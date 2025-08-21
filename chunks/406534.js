@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(481369),
     U = n(186877),
     B = n(294218),
-    G = n(534469),
-    F = n(993397),
+    F = n(534469),
+    G = n(993397),
     H = n(511010),
     V = n(524444),
     z = n(977391),
@@ -209,7 +209,7 @@ function en(e) {
                               ? J.t.VFWjc3
                               : J.t.xfkfTE),
                     (0, r.jsx)(
-                        F.Z,
+                        G.Z,
                         {
                             unreadId: K.j1,
                             messages: e,
@@ -225,7 +225,7 @@ function en(e) {
             e.type === X.ys_.MESSAGE && null == eI && (eI = e);
             let l = e.groupId === (null == eI ? void 0 : eI.groupId) ? eI.content.id : e.groupId,
                 a = eS && e.content.isFirstMessageInForumPost(f),
-                o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? G.Ru : G.ZP;
+                o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? F.Ru : F.ZP;
             return (0, r.jsx)(
                 o,
                 {

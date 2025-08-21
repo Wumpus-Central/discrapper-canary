@@ -77,7 +77,7 @@ function R(e) {
                 .value();
         }, [t, D]),
         B = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
-        G = i.useCallback(() => l(!1), []);
+        F = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(P.ZP, {
         channelId: t.id,
         children: [
@@ -220,7 +220,7 @@ function R(e) {
                               })({}, e)),
                               (i = i =
                                   {
-                                      onClose: () => (G(), e.onClose()),
+                                      onClose: () => (F(), e.onClose()),
                                       channelId: t.id,
                                   }),
                               Object.getOwnPropertyDescriptors

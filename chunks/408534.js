@@ -38,8 +38,8 @@ function j(e) {
         k = (0, y.Z)(),
         U = (0, c.$A)(P),
         B = (0, c.j8)(P),
-        G = (0, b.Z)(A, I),
-        F = (0, g.Z)(w, P),
+        F = (0, b.Z)(A, I),
+        G = (0, g.Z)(w, P),
         H = (0, f.Z)(),
         V = (0, s.Z)(j);
     return (0, r.jsxs)(l.v2r, {
@@ -64,7 +64,7 @@ function j(e) {
             (0, r.jsx)(l.kSQ, { children: V }),
             (0, r.jsx)(l.kSQ, { children: k }),
             (0, r.jsxs)(l.kSQ, {
-                children: [null != A ? G : null, null != w ? F : null],
+                children: [null != A ? F : null, null != w ? G : null],
             }),
         ],
     });

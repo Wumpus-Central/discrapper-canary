@@ -131,8 +131,8 @@ let k = i.forwardRef(function (e, t) {
         let e = setTimeout(() => P.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: G } = I.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
-        F = i.useCallback(() => {
+    let { enabled: F } = I.c.useExperiment({ location: "ActivitiesMiniShelf" }, { autoTrackExposure: !0 }),
+        G = i.useCallback(() => {
             (0, y.Z)({
                 context:
                     null != l
@@ -157,7 +157,7 @@ let k = i.forwardRef(function (e, t) {
             },
             [c, l],
         ),
-        V = G ? p.iWm : p.nG3;
+        V = F ? p.iWm : p.nG3;
     return (0, r.jsx)(g.Gt, {
         value: M,
         children: (0, r.jsx)(j.Z, {
@@ -199,7 +199,7 @@ let k = i.forwardRef(function (e, t) {
                                     }),
                                     (0, r.jsxs)(p.P3F, {
                                         className: R.titleRight,
-                                        onClick: F,
+                                        onClick: G,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: "eyebrow",

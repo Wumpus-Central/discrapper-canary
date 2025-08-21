@@ -46,8 +46,8 @@ var r,
     k = n(752048),
     U = n(131704),
     B = n(592125),
-    G = n(341165),
-    F = n(544610),
+    F = n(341165),
+    G = n(544610),
     H = n(19780),
     V = n(306680),
     z = n(699516),
@@ -895,11 +895,11 @@ function eb(e) {
 function e_(e) {
     var { channel: t } = e,
         n = eu(e, ["channel"]);
-    let r = (0, p.cj)([F.Z, G.Z, W.Z], () => {
+    let r = (0, p.cj)([G.Z, F.Z, W.Z], () => {
         let e;
         return (
-            null != t && null != (e = G.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-            ec(es({}, F.Z.getState()), {
+            null != t && null != (e = F.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            ec(es({}, G.Z.getState()), {
                 invite: e,
                 hideDiscriminator: W.Z.hidePersonalInformation,
                 hideInstantInvites: W.Z.hideInstantInvites,

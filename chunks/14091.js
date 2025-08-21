@@ -37,7 +37,7 @@ var r = n(951288),
     k = n(531578),
     U = n(388032),
     B = n(669922);
-function G(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function G(e, t, n) {
         e
     );
 }
-class F extends i.Component {
+class G extends i.Component {
     componentDidMount() {
         this.autoAnalytics();
     }
@@ -66,7 +66,7 @@ class F extends i.Component {
         var t;
         super(...e),
             (t = this),
-            G(this, "autoAnalytics", function () {
+            F(this, "autoAnalytics", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
                 if (null == t.props.searchRequestAnalyticsId || t.props.isSearching) return;
                 let n = 0,
@@ -254,7 +254,7 @@ let W = [],
             {
                 paginationTotalCount: w,
                 paginationMaxIndex: k,
-                isPaginationTotalCountLimited: F,
+                isPaginationTotalCountLimited: G,
             } = (0, R.M)({
                 totalResults: n.totalResults,
                 isSearching: n.isSearching,
@@ -262,7 +262,7 @@ let W = [],
             H = i.useCallback(
                 (e, t) => {
                     let n = k + 1;
-                    if (!F || e.targetPage !== n) return t;
+                    if (!G || e.targetPage !== n) return t;
                     {
                         let e = U.intl.formatToPlainString(U.t["E+2azc"], { maxPages: n });
                         return (0, r.jsx)(d.ua7, {
@@ -289,7 +289,7 @@ let W = [],
                                                     }),
                                                 )),
                                                 r.forEach(function (t) {
-                                                    G(e, t, n[t]);
+                                                    F(e, t, n[t]);
                                                 });
                                         }
                                         return e;
@@ -313,7 +313,7 @@ let W = [],
                         });
                     }
                 },
-                [F, k],
+                [G, k],
             ),
             Y = i.useCallback(
                 (e) => {
@@ -364,7 +364,7 @@ let W = [],
                 [y, t, a],
             ),
             X = Math.floor(n.offset / L.vpv),
-            Q = F && X >= k,
+            Q = G && X >= k,
             J = k + 1,
             $ = (0, x.C)({ location: "SearchResults" }),
             ee = (0, c.Wu)([M.Z], () => {
@@ -433,7 +433,7 @@ let W = [],
                             onClick: q,
                             onScrollTo: A,
                             onPageChange: K,
-                            paginationTotalCount: F ? w : void 0,
+                            paginationTotalCount: G ? w : void 0,
                             renderPageWrapper: H,
                             onBlockedResultsClick: O,
                             searchRequestAnalyticsId: a,
@@ -576,7 +576,7 @@ function q(e) {
                 searchResultsQuery: I,
                 isFavoritesSearch: Z,
             }),
-            (0, r.jsx)(F, {
+            (0, r.jsx)(G, {
                 searchContext: t,
                 searchRequestAnalyticsId: D,
                 searchResults: N,

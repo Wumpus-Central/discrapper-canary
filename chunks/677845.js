@@ -53,8 +53,8 @@ function S(e) {
     let k = (0, o.e7)([y.Z], () => P.isPrivate() || (0, m.b)(y.Z, w, P), [w, P]),
         U = (null == w ? void 0 : w.afkChannelId) === P.id,
         B = P.userLimit <= 0 || P.userLimit > 1,
-        G = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
-        F = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        F = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
+        G = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         H = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
         V = null != R && R === P.id,
         z = D.map(
@@ -91,11 +91,11 @@ function S(e) {
     ),
         null != w &&
             !U &&
-            (!(M >= 2) || !G || H || F || V
+            (!(M >= 2) || !F || H || G || V
                 ? B &&
                   1 === M &&
                   k &&
-                  (G && !H
+                  (F && !H
                       ? z.push((e) =>
                             (0, r.jsx)(C.h, {
                                 channel: P,

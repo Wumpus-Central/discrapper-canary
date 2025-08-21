@@ -76,7 +76,7 @@ function y(e) {
             location: "SearchHeader",
         }),
         I = (0, h.I)(t),
-        { totalFilters: P } = (0, c.hE)(I),
+        { totalFilters: P } = (0, c.p4)(I, t),
         Z = i.useMemo(() => {
             if (t.type === f.aib.DMS && j) {
                 var e, n;

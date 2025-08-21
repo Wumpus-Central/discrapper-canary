@@ -124,6 +124,7 @@ u(g, "displayName", "SelectivelySyncedUserSettingsStore"),
                             "animateEmoji",
                             "animateStickers",
                             "gifAutoPlay",
+                            "defaultReactionEmoji",
                         ]),
                     }),
                 !1 === n[c.oAB.APPEARANCE] &&

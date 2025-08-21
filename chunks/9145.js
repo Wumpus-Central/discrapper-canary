@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(981631),
     U = n(388032),
     B = n(33985);
-let G = A.u8.SIZE_32,
-    F = {
+let F = A.u8.SIZE_32,
+    G = {
         [L.MI.NO_CHAT]: B.noChat,
         [L.MI.RESIZABLE]: B.resizable,
     };
@@ -194,7 +194,7 @@ function H(e) {
                 children: (0, r.jsx)(
                     "img",
                     {
-                        src: e.getAvatarURL(null == K ? void 0 : K.guild_id, G),
+                        src: e.getAvatarURL(null == K ? void 0 : K.guild_id, F),
                         alt: i,
                         className: B.avatar,
                     },
@@ -208,7 +208,7 @@ function H(e) {
         theme: k.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: a()(B.wrapper, F[ee], e),
+                className: a()(B.wrapper, G[ee], e),
                 ref: $,
                 style: eg,
                 children: [
@@ -248,7 +248,7 @@ function H(e) {
                                           (0, r.jsx)(A.ZP, {
                                               renderIcon: !1,
                                               users: e_,
-                                              size: G,
+                                              size: F,
                                               max: 6,
                                               renderUser: ey,
                                           }),

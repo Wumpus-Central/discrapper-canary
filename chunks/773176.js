@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(768943),
     U = n(665906),
     B = n(695346),
-    G = n(314897),
-    F = n(323873),
+    F = n(314897),
+    G = n(323873),
     H = n(271383),
     V = n(430824),
     z = n(607744),
@@ -193,7 +193,7 @@ function eg(e) {
             canViewThread: w,
             canForward: R,
             isExpanded: M,
-            showMoreUtilities: F,
+            showMoreUtilities: G,
             showEmojiPicker: K,
             showMessageBookmarksActions: X,
             isMessageBookmark: el,
@@ -213,7 +213,7 @@ function eg(e) {
                 } = e,
                 { author: d } = n,
                 p = (0, u.e7)([V.Z], () => V.Z.getGuild(t.guild_id), [t.guild_id]),
-                h = (0, u.e7)([G.default], () => G.default.getId()),
+                h = (0, u.e7)([F.default], () => F.default.getId()),
                 g = (0, U.$R)(t),
                 b = (0, U.Gu)(t),
                 { firstMessage: _ } = (0, u.e7)([x.Z], () => x.Z.getMessage(t.id), [t.id]),
@@ -239,7 +239,7 @@ function eg(e) {
                 t.isModeratorReportChannel() && (w = w && n.id !== (null == _ ? void 0 : _.id) && !(0, ee.Z)(n));
             let R = (0, Q.a4)(n),
                 M = (0, $.Z)(n, t),
-                F = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
+                G = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
                 { disableReactionCreates: Y } = (0, et.Z)({
                     channel: t,
                     canChat: O,
@@ -269,7 +269,7 @@ function eg(e) {
                 channel: t,
                 message: n,
                 canPin: M,
-                canEdit: F,
+                canEdit: G,
                 canDelete: w,
                 canReport: R,
                 canReply: I,
@@ -293,13 +293,13 @@ function eg(e) {
         })(e),
         eh = i.useRef(null),
         eg = i.useCallback(() => {
-            F ||
+            G ||
                 Y.default.track(ea.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id,
                 }),
-                es({ moreUtilities: !F });
-        }, [F, es, n]),
+                es({ moreUtilities: !G });
+        }, [G, es, n]),
         eb = i.useCallback(() => {
             es({ emojiPicker: !K });
         }, [K, es]),
@@ -580,7 +580,7 @@ function eg(e) {
                               updatePosition: i,
                           });
                       },
-                      shouldShow: F,
+                      shouldShow: G,
                       onRequestClose: eg,
                       position: "left",
                       align: "top",
@@ -705,7 +705,7 @@ function ey(e, t, n) {
 }
 let eC = i.memo(function (e) {
     let { channel: t, message: n, isHeader: i, isReply: l } = e,
-        o = (0, u.e7)([F.Z], () => F.Z.isEditing(t.id, n.id), [t.id, n.id]),
+        o = (0, u.e7)([G.Z], () => G.Z.isEditing(t.id, n.id), [t.id, n.id]),
         s = (function (e) {
             let { channel: t, message: n } = e;
             return n.state === ea.yb.SEND_FAILED

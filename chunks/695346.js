@@ -624,8 +624,30 @@ let e_ = new Set(Object.values(h.Skl)),
         ),
         "text",
         "renderReactions",
+    );
+(0, d.KM)(
+    (0, d.Zc)(
+        "textAndImages",
+        "defaultReactionEmoji",
+        (e) => {
+            let { emojiId: t, emojiName: n } = null != e ? e : {};
+            return {
+                emojiId: null == t ? void 0 : t.value,
+                emojiName: null == n ? void 0 : n.value,
+            };
+        },
+        (e) => {
+            let { emojiId: t, emojiName: n } = e;
+            return {
+                emojiId: o.wA.create({ value: t }),
+                emojiName: o.Gm.create({ value: n }),
+            };
+        },
     ),
-    ev = (0, d.Zc)(
+    "text",
+    "defaultReactionEmoji",
+);
+let ev = (0, d.Zc)(
         "localization",
         "timezoneOffset",
         (e) => {

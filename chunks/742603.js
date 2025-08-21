@@ -37,7 +37,7 @@ var r = n(951288),
     k = n(388032),
     U = n(39219),
     B = n(430864);
-function G(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function G(e) {
     }
     return e;
 }
-function F(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -203,7 +203,7 @@ function W(e) {
                   children: (e) =>
                       (0, r.jsxs)(
                           s.P3F,
-                          F(G({}, e), {
+                          G(F({}, e), {
                               className: a()(U.channelStatusClickable, { [U.hoverable]: H }),
                               onClick: H ? W : void 0,
                               children: [
@@ -229,7 +229,7 @@ function W(e) {
         (0, s.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 339340));
-                return (n) => (0, r.jsx)(e, G({ channel: t }, n));
+                return (n) => (0, r.jsx)(e, F({ channel: t }, n));
             },
             { modalKey: R.a },
         );
@@ -274,7 +274,7 @@ function W(e) {
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         s.tQf,
-                                                        F(G({}, e), {
+                                                        G(F({}, e), {
                                                             size: "xs",
                                                             "aria-label": k.intl.string(k.t.VHXh8f),
                                                             color: s.TVs.colors.INTERACTIVE_NORMAL,

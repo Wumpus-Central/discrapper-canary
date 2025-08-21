@@ -74,10 +74,10 @@ function A(e) {
     function B() {
         y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R("/", (0, O.JM)("/"));
     }
-    function G() {
+    function F() {
         M();
     }
-    function F() {
+    function G() {
         (0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
@@ -228,7 +228,7 @@ function A(e) {
                             {
                                 id: "clips",
                                 label: i,
-                                action: G,
+                                action: F,
                             },
                             "clips",
                         );
@@ -238,7 +238,7 @@ function A(e) {
                             {
                                 id: "poll",
                                 label: i,
-                                action: F,
+                                action: G,
                             },
                             "poll",
                         );

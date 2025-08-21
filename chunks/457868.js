@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(51144),
     U = n(998502),
     B = n(276264),
-    G = n(981631),
-    F = n(388032),
+    F = n(981631),
+    G = n(388032),
     H = n(61722),
     V = n(32482);
 function z(e) {
@@ -132,8 +132,8 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 if (null == b) return;
                 let e = "@".concat(k.ZP.getUserTag(b, { decoration: "never" })),
                     n = "<@".concat(b.id, ">");
-                D.S.dispatch(G.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
-                    D.S.dispatchToLastSubscribed(G.CkL.INSERT_TEXT, {
+                D.S.dispatch(F.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
+                    D.S.dispatchToLastSubscribed(F.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: n,
                     }),
@@ -145,8 +145,8 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                         (0, x.f)({
                             guildId: t.guild_id,
                             location: {
-                                section: G.jXE.THREAD_MEMBER_LIST,
-                                object: G.qAy.BOOST_GEM_ICON,
+                                section: F.jXE.THREAD_MEMBER_LIST,
+                                object: F.qAy.BOOST_GEM_ICON,
                             },
                         });
                 },
@@ -219,7 +219,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             premiumSince: null == Q ? null : new Date(Q),
                             onClickPremiumGuildIcon: Y,
                             itemProps: M,
-                            lostPermissionTooltipText: L ? void 0 : F.intl.string(F.t["/QcoT0"]),
+                            lostPermissionTooltipText: L ? void 0 : G.intl.string(G.t["/QcoT0"]),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
@@ -242,14 +242,14 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 guildId: l,
                 size: 16,
             });
-        return t === G.Skl.UNKNOWN
+        return t === F.Skl.UNKNOWN
             ? (0, r.jsx)("div", {
                   className: V.membersGroup,
                   children: (0, r.jsx)("div", { className: V.memberGroupsPlaceholder }),
               })
             : (0, r.jsxs)(y.Z, {
                   className: V.membersGroup,
-                  "aria-label": F.intl.formatToPlainString(F.t.UaqbkZ, {
+                  "aria-label": G.intl.formatToPlainString(G.t.UaqbkZ, {
                       title: n,
                       count: i,
                   }),
@@ -264,7 +264,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     X = i.memo(function (e) {
         let { channel: t } = e;
-        return t.type === G.d4z.PRIVATE_THREAD
+        return t.type === F.d4z.PRIVATE_THREAD
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)("div", { className: H.divider }),
@@ -278,14 +278,14 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                                   color: "currentColor",
                               }),
                               "\xA0",
-                              F.intl.string(F.t.BTLTAg),
+                              G.intl.string(G.t.BTLTAg),
                           ],
                       }),
                       (0, r.jsx)(h.Text, {
                           variant: "text-sm/normal",
                           color: "header-secondary",
                           className: H.instructions,
-                          children: F.intl.string(F.t.Hsd8hI),
+                          children: G.intl.string(G.t.Hsd8hI),
                       }),
                   ],
               })
@@ -359,7 +359,7 @@ function Q(e) {
         C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
-            M.default.track(G.rMx.MEMBER_LIST_VIEWED, {
+            M.default.track(F.rMx.MEMBER_LIST_VIEWED, {
                 channel_id: t.id,
                 channel_type: t.type,
                 guild_id: t.guild_id,
@@ -415,10 +415,10 @@ function Q(e) {
                                             l[i],
                                         );
                                     },
-                                    footerHeight: (e) => 80 * (d[e] === f && t.type === G.d4z.PRIVATE_THREAD),
+                                    footerHeight: (e) => 80 * (d[e] === f && t.type === F.d4z.PRIVATE_THREAD),
                                     renderFooter: (e) =>
                                         d[e.section] === f ? (0, r.jsx)(X, { channel: t }, "footer") : null,
-                                    innerAriaLabel: F.intl.string(F.t["9Oq93t"]),
+                                    innerAriaLabel: G.intl.string(G.t["9Oq93t"]),
                                     innerTag: "ul",
                                     sections: d.map((e) => e.userIds.length),
                                     fade: !0,
@@ -442,7 +442,7 @@ function J(e) {
                 className: H.emptyStateHeader,
                 variant: "text-xs/bold",
                 color: "interactive-normal",
-                children: F.intl.string(F.t["9Oq93t"]),
+                children: G.intl.string(G.t["9Oq93t"]),
             }),
             (0, r.jsxs)("div", {
                 className: H.emptyStateIconContainer,
@@ -459,13 +459,13 @@ function J(e) {
             }),
             (0, r.jsx)(h.X6q, {
                 variant: "heading-md/semibold",
-                children: t.isForumPost() ? F.intl.string(F.t.p0UgNT) : F.intl.string(F.t["9/n5v7"]),
+                children: t.isForumPost() ? G.intl.string(G.t.p0UgNT) : G.intl.string(G.t["9/n5v7"]),
             }),
             (0, r.jsx)(h.Text, {
                 className: H.emptyStateSubtext,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: F.intl.string(F.t.emw8UF),
+                children: G.intl.string(G.t.emw8UF),
             }),
         ],
     });

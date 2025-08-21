@@ -133,7 +133,7 @@ class y extends o.Z {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || "7ac3d7b835a277dfed1e69ac75adf1b5e12e490f" === e.body.hash)
+                                if (null == e.body || "7f26fa457df7601233302f4b08c16b846e0a12a8" === e.body.hash)
                                     return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, s.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? m : g;

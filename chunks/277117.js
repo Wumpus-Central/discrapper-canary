@@ -38,8 +38,8 @@ function w(e) {
         })),
         U = (0, o.vh)(t.id),
         B = (0, s.Y)({ userId: t.id }),
-        G = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        F = (0, l.e7)([h.Z], () => {
+        F = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        G = (0, l.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
@@ -59,7 +59,7 @@ function w(e) {
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(y.Z, { userId: t.id }),
-                        !G &&
+                        !F &&
                             (0, r.jsx)(P.Z, {
                                 userId: t.id,
                                 isHovering: M,
@@ -123,7 +123,7 @@ function w(e) {
             (0, r.jsxs)(S.Z.Overlay, {
                 className: A.overlay,
                 children: [
-                    !G &&
+                    !F &&
                         (null == w ? void 0 : w.bio) != null &&
                         (null == w ? void 0 : w.bio) !== "" &&
                         (0, r.jsx)(j.Z, {
@@ -136,10 +136,10 @@ function w(e) {
                                 userId: t.id,
                             }),
                         }),
-                    (null == F ? void 0 : F.popularApplicationCommandIds) != null &&
+                    (null == G ? void 0 : G.popularApplicationCommandIds) != null &&
                         (0, r.jsx)(m.Z, {
-                            applicationId: F.id,
-                            commandIds: F.popularApplicationCommandIds,
+                            applicationId: G.id,
+                            commandIds: G.popularApplicationCommandIds,
                             channel: R,
                         }),
                     B.length > 0 &&

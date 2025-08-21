@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(663993),
     U = n(252618),
     B = n(201493),
-    G = n(266454),
-    F = n(174130),
+    F = n(266454),
+    G = n(174130),
     H = n(588322),
     V = n(591472),
     z = n(446226),
@@ -91,8 +91,8 @@ var r = n(951288),
     ek = n(433355),
     eU = n(592125),
     eB = n(703558),
-    eG = n(486472),
-    eF = n(731290),
+    eF = n(486472),
+    eG = n(731290),
     eH = n(430824),
     eV = n(158776),
     ez = n(19780),
@@ -701,7 +701,7 @@ class to extends i.PureComponent {
                         break;
                     case e3.d4z.GUILD_ANNOUNCEMENT:
                     case e3.d4z.GUILD_TEXT:
-                        o.push((0, r.jsx)(F.Z, { channel: e }, "favorites")),
+                        o.push((0, r.jsx)(G.Z, { channel: e }, "favorites")),
                             o.push((0, r.jsx)(eP.Z, { channel: e }, "browser")),
                             n || o.push((0, r.jsx)(et.Z, { channel: e }, "notifications")),
                             o.push((0, r.jsx)(en.Z, { channel: e }, "pins")),
@@ -900,7 +900,7 @@ let ts = (0, j.Z)(to),
             ),
             U = null != c && c.isPrivate() && !L && x,
             B = (null == c ? void 0 : c.isGuildVocal()) || U || k,
-            F = (0, p.e7)([V.Z], () => V.Z.getFrameLayoutMode() === e5.U.FOCUSED),
+            G = (0, p.e7)([V.Z], () => V.Z.getFrameLayoutMode() === e5.U.FOCUSED),
             { welcomeModalChannelId: H } = (0, d.TH)(),
             W = (0, p.e7)([em.Z], () => null != c && em.Z.isLurking(c.guild_id), [c]),
             Y = (0, p.e7)([eD.Z], () => eD.Z.hasSeen(null == c ? void 0 : c.guild_id, W), [c, W]),
@@ -965,7 +965,7 @@ let ts = (0, j.Z)(to),
         i.useEffect(() => {
             let e = ey && !eb,
                 t = ey && eb && (null == c ? void 0 : c.id) !== eC;
-            (e || t) && (0, G.Q3)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
+            (e || t) && (0, F.Q3)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
         }, [null == c ? void 0 : c.id, eC, eb, ey]);
         let ex = (0, f.f9)();
         return (0, r.jsx)(
@@ -990,8 +990,8 @@ let ts = (0, j.Z)(to),
                         guild: y,
                         showCall: !C && B,
                         showActivityPanel: L,
-                        showFramePanel: F,
-                        nsfwAgree: (0, p.e7)([eF.Z], () => eF.Z.didAgree(null == c ? void 0 : c.guild_id)),
+                        showFramePanel: G,
+                        nsfwAgree: (0, p.e7)([eG.Z], () => eG.Z.didAgree(null == c ? void 0 : c.guild_id)),
                         isMobile: (0, p.e7)(
                             [eV.Z],
                             () =>
@@ -999,8 +999,8 @@ let ts = (0, j.Z)(to),
                             [c],
                         ),
                         isUnavailable: (0, p.e7)(
-                            [eG.Z],
-                            () => (null == c ? void 0 : c.guild_id) != null && eG.Z.isUnavailable(c.guild_id),
+                            [eF.Z],
+                            () => (null == c ? void 0 : c.guild_id) != null && eF.Z.isUnavailable(c.guild_id),
                             [c],
                         ),
                         showRealNameModal: J,

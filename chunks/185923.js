@@ -58,6 +58,7 @@ var u = (function (e) {
             (e[(e.MESSAGE_CONFETTI = 12)] = "MESSAGE_CONFETTI"),
             (e[(e.GUILD_PROFILE = 13)] = "GUILD_PROFILE"),
             (e[(e.CHANNEL_NAME = 14)] = "CHANNEL_NAME"),
+            (e[(e.DEFAULT_REACT_EMOJI = 15)] = "DEFAULT_REACT_EMOJI"),
             e
         );
     })({});

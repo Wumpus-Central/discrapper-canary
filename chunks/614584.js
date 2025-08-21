@@ -145,7 +145,7 @@ let S = i.memo(function (e) {
             }
             return null;
         }, [R, M, I, k, D, L]),
-        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: G } = (0, l.cj)(
+        { isReplyAuthorBlocked: B, isReplyAuthorIgnored: F } = (0, l.cj)(
             [m.Z],
             () => ({
                 isReplyAuthorBlocked: null != R && m.Z.isBlockedForMessage(R),
@@ -153,7 +153,7 @@ let S = i.memo(function (e) {
             }),
             [R],
         ),
-        F = (0, x.wq)(null == R ? void 0 : R.author.id, I.id),
+        G = (0, x.wq)(null == R ? void 0 : R.author.id, I.id),
         H = (0, x.$3)(n, R),
         V = (0, x.Wl)(R, I, Z, N),
         z = (0, x.rY)(T, N),
@@ -173,14 +173,14 @@ let S = i.memo(function (e) {
         content: U,
         compact: P,
         isReplyAuthorBlocked: B,
-        isReplyAuthorIgnored: G,
+        isReplyAuthorIgnored: F,
         showAvatarPopout: T,
         showUsernamePopout: Z,
         renderPopout: C.Z,
         onClickAvatar: z,
         onClickUsername: V,
         onClickReply: H,
-        onContextMenu: F,
+        onContextMenu: G,
         onPopoutRequestClose: W,
         isReplySpineClickable: A,
         showReplySpine: w,

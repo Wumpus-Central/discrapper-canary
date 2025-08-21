@@ -41,8 +41,8 @@ var r = n(951288),
     k = n(496675),
     U = n(944486),
     B = n(358085),
-    G = n(998502),
-    F = n(922482),
+    F = n(998502),
+    G = n(922482),
     H = n(431328),
     V = n(501655),
     z = n(427679),
@@ -103,7 +103,7 @@ function es(e) {
         f = M.default.getId(),
         m =
             !(0, s.e7)([_.Z], () => _.Z.isFullscreenInContext(n)) &&
-            (!B.isPlatformEmbedded || (B.isPlatformEmbedded && G.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS))),
+            (!B.isPlatformEmbedded || (B.isPlatformEmbedded && F.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS))),
         g = null != c && c.type !== en.fO.ACTIVITY && c.user.id !== f,
         C = i.useMemo(() => {
             var e;
@@ -116,7 +116,7 @@ function es(e) {
             popoutWindow: a,
             currentWindow: C,
         }),
-        v = n === et.IlC.POPOUT && B.isPlatformEmbedded && G.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS);
+        v = n === et.IlC.POPOUT && B.isPlatformEmbedded && F.ZP.supportsFeature(et.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             g
@@ -202,7 +202,7 @@ function eu(e) {
             ? (0, r.jsx)(J.Z, {
                   channel: c,
                   onContinueClick: () => {
-                      (0, W.Ku)(!1), j || (0, F.TM)(c);
+                      (0, W.Ku)(!1), j || (0, G.TM)(c);
                   },
               })
             : j

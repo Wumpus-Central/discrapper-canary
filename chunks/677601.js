@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(569545),
     U = n(102172),
     B = n(788983),
-    G = n(928518),
-    F = n(703656),
+    F = n(928518),
+    G = n(703656),
     H = n(880395),
     V = n(740492),
     z = n(793319),
@@ -118,7 +118,7 @@ function eB(e) {
     }
     return e;
 }
-function eG(e, t) {
+function eF(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -136,7 +136,7 @@ function eG(e, t) {
         e
     );
 }
-let eF = {
+let eG = {
         [eD.AEg.NORMAL]: ek.normal,
         [eD.AEg.MINIMUM]: ek.minimum,
         [eD.AEg.NO_CHAT]: ek.noChat,
@@ -225,15 +225,15 @@ class eV extends i.PureComponent {
                 canStayOnTop: c,
             };
         if (!r)
-            return eG(eB({}, u), {
+            return eF(eB({}, u), {
                 canFullscreen: i,
                 useTheme: !0,
             });
         switch (e) {
             case eD.AEg.FULL_SCREEN:
-                return eG(eB({}, u), { canPopout: !this.inPopout && this.popoutOpen && u.canPopout });
+                return eF(eB({}, u), { canPopout: !this.inPopout && this.popoutOpen && u.canPopout });
             case eD.AEg.MINIMUM:
-                return eG(eB({}, u), {
+                return eF(eB({}, u), {
                     canPopout: !1,
                     useTheme: !0,
                 });
@@ -270,7 +270,7 @@ class eV extends i.PureComponent {
             (this._lastIdleProps = e),
             (0, r.jsx)(
                 Q.Z,
-                eG(
+                eF(
                     eB(
                         {
                             renderHeader: this.renderHeader,
@@ -332,7 +332,7 @@ class eV extends i.PureComponent {
             m = e !== eD.AEg.NO_CHAT && e !== eD.AEg.FULL_SCREEN && null != c,
             g = eD.BRd.MIDNIGHT;
         return (0, r.jsxs)("div", {
-            className: a()(ek.wrapper, eF[e], eH[o], {
+            className: a()(ek.wrapper, eG[e], eH[o], {
                 [ek.poppedOut]: this.popoutOpen && !this.inPopout && e !== eD.AEg.NO_CHAT && t.isPrivate(),
                 [ek.video]: f,
                 [ek.sidebarOpen]: l || d,
@@ -485,7 +485,7 @@ class eV extends i.PureComponent {
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            eG(eB({}, n), {
+                                            eF(eB({}, n), {
                                                 stream: e.stream,
                                                 exitFullscreen: this.maybeLeaveFullScreen,
                                                 appContext: u,
@@ -533,7 +533,7 @@ class eV extends i.PureComponent {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
-                                                    eG(eB({}, n), {
+                                                    eF(eB({}, n), {
                                                         showChannelCallItems: !0,
                                                         showMediaItems: !0,
                                                         user: h,
@@ -561,7 +561,7 @@ class eV extends i.PureComponent {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     t,
-                                                    eG(eB({}, n), {
+                                                    eF(eB({}, n), {
                                                         showChannelCallItems: !0,
                                                         showMediaItems: !0,
                                                         showChatItems: d === eD.AEg.MINIMUM || d === eD.AEg.NORMAL,
@@ -597,7 +597,7 @@ class eV extends i.PureComponent {
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         t,
-                                                        eG(eB({}, n), {
+                                                        eF(eB({}, n), {
                                                             showMediaItems: !0,
                                                             showChannelCallItems: !0,
                                                             showChatItems: !1,
@@ -640,7 +640,7 @@ class eV extends i.PureComponent {
                 let { channel: e, connectedEmbeddedActivity: t } = this.props,
                     n = () => {
                         let t = e.getGuildId();
-                        null != t && (0, F.uL)((0, eg.LY)(t)), B.hP(e);
+                        null != t && (0, G.uL)((0, eg.LY)(t)), B.hP(e);
                     };
                 null == t || (0, E.R)() ? n() : (0, Z.Z)({ onConfirm: n });
             }),
@@ -931,7 +931,7 @@ let ez = function (e) {
                 }
             );
         }, [g, n.id]),
-        F = (0, u.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
+        G = (0, u.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
         { selectedStream: H } = (0, u.cj)(
             [el.Z],
             () => ({ selectedStream: null != B ? el.Z.getActiveStreamForStreamKey(B.id) : null }),
@@ -941,9 +941,9 @@ let ez = function (e) {
         W = (0, u.e7)([es.Z], () => es.Z.getCall(n.id), [n.id]),
         Y = (0, u.e7)([ed.ZP], () => ed.ZP.getMentionCount(n.id), [n.id]),
         q = (0, u.e7)([ea.default], () => ea.default.getId()),
-        { popoutWindow: K, popoutWindowAlwaysOnTop: X } = (0, u.cj)([G.Z], () => ({
-            popoutWindow: G.Z.getWindow(eD.KJ3.CHANNEL_CALL_POPOUT),
-            popoutWindowAlwaysOnTop: G.Z.getIsAlwaysOnTop(eD.KJ3.CHANNEL_CALL_POPOUT),
+        { popoutWindow: K, popoutWindowAlwaysOnTop: X } = (0, u.cj)([F.Z], () => ({
+            popoutWindow: F.Z.getWindow(eD.KJ3.CHANNEL_CALL_POPOUT),
+            popoutWindowAlwaysOnTop: F.Z.getIsAlwaysOnTop(eD.KJ3.CHANNEL_CALL_POPOUT),
         })),
         Q = (0, u.e7)([eu.Z], () => eu.Z.can(eD.Plq.CONNECT, n)),
         J = (0, u.e7)([eo.Z], () => eo.Z.getToastsEnabled(n.id)),
@@ -1014,7 +1014,7 @@ let ez = function (e) {
                             shouldUseVoiceEffectsActionBar: em,
                             currentUserId: q,
                             selectedParticipant: B,
-                            allActiveStreams: F,
+                            allActiveStreams: G,
                             useNewInviteButton: er,
                             connectedEmbeddedActivity: null != ef ? ef : void 0,
                             showChatToasts: J,

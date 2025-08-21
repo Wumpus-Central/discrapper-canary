@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(928477),
     U = n(456077),
     B = n(488131),
-    G = n(842332),
-    F = n(602034),
+    F = n(842332),
+    G = n(602034),
     H = n(981631),
     V = n(388032),
     z = n(757212),
@@ -216,7 +216,7 @@ function Q(e) {
             isGeneratingAI: x,
             enableAIFeatures: v,
             renderAiGenerateButton: j,
-        } = (0, G.U)({
+        } = (0, F.U)({
             parentChannel: t,
             parentMessageId: n,
             updateThreadSettings: g,
@@ -241,7 +241,7 @@ function Q(e) {
                 [c, u] = i.useState(null),
                 [d, p] = i.useState(null),
                 [h, f] = i.useState(!1),
-                m = (0, F.Z)({
+                m = (0, G.Z)({
                     parentChannel: t,
                     parentMessageId: n,
                     threadSettings: r,

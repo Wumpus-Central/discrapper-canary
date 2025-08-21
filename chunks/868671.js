@@ -75,8 +75,8 @@ function v(e) {
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
         }, [v, I, j, t, O, S, n, x, T, M, Z]),
         B = r.useRef(0),
-        G = r.useRef(I),
-        F = r.useRef(void 0),
+        F = r.useRef(I),
+        G = r.useRef(void 0),
         H = r.useRef({ impressionCappedEntryIds: P }),
         V = r.useCallback(
             (e) => {
@@ -89,7 +89,7 @@ function v(e) {
         );
     return (
         r.useEffect(() => {
-            G.current = I;
+            F.current = I;
         }, [I]),
         r.useEffect(() => {
             H.current = { impressionCappedEntryIds: P };
@@ -97,18 +97,18 @@ function v(e) {
         r.useEffect(
             () => (
                 (B.current = 0),
-                (F.current = Date.now()),
+                (G.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == S || null == F.current || Date.now() - F.current < 3000) return;
-                    let n = null != (t = null == (e = G.current) ? void 0 : e.map((e) => e.id)) ? t : [],
+                    if (null == S || null == G.current || Date.now() - G.current < 3000) return;
+                    let n = null != (t = null == (e = F.current) ? void 0 : e.map((e) => e.id)) ? t : [],
                         r = n.slice(0, B.current);
                     !T &&
                         N &&
                         M &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: S,
-                            first_shown_at: F.current,
+                            first_shown_at: G.current,
                             item_ids: r,
                             surface_type: b.Kd.GUILD_MEMBER_LIST,
                             channel_id: v,

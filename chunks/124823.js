@@ -67,7 +67,7 @@ function w(e) {
         }),
         U = i.useRef(null),
         B = (0, o.Z)(U),
-        G = (e) => {
+        F = (e) => {
             (0, b.openUserProfileModal)(
                 A(
                     {
@@ -111,7 +111,7 @@ function w(e) {
                                         displayProfile: R,
                                         channelId: n.id,
                                         themeType: P.l.SIDEBAR,
-                                        onOpenProfile: w ? void 0 : G,
+                                        onOpenProfile: w ? void 0 : F,
                                     }),
                                 ],
                             }),
@@ -122,7 +122,7 @@ function w(e) {
                                         user: t,
                                         nickname: h.ZP.getName(null, n.id, t),
                                         pronouns: null == R ? void 0 : R.pronouns,
-                                        onOpenProfile: w ? void 0 : G,
+                                        onOpenProfile: w ? void 0 : F,
                                         tags: (0, r.jsx)(y.Z, {
                                             displayProfile: R,
                                             themeType: P.l.SIDEBAR,
@@ -157,7 +157,7 @@ function w(e) {
                             className: T.footer,
                             children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
-                                    G(),
+                                    F(),
                                         (0, m.pQ)(
                                             A(
                                                 {

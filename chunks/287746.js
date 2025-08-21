@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(104919),
     U = n(541716),
     B = n(752305),
-    G = n(190210),
-    F = n(516887),
+    F = n(190210),
+    G = n(516887),
     H = n(974251),
     V = n(893718),
     z = n(436660),
@@ -91,8 +91,8 @@ var r = n(951288),
     ek = n(594174),
     eU = n(626135),
     eB = n(934415),
-    eG = n(459273),
-    eF = n(585483),
+    eF = n(459273),
+    eG = n(585483),
     eH = n(630388),
     eV = n(709054),
     ez = n(838440),
@@ -272,7 +272,7 @@ class ta extends i.PureComponent {
             { contentWarningProps: x } = this.state,
             v =
                 e.type === e3.d4z.GUILD_ANNOUNCEMENT && C
-                    ? (0, r.jsx)(G.Z, {
+                    ? (0, r.jsx)(F.Z, {
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
                           focused: t,
@@ -386,8 +386,8 @@ class ta extends i.PureComponent {
                         if (i || l) return;
                         if ((e.preventDefault(), t))
                             eL.Z.getUploadCount(r.id, eN.d.ChannelMessage) > 0
-                                ? eF.S.dispatchToLastSubscribed(e3.CkL.FOCUS_ATTACHMENT_AREA)
-                                : eF.S.dispatchToLastSubscribed(e3.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                                ? eG.S.dispatchToLastSubscribed(e3.CkL.FOCUS_ATTACHMENT_AREA)
+                                : eG.S.dispatchToLastSubscribed(e3.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                         else {
                             let { channel: e } = this.props,
                                 t = eR.Z.getLastChatCommandMessage(e.id),
@@ -462,7 +462,7 @@ class ta extends i.PureComponent {
                 if (null != l) {
                     if (l.inputType === M.iw.BUILT_IN_INTEGRATION)
                         return (
-                            eF.S.dispatch(e3.CkL.SHAKE_APP, {
+                            eG.S.dispatch(e3.CkL.SHAKE_APP, {
                                 duration: 200,
                                 intensity: 2,
                             }),
@@ -536,11 +536,11 @@ class ta extends i.PureComponent {
                     if (!y)
                         if (C === e3.zYc.SLOWMODE_COOLDOWN)
                             return (
-                                eF.S.dispatch(e3.CkL.SHAKE_APP, {
+                                eG.S.dispatch(e3.CkL.SHAKE_APP, {
                                     duration: 200,
                                     intensity: 2,
                                 }),
-                                eF.S.dispatch(e3.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
+                                eG.S.dispatch(e3.CkL.EMPHASIZE_SLOWMODE_COOLDOWN),
                                 {
                                     shouldClear: !1,
                                     shouldRefocus: !0,
@@ -675,7 +675,7 @@ class ta extends i.PureComponent {
                 }),
             ),
             e9(this, "renderApplicationCommandIcon", (e, t, n) =>
-                (0, r.jsx)(F.Z, {
+                (0, r.jsx)(G.Z, {
                     className: n,
                     command: e,
                     section: t,
@@ -697,14 +697,14 @@ class to extends i.PureComponent {
             : null;
     }
     componentDidMount() {
-        eF.S.subscribe(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
+        eG.S.subscribe(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
     }
     componentDidUpdate(e) {
         (this.props.isEditing !== e.isEditing || this.props.hasModalOpen !== e.hasModalOpen) &&
             (this.props.isEditing || this.props.hasModalOpen ? this.handleInputBlur() : this.handleInputFocus());
     }
     componentWillUnmount() {
-        eF.S.unsubscribe(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
+        eG.S.unsubscribe(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, this.handleRequestFocus);
     }
     render() {
         var e, t;
@@ -749,11 +749,11 @@ class to extends i.PureComponent {
                   : u.T.THREADS.has(i.type)
                     ? e7.t["OkzL+f"]
                     : e7.t.UbNmGR;
-        let G = (0, r.jsx)("div", {
+        let F = (0, r.jsx)("div", {
                 className: e6.channelBottomBarArea,
                 children: (0, r.jsx)(e0.Z, {}),
             }),
-            F = (0, r.jsxs)("div", {
+            G = (0, r.jsxs)("div", {
                 className: e6.channelBottomBarArea,
                 children: [
                     (0, r.jsx)(eS.Z, {
@@ -790,7 +790,7 @@ class to extends i.PureComponent {
                 ],
             }),
             H = (E && S) || M,
-            V = H ? G : F,
+            V = H ? F : G,
             z = a()({
                 [e5.barWithAppLauncherButton]: j,
                 [e5.barWithAppsDMsUI]: E,
@@ -807,22 +807,22 @@ class to extends i.PureComponent {
                 page: (0, eB.mE)(this.props.channel),
                 children: (0, r.jsx)(eo.sW, {
                     children: (0, r.jsx)(ea.BV, {
-                        children: (0, r.jsxs)(eG.I3, {
+                        children: (0, r.jsxs)(eF.I3, {
                             ref: this.dispatchGroupRef,
                             children: [
-                                (0, r.jsx)(eG.d9, {
+                                (0, r.jsx)(eF.d9, {
                                     event: e3.CkL.TEXTAREA_FOCUS,
                                     handler: this.handleInputFocus,
                                 }),
-                                (0, r.jsx)(eG.d9, {
+                                (0, r.jsx)(eF.d9, {
                                     event: e3.CkL.TEXTAREA_BLUR,
                                     handler: this.handleInputBlur,
                                 }),
-                                (0, r.jsx)(eG.d9, {
+                                (0, r.jsx)(eF.d9, {
                                     event: e3.CkL.OPEN_EXPRESSION_PICKER,
                                     handler: this.handleOpenExpressionPicker,
                                 }),
-                                (0, r.jsx)(eG.d9, {
+                                (0, r.jsx)(eF.d9, {
                                     event: e3.CkL.OPEN_APP_LAUNCHER,
                                     handler: this.handleOpenAppLauncher,
                                 }),
@@ -968,11 +968,11 @@ class to extends i.PureComponent {
                     switch (e.which) {
                         case e3.yXg.ARROW_LEFT:
                             n === U.Ie.SIDEBAR &&
-                                eF.S.dispatch(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eD.Z.getChannelId() });
+                                eG.S.dispatch(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eD.Z.getChannelId() });
                             return;
                         case e3.yXg.ARROW_RIGHT:
                             n === U.Ie.NORMAL &&
-                                eF.S.dispatch(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, {
+                                eG.S.dispatch(e3.CkL.FOCUS_CHANNEL_TEXT_AREA, {
                                     channelId: eZ.ZP.getCurrentSidebarChannelId(r.id),
                                 });
                     }
@@ -1104,9 +1104,9 @@ let ts = i.memo(function (e) {
         commands: U,
     });
     let B = i.useRef(null),
-        G = (0, d.e7)([P.Z], () => P.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        F = (0, d.e7)([eD.Z], () => eD.Z.getVoiceChannelId()),
-        H = (0, d.e7)([eT.Z], () => eT.Z.getChannel(F)),
+        F = (0, d.e7)([P.Z], () => P.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        G = (0, d.e7)([eD.Z], () => eD.Z.getVoiceChannelId()),
+        H = (0, d.e7)([eT.Z], () => eT.Z.getChannel(G)),
         V = (0, d.e7)([ek.default], () => (t.type !== e3.d4z.DM ? null : ek.default.getUser(t.getRecipientId()))),
         z = (0, d.e7)([em.ZP, eP.default], () => em.ZP.getUserCombo(eP.default.getId(), t.id)),
         q = (0, b.iD)(t),
@@ -1137,7 +1137,7 @@ let ts = i.memo(function (e) {
         isInitialLoading: w,
         showEntryPointAppCommandButton: null != R,
         entryPointCommandButtonRef: B,
-        isFailedAppDMLoad: G,
+        isFailedAppDMLoad: F,
         pendingScheduledMessage: I,
         recipientUser: V,
         voiceChannel: H,

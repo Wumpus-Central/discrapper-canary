@@ -67,9 +67,9 @@ function w(e) {
         }),
         U = i.useRef(null),
         B = (0, s.Z)(U),
-        G = (0, g.$m)(),
-        F = (0, o.q_F)({
-            opacity: +(null != G.interactionType),
+        F = (0, g.$m)(),
+        G = (0, o.q_F)({
+            opacity: +(null != F.interactionType),
             config: { duration: 150 },
         }),
         H = (e) => {
@@ -93,7 +93,7 @@ function w(e) {
             fetchEndedAt: null == w ? void 0 : w.fetchEndedAt,
             isLoaded: null == w ? void 0 : w.isLoaded,
             children: (0, r.jsx)(g.NJ, {
-                value: G,
+                value: F,
                 children: (0, r.jsxs)(x.Z, {
                     ref: U,
                     user: t,
@@ -101,9 +101,9 @@ function w(e) {
                     themeType: Z.l.SIDEBAR,
                     themeOverride: M,
                     children: [
-                        null != G.interactionType &&
+                        null != F.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: F,
+                                style: G,
                                 className: N.backdrop,
                             }),
                         (0, r.jsxs)(a.u2, {
@@ -113,7 +113,7 @@ function w(e) {
                                         (0, r.jsx)(j.Z, {
                                             user: t,
                                             themeType: Z.l.SIDEBAR,
-                                            shouldShowTooltip: null === G.interactionType,
+                                            shouldShowTooltip: null === F.interactionType,
                                         }),
                                         t.bot
                                             ? (0, r.jsx)(v.Z, { user: t })
@@ -159,7 +159,7 @@ function w(e) {
                                     currentUser: n,
                                     displayProfile: w,
                                     channel: f,
-                                    isHovering: null == G.interactionType && B,
+                                    isHovering: null == F.interactionType && B,
                                     onOpenProfile: T ? void 0 : H,
                                 }),
                                 (0, r.jsx)(P.Z, {

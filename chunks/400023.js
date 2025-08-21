@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(419388),
     U = n(406534),
     B = n(981631),
-    G = n(388032),
-    F = n(151227);
+    F = n(388032),
+    G = n(151227);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -248,7 +248,7 @@ let W = (0, o.animated)(u.eTT),
                 children: [
                     null != er && er,
                     (0, r.jsxs)("div", {
-                        className: a()(F.messagesWrapper, l, "group-spacing-".concat(o)),
+                        className: a()(G.messagesWrapper, l, "group-spacing-".concat(o)),
                         children: [
                             null == er && ee,
                             (0, r.jsxs)(
@@ -259,8 +259,8 @@ let W = (0, o.animated)(u.eTT),
                                             style: D ? ec : void 0,
                                             ref: es,
                                             customTheme: !0,
-                                            className: a()(p, F.scroller),
-                                            contentClassName: F.scrollerContent,
+                                            className: a()(p, G.scroller),
+                                            contentClassName: G.scrollerContent,
                                             onResize: X.handleResize,
                                             onScroll: X.handleScroll,
                                             onMouseDown: X.handleMouseDown,
@@ -278,10 +278,10 @@ let W = (0, o.animated)(u.eTT),
                                                 V(
                                                     H(
                                                         {
-                                                            className: a()(F.scrollerInner, {
-                                                                [F.scrollerAllowSticky]: m.isModeratorReportChannel(),
+                                                            className: a()(G.scrollerInner, {
+                                                                [G.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
-                                                            "aria-label": G.intl.formatToPlainString(G.t.XarRiI, {
+                                                            "aria-label": F.intl.formatToPlainString(F.t.XarRiI, {
                                                                 channelName: m.name,
                                                             }),
                                                         },
@@ -290,17 +290,17 @@ let W = (0, o.animated)(u.eTT),
                                                     {
                                                         children: [
                                                             (0, r.jsx)("span", {
-                                                                className: F.navigationDescription,
+                                                                className: G.navigationDescription,
                                                                 id: "messagesNavigationDescription",
                                                                 "aria-hidden": !0,
-                                                                children: G.intl.string(G.t.Spb3s7),
+                                                                children: F.intl.string(F.t.Spb3s7),
                                                             }),
                                                             $,
                                                             (0, r.jsx)("div", {
                                                                 className: a()({
-                                                                    [F.scrollerSpacer]: !T,
-                                                                    [F.empty]: 0 === g.length && !g.loadingMore,
-                                                                    [F.emptyForum]:
+                                                                    [G.scrollerSpacer]: !T,
+                                                                    [G.empty]: 0 === g.length && !g.loadingMore,
+                                                                    [G.emptyForum]:
                                                                         1 === g.length &&
                                                                         !g.loadingMore &&
                                                                         m.isForumPost() &&
@@ -395,8 +395,8 @@ let W = (0, o.animated)(u.eTT),
                 };
             })(),
             {
-                messages: G,
-                channelStream: F,
+                messages: F,
+                channelStream: G,
                 oldestUnreadMessageId: W,
                 editingMessageId: q,
             } = (function (e) {
@@ -465,8 +465,8 @@ let W = (0, o.animated)(u.eTT),
                         showNewMessagesBar: !0,
                         channel: t,
                         messageDisplayCompact: !o && (a || L),
-                        messages: G,
-                        channelStream: F,
+                        messages: F,
+                        channelStream: G,
                         permissionVersion: C,
                         uploads: (0, c.e7)([T.Z], () => T.Z.getFiles(t.id), [t]),
                         unreadCount: (0, c.e7)([Z.ZP], () => Z.ZP.getUnreadCount(t.id), [t]),

@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(981631),
     U = n(701488),
     B = n(815660),
-    G = n(388032),
-    F = n(97508);
+    F = n(388032),
+    G = n(97508);
 function H(e, t, n) {
     return (
         t in e
@@ -128,59 +128,59 @@ class W extends i.PureComponent {
                 useReducedMotion: y,
             };
         if (e && !f) {
-            if (((S.message = G.intl.string(G.t.Hl0Mqq)), null != m && m >= 1000)) {
+            if (((S.message = F.intl.string(F.t.Hl0Mqq)), null != m && m >= 1000)) {
                 let e = 1000 * Math.floor(m / 1000);
-                S.subtitle = G.intl.formatToPlainString(G.t.C5bgrK, { count: e.toLocaleString() });
+                S.subtitle = F.intl.formatToPlainString(F.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (S.buttonText = G.intl.string(G.t["3aOv+v"])),
+            (S.buttonText = F.intl.string(F.t["3aOv+v"])),
                 (S.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((S.onSecondaryButtonClick = this.handleJoinServer),
-                    (S.secondaryButtonText = G.intl.string(G.t["RLch7+"])));
+                    (S.secondaryButtonText = F.intl.string(F.t["RLch7+"])));
         } else if (n)
-            (S.message = G.intl.string(G.t["Eg3/c3"])),
-                (S.buttonText = G.intl.string(G.t.fiNVio)),
+            (S.message = F.intl.string(F.t["Eg3/c3"])),
+                (S.buttonText = F.intl.string(F.t.fiNVio)),
                 (S.onButtonClick = b ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (b)
             switch (null == x ? void 0 : x.applicationStatus) {
                 case _.wB.SUBMITTED:
-                    (S.message = G.intl.string(G.t["5iLvS0"])),
-                        (S.subtitle = G.intl.string(G.t.FdsK4u)),
-                        (S.buttonText = G.intl.string(G.t.mqtdmZ)),
+                    (S.message = F.intl.string(F.t["5iLvS0"])),
+                        (S.subtitle = F.intl.string(F.t.FdsK4u)),
+                        (S.buttonText = F.intl.string(F.t.mqtdmZ)),
                         (S.onButtonClick = this.handleCancelApplication);
                     break;
                 case _.wB.REJECTED:
-                    (S.message = G.intl.string(G.t.lk30cX)),
-                        (S.buttonText = G.intl.string(G.t["8RrsHh"])),
+                    (S.message = F.intl.string(F.t.lk30cX)),
+                        (S.buttonText = F.intl.string(F.t["8RrsHh"])),
                         (S.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (S.message = G.intl.string(G.t.rEBKvr)),
-                        (S.buttonText = G.intl.string(G.t["r8/DT0"])),
+                    (S.message = F.intl.string(F.t.rEBKvr)),
+                        (S.buttonText = F.intl.string(F.t["r8/DT0"])),
                         (S.buttonColor = s.Tt.BRAND),
                         (S.onButtonClick = this.handleShowMemberVerification);
             }
         else if (v || null == O)
             i && !C
-                ? ((S.message = G.intl.string(G.t["2dThMD"])),
-                  (S.buttonText = G.intl.string(G.t["50gfOj"])),
+                ? ((S.message = F.intl.string(F.t["2dThMD"])),
+                  (S.buttonText = F.intl.string(F.t["50gfOj"])),
                   (S.onButtonClick = this.handleVerifyPhone))
                 : l
-                  ? ((S.message = G.intl.string(G.t.FkGPS0)),
-                    (S.buttonText = G.intl.string(G.t.lm1UKi)),
+                  ? ((S.message = F.intl.string(F.t.FkGPS0)),
+                    (S.buttonText = F.intl.string(F.t.lm1UKi)),
                     (S.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((S.message = G.intl.formatToPlainString(G.t.IH7RMD, { min: k.YeM.MEMBER_AGE })),
+                    ? ((S.message = F.intl.formatToPlainString(F.t.IH7RMD, { min: k.YeM.MEMBER_AGE })),
                       (S.countdown = o))
                     : u &&
-                      ((S.message = G.intl.formatToPlainString(G.t["2JA2GB"], { min: k.YeM.ACCOUNT_AGE })),
+                      ((S.message = F.intl.formatToPlainString(F.t["2JA2GB"], { min: k.YeM.ACCOUNT_AGE })),
                       (S.countdown = d));
         else {
             var I;
             (S.imageSrc = null != (I = O.getIconURL(U.Si.SMALL)) ? I : void 0),
-                (S.message = G.intl.format(G.t.EvDn1N, { name: O.name })),
+                (S.message = F.intl.format(F.t.EvDn1N, { name: O.name })),
                 null != O.connectionEntrypointUrl &&
-                    ((S.buttonText = G.intl.string(G.t.S0W8Z2)),
+                    ((S.buttonText = F.intl.string(F.t.S0W8Z2)),
                     (S.onButtonClick = () => {
                         window.open(O.connectionEntrypointUrl, "_blank");
                     }));
@@ -210,7 +210,7 @@ class W extends i.PureComponent {
                                               (0, r.jsx)(
                                                   c.P3F,
                                                   z(V({ innerRef: this.upsellTargetRef }, e), {
-                                                      className: F.clickableChannelTextArea,
+                                                      className: G.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
                                                       children: h,
                                                   }),
@@ -252,9 +252,9 @@ class W extends i.PureComponent {
                             z(
                                 V(
                                     {
-                                        header: G.intl.string(G.t.aIz1oa),
-                                        confirmText: G.intl.string(G.t["cY+Ooa"]),
-                                        cancelText: G.intl.string(G.t["ETE/oK"]),
+                                        header: F.intl.string(F.t.aIz1oa),
+                                        confirmText: F.intl.string(F.t["cY+Ooa"]),
+                                        cancelText: F.intl.string(F.t["ETE/oK"]),
                                         onConfirm: () => m.Z.removeGuildJoinRequest(e.id),
                                         confirmButtonColor: s.zx.Colors.BRAND,
                                     },
@@ -263,7 +263,7 @@ class W extends i.PureComponent {
                                 {
                                     children: (0, r.jsx)(c.Text, {
                                         variant: "text-md/normal",
-                                        children: G.intl.string(G.t["13tjTU"]),
+                                        children: F.intl.string(F.t["13tjTU"]),
                                     }),
                                 },
                             ),
@@ -303,12 +303,12 @@ class W extends i.PureComponent {
                         (0, r.jsx)(
                             c.ConfirmModal,
                             z(V({}, e), {
-                                header: G.intl.string(G.t.LykQYm),
-                                confirmText: G.intl.string(G.t.BddRzc),
+                                header: F.intl.string(F.t.LykQYm),
+                                confirmText: F.intl.string(F.t.BddRzc),
                                 confirmButtonColor: s.zx.Colors.BRAND,
                                 children: (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    children: G.intl.format(G.t.azKEPz, { email: t }),
+                                    children: F.intl.format(F.t.azKEPz, { email: t }),
                                 }),
                             }),
                         ),

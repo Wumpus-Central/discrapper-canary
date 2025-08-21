@@ -357,7 +357,7 @@ class w extends o.C {
                     a.ads = to.internalBinaryRead(e, e.uint32(), n, a.ads);
                     break;
                 case 25:
-                    a.inAppFeedbackSettings = tu.internalBinaryRead(e, e.uint32(), n, a.inAppFeedbackSettings);
+                    a.inAppFeedbackSettings = tf.internalBinaryRead(e, e.uint32(), n, a.inAppFeedbackSettings);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -400,7 +400,7 @@ class w extends o.C {
             e.applications && e7.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(),
             e.ads && to.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(),
             e.inAppFeedbackSettings &&
-                tu.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, r.TD.LengthDelimited).fork(), n).join();
+                tf.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -554,7 +554,7 @@ class w extends o.C {
                 no: 25,
                 name: "in_app_feedback_settings",
                 kind: "message",
-                T: () => tu,
+                T: () => tf,
             },
         ]);
     }
@@ -2119,6 +2119,9 @@ class ec extends o.C {
                 case 32:
                     a.goreContentSettings = eo.internalBinaryRead(e, e.uint32(), n, a.goreContentSettings);
                     break;
+                case 33:
+                    a.defaultReactionEmoji = tu.internalBinaryRead(e, e.uint32(), n, a.defaultReactionEmoji);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2202,7 +2205,9 @@ class ec extends o.C {
                     n,
                 ).join(),
             e.goreContentSettings &&
-                eo.internalBinaryWrite(e.goreContentSettings, t.tag(32, r.TD.LengthDelimited).fork(), n).join();
+                eo.internalBinaryWrite(e.goreContentSettings, t.tag(32, r.TD.LengthDelimited).fork(), n).join(),
+            e.defaultReactionEmoji &&
+                tu.internalBinaryWrite(e.defaultReactionEmoji, t.tag(33, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2396,6 +2401,12 @@ class ec extends o.C {
                 name: "gore_content_settings",
                 kind: "message",
                 T: () => eo,
+            },
+            {
+                no: 33,
+                name: "default_reaction_emoji",
+                kind: "message",
+                T: () => tu,
             },
         ]);
     }
@@ -5158,6 +5169,66 @@ class ts extends o.C {
 let tl = new ts();
 class tc extends o.C {
     create(e) {
+        let t = {};
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    a.emojiId = s.wA.internalBinaryRead(e, e.uint32(), n, a.emojiId);
+                    break;
+                case 2:
+                    a.emojiName = s.Gm.internalBinaryRead(e, e.uint32(), n, a.emojiName);
+                    break;
+                default:
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
+                    let l = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, l);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        e.emojiId && s.wA.internalBinaryWrite(e.emojiId, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
+            e.emojiName && s.Gm.internalBinaryWrite(e.emojiName, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_users.v1.DefaultReactionEmoji", [
+            {
+                no: 1,
+                name: "emoji_id",
+                kind: "message",
+                T: () => s.wA,
+            },
+            {
+                no: 2,
+                name: "emoji_name",
+                kind: "message",
+                T: () => s.Gm,
+            },
+        ]);
+    }
+}
+let tu = new tc();
+class td extends o.C {
+    create(e) {
         let t = { inAppFeedbackStates: {} };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -5232,4 +5303,4 @@ class tc extends o.C {
         ]);
     }
 }
-let tu = new tc();
+let tf = new td();

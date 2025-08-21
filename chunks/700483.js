@@ -37,8 +37,8 @@ var r = n(951288),
     k = n(314897),
     U = n(131951),
     B = n(496675),
-    G = n(944486),
-    F = n(594174),
+    F = n(944486),
+    G = n(594174),
     H = n(881824),
     V = n(471253),
     z = n(922482),
@@ -80,7 +80,7 @@ function es(e) {
 }
 let ec = i.memo(function (e) {
     let { channel: t } = e,
-        n = (0, o.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]);
+        n = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]);
     return (0, r.jsxs)("div", {
         className: eo.container,
         children: [
@@ -114,7 +114,7 @@ function ed(e) {
         { canManageGuildEvent: f } = (0, E.XJ)(t),
         m = (0, o.e7)([K.Z], () => K.Z.getStageInstanceByChannel(t.id), [t.id]),
         g = (0, o.e7)([v.ZP], () => v.ZP.getGuildScheduledEvent(null == m ? void 0 : m.guild_scheduled_event_id)),
-        b = (0, o.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]),
+        b = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: C } = (0, Z.Z)(t),
         x = k.default.getId(),
         [O] = (0, er.Z)(t),
@@ -253,9 +253,9 @@ let ef = i.memo(function (e) {
         { cameraUnavailable: p, enabled: _ } = (0, S.Z)(),
         v = (0, P.Z)(t),
         { limit: O, reachedLimit: j } = (0, I.Z)(t),
-        E = (0, o.e7)([F.default], () => F.default.getCurrentUser()),
+        E = (0, o.e7)([G.default], () => G.default.getCurrentUser()),
         R = (0, o.e7)([U.Z], () => (0, x.Z)(U.Z)),
-        M = (0, o.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]),
+        M = (0, o.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         k = (0, o.e7)([f.Z], () => f.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, X.PK)(t.id),
         H = O > 0,

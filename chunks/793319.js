@@ -42,8 +42,8 @@ var r = n(951288),
     k = n(140465),
     U = n(800966),
     B = n(641015),
-    G = n(618158),
-    F = n(390322),
+    F = n(618158),
+    G = n(390322),
     H = n(791592),
     V = n(136995),
     z = n(402113),
@@ -178,12 +178,12 @@ function eO(e) {
                         },
                     });
             })(),
-            (0, r.jsx)(G.Z, {
+            (0, r.jsx)(F.Z, {
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: y,
                     renderPopout: (e) => {
                         let { closePopout: i } = e;
-                        return (0, r.jsx)(F.Z, {
+                        return (0, r.jsx)(G.Z, {
                             children: (0, r.jsx)(eu.Z, {
                                 channel: t,
                                 currentUser: n,
@@ -487,7 +487,7 @@ let eP = function (e) {
             var e;
             return (null != (e = null == M ? void 0 : M.channelId) ? e : en.Z.getVoiceChannelId()) === n.id;
         }),
-        G = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
+        F = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: H, limit: V } = (0, el.Z)(n),
         { analyticsLocations: z } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
         W = (0, Q.Hu)({
@@ -537,7 +537,7 @@ let eP = function (e) {
                                           targetElementRef: $,
                                           renderPopout: (e) => {
                                               let { closePopout: t } = e;
-                                              return (0, r.jsx)(F.Z, {
+                                              return (0, r.jsx)(G.Z, {
                                                   children: (0, r.jsx)(J.R, {
                                                       onClose: t,
                                                       location: x.Z.VOICE_CONTROL_TRAY,
@@ -571,7 +571,7 @@ let eP = function (e) {
                                               targetElementRef: ee,
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;
-                                                  return (0, r.jsx)(F.Z, {
+                                                  return (0, r.jsx)(G.Z, {
                                                       children: (0, r.jsx)(E.Z, {
                                                           onClose: t,
                                                           minimal: !0,
@@ -637,7 +637,7 @@ let eP = function (e) {
                                   ],
                               }),
                               (0, r.jsx)(eE, {
-                                  connectedEmbeddedActivity: G,
+                                  connectedEmbeddedActivity: F,
                                   currentUser: _,
                                   channel: n,
                                   onDisconnectCall: o,

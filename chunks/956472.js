@@ -103,21 +103,28 @@ let d = (e) => {
     },
     h = (e) => {
         var t;
-        let { hasSufficientOrbs: n, orbPrice: r, fiatPrice: i, isOrbExclusive: a, hasDiscountOffer: o = !1 } = e,
-            s = [];
+        let {
+                hasSufficientOrbs: n,
+                orbPrice: r,
+                fiatPrice: i,
+                isOrbExclusive: a,
+                hasDiscountOffer: o = !1,
+                tab: c = null,
+            } = e,
+            u = [];
         null != r && null != i
-            ? n && !o
-                ? s.push(r, i)
-                : s.push(i, r)
+            ? n && (!o || c === s.AW.ORBS)
+                ? u.push(r, i)
+                : u.push(i, r)
             : null != r
-              ? s.push(r)
-              : null != i && s.push(i);
-        let c = s.length > 0 && (null == (t = s[0]) ? void 0 : t.currency) === l.pKx.DISCORD_ORB;
+              ? u.push(r)
+              : null != i && u.push(i);
+        let d = u.length > 0 && (null == (t = u[0]) ? void 0 : t.currency) === l.pKx.DISCORD_ORB;
         return {
-            checkoutEligiblePrices: s,
+            checkoutEligiblePrices: u,
             isOrbExclusive: a,
             hasSufficientOrbs: n,
-            shouldCheckoutWithOrbs: c,
+            shouldCheckoutWithOrbs: d,
         };
     },
     m = (e) => {
@@ -163,6 +170,7 @@ function g(e) {
             isOrbExclusive: l,
             hasSufficientOrbs: d,
             hasDiscountOffer: a,
+            tab: i,
         }),
     );
 }

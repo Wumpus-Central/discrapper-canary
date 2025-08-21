@@ -41,8 +41,8 @@ var r = n(951288),
     k = n(689674),
     U = n(438075),
     B = n(764893),
-    G = n(481363),
-    F = n(900902),
+    F = n(481363),
+    G = n(900902),
     H = n(252032),
     V = n(737243),
     z = n(614584),
@@ -170,7 +170,7 @@ function en(e) {
                       [X.systemMessage]: !0,
                       [X.groupStart]: !0,
                   }),
-                  childrenHeader: (0, F.Z)({
+                  childrenHeader: (0, G.Z)({
                       messageProps: e,
                       setPopout: m,
                       messagePopouts: f,
@@ -203,7 +203,7 @@ function er(e) {
         { onFocus: S } = E,
         P = ee(E, ["onFocus"]),
         { isFocused: N, handleFocus: k, handleBlur: B } = (0, R.bb)(S),
-        { popouts: G, selected: V, setPopout: Q } = (0, D.Z)(o.id, Y.d$),
+        { popouts: F, selected: V, setPopout: Q } = (0, D.Z)(o.id, Y.d$),
         et = v.RS.useSetting(),
         en = v.NA.useSetting(),
         er = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(j)),
@@ -216,7 +216,7 @@ function er(e) {
             groupId: y,
             message: o,
             defaultValue: V,
-            popouts: G,
+            popouts: F,
         }),
         es = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         ec = V || (es && N),
@@ -273,17 +273,17 @@ function er(e) {
                         (0, z.Z)(
                             $(J({}, e), {
                                 setPopout: Q,
-                                referencedUsernameProfile: G.referencedUsernameProfile,
-                                referencedAvatarProfile: G.referencedAvatarProfile,
+                                referencedUsernameProfile: F.referencedUsernameProfile,
+                                referencedAvatarProfile: F.referencedAvatarProfile,
                                 replyReference: j,
                                 replyMessage: er,
                                 isReplySpineClickable: !0,
                             }),
                         ),
-                    childrenHeader: (0, F.Z)({
+                    childrenHeader: (0, G.Z)({
                         messageProps: e,
                         setPopout: Q,
-                        messagePopouts: G,
+                        messagePopouts: F,
                         replyReference: j,
                         author: ef,
                         repliedMessage: er,
@@ -384,8 +384,8 @@ let ei = i.memo(function (e) {
             previewLinkTarget: !0,
         }),
         eB = (0, M.Z)(P, et, eN),
-        eG = (0, T.ZP)(x),
-        eF = (0, u.e7)([y.Z], () => y.Z.getPendingReply(et)),
+        eF = (0, T.ZP)(x),
+        eG = (0, u.e7)([y.Z], () => y.Z.getPendingReply(et)),
         eH = (function (e) {
             let t = i.useRef(e);
             return (
@@ -397,7 +397,7 @@ let ei = i.memo(function (e) {
         })(ei),
         eV = (0, f.p9)({
             guildId: Q.guild_id,
-            roleId: eG.iconRoleId,
+            roleId: eF.iconRoleId,
         }),
         ez = (0, w.iG)(x, el),
         eW = (0, w.Gx)(x),
@@ -453,7 +453,7 @@ let ei = i.memo(function (e) {
                                 [X.systemMessage]: (0, Z.Z)(x),
                                 [X.groupStart]: !ea && (eJ || x.type === q.uaV.REPLY),
                                 [X.selected]: eA,
-                                [X.replying]: (null == eF ? void 0 : eF.message.id) === x.id,
+                                [X.replying]: (null == eG ? void 0 : eG.message.id) === x.id,
                                 [X.interactionSending]: x.isCommandType() && x.state === q.yb.SENDING,
                                 [X.automodMessage]: eX,
                                 [X.editing]: eT,
@@ -477,12 +477,12 @@ let ei = i.memo(function (e) {
                             childrenExecutedCommand: (0, V.Z)(e, eb, em),
                             childrenHeader: ea
                                 ? void 0
-                                : (0, F.Z)({
+                                : (0, G.Z)({
                                       messageProps: e,
                                       setPopout: eb,
                                       messagePopouts: em,
                                       replyReference: eo,
-                                      author: eG,
+                                      author: eF,
                                       repliedMessage: ef,
                                       roleIcon: eV,
                                   }),
@@ -496,7 +496,7 @@ let ei = i.memo(function (e) {
                             }),
                             childrenButtons:
                                 ev || eE
-                                    ? (0, G.Z)({
+                                    ? (0, F.Z)({
                                           buttonProps: e,
                                           setPopout: eb,
                                           messagePopouts: em,
@@ -520,7 +520,7 @@ let ei = i.memo(function (e) {
                                             ? n
                                             : window);
                             },
-                            author: eG,
+                            author: eF,
                         }),
                     ),
                 ],

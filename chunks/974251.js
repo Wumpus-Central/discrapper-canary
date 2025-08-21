@@ -37,7 +37,7 @@ var r = n(951288),
     k = n(921944),
     U = n(388032),
     B = n(90274);
-function G(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function G(e) {
     }
     return e;
 }
-function F(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -118,7 +118,7 @@ let H = i.memo(function (e) {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await n.e("57478").then(n.bind(n, 542055));
-                return (t) => (0, r.jsx)(e, F(G({}, t), { channelId: V.id }));
+                return (t) => (0, r.jsx)(e, G(F({}, t), { channelId: V.id }));
             },
             { modalKey: L.Qr },
         ),
@@ -191,7 +191,7 @@ let H = i.memo(function (e) {
                     case "recentClips":
                         return (0, r.jsx)(
                             b.Z,
-                            F(G({}, e), {
+                            G(F({}, e), {
                                 onOpenClips: em,
                                 lastClipsSession: ee,
                             }),
@@ -199,7 +199,7 @@ let H = i.memo(function (e) {
                     case "attachMenu":
                         return (0, r.jsx)(
                             R.Z,
-                            F(G({}, e), {
+                            G(F({}, e), {
                                 onClose: () => ec(null),
                                 options: eO,
                                 channel: V,
@@ -220,8 +220,8 @@ let H = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     w.Z,
-                    F(
-                        G(
+                    G(
+                        F(
                             {
                                 ref: Q,
                                 className: a()(B.attachButton, H),
