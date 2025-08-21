@@ -84856,6 +84856,12 @@ div.nagbar_d74ef8 {
 }
 
 .warningCorner__7700a {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-round);
+    display: flex;
+    justify-content: center;
+    padding: 2px;
     position: absolute;
     right: 0;
     top: 0
