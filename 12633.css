@@ -84808,6 +84808,42 @@ div.nagbar_d74ef8 {
     color: var(--premium-tier-2-pink)
 }
 
+.container__7700a {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 16px
+}
+
+.textContainer__7700a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1
+}
+
+.iconContainer__7700a {
+    align-items: center;
+    background-color: var(--background-feedback-warning);
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.gameIconContainer__7700a {
+    position: relative
+}
+
+.warningCorner__7700a {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
 .wrapper__8b9fc {
     background-clip: padding-box;
     background-color: var(--status-danger);
@@ -85134,6 +85170,10 @@ div.nagbar_d74ef8 {
 
 .theme-dark .row__740f2 {
     box-shadow: inset 0 -1px 0 hsl(var(--primary-400-hsl)/.3)
+}
+
+.systemServiceUpsell__740f2 {
+    margin-bottom: 24px
 }
 
 .option_be1a1e {
@@ -89113,6 +89153,10 @@ html .invoiceCancelRow__968a4 {
 
 .column__7072d {
     flex: 1 1 50%
+}
+
+.systemServiceUpsell_b4258e {
+    margin-bottom: 30px
 }
 
 .container_cc79ae {
