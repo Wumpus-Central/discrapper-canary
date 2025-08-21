@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"o/An3t":["Użytkownik ",[1,"username"]," poprosił Cię o streamowanie ",[1,"applicationName"]],"DKHheX":"Poproś o streamowanie","8qq+Hx":["Poproś o streamowanie ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," prosi Cię o streamowanie ",[1,"applicationName"]],"7pndSk":["Poproszono o streamowanie ",[1,"applicationName"]],"P0wwmJ":"Użytkownik już streamuje","u4QmWl":"Prośba wygasła","qRXatr":"Użytkownika nie ma na kanale głosowym","43zohI":"Gra nie jest uruchomiona","8HU1Mz":"Prośba oczekuje na rozpatrzenie","5+172d":"Streamuj","jTbTAA":[[8,"$b",[[1,"username"]]]," chce oglądać, jak grasz w ",[8,"$b",[[1,"game"]]],". Rozpocząć transmisję na żywo?"]}',
+);
