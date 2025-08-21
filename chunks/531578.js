@@ -129,6 +129,7 @@ var p = (function (e) {
             (e.UNABLE_TO_FIND_OUTPUT_DEVICE = "UNABLE_TO_FIND_OUTPUT_DEVICE"),
             (e.TROUBLE_WITH_SPEAKERPHONE = "TROUBLE_WITH_SPEAKERPHONE"),
             (e.COMPLAINTS = "COMPLAINTS"),
+            (e.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
             e
         );
     })({}),
@@ -155,6 +156,7 @@ var p = (function (e) {
             (e.BAD_AUDIO = "BAD_AUDIO"),
             (e.STOPPED_UNEXPECTEDLY = "STOPPED_UNEXPECTEDLY"),
             (e.DESYNC = "DESYNC"),
+            (e.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
             e
         );
     })({}),

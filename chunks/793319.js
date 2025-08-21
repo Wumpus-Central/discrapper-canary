@@ -1,7 +1,7 @@
 n.d(t, {
-    NZ: () => eO,
-    ZP: () => eP,
-    r: () => ev,
+    NZ: () => eE,
+    ZP: () => eT,
+    r: () => ej,
 }),
     n(388685);
 var r = n(951288),
@@ -26,56 +26,58 @@ var r = n(951288),
     v = n(906732),
     O = n(358221),
     j = n(659580),
-    E = n(793865),
-    S = n(575175),
-    I = n(522651),
-    P = n(795318),
-    Z = n(243778),
-    T = n(258609),
-    N = n(446226),
-    A = n(569545),
-    w = n(74299),
-    R = n(803647),
-    M = n(554747),
-    D = n(95764),
-    L = n(459502),
-    k = n(140465),
-    U = n(800966),
-    B = n(641015),
-    F = n(618158),
-    G = n(390322),
-    H = n(791592),
-    V = n(136995),
-    z = n(402113),
-    W = n(197016),
-    Y = n(386000),
-    q = n(331197),
-    K = n(698877),
-    X = n(25827),
-    Q = n(875527),
-    J = n(540650),
-    $ = n(199902),
-    ee = n(523746),
-    et = n(131951),
-    en = n(944486),
-    er = n(594174),
-    ei = n(923973),
-    el = n(829750),
-    ea = n(189771),
-    eo = n(294629),
-    es = n(304745),
-    ec = n(987329),
-    eu = n(544384),
-    ed = n(560688),
-    ep = n(127608),
-    eh = n(76021),
-    ef = n(173507),
-    em = n(981631),
-    eg = n(354459),
-    eb = n(921944),
-    e_ = n(32312);
-function ey() {
-    return (ey =
+    E = n(855844),
+    S = n(793865),
+    I = n(575175),
+    P = n(522651),
+    Z = n(795318),
+    T = n(243778),
+    N = n(258609),
+    A = n(446226),
+    w = n(569545),
+    R = n(74299),
+    M = n(803647),
+    D = n(554747),
+    L = n(95764),
+    k = n(459502),
+    U = n(853170),
+    B = n(140465),
+    F = n(800966),
+    G = n(641015),
+    H = n(618158),
+    V = n(390322),
+    z = n(791592),
+    W = n(136995),
+    Y = n(402113),
+    q = n(197016),
+    K = n(386000),
+    X = n(331197),
+    Q = n(698877),
+    J = n(25827),
+    $ = n(875527),
+    ee = n(306609),
+    et = n(199902),
+    en = n(523746),
+    er = n(131951),
+    ei = n(944486),
+    el = n(594174),
+    ea = n(923973),
+    eo = n(829750),
+    es = n(189771),
+    ec = n(294629),
+    eu = n(304745),
+    ed = n(987329),
+    ep = n(544384),
+    eh = n(560688),
+    ef = n(127608),
+    em = n(76021),
+    eg = n(173507),
+    eb = n(981631),
+    e_ = n(354459),
+    ey = n(921944),
+    eC = n(32312);
+function ex() {
+    return (ex =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -85,7 +87,7 @@ function ey() {
             return e;
         }).apply(this, arguments);
 }
-function eC(e) {
+function ev(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -110,7 +112,7 @@ function eC(e) {
     }
     return e;
 }
-function ex(e, t) {
+function eO(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -128,38 +130,38 @@ function ex(e, t) {
         e
     );
 }
-function ev(e, t) {
-    if (et.Z.isVideoEnabled() === e) return;
+function ej(e, t) {
+    if (er.Z.isVideoEnabled() === e) return;
     let n = () => h.Z.setVideoEnabled(e);
-    (0, I.v)(x.Z.VOICE_CONTROL_TRAY, I.d.CAMERA, e), e ? (0, ef.Z)(n, t) : n();
+    (0, P.v)(x.Z.VOICE_CONTROL_TRAY, P.d.CAMERA, e), e ? (0, eg.Z)(n, t) : n();
 }
-function eO(e) {
+function eE(e) {
     let { channel: t, currentUser: n, exitFullScreen: l, canGoLive: a, hasPermission: o, disabled: s } = e,
         { parentAnalyticsLocation: c, analyticsLocations: h } = (0, v.ZP)(),
         f = (0, _.bp)(),
-        m = (0, u.Wu)([$.Z], () => $.Z.getAllActiveStreams()),
+        m = (0, u.Wu)([et.Z], () => et.Z.getAllActiveStreams()),
         g = m.find((e) => e.ownerId === n.id),
         b = i.useRef(null),
         y = i.useRef(null),
         C = t.getGuildId(),
         x = i.useCallback(() => {
-            if ((null == l || l(), !a)) return (0, ep.Z)();
-            (0, eh.Z)(C, t.id, h);
+            if ((null == l || l(), !a)) return (0, ef.Z)();
+            (0, em.Z)(C, t.id, h);
         }, [C, t.id, a, l, h]),
-        O = (0, k.B4)(),
+        O = (0, B.B4)(),
         [j, E] = i.useState(!1),
         S = () => {
-            if (((0, I.v)(c, I.d.STREAM, !0), a)) return void x();
-            (0, ep.Z)();
+            if (((0, P.v)(c, P.d.STREAM, !0), a)) return void x();
+            (0, ef.Z)();
         },
-        P = () => {
-            (0, I.v)(c, I.d.STREAM, !1), (0, R.Z)(g);
+        I = () => {
+            (0, P.v)(c, P.d.STREAM, !1), (0, M.Z)(g);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (() => {
                 if (O && 0 === m.length)
-                    return (0, r.jsx)(Z.ZP, {
+                    return (0, r.jsx)(T.ZP, {
                         contentTypes: [d.z.TRIAL_NUX_STREAM_COACH_MARK],
                         bypassAutoDismiss: !0,
                         children: (e) => {
@@ -167,31 +169,31 @@ function eO(e) {
                             if (t === d.z.TRIAL_NUX_STREAM_COACH_MARK)
                                 return (
                                     E(!0),
-                                    (0, r.jsx)(U.h, {
+                                    (0, r.jsx)(F.h, {
                                         buttonRef: b,
                                         dismissed: !1,
                                         onDismiss: () => {
-                                            n(eb.L.USER_DISMISS), E(!1);
+                                            n(ey.L.USER_DISMISS), E(!1);
                                         },
                                     })
                                 );
                         },
                     });
             })(),
-            (0, r.jsx)(F.Z, {
+            (0, r.jsx)(H.Z, {
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: y,
                     renderPopout: (e) => {
                         let { closePopout: i } = e;
-                        return (0, r.jsx)(G.Z, {
-                            children: (0, r.jsx)(eu.Z, {
+                        return (0, r.jsx)(V.Z, {
+                            children: (0, r.jsx)(ep.Z, {
                                 channel: t,
                                 currentUser: n,
                                 activeStreams: null != g ? [g] : [],
                                 handleGoLive: x,
                                 appContext: f,
                                 onClose: i,
-                                onInteraction: eI("ManageStreamsMenu"),
+                                onInteraction: eZ("ManageStreamsMenu"),
                             }),
                         });
                     },
@@ -200,7 +202,7 @@ function eO(e) {
                     spacing: 16,
                     animation: p.yRy.Animation.FADE,
                     children: (e, t) => {
-                        var n = ey(
+                        var n = ex(
                                 {},
                                 (function (e) {
                                     if (null == e) throw TypeError("Cannot destructure " + e);
@@ -239,11 +241,11 @@ function eO(e) {
                                     })(n, ["onClick"]),
                                     a = null != g;
                                 return (0, r.jsx)(
-                                    K.O,
-                                    ex(eC({}, l), {
+                                    Q.O,
+                                    eO(ev({}, l), {
                                         centerButton: !0,
                                         disabled: s || !o,
-                                        className: e_.controlButton,
+                                        className: eC.controlButton,
                                         hasPermission: o,
                                         streamActive: null != g,
                                         isSelfStream: !0,
@@ -256,7 +258,7 @@ function eO(e) {
                                         shouldShowTooltip: !t,
                                         renderNUXHighlight: j,
                                         buttonRef: b,
-                                        onClick: null != g ? P : S,
+                                        onClick: null != g ? I : S,
                                     }),
                                 );
                             })(n, i),
@@ -267,13 +269,13 @@ function eO(e) {
         ],
     });
 }
-function ej(e) {
+function eS(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: i, setWhichPopoutIsOpen: l } = e,
         a = t.getGuildId();
     return (0, C.Z)(a, t.id)
         ? (0, r.jsx)("div", {
-              className: e_.buttonContainer,
-              children: (0, r.jsx)(es.M, {
+              className: eC.buttonContainer,
+              children: (0, r.jsx)(eu.M, {
                   channel: t,
                   idle: n,
                   whichPopoutIsOpen: i,
@@ -282,26 +284,26 @@ function ej(e) {
           })
         : null;
 }
-let eE = i.memo(function (e) {
+let eI = i.memo(function (e) {
     let { currentUser: t, onDisconnectCall: n, channel: l, connectedEmbeddedActivity: a } = e,
         { parentAnalyticsLocation: o } = (0, v.ZP)(),
         s = (0, u.e7)([O.Z], () => O.Z.getSelectedParticipant(l.id)),
         { reducedMotion: d } = i.useContext(p.Sfi),
         [h, f] = i.useState(!1),
         b = null == s ? void 0 : s.id,
-        _ = (0, u.e7)([$.Z], () => (null != b ? $.Z.getActiveStreamForStreamKey(b) : null), [b]),
-        y = (null == s ? void 0 : s.type) === eg.fO.STREAM && null != _ && _.ownerId !== (null == t ? void 0 : t.id),
-        C = (0, u.Wu)([$.Z], () =>
-            $.Z.getAllActiveStreamsForChannel(l.id).filter((e) => {
+        _ = (0, u.e7)([et.Z], () => (null != b ? et.Z.getActiveStreamForStreamKey(b) : null), [b]),
+        y = (null == s ? void 0 : s.type) === e_.fO.STREAM && null != _ && _.ownerId !== (null == t ? void 0 : t.id),
+        C = (0, u.Wu)([et.Z], () =>
+            et.Z.getAllActiveStreamsForChannel(l.id).filter((e) => {
                 let { ownerId: n } = e;
                 return n !== (null == t ? void 0 : t.id);
             }),
         ),
-        x = (0, M.qY)(l.id),
+        x = (0, D.qY)(l.id),
         j = i.useRef(null),
         E = i.useCallback(
             () =>
-                (null == s ? void 0 : s.type) === eg.fO.ACTIVITY &&
+                (null == s ? void 0 : s.type) === e_.fO.ACTIVITY &&
                 s.applicationId === (null == a ? void 0 : a.applicationId)
                     ? "ACTIVITY"
                     : y
@@ -311,7 +313,7 @@ let eE = i.memo(function (e) {
                         : "CALL",
             [s, null == a ? void 0 : a.applicationId, y, x],
         ),
-        [S, P] = i.useState(E()),
+        [S, I] = i.useState(E()),
         Z = (0, p.q_F)(
             {
                 opacity: h ? 0.2 : 1,
@@ -324,7 +326,7 @@ let eE = i.memo(function (e) {
                     clamp: h,
                 },
                 onRest: () => {
-                    P(E()), f(!1);
+                    I(E()), f(!1);
                 },
             },
             "animate-always",
@@ -333,21 +335,21 @@ let eE = i.memo(function (e) {
         E() !== S && f(!0);
     }, [S, E]);
     let T = i.useCallback(() => {
-        if (null != _) (0, g.g)((0, A.V9)(_));
-        else for (let e of C) (0, g.g)((0, A.V9)(e));
+        if (null != _) (0, g.g)((0, w.V9)(_));
+        else for (let e of C) (0, g.g)((0, w.V9)(e));
     }, [C, _]);
     return (0, r.jsx)(p.yRy, {
         targetElementRef: j,
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(eu.Z, {
+            return (0, r.jsx)(ep.Z, {
                 channel: l,
                 currentUser: t,
                 activeStreams: C,
-                handleGoLive: em.VqG,
+                handleGoLive: eb.VqG,
                 hideSelfOptions: !0,
                 onClose: n,
-                onInteraction: eI("ManageStreamsMenu"),
+                onInteraction: eZ("ManageStreamsMenu"),
             });
         },
         position: "top",
@@ -367,10 +369,10 @@ let eE = i.memo(function (e) {
                     };
                     switch (S) {
                         case "ACTIVITY":
-                            if (null == s || null == t || s.type !== eg.fO.ACTIVITY || null == a) return;
+                            if (null == s || null == t || s.type !== e_.fO.ACTIVITY || null == a) return;
                             return (0, r.jsx)(
-                                z.Z,
-                                ex(eC({}, c), {
+                                Y.Z,
+                                eO(ev({}, c), {
                                     applicationId: s.applicationId,
                                     color: "disconnect",
                                     location: a.location,
@@ -379,13 +381,13 @@ let eE = i.memo(function (e) {
                             );
                         case "STREAM":
                             return (0, r.jsx)(
-                                K.O,
-                                ex(eC({}, c), {
+                                Q.O,
+                                eO(ev({}, c), {
                                     hasPermission: !0,
                                     streamActive: !0,
                                     color: "disconnect",
                                     onClick: () => {
-                                        (0, I.v)(o, I.d.STOP_WATCHING), T();
+                                        (0, P.v)(o, P.d.STOP_WATCHING), T();
                                     },
                                     onPopoutClick: C.length > 1 ? i : null,
                                     isSelfStream: !1,
@@ -393,20 +395,20 @@ let eE = i.memo(function (e) {
                             );
                         case "CALL":
                             return (0, r.jsx)(
-                                W.Z,
-                                ex(eC({}, c), {
+                                q.Z,
+                                eO(ev({}, c), {
                                     color: "disconnect",
                                     onClick: () => {
-                                        (0, I.v)(o, I.d.DISCONNECT), null == n || n();
+                                        (0, P.v)(o, P.d.DISCONNECT), null == n || n();
                                     },
                                     onPopoutClick: C.length > 0 ? i : null,
                                 }),
                             );
                         case "EVENT":
-                            return (0, r.jsx)(D.Z, {
+                            return (0, r.jsx)(L.Z, {
                                 channelId: l.id,
                                 onClick: () => {
-                                    (0, I.v)(o, I.d.DISCONNECT), m.default.disconnect(), null == n || n();
+                                    (0, P.v)(o, P.d.DISCONNECT), m.default.disconnect(), null == n || n();
                                 },
                             });
                     }
@@ -415,25 +417,25 @@ let eE = i.memo(function (e) {
         },
     });
 });
-function eS(e) {
+function eP(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: l, currentUser: a } = e,
         o = (0, _.bp)(),
         { parentAnalyticsLocation: s } = (0, v.ZP)(),
-        { reachedLimit: c, limit: d } = (0, el.Z)(t),
+        { reachedLimit: c, limit: d } = (0, eo.Z)(t),
         p = i.useCallback(() => {
-            (0, I.v)(s, I.d.JOIN_VIDEO_CALL), (0, ef.Z)(() => m.default.selectVoiceChannel(t.id, !0), o);
+            (0, P.v)(s, P.d.JOIN_VIDEO_CALL), (0, eg.Z)(() => m.default.selectVoiceChannel(t.id, !0), o);
         }, [t.id, o, s]),
         h = i.useCallback(() => {
-            n ? (0, ed.Z)() : p();
+            n ? (0, eh.Z)() : p();
         }, [n, p]),
-        f = (0, u.e7)([ee.Z], () => {
-            let e = ee.Z.getCall(t.id);
+        f = (0, u.e7)([en.Z], () => {
+            let e = en.Z.getCall(t.id);
             return (null == e ? void 0 : e.ringing.includes(a.id)) === !0;
         });
     return (0, r.jsxs)("div", {
-        className: e_.wrapper,
+        className: eC.wrapper,
         children: [
-            (0, r.jsx)(X.C, {
+            (0, r.jsx)(J.C, {
                 enabled: !0,
                 centerButton: !0,
                 join: !0,
@@ -444,60 +446,61 @@ function eS(e) {
                 cameraUnavailable: n,
                 hasPermission: l,
                 onCameraUnavailable: h,
-                className: e_.controlButton,
+                className: eC.controlButton,
                 onChange: p,
             }),
-            (0, r.jsx)(V.Z, {
+            (0, r.jsx)(W.Z, {
                 centerButton: !0,
                 color: "join",
                 channel: t,
-                className: e_.controlButton,
+                className: eC.controlButton,
             }),
             f
-                ? (0, r.jsx)(H.Z, {
+                ? (0, r.jsx)(z.Z, {
                       color: "disconnect",
                       channel: t,
-                      className: e_.controlButton,
+                      className: eC.controlButton,
                       isTrayButton: !1,
                   })
                 : null,
         ],
     });
 }
-function eI(e) {
-    return (0, P.u)(e, x.Z.VOICE_CONTROL_TRAY, { entrypoint: eg.A5.CARET });
+function eZ(e) {
+    return (0, Z.u)(e, x.Z.VOICE_CONTROL_TRAY, { entrypoint: e_.A5.CARET });
 }
-let eP = function (e) {
+let eT = function (e) {
     var t;
     let { channel: n, className: l, onDisconnectCall: o, exitFullScreen: c, idleProps: d } = e,
         h = i.useRef(null),
         [m, g] = i.useState(void 0),
-        _ = (0, u.e7)([er.default], () => {
-            let e = er.default.getCurrentUser();
+        _ = (0, u.e7)([el.default], () => {
+            let e = el.default.getCurrentUser();
             return s()(null != e, "CenterControlTray: currentUser cannot be undefined"), e;
         }),
-        { cameraUnavailable: C, enabled: O } = (0, ei.Z)(),
-        I = (0, ea.Z)(n),
-        { suppress: P, selfMute: Z, mute: A } = (0, eo.Z)(n),
-        { canGoLive: R } = (0, u.cj)([et.Z], () => ({ canGoLive: (0, w.Z)(et.Z) })),
-        M = (0, N.Z)(),
-        D = (0, u.e7)([T.Z], () => null != T.Z.getAwaitingRemoteSessionInfo()),
-        k = null != M,
-        U = (0, u.e7)([en.Z], () => {
+        { cameraUnavailable: C, enabled: O } = (0, ea.Z)(),
+        P = (0, es.Z)(n),
+        { suppress: Z, selfMute: T, mute: w } = (0, ec.Z)(n),
+        { canGoLive: M } = (0, u.cj)([er.Z], () => ({ canGoLive: (0, R.Z)(er.Z) })),
+        D = (0, A.Z)(),
+        L = (0, u.e7)([N.Z], () => null != N.Z.getAwaitingRemoteSessionInfo()),
+        B = null != D,
+        F = (0, u.e7)([ei.Z], () => {
             var e;
-            return (null != (e = null == M ? void 0 : M.channelId) ? e : en.Z.getVoiceChannelId()) === n.id;
+            return (null != (e = null == D ? void 0 : D.channelId) ? e : ei.Z.getVoiceChannelId()) === n.id;
         }),
-        F = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
-        { reachedLimit: H, limit: V } = (0, el.Z)(n),
-        { analyticsLocations: z } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
-        W = (0, Q.Hu)({
+        H = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
+        { reachedLimit: z, limit: W } = (0, eo.Z)(n),
+        { analyticsLocations: Y } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
+        q = (0, $.Hu)({
             location: x.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
         }),
-        K = (0, B.Z)(n),
-        $ = i.useRef(null),
-        ee = i.useRef(null),
-        es = W
+        { showRefreshedAudioContextMenu: Q } = (0, U.e)({ location: x.Z.VOICE_CONTROL_TRAY }),
+        et = (0, G.Z)(n),
+        en = i.useRef(null),
+        eu = i.useRef(null),
+        ep = q
             ? (e) => {
                   (0, f.jW)(e, () =>
                       Promise.resolve(() =>
@@ -510,40 +513,70 @@ let eP = function (e) {
                               renderOutputVolume: !0,
                               renderDeafen: !0,
                               minimal: !0,
-                              onInteraction: eI("AudioDeviceMenu"),
+                              onInteraction: eZ("AudioDeviceMenu"),
                           }),
                       ),
                   );
               }
             : void 0;
-    return U
+    return F
         ? (0, r.jsx)(v.Gt, {
-              value: z,
+              value: Y,
               children: (0, r.jsxs)(b.Z, {
-                  section: em.jXE.VOICE_CONTROL_TRAY,
+                  section: eb.jXE.VOICE_CONTROL_TRAY,
                   children: [
                       (0, r.jsx)("div", {
-                          className: e_.eventPromptsContainer,
-                          children: (0, r.jsx)(L.Z, { channelId: n.id }),
+                          className: eC.eventPromptsContainer,
+                          children: (0, r.jsx)(k.Z, { channelId: n.id }),
                       }),
                       (0, r.jsxs)("div", {
                           ref: h,
-                          className: a()(e_.wrapper, l),
+                          className: a()(eC.wrapper, l),
                           children: [
                               (0, r.jsxs)("div", {
-                                  className: e_.buttonSection,
+                                  className: eC.buttonSection,
                                   children: [
                                       (0, r.jsx)(p.yRy, {
-                                          targetElementRef: $,
+                                          targetElementRef: en,
                                           renderPopout: (e) => {
-                                              let { closePopout: t } = e;
-                                              return (0, r.jsx)(G.Z, {
-                                                  children: (0, r.jsx)(J.R, {
-                                                      onClose: t,
-                                                      location: x.Z.VOICE_CONTROL_TRAY,
-                                                      onInteraction: eI("AudioDeviceMenu"),
-                                                  }),
-                                              });
+                                              let t,
+                                                  { closePopout: n } = e;
+                                              return (
+                                                  (t = q
+                                                      ? (0, r.jsx)(ee.l, {
+                                                            wide: !0,
+                                                            showOutputDevices: !0,
+                                                            onSettingsButtonClick: n,
+                                                        })
+                                                      : Q
+                                                        ? (0, r.jsx)(E.Z, {
+                                                              onInteraction: eZ("AudioDeviceMenu"),
+                                                              onClose: n,
+                                                              maybeRenderPTTCheckbox: !0,
+                                                              renderInputProfiles: !0,
+                                                              renderInputDevices: !0,
+                                                              renderInputVolume: !0,
+                                                              maybeRenderInputMeter: !0,
+                                                              renderDeafenCheckbox: !0,
+                                                              renderOutputDevices: !0,
+                                                              renderOutputVolume: !0,
+                                                              renderSettingsButton: !0,
+                                                          })
+                                                        : (0, r.jsx)(j.default, {
+                                                              onClose: n,
+                                                              renderInputDevices: !0,
+                                                              renderOutputDevices: !0,
+                                                              renderInputModes: !0,
+                                                              renderInputVolume: !0,
+                                                              renderOutputVolume: !0,
+                                                              renderDeafen: !0,
+                                                              minimal: !0,
+                                                              onInteraction: eZ("AudioDeviceMenu"),
+                                                          })),
+                                                  (0, r.jsxs)(V.Z, {
+                                                      children: [t, " "],
+                                                  })
+                                              );
                                           },
                                           align: "center",
                                           position: "top",
@@ -552,30 +585,30 @@ let eP = function (e) {
                                           children: (e, t) => {
                                               let { onClick: n } = e,
                                                   { isShown: i } = t;
-                                              return (0, r.jsx)(Y.Z, {
-                                                  ref: $,
+                                              return (0, r.jsx)(K.Z, {
+                                                  ref: en,
                                                   centerButton: !0,
-                                                  onPopoutClick: k ? null : n,
-                                                  selfMute: Z,
-                                                  serverMute: A,
-                                                  suppress: P,
+                                                  onPopoutClick: B ? null : n,
+                                                  selfMute: T,
+                                                  serverMute: w,
+                                                  suppress: Z,
                                                   popoutOpen: i,
-                                                  awaitingRemote: D,
-                                                  onClick: () => (0, S.Z)(A, P, em.jXE.VOICE_CONTROL_TRAY),
-                                                  onContextMenu: es,
+                                                  awaitingRemote: L,
+                                                  onClick: () => (0, I.Z)(w, Z, eb.jXE.VOICE_CONTROL_TRAY),
+                                                  onContextMenu: ep,
                                               });
                                           },
                                       }),
-                                      !k &&
+                                      !B &&
                                           (0, r.jsx)(p.yRy, {
-                                              targetElementRef: ee,
+                                              targetElementRef: eu,
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;
-                                                  return (0, r.jsx)(G.Z, {
-                                                      children: (0, r.jsx)(E.Z, {
+                                                  return (0, r.jsx)(V.Z, {
+                                                      children: (0, r.jsx)(S.Z, {
                                                           onClose: t,
                                                           minimal: !0,
-                                                          onInteraction: eI("VideoDeviceMenu"),
+                                                          onInteraction: eZ("VideoDeviceMenu"),
                                                       }),
                                                   });
                                               },
@@ -586,16 +619,16 @@ let eP = function (e) {
                                               children: (e, t) => {
                                                   let { onClick: n } = e,
                                                       { isShown: i } = t;
-                                                  return (0, r.jsx)(X.C, {
-                                                      ref: ee,
+                                                  return (0, r.jsx)(J.C, {
+                                                      ref: eu,
                                                       centerButton: !0,
-                                                      hasPermission: I,
+                                                      hasPermission: P,
                                                       enabled: O,
                                                       cameraUnavailable: C,
-                                                      onChange: ev,
-                                                      onCameraUnavailable: ed.Z,
-                                                      channelLimitReached: H,
-                                                      channelLimit: V,
+                                                      onChange: ej,
+                                                      onCameraUnavailable: eh.Z,
+                                                      channelLimitReached: z,
+                                                      channelLimit: W,
                                                       popoutOpen: i,
                                                       onPopoutClick: n,
                                                   });
@@ -604,40 +637,40 @@ let eP = function (e) {
                                   ],
                               }),
                               (0, r.jsxs)("div", {
-                                  className: e_.buttonSection,
+                                  className: eC.buttonSection,
                                   children: [
-                                      !k &&
-                                          (0, r.jsx)(eO, {
+                                      !B &&
+                                          (0, r.jsx)(eE, {
                                               channel: n,
                                               currentUser: _,
                                               exitFullScreen: c,
-                                              canGoLive: R,
-                                              hasPermission: I,
+                                              canGoLive: M,
+                                              hasPermission: P,
                                           }),
-                                      !k &&
-                                          (0, r.jsx)(ej, {
+                                      !B &&
+                                          (0, r.jsx)(eS, {
                                               channel: n,
                                               idle: null == (t = null == d ? void 0 : d.idle) || t,
                                               whichPopoutIsOpen: m,
                                               setWhichPopoutIsOpen: g,
                                           }),
-                                      K &&
-                                          (0, r.jsx)(q.Z, {
+                                      et &&
+                                          (0, r.jsx)(X.Z, {
                                               channel: n,
                                               themeable: !0,
                                               whichPopoutIsOpen: m,
                                               setWhichPopoutIsOpen: g,
                                           }),
-                                      (0, r.jsx)(ec.Z, {
+                                      (0, r.jsx)(ed.Z, {
                                           channel: n,
                                           whichPopoutIsOpen: m,
                                           setWhichPopoutIsOpen: g,
-                                          remoteMode: k,
+                                          remoteMode: B,
                                       }),
                                   ],
                               }),
-                              (0, r.jsx)(eE, {
-                                  connectedEmbeddedActivity: F,
+                              (0, r.jsx)(eI, {
+                                  connectedEmbeddedActivity: H,
                                   currentUser: _,
                                   channel: n,
                                   onDisconnectCall: o,
@@ -648,11 +681,11 @@ let eP = function (e) {
               }),
           })
         : (0, r.jsx)(v.Gt, {
-              value: z,
-              children: (0, r.jsx)(eS, {
+              value: Y,
+              children: (0, r.jsx)(eP, {
                   channel: n,
                   cameraUnavailable: C,
-                  hasCameraPermission: I,
+                  hasCameraPermission: P,
                   currentUser: _,
               }),
           });

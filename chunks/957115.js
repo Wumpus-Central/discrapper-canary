@@ -1,11 +1,11 @@
 n.d(t, {
     Bi: () => f,
     Ez: () => _,
-    NX: () => g,
-    Uv: () => h,
+    NX: () => m,
+    Uv: () => N,
     Z1: () => S,
     hP: () => p,
-    w9: () => m,
+    w9: () => g,
 }),
     n(539854);
 var a = n(392711),
@@ -71,7 +71,7 @@ let f = (e, t) => {
     }
     return n;
 };
-function h(e) {
+function N(e) {
     let { feedbackType: t, location: n } = e,
         { persistToBackend: a } = (0, u.O)({ location: n }),
         l = d.R[t].hotspot;
@@ -83,7 +83,7 @@ function h(e) {
           r.A2.updateSetting((e) => v(O({}, e), { [t]: v(O({}, e[t]), { optOutExpiryTime: c.uf }) })))
         : (0, i.Kw)(l);
 }
-function N(e) {
+function h(e) {
     return e
         .filter((e) => {
             let { disabled: t } = e;
@@ -115,7 +115,7 @@ function N(e) {
         });
 }
 function S() {
-    return N([
+    return h([
         {
             variant: c.$7.SELF,
             value: c.T_.COULD_NOT_CONNECT,
@@ -148,9 +148,9 @@ function S() {
         },
     ]);
 }
-function m(e) {
+function g(e) {
     let { isMobile: t } = e;
-    return N([
+    return h([
         {
             value: c.b9.NO_AUDIO,
             variant: c.$7.SELF,
@@ -212,10 +212,15 @@ function m(e) {
             label: E.intl.string(o.default["4qlGrK"]),
             disabled: !t,
         },
+        {
+            value: c.b9.NO_GAME_AUDIO,
+            variant: c.$7.SELF,
+            label: E.intl.string(o.default["2IG95O"]),
+        },
     ]);
 }
-function g() {
-    return N([
+function m() {
+    return h([
         {
             value: c.ct.NO_VIDEO,
             variant: c.$7.SELF,
@@ -250,7 +255,7 @@ function g() {
 }
 function _(e) {
     let { isStreamer: t } = e;
-    return N([
+    return h([
         {
             value: c.MJ.COULD_NOT_LOAD,
             variant: c.$7.SELF,
@@ -303,6 +308,12 @@ function _(e) {
             value: c.MJ.DESYNC,
             variant: c.$7.SELF,
             label: E.intl.string(o.default.JS6akJ),
+            disabled: !t,
+        },
+        {
+            value: c.MJ.NO_GAME_AUDIO,
+            variant: c.$7.SELF,
+            label: E.intl.string(o.default.TaIrh4),
             disabled: !t,
         },
         {
@@ -362,7 +373,7 @@ function _(e) {
     ]);
 }
 function p() {
-    return N([
+    return h([
         {
             value: c.s_.TOXIC_OR_INAPPROPRIATE,
             variant: c.$7.OTHERS,

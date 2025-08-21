@@ -395,6 +395,7 @@ var r = (function (e) {
         (e.INPUT_BORDER_CRITICAL_HOVER = "var(--input-border-critical-hover)"),
         (e.INPUT_BORDER_DEFAULT = "var(--input-border-default)"),
         (e.INPUT_BORDER_DEFAULT_HOVER = "var(--input-border-default-hover)"),
+        (e.INPUT_BORDER_READ_ONLY = "var(--input-border-read-only)"),
         (e.INPUT_ERROR_BACKGROUND = "var(--input-error-background)"),
         (e.INPUT_ERROR_BORDER = "var(--input-error-border)"),
         (e.INPUT_ERROR_TEXT = "var(--input-error-text)"),

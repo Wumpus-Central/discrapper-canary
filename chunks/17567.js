@@ -103,7 +103,11 @@ class E {
     handleGuildRoleChange(e, t) {
         let n = l.Z.getGuild(e.guildId),
             r = s.Z.getUnsafeMutableRoles(e.guildId);
-        null != n && this.put(c.rk(n, m(p({}, r), { [e.role.id]: e.role }), o.ZP.getSelfMember(e.guildId)), t);
+        null != n &&
+            this.put(
+                c.rk(n, u.an(m(p({}, r), { [e.role.id]: u.wD(e.guildId, e.role) })), o.ZP.getSelfMember(e.guildId)),
+                t,
+            );
     }
     handleGuildRoleDelete(e, t) {
         let n = l.Z.getGuild(e.guildId);

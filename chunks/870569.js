@@ -103,9 +103,11 @@ let g = 20,
                 tooltipColor: R,
                 tooltipForceOpen: P,
                 tooltipContentClassName: w,
-                plated: D,
+                tooltipPositionKeyStemOverride: D,
+                tooltipShouldShow: x,
+                plated: L,
             } = e,
-            x =
+            j =
                 "function" == typeof m
                     ? (0, r.jsx)(m, {
                           width: g,
@@ -122,6 +124,8 @@ let g = 20,
             color: R,
             tooltipContentClassName: w,
             forceOpen: P,
+            shouldShow: x,
+            positionKeyStemOverride: D,
             children: (e) => {
                 var { onClick: n, onMouseEnter: l, onMouseLeave: m } = e,
                     E = h(e, ["onClick", "onMouseEnter", "onMouseLeave"]);
@@ -139,8 +143,8 @@ let g = 20,
                             [u.orangeGlow]: v,
                             [u.disabled]: _,
                             [u.enabled]: !_,
-                            [u.plated]: D,
-                            [u.plateMuted]: O && D,
+                            [u.plated]: L,
+                            [u.plateMuted]: O && L,
                         }),
                         onClick: (e) => {
                             null != n && n(), null != d && d(e);
@@ -168,9 +172,9 @@ let g = 20,
                                       width: g,
                                       height: g,
                                       mask: c.ZP.Masks.PANEL_BUTTON,
-                                      children: x,
+                                      children: j,
                                   })
-                                : x,
+                                : j,
                             i,
                         ],
                     }),

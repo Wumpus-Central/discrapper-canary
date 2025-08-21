@@ -6,6 +6,7 @@ e.exports = {
     summaryContainer: "summaryContainer__15328",
     clickable: "clickable__15328",
     gameIcon: "gameIcon__15328",
+    gameIconFallback: "gameIconFallback__15328",
     container: "container__15328",
     error: "error__15328",
     actionButtonsContainer: "actionButtonsContainer__15328",

@@ -32,7 +32,10 @@ function b(e) {
         }, [t]);
     return (0, r.jsx)("div", {
         className: E.gameArtHero,
-        style: { backgroundImage: 'url("'.concat(n, '")') },
+        style:
+            null != n && n.length > 0
+                ? { backgroundImage: 'url("'.concat(n, '")') }
+                : { backgroundColor: c.TVs.colors.BG_BRAND.css },
     });
 }
 function y(e) {
@@ -41,13 +44,19 @@ function y(e) {
     return (0, r.jsx)("div", {
         className: E.iconContainer,
         children:
-            null != n &&
-            (0, r.jsx)("img", {
-                className: E.gameIcon,
-                src: n,
-                height: 80,
-                alt: g.intl.formatToPlainString(g.t["nh+jWl"], { game: t.name }),
-            }),
+            null != n && n.length > 0
+                ? (0, r.jsx)("img", {
+                      className: E.gameIcon,
+                      src: n,
+                      height: 80,
+                      alt: g.intl.formatToPlainString(g.t["nh+jWl"], { game: t.name }),
+                  })
+                : (0, r.jsx)(c.IMN, {
+                      size: "lg",
+                      className: E.gameIconFallback,
+                      color: c.TVs.colors.BACKGROUND_SURFACE_HIGH,
+                      style: { backgroundColor: c.TVs.colors.BG_BRAND.css },
+                  }),
     });
 }
 function O(e) {

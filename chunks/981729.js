@@ -143,15 +143,16 @@ let D = (e) => {
                 disableTooltipPointerEvents: h = !1,
                 allowOverflow: m = !1,
                 tooltipPointerClassName: b,
+                positionKeyStemOverride: O,
             } = e,
-            O = "".concat("string" == typeof o ? o : "", ":").concat(r);
+            v = "".concat(null != O ? O : "string" == typeof o ? o : "", ":").concat(r);
         return (0, i.jsx)(g.W5, {
             disablePointerEvents: h,
             targetRef: t,
             position: r,
             autoInvert: !0,
             align: n,
-            positionKey: O,
+            positionKey: v,
             spacing: _,
             nudgeAlignIntoViewport: !0,
             children: (e) => {
@@ -317,6 +318,7 @@ class k extends (r = a.Component) {
                 onAnimationRest: d,
                 onNonAccessibleClick: m ? this.handleClick : void 0,
                 allowOverflow: f,
+                positionKeyStemOverride: this.props.positionKeyStemOverride,
                 children: b,
             })
         );

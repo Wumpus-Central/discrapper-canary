@@ -6895,6 +6895,25 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.2,
                 },
             },
+            INPUT_BORDER_READ_ONLY: {
+                category: "background",
+                [r.DARK]: {
+                    raw: "OPACITY_WHITE_8",
+                    opacity: 0.0784313725490196,
+                },
+                [r.LIGHT]: {
+                    raw: "OPACITY_BLACK_4",
+                    opacity: 0.0392156862745098,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "OPACITY_WHITE_12",
+                    opacity: 0.12156862745098039,
+                },
+                [r.DARKER]: {
+                    raw: "OPACITY_WHITE_8",
+                    opacity: 0.0784313725490196,
+                },
+            },
             INPUT_ERROR_BACKGROUND: {
                 category: "background",
                 [r.DARK]: {

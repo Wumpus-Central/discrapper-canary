@@ -1,58 +1,58 @@
-n.d(t, { Z: () => _ });
-var i = n(951288);
-n(647438);
-var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    c = n(709054),
-    o = n(7697),
-    s = n(421032),
-    u = n(388032),
-    d = n(393181);
+t.d(n, { Z: () => _ });
+var i = t(951288);
+t(647438);
+var r = t(120356),
+    a = t.n(r),
+    l = t(481060),
+    o = t(709054),
+    c = t(7697),
+    s = t(421032),
+    d = t(388032),
+    u = t(393181);
 function _(e) {
     let {
-            guildId: t,
-            recurrenceRule: n,
-            guildEventId: l,
+            guildId: n,
+            recurrenceRule: t,
+            guildEventId: r,
             onRecurrenceClick: _,
-            hideScroller: g = !1,
-            activeRecurrenceId: h,
+            hideScroller: b = !1,
+            activeRecurrenceId: p,
         } = e,
-        { recurrenceStartTimes: p, canViewMoreRecurrences: v, updateRecurrenceStartTimes: f } = (0, o.Z)(l, t, n),
-        b = g ? "div" : a.Ttm;
+        { recurrenceStartTimes: h, canViewMoreRecurrences: f, updateRecurrenceStartTimes: g } = (0, c.Z)(r, n, t),
+        m = b ? "div" : l.Ttm;
     return (0, i.jsxs)("div", {
-        className: d.recurrences,
+        className: u.recurrences,
         children: [
-            (0, i.jsx)(a.X6q, {
+            (0, i.jsx)(l.X6q, {
                 variant: "heading-sm/medium",
-                className: d.heading,
-                children: u.intl.string(u.t["D/jjoa"]),
+                className: u.heading,
+                children: d.intl.string(d.t["D/jjoa"]),
             }),
-            (0, i.jsxs)(b, {
-                className: r()(d.scroller, { [d.showScroller]: !g }),
+            (0, i.jsxs)(m, {
+                className: a()(u.scroller, { [u.showScroller]: !b }),
                 children: [
-                    p.map((e) => {
-                        let t = c.default.fromTimestamp(e.getTime());
+                    h.map((e) => {
+                        let n = o.default.fromTimestamp(e.getTime());
                         return (0, i.jsx)(
                             s.Z,
                             {
-                                recurrenceId: t,
+                                recurrenceId: n,
                                 originalScheduledStartTime: e,
-                                guildEventId: l,
+                                guildEventId: r,
                                 onClick: _,
-                                isActive: t === h,
+                                isActive: n === p,
                             },
-                            t,
+                            n,
                         );
                     }),
-                    v &&
+                    f &&
                         (0, i.jsx)("div", {
-                            className: d.buttonContainer,
-                            children: (0, i.jsx)(a.Avr, {
+                            className: u.buttonContainer,
+                            children: (0, i.jsx)(l.Avr, {
                                 onClick: (e) => {
-                                    e.stopPropagation(), f();
+                                    e.stopPropagation(), g();
                                 },
-                                text: u.intl.string(u.t["8O7Hp6"]),
+                                text: d.intl.string(d.t["8O7Hp6"]),
                                 size: "sm",
                             }),
                         }),

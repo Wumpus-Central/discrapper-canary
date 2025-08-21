@@ -13,11 +13,11 @@ var a = n(951288),
     O = n(237617),
     v = n(572539),
     f = n(626135),
-    h = n(63063),
-    N = n(957115),
+    N = n(63063),
+    h = n(957115),
     S = n(764920),
-    m = n(531578),
-    g = n(981631),
+    g = n(531578),
+    m = n(981631),
     _ = n(388032),
     p = n(817320);
 function x() {
@@ -25,7 +25,7 @@ function x() {
         className: p.helpdeskLink,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: _.intl.format(_.t.ybi2tL, { helpdeskURL: h.Z.getSubmitRequestURL() }),
+        children: _.intl.format(_.t.ybi2tL, { helpdeskURL: N.Z.getSubmitRequestURL() }),
     });
 }
 function R(e) {
@@ -34,23 +34,23 @@ function R(e) {
             modalType: n,
             header: i,
             body: s,
-            problemTitle: h,
+            problemTitle: N,
             problems: R,
             transitionState: L,
-            ratingOptions: T,
-            ratingEmojiKind: j,
-            ratingTextLabels: D,
-            freeformNeededProblems: I = [],
-            otherKey: C,
-            hideDontShowAgainCheckbox: M,
+            ratingOptions: I,
+            ratingEmojiKind: D,
+            ratingTextLabels: T,
+            freeformNeededProblems: j = [],
+            otherKey: M,
+            hideDontShowAgainCheckbox: C,
             startRating: A = null,
             hideHelpDeskLink: P = !1,
             onSubmit: y,
             onClose: F,
             impression: $,
-            freeformDescription: k,
+            freeformDescription: U,
         } = e,
-        U = (0, b.Z)(R),
+        k = (0, b.Z)(R),
         [Z, B] = l.useState(!1),
         [G, J] = l.useState(A),
         [w, H] = l.useState(null),
@@ -66,15 +66,15 @@ function R(e) {
     return (
         null == G
             ? (en = "RATING")
-            : G !== m.aZ.GOOD && null == w
+            : G !== g.aZ.GOOD && null == w
               ? (en = "PROBLEM")
-              : null != w && I.includes(w.value) && (en = "FREEFORM"),
+              : null != w && j.includes(w.value) && (en = "FREEFORM"),
         l.useEffect(() => {
-            d().isEqual(U, R) || K((0, N.Bi)(R, C));
-        }, [R, U, C]),
+            d().isEqual(k, R) || K((0, h.Bi)(R, M));
+        }, [R, k, M]),
         (0, c.ZP)(
             () => (
-                f.default.track(g.rMx.OPEN_MODAL, {
+                f.default.track(m.rMx.OPEN_MODAL, {
                     type: n,
                     source: "Feedback Modal",
                 }),
@@ -113,16 +113,16 @@ function R(e) {
                         }),
                     ],
                 }),
-                ("RATING" === en || ("PROBLEM" === en && null == D)) &&
+                ("RATING" === en || ("PROBLEM" === en && null == T)) &&
                     (0, a.jsx)(u.xJW, {
                         className: r()(p.problemInfo, p.ratingSelectorContainer),
                         children: (0, a.jsx)(S.Z, {
-                            ratingOptions: T,
-                            emojiKind: j,
-                            textLabels: D,
+                            ratingOptions: I,
+                            emojiKind: D,
+                            textLabels: T,
                             selectedRating: G,
                             onChangeRating: function (e) {
-                                J(e), e === m.aZ.GOOD && F();
+                                J(e), e === g.aZ.GOOD && F();
                             },
                         }),
                     }),
@@ -130,16 +130,16 @@ function R(e) {
                     (0, a.jsx)(u.hzk, {
                         className: p.__invalid_content,
                         children: (0, a.jsx)(u.xJW, {
-                            title: h,
-                            className: r()(p.problemInfo, p.presetList, { [p.marginBottom16]: M }),
+                            title: N,
+                            className: r()(p.problemInfo, p.presetList, { [p.marginBottom16]: C }),
                             children: (0, a.jsx)(v.Z, {
                                 options: z,
                                 onClick: function (e) {
-                                    H(e), I.includes(e.value) || F();
+                                    H(e), j.includes(e.value) || F();
                                 },
                                 hideCaret: (e) => {
                                     let { value: t } = e;
-                                    return !I.includes(t);
+                                    return !j.includes(t);
                                 },
                             }),
                         }),
@@ -148,12 +148,12 @@ function R(e) {
                     (0, a.jsx)(u.hzk, {
                         className: p.__invalid_content,
                         children: (0, a.jsxs)(u.xJW, {
-                            title: null != (t = null == k ? void 0 : k(w)) ? t : _.intl.string(_.t.h95hcn),
+                            title: null != (t = null == U ? void 0 : U(w)) ? t : _.intl.string(_.t.h95hcn),
                             className: p.problemInfo,
                             children: [
                                 (0, a.jsx)(u.Kx8, {
                                     value: Y,
-                                    maxLength: m.iF,
+                                    maxLength: g.iF,
                                     onChange: X,
                                 }),
                                 !P && (0, a.jsx)(x, {}),
@@ -161,7 +161,7 @@ function R(e) {
                         }),
                     }),
                 "RATING" === en &&
-                    !M &&
+                    !C &&
                     (0, a.jsx)(u.mzw, {
                         className: p.footer,
                         direction: o.Z.Direction.HORIZONTAL,
@@ -176,7 +176,7 @@ function R(e) {
                             }),
                         }),
                     }),
-                ("FREEFORM" === en || ("PROBLEM" === en && null != D)) &&
+                ("FREEFORM" === en || ("PROBLEM" === en && null != T)) &&
                     (0, a.jsx)(u.mzw, {
                         className: p.footer,
                         direction: o.Z.Direction.HORIZONTAL,

@@ -15,6 +15,7 @@ e.exports = {
     micButtonParent: "micButtonParent__37e49",
     buttonChevron: "buttonChevron__37e49",
     micButtonWithMenu: "micButtonWithMenu__37e49",
+    popoutOpen: "popoutOpen__37e49",
     hasColorGlow: "hasColorGlow__37e49",
     buttonChevronIcon: "buttonChevronIcon__37e49",
     voiceFilterWarning: "voiceFilterWarning__37e49",

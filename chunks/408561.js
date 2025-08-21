@@ -7,8 +7,8 @@ var l = n(951288),
     u = n(211266),
     d = n(266454),
     s = n(624659),
-    c = n(594174),
-    b = n(626135),
+    b = n(594174),
+    c = n(626135),
     E = n(924400),
     O = n(987562),
     f = n(981631),
@@ -16,10 +16,10 @@ var l = n(951288),
 function _(e) {
     let { transitionState: t, onClose: _, channel: h } = e,
         g = (0, u.Z)(O.TL),
-        S = (0, i.e7)([c.default], () => c.default.getUser(h.getRecipientId()));
+        S = (0, i.e7)([b.default], () => b.default.getUser(h.getRecipientId()));
     return (
         a.useEffect(() => {
-            b.default.track(f.rMx.OPEN_MODAL, { type: "DM Mute Feedback Modal" });
+            c.default.track(f.rMx.OPEN_MODAL, { type: "DM Mute Feedback Modal" });
         }, []),
         (0, l.jsx)(s.Z, {
             hasCloseButton: !0,

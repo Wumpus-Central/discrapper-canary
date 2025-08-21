@@ -77,21 +77,21 @@ function Y(e) {
         } = e,
         z = I.Z.getVideoComponent(),
         G = (0, o.e7)([j.default], () => j.default.getId()),
-        B = (0, g.Z)(),
-        { stream: K, user: q, streamId: J } = t,
-        X = (0, o.e7)([Z.Z], () => Z.Z.getChannel(K.channelId)),
-        Q = (0, o.e7)([_.Z], () => _.Z.getActiveStreamForUser(q.id, K.guildId), [q.id, K.guildId]),
+        K = (0, g.Z)(),
+        { stream: q, user: B, streamId: J } = t,
+        X = (0, o.e7)([Z.Z], () => Z.Z.getChannel(q.channelId)),
+        Q = (0, o.e7)([_.Z], () => _.Z.getActiveStreamForUser(B.id, q.guildId), [B.id, q.guildId]),
         $ = (0, o.e7)([_.Z], () => _.Z.getAllActiveStreams().length > 0),
         ee = (0, o.e7)([w.Z], () => w.Z.isFocused()),
         et = (null == Q ? void 0 : Q.ownerId) === G,
         en = et && !ee && !m,
-        er = null != Q ? (0, b.Z)(Q, q, q.id === G, en) : null,
+        er = null != Q ? (0, b.Z)(Q, B, B.id === G, en) : null,
         el = D < 195;
     (0, d.ZP)(() => {
         !$ &&
             (null == X ? void 0 : X.isGuildStageVoice()) &&
             !et &&
-            ((0, c.rn)(K), s.Z.updateStageStreamSize(K.channelId, !1));
+            ((0, c.rn)(q), s.Z.updateStageStreamSize(q.channelId, !1));
     });
     let ei = (0, E.c)(k.Yn.STREAM, t.user.id);
     if (
@@ -104,13 +104,13 @@ function Y(e) {
                     .concat(I.Z.supports(k.AN.VIDEO)),
             );
         }, [z, Q, n]),
-        B)
+        K)
     )
         return (0, r.jsx)(T.Z, {
             stream: t.stream,
             isSmall: el,
             selected: n,
-            isSelfStream: q.id === G,
+            isSelfStream: B.id === G,
         });
     if ((null == Q ? void 0 : Q.state) === L.jm8.ENDED)
         return (0, r.jsx)(R.Z, {
@@ -159,7 +159,7 @@ function Y(e) {
                                         className: U.addCTA,
                                         tooltip: V.intl.string(V.t.wCrzur),
                                         onClick: (e) => {
-                                            e.stopPropagation(), (0, c.rn)(K, { forceMultiple: !0 });
+                                            e.stopPropagation(), (0, c.rn)(q, { forceMultiple: !0 });
                                         },
                                         isSmall: el,
                                         children: (0, r.jsx)(u.OgY, {
@@ -181,9 +181,9 @@ function Y(e) {
                           focused: M,
                           channelId: X.id,
                           guildId: X.guild_id,
-                          streamerId: q.id,
+                          streamerId: B.id,
                           hasScreenMessage: null != er,
-                          stream: K,
+                          stream: q,
                       })
                     : null,
                 (0, r.jsx)(
@@ -197,7 +197,7 @@ function Y(e) {
                         fit: p,
                         paused: Y || (null == Q ? void 0 : Q.state) === L.jm8.PAUSED || en,
                         videoSpinnerContext: et ? f.m.SELF_STREAM : f.m.REMOTE_STREAM,
-                        userId: q.id,
+                        userId: B.id,
                         streamKey: t.id,
                     },
                     J,
@@ -233,7 +233,7 @@ function Y(e) {
                       )
                     : null,
                 (0, r.jsx)(C.Z, {
-                    stream: K,
+                    stream: q,
                     inPopout: m,
                 }),
             ],
