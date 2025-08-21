@@ -78257,7 +78257,6 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .bannerContainer_ce5f0d {
     gap: 40px;
-    height: 144px;
     justify-content: center;
     padding: 24px;
     width: 811px
@@ -89937,7 +89936,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
