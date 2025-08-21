@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var i = n(951288),
     r = n(647438),
     o = n(120356),
@@ -56,15 +56,15 @@ function O(e, t) {
         e
     );
 }
-function b(e) {
+function v(e) {
     let { locked: t, pinned: n, anchorLeft: o } = e,
-        b = (0, a.e7)([d.Z], () => d.Z.getSocket()),
-        v = (0, a.e7)([h.ZP], () => h.ZP.isGPUBoosted());
+        v = (0, a.e7)([d.Z], () => d.Z.getSocket()),
+        b = (0, a.e7)([h.ZP], () => h.ZP.isGPUBoosted());
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
-        [_, x] = (0, u.m8)(b),
+        [_, S] = (0, u.m8)(v),
         {
-            currentFPS: S,
+            currentFPS: x,
             averageFrameTime: I,
             timeSinceLastDrop: j,
             onResetFrameData: C,
@@ -73,9 +73,9 @@ function b(e) {
             bufferFramecountRef: Z,
             frameCheckerEffect: P,
         } = (0, u.d6)(!0, _, !0),
-        [T, A, k] = (0, u.ZF)(b),
+        [T, A, k] = (0, u.ZF)(v),
         [D, R] = (0, u.Y5)(T, P, E),
-        L = performance.now() - x.current < u.MC,
+        L = performance.now() - S.current < u.MC,
         M = A(I, Z.current);
     (0, c.ZP)(
         () => (
@@ -122,12 +122,12 @@ function b(e) {
                                           tag: "span",
                                           variant: "code",
                                           color:
-                                              S < 30
+                                              x < 30
                                                   ? "text-danger"
-                                                  : S < 45
+                                                  : x < 45
                                                     ? "text-feedback-warning"
                                                     : "text-primary",
-                                          children: S.toFixed(2),
+                                          children: x.toFixed(2),
                                       }),
                                   ],
                               }),
@@ -288,7 +288,7 @@ function b(e) {
                                   }),
                               ),
                       }),
-                  v &&
+                  b &&
                       (0, i.jsx)(s.Text, {
                           tag: "span",
                           variant: "code",

@@ -1,11 +1,12 @@
-n.d(t, { Z: () => E }), n(290780);
+n.d(t, { Z: () => O }), n(415506), n(388685), n(290780);
 var r,
     i = n(843611),
     a = n(442837),
     o = n(570140),
-    s = n(893607),
-    l = n(981631);
-function c(e, t, n) {
+    s = n(710845),
+    l = n(893607),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,65 +19,81 @@ function c(e, t, n) {
         e
     );
 }
-let u = 20,
-    d = [
-        l.Z5c.CHANNEL_THREAD_VIEW(s.Hw.guildId(), s.Hw.channelId({ optional: !0 }), ":threadId", ":messageId?"),
-        l.Z5c.CHANNEL(s.Hw.guildId(), s.Hw.channelId({ optional: !0 }), ":messageId?"),
-        l.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(s.Hw.guildId(), s.Hw.channelId({ optional: !0 }), ":messageId?"),
-        l.Z5c.NOTIFICATIONS,
-        l.Z5c.FRIENDS,
-        l.Z5c.ME,
-        l.Z5c.MESSAGE_REQUESTS,
-        l.Z5c.GUILD_DISCOVERY,
-        l.Z5c.APPLICATION_STORE,
-        l.Z5c.COLLECTIBLES_SHOP,
+let d = new s.Z("BackForwardNavStore"),
+    f = 20,
+    _ = [
+        c.Z5c.CHANNEL_THREAD_VIEW(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ":threadId", ":messageId?"),
+        c.Z5c.CHANNEL(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ":messageId?"),
+        c.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ":messageId?"),
+        c.Z5c.NOTIFICATIONS,
+        c.Z5c.FRIENDS,
+        c.Z5c.ME,
+        c.Z5c.MESSAGE_REQUESTS,
+        c.Z5c.GUILD_DISCOVERY,
+        c.Z5c.APPLICATION_STORE,
+        c.Z5c.COLLECTIBLES_SHOP,
+        c.Z5c.USERS(":userId"),
+        c.Z5c.GUILD_DISCOVERY,
+        c.Z5c.GLOBAL_DISCOVERY,
+        c.Z5c.QUEST_HOME,
+        c.Z5c.GLOBAL_DISCOVERY_SERVERS,
+        c.Z5c.GLOBAL_DISCOVERY_APPS,
     ],
-    f = [],
-    _ = 0;
-function p(e) {
-    let { path: t } = e;
-    if (f.length > 0) {
-        if (t === f[_].path) return !1;
-        let e = f.findIndex((e) => e.path === t);
-        -1 !== e && f.splice(e, 1);
+    p = [],
+    h = 0;
+function m(e, t) {
+    if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
+    let n = 0,
+        r = t;
+    for (; n < r; ) ([e[n], e[r]] = [e[r], e[n]]), n++, r--;
+    return e;
+}
+function g(e) {
+    let { path: t } = e,
+        n = (0, i.LX)(t, _);
+    if (null == n) return !1;
+    if (n.params.guildId === c.STv && void 0 === n.params.messageId)
+        return d.verbose("Ignoring weird notification sidebar route lacking messageId"), !1;
+    if (p.length > 0) {
+        if (t === p[h].path) return !1;
+        let e = p.findIndex((e) => e.path === t);
+        -1 !== e && (h >= e && (h -= 1), p.splice(e, 1));
     }
-    (_ = 0), f.length > u && (f = f.slice(0, u));
-    let n = (0, i.LX)(t, d);
-    null != n &&
-        f.unshift({
-            path: t,
-            params: n.params,
-        });
+    for (n.params.guildId !== c.STv && (h > 0 && m(p, h), (h = 0)); p.length > f; ) p.pop();
+    p.unshift({
+        path: t,
+        params: n.params,
+    });
 }
-function h(e) {
-    _ < f.length - 1 && _++;
+function E(e) {
+    h < p.length - 1 && h++;
 }
-function m(e) {
-    _ > 0 && _--;
+function b(e) {
+    h > 0 && h--;
 }
-class g extends (r = a.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     initialize() {
-        (f = []), (_ = 0);
+        (p = []), (h = 0);
     }
-    get recentPlaces() {
-        return f.slice(1);
+    get pastPlaces() {
+        return p;
     }
     get canGoBack() {
-        return _ < f.length - 1;
+        return h < p.length - 1;
     }
     get canGoForward() {
-        return _ > 0;
+        return h > 0;
     }
     get backDestination() {
-        return this.canGoBack ? f[_ + 1] : null;
+        return this.canGoBack ? p[h + 1] : null;
     }
     get forwardDestination() {
-        return this.canGoForward ? f[_ - 1] : null;
+        return this.canGoForward ? p[h - 1] : null;
     }
 }
-c(g, "displayName", "BackForwardNavStore");
-let E = new g(o.Z, {
-    ROUTE_CHANGED: p,
-    GO_BACK: h,
-    GO_FORWARD: m,
+u(y, "displayName", "BackForwardNavStore");
+let O = new y(o.Z, {
+    ROUTE_CHANGED: g,
+    GO_BACK: E,
+    GO_FORWARD: b,
 });

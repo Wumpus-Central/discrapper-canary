@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(728345),
     p = n(372900),
     h = n(77498),
-    f = n(158776),
-    m = n(19780),
-    g = n(594174),
-    b = n(607361),
+    f = n(19780),
+    m = n(594174),
+    g = n(607361),
+    b = n(463421),
     _ = n(981631),
     y = n(658805),
     C = n(388032),
@@ -23,8 +23,8 @@ function v(e) {
         { activity: n, channel: l, userId: a } = e,
         u = (0, d.IX)(n.application_id).data,
         [p, h] = i.useState(!1),
-        [f, g] = i.useState(0),
-        b = (0, o.e7)([m.Z], () => m.Z.getChannelId() !== l.id);
+        [m, g] = i.useState(0),
+        b = (0, o.e7)([f.Z], () => f.Z.getChannelId() !== l.id);
     async function v() {
         g(1);
         try {
@@ -77,11 +77,11 @@ function v(e) {
                     ],
                 }),
                 (0, r.jsx)(s.zxk, {
-                    loading: 1 === f,
-                    disabled: b || 2 === f,
+                    loading: 1 === m,
+                    disabled: b || 2 === m,
                     fullWidth: !0,
                     size: "sm",
-                    text: 2 === f ? C.intl.string(y.default["8HU1Mz"]) : C.intl.string(y.default.DKHheX),
+                    text: 2 === m ? C.intl.string(y.default["8HU1Mz"]) : C.intl.string(y.default.DKHheX),
                     onClick: v,
                 }),
                 null != t &&
@@ -97,32 +97,29 @@ function v(e) {
 }
 function O(e) {
     let { userId: t, channel: n } = e,
-        s = (0, o.e7)([g.default], () => g.default.getUser(t)),
-        c = (0, o.e7)([f.Z], () => f.Z.getActivities(t, n.getGuildId())),
-        d = (0, b.Z)(t, n.id),
-        m = null == s || !d,
-        y = i.useMemo(
+        s = (0, o.e7)([m.default], () => m.default.getUser(t)),
+        c = (0, b.Z)(t, n.guild_id),
+        d = (0, g.Z)(t, n.id),
+        f = i.useMemo(
             () =>
-                l.uniqWith(
-                    c.filter((e) => e.type === _.IIU.PLAYING),
-                    (e, t) => {
-                        if (e.application_id === t.application_id) return !0;
-                        let n = h.Z.getGameByName(e.name),
-                            r = h.Z.getGameByName(t.name);
-                        return (null != n && n === r) || e.name === t.name;
-                    },
-                ),
+                l.uniqWith(c, (e, t) => {
+                    if (e.application_id === t.application_id) return !0;
+                    let n = h.Z.getGameByName(e.name),
+                        r = h.Z.getGameByName(t.name);
+                    return (null != n && n === r) || e.name === t.name;
+                }),
             [c],
-        );
+        ),
+        _ = null == s || !d || 0 === f.length;
     return ((0, u.Z)(
         {
             type: a.ImpressionTypes.POPOUT,
             name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT,
             properties: {},
         },
-        { disableTrack: m },
+        { disableTrack: _ },
     ),
-    m)
+    _)
         ? null
         : (0, r.jsx)(p.Z.Provider, {
               value: n.guild_id,
@@ -130,7 +127,7 @@ function O(e) {
                   className: x.root,
                   children: (0, r.jsx)("div", {
                       className: x.activityList,
-                      children: y.map((e) =>
+                      children: f.map((e) =>
                           (0, r.jsx)(
                               v,
                               {

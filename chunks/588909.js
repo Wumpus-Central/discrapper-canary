@@ -16,12 +16,12 @@ var r = n(704215),
     g = n(618373),
     y = n(620954),
     O = n(987650),
-    b = n(981631),
-    v = n(602091),
+    v = n(981631),
+    b = n(602091),
     E = n(701488),
     _ = n(388032),
-    x = n(968803),
-    S = n(336501);
+    S = n(968803),
+    x = n(336501);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,13 +91,13 @@ function N(e, t) {
                           ? p.Z.getApplicationActivity(e.id)
                           : null;
                 null != t &&
-                    (0, s.Z)(t, b.xjy.JOIN) &&
+                    (0, s.Z)(t, v.xjy.JOIN) &&
                     ((E.cancelText = _.intl.string(_.t["6F9ivr"])),
                     (E.onCancelClick = (e, n) => {
                         u("unlock"),
                             a.Z.updateNotificationStatus(n),
                             a.Z.setInputLocked(!1, (0, f.getPID)()),
-                            (0, l.h7)(t, !1, b.IlC.POPOUT);
+                            (0, l.h7)(t, !1, v.IlC.POPOUT);
                     }));
                 break;
             }
@@ -123,11 +123,11 @@ function N(e, t) {
                                                 sourcePID: (0, f.getPID)(),
                                                 guildId: r.type === O.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
                                                 selectGuild: r.type === O.nc.GO_LIVE_NON_VOICE,
-                                                analyticsLocation: b.Sbl.OVERLAY_NUDGE,
+                                                analyticsLocation: v.Sbl.OVERLAY_NUDGE,
                                             }),
                                         );
                                 },
-                                { contextKey: v.u1 },
+                                { contextKey: b.u1 },
                             );
                     });
                 break;
@@ -137,10 +137,10 @@ function N(e, t) {
                         (0, i.jsx)(m.lX, {
                             gamingId: null == e ? void 0 : e.id,
                             maxUserShowCount: 5,
-                            className: S.container,
+                            className: x.container,
                         })),
                     (E.onNotificationShow = () => {
-                        a.Z.track(b.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                        a.Z.track(v.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                             user_ids: r.entries.map((e) => e.author_id),
                             entry_ids: r.entries.map((e) => e.id),
                         });
@@ -154,7 +154,7 @@ function N(e, t) {
                 ? (0, i.jsx)(C, { game: e })
                 : (0, i.jsx)("img", {
                       src: n(328756),
-                      className: x.icon,
+                      className: S.icon,
                       alt: "",
                   });
     return j(

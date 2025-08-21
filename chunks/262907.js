@@ -1,3 +1,3 @@
 n.exports = JSON.parse(
-    '{"klSpfn":"Ändra inställningar","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["meddelande"],"other":["meddelanden"]},0,"cardinal"]],"O+racX":"Det finns inga aviseringar.","5H2Jd3":"Visa alla","dcpdhI":"Välj ett meddelande för att hoppa dit.","VAK+h4":"Välkommen till ditt aviseringscenter!"}',
+    '{"klSpfn":"Ändra inställningar","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["meddelande"],"other":["meddelanden"]},0,"cardinal"]],"O+racX":"Det finns inga aviseringar.","5H2Jd3":"Visa alla","Ko8NGh":"Visa bokmärken","dcpdhI":"Välj ett meddelande för att hoppa dit.","VAK+h4":"Välkommen till ditt aviseringscenter!"}',
 );

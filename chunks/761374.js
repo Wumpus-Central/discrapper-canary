@@ -20,12 +20,12 @@ var i = n(951288),
     g = n(592125),
     y = n(355863),
     O = n(944486),
-    b = n(837268),
-    v = n(353038),
+    v = n(837268),
+    b = n(353038),
     E = n(804570),
     _ = n(350663),
-    x = n(461393),
-    S = n(340101),
+    S = n(461393),
+    x = n(340101),
     I = n(501787),
     j = n(388032),
     C = n(965365);
@@ -87,7 +87,7 @@ function A(e, t, n, i, r) {
         s = (a - 1) * o,
         c = t * a + s,
         u = n * a + s;
-    return e === S.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
+    return e === x.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
 }
 function k(e, t, n) {
     return A(e, _.bt, _.fd, t, n);
@@ -98,8 +98,8 @@ let D = (e) => {
         s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
         c = (() => {
             switch (t) {
-                case v.B.RESIZE_NORTH:
-                case v.B.RESIZE_SOUTH:
+                case b.B.RESIZE_NORTH:
+                case b.B.RESIZE_SOUTH:
                     return {
                         height: n.height,
                         width: Math.round((n.height - a) * s + a),
@@ -111,7 +111,7 @@ let D = (e) => {
                     };
             }
         })();
-    return (0, x.S)(c, s, a, {
+    return (0, S.S)(c, s, a, {
         maxWidth: 0.75 * l.maxX,
         maxHeight: 0.75 * l.maxY,
     });
@@ -122,7 +122,7 @@ function R(e) {
     let { width: c, height: u } = D(
             N(
                 {
-                    operation: v.B.RESIZE_NORTH,
+                    operation: b.B.RESIZE_NORTH,
                     computedSize: {
                         width: n.width,
                         height: n.height,
@@ -141,7 +141,7 @@ function R(e) {
         { width: d, height: p } = D(
             N(
                 {
-                    operation: v.B.RESIZE_NORTH,
+                    operation: b.B.RESIZE_NORTH,
                     computedSize: {
                         width: o.width,
                         height: o.height,
@@ -171,7 +171,7 @@ function R(e) {
     });
 }
 function L(e) {
-    var t, n, a, v, x, P;
+    var t, n, a, b, S, P;
     let {
             id: D,
             widget: L,
@@ -191,35 +191,35 @@ function L(e) {
             width: "number" == typeof M.width ? M.width : _.bt,
             height: "number" == typeof M.height ? M.height : _.fd,
         },
-        J = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId()),
-        { width: q = K - Q, height: $ = X - Q, ref: ee } = (0, c.ZP)(),
+        q = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId()),
+        { width: J = K - Q, height: $ = X - Q, ref: ee } = (0, c.ZP)(),
         et = (0, o.e7)([y.Z], () => {
             var e;
             let t = y.Z.getWidget(D);
-            return !!(0, S.ZL)(t) && !z && (null == (e = t.meta.showAllStreams) || e);
+            return !!(0, x.ZL)(t) && !z && (null == (e = t.meta.showAllStreams) || e);
         }, [D, z]),
         en = !F,
-        ei = (0, o.e7)([g.Z], () => g.Z.getChannel(J)),
+        ei = (0, o.e7)([g.Z], () => g.Z.getChannel(q)),
         er = (0, o.e7)([m.default], () => m.default.getId()),
         {
             streamParticipants: eo,
             activeStreams: el,
             participantsVersion: ea,
-        } = ((x = (B && en) || (H && F)),
+        } = ((S = (B && en) || (H && F)),
         (P = (!B && en) || (!H && F)),
         (0, o.cj)([h.Z, d.Z], () => {
-            if (null == J)
+            if (null == q)
                 return {
                     streamParticipants: Z,
                     participantsVersion: -1,
                     activeStreams: new Set(),
                 };
-            let e = new Set(h.Z.getAllActiveStreamsForChannel(J).map((e) => (0, p.V9)(e))),
+            let e = new Set(h.Z.getAllActiveStreamsForChannel(q).map((e) => (0, p.V9)(e))),
                 t = (t) => e.has((0, p.V9)(t.stream)),
-                n = d.Z.getStreamParticipants(J).filter((e) => e.user.id !== er && (!!et || t(e)));
+                n = d.Z.getStreamParticipants(q).filter((e) => e.user.id !== er && (!!et || t(e)));
             return (
                 n.sort((e, n) => {
-                    if (x) {
+                    if (S) {
                         if (t(e) && !t(n)) return -1;
                         if (!t(e) && t(n)) return 1;
                     } else if (P) {
@@ -231,15 +231,15 @@ function L(e) {
                 {
                     streamParticipants: n,
                     activeStreams: e,
-                    participantsVersion: d.Z.getParticipantsVersion(J),
+                    participantsVersion: d.Z.getParticipantsVersion(q),
                 }
             );
-        }, [J, er, et, x, P])),
+        }, [q, er, et, S, P])),
         es = eo.length,
         ec = null == ei || (0 === el.size && z) || (0 === es && !z),
-        eu = F ? S.C5.HORIZONTAL : S.C5.VERTICAL,
+        eu = F ? x.C5.HORIZONTAL : x.C5.VERTICAL,
         ed = {
-            containerWidth: q,
+            containerWidth: J,
             containerHeight: $,
         },
         { tileWidth: ep, tileHeight: ef } = (function (e, t, n) {
@@ -280,14 +280,14 @@ function L(e) {
                 top: 0,
                 left: 0,
                 bottom: null != (a = null == eh ? void 0 : eh.height) ? a : X,
-                right: null != (v = null == eh ? void 0 : eh.width) ? v : K,
+                right: null != (b = null == eh ? void 0 : eh.width) ? b : K,
             },
         };
     return (r.useEffect(() => {
-        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
+        s.Z.setGpuBoostRequested(v.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
     }, [ec]),
     (0, u.ZP)(() => () => {
-        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        s.Z.setGpuBoostRequested(v.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
     (function (e) {
         let { streamParticipants: t, layout: n, widgetLayoutSpecs: i } = e,

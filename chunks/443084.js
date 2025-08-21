@@ -1,3 +1,3 @@
-n.exports = JSON.parse(
-    '{"klSpfn":"Einstellungen bearbeiten","NzUuLC":["+",[1,"count"],"\xA0",[6,"count",{"one":["Nachricht"],"other":["Nachrichten"]},0,"cardinal"]],"O+racX":"Es gibt keine Benachrichtigungen.","5H2Jd3":"Alle anzeigen","dcpdhI":"Wähle eine Nachricht aus, um dorthin zu springen.","VAK+h4":"Willkommen in deinem Benachrichtigungszentrum!"}',
+e.exports = JSON.parse(
+    '{"klSpfn":"Einstellungen bearbeiten","NzUuLC":["+",[1,"count"],"\xA0",[6,"count",{"one":["Nachricht"],"other":["Nachrichten"]},0,"cardinal"]],"O+racX":"Es gibt keine Benachrichtigungen.","5H2Jd3":"Alle anzeigen","Ko8NGh":"Lesezeichen anzeigen","dcpdhI":"Wähle eine Nachricht aus, um dorthin zu springen.","VAK+h4":"Willkommen in deinem Benachrichtigungszentrum!"}',
 );

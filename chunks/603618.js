@@ -22,12 +22,12 @@ var i = n(951288),
     g = n(13245),
     y = n(99690),
     O = n(493773),
-    b = n(549879),
-    v = n(620662),
+    v = n(549879),
+    b = n(620662),
     E = n(835473),
     _ = n(194082),
-    x = n(297781),
-    S = n(656709),
+    S = n(297781),
+    x = n(656709),
     I = n(692701),
     j = n(225559),
     C = n(703656),
@@ -105,7 +105,7 @@ function X(e) {
             return () => clearTimeout(e);
         }
     }, [s]);
-    let O = null != n && (0, v.Z)(n, G.xjy.JOIN),
+    let O = null != n && (0, b.Z)(n, G.xjy.JOIN),
         E = async (e) => {
             if (null != a && "unsent" === s) {
                 e.stopPropagation();
@@ -123,16 +123,16 @@ function X(e) {
                             n = null != (i = T.Z.getChannel(e)) ? i : null;
                         l()(null != n, "Send channel must be defined"),
                             (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
-                            (0, b.i)(G.IlC.OVERLAY, !0),
+                            (0, v.i)(G.IlC.OVERLAY, !0),
                             "fake_inventory_item" in t.extra && !0 === t.extra.fake_inventory_item
-                                ? await (0, S.k)({
+                                ? await (0, x.k)({
                                       channel: n,
                                       content: H.intl.formatToPlainString(H.t.UVBA9v, { gameName: t.extra.game_name }),
                                       whenReady: !0,
                                       doNotNotifyOnError: !1,
                                       location: B.dy.OVERLAY,
                                   })
-                                : await (0, S.p)({
+                                : await (0, x.p)({
                                       channel: n,
                                       content: H.intl.string(H.t.DwAcMz),
                                       entry: t,
@@ -164,14 +164,14 @@ function X(e) {
                 n = null != (e = T.Z.getChannel(t)) ? e : null;
             l()(null != n, "Send channel must be defined"),
                 (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
-                (0, b.i)(G.IlC.OVERLAY, !0),
+                (0, v.i)(G.IlC.OVERLAY, !0),
                 (0, W.Ws)(G.Odu.ACTIVITY, {
                     type: W.Qu.REDIRECT,
                     value: W.bk.CHAT,
                     userId: a.id,
                 });
         },
-        x = O ? H.intl.string(H.t["3fRyS0"]) : H.intl.string(H.t.XHxDIS),
+        S = O ? H.intl.string(H.t["3fRyS0"]) : H.intl.string(H.t.XHxDIS),
         I = O
             ? (0, i.jsx)(p.ejJ, {
                   color: "currentColor",
@@ -182,8 +182,8 @@ function X(e) {
                   size: "sm",
               });
     return (0, i.jsx)(p.ua7, {
-        text: x,
-        "aria-label": x,
+        text: S,
+        "aria-label": S,
         children: (e) =>
             (0, i.jsx)(
                 d.zx,
@@ -213,14 +213,14 @@ function X(e) {
             ),
     });
 }
-function J(e) {
+function q(e) {
     var t;
     let { entry: n, currentUserActivity: o } = e,
         l = (0, u.e7)([R.default], () => R.default.getUser(n.author_id)),
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
         s = (0, u.e7)([k.Z], () => (null != l ? k.Z.getApplicationActivity(l.id, a) : null), [a, l]),
         [c, h] = r.useState("unsent");
-    if (!(null != s && (0, v.Z)(s, G.xjy.JOIN))) return null;
+    if (!(null != s && (0, b.Z)(s, G.xjy.JOIN))) return null;
     let m = async (e) => {
             if (null != l && "unsent" === c) {
                 e.stopPropagation();
@@ -274,7 +274,7 @@ function J(e) {
             ),
     });
 }
-function q(e) {
+function J(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
         o = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
         l = (0, u.e7)([P.Z], () => (null != o ? P.Z.getAnyStreamForUser(o.id) : null), [o]),
@@ -318,16 +318,16 @@ function q(e) {
                                   null != l && (0, i.jsx)(_.ZP, { className: Y.liveIndicator }),
                               ],
                           }),
-                          (0, i.jsx)(x.Gk, {
-                              location: x.Gt.OVERLAY,
+                          (0, i.jsx)(S.Gk, {
+                              location: S.Gt.OVERLAY,
                               className: Y.badgesContainer,
-                              children: [x.OV, x.wO, x.f, x.v1, x.pQ].map((e, n) =>
+                              children: [S.OV, S.wO, S.f, S.v1, S.pQ].map((e, n) =>
                                   (0, i.jsx)(e, { entry: t }, "entry-".concat(n)),
                               ),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(J, {
+                  (0, i.jsx)(q, {
                       entry: t,
                       currentUserActivity: n,
                       idx: r,
@@ -391,7 +391,7 @@ function ee(e) {
                       }),
                   t.map((e, t) =>
                       (0, i.jsx)(
-                          q,
+                          J,
                           {
                               idx: t,
                               entry: e,
@@ -499,7 +499,7 @@ function en(e) {
 }
 function ei(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
-        o = null != t && (0, v.Z)(t, G.xjy.JOIN),
+        o = null != t && (0, b.Z)(t, G.xjy.JOIN),
         l = (0, E.q)(null == t ? void 0 : t.application_id),
         a = null != l && (0, z.yE)(l.flags, G.udG.EMBEDDED);
     return null == t || null == n

@@ -75,7 +75,7 @@ function b(e) {
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         l = u.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: d, applications: f } = r,
-        p = (0, s.gv)(f),
+        p = (0, s.Z5)(f),
         h = n.config.messages.gameTitle,
         m = (0, s.f$)(n.config),
         g = (0, s._p)(n.config);
@@ -118,7 +118,7 @@ function O(e) {
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         l = u.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: d, applications: f } = r,
-        p = (0, s.gv)(f),
+        p = (0, s.Z5)(f),
         h = n.config.messages.gameTitle,
         m = (0, s.f$)(n.config),
         g = (0, s._p)(n.config);

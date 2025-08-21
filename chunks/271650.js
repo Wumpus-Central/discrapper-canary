@@ -1,1 +1,4 @@
-e.exports = { divider: "divider__9c880" };
+e.exports = {
+    container: "container__9c880",
+    divider: "divider__9c880",
+};

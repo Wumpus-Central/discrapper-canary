@@ -1,8 +1,8 @@
 n.d(t, {
     IV: () => E,
-    ZP: () => x,
-    bt: () => b,
-    fd: () => v,
+    ZP: () => S,
+    bt: () => v,
+    fd: () => b,
 }),
     n(388685);
 var i = n(951288),
@@ -62,20 +62,20 @@ function O(e, t) {
         e
     );
 }
-let b = 256,
-    v = 144;
+let v = 256,
+    b = 144;
 function E(e, t, n) {
     if (e === h.C5.VERTICAL) {
-        let e = Math.max(t, b),
-            n = Math.max((9 / 16) * e, v);
+        let e = Math.max(t, v),
+            n = Math.max((9 / 16) * e, b);
         return {
             tileWidth: e,
             tileHeight: n,
         };
     }
-    let i = Math.max(n, v);
+    let i = Math.max(n, b);
     return {
-        tileWidth: Math.max((16 / 9) * i, b),
+        tileWidth: Math.max((16 / 9) * i, v),
         tileHeight: i,
     };
 }
@@ -85,33 +85,33 @@ let _ = {
         friction: 18,
         clamp: !0,
     },
-    x = r.memo(function (e) {
+    S = r.memo(function (e) {
         let {
                 widgetId: t,
                 tileWidth: n,
                 tileHeight: o,
-                layout: b,
-                locked: v,
+                layout: v,
+                locked: b,
                 activeStreams: E,
-                streamParticipants: x,
-                participantsVersion: S,
+                streamParticipants: S,
+                participantsVersion: x,
                 pinned: I,
                 padding: j,
                 sizeOffset: C,
             } = e,
-            N = x.map((e) => ({
+            N = S.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
                 height: o,
-                locked: v,
+                locked: b,
                 widgetId: t,
                 pinned: I,
             })),
             w = (0, c.Z)(n),
-            Z = (0, c.Z)(v),
-            P = b === h.C5.VERTICAL,
-            T = v || Z !== v || w !== n,
+            Z = (0, c.Z)(b),
+            P = v === h.C5.VERTICAL,
+            T = b || Z !== b || w !== n,
             A = 0,
             k = 0,
             D = (0, s.Yzy)(
@@ -162,8 +162,8 @@ let _ = {
                 },
                 T ? "animate-never" : "respect-motion-settings",
             ),
-            R = (0, p.ee)(() => new Set(x.map((e) => e.user.id)), [x, S]),
-            L = (0, p.ee)(() => new Set(x.filter((e) => E.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [x, E, S]);
+            R = (0, p.ee)(() => new Set(S.map((e) => e.user.id)), [S, x]),
+            L = (0, p.ee)(() => new Set(S.filter((e) => E.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [S, E, x]);
         return (
             r.useEffect(() => {
                 0 !== R.size &&

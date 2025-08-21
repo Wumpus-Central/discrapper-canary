@@ -1,2 +1,2 @@
-n.d(t, { e: () => r });
-let r = 5 * n(70956).Z.Millis.MINUTE;
+n.d(t, { O: () => r });
+let r = 10 * n(70956).Z.Millis.MINUTE;

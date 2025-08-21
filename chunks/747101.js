@@ -1,14 +1,15 @@
 r.d(t, {
-    F: () => s,
-    Z: () => u,
+    F: () => u,
+    Z: () => d,
 }),
     r(539854),
     r(388685);
 var n = r(647438),
     i = r(442837),
     l = r(224706),
-    a = r(669764);
-function o(e) {
+    a = r(669764),
+    o = r(77498);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -33,7 +34,7 @@ function o(e) {
     }
     return e;
 }
-function c(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,7 +52,7 @@ function c(e, t) {
         e
     );
 }
-function s(e) {
+function u(e) {
     n.useEffect(() => {
         if (e.length > 0) {
             let t = e.filter((e) => a.Z.canFetch(e));
@@ -72,8 +73,8 @@ function s(e) {
         isGameFetching: n.useCallback((e) => a.Z.isFetching(e), []),
     };
 }
-function u(e) {
-    let { gameDataMap: t, isGameFetching: r } = s(
+function d(e) {
+    let { gameDataMap: t, isGameFetching: r } = u(
         n.useMemo(
             () =>
                 (function (e) {
@@ -96,12 +97,15 @@ function u(e) {
                 e.map((e) => {
                     let r = e.games.map((e) => {
                         let r = t[e.applicationId];
-                        return c(o({}, e), {
-                            gameName: null == r ? void 0 : r.name,
-                            imageSrc: null == r ? void 0 : r.coverImageUrl,
-                        });
+                        if (null != r)
+                            return s(c({}, e), {
+                                gameName: r.name,
+                                imageSrc: r.coverImageUrl,
+                            });
+                        let n = o.Z.getDetectableGame(e.applicationId);
+                        return s(c({}, e), { gameName: null == n ? void 0 : n.name });
                     });
-                    return c(o({}, e), { games: r });
+                    return s(c({}, e), { games: r });
                 }),
             [e, t],
         ),

@@ -16,15 +16,15 @@ var r = n(951288),
     b = n(882522),
     _ = n(512384),
     y = n(763624),
-    C = n(470956),
-    x = n(597998),
-    v = n(199902),
-    O = n(314897),
-    j = n(271383),
-    E = n(131951),
-    S = n(496675),
-    I = n(158776),
-    P = n(885110),
+    C = n(463421),
+    x = n(470956),
+    v = n(597998),
+    O = n(199902),
+    j = n(314897),
+    E = n(271383),
+    S = n(131951),
+    I = n(496675),
+    P = n(158776),
     Z = n(797258),
     T = n(606304),
     N = n(979651),
@@ -35,61 +35,59 @@ var r = n(951288),
     D = n(541675);
 let L = i.memo((e) => {
     var t, n, i, l;
-    let { mute: a, deaf: s, user: x, channel: S, sessionId: D, nick: L } = e,
-        k = x.id,
-        U = (0, o.e7)([O.default], () => O.default.getId() === k, [k]),
-        [B, F, G] = (0, o.Wu)(
-            [E.Z],
+    let { mute: a, deaf: s, user: v, channel: I, sessionId: P, nick: D } = e,
+        L = v.id,
+        k = (0, o.e7)([j.default], () => j.default.getId() === L, [L]),
+        [U, B, F] = (0, o.Wu)(
+            [S.Z],
             () =>
-                U
-                    ? [!E.Z.isSupported() || E.Z.isSelfMute() || E.Z.isSelfMutedTemporarily(), E.Z.isSelfDeaf(), !1]
-                    : [!E.Z.isSupported() || E.Z.isLocalMute(k), !1, E.Z.isLocalVideoDisabled(k)],
-            [U, k],
+                k
+                    ? [!S.Z.isSupported() || S.Z.isSelfMute() || S.Z.isSelfMutedTemporarily(), S.Z.isSelfDeaf(), !1]
+                    : [!S.Z.isSupported() || S.Z.isLocalMute(L), !1, S.Z.isLocalVideoDisabled(L)],
+            [k, L],
         ),
-        H = (0, o.e7)([T.Z], () => T.Z.isPrioritySpeaker(k)),
-        V = (0, c.Z)({
-            userId: k,
+        G = (0, o.e7)([T.Z], () => T.Z.isPrioritySpeaker(L)),
+        H = (0, c.Z)({
+            userId: L,
             checkSoundSharing: !0,
         }),
-        z = (0, o.e7)([j.ZP], () => j.ZP.isGuestOrLurker(S.guild_id, k)),
-        W = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(S.id).has(k)),
-        Y = (0, o.e7)(
+        V = (0, o.e7)([E.ZP], () => E.ZP.isGuestOrLurker(I.guild_id, L)),
+        z = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(I.id).has(L)),
+        W = (0, o.e7)(
             [u.ZP],
             () =>
-                u.ZP.getEmbeddedActivitiesForChannel(S.id).find((e) => {
+                u.ZP.getEmbeddedActivitiesForChannel(I.id).find((e) => {
                     let { userIds: t } = e;
-                    return t.has(k);
+                    return t.has(L);
                 }),
-            [k, S.id],
+            [L, I.id],
         ),
-        q = (0, p.Z)(null != Y ? [Y.applicationId] : []),
-        K = (0, o.e7)([I.Z, P.Z], () => (U ? P.Z.getActivities() : I.Z.getActivities(k, S.guild_id))).find(
-            (e) => null != e.application_id && e.type === R.IIU.PLAYING,
+        Y = (0, p.Z)(null != W ? [W.applicationId] : []),
+        q = (0, C.Z)(L, I.guild_id)[0],
+        K = null != (n = (0, d.IX)(null == q ? void 0 : q.application_id).data) ? n : void 0,
+        [X, Q] = (0, o.Wu)(
+            [O.Z],
+            () => [O.Z.getStreamForUser(L, I.getGuildId()), O.Z.getActiveStreamForUser(L, I.getGuildId())],
+            [I, L],
         ),
-        X = null != (n = (0, d.IX)(null == K ? void 0 : K.application_id).data) ? n : void 0,
-        [Q, J] = (0, o.Wu)(
-            [v.Z],
-            () => [v.Z.getStreamForUser(k, S.getGuildId()), v.Z.getActiveStreamForUser(k, S.getGuildId())],
-            [S, k],
-        ),
-        $ = (0, o.e7)([Z.Z], () => Z.Z.getSessionById(D)),
-        ee = A.ZP.useName(x),
-        et = (0, o.e7)([N.Z], () => N.Z.getVoicePlatformForChannel(S.id, k), [S.id, k]),
-        { enableHangStatus: en } = m.n.useExperiment({
-            guildId: S.guild_id,
+        J = (0, o.e7)([Z.Z], () => Z.Z.getSessionById(P)),
+        $ = A.ZP.useName(v),
+        ee = (0, o.e7)([N.Z], () => N.Z.getVoicePlatformForChannel(I.id, L), [I.id, L]),
+        { enableHangStatus: et } = m.n.useExperiment({
+            guildId: I.guild_id,
             location: "VoiceUsers",
         }),
-        er = (0, f.ZP)(S, !0, x),
-        ei = (0, o.e7)([g.Z], () => (U ? g.Z.getHangStatusActivity() : null), [U]),
-        el = (0, b.j)(k),
-        ea = (0, C.Eu)(S.id, k),
-        { enableVCStatusIcons: eo, enableRequestToStream: es } = y.A.useExperiment({
-            guildId: S.guild_id,
+        en = (0, f.ZP)(I, !0, v),
+        er = (0, o.e7)([g.Z], () => (k ? g.Z.getHangStatusActivity() : null), [k]),
+        ei = (0, b.j)(L),
+        el = (0, x.Eu)(I.id, L),
+        { enableVCStatusIcons: ea, enableRequestToStream: eo } = y.A.useExperiment({
+            guildId: I.guild_id,
             location: "VoiceUsers",
         });
     return (0, r.jsx)(_.Z, {
         shakeLocation: M.oZ.VOICE_USER,
-        isShaking: V,
+        isShaking: H,
         children: (0, r.jsx)(
             w.ZP,
             ((i = (function (e) {
@@ -119,27 +117,27 @@ let L = i.memo((e) => {
             })({}, e)),
             (l = l =
                 {
-                    nick: null != L ? L : ee,
-                    canDrag: e.canDrag && !z,
-                    disconnected: ea,
-                    otherClientSessionType: null == $ || null == (t = $.clientInfo) ? void 0 : t.os,
-                    voicePlatform: et,
-                    localMute: B && !U,
-                    localVideoDisabled: G,
-                    mute: a || B,
-                    deaf: s || F,
-                    speaking: V,
-                    ringing: W,
-                    priority: H,
-                    embeddedApplication: q[0],
-                    isStreaming: null != Q && Q.channelId === S.id,
-                    isWatching: null != J && J.state !== R.jm8.ENDED,
-                    isGuest: z,
-                    isSelf: U,
-                    requestToStreamActivity: es ? K : void 0,
-                    application: eo && (null == K ? void 0 : K.session_id) != null ? X : void 0,
-                    showHangStatus: er && en && (U || null != el),
-                    hangStatusActivity: U ? ei : el,
+                    nick: null != D ? D : $,
+                    canDrag: e.canDrag && !V,
+                    disconnected: el,
+                    otherClientSessionType: null == J || null == (t = J.clientInfo) ? void 0 : t.os,
+                    voicePlatform: ee,
+                    localMute: U && !k,
+                    localVideoDisabled: F,
+                    mute: a || U,
+                    deaf: s || B,
+                    speaking: H,
+                    ringing: z,
+                    priority: G,
+                    embeddedApplication: Y[0],
+                    isStreaming: null != X && X.channelId === I.id,
+                    isWatching: null != Q && Q.state !== R.jm8.ENDED,
+                    isGuest: V,
+                    isSelf: k,
+                    requestToStreamActivity: eo ? q : void 0,
+                    application: ea && (null == q ? void 0 : q.session_id) != null ? K : void 0,
+                    showHangStatus: en && et && (k || null != ei),
+                    hangStatusActivity: k ? er : ei,
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -174,40 +172,40 @@ let k = [],
                 className: _,
                 children: y,
             } = e,
-            [v, j] = i.useState(null),
-            [E, P] = i.useState(!1),
+            [C, O] = i.useState(null),
+            [E, S] = i.useState(!1),
             Z = i.useRef(null),
-            T = (0, C.Es)(l.id, null != c ? c : k),
+            T = (0, x.Es)(l.id, null != c ? c : k),
             N = i.useRef(
                 new s.sW(50, () => {
-                    j(Z.current), (Z.current = null);
+                    O(Z.current), (Z.current = null);
                 }),
             ),
             A = i.useRef(
                 new s.sW(175, () => {
-                    j(null);
+                    O(null);
                 }),
             ),
             M = i.useCallback(
                 (e) => {
-                    t && (P(!0), A.current.cancel(), (Z.current = e), N.current.delay());
+                    t && (S(!0), A.current.cancel(), (Z.current = e), N.current.delay());
                 },
                 [t],
             ),
             U = i.useCallback(
                 (e) => {
-                    t && (N.current.cancel(), v === e && (P(!1), A.current.delay()));
+                    t && (N.current.cancel(), C === e && (S(!1), A.current.delay()));
                 },
-                [t, v],
+                [t, C],
             ),
-            B = (0, o.Wu)([I.Z], () => {
+            B = (0, o.Wu)([P.Z], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
                     null == T ||
                         T.forEach((t) => {
                             let { user: n } = t;
-                            I.Z.getActivities(n.id, l.guild_id).forEach((t) => {
+                            P.Z.getActivities(n.id, l.guild_id).forEach((t) => {
                                 null != t.application_id && e.add(t.application_id);
                             });
                         }),
@@ -228,7 +226,7 @@ let k = [],
                         {
                             user: a,
                             nick: o,
-                            isSelfOnOtherClient: O.default.getId() === a.id && s.sessionId !== O.default.getSessionId(),
+                            isSelfOnOtherClient: j.default.getId() === a.id && s.sessionId !== j.default.getSessionId(),
                             mute: s.isVoiceMuted(),
                             deaf: s.isVoiceDeafened(),
                             video: s.selfVideo,
@@ -237,11 +235,11 @@ let k = [],
                             sessionId: null != (i = s.sessionId) ? i : "",
                             channel: l,
                             collapsed: u,
-                            canDrag: n && S.Z.can(R.Plq.MOVE_MEMBERS, l),
+                            canDrag: n && I.Z.can(R.Plq.MOVE_MEMBERS, l),
                             showPreview: M,
                             hidePreview: U,
                             previewIsOpen: E,
-                            shouldShowHoverPopout: v === a.id,
+                            shouldShowHoverPopout: C === a.id,
                             tabIndex: f,
                             location: m,
                         },
@@ -262,7 +260,7 @@ let k = [],
         })();
         return null == F && null == y
             ? null
-            : (0, r.jsxs)(x.eJ, {
+            : (0, r.jsxs)(v.eJ, {
                   className: a()(_, D.list, {
                       [D.collapsed]: u,
                       [D.withGuildIcon]: b,

@@ -1361,6 +1361,7 @@ class eI extends d.Z {
                 users_added_count: t.usersAdded,
                 users_removed_count: t.usersRemoved,
                 roster_size_after: t.rosterSizeAfter,
+                init_to_finish_duration: r(t.executeFinishedTime, t.initReceivedTime),
             }),
         ),
             e === eO && this._trackRemainingSecureFrameTransitions();

@@ -15,12 +15,12 @@ var i = n(951288),
     g = n(194082),
     y = n(871118),
     O = n(172751),
-    b = n(352978),
-    v = n(833519),
+    v = n(352978),
+    b = n(833519),
     E = n(839662),
     _ = n(199902),
-    x = n(314897),
-    S = n(131951),
+    S = n(314897),
+    x = n(131951),
     I = n(594174),
     j = n(5192),
     C = n(444295),
@@ -94,11 +94,11 @@ function k(e, t) {
 function D(e) {
     let { participant: t } = e,
         n = t.user.id,
-        o = (0, a.e7)([S.Z], () => {
+        o = (0, a.e7)([x.Z], () => {
             let e = (0, m.Z)(t.type);
-            return S.Z.isLocalMute(t.user.id, e);
+            return x.Z.isLocalMute(t.user.id, e);
         }, [t]),
-        l = (0, a.e7)([x.default], () => x.default.getId()),
+        l = (0, a.e7)([S.default], () => S.default.getId()),
         { hasVideo: d } = (0, E.Z)(t, l),
         p = o && d,
         f = r.useCallback(() => {
@@ -312,10 +312,10 @@ let M = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                                     onContextMenu: R(t, u),
                                     className: P.streamTile,
                                     style: { transform: "scale(".concat(m, ")") },
-                                    children: (0, i.jsx)(v.Z, {
+                                    children: (0, i.jsx)(b.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != O ? O : b.L.CONTAIN,
+                                        fit: null != O ? O : v.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !r,
                                         selected: !1,

@@ -1,6 +1,6 @@
 n.d(t, {
+    C: () => o,
     D: () => i,
-    X: () => a,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -20,4 +20,8 @@ let i = (0, r.le)({
             0: { enabled: !1 },
             1: { enabled: !0 },
         },
-    });
+    }),
+    o = (e) => {
+        let { enabled: t } = a.getConfig({ location: e });
+        return t;
+    };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eb }), n(539854), n(388685), n(642613), n(290780);
+n.d(t, { Z: () => ev }), n(539854), n(388685), n(642613), n(290780);
 var i,
     r = n(512722),
     o = n.n(r),
@@ -15,12 +15,12 @@ var i,
     g = n(314897),
     y = n(592125),
     O = n(375954),
-    b = n(292959),
-    v = n(649974),
+    v = n(292959),
+    b = n(649974),
     E = n(158776),
     _ = n(699516),
-    x = n(944486),
-    S = n(885110),
+    S = n(944486),
+    x = n(885110),
     I = n(246946),
     j = n(594174),
     C = n(979651),
@@ -59,7 +59,7 @@ function X(e, t, n) {
         e
     );
 }
-function J(e) {
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -75,7 +75,7 @@ function J(e) {
     }
     return e;
 }
-function q(e, t) {
+function J(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -134,20 +134,20 @@ function ef(e) {
     let i = er[n];
     if ((i.timer.stop(), (er = [...er]), t === Q._1z.FOCUSED)) {
         let [e] = er.splice(n, 1);
-        (e = q(J({}, e), { status: t })), er.unshift(e), (eo = !0);
+        (e = J(q({}, e), { status: t })), er.unshift(e), (eo = !0);
         return;
     }
-    t === Q._1z.DISMISSED ? er.splice(n, 1) : (er[n] = q(J({}, i), { status: t })), ed();
+    t === Q._1z.DISMISSED ? er.splice(n, 1) : (er[n] = J(q({}, i), { status: t })), ed();
 }
 function eh(e) {
     let t = er.find((t) => t.type === L.kL.INCOMING_CALL && t.channelId === e);
     return null != t ? t.id : null;
 }
 function em(e, t) {
-    let n = J(q(J({}, ei), { timestamp: Date.now() }), t),
+    let n = q(J(q({}, ei), { timestamp: Date.now() }), t),
         i = (0, l.Z)(),
         r = !1,
-        o = J(
+        o = q(
             {
                 id: i,
                 status: Q._1z.ACTIVE,
@@ -166,7 +166,7 @@ function em(e, t) {
                         },
                     };
                 })(i, n.expirationExternallyManaged, n.duration),
-                props: q(J({}, e), {
+                props: J(q({}, e), {
                     onNotificationShow: () => {
                         var t;
                         r || ((r = !0), null == (t = e.onNotificationShow) || t.call(e, i));
@@ -189,7 +189,7 @@ function eg() {
         D.Z.isNotificationDisabled(T.OverlayNotificationDisabledSetting.NOW_PLAYING)
     )
         return !1;
-    let e = v.Z.usersPlaying,
+    let e = b.Z.usersPlaying,
         t = new Set(),
         n = (function () {
             let e = [];
@@ -205,7 +205,7 @@ function eg() {
                 if (!_.Z.isFriend(e)) return !1;
                 let r = t.gameId;
                 if (null == r) return !1;
-                let o = null == (n = v.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
+                let o = null == (n = b.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
                 if (
                     null == o ||
                     o.type !== Q.IIU.PLAYING ||
@@ -217,7 +217,7 @@ function eg() {
                     })(o)
                 )
                     return !1;
-                let l = x.Z.getVoiceChannelId(),
+                let l = S.Z.getVoiceChannelId(),
                     a = null == (i = C.Z.getDiscoverableVoiceStateForUser(e)) ? void 0 : i.channelId;
                 if (null != l && null != a && l === a) return !1;
                 let s = (0, M.pL)();
@@ -291,7 +291,7 @@ function ey(e) {
                 guildId: e.guildId,
                 location: "OverlayV3StartRinging",
             }).enabled) ||
-        S.Z.getStatus() === Q.Skl.DND ||
+        x.Z.getStatus() === Q.Skl.DND ||
         h.QZ.getSetting()
     )
         return !1;
@@ -306,14 +306,14 @@ function ey(e) {
 }
 class eO extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(y.Z, j.default, v.Z, D.Z), this.syncWith([v.Z], eg);
+        this.waitFor(y.Z, j.default, b.Z, D.Z), this.syncWith([b.Z], eg);
     }
     getNotifications() {
         return er;
     }
 }
 X(eO, "displayName", "OverlayNotificationsStore");
-let eb = new eO(s.Z, {
+let ev = new eO(s.Z, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
         let { notificationId: t, status: n } = e;
         ef(t, n);
@@ -383,7 +383,7 @@ let eb = new eO(s.Z, {
                         break;
                     case Q.mFx.JOIN_REQUEST:
                         if (
-                            null == (r = S.Z.getApplicationActivity(s)) ||
+                            null == (r = x.Z.getApplicationActivity(s)) ||
                             null == r.party ||
                             r.party.id !== t.activity.party_id
                         )
@@ -395,18 +395,27 @@ let eb = new eO(s.Z, {
                             guildId: e.guild_id,
                             location: "showActivityNotification",
                         });
-                        if (!c || null == (r = S.Z.getApplicationActivity(s)) || r.application_id !== s) return !1;
+                        if (!c || null == (r = x.Z.getApplicationActivity(s)) || r.application_id !== s) return !1;
                         l = (0, B.Z)(e, n, a, r);
                 }
+                if (null == l) return !1;
+                em(l, {
+                    priority: L.Tu.URGENT,
+                    expirationExternallyManaged: !0,
+                    channelId: e.id,
+                    duration: en,
+                    uniqueKey: "activity-".concat(t.activity.type, "-").concat(n.id, "-").concat(e.id, "-").concat(s),
+                });
+                let u = new Set();
                 return (
-                    null != l &&
-                    (em(l, {
-                        priority: L.Tu.URGENT,
-                        expirationExternallyManaged: !0,
-                        channelId: e.id,
-                        duration: en,
-                    }),
-                    !0)
+                    er
+                        .filter((e) => null != e.uniqueKey)
+                        .sort((e, t) => t.timestamp - e.timestamp)
+                        .forEach((e) => {
+                            null != e.uniqueKey &&
+                                (u.has(e.uniqueKey) ? ef(e.id, Q._1z.DISMISSED) : u.add(e.uniqueKey));
+                        }),
+                    !0
                 );
             })(a, l, s);
             if (!1 !== e) return e;
@@ -417,7 +426,7 @@ let eb = new eO(s.Z, {
             !(0, p.eF)(l, r)
         )
             return !1;
-        let c = !b.Z.isSoundDisabled(N.Ay),
+        let c = !v.Z.isSoundDisabled(N.Ay),
             u = null != (i = O.Z.getMessage(r, l.id)) ? i : (0, d.e5)(l);
         em((0, H.Z)(a, u, s, c), {
             type: L.kL.TEXT,

@@ -51,6 +51,7 @@ let g = (e) => {
         return (0, r.jsxs)(i.Kq, {
             padding: { top: 24 },
             gap: 4,
+            className: m.container,
             children: [
                 (0, r.jsx)(i.xv, {
                     variant: "eyebrow",

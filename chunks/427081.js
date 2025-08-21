@@ -88,14 +88,14 @@ class N extends i.Z {
                 continue;
             }
         }
-        let a = E.X.getConfig({ location: y.dr.QUESTS_MANAGER });
+        let a = (0, E.C)(y.dr.QUESTS_MANAGER);
         for (let t of Object.keys(i)) {
             let o = i[t];
             for (let i of n.values()) {
                 let n = i.config.taskConfigV2.tasks[r.X.PLAY_ON_DESKTOP];
                 if (!A(i) || null == n) continue;
                 let s = [i.config.application];
-                a.enabled && null != n.applications && (s = n.applications),
+                a && null != n.applications && (s = n.applications),
                     (s.some((e) => e.id === t) || C(i, o)) && e.add(i.id);
             }
         }

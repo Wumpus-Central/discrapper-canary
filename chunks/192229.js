@@ -1,13 +1,14 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(872810),
     i = n(147913),
-    a = n(994339),
-    o = n(199902),
-    s = n(375954),
-    l = n(158776),
-    c = n(172029),
-    u = n(981631);
-function d(e, t, n) {
+    a = n(199902),
+    o = n(375954),
+    s = n(709054),
+    l = n(172029),
+    c = n(463421),
+    u = n(915553),
+    d = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,23 +21,30 @@ function d(e, t, n) {
         e
     );
 }
-class f extends i.Z {
+class _ extends i.Z {
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         for (let e of t) {
             var n, i;
             if (null == e.channelId || !0 !== e.selfStream) continue;
-            let t = c.Z.getPendingRequestForUser(e.userId);
+            let t = l.Z.getPendingRequestForUser(e.userId);
             if (null == t) continue;
-            let d = s.Z.getMessage(e.channelId, t);
+            let f = o.Z.getMessage(e.channelId, t);
             if (
-                (null == d || null == (n = d.activity) ? void 0 : n.type) !== u.mFx.STREAM_REQUEST ||
-                (null == (i = d.application) ? void 0 : i.id) == null
+                (null == f || null == (n = f.activity) ? void 0 : n.type) !== d.mFx.STREAM_REQUEST ||
+                (null == (i = f.application) ? void 0 : i.id) == null ||
+                s.default.extractTimestamp(t) < Date.now() - u.O ||
+                null ==
+                    (0, c._)(e.userId, e.guildId).find((e) => {
+                        var t;
+                        return (
+                            (null == (t = f.application) ? void 0 : t.id) != null &&
+                            e.application_id === f.application.id
+                        );
+                    })
             )
                 continue;
-            let f = l.Z.getApplicationActivity(e.userId, d.application.id, e.guildId);
-            if (!(0, a.Z)(f, d, d.application.id)) continue;
-            let _ = o.Z.getStreamForUser(e.userId, e.guildId);
+            let _ = a.Z.getStreamForUser(e.userId, e.guildId);
             null != _ &&
                 r.rn(_, {
                     forceMultiple: !0,
@@ -45,7 +53,7 @@ class f extends i.Z {
         }
     }
     constructor(...e) {
-        super(...e), d(this, "actions", { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates });
+        super(...e), f(this, "actions", { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates });
     }
 }
-let _ = new f();
+let p = new _();
