@@ -1,14 +1,14 @@
 r.d(t, { Z: () => u });
 var n = r(951288);
 r(647438);
-var l = r(120356),
-    i = r.n(l),
+var i = r(120356),
+    l = r.n(i),
     a = r(481060),
     o = r(86419),
     c = r(388032),
     s = r(51708);
 function u(e) {
-    let { game: t, widgetType: r, iconSize: l = "refresh_sm", className: u } = e,
+    let { game: t, widgetType: r, iconSize: i = "refresh_sm", className: u } = e,
         d = () => {
             (0, o.$b)(r, t.applicationId);
         };
@@ -47,9 +47,9 @@ function u(e) {
                     {
                         onClick: d,
                         "aria-label": c.intl.string(c.t.HUvyDQ),
-                        className: i()(u, s.clickable),
+                        className: l()(u, s.clickable),
                         children: (0, n.jsx)(a.XHJ, {
-                            size: l,
+                            size: i,
                             className: s.icon,
                             color: a.TVs.colors.STATUS_DANGER,
                         }),

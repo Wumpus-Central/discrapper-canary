@@ -13,7 +13,7 @@ let d = (e) => {
             isModeratorReport: _,
         } = e,
         p = (null == m ? void 0 : m.type) === "submit",
-        f = i.useRef(
+        x = i.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -70,7 +70,7 @@ let d = (e) => {
                 ? (0, r.jsx)(l.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: f.current(u),
+                      children: x.current(u),
                   })
                 : null,
             p &&

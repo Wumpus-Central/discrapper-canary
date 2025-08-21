@@ -1,8 +1,8 @@
 r.d(t, { S: () => f });
 var n = r(951288);
 r(647438);
-var l = r(594174),
-    i = r(971082),
+var i = r(594174),
+    l = r(971082),
     a = r(817053),
     o = r(533815),
     c = r(853072),
@@ -14,16 +14,16 @@ function f(e) {
             game: t,
             userId: r,
             widgetType: f,
-            guildId: g,
-            channelId: p,
-            loading: b = !1,
+            guildId: b,
+            channelId: g,
+            loading: p = !1,
             disableInteraction: O = !1,
         } = e,
         m = (0, c.Z)(t.applicationId),
         j = m.length > 0,
-        y = l.default.getCurrentUser(),
+        y = i.default.getCurrentUser(),
         v = (null == y ? void 0 : y.id) === r;
-    return b
+    return p
         ? (0, n.jsx)("div", { className: u.loadingCover })
         : (0, n.jsxs)("div", {
               className: d.container,
@@ -46,12 +46,12 @@ function f(e) {
                       }),
                   !O &&
                       j &&
-                      (0, n.jsx)(i.Z, {
+                      (0, n.jsx)(l.Z, {
                           label: s.intl.formatToPlainString(s.t.ujhJdH, { numFriends: m.length }),
                           className: d.socialProof,
                           users: m,
-                          guildId: g,
-                          channelId: p,
+                          guildId: b,
+                          channelId: g,
                           visuallyHideLabel: !0,
                       }),
               ],

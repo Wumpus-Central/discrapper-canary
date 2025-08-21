@@ -10,8 +10,8 @@ var r = n(951288),
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: _, rows: p, character_limit: f, pattern: g },
-                onChange: x,
+                data: { title: u, subtitle: m, placeholder: _, rows: p, character_limit: x, pattern: g },
+                onChange: f,
                 initialText: b,
                 isRequired: h,
             } = e,
@@ -71,17 +71,17 @@ let u = (e) => {
                     ? null != e &&
                       (C(null),
                       y(e),
-                      x({
+                      f({
                           value: e,
                           isValid: !0,
                       }))
                     : (C(s.intl.string(s.t["24xrGR"])),
-                      x({
+                      f({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [x, g],
+            [f, g],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -102,7 +102,7 @@ let u = (e) => {
                         }),
                     }),
                 (0, r.jsx)(l.Kx8, {
-                    maxLength: f,
+                    maxLength: x,
                     onChange: Z,
                     value: j,
                     error: O,

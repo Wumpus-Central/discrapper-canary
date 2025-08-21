@@ -51,9 +51,9 @@ function d(e) {
             iconClassName: m,
             color: _,
             buttonText: p,
-            buttonVariant: f = "secondary",
+            buttonVariant: x = "secondary",
             buttonSize: g = "sm",
-            buttonDisabled: x,
+            buttonDisabled: f,
             buttonIcon: b,
             buttonIconPosition: h = "start",
             buttonLoading: v,
@@ -65,12 +65,12 @@ function d(e) {
         Z =
             null != p
                 ? (0, r.jsx)(a.zxk, {
-                      variant: f,
+                      variant: x,
                       size: g,
                       text: p,
                       icon: b,
                       iconPosition: h,
-                      disabled: x,
+                      disabled: f,
                       loading: v,
                       onClick: j,
                       "aria-label": p,

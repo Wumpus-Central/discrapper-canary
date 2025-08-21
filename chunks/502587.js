@@ -1,7 +1,7 @@
-r.d(t, { Z: () => p });
+r.d(t, { Z: () => g });
 var n = r(951288),
-    l = r(647438),
-    i = r(481060),
+    i = r(647438),
+    l = r(481060),
     a = r(239091),
     o = r(314897),
     c = r(86419),
@@ -33,7 +33,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,21 +51,21 @@ function g(e, t) {
         e
     );
 }
-function p(e) {
+function g(e) {
     let { widget: t } = e,
-        p = l.useRef(null),
-        b = (e) => {
+        g = i.useRef(null),
+        p = (e) => {
             if (e.shiftKey) {
                 (0, c.y8)(t.type), (0, s.L$)(u.qb.WIDGET_REMOVED);
                 return;
             }
-            (0, i.ZDy)(
+            (0, l.ZDy)(
                 async () => {
                     let { default: e } = await r.e("70887").then(r.bind(r, 37668));
                     return (r) =>
                         (0, n.jsx)(
                             e,
-                            g(f({}, r), {
+                            b(f({}, r), {
                                 userId: o.default.getId(),
                                 widget: t,
                             }),
@@ -74,37 +74,37 @@ function p(e) {
                 { stackingBehavior: "stack" },
             );
         };
-    return (0, n.jsx)(i.yRy, {
-        targetElementRef: p,
+    return (0, n.jsx)(l.yRy, {
+        targetElementRef: g,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(i.v2r, {
+            return (0, n.jsx)(l.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
                     (0, a.Zy)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": d.intl.string(d.t.xpSHSk),
-                children: (0, n.jsx)(i.kSQ, {
-                    children: (0, n.jsx)(i.sNh, {
+                children: (0, n.jsx)(l.kSQ, {
+                    children: (0, n.jsx)(l.sNh, {
                         id: "remove-widget",
                         label: d.intl.string(d.t.Mm07YW),
-                        action: b,
+                        action: p,
                         color: "danger",
-                        icon: i.XHJ,
+                        icon: l.XHJ,
                     }),
                 }),
             });
         },
         children: (e) =>
             (0, n.jsx)(
-                i.hU,
-                g(f({}, e), {
-                    buttonRef: p,
-                    icon: i.xhG,
+                l.hU,
+                b(f({}, e), {
+                    buttonRef: g,
+                    icon: l.xhG,
                     variant: "secondary",
                     "aria-label": d.intl.string(d.t.xpSHSk),
                     size: "sm",

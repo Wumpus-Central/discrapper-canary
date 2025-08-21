@@ -179,7 +179,7 @@ let R = (e) => {
                       c.gtL,
                       A(
                           T(
-                              A(T({}, e), {
+                              A(T({ "data-migration-pending": !0 }, e), {
                                   disabled: !0,
                                   size: l.zx.Sizes.SMALL,
                                   pauseAnimation: P,
@@ -192,12 +192,21 @@ let R = (e) => {
           })
         : (0, r.jsx)(
               c.gtL,
-              A(T({ size: l.zx.Sizes.SMALL }, M), {
-                  className: o()(M.className, { [v.buttonHighlighted]: x }),
-                  submitting: G,
-                  onClick: W,
-                  pauseAnimation: P,
-                  children: z,
-              }),
+              A(
+                  T(
+                      {
+                          "data-migration-pending": !0,
+                          size: l.zx.Sizes.SMALL,
+                      },
+                      M,
+                  ),
+                  {
+                      className: o()(M.className, { [v.buttonHighlighted]: x }),
+                      submitting: G,
+                      onClick: W,
+                      pauseAnimation: P,
+                      children: z,
+                  },
+              ),
           );
 };

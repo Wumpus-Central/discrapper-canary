@@ -11,9 +11,9 @@ var r = n(951288),
     m = n(816342),
     _ = n(15667),
     p = n(76264),
-    f = n(805746),
+    x = n(805746),
     g = n(822686),
-    x = n(356110),
+    f = n(356110),
     b = n(730719),
     h = n(996701),
     v = n(238122),
@@ -27,20 +27,20 @@ var r = n(951288),
     N = n(266080),
     T = n(316617),
     P = n(15682),
-    k = n(189472),
-    E = n(749534),
+    E = n(189472),
+    k = n(749534),
     w = n(157759),
     R = n(521332),
     D = n(905434),
-    M = n(196627),
-    B = n(289809),
+    B = n(196627),
+    M = n(289809),
     A = n(739319),
-    G = n(842401),
-    L = n(229916),
+    L = n(842401),
+    G = n(229916),
     U = n(375790),
     W = n(981631),
-    F = n(388032),
-    z = n(764295),
+    z = n(388032),
+    F = n(764295),
     X = n(520310);
 function q(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -104,8 +104,8 @@ let J = (e) => {
         ed = l.s.REPORT_TO_MOD.has(n.name),
         [eu, em] = i.useState(!1),
         [e_, ep] = i.useState(!1),
-        [ef, eg] = i.useState(""),
-        [ex, eb] = i.useState(() => ({})),
+        [ex, eg] = i.useState(""),
+        [ef, eb] = i.useState(() => ({})),
         [eh, ev] = i.useState(() => ({})),
         ej = i.useMemo(() => ("message" === n.name ? n.record.channel_id : void 0), [n]),
         ey = i.useCallback(
@@ -117,13 +117,13 @@ let J = (e) => {
                     null != ei
                         ? {
                               name: ei.name,
-                              state: ex,
+                              state: ef,
                           }
                         : void 0,
             }),
-            [t, eo, es, ei, ex, eh],
+            [t, eo, es, ei, ef, eh],
         ),
-        eO = i.useMemo(() => (0, c.VP)(eo, es, ei, eh, ex), [eo, es, ei, eh, ex]),
+        eO = i.useMemo(() => (0, c.VP)(eo, es, ei, eh, ef), [eo, es, ei, eh, ef]),
         eC = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = q({}, eh);
@@ -181,7 +181,7 @@ let J = (e) => {
                 direction: o.Z.Direction.VERTICAL,
                 className: X.header,
                 children: [
-                    (0, r.jsx)(M.Z, { element: H(t, "success") }),
+                    (0, r.jsx)(B.Z, { element: H(t, "success") }),
                     (0, r.jsx)(Z.Z, {
                         node: t,
                         isModeratorReport: ed,
@@ -194,13 +194,13 @@ let J = (e) => {
                 className: X.body,
                 children: [
                     null != el && (0, r.jsx)(A.Z, { element: el }),
-                    null != ec && (0, r.jsx)(B.Z, { element: ec }),
+                    null != ec && (0, r.jsx)(M.Z, { element: ec }),
                     null != H(t, "message_preview") &&
                         ("message" === n.name || "first_dm" === n.name || "report_to_mod_message" === n.name) &&
                         (0, r.jsx)(T.Z, { message: n.record }),
-                    null != H(t, "user_preview") && "user" === n.name ? (0, r.jsx)(G.Z, { user: n.record }) : null,
+                    null != H(t, "user_preview") && "user" === n.name ? (0, r.jsx)(L.Z, { user: n.record }) : null,
                     null != H(t, "widget_preview") && "widget" === n.name
-                        ? (0, r.jsx)(L.Z, {
+                        ? (0, r.jsx)(G.Z, {
                               widget: n.widget,
                               userId: n.user_id,
                           })
@@ -218,7 +218,7 @@ let J = (e) => {
                             return U.O.includes(t);
                         });
                     })(t) &&
-                        (0, r.jsxs)(E.Z, {
+                        (0, r.jsxs)(k.Z, {
                             children: [
                                 eS &&
                                     (0, r.jsx)(I.Z, {
@@ -249,7 +249,7 @@ let J = (e) => {
                                         "first_dm" === n.name ||
                                         "user" === n.name ||
                                         "report_to_mod_message" === n.name) &&
-                                    (0, r.jsx)(k.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         user: "user" === n.name ? n.record : n.record.author,
                                         channelId: ej,
                                         reportId: en,
@@ -268,7 +268,7 @@ let J = (e) => {
                                     }),
                                 null != H(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, r.jsx)(f.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         application: n.record,
                                         reportId: en,
                                     }),
@@ -308,15 +308,15 @@ let J = (e) => {
                         (0, r.jsx)(P.Z, {
                             element: ei,
                             onChange: (e, t) => {
-                                let n = q({}, ex);
-                                e in ex ? delete n[e] : (n[e] = t), eb(n);
+                                let n = q({}, ef);
+                                e in ef ? delete n[e] : (n[e] = t), eb(n);
                             },
-                            state: ex,
+                            state: ef,
                         }),
                     V.includes(n.name) &&
                         null != es &&
                         es.length > 0 &&
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(f.Z, {
                             elements: es,
                             onChange: eC,
                             state: eh,
@@ -340,7 +340,7 @@ let J = (e) => {
                         ],
                     }),
                     (0, r.jsx)(b.Z, {
-                        errorMessage: ef,
+                        errorMessage: ex,
                         onClose: () => {
                             eg("");
                         },
@@ -371,10 +371,10 @@ let J = (e) => {
                                 .catch((e) => {
                                     var t;
                                     (null == (t = e.body) ? void 0 : t.code) === W.evJ.INVALID_FORM_BODY
-                                        ? eg(F.intl.string(F.t.VjAAuL))
+                                        ? eg(z.intl.string(z.t.VjAAuL))
                                         : ed
-                                          ? eg(F.intl.string(z.default.psKFdH))
-                                          : eg(F.intl.string(F.t.h6D8V1));
+                                          ? eg(z.intl.string(F.default.psKFdH))
+                                          : eg(z.intl.string(z.t.h6D8V1));
                                 })
                                 .finally(() => {
                                     em(!1);

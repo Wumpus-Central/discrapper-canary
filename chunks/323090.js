@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(900927),
     p = t(678738),
     b = t(179828),
-    g = t(228168),
-    x = t(388032),
+    x = t(228168),
+    g = t(388032),
     h = t(54966);
 function j(e) {
     let { user: n, currentUser: t, displayProfile: j, guildId: v, subsection: _, onClose: y } = e,
@@ -23,7 +23,7 @@ function j(e) {
             var e;
             return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        P = (0, o.e7)([c.Z, a.Z], () => c.Z.getChannel(a.Z.getChannelId()));
+        Z = (0, o.e7)([c.Z, a.Z], () => c.Z.getChannel(a.Z.getChannelId()));
     return (0, r.jsxs)(l.zJl, {
         fade: !0,
         className: h.scroller,
@@ -35,11 +35,11 @@ function j(e) {
                     setLineClamp: !1,
                 }),
             (null == O ? void 0 : O.popularApplicationCommandIds) != null &&
-                null != P &&
+                null != Z &&
                 (0, r.jsx)(u.Z, {
                     applicationId: O.id,
                     commandIds: O.popularApplicationCommandIds,
-                    channel: P,
+                    channel: Z,
                     guildId: v,
                     onClick: y,
                 }),
@@ -48,23 +48,23 @@ function j(e) {
                     user: n,
                     currentUser: t,
                     guildId: j.guildId,
-                    scrollIntoView: _ === g.Tb.ROLES,
+                    scrollIntoView: _ === x.Tb.ROLES,
                 }),
             (0, r.jsx)(p.Z, {
-                heading: x.intl.string(x.t["A//N4u"]),
+                heading: g.intl.string(g.t["A//N4u"]),
                 children: (0, r.jsx)(m.Z, {
                     userId: n.id,
                     guildId: v,
-                    tooltipDelay: g.vB,
+                    tooltipDelay: x.vB,
                 }),
             }),
             (0, r.jsx)(p.Z, {
-                heading: x.intl.string(x.t["mQKv+v"]),
-                scrollIntoView: _ === g.Tb.NOTE,
+                heading: g.intl.string(g.t["mQKv+v"]),
+                scrollIntoView: _ === x.Tb.NOTE,
                 children: (0, r.jsx)(i.Z, {
                     userId: n.id,
                     className: h.note,
-                    autoFocus: _ === g.Tb.NOTE,
+                    autoFocus: _ === x.Tb.NOTE,
                     onUpdate: () => I({ action: "SET_NOTE" }),
                 }),
             }),

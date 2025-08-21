@@ -1,15 +1,15 @@
 r.d(t, { Z: () => f }), r(539854), r(388685);
 var n = r(951288),
-    l = r(647438),
-    i = r(481060),
+    i = r(647438),
+    l = r(481060),
     a = r(785717),
     o = r(86419),
     c = r(286957),
     s = r(388032),
     u = r(44258);
-let d = l.memo(function (e) {
-    let { currentTags: t, onTagSelect: r, onNoneSelect: l, onClose: a } = e;
-    return (0, n.jsx)(i.v2r, {
+let d = i.memo(function (e) {
+    let { currentTags: t, onTagSelect: r, onNoneSelect: i, onClose: a } = e;
+    return (0, n.jsx)(l.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOj),
         onClose: a,
@@ -22,44 +22,44 @@ let d = l.memo(function (e) {
                         a.type === c.kd.RADIO &&
                             o.push(
                                 (0, n.jsx)(
-                                    i.k5B,
+                                    l.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
                                         label: s.intl.string(s.t.PoWNfX),
                                         checked: !a.tags.some((e) => t.includes(e)),
-                                        action: () => l(a.tags),
+                                        action: () => i(a.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        a.tags.forEach((l) => {
-                            let s = c.XV[l];
+                        a.tags.forEach((i) => {
+                            let s = c.XV[i];
                             null != s &&
                                 (a.type === c.kd.RADIO
                                     ? o.push(
                                           (0, n.jsx)(
-                                              i.k5B,
+                                              l.k5B,
                                               {
-                                                  id: l,
+                                                  id: i,
                                                   group: e,
                                                   label: s.getText(),
-                                                  checked: t.includes(l),
-                                                  action: () => r(l, !0),
+                                                  checked: t.includes(i),
+                                                  action: () => r(i, !0),
                                               },
-                                              l,
+                                              i,
                                           ),
                                       )
                                     : o.push(
                                           (0, n.jsx)(
-                                              i.S89,
+                                              l.S89,
                                               {
-                                                  id: l,
+                                                  id: i,
                                                   label: s.getText(),
-                                                  checked: t.includes(l),
-                                                  action: () => r(l, !1),
+                                                  checked: t.includes(i),
+                                                  action: () => r(i, !1),
                                               },
-                                              l,
+                                              i,
                                           ),
                                       ));
                         }),
@@ -67,7 +67,7 @@ let d = l.memo(function (e) {
                     );
                 })(a, o);
             return (0, n.jsx)(
-                i.kSQ,
+                l.kSQ,
                 {
                     label: o.getLabel(),
                     children: u,
@@ -78,11 +78,11 @@ let d = l.memo(function (e) {
     });
 });
 function f(e) {
-    let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
-        p = (0, l.useRef)(null),
-        { trackUserProfileAction: b } = (0, a.KZ)(),
-        O = (0, l.useMemo)(() => (null != t ? t : []), [t]),
-        m = (0, l.useCallback)(
+    let { tags: t, widgetType: r, applicationId: f, ref: b } = e,
+        g = (0, i.useRef)(null),
+        { trackUserProfileAction: p } = (0, a.KZ)(),
+        O = (0, i.useMemo)(() => (null != t ? t : []), [t]),
+        m = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = new Set(O);
@@ -93,28 +93,28 @@ function f(e) {
                             n.delete(e);
                         }),
                         n.add(e),
-                        b({ action: "ADD_GAME_TAGS" }));
+                        p({ action: "ADD_GAME_TAGS" }));
                 } else
                     n.has(e)
-                        ? (n.delete(e), b({ action: "REMOVE_GAME_TAGS" }))
-                        : (n.add(e), b({ action: "ADD_GAME_TAGS" }));
+                        ? (n.delete(e), p({ action: "REMOVE_GAME_TAGS" }))
+                        : (n.add(e), p({ action: "ADD_GAME_TAGS" }));
                 (0, o.n$)(r, f, Array.from(n));
             },
-            [O, b, r, f],
+            [O, p, r, f],
         ),
-        j = (0, l.useCallback)(
+        j = (0, i.useCallback)(
             (e) => {
                 let t = new Set(O);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    b({ action: "REMOVE_GAME_TAGS" }),
+                    p({ action: "REMOVE_GAME_TAGS" }),
                     (0, o.n$)(r, f, Array.from(t));
             },
-            [O, b, r, f],
+            [O, p, r, f],
         );
-    return (0, n.jsx)(i.yRy, {
-        targetElementRef: p,
+    return (0, n.jsx)(l.yRy, {
+        targetElementRef: g,
         position: "right",
         align: "top",
         renderPopout: (e) => {
@@ -130,13 +130,13 @@ function f(e) {
             var t, r;
             return (0, n.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((p.current = e), (g.current = e)),
+                    null != e && ((g.current = e), (b.current = e)),
                     () => {
-                        (p.current = null), (g.current = null);
+                        (g.current = null), (b.current = null);
                     }
                 ),
                 children: (0, n.jsx)(
-                    i.P3F,
+                    l.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -166,7 +166,7 @@ function f(e) {
                         {
                             className: u.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOj),
-                            children: (0, n.jsx)(i.Text, {
+                            children: (0, n.jsx)(l.Text, {
                                 variant: "text-xxs/medium",
                                 color: "text-secondary",
                                 children: s.intl.string(s.t.fZSej4),

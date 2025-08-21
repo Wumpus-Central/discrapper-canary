@@ -471,6 +471,7 @@ var r = (function (e) {
             (e[(e.WIDGETS_USER_SETTINGS_NEW_BADGE = 588)] = "WIDGETS_USER_SETTINGS_NEW_BADGE"),
             (e[(e.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE = 589)] =
                 "WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE"),
+            (e[(e.CUSTOM_THEMES_PREMIUM_TAB_BADGE = 590)] = "CUSTOM_THEMES_PREMIUM_TAB_BADGE"),
             e
         );
     })({}),

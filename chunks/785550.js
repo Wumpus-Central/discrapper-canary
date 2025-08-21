@@ -1,8 +1,9 @@
 e.exports = {
-    content: "content__4c084",
-    stageIconBackground: "stageIconBackground__4c084",
-    stageIcon: "stageIcon__4c084",
-    headerTitle: "headerTitle__4c084",
-    headerSubtitle: "headerSubtitle__4c084",
-    slideContainer: "slideContainer__4c084",
+    blockedUsersContainer: "blockedUsersContainer__4c084",
+    form: "form__4c084",
+    formItem: "formItem__4c084",
+    channelSelectionFormItem: "channelSelectionFormItem__4c084",
+    channelName: "channelName__4c084",
+    channelSelection: "channelSelection__4c084",
+    warning: "warning__4c084",
 };

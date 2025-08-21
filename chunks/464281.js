@@ -43,7 +43,7 @@ function s(e, t) {
     if (null != e || null != t)
         return function () {
             for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-            null == e || e(...r), null == t || t(...r);
+            "function" == typeof e && e(...r), "function" == typeof t && t(...r);
         };
 }
 function l(e) {
@@ -76,16 +76,17 @@ function c(e, t, n, i) {
             onContextMenu: s(a.onContextMenu, t.onContextMenu),
             "aria-describedby": o(a["aria-describedby"], n),
         };
-    if ("innerRef" in e.props) {
+    if ("string" == typeof e.type) d.ref = u;
+    else if ("innerRef" in e.props) {
         let t = e.props.innerRef;
         d.innerRef = (e) => {
-            l(t, e), i(e);
+            l(t, e), l(c, e), i(e);
         };
     } else d.ref = u;
     return r.cloneElement(e, d);
 }
 function u(e) {
-    let { element: t, className: n, tabIndex: i, children: o, triggerHandlers: s, describedById: l, triggerRef: c } = e;
+    let { tag: t, className: n, tabIndex: i, children: o, triggerHandlers: s, describedById: l, triggerRef: c } = e;
     return r.createElement(
         t,
         a(

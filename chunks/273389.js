@@ -16,15 +16,15 @@ let c = (e) => {
             onBackClicked: _,
             isModeratorReport: p,
         } = e,
-        f = i.useRef(null),
+        x = i.useRef(null),
         g = null != n && "cancel" !== n.type,
-        x = m && (null == n ? void 0 : n.type) !== "done",
-        b = g || x;
+        f = m && (null == n ? void 0 : n.type) !== "done",
+        b = g || f;
     if (
         (i.useEffect(() => {
             if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
                 var e;
-                null == (e = f.current) || e.focus();
+                null == (e = x.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
         !b)
@@ -41,9 +41,9 @@ let c = (e) => {
             "data-migration-pending": !0,
             direction: a.Z.Direction.HORIZONTAL,
             children: (0, r.jsxs)(l.hE2, {
-                fullWidth: x && g,
+                fullWidth: f && g,
                 children: [
-                    x &&
+                    f &&
                         (0, r.jsx)(l.zxk, {
                             onClick: _,
                             variant: "secondary",
@@ -57,7 +57,7 @@ let c = (e) => {
                             },
                             variant: t,
                             disabled: c || d,
-                            buttonRef: f,
+                            buttonRef: x,
                             text: h,
                         }),
                 ],

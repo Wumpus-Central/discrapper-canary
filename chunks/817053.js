@@ -1,8 +1,12 @@
-r.d(t, { Z: () => O }), r(388685);
+r.d(t, {
+    Z: () => O,
+    o: () => g,
+}),
+    r(388685);
 var n = r(951288),
-    l = r(647438),
-    i = r(120356),
-    a = r.n(i),
+    i = r(647438),
+    l = r(120356),
+    a = r.n(l),
     o = r(481060),
     c = r(810568),
     s = r(168524),
@@ -33,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,11 +55,11 @@ function g(e, t) {
         e
     );
 }
-function p(e) {
+function g(e) {
     let { imageSrc: t, gameName: r } = e,
-        [i, a] = l.useState(!1),
+        [l, a] = i.useState(!1),
         c = null != r ? r : u.intl.string(u.t.GIWFlJ);
-    return i || null == t
+    return l || null == t
         ? (0, n.jsx)("div", {
               role: "img",
               "aria-label": c,
@@ -75,13 +79,13 @@ function p(e) {
               onLoad: () => a(!1),
           });
 }
-function b(e) {
-    let { imageSrc: t, gameName: r, applicationId: l, userId: i, className: b, hideTooltip: O = !1 } = e,
+function p(e) {
+    let { imageSrc: t, gameName: r, applicationId: i, userId: l, className: p, hideTooltip: O = !1 } = e,
         m = (0, s.Z)({
             location: "GameCover",
-            applicationId: l,
+            applicationId: i,
             source: c.m1.UserProfile,
-            sourceUserId: i,
+            sourceUserId: l,
             trackEntryPointImpression: !0,
         }),
         j = null != r ? r : u.intl.string(u.t.GIWFlJ),
@@ -98,8 +102,8 @@ function b(e) {
             ? (e) =>
                   (0, n.jsx)(
                       "div",
-                      g(f({ className: b }, e), {
-                          children: (0, n.jsx)(p, {
+                      b(f({ className: p }, e), {
+                          children: (0, n.jsx)(g, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -108,11 +112,11 @@ function b(e) {
             : (e) =>
                   (0, n.jsx)(
                       o.P3F,
-                      g(f({}, e), {
+                      b(f({}, e), {
                           onClick: m,
                           "aria-label": y,
-                          className: a()(d.clickable, b),
-                          children: (0, n.jsx)(p, {
+                          className: a()(d.clickable, p),
+                          children: (0, n.jsx)(g, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -121,36 +125,36 @@ function b(e) {
     );
 }
 function O(e) {
-    var { applicationId: t, userId: r, className: l, disableInteraction: i = !1, hideTooltip: o } = e,
+    var { applicationId: t, userId: r, className: i, disableInteraction: l = !1, hideTooltip: o } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        l = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return l;
+            return i;
         })(e, ["applicationId", "userId", "className", "disableInteraction", "hideTooltip"]);
-    let s = a()(d.coverContainer, l);
-    return i
+    let s = a()(d.coverContainer, i);
+    return l
         ? (0, n.jsx)("div", {
               className: s,
-              children: (0, n.jsx)(p, f({}, c)),
+              children: (0, n.jsx)(g, f({}, c)),
           })
         : (0, n.jsx)(
-              b,
+              p,
               f(
                   {
                       className: s,

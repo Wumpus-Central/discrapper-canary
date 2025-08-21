@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(29899),
     p = t(678738),
     b = t(151545),
-    g = t(744802),
-    x = t(493043),
+    x = t(744802),
+    g = t(493043),
     h = t(864141),
     j = t(228168),
     v = t(981631),
@@ -22,13 +22,13 @@ var o = t(442837),
     y = t(7994),
     I = t(878449);
 function O(e) {
-    let { user: n, currentUser: t, displayProfile: O, guildId: P, subsection: Z, onClose: T } = e,
+    let { user: n, currentUser: t, displayProfile: O, guildId: Z, subsection: P, onClose: T } = e,
         { voiceActivityStatusEnabled: A } = (0, i.U)({ location: "UserProfileModalActivity" }),
         N = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: C, recent: E, stream: S } = (0, f.Z)(n.id),
         { voiceChannel: w, voiceActivity: B } = (0, m.Z)({
             userId: n.id,
-            guildId: P,
+            guildId: Z,
         }),
         D = (0, o.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
         L = n.id === t.id,
@@ -63,7 +63,7 @@ function O(e) {
                                         }),
                                     null != S &&
                                         (0, r.jsx)("li", {
-                                            children: (0, r.jsx)(x.Z, {
+                                            children: (0, r.jsx)(g.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: n,
                                                 currentUser: t,
@@ -107,14 +107,14 @@ function O(e) {
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: Z === j.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: P === j.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
                                 className: y.activityList,
                                 children: E.map((e) =>
                                     (0, r.jsx)(
                                         "li",
                                         {
-                                            children: (0, r.jsx)(g.Z, {
+                                            children: (0, r.jsx)(x.Z, {
                                                 location: "UserProfileModalActivity",
                                                 user: n,
                                                 currentUser: t,

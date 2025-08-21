@@ -167,8 +167,12 @@ function j(e) {
             (z = P.intl.format(P.t.eb0xgY, { expirationDate: u.endsAt.toDate() })),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(C.Z, { onClose: O }),
+                (0, r.jsx)(C.Z, {
+                    "data-migration-pending": !0,
+                    onClose: O,
+                }),
                 (0, r.jsxs)(c.hzk, {
+                    "data-migration-pending": !0,
                     className: w.body,
                     children: [
                         null !== R &&
@@ -203,6 +207,7 @@ function j(e) {
                     ],
                 }),
                 (0, r.jsxs)(c.mzw, {
+                    "data-migration-pending": !0,
                     align: h.Z.Align.CENTER,
                     justify: h.Z.Justify.BETWEEN,
                     children: [
@@ -261,7 +266,11 @@ function k(e) {
         d = (0, p.Z)(),
         [h, m] = i.useState(1),
         { analyticsLocations: g } = (0, _.ZP)(f.Z.GUILD_BOOST_CANCELLATION_MODAL);
-    if (null == l) t = (0, r.jsx)(c.hzk, { children: (0, r.jsx)(c.$jN, {}) });
+    if (null == l)
+        t = (0, r.jsx)(c.hzk, {
+            "data-migration-pending": !0,
+            children: (0, r.jsx)(c.$jN, {}),
+        });
     else
         switch (h) {
             case 1:

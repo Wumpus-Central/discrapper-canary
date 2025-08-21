@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(687158),
     p = t(899007),
     b = t(648052),
-    g = t(867176),
-    x = t(280885),
+    x = t(867176),
+    g = t(280885),
     h = t(900927),
     j = t(678738),
     v = t(502762),
@@ -21,8 +21,8 @@ var r = t(951288),
     y = t(679332),
     I = t(544989),
     O = t(228168),
-    P = t(981631),
-    Z = t(671955),
+    Z = t(981631),
+    P = t(671955),
     T = t(388032),
     A = t(673517),
     N = t(54966),
@@ -40,7 +40,7 @@ function E(e) {
             onClose: R,
             sourceAnalyticsLocations: U = [],
         } = e,
-        M = t === P.ME ? void 0 : t,
+        M = t === Z.ME ? void 0 : t,
         k = (0, m.ZP)(n.id, M),
         G = u.ZP.getName(M, E, n),
         V = (0, s.Dt)(),
@@ -54,8 +54,8 @@ function E(e) {
             messageId: S,
             roleId: w,
         }),
-        W = o.useRef(null),
-        z = (0, i.Z)(W);
+        z = o.useRef(null),
+        W = (0, i.Z)(z);
     return (0, r.jsx)(a.Gt, {
         value: F,
         children: (0, r.jsx)(f.Mt, {
@@ -82,16 +82,16 @@ function E(e) {
                         children: (0, r.jsxs)(v.Z, {
                             user: n,
                             displayProfile: k,
-                            themeType: Z.l.MODAL,
-                            ref: (null == k ? void 0 : k.profileEffectId) != null ? W : void 0,
+                            themeType: P.l.MODAL,
+                            ref: (null == k ? void 0 : k.profileEffectId) != null ? z : void 0,
                             children: [
                                 (0, r.jsx)(I.Z, { children: (0, r.jsx)(y.Z, { user: n }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(g.Z, {
+                                        (0, r.jsx)(x.Z, {
                                             user: n,
                                             displayProfile: k,
-                                            themeType: Z.l.MODAL,
+                                            themeType: P.l.MODAL,
                                         }),
                                         (0, r.jsx)("div", {
                                             className: A.headerInner,
@@ -100,7 +100,7 @@ function E(e) {
                                                 displayProfile: k,
                                                 guildId: M,
                                                 channelId: E,
-                                                themeType: Z.l.MODAL,
+                                                themeType: P.l.MODAL,
                                             }),
                                         }),
                                     ],
@@ -116,7 +116,7 @@ function E(e) {
                                             nicknameVariant: "heading-xl/bold",
                                             tags: (0, r.jsx)(b.Z, {
                                                 displayProfile: k,
-                                                themeType: Z.l.MODAL,
+                                                themeType: P.l.MODAL,
                                                 onClose: R,
                                             }),
                                         }),
@@ -127,7 +127,7 @@ function E(e) {
                                                     className: C.tabBar,
                                                     type: "top",
                                                     selectedItem: O.oh.BOT_INFO,
-                                                    onItemSelect: P.dG4,
+                                                    onItemSelect: Z.dG4,
                                                     children: (0, r.jsx)(
                                                         l.njP.Item,
                                                         {
@@ -146,7 +146,7 @@ function E(e) {
                                                     fade: !0,
                                                     className: N.scroller,
                                                     children: [
-                                                        (0, r.jsx)(x.Z, {
+                                                        (0, r.jsx)(g.Z, {
                                                             userId: n.id,
                                                             userBio: null == k ? void 0 : k.bio,
                                                             setLineClamp: !1,
@@ -171,7 +171,7 @@ function E(e) {
                     (null == k ? void 0 : k.profileEffectId) != null &&
                         (0, r.jsx)(d.Z, {
                             profileEffectId: null == k ? void 0 : k.profileEffectId,
-                            isHovering: z,
+                            isHovering: W,
                         }),
                 ],
             }),

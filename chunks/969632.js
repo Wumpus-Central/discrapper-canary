@@ -73,9 +73,13 @@ class _ extends (r = a.ZP.PersistedStore) {
         return null != p ? p : m;
     }
     hasChanges() {
-        return (
-            null != g && !l().isEqual(l().omit(p, "newMemberActions"), l().omit(o.Z.getSettings(g), "newMemberActions"))
-        );
+        return null != g && !l().isEqual(p, o.Z.getSettings(g));
+    }
+    canCloseEarly() {
+        return !this.hasChanges();
+    }
+    showNotice() {
+        return this.hasChanges();
     }
     getSubmitting() {
         return h;

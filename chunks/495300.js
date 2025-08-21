@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => Z });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -7,99 +7,111 @@ var r = n(951288),
     o = n(704215),
     c = n(755721),
     d = n(481060),
-    u = n(266454),
-    m = n(768762),
-    g = n(999382),
-    p = n(743475),
-    h = n(983135),
-    f = n(570961),
-    b = n(208665),
-    x = n(359191),
-    j = n(84658),
-    v = n(142961),
-    _ = n(729311),
-    O = n(850864),
-    y = n(729995),
-    C = n(966301),
-    N = n(707076),
-    E = n(213956),
-    I = n(388032),
-    S = n(885541);
-function T() {
-    let e = (0, s.e7)([g.Z], () => g.Z.getGuildId());
-    return null == e ? null : (0, r.jsx)(P, { guildId: e });
+    u = n(503089),
+    m = n(266454),
+    g = n(768762),
+    p = n(585483),
+    h = n(999382),
+    f = n(743475),
+    b = n(983135),
+    x = n(8426),
+    j = n(570961),
+    v = n(208665),
+    _ = n(359191),
+    O = n(84658),
+    y = n(142961),
+    C = n(729311),
+    N = n(850864),
+    E = n(729995),
+    I = n(966301),
+    S = n(707076),
+    T = n(213956),
+    P = n(981631),
+    w = n(388032),
+    R = n(885541);
+function Z() {
+    let e = (0, s.e7)([h.Z], () => h.Z.getGuildId());
+    return null == e ? null : (0, r.jsx)(D, { guildId: e });
 }
-function P(e) {
+function D(e) {
     let t,
         { guildId: n } = e,
-        l = (0, s.e7)([x.Z], () => x.Z.getCurrentPage()),
-        g = (0, s.e7)([x.Z], () => {
-            let e = (0, j.lg)(l);
-            return null != e && !x.Z.isEducationUpsellDismissed(e);
+        l = (0, s.e7)([_.Z], () => _.Z.getCurrentPage()),
+        h = (0, s.e7)([_.Z], () => {
+            let e = (0, O.lg)(l);
+            return null != e && !_.Z.isEducationUpsellDismissed(e);
         }),
-        b = (0, v.Z)(n),
-        T = !b && g;
+        v = (0, y.Z)(n),
+        Z = !v && h;
     switch (
         (i.useEffect(() => {
-            (0, u.Q3)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
+            (0, m.Q3)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
         }, []),
         l)
     ) {
-        case j.PG.LANDING:
-            t = b
-                ? (0, r.jsx)(y.Z, {
+        case O.PG.LANDING:
+            t = v
+                ? (0, r.jsx)(E.Z, {
                       completed: !0,
                       guildId: n,
                   })
-                : (0, r.jsx)(N.Z, {});
+                : (0, r.jsx)(S.Z, {});
             break;
-        case j.PG.SAFETY_CHECK:
-            t = (0, r.jsx)(E.Z, {});
+        case O.PG.SAFETY_CHECK:
+            t = (0, r.jsx)(T.Z, {});
             break;
-        case j.PG.DEFAULT_CHANNELS:
-            t = (0, r.jsx)(_.Z, { saveOnClose: !b });
+        case O.PG.DEFAULT_CHANNELS:
+            t = (0, r.jsx)(C.Z, { saveOnClose: !v });
             break;
-        case j.PG.CUSTOMIZATION_QUESTIONS:
-            t = (0, r.jsx)(C.ZP, { saveOnClose: !b });
+        case O.PG.CUSTOMIZATION_QUESTIONS:
+            t = (0, r.jsx)(I.ZP, { saveOnClose: !v });
             break;
-        case j.PG.HOME_SETTINGS:
-            t = (0, r.jsx)(O.Z, { saveOnClose: !b });
+        case O.PG.HOME_SETTINGS:
+            t = (0, r.jsx)(N.Z, { saveOnClose: !v });
             break;
-        case j.PG.REVIEW:
-            t = (0, r.jsx)(y.Z, {
-                completed: b,
+        case O.PG.REVIEW:
+            t = (0, r.jsx)(E.Z, {
+                completed: v,
                 guildId: n,
             });
     }
     return (0, r.jsxs)("div", {
-        className: a()(S.onboardingContainer, { [S.upsellOnTop]: T }),
+        className: a()(R.onboardingContainer, { [R.upsellOnTop]: Z }),
         children: [
-            !b &&
-                l !== j.PG.LANDING &&
-                (0, r.jsx)(w, {
-                    setOnboardingStep: h.$K,
+            !v &&
+                l !== O.PG.LANDING &&
+                (0, r.jsx)(A, {
+                    setOnboardingStep: b.$K,
                     page: l,
                     homeSettingsEnabled: !0,
                 }),
-            b &&
-                l !== j.PG.LANDING &&
+            v &&
+                l !== O.PG.LANDING &&
                 (0, r.jsx)("div", {
                     children: (0, r.jsxs)(c.zx, {
-                        innerClassName: S.backButton,
+                        innerClassName: R.backButton,
                         look: c.zx.Looks.BLANK,
                         size: c.zx.Sizes.MIN,
                         onClick: () => {
-                            (0, f.NB)(), (0, p.BG)(), (0, h.$K)(j.PG.LANDING);
+                            if (_.Z.hasChanges() && !_.Z.canCloseEarly()) {
+                                p.S.dispatch(P.CkL.SHAKE_APP, {
+                                    duration: 300,
+                                    intensity: u.$x,
+                                }),
+                                    p.S.dispatch(P.CkL.EMPHASIZE_NOTICE);
+                                return;
+                            }
+                            (0, j.NB)(), (0, f.BG)(), (0, x.bj)(), (0, b.$K)(O.PG.LANDING);
                         },
                         children: [
-                            (0, r.jsx)(m.Z, {
-                                className: S.arrow,
-                                direction: m.Z.Directions.LEFT,
+                            (0, r.jsx)(g.Z, {
+                                className: R.arrow,
+                                direction: g.Z.Directions.LEFT,
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
                                 color: "interactive-normal",
-                                children: I.intl.string(I.t["13/7kZ"]),
+                                children: w.intl.string(w.t["13/7kZ"]),
                             }),
                         ],
                     }),
@@ -108,85 +120,85 @@ function P(e) {
         ],
     });
 }
-function w(e) {
+function A(e) {
     let { page: t, setOnboardingStep: n, homeSettingsEnabled: i } = e,
-        l = (0, s.e7)([x.Z], () => x.Z.hasErrors()),
+        l = (0, s.e7)([_.Z], () => _.Z.hasErrors()),
         o = (e) => {
             if (!l) return () => n(e);
         },
-        c = (0, s.e7)([b.Z], () => b.Z.advancedMode);
+        c = (0, s.e7)([v.Z], () => v.Z.advancedMode);
     return (0, r.jsxs)("div", {
-        className: S.progressContainer,
+        className: R.progressContainer,
         children: [
             (0, r.jsxs)(d.P3F, {
-                className: a()(S.progressBarContainer, S.clickableProgressBar),
-                onClick: o(j.PG.SAFETY_CHECK),
+                className: a()(R.progressBarContainer, R.clickableProgressBar),
+                onClick: o(O.PG.SAFETY_CHECK),
                 children: [
                     (0, r.jsx)("div", {
-                        className: a()(S.progressBar, { [S.progressBarCurrent]: t === j.PG.SAFETY_CHECK }),
+                        className: a()(R.progressBar, { [R.progressBarCurrent]: t === O.PG.SAFETY_CHECK }),
                     }),
                     (0, r.jsx)(d.Text, {
-                        color: t === j.PG.SAFETY_CHECK ? "text-brand" : "text-muted",
+                        color: t === O.PG.SAFETY_CHECK ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: I.intl.format(I.t.Me5MmZ, { stepNumber: 1 }),
+                        children: w.intl.format(w.t.Me5MmZ, { stepNumber: 1 }),
                     }),
                 ],
             }),
             (0, r.jsxs)(d.P3F, {
-                className: a()(S.progressBarContainer, S.clickableProgressBar),
-                onClick: o(j.PG.DEFAULT_CHANNELS),
+                className: a()(R.progressBarContainer, R.clickableProgressBar),
+                onClick: o(O.PG.DEFAULT_CHANNELS),
                 children: [
                     (0, r.jsx)("div", {
-                        className: a()(S.progressBar, { [S.progressBarCurrent]: t === j.PG.DEFAULT_CHANNELS }),
+                        className: a()(R.progressBar, { [R.progressBarCurrent]: t === O.PG.DEFAULT_CHANNELS }),
                     }),
                     (0, r.jsx)(d.Text, {
-                        color: t === j.PG.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
+                        color: t === O.PG.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
                         children: c
-                            ? I.intl.formatToPlainString(I.t["8mGhOz"], { stepNumber: 2 })
-                            : I.intl.formatToPlainString(I.t.vxpuTU, { stepNumber: 2 }),
+                            ? w.intl.formatToPlainString(w.t["8mGhOz"], { stepNumber: 2 })
+                            : w.intl.formatToPlainString(w.t.vxpuTU, { stepNumber: 2 }),
                     }),
                 ],
             }),
             (0, r.jsxs)(d.P3F, {
-                className: a()(S.progressBarContainer, S.clickableProgressBar),
-                onClick: o(j.PG.CUSTOMIZATION_QUESTIONS),
+                className: a()(R.progressBarContainer, R.clickableProgressBar),
+                onClick: o(O.PG.CUSTOMIZATION_QUESTIONS),
                 children: [
                     (0, r.jsx)("div", {
-                        className: a()(S.progressBar, { [S.progressBarCurrent]: t === j.PG.CUSTOMIZATION_QUESTIONS }),
+                        className: a()(R.progressBar, { [R.progressBarCurrent]: t === O.PG.CUSTOMIZATION_QUESTIONS }),
                     }),
                     (0, r.jsx)(d.Text, {
-                        color: t === j.PG.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
+                        color: t === O.PG.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
                         children: c
-                            ? I.intl.formatToPlainString(I.t.vb6J5u, { stepNumber: 3 })
-                            : I.intl.formatToPlainString(I.t.ZpdQqK, { stepNumber: 3 }),
+                            ? w.intl.formatToPlainString(w.t.vb6J5u, { stepNumber: 3 })
+                            : w.intl.formatToPlainString(w.t.ZpdQqK, { stepNumber: 3 }),
                     }),
                 ],
             }),
             i &&
                 (0, r.jsxs)(d.P3F, {
-                    className: a()(S.progressBarContainer, S.clickableProgressBar),
-                    onClick: o(j.PG.HOME_SETTINGS),
+                    className: a()(R.progressBarContainer, R.clickableProgressBar),
+                    onClick: o(O.PG.HOME_SETTINGS),
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(S.progressBar, { [S.progressBarCurrent]: t === j.PG.HOME_SETTINGS }),
+                            className: a()(R.progressBar, { [R.progressBarCurrent]: t === O.PG.HOME_SETTINGS }),
                         }),
                         (0, r.jsx)(d.Text, {
-                            color: t === j.PG.HOME_SETTINGS ? "text-brand" : "text-muted",
+                            color: t === O.PG.HOME_SETTINGS ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
-                            children: I.intl.format(I.t.KVOukp, { stepNumber: 4 }),
+                            children: w.intl.format(w.t.KVOukp, { stepNumber: 4 }),
                         }),
                     ],
                 }),
             (0, r.jsxs)("div", {
-                className: S.progressBarContainer,
+                className: R.progressBarContainer,
                 children: [
-                    (0, r.jsx)("div", { className: a()(S.progressBar, { [S.progressBarCurrent]: t === j.PG.REVIEW }) }),
+                    (0, r.jsx)("div", { className: a()(R.progressBar, { [R.progressBarCurrent]: t === O.PG.REVIEW }) }),
                     (0, r.jsx)(d.Text, {
-                        color: t === j.PG.REVIEW ? "text-brand" : "text-muted",
+                        color: t === O.PG.REVIEW ? "text-brand" : "text-muted",
                         variant: "text-xs/medium",
-                        children: I.intl.format(I.t.oVzkiI, { stepNumber: 3 + +!!i + 1 }),
+                        children: w.intl.format(w.t.oVzkiI, { stepNumber: 3 + +!!i + 1 }),
                     }),
                 ],
             }),

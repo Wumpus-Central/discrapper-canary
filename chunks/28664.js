@@ -93,18 +93,8 @@ function b(e) {
             onAnimationRest: u,
             targetElementRef: f,
             caretConfig: p,
-            className: h,
-            style: g,
-            color: b,
-            tooltipClassName: y,
-            tooltipContentClassName: O,
-            tooltipPointerClassName: I,
-            allowOverflow: T,
-            disableTooltipPointerEvents: S,
-            clickableOnMobile: A,
-            hideOnClick: C,
         } = e,
-        N = m(e, [
+        h = m(e, [
             "children",
             "text",
             "position",
@@ -114,33 +104,23 @@ function b(e) {
             "onAnimationRest",
             "targetElementRef",
             "caretConfig",
-            "className",
-            "style",
-            "color",
-            "tooltipClassName",
-            "tooltipContentClassName",
-            "tooltipPointerClassName",
-            "allowOverflow",
-            "disableTooltipPointerEvents",
-            "clickableOnMobile",
-            "hideOnClick",
         ]);
-    let R = (0, d.c)(f),
-        P = i.useId(),
+    let g = (0, d.c)(f),
+        b = i.useId(),
         {
-            isVisible: w,
-            isRendered: D,
-            triggerProps: x,
-            handleExitComplete: L,
-        } = (0, c.l)(_({ targetElementRef: R.targetElementRef }, N)),
-        j = i.useMemo(
+            isVisible: y,
+            isRendered: O,
+            triggerProps: I,
+            handleExitComplete: T,
+        } = (0, c.l)(_({ targetElementRef: g.targetElementRef }, h)),
+        S = i.useMemo(
             () => ({
-                triggerHandlers: x,
-                triggerRef: R.triggerRef,
-                targetElementRef: R.targetElementRef,
-                tooltipId: P,
-                isVisible: w,
-                isRendered: D,
+                triggerHandlers: I,
+                triggerRef: g.triggerRef,
+                targetElementRef: g.targetElementRef,
+                tooltipId: b,
+                isVisible: y,
+                isRendered: O,
                 text: n,
                 position: a,
                 align: o,
@@ -148,18 +128,19 @@ function b(e) {
                 caretConfig: p,
                 layerContext: l,
                 onAnimationRest: u,
-                handleExitComplete: L,
+                handleExitComplete: T,
+                positionKey: "string" == typeof n ? n : void 0,
             }),
-            [x, R.triggerRef, R.targetElementRef, P, w, D, n, a, o, s, p, l, u, L],
+            [I, g.triggerRef, g.targetElementRef, b, y, O, n, a, o, s, p, l, u, T],
         );
     return (0, r.jsxs)(E.Provider, {
-        value: j,
+        value: S,
         children: [t, (0, r.jsx)(v, {})],
     });
 }
 function y(e) {
     var t;
-    let { strategy: n = "clone", element: r = "div", children: a } = e,
+    let { strategy: n = "clone", tag: r = "div", children: a } = e,
         s = i.useContext(E);
     if (null == s) throw Error("TooltipTrigger must be used within TooltipRoot");
     let { triggerHandlers: c, triggerRef: u, tooltipId: d } = s,
@@ -177,24 +158,24 @@ function y(e) {
         }),
     });
     return (0, l.FX)({
-        element: r,
+        tag: r,
         children: a,
         triggerHandlers: m,
         triggerRef: u,
     });
 }
 function O(e) {
-    var { children: t, asContainer: n = !1 } = e,
-        a = m(e, ["children", "asContainer"]);
-    return null == a.text || "" === a.text
+    var { children: t, asContainer: n = !1, tag: a = "div" } = e,
+        o = m(e, ["children", "asContainer", "tag"]);
+    return null == o.text || "" === o.text
         ? t
         : n
           ? (0, r.jsx)(
                 b,
-                h(_({}, a), {
+                h(_({}, o), {
                     children: (0, r.jsx)(y, {
                         strategy: "wrap",
-                        element: "div",
+                        tag: a,
                         children: t,
                     }),
                 }),
@@ -202,7 +183,7 @@ function O(e) {
           : i.isValidElement(t)
             ? (0, r.jsx)(
                   b,
-                  h(_({}, a), {
+                  h(_({}, o), {
                       children: (0, r.jsx)(y, {
                           strategy: "clone",
                           children: t,
@@ -228,6 +209,7 @@ function v() {
         spacing: g,
         caretConfig: b,
         layerContext: y,
+        positionKey: O,
     } = t;
     return (0, u.Q)({
         shouldShow: n,
@@ -248,6 +230,7 @@ function v() {
                   caretConfig: b,
                   layerContext: null != y ? y : a.nz,
                   animationStyle: e,
+                  positionKey: O,
                   "data-mana-component": "tooltip",
               })
             : null,

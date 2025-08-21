@@ -12,8 +12,8 @@ var r = t(951288),
     m = t(221292),
     p = t(687158),
     b = t(316027),
-    g = t(502762),
-    x = t(848780),
+    x = t(502762),
+    g = t(848780),
     h = t(907179),
     j = t(981631),
     v = t(671955),
@@ -49,8 +49,8 @@ function O(e) {
             user: n,
             guildId: t,
             channelId: O,
-            messageId: P,
-            roleId: Z,
+            messageId: Z,
+            roleId: P,
             transitionState: T,
             openedAt: A,
             onHide: N,
@@ -65,8 +65,8 @@ function O(e) {
             showGuildProfile: !0,
             guildId: E,
             channelId: O,
-            messageId: P,
-            roleId: Z,
+            messageId: Z,
+            roleId: P,
         }),
         D = [
             {
@@ -95,7 +95,7 @@ function O(e) {
                 className: y.root,
                 "aria-label": U,
                 parentComponent: "RestrictedUserProfileModalV2",
-                children: (0, r.jsxs)(g.Z, {
+                children: (0, r.jsxs)(x.Z, {
                     user: n,
                     displayProfile: L,
                     themeType: v.l.MODAL_V2,
@@ -161,7 +161,7 @@ function O(e) {
                                                     );
                                             },
                                         }),
-                                        (0, r.jsx)(x.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             userId: n.id,
                                             onClick: () => {
                                                 N(),

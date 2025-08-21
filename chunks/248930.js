@@ -12,23 +12,23 @@ var r = t(951288),
     m = t(660579),
     p = t(652853),
     b = t(64621),
-    g = t(382405),
-    x = t(386019),
+    x = t(382405),
+    g = t(386019),
     h = t(228168),
     j = t(704543);
 function v(e) {
     let { user: n, entry: t, profileGuildId: l, className: v, onClose: _, hideContextMenu: y = !1 } = e,
         I = o.useRef(null),
         { analyticsLocations: O } = (0, a.ZP)(c.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { themeType: P } = (0, p.z)(),
-        { interactionSource: Z, interactionSourceId: T } = (0, u.Xo)(),
+        { themeType: Z } = (0, p.z)(),
+        { interactionSource: P, interactionSourceId: T } = (0, u.Xo)(),
         A = (0, d.Z)({
             display: "recent",
             user: n,
             entry: t,
             analyticsLocations: O,
         });
-    return null != P && (0, s.Rh)(t)
+    return null != Z && (0, s.Rh)(t)
         ? (0, r.jsx)(a.Gt, {
               value: O,
               children: (0, r.jsx)(b.Z, {
@@ -38,7 +38,7 @@ function v(e) {
                   children: (0, r.jsx)(f.Z, {
                       user: n,
                       guildId: l,
-                      themeType: P,
+                      themeType: Z,
                       sourceId: t.id,
                       entry: t,
                       onAction: A,
@@ -55,18 +55,18 @@ function v(e) {
                               renderMoreButtonPopout: y
                                   ? void 0
                                   : (e) =>
-                                        (0, r.jsx)(x.Z, {
+                                        (0, r.jsx)(g.Z, {
                                             display: "recent",
                                             entry: t,
                                             user: n,
                                             onClose: _,
                                             children: e,
                                         }),
-                              children: (0, r.jsx)(g.Z, {
+                              children: (0, r.jsx)(x.Z, {
                                   entry: t,
                                   user: n,
                                   onClose: _,
-                                  className: i()(v, { [j.hoisted]: Z === h.n_.ACTIVITY && T === t.id }),
+                                  className: i()(v, { [j.hoisted]: P === h.n_.ACTIVITY && T === t.id }),
                               }),
                           }),
                   }),

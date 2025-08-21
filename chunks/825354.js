@@ -1,17 +1,17 @@
 r.d(t, { Z: () => f });
 var n = r(951288),
-    l = r(647438),
-    i = r(120356),
-    a = r.n(i),
+    i = r(647438),
+    l = r(120356),
+    a = r.n(l),
     o = r(481060),
     c = r(239091),
     s = r(726521),
     u = r(388032),
     d = r(595342);
 function f(e) {
-    let { widget: t, userId: r, className: i } = e,
-        f = l.useRef(null),
-        g = () => {
+    let { widget: t, userId: r, className: l } = e,
+        f = i.useRef(null),
+        b = () => {
             (0, s.G1)(r, t);
         };
     return (0, n.jsx)(o.yRy, {
@@ -32,7 +32,7 @@ function f(e) {
                     children: (0, n.jsx)(o.sNh, {
                         id: "flag-widget",
                         label: u.intl.string(u.t.D4GvHB),
-                        action: g,
+                        action: b,
                         color: "danger",
                         icon: o.U65,
                     }),
@@ -72,7 +72,7 @@ function f(e) {
                     {
                         innerRef: f,
                         "aria-label": u.intl.string(u.t.xpSHSk),
-                        className: a()(d.button, i),
+                        className: a()(d.button, l),
                         children: (0, n.jsx)(o.xhG, {
                             size: "sm",
                             color: "currentColor",

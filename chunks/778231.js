@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -11,46 +11,46 @@ var r = n(951288),
     m = n(881998),
     _ = n(709054),
     p = n(388032),
-    f = n(719706),
+    x = n(719706),
     g = n(970952);
-let x = (e) => {
+let f = (e) => {
     var t, n;
-    let { entry: x } = e,
-        { name: b } = x,
-        h = (0, l.e7)([m.Z], () => m.Z.getNewestTokenForApplication(x.id)),
-        v = null != (n = x.getIconURL(40)) ? n : g,
-        j = (0, d.Z)({ application: x }),
+    let { entry: f } = e,
+        { name: b } = f,
+        h = (0, l.e7)([m.Z], () => m.Z.getNewestTokenForApplication(f.id)),
+        v = null != (n = f.getIconURL(40)) ? n : g,
+        j = (0, d.Z)({ application: f }),
         y = i.useRef(!1);
     i.useEffect(() => {
         y.current || (o.Z.fetch(), (y.current = !0));
     }, []);
     let O = null != h ? _.default.extractTimestamp(h.id) : void 0;
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: x.container,
         children: [
             (0, r.jsx)(a.X6q, {
-                className: f.header,
+                className: x.header,
                 variant: "heading-sm/semibold",
                 children: p.intl.string(p.t["aYfK//"]),
             }),
             (0, r.jsx)("div", {
-                className: f.appContainer,
+                className: x.appContainer,
                 children: (0, r.jsxs)("div", {
-                    className: f.appInfo,
+                    className: x.appInfo,
                     children: [
                         (0, r.jsx)(s.ZP, {
                             mask: s.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
-                            className: f.appIconMask,
+                            className: x.appIconMask,
                             children: (0, r.jsx)("img", {
                                 src: v,
                                 alt: "",
-                                className: f.appIcon,
+                                className: x.appIcon,
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: f.textContainer,
+                            className: x.textContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",
@@ -66,7 +66,7 @@ let x = (e) => {
                                                   children: (0, u.Z)(j.length),
                                               }),
                                               (0, r.jsx)(c.Z, {
-                                                  className: f.guildStack,
+                                                  className: x.guildStack,
                                                   guilds: j,
                                                   maxGuilds: 6,
                                               }),
@@ -77,7 +77,7 @@ let x = (e) => {
                                               (0, r.jsx)(a.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
-                                                  children: null == (t = x.bot) ? void 0 : t.tag,
+                                                  children: null == (t = f.bot) ? void 0 : t.tag,
                                               }),
                                               null != O &&
                                                   (0, r.jsx)(a.Text, {

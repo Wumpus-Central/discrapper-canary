@@ -873,6 +873,7 @@ let ek = (e) => {
                     null != N &&
                         (0, r.jsx)(r.Fragment, {
                             children: (0, r.jsxs)(b.mzw, {
+                                "data-migration-pending": !0,
                                 className: eI.modalFooter,
                                 children: [
                                     (0, r.jsx)("img", {

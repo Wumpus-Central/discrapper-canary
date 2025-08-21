@@ -126,6 +126,7 @@ function A(e) {
         if (D === y.PG.DEFAULT_CHANNELS) return (0, r.jsx)(E.j, {});
         else if (D === y.PG.CUSTOMIZATION_QUESTIONS) return (0, r.jsx)(I.Zm, {});
         else if (D === y.PG.HOME_SETTINGS) return (0, r.jsx)(S.Z, {});
+        else if ((D === y.PG.LANDING || D === y.PG.REVIEW) && j.Z.hasChanges()) return (0, r.jsx)(S.Z, {});
     }
     let K = D === y.xh[y.xh.length - 1],
         X = async () => {

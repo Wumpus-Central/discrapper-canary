@@ -11,14 +11,14 @@ var r = n(951288),
     m = n(267128),
     _ = n(25015),
     p = n(695346),
-    f = n(592125),
+    x = n(592125),
     g = n(217702),
-    x = n(388032),
+    f = n(388032),
     b = n(492402);
 let h = (e) => {
     let { message: t } = e,
         n = (0, s.ZP)(t),
-        h = (0, l.e7)([f.Z], () => f.Z.getChannel(t.channel_id)),
+        h = (0, l.e7)([x.Z], () => x.Z.getChannel(t.channel_id)),
         v = i.useMemo(() => (0, o.Z)(t), [t]),
         { content: j } = (0, _.Z)(v, { hideSimpleEmbedContent: !1 }),
         y = p.jU.useSetting(),
@@ -49,7 +49,7 @@ let h = (e) => {
                   (0, r.jsx)(a.X6q, {
                       className: b.header,
                       variant: "heading-sm/semibold",
-                      children: x.intl.string(x.t.iouM3d),
+                      children: f.intl.string(f.t.iouM3d),
                   }),
                   (0, r.jsx)(a.Ttm, {
                       className: b.messagePreviewContainer,

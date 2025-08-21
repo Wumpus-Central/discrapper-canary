@@ -631,7 +631,7 @@ function ed(e) {
 let eu = i.memo(function (e) {
         let { parentChannel: t, textValue: n } = e,
             i = new M.ZP({
-                channelId: t.id,
+                channel_id: t.id,
                 content: n,
             }),
             { content: a } = (0, T.Z)(i, {

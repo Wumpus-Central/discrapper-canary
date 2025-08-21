@@ -1,4 +1,4 @@
-t.d(n, { Z: () => P });
+t.d(n, { Z: () => Z });
 var r = t(951288);
 t(647438);
 var o = t(442837),
@@ -13,8 +13,8 @@ var o = t(442837),
     m = t(369566),
     p = t(29899),
     b = t(151545),
-    g = t(744802),
-    x = t(493043),
+    x = t(744802),
+    g = t(493043),
     h = t(864141),
     j = t(264481),
     v = t(693408),
@@ -22,14 +22,14 @@ var o = t(442837),
     y = t(981631),
     I = t(388032),
     O = t(158069);
-function P(e) {
-    let { user: n, currentUser: t, displayProfile: P, guildId: Z, channelId: T, subsection: A, onClose: N } = e,
+function Z(e) {
+    let { user: n, currentUser: t, displayProfile: Z, guildId: P, channelId: T, subsection: A, onClose: N } = e,
         { voiceActivityStatusEnabled: C } = (0, i.U)({ location: "UserProfileModalV2Activity" }),
         E = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: S, recent: w, stream: B } = (0, m.Z)(n.id),
         { voiceChannel: D, voiceActivity: L } = (0, p.Z)({
             userId: n.id,
-            guildId: Z,
+            guildId: P,
         }),
         R = (0, o.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
         U = n.id === t.id,
@@ -70,7 +70,7 @@ function P(e) {
             ? (0, r.jsx)(j.Uf, { onClose: N })
             : (0, r.jsx)(j.P9, {
                   user: n,
-                  guildId: null != (Y = null == P ? void 0 : P.guildId) ? Y : void 0,
+                  guildId: null != (Y = null == Z ? void 0 : Z.guildId) ? Y : void 0,
                   channelId: T,
                   onClose: N,
               });
@@ -97,13 +97,13 @@ function P(e) {
                                   }),
                               null != B &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(x.Z, {
+                                      children: (0, r.jsx)(g.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: n,
                                           currentUser: t,
                                           stream: B,
                                           onClose: N,
-                                          profileGuildId: null == P ? void 0 : P.guildId,
+                                          profileGuildId: null == Z ? void 0 : Z.guildId,
                                       }),
                                   }),
                               S.map((e, o) =>
@@ -115,7 +115,7 @@ function P(e) {
                                               currentUser: t,
                                               activity: e,
                                               onClose: N,
-                                              profileGuildId: null == P ? void 0 : P.guildId,
+                                              profileGuildId: null == Z ? void 0 : Z.guildId,
                                           }),
                                       },
                                       "live-".concat(o),
@@ -158,12 +158,12 @@ function P(e) {
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(g.Z, {
+                                      children: (0, r.jsx)(x.Z, {
                                           location: "UserProfileModalV2Activity",
                                           user: n,
                                           currentUser: t,
                                           entry: e,
-                                          profileGuildId: null == P ? void 0 : P.guildId,
+                                          profileGuildId: null == Z ? void 0 : Z.guildId,
                                           onClose: N,
                                       }),
                                   },

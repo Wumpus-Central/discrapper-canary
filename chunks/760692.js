@@ -78,7 +78,7 @@ function b(e) {
         : {
               [c]: e[0],
               [u]: e[1],
-              textDecorationColor: e[0],
+              [d]: e[0],
           };
 }
 function y(e, t) {

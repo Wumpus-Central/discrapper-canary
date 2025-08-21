@@ -1,4 +1,4 @@
-n.d(t, { default: () => f }), n(388685), n(539854);
+n.d(t, { default: () => x }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(286379),
@@ -11,13 +11,13 @@ var r = n(951288),
     m = n(255514),
     _ = n(981631),
     p = n(584581);
-let f = (e) => {
+let x = (e) => {
     let {
             reportType: t,
             menu: n,
-            modalProps: f,
+            modalProps: x,
             onSubmit: g,
-            onNavigate: x,
+            onNavigate: f,
             emailToken: b,
             isAuthenticated: h = !0,
         } = e,
@@ -26,17 +26,17 @@ let f = (e) => {
         [Z, I] = i.useState(y),
         [S, N] = i.useState(void 0),
         [T, P] = i.useState(void 0),
-        [k, E] = i.useState([]),
+        [E, k] = i.useState([]),
         [w, R] = i.useState(void 0),
-        [D, M] = i.useState(void 0),
-        B = (e) => {
+        [D, B] = i.useState(void 0),
+        M = (e) => {
             var n, r, i;
             let { destination: a } = e,
                 [, s] = a,
                 u = j[s];
             if (void 0 === u) return void c.Z.increment({ name: l.V.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
             if (u.elements.some((e) => "skip" === e.type) && (null == (n = u.button) ? void 0 : n.type) === "next")
-                return B(
+                return M(
                     ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -81,8 +81,8 @@ let f = (e) => {
                     r),
                 );
             if (
-                (E([...k, e]),
-                null != u.key && (null == x || x(u.key)),
+                (k([...E, e]),
+                null != u.key && (null == f || f(u.key)),
                 N(void 0),
                 P(void 0),
                 t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)
@@ -100,14 +100,14 @@ let f = (e) => {
         },
         A = async (e) => {
             var r;
-            let i = h ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], b),
+            let i = h ? await (0, u.ZD)(n, t, [...E, e]) : await (0, u.fw)(n, t, [...E, e], b),
                 l = null == i || null == (r = i.body) ? void 0 : r.report_id;
-            null != l && R(l), M(j[e.nodeRef].report_type), null == g || g(l);
+            null != l && R(l), B(j[e.nodeRef].report_type), null == g || g(l);
         },
-        G = () => {
+        L = () => {
             var e, n;
-            if (k.length < 1) return;
-            let r = [...k],
+            if (E.length < 1) return;
+            let r = [...E],
                 i = r.pop(),
                 l = null != (n = null == i ? void 0 : i.nodeRef) ? n : y;
             if (t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM) {
@@ -123,10 +123,10 @@ let f = (e) => {
             N(null == i || null == (e = i.multiSelect) ? void 0 : e.state),
                 P(null == i ? void 0 : i.textInput),
                 I(l),
-                E(r),
-                null == x || x("..");
+                k(r),
+                null == f || f("..");
         },
-        L = i.useMemo(() => {
+        G = i.useMemo(() => {
             let e = [],
                 t = [];
             for (let l in j) {
@@ -148,14 +148,14 @@ let f = (e) => {
         }, [j, y, C, O]);
     return (0, r.jsx)(a.Y0X, {
         "data-migration-pending": !0,
-        transitionState: f.transitionState,
+        transitionState: x.transitionState,
         "aria-labelledby": v,
         parentComponent: "InAppReportModal",
         children: (0, r.jsx)(a.MyZ, {
             width: 440,
             activeSlide: Z,
             centered: !1,
-            children: L.map((e) =>
+            children: G.map((e) =>
                 (0, r.jsx)(
                     a.Mi4,
                     {
@@ -166,10 +166,10 @@ let f = (e) => {
                                 node: e,
                                 reportType: t,
                                 reportSubType: D,
-                                history: k,
-                                onModalClose: f.onClose,
-                                onSelectChild: B,
-                                onNavigateBack: G,
+                                history: E,
+                                onModalClose: x.onClose,
+                                onSelectChild: M,
+                                onNavigateBack: L,
                                 multiSelect: S,
                                 textInput: T,
                                 successNodeId: O,

@@ -1,11 +1,11 @@
 r.d(t, {
     C: () => I,
-    Z: () => E,
+    Z: () => w,
 }),
     r(388685);
 var n = r(951288),
-    l = r(647438),
-    i = r(296009),
+    i = r(647438),
+    l = r(296009),
     a = r(442837),
     o = r(481060),
     c = r(355467),
@@ -13,9 +13,9 @@ var n = r(951288),
     u = r(314897),
     d = r(351402),
     f = r(206599),
-    g = r(747101),
-    p = r(517157),
-    b = r(985748),
+    b = r(747101),
+    g = r(517157),
+    p = r(985748),
     O = r(566007),
     m = r(173951),
     j = r(455731),
@@ -48,43 +48,43 @@ function P(e) {
     }
     return e;
 }
-function E(e) {
+function w(e) {
     var { widget: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        l = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return l;
+            return i;
         })(e, ["widget"]);
     switch (t.type) {
-        case i.l.FAVORITE_GAMES:
+        case l.l.FAVORITE_GAMES:
             return (0, n.jsx)(O.Z, P({ widget: t }, r));
-        case i.l.CURRENT_GAMES:
-            return (0, n.jsx)(b.Z, P({ widget: t }, r));
-        case i.l.WANT_TO_PLAY_GAMES:
+        case l.l.CURRENT_GAMES:
+            return (0, n.jsx)(p.Z, P({ widget: t }, r));
+        case l.l.WANT_TO_PLAY_GAMES:
             return (0, n.jsx)(j.Z, P({ widget: t }, r));
-        case i.l.PLAYED_GAMES:
+        case l.l.PLAYED_GAMES:
             return (0, n.jsx)(m.Z, P({ widget: t }, r));
         default:
             return null;
     }
 }
-function w() {
+function S() {
     return (0, n.jsxs)("div", {
         className: h.ukTeenDisclaimer,
         children: [
@@ -98,35 +98,35 @@ function w() {
         ],
     });
 }
-function S(e) {
-    let { user: t, guildId: r, channelId: i } = e,
-        o = (0, p.Z)(t.id),
-        { widgets: b, isGameFetching: O } = (0, g.Z)(o),
+function E(e) {
+    let { user: t, guildId: r, channelId: l } = e,
+        o = (0, g.Z)(t.id),
+        { widgets: p, isGameFetching: O } = (0, b.Z)(o),
         m = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         j = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
                 r = (0, s.U)();
             return (
-                l.useEffect(() => {
+                i.useEffect(() => {
                     null == e && null == t && r && (0, c.GE)();
                 }, [e, t, r]),
                 "GB" === e && r
             );
         })(),
-        x = 0 === b.length && m;
-    return ((0, f.J)(m, b), x)
+        x = 0 === p.length && m;
+    return ((0, f.J)(m, p), x)
         ? (0, n.jsx)(v.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  j && (0, n.jsx)(w, {}),
-                  b.map((e) =>
+                  j && (0, n.jsx)(S, {}),
+                  p.map((e) =>
                       (0, n.jsx)(
-                          E,
+                          w,
                           {
                               widget: e,
                               user: t,
                               guildId: r,
-                              channelId: i,
+                              channelId: l,
                               isGameFetching: O,
                           },
                           e.id,
@@ -140,6 +140,6 @@ function I(e) {
     return (0, n.jsx)(o.Ttm, {
         className: h.scroller,
         fade: !0,
-        children: (0, n.jsx)(S, P({}, e)),
+        children: (0, n.jsx)(E, P({}, e)),
     });
 }

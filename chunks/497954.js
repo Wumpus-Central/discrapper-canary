@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(388032);
 let p = (e) => {
     let { user: t, channelId: n, reportId: p } = e,
-        { isIgnored: f, isBlocked: g } = (0, l.cj)(
+        { isIgnored: x, isBlocked: g } = (0, l.cj)(
             [d.Z],
             () => ({
                 isIgnored: d.Z.isIgnored(t.id),
@@ -20,8 +20,8 @@ let p = (e) => {
             }),
             [t],
         ),
-        x = (0, l.e7)([c.Z], () => c.Z.getChannel(n), [n]),
-        b = i.useMemo(() => u.ZP.getName(null == x ? void 0 : x.guild_id, null == x ? void 0 : x.id, t), [x, t]),
+        f = (0, l.e7)([c.Z], () => c.Z.getChannel(n), [n]),
+        b = i.useMemo(() => u.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, t), [f, t]),
         h = i.useCallback(() => {
             o.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
@@ -29,7 +29,7 @@ let p = (e) => {
             }),
                 a.Z.ignoreUser(t.id, "web_iar_ignore_user_element", n);
         }, [t, p, n]),
-        v = i.useMemo(() => f || g, [f, g]);
+        v = i.useMemo(() => x || g, [x, g]);
     return (0, r.jsx)(s.JZ, {
         title: _.intl.formatToPlainString(_.t.U3yyFh, { username: b }),
         description: _.intl.string(_.t.naWE6e),

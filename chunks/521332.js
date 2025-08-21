@@ -11,9 +11,9 @@ var r = n(951288),
     m = n(155647),
     _ = n(185625),
     p = n(981631),
-    f = n(388032),
+    x = n(388032),
     g = n(769450);
-function x(e) {
+function f(e) {
     let { title: t, description: n, onButtonClick: l, trackSettingsUpsellsAction: a } = e,
         [o, c] = i.useState(!1);
     return (
@@ -23,7 +23,7 @@ function x(e) {
         (0, r.jsx)(d.JZ, {
             title: t,
             description: n,
-            buttonText: o ? f.intl.string(f.t["h+WsPT"]) : f.intl.string(f.t.A8t4NT),
+            buttonText: o ? x.intl.string(x.t["h+WsPT"]) : x.intl.string(x.t.A8t4NT),
             buttonDisabled: o,
             onButtonPress: () => {
                 l(), c(!0), a(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
@@ -44,14 +44,14 @@ function b(e) {
                   (0, r.jsx)(a.X6q, {
                       variant: "text-sm/semibold",
                       className: g.header,
-                      children: f.intl.string(f.t["1yxTIC"]),
+                      children: x.intl.string(x.t["1yxTIC"]),
                   }),
                   (0, r.jsx)("div", {
                       className: g.upsellsContainer,
                       children: v.map((e, n) => {
                           let { getTitle: i, getDescription: l, onApply: a } = e;
                           return (0, r.jsx)(
-                              x,
+                              f,
                               {
                                   title: i(),
                                   description: l(),
@@ -63,7 +63,7 @@ function b(e) {
                       }),
                   }),
                   (0, r.jsx)(a.Avr, {
-                      text: f.intl.string(f.t.olebGx),
+                      text: x.intl.string(x.t.olebGx),
                       onClick: () => {
                           o.Z.open(p.oAB.CONTENT_AND_SOCIAL),
                               i(),

@@ -1,34 +1,34 @@
-n.d(t, { Z: () => x }), n(388685);
-var r = n(647438),
-    i = n(749210),
-    l = n(287734),
+n.d(t, { Z: () => g }), n(388685);
+var l = n(647438),
+    r = n(749210),
+    i = n(287734),
     a = n(881052),
     o = n(142497),
-    s = n(570188),
-    c = n(471253),
-    d = n(427679),
-    u = n(190378);
-function x(e, t) {
+    c = n(570188),
+    s = n(471253),
+    u = n(427679),
+    d = n(190378);
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        [x, h] = r.useState(!1),
-        [g, m] = r.useState(null),
-        b = r.useMemo(() => d.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
-        f = (0, s.J)(e);
+        [g, f] = l.useState(!1),
+        [b, m] = l.useState(null),
+        p = l.useMemo(() => u.Z.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
+        h = (0, c.J)(e);
     return {
-        loading: x,
-        error: g,
-        onSave: async (r) => {
-            let { topic: s, privacyLevel: d, sendStartNotification: x } = r;
-            if (null != e && "" !== s && null != d) {
-                h(!0), m(null), null != n && (i.Z.selectGuild(n), l.default.selectVoiceChannel(e.id));
+        loading: g,
+        error: b,
+        onSave: async (l) => {
+            let { topic: c, privacyLevel: u, sendStartNotification: g } = l;
+            if (null != e && "" !== c && null != u) {
+                f(!0), m(null), null != n && (r.Z.selectGuild(n), i.default.selectVoiceChannel(e.id));
                 try {
                     let n;
-                    null != b
-                        ? (n = await c.Ef(e, s, d))
-                        : ((n = await c.HO(e, s, d, null != x && x)), f && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)),
+                    null != p
+                        ? (n = await s.Ef(e, c, u))
+                        : ((n = await s.HO(e, c, u, null != g && g)), h && o.Kw(d.v.LIVE_STAGE_NOTIFICATION_BADGE)),
                         t(n);
                 } catch (e) {
-                    m(new a.Hx(e)), h(!1);
+                    m(new a.Hx(e)), f(!1);
                 }
             }
         },

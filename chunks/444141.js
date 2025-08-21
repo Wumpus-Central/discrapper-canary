@@ -52,7 +52,7 @@ function f(e, n) {
 }
 function m(e) {
     let { user: n, guildId: t, channelId: m, displayProfile: p, onClose: b } = e,
-        { analyticsLocations: g, sourceAnalyticsLocations: x } = (0, l.ZP)(),
+        { analyticsLocations: x, sourceAnalyticsLocations: g } = (0, l.ZP)(),
         { context: h, trackUserProfileAction: j } = (0, c.KZ)(),
         v = (0, s.ZP)(n.id, t);
     return (null == v ? void 0 : v.guildId) == null || null == h
@@ -67,14 +67,14 @@ function m(e) {
                         (0, a.openUserProfileModal)(
                             f(u({}, h), {
                                 showGuildProfile: !1,
-                                sourceAnalyticsLocations: x,
+                                sourceAnalyticsLocations: g,
                             }),
                         ),
                         j(
                             u(
                                 {
                                     action: "PRESS_VIEW_MAIN_PROFILE",
-                                    analyticsLocations: g,
+                                    analyticsLocations: x,
                                 },
                                 h,
                             ),
@@ -90,14 +90,14 @@ function m(e) {
                         (0, a.openUserProfileModal)(
                             f(u({}, h), {
                                 showGuildProfile: !0,
-                                sourceAnalyticsLocations: x,
+                                sourceAnalyticsLocations: g,
                             }),
                         ),
                         j(
                             u(
                                 {
                                     action: "PRESS_VIEW_SERVER_PROFILE",
-                                    analyticsLocations: g,
+                                    analyticsLocations: x,
                                 },
                                 h,
                             ),

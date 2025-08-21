@@ -12,10 +12,10 @@ let m = (e) => {
     let { guildId: t, reportId: n } = e,
         [m, _] = i.useState(!1),
         p = c.Z.getGuild(t),
-        f = null != p;
+        x = null != p;
     i.useEffect(() => {
-        _(!f);
-    }, [f]);
+        _(!x);
+    }, [x]);
     let g = i.useCallback(() => {
         _(!0),
             a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {

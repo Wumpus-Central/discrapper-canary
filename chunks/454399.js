@@ -165,8 +165,9 @@ function O(e) {
                 layerContext: O,
                 onAnimationRest: c,
                 handleExitComplete: P,
+                positionKey: "".concat(n, "|").concat(o),
             }),
-            [R, I.triggerRef, I.targetElementRef, S, C, N, A, d, p, m, b, O, c, P],
+            [R, I.triggerRef, I.targetElementRef, S, C, N, A, d, p, m, b, O, c, P, n, o],
         );
     return (0, r.jsxs)(y.Provider, {
         value: w,
@@ -174,40 +175,41 @@ function O(e) {
     });
 }
 function v(e) {
-    let { strategy: t = "clone", children: n } = e,
-        r = i.useContext(y);
-    if (null == r) throw Error("RichTooltipTrigger must be used within RichTooltipRoot");
+    let { strategy: t = "clone", tag: n = "div", children: r } = e,
+        a = i.useContext(y);
+    if (null == a) throw Error("RichTooltipTrigger must be used within RichTooltipRoot");
     if ("clone" === t) {
-        if (!i.isValidElement(n)) return null;
-        let e = n;
-        return (0, c.C9)(e, r.triggerProps, r.tooltipId, r.triggerRef);
+        if (!i.isValidElement(r)) return null;
+        let e = r;
+        return (0, c.C9)(e, a.triggerProps, a.tooltipId, a.triggerRef);
     }
-    let a = g(h({}, r.triggerProps), {
-        onFocus: (0, c.tS)(r.triggerProps.onFocus, (e) => {
+    let o = g(h({}, a.triggerProps), {
+        onFocus: (0, c.tS)(a.triggerProps.onFocus, (e) => {
             let t = e.target;
             if (null != t) {
                 var n;
-                let e = (0, c.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, r.tooltipId);
+                let e = (0, c.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, a.tooltipId);
                 t.setAttribute("aria-describedby", e);
             }
         }),
     });
     return (0, c.FX)({
-        element: "div",
-        children: n,
-        triggerHandlers: a,
-        triggerRef: r.triggerRef,
+        tag: n,
+        children: r,
+        triggerHandlers: o,
+        triggerRef: a.triggerRef,
     });
 }
 function I(e) {
-    var { children: t, asContainer: n = !1 } = e,
-        a = E(e, ["children", "asContainer"]);
+    var { children: t, asContainer: n = !1, element: a = "div" } = e,
+        o = E(e, ["children", "asContainer", "element"]);
     return n
         ? (0, r.jsx)(
               O,
-              g(h({}, a), {
+              g(h({}, o), {
                   children: (0, r.jsx)(v, {
                       strategy: "wrap",
+                      tag: a,
                       children: t,
                   }),
               }),
@@ -215,7 +217,7 @@ function I(e) {
         : i.isValidElement(t)
           ? (0, r.jsx)(
                 O,
-                g(h({}, a), {
+                g(h({}, o), {
                     children: (0, r.jsx)(v, {
                         strategy: "clone",
                         children: t,
@@ -241,6 +243,7 @@ function T() {
         spacing: E,
         caretConfig: b,
         layerContext: O,
+        positionKey: v,
     } = t;
     return (0, d.Q)({
         shouldShow: n,
@@ -263,6 +266,7 @@ function T() {
                       caretConfig: b,
                       layerContext: null != O ? O : o.nz,
                       animationStyle: e,
+                      positionKey: v,
                       "data-mana-component": "rich-tooltip",
                   }),
               })

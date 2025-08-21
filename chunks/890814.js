@@ -1,11 +1,11 @@
-r.d(t, { Z: () => i });
+r.d(t, { Z: () => l });
 var n = r(951288);
 r(647438);
-var l = r(956636);
-function i(e) {
+var i = r(956636);
+function l(e) {
     let { games: t, renderGame: r } = e;
     return (0, n.jsx)("ul", {
-        className: l.coverList,
+        className: i.coverList,
         children: t.map((e, t) => (0, n.jsx)("li", { children: r(e) }, "".concat(e.applicationId, "-").concat(t))),
     });
 }

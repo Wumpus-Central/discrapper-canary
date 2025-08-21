@@ -1497,12 +1497,6 @@ let eE = "@me",
         BILLING_INVOICE_BREAKDOWN: "/users/@me/billing/invoice/breakdown",
         BILLING_STRIPE_PAYMENT_INTENTS: (e) => "/users/@me/billing/stripe/payment-intents/payments/".concat(e),
         BILLING_STRIPE_PAYMENT_INTENTS_VIA_ID: (e) => "/users/@me/billing/stripe/payment-intents/".concat(e),
-        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r) =>
-            "/billing/premium/subscribe?plan_id="
-                .concat(e, "&gift=")
-                .concat(t, "&load_id=")
-                .concat(n)
-                .concat(r ? "&payment_method_type=".concat(r) : ""),
         BILLING_STANDALONE_CHECKOUT_LOGIN_HANDOFF: (e, t, n) =>
             ""
                 .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/billing/premium/subscribe/login-handoff?handoff_key=")
@@ -2055,6 +2049,12 @@ let eE = "@me",
         VERIFY_HUB_EMAIL: "/verify-hub-email",
         OPEN_APP_FROM_EMAIL: "/open-app-from-email",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
+        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r) =>
+            "/billing/premium/subscribe?plan_id="
+                .concat(e, "&gift=")
+                .concat(t, "&load_id=")
+                .concat(n)
+                .concat(r ? "&payment_method_type=".concat(r) : ""),
         GUILD_BOOSTING_MARKETING: (e) => "/guilds/".concat(e, "/premium-guild-subscriptions"),
         GUILD_SETTINGS: (e, t, n) => {
             let r = "/guilds/".concat(e, "/settings").concat(null != t ? "/".concat(t) : "");

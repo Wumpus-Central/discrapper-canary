@@ -20,6 +20,7 @@ function d(e) {
         }),
         p = (0, i.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, r.jsxs)(a.xBx, {
+        "data-migration-pending": !0,
         align: s.Z.Align.START,
         className: u.header,
         separator: !1,
@@ -33,6 +34,7 @@ function d(e) {
             }),
             (0, r.jsx)("div", { className: u.headerTitle }),
             (0, r.jsx)(a.olH, {
+                "data-migration-pending": !0,
                 onClick: d,
                 className: u.closeButton,
             }),

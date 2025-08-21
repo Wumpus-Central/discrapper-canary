@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -11,11 +11,11 @@ var r = n(951288),
     m = n(430824),
     _ = n(496675),
     p = n(944486),
-    f = n(981631),
+    x = n(981631),
     g = n(388032);
-let x = (e) => {
+let f = (e) => {
     let { application: t, reportId: n } = e,
-        [x, b] = i.useState(!1),
+        [f, b] = i.useState(!1),
         [h, v] = i.useState(!1),
         j = (0, l.e7)([p.Z, u.Z], () => {
             var e;
@@ -48,7 +48,7 @@ let x = (e) => {
         }, [j, t.id]);
     let C = i.useCallback(() => {
             v(!1),
-                o.ZP.trackWithMetadata(f.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
+                o.ZP.trackWithMetadata(x.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: j,
                     application_id: t.id,
                     report_id: n,
@@ -65,11 +65,11 @@ let x = (e) => {
         Z = (0, l.e7)([_.Z, m.Z], () => {
             let e = m.Z.getGuild(j);
             if (null == e) return !1;
-            let n = _.Z.can(f.Plq.MANAGE_GUILD, e),
-                r = null == t.bot || _.Z.canManageUser(f.Plq.MANAGE_GUILD, t.bot.id, e);
+            let n = _.Z.can(x.Plq.MANAGE_GUILD, e),
+                r = null == t.bot || _.Z.canManageUser(x.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
-    return null != t && null != j && x && Z
+    return null != t && null != j && f && Z
         ? (0, r.jsx)(d.JZ, {
               title: g.intl.string(g.t["WV/CsL"]),
               description: g.intl.string(g.t["FlcC+/"]),

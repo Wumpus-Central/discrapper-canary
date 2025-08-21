@@ -1,55 +1,55 @@
 n.d(t, { Z: () => o });
-var r = n(951288);
+var l = n(951288);
 n(647438);
-var i = n(481060),
-    l = n(388032),
+var r = n(481060),
+    i = n(388032),
     a = n(788931);
 function o(e) {
     let { sendStartNotification: t, setSendStartNotification: n } = e,
-        o = t ? l.intl.string(l.t.xAT8lJ) : l.intl.string(l.t["Y+18hY"]);
-    return (0, r.jsx)("div", {
+        o = t ? i.intl.string(i.t.xAT8lJ) : i.intl.string(i.t["Y+18hY"]);
+    return (0, l.jsx)("div", {
         className: a.notificationToggle,
-        children: (0, r.jsx)(i.XZJ, {
-            type: i.XZJ.Types.INVERTED,
+        children: (0, l.jsx)(r.XZJ, {
+            type: r.XZJ.Types.INVERTED,
             size: 14,
             className: a.__invalid_checkbox,
             value: t,
             onChange: function () {
                 n(!t);
             },
-            children: (0, r.jsx)(i.Text, {
+            children: (0, l.jsx)(r.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                children: (0, r.jsx)(i.ua7, {
+                children: (0, l.jsx)(r.ua7, {
                     position: "bottom",
                     tooltipClassName: a.tooltip,
-                    text: l.intl.string(l.t["4A/xnZ"]),
-                    "aria-label": l.intl.string(l.t["4A/xnZ"]),
+                    text: i.intl.string(i.t["4A/xnZ"]),
+                    "aria-label": i.intl.string(i.t["4A/xnZ"]),
                     children: (e) => {
                         var t, n;
-                        return (0, r.jsx)(
+                        return (0, l.jsx)(
                             "span",
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
+                                        l = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
+                                        (l = l.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
+                                        l.forEach(function (t) {
+                                            var l;
+                                            (l = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: r,
+                                                          value: l,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = r);
+                                                    : (e[t] = l);
                                         });
                                 }
                                 return e;
@@ -60,8 +60,8 @@ function o(e) {
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var l = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, l);
                                       }
                                       return n;
                                   })(Object(n)).forEach(function (e) {

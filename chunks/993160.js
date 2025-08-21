@@ -13,13 +13,13 @@ var o = t(755721),
     m = t(562831),
     p = t(981631);
 function b(e) {
-    let { user: n, currentUser: t, guildId: b, channelId: g, displayProfile: x, relationshipType: h, onClose: j } = e,
+    let { user: n, currentUser: t, guildId: b, channelId: x, displayProfile: g, relationshipType: h, onClose: j } = e,
         { newestAnalyticsLocation: v } = (0, i.ZP)(),
         _ = (0, c.Z)({
             user: n,
             guildId: b,
-            channelId: g,
-            displayProfile: x,
+            channelId: x,
+            displayProfile: g,
             onClose: j,
         }),
         {
@@ -27,7 +27,7 @@ function b(e) {
             hasOutgoingPendingGameFriends: I,
             hasIncomingPendingGameFriends: O,
         } = (0, m.H)({ userId: n.id }),
-        P = y.length > 0 || I || O;
+        Z = y.length > 0 || I || O;
     return h === p.OGo.BLOCKED
         ? null
         : n.id === t.id
@@ -111,7 +111,7 @@ function b(e) {
                           }),
                       ],
                   })
-                : h === p.OGo.NONE && P
+                : h === p.OGo.NONE && Z
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(s.Z, {

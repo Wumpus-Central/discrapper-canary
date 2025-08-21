@@ -469,11 +469,15 @@ function tF() {
         ) {
             let { simulcastEnabled: t, lqStreamBitrate: n } = V.Z.getConfig();
             e.configureGoLiveSimulcast(t, n);
-            let { enabled: r, adjustResolution: i } = (0, F.k)({
+            let {
+                enabled: r,
+                scaleOffBitrateFloor: i,
+                adjustMaxBitrateFloor: a,
+            } = (0, F.k)({
                 location: "setupMediaEngine",
                 autoTrackExposure: !0,
             });
-            e.setGoLiveUsePixelCounts(r, i);
+            e.setGoLiveUsePixelCounts(r, i, a);
         }
         if (
             ((0, es.isWindows)()

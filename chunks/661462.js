@@ -59,8 +59,8 @@ function p(e) {
             guildId: u,
             channelId: p,
             items: b,
-            initialSection: g,
-            initialSubsection: x,
+            initialSection: x,
+            initialSubsection: g,
             onClose: h,
         } = e,
         { trackUserProfileAction: j } = (0, i.KZ)(),
@@ -94,12 +94,12 @@ function p(e) {
                 null !=
                     (n = b.find((e) => {
                         let { section: n } = e;
-                        return n === g;
+                        return n === x;
                     }))
                     ? n
                     : b[0],
             )),
-            (c = c = { subsection: x }),
+            (c = c = { subsection: g }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(c))
                 : (function (e, n) {

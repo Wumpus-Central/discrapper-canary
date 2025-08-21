@@ -12,19 +12,19 @@ var r = n(951288),
     _ = n(388032);
 let p = (e) => {
     let { application: t, reportId: n } = e,
-        [p, f] = i.useState(!1),
+        [p, x] = i.useState(!1),
         g = (0, l.e7)([u.Z], () => u.Z.getNewestTokenForApplication(t.id));
     i.useEffect(() => {
-        null != g && f(!0);
+        null != g && x(!0);
     }, [g]);
-    let x = i.useRef(!1);
+    let f = i.useRef(!1);
     i.useEffect(() => {
-        x.current || (a.Z.fetch(), (x.current = !0));
+        f.current || (a.Z.fetch(), (f.current = !0));
     }, []);
     let b = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities()),
         h = i.useCallback(() => {
             if (
-                (f(!1),
+                (x(!1),
                 c.ZP.trackWithMetadata(m.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
                     report_id: n,

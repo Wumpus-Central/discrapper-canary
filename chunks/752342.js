@@ -13,8 +13,8 @@ var o = t(481060),
     m = t(648052),
     p = t(867176),
     b = t(681837),
-    g = t(502762),
-    x = t(530),
+    x = t(502762),
+    g = t(530),
     h = t(871604),
     j = t(952124),
     v = t(53558),
@@ -22,8 +22,8 @@ var o = t(481060),
     y = t(30556),
     I = t(4517),
     O = t(740628),
-    P = t(398145),
-    Z = t(228168),
+    Z = t(398145),
+    P = t(228168),
     T = t(981631),
     A = t(671955),
     N = t(388032),
@@ -47,8 +47,8 @@ function E(e) {
         V = E === T.ME ? void 0 : E,
         F = (0, u.ZP)(n.id, V),
         Y = s.ZP.getName(V, S, n),
-        W = (0, a.Dt)(),
-        { analyticsLocations: z } = (0, c.ZP)([...G, i.Z.USER_PROFILE_MODAL]),
+        z = (0, a.Dt)(),
+        { analyticsLocations: W } = (0, c.ZP)([...G, i.Z.USER_PROFILE_MODAL]),
         K = (0, d.ZB)({
             layout: "MODAL",
             userId: n.id,
@@ -58,9 +58,9 @@ function E(e) {
             messageId: w,
             roleId: B,
         }),
-        H = (0, P.Z)(n);
+        H = (0, Z.Z)(n);
     return (0, r.jsx)(c.Gt, {
-        value: z,
+        value: W,
         children: (0, r.jsx)(d.Mt, {
             value: K,
             openedAt: M,
@@ -72,16 +72,16 @@ function E(e) {
                 transitionState: U,
                 className: C.root,
                 hideShadow: !0,
-                "aria-labelledby": W,
+                "aria-labelledby": z,
                 parentComponent: "BotUserProfileModal",
                 children: (0, r.jsx)(o.y5t, {
                     component: (0, r.jsx)(o.nn4, {
                         children: (0, r.jsx)(o.H, {
-                            id: W,
+                            id: z,
                             children: N.intl.format(N.t.KRe1Fh, { name: Y }),
                         }),
                     }),
-                    children: (0, r.jsxs)(g.Z, {
+                    children: (0, r.jsxs)(x.Z, {
                         user: n,
                         displayProfile: F,
                         themeType: A.l.MODAL,
@@ -147,7 +147,7 @@ function E(e) {
                             (0, r.jsxs)("div", {
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(g.Z, {
                                         className: C.username,
                                         user: n,
                                         nickname: Y,
@@ -169,7 +169,7 @@ function E(e) {
                                         displayProfile: F,
                                         guildId: V,
                                         items: H,
-                                        initialSection: null != L ? L : Z.oh.BOT_INFO,
+                                        initialSection: null != L ? L : P.oh.BOT_INFO,
                                         initialSubsection: R,
                                         onClose: k,
                                     }),

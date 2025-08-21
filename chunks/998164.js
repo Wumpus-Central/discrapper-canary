@@ -121,13 +121,7 @@ let j = function (e) {
         }),
         a = i.useCallback(
             (e, n) => {
-                (0, c.vR)(e);
-                let r = d.Z.getSettings();
-                if (null == r) return;
-                let { channelId: i } = e;
-                (0, c.oo)(t, r, !0).then(() => {
-                    null != n && (0, c.ad)(t, i, n, !0);
-                });
+                (0, c.vR)(e), (0, c.ad)(t, e.channelId, n, !0);
             },
             [t],
         ),
@@ -135,36 +129,22 @@ let j = function (e) {
             (e, r, i, l) => {
                 var a;
                 let s = null == (a = n[e]) ? void 0 : a.channelId;
-                if (null == s) return;
-                let o = d.Z.getSettings();
-                null != o &&
-                    ((0, c.el)(s, r),
-                    (0, c.oo)(t, o, !0).then(() => {
-                        (0, c.ad)(t, s, i, l);
-                    }));
+                null != s && null != d.Z.getSettings() && ((0, c.el)(s, r), (0, c.ad)(t, s, i, l));
             },
             [n, t],
         ),
         j = i.useCallback(
             (e) => {
-                var r;
-                let i = null == (r = n[e]) ? void 0 : r.channelId;
-                if (null == i) return;
-                (0, c.Hr)(i);
-                let l = d.Z.getSettings();
-                (0, c.oo)(t, l, !0);
+                var t;
+                let r = null == (t = n[e]) ? void 0 : t.channelId;
+                null != r && (0, c.Hr)(r);
             },
-            [n, t],
+            [n],
         ),
         v = n.map((e) => h(p({}, e), { id: e.channelId })),
-        _ = i.useCallback(
-            (e) => {
-                (0, c.hS)(e);
-                let n = d.Z.getSettings();
-                null != n && (0, c.oo)(t, n, !0);
-            },
-            [t],
-        ),
+        _ = i.useCallback((e) => {
+            (0, c.hS)(e);
+        }, []),
         { handleDragStart: O, handleDragReset: y, handleDragComplete: C } = (0, s.Z)(v, _);
     return (0, r.jsxs)("div", {
         className: g.section,

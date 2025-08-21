@@ -30,7 +30,7 @@ var r = n(951288),
     y = n(162925);
 let O = 1000;
 function v(e, t, n, r, i) {
-    let s = g.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
+    let s = g.Z5c.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
         l = new URL(f.Z.makeUrl(g.Z5c.BILLING_LOGIN_HANDOFF)),
         c = (0, a.Z)();
     return (

@@ -2,13 +2,13 @@ n.d(t, {
     $A: () => T,
     $B: () => C,
     $j: () => s,
-    AN: () => Y,
-    AS: () => W,
+    AN: () => W,
+    AS: () => K,
     Av: () => g,
-    Dg: () => q,
+    Dg: () => X,
     Er: () => w,
     Gs: () => R,
-    H3: () => et,
+    H3: () => en,
     JA: () => v,
     Jk: () => I,
     LD: () => x,
@@ -17,10 +17,10 @@ n.d(t, {
     QP: () => l,
     Qx: () => d,
     R$: () => M,
-    Tr: () => X,
+    Tr: () => Q,
     UC: () => U,
-    Uc: () => ee,
-    V8: () => $,
+    Uc: () => et,
+    V8: () => ee,
     WA: () => y,
     XR: () => Z,
     YE: () => G,
@@ -28,30 +28,31 @@ n.d(t, {
     Yn: () => i,
     Z: () => u,
     Zq: () => b,
-    ad: () => z,
+    ad: () => q,
     dX: () => _,
     ed: () => p,
     ef: () => L,
     fC: () => c,
     fU: () => m,
+    fm: () => F,
     h7: () => a,
-    iA: () => K,
+    iA: () => z,
     jg: () => E,
     kS: () => V,
     mC: () => A,
     mN: () => S,
-    n4: () => H,
+    n4: () => Y,
     pM: () => o,
     pk: () => k,
     ru: () => j,
     u$: () => N,
-    uA: () => Q,
-    ux: () => F,
+    uA: () => J,
+    ux: () => H,
     vA: () => r.vA,
     w5: () => h,
     y7: () => D,
     yf: () => B,
-    ym: () => J,
+    ym: () => $,
 });
 var r = n(268146),
     i = (function (e) {
@@ -158,9 +159,10 @@ let d = 100,
         },
         videoBitrateFloor: 150000,
     },
-    F = 60000,
-    H = ">=22.0.0";
-var Y = (function (e) {
+    F = 0.02,
+    H = 60000,
+    Y = ">=22.0.0";
+var W = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
             (e.ATTENUATION = "ATTENUATION"),
@@ -222,10 +224,10 @@ var Y = (function (e) {
             e
         );
     })({}),
-    W = (function (e) {
+    K = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    K = (function (e) {
+    z = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -234,7 +236,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    z = (function (e) {
+    q = (function (e) {
         return (
             (e.OPUS = "opus"),
             (e.VP8 = "VP8"),
@@ -246,7 +248,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    q = (function (e) {
+    X = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.VOICE = 1)] = "VOICE"),
@@ -256,16 +258,16 @@ var Y = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return (e.AUDIO = "audio"), (e.VIDEO = "video"), (e.SCREEN = "screen"), (e.TEST = "test"), e;
     })({}),
-    Q = (function (e) {
+    J = (function (e) {
         return (e.FIXED = "fixed"), (e.SOURCE = "source"), e;
     })({}),
-    J = (function (e) {
+    $ = (function (e) {
         return (e.REMB = "remb"), e;
     })({}),
-    $ = (function (e) {
+    ee = (function (e) {
         return (
             (e.VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
             (e.SIGNAL_AV1 = "signal_av1"),
@@ -283,10 +285,10 @@ var Y = (function (e) {
             e
         );
     })({}),
-    ee = (function (e) {
+    et = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({}),
-    et = (function (e) {
+    en = (function (e) {
         return (
             (e[(e.CPU_OVERUSE = 1)] = "CPU_OVERUSE"),
             (e[(e.FAILED = 2)] = "FAILED"),

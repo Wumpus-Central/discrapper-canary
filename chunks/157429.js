@@ -1,68 +1,68 @@
-t.d(i, { default: () => _ }), t(388685);
-var a = t(951288);
-t(647438);
-var e = t(512722),
-    s = t.n(e),
-    l = t(481060),
-    o = t(935369),
-    r = t(313201),
-    c = t(53365),
-    d = t(981631),
-    u = t(388032),
-    x = t(965193);
-function _(n) {
-    let { transitionState: i, guild: t, onClose: e } = n,
-        _ = (0, r.Dt)(),
-        [h, { loading: m, error: p }] = (0, o.Z)(c.oL),
-        g = async () => {
-            s()(null != t, "no guild"), null != (await h(t.id)) && e();
+e.d(t, { default: () => h }), e(388685);
+var i = e(951288);
+e(647438);
+var s = e(512722),
+    a = e.n(s),
+    l = e(481060),
+    o = e(935369),
+    c = e(313201),
+    r = e(53365),
+    d = e(981631),
+    u = e(388032),
+    x = e(965193);
+function h(n) {
+    let { transitionState: t, guild: e, onClose: s } = n,
+        h = (0, c.Dt)(),
+        [m, { loading: p, error: _ }] = (0, o.Z)(r.oL),
+        j = async () => {
+            a()(null != e, "no guild"), null != (await m(e.id)) && s();
         };
-    return (0, a.jsxs)(l.Y0X, {
-        transitionState: i,
-        "aria-labelledby": _,
+    return (0, i.jsxs)(l.Y0X, {
+        transitionState: t,
+        "aria-labelledby": h,
         parentComponent: "RemoveMonetizationModal",
         children: [
-            (0, a.jsxs)(l.xBx, {
+            (0, i.jsxs)(l.xBx, {
                 children: [
-                    (0, a.jsx)(l.X6q, {
-                        id: _,
+                    (0, i.jsx)(l.X6q, {
+                        id: h,
                         variant: "heading-md/semibold",
                         children: u.intl.string(u.t.rRpcEx),
                     }),
-                    (0, a.jsx)(l.olH, {
+                    (0, i.jsx)(l.olH, {
                         className: x.closeButton,
-                        onClick: e,
+                        onClick: s,
                     }),
                 ],
             }),
-            (0, a.jsxs)(l.hzk, {
+            (0, i.jsxs)(l.hzk, {
                 className: x.content,
                 children: [
-                    null != p
-                        ? (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(l.kzN, { children: p.message }), (0, a.jsx)(l.LZC, { size: 24 })],
+                    null != _
+                        ? (0, i.jsxs)(i.Fragment, {
+                              children: [(0, i.jsx)(l.kzN, { children: _.message }), (0, i.jsx)(l.LZC, { size: 24 })],
                           })
                         : null,
-                    (0, a.jsx)(l.R94, {
+                    (0, i.jsx)(l.R94, {
                         type: l.R94.Types.ERROR,
                         children: u.intl.format(u.t["Oa5P6+"], {
-                            guildName: t.name,
+                            guildName: e.name,
                             url: d.EYA.DEVELOPER_PORTAL_TEAMS,
                         }),
                     }),
-                    (0, a.jsx)(l.LZC, { size: 16 }),
+                    (0, i.jsx)(l.LZC, { size: 16 }),
                 ],
             }),
-            (0, a.jsx)(l.mzw, {
+            (0, i.jsx)(l.mzw, {
                 className: x.__invalid_footer,
-                children: (0, a.jsx)("div", {
+                children: (0, i.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: x.__invalid_goBackButton,
-                    children: (0, a.jsx)(l.zxk, {
+                    children: (0, i.jsx)(l.zxk, {
                         variant: "critical-primary",
                         text: u.intl.string(u.t.R3BPHx),
-                        loading: m,
-                        onClick: g,
+                        loading: p,
+                        onClick: j,
                     }),
                 }),
             }),

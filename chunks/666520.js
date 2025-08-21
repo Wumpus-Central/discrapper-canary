@@ -12,7 +12,7 @@ var r = t(951288),
 function m(e) {
     let { autoFocus: n = !1, className: t, userId: m, onUpdate: p } = e,
         b = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        { loading: g, note: x } = (0, a.Z)(m),
+        { loading: x, note: g } = (0, a.Z)(m),
         h = o.useRef(null);
     return (o.useEffect(() => {
         if (!n || b) return;
@@ -26,12 +26,12 @@ function m(e) {
               children: (0, r.jsx)(i.lcI, {
                   ref: h,
                   className: f.textarea,
-                  disabled: g,
-                  placeholder: g ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
+                  disabled: x,
+                  placeholder: x ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
                   "aria-label": u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      (null != x ? x : "") !== n && (null == p || p(), c.Z.updateNote(m, n));
+                      (null != g ? g : "") !== n && (null == p || p(), c.Z.updateNote(m, n));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -42,7 +42,7 @@ function m(e) {
                           } else e.preventDefault(), e.currentTarget.blur();
                       else e.which === d.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != x ? x : void 0,
+                  defaultValue: null != g ? g : void 0,
                   maxLength: d.vuo,
               }),
           });

@@ -23,8 +23,8 @@ function l(e) {
         () => (
             (b.current = new a.V7()),
             () => {
-                var e;
-                null == (e = b.current) || e.stop();
+                let e = b.current;
+                null != e && e.stop();
             }
         ),
         [],
@@ -38,15 +38,15 @@ function l(e) {
             E(!1);
         }, []),
         I = r.useCallback(() => {
-            var e;
             if (f && null != p.current) {
                 let e = p.current;
                 if ((0, i.k)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return;
             }
-            let t = null != l ? l : s;
-            null == (e = b.current) ||
-                e.start(
-                    t,
+            let e = null != l ? l : s,
+                t = b.current;
+            null != t &&
+                t.start(
+                    e,
                     () => {
                         m(!0), null == c || c();
                     },
@@ -54,8 +54,8 @@ function l(e) {
                 );
         }, [l, c, f, p]),
         T = r.useCallback(() => {
-            var e;
-            null == (e = b.current) || e.stop(), m(!1), null == u || u();
+            let e = b.current;
+            null != e && e.stop(), m(!1), null == u || u();
         }, [u]),
         S = r.useCallback(
             (e) => {
