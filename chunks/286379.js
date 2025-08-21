@@ -27,6 +27,7 @@ var r = (function (e) {
         (e.RTC_CONNECTION_DUPLICATE_USER = "rtc_connection_duplicate_user"),
         (e.QUEST_CONTENT_IMPRESSION = "quest_content_impression"),
         (e.QUEST_BAR_RENDER_DELAY = "quest_bar_render_delay"),
+        (e.QUEST_CONTENT_RENDERING_FAILURE = "quest_content_rendering_failure"),
         (e.QUEST_VIDEO_ERROR = "quest_video_error"),
         (e.OTA_CHECK_ATTEMPT = "OtaCheckAttempt"),
         (e.OTA_ASSET_DOWNLOAD_ATTEMPT = "OtaAssetDownloadAttempt"),

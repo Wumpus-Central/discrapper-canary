@@ -134,7 +134,7 @@ let N = (e, t) => {
                       ? I.intl.string(I.t.GP5lbm)
                       : o > 0
                         ? I.intl.formatToPlainString(I.t.iWtOfH, { numReferrals: e })
-                        : I.intl.string(I.t.Pcb7KC);
+                        : I.intl.string(I.t.tKCltb);
             },
             h = () =>
                 !0 === a

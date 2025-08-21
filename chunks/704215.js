@@ -466,6 +466,7 @@ var r = (function (e) {
             (e[(e.ACCESSIBILITY_HIGH_CONTRAST_MODE_NEW_BADGE = 583)] = "ACCESSIBILITY_HIGH_CONTRAST_MODE_NEW_BADGE"),
             (e[(e.WIDGETS_RTC_UPSELL_COACHMARK = 584)] = "WIDGETS_RTC_UPSELL_COACHMARK"),
             (e[(e.CLOUD_PLAY_POPOVER = 585)] = "CLOUD_PLAY_POPOVER"),
+            (e[(e.CUSTOM_THEMES_NITRO_HOME_TILE = 586)] = "CUSTOM_THEMES_NITRO_HOME_TILE"),
             e
         );
     })({}),

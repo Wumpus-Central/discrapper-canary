@@ -220,41 +220,40 @@ var w = (function (e) {
     );
 })({});
 let D = (e) => {
-    let { onClose: t, startingScreen: n = null } = e,
+    let { onClose: t, startingScreen: n = 1 } = e,
         a = (0, s.e7)([y.Z], () => y.Z.getReferralsRemaining()),
-        [o, l] = i.useState(null !== n ? n : null !== a && a > 0 ? 1 : 3),
-        [c, d] = i.useState(!1),
-        [f, _] = i.useState([]),
-        { analyticsLocations: p } = (0, m.ZP)([h.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]),
-        E = async (e) => {
-            g.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: p });
+        [o, l] = i.useState(n),
+        [c, d] = i.useState([]),
+        { analyticsLocations: f } = (0, m.ZP)([h.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]),
+        _ = async (e) => {
+            g.default.track(A.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: f });
             let t = await (0, b.jy)(Object.values(e).map((e) => e.id));
-            _(
+            d(
                 e.map((e) => ({
                     recipient: e,
                     status: t.get(e.id),
                 })),
             ),
-                3 === o && d(!0),
                 l(2);
         };
-    return null === a
-        ? (0, r.jsx)(u.$jN, {})
-        : 2 === o
-          ? (0, r.jsx)(S.m, {
-                isReminderConfirmation: c,
-                results: f,
+    if (null === a) return (0, r.jsx)(u.$jN, {});
+    if (2 === o) {
+        let e = 3 === n;
+        return (0, r.jsx)(S.m, {
+            isReminderConfirmation: e,
+            results: c,
+            onClose: t,
+        });
+    }
+    return 1 === o
+        ? (0, r.jsx)(R, {
+              onClose: t,
+              onShare: _,
+          })
+        : 3 === o
+          ? (0, r.jsx)(P, {
                 onClose: t,
+                onShare: _,
             })
-          : 1 === o
-            ? (0, r.jsx)(R, {
-                  onClose: t,
-                  onShare: E,
-              })
-            : 3 === o
-              ? (0, r.jsx)(P, {
-                    onClose: t,
-                    onShare: E,
-                })
-              : void 0;
+          : void 0;
 };

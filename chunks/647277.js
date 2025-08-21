@@ -124,7 +124,7 @@ let T = (e) => {
                     children: [
                         t.map((e) => (0, r.jsx)(S, { user: e }, e.id)),
                         (0, r.jsx)(s.Text, {
-                            variant: "text-md/medium",
+                            variant: "text-sm/medium",
                             color: "text-primary",
                             className: E.reminderAvatarText,
                             children: A({ recipientNames: t.map((e) => (0, d.oY)(e)) }),
@@ -148,15 +148,17 @@ let T = (e) => {
     N = (e) => {
         let { className: t } = e,
             { referralSentUsers: n } = (0, p.G)(),
-            i = (0, o.e7)([_.Z], () => _.Z.getRecipientStatus())
-                .values()
-                .every((e) => e === f.Fe.REDEEMED),
-            l = () =>
-                n.length === p.Q
-                    ? !0 === i
-                        ? g.intl.format(g.t["1aEjsL"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
-                        : g.intl.format(g.t["+u3AOD"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
-                    : g.intl.format(g.t["omMr+f"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) });
+            i = (0, o.e7)([_.Z], () => _.Z.getRecipientStatus()),
+            l = (0, o.e7)([_.Z], () => _.Z.getHasEligibleFriends()),
+            c = i.size === p.Q && i.values().every((e) => e === f.Fe.REDEEMED),
+            d = () =>
+                !1 === l
+                    ? g.intl.format(g.t["zWhX/f"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
+                    : n.length === p.Q
+                      ? !0 === c
+                          ? g.intl.format(g.t["1aEjsL"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
+                          : g.intl.format(g.t["+u3AOD"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
+                      : g.intl.format(g.t["omMr+f"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) });
         return (0, r.jsxs)("div", {
             className: a()(E.container, t),
             children: [
@@ -182,12 +184,13 @@ let T = (e) => {
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
-                                            children: l(),
+                                            children: d(),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "primary",
+                                    disabled: !1 === l || !0 === c,
                                     text: g.intl.string(g.t.Lm2nFR),
                                     onClick: () =>
                                         T({
@@ -202,7 +205,7 @@ let T = (e) => {
                 n.length > 0 &&
                     (0, r.jsx)(C, {
                         referralSentUsers: n,
-                        allRedeemed: i,
+                        allRedeemed: c,
                     }),
             ],
         });
