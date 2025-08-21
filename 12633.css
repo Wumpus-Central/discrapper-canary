@@ -27643,11 +27643,11 @@ div.modalHeader_c28af8 {
 .header__8da80 {
     align-items: center;
     display: flex;
-    flex-direction: column;
-    padding-top: 75px
+    flex-direction: column
 }
 
 .title__8da80 {
+    padding-top: 59px;
     text-align: center
 }
 
@@ -89906,7 +89906,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
