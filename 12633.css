@@ -51741,7 +51741,7 @@ screen and (max-width:485px) {
 
 .container_a1d343 {
     align-items: center;
-    background-color: var(--background-base-lower);
+    background-color: var(--background-base-lowest);
     border-radius: var(--radius-sm);
     display: flex;
     gap: 16px;
@@ -89841,7 +89841,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -93307,8 +93307,8 @@ html.disable-forced-colors * {
     border: 1px solid var(--border-faint);
     border-radius: var(--radius-sm);
     display: flex;
-    height: 32px;
-    padding: 2px;
+    height: 40px;
+    padding: 0 4px 0 8px;
     position: relative;
     transition: border-color .15s ease
 }
@@ -93373,7 +93373,7 @@ html.disable-forced-colors * {
     border-radius: var(--radius-xs);
     flex-shrink: 0;
     height: 24px;
-    margin: 6px 8px 6px 4px;
+    margin-right: 8px;
     width: 24px
 }
 
