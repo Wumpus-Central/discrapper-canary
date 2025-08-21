@@ -92,12 +92,13 @@ let T = [],
                     className: C.featureCardTextGroup,
                     children: [
                         (0, r.jsx)(u.X6q, {
-                            variant: "heading-md/extrabold",
+                            variant: "heading-md/bold",
                             className: C.featureCardTextHeader,
                             children: t,
                         }),
                         (0, r.jsx)(u.Text, {
-                            variant: "text-sm/normal",
+                            variant: "text-md/normal",
+                            color: "text-secondary",
                             children: n,
                         }),
                     ],
@@ -314,8 +315,9 @@ function A(e) {
                                 children: [L, null == R ? void 0 : R()],
                             }),
                             null != U &&
+                                "" !== U &&
                                 (0, r.jsx)(u.X6q, {
-                                    variant: "heading-md/medium",
+                                    variant: "heading-lg/semibold",
                                     className: C.bodyText,
                                     children: U,
                                 }),
@@ -330,7 +332,10 @@ function A(e) {
                                         ),
                                     ),
                                 }),
-                            M(),
+                            (0, r.jsx)("div", {
+                                className: C.buttonContainer,
+                                children: M(),
+                            }),
                         ],
                     }),
                 ],

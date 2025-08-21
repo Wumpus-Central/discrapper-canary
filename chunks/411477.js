@@ -1,33 +1,33 @@
-n.d(t, { Z: () => s });
+n.d(e, { Z: () => s });
 var i = n(951288);
 n(647438);
-var a = n(120356),
-    o = n.n(a),
-    r = n(481060),
+var o = n(120356),
+    r = n.n(o),
+    a = n(481060),
     l = n(436774),
     c = n(279798);
-function s(e) {
-    let { text: t, className: n, button: a, reducedRightPadding: s = !1 } = e;
+function s(t) {
+    let { text: e, className: n, button: o, reducedRightPadding: s = !1 } = t;
     return (0, i.jsxs)("div", {
-        className: o()(s ? c.noticeWithoutRightPadding : c.noticeWithRightPadding, n),
+        className: r()(s ? c.noticeWithoutRightPadding : c.noticeWithRightPadding, n),
         children: [
             (0, i.jsxs)("div", {
                 className: c.noticeLeft,
                 children: [
-                    (0, i.jsx)(r.SrA, {
+                    (0, i.jsx)(a.SrA, {
                         size: "md",
                         className: c.icon,
                         color: l.JX.PREMIUM_TIER_2,
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         className: c.text,
                         variant: "text-md/normal",
                         color: "header-primary",
-                        children: t,
+                        children: e,
                     }),
                 ],
             }),
-            a,
+            o,
         ],
     });
 }

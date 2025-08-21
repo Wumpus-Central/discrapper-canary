@@ -1,9 +1,9 @@
-n.d(t, { N: () => i });
-let r = null;
-function i() {
-    if (null == r)
+t.d(n, { N: () => l });
+let a = null;
+function l() {
+    if (null == a)
         try {
-            r = new AudioContext();
+            a = new AudioContext();
         } catch (e) {}
-    return r;
+    return a;
 }

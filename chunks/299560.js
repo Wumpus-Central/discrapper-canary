@@ -44,24 +44,25 @@ let m = {
     },
 };
 function j(e) {
-    let { widgetType: t, onAddWidget: r, size: l = "default" } = e,
-        { placeholder: o, getAriaLabel: s } = m[t],
-        j = "small" === l,
-        y = i.useCallback(() => {
-            (0, u.qH)(t), (0, d.L$)(b.qb.WIDGET_ADDED), null == r || r();
-        }, [t, r]);
+    let { widgetType: t, onAddWidget: r, size: l = "default", loading: o = !1 } = e,
+        { placeholder: s, getAriaLabel: j } = m[t],
+        y = "small" === l,
+        v = i.useCallback(() => {
+            o || ((0, u.qH)(t), (0, d.L$)(b.qb.WIDGET_ADDED), null == r || r());
+        }, [t, r, o]);
     return (0, n.jsxs)(c.P3F, {
-        className: a()(O.addButtonContainer, j && O.sizeSmall),
-        onClick: y,
-        "aria-label": s(),
+        className: a()(O.addButtonContainer, y && O.sizeSmall, o && O.loading),
+        onClick: v,
+        "aria-label": j(),
+        "aria-busy": o,
         children: [
-            "details" === o.variant
+            "details" === s.variant
                 ? (0, n.jsx)(f.i, {
-                      applicationId: o.applicationId,
+                      applicationId: s.applicationId,
                       size: l,
                   })
                 : (0, n.jsx)(f.c, {
-                      applicationIds: o.applicationIds,
+                      applicationIds: s.applicationIds,
                       size: l,
                   }),
             (0, n.jsxs)("div", {

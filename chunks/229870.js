@@ -3,4 +3,5 @@ e.exports = {
     sizeSmall: "sizeSmall__4a011",
     overlay: "overlay__4a011",
     addButton: "addButton__4a011",
+    loading: "loading__4a011",
 };

@@ -273,6 +273,7 @@ class ta extends i.PureComponent {
             v =
                 e.type === e3.d4z.GUILD_ANNOUNCEMENT && C
                     ? (0, r.jsx)(F.Z, {
+                          ref: this.props.refInstance,
                           textValue: this.state.textValue,
                           richValue: this.state.richValue,
                           focused: t,

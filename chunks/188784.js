@@ -7,6 +7,7 @@ e.exports = {
     content: "content_d06335",
     subHeader: "subHeader_d06335",
     bodyText: "bodyText_d06335",
+    buttonContainer: "buttonContainer_d06335",
     featureCardGroup: "featureCardGroup_d06335",
     wideStyle: "wideStyle_d06335",
     featureCard: "featureCard_d06335",

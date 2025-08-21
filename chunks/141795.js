@@ -1,6 +1,6 @@
 n.d(t, {
-    mw: () => k,
-    nH: () => G,
+    mw: () => M,
+    nH: () => U,
 }),
     n(415506),
     n(388685),
@@ -17,23 +17,22 @@ var r = n(392711),
     u = n(630755),
     d = n(171638),
     f = n(719755),
-    _ = n(873186),
-    p = n(481981),
-    h = n(740492),
-    m = n(866960),
-    g = n(594174),
-    E = n(626135),
-    b = n(510990),
-    y = n(70956),
-    O = n(931619),
-    v = n(960048),
-    I = n(861990),
-    T = n(476326),
-    S = n(983544),
-    A = n(596956),
-    C = n(125186),
-    N = n(981631);
-function R(e, t, n) {
+    _ = n(481981),
+    p = n(740492),
+    h = n(866960),
+    m = n(594174),
+    g = n(626135),
+    E = n(510990),
+    b = n(70956),
+    y = n(931619),
+    O = n(960048),
+    v = n(861990),
+    I = n(476326),
+    T = n(983544),
+    S = n(596956),
+    A = n(125186),
+    C = n(981631);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +45,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,12 +56,12 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
 }
-function w(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,20 +73,20 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let x = new s.Z("CloudUpload.tsx"),
-    L = n(224497).Z;
-class j extends Error {
+let D = new s.Z("CloudUpload.tsx"),
+    x = n(224497).Z;
+class L extends Error {
     static getErrorKind(e, t) {
         var n;
         let r = null != (n = null == t ? void 0 : t.status) ? n : 0,
@@ -101,9 +100,9 @@ class j extends Error {
     }
     static rejectionHandler(e) {
         return (t) => {
-            if (t instanceof o.Pd) throw new j(e, { response: t });
-            if (t instanceof Error) throw new j(e, { cause: t });
-            throw new j(e, { cause: Error(String(t)) });
+            if (t instanceof o.Pd) throw new L(e, { response: t });
+            if (t instanceof Error) throw new L(e, { cause: t });
+            throw new L(e, { cause: Error(String(t)) });
         };
     }
     canRetry() {
@@ -112,7 +111,7 @@ class j extends Error {
     constructor(e, t = {}) {
         var n, r;
         let { cause: i, response: a } = t,
-            o = j.getErrorKind(
+            o = L.getErrorKind(
                 null != i ? i : Error("".concat(null != (n = null == a ? void 0 : a.text) ? n : "Unknown error")),
                 a,
             ),
@@ -124,17 +123,17 @@ class j extends Error {
                           .concat(null != (r = null == a ? void 0 : a.status) ? r : 0)
                     : "".concat(e, ":").concat(o);
         super(s, { cause: i }),
-            R(this, "kind", void 0),
-            R(this, "phase", void 0),
-            R(this, "messageShort", void 0),
+            N(this, "kind", void 0),
+            N(this, "phase", void 0),
+            N(this, "messageShort", void 0),
             (this.name = "ResumableUploadError"),
             (this.phase = e),
             (this.kind = o),
             (this.messageShort = s);
     }
 }
-let M = "Content-MD5";
-var k = (function (e) {
+let j = "Content-MD5";
+var M = (function (e) {
     return (
         (e.NOT_STARTED = "NOT_STARTED"),
         (e.STARTED = "STARTED"),
@@ -145,47 +144,47 @@ var k = (function (e) {
         e
     );
 })({});
-class U {
+class k {
     constructor() {
-        R(this, "numUploadAttempts", void 0),
-            R(this, "timing", {}),
-            R(this, "compressAndExtractDisabled", void 0),
-            R(this, "fileAlreadyPrepped", void 0),
-            R(this, "imageCompressionQuality", void 0),
-            R(this, "videoCompressionQuality", void 0),
-            R(this, "convertedMimeType", void 0),
-            R(this, "sourceMediaWidth", void 0),
-            R(this, "sourceMediaHeight", void 0),
-            R(this, "sourceMediaFormat", void 0),
-            R(this, "sourceVideoBitrate", void 0),
-            R(this, "sourceVideoFramerate", void 0),
-            R(this, "videoDurationMs", void 0),
-            R(this, "sourceVideoProfile", void 0),
-            R(this, "sourceVideoLevel", void 0),
-            R(this, "targetVideoWidth", void 0),
-            R(this, "targetVideoHeight", void 0),
-            R(this, "targetVideoBitrate", void 0),
-            R(this, "targetVideoCodec", void 0),
-            R(this, "targetVideoFramerate", void 0),
-            R(this, "targetVideoIsHdr", void 0),
-            R(this, "hevcIsSupported", void 0),
-            R(this, "progressUpdateGranularity", void 0),
-            R(this, "validUploadHash", void 0),
-            R(this, "psnr", void 0),
-            R(this, "ssim", void 0),
-            R(this, "origin", void 0),
-            R(this, "psnrMeasurementLatencyMs", void 0),
-            R(this, "ssimMeasurementLatencyMs", void 0),
-            R(this, "uploadResumptionCount", 0),
-            R(this, "uploadResumptionPosition", 0),
-            R(this, "uploadResumptionReason", void 0),
-            R(this, "conversionFailureReason", void 0);
+        N(this, "numUploadAttempts", void 0),
+            N(this, "timing", {}),
+            N(this, "compressAndExtractDisabled", void 0),
+            N(this, "fileAlreadyPrepped", void 0),
+            N(this, "imageCompressionQuality", void 0),
+            N(this, "videoCompressionQuality", void 0),
+            N(this, "convertedMimeType", void 0),
+            N(this, "sourceMediaWidth", void 0),
+            N(this, "sourceMediaHeight", void 0),
+            N(this, "sourceMediaFormat", void 0),
+            N(this, "sourceVideoBitrate", void 0),
+            N(this, "sourceVideoFramerate", void 0),
+            N(this, "videoDurationMs", void 0),
+            N(this, "sourceVideoProfile", void 0),
+            N(this, "sourceVideoLevel", void 0),
+            N(this, "targetVideoWidth", void 0),
+            N(this, "targetVideoHeight", void 0),
+            N(this, "targetVideoBitrate", void 0),
+            N(this, "targetVideoCodec", void 0),
+            N(this, "targetVideoFramerate", void 0),
+            N(this, "targetVideoIsHdr", void 0),
+            N(this, "hevcIsSupported", void 0),
+            N(this, "progressUpdateGranularity", void 0),
+            N(this, "validUploadHash", void 0),
+            N(this, "psnr", void 0),
+            N(this, "ssim", void 0),
+            N(this, "origin", void 0),
+            N(this, "psnrMeasurementLatencyMs", void 0),
+            N(this, "ssimMeasurementLatencyMs", void 0),
+            N(this, "uploadResumptionCount", 0),
+            N(this, "uploadResumptionPosition", 0),
+            N(this, "uploadResumptionReason", void 0),
+            N(this, "conversionFailureReason", void 0);
     }
 }
-class G extends T.ZP {
+class U extends I.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new G(t, n, r, i);
+            a = new U(t, n, r, i);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -200,38 +199,38 @@ class G extends T.ZP {
         return null == t ? null : [parseInt(t[1], 10), parseInt(t[2], 10)];
     }
     retryOpts() {
-        return this.item.platform === T.ow.REACT_NATIVE
+        return this.item.platform === I.ow.REACT_NATIVE
             ? {
-                  timeout: +y.Z.Millis.HOUR,
-                  backoff: new a.Z(0.5 * y.Z.Millis.SECOND, 30 * y.Z.Millis.MINUTE),
+                  timeout: +b.Z.Millis.HOUR,
+                  backoff: new a.Z(0.5 * b.Z.Millis.SECOND, 30 * b.Z.Millis.MINUTE),
                   retries: 12,
               }
             : {
-                  timeout: +y.Z.Millis.HOUR,
+                  timeout: +b.Z.Millis.HOUR,
                   retries: 12,
                   backoff: new a.Z(),
               };
     }
     createAttachmentUrlRetryOpts() {
-        return this.item.platform === T.ow.REACT_NATIVE
+        return this.item.platform === I.ow.REACT_NATIVE
             ? {
                   timeout: {
-                      response: 30 * y.Z.Millis.SECOND,
-                      deadline: 30 * y.Z.Millis.MINUTE,
+                      response: 30 * b.Z.Millis.SECOND,
+                      deadline: 30 * b.Z.Millis.MINUTE,
                   },
-                  backoff: new a.Z(0.5 * y.Z.Millis.SECOND, 60 * y.Z.Millis.SECOND),
+                  backoff: new a.Z(0.5 * b.Z.Millis.SECOND, 60 * b.Z.Millis.SECOND),
                   retries: 8,
               }
             : this.retryOpts();
     }
     supportsResume() {
-        return this._libdiscoreEnabled || this.item.platform !== T.ow.REACT_NATIVE;
+        return (this._libdiscoreEnabled || this.item.platform !== I.ow.REACT_NATIVE) && this._resumptionEnabled;
     }
     async uploadFileToCloud() {
         let e, t;
         if (null == this.responseUrl) throw Error("_uploadFileToCloud - responseUrl is not set");
-        x.log("Uploading ".concat(this.id)),
-            this.item.platform === T.ow.REACT_NATIVE
+        D.log("Uploading ".concat(this.id)),
+            this.item.platform === I.ow.REACT_NATIVE
                 ? (t =
                       null !=
                           (e = {
@@ -242,27 +241,27 @@ class G extends T.ZP {
                           ? e.type
                           : "application/octet-stream")
                 : ((e = this.item.file), (t = "application/octet-stream"));
-        let n = (0, _.G)({ location: "CloudUpload" }).enableResumableUploads,
-            r = (0, p.m)({ location: "CloudUpload" }).enableResumableUploads;
-        if (
-            (r && (0, A.Z_)(this.item) && ((this._uploadHttpClient = new A.Qn()), (this._libdiscoreEnabled = !0)),
-            n || r)
-        )
-            return await this.uploadFileWithResumption(this.responseUrl, e, t);
-        let a = { "Content-Type": t };
-        void 0 !== this.contentHash && (a[M] = this.contentHash);
-        let s = P(
+        let n = (0, _.m)({ location: "CloudUpload" });
+        if (n.enableNewRetry)
+            return (
+                (0, S.Z_)(this.item) && ((this._uploadHttpClient = new S.Qn()), (this._libdiscoreEnabled = !0)),
+                (this._resumptionEnabled = n.enableResumption),
+                await this.uploadFileWithResumption(this.responseUrl, e, t)
+            );
+        let r = { "Content-Type": t };
+        void 0 !== this.contentHash && (r[j] = this.contentHash);
+        let a = R(
             {
                 url: this.responseUrl,
                 body: e,
-                headers: a,
+                headers: r,
                 signal: this._abortController.signal,
                 onRequestProgress: i().throttle(this.createResumeAwareProgressFn(0), 50),
                 rejectWithError: !1,
             },
             this.retryOpts(),
         );
-        return o.tn.put(s);
+        return o.tn.put(a);
     }
     async getResumePosition(e) {
         let t = {
@@ -270,13 +269,13 @@ class G extends T.ZP {
             headers: { "Content-Range": "bytes */*" },
             rejectWithError: !0,
             retries: 0,
-            timeout: { deadline: 30 * y.Z.Millis.SECOND },
+            timeout: { deadline: 30 * b.Z.Millis.SECOND },
             signal: this._abortController.signal,
         };
         return await this._uploadHttpClient
             .doUpload(t)
             .then((e) =>
-                200 === e.status || 201 === e.status ? this.currentSize : j.rejectionHandler("status_check")(e),
+                200 === e.status || 201 === e.status ? this.currentSize : L.rejectionHandler("status_check")(e),
             )
             .catch((e) => {
                 if (e instanceof o.Pd && 308 === e.status) {
@@ -284,13 +283,13 @@ class G extends T.ZP {
                     let n = this.parseRangeHeader(null != (t = e.headers.range) ? t : "");
                     return null != n ? n[1] + 1 : 0;
                 }
-                return j.rejectionHandler("status_check")(e);
+                return L.rejectionHandler("status_check")(e);
             });
     }
     async startOrResumeUpload(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (
-            (x.log(
+            (D.log(
                 "Attempting to upload attachment with resumeFrom: "
                     .concat(t, " and attempts: ")
                     .concat(this.uploadAttempts),
@@ -299,7 +298,7 @@ class G extends T.ZP {
         ) {
             var n;
             this.uploadAnalytics.uploadResumptionCount++,
-                (e.headers = D(P({}, null != (n = e.headers) ? n : {}), {
+                (e.headers = w(R({}, null != (n = e.headers) ? n : {}), {
                     "Content-Range": "bytes "
                         .concat(t, "-")
                         .concat(this.currentSize - 1, "/")
@@ -309,8 +308,8 @@ class G extends T.ZP {
         e.onRequestProgress = i().throttle(this.createResumeAwareProgressFn(t), 50);
         let r = await this._uploadHttpClient
             .doUpload(e, { fileByteRange: { start: t } })
-            .catch(j.rejectionHandler("upload"));
-        if (200 !== r.status && 201 !== r.status) throw new j("upload", { response: r });
+            .catch(L.rejectionHandler("upload"));
+        if (200 !== r.status && 201 !== r.status) throw new L("upload", { response: r });
         return r;
     }
     async uploadFileWithResumption(e, t, n) {
@@ -337,14 +336,14 @@ class G extends T.ZP {
                 }
                 return await this.startOrResumeUpload(s, l);
             } catch (e) {
-                if (e instanceof j && e.canRetry()) {
-                    x.warn("Error uploading ".concat(this.id, ": ").concat(e.message, ", attempting resumption")),
+                if (e instanceof L && e.canRetry()) {
+                    D.warn("Error uploading ".concat(this.id, ": ").concat(e.message, ", attempting resumption")),
                         (this.uploadAnalytics.uploadResumptionReason = e.messageShort),
-                        await O.Z.awaitOnline();
+                        await y.Z.awaitOnline();
                     let t = a.fail();
-                    x.log("Waiting ".concat(t, "ms before attachment upload attempt ").concat(this.uploadAttempts + 1)),
+                    D.log("Waiting ".concat(t, "ms before attachment upload attempt ").concat(this.uploadAttempts + 1)),
                         await new Promise((e) => setTimeout(e, t));
-                } else throw (x.warn("Unrecoverable error uploading ".concat(this.id, ": ").concat(e.message)), e);
+                } else throw (D.warn("Unrecoverable error uploading ".concat(this.id, ": ").concat(e.message)), e);
             }
         }
         throw Error("Upload failed after ".concat(this.uploadAttempts, " attempts"));
@@ -379,14 +378,14 @@ class G extends T.ZP {
             "CANCELED" === this.status)
         )
             return void this.handleComplete(this.id);
-        this.item.platform === T.ow.WEB &&
+        this.item.platform === I.ow.WEB &&
             (null == (e = this.item.compressionMetadata) ? void 0 : e.convertedMimeType) !== "image/webp" &&
             (await this.maybeConvertToWebP());
-        let a = await L.getUploadPayload(this),
-            s = (0, S.F)(this.item.target),
+        let a = await x.getUploadPayload(this),
+            s = (0, T.F)(this.item.target),
             c = (0, d.G)({ location: "CloudUpload.upload" });
         if (null == a.filename || "" === a.filename) {
-            x.error("File does not have a filename.", JSON.stringify(a)), this.handleError(N.evJ.INVALID_FILE_ASSET);
+            D.error("File does not have a filename.", JSON.stringify(a)), this.handleError(C.evJ.INVALID_FILE_ASSET);
             return;
         }
         if (c.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
@@ -394,14 +393,14 @@ class G extends T.ZP {
                 let e = await (0, u.M)(this.item.file);
                 e > 0 && (this.currentSize = e);
             } catch (e) {
-                x.warn("Failed to detect file size, proceeding with original", {
+                D.warn("Failed to detect file size, proceeding with original", {
                     filename: a.filename,
                     error: e instanceof Error ? e.message : String(e),
                 });
             }
-        if (0 === this.currentSize) return void this.handleError(N.evJ.INVALID_FILE_ASSET);
+        if (0 === this.currentSize) return void this.handleError(C.evJ.INVALID_FILE_ASSET);
         if ((null != (t = this.currentSize) ? t : 0) > s.getMaxFileSize(this.channelId))
-            return void this.handleError(N.evJ.ENTITY_TOO_LARGE);
+            return void this.handleError(C.evJ.ENTITY_TOO_LARGE);
         if (l.ZP.get("upload_fail_50") && 0.5 > Math.random())
             return void setTimeout(() => {
                 this.handleError(500);
@@ -410,13 +409,13 @@ class G extends T.ZP {
             p = null;
         _.enabled;
         try {
-            x.log("Requesting upload url for ".concat(this.id));
+            D.log("Requesting upload url for ".concat(this.id));
             let e = await this.trackTime(
                 "getUploadUrlTimeMs",
                 async () =>
                     await o.tn.post(
-                        D(
-                            P(
+                        w(
+                            R(
                                 {
                                     url: s.getCreateAttachmentURL(this.channelId),
                                     body: { files: [a] },
@@ -431,13 +430,13 @@ class G extends T.ZP {
                 this.setUploadedFilename(e.body.attachments[0].upload_filename);
         } catch (t) {
             let e = null != (r = null == t || null == (n = t.body) ? void 0 : n.code) ? r : t.status;
-            e !== N.evJ.ENTITY_TOO_LARGE &&
-                (x.error(
+            e !== C.evJ.ENTITY_TOO_LARGE &&
+                (D.error(
                     "Requesting upload url failed with code "
                         .concat(null != e ? e : JSON.stringify(t.body), " for ")
                         .concat(this.id),
                 ),
-                v.Z.captureException(t)),
+                O.Z.captureException(t)),
                 this.handleError(e);
             return;
         }
@@ -462,7 +461,7 @@ class G extends T.ZP {
                         )
                         .concat(this.etag, ", expected ")
                         .concat(this.contentHash);
-                    x.error(e), v.Z.captureMessage(e), this.handleError(N.evJ.INVALID_FILE_ASSET);
+                    D.error(e), O.Z.captureMessage(e), this.handleError(C.evJ.INVALID_FILE_ASSET);
                     return;
                 }
             }
@@ -470,33 +469,33 @@ class G extends T.ZP {
         } catch (e) {
             "CANCELED" === this.status
                 ? this.handleComplete(e)
-                : (x.info("Error: status ".concat(e.status, " for ").concat(this.id)), this.handleError(e));
+                : (D.info("Error: status ".concat(e.status, " for ").concat(this.id)), this.handleError(e));
         }
     }
     async reactNativeCompressAndExtractData() {
         var e, t;
-        if (!(0, S.F)(this.item.target).shouldReactNativeCompressUploads)
+        if (!(0, T.F)(this.item.target).shouldReactNativeCompressUploads)
             return (
                 (this.uploadAnalytics.compressAndExtractDisabled = !0),
-                x.log("reactNativeCompressAndExtractData() disabled by upload target"),
+                D.log("reactNativeCompressAndExtractData() disabled by upload target"),
                 this
             );
         if (!0 === this.reactNativeFilePrepped)
             return (
                 (this.uploadAnalytics.fileAlreadyPrepped = !0),
-                x.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id)),
+                D.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id)),
                 this
             );
-        x.log("Starting compression/conversion for ".concat(this.id));
+        D.log("Starting compression/conversion for ".concat(this.id));
         let n = await this.trackTime("compressTimeMs", async () => {
             var e;
-            return await (0, b.J)(this, null != (e = this.reactNativeFileIndex) ? e : 0);
+            return await (0, E.J)(this, null != (e = this.reactNativeFileIndex) ? e : 0);
         });
-        if (null == n || null == n.file) return x.error("Failed to get compressed file for ".concat(this.id)), this;
+        if (null == n || null == n.file) return D.error("Failed to get compressed file for ".concat(this.id)), this;
         let r = n.uri,
             i = n.file.name;
         if (
-            ((0, T.rG)(n.file) &&
+            ((0, I.rG)(n.file) &&
                 ((this.uploadAnalytics.imageCompressionQuality = n.file.imageCompressionQuality),
                 (this.uploadAnalytics.videoCompressionQuality = n.file.videoCompressionQuality),
                 n.file.isImage &&
@@ -529,7 +528,7 @@ class G extends T.ZP {
             null == i || null == r || null == n.file.type)
         )
             throw (
-                (x.error(
+                (D.error(
                     "Insufficient file data: "
                         .concat(
                             {
@@ -552,10 +551,10 @@ class G extends T.ZP {
         let a = null == (e = i.split(".").pop()) ? void 0 : e.toLowerCase(),
             o = "jpg" === a || "jpeg" === a ? "image/jpeg" : n.file.type;
         this.uploadAnalytics.convertedMimeType = o;
-        let s = null != (t = n.fileSize) ? t : (await (0, I.Lc)(r)).size;
+        let s = null != (t = n.fileSize) ? t : (await (0, v.Lc)(r)).size;
         if (((this.postCompressionSize = s), (this.currentSize = s), null == s))
-            throw (x.error("Size missing from file data for ".concat(this.id)), Error("Size missing from file data"));
-        x.log(
+            throw (D.error("Size missing from file data for ".concat(this.id)), Error("Size missing from file data"));
+        D.log(
             "Completed compression and conversion. Output size="
                 .concat(s, " bytes; filename=")
                 .concat(i, "; uri=")
@@ -568,23 +567,23 @@ class G extends T.ZP {
             filename: i,
             mimeType: o,
         };
-        return (this.item = P({}, this.item, l)), (this.reactNativeFilePrepped = !0), this;
+        return (this.item = R({}, this.item, l)), (this.reactNativeFilePrepped = !0), this;
     }
     async maybeConvertToWebP() {
         var e, t, n;
         let r;
         if (!(0, c.U)({ location: "CloudUpload.maybeConvertToWebP" }).enabled) return;
-        if (null == this.item.file) return void x.warn("webp conversion skipped for ".concat(this.id, ": no file"));
+        if (null == this.item.file) return void D.warn("webp conversion skipped for ".concat(this.id, ": no file"));
         if (this._aborted) return;
         let i = performance.now();
         try {
-            if (((r = await (0, C.lG)(this.item.file)), this._aborted)) return;
+            if (((r = await (0, A.lG)(this.item.file)), this._aborted)) return;
             if (r.success)
-                (this.item.file = (0, C.ub)(r)),
+                (this.item.file = (0, A.ub)(r)),
                     (this.currentSize = this.item.file.size),
                     (this.uploadAnalytics.convertedMimeType = "image/webp"),
                     null != r.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = r.hashTimeMs),
-                    x.log(
+                    D.log(
                         "webp conversion worked for "
                             .concat(this.id, ": ")
                             .concat(r.sizeBefore, " -> ")
@@ -595,17 +594,17 @@ class G extends T.ZP {
                 let n = null != (e = r.reason) ? e : "unknown";
                 if (
                     ((this.uploadAnalytics.conversionFailureReason = n),
-                    x.log("webp conversion skipped for ".concat(this.id, ": ").concat(n)),
-                    n === C.S8.INSUFFICIENT_SAVINGS || n === C.S8.PIXEL_HASH_MISMATCH)
+                    D.log("webp conversion skipped for ".concat(this.id, ": ").concat(n)),
+                    n === A.S8.INSUFFICIENT_SAVINGS || n === A.S8.PIXEL_HASH_MISMATCH)
                 ) {
                     let e = {
                         channelId: this.channelId,
-                        userId: null == (t = g.default.getCurrentUser()) ? void 0 : t.id,
+                        userId: null == (t = m.default.getCurrentUser()) ? void 0 : t.id,
                         originalSize: this.item.file.size,
                         fileName: this.filename,
                         origin: this.uploadAnalytics.origin,
                     };
-                    v.Z.captureMessage("webp compression failure: " + n, {
+                    O.Z.captureMessage("webp compression failure: " + n, {
                         tags: {
                             conversion_failure: n,
                             feature: "webp_compression",
@@ -616,7 +615,7 @@ class G extends T.ZP {
             }
         } catch (e) {
             (this.uploadAnalytics.conversionFailureReason = "unknown_error"),
-                x.warn("webp conversion failed for ".concat(this.id, ":"), e);
+                D.warn("webp conversion failed for ".concat(this.id, ":"), e);
         }
         this.uploadAnalytics.timing.compressTimeMs =
             null != (n = null == r ? void 0 : r.compressTimeMs) ? n : Math.round(performance.now() - i);
@@ -630,12 +629,12 @@ class G extends T.ZP {
     }
     handleComplete(e) {
         this.setStatus("COMPLETED"),
-            x.log("Upload complete for ".concat(this.id)),
+            D.log("Upload complete for ".concat(this.id)),
             this.emit("complete", e),
             this.removeAllListeners();
     }
     cancel() {
-        x.log("Cancelled called for ".concat(this.id)),
+        D.log("Cancelled called for ".concat(this.id)),
             (this._aborted = !0),
             this._abortController.abort(),
             this.trackUploadFinished("CANCELED"),
@@ -651,7 +650,7 @@ class G extends T.ZP {
             (this.responseUrl = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new U()),
+            (this.uploadAnalytics = new k()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -660,7 +659,7 @@ class G extends T.ZP {
     }
     async delete() {
         if (null == this.uploadedFilename) return;
-        let e = (0, S.F)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
+        let e = (0, T.F)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
         try {
             await o.tn.del(e);
         } catch (e) {}
@@ -679,22 +678,22 @@ class G extends T.ZP {
     }
     trackUploadStart() {
         var e;
-        E.default.track(N.rMx.ATTACHMENT_UPLOAD_STARTED, {
+        g.default.track(C.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null != (e = this.mimeType) ? e : "unknown",
-            video_upload_quality: h.ZP.videoUploadQuality,
-            data_saving_mode: h.ZP.dataSavingMode,
-            low_quality_image_mode: h.ZP.dataSavingMode,
+            video_upload_quality: p.ZP.videoUploadQuality,
+            data_saving_mode: p.ZP.dataSavingMode,
+            low_quality_image_mode: p.ZP.dataSavingMode,
             channel_id: this.channelId,
-            connection_type: m.Z.getType(),
-            effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
-            service_provider: m.Z.getServiceProvider(),
+            connection_type: h.Z.getType(),
+            effective_connection_speed: h.Z.getEffectiveConnectionSpeed(),
+            service_provider: h.Z.getServiceProvider(),
         });
     }
     trackUploadFinished(e) {
         var t, n, r, i, a;
         let o = null != this.startTime ? performance.now() - this.startTime : -1;
-        E.default.track(N.rMx.ATTACHMENT_UPLOAD_FINISHED, {
+        g.default.track(C.rMx.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: o,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,
@@ -702,9 +701,9 @@ class G extends T.ZP {
             mime_type: null != (t = this.mimeType) ? t : "unknown",
             num_upload_attempts: null != (n = this.uploadAnalytics.numUploadAttempts) ? n : 1,
             error_code: this.error,
-            video_upload_quality: h.ZP.videoUploadQuality,
-            data_saving_mode: h.ZP.dataSavingMode,
-            low_quality_image_mode: h.ZP.dataSavingMode,
+            video_upload_quality: p.ZP.videoUploadQuality,
+            data_saving_mode: p.ZP.dataSavingMode,
+            low_quality_image_mode: p.ZP.dataSavingMode,
             compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
             get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
             upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,
@@ -745,35 +744,36 @@ class G extends T.ZP {
             upload_resumption_check_time_ms: this.uploadAnalytics.timing.resumptionCheckTimeMs,
             conversion_failure_reason: this.uploadAnalytics.conversionFailureReason,
             upload_http_client: this._libdiscoreEnabled ? "libdiscore" : "httputils",
-            connection_type: m.Z.getType(),
-            effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
-            service_provider: m.Z.getServiceProvider(),
+            connection_type: h.Z.getType(),
+            effective_connection_speed: h.Z.getEffectiveConnectionSpeed(),
+            service_provider: h.Z.getServiceProvider(),
         });
     }
     constructor(e, t, n, r) {
         var i, a, o, s;
         super(e, n),
-            R(this, "status", "NOT_STARTED"),
-            R(this, "channelId", void 0),
-            R(this, "responseUrl", void 0),
-            R(this, "currentSize", void 0),
-            R(this, "preCompressionSize", void 0),
-            R(this, "postCompressionSize", void 0),
-            R(this, "loaded", 0),
-            R(this, "reactNativeFileIndex", void 0),
-            R(this, "error", void 0),
-            R(this, "reactNativeFilePrepped", !1),
-            R(this, "startTime", void 0),
-            R(this, "uploadAnalytics", new U()),
-            R(this, "contentHash", void 0),
-            R(this, "etag", void 0),
-            R(this, "uploadAttempts", 0),
-            R(this, "_abortController", void 0),
-            R(this, "_xhr", void 0),
-            R(this, "_aborted", !1),
-            R(this, "_uploadHttpClient", void 0),
-            R(this, "_libdiscoreEnabled", void 0),
-            R(this, "createResumeAwareProgressFn", (e) => (t) => {
+            N(this, "status", "NOT_STARTED"),
+            N(this, "channelId", void 0),
+            N(this, "responseUrl", void 0),
+            N(this, "currentSize", void 0),
+            N(this, "preCompressionSize", void 0),
+            N(this, "postCompressionSize", void 0),
+            N(this, "loaded", 0),
+            N(this, "reactNativeFileIndex", void 0),
+            N(this, "error", void 0),
+            N(this, "reactNativeFilePrepped", !1),
+            N(this, "startTime", void 0),
+            N(this, "uploadAnalytics", new k()),
+            N(this, "contentHash", void 0),
+            N(this, "etag", void 0),
+            N(this, "uploadAttempts", 0),
+            N(this, "_abortController", void 0),
+            N(this, "_xhr", void 0),
+            N(this, "_aborted", !1),
+            N(this, "_uploadHttpClient", void 0),
+            N(this, "_libdiscoreEnabled", void 0),
+            N(this, "_resumptionEnabled", void 0),
+            N(this, "createResumeAwareProgressFn", (e) => (t) => {
                 let n = t.loaded + e,
                     r = t.total + e,
                     i = n - this.loaded;
@@ -785,8 +785,8 @@ class G extends T.ZP {
             (this.reactNativeFileIndex = r),
             (this._abortController = new AbortController()),
             null != this.origin &&
-                (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : T.BS[this.origin]),
-            e.platform === T.ow.WEB &&
+                (this.uploadAnalytics.origin = "string" == typeof this.origin ? this.origin : I.BS[this.origin]),
+            e.platform === I.ow.WEB &&
                 null != e.compressionMetadata &&
                 ((this.preCompressionSize = e.compressionMetadata.preCompressionSize),
                 (this.uploadAnalytics.timing.compressTimeMs = e.compressionMetadata.compressTimeMs),
@@ -794,7 +794,8 @@ class G extends T.ZP {
                 (this.uploadAnalytics.conversionFailureReason = e.compressionMetadata.conversionFailureReason),
                 (this.uploadAnalytics.timing.hashTimeMs = e.compressionMetadata.hashTimeMs),
                 (this.mimeType = e.compressionMetadata.originalContentType)),
-            (this._uploadHttpClient = new A.LD()),
-            (this._libdiscoreEnabled = !1);
+            (this._uploadHttpClient = new S.LD()),
+            (this._libdiscoreEnabled = !1),
+            (this._resumptionEnabled = !1);
     }
 }

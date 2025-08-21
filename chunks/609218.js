@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => k,
-    p: () => M,
+    Z: () => U,
+    p: () => k,
 }),
     n(953529);
 var r = n(951288),
@@ -20,23 +20,24 @@ var r = n(951288),
     g = n(526167),
     E = n(74538),
     b = n(357355),
-    y = n(998076),
-    O = n(639119),
-    v = n(638212),
-    I = n(767714),
-    T = n(717975),
-    S = n(302945),
-    A = n(474936),
-    C = n(981631),
-    N = n(388032),
-    R = n(124527),
-    P = n(591867),
-    w = n(525751),
-    D = n(428946),
-    x = n(42948),
-    L = n(109194),
-    j = n(352812),
-    M = (function (e) {
+    y = n(47280),
+    O = n(998076),
+    v = n(639119),
+    I = n(638212),
+    T = n(767714),
+    S = n(717975),
+    A = n(302945),
+    C = n(474936),
+    N = n(981631),
+    R = n(388032),
+    P = n(124527),
+    w = n(591867),
+    D = n(525751),
+    x = n(428946),
+    L = n(42948),
+    j = n(109194),
+    M = n(352812),
+    k = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.PARENT_CONTAINER = 1)] = "PARENT_CONTAINER"),
@@ -44,75 +45,77 @@ var r = n(951288),
             e
         );
     })({});
-function k(e) {
+function U(e) {
     let {
             containerContext: t,
             image: n,
             title: a,
-            description: M,
-            enableSocialProof: k,
-            analyticsLocationSection: U,
-            upsellViewedTrackingData: G,
-            onClose: B,
-            onDisplay: Z,
-            onLearnMore: V,
-            isEmojiPickerOverlay: F = !1,
+            description: k,
+            enableSocialProof: U,
+            analyticsLocationSection: G,
+            upsellViewedTrackingData: B,
+            onClose: Z,
+            onDisplay: V,
+            onLearnMore: F,
+            isEmojiPickerOverlay: H = !1,
         } = e,
-        H = (0, s.e7)([b.Z], () => b.Z.affinities),
-        Y = (0, s.e7)([b.Z], () => b.Z.hasFetched);
+        Y = (0, s.e7)([b.Z], () => b.Z.affinities),
+        W = (0, s.e7)([b.Z], () => b.Z.hasFetched);
     i.useEffect(() => {
-        !Y && k && f.MH();
-    }, [Y, k]),
+        !W && U && f.MH();
+    }, [W, U]),
         i.useEffect(() => {
-            m.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, G), null == Z || Z();
-        }, [Z, G]);
-    let W = H.length > 1 && k,
-        K = () => (2 === t ? P.hasTabParentContainer : 1 === t ? P.hasParentContainer : P.noParentContainer),
-        z = () => {
-            m.default.track(C.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: U,
-                location_object: C.qAy.NAVIGATION_LINK,
+            m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, B), null == V || V();
+        }, [V, B]);
+    let K = Y.length > 1 && U,
+        z = () => (2 === t ? w.hasTabParentContainer : 1 === t ? w.hasParentContainer : w.noParentContainer),
+        q = () => {
+            m.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: G,
+                location_object: N.qAy.NAVIGATION_LINK,
             }),
-                null == V || V(),
+                null == F || F(),
                 (0, p.Z)(),
-                B(),
+                Z(),
                 (0, _.xf)(),
-                (0, h.uL)(C.Z5c.APPLICATION_STORE);
+                (0, h.uL)(N.Z5c.APPLICATION_STORE);
         },
-        q = (0, O.N)(),
-        X = i.useCallback(() => {
+        X = (0, v.N)(),
+        Q = i.useCallback(() => {
             var e;
-            return null != (e = (0, E.fr)(q)) ? e : N.intl.string(N.t.pj0XBA);
-        }, [q]),
-        Q = (0, y.Z)({ location: "PremiumUpsellPickerOverlay" }),
-        J = (0, T.Z)(A.Si.TIER_2);
-    if (Q) {
+            return null != (e = (0, E.fr)(X)) ? e : R.intl.string(R.t.pj0XBA);
+        }, [X]),
+        J = (0, y.ZP)({ location: "PremiumUpsellPickerOverlay" }),
+        $ = (0, O.Z)({ location: "PremiumUpsellPickerOverlay" }),
+        ee = J || $,
+        et = (0, S.Z)(C.Si.TIER_2);
+    if (ee) {
         let e;
-        e = F ? ((0, g.rO)() ? D.Z : x.Z) : (0, g.rO)() ? L.Z : j.Z;
-        let t = F ? "nitro-pink" : "green";
+        e = H ? ((0, g.rO)() ? x.Z : L.Z) : (0, g.rO)() ? j.Z : M.Z;
+        let t = H ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(d.ZMr, {
-                    onClick: B,
+                    onClick: Z,
                     isVisible: !0,
                 }),
                 (0, r.jsxs)(c.$, {
                     color: t,
-                    className: R.container,
+                    className: P.container,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: R.content,
+                            className: P.content,
                             children: [
                                 (0, r.jsx)(d.olH, {
                                     "data-migration-pending": !0,
-                                    onClick: B,
-                                    className: R.closeButton,
+                                    onClick: Z,
+                                    className: P.closeButton,
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: R.contentContainer,
+                                    className: P.contentContainer,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: w.headerGraphic,
+                                            className: D.headerGraphic,
                                             children: (0, r.jsx)(d.zsu, {
                                                 type: "video",
                                                 src: e,
@@ -120,9 +123,9 @@ function k(e) {
                                                 loopAt: 5,
                                             }),
                                         }),
-                                        null != J && (0, r.jsx)(l.C, { type: { text: J } }),
+                                        null != et && (0, r.jsx)(l.C, { type: { text: et } }),
                                         (0, r.jsx)(d.X6q, {
-                                            className: o()(R.title, { [R.withBadge]: null != J }),
+                                            className: o()(P.title, { [P.withBadge]: null != et }),
                                             variant: "heading-xl/bold",
                                             color: "header-primary",
                                             children: a,
@@ -130,34 +133,34 @@ function k(e) {
                                         (0, r.jsx)(d.Text, {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
-                                            className: R.body,
-                                            children: M,
+                                            className: P.body,
+                                            children: k,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: R.footer,
+                            className: P.footer,
                             children: (0, r.jsxs)("div", {
-                                className: R.buttonContainer,
+                                className: P.buttonContainer,
                                 children: [
                                     (0, r.jsx)(d.zxk, {
                                         variant: "secondary",
-                                        onClick: z,
-                                        text: N.intl.string(N.t.ZnqyZ2),
+                                        onClick: q,
+                                        text: R.intl.string(R.t.ZnqyZ2),
                                         fullWidth: !0,
                                     }),
-                                    (0, r.jsx)(v.Z, {
+                                    (0, r.jsx)(I.Z, {
                                         premiumModalAnalyticsLocation: {
-                                            section: U,
-                                            object: C.qAy.BUTTON_CTA,
+                                            section: G,
+                                            object: N.qAy.BUTTON_CTA,
                                         },
-                                        subscriptionTier: A.Si.TIER_2,
+                                        subscriptionTier: C.Si.TIER_2,
                                         onClick: () => {
-                                            B();
+                                            Z();
                                         },
-                                        defaultTextOverride: X(),
+                                        defaultTextOverride: Q(),
                                         fullWidth: !0,
                                     }),
                                 ],
@@ -171,65 +174,65 @@ function k(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.ZMr, {
-                onClick: B,
+                onClick: Z,
                 isVisible: !0,
             }),
             (0, r.jsxs)("div", {
-                className: o()(P.container, K()),
+                className: o()(w.container, z()),
                 children: [
                     (0, r.jsx)(d.olH, {
                         "data-migration-pending": !0,
-                        onClick: B,
-                        className: P.closeButton,
+                        onClick: Z,
+                        className: w.closeButton,
                     }),
                     (0, r.jsxs)("div", {
-                        className: P.contentContainer,
+                        className: w.contentContainer,
                         children: [
                             (0, r.jsx)("img", {
-                                className: P.image,
+                                className: w.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: "Nitro Perk",
                             }),
                             (0, r.jsx)(d.X6q, {
-                                className: o()(P.title, { [P.titleNoSocialProof]: !W }),
+                                className: o()(w.title, { [w.titleNoSocialProof]: !K }),
                                 variant: "heading-xl/bold",
                                 children: a,
                             }),
-                            W && (0, r.jsx)(S.Z, { affinities: H }),
+                            K && (0, r.jsx)(A.Z, { affinities: Y }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/medium",
-                                className: P.body,
-                                children: M,
+                                className: w.body,
+                                children: k,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: P.ctaContainer,
+                        className: w.ctaContainer,
                         children: [
                             (0, r.jsx)(u.zx, {
                                 "data-migration-pending": !0,
-                                className: P.secondaryCTA,
+                                className: w.secondaryCTA,
                                 size: u.zx.Sizes.SMALL,
                                 color: u.zx.Colors.CUSTOM,
                                 look: u.zx.Looks.LINK,
-                                onClick: z,
-                                children: N.intl.string(N.t.ZnqyZ2),
+                                onClick: q,
+                                children: R.intl.string(R.t.ZnqyZ2),
                             }),
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(T.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: U,
-                                    object: C.qAy.BUTTON_CTA,
+                                    section: G,
+                                    object: N.qAy.BUTTON_CTA,
                                 },
-                                subscriptionTier: A.Si.TIER_2,
+                                subscriptionTier: C.Si.TIER_2,
                                 size: u.zx.Sizes.SMALL,
                                 color: u.zx.Colors.CUSTOM,
                                 onClick: () => {
-                                    B();
+                                    Z();
                                 },
-                                textOptions: { textOverride: X() },
+                                textOptions: { textOverride: Q() },
                             }),
                         ],
                     }),

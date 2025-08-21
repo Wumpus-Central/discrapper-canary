@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     similarGames: "similarGames_a02225",
     similarGameImageWrapper: "similarGameImageWrapper_a02225",
     similarGameImageClickable: "similarGameImageClickable_a02225 similarGameImageWrapper_a02225",

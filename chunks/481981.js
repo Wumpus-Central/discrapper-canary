@@ -4,18 +4,35 @@ var r = n(818083),
 let a = (0, r.B)({
     id: "2025-08_resumable_attachment_uploads_v2",
     kind: "user",
-    label: "Resumable mobile attachment uploads",
-    defaultConfig: { enableResumableUploads: !1 },
+    label: "Resumable attachment uploads v2",
+    defaultConfig: {
+        enableNewRetry: !1,
+        enableResumption: !1,
+    },
     treatments: [
         {
             id: 0,
             label: "Control",
-            config: { enableResumableUploads: !1 },
+            config: {
+                enableNewRetry: !1,
+                enableResumption: !1,
+            },
         },
         {
             id: 1,
-            label: "Resumable Uploads Enabled",
-            config: { enableResumableUploads: !0 },
+            label: "New Retry No Resumption",
+            config: {
+                enableNewRetry: !0,
+                enableResumption: !1,
+            },
+        },
+        {
+            id: 2,
+            label: "New Retry With Resumption",
+            config: {
+                enableNewRetry: !0,
+                enableResumption: !0,
+            },
         },
     ],
 });

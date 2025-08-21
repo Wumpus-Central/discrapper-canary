@@ -1,18 +1,19 @@
-r.d(t, { default: () => f }), r(388685);
+r.d(t, { default: () => d }), r(388685);
 var n = r(951288),
     o = r(647438),
-    c = r(442837),
-    i = r(82659),
-    l = r(594174),
-    s = r(810473),
-    u = r(299560),
+    i = r(442837),
+    l = r(82659),
+    c = r(481060),
+    s = r(594174),
+    u = r(810473),
+    a = r(299560),
     p = r(247397),
-    a = r(388032),
+    f = r(388032),
     b = r(32442);
-function f(e) {
+function d(e) {
     var t,
         r,
-        { onClose: f } = e,
+        { onClose: d } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -22,28 +23,35 @@ function f(e) {
                     var r,
                         n,
                         o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
         })(e, ["onClose"]);
-    let y = (0, c.e7)([l.default], () => l.default.getCurrentUser()),
-        d = (0, s.Z)(),
-        g = o.useMemo(() => {
-            let e = new Set(d);
-            return p.rR.filter((t) => e.has(t));
+    let y = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        g = (0, u.Z)(),
+        j = o.useRef(new Set(g)),
+        m = p.rR.filter((e) => j.current.has(e)),
+        h = m.length > 0,
+        [w, v] = o.useState(!1),
+        P = {
+            onClick: () => d(),
+            text: f.intl.string(f.t.cpT0Cg),
+        },
+        x = o.useCallback(() => {
+            v(!0), d();
         }, [d]);
     return null == y
         ? null
         : (0, n.jsx)(
-              i.Modal,
+              l.Modal,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var r = null != arguments[t] ? arguments[t] : {},
@@ -70,28 +78,36 @@ function f(e) {
                   return e;
               })(
                   {
-                      title: a.intl.string(a.t.grUgR0),
-                      actions: [],
-                      onClose: f,
+                      title: f.intl.string(f.t.grUgR0),
+                      actions: h ? [] : [P],
+                      size: h ? "md" : "sm",
+                      onClose: d,
                   },
                   O,
               )),
               (r = r =
                   {
-                      children: (0, n.jsx)("ul", {
-                          "aria-label": a.intl.string(a.t["+EIBSE"]),
-                          className: b.options,
-                          children: g.map((e) =>
-                              (0, n.jsx)(
-                                  u.Z,
-                                  {
-                                      widgetType: e,
-                                      onAddWidget: f,
-                                  },
-                                  e,
-                              ),
-                          ),
-                      }),
+                      children: h
+                          ? (0, n.jsx)("ul", {
+                                "aria-label": f.intl.string(f.t["+EIBSE"]),
+                                className: b.options,
+                                children: m.map((e) =>
+                                    (0, n.jsx)(
+                                        a.Z,
+                                        {
+                                            widgetType: e,
+                                            onAddWidget: x,
+                                            loading: w,
+                                        },
+                                        e,
+                                    ),
+                                ),
+                            })
+                          : (0, n.jsx)(c.Text, {
+                                variant: "text-md/medium",
+                                color: "text-secondary",
+                                children: f.intl.string(f.t["1nkDOj"]),
+                            }),
                   }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
