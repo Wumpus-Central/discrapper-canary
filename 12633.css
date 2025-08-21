@@ -23081,16 +23081,18 @@ svg.radioIcon_c1e9c4 {
 }
 
 .gameIcon__15328 {
+    background: var(--background-surface-high);
     border-radius: 8px
 }
 
-.container__15328,
-.gameIcon__15328 {
-    background: var(--background-surface-high)
+.gameIconFallback__15328 {
+    border-radius: 8px;
+    padding: 24px
 }
 
 .container__15328 {
     align-items: flex-start;
+    background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
     flex-direction: column;
@@ -89853,7 +89855,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
