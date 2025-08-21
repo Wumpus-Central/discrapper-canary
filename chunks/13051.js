@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
+n.d(t, { Z: () => I }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -49,14 +49,14 @@ function w(e) {
     }
     return e;
 }
-function T(e) {
+function I(e) {
     let t,
         {
             guild: n,
             integration: l,
             editedIntegration: o,
-            isExpanded: T,
-            onToggleExpand: I,
+            isExpanded: I,
+            onToggleExpand: T,
             onDisable: P,
             onEnable: E,
         } = e,
@@ -228,7 +228,7 @@ function T(e) {
                           grow: 0,
                           children: (0, i.jsx)(v.Z, {
                               className: Z.expandIcon,
-                              expanded: T && !k,
+                              expanded: I && !k,
                               "aria-hidden": !0,
                           }),
                       })
@@ -254,7 +254,7 @@ function T(e) {
         }),
         J = null;
     return (
-        T &&
+        I &&
             !k &&
             null != o &&
             (J = (0, i.jsxs)(b.Z, {
@@ -484,8 +484,8 @@ function T(e) {
                     l.enabled
                         ? (0, i.jsx)(u.P3F, {
                               className: Z.expandableHeader,
-                              "aria-expanded": T && !k,
-                              onClick: I,
+                              "aria-expanded": I && !k,
+                              onClick: T,
                               children: $,
                           })
                         : $,

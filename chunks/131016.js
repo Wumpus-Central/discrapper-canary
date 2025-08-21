@@ -8,7 +8,7 @@ var r = n(688619),
     a = n(522942),
     o = n(660662);
 function s(e) {
-    let t = i()(e),
+    let t = i()(e).alpha(1),
         n = t.get("hsl.l");
     return {
         main: e,

@@ -1,59 +1,59 @@
-n.d(e, { w: () => a });
-var i = n(951288);
-n(647438);
-var l = n(481060);
-function a(t, e) {
-    return (0, l.ZDy)(async () => {
-        let { default: l } = await n.e("79521").then(n.bind(n, 207540));
-        return (n) => {
-            var a, s;
+t.d(n, { w: () => l });
+var i = t(951288);
+t(647438);
+var r = t(481060);
+function l(e, n) {
+    return (0, r.ZDy)(async () => {
+        let { default: r } = await t.e("79521").then(t.bind(t, 207540));
+        return (t) => {
+            var l, a;
             return (0, i.jsx)(
-                l,
-                ((a = (function (t) {
-                    for (var e = 1; e < arguments.length; e++) {
-                        var n = null != arguments[e] ? arguments[e] : {},
-                            i = Object.keys(n);
+                r,
+                ((l = (function (e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = null != arguments[n] ? arguments[n] : {},
+                            i = Object.keys(t);
                         "function" == typeof Object.getOwnPropertySymbols &&
                             (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                 }),
                             )),
-                            i.forEach(function (e) {
+                            i.forEach(function (n) {
                                 var i;
-                                (i = n[e]),
-                                    e in t
-                                        ? Object.defineProperty(t, e, {
+                                (i = t[n]),
+                                    n in e
+                                        ? Object.defineProperty(e, n, {
                                               value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (t[e] = i);
+                                        : (e[n] = i);
                             });
                     }
-                    return t;
-                })({}, n)),
-                (s = s =
+                    return e;
+                })({}, t)),
+                (a = a =
                     {
                         onConfirm: () => {
-                            n.onClose(), e();
+                            t.onClose(), n();
                         },
-                        channel: t,
+                        channel: e,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
-                    : (function (t, e) {
-                          var n = Object.keys(t);
+                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                    : (function (e, n) {
+                          var t = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(t);
-                              n.push.apply(n, i);
+                              var i = Object.getOwnPropertySymbols(e);
+                              t.push.apply(t, i);
                           }
-                          return n;
-                      })(Object(s)).forEach(function (t) {
-                          Object.defineProperty(a, t, Object.getOwnPropertyDescriptor(s, t));
+                          return t;
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                a),
+                l),
             );
         };
     });

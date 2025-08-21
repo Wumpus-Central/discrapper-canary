@@ -1,4 +1,4 @@
-n.d(t, { o: () => T }), n(388685);
+n.d(t, { o: () => T });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -231,66 +231,53 @@ function T(e) {
             null == (t = U.onBlur) || t.call(U, e), null == (n = G.setIsFocused) || n.call(G, !1);
         },
         W = (e) => {
-            var t, n, r;
-            if (V && "Backspace" === e.key && "" === T) {
-                let t = null != (n = null == R ? void 0 : R.items) ? n : [];
-                if (t.length > 0) {
-                    let n = t[t.length - 1];
-                    e.preventDefault(),
-                        e.stopPropagation(),
-                        null == R || null == (r = R.onRemove) || r.call(R, new Set([n.id]));
-                }
-            }
-            null == U || null == (t = U.onKeyDown) || t.call(U, e);
-        },
-        K = (e) => {
             if (null != U.onClear) U.onClear(e);
             else {
                 var t;
                 null == (t = U.onChange) || t.call(U, "", _);
             }
         },
-        z = i.useRef(null),
-        q = U.readOnly;
-    null == q && !1 === l && (q = !0);
-    let X = null;
-    ("boolean" == typeof L ? L && null != T && "" !== T && !q : L.show)
-        ? (X = (0, r.jsx)(I, {
+        K = i.useRef(null),
+        z = U.readOnly;
+    null == z && !1 === l && (z = !0);
+    let q = null;
+    ("boolean" == typeof L ? L && null != T && "" !== T && !z : L.show)
+        ? (q = (0, r.jsx)(I, {
               inputSize: D,
-              onClick: K,
+              onClick: W,
           }))
         : null != P &&
-          (X = (0, r.jsx)(v, {
+          (q = (0, r.jsx)(v, {
               accessory: P,
               inputSize: D,
           }));
-    let Q = null;
+    let X = null;
     return (
         null != R &&
-            (Q = (0, r.jsx)(v, {
+            (X = (0, r.jsx)(v, {
                 accessory: R,
                 inputSize: D,
             })),
         (0, r.jsxs)(d.J, {
-            ref: z,
+            ref: K,
             disabled: a,
             validation: B,
             fullWidth: x,
-            readOnly: q,
+            readOnly: z,
             helperText: j,
             successMessage: k,
             characterCount: M ? (null != (t = null == T ? void 0 : T.length) ? t : 0) : void 0,
             characterCountMaxLength: y,
             className: o()(p.container, p[D], {
-                [p.leading]: null != Q,
-                [p.trailing]: null != X,
-                [p.tags]: V,
+                [p.hasLeading]: null != X,
+                [p.hasTrailing]: null != q,
+                [p.hasTags]: V,
             }),
             children: [
-                Q,
+                X,
                 (0, r.jsx)(
                     s.t,
-                    E(m({ ringTarget: z }, u), {
+                    E(m({ ringTarget: K }, u), {
                         children: (0, r.jsx)(
                             "input",
                             E(
@@ -299,7 +286,7 @@ function T(e) {
                                         name: _,
                                         className: p.input,
                                         disabled: a,
-                                        readOnly: q,
+                                        readOnly: z,
                                         type: h,
                                         placeholder: g,
                                         maxLength: y,
@@ -314,14 +301,13 @@ function T(e) {
                                     onChange: F,
                                     onBlur: Y,
                                     onFocus: H,
-                                    onKeyDown: W,
                                     ref: c,
                                 },
                             ),
                         ),
                     }),
                 ),
-                X,
+                q,
             ],
         })
     );

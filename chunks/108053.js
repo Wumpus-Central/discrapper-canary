@@ -29,7 +29,7 @@ function j(e) {
         } = e,
         Z = (0, d.ZP)(),
         [S, w] = r.useState(null),
-        [T, I] = r.useState(null);
+        [I, T] = r.useState(null);
     if (null != j) t = j;
     else {
         let e = Object.values(O);
@@ -57,7 +57,7 @@ function j(e) {
                     null
                 );
             });
-            null != e && (I(e.id), w(e));
+            null != e && (T(e.id), w(e));
         }
     }, [N, t, n]);
     (0, c.ZP)(() => {

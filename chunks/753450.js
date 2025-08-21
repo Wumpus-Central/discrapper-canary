@@ -80,69 +80,73 @@ function h(e, t) {
     return i;
 }
 function m(e) {
-    var { label: t, layout: n } = e,
-        i = p(e, ["label", "layout"]);
+    var { label: t, layout: n, isDisabled: i } = e,
+        u = p(e, ["label", "layout", "isDisabled"]);
     return (0, r.jsx)(
         a.Vp,
-        _(
-            d(
-                {
-                    className: c.tag,
-                    textValue: t,
-                },
-                i,
-            ),
-            {
-                children: (e) => {
-                    let { allowsRemoving: i } = e;
-                    return (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsx)(s.x, {
-                                variant: "inline" === n ? "text-sm/normal" : "text-md/normal",
-                                children: t,
-                            }),
-                            i &&
-                                (0, r.jsx)(o.z, {
-                                    slot: "remove",
-                                    children: (0, r.jsx)(l.Dio, {
-                                        size: "inline" === n ? "xs" : "sm",
-                                        color: l.TVs.colors.ICON_DEFAULT,
-                                    }),
+        _(d({}, u), {
+            className: c.tag,
+            textValue: t,
+            isDisabled: i,
+            children: (e) => {
+                let { allowsRemoving: i } = e;
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(s.x, {
+                            variant: "inline" === n ? "text-sm/normal" : "text-md/normal",
+                            children: t,
+                        }),
+                        i &&
+                            (0, r.jsx)(o.z, {
+                                slot: "remove",
+                                children: (0, r.jsx)(l.Dio, {
+                                    size: "inline" === n ? "xs" : "sm",
+                                    color: l.TVs.colors.ICON_DEFAULT,
                                 }),
-                        ],
-                    });
-                },
+                            }),
+                    ],
+                });
             },
-        ),
+        }),
     );
 }
 function g(e) {
-    let { label: t, selectionMode: n = "none", layout: o = "default", items: s, onRemove: l, children: u } = e,
-        [d, f] = i.useState(() => new Set());
+    let {
+            label: t,
+            disabledKeys: n,
+            selectionMode: o = "none",
+            layout: s = "default",
+            items: l,
+            onRemove: u,
+            children: d,
+        } = e,
+        [f, _] = i.useState(() => new Set());
     return (0, r.jsxs)(a.QS, {
         "aria-label": t,
-        "data-layout": o,
+        "data-layout": s,
         className: c.tagGroup,
-        selectionMode: n,
-        selectedKeys: d,
-        onSelectionChange: f,
-        onRemove: l,
+        selectionMode: o,
+        selectedKeys: f,
+        onSelectionChange: _,
+        disabledKeys: n,
+        onRemove: u,
         children: [
             (0, r.jsx)(a.PS, {
-                items: s,
                 className: c.tagList,
-                children: (e) =>
+                children: l.map((e) =>
                     (0, r.jsx)(
                         m,
                         {
                             id: e.id,
                             label: e.label,
-                            layout: o,
+                            layout: s,
+                            isDisabled: e.isDisabled,
                         },
                         e.id,
                     ),
+                ),
             }),
-            u,
+            d,
         ],
     });
 }

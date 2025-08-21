@@ -63,6 +63,7 @@ var r = n(754700),
             (e.CONFLICT_CHECKS = "conflict_checks"),
             (e.VIDEO_MODAL = "video_modal"),
             (e.VIDEO_MODAL_MOBILE = "video_modal_mobile"),
+            (e.GAME_WIDGETS_POPOVER = "game_widgets_popover"),
             e
         );
     })({});

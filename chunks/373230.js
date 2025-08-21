@@ -1,7 +1,4 @@
-n.d(t, {
-    T: () => i,
-    c: () => r,
-});
+n.d(t, { T: () => i });
 let r = (0, n(818083).B)({
     kind: "user",
     id: "2025-01_recent_avatars",

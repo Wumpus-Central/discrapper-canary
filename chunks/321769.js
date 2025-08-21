@@ -11,6 +11,7 @@ let s = [
         {
             id: "dexterity",
             label: "Dexterity",
+            isDisabled: !0,
         },
         {
             id: "wisdom",
@@ -45,6 +46,7 @@ let s = [
                             label: "Categories",
                             selectionMode: t,
                             items: l,
+                            disabledKeys: ["dexterity"],
                             onRemove: n ? u : void 0,
                             children:
                                 n &&

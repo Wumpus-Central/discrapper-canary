@@ -154,21 +154,22 @@ async function j(e, t, i) {
     if (e.length < 1) return;
     if (null != n && n.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
     let O = t.getGuildId(),
-        b = await P(Array.from(e), f, {
+        b = Array.from(e),
+        S = await P(b, f, {
             channel: t,
             currentGuildId: O,
         }),
-        S = b.map((e) => e.file),
-        I = b.map((e) => e.compressionMetadata);
-    if ((0, y.Bf)(S, O)) return void C(t, Array.from(e));
-    if (m.Z.getUploadCount(t.id, i) + S.length > E.dN1) {
+        I = S.map((e) => e.file),
+        j = S.map((e) => e.compressionMetadata);
+    if ((0, y.Bf)(I, O)) return void C(t, b);
+    if (m.Z.getUploadCount(t.id, i) + I.length > E.dN1) {
         (0, l.openUploadError)({
             title: w.intl.string(w.t.wOr6hI),
             help: w.intl.formatToPlainString(w.t["qqyp/f"], { limit: E.dN1 }),
         }),
             v.default.track(E.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: m.Z.getUploadCount(t.id, i),
-                new_count: S.length,
+                new_count: I.length,
             });
         return;
     }
@@ -178,8 +179,8 @@ async function j(e, t, i) {
             r.Z.updateChatOpen(t.id, !0),
         c)
     ) {
-        let e = S.map((e, t) => {
-            let i = I[t];
+        let e = I.map((e, t) => {
+            let i = j[t];
             return Z(
                 {
                     file: e,
@@ -198,9 +199,9 @@ async function j(e, t, i) {
             draftType: i,
         });
     } else {
-        let e = S.map((e, i) => {
+        let e = I.map((e, i) => {
             let r = null != n ? n[i] : {},
-                s = I[i];
+                s = j[i];
             return new a.nH(
                 Z(
                     {

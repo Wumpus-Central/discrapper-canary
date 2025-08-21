@@ -25,8 +25,8 @@ var i = n(951288),
     Z = n(63063),
     S = n(709054),
     w = n(51144),
-    T = n(466070),
-    I = n(585835),
+    I = n(466070),
+    T = n(585835),
     P = n(997787),
     E = n(981631),
     k = n(49898),
@@ -178,7 +178,7 @@ function U(e) {
                           text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: S.default.extractTimestamp(l.id) }),
                       }),
                 (0, i.jsx)(
-                    I.Z,
+                    T.Z,
                     {
                         name: r.name,
                         imageSrc: null != (t = r.getIconURL(48)) ? t : N.pK["0"],
@@ -268,14 +268,14 @@ function U(e) {
         (eZ = null));
     let eS = Z.Z.getArticleURL(E.BhN.INTEGRATIONS),
         ew = null != H ? A.t.YV0vh4 : A.t.FnZEJi,
-        eT = [];
+        eI = [];
     if (el) {
         let e, t, r, a, o;
-        eT.push(
+        eI.push(
             ((n = F.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJC)),
             (0, i.jsx)(
-                I.Z,
+                T.Z,
                 {
                     name: A.intl.string(A.t.xOg4SE),
                     icon: u.tYf,
@@ -291,14 +291,14 @@ function U(e) {
         ),
             (null == H ? void 0 : H.type) === E.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && E.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                eT.push(
+                eI.push(
                     ((l = K.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = J))
                         : ((r = A.intl.string(A.t["ZwSt+f"])),
                           (a = () => open(Z.Z.getArticleURL(E.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        I.Z,
+                        T.Z,
                         {
                             name: A.intl.string(A.t.OrV60t),
                             icon: u.AsW,
@@ -314,10 +314,10 @@ function U(e) {
     }
     null == H &&
         ec.length > 0 &&
-        eT.push(
+        eI.push(
             ((o = ec.length),
             (0, i.jsx)(
-                I.Z,
+                T.Z,
                 {
                     name: A.intl.string(A.t.tqtDXF),
                     icon: u.DuK,
@@ -330,7 +330,7 @@ function U(e) {
             )),
         ),
         eb &&
-            eT.push(
+            eI.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -350,7 +350,7 @@ function U(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            I.Z,
+                            T.Z,
                             {
                                 name: A.intl.string(A.t.q4pBGx),
                                 icon: s.icon.whiteSVG,
@@ -368,7 +368,7 @@ function U(e) {
                 })(ed, ep, Y),
             ),
         eg &&
-            eT.push(
+            eI.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -388,7 +388,7 @@ function U(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            I.Z,
+                            T.Z,
                             {
                                 name: A.intl.string(A.t.aS6cKy),
                                 icon: s.icon.whiteSVG,
@@ -405,7 +405,7 @@ function U(e) {
                     );
                 })(eu, em, Y),
             );
-    let eI = null != H && eo && null != es;
+    let eT = null != H && eo && null != es;
     return (0, i.jsxs)(u.hjN, {
         className: a()(null != eZ ? D.footerPlaceholder : null),
         children: [
@@ -421,17 +421,17 @@ function U(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          eT,
-                          eI &&
+                          eI,
+                          eT &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      eT.length > 0 ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
+                                      eI.length > 0 ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
                                       (0, i.jsx)(u.X6q, {
                                           variant: "heading-md/semibold",
                                           className: D.sectionHeader,
                                           children: A.intl.string(A.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(T.t, {
+                                      (0, i.jsx)(I.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
@@ -445,7 +445,7 @@ function U(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eT.length > 0 || eI ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
+                                        eI.length > 0 || eT ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
                                         (0, i.jsx)(u.X6q, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,

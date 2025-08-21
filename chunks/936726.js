@@ -80,8 +80,8 @@ function w(e) {
             editedWebhook: l,
             channelOptions: h,
             isExpanded: w,
-            isNew: T,
-            errors: I,
+            isNew: I,
+            errors: T,
             onToggleExpand: P,
         } = e,
         [E, k] = r.useState(!1),
@@ -165,11 +165,11 @@ function w(e) {
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != I.avatar && "" !== I.avatar
+                                        null != T.avatar && "" !== T.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: I.avatar,
+                                                  children: T.avatar,
                                               })
                                             : null,
                                     ],
@@ -190,7 +190,7 @@ function w(e) {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: I.name,
+                                                        error: T.name,
                                                     }),
                                                 }),
                                             }),
@@ -306,7 +306,7 @@ function w(e) {
         (0, i.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: a()(C.card, T ? C.pulse : null),
+            className: a()(C.card, I ? C.pulse : null),
             children: (0, i.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [

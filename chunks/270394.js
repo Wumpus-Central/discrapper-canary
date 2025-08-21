@@ -25,8 +25,8 @@ var i = n(951288),
     Z = n(600164),
     S = n(925329),
     w = n(666657),
-    T = n(664452),
-    I = n(560114),
+    I = n(664452),
+    T = n(560114),
     P = n(685929),
     E = n(592125),
     k = n(699516),
@@ -321,7 +321,7 @@ function q(e) {
             (0, g.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        I.default,
+                        T.default,
                         z(G({}, e), {
                             channel: u,
                             guild: l,
@@ -336,7 +336,7 @@ function q(e) {
             (0, g.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
-                        T.default,
+                        I.default,
                         z(G({}, t), {
                             guildId: l.id,
                             analyticsData: e,

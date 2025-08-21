@@ -28,8 +28,8 @@ function _(e) {
             iconBackgroundColor: Z,
             iconClassName: S,
             iconWrapperClassName: w,
-            details: T,
-            integration: I,
+            details: I,
+            integration: T,
             buttonText: P,
             buttonDisabled: E,
             hasNextSection: k,
@@ -41,7 +41,7 @@ function _(e) {
         } = e,
         [B, W] = r.useState(!1),
         [U, H] = r.useState(!1),
-        G = L && !R && !U && void 0 !== D && null != I,
+        G = L && !R && !U && void 0 !== D && null != T,
         z = r.useRef(null),
         F = r.useRef(null),
         K = r.useCallback(
@@ -111,7 +111,7 @@ function _(e) {
                 })({}, (0, u.hH)(D))),
                 (t = t =
                     {
-                        application_id: null == I ? void 0 : I.application.id,
+                        application_id: null == T ? void 0 : T.application.id,
                         location: "overview",
                     }),
                 Object.getOwnPropertyDescriptors
@@ -128,14 +128,14 @@ function _(e) {
                       }),
                 e),
             );
-    }, [D, null == I ? void 0 : I.application.id, G]);
+    }, [D, null == T ? void 0 : T.application.id, G]);
     let V = G
             ? (0, i.jsx)(d.yRy, {
                   targetElementRef: k ? F : z,
                   renderPopout: () =>
                       (0, i.jsx)(d.P3F, {
                           onClick: (e) => {
-                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, I.integration);
+                              e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, T.integration);
                           },
                           children: (0, i.jsx)(g.ZP, {
                               content: y.intl.string(y.t.TyMJwM),
@@ -151,15 +151,15 @@ function _(e) {
             : K,
         q = (0, s.Wu)([b.Z], () => {
             var e;
-            return null != I && null != D && null != (e = b.Z.getApplicationEntitlementsForGuild(I.application.id, D))
+            return null != T && null != D && null != (e = b.Z.getApplicationEntitlementsForGuild(T.application.id, D))
                 ? e
                 : [];
         }),
         Y = (0, p.LD)(D, !0),
         $ =
-            (null == I ? void 0 : I.application) != null &&
+            (null == T ? void 0 : T.application) != null &&
             Object.keys(
-                null != (l = null == (n = Y.result) || null == (t = n.sections[I.application.id]) ? void 0 : t.commands)
+                null != (l = null == (n = Y.result) || null == (t = n.sections[T.application.id]) ? void 0 : t.commands)
                     ? l
                     : {},
             ).length > 0,
@@ -172,7 +172,7 @@ function _(e) {
                     iconBackgroundColor: Z,
                     iconClassName: S,
                     iconWrapperClassName: w,
-                    details: T,
+                    details: I,
                     isPremium: q.length > 0,
                 }),
                 (0, i.jsx)(m.Z.Child, {
@@ -249,7 +249,7 @@ function _(e) {
                                         ),
                                     a
                                 );
-                            })(I, B, $),
+                            })(T, B, $),
                             V,
                             M,
                         ],
@@ -260,7 +260,7 @@ function _(e) {
     return k
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  L && null != D && null != I && j.Z.dismissOverviewTooltip(D, I.integration), null == A || A();
+                  L && null != D && null != T && j.Z.dismissOverviewTooltip(D, T.integration), null == A || A();
               },
               onFocus: () => W(!0),
               onBlur: () => W(!1),

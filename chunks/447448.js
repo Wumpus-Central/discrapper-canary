@@ -1,4 +1,7 @@
-n.d(t, { k: () => o });
+n.d(t, {
+    h: () => s,
+    k: () => o,
+});
 var r = n(818083),
     i = n(438379);
 let a = (0, r.B)({
@@ -28,4 +31,15 @@ function o(e) {
             },
         );
     return o;
+}
+function s(e) {
+    let { isInHoldout: t } = i.m.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
+        { enabled: n } = a.getCurrentConfig(
+            { location: e },
+            {
+                autoTrackExposure: !1,
+                disable: t,
+            },
+        );
+    return n;
 }

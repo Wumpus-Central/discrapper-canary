@@ -74,7 +74,7 @@ function E(e) {
 }
 function b(e) {
     return e.length < 2
-        ? {}
+        ? b(["#999", "#999"])
         : {
               [c]: e[0],
               [u]: e[1],

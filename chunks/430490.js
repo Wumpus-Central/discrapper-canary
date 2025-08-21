@@ -107,9 +107,9 @@ var r = {
     iconButton: "iconButton__0f084 button__0f084 icon__0f084 icon-only__0f084",
     clearButton: "clearButton__0f084 button__0f084 icon__0f084",
     leadingText: "leadingText__0f084",
-    leading: "leading__0f084",
+    hasLeading: "hasLeading__0f084",
     input: "input__0f084",
-    trailing: "trailing__0f084",
-    tags: "tags__0f084",
+    hasTrailing: "hasTrailing__0f084",
+    hasTags: "hasTags__0f084",
 };
 n.r((e.exports = r));

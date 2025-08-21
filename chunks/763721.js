@@ -467,18 +467,16 @@ let p = [
                                                             }),
                                                             (0, r.jsx)(a.xJW, {
                                                                 title: "Tags",
-                                                                children: (0, r.jsx)(a.Kqy, {
-                                                                    children: (0, r.jsx)(
-                                                                        a.oil,
-                                                                        d(c({}, g), {
-                                                                            leading: {
-                                                                                type: "tags",
-                                                                                label: "Tags",
-                                                                                items: p.slice(0, 3),
-                                                                            },
-                                                                        }),
-                                                                    ),
-                                                                }),
+                                                                children: (0, r.jsx)(
+                                                                    a.oil,
+                                                                    d(c({}, g), {
+                                                                        leading: {
+                                                                            type: "tags",
+                                                                            label: "Tags",
+                                                                            items: p.slice(0, 3),
+                                                                        },
+                                                                    }),
+                                                                ),
                                                             }),
                                                         ],
                                                     }),
