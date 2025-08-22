@@ -20,8 +20,8 @@ var i = n(951288),
     g = n(592125),
     y = n(355863),
     O = n(944486),
-    v = n(837268),
-    b = n(353038),
+    b = n(837268),
+    v = n(353038),
     E = n(804570),
     _ = n(350663),
     S = n(461393),
@@ -98,8 +98,8 @@ let D = (e) => {
         s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
         c = (() => {
             switch (t) {
-                case b.B.RESIZE_NORTH:
-                case b.B.RESIZE_SOUTH:
+                case v.B.RESIZE_NORTH:
+                case v.B.RESIZE_SOUTH:
                     return {
                         height: n.height,
                         width: Math.round((n.height - a) * s + a),
@@ -122,7 +122,7 @@ function R(e) {
     let { width: c, height: u } = D(
             N(
                 {
-                    operation: b.B.RESIZE_NORTH,
+                    operation: v.B.RESIZE_NORTH,
                     computedSize: {
                         width: n.width,
                         height: n.height,
@@ -141,7 +141,7 @@ function R(e) {
         { width: d, height: p } = D(
             N(
                 {
-                    operation: b.B.RESIZE_NORTH,
+                    operation: v.B.RESIZE_NORTH,
                     computedSize: {
                         width: o.width,
                         height: o.height,
@@ -171,7 +171,7 @@ function R(e) {
     });
 }
 function L(e) {
-    var t, n, a, b, S, P;
+    var t, n, a, v, S, P;
     let {
             id: D,
             widget: L,
@@ -280,14 +280,14 @@ function L(e) {
                 top: 0,
                 left: 0,
                 bottom: null != (a = null == eh ? void 0 : eh.height) ? a : X,
-                right: null != (b = null == eh ? void 0 : eh.width) ? b : K,
+                right: null != (v = null == eh ? void 0 : eh.width) ? v : K,
             },
         };
     return (r.useEffect(() => {
-        s.Z.setGpuBoostRequested(v.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
+        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
     }, [ec]),
     (0, u.ZP)(() => () => {
-        s.Z.setGpuBoostRequested(v.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
     (function (e) {
         let { streamParticipants: t, layout: n, widgetLayoutSpecs: i } = e,

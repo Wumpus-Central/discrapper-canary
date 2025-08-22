@@ -15,10 +15,10 @@ var i = n(951288),
     g = n(388032),
     y = n(63452);
 let O = [];
-function v(e) {
+function b(e) {
     return e.notification.id;
 }
-function b(e, t, n, r) {
+function v(e, t, n, r) {
     let { index: o, notification: l, locked: a, pinned: s } = t;
     return (0, i.jsx)(
         p.Z,
@@ -71,8 +71,8 @@ let _ = r.memo(function (e) {
               value: _,
               children: (0, i.jsx)(l.W3x, {
                   items: y,
-                  renderItem: b,
-                  getItemKey: v,
+                  renderItem: v,
+                  getItemKey: b,
                   wrapChildren: E,
               }),
           })

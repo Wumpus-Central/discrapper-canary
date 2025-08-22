@@ -740,6 +740,7 @@ var v = (function (e) {
             (e.REGISTER = "REGISTER"),
             (e.MACOS_19_DEPRECATED_MESSAGE = "MACOS_19_DEPRECATED_MESSAGE"),
             (e.REPORT_TO_MOD_SURVEY = "REPORT_TO_MOD_SURVEY"),
+            (e.SYSTEM_SERVICE_WARNING = "SYSTEM_SERVICE_WARNING"),
             e
         );
     })({}),

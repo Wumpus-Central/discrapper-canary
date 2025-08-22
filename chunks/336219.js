@@ -1,15 +1,17 @@
 n.d(t, {
-    MK: () => r,
-    ZP: () => a,
-    vA: () => i,
+    t: () => s,
+    v: () => l,
 });
-let r = (0, n(818083).B)({
+var r = n(818083),
+    i = n(358085);
+let a = (0, r.B)({
     kind: "user",
     id: "2025-03_fast_travel",
     label: "Fast Travel",
     defaultConfig: {
         backForwardButtons: !1,
         titlebarFastTravel: !1,
+        quickSwitcherInsteadOfTitle: !1,
     },
     treatments: [
         {
@@ -18,20 +20,39 @@ let r = (0, n(818083).B)({
             config: {
                 backForwardButtons: !0,
                 titlebarFastTravel: !1,
+                quickSwitcherInsteadOfTitle: !1,
             },
         },
         {
             id: 2,
-            label: "Back/Forward buttons and titlebar fast travel",
+            label: "back/forward buttons and quick switcher on title",
             config: {
                 backForwardButtons: !0,
                 titlebarFastTravel: !0,
+                quickSwitcherInsteadOfTitle: !1,
+            },
+        },
+        {
+            id: 3,
+            label: "back/forward buttons and quick switcher INSTEAD of title",
+            config: {
+                backForwardButtons: !0,
+                titlebarFastTravel: !0,
+                quickSwitcherInsteadOfTitle: !0,
             },
         },
     ],
 });
-function i(e) {
-    let { backForwardButtons: t } = r.getCurrentConfig(e);
+function o() {
+    return {
+        autoTrackExposure: !0,
+        disable: !(0, i.isDesktop)(),
+    };
+}
+function s(e) {
+    return a.useExperiment(e, o());
+}
+function l(e) {
+    let { backForwardButtons: t } = a.getCurrentConfig(e, o());
     return t;
 }
-let a = r;

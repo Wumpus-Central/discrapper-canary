@@ -17,13 +17,13 @@ function s(e, t, n) {
 }
 function l(e) {
     if (!(0, i.x3)()) return;
-    if (!(0, o.vA)({ location: e })) return void (0, i.op)();
+    if (!(0, o.v)({ location: e })) return void (0, i.op)();
     let t = a.Z.backDestination;
     null != t && (r.Z.dispatch({ type: "GO_BACK" }), (0, i.uL)(t.path));
 }
 function c(e) {
     if (!(0, i.x3)()) return;
-    if (!(0, o.vA)({ location: e })) return void (0, i.eH)();
+    if (!(0, o.v)({ location: e })) return void (0, i.eH)();
     let t = a.Z.forwardDestination;
     null != t && (r.Z.dispatch({ type: "GO_FORWARD" }), (0, i.uL)(t.path));
 }

@@ -24,8 +24,8 @@ var i = n(951288),
     g = n(906732),
     y = n(571250),
     O = n(628581),
-    v = n(659580),
-    b = n(855844),
+    b = n(659580),
+    v = n(855844),
     E = n(793865),
     _ = n(55311),
     S = n(575175),
@@ -122,7 +122,7 @@ function es(e) {
             onContextMenu: y,
             isTrayButton: O,
         } = e,
-        v = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -183,7 +183,7 @@ function es(e) {
         isActive: n,
         onContextMenu: y,
         onPopoutClick: h,
-        "aria-label": v["aria-label"],
+        "aria-label": b["aria-label"],
     });
 }
 function ec(e) {
@@ -223,7 +223,7 @@ function ec(e) {
                       showSearchBar: !I,
                   })
                 : C
-                  ? (0, i.jsx)(b.Z, {
+                  ? (0, i.jsx)(v.Z, {
                         onClose: n,
                         maybeRenderPTTCheckbox: !0,
                         renderInputProfiles: !0,
@@ -232,7 +232,7 @@ function ec(e) {
                         maybeRenderInputMeter: !0,
                         renderSettingsButton: !0,
                     })
-                  : (0, i.jsx)(v.default, {
+                  : (0, i.jsx)(b.default, {
                         onClose: n,
                         renderInputDevices: !0,
                         renderOutputDevices: !0,
@@ -311,14 +311,14 @@ function eu(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return S
-                ? (0, i.jsx)(b.Z, {
+                ? (0, i.jsx)(v.Z, {
                       onClose: E(t),
                       renderDeafenCheckbox: !0,
                       renderOutputDevices: !0,
                       renderOutputVolume: !0,
                       renderSettingsButton: !0,
                   })
-                : (0, i.jsx)(v.default, {
+                : (0, i.jsx)(b.default, {
                       onClose: E(t),
                       renderOutputDevices: !0,
                       renderOutputVolume: !0,
@@ -376,8 +376,8 @@ function ed(e) {
                 });
         },
         {
-            Component: v,
-            play: b,
+            Component: b,
+            play: v,
             events: { onMouseEnter: _, onMouseLeave: S },
         } = (0, u.o)(s ? "disable" : "enable"),
         x =
@@ -389,7 +389,7 @@ function ed(e) {
                       channel: n,
                   })
                 : void 0;
-    r.useEffect(() => () => b(), [s, b]);
+    r.useEffect(() => () => v(), [s, v]);
     let I = ea(l),
         j = null == n || !m;
     return (0, i.jsx)(d.yRy, {
@@ -409,7 +409,7 @@ function ed(e) {
                 { isShown: r } = t;
             return (0, i.jsx)(es, {
                 ref: a,
-                iconComponent: v,
+                iconComponent: b,
                 tooltip: x,
                 onClick: O,
                 isActive: s,
@@ -472,8 +472,8 @@ function ep(e) {
                 });
         },
         {
-            Component: v,
-            events: { onMouseEnter: b, onMouseLeave: E },
+            Component: b,
+            events: { onMouseEnter: v, onMouseLeave: E },
             play: _,
         } = (0, s.P)(g ? "disable" : "enable");
     r.useEffect(() => () => _(), [g, _]);
@@ -500,7 +500,7 @@ function ep(e) {
                 { isShown: o } = n;
             return (0, i.jsx)(es, {
                 ref: a,
-                iconComponent: v,
+                iconComponent: b,
                 tooltip: t,
                 "aria-label": er.intl.string(er.t.FeUKeH),
                 isActive: g,
@@ -510,7 +510,7 @@ function ep(e) {
                 popoutDisabled: !g,
                 onPopoutClick: O(r),
                 onContextMenu: O(r),
-                onMouseEnter: b,
+                onMouseEnter: v,
                 onMouseLeave: E,
                 disabled: !p || !u,
                 isTrayButton: !0,
@@ -527,7 +527,7 @@ function ef(e) {
         m = (0, o.e7)([Y.Z], () => Y.Z.isDeaf()),
         y = null == l || p || h || m,
         { analyticsLocations: O } = (0, g.ZP)();
-    function v(e) {
+    function b(e) {
         null != u &&
             ((0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
                 type: $.Qu.SOUNDBOARD,
@@ -549,7 +549,7 @@ function ef(e) {
             }));
     }
     let {
-            Component: b,
+            Component: v,
             events: { onClick: E, onMouseEnter: _, onMouseLeave: S },
         } = (0, c.j)(),
         x = ea(a),
@@ -575,7 +575,7 @@ function ef(e) {
                 { isShown: r } = t;
             return (0, i.jsx)(es, {
                 ref: s,
-                iconComponent: b,
+                iconComponent: v,
                 tooltip: p
                     ? er.intl.string(er.t["Ox4/zc"])
                     : h
@@ -594,7 +594,7 @@ function ef(e) {
                 },
                 highlightedColor: I,
                 defaultColor: I,
-                onContextMenu: v,
+                onContextMenu: b,
                 onMouseEnter: _,
                 onMouseLeave: S,
                 isActive: r,
@@ -639,15 +639,15 @@ function eh(e) {
             Component: g,
             events: { onMouseEnter: y, onMouseLeave: O },
         } = (0, l.K)(),
-        v = ea(n),
-        b = s ? g : d.Csw;
+        b = ea(n),
+        v = s ? g : d.Csw;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(M.Z, {
                 currentVoiceChannel: t,
-                onClose: v(n),
+                onClose: b(n),
                 onSelect: u,
             });
         },
@@ -659,7 +659,7 @@ function eh(e) {
                 { isShown: r } = t;
             return (0, i.jsx)(es, {
                 ref: a,
-                iconComponent: b,
+                iconComponent: v,
                 tooltip: s ? er.intl.string(er.t["6vrfgo"]) : er.intl.string(er.t.S0W8Z2),
                 onClick: s ? c : m(n),
                 defaultColor: s ? "disconnect" : void 0,

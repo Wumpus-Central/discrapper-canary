@@ -691,15 +691,21 @@ class U extends I.ZP {
         });
     }
     trackUploadFinished(e) {
-        var t, n, r, i, a;
-        let o = null != this.startTime ? performance.now() - this.startTime : -1;
+        var t, n, r, i, a, o, s;
+        let l = null != this.startTime ? performance.now() - this.startTime : -1,
+            c =
+                this.item.platform === I.ow.WEB &&
+                null != (n = null == (t = this.item.compressionMetadata) ? void 0 : t.compressTimeMs)
+                    ? n
+                    : 0,
+            u = l >= 0 ? l + c : -1;
         g.default.track(C.rMx.ATTACHMENT_UPLOAD_FINISHED, {
-            duration_ms: o,
+            duration_ms: u,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,
             final_state: e,
-            mime_type: null != (t = this.mimeType) ? t : "unknown",
-            num_upload_attempts: null != (n = this.uploadAnalytics.numUploadAttempts) ? n : 1,
+            mime_type: null != (r = this.mimeType) ? r : "unknown",
+            num_upload_attempts: null != (i = this.uploadAnalytics.numUploadAttempts) ? i : 1,
             error_code: this.error,
             video_upload_quality: p.ZP.videoUploadQuality,
             data_saving_mode: p.ZP.dataSavingMode,
@@ -707,9 +713,9 @@ class U extends I.ZP {
             compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
             get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
             upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,
-            converted_mime_type: null != (r = this.uploadAnalytics.convertedMimeType) ? r : "unknown",
-            image_compression_quality: null != (i = this.uploadAnalytics.imageCompressionQuality) ? i : 0,
-            video_compression_quality: null != (a = this.uploadAnalytics.videoCompressionQuality) ? a : "unknown",
+            converted_mime_type: null != (a = this.uploadAnalytics.convertedMimeType) ? a : "unknown",
+            image_compression_quality: null != (o = this.uploadAnalytics.imageCompressionQuality) ? o : 0,
+            video_compression_quality: null != (s = this.uploadAnalytics.videoCompressionQuality) ? s : "unknown",
             was_converted:
                 null != this.uploadAnalytics.convertedMimeType &&
                 this.mimeType !== this.uploadAnalytics.convertedMimeType,

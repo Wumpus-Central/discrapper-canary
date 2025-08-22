@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var i = n(951288),
     r = n(647438),
     o = n(904245),
@@ -15,10 +15,10 @@ var i = n(951288),
     g = n(981631),
     y = n(959517),
     O = n(572985);
-function v(e) {
-    let { id: t, replyToMessageId: n, channel: v, onSend: b } = e,
+function b(e) {
+    let { id: t, replyToMessageId: n, channel: b, onSend: v } = e,
         E = (0, h.Z)(),
-        { placeholder: _, accessibilityLabel: S } = (0, c.Z)({ channel: v }),
+        { placeholder: _, accessibilityLabel: S } = (0, c.Z)({ channel: b }),
         [x, I] = r.useState(() => (0, d.H2)()),
         { textValue: j, richValue: C } = x,
         [N, w] = r.useState(!1),
@@ -26,7 +26,7 @@ function v(e) {
         P = r.useCallback(() => w(!1), []);
     (0, s.ZP)(() => {
         (0, a.In)(
-            v.id,
+            b.id,
             {
                 section: g.jXE.OVERLAY,
                 object: g.qAy.ACK_INLINE_REPLY,
@@ -52,16 +52,16 @@ function v(e) {
         k = r.useCallback(
             () => (
                 j.length > E ||
-                    (o.Z.sendMessage(v.id, f.ZP.parse(v, j), !1, { location: y.dy.OVERLAY }),
+                    (o.Z.sendMessage(b.id, f.ZP.parse(b, j), !1, { location: y.dy.OVERLAY }),
                     l.Z.setInputLocked(!0, (0, m.getPID)()),
                     l.Z.updateNotificationStatus(t, g._1z.DISMISSED),
-                    null == b || b(j)),
+                    null == v || v(j)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0,
                 })
             ),
-            [j, E, v, t, b],
+            [j, E, b, t, v],
         );
     return (0, i.jsx)("div", {
         className: O.container,
@@ -70,7 +70,7 @@ function v(e) {
             onChange: T,
             placeholder: _,
             accessibilityLabel: S,
-            channel: v,
+            channel: b,
             textValue: j,
             richValue: C,
             type: u.Ie.OVERLAY_INLINE_REPLY,

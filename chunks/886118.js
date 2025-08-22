@@ -1,8 +1,8 @@
 n.d(t, {
-    E: () => i,
-    S: () => r,
+    E: () => l,
+    S: () => a,
 });
-var a,
-    o,
-    r = (((a = {}).FUZZY = "fuzzy"), (a.EXACT = "exact"), (a.REGEX = "regex"), (a.JARO_WINKLER = "jaro_winkler"), a),
-    i = (((o = {}).NONE = "none"), (o.JARO_WINKLER = "jaro_winkler"), o);
+var r,
+    i,
+    a = (((r = {}).FUZZY = "fuzzy"), (r.EXACT = "exact"), (r.REGEX = "regex"), (r.JARO_WINKLER = "jaro_winkler"), r),
+    l = (((i = {}).NONE = "none"), (i.JARO_WINKLER = "jaro_winkler"), i);

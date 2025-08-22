@@ -12,33 +12,33 @@ var i = n(951288),
     g = n(990757);
 function v(e) {
     let { root: t, initialPanel: n, onClose: r, sidebarHeader: v, sidebarFooter: m } = e,
-        [b, x] = l.useState(!0),
-        [p, j] = l.useState(n.key),
+        [b, p] = l.useState(!0),
+        [x, j] = l.useState(n.key),
         { navigateWithValidation: y } = (0, d.Cu)(),
-        h = l.useMemo(
+        C = l.useMemo(
             () => ({
-                currentPanel: t.layout.flatMap((e) => e.layout).find((e) => e.key === p),
+                currentPanel: t.layout.flatMap((e) => e.layout).find((e) => e.key === x),
                 setCurrentPanel: (e) => y(() => j(e.key)),
                 showNavigationMobile: b,
+                setShowNavigationMobile: p,
             }),
-            [p, t, b, y],
+            [x, t, b, y, p],
         ),
-        C = () => y(r);
+        h = () => y(r);
     return (0, i.jsx)(f.j.Provider, {
-        value: h,
+        value: C,
         children: (0, i.jsxs)("div", {
             className: o()(g.container, { [g.mobile]: s.tq }),
             children: [
-                (0, i.jsx)(c.d, { onClose: C }),
+                (0, i.jsx)(c.d, { onClose: h }),
                 (0, i.jsx)(u.P, {
                     root: t,
                     header: v,
                     footer: m,
                 }),
                 (0, i.jsx)(a.Z, {
-                    onClose: C,
-                    setShowNavigationMobile: x,
-                    setting: h.currentPanel,
+                    onClose: h,
+                    setting: C.currentPanel,
                 }),
             ],
         }),

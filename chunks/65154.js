@@ -221,6 +221,7 @@ var W = (function (e) {
             (e.NATIVE_SCREENSHARE_PICKER = "NATIVE_SCREENSHARE_PICKER"),
             (e.MLS_PAIRWISE_FINGERPRINTS = "MLS_PAIRWISE_FINGERPRINTS"),
             (e.OFFLOAD_ADM_CONTROLS = "OFFLOAD_ADM_CONTROLS"),
+            (e.SIDECHAIN_COMPRESSION = "SIDECHAIN_COMPRESSION"),
             e
         );
     })({}),

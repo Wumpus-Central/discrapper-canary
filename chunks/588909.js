@@ -16,8 +16,8 @@ var r = n(704215),
     g = n(618373),
     y = n(620954),
     O = n(987650),
-    v = n(981631),
-    b = n(602091),
+    b = n(981631),
+    v = n(602091),
     E = n(701488),
     _ = n(388032),
     S = n(968803),
@@ -91,13 +91,13 @@ function N(e, t) {
                           ? p.Z.getApplicationActivity(e.id)
                           : null;
                 null != t &&
-                    (0, s.Z)(t, v.xjy.JOIN) &&
+                    (0, s.Z)(t, b.xjy.JOIN) &&
                     ((E.cancelText = _.intl.string(_.t["6F9ivr"])),
                     (E.onCancelClick = (e, n) => {
                         u("unlock"),
                             a.Z.updateNotificationStatus(n),
                             a.Z.setInputLocked(!1, (0, f.getPID)()),
-                            (0, l.h7)(t, !1, v.IlC.POPOUT);
+                            (0, l.h7)(t, !1, b.IlC.POPOUT);
                     }));
                 break;
             }
@@ -123,11 +123,11 @@ function N(e, t) {
                                                 sourcePID: (0, f.getPID)(),
                                                 guildId: r.type === O.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
                                                 selectGuild: r.type === O.nc.GO_LIVE_NON_VOICE,
-                                                analyticsLocation: v.Sbl.OVERLAY_NUDGE,
+                                                analyticsLocation: b.Sbl.OVERLAY_NUDGE,
                                             }),
                                         );
                                 },
-                                { contextKey: b.u1 },
+                                { contextKey: v.u1 },
                             );
                     });
                 break;
@@ -140,7 +140,7 @@ function N(e, t) {
                             className: x.container,
                         })),
                     (E.onNotificationShow = () => {
-                        a.Z.track(v.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                        a.Z.track(b.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
                             user_ids: r.entries.map((e) => e.author_id),
                             entry_ids: r.entries.map((e) => e.id),
                         });

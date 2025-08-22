@@ -18,30 +18,30 @@ var r = n(951288),
     g = n(540059),
     m = n(336219),
     b = n(609174),
-    _ = n(916069),
-    O = n(591472),
-    E = n(111666),
-    y = n(565138),
-    v = n(300986),
-    I = n(314451),
-    C = n(35583),
-    S = n(821020),
-    N = n(370774),
-    T = n(340137),
-    P = n(522474),
-    j = n(51596),
-    A = n(141321),
-    x = n(819439),
-    Z = n(296241),
-    w = n(165017),
-    L = n(984802),
-    R = n(592125),
-    D = n(430824),
-    k = n(944486),
-    M = n(914010),
-    U = n(451478),
-    G = n(768581),
-    B = n(358085),
+    _ = n(257966),
+    O = n(916069),
+    E = n(591472),
+    y = n(111666),
+    v = n(565138),
+    I = n(300986),
+    C = n(314451),
+    S = n(35583),
+    N = n(821020),
+    T = n(370774),
+    P = n(340137),
+    j = n(522474),
+    A = n(51596),
+    x = n(141321),
+    Z = n(819439),
+    w = n(296241),
+    L = n(165017),
+    R = n(984802),
+    D = n(592125),
+    k = n(430824),
+    M = n(944486),
+    U = n(914010),
+    G = n(451478),
+    B = n(768581),
     V = n(998502),
     H = n(228488),
     F = n(950796),
@@ -100,30 +100,30 @@ function et(e) {
     let t,
         { selectedChannelId: n, withFastTravel: l, focusSectionProps: s } = e,
         d = (0, o.TH)(),
-        f = (0, c.e7)([M.Z], () => M.Z.getGuildId()),
-        h = (0, c.e7)([R.Z], () => R.Z.getChannel(n), [n]),
+        f = (0, c.e7)([U.Z], () => U.Z.getGuildId()),
+        h = (0, c.e7)([D.Z], () => D.Z.getChannel(n), [n]),
         g = null != f ? f : null == h ? void 0 : h.guild_id,
-        m = (0, c.e7)([D.Z], () => D.Z.getGuild(g), [g]),
-        b = (0, _.Z)(),
-        E = (0, N.D)(),
-        { application: v, isFrameInFocusedMode: I } = (0, c.cj)([p.Z, O.Z], () => {
-            let e = O.Z.getConnectedFrame();
+        m = (0, c.e7)([k.Z], () => k.Z.getGuild(g), [g]),
+        b = (0, O.Z)(),
+        _ = (0, T.D)(),
+        { application: y, isFrameInFocusedMode: I } = (0, c.cj)([p.Z, E.Z], () => {
+            let e = E.Z.getConnectedFrame();
             return {
                 application: p.Z.getApplication(null == e ? void 0 : e.applicationId),
-                isFrameInFocusedMode: O.Z.getFrameLayoutMode() === K.U.FOCUSED,
+                isFrameInFocusedMode: E.Z.getFrameLayoutMode() === K.U.FOCUSED,
             };
         }),
         C =
-            null != v
-                ? G.ZP.getApplicationIconURL({
-                      id: v.id,
-                      icon: v.icon,
-                      bot: v.bot,
+            null != y
+                ? B.ZP.getApplicationIconURL({
+                      id: y.id,
+                      icon: y.icon,
+                      bot: y.bot,
                   })
                 : void 0,
         S = null;
-    null != v && I
-        ? ((t = v.name),
+    null != y && I
+        ? ((t = y.name),
           (S = (0, r.jsx)("img", {
               className: X.appIcon,
               alt: q.intl.string(q.t.X4IxWF),
@@ -131,14 +131,14 @@ function et(e) {
               "aria-hidden": !0,
               draggable: !1,
           })))
-        : E
+        : _
           ? ((t = q.intl.string(q.t.HcoRu7)), (S = (0, r.jsx)(u.Dkj, { size: "xs" })))
           : null != m
             ? ((S = b
                   ? (0, r.jsx)(u.r7p, { size: "xs" })
-                  : (0, r.jsx)(y.Z, {
+                  : (0, r.jsx)(v.Z, {
                         guild: m,
-                        size: y.Z.Sizes.MINI,
+                        size: v.Z.Sizes.MINI,
                         active: !0,
                         className: X.guildIcon,
                     })),
@@ -155,8 +155,8 @@ function et(e) {
                       ? ((t = q.intl.string(q.t.TdEu5e)), (S = (0, r.jsx)(u.iFz, { size: "xs" })))
                       : d.pathname.startsWith(z.Z5c.FAMILY_CENTER) &&
                         ((t = q.intl.string(Q.default.RZqaJi)), (S = (0, r.jsx)(u.BFJ, { size: "xs" })));
-    let T = i.useCallback((e) => {
-        (0, j.ZN)("fast-travel");
+    let N = i.useCallback((e) => {
+        (0, A.ZN)("fast-travel");
     }, []);
     return null == t || "" === t
         ? null
@@ -176,7 +176,7 @@ function et(e) {
                   (0, r.jsxs)(
                       u.P3F,
                       $(J({ className: a()(X.title, { [X.fastTravel]: l }) }, e, s), {
-                          onClick: l ? T : void 0,
+                          onClick: l ? N : void 0,
                           children: [
                               S,
                               (0, r.jsx)(u.Text, {
@@ -184,7 +184,7 @@ function et(e) {
                                   lineClamp: 1,
                                   children: t,
                               }),
-                              l && (0, r.jsx)(u.hic, { size: "xs" }),
+                              l && (0, r.jsx)(u.Fbu, { size: "xs" }),
                           ],
                       }),
                   ),
@@ -192,12 +192,12 @@ function et(e) {
 }
 function en(e) {
     let { selectedChannelId: t, withFastTravel: n, focusSectionProps: i } = e,
-        l = (0, c.e7)([M.Z, R.Z], () => {
-            let e = M.Z.getGuildId(),
-                n = R.Z.getChannel(t);
+        l = (0, c.e7)([U.Z, D.Z], () => {
+            let e = U.Z.getGuildId(),
+                n = D.Z.getChannel(t);
             return null != e ? e : null == n ? void 0 : n.guild_id;
         }),
-        a = (0, w.H)({
+        a = (0, L.H)({
             guildId: l,
             channelId: t,
         });
@@ -207,30 +207,32 @@ function en(e) {
               withFastTravel: n,
               focusSectionProps: i,
           })
-        : (0, r.jsx)(Z.Z, {
+        : (0, r.jsx)(w.Z, {
               searchContext: a,
               focusSectionProps: i,
           });
 }
 function er(e) {
-    let { withFastTravel: t, focusSectionProps: n } = e,
-        i = (0, c.e7)([k.Z], () => k.Z.getChannelId()),
-        l = (0, x.$)({ location: "TitleText" }),
-        a = (0, c.e7)([R.Z], () => {
-            let e = R.Z.getChannel(i);
+    let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e,
+        l = (0, c.e7)([M.Z], () => M.Z.getChannelId()),
+        a = (0, Z.$)({ location: "TitleText" }),
+        o = (0, c.e7)([D.Z], () => {
+            let e = D.Z.getChannel(l);
             return null != e && !e.isDirectory() && !e.isGuildVocal();
         });
-    return l && null != i && !(0, W.AB)(i) && a
+    return a && null != l && !(0, W.AB)(l) && o
         ? (0, r.jsx)(en, {
-              selectedChannelId: i,
+              selectedChannelId: l,
               withFastTravel: t,
-              focusSectionProps: n,
+              focusSectionProps: i,
           })
-        : (0, r.jsx)(et, {
-              selectedChannelId: i,
-              withFastTravel: t,
-              focusSectionProps: n,
-          });
+        : n
+          ? (0, r.jsx)(_.R, { focusSectionProps: i })
+          : (0, r.jsx)(et, {
+                selectedChannelId: l,
+                withFastTravel: t,
+                focusSectionProps: i,
+            });
 }
 let ei = i.memo(function () {
     i.useLayoutEffect(() => {
@@ -238,19 +240,22 @@ let ei = i.memo(function () {
     }, []);
     let e = (0, g.T)("AppTitleBar"),
         t = ee((e) => e.isOpen),
-        { notificationCenterVariant: n, entrypoint: l } = (0, S.pN)({ location: "AppTitleBar" }),
-        { backForwardButtons: a, titlebarFastTravel: o } = m.ZP.useExperiment({ location: "AppTitleBar" }),
-        s = (0, B.isDesktop)() && a,
+        { notificationCenterVariant: n, entrypoint: l } = (0, N.pN)({ location: "AppTitleBar" }),
+        {
+            backForwardButtons: a,
+            titlebarFastTravel: o,
+            quickSwitcherInsteadOfTitle: s,
+        } = (0, m.t)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: p } = f.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         _ = !t && e,
-        O = null !== n && l === S.u3.TITLE_BAR_LEFT,
-        y = null === n;
+        O = null !== n && l === N.u3.TITLE_BAR_LEFT,
+        E = null === n;
     i.useLayoutEffect(() => {
         V.ZP.setMinimumSize(Y.J, Y.N);
     }, []);
-    let N = (0, L.Ll)(),
-        j = (0, c.e7)([U.Z, P.Z], () => (0, H.rB)()),
-        x = (function (e) {
+    let v = (0, R.Ll)(),
+        T = (0, c.e7)([G.Z, j.Z], () => (0, H.rB)()),
+        A = (function (e) {
             let {
                 showBackForwardButtons: t,
                 showCollapsedSidebarIcons: n,
@@ -274,34 +279,34 @@ let ei = i.memo(function () {
                 [t, n, r, l, a],
             );
         })({
-            showBackForwardButtons: s,
+            showBackForwardButtons: a,
             showCollapsedSidebarIcons: _,
             showNotificationsInbox: O,
             titlebarFastTravel: o,
-            showRecentsButton: y,
+            showRecentsButton: E,
         });
-    return j
+    return T
         ? null
         : (0, r.jsx)(u.Wdt, {
               children: (e) =>
                   (0, r.jsx)(u.f6W, {
-                      theme: N,
+                      theme: v,
                       children: (t) =>
                           (0, r.jsx)(F.TF, {
                               className: t,
                               leading: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      s &&
+                                      a &&
                                           (0, r.jsx)(b.Z, {
                                               firstElementFocusJumpSectionProps:
-                                                  "BACK_FORWARD_NAVIGATION" === x ? e : void 0,
+                                                  "BACK_FORWARD_NAVIGATION" === A ? e : void 0,
                                           }),
                                       _ &&
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)(
                                                       u.P3F,
-                                                      $(J({}, "SIDEBAR" === x ? e : {}), {
+                                                      $(J({}, "SIDEBAR" === A ? e : {}), {
                                                           className: X.button,
                                                           onClick: () => {
                                                               ee.setState({ isOpen: !ee.getState().isOpen });
@@ -322,33 +327,34 @@ let ei = i.memo(function () {
                                               ],
                                           }),
                                       O &&
-                                          (0, r.jsx)(T.Z, {
-                                              focusSectionProps: "NOTIFICATIONS_INBOX" === x ? e : void 0,
+                                          (0, r.jsx)(P.Z, {
+                                              focusSectionProps: "NOTIFICATIONS_INBOX" === A ? e : void 0,
                                           }),
                                   ],
                               }),
                               title: (0, r.jsx)(er, {
                                   withFastTravel: o,
-                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === x ? e : void 0,
+                                  quickSwitcherInsteadOfTitle: s,
+                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === A ? e : void 0,
                               }),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(E.Z, { className: X.button }),
+                                      (0, r.jsx)(y.Z, { className: X.button }),
                                       (0, r.jsx)(h.Z, {
                                           canShowReminder: !0,
                                           className: X.button,
                                       }),
-                                      y && (0, r.jsx)(A.Z, $(J({}, "RECENTS" === x ? e : {}), { className: X.button })),
+                                      E && (0, r.jsx)(x.Z, $(J({}, "RECENTS" === A ? e : {}), { className: X.button })),
                                       p
-                                          ? (0, r.jsx)(I.Z, {
-                                                focusSectionProps: "HELP" === x ? e : void 0,
+                                          ? (0, r.jsx)(C.Z, {
+                                                focusSectionProps: "HELP" === A ? e : void 0,
                                                 className: X.button,
                                             })
-                                          : (0, r.jsx)(v.Z, {
-                                                focusSectionProps: "HELP" === x ? e : void 0,
+                                          : (0, r.jsx)(I.Z, {
+                                                focusSectionProps: "HELP" === A ? e : void 0,
                                                 className: X.button,
                                             }),
-                                      (0, r.jsx)(C.Z, { className: X.button }),
+                                      (0, r.jsx)(S.Z, { className: X.button }),
                                   ],
                               }),
                           }),

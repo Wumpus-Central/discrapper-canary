@@ -75,6 +75,7 @@ var o = (function (e) {
             (e.MLS_PAIRWISE_FINGERPRINTS = "mls_pairwise_fingerprints"),
             (e.OFFLOAD_ADM_CONTROLS = "offload_adm_controls"),
             (e.AUDIO_CODEC_RED = "audio_codec_red"),
+            (e.SIDECHAIN_COMPRESSION = "sidechain_compression"),
             e
         );
     })({}),

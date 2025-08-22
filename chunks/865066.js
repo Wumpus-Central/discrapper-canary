@@ -1,6 +1,7 @@
 n.d(t, {
     hi: () => u,
-    sU: () => d,
+    s2: () => d,
+    sU: () => f,
 });
 var r = n(442837),
     i = n(481060),
@@ -16,6 +17,9 @@ function c() {
 function u() {
     return (0, r.e7)([a.ZP], () => a.ZP.canShowAdminWarning) && !l() && c();
 }
-function d() {
+function d(e) {
+    return e.canShowAdminWarning && !l() && c();
+}
+function f() {
     (0, i.showToast)((0, i.createToast)(s.intl.string(s.t.kQnWb2), i.ToastType.SUCCESS));
 }

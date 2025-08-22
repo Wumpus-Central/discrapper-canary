@@ -10,26 +10,29 @@ var i = n(951288),
     d = n(643153);
 function f(e) {
     let { node: t } = e,
-        { currentPanel: n, setCurrentPanel: r } = (0, u.t)(),
-        o = t.useTitle(),
-        s = l.useMemo(() => t.layout.flatMap((e) => e.layout), [t]),
-        a = (null == n ? void 0 : n.key) === t.key;
+        { currentPanel: n, setCurrentPanel: r, setShowNavigationMobile: o } = (0, u.t)(),
+        s = t.useTitle(),
+        a = l.useMemo(() => t.layout.flatMap((e) => e.layout), [t]),
+        d = (null == n ? void 0 : n.key) === t.key;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
                 icon: t.icon,
-                title: o,
-                active: a,
-                onClick: () => r(t),
+                title: s,
+                active: d,
+                onClick: () => {
+                    r(t), o(!1);
+                },
             }),
-            a && s.length > 1 && (0, i.jsx)(g, { categories: s }),
+            d && a.length > 1 && (0, i.jsx)(g, { categories: a }),
         ],
     });
 }
 function g(e) {
     let { categories: t } = e,
         [n, r] = l.useState(0),
-        [u, c] = (0, a.q_F)(() => ({
+        { setShowNavigationMobile: c } = (0, u.t)(),
+        [f, g] = (0, a.q_F)(() => ({
             y: 0,
             config: {
                 mass: 0.1,
@@ -37,7 +40,7 @@ function g(e) {
                 tension: 300,
             },
         })),
-        f = l.useMemo(
+        v = l.useMemo(
             () =>
                 t
                     .map((e) => {
@@ -60,17 +63,17 @@ function g(e) {
                 className: d.track,
                 children: (0, i.jsx)(s.animated.div, {
                     className: d.thumb,
-                    style: u,
+                    style: f,
                 }),
             }),
             (0, i.jsx)("ul", {
-                children: f.map((e, t) => {
+                children: v.map((e, t) => {
                     let { title: l, key: s } = e;
                     return (0, i.jsx)(
                         a.P3F,
                         {
                             onClick: () => {
-                                r(t), c({ y: 40 * t });
+                                r(t), g({ y: 40 * t }), c(!1);
                             },
                             tag: "li",
                             className: o()({ [d.active]: t === n }),

@@ -1,8 +1,8 @@
 n.d(t, {
     IV: () => E,
     ZP: () => S,
-    bt: () => v,
-    fd: () => b,
+    bt: () => b,
+    fd: () => v,
 }),
     n(388685);
 var i = n(951288),
@@ -62,20 +62,20 @@ function O(e, t) {
         e
     );
 }
-let v = 256,
-    b = 144;
+let b = 256,
+    v = 144;
 function E(e, t, n) {
     if (e === h.C5.VERTICAL) {
-        let e = Math.max(t, v),
-            n = Math.max((9 / 16) * e, b);
+        let e = Math.max(t, b),
+            n = Math.max((9 / 16) * e, v);
         return {
             tileWidth: e,
             tileHeight: n,
         };
     }
-    let i = Math.max(n, b);
+    let i = Math.max(n, v);
     return {
-        tileWidth: Math.max((16 / 9) * i, v),
+        tileWidth: Math.max((16 / 9) * i, b),
         tileHeight: i,
     };
 }
@@ -90,8 +90,8 @@ let _ = {
                 widgetId: t,
                 tileWidth: n,
                 tileHeight: o,
-                layout: v,
-                locked: b,
+                layout: b,
+                locked: v,
                 activeStreams: E,
                 streamParticipants: S,
                 participantsVersion: x,
@@ -104,14 +104,14 @@ let _ = {
                 key: e.user.id,
                 width: n,
                 height: o,
-                locked: b,
+                locked: v,
                 widgetId: t,
                 pinned: I,
             })),
             w = (0, c.Z)(n),
-            Z = (0, c.Z)(b),
-            P = v === h.C5.VERTICAL,
-            T = b || Z !== b || w !== n,
+            Z = (0, c.Z)(v),
+            P = b === h.C5.VERTICAL,
+            T = v || Z !== v || w !== n,
             A = 0,
             k = 0,
             D = (0, s.Yzy)(

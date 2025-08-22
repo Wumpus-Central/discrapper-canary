@@ -157,12 +157,12 @@ let b = [
             useTooltip: e.useTooltip,
         }),
     })),
-    x = (0, u.qs)("SelectedChannelNotifications", {
+    p = (0, u.qs)("SelectedChannelNotifications", {
         useTitle: () => f.intl.string(f.t.TzjwV1),
         useValue: () => (0, r.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
         setValue: (e) => s.default.setNotifyMessagesInSelectedChannel(e),
     }),
-    p = (0, u.qs)("DisableAllNotificationSounds", {
+    x = (0, u.qs)("DisableAllNotificationSounds", {
         useTitle: () => f.intl.string(f.t["2ZhCOT"]),
         useSubtitle: () => f.intl.string(f.t["+B0XLC"]),
         useValue: () => (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds()),
@@ -196,5 +196,5 @@ let b = [
                 children: t,
             });
         },
-        getLayout: () => [b[0].node, x, b[1].node, p, ...b.slice(2).map((e) => e.node)],
+        getLayout: () => [b[0].node, p, b[1].node, x, ...b.slice(2).map((e) => e.node)],
     });

@@ -11,7 +11,7 @@ function a(e) {
         v = null == u ? void 0 : u(),
         m = n(),
         b = null == c ? void 0 : c(),
-        x = null == d ? void 0 : d();
+        p = null == d ? void 0 : d();
     return (0, i.jsx)(l.x, {
         title: g,
         className: s.settingButtonContainer,
@@ -27,7 +27,7 @@ function a(e) {
                     onClick: f,
                     text: m,
                     variant: b,
-                    disabled: x,
+                    disabled: p,
                 }),
             ],
         }),

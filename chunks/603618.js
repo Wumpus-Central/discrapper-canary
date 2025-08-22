@@ -22,8 +22,8 @@ var i = n(951288),
     g = n(13245),
     y = n(99690),
     O = n(493773),
-    v = n(549879),
-    b = n(620662),
+    b = n(549879),
+    v = n(620662),
     E = n(835473),
     _ = n(194082),
     S = n(297781),
@@ -105,7 +105,7 @@ function X(e) {
             return () => clearTimeout(e);
         }
     }, [s]);
-    let O = null != n && (0, b.Z)(n, G.xjy.JOIN),
+    let O = null != n && (0, v.Z)(n, G.xjy.JOIN),
         E = async (e) => {
             if (null != a && "unsent" === s) {
                 e.stopPropagation();
@@ -123,7 +123,7 @@ function X(e) {
                             n = null != (i = T.Z.getChannel(e)) ? i : null;
                         l()(null != n, "Send channel must be defined"),
                             (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
-                            (0, v.i)(G.IlC.OVERLAY, !0),
+                            (0, b.i)(G.IlC.OVERLAY, !0),
                             "fake_inventory_item" in t.extra && !0 === t.extra.fake_inventory_item
                                 ? await (0, x.k)({
                                       channel: n,
@@ -164,7 +164,7 @@ function X(e) {
                 n = null != (e = T.Z.getChannel(t)) ? e : null;
             l()(null != n, "Send channel must be defined"),
                 (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
-                (0, v.i)(G.IlC.OVERLAY, !0),
+                (0, b.i)(G.IlC.OVERLAY, !0),
                 (0, W.Ws)(G.Odu.ACTIVITY, {
                     type: W.Qu.REDIRECT,
                     value: W.bk.CHAT,
@@ -220,7 +220,7 @@ function q(e) {
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
         s = (0, u.e7)([k.Z], () => (null != l ? k.Z.getApplicationActivity(l.id, a) : null), [a, l]),
         [c, h] = r.useState("unsent");
-    if (!(null != s && (0, b.Z)(s, G.xjy.JOIN))) return null;
+    if (!(null != s && (0, v.Z)(s, G.xjy.JOIN))) return null;
     let m = async (e) => {
             if (null != l && "unsent" === c) {
                 e.stopPropagation();
@@ -499,7 +499,7 @@ function en(e) {
 }
 function ei(e) {
     let { activity: t, currentUser: n, showInviteButton: r = !0 } = e,
-        o = null != t && (0, b.Z)(t, G.xjy.JOIN),
+        o = null != t && (0, v.Z)(t, G.xjy.JOIN),
         l = (0, E.q)(null == t ? void 0 : t.application_id),
         a = null != l && (0, z.yE)(l.flags, G.udG.EMBEDDED);
     return null == t || null == n

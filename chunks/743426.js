@@ -179,6 +179,7 @@ class v extends a.Z {
             case h.AN.SAMPLE_PLAYBACK:
             case h.AN.NOISE_SUPPRESSION:
             case h.AN.AUTOMATIC_GAIN_CONTROL:
+            case h.AN.SIDECHAIN_COMPRESSION:
                 return !0;
             default:
                 return !1;

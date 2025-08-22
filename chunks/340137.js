@@ -47,7 +47,7 @@ function S(e) {
             width: 20,
         }),
         { badge: T, badgeType: P } = (0, b.h6)({ isSelected: O }),
-        { backForwardButtons: j } = d.MK.useExperiment({ location: "AppTitleBar" }),
+        { backForwardButtons: j } = (0, d.t)({ location: "AppTitleBar" }),
         A = (0, h.isDesktop)() && j,
         x = (0, p.A)(),
         Z = (0, h.isMac)() ? v[x] : A ? I[x] : C[x];

@@ -26,7 +26,7 @@ function f(e, t, n, f) {
         icon: g,
         title: h,
         body: m,
-        confirmText: d.intl.string(d.t["fgP/wc"]),
+        confirmText: d.intl.string(p.default.UGbmBg),
         cancelText: d.intl.string(d.t.tpXzJy),
         onNotificationShow: () => {
             y();

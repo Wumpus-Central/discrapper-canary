@@ -1,44 +1,32 @@
-n.d(t, { d: () => c });
+n.d(t, { d: () => d });
 var i = n(951288),
     l = n(873546),
-    r = n(755721),
+    r = n(861066),
     o = n(481060),
     s = n(950796),
-    a = n(990757);
-function u(e) {
-    let { icon: t, onClick: n, disabled: l } = e;
-    return (0, i.jsx)(r.zx, {
-        look: r.zx.Looks.BLANK,
-        size: r.zx.Sizes.NONE,
-        className: a.topBarButton,
-        innerClassName: a.iconButtonInner,
-        onClick: n,
-        disabled: l,
-        children: (0, i.jsx)(t, { size: "sm" }),
+    a = n(388032),
+    u = n(990757);
+function c(e) {
+    let { icon: t, label: n, onClick: l, disabled: o } = e;
+    return (0, i.jsx)(r.h, {
+        onClick: l,
+        disabled: o,
+        "aria-label": n,
+        icon: t,
+        size: "sm",
+        variant: "icon-only",
     });
 }
-function c(e) {
+function d(e) {
     let { onClose: t } = e;
     return (0, i.jsx)("div", {
-        className: a.topBar,
+        className: u.topBar,
         children: (0, i.jsx)(s.TF, {
-            leading: (0, i.jsxs)("div", {
-                className: a.arrowButtons,
-                children: [
-                    (0, i.jsx)(u, {
-                        icon: o.whL,
-                        disabled: !0,
-                    }),
-                    (0, i.jsx)(u, {
-                        icon: o.ZSh,
-                        disabled: !0,
-                    }),
-                ],
-            }),
             trailing:
                 l.tq &&
-                (0, i.jsx)(u, {
+                (0, i.jsx)(c, {
                     icon: o.Dio,
+                    label: a.intl.string(a.t.cpT0Cg),
                     onClick: t,
                 }),
         }),

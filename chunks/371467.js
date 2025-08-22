@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ev }), n(539854), n(388685), n(642613), n(290780);
+n.d(t, { Z: () => eb }), n(539854), n(388685), n(642613), n(290780);
 var i,
     r = n(512722),
     o = n.n(r),
@@ -15,8 +15,8 @@ var i,
     g = n(314897),
     y = n(592125),
     O = n(375954),
-    v = n(292959),
-    b = n(649974),
+    b = n(292959),
+    v = n(649974),
     E = n(158776),
     _ = n(699516),
     S = n(944486),
@@ -189,7 +189,7 @@ function eg() {
         D.Z.isNotificationDisabled(T.OverlayNotificationDisabledSetting.NOW_PLAYING)
     )
         return !1;
-    let e = b.Z.usersPlaying,
+    let e = v.Z.usersPlaying,
         t = new Set(),
         n = (function () {
             let e = [];
@@ -205,7 +205,7 @@ function eg() {
                 if (!_.Z.isFriend(e)) return !1;
                 let r = t.gameId;
                 if (null == r) return !1;
-                let o = null == (n = b.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
+                let o = null == (n = v.Z.getNowPlaying(r)[e]) ? void 0 : n.activity;
                 if (
                     null == o ||
                     o.type !== Q.IIU.PLAYING ||
@@ -306,14 +306,14 @@ function ey(e) {
 }
 class eO extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(y.Z, j.default, b.Z, D.Z), this.syncWith([b.Z], eg);
+        this.waitFor(y.Z, j.default, v.Z, D.Z), this.syncWith([v.Z], eg);
     }
     getNotifications() {
         return er;
     }
 }
 X(eO, "displayName", "OverlayNotificationsStore");
-let ev = new eO(s.Z, {
+let eb = new eO(s.Z, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
         let { notificationId: t, status: n } = e;
         ef(t, n);
@@ -426,7 +426,7 @@ let ev = new eO(s.Z, {
             !(0, p.eF)(l, r)
         )
             return !1;
-        let c = !v.Z.isSoundDisabled(N.Ay),
+        let c = !b.Z.isSoundDisabled(N.Ay),
             u = null != (i = O.Z.getMessage(r, l.id)) ? i : (0, d.e5)(l);
         em((0, H.Z)(a, u, s, c), {
             type: L.kL.TEXT,
