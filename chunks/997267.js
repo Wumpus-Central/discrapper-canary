@@ -14,5 +14,4 @@ e.exports = {
     rewardTileWrapper: "rewardTileWrapper__2055a",
     rewardTileExpired: "rewardTileExpired__2055a",
     rewardTileExpirationTooltip: "rewardTileExpirationTooltip__2055a",
-    removeStackWidth: "removeStackWidth__2055a",
 };

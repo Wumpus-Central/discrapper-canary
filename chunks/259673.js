@@ -34,7 +34,7 @@ let d = (e) => {
             }
             return i;
         })(f, ["pendingAvatar"]),
-        b = (0, a.SD)({
+        g = (0, a.SD)({
             userId: d.id,
             image: p,
         });
@@ -69,7 +69,7 @@ let d = (e) => {
             })({}, v)),
             (n = n =
                 {
-                    pendingAvatar: b,
+                    pendingAvatar: g,
                     user: d,
                     pendingBadges: [(0, c.X)()],
                     canUsePremiumCustomization: m,

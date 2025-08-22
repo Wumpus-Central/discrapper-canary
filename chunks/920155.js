@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(803948),
+    s = n(202841),
     l = n(442837),
     c = n(930295),
     u = n(681803),
@@ -134,6 +134,7 @@ function I(e) {
                     children:
                         null != S
                             ? (0, r.jsx)(d.$, {
+                                  offsetBottom: 0.4,
                                   color: S,
                                   className: h.popoverGradientWrapper,
                                   children: l,

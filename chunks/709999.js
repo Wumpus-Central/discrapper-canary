@@ -15,8 +15,8 @@ var r = i(951288),
     c = i(311570),
     p = i(399606),
     g = i(622535),
-    m = i(481060),
-    h = i(727637),
+    h = i(481060),
+    m = i(727637),
     v = i(607070),
     x = i(100527),
     f = i(906732),
@@ -119,9 +119,9 @@ let eu = (e) => {
             className: s()(eo.nameplatePreviewSampleItem, eo.placeholderItem),
             style: { opacity: l },
             children: [
-                (0, r.jsx)(m.qEK, {
+                (0, r.jsx)(h.qEK, {
                     src: null,
-                    size: m.EFr.SIZE_32,
+                    size: h.EFr.SIZE_32,
                     status: t ? en.Skl.ONLINE : void 0,
                     statusColor: "var(--border-subtle)",
                     "aria-hidden": !0,
@@ -184,7 +184,7 @@ let eu = (e) => {
             }),
         });
     },
-    em = (e) => {
+    eh = (e) => {
         let { tab: t, selectedProduct: i, cardRef: l, children: n } = e,
             { handleCardVisibilityChange: s } = (0, W.E)(i.skuId, t === el.AW.CATALOG ? "full" : t);
         return (0, r.jsx)(g.$, {
@@ -194,7 +194,7 @@ let eu = (e) => {
             children: n,
         });
     },
-    eh =
+    em =
         12633 == i.j
             ? l.memo(function (e) {
                   var { tab: t, product: i, onMount: n, _isInHeroBlock: s = !1 } = e,
@@ -225,13 +225,13 @@ let eu = (e) => {
                       d = (0, k.o)(i, o),
                       u = (0, X.W)(i, d),
                       c = l.useRef(null),
-                      { previewingVariantIndex: g, handleEntering: m, handleLeaving: h } = (0, ee.f)(i),
+                      { previewingVariantIndex: g, handleEntering: h, handleLeaving: m } = (0, ee.f)(i),
                       v = (0, $.o)(i, o, g);
                   return (
                       l.useEffect(() => {
                           null == n || n(c, i);
                       }, [n, i]),
-                      (0, r.jsx)(em, {
+                      (0, r.jsx)(eh, {
                           tab: t,
                           selectedProduct: u,
                           cardRef: c,
@@ -245,8 +245,8 @@ let eu = (e) => {
                                       selectedProduct: u,
                                       cardRef: c,
                                       previewingVariantIndex: g,
-                                      handleEntering: m,
-                                      handleLeaving: h,
+                                      handleEntering: h,
+                                      handleLeaving: m,
                                       firstCollectibleItem: v,
                                       _isInHeroBlock: s,
                                   },
@@ -267,7 +267,7 @@ function ev(e) {
             analyticsLocations: a,
             buildHandlePreviewClick: d,
             isPremiumUser: g,
-            isPremiumProduct: h,
+            isPremiumProduct: m,
             isPurchased: v,
             isPartiallyOwnedBundle: f,
             isDisabled: C,
@@ -304,7 +304,7 @@ function ev(e) {
         });
     if (0 === K.length) return null;
     let et = () =>
-        (0, r.jsx)(m.zxk, {
+        (0, r.jsx)(h.zxk, {
             variant: "primary",
             onClick: (e) => {
                 e.stopPropagation(), F(e);
@@ -318,7 +318,7 @@ function ev(e) {
             (0, r.jsx)("div", {
                 className: eo.innerBlur,
                 children: C
-                    ? (0, r.jsx)(m.Text, {
+                    ? (0, r.jsx)(h.Text, {
                           tag: "div",
                           variant: "heading-md/semibold",
                           color: "header-muted",
@@ -330,8 +330,8 @@ function ev(e) {
                             className: eo.priceTag,
                             isPartiallyPurchased: f,
                         })
-                      : h
-                        ? (0, r.jsx)(m.Text, {
+                      : m
+                        ? (0, r.jsx)(h.Text, {
                               variant: "text-md/semibold",
                               className: eo.priceTag,
                               children: ea.intl.string(ea.t.rt69oq),
@@ -357,11 +357,12 @@ function ev(e) {
             }),
             (0, r.jsx)("div", {
                 className: eo.innerHover,
-                children: (0, r.jsxs)("div", {
-                    className: eo.buttonsContainer,
+                children: (0, r.jsxs)(h.hE2, {
+                    wrap: !1,
+                    fullWidth: !0,
                     children: [
                         (() => {
-                            if (h && !g && !k)
+                            if (m && !g && !k)
                                 return (0, r.jsx)("div", {
                                     className: eo.hoverUpsellContainer,
                                     children: (0, r.jsx)(P.Z, {
@@ -375,7 +376,7 @@ function ev(e) {
                                 });
                             if (!W || C) return et();
                             if (v)
-                                return (0, r.jsx)(m.zxk, {
+                                return (0, r.jsx)(h.zxk, {
                                     variant: "primary",
                                     onClick: (e) => {
                                         e.stopPropagation(), D();
@@ -385,7 +386,7 @@ function ev(e) {
                                     fullWidth: !0,
                                 });
                             {
-                                if (h) {
+                                if (m) {
                                     let e = async () => {
                                         j.default.track(en.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                             collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -407,7 +408,7 @@ function ev(e) {
                                                 purchaseType: el.o8.PREMIUM_PURCHASE,
                                             });
                                     };
-                                    return (0, r.jsx)(m.zxk, {
+                                    return (0, r.jsx)(h.zxk, {
                                         variant: "primary",
                                         onClick: (t) => {
                                             t.stopPropagation(), e();
@@ -422,7 +423,7 @@ function ev(e) {
                                 }
                                 if ($)
                                     if (ee)
-                                        return (0, r.jsx)(m.zxk, {
+                                        return (0, r.jsx)(h.zxk, {
                                             variant: "primary",
                                             text: ea.intl.format(ea.t.kAgx5O, {
                                                 orbPrice: X[0].amount,
@@ -480,7 +481,7 @@ function ev(e) {
                                         });
                                     else return et();
                                 if (i === el.AW.ORBS)
-                                    return (0, r.jsx)(m.zxk, {
+                                    return (0, r.jsx)(h.zxk, {
                                         variant: "primary",
                                         onClick: (e) => {
                                             e.stopPropagation(), F(e);
@@ -491,7 +492,7 @@ function ev(e) {
                                 let e = q
                                     ? ea.intl.formatToPlainString(ea.t["5U5RBw"], { discountOfferAmount: U })
                                     : ea.intl.formatToPlainString(ea.t["cNSL/v"], { price: Z });
-                                return (0, r.jsx)(m.zxk, {
+                                return (0, r.jsx)(h.zxk, {
                                     variant: "primary",
                                     onClick: (e) => {
                                         e.stopPropagation(),
@@ -524,13 +525,13 @@ function ev(e) {
                                 });
                             }
                         })(),
-                        h || o.tq || J || !W || i === el.AW.ORBS
+                        m || o.tq || J || !W || i === el.AW.ORBS
                             ? null
                             : k
-                              ? (0, r.jsx)(m.hU, {
+                              ? (0, r.jsx)(h.hU, {
                                     variant: "primary",
                                     "aria-label": ea.intl.string(ea.t.SKNnqq),
-                                    icon: m.tEF,
+                                    icon: h.tEF,
                                     onClick: (e) => {
                                         e.stopPropagation(), F(e);
                                     },
@@ -571,7 +572,7 @@ let ex =
                       } = e,
                       { analyticsLocations: T } = (0, f.ZP)([x.Z.COLLECTIBLES_SHOP_CARD]),
                       k = (0, S.sp)(),
-                      L = (0, h.Z)(c),
+                      L = (0, m.Z)(c),
                       W = (0, J.m)(c),
                       B = L || W,
                       M = (0, et.To)(t),
@@ -579,14 +580,14 @@ let ex =
                       z = I.ZP.canUseCollectibles(i),
                       U = l.useMemo(() => (0, N.BH)(t, z), [t, z]),
                       K = (0, N.G1)(t),
-                      Q = (0, p.e7)([_.Z], () => (0, m.wjy)(_.Z.theme)),
+                      Q = (0, p.e7)([_.Z], () => (0, h.wjy)(_.Z.theme)),
                       X = (0, N.Yq)(t.skuId),
                       Y = n.skuId === d.T.ANIME_V3 && (0, N.WW)(t.skuId),
                       { hoverVariant: $ } = (0, w.E)("CollectiblesShopTallCard"),
                       { isPurchased: ee, isPartiallyOwnedBundle: er } = (0, Z.L)(g),
                       { isDisabled: es } = (0, R.G)(g.skuId),
                       ep = null !== b ? b : P,
-                      [em, eh] = l.useState(!1),
+                      [eh, em] = l.useState(!1),
                       ex = l.useCallback(
                           function (e, t, l) {
                               let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
@@ -655,8 +656,8 @@ let ex =
                       e_ = eC(x.Z.COLLECTIBLES_SHOP_CARD);
                   return 0 === ey.length || ((0, N.x6)(t) && null != U && U.discountPercentage < 0)
                       ? null
-                      : (0, r.jsx)(m.tEY, {
-                            children: (0, r.jsxs)(m.kL8, {
+                      : (0, r.jsx)(h.tEY, {
+                            children: (0, r.jsxs)(h.kL8, {
                                 className: s()(E, Q ? eo.shopCardDark : eo.shopCard, {
                                     [eo.partiallyOwned]: er && !B,
                                     [eo.shopCardAnimation]: !G && $ !== w.D.NO_MOVEMENT,
@@ -667,19 +668,19 @@ let ex =
                                 "aria-label": t.name,
                                 children: [
                                     K &&
-                                        (0, r.jsx)(m.ua7, {
+                                        (0, r.jsx)(h.ua7, {
                                             tooltipContentClassName: eo.premiumWheelTooltipContent,
-                                            color: m.ua7.Colors.PRIMARY,
+                                            color: h.ua7.Colors.PRIMARY,
                                             text: ea.intl.string(ea.t.nKdAlJ),
                                             children: (e) => {
                                                 var t, i;
                                                 return (0, r.jsx)(
-                                                    m.IGR,
+                                                    h.IGR,
                                                     ((t = ed({}, e)),
                                                     (i = i =
                                                         {
                                                             className: eo.premiumWheelBadge,
-                                                            text: (0, r.jsx)(m.SrA, {
+                                                            text: (0, r.jsx)(h.SrA, {
                                                                 size: "md",
                                                                 color: "currentColor",
                                                                 className: eo.premiumWheel,
@@ -715,19 +716,19 @@ let ex =
                                     }),
                                     er || ee || !X
                                         ? eP
-                                            ? (0, r.jsx)(m.IGR, {
+                                            ? (0, r.jsx)(h.IGR, {
                                                   text: ea.intl.string(ea.t["0TmQRE"]),
                                                   disableColor: !0,
                                                   className: eo.badge,
                                               })
                                             : Y
-                                              ? (0, r.jsx)(m.IGR, {
+                                              ? (0, r.jsx)(h.IGR, {
                                                     text: ea.intl.string(ea.t.S6kE9v),
                                                     disableColor: !0,
                                                     className: eo.badge,
                                                 })
                                               : null
-                                        : (0, r.jsx)(m.IGR, {
+                                        : (0, r.jsx)(h.IGR, {
                                               text: ea.intl.string(ea.t.y2b7CA),
                                               disableColor: !0,
                                               className: eo.badge,
@@ -751,7 +752,7 @@ let ex =
                                                 let e = t.variants[ep];
                                                 if (null == e) return null;
                                                 let [i] = e.items;
-                                                return ex(i, B, ee, em);
+                                                return ex(i, B, ee, eh);
                                             })
                                             .with(u.Z.EXTERNAL_SKU, () =>
                                                 (0, r.jsx)(V.b, {
@@ -763,7 +764,7 @@ let ex =
                                             .otherwise(() => null),
                                     }),
                                     (() => {
-                                        let e = ee ? m.sV5 : es ? m.mBM : null;
+                                        let e = ee ? h.sV5 : es ? h.mBM : null;
                                         return null == e
                                             ? null
                                             : (0, r.jsx)("div", {
@@ -784,7 +785,7 @@ let ex =
                                             { [eo.variantsGroup]: t.type === u.Z.VARIANTS_GROUP },
                                         ),
                                         children: [
-                                            (0, r.jsx)(m.X6q, {
+                                            (0, r.jsx)(h.X6q, {
                                                 variant: "text-lg/bold",
                                                 className: eo.productName,
                                                 children: M,
@@ -798,7 +799,7 @@ let ex =
                                                           handleLeaving: O,
                                                       },
                                                       selectedVariantIndex: P,
-                                                      setIsHoveringOnSwitch: eh,
+                                                      setIsHoveringOnSwitch: em,
                                                       minimal: !B,
                                                       alternativeBackgroundColor:
                                                           (null == y ? void 0 : y.type) === u.Z.PROFILE_EFFECT,
@@ -826,4 +827,4 @@ let ex =
                         });
               })
             : null,
-    ef = 12633 == i.j ? eh : null;
+    ef = 12633 == i.j ? em : null;

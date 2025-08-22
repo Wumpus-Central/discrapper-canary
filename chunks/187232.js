@@ -65,8 +65,22 @@ let u = {
         rewardAssetIdMap: (0, i.YV)([u, d, f, _, p, h, m, g]),
         chatGiftIcon: {
             trinketsAnimation: {
-                getAnimationData: () => n(969666),
-                getGlowAnimationData: () => n(90801),
+                getAnimationData: () =>
+                    n
+                        .e("2561")
+                        .then(n.bind(n, 969666))
+                        .then((e) => {
+                            let { default: t } = e;
+                            return fetch(t).then((e) => e.json());
+                        }),
+                getGlowAnimationData: () =>
+                    n
+                        .e("51924")
+                        .then(n.bind(n, 90801))
+                        .then((e) => {
+                            let { default: t } = e;
+                            return fetch(t).then((e) => e.json());
+                        }),
             },
         },
         dismissibleContentVersion: 4,

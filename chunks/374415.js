@@ -14,8 +14,9 @@ function s(e) {
             children: d,
             wrap: f = !0,
             fullWidth: _ = !1,
+            fullWidthContainer: p = !1,
         } = e,
-        p = i.useMemo(
+        h = i.useMemo(
             () => ({
                 size: t,
                 fullWidth: _,
@@ -30,8 +31,9 @@ function s(e) {
         wrap: f,
         padding: c,
         className: u,
+        fullWidth: !!p || _,
         children: (0, r.jsx)(o.u.Provider, {
-            value: p,
+            value: h,
             children: d,
         }),
     });

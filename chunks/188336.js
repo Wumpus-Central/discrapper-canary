@@ -40,8 +40,6 @@ e.exports = {
     priceTagContainer: "priceTagContainer_c50f62",
     headingWithItemTypePill: "headingWithItemTypePill_c50f62",
     disabledReason: "disabledReason_c50f62",
-    buttonsContainer: "buttonsContainer_c50f62",
-    checkoutButtonsRow: "checkoutButtonsRow_c50f62",
     variantsSwitch: "variantsSwitch_c50f62",
     externalProductProfilePreview: "externalProductProfilePreview_c50f62",
     orbIconAligned: "orbIconAligned_c50f62",

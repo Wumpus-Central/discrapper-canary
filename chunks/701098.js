@@ -1,7 +1,7 @@
-n.d(t, { G: () => b });
+n.d(t, { G: () => g });
 var r = n(951288),
-    i = n(647438),
-    l = n(442837),
+    l = n(647438),
+    i = n(442837),
     o = n(481060),
     a = n(569545),
     c = n(352954),
@@ -9,20 +9,20 @@ var r = n(951288),
     u = n(441894),
     d = n(199902),
     f = n(388032);
-function b(e) {
+function g(e) {
     let { stream: t, channelId: n } = e,
-        b = (0, u.J)({ channelId: n }),
-        p = (0, l.e7)([d.Z], () => null != d.Z.getActiveStreamForApplicationStream(t)),
-        g = (0, a.V9)(t),
-        O = (0, s.t)(g),
-        h = i.useCallback(() => {
-            c.Z.openSecureFramesStreamVerification(g, n);
-        }, [n, g]);
-    return b && p && !O
+        g = (0, u.J)({ channelId: n }),
+        b = (0, i.e7)([d.Z], () => null != d.Z.getActiveStreamForApplicationStream(t)),
+        p = (0, a.V9)(t),
+        h = (0, s.t)(p),
+        j = l.useCallback(() => {
+            c.Z.openSecureFramesStreamVerification(p, n);
+        }, [n, p]);
+    return g && b && !h
         ? (0, r.jsx)(o.sNh, {
               id: "secure-frames-stream-verification",
               label: f.intl.string(f.t.tjbJbW),
-              action: h,
+              action: j,
           })
         : null;
 }

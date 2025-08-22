@@ -148,7 +148,6 @@ class P extends (r = a.PureComponent) {
                 justify: "space-between",
                 children: [
                     (0, i.jsx)(d.h, {
-                        justify: "start",
                         children: (0, i.jsxs)("div", {
                             className: I.disabledTooltipWrapper,
                             children: [
@@ -181,7 +180,6 @@ class P extends (r = a.PureComponent) {
                         }),
                     }),
                     (0, i.jsxs)(d.h, {
-                        justify: "end",
                         children: [
                             (0, i.jsx)(u.z, {
                                 type: "button",

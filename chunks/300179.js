@@ -10,7 +10,6 @@ e.exports = {
     darkCardBackground: "darkCardBackground_c3d04b",
     lightCardBackground: "lightCardBackground_c3d04b",
     priceTag: "priceTag_c3d04b",
-    buttonsContainer: "buttonsContainer_c3d04b",
     premiumWheelTooltipContent: "premiumWheelTooltipContent_c3d04b",
     premiumWheelBadge: "premiumWheelBadge_c3d04b",
     premiumWheel: "premiumWheel_c3d04b",

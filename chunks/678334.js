@@ -219,6 +219,7 @@ function L(e) {
                       (0, r.jsx)(u.Text, {
                           variant: "text-xs/semibold",
                           className: D.discountFooterText,
+                          lineClamp: 2,
                           children: w.intl.formatToPlainString(w.t.IhKBNT, { discountOfferAmount: eU }),
                       }),
               ],

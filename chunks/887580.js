@@ -1,7 +1,7 @@
 n.d(t, {
-    $2: () => b,
-    sZ: () => v,
-    vF: () => T,
+    $2: () => E,
+    sZ: () => O,
+    vF: () => I,
 }),
     n(413496),
     n(433524),
@@ -9,162 +9,151 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(755721),
-    s = n(481060),
-    l = n(314897),
-    c = n(594174),
-    u = n(572004),
-    d = n(499533),
-    f = n(492435),
-    _ = n(389494),
-    p = n(667344),
-    h = n(453032),
-    m = n(493075),
-    g = n(941189);
-let E = RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-function b(e) {
-    return E.test(e);
+    o = n(481060),
+    s = n(314897),
+    l = n(594174),
+    c = n(572004),
+    u = n(499533),
+    d = n(492435),
+    f = n(389494),
+    _ = n(667344),
+    p = n(453032),
+    h = n(493075),
+    m = n(941189);
+let g = RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
+function E(e) {
+    return g.test(e);
 }
-function y(e) {
-    let t = e.match(E);
+function b(e) {
+    let t = e.match(g);
     return null == t || t.length < 2 ? null : t[1];
 }
-function O(e) {
-    let t = e.match(E);
+function y(e) {
+    let t = e.match(g);
     return null == t || t.length < 3 ? null : parseInt(t[2], 10);
 }
-function v(e, t) {
+function O(e, t) {
     return null != t ? "dev://experiment/".concat(e, "/").concat(t) : "dev://experiment/".concat(e);
 }
-function I(e) {
+function v(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
-            (0, u.JG)(t, () =>
-                (0, s.showToast)({
+            (0, c.JG)(t, () =>
+                (0, o.showToast)({
                     id: "experiment-link-copied",
                     message: "Copied experiment link",
-                    type: s.ToastType.SUCCESS,
+                    type: o.ToastType.SUCCESS,
                 }),
             );
         }, [t]);
-    return (0, r.jsx)(s.P3F, {
-        className: g.copyLinkButton,
+    return (0, r.jsx)(o.P3F, {
+        className: m.copyLinkButton,
         onClick: n,
-        children: (0, r.jsx)(s.xPt, {
+        children: (0, r.jsx)(o.xPt, {
             size: "sm",
             color: "currentColor",
         }),
     });
 }
-function T(e) {
+function I(e) {
     let { url: t } = e,
-        n = y(t),
-        u = O(t),
-        { experiments: E, overridesInfo: b } = (0, m.s)(),
-        { experiments: v, overridesInfo: T } = (0, p.Q)(),
-        S = i.useMemo(() => (null == n ? null : null != E[n] ? E[n] : v[n]), [E, v, n]),
-        A = i.useMemo(() => {
+        n = b(t),
+        c = y(t),
+        { experiments: g, overridesInfo: E } = (0, h.s)(),
+        { experiments: O, overridesInfo: I } = (0, _.Q)(),
+        T = i.useMemo(() => (null == n ? null : null != g[n] ? g[n] : O[n]), [g, O, n]),
+        S = i.useMemo(() => {
             if (null == n);
-            else if (null != b[n]) return b[n];
-            else if (null != T[n]) return T[n];
-        }, [b, T, n]),
-        C = l.default.getId(),
-        N = (0, h.a)(S, C),
-        R = i.useMemo(
+            else if (null != E[n]) return E[n];
+            else if (null != I[n]) return I[n];
+        }, [E, I, n]),
+        A = s.default.getId(),
+        C = (0, p.a)(T, A),
+        N = i.useMemo(
             () =>
-                null == N || null == S
+                null == C || null == T
                     ? null
-                    : S.system === f.I.LEGACY
-                      ? d.Z.getExperimentBucketName(N.bucket)
-                      : S.system === f.I.APEX
-                        ? "Variant ".concat(N.variantId)
+                    : T.system === d.I.LEGACY
+                      ? u.Z.getExperimentBucketName(C.bucket)
+                      : T.system === d.I.APEX
+                        ? "Variant ".concat(C.variantId)
                         : null,
-            [N, S],
+            [C, T],
         ),
-        P = (0, a.e7)([c.default], () => {
-            let e = c.default.getCurrentUser();
+        R = (0, a.e7)([l.default], () => {
+            let e = l.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         });
-    if (null == n || null == S) return null;
-    let w = (0, _.a)(S).find((e) => e.value === u),
-        D = +(null != w),
-        x = null != A && null != w && A.variantId === w.value,
-        L = () => {
-            null != w && (x ? (0, f.rX)(S.system, n, null) : (0, f.rX)(S.system, n, w.value));
+    if (null == n || null == T) return null;
+    let P = (0, f.a)(T).find((e) => e.value === c),
+        w = +(null != P),
+        D = null != S && null != P && S.variantId === P.value,
+        x = () => {
+            null != P && (D ? (0, d.rX)(T.system, n, null) : (0, d.rX)(T.system, n, P.value));
         },
-        j = (0, r.jsx)(I, { url: t }),
-        M = null;
-    return (1 === D && null != w
-        ? (M = (0, r.jsx)(s.Text, {
+        L = (0, r.jsx)(v, { url: t }),
+        j = null;
+    return (1 === w && null != P
+        ? (j = (0, r.jsx)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
-              children: w.label,
+              children: P.label,
           }))
-        : null != N &&
-          (M = (0, r.jsxs)(s.Text, {
+        : null != C &&
+          (j = (0, r.jsxs)(o.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
-              children: ["Server Config: ", R],
+              children: ["Server Config: ", N],
           })),
-    P)
+    R)
         ? (0, r.jsxs)("div", {
-              className: g.root,
+              className: m.root,
               children: [
                   (0, r.jsx)("div", {
                       children: (0, r.jsx)("div", {
-                          className: g.header,
-                          children: (0, r.jsxs)(s.Kqy, {
+                          className: m.header,
+                          children: (0, r.jsxs)(o.Kqy, {
                               direction: "horizontal",
-                              align: "start",
-                              gap: 8,
+                              justify: "space-between",
                               children: [
-                                  (0, r.jsx)(s.Che, { size: "lg" }),
-                                  (0, r.jsxs)(s.Kqy, {
-                                      direction: "vertical",
-                                      gap: 0,
+                                  (0, r.jsxs)(o.Kqy, {
+                                      direction: "horizontal",
+                                      gap: 8,
                                       children: [
-                                          (0, r.jsx)(s.Text, {
-                                              variant: "text-md/semibold",
-                                              children: S.title,
+                                          (0, r.jsx)(o.Che, { size: "lg" }),
+                                          (0, r.jsxs)(o.Kqy, {
+                                              direction: "vertical",
+                                              gap: 0,
+                                              children: [
+                                                  (0, r.jsx)(o.Text, {
+                                                      variant: "text-md/semibold",
+                                                      children: T.title,
+                                                  }),
+                                                  j,
+                                              ],
                                           }),
-                                          M,
                                       ],
                                   }),
-                                  j,
+                                  L,
                               ],
                           }),
                       }),
                   }),
-                  (0, r.jsx)(s.Kqy, {
-                      direction: "horizontal",
-                      align: "center",
-                      gap: 4,
-                      justify: "space-between",
-                      children:
-                          null != w
-                              ? (0, r.jsx)(s.Kqy, {
-                                    direction: "horizontal",
-                                    align: "center",
-                                    gap: 4,
-                                    justify: "end",
-                                    children: (0, r.jsx)(o.zx, {
-                                        fullWidth: !0,
-                                        onClick: L,
-                                        color: x ? o.zx.Colors.RED : o.zx.Colors.BRAND,
-                                        children: x
-                                            ? "Clear Treatment ".concat(w.value)
-                                            : "Apply Treatment ".concat(w.value),
-                                    }),
-                                })
-                              : (0, r.jsx)("div", {
-                                    className: g.experimentOverride,
-                                    children: (0, r.jsx)(_.y, {
-                                        experiment: S,
-                                        experimentId: n,
-                                        overrideInfo: A,
-                                    }),
-                                }),
-                  }),
+                  null != P
+                      ? (0, r.jsx)(o.zxk, {
+                            fullWidth: !0,
+                            variant: D ? "critical-primary" : "primary",
+                            text: D ? "Clear Treatment ".concat(P.value) : "Apply Treatment ".concat(P.value),
+                            onClick: x,
+                        })
+                      : (0, r.jsx)("div", {
+                            className: m.experimentOverride,
+                            children: (0, r.jsx)(f.y, {
+                                experiment: T,
+                                experimentId: n,
+                                overrideInfo: S,
+                            }),
+                        }),
               ],
           })
         : null;

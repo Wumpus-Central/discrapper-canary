@@ -39,7 +39,7 @@ function d(e) {
 function f() {
     let e = () => {
         (0, i.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("20193"), n.e("90688")]).then(n.bind(n, 978305));
+            let { default: e } = await Promise.all([n.e("7784"), n.e("90688")]).then(n.bind(n, 978305));
             return (t) => (0, r.jsx)(e, d({}, t));
         }),
             a.default.track(s.rMx.FAMILY_CENTER_ACTION, { action: o.YC.ShowQRCodeModal });

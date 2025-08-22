@@ -61,6 +61,7 @@ class b extends (r = a.PureComponent) {
             children: [
                 (0, i.jsxs)(s.Kqy, {
                     gap: 16,
+                    fullWidth: !1,
                     className: c()(m.container, { [m.isMobile]: o.tq }),
                     align: "center",
                     direction: "vertical",
