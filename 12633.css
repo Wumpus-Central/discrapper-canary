@@ -23751,11 +23751,11 @@ svg.radioIcon_c1e9c4 {
 
 .childContainer__91a9d {
     border-radius: inherit;
-    padding: 0 8px
+    padding: 0 8px 0 var(--space-xs)
 }
 
 .childContainer__91a9d.nameplated__91a9d {
-    padding-right: 36px;
+    padding-right: 32px;
     position: relative
 }
 
@@ -27831,7 +27831,7 @@ div.modalHeader_c28af8 {
 .memberInner__5d473 {
     box-sizing: border-box;
     height: auto;
-    padding: var(--space-xxs) var(--space-16) var(--space-xxs) var(--space-xs)
+    padding: var(--space-xxs) 0 var(--space-xxs)
 }
 
 .offline__5d473 {
