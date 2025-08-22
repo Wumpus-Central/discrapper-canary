@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(607070),
     C = n(987209),
     d = n(347896),
-    p = n(717401),
-    c = n(897942),
+    c = n(717401),
+    p = n(897942),
     u = n(432483);
 function x() {
     var e;
@@ -26,12 +26,12 @@ function x() {
                       isDarkMode: x,
                       isAndroid: !1,
                   }),
-        m = (0, p.Tl)(j);
+        m = (0, c.Tl)(j);
     return (0, r.jsxs)("div", {
         className: u.promotionalFooterBanner,
         style: m,
         children: [
-            (0, r.jsx)(c.Z, {
+            (0, r.jsx)(p.Z, {
                 claimableRewards: f,
                 maxRewardImageSrc: _.getImageUrl(x, t),
                 size: s.EFr.SIZE_40,

@@ -1,79 +1,47 @@
 n.d(t, {
-    M: () => I,
-    a: () => T,
+    M: () => y,
+    a: () => O,
 }),
-    n(190126),
-    n(368063),
-    n(65234),
-    n(111804),
-    n(490233),
-    n(97749),
     n(388685),
     n(953529);
 var r = n(951288),
     i = n(647438),
-    a = n(772848),
-    o = n(544891),
-    s = n(481060),
-    l = n(355467),
-    c = n(821849),
-    u = n(600164),
-    d = n(311821),
-    f = n(591759),
-    _ = n(987209),
-    p = n(563132),
-    h = n(409813),
-    m = n(362755),
-    g = n(981631),
-    E = n(474936),
-    b = n(388032),
-    y = n(162925);
-let O = 1000;
-function v(e, t, n, r, i) {
-    let s = g.Z5c.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, i),
-        l = new URL(f.Z.makeUrl(g.Z5c.BILLING_LOGIN_HANDOFF)),
-        c = (0, a.Z)();
-    return (
-        l.searchParams.append("handoff_key", c),
-        l.searchParams.append("redirect_to", s),
-        o.tn
-            .post({
-                url: g.ANM.HANDOFF,
-                body: { key: c },
-                oldFormErrors: !0,
-                rejectWithError: !1,
-            })
-            .then(
-                (e) => {
-                    l.searchParams.append("handoff_token", e.body.handoff_token), window.open(l.href);
-                },
-                () => {
-                    r();
-                },
-            )
-    );
-}
-let I = (e) => {
+    a = n(481060),
+    o = n(355467),
+    s = n(821849),
+    l = n(600164),
+    c = n(311821),
+    u = n(829176),
+    d = n(987209),
+    f = n(563132),
+    _ = n(409813),
+    p = n(362755),
+    h = n(981631),
+    m = n(474936),
+    g = n(388032),
+    E = n(162925);
+let b = 1000,
+    y = (e) => {
         let t,
-            { step: n, onPurchaseComplete: a, onHandoffFailure: o } = e,
+            { step: n, onPurchaseComplete: l, onHandoffFailure: c } = e,
             {
-                selectedPlan: u,
-                setSelectedPlanId: d,
-                setSelectedSkuId: f,
+                selectedPlan: y,
+                setSelectedPlanId: O,
+                setSelectedSkuId: v,
                 browserCheckoutState: I,
                 browserCheckoutStateLoadId: T,
                 browserCheckoutStateSkuId: S,
                 browserCheckoutStatePlanId: A,
                 contextMetadata: C,
-            } = (0, p.JL)(),
-            { isGift: N } = (0, _.wD)(),
+            } = (0, f.JL)(),
+            { isGift: N } = (0, d.wD)(),
             [R, P] = i.useState(!1);
         switch (n) {
-            case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                t = g.i$l.GOOGLE_PAY;
+            case _.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+                t = h.i$l.GOOGLE_PAY;
                 break;
-            case h.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                t = g.i$l.APPLE_PAY;
+            case _.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+                t = h.i$l.APPLE_PAY;
         }
         return (
             i.useEffect(() => {
@@ -81,45 +49,53 @@ let I = (e) => {
                     var e;
                     R ||
                         (P(!0),
-                        (0, l.r5)(C.loadId),
-                        v(null != (e = null == u ? void 0 : u.id) ? e : E.Xh.PREMIUM_MONTH_TIER_2, N, C.loadId, o, t));
-                }, O);
+                        (0, o.r5)(C.loadId),
+                        (0, u.rS)(
+                            {
+                                planId: null != (e = null == y ? void 0 : y.id) ? e : m.Xh.PREMIUM_MONTH_TIER_2,
+                                isGift: N,
+                                loadId: C.loadId,
+                                paymentMethodType: t,
+                            },
+                            c,
+                        ));
+                }, b);
                 return () => clearTimeout(e);
-            }, [u, N, C, o, P, R, t]),
+            }, [y, N, C, c, P, R, t]),
             i.useEffect(() => {
-                null !== S && (E.YQ.includes(S) && ((0, c.GZ)(S), (0, l.jg)()), f(S)),
-                    null !== A && d(A),
-                    T === C.loadId && I === m.Y.DONE && a();
-            }, [f, d, I, T, S, A, C, a]),
+                null !== S && (m.YQ.includes(S) && ((0, s.GZ)(S), (0, o.jg)()), v(S)),
+                    null !== A && O(A),
+                    T === C.loadId && I === p.Y.DONE && l();
+            }, [v, O, I, T, S, A, C, l]),
             (0, r.jsxs)("div", {
-                className: y.body,
+                className: E.body,
                 children: [
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: "heading-xl/bold",
-                        children: b.intl.string(b.t.C4HYf3),
+                        children: g.intl.string(g.t.C4HYf3),
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        className: y.description,
-                        children: b.intl.string(b.t.xfG7Ji),
+                        className: E.description,
+                        children: g.intl.string(g.t.xfG7Ji),
                     }),
                 ],
             })
         );
     },
-    T = (e) => {
+    O = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
         return (0, r.jsx)("div", {
-            children: (0, r.jsxs)(s.mzw, {
-                justify: u.Z.Justify.BETWEEN,
-                align: u.Z.Align.CENTER,
+            children: (0, r.jsxs)(a.mzw, {
+                justify: l.Z.Justify.BETWEEN,
+                align: l.Z.Align.CENTER,
                 "data-migration-pending": !0,
                 children: [
-                    (0, r.jsx)(d.y, {
+                    (0, r.jsx)(c.y, {
                         onClick: t,
-                        children: b.intl.string(b.t["4Qvmmp"]),
+                        children: g.intl.string(g.t["4Qvmmp"]),
                     }),
-                    (0, r.jsx)(d.Z, { onClick: n }),
+                    (0, r.jsx)(c.Z, { onClick: n }),
                 ],
             }),
         });

@@ -21,8 +21,8 @@ var r,
     j = n(481230),
     I = n(388905),
     N = n(853268),
-    O = n(639946),
-    y = n(616952),
+    y = n(639946),
+    O = n(616952),
     S = n(792766),
     C = n(692483),
     Z = n(100159),
@@ -328,7 +328,7 @@ class eu extends (r = l.PureComponent) {
     renderInviteHeader() {
         let { invite: e } = this.props;
         return (null == e ? void 0 : e.guild_scheduled_event) != null
-            ? (0, i.jsx)(O.r, {
+            ? (0, i.jsx)(y.r, {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
@@ -490,10 +490,10 @@ class eu extends (r = l.PureComponent) {
                 registering: _,
                 apiErrors: { email: v, username: E, global_name: b, password: j, date_of_birth: N } = {},
             } = this.state,
-            { consentRequired: O, authBoxClassName: S, hasLoggedInAccounts: C } = this.props,
+            { consentRequired: y, authBoxClassName: S, hasLoggedInAccounts: C } = this.props,
             Z = this.renderErrorMessage(),
             A = (0, i.jsx)(f.ua7, {
-                text: !c && O ? en.intl.string(en.t.AY4IVF) : null,
+                text: !c && y ? en.intl.string(en.t.AY4IVF) : null,
                 children: (e) =>
                     (0, i.jsx)(
                         "div",
@@ -630,7 +630,7 @@ class eu extends (r = l.PureComponent) {
                         onFocus: this.trackInputFocus,
                         onBlur: this.trackInputBlur,
                     }),
-                    (0, i.jsx)(y.Z, {}),
+                    (0, i.jsx)(O.Z, {}),
                     this.renderConsentComponent(),
                     A,
                     Z,

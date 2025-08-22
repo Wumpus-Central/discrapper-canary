@@ -23,7 +23,7 @@ let v = (e) => {
         E = (0, f.oK)("RSL - Landing Page"),
         [b, j] = i.useState(!1),
         [I, N] = i.useState(_.intl.string(_.t["9exy+f"])),
-        [O, y] = i.useState(!0),
+        [y, O] = i.useState(!0),
         S = (e) => {
             switch (e) {
                 case m.evJ.INVALID_FORM_BODY:
@@ -46,12 +46,12 @@ let v = (e) => {
     return (
         i.useEffect(() => {
             n
-                ? (y(!0),
+                ? (O(!0),
                   a
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => y(!1))
-                      .catch(() => y(!1)))
-                : y(!1);
+                      .then(() => O(!1))
+                      .catch(() => O(!1)))
+                : O(!1);
         }, [n]),
         i.useEffect(() => {
             v || E || s.Z.getExperiments();
@@ -71,7 +71,7 @@ let v = (e) => {
             j(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
         }, [t]),
         E &&
-            !O &&
+            !y &&
             (0, r.jsxs)(u.ZP, {
                 children: [
                     (0, r.jsx)(u.Dx, {

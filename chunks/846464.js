@@ -8,8 +8,8 @@ var i = n(120356),
     o = n(47280),
     C = n(639119),
     d = n(973007),
-    p = n(74538),
-    c = n(987209),
+    c = n(74538),
+    p = n(987209),
     u = n(563132),
     x = n(409813),
     h = n(614223),
@@ -27,7 +27,7 @@ function L(e) {
             priceOptions: m,
             defaultPlanId: L,
         } = (0, u.JL)(),
-        { isGift: b, claimableRewards: y } = (0, c.wD)(),
+        { isGift: b, claimableRewards: y } = (0, p.wD)(),
         S = b && null != y && y.length > 0,
         E = (0, C.N)(i),
         O = (0, a.Nx)(),
@@ -48,8 +48,8 @@ function L(e) {
                 } = e;
                 r(n);
                 let d = x.h8.PLAN_SELECT,
-                    c = (0, p.k5)(t);
-                (c !== f.Si.TIER_1 && c !== f.Si.TIER_2) || n !== f.Si.TIER_0 || l || (d = x.h8.WHAT_YOU_LOSE);
+                    p = (0, c.k5)(t);
+                (p !== f.Si.TIER_1 && p !== f.Si.TIER_2) || n !== f.Si.TIER_0 || l || (d = x.h8.WHAT_YOU_LOSE);
                 let u = (0, _.T)({
                         userTrialOffer: s,
                         isGift: l,
@@ -90,9 +90,9 @@ function g(e) {
             inOfferExperience: a,
             priceOptions: o,
             showPromotionalGiftBanner: C,
-            enablePremiumBrandRefresh: c,
+            enablePremiumBrandRefresh: p,
         } = e,
-        u = c
+        u = p
             ? (0, r.jsx)(s.X6q, {
                   variant: "heading-lg/bold",
                   children: j.intl.string(j.t["r+SebW"]),
@@ -105,7 +105,7 @@ function g(e) {
         children: [
             (0, r.jsxs)(s.xBx, {
                 "data-migration-pending": !0,
-                className: l()(m.skuSelectModalHeader, { [m.premiumBrandRefreshHeader]: c }),
+                className: l()(m.skuSelectModalHeader, { [m.premiumBrandRefreshHeader]: p }),
                 separator: !1,
                 children: [
                     u,
@@ -119,16 +119,16 @@ function g(e) {
             (0, r.jsx)(s.hzk, {
                 "data-migration-pending": !0,
                 className: l()(m.skuSelectModalContent, {
-                    [m.modalSize]: !c,
-                    [m.modalPadding]: a && !c,
-                    [m.premiumBrandRefreshContent]: c,
+                    [m.modalSize]: !p,
+                    [m.modalPadding]: a && !p,
+                    [m.premiumBrandRefreshContent]: p,
                 }),
                 children: (0, r.jsx)(d.Z, {
-                    onSelectSku: (e) => t((0, p.Wz)(e)),
+                    onSelectSku: (e) => t((0, c.Wz)(e)),
                     isGift: i,
                     priceOptions: o,
                     showPromotionalGiftBanner: C,
-                    enablePremiumBrandRefresh: c,
+                    enablePremiumBrandRefresh: p,
                 }),
             }),
         ],

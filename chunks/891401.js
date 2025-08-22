@@ -1,44 +1,44 @@
-a.d(t, { Z: () => N }), a(49124);
-var n = a(951288),
-    r = a(647438),
-    l = a(120356),
-    i = a.n(l),
-    s = a(392711),
-    o = a(793030),
-    c = a(442837),
-    d = a(704215),
-    u = a(755721),
-    m = a(481060),
-    x = a(411149),
-    h = a(151480),
-    p = a(461762),
-    v = a(680783),
-    b = a(605236),
-    f = a(675478),
-    j = a(944486),
-    g = a(388032),
-    _ = a(715639);
+n.d(t, { Z: () => N }), n(49124);
+var a = n(951288),
+    r = n(647438),
+    l = n(120356),
+    i = n.n(l),
+    s = n(392711),
+    o = n(793030),
+    c = n(442837),
+    d = n(704215),
+    u = n(755721),
+    m = n(481060),
+    x = n(411149),
+    h = n(151480),
+    p = n(461762),
+    f = n(680783),
+    v = n(605236),
+    b = n(675478),
+    j = n(944486),
+    g = n(388032),
+    _ = n(715639);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(a);
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = a[t]),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = a);
             });
     }
     return e;
@@ -49,37 +49,37 @@ function C(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var a = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      a.push.apply(a, n);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
-                  return a;
-              })(Object(t)).forEach(function (a) {
-                  Object.defineProperty(e, a, Object.getOwnPropertyDescriptor(t, a));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function N() {
-    return (0, n.jsxs)(m.Ttm, {
+    return (0, a.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(O, {}), (0, n.jsx)(E, {})],
+        children: [(0, a.jsx)(E, {}), (0, a.jsx)(O, {})],
     });
 }
-function O() {
+function E() {
     var e, t;
-    let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
-        l = (0, v.Z)(a),
+    let n = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
+        l = (0, f.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, p.Z)(s),
-        b = r.useCallback(
+        v = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { opacity: e });
             },
             [s],
         ),
-        f = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 T(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
@@ -91,16 +91,16 @@ function O() {
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        O = r.useCallback(
+        E = r.useCallback(
             (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId],
         ),
-        E = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        O = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        k = r.useCallback(
+        k = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        I = r.useCallback(
             (e) => {
                 null != s && (0, h.i)(s, { token_mix_amount: Math.round(e) });
             },
@@ -111,34 +111,34 @@ function O() {
         }, [s]),
         Z = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
         A = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         children: [
-            (0, n.jsx)(o.X6, {
+            (0, a.jsx)(o.X6, {
                 className: _.header,
                 variant: "heading-lg/semibold",
                 children: "DM Wallpapers",
             }),
             null == d &&
-                (0, n.jsx)("p", {
+                (0, a.jsx)("p", {
                     className: _.explanation,
                     children: "Open a DM with a wallpaper to customize.",
                 }),
             null != d &&
-                (0, n.jsxs)(n.Fragment, {
+                (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, n.jsx)(o.X6, {
+                        (0, a.jsx)(o.X6, {
                             className: _.subheader,
                             variant: "heading-md/semibold",
                             children: "ChatWallpaperMetadataRecord",
                         }),
-                        (0, n.jsx)("pre", {
+                        (0, a.jsx)("pre", {
                             className: _.code,
                             children: JSON.stringify(x.Z.getWallpaperById(s), null, 2),
                         }),
-                        (0, n.jsx)(m.ua7, {
+                        (0, a.jsx)(m.ua7, {
                             text: "The opacity of the wallpaper.",
                             children: (e) =>
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     o.X6,
                                     C(
                                         y(
@@ -152,7 +152,7 @@ function O() {
                                     ),
                                 ),
                         }),
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             m.iRW,
                             {
                                 className: _.slider,
@@ -160,14 +160,14 @@ function O() {
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: b,
+                                onValueChange: v,
                             },
                             "opacity-".concat(Z),
                         ),
-                        (0, n.jsx)(m.ua7, {
+                        (0, a.jsx)(m.ua7, {
                             text: "The most prominent color in the wallpaper. This will be used to adjust the color tokens.",
                             children: (e) =>
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     o.X6,
                                     C(
                                         y(
@@ -181,34 +181,34 @@ function O() {
                                     ),
                                 ),
                         }),
-                        (0, n.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                             className: _.colorInputContainer,
                             children: [
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     "input",
                                     {
                                         type: "color",
                                         value: d.primary_color,
-                                        onChange: f,
+                                        onChange: b,
                                     },
                                     "primaryColor-".concat(d.primary_color),
                                 ),
-                                (0, n.jsx)(m.M0o, {
+                                (0, a.jsx)(m.M0o, {
                                     color: "currentColor",
                                     tooltip: g.intl.string(g.t.N86XcH),
-                                    icon: (0, n.jsx)(m.P$X, {
+                                    icon: (0, a.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: E,
+                                    onClick: O,
                                     className: _.removeButton,
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(m.ua7, {
+                        (0, a.jsx)(m.ua7, {
                             text: "The second most prominent color in the wallpaper. This will be used to adjust the color tokens.",
                             children: (e) =>
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     o.X6,
                                     C(
                                         y(
@@ -222,10 +222,10 @@ function O() {
                                     ),
                                 ),
                         }),
-                        (0, n.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                             className: _.colorInputContainer,
                             children: [
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     "input",
                                     {
                                         type: "color",
@@ -234,10 +234,10 @@ function O() {
                                     },
                                     "secondaryColor-".concat(d.secondary_color),
                                 ),
-                                (0, n.jsx)(m.M0o, {
+                                (0, a.jsx)(m.M0o, {
                                     color: "currentColor",
                                     tooltip: g.intl.string(g.t.N86XcH),
-                                    icon: (0, n.jsx)(m.P$X, {
+                                    icon: (0, a.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
@@ -246,10 +246,10 @@ function O() {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(m.ua7, {
+                        (0, a.jsx)(m.ua7, {
                             text: "Controls how much the primary/secondary colors are mixed into the tokens.",
                             children: (e) =>
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     o.X6,
                                     C(
                                         y(
@@ -263,7 +263,7 @@ function O() {
                                     ),
                                 ),
                         }),
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             m.iRW,
                             {
                                 className: _.slider,
@@ -271,14 +271,14 @@ function O() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: k,
+                                onValueChange: I,
                             },
                             "tokenMixAmount-".concat(A),
                         ),
-                        (0, n.jsx)(m.ua7, {
+                        (0, a.jsx)(m.ua7, {
                             text: "The color used for hyperlinks.",
                             children: (e) =>
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     o.X6,
                                     C(
                                         y(
@@ -292,31 +292,31 @@ function O() {
                                     ),
                                 ),
                         }),
-                        (0, n.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                             className: _.colorInputContainer,
                             children: [
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     "input",
                                     {
                                         type: "color",
                                         value: d.link_color,
-                                        onChange: O,
+                                        onChange: E,
                                     },
                                     "linkColor-".concat(d.link_color),
                                 ),
-                                (0, n.jsx)(m.M0o, {
+                                (0, a.jsx)(m.M0o, {
                                     color: "currentColor",
                                     tooltip: g.intl.string(g.t.N86XcH),
-                                    icon: (0, n.jsx)(m.P$X, {
+                                    icon: (0, a.jsx)(m.P$X, {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                    onClick: I,
+                                    onClick: k,
                                     className: _.removeButton,
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(u.zx, {
+                        (0, a.jsx)(u.zx, {
                             className: _.resetButton,
                             onClick: R,
                             children: "Reset",
@@ -326,32 +326,32 @@ function O() {
         ],
     });
 }
-function E() {
+function O() {
     let e = r.useCallback(() => {
-            (0, f.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
+            (0, b.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
-        { lastDismissedAtMs: t } = (0, b.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
-        a = null != t ? new Date(t) : null;
-    return (0, n.jsxs)(n.Fragment, {
+        { lastDismissedAtMs: t } = (0, v.Fo)(d.z.NITRO_TENURE_BADGE_LEVEL_UP),
+        n = null != t ? new Date(t) : null;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, n.jsx)(o.X6, {
+            (0, a.jsx)(o.X6, {
                 className: _.header,
                 variant: "heading-lg/semibold",
                 children: "Tenure Badges",
             }),
-            (0, n.jsxs)("p", {
+            (0, a.jsxs)("p", {
                 children: [
                     "Level Up DC:\xA0",
-                    null != a &&
-                        (0, n.jsxs)("b", {
-                            children: ["Dismissed (", a.toLocaleDateString(), ")"],
+                    null != n &&
+                        (0, a.jsxs)("b", {
+                            children: ["Dismissed (", n.toLocaleDateString(), ")"],
                         }),
-                    null == a && (0, n.jsx)("b", { children: "Not Dismissed" }),
+                    null == n && (0, a.jsx)("b", { children: "Not Dismissed" }),
                 ],
             }),
-            (0, n.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: _.tenureBadgeControls,
-                children: (0, n.jsx)(m.zxk, {
+                children: (0, a.jsx)(m.zxk, {
                     variant: "primary",
                     text: "Reset Level Up DC",
                     onClick: e,

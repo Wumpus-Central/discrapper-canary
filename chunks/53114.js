@@ -304,6 +304,8 @@ class y extends o.Z {
                         video_entropy_percentile75: y.count > 0 ? y.percentiles[75] : null,
                         video_entropy_percentile99: y.count > 0 ? y.percentiles[99] : null,
                         duration_encoder_exynos: E(t.encoderBuckets[_.Su.EXYNOS]),
+                        duration_encoder_qualcomm: E(t.encoderBuckets[_.Su.QUALCOMM]),
+                        duration_encoder_mediatek: E(t.encoderBuckets[_.Su.MEDIATEK]),
                     }),
                 );
             }),
@@ -439,6 +441,8 @@ class y extends o.Z {
                     duration_decoder_unknown: E(e.decoderBuckets[_.gr.UNKNOWN]),
                     duration_decoder_exynos: E(e.decoderBuckets[_.gr.EXYNOS]),
                     duration_decoder_webrtc: E(e.decoderBuckets[_.gr.WEBRTC]),
+                    duration_decoder_qualcomm: E(e.decoderBuckets[_.gr.QUALCOMM]),
+                    duration_decoder_mediatek: E(e.decoderBuckets[_.gr.MEDIATEK]),
                 },
                 m,
             ),

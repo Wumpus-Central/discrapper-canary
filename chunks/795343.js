@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(626135),
     d = n(381585),
     g = n(597688),
-    f = n(370039),
-    p = n(501431),
+    p = n(370039),
+    f = n(501431),
     m = n(149705),
     _ = n(303952),
     h = n(38900),
@@ -36,7 +36,7 @@ function v(e) {
     l.useEffect(() => {
         R();
     }, [Z, R]);
-    let w = (0, f.a)(),
+    let w = (0, p.a)(),
         F = l.useMemo(() => w(A), [w, A]);
     l.useEffect(() => {
         n ||
@@ -50,7 +50,7 @@ function v(e) {
             });
     }, [T, a, j, L, n, x]);
     let D = l.useRef(null),
-        { setQueryPageSize: M, setQueryPageOffset: H, queryPageSize: W } = (0, p.S)(),
+        { setQueryPageSize: M, setQueryPageOffset: H, queryPageSize: W } = (0, f.S)(),
         [U, V] = l.useState(!1),
         z = n || P || null == k;
     l.useEffect(() => {

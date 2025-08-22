@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(780384),
     C = n(481060),
     d = n(727637),
-    p = n(410030),
-    c = n(616066),
+    c = n(410030),
+    p = n(616066),
     u = n(466679),
     x = n(388032),
     h = n(632939);
@@ -18,7 +18,7 @@ let _ = (e) => {
         g = (0, d.Z)(L),
         b = (0, u.m)(L),
         y = g || b,
-        S = (0, p.ZP)(),
+        S = (0, c.ZP)(),
         E = (0, o.wj)(S),
         O = {
             type: a.Z.AVATAR_DECORATION,
@@ -40,7 +40,7 @@ let _ = (e) => {
             children: [
                 (0, r.jsx)("div", {
                     className: h.preview,
-                    children: (0, r.jsx)(c.R, {
+                    children: (0, r.jsx)(p.R, {
                         item: O,
                         user: l,
                         isHighlighted: y,

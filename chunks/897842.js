@@ -1,16 +1,16 @@
-a.d(t, {
+n.d(t, {
     A: () => l,
     default: () => i,
 });
-var n = a(951288);
-a(647438);
-var r = a(82659);
+var a = n(951288);
+n(647438);
+var r = n(82659);
 let l = "UPLOAD_ERROR_MODAL_KEY",
     i = (e) => {
-        let { title: t, help: a, transitionState: l, onClose: i } = e;
-        return (0, n.jsx)(r.Modal, {
+        let { title: t, help: n, transitionState: l, onClose: i } = e;
+        return (0, a.jsx)(r.Modal, {
             title: t,
-            subtitle: a,
+            subtitle: n,
             transitionState: l,
             actions: [
                 {

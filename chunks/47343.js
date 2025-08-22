@@ -26,8 +26,8 @@ let x = () => {
             setNickname: j,
             setDmsAllowed: I,
             setShowActivity: N,
-            setMutedServer: O,
-            guildId: y,
+            setMutedServer: y,
+            guildId: O,
             inviteCode: S,
         } = (0, p.XW)(),
         C = null == (e = a.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
@@ -40,7 +40,7 @@ let x = () => {
                 onClick: () => {
                     t ||
                         h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: y,
+                            guild_id: O,
                             invite_code: S,
                         }),
                         n(!t);
@@ -110,7 +110,7 @@ let x = () => {
                         (0, r.jsx)(u.Z, {
                             title: m.intl.string(m.t["0nZCqK"]),
                             value: b,
-                            onChange: O,
+                            onChange: y,
                         }),
                 ],
             }),

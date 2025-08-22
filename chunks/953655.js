@@ -10,7 +10,7 @@ var l = n(120356),
     u = n(388032),
     d = n(310582);
 let g = ["1366494385738354769", "1385035256125591633"],
-    f = (e) => {
+    p = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e;
         return (0, r.jsx)("div", {
             className: a()(d.col2, d.centeredSection),
@@ -51,7 +51,7 @@ let g = ["1366494385738354769", "1385035256125591633"],
                       }),
         });
     },
-    p = (e) => {
+    f = (e) => {
         let { handleTransition: t, categories: n } = e;
         if (null == n || n.length < 2)
             return i.Z.captureMessage("Collectible Featured Block requires at least 2 categories"), null;
@@ -100,12 +100,12 @@ let g = ["1366494385738354769", "1385035256125591633"],
                   ],
               })
             : null != s
-              ? (0, r.jsx)(f, {
+              ? (0, r.jsx)(p, {
                     featuredBlockRecord: s,
                     handleTransition: n,
                     isLoading: !1,
                 })
-              : (0, r.jsx)(p, {
+              : (0, r.jsx)(f, {
                     categories: l,
                     handleTransition: n,
                     isLoading: !1,

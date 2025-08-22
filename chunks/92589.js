@@ -42,8 +42,8 @@ let d = (e) => {
             null != n,
         ),
         g = null != t.textColor ? { color: t.textColor } : void 0,
-        f = null != t.body && "" !== t.body,
-        p = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        p = null != t.body && "" !== t.body,
+        f = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
         ref: d,
         className: c.immersiveBannerBlock,
@@ -73,14 +73,14 @@ let d = (e) => {
                             style: u({}, g),
                             children: t.title,
                         }),
-                        f || p
+                        p || f
                             ? (0, r.jsxs)(l.Text, {
                                   variant: "text-md/medium",
                                   style: u({}, g),
                                   children: [
-                                      f && t.body,
-                                      f && p && " ",
-                                      p &&
+                                      p && t.body,
+                                      p && f && " ",
+                                      f &&
                                           (0, r.jsx)(l.eee, {
                                               href: t.helpCenterUrl,
                                               className: c.learnMoreLink,

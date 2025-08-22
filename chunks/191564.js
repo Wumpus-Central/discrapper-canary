@@ -21,8 +21,8 @@ var r = n(951288),
     y = n(981631),
     O = n(474936),
     _ = n(388032),
-    E = n(238983);
-function C(e) {
+    C = n(238983);
+function E(e) {
     let {
             user: t,
             product: n,
@@ -40,7 +40,7 @@ function C(e) {
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)(s.mzw, {
             "data-migration-pending": !0,
-            className: E.modalFooter,
+            className: C.modalFooter,
             children: [
                 (null != i && (!(0, u.qS)(i) || d)) || null === f
                     ? (0, r.jsx)(s.zxk, {
@@ -97,15 +97,15 @@ function I(e) {
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
         [O, I] = i.useState(() => (null != p ? p : void 0 !== x ? x : null == m ? null : null != m ? m : null)),
-        [S, Z] = i.useMemo(() => {
+        [S, w] = i.useMemo(() => {
             var e;
             let t = b.find((e) => (null == e ? void 0 : e.id) === O),
                 n = null != t || null === O;
             return [null != (e = null != t ? t : y.find((e) => (null == e ? void 0 : e.id) === O)) ? e : null, n];
         }, [O, b, y]),
-        { product: w, purchase: N } = (0, d.Z)(null == S ? void 0 : S.skuId),
-        D = i.useRef(null),
-        k = j.ZP.canUseCollectibles(t),
+        { product: N, purchase: Z } = (0, d.Z)(null == S ? void 0 : S.skuId),
+        k = i.useRef(null),
+        D = j.ZP.canUseCollectibles(t),
         A = O === (void 0 === x ? (null != m ? m : null) : x),
         G = i.useCallback(
             (e) => {
@@ -129,7 +129,7 @@ function I(e) {
             (0, r.jsxs)(s.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: E.modalHeader,
+                className: C.modalHeader,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: "heading-lg/semibold",
@@ -137,43 +137,43 @@ function I(e) {
                     }),
                     (0, r.jsx)(s.olH, {
                         "data-migration-pending": !0,
-                        className: E.modalCloseButton,
+                        className: C.modalCloseButton,
                         onClick: f,
                     }),
                 ],
             }),
             (0, r.jsxs)(s.hzk, {
                 "data-migration-pending": !0,
-                className: E.modalContent,
+                className: C.modalContent,
                 children: [
                     (0, r.jsx)(P.Z, {
                         user: t,
                         guild: n,
                         pendingProfileEffect: O,
-                        selectedProfileEffectRef: D,
+                        selectedProfileEffectRef: k,
                         onSelect: G,
                         onOpenShop: T,
                     }),
                     (0, r.jsx)(v.Z, {
                         user: t,
-                        canApplySelectedChange: Z,
+                        canApplySelectedChange: w,
                         pendingProfileEffectRecord: S,
-                        product: w,
-                        purchase: N,
+                        product: N,
+                        purchase: Z,
                         guild: n,
                     }),
                 ],
             }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(E, {
                 user: t,
                 onApply: () => {
                     (0, h.s6)(O, m, null == n ? void 0 : n.id), f();
                 },
                 onClose: f,
                 onOpenShop: T,
-                product: w,
-                purchase: N,
-                canUseCollectibles: k,
+                product: N,
+                purchase: Z,
+                canUseCollectibles: D,
                 selectedProfileEffectId: O,
                 selectedProfileEffectItem: S,
                 disableApplyButton: A,
@@ -199,13 +199,13 @@ function S(e) {
             value: v,
             children: (0, r.jsx)(s.Y0X, {
                 transitionState: t,
-                className: E.modal,
+                className: C.modal,
                 size: p ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
                 parentComponent: "ProfileEffectModal",
                 "data-migration-pending": !0,
                 children: p
                     ? (0, r.jsx)(s.$jN, {
-                          className: E.spinner,
+                          className: C.spinner,
                           type: s.$jN.Type.SPINNING_CIRCLE,
                       })
                     : (0, r.jsx)(I, {

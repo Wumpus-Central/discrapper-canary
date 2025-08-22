@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(481060),
     C = n(14476),
     d = n(314404),
-    p = n(594174),
-    c = n(626135),
+    c = n(594174),
+    p = n(626135),
     u = n(987209),
     x = n(563132),
     h = n(409813),
@@ -25,7 +25,7 @@ function L(e) {
             claimableRewards: S,
             claimableVariants: E,
         } = (0, u.wD)(),
-        O = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
+        O = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         [P, v] = i.useState(null),
         w = Math.floor(2 * Math.random()),
         [M, I] = i.useState(w);
@@ -112,7 +112,7 @@ function L(e) {
                     onStepChange: (e) => {
                         null != O &&
                             null != y &&
-                            c.default.track(f.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            p.default.track(f.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: O.id,
                                 reward_sku_id: y.skuId,
                             }),

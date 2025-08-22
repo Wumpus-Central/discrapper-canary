@@ -1,49 +1,50 @@
-a.d(t, {
-    OC: () => j,
-    Sr: () => f,
-    du: () => v,
+n.d(t, {
+    FB: () => v,
+    OC: () => g,
+    Sr: () => j,
     lG: () => b,
+    mo: () => f,
 }),
-    a(539854);
-var n = a(933557),
-    r = a(710845),
-    l = a(823385),
-    i = a(592125),
-    s = a(580005),
-    o = a(271383),
-    c = a(699516),
-    d = a(594174),
-    u = a(411198),
-    m = a(51144),
-    x = a(727785);
+    n(539854);
+var a = n(933557),
+    r = n(710845),
+    l = n(823385),
+    i = n(592125),
+    s = n(580005),
+    o = n(271383),
+    c = n(699516),
+    d = n(594174),
+    u = n(411198),
+    m = n(51144),
+    x = n(727785);
 let h = new r.Z("SearchDebugUtils");
 function p() {
     h.info("--------------------------");
 }
-function v() {
+function f() {
     let e = i.Z.getMutablePrivateChannels(),
         t = [],
-        a = [];
+        n = [];
     Object.values(e).forEach((e) => {
-        e.isGroupDM() && t.push(e), e.isDM() && a.push(e);
+        e.isGroupDM() && t.push(e), e.isDM() && n.push(e);
     }),
         h.info("START Logging Group DM Channels"),
         t.forEach((e) => {
-            let t = (0, n.F6)(e, d.default, c.Z),
-                a = (0, n.on)(e, d.default, c.Z);
+            let t = (0, a.F6)(e, d.default, c.Z),
+                n = (0, a.on)(e, d.default, c.Z);
             h.info("id: ".concat(e.id)),
                 h.info("name: ".concat(t)),
-                h.info("default name: ".concat(a)),
+                h.info("default name: ".concat(n)),
                 h.info("recipients ids: ".concat(e.recipients)),
                 e.recipients.forEach((e) => {
                     let t = d.default.getUser(e);
                     if (null == t) return;
-                    let a = t.username,
-                        n = m.ZP.getGlobalName(t),
+                    let n = t.username,
+                        a = m.ZP.getGlobalName(t),
                         r = c.Z.getNickname(t.id),
                         l = o.ZP.getNicknames(t.id);
-                    h.info("username: ".concat(a)),
-                        h.info("global name: ".concat(n)),
+                    h.info("username: ".concat(n)),
+                        h.info("global name: ".concat(a)),
                         h.info("nickname: ".concat(r)),
                         h.info("guild nicknames: ".concat(l)),
                         p();
@@ -51,11 +52,55 @@ function v() {
         }),
         h.info("END Logging Group DM Channels\n"),
         h.info("START Logging DM Channels"),
-        a.forEach((e) => {
-            let t = (0, n.F6)(e, d.default, c.Z);
+        n.forEach((e) => {
+            let t = (0, a.F6)(e, d.default, c.Z);
             h.info("id: ".concat(e.id)), h.info("name: ".concat(t));
-            let a = e.getRecipientId(),
-                r = d.default.getUser(a);
+            let n = e.getRecipientId(),
+                r = d.default.getUser(n);
+            if (null == r) return;
+            let l = r.username,
+                i = m.ZP.getGlobalName(r),
+                s = c.Z.getNickname(r.id);
+            h.info("username: ".concat(l)), h.info("global name: ".concat(i)), h.info("nickname: ".concat(s)), p();
+        }),
+        h.info("END Logging DM Channels\n");
+}
+function v() {
+    let e = i.Z.getMutablePrivateChannels(),
+        t = [],
+        n = [];
+    Object.values(e).forEach((e) => {
+        e.isGroupDM() && t.push(e), e.isDM() && n.push(e);
+    }),
+        h.info("START Logging Group DM Channels"),
+        t.forEach((e) => {
+            let t = (0, a.F6)(e, d.default, c.Z),
+                n = (0, a.on)(e, d.default, c.Z);
+            h.info("id: ".concat(e.id)),
+                h.info("name: ".concat(t)),
+                h.info("default name: ".concat(n)),
+                h.info("recipients ids: ".concat(e.recipients)),
+                e.recipients.forEach((e) => {
+                    let t = d.default.getUser(e);
+                    if (null == t) return;
+                    let n = t.username,
+                        a = m.ZP.getGlobalName(t),
+                        r = c.Z.getNickname(t.id),
+                        l = o.ZP.getNicknames(t.id);
+                    h.info("username: ".concat(n)),
+                        h.info("global name: ".concat(a)),
+                        h.info("nickname: ".concat(r)),
+                        h.info("guild nicknames: ".concat(l)),
+                        p();
+                });
+        }),
+        h.info("END Logging Group DM Channels\n"),
+        h.info("START Logging DM Channels"),
+        n.forEach((e) => {
+            let t = (0, a.F6)(e, d.default, c.Z);
+            h.info("id: ".concat(e.id)), h.info("name: ".concat(t));
+            let n = e.getRecipientId(),
+                r = d.default.getUser(n);
             if (null == r) return;
             let l = r.username,
                 i = m.ZP.getGlobalName(r),
@@ -70,26 +115,26 @@ function b() {
         e.forEach((e) => {
             let t = d.default.getUser(e);
             if (null == t) return;
-            let a = t.username,
-                n = m.ZP.getGlobalName(t),
+            let n = t.username,
+                a = m.ZP.getGlobalName(t),
                 r = c.Z.getNickname(t.id),
                 l = o.ZP.getNicknames(t.id);
-            h.info("username: ".concat(a)),
-                h.info("global name: ".concat(n)),
+            h.info("username: ".concat(n)),
+                h.info("global name: ".concat(a)),
                 h.info("nickname: ".concat(r)),
                 h.info("guild nicknames: ".concat(l)),
                 p();
         }),
         h.info("END Discord Friends\n");
 }
-function f() {
+function j() {
     let e = s.Z.getFrequentlyWithoutFetchingLatest(),
         t = [],
-        a = [],
+        n = [],
         r = [],
         l = [];
     e.forEach((e) => {
-        (0, u.lM)(e) ? t.push(e) : e.isDM() ? r.push(e) : e.isMultiUserDM() ? l.push(e) : a.push(e);
+        (0, u.lM)(e) ? t.push(e) : e.isDM() ? r.push(e) : e.isMultiUserDM() ? l.push(e) : n.push(e);
     }),
         h.info("START Frecency"),
         h.info("Guilds"),
@@ -108,19 +153,19 @@ function f() {
         l.forEach((e) => {
             let t = s.Z.getScoreWithoutFetchingLatest(e.id);
             h.info("id: ".concat(e.id, " - Frecency Score: ").concat(t)),
-                h.info("default name: ".concat((0, n.on)(e, d.default, c.Z))),
-                h.info("name: ".concat((0, n.F6)(e, d.default, c.Z)));
+                h.info("default name: ".concat((0, a.on)(e, d.default, c.Z))),
+                h.info("name: ".concat((0, a.F6)(e, d.default, c.Z)));
         }),
         p(),
         h.info("Guild Channels"),
-        a.forEach((e) => {
+        n.forEach((e) => {
             let t = s.Z.getScoreWithoutFetchingLatest(e.id);
             h.info("id: ".concat(e.id, " - Frecency Score: ").concat(t));
         }),
         p(),
         h.info("END Frecency\n");
 }
-function j() {
+function g() {
     let e = l.Z.getProps();
     h.info("START Quick Switcher State"),
         h.info("Query: ".concat(e.query)),
@@ -130,10 +175,38 @@ function j() {
                     h.info("guild id: ".concat(e.record.id));
                     break;
                 case x.h8.TEXT_CHANNEL:
-                case x.h8.DM:
-                case x.h8.GROUP_DM:
                 case x.h8.VOICE_CHANNEL:
-                    h.info("channel type: ".concat(e.record.type)), h.info("channel id: ".concat(e.record.id));
+                    h.info("channel type: ".concat(e.record.type)),
+                        h.info("channel id: ".concat(e.record.id)),
+                        h.info("name: ".concat(e.record.name));
+                    break;
+                case x.h8.DM:
+                    h.info("channel type: ".concat(e.record.type)),
+                        h.info("channel id: ".concat(e.record.id)),
+                        e.record.isDM() &&
+                            (h.info("recipient id: ".concat(e.record.getRecipientId())),
+                            e.record.recipients.forEach((e) => {
+                                let t = d.default.getUser(e);
+                                null != t &&
+                                    (h.info("recipient username: ".concat(t.username)),
+                                    h.info("recipient global name: ".concat(m.ZP.getGlobalName(t))),
+                                    h.info("recipient nickname: ".concat(c.Z.getNickname(t.id))));
+                            }));
+                    break;
+                case x.h8.GROUP_DM:
+                    h.info("channel type: ".concat(e.record.type)),
+                        h.info("channel id: ".concat(e.record.id)),
+                        h.info("name: ".concat((0, a.F6)(e.record, d.default, c.Z))),
+                        e.record.isGroupDM() &&
+                            (h.info("default name: ".concat((0, a.on)(e.record, d.default, c.Z))),
+                            h.info("recipient id: ".concat(e.record.recipients)),
+                            e.record.recipients.forEach((e) => {
+                                let t = d.default.getUser(e);
+                                null != t &&
+                                    (h.info("recipient username: ".concat(t.username)),
+                                    h.info("recipient global name: ".concat(m.ZP.getGlobalName(t))),
+                                    h.info("recipient nickname: ".concat(c.Z.getNickname(t.id))));
+                            }));
                     break;
                 case x.h8.USER:
                     h.info("user id: ".concat(e.record.id)),

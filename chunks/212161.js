@@ -1,7 +1,8 @@
 n.d(t, {
     H: () => s,
     Z: () => l,
-});
+}),
+    n(953529);
 var r = n(979554),
     i = n(656698);
 function a(e, t, n) {
@@ -39,6 +40,23 @@ class l extends i.Z {
         return new l(o({}, super.fromServer(e), e));
     }
     constructor(e) {
-        super(e), (this.type = r.Z.PROFILE_EFFECT);
+        super(e),
+            a(this, "title", void 0),
+            a(this, "description", void 0),
+            a(this, "accessibilityLabel", void 0),
+            a(this, "reducedMotionSrc", void 0),
+            a(this, "thumbnailPreviewSrc", void 0),
+            a(this, "effects", void 0),
+            a(this, "animationType", void 0),
+            a(this, "staticFrameSrc", void 0),
+            (this.type = r.Z.PROFILE_EFFECT),
+            (this.title = e.title),
+            (this.description = e.description),
+            (this.accessibilityLabel = e.accessibilityLabel),
+            (this.reducedMotionSrc = e.reducedMotionSrc),
+            (this.thumbnailPreviewSrc = e.thumbnailPreviewSrc),
+            (this.effects = e.effects),
+            (this.animationType = e.animationType),
+            (this.staticFrameSrc = e.staticFrameSrc);
     }
 }

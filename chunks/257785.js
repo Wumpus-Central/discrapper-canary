@@ -1,25 +1,25 @@
-a.d(t, {
+n.d(t, {
     E: () => d,
     Z9: () => u,
     wl: () => m,
 }),
-    a(388685);
-var n = a(951288),
-    r = a(647438),
-    l = a(120356),
-    i = a.n(l),
-    s = a(481060),
-    o = a(572004),
-    c = a(451429);
+    n(388685);
+var a = n(951288),
+    r = n(647438),
+    l = n(120356),
+    i = n.n(l),
+    s = n(481060),
+    o = n(572004),
+    c = n(451429);
 function d(e) {
-    let { className: t, children: a } = e;
-    return (0, n.jsx)("dl", {
+    let { className: t, children: n } = e;
+    return (0, a.jsx)("dl", {
         className: i()(c.properties, t),
-        children: a,
+        children: n,
     });
 }
 let u = (e) => {
-    let { name: t, children: a, copyValue: l } = e,
+    let { name: t, children: n, copyValue: l } = e,
         [i, d] = r.useState(!1);
     return (
         r.useEffect(() => {
@@ -28,27 +28,27 @@ let u = (e) => {
                 return () => clearTimeout(e);
             }
         }, [i]),
-        (0, n.jsxs)(n.Fragment, {
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, n.jsx)("dt", {
+                (0, a.jsx)("dt", {
                     className: c.propertyName,
                     children: t,
                 }),
-                (0, n.jsxs)("dd", {
+                (0, a.jsxs)("dd", {
                     className: c.propertyValue,
                     children: [
-                        a,
+                        n,
                         null != l
-                            ? (0, n.jsx)(s.P3F, {
+                            ? (0, a.jsx)(s.P3F, {
                                   tag: "span",
                                   className: c.copyPropertyButton,
                                   onClick: () => (0, o.JG)(l, () => d(!0)),
                                   children: i
-                                      ? (0, n.jsx)(s.kmB, {
+                                      ? (0, a.jsx)(s.kmB, {
                                             color: "currentColor",
                                             size: "sm",
                                         })
-                                      : (0, n.jsx)(s.TIy, {
+                                      : (0, a.jsx)(s.TIy, {
                                             color: "currentColor",
                                             size: "sm",
                                         }),
@@ -62,7 +62,7 @@ let u = (e) => {
 };
 function m(e) {
     let { value: t } = e;
-    return (0, n.jsx)(s.XZJ, {
+    return (0, a.jsx)(s.XZJ, {
         size: 16,
         value: t,
         shape: s.XZJ.Shapes.SMALL_BOX,

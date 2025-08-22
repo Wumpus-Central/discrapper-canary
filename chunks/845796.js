@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(626135),
     d = n(381585),
     g = n(501431),
-    f = n(642909),
-    p = n(215023),
+    p = n(642909),
+    f = n(215023),
     m = n(981631),
     _ = n(388032),
     h = n(182668),
@@ -18,9 +18,9 @@ var r = n(951288),
 let C = () => {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, g.S)(),
         a = (0, d.sp)(),
-        C = (0, f.G)("CollectiblesSortSelect"),
+        C = (0, p.G)("CollectiblesSortSelect"),
         E = n(),
-        S = l.useMemo(() => p.aP.filter((e) => e.sortType !== o.E.RELEVANCE || E), [E]),
+        S = l.useMemo(() => f.aP.filter((e) => e.sortType !== o.E.RELEVANCE || E), [E]),
         O = l.useCallback((e) => {
             let { sortType: t, sortDirection: n } = e;
             return t === o.E.RECENCY

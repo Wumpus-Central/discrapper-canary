@@ -282,27 +282,28 @@ function B(e) {
                                     sourceQuestContent: v,
                                 }),
                                 b
-                                    ? ((0, T.R)(N.dr.QUEST_HOME_DESKTOP)
-                                          ? await (0, g.AH)(n.id, {
-                                                questContent: o,
-                                                questContentCTA: t,
-                                                questContentPosition: s,
-                                                questContentRowIndex: f,
-                                                sourceQuestContent: v,
-                                            })
-                                          : (0, g.AH)(n.id, {
-                                                questContent: o,
-                                                questContentCTA: t,
-                                                questContentPosition: s,
-                                                questContentRowIndex: f,
-                                                sourceQuestContent: v,
-                                            }),
-                                      (0, S.openVideoQuestModal)({
-                                          quest: n,
-                                          questContent: o,
-                                          sourceQuestContent: v,
-                                          sourceQuestContentCTA: p.jZ.ACCEPT_QUEST,
-                                      }))
+                                    ? (0, T.R)(N.dr.QUEST_HOME_DESKTOP)
+                                        ? await (0, S.enrollAndStartVideoQuestWithErrorHandling)(n, {
+                                              questContent: o,
+                                              questContentCTA: t,
+                                              sourceQuestContent: v,
+                                              sourceQuestContentCTA: p.jZ.ACCEPT_QUEST,
+                                              questContentPosition: s,
+                                              questContentRowIndex: f,
+                                          })
+                                        : ((0, g.AH)(n.id, {
+                                              questContent: o,
+                                              questContentCTA: t,
+                                              questContentPosition: s,
+                                              questContentRowIndex: f,
+                                              sourceQuestContent: v,
+                                          }),
+                                          (0, S.openVideoQuestModal)({
+                                              quest: n,
+                                              questContent: o,
+                                              sourceQuestContent: v,
+                                              sourceQuestContentCTA: p.jZ.ACCEPT_QUEST,
+                                          }))
                                     : y && n.config.features.includes(N.S7.START_QUEST_CTA) && U();
                         },
                     }

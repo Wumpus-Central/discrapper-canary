@@ -93,9 +93,9 @@ function w(e) {
 }
 let D = {
     URL_REGEX: O,
-    makeUrl: function (e) {
-        let t = (0, l.Hc)() ? window.GLOBAL_ENV.INVITE_HOST : location.host;
-        return "".concat(location.protocol, "//").concat(t).concat(e);
+    makeUrl: function (e, t) {
+        let n = (null != t ? t : (0, l.Hc)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+        return "".concat(location.protocol, "//").concat(n).concat(e);
     },
     isOriginalContentTypeDifferent: I,
     isDiscordHostname: S,

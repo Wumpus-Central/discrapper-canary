@@ -21,8 +21,8 @@ var r = n(951288),
     j = n(954824),
     I = n(781428),
     N = n(163671),
-    O = n(423527),
-    y = n(981631),
+    y = n(423527),
+    O = n(981631),
     S = n(260539),
     C = n(701476),
     Z = n(630724),
@@ -47,7 +47,7 @@ c.ZP.initialize();
 class L extends i.PureComponent {
     componentDidMount() {
         (0, x.e)("guildTemplate"),
-            A.KO || j.Z.launch("discord://" + y.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+            A.KO || j.Z.launch("discord://" + O.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
@@ -114,8 +114,8 @@ class L extends i.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: l } = this.props;
         if (null == e) return this.renderSpinner(T.intl.string(T.t.ZTNur6));
-        if (t === y.kEZ.OPEN) return this.renderAppOpened();
-        if (t === y.kEZ.OPENING) return this.renderSpinner(T.intl.string(T.t["Z+hCVV"]));
+        if (t === O.kEZ.OPEN) return this.renderAppOpened();
+        if (t === O.kEZ.OPENING) return this.renderSpinner(T.intl.string(T.t["Z+hCVV"]));
         switch (e.state) {
             case S.Rj.RESOLVING:
                 return this.renderSpinner(T.intl.string(T.t["Z+hCVV"]));
@@ -127,7 +127,7 @@ class L extends i.PureComponent {
                         transitionTo: i,
                         location: l,
                     });
-                return (0, r.jsx)(O.Z, {
+                return (0, r.jsx)(y.Z, {
                     guildTemplate: e,
                     transitionTo: i,
                     location: l,

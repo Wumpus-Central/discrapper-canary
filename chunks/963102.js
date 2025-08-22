@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(37234),
     d = n(425493),
     g = n(410030),
-    f = n(857595),
-    p = n(607070),
+    p = n(857595),
+    f = n(607070),
     m = n(984370),
     _ = n(110560),
     h = n(507808),
@@ -48,7 +48,7 @@ function B(e) {
                         u(e);
                     }, 100),
                 ),
-                e && (h.current = p.Z.keyboardModeEnabled);
+                e && (h.current = f.Z.keyboardModeEnabled);
         },
         C = (e) => {
             ("Enter" === e.key || " " === e.key) && (e.preventDefault(), b(!0));
@@ -65,7 +65,7 @@ function B(e) {
             onRequestOpen: () => b(!0),
             onRequestClose: () => {
                 var e;
-                h.current && !p.Z.keyboardModeEnabled && (0, f.Qj)(), b(!1), null == (e = d.current) || e.focus();
+                h.current && !f.Z.keyboardModeEnabled && (0, p.Qj)(), b(!1), null == (e = d.current) || e.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -146,7 +146,7 @@ function B(e) {
     });
 }
 function N(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: f, handleTransition: p } = e,
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: p, handleTransition: f } = e,
         x = (0, g.ZP)(),
         N = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         P = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
@@ -167,7 +167,7 @@ function N(e) {
             displayText: j.intl.string(j.t.EBYkzs),
         });
     let Z = n ? O.DR : a,
-        w = f === T.AW.ORBS ? L.ZY5.SHOP_ORBS_TAB : L.ZY5.COLLECTIBLES_SHOP,
+        w = p === T.AW.ORBS ? L.ZY5.SHOP_ORBS_TAB : L.ZY5.COLLECTIBLES_SHOP,
         F = l.useCallback(() => {
             t && (Z(), (0, u.Ou)()),
                 (0, h.Y)({
@@ -189,7 +189,7 @@ function N(e) {
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: k.shopHomeLink,
-                        onClick: () => p(T.AW.HOME),
+                        onClick: () => f(T.AW.HOME),
                         "aria-label": j.intl.string(j.t.pWG4zc) + " home",
                         children: [
                             (0, r.jsx)(S.Z, { className: k.discordLogo }),
@@ -205,9 +205,9 @@ function N(e) {
                                       B,
                                       {
                                           tab: t,
-                                          selected: (0, T.RE)(f) || f === t,
+                                          selected: (0, T.RE)(p) || p === t,
                                           displayText: n,
-                                          handleTransition: p,
+                                          handleTransition: f,
                                       },
                                       t,
                                   )
@@ -216,8 +216,8 @@ function N(e) {
                                       {
                                           tab: t,
                                           displayText: n,
-                                          selected: f === t,
-                                          handleTransition: p,
+                                          selected: p === t,
+                                          handleTransition: f,
                                       },
                                       t,
                                   );
@@ -229,8 +229,8 @@ function N(e) {
                             children: [
                                 D &&
                                     (0, r.jsx)(y.Z, {
-                                        handleTransition: p,
-                                        selectedTab: f,
+                                        handleTransition: f,
+                                        selectedTab: p,
                                     }),
                                 A &&
                                     (0, r.jsx)(C.V9, {

@@ -1,4 +1,4 @@
-n.d(t, { J: () => f });
+n.d(t, { J: () => p });
 var r = n(951288),
     l = n(647438),
     a = n(120356),
@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(481060),
     d = n(168020),
     g = n(779485);
-let f = l.memo(function (e) {
+let p = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: n, isFullScreen: l } = e,
         a = (0, u.q_F)({
             transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),

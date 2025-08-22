@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(607070),
     d = n(594174),
     g = n(451478),
-    f = n(626135),
-    p = n(63063),
+    p = n(626135),
+    f = n(63063),
     m = n(74538),
     _ = n(381585),
     h = n(597688),
@@ -61,7 +61,7 @@ let j = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => F(e),
                 }),
-                    f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    p.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: X,
                         sort_type: e,
                     });
@@ -122,7 +122,7 @@ let j = (e) => {
                                                       {
                                                           onClick: () =>
                                                               (0, c.Z)(
-                                                                  p.Z.getArticleURL(x.BhN.DATA_USED_FOR_RECOMMENDED),
+                                                                  f.Z.getArticleURL(x.BhN.DATA_USED_FOR_RECOMMENDED),
                                                               ),
                                                           className: L.informationIcon,
                                                           children: (0, r.jsx)(o.d3s, { size: "sm" }),
@@ -180,7 +180,7 @@ let j = (e) => {
                                                         onOutroComplete: H,
                                                         returnRef: Q,
                                                     }),
-                                                        f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                        p.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                             page_session_id: X,
                                                         });
                                                 },

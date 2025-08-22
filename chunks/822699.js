@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => ey }), n(35282), n(388685);
+n.r(t), n.d(t, { default: () => eO }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(593473),
@@ -21,8 +21,8 @@ var r = n(951288),
     j = n(637776),
     I = n(264229),
     N = n(677760),
-    O = n(893607),
-    y = n(314897),
+    y = n(893607),
+    O = n(314897),
     S = n(82142),
     C = n(701190),
     Z = n(626135),
@@ -120,7 +120,7 @@ let el = (0, L.Z)(K.Z),
     ej = (0, L.Z)(X.Z),
     eI = (0, L.Z)(Y.Z),
     eN = (0, L.Z)(p.Z);
-class eO extends i.PureComponent {
+class ey extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: r, location: i } = e,
@@ -344,7 +344,7 @@ class eO extends i.PureComponent {
                     render: (e) => (0, r.jsx)(eb, er({}, e)),
                 }),
                 (0, r.jsx)(g.Z, {
-                    path: $.Z5c.CHANNEL(O.Hw.guildId(), O.Hw.channelId({ optional: !0 }), ":messageId?"),
+                    path: $.Z5c.CHANNEL(y.Hw.guildId(), y.Hw.channelId({ optional: !0 }), ":messageId?"),
                     render: (e) => (0, r.jsx)(eE, er({}, e)),
                 }),
                 (0, r.jsx)(g.Z, {
@@ -371,7 +371,7 @@ class eO extends i.PureComponent {
             });
     }
 }
-let ey = a.ZP.connectStores([y.default, C.Z, S.Z, v.Z, E.Z], (e) => {
+let eO = a.ZP.connectStores([O.default, C.Z, S.Z, v.Z, E.Z], (e) => {
     var t, n, r;
     let { match: i, location: l } = e,
         o = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
@@ -381,7 +381,7 @@ let ey = a.ZP.connectStores([y.default, C.Z, S.Z, v.Z, E.Z], (e) => {
         u = null == i || null == (r = i.params) ? void 0 : r.guildTemplateCode;
     return {
         inviteKey: a,
-        isAuthenticated: y.default.isAuthenticated(),
+        isAuthenticated: O.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: u,
         gift: null != c ? S.Z.get(c) : null,
@@ -389,4 +389,4 @@ let ey = a.ZP.connectStores([y.default, C.Z, S.Z, v.Z, E.Z], (e) => {
         guildTemplate: null != u ? E.Z.getGuildTemplate(u) : null,
         hasLoadedExperiments: v.Z.hasLoadedExperiments,
     };
-})(eO);
+})(ey);

@@ -1,35 +1,35 @@
-a.d(t, { O: () => O }), a(388685);
-var n = a(951288),
-    r = a(647438),
-    l = a(481060),
-    i = a(373071),
-    s = a(637443),
-    o = a(619899),
-    c = a(18868),
-    d = a(281598),
-    u = a(206878),
-    m = a(198764);
+n.d(t, { O: () => E }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    l = n(481060),
+    i = n(373071),
+    s = n(637443),
+    o = n(619899),
+    c = n(18868),
+    d = n(281598),
+    u = n(206878),
+    m = n(198764);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(a);
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = a[t]),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = a);
             });
     }
     return e;
@@ -48,17 +48,17 @@ let h = [
         label: "[none selected]",
         value: null,
     },
-    v = {
+    f = {
         label: "[preview all]",
         value: null,
     },
-    b = () => {
+    v = () => {
         (0, l.nfh)(s.g)
             ? (0, l.Mr3)(s.g)
             : (0, l.ZDy)(
                   async () => {
-                      let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(a.bind(a, 637443));
-                      return (t) => (0, n.jsx)(e, x({}, t));
+                      let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
+                      return (t) => (0, a.jsx)(e, x({}, t));
                   },
                   {
                       modalKey: s.g,
@@ -66,13 +66,13 @@ let h = [
                   },
               );
     },
-    f = () => {
+    b = () => {
         (0, l.nfh)(s.c)
             ? (0, l.Mr3)(s.c)
             : (0, l.ZDy)(
                   async () => {
-                      let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(a.bind(a, 637443));
-                      return (t) => (0, n.jsx)(e, x({}, t));
+                      let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
+                      return (t) => (0, a.jsx)(e, x({}, t));
                   },
                   {
                       modalKey: s.c,
@@ -82,7 +82,7 @@ let h = [
     },
     j = () => {
         let e = (0, i.lb)(),
-            { previewProfileEffectId: t, setPreviewProfileEffectId: a } = (0, o.N9)(),
+            { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, o.N9)(),
             s = r.useMemo(
                 () => [
                     p,
@@ -93,59 +93,59 @@ let h = [
                 ],
                 [e],
             );
-        return (0, n.jsxs)("div", {
+        return (0, a.jsxs)("div", {
             className: m.previewSelector,
             children: [
-                (0, n.jsx)(l.LZC, { size: 16 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsx)(l.LZC, { size: 16 }),
+                (0, a.jsxs)("div", {
                     className: m.headingContainer,
                     children: [
-                        (0, n.jsx)(l.X6q, {
+                        (0, a.jsx)(l.X6q, {
                             variant: "heading-md/bold",
                             children: "Preview Profile Effect",
                         }),
-                        (0, n.jsx)(l.hU, {
+                        (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: f,
+                            onClick: b,
                             icon: l.idN,
                             "aria-label": "Open PFX preview instructions",
                         }),
                     ],
                 }),
-                (0, n.jsx)(l.q4e, {
+                (0, a.jsx)(l.q4e, {
                     options: s,
                     value: t,
                     maxVisibleItems: 30,
-                    onChange: (e) => a(e),
+                    onChange: (e) => n(e),
                 }),
             ],
         });
     },
     g = () => {
         let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
-            { avatarDecorationAssets: a } = (0, o.xq)(),
+            { avatarDecorationAssets: n } = (0, o.xq)(),
             i = r.useMemo(
                 () => [
-                    v,
-                    ...a.map((e) => ({
+                    f,
+                    ...n.map((e) => ({
                         label: e.name,
                         value: e.name,
                     })),
                 ],
-                [a],
+                [n],
             );
-        return 0 === a.length
+        return 0 === n.length
             ? null
-            : (0, n.jsxs)("div", {
+            : (0, a.jsxs)("div", {
                   className: m.previewSelector,
                   children: [
-                      (0, n.jsx)(l.LZC, { size: 16 }),
-                      (0, n.jsx)(l.X6q, {
+                      (0, a.jsx)(l.LZC, { size: 16 }),
+                      (0, a.jsx)(l.X6q, {
                           variant: "heading-md/bold",
                           children: "Preview Avatar Decorations",
                       }),
-                      (0, n.jsx)(l.q4e, {
+                      (0, a.jsx)(l.q4e, {
                           options: i,
                           value: e,
                           maxVisibleItems: 30,
@@ -155,7 +155,7 @@ let h = [
               });
     },
     _ = (e) => {
-        let { clearAssets: t, clearIgnoredFiles: a } = e,
+        let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: i } = (0, o.xq)(),
             { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
             d = r.useMemo(
@@ -168,21 +168,21 @@ let h = [
             ),
             u = r.useCallback((e) => s(e), [s]),
             x = r.useCallback(() => {
-                c(), t(), a();
-            }, [c, t, a]);
+                c(), t(), n();
+            }, [c, t, n]);
         return 0 === d.length
             ? null
-            : (0, n.jsxs)(n.Fragment, {
+            : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, n.jsx)(l.LZC, { size: 16 }),
-                      (0, n.jsxs)("div", {
+                      (0, a.jsx)(l.LZC, { size: 16 }),
+                      (0, a.jsxs)("div", {
                           className: m.headingContainer,
                           children: [
-                              (0, n.jsx)(l.X6q, {
+                              (0, a.jsx)(l.X6q, {
                                   variant: "heading-lg/bold",
                                   children: "Uploaded Assets",
                               }),
-                              (0, n.jsx)(l.zxk, {
+                              (0, a.jsx)(l.zxk, {
                                   variant: "critical-primary",
                                   size: "sm",
                                   onClick: x,
@@ -190,21 +190,21 @@ let h = [
                               }),
                           ],
                       }),
-                      (0, n.jsx)("ul", {
+                      (0, a.jsx)("ul", {
                           children: d.map((e) =>
-                              (0, n.jsxs)(
+                              (0, a.jsxs)(
                                   "li",
                                   {
                                       className: m.uploadedFileListItem,
                                       children: [
-                                          (0, n.jsx)(l.hU, {
+                                          (0, a.jsx)(l.hU, {
                                               variant: "icon-only",
                                               size: "sm",
                                               onClick: () => u(e.value),
                                               icon: l.Dio,
                                               "aria-label": "Remove asset",
                                           }),
-                                          (0, n.jsx)(l.Text, {
+                                          (0, a.jsx)(l.Text, {
                                               variant: "text-md/normal",
                                               children: e.label,
                                           }),
@@ -218,34 +218,34 @@ let h = [
               });
     },
     y = (e) => {
-        let { ignoredFiles: t, handleClearIgnoredFiles: a } = e;
+        let { ignoredFiles: t, handleClearIgnoredFiles: n } = e;
         return 0 === t.length
             ? null
-            : (0, n.jsxs)(n.Fragment, {
+            : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, n.jsx)(l.LZC, { size: 16 }),
-                      (0, n.jsxs)("div", {
+                      (0, a.jsx)(l.LZC, { size: 16 }),
+                      (0, a.jsxs)("div", {
                           className: m.headingContainer,
                           children: [
-                              (0, n.jsx)(l.X6q, {
+                              (0, a.jsx)(l.X6q, {
                                   variant: "heading-lg/bold",
                                   children: "Ignored Files",
                               }),
-                              (0, n.jsx)(l.zxk, {
+                              (0, a.jsx)(l.zxk, {
                                   variant: "primary",
                                   size: "sm",
-                                  onClick: a,
+                                  onClick: n,
                                   text: "Clear",
                               }),
                           ],
                       }),
-                      (0, n.jsx)("ul", {
+                      (0, a.jsx)("ul", {
                           children: t.map((e, t) =>
-                              (0, n.jsx)(
+                              (0, a.jsx)(
                                   "li",
                                   {
                                       className: m.ignoredFileListItem,
-                                      children: (0, n.jsx)(l.Text, {
+                                      children: (0, a.jsx)(l.Text, {
                                           variant: "text-md/normal",
                                           children: e,
                                       }),
@@ -258,35 +258,35 @@ let h = [
               });
     },
     C = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: a, warnings: i, errors: s } = (0, u.g)(),
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, u.g)(),
             o = Object.entries(s),
             d = Object.entries(i),
             x = o.length > 0,
             h = d.length > 0,
             p = r.useCallback(
-                (a) => {
-                    t(), e(a);
+                (n) => {
+                    t(), e(n);
                 },
                 [e, t],
             );
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, n.jsx)(c.L, { onDrop: p }),
-                a
-                    ? (0, n.jsxs)("div", {
+                (0, a.jsx)(c.L, { onDrop: p }),
+                n
+                    ? (0, a.jsxs)("div", {
                           className: m.validationSummary,
                           children: [
-                              (0, n.jsx)(l.Text, {
+                              (0, a.jsx)(l.Text, {
                                   variant: "text-md/normal",
                                   color: x ? "text-danger" : "text-default",
                                   children: "".concat(o.length, " errors"),
                               }),
-                              (0, n.jsx)(l.Text, {
+                              (0, a.jsx)(l.Text, {
                                   variant: "text-md/normal",
                                   color: h ? "text-feedback-warning" : "text-default",
                                   children: "".concat(d.length, " warnings"),
                               }),
-                              (0, n.jsx)(l.zxk, {
+                              (0, a.jsx)(l.zxk, {
                                   variant: "primary",
                                   size: "sm",
                                   onClick: t,
@@ -294,40 +294,40 @@ let h = [
                               }),
                           ],
                       })
-                    : (0, n.jsx)(l.Text, {
+                    : (0, a.jsx)(l.Text, {
                           variant: "text-md/normal",
                           children: "Drop asset folder to validate.",
                       }),
-                (0, n.jsx)(l.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 16 }),
                 x &&
-                    (0, n.jsxs)(n.Fragment, {
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, n.jsx)(l.X6q, {
+                            (0, a.jsx)(l.X6q, {
                                 variant: "heading-lg/bold",
                                 children: "Errors",
                             }),
-                            (0, n.jsx)(l.LZC, { size: 8 }),
-                            (0, n.jsx)("ul", {
+                            (0, a.jsx)(l.LZC, { size: 8 }),
+                            (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
                                 children: o.map((e, t) => {
-                                    let [a, r] = e;
-                                    return (0, n.jsxs)(
+                                    let [n, r] = e;
+                                    return (0, a.jsxs)(
                                         "li",
                                         {
                                             children: [
-                                                (0, n.jsx)(l.Text, {
+                                                (0, a.jsx)(l.Text, {
                                                     variant: "text-md/bold",
                                                     color: "text-danger",
-                                                    children: a,
+                                                    children: n,
                                                 }),
                                                 r.length > 0 &&
-                                                    (0, n.jsx)("ul", {
+                                                    (0, a.jsx)("ul", {
                                                         className: m.validationIssuesList,
                                                         children: r.map((e, t) =>
-                                                            (0, n.jsx)(
+                                                            (0, a.jsx)(
                                                                 "li",
                                                                 {
-                                                                    children: (0, n.jsx)(l.Text, {
+                                                                    children: (0, a.jsx)(l.Text, {
                                                                         variant: "text-sm/normal",
                                                                         color: "text-danger",
                                                                         children: e,
@@ -339,41 +339,41 @@ let h = [
                                                     }),
                                             ],
                                         },
-                                        "".concat(a, "-").concat(t),
+                                        "".concat(n, "-").concat(t),
                                     );
                                 }),
                             }),
                         ],
                     }),
                 h &&
-                    (0, n.jsxs)(n.Fragment, {
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, n.jsx)(l.X6q, {
+                            (0, a.jsx)(l.X6q, {
                                 variant: "heading-lg/bold",
                                 children: "Warnings",
                             }),
-                            (0, n.jsx)(l.LZC, { size: 8 }),
-                            (0, n.jsx)("ul", {
+                            (0, a.jsx)(l.LZC, { size: 8 }),
+                            (0, a.jsx)("ul", {
                                 className: m.validationIssuesList,
                                 children: Object.entries(i).map((e, t) => {
-                                    let [a, r] = e;
-                                    return (0, n.jsxs)(
+                                    let [n, r] = e;
+                                    return (0, a.jsxs)(
                                         "li",
                                         {
                                             children: [
-                                                (0, n.jsx)(l.Text, {
+                                                (0, a.jsx)(l.Text, {
                                                     variant: "text-md/bold",
                                                     color: "text-feedback-warning",
-                                                    children: a,
+                                                    children: n,
                                                 }),
                                                 r.length > 0 &&
-                                                    (0, n.jsx)("ul", {
+                                                    (0, a.jsx)("ul", {
                                                         className: m.validationIssuesList,
                                                         children: r.map((e, t) =>
-                                                            (0, n.jsx)(
+                                                            (0, a.jsx)(
                                                                 "li",
                                                                 {
-                                                                    children: (0, n.jsx)(l.Text, {
+                                                                    children: (0, a.jsx)(l.Text, {
                                                                         variant: "text-sm/normal",
                                                                         color: "text-feedback-warning",
                                                                         children: e,
@@ -385,7 +385,7 @@ let h = [
                                                     }),
                                             ],
                                         },
-                                        "".concat(a, "-").concat(t),
+                                        "".concat(n, "-").concat(t),
                                     );
                                 }),
                             }),
@@ -395,73 +395,73 @@ let h = [
         });
     },
     N = () => {
-        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: a } = (0, o.N9)(),
+        let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
             { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: x } = (0, d.hm)(),
             h = r.useCallback(
                 (e) => {
-                    a(), x(e);
+                    n(), x(e);
                 },
-                [x, a],
+                [x, n],
             );
-        return (0, n.jsxs)(n.Fragment, {
+        return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, n.jsx)(c.L, { onDrop: h }),
-                (0, n.jsx)(l.Text, {
+                (0, a.jsx)(c.L, { onDrop: h }),
+                (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
                     children: "Drop files in this panel to begin preview.",
                 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: m.previewToggleContainer,
                     children: [
-                        (0, n.jsx)(l.rsf, {
+                        (0, a.jsx)(l.rsf, {
                             checked: e,
                             onChange: (e) => t(e),
                         }),
-                        (0, n.jsx)(l.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children: "Enable Preview",
                         }),
-                        (0, n.jsx)(l.hU, {
+                        (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: b,
+                            onClick: v,
                             icon: l.idN,
                             "aria-label": "Open preview instructions",
                         }),
                     ],
                 }),
-                (0, n.jsx)(j, {}),
-                (0, n.jsx)(g, {}),
-                (0, n.jsx)(_, {
+                (0, a.jsx)(j, {}),
+                (0, a.jsx)(g, {}),
+                (0, a.jsx)(_, {
                     clearAssets: s,
                     clearIgnoredFiles: u,
                 }),
-                (0, n.jsx)(y, {
+                (0, a.jsx)(y, {
                     ignoredFiles: i,
                     handleClearIgnoredFiles: u,
                 }),
             ],
         });
     },
-    O = () => {
+    E = () => {
         let [e, t] = r.useState("preview");
-        return (0, n.jsxs)("div", {
+        return (0, a.jsxs)("div", {
             className: m.container,
             children: [
-                (0, n.jsx)(l.sY7, {
+                (0, a.jsx)(l.sY7, {
                     options: h,
                     value: e,
                     onChange: (e) => {
-                        let { value: a } = e;
-                        return t(a);
+                        let { value: n } = e;
+                        return t(n);
                     },
                     className: m.panelModeControl,
                     optionClassName: m.panelModeControlOption,
                 }),
-                (0, n.jsx)(l.LZC, { size: 8 }),
-                "preview" === e && (0, n.jsx)(N, {}),
-                "validate" === e && (0, n.jsx)(C, {}),
-                (0, n.jsx)(l.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 8 }),
+                "preview" === e && (0, a.jsx)(N, {}),
+                "validate" === e && (0, a.jsx)(C, {}),
+                (0, a.jsx)(l.LZC, { size: 16 }),
             ],
         });
     };

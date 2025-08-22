@@ -1,27 +1,27 @@
-a.d(t, { g: () => j }), a(388685), a(35282);
-var n = a(647438),
-    r = a(281598);
+n.d(t, { g: () => j }), n(388685), n(35282);
+var a = n(647438),
+    r = n(281598);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(a);
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = a[t]),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = a);
             });
     }
     return e;
@@ -32,14 +32,14 @@ function i(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var a = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      a.push.apply(a, n);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
-                  return a;
-              })(Object(t)).forEach(function (a) {
-                  Object.defineProperty(e, a, Object.getOwnPropertyDescriptor(t, a));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
@@ -97,18 +97,18 @@ let s = new Set([
     },
     p = async (e) => {
         let t = Object.values(r.CM),
-            a = new Set(),
-            n = e.createReader();
-        for (let e of await new Promise((e) => n.readEntries(e))) e.isDirectory && t.includes(e.name) && a.add(e.name);
-        return t.filter((e) => !a.has(e));
+            n = new Set(),
+            a = e.createReader();
+        for (let e of await new Promise((e) => a.readEntries(e))) e.isDirectory && t.includes(e.name) && n.add(e.name);
+        return t.filter((e) => !n.has(e));
     },
-    v = (e) => {
-        let { names: t, addError: a } = e,
-            n = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
-            r = t.filter((e) => !n.test(e));
-        r.length > 0 && a("File names must be in lowercase snake case", r);
+    f = (e) => {
+        let { names: t, addError: n } = e,
+            a = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
+            r = t.filter((e) => !a.test(e));
+        r.length > 0 && n("File names must be in lowercase snake case", r);
     },
-    b = (e, t, a, n) => {
+    v = (e, t, n, a) => {
         let r = t.size,
             l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
             i = "".concat(t.name, " - ").concat(l);
@@ -117,133 +117,133 @@ let s = new Set([
                 e.max > 1000000
                     ? "".concat(Math.round(e.max / 1000000), "MB")
                     : "".concat(Math.round(e.max / 1000), "KB");
-            a("Files exceed the recommended size limit - make sure they are optimized!", [
+            n("Files exceed the recommended size limit - make sure they are optimized!", [
                 "".concat(i, " (max: ").concat(t, ")"),
             ]);
-        } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
+        } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
     },
-    f = (e, t, a, n) => {
+    b = (e, t, n, a) => {
         let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith(".txt") || b(r, e, a, n);
+        if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, n, a);
     },
     j = () => {
-        let [e, t] = n.useState(!1),
-            [a, c] = n.useState({}),
-            [d, u] = n.useState({}),
-            m = n.useCallback(function (e) {
+        let [e, t] = a.useState(!1),
+            [n, c] = a.useState({}),
+            [d, u] = a.useState({}),
+            m = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                u((a) => {
-                    var n;
-                    let r = null != (n = a[e]) ? n : [];
-                    return i(l({}, a), {
+                u((n) => {
+                    var a;
+                    let r = null != (a = n[e]) ? a : [];
+                    return i(l({}, n), {
                         [e]: [...r, ...t],
                     });
                 });
             }, []),
-            x = n.useCallback(function (e) {
+            x = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                c((a) => {
-                    var n;
-                    let r = null != (n = a[e]) ? n : [];
-                    return i(l({}, a), {
+                c((n) => {
+                    var a;
+                    let r = null != (a = n[e]) ? a : [];
+                    return i(l({}, n), {
                         [e]: [...r, ...t],
                     });
                 });
             }, []),
-            j = n.useCallback(() => {
+            j = a.useCallback(() => {
                 t(!1), u({}), c({});
             }, []);
         return {
             validationComplete: e,
             errors: d,
-            warnings: a,
-            validateShopAssetPackage: n.useCallback(
+            warnings: n,
+            validateShopAssetPackage: a.useCallback(
                 async (e) => {
                     try {
-                        var a;
+                        var n;
                         if (0 === e.length) return void m("No files found");
                         if (e.length > 1) return void m("Uploaded multiple files. Expected 1 directory.");
                         let t = e[0];
                         if (!t.isDirectory) return void m("Uploaded a file. Expected a directory.");
-                        let n = await p(t);
-                        if (n.length > 0) return void m("Missing required directories", n);
-                        (a = await (0, r.LY)([t])),
+                        let a = await p(t);
+                        if (a.length > 0) return void m("Missing required directories", a);
+                        (n = await (0, r.LY)([t])),
                             ((e) => {
-                                let { files: t, addError: a, addWarning: n } = e;
+                                let { files: t, addError: n, addWarning: a } = e;
                                 for (let e of t.collectionFiles) {
                                     let t = (0, r.BU)(e),
                                         l = null != t ? h[t] : null;
-                                    null != l && b(l, e, a, n);
+                                    null != l && v(l, e, n, a);
                                 }
-                                v({
+                                f({
                                     names: t.collectionFiles.map((e) => e.name),
-                                    addError: a,
+                                    addError: n,
                                 });
                                 let l = new Set(t.collectionFiles.map((e) => e.name)),
                                     i = Array.from(s).filter((e) => !l.has(e));
-                                i.length > 0 && a("Missing required files", i);
+                                i.length > 0 && n("Missing required files", i);
                                 let o = Object.values(r.jE)
                                     .filter((e) => !s.has(e))
                                     .filter((e) => !l.has(e));
-                                o.length > 0 && n("Missing optional assets", o);
+                                o.length > 0 && a("Missing optional assets", o);
                             })({
-                                files: a,
+                                files: n,
                                 addError: m,
                                 addWarning: x,
                             }),
                             ((e) => {
-                                let { files: t, addError: a, addWarning: n } = e;
-                                v({
+                                let { files: t, addError: n, addWarning: a } = e;
+                                f({
                                     names: Object.keys(t.profileEffectFilesMap),
-                                    addError: a,
+                                    addError: n,
                                 }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
                                         let [t, l] = e,
                                             i = l.map((e) => e.name);
-                                        v({
+                                        f({
                                             names: i.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
                                             }),
-                                            addError: a,
+                                            addError: n,
                                         }),
-                                            f(r.aB.PROFILE_EFFECT, l, a, n);
+                                            b(r.aB.PROFILE_EFFECT, l, n, a);
                                         let s = o
                                             .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => "".concat(t, "/").concat(e));
-                                        s.length > 0 && a("Missing required PFX files with prefix", s),
+                                        s.length > 0 && n("Missing required PFX files with prefix", s),
                                             i.some((e) => e.endsWith(".txt")) ||
-                                                a(
+                                                n(
                                                     "PFX configs required - please include both exports! (exception: duplicate variant configs are optional)",
                                                     [t],
                                                 );
                                         let c = i
                                             .filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith(".txt"))
                                             .map((e) => "".concat(t, "/").concat(e));
-                                        c.length > 0 && n("Contains unrecognized files", c);
+                                        c.length > 0 && a("Contains unrecognized files", c);
                                     });
                             })({
-                                files: a,
+                                files: n,
                                 addError: m,
                                 addWarning: x,
                             }),
                             ((e) => {
-                                let { files: t, addError: a, addWarning: n } = e;
-                                v({
+                                let { files: t, addError: n, addWarning: a } = e;
+                                f({
                                     names: t.avatarDecorationFiles.map((e) => e.name),
-                                    addError: a,
+                                    addError: n,
                                 }),
-                                    f(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, a, n);
+                                    b(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({
-                                files: a,
+                                files: n,
                                 addError: m,
                                 addWarning: x,
                             }),
                             ((e) => {
-                                let { files: t, addWarning: a } = e;
-                                t.ignoredFilenames.length > 0 && a("Contains unrecognized files", t.ignoredFilenames);
+                                let { files: t, addWarning: n } = e;
+                                t.ignoredFilenames.length > 0 && n("Contains unrecognized files", t.ignoredFilenames);
                             })({
-                                files: a,
+                                files: n,
                                 addError: m,
                                 addWarning: x,
                             });

@@ -12,8 +12,8 @@ var r = n(951288),
     o = n(100527),
     C = n(906732),
     d = n(367074),
-    p = n(717401),
-    c = n(509545),
+    c = n(717401),
+    p = n(509545),
     u = n(78839),
     x = n(669079),
     h = n(987209),
@@ -70,7 +70,7 @@ function R(e) {
             analyticsSourceLocation: l,
             onComplete: o,
             transitionState: d,
-            initialPlanId: p,
+            initialPlanId: c,
             subscriptionTier: u,
             onClose: j,
             trialId: L,
@@ -92,7 +92,7 @@ function R(e) {
         } = e,
         { analyticsLocations: N } = (0, C.ZP)();
     i.useEffect(() => {
-        c.Z.isLoadedForPremiumSKUs() || s.Z.wait(() => (0, a.Y2)());
+        p.Z.isLoadedForPremiumSKUs() || s.Z.wait(() => (0, a.Y2)());
     }, []);
     let { step: H } = (0, _.JL)(),
         { isGift: F, giftMessage: G, giftRecipient: D } = (0, h.wD)(),
@@ -107,7 +107,7 @@ function R(e) {
             analyticsSubscriptionType: Z.NYc.PREMIUM,
             onComplete: o,
             transitionState: d,
-            initialPlanId: p,
+            initialPlanId: c,
             giftMessage: G,
             subscriptionTier: u,
             onClose: j,
@@ -138,14 +138,14 @@ function N(e) {
     var t, n;
     let { initialPlanId: i, handleStepChange: l, referralTrialOfferId: s } = e,
         { paymentSources: a, selectedSkuId: o, selectedPlan: C } = (0, _.JL)(),
-        { isGift: d, claimableRewards: c } = (0, h.wD)(),
+        { isGift: d, claimableRewards: p } = (0, h.wD)(),
         u = (0, I.Z)({
             isGift: d,
             skuId: o,
             referralTrialOfferId: s,
         }),
         x = (0, P.Fv)(u),
-        j = (0, p.id)(C, d, c);
+        j = (0, c.id)(C, d, p);
     return (0, r.jsx)(
         L.J,
         ((t = B({}, e)),
@@ -250,8 +250,8 @@ function F(e) {
         {
             confirmationFooter: s,
             defaultPlanId: a,
-            giftingOrigin: p,
-            giftMessage: c,
+            giftingOrigin: c,
+            giftMessage: p,
             giftRecipient: x,
             giftStyle: f,
             isGift: m,
@@ -259,6 +259,7 @@ function F(e) {
             paymentModalBanner: g,
             referralCode: b,
             subscriptionTier: y,
+            customCheckoutFlow: S,
         } = e;
     if (null != y && !Object.values(A.Si).includes(y)) throw Error("subscriptionTier must be a premium subscription");
     return (0, r.jsx)(C.Gt, {
@@ -272,15 +273,16 @@ function F(e) {
             defaultPlanId: null != n ? n : a,
             referralCode: b,
             wasTier2PremiumBeforePurchase: e.wasTier2PremiumBeforePurchase,
+            customCheckoutFlow: S,
             children: (0, r.jsx)(j.c1, {
                 confirmationFooter: s,
                 paymentModalBanner: g,
                 children: (0, r.jsx)(h.KB, {
                     isGift: m,
                     giftRecipient: null == x ? void 0 : x,
-                    giftMessage: c,
+                    giftMessage: p,
                     giftStyle: f,
-                    giftingOrigin: p,
+                    giftingOrigin: c,
                     children: (0, r.jsx)(R, B({}, e)),
                 }),
             }),

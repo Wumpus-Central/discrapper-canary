@@ -1,7 +1,7 @@
 n.d(t, {
     EB: () => m,
-    MV: () => f,
-    q3: () => p,
+    MV: () => p,
+    q3: () => f,
 }),
     n(388685);
 var r = n(647438),
@@ -14,7 +14,7 @@ var r = n(647438),
     u = n(215023),
     d = n(981631),
     g = n(474936);
-let f = (e) => {
+let p = (e) => {
         let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
             r = ((e) => {
                 switch (e) {
@@ -42,8 +42,8 @@ let f = (e) => {
             currentTabLocation: r,
         };
     },
-    p = (e, t, n, l, a) => {
-        let { analyticsLocations: s, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: g } = f(t);
+    f = (e, t, n, l, a) => {
+        let { analyticsLocations: s, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: g } = p(t);
         r.useEffect(() => {
             if (l !== u.f7.VISIBLE || g !== c) return;
             let r = t === u.AW.CATALOG ? a : o;
@@ -57,7 +57,7 @@ let f = (e) => {
         }, [s, e, t, n, c, l, a, o, g]);
     },
     m = (e, t) => {
-        let { analyticsLocations: n } = f(e);
+        let { analyticsLocations: n } = p(e);
         r.useEffect(() => {
             null == t ||
                 o.ZP.canUseCollectibles(t) ||

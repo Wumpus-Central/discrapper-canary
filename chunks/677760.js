@@ -21,7 +21,7 @@ var r = n(951288),
     j = n(981631),
     I = n(388032),
     N = n(271922);
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -163,8 +163,8 @@ function T(e) {
     return null != t && (0, v.JI)(t)
         ? (0, r.jsx)(
               A,
-              y(
-                  O(
+              O(
+                  y(
                       {
                           startAnimHeightPx: 0,
                           innerStyle: () => N.guildInfoInner,
@@ -185,8 +185,8 @@ function P(e) {
         };
     return (0, r.jsx)(
         A,
-        y(
-            O(
+        O(
+            y(
                 {
                     startAnimHeightPx: 200,
                     innerStyle: (e) => n[e],
@@ -199,9 +199,9 @@ function P(e) {
                         if (null == t) return (0, r.jsx)(S, {});
                         switch (n) {
                             case 1:
-                                return (0, r.jsx)(E.Z, y(O({}, e), { invite: t }));
+                                return (0, r.jsx)(E.Z, O(y({}, e), { invite: t }));
                             case 2:
-                                return (0, r.jsx)(Z, y(O({}, e), { invite: t }));
+                                return (0, r.jsx)(Z, O(y({}, e), { invite: t }));
                             default:
                                 return (0, r.jsx)(S, {});
                         }
@@ -226,7 +226,7 @@ function R(e) {
         className: N.splashBackground,
         style: l,
         contentClassName: N.centerAuthBoxContent,
-        children: [(0, r.jsx)(P, y(O({}, e), { onAcceptInvite: n })), (0, r.jsx)(T, O({}, e))],
+        children: [(0, r.jsx)(P, O(y({}, e), { onAcceptInvite: n })), (0, r.jsx)(T, y({}, e))],
     });
 }
 function w(e) {

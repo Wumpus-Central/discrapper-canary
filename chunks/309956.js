@@ -1,4 +1,4 @@
-n.d(t, { B: () => f }), n(388685), n(539854);
+n.d(t, { B: () => p }), n(388685), n(539854);
 var r = n(647438),
     l = n(843611),
     a = n(335818),
@@ -14,10 +14,10 @@ let g = {
         [u.AW.NAMEPLATES]: a.G.NAMEPLATE,
         [u.AW.BUNDLES]: a.G.BUNDLE,
     },
-    f = (e, t) => {
+    p = (e, t) => {
         let { enabled: n } = (0, s.WX)({ location: "useShopViewTransition" }),
             a = (0, i.FF)("CollectiblesBrowse"),
-            { setItemTypeFilter: f, reset: p, setCurrentTab: m } = (0, o.S)(),
+            { setItemTypeFilter: p, reset: f, setCurrentTab: m } = (0, o.S)(),
             _ = r.useMemo(() => (e !== u.AW.ORBS || n ? ((0, u.RE)(e) && a ? u.AW.CATALOG : e) : u.AW.HOME), [e, n, a]),
             [h, b] = r.useState(_),
             [C, E] = r.useState(u.f7.VISIBLE);
@@ -31,10 +31,10 @@ let g = {
             O = (0, l.k6)(),
             v = r.useCallback(
                 async (e, n) => {
-                    if ((S(), e === u.AW.CATALOG)) p();
+                    if ((S(), e === u.AW.CATALOG)) f();
                     else if ((0, u.RE)(e) && e !== h) {
                         let t = g[e];
-                        null != t ? f(t) : p();
+                        null != t ? p(t) : f();
                     }
                     if (h === e) return;
                     if (n) {
@@ -47,7 +47,7 @@ let g = {
                         t || O.push(d.Z5c.COLLECTIBLES_SHOP_WITH_TAB(r), { shallow: !0 }),
                         E(u.f7.VISIBLE);
                 },
-                [O, t, a, f, p, h, S],
+                [O, t, a, p, f, h, S],
             );
         return {
             selectedTab: h,

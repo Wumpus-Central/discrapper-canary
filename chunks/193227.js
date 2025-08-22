@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(594174),
     d = n(381585),
     g = n(870289),
-    f = n(456080),
-    p = n(370039),
+    p = n(456080),
+    f = n(370039),
     m = n(937510),
     _ = n(303952),
     h = n(253355),
@@ -66,7 +66,7 @@ function T(e) {
 function L(e) {
     let { category: t } = e,
         n = (0, m.l)(t.products),
-        l = (0, p.a)()(n);
+        l = (0, f.a)()(n);
     return (0, r.jsx)(T, {
         products: l,
         category: t,
@@ -81,7 +81,7 @@ function j(e) {
             },
             n ? 0.13 : 0.15,
         ),
-        o = (0, f.B)("CollectiblesCatalogContent");
+        o = (0, p.B)("CollectiblesCatalogContent");
     return (0, r.jsxs)("div", {
         className: y.categoryWrapper,
         ref: i,
@@ -99,9 +99,9 @@ function j(e) {
 function k(e) {
     var t;
     let { sortedCategories: n, setCategoryRef: a, isFullScreen: i, currentPage: c, handlePageChange: u } = e,
-        f = (0, d.sp)(),
-        p = (0, S.R)(),
-        m = null != (t = null == f ? void 0 : f.sessionId) ? t : "",
+        p = (0, d.sp)(),
+        f = (0, S.R)(),
+        m = null != (t = null == p ? void 0 : p.sessionId) ? t : "",
         { noCache: h, includeUnpublished: b } = (0, O.Z)(),
         E = l.useMemo(
             () =>
@@ -128,7 +128,7 @@ function k(e) {
         });
     }, []),
         l.useEffect(() => {
-            p ||
+            f ||
                 0 === v.length ||
                 (0, _.n)({
                     sessionId: m,
@@ -138,9 +138,9 @@ function k(e) {
                     unpublishedCategoriesShown: b,
                     cacheDisabled: h,
                 });
-        }, [m, i, b, h, p, v.length]);
+        }, [m, i, b, h, f, v.length]);
     let T = (0, g.FF)("CollectiblesBrowse");
-    return p
+    return f
         ? (0, r.jsx)(C.Z, {})
         : (0, r.jsxs)("div", {
               className: s()(y.categories, { [y.categoriesNoFilter]: !T }),

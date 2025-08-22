@@ -1,18 +1,18 @@
-a.d(t, { Z: () => b }), a(539854), a(388685);
-var n,
+n.d(t, { Z: () => v }), n(539854), n(388685);
+var a,
     r,
-    l = a(772848),
-    i = a(756647),
-    s = a(442837),
-    o = a(570140),
-    c = a(314897),
-    d = a(906467);
+    l = n(772848),
+    i = n(756647),
+    s = n(442837),
+    o = n(570140),
+    c = n(314897),
+    d = n(906467);
 let u = 0,
     m = [],
     x = 0,
     h = [],
     p = !1;
-class v extends (n = s.ZP.Store) {
+class f extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -29,30 +29,30 @@ class v extends (n = s.ZP.Store) {
         return p;
     }
 }
-(r = "displayName") in v
-    ? Object.defineProperty(v, r, {
+(r = "displayName") in f
+    ? Object.defineProperty(f, r, {
           value: "AnalyticsLogStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (v[r] = "AnalyticsLogStore");
-let b = new v(o.Z, {
+    : (f[r] = "AnalyticsLogStore");
+let v = new f(o.Z, {
     TRACK: function (e) {
-        let { event: t, properties: a, fingerprint: n } = e;
+        let { event: t, properties: n, fingerprint: a } = e;
         d.Z.isDeveloper &&
             (m.push({
                 key: (u++).toString(),
                 event: t,
-                properties: a,
-                fingerprint: null != n ? (0, i.s)(n) : c.default.getId(),
+                properties: n,
+                fingerprint: null != a ? (0, i.s)(a) : c.default.getId(),
                 timestamp: new Date(),
             }),
             x++,
             m.length > 500 && (m = m.slice(-Math.floor(250))));
     },
     TRACK_TRIGGER: function (e) {
-        let { experimentId: t, descriptor: a, exposureType: n, excluded: r, location: i, previouslyTracked: s } = e;
+        let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: i, previouslyTracked: s } = e;
         d.Z.isDeveloper &&
             p &&
             (h = [
@@ -60,8 +60,8 @@ let b = new v(o.Z, {
                 {
                     key: (0, l.Z)(),
                     experimentId: t,
-                    descriptor: a,
-                    exposureType: n,
+                    descriptor: n,
+                    exposureType: a,
                     excluded: r,
                     location: i,
                     previouslyTracked: s,

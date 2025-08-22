@@ -13,8 +13,8 @@ var r = n(951288),
     u = n(607070),
     d = n(906732),
     g = n(70097),
-    f = n(963249),
-    p = n(594174),
+    p = n(963249),
+    f = n(594174),
     m = n(451478),
     _ = n(754347),
     h = n(74538),
@@ -32,7 +32,7 @@ let L = (0, b.IC)(90),
         let { category: t } = e,
             { analyticsLocations: n } = (0, d.ZP)(),
             a = l.useRef(null),
-            s = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+            s = (0, o.e7)([f.default], () => f.default.getCurrentUser());
         return h.ZP.canUseCollectibles(s)
             ? t.summary
             : y.intl.format(y.t["9hafRk"], {
@@ -41,7 +41,7 @@ let L = (0, b.IC)(90),
                           innerRef: a,
                           className: T.getPremiumHook,
                           onClick: () => {
-                              (0, f.Z)({
+                              (0, p.Z)({
                                   subscriptionTier: x.Si.TIER_2,
                                   analyticsLocations: n,
                                   returnRef: a,
@@ -77,10 +77,10 @@ function I(e) {
         { backgroundColors: a } = (0, C.Z)(t.styles),
         d = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         g = (0, o.e7)([m.Z], () => m.Z.isFocused()),
-        { bannerOverrides: f, shopAllBannerStatic: p, shopAllBannerAnimated: h } = (0, v.t0)(t),
-        x = !!(null == f ? void 0 : f.showDarkBannerText);
+        { bannerOverrides: p, shopAllBannerStatic: f, shopAllBannerAnimated: h } = (0, v.t0)(t),
+        x = !!(null == p ? void 0 : p.showDarkBannerText);
     return (0, r.jsxs)(E.Z, {
-        asset: p,
+        asset: f,
         className: s()(T.shopBanner, n),
         style:
             null != a
@@ -91,7 +91,7 @@ function I(e) {
                 : void 0,
         children: [
             !d && null != h && g && (0, r.jsx)(k, { src: h }),
-            (null == f ? void 0 : f.addAttributionLogo)
+            (null == p ? void 0 : p.addAttributionLogo)
                 ? (0, r.jsxs)("div", {
                       className: T.discordLogo,
                       children: [
@@ -106,12 +106,12 @@ function I(e) {
                       ],
                   })
                 : (0, r.jsx)(c.LZC, { size: 28 }),
-            (null == f ? void 0 : f.addLogo)
+            (null == p ? void 0 : p.addLogo)
                 ? (0, r.jsx)("img", {
                       className: T.categoryLogo,
                       src: (0, b.uV)(t.logo, { size: L }),
                       alt: t.name,
-                      style: { maxWidth: null == f ? void 0 : f.logoMaxWidth },
+                      style: { maxWidth: null == p ? void 0 : p.logoMaxWidth },
                   })
                 : (0, r.jsx)(c.LZC, { size: 90 }),
             "" !== t.summary &&

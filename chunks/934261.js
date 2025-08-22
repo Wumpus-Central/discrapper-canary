@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => w });
 var r = n(951288);
 n(647438);
 var i = n(392711),
@@ -22,8 +22,8 @@ var i = n(392711),
     y = n(55935),
     O = n(74538),
     _ = n(388032),
-    E = n(71627);
-function C(e) {
+    C = n(71627);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,43 +57,43 @@ let I = (e) => {
             b = (0, c.qS)(d),
             j = (0, c.G1)(u),
             v = !h && b,
-            C = (null == d ? void 0 : d.expiresAt) != null ? (0, y.TD)(Date.now(), d.expiresAt) : null,
+            E = (null == d ? void 0 : d.expiresAt) != null ? (0, y.TD)(Date.now(), d.expiresAt) : null,
             I = (0, a.ag)(d),
-            Z = (0, a.kd)(m),
-            w = (0, f.M)(!j || h),
-            N = S(v, j, h, w);
+            w = (0, a.kd)(m),
+            N = (0, f.M)(!j || h),
+            Z = S(v, j, h, N);
         return null != n
             ? (0, r.jsx)("div", {
-                  className: t ? E.effectDescriptionNoGradient : E.effectDescriptionBorderWithGradient,
+                  className: t ? C.effectDescriptionNoGradient : C.effectDescriptionBorderWithGradient,
                   children: (0, r.jsxs)("div", {
-                      className: E.effectDescriptionContainer,
+                      className: C.effectDescriptionContainer,
                       children: [
                           (0, r.jsx)(s.Text, {
                               color: "header-primary",
                               variant: "text-sm/semibold",
-                              className: E.effectName,
-                              children: (0, i.isEmpty)(I) ? Z : I,
+                              className: C.effectName,
+                              children: (0, i.isEmpty)(I) ? w : I,
                           }),
                           null != d
                               ? null
                               : (0, r.jsx)(s.Text, {
                                     color: "text-default",
                                     variant: "text-sm/normal",
-                                    className: E.effectDescription,
-                                    children: N,
+                                    className: C.effectDescription,
+                                    children: Z,
                                 }),
-                          null != C &&
+                          null != E &&
                               (0, r.jsx)(s.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
-                                  className: E.effectPurchasedAt,
-                                  children: _.intl.format(_.t.Io7ozs, { days: C.days.toString() }),
+                                  className: C.effectPurchasedAt,
+                                  children: _.intl.format(_.t.Io7ozs, { days: E.days.toString() }),
                               }),
                           null != d &&
                               (0, r.jsxs)(s.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
-                                  className: E.effectPurchasedAt,
+                                  className: C.effectPurchasedAt,
                                   children: [
                                       _.intl.format(_.t.gW9R4O, {
                                           date: d.purchasedAt.toLocaleDateString(g, {
@@ -122,7 +122,7 @@ let I = (e) => {
                               (0, r.jsx)(s.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
-                                  className: E.effectPurchasedAt,
+                                  className: C.effectPurchasedAt,
                                   children: _.intl.string(_.t.nKdAlJ),
                               }),
                       ],
@@ -140,7 +140,7 @@ let I = (e) => {
                     ? _.intl.string(_.t.meldu7)
                     : _.intl.string(_.t.JtAKws)
                 : _.intl.string(_.t.fEGjVV),
-    Z = (e) => {
+    w = (e) => {
         var t, n, i;
         let {
                 user: s,
@@ -155,13 +155,13 @@ let I = (e) => {
                 pendingNickname: y,
                 pendingPronouns: _,
                 pendingBio: S,
-                pendingBanner: Z,
-                pendingAvatar: w,
-                pendingAvatarDecoration: N,
-                pendingThemeColors: D,
-                pendingAccentColor: k,
+                pendingBanner: w,
+                pendingAvatar: N,
+                pendingAvatarDecoration: Z,
+                pendingThemeColors: k,
+                pendingAccentColor: D,
             } = (0, l.cj)([u.Z, v.Z], () =>
-                C(
+                E(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
@@ -181,15 +181,15 @@ let I = (e) => {
                 pendingNickname: y,
                 pendingPronouns: _,
                 pendingBio: b.dN.useSetting() && null != S ? d.ZP.parse(void 0, S).content : S,
-                pendingBanner: Z,
+                pendingBanner: w,
                 useLargeBanner: !0,
                 pendingAvatar: (0, m.SD)({
                     userId: s.id,
-                    image: w,
+                    image: N,
                 }),
-                pendingAvatarDecoration: N,
-                pendingThemeColors: D,
-                pendingAccentColor: k,
+                pendingAvatarDecoration: Z,
+                pendingThemeColors: k,
+                pendingAccentColor: D,
                 pendingProfileEffectId: null != (t = null == o ? void 0 : o.id) ? t : null,
                 hideFakeActivity: R,
                 canUsePremiumCustomization: G,
@@ -197,11 +197,11 @@ let I = (e) => {
                 onBannerChange: g.g_,
             };
         return (0, r.jsxs)("div", {
-            className: E.previewContainer,
+            className: C.previewContainer,
             children: [
                 (0, r.jsx)(
                     p.Z,
-                    ((n = C({}, B)),
+                    ((n = E({}, B)),
                     (i = i =
                         {
                             disabledInputs: !0,

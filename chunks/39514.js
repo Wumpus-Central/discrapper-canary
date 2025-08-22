@@ -21,8 +21,8 @@ var r = n(951288),
     j = n(63063),
     I = n(51144),
     N = n(481153),
-    O = n(781428),
-    y = n(423527),
+    y = n(781428),
+    O = n(423527),
     S = n(981631),
     C = n(388032),
     Z = n(197571);
@@ -215,13 +215,13 @@ class T extends i.PureComponent {
                       : this.renderAuthenticated(i, e);
             }
             return "login" === this.getMode()
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(y.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: s,
                       location: a,
                   })
-                : (0, r.jsx)(y.Z, {
+                : (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: s,

@@ -18,8 +18,8 @@ var r = n(647438),
     u = n(597688),
     d = n(328347),
     g = n(429368),
-    f = n(410127),
-    p = n(237031),
+    p = n(410127),
+    f = n(237031),
     m = n(258939),
     _ = n(956472),
     h = n(981631);
@@ -47,7 +47,7 @@ let b = "".concat("#").concat("itemSkuId", "="),
                       ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN
                       : i.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: E } = (0, o.ZP)(b),
-            S = (0, f.Z)();
+            S = (0, p.Z)();
         r.useEffect(() => {
             if (e) return;
             let t = C.exec(s.hash);
@@ -79,7 +79,7 @@ let b = "".concat("#").concat("itemSkuId", "="),
                                     null != r && r > -1 && (0, g.$)(n, r);
                                 }
                             }
-                            (0, p.T)({
+                            (0, f.T)({
                                 product: e,
                                 category: s,
                                 analyticsSource: r,

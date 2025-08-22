@@ -1,21 +1,21 @@
-a.d(t, { Z: () => c });
-var n = a(951288);
-a(647438);
-var r = a(442837),
-    l = a(481060),
-    i = a(335131),
-    s = a(597688),
-    o = a(851339);
+n.d(t, { Z: () => c });
+var a = n(951288);
+n(647438);
+var r = n(442837),
+    l = n(481060),
+    i = n(335131),
+    s = n(597688),
+    o = n(851339);
 let c = () => {
     let e = (0, r.e7)([s.Z], () => s.Z.skipNumCategories);
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: o.container,
         children: [
-            (0, n.jsx)(l.Text, {
+            (0, a.jsx)(l.Text, {
                 variant: "text-md/normal",
                 children: "Hide first # of categories",
             }),
-            (0, n.jsx)(l.FiK, {
+            (0, a.jsx)(l.FiK, {
                 className: o.numberInputStepper,
                 value: e,
                 onChange: (e) => {

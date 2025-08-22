@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(990547),
@@ -125,7 +125,7 @@ let I = {
             ],
         });
     },
-    O = () => {
+    y = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
             h = (0, o.e7)([g.default], () => g.default.isAuthenticated()),

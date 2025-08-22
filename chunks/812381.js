@@ -1,12 +1,12 @@
-a.d(t, { a: () => d }), a(388685);
-var n = a(951288);
-a(647438);
-var r = a(920981),
-    l = a(442837),
-    i = a(481060),
-    s = a(335131),
-    o = a(52030),
-    c = a(978134);
+n.d(t, { a: () => d }), n(388685);
+var a = n(951288);
+n(647438);
+var r = n(920981),
+    l = n(442837),
+    i = n(481060),
+    s = n(335131),
+    o = n(52030),
+    c = n(978134);
 let d = () => {
     let e = (0, l.e7)([o.Z], () => o.Z.getShopHomeConfigOverride()),
         t = [
@@ -21,14 +21,14 @@ let d = () => {
                     value: e,
                 })),
         ];
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: c.container,
         children: [
-            (0, n.jsx)(i.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: "text-md/normal",
                 children: "Shop Home Override",
             }),
-            (0, n.jsx)(i.q4e, {
+            (0, a.jsx)(i.q4e, {
                 className: c.selector,
                 options: t,
                 value: e,

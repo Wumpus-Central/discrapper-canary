@@ -1,12 +1,12 @@
-a.d(t, { Z: () => p }), a(388685), a(35282);
-var n = a(951288);
-a(647438);
-var r = a(805203),
-    l = a(692547),
-    i = a(410030),
-    s = a(95398),
-    o = a(981631),
-    c = a(451429);
+n.d(t, { Z: () => p }), n(388685), n(35282);
+var a = n(951288);
+n(647438);
+var r = n(805203),
+    l = n(692547),
+    i = n(410030),
+    s = n(95398),
+    o = n(981631),
+    c = n(451429);
 let d = {
     base00: l.Z.colors.BACKGROUND_BASE_LOWER.css,
     base03: l.Z.colors.TEXT_FEEDBACK_WARNING.css,
@@ -18,14 +18,14 @@ let d = {
 };
 function u(e) {
     let t = {};
-    for (let [a, n] of Object.entries(e)) t[a] = n;
+    for (let [n, a] of Object.entries(e)) t[n] = a;
     return t;
 }
 let m = u(d),
     x = u(d);
 function h(e) {
     return o.Jn9.test(e)
-        ? (0, n.jsx)(s.ZP, {
+        ? (0, a.jsx)(s.ZP, {
               type: s.ZP.Types.TEXT,
               children: () => e,
           })
@@ -33,12 +33,12 @@ function h(e) {
 }
 function p(e) {
     let { data: t } = e,
-        a = (0, i.ZP)();
-    return (0, n.jsx)("div", {
+        n = (0, i.ZP)();
+    return (0, a.jsx)("div", {
         className: c.inspectorWrapper,
-        children: (0, n.jsx)(r.L, {
+        children: (0, a.jsx)(r.L, {
             data: t,
-            theme: "light" === a ? x : m,
+            theme: "light" === n ? x : m,
             invertTheme: !1,
             valueRenderer: h,
             shouldExpandNode: () => !0,

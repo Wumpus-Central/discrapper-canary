@@ -60,7 +60,7 @@ function b() {
     let { profileEffects: e, upsertConfig: t } = (0, _.n6)(),
         [n, a] = i.useState(),
         b = i.useRef(null),
-        y = (0, l.Wu)([f.Z], () => f.Z.profileEffects),
+        y = (0, l.Wu)([f.Z], () => f.Z.getAllProfileEffects()),
         [O, v] = i.useState(""),
         I = i.useMemo(
             () =>

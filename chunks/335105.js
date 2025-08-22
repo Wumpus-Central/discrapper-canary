@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(e, { Z: () => d });
 var s = n(951288);
 n(647438);
 var i = n(780384),
@@ -7,15 +7,15 @@ var i = n(780384),
     r = n(210642),
     C = n(859218),
     c = n(298522);
-let d = (e) => {
-    let { type: t, theme: n } = e;
+let d = (t) => {
+    let { type: e, theme: n } = t;
     return (0, s.jsx)("div", {
         className: c.gradientOuterBorder,
         children: (0, s.jsx)("div", {
             className: c.gradientInnerBorder,
-            children: ((e, t) => {
-                let n = (0, i.wj)(t) ? "white" : "black";
-                switch (e) {
+            children: ((t, e) => {
+                let n = (0, i.wj)(e) ? "white" : "black";
+                switch (t) {
                     case l.Yk.PREMIUM_UPDATED:
                         return (0, s.jsx)(C.Z, {
                             color: n,
@@ -34,7 +34,7 @@ let d = (e) => {
                     default:
                         return null;
                 }
-            })(t, n),
+            })(e, n),
         }),
     });
 };

@@ -403,17 +403,26 @@ function z(e) {
     });
 }
 async function q(e, t, n, r) {
-    if ((0, g.q8)(e) && (0, T.R)(G.dr.QUESTS_BAR))
-        return void (await (0, E.AH)(e.id, {
+    let i = (0, g.q8)(e);
+    if (i && (0, T.R)(G.dr.QUESTS_BAR))
+        return void (await (0, R.enrollAndStartVideoQuestWithErrorHandling)(e, {
             questContent: t,
             questContentCTA: n,
             sourceQuestContent: r,
+            sourceQuestContentCTA: n,
         }));
     (0, E.AH)(e.id, {
         questContent: t,
         questContentCTA: n,
         sourceQuestContent: r,
-    });
+    }),
+        i &&
+            (0, R.openVideoQuestModal)({
+                quest: e,
+                questContent: t,
+                sourceQuestContent: r,
+                sourceQuestContentCTA: n,
+            });
 }
 let X = i.forwardRef(function (e, t) {
     var n;
@@ -432,29 +441,20 @@ let X = i.forwardRef(function (e, t) {
             useReducedMotion: v,
             taskDetails: I,
         } = e,
-        T = (0, g.q8)(y),
-        S = (0, g.Vl)(y),
-        { launchInGameActivity: A } = (0, b.zB)(y),
-        C = i.useCallback(async () => {
+        T = (0, g.Vl)(y),
+        { launchInGameActivity: S } = (0, b.zB)(y),
+        A = i.useCallback(async () => {
             let e = y.config.features.includes(G.S7.START_QUEST_CTA),
                 t = e ? m.jZ.START_QUEST : m.jZ.ACCEPT_QUEST;
-            await q(y, O.jn.QUEST_BAR_V2, t, O.jn.QUEST_BAR_V2),
-                T &&
-                    (0, R.openVideoQuestModal)({
-                        quest: y,
-                        questContent: O.jn.QUEST_BAR_V2,
-                        sourceQuestContent: O.jn.QUEST_BAR_V2,
-                        sourceQuestContentCTA: t,
-                    }),
-                S && e && A();
-        }, [y, T, S, A]),
-        N = (null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
-        P = u && d;
+            await q(y, O.jn.QUEST_BAR_V2, t, O.jn.QUEST_BAR_V2), T && e && S();
+        }, [y, T, S]),
+        C = (null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
+        N = u && d;
     return (0, r.jsxs)(s.animated.div, {
-        "aria-hidden": !P,
+        "aria-hidden": !N,
         className: o()(l, V.contentExpanded, {
-            [V.contentInteractable]: P,
-            [V.contentExpandedAccepted]: N,
+            [V.contentInteractable]: N,
+            [V.contentExpandedAccepted]: C,
         }),
         style: {
             transform: (0, s.to)(
@@ -475,7 +475,7 @@ let X = i.forwardRef(function (e, t) {
             a,
             (0, r.jsx)(s.animated.div, {
                 style: { opacity: 1 },
-                children: N
+                children: C
                     ? (0, r.jsx)(z, {
                           quest: y,
                           taskDetails: I,
@@ -492,11 +492,11 @@ let X = i.forwardRef(function (e, t) {
                           quest: y,
                           taskDetails: I,
                           expansionSpring: f,
-                          isInteractable: P,
+                          isInteractable: N,
                           reducedMotion: v,
                           containerRef: t,
                           isExpanded: u,
-                          onAcceptQuest: C,
+                          onAcceptQuest: A,
                       }),
             }),
         ],

@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(381585),
     d = n(870289),
     g = n(501431),
-    f = n(888302),
-    p = n(193227),
+    p = n(888302),
+    f = n(193227),
     m = n(426171),
     _ = n(845796),
     h = n(841875),
@@ -24,11 +24,11 @@ var r = n(951288),
 function y(e) {
     let { isFullScreen: t, tab: n, sortedCategories: a, initialCategoryId: c, onUnmount: u } = e;
     (0, g.A)();
-    let f = (0, d.FF)("CollectiblesBrowse"),
-        p = l.useRef(null),
-        { handleScroll: _ } = (0, o.z)(p, n),
-        { setCategoryRef: b, handleScrollToCategory: C } = (0, m.xV)(p.current),
-        [E, S] = l.useState(f),
+    let p = (0, d.FF)("CollectiblesBrowse"),
+        f = l.useRef(null),
+        { handleScroll: _ } = (0, o.z)(f, n),
+        { setCategoryRef: b, handleScrollToCategory: C } = (0, m.xV)(f.current),
+        [E, S] = l.useState(p),
         [O, v] = l.useState(!1);
     return (
         l.useEffect(() => {
@@ -47,16 +47,16 @@ function y(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         l.useEffect(() => {
-            f || S(!1);
-        }, [f, S]),
+            p || S(!1);
+        }, [p, S]),
         (0, r.jsx)("div", {
-            className: s()(x.pageWrapper, { [x.pageWrapperFilter]: f }),
+            className: s()(x.pageWrapper, { [x.pageWrapperFilter]: p }),
             children: (0, r.jsxs)("main", {
-                className: s()(x.page, { [x.pageFilter]: f }),
+                className: s()(x.page, { [x.pageFilter]: p }),
                 children: [
                     (0, r.jsx)(i.yWw, {
                         className: x.shopScroll,
-                        ref: p,
+                        ref: f,
                         onScroll: _,
                         children: (0, r.jsx)(T, {
                             isFullScreen: t,
@@ -64,7 +64,7 @@ function y(e) {
                             filterBarOpen: E,
                             setFilterBarOpen: S,
                             tab: n,
-                            scrollerRef: p,
+                            scrollerRef: f,
                             sortedCategories: a,
                             setCategoryRef: b,
                         }),
@@ -152,7 +152,7 @@ let T = (e) => {
                             children: [
                                 (0, r.jsx)("div", {
                                     className: x.controlsLeftSide,
-                                    children: (0, r.jsx)(f.Z, {}),
+                                    children: (0, r.jsx)(p.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
                                     className: s()(x.controlsRightSide, { [x.controlsRightSideResponsive]: n }),
@@ -225,7 +225,7 @@ let T = (e) => {
                             )
                           : (0, r.jsx)(u.k0, {
                                 newValue: { pageIndex: P },
-                                children: (0, r.jsx)(p.Z, {
+                                children: (0, r.jsx)(f.Z, {
                                     isFullScreen: t,
                                     sortedCategories: T,
                                     setCategoryRef: L,

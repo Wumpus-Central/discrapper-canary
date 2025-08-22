@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(302221),
     d = n(884697),
     g = n(372654),
-    f = n(992171);
-function p(e) {
+    p = n(992171);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -72,8 +72,8 @@ let _ = (e) => {
                       }
                     : {};
             if (1 === C)
-                return p(
-                    m(p({}, _), {
+                return f(
+                    m(f({}, _), {
                         backgroundImage: (null == b ? void 0 : b.addGradient)
                             ? "url(".concat(
                                   e,
@@ -87,8 +87,8 @@ let _ = (e) => {
                     r,
                 );
             let l = (0, u.aD)(o.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - C);
-            return p(
-                m(p({}, _), {
+            return f(
+                m(f({}, _), {
                     backgroundImage: "linear-gradient(".concat(l, ", ").concat(l, "), url(").concat(e, ")"),
                     backgroundBlendMode: "saturation",
                     backgroundSize: "cover",
@@ -98,7 +98,7 @@ let _ = (e) => {
             );
         }, [t, n, C, _, null == b ? void 0 : b.blur, null == b ? void 0 : b.addGradient]);
     return (0, r.jsx)("div", {
-        className: s()(f.banner, a),
+        className: s()(p.banner, a),
         style: E,
         children: h,
     });

@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     g = n(434650),
-    f = n(688465),
-    p = n(110560),
+    p = n(688465),
+    f = n(110560),
     m = n(507808),
     _ = n(794231),
     h = n(594174),
@@ -182,7 +182,7 @@ let Z = {
                                                                     color: "header-primary",
                                                                     children: [
                                                                         q.title,
-                                                                        M === N.AW.ORBS && G && (0, r.jsx)(f.Z, {}),
+                                                                        M === N.AW.ORBS && G && (0, r.jsx)(p.Z, {}),
                                                                     ],
                                                                 }),
                                                             "" !== q.summary &&
@@ -223,7 +223,7 @@ let Z = {
                                                                 sectionType: P.jXE.ORBS_SHOP_HERO_BLOCK,
                                                                 ctaObject: P.qAy.CTA_TO_QUEST_HOME,
                                                             }),
-                                                            (0, p.navigateToQuestHome)({
+                                                            (0, f.navigateToQuestHome)({
                                                                 fromContent: o.j.ORBS_SHOP_HERO_CTA,
                                                             }))
                                                           : (a(

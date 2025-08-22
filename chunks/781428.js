@@ -25,8 +25,8 @@ var r,
     j = n(124860),
     I = n(86779),
     N = n(726745),
-    O = n(913583),
-    y = n(144114),
+    y = n(913583),
+    O = n(144114),
     S = n(541692),
     C = n(952802),
     Z = n(703656),
@@ -571,7 +571,7 @@ class X extends (r = l.PureComponent) {
         let e = () => {
             this.setState((e) => Y(q({}, e), { dismissedChooseAccount: !0 }));
         };
-        return (0, i.jsx)(O.Z, { onDismiss: e });
+        return (0, i.jsx)(y.Z, { onDismiss: e });
     }
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: r, handoffAvailable: l } = this.props,
@@ -665,7 +665,7 @@ class X extends (r = l.PureComponent) {
                 let t = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    let { token: n } = await y.Z.verifyPhone(t, e, !1);
+                    let { token: n } = await O.Z.verifyPhone(t, e, !1);
                     await f.Z.authorizeIPAddress(n), this.handleLogin();
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -675,7 +675,7 @@ class X extends (r = l.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await y.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await O.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(G.Z5c.RESET, {
                         search: (0, a.stringify)({
                             token: n,
@@ -733,7 +733,7 @@ class X extends (r = l.PureComponent) {
                 }
             }),
             W(this, "handleResendCode", () => {
-                y.Z.resendCode(this.getFullLogin());
+                O.Z.resendCode(this.getFullLogin());
             }),
             W(this, "handleReset", (e) => {
                 null != e && e.preventDefault(),

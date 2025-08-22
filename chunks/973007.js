@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -63,7 +63,7 @@ function d(e) {
               }),
           });
 }
-let p = function (e) {
+let c = function (e) {
     let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: l, enablePremiumBrandRefresh: s } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

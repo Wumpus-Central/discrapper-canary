@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(e, { Z: () => x });
 var s = n(951288),
     i = n(512722),
     l = n.n(i),
@@ -16,16 +16,16 @@ var s = n(951288),
     m = n(667325),
     Z = n(552039),
     g = n(445161);
-let x = (e) => {
-    let { type: t, text: n, buttonText: i, hideClose: x, onClose: f } = e,
-        p = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+let x = (t) => {
+    let { type: e, text: n, buttonText: i, hideClose: x, onClose: p } = t,
+        f = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         N = (0, a.e7)([o.default], () => {
-            let e = o.default.getCurrentUser();
-            return l()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
+            let t = o.default.getCurrentUser();
+            return l()(null != t, "UserSettingsProfileCustomization: user cannot be undefined"), t;
         }),
         T = (0, L.rO)() ? m.Z : Z.Z,
-        I = ((e) => {
-            switch (e) {
+        I = ((t) => {
+            switch (t) {
                 case H.Yk.PREMIUM_UPDATED:
                     return M.intl.string(M.t["75Wt0N"]);
                 case H.Yk.PREMIUM_ACTIVATED:
@@ -33,7 +33,7 @@ let x = (e) => {
                 default:
                     return M.intl.string(M.t.X79Az8);
             }
-        })(t);
+        })(e);
     return (0, s.jsxs)("div", {
         className: h.container,
         children: [
@@ -46,7 +46,7 @@ let x = (e) => {
             (0, s.jsxs)("div", {
                 className: h.nameplatePreviewContainer,
                 children: [
-                    p
+                    f
                         ? (0, s.jsx)("img", {
                               src: g.Z,
                               alt: "",
@@ -81,7 +81,7 @@ let x = (e) => {
                         variant: "expressive",
                         fullWidth: !0,
                         text: i,
-                        onClick: f,
+                        onClick: p,
                     }),
                 }),
         ],

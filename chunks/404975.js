@@ -34,9 +34,20 @@ function d(e) {
     });
 }
 function f(e) {
-    let { section: t } = e;
-    return (0, i.jsx)("ul", {
+    var t;
+    let { section: n } = e,
+        l = null == (t = n.useTitle) ? void 0 : t.call(n);
+    return (0, i.jsxs)("ul", {
         className: c.section,
-        children: t.layout.map((e) => (0, i.jsx)("li", { children: (0, i.jsx)(u.Z, { node: e }) }, e.key)),
+        children: [
+            null != l &&
+                (0, i.jsx)(s.X6q, {
+                    className: c.label,
+                    variant: "heading-sm/medium",
+                    color: "text-tertiary",
+                    children: l,
+                }),
+            n.layout.map((e) => (0, i.jsx)("li", { children: (0, i.jsx)(u.Z, { node: e }) }, e.key)),
+        ],
     });
 }

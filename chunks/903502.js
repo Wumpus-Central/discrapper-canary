@@ -1,15 +1,15 @@
-a.d(t, { Z: () => p }), a(388685);
-var n = a(951288),
-    r = a(647438),
-    l = a(442837),
-    i = a(481060),
-    s = a(570140),
-    o = a(178635),
-    c = a(115470),
-    d = a(511010),
-    u = a(246992),
-    m = a(531578),
-    x = a(584314);
+n.d(t, { Z: () => p }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    l = n(442837),
+    i = n(481060),
+    s = n(570140),
+    o = n(178635),
+    c = n(115470),
+    d = n(511010),
+    u = n(246992),
+    m = n(531578),
+    x = n(584314);
 let h = [
     {
         label: "second(s)",
@@ -30,9 +30,9 @@ let h = [
 ];
 function p() {
     let [e, t] = r.useState(null),
-        [a, p] = r.useState(0),
-        [v, b] = r.useState(1000),
-        [f, j] = r.useState(0),
+        [n, p] = r.useState(0),
+        [f, v] = r.useState(1000),
+        [b, j] = r.useState(0),
         g = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null != (t = c.Z.getFeedbackConfig(m.nw[e])) ? t : o.R[m.nw[e]];
@@ -45,15 +45,15 @@ function p() {
                 value: t,
             };
         }),
-        C = r.useMemo(() => null != e && f >= 0 && f <= 100 && a >= 0, [e, f, a]);
-    return (0, n.jsxs)("div", {
+        C = r.useMemo(() => null != e && b >= 0 && b <= 100 && n >= 0, [e, b, n]);
+    return (0, a.jsxs)("div", {
         className: x.container,
         children: [
-            (0, n.jsx)(i.hjN, {
+            (0, a.jsx)(i.hjN, {
                 title: "Feedback Survey",
                 className: x.formElement,
                 tag: i.RB0.H3,
-                children: (0, n.jsx)(i.q4e, {
+                children: (0, a.jsx)(i.q4e, {
                     options: y,
                     value: e,
                     onChange: (e) => {
@@ -63,61 +63,61 @@ function p() {
                     placeholder: "Select Feedback Survey",
                 }),
             }),
-            (0, n.jsxs)(i.hjN, {
+            (0, a.jsxs)(i.hjN, {
                 title: "Override Survey Cooldown",
                 className: x.formElement,
                 tag: i.RB0.H3,
                 children: [
                     null != g &&
-                        (0, n.jsxs)(n.Fragment, {
+                        (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, n.jsx)(d.Z, {
+                                (0, a.jsx)(d.Z, {
                                     className: x.formDividerTitle,
-                                    children: (0, n.jsx)(i.Text, {
+                                    children: (0, a.jsx)(i.Text, {
                                         variant: "text-sm/semibold",
                                         children: "Current cooldown",
                                     }),
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-sm/normal",
                                     children: "".concat(g.cooldown / 1000, " second(s) or"),
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-sm/normal",
                                     children: "".concat(g.cooldown / 60000, " minute(s) or"),
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-sm/normal",
                                     children: "".concat(g.cooldown / 3600000, " hour(s) or"),
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-sm/normal",
                                     children: "".concat(g.cooldown / 86400000, " day(s)"),
                                 }),
                             ],
                         }),
-                    (0, n.jsx)(d.Z, {
+                    (0, a.jsx)(d.Z, {
                         className: x.formDividerTitle,
-                        children: (0, n.jsx)(i.Text, {
+                        children: (0, a.jsx)(i.Text, {
                             variant: "text-sm/semibold",
                             children: "Override cooldown",
                         }),
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: x.formRow,
                         children: [
-                            (0, n.jsx)(i.oil, {
+                            (0, a.jsx)(i.oil, {
                                 min: 0,
-                                value: a.toString(),
+                                value: n.toString(),
                                 type: "number",
                                 placeholder: "Duration length",
                                 onChange: (e) => p(parseFloat(e)),
                             }),
-                            (0, n.jsx)(i.q4e, {
+                            (0, a.jsx)(i.q4e, {
                                 options: h,
-                                value: v,
+                                value: f,
                                 onChange: (e) => {
-                                    b(e);
+                                    v(e);
                                 },
                                 popoutLayerContext: u.O$,
                             }),
@@ -125,45 +125,45 @@ function p() {
                     }),
                 ],
             }),
-            (0, n.jsxs)(i.hjN, {
+            (0, a.jsxs)(i.hjN, {
                 title: "Override Survey Chance",
                 className: x.formElement,
                 tag: i.RB0.H3,
                 children: [
                     null != g &&
-                        (0, n.jsxs)(n.Fragment, {
+                        (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, n.jsx)(d.Z, {
+                                (0, a.jsx)(d.Z, {
                                     className: x.formDividerTitle,
-                                    children: (0, n.jsx)(i.Text, {
+                                    children: (0, a.jsx)(i.Text, {
                                         variant: "text-sm/semibold",
                                         children: "Current chance",
                                     }),
                                 }),
-                                (0, n.jsx)(i.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-sm/normal",
                                     children: "".concat(100 * g.chance, "%"),
                                 }),
                             ],
                         }),
-                    (0, n.jsx)(d.Z, {
+                    (0, a.jsx)(d.Z, {
                         className: x.formDividerTitle,
-                        children: (0, n.jsx)(i.Text, {
+                        children: (0, a.jsx)(i.Text, {
                             variant: "text-sm/semibold",
                             children: "Override chance",
                         }),
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: x.formRow,
                         children: [
-                            (0, n.jsx)(i.oil, {
+                            (0, a.jsx)(i.oil, {
                                 min: 0,
                                 max: 100,
-                                value: f.toString(),
+                                value: b.toString(),
                                 type: "number",
                                 onChange: (e) => j(parseFloat(e)),
                             }),
-                            (0, n.jsx)(i.Text, {
+                            (0, a.jsx)(i.Text, {
                                 variant: "text-md/normal",
                                 children: "%",
                             }),
@@ -171,10 +171,10 @@ function p() {
                     }),
                 ],
             }),
-            (0, n.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: x.formRow,
                 children: [
-                    (0, n.jsx)(i.zxk, {
+                    (0, a.jsx)(i.zxk, {
                         variant: "primary",
                         text: "Update",
                         onClick: () =>
@@ -183,13 +183,13 @@ function p() {
                                 s.Z.dispatch({
                                     type: "FEEDBACK_OVERRIDE_SET",
                                     feedbackType: g.feedbackType,
-                                    cooldown: a * v,
-                                    chance: f / 100,
+                                    cooldown: n * f,
+                                    chance: b / 100,
                                 })
                             ),
                         disabled: !C,
                     }),
-                    (0, n.jsx)(i.zxk, {
+                    (0, a.jsx)(i.zxk, {
                         variant: "primary",
                         text: "Clear Override",
                         onClick: () =>
@@ -205,24 +205,24 @@ function p() {
                 ],
             }),
             null == e &&
-                (0, n.jsx)(i.Text, {
+                (0, a.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-danger",
                     children: "Error: need to select a survey",
                 }),
-            !(a >= 0) &&
-                (0, n.jsx)(i.Text, {
+            !(n >= 0) &&
+                (0, a.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-danger",
                     children: "Error: cooldown needs to be a number greater than 0",
                 }),
-            !(f >= 0 && f <= 100) &&
-                (0, n.jsx)(i.Text, {
+            !(b >= 0 && b <= 100) &&
+                (0, a.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-danger",
                     children: "Error: chance needs to be a number between 0 and 100",
                 }),
-            (0, n.jsx)(i.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 children: "Clear override resets a feedback survey to its default values",
             }),

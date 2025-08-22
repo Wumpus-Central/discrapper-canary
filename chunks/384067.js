@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(597688),
     d = n(297651),
     g = n(215023),
-    f = n(981631),
-    p = n(388032),
+    p = n(981631),
+    f = n(388032),
     m = n(310582);
 let _ = (e) => {
     var t, n, a;
@@ -72,8 +72,8 @@ let _ = (e) => {
                                 lineClamp: 2,
                                 variant: L ? "text-md/medium" : "text-sm/medium",
                                 children: L
-                                    ? p.intl.format(p.t.SFFP7O, {
-                                          helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
+                                    ? f.intl.format(f.t.SFFP7O, {
+                                          helpdeskArticle: c.Z.getArticleURL(p.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
                                       })
                                     : _.body,
                             }),
@@ -86,7 +86,7 @@ let _ = (e) => {
                         children: (0, r.jsx)(o.zxk, {
                             variant: "overlay-primary",
                             onClick: () => h("shop wide banner", x),
-                            text: p.intl.string(p.t.jVcuVV),
+                            text: f.intl.string(f.t.jVcuVV),
                         }),
                     }),
             ],

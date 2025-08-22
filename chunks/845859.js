@@ -2,7 +2,7 @@ e.exports = {
     container: "container__203bc",
     header: "header__203bc",
     dismissButton: "dismissButton__203bc",
-    cover: "cover__203bc " + t(932366).coverContainer,
+    cover: "cover__203bc " + n(932366).coverContainer,
     addButton: "addButton__203bc",
     addIcon: "addIcon__203bc",
 };

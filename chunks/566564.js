@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(626135),
     d = n(381585),
     g = n(139668),
-    f = n(364111),
-    p = n(303952),
+    p = n(364111),
+    f = n(303952),
     m = n(752053),
     _ = n(258939),
     h = n(81136),
@@ -34,9 +34,9 @@ let I = (e) => {
             I = (0, d.sp)(),
             B = null != (t = null == I ? void 0 : I.sessionId) ? t : "";
         l.useEffect(() => {
-            (0, p.n)({
+            (0, f.n)({
                 sessionId: B,
-                checkpoint: p.a.SHOP_MOUNTED,
+                checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: u,
                 unpublishedCategoriesShown: _,
@@ -48,7 +48,7 @@ let I = (e) => {
                 fetchShopHomeError: P,
                 shopBlocks: A,
                 refreshShopHome: R,
-            } = (0, f.E)(
+            } = (0, p.E)(
                 c,
                 {
                     noCache: g,
@@ -69,9 +69,9 @@ let I = (e) => {
             null != P ||
                 N ||
                 0 === A.length ||
-                (0, p.n)({
+                (0, f.n)({
                     sessionId: B,
-                    checkpoint: p.a.SHOP_RENDERED,
+                    checkpoint: f.a.SHOP_RENDERED,
                     tab: c,
                     isFullScreen: u,
                     unpublishedCategoriesShown: _,
@@ -138,7 +138,7 @@ let I = (e) => {
                                     );
                                     break;
                                 case i.z.FEED:
-                                    let f = e.sortedSkuIds;
+                                    let p = e.sortedSkuIds;
                                     d = (0, r.jsx)(
                                         E.Z,
                                         {
@@ -146,7 +146,7 @@ let I = (e) => {
                                                 c === T.AW.ORBS ? j.intl.string(j.t.dFgeub) : j.intl.string(j.t.NSv5KS),
                                             isLoading: N || o,
                                             numVisibleItems: a,
-                                            sortedSkuIds: f,
+                                            sortedSkuIds: p,
                                             buttonContainerClassName:
                                                 (null == t ? void 0 : t.type) === i.z.IMMERSIVE_BANNER
                                                     ? k.feedblockInteractiveBackground
@@ -220,8 +220,8 @@ let I = (e) => {
     B = (e) => {
         let { isFullScreen: t, handleTransition: n, tab: a, transitionState: s } = e,
             i = l.useRef(null),
-            { handleScroll: f } = (0, c.z)(i, a),
-            p = (0, g.R)("CollectiblesFeedShop"),
+            { handleScroll: p } = (0, c.z)(i, a),
+            f = (0, g.R)("CollectiblesFeedShop"),
             m = (0, _.R)(),
             h = (0, d.sp)(),
             [b, C] = l.useState(T.IV),
@@ -232,7 +232,7 @@ let I = (e) => {
                     let e = () => {
                             if (null == i.current) return;
                             let e = i.current.getDistanceFromBottom();
-                            b >= p ? S(e < 20) : e <= 200 && C((e) => e + T.IV);
+                            b >= f ? S(e < 20) : e <= 200 && C((e) => e + T.IV);
                         },
                         t = i.current.getScrollerNode();
                     return (
@@ -242,11 +242,11 @@ let I = (e) => {
                         }
                     );
                 }
-            }, [i, b, p, C, S]),
+            }, [i, b, f, C, S]),
             (0, r.jsx)(o.Den, {
                 className: k.shopScroll,
                 ref: i,
-                onScroll: f,
+                onScroll: p,
                 children: (0, r.jsxs)("div", {
                     className: k.shop,
                     children: [
@@ -261,7 +261,7 @@ let I = (e) => {
                                     isFullScreen: t,
                                 }),
                                 a !== T.AW.CATALOG &&
-                                    b >= p &&
+                                    b >= f &&
                                     (0, r.jsxs)("div", {
                                         className: k.endOfFeed,
                                         children: [

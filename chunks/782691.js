@@ -14,14 +14,14 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(979554),
-    l = n(442837),
-    c = n(755721),
-    u = n(481060),
-    d = n(23645),
-    f = n(53281),
-    _ = n(678135),
-    p = n(594174),
+    s = n(442837),
+    l = n(755721),
+    c = n(481060),
+    u = n(23645),
+    d = n(53281),
+    f = n(678135),
+    _ = n(594174),
+    p = n(802433),
     h = n(373071),
     m = n(489495),
     g = n(189),
@@ -89,7 +89,7 @@ let S = {
     C = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, h.n6)(),
-            a = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+            a = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
             [O, I] = i.useState(!0),
             C = i.useRef(null),
             [N, R] = i.useState(!1),
@@ -101,15 +101,15 @@ let S = {
             G = k.toLowerCase().replace(/\s+/g, "_"),
             B = i.useMemo(
                 () => ({
-                    type: s.Z.PROFILE_EFFECT,
                     id: A,
                     skuId: A,
                     title: A,
                     description: A,
                     accessibilityLabel: A,
                     reducedMotionSrc: "",
+                    thumbnailPreviewSrc: "",
                     effects: D,
-                    animationType: 0,
+                    animationType: p.Q.UNSPECIFIED,
                 }),
                 [D],
             ),
@@ -246,7 +246,7 @@ let S = {
                                   (0, r.jsxs)("div", {
                                       className: o()(E.col, E.section),
                                       children: [
-                                          (0, r.jsx)(u.Text, {
+                                          (0, r.jsx)(c.Text, {
                                               variant: "text-md/normal",
                                               children: "Profile Effect Name",
                                           }),
@@ -266,7 +266,7 @@ let S = {
                                           (0, r.jsxs)("div", {
                                               className: E.row,
                                               children: [
-                                                  (0, r.jsx)(u.Text, {
+                                                  (0, r.jsx)(c.Text, {
                                                       variant: "text-md/normal",
                                                       children: "Dark Theme",
                                                   }),
@@ -283,7 +283,7 @@ let S = {
                                           (0, r.jsxs)("div", {
                                               className: E.row,
                                               children: [
-                                                  (0, r.jsx)(u.Text, {
+                                                  (0, r.jsx)(c.Text, {
                                                       variant: "text-md/normal",
                                                       children: "Show User Profile",
                                                   }),
@@ -302,18 +302,18 @@ let S = {
                                   (0, r.jsxs)("div", {
                                       className: E.row,
                                       children: [
-                                          (0, r.jsxs)(c.zx, {
-                                              color: c.Tt.GREEN,
+                                          (0, r.jsxs)(l.zx, {
+                                              color: l.Tt.GREEN,
                                               children: [
                                                   "Upload Animated Layer",
-                                                  (0, r.jsx)(f.Z, {
+                                                  (0, r.jsx)(d.Z, {
                                                       ref: C,
                                                       onChange: F,
                                                       multiple: !1,
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsx)(u.Text, {
+                                          (0, r.jsx)(c.Text, {
                                               variant: "text-sm/semibold",
                                               children: "Make sure to upload the bottommost layer first!",
                                           }),
@@ -322,33 +322,33 @@ let S = {
                                   (0, r.jsxs)("div", {
                                       className: E.row,
                                       children: [
-                                          (0, r.jsxs)(c.zx, {
-                                              color: c.Tt.GREEN,
+                                          (0, r.jsxs)(l.zx, {
+                                              color: l.Tt.GREEN,
                                               children: [
                                                   "Upload thumbnail.png",
-                                                  (0, r.jsx)(f.Z, {
+                                                  (0, r.jsx)(d.Z, {
                                                       ref: C,
                                                       onChange: (e) => V(m.cq.THUMBNAIL, e),
                                                       multiple: !1,
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsxs)(c.zx, {
-                                              color: c.Tt.GREEN,
+                                          (0, r.jsxs)(l.zx, {
+                                              color: l.Tt.GREEN,
                                               children: [
                                                   "Upload static.png",
-                                                  (0, r.jsx)(f.Z, {
+                                                  (0, r.jsx)(d.Z, {
                                                       ref: C,
                                                       onChange: (e) => V(m.cq.STATIC, e),
                                                       multiple: !1,
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsxs)(c.zx, {
-                                              color: c.Tt.GREEN,
+                                          (0, r.jsxs)(l.zx, {
+                                              color: l.Tt.GREEN,
                                               children: [
                                                   "Upload reduced_motion.png",
-                                                  (0, r.jsx)(f.Z, {
+                                                  (0, r.jsx)(d.Z, {
                                                       ref: C,
                                                       onChange: (e) => V(m.cq.REDUCED_MOTION, e),
                                                       multiple: !1,
@@ -361,7 +361,7 @@ let S = {
                                       className: E.bottomControls,
                                       children: (0, r.jsx)("div", {
                                           className: E.row,
-                                          children: (0, r.jsx)(u.zxk, {
+                                          children: (0, r.jsx)(c.zxk, {
                                               variant: "primary",
                                               text: "Replay Animation",
                                               onClick: () => {
@@ -373,11 +373,11 @@ let S = {
                                   (0, r.jsxs)("div", {
                                       className: o()(E.bottomControls, E.shareSection),
                                       children: [
-                                          (0, r.jsx)(u.Text, {
+                                          (0, r.jsx)(c.Text, {
                                               variant: "text-sm/semibold",
                                               children: "Please download both configs for the drop package!",
                                           }),
-                                          (0, r.jsx)(u.Text, {
+                                          (0, r.jsx)(c.Text, {
                                               variant: "text-sm/bold",
                                               color: "text-danger",
                                               children: "WARNING: The full config is really big :0",
@@ -385,21 +385,21 @@ let S = {
                                           (0, r.jsxs)("div", {
                                               className: E.row,
                                               children: [
-                                                  (0, r.jsx)(d.Z, {
+                                                  (0, r.jsx)(u.Z, {
                                                       fileContents: () => (0, m.yR)(D),
                                                       contentType: "text/plain",
                                                       fileName: "".concat(G, "_timing_config.txt"),
-                                                      children: (0, r.jsx)(u.zxk, {
+                                                      children: (0, r.jsx)(c.zxk, {
                                                           variant: "primary",
                                                           size: "sm",
                                                           text: "Download Timing Config",
                                                       }),
                                                   }),
-                                                  (0, r.jsx)(d.Z, {
+                                                  (0, r.jsx)(u.Z, {
                                                       fileContents: K,
                                                       contentType: "text/plain",
                                                       fileName: "".concat(G, "_config.txt"),
-                                                      children: (0, r.jsx)(u.zxk, {
+                                                      children: (0, r.jsx)(c.zxk, {
                                                           variant: "primary",
                                                           size: "sm",
                                                           text: "Download Full Config",
@@ -412,7 +412,7 @@ let S = {
                                   (0, r.jsxs)("div", {
                                       className: E.section,
                                       children: [
-                                          (0, r.jsx)(u.X6q, {
+                                          (0, r.jsx)(c.X6q, {
                                               variant: "heading-lg/bold",
                                               children: "Still Frames",
                                           }),
@@ -425,7 +425,7 @@ let S = {
                                                       {
                                                           className: E.stillFramePreviewContainer,
                                                           children: [
-                                                              (0, r.jsx)(u.X6q, {
+                                                              (0, r.jsx)(c.X6q, {
                                                                   variant: "heading-sm/bold",
                                                                   children: t,
                                                               }),
@@ -435,10 +435,10 @@ let S = {
                                                                   alt: "",
                                                               }),
                                                               null != n &&
-                                                                  (0, r.jsx)(c.zx, {
-                                                                      size: c.Ph.TINY,
-                                                                      color: c.Tt.RED,
-                                                                      look: c.iL.OUTLINED,
+                                                                  (0, r.jsx)(l.zx, {
+                                                                      size: l.Ph.TINY,
+                                                                      color: l.Tt.RED,
+                                                                      look: l.iL.OUTLINED,
                                                                       onClick: () => W(t),
                                                                       children: "Clear",
                                                                   }),
@@ -457,7 +457,7 @@ let S = {
                                       (0, r.jsxs)("div", {
                                           className: o()(E.section, E.randomizedRules),
                                           children: [
-                                              (0, r.jsx)(u.Text, {
+                                              (0, r.jsx)(c.Text, {
                                                   variant: "text-md/bold",
                                                   children: "Rules of Randomized Effects",
                                               }),
@@ -489,7 +489,7 @@ let S = {
                                           (0, r.jsxs)("div", {
                                               className: o()(E.userProfilePreview, E.preview),
                                               children: [
-                                                  (0, r.jsx)(_.Z, {
+                                                  (0, r.jsx)(f.Z, {
                                                       user: a,
                                                       pendingAvatar: void 0,
                                                       pendingProfileEffectId: null,
@@ -507,7 +507,7 @@ let S = {
                               children: [
                                   (0, r.jsx)("div", {
                                       className: E.dangerControls,
-                                      children: (0, r.jsx)(u.zxk, {
+                                      children: (0, r.jsx)(c.zxk, {
                                           variant: "critical-secondary",
                                           text: "Clear Assets",
                                           onClick: Y,
@@ -522,7 +522,7 @@ let S = {
                                                   (0, r.jsxs)("div", {
                                                       className: E.layerPreviewContainer,
                                                       children: [
-                                                          (0, r.jsx)(u.X6q, {
+                                                          (0, r.jsx)(c.X6q, {
                                                               variant: "heading-md/bold",
                                                               children: e.name,
                                                           }),
@@ -534,7 +534,7 @@ let S = {
                                                           null != e.randomizedSources &&
                                                               (0, r.jsxs)(r.Fragment, {
                                                                   children: [
-                                                                      (0, r.jsx)(u.X6q, {
+                                                                      (0, r.jsx)(c.X6q, {
                                                                           variant: "heading-md/bold",
                                                                           children: "Alternatives",
                                                                       }),
@@ -545,7 +545,7 @@ let S = {
                                                                               {
                                                                                   children: [
                                                                                       null != e.filename &&
-                                                                                          (0, r.jsx)(u.X6q, {
+                                                                                          (0, r.jsx)(c.X6q, {
                                                                                               variant:
                                                                                                   "heading-sm/semibold",
                                                                                               children: e.filename,
@@ -572,7 +572,7 @@ let S = {
                                                           (0, r.jsxs)("div", {
                                                               className: E.col,
                                                               children: [
-                                                                  (0, r.jsx)(u.Text, {
+                                                                  (0, r.jsx)(c.Text, {
                                                                       variant: "text-md/bold",
                                                                       children: "Start",
                                                                   }),
@@ -598,7 +598,7 @@ let S = {
                                                           (0, r.jsxs)("div", {
                                                               className: E.col,
                                                               children: [
-                                                                  (0, r.jsx)(u.Text, {
+                                                                  (0, r.jsx)(c.Text, {
                                                                       variant: "text-md/bold",
                                                                       children: "Duration",
                                                                   }),
@@ -629,7 +629,7 @@ let S = {
                                                           (0, r.jsxs)("div", {
                                                               className: E.col,
                                                               children: [
-                                                                  (0, r.jsx)(u.Text, {
+                                                                  (0, r.jsx)(c.Text, {
                                                                       variant: "text-md/bold",
                                                                       children: "Loop",
                                                                   }),
@@ -657,7 +657,7 @@ let S = {
                                                                   e.loop &&
                                                                   (0, r.jsxs)(r.Fragment, {
                                                                       children: [
-                                                                          (0, r.jsx)(u.Text, {
+                                                                          (0, r.jsx)(c.Text, {
                                                                               variant: "text-md/bold",
                                                                               children: "Loop Delay",
                                                                           }),
@@ -690,19 +690,19 @@ let S = {
                                                           (0, r.jsxs)("div", {
                                                               className: E.uploadButton,
                                                               children: [
-                                                                  (0, r.jsx)(u.Text, {
+                                                                  (0, r.jsx)(c.Text, {
                                                                       variant: "text-sm/normal",
                                                                       color: "always-white",
                                                                       children: "Add Alternative",
                                                                   }),
-                                                                  (0, r.jsx)(f.Z, {
+                                                                  (0, r.jsx)(d.Z, {
                                                                       ref: C,
                                                                       onChange: (e) => H(e, t),
                                                                       multiple: !1,
                                                                   }),
                                                               ],
                                                           }),
-                                                          (0, r.jsx)(u.zxk, {
+                                                          (0, r.jsx)(c.zxk, {
                                                               variant: "critical-secondary",
                                                               text: "Remove Layer",
                                                               onClick: () => {

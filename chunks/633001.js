@@ -1,67 +1,67 @@
-a.d(t, { Z: () => ej }), a(388685), a(583741), a(539854), a(49124), a(35282), a(781311);
-var n = a(951288),
-    r = a(647438),
-    l = a(120356),
-    i = a.n(l),
-    s = a(913527),
-    o = a.n(s),
-    c = a(772848),
-    d = a(442837),
-    u = a(755721),
-    m = a(481060),
-    x = a(765250),
-    h = a(13245),
-    p = a(593472),
-    v = a(393238),
-    b = a(594190),
-    f = a(984370),
-    j = a(427860),
-    g = a(837268),
-    _ = a(371651),
-    y = a(829907),
-    C = a(610394),
-    N = a(886118),
-    O = a(301801),
-    E = a(352527),
-    T = a(355863),
-    S = a(449224),
-    P = a(808506),
-    w = a(572004),
-    I = a(55935),
-    k = a(70956),
-    R = a(136015),
-    Z = a(145597),
-    A = a(246992),
-    D = a(257785),
-    L = a(484036),
-    M = a(681619),
-    F = a(621060),
-    U = a(981631),
-    z = a(757744),
-    B = a(388032),
-    G = a(454741),
-    V = a(451429);
+n.d(t, { Z: () => ej }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+var a = n(951288),
+    r = n(647438),
+    l = n(120356),
+    i = n.n(l),
+    s = n(913527),
+    o = n.n(s),
+    c = n(772848),
+    d = n(442837),
+    u = n(755721),
+    m = n(481060),
+    x = n(765250),
+    h = n(13245),
+    p = n(593472),
+    f = n(393238),
+    v = n(594190),
+    b = n(984370),
+    j = n(427860),
+    g = n(837268),
+    _ = n(371651),
+    y = n(829907),
+    C = n(610394),
+    N = n(886118),
+    E = n(301801),
+    O = n(352527),
+    T = n(355863),
+    S = n(449224),
+    P = n(808506),
+    w = n(572004),
+    k = n(55935),
+    I = n(70956),
+    R = n(136015),
+    Z = n(145597),
+    A = n(246992),
+    D = n(257785),
+    L = n(484036),
+    M = n(681619),
+    F = n(621060),
+    U = n(981631),
+    z = n(757744),
+    B = n(388032),
+    G = n(454741),
+    V = n(451429);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(a);
+        var n = null != arguments[t] ? arguments[t] : {},
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+            (a = a.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = a[t]),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = a);
             });
     }
     return e;
@@ -72,14 +72,14 @@ function W(e, t) {
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var a = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      a.push.apply(a, n);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
-                  return a;
-              })(Object(t)).forEach(function (a) {
-                  Object.defineProperty(e, a, Object.getOwnPropertyDescriptor(t, a));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
@@ -130,12 +130,12 @@ let K = {
     X = {};
 function Y(e) {
     let { id: t } = e,
-        [a, l] = r.useState(!1);
+        [n, l] = r.useState(!1);
     return (
         r.useEffect(() => {
             let e;
             return (
-                a &&
+                n &&
                     (e = setTimeout(() => {
                         l(!1);
                     }, 1000)),
@@ -143,8 +143,8 @@ function Y(e) {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [a]),
-        (0, n.jsxs)(u.zx, {
+        }, [n]),
+        (0, a.jsxs)(u.zx, {
             look: u.zx.Looks.LINK,
             color: u.zx.Colors.LINK,
             size: u.zx.Sizes.MIN,
@@ -152,78 +152,78 @@ function Y(e) {
                 (0, w.JG)(t, () => l(!0));
             },
             className: G.copyId,
-            children: ["Application Id: ", t, " ", a ? B.intl.string(B.t["t5VZ8/"]) : null],
+            children: ["Application Id: ", t, " ", n ? B.intl.string(B.t["t5VZ8/"]) : null],
         })
     );
 }
 let J = r.memo(function (e) {
         let { trackedGame: t } = e,
-            a = (0, d.e7)([b.ZP], () => b.ZP.getGameOrTransformedSubgameForPID(t.pid)),
+            n = (0, d.e7)([v.ZP], () => v.ZP.getGameOrTransformedSubgameForPID(t.pid)),
             r = (0, d.e7)([S.Z], () => S.Z.getGameForPID(t.pid)),
-            l = (0, d.e7)([b.ZP], () => (null == a ? null : b.ZP.getGameOverlayStatus(a)));
-        return (0, n.jsxs)("div", {
+            l = (0, d.e7)([v.ZP], () => (null == n ? null : v.ZP.getGameOverlayStatus(n)));
+        return (0, a.jsxs)("div", {
             className: G.panelGroup,
             children: [
-                (0, n.jsx)(m.Text, {
+                (0, a.jsx)(m.Text, {
                     variant: "text-md/bold",
                     color: "text-primary",
                     children: t.gameName,
                 }),
-                (0, n.jsx)(m.Text, {
+                (0, a.jsx)(m.Text, {
                     variant: "text-sm/bold",
                     color: "text-secondary",
                     children: t.pid,
                 }),
-                (0, n.jsx)(m.Text, {
+                (0, a.jsx)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
-                    children: null == a ? void 0 : a.exeName,
+                    children: null == n ? void 0 : n.exeName,
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["isLauncher: ", (null == a ? void 0 : a.isLauncher) ? "Yes" : "No"],
+                    children: ["isLauncher: ", (null == n ? void 0 : n.isLauncher) ? "Yes" : "No"],
                 }),
                 null != t.applicationId &&
-                    (0, n.jsx)(m.Text, {
+                    (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
                         color: "text-primary",
-                        children: (0, n.jsx)(Y, { id: t.applicationId }),
+                        children: (0, a.jsx)(Y, { id: t.applicationId }),
                     }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: ["fullscreenType: ", (0, y.sS)(t.fullscreenType)],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: ["state: ", t.state],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: ["successfullyShown: ", t.successfullyShown ? "Yes" : "No"],
                 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: G.panelGroup,
                     children: [
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: ["source: ", t.source],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: ["legacyEnabled: ", t.legacyEnabled ? "Yes" : "No"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: ["oopEnabled: ", t.oopEnabled ? "Yes" : "No"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: ["overlayMethod: ", (0, y.P_)(t.overlayMethod)],
@@ -231,47 +231,47 @@ let J = r.memo(function (e) {
                     ],
                 }),
                 null != l &&
-                    (0, n.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: G.panelGroup,
                         children: [
-                            (0, n.jsxs)(m.Text, {
+                            (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: ["raw source: ", l.source],
                             }),
-                            (0, n.jsxs)(m.Text, {
+                            (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: ["raw enabledLegacy: ", l.enabledLegacy ? "Yes" : "No"],
                             }),
-                            (0, n.jsxs)(m.Text, {
+                            (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: ["raw enabledOOP: ", l.enabledOOP ? "Yes" : "No"],
                             }),
-                            (0, n.jsxs)(m.Text, {
+                            (0, a.jsxs)(m.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: ["raw overlayMethod: ", (0, y.P_)(l.overlayMethod)],
                             }),
                         ],
                     }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: ["hidden: ", (null == a ? void 0 : a.hidden) ? "Yes" : "No"],
+                    children: ["hidden: ", (null == n ? void 0 : n.hidden) ? "Yes" : "No"],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: ["hook: ", (null == r ? void 0 : r.hook) ? "Yes" : "No"],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: ["overlay: ", (null == r ? void 0 : r.overlay) ? "Yes" : "No"],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: [
@@ -279,7 +279,7 @@ let J = r.memo(function (e) {
                         (null == r ? void 0 : r.overlayCompatibilityHook) ? "Yes" : "No",
                     ],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: [
@@ -292,89 +292,89 @@ let J = r.memo(function (e) {
     }),
     q = r.memo(function (e) {
         let { pid: t } = e,
-            a = (0, d.cj)([P.default], () => P.default.getOverlayPIDStatuses()),
+            n = (0, d.cj)([P.default], () => P.default.getOverlayPIDStatuses()),
             r = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
             l = (0, d.e7)([P.default], () => P.default.isInputLocked(t), [t]),
             i = (0, d.e7)([P.default], () => P.default.DEV_isInputLockedV3(t), [t]),
             s = (0, d.e7)([P.default], () => P.default.DEV_isInputLocked(t), [t]),
             o = (0, d.e7)([P.default], () => P.default.isReady(t), [t]);
-        return (0, n.jsxs)("div", {
+        return (0, a.jsxs)("div", {
             className: G.panelGroup,
             children: [
-                (0, n.jsx)(m.Text, {
+                (0, a.jsx)(m.Text, {
                     variant: "text-md/semibold",
                     color: "text-primary",
                     children: "".concat(t),
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: [
                         "Screen Type Resolution: ",
                         ((e) => {
                             var t;
-                            let a = null == (t = r[e]) ? void 0 : t.timer;
-                            if (null == a || null == a.screenTypeResolutionTimestamp) return "...";
-                            let n = a.screenTypeResolutionTimestamp - a.startTrackingTimestamp;
-                            return "".concat(n.toFixed(2), "ms");
+                            let n = null == (t = r[e]) ? void 0 : t.timer;
+                            if (null == n || null == n.screenTypeResolutionTimestamp) return "...";
+                            let a = n.screenTypeResolutionTimestamp - n.startTrackingTimestamp;
+                            return "".concat(a.toFixed(2), "ms");
                         })(t),
                     ],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: [
                         "Window Creation: ",
                         ((e) => {
                             var t;
-                            let a = null == (t = r[e]) ? void 0 : t.timer;
+                            let n = null == (t = r[e]) ? void 0 : t.timer;
                             if (
-                                null == a ||
-                                null == a.moduleTrackingTimestamp ||
-                                null == a.screenTypeResolutionTimestamp
+                                null == n ||
+                                null == n.moduleTrackingTimestamp ||
+                                null == n.screenTypeResolutionTimestamp
                             )
                                 return "...";
-                            let n = a.moduleTrackingTimestamp - a.screenTypeResolutionTimestamp;
-                            return "".concat(n.toFixed(2), "ms");
+                            let a = n.moduleTrackingTimestamp - n.screenTypeResolutionTimestamp;
+                            return "".concat(a.toFixed(2), "ms");
                         })(t),
                     ],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: [
                         "Rendering: ",
                         ((e) => {
                             var t;
-                            let a = null == (t = r[e]) ? void 0 : t.timer;
-                            if (null == a || null == a.overlayRenderingTimestamp || null == a.moduleTrackingTimestamp)
+                            let n = null == (t = r[e]) ? void 0 : t.timer;
+                            if (null == n || null == n.overlayRenderingTimestamp || null == n.moduleTrackingTimestamp)
                                 return "...";
-                            let n = a.overlayRenderingTimestamp - a.moduleTrackingTimestamp;
-                            return "".concat(n.toFixed(2), "ms");
+                            let a = n.overlayRenderingTimestamp - n.moduleTrackingTimestamp;
+                            return "".concat(a.toFixed(2), "ms");
                         })(t),
                     ],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-primary",
-                    children: ["Bridge Status: ", a.get(Number(t))],
+                    children: ["Bridge Status: ", n.get(Number(t))],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-primary",
                     children: ["isInputLocked: ", l],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-primary",
                     children: ["isInputLockedV3: ", i],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-primary",
                     children: ["isInputLockedV2: ", s],
                 }),
-                (0, n.jsxs)(m.Text, {
+                (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
                     color: "text-primary",
                     children: ["isReady: ", o],
@@ -384,16 +384,16 @@ let J = r.memo(function (e) {
     });
 function $(e) {
     let t,
-        a = ((t = Object.values((0, d.Wu)([T.Z], () => T.Z.getWidgetsForLayout(z.$S)))), t.find((t) => t.type === e));
+        n = ((t = Object.values((0, d.Wu)([T.Z], () => T.Z.getWidgetsForLayout(z.$S)))), t.find((t) => t.type === e));
     return [
-        a,
+        n,
         () => {
-            if (null != a) (0, x.E9)(a.id);
+            if (null != n) (0, x.E9)(n.id);
             else {
                 let t = K[e];
                 if (null == t) return;
-                let a = t(z.$S);
-                (0, x.A4)(a);
+                let n = t(z.$S);
+                (0, x.A4)(n);
             }
         },
     ];
@@ -404,36 +404,36 @@ function Q(e) {
 }
 let ee = r.memo(function (e) {
     var { pid: t } = e,
-        a = (function (e, t) {
+        n = (function (e, t) {
             if (null == e) return {};
-            var a,
-                n,
+            var n,
+                a,
                 r = (function (e, t) {
                     if (null == e) return {};
-                    var a,
-                        n,
+                    var n,
+                        a,
                         r = {},
                         l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (a = l[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+                    for (a = 0; a < l.length; a++) (n = l[a]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (a = l[n]),
-                        !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]);
+                for (a = 0; a < l.length; a++)
+                    (n = l[a]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ["pid"]);
     let r = (0, d.e7)([_.default], () => {
-        var e, a;
+        var e, n;
         if (null == t) return "Unknown";
-        let n = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
-        return null != n ? ((X[t] = n), n) : null != (a = X[t]) ? a : "Unknown";
+        let a = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
+        return null != a ? ((X[t] = a), a) : null != (n = X[t]) ? n : "Unknown";
     }, [t]);
-    return (0, n.jsx)(
+    return (0, a.jsx)(
         m.Text,
-        W(H({}, a), {
+        W(H({}, n), {
             variant: "text-md/semibold",
             color: "text-primary",
             children: r,
@@ -443,13 +443,13 @@ let ee = r.memo(function (e) {
 function et() {
     let e = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([_.default], () => _.default.getDevToolsFocusedPidsWithTimestamp(), []);
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: G.panelGroup,
         children: [
-            (0, n.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: G.panelHeader,
                 children: [
-                    (0, n.jsx)(m.XZJ, {
+                    (0, a.jsx)(m.XZJ, {
                         value: e,
                         onChange: () =>
                             void h.Z.setRenderDebugMode(
@@ -459,55 +459,55 @@ function et() {
                         size: 18,
                         type: m.XZJ.Types.INVERTED,
                         shape: m.XZJ.Shapes.BOX,
-                        children: (0, n.jsx)(m.Text, {
+                        children: (0, a.jsx)(m.Text, {
                             tag: "span",
                             variant: "text-md/normal",
                             color: "text-muted",
                             children: "Track Focus Pids",
                         }),
                     }),
-                    (0, n.jsx)(m.P3F, {
+                    (0, a.jsx)(m.P3F, {
                         className: G.panelButton,
                         onClick: () => h.Z.clearTrackedPids(),
-                        children: (0, n.jsx)(m.XHJ, {
+                        children: (0, a.jsx)(m.XHJ, {
                             size: "md",
                             color: "currentColor",
                         }),
                     }),
                 ],
             }),
-            (0, n.jsxs)(m.zJl, {
+            (0, a.jsxs)(m.zJl, {
                 className: i()(G.panelGroup, G.scroller),
                 children: [
                     0 === t.length &&
-                        (0, n.jsx)(m.Text, {
+                        (0, a.jsx)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: "No recent focused pids",
                         }),
                     [...t].reverse().map((e) => {
-                        let [t, a, l] = e;
-                        return (0, n.jsx)(
+                        let [t, n, l] = e;
+                        return (0, a.jsx)(
                             r.Fragment,
                             {
-                                children: (0, n.jsx)(m.ua7, {
+                                children: (0, a.jsx)(m.ua7, {
                                     position: "left",
                                     text: l === g.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
                                         var r;
-                                        return (0, n.jsx)(
+                                        return (0, a.jsx)(
                                             "div",
                                             W(H({}, e), {
-                                                children: (0, n.jsxs)(m.Text, {
+                                                children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
                                                     color: l === g.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
-                                                        (0, n.jsx)(ee, {
-                                                            pid: a,
+                                                        (0, a.jsx)(ee, {
+                                                            pid: n,
                                                             tag: "span",
                                                         }),
                                                         " - ",
-                                                        null != (r = null == a ? void 0 : a.toString()) ? r : "null",
+                                                        null != (r = null == n ? void 0 : n.toString()) ? r : "null",
                                                         " @ ",
                                                         Q(t, !0),
                                                     ],
@@ -517,7 +517,7 @@ function et() {
                                     },
                                 }),
                             },
-                            "".concat(a, "-").concat(t),
+                            "".concat(n, "-").concat(t),
                         );
                     }),
                 ],
@@ -525,44 +525,44 @@ function et() {
         ],
     });
 }
-let ea = r.memo(function (e) {
+let en = r.memo(function (e) {
         let { pid: t } = e,
-            a = (0, d.e7)([_.default, b.ZP], () => {
-                var e, a;
+            n = (0, d.e7)([_.default, v.ZP], () => {
+                var e, n;
                 if (null == t) return null;
-                let n = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
-                if (null != n) return n;
-                let r = b.ZP.getGameOrTransformedSubgameForPID(t);
-                return null != (a = null == r ? void 0 : r.fullscreenType) ? a : p.Jx.UNKNOWN;
+                let a = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
+                if (null != a) return a;
+                let r = v.ZP.getGameOrTransformedSubgameForPID(t);
+                return null != (n = null == r ? void 0 : r.fullscreenType) ? n : p.Jx.UNKNOWN;
             }, [t]);
-        return (0, n.jsxs)(m.Text, {
+        return (0, a.jsxs)(m.Text, {
             variant: "text-sm/normal",
             color: "text-secondary",
             tag: "span",
-            children: ["Original Screen Type: ", null != a ? (0, y.sS)(a) : "Unknown"],
+            children: ["Original Screen Type: ", null != n ? (0, y.sS)(n) : "Unknown"],
         });
     }),
-    en = r.memo(function () {
+    ea = r.memo(function () {
         let e = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
-            [t, a] = r.useState({}),
+            [t, n] = r.useState({}),
             l = r.useRef(null);
         return (
             r.useEffect(
                 () => (
                     (l.current = setInterval(async () => {
-                        let e = b.ZP.getRunningGames(),
+                        let e = v.ZP.getRunningGames(),
                             t = [],
-                            n = Date.now();
-                        for (let a of e) t.push((0, y.hj)(a.pid, 0).then((e) => [a.pid, e, n]));
+                            a = Date.now();
+                        for (let n of e) t.push((0, y.hj)(n.pid, 0).then((e) => [n.pid, e, a]));
                         let r = await Promise.all(t);
-                        a((e) =>
+                        n((e) =>
                             r.reduce(
                                 (e, t) => {
-                                    var a, n;
+                                    var n, a;
                                     let [r, l, i] = t;
                                     if (null == l || null == r) return e;
-                                    let s = null != (n = e[r]) ? n : [],
-                                        o = null == (a = s[s.length - 1]) ? void 0 : a.screenType;
+                                    let s = null != (a = e[r]) ? a : [],
+                                        o = null == (n = s[s.length - 1]) ? void 0 : n.screenType;
                                     return (
                                         (0 === s.length || o !== l) &&
                                             (e[r] = [
@@ -579,51 +579,51 @@ let ea = r.memo(function (e) {
                                 H({}, e),
                             ),
                         );
-                    }, +k.Z.Millis.SECOND)),
+                    }, +I.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 [],
             ),
-            (0, n.jsx)(m.ua7, {
+            (0, a.jsx)(m.ua7, {
                 position: "left",
                 text: "The most recent screen types we've logged, indexed by pid",
-                children: (a) =>
-                    (0, n.jsx)(
+                children: (n) =>
+                    (0, a.jsx)(
                         "div",
-                        W(H({}, a), {
-                            children: (0, n.jsxs)(m.zJl, {
+                        W(H({}, n), {
+                            children: (0, a.jsxs)(m.zJl, {
                                 className: i()(G.panelGroup, G.scroller),
                                 children: [
                                     0 === Object.keys(e).length &&
-                                        (0, n.jsx)(m.Text, {
+                                        (0, a.jsx)(m.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
                                             children: "No recent screen types",
                                         }),
                                     Object.values(e).map((e) =>
-                                        (0, n.jsxs)(
+                                        (0, a.jsxs)(
                                             "div",
                                             {
                                                 children: [
-                                                    (0, n.jsx)(ee, {
+                                                    (0, a.jsx)(ee, {
                                                         tag: "div",
                                                         pid: e.pid,
                                                     }),
-                                                    (0, n.jsx)(ea, { pid: e.pid }),
+                                                    (0, a.jsx)(en, { pid: e.pid }),
                                                     null != t[e.pid] &&
                                                         [...t[e.pid]].reverse().map((t) => {
-                                                            let { screenType: a, timestamp: r } = t;
-                                                            return (0, n.jsx)(
+                                                            let { screenType: n, timestamp: r } = t;
+                                                            return (0, a.jsx)(
                                                                 m.Text,
                                                                 {
                                                                     variant: "text-xs/normal",
                                                                     color: "text-default",
                                                                     children: ""
-                                                                        .concat(a, ":")
-                                                                        .concat((0, y.sS)(a), " @ ")
+                                                                        .concat(n, ":")
+                                                                        .concat((0, y.sS)(n), " @ ")
                                                                         .concat(Q(r)),
                                                                 },
-                                                                "".concat(e.pid, "-").concat(a, "-").concat(r),
+                                                                "".concat(e.pid, "-").concat(n, "-").concat(r),
                                                             );
                                                         }),
                                                 ],
@@ -640,50 +640,50 @@ let ea = r.memo(function (e) {
     }),
     er = r.memo(function () {
         var e, t;
-        let a = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
+        let n = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
             r = (0, Z.getPID)(),
             l = (0, d.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(r), [r]),
-            [i, s] = (0, d.Wu)([E.Z], () => [E.Z.enabled, E.Z.keepOpen]),
+            [i, s] = (0, d.Wu)([O.Z], () => [O.Z.enabled, O.Z.keepOpen]),
             o = (0, d.e7)([P.default], () => P.default.getFocusedPID()),
             c = (0, d.e7)([P.default], () => P.default.isFocusedPidOutOfProcess());
-        return (0, n.jsxs)("div", {
+        return (0, a.jsxs)("div", {
             className: G.panelGroup,
             children: [
-                0 === Object.keys(a).length &&
-                    (0, n.jsx)(m.Text, {
+                0 === Object.keys(n).length &&
+                    (0, a.jsx)(m.Text, {
                         variant: "text-sm/normal",
                         color: "text-default",
                         children: "No tracked game times",
                     }),
-                Object.values(a).map((e) => (0, n.jsx)(q, { pid: e.pid }, e.pid)),
-                (0, n.jsxs)("div", {
+                Object.values(n).map((e) => (0, a.jsx)(q, { pid: e.pid }, e.pid)),
+                (0, a.jsxs)("div", {
                     children: [
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/medium",
                             color: "text-primary",
                             children: ["focusedPID: ", null != (e = null == o ? void 0 : o.toString()) ? e : "null"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             children: ["isFocusedPidOutOfProcess: ", c ? "Yes" : "No"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/medium",
                             color: "text-primary",
                             children: ["processPid: ", null != (t = null == r ? void 0 : r.toString()) ? t : "unknown"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             children: ["isOOPEnabledForPid: ", l ? "Yes" : "No"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             children: ["SoundboardOverlay.enabled: ", i ? "Yes" : "No"],
                         }),
-                        (0, n.jsxs)(m.Text, {
+                        (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             children: ["SoundboardOverlay.keepOpen: ", s ? "Yes" : "No"],
@@ -695,7 +695,7 @@ let ea = r.memo(function (e) {
     }),
     el = r.memo(function () {
         let [e, t] = $(U.Odu.CLICK_ZONE_DEBUG),
-            [a, r] = $(U.Odu.PERFORMANCE_DEBUG),
+            [n, r] = $(U.Odu.PERFORMANCE_DEBUG),
             l = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ClickZones)),
             i = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
             s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.DisabledGPUBoost)),
@@ -703,23 +703,23 @@ let ea = r.memo(function (e) {
             c = (e) => {
                 h.Z.setRenderDebugMode(!C.ZP.hasRenderDebugMode(e), e);
             };
-        return (0, n.jsxs)("div", {
+        return (0, a.jsxs)("div", {
             className: G.panelGroup,
             children: [
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "Enables a red border around click zones to help with debugging.",
                     children: (e) =>
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             "div",
                             W(H({}, e), {
-                                children: (0, n.jsx)(m.XZJ, {
+                                children: (0, a.jsx)(m.XZJ, {
                                     value: l,
                                     onChange: () => void c(g.GO.ClickZones),
                                     size: 18,
                                     type: m.XZJ.Types.INVERTED,
                                     shape: m.XZJ.Shapes.BOX,
-                                    children: (0, n.jsx)(m.Text, {
+                                    children: (0, a.jsx)(m.Text, {
                                         tag: "span",
                                         variant: "text-md/normal",
                                         color: "text-muted",
@@ -729,20 +729,20 @@ let ea = r.memo(function (e) {
                             }),
                         ),
                 }),
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets",
                     children: (e) =>
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             "div",
                             W(H({}, e), {
-                                children: (0, n.jsx)(m.XZJ, {
+                                children: (0, a.jsx)(m.XZJ, {
                                     value: i,
                                     onChange: () => void c(g.GO.WidgetAreas),
                                     size: 18,
                                     type: m.XZJ.Types.INVERTED,
                                     shape: m.XZJ.Shapes.BOX,
-                                    children: (0, n.jsx)(m.Text, {
+                                    children: (0, a.jsx)(m.Text, {
                                         tag: "span",
                                         variant: "text-md/normal",
                                         color: "text-muted",
@@ -752,20 +752,20 @@ let ea = r.memo(function (e) {
                             }),
                         ),
                 }),
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "Disables GPU Boost, which can help with performance when games compete for GPU resources.",
                     children: (e) =>
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             "div",
                             W(H({}, e), {
-                                children: (0, n.jsx)(m.XZJ, {
+                                children: (0, a.jsx)(m.XZJ, {
                                     value: s,
                                     onChange: () => void c(g.GO.DisabledGPUBoost),
                                     size: 18,
                                     type: m.XZJ.Types.INVERTED,
                                     shape: m.XZJ.Shapes.BOX,
-                                    children: (0, n.jsx)(m.Text, {
+                                    children: (0, a.jsx)(m.Text, {
                                         tag: "span",
                                         variant: "text-md/normal",
                                         color: "text-muted",
@@ -775,21 +775,21 @@ let ea = r.memo(function (e) {
                             }),
                         ),
                 }),
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "Forces GPU Boost, which can help with performance when games compete for GPU resources.",
                     children: (e) =>
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             "div",
                             W(H({}, e), {
-                                children: (0, n.jsx)(m.XZJ, {
+                                children: (0, a.jsx)(m.XZJ, {
                                     value: o,
                                     onChange: () => void c(g.GO.ForceGPUBoost),
                                     size: 18,
                                     disabled: s,
                                     type: m.XZJ.Types.INVERTED,
                                     shape: m.XZJ.Shapes.BOX,
-                                    children: (0, n.jsx)(m.Text, {
+                                    children: (0, a.jsx)(m.Text, {
                                         tag: "span",
                                         variant: "text-md/normal",
                                         color: "text-muted",
@@ -799,20 +799,20 @@ let ea = r.memo(function (e) {
                             }),
                         ),
                 }),
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.",
-                    children: (a) =>
-                        (0, n.jsx)(
+                    children: (n) =>
+                        (0, a.jsx)(
                             "div",
-                            W(H({}, a), {
-                                children: (0, n.jsx)(m.XZJ, {
+                            W(H({}, n), {
+                                children: (0, a.jsx)(m.XZJ, {
                                     value: null != e,
                                     onChange: () => t(),
                                     size: 18,
                                     type: m.XZJ.Types.INVERTED,
                                     shape: m.XZJ.Shapes.BOX,
-                                    children: (0, n.jsx)(m.Text, {
+                                    children: (0, a.jsx)(m.Text, {
                                         tag: "span",
                                         variant: "text-md/normal",
                                         color: "text-muted",
@@ -822,20 +822,20 @@ let ea = r.memo(function (e) {
                             }),
                         ),
                 }),
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "Creates a widget that shows the overlay's window performance metrics.",
                     children: (e) =>
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             "div",
                             W(H({}, e), {
-                                children: (0, n.jsx)(m.XZJ, {
-                                    value: null != a,
+                                children: (0, a.jsx)(m.XZJ, {
+                                    value: null != n,
                                     onChange: () => r(),
                                     size: 18,
                                     type: m.XZJ.Types.INVERTED,
                                     shape: m.XZJ.Shapes.BOX,
-                                    children: (0, n.jsx)(m.Text, {
+                                    children: (0, a.jsx)(m.Text, {
                                         tag: "span",
                                         variant: "text-md/normal",
                                         color: "text-muted",
@@ -850,29 +850,29 @@ let ea = r.memo(function (e) {
     }),
     ei = r.memo(function () {
         let e = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
-            t = (0, d.e7)([b.ZP], () => b.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
-        return (0, n.jsxs)(n.Fragment, {
+            t = (0, d.e7)([v.ZP], () => v.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
+        return (0, a.jsxs)(a.Fragment, {
             children: [
                 t.length > 0 &&
-                    (0, n.jsx)(m.ua7, {
+                    (0, a.jsx)(m.ua7, {
                         position: "left",
                         text: "Games that are running but not tracked by the overlay",
                         children: (e) =>
-                            (0, n.jsx)(
+                            (0, a.jsx)(
                                 "div",
                                 W(H({}, e), {
-                                    children: (0, n.jsxs)("div", {
+                                    children: (0, a.jsxs)("div", {
                                         className: G.panelGroup,
                                         children: [
-                                            (0, n.jsx)(m.Text, {
+                                            (0, a.jsx)(m.Text, {
                                                 variant: "text-md/bold",
                                                 color: "text-danger",
                                                 children: "Untracked Running Games",
                                             }),
                                             t.map((e) =>
-                                                (0, n.jsxs)(n.Fragment, {
+                                                (0, a.jsxs)(a.Fragment, {
                                                     children: [
-                                                        (0, n.jsx)(
+                                                        (0, a.jsx)(
                                                             m.Text,
                                                             {
                                                                 variant: "text-sm/normal",
@@ -884,7 +884,7 @@ let ea = r.memo(function (e) {
                                                             },
                                                             e.pid,
                                                         ),
-                                                        (0, n.jsx)(ea, { pid: e.pid }),
+                                                        (0, a.jsx)(en, { pid: e.pid }),
                                                     ],
                                                 }),
                                             ),
@@ -893,23 +893,23 @@ let ea = r.memo(function (e) {
                                 }),
                             ),
                     }),
-                (0, n.jsx)(m.ua7, {
+                (0, a.jsx)(m.ua7, {
                     position: "left",
                     text: "The current running games process information",
                     children: (t) =>
-                        (0, n.jsx)(
+                        (0, a.jsx)(
                             "div",
                             W(H({}, t), {
-                                children: (0, n.jsxs)("div", {
+                                children: (0, a.jsxs)("div", {
                                     className: G.panelGroup,
                                     children: [
                                         0 === Object.keys(e).length &&
-                                            (0, n.jsx)(m.Text, {
+                                            (0, a.jsx)(m.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-default",
                                                 children: "No running games",
                                             }),
-                                        Object.values(e).map((e) => (0, n.jsx)(J, { trackedGame: e }, e.pid)),
+                                        Object.values(e).map((e) => (0, a.jsx)(J, { trackedGame: e }, e.pid)),
                                     ],
                                 }),
                             }),
@@ -920,9 +920,9 @@ let ea = r.memo(function (e) {
     }),
     es = r.memo(function () {
         let e = (0, d.e7)([_.default], () => _.default.getForcedRenderMode()),
-            [t, a] = r.useState(e),
+            [t, n] = r.useState(e),
             l = (e) => {
-                a(e), h.Z.forceRenderMode(e);
+                n(e), h.Z.forceRenderMode(e);
             },
             i = [
                 {
@@ -942,15 +942,15 @@ let ea = r.memo(function (e) {
                     value: g.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
             ].map((t) => W(H({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
-        return (0, n.jsx)(m.ua7, {
+        return (0, a.jsx)(m.ua7, {
             position: "left",
             text: "Override the overlay render mode",
             children: (e) =>
-                (0, n.jsx)(
+                (0, a.jsx)(
                     "div",
                     W(H({}, e), {
                         className: G.panelGroup,
-                        children: (0, n.jsx)(m.PhF, {
+                        children: (0, a.jsx)(m.PhF, {
                             serialize: (e) => e,
                             isSelected: (e) => e === t,
                             options: i,
@@ -999,12 +999,12 @@ let ed = [
         cellClassName: G.tableBarColumn,
         renderHeader: () => null,
         render(e) {
-            let { type: t, logType: a } = e,
+            let { type: t, logType: n } = e,
                 r = eu(t);
-            return (0, n.jsx)("div", {
+            return (0, a.jsx)("div", {
                 className: G.tableBar,
-                style: { color: ec(t, a) },
-                children: (0, n.jsx)(r, {
+                style: { color: ec(t, n) },
+                children: (0, a.jsx)(r, {
                     color: "currentColor",
                     size: "sm",
                 }),
@@ -1015,10 +1015,10 @@ let ed = [
         key: "name",
         cellClassName: G.nameColumn,
         render(e) {
-            let { name: t, type: a, logType: r } = e;
-            return (0, n.jsxs)(n.Fragment, {
+            let { name: t, type: n, logType: r } = e;
+            return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, n.jsx)(m.Text, {
+                    (0, a.jsx)(m.Text, {
                         variant: "text-md/normal",
                         color: (function (e) {
                             switch (e) {
@@ -1034,10 +1034,10 @@ let ed = [
                         })(r),
                         children: t,
                     }),
-                    (0, n.jsxs)(m.Text, {
+                    (0, a.jsxs)(m.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: ["(", a, ")"],
+                        children: ["(", n, ")"],
                     }),
                 ],
             });
@@ -1048,7 +1048,7 @@ let ed = [
         cellClassName: G.rightColumn,
         render(e) {
             let { timestamp: t } = e;
-            return (0, I.vc)(o()(t), "h:mm:ss.SSS");
+            return (0, k.vc)(o()(t), "h:mm:ss.SSS");
         },
     },
 ];
@@ -1079,110 +1079,110 @@ let ex = ["__webpack_require__", "fn"],
             name: "Details",
             group: F.v0.NONE,
             render: (e) => {
-                var t, a;
+                var t, n;
                 let { breadcrumb: r, onClose: l } = e,
                     { name: s, type: c, logType: d, nativeId: u, stack: x, data: h, timestamp: p } = r,
-                    v = o()(p),
-                    b = eu(c);
-                return (0, n.jsxs)(m.w0Z, {
+                    f = o()(p),
+                    v = eu(c);
+                return (0, a.jsxs)(m.w0Z, {
                     className: G.subPanelScroller,
                     children: [
-                        (0, n.jsxs)(f.Z, {
+                        (0, a.jsxs)(b.Z, {
                             className: i()(V.headerBar, G.subPanelHeaderBar),
                             children: [
-                                (0, n.jsx)("div", {
+                                (0, a.jsx)("div", {
                                     style: { color: ec(c, d) },
                                     className: G.headerIcon,
-                                    children: (0, n.jsx)(b, {
+                                    children: (0, a.jsx)(v, {
                                         color: "currentColor",
                                         size: "sm",
                                     }),
                                 }),
-                                (0, n.jsxs)(f.Z.Title, {
+                                (0, a.jsxs)(b.Z.Title, {
                                     wrapperClassName: G.headerTitle,
                                     children: [
                                         s,
                                         " (",
                                         c,
                                         ")",
-                                        (0, n.jsx)(m.P3F, {
+                                        (0, a.jsx)(m.P3F, {
                                             tag: "span",
                                             className: G.copyEventButton,
                                             onClick: () => (0, w.JG)(s),
-                                            children: (0, n.jsx)(m.TIy, {
+                                            children: (0, a.jsx)(m.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
                                             }),
                                         }),
                                     ],
                                 }),
-                                (0, n.jsx)(f.Z.Icon, {
+                                (0, a.jsx)(b.Z.Icon, {
                                     icon: m.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
                                         (0, w.JG)(em(r));
                                     },
                                 }),
-                                (0, n.jsx)(f.Z.Icon, {
+                                (0, a.jsx)(b.Z.Icon, {
                                     icon: m.k$p,
                                     tooltip: "Close",
                                     onClick: l,
                                 }),
                             ],
                         }),
-                        (0, n.jsxs)(D.E, {
+                        (0, a.jsxs)(D.E, {
                             className: G.commonProperties,
                             children: [
-                                (0, n.jsx)(D.Z9, {
+                                (0, a.jsx)(D.Z9, {
                                     name: "Timestamp",
-                                    copyValue: v.toISOString(),
-                                    children: (0, n.jsx)("time", {
-                                        dateTime: v.toISOString(),
-                                        title: (0, I.vc)(v, "LLLL"),
-                                        children: (0, I.vc)(v, "L h:mm:ss.SSS"),
+                                    copyValue: f.toISOString(),
+                                    children: (0, a.jsx)("time", {
+                                        dateTime: f.toISOString(),
+                                        title: (0, k.vc)(f, "LLLL"),
+                                        children: (0, k.vc)(f, "L h:mm:ss.SSS"),
                                     }),
                                 }),
-                                (0, n.jsx)(D.Z9, {
+                                (0, a.jsx)(D.Z9, {
                                     name: "Log Type",
                                     copyValue: d,
-                                    children: (0, n.jsx)("code", { children: d }),
+                                    children: (0, a.jsx)("code", { children: d }),
                                 }),
-                                (0, n.jsx)(D.Z9, {
+                                (0, a.jsx)(D.Z9, {
                                     name: "Native ID",
                                     copyValue: null != (t = null == u ? void 0 : u.toString()) ? t : "null",
-                                    children: (0, n.jsx)("code", {
-                                        children: null != (a = null == u ? void 0 : u.toString()) ? a : "null",
+                                    children: (0, a.jsx)("code", {
+                                        children: null != (n = null == u ? void 0 : u.toString()) ? n : "null",
                                     }),
                                 }),
-                                (0, n.jsx)(D.Z9, {
+                                (0, a.jsx)(D.Z9, {
                                     name: "Data",
                                     copyValue: em(h),
-                                    children: (0, n.jsx)("code", { children: em(h) }),
+                                    children: (0, a.jsx)("code", { children: em(h) }),
                                 }),
-                                (0, n.jsx)(D.Z9, {
+                                (0, a.jsx)(D.Z9, {
                                     name: "Stack Trace",
                                     copyValue: x,
-                                    children: (0, n.jsx)("code", {
+                                    children: (0, a.jsx)("code", {
                                         children: x.split("\n").map((e, t) => {
-                                            let a = e.match(/at (.*) \((.*):(\d+):(\d+)\)/);
-                                            if (null != a) {
-                                                let [, e, r, l, i] = a,
+                                            let n = e.match(/at (.*) \((.*):(\d+):(\d+)\)/);
+                                            if (null != n) {
+                                                let [, e, r, l, i] = n,
                                                     s = r.split(/[\\/]/).pop();
                                                 return ex.includes(e.trim())
                                                     ? null
-                                                    : (0, n.jsxs)(
+                                                    : (0, a.jsxs)(
                                                           "div",
                                                           {
                                                               children: [
-                                                                  (0, n.jsx)("span", {
+                                                                  (0, a.jsx)("span", {
                                                                       className: G.stackTraceFunction,
                                                                       children: e.trim(),
                                                                   }),
                                                                   !eh.includes(null != s ? s : "") &&
-                                                                      (0, n.jsxs)(n.Fragment, {
+                                                                      (0, a.jsxs)(a.Fragment, {
                                                                           children: [
                                                                               " (",
-                                                                              (0, n.jsxs)("span", {
+                                                                              (0, a.jsxs)("span", {
                                                                                   className: G.stackTraceLocation,
                                                                                   title: r,
                                                                                   children: [s, ":", l, ":", i],
@@ -1195,7 +1195,7 @@ let ex = ["__webpack_require__", "fn"],
                                                           t,
                                                       );
                                             }
-                                            return (0, n.jsx)("div", { children: e }, t);
+                                            return (0, a.jsx)("div", { children: e }, t);
                                         }),
                                     }),
                                 }),
@@ -1206,42 +1206,42 @@ let ex = ["__webpack_require__", "fn"],
             },
         },
     ],
-    ev = {
+    ef = {
         searchType: N.S.REGEX,
         searchStringGenerator: (e) => {
-            let { name: t, type: a, stack: n, data: r } = e;
-            return [t, a, n, JSON.stringify(r)];
+            let { name: t, type: n, stack: a, data: r } = e;
+            return [t, n, a, JSON.stringify(r)];
         },
         throttleMs: 100,
     };
-function eb() {
+function ev() {
     let [e, t] = (0, d.e7)([C.ZP], () => C.ZP.DEV_getOverlayLoggingBreadcrumbs(), [], R.Q),
-        { ref: a, height: l } = (0, v.ZP)(),
+        { ref: n, height: l } = (0, f.ZP)(),
         s = (0, d.e7)([C.ZP], () => C.ZP.DEV_isOverlayModuleLoggingEnabled()),
         [o, c] = r.useState(s),
         [u, x] = r.useState(Object.keys(eo)),
-        [p, b] = r.useState(""),
-        f = r.useMemo(
+        [p, v] = r.useState(""),
+        b = r.useMemo(
             () =>
                 0 === t
                     ? []
                     : e.filter((e) => {
                           for (let t of u) {
-                              let { filter: a } = eo[t];
-                              if (a(e)) return !0;
+                              let { filter: n } = eo[t];
+                              if (n(e)) return !0;
                           }
                           return !1;
                       }),
             [e, u, t],
         ),
-        [j, g] = r.useState(f),
+        [j, g] = r.useState(b),
         [_, y] = r.useState(null),
         N = r.useMemo(() => e.find((e) => e.key === _), [e, _]),
-        E = r.useCallback((e) => {
+        O = r.useCallback((e) => {
             g(e);
         }, []),
         { renderSelectedTab: T } = (0, F.ZP)({ tabs: ep }, []);
-    (0, O.BO)(p, f, E, ev, [e]);
+    (0, E.BO)(p, b, O, ef, [e]);
     let S = r.useCallback((e) => {
         c(e), h.Z.setModuleLogging(e);
     }, []);
@@ -1254,42 +1254,42 @@ function eb() {
             clearTimeout(e);
         };
     }, []);
-    let [P, I] = r.useState(!1),
-        k = r.useRef(null),
+    let [P, k] = r.useState(!1),
+        I = r.useRef(null),
         Z = r.useCallback(() => {
-            (0, w.JG)(JSON.stringify(e)), I(!0);
+            (0, w.JG)(JSON.stringify(e)), k(!0);
         }, [e]);
     return (
         r.useEffect(() => {
             if (P)
                 return (
-                    (k.current = setTimeout(() => {
-                        I(!1);
+                    (I.current = setTimeout(() => {
+                        k(!1);
                     }, 4000)),
                     () => {
-                        null != k.current && clearTimeout(k.current);
+                        null != I.current && clearTimeout(I.current);
                     }
                 );
         }, [P]),
-        (0, n.jsxs)("div", {
-            ref: a,
+        (0, a.jsxs)("div", {
+            ref: n,
             className: G.panelContainer,
             children: [
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: G.panelGroup,
                     children: [
-                        (0, n.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                             className: i()(G.toolbar, G.filtersToolbar),
                             children: [
-                                (0, n.jsxs)("div", {
+                                (0, a.jsxs)("div", {
                                     title: "Toggles the Polling of Native",
                                     className: G.pollBreadcrumbs,
                                     children: [
-                                        (0, n.jsx)(m.rsf, {
+                                        (0, a.jsx)(m.rsf, {
                                             checked: o,
                                             onChange: (e) => S(e),
                                         }),
-                                        (0, n.jsx)(m.Text, {
+                                        (0, a.jsx)(m.Text, {
                                             variant: "text-md/normal",
                                             color: "currentColor",
                                             children: "Poll Native",
@@ -1297,38 +1297,38 @@ function eb() {
                                     ],
                                 }),
                                 Object.entries(eo).map((e) => {
-                                    let [t, a] = e;
-                                    return (0, n.jsx)(
+                                    let [t, n] = e;
+                                    return (0, a.jsx)(
                                         m.P3F,
                                         {
                                             className: i()(G.filter, u.includes(t) && G.activeFilter),
                                             onClick: () => {
                                                 x((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                             },
-                                            children: (0, n.jsx)(m.Text, {
+                                            children: (0, a.jsx)(m.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "currentColor",
-                                                children: a.label,
+                                                children: n.label,
                                             }),
                                         },
                                         t,
                                     );
                                 }),
-                                (0, n.jsxs)(m.P3F, {
+                                (0, a.jsxs)(m.P3F, {
                                     className: G.copyAll,
                                     onClick: Z,
                                     children: [
-                                        (0, n.jsx)(m.Text, {
+                                        (0, a.jsx)(m.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
                                             children: P ? "Copied" : "Copy All",
                                         }),
                                         P
-                                            ? (0, n.jsx)(m.dz2, {
+                                            ? (0, a.jsx)(m.dz2, {
                                                   size: "sm",
                                                   color: m.TVs.unsafe_rawColors.GREEN_330.css,
                                               })
-                                            : (0, n.jsx)(m.TIy, {
+                                            : (0, a.jsx)(m.TIy, {
                                                   color: "currentColor",
                                                   size: "sm",
                                               }),
@@ -1336,21 +1336,21 @@ function eb() {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)("div", {
+                        (0, a.jsx)("div", {
                             className: G.toolbar,
-                            children: (0, n.jsx)(m.E1j, {
+                            children: (0, a.jsx)(m.E1j, {
                                 className: G.searchBar,
                                 query: p,
-                                onChange: b,
-                                onClear: () => b(""),
+                                onChange: v,
+                                onClear: () => v(""),
                                 placeholder: "Regex search by breadcrumb name and data",
                             }),
                         }),
                     ],
                 }),
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                     className: i()(G.panelGroup, G.tableContainer),
-                    children: (0, n.jsx)(M.Z, {
+                    children: (0, a.jsx)(M.Z, {
                         columns: ed,
                         data: j,
                         selectedRowKey: null != _ ? _ : void 0,
@@ -1358,7 +1358,7 @@ function eb() {
                     }),
                 }),
                 null != N &&
-                    (0, n.jsx)(L.Z, {
+                    (0, a.jsx)(L.Z, {
                         className: i()(G.panelGroup, G.subPanel),
                         minHeight: 100,
                         initialHeight: null != l ? l / 3 : 300,
@@ -1371,42 +1371,42 @@ function eb() {
         })
     );
 }
-function ef() {
-    return (0, n.jsx)(m.w0Z, {
-        children: (0, n.jsxs)("div", {
+function eb() {
+    return (0, a.jsx)(m.w0Z, {
+        children: (0, a.jsxs)("div", {
             className: i()(V.panel, G.subPanel),
             children: [
-                (0, n.jsx)(el, {}),
-                (0, n.jsx)(es, {}),
-                (0, n.jsx)(ei, {}),
-                (0, n.jsx)(er, {}),
-                (0, n.jsx)(et, {}),
-                (0, n.jsx)(en, {}),
+                (0, a.jsx)(el, {}),
+                (0, a.jsx)(es, {}),
+                (0, a.jsx)(ei, {}),
+                (0, a.jsx)(er, {}),
+                (0, a.jsx)(et, {}),
+                (0, a.jsx)(ea, {}),
             ],
         }),
     });
 }
 function ej() {
     let [e, t] = r.useState("state");
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: i()(V.panel, G.panel),
         children: [
-            (0, n.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: G.toolbar,
                 children: [
-                    (0, n.jsx)(m.P3F, {
+                    (0, a.jsx)(m.P3F, {
                         className: i()(G.paneOption, "state" === e && G.activePaneOption),
                         onClick: () => t("state"),
-                        children: (0, n.jsx)(m.Text, {
+                        children: (0, a.jsx)(m.Text, {
                             variant: "text-md/medium",
                             color: "currentColor",
                             children: "Client State",
                         }),
                     }),
-                    (0, n.jsx)(m.P3F, {
+                    (0, a.jsx)(m.P3F, {
                         className: i()(G.paneOption, "logging" === e && G.activePaneOption),
                         onClick: () => t("logging"),
-                        children: (0, n.jsx)(m.Text, {
+                        children: (0, a.jsx)(m.Text, {
                             variant: "text-md/medium",
                             color: "currentColor",
                             children: "Logging",
@@ -1414,8 +1414,8 @@ function ej() {
                     }),
                 ],
             }),
-            "state" === e && (0, n.jsx)(ef, {}),
-            "logging" === e && (0, n.jsx)(eb, {}),
+            "state" === e && (0, a.jsx)(eb, {}),
+            "logging" === e && (0, a.jsx)(ev, {}),
         ],
     });
 }

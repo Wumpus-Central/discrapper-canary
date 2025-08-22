@@ -1,40 +1,40 @@
-a.d(t, { Z: () => Z }), a(388685);
-var n = a(951288),
-    r = a(647438),
-    l = a(120356),
-    i = a.n(l),
-    s = a(392711),
-    o = a.n(s),
-    c = a(876215),
-    d = a(126313),
-    u = a(442837),
-    m = a(433517),
-    x = a(481060),
-    h = a(570140),
-    p = a(812206),
-    v = a(835473),
-    b = a(246992),
-    f = a(681619),
-    j = a(810568),
-    g = a(168524),
-    _ = a(77498),
-    y = a(823379),
-    C = a(550532),
-    N = a(71585),
-    O = a(146282),
-    E = a(780106),
-    T = a(650613),
-    S = a(789086),
-    P = a(206583),
-    w = a(680027),
-    I = a(451429);
-let k = [
+n.d(t, { Z: () => Z }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    l = n(120356),
+    i = n.n(l),
+    s = n(392711),
+    o = n.n(s),
+    c = n(876215),
+    d = n(126313),
+    u = n(442837),
+    m = n(433517),
+    x = n(481060),
+    h = n(570140),
+    p = n(812206),
+    f = n(835473),
+    v = n(246992),
+    b = n(681619),
+    j = n(810568),
+    g = n(168524),
+    _ = n(77498),
+    y = n(823379),
+    C = n(550532),
+    N = n(71585),
+    E = n(146282),
+    O = n(780106),
+    T = n(650613),
+    S = n(789086),
+    P = n(206583),
+    w = n(680027),
+    k = n(451429);
+let I = [
     {
         key: "type",
         cellClassName: i()(w.cell, w.cellType),
         render(e) {
             let { type: t } = e;
-            return (0, n.jsx)(x.Text, {
+            return (0, a.jsx)(x.Text, {
                 variant: "text-md/semibold",
                 children: c.s[t],
             });
@@ -45,8 +45,8 @@ let k = [
         cellClassName: i()(w.cell, w.cellCount),
         render(e) {
             let { entries: t } = e;
-            return (0, n.jsx)("div", {
-                children: (0, n.jsx)(x.Text, {
+            return (0, a.jsx)("div", {
+                children: (0, a.jsx)(x.Text, {
                     variant: "text-md/normal",
                     children: t.length,
                 }),
@@ -58,16 +58,16 @@ let k = [
         cellClassName: w.cell,
         render(e) {
             let { type: t } = e;
-            return (0, n.jsx)(R, { type: t });
+            return (0, a.jsx)(R, { type: t });
         },
     },
 ];
 function R(e) {
-    var t, a;
+    var t, n;
     let { type: r } = e,
-        l = (0, u.e7)([O.Z], () => O.Z.getFilters()),
-        i = null != (a = null == l || null == (t = l.types) ? void 0 : t.has(r)) && a;
-    return (0, n.jsx)(x.XZJ, {
+        l = (0, u.e7)([E.Z], () => E.Z.getFilters()),
+        i = null != (n = null == l || null == (t = l.types) ? void 0 : t.has(r)) && n;
+    return (0, a.jsx)(x.XZJ, {
         value: i,
         onClick: function () {
             i
@@ -84,31 +84,31 @@ function R(e) {
 }
 function Z() {
     var e, t;
-    let a = (0, u.e7)([O.Z], () => O.Z.getFeed(P.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
+    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
         i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
-                let a = t[e];
+                let n = t[e];
                 return {
                     key: "".concat(e),
-                    type: a[0].content_type,
-                    entries: a,
+                    type: n[0].content_type,
+                    entries: n,
                 };
             });
-        })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([O.Z], () => {
+        })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
+        c = (0, u.e7)([E.Z], () => {
             var e;
-            return (null == (e = O.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = E.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [R, Z] = r.useState(""),
         D = (0, u.e7)([_.Z, p.Z], () => {
-            var e, t, a;
+            var e, t, n;
             return parseInt(R) > 0
                 ? R
-                : null != (a = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id)
-                  ? a
+                : null != (n = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id)
+                  ? n
                   : null == (t = p.Z.getApplicationByName(R))
                     ? void 0
                     : t.id;
@@ -120,31 +120,31 @@ function Z() {
         }),
         M = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
             .filter((e) => {
-                let [t, a] = e;
-                return a;
+                let [t, n] = e;
+                return n;
             })
             .map((e) => {
                 let [t] = e;
                 return t;
             }),
-        F = (0, v.Z)(M).filter(y.lm),
+        F = (0, f.Z)(M).filter(y.lm),
         U = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
-    return (0, n.jsx)("div", {
-        className: I.panel,
-        children: (0, n.jsxs)(x.zJl, {
+    return (0, a.jsx)("div", {
+        className: k.panel,
+        children: (0, a.jsxs)(x.zJl, {
             className: w.content,
             children: [
-                (0, n.jsxs)(x.hjN, {
+                (0, a.jsxs)(x.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: "Inventory" }),
+                        (0, a.jsx)(x.vwX, { children: "Inventory" }),
                         s.length > 0 &&
-                            (0, n.jsx)(f.Z, {
-                                columns: k,
+                            (0, a.jsx)(b.Z, {
+                                columns: I,
                                 data: s,
                             }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(S.Z, {}),
-                        (0, n.jsx)(x.zxk, {
+                        (0, a.jsx)(x.LZC, { size: 8 }),
+                        (0, a.jsx)(S.Z, {}),
+                        (0, a.jsx)(x.zxk, {
                             variant: "primary",
                             text: "Refresh Now",
                             fullWidth: !0,
@@ -159,10 +159,10 @@ function Z() {
                         }),
                     ],
                 }),
-                (0, n.jsxs)(x.hjN, {
+                (0, a.jsxs)(x.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: "Impression Capping" }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, a.jsx)(x.vwX, { children: "Impression Capping" }),
+                        (0, a.jsx)(x.zxk, {
                             variant: "primary",
                             text: "Clear Impressions",
                             fullWidth: !0,
@@ -170,8 +170,8 @@ function Z() {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS" });
                             },
                         }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, a.jsx)(x.LZC, { size: 8 }),
+                        (0, a.jsx)(x.zxk, {
                             variant: "primary",
                             text: "Log Impressions",
                             fullWidth: !0,
@@ -179,8 +179,8 @@ function Z() {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS" });
                             },
                         }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, a.jsx)(x.LZC, { size: 8 }),
+                        (0, a.jsx)(x.zxk, {
                             variant: "primary",
                             text: l ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
@@ -188,8 +188,8 @@ function Z() {
                                 h.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
                             },
                         }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, a.jsx)(x.LZC, { size: 8 }),
+                        (0, a.jsx)(x.zxk, {
                             variant: "primary",
                             text: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
@@ -200,11 +200,11 @@ function Z() {
                     ],
                 }),
                 !1,
-                (0, n.jsx)(T.Z, {}),
-                (0, n.jsxs)(x.hjN, {
+                (0, a.jsx)(T.Z, {}),
+                (0, a.jsxs)(x.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: "Game Profile" }),
-                        (0, n.jsx)(x.oil, {
+                        (0, a.jsx)(x.vwX, { children: "Game Profile" }),
+                        (0, a.jsx)(x.oil, {
                             placeholder: "App ID or full name",
                             onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
@@ -217,26 +217,26 @@ function Z() {
                                     : void 0,
                             successMessage: null != L ? "Game profile found" : void 0,
                         }),
-                        (0, n.jsx)("ul", {
+                        (0, a.jsx)("ul", {
                             children: F.map((e) =>
-                                (0, n.jsx)(
+                                (0, a.jsx)(
                                     "li",
-                                    { children: (0, n.jsx)(A, { application: e }) },
+                                    { children: (0, a.jsx)(A, { application: e }) },
                                     "follow-game-".concat(e.id),
                                 ),
                             ),
                         }),
                     ],
                 }),
-                (0, n.jsxs)(x.hjN, {
+                (0, a.jsxs)(x.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: "Activity Sharing" }),
-                        (0, n.jsx)(x.Text, {
+                        (0, a.jsx)(x.vwX, { children: "Activity Sharing" }),
+                        (0, a.jsx)(x.Text, {
                             variant: "text-md/normal",
                             children: "Force show game:",
                         }),
-                        (0, n.jsx)(x.PhF, {
-                            options: E.h.map((e) => ({
+                        (0, a.jsx)(x.PhF, {
+                            options: O.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),
@@ -248,7 +248,7 @@ function Z() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: b.O$,
+                            popoutLayerContext: v.O$,
                         }),
                     ],
                 }),
@@ -258,18 +258,18 @@ function Z() {
 }
 let A = (e) => {
     let { application: t } = e,
-        a = (0, g.Z)({
+        n = (0, g.Z)({
             applicationId: t.id,
             location: "DevToolsContentInventory",
             source: j.m1.DevTools,
         });
-    return (0, n.jsx)(x.P3F, {
-        onClick: a,
+    return (0, a.jsx)(x.P3F, {
+        onClick: n,
         style: {
             margin: "2px",
             cursor: "pointer",
         },
-        children: (0, n.jsx)(x.Text, {
+        children: (0, a.jsx)(x.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
             children: t.name,

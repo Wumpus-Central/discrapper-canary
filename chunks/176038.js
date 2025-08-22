@@ -1,50 +1,50 @@
-a.d(t, {
-    _Y: () => E,
+n.d(t, {
+    _Y: () => O,
     aB: () => N,
-    th: () => O,
+    th: () => E,
     ub: () => T,
 }),
-    a(388685),
-    a(457542);
-var n = a(647438),
-    r = a(524437),
-    l = a(809206),
-    i = a(153867),
-    s = a(857595),
-    o = a(607070),
-    c = a(1870),
-    d = a(884697),
-    u = a(164946),
-    m = a(210887),
-    x = a(695346),
-    h = a(675478),
-    p = a(25990),
-    v = a(594174),
-    b = a(74538),
-    f = a(981631),
-    j = a(469115),
-    g = a(959517);
-let _ = [f.BRd.DARK, f.BRd.LIGHT, f.BRd.DARKER, f.BRd.MIDNIGHT],
+    n(388685),
+    n(457542);
+var a = n(647438),
+    r = n(524437),
+    l = n(809206),
+    i = n(153867),
+    s = n(857595),
+    o = n(607070),
+    c = n(1870),
+    d = n(884697),
+    u = n(164946),
+    m = n(210887),
+    x = n(695346),
+    h = n(675478),
+    p = n(25990),
+    f = n(594174),
+    v = n(74538),
+    b = n(981631),
+    j = n(469115),
+    g = n(959517);
+let _ = [b.BRd.DARK, b.BRd.LIGHT, b.BRd.DARKER, b.BRd.MIDNIGHT],
     y = [r.Pi.COMPACT, r.Pi.COZY, r.Pi.DEFAULT];
 function C(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
 async function N() {
     let e = (function () {
-            let e = v.default.getCurrentUser();
-            return b.ZP.canUseClientThemes(e) ? Object.keys(j.qt).map((e) => Number(e)) : [];
+            let e = f.default.getCurrentUser();
+            return v.ZP.canUseClientThemes(e) ? Object.keys(j.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
     try {
         if (t) {
             let t,
-                n = [...e, null],
-                r = C(n);
+                a = [...e, null],
+                r = C(a);
             if (null != r) {
-                var a;
+                var n;
                 let e = j.qt[r];
-                t = null != (a = null == e ? void 0 : e.theme) ? a : f.BRd.DARK;
-            } else t = C([f.BRd.DARK, f.BRd.DARKER, f.BRd.MIDNIGHT]);
+                t = null != (n = null == e ? void 0 : e.theme) ? n : b.BRd.DARK;
+            } else t = C([b.BRd.DARK, b.BRd.DARKER, b.BRd.MIDNIGHT]);
             await i.ZI(
                 {
                     theme: t,
@@ -66,20 +66,20 @@ async function N() {
         }
     } catch (e) {}
 }
-async function O() {
+async function E() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
-        a = (0, d.jT)(e),
-        n = t.length > 0,
-        r = a.length > 0;
-    if (n || r)
+        n = (0, d.jT)(e),
+        a = t.length > 0,
+        r = n.length > 0;
+    if (a || r)
         try {
-            if (n) {
+            if (a) {
                 let e = C([...t, null]);
                 (0, l.cV)(e);
             }
             if (r) {
-                let e = C([...a, null]);
+                let e = C([...n, null]);
                 (0, l.Rx)(e);
             }
             let e = p.Z.getAllPending(),
@@ -87,30 +87,30 @@ async function O() {
             await (0, l.Mn)(i).finally(l.si);
         } catch (e) {}
 }
-function E() {
+function O() {
     try {
-        let e = C(f.yqN.FONT_SIZES);
+        let e = C(b.yqN.FONT_SIZES);
         (0, s.oL)(e);
         let t = C(g.fP);
         (0, s.ZZ)(t);
-        let a = C(y);
-        x.YC.updateSetting(a);
+        let n = C(y);
+        x.YC.updateSetting(n);
     } catch (e) {}
 }
 function T() {
-    n.useEffect(() => {
-        var e, t, a, n, r;
-        let b = v.default.getCurrentUser(),
-            f = x.L1.getSetting(),
+    a.useEffect(() => {
+        var e, t, n, a, r;
+        let v = f.default.getCurrentUser(),
+            b = x.L1.getSetting(),
             j = c.Z.purchases,
             g = (0, d.Ad)(j),
             _ = (0, d.jT)(j),
             y = m.Z.theme,
-            C = f.backgroundGradientPresetId,
-            N = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
-            O = null == b || null == (a = b.collectibles) || null == (t = a.nameplate) ? void 0 : t.skuId,
-            E = null != N && null != (n = g.find((e) => e.skuId === N)) ? n : null,
-            T = null != O && null != (r = _.find((e) => e.skuId === O)) ? r : null,
+            C = b.backgroundGradientPresetId,
+            N = null == v || null == (e = v.avatarDecoration) ? void 0 : e.skuId,
+            E = null == v || null == (n = v.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+            O = null != N && null != (a = g.find((e) => e.skuId === N)) ? a : null,
+            T = null != E && null != (r = _.find((e) => e.skuId === E)) ? r : null,
             S = o.Z.fontSize,
             P = o.Z.messageGroupSpacing,
             w = x.YC.getSetting();
@@ -124,7 +124,7 @@ function T() {
                     },
                     h.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, l.cV)(E),
+                    (0, l.cV)(O),
                     (0, l.Rx)(T);
                 let e = p.Z.getAllPending(),
                     t = (0, u.ED)(e);

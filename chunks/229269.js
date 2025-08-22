@@ -94,7 +94,7 @@ function C() {
     });
 }
 function N() {
-    let [e, t] = i.useState("discord://".concat(location.host, "/feature/open-shop")),
+    let [e, t] = i.useState("discord://".concat(location.host, "/feature/apple-payment-link")),
         n = () => {
             console.log("Opening deep link... ", e),
                 g.Z.launch(e, (e) => {

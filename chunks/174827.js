@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(481060),
     C = n(975608),
     d = n(600164),
-    p = n(711459),
-    c = n(374649),
+    c = n(711459),
+    p = n(374649),
     u = n(347896),
     x = n(717401),
     h = n(572517),
@@ -63,11 +63,11 @@ function F(e) {
         } = (0, P.JL)(),
         { isGift: es, giftRecipient: ea, giftMessage: eo, claimableRewards: eC } = (0, O.wD)(),
         { paymentModalBanner: ed } = (0, w.zb)(),
-        ep = (0, x.a5)(ee),
-        ec = (null == (t = (0, u.Z)()) ? void 0 : t.planSelectionBanner) != null,
-        eu = es && ep && null != eC && eC.length > 0 && ec,
+        ec = (0, x.a5)(ee),
+        ep = (null == (t = (0, u.Z)()) ? void 0 : t.planSelectionBanner) != null,
+        eu = es && ec && null != eC && eC.length > 0 && ep,
         ex = (0, A.m)(Q, X),
-        { newPlans: eh } = p.ZP.useExperiment({ location: "d17fd6_3" }, { autoTrackExposure: !1 }),
+        { newPlans: eh } = c.ZP.useExperiment({ location: "d17fd6_3" }, { autoTrackExposure: !1 }),
         e_ = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         ef =
             !es &&
@@ -77,7 +77,7 @@ function F(e) {
             e_.hasHadPremium() &&
             J &&
             null == q &&
-            (0, p.aQ)(ex),
+            (0, c.aQ)(ex),
         ej = (0, f.N)(V),
         em = !es && null != ej && null != $ && R.nG[ej.trial_id].skus.includes($),
         eL = (0, _.Ng)(),
@@ -104,7 +104,7 @@ function F(e) {
             },
         ],
         [ev, ew] = i.useState(ey),
-        [eM, eI] = (0, c.ED)({
+        [eM, eI] = (0, p.ED)({
             items: eP,
             renewal: !1,
             preventFetch: !ey,

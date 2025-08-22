@@ -1,46 +1,46 @@
-a.d(t, { Z: () => x }), a(388685);
-var n = a(951288),
-    r = a(647438),
-    l = a(481060),
-    i = a(570140),
-    s = a(750180),
-    o = a(358820),
-    c = a(585483),
-    d = a(981631),
-    u = a(451429),
-    m = a(877600);
+n.d(t, { Z: () => x }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    l = n(481060),
+    i = n(570140),
+    s = n(750180),
+    o = n(358820),
+    c = n(585483),
+    d = n(981631),
+    u = n(451429),
+    m = n(877600);
 function x() {
     let [e, t] = r.useState(30),
-        a = r.useCallback(() => {
+        n = r.useCallback(() => {
             i.Z.dispatch({
                 type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE",
                 state: s.O.LOADING,
             });
         }, []);
-    return (0, n.jsx)(l.zJl, {
+    return (0, a.jsx)(l.zJl, {
         className: u.panel,
-        children: (0, n.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
             className: m.panelInner,
             children: [
-                (0, n.jsx)(l.Text, {
+                (0, a.jsx)(l.Text, {
                     className: m.panelHeader,
                     variant: "text-lg/bold",
                     children: "Voice Filters",
                 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: m.panelRow,
                     children: [
-                        (0, n.jsx)(l.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children: "Set number of seconds remaining in countdown",
                         }),
-                        (0, n.jsx)(l.oil, {
+                        (0, a.jsx)(l.oil, {
                             defaultValue: 30,
                             onChange: (e) => {
                                 t(parseInt(e));
                             },
                         }),
-                        (0, n.jsx)(l.zxk, {
+                        (0, a.jsx)(l.zxk, {
                             variant: "primary",
                             size: "sm",
                             text: "Set",
@@ -52,14 +52,14 @@ function x() {
                         }),
                     ],
                 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: m.panelRow,
                     children: [
-                        (0, n.jsx)(l.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children: "Reset to API values",
                         }),
-                        (0, n.jsx)(l.zxk, {
+                        (0, a.jsx)(l.zxk, {
                             variant: "primary",
                             size: "sm",
                             text: "Reset",
@@ -69,25 +69,25 @@ function x() {
                         }),
                     ],
                 }),
-                (0, n.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: m.panelRow,
                     children: [
-                        (0, n.jsx)(l.Text, {
+                        (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             children:
                                 "Pretend the native module is loading so when you close your app it'll look as if it crashed on load",
                         }),
-                        (0, n.jsx)(l.zxk, {
+                        (0, a.jsx)(l.zxk, {
                             variant: "primary",
                             size: "sm",
                             text: "Pretend",
-                            onClick: a,
+                            onClick: n,
                         }),
                     ],
                 }),
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                     className: m.panelRow,
-                    children: (0, n.jsx)(l.zxk, {
+                    children: (0, a.jsx)(l.zxk, {
                         variant: "primary",
                         size: "sm",
                         text: "Open voice filters panel",

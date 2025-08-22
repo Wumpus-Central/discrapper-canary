@@ -8,21 +8,21 @@ var i = n(780384),
     o = n(51144),
     C = n(105759),
     d = n(898969),
-    p = n(703614),
-    c = n(268685),
+    c = n(703614),
+    p = n(268685),
     u = n(388032),
     x = n(908780);
 let h = () => {
     let e = (0, C.Z)(),
         { avatarSrc: t, eventHandlers: n } = (0, a.Z)({
             userId: null == e ? void 0 : e.id,
-            size: c.EF.SIZE_32,
+            size: p.EF.SIZE_32,
             animateOnHover: !0,
         }),
         h = (0, s.Fg)(),
         _ = (0, i.ap)(h),
         f = o.ZP.getName(e),
-        j = _ ? d.Z : p.Z;
+        j = _ ? d.Z : c.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
@@ -60,7 +60,7 @@ let h = () => {
                               {
                                   src: t,
                                   "aria-label": e.username,
-                                  size: c.EF.SIZE_32,
+                                  size: p.EF.SIZE_32,
                               },
                               n,
                           ),

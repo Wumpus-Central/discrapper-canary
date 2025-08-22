@@ -83,7 +83,7 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let y = "MMM D, YYYY";
+let y = "ll";
 function O(e) {
     let { value: t, onSelect: n, dateFormat: a = y, minDate: p, maxDate: m, disabled: b = !1 } = e,
         O = i.useRef(null);

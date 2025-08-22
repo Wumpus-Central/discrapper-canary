@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(481060),
@@ -9,21 +9,21 @@ var r = n(951288),
     u = n(981631),
     d = n(388032),
     g = n(535333);
-function f(e) {
+function p(e) {
     let { handleTransition: t, selectedTab: n } = e,
-        { searchQuery: f, onSetSearchQuery: p } = (0, o.S)(),
+        { searchQuery: p, onSetSearchQuery: f } = (0, o.S)(),
         [m, _] = l.useState(""),
         h = (0, i.sp)();
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
-                p(m);
+                f(m);
             }, 250);
             return () => clearTimeout(e);
-        }, [m, p]),
+        }, [m, f]),
         l.useEffect(() => {
-            _(f);
-        }, [f]),
+            _(p);
+        }, [p]),
         (0, r.jsx)(a.P3F, {
             ignoreKeyPress: !0,
             onClick: () => {
@@ -42,7 +42,7 @@ function f(e) {
                 size: "sm",
                 className: g.searchBar,
                 onKeyDown: (e) => {
-                    "Enter" === e.key && p(m);
+                    "Enter" === e.key && f(m);
                 },
                 query: m,
                 onChange: _,

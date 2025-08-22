@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(597688),
     d = n(1870),
     g = n(870289),
-    f = n(149705),
-    p = n(929255),
+    p = n(149705),
+    f = n(929255),
     m = n(752053),
     _ = n(81136),
     h = n(566564),
@@ -41,7 +41,7 @@ function S(e) {
             [n, x, c, d],
         ),
         j = (0, g.FF)("CollectiblesContent"),
-        { searchError: k } = (0, f.a)();
+        { searchError: k } = (0, p.a)();
     return j && null != k
         ? (0, r.jsx)(b.Z, {})
         : null != S
@@ -57,7 +57,7 @@ function S(e) {
                   tab: t,
                   transitionState: u,
               })
-            : (0, r.jsx)(p.Z, {
+            : (0, r.jsx)(f.Z, {
                   isFullScreen: n,
                   tab: t,
                   sortedCategories: o,

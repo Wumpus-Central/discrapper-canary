@@ -1,14 +1,14 @@
-a.d(t, { Z: () => h });
-var n = a(951288),
-    r = a(647438),
-    l = a(120356),
-    i = a.n(l),
-    s = a(524437),
-    o = a(481060),
-    c = a(695346),
-    d = a(246992),
-    u = a(451429),
-    m = a(441900);
+n.d(t, { Z: () => h });
+var a = n(951288),
+    r = n(647438),
+    l = n(120356),
+    i = n.n(l),
+    s = n(524437),
+    o = n(481060),
+    c = n(695346),
+    d = n(246992),
+    u = n(451429),
+    m = n(441900);
 let x = [
     {
         label: "Unset",
@@ -30,15 +30,15 @@ let x = [
 function h() {
     let e = r.useRef(null),
         t = c.JG.useSetting();
-    return (0, n.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         ref: e,
         className: i()(u.panel, m.panel),
         children: [
-            (0, n.jsx)(o.Text, {
+            (0, a.jsx)(o.Text, {
                 variant: "text-md/normal",
                 children: "Receive DMs In Game",
             }),
-            (0, n.jsx)(o.PhF, {
+            (0, a.jsx)(o.PhF, {
                 options: x,
                 isSelected: (e) => e === t,
                 select: c.JG.updateSetting,

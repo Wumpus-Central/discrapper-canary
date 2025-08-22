@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(605236),
     C = n(347896),
     d = n(717401),
-    p = n(317269),
-    c = n(669079),
+    c = n(317269),
+    p = n(669079),
     u = n(296848),
     x = n(987209),
     h = n(563132),
@@ -66,7 +66,7 @@ function b(e) {
     }, [n, b]);
     return (
         i.useEffect(() => {
-            !B || null == U || null == R || N || H || (0, c.pO)(U) || F({ onSubscriptionConfirmation: b });
+            !B || null == U || null == R || N || H || (0, p.pO)(U) || F({ onSubscriptionConfirmation: b });
         }, [F, B, U, R, N, H, b]),
         i.useEffect(() => {
             null != V &&
@@ -80,14 +80,14 @@ function b(e) {
             null != y
                 ? y(M, Q, A)
                 : null != O
-                  ? (0, r.jsx)(p.VY, {})
+                  ? (0, r.jsx)(c.VY, {})
                   : B
-                    ? (0, r.jsx)(p.TB, {
+                    ? (0, r.jsx)(c.TB, {
                           planId: M.id,
                           onClose: Q,
                       })
                     : k.current === M.id
-                      ? (0, r.jsx)(p.ZP, {
+                      ? (0, r.jsx)(c.ZP, {
                             planId: M.id,
                             postSuccessGuild: S,
                             onClose: Q,
@@ -95,7 +95,7 @@ function b(e) {
                             hideClose: z,
                             startingFractionalPremiumEndsAt: T.current,
                         })
-                      : (0, r.jsx)(p.ZP, {
+                      : (0, r.jsx)(c.ZP, {
                             followupSKUInfo: E,
                             startingPremiumSubscriptionPlanId: k.current,
                             planId: M.id,

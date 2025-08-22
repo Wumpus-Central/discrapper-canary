@@ -2050,12 +2050,13 @@ let eE = "@me",
         VERIFY_HUB_EMAIL: "/verify-hub-email",
         OPEN_APP_FROM_EMAIL: "/open-app-from-email",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
-        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r) =>
+        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i) =>
             "/billing/premium/subscribe?plan_id="
                 .concat(e, "&gift=")
                 .concat(t, "&load_id=")
                 .concat(n)
-                .concat(r ? "&payment_method_type=".concat(r) : ""),
+                .concat(null != r ? "&payment_method_type=".concat(r) : "")
+                .concat(null != i ? "&deep_link_type=".concat(i) : ""),
         GUILD_BOOSTING_MARKETING: (e) => "/guilds/".concat(e, "/premium-guild-subscriptions"),
         GUILD_SETTINGS: (e, t, n) => {
             let r = "/guilds/".concat(e, "/settings").concat(null != t ? "/".concat(t) : "");
@@ -3225,6 +3226,7 @@ var tB = (function (e) {
             (e.ACK_WINDOW_FOCUS = "Ack - Window Focus"),
             (e.ACK_CHANNEL_SECTION_STORE_UPDATE = "Ack - Channel Section Store Update"),
             (e.ACK_VOICE_CHANNEL_SELECT = "Ack - Voice Channel Select"),
+            (e.ACK_APP_FOREGROUND = "Ack - App Foreground"),
             (e.ENABLE_AUTOMATIC_ACK = "Enable Automatic Ack"),
             e
         );
@@ -5187,6 +5189,14 @@ var nb = (function (e) {
             (e.NITRO_PRIVATE_BROWSING_SURVEY_RESPONDED = "nitro_privatebrowsing_surveyresponded"),
             (e.EMOJI_STUDIO_ENDED = "emoji_studio_ended"),
             (e.PASSWORD_RESET_ACTION = "password_reset_action"),
+            (e.GUILD_CHANNEL_RESYNC_REQUESTED = "guild_channel_resync_requested"),
+            (e.GUILD_CHANNEL_RESYNC_EXECUTED = "guild_channel_resync_executed"),
+            (e.GUILD_CHANNEL_RESYNC_COMPLETED = "guild_channel_resync_completed"),
+            (e.GUILD_CHANNEL_RESYNC_FAILED = "guild_channel_resync_failed"),
+            (e.GUILD_CHANNEL_INTEGRITY_CHECK_REQUESTED = "guild_channel_integrity_check_requested"),
+            (e.GUILD_CHANNEL_INTEGRITY_CHECK_EXECUTED = "guild_channel_integrity_check_executed"),
+            (e.GUILD_CHANNEL_INTEGRITY_CHECK_COMPLETED = "guild_channel_integrity_check_completed"),
+            (e.GUILD_CHANNEL_INTEGRITY_CHECK_FAILED = "guild_channel_integrity_check_failed"),
             e
         );
     })({}),

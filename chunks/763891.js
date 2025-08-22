@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(594174),
     d = n(626135),
     g = n(381585),
-    f = n(597688),
-    p = n(370039),
+    p = n(597688),
+    f = n(370039),
     m = n(937510),
     _ = n(303952),
     h = n(38900),
@@ -35,7 +35,7 @@ function N(e) {
         Z = null != (t = null == R ? void 0 : R.sessionId) ? t : "",
         { noCache: w, includeUnpublished: F } = (0, C.Z)(),
         D = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        M = (0, s.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
+        M = (0, s.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [H, W] = l.useState(1),
         U = (0, c.Fg)(),
         V = (0, i.ap)(U),
@@ -51,7 +51,7 @@ function N(e) {
                     return [O.intl.string(O.t.FYFppq), V ? y.Z : x.Z, a.Z.BUNDLE];
             }
         }, [A, V]),
-        K = (0, p.a)(),
+        K = (0, f.a)(),
         Y = l.useMemo(
             () =>
                 K(
@@ -103,7 +103,7 @@ function N(e) {
                   (0, r.jsx)("div", {
                       className: v.products,
                       children: X.slice(40 * (H - 1), 40 * H).map((e, t) => {
-                          let n = f.Z.getCategory(e.categorySkuId);
+                          let n = p.Z.getCategory(e.categorySkuId);
                           return null == n
                               ? null
                               : (0, r.jsx)(

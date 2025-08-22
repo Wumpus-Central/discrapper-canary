@@ -1,16 +1,17 @@
 n.r(t),
     n.d(t, {
-        CaptchaCancelError: () => c,
-        CaptchaError: () => o,
-        emitCaptchaDistributionMetric: () => a,
-        extractCaptchaPropsFromResponse: () => s,
+        CaptchaCancelError: () => l,
+        CaptchaError: () => a,
+        emitCaptchaDistributionMetric: () => s,
+        extractCaptchaPropsFromResponse: () => o,
     }),
     n(415506);
-var r,
-    i = n(644947),
-    l = n(234888),
-    o = (((r = {}).CANCEL = "cancel"), (r.ERROR = "error"), (r.EXPIRED = "expired"), r);
-function s(e) {
+var r = n(644947),
+    i = n(234888),
+    a = (function (e) {
+        return (e.CANCEL = "cancel"), (e.ERROR = "error"), (e.EXPIRED = "expired"), e;
+    })({});
+function o(e) {
     var t;
     return {
         captchaService: e.captcha_service,
@@ -24,10 +25,10 @@ function s(e) {
         },
     };
 }
-function a(e) {
-    (0, i._8)() && setTimeout(() => (0, i.Zq)(), l.i), (0, i.s$)(e);
+function s(e) {
+    (0, r._8)() && setTimeout(() => (0, r.Zq)(), i.i), (0, r.s$)(e);
 }
-class c extends Error {
+class l extends Error {
     constructor() {
         super("Captcha cancelled");
     }

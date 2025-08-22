@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     Ex: () => eR,
-    ZP: () => t0,
+    ZP: () => t1,
 }),
     n(388685),
     n(415506),
@@ -16,8 +16,9 @@ var i,
     u = n(846519),
     d = n(283693),
     f = n(570140),
-    _ = n(317381),
-    p = n(358221),
+    _ = n(317381);
+n(15624);
+var p = n(358221),
     h = n(702321),
     m = n(430198),
     g = n(710845),
@@ -1103,7 +1104,7 @@ function eJ(e) {
     N.Z.hasLoaded(n.guild_id) &&
         G.default
             .keys(N.Z.getThreadsForParent(n.guild_id, r))
-            .every((e) => t$.hasOpenedThread(e) || 0 > G.default.compare(e, i.ackMessageId)) &&
+            .every((e) => t0.hasOpenedThread(e) || 0 > G.default.compare(e, i.ackMessageId)) &&
         i.ack({
             trackAnalytics: !0,
             location: {
@@ -1752,7 +1753,7 @@ function tF(e, t, n) {
 function tH(e) {
     let { channels: t, context: n, onFinished: r } = e;
     tF(
-        t.filter((e) => null != e.messageId && t$.hasUnreadOrMentions(e.channelId, e.readStateType)),
+        t.filter((e) => null != e.messageId && t0.hasUnreadOrMentions(e.channelId, e.readStateType)),
         n,
         r,
     );
@@ -1819,7 +1820,21 @@ function tQ(e) {
     if (null == r.ackMessageId) return !1;
     r.ackMessageId = void 0;
 }
-class tJ extends (i = l.ZP.Store) {
+function tJ(e) {
+    let { state: t } = e;
+    return (
+        t === ee.$7l.ACTIVE &&
+        eQ(
+            {
+                section: ee.jXE.CHANNEL,
+                object: ee.qAy.ACK_APP_FOREGROUND,
+                objectType: ee.Qqv.ACK_AUTOMATIC,
+            },
+            X.Z.getChannelId(),
+        )
+    );
+}
+class t$ extends (i = l.ZP.Store) {
     initialize() {
         let e = [
             F.Z,
@@ -1989,8 +2004,8 @@ class tJ extends (i = l.ZP.Store) {
         return ey.getAllChannelIdsForWindowId(e);
     }
 }
-eo(tJ, "displayName", "ReadStateStore");
-let t$ = new tJ(f.Z, {
+eo(t$, "displayName", "ReadStateStore");
+let t0 = new t$(f.Z, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: tq,
         CONNECTION_OPEN: e$,
         CONNECTION_OPEN_SUPPLEMENTAL: e4,
@@ -2046,5 +2061,6 @@ let t$ = new tJ(f.Z, {
         TRY_ACK: tz,
         MESSAGE_REQUEST_ACK: tX,
         MESSAGE_REQUEST_CLEAR_ACK: tQ,
+        APP_STATE_UPDATE: tJ,
     }),
-    t0 = t$;
+    t1 = t0;

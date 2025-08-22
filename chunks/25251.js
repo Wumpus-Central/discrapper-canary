@@ -1,9 +1,9 @@
-let r;
-n.d(t, { Z: () => A });
-var i,
-    a = n(392711),
-    o = n(442837),
-    s = n(570140),
+n.d(t, { Z: () => D });
+var r,
+    i = n(392711),
+    a = n(442837),
+    o = n(570140),
+    s = n(212161),
     l = n(70956);
 function c(e, t, n) {
     return (
@@ -18,63 +18,119 @@ function c(e, t, n) {
         e
     );
 }
-let u = [],
-    d = {},
-    f = u,
-    _ = d,
-    p = null,
-    h = l.Z.Millis.MINUTE,
-    m = l.Z.Millis.HOUR,
-    g = !1,
-    E = 0,
-    b = 0,
+let u = {},
+    d = l.Z.Millis.MINUTE,
+    f = l.Z.Millis.HOUR,
+    _ = !1,
+    p = 0,
+    h = 0,
+    m = (e) => Math.min(d * 2 ** e, f),
+    g = (e) => !(0, i.isEqual)(u[e.id], e) && ((u[e.id] = e), !0),
+    E = (e) => {
+        let t = !1;
+        return (
+            e.items.forEach((n) => {
+                (0, s.H)(n) &&
+                    g({
+                        id: n.id,
+                        skuId: e.skuId,
+                        config: n,
+                    }) &&
+                    (t = !0);
+            }),
+            t
+        );
+    },
+    b = (e) => {
+        let t = !1;
+        return (
+            e.forEach((e) => {
+                e.products.forEach((e) => {
+                    E(e) && (t = !0);
+                });
+            }),
+            t
+        );
+    },
     y = (e) => {
-        g = !0;
+        let t = !1;
+        return (
+            e.forEach((e) => {
+                E(e) && (t = !0);
+            }),
+            t
+        );
     },
     O = (e) => {
-        let { presets: t } = e;
-        0 === t.length ? ((f = u), (_ = d)) : ((f = (0, a.cloneDeep)(t)), (_ = (0, a.keyBy)(f, "id"))),
-            (E = 1 / 0),
-            (b = 0),
-            (r = void 0),
-            (g = !1);
+        _ = !0;
     },
     v = (e) => {
-        let { error: t } = e;
-        (f = u), (_ = d), (E = Date.now() + Math.min(h * 2 ** b, m)), (b += 1), (r = t), (g = !1);
+        let { configs: t } = e;
+        t.forEach((e) => {
+            g({
+                id: e.id,
+                skuId: e.skuId,
+                config: e,
+            });
+        }),
+            (p = 1 / 0),
+            (h = 0),
+            (_ = !1);
     },
     I = (e) => {
-        let { id: t } = e;
-        p = t;
+        (p = Date.now() + m(h)), (h += 1), (_ = !1);
     },
     T = (e) => {
-        (f = u), (_ = d), (p = null), (g = !1), (r = void 0), (E = 0), (b = 0);
+        let { product: t } = e;
+        return E(t);
+    },
+    S = (e) => {
+        let { categories: t } = e;
+        return b(t);
+    },
+    A = (e) => {
+        let { categories: t } = e;
+        return b(t.categories);
+    },
+    C = (e) => {
+        let { shopHome: t } = e;
+        return b(t.categories);
+    },
+    N = (e) => {
+        let { purchases: t } = e;
+        return y(t);
+    },
+    R = (e) => {
+        let { purchases: t } = e;
+        return null != t && y(t);
+    },
+    P = (e) => {
+        (u = {}), (_ = !1), (p = 0), (h = 0);
     };
-class S extends (i = o.ZP.Store) {
-    get isFetchingAll() {
-        return g;
-    }
-    get fetchError() {
-        return r;
-    }
-    get profileEffects() {
-        return f;
-    }
-    get tryItOutId() {
-        return p;
-    }
-    canFetch() {
-        return Date.now() >= E;
+class w extends (r = a.ZP.Store) {
+    getAllProfileEffects() {
+        return Object.values(u);
     }
     getProfileEffectById(e) {
-        return null != e ? _[e] : void 0;
+        return null != e ? u[e] : void 0;
+    }
+    get isFetchingAll() {
+        return _;
+    }
+    canFetchAll() {
+        return Date.now() >= p;
     }
 }
-c(S, "displayName", "ProfileEffectStore");
-let A = new S(s.Z, {
-    PROFILE_EFFECTS_FETCH_ALL: y,
-    PROFILE_EFFECTS_FETCH_ALL_SUCCESS: O,
-    PROFILE_EFFECTS_FETCH_ALL_FAILURE: v,
-    PROFILE_EFFECTS_SET_TRY_IT_OUT: I,
-    LOGOUT: T,
+c(w, "displayName", "ProfileEffectStore");
+let D = new w(o.Z, {
+    PROFILE_EFFECTS_FETCH_ALL: O,
+    PROFILE_EFFECTS_FETCH_ALL_SUCCESS: v,
+    PROFILE_EFFECTS_FETCH_ALL_FAILURE: I,
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: T,
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: S,
+    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: A,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: C,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: N,
+    COLLECTIBLES_CLAIM_SUCCESS: R,
+    LOGOUT: P,
 });

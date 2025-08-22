@@ -120,7 +120,7 @@ function b(e) {
     interceptResponse(e, t, r) {
         var i, a, c, u, d;
         return 400 === e.statusCode && (null == (i = e.body) ? void 0 : i.captcha_key)
-            ? (Promise.all([n.e("36514").then(n.bind(n, 475271)), n.e("31177").then(n.bind(n, 353250))])
+            ? (Promise.all([n.e("36514").then(n.bind(n, 475271)), Promise.resolve().then(n.bind(n, 353250))])
                   .then((t) => {
                       let [{ default: n }, { extractCaptchaPropsFromResponse: r }] = t;
                       return n.showCaptchaAsync(r(e.body));

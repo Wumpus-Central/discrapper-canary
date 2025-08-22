@@ -84,6 +84,8 @@ var d = (function (e) {
             (e.INTEL_DIRECT_3D = "intel_direct_3d"),
             (e.VP8_LIBVPX = "vp8_libvpx"),
             (e.EXYNOS = "exynos"),
+            (e.QUALCOMM = "qualcomm"),
+            (e.MEDIATEK = "mediatek"),
             (e.UNCATEGORIZED = "uncategorized"),
             (e.UNKNOWN = "unknown"),
             e
@@ -98,6 +100,8 @@ var d = (function (e) {
             (e.DAV1D = "dav1d"),
             (e.WEBRTC = "WebRTC"),
             (e.EXYNOS = "exynos"),
+            (e.QUALCOMM = "qualcomm"),
+            (e.MEDIATEK = "mediatek"),
             (e.UNCATEGORIZED = "uncategorized"),
             (e.UNKNOWN = "unknown"),
             e
@@ -109,19 +113,29 @@ let p = Object.freeze({
         "amd: direct3d": "amd_direct_3d",
         "intel: direct3d": "intel_direct_3d",
         intel: "intel",
-        VideoToolbox: "videotoolbox",
-        OpenH264: "openh264",
+        videotoolbox: "videotoolbox",
+        openh264: "openh264",
         libvpx: "vp8_libvpx",
         "c2.exynos": "exynos",
+        "omx.exynos": "exynos",
+        "c2.qti": "qualcomm",
+        "omx.qcom": "qualcomm",
+        "c2.mtk": "mediatek",
+        "omx.mtk": "mediatek",
     }),
     h = Object.freeze({
-        VideoToolbox: "videotoolbox",
+        videotoolbox: "videotoolbox",
         libvpx: "vp8_libvpx",
         electron: "electron",
         ffmpeg: "ffmpeg",
         dav1d: "dav1d",
-        WebRTC: "WebRTC",
+        webrtc: "WebRTC",
         "c2.exynos": "exynos",
+        "omx.exynos": "exynos",
+        "c2.qti": "qualcomm",
+        "omx.qcom": "qualcomm",
+        "c2.mtk": "mediatek",
+        "omx.mtk": "mediatek",
     });
 var m = (function (e) {
     return (
@@ -133,12 +147,12 @@ var m = (function (e) {
 })({});
 function g(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(p)) if (e.includes(t)) return p[t];
+    for (let t of Object.keys(p)) if (e.toLowerCase().includes(t)) return p[t];
     return "uncategorized";
 }
 function E(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(h)) if (e.includes(t)) return h[t];
+    for (let t of Object.keys(h)) if (e.toLowerCase().includes(t)) return h[t];
     return "uncategorized";
 }
 function b(e) {

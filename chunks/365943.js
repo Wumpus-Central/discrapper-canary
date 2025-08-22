@@ -1,4 +1,4 @@
-n.d(t, { t: () => m });
+n.d(t, { t: () => p });
 var r = n(544891),
     i = n(570140),
     a = n(479531),
@@ -35,33 +35,10 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +46,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,35 +55,31 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = (e) => {
-        var { sku_id: t } = e,
-            n = _(e, ["sku_id"]);
-        return {
-            id: n.id,
-            skuId: t,
-            config: f(u({}, n), { skuId: t }),
-        };
+let _ = (e) => {
+        var { sku_id: t } = e;
+        return u({ skuId: t }, d(e, ["sku_id"]));
     },
-    m = async function () {
+    p = async function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!s.Z.isFetchingAll && (e || s.Z.canFetch())) {
+        if (!s.Z.isFetchingAll && (e || s.Z.canFetchAll())) {
             i.Z.dispatch({ type: "PROFILE_EFFECTS_FETCH_ALL" });
             try {
+                var t, n;
                 let { body: e } = await r.tn.get({
-                        url: l.ANM.USER_PROFILE_EFFECTS,
-                        rejectWithError: !1,
-                    }),
-                    t = (null == e ? void 0 : e.profile_effect_configs).map(h);
+                    url: l.ANM.USER_PROFILE_EFFECTS,
+                    rejectWithError: !0,
+                });
                 i.Z.dispatch({
                     type: "PROFILE_EFFECTS_FETCH_ALL_SUCCESS",
-                    presets: t,
+                    configs:
+                        null != (n = null == e || null == (t = e.profile_effect_configs) ? void 0 : t.map(_)) ? n : [],
                 });
             } catch (t) {
                 let e = new a.Z(t);
                 (0, o.G)(e),
                     i.Z.dispatch({
                         type: "PROFILE_EFFECTS_FETCH_ALL_FAILURE",
-                        error: e,
+                        apiError: e,
                     });
             }
         }
