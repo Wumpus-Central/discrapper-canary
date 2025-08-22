@@ -1,4 +1,4 @@
-r.d(t, { Z: () => g }), r(388685);
+r.d(t, { Z: () => b }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(481060),
@@ -9,10 +9,10 @@ var n = r(951288),
     u = r(978369),
     d = r(286957),
     f = r(388032),
-    b = r(44258);
-function g(e) {
+    g = r(44258);
+function b(e) {
     let { tags: t, isCurrentUser: r, widgetType: l, applicationId: a, disableInteraction: c = !1 } = e,
-        g = null == t ? void 0 : t.filter((e) => null != (0, d.zK)(e)),
+        b = null == t ? void 0 : t.filter((e) => null != (0, d.zK)(e)),
         y = (0, i.useRef)(new Map()),
         v = (0, i.useRef)(null),
         x = (0, i.useRef)(null),
@@ -20,7 +20,7 @@ function g(e) {
         [w, S] = (0, i.useState)(!1),
         { trackUserProfileAction: E } = (0, o.KZ)(),
         I = r && !c && (0, s.M8)(l),
-        _ = j(v, x, g, y, P);
+        _ = j(v, x, b, y, P);
     if (
         ((0, i.useEffect)(
             () => (
@@ -30,13 +30,13 @@ function g(e) {
                     window.removeEventListener("resize", _);
                 }
             ),
-            [_, null == g ? void 0 : g.join("")],
+            [_, null == b ? void 0 : b.join("")],
         ),
-        null == g || 0 === g.length)
+        null == b || 0 === b.length)
     )
         return I
             ? (0, n.jsx)("div", {
-                  className: b.tagListContainer,
+                  className: g.tagListContainer,
                   children: (0, n.jsx)(u.Z, {
                       tags: t,
                       widgetType: l,
@@ -45,12 +45,12 @@ function g(e) {
                   }),
               })
             : null;
-    let T = w ? g : g.slice(0, g.length - h);
+    let T = w ? b : b.slice(0, b.length - h);
     return (0, n.jsxs)("div", {
-        className: b.tagListContainer,
+        className: g.tagListContainer,
         children: [
             (0, n.jsx)("ul", {
-                className: b.tagList,
+                className: g.tagList,
                 "aria-label": f.intl.string(f.t.EfjTi4),
                 children: T.map((e) =>
                     (0, n.jsx)(
@@ -97,14 +97,14 @@ function g(e) {
 }
 let p = (e) => {
         let { tag: t, isCurrentUser: r, applicationId: i, widgetType: a, disableInteraction: o, ref: u } = e,
-            g = (0, d.zK)(t);
-        if (null == g) return null;
-        let { getText: p, icon: O } = g,
+            b = (0, d.zK)(t);
+        if (null == b) return null;
+        let { getText: p, icon: O } = b,
             m = () => {
                 (0, s.RZ)(a, i, t), (0, c.pQ)({ action: "REMOVE_GAME_TAGS" });
             };
         return (0, n.jsxs)("li", {
-            className: b.tag,
+            className: g.tag,
             ref: u,
             children: [
                 (0, n.jsx)(O, { size: "xxs" }),
@@ -149,7 +149,7 @@ let p = (e) => {
                                 (r = r =
                                     {
                                         onClick: m,
-                                        className: b.removeButton,
+                                        className: g.removeButton,
                                         "aria-label": f.intl.formatToPlainString(f.t.GCn1nZ, { tag: p() }),
                                         children: (0, n.jsx)(l.Dio, { size: "xxs" }),
                                     }),
@@ -176,7 +176,7 @@ let p = (e) => {
         let { numHidden: t, onClick: r, disableInteraction: i, ref: a } = e;
         return i
             ? (0, n.jsx)("div", {
-                  className: b.expandButton,
+                  className: g.expandButton,
                   children: (0, n.jsx)(l.Text, {
                       variant: "text-xxs/medium",
                       color: "text-secondary",
@@ -184,11 +184,11 @@ let p = (e) => {
                   }),
               })
             : (0, n.jsx)(l.DY3, {
-                  className: b.buttonContainer,
+                  className: g.buttonContainer,
                   text: f.intl.string(f.t.mriLXF),
                   children: (0, n.jsx)(l.P3F, {
                       onClick: r,
-                      className: b.expandButton,
+                      className: g.expandButton,
                       innerRef: a,
                       "aria-label": f.intl.string(f.t.mriLXF),
                       children: (0, n.jsx)(l.Text, {
@@ -202,17 +202,17 @@ let p = (e) => {
     m = (e) => {
         let { onClick: t } = e;
         return (0, n.jsx)(l.DY3, {
-            className: b.buttonContainer,
+            className: g.buttonContainer,
             text: f.intl.string(f.t.z9VPra),
             children: (0, n.jsx)(l.P3F, {
                 onClick: t,
-                className: b.collapseButton,
+                className: g.collapseButton,
                 "aria-label": f.intl.string(f.t.z9VPra),
                 children: (0, n.jsx)(a.Z, {
                     direction: a.Z.Directions.LEFT,
                     width: 12,
                     height: 12,
-                    className: b.caret,
+                    className: g.caret,
                 }),
             }),
         });
@@ -225,20 +225,20 @@ let p = (e) => {
                 u = null != (c = null == (a = t.current) ? void 0 : a.getBoundingClientRect().width) ? c : 0,
                 d = u > 0 ? 8 : 4,
                 f = 0,
-                b = 0,
-                g = n.current;
+                g = 0,
+                b = n.current;
             for (let e = 0; e < r.length; e++) {
-                let t = g.get(r[e]);
+                let t = b.get(r[e]);
                 if (null != t) {
-                    if ((b += t.offsetWidth + 4) > 296) break;
+                    if ((g += t.offsetWidth + 4) > 296) break;
                     f++;
                 }
             }
-            b = 0;
+            g = 0;
             for (let e = f; e < r.length; e++) {
-                let t = g.get(r[e]);
+                let t = b.get(r[e]);
                 if (null != t) {
-                    if ((b += t.offsetWidth + 4) > 296 - s - u - d) break;
+                    if ((g += t.offsetWidth + 4) > 296 - s - u - d) break;
                     f++;
                 }
             }

@@ -9,8 +9,8 @@ var n = r(951288),
     u = r(86419),
     d = r(872269),
     f = r(248554),
-    b = r(228168),
-    g = r(247397),
+    g = r(228168),
+    b = r(247397),
     p = r(388032),
     O = r(229870);
 let m = {
@@ -48,7 +48,7 @@ function j(e) {
         { placeholder: s, getAriaLabel: j } = m[t],
         y = "small" === l,
         v = i.useCallback(() => {
-            o || ((0, u.qH)(t), (0, d.L$)(b.qb.WIDGET_ADDED), null == r || r());
+            o || ((0, u.qH)(t), (0, d.L$)(g.qb.WIDGET_ADDED), null == r || r());
         }, [t, r, o]);
     return (0, n.jsxs)(c.P3F, {
         className: a()(O.addButtonContainer, y && O.sizeSmall, o && O.loading),
@@ -76,7 +76,7 @@ function j(e) {
                     (0, n.jsx)(c.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: p.intl.string(g.NP[t]),
+                        children: p.intl.string(b.NP[t]),
                     }),
                 ],
             }),

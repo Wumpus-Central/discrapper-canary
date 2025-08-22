@@ -16,15 +16,15 @@ function u(e) {
     var t, r;
     let { bump: i, bumpMultiple: a, gameIds: o } = (0, c.b)(),
         { remove: u, peekedGameIds: d } = (0, c.b)(),
-        { gameDataMap: f, isGameFetching: b } = (0, s.F)(null != (t = d[e]) ? t : []);
+        { gameDataMap: f, isGameFetching: g } = (0, s.F)(null != (t = d[e]) ? t : []);
     n.useEffect(() => {
         var t;
         for (let r of null != (t = d[e]) ? t : []) {
             let t = f[r];
-            (null == t ? void 0 : t.coverImageUrl) != null || b(r) || u(r, e);
+            (null == t ? void 0 : t.coverImageUrl) != null || g(r) || u(r, e);
         }
-    }, [d, f, b, u, e]);
-    let g = n.useMemo(() => {
+    }, [d, f, g, u, e]);
+    let b = n.useMemo(() => {
             var t;
             return null != (t = o[e]) ? t : [];
         }, [o, e]),
@@ -34,17 +34,17 @@ function u(e) {
             },
             [i, e],
         ),
-        { gameDataMap: O, isGameFetching: m } = (0, s.F)(g),
+        { gameDataMap: O, isGameFetching: m } = (0, s.F)(b),
         [j, y] = n.useState([]),
-        v = ((r = g.map((e) => m(e))), n.useMemo(() => r.join("\x1F"), [r]));
+        v = ((r = b.map((e) => m(e))), n.useMemo(() => r.join("\x1F"), [r]));
     return (
         n.useEffect(() => {
-            let t = g.filter((e) => l.Z.noDataAvailable(e));
+            let t = b.filter((e) => l.Z.noDataAvailable(e));
             t.length > 0 && a(t, e);
-        }, [O, v, g, e, a]),
+        }, [O, v, b, e, a]),
         n.useEffect(() => {
             y(
-                g.map((e) => {
+                b.map((e) => {
                     let t = O[e];
                     return {
                         applicationId: e,
@@ -53,7 +53,7 @@ function u(e) {
                     };
                 }),
             );
-        }, [g, O, e]),
+        }, [b, O, e]),
         {
             games: j,
             isGameFetching: m,

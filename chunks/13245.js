@@ -413,11 +413,10 @@ let O = new o.Z("OverlayActionCreators"),
                 enabled: t,
             });
         },
-        successfullyShown(e, t) {
+        successfullyShown(e) {
             i.Z.dispatch({
                 type: "OVERLAY_SUCCESSFULLY_SHOWN",
                 pid: e,
-                isFromNative: t,
             });
         },
         setGpuBoostRequested(e, t) {

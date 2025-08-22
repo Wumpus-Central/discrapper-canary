@@ -1,46 +1,41 @@
-r.d(t, { Z: () => p }), r(388685);
-var n = r(951288),
-    i = r(647438),
-    l = r(120356),
-    a = r.n(l),
-    o = r(793030),
-    c = r(442837),
-    s = r(313201),
-    u = r(314897),
-    d = r(86419),
-    f = r(840367),
-    b = r(272289),
+r.d(t, { Z: () => b });
+var n = r(951288);
+r(647438);
+var i = r(120356),
+    l = r.n(i),
+    a = r(793030),
+    o = r(442837),
+    c = r(313201),
+    s = r(314897),
+    u = r(556045),
+    d = r(840367),
+    f = r(272289),
     g = r(415734);
-function p(e) {
-    let { userId: t, widget: r, children: l, disableInteraction: p, className: O } = e,
-        [m, j] = i.useState(!1),
-        y = (0, s.Dt)(),
-        v = (0, c.e7)([u.default], () => u.default.getId() === t),
-        x = (0, d.kQ)(r),
-        h = i.useCallback(() => {
-            j(!0);
-        }, []);
+function b(e) {
+    let { userId: t, widget: r, children: i, disableInteraction: b, className: p } = e,
+        O = (0, c.Dt)(),
+        m = (0, o.e7)([s.default], () => s.default.getId() === t),
+        { shouldShowSuggestions: j, handleDismissSuggestions: y } = (0, u.h)(r);
     return (0, n.jsxs)("section", {
-        className: a()(g.container, O),
-        "aria-labelledby": y,
+        className: l()(g.container, p),
+        "aria-labelledby": O,
         children: [
-            (0, n.jsx)(f.Z, {
+            (0, n.jsx)(d.Z, {
                 userId: t,
-                headingId: y,
+                headingId: O,
                 widget: r,
-                disableInteraction: p,
+                disableInteraction: b,
             }),
-            (0, n.jsxs)(o.y5, {
+            (0, n.jsxs)(a.y5, {
                 children: [
-                    l,
-                    v &&
-                        !x &&
-                        !p &&
-                        !m &&
-                        (0, n.jsx)(b.Z, {
+                    i,
+                    m &&
+                        !b &&
+                        j &&
+                        (0, n.jsx)(f.Z, {
                             userId: t,
                             widgetType: r.type,
-                            onDismiss: h,
+                            onDismiss: y,
                         }),
                 ],
             }),

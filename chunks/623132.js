@@ -10,8 +10,8 @@ var i = r(481060),
     u = r(817053),
     d = r(248554),
     f = r(879877),
-    b = r(533815),
-    g = r(853072),
+    g = r(533815),
+    b = r(853072),
     p = r(388032),
     O = r(776385);
 function m(e) {
@@ -120,7 +120,7 @@ function v(e) {
 }
 function x(e) {
     let { applicationId: t, guildId: r, channelId: i, className: l } = e,
-        a = (0, g.Z)(t);
+        a = (0, b.Z)(t);
     return a.length > 0
         ? (0, n.jsx)(s.Z, {
               label: p.intl.formatToPlainString(p.t.ujhJdH, { numFriends: a.length }),
@@ -132,7 +132,7 @@ function x(e) {
         : null;
 }
 function h(e) {
-    let { user: t, guildId: r, channelId: l, game: a, widgetType: c, loading: s = !1, disableInteraction: g = !1 } = e,
+    let { user: t, guildId: r, channelId: l, game: a, widgetType: c, loading: s = !1, disableInteraction: b = !1 } = e,
         { gameName: h = p.intl.string(p.t.GIWFlJ), imageSrc: P, applicationId: w, comment: S, tags: E } = a,
         I = {
             variant: "heading-sm/medium",
@@ -150,13 +150,13 @@ function h(e) {
                       gameName: h,
                       applicationId: w,
                       userId: t.id,
-                      disableInteraction: g,
+                      disableInteraction: b,
                       hideTooltip: !0,
                   }),
                   (0, n.jsxs)("div", {
                       className: O.details,
                       children: [
-                          g
+                          b
                               ? (0, n.jsx)(i.X6q, j(m({}, I), { children: h }))
                               : (0, n.jsx)(
                                     y,
@@ -181,9 +181,9 @@ function h(e) {
                               isCurrentUser: T,
                               widgetType: c,
                               applicationId: w,
-                              disableInteraction: g,
+                              disableInteraction: b,
                           }),
-                          !g &&
+                          !b &&
                               (0, n.jsx)(x, {
                                   className: O.socialProof,
                                   applicationId: w,
@@ -192,9 +192,9 @@ function h(e) {
                               }),
                       ],
                   }),
-                  !g &&
+                  !b &&
                       T &&
-                      (0, n.jsx)(b.Z, {
+                      (0, n.jsx)(g.Z, {
                           game: a,
                           widgetType: c,
                           className: O.removeGameButton,

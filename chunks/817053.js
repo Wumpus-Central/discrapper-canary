@@ -1,6 +1,6 @@
 r.d(t, {
     Z: () => O,
-    o: () => g,
+    o: () => b,
 }),
     r(388685);
 var n = r(951288),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function b(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,7 +55,7 @@ function b(e, t) {
         e
     );
 }
-function g(e) {
+function b(e) {
     let { imageSrc: t, gameName: r } = e,
         [l, a] = i.useState(!1),
         c = null != r ? r : u.intl.string(u.t.GIWFlJ);
@@ -102,8 +102,8 @@ function p(e) {
             ? (e) =>
                   (0, n.jsx)(
                       "div",
-                      b(f({ className: p }, e), {
-                          children: (0, n.jsx)(g, {
+                      g(f({ className: p }, e), {
+                          children: (0, n.jsx)(b, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -112,11 +112,11 @@ function p(e) {
             : (e) =>
                   (0, n.jsx)(
                       o.P3F,
-                      b(f({}, e), {
+                      g(f({}, e), {
                           onClick: m,
                           "aria-label": y,
                           className: a()(d.clickable, p),
-                          children: (0, n.jsx)(g, {
+                          children: (0, n.jsx)(b, {
                               imageSrc: t,
                               gameName: r,
                           }),
@@ -151,7 +151,7 @@ function O(e) {
     return l
         ? (0, n.jsx)("div", {
               className: s,
-              children: (0, n.jsx)(g, f({}, c)),
+              children: (0, n.jsx)(b, f({}, c)),
           })
         : (0, n.jsx)(
               p,

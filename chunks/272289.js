@@ -30,8 +30,8 @@ function u(e) {
             return i;
         })(e, ["widgetType"]);
     let { games: u, isGameFetching: d, onAddGame: f } = (0, c.K)(t),
-        [b] = (0, l.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
-        g = i.useCallback(
+        [g] = (0, l.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
+        b = i.useCallback(
             (e, r, n) => {
                 f(e),
                     (0, o.ES)(t, {
@@ -72,8 +72,8 @@ function u(e) {
             {
                 games: u,
                 isGameFetching: d,
-                isSuggestedGamesLoading: b,
-                onClick: g,
+                isSuggestedGamesLoading: g,
+                onClick: b,
             },
             r,
         ),

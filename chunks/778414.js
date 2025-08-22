@@ -13,8 +13,8 @@ var n = r(951288),
     u = r(314897),
     d = r(351402),
     f = r(206599),
-    b = r(747101),
-    g = r(517157),
+    g = r(747101),
+    b = r(517157),
     p = r(985748),
     O = r(566007),
     m = r(173951),
@@ -100,8 +100,8 @@ function S() {
 }
 function E(e) {
     let { user: t, guildId: r, channelId: l } = e,
-        o = (0, g.Z)(t.id),
-        { widgets: p, isGameFetching: O } = (0, b.Z)(o),
+        o = (0, b.Z)(t.id),
+        { widgets: p, isGameFetching: O } = (0, g.Z)(o),
         m = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         j = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),

@@ -11,11 +11,11 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(202841),
-    l = n(1561),
-    c = n(438784),
-    u = n(696826),
-    d = n(981729),
-    f = n(481060),
+    l = n(143450),
+    c = n(1561),
+    u = n(438784),
+    d = n(696826),
+    f = n(981729),
     _ = n(686546),
     p = n(51144),
     h = n(981631),
@@ -299,7 +299,7 @@ function w(e, t, n, r) {
 }
 function D(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = (0, u.W5)(e.status, t, n, r),
+        i = (0, d.W5)(e.status, t, n, r),
         a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
     return I(O({}, i), {
         x: a,
@@ -321,7 +321,7 @@ function x(e, t, n) {
 }
 function L(e, t, n, i) {
     let a = D(n, i, t, !1),
-        o = (0, u.lm)(i, e);
+        o = (0, d.lm)(i, e);
     if (!t) {
         let t = a.height / 2 + n.stroke,
             i = a.x + n.status / 2;
@@ -336,14 +336,14 @@ function L(e, t, n, i) {
     let s = a.height + 2 * n.stroke,
         l = a.width + 2 * n.stroke,
         c = a.x - n.stroke,
-        d = a.y - n.stroke;
+        u = a.y - n.stroke;
     return (0, r.jsx)("rect", {
         fill: e,
         height: s,
         width: l,
         style: { opacity: o },
         x: c,
-        y: d,
+        y: u,
         rx: n.stroke,
     });
 }
@@ -354,7 +354,7 @@ function j(e) {
     return O(
         {},
         x(o, a, r),
-        (0, u.Dk)({
+        (0, d.Dk)({
             status: t,
             size: o.status,
             isMobile: a,
@@ -371,7 +371,7 @@ function M(e) {
             onClick: i,
             onMouseDown: a,
             onKeyDown: s,
-            onContextMenu: c,
+            onContextMenu: l,
             onMouseEnter: u,
             onMouseLeave: d,
             className: f,
@@ -418,12 +418,12 @@ function M(e) {
                 }),
             });
     return null != i || null != a
-        ? (0, r.jsxs)(l.P, {
+        ? (0, r.jsxs)(c.P, {
               className: o()(b.wrapper, b.pointer, f),
               style: S,
               onClick: i,
               tabIndex: _,
-              onContextMenu: c,
+              onContextMenu: l,
               onMouseDown: a,
               onKeyDown: s,
               onMouseEnter: null != u ? u : void 0,
@@ -435,7 +435,7 @@ function M(e) {
         : (0, r.jsxs)("div", {
               className: o()(b.wrapper, f),
               style: S,
-              onContextMenu: null != c ? c : void 0,
+              onContextMenu: null != l ? l : void 0,
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
               role: "img",
@@ -472,7 +472,7 @@ function U(e) {
             statusColor: a,
             isMobile: s = !1,
             isTyping: l = !1,
-            typingIndicatorRef: f,
+            typingIndicatorRef: c,
             avatarContentRef: _,
             isSpeaking: m = !1,
             statusTooltip: E = !1,
@@ -487,7 +487,7 @@ function U(e) {
         R = (0, g.UC)(i),
         P = null != N ? Math.ceil((R.status * g.D6 - R.status) / 2) : 0,
         x = R.size + P,
-        j = (0, u.vj)(N, a);
+        j = (0, d.vj)(N, a);
     return (0, r.jsx)(
         M,
         I(O({}, e), {
@@ -519,7 +519,7 @@ function U(e) {
                     }),
                     null != N && null != v ? L(v, s, R, N) : null,
                     null != N
-                        ? (0, r.jsx)(d.u, {
+                        ? (0, r.jsx)(f.u, {
                               text: E ? (0, p.u5)(N) : null,
                               "aria-label": !1,
                               position: "top",
@@ -532,13 +532,13 @@ function U(e) {
                                               "rect",
                                               I(O({}, e, D(R, N, s, l)), {
                                                   fill: j,
-                                                  mask: "url(#".concat((0, u.rs)(N, s, l), ")"),
+                                                  mask: "url(#".concat((0, d.rs)(N, s, l), ")"),
                                                   className: b.pointerEvents,
                                               }),
                                           ),
                                           l
-                                              ? (0, r.jsx)(c.b, {
-                                                    ref: f,
+                                              ? (0, r.jsx)(u.b, {
+                                                    ref: c,
                                                     dotRadius: R.status / 4,
                                                     x: R.size - 1.375 * R.status - R.offset,
                                                     y: R.size - R.status / 1.333 - R.offset,
@@ -572,7 +572,7 @@ function Z(e) {
             fromIsMobile: t = !0,
             fromStatus: n,
             fromColor: a,
-            isMobile: l = !1,
+            isMobile: c = !1,
             isTyping: _ = !1,
             typingIndicatorRef: h,
             isSpeaking: m = !1,
@@ -588,7 +588,7 @@ function Z(e) {
             imageClassName: U,
             pulseStatusIcon: Z,
         } = e,
-        V = (0, u.vj)(v, S),
+        V = (0, d.vj)(v, S),
         F = i.useId(),
         H = i.useId(),
         [Y] = i.useState(() =>
@@ -609,13 +609,13 @@ function Z(e) {
                     j({
                         size: E,
                         status: v,
-                        isMobile: l,
+                        isMobile: c,
                         isTyping: _,
                     }),
                 ),
-            [V, E, v, l, _],
+            [V, E, v, c, _],
         ),
-        K = (0, f.q_F)(
+        K = (0, l.q)(
             {
                 config: A,
                 from: Y,
@@ -645,7 +645,7 @@ function Z(e) {
         ei = en.status * g.EW,
         ea = null != v ? (en.status * g.D6 - en.status) / 2 : 0,
         eo = en.size + Math.ceil(ea),
-        [es, el, ec] = (0, f.q_F)(
+        [es, el, ec] = (0, l.q)(
             {
                 config: {
                     tension: 450,
@@ -707,12 +707,12 @@ function Z(e) {
                             className: U,
                         }),
                     }),
-                    null != w && L(w, l, en, v),
-                    (0, r.jsx)(d.u, {
+                    null != w && L(w, c, en, v),
+                    (0, r.jsx)(f.u, {
                         text: R ? (0, p.u5)(v) : null,
                         "aria-label": !1,
                         position: "top",
-                        spacing: G(en.status, en.stroke, l, _),
+                        spacing: G(en.status, en.stroke, c, _),
                         delay: P,
                         children: (e) =>
                             (0, r.jsxs)(s.animated.g, {
@@ -724,14 +724,14 @@ function Z(e) {
                                         viewBox: "0 0 ".concat(er, " ").concat(ei),
                                         className: R ? b.cursorDefault : void 0,
                                         children: [
-                                            (0, u.vP)(ee, en.status, H),
+                                            (0, d.vP)(ee, en.status, H),
                                             (0, r.jsx)(s.animated.rect, {
                                                 fill: $,
                                                 width: er,
                                                 height: ei,
                                                 mask: "url(#".concat(H, ")"),
                                             }),
-                                            (0, r.jsx)(c.b, {
+                                            (0, r.jsx)(u.b, {
                                                 ref: h,
                                                 dotRadius: en.status / 4,
                                                 x: 0.15 * er,
@@ -745,7 +745,7 @@ function Z(e) {
                                         O(
                                             {
                                                 size: E,
-                                                isMobile: l,
+                                                isMobile: c,
                                                 isTyping: _,
                                                 className: b.pointerEvents,
                                             },
@@ -770,20 +770,20 @@ let F = i.memo(function (e) {
     let { isMobile: o = !1, isTyping: s = !1 } = a,
         l = i.useRef(n),
         c = i.useRef(o),
-        d = (0, u.vj)(n, t),
-        f = i.useRef(d),
+        u = (0, d.vj)(n, t),
+        f = i.useRef(u),
         _ = i.useRef(!1),
         p = _.current || V(s, n, l.current, o, c.current);
     return (
         i.useLayoutEffect(() => {
-            (_.current = p), (l.current = n), (c.current = o), (f.current = d);
-        }, [n, o, d, p]),
+            (_.current = p), (l.current = n), (c.current = o), (f.current = u);
+        }, [n, o, u, p]),
         null != n && null != l.current && p
             ? (0, r.jsx)(
                   Z,
                   I(O({}, a), {
                       status: n,
-                      statusColor: d,
+                      statusColor: u,
                       fromStatus: l.current,
                       fromIsMobile: c.current,
                       fromColor: f.current,
@@ -793,7 +793,7 @@ let F = i.memo(function (e) {
                   U,
                   I(O({}, a), {
                       status: n,
-                      statusColor: d,
+                      statusColor: u,
                   }),
               )
     );

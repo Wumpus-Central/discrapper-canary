@@ -12,9 +12,9 @@ var r,
     l = n(512722),
     c = n.n(l),
     u = n(866442),
-    d = n(692547),
-    f = n(84735),
-    _ = n(481060),
+    d = n(657707),
+    f = n(692547),
+    _ = n(84735),
     p = n(981631),
     h = n(81818);
 function m(e, t, n) {
@@ -74,7 +74,7 @@ class v extends (r = a.PureComponent) {
                 size: c,
                 reverse: u,
                 displayOnly: d,
-                type: _,
+                type: f,
                 onClick: m,
             } = this.props,
             E =
@@ -94,13 +94,13 @@ class v extends (r = a.PureComponent) {
         return (0, i.jsxs)(b, {
             "data-toggleable-component": "checkbox",
             className: s()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], a, {
-                [h.row]: "row" === _,
+                [h.row]: "row" === f,
                 [h.checked]: n,
             }),
             children: [
                 u ? E : null,
                 !d &&
-                    (0, i.jsx)(f.t, {
+                    (0, i.jsx)(_.t, {
                         children: (0, i.jsx)("input", {
                             className: s()(o, y),
                             type: "checkbox",
@@ -154,7 +154,7 @@ function I(e) {
 function T(e) {
     let { indicatorClassName: t, value: n, size: r, shape: o, checkboxColor: l, disabled: c } = e,
         u = I(e),
-        f = a.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
+        _ = a.useMemo(() => (n ? f.Z.colors.WHITE.css : f.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
     return (0, i.jsx)("div", {
         className: s()(h.checkbox, o, t, {
             [h.checked]: n,
@@ -168,9 +168,9 @@ function T(e) {
             },
             u,
         ),
-        children: (0, i.jsx)(_.kSu, {
+        children: (0, i.jsx)(d.kSu, {
             size: "sm",
-            color: f,
+            color: _,
             "aria-hidden": !0,
         }),
     });

@@ -78,8 +78,8 @@ let d = i.memo(function (e) {
     });
 });
 function f(e) {
-    let { tags: t, widgetType: r, applicationId: f, ref: b } = e,
-        g = (0, i.useRef)(null),
+    let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
+        b = (0, i.useRef)(null),
         { trackUserProfileAction: p } = (0, a.KZ)(),
         O = (0, i.useMemo)(() => (null != t ? t : []), [t]),
         m = (0, i.useCallback)(
@@ -114,7 +114,7 @@ function f(e) {
             [O, p, r, f],
         );
     return (0, n.jsx)(l.yRy, {
-        targetElementRef: g,
+        targetElementRef: b,
         position: "right",
         align: "top",
         renderPopout: (e) => {
@@ -130,9 +130,9 @@ function f(e) {
             var t, r;
             return (0, n.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((g.current = e), (b.current = e)),
+                    null != e && ((b.current = e), (g.current = e)),
                     () => {
-                        (g.current = null), (b.current = null);
+                        (b.current = null), (g.current = null);
                     }
                 ),
                 children: (0, n.jsx)(

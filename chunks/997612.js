@@ -1,22 +1,33 @@
 n.d(t, {
-    $: () => O,
-    X: () => T,
+    $: () => D,
+    X: () => j,
 });
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(972959),
-    s = n(665149),
-    l = n(606669),
-    c = n(53432),
-    u = n(74869),
-    d = n(572004),
-    f = n(561134),
-    _ = n(988587),
-    p = n(231338),
-    h = n(388032),
-    m = n(624315);
-function g(e, t, n) {
+    a = n(657707),
+    o = n(756715),
+    s = n(104140),
+    l = n(830447),
+    c = n(828214),
+    u = n(327496),
+    d = n(235874),
+    f = n(21340),
+    _ = n(417153),
+    p = n(981729),
+    h = n(861066),
+    m = n(972959),
+    g = n(665149),
+    E = n(606669),
+    b = n(53432),
+    y = n(74869),
+    O = n(572004),
+    v = n(561134),
+    I = n(988587),
+    T = n(561466),
+    S = n(231338),
+    A = n(388032),
+    C = n(624315);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +40,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +51,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                N(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,39 +68,42 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = (0, o.H)(() => ({ selected: null }));
-function v() {
-    let e = (0, c.Z)(),
-        t = (0, l.Z)(),
-        n = (0, u.Z)();
-    return (0, r.jsxs)(a.v2r, {
-        onSelect: p.dG,
+let D = (0, m.H)(() => ({
+    selectedCollection: null,
+    selectedStory: null,
+}));
+function x() {
+    let e = (0, b.Z)(),
+        t = (0, E.Z)(),
+        n = (0, y.Z)();
+    return (0, r.jsxs)(l.v, {
+        onSelect: S.dG,
         navId: "playground-settings-menu",
-        onClose: p.dG,
+        onClose: S.dG,
         "aria-label": "Playground Settings",
         children: [
-            (0, r.jsx)(a.sNh, {
+            (0, r.jsx)(c.sN, {
                 id: "appearance",
-                label: h.intl.string(h.t["iHH+k5"]),
+                label: A.intl.string(A.t["iHH+k5"]),
                 children: e.filter((e) => null != e),
             }),
-            (0, r.jsx)(a.sNh, {
+            (0, r.jsx)(c.sN, {
                 id: "accessibility",
-                label: h.intl.string(h.t.G0neg4),
+                label: A.intl.string(A.t.G0neg4),
                 children: t.filter((e) => null != e),
             }),
-            (0, r.jsx)(a.sNh, {
+            (0, r.jsx)(c.sN, {
                 id: "experiments",
                 label: "Experiments",
                 children: n.filter((e) => null != e),
@@ -97,20 +111,20 @@ function v() {
         ],
     });
 }
-function I() {
+function L() {
     let e = i.useRef(null);
-    return (0, r.jsx)(a.yRy, {
+    return (0, r.jsx)(d.y, {
         targetElementRef: e,
-        renderPopout: () => (0, r.jsx)(v, {}),
+        renderPopout: () => (0, r.jsx)(x, {}),
         position: "bottom",
         align: "center",
-        animation: a.yRy.Animation.SCALE,
+        animation: d.y.Animation.SCALE,
         onRequestClose: () => {},
         children: (t) =>
             (0, r.jsx)(
-                a.hU,
-                y(
-                    E(
+                h.h,
+                w(
+                    R(
                         {
                             size: "sm",
                             icon: a.ewm,
@@ -124,116 +138,149 @@ function I() {
             ),
     });
 }
-function T(e) {
+function j(e) {
     var t;
     let { config: n } = e,
-        o = O.useField("selected"),
-        { group: l, story: c } = i.useMemo(() => {
+        l = D.useField("selectedCollection"),
+        c = D.useField("selectedStory"),
+        {
+            collection: d,
+            group: m,
+            story: E,
+        } = i.useMemo(() => {
             var e;
-            let t = n.groups.find((e) => e.stories.some((e) => e.id === o)),
-                r = null != (e = null == t ? void 0 : t.stories.find((e) => e.id === o)) ? e : null;
+            let t = null != l ? n.collections.find((e) => e.id === l) : n.collections[0];
+            if (null == t)
+                return {
+                    collection: null,
+                    group: null,
+                    story: null,
+                };
+            let r = t.groups.find((e) => e.stories.some((e) => e.id === c)),
+                i = null != (e = null == r ? void 0 : r.stories.find((e) => e.id === c)) ? e : null;
             return {
-                group: t,
-                story: r,
+                collection: t,
+                group: r,
+                story: i,
             };
-        }, [o, n.groups]),
-        u = (e) => {
-            O.setState({ selected: e });
+        }, [l, c, n.collections]),
+        b = (e) => {
+            D.setState({
+                selectedCollection: e,
+                selectedStory: null,
+            });
         },
-        p = null != (t = null == l ? void 0 : l.title) ? t : "Mana",
-        h = null == c ? void 0 : c.name,
-        g = () => {
-            let e = "dev://mana/".concat(null == c ? void 0 : c.id);
-            (0, d.JG)(e, () =>
-                (0, a.showToast)({
+        y = (e) => {
+            D.setState({ selectedStory: e });
+        },
+        S = null != (t = null == d ? void 0 : d.name) ? t : "Design System",
+        A = null == E ? void 0 : E.name,
+        N = () => {
+            let e = "dev://mana/".concat(null == E ? void 0 : E.id);
+            (0, O.JG)(e, () =>
+                (0, _.CF)({
                     id: "playground-link-copied",
                     message: "Copied playground link",
-                    type: a.ToastType.SUCCESS,
+                    type: T.pC.SUCCESS,
                 }),
             );
         };
     return (0, r.jsxs)("div", {
-        className: m.root,
+        className: C.root,
         children: [
             (0, r.jsx)("div", {
-                className: m.group,
-                children: (0, r.jsx)(a.aRk, {
-                    children: (0, r.jsx)(a.ua7, {
-                        position: "right",
-                        text: "Mana Design System",
-                        children: (e) =>
-                            (0, r.jsx)(
-                                a.LYs,
-                                y(E({}, e), {
-                                    name: "Mana",
-                                    selected: !0,
-                                }),
-                            ),
-                    }),
-                }),
+                className: C.group,
+                children: n.collections.map((e) =>
+                    (0, r.jsx)(
+                        s.a,
+                        {
+                            children: (0, r.jsx)(p.u, {
+                                position: "right",
+                                text: "".concat(e.name, " Design System"),
+                                children: (t) => {
+                                    var i;
+                                    return (0, r.jsx)(
+                                        u.L,
+                                        w(R({}, t), {
+                                            name: e.name,
+                                            selected:
+                                                (null != l ? l : null == (i = n.collections[0]) ? void 0 : i.id) ===
+                                                e.id,
+                                            onClick: () => b(e.id),
+                                        }),
+                                    );
+                                },
+                            }),
+                        },
+                        e.id,
+                    ),
+                ),
             }),
             (0, r.jsxs)("div", {
-                className: m.content,
+                className: C.content,
                 children: [
-                    (0, r.jsxs)(s.ZP, {
-                        className: m.header,
+                    (0, r.jsxs)(g.ZP, {
+                        className: C.header,
                         children: [
-                            null != p ? (0, r.jsx)(s.ZP.Title, { children: p }) : null,
-                            null != h
+                            null != S ? (0, r.jsx)(g.ZP.Title, { children: S }) : null,
+                            null != A
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          null != p ? (0, r.jsx)(s.ZP.Caret, { className: m.headerDivider }) : null,
-                                          (0, r.jsx)(s.ZP.Title, { children: h }),
+                                          null != S ? (0, r.jsx)(g.ZP.Caret, { className: C.headerDivider }) : null,
+                                          (0, r.jsx)(g.ZP.Title, { children: A }),
                                       ],
                                   })
                                 : null,
-                            (null == c ? void 0 : c.docs) != null
+                            (null == E ? void 0 : E.docs) != null
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(s.ZP.Divider, { className: m.headerDivider }),
-                                          (0, r.jsx)(s.ZP.Title, {
-                                              children: (0, r.jsx)(a.eee, {
-                                                  href: c.docs,
+                                          (0, r.jsx)(g.ZP.Divider, { className: C.headerDivider }),
+                                          (0, r.jsx)(g.ZP.Title, {
+                                              children: (0, r.jsx)(o.Anchor, {
+                                                  href: E.docs,
                                                   children: "Docs",
                                               }),
                                           }),
                                       ],
                                   })
                                 : null,
-                            null != c
-                                ? (0, r.jsx)(a.hU, {
+                            null != E
+                                ? (0, r.jsx)(h.h, {
                                       size: "sm",
                                       "aria-label": "Copy Link",
                                       variant: "icon-only",
                                       icon: a.TIy,
-                                      onClick: g,
+                                      onClick: N,
                                   })
                                 : null,
                             (0, r.jsx)("div", {
-                                className: m.headerRight,
-                                children: (0, r.jsx)(I, {}),
+                                className: C.headerRight,
+                                children: (0, r.jsx)(L, {}),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: m.page,
+                        className: C.page,
                         children: [
-                            (0, r.jsx)(a.zJl, {
+                            (0, r.jsx)(f.zJ, {
                                 fade: !0,
-                                className: m.sidebar,
-                                children: (0, r.jsx)(f.N, {
-                                    groups: n.groups,
-                                    selectedStory: o,
-                                    onStorySelect: u,
-                                }),
+                                className: C.sidebar,
+                                children:
+                                    null != d
+                                        ? (0, r.jsx)(v.N, {
+                                              groups: d.groups,
+                                              selectedStory: c,
+                                              onStorySelect: y,
+                                          })
+                                        : null,
                             }),
                             (0, r.jsx)("div", {
-                                className: m.content,
+                                className: C.content,
                                 children:
-                                    null != c && null != l
-                                        ? (0, r.jsx)(_.b, {
-                                              story: c,
-                                              groupTitle: l.title,
+                                    null != E && null != m
+                                        ? (0, r.jsx)(I.b, {
+                                              story: E,
+                                              groupTitle: m.title,
                                           })
                                         : null,
                             }),

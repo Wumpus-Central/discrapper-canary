@@ -10,13 +10,13 @@ var i = r(624238),
     u = r(881410),
     d = r(502587),
     f = r(825354),
-    b = r(388032),
-    g = r(635318);
+    g = r(388032),
+    b = r(635318);
 let p = {
-    [l.l.FAVORITE_GAMES]: () => b.intl.string(b.t.sUQar6),
-    [l.l.CURRENT_GAMES]: () => b.intl.string(b.t.SqNnur),
-    [l.l.WANT_TO_PLAY_GAMES]: () => b.intl.string(b.t.bWSQwc),
-    [l.l.PLAYED_GAMES]: () => b.intl.string(b.t.scOKER),
+    [l.l.FAVORITE_GAMES]: () => g.intl.string(g.t.sUQar6),
+    [l.l.CURRENT_GAMES]: () => g.intl.string(g.t.SqNnur),
+    [l.l.WANT_TO_PLAY_GAMES]: () => g.intl.string(g.t.bWSQwc),
+    [l.l.PLAYED_GAMES]: () => g.intl.string(g.t.scOKER),
 };
 function O(e) {
     var t;
@@ -27,13 +27,13 @@ function O(e) {
         y =
             f && u.games.length > 0
                 ? ((t = u.type),
-                  1 === i.k[t] ? b.intl.string(b.t.wiXdER) : b.intl.format(b.t["zR1+09"], { numGames: i.k[t] }))
+                  1 === i.k[t] ? g.intl.string(g.t.wiXdER) : g.intl.format(g.t["zR1+09"], { numGames: i.k[t] }))
                 : void 0;
     return (0, n.jsxs)("div", {
-        className: g.headerRow,
+        className: b.headerRow,
         children: [
             (0, n.jsxs)("div", {
-                className: g.title,
+                className: b.title,
                 children: [
                     (0, n.jsx)(o.X6q, {
                         variant: "heading-sm/medium",
@@ -61,12 +61,12 @@ function O(e) {
 function m(e) {
     let { widget: t, disabled: r, disabledInteraction: i, userId: l } = e,
         o = (0, a.e7)([c.default], () => c.default.getId() === l),
-        b = (0, s.vI)(t.type) && t.games.some((e) => null != e.comment);
+        g = (0, s.vI)(t.type) && t.games.some((e) => null != e.comment);
     return i
         ? null
         : o
           ? (0, n.jsxs)("div", {
-                className: g.actions,
+                className: b.actions,
                 children: [
                     (0, n.jsx)(u.Z, {
                         disabled: r,
@@ -76,13 +76,13 @@ function m(e) {
                     (0, n.jsx)(d.Z, { widget: t }),
                 ],
             })
-          : b
+          : g
             ? (0, n.jsx)("div", {
-                  className: g.actions,
+                  className: b.actions,
                   children: (0, n.jsx)(f.Z, {
                       widget: t,
                       userId: l,
-                      className: g.menuButton,
+                      className: b.menuButton,
                   }),
               })
             : null;

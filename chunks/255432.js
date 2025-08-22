@@ -1,9 +1,14 @@
-n.d(t, { a: () => u }), n(388685);
+n.d(t, { a: () => h }), n(388685);
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(624315);
-function o(e, t, n) {
+var i = n(793030),
+    a = n(178940),
+    o = n(540863),
+    s = n(619307),
+    l = n(993365),
+    c = n(463208),
+    u = n(624315);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +21,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +32,12 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,68 +49,69 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function u(e) {
-    let { controls: t, props: n, onPropsChange: o } = e,
-        l = (e, t) => {
-            o(c(s({}, n), { [e]: t }));
+function h(e) {
+    let { controls: t, props: n, onPropsChange: d } = e,
+        _ = (e, t) => {
+            d(p(f({}, n), { [e]: t }));
         },
-        u = Object.entries(t);
-    return 0 === u.length
+        h = Object.entries(t);
+    return 0 === h.length
         ? null
         : (0, r.jsx)("div", {
-              className: a.controlsSection,
-              children: (0, r.jsx)(i.Kqy, {
+              className: u.controlsSection,
+              children: (0, r.jsx)(i.Kq, {
                   gap: 16,
-                  children: u.map((e) => {
+                  children: h.map((e) => {
                       var t;
-                      let [a, o] = e,
-                          s = null != (t = n[a]) ? t : o.defaultValue;
+                      let [i, u] = e,
+                          d = null != (t = n[i]) ? t : u.defaultValue;
                       return (0, r.jsxs)(
-                          i.xJW,
+                          o.x,
                           {
-                              title: "boolean" === o.type ? void 0 : o.label,
+                              title: "boolean" === u.type ? void 0 : u.label,
                               children: [
-                                  "select" === o.type &&
-                                      null != o.options &&
-                                      (0, r.jsx)(i.q4e, {
-                                          value: s,
-                                          onChange: (e) => l(a, e),
-                                          options: o.options,
+                                  "select" === u.type &&
+                                      null != u.options &&
+                                      (0, r.jsx)(s.q4, {
+                                          value: d,
+                                          onChange: (e) => _(i, e),
+                                          options: u.options,
                                       }),
-                                  "boolean" === o.type &&
-                                      (0, r.jsx)(i.XZJ, {
-                                          value: s,
-                                          onChange: (e, t) => l(a, t),
-                                          children: (0, r.jsx)(i.Text, {
+                                  "boolean" === u.type &&
+                                      (0, r.jsx)(a.X, {
+                                          value: d,
+                                          onChange: (e, t) => _(i, t),
+                                          children: (0, r.jsx)(l.x, {
                                               variant: "text-md/medium",
-                                              children: o.label,
+                                              children: u.label,
                                           }),
                                       }),
-                                  "text" === o.type &&
-                                      (0, r.jsx)(i.oil, {
-                                          value: s,
-                                          onChange: (e) => l(a, e),
+                                  "text" === u.type &&
+                                      (0, r.jsx)(c.o, {
+                                          value: d,
+                                          onChange: (e) => _(i, e),
                                       }),
-                                  "number" === o.type &&
-                                      (0, r.jsx)(i.oil, {
+                                  "number" === u.type &&
+                                      (0, r.jsx)(c.o, {
                                           type: "number",
-                                          value: String(s),
-                                          onChange: (e) => l(a, Number(e)),
+                                          value: String(d),
+                                          min: u.minValue,
+                                          onChange: (e) => _(i, Number(e)),
                                       }),
                               ],
                           },
-                          a,
+                          i,
                       );
                   }),
               }),

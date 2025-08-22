@@ -602,6 +602,7 @@ let eZ = (e) => {
                             nameplate: n,
                             showStatus: !0,
                             isHighlighted: !0,
+                            skipEffectDisplayName: !0,
                         }),
                     }),
                     (0, r.jsx)(eF, {

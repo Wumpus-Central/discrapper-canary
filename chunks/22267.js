@@ -41,50 +41,51 @@ let C = {
                 showPlaceholderUser: x,
                 pendingGlobalName: L,
                 pendingDisplayNameStyles: j,
-                nameplatePreviewSize: M = "default",
-                isPurchased: k = !1,
-                avatarDecorationOverride: U,
+                avatarDecorationOverride: M,
+                nameplatePreviewSize: k = "default",
+                isPurchased: U = !1,
+                skipEffectDisplayName: G = !1,
             } = e,
-            G = (0, s.e7)([b.Z], () => (0, l.wj)(b.Z.theme)),
-            B = null != a ? (0, v.EU)(a) : N,
-            Z = (0, s.e7)([O.Z], () => (null != t ? O.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            V = G ? "#706F74" : "#aaaab2",
-            F = i.useRef(null),
-            H = (0, s.e7)([y.ZP], () => (null != n && null != t ? y.ZP.getMember(n, t.id) : null)),
-            Y =
+            B = (0, s.e7)([b.Z], () => (0, l.wj)(b.Z.theme)),
+            Z = null != a ? (0, v.EU)(a) : N,
+            V = (0, s.e7)([O.Z], () => (null != t ? O.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            F = B ? "#706F74" : "#aaaab2",
+            H = i.useRef(null),
+            Y = (0, s.e7)([y.ZP], () => (null != n && null != t ? y.ZP.getMember(n, t.id) : null)),
+            W =
                 null != t
                     ? (0, E.Ly)({
                           pendingNickname: void 0,
                           pendingGlobalName: L,
                           user: t,
-                          guildMember: H,
+                          guildMember: Y,
                       })
                     : void 0,
-            W = C[M],
-            K = (0, f.Y)({ location: "NameplatePreview" }),
-            z = void 0 !== j ? j : null == t ? void 0 : t.displayNameStyles;
+            K = C[k],
+            z = (0, f.Y)({ location: "NameplatePreview" }),
+            q = void 0 !== j ? j : null == t ? void 0 : t.displayNameStyles;
         return (0, r.jsx)("div", {
             role: "img",
             "aria-label": I.intl.string(I.t.SZeUdX),
             style: {
-                color: G ? "white" : "black",
+                color: B ? "white" : "black",
                 width: "100%",
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(R, T.nameplatePreview, {
-                    [T.nameplatePurchased]: k && !w,
-                    [T.large]: "large" === M,
-                    [T.xlarge]: "xlarge" === M,
+                    [T.nameplatePurchased]: U && !w,
+                    [T.large]: "large" === k,
+                    [T.xlarge]: "xlarge" === k,
                 }),
                 children: [
-                    null != B &&
+                    null != Z &&
                         (0, r.jsx)(
                             g.Z,
                             {
-                                nameplate: B,
+                                nameplate: Z,
                                 hovered: w,
                                 placement: m.i.PREVIEW,
-                                content: x ? void 0 : F,
+                                content: x ? void 0 : H,
                             },
                             null == a ? void 0 : a.id,
                         ),
@@ -95,14 +96,14 @@ let C = {
                                 ? (0, r.jsx)("div", {
                                       className: o()(T.avatarContainer, !x && T.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
-                                          ref: F,
+                                          ref: H,
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
                                               guildId: n,
-                                              avatarSize: W,
-                                              status: D ? Z : void 0,
+                                              avatarSize: K,
+                                              status: D ? V : void 0,
                                               "aria-hidden": !0,
-                                              avatarDecorationOverride: null != U ? { asset: U.asset } : void 0,
+                                              avatarDecorationOverride: null != M ? { asset: M.asset } : void 0,
                                           }),
                                           decorators: (0, r.jsx)(h.ZP, {
                                               userId: t.id,
@@ -110,13 +111,13 @@ let C = {
                                               className: T.tagChiplet,
                                           }),
                                           name: (0, r.jsx)(p.Z, {
-                                              userName: Y,
-                                              displayNameStyles: z,
-                                              effectDisplayType: _.F.ANIMATED,
+                                              userName: W,
+                                              displayNameStyles: q,
+                                              effectDisplayType: G ? _.F.PLAIN : _.F.ANIMATED,
                                               loop: !0,
                                           }),
                                           innerClassName: P,
-                                          withDisplayNameStyles: K && null != z,
+                                          withDisplayNameStyles: z && null != q,
                                       }),
                                   })
                                 : null,
@@ -124,11 +125,11 @@ let C = {
                                 className: o()(T.avatarContainer, x && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
-                                        src: G ? S : A,
-                                        size: W,
+                                        src: B ? S : A,
+                                        size: K,
                                         "aria-hidden": !0,
                                         status: c.Skl.ONLINE,
-                                        statusColor: V,
+                                        statusColor: F,
                                         className: T.avatar,
                                     }),
                                     (0, r.jsx)("div", { className: T.placeholderUsername }),

@@ -4,8 +4,8 @@ t.d(n, {
 }),
     t(388685),
     t(539854);
-var i = t(951288),
-    r = t(647438),
+var r = t(951288),
+    i = t(647438),
     a = t(846519),
     l = t(481060),
     o = t(493773),
@@ -15,29 +15,29 @@ function d(e) {
     let {
             isActive: n,
             isUserLurking: t,
-            rsvped: i,
+            rsvped: r,
             canInvite: d,
             isChannelPublic: u = !0,
             entityType: _,
-            onJoinClick: b,
-            onRsvpClick: p,
+            onJoinClick: p,
+            onRsvpClick: b,
             onStartClick: h,
-            onInviteClick: f,
+            onInviteClick: m,
             onEndClick: g,
-            onJoinGuildClick: m,
+            onJoinGuildClick: f,
             isJoined: v = !1,
         } = e,
-        x = void 0 !== b,
+        x = void 0 !== p,
         C = (function (e) {
-            let { onInviteClick: n, canInvite: t, isChannelPublic: i } = e,
+            let { onInviteClick: n, canInvite: t, isChannelPublic: r } = e,
                 c = new a.V7(),
-                [d, u] = r.useState(!1);
+                [d, u] = i.useState(!1);
             return ((0, o.ZP)(() => () => {
                 c.stop();
             }),
             null == n)
                 ? null
-                : t && i
+                : t && r
                   ? {
                         variant: "secondary",
                         icon: l.aAc,
@@ -56,7 +56,7 @@ function d(e) {
                         "aria-label": s.intl.string(s.t.Ej3B3d),
                     };
         })({
-            onInviteClick: f,
+            onInviteClick: m,
             canInvite: d,
             isChannelPublic: u,
         }),
@@ -68,13 +68,13 @@ function d(e) {
             j.push({
                 variant: "active",
                 size: "sm",
-                onClick: b,
+                onClick: p,
                 text: (function (e) {
-                    let { isJoined: n, canJoin: t, isVoiceChannel: i } = e;
+                    let { isJoined: n, canJoin: t, isVoiceChannel: r } = e;
                     return t
                         ? n
                             ? s.intl.string(s.t.aW2YlJ)
-                            : i
+                            : r
                               ? s.intl.string(s.t.nxUtoa)
                               : s.intl.string(s.t.ZYO5OD)
                         : s.intl.string(s.t.TVBCKS);
@@ -86,22 +86,22 @@ function d(e) {
                 disabled: !x,
             }),
         t &&
-            null != m &&
+            null != f &&
             j.push({
                 variant: "active",
                 size: "sm",
                 text: s.intl.string(s.t["2BP08P"]),
-                onClick: m,
+                onClick: f,
             }),
-        !t && !n && null != p)
+        !t && !n && null != b)
     ) {
-        let e = i && !t;
+        let e = r && !t;
         j.push({
             variant: e ? "active" : "secondary",
             size: "sm",
             icon: e ? l.dz2 : l.Dkj,
             text: s.intl.string(s.t.DlcqlZ),
-            onClick: p,
+            onClick: b,
             disabled: t,
         });
     }
@@ -127,7 +127,7 @@ function d(e) {
 }
 function u(e) {
     let { onClick: n } = e;
-    return (0, i.jsx)(l.hU, {
+    return (0, r.jsx)(l.hU, {
         icon: l.xhG,
         variant: "secondary",
         "aria-label": s.intl.string(s.t.bt75u7),

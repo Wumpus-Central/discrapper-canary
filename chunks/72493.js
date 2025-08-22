@@ -8,6 +8,6 @@ r(647438);
 var u = r(51251),
     c = r(997612);
 function i() {
-    return (0, t.jsx)(c.X, { config: u.$ });
+    return (0, t.jsx)(c.X, { config: u.g });
 }
 let s = i;

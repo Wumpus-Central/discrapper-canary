@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(442837),
     a = n(704215),
@@ -8,32 +8,36 @@ var r = n(951288),
     c = n(892001),
     u = n(314897),
     d = n(993413),
-    f = n(921944),
-    _ = n(228168),
-    p = n(388032),
-    h = n(700803);
-let m = () => {
+    f = n(504983),
+    _ = n(921944),
+    p = n(228168),
+    h = n(388032),
+    m = n(700803);
+let g = () => {
     let [e, t] = (0, l.US)([a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE]),
         n = e === a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        m = (0, i.e7)([u.default], () => u.default.getId());
+        g = (0, i.e7)([u.default], () => u.default.getId());
     return (0, r.jsx)(d.Z, {
-        title: p.intl.string(p.t.Jzj9q6),
-        description: p.intl.string(p.t.lfF1Sk),
+        title: h.intl.string(h.t.Jzj9q6),
+        description: h.intl.string(h.t.lfF1Sk),
         titleIcon: n
             ? (0, r.jsx)(o.IGR, {
-                  className: h.newBadge,
-                  text: p.intl.string(p.t.y2b7CA),
+                  className: m.newBadge,
+                  text: h.intl.string(h.t.y2b7CA),
               })
             : null,
+        borderType: f.Y.LIMITED,
+        showBorder: n,
+        hasBackground: n,
         children: (0, r.jsx)(o.zxk, {
-            text: p.intl.string(p.t.Geikws),
+            text: h.intl.string(h.t.Geikws),
             onClick: () => {
-                n && t(f.L.TAKE_ACTION),
+                n && t(_.L.TAKE_ACTION),
                     (0, c.openUserProfileModal)({
-                        userId: m,
+                        userId: g,
                         sourceAnalyticsLocations: [s.Z.USER_SETTINGS_USER_PROFILE],
                         hideRestrictedProfile: !0,
-                        section: _.oh.WIDGETS,
+                        section: p.oh.WIDGETS,
                     });
             },
             size: "sm",

@@ -1,92 +1,107 @@
 n.d(t, {
-    Y: () => p,
-    k: () => m,
+    Y: () => E,
+    k: () => y,
 }),
     n(413496),
     n(433524),
-    n(35282);
+    n(35282),
+    n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(51251),
-    s = n(481060),
-    l = n(37234),
-    c = n(594174),
-    u = n(997612),
-    d = n(981631),
-    f = n(567);
-let _ = RegExp("^dev://mana(/([-\\w._0-9]+))?$", "i");
-function p(e) {
-    return _.test(e);
+    a = n(657707),
+    o = n(793030),
+    s = n(442837),
+    l = n(756715),
+    c = n(993365),
+    u = n(680018),
+    d = n(51251),
+    f = n(37234),
+    _ = n(594174),
+    p = n(997612),
+    h = n(981631),
+    m = n(567);
+let g = RegExp("^dev://mana(/([-\\w._0-9]+))?$", "i");
+function E(e) {
+    return g.test(e);
 }
-function h(e) {
-    let t = e.match(_);
+function b(e) {
+    let t = e.match(g);
     return null == t || t.length < 2 ? null : t[2];
 }
-function m(e) {
+function y(e) {
     var t;
-    let n = (0, a.e7)([c.default], () => {
-            let e = c.default.getCurrentUser();
+    let n = (0, s.e7)([_.default], () => {
+            let e = _.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        _ = i.useMemo(() => {
-            var t;
-            let n = h(e.url);
-            return null == (t = o.$.groups.find((e) => e.stories.some((e) => e.id === n)))
-                ? void 0
-                : t.stories.find((e) => e.id === n);
+        g = i.useMemo(() => {
+            let t = b(e.url);
+            for (let e of d.g.collections) {
+                let n = e.groups.find((e) => e.stories.some((e) => e.id === t));
+                if (null != n) return n.stories.find((e) => e.id === t);
+            }
         }, [e.url]),
-        p = null != (t = null == _ ? void 0 : _.name) ? t : "Mana Playground",
-        m =
-            null != _ && null != _.docs
-                ? (0, r.jsx)(s.eee, {
-                      href: _.docs,
+        E = null != (t = null == g ? void 0 : g.name) ? t : "Mana Playground",
+        y =
+            null != g && null != g.docs
+                ? (0, r.jsx)(l.Anchor, {
+                      href: g.docs,
                       children: "Documentation",
                   })
                 : "Explore the Mana Design System",
-        g = i.useCallback(() => {
-            null != _ && u.$.setState({ selected: _.id }), (0, l.jN)(d.S9g.MANA_PLAYGROUND);
-        }, [_]);
+        O = i.useCallback(() => {
+            if (null != g) {
+                for (let e of d.g.collections)
+                    if (e.groups.some((e) => e.stories.some((e) => e.id === g.id))) {
+                        p.$.setState({
+                            selectedCollection: e.id,
+                            selectedStory: g.id,
+                        });
+                        break;
+                    }
+            }
+            (0, f.jN)(h.S9g.MANA_PLAYGROUND);
+        }, [g]);
     return n
         ? (0, r.jsx)("div", {
-              className: f.root,
-              "data-has-story": null != _,
-              children: (0, r.jsxs)(s.Kqy, {
-                  direction: null == _ ? "vertical" : "horizontal",
-                  align: null == _ ? "start" : "center",
+              className: m.root,
+              "data-has-story": null != g,
+              children: (0, r.jsxs)(o.Kq, {
+                  direction: null == g ? "vertical" : "horizontal",
+                  align: null == g ? "start" : "center",
                   gap: 12,
-                  justify: null == _ ? "end" : "space-between",
+                  justify: null == g ? "end" : "space-between",
                   children: [
                       (0, r.jsx)("div", {
-                          className: f.header,
-                          children: (0, r.jsxs)(s.Kqy, {
+                          className: m.header,
+                          children: (0, r.jsxs)(o.Kq, {
                               direction: "horizontal",
                               align: "start",
                               gap: 8,
                               children: [
-                                  (0, r.jsx)(s.hh5, { size: "lg" }),
-                                  (0, r.jsxs)(s.Kqy, {
+                                  (0, r.jsx)(a.hh5, { size: "lg" }),
+                                  (0, r.jsxs)(o.Kq, {
                                       direction: "vertical",
                                       gap: 0,
                                       children: [
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(c.x, {
                                               variant: "text-md/semibold",
-                                              children: p,
+                                              children: E,
                                           }),
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(c.x, {
                                               variant: "text-sm/normal",
-                                              children: m,
+                                              children: y,
                                           }),
                                       ],
                                   }),
                               ],
                           }),
                       }),
-                      (0, r.jsx)(s.zxk, {
+                      (0, r.jsx)(u.z, {
                           size: "sm",
-                          onClick: g,
+                          onClick: O,
                           text: "Open Playground",
-                          fullWidth: null == _,
+                          fullWidth: null == g,
                       }),
                   ],
               }),

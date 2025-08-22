@@ -1,4 +1,4 @@
-r.d(t, { Z: () => g });
+r.d(t, { Z: () => b });
 var n = r(951288),
     i = r(647438),
     l = r(481060),
@@ -33,7 +33,7 @@ function f(e) {
     }
     return e;
 }
-function b(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,9 +51,9 @@ function b(e, t) {
         e
     );
 }
-function g(e) {
+function b(e) {
     let { widget: t } = e,
-        g = i.useRef(null),
+        b = i.useRef(null),
         p = (e) => {
             if (e.shiftKey) {
                 (0, c.y8)(t.type), (0, s.L$)(u.qb.WIDGET_REMOVED);
@@ -65,7 +65,7 @@ function g(e) {
                     return (r) =>
                         (0, n.jsx)(
                             e,
-                            b(f({}, r), {
+                            g(f({}, r), {
                                 userId: o.default.getId(),
                                 widget: t,
                             }),
@@ -75,7 +75,7 @@ function g(e) {
             );
         };
     return (0, n.jsx)(l.yRy, {
-        targetElementRef: g,
+        targetElementRef: b,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
@@ -102,8 +102,8 @@ function g(e) {
         children: (e) =>
             (0, n.jsx)(
                 l.hU,
-                b(f({}, e), {
-                    buttonRef: g,
+                g(f({}, e), {
+                    buttonRef: b,
                     icon: l.xhG,
                     variant: "secondary",
                     "aria-label": d.intl.string(d.t.xpSHSk),

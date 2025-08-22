@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(202841),
@@ -23,12 +23,14 @@ var r = n(951288),
     j = n(481932),
     E = n(664794),
     S = n(4517),
-    I = n(277117),
-    P = n(52639),
-    Z = n(671955),
-    T = n(388032),
-    N = n(231688);
-function A(e) {
+    I = n(252748),
+    P = n(277117),
+    Z = n(52639),
+    T = n(228168),
+    N = n(671955),
+    A = n(388032),
+    w = n(231688);
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,59 +55,60 @@ function A(e) {
     }
     return e;
 }
-function w(e) {
+function M(e) {
     var t;
-    let { user: n, currentUser: f, channel: T } = e,
-        w = __OVERLAY__,
-        M = (0, m.ZP)(n.id),
-        D = (0, c.ZP)(),
-        L = i.useRef(Date.now()),
-        { analyticsLocations: k } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
-        U = (0, h.ZB)({
+    let { user: n, currentUser: f, channel: A } = e,
+        M = __OVERLAY__,
+        L = (0, m.ZP)(n.id),
+        k = (0, c.ZP)(),
+        U = i.useRef(Date.now()),
+        { analyticsLocations: B } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        F = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: n.id,
-            channelId: T.id,
+            channelId: A.id,
         }),
-        B = i.useRef(null),
-        F = (0, s.Z)(B),
-        G = (0, g.$m)(),
-        H = (0, o.q_F)({
-            opacity: +(null != G.interactionType),
+        G = i.useRef(null),
+        H = (0, s.Z)(G),
+        V = (0, g.$m)(),
+        z = (0, o.q_F)({
+            opacity: +(null != V.interactionType),
             config: { duration: 150 },
         }),
-        V = (e) => {
+        W = (e) => {
             (0, b.openUserProfileModal)(
-                A(
+                R(
                     {
-                        sourceAnalyticsLocations: k,
+                        sourceAnalyticsLocations: B,
                         hideRestrictedProfile: !0,
                     },
-                    U,
+                    F,
                     e,
                 ),
             );
-        };
+        },
+        q = (null == L ? void 0 : L.widgets) != null && L.widgets.length > 0;
     return (0, r.jsx)(d.Gt, {
-        value: k,
+        value: B,
         children: (0, r.jsx)(h.Mt, {
-            value: U,
-            openedAt: L.current,
-            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
-            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
-            isLoaded: null == M ? void 0 : M.isLoaded,
+            value: F,
+            openedAt: U.current,
+            fetchStartedAt: null == L ? void 0 : L.fetchStartedAt,
+            fetchEndedAt: null == L ? void 0 : L.fetchEndedAt,
+            isLoaded: null == L ? void 0 : L.isLoaded,
             children: (0, r.jsx)(g.NJ, {
-                value: G,
+                value: V,
                 children: (0, r.jsxs)(x.Z, {
-                    ref: B,
+                    ref: G,
                     user: n,
-                    displayProfile: M,
-                    themeType: Z.l.SIDEBAR,
-                    themeOverride: D,
+                    displayProfile: L,
+                    themeType: N.l.SIDEBAR,
+                    themeOverride: k,
                     children: [
-                        null != G.interactionType &&
+                        null != V.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: H,
-                                className: N.backdrop,
+                                style: z,
+                                className: w.backdrop,
                             }),
                         (0, r.jsxs)(a.u2, {
                             children: [
@@ -113,8 +116,8 @@ function w(e) {
                                     children: [
                                         (0, r.jsx)(j.Z, {
                                             user: n,
-                                            themeType: Z.l.SIDEBAR,
-                                            shouldShowTooltip: null === G.interactionType,
+                                            themeType: N.l.SIDEBAR,
+                                            shouldShowTooltip: null === V.interactionType,
                                         }),
                                         n.bot
                                             ? (0, r.jsx)(v.Z, { user: n })
@@ -125,58 +128,68 @@ function w(e) {
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: N.header,
+                                    className: w.header,
                                     children: [
                                         (0, r.jsx)(y.Z, {
                                             user: n,
-                                            displayProfile: M,
-                                            themeType: Z.l.SIDEBAR,
-                                            animateOnHover: !F,
-                                            className: N.banner,
+                                            displayProfile: L,
+                                            themeType: N.l.SIDEBAR,
+                                            animateOnHover: !H,
+                                            className: w.banner,
                                         }),
                                         (0, r.jsx)(C.Z, {
                                             userId: n.id,
-                                            className: N.toast,
+                                            className: w.toast,
                                         }),
                                         (0, r.jsx)(_.Z, {
                                             user: n,
-                                            displayProfile: M,
-                                            channelId: T.id,
-                                            themeType: Z.l.SIDEBAR,
-                                            onOpenProfile: w ? void 0 : V,
+                                            displayProfile: L,
+                                            channelId: A.id,
+                                            themeType: N.l.SIDEBAR,
+                                            onOpenProfile: M ? void 0 : W,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             user: n,
-                                            channelId: T.id,
-                                            themeType: Z.l.SIDEBAR,
+                                            channelId: A.id,
+                                            themeType: N.l.SIDEBAR,
                                             disableToolbar: n.bot,
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(I.Z, {
-                                    user: n,
-                                    currentUser: f,
-                                    displayProfile: M,
-                                    channel: T,
-                                    isHovering: null == G.interactionType && F,
-                                    onOpenProfile: w ? void 0 : V,
-                                }),
                                 (0, r.jsx)(P.Z, {
                                     user: n,
-                                    channelId: T.id,
+                                    currentUser: f,
+                                    displayProfile: L,
+                                    channel: A,
+                                    isHovering: null == V.interactionType && H,
+                                    onOpenProfile: M ? void 0 : W,
+                                }),
+                                q &&
+                                    (0, r.jsx)("div", {
+                                        className: w.widgetBreadcrumb,
+                                        children: (0, r.jsx)(I.Z, {
+                                            widgets: L.widgets,
+                                            onClick: () => {
+                                                null == W || W({ section: T.oh.WIDGETS });
+                                            },
+                                        }),
+                                    }),
+                                (0, r.jsx)(Z.Z, {
+                                    user: n,
+                                    channelId: A.id,
                                 }),
                             ],
                         }),
-                        !w &&
-                            (0, r.jsx)(R, {
-                                handleOpenProfile: V,
-                                analyticsLocations: k,
-                                context: U,
+                        !M &&
+                            (0, r.jsx)(D, {
+                                handleOpenProfile: W,
+                                analyticsLocations: B,
+                                context: F,
                             }),
-                        (null == M ? void 0 : M.profileEffect) != null &&
+                        (null == L ? void 0 : L.profileEffect) != null &&
                             (0, r.jsx)(p.Z, {
-                                profileEffectId: null == M || null == (t = M.profileEffect) ? void 0 : t.id,
-                                isHovering: F,
+                                profileEffectId: null == L || null == (t = L.profileEffect) ? void 0 : t.id,
+                                isHovering: H,
                                 urlQueryString: "dmView",
                             }),
                     ],
@@ -185,18 +198,18 @@ function w(e) {
         }),
     });
 }
-let R = (e) => {
+let D = (e) => {
     let { handleOpenProfile: t, analyticsLocations: n, context: l } = e,
         [a, s] = i.useState("interactive-normal");
     return (0, r.jsx)("div", {
-        className: N.footer,
+        className: w.footer,
         children: (0, r.jsx)(o.P3F, {
             onMouseEnter: () => s("interactive-hover"),
             onMouseLeave: () => s("interactive-normal"),
             onClick: () => {
                 t(),
                     (0, f.pQ)(
-                        A(
+                        R(
                             {
                                 action: "PRESS_VIEW_PROFILE",
                                 analyticsLocations: n,
@@ -205,11 +218,11 @@ let R = (e) => {
                         ),
                     );
             },
-            className: N.footerButton,
+            className: w.footerButton,
             children: (0, r.jsx)(o.Text, {
                 color: a,
                 variant: "text-sm/normal",
-                children: T.intl.string(T.t["+Xp3ho"]),
+                children: A.intl.string(A.t["+Xp3ho"]),
             }),
         }),
     });
