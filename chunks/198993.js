@@ -1,115 +1,115 @@
-n.d(t, {
-    ZP: () => v,
-    c2: () => x,
-    cK: () => p,
+t.d(r, {
+    ZP: () => h,
+    c2: () => g,
+    cK: () => m,
 });
-var r,
-    i,
-    l,
-    o = n(951288),
-    s = n(647438),
-    a = n(120356),
-    c = n.n(a),
-    u = n(598390),
-    d = n(678249);
-function h(e, t, n) {
+var n,
+    o,
+    a,
+    s = t(951288),
+    i = t(647438),
+    l = t(120356),
+    c = t.n(l),
+    d = t(598390),
+    u = t(678249);
+function f(e, r, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        r in e
+            ? Object.defineProperty(e, r, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[r] = t),
         e
     );
 }
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+function C(e) {
+    for (var r = 1; r < arguments.length; r++) {
+        var t = null != arguments[r] ? arguments[r] : {},
+            n = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(t).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                h(e, t, n[t]);
+            n.forEach(function (r) {
+                f(e, r, t[r]);
             });
     }
     return e;
 }
-var p = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
-let g = Object.freeze({
+var m = (((n = {}).SIZE_40 = "SIZE_40"), (n.SIZE_60 = "SIZE_60"), n);
+let p = Object.freeze({
         SIZE_40: "size-40",
         SIZE_60: "size-60",
     }),
-    m = n(515695);
-class _ extends (i = s.PureComponent) {
+    x = t(515695);
+class b extends (o = i.PureComponent) {
     render() {
         let e = this.props,
-            { className: t, text: n } = e,
-            r = (function (e, t) {
+            { className: r, text: t } = e,
+            n = (function (e, r) {
                 if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
+                var t,
+                    n,
+                    o = (function (e, r) {
                         if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
-                    })(e, t);
+                        var t,
+                            n,
+                            o = {},
+                            a = Object.keys(e);
+                        for (n = 0; n < a.length; n++) (t = a[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                        return o;
+                    })(e, r);
                 if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++)
-                        (n = l[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    var a = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < a.length; n++)
+                        (t = a[n]),
+                            !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
                 }
-                return i;
+                return o;
             })(e, ["className", "text"]);
-        return (0, o.jsx)("div", {
+        return (0, s.jsx)("div", {
             style: {
-                width: r.size,
-                height: r.size,
-                backgroundColor: r.bgColor,
+                width: n.size,
+                height: n.size,
+                backgroundColor: n.bgColor,
             },
-            className: c()(d.qrCodeContainer, t),
-            children: (0, o.jsx)(
-                u.default,
-                f(
+            className: c()(u.qrCodeContainer, r),
+            children: (0, s.jsx)(
+                d.default,
+                C(
                     {
-                        value: n,
+                        value: t,
                         level: "M",
                     },
-                    r,
+                    n,
                 ),
             ),
         });
     }
 }
-h(_, "defaultProps", {
+f(b, "defaultProps", {
     size: 128,
     bgColor: "#ffffff",
     fgColor: "#000000",
 });
-class x extends (l = s.PureComponent) {
+class g extends (a = i.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = g[null != e ? e : "SIZE_40"];
-        return (0, o.jsxs)("div", {
-            className: d.qrCodeOverlayContainer,
+            r = p[null != e ? e : "SIZE_40"];
+        return (0, s.jsxs)("div", {
+            className: u.qrCodeOverlayContainer,
             children: [
-                (0, o.jsx)(_, f({}, this.props)),
-                (0, o.jsx)("div", {
-                    className: d.qrCodeOverlay,
-                    children: (0, o.jsx)("img", {
-                        className: d[t],
-                        src: m,
+                (0, s.jsx)(b, C({}, this.props)),
+                (0, s.jsx)("div", {
+                    className: u.qrCodeOverlay,
+                    children: (0, s.jsx)("img", {
+                        className: u[r],
+                        src: x,
                         alt: "",
                     }),
                 }),
@@ -117,9 +117,9 @@ class x extends (l = s.PureComponent) {
         });
     }
 }
-h(x, "defaultProps", {
+f(g, "defaultProps", {
     size: 144,
     bgColor: "#ffffff",
     fgColor: "#000000",
 });
-let v = _;
+let h = b;

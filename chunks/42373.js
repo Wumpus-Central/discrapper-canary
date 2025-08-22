@@ -96,6 +96,9 @@ function A(e) {
             break;
         case g.NA.VOICE_FILTERS:
             t = y.voiceFiltersBackground;
+            break;
+        case g.NA.CUSTOM_THEMES:
+            t = y.customThemesBackground;
     }
     return t;
 }

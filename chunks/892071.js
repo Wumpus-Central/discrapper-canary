@@ -98,7 +98,7 @@ function m(e) {
             let e = G
                 ? {
                       x: 10,
-                      y: 16,
+                      y: 12,
                   }
                 : {
                       x: 10,

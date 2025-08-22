@@ -4,6 +4,7 @@ var r = {
     referralProgramBackground: "referralProgramBackground_abac7b",
     serverProfilesBackground: "serverProfilesBackground_abac7b",
     yourStyleBackground: "yourStyleBackground_abac7b",
+    customThemesBackground: "customThemesBackground_abac7b",
     yourSpaceBackground: "yourSpaceBackground_abac7b",
     noLimitsBackground: "noLimitsBackground_abac7b",
     emojisBackground: "emojisBackground_abac7b",

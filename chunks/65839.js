@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -7,46 +7,54 @@ var r = n(951288),
     s = n(393238),
     c = n(400251),
     u = n(75666),
-    d = n(388032),
-    p = n(806328),
-    h = n(152013),
-    f = n(584354),
-    m = n(725060);
-let g = (e) => {
+    d = n(231338),
+    p = n(388032),
+    h = n(806328),
+    f = n(152013),
+    m = n(584354),
+    g = n(725060);
+let b = (e) => {
         let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
             { ref: c, width: u } = (0, s.ZP)(),
-            p = null != u && u <= 800;
+            h = null != u && u <= 800;
         return (0, r.jsxs)("div", {
             ref: c,
-            className: h.header,
+            className: f.header,
             children: [
                 (0, r.jsx)("img", {
                     alt: "",
-                    className: h.headerImage,
-                    src: p ? m : f,
+                    className: f.headerImage,
+                    src: h ? g : m,
                 }),
                 (0, r.jsx)("div", {
-                    className: h.headerContentWrapper,
+                    className: f.headerContentWrapper,
                     children: (0, r.jsxs)("div", {
-                        className: a()(h.headerContent, { [h.headerContentSmall]: p }),
+                        className: a()(f.headerContent, { [f.headerContentSmall]: h }),
                         children: [
                             (0, r.jsx)(o.X6q, {
                                 variant: "heading-xl/semibold",
-                                className: h.searchTitle,
-                                children: d.intl.string(d.t.IT7qoK),
+                                className: f.searchTitle,
+                                children: p.intl.string(p.t.IT7qoK),
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/normal",
-                                className: h.searchSubtitle,
-                                children: d.intl.string(d.t["5PoYtr"]),
+                                className: f.searchSubtitle,
+                                children: p.intl.string(p.t["5PoYtr"]),
                             }),
-                            (0, r.jsx)(o.E1j, {
-                                query: t,
-                                "aria-label": d.intl.string(d.t.nL2wKC),
-                                placeholder: d.intl.string(d.t.nL2wKC),
-                                onChange: n,
-                                onClear: i,
-                                onKeyDown: l,
+                            (0, r.jsx)(o.f6W, {
+                                theme: d.BR.LIGHT,
+                                children: (e) =>
+                                    (0, r.jsx)("div", {
+                                        className: a()(f.searchContainer, e),
+                                        children: (0, r.jsx)(o.E1j, {
+                                            query: t,
+                                            "aria-label": p.intl.string(p.t.nL2wKC),
+                                            placeholder: p.intl.string(p.t.nL2wKC),
+                                            onChange: n,
+                                            onClear: i,
+                                            onKeyDown: l,
+                                        }),
+                                    }),
                             }),
                         ],
                     }),
@@ -54,39 +62,39 @@ let g = (e) => {
             ],
         });
     },
-    b = (e) => {
+    _ = (e) => {
         let {
             channel: t,
             directoryEntries: n,
             handleCreateOrAddGuild: l,
             searchQuery: a,
             setSearchQuery: s,
-            handleClearSearch: f,
+            handleClearSearch: d,
             handleSearchKeyPress: m,
-            currentCategoryId: b,
+            currentCategoryId: g,
             handleSelectCategory: _,
             categoryCounts: y,
             allEntriesCount: C,
             isLoading: x,
         } = e;
         return (0, r.jsx)("div", {
-            className: p.pageContainer,
+            className: h.pageContainer,
             children: (0, r.jsxs)(o.yWw, {
-                className: p.scroller,
+                className: h.scroller,
                 children: [
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(b, {
                         searchQuery: a,
                         setSearchQuery: s,
-                        handleClearSearch: f,
+                        handleClearSearch: d,
                         handleSearchKeyPress: m,
                     }),
                     (0, r.jsx)(o.h21, {
                         orientation: "horizontal",
                         children: (0, r.jsxs)(o.njP, {
-                            className: h.tabBar,
+                            className: f.tabBar,
                             type: "top",
                             look: "brand",
-                            selectedItem: b,
+                            selectedItem: g,
                             onItemSelect: (e) => {
                                 _(e);
                             },
@@ -94,9 +102,9 @@ let g = (e) => {
                                 (0, r.jsx)(
                                     o.njP.Item,
                                     {
-                                        className: h.tabBarItem,
+                                        className: f.tabBarItem,
                                         id: u.AR.ALL,
-                                        children: "".concat(d.intl.string(d.t.hEAa2d), " (").concat(C, ")"),
+                                        children: "".concat(p.intl.string(p.t.hEAa2d), " (").concat(C, ")"),
                                     },
                                     u.AR.ALL,
                                 ),
@@ -105,7 +113,7 @@ let g = (e) => {
                                     return (0, r.jsx)(
                                         o.njP.Item,
                                         {
-                                            className: h.tabBarItem,
+                                            className: f.tabBarItem,
                                             id: t,
                                             children: ""
                                                 .concat(n, " ")
@@ -118,7 +126,7 @@ let g = (e) => {
                         }),
                     }),
                     x && null == n
-                        ? (0, r.jsx)(o.$jN, { className: p.spinner })
+                        ? (0, r.jsx)(o.$jN, { className: h.spinner })
                         : null == n
                           ? void 0
                           : n.map((e, t) =>
@@ -129,12 +137,12 @@ let g = (e) => {
                                             void 0 !== e.header
                                                 ? (0, r.jsx)(o.Text, {
                                                       variant: "text-md/semibold",
-                                                      className: h.sectionHeader,
+                                                      className: f.sectionHeader,
                                                       children: e.header,
                                                   })
                                                 : null,
                                             (0, r.jsxs)("div", {
-                                                className: p.cardsContainer,
+                                                className: h.cardsContainer,
                                                 children: [
                                                     e.entries.map((e) => (0, r.jsx)(c.Z, { entry: e }, e.guildId)),
                                                     e.appendEndCard && null != l

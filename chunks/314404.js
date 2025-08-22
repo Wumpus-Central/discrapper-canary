@@ -378,7 +378,7 @@ function J(e) {
                 className: H.stepBodyCustomGift,
                 children: [
                     (0, r.jsx)("div", {
-                        className: H.bodyColumnMiddle,
+                        className: eu ? H.bodyColumnMiddleCentered : H.bodyColumnMiddle,
                         children: null != e_ && (0, r.jsx)(j.q, {}),
                     }),
                     (0, r.jsxs)("div", {

@@ -1,7 +1,8 @@
 n.d(t, {
     Z: () => O,
     z: () => g,
-});
+}),
+    n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -62,7 +63,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = null;
+let m = new Set();
 function g(e, t) {
     return "USER_PROFILE_MODAL_KEY:".concat(e, ":").concat(null == t ? "" : t);
 }
@@ -74,12 +75,12 @@ async function E(e) {
             subsection: f,
             guildId: h,
             channelId: E,
-            showGuildProfile: y = !0,
-            appContext: O,
-            customStatusPrompt: v,
-            disableActionsForPreview: I = !1,
+            showGuildProfile: b = !0,
+            appContext: y,
+            customStatusPrompt: O,
+            disableActionsForPreview: v = !1,
         } = e,
-        T = p(e, [
+        I = p(e, [
             "userId",
             "section",
             "subsection",
@@ -90,11 +91,13 @@ async function E(e) {
             "customStatusPrompt",
             "disableActionsForPreview",
         ]);
-    let S = l.default.getUser(a);
+    let T = l.default.getUser(a);
+    if (null == T) return;
+    let S = l.default.getCurrentUser();
     if (null == S) return;
-    let A = l.default.getCurrentUser();
-    null != A &&
-        (m = await (0, i.ZDy)(
+    let A = g(a, b ? h : void 0);
+    m.add(
+        await (0, i.ZDy)(
             async () => {
                 let e = (
                     await Promise.all([n.e("1268"), n.e("27069"), n.e("62880"), n.e("98360")]).then(n.bind(n, 866035))
@@ -104,33 +107,37 @@ async function E(e) {
                         e,
                         _(
                             {
-                                user: S,
-                                currentUser: A,
+                                user: T,
+                                currentUser: S,
                                 guildId: h,
                                 initialSection: o,
                                 initialSubsection: f,
                                 channelId: E,
-                                showGuildProfile: y,
-                                customStatusPrompt: v,
-                                disableActionsForPreview: I,
+                                showGuildProfile: b,
+                                customStatusPrompt: O,
+                                disableActionsForPreview: v,
                             },
                             t,
-                            T,
+                            I,
                         ),
                     );
             },
             {
-                modalKey: g(a, y ? h : void 0),
-                contextKey: (0, i.VnL)(null != (t = null != O ? O : (0, s.GB)()) ? t : d.IlC.APP),
+                modalKey: A,
+                contextKey: (0, i.VnL)(null != (t = null != y ? y : (0, s.GB)()) ? t : d.IlC.APP),
                 onCloseRequest: () => {
                     if (u.Z.hasSaveablePendingChanges()) return void c.Z.notifyPendingWidgets();
-                    b();
+                    (0, i.Mr3)(A), m.delete(A), c.Z.clearPendingWidgets();
                 },
             },
-        ));
+        ),
+    );
 }
 function b() {
-    null != m && ((0, i.Mr3)(m), c.Z.clearPendingWidgets()), (m = null);
+    if (0 !== m.size) {
+        for (let e of m) (0, i.Mr3)(e);
+        m.clear(), c.Z.clearPendingWidgets();
+    }
 }
 class y extends o.Z {
     _initialize() {

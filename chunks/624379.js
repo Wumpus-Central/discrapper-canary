@@ -2,6 +2,7 @@ e.exports = {
     stepBody: "stepBody_d947e6",
     stepBodyCustomGift: "stepBodyCustomGift_d947e6",
     bodyColumnMiddle: "bodyColumnMiddle_d947e6",
+    bodyColumnMiddleCentered: "bodyColumnMiddleCentered_d947e6",
     bodyColumnRight: "bodyColumnRight_d947e6",
     bodyText: "bodyText_d947e6",
     selectPlanDivider: "selectPlanDivider_d947e6",

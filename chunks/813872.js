@@ -1,9 +1,9 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => j });
 var l = n(951288),
     r = n(647438),
     i = n(442837),
-    a = n(481060),
-    o = n(40851),
+    o = n(481060),
+    a = n(40851),
     u = n(549879),
     c = n(189432),
     s = n(189357),
@@ -12,27 +12,27 @@ var l = n(951288),
     b = n(626135),
     g = n(981631),
     O = n(176505),
-    E = n(50493),
-    y = n(388032);
-function p(e) {
-    let { userId: t, guildId: n, channelId: p, location: Z, onAction: P, appContext: j } = e,
-        m = r.useContext(b.AnalyticsContext),
-        v = (0, o.Aq)(),
-        h = (0, i.e7)([f.Z], () => (null != p ? p : f.Z.getChannelId(n, !0)), [p, n]),
-        _ = (0, i.e7)([d.ZP], () => (null == n ? null : d.ZP.getMember(n, t)), [n, t]),
-        S = (0, s.m)(n);
-    return null != n && null != _ && S
-        ? (0, l.jsx)(a.sNh, {
+    y = n(50493),
+    Z = n(388032);
+function j(e) {
+    let { userId: t, guildId: n, channelId: j, location: v, onAction: m, appContext: E } = e,
+        p = r.useContext(b.AnalyticsContext),
+        S = (0, a.Aq)(),
+        _ = (0, i.e7)([f.Z], () => (null != j ? j : f.Z.getChannelId(n, !0)), [j, n]),
+        h = (0, i.e7)([d.ZP], () => (null == n ? null : d.ZP.getMember(n, t)), [n, t]),
+        P = (0, s.m)(n);
+    return null != n && null != h && P
+        ? (0, l.jsx)(o.sNh, {
               id: "mod-view",
-              label: y.intl.string(y.t.kj3tz8),
+              label: Z.intl.string(Z.t.kj3tz8),
               action: () => {
-                  null == P || P(),
-                      (0, u.i)(j),
-                      (0, c.r)(n, t, null != h ? h : O.oC.MEMBER_SAFETY, {
-                          modViewPanel: E.k.INFO,
-                          sourceLocation: null != Z ? Z : m.location,
+                  null == m || m(),
+                      (0, u.i)(E),
+                      (0, c.r)(n, t, null != _ ? _ : O.oC.MEMBER_SAFETY, {
+                          modViewPanel: y.k.INFO,
+                          sourceLocation: null != v ? v : p.location,
                       }),
-                      v.dispatch(g.CkL.POPOUT_CLOSE);
+                      S.dispatch(g.CkL.POPOUT_CLOSE);
               },
           })
         : null;

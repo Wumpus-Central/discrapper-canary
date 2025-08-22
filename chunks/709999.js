@@ -288,7 +288,7 @@ function ev(e) {
         { enabled: H } = (0, O.WX)({ location: "collectibles_shop_tall_card" }),
         { handleUseNow: D, isApplying: V } = (0, L.W)({ product: l }),
         F = d(x.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-        U = (0, Y.I)(t),
+        U = (0, Y.Iw)(t),
         q = null != U,
         {
             displayPrices: K,
