@@ -15014,14 +15014,13 @@ svg.radioIcon_c1e9c4 {
 
 .childContainer__3e3b0 {
     align-items: center;
-    bottom: 0;
     display: flex;
     justify-content: center;
-    left: 0;
+    left: 50%;
     pointer-events: none;
     position: absolute;
-    right: 0;
-    top: 0
+    top: 50%;
+    transform: translate(-50%, -50%)
 }
 
 :where(.redesignIconChildContainer__3e3b0)>svg {
@@ -15050,11 +15049,6 @@ svg.radioIcon_c1e9c4 {
 
 .staff__09691 {
     color: var(--icon-tertiary)
-}
-
-.staff__09691 .icon__09691 {
-    height: 60%;
-    width: 60%
 }
 
 .partnered__09691 {
@@ -90527,7 +90521,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
