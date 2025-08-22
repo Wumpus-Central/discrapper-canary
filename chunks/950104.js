@@ -1,8 +1,7 @@
 n.d(t, {
-    DT: () => d,
+    DT: () => u,
     Qg: () => c,
     S3: () => s,
-    r5: () => u,
 }),
     n(388685),
     n(415506);
@@ -42,8 +41,5 @@ function c(e) {
     return l(h);
 }
 function u(e, t) {
-    return l(i()(e).darken(t));
-}
-function d(e, t) {
     return l(i()(e).brighten(t));
 }

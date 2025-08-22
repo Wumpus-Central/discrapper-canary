@@ -144,7 +144,7 @@ class c {
         return this._userProfile.legacyUsername;
     }
     constructor(e, t) {
-        var n, r, i;
+        var n, r, i, a;
         s(this, "userId", void 0),
             s(this, "guildId", void 0),
             s(this, "banner", void 0),
@@ -152,9 +152,8 @@ class c {
             s(this, "pronouns", void 0),
             s(this, "accentColor", void 0),
             s(this, "themeColors", void 0),
+            s(this, "profileEffect", void 0),
             s(this, "popoutAnimationParticleType", void 0),
-            s(this, "profileEffectId", void 0),
-            s(this, "profileEffectExpiresAt", void 0),
             s(this, "fetchStartedAt", void 0),
             s(this, "fetchEndedAt", void 0),
             s(this, "_userProfile", void 0),
@@ -166,13 +165,9 @@ class c {
             (this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns)),
             (this.accentColor = e.accentColor),
             (this.themeColors = null != (r = null == t ? void 0 : t.themeColors) ? r : e.themeColors),
+            (this.profileEffect = null != (i = null == t ? void 0 : t.profileEffect) ? i : e.profileEffect),
             (this.popoutAnimationParticleType =
-                null != (i = null == t ? void 0 : t.popoutAnimationParticleType) ? i : e.popoutAnimationParticleType),
-            (null == t ? void 0 : t.profileEffectId) != null
-                ? ((this.profileEffectId = t.profileEffectId), (this.profileEffectExpiresAt = t.profileEffectExpiresAt))
-                : null != e.profileEffectId &&
-                  ((this.profileEffectId = e.profileEffectId),
-                  (this.profileEffectExpiresAt = e.profileEffectExpiresAt)),
+                null != (a = null == t ? void 0 : t.popoutAnimationParticleType) ? a : e.popoutAnimationParticleType),
             (this.fetchStartedAt = e.fetchStartedAt),
             (this.fetchEndedAt = e.fetchEndedAt),
             (this._userProfile = e),

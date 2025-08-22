@@ -213,7 +213,7 @@ function er(e) {
                                             }),
                                             (0, r.jsxs)("div", {
                                                 className: et.profile,
-                                                ref: (null == eT ? void 0 : eT.profileEffectId) != null ? ev : void 0,
+                                                ref: (null == eT ? void 0 : eT.profileEffect) != null ? ev : void 0,
                                                 children: [
                                                     (0, r.jsxs)("div", {
                                                         className: et.profileHeader,
@@ -447,9 +447,9 @@ function er(e) {
                                                             }),
                                                         ],
                                                     }),
-                                                    (null == eT ? void 0 : eT.profileEffectId) != null &&
+                                                    (null == eT ? void 0 : eT.profileEffect) != null &&
                                                         (0, r.jsx)(h.Z, {
-                                                            profileEffectId: null == eT ? void 0 : eT.profileEffectId,
+                                                            profileEffectId: null == eT ? void 0 : eT.profileEffect.id,
                                                             isHovering: e_,
                                                         }),
                                                 ],

@@ -99,7 +99,7 @@ let v = (e) => {
                 void 0 !== a.themeColors.find((e) => null !== e) &&
                 o.push(h.cm.THEME),
             (null == t ? void 0 : t.avatarDecoration) != null && o.push(h.cm.AVATAR_DECORATION),
-            (null == a ? void 0 : a.profileEffectId) != null && o.push(h.cm.PROFILE_EFFECT),
+            (null == a ? void 0 : a.profileEffect) != null && o.push(h.cm.PROFILE_EFFECT),
             o
         );
     },
@@ -110,42 +110,42 @@ let v = (e) => {
     },
     T = (e) => (null == e ? e : "VOICE" === e ? "VOICE" : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
     S = (e) => {
-        var t, n;
-        let { layout: r, userId: i, guildId: a, sessionId: l, sourceSessionId: u, showGuildProfile: d = !0 } = e,
-            f = c.default.getUser(i);
-        if (null == f) return {};
-        let _ = (0, p.Of)(null == f ? void 0 : f.id, d ? a : void 0),
-            h = d && null != a ? o.ZP.getMember(a, null == f ? void 0 : f.id) : null;
+        var t, n, r;
+        let { layout: i, userId: a, guildId: l, sessionId: u, sourceSessionId: d, showGuildProfile: f = !0 } = e,
+            _ = c.default.getUser(a);
+        if (null == _) return {};
+        let h = (0, p.Of)(null == _ ? void 0 : _.id, f ? l : void 0),
+            m = f && null != l ? o.ZP.getMember(l, null == _ ? void 0 : _.id) : null;
         return {
-            profile_layout: r,
-            profile_session_id: l,
-            source_profile_session_id: u,
+            profile_layout: i,
+            profile_session_id: u,
+            source_profile_session_id: d,
             profile_properties: v({
-                user: f,
-                userProfile: null == _ ? void 0 : _._userProfile,
+                user: _,
+                userProfile: null == h ? void 0 : h._userProfile,
             }),
             guild_profile_properties: v({
-                guildMember: h,
-                guildMemberProfile: null == _ ? void 0 : _._guildMemberProfile,
+                guildMember: m,
+                guildMemberProfile: null == h ? void 0 : h._guildMemberProfile,
             }),
-            profile_activity_types: s.Z.getActivities(f.id)
+            profile_activity_types: s.Z.getActivities(_.id)
                 .map((e) => {
                     let { type: t } = e;
                     return t;
                 })
                 .filter((e) => void 0 !== e),
             profile_badges:
-                null == _ || null == (t = _.getBadges())
+                null == h || null == (t = h.getBadges())
                     ? void 0
                     : t.map((e) => {
                           let { id: t } = e;
                           return t;
                       }),
-            avatar_decoration_sku_id: null == (n = f.avatarDecoration) ? void 0 : n.skuId,
-            profile_effect_sku_id: null == _ ? void 0 : _.profileEffectId,
-            user_status: I(f.id),
-            is_guild_profile: (null == _ ? void 0 : _.guildId) != null,
-            is_bot_profile: f.bot,
+            avatar_decoration_sku_id: null == (n = _.avatarDecoration) ? void 0 : n.skuId,
+            profile_effect_sku_id: null == h || null == (r = h.profileEffect) ? void 0 : r.skuId,
+            user_status: I(_.id),
+            is_guild_profile: (null == h ? void 0 : h.guildId) != null,
+            is_bot_profile: _.bot,
         };
     },
     A = (e) => {

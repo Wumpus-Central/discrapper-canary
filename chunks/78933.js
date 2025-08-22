@@ -180,19 +180,18 @@ function ed(e) {
         }, 500);
     }, []);
     let eZ = (e) => {
-            null == n || n(),
-                (0, A.openUserProfileModal)(
-                    eo(
-                        {
-                            customStatusPrompt: eU,
-                            sourceAnalyticsLocations: e_,
-                        },
-                        ep,
-                        e,
-                    ),
-                );
-        },
-        eV = (null == ef ? void 0 : ef.profileEffectId) != null && !ek.current;
+        null == n || n(),
+            (0, A.openUserProfileModal)(
+                eo(
+                    {
+                        customStatusPrompt: eU,
+                        sourceAnalyticsLocations: e_,
+                    },
+                    ep,
+                    e,
+                ),
+            );
+    };
     return (0, r.jsx)(_.Gt, {
         value: e_,
         children: (0, r.jsx)(I.Mt, {
@@ -450,9 +449,10 @@ function ed(e) {
                                     }),
                                 ],
                             }),
-                            eV &&
+                            (null == ef ? void 0 : ef.profileEffect) != null &&
+                                !ek.current &&
                                 (0, r.jsx)(v.Z, {
-                                    profileEffectId: null == ef ? void 0 : ef.profileEffectId,
+                                    profileEffectId: ef.profileEffect.id,
                                     isHovering: em,
                                 }),
                         ],

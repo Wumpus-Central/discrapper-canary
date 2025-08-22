@@ -54,56 +54,57 @@ function A(e) {
     return e;
 }
 function w(e) {
-    let { user: t, currentUser: n, channel: f } = e,
-        T = __OVERLAY__,
-        w = (0, m.ZP)(t.id),
-        M = (0, c.ZP)(),
-        D = i.useRef(Date.now()),
-        { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
-        k = (0, h.ZB)({
+    var t;
+    let { user: n, currentUser: f, channel: T } = e,
+        w = __OVERLAY__,
+        M = (0, m.ZP)(n.id),
+        D = (0, c.ZP)(),
+        L = i.useRef(Date.now()),
+        { analyticsLocations: k } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        U = (0, h.ZB)({
             layout: "SIDEBAR",
-            userId: t.id,
-            channelId: f.id,
+            userId: n.id,
+            channelId: T.id,
         }),
-        U = i.useRef(null),
-        B = (0, s.Z)(U),
-        F = (0, g.$m)(),
-        G = (0, o.q_F)({
-            opacity: +(null != F.interactionType),
+        B = i.useRef(null),
+        F = (0, s.Z)(B),
+        G = (0, g.$m)(),
+        H = (0, o.q_F)({
+            opacity: +(null != G.interactionType),
             config: { duration: 150 },
         }),
-        H = (e) => {
+        V = (e) => {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: L,
+                        sourceAnalyticsLocations: k,
                         hideRestrictedProfile: !0,
                     },
-                    k,
+                    U,
                     e,
                 ),
             );
         };
     return (0, r.jsx)(d.Gt, {
-        value: L,
+        value: k,
         children: (0, r.jsx)(h.Mt, {
-            value: k,
-            openedAt: D.current,
-            fetchStartedAt: null == w ? void 0 : w.fetchStartedAt,
-            fetchEndedAt: null == w ? void 0 : w.fetchEndedAt,
-            isLoaded: null == w ? void 0 : w.isLoaded,
+            value: U,
+            openedAt: L.current,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(g.NJ, {
-                value: F,
+                value: G,
                 children: (0, r.jsxs)(x.Z, {
-                    ref: U,
-                    user: t,
-                    displayProfile: w,
+                    ref: B,
+                    user: n,
+                    displayProfile: M,
                     themeType: Z.l.SIDEBAR,
-                    themeOverride: M,
+                    themeOverride: D,
                     children: [
-                        null != F.interactionType &&
+                        null != G.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: G,
+                                style: H,
                                 className: N.backdrop,
                             }),
                         (0, r.jsxs)(a.u2, {
@@ -111,15 +112,15 @@ function w(e) {
                                 (0, r.jsxs)(O.Z, {
                                     children: [
                                         (0, r.jsx)(j.Z, {
-                                            user: t,
+                                            user: n,
                                             themeType: Z.l.SIDEBAR,
-                                            shouldShowTooltip: null === F.interactionType,
+                                            shouldShowTooltip: null === G.interactionType,
                                         }),
-                                        t.bot
-                                            ? (0, r.jsx)(v.Z, { user: t })
+                                        n.bot
+                                            ? (0, r.jsx)(v.Z, { user: n })
                                             : (0, r.jsx)(E.Z, {
                                                   type: "banner",
-                                                  user: t,
+                                                  user: n,
                                               }),
                                     ],
                                 }),
@@ -127,57 +128,57 @@ function w(e) {
                                     className: N.header,
                                     children: [
                                         (0, r.jsx)(y.Z, {
-                                            user: t,
-                                            displayProfile: w,
+                                            user: n,
+                                            displayProfile: M,
                                             themeType: Z.l.SIDEBAR,
-                                            animateOnHover: !B,
+                                            animateOnHover: !F,
                                             className: N.banner,
                                         }),
                                         (0, r.jsx)(C.Z, {
-                                            userId: t.id,
+                                            userId: n.id,
                                             className: N.toast,
                                         }),
                                         (0, r.jsx)(_.Z, {
                                             location: "UserProfileSidebar",
-                                            user: t,
-                                            displayProfile: w,
-                                            channelId: f.id,
+                                            user: n,
+                                            displayProfile: M,
+                                            channelId: T.id,
                                             themeType: Z.l.SIDEBAR,
-                                            onOpenProfile: T ? void 0 : H,
+                                            onOpenProfile: w ? void 0 : V,
                                         }),
                                         (0, r.jsx)(S.Z, {
                                             location: "UserProfileSidebar",
-                                            user: t,
-                                            channelId: f.id,
+                                            user: n,
+                                            channelId: T.id,
                                             themeType: Z.l.SIDEBAR,
-                                            disableToolbar: t.bot,
+                                            disableToolbar: n.bot,
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(I.Z, {
-                                    user: t,
-                                    currentUser: n,
-                                    displayProfile: w,
-                                    channel: f,
-                                    isHovering: null == F.interactionType && B,
-                                    onOpenProfile: T ? void 0 : H,
+                                    user: n,
+                                    currentUser: f,
+                                    displayProfile: M,
+                                    channel: T,
+                                    isHovering: null == G.interactionType && F,
+                                    onOpenProfile: w ? void 0 : V,
                                 }),
                                 (0, r.jsx)(P.Z, {
-                                    user: t,
-                                    channelId: f.id,
+                                    user: n,
+                                    channelId: T.id,
                                 }),
                             ],
                         }),
-                        !T &&
+                        !w &&
                             (0, r.jsx)(R, {
-                                handleOpenProfile: H,
-                                analyticsLocations: L,
-                                context: k,
+                                handleOpenProfile: V,
+                                analyticsLocations: k,
+                                context: U,
                             }),
-                        (null == w ? void 0 : w.profileEffectId) != null &&
+                        (null == M ? void 0 : M.profileEffect) != null &&
                             (0, r.jsx)(p.Z, {
-                                profileEffectId: null == w ? void 0 : w.profileEffectId,
-                                isHovering: B,
+                                profileEffectId: null == M || null == (t = M.profileEffect) ? void 0 : t.id,
+                                isHovering: F,
                                 urlQueryString: "dmView",
                             }),
                     ],

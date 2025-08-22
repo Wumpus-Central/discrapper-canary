@@ -54,64 +54,65 @@ function A(e) {
     return e;
 }
 function w(e) {
-    let { user: t, channel: n } = e,
-        w = __OVERLAY__ || !(0, d.Z)(t.id),
-        R = (0, g.ZP)(t.id),
-        M = (0, s.ZP)(),
-        D = i.useRef(Date.now()),
-        { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        k = (0, f.ZB)({
+    var t;
+    let { user: n, channel: w } = e,
+        R = __OVERLAY__ || !(0, d.Z)(n.id),
+        M = (0, g.ZP)(n.id),
+        D = (0, s.ZP)(),
+        L = i.useRef(Date.now()),
+        { analyticsLocations: k } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        U = (0, f.ZB)({
             layout: "SIDEBAR",
-            userId: t.id,
-            channelId: n.id,
+            userId: n.id,
+            channelId: w.id,
         }),
-        U = i.useRef(null),
-        B = (0, o.Z)(U),
-        F = (e) => {
+        B = i.useRef(null),
+        F = (0, o.Z)(B),
+        G = (e) => {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: L,
+                        sourceAnalyticsLocations: k,
                         hideRestrictedProfile: !0,
                     },
-                    k,
+                    U,
                     e,
                 ),
             );
         };
     return (0, r.jsx)(u.Gt, {
-        value: L,
+        value: k,
         children: (0, r.jsx)(f.Mt, {
-            value: k,
-            openedAt: D.current,
-            fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
-            fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
-            isLoaded: null == R ? void 0 : R.isLoaded,
+            value: U,
+            openedAt: L.current,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsxs)(j.Z, {
-                ref: U,
-                user: t,
-                displayProfile: R,
+                ref: B,
+                user: n,
+                displayProfile: M,
                 themeType: P.l.SIDEBAR,
-                themeOverride: M,
+                themeOverride: D,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
-                            (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
+                            (0, r.jsx)(I.Z, { children: (0, r.jsx)(S.Z, { user: n }) }),
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
                                     (0, r.jsx)(C.Z, {
-                                        user: t,
-                                        displayProfile: R,
+                                        user: n,
+                                        displayProfile: M,
                                         themeType: P.l.SIDEBAR,
-                                        animateOnHover: !B,
+                                        animateOnHover: !F,
                                     }),
                                     (0, r.jsx)(_.Z, {
-                                        user: t,
-                                        displayProfile: R,
-                                        channelId: n.id,
+                                        user: n,
+                                        displayProfile: M,
+                                        channelId: w.id,
                                         themeType: P.l.SIDEBAR,
-                                        onOpenProfile: w ? void 0 : F,
+                                        onOpenProfile: R ? void 0 : G,
                                     }),
                                 ],
                             }),
@@ -119,12 +120,12 @@ function w(e) {
                                 className: N.body,
                                 children: [
                                     (0, r.jsx)(E.Z, {
-                                        user: t,
-                                        nickname: h.ZP.getName(null, n.id, t),
-                                        pronouns: null == R ? void 0 : R.pronouns,
-                                        onOpenProfile: w ? void 0 : F,
+                                        user: n,
+                                        nickname: h.ZP.getName(null, w.id, n),
+                                        pronouns: null == M ? void 0 : M.pronouns,
+                                        onOpenProfile: R ? void 0 : G,
                                         tags: (0, r.jsx)(y.Z, {
-                                            displayProfile: R,
+                                            displayProfile: M,
                                             themeType: P.l.SIDEBAR,
                                         }),
                                     }),
@@ -135,16 +136,16 @@ function w(e) {
                                                 heading: Z.intl.string(Z.t["61W33d"]),
                                                 headingColor: "header-primary",
                                                 children: (0, r.jsx)(x.Z, {
-                                                    userBio: null == R ? void 0 : R.bio,
-                                                    userId: t.id,
+                                                    userBio: null == M ? void 0 : M.bio,
+                                                    userId: n.id,
                                                     animateOnHover: !0,
-                                                    isHovering: B,
+                                                    isHovering: F,
                                                 }),
                                             }),
                                             (0, r.jsx)(O.Z, {
                                                 heading: Z.intl.string(Z.t["A//N4u"]),
                                                 headingColor: "header-primary",
-                                                children: (0, r.jsx)(v.Z, { userId: t.id }),
+                                                children: (0, r.jsx)(v.Z, { userId: n.id }),
                                             }),
                                         ],
                                     }),
@@ -152,19 +153,19 @@ function w(e) {
                             }),
                         ],
                     }),
-                    !w &&
+                    !R &&
                         (0, r.jsx)("div", {
                             className: T.footer,
                             children: (0, r.jsx)(a.P3F, {
                                 onClick: () => {
-                                    F(),
+                                    G(),
                                         (0, m.pQ)(
                                             A(
                                                 {
                                                     action: "PRESS_VIEW_PROFILE",
-                                                    analyticsLocations: L,
+                                                    analyticsLocations: k,
                                                 },
-                                                k,
+                                                U,
                                             ),
                                         );
                                 },
@@ -172,10 +173,10 @@ function w(e) {
                                 children: Z.intl.string(Z.t["+Xp3ho"]),
                             }),
                         }),
-                    (null == R ? void 0 : R.profileEffectId) != null &&
+                    (null == M ? void 0 : M.profileEffect) != null &&
                         (0, r.jsx)(p.Z, {
-                            profileEffectId: null == R ? void 0 : R.profileEffectId,
-                            isHovering: B,
+                            profileEffectId: null == M || null == (t = M.profileEffect) ? void 0 : t.id,
+                            isHovering: F,
                         }),
                 ],
             }),

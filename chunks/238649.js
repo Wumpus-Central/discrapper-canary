@@ -17,8 +17,8 @@ var r = n(951288),
     E = n(206127),
     b = n(710220),
     y = n(164662),
-    O = n(123274),
-    v = n(638631),
+    O = n(638631),
+    v = n(946749),
     I = n(254139),
     T = n(388032),
     S = n(350169);
@@ -48,11 +48,11 @@ let A = (e, t) => {
                             C &&
                                 (0, r.jsx)("div", {
                                     className: S.offerPillContainer,
-                                    children: (0, r.jsx)(v.Z, { enablePremiumBrandRefresh: !0 }),
+                                    children: (0, r.jsx)(O.Z, { enablePremiumBrandRefresh: !0 }),
                                 }),
                             (0, r.jsx)("div", {
                                 className: S.marketingPageTextContainer,
-                                children: (0, r.jsx)(O.Z, { children: T.intl.string(T.t["EW+VIS"]) }),
+                                children: (0, r.jsx)(v.Z, { children: T.intl.string(T.t["EW+VIS"]) }),
                             }),
                             (0, r.jsxs)("div", {
                                 className: S.body,

@@ -75,14 +75,14 @@ function h(e, t) {
 }
 function m(e, t) {
     return (0, i.e7)([u.Z], () => {
-        var n, r;
+        var n, r, i, a;
         return null == t
-            ? null == (n = u.Z.getUserProfile(e.id))
+            ? null == (r = u.Z.getUserProfile(e.id)) || null == (n = r.profileEffect)
                 ? void 0
-                : n.profileEffectId
-            : null == (r = u.Z.getGuildMemberProfile(e.id, t.id))
+                : n.id
+            : null == (a = u.Z.getGuildMemberProfile(e.id, t.id)) || null == (i = a.profileEffect)
               ? void 0
-              : r.profileEffectId;
+              : i.id;
     }, [e, t]);
 }
 function g(e) {
@@ -140,12 +140,12 @@ function I(e, t, n) {
             };
 }
 function T(e) {
-    var t, n;
-    let { pendingProfileEffectId: r, displayProfile: i } = e,
-        a = null == i || null == (t = i._userProfile) ? void 0 : t.profileEffectId,
-        o = null == i || null == (n = i._guildMemberProfile) ? void 0 : n.profileEffectId,
-        s = null === r;
-    return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
+    var t, n, r, i, a;
+    let { pendingProfileEffectId: o, displayProfile: s } = e,
+        l = null == s || null == (n = s._userProfile) || null == (t = n.profileEffect) ? void 0 : t.id,
+        c = null == s || null == (i = s._guildMemberProfile) || null == (r = i.profileEffect) ? void 0 : r.id,
+        u = null === o;
+    return u && null != c ? l : u ? null : null != o ? o : null == s || null == (a = s.profileEffect) ? void 0 : a.id;
 }
 function S(e, t) {
     return void 0 === e ? null != t : null != e;

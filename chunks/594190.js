@@ -724,14 +724,16 @@ function e4() {
                     let n = null != e.arguments && e.arguments.length > 0 ? e.arguments : "null";
                     null == i[n] && (i[n] = []), i[n].push(e.name), e.isLauncher && t.add(e.name);
                 }),
-                    Object.keys(i).forEach((t) =>
-                        e.push({
+                    Object.keys(i).forEach((t) => {
+                        var r;
+                        return e.push({
                             name: n.name,
                             id: n.id,
                             executables: i[t],
                             cmdLine: "null" !== t ? t : null,
-                        }),
-                    );
+                            thirdPartySkus: null != (r = n.thirdPartySkus) ? r : [],
+                        });
+                    });
             }),
             (e = e.filter((e) => null != e.executables && e.executables.length > 0));
         let u = k.T.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).useDetectionV2;

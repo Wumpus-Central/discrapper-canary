@@ -54,114 +54,115 @@ function R(e) {
     return e;
 }
 function P(e) {
+    var t;
     let {
-            user: t,
-            guildId: n,
-            channelId: N,
-            messageId: P,
-            roleId: w,
-            openedAt: D,
-            setPopoutRef: x,
-            closePopout: L,
-            disableUserProfileLink: j = __OVERLAY__,
-            newAnalyticsLocations: M = [],
-            disableAutoFocus: k = !1,
+            user: n,
+            guildId: N,
+            channelId: P,
+            messageId: w,
+            roleId: D,
+            openedAt: x,
+            setPopoutRef: L,
+            closePopout: j,
+            disableUserProfileLink: M = __OVERLAY__,
+            newAnalyticsLocations: k = [],
+            disableAutoFocus: U = !1,
         } = e,
-        U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...M, s.Z.USER_PROFILE_POPOUT]),
-        B = (0, _.ZB)({
+        G = (0, h.ZP)(n.id, N),
+        { analyticsLocations: B } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
+        Z = (0, _.ZB)({
             layout: "POPOUT",
-            userId: t.id,
-            guildId: n,
-            channelId: N,
-            messageId: P,
-            roleId: w,
+            userId: n.id,
+            guildId: N,
+            channelId: P,
+            messageId: w,
+            roleId: D,
         }),
-        Z = i.useRef(null),
-        V = (0, o.Z)(Z);
+        V = i.useRef(null),
+        F = (0, o.Z)(V);
     i.useEffect(() => {
-        null == x || x(null == Z ? void 0 : Z.current);
-    }, [Z, x]);
-    let F = () => {
-            null == L || L(),
+        null == L || L(null == V ? void 0 : V.current);
+    }, [V, L]);
+    let H = () => {
+            null == j || j(),
                 (0, m.openUserProfileModal)(
                     R(
                         {
-                            sourceAnalyticsLocations: G,
+                            sourceAnalyticsLocations: B,
                             hideRestrictedProfile: !0,
                         },
-                        B,
+                        Z,
                     ),
                 );
         },
-        H = !j && (0, c.Z)(t.id),
-        Y = () =>
-            H
+        Y = !M && (0, c.Z)(n.id),
+        W = () =>
+            Y
                 ? (0, r.jsx)(a.sNh, {
                       id: "view-profile",
                       label: A.intl.string(A.t["+Xp3ho"]),
                       action: () => {
-                          F(),
+                          H(),
                               (0, p.pQ)(
                                   R(
                                       {
                                           action: "PRESS_VIEW_PROFILE",
-                                          analyticsLocations: G,
+                                          analyticsLocations: B,
                                       },
-                                      B,
+                                      Z,
                                   ),
                               );
                       },
                   })
                 : null,
-        W = k ? "div" : a.VqE,
-        K = (0, u.Dt)(),
-        z = f.ZP.useName(n, N, t);
+        K = U ? "div" : a.VqE,
+        z = (0, u.Dt)(),
+        q = f.ZP.useName(N, P, n);
     return (0, r.jsx)(l.Gt, {
-        value: G,
+        value: B,
         children: (0, r.jsx)(_.Mt, {
-            value: B,
-            openedAt: D,
-            fetchStartedAt: null == U ? void 0 : U.fetchStartedAt,
-            fetchEndedAt: null == U ? void 0 : U.fetchEndedAt,
-            isLoaded: null == U ? void 0 : U.isLoaded,
-            children: (0, r.jsxs)(W, {
-                ref: Z,
-                "aria-labelledby": K,
+            value: Z,
+            openedAt: x,
+            fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
+            fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
+            isLoaded: null == G ? void 0 : G.isLoaded,
+            children: (0, r.jsxs)(K, {
+                ref: V,
+                "aria-labelledby": z,
                 children: [
                     (0, r.jsx)(a.nn4, {
                         children: (0, r.jsx)(a.H, {
-                            id: K,
-                            children: A.intl.format(A.t.KRe1Fh, { name: z }),
+                            id: z,
+                            children: A.intl.format(A.t.KRe1Fh, { name: q }),
                         }),
                     }),
                     (0, r.jsxs)(O.Z, {
-                        user: t,
-                        displayProfile: U,
+                        user: n,
+                        displayProfile: G,
                         themeType: S.l.POPOUT,
                         children: [
                             (0, r.jsx)(T.Z, {
                                 children: (0, r.jsx)(I.Z, {
-                                    user: t,
-                                    viewProfileItem: Y(),
+                                    user: n,
+                                    viewProfileItem: W(),
                                 }),
                             }),
                             (0, r.jsxs)("div", {
                                 className: C.header,
                                 children: [
                                     (0, r.jsx)(b.Z, {
-                                        user: t,
-                                        displayProfile: U,
-                                        guildId: n,
+                                        user: n,
+                                        displayProfile: G,
+                                        guildId: N,
                                         themeType: S.l.POPOUT,
                                     }),
                                     (0, r.jsx)(g.Z, {
-                                        user: t,
-                                        displayProfile: U,
-                                        guildId: n,
-                                        channelId: N,
+                                        user: n,
+                                        displayProfile: G,
+                                        guildId: N,
+                                        channelId: P,
                                         themeType: S.l.POPOUT,
-                                        onOpenProfile: H ? F : void 0,
+                                        onOpenProfile: Y ? H : void 0,
                                     }),
                                 ],
                             }),
@@ -170,18 +171,18 @@ function P(e) {
                                 className: C.body,
                                 children: [
                                     (0, r.jsx)(v.Z, {
-                                        user: t,
-                                        nickname: f.ZP.getName(n, N, t),
-                                        onOpenProfile: H ? F : void 0,
+                                        user: n,
+                                        nickname: f.ZP.getName(N, P, n),
+                                        onOpenProfile: Y ? H : void 0,
                                         tags: (0, r.jsx)(E.Z, {
-                                            displayProfile: U,
+                                            displayProfile: G,
                                             themeType: S.l.POPOUT,
-                                            onClose: L,
+                                            onClose: j,
                                         }),
                                     }),
                                     (0, r.jsx)(y.Z, {
-                                        userId: t.id,
-                                        userBio: null == U ? void 0 : U.bio,
+                                        userId: n.id,
+                                        userBio: null == G ? void 0 : G.bio,
                                         setLineClamp: !1,
                                         textColor: "header-primary",
                                     }),
@@ -190,10 +191,10 @@ function P(e) {
                             (0, r.jsx)("div", { className: C.footer }),
                         ],
                     }),
-                    (null == U ? void 0 : U.profileEffectId) != null &&
+                    (null == G ? void 0 : G.profileEffect) != null &&
                         (0, r.jsx)(d.Z, {
-                            profileEffectId: null == U ? void 0 : U.profileEffectId,
-                            isHovering: V,
+                            profileEffectId: null == G || null == (t = G.profileEffect) ? void 0 : t.id,
+                            isHovering: F,
                         }),
                 ],
             }),

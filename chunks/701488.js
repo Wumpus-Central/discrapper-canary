@@ -1,30 +1,29 @@
 n.d(t, {
-    $y: () => L,
-    Cr: () => y,
+    $y: () => x,
+    Cr: () => b,
     Ev: () => s,
-    Fu: () => m,
-    GM: () => x,
-    Gu: () => w,
-    In: () => p,
-    JT: () => h,
-    K8: () => O,
-    OF: () => D,
-    P9: () => b,
-    Pc: () => S,
-    S4: () => I,
-    Si: () => g,
-    Ws: () => v,
+    Fu: () => h,
+    GM: () => D,
+    Gu: () => P,
+    JT: () => p,
+    K8: () => y,
+    OF: () => w,
+    P9: () => E,
+    Pc: () => T,
+    S4: () => v,
+    Si: () => m,
+    Ws: () => O,
     Zc: () => _,
-    cE: () => C,
+    cE: () => A,
     cc: () => a,
     d: () => o,
-    eB: () => E,
+    eB: () => g,
     jT: () => f,
     qm: () => l,
-    um: () => A,
-    wP: () => P,
-    wT: () => R,
-    xK: () => T,
+    um: () => S,
+    wP: () => R,
+    wT: () => N,
+    xK: () => I,
 }),
     n(388685);
 var r = n(911969),
@@ -38,15 +37,14 @@ let a = 160,
     d = "1050941315912835122",
     f = "880218394199220334",
     _ = "755827207812677713",
-    p = "1011683823555199066",
-    h = "1234546995360694434",
-    m = "1214629548377768066",
-    g = {
+    p = "1234546995360694434",
+    h = "1214629548377768066",
+    m = {
         SMALL: 64,
         LARGE: 160,
     },
-    E = ["in_development", "activities_team", "employee_release"],
-    b = [
+    g = ["in_development", "activities_team", "employee_release"],
+    E = [
         "1037680572660727838",
         "235088799074484224",
         "1007373802981822582",
@@ -59,8 +57,8 @@ let a = 160,
         "1235205910863806484",
         "1227719606223765687",
     ],
-    y = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-var O = (function (e) {
+    b = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
+var y = (function (e) {
         return (
             (e.ADS = "ADS"),
             (e.FAILED_LOAD = "FAILED_LOAD"),
@@ -71,13 +69,13 @@ var O = (function (e) {
             e
         );
     })({}),
-    v = (function (e) {
+    O = (function (e) {
         return (e[(e.PLAY = 0)] = "PLAY"), (e[(e.SPECTATE = 1)] = "SPECTATE"), e;
     })({}),
-    I = (function (e) {
+    v = (function (e) {
         return (e.DESKTOP = "desktop"), (e.MOBILE = "mobile"), e;
     })({}),
-    T = (function (e) {
+    I = (function (e) {
         return (
             (e[(e.UNLOCKED = 1)] = "UNLOCKED"),
             (e[(e.PORTRAIT = 2)] = "PORTRAIT"),
@@ -85,19 +83,19 @@ var O = (function (e) {
             e
         );
     })({});
-let S = new Set([c, u, d, f]),
-    A = new Set([u, d, f]);
-var C = (function (e) {
+let T = new Set([c, u, d, f]),
+    S = new Set([u, d, f]);
+var A = (function (e) {
     return (e[(e.FOCUSED = 0)] = "FOCUSED"), (e[(e.PIP = 1)] = "PIP"), (e[(e.GRID = 2)] = "GRID"), e;
 })({});
-let N = {
+let C = {
         label_type: r.ww.NONE,
         release_phase: "",
         label_from: null,
         label_until: null,
         omit_badge_from_surfaces: [],
     },
-    R = {
+    N = {
         application_id: "",
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -105,17 +103,17 @@ let N = {
         tablet_default_orientation_lock_state: 1,
         supported_platforms: [r.C3.WEB],
         client_platform_config: {
-            [r.C3.WEB]: N,
-            [r.C3.IOS]: N,
-            [r.C3.ANDROID]: N,
+            [r.C3.WEB]: C,
+            [r.C3.IOS]: C,
+            [r.C3.ANDROID]: C,
         },
         has_csp_exception: !1,
         displays_advertisements: !1,
     },
-    P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
-    w = [...P, i.d4z.GUILD_VOICE],
-    D = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var x = (function (e) {
+    R = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
+    P = [...R, i.d4z.GUILD_VOICE],
+    w = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
+var D = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;
 })({});
-let L = 21600000;
+let x = 21600000;
