@@ -42541,6 +42541,16 @@ body .headerAnimation_b54a5b {
     padding: 16px 16px 0
 }
 
+.warningContainer__98bed {
+    align-items: center;
+    background-color: var(--background-feedback-warning);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
+    padding: var(--space-8)
+}
+
 .gameIcon_b52e4f {
     filter: saturate(var(--saturation-factor, 1));
     -webkit-user-drag: none;
@@ -89916,7 +89926,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -90204,8 +90214,14 @@ h2.title_feb59c {
     padding-top: var(--space-8)
 }
 
-.formErrorContainer_ae9991 {
-    margin: 8px 0
+.warningContainer_ae9991 {
+    align-items: center;
+    background-color: var(--background-feedback-warning);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
+    padding: var(--space-8)
 }
 
 .paymentSourceWrapper_ae9991 {
