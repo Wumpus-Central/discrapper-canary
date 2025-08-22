@@ -46,8 +46,9 @@ class u extends a.Z {
         Date.now() - u < 5000 && o.Z.resort(c.parent_id);
     }
     handleGuildDelete(e) {
-        let { guild: t } = e,
-            n = l.Z.getAllThreadsForGuild(t.id);
+        let { guild: t } = e;
+        if (t.unavailable) return;
+        let n = l.Z.getAllThreadsForGuild(t.id);
         0 !== n.length &&
             r.ZP.Emitter.batched(() => {
                 for (let e of n)

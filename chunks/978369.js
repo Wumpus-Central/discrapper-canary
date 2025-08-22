@@ -1,45 +1,45 @@
 r.d(t, { Z: () => f }), r(539854), r(388685);
 var n = r(951288),
     i = r(647438),
-    l = r(481060),
-    a = r(785717),
+    a = r(481060),
+    l = r(785717),
     o = r(86419),
     c = r(286957),
     s = r(388032),
     u = r(44258);
 let d = i.memo(function (e) {
-    let { currentTags: t, onTagSelect: r, onNoneSelect: i, onClose: a } = e;
-    return (0, n.jsx)(l.v2r, {
+    let { currentTags: t, onTagSelect: r, onNoneSelect: i, onClose: l } = e;
+    return (0, n.jsx)(a.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOj),
-        onClose: a,
+        onClose: l,
         onSelect: () => {},
         children: Object.entries(c.aE).map((e) => {
-            let [a, o] = e,
-                u = ((e, a) => {
+            let [l, o] = e,
+                u = ((e, l) => {
                     let o = [];
                     return (
-                        a.type === c.kd.RADIO &&
+                        l.type === c.kd.RADIO &&
                             o.push(
                                 (0, n.jsx)(
-                                    l.k5B,
+                                    a.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
                                         label: s.intl.string(s.t.PoWNfX),
-                                        checked: !a.tags.some((e) => t.includes(e)),
-                                        action: () => i(a.tags),
+                                        checked: !l.tags.some((e) => t.includes(e)),
+                                        action: () => i(l.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        a.tags.forEach((i) => {
+                        l.tags.forEach((i) => {
                             let s = c.XV[i];
                             null != s &&
-                                (a.type === c.kd.RADIO
+                                (l.type === c.kd.RADIO
                                     ? o.push(
                                           (0, n.jsx)(
-                                              l.k5B,
+                                              a.k5B,
                                               {
                                                   id: i,
                                                   group: e,
@@ -52,7 +52,7 @@ let d = i.memo(function (e) {
                                       )
                                     : o.push(
                                           (0, n.jsx)(
-                                              l.S89,
+                                              a.S89,
                                               {
                                                   id: i,
                                                   label: s.getText(),
@@ -65,14 +65,14 @@ let d = i.memo(function (e) {
                         }),
                         o
                     );
-                })(a, o);
+                })(l, o);
             return (0, n.jsx)(
-                l.kSQ,
+                a.kSQ,
                 {
                     label: o.getLabel(),
                     children: u,
                 },
-                a,
+                l,
             );
         }),
     });
@@ -80,12 +80,12 @@ let d = i.memo(function (e) {
 function f(e) {
     let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
         b = (0, i.useRef)(null),
-        { trackUserProfileAction: p } = (0, a.KZ)(),
-        O = (0, i.useMemo)(() => (null != t ? t : []), [t]),
-        m = (0, i.useCallback)(
+        { trackUserProfileAction: p } = (0, l.KZ)(),
+        m = (0, i.useMemo)(() => (null != t ? t : []), [t]),
+        O = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = new Set(O);
+                    n = new Set(m);
                 if (t) {
                     let t = Object.values(c.aE).find((t) => t.tags.includes(e));
                     null != t &&
@@ -100,28 +100,28 @@ function f(e) {
                         : (n.add(e), p({ action: "ADD_GAME_TAGS" }));
                 (0, o.n$)(r, f, Array.from(n));
             },
-            [O, p, r, f],
+            [m, p, r, f],
         ),
         j = (0, i.useCallback)(
             (e) => {
-                let t = new Set(O);
+                let t = new Set(m);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
                     p({ action: "REMOVE_GAME_TAGS" }),
                     (0, o.n$)(r, f, Array.from(t));
             },
-            [O, p, r, f],
+            [m, p, r, f],
         );
-    return (0, n.jsx)(l.yRy, {
+    return (0, n.jsx)(a.yRy, {
         targetElementRef: b,
         position: "right",
         align: "top",
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, n.jsx)(d, {
-                currentTags: O,
-                onTagSelect: m,
+                currentTags: m,
+                onTagSelect: O,
                 onNoneSelect: j,
                 onClose: t,
             });
@@ -136,7 +136,7 @@ function f(e) {
                     }
                 ),
                 children: (0, n.jsx)(
-                    l.P3F,
+                    a.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -166,7 +166,7 @@ function f(e) {
                         {
                             className: u.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOj),
-                            children: (0, n.jsx)(l.Text, {
+                            children: (0, n.jsx)(a.Text, {
                                 variant: "text-xxs/medium",
                                 color: "text-secondary",
                                 children: s.intl.string(s.t.fZSej4),

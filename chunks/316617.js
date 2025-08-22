@@ -1,35 +1,35 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(39154),
-    s = n(739566),
+    s = n(39154),
+    o = n(739566),
     c = n(492593),
     d = n(930282),
     u = n(464891),
     m = n(267128),
-    _ = n(25015),
-    p = n(695346),
+    p = n(25015),
+    g = n(695346),
     x = n(592125),
-    g = n(217702),
-    f = n(388032),
-    b = n(492402);
-let h = (e) => {
+    h = n(217702),
+    b = n(388032),
+    _ = n(492402);
+let f = (e) => {
     let { message: t } = e,
-        n = (0, s.ZP)(t),
-        h = (0, l.e7)([x.Z], () => x.Z.getChannel(t.channel_id)),
-        v = i.useMemo(() => (0, o.Z)(t), [t]),
-        { content: j } = (0, _.Z)(v, { hideSimpleEmbedContent: !1 }),
-        y = p.jU.useSetting(),
+        n = (0, o.ZP)(t),
+        f = (0, l.e7)([x.Z], () => x.Z.getChannel(t.channel_id)),
+        v = i.useMemo(() => (0, s.Z)(t), [t]),
+        { content: j } = (0, p.Z)(v, { hideSimpleEmbedContent: !1 }),
+        y = g.jU.useSetting(),
         O = i.useCallback(() => {
             let { leadingIcon: e, trailingIcon: n } = (0, m.f)(t, j, !1, !1, "", {
-                leadingIconClass: b.attachmentIcon,
-                trailingIconClass: b.attachmentIcon,
-                iconSize: g.WW,
+                leadingIconClass: _.attachmentIcon,
+                trailingIconClass: _.attachmentIcon,
+                iconSize: h.WW,
             });
             return (0, r.jsxs)("div", {
-                className: b.contentContainer,
+                className: _.contentContainer,
                 children: [
                     e,
                     (0, r.jsx)(d.ZP, {
@@ -41,25 +41,25 @@ let h = (e) => {
                 ],
             });
         }, [t, j, y]);
-    return null == h
+    return null == f
         ? null
         : (0, r.jsxs)("div", {
-              className: b.container,
+              className: _.container,
               children: [
                   (0, r.jsx)(a.X6q, {
-                      className: b.header,
+                      className: _.header,
                       variant: "heading-sm/semibold",
-                      children: f.intl.string(f.t.iouM3d),
+                      children: b.intl.string(b.t.iouM3d),
                   }),
                   (0, r.jsx)(a.Ttm, {
-                      className: b.messagePreviewContainer,
+                      className: _.messagePreviewContainer,
                       children: (0, r.jsx)(c.Z, {
                           childrenMessageContent: O(),
                           childrenHeader: (0, r.jsx)(u.ZP, {
                               message: t,
-                              channel: h,
+                              channel: f,
                               author: n,
-                              guildId: h.guild_id,
+                              guildId: f.guild_id,
                           }),
                           disableInteraction: !0,
                           author: n,

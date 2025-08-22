@@ -1,12 +1,12 @@
 r.d(t, { Z: () => c });
 var n = r(951288),
     i = r(647438),
-    l = r(481060),
-    a = r(388032),
+    a = r(481060),
+    l = r(388032),
     o = r(684066);
 function c() {
     let e = i.useCallback(() => {
-        (0, l.ZDy)(
+        (0, a.ZDy)(
             async () => {
                 let { default: e } = await r.e("38576").then(r.bind(r, 925170));
                 return (t) =>
@@ -42,18 +42,18 @@ function c() {
             { stackingBehavior: "stack" },
         );
     }, []);
-    return (0, n.jsxs)(l.P3F, {
+    return (0, n.jsxs)(a.P3F, {
         className: o.addWidgetButton,
         onClick: e,
         children: [
-            (0, n.jsx)(l.qJs, {
+            (0, n.jsx)(a.qJs, {
                 size: "sm",
                 color: "currentColor",
             }),
-            (0, n.jsx)(l.Text, {
+            (0, n.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: a.intl.string(a.t.lBG2s7),
+                children: l.intl.string(l.t.lBG2s7),
             }),
         ],
     });

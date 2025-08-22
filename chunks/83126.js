@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(592204),
     i = n(131681),
     l = n(695346),
     a = n(82554),
-    o = n(388032);
-let s = {
-    getTitle: () => o.intl.string(o.t.DPVOLS),
-    getDisabledTitle: () => o.intl.string(o.t["B/dag4"]),
-    getDescription: () => o.intl.string(o.t["+Esd3N"]),
+    s = n(388032);
+let o = {
+    getTitle: () => s.intl.string(s.t.DPVOLS),
+    getDisabledTitle: () => s.intl.string(s.t["B/dag4"]),
+    getDescription: () => s.intl.string(s.t["+Esd3N"]),
     eligibleReportSubtypes: [
         a.i5.SUB_GENERAL_HARASSMENT,
         a.i5.SUB_RACIST_OR_DICRIMINATORY_LANGUAGE_OR_IMAGERY,

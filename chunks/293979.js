@@ -156,6 +156,8 @@ let w = (e, t) =>
                     values: (null == n ? void 0 : n.type) === t.type ? n.selectedOptions.map((e) => e.value) : null,
                 };
             }
+            case c.re.TEXT_DISPLAY:
+                return { type: t.type };
             case c.re.LABEL:
                 return {
                     type: t.type,

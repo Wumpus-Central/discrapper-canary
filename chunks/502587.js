@@ -1,8 +1,8 @@
 r.d(t, { Z: () => b });
 var n = r(951288),
     i = r(647438),
-    l = r(481060),
-    a = r(239091),
+    a = r(481060),
+    l = r(239091),
     o = r(314897),
     c = r(86419),
     s = r(872269),
@@ -59,7 +59,7 @@ function b(e) {
                 (0, c.y8)(t.type), (0, s.L$)(u.qb.WIDGET_REMOVED);
                 return;
             }
-            (0, l.ZDy)(
+            (0, a.ZDy)(
                 async () => {
                     let { default: e } = await r.e("70887").then(r.bind(r, 37668));
                     return (r) =>
@@ -74,37 +74,37 @@ function b(e) {
                 { stackingBehavior: "stack" },
             );
         };
-    return (0, n.jsx)(l.yRy, {
+    return (0, n.jsx)(a.yRy, {
         targetElementRef: b,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(l.v2r, {
+            return (0, n.jsx)(a.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, a.Zy)(), t();
+                    (0, l.Zy)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": d.intl.string(d.t.xpSHSk),
-                children: (0, n.jsx)(l.kSQ, {
-                    children: (0, n.jsx)(l.sNh, {
+                children: (0, n.jsx)(a.kSQ, {
+                    children: (0, n.jsx)(a.sNh, {
                         id: "remove-widget",
                         label: d.intl.string(d.t.Mm07YW),
                         action: p,
                         color: "danger",
-                        icon: l.XHJ,
+                        icon: a.XHJ,
                     }),
                 }),
             });
         },
         children: (e) =>
             (0, n.jsx)(
-                l.hU,
+                a.hU,
                 g(f({}, e), {
                     buttonRef: b,
-                    icon: l.xhG,
+                    icon: a.xhG,
                     variant: "secondary",
                     "aria-label": d.intl.string(d.t.xpSHSk),
                     size: "sm",

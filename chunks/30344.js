@@ -1,11 +1,11 @@
-r.d(t, { Z: () => a });
+r.d(t, { Z: () => l });
 var n = r(951288);
 r(647438);
 var i = r(890814),
-    l = r(753436);
-function a(e) {
+    a = r(753436);
+function l(e) {
     var { games: t, isGameFetching: r } = e,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -14,14 +14,14 @@ function a(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
@@ -30,7 +30,7 @@ function a(e) {
         games: t,
         renderGame: (e) =>
             (0, n.jsx)(
-                l.S,
+                a.S,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function a(e) {
                         game: e,
                         loading: r(e.applicationId),
                     },
-                    a,
+                    l,
                 ),
             ),
     });

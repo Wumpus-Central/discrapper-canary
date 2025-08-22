@@ -1,8 +1,8 @@
 r.d(t, { Z: () => u }), r(388685);
 var n = r(951288),
     i = r(647438),
-    l = r(399606),
-    a = r(224724),
+    a = r(399606),
+    l = r(224724),
     o = r(86419),
     c = r(206599),
     s = r(977416);
@@ -17,20 +17,20 @@ function u(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["widgetType"]);
     let { games: u, isGameFetching: d, onAddGame: f } = (0, c.K)(t),
-        [g] = (0, l.Wu)([a.Z], () => [a.Z.suggestedFetchIsLoading]),
+        [g] = (0, a.Wu)([l.Z], () => [l.Z.suggestedFetchIsLoading]),
         b = i.useCallback(
             (e, r, n) => {
                 f(e),

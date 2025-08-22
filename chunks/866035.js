@@ -1,12 +1,12 @@
 t.r(n), t.d(n, { default: () => d }), t(388685);
 var r = t(951288);
 t(647438);
-var o = t(788111),
-    l = t(752342),
+var l = t(788111),
+    o = t(752342),
     i = t(886794),
     c = t(583816),
-    a = t(595145);
-function s(e) {
+    s = t(595145);
+function a(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -37,30 +37,30 @@ function d(e) {
             if (null == e) return {};
             var t,
                 r,
-                o = (function (e, n) {
+                l = (function (e, n) {
                     if (null == e) return {};
                     var t,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (t = l[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (t = o[r]), n.indexOf(t) >= 0 || (l[t] = e[t]);
+                    return l;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (t = l[r]),
-                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (t = o[r]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
             }
-            return o;
+            return l;
         })(e, ["hideRestrictedProfile"]);
     let { user: d } = t,
-        [u, f] = (0, o.Z)(d.id);
+        [u, f] = (0, l.Z)(d.id);
     return u && !n
-        ? (0, r.jsx)(c.Z, s({ onHide: f }, t))
+        ? (0, r.jsx)(c.Z, a({ onHide: f }, t))
         : d.isNonUserBot()
-          ? (0, r.jsx)(i.Z, s({}, t))
+          ? (0, r.jsx)(i.Z, a({}, t))
           : d.bot
-            ? (0, r.jsx)(l.Z, s({}, t))
-            : (0, r.jsx)(a.Z, s({}, t));
+            ? (0, r.jsx)(o.Z, a({}, t))
+            : (0, r.jsx)(s.Z, a({}, t));
 }

@@ -2,8 +2,8 @@ r.d(t, { Z: () => b });
 var n = r(951288);
 r(647438);
 var i = r(120356),
-    l = r.n(i),
-    a = r(793030),
+    a = r.n(i),
+    l = r(793030),
     o = r(442837),
     c = r(313201),
     s = r(314897),
@@ -13,23 +13,23 @@ var i = r(120356),
     g = r(415734);
 function b(e) {
     let { userId: t, widget: r, children: i, disableInteraction: b, className: p } = e,
-        O = (0, c.Dt)(),
-        m = (0, o.e7)([s.default], () => s.default.getId() === t),
+        m = (0, c.Dt)(),
+        O = (0, o.e7)([s.default], () => s.default.getId() === t),
         { shouldShowSuggestions: j, handleDismissSuggestions: y } = (0, u.h)(r);
     return (0, n.jsxs)("section", {
-        className: l()(g.container, p),
-        "aria-labelledby": O,
+        className: a()(g.container, p),
+        "aria-labelledby": m,
         children: [
             (0, n.jsx)(d.Z, {
                 userId: t,
-                headingId: O,
+                headingId: m,
                 widget: r,
                 disableInteraction: b,
             }),
-            (0, n.jsxs)(a.y5, {
+            (0, n.jsxs)(l.y5, {
                 children: [
                     i,
-                    m &&
+                    O &&
                         !b &&
                         j &&
                         (0, n.jsx)(f.Z, {

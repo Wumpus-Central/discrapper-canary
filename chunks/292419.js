@@ -106,16 +106,16 @@ function v(e) {
     return e.map((e, n) => I(e, t, [n])).filter((e) => null != e);
 }
 function I(e, t, n) {
-    var a, o, l, d, h, m, E, b, y;
+    var a, o, l, d, h, m, E, b, y, O, v, S, A;
     if (!g(e.type)) return null;
-    function O(e, r) {
+    function C(e, r) {
         let i = I(e, t, [...n, r]);
         return null == i ? null : i;
     }
-    let { includeEmojiSrc: v } = t;
+    let { includeEmojiSrc: N } = t;
     switch (e.type) {
         case i.re.ACTION_ROW: {
-            let t = e.components.map((e, t) => O(e, t)).filter(c.lm);
+            let t = e.components.map((e, t) => C(e, t)).filter(c.lm);
             return {
                 type: i.re.ACTION_ROW,
                 id: T(n),
@@ -123,7 +123,7 @@ function I(e, t, n) {
             };
         }
         case i.re.BUTTON: {
-            let t = null != e.emoji ? p(e.emoji, v) : void 0;
+            let t = null != e.emoji ? p(e.emoji, N) : void 0;
             return {
                 type: i.re.BUTTON,
                 id: T(n),
@@ -149,7 +149,7 @@ function I(e, t, n) {
                     value: e.value,
                     default: e.default,
                     description: e.description,
-                    emoji: null != e.emoji ? p(e.emoji, v) : void 0,
+                    emoji: null != e.emoji ? p(e.emoji, N) : void 0,
                 })),
                 placeholder: null != (o = e.placeholder) ? o : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
@@ -175,7 +175,8 @@ function I(e, t, n) {
                 id: T(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (d = e.placeholder) ? d : f.intl.string(f.t.Otr6W1),
+                required: null != (d = e.required) && d,
+                placeholder: null != (h = e.placeholder) ? h : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
@@ -186,7 +187,8 @@ function I(e, t, n) {
                 id: T(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (h = e.placeholder) ? h : f.intl.string(f.t.Otr6W1),
+                required: null != (m = e.required) && m,
+                placeholder: null != (E = e.placeholder) ? E : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
@@ -197,7 +199,8 @@ function I(e, t, n) {
                 id: T(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (m = e.placeholder) ? m : f.intl.string(f.t.Otr6W1),
+                required: null != (b = e.required) && b,
+                placeholder: null != (y = e.placeholder) ? y : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
@@ -208,15 +211,16 @@ function I(e, t, n) {
                 id: T(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                placeholder: null != (E = e.placeholder) ? E : f.intl.string(f.t.Otr6W1),
+                required: null != (O = e.required) && O,
+                placeholder: null != (v = e.placeholder) ? v : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 channelTypes: e.channel_types,
                 defaultValues: e.default_values,
             };
         case i.re.SECTION: {
-            let t = e.components.map((e, t) => O(e, t)).filter(c.lm),
-                r = O(e.accessory, t.length);
+            let t = e.components.map((e, t) => C(e, t)).filter(c.lm),
+                r = C(e.accessory, t.length);
             if (0 === t.length || null == r) return null;
             return {
                 type: i.re.SECTION,
@@ -262,8 +266,8 @@ function I(e, t, n) {
             return {
                 type: i.re.SEPARATOR,
                 id: T(n),
-                divider: null == (b = e.divider) || b,
-                spacing: null != (y = e.spacing) ? y : i.US.SMALL,
+                divider: null == (S = e.divider) || S,
+                spacing: null != (A = e.spacing) ? A : i.US.SMALL,
             };
         case i.re.CONTENT_INVENTORY_ENTRY:
             if (null == e.content_inventory_entry) return null;
@@ -273,7 +277,7 @@ function I(e, t, n) {
                 contentInventoryEntry: e.content_inventory_entry,
             };
         case i.re.CONTAINER: {
-            let t = e.components.map((e, t) => O(e, t)).filter(c.lm);
+            let t = e.components.map((e, t) => C(e, t)).filter(c.lm);
             return {
                 type: i.re.CONTAINER,
                 id: T(n),
@@ -283,7 +287,7 @@ function I(e, t, n) {
             };
         }
         case i.re.LABEL: {
-            let t = O(e.component, 0);
+            let t = C(e.component, 0);
             if (null == t) return null;
             return {
                 type: i.re.LABEL,

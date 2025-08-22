@@ -29,6 +29,7 @@ let i = (0, r.B)({
         defaultConfig: {
             loadWasmModule: !1,
             useWasmModule: !1,
+            preload: !1,
         },
         treatments: [
             {
@@ -37,6 +38,7 @@ let i = (0, r.B)({
                 config: {
                     loadWasmModule: !0,
                     useWasmModule: !1,
+                    preload: !1,
                 },
             },
             {
@@ -45,6 +47,16 @@ let i = (0, r.B)({
                 config: {
                     loadWasmModule: !0,
                     useWasmModule: !0,
+                    preload: !1,
+                },
+            },
+            {
+                id: 3,
+                label: "Preload",
+                config: {
+                    loadWasmModule: !0,
+                    useWasmModule: !0,
+                    preload: !0,
                 },
             },
         ],

@@ -1,27 +1,27 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(99690),
     a = n(388032),
-    o = n(430147);
-let s = (e) => {
+    s = n(430147);
+let o = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)("div", {
-        className: o.container,
+        className: s.container,
         children: [
             (0, r.jsx)(i.X6q, {
-                className: o.header,
+                className: s.header,
                 variant: "heading-sm/semibold",
                 children: a.intl.string(a.t["Rsth7+"]),
             }),
             (0, r.jsx)("div", {
-                className: o.userContainer,
+                className: s.userContainer,
                 children: (0, r.jsxs)("div", {
-                    className: o.userInfo,
+                    className: s.userInfo,
                     children: [
                         (0, r.jsx)(l.Z, {
-                            className: o.userIcon,
+                            className: s.userIcon,
                             user: t,
                             size: i.EFr.SIZE_40,
                         }),

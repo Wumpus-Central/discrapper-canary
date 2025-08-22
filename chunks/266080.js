@@ -3,32 +3,32 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(367907),
-    o = n(434404),
-    s = n(138201),
+    s = n(434404),
+    o = n(138201),
     c = n(430824),
     d = n(981631),
     u = n(388032);
 let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [m, _] = i.useState(!1),
-        p = c.Z.getGuild(t),
-        x = null != p;
+        [m, p] = i.useState(!1),
+        g = c.Z.getGuild(t),
+        x = null != g;
     i.useEffect(() => {
-        _(!x);
+        p(!x);
     }, [x]);
-    let g = i.useCallback(() => {
-        _(!0),
+    let h = i.useCallback(() => {
+        p(!0),
             a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n,
             }),
-            o.Z.leaveGuild(t);
+            s.Z.leaveGuild(t);
     }, [t, n]);
-    return null == p
+    return null == g
         ? null
-        : (0, r.jsx)(s.JZ, {
+        : (0, r.jsx)(o.JZ, {
               title: u.intl.string(u.t.cU96io),
-              description: u.intl.formatToPlainString(u.t["26mR6+"], { guildName: null == p ? void 0 : p.name }),
+              description: u.intl.formatToPlainString(u.t["26mR6+"], { guildName: null == g ? void 0 : g.name }),
               buttonText: m ? u.intl.string(u.t["9Ak99v"]) : u.intl.string(u.t.F3qExs),
               buttonDisabled: m,
               buttonVariant: "critical-primary",
@@ -63,10 +63,10 @@ let m = (e) => {
                               return e;
                           })(
                               {
-                                  header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: p.name }),
+                                  header: u.intl.formatToPlainString(u.t["1GX6Pz"], { name: g.name }),
                                   confirmText: u.intl.string(u.t.J2TBi4),
                                   cancelText: u.intl.string(u.t["ETE/oK"]),
-                                  onConfirm: g,
+                                  onConfirm: h,
                               },
                               e,
                           )),
@@ -74,7 +74,7 @@ let m = (e) => {
                               {
                                   children: (0, r.jsx)(l.Text, {
                                       variant: "text-md/normal",
-                                      children: u.intl.format(u.t.ZEXC0t, { name: p.name }),
+                                      children: u.intl.format(u.t.ZEXC0t, { name: g.name }),
                                   }),
                               }),
                           Object.getOwnPropertyDescriptors

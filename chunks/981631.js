@@ -3415,6 +3415,7 @@ var tY = (function (e) {
             (e.GUILD_EVENTS = "Guild Events"),
             (e.GUILD_CONTEXT_MENU = "Guild Context Menu"),
             (e.GUILD_CREATE = "Guild Create"),
+            (e.GUILD_SCHEDULED_EVENT = "Guild Scheduled Event"),
             (e.STREAM_INVITE = "Stream Invite"),
             (e.GUILD_PROGRESS = "Guild Progress"),
             (e.CHANNEL_WELCOME = "Channel Welcome CTA"),
@@ -3423,6 +3424,8 @@ var tY = (function (e) {
             (e.INVITE_SYSTEM_MESSAGE = "Invite System Message"),
             (e.HUB_DIRECTORY = "Hub Directory Channel"),
             (e.HUB_SIDEBAR = "Hub Sidebar"),
+            (e.HUB_PROGRESS = "Hub Progress"),
+            (e.HUB_EMPTY_STATE = "Hub Empty State"),
             (e.STAGE_CHANNEL = "Stage Channel"),
             (e.GROUP_DM = "Group DM Invite Create"),
             (e.GUILD_HOME = "Guild Home"),
@@ -3431,6 +3434,10 @@ var tY = (function (e) {
             (e.ADD_FRIENDS_WIDGET = "Add Friends Widget"),
             (e.ADD_FRIENDS_MODAL_SEARCH = "Add Friends Modal Search"),
             (e.PROFILE_CTA = "Profile CTA"),
+            (e.CHAT_SIDEBAR = "Chat Sidebar"),
+            (e.VOICE_CHANNEL = "Voice Channel"),
+            (e.STREAM = "Stream"),
+            (e.SERVER_PROFILE = "Server Profile"),
             e
         );
     })({}),

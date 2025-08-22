@@ -4,20 +4,20 @@ n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    o = n(782568),
-    s = n(388032),
+    s = n(782568),
+    o = n(388032),
     c = n(520310),
     d = n(315665);
 let u = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: i, is_localized: s },
+        data: { url: t, link_text: n, link_description: i, is_localized: o },
     } = e;
-    return s
+    return o
         ? (0, r.jsxs)(a.P3F, {
               role: "link",
               className: l()(d.linkButton, c.listElement),
               onClick: () => {
-                  (0, o.Z)(t);
+                  (0, s.Z)(t);
               },
               children: [
                   (0, r.jsxs)("div", {
@@ -74,7 +74,7 @@ function m(e) {
                     variant: "heading-sm/semibold",
                     color: "header-secondary",
                     className: d.header,
-                    children: s.intl.string(s.t.hvVgAQ),
+                    children: o.intl.string(o.t.hvVgAQ),
                 }),
             n,
         ],

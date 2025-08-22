@@ -107,10 +107,15 @@ function I(e) {
             visualState: B,
             isDisabled: Z,
             error: V,
-        } = k.useComponentState(t, {
-            type: b,
-            selectedOptions: Array.from(R.values()),
-        }),
+        } = k.useComponentState(
+            t,
+            R.size > 0
+                ? {
+                      type: b,
+                      selectedOptions: Array.from(R.values()),
+                  }
+                : void 0,
+        ),
         F = null != k.modal,
         H = I > 1,
         Y = B === _.gH.LOADING;

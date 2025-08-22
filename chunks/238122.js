@@ -3,17 +3,17 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(454585),
-    o = n(273744),
-    s = n(388032),
+    s = n(273744),
+    o = n(388032),
     c = n(124252),
     d = n(197571);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: _, rows: p, character_limit: x, pattern: g },
-                onChange: f,
-                initialText: b,
-                isRequired: h,
+                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: x, pattern: h },
+                onChange: b,
+                initialText: _,
+                isRequired: f,
             } = e,
             v = i.useRef(
                 a.Z.reactParserFor(
@@ -42,7 +42,7 @@ let u = (e) => {
                         }
                         return e;
                     })({}, a.Z.defaultRules)),
-                    (n = n = { link: o.s }),
+                    (n = n = { link: s.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -59,29 +59,29 @@ let u = (e) => {
                 ),
             ),
             [j, y] = i.useState(""),
-            [O, C] = i.useState(null);
+            [O, Z] = i.useState(null);
         i.useEffect(() => {
             var e;
-            y(null != (e = null == b ? void 0 : b.value) ? e : "");
-        }, [b]);
-        let Z = i.useCallback(
+            y(null != (e = null == _ ? void 0 : _.value) ? e : "");
+        }, [_]);
+        let I = i.useCallback(
             (e) => {
-                let t = null != g ? new RegExp(g) : null;
+                let t = null != h ? new RegExp(h) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (C(null),
+                      (Z(null),
                       y(e),
-                      f({
+                      b({
                           value: e,
                           isValid: !0,
                       }))
-                    : (C(s.intl.string(s.t["24xrGR"])),
-                      f({
+                    : (Z(o.intl.string(o.t["24xrGR"])),
+                      b({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [f, g],
+            [b, h],
         );
         return (0, r.jsxs)("div", {
             className: d.marginBottom8,
@@ -93,7 +93,7 @@ let u = (e) => {
                             variant: "text-sm/bold",
                             children: [
                                 u,
-                                h &&
+                                f &&
                                     (0, r.jsx)("span", {
                                         className: c.required,
                                         children: "*",
@@ -103,11 +103,11 @@ let u = (e) => {
                     }),
                 (0, r.jsx)(l.Kx8, {
                     maxLength: x,
-                    onChange: Z,
+                    onChange: I,
                     value: j,
                     error: O,
-                    rows: p,
-                    placeholder: _,
+                    rows: g,
+                    placeholder: p,
                     autoFocus: !0,
                 }),
                 null != m &&

@@ -6,8 +6,8 @@ r.d(t, {
     r(388685);
 var n = r(647438),
     i = r(442837),
-    l = r(224706),
-    a = r(669764),
+    a = r(224706),
+    l = r(669764),
     o = r(77498);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -55,22 +55,22 @@ function s(e, t) {
 function u(e) {
     n.useEffect(() => {
         if (e.length > 0) {
-            let t = e.filter((e) => a.Z.canFetch(e));
-            t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
+            let t = e.filter((e) => l.Z.canFetch(e));
+            t.length > 0 && a.Z.getDetectableGamesSupplemental(t);
         }
     }, [e]);
-    let [t, r] = (0, i.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]);
+    let [t, r] = (0, i.Wu)([l.Z], () => [l.Z.numNoDataAvailable(), l.Z.numSupplementalGames()]);
     return {
         gameDataMap: n.useMemo(() => {
             let t = {};
             return (
                 e.forEach((e) => {
-                    t[e] = a.Z.getGame(e);
+                    t[e] = l.Z.getGame(e);
                 }),
                 t
             );
         }, [e, t, r]),
-        isGameFetching: n.useCallback((e) => a.Z.isFetching(e), []),
+        isGameFetching: n.useCallback((e) => l.Z.isFetching(e), []),
     };
 }
 function d(e) {

@@ -1,12 +1,12 @@
 t.d(n, { Z: () => f });
 var r = t(951288);
 t(647438);
-var o = t(442837),
-    l = t(481060),
+var l = t(442837),
+    o = t(481060),
     i = t(906732),
     c = t(335131),
-    a = t(592183),
-    s = t(224724),
+    s = t(592183),
+    a = t(224724),
     d = t(475413),
     u = t(388032);
 function f(e) {
@@ -15,25 +15,25 @@ function f(e) {
             if (null == e) return {};
             var t,
                 r,
-                o = (function (e, n) {
+                l = (function (e, n) {
                     if (null == e) return {};
                     var t,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (t = l[r]), n.indexOf(t) >= 0 || (o[t] = e[t]);
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (t = o[r]), n.indexOf(t) >= 0 || (l[t] = e[t]);
+                    return l;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (t = l[r]),
-                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++)
+                    (t = o[r]),
+                        !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (l[t] = e[t]);
             }
-            return o;
+            return l;
         })(e, ["onClose"]);
     let { analyticsLocations: f, newestAnalyticsLocation: m } = (0, i.ZP)(),
-        p = (0, o.e7)([s.Z], () => s.Z.hasSaveablePendingChanges());
+        p = (0, l.e7)([a.Z], () => a.Z.hasSaveablePendingChanges());
     return (0, r.jsx)(
         d.ef,
         (function (e) {
@@ -63,11 +63,11 @@ function f(e) {
         })(
             {
                 action: "VISIT_SHOP",
-                icon: l.EOn,
+                icon: o.EOn,
                 tooltipText: u.intl.string(u.t.b2d0Nz),
                 themeColor: "secondary",
                 onClick: () => {
-                    if (p) return void a.Z.notifyPendingWidgets();
+                    if (p) return void s.Z.notifyPendingWidgets();
                     (0, c.mK)({
                         analyticsLocations: f,
                         openInLayer: !1,

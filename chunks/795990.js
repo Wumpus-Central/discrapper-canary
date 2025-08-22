@@ -2,8 +2,8 @@ r.d(t, { Z: () => s });
 var n = r(951288);
 r(647438);
 var i = r(481060),
-    l = r(299560),
-    a = r(247397),
+    a = r(299560),
+    l = r(247397),
     o = r(388032),
     c = r(958461);
 function s() {
@@ -28,11 +28,11 @@ function s() {
             (0, n.jsx)("ul", {
                 className: c.widgetGrid,
                 "aria-label": o.intl.string(o.t["+EIBSE"]),
-                children: a.rR.map((e) =>
+                children: l.rR.map((e) =>
                     (0, n.jsx)(
                         "li",
                         {
-                            children: (0, n.jsx)(l.Z, {
+                            children: (0, n.jsx)(a.Z, {
                                 widgetType: e,
                                 size: "small",
                             }),

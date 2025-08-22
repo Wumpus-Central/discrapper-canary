@@ -8,13 +8,13 @@ var r = n(647438),
     i = n(823379),
     l = n(568315),
     a = n(83126),
-    o = n(218471),
-    s = n(46912),
+    s = n(218471),
+    o = n(46912),
     c = n(82554);
 let d = {
     [c.zR.SAFETY_DM_SPAM_FILTER]: l.Z,
-    [c.zR.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.Z,
-    [c.zR.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: o.Z,
+    [c.zR.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: o.Z,
+    [c.zR.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: s.Z,
     [c.zR.SAFETY_LANGUAGE_FILTER]: a.Z,
 };
 function u(e) {

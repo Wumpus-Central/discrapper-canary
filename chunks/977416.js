@@ -2,8 +2,8 @@ r.d(t, { Z: () => b });
 var n = r(951288);
 r(647438);
 var i = r(481060),
-    l = r(313201),
-    a = r(817053),
+    a = r(313201),
+    l = r(817053),
     o = r(890814),
     c = r(388032),
     s = r(932366),
@@ -52,7 +52,7 @@ function f(e, t) {
     );
 }
 function g(e) {
-    var { gameName: t, onClick: r, loading: l = !0 } = e,
+    var { gameName: t, onClick: r, loading: a = !0 } = e,
         o = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -62,21 +62,21 @@ function g(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["gameName", "onClick", "loading"]);
     let g = null != t ? t : c.intl.string(c.t.GIWFlJ),
         b = c.intl.formatToPlainString(c.t["3mb1s7"], { game: g });
-    return l
+    return a
         ? (0, n.jsx)("div", { className: s.loadingCover })
         : (0, n.jsx)(i.ua7, {
               text: b,
@@ -87,7 +87,7 @@ function g(e) {
                           onClick: r,
                           children: [
                               (0, n.jsx)(
-                                  a.Z,
+                                  l.Z,
                                   f(
                                       d(
                                           {
@@ -110,8 +110,8 @@ function g(e) {
           });
 }
 function b(e) {
-    let { userId: t, games: r, isGameFetching: a, isSuggestedGamesLoading: s, onDismiss: d, onClick: f } = e,
-        b = (0, l.Dt)();
+    let { userId: t, games: r, isGameFetching: l, isSuggestedGamesLoading: s, onDismiss: d, onClick: f } = e,
+        b = (0, a.Dt)();
     return (0, n.jsxs)("aside", {
         className: u.container,
         "aria-labelledby": b,
@@ -139,14 +139,14 @@ function b(e) {
             (0, n.jsx)(o.Z, {
                 games: r,
                 renderGame: (e) => {
-                    let { applicationId: r, gameName: i, imageSrc: l } = e;
+                    let { applicationId: r, gameName: i, imageSrc: a } = e;
                     return (0, n.jsx)(g, {
-                        onClick: () => f(r, i, l),
+                        onClick: () => f(r, i, a),
                         userId: t,
-                        loading: s || a(r),
+                        loading: s || l(r),
                         applicationId: r,
                         gameName: i,
-                        imageSrc: l,
+                        imageSrc: a,
                     });
                 },
             }),

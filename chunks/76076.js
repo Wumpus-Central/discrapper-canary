@@ -1,55 +1,55 @@
-t.d(n, { Z: () => h }), t(388685);
+t.d(n, { Z: () => j }), t(388685);
 var r = t(951288),
-    o = t(647438),
-    l = t(120356),
-    i = t.n(l),
+    l = t(647438),
+    o = t(120356),
+    i = t.n(o),
     c = t(202841),
-    a = t(442837),
-    s = t(481060),
+    s = t(442837),
+    a = t(481060),
     d = t(607070),
     u = t(872269),
     f = t(228168),
     m = t(388032),
     p = t(361623),
-    x = t(583140);
-let b = {
+    h = t(583140);
+let x = {
         [f.qb.WIDGET_ADDED]: {
             message: m.intl.string(m.t.fFP1U1),
-            icon: (0, r.jsx)(s.dz2, {
+            icon: (0, r.jsx)(a.dz2, {
                 size: "sm",
-                color: s.TVs.colors.STATUS_POSITIVE.css,
+                color: a.TVs.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_added",
         },
         [f.qb.WIDGET_REMOVED]: {
             message: m.intl.string(m.t.zzsK7u),
-            icon: (0, r.jsx)(s.dz2, {
+            icon: (0, r.jsx)(a.dz2, {
                 size: "sm",
-                color: s.TVs.colors.STATUS_POSITIVE.css,
+                color: a.TVs.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_removed",
         },
         [f.qb.WIDGET_SAVE_FAILURE]: {
             message: m.intl.string(m.t["84MExs"]),
-            icon: (0, r.jsx)(s.Uz9, {
+            icon: (0, r.jsx)(a.Uz9, {
                 size: "sm",
-                color: s.TVs.colors.STATUS_DANGER.css,
+                color: a.TVs.colors.STATUS_DANGER.css,
             }),
             toast_id: "user_profile_widget_save_failure",
-            type: s.ToastType.FAILURE,
+            type: a.ToastType.FAILURE,
         },
     },
-    g = (e) => {
-        let { message: n, icon: t, type: o } = e;
+    b = (e) => {
+        let { message: n, icon: t, type: l } = e;
         return (0, r.jsxs)("div", {
-            className: i()(x.toast, p.toast),
-            "data-type": o,
+            className: i()(h.toast, p.toast),
+            "data-type": l,
             children: [
                 (0, r.jsx)("div", {
                     className: p.toastIcon,
                     children: t,
                 }),
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(a.Text, {
                     color: "header-primary",
                     variant: "text-sm/semibold",
                     children: n,
@@ -57,16 +57,16 @@ let b = {
             ],
         });
     },
-    h = (e) => {
+    j = (e) => {
         let { className: n, onAutoHide: t } = e,
-            l = (0, u.be)(),
-            f = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            [m, x] = o.useState(!1),
-            [h, j] = o.useState(null);
-        o.useEffect(() => {
-            null !== l ? (x(!0), j(b[l]), s.uvj.announce(b[l].message)) : x(!1);
-        }, [l]);
-        let v = (0, s.Yzy)(
+            o = (0, u.be)(),
+            f = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+            [m, h] = l.useState(!1),
+            [j, g] = l.useState(null);
+        l.useEffect(() => {
+            null !== o ? (h(!0), g(x[o]), a.uvj.announce(x[o].message)) : h(!1);
+        }, [o]);
+        let v = (0, a.Yzy)(
             m,
             {
                 from: {
@@ -91,7 +91,7 @@ let b = {
             "animate-always",
         );
         return (
-            o.useEffect(() => {
+            l.useEffect(() => {
                 if (m) {
                     let e = setTimeout(() => {
                         null == t || t();
@@ -103,12 +103,12 @@ let b = {
                 children: v(
                     (e, t) =>
                         t &&
-                        null !== h &&
+                        null !== j &&
                         (0, r.jsx)(c.animated.div, {
                             className: i()(n, p.toastContainer),
                             style: e,
                             children: (0, r.jsx)(
-                                g,
+                                b,
                                 (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -133,7 +133,7 @@ let b = {
                                             });
                                     }
                                     return e;
-                                })({}, h),
+                                })({}, j),
                             ),
                         }),
                 ),

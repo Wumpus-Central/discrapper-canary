@@ -3,16 +3,16 @@ var r = n(951288),
     i = n(647438),
     l = n(481060),
     a = n(454585),
-    o = n(273744),
-    s = n(388032),
+    s = n(273744),
+    o = n(388032),
     c = n(204800);
 let d = (e) => {
     var t, n;
     let {
             node: { header: d, subheader: u, button: m },
-            isModeratorReport: _,
+            isModeratorReport: p,
         } = e,
-        p = (null == m ? void 0 : m.type) === "submit",
+        g = (null == m ? void 0 : m.type) === "submit",
         x = i.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
@@ -40,7 +40,7 @@ let d = (e) => {
                     }
                     return e;
                 })({}, a.Z.defaultRules)),
-                (n = n = { link: o.s }),
+                (n = n = { link: s.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -73,11 +73,11 @@ let d = (e) => {
                       children: x.current(u),
                   })
                 : null,
-            p &&
-                !_ &&
+            g &&
+                !p &&
                 (0, r.jsx)(l.Text, {
                     variant: "text-sm/normal",
-                    children: s.intl.format(s.t.Q0tSKS, {}),
+                    children: o.intl.format(o.t.Q0tSKS, {}),
                 }),
         ],
     });

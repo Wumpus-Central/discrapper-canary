@@ -1,54 +1,54 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(384275),
-    o = n(317381),
-    s = n(513202),
+    s = n(317381),
+    o = n(513202),
     c = n(367907),
     d = n(138201),
     u = n(881998),
     m = n(981631),
-    _ = n(388032);
-let p = (e) => {
+    p = n(388032);
+let g = (e) => {
     let { application: t, reportId: n } = e,
-        [p, x] = i.useState(!1),
-        g = (0, l.e7)([u.Z], () => u.Z.getNewestTokenForApplication(t.id));
+        [g, x] = i.useState(!1),
+        h = (0, l.e7)([u.Z], () => u.Z.getNewestTokenForApplication(t.id));
     i.useEffect(() => {
-        null != g && x(!0);
-    }, [g]);
-    let f = i.useRef(!1);
+        null != h && x(!0);
+    }, [h]);
+    let b = i.useRef(!1);
     i.useEffect(() => {
-        f.current || (a.Z.fetch(), (f.current = !0));
+        b.current || (a.Z.fetch(), (b.current = !0));
     }, []);
-    let b = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities()),
-        h = i.useCallback(() => {
+    let _ = (0, l.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities()),
+        f = i.useCallback(() => {
             if (
                 (x(!1),
                 c.ZP.trackWithMetadata(m.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
                     report_id: n,
                 }),
-                null == g)
+                null == h)
             )
                 return;
-            a.Z.delete(g.id);
-            let e = b.get(t.id);
+            a.Z.delete(h.id);
+            let e = _.get(t.id);
             null != e &&
-                s.Z.leaveActivity({
+                o.Z.leaveActivity({
                     location: e.location,
                     applicationId: t.id,
                     showFeedback: !1,
                 });
-        }, [t.id, g, b, n]);
+        }, [t.id, h, _, n]);
     return null == t
         ? null
         : (0, r.jsx)(d.JZ, {
-              title: _.intl.string(_.t.ygG62N),
-              description: _.intl.string(_.t.S51EKi),
-              buttonText: p ? _.intl.string(_.t.xXpoGR) : _.intl.string(_.t.JsiUnJ),
-              buttonDisabled: !p,
-              onButtonPress: h,
-              buttonVariant: p ? "critical-primary" : "secondary",
+              title: p.intl.string(p.t.ygG62N),
+              description: p.intl.string(p.t.S51EKi),
+              buttonText: g ? p.intl.string(p.t.xXpoGR) : p.intl.string(p.t.JsiUnJ),
+              buttonDisabled: !g,
+              onButtonPress: f,
+              buttonVariant: g ? "critical-primary" : "secondary",
           });
 };

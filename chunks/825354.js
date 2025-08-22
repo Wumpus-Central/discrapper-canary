@@ -1,15 +1,15 @@
 r.d(t, { Z: () => f });
 var n = r(951288),
     i = r(647438),
-    l = r(120356),
-    a = r.n(l),
+    a = r(120356),
+    l = r.n(a),
     o = r(481060),
     c = r(239091),
     s = r(726521),
     u = r(388032),
     d = r(595342);
 function f(e) {
-    let { widget: t, userId: r, className: l } = e,
+    let { widget: t, userId: r, className: a } = e,
         f = i.useRef(null),
         g = () => {
             (0, s.G1)(r, t);
@@ -72,7 +72,7 @@ function f(e) {
                     {
                         innerRef: f,
                         "aria-label": u.intl.string(u.t.xpSHSk),
-                        className: a()(d.button, l),
+                        className: l()(d.button, a),
                         children: (0, n.jsx)(o.xhG, {
                             size: "sm",
                             color: "currentColor",

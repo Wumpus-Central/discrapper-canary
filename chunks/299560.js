@@ -1,8 +1,8 @@
 r.d(t, { Z: () => j });
 var n = r(951288),
     i = r(647438),
-    l = r(120356),
-    a = r.n(l),
+    a = r(120356),
+    l = r.n(a),
     o = r(296009),
     c = r(481060),
     s = r(804919),
@@ -12,8 +12,8 @@ var n = r(951288),
     g = r(228168),
     b = r(247397),
     p = r(388032),
-    O = r(229870);
-let m = {
+    m = r(229870);
+let O = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {
             variant: "details",
@@ -44,34 +44,34 @@ let m = {
     },
 };
 function j(e) {
-    let { widgetType: t, onAddWidget: r, size: l = "default", loading: o = !1 } = e,
-        { placeholder: s, getAriaLabel: j } = m[t],
-        y = "small" === l,
-        v = i.useCallback(() => {
+    let { widgetType: t, onAddWidget: r, size: a = "default", loading: o = !1 } = e,
+        { placeholder: s, getAriaLabel: j } = O[t],
+        y = "small" === a,
+        x = i.useCallback(() => {
             o || ((0, u.qH)(t), (0, d.L$)(g.qb.WIDGET_ADDED), null == r || r());
         }, [t, r, o]);
     return (0, n.jsxs)(c.P3F, {
-        className: a()(O.addButtonContainer, y && O.sizeSmall, o && O.loading),
-        onClick: v,
+        className: l()(m.addButtonContainer, y && m.sizeSmall, o && m.loading),
+        onClick: x,
         "aria-label": j(),
         "aria-busy": o,
         children: [
             "details" === s.variant
                 ? (0, n.jsx)(f.i, {
                       applicationId: s.applicationId,
-                      size: l,
+                      size: a,
                   })
                 : (0, n.jsx)(f.c, {
                       applicationIds: s.applicationIds,
-                      size: l,
+                      size: a,
                   }),
             (0, n.jsxs)("div", {
-                className: O.overlay,
+                className: m.overlay,
                 children: [
                     (0, n.jsx)(c.oFk, {
                         size: "md",
                         color: "currentColor",
-                        className: O.addButton,
+                        className: m.addButton,
                     }),
                     (0, n.jsx)(c.Text, {
                         variant: "text-md/medium",

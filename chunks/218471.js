@@ -1,9 +1,9 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(524437),
     i = n(925513),
     l = n(82554),
     a = n(388032);
-let o = {
+let s = {
     getTitle: () => a.intl.string(a.t.RVX1zc),
     getDisabledTitle: () => a.intl.string(a.t.SYkEBg),
     getDescription: () => a.intl.string(a.t.aqlmp6),

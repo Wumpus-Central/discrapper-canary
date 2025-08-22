@@ -2,8 +2,8 @@ r.d(t, { Z: () => u });
 var n = r(951288);
 r(647438);
 var i = r(120356),
-    l = r.n(i),
-    a = r(481060),
+    a = r.n(i),
+    l = r(481060),
     o = r(86419),
     c = r(388032),
     s = r(51708);
@@ -12,12 +12,12 @@ function u(e) {
         d = () => {
             (0, o.$b)(r, t.applicationId);
         };
-    return (0, n.jsx)(a.ua7, {
+    return (0, n.jsx)(l.ua7, {
         text: c.intl.string(c.t.HUvyDQ),
         children: (e) => {
             var t, r;
             return (0, n.jsx)(
-                a.P3F,
+                l.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -47,11 +47,11 @@ function u(e) {
                     {
                         onClick: d,
                         "aria-label": c.intl.string(c.t.HUvyDQ),
-                        className: l()(u, s.clickable),
-                        children: (0, n.jsx)(a.XHJ, {
+                        className: a()(u, s.clickable),
+                        children: (0, n.jsx)(l.XHJ, {
                             size: i,
                             className: s.icon,
-                            color: a.TVs.colors.STATUS_DANGER,
+                            color: l.TVs.colors.STATUS_DANGER,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

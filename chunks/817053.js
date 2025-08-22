@@ -1,12 +1,12 @@
 r.d(t, {
-    Z: () => O,
+    Z: () => m,
     o: () => b,
 }),
     r(388685);
 var n = r(951288),
     i = r(647438),
-    l = r(120356),
-    a = r.n(l),
+    a = r(120356),
+    l = r.n(a),
     o = r(481060),
     c = r(810568),
     s = r(168524),
@@ -57,9 +57,9 @@ function g(e, t) {
 }
 function b(e) {
     let { imageSrc: t, gameName: r } = e,
-        [l, a] = i.useState(!1),
+        [a, l] = i.useState(!1),
         c = null != r ? r : u.intl.string(u.t.GIWFlJ);
-    return l || null == t
+    return a || null == t
         ? (0, n.jsx)("div", {
               role: "img",
               "aria-label": c,
@@ -75,30 +75,30 @@ function b(e) {
               src: t,
               alt: c,
               className: d.gameCoverImage,
-              onError: () => a(!0),
-              onLoad: () => a(!1),
+              onError: () => l(!0),
+              onLoad: () => l(!1),
           });
 }
 function p(e) {
-    let { imageSrc: t, gameName: r, applicationId: i, userId: l, className: p, hideTooltip: O = !1 } = e,
-        m = (0, s.Z)({
+    let { imageSrc: t, gameName: r, applicationId: i, userId: a, className: p, hideTooltip: m = !1 } = e,
+        O = (0, s.Z)({
             location: "GameCover",
             applicationId: i,
             source: c.m1.UserProfile,
-            sourceUserId: l,
+            sourceUserId: a,
             trackEntryPointImpression: !0,
         }),
         j = null != r ? r : u.intl.string(u.t.GIWFlJ),
         y = u.intl.formatToPlainString(u.t["8QLQBw"], { gameName: j }),
-        v = (e) =>
-            O
+        x = (e) =>
+            m
                 ? e()
                 : (0, n.jsx)(o.ua7, {
                       text: j,
                       children: (t) => e(t),
                   });
-    return v(
-        null == m
+    return x(
+        null == O
             ? (e) =>
                   (0, n.jsx)(
                       "div",
@@ -113,9 +113,9 @@ function p(e) {
                   (0, n.jsx)(
                       o.P3F,
                       g(f({}, e), {
-                          onClick: m,
+                          onClick: O,
                           "aria-label": y,
-                          className: a()(d.clickable, p),
+                          className: l()(d.clickable, p),
                           children: (0, n.jsx)(b, {
                               imageSrc: t,
                               gameName: r,
@@ -124,8 +124,8 @@ function p(e) {
                   ),
     );
 }
-function O(e) {
-    var { applicationId: t, userId: r, className: i, disableInteraction: l = !1, hideTooltip: o } = e,
+function m(e) {
+    var { applicationId: t, userId: r, className: i, disableInteraction: a = !1, hideTooltip: o } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -135,20 +135,20 @@ function O(e) {
                     var r,
                         n,
                         i = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++)
+                    (r = a[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
         })(e, ["applicationId", "userId", "className", "disableInteraction", "hideTooltip"]);
-    let s = a()(d.coverContainer, i);
-    return l
+    let s = l()(d.coverContainer, i);
+    return a
         ? (0, n.jsx)("div", {
               className: s,
               children: (0, n.jsx)(b, f({}, c)),
