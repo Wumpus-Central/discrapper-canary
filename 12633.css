@@ -60736,410 +60736,6 @@ h3.improved__1689b:after {
     top: 0
 }
 
-.desktopTooltip_fed3a2 {
-    display: flex;
-    padding: 4px 0;
-    width: 100%
-}
-
-.infoIcon_fed3a2 {
-    color: var(--white-500);
-    margin-right: 4px
-}
-
-.wrapper_ef0e9b {
-    width: 100%
-}
-
-.percentCompleteWrapper_ef0e9b {
-    display: flex
-}
-
-.percentCompleteLabel_ef0e9b {
-    flex: 1 1 auto;
-    text-align: right
-}
-
-.progressBar_ef0e9b {
-    height: 4px;
-    position: relative
-}
-
-.progressBar_ef0e9b:after {
-    content: "";
-    opacity: .2;
-    width: 100%
-}
-
-.progressBar_ef0e9b:after,
-.progressBarFill_ef0e9b {
-    background-color: currentColor;
-    border-radius: 4px;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0
-}
-
-.progressBarFill_ef0e9b:after {
-    box-shadow: 0 0 8px currentColor;
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: .7;
-    position: absolute;
-    top: 0;
-    width: 100%
-}
-
-.percentCompleteLabelOffset_ef0e9b,
-.progressBarFill_ef0e9b {
-    transition: width .3s ease-in-out
-}
-
-.lottieAnimation__85ad0 {
-    pointer-events: none;
-    position: absolute
-}
-
-.lottieAnimation__85ad0 svg {
-    display: block
-}
-
-.backgroundFallback__85ad0 {
-    z-index: 0
-}
-
-.backgroundFallback__85ad0,
-.lottieAnimationBackgroundWrapper__85ad0 {
-    background-color: currentColor;
-    border-radius: 8px 8px 0 0;
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1
-}
-
-.lottieAnimationBackground__85ad0 {
-    z-index: 1
-}
-
-.backgroundFallback__85ad0,
-.lottieAnimationBackground__85ad0 {
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    top: 0;
-    width: 100%
-}
-
-.contentCollapsed_b628ac {
-    bottom: 0;
-    box-sizing: border-box;
-    height: 100%;
-    left: 0;
-    padding: 8px 0 8px 8px;
-    position: absolute;
-    width: 100%;
-    z-index: 3
-}
-
-.contentCollapsedWrapper_b628ac {
-    position: relative;
-    z-index: 2
-}
-
-.contentCollapsedAccepted_b628ac {
-    padding-bottom: 6px;
-    padding-right: 8px;
-    padding-top: 6px
-}
-
-.contentCollapsedExpanded_b628ac {
-    pointer-events: none
-}
-
-.brandingWrapper_b628ac {
-    align-items: center;
-    display: flex;
-    -webkit-mask-image: linear-gradient(270deg, transparent 4px, #000 24px);
-    mask-image: linear-gradient(270deg, transparent 4px, #000 24px)
-}
-
-.partnerBranding_b628ac {
-    margin-right: 12px
-}
-
-.questName_b628ac {
-    flex: 1 1 auto;
-    text-shadow: 0 0 8px rgba(0, 0, 0, .3);
-    white-space: nowrap
-}
-
-.questProgressWrapper_b628ac {
-    align-items: center;
-    display: flex
-}
-
-.questProgressRewardTile_b628ac {
-    border-radius: 4px;
-    box-shadow: var(--shadow-high);
-    display: block;
-    flex: 0 0 auto;
-    margin-right: 8px
-}
-
-.questProgressRewardTile_b628ac.questProgressRewardTile_b628ac {
-    height: 28px;
-    width: 28px
-}
-
-.questProgressBar_b628ac,
-.questProgressHint_b628ac {
-    flex: 1 1 auto
-}
-
-.shine_b628ac {
-    color: var(--opacity-white-8)
-}
-
-.full-motion .shine_b628ac {
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-name: Shine_b628ac;
-    animation-timing-function: ease-in-out
-}
-
-@keyframes Shine_b628ac {
-    0% {
-        transform: translate3d(-50%, 0, 0)
-    }
-
-    to {
-        transform: translate3d(200%, 0, 0)
-    }
-}
-
-.promotedTag__1d868 {
-    isolation: isolate;
-    padding: 3px 4px 2px;
-    position: relative;
-    text-transform: uppercase
-}
-
-.promotedTag__1d868,
-.promotedTag__1d868 span {
-    display: block
-}
-
-.promotedTagBackground__1d868 {
-    background-color: var(--black-500);
-    border-radius: 3px;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 0
-}
-
-.contentExpanded_f339f7 {
-    border-radius: 8px 8px 0 0;
-    box-sizing: border-box;
-    left: 0;
-    padding: 8px;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1
-}
-
-.contentInteractable_f339f7 {
-    pointer-events: all
-}
-
-.questPromoContent_f339f7 {
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    z-index: 2
-}
-
-.utils_f339f7 {
-    align-items: center;
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: space-between;
-    margin-bottom: 42px
-}
-
-.questAcceptedContent_f339f7 .utils_f339f7 {
-    align-items: flex-start;
-    margin-bottom: 6px
-}
-
-.details_f339f7 {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 2px
-}
-
-.submenuWrapper_f339f7 {
-    background-color: rgba(0, 0, 0, .4);
-    border-radius: 16px;
-    cursor: pointer;
-    flex: 0 0 auto;
-    height: 20px;
-    opacity: .9;
-    position: relative;
-    transition: background-color .125s, opacity .125s;
-    width: 20px
-}
-
-.submenuWrapper_f339f7:focus,
-.submenuWrapper_f339f7:hover {
-    background-color: rgba(0, 0, 0, .5)
-}
-
-.submenuWrapper_f339f7:active {
-    opacity: .7
-}
-
-.questAcceptedContent_f339f7 .submenuWrapper_f339f7 {
-    background-color: unset;
-    height: 24px;
-    width: 24px
-}
-
-.questAcceptedContent_f339f7 .submenuWrapper_f339f7:focus,
-.questAcceptedContent_f339f7 .submenuWrapper_f339f7:hover {
-    background-color: unset
-}
-
-.submenuIcon_f339f7 {
-    color: var(--white-500);
-    height: 16px;
-    left: 2px;
-    position: absolute;
-    top: 2px;
-    width: 16px
-}
-
-.questAcceptedContent_f339f7 .submenuIcon_f339f7 {
-    left: 0;
-    top: 0
-}
-
-.heroAssetWrapper_f339f7 {
-    border-radius: 8px 8px 0 0;
-    height: calc(100% - 38px);
-    overflow: hidden;
-    right: 0
-}
-
-.heroAssetWrapper_f339f7,
-.heroAssetWrapper_f339f7:after {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1
-}
-
-.heroAssetWrapper_f339f7:after {
-    background-color: currentColor;
-    content: "";
-    height: 100%;
-    -webkit-mask-image: linear-gradient(180deg, transparent, #000);
-    mask-image: linear-gradient(180deg, transparent, #000)
-}
-
-.heroAsset_f339f7 {
-    height: 240px;
-    object-fit: cover;
-    position: absolute;
-    width: 240px;
-    z-index: 0
-}
-
-.cta_f339f7 {
-    background-color: var(--custom-cta-color, var(--opacity-black-20));
-    color: var(--white-500);
-    flex: 0 0 auto;
-    margin-top: 8px;
-    padding-bottom: 4px;
-    padding-top: 4px;
-    transition: background-color .125s
-}
-
-.cta_f339f7:focus,
-.cta_f339f7:hover {
-    background-color: var(--custom-cta-color-hover, var(--opacity-black-28))
-}
-
-.cta_f339f7:active {
-    background-color: var(--custom-cta-color-active, var(--opacity-black-36))
-}
-
-.ctaClaimReward_f339f7 {
-    margin-bottom: 4px
-}
-
-.description_f339f7,
-.title_f339f7 {
-    text-shadow: 0 0 6px rgba(0, 0, 0, .3)
-}
-
-.title_f339f7 {
-    margin-bottom: 2px
-}
-
-.rewardTile_f339f7 {
-    margin-bottom: 8px
-}
-
-.questAcceptedContentHeading_f339f7 {
-    align-items: center;
-    display: flex
-}
-
-.questProgressRewardTile_f339f7 {
-    border-radius: 4px;
-    box-shadow: var(--shadow-high);
-    display: block;
-    flex: 0 0 auto;
-    height: 28px;
-    margin-right: 8px;
-    width: 28px
-}
-
-.questAcceptedContentHeading_f339f7 .questProgressRewardTile_f339f7 {
-    height: 32px;
-    width: 32px
-}
-
-.questAcceptedContentCopySubheading_f339f7 {
-    opacity: .7
-}
-
-.questAcceptedContent_f339f7 .description_f339f7 {
-    margin-bottom: 2px;
-    text-shadow: none
-}
-
-.content__874f8 {
-    overflow: hidden
-}
-
 .wrapper__0d616 {
     background: var(--background-base-lower);
     border-top-left-radius: var(--radius-sm);
@@ -61947,6 +61543,29 @@ h3.improved__1689b:after {
     width: auto
 }
 
+.promotedTag__1d868 {
+    isolation: isolate;
+    padding: 3px 4px 2px;
+    position: relative;
+    text-transform: uppercase
+}
+
+.promotedTag__1d868,
+.promotedTag__1d868 span {
+    display: block
+}
+
+.promotedTagBackground__1d868 {
+    background-color: var(--black-500);
+    border-radius: 3px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0
+}
+
 .outerContainer__092f9 {
     display: flex;
     flex-direction: column;
@@ -62150,6 +61769,67 @@ h3.improved__1689b:after {
 
 .questsCard__72a00+.questsCard__72a00 {
     margin-top: 16px
+}
+
+.desktopTooltip_fed3a2 {
+    display: flex;
+    padding: 4px 0;
+    width: 100%
+}
+
+.infoIcon_fed3a2 {
+    color: var(--white-500);
+    margin-right: 4px
+}
+
+.wrapper_ef0e9b {
+    width: 100%
+}
+
+.percentCompleteWrapper_ef0e9b {
+    display: flex
+}
+
+.percentCompleteLabel_ef0e9b {
+    flex: 1 1 auto;
+    text-align: right
+}
+
+.progressBar_ef0e9b {
+    height: 4px;
+    position: relative
+}
+
+.progressBar_ef0e9b:after {
+    content: "";
+    opacity: .2;
+    width: 100%
+}
+
+.progressBar_ef0e9b:after,
+.progressBarFill_ef0e9b {
+    background-color: currentColor;
+    border-radius: 4px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+.progressBarFill_ef0e9b:after {
+    box-shadow: 0 0 8px currentColor;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.percentCompleteLabelOffset_ef0e9b,
+.progressBarFill_ef0e9b {
+    transition: width .3s ease-in-out
 }
 
 .wrapper_b76891 {
@@ -89928,7 +89608,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
