@@ -41941,22 +41941,11 @@ body .headerAnimation_b54a5b {
     width: 100%
 }
 
-.infoIcon_d54fab {
-    color: var(--header-primary);
-    height: 16px
-}
-
-.infoIconContainer_d54fab {
-    display: flex
-}
-
-.giftBoxHeaderContainer_d54fab {
-    display: flex;
-    flex-direction: row
-}
-
 .giftMainAnimation_d54fab {
+    align-items: flex-end;
+    display: flex;
     height: 275px;
+    justify-content: center;
     position: relative
 }
 
@@ -41985,9 +41974,6 @@ body .headerAnimation_b54a5b {
 }
 
 .animation_d54fab {
-    bottom: 0;
-    left: 0;
-    position: absolute;
     transform: scale(1)
 }
 
@@ -41995,12 +41981,6 @@ body .headerAnimation_b54a5b {
     height: 100%;
     transform: scale(.75);
     width: 100%
-}
-
-.giftBoxHeaderText_d54fab {
-    letter-spacing: .02em;
-    margin-right: 6px;
-    text-transform: uppercase
 }
 
 .giftBoxOptionContainer_d54fab {
@@ -42167,6 +42147,13 @@ body .headerAnimation_b54a5b {
 }
 
 .bodyColumnMiddle_d947e6 {
+    margin-right: 30px
+}
+
+.bodyColumnMiddleCentered_d947e6 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin-right: 30px
 }
 
