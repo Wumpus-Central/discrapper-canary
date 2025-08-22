@@ -1,4 +1,4 @@
-t.d(n, { Z: () => I });
+t.d(n, { Z: () => O });
 var r = t(951288);
 t(647438);
 var o = t(120356),
@@ -12,8 +12,8 @@ var o = t(120356),
     f = t(888496),
     m = t(768762),
     p = t(706454),
-    b = t(49012),
-    x = t(981631),
+    x = t(49012),
+    b = t(981631),
     g = t(856651),
     h = t(388032),
     j = t(20163);
@@ -118,14 +118,14 @@ function y(e) {
                                                         .concat(h.intl.string(h.t.q5jLJC))
                                                   : "".concat(t.name, ", ").concat(h.intl.string(h.t.q5jLJC)),
                                           onClick: (e) => {
-                                              (0, s.yw)(x.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                                              (0, s.yw)(b.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: t.type,
                                                   other_user_id: l,
                                               }),
-                                                  (0, b.q)(
+                                                  (0, x.q)(
                                                       {
                                                           href: n,
-                                                          trusted: (null == y ? void 0 : y.type) !== x.ABu.DOMAIN,
+                                                          trusted: (null == y ? void 0 : y.type) !== b.ABu.DOMAIN,
                                                       },
                                                       e,
                                                   );
@@ -164,17 +164,17 @@ function y(e) {
                     (0, r.jsx)("div", {
                         className: j.metadata,
                         children:
-                            t.type === x.ABu.REDDIT
+                            t.type === b.ABu.REDDIT
                                 ? (0, f.oP)(i)
-                                : t.type === x.ABu.STEAM
+                                : t.type === b.ABu.STEAM
                                   ? (0, f.Dq)(i)
-                                  : t.type === x.ABu.BLUESKY || t.type === x.ABu.MASTODON || t.type === x.ABu.TWITTER
+                                  : t.type === b.ABu.BLUESKY || t.type === b.ABu.MASTODON || t.type === b.ABu.TWITTER
                                     ? (0, f.rJ)(i)
-                                    : t.type === x.ABu.PAYPAL
+                                    : t.type === b.ABu.PAYPAL
                                       ? (0, f.li)(i)
-                                      : t.type === x.ABu.EBAY
+                                      : t.type === b.ABu.EBAY
                                         ? (0, f.ul)(i)
-                                        : t.type === x.ABu.TIKTOK
+                                        : t.type === b.ABu.TIKTOK
                                           ? (0, f.hf)(i)
                                           : null,
                     }),
@@ -183,7 +183,7 @@ function y(e) {
         ],
     });
 }
-function I(e) {
+function O(e) {
     let { connections: n, userId: t, className: o } = e,
         c = (0, i.e7)([p.default], () => p.default.locale);
     return 0 === n.length

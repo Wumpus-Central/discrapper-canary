@@ -1,27 +1,27 @@
 r.r(t), r.d(t, { default: () => A }), r(388685), r(314940);
 var a = r(951288),
-    n = r(647438),
-    i = r(512722),
-    o = r.n(i),
-    s = r(202841),
-    l = r(278074),
-    c = r(979554),
+    i = r(647438),
+    n = r(512722),
+    s = r.n(n),
+    o = r(202841),
+    c = r(278074),
+    l = r(979554),
     d = r(314794),
     u = r(399606),
     f = r(481060),
-    v = r(47280),
+    h = r(47280),
     p = r(876917),
-    h = r(594174),
-    g = r(508925),
-    m = r(616066),
-    y = r(216541),
+    g = r(594174),
+    m = r(508925),
+    v = r(616066),
+    j = r(216541),
     P = r(22267),
     b = r(302800),
-    w = r(388032),
+    y = r(388032),
     O = r(186175),
-    j = r(593639),
-    _ = r(945182),
-    E = r(234286);
+    w = r(593639),
+    E = r(945182),
+    _ = r(234286);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -47,36 +47,36 @@ function x(e) {
     }
     return e;
 }
-let C = (e) => {
-        let { product: t, pairedProduct: r, itemConsumed: n } = e,
-            [i] = t.items,
-            s = null == r ? void 0 : r.items[0],
-            b = (0, u.e7)([h.default], () => {
-                let e = h.default.getCurrentUser();
-                return o()(null != e, "User cannot be undefined"), e;
+let S = (e) => {
+        let { product: t, pairedProduct: r, itemConsumed: i, forCollectedModal: n } = e,
+            [o] = t.items,
+            b = null == r ? void 0 : r.items[0],
+            x = (0, u.e7)([g.default], () => {
+                let e = g.default.getCurrentUser();
+                return s()(null != e, "User cannot be undefined"), e;
             }),
-            x = Object.values(d.a).includes(t.skuId),
-            C = (0, v.ZP)({ location: "CollectiblesProductPreview" });
-        return (0, l.EQ)(t.type)
-            .with(c.Z.PROFILE_EFFECT, () =>
+            S = Object.values(d.a).includes(t.skuId),
+            C = (0, h.ZP)({ location: "CollectiblesProductPreview" });
+        return (0, c.EQ)(t.type)
+            .with(l.Z.PROFILE_EFFECT, () =>
                 (0, a.jsx)("div", {
                     className: O.profileEffectShopPreview,
                     children: (0, a.jsx)(p.Z, {
                         forCollectedModal: !0,
-                        profileEffectId: i.id,
+                        profileEffectId: o.id,
                     }),
                 }),
             )
-            .with(c.Z.AVATAR_DECORATION, () =>
-                (o()(i.type === c.Z.AVATAR_DECORATION, "ts-match already checked the type"),
-                null != s && s.type === c.Z.AVATAR_DECORATION)
+            .with(l.Z.AVATAR_DECORATION, () =>
+                (s()(o.type === l.Z.AVATAR_DECORATION, "ts-match already checked the type"),
+                null != b && b.type === l.Z.AVATAR_DECORATION)
                     ? (0, a.jsxs)("div", {
                           children: [
                               (0, a.jsx)("div", {
                                   className: O.avatarDecorationPairOne,
-                                  children: (0, a.jsx)(m.R, {
-                                      item: i,
-                                      user: b,
+                                  children: (0, a.jsx)(v.R, {
+                                      item: o,
+                                      user: x,
                                       avatarSize: f.EFr.SIZE_120,
                                       isPurchased: !1,
                                       isHighlighted: !0,
@@ -84,79 +84,66 @@ let C = (e) => {
                               }),
                               (0, a.jsx)("div", {
                                   className: O.avatarDecorationPairTwo,
-                                  children: (0, a.jsx)(m.R, {
-                                      item: s,
+                                  children: (0, a.jsx)(v.R, {
+                                      item: b,
                                       avatarSize: f.EFr.SIZE_120,
                                       isPurchased: !1,
                                   }),
                               }),
                           ],
                       })
-                    : (0, a.jsx)(m.R, {
-                          item: i,
-                          user: b,
+                    : (0, a.jsx)(v.R, {
+                          item: o,
+                          user: x,
                           avatarSize: f.EFr.SIZE_120,
                           isPurchased: !1,
                           isHighlighted: !0,
                       }),
             )
-            .with(c.Z.NAMEPLATE, () =>
+            .with(l.Z.NAMEPLATE, () =>
                 (0, a.jsx)("div", {
                     className: O.nameplate,
                     children: (0, a.jsx)(P.Z, {
-                        nameplate: i,
-                        user: b,
+                        nameplate: o,
+                        user: x,
                         nameplatePreviewSize: "large",
                         isHighlighted: !0,
                     }),
                 }),
             )
-            .with(c.Z.BUNDLE, () =>
+            .with(l.Z.BUNDLE, () =>
                 (0, a.jsx)("div", {
                     className: O.bundlePreview,
-                    children: (0, a.jsx)(y.d, {
+                    children: (0, a.jsx)(j.d, {
                         containerClassName: O.bundlePreviewContainer,
                         product: t,
-                        user: b,
+                        user: x,
                         isPurchased: !1,
                         isHighlighted: !0,
-                        profileEffectClassName: O.bundleProfileEffectCard,
-                        avatarDecorationClassName: O.bundleAvatarDecorationCard,
+                        forCollectedModal: n,
                     }),
                 }),
             )
-            .with(c.Z.EXTERNAL_SKU, () => {
-                if (x)
-                    if (n)
+            .with(l.Z.EXTERNAL_SKU, () => {
+                if (S)
+                    if (i)
                         return (0, a.jsx)("img", {
-                            src: C ? E : _,
-                            alt: w.intl.string(w.t.t0xkSE),
+                            src: C ? _ : E,
+                            alt: y.intl.string(y.t.t0xkSE),
                             style: { width: "100%" },
                         });
                     else
                         return (0, a.jsx)("img", {
-                            src: j,
-                            alt: w.intl.string(w.t.g5W1g4),
+                            src: w,
+                            alt: y.intl.string(y.t.g5W1g4),
                         });
-                return (0, a.jsx)(g.b, { product: t });
+                return (0, a.jsx)(m.b, { product: t });
             })
             .otherwise(() => null);
     },
-    S = (e) => {
+    C = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
-            [i, o] = n.useState(!1),
-            l = (0, f.q_F)({
-                from: {
-                    transform: "translateX(100%)",
-                    right: "-100%",
-                },
-                to: {
-                    transform: "translateX(50%)",
-                    right: "50%",
-                },
-                config: { duration: 1550 },
-                onRest: () => setTimeout(() => o(!0), 100),
-            }),
+            [n, s] = i.useState(!1),
             c = (0, f.q_F)({
                 from: {
                     transform: "translateX(100%)",
@@ -167,7 +154,19 @@ let C = (e) => {
                     right: "50%",
                 },
                 config: { duration: 1550 },
-                reverse: i,
+                onRest: () => setTimeout(() => s(!0), 100),
+            }),
+            l = (0, f.q_F)({
+                from: {
+                    transform: "translateX(100%)",
+                    right: "-100%",
+                },
+                to: {
+                    transform: "translateX(50%)",
+                    right: "50%",
+                },
+                config: { duration: 1550 },
+                reverse: n,
             }),
             d = (0, f.q_F)(
                 {
@@ -188,14 +187,14 @@ let C = (e) => {
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(s.animated.div, {
+                (0, a.jsx)(o.animated.div, {
                     className: O.easterEggContainer,
-                    style: l,
-                    children: (0, a.jsx)(C, x({}, e)),
+                    style: c,
+                    children: (0, a.jsx)(S, x({}, e)),
                 }),
-                (0, a.jsx)(s.animated.div, {
+                (0, a.jsx)(o.animated.div, {
                     className: O.easterEggContainer,
-                    style: t ? d : c,
+                    style: t ? d : l,
                     children: (0, a.jsx)("img", {
                         src: r.getSrc(),
                         style: r.style,
@@ -208,12 +207,12 @@ let C = (e) => {
     };
 function A(e) {
     var t, r;
-    let n = (0, b.v)(e.product.categorySkuId);
-    return null != n
+    let i = (0, b.v)(e.product.categorySkuId);
+    return null != i
         ? (0, a.jsx)(
-              S,
+              C,
               ((t = x({}, e)),
-              (r = r = { displayOptions: n }),
+              (r = r = { displayOptions: i }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                   : (function (e, t) {
@@ -228,5 +227,5 @@ function A(e) {
                     }),
               t),
           )
-        : (0, a.jsx)(C, x({}, e));
+        : (0, a.jsx)(S, x({}, e));
 }

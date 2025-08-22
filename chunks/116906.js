@@ -1,4 +1,4 @@
-t.d(n, { Z: () => O });
+t.d(n, { Z: () => I });
 var r = t(951288);
 t(647438);
 var o = t(442837),
@@ -12,76 +12,73 @@ var o = t(442837),
     f = t(369566),
     m = t(29899),
     p = t(678738),
-    b = t(151545),
-    x = t(744802),
-    g = t(493043),
+    x = t(151545),
+    b = t(527790),
+    g = t(769140),
     h = t(864141),
     j = t(228168),
     v = t(981631),
     _ = t(388032),
     y = t(7994),
-    I = t(878449);
-function O(e) {
-    let { user: n, currentUser: t, displayProfile: O, guildId: Z, subsection: P, onClose: T } = e,
-        { voiceActivityStatusEnabled: A } = (0, i.U)({ location: "UserProfileModalActivity" }),
+    O = t(878449);
+function I(e) {
+    let { user: n, currentUser: t, guildId: I, subsection: Z, onClose: P } = e,
+        { voiceActivityStatusEnabled: T } = (0, i.U)({ location: "UserProfileModalActivity" }),
         N = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: C, recent: E, stream: S } = (0, f.Z)(n.id),
-        { voiceChannel: w, voiceActivity: B } = (0, m.Z)({
+        { live: A, recent: C, stream: E } = (0, f.Z)(n.id),
+        { voiceChannel: S, voiceActivity: w } = (0, m.Z)({
             userId: n.id,
-            guildId: Z,
+            guildId: I,
         }),
-        D = (0, o.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
-        L = n.id === t.id,
-        R = (0, o.e7)([s.Z, a.Z], () => {
-            let e = L ? s.Z.getStatus() : a.Z.getStatus(n.id);
+        B = (0, o.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
+        D = n.id === t.id,
+        L = (0, o.e7)([s.Z, a.Z], () => {
+            let e = D ? s.Z.getStatus() : a.Z.getStatus(n.id);
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
-        U = C.length > 0 || null != S,
-        M = A && null == S && null == B && null != w,
-        k = !R && (U || M),
-        G = E.length > 0;
-    return k || G || !D
+        R = A.length > 0 || null != E,
+        U = T && null == E && null == w && null != S,
+        M = !L && (R || U),
+        k = C.length > 0;
+    return M || k || !B
         ? (0, r.jsxs)(l.zJl, {
               className: y.scroller,
               fade: !0,
               children: [
-                  k
+                  M
                       ? (0, r.jsx)(p.Z, {
                             "aria-label": _.intl.string(_.t.J6STd3),
                             children: (0, r.jsxs)("ul", {
                                 className: y.activityList,
                                 children: [
                                     !N &&
-                                        M &&
+                                        U &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(h.Z, {
                                                 user: n,
                                                 currentUser: t,
-                                                voiceChannel: w,
-                                                onClose: T,
+                                                voiceChannel: S,
+                                                onClose: P,
                                             }),
                                         }),
-                                    null != S &&
+                                    null != E &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(g.Z, {
-                                                location: "UserProfileModalActivity",
                                                 user: n,
                                                 currentUser: t,
-                                                stream: S,
-                                                onClose: T,
-                                                profileGuildId: null == O ? void 0 : O.guildId,
+                                                stream: E,
+                                                onClose: P,
                                             }),
                                         }),
-                                    C.map((e, o) =>
+                                    A.map((e, o) =>
                                         (0, r.jsx)(
                                             "li",
                                             {
-                                                children: (0, r.jsx)(b.Z, {
+                                                children: (0, r.jsx)(x.Z, {
                                                     user: n,
                                                     currentUser: t,
                                                     activity: e,
-                                                    onClose: T,
-                                                    profileGuildId: null == O ? void 0 : O.guildId,
+                                                    onClose: P,
                                                 }),
                                             },
                                             "live-".concat(o),
@@ -91,10 +88,10 @@ function O(e) {
                             }),
                         })
                       : null,
-                  G
+                  k
                       ? (0, r.jsx)(p.Z, {
                             heading: _.intl.string(_.t.M0zgnZ),
-                            introText: L
+                            introText: D
                                 ? _.intl.format(_.t["4bk9Ag"], {
                                       learnMoreHook: (e, n) =>
                                           (0, r.jsx)(
@@ -107,20 +104,17 @@ function O(e) {
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: P === j.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: Z === j.Tb.RECENT_ACTIVITY,
                             children: (0, r.jsx)("ul", {
                                 className: y.activityList,
-                                children: E.map((e) =>
+                                children: C.map((e) =>
                                     (0, r.jsx)(
                                         "li",
                                         {
-                                            children: (0, r.jsx)(x.Z, {
-                                                location: "UserProfileModalActivity",
+                                            children: (0, r.jsx)(b.Z, {
                                                 user: n,
-                                                currentUser: t,
                                                 entry: e,
-                                                profileGuildId: null == O ? void 0 : O.guildId,
-                                                onClose: T,
+                                                onClose: P,
                                             }),
                                         },
                                         e.id,
@@ -132,7 +126,7 @@ function O(e) {
               ],
           })
         : (0, r.jsx)("div", {
-              className: I.empty,
+              className: O.empty,
               children: (0, r.jsx)(l.$jN, {}),
           });
 }

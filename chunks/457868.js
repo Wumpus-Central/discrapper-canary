@@ -67,8 +67,8 @@ function z(e) {
     return e;
 }
 let W = U.ZP.getEnableHardwareAcceleration(),
-    Y = 44 + B.x,
-    q = i.memo(function (e) {
+    q = 44 + B.x,
+    Y = i.memo(function (e) {
         let { channel: t, sectionId: l, userId: a, guildOwnerId: o } = e,
             s = i.useRef(null),
             u = (0, p.e7)([A.Z], () => A.Z.isTyping(t.id, a)),
@@ -139,7 +139,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                     }),
                     m.Z.startTyping(t.id);
             }, [b, t]),
-            Y = i.useCallback(
+            q = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         (0, x.f)({
@@ -152,7 +152,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            q = (0, O.K)({
+            Y = (0, O.K)({
                 user: b,
                 guildId: t.guild_id,
                 location: "ThreadMembers",
@@ -217,11 +217,11 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             selected: K,
                             applicationStream: R,
                             premiumSince: null == Q ? null : new Date(Q),
-                            onClickPremiumGuildIcon: Y,
+                            onClickPremiumGuildIcon: q,
                             itemProps: M,
                             lostPermissionTooltipText: L ? void 0 : G.intl.string(G.t["/QcoT0"]),
                             isOwner: U,
-                            nameplate: q,
+                            nameplate: Y,
                             onClick: (e) => {
                                 e.shiftKey ? null == V || V() : X((e) => !e);
                             },
@@ -355,7 +355,7 @@ function Q(e) {
                 }),
                 listRef: r,
             };
-        })(l, Y),
+        })(l, q),
         C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
@@ -400,12 +400,12 @@ function Q(e) {
                                             i.id,
                                         );
                                     },
-                                    rowHeight: Y,
+                                    rowHeight: q,
                                     renderRow: (e) => {
                                         let { section: n, row: i } = e,
                                             { userIds: l, id: a } = d[n];
                                         return (0, r.jsx)(
-                                            q,
+                                            Y,
                                             {
                                                 channel: t,
                                                 sectionId: a,

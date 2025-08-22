@@ -308,7 +308,7 @@ function N(e) {
                 ? (N += " " + p.intl.formatToPlainString(p.t.DQnFp6, { lines: y - O }))
                 : (N += " " + p.intl.formatToPlainString(p.t["1+gGcH"], { formattedBytes: (0, _.IC)(g) })));
     let R = (null == b ? void 0 : b.slice(0, O).join("\n")) + N,
-        P = (0, u.yx)(R),
+        P = (0, u.nM)(R),
         w = c || O < y;
     return (0, r.jsxs)("div", {
         className: o()(E, h.container),

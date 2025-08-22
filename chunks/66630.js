@@ -18,8 +18,8 @@ var l = n(951288),
     j = n(626135),
     O = n(644540),
     v = n(359588),
-    C = n(368326),
-    x = n(720449),
+    x = n(368326),
+    C = n(720449),
     _ = n(684269),
     T = n(397416),
     y = n(745579),
@@ -45,7 +45,7 @@ function B(t) {
             prompt: Y = null,
             showLabelSelectorNewTooltip: H = !1,
         } = t,
-        W = (0, C.p)({ location: "CustomStatusModalWithPreview" }),
+        W = (0, x.p)({ location: "CustomStatusModalWithPreview" }),
         z = (0, O.P)({ location: "CustomStatusModalWithPreview" }),
         V = (0, v.Z)({ location: "CustomStatusModalWithPreview" }),
         { analyticsLocations: G } = (0, h.ZP)(F, p.Z.CUSTOM_STATUS_MODAL),
@@ -90,7 +90,7 @@ function B(t) {
         });
     let th = () => {
             tt !== M &&
-                ((0, x.Z)({
+                ((0, C.Z)({
                     text: X,
                     emojiInfo: J,
                     clearAfter: tt,

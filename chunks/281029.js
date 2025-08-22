@@ -57,7 +57,7 @@ function u(e) {
     };
 }
 function d(e, t, n, r, l) {
-    var d, p, f, h, g;
+    var d, p, h, f, g;
     if (null == e || null == n) return null;
     let { GUILD_CATEGORY: m } = o.d4z;
     if (e.type === m) {
@@ -80,7 +80,7 @@ function d(e, t, n, r, l) {
     if (a(e.type, n.type)) return u(n);
     if (r < t) {
         if (n.type === m) {
-            let t = l[(null != (h = c(n, l, !0)) ? h : 0) - 1],
+            let t = l[(null != (f = c(n, l, !0)) ? f : 0) - 1],
                 r = s(1, n.id, e.type, l);
             if (null == t)
                 return {
@@ -101,7 +101,7 @@ function d(e, t, n, r, l) {
             }
             return null;
         }
-        let t = l[(null != (f = c(n, l, !0)) ? f : 0) - 1],
+        let t = l[(null != (h = c(n, l, !0)) ? h : 0) - 1],
             r = s(1, n.id, e.type, l);
         return null != t || e.isGuildVocal()
             ? (0, i.r8)(e.type) && null != r && ((0, i.r8)(t.channel.type) || t.channel.isCategory())
@@ -165,7 +165,7 @@ function p(e, t, n, o) {
         u = [],
         d = [],
         p = o._categories,
-        f = (t) => {
+        h = (t) => {
             var n, r;
             let i;
             return (
@@ -194,7 +194,7 @@ function p(e, t, n, o) {
         };
     if (e.isCategory()) {
         let n = [...p].slice(1);
-        (a = c(e, n)), (s = c(t, n)), (d = f(n)).unshift(p[0]);
+        (a = c(e, n)), (s = c(t, n)), (d = h(n)).unshift(p[0]);
     }
     if ((0, i.r8)(e.type) || e.isCategory()) {
         let n = (0, r.Z)(d.length > 0 ? d : p, o, (e) => {
@@ -203,14 +203,14 @@ function p(e, t, n, o) {
             } = e;
             return (0, i.r8)(t);
         });
-        (a = c(e, n)), (s = c(t, n)), f(n);
+        (a = c(e, n)), (s = c(t, n)), h(n);
     }
     if (e.isGuildVocal() || e.isCategory()) {
         let n = (0, r.Z)(d.length > 0 ? d : p, o, (e) => {
             let { channel: t } = e;
             return t.isGuildVocal();
         });
-        (a = c(e, n)), (s = c(t, n)), f(n);
+        (a = c(e, n)), (s = c(t, n)), h(n);
     }
     if (e.parent_id !== n) {
         let t = !1;

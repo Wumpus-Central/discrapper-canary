@@ -1,37 +1,37 @@
-r.d(t, { Z: () => u });
-var n = r(951288),
-    l = r(647438),
-    a = r(335818),
-    i = r(481060),
-    o = r(501431),
-    s = r(149705),
-    c = r(388032);
+n.d(t, { Z: () => u });
+var r = n(951288),
+    l = n(647438),
+    a = n(335818),
+    s = n(481060),
+    i = n(501431),
+    o = n(149705),
+    c = n(388032);
 function u() {
-    let { itemTypeFilters: e, searchQuery: t } = (0, o.S)((e) => e),
-        { totalCount: r, isFetchingResults: u } = (0, s.a)(),
-        d = (0, o.S)((e) => e.hasFilters()),
-        p = l.useCallback(() => {
+    let { itemTypeFilters: e, searchQuery: t } = (0, i.S)((e) => e),
+        { totalCount: n, isFetchingResults: u } = (0, o.a)(),
+        d = (0, i.S)((e) => e.hasFilters()),
+        g = l.useCallback(() => {
             if (!d) return "";
             if (u) return c.intl.string(c.t["/FaMSE"]);
             if ("" !== t) {
                 let e = t.length > 40 ? "".concat(t.slice(0, 40), "...") : t;
                 return c.intl.format(c.t.KJMJOz, {
-                    count: r,
+                    count: n,
                     search: e,
                 });
             }
             return 1 === e.size && e.has(a.G.AVATAR_DECORATION)
-                ? c.intl.format(c.t.s1UzGR, { count: r })
+                ? c.intl.format(c.t.s1UzGR, { count: n })
                 : 1 === e.size && e.has(a.G.NAMEPLATE)
-                  ? c.intl.format(c.t.ZWGN9f, { count: r })
+                  ? c.intl.format(c.t.ZWGN9f, { count: n })
                   : 1 === e.size && e.has(a.G.PROFILE_EFFECT)
-                    ? c.intl.format(c.t["v/7apq"], { count: r })
+                    ? c.intl.format(c.t["v/7apq"], { count: n })
                     : 1 === e.size && e.has(a.G.BUNDLE)
-                      ? c.intl.format(c.t.fZ1rdn, { count: r })
-                      : c.intl.format(c.t["/rPvmZ"], { count: r });
-        }, [e, r, d, t, u]);
-    return (0, n.jsx)(i.X6q, {
+                      ? c.intl.format(c.t.fZ1rdn, { count: n })
+                      : c.intl.format(c.t["/rPvmZ"], { count: n });
+        }, [e, n, d, t, u]);
+    return (0, r.jsx)(s.X6q, {
         variant: "heading-lg/semibold",
-        children: p(),
+        children: g(),
     });
 }

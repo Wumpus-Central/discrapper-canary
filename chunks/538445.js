@@ -9,30 +9,30 @@ var r = n(951288),
     u = n(100527),
     d = n(906732),
     p = n(204418),
-    f = n(879892),
-    h = n(742409),
+    h = n(879892),
+    f = n(742409),
     g = n(970731),
     m = n(485386),
     b = n(594174),
     O = n(5192),
-    _ = n(944888),
-    y = n(234368),
-    v = n(981631),
-    j = n(921944),
-    C = n(989308),
-    x = n(388032),
+    y = n(944888),
+    _ = n(234368),
+    j = n(981631),
+    v = n(921944),
+    x = n(989308),
+    C = n(388032),
     E = n(49777),
     S = n(842926),
-    I = n(445648),
-    P = n(128647);
+    P = n(445648),
+    I = n(128647);
 function N(e) {
     let { guild: t, markAsDismissed: n } = e,
         l = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
         N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? E[l] : "",
         { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
         Z = i.useCallback(() => {
-            (0, f.u)({
-                analyticsLocation: { section: v.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
+            (0, h.u)({
+                analyticsLocation: { section: j.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
                 analyticsLocations: w,
                 guild: t,
@@ -40,12 +40,12 @@ function N(e) {
         }, [t, w]),
         T = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         A = (function (e) {
-            let t = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(e).find(_.YB));
+            let t = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(e).find(y.YB));
             return (null == t ? void 0 : t.colorStrings) != null
                 ? t.colorStrings
                 : {
-                      primaryColor: (0, a.Rf)(y.oC.primary_color),
-                      secondaryColor: (0, a.Rf)(y.oC.secondary_color),
+                      primaryColor: (0, a.Rf)(_.oC.primary_color),
+                      secondaryColor: (0, a.Rf)(_.oC.secondary_color),
                       tertiaryColor: null,
                   };
         })(t.id),
@@ -62,7 +62,7 @@ function N(e) {
                 null != T
                     ? (0, r.jsx)("div", {
                           className: E.messageContainer,
-                          children: (0, r.jsx)(h.l, {
+                          children: (0, r.jsx)(f.l, {
                               avatar: (0, r.jsx)(p.Z, {
                                   user: T,
                                   guildId: t.id,
@@ -74,32 +74,32 @@ function N(e) {
                               username: O.ZP.getName(t.id, null, T),
                               asset: (0, r.jsx)("img", {
                                   alt: "",
-                                  src: I.Z,
+                                  src: P.Z,
                               }),
                           }),
                       })
                     : (0, r.jsx)("img", {
                           alt: "",
-                          src: P.Z,
+                          src: I.Z,
                           className: E.image,
                       }),
                 (0, r.jsx)(c.olH, {
                     className: E.close,
                     innerClassName: E.innerClose,
-                    onClick: () => (null == n ? void 0 : n(j.L.USER_DISMISS)),
+                    onClick: () => (null == n ? void 0 : n(v.L.USER_DISMISS)),
                 }),
             ],
         }),
         header: (0, r.jsx)(c.Text, {
             variant: "text-md/semibold",
-            children: x.intl.string(C.default.bw76aG),
+            children: C.intl.string(x.default.bw76aG),
         }),
         content: (0, r.jsx)(c.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            children: x.intl.string(C.default["/DTbiY"]),
+            children: C.intl.string(x.default["/DTbiY"]),
         }),
-        buttonCTA: x.intl.string(x.t["oPAx7+"]),
+        buttonCTA: C.intl.string(C.t["oPAx7+"]),
         onClick: Z,
         className: o()(E.container, N),
         caretPosition: l,

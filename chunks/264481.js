@@ -1,5 +1,5 @@
 t.d(n, {
-    P9: () => I,
+    P9: () => O,
     Uf: () => Z,
     b0: () => y,
     s_: () => _,
@@ -17,8 +17,8 @@ var r = t(951288),
     f = t(475413),
     m = t(981631),
     p = t(388032),
-    b = t(839468);
-let x = [
+    x = t(839468);
+let b = [
         () => p.intl.string(p.t.madJdH),
         () => p.intl.string(p.t.NYmfoK),
         () => p.intl.string(p.t.R2PaCg),
@@ -68,10 +68,10 @@ let x = [
 function v(e) {
     let { heading: n, bodyText: t, children: o } = e;
     return (0, r.jsxs)("div", {
-        className: b.empty,
+        className: x.empty,
         children: [
             (0, r.jsxs)("div", {
-                className: b.textContainer,
+                className: x.textContainer,
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: "heading-md/medium",
@@ -93,7 +93,7 @@ function _() {
     let e = p.intl.string(p.t.RnD2yc),
         [n] = o.useState(() => {
             var e;
-            return (null != (e = (0, l.sample)(x)) ? e : x[0])();
+            return (null != (e = (0, l.sample)(b)) ? e : b[0])();
         });
     return (0, r.jsx)(v, {
         heading: e,
@@ -111,11 +111,11 @@ function y() {
         bodyText: n,
     });
 }
-function I(e) {
+function O(e) {
     let { user: n, guildId: t, channelId: a, onClose: s } = e,
         d = u.ZP.getName(t, a, n),
         m = p.intl.formatToPlainString(p.t.sjSitL, { name: d }),
-        [x] = o.useState(() => {
+        [b] = o.useState(() => {
             var e;
             return (null != (e = (0, l.sample)(h)) ? e : h[0])(d);
         }),
@@ -124,9 +124,9 @@ function I(e) {
         }, [n.id, s]);
     return (0, r.jsx)(v, {
         heading: m,
-        bodyText: x,
+        bodyText: b,
         children: (0, r.jsx)("div", {
-            className: b.buttonRow,
+            className: x.buttonRow,
             children: (0, r.jsx)(f.tG, {
                 icon: i.kBi,
                 text: p.intl.string(p.t["g33r/P"]),
@@ -136,10 +136,10 @@ function I(e) {
         }),
     });
 }
-function O() {
+function I() {
     let e = (0, s.ZP)();
     return (0, r.jsx)("div", {
-        className: b.connectionPlatforms,
+        className: x.connectionPlatforms,
         children: j.map((n, t) => {
             let o = d.Z.get(n);
             if (null == o) return null;
@@ -149,7 +149,7 @@ function O() {
                 {
                     src: l,
                     alt: o.name,
-                    className: b.connectionIcon,
+                    className: x.connectionIcon,
                 },
                 t,
             );
@@ -168,9 +168,9 @@ function Z(e) {
         heading: p.intl.string(p.t.VB6LWV),
         bodyText: p.intl.string(p.t.KpjsU1),
         children: [
-            (0, r.jsx)(O, {}),
+            (0, r.jsx)(I, {}),
             (0, r.jsxs)("div", {
-                className: b.buttonRow,
+                className: x.buttonRow,
                 children: [
                     (0, r.jsx)(f.tG, {
                         text: p.intl.string(p.t["/Hl24e"]),

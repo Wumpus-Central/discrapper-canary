@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(888369),
     d = n(430824),
     p = n(823379),
-    f = n(179809),
-    h = n(652376),
+    h = n(179809),
+    f = n(652376),
     g = n(981631);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -78,10 +78,10 @@ let O = i.memo(function (e) {
             }
             return i;
         })(e, ["folderNode"]);
-    let { id: _, name: y, color: v, children: j } = t,
-        C = j.map((e) => e.id),
-        x = (0, s.Z)((e) => e.guildId),
-        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
+    let { id: y, name: _, color: j, children: v } = t,
+        x = v.map((e) => e.id),
+        C = (0, s.Z)((e) => e.guildId),
+        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(y)),
         S = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -95,19 +95,19 @@ let O = i.memo(function (e) {
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
             return "".concat(r.join(", ")).concat(r.length < t.length ? ", ..." : "");
         })(t),
-        I = (0, h.Z)(t),
+        P = (0, f.Z)(t),
         {
-            mentionCount: P,
+            mentionCount: I,
             isMentionLowImportance: N,
             unread: w,
         } = (0, l.cj)([u.default], () => ({
-            mentionCount: C.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-            isMentionLowImportance: C.every((e) => u.default.getIsMentionLowImportance(e)),
-            unread: C.some((e) => u.default.hasUnread(e)),
+            mentionCount: x.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+            isMentionLowImportance: x.every((e) => u.default.getIsMentionLowImportance(e)),
+            unread: x.some((e) => u.default.hasUnread(e)),
         })),
         Z = i.useCallback(() => {
-            a.Z.toggleGuildFolderExpand(_);
-        }, [_]),
+            a.Z.toggleGuildFolderExpand(y);
+        }, [y]),
         T = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
@@ -116,26 +116,26 @@ let O = i.memo(function (e) {
                         (0, r.jsx)(
                             e,
                             b(m({}, t), {
-                                folderId: _,
-                                folderName: y,
-                                folderColor: v,
-                                unread: w || P > 0,
+                                folderId: y,
+                                folderName: _,
+                                folderColor: j,
+                                unread: w || I > 0,
                             }),
                         );
                 });
             },
-            [_, y, v, w, P],
+            [y, _, j, w, I],
         );
     return (0, r.jsx)(
-        f.Z,
+        h.Z,
         b(m({}, O), {
             folderNode: t,
             expanded: E,
-            selected: null != x && C.includes(x),
-            mentionCount: P,
+            selected: null != C && x.includes(C),
+            mentionCount: I,
             isMentionLowImportance: N,
             unread: w,
-            mediaState: I,
+            mediaState: P,
             defaultFolderName: S,
             onExpandCollapse: Z,
             onContextMenu: T,

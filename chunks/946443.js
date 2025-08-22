@@ -1,7 +1,7 @@
 n.d(t, {
     QP: () => N,
     ZP: () => S,
-    h6: () => P,
+    h6: () => I,
 }),
     n(388685);
 var r = n(951288),
@@ -14,27 +14,27 @@ var r = n(951288),
     u = n(442837),
     d = n(481060),
     p = n(570140),
-    f = n(493773),
-    h = n(607070),
+    h = n(493773),
+    f = n(607070),
     g = n(724757),
     m = n(626135),
     b = n(585483),
     O = n(358085),
-    _ = n(143316),
-    y = n(240126),
-    v = n(147522),
-    j = n(809780),
-    C = n(981631),
-    x = n(388032),
+    y = n(143316),
+    _ = n(240126),
+    j = n(147522),
+    v = n(809780),
+    x = n(981631),
+    C = n(388032),
     E = n(915087);
 function S(e) {
-    var t, n, l, a, _, S, P;
+    var t, n, l, a, y, S, I;
     let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
         A = i.useRef(null),
-        [R, D] = (0, j.ZP)(A),
+        [R, D] = (0, v.ZP)(A),
         { loadState: M, channels: L } = R,
         { maybeLoadMore: k } = D,
-        U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
+        U = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing);
     (t = A),
         (n = R),
         (l = D),
@@ -52,19 +52,19 @@ function S(e) {
             (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
         (a = R),
-        (_ = D),
+        (y = D),
         i.useEffect(() => {
             let e = () => {
                 let e = a.channels.find((e) => !e.collapsed);
-                null != e && _.markChannelRead(e);
+                null != e && y.markChannelRead(e);
             };
             return (
-                b.S.subscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                b.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    b.S.unsubscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    b.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [_, a.channels]),
+        }, [y, a.channels]),
         (S = D),
         i.useEffect(() => {
             let e = (e) => {
@@ -82,7 +82,7 @@ function S(e) {
             );
         }, [S]),
         i.useEffect(() => {
-            m.default.track(C.rMx.OPEN_POPOUT, { type: "Inbox" });
+            m.default.track(x.rMx.OPEN_POPOUT, { type: "Inbox" });
         }, []),
         i.useEffect(
             () => (
@@ -93,23 +93,23 @@ function S(e) {
             ),
             [T],
         ),
-        (0, f.ZP)(
+        (0, h.ZP)(
             () => (
-                b.S.subscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
+                b.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
-                    b.S.unsubscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
+                    b.S.unsubscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
                 }
             ),
         );
     let G = (0, g.Z)("unreads", A);
     if (0 === L.length) {
-        return (0, r.jsx)(y.Z, {
+        return (0, r.jsx)(_.Z, {
             Icon: d.xx7,
-            header: x.intl.string(x.t["6XMM+P"]),
+            header: C.intl.string(C.t["6XMM+P"]),
             tip:
-                (null == (P = s().os) ? void 0 : P.family) === "OS X"
-                    ? x.intl.string(x.t.w9uDOT)
-                    : x.intl.string(x.t.BiUJCw),
+                (null == (I = s().os) ? void 0 : I.family) === "OS X"
+                    ? C.intl.string(C.t.w9uDOT)
+                    : C.intl.string(C.t.BiUJCw),
         });
     }
     return (0, r.jsx)(c.bG, {
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: M === j.jd.Done ? void 0 : k,
+                            onScroll: M === v.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
-                                w ? (0, r.jsx)(I, { setSeenTutorial: Z }) : null,
-                                (0, v.Z)(L, D, N),
-                                M === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                w ? (0, r.jsx)(P, { setSeenTutorial: Z }) : null,
+                                (0, j.Z)(L, D, N),
+                                M === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -206,7 +206,7 @@ function S(e) {
         }),
     });
 }
-function I(e) {
+function P(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
         className: E.tutorial,
@@ -223,12 +223,12 @@ function I(e) {
                     (0, r.jsx)(d.X6q, {
                         className: E.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: x.intl.string(x.t.vZPktL),
+                        children: C.intl.string(C.t.vZPktL),
                     }),
                     (0, r.jsx)(d.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: x.intl.string(x.t.vWkIIC),
+                        children: C.intl.string(C.t.vWkIIC),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
@@ -236,7 +236,7 @@ function I(e) {
                         children: (0, r.jsx)(d.zxk, {
                             variant: "primary",
                             size: "sm",
-                            text: x.intl.string(x.t["+IrDzM"]),
+                            text: C.intl.string(C.t["+IrDzM"]),
                             onClick: t,
                         }),
                     }),
@@ -245,16 +245,16 @@ function I(e) {
         ],
     });
 }
-function P() {
-    return (0, r.jsx)(y.Z, {
+function I() {
+    return (0, r.jsx)(_.Z, {
         Icon: d.xx7,
         disableStars: !0,
-        header: x.intl.string(x.t["KG/ynZ"]),
-        tip: x.intl.string(x.t.cvcKzc),
+        header: C.intl.string(C.t["KG/ynZ"]),
+        tip: C.intl.string(C.t.cvcKzc),
     });
 }
 let N = () =>
-    (0, r.jsx)(_.Z, {
-        onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ),
+    (0, r.jsx)(y.Z, {
+        onClick: () => b.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

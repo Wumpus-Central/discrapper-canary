@@ -1,19 +1,19 @@
-r.d(t, { b: () => s });
-var n = r(951288),
-    l = r(120356),
-    a = r.n(l),
-    i = r(755419),
-    o = r(200192);
-let s = (e) => {
-    let { product: t, animationState: r, className: l } = e,
-        s = i.K[t.skuId];
-    return null != s
-        ? (0, n.jsx)("div", {
-              className: a()(o.externalProductWrapper, l),
+n.d(t, { b: () => l });
+var r = n(951288),
+    i = n(120356),
+    a = n.n(i),
+    o = n(755419),
+    s = n(200192);
+let l = (e) => {
+    let { product: t, animationState: n, className: i } = e,
+        l = o.K[t.skuId];
+    return null != l
+        ? (0, r.jsx)("div", {
+              className: a()(s.externalProductWrapper, i),
               children:
-                  null != s.render &&
-                  s.render({
-                      animationState: r,
+                  null != l.render &&
+                  l.render({
+                      animationState: n,
                       alt: t.name,
                   }),
           })

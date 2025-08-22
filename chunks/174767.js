@@ -2,7 +2,7 @@ n.d(t, {
     Br: () => s,
     MH: () => c,
     Ol: () => u,
-    TG: () => f,
+    TG: () => h,
     UF: () => p,
     sJ: () => d,
 }),
@@ -17,7 +17,7 @@ async function s(e) {
         let t = e.parsed_launch_parameters.titleId,
             n = e.parsed_launch_parameters.inviteToken;
         if (!(0, o.isWindows)() || null == t || null == n) return;
-        let r = await h(t, !1),
+        let r = await f(t, !1),
             l = await m(n);
         i.Z.dispatch({
             type: "GAME_INVITE_UPDATE_STATUS",
@@ -50,13 +50,13 @@ async function p(e) {
         rejectWithError: !1,
     });
 }
-async function f() {
+async function h() {
     await r.tn.del({
         url: a.ANM.GAME_INVITES,
         rejectWithError: !1,
     });
 }
-async function h(e, t) {
+async function f(e, t) {
     if (!(0, o.isWindows)()) return !1;
     let n = await (0, l.Z)();
     return new Promise((r, i) => {

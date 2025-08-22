@@ -1,11 +1,11 @@
-r.d(t, {
-    FF: () => i,
+n.d(t, {
+    FF: () => s,
     KS: () => a,
-    eN: () => o,
+    eN: () => i,
 });
-var n = r(818083),
-    l = r(987338);
-let a = (0, n.B)({
+var r = n(818083),
+    l = n(987338);
+let a = (0, r.B)({
         kind: "user",
         id: "2025-06_collectibles_browse",
         label: "Collectibles Browse Experiment",
@@ -33,5 +33,5 @@ let a = (0, n.B)({
             },
         ],
     }),
-    i = (e) => a.useExperiment({ location: e }).filterEnabled,
-    o = (e) => a.useExperiment({ location: e }).searchEnabled;
+    s = (e) => a.useExperiment({ location: e }).filterEnabled,
+    i = (e) => a.useExperiment({ location: e }).searchEnabled;

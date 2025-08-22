@@ -234,7 +234,7 @@ function W(e) {
             { modalKey: R.a },
         );
     }
-    let Y = (0, E.m$)({ channelId: t.id });
+    let q = (0, E.m$)({ channelId: t.id });
     return (0, r.jsxs)("div", {
         className: U.subtitleContainer,
         children: [
@@ -268,7 +268,7 @@ function W(e) {
                                               })
                                             : null,
                                         y,
-                                        Y &&
+                                        q &&
                                             (0, r.jsx)(s.ua7, {
                                                 text: k.intl.string(k.t.QyZ4TU),
                                                 children: (e) =>

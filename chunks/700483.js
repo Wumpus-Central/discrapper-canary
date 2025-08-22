@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(88751),
     z = n(427679),
     W = n(368442),
-    Y = n(600518),
-    q = n(485287),
+    q = n(600518),
+    Y = n(485287),
     K = n(754277),
     X = n(719100),
     Q = n(184805),
@@ -191,7 +191,7 @@ function ec(e) {
     let { channelId: t } = e,
         { parentAnalyticsLocation: n } = (0, u.ZP)(),
         i = (0, l.e7)([K.Z], () => K.Z.isMuted()),
-        o = (0, q.pp)(t),
+        o = (0, Y.pp)(t),
         s = (0, l.e7)([K.Z], () => K.Z.shouldPlay());
     return o
         ? (0, r.jsx)(N.d, {
@@ -201,7 +201,7 @@ function ec(e) {
               iconComponent: i ? a.xjP : a.RZG,
               color: i ? void 0 : "green",
               onClick: () => {
-                  (0, m.v)(n, m.d.STAGE_MUSIC, i), (0, Y.v)(!i);
+                  (0, m.v)(n, m.d.STAGE_MUSIC, i), (0, q.v)(!i);
               },
           })
         : (0, r.jsx)(N.d, {
@@ -211,7 +211,7 @@ function ec(e) {
               iconComponent: s ? a.RZG : a.xjP,
               color: s ? "green" : void 0,
               onClick: () => {
-                  (0, m.v)(n, m.d.STAGE_MUSIC, !s), (0, Y.z)(!s);
+                  (0, m.v)(n, m.d.STAGE_MUSIC, !s), (0, q.z)(!s);
               },
           });
 }
@@ -231,12 +231,12 @@ let eu = i.memo(function (e) {
         H = (0, W.PK)(t.id),
         V = N > 0,
         z = (A && !H) || (null != F && F.user.id !== (null == M ? void 0 : M.id)),
-        Y = (0, g.u)("AudioDeviceMenu", n, { entrypoint: et.A5.CARET }),
-        q = i.useRef(null),
+        q = (0, g.u)("AudioDeviceMenu", n, { entrypoint: et.A5.CARET }),
+        Y = i.useRef(null),
         K = i.useRef(null);
     if (null == M) return null;
     let X = (0, r.jsx)(a.yRy, {
-        targetElementRef: q,
+        targetElementRef: Y,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(T.Z, {
@@ -255,7 +255,7 @@ let eu = i.memo(function (e) {
             let { onClick: n } = e,
                 { isShown: i } = t;
             return (0, r.jsx)(R.C, {
-                ref: q,
+                ref: Y,
                 centerButton: !0,
                 hasPermission: v,
                 enabled: x,
@@ -290,7 +290,7 @@ let eu = i.memo(function (e) {
                                           renderOutputVolume: !0,
                                           renderDeafen: !0,
                                           minimal: !0,
-                                          onInteraction: Y,
+                                          onInteraction: q,
                                       }),
                                   });
                               },

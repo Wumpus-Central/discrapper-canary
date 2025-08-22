@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
@@ -9,22 +9,22 @@ var r,
     u = n(91192),
     d = n(924826),
     p = n(442837),
-    f = n(902704),
-    h = n(481060),
+    h = n(902704),
+    f = n(481060),
     g = n(925549),
     m = n(607070),
     b = n(100527),
     O = n(367907),
-    _ = n(906732),
-    y = n(453542),
-    v = n(702321),
-    j = n(46148),
-    C = n(82295),
-    x = n(313201),
+    y = n(906732),
+    _ = n(453542),
+    j = n(702321),
+    v = n(46148),
+    x = n(82295),
+    C = n(313201),
     E = n(860144),
     S = n(214852),
-    I = n(518311),
-    P = n(355298),
+    P = n(518311),
+    I = n(355298),
     N = n(869404),
     w = n(333984),
     Z = n(984802),
@@ -229,7 +229,7 @@ let B = l.memo(function () {
         ],
     });
 });
-class V extends (r = l.Component) {
+class F extends (r = l.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -253,7 +253,7 @@ class V extends (r = l.Component) {
         null != e && null != t && t.indexOf(e) >= 0 && this.scrollToChannel(e), this.reportAnalytics();
     }
     shouldComponentUpdate(e) {
-        return !(0, f.Z)(this.props, e, ["children"]);
+        return !(0, h.Z)(this.props, e, ["children"]);
     }
     componentDidUpdate(e) {
         let { selectedChannelId: t, homeLink: n } = this.props;
@@ -305,10 +305,10 @@ class V extends (r = l.Component) {
                         }
                         return i;
                     })(r, ["ref", "role"]);
-                return (0, i.jsx)(h.Wdt, {
+                return (0, i.jsx)(f.Wdt, {
                     children: (r) =>
                         (0, i.jsx)(
-                            h.aVo,
+                            f.aVo,
                             U(
                                 {
                                     fade: !0,
@@ -362,7 +362,7 @@ class V extends (r = l.Component) {
                 let o = Math.round((t.offsetHeight - 44 * i) / 44),
                     a = o > n.length ? n.slice(0, o + 1) : n,
                     s = a.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, v.Z)(e)),
+                    c = n.some((e) => (0, j.Z)(e)),
                     u = {
                         num_users_visible: a.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e))
@@ -371,7 +371,7 @@ class V extends (r = l.Component) {
                 (this.hasReportedAnalytics = !0),
                     O.ZP.trackWithMetadata(
                         D.rMx.DM_LIST_VIEWED,
-                        G(U({}, u, (0, y.X)()), {
+                        G(U({}, u, (0, _.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c,
                         }),
@@ -399,7 +399,7 @@ class V extends (r = l.Component) {
                 return null == s
                     ? null
                     : (0, i.jsx)(
-                          j.W,
+                          v.W,
                           {
                               channel: s,
                               selected: s.id === l,
@@ -433,7 +433,7 @@ class V extends (r = l.Component) {
                     { showDMHeader: n, createDMCTAButtonVariant: r } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          C.Z,
+                          x.Z,
                           {
                               className: a()(L.privateChannelsHeaderContainer, { [L.tall]: "side" === r }),
                               children: [
@@ -442,20 +442,20 @@ class V extends (r = l.Component) {
                                       children: M.intl.string(M.t.YUU0RE),
                                   }),
                                   null == r &&
-                                      (0, i.jsx)(I.Z, {
+                                      (0, i.jsx)(P.Z, {
                                           location: "PrivateChannelsList-CreateDMButton",
                                           tooltip: M.intl.string(M.t["6Urw1t"]),
                                           tooltipPosition: "top",
                                           popoutAlign: "left",
                                           className: L.privateChannelRecipientsInviteButtonIconContainer,
                                           iconClassName: L.privateChannelRecipientsInviteButtonIcon,
-                                          icon: h.BRu,
+                                          icon: f.BRu,
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
-                                      (0, i.jsx)(I.l, {
+                                      (0, i.jsx)(P.l, {
                                           popoutAlign: "left",
-                                          icon: h.kL_,
+                                          icon: f.kL_,
                                           text: M.intl.string(M.t["6Urw1t"]),
                                           size: "sm",
                                           subscribeToGlobalHotkey: !0,
@@ -485,21 +485,21 @@ class V extends (r = l.Component) {
             });
     }
 }
-k(V, "defaultProps", { padding: 8 });
-let F = (e) => {
-    let { density: t } = (0, h.TCT)(),
+k(F, "defaultProps", { padding: 8 });
+let V = (e) => {
+    let { density: t } = (0, f.TCT)(),
         { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
-        f = l.Children.count(o),
+        h = l.Children.count(o),
         g = T.Z.getMutablePrivateChannels(),
         O = (0, N.k1)(g),
-        y = (0, p.Wu)([R.Z, P.Z, w.Z], () => {
+        _ = (0, p.Wu)([R.Z, I.Z, w.Z], () => {
             let e = R.Z.getPrivateChannelIds();
-            return (0, N.tU)(e, [P.Z, w.Z]);
+            return (0, N.tU)(e, [I.Z, w.Z]);
         }, []);
     (0, S.z)(E.R);
-    let { analyticsLocations: v } = (0, _.ZP)(b.Z.CONTACTS_LIST),
-        j = (0, Z.Ll)(),
-        { keyboardModeEnabled: C, version: I } = (0, p.cj)([m.Z, T.Z], () => ({
+    let { analyticsLocations: j } = (0, y.ZP)(b.Z.CONTACTS_LIST),
+        v = (0, Z.Ll)(),
+        { keyboardModeEnabled: x, version: P } = (0, p.cj)([m.Z, T.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion(),
@@ -548,28 +548,28 @@ let F = (e) => {
                 }),
             [D],
         ),
-        B = (0, x.Dt)(),
-        F = (0, d.ZP)({
+        B = (0, C.Dt)(),
+        V = (0, d.ZP)({
             id: "private-channels-".concat(B),
-            isEnabled: C,
+            isEnabled: x,
             scrollToStart: L,
             scrollToEnd: k,
-            defaultFocused: (f + +!!a).toString(),
+            defaultFocused: (h + +!!a).toString(),
             setFocus: M,
         });
-    return (0, i.jsx)(_.Gt, {
-        value: v,
+    return (0, i.jsx)(y.Gt, {
+        value: j,
         children: (0, i.jsx)(u.bG, {
-            navigator: F,
+            navigator: V,
             children: (0, i.jsx)(
-                V,
+                F,
                 G(U({}, e), {
                     density: t,
                     channels: O,
-                    privateChannelIds: y,
+                    privateChannelIds: _,
                     listRef: D,
-                    theme: null != j ? j : r,
-                    version: I,
+                    theme: null != v ? v : r,
+                    version: P,
                     createDMCTAButtonVariant: c,
                 }),
             ),

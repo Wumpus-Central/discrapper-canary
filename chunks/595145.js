@@ -11,22 +11,22 @@ var r = t(951288),
     f = t(906732),
     m = t(313201),
     p = t(368326),
-    b = t(429467),
-    x = t(320582),
+    x = t(429467),
+    b = t(320582),
     g = t(246016),
     h = t(680295),
     j = t(189156),
     v = t(699516),
     _ = t(246946),
     y = t(585483),
-    I = t(5192),
-    O = t(111361),
+    O = t(5192),
+    I = t(111361),
     Z = t(785717),
     P = t(221292),
     T = t(687158),
-    A = t(771362),
-    N = t(510659),
-    C = t(113557),
+    N = t(771362),
+    A = t(510659),
+    C = t(899007),
     E = t(648052),
     S = t(867176),
     w = t(280885),
@@ -38,11 +38,11 @@ var r = t(951288),
     M = t(900927),
     k = t(944043),
     G = t(502762),
-    V = t(530),
-    F = t(4517),
-    Y = t(179828),
-    z = t(993160),
-    W = t(574887),
+    F = t(530),
+    V = t(4517),
+    W = t(179828),
+    Y = t(993160),
+    z = t(574887),
     K = t(693408),
     H = t(661462),
     J = t(76076),
@@ -69,11 +69,11 @@ function er(e) {
             customStatusPrompt: ef,
             openedAt: em,
             onClose: ep,
-            showGuildProfile: eb = !0,
-            sourceAnalyticsLocations: ex = [],
+            showGuildProfile: ex = !0,
+            sourceAnalyticsLocations: eb = [],
             disableActionsForPreview: eg = !1,
         } = e,
-        { analyticsLocations: eh } = (0, f.ZP)([...ex, u.Z.USER_PROFILE_MODAL_V2]),
+        { analyticsLocations: eh } = (0, f.ZP)([...eb, u.Z.USER_PROFILE_MODAL_V2]),
         ej = (0, Z.ZB)({
             layout: "MODAL_V2",
             userId: t.id,
@@ -82,21 +82,21 @@ function er(e) {
             channelId: el,
             messageId: ei,
             roleId: ec,
-            showGuildProfile: eb,
+            showGuildProfile: ex,
         }),
         ev = o.useRef(null),
         e_ = (0, s.Z)(ev),
-        [ey, eI] = o.useState(!1),
-        eO = (0, N.$m)(),
+        [ey, eO] = o.useState(!1),
+        eI = (0, A.$m)(),
         eZ = (0, c.q_F)({
-            opacity: +(null != eO.interactionType),
+            opacity: +(null != eI.interactionType),
             config: { duration: 150 },
         }),
         eP = o.useMemo(() => (null != eo ? { [eo]: [t.id] } : {}), [eo, t.id]);
     (0, d.$)(eP);
-    let eT = (0, T.ZP)(t.id, eb ? eo : void 0),
-        eA = I.ZP.useName(null == eT ? void 0 : eT.guildId, el, t),
-        { relationshipType: eN, originApplicationId: eC } = (0, i.cj)([v.Z], () => ({
+    let eT = (0, T.ZP)(t.id, ex ? eo : void 0),
+        eN = O.ZP.useName(null == eT ? void 0 : eT.guildId, el, t),
+        { relationshipType: eA, originApplicationId: eC } = (0, i.cj)([v.Z], () => ({
             relationshipType: v.Z.getRelationshipType(t.id),
             originApplicationId: v.Z.getOriginApplicationId(t.id),
         })),
@@ -109,22 +109,22 @@ function er(e) {
                       size: 1024,
                   }),
         ew = (0, p.p)({ location: "UserProfileModalV2" }),
-        eB = o.useMemo(() => (null != ef ? ef : (0, b.Z)()), [ef]),
+        eB = o.useMemo(() => (null != ef ? ef : (0, x.Z)()), [ef]),
         eD = (0, q.Z)({
             user: t,
             currentUser: er,
         }),
         eL = (0, g.Y)({ userId: t.id }),
-        eR = (0, x.vh)(t.id),
-        eU = (0, A.Z)(t.id),
+        eR = (0, b.vh)(t.id),
+        eU = (0, N.Z)(t.id),
         eM = (0, m.Dt)(),
-        ek = en.intl.format(en.t.KRe1Fh, { name: eA });
+        ek = en.intl.format(en.t.KRe1Fh, { name: eN });
     return (
         o.useEffect(() => {
             let e = () => {
-                eI(!0),
+                eO(!0),
                     setTimeout(() => {
-                        eI(!1);
+                        eO(!1);
                     }, 1000);
             };
             return (
@@ -142,8 +142,8 @@ function er(e) {
                 fetchStartedAt: null == eT ? void 0 : eT.fetchStartedAt,
                 fetchEndedAt: null == eT ? void 0 : eT.fetchEndedAt,
                 isLoaded: null == eT ? void 0 : eT.isLoaded,
-                children: (0, r.jsx)(N.NJ, {
-                    value: eO,
+                children: (0, r.jsx)(A.NJ, {
+                    value: eI,
                     children: (0, r.jsx)(c.UkV, {
                         isShaking: ey,
                         intensity: 1.4,
@@ -202,7 +202,7 @@ function er(e) {
                                                     className: et.backgroundImage,
                                                     style: { backgroundImage: "url(".concat(eS, ")") },
                                                 }),
-                                            null != eO.interactionType &&
+                                            null != eI.interactionType &&
                                                 (0, r.jsx)(l.animated.div, {
                                                     style: eZ,
                                                     className: et.backdrop,
@@ -229,15 +229,13 @@ function er(e) {
                                                                 className: et.interactionToast,
                                                             }),
                                                             (0, r.jsx)(C.Z, {
-                                                                location: "UserProfileModalV2",
                                                                 user: t,
                                                                 displayProfile: eT,
                                                                 guildId: eo,
                                                                 channelId: el,
                                                                 themeType: ee.l.MODAL_V2,
                                                             }),
-                                                            (0, r.jsx)(F.Z, {
-                                                                location: "UserProfileModalV2",
+                                                            (0, r.jsx)(V.Z, {
                                                                 user: t,
                                                                 guildId: eo,
                                                                 channelId: el,
@@ -252,10 +250,10 @@ function er(e) {
                                                         fade: !0,
                                                         className: et.profileBody,
                                                         children: [
-                                                            (0, r.jsx)(V.Z, {
+                                                            (0, r.jsx)(F.Z, {
                                                                 user: t,
                                                                 onClose: ep,
-                                                                nickname: I.ZP.useName(
+                                                                nickname: O.ZP.useName(
                                                                     null == eT ? void 0 : eT.guildId,
                                                                     el,
                                                                     t,
@@ -272,7 +270,7 @@ function er(e) {
                                                                     onClose: ep,
                                                                 }),
                                                             }),
-                                                            eN === $.OGo.PENDING_INCOMING &&
+                                                            eA === $.OGo.PENDING_INCOMING &&
                                                                 (0, r.jsx)(G.Z.Overlay, {
                                                                     className: et.profileOverlay,
                                                                     children: (0, r.jsx)(R.Z, {
@@ -329,7 +327,7 @@ function er(e) {
                                                                 }),
                                                             t.id === er.id &&
                                                                 (0, r.jsx)(B.Z, {
-                                                                    isPremiumUser: (0, O.I5)(er),
+                                                                    isPremiumUser: (0, I.I5)(er),
                                                                     onInteraction: ep,
                                                                 }),
                                                             (0, r.jsx)(k.Z, {
@@ -338,13 +336,13 @@ function er(e) {
                                                             }),
                                                             (0, r.jsx)("div", {
                                                                 className: et.profileButtons,
-                                                                children: (0, r.jsx)(z.Z, {
+                                                                children: (0, r.jsx)(Y.Z, {
                                                                     user: t,
                                                                     currentUser: er,
                                                                     guildId: eo,
                                                                     channelId: el,
                                                                     displayProfile: eT,
-                                                                    relationshipType: eN,
+                                                                    relationshipType: eA,
                                                                     onClose: ep,
                                                                 }),
                                                             }),
@@ -369,7 +367,7 @@ function er(e) {
                                                                 }),
                                                             }),
                                                             (null == eT ? void 0 : eT.guildId) != null &&
-                                                                (0, r.jsx)(Y.Z, {
+                                                                (0, r.jsx)(W.Z, {
                                                                     user: t,
                                                                     currentUser: er,
                                                                     guildId: eT.guildId,
@@ -382,7 +380,7 @@ function er(e) {
                                                                 (0, r.jsx)(K.Z, {
                                                                     heading: en.intl.string(en.t["3fe7U1"]),
                                                                     scrollIntoView: ed === Q.Tb.CONNECTIONS,
-                                                                    children: (0, r.jsx)(W.Z, {
+                                                                    children: (0, r.jsx)(z.Z, {
                                                                         connections: eU,
                                                                         userId: t.id,
                                                                         className: et.profileAppConnections,

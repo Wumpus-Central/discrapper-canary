@@ -1,17 +1,17 @@
-r.d(t, { D: () => d }), r(388685);
-var n = r(647438),
-    l = r(442837),
-    a = r(597688),
-    i = r(1870),
-    o = r(212161),
-    s = r(365943),
-    c = r(25251);
+n.d(t, { D: () => d }), n(388685);
+var r = n(647438),
+    l = n(442837),
+    a = n(597688),
+    s = n(1870),
+    i = n(212161),
+    o = n(365943),
+    c = n(25251);
 let u = (e) =>
-        (0, o.H)(e) && e.items.length > 0 && null != e.items[0].id && null == c.Z.getProfileEffectById(e.items[0].id),
+        (0, i.H)(e) && e.items.length > 0 && null != e.items[0].id && null == c.Z.getProfileEffectById(e.items[0].id),
     d = () => {
         let e = (0, l.e7)([a.Z], () => a.Z.products),
-            t = (0, l.e7)([i.Z], () => i.Z.purchases);
-        n.useEffect(() => {
-            [...e.values(), ...t.values()].some(u) && (0, s.t)(!0);
+            t = (0, l.e7)([s.Z], () => s.Z.purchases);
+        r.useEffect(() => {
+            [...e.values(), ...t.values()].some(u) && (0, o.t)(!0);
         }, [e, t]);
     };

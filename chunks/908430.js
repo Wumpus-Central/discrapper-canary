@@ -1,29 +1,29 @@
-r.d(t, { f: () => o }), r(388685), r(539854);
-var n = r(647438),
-    l = r(399606),
-    a = r(570140),
-    i = r(615006);
-function o() {
-    let e = n.useRef(new Map()),
-        t = (0, l.e7)([i.Z], () => i.Z.getUserDiscounts());
-    n.useEffect(() => {
-        let r = e.current,
-            n = Date.now(),
+n.d(t, { f: () => i }), n(388685), n(539854);
+var r = n(647438),
+    l = n(399606),
+    a = n(570140),
+    s = n(615006);
+function i() {
+    let e = r.useRef(new Map()),
+        t = (0, l.e7)([s.Z], () => s.Z.getUserDiscounts());
+    r.useEffect(() => {
+        let n = e.current,
+            r = Date.now(),
             l = [];
         return (
             t.forEach((e) => {
                 if (null == e.expiresAt) return;
-                let t = e.expiresAt.getTime() - n;
+                let t = e.expiresAt.getTime() - r;
                 if (t <= 0) l.push(e.discountId);
                 else {
-                    let n = setTimeout(() => {
+                    let r = setTimeout(() => {
                         a.Z.dispatch({
                             type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED",
                             discountIds: [e.discountId],
                         }),
-                            r.delete(e.discountId);
+                            n.delete(e.discountId);
                     }, t);
-                    r.set(e.discountId, n);
+                    n.set(e.discountId, r);
                 }
             }),
             l.length > 0 &&
@@ -32,7 +32,7 @@ function o() {
                     discountIds: l,
                 }),
             () => {
-                r.forEach((e) => clearTimeout(e)), r.clear();
+                n.forEach((e) => clearTimeout(e)), n.clear();
             }
         );
     }, [t]);

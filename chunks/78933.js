@@ -233,7 +233,6 @@ function ed(e) {
                                               children: () =>
                                                   (0, r.jsx)(U.Z, {
                                                       ref: ew,
-                                                      location: "UserProfileAccountPopout",
                                                       user: t,
                                                       themeType: et.l.POPOUT,
                                                       onCloseProfile: n,
@@ -241,7 +240,6 @@ function ed(e) {
                                                   }),
                                           })
                                         : (0, r.jsx)(U.Z, {
-                                              location: "UserProfileAccountPopout",
                                               user: t,
                                               themeType: et.l.POPOUT,
                                               onCloseProfile: n,
@@ -290,14 +288,12 @@ function ed(e) {
                                         ? (0, r.jsx)(L.Z, {
                                               user: t,
                                               currentUser: t,
-                                              displayProfile: ef,
                                               onOpenUserProfileModal: eZ,
                                               onClose: n,
                                           })
                                         : (0, r.jsx)(D.Z, {
                                               user: t,
                                               currentUser: t,
-                                              displayProfile: ef,
                                               onClose: n,
                                           }),
                                     (0, r.jsxs)("div", {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,8 +7,9 @@ var r = n(951288),
     l = n(481060),
     c = n(715495),
     u = n(538645),
-    d = n(646420);
-let f = (e) => {
+    d = n(383036),
+    f = n(646420);
+let _ = (e) => {
         let { setTab: t } = e;
         return (0, r.jsxs)("div", {
             children: [
@@ -17,7 +18,7 @@ let f = (e) => {
                         t(1);
                     },
                     children: (0, r.jsx)("div", {
-                        className: o()(d.banner, d.pfxBanner),
+                        className: o()(f.banner, f.pfxBanner),
                         children: (0, r.jsx)(s.xv, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -30,7 +31,7 @@ let f = (e) => {
                         t(2);
                     },
                     children: (0, r.jsx)("div", {
-                        className: o()(d.banner, d.nameplateBanner),
+                        className: o()(f.banner, f.nameplateBanner),
                         children: (0, r.jsx)(s.xv, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -38,10 +39,23 @@ let f = (e) => {
                         }),
                     }),
                 }),
+                (0, r.jsx)(l.P3F, {
+                    onClick: () => {
+                        t(3);
+                    },
+                    children: (0, r.jsx)("div", {
+                        className: o()(f.banner, f.bundlesBanner),
+                        children: (0, r.jsx)(s.xv, {
+                            variant: "text-md/bold",
+                            color: "always-white",
+                            children: "Product Preview Tool",
+                        }),
+                    }),
+                }),
             ],
         });
     },
-    _ = () => {
+    p = () => {
         let [e, t] = i.useState(0),
             n = () => {
                 switch (e) {
@@ -49,15 +63,17 @@ let f = (e) => {
                         return (0, r.jsx)(u.Z, {});
                     case 2:
                         return (0, r.jsx)(c.Z, {});
+                    case 3:
+                        return (0, r.jsx)(d.Z, {});
                     default:
-                        return (0, r.jsx)(f, { setTab: t });
+                        return (0, r.jsx)(_, { setTab: t });
                 }
             };
         return (0, r.jsxs)("div", {
-            className: d.wrapper,
+            className: f.wrapper,
             children: [
                 (0, r.jsxs)("div", {
-                    className: d.nav,
+                    className: f.nav,
                     children: [
                         (0, r.jsx)(s.X6, {
                             variant: "heading-xxl/medium",

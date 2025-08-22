@@ -1,5 +1,5 @@
 t.d(n, {
-    E3: () => N,
+    E3: () => A,
     ZP: () => E,
     tH: () => C,
 }),
@@ -17,16 +17,16 @@ var o = t(120356),
     f = t(122021),
     m = t(275759),
     p = t(888496),
-    b = t(753194),
-    x = t(749681),
+    x = t(753194),
+    b = t(749681),
     g = t(258971),
     h = t(598077),
     j = t(671533),
     v = t(49012),
     _ = t(652853),
     y = t(981631),
-    I = t(856651),
-    O = t(49898),
+    O = t(856651),
+    I = t(49898),
     Z = t(388032),
     P = t(455392);
 function T(e) {
@@ -54,7 +54,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, n) {
+function N(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -72,23 +72,23 @@ function A(e, n) {
         e
     );
 }
-function N(e) {
+function A(e) {
     var n, t;
     let o,
         s,
-        x,
+        b,
         {
             connectedAccount: g,
             theme: h,
             locale: _,
-            userId: O,
-            className: N,
+            userId: I,
+            className: A,
             showMetadata: C,
             showInvisibleIcon: E,
         } = e;
     null == C && (C = !0);
     let S = null != (t = g.metadata) ? t : {},
-        w = C ? (0, m.FI)(S[I.PC.CREATED_AT], _) : null,
+        w = C ? (0, m.FI)(S[O.PC.CREATED_AT], _) : null,
         B = (0, a.dQu)(i.Z.unsafe_rawColors.TWITTER).hex(),
         D = Z.intl.string(Z.t["6H6h1t"]);
     if (C)
@@ -102,7 +102,7 @@ function N(e) {
             case y.ABu.BLUESKY:
             case y.ABu.MASTODON:
             case y.ABu.TWITTER:
-                (o = (0, p.rJ)(S)), "1" === S[I.PC.TWITTER_VERIFIED] && ((s = B), (D = Z.intl.string(Z.t.Jebrw8)));
+                (o = (0, p.rJ)(S)), "1" === S[O.PC.TWITTER_VERIFIED] && ((s = B), (D = Z.intl.string(Z.t.Jebrw8)));
                 break;
             case y.ABu.PAYPAL:
                 o = (0, p.li)(S);
@@ -116,13 +116,13 @@ function N(e) {
     let L = d.Z.get((0, f.rR)(g.type)),
         R = null == L || null == (n = L.getPlatformUserUrl) ? void 0 : n.call(L, g);
     null != E && E
-        ? (x = (0, r.jsx)(a.kZF, {
+        ? (b = (0, r.jsx)(a.kZF, {
               size: "md",
               color: "currentColor",
               className: l()(P.__invalid_connectedAccountOpenIconContainer, P.connectedAccountHideIcon),
           }))
         : null != R &&
-          (x = (0, r.jsx)(a.eee, {
+          (b = (0, r.jsx)(a.eee, {
               href: R,
               "aria-label":
                   (null == L ? void 0 : L.name) != null
@@ -133,7 +133,7 @@ function N(e) {
                   (n = g.type),
                       (0, u.yw)(y.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: n,
-                          other_user_id: O,
+                          other_user_id: I,
                       }),
                       (0, v.q)(
                           {
@@ -151,7 +151,7 @@ function N(e) {
     let U = (0, a.dQu)(i.Z.colors.INTERACTIVE_MUTED).hex(),
         M = (0, a.dQu)(i.Z.colors.INTERACTIVE_ACTIVE).hex(),
         k = g.verified
-            ? (0, r.jsx)(b.Z, {
+            ? (0, r.jsx)(x.Z, {
                   className: P.connectedAccountVerifiedIcon,
                   color: null != s ? s : U,
                   forcedIconColor: M,
@@ -163,7 +163,7 @@ function N(e) {
         className: l()(
             P.connectedAccountContainer,
             (null != o && o.length > 0) || null != w ? P.connectedAccountContainerWithMetadata : null,
-            N,
+            A,
         ),
         children: [
             (0, r.jsxs)("div", {
@@ -174,7 +174,7 @@ function N(e) {
                         children: (e) =>
                             (0, r.jsx)(
                                 "img",
-                                A(T({}, e), {
+                                N(T({}, e), {
                                     alt: Z.intl.formatToPlainString(Z.t.rtm15O, { name: null == L ? void 0 : L.name }),
                                     className: P.connectedAccountIcon,
                                     src: (0, c.wj)(h)
@@ -202,7 +202,7 @@ function N(e) {
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         a.Text,
-                                                        A(T({}, e), {
+                                                        N(T({}, e), {
                                                             variant: "text-sm/medium",
                                                             color: "interactive-active",
                                                             className: P.connectedAccountNameText,
@@ -213,7 +213,7 @@ function N(e) {
                                             k,
                                         ],
                                     }),
-                                    x,
+                                    b,
                                 ],
                             }),
                             null != w
@@ -241,8 +241,8 @@ function C(e) {
         d = (0, p.rm)(n, void 0, o),
         u = () => {
             null == i || i(),
-                (0, x.transitionToGlobalDiscovery)({
-                    tab: O.GlobalDiscoveryTab.APPS,
+                (0, b.transitionToGlobalDiscovery)({
+                    tab: I.GlobalDiscoveryTab.APPS,
                     applicationId: n.application.id,
                     newSessionState: {
                         entrypoint: { name: g.xF.APPLICATION_DIRECTORY_URL },
@@ -331,7 +331,7 @@ function E(e) {
     if (null == n || 0 === n.length) return null;
     let a = n.map((e) =>
             (0, r.jsx)(
-                N,
+                A,
                 {
                     connectedAccount: e,
                     theme: c,

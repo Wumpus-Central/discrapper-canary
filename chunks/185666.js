@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(590965),
     d = n(981631);
 let p = "INVITE_MODAL_KEY";
-class f extends o.Z {
+class h extends o.Z {
     _initialize() {
         l.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             l.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
@@ -76,4 +76,4 @@ class f extends o.Z {
         (0, i.Mr3)(p);
     }
 }
-let h = new f();
+let f = new h();

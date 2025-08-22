@@ -12,8 +12,8 @@ var r = n(647438),
     u = n(639777),
     d = n(973772),
     p = n(834209),
-    f = n(279604),
-    h = n(535396),
+    h = n(279604),
+    f = n(535396),
     g = n(989308),
     m = n(388032);
 function b(e, t) {
@@ -22,55 +22,55 @@ function b(e, t) {
         o = (0, d.ZP)(e, r),
         a = (0, c.q8)(e, t),
         u = null == r ? void 0 : r.storeRemovalDate,
-        f = a && null != u && o.type !== h.A3.INACTIVE,
-        b = f
+        h = a && null != u && o.type !== f.A3.INACTIVE,
+        b = h
             ? {
                   title: m.intl.formatToPlainString(g.default.mgoPkZ, { perkName: null == r ? void 0 : r.title }),
                   description: m.intl.formatToPlainString(g.default.UT9pkJ, { dateString: (0, p.Z)(u) }),
               }
             : null;
     return {
-        shouldShow: f,
+        shouldShow: h,
         notificationConfig: b,
     };
 }
 function O(e, t) {
-    var n, d, h, b;
+    var n, d, f, b;
     let O = (0, l.e7)([o.Z], () => o.Z.getGuild(e)),
-        _ = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
-        y = null != (b = (0, u.Z)(e)) && b,
-        v = (0, c.q8)(e, t),
-        j = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
-        C = (null == j || null == (n = j.unlockedPowerups) ? void 0 : n[i.A$]) != null,
-        x = null == j || null == (d = j.allPowerups) ? void 0 : d[i.A$],
-        E = null == x ? void 0 : x.storeRemovalDate,
-        S = null == j || null == (h = j.allPowerups) ? void 0 : h[i.XW],
-        { onActivate: I } = (0, f._C)(e, S),
-        P = !_ && y && v && C && null != x && null != E && null != S && null != O,
+        y = (0, l.e7)([a.Z], () => a.Z.hasLayers()),
+        _ = null != (b = (0, u.Z)(e)) && b,
+        j = (0, c.q8)(e, t),
+        v = (0, l.e7)([s.Z], () => s.Z.getStateForGuild(e)),
+        x = (null == v || null == (n = v.unlockedPowerups) ? void 0 : n[i.A$]) != null,
+        C = null == v || null == (d = v.allPowerups) ? void 0 : d[i.A$],
+        E = null == C ? void 0 : C.storeRemovalDate,
+        S = null == v || null == (f = v.allPowerups) ? void 0 : f[i.XW],
+        { onActivate: P } = (0, h._C)(e, S),
+        I = !y && _ && j && x && null != C && null != E && null != S && null != O,
         N = r.useCallback(
             (e) => {
-                I(e);
+                P(e);
             },
-            [I],
+            [P],
         ),
         w = r.useMemo(() => {
-            if (!P) return null;
+            if (!I) return null;
             let e = (0, p.Z)(E);
             return {
-                firstHeader: x.title,
+                firstHeader: C.title,
                 secondHeader: m.intl.formatToPlainString(g.default["8imxAg"], { dateString: e }),
                 firstBody: m.intl.formatToPlainString(g.default["/bW9tb"], { serverName: O.name }),
                 secondBody: m.intl.formatToPlainString(g.default.D09fdn, {
                     dateString: e,
-                    boostCount: x.cost,
+                    boostCount: C.cost,
                 }),
                 thirdBody: m.intl.string(g.default["+zvKPj"]),
                 primaryButtonText: m.intl.string(g.default["0uo/LC"]),
                 onPrimaryClick: N,
             };
-        }, [P, x, E, O, N]);
+        }, [I, C, E, O, N]);
     return {
-        shouldShow: P,
+        shouldShow: I,
         modalConfig: w,
     };
 }

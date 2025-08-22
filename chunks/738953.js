@@ -25,7 +25,7 @@ var r = n(951288),
     A = n(687158),
     C = n(510659),
     N = n(892001),
-    R = n(113557),
+    R = n(899007),
     P = n(867176),
     w = n(451834),
     D = n(502762),
@@ -260,7 +260,6 @@ function z(e) {
                                             onClose: J,
                                         }),
                                         (0, r.jsx)(R.Z, {
-                                            location: "UserProfilePopout",
                                             user: n,
                                             displayProfile: ec,
                                             guildId: Y,
@@ -277,7 +276,6 @@ function z(e) {
                                                   children: () =>
                                                       (0, r.jsx)(k.Z, {
                                                           ref: e_,
-                                                          location: "UserProfilePopout",
                                                           user: n,
                                                           guildId: Y,
                                                           channelId: z,
@@ -288,7 +286,6 @@ function z(e) {
                                               })
                                             : (0, r.jsx)(k.Z, {
                                                   ref: ev ? e_ : void 0,
-                                                  location: "UserProfilePopout",
                                                   user: n,
                                                   guildId: Y,
                                                   channelId: z,

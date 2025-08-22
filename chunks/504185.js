@@ -47,8 +47,8 @@ var r = n(951288),
     V = n(501655),
     z = n(427679),
     W = n(513449),
-    Y = n(153349),
-    q = n(901434),
+    q = n(153349),
+    Y = n(901434),
     K = n(302270),
     X = n(308177),
     Q = n(700483),
@@ -213,7 +213,7 @@ function eu(e) {
                         (0, o.debounce)(() => A(t), 1000, { leading: !0 })();
                     },
                 })
-              : (0, r.jsx)(q.Z, {
+              : (0, r.jsx)(Y.Z, {
                     participants: S,
                     channel: c,
                     hasConnectPermission: E,
@@ -354,7 +354,7 @@ function ed(e) {
                                 }),
                         }),
                         l
-                            ? (0, r.jsx)(Y.Z, {
+                            ? (0, r.jsx)(q.Z, {
                                   channel: t,
                                   toggleRequestToSpeakSidebar: u,
                                   chatOpen: P,

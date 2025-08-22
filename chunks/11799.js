@@ -14,19 +14,19 @@ let p = () => {
         loading: t,
         items: n,
         hasMore: p,
-        loadMore: f,
+        loadMore: h,
     } = ((e) => {
-        let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: f = !1, initialPageSize: h } = e,
+        let { isFocused: t, navigatedAway: n, isDesktop: p, withMentions: h = !1, initialPageSize: f } = e,
             g = (0, i.e7)([u.Z], () => u.Z.shouldReload()),
             m = r.useRef(!1),
             [b, O] = r.useState(!1),
             {
-                initialized: _,
-                loading: y,
-                items: v,
-                hasMore: j,
-                cursor: C,
-                errored: x,
+                initialized: y,
+                loading: _,
+                items: j,
+                hasMore: v,
+                cursor: x,
+                errored: C,
             } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
@@ -41,41 +41,41 @@ let p = () => {
             }));
         r.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             r.useEffect(() => {
-                _ && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, _]);
-        let I = (0, o.Z)();
+                y && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, y]);
+        let P = (0, o.Z)();
         r.useEffect(
             () => () => {
-                p ? !I() && (x || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                p ? !P() && (C || j.length > 100) && (0, s.jF)() : n && j.length > 100 && (0, s.jF)();
             },
-            [n, v, p, I, x],
+            [n, j, p, P, C],
         ),
             r.useEffect(() => {
                 let e = g && t;
-                (!_ || e) &&
+                (!y || e) &&
                     (0, s.jk)({
-                        limit: null != h ? h : f ? 8 : 20,
-                        with_mentions: f,
+                        limit: null != f ? f : h ? 8 : 20,
+                        with_mentions: h,
                         roles_filter: E,
                         everyone_filter: S,
                     });
-            }, [_, g, t, f, E, S, h]);
-        let P = r.useCallback(
+            }, [y, g, t, h, E, S, f]);
+        let I = r.useCallback(
             async (e) => {
                 !m.current &&
-                    _ &&
-                    j &&
-                    null != C &&
-                    (e || !x) &&
+                    y &&
+                    v &&
+                    null != x &&
+                    (e || !C) &&
                     ((m.current = !0),
                     O(!0),
                     await (0, s.jk)(
                         {
-                            after: C,
-                            with_mentions: f,
+                            after: x,
+                            with_mentions: h,
                             roles_filter: E,
                             everyone_filter: S,
-                            limit: f ? 8 : 20,
+                            limit: h ? 8 : 20,
                         },
                         () => {
                             m.current = !1;
@@ -83,19 +83,19 @@ let p = () => {
                     ),
                     O(!1));
             },
-            [_, j, C, x, f, E, S],
+            [y, v, x, C, h, E, S],
         );
         return {
-            initialized: _,
-            loading: y,
-            items: v,
-            hasMore: j,
-            loadMore: P,
+            initialized: y,
+            loading: _,
+            items: j,
+            hasMore: v,
+            loadMore: I,
             loadingMore: b,
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);
             },
-            errored: x,
+            errored: C,
         };
     })({
         isFocused: !0,
@@ -106,6 +106,6 @@ let p = () => {
         loading: t,
         items: n.filter((e) => "notification-center-item" === e.kind),
         hasMore: p,
-        loadMore: f,
+        loadMore: h,
     };
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(415506), n(388685);
+n.d(t, { Z: () => v }), n(415506), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(594174),
     d = n(431),
     p = n(74538),
-    f = n(970645),
-    h = n(30684),
+    h = n(970645),
+    f = n(30684),
     g = n(937579),
     m = n(522558),
     b = n(11352);
@@ -28,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-function _(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function y(e, t) {
         e
     );
 }
-class v extends o.Z {
+class j extends o.Z {
     _initialize() {
         __OVERLAY__
             ? l.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
@@ -90,7 +90,7 @@ class v extends o.Z {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    _(
+                    y(
                         {
                             channel: t,
                             content: l,
@@ -104,7 +104,7 @@ class v extends o.Z {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
         return new Promise((t, n) => {
             (0, s.Z)(
-                y(_({}, e), {
+                _(y({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
                     },
@@ -141,7 +141,7 @@ class v extends o.Z {
             }),
             O(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
-                null != e && e.verified && !(0, p.I5)(e) && h.Z.shouldFetchCheckoutRecovery() && (await (0, f.o)());
+                null != e && e.verified && !(0, p.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
             }),
             O(this, "_maybeFetchUserAffinities", () => {
                 let { enabled: e } = m.w.getCurrentConfig({ location: "PremiumManager" }, { autoTrackExposure: !1 });
@@ -152,7 +152,7 @@ class v extends o.Z {
             }),
             O(this, "_handlePremiumPaymentModalOpen", (e) => {
                 (0, s.Z)(
-                    y(_({}, e), {
+                    _(y({}, e), {
                         analyticsLocations: [a.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
@@ -173,4 +173,4 @@ class v extends o.Z {
             });
     }
 }
-let j = new v();
+let v = new j();

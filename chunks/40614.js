@@ -1,4 +1,4 @@
-n.d(t, { V: () => _ }), n(388685);
+n.d(t, { V: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(594190),
     d = n(695346),
     p = n(885110),
-    f = n(316496),
-    h = n(933554),
+    h = n(316496),
+    f = n(933554),
     g = n(388032),
     m = n(973543);
 function b(e) {
@@ -30,13 +30,13 @@ function O(e) {
     var t;
     let { onClick: n } = e,
         p = (0, l.e7)([a.Z], () => a.Z.getFakeGameData()),
-        f = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
-        b = null != (t = null == p ? void 0 : p.start) ? t : null == f ? void 0 : f.start,
+        h = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
+        b = null != (t = null == p ? void 0 : p.start) ? t : null == h ? void 0 : h.start,
         O = d.SE.useSetting().length > 0,
-        { now: _ } = (0, s.tS)(),
-        y = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, _)), [b, _]);
+        { now: y } = (0, s.tS)(),
+        _ = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, y)), [b, y]);
     if (null == b) return null;
-    let v = [...(O ? [g.intl.string(h.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
+    let j = [...(O ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), _];
     return (0, r.jsx)(o.P3F, {
         className: m.container,
         onClick: n,
@@ -45,13 +45,13 @@ function O(e) {
             variant: "text-xs/medium",
             color: "text-feedback-positive",
             lineClamp: 1,
-            children: v.join(" \xB7 "),
+            children: j.join(" \xB7 "),
         }),
     });
 }
-function _(e) {
+function y(e) {
     let { onClick: t } = e,
-        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, f.D)("not sharing link"),
+        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, h.D)("not sharing link"),
         a = d.G6.useSetting(),
         s = (0, l.e7)([p.Z], () => p.Z.getStatus());
     return !n || __OVERLAY__

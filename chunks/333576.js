@@ -9,7 +9,7 @@ var i = n(693789),
     c = n(450272),
     u = n(981631);
 let d = function () {
-    let { resetOnboardingAnnouncementModal: e, resetQuestStatus: t } = (0, l.Z)();
+    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, l.Z)();
     return (0, r.jsxs)(c.$0, {
         children: [
             (0, r.jsx)(a.X6q, {

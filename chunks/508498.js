@@ -1,49 +1,49 @@
-r.d(t, { Db: () => s }), r(35282), r(65234), r(111804), r(490233), r(97749), r(388685);
-var n = r(647438),
-    l = r(843611),
-    a = r(37234),
-    i = r(703656),
-    o = r(981631);
-function s() {
+n.d(t, { Db: () => o }), n(35282), n(65234), n(111804), n(490233), n(97749), n(388685);
+var r = n(647438),
+    l = n(843611),
+    a = n(37234),
+    s = n(703656),
+    i = n(981631);
+function o() {
     let { search: e } = (0, l.TH)(),
         t = (0, l.UO)(),
-        r = n.useMemo(() => new URLSearchParams(e), [e]).get("source"),
-        s = null != r ? parseInt(r, 10) : null;
+        n = r.useMemo(() => new URLSearchParams(e), [e]).get("source"),
+        o = null != n ? parseInt(n, 10) : null;
     return (function (e) {
         for (var t = 1; t < arguments.length; t++) {
-            var r = null != arguments[t] ? arguments[t] : {},
-                n = Object.keys(r);
+            var n = null != arguments[t] ? arguments[t] : {},
+                r = Object.keys(n);
             "function" == typeof Object.getOwnPropertySymbols &&
-                (n = n.concat(
-                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                (r = r.concat(
+                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                     }),
                 )),
-                n.forEach(function (t) {
-                    var n;
-                    (n = r[t]),
+                r.forEach(function (t) {
+                    var r;
+                    (r = n[t]),
                         t in e
                             ? Object.defineProperty(e, t, {
-                                  value: n,
+                                  value: r,
                                   enumerable: !0,
                                   configurable: !0,
                                   writable: !0,
                               })
-                            : (e[t] = n);
+                            : (e[t] = r);
                 });
         }
         return e;
     })(
         {
-            onClose: n.useCallback(() => {
-                if (0 === s) {
-                    (0, i.op)(), (0, a.jN)(o.S9g.USER_SETTINGS);
+            onClose: r.useCallback(() => {
+                if (0 === o) {
+                    (0, s.op)(), (0, a.jN)(i.S9g.USER_SETTINGS);
                     return;
                 }
-                if ((0, i.uv)()) return void (0, i.op)();
-                (0, i.uL)(o.Z5c.APP);
-            }, [s]),
-            source: s,
+                if ((0, s.uv)()) return void (0, s.op)();
+                (0, s.uL)(i.Z5c.APP);
+            }, [o]),
+            source: o,
         },
         t,
     );

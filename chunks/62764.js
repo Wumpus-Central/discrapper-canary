@@ -122,9 +122,9 @@ function V(e) {
         { ref: v, width: O } = (0, p.ZP)(),
         [E, L] = i.useState(3),
         [V, z] = i.useState(!n),
-        [W, Y] = (0, h.Z)(!1, 2000),
-        q = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
-        { firstMessage: K } = (0, w.cl)(q),
+        [W, q] = (0, h.Z)(!1, 2000),
+        Y = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
+        { firstMessage: K } = (0, w.cl)(Y),
         X = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
         {
             disableReactionUpdates: Q,
@@ -132,8 +132,8 @@ function V(e) {
             isLurking: $,
             isGuest: ee,
             isPendingMember: et,
-        } = (0, b.Z)(q),
-        en = (0, j.nw)(q),
+        } = (0, b.Z)(Y),
+        en = (0, j.nw)(Y),
         er = (0, o.e7)([Z.Z], () => Z.Z.getChannel(s)),
         ei = (0, A.Bs)(er),
         el = (0, o.e7)([f.Z], () => f.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -164,24 +164,24 @@ function V(e) {
         (i.useEffect(() => {
             null != O && (L(Math.floor((O - 280) / 58)), es(!1));
         }, [O]),
-        null == q || null == K)
+        null == Y || null == K)
     )
         return null;
     let ec = K.reactions.length > 0,
         eu = () => {
-            X ? P.Z.leaveThread(q, "Forum Toolbar") : P.Z.joinThread(q, "Forum Toolbar");
+            X ? P.Z.leaveThread(Y, "Forum Toolbar") : P.Z.joinThread(Y, "Forum Toolbar");
         },
         ed = () => {
             (0, R.B)({
-                postId: q.id,
+                postId: Y.id,
                 location: { section: M.jXE.CHANNEL_HEADER },
             }),
-                (0, N.JG)((0, T.EO)(q, er), () => Y(!0));
+                (0, N.JG)((0, T.EO)(Y, er), () => q(!0));
         },
         ep = () => {
             u.Z.jumpToMessage({
-                channelId: q.id,
-                messageId: q.id,
+                channelId: Y.id,
+                messageId: Y.id,
                 flash: !0,
                 jumpType: d.SR.INSTANT,
             });
@@ -198,7 +198,7 @@ function V(e) {
                               className: k.reportedMessageActions,
                               children: (0, r.jsx)(S.Z, {
                                   message: K,
-                                  channel: q,
+                                  channel: Y,
                               }),
                           })
                         : (0, r.jsxs)("div", {
@@ -228,7 +228,7 @@ function V(e) {
                                       }),
                                   (0, r.jsx)(C.Z, {
                                       message: K,
-                                      channel: q,
+                                      channel: Y,
                                       disableReactionCreates: !0,
                                       disableReactionUpdates: Q,
                                       isLurking: $,
@@ -244,7 +244,7 @@ function V(e) {
                                       (0, r.jsx)(_.X, {
                                           type: g.O.NORMAL,
                                           message: K,
-                                          channel: q,
+                                          channel: Y,
                                           useChatFontScaling: !1,
                                           className: a()(U.secondary, k.addReactButton, { [k.hasNoReactions]: !ec }),
                                           isForumToolbar: !0,
@@ -256,7 +256,7 @@ function V(e) {
                         className: k.buttons,
                         children: [
                             en
-                                ? (0, r.jsx)(H, { channel: q })
+                                ? (0, r.jsx)(H, { channel: Y })
                                 : (0, r.jsx)(c.ua7, {
                                       text: D.intl.string(D.t.F7oeDg),
                                       children: (e) =>
@@ -317,7 +317,7 @@ function V(e) {
             }),
             el && (0, r.jsx)(m.Z, { threadId: t }),
             (0, r.jsx)(y.Z, {
-                channel: q,
+                channel: Y,
                 isLastItem: l,
             }),
         ],

@@ -15,15 +15,15 @@ function d(e) {
     let { guildId: t, guildJoinRequests: n } = e,
         i = r.useRef(!1),
         [d, p] = r.useState(null),
-        f = r.useRef(null),
-        h = r.useRef(!1);
+        h = r.useRef(null),
+        f = r.useRef(!1);
     return {
         fetchNextPage: r.useCallback(
             async (e, r) => {
                 if (i.current) return;
                 let g = "".concat(e, "-").concat(r),
                     m = !1;
-                if ((g !== f.current && ((f.current = g), (h.current = !1), (m = !0)), h.current)) return;
+                if ((g !== h.current && ((h.current = g), (f.current = !1), (m = !0)), f.current)) return;
                 null != d && p(null);
                 let b = (function (e, t, n, r) {
                     let i = n === c.wB.SUBMITTED;
@@ -78,7 +78,7 @@ function d(e) {
                     );
                     if (null != e) {
                         let { guild_join_requests: t } = e.body;
-                        t.length < u && (h.current = !0);
+                        t.length < u && (f.current = !0);
                     }
                 } catch (e) {
                     p(new o.Hx(e).getAnyErrorMessage());

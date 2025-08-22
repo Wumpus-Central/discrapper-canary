@@ -9,22 +9,22 @@ var r,
     u = n(481060),
     d = n(239091),
     p = n(134616),
-    f = n(714338),
-    h = n(212819),
+    h = n(714338),
+    f = n(212819),
     g = n(815372),
     m = n(14429),
     b = n(576855),
     O = n(313201),
-    _ = n(991346),
-    y = n(592125),
-    v = n(888369),
-    j = n(430824),
-    C = n(306680),
-    x = n(944486),
+    y = n(991346),
+    _ = n(592125),
+    j = n(888369),
+    v = n(430824),
+    x = n(306680),
+    C = n(944486),
     E = n(938475),
     S = n(483360),
-    I = n(585483),
-    P = n(63063),
+    P = n(585483),
+    I = n(63063),
     N = n(51596),
     w = n(823385),
     Z = n(415795),
@@ -91,7 +91,7 @@ let G = () =>
             (0, i.jsx)("div", {
                 className: M.emptyStateCTA,
                 children: (0, i.jsx)(u.eee, {
-                    href: P.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                    href: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: D.intl.string(D.t["4iPfEB"]),
                 }),
             }),
@@ -99,7 +99,7 @@ let G = () =>
     });
 class B extends (r = l.Component) {
     render() {
-        let e = j.Z.getGuild(this.props.channel.guild_id);
+        let e = v.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             Z.$W,
             U(k({}, this.props), {
@@ -112,33 +112,33 @@ class B extends (r = l.Component) {
     }
 }
 L(B, "defaultProps", { unread: !1 });
-let V = s.ZP.connectStores([C.ZP, y.Z], (e) => {
+let F = s.ZP.connectStores([x.ZP, _.Z], (e) => {
         let { channel: t } = e;
         return {
-            unread: C.ZP.hasUnread(t.id),
-            mentions: C.ZP.getMentionCount(t.id),
-            isMentionLowImportance: C.ZP.getIsMentionLowImportance(t.id),
-            category: y.Z.getChannel(t.parent_id),
+            unread: x.ZP.hasUnread(t.id),
+            mentions: x.ZP.getMentionCount(t.id),
+            isMentionLowImportance: x.ZP.getIsMentionLowImportance(t.id),
+            category: _.Z.getChannel(t.parent_id),
         };
     })(B),
-    F = s.ZP.connectStores([E.ZP], (e) => {
+    V = s.ZP.connectStores([E.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(B),
-    H = s.ZP.connectStores([v.default], (e) => {
+    H = s.ZP.connectStores([j.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: j.default.hasUnread(t.id) };
     })(Z.ic),
-    z = s.ZP.connectStores([C.ZP], (e) => {
+    z = s.ZP.connectStores([x.ZP], (e) => {
         let { channel: t } = e;
-        return { mentions: C.ZP.getMentionCount(t.id) };
+        return { mentions: x.ZP.getMentionCount(t.id) };
     })(Z.PZ),
-    W = s.ZP.connectStores([y.Z, C.ZP], (e) => {
+    W = s.ZP.connectStores([_.Z, x.ZP], (e) => {
         let { user: t } = e,
-            n = y.Z.getDMFromUserId(t.id);
-        return { mentions: null != n ? C.ZP.getMentionCount(n) : 0 };
+            n = _.Z.getDMFromUserId(t.id);
+        return { mentions: null != n ? x.ZP.getMentionCount(n) : 0 };
     })(Z.n5);
 function K(e, t, n) {
     return (0, i.jsx)(
@@ -159,10 +159,10 @@ function K(e, t, n) {
 }
 class Y extends l.PureComponent {
     componentDidMount() {
-        f.Z.disable(), f.Z.enableTemp(p.u);
+        h.Z.disable(), h.Z.enableTemp(p.u);
     }
     componentWillUnmount() {
-        f.Z.disableTemp(), f.Z.enable();
+        h.Z.disableTemp(), h.Z.enable();
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: r } = this.state,
@@ -240,7 +240,7 @@ class Y extends l.PureComponent {
         });
     }
     focusNode(e) {
-        I.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        P.S.dispatch(R.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
@@ -250,11 +250,11 @@ class Y extends l.PureComponent {
             className: a()(M.protip, { [M.hasContent]: this.state.query.length > 0 }),
             type: b.Z.Types.INLINE,
             children: D.intl.format(D.t.wukqXV, {
-                userSymbolHook: (e, t) => K(t, h.xQ.USER, D.intl.string(D.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => K(t, h.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => K(t, h.xQ.VOICE_CHANNEL, D.intl.string(D.t["jz+hJi"])),
-                guildSymbolHook: (e, t) => K(t, h.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
-                helpdeskArticle: P.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
+                userSymbolHook: (e, t) => K(t, f.xQ.USER, D.intl.string(D.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => K(t, f.xQ.TEXT_CHANNEL, D.intl.string(D.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => K(t, f.xQ.VOICE_CHANNEL, D.intl.string(D.t["jz+hJi"])),
+                guildSymbolHook: (e, t) => K(t, f.xQ.GUILD, D.intl.string(D.t.WuwCWl)),
+                helpdeskArticle: I.Z.getArticleURL(R.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -297,12 +297,12 @@ class Y extends l.PureComponent {
                 this.state.mouseFocusDisabled || (0, N.tF)(this.props.results.indexOf(e));
             }),
             L(this, "selectResult", (e) => {
-                (0, N.Se)(e, this.props.queryMode === h.h8.TEXT_CHANNEL);
+                (0, N.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             L(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
-                    case h.h8.GUILD:
+                    case f.h8.GUILD:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("1806"),
@@ -333,10 +333,10 @@ class Y extends l.PureComponent {
                                     }),
                                 );
                         });
-                    case h.h8.TEXT_CHANNEL:
-                    case h.h8.VOICE_CHANNEL:
+                    case f.h8.TEXT_CHANNEL:
+                    case f.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = j.Z.getGuild(r.getGuildId());
+                            l = v.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case R.d4z.GUILD_TEXT:
@@ -412,7 +412,7 @@ class Y extends l.PureComponent {
                                 });
                         }
                         break;
-                    case h.h8.GROUP_DM:
+                    case f.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("57789"), n.e("81239")]).then(
                                 n.bind(n, 354741),
@@ -422,12 +422,12 @@ class Y extends l.PureComponent {
                                     e,
                                     U(k({}, n), {
                                         channel: t.record,
-                                        selected: x.Z.getChannelId() === t.record.id,
+                                        selected: C.Z.getChannelId() === t.record.id,
                                         onSelect: N.Cp,
                                     }),
                                 );
                         });
-                    case h.h8.USER:
+                    case f.h8.USER:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220")]).then(
                                 n.bind(n, 881351),
@@ -465,18 +465,18 @@ class Y extends l.PureComponent {
                         return;
                     }
                     case "arrowup":
-                        l = (0, h.gJ)(h.a8.UP, l, r);
+                        l = (0, f.gJ)(f.a8.UP, l, r);
                         break;
                     case "arrowdown":
-                        l = (0, h.gJ)(h.a8.DOWN, l, r);
+                        l = (0, f.gJ)(f.a8.DOWN, l, r);
                         break;
                     case "n":
                         if (!e.ctrlKey) return;
-                        l = (0, h.gJ)(h.a8.DOWN, l, r);
+                        l = (0, f.gJ)(f.a8.DOWN, l, r);
                         break;
                     case "p":
                         if (!e.ctrlKey) return;
-                        l = (0, h.gJ)(h.a8.UP, l, r);
+                        l = (0, f.gJ)(f.a8.UP, l, r);
                         break;
                     default:
                         return;
@@ -489,28 +489,13 @@ class Y extends l.PureComponent {
                     { selectedIndex: r } = this.props,
                     { showScores: l } = m.Z.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
                 switch (n.type) {
-                    case h.h8.HEADER:
+                    case f.h8.HEADER:
                         return (0, i.jsx)(
                             Z.h4,
                             { children: n.record.text },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.TEXT_CHANNEL:
-                        return (0, i.jsx)(
-                            V,
-                            {
-                                id: this.getRowId(t),
-                                focused: r >= 0 && t === r,
-                                onClick: () => this.selectResult(n),
-                                onMouseEnter: () => this.focusResult(n),
-                                onFocus: this.focusNode,
-                                onContextMenu: this.handleContextMenu,
-                                channel: n.record,
-                                score: l ? n.score : void 0,
-                            },
-                            "".concat(n.type, "-").concat(n.record.id),
-                        );
-                    case h.h8.VOICE_CHANNEL:
+                    case f.h8.TEXT_CHANNEL:
                         return (0, i.jsx)(
                             F,
                             {
@@ -525,7 +510,22 @@ class Y extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.GUILD:
+                    case f.h8.VOICE_CHANNEL:
+                        return (0, i.jsx)(
+                            V,
+                            {
+                                id: this.getRowId(t),
+                                focused: r >= 0 && t === r,
+                                onClick: () => this.selectResult(n),
+                                onMouseEnter: () => this.focusResult(n),
+                                onFocus: this.focusNode,
+                                onContextMenu: this.handleContextMenu,
+                                channel: n.record,
+                                score: l ? n.score : void 0,
+                            },
+                            "".concat(n.type, "-").concat(n.record.id),
+                        );
+                    case f.h8.GUILD:
                         return (0, i.jsx)(
                             H,
                             {
@@ -540,7 +540,7 @@ class Y extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.USER:
+                    case f.h8.USER:
                         return (0, i.jsx)(
                             W,
                             {
@@ -556,7 +556,7 @@ class Y extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.GROUP_DM:
+                    case f.h8.GROUP_DM:
                         return (0, i.jsx)(
                             z,
                             {
@@ -571,7 +571,7 @@ class Y extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.APPLICATION:
+                    case f.h8.APPLICATION:
                         return (0, i.jsx)(
                             Z.Mx,
                             {
@@ -584,7 +584,7 @@ class Y extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.LINK:
+                    case f.h8.LINK:
                         return (0, i.jsx)(
                             Z.rU,
                             {
@@ -599,7 +599,7 @@ class Y extends l.PureComponent {
                             },
                             "".concat(n.type, "-").concat(n.record.id),
                         );
-                    case h.h8.IN_APP_NAVIGATION:
+                    case f.h8.IN_APP_NAVIGATION:
                         return (0, i.jsx)(
                             Z.s8,
                             {
@@ -628,7 +628,7 @@ class Y extends l.PureComponent {
 }
 function q(e) {
     let t = (0, s.cj)([w.Z], () => w.Z.getProps()),
-        n = (0, _.Pt)(),
+        n = (0, y.Pt)(),
         r = A.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
         o = l.useMemo(
             () =>

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var i,
     l = n(442837),
     o = n(570140),
@@ -9,13 +9,13 @@ var i,
     u = n(592125),
     d = n(430824),
     p = n(701190),
-    f = n(496675),
-    h = n(594174),
+    h = n(496675),
+    f = n(594174),
     g = n(411198),
     m = n(998502),
     b = n(981631),
     O = n(176505);
-function _(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function y(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,40 +39,40 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-let v = b.IlC.APP,
-    j = !1,
-    C = !1,
-    x = [];
+let j = b.IlC.APP,
+    v = !1,
+    x = !1,
+    C = [];
 function E() {
-    j = !0;
+    v = !0;
 }
 class S extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, p.Z, h.default);
+        this.waitFor(d.Z, p.Z, f.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(j && x.length > 0 && v === e);
+        return !!(v && C.length > 0 && j === e);
     }
     getProps() {
         return {
-            invite: x.length > 0 ? x[0][0] : null,
+            invite: C.length > 0 ? C[0][0] : null,
             error: null != r && "" !== r ? r : null,
-            submitting: C,
+            submitting: x,
         };
     }
 }
-_(S, "displayName", "InviteModalStore");
-let I = new S(o.Z, {
+y(S, "displayName", "InviteModalStore");
+let P = new S(o.Z, {
     OVERLAY_INITIALIZE: E,
     CONNECTION_OPEN: E,
     CONNECTION_CLOSED: function () {
-        j = !1;
+        v = !1;
     },
     INVITE_MODAL_OPEN: function (e) {
         let t = e.invite;
@@ -90,7 +90,7 @@ let I = new S(o.Z, {
                         let { channel: t } = e;
                         if (null != t) {
                             let e = u.Z.getChannel(t.id);
-                            if (f.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
+                            if (h.Z.can(b.Plq.VIEW_CHANNEL, e)) return t.id;
                         }
                         return null;
                     })(t);
@@ -99,13 +99,13 @@ let I = new S(o.Z, {
             }
         }
         if (
-            x.some((e) => {
+            C.some((e) => {
                 let [n] = e;
                 return n.code === t.code;
             })
         )
             return !1;
-        (v = e.context), (C = !1);
+        (j = e.context), (x = !1);
         let n = (function (e) {
             let {
                     approximate_member_count: t,
@@ -132,25 +132,25 @@ let I = new S(o.Z, {
                     is_nickname_changeable: d,
                 };
             return (
-                null != c && (p.channel = y({}, c)),
+                null != c && (p.channel = _({}, c)),
                 null != u && (p.guild = (0, g.Qs)(u)),
-                null != e.inviter && (p.inviter = y({}, e.inviter)),
+                null != e.inviter && (p.inviter = _({}, e.inviter)),
                 p
             );
         })(t);
-        x.push([n, e.resolve]);
+        C.push([n, e.resolve]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (((r = null), (C = !1), x.length > 0)) {
-            let [, e] = x.shift();
+        if (((r = null), (x = !1), C.length > 0)) {
+            let [, e] = C.shift();
             null != e && e();
         }
     },
     INVITE_ACCEPT: function () {
-        C = !0;
+        x = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
         let { message: t } = e;
-        (r = t), (C = !1);
+        (r = t), (x = !1);
     },
 });

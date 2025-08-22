@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -103,7 +103,7 @@ function z(e, t) {
     return i;
 }
 let W = (0, o.animated)(u.eTT),
-    Y = i.memo(
+    q = i.memo(
         function (e) {
             var t, n;
             let {
@@ -128,7 +128,7 @@ let W = (0, o.animated)(u.eTT),
                     typingGradient: R,
                     isChatInputBottomAligned: D,
                 } = e,
-                [Y, q] = i.useState(null != (n = j.Z.isAtBottom(m.id)) && n),
+                [q, Y] = i.useState(null != (n = j.Z.isAtBottom(m.id)) && n),
                 K = i.useMemo(
                     () =>
                         y
@@ -158,8 +158,8 @@ let W = (0, o.animated)(u.eTT),
                     focusId: E,
                     placeholderHeight: K.totalHeight,
                     canLoadMore: null == Z,
-                    handleScrollToBottom: i.useCallback(() => q(!0), [q]),
-                    handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
+                    handleScrollToBottom: i.useCallback(() => Y(!0), [Y]),
+                    handleScrollFromBottom: i.useCallback(() => Y(!1), [Y]),
                     additionalMessagePadding: 48 * !!D,
                 }),
                 Q = (0, L.Z)({
@@ -235,14 +235,14 @@ let W = (0, o.animated)(u.eTT),
                         (ea.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                 }),
                 ec = i.useMemo(() => {
-                    let e = R && !Y ? 96 : R ? 32 : 16,
-                        t = R && !Y ? 24 : 24 * !!R;
+                    let e = R && !q ? 96 : R ? 32 : 16,
+                        t = R && !q ? 24 : 24 * !!R;
                     return {
                         mask: "linear-gradient(180deg, black 0%, black calc(100% - "
                             .concat(e, "px), rgba(0,0,0,0) calc(100% - ")
                             .concat(t, "px), rgba(0,0,0,0) 100%)"),
                     };
-                }, [R, Y]);
+                }, [R, q]);
             return (0, r.jsxs)(s.bG, {
                 navigator: Q,
                 children: [
@@ -325,7 +325,7 @@ let W = (0, o.animated)(u.eTT),
         },
         (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden,
     ),
-    q = i.memo(function (e) {
+    Y = i.memo(function (e) {
         var {
                 channel: t,
                 showingQuarantineBanner: n,
@@ -398,7 +398,7 @@ let W = (0, o.animated)(u.eTT),
                 messages: F,
                 channelStream: G,
                 oldestUnreadMessageId: W,
-                editingMessageId: q,
+                editingMessageId: Y,
             } = (function (e) {
                 var t, n;
                 let r = (0, c.e7)([I.Z], () => I.Z.getMessages(e.id), [e.id]),
@@ -459,7 +459,7 @@ let W = (0, o.animated)(u.eTT),
             value: (0, w.Z)(k, h),
             children: (0, r.jsx)(D.v, {
                 children: (0, r.jsx)(
-                    Y,
+                    q,
                     V(H({}, d), {
                         messageGroupSpacing: A,
                         showNewMessagesBar: !0,
@@ -472,7 +472,7 @@ let W = (0, o.animated)(u.eTT),
                         unreadCount: (0, c.e7)([Z.ZP], () => Z.ZP.getUnreadCount(t.id), [t]),
                         hasUnreads: null != W,
                         canChat: j,
-                        editingMessageId: q,
+                        editingMessageId: Y,
                         fontSize: M,
                         keyboardModeEnabled: U,
                         showingQuarantineBanner: n,

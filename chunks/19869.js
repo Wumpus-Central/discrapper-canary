@@ -1,7 +1,7 @@
-n.d(t, { O: () => w }), n(388685);
+n.d(t, { O: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(693789),
+    a = n(680018),
     o = n(481060),
     s = n(37234),
     l = n(100527),
@@ -21,105 +21,32 @@ var r = n(951288),
     v = n(981631),
     I = n(388032),
     T = n(905164);
-function S(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                S(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function C(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function N(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = P(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function P(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function w() {
+function S() {
     let { enabled: e } = (0, p.WX)({ location: "revenue_storybook" });
     return (0, r.jsxs)("div", {
-        children: [e && (0, r.jsx)(L, {}), (0, r.jsx)(x, {}), (0, r.jsx)(j, {})],
+        children: [e && (0, r.jsx)(N, {}), (0, r.jsx)(C, {}), (0, r.jsx)(R, {})],
     });
 }
-let D = 150;
-function x() {
+let A = 150;
+function C() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, f.l)({ location: "VirtualCurrencyComponents" }),
-        [t, n] = i.useState(D),
-        [_, p] = i.useState(D),
+        [t, n] = i.useState(A),
+        [_, p] = i.useState(A),
         [b, y] = i.useState(500),
-        [S, A] = i.useState(h.b.DEFAULT),
-        C = () => {
+        [S, C] = i.useState(h.b.DEFAULT),
+        N = () => {
             switch (S) {
                 case h.b.DEFAULT:
-                    A(h.b.HIGHLIGHTED);
+                    C(h.b.HIGHLIGHTED);
                     break;
                 case h.b.HIGHLIGHTED:
-                    A(h.b.SELECTED);
+                    C(h.b.SELECTED);
                     break;
                 case h.b.SELECTED:
-                    A(h.b.DEFAULT);
+                    C(h.b.DEFAULT);
             }
         },
-        { analyticsLocations: N } = (0, c.ZP)(l.Z.PAYMENT_FLOW_TEST_PAGE);
+        { analyticsLocations: R } = (0, c.ZP)(l.Z.PAYMENT_FLOW_TEST_PAGE);
     return (0, r.jsxs)(O.$0, {
         children: [
             (0, r.jsx)(o.X6q, {
@@ -155,13 +82,13 @@ function x() {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.z, {
                         onClick: () => {
                             (0, s.xf)(),
                                 (0, d.s1)().location.pathname.includes(v.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, u.mK)({
                                         openInLayer: !1,
-                                        analyticsLocations: N,
+                                        analyticsLocations: R,
                                         analyticsSource: l.Z.REVENUE_STORYBOOK_TEST_PAGE,
                                     }),
                                 e({
@@ -169,7 +96,7 @@ function x() {
                                     delayMS: 200,
                                 });
                         },
-                        children: "Open Balance Widget Coachmark",
+                        text: "Open Balance Widget Coachmark",
                     }),
                 ],
             }),
@@ -213,16 +140,16 @@ function x() {
                         value: t,
                         onChange: (e) => n(e),
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.z, {
                         onClick: () => p(t),
-                        children: "Set Balance",
+                        text: "Set Balance",
                     }),
                     (0, r.jsx)("div", {
                         className: T.interactivePillContainer,
                         children: (0, r.jsx)(E.A4, {
                             balance: _,
                             balanceWidgetMode: S,
-                            onClick: () => C(),
+                            onClick: () => N(),
                         }),
                     }),
                     (0, r.jsx)(o.Text, {
@@ -236,21 +163,21 @@ function x() {
                         value: b,
                         onChange: (e) => y(e),
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.z, {
                         onClick: () => {
                             p(null),
                                 setTimeout(() => {
                                     p(t);
                                 }, b);
                         },
-                        children: "Simulate Loading State",
+                        text: "Simulate Loading State",
                     }),
                     (0, r.jsx)("div", {
                         className: T.interactivePillContainer,
                         children: (0, r.jsx)(E.A4, {
                             balance: _,
                             balanceWidgetMode: S,
-                            onClick: () => C(),
+                            onClick: () => N(),
                         }),
                     }),
                 ],
@@ -266,7 +193,7 @@ function x() {
         ],
     });
 }
-function L() {
+function N() {
     let [e, t] = i.useState("1144308439720394944");
     return (0, r.jsxs)(O.$0, {
         children: [
@@ -292,7 +219,7 @@ function L() {
                         color: "text-feedback-info",
                         children: "The Orb Checkout Modal will open with the orb price of the product, if it exists",
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.z, {
                         onClick: () => {
                             (0, b.qA)({
                                 skuId: e,
@@ -309,43 +236,20 @@ function L() {
                                 },
                             });
                         },
-                        children: "Open Orb Checkout Integrated with Payment Modal",
+                        text: "Open Orb Checkout Integrated with Payment Modal",
                     }),
                 ],
             }),
         ],
     });
 }
-function j() {
-    let e = () => {
-            (0, o.ZDy)(async () => {
-                let { AnnouncementModal: e } = await n.e("86653").then(n.bind(n, 993318));
-                return (t) => {
-                    var { onClose: n } = t,
-                        i = R(t, ["onClose"]);
-                    return (0, r.jsx)(
-                        e,
-                        N(A({}, i), {
-                            onClose: n,
-                            ctaOnClick: n,
-                        }),
-                    );
-                };
-            });
-        },
-        { resetOnboardingAnnouncementModal: t } = (0, _.Z)();
+function R() {
+    let { resetOnboardingExperience: e } = (0, _.Z)();
     return (0, r.jsxs)(O.$0, {
         children: [
             (0, r.jsx)(o.X6q, {
                 variant: "heading-xl/semibold",
                 children: "Onboarding Components",
-            }),
-            (0, r.jsx)(O.E_, {
-                label: "Announcement Modal",
-                children: (0, r.jsx)(a.zx, {
-                    onClick: e,
-                    children: "Open Announcement Modal",
-                }),
             }),
             (0, r.jsxs)(O.E_, {
                 label: "Announcement Modal [Reset Dismissible Content]",
@@ -358,9 +262,9 @@ function j() {
                         children:
                             "After resetting your Announcement Modal State and exiting from user settings, you'll be able to see the Announcement Modal again.",
                     }),
-                    (0, r.jsx)(a.zx, {
-                        onClick: () => t(),
-                        children: "Reset Announcement Modal State",
+                    (0, r.jsx)(a.z, {
+                        onClick: () => e(),
+                        text: "Reset Announcement Modal State",
                     }),
                 ],
             }),

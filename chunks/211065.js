@@ -18,8 +18,8 @@ var l = n(951288),
     j = n(684269),
     O = n(678865),
     v = n(745579),
-    C = n(875425),
-    x = n(981631),
+    x = n(875425),
+    C = n(981631),
     _ = n(185923),
     T = n(388032),
     y = n(486384);
@@ -86,15 +86,15 @@ function E(t) {
 class D extends a.PureComponent {
     componentDidMount() {
         let { sourceAnalyticsLocations: t, sourceAnalyticsContext: e } = this.props;
-        S.default.track(x.rMx.OPEN_MODAL, {
+        S.default.track(C.rMx.OPEN_MODAL, {
             source: null == e ? void 0 : e.location,
-            type: x.jXE.CUSTOM_STATUS_MODAL,
+            type: C.jXE.CUSTOM_STATUS_MODAL,
             load_id: null == e ? void 0 : e.loadId,
             location_stack: t,
         });
     }
     get analyticsLocation() {
-        return { page: x.ZY5.CUSTOM_STATUS_MODAL };
+        return { page: C.ZY5.CUSTOM_STATUS_MODAL };
     }
     getEmojiButtonRenderer() {
         let { emojiInfo: t } = this.state;
@@ -119,7 +119,7 @@ class D extends a.PureComponent {
                 children: [
                     (0, l.jsx)("div", { className: y.emojiButtonContainer }),
                     (0, l.jsx)(s.oil, {
-                        maxLength: C.s0,
+                        maxLength: x.s0,
                         value: e,
                         placeholder: T.intl.string(T.t["zYR38/"]),
                         onChange: this.handleStatusChange,
@@ -162,9 +162,9 @@ class D extends a.PureComponent {
             title: T.intl.string(T.t.E45wvL),
             children: (0, l.jsx)(s.q4e, {
                 placeholder: T.intl.string(T.t.E45wvL),
-                maxVisibleItems: C.wS.length,
+                maxVisibleItems: x.wS.length,
                 value: t,
-                options: C.wS.map((t) => ({
+                options: x.wS.map((t) => ({
                     value: t,
                     key: t,
                     label: (0, v.Z)(t),
@@ -181,7 +181,7 @@ class D extends a.PureComponent {
             children: (0, l.jsx)(s.q4e, {
                 maxVisibleItems: 4,
                 value: t,
-                options: C.Df.map((t) =>
+                options: x.Df.map((t) =>
                     N(P({}, t), {
                         value: t.value,
                         key: t.value,
@@ -318,7 +318,7 @@ class D extends a.PureComponent {
                     e();
             }),
             w(this, "handleKeyPress", (t) => {
-                t.which === x.yXg.ENTER && this.handleSaveStatus();
+                t.which === C.yXg.ENTER && this.handleSaveStatus();
             }),
             w(this, "renderEmojiPicker", (t) => {
                 let { closePopout: e } = t,

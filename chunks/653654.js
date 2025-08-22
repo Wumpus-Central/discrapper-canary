@@ -1,13 +1,13 @@
-r.d(t, { y: () => o });
-var n = r(544891),
-    l = r(343817),
-    a = r(411700),
-    i = r(981631);
-let o = async (e) => {
+n.d(t, { y: () => i });
+var r = n(544891),
+    l = n(343817),
+    a = n(411700),
+    s = n(981631);
+let i = async (e) => {
     try {
         return (
-            await n.tn.get({
-                url: i.ANM.COLLECTIBLES_SEARCH,
+            await r.tn.get({
+                url: s.ANM.COLLECTIBLES_SEARCH,
                 query: e,
                 rejectWithError: !0,
             })

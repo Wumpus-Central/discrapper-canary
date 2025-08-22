@@ -9,18 +9,18 @@ var r = n(951288),
     u = n(704215),
     d = n(481060),
     p = n(239091),
-    f = n(100527),
-    h = n(243778),
+    h = n(100527),
+    f = n(243778),
     g = n(667815),
     m = n(531572),
     b = n(259580),
     O = n(538445),
-    _ = n(639777),
-    y = n(495804),
-    v = n(441536),
-    j = n(921944),
-    C = n(989308),
-    x = n(388032),
+    y = n(639777),
+    _ = n(495804),
+    j = n(441536),
+    v = n(921944),
+    x = n(989308),
+    C = n(388032),
     E = n(931942);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,12 +65,12 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
-    let { guild: t, tooltipTypes: l, withMargin: P } = e,
-        N = (0, y.Z)(t, "GuildPowerupsProgressBar"),
-        w = (0, _.Z)(t.id),
+function I(e) {
+    let { guild: t, tooltipTypes: l, withMargin: I } = e,
+        N = (0, _.Z)(t, "GuildPowerupsProgressBar"),
+        w = (0, y.Z)(t.id),
         Z = i.useCallback(() => {
-            (0, v.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+            (0, j.Z)(t.id, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
         T = (0, c.e7)([m.Z], () => {
             var e;
@@ -97,11 +97,11 @@ function P(e) {
     }, [A, D]);
     let M = T >= N,
         L = i.useRef(null),
-        [k, U] = (0, h.US)(l),
+        [k, U] = (0, f.US)(l),
         G = (e) =>
             (0, r.jsx)(
                 d.P3F,
-                I(S({}, e), {
+                P(S({}, e), {
                     "aria-label": void 0,
                     role: "button",
                     focusProps: {
@@ -114,12 +114,12 @@ function P(e) {
                         var t;
                         null == e || null == (t = e.onClick) || t.call(e), Z();
                     },
-                    className: o()(E.container, { [E.containerWithMargin]: P }),
+                    className: o()(E.container, { [E.containerWithMargin]: I }),
                     onContextMenu: (e) => {
                         w &&
                             (0, p.jW)(e, async () => {
                                 let { default: e } = await n.e("8570").then(n.bind(n, 651138));
-                                return (n) => (0, r.jsx)(e, I(S({}, n), { guild: t }));
+                                return (n) => (0, r.jsx)(e, P(S({}, n), { guild: t }));
                             });
                     },
                     children: (0, r.jsxs)("div", {
@@ -139,7 +139,7 @@ function P(e) {
                                             (0, r.jsx)(s.xv, {
                                                 className: E.text,
                                                 variant: "text-xs/semibold",
-                                                children: x.intl.string(C.default.NI6IhY),
+                                                children: C.intl.string(x.default.NI6IhY),
                                             }),
                                             t.premiumSubscriberCount >= N &&
                                                 (0, r.jsx)(s.xv, {
@@ -156,10 +156,10 @@ function P(e) {
                                                 className: o()(E.text, E.boostCountText),
                                                 variant: "text-xs/semibold",
                                                 children: M
-                                                    ? x.intl.formatToPlainString(C.default["Ehpq+/"], {
+                                                    ? C.intl.formatToPlainString(x.default["Ehpq+/"], {
                                                           appliedBoostCount: T,
                                                       })
-                                                    : x.intl.formatToPlainString(C.default["/rbPDg"], {
+                                                    : C.intl.formatToPlainString(x.default["/rbPDg"], {
                                                           appliedBoostCount: T,
                                                           maxBoostCount: N,
                                                       }),
@@ -192,7 +192,7 @@ function P(e) {
               align: "top",
               shouldShow: !0,
               closeOnScroll: !0,
-              onRequestClose: () => U(j.L.INDIRECT_ACTION),
+              onRequestClose: () => U(v.L.INDIRECT_ACTION),
               animation: d.yRy.Animation.TRANSLATE,
               children: (e) =>
                   (0, r.jsx)("div", {
@@ -204,7 +204,7 @@ function P(e) {
 }
 function N(e) {
     let { guild: t, tooltipTypes: n, withMargin: i } = e;
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(I, {
         guild: t,
         tooltipTypes: n,
         withMargin: i,

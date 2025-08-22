@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => P,
+    $h: () => I,
     cO: () => w,
-    jG: () => I,
+    jG: () => P,
     yI: () => N,
 });
 var r = n(951288);
@@ -15,49 +15,49 @@ var i = n(120356),
     u = n(100527),
     d = n(623624),
     p = n(970731),
-    f = n(430824),
-    h = n(639777),
+    h = n(430824),
+    f = n(639777),
     g = n(441536),
     m = n(795338),
     b = n(279604),
     O = n(535396),
-    _ = n(981631),
-    y = n(921944),
-    v = n(989308),
-    j = n(388032),
-    C = n(428197),
-    x = n(928381),
+    y = n(981631),
+    _ = n(921944),
+    j = n(989308),
+    v = n(388032),
+    x = n(428197),
+    C = n(928381),
     E = n(283902),
     S = n(225375);
-function I(e) {
+function P(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(Z, {
-        asset: (0, r.jsx)(m.g, { className: C.image }),
-        header: j.intl.formatToPlainString(v.default["Zg/m9P"], { perkName: n.title }),
-        content: j.intl.formatToPlainString(v.default["1EGXSE"], { perkName: n.title }),
-        buttonCTA: j.intl.string(j.t.RzWDqa),
+        asset: (0, r.jsx)(m.g, { className: x.image }),
+        header: v.intl.formatToPlainString(j.default["Zg/m9P"], { perkName: n.title }),
+        content: v.intl.formatToPlainString(j.default["1EGXSE"], { perkName: n.title }),
+        buttonCTA: v.intl.string(v.t.RzWDqa),
         onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i,
     });
 }
-function P(e) {
+function I(e) {
     let { guildId: t, markAsDismissed: n } = e,
-        i = (0, h.Z)(t);
+        i = (0, f.Z)(t);
     return (0, r.jsx)(Z, {
         asset: (0, r.jsx)("img", {
             alt: "",
-            src: x.Z,
-            className: l()(C.image, C.newPerksImage),
+            src: C.Z,
+            className: l()(x.image, x.newPerksImage),
         }),
-        header: j.intl.string(v.default.QpQBPT),
-        content: i ? j.intl.string(v.default["6hn0xM"]) : j.intl.string(v.default.RDuvXl),
-        buttonCTA: j.intl.string(j.t.RzWDqa),
+        header: v.intl.string(j.default.QpQBPT),
+        content: i ? v.intl.string(j.default["6hn0xM"]) : v.intl.string(j.default.RDuvXl),
+        buttonCTA: v.intl.string(v.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
                 : (0, d.f)({
                       guildId: t,
-                      location: { section: _.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
+                      location: { section: y.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK },
                   }),
         markAsDismissed: n,
         caretPosition: i ? p.DF.LEFT_TOP : p.DF.TOP_CENTER,
@@ -65,36 +65,36 @@ function P(e) {
 }
 function N(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
-        l = (0, s.e7)([f.Z], () => {
+        l = (0, s.e7)([h.Z], () => {
             var e;
-            return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = h.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: o } = (0, b.ZP)(t, n[0]);
     if (0 === n.length) return;
     let a =
             n.length >= 3
-                ? j.intl.formatToPlainString(v.default["6Sv+3N"], {
+                ? v.intl.formatToPlainString(j.default["6Sv+3N"], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title,
                   })
                 : 2 === n.length
-                  ? j.intl.formatToPlainString(v.default.wcQOqK, {
+                  ? v.intl.formatToPlainString(j.default.wcQOqK, {
                         perks: "".concat(n[0].title, " & ").concat(n[1].title),
                     })
-                  : j.intl.formatToPlainString(v.default.ZF8NT0, { perk: n[0].title }),
+                  : v.intl.formatToPlainString(j.default.ZF8NT0, { perk: n[0].title }),
         c = 1 === n.length;
     return (0, r.jsx)(Z, {
         asset:
             1 === n.length
                 ? (0, r.jsx)(m.m, {
-                      className: C.image,
+                      className: x.image,
                       powerup: n[0],
                   })
-                : (0, r.jsx)(m.g, { className: C.image }),
-        header: j.intl.formatToPlainString(v.default.LmpChI, { guildName: l }),
+                : (0, r.jsx)(m.g, { className: x.image }),
+        header: v.intl.formatToPlainString(j.default.LmpChI, { guildName: l }),
         content: a,
-        buttonCTA: c ? j.intl.string(v.default.gSxlHR) : j.intl.string(j.t.RzWDqa),
+        buttonCTA: c ? v.intl.string(j.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i,
     });
@@ -104,30 +104,30 @@ function w(e) {
         l = n.find((e) => e.skuId === o.A$);
     if (null != l)
         return (0, r.jsx)(Z, {
-            header: j.intl.string(v.default.Ygpx4e),
-            content: j.intl.string(v.default.mmNkUF),
+            header: v.intl.string(j.default.Ygpx4e),
+            content: v.intl.string(j.default.mmNkUF),
             asset: (0, r.jsx)("img", {
                 alt: "",
                 src: S.Z,
-                className: C.image,
+                className: x.image,
             }),
             onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, l.skuId),
             markAsDismissed: i,
-            buttonCTA: j.intl.string(j.t.RzWDqa),
+            buttonCTA: v.intl.string(v.t.RzWDqa),
         });
     let a = n.find((e) => O.NL.has(e.skuId));
     return null != a
         ? (0, r.jsx)(Z, {
-              header: j.intl.string(v.default["kA2c+v"]),
-              content: j.intl.string(v.default.TUilLi),
+              header: v.intl.string(j.default["kA2c+v"]),
+              content: v.intl.string(j.default.TUilLi),
               asset: (0, r.jsx)("img", {
                   alt: "",
                   src: E.Z,
-                  className: C.image,
+                  className: x.image,
               }),
               onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, a.skuId),
               markAsDismissed: i,
-              buttonCTA: j.intl.string(j.t.RzWDqa),
+              buttonCTA: v.intl.string(v.t.RzWDqa),
           })
         : null;
 }
@@ -155,7 +155,7 @@ function Z(e) {
             return i;
         })(e, ["asset", "header", "content", "caretPosition", "markAsDismissed"]);
     let d = null != o ? o : p.DF.LEFT_TOP,
-        f = d === p.DF.TOP_CENTER || d === p.DF.LEFT_TOP ? C[d] : "";
+        h = d === p.DF.TOP_CENTER || d === p.DF.LEFT_TOP ? x[d] : "";
     return (0, r.jsx)(
         p.ZP,
         (function (e) {
@@ -185,12 +185,12 @@ function Z(e) {
         })(
             {
                 asset: (0, r.jsxs)("div", {
-                    className: C.imageContainer,
+                    className: x.imageContainer,
                     children: [
                         t,
                         (0, r.jsx)(c.olH, {
-                            className: C.close,
-                            onClick: () => (null == s ? void 0 : s(y.L.USER_DISMISS)),
+                            className: x.close,
+                            onClick: () => (null == s ? void 0 : s(_.L.USER_DISMISS)),
                         }),
                     ],
                 }),
@@ -203,9 +203,9 @@ function Z(e) {
                     color: "text-muted",
                     children: i,
                 }),
-                className: l()(C.container, f),
-                headerClassName: C.header,
-                contentClassName: C.header,
+                className: l()(x.container, h),
+                headerClassName: x.header,
+                contentClassName: x.header,
                 caretPosition: d,
                 markAsDismissed: s,
             },

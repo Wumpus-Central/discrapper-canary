@@ -13,18 +13,18 @@ var r = n(951288),
     u = n(481060),
     d = n(666188),
     p = n(340541),
-    f = n(159300),
-    h = n(553984),
+    h = n(159300),
+    f = n(553984),
     g = n(210887),
     m = n(695346),
     b = n(496675),
     O = n(768581),
-    _ = n(598056),
-    y = n(358555),
-    v = n(981631),
-    j = n(647086),
-    C = n(388032),
-    x = n(869786);
+    y = n(598056),
+    _ = n(358555),
+    j = n(981631),
+    v = n(647086),
+    x = n(388032),
+    C = n(869786);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,21 +68,21 @@ function S(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     var t;
     let { guild: n, controller: i, guildBanner: l, animate: c } = e,
         { value: u } = i.springs;
     return (0, r.jsx)(a.animated.div, {
-        className: x.animatedContainer,
+        className: C.animatedContainer,
         style: {
             opacity: u,
             transform: u.to((e) => "translateY(-".concat((1 - e) * 90, "px)")),
         },
         children: (0, r.jsx)(a.animated.div, {
-            className: o()(x.bannerImage, { [x.bannerImgFullWidth]: s.tq }),
+            className: o()(C.bannerImage, { [C.bannerImgFullWidth]: s.tq }),
             style: { transform: u.to((e) => "translateY(".concat((1 - e) * 90, "px)")) },
             children: (0, r.jsx)("img", {
-                className: o()(x.bannerImg, { [x.bannerImgFullWidth]: s.tq }),
+                className: o()(C.bannerImg, { [C.bannerImgFullWidth]: s.tq }),
                 src:
                     null !=
                     (t = O.ZP.getGuildBannerURL(
@@ -100,33 +100,33 @@ function I(e) {
         }),
     });
 }
-function P(e) {
+function I(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: s } = n.springs,
-        c = t.features.has(v.oNc.DISCOVERABLE),
+        c = t.features.has(j.oNc.DISCOVERABLE),
         d = (0, r.jsx)("div", {
-            className: x.communityInfo,
+            className: C.communityInfo,
             children:
                 c &&
                 (0, r.jsx)(u.ua7, {
-                    text: C.intl.string(C.t.O8lDIy),
+                    text: x.intl.string(x.t.O8lDIy),
                     position: "right",
                     children: (e) =>
                         (0, r.jsxs)(
                             "div",
-                            S(E({ className: x.communityInfoPill }, e), {
+                            S(E({ className: C.communityInfoPill }, e), {
                                 children: [
                                     (0, r.jsx)(u.enf, {
                                         size: "custom",
                                         color: "currentColor",
                                         width: 12,
                                         height: 12,
-                                        className: x.communityIcon,
+                                        className: C.communityIcon,
                                     }),
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-xs/normal",
                                         color: "none",
-                                        children: C.intl.string(C.t["B/vjCg"]),
+                                        children: x.intl.string(x.t["B/vjCg"]),
                                     }),
                                 ],
                             }),
@@ -135,11 +135,11 @@ function P(e) {
         });
     return l
         ? (0, r.jsx)("div", {
-              className: o()(x.communityInfoContainer, x.hasSubheader),
+              className: o()(C.communityInfoContainer, C.hasSubheader),
               children: d,
           })
         : (0, r.jsx)(a.animated.div, {
-              className: x.communityInfoContainer,
+              className: C.communityInfoContainer,
               style: i ? { opacity: s } : { height: s.to((e) => "".concat(20 * e, "px")) },
               children: d,
           });
@@ -148,7 +148,7 @@ function N() {
     return (0, r.jsx)(u.r7p, {
         size: "custom",
         color: "currentColor",
-        className: x.favoritesIcon,
+        className: C.favoritesIcon,
         height: 20,
         width: 20,
     });
@@ -166,7 +166,7 @@ function Z(e) {
     return (0, r.jsx)(u.X6q, {
         variant: "text-md/semibold",
         lineClamp: 1,
-        className: x.name,
+        className: C.name,
         children: t.name,
     });
 }
@@ -184,15 +184,15 @@ function T(e) {
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(_.Z, {
                 guild: i,
                 isBannerVisible: n,
             }),
-            i.id === j._ && (0, r.jsx)(N, {}),
+            i.id === v._ && (0, r.jsx)(N, {}),
             (0, r.jsx)(Z, { guild: i }),
             null != l &&
                 (0, r.jsx)(u.P3F, {
-                    className: x.headerButton,
+                    className: C.headerButton,
                     onClick: l,
                     onContextMenu: o,
                     "aria-controls": a,
@@ -201,18 +201,18 @@ function T(e) {
                         ringTarget: c,
                         offset: 4,
                     },
-                    "aria-label": C.intl.formatToPlainString(C.t.xMXpl5, {
+                    "aria-label": x.intl.formatToPlainString(x.t.xMXpl5, {
                         guildName: null != (t = null == i ? void 0 : i.name) ? t : "",
                     }),
                 }),
             (0, r.jsx)("div", {
-                className: x.headerChildren,
+                className: C.headerChildren,
                 children: d,
             }),
         ],
     });
 }
-let A = [j._, v.STv];
+let A = [v._, j.STv];
 function R(e) {
     let { bannerVisible: t, guild: l, onClick: o, onContextMenu: a, children: s } = e,
         d = i.useRef(null),
@@ -234,8 +234,8 @@ function R(e) {
                 });
             };
         }, [l, p]),
-        O = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, l)),
-        _ = i.useCallback(() => {
+        O = (0, c.e7)([b.Z], () => (0, h.b)(b.Z, l)),
+        y = i.useCallback(() => {
             O
                 ? (0, u.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
@@ -244,7 +244,7 @@ function R(e) {
                               e,
                               S(E({}, t), {
                                   guild: l,
-                                  source: v.t4x.GUILD_HEADER,
+                                  source: j.t4x.GUILD_HEADER,
                               }),
                           );
                   })
@@ -270,8 +270,8 @@ function R(e) {
                             E(
                                 {
                                     innerRef: d,
-                                    className: x.guildDropdown,
-                                    "aria-label": C.intl.formatToPlainString(C.t.xMXpl5, {
+                                    className: C.guildDropdown,
+                                    "aria-label": x.intl.formatToPlainString(x.t.xMXpl5, {
                                         guildName: null != (n = null == l ? void 0 : l.name) ? n : "",
                                     }),
                                     onContextMenu: a,
@@ -285,18 +285,18 @@ function R(e) {
                                 },
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: x.guildBadgeAndName,
+                                        className: C.guildBadgeAndName,
                                         children: [
-                                            (0, r.jsx)(y.Z, {
+                                            (0, r.jsx)(_.Z, {
                                                 guild: l,
                                                 isBannerVisible: t,
                                             }),
-                                            l.id === j._ && (0, r.jsx)(N, {}),
+                                            l.id === v._ && (0, r.jsx)(N, {}),
                                             (0, r.jsx)(Z, { guild: l }),
                                         ],
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: x.headerChildren,
+                                        className: C.headerChildren,
                                         children: s,
                                     }),
                                 ],
@@ -307,15 +307,15 @@ function R(e) {
             }),
             !A.includes(l.id) &&
                 (0, r.jsx)(u.ua7, {
-                    text: C.intl.string(C.t.Sd8Ix8),
+                    text: x.intl.string(x.t.Sd8Ix8),
                     position: "bottom",
                     children: (e) =>
                         (0, r.jsx)(
                             u.P3F,
-                            S(E({ className: x.inviteButton }, e), {
+                            S(E({ className: C.inviteButton }, e), {
                                 onClick: () => {
                                     var t;
-                                    null == (t = e.onClick) || t.call(e), _();
+                                    null == (t = e.onClick) || t.call(e), y();
                                 },
                                 children: (0, r.jsx)(u.ejJ, {
                                     size: "refresh_sm",
@@ -324,7 +324,7 @@ function R(e) {
                             }),
                         ),
                 }),
-            l.id === v.STv && (0, r.jsx)(h.p, {}),
+            l.id === j.STv && (0, r.jsx)(f.p, {}),
         ],
     });
 }
@@ -335,25 +335,25 @@ let D = i.memo(function (e) {
             controller: l,
             className: a,
             onClick: c,
-            onContextMenu: f,
-            onMouseDown: h,
+            onContextMenu: h,
+            onMouseDown: f,
             disableBannerAnimation: g,
             "aria-expanded": b,
-            "aria-controls": y,
-            guild: j,
-            guildBanner: C,
+            "aria-controls": _,
+            guild: v,
+            guildBanner: x,
             animationOverlayHeight: N,
             children: w,
             headerClassName: Z,
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
-        L = j.features.has(v.oNc.ANIMATED_BANNER),
-        k = (0, d.Z)(j),
-        U = !k && (0, _.Z)(j),
+        L = v.features.has(j.oNc.ANIMATED_BANNER),
+        k = (0, d.Z)(v),
+        U = !k && (0, y.Z)(v),
         G = !k && A,
-        B = (0, O.xR)(C) && L && !g,
-        [V, F] = i.useState(!1),
+        B = (0, O.xR)(x) && L && !g,
+        [F, V] = i.useState(!1),
         H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
@@ -362,9 +362,9 @@ let D = i.memo(function (e) {
     i.useEffect(() => {
         if (B && n && !H.current && Y)
             return (
-                F(!0),
+                V(!0),
                 (K.current = setTimeout(() => {
-                    F(!1);
+                    V(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -381,15 +381,15 @@ let D = i.memo(function (e) {
         { entrypoints: X } = (0, p._k)({ location: "guild_header" }),
         Q = {
             bannerVisible: n,
-            guild: j,
+            guild: v,
             onClick: c,
-            onContextMenu: f,
-            ariaControls: y,
+            onContextMenu: h,
+            ariaControls: _,
             ariaExpanded: b,
             guildHeaderRef: W,
         };
     return (0, r.jsx)(u.f6W, {
-        theme: n ? v.BRd.DARK : void 0,
+        theme: n ? j.BRd.DARK : void 0,
         children: (e) =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -398,43 +398,43 @@ let D = i.memo(function (e) {
                         "data-banner-visible": n,
                         ref: W,
                         className: o()(a, {
-                            [x.container]: !0,
-                            [x.clickable]: !X && null != c,
-                            [x.selected]: !X && null != c && b,
-                            [x.hasBanner]: q(),
-                            [x.bannerVisible]: n,
+                            [C.container]: !0,
+                            [C.clickable]: !X && null != c,
+                            [C.selected]: !X && null != c && b,
+                            [C.hasBanner]: q(),
+                            [C.bannerVisible]: n,
                             [e]: !1,
-                            [x.communityInfoVisible]: G || (D && U),
-                            [x.invitesRefresh]: X,
+                            [C.communityInfoVisible]: G || (D && U),
+                            [C.invitesRefresh]: X,
                         }),
-                        onMouseDown: h,
+                        onMouseDown: f,
                         onClick: X ? void 0 : c,
-                        onContextMenu: f,
+                        onContextMenu: h,
                         children: [
                             (0, r.jsxs)("header", {
-                                className: o()(x.header, Z, { [x.themedHeaderMobile]: s.tq }),
+                                className: o()(C.header, Z, { [C.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: o()(x.headerContent, x.primaryInfo),
+                                        className: o()(C.headerContent, C.primaryInfo),
                                         children: X
                                             ? (0, r.jsx)(R, S(E({}, Q), { children: w }))
                                             : (0, r.jsx)(T, S(E({}, Q), { children: w })),
                                     }),
                                     U &&
-                                        (0, r.jsx)(P, {
-                                            guild: j,
+                                        (0, r.jsx)(I, {
+                                            guild: v,
                                             controller: l,
-                                            hasBanner: null != C,
+                                            hasBanner: null != x,
                                             hasSubheader: null != D && D,
                                         }),
                                 ],
                             }),
-                            null != C
-                                ? (0, r.jsx)(I, {
-                                      guild: j,
+                            null != x
+                                ? (0, r.jsx)(P, {
+                                      guild: v,
                                       controller: l,
-                                      guildBanner: C,
-                                      animate: V,
+                                      guildBanner: x,
+                                      animate: F,
                                   })
                                 : null,
                             (0, r.jsx)(M, { controller: l }),
@@ -442,11 +442,11 @@ let D = i.memo(function (e) {
                     }),
                     B && q()
                         ? (0, r.jsx)("div", {
-                              className: x.animatedBannerHoverLayer,
+                              className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  F(!0), clearTimeout(K.current);
+                                  V(!0), clearTimeout(K.current);
                               },
-                              onMouseLeave: () => F(!1),
+                              onMouseLeave: () => V(!1),
                               style: { height: N },
                           })
                         : null,
@@ -461,15 +461,15 @@ function M(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.animated.div, {
-                className: x.headerEllipseBackdrop,
+                className: C.headerEllipseBackdrop,
                 style: { opacity: i.to((e) => 0.5 * e) },
             }),
             (0, r.jsx)(a.animated.div, {
-                className: x.headerEllipseForeground,
+                className: C.headerEllipseForeground,
                 style: { opacity: i.to((e) => e) },
             }),
             (0, r.jsx)(a.animated.div, {
-                className: x.headerGlass,
+                className: C.headerGlass,
                 style: {
                     opacity: i.to((e) => (1 - e) * 6),
                     filter: (0, u.apv)(n) ? i.to((e) => "brightness(".concat(0.75 + 0.25 * e, ")")) : void 0,

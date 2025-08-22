@@ -10,8 +10,8 @@ var i = n(91192),
     u = n(682662),
     d = n(662146),
     p = n(981631),
-    f = n(388032),
-    h = n(419619);
+    h = n(388032),
+    f = n(419619);
 function g() {
     var e, t;
     let n = (0, l.e7)([s.Z, c.Z], () => s.Z.unavailableGuilds.filter((e) => null == c.Z.getGuild(e)).length),
@@ -20,7 +20,7 @@ function g() {
         ? null
         : (0, r.jsx)(u.H, {
               children: (0, r.jsx)(d.Z, {
-                  text: f.intl.format(f.t["TnH05+"], { count: n }),
+                  text: h.intl.format(h.t["TnH05+"], { count: n }),
                   color: o.ua7.Colors.RED,
                   children: (0, r.jsx)(
                       o.eee,
@@ -52,8 +52,8 @@ function g() {
                           {
                               href: (0, a.Z)(p.RK.TWITTER),
                               target: "_blank",
-                              className: h.guildsError,
-                              "aria-label": f.intl.formatToPlainString(f.t["MEpX+/"], { count: n }),
+                              className: f.guildsError,
+                              "aria-label": h.intl.formatToPlainString(h.t["MEpX+/"], { count: n }),
                           },
                           g,
                       )),

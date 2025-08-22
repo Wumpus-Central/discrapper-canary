@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(524444),
     z = n(977391),
     W = n(921235),
-    Y = n(97352),
-    q = n(226027),
+    q = n(97352),
+    Y = n(226027),
     K = n(959517),
     X = n(981631),
     Q = n(134612),
@@ -157,7 +157,7 @@ function en(e) {
         ej = f.isForumPost() && !eg ? (0, r.jsx)(g.Z, { postId: f.id }) : null,
         eE = (0, _.Z)(f.id),
         eS = (0, y.nw)(f);
-    (0, Y.Z)();
+    (0, q.Z)();
     let eI = null,
         eP = [],
         eZ = el.map((e, t) => {
@@ -313,7 +313,7 @@ function en(e) {
             (T.ZP.isEstimated(f.id)
                 ? ((e = o ? J.t.wvtbbG : J.t.tHqbtr), (t = J.t.vaPWFR))
                 : ((e = o ? J.t.BctFHx : J.t["3wXb9P"]), (t = J.t["4H8ldH"])),
-            eb && (0, c.tW)(f) && ev.includes(q.E.SUMMARIES))
+            eb && (0, c.tW)(f) && ev.includes(Y.E.SUMMARIES))
         ) {
             let n = T.ZP.ackMessageId(f.id),
                 o = (0, I.q)(f.id, T.ZP.getOldestUnreadMessageId(f.id));
@@ -412,7 +412,7 @@ function en(e) {
                 }
             }
         } else
-            ev.includes(q.E.NEW_MESSAGES) &&
+            ev.includes(Y.E.NEW_MESSAGES) &&
                 (i = (0, r.jsx)(V.LE, {
                     content: J.intl.format(e, {
                         count: en,
@@ -425,7 +425,7 @@ function en(e) {
         (null == i &&
             (0, c.Lp)(f) &&
             e_ &&
-            ev.includes(q.E.SUMMARIES) &&
+            ev.includes(Y.E.SUMMARIES) &&
             (i = (0, r.jsx)(V.BO, {
                 channel: f,
                 scrollManager: eo,

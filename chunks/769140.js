@@ -168,7 +168,8 @@ function Z(e) {
                               maxUsers: w.W,
                               size: s.EFr.SIZE_16,
                               onClickOverflow: (e) => {
-                                  e.stopPropagation(), null == X || X({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                  null == e || e.stopPropagation(),
+                                      null == X || X({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,

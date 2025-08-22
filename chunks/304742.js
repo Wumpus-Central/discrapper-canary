@@ -1,17 +1,17 @@
-r.d(t, { Z: () => p });
-var n = r(951288),
-    l = r(647438),
-    a = r(120356),
-    i = r.n(a),
-    o = r(481060),
-    s = r(642909),
-    c = r(215023),
-    u = r(388032),
-    d = r(345213);
-function p(e) {
-    let { handleTransition: t, onClose: r } = e,
-        a = (0, s.G)("CollectiblesIndexPageContextMenu"),
-        p = l.useMemo(
+n.d(t, { Z: () => g });
+var r = n(951288),
+    l = n(647438),
+    a = n(120356),
+    s = n.n(a),
+    i = n(481060),
+    o = n(642909),
+    c = n(215023),
+    u = n(388032),
+    d = n(345213);
+function g(e) {
+    let { handleTransition: t, onClose: n } = e,
+        a = (0, o.G)("CollectiblesIndexPageContextMenu"),
+        g = l.useMemo(
             () => [
                 {
                     label: u.intl.string(u.t.dRZYND),
@@ -36,17 +36,17 @@ function p(e) {
             ],
             [],
         );
-    return (0, n.jsx)("div", {
-        className: i()({ [d.shopTakeOver]: a }),
-        children: (0, n.jsx)(o.v2r, {
+    return (0, r.jsx)("div", {
+        className: s()({ [d.shopTakeOver]: a }),
+        children: (0, r.jsx)(i.v2r, {
             navId: "collectibles-index-page-menu",
-            className: i()({ [d.shopTakeOver]: a }),
-            onClose: r,
+            className: s()({ [d.shopTakeOver]: a }),
+            onClose: n,
             "aria-label": u.intl.string(u.t.xFcotb),
             onSelect: () => {},
-            children: p.map((e) =>
-                (0, n.jsx)(
-                    o.sNh,
+            children: g.map((e) =>
+                (0, r.jsx)(
+                    i.sNh,
                     {
                         id: e.value,
                         label: e.label,

@@ -58,13 +58,13 @@ function p(e) {
             displayProfile: d,
             guildId: u,
             channelId: p,
-            items: b,
-            initialSection: x,
+            items: x,
+            initialSection: b,
             initialSubsection: g,
             onClose: h,
         } = e,
         { trackUserProfileAction: j } = (0, i.KZ)(),
-        [{ section: v, subsection: _, text: y }, I] = o.useState(
+        [{ section: v, subsection: _, text: y }, O] = o.useState(
             ((t = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
@@ -92,12 +92,12 @@ function p(e) {
             })(
                 {},
                 null !=
-                    (n = b.find((e) => {
+                    (n = x.find((e) => {
                         let { section: n } = e;
-                        return n === x;
+                        return n === b;
                     }))
                     ? n
-                    : b[0],
+                    : x[0],
             )),
             (c = c = { subsection: g }),
             Object.getOwnPropertyDescriptors
@@ -131,12 +131,12 @@ function p(e) {
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            I((n) => {
+                            O((n) => {
                                 var t;
-                                return null != (t = b.find((n) => n.section === e)) ? t : n;
+                                return null != (t = x.find((n) => n.section === e)) ? t : n;
                             });
                     },
-                    children: b.map((e) =>
+                    children: x.map((e) =>
                         (0, r.jsx)(
                             l.njP.Item,
                             {

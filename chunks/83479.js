@@ -1,20 +1,30 @@
-n.d(t, { G: () => u }), n(388685);
+n.d(t, { G: () => u }), n(539854), n(704826), n(35282);
 var r = n(647438),
     i = n(979554),
     l = n(215023),
     a = n(388032);
 let o = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (t) {
-            var n;
+        var t, n, r, l;
+        let o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (o)
             return a.intl.formatToPlainString(a.t["/0Yndn"], {
-                num: null == (n = e.bundledProducts) ? void 0 : n.length,
+                num: null == (t = e.bundledProducts) ? void 0 : t.length,
             });
+        let s = null != (n = e.bundledProducts) ? n : [],
+            c = s.find((e) => e.type === i.Z.AVATAR_DECORATION),
+            u = s.find((e) => e.type === i.Z.PROFILE_EFFECT),
+            d = s.find((e) => e.type === i.Z.NAMEPLATE);
+        if (null != d) {
+            let e = [];
+            null != c && e.push(a.intl.formatToPlainString(a.t.Ntv9Ji, { itemName: c.name })),
+                null != u && e.push(a.intl.formatToPlainString(a.t["3Y8q7e"], { itemName: u.name })),
+                null != d && e.push(a.intl.formatToPlainString(a.t["2keXk5"], { itemName: d.name }));
+            let t = e.join(", ").replace(/, ([^,]*)$/, " & $1");
+            return a.intl.formatToPlainString(a.t.Ofrqj4, { joinedItems: t });
         }
-        let [r, i] = null != e.bundledProducts ? e.bundledProducts : [];
-        return a.intl.formatToPlainString(a.t.WQbNhI, {
-            decoName: r.name,
-            pfxName: i.name,
+        return a.intl.formatToPlainString(a.t.BS1Cu7, {
+            decoName: null != (r = null == c ? void 0 : c.name) ? r : "",
+            pfxName: null != (l = null == u ? void 0 : u.name) ? l : "",
         });
     },
     s = function (e) {

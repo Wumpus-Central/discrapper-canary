@@ -9,22 +9,22 @@ var r = n(951288),
     u = n(493683),
     d = n(239091),
     p = n(111028),
-    f = n(569471),
-    h = n(488131),
+    h = n(569471),
+    f = n(488131),
     g = n(592125),
     m = n(306680),
     b = n(979651),
     O = n(938475),
-    _ = n(714794),
-    y = n(876548),
-    v = n(25601),
-    j = n(207055),
-    C = n(981631),
-    x = n(124368),
+    y = n(714794),
+    _ = n(876548),
+    j = n(25601),
+    v = n(207055),
+    x = n(981631),
+    C = n(124368),
     E = n(388032),
     S = n(55940),
-    I = n(509612),
-    P = n(113914);
+    P = n(509612),
+    I = n(113914);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function w(e, t) {
 function Z(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
-            className: o()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: i }),
+            className: o()(I.spine, { [I.spineWithGuildIcon]: n }, { [I.invertedSpine]: i }),
             style: t,
         },
         { density: a } = (0, c.TCT)();
@@ -142,7 +142,7 @@ function Z(e) {
     }
 }
 let T = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: P, isLast: T, withGuildIcon: A } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: I, isLast: T, withGuildIcon: A } = e,
         R = (0, s.e7)([O.ZP], () => O.ZP.getVoiceStatesForChannel(t), [t]),
         D = (0, s.e7)([b.Z], () => b.Z.hasVideo(t.id)),
         {
@@ -154,17 +154,17 @@ let T = i.memo(function (e) {
             mentionCount: m.ZP.getMentionCount(t.id),
             isMentionLowImportance: m.ZP.getIsMentionLowImportance(t.id),
         })),
-        U = (0, s.e7)([f.Z], () => f.Z.isMuted(t.id)),
+        U = (0, s.e7)([h.Z], () => h.Z.isMuted(t.id)),
         G = i.useCallback(
             (e) => {
-                (0, h.ok)(t, !e.shiftKey, x.on.CHANNEL_LIST);
+                (0, f.ok)(t, !e.shiftKey, C.on.CHANNEL_LIST);
             },
             [t],
         ),
         B = i.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        V = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 let i = g.Z.getChannel(t.id);
                 null != i &&
@@ -175,7 +175,7 @@ let T = i.memo(function (e) {
             },
             [t.id],
         ),
-        F = null == R ? 0 : R.length,
+        V = null == R ? 0 : R.length,
         H = (0, a.JA)(t.id),
         { role: z } = H,
         W = (function (e, t) {
@@ -230,44 +230,44 @@ let T = i.memo(function (e) {
                     right: 4,
                 },
                 children: (0, r.jsxs)("div", {
-                    className: o()(S.iconVisibility, I.wrapper, I.typeThread, {
-                        [I.modeSelected]: l,
-                        [I.modeMuted]: !l && U,
-                        [I.modeUnreadImportant]: !U && !l && M,
-                        [I.withGuildIcon]: A,
+                    className: o()(S.iconVisibility, P.wrapper, P.typeThread, {
+                        [P.modeSelected]: l,
+                        [P.modeMuted]: !l && U,
+                        [P.modeUnreadImportant]: !U && !l && M,
+                        [P.withGuildIcon]: A,
                     }),
                     onMouseDown: B,
-                    onContextMenu: V,
+                    onContextMenu: F,
                     children: [
-                        !M || U || l ? null : (0, r.jsx)("div", { className: o()(I.unread, I.unreadImportant) }),
+                        !M || U || l ? null : (0, r.jsx)("div", { className: o()(P.unread, P.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
                             w(N({}, W), {
                                 innerRef: K,
-                                className: I.link,
+                                className: P.link,
                                 onClick: G,
                                 "aria-label": Y,
                                 focusProps: { enabled: !1 },
                                 children: (0, r.jsxs)("div", {
-                                    className: o()(I.linkTop, I.__invalid_threadMainContent),
+                                    className: o()(P.linkTop, P.__invalid_threadMainContent),
                                     children: [
                                         (0, r.jsx)(p.Z, {
-                                            className: I.name,
+                                            className: P.name,
                                             "aria-hidden": !0,
                                             children: t.name,
                                         }),
                                         (0, r.jsxs)("div", {
-                                            className: I.children,
+                                            className: P.children,
                                             children: [
-                                                F > 0 && t.userLimit > 0
-                                                    ? (0, r.jsx)(y.Z, {
-                                                          userCount: F,
+                                                V > 0 && t.userLimit > 0
+                                                    ? (0, r.jsx)(_.Z, {
+                                                          userCount: V,
                                                           video: D,
                                                           channel: t,
                                                       })
                                                     : null,
-                                                (0, _.Z)(L)
-                                                    ? (0, r.jsx)(v.Z, {
+                                                (0, y.Z)(L)
+                                                    ? (0, r.jsx)(j.Z, {
                                                           mentionsCount: L,
                                                           isMentionLowImportance: k,
                                                       })
@@ -281,12 +281,12 @@ let T = i.memo(function (e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(v.Z, {
                 channel: t,
-                collapsed: !P,
+                collapsed: !I,
                 collapsedMax: 6,
                 voiceStates: R,
-                location: C.Sbl.GUILD_CHANNEL_LIST,
+                location: x.Sbl.GUILD_CHANNEL_LIST,
             }),
         ],
     });

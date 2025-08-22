@@ -8,49 +8,46 @@ var i = n(442837),
     l = n(369566),
     c = n(29899),
     u = n(151545),
-    d = n(493043),
+    d = n(769140),
     f = n(864141),
     _ = n(231338);
 function p(e) {
-    let { user: t, currentUser: n, displayProfile: p, guildId: h, className: m, onClose: g } = e,
-        { live: E, stream: b } = (0, l.Z)(t.id),
-        [y] = E,
-        { voiceChannel: O } = (0, c.Z)({
+    let { user: t, currentUser: n, guildId: p, className: h, onClose: m } = e,
+        { live: g, stream: E } = (0, l.Z)(t.id),
+        [b] = g,
+        { voiceChannel: y } = (0, c.Z)({
             userId: t.id,
-            guildId: h,
+            guildId: p,
         }),
-        v = t.id === n.id,
-        I = (0, i.e7)([s.Z, o.Z], () => {
-            let e = v ? s.Z.getStatus() : o.Z.getStatus(t.id, h);
+        O = t.id === n.id,
+        v = (0, i.e7)([s.Z, o.Z], () => {
+            let e = O ? s.Z.getStatus() : o.Z.getStatus(t.id, p);
             return e === _.Sk.OFFLINE || e === _.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: T } = (0, a.U)({ location: "UserProfileFeaturedActivity" });
-    return I || null == b
-        ? I || null == y
-            ? T && !I && null != O
+        { voiceActivityStatusEnabled: I } = (0, a.U)({ location: "UserProfileFeaturedActivity" });
+    return v || null == E
+        ? v || null == b
+            ? I && !v && null != y
                 ? (0, r.jsx)(f.Z, {
                       user: t,
                       currentUser: n,
-                      voiceChannel: O,
-                      className: m,
-                      onClose: g,
+                      voiceChannel: y,
+                      className: h,
+                      onClose: m,
                   })
                 : null
             : (0, r.jsx)(u.Z, {
                   user: t,
                   currentUser: n,
-                  activity: y,
-                  profileGuildId: null == p ? void 0 : p.guildId,
-                  className: m,
-                  onClose: g,
+                  activity: b,
+                  className: h,
+                  onClose: m,
               })
         : (0, r.jsx)(d.Z, {
-              location: "UserProfileFeaturedActivity",
               user: t,
               currentUser: n,
-              stream: b,
-              profileGuildId: null == p ? void 0 : p.guildId,
-              className: m,
-              onClose: g,
+              stream: E,
+              className: h,
+              onClose: m,
           });
 }

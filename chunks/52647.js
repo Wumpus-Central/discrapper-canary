@@ -40,7 +40,7 @@ let d = () => {
         }, [d, f, n]),
         { handleResetStatusClick: p } = (0, l.kJ)(u.V6);
     return {
-        resetOnboardingAnnouncementModal: _,
+        resetOnboardingExperience: _,
         resetQuestStatus: p,
     };
 };

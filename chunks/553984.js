@@ -9,8 +9,8 @@ var r = n(951288),
     u = n(370774),
     d = n(334426),
     p = n(982183),
-    f = n(388032),
-    h = n(567843);
+    h = n(388032),
+    f = n(567843);
 function g(e) {
     let { className: t } = e,
         n = (0, s.fJ)(),
@@ -28,10 +28,10 @@ function g(e) {
                     viewId: n,
                 });
         },
-        _ = g === p.V5.ALL ? f.intl.string(f.t["2pAkDA"]) : f.intl.string(f.t.HcoRu7);
+        y = g === p.V5.ALL ? h.intl.string(h.t["2pAkDA"]) : h.intl.string(h.t.HcoRu7);
     return (0, r.jsx)(o.ua7, {
         position: "bottom",
-        text: _,
+        text: y,
         children: (e) => {
             var n, i;
             return (0, r.jsx)(
@@ -63,8 +63,8 @@ function g(e) {
                 })({}, e)),
                 (i = i =
                     {
-                        className: l()(t, h.headerButton, { [h.enabled]: g === p.V5.BOOKMARKS }),
-                        "aria-label": _,
+                        className: l()(t, f.headerButton, { [f.enabled]: g === p.V5.BOOKMARKS }),
+                        "aria-label": y,
                         onClick: O,
                         children:
                             g === p.V5.BOOKMARKS

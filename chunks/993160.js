@@ -1,4 +1,4 @@
-t.d(n, { Z: () => b });
+t.d(n, { Z: () => x });
 var r = t(951288);
 t(647438);
 var o = t(755721),
@@ -12,22 +12,22 @@ var o = t(755721),
     f = t(821706),
     m = t(562831),
     p = t(981631);
-function b(e) {
-    let { user: n, currentUser: t, guildId: b, channelId: x, displayProfile: g, relationshipType: h, onClose: j } = e,
+function x(e) {
+    let { user: n, currentUser: t, guildId: x, channelId: b, displayProfile: g, relationshipType: h, onClose: j } = e,
         { newestAnalyticsLocation: v } = (0, i.ZP)(),
         _ = (0, c.Z)({
             user: n,
-            guildId: b,
-            channelId: x,
+            guildId: x,
+            channelId: b,
             displayProfile: g,
             onClose: j,
         }),
         {
             gameFriends: y,
-            hasOutgoingPendingGameFriends: I,
-            hasIncomingPendingGameFriends: O,
+            hasOutgoingPendingGameFriends: O,
+            hasIncomingPendingGameFriends: I,
         } = (0, m.H)({ userId: n.id }),
-        Z = y.length > 0 || I || O;
+        Z = y.length > 0 || O || I;
     return h === p.OGo.BLOCKED
         ? null
         : n.id === t.id
@@ -35,14 +35,14 @@ function b(e) {
                 children: [
                     (0, r.jsx)(a.Z, {
                         user: n,
-                        guildId: b,
+                        guildId: x,
                         onClose: j,
                     }),
                     (0, r.jsx)(u.Z, { onClose: j }),
                     (0, r.jsx)(d.Z, {
                         type: "icon",
                         user: n,
-                        guildId: b,
+                        guildId: x,
                         viewProfileItem: _,
                         themeColor: "secondary",
                     }),
@@ -60,7 +60,7 @@ function b(e) {
                       (0, r.jsx)(d.Z, {
                           type: "icon",
                           user: n,
-                          guildId: b,
+                          guildId: x,
                           viewProfileItem: _,
                           themeColor: "secondary",
                       }),
@@ -79,7 +79,7 @@ function b(e) {
                         (0, r.jsx)(d.Z, {
                             type: "icon",
                             user: n,
-                            guildId: b,
+                            guildId: x,
                             themeColor: "secondary",
                         }),
                     ],
@@ -105,7 +105,7 @@ function b(e) {
                           (0, r.jsx)(d.Z, {
                               type: "icon",
                               user: n,
-                              guildId: b,
+                              guildId: x,
                               viewProfileItem: _,
                               themeColor: "secondary",
                           }),
@@ -129,13 +129,13 @@ function b(e) {
                                 tooltipPosition: "top",
                                 tooltipAlign: "center",
                                 shouldShowTooltip: !0,
-                                hasIncomingPendingGameFriends: O,
-                                hasOutgoingPendingGameFriends: I,
+                                hasIncomingPendingGameFriends: I,
+                                hasOutgoingPendingGameFriends: O,
                             }),
                             (0, r.jsx)(d.Z, {
                                 type: "icon",
                                 user: n,
-                                guildId: b,
+                                guildId: x,
                                 viewProfileItem: _,
                                 themeColor: "secondary",
                             }),
@@ -159,7 +159,7 @@ function b(e) {
                             (0, r.jsx)(d.Z, {
                                 type: "icon",
                                 user: n,
-                                guildId: b,
+                                guildId: x,
                                 viewProfileItem: _,
                                 themeColor: "secondary",
                             }),

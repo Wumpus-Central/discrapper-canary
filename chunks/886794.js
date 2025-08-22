@@ -11,21 +11,21 @@ var r = t(951288),
     f = t(785717),
     m = t(687158),
     p = t(899007),
-    b = t(648052),
-    x = t(867176),
+    x = t(648052),
+    b = t(867176),
     g = t(280885),
     h = t(900927),
     j = t(678738),
     v = t(502762),
     _ = t(530),
     y = t(679332),
-    I = t(544989),
-    O = t(228168),
+    O = t(544989),
+    I = t(228168),
     Z = t(981631),
     P = t(671955),
     T = t(388032),
-    A = t(673517),
-    N = t(54966),
+    N = t(673517),
+    A = t(54966),
     C = t(602727);
 function E(e) {
     var n;
@@ -43,10 +43,10 @@ function E(e) {
         } = e,
         k = E === Z.ME ? void 0 : E,
         G = (0, m.ZP)(t.id, k),
-        V = u.ZP.getName(k, S, t),
-        F = (0, s.Dt)(),
-        { analyticsLocations: Y } = (0, a.ZP)([...M, c.Z.USER_PROFILE_MODAL]),
-        z = (0, f.ZB)({
+        F = u.ZP.getName(k, S, t),
+        V = (0, s.Dt)(),
+        { analyticsLocations: W } = (0, a.ZP)([...M, c.Z.USER_PROFILE_MODAL]),
+        Y = (0, f.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: D,
@@ -55,12 +55,12 @@ function E(e) {
             messageId: w,
             roleId: B,
         }),
-        W = o.useRef(null),
-        K = (0, i.Z)(W);
+        z = o.useRef(null),
+        K = (0, i.Z)(z);
     return (0, r.jsx)(a.Gt, {
-        value: Y,
+        value: W,
         children: (0, r.jsx)(f.Mt, {
-            value: z,
+            value: Y,
             openedAt: R,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
@@ -68,34 +68,34 @@ function E(e) {
             children: (0, r.jsxs)(l.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: L,
-                className: A.root,
+                className: N.root,
                 hideShadow: !0,
-                "aria-labelledby": F,
+                "aria-labelledby": V,
                 parentComponent: "NonUserBotProfileModal",
                 children: [
                     (0, r.jsx)(l.y5t, {
                         component: (0, r.jsx)(l.nn4, {
                             children: (0, r.jsx)(l.H, {
-                                id: F,
-                                children: T.intl.format(T.t.KRe1Fh, { name: V }),
+                                id: V,
+                                children: T.intl.format(T.t.KRe1Fh, { name: F }),
                             }),
                         }),
                         children: (0, r.jsxs)(v.Z, {
                             user: t,
                             displayProfile: G,
                             themeType: P.l.MODAL,
-                            ref: (null == G ? void 0 : G.profileEffect) != null ? W : void 0,
+                            ref: (null == G ? void 0 : G.profileEffect) != null ? z : void 0,
                             children: [
-                                (0, r.jsx)(I.Z, { children: (0, r.jsx)(y.Z, { user: t }) }),
+                                (0, r.jsx)(O.Z, { children: (0, r.jsx)(y.Z, { user: t }) }),
                                 (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(x.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             user: t,
                                             displayProfile: G,
                                             themeType: P.l.MODAL,
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: A.headerInner,
+                                            className: N.headerInner,
                                             children: (0, r.jsx)(p.Z, {
                                                 user: t,
                                                 displayProfile: G,
@@ -107,15 +107,15 @@ function E(e) {
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: A.body,
+                                    className: N.body,
                                     children: [
                                         (0, r.jsx)(_.Z, {
-                                            className: A.username,
+                                            className: N.username,
                                             user: t,
-                                            nickname: V,
+                                            nickname: F,
                                             pronouns: null == G ? void 0 : G.pronouns,
                                             nicknameVariant: "heading-xl/bold",
-                                            tags: (0, r.jsx)(b.Z, {
+                                            tags: (0, r.jsx)(x.Z, {
                                                 displayProfile: G,
                                                 themeType: P.l.MODAL,
                                                 onClose: U,
@@ -127,25 +127,25 @@ function E(e) {
                                                 (0, r.jsx)(l.njP, {
                                                     className: C.tabBar,
                                                     type: "top",
-                                                    selectedItem: O.oh.BOT_INFO,
+                                                    selectedItem: I.oh.BOT_INFO,
                                                     onItemSelect: Z.dG4,
                                                     children: (0, r.jsx)(
                                                         l.njP.Item,
                                                         {
                                                             className: C.tabBarItem,
-                                                            id: O.oh.BOT_INFO,
+                                                            id: I.oh.BOT_INFO,
                                                             "aria-label": T.intl.string(T.t.jGoPJS),
                                                             children: (0, r.jsx)(l.Text, {
                                                                 variant: "text-sm/normal",
                                                                 children: T.intl.string(T.t.jGoPJS),
                                                             }),
                                                         },
-                                                        O.oh.BOT_INFO,
+                                                        I.oh.BOT_INFO,
                                                     ),
                                                 }),
                                                 (0, r.jsxs)(l.zJl, {
                                                     fade: !0,
-                                                    className: N.scroller,
+                                                    className: A.scroller,
                                                     children: [
                                                         (0, r.jsx)(g.Z, {
                                                             userId: t.id,
@@ -157,7 +157,7 @@ function E(e) {
                                                             children: (0, r.jsx)(h.Z, {
                                                                 userId: t.id,
                                                                 guildId: k,
-                                                                tooltipDelay: O.vB,
+                                                                tooltipDelay: I.vB,
                                                             }),
                                                         }),
                                                     ],

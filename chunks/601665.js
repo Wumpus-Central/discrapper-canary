@@ -168,7 +168,6 @@ function P(e) {
                                         onOpenProfile: M ? void 0 : Y,
                                     }),
                                     (0, r.jsx)(v.Z, {
-                                        location: "BotUserProfilePopout",
                                         user: t,
                                         themeType: S.l.POPOUT,
                                         onCloseProfile: L,

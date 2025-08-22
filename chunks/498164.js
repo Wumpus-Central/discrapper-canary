@@ -132,9 +132,7 @@ let Z = {
                                     location: j.SaU,
                                 }),
                                 (0, l.ZDy)(async () => {
-                                    let { default: e } = await Promise.all([n.e("92446"), n.e("78676")]).then(
-                                        n.bind(n, 409858),
-                                    );
+                                    let { default: e } = await n.e("38029").then(n.bind(n, 409858));
                                     return (n) => (0, r.jsx)(e, A({ code: t }, n));
                                 }),
                                 e({ giftCode: a });

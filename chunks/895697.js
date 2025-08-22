@@ -100,7 +100,6 @@ function R(e) {
                 ? (0, r.jsx)(g.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: R,
                       guildId: null == P ? void 0 : P.id,
                       onOpenUserProfileModal: D,
                       onClose: L,
@@ -108,7 +107,6 @@ function R(e) {
                 : (0, r.jsx)(p.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: R,
                       guildId: null == P ? void 0 : P.id,
                       onClose: L,
                   }),

@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => f,
-    Z: () => h,
+    U: () => h,
+    Z: () => f,
 });
 var r,
     i = n(951288),
@@ -12,9 +12,9 @@ var r,
     u = n(481060),
     d = n(213609),
     p = n(452956),
-    f = (((r = {}).TOP = "top"), (r.BOTTOM = "bottom"), r);
-let h = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: l, buttonText: o, onClose: f, art: h, align: g } = e;
+    h = (((r = {}).TOP = "top"), (r.BOTTOM = "bottom"), r);
+let f = l.forwardRef(function (e, t) {
+    let { body: n, header: r, artClassName: l, buttonText: o, onClose: h, art: f, align: g } = e;
     return (
         (0, d.Z)({
             type: s.ImpressionTypes.POPOUT,
@@ -28,7 +28,7 @@ let h = l.forwardRef(function (e, t) {
                 children: [
                     (0, i.jsx)("div", {
                         className: l,
-                        children: h,
+                        children: f,
                     }),
                     (0, i.jsxs)("div", {
                         className: p.body,
@@ -57,7 +57,7 @@ let h = l.forwardRef(function (e, t) {
                             text: o,
                             fullWidth: !0,
                             onClick: (e) => {
-                                null == f || f(e);
+                                null == h || h(e);
                             },
                         }),
                     }),

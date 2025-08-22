@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(740492),
     z = n(793319),
     W = n(3861),
-    Y = n(493754),
-    q = n(937995),
+    q = n(493754),
+    Y = n(937995),
     K = n(618158),
     X = n(880831),
     Q = n(73563),
@@ -357,7 +357,7 @@ class eV extends i.PureComponent {
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },
-                            children: (0, r.jsx)(q.ZP, {
+                            children: (0, r.jsx)(Y.ZP, {
                                 timeout: 2000,
                                 children: (e) => this.renderContent(e),
                             }),
@@ -707,7 +707,7 @@ class eV extends i.PureComponent {
                             : this.handleToggleLayout,
                     { canChangeLayout: g, canInvite: b } = this.viewProperties,
                     _ = l
-                        ? (0, r.jsx)(Y.Z, {
+                        ? (0, r.jsx)(q.Z, {
                               channel: n,
                               stream: (null == o ? void 0 : o.type) === eM.fO.STREAM ? (0, k.my)(o.id) : void 0,
                               applicationId:
@@ -939,8 +939,8 @@ let ez = function (e) {
         ),
         z = (0, u.e7)([ec.Z], () => ec.Z.getGuild(n.getGuildId())),
         W = (0, u.e7)([es.Z], () => es.Z.getCall(n.id), [n.id]),
-        Y = (0, u.e7)([ed.ZP], () => ed.ZP.getMentionCount(n.id), [n.id]),
-        q = (0, u.e7)([ea.default], () => ea.default.getId()),
+        q = (0, u.e7)([ed.ZP], () => ed.ZP.getMentionCount(n.id), [n.id]),
+        Y = (0, u.e7)([ea.default], () => ea.default.getId()),
         { popoutWindow: K, popoutWindowAlwaysOnTop: X } = (0, u.cj)([F.Z], () => ({
             popoutWindow: F.Z.getWindow(eD.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: F.Z.getIsAlwaysOnTop(eD.KJ3.CHANNEL_CALL_POPOUT),
@@ -1001,7 +1001,7 @@ let ez = function (e) {
                             call: W,
                             popoutWindow: K,
                             popoutWindowAlwaysOnTop: X,
-                            mentionCount: Y,
+                            mentionCount: q,
                             selectedStream: H,
                             mode: N,
                             inCall: _,
@@ -1012,7 +1012,7 @@ let ez = function (e) {
                             chatOpen: U,
                             maxSidebarWidth: eC,
                             shouldUseVoiceEffectsActionBar: em,
-                            currentUserId: q,
+                            currentUserId: Y,
                             selectedParticipant: B,
                             allActiveStreams: G,
                             useNewInviteButton: er,

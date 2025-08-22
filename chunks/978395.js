@@ -149,7 +149,6 @@ function L(e) {
                 ? (0, r.jsx)(y.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: L,
                       guildId: null == j ? void 0 : j.id,
                       onOpenUserProfileModal: k,
                       onClose: G,
@@ -157,7 +156,6 @@ function L(e) {
                 : (0, r.jsx)(h.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: L,
                       guildId: null == j ? void 0 : j.id,
                       onClose: G,
                   }),

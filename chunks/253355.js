@@ -1,37 +1,37 @@
-r.d(t, { Z: () => p });
-var n = r(951288);
-r(647438);
-var l = r(399606),
-    a = r(607070),
-    i = r(70097),
-    o = r(451478),
-    s = r(884697),
-    c = r(813083),
-    u = r(794324),
-    d = r(638758);
-function p(e) {
+n.d(t, { Z: () => g });
+var r = n(951288);
+n(647438);
+var l = n(399606),
+    a = n(607070),
+    s = n(70097),
+    i = n(451478),
+    o = n(884697),
+    c = n(813083),
+    u = n(794324),
+    d = n(638758);
+function g(e) {
     let { category: t } = e,
-        r = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
-        s = (0, l.e7)([o.Z], () => o.Z.isFocused()),
-        { catalogBannerStatic: p, catalogBannerAnimated: g } = (0, u.Oi)(t);
-    return (0, n.jsxs)("div", {
+        n = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        o = (0, l.e7)([i.Z], () => i.Z.isFocused()),
+        { catalogBannerStatic: g, catalogBannerAnimated: f } = (0, u.Oi)(t);
+    return (0, r.jsxs)("div", {
         className: d.catalogBanner,
         children: [
-            (0, n.jsx)("img", {
+            (0, r.jsx)("img", {
                 className: d.catalogBannerImage,
-                src: p,
+                src: g,
                 alt: t.name,
             }),
-            null != g &&
-                !r &&
-                s &&
-                (0, n.jsx)(i.Z, {
-                    src: g,
+            null != f &&
+                !n &&
+                o &&
+                (0, r.jsx)(s.Z, {
+                    src: f,
                     className: d.animationAsset,
                     autoPlay: !0,
                     loop: !0,
                 }),
-            (0, n.jsx)(c.Z, {
+            (0, r.jsx)(c.Z, {
                 category: t,
                 className: d.limitedTimeBadge,
                 display: c.k.BANNER,
@@ -39,4 +39,4 @@ function p(e) {
         ],
     });
 }
-(0, s.IC)(90);
+(0, o.IC)(90);

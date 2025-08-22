@@ -1,4 +1,4 @@
-t.d(n, { Z: () => b });
+t.d(n, { Z: () => x });
 var r = t(951288),
     o = t(647438),
     l = t(481060),
@@ -11,8 +11,8 @@ var r = t(951288),
     f = t(252417),
     m = t(388032),
     p = t(878449);
-function b(e) {
-    let { user: n, guildId: t, channelId: b, onClose: x } = e,
+function x(e) {
+    let { user: n, guildId: t, channelId: x, onClose: b } = e,
         { mutualFriends: g } = (0, s.Z)(n),
         { analyticsLocations: h } = (0, c.ZP)(),
         { context: j, trackUserProfileAction: v } = (0, a.KZ)(),
@@ -49,10 +49,10 @@ function b(e) {
                                     user: o,
                                     status: l,
                                     guildId: t,
-                                    channelId: b,
+                                    channelId: x,
                                     onSelect: () => {
                                         var e, n, t;
-                                        null == x || x(),
+                                        null == b || b(),
                                             v({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (e = o.id),
                                             (0, u.openUserProfileModal)(

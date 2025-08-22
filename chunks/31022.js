@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(442837),
     i = n(853856),
     l = n(592125),
@@ -9,7 +9,7 @@ var r = n(442837),
     u = n(565799),
     d = n(501655),
     p = n(981631);
-function f(e) {
+function h(e) {
     let { voiceState: t, userNick: n, user: r } = e,
         i = (0, o.sQ)(t, n);
     return {
@@ -19,7 +19,7 @@ function f(e) {
         comparator: i,
     };
 }
-function h(e) {
+function f(e) {
     let [t] = (0, r.e7)(
         [u.Z, l.Z, i.Z],
         () => {
@@ -34,7 +34,7 @@ function h(e) {
                               .filter((e) => e.isGuildStageVoice())
                         : u.Z.getChannels(e)).reduce((e, t) => {
                     let n = u.Z.getMutableParticipants(t.id, d.pV.SPEAKER);
-                    return (e[t.id] = n.filter((e) => e.type === d.Ui.VOICE).map(f)), e;
+                    return (e[t.id] = n.filter((e) => e.type === d.Ui.VOICE).map(h)), e;
                 }, {}),
                 t.reduce((e, t) => {
                     let { id: n } = t;

@@ -1,34 +1,34 @@
-r.d(t, { h: () => i }), r(388685);
-var n = r(647438),
-    l = r(180650),
-    a = r(215023);
-let i = (e) => {
-    let { scrollerRef: t, sortedCategories: r } = e,
-        [i, o] = n.useState(1),
-        s = n.useCallback(
+n.d(t, { h: () => s }), n(388685);
+var r = n(647438),
+    l = n(180650),
+    a = n(215023);
+let s = (e) => {
+    let { scrollerRef: t, sortedCategories: n } = e,
+        [s, i] = r.useState(1),
+        o = r.useCallback(
             (e) => {
-                let t = r.findIndex((t) => t.skuId === e);
+                let t = n.findIndex((t) => t.skuId === e);
                 return -1 === t ? 1 : Math.floor(t / a.kN) + 1;
             },
-            [r],
+            [n],
         ),
-        c = n.useCallback(
+        c = r.useCallback(
             (e) => {
                 if (null != e && e !== l.T.ORB) {
-                    let t = s(e);
-                    t !== i && o(t);
+                    let t = o(e);
+                    t !== s && i(t);
                 }
             },
-            [s, i, o],
+            [o, s, i],
         );
     return {
-        currentPage: i,
-        handlePageChange: n.useCallback(
+        currentPage: s,
+        handlePageChange: r.useCallback(
             (e) => {
-                var r;
-                o(e), null == (r = t.current) || r.scrollTo({ to: 0 });
+                var n;
+                i(e), null == (n = t.current) || n.scrollTo({ to: 0 });
             },
-            [t, o],
+            [t, i],
         ),
         scrollToCategory: c,
     };

@@ -46,7 +46,7 @@ let l = (e) => {
     (0, i.ZDy)(
         async () => {
             if (t.skuId === a.Vt.FRACTIONAL_PREMIUM || t.skuId === a.Vt.ORB_PROFILE_BADGE) {
-                let { default: e } = await Promise.all([n.e("30141"), n.e("77198")]).then(n.bind(n, 509428));
+                let { default: e } = await n.e("77198").then(n.bind(n, 509428));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -63,7 +63,7 @@ let l = (e) => {
                         ),
                     );
             }
-            let { default: e } = await Promise.all([n.e("30141"), n.e("87624")]).then(n.bind(n, 331042));
+            let { default: e } = await n.e("87624").then(n.bind(n, 331042));
             return (n) =>
                 (0, r.jsx)(
                     e,

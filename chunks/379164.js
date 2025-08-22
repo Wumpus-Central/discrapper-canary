@@ -9,14 +9,14 @@ var r = n(570140),
     u = n(626135),
     d = n(782605),
     p = n(621600),
-    f = n(88658),
-    h = n(981631);
+    h = n(88658),
+    f = n(981631);
 let g = {
     acceptInvite(e) {
         let t = i.ZP.getInviteContext("Desktop Invite Modal", e),
             n = (0, s.y)(),
             u = (0, s.h6)(),
-            h = (0, s.U1)(),
+            f = (0, s.U1)(),
             g = (0, s.yS)();
         i.ZP.acceptInvite({
             inviteKey: e.code,
@@ -29,21 +29,21 @@ let g = {
                 if ((0, a.gY)({ location: "acceptInvite" }) && null != e.guild) {
                     if (u) {
                         if (c.h2.getSetting().includes(e.guild.id)) {
-                            let t = new Set((0, f.YK)());
+                            let t = new Set((0, h.YK)());
                             t.delete(e.guild.id), c.h2.updateSetting(Array.from(t));
                         }
                     } else {
                         var t;
-                        let n = new Set((0, f.YK)());
+                        let n = new Set((0, h.YK)());
                         n.add(null == (t = e.guild) ? void 0 : t.id), c.h2.updateSetting(Array.from(n));
                     }
-                    if (h) {
+                    if (f) {
                         if (c.SE.getSetting().includes(e.guild.id)) {
-                            let t = new Set((0, f._o)());
+                            let t = new Set((0, h._o)());
                             t.delete(e.guild.id), c.SE.updateSetting(Array.from(t));
                         }
                     } else {
-                        let t = new Set((0, f._o)());
+                        let t = new Set((0, h._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
                     null != n && n.length > 0 && (0, o.iq)(e.guild.id, { nick: n }),
@@ -69,7 +69,7 @@ let g = {
                 i = (0, s.U1)(),
                 l = (0, s.yS)(),
                 o = (0, s.aP)();
-            u.default.track(h.rMx.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
+            u.default.track(f.rMx.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
                 invite_code: e,
                 guild_id: t,
                 nickname_present: null != n && n.length > 0,

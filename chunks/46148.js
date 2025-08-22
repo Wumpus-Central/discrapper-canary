@@ -1,4 +1,4 @@
-n.d(t, { W: () => x }), n(388685);
+n.d(t, { W: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,17 +9,17 @@ var r = n(951288),
     u = n(243778),
     d = n(612659),
     p = n(819640),
-    f = n(436952),
-    h = n(54480),
+    h = n(436952),
+    f = n(54480),
     g = n(680783),
     m = n(13186),
     b = n(981631),
     O = n(921944),
-    _ = n(474936),
-    y = n(388032),
-    v = n(865696),
-    j = n(777091);
-function C(e) {
+    y = n(474936),
+    _ = n(388032),
+    j = n(865696),
+    v = n(777091);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,18 +44,18 @@ function C(e) {
     }
     return e;
 }
-let x = i.memo(function (e) {
+let C = i.memo(function (e) {
     let t = e.channel.id,
         n = e.selected,
-        x = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        C = (0, c.Nj)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
         E = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
-        { canAccessPicker: S, entryPoint: I } = (0, h.m)({
+        { canAccessPicker: S, entryPoint: P } = (0, f.m)({
             location: "ChatWallpaperDMListCoachmark",
             channelId: t,
         }),
-        P = I === f.FN.CONTEXT_MENU,
-        [N, w] = (0, u.US)(x && P && n && S && !E ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-        Z = (0, d.m)(_.p9.TIER_2),
+        I = P === h.FN.CONTEXT_MENU,
+        [N, w] = (0, u.US)(C && I && n && S && !E ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+        Z = (0, d.m)(y.p9.TIER_2),
         T = (0, g.Z)(t),
         A = N === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
         R = (0, i.useRef)(null),
@@ -76,7 +76,7 @@ let x = i.memo(function (e) {
         }, [A]),
         !A)
     )
-        return (0, r.jsx)(s.ZP, C({}, e));
+        return (0, r.jsx)(s.ZP, x({}, e));
     let U = () => {
             w(O.L.USER_DISMISS);
         },
@@ -84,15 +84,15 @@ let x = i.memo(function (e) {
             let n = null != t && !t.isPreview;
             return e ? (e && !n ? "no-wallpaper-nitro" : "has-wallpaper-nitro") : "non-nitro";
         })(Z, null != T ? T : null),
-        B = "has-wallpaper-nitro" === G ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0),
-        V = ((e) => {
+        B = "has-wallpaper-nitro" === G ? _.intl.string(_.t.T9dXPj) : _.intl.string(_.t.zyvzQ0),
+        F = ((e) => {
             switch (e) {
                 case "non-nitro":
-                    return y.intl.string(y.t.VU8fxM);
+                    return _.intl.string(_.t.VU8fxM);
                 case "no-wallpaper-nitro":
-                    return y.intl.string(y.t.BQBNjY);
+                    return _.intl.string(_.t.BQBNjY);
                 case "has-wallpaper-nitro":
-                    return y.intl.string(y.t.eZMxlZ);
+                    return _.intl.string(_.t.eZMxlZ);
             }
         })(G);
     return (0, r.jsx)("div", {
@@ -107,21 +107,21 @@ let x = i.memo(function (e) {
                 (0, r.jsx)(m.Z, {
                     ref: M,
                     onClose: U,
-                    buttonText: y.intl.string(y.t["+IrDzM"]),
+                    buttonText: _.intl.string(_.t["+IrDzM"]),
                     header: B,
                     art: (0, r.jsx)("img", {
-                        src: j.Z,
+                        src: v.Z,
                         alt: "",
-                        className: v.chatWallpaperDMListCoachmarkArt,
+                        className: j.chatWallpaperDMListCoachmarkArt,
                     }),
-                    body: V,
+                    body: F,
                     align: L,
                 }),
             children: (t) => {
                 var n, i;
                 return (0, r.jsx)(
                     s.ZP,
-                    ((n = C({}, e)),
+                    ((n = x({}, e)),
                     (i = i = { ref: D }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

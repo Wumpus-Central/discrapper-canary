@@ -1,5 +1,4 @@
-n.d(t, { Z: () => r });
-let r = (0, n(818083).B)({
+(0, n(818083).B)({
     kind: "user",
     id: "2025-05_virtual_currency_onboarding_experience",
     label: "Virtual Currency Onboarding Experience",

@@ -43,8 +43,8 @@ var r = n(951288),
     V = n(430824),
     z = n(607744),
     W = n(496675),
-    Y = n(626135),
-    q = n(572004),
+    q = n(626135),
+    Y = n(572004),
     K = n(176354),
     X = n(823379),
     Q = n(970257),
@@ -240,7 +240,7 @@ function eg(e) {
             let R = (0, Q.a4)(n),
                 M = (0, $.Z)(n, t),
                 G = !t.isSystemDM() && (0, J.Z)(n, h) && g && !b,
-                { disableReactionCreates: Y } = (0, et.Z)({
+                { disableReactionCreates: q } = (0, et.Z)({
                     channel: t,
                     canChat: O,
                     renderReactions: y,
@@ -276,9 +276,9 @@ function eg(e) {
                 canStartThread: P,
                 canViewThread: Z,
                 canForward: er,
-                canCopy: q.wS,
+                canCopy: Y.wS,
                 hasDeveloperMode: C,
-                canReact: !Y && y,
+                canReact: !q && y,
                 canPublish: K,
                 canConfigureJoin: en,
                 isExpanded: eo && !es && !r && !i && !l,
@@ -294,7 +294,7 @@ function eg(e) {
         eh = i.useRef(null),
         eg = i.useCallback(() => {
             G ||
-                Y.default.track(ea.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                q.default.track(ea.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: n.id,
                     channel: n.channel_id,
                 }),
@@ -465,7 +465,7 @@ function eg(e) {
                                         label: ec.intl.string(ec.t.icaJW1),
                                         icon: p.l22,
                                         onClick: () => {
-                                            Y.default.track(ea.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, {
+                                            q.default.track(ea.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, {
                                                 location: Z.MG.MessageExpandingButtons,
                                             }),
                                                 (0, T.s)({

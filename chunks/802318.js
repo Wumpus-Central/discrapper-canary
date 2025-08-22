@@ -1,1 +1,1 @@
-e.exports = { platforms: "platforms__93ebb" };
+a.exports = { platforms: "platforms__93ebb" };

@@ -1,5 +1,5 @@
 n.d(t, {
-    m: () => h,
+    m: () => f,
     o: () => m,
 }),
     n(388685);
@@ -13,7 +13,7 @@ var r,
     u = n(979651),
     d = n(626135),
     p = n(981631);
-function f(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-var h =
+var f =
     (((r = {}).SELF_VIDEO = "self_video"),
     (r.SELF_STREAM = "self_stream"),
     (r.REMOTE_VIDEO = "remote_video"),
@@ -57,8 +57,8 @@ class m {
         this.logger.info(
             "spinner visible for ".concat(l, " ms\n      [").concat(e, ", count for stream: ").concat(r, "]"),
         );
-        let f = c.Z.getGuildId(),
-            h = u.Z.getUserVoiceChannelId(f, o.default.getId()),
+        let h = c.Z.getGuildId(),
+            f = u.Z.getUserVoiceChannelId(h, o.default.getId()),
             m = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return "guild_voice";
@@ -67,15 +67,15 @@ class m {
                     if (e.isGroupDM()) return "group_dm";
                 }
                 return null;
-            })(a.Z.getChannel(h));
+            })(a.Z.getChannel(f));
         d.default.track(p.rMx.VIDEO_SPINNER_SHOWN_V2, {
             video_spinner_context: e,
             duration_video_spinner_visible_ms: l,
             rtc_connection_id: c.Z.getRTCConnectionId(),
             media_session_id: c.Z.getMediaSessionId(),
             event_count_for_stream: r,
-            guild_id: f,
-            channel_id: h,
+            guild_id: h,
+            channel_id: f,
             channel_type: m,
             spinning_user_id: t,
             connection_type: s.Z.getType(),
@@ -84,6 +84,6 @@ class m {
         });
     }
     constructor(e) {
-        f(this, "logger", void 0), f(this, "spinnerVisibleStart", null), (this.logger = new l.Z(e));
+        h(this, "logger", void 0), h(this, "spinnerVisibleStart", null), (this.logger = new l.Z(e));
     }
 }

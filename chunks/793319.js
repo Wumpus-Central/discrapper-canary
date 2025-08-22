@@ -48,8 +48,8 @@ var r = n(951288),
     V = n(390322),
     z = n(791592),
     W = n(136995),
-    Y = n(402113),
-    q = n(197016),
+    q = n(402113),
+    Y = n(197016),
     K = n(386000),
     X = n(331197),
     Q = n(698877),
@@ -371,7 +371,7 @@ let eI = i.memo(function (e) {
                         case "ACTIVITY":
                             if (null == s || null == t || s.type !== e_.fO.ACTIVITY || null == a) return;
                             return (0, r.jsx)(
-                                Y.Z,
+                                q.Z,
                                 eO(ev({}, c), {
                                     applicationId: s.applicationId,
                                     color: "disconnect",
@@ -395,7 +395,7 @@ let eI = i.memo(function (e) {
                             );
                         case "CALL":
                             return (0, r.jsx)(
-                                q.Z,
+                                Y.Z,
                                 eO(ev({}, c), {
                                     color: "disconnect",
                                     onClick: () => {
@@ -491,8 +491,8 @@ let eT = function (e) {
         }),
         H = (0, u.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
-        { analyticsLocations: Y } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
-        q = (0, $.Hu)({
+        { analyticsLocations: q } = (0, v.ZP)(x.Z.VOICE_CONTROL_TRAY),
+        Y = (0, $.Hu)({
             location: x.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
         }),
@@ -500,7 +500,7 @@ let eT = function (e) {
         et = (0, G.Z)(n),
         en = i.useRef(null),
         eu = i.useRef(null),
-        ep = q
+        ep = Y
             ? (e) => {
                   (0, f.jW)(e, () =>
                       Promise.resolve(() =>
@@ -521,7 +521,7 @@ let eT = function (e) {
             : void 0;
     return F
         ? (0, r.jsx)(v.Gt, {
-              value: Y,
+              value: q,
               children: (0, r.jsxs)(b.Z, {
                   section: eb.jXE.VOICE_CONTROL_TRAY,
                   children: [
@@ -542,7 +542,7 @@ let eT = function (e) {
                                               let t,
                                                   { closePopout: n } = e;
                                               return (
-                                                  (t = q
+                                                  (t = Y
                                                       ? (0, r.jsx)(ee.l, {
                                                             wide: !0,
                                                             showOutputDevices: !0,
@@ -681,7 +681,7 @@ let eT = function (e) {
               }),
           })
         : (0, r.jsx)(v.Gt, {
-              value: Y,
+              value: q,
               children: (0, r.jsx)(eP, {
                   channel: n,
                   cameraUnavailable: C,

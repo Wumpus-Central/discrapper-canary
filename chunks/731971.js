@@ -1,16 +1,16 @@
 n.d(t, {
     NQ: () => b,
-    U1: () => y,
+    U1: () => _,
     XW: () => d,
     _J: () => m,
-    aP: () => h,
+    aP: () => f,
     e7: () => g,
     h6: () => O,
-    oE: () => f,
+    oE: () => h,
     pB: () => p,
-    y: () => _,
-    yS: () => v,
-    yr: () => j,
+    y: () => y,
+    yS: () => j,
+    yr: () => v,
 }),
     n(781311);
 var r = n(879690),
@@ -145,10 +145,10 @@ let d = (0, r.U)((e) => ({
     p = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
-    f = () => {
+    h = () => {
         d.getState().reset();
     },
-    h = () => {
+    f = () => {
         let e = d.getState();
         return (
             e.nickname !== c.nickname ||
@@ -161,10 +161,10 @@ let d = (0, r.U)((e) => ({
     m = () => d.getState().guildId,
     b = () => d.getState().touched,
     O = () => d.getState().dmsAllowed,
-    _ = () => d.getState().nickname,
-    y = () => d.getState().showActivity,
-    v = () => d.getState().mutedServer,
-    j = () => {
+    y = () => d.getState().nickname,
+    _ = () => d.getState().showActivity,
+    j = () => d.getState().mutedServer,
+    v = () => {
         var e, t;
         let { nickname: n } = d();
         if (null != n && "" !== n.trim()) return n;

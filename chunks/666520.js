@@ -11,23 +11,23 @@ var r = t(951288),
     f = t(215258);
 function m(e) {
     let { autoFocus: n = !1, className: t, userId: m, onUpdate: p } = e,
-        b = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
-        { loading: x, note: g } = (0, a.Z)(m),
+        x = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
+        { loading: b, note: g } = (0, a.Z)(m),
         h = o.useRef(null);
     return (o.useEffect(() => {
-        if (!n || b) return;
+        if (!n || x) return;
         let e = h.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, b]),
-    b)
+    }, [n, x]),
+    x)
         ? null
         : (0, r.jsx)("div", {
               className: t,
               children: (0, r.jsx)(i.lcI, {
                   ref: h,
                   className: f.textarea,
-                  disabled: x,
-                  placeholder: x ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
+                  disabled: b,
+                  placeholder: b ? u.intl.string(u.t["WLKx//"]) : u.intl.string(u.t.VBhOe3),
                   "aria-label": u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;

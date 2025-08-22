@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(755721),
+var i = n(481060),
     l = n(493683),
     a = n(726521),
     o = n(213010),
@@ -11,31 +11,29 @@ function u(e) {
     let {
             otherUserId: t,
             channel: n,
-            buttonSize: u = i.Ph.TINY,
-            className: d,
-            buttonText: p,
-            navigateAwayOnReportSuccess: h = !0,
-            onReportClick: f,
-            onReportSubmit: m,
-            onMouseEnter: g,
-            onMouseLeave: b,
+            buttonText: u,
+            buttonSize: d = "sm",
+            navigateAwayOnReportSuccess: p = !0,
+            onReportClick: h,
+            onReportSubmit: f,
+            onMouseEnter: m,
+            onMouseLeave: g,
         } = e,
-        _ = (0, o.Q)(t),
-        y = (0, s.V)(n.id, t);
-    if (!_ || null == y) return null;
-    let C = () => {
-        null == m || m(), l.Z.closePrivateChannel(n.id, h);
+        b = (0, o.Q)(t),
+        _ = (0, s.V)(n.id, t);
+    if (!b || null == _) return null;
+    let y = () => {
+        null == f || f(), l.Z.closePrivateChannel(n.id, p);
     };
-    return (0, r.jsx)(i.zx, {
-        className: d,
-        size: u,
-        color: i.zx.Colors.RED,
-        disabled: null == y,
+    return (0, r.jsx)(i.zxk, {
+        size: d,
+        variant: "critical-primary",
+        disabled: null == _,
         onClick: () => {
-            null == f || f(), (0, a.WL)(y, C);
+            null == h || h(), (0, a.WL)(_, y);
         },
-        onMouseEnter: g,
-        onMouseLeave: b,
-        children: null != p ? p : c.intl.string(c.t.HHZmDg),
+        onMouseEnter: m,
+        onMouseLeave: g,
+        text: null != u ? u : c.intl.string(c.t.HHZmDg),
     });
 }

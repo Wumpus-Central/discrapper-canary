@@ -1,60 +1,60 @@
-r.d(t, { Z: () => f });
-var n = r(951288);
-r(647438);
-var l = r(120356),
-    a = r.n(l),
-    i = r(442837),
-    o = r(481060),
-    s = r(594174),
-    c = r(381585),
-    u = r(597688),
-    d = r(709999),
-    p = r(388032),
-    g = r(310582);
-let f = (e) => {
-    let { shelf: t, handleTransition: r, tab: l } = e,
-        f = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    return null == f
+n.d(t, { Z: () => p });
+var r = n(951288);
+n(647438);
+var l = n(120356),
+    a = n.n(l),
+    s = n(442837),
+    i = n(481060),
+    o = n(594174),
+    c = n(381585),
+    u = n(597688),
+    d = n(709999),
+    g = n(388032),
+    f = n(310582);
+let p = (e) => {
+    let { shelf: t, handleTransition: n, tab: l } = e,
+        p = (0, s.e7)([o.default], () => o.default.getCurrentUser());
+    return null == p
         ? null
-        : (0, n.jsxs)("div", {
-              className: a()(g.shelfBlockContainer, g.centeredSection),
+        : (0, r.jsxs)("div", {
+              className: a()(f.shelfBlockContainer, f.centeredSection),
               children: [
-                  (0, n.jsxs)("div", {
-                      className: g.blockHeader,
+                  (0, r.jsxs)("div", {
+                      className: f.blockHeader,
                       children: [
-                          (0, n.jsx)(o.X6q, {
+                          (0, r.jsx)(i.X6q, {
                               variant: "heading-lg/semibold",
                               children: t.name,
                           }),
-                          (0, n.jsx)(o.zxk, {
+                          (0, r.jsx)(i.zxk, {
                               variant: "secondary",
-                              text: p.intl.formatToPlainString(p.t.bc9RBA, { category_name: t.name }),
-                              onClick: () => r("shelf block see all", t.categorySkuId),
+                              text: g.intl.formatToPlainString(g.t.bc9RBA, { category_name: t.name }),
+                              onClick: () => n("shelf block see all", t.categorySkuId),
                           }),
                       ],
                   }),
-                  (0, n.jsx)("div", {
-                      className: g.feed,
-                      children: (0, n.jsx)(n.Fragment, {
-                          children: t.rankedSkuIds.map((e, r) => {
+                  (0, r.jsx)("div", {
+                      className: f.feed,
+                      children: (0, r.jsx)(r.Fragment, {
+                          children: t.rankedSkuIds.map((e, n) => {
                               let a = u.Z.getCategoryForProduct(e),
-                                  i = u.Z.getProduct(e);
-                              return null == a || null == i
+                                  s = u.Z.getProduct(e);
+                              return null == a || null == s
                                   ? null
-                                  : (0, n.jsx)(
+                                  : (0, r.jsx)(
                                         c.k0,
                                         {
                                             newValue: {
-                                                tilePosition: r,
+                                                tilePosition: n,
                                                 pageSection: t.name,
                                                 categoryPosition: 2,
                                             },
-                                            children: (0, n.jsx)(
+                                            children: (0, r.jsx)(
                                                 d.Z,
                                                 {
-                                                    product: i,
+                                                    product: s,
                                                     category: a,
-                                                    user: f,
+                                                    user: p,
                                                     tab: l,
                                                 },
                                                 e,

@@ -10,8 +10,8 @@ var i = n(120356),
     u = n(925329),
     d = n(810568),
     p = n(168524),
-    f = n(115530),
-    h = n(388032),
+    h = n(115530),
+    f = n(388032),
     g = n(48733);
 function m(e) {
     let { name: t, applicationId: n } = e,
@@ -24,7 +24,7 @@ function m(e) {
     return (0, r.jsx)(o.P3F, {
         onClick: i,
         className: l()(null != i && g.clickableGameName),
-        children: (0, r.jsx)(f.Z, {
+        children: (0, r.jsx)(h.Z, {
             className: g.gameName,
             children: t,
         }),
@@ -39,7 +39,7 @@ function b(e) {
             isForceShowSharingPopout: d,
             setIsForceShowSharingPopout: p,
         } = e,
-        f = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
+        h = null != n ? n.name : null != i ? i.name : f.intl.string(f.t["UQMV/P"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -68,9 +68,9 @@ function b(e) {
                     children: (0, r.jsxs)("div", {
                         className: g.info,
                         children: [
-                            null != f
+                            null != h
                                 ? (0, r.jsx)(m, {
-                                      name: f,
+                                      name: h,
                                       applicationId: null == n ? void 0 : n.id,
                                   })
                                 : null,

@@ -1,4 +1,4 @@
-i.d(e, { Z: () => P });
+i.d(e, { Z: () => v });
 var n = i(951288);
 i(647438);
 var r = i(979554),
@@ -9,16 +9,16 @@ var r = i(979554),
     u = i(479446),
     c = i(981632),
     d = i(876917),
-    p = i(594174),
-    f = i(597688),
+    f = i(594174),
+    p = i(597688),
     m = i(22267),
     h = i(948067);
 let g = s.EFr.SIZE_152,
     y = (0, a.y9)(g),
-    O = (t) => {
+    b = (t) => {
         var e, i;
         let { item: r } = t,
-            a = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+            a = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
             {
                 avatarDecorationSrc: u,
                 avatarPlaceholderSrc: c,
@@ -80,7 +80,7 @@ let g = s.EFr.SIZE_152,
             ),
         });
     },
-    b = (t) => {
+    O = (t) => {
         let { item: e } = t;
         return (0, n.jsx)("div", {
             className: h.profileEffectPreview,
@@ -90,7 +90,7 @@ let g = s.EFr.SIZE_152,
             }),
         });
     },
-    j = (t) => {
+    P = (t) => {
         let { item: e } = t;
         return (0, n.jsx)("div", {
             className: h.nameplatePreview,
@@ -103,17 +103,17 @@ let g = s.EFr.SIZE_152,
             }),
         });
     },
-    P = (t) => {
+    v = (t) => {
         let { giftCode: e } = t,
-            i = (0, l.e7)([f.Z], () => f.Z.getProduct(e.skuId)),
+            i = (0, l.e7)([p.Z], () => p.Z.getProduct(e.skuId)),
             s = null == i ? void 0 : i.items[0];
         switch (null == s ? void 0 : s.type) {
             case r.Z.AVATAR_DECORATION:
-                return (0, n.jsx)(O, { item: s });
-            case r.Z.PROFILE_EFFECT:
                 return (0, n.jsx)(b, { item: s });
+            case r.Z.PROFILE_EFFECT:
+                return (0, n.jsx)(O, { item: s });
             case r.Z.NAMEPLATE:
-                return (0, n.jsx)(j, { item: s });
+                return (0, n.jsx)(P, { item: s });
             default:
                 return null != e.giftStyle
                     ? (0, n.jsx)(c.Z, {

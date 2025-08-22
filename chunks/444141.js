@@ -51,8 +51,8 @@ function f(e, n) {
     );
 }
 function m(e) {
-    let { user: n, guildId: t, channelId: m, displayProfile: p, onClose: b } = e,
-        { analyticsLocations: x, sourceAnalyticsLocations: g } = (0, l.ZP)(),
+    let { user: n, guildId: t, channelId: m, displayProfile: p, onClose: x } = e,
+        { analyticsLocations: b, sourceAnalyticsLocations: g } = (0, l.ZP)(),
         { context: h, trackUserProfileAction: j } = (0, c.KZ)(),
         v = (0, s.ZP)(n.id, t);
     return (null == v ? void 0 : v.guildId) == null || null == h
@@ -63,7 +63,7 @@ function m(e) {
                 label: d.intl.string(d.t.GISTtb),
                 subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: i.ZP.getName(void 0, void 0, n) }),
                 action: () => {
-                    null == b || b(),
+                    null == x || x(),
                         (0, a.openUserProfileModal)(
                             f(u({}, h), {
                                 showGuildProfile: !1,
@@ -74,7 +74,7 @@ function m(e) {
                             u(
                                 {
                                     action: "PRESS_VIEW_MAIN_PROFILE",
-                                    analyticsLocations: x,
+                                    analyticsLocations: b,
                                 },
                                 h,
                             ),
@@ -86,7 +86,7 @@ function m(e) {
                 label: d.intl.string(d.t.DisZzM),
                 subtext: d.intl.formatToPlainString(d.t["mn/nW1"], { displayName: i.ZP.getName(t, m, n) }),
                 action: () => {
-                    null == b || b(),
+                    null == x || x(),
                         (0, a.openUserProfileModal)(
                             f(u({}, h), {
                                 showGuildProfile: !0,
@@ -97,7 +97,7 @@ function m(e) {
                             u(
                                 {
                                     action: "PRESS_VIEW_SERVER_PROFILE",
-                                    analyticsLocations: x,
+                                    analyticsLocations: b,
                                 },
                                 h,
                             ),

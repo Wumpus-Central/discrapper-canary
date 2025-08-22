@@ -9,22 +9,22 @@ var r = n(951288),
     u = n(493683),
     d = n(239091),
     p = n(317381),
-    f = n(16609),
-    h = n(276952),
+    h = n(16609),
+    f = n(276952),
     g = n(682662),
     m = n(674552),
     b = n(593364),
     O = n(905423),
-    _ = n(199902),
-    y = n(592125),
-    v = n(944486),
-    j = n(979651),
-    C = n(709054),
-    x = n(853856),
+    y = n(199902),
+    _ = n(592125),
+    j = n(944486),
+    v = n(979651),
+    x = n(709054),
+    C = n(853856),
     E = n(593214),
     S = n(919755),
-    I = n(110977),
-    P = n(603274),
+    P = n(110977),
+    I = n(603274),
     N = n(981631),
     w = n(388032),
     Z = n(499951);
@@ -65,66 +65,66 @@ function R() {
     let l = (0, a.Ie)("favorites"),
         { favoriteAdded: R, clearFavoriteAdded: D } = (0, E.up)(),
         [M, L] = i.useState(!1),
-        { favoriteServerMuted: k, favoriteChannels: U } = (0, s.cj)([x.Z], () => ({
-            favoriteChannels: x.Z.getFavoriteChannels(),
-            favoriteServerMuted: x.Z.favoriteServerMuted,
+        { favoriteServerMuted: k, favoriteChannels: U } = (0, s.cj)([C.Z], () => ({
+            favoriteChannels: C.Z.getFavoriteChannels(),
+            favoriteServerMuted: C.Z.favoriteServerMuted,
         })),
-        G = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
-        B = (0, s.e7)([y.Z], () => y.Z.getChannel(G)),
-        V = (0, O.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: H } = (0, S.Z)(U),
+        G = (0, s.e7)([j.Z], () => j.Z.getChannelId(N.I_8)),
+        B = (0, s.e7)([_.Z], () => _.Z.getChannel(G)),
+        F = (0, O.Z)((e) => e.guildId) === N.I_8,
+        { badge: V, unread: H } = (0, S.Z)(U),
         z = (function (e) {
-            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([j.Z], () => j.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, s.e7)([_.Z], () => {
+                r = (0, s.e7)([y.Z], () => {
                     if (!n) return !1;
-                    let t = _.Z.getCurrentUserActiveStream();
+                    let t = y.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, s.e7)([_.Z], () => _.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, s.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
+                i = (0, s.e7)([y.Z], () => y.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, s.e7)([v.Z], () => n && null != t && v.Z.hasVideo(t), [n, t]),
                 o = (0, s.Wu)([p.ZP], () =>
-                    C.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
+                    x.default.keys(e).reduce((e, t) => (e.push(...p.ZP.getEmbeddedActivitiesForChannel(t)), e), []),
                 ),
                 a = (0, s.e7)([p.ZP], () =>
                     Array.from(p.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
-                            r = (0, f.p)(n);
+                            r = (0, h.p)(n);
                         return null != r && null != e[r];
                     }),
                 ),
                 c = o.length > 0,
                 u = !1,
                 d = !1,
-                h = !1,
+                f = !1,
                 g = !1;
             return (
-                n ? ((u = !l), (d = l), (h = r), (g = a)) : ((h = i), (g = c)),
+                n ? ((u = !l), (d = l), (f = r), (g = a)) : ((f = i), (g = c)),
                 (0, m.Or)({
                     audio: u,
                     video: d,
-                    screenshare: h,
+                    screenshare: f,
                     liveStage: !1,
                     isCurrentUserConnected: n,
                     activity: g,
                 })
             );
         })(U),
-        W = F > 0 ? (0, b.N)(F) : null,
+        W = V > 0 ? (0, b.N)(V) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
     return (0, r.jsxs)(g.H, {
         children: [
-            (0, r.jsx)(h.Z, {
-                selected: V,
+            (0, r.jsx)(f.Z, {
+                selected: F,
                 hovered: M,
                 unread: H && !k,
                 className: Z.pill,
             }),
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(I.Z, {
                 onShow: K,
-                children: (0, r.jsx)(I.S, {
+                children: (0, r.jsx)(P.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: !0,
                         upperBadge: z,
@@ -136,14 +136,14 @@ function R() {
                                 {
                                     ariaLabel: w.intl.formatToPlainString(w.t["/uzRsr"], {
                                         guildName: w.intl.string(w.t.wMWycn),
-                                        mentions: F,
+                                        mentions: V,
                                     }),
-                                    "aria-selected": V,
+                                    "aria-selected": F,
                                     to: {
                                         pathname: N.Z5c.CHANNEL(N.I_8, G),
                                         state: A,
                                     },
-                                    selected: V || M,
+                                    selected: F || M,
                                     onMouseEnter: () => L(!0),
                                     onMouseLeave: () => L(!1),
                                     onMouseDown: function () {

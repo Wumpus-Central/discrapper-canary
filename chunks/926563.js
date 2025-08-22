@@ -48,7 +48,6 @@ function b(t) {
                         }),
                     }),
                     (0, l.jsx)(m.Z, {
-                        location: "CustomStatusUserProfilePreview",
                         user: e,
                         themeType: p.l.POPOUT,
                         previewText: n,

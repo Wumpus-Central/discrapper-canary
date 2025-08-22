@@ -458,7 +458,6 @@ let eO = i.memo(function (e) {
                                     m === et.Z5c.COLLECTIBLES_SHOP ||
                                     (null == l ? void 0 : l.startsWith(et.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: _,
-                                listScrollerRef: O,
                                 locationState: {
                                     analyticsSource: {
                                         page: e_(l),
