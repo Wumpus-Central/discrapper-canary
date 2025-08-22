@@ -90521,7 +90521,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -93457,7 +93457,9 @@ html.disable-forced-colors * {
 }
 
 .editorFooterV2_cf6da1 {
-    gap: 12px
+    box-sizing: border-box;
+    gap: 12px;
+    max-width: 268px
 }
 
 .closeCircleButton_cf6da1 {
