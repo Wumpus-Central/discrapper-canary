@@ -75251,7 +75251,7 @@ html .progress__61462 {
     margin-bottom: 30px
 }
 
-.header__61e0e {
+.header__1aec9 {
     font-size: 72px;
     font-style: italic;
     font-weight: 900;
@@ -75261,7 +75261,7 @@ html .progress__61462 {
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
-    .header__61e0e.responsive__61e0e {
+    .header__1aec9.responsive__1aec9 {
         font-size: 42px;
         letter-spacing: -.84px;
         line-height: 90%
@@ -75281,17 +75281,6 @@ html .progress__61462 {
     z-index: -1
 }
 
-@container premium-marketing-page-container (max-width: 720px) {
-
-    .boltTrinket__24d89,
-    .carTrinket__24d89,
-    .hammerTrinket__24d89,
-    .keyTrinket__24d89,
-    .starTrinket__24d89 {
-        width: 60px
-    }
-}
-
 .jumpingWumpusContainer__82b10 {
     left: 50%;
     position: absolute;
@@ -75303,46 +75292,54 @@ html .progress__61462 {
     height: 283px
 }
 
-.bolt__82b10,
-.car__82b10,
-.hammer__82b10,
-.key__82b10,
-.star__82b10 {
+.boltContainer__82b10,
+.carContainer__82b10,
+.hammerContainer__82b10,
+.keyContainer__82b10,
+.starContainer__82b10 {
     position: absolute
 }
 
-.bolt__82b10 {
+.boltContainer__82b10 {
     left: 0;
     top: 200px
 }
 
-.car__82b10 {
+.carContainer__82b10 {
     right: 90px;
     top: -80px
 }
 
-.hammer__82b10 {
+.hammerContainer__82b10 {
     left: -65px;
     top: 40px
 }
 
-.key__82b10 {
+.keyContainer__82b10 {
     right: 50px;
     top: 185px
 }
 
-.star__82b10 {
+.starContainer__82b10 {
     left: 50px;
     top: -200px
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
-    .bolt__82b10 {
+    .boltContainer__82b10 {
         transform: translateY(75px)
     }
 
-    .key__82b10 {
+    .keyContainer__82b10 {
         transform: translateY(125px)
+    }
+
+    .boltTrinket__82b10,
+    .carTrinket__82b10,
+    .hammerTrinket__82b10,
+    .keyTrinket__82b10,
+    .starTrinket__82b10 {
+        width: 60px
     }
 }
 
@@ -75488,35 +75485,35 @@ html .progress__61462 {
     height: 293px
 }
 
-.bolt_d033b5,
-.car_d033b5,
-.hammer_d033b5,
-.key_d033b5,
-.star_d033b5 {
+.boltContainer_d033b5,
+.carContainer_d033b5,
+.hammerContainer_d033b5,
+.keyContainer_d033b5,
+.starContainer_d033b5 {
     position: absolute
 }
 
-.bolt_d033b5 {
+.boltContainer_d033b5 {
     right: -250px;
     top: 115px
 }
 
-.car_d033b5 {
+.carContainer_d033b5 {
     left: 40px;
     top: 270px
 }
 
-.hammer_d033b5 {
+.hammerContainer_d033b5 {
     right: 90px;
     top: 60px
 }
 
-.key_d033b5 {
+.keyContainer_d033b5 {
     left: -70px;
     top: 350px
 }
 
-.star_d033b5 {
+.starContainer_d033b5 {
     left: -135px;
     top: 110px
 }
@@ -75531,14 +75528,14 @@ html .progress__61462 {
         height: 200px
     }
 
-    .bolt_d033b5 {
+    .boltContainer_d033b5 {
         right: -100px;
         top: 325px
     }
 
-    .car_d033b5,
-    .key_d033b5,
-    .star_d033b5 {
+    .carContainer_d033b5,
+    .keyContainer_d033b5,
+    .starContainer_d033b5 {
         transform: translateX(30px) translateY(-50px)
     }
 }
@@ -75553,13 +75550,21 @@ html .progress__61462 {
         height: 170px
     }
 
-    .key_d033b5,
-    .star_d033b5 {
+    .keyContainer_d033b5,
+    .starContainer_d033b5 {
         transform: translateX(75px) translateY(-50px)
     }
 
-    .car_d033b5 {
+    .carContainer_d033b5 {
         transform: translateX(-75px) translateY(-50px)
+    }
+
+    .boltTrinket_d033b5,
+    .carTrinket_d033b5,
+    .hammerTrinket_d033b5,
+    .keyTrinket_d033b5,
+    .starTrinket_d033b5 {
+        width: 60px
     }
 }
 
@@ -77995,21 +78000,101 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     text-align: left
 }
 
-.flyingWumpusContainer_cc63c7 {
-    pointer-events: none;
-    position: absolute;
-    right: -50px;
-    top: calc(100% - 20px);
-    z-index: 2
-}
-
-.flyingWumpusAsset_cc63c7 {
-    height: 200px
+.header__36b3e {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 100%;
+    text-transform: uppercase
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
-    .flyingWumpusAsset_cc63c7 {
-        height: 150px
+    .header__36b3e.responsive__36b3e {
+        font-size: 42px;
+        letter-spacing: -.84px
+    }
+}
+
+@container premium-marketing-page-container (max-width: 540px) {
+    .header__36b3e.responsive__36b3e {
+        font-size: 38px;
+        letter-spacing: -.76px
+    }
+}
+
+.jumpingWumpusContainer_cc63c7 {
+    bottom: -100px;
+    left: calc(100% + 20px);
+    pointer-events: none;
+    position: absolute
+}
+
+.jumpingWumpus_cc63c7 {
+    height: 227px
+}
+
+.hammerContainer_cc63c7,
+.keyContainer_cc63c7,
+.starContainer_cc63c7 {
+    pointer-events: none;
+    position: absolute
+}
+
+.hammerContainer_cc63c7 {
+    right: 40px;
+    top: -50px
+}
+
+.keyContainer_cc63c7 {
+    left: -180px;
+    top: calc(100% + 20px)
+}
+
+.starContainer_cc63c7 {
+    left: -150px;
+    top: -50px
+}
+
+.starTrinket_cc63c7 {
+    height: 80px
+}
+
+.keyTrinket_cc63c7 {
+    height: 60px
+}
+
+.hammerTrinket_cc63c7 {
+    height: 30px
+}
+
+@container premium-marketing-page-container (max-width: 960px) {
+
+    .keyContainer_cc63c7,
+    .starContainer_cc63c7 {
+        transform: translateX(50px)
+    }
+
+    .jumpingWumpusContainer_cc63c7 {
+        transform: translateX(-50px)
+    }
+}
+
+@container premium-marketing-page-container (max-width: 720px) {
+    .jumpingWumpus_cc63c7 {
+        height: 163px
+    }
+
+    .keyContainer_cc63c7 {
+        transform: translateX(100px)
+    }
+
+    .starTrinket_cc63c7 {
+        height: 62px
+    }
+
+    .keyTrinket_cc63c7 {
+        height: 46px
     }
 }
 
@@ -78209,7 +78294,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: var(--space-64) 0 var(--space-128);
+    padding: 80px 0 var(--space-128);
     width: 100%
 }
 
@@ -78228,7 +78313,8 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .headerContainer__555fb {
-    max-width: 900px;
+    margin: 0 100px;
+    max-width: 625px;
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
@@ -78240,7 +78326,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 @container premium-marketing-page-container (max-width: 960px) {
     .headerContainer__555fb {
-        max-width: 600px
+        max-width: 500px
     }
 }
 
@@ -78276,7 +78362,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     height: 100px;
     margin-left: -182px;
     position: absolute;
-    top: 3%
+    top: 60px
 }
 
 .content_b9abc5 {
@@ -78336,32 +78422,33 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     }
 }
 
+.hammerContainer__627b9 {
+    left: 100%;
+    top: -25px
+}
+
 .hammerContainer__627b9,
 .keyContainer__627b9 {
     pointer-events: none;
     position: absolute
 }
 
-.hammerContainer__627b9 {
-    right: 0;
-    top: 0;
-    z-index: -1
-}
-
 .keyContainer__627b9 {
-    left: 50px;
-    top: 100px
+    bottom: -50px;
+    right: 100%
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
+    .hammerTrinket__627b9 {
+        height: 62px
+    }
 
-    .hammerTrinket__627b9,
     .keyTrinket__627b9 {
-        width: 60px
+        height: 60px
     }
 }
 
-.container__3902b {
+.container_eccf53 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -78372,26 +78459,28 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     width: 100%
 }
 
-.backButtonContainer__3902b {
+.backButtonContainer_eccf53 {
     grid-column: 1;
     grid-row: 1;
     justify-self: start;
-    margin-left: var(--space-16)
+    margin-left: var(--space-16);
+    z-index: 1
 }
 
-.content__3902b {
+.content_eccf53 {
     grid-column: 1;
     grid-row: 1;
     position: relative
 }
 
-.headerContainer__3902b {
+.headerContainer_eccf53 {
     justify-self: center;
     margin: 0 130px;
-    max-width: 700px;
+    max-width: 600px;
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
+    position: relative;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content
@@ -78581,6 +78670,10 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 .responsiveContainer_ca1a02 {
     container-name: premium-marketing-page-container;
     container-type: inline-size
+}
+
+.hiddenGradient_ca1a02:before {
+    display: none
 }
 
 .perksDiscoverability_ca1a02,
