@@ -74795,6 +74795,7 @@ html .progress__61462 {
     background: linear-gradient(180deg, #000, #19033d)
 }
 
+.customThemesBackground_abac7b,
 .yourSpaceBackground_abac7b {
     background: linear-gradient(180deg, #000, #2a1332)
 }
@@ -74824,6 +74825,7 @@ html .progress__61462 {
     background: linear-gradient(180deg, #f7f7fe 22.95%, #a9b7ff 153.33%)
 }
 
+.theme-light .customThemesBackground_abac7b,
 .theme-light .yourSpaceBackground_abac7b {
     background: linear-gradient(180deg, #f7f7fe 50%, #ffc6fd 153.33%)
 }
@@ -89926,7 +89928,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
