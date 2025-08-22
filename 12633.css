@@ -2172,6 +2172,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     max-width: 352px
 }
 
+@media (max-height:550px) {
+    .headerGraphicContainer__53cea>* {
+        max-height: 15vh
+    }
+}
+
 .headerLeading__53cea,
 .headerLeadingSpacer__53cea {
     margin-left: calc((var(--custom-modal-padding) - var(--space-8))*-1);
@@ -90521,7 +90527,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
