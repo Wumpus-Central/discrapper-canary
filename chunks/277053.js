@@ -73,7 +73,7 @@ function j(e) {
         n = b({}, e.permissionOverwrites);
     return null != t && null == n[t] && (n[t] = d.we(t)), n;
 }
-function A() {
+function x() {
     if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
     let e = C.getGuildId();
     (I = v = j(C)),
@@ -85,7 +85,7 @@ function A() {
         (E = h.QZA.CLOSED),
         O.clear();
 }
-class x extends (l = s.ZP.Store) {
+class A extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, f.Z);
     }
@@ -126,14 +126,14 @@ class x extends (l = s.ZP.Store) {
         return P;
     }
 }
-m(x, "displayName", "ChannelSettingsPermissionsStore");
-let Z = new x(u.Z, {
+m(A, "displayName", "ChannelSettingsPermissionsStore");
+let Z = new A(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
         if (null != C || t !== h.CoT.PERMISSIONS) return !1;
-        A();
+        x();
     },
-    CHANNEL_SETTINGS_PERMISSIONS_INIT: A,
+    CHANNEL_SETTINGS_PERMISSIONS_INIT: x,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
         let { id: t, allow: n, deny: i } = e,
             l = null == v ? void 0 : v[t];
@@ -157,7 +157,7 @@ let Z = new x(u.Z, {
         }
     },
     CHANNEL_SETTINGS_INIT: function () {
-        p.Z.getSection() === h.CoT.PERMISSIONS && A();
+        p.Z.getSection() === h.CoT.PERMISSIONS && x();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
         (E = h.QZA.CLOSED), (v = null), (I = null), (C = null), (S = null), (y = !1), O.clear(), (N = null), (T = null);
@@ -194,7 +194,7 @@ let Z = new x(u.Z, {
     },
     CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
         let { silent: t } = e;
-        t ? (E = h.QZA.OPEN) : ((E = h.QZA.CLOSED), A());
+        t ? (E = h.QZA.OPEN) : ((E = h.QZA.CLOSED), x());
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;

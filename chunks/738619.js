@@ -22,17 +22,17 @@ var n = i(951288),
     v = i(246642),
     O = i(624030),
     b = i(314897),
-    S = i(699516),
-    y = i(885110),
+    y = i(699516),
+    S = i(885110),
     E = i(111583),
     T = i(594174),
-    I = i(451478),
-    w = i(626135),
+    w = i(451478),
+    I = i(626135),
     Z = i(823379),
-    C = i(5192),
-    P = i(981631),
-    x = i(388032),
-    j = i(458182);
+    P = i(5192),
+    C = i(981631),
+    j = i(388032),
+    x = i(458182);
 function _(e, t, i) {
     return (
         t in e
@@ -76,7 +76,7 @@ class M extends r.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === N.indexOf(e) &&
-            (w.default.track(P.rMx.SHOW_TUTORIAL, {
+            (I.default.track(C.rMx.SHOW_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
             }),
@@ -88,11 +88,11 @@ class M extends r.PureComponent {
     render() {
         let { activity: e } = this.props;
         return (0, n.jsxs)("div", {
-            className: o()(j.activityInviteEducation, { [j.activityInviteEducationFadeIn]: this.state.fadeIn }),
+            className: o()(x.activityInviteEducation, { [x.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
-                (0, n.jsx)("div", { className: j.activityInviteEducationArrow }),
+                (0, n.jsx)("div", { className: x.activityInviteEducationArrow }),
                 (0, n.jsx)("span", {
-                    children: x.intl.format(x.t["i/MoCg"], {
+                    children: j.intl.format(j.t["i/MoCg"], {
                         game: e.name,
                         dismissOnClick: this.handleDismissInviteEducation,
                     }),
@@ -126,14 +126,14 @@ function F(e) {
         { rateLimitPerUser: f } = a,
         O = r.useRef(null),
         b = r.useRef(null),
-        [S, y] = r.useState(!1);
+        [y, S] = r.useState(!1);
     if (
         (r.useLayoutEffect(() => {
             if (null != O.current && null != b.current && g) {
                 let e = () => {
                     if (null != O.current && null != b.current) {
                         let e = O.current.getBoundingClientRect();
-                        b.current.scrollWidth + 48 > e.width ? y(!0) : y(!1);
+                        b.current.scrollWidth + 48 > e.width ? S(!0) : S(!1);
                     }
                 };
                 e();
@@ -157,60 +157,60 @@ function F(e) {
                   isFocused: i,
               })
             : null;
-    let [E, T, I] = s,
-        w = "";
+    let [E, T, w] = s,
+        I = "";
     1 === s.length
-        ? (w = x.intl.format(x.t.lJ9sZW, { a: E }))
+        ? (I = j.intl.format(j.t.lJ9sZW, { a: E }))
         : 2 === s.length
-          ? (w = x.intl.format(x.t.rB0CUV, {
+          ? (I = j.intl.format(j.t.rB0CUV, {
                 a: E,
                 b: T,
             }))
           : 3 === s.length
-            ? (w = x.intl.format(x.t.StKTho, {
+            ? (I = j.intl.format(j.t.StKTho, {
                   a: E,
                   b: T,
-                  c: I,
+                  c: w,
               }))
-            : s.length > 3 && (w = x.intl.format(x.t.Q8lUnJ, {}));
-    let Z = S && s.length > 0 && s.length <= 3 ? x.intl.format(x.t["qD/0qa"], {}) : w;
+            : s.length > 3 && (I = j.intl.format(j.t.Q8lUnJ, {}));
+    let Z = y && s.length > 0 && s.length <= 3 ? j.intl.format(j.t["qD/0qa"], {}) : I;
     return (0, n.jsxs)("div", {
         className: o()(
-            j.typing,
+            x.typing,
             {
                 "stop-animation": !i,
-                [j.isComboing]: h && p,
-                [j.inTextChannel]: g,
+                [x.isComboing]: h && p,
+                [x.inTextChannel]: g,
             },
             l,
         ),
         children: [
             (0, n.jsxs)("div", {
-                className: j.typingDots,
+                className: x.typingDots,
                 ref: O,
                 children: [
                     s.length > 0 &&
                         !1 !== c &&
                         (0, n.jsx)(u.bbz, {
-                            className: j.ellipsis,
+                            className: x.ellipsis,
                             dotRadius: 3.5,
                             themed: !0,
                         }),
                     (0, n.jsx)("span", {
-                        className: j.text,
+                        className: x.text,
                         "aria-live": "polite",
                         "aria-atomic": !0,
                         children: Z,
                     }),
                     (0, n.jsx)("span", {
-                        className: j.text,
+                        className: x.text,
                         style: {
                             position: "absolute",
                             visibility: "hidden",
                         },
                         "aria-hidden": !0,
                         ref: b,
-                        children: w,
+                        children: I,
                     }),
                 ],
             }),
@@ -228,15 +228,15 @@ function D(e) {
     return a()(t)
         .keys()
         .filter((e) => e !== (null == i ? void 0 : i.id))
-        .reject((e) => S.Z.isBlockedOrIgnored(e))
+        .reject((e) => y.Z.isBlockedOrIgnored(e))
         .map((e) => T.default.getUser(e))
         .filter(Z.lm)
-        .map((t) => C.ZP.getName(e.guild_id, e.id, t))
+        .map((t) => P.ZP.getName(e.guild_id, e.id, t))
         .value();
 }
 function U(e) {
-    let t = (0, d.e7)([y.Z], () => y.Z.findActivity((e) => null != e.application_id));
-    return (0, d.e7)([O.Z, g.Z, S.Z], () => (0, p.Z)(e, t, O.Z, g.Z, S.Z)) ? t : null;
+    let t = (0, d.e7)([S.Z], () => S.Z.findActivity((e) => null != e.application_id));
+    return (0, d.e7)([O.Z, g.Z, y.Z], () => (0, p.Z)(e, t, O.Z, g.Z, y.Z)) ? t : null;
 }
 function R(e) {
     var t,
@@ -273,7 +273,7 @@ function R(e) {
                     activeTextColor: (0, u.dQu)(c.Z.colors.INTERACTIVE_NORMAL).hex(),
                     activityInviteEducationActivity: U(r),
                     typingUsers: s ? [] : a,
-                    isFocused: (0, d.e7)([I.Z], () => I.Z.isFocused()),
+                    isFocused: (0, d.e7)([w.Z], () => w.Z.isFocused()),
                     guildId: r.guild_id,
                     isComboing: null != l,
                     channel: r,

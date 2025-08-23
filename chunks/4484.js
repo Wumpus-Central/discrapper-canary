@@ -153,43 +153,48 @@ let x = i.forwardRef(function (e, t) {
         ),
         eS = i.useCallback(() => {
             let e,
-                t = et ? c.Z.getActiveCommand(x.id) : null;
-            if (null != t && null != t.options) {
-                let i = eT(t, !1);
-                e = i.values;
-                let a = p
+                t = b.bN.getNodesOfType(eI, ["gameMentionInput"]),
+                n = null != t ? [...t] : null,
+                r = et ? c.Z.getActiveCommand(x.id) : null,
+                i = !1;
+            if (null != r && null != r.options) {
+                let t = eT(r, !1);
+                e = t.values;
+                let n = p
                     .cu(eI)
-                    .filter((e) => !i.results[e].success)
+                    .filter((e) => !t.results[e].success)
                     .map((e) => {
-                        var n;
-                        return (null != (n = t.options) ? n : []).find((t) => t.name === e);
+                        var t;
+                        return (null != (t = r.options) ? t : []).find((t) => t.name === e);
                     });
-                for (let e of t.options)
-                    !e.required || e.name in i.values || (E.Q.insertCommandOption(eI, e), a.push(e));
-                if (a.length > 0) {
-                    var n, r;
-                    let e = a[0];
+                for (let e of r.options)
+                    !e.required || e.name in t.values || (E.Q.insertCommandOption(eI, e), n.push(e));
+                if (n.length > 0) {
+                    var a, o;
+                    let e = n[0];
                     E.Q.selectCommandOption(eI, e.name),
-                        f.S.dispatch(w.CkL.SHAKE_APP, {
-                            duration: 200,
-                            intensity: 2,
-                        }),
+                        (i = !0),
                         (0, l.yw)(w.rMx.APPLICATION_COMMAND_VALIDATION_FAILED, {
-                            application_id: null == t ? void 0 : t.applicationId,
-                            command_id: null == t || null == (n = t.rootCommand) ? void 0 : n.id,
-                            argument_type: s.jw[null != (r = null == e ? void 0 : e.type) ? r : 3],
+                            application_id: null == r ? void 0 : r.applicationId,
+                            command_id: null == r || null == (a = r.rootCommand) ? void 0 : a.id,
+                            argument_type: s.jw[null != (o = null == e ? void 0 : e.type) ? o : 3],
                             is_required: null == e ? void 0 : e.required,
                         });
-                    return;
                 }
             }
+            if (null != n) for (let [e, t] of n) (i = !0), E.Q.setNodes(eI, { error: !0 }, { at: t });
+            if (i)
+                return void f.S.dispatch(w.CkL.SHAKE_APP, {
+                    duration: 200,
+                    intensity: 2,
+                });
             null == X ||
                 X(
                     (0, g.sk)(b.bN.richValue(eI), {
                         mode: "raw",
                         ignoreTrailingEmptyNodes: !0,
                     }),
-                    t,
+                    r,
                     e,
                 );
         }, [x.id, eI, X, eT, et]);

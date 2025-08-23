@@ -11,9 +11,11 @@ n.d(t, {
     V6: () => y,
     V_: () => b,
     XZ: () => d,
+    _v: () => A,
     a_: () => s.a,
     cd: () => _,
     dr: () => c,
+    j5: () => C,
     l$: () => v,
     tD: () => p,
     tt: () => T,
@@ -127,3 +129,22 @@ let y = "1333839522189938740",
         r.X.PLAY_ON_DESKTOP_V2,
     ]),
     S = { is_targeted: !1 };
+var A = (function (e) {
+        return (
+            (e.SUGGESTED = "suggested"),
+            (e.MOST_RECENT = "most_recent"),
+            (e.EXPIRING_SOON = "expiring_soon"),
+            (e.RECENTLY_ENROLLED = "recently_enrolled"),
+            e
+        );
+    })({}),
+    C = (function (e) {
+        return (
+            (e.REWARD_VIRTUAL_CURRENCY = "reward_virtual_currency"),
+            (e.REWARD_COLLECTIBLE = "reward_collectible"),
+            (e.REWARD_IN_GAME = "reward_in_game"),
+            (e.QUEST_TYPE_VIDEO = "quest_type_video"),
+            (e.QUEST_TYPE_PLAY = "quest_type_play"),
+            e
+        );
+    })({});

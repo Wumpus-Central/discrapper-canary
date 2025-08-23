@@ -1,5 +1,5 @@
 i.d(t, {
-    AF: () => S,
+    AF: () => y,
     oL: () => O,
     xH: () => b,
 }),
@@ -204,7 +204,7 @@ function b(e, t) {
     let i = r.useContext(v);
     return o()(null != i, "[useForumPostComposerStore] Context should not be null"), i(e, t);
 }
-function S() {
+function y() {
     let e = r.useContext(v);
     return o()(null != e, "[useForumPostComposerStore] Context should not be null"), e;
 }

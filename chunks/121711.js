@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(775451),
     P = n(451478),
     j = n(526167),
-    A = n(63063),
-    x = n(113434),
+    x = n(63063),
+    A = n(113434),
     Z = n(833435),
     w = n(150560),
     L = n(672188),
@@ -114,7 +114,7 @@ let Q = function () {
         { showBetaTag: W } = S.Z.useExperiment({ location: B.dr.QUEST_HOME_DESKTOP }),
         Y = i.useCallback(() => {
             if (L) return void window.open(V.EYA.PAID_TERMS_ORBS);
-            window.open(A.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
+            window.open(x.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
         }, [L]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
     let K = L ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
@@ -198,7 +198,7 @@ let Q = function () {
                               }),
                               (0, r.jsx)(O.Z, {
                                   children:
-                                      e === x.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
+                                      e === A.e5.CLAIMED ? (0, r.jsx)(m, { onSelectTab: t }) : (0, r.jsx)(R.Z, {}),
                               }),
                           ],
                       }),
@@ -247,7 +247,7 @@ let Q = function () {
                                                       onTabSelect: t,
                                                   }),
                                               }),
-                                              e === x.e5.CLAIMED
+                                              e === A.e5.CLAIMED
                                                   ? (0, r.jsx)(m, { onSelectTab: t })
                                                   : (0, r.jsx)(R.Z, {}),
                                           ],

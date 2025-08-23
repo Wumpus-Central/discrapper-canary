@@ -44,8 +44,8 @@ let S = Object.freeze({
     });
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
-        x = 0 === s.length && !f,
+        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        A = 0 === s.length && !f,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
@@ -55,9 +55,9 @@ function j(e) {
         B = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                if (null != e && !x && !f) 336 * (s.length / M) <= e.height && j();
+                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && j();
             },
-            [x, f, s.length, M, j],
+            [A, f, s.length, M, j],
         ),
         H = i.useCallback(
             (e) => {
@@ -82,10 +82,10 @@ function j(e) {
                 query: I,
                 guildResults: s.map(h.Z.getGuild).filter(p.lm),
                 analyticsContext: Z,
-                categoryId: A,
+                categoryId: x,
             });
-        }, [Z, s, t, A, w, I]);
-    let z = i.useCallback((e) => n(e, A), [n, A]),
+        }, [Z, s, t, x, w, I]);
+    let z = i.useCallback((e) => n(e, x), [n, x]),
         W = i.useMemo(() => (f ? [s.length, 0] : [s.length]), [s.length, f]),
         Y = i.useCallback(
             (e, n, i) => {
@@ -105,7 +105,7 @@ function j(e) {
                                             className: C.headingFilters,
                                             children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })],
                                         }),
-                                    x && (0, r.jsx)(E.Z, { loadId: t }),
+                                    A && (0, r.jsx)(E.Z, { loadId: t }),
                                 ],
                             },
                             i,
@@ -114,21 +114,21 @@ function j(e) {
                         return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
-            [x, R, t],
+            [A, R, t],
         ),
         K = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = R ? 16 : 50;
-                        return x ? t + 448 : t;
+                        return A ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error("[getSectionHeight] Failed for section: ".concat(e));
                 }
             },
-            [x, R],
+            [A, R],
         ),
         q = i.useCallback(
             (e, t) => {
@@ -173,7 +173,7 @@ function j(e) {
                             style: n,
                             children: (0, r.jsx)(v.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, A, T),
+                                onClick: async (e) => await X(e, t, x, T),
                                 onView: (e) => z(e),
                             }),
                         },
@@ -181,7 +181,7 @@ function j(e) {
                     );
                 }
             },
-            [s, X, z, A],
+            [s, X, z, x],
         );
     i.useEffect(() => {
         let e = B.current;

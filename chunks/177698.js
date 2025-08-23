@@ -76,14 +76,14 @@ let O = (0, f.Z)(
                 disableGuildSelect: T,
                 disclosures: P,
                 integrationType: j,
-                pid: A,
-                signal: x,
+                pid: x,
+                signal: A,
             } = e,
             Z = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S),
             w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
-            let a = (0, h.jU)(A),
+            let a = (0, h.jU)(x),
                 w = i.z1l;
             null != L &&
             null !=
@@ -151,7 +151,7 @@ let O = (0, f.Z)(
                             },
                         }
                     );
-                })(Z, x);
+                })(Z, A);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(

@@ -26,8 +26,8 @@ var r,
     T = n(548816),
     P = n(925329),
     j = n(102172),
-    A = n(871118),
-    x = n(707409),
+    x = n(871118),
+    A = n(707409),
     Z = n(359110),
     w = n(769654),
     L = n(849171),
@@ -84,10 +84,10 @@ class $ extends l.Component {
             : Q(
                   (0, b.Z)(e)
                       ? (0, i.jsx)(X, { timestamps: t })
-                      : (0, i.jsx)(x.ZP, {
+                      : (0, i.jsx)(A.ZP, {
                             start: t.start,
                             end: t.end,
-                            location: x.ZP.Locations.USER_ACTIVITY,
+                            location: A.ZP.Locations.USER_ACTIVITY,
                             className: Y.__invalid_playTime,
                         }),
               );
@@ -546,7 +546,7 @@ let er = (e) => {
                 onClick: p ? o : void 0,
                 className: Y.applicationStreamingPreviewWrapper,
                 children: [
-                    (0, i.jsx)(A.Z, {
+                    (0, i.jsx)(x.Z, {
                         stream: a,
                         className: Y.applicationStreamingPreviewSize,
                     }),

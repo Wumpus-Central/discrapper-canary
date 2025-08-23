@@ -27,7 +27,7 @@ var i = n(756647),
     T = n(109815),
     P = n(186901),
     j = n(981631);
-function A(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function A(e) {
     }
     return e;
 }
-function x(e, t) {
+function A(e, t) {
     null != e &&
         v.default.track(j.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
@@ -90,7 +90,7 @@ let Z = {
                         var n, l;
                         return (0, r.jsx)(
                             e,
-                            ((n = A({}, t)),
+                            ((n = x({}, t)),
                             (l = l = { guildTemplate: i }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -133,7 +133,7 @@ let Z = {
                                 }),
                                 (0, l.ZDy)(async () => {
                                     let { default: e } = await n.e("38029").then(n.bind(n, 409858));
-                                    return (n) => (0, r.jsx)(e, A({ code: t }, n));
+                                    return (n) => (0, r.jsx)(e, x({ code: t }, n));
                                 }),
                                 e({ giftCode: a });
                         })
@@ -154,23 +154,23 @@ let Z = {
             } = e;
             switch ((S.ZP.focus(), t)) {
                 case P.jE.USER_SETTINGS:
-                    null != n && ((0, O.dL)(j.Z5c.SETTINGS(n.section, n.subsection)), x(n.fingerprint, (0, P.O)(t)));
+                    null != n && ((0, O.dL)(j.Z5c.SETTINGS(n.section, n.subsection)), A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.CHANGELOG:
                     null != n &&
                         ((0, O.dL)(C.Z.formatPathWithQuery(j.Z5c.CHANGELOGS(n.date), n.query)),
-                        x(n.fingerprint, (0, P.O)(t)));
+                        A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.LIBRARY:
-                    (0, O.dL)(j.Z5c.APPLICATION_LIBRARY), null != n && x(n.fingerprint, (0, P.O)(t));
+                    (0, O.dL)(j.Z5c.APPLICATION_LIBRARY), null != n && A(n.fingerprint, (0, P.O)(t));
                     break;
                 case P.jE.STORE_HOME:
-                    (0, O.dL)(j.Z5c.APPLICATION_STORE), null != n && x(n.fingerprint, (0, P.O)(t));
+                    (0, O.dL)(j.Z5c.APPLICATION_STORE), null != n && A(n.fingerprint, (0, P.O)(t));
                     break;
                 case P.jE.STORE_LISTING:
                     null != n &&
                         ((0, O.dL)(j.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)),
-                        x(n.fingerprint, (0, P.O)(t)));
+                        A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.PICK_GUILD_SETTINGS:
                     null != n &&
@@ -178,7 +178,7 @@ let Z = {
                             pathname: j.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search,
                         }),
-                        x(n.fingerprint, (0, P.O)(t)));
+                        A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.CHANNEL:
                     null != n &&
@@ -186,7 +186,7 @@ let Z = {
                             pathname: j.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search,
                         }),
-                        x(n.fingerprint, (0, P.O)(t)));
+                        A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.QUEST_HOME:
                     null != n
@@ -194,7 +194,7 @@ let Z = {
                               pathname: j.Z5c.QUEST_HOME,
                               hash: n.questId,
                           }),
-                          x(n.fingerprint, (0, P.O)(t)))
+                          A(n.fingerprint, (0, P.O)(t)))
                         : (0, O.dL)(j.Z5c.QUEST_HOME);
                     break;
                 case P.jE.DISCOVERY_GAME_RESULTS:
@@ -203,7 +203,7 @@ let Z = {
                             pathname: j.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: "?game=".concat(n.gameId),
                         }),
-                        x(n.fingerprint, (0, P.O)(t)));
+                        A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.OAUTH2:
                     let r = new URL(j.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
@@ -217,12 +217,12 @@ let Z = {
                             pathname: j.Z5c.COLLECTIBLES_SHOP,
                             search: n.search,
                         }),
-                        x(n.fingerprint, (0, P.O)(t)));
+                        A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.FEATURES:
                 case P.jE.SHOP:
                     (null == n ? void 0 : n.path) != null &&
-                        ((0, O.dL)({ pathname: n.path }), x(n.fingerprint, (0, P.O)(t)));
+                        ((0, O.dL)({ pathname: n.path }), A(n.fingerprint, (0, P.O)(t)));
                     break;
                 case P.jE.ACTIVITIES:
                     if (null != n)
@@ -250,7 +250,7 @@ let Z = {
                                     referrerId: d,
                                 });
                             })(n.applicationId, n.url),
-                            x(n.fingerprint, (0, P.O)(t)),
+                            A(n.fingerprint, (0, P.O)(t)),
                             !0
                         );
                     return !1;

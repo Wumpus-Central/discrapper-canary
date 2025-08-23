@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => x }), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -106,14 +106,14 @@ let T = [],
             ],
         });
     };
-function A(e) {
+function x(e) {
     let {
             className: t,
             renderModalProps: n,
             heroArt: l,
             heroArtClassName: P,
-            modalDismissibleContent: A,
-            modalTopExtra: x,
+            modalDismissibleContent: x,
+            modalTopExtra: A,
             header: Z,
             headerClassName: w,
             subHeader: L,
@@ -199,7 +199,7 @@ function A(e) {
             [k, l.type],
         ),
         i.useEffect(() => {
-            null != A && (0, b.kk)(A);
+            null != x && (0, b.kk)(x);
             let e = Date.now();
             return (
                 O.default.track(y.rMx.CHANGE_LOG_OPENED, { change_log_id: k }),
@@ -208,10 +208,10 @@ function A(e) {
                         change_log_id: k,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
-                        null != A && (0, m.Q3)(A, { dismissAction: v.L.DISMISS });
+                        null != x && (0, m.Q3)(x, { dismissAction: v.L.DISMISS });
                 }
             );
-        }, [A, k]),
+        }, [x, k]),
         (0, r.jsx)(u.Y0X, {
             "data-migration-pending": !0,
             className: a()(C.root, C.largeBorderRadius, t),
@@ -228,7 +228,7 @@ function A(e) {
                             onClick: async () => await G(),
                         }),
                     }),
-                    null == x ? void 0 : x(),
+                    null == A ? void 0 : A(),
                     (0, r.jsxs)(u.hzk, {
                         "data-migration-pending": !0,
                         className: C.content,

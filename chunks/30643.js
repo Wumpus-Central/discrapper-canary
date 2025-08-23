@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(237997),
     i = n(998502),
     l = n(576027),
@@ -50,7 +50,7 @@ function T(e) {
 }
 let P = T({}, l.A, d.Z, p.Z, h.Z, m.Z, g.Z, b.Z, _.Z, O.Z, E.Z, y.Z, I.Z, S.Z, C.Z, f.Z, v.Z),
     j = T({}, a.Z, s.M, c.f, u.n),
-    A = {
+    x = {
         server: o.Z,
         commands: P,
         events: j,

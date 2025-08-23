@@ -88,7 +88,7 @@ class N extends i.Z {
                 continue;
             }
         }
-        let a = (0, E.C)(y.dr.QUESTS_MANAGER);
+        let a = (0, E.CD)(y.dr.QUESTS_MANAGER);
         for (let t of Object.keys(i)) {
             let o = i[t];
             for (let i of n.values()) {

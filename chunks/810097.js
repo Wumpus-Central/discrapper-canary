@@ -1,26 +1,22 @@
 n.d(t, {
-    ZP: () => N,
-    _1: () => T,
-    jd: () => S,
+    ZP: () => T,
+    _1: () => y,
+    jd: () => O,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(704215),
-    c = n(481060),
-    u = n(951394),
-    d = n(266454),
-    f = n(314897),
-    _ = n(837411),
-    p = n(510659),
-    h = n(652853),
-    m = n(228168),
-    g = n(671955),
-    E = n(388032),
-    b = n(734623);
-function y(e, t, n) {
+    l = n(481060),
+    c = n(951394),
+    u = n(314897),
+    d = n(837411),
+    f = n(510659),
+    _ = n(228168),
+    p = n(388032),
+    h = n(734623);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +29,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +40,12 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,141 +57,138 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let T = 2700,
-    S = "> -# *",
-    A = {
-        [m.n_.AVATAR]: () => E.intl.string(E.t["fEUP/v"]),
-        [m.n_.STATUS]: () => E.intl.string(E.t.TKdBCw),
-        [m.n_.ACTIVITY]: () => E.intl.string(E.t.bSe71N),
+let y = 2700,
+    O = "> -# *",
+    v = {
+        [_.n_.AVATAR]: () => p.intl.string(p.t["fEUP/v"]),
+        [_.n_.STATUS]: () => p.intl.string(p.t.TKdBCw),
+        [_.n_.ACTIVITY]: () => p.intl.string(p.t.bSe71N),
     },
-    C = {
-        [m.n_.AVATAR]: () => E.intl.string(E.t.xvN0fX),
-        [m.n_.STATUS]: () => E.intl.string(E.t["C/vzS0"]),
-        [m.n_.ACTIVITY]: () => E.intl.string(E.t.ObfsSk),
+    I = {
+        [_.n_.AVATAR]: () => p.intl.string(p.t.xvN0fX),
+        [_.n_.STATUS]: () => p.intl.string(p.t["C/vzS0"]),
+        [_.n_.ACTIVITY]: () => p.intl.string(p.t.ObfsSk),
     };
-function N(e) {
+function T(e) {
     let {
             user: t,
             sourceType: n,
             isVisible: a,
-            isExpandable: y,
-            interactionSourceId: v,
-            targetRef: T,
-            onAction: S,
-            renderMoreButtonPopout: N,
+            isExpandable: m,
+            interactionSourceId: E,
+            targetRef: y,
+            onAction: O,
+            renderMoreButtonPopout: T,
         } = e,
-        R = i.useRef(null),
-        P = (0, s.e7)([f.default], () => f.default.getId() === t.id),
-        w = (0, _.Z)(t.id),
-        { themeType: D } = (0, h.z)(),
-        { onInteraction: x, onInteractionPopoutTargetRefChange: L } = (0, p.Xo)();
-    if (t.bot || P || !w) return null;
-    let j = () => {
-            L(T),
-                n === m.n_.AVATAR
-                    ? S({ action: "PRESS_REACT_AVATAR" })
-                    : n === m.n_.STATUS
-                      ? S({ action: "PRESS_REACT_CUSTOM_STATUS" })
-                      : S({ action: "PRESS_REACT_ACTIVITY" }),
-                null == x ||
-                    x({
-                        interactionType: m.P.REACT,
+        S = i.useRef(null),
+        A = (0, s.e7)([u.default], () => u.default.getId() === t.id),
+        C = (0, d.Z)(t.id),
+        { onInteraction: N, onInteractionPopoutTargetRefChange: R } = (0, f.Xo)();
+    if (t.bot || A || !C) return null;
+    let P = () => {
+            R(y),
+                n === _.n_.AVATAR
+                    ? O({ action: "PRESS_REACT_AVATAR" })
+                    : n === _.n_.STATUS
+                      ? O({ action: "PRESS_REACT_CUSTOM_STATUS" })
+                      : O({ action: "PRESS_REACT_ACTIVITY" }),
+                null == N ||
+                    N({
+                        interactionType: _.P.REACT,
                         interactionSource: n,
-                        interactionSourceId: v,
-                    }),
-                D === g.l.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                        interactionSourceId: E,
+                    });
         },
-        M = () => {
-            L(T),
-                n === m.n_.AVATAR
-                    ? S({ action: "PRESS_REPLY_AVATAR" })
-                    : n === m.n_.STATUS
-                      ? S({ action: "PRESS_REPLY_CUSTOM_STATUS" })
-                      : S({ action: "PRESS_REPLY_ACTIVITY" }),
-                null == x ||
-                    x({
-                        interactionType: m.P.REPLY,
+        w = () => {
+            R(y),
+                n === _.n_.AVATAR
+                    ? O({ action: "PRESS_REPLY_AVATAR" })
+                    : n === _.n_.STATUS
+                      ? O({ action: "PRESS_REPLY_CUSTOM_STATUS" })
+                      : O({ action: "PRESS_REPLY_ACTIVITY" }),
+                null == N ||
+                    N({
+                        interactionType: _.P.REPLY,
                         interactionSource: n,
-                        interactionSourceId: v,
-                    }),
-                D === g.l.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                        interactionSourceId: E,
+                    });
         };
-    return (0, r.jsxs)(u.ZP, {
-        className: o()(b.popover, {
-            [b.visible]: a,
-            [b.expandable]: y,
-            [b.statusPopover]: n === m.n_.STATUS,
-            [b.avatarPopover]: n === m.n_.AVATAR,
-            [b.activityPopover]: n === m.n_.ACTIVITY,
+    return (0, r.jsxs)(c.ZP, {
+        className: o()(h.popover, {
+            [h.visible]: a,
+            [h.expandable]: m,
+            [h.statusPopover]: n === _.n_.STATUS,
+            [h.avatarPopover]: n === _.n_.AVATAR,
+            [h.activityPopover]: n === _.n_.ACTIVITY,
         }),
         children: [
-            (0, r.jsx)(c.DY3, {
-                text: E.intl.string(E.t.nhaI4e),
+            (0, r.jsx)(l.DY3, {
+                text: p.intl.string(p.t.nhaI4e),
                 shouldShow: a,
-                className: b.tooltipContainer,
+                className: h.tooltipContainer,
                 delay: 0,
                 "aria-label": !1,
-                children: (0, r.jsx)(u.zx, {
-                    onClick: j,
-                    className: b.button,
-                    "aria-label": A[n](),
+                children: (0, r.jsx)(c.zx, {
+                    onClick: P,
+                    className: h.button,
+                    "aria-label": v[n](),
                     "aria-haspopup": "dialog",
-                    children: (0, r.jsx)(c.EO4, {
+                    children: (0, r.jsx)(l.EO4, {
                         size: "xs",
-                        className: b.icon,
+                        className: h.icon,
                     }),
                 }),
             }),
-            (0, r.jsx)(c.DY3, {
-                text: E.intl.string(E.t.RmDYKC),
+            (0, r.jsx)(l.DY3, {
+                text: p.intl.string(p.t.RmDYKC),
                 shouldShow: a,
-                className: b.tooltipContainer,
+                className: h.tooltipContainer,
                 delay: 0,
                 "aria-label": !1,
-                children: (0, r.jsx)(u.zx, {
-                    onClick: M,
-                    className: b.button,
-                    "aria-label": C[n](),
+                children: (0, r.jsx)(c.zx, {
+                    onClick: w,
+                    className: h.button,
+                    "aria-label": I[n](),
                     "aria-haspopup": "dialog",
-                    children: (0, r.jsx)(c.n$P, {
+                    children: (0, r.jsx)(l.n$P, {
                         size: "xs",
-                        className: b.icon,
+                        className: h.icon,
                     }),
                 }),
             }),
-            null == N
+            null == T
                 ? void 0
-                : N((e) => {
+                : T((e) => {
                       let t = () => {
                           var t;
-                          L(R), null == (t = e.onClick) || t.call(e);
+                          R(S), null == (t = e.onClick) || t.call(e);
                       };
-                      return (0, r.jsx)(c.DY3, {
-                          text: E.intl.string(E.t.UKOtz8),
+                      return (0, r.jsx)(l.DY3, {
+                          text: p.intl.string(p.t.UKOtz8),
                           shouldShow: a,
-                          className: b.tooltipContainer,
+                          className: h.tooltipContainer,
                           delay: 0,
                           "aria-label": !1,
                           children: (0, r.jsx)(
-                              u.zx,
-                              I(O({ ref: R }, e), {
+                              c.zx,
+                              b(g({ ref: S }, e), {
                                   onClick: t,
-                                  className: b.button,
-                                  "aria-label": E.intl.string(E.t.UKOtz8),
-                                  children: (0, r.jsx)(c.xhG, {
+                                  className: h.button,
+                                  "aria-label": p.intl.string(p.t.UKOtz8),
+                                  children: (0, r.jsx)(l.xhG, {
                                       size: "xs",
-                                      className: b.icon,
+                                      className: h.icon,
                                   }),
                               }),
                           ),

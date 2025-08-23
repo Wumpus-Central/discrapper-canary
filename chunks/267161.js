@@ -30,8 +30,8 @@ var r = n(951288),
     T = n(370774),
     P = n(340137),
     j = n(522474),
-    A = n(51596),
-    x = n(141321),
+    x = n(51596),
+    A = n(141321),
     Z = n(819439),
     w = n(296241),
     L = n(165017),
@@ -156,7 +156,7 @@ function et(e) {
                       : d.pathname.startsWith(z.Z5c.FAMILY_CENTER) &&
                         ((t = q.intl.string(Q.default.RZqaJi)), (S = (0, r.jsx)(u.BFJ, { size: "xs" })));
     let N = i.useCallback((e) => {
-        (0, A.ZN)("fast-travel");
+        (0, x.ZN)("fast-travel");
     }, []);
     return null == t || "" === t
         ? null
@@ -255,7 +255,7 @@ let ei = i.memo(function () {
     }, []);
     let v = (0, R.Ll)(),
         T = (0, c.e7)([G.Z, j.Z], () => (0, H.rB)()),
-        A = (function (e) {
+        x = (function (e) {
             let {
                 showBackForwardButtons: t,
                 showCollapsedSidebarIcons: n,
@@ -299,14 +299,14 @@ let ei = i.memo(function () {
                                       a &&
                                           (0, r.jsx)(b.Z, {
                                               firstElementFocusJumpSectionProps:
-                                                  "BACK_FORWARD_NAVIGATION" === A ? e : void 0,
+                                                  "BACK_FORWARD_NAVIGATION" === x ? e : void 0,
                                           }),
                                       _ &&
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)(
                                                       u.P3F,
-                                                      $(J({}, "SIDEBAR" === A ? e : {}), {
+                                                      $(J({}, "SIDEBAR" === x ? e : {}), {
                                                           className: X.button,
                                                           onClick: () => {
                                                               ee.setState({ isOpen: !ee.getState().isOpen });
@@ -328,14 +328,14 @@ let ei = i.memo(function () {
                                           }),
                                       O &&
                                           (0, r.jsx)(P.Z, {
-                                              focusSectionProps: "NOTIFICATIONS_INBOX" === A ? e : void 0,
+                                              focusSectionProps: "NOTIFICATIONS_INBOX" === x ? e : void 0,
                                           }),
                                   ],
                               }),
                               title: (0, r.jsx)(er, {
                                   withFastTravel: o,
                                   quickSwitcherInsteadOfTitle: s,
-                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === A ? e : void 0,
+                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === x ? e : void 0,
                               }),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
@@ -344,14 +344,14 @@ let ei = i.memo(function () {
                                           canShowReminder: !0,
                                           className: X.button,
                                       }),
-                                      E && (0, r.jsx)(x.Z, $(J({}, "RECENTS" === A ? e : {}), { className: X.button })),
+                                      E && (0, r.jsx)(A.Z, $(J({}, "RECENTS" === x ? e : {}), { className: X.button })),
                                       p
                                           ? (0, r.jsx)(C.Z, {
-                                                focusSectionProps: "HELP" === A ? e : void 0,
+                                                focusSectionProps: "HELP" === x ? e : void 0,
                                                 className: X.button,
                                             })
                                           : (0, r.jsx)(I.Z, {
-                                                focusSectionProps: "HELP" === A ? e : void 0,
+                                                focusSectionProps: "HELP" === x ? e : void 0,
                                                 className: X.button,
                                             }),
                                       (0, r.jsx)(S.Z, { className: X.button }),

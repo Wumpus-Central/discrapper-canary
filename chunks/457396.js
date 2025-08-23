@@ -31,8 +31,8 @@ var r = n(951288),
     T = n(104494),
     P = n(639119),
     j = n(655525),
-    A = n(93237),
-    x = n(138176),
+    x = n(93237),
+    A = n(138176),
     Z = n(924540),
     w = n(474486),
     L = n(497334),
@@ -94,9 +94,9 @@ let V = (e) => {
             ei = (0, T.Ng)(),
             el = (0, v.W)(),
             ea = (0, y.Vi)(),
-            eo = (0, A.HI)({ trialOffer: er }),
+            eo = (0, x.HI)({ trialOffer: er }),
             es = (0, R.V)(),
-            ec = (0, A.eW)(),
+            ec = (0, x.eW)(),
             eu = C.ZP.useExperiment({ location: "NitroTabButton" }),
             ed = (0, D.Kn)("NitroTabButton") && eu.cohort === C.xI.Control,
             { fractionalState: ep, startsAt: ef, endsAt: eh } = (0, d.Z)({ forceFetch: !0 }),
@@ -144,7 +144,7 @@ let V = (e) => {
         )
             (n = (0, r.jsx)(j.Z, {})), (E = 0);
         else if (eo) {
-            let e = (0, A.$q)();
+            let e = (0, x.$q)();
             (n = (0, r.jsx)(Z._y, {
                 isTabSelected: z,
                 badgeCopy: B.intl.string(B.t.OS9KPj),
@@ -209,7 +209,7 @@ let V = (e) => {
                         badge_decorator: E,
                         has_premium: J,
                     }),
-                        (0, A.ZL)();
+                        (0, x.ZL)();
                 }));
         let eS = (0, r.jsx)(
             c.Qj,
@@ -270,7 +270,7 @@ let V = (e) => {
             H),
         );
         return ec && eu.cohort === C.xI.Static
-            ? (0, r.jsx)(x.X, { children: eS })
+            ? (0, r.jsx)(A.X, { children: eS })
             : ed
               ? (0, r.jsx)(w.C, { children: eS })
               : eS;

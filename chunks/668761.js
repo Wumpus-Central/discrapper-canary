@@ -1,6 +1,6 @@
 n.d(t, {
-    f: () => h,
-    y: () => u,
+    f: () => p,
+    y: () => h,
 });
 var i = n(951288);
 n(647438);
@@ -8,23 +8,25 @@ var r = n(481060),
     o = n(312839),
     l = n(556296),
     s = n(13140),
-    a = n(981631),
-    c = n(987650),
-    d = n(388032);
-function u() {
-    let { trackView: e, trackClick: t } = (0, o.R)(c.n0.ClipsReminderNotification, {
-            notif_type: c.n0.ClipsReminderNotification,
+    a = n(435064),
+    c = n(981631),
+    d = n(987650),
+    u = n(388032);
+function h() {
+    let { trackView: e, trackClick: t } = (0, o.R)(d.n0.ClipsReminderNotification, {
+            notif_type: d.n0.ClipsReminderNotification,
         }),
-        n = l.ZP.getKeybindForAction(a.kg4.SAVE_CLIP);
-    if (null == n) return null;
-    let u = s.BB(n.shortcut, !0);
+        n = l.ZP.getKeybindForAction(c.kg4.SAVE_CLIP),
+        h = a.Z.getSettings().clipsEnabled;
+    if (null == n || !h) return null;
+    let p = s.BB(n.shortcut, !0);
     return {
-        title: d.intl.format(d.t.S5uhCA, {
-            keybind: u,
+        title: u.intl.format(u.t.S5uhCA, {
+            keybind: p,
             keybindHook: () =>
                 (0, i.jsx)("span", {
                     style: { display: "inline-block" },
-                    children: (0, i.jsx)(r.M2$, { shortcut: u }),
+                    children: (0, i.jsx)(r.M2$, { shortcut: p }),
                 }),
         }),
         icon: (0, i.jsx)(r.AlX, {
@@ -39,8 +41,8 @@ function u() {
         },
     };
 }
-function h(e) {
-    let { trackView: t, trackClick: n } = (0, o.R)(c.n0.ClipsNotification, { notif_type: c.n0.ClipsNotification });
+function p(e) {
+    let { trackView: t, trackClick: n } = (0, o.R)(d.n0.ClipsNotification, { notif_type: d.n0.ClipsNotification });
     return {
         title: e,
         icon: (0, i.jsx)(r.AlX, {

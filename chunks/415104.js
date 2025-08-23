@@ -109,11 +109,12 @@ function T(e) {
                     properties: {
                         content_id: d,
                         content_name: (0, s._b)(d),
+                        content_position: _,
                     },
                     sourceQuestContent: O,
                 }),
                 N && (0, f.loadVideoQuestModal)();
-        }, [R, a.id, d, N, O]),
+        }, [R, a.id, d, N, O, _]),
         w = i.useCallback(() => {
             T(!1),
                 R({
@@ -122,10 +123,11 @@ function T(e) {
                     properties: {
                         content_id: d,
                         content_name: (0, s._b)(d),
+                        content_position: _,
                     },
                     sourceQuestContent: O,
                 });
-        }, [R, a.id, d, O]),
+        }, [R, a.id, d, O, _]),
         D = i.useContext(p.t),
         { visibilityElementRef: x, almostVisibleInViewport: L } = I(
             null != (n = null == D || null == (t = D.current) ? void 0 : t.getScrollerNode()) ? n : null,

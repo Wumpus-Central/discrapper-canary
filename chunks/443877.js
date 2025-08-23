@@ -18,7 +18,7 @@ function p(e) {
         v = (0, n.e7)([c.Z], () => g && c.Z.can(h.Plq.ADD_REACTIONS, e), [g, e]),
         O = (0, r.ux)(p),
         [, b] = (0, s.AB)(p),
-        S = (0, l.$R)(e);
+        y = (0, l.$R)(e);
     return null == e
         ? {
               disableReactionReads: !0,
@@ -62,7 +62,7 @@ function p(e) {
                   isLurking: m,
                   isGuest: f,
                   communicationDisabled: b,
-                  isActiveChannelOrUnarchivableThread: S,
+                  isActiveChannelOrUnarchivableThread: y,
                   isAutomodQuarantined: O,
               }),
           )),

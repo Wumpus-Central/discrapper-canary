@@ -26,8 +26,8 @@ var r = n(951288),
     T = n(32300),
     P = n(371651),
     j = n(829907),
-    A = n(509003),
-    x = n(427679),
+    x = n(509003),
+    A = n(427679),
     Z = n(695346),
     w = n(592125),
     L = n(77498),
@@ -122,7 +122,7 @@ async function ee(e) {
         voice_channel_guild_id: p,
         distributor_game_id: n.sku,
         hidden_by_distributor: n.hidden,
-        game_metadata: (0, A.sD)(n),
+        game_metadata: (0, x.sD)(n),
     }),
         null != m && O.ZP.addExecutableTrackedByAnalytics(m);
 }
@@ -145,7 +145,7 @@ class et extends i.PureComponent {
         if (e.voiceChannelId !== o && null != e.voiceChannelId) {
             let t = O.ZP.getCurrentGameForAnalytics(),
                 n = null != t ? t.name : "",
-                r = x.Z.getStageInstanceByChannel(e.voiceChannelId),
+                r = A.Z.getStageInstanceByChannel(e.voiceChannelId),
                 i = v.ZP.getActiveEventByChannel(e.voiceChannelId);
             K.default.track(
                 X.rMx.LEAVE_VOICE_CHANNEL,
@@ -173,7 +173,7 @@ class et extends i.PureComponent {
         if (e.voiceChannelId !== o && null != o) {
             let e = O.ZP.getCurrentGameForAnalytics(),
                 t = null != e ? e.name : "",
-                n = x.Z.getStageInstanceByChannel(o),
+                n = A.Z.getStageInstanceByChannel(o),
                 r = v.ZP.getActiveEventByChannel(o);
             (0, d.yw)(X.rMx.CHANNEL_OPENED, $({}, (0, d.$H)(o))),
                 (0, f.a)(X.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: o });
@@ -348,8 +348,8 @@ function en() {
         N = (0, o.e7)([E.Z], () => E.Z.isConnected(), []),
         [T, P] = (0, o.Wu)([k.Z], () => [k.Z.isVideoEnabled(), k.Z.isScreenSharing()], []),
         j = (0, o.e7)([V.Z], () => V.Z.getPrimaryActivity(), []),
-        A = (0, o.e7)([O.ZP], () => O.ZP.getCurrentGameForAnalytics(), []),
-        x = (0, y.Z)(c),
+        x = (0, o.e7)([O.ZP], () => O.ZP.getCurrentGameForAnalytics(), []),
+        A = (0, y.Z)(c),
         Z = (0, o.e7)([C.Z], () => C.Z.getMessageRequestsCount(), []),
         L = {
             selectedChannelId: t,
@@ -364,15 +364,15 @@ function en() {
             voiceChannelGuildId: null == s ? void 0 : s.getGuildId(),
             voiceChannelType: null == s ? void 0 : s.type,
             voiceChannelBitrate: null == s ? void 0 : s.bitrate,
-            runningGame: A,
-            runningGamePid: null != A ? A.pid : null,
+            runningGame: x,
+            runningGamePid: null != x ? x.pid : null,
             gamePlatform: (0, u.Z)(j),
             gameName: null != j ? j.name : null,
             gameId: null != j ? j.application_id : null,
-            gameExeName: null != A ? A.exeName : null,
+            gameExeName: null != x ? x.exeName : null,
             hasPreviewEnabled: null == g ? void 0 : g.features.has(X.oNc.PREVIEW_ENABLED),
             isMemberPending: _,
-            postableChannelCount: x,
+            postableChannelCount: A,
             isTextInVoice: l,
             numMessageRequests: Z,
         },

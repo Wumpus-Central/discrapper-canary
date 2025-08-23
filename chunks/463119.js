@@ -26,7 +26,7 @@ var r = n(951288),
     T = n(921944),
     P = n(388032),
     j = n(677372);
-function A(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function A(e) {
     }
     return e;
 }
-function x(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -159,8 +159,8 @@ let w = (e) => {
                 y && (0, r.jsx)(L, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    x(
-                        A(
+                    A(
+                        x(
                             {
                                 selected: t,
                                 route: C,
@@ -182,7 +182,7 @@ let w = (e) => {
             ],
         });
     },
-    D = (e) => (0, r.jsx)(R, x(A({}, e), { children: (0, r.jsx)(w, {}) })),
+    D = (e) => (0, r.jsx)(R, A(x({}, e), { children: (0, r.jsx)(w, {}) })),
     k = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -278,10 +278,10 @@ let w = (e) => {
             children: (e) =>
                 (0, r.jsxs)(
                     R,
-                    x(
-                        A(
-                            x(
-                                A(
+                    A(
+                        x(
+                            A(
+                                x(
                                     {
                                         className:
                                             null != I.entryPointClassName ? (0, _.l)(j, I.entryPointClassName) : void 0,
@@ -334,7 +334,7 @@ let w = (e) => {
             delay: 100,
             hideOnClick: !1,
             "aria-label": t.title(),
-            children: (e) => (0, r.jsx)(R, x(A({}, n, e), { children: (0, r.jsx)(w, { color: t.badgeColor }) })),
+            children: (e) => (0, r.jsx)(R, A(x({}, n, e), { children: (0, r.jsx)(w, { color: t.badgeColor }) })),
         });
     },
     G = (e) => {
@@ -359,7 +359,7 @@ let w = (e) => {
             children: [
                 (0, r.jsxs)(
                     R,
-                    x(A({}, s), {
+                    A(x({}, s), {
                         onClick: () => a(T.L.TAKE_ACTION),
                         listItemRef: c,
                         children: [
@@ -402,13 +402,13 @@ let w = (e) => {
         if (null != a)
             switch (a.type) {
                 case C.k2.TOOLTIP:
-                    return (0, r.jsx)(U, x(A({}, s), { displayOptions: a }));
+                    return (0, r.jsx)(U, A(x({}, s), { displayOptions: a }));
                 case C.k2.COACHTIP:
-                    return (0, r.jsx)(M, x(A({}, s), { displayOptions: a }));
+                    return (0, r.jsx)(M, A(x({}, s), { displayOptions: a }));
                 case C.k2.BADGE:
-                    return (0, r.jsx)(D, A({}, s));
+                    return (0, r.jsx)(D, x({}, s));
                 case C.k2.COACHMARK:
-                    return (0, r.jsx)(G, x(A({ dismissContent: o }, s), { displayOptions: a }));
+                    return (0, r.jsx)(G, A(x({ dismissContent: o }, s), { displayOptions: a }));
             }
-        return (0, r.jsx)(R, A({}, s));
+        return (0, r.jsx)(R, x({}, s));
     };

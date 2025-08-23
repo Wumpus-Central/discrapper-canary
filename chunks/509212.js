@@ -553,7 +553,7 @@ let eU = (e, t) => {
 };
 function eG(e) {
     var t;
-    return (0, N.C)("QuestUtils") && (null != (t = null == e ? void 0 : e.length) ? t : 0) > 1;
+    return (0, N.CD)("QuestUtils") && (null != (t = null == e ? void 0 : e.length) ? t : 0) > 1;
 }
 function eB(e) {
     return (null == e ? void 0 : e.type) === o.X.PLAY_ON_DESKTOP;

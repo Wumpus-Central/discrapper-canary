@@ -36,7 +36,7 @@ function j(e, t, n, r) {
         return l.attach("useSound"), () => l.detach();
     });
 }
-function A() {
+function x() {
     return (
         j(
             [E.Z, I.Z],
@@ -63,7 +63,7 @@ function A() {
         null
     );
 }
-function x() {
+function A() {
     return (
         j(
             [E.Z, I.Z],
@@ -407,8 +407,8 @@ function B() {
 function V() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(A, {}),
             (0, r.jsx)(x, {}),
+            (0, r.jsx)(A, {}),
             (0, r.jsx)(Z, {}),
             (0, r.jsx)(w, {}),
             (0, r.jsx)(R, {}),

@@ -26,7 +26,7 @@ var r = n(392711),
     T = n(186901),
     P = n(981631);
 let j = (e) => (0, I.Z)(e).required().keys({ channel_id: e.string().required() });
-function A(e) {
+function x(e) {
     var t;
     let {
             args: { channel_id: n },
@@ -38,7 +38,7 @@ function A(e) {
     if ((0, s.aC)(i) && (null == (t = _.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0)
         throw new E.Z({ errorCode: P.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(i.id));
 }
-let x = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
+let A = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
 function Z(e) {
     let {
         args: { channel_id: t },
@@ -177,30 +177,30 @@ let w = {
     [P.zMe.MESSAGE_CREATE]: {
         scope: l.x.RPC,
         validation: j,
-        handler: A,
+        handler: x,
     },
     [P.zMe.MESSAGE_UPDATE]: {
         scope: l.x.RPC,
         validation: j,
-        handler: A,
+        handler: x,
     },
     [P.zMe.MESSAGE_DELETE]: {
         scope: l.x.RPC,
         validation: j,
-        handler: A,
+        handler: x,
     },
     [P.zMe.SPEAKING_START]: {
         scope: {
             [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, T.lH],
         },
-        validation: x,
+        validation: A,
         handler: Z,
     },
     [P.zMe.SPEAKING_STOP]: {
         scope: {
             [T.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ, T.lH],
         },
-        validation: x,
+        validation: A,
         handler: Z,
     },
     [P.zMe.GUILD_CREATE]: {
