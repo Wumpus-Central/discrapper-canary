@@ -377,8 +377,8 @@ class k extends v.ZP {
             "CANCELED" === this.status)
         )
             return void this.handleComplete(this.id);
-        this.item.platform === v.ow.WEB &&
-            (null == (e = this.item.compressionMetadata) ? void 0 : e.convertedMimeType) !== "image/webp" &&
+        this.item.platform !== v.ow.WEB ||
+            (null == (e = this.item.compressionMetadata) ? void 0 : e.earlyClipboardCompressionAttempted) ||
             (await this.maybeConvertToWebP());
         let a = await D.getUploadPayload(this),
             s = (0, I.F)(this.item.target),

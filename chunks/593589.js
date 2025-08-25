@@ -1,36 +1,36 @@
-t.d(n, { Z: () => h });
-var r = t(951288),
-    i = t(647438),
-    o = t(481060),
-    a = t(372900),
-    l = t(238246),
-    c = t(788983),
-    s = t(207035),
-    d = t(823748),
-    u = t(981631),
-    p = t(815523);
+n.d(t, { Z: () => f });
+var r = n(951288),
+    i = n(647438),
+    l = n(481060),
+    o = n(372900),
+    c = n(238246),
+    a = n(788983),
+    u = n(207035),
+    s = n(823748),
+    d = n(981631),
+    p = n(815523);
 function b(e) {
-    let { windowKey: n, channel: t } = e;
-    return (0, r.jsx)(l.Z, {
+    let { windowKey: t, channel: n } = e;
+    return (0, r.jsx)(c.Z, {
         withTitleBar: !0,
-        windowKey: n,
-        title: t.name,
-        channelId: t.id,
+        windowKey: t,
+        title: n.name,
+        channelId: n.id,
         contentClassName: p.popoutContent,
-        children: (0, r.jsx)(a.Z.Provider, {
-            value: t.guild_id,
-            children: (0, r.jsx)(d.Z, { providedChannel: t }),
+        children: (0, r.jsx)(o.Z.Provider, {
+            value: n.guild_id,
+            children: (0, r.jsx)(s.Z, { providedChannel: n }),
         }),
     });
 }
-function h(e, n) {
-    let t = (0, s.P)(n),
-        a = i.useCallback(() => {
-            c.bA(
-                "".concat(u.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
-                (n) =>
+function f(e, t) {
+    let n = (0, u.P)(t),
+        o = i.useCallback(() => {
+            a.bA(
+                "".concat(d.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
+                (t) =>
                     (0, r.jsx)(b, {
-                        windowKey: n,
+                        windowKey: t,
                         channel: e,
                     }),
                 {
@@ -39,11 +39,11 @@ function h(e, n) {
                 },
             );
         }, [e]);
-    return t
-        ? (0, r.jsx)(o.sNh, {
+    return n
+        ? (0, r.jsx)(l.sNh, {
               id: "channel-pop-out",
               label: "Open in Popout",
-              action: () => a(),
+              action: () => o(),
           })
         : null;
 }

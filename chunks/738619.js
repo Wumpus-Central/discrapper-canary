@@ -27,10 +27,10 @@ var n = i(951288),
     E = i(111583),
     T = i(594174),
     w = i(451478),
-    I = i(626135),
-    Z = i(823379),
-    P = i(5192),
-    C = i(981631),
+    C = i(626135),
+    I = i(823379),
+    Z = i(5192),
+    P = i(981631),
     j = i(388032),
     x = i(458182);
 function _(e, t, i) {
@@ -76,7 +76,7 @@ class M extends r.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === N.indexOf(e) &&
-            (I.default.track(C.rMx.SHOW_TUTORIAL, {
+            (C.default.track(P.rMx.SHOW_TUTORIAL, {
                 tutorial: "activity-invite-nux-inline",
                 application_id: e,
             }),
@@ -158,22 +158,22 @@ function F(e) {
               })
             : null;
     let [E, T, w] = s,
-        I = "";
+        C = "";
     1 === s.length
-        ? (I = j.intl.format(j.t.lJ9sZW, { a: E }))
+        ? (C = j.intl.format(j.t.lJ9sZW, { a: E }))
         : 2 === s.length
-          ? (I = j.intl.format(j.t.rB0CUV, {
+          ? (C = j.intl.format(j.t.rB0CUV, {
                 a: E,
                 b: T,
             }))
           : 3 === s.length
-            ? (I = j.intl.format(j.t.StKTho, {
+            ? (C = j.intl.format(j.t.StKTho, {
                   a: E,
                   b: T,
                   c: w,
               }))
-            : s.length > 3 && (I = j.intl.format(j.t.Q8lUnJ, {}));
-    let Z = y && s.length > 0 && s.length <= 3 ? j.intl.format(j.t["qD/0qa"], {}) : I;
+            : s.length > 3 && (C = j.intl.format(j.t.Q8lUnJ, {}));
+    let I = y && s.length > 0 && s.length <= 3 ? j.intl.format(j.t["qD/0qa"], {}) : C;
     return (0, n.jsxs)("div", {
         className: o()(
             x.typing,
@@ -200,7 +200,7 @@ function F(e) {
                         className: x.text,
                         "aria-live": "polite",
                         "aria-atomic": !0,
-                        children: Z,
+                        children: I,
                     }),
                     (0, n.jsx)("span", {
                         className: x.text,
@@ -210,7 +210,7 @@ function F(e) {
                         },
                         "aria-hidden": !0,
                         ref: b,
-                        children: I,
+                        children: C,
                     }),
                 ],
             }),
@@ -230,8 +230,8 @@ function D(e) {
         .filter((e) => e !== (null == i ? void 0 : i.id))
         .reject((e) => y.Z.isBlockedOrIgnored(e))
         .map((e) => T.default.getUser(e))
-        .filter(Z.lm)
-        .map((t) => P.ZP.getName(e.guild_id, e.id, t))
+        .filter(I.lm)
+        .map((t) => Z.ZP.getName(e.guild_id, e.id, t))
         .value();
 }
 function U(e) {
