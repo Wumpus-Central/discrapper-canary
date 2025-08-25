@@ -125,11 +125,10 @@ let W = (0, o.animated)(u.eTT),
                     showingQuarantineBanner: T,
                     hideSummaries: N = !1,
                     jumpBarClassName: w,
-                    typingGradient: R,
-                    isChatInputBottomAligned: D,
+                    isChatInputBottomAligned: R,
                 } = e,
-                [q, Y] = i.useState(null != (n = j.Z.isAtBottom(m.id)) && n),
-                K = i.useMemo(
+                [D, q] = i.useState(null != (n = j.Z.isAtBottom(m.id)) && n),
+                Y = i.useMemo(
                     () =>
                         y
                             ? (0, M.aJ)({
@@ -150,33 +149,33 @@ let W = (0, o.animated)(u.eTT),
                               }),
                     [y, S, o],
                 ),
-                X = (0, k.ZP)({
+                K = (0, k.ZP)({
                     messages: g,
                     channel: m,
                     compact: y,
                     hasUnreads: O,
                     focusId: E,
-                    placeholderHeight: K.totalHeight,
+                    placeholderHeight: Y.totalHeight,
                     canLoadMore: null == Z,
-                    handleScrollToBottom: i.useCallback(() => Y(!0), [Y]),
-                    handleScrollFromBottom: i.useCallback(() => Y(!1), [Y]),
-                    additionalMessagePadding: 48 * !!D,
+                    handleScrollToBottom: i.useCallback(() => q(!0), [q]),
+                    handleScrollFromBottom: i.useCallback(() => q(!1), [q]),
+                    additionalMessagePadding: 48 * !!R,
                 }),
-                Q = (0, L.Z)({
-                    scrollerRef: X.ref,
+                X = (0, L.Z)({
+                    scrollerRef: K.ref,
                     isEditing: null != E,
                     keyboardModeEnabled: I,
                     hasMoreAfter: g.hasMoreAfter,
                 }),
-                J = (0, c.e7)([C.Z], () =>
+                Q = (0, c.e7)([C.Z], () =>
                     P.Z.can(B.Plq.READ_MESSAGE_HISTORY, m) ? null : C.Z.getViewingRolesTimestamp(m.getGuildId()),
                 ),
                 {
-                    channelStreamMarkup: $,
-                    newMessagesBar: ee,
-                    jumpToPresentBar: et,
-                    forumPostActionBar: en,
-                    safetyWarningBanner: er,
+                    channelStreamMarkup: J,
+                    newMessagesBar: $,
+                    jumpToPresentBar: ee,
+                    forumPostActionBar: et,
+                    safetyWarningBanner: en,
                 } = (0, U.Z)({
                     channel: m,
                     messages: g,
@@ -185,16 +184,16 @@ let W = (0, o.animated)(u.eTT),
                     messageDisplayCompact: y,
                     channelStream: x,
                     uploads: v,
-                    loadMore: X.loadMore,
-                    scrollManager: X,
-                    specs: K,
-                    filterAfterTimestamp: null != Z ? Z : J,
+                    loadMore: K.loadMore,
+                    scrollManager: K,
+                    specs: Y,
+                    filterAfterTimestamp: null != Z ? Z : Q,
                     showingQuarantineBanner: T,
                     hideSummaries: N,
                     jumpToPresent: () => {
                         if (g.hasPresent()) {
                             var e;
-                            null == (e = X.ref.current) || e.scrollToBottom({ animate: !f.Z.useReducedMotion });
+                            null == (e = K.ref.current) || e.scrollToBottom({ animate: !f.Z.useReducedMotion });
                         } else d.Z.jumpToPresent(m.id, B.AQB);
                     },
                     jumpBarClassName: w,
@@ -224,55 +223,45 @@ let W = (0, o.animated)(u.eTT),
                         event: B.CkL.SCROLL_PAGE_DOWN,
                         handler: r,
                     });
-            })(X.ref);
-            let ei = (0, u.mFp)(),
-                el = (0, s.l2)(Q),
-                { ref: ea } = el,
-                eo = z(el, ["ref"]),
-                es = (0, h.Z)((e) => {
+            })(K.ref);
+            let er = (0, u.mFp)(),
+                ei = (0, s.l2)(X),
+                { ref: el } = ei,
+                ea = z(ei, ["ref"]),
+                eo = (0, h.Z)((e) => {
                     var t;
-                    (X.ref.current = e),
-                        (ea.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
-                }),
-                ec = i.useMemo(() => {
-                    let e = R && !q ? 96 : R ? 32 : 16,
-                        t = R && !q ? 24 : 24 * !!R;
-                    return {
-                        mask: "linear-gradient(180deg, black 0%, black calc(100% - "
-                            .concat(e, "px), rgba(0,0,0,0) calc(100% - ")
-                            .concat(t, "px), rgba(0,0,0,0) 100%)"),
-                    };
-                }, [R, q]);
+                    (K.ref.current = e),
+                        (el.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                });
             return (0, r.jsxs)(s.bG, {
-                navigator: Q,
+                navigator: X,
                 children: [
-                    null != er && er,
+                    null != en && en,
                     (0, r.jsxs)("div", {
                         className: a()(G.messagesWrapper, l, "group-spacing-".concat(o)),
                         children: [
-                            null == er && ee,
+                            null == en && $,
                             (0, r.jsxs)(
                                 W,
                                 V(
                                     H(
                                         {
-                                            style: D ? ec : void 0,
-                                            ref: es,
+                                            ref: eo,
                                             customTheme: !0,
                                             className: a()(p, G.scroller),
                                             contentClassName: G.scrollerContent,
-                                            onResize: X.handleResize,
-                                            onScroll: X.handleScroll,
-                                            onMouseDown: X.handleMouseDown,
-                                            onMouseUp: X.handleMouseUp,
+                                            onResize: K.handleResize,
+                                            onScroll: K.handleScroll,
+                                            onMouseDown: K.handleMouseDown,
+                                            onMouseUp: K.handleMouseUp,
                                         },
-                                        ei,
+                                        er,
                                     ),
                                     {
                                         tabIndex: -1,
                                         role: "group",
                                         children: [
-                                            en,
+                                            et,
                                             (0, r.jsxs)(
                                                 "ol",
                                                 V(
@@ -285,7 +274,7 @@ let W = (0, o.animated)(u.eTT),
                                                                 channelName: m.name,
                                                             }),
                                                         },
-                                                        eo,
+                                                        ea,
                                                     ),
                                                     {
                                                         children: [
@@ -295,7 +284,7 @@ let W = (0, o.animated)(u.eTT),
                                                                 "aria-hidden": !0,
                                                                 children: F.intl.string(F.t.Spb3s7),
                                                             }),
-                                                            $,
+                                                            J,
                                                             (0, r.jsx)("div", {
                                                                 className: a()({
                                                                     [G.scrollerSpacer]: !T,
@@ -317,7 +306,7 @@ let W = (0, o.animated)(u.eTT),
                                     },
                                 ),
                             ),
-                            et,
+                            ee,
                         ],
                     }),
                 ],
