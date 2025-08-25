@@ -126,7 +126,7 @@ let I = (e) => {
                         w && M
                             ? (0, r.jsx)(c.zxk, {
                                   size: "sm",
-                                  text: E.intl.string(E.t["0eHzpq"]),
+                                  text: E.intl.string(E.t.xcVcFR),
                                   onClick: () => {
                                       let e = t.state;
                                       e === j.tNA.CUSTOM
