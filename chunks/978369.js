@@ -1,88 +1,88 @@
 r.d(t, { Z: () => f }), r(539854), r(388685);
 var n = r(951288),
-    i = r(647438),
-    a = r(481060),
-    l = r(785717),
+    l = r(647438),
+    i = r(481060),
+    a = r(785717),
     o = r(86419),
     c = r(286957),
     s = r(388032),
     u = r(44258);
-let d = i.memo(function (e) {
-    let { currentTags: t, onTagSelect: r, onNoneSelect: i, onClose: l } = e;
-    return (0, n.jsx)(a.v2r, {
+let d = l.memo(function (e) {
+    let { currentTags: t, onTagSelect: r, onNoneSelect: l, onClose: a } = e;
+    return (0, n.jsx)(i.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOj),
-        onClose: l,
+        onClose: a,
         onSelect: () => {},
         children: Object.entries(c.aE).map((e) => {
-            let [l, o] = e,
-                u = ((e, l) => {
+            let [a, o] = e,
+                u = ((e, a) => {
                     let o = [];
                     return (
-                        l.type === c.kd.RADIO &&
+                        a.type === c.kd.RADIO &&
                             o.push(
                                 (0, n.jsx)(
-                                    a.k5B,
+                                    i.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
                                         label: s.intl.string(s.t.PoWNfX),
-                                        checked: !l.tags.some((e) => t.includes(e)),
-                                        action: () => i(l.tags),
+                                        checked: !a.tags.some((e) => t.includes(e)),
+                                        action: () => l(a.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        l.tags.forEach((i) => {
-                            let s = c.XV[i];
+                        a.tags.forEach((l) => {
+                            let s = c.XV[l];
                             null != s &&
-                                (l.type === c.kd.RADIO
+                                (a.type === c.kd.RADIO
                                     ? o.push(
                                           (0, n.jsx)(
-                                              a.k5B,
+                                              i.k5B,
                                               {
-                                                  id: i,
+                                                  id: l,
                                                   group: e,
                                                   label: s.getText(),
-                                                  checked: t.includes(i),
-                                                  action: () => r(i, !0),
+                                                  checked: t.includes(l),
+                                                  action: () => r(l, !0),
                                               },
-                                              i,
+                                              l,
                                           ),
                                       )
                                     : o.push(
                                           (0, n.jsx)(
-                                              a.S89,
+                                              i.S89,
                                               {
-                                                  id: i,
+                                                  id: l,
                                                   label: s.getText(),
-                                                  checked: t.includes(i),
-                                                  action: () => r(i, !1),
+                                                  checked: t.includes(l),
+                                                  action: () => r(l, !1),
                                               },
-                                              i,
+                                              l,
                                           ),
                                       ));
                         }),
                         o
                     );
-                })(l, o);
+                })(a, o);
             return (0, n.jsx)(
-                a.kSQ,
+                i.kSQ,
                 {
                     label: o.getLabel(),
                     children: u,
                 },
-                l,
+                a,
             );
         }),
     });
 });
 function f(e) {
     let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
-        b = (0, i.useRef)(null),
-        { trackUserProfileAction: p } = (0, l.KZ)(),
-        m = (0, i.useMemo)(() => (null != t ? t : []), [t]),
-        O = (0, i.useCallback)(
+        b = (0, l.useRef)(null),
+        { trackUserProfileAction: p } = (0, a.KZ)(),
+        m = (0, l.useMemo)(() => (null != t ? t : []), [t]),
+        O = (0, l.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = new Set(m);
@@ -102,7 +102,7 @@ function f(e) {
             },
             [m, p, r, f],
         ),
-        j = (0, i.useCallback)(
+        j = (0, l.useCallback)(
             (e) => {
                 let t = new Set(m);
                 e.forEach((e) => {
@@ -113,7 +113,7 @@ function f(e) {
             },
             [m, p, r, f],
         );
-    return (0, n.jsx)(a.yRy, {
+    return (0, n.jsx)(i.yRy, {
         targetElementRef: b,
         position: "right",
         align: "top",
@@ -136,7 +136,7 @@ function f(e) {
                     }
                 ),
                 children: (0, n.jsx)(
-                    a.P3F,
+                    i.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -166,9 +166,9 @@ function f(e) {
                         {
                             className: u.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOj),
-                            children: (0, n.jsx)(a.Text, {
+                            children: (0, n.jsx)(i.Text, {
                                 variant: "text-xxs/medium",
-                                color: "text-secondary",
+                                color: "none",
                                 children: s.intl.string(s.t.fZSej4),
                             }),
                         }),

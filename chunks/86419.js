@@ -1,34 +1,35 @@
 n.d(t, {
-    $b: () => D,
-    Bu: () => P,
-    ES: () => w,
-    M8: () => E,
-    RZ: () => R,
-    X6: () => L,
+    $b: () => x,
+    Bu: () => w,
+    ES: () => D,
+    M8: () => b,
+    RZ: () => P,
+    X6: () => j,
     kQ: () => M,
-    n$: () => N,
-    np: () => O,
-    ou: () => Z,
-    qH: () => A,
-    tk: () => j,
-    vH: () => x,
-    vI: () => g,
-    y8: () => C,
+    n$: () => R,
+    np: () => v,
+    ou: () => V,
+    qH: () => C,
+    tk: () => k,
+    vH: () => L,
+    vI: () => E,
+    y8: () => N,
 }),
     n(388685),
     n(642613),
     n(415506);
 var r = n(624238),
-    i = n(296009),
-    a = n(224706),
-    o = n(594174),
-    s = n(621853),
-    l = n(592183),
-    c = n(224724),
-    u = n(247397),
-    d = n(925434),
-    f = n(570911);
-function _(e, t, n) {
+    i = n(379405),
+    a = n(296009),
+    o = n(224706),
+    s = n(594174),
+    l = n(621853),
+    c = n(592183),
+    u = n(224724),
+    d = n(247397),
+    f = n(925434),
+    _ = n(570911);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +42,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +53,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,59 +70,59 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
-    return u.S5.includes(e);
-}
 function E(e) {
-    return u.uX.includes(e);
+    return d.S5.includes(e);
 }
 function b(e) {
+    return d.uX.includes(e);
+}
+function y(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-function y(e, t) {
+function O(e, t) {
     return [...e].sort(() => 0.5 - Math.random()).slice(0, t);
 }
-function O(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set(),
-        n = f.J6.filter((e) => !t.has(e)),
-        r = { applicationId: b(n.length > 0 ? n : f.J6) };
+        n = _.J6.filter((e) => !t.has(e)),
+        r = { applicationId: y(n.length > 0 ? n : _.J6) };
     return (
-        g(e) && (r.comment = Math.random() > 0.5 ? b(d.x) : void 0),
-        E(e) && (r.tags = Math.random() > 0.3 ? y(d.T, d.T.length) : void 0),
+        E(e) && (r.comment = Math.random() > 0.5 ? y(f.x) : void 0),
+        b(e) && (r.tags = Math.random() > 0.3 ? O(f.T, f.T.length) : void 0),
         r
     );
 }
-function v() {
-    var e;
-    let t = o.default.getCurrentUser(),
-        n = null != t ? s.Z.getUserProfile(t.id) : null;
-    return null != (e = null == n ? void 0 : n.widgets) ? e : [];
-}
 function I() {
     var e;
-    return c.Z.hasPendingChanges() ? (null != (e = c.Z.getPendingWidgets()) ? e : []) : v();
+    let t = s.default.getCurrentUser(),
+        n = null != t ? l.Z.getUserProfile(t.id) : null;
+    return null != (e = null == n ? void 0 : n.widgets) ? e : [];
 }
-function T(e) {
+function T() {
+    var e;
+    return u.Z.hasPendingChanges() ? (null != (e = u.Z.getPendingWidgets()) ? e : []) : I();
+}
+function S(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        r = v().find((t) => t.type === e);
-    return m(p({}, { id: null != (t = null == r ? void 0 : r.id) ? t : e }), {
+        r = I().find((t) => t.type === e);
+    return g(h({}, { id: null != (t = null == r ? void 0 : r.id) ? t : e }), {
         type: e,
         games: n,
     });
 }
-function S(e, t) {
+function A(e, t) {
     let n = e.findIndex((e) => e.id === t.id);
     if (-1 === n) return [...e, t];
     {
@@ -129,51 +130,53 @@ function S(e, t) {
         return (r[n] = t), r;
     }
 }
-function A(e) {
-    let t = I();
-    if (null != t.find((t) => t.type === e)) return;
-    let n = T(e);
-    l.Z.setPendingWidgets([...t, n]);
-}
 function C(e) {
-    let t = I().filter((t) => t.type !== e);
-    l.Z.setPendingWidgets(t);
+    let t = T();
+    if (null != t.find((t) => t.type === e)) return;
+    let n = S(e);
+    c.Z.setPendingWidgets([...t, n]);
 }
-function N(e, t, n) {
-    let r = I(),
-        i = r.find((t) => t.type === e);
-    if (null == i) return;
-    let a = i.games.find((e) => e.applicationId === t);
-    if (null == a) return;
-    let o = m(p({}, a), { tags: n }),
-        s = i.games.map((e) => (e.applicationId === t ? o : e)),
-        c = S(r, m(p({}, i), { games: s }));
-    l.Z.setPendingWidgets(c);
+function N(e) {
+    let t = T().filter((t) => t.type !== e);
+    c.Z.setPendingWidgets(t);
 }
 function R(e, t, n) {
-    let r = I().find((t) => t.type === e);
+    let r = Object.values(i._).length;
+    if (n.length > r) return;
+    let a = T(),
+        o = a.find((t) => t.type === e);
+    if (null == o) return;
+    let s = o.games.find((e) => e.applicationId === t);
+    if (null == s) return;
+    let l = g(h({}, s), { tags: n }),
+        u = o.games.map((e) => (e.applicationId === t ? l : e)),
+        d = A(a, g(h({}, o), { games: u }));
+    c.Z.setPendingWidgets(d);
+}
+function P(e, t, n) {
+    let r = T().find((t) => t.type === e);
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || null == i.tags || 0 === i.tags.length) return;
     let a = i.tags.filter((e) => e !== n);
-    N(e, t, a.length > 0 ? a : []);
+    R(e, t, a.length > 0 ? a : []);
 }
-function P(e, t, n) {
-    let r = I(),
+function w(e, t, n) {
+    let r = T(),
         i = r.find((t) => t.type === e);
     if (null == i) return;
     let a = i.games.find((e) => e.applicationId === t);
     if (null == a || n === a.comment) return;
-    let o = m(p({}, a), { comment: n }),
+    let o = g(h({}, a), { comment: n }),
         s = i.games.map((e) => (e.applicationId === t ? o : e)),
-        c = S(r, m(p({}, i), { games: s }));
-    l.Z.setPendingWidgets(c);
+        l = A(r, g(h({}, i), { games: s }));
+    c.Z.setPendingWidgets(l);
 }
-function w(e, t) {
-    var n, i, o;
+function D(e, t) {
+    var n, i, a;
     let s,
-        c = I(),
-        u = c.find((t) => t.type === e),
+        l = T(),
+        u = l.find((t) => t.type === e),
         d = r.k[e];
     if (null != u && (null != (i = null == (n = u.games) ? void 0 : n.length) ? i : 0) >= d) return;
     let f = {
@@ -181,23 +184,23 @@ function w(e, t) {
             comment: t.comment,
             tags: t.tags,
         },
-        _ = S(c, T(e, (s = null != u ? [...(null != (o = u.games) ? o : []), f] : [f])));
-    l.Z.setPendingWidgets(_), a.Z.getDetectableGamesSupplemental([t.applicationId]);
+        _ = A(l, S(e, (s = null != u ? [...(null != (a = u.games) ? a : []), f] : [f])));
+    c.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
-function D(e, t) {
-    let n = I(),
+function x(e, t) {
+    let n = T(),
         r = n.find((t) => t.type === e);
     if (null == r) return;
-    let i = S(
+    let i = A(
         n,
-        T(
+        S(
             e,
             (null != r.games ? r.games : []).filter((e) => e.applicationId !== t),
         ),
     );
-    l.Z.setPendingWidgets(i);
+    c.Z.setPendingWidgets(i);
 }
-function x(e) {
+function L(e) {
     let t = (e) => ({
             game_id: e.applicationId,
             comment: e.comment,
@@ -212,18 +215,18 @@ function x(e) {
         },
     };
 }
-async function L() {
-    let e = c.Z.getPendingWidgets();
+async function j() {
+    let e = u.Z.getPendingWidgets();
     if (null !== e)
         try {
-            await l.Z.savePendingWidgets(e);
+            await c.Z.savePendingWidgets(e);
         } catch (e) {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function j() {
+async function k() {
     try {
-        await l.Z.savePendingWidgets([]);
+        await c.Z.savePendingWidgets([]);
     } catch (e) {
         console.error("Failed to clear saved widgets", e);
     }
@@ -232,37 +235,37 @@ function M(e) {
     let t = r.k[e.type];
     return e.games.length >= t;
 }
-function k(e) {
+function U(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
-function U(e, t) {
-    return e.applicationId === t.applicationId && k(e.comment) === k(t.comment);
-}
 function G(e, t) {
+    return e.applicationId === t.applicationId && U(e.comment) === U(t.comment);
+}
+function B(e, t) {
     if (e.applicationId !== t.applicationId) return !1;
-    let n = k(e.tags),
-        r = k(t.tags);
+    let n = U(e.tags),
+        r = U(t.tags);
     return (
         (null === n && null === r) ||
         (null !== n && null !== r && n.length === r.length && n.every((e, t) => e === r[t]))
     );
 }
-function B(e, t) {
+function Z(e, t) {
     return e.applicationId === t.applicationId;
 }
-function Z(e, t, n) {
+function V(e, t, n) {
     let r;
     if (e.length !== t.length) return !1;
     switch (n) {
-        case i.l.FAVORITE_GAMES:
-            r = U;
-            break;
-        case i.l.CURRENT_GAMES:
+        case a.l.FAVORITE_GAMES:
             r = G;
             break;
-        case i.l.WANT_TO_PLAY_GAMES:
-        case i.l.PLAYED_GAMES:
+        case a.l.CURRENT_GAMES:
             r = B;
+            break;
+        case a.l.WANT_TO_PLAY_GAMES:
+        case a.l.PLAYED_GAMES:
+            r = Z;
             break;
         default:
             throw Error("Unknown widget type: ".concat(n));
