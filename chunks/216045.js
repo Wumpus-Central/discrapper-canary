@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
@@ -121,20 +121,13 @@ function q() {
     }, [n]);
 }
 function X() {
-    let [e, t] = (0, y.US)([l.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE]),
-        n = e === l.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE;
-    i.useEffect(() => {
-        n && t(B.L.TAKE_ACTION);
-    }, [n, t]);
-}
-function Q() {
     let [e, t] = (0, y.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
         n = e === l.z.DISPLAY_NAME_STYLES_NEW_BADGE;
     i.useEffect(() => {
         n && t(B.L.TAKE_ACTION);
     }, [n, t]);
 }
-function J() {
+function Q() {
     let e = (0, s.e7)([D.default], () => {
             let e = D.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
@@ -150,12 +143,12 @@ function J() {
         B = (0, s.e7)([w.Z], () => w.Z.showNotice()),
         F = M.dN.useSetting() && null != a ? O.ZP.parse(void 0, a).content : a,
         Y = L.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: z, newestAnalyticsLocation: J } = (0, m.ZP)(h.Z.USER_SETTINGS_USER_PROFILE);
-    q(), X(), Q(), i.useEffect(() => () => f.Z.wait(_.W3), []);
-    let [$, ee] = i.useState(!1),
-        { showRedesign: et } = j.b.useExperiment({ location: "profile customization" }),
-        en = !Y,
-        er = i.useRef(null);
+        { analyticsLocations: z, newestAnalyticsLocation: Q } = (0, m.ZP)(h.Z.USER_SETTINGS_USER_PROFILE);
+    q(), X(), i.useEffect(() => () => f.Z.wait(_.W3), []);
+    let [J, $] = i.useState(!1),
+        { showRedesign: ee } = j.b.useExperiment({ location: "profile customization" }),
+        et = !Y,
+        en = i.useRef(null);
     return t
         ? (0, r.jsx)(p.Z, {})
         : (0, r.jsxs)(m.Gt, {
@@ -197,27 +190,27 @@ function J() {
                       ),
                       children: (0, r.jsx)(U.Z, {}),
                   }),
-                  et && (0, r.jsx)(A.Z, {}),
+                  ee && (0, r.jsx)(A.Z, {}),
                   (0, r.jsx)(c.$, {
-                      innerRef: er,
-                      onChange: (e) => ee(e),
+                      innerRef: en,
+                      onChange: (e) => $(e),
                       threshold: 0.25,
-                      active: en,
+                      active: et,
                       children: (0, r.jsx)("div", {
-                          ref: er,
+                          ref: en,
                           children: (0, r.jsx)(C.Z, {
                               user: e,
-                              shouldShow: en,
-                              isVisible: $,
+                              shouldShow: et,
+                              isVisible: J,
                           }),
                       }),
                   }),
-                  en &&
+                  et &&
                       !B &&
                       (0, r.jsx)(v.p, {
                           className: V.floatingNitroUpsell,
-                          showUpsell: en && !$,
-                          text: Z.intl.format(Z.t.TmfgIy, { onClick: () => (0, I.y)({ analyticsSource: J }) }),
+                          showUpsell: et && !J,
+                          text: Z.intl.format(Z.t.TmfgIy, { onClick: () => (0, I.y)({ analyticsSource: Q }) }),
                           textVariant: "heading-md/medium",
                           button: (0, r.jsxs)(d.gtL, {
                               className: V.floatingNitroButton,
@@ -227,8 +220,8 @@ function J() {
                                   x.default.track(G.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
-                                      null == er ||
-                                          null == (e = er.current) ||
+                                      null == en ||
+                                          null == (e = en.current) ||
                                           e.scrollIntoView({ behavior: "smooth" });
                               },
                               color: u.zx.Colors.GREEN,
