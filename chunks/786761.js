@@ -168,8 +168,8 @@ function P(e) {
                   content: F,
                   referralTrialOfferId: h,
                   call: L(e.call, T.timestamp),
-                  messageSnapshots: k(e),
-                  reactions: M(null != y ? y : e.reactions, e.poll),
+                  messageSnapshots: M(e),
+                  reactions: k(null != y ? y : e.reactions, e.poll),
                   interaction: Z,
                   interactionData: null != v ? v : e.interaction_data,
                   interactionMetadata: e.interaction_metadata,
@@ -203,9 +203,11 @@ function D(e, t) {
     if (
         (null != t.call && (n = n.set("call", L(t.call, e.timestamp))),
         null != t.attachments && (n = n.set("attachments", x(t))),
+        null != t.application && (n = n.set("application", t.application)),
+        null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
         null != t.embeds && (n = n.set("embeds", j(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", k(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", M(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new f.Z(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
@@ -214,7 +216,7 @@ function D(e, t) {
         null != t.reactions)
     ) {
         var i;
-        n = n.set("reactions", M(null != (i = e.reactions) ? i : t.reactions));
+        n = n.set("reactions", k(null != (i = e.reactions) ? i : t.reactions));
     }
     return (
         null != t.poll && (n = n.set("poll", (0, l.Z)(t.poll))),
@@ -259,7 +261,7 @@ function j(e) {
     let t = e.embeds.map((t) => (0, m.kC)(e.channel_id, e.id, t));
     return (0, m.o3)(t);
 }
-function M(e, t) {
+function k(e, t) {
     var n;
     if (null == e && (null == t ? void 0 : t.results) == null) return [];
     let r =
@@ -288,7 +290,7 @@ function M(e, t) {
         return t.count < 0 && (t.count = 0), t.burst_count < 0 && (t.burst_count = 0), t;
     });
 }
-function k(e) {
+function M(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
