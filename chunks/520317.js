@@ -1,7 +1,5 @@
 e.exports = {
     content: "content_d97f89",
-    questionInput: "questionInput_d97f89",
-    hasError: "hasError_d97f89",
     answerInputsContainer: "answerInputsContainer_d97f89",
     defaultContainer: "defaultContainer_d97f89",
     addAnswerButton: "addAnswerButton_d97f89",

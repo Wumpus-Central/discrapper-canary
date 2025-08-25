@@ -121,12 +121,14 @@ function S(e) {
                                 color: "text-secondary",
                                 children: N.intl.string(N.t["6Y9q8f"]),
                             }),
-                            (0, r.jsx)(s.iS, {
+                            (0, r.jsx)("div", {
                                 className: E.editableSection,
-                                value: null != (t = n.description) ? t : "",
-                                placeholder: N.intl.string(N.t.Nvfows),
-                                onChange: h,
-                                maxLength: l.Us,
+                                children: (0, r.jsx)(o.Kx8, {
+                                    value: null != (t = n.description) ? t : "",
+                                    placeholder: N.intl.string(N.t.Nvfows),
+                                    onChange: h,
+                                    maxLength: l.Us,
+                                }),
                             }),
                         ],
                     }),

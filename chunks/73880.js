@@ -1,51 +1,46 @@
 n.d(t, {
-    Q8: () => d,
-    jn: () => C,
-    lX: () => m,
+    Q8: () => s,
+    jn: () => c,
+    lX: () => u,
 });
 var r = n(951288);
 n(647438);
-var l = n(120356),
-    o = n.n(l),
-    i = n(755721),
-    a = n(489813),
-    s = n(592286),
-    c = n(388032),
-    u = n(624463);
-function d(e) {
-    let { value: t, placeholder: n, onChange: l, disabled: a, className: c, autofocus: d } = e;
-    return (0, r.jsx)(i.iS, {
-        className: o()(u.paragraphFieldBody, c),
-        maxLength: s.RS,
+var l = n(481060),
+    o = n(489813),
+    i = n(592286),
+    a = n(388032);
+function s(e) {
+    let { value: t, placeholder: n, onChange: o, disabled: a, autofocus: s } = e;
+    return (0, r.jsx)(l.Kx8, {
+        maxLength: i.RS,
         value: null != t ? t : "",
         placeholder: null != n ? n : "",
-        onChange: l,
+        onChange: o,
         disabled: a,
-        autoFocus: d,
+        autoFocus: s,
         autosize: !0,
         showRemainingCharacterCount: !a,
     });
 }
-function C(e) {
+function c(e) {
     let { formField: t } = e;
-    return (0, r.jsx)(a.CA, {
+    return (0, r.jsx)(o.CA, {
         title: t.label,
-        children: (0, r.jsx)(d, {
-            className: u.disabledFieldBackground,
+        children: (0, r.jsx)(s, {
             value: t.response,
             disabled: !0,
         }),
     });
 }
-function m(e) {
+function u(e) {
     let { formField: t, autofocus: n, onChange: l } = e;
-    return (0, r.jsx)(a.hK, {
+    return (0, r.jsx)(o.hK, {
         title: t.label,
-        children: (0, r.jsx)(d, {
+        children: (0, r.jsx)(s, {
             value: t.response,
             onChange: l,
             autofocus: n,
-            placeholder: c.intl.string(c.t["Sqn+Wl"]),
+            placeholder: a.intl.string(a.t["Sqn+Wl"]),
         }),
     });
 }

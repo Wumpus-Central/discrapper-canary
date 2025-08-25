@@ -35,10 +35,10 @@ function I(e) {
             body: o,
             problems: h,
             transitionState: I,
-            feedbackProblems: x = {},
-            otherKey: L,
-            hasCloseButton: T,
-            onSubmit: D,
+            feedbackProblems: L = {},
+            otherKey: T,
+            hasCloseButton: D,
+            onSubmit: x,
             onClose: y,
             canDismissForever: M = !0,
             showHelpdeskLink: R = !0,
@@ -52,20 +52,20 @@ function I(e) {
         J = (0, O.Dt)(),
         G = (0, f.Z)(j),
         z = (0, f.Z)(P),
-        Y = (0, f.Z)(D),
-        K = (0, f.Z)(F),
+        K = (0, f.Z)(x),
+        Y = (0, f.Z)(F),
         X = (0, f.Z)(w),
-        Q = null != P ? x[P] : null,
+        Q = null != P ? L[P] : null,
         V = null != Q;
     return (
         a.useEffect(() => {
-            u().isEqual(k, h) || $((0, g.Bi)(h, L));
-        }, [h, k, L]),
+            u().isEqual(k, h) || $((0, g.Bi)(h, T));
+        }, [h, k, T]),
         (0, b.ZP)(() => () => {
-            Y.current({
+            K.current({
                 problem: z.current,
                 dontShowAgain: G.current,
-                feedback: K.current,
+                feedback: Y.current,
                 closeClicked: X.current,
             });
         }),
@@ -92,7 +92,7 @@ function I(e) {
                             className: r()(m.ratingBody, p.headerBody),
                             children: null != (t = null == Q ? void 0 : Q.subheader) ? t : o,
                         }),
-                        T
+                        D
                             ? (0, l.jsx)(s.olH, {
                                   className: m.modalCloseButton,
                                   onClick: function () {
@@ -113,7 +113,7 @@ function I(e) {
                                       options: U,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          B(t), Object.keys(x).includes(t) || y();
+                                          B(t), Object.keys(L).includes(t) || y();
                                       },
                                   }),
                               }),
@@ -121,11 +121,10 @@ function I(e) {
                             ? (0, l.jsxs)(s.xJW, {
                                   className: m.problemInfo,
                                   children: [
-                                      (0, l.jsx)(d.iS, {
+                                      (0, l.jsx)(s.Kx8, {
                                           value: F,
                                           maxLength: S.iF,
                                           onChange: Z,
-                                          className: p.textArea,
                                           placeholder: null != (n = Q.hint) ? n : N.intl.string(N.t.h95hcn),
                                       }),
                                       R ? (0, l.jsx)(C, {}) : null,

@@ -9,7 +9,6 @@ e.exports = {
     betaTag: "betaTag_ebb372",
     twoColumnFormSection: "twoColumnFormSection_ebb372",
     checklist: "checklist_ebb372",
-    textArea: "textArea_ebb372",
     socialLinksContainer: "socialLinksContainer_ebb372",
     socialLinksDropdownMin: "socialLinksDropdownMin_ebb372",
     socialLinksDropdownMax: "socialLinksDropdownMax_ebb372",

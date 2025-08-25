@@ -177,7 +177,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                 let { reason: t = "", emoji_name: n = "" } = e;
                 return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
             },
-            Y = [
+            K = [
                 {
                     title: E.intl.string(E.t["/SWsHx"]),
                     items: [
@@ -209,7 +209,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     ],
                 },
             ],
-            K = (e, t) => {
+            Y = (e, t) => {
                 let n = [...G];
                 (n[e] = t), U(n);
             };
@@ -393,7 +393,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         type: s.geA.DESCRIPTION,
                                                         children: E.intl.string(E.t.IBi6h4),
                                                     }),
-                                                    (0, r.jsx)(a.iS, {
+                                                    (0, r.jsx)(s.Kx8, {
                                                         value: null !== c.description ? c.description : "",
                                                         placeholder: E.intl.string(E.t.rFa9Ul),
                                                         onChange: (e) => {
@@ -466,10 +466,10 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                 children: E.intl.string(E.t.ozSi8v),
                                                             }),
                                                             (0, r.jsx)(
-                                                                a.iS,
+                                                                s.Kx8,
                                                                 {
                                                                     showCharacterCount: !0,
-                                                                    className: I.textArea,
+                                                                    rows: 10,
                                                                     value: Z.about,
                                                                     placeholder: E.intl.string(E.t.TduTbm),
                                                                     onChange: (e) => {
@@ -514,10 +514,10 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             "div",
                                                             {
                                                                 className: I.socialLinksContainer,
-                                                                onMouseOver: () => K(t, !0),
-                                                                onFocus: () => K(t, !0),
-                                                                onMouseOut: () => K(t, !1),
-                                                                onBlur: () => K(t, !1),
+                                                                onMouseOver: () => Y(t, !0),
+                                                                onFocus: () => Y(t, !0),
+                                                                onMouseOut: () => Y(t, !1),
+                                                                onBlur: () => Y(t, !1),
                                                                 children: [
                                                                     (0, r.jsx)(s.q4e, {
                                                                         className: Z.isPublished
@@ -669,7 +669,7 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                             className: I.checklist,
                                             children: (0, r.jsx)(u.Z, {
                                                 title: E.intl.string(E.t["2kCyn5"]),
-                                                children: Y,
+                                                children: K,
                                                 buttonLabel: E.intl.string(E.t.tVK6S0),
                                                 buttonCallback: () => W(!0),
                                                 disabled: !w || !k,

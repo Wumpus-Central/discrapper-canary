@@ -7,7 +7,6 @@ e.exports = {
     formGroup: "formGroup_e45886",
     splitGroup: "splitGroup_e45886",
     channelIcon: "channelIcon_e45886",
-    welcomeMessageTextInput: "welcomeMessageTextInput_e45886",
     uploadImage: "uploadImage_e45886",
     uploader: "uploader_e45886",
     uploadImageIcon: "uploadImageIcon_e45886",

@@ -333,7 +333,7 @@ class eR extends l.PureComponent {
                               (0, i.jsx)(m.xJW, {
                                   title: ea.intl.string(ea.t.qk2jdX),
                                   className: ec.marginTop20,
-                                  children: (0, i.jsx)(g.iS, {
+                                  children: (0, i.jsx)(m.Kx8, {
                                       placeholder: ea.intl.string(ea.t.DDjD1N),
                                       value: I.ZP.translateSurrogatesToInlineEmoji(null != (r = e.template) ? r : ""),
                                       onChange: this.handleChangeTemplate,
@@ -341,6 +341,7 @@ class eR extends l.PureComponent {
                                       maxLength: er.Vb,
                                       disabled: !b,
                                       autosize: !0,
+                                      showCharacterCount: !0,
                                   }),
                               }),
                               (0, i.jsx)(m.$i$, { className: s()(ec.marginTop40, ec.marginBottom40) }),

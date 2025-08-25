@@ -10,8 +10,8 @@ var a = n(951288),
     u = n(77498),
     m = n(626135),
     _ = n(837268),
-    h = n(371651),
-    x = n(981631),
+    x = n(371651),
+    h = n(981631),
     p = n(388032),
     g = n(361902);
 function v(e) {
@@ -27,11 +27,11 @@ function v(e) {
             let t = null != j ? j : null == (e = c.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
             return null == t ? null : u.Z.getDetectableGame(t);
         }),
-        B = (0, i.e7)([h.default], () => {
+        B = (0, i.e7)([x.default], () => {
             var e;
             let t =
                 null !=
-                (e = null === h.default || void 0 === h.default ? void 0 : h.default.getMostRecentOverlayRenderMethod())
+                (e = null === x.default || void 0 === x.default ? void 0 : x.default.getMostRecentOverlayRenderMethod())
                     ? e
                     : void 0;
             return null != t ? _.gl[t] : void 0;
@@ -58,7 +58,7 @@ function v(e) {
                 return;
             }
             N(!0),
-                await m.default.track(x.rMx.OVERLAY_DISABLED_SURVEY, {
+                await m.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: C,
                     comment: k,
                     client_setting_type: v,
@@ -74,7 +74,7 @@ function v(e) {
         };
     return (
         (0, d.ZP)(() => {
-            m.default.track(x.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+            m.default.track(h.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
         }),
         (0, a.jsxs)(l.Y0X, {
             transitionState: n,
@@ -145,7 +145,7 @@ function v(e) {
                                         className: g.commentHeader,
                                         children: p.intl.string(p.t.LYnrhY),
                                     }),
-                                    (0, a.jsx)(o.iS, {
+                                    (0, a.jsx)(l.Kx8, {
                                         autosize: !0,
                                         value: k,
                                         maxLength: 1000,

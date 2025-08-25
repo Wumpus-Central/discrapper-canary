@@ -1,10 +1,11 @@
-n.d(t, { z: () => h }), n(388685);
+n.d(t, { z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(377089),
-    s = n(231338);
-function l(e, t, n) {
+    a = n(755721),
+    o = n(481060),
+    s = n(377089),
+    l = n(231338);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +29,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,22 +46,22 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +78,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = [
+let h = [
         {
             id: "strength",
             label: "Strength",
@@ -103,17 +104,17 @@ let p = [
             label: "Constitution",
         },
     ],
-    h = {
+    m = {
         title: "Input Components",
         stories: [
             {
                 name: "TextInput",
                 component: function (e) {
                     var { leading: t, trailing: n } = e,
-                        l = f(e, ["leading", "trailing"]);
-                    let [u, _] = i.useState(""),
-                        h = (0, o.U)("UserSettingsDesignSystems"),
-                        [m, g] = i.useState(p),
+                        a = _(e, ["leading", "trailing"]);
+                    let [c, d] = i.useState(""),
+                        p = (0, s.U)("UserSettingsDesignSystems"),
+                        [m, g] = i.useState(h),
                         E = i.useCallback(
                             (e) => {
                                 g(m.filter((t) => !e.has(t.id)));
@@ -121,7 +122,7 @@ let p = [
                             [m],
                         );
                     function b(e) {
-                        if (h)
+                        if (p)
                             switch (e) {
                                 case "tags":
                                     return {
@@ -132,8 +133,8 @@ let p = [
                                     };
                                 case "icon":
                                     return {
-                                        icon: a.lOy,
-                                        onClick: s.dG,
+                                        icon: o.lOy,
+                                        onClick: l.dG,
                                         "aria-label": "At",
                                     };
                                 case "text":
@@ -143,34 +144,34 @@ let p = [
                             }
                     }
                     function y(e) {
-                        if (h)
+                        if (p)
                             if ("icon" === e)
                                 return {
-                                    icon: a.qJs,
-                                    onClick: s.dG,
+                                    icon: o.qJs,
+                                    onClick: l.dG,
                                     "aria-label": "At",
                                 };
                             else return;
                     }
-                    return (0, r.jsxs)(a.Kqy, {
+                    return (0, r.jsxs)(o.Kqy, {
                         gap: 16,
                         children: [
                             (0, r.jsx)(
-                                a.oil,
-                                d(c({}, l), {
-                                    value: u,
-                                    onChange: _,
+                                o.oil,
+                                f(u({}, a), {
+                                    value: c,
+                                    onChange: d,
                                     leading: b(t),
                                     trailing: y(n),
                                     maxLength: 500,
                                 }),
                             ),
                             "tags" === t
-                                ? (0, r.jsx)(a.zxk, {
+                                ? (0, r.jsx)(o.zxk, {
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",
-                                      onClick: () => g(p),
+                                      onClick: () => g(h),
                                   })
                                 : null,
                         ],
@@ -286,8 +287,8 @@ let p = [
                 component: function (e) {
                     let [t, n] = i.useState("");
                     return (0, r.jsx)(
-                        a.E1j,
-                        d(c({}, e), {
+                        o.E1j,
+                        f(u({}, e), {
                             query: t,
                             onChange: n,
                             onClear: e.clearable ? () => n("") : void 0,
@@ -339,8 +340,8 @@ let p = [
                 component: function (e) {
                     let [t, n] = i.useState("");
                     return (0, r.jsx)(
-                        a.Kx8,
-                        d(c({}, e), {
+                        o.Kx8,
+                        f(u({}, e), {
                             value: t,
                             onChange: n,
                         }),
@@ -360,7 +361,12 @@ let p = [
                     rows: {
                         label: "Rows",
                         type: "number",
-                        defaultValue: 4,
+                        defaultValue: 3,
+                    },
+                    autosize: {
+                        label: "Autosize",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     maxLength: {
                         label: "Max Length",
@@ -387,93 +393,93 @@ let p = [
                             error: t,
                             disabled: n,
                             placeholder: i,
-                            value: l = "",
-                            readOnly: u,
-                            helperText: f,
-                            successMessage: _,
-                            showCharacterCount: h,
+                            value: c = "",
+                            readOnly: d,
+                            helperText: _,
+                            successMessage: p,
+                            showCharacterCount: m,
                         } = e,
-                        m = (0, o.U)("UserSettingsDesignSystems"),
-                        g = {
-                            value: l,
+                        g = (0, s.U)("UserSettingsDesignSystems"),
+                        E = {
+                            value: c,
                             error: t,
                             disabled: n,
                             placeholder: i,
-                            readOnly: u,
-                            helperText: f,
-                            showCharacterCount: h,
-                            successMessage: _,
+                            readOnly: d,
+                            helperText: _,
+                            showCharacterCount: m,
+                            successMessage: p,
                         };
-                    return (0, r.jsxs)(a.Kqy, {
+                    return (0, r.jsxs)(o.Kqy, {
                         children: [
-                            (0, r.jsxs)(a.Kqy, {
+                            (0, r.jsxs)(o.Kqy, {
                                 children: [
-                                    (0, r.jsx)(a.xJW, {
+                                    (0, r.jsx)(o.xJW, {
                                         title: "Text Input",
-                                        children: (0, r.jsxs)(a.Kqy, {
+                                        children: (0, r.jsxs)(o.Kqy, {
                                             children: [
-                                                (0, r.jsx)(a.oil, c({}, g)),
-                                                (0, r.jsx)(a.oil, d(c({}, g), { clearable: !0 })),
-                                                m &&
+                                                (0, r.jsx)(o.oil, u({}, E)),
+                                                (0, r.jsx)(o.oil, f(u({}, E), { clearable: !0 })),
+                                                g &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsx)(a.xJW, {
+                                                            (0, r.jsx)(o.xJW, {
                                                                 title: "Leading Icons",
-                                                                children: (0, r.jsxs)(a.Kqy, {
+                                                                children: (0, r.jsxs)(o.Kqy, {
                                                                     children: [
                                                                         (0, r.jsx)(
-                                                                            a.oil,
-                                                                            d(c({}, g), {
+                                                                            o.oil,
+                                                                            f(u({}, E), {
                                                                                 leading: {
-                                                                                    icon: a.lOy,
-                                                                                    onClick: s.dG,
+                                                                                    icon: o.lOy,
+                                                                                    onClick: l.dG,
                                                                                     "aria-label": "At",
                                                                                 },
                                                                             }),
                                                                         ),
                                                                         (0, r.jsx)(
-                                                                            a.oil,
-                                                                            d(c({}, g), { leading: a.lOy }),
+                                                                            o.oil,
+                                                                            f(u({}, E), { leading: o.lOy }),
                                                                         ),
                                                                         (0, r.jsx)(
-                                                                            a.oil,
-                                                                            d(c({}, g), {
+                                                                            o.oil,
+                                                                            f(u({}, E), {
                                                                                 leading: "https://discord.gg/",
                                                                             }),
                                                                         ),
                                                                     ],
                                                                 }),
                                                             }),
-                                                            (0, r.jsx)(a.xJW, {
+                                                            (0, r.jsx)(o.xJW, {
                                                                 title: "Trailing Icons",
-                                                                children: (0, r.jsxs)(a.Kqy, {
+                                                                children: (0, r.jsxs)(o.Kqy, {
                                                                     children: [
                                                                         (0, r.jsx)(
-                                                                            a.oil,
-                                                                            d(c({}, g), {
+                                                                            o.oil,
+                                                                            f(u({}, E), {
                                                                                 trailing: {
-                                                                                    icon: a.lOy,
-                                                                                    onClick: s.dG,
+                                                                                    icon: o.lOy,
+                                                                                    onClick: l.dG,
                                                                                     "aria-label": "At",
                                                                                 },
                                                                             }),
                                                                         ),
                                                                         (0, r.jsx)(
-                                                                            a.oil,
-                                                                            d(c({}, g), { trailing: a.lOy }),
+                                                                            o.oil,
+                                                                            f(u({}, E), { trailing: o.lOy }),
                                                                         ),
                                                                     ],
                                                                 }),
                                                             }),
-                                                            (0, r.jsx)(a.xJW, {
+                                                            (0, r.jsx)(o.xJW, {
                                                                 title: "Tags",
                                                                 children: (0, r.jsx)(
-                                                                    a.oil,
-                                                                    d(c({}, g), {
+                                                                    o.oil,
+                                                                    f(u({}, E), {
                                                                         leading: {
                                                                             type: "tags",
                                                                             label: "Tags",
-                                                                            items: p.slice(0, 3),
+                                                                            items: h.slice(0, 3),
                                                                         },
                                                                     }),
                                                                 ),
@@ -483,25 +489,25 @@ let p = [
                                             ],
                                         }),
                                     }),
-                                    (0, r.jsx)(a.xJW, {
+                                    (0, r.jsx)(o.xJW, {
                                         title: "Text Input (Legacy)",
-                                        children: (0, r.jsx)(a.GSy, c({}, g)),
+                                        children: (0, r.jsx)(o.GSy, u({}, E)),
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(a.xJW, {
+                            (0, r.jsx)(o.xJW, {
                                 title: "Search Bar",
-                                children: (0, r.jsxs)(a.Kqy, {
+                                children: (0, r.jsxs)(o.Kqy, {
                                     children: [
-                                        (0, r.jsx)(a.E1j, {
-                                            query: l,
-                                            onChange: s.dG,
+                                        (0, r.jsx)(o.E1j, {
+                                            query: c,
+                                            onChange: l.dG,
                                             disabled: n,
                                             placeholder: i,
                                         }),
-                                        (0, r.jsx)(a.E1j, {
-                                            query: l,
-                                            onChange: s.dG,
+                                        (0, r.jsx)(o.E1j, {
+                                            query: c,
+                                            onChange: l.dG,
                                             size: "sm",
                                             disabled: n,
                                             placeholder: i,
@@ -509,9 +515,13 @@ let p = [
                                     ],
                                 }),
                             }),
-                            (0, r.jsx)(a.xJW, {
+                            (0, r.jsx)(o.xJW, {
                                 title: "Text Area",
-                                children: (0, r.jsx)(a.Kx8, c({}, g)),
+                                children: (0, r.jsx)(o.Kx8, u({}, E)),
+                            }),
+                            (0, r.jsx)(o.xJW, {
+                                title: "Text Area (Legacy)",
+                                children: (0, r.jsx)(a.iS, u({}, E)),
                             }),
                         ],
                     });

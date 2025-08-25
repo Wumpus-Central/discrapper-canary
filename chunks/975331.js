@@ -59,7 +59,6 @@ function x() {
                     (0, r.jsx)(s.q4e, {
                         "aria-labelledby": E,
                         options: _,
-                        className: b.formInput,
                         placeholder: f.intl.string(f.t.WZG1BQ),
                         value: n,
                         onChange: l,
@@ -84,7 +83,6 @@ function x() {
                     (0, r.jsx)(s.q4e, {
                         "aria-labelledby": I,
                         options: O,
-                        className: b.formInput,
                         value: x,
                         onChange: j,
                         maxVisibleItems: 5,

@@ -1,113 +1,109 @@
-n.d(e, { default: () => I }), n(388685);
+n.d(e, { default: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
     a = n(82659),
-    s = n(755721),
-    c = n(481060),
-    u = n(367907),
-    d = n(369994),
-    _ = n(681678),
-    p = n(177862),
-    f = n(981631),
+    s = n(481060),
+    c = n(367907),
+    u = n(369994),
+    d = n(681678),
+    _ = n(177862),
+    p = n(981631),
     O = n(484710),
-    h = n(388032),
-    E = n(833894);
-function I(t) {
-    let { guildId: e, messageId: n, transitionState: l, onClose: I } = t,
-        [b, A] = i.useState([]),
-        [y, T] = i.useState(),
-        x = i.useCallback(() => {
+    f = n(388032),
+    h = n(833894);
+function E(t) {
+    let { guildId: e, messageId: n, transitionState: l, onClose: E } = t,
+        [I, b] = i.useState([]),
+        [y, C] = i.useState(),
+        A = i.useCallback(() => {
             let t = {
-                raid_alert_type: p.wR.JOIN_RAID,
+                raid_alert_type: _.wR.JOIN_RAID,
                 raid_alert_id: n,
-                false_alarm_type: b.map((t) => t.toString()),
+                false_alarm_type: I.map((t) => t.toString()),
                 false_alarm_other_reason: y,
                 guild_id: e,
             };
-            (0, u.yw)(f.rMx.GUILD_RAID_FEEDBACK, t),
-                (0, d.Fi)(e, n, (0, p.J$)(b)),
-                I(),
-                _.Z.showSuccessToast(O.wQ.SAFETY_FEEDBACK_SUCCESS);
-        }, [I, n, e, y, b]),
-        C = [
+            (0, c.yw)(p.rMx.GUILD_RAID_FEEDBACK, t),
+                (0, u.Fi)(e, n, (0, _.J$)(I)),
+                E(),
+                d.Z.showSuccessToast(O.wQ.SAFETY_FEEDBACK_SUCCESS);
+        }, [E, n, e, y, I]),
+        T = [
             {
-                text: h.intl.string(h.t.yeaXw8),
-                value: p.$l.LEGITIMATE_ACTIVITY,
+                text: f.intl.string(f.t.yeaXw8),
+                value: _.$l.LEGITIMATE_ACTIVITY,
             },
             {
-                text: h.intl.string(h.t["o++3Bw"]),
-                value: p.$l.DM_SPAM,
+                text: f.intl.string(f.t["o++3Bw"]),
+                value: _.$l.DM_SPAM,
             },
             {
-                text: h.intl.string(h.t.UfHAwc),
-                value: p.$l.JOIN_RAID,
+                text: f.intl.string(f.t.UfHAwc),
+                value: _.$l.JOIN_RAID,
             },
             {
-                text: h.intl.string(h.t.K3UWeX),
-                value: p.$l.OTHER,
+                text: f.intl.string(f.t.K3UWeX),
+                value: _.$l.OTHER,
             },
         ];
-    function N(t) {
-        b.includes(t) ? A((e) => e.filter((e) => e !== t)) : A((e) => [...e, t]);
+    function g(t) {
+        I.includes(t) ? b((e) => e.filter((e) => e !== t)) : b((e) => [...e, t]);
     }
     return (0, r.jsx)(a.Modal, {
-        onClose: I,
+        onClose: E,
         transitionState: l,
-        title: h.intl.string(h.t["1zmw/P"]),
-        subtitle: h.intl.string(h.t.nF79oK),
+        title: f.intl.string(f.t["1zmw/P"]),
+        subtitle: f.intl.string(f.t.nF79oK),
         actions: [
             {
-                text: h.intl.string(h.t["ETE/oK"]),
-                onClick: I,
+                text: f.intl.string(f.t["ETE/oK"]),
+                onClick: E,
                 variant: "secondary",
             },
             {
-                text: h.intl.string(h.t.Gh3A0N),
-                onClick: x,
+                text: f.intl.string(f.t.Gh3A0N),
+                onClick: A,
             },
         ],
         children: (0, r.jsx)("div", {
-            className: E.options,
-            children: C.map((t) => {
+            className: h.options,
+            children: T.map((t) => {
                 let { text: e, value: n } = t;
                 return (0, r.jsxs)(
                     "div",
                     {
-                        className: o()(E.optionContainer, { [E.optionContainerOther]: n === p.$l.OTHER }),
+                        className: o()(h.optionContainer, { [h.optionContainerOther]: n === _.$l.OTHER }),
                         children: [
-                            (0, r.jsxs)(c.P3F, {
-                                className: E.optionText,
-                                onClick: () => N(n),
+                            (0, r.jsxs)(s.P3F, {
+                                className: h.optionText,
+                                onClick: () => g(n),
                                 children: [
                                     (0, r.jsx)("div", {
-                                        children: (0, r.jsx)(c.XZJ, {
-                                            type: c.XZJ.Types.INVERTED,
+                                        children: (0, r.jsx)(s.XZJ, {
+                                            type: s.XZJ.Types.INVERTED,
                                             size: 20,
-                                            value: b.includes(n),
-                                            onChange: () => N(n),
+                                            value: I.includes(n),
+                                            onChange: () => g(n),
                                         }),
                                     }),
-                                    (0, r.jsx)(c.Text, {
+                                    (0, r.jsx)(s.Text, {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
                                         children: e,
                                     }),
                                 ],
                             }),
-                            n === p.$l.OTHER &&
-                                b.includes(p.$l.OTHER) &&
+                            n === _.$l.OTHER &&
+                                I.includes(_.$l.OTHER) &&
                                 (0, r.jsx)("div", {
-                                    className: E.textboxContainer,
-                                    children: (0, r.jsx)(s.iS, {
-                                        className: E.falseAlarmReasonText,
-                                        placeholder: h.intl.string(h.t["PAM+JS"]),
-                                        onChange: (t) => T(t),
+                                    className: h.textboxContainer,
+                                    children: (0, r.jsx)(s.Kx8, {
+                                        placeholder: f.intl.string(f.t["PAM+JS"]),
+                                        onChange: C,
                                         value: y,
-                                        rows: 2,
                                         autoFocus: !0,
-                                        flex: !0,
                                     }),
                                 }),
                         ],

@@ -166,7 +166,7 @@ function E(e) {
                         title: y.intl.string(y.t["+gRCCw"]),
                         className: b.formItem,
                         children: [
-                            (0, l.jsx)(s.iS, {
+                            (0, l.jsx)(o.Kx8, {
                                 placeholder: y.intl.string(y.t["kWO/Ex"]),
                                 value: P,
                                 onChange: (e) => {
