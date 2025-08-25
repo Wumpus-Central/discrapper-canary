@@ -17,7 +17,7 @@ async function d(e, n) {
             let n = o.Z.getChannelId(),
                 t = c.Z.getChannel(e.channel_id);
             l()(null != t, "could not find channel"),
-                n !== t.id && (await s.TM(t, !0), await s.R5(t, null, !1)),
+                n !== t.id && (await s.TM(t, !0), await s.R5(t, null)),
                 await (0, a.RK)(t, !1, !0);
             break;
         }
