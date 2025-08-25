@@ -23,6 +23,7 @@ var r = n(230367),
             (e[(e.API = 1)] = "API"),
             (e[(e.APP = 2)] = "APP"),
             (e[(e.DEVELOPER_PORTAL = 3)] = "DEVELOPER_PORTAL"),
+            (e[(e.ADMIN_PORTAL = 4)] = "ADMIN_PORTAL"),
             e
         );
     })({}),
