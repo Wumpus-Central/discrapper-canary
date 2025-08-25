@@ -23938,7 +23938,8 @@ svg.radioIcon_c1e9c4 {
     white-space: var(--custom-display-name-styles-wrap)
 }
 
-.innerContainer_dfb989.chicle_dfb989 {
+.innerContainer_dfb989.chicle_dfb989.gradient_dfb989,
+.innerContainer_dfb989.chicle_dfb989.solid_dfb989 {
     margin: -.05em;
     padding: .05em
 }
@@ -89907,7 +89908,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

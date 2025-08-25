@@ -847,6 +847,7 @@ var v = (function (e) {
             (e.PIN_PERMISSION_MIGRATION_COMPLETE = "PIN_PERMISSION_MIGRATION_COMPLETE"),
             (e.GUILD_TAGS_BADGE_PACK_PETS = "GUILD_TAGS_BADGE_PACK_PETS"),
             (e.GUILD_TAGS_BADGE_PACK_FLEX = "GUILD_TAGS_BADGE_PACK_FLEX"),
+            (e.GAME_SERVER_HOSTING = "GAME_SERVER_HOSTING"),
             e
         );
     })({});
