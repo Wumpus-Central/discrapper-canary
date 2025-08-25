@@ -32,6 +32,7 @@ let u = (e) => {
                         containerVisibilityPercentage: t,
                         changeOpacity: !0,
                     },
+                    animationSpeedScale: 2,
                     children: (0, r.jsx)("img", {
                         src: c.Z,
                         alt: "",
@@ -48,6 +49,7 @@ let u = (e) => {
                 hammerAssetClassName: l.hammerTrinket,
                 keyAssetClassName: l.keyTrinket,
                 starAssetClassName: l.starTrinket,
+                animationSpeedScale: 2,
             }),
         ],
     });

@@ -30,66 +30,67 @@ let _ = (e) => {
             parallaxAnimationData: d,
             animateXAxisWiggle: f = !1,
             isMotionReduced: _ = !1,
-            children: p,
+            animationSpeedScale: p = 1,
+            children: h,
         } = e,
-        h = (0, o.q_F)(
+        m = (0, o.q_F)(
             null != u
                 ? {
                       from: { y: 0 },
                       to: { y: 1 },
-                      config: { duration: u.duration },
+                      config: { duration: u.duration * p },
                       loop: !0,
                   }
                 : { y: 0 },
         ),
-        m = (null == u ? void 0 : u.path) === "sine" ? Math.sin : Math.cos,
-        [g, E] = (0, i.useState)(1),
-        b = (0, o.q_F)(
+        g = (null == u ? void 0 : u.path) === "sine" ? Math.sin : Math.cos,
+        [E, b] = (0, i.useState)(1),
+        y = (0, o.q_F)(
             null != c
                 ? {
-                      from: { scale: g > 0 ? c.startScale : c.endScale },
-                      to: { scale: g > 0 ? c.endScale : c.startScale },
-                      config: { duration: c.duration },
-                      onRest: () => E((e) => -1 * e),
+                      from: { scale: E > 0 ? c.startScale : c.endScale },
+                      to: { scale: E > 0 ? c.endScale : c.startScale },
+                      config: { duration: c.duration * p },
+                      onRest: () => b((e) => -1 * e),
                   }
                 : { scale: 1 },
         ),
-        [y, O] = (0, i.useState)(1),
-        v = (0, o.q_F)(
+        [O, v] = (0, i.useState)(1),
+        I = (0, o.q_F)(
             null != l
                 ? {
-                      from: { blur: y > 0 ? l.startBlurRadius : l.endBlurRadius },
-                      to: { blur: y > 0 ? l.endBlurRadius : l.startBlurRadius },
-                      config: { duration: l.duration },
-                      onRest: () => O((e) => -1 * e),
+                      from: { blur: O > 0 ? l.startBlurRadius : l.endBlurRadius },
+                      to: { blur: O > 0 ? l.endBlurRadius : l.startBlurRadius },
+                      config: { duration: l.duration * p },
+                      onRest: () => v((e) => -1 * e),
                   }
                 : { blur: 0 },
         ),
-        I = (0, i.useMemo)(() => Math.round(750 + (200 * Math.random() - 100)), []),
-        T = 5,
-        [S, A] = (0, i.useState)(0),
-        [C, N] = (0, i.useState)(1),
-        R = (0, o.q_F)({
-            xOffset: S,
+        T = (0, i.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * p), [p]),
+        S = 5,
+        [A, C] = (0, i.useState)(0),
+        [N, R] = (0, i.useState)(1),
+        P = (0, o.q_F)({
+            xOffset: A,
             config: {
                 tension: 10,
                 friction: 10,
-                duration: I,
+                duration: T,
             },
         });
     return ((0, s.Z)(() => {
-        A(C * (0.5 * Math.random() * T + T / 2)), N((e) => -1 * e);
-    }, I),
+        C(N * (0.5 * Math.random() * S + S / 2)), R((e) => -1 * e);
+    }, T),
     _)
-        ? p
+        ? h
         : (0, r.jsx)(a.animated.div, {
               style: {
                   transform:
-                      null == (t = h.y)
+                      null == (t = m.y)
                           ? void 0
                           : t.to((e) => {
                                 if (null == u) return "translateY(0px)";
-                                let t = m(e * Math.PI * 2) * u.range,
+                                let t = g(e * Math.PI * 2) * u.range,
                                     n = 0;
                                 if (null != d) {
                                     let e = d.range * (1 - d.containerVisibilityPercentage);
@@ -97,11 +98,11 @@ let _ = (e) => {
                                 }
                                 return "translateY(".concat(t + n, "px)");
                             }),
-                  translateX: f ? R.xOffset.to((e) => "".concat(e, "px")) : 0,
-                  scale: b.scale,
-                  filter: null == (n = v.blur) ? void 0 : n.to((e) => "blur(".concat(e, "px)")),
+                  translateX: f ? P.xOffset.to((e) => "".concat(e, "px")) : 0,
+                  scale: y.scale,
+                  filter: null == (n = I.blur) ? void 0 : n.to((e) => "blur(".concat(e, "px)")),
                   opacity: null != d && d.changeOpacity ? d.containerVisibilityPercentage : 1,
               },
-              children: p,
+              children: h,
           });
 };

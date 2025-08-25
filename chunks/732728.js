@@ -11,5 +11,6 @@ let o = (e) => {
         keyContainerClassName: a.keyContainer,
         hammerAssetClassName: a.hammerTrinket,
         keyAssetClassName: a.keyTrinket,
+        animationSpeedScale: 2,
     });
 };
