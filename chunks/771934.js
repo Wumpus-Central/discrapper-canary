@@ -1,18 +1,20 @@
 n.d(t, {
-    HA: () => A,
-    HV: () => y,
+    Ac: () => E,
+    HA: () => N,
+    HV: () => v,
     J4: () => p,
     JL: () => m,
-    Om: () => O,
+    Om: () => I,
     P0: () => _,
-    Vb: () => I,
-    fR: () => E,
+    PI: () => y,
+    Vb: () => S,
+    fR: () => b,
     gG: () => h,
-    hf: () => S,
-    u7: () => T,
-    uf: () => v,
+    hf: () => C,
+    u7: () => A,
+    uf: () => T,
     w8: () => g,
-    z3: () => b,
+    z3: () => O,
     zW: () => f,
 });
 var r = n(647438),
@@ -44,25 +46,33 @@ let d = "manual",
     },
     E = () => {
         (d = "manual"),
-            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "gradient_direction" });
+            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "gradient_direction_input" });
     },
     b = () => {
         (d = "manual"),
-            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity" });
+            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "gradient_direction" });
     },
     y = () => {
-        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "base_theme" });
+        (d = "manual"),
+            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity_input" });
     },
     O = () => {
-        (d = "surprise_me"), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+        (d = "manual"),
+            l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity" });
     },
     v = () => {
-        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "base_theme" });
     },
     I = () => {
+        (d = "surprise_me"), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
+    },
+    T = () => {
+        (d = "manual"), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
+    },
+    S = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     },
-    T = (e, t, n, r, i) => {
+    A = (e, t, n, r, i) => {
         l.default.track(c.rMx.CUSTOM_THEMES_UPDATED, {
             colors: e,
             color_intensity: t,
@@ -73,7 +83,7 @@ let d = "manual",
         }),
             (d = "manual");
     },
-    S = (e, t) => {
+    C = (e, t) => {
         let { analyticsLocations: n } = (0, a.ZP)(t);
         r.useEffect(() => {
             e ||
@@ -83,7 +93,7 @@ let d = "manual",
                 });
         }, [e, n]);
     },
-    A = (e, t) => {
+    N = (e, t) => {
         let n = (0, s.Nj)(i.z.CUSTOM_THEME_COACHMARK);
         r.useEffect(() => {
             if (e && !n && t !== i.z.CUSTOM_THEME_COACHMARK) {
