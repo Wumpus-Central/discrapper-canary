@@ -43,6 +43,7 @@ var s = (function (e) {
         (e[(e.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
         (e[(e.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
         (e[(e.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
+        (e[(e.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         e
     );
 })({});
@@ -181,6 +182,12 @@ class l extends r.EventEmitter {
     }
     requestChannelStatuses(e) {
         this.send(36, { guild_id: e });
+    }
+    requestChannelInfo(e, t) {
+        this.send(43, {
+            guild_id: e,
+            fields: t,
+        });
     }
     requestChannelMemberCount(e, t) {
         this.send(39, {

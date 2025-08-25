@@ -688,11 +688,31 @@ Y(
             status: e.status,
         });
     }),
+    H(["VOICE_CHANNEL_START_TIME_UPDATE"], (e, t) => {
+        var n;
+        z({
+            type: t,
+            id: e.id,
+            guildId: e.guild_id,
+            voiceStartTime: null != (n = e.voice_start_time) ? n : void 0,
+        });
+    }),
     H(["CHANNEL_STATUSES"], (e, t) => {
         z({
             type: t,
             guildId: e.guild_id,
             channels: e.channels,
+        });
+    }),
+    H(["CHANNEL_INFO"], (e, t) => {
+        z({
+            type: t,
+            guildId: e.guild_id,
+            channels: e.channels.map((e) => ({
+                id: e.id,
+                status: e.status,
+                voiceStartTime: e.voice_start_time,
+            })),
         });
     }),
     H(["CHANNEL_MEMBER_COUNT_UPDATE"], (e, t) => {
