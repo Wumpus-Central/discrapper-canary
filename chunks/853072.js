@@ -6,15 +6,17 @@ var n = r(442837),
 function o(e) {
     let t = (0, i.N)(e);
     return (0, n.Wu)([a.default], () => {
-        let e = new Set();
+        let e = a.default.getCurrentUser(),
+            r = new Set();
         return (
-            t.forEach((t) => {
-                e.add(t.author_id),
-                    t.participants.forEach((t) => {
-                        e.add(t);
+            t.forEach((e) => {
+                r.add(e.author_id),
+                    e.participants.forEach((e) => {
+                        r.add(e);
                     });
             }),
-            Array.from(e)
+            Array.from(r)
+                .filter((t) => t !== (null == e ? void 0 : e.id))
                 .map((e) => a.default.getUser(e))
                 .filter(l.lm)
         );
