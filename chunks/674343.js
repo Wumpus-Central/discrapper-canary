@@ -1,36 +1,34 @@
-n.d(t, { Z: () => d }), n(953529);
+n.d(t, { Z: () => c }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
-    s = n(313201),
-    l = n(36703),
-    c = n(684554);
-let u = (0, s.hQ)();
-function d(e) {
-    let { volume: t, title: n, description: i, label: s, onVolumeChange: d, refreshStyles: f = !1 } = e;
+var i = n(481060),
+    a = n(313201),
+    o = n(36703),
+    s = n(684554);
+let l = (0, a.hQ)();
+function c(e) {
+    let { volume: t, title: n, description: a, label: c, onVolumeChange: u } = e;
     return (0, r.jsxs)("div", {
-        className: a()(c.soundboardRow, { [c.refresh]: f }),
+        className: s.soundboardRow,
         children: [
             (0, r.jsx)("div", {
-                className: c.soundboardColumn,
-                children: (0, r.jsx)(o.xJW, {
+                className: s.soundboardColumn,
+                children: (0, r.jsx)(i.xJW, {
                     title: n,
-                    children: (0, r.jsx)(o.R94, { children: i }),
+                    children: (0, r.jsx)(i.R94, { children: a }),
                 }),
             }),
             (0, r.jsx)("div", {
-                className: c.soundboardColumn,
-                children: (0, r.jsx)(o.xJW, {
-                    title: s,
-                    titleId: u,
-                    children: (0, r.jsx)(o.iRW, {
-                        initialValue: (0, l.P)(t),
+                className: s.soundboardColumn,
+                children: (0, r.jsx)(i.xJW, {
+                    title: c,
+                    titleId: l,
+                    children: (0, r.jsx)(i.iRW, {
+                        initialValue: (0, o.P)(t),
                         maxValue: 100,
                         onValueRender: (e) => "".concat(e.toFixed(0), "%"),
-                        onValueChange: d,
-                        "aria-labelledby": u,
+                        onValueChange: u,
+                        "aria-labelledby": l,
                     }),
                 }),
             }),

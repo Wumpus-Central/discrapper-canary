@@ -1,65 +1,49 @@
-n.d(t, { Z: () => E }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    c = n(921801),
-    u = n(131951),
-    d = n(962100),
-    f = n(445817),
-    _ = n(726985),
-    p = n(65154),
-    h = n(388032),
-    m = n(197571);
-function g() {
-    return (0, r.jsx)(l.ToO, {
-        type: l.sje.PRIMARY,
-        title: h.intl.string(h.t.XLw6FB),
-        body: h.intl.string(h.t.wVjKGh),
-        button: (0, r.jsx)("div", {
-            "data-button-hoisted-classname-wrapper": !0,
-            className: m.marginTop20,
-            children: (0, r.jsx)(l.zxk, {
-                variant: "primary",
-                size: "sm",
-                text: h.intl.string(h.t.BK8LKy),
-                onClick: () => (0, d.y)("Video unsupported browser"),
-            }),
-        }),
-    });
-}
-function E(e) {
-    let { refreshStyles: t = !1 } = e,
-        n = (0, s.e7)([u.Z], () => u.Z.supports(p.AN.VIDEO)),
-        [a, d] = i.useState(!1),
-        E = (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(c.F, {
-                    setting: _.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                    children: (0, r.jsx)(f.Z, {
-                        previewEnabled: a,
-                        onEnablePreview: () => d(!0),
-                        onCancelPreview: () => d(!1),
+n.d(t, { Z: () => y });
+var r = n(951288);
+n(647438);
+var i = n(100527),
+    a = n(906732),
+    o = n(131951),
+    s = n(603963),
+    l = n(738486),
+    c = n(359138),
+    u = n(417420),
+    d = n(973465),
+    f = n(546997),
+    _ = n(186934),
+    p = n(520384),
+    h = n(154784),
+    m = n(267006),
+    g = n(726985),
+    E = n(65154),
+    b = n(388032);
+function y() {
+    let e = o.Z.supports(E.AN.SIDECHAIN_COMPRESSION),
+        { analyticsLocations: t } = (0, a.ZP)([i.Z.USER_SETTINGS_VIDEO_TAB]);
+    return (0, r.jsxs)(a.Gt, {
+        value: t,
+        children: [
+            (0, r.jsxs)(s.Z, {
+                webSetting: g.s6.VOICE_AND_VIDEO_VIDEO,
+                children: [
+                    (0, r.jsxs)(l.Z, {
+                        children: [(0, r.jsx)(c.Z, {}), (0, r.jsx)(u.Z, {}), (0, r.jsx)(d.Z, {})],
                     }),
+                    (0, r.jsx)(h.Z, {}),
+                ],
+            }),
+            (0, r.jsx)(s.Z, {
+                title: b.intl.string(b.t.KDdjoq),
+                webSetting: g.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
+                children: (0, r.jsxs)(l.Z, {
+                    children: [(0, r.jsx)(p.Z, {}), e && (0, r.jsx)(_.Z, {}), (0, r.jsx)(f.Z, {})],
                 }),
-                !n && (0, r.jsx)(g, {}),
-            ],
-        });
-    return t
-        ? E
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsx)(l.y5t, {
-                      component: (0, r.jsx)(l.vwX, {
-                          tag: l.RB0.H1,
-                          className: m.marginBottom20,
-                          children: h.intl.string(h.t.LKzQSE),
-                      }),
-                      children: E,
-                  }),
-                  (0, r.jsx)(l.$i$, { className: o()(m.marginBottom40, m.marginTop40) }),
-              ],
-          });
+            }),
+            (0, r.jsx)(s.Z, {
+                title: b.intl.string(b.t["8/udY2"]),
+                webSetting: g.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED,
+                children: (0, r.jsx)(l.Z, { children: (0, r.jsx)(m.Z, {}) }),
+            }),
+        ],
+    });
 }

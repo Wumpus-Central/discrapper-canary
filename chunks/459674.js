@@ -10,20 +10,19 @@ var i = n(442837),
     u = n(726985),
     d = n(388032),
     f = n(197571);
-function _(e) {
-    let { refreshStyles: t = !1 } = e,
-        n = (0, i.e7)([l.ZP], () => l.ZP.disableVoiceChannelChangeAlert);
+function _() {
+    let e = (0, i.e7)([l.ZP], () => l.ZP.disableVoiceChannelChangeAlert);
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT,
         children: (0, r.jsx)(a.j7V, {
             className: f.marginBottom20,
             note: d.intl.string(d.t.YCCMkJ),
-            onChange: (e) => {
-                (0, c.Z)("switch_channel_warning_enabled", e, !n),
-                    o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !e });
+            onChange: (t) => {
+                (0, c.Z)("switch_channel_warning_enabled", t, !e),
+                    o.ZP.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: !t });
             },
-            value: !n,
-            hideBorder: t,
+            value: !e,
+            hideBorder: !0,
             children: (0, r.jsx)(a.X6q, {
                 variant: "text-md/medium",
                 color: "header-primary",

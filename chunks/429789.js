@@ -1,71 +1,58 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
-    s = n(481060),
-    l = n(846027),
-    c = n(313201),
-    u = n(921801),
-    d = n(131951),
-    f = n(726985),
-    _ = n(388032),
-    p = n(197571);
-let h = (0, c.hQ)();
-function m(e) {
-    let { refreshStyles: t } = e,
-        {
-            attenuation: n,
-            attenuateWhileSpeakingSelf: i,
-            attenuateWhileSpeakingOthers: c,
-        } = (0, o.cj)([d.Z], () => ({
-            attenuation: d.Z.getAttenuation(),
-            attenuateWhileSpeakingSelf: d.Z.getAttenuateWhileSpeakingSelf(),
-            attenuateWhileSpeakingOthers: d.Z.getAttenuateWhileSpeakingOthers(),
-        })),
-        m = (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(s.vwX, {
-                    id: h,
-                    tag: s.RB0.H5,
-                    className: p.marginBottom8,
-                    children: _.intl.string(_.t.oSdBvb),
-                }),
-                (0, r.jsx)(s.iRW, {
-                    initialValue: n,
-                    onValueChange: (e) => {
-                        l.Z.setAttenuation(e, i, c);
-                    },
-                    "aria-labelledby": h,
-                }),
-                (0, r.jsx)(s.R94, {
-                    className: a()({ [p.marginBottom20]: !t }),
-                    type: s.R94.Types.DESCRIPTION,
-                    children: _.intl.string(_.t["0A/8Rk"]),
-                }),
-                !t && (0, r.jsx)(s.$i$, { className: p.marginBottom20 }),
-                (0, r.jsx)(s.j7V, {
-                    value: i,
-                    onChange: (e) => l.Z.setAttenuation(n, e, c),
-                    hideBorder: t,
-                    children: _.intl.string(_.t["9dHxRU"]),
-                }),
-                (0, r.jsx)(s.j7V, {
-                    value: c,
-                    onChange: (e) => l.Z.setAttenuation(n, i, e),
-                    hideBorder: t,
-                    children: _.intl.string(_.t.SMt0Gh),
-                }),
-            ],
-        });
-    return (0, r.jsx)(u.F, {
-        setting: f.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
-        children: t
-            ? m
-            : (0, r.jsx)(s.hjN, {
-                  className: p.marginBottom20,
-                  children: m,
-              }),
+var i = n(442837),
+    a = n(481060),
+    o = n(846027),
+    s = n(313201),
+    l = n(921801),
+    c = n(131951),
+    u = n(726985),
+    d = n(388032),
+    f = n(197571);
+let _ = (0, s.hQ)();
+function p() {
+    let {
+        attenuation: e,
+        attenuateWhileSpeakingSelf: t,
+        attenuateWhileSpeakingOthers: n,
+    } = (0, i.cj)([c.Z], () => ({
+        attenuation: c.Z.getAttenuation(),
+        attenuateWhileSpeakingSelf: c.Z.getAttenuateWhileSpeakingSelf(),
+        attenuateWhileSpeakingOthers: c.Z.getAttenuateWhileSpeakingOthers(),
+    }));
+    return (0, r.jsxs)(l.F, {
+        setting: u.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION,
+        children: [
+            (0, r.jsx)(a.vwX, {
+                id: _,
+                tag: a.RB0.H5,
+                className: f.marginBottom8,
+                children: d.intl.string(d.t.oSdBvb),
+            }),
+            (0, r.jsx)(a.iRW, {
+                initialValue: e,
+                onValueChange: (e) => {
+                    o.Z.setAttenuation(e, t, n);
+                },
+                "aria-labelledby": _,
+            }),
+            (0, r.jsx)(a.R94, {
+                type: a.R94.Types.DESCRIPTION,
+                children: d.intl.string(d.t["0A/8Rk"]),
+            }),
+            (0, r.jsx)(a.j7V, {
+                value: t,
+                onChange: (t) => o.Z.setAttenuation(e, t, n),
+                hideBorder: !0,
+                children: d.intl.string(d.t["9dHxRU"]),
+            }),
+            (0, r.jsx)(a.j7V, {
+                value: n,
+                onChange: (n) => o.Z.setAttenuation(e, t, n),
+                hideBorder: !0,
+                children: d.intl.string(d.t.SMt0Gh),
+            }),
+        ],
     });
 }

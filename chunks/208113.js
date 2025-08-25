@@ -37,39 +37,31 @@ function p(e, t, n) {
         r
     );
 }
-function h(e) {
-    let { refreshStyles: t = !1 } = e,
-        {
-            audioSubsystem: n,
-            legacyAudioSubsystemSupported: h,
-            experimentalAudioSubsystemSupported: m,
-            automaticAudioSubsystemSupported: g,
-        } = (0, i.cj)([l.Z], () => ({
-            audioSubsystem: l.Z.getAudioSubsystem(),
-            legacyAudioSubsystemSupported: l.Z.supports(d.AN.LEGACY_AUDIO_SUBSYSTEM),
-            experimentalAudioSubsystemSupported: l.Z.supports(d.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
-            automaticAudioSubsystemSupported: l.Z.supports(d.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
-        })),
-        E = (0, r.jsx)(a.q4e, {
-            className: _.marginBottom20,
-            value: n,
-            options: p(h, m, g),
-            onChange: (e) => {
-                let t = () => o.Z.setAudioSubsystem(e);
-                (0, c.Z)(f.intl.string(f.t.uY7AcX), f.intl.string(f.t.gBqik5), t);
-            },
-        });
+function h() {
+    let {
+        audioSubsystem: e,
+        legacyAudioSubsystemSupported: t,
+        experimentalAudioSubsystemSupported: n,
+        automaticAudioSubsystemSupported: h,
+    } = (0, i.cj)([l.Z], () => ({
+        audioSubsystem: l.Z.getAudioSubsystem(),
+        legacyAudioSubsystemSupported: l.Z.supports(d.AN.LEGACY_AUDIO_SUBSYSTEM),
+        experimentalAudioSubsystemSupported: l.Z.supports(d.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
+        automaticAudioSubsystemSupported: l.Z.supports(d.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
+    }));
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
-        children: t
-            ? (0, r.jsx)(a.xJW, {
-                  title: f.intl.string(f.t.wVBHr6),
-                  children: E,
-              })
-            : (0, r.jsxs)(a.hjN, {
-                  className: _.marginBottom20,
-                  title: f.intl.string(f.t.wVBHr6),
-                  children: [E, (0, r.jsx)(a.$i$, { className: _.marginBottom20 })],
-              }),
+        children: (0, r.jsx)(a.xJW, {
+            title: f.intl.string(f.t.wVBHr6),
+            children: (0, r.jsx)(a.q4e, {
+                className: _.marginBottom20,
+                value: e,
+                options: p(t, n, h),
+                onChange: (e) => {
+                    let t = () => o.Z.setAudioSubsystem(e);
+                    (0, c.Z)(f.intl.string(f.t.uY7AcX), f.intl.string(f.t.gBqik5), t);
+                },
+            }),
+        }),
     });
 }
