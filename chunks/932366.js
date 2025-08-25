@@ -5,4 +5,5 @@ e.exports = {
     fallback: "fallback__1a3d6 gameCover__1a3d6",
     clickable: "clickable__1a3d6",
     loadingCover: "loadingCover__1a3d6 coverContainer__1a3d6 gameCover__1a3d6",
+    hoverActiveEffect: "hoverActiveEffect__1a3d6",
 };
