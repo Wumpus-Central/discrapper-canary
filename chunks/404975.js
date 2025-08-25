@@ -1,53 +1,87 @@
-n.d(t, { P: () => d });
-var i = n(951288),
-    l = n(120356),
-    r = n.n(l),
-    o = n(873546),
-    s = n(481060),
+n.d(t, { P: () => f }), n(361932), n(187205);
+var l = n(951288),
+    i = n(120356),
+    r = n.n(i),
+    s = n(873546),
+    u = n(481060),
+    o = n(243778),
     a = n(59662),
-    u = n(829210),
-    c = n(845435);
-function d(e) {
-    let { root: t, header: n, footer: l } = e,
-        { showNavigationMobile: u } = (0, a.t)();
-    return (0, i.jsxs)("div", {
-        className: r()(c.sidebar, {
-            [c.mobile]: o.tq,
-            [c.mobileNavigationOpen]: u,
-        }),
-        children: [
-            null != n && (0, i.jsx)(n, {}),
-            (0, i.jsx)(s.zJl, {
-                className: c.navScroller,
-                fade: !0,
-                children: (0, i.jsx)("nav", {
-                    className: c.nav,
-                    children: t.layout.map((e) => (0, i.jsx)(f, { section: e }, e.key)),
+    c = n(829210),
+    d = n(845435);
+function f(e) {
+    let { root: t, header: n, footer: i } = e,
+        { showNavigationMobile: c } = (0, a.t)(),
+        f = t.layout
+            .flatMap((e) => e.layout)
+            .flatMap((e) => {
+                var t;
+                return null == (t = e.trailing) ? void 0 : t.newIndicatorDismissibleContentTypes;
+            })
+            .filter((e) => null != e);
+    return (0, l.jsx)(o.ZP, {
+        contentTypes: f,
+        children: (e) => {
+            let { visibleContent: o } = e;
+            return (0, l.jsxs)("div", {
+                className: r()(d.sidebar, {
+                    [d.mobile]: s.tq,
+                    [d.mobileNavigationOpen]: c,
                 }),
-            }),
-            null != l &&
-                (0, i.jsx)("footer", {
-                    className: c.footer,
-                    children: (0, i.jsx)(l, {}),
-                }),
-        ],
+                children: [
+                    null != n && (0, l.jsx)(n, {}),
+                    (0, l.jsx)(u.zJl, {
+                        className: d.navScroller,
+                        fade: !0,
+                        children: (0, l.jsx)("nav", {
+                            className: d.nav,
+                            children: t.layout.map((e) =>
+                                (0, l.jsx)(
+                                    g,
+                                    {
+                                        section: e,
+                                        visibleContent: o,
+                                    },
+                                    e.key,
+                                ),
+                            ),
+                        }),
+                    }),
+                    null != i &&
+                        (0, l.jsx)("footer", {
+                            className: d.footer,
+                            children: (0, l.jsx)(i, {}),
+                        }),
+                ],
+            });
+        },
     });
 }
-function f(e) {
+function g(e) {
     var t;
-    let { section: n } = e,
-        l = null == (t = n.useTitle) ? void 0 : t.call(n);
-    return (0, i.jsxs)("ul", {
-        className: c.section,
+    let { section: n, visibleContent: i } = e,
+        r = null == (t = n.useLabel) ? void 0 : t.call(n);
+    return (0, l.jsxs)("ul", {
+        className: d.section,
         children: [
-            null != l &&
-                (0, i.jsx)(s.X6q, {
-                    className: c.label,
+            null != r &&
+                (0, l.jsx)(u.X6q, {
+                    className: d.label,
                     variant: "heading-sm/medium",
                     color: "text-tertiary",
-                    children: l,
+                    children: r,
                 }),
-            n.layout.map((e) => (0, i.jsx)("li", { children: (0, i.jsx)(u.Z, { node: e }) }, e.key)),
+            n.layout.map((e) =>
+                (0, l.jsx)(
+                    "li",
+                    {
+                        children: (0, l.jsx)(c.Z, {
+                            node: e,
+                            visibleContent: i,
+                        }),
+                    },
+                    e.key,
+                ),
+            ),
         ],
     });
 }
