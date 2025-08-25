@@ -1,65 +1,65 @@
-r.d(t, { Z: () => j });
+r.d(t, { Z: () => P });
 var n = r(951288),
-    l = r(647438),
-    a = r(442837),
-    i = r(481060),
+    i = r(647438),
+    l = r(442837),
+    o = r(481060),
     c = r(616780),
-    o = r(40851),
-    s = r(300284),
-    u = r(484459),
+    a = r(40851),
+    u = r(300284),
+    s = r(484459),
     b = r(314897),
     p = r(271383),
-    f = r(430824),
-    d = r(496675),
-    O = r(594174),
-    P = r(981631),
+    O = r(430824),
+    f = r(496675),
+    d = r(594174),
+    y = r(981631),
     g = r(388032),
-    y = r(766509);
-function j(e) {
-    let { guildId: t, userId: j, analyticsLocation: h, analyticsLocations: w, context: N, icon: v } = e,
-        Z = f.Z.getGuild(t),
-        _ = b.default.getId(),
-        C = (0, a.e7)([O.default], () => O.default.getUser(j)),
-        m = (0, a.e7)([p.ZP], () => p.ZP.isGuestOrLurker(t, j), [t, j]);
-    (0, a.e7)([d.Z], () => d.Z.getGuildVersion(t), [t]);
-    let A = l.useMemo(() => ({ [t]: [j] }), [t, j]);
-    (0, c.$)(A);
-    let k = N === P.IlC.POPOUT,
-        E = (0, s.Z)({
+    j = r(766509);
+function P(e) {
+    let { guildId: t, userId: P, analyticsLocation: v, analyticsLocations: h, context: w, icon: E } = e,
+        Z = O.Z.getGuild(t),
+        m = b.default.getId(),
+        D = (0, l.e7)([d.default], () => d.default.getUser(P)),
+        N = (0, l.e7)([p.ZP], () => p.ZP.isGuestOrLurker(t, P), [t, P]);
+    (0, l.e7)([f.Z], () => f.Z.getGuildVersion(t), [t]);
+    let S = i.useMemo(() => ({ [t]: [P] }), [t, P]);
+    (0, c.$)(S);
+    let _ = w === y.IlC.POPOUT,
+        C = (0, u.Z)({
             guild: Z,
-            analyticsLocation: h,
+            analyticsLocation: v,
         }),
-        x = (0, o.Aq)();
-    if (null == Z || k) return null;
-    let M = _ === j && (d.Z.can(P.Plq.CHANGE_NICKNAME, Z) || d.Z.can(P.Plq.MANAGE_NICKNAMES, Z)),
-        S = _ === j,
-        D = d.Z.canManageUser(P.Plq.MANAGE_NICKNAMES, j, Z);
-    if (!(M || D || S) || null == C || m) return null;
-    let G = Z.features.has(P.oNc.HUB) ? g.intl.string(g.t["+MWrWl"]) : g.intl.string(g.t["PKQB/P"]),
-        I = S ? G : g.intl.string(g.t.dilOFx);
-    return (0, n.jsx)(i.sNh, {
+        I = (0, a.Aq)();
+    if (null == Z || _) return null;
+    let k = m === P && (f.Z.can(y.Plq.CHANGE_NICKNAME, Z) || f.Z.can(y.Plq.MANAGE_NICKNAMES, Z)),
+        x = m === P,
+        A = f.Z.canManageUser(y.Plq.MANAGE_NICKNAMES, P, Z);
+    if (!(k || A || x) || null == D || N) return null;
+    let G = Z.features.has(y.oNc.HUB) ? g.intl.string(g.t["+MWrWl"]) : g.intl.string(g.t["PKQB/P"]),
+        M = x ? G : g.intl.string(g.t.dilOFx);
+    return (0, n.jsx)(o.sNh, {
         id: "change-nickname",
         label: (0, n.jsx)("div", {
-            className: y.labelWrapper,
+            className: j.labelWrapper,
             children: (0, n.jsx)("span", {
-                className: y.label,
-                children: I,
+                className: j.label,
+                children: M,
             }),
         }),
-        icon: v,
+        icon: E,
         action: () => {
-            S
-                ? ((0, u.Z)(C.id, C.getAvatarURL(t, 80), { guildId: t }),
-                  E(),
-                  x.dispatch(P.CkL.POPOUT_CLOSE),
-                  (0, i.pTH)())
-                : (0, i.ZDy)(async () => {
+            x
+                ? ((0, s.Z)(D.id, D.getAvatarURL(t, 80), { guildId: t }),
+                  C(),
+                  I.dispatch(y.CkL.POPOUT_CLOSE),
+                  (0, o.pTH)())
+                : (0, o.ZDy)(async () => {
                       let { default: e } = await r.e("17712").then(r.bind(r, 620021));
                       return (r) => {
-                          var l, a;
+                          var i, l;
                           return (0, n.jsx)(
                               e,
-                              ((l = (function (e) {
+                              ((i = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
                                           n = Object.keys(r);
@@ -84,15 +84,15 @@ function j(e) {
                                   }
                                   return e;
                               })({}, r)),
-                              (a = a =
+                              (l = l =
                                   {
                                       guildId: t,
-                                      user: C,
-                                      analyticsSource: h,
-                                      analyticsLocations: w,
+                                      user: D,
+                                      analyticsSource: v,
+                                      analyticsLocations: h,
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                                  ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var r = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -100,10 +100,10 @@ function j(e) {
                                             r.push.apply(r, n);
                                         }
                                         return r;
-                                    })(Object(a)).forEach(function (e) {
-                                        Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
-                              l),
+                              i),
                           );
                       };
                   });
