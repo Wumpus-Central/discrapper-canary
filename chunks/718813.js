@@ -76,7 +76,7 @@ let N = (0, g.Un)({
         webpackId: 72493,
     }),
     P = (0, g.Un)({
-        createPromise: () => n.e("36878").then(n.bind(n, 604960)),
+        createPromise: () => Promise.all([n.e("76210"), n.e("36878")]).then(n.bind(n, 604960)),
         webpackId: 604960,
         name: "UserSettingsV2",
     }),

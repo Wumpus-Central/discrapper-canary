@@ -1,58 +1,52 @@
-n.d(t, { Z: () => m }), n(388685), n(361932), n(187205);
-var i = n(951288),
-    l = n(647438),
-    r = n(120356),
-    o = n.n(r),
-    s = n(873546),
-    a = n(636298),
-    u = n(404975),
-    c = n(178167),
-    d = n(924052),
-    f = n(59662),
-    g = n(990757);
-function v(e) {
-    let { root: t, initialPanel: n, onClose: r, sidebarHeader: v, sidebarFooter: m } = e,
-        [b, p] = l.useState(!0),
-        [x, j] = l.useState(n.key),
-        { navigateWithValidation: y } = (0, d.Cu)(),
-        C = l.useMemo(
+n.d(t, { Z: () => d }), n(388685), n(361932), n(187205);
+var l = n(951288),
+    i = n(647438),
+    r = n(636298),
+    s = n(404975),
+    o = n(924052),
+    u = n(59662),
+    a = n(990757);
+function c(e) {
+    let { root: t, initialPanel: n, onClose: c, sidebarHeader: d, sidebarFooter: f } = e,
+        [g, v] = i.useState(!0),
+        [m, j] = i.useState(n.key),
+        { navigateWithValidation: b } = (0, o.Cu)(),
+        y = i.useMemo(
             () => ({
-                currentPanel: t.layout.flatMap((e) => e.layout).find((e) => e.key === x),
-                setCurrentPanel: (e) => y(() => j(e.key)),
-                showNavigationMobile: b,
-                setShowNavigationMobile: p,
+                currentPanel: t.layout.flatMap((e) => e.layout).find((e) => e.key === m),
+                setCurrentPanel: (e) => b(() => j(e.key)),
+                showNavigationMobile: g,
+                setShowNavigationMobile: v,
             }),
-            [x, t, b, y, p],
-        ),
-        h = () => y(r);
-    return (0, i.jsx)(f.j.Provider, {
-        value: C,
-        children: (0, i.jsxs)("div", {
-            className: o()(g.container, { [g.mobile]: s.tq }),
+            [m, t, g, b, v],
+        );
+    return (0, l.jsx)(u.j.Provider, {
+        value: y,
+        children: (0, l.jsxs)("div", {
+            className: a.container,
             children: [
-                (0, i.jsx)(c.d, { onClose: h }),
-                (0, i.jsx)(u.P, {
+                (0, l.jsx)(s.P, {
                     root: t,
-                    header: v,
-                    footer: m,
+                    header: d,
+                    footer: f,
                 }),
-                (0, i.jsx)(a.Z, {
-                    onClose: h,
-                    setting: C.currentPanel,
+                (0, l.jsx)(r.Z, {
+                    onClose: () => b(c),
+                    setting: y.currentPanel,
                 }),
             ],
         }),
     });
 }
-function m(e) {
-    let { root: t, initialPanel: n, onClose: l, sidebarHeader: r, sidebarFooter: o } = e;
-    return (0, i.jsx)(d.Ri, {
-        children: (0, i.jsx)(v, {
+function d(e) {
+    let { root: t, initialPanel: n, onClose: i, sidebarHeader: r, sidebarFooter: s } = e;
+    return (0, l.jsx)(o.Ri, {
+        children: (0, l.jsx)(c, {
             root: t,
             initialPanel: n,
-            onClose: l,
+            onClose: i,
             sidebarHeader: r,
-            sidebarFooter: o,
+            sidebarFooter: s,
         }),
     });
 }
