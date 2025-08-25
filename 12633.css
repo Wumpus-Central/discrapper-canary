@@ -34438,6 +34438,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     display: inline-block
 }
 
+.gameMention__1464f {
+    display: inline-flex;
+    margin: -4px 0 -8px
+}
+
 .inlineFlex__1464f {
     display: inline-flex;
     margin: 0
@@ -89902,7 +89907,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
