@@ -209,7 +209,7 @@ class _ extends o.C {
                 case 9:
                     a.filter = {
                         oneofKind: "clientIp",
-                        clientIp: M.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
+                        clientIp: k.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp),
                     };
                     break;
                 case 10:
@@ -266,6 +266,12 @@ class _ extends o.C {
                         clientSystemLocale: A.internalBinaryRead(e, e.uint32(), n, a.filter.clientSystemLocale),
                     };
                     break;
+                case 19:
+                    a.filter = {
+                        oneofKind: "unitIdInExperiment",
+                        unitIdInExperiment: ey.internalBinaryRead(e, e.uint32(), n, a.filter.unitIdInExperiment),
+                    };
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -294,7 +300,7 @@ class _ extends o.C {
             "clientLocation" === e.filter.oneofKind &&
                 N.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
-                M.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
+                k.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             "userLocale" === e.filter.oneofKind &&
                 v.internalBinaryWrite(e.filter.userLocale, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             "bot" === e.filter.oneofKind &&
@@ -312,7 +318,9 @@ class _ extends o.C {
             "always" === e.filter.oneofKind &&
                 eE.internalBinaryWrite(e.filter.always, t.tag(17, r.TD.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
-                A.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join();
+                A.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
+            "unitIdInExperiment" === e.filter.oneofKind &&
+                ey.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -372,7 +380,7 @@ class _ extends o.C {
                 name: "client_ip",
                 kind: "message",
                 oneof: "filter",
-                T: () => M,
+                T: () => k,
             },
             {
                 no: 10,
@@ -436,6 +444,13 @@ class _ extends o.C {
                 kind: "message",
                 oneof: "filter",
                 T: () => A,
+            },
+            {
+                no: 19,
+                name: "unit_id_in_experiment",
+                kind: "message",
+                oneof: "filter",
+                T: () => ey,
             },
         ]);
     }
@@ -1075,8 +1090,8 @@ class j extends o.C {
         ]);
     }
 }
-let M = new j();
-class k extends o.C {
+let k = new j();
+class M extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1188,7 +1203,7 @@ class k extends o.C {
         ]);
     }
 }
-let U = new k();
+let U = new M();
 class G extends o.C {
     create(e) {
         let t = {
@@ -2176,3 +2191,72 @@ class eg extends o.C {
     }
 }
 let eE = new eg();
+class eb extends o.C {
+    create(e) {
+        let t = {
+            experimentId: "0",
+            variationIds: [],
+        };
+        return (
+            globalThis.Object.defineProperty(t, a.C, {
+                enumerable: !1,
+                value: this,
+            }),
+            void 0 !== e && (0, i.l)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let a = null != i ? i : this.create(),
+            o = e.pos + t;
+        for (; e.pos < o; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    a.experimentId = e.fixed64().toString();
+                    break;
+                case 2:
+                    if (i === r.TD.LengthDelimited)
+                        for (let t = e.int32() + e.pos; e.pos < t; ) a.variationIds.push(e.int32());
+                    else a.variationIds.push(e.int32());
+                    break;
+                default:
+                    let o = n.readUnknownField;
+                    if ("throw" === o)
+                        throw new globalThis.Error(
+                            "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
+                        );
+                    let s = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+            }
+        }
+        return a;
+    }
+    internalBinaryWrite(e, t, n) {
+        if (("0" !== e.experimentId && t.tag(1, r.TD.Bit64).fixed64(e.experimentId), e.variationIds.length)) {
+            t.tag(2, r.TD.LengthDelimited).fork();
+            for (let n = 0; n < e.variationIds.length; n++) t.int32(e.variationIds[n]);
+            t.join();
+        }
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
+    }
+    constructor() {
+        super("discord_protos.discord_experimentation.v1.UnitIdInExperiment", [
+            {
+                no: 1,
+                name: "experiment_id",
+                kind: "scalar",
+                T: 6,
+            },
+            {
+                no: 2,
+                name: "variation_ids",
+                kind: "scalar",
+                repeat: 1,
+                T: 5,
+            },
+        ]);
+    }
+}
+let ey = new eb();
