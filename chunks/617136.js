@@ -1,7 +1,7 @@
 n.d(t, {
     Ic: () => L,
-    O5: () => M,
-    Zk: () => k,
+    O5: () => k,
+    Zk: () => M,
     _3: () => x,
     _F: () => j,
     _b: () => C,
@@ -25,7 +25,7 @@ var r = n(647438),
     p = n(509212),
     h = n(569984),
     m = n(497505),
-    g = n(977156),
+    g = n(36243),
     E = n(566078),
     b = n(46140),
     y = n(981631);
@@ -128,10 +128,7 @@ function w(e) {
             sourceQuestContent: o,
         } = e,
         l = h.Z.quests.get(t);
-    if (
-        null == l ||
-        ((0, g.X7)({ location: b.dr.QUEST_PREVIEW_TOOL }) && u.Z.getLayers().includes(y.S9g.USER_SETTINGS))
-    )
+    if (null == l || ((0, g.X)({ location: b.dr.QUEST_PREVIEW_TOOL }) && u.Z.getLayers().includes(y.S9g.USER_SETTINGS)))
         return;
     let f = v({}, R(l, o, a), r);
     if ((c.default.isLoggingAnalyticsEvents && console.info("[Quest] AnalyticsUtils.track", n, f), l.preview)) return;
@@ -246,7 +243,7 @@ function j() {
         [e],
     );
 }
-function M() {
+function k() {
     let e = j();
     return r.useCallback(
         (t) => {
@@ -280,7 +277,7 @@ function M() {
         [e],
     );
 }
-function k(e, t) {
+function M(e, t) {
     r.useEffect(() => {
         U(t, e);
     }, [e, t]);

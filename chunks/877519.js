@@ -29,7 +29,7 @@ let p = a.Z.Millis.DAY,
     E = 12 * a.Z.Millis.HOUR;
 class b extends r.Z {
     _fetch(e) {
-        if ((0, d.cB)({ location: f.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests)
+        if ((0, d.c)({ location: f.dr.QUESTS_MANAGER }) && !s.Z.isFetchingCurrentQuests)
             (0, o.xw)(),
                 (c.DL.getConfig({ location: f.dr.QUESTS_MANAGER }).enabled && "focused" !== i.Z.getState()) ||
                     (0, o.w)(l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, e);

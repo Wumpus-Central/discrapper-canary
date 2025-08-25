@@ -88,7 +88,7 @@ function F(e) {
         H = i.useRef(new u.Xp()),
         z = (0, d.e7)([x.ZP], () => x.ZP.getRunningGames()),
         V = (function (e, t, n) {
-            let r = (0, j.Zy)({ location: L.dr.STREAM_SOURCE_SELECT });
+            let r = (0, j.Z)({ location: L.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !r) return null;
                 for (let r of n) {

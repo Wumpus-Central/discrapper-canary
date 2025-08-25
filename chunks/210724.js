@@ -36,8 +36,8 @@ var r = n(951288),
     x = n(743294),
     L = n(981631),
     j = n(89855);
-let M = 75,
-    k = 70;
+let k = 75,
+    M = 70;
 function U(e) {
     let { isExpanded: t, questId: n } = e;
     return (
@@ -57,7 +57,7 @@ function G(e) {
             quest: a,
             location: D.dr.QUESTS_BAR,
         }),
-        G = (0, I.Zy)({ location: D.dr.QUESTS_BAR }),
+        G = (0, I.Z)({ location: D.dr.QUESTS_BAR }),
         B = (0, c.e7)([b.Z], () => null != b.Z.questEnrollmentBlockedUntil),
         { isQuestBarVisible: Z, reason: V } = (0, N.qN)({
             quest: a,
@@ -104,7 +104,7 @@ function G(e) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (ea) return;
                 let { withDelay: t = !1 } = e;
-                t ? (ee.current = window.setTimeout(e_, M)) : e_();
+                t ? (ee.current = window.setTimeout(e_, k)) : e_();
             },
             [e_, ea],
         ),
@@ -250,7 +250,7 @@ function G(e) {
     });
     if (!G || (!J && ec && !Q) || X)
         return X ? E.log("Not rendered due to asset error") : G || E.log("Not rendered due to ineligibility"), null;
-    let eC = k + 78 * !!en;
+    let eC = M + 78 * !!en;
     return (0, r.jsx)(S.A, {
         questOrQuests: a,
         questContent: y.jn.QUEST_BAR_V2,

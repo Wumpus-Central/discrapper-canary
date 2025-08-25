@@ -2,8 +2,8 @@ n.d(t, {
     DH: () => Z,
     Ks: () => B,
     Ws: () => F,
-    g2: () => k,
-    hf: () => M,
+    g2: () => M,
+    hf: () => k,
     k3: () => U,
     qN: () => V,
 }),
@@ -90,7 +90,7 @@ function j(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: s } = e,
         l = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         c = null == l ? void 0 : l.hasVerifiedEmailOrPhone(),
@@ -126,7 +126,7 @@ function M(e) {
                   : (0, C.B)());
     }, [t, d, n, r, a, c, u, s]);
 }
-let k = (e) => {
+let M = (e) => {
         let { useReducedMotion: t, className: n } = e,
             [o, l] = (0, s.q_F)(() => ({})),
             c = i.useRef(!1),
@@ -206,7 +206,7 @@ function B(e) {
             inGameQuest: y,
             sourceQuestContent: v,
         } = e,
-        I = M({
+        I = k({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -231,7 +231,7 @@ function B(e) {
                     analyticsSource: l.Z.QUEST_HOME_PAGE,
                 });
         }, []),
-        k = null == (t = (0, h.WD)()) ? void 0 : t.getId(),
+        M = null == (t = (0, h.WD)()) ? void 0 : t.getId(),
         { launchInGameActivity: U } = (0, E.zB)(n),
         B = (0, O.f)({
             location: N.dr.QUEST_HOME_DESKTOP,
@@ -322,7 +322,7 @@ function B(e) {
                                     ctaContent: p.jZ.CONNECT_CONSOLE,
                                     position: s,
                                     rowIndex: f,
-                                    impressionId: k,
+                                    impressionId: M,
                                     sourceQuestContent: v,
                                 },
                             ),
@@ -389,7 +389,7 @@ function B(e) {
                     };
                 return j(x({}, i), { text: w.intl.string(w.t.bAGFz8) });
         }
-    }, [r, b, A, _, I, a, n, o, s, f, k, C, D, L, y, U, v, B]);
+    }, [r, b, A, _, I, a, n, o, s, f, M, C, D, L, y, U, v, B]);
 }
 function Z() {
     return (0, o.e7)([b.Z], () => {
@@ -406,7 +406,7 @@ function Z() {
 function V(e) {
     var t;
     let { location: n, quest: r } = e,
-        i = (0, I.Zy)({ location: n }),
+        i = (0, I.Z)({ location: n }),
         a = (0, E.tP)(r),
         s = (0, v.b)({ location: n }),
         { premiumSubscription: l, hasFetchedSubscriptions: c } = (0, o.cj)([_.Z], () => ({
