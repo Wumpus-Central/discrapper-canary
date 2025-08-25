@@ -151,7 +151,8 @@ let T = (e) => {
             i = (0, o.e7)([_.Z], () => _.Z.getRecipientStatus()),
             l = (0, o.e7)([_.Z], () => _.Z.getHasEligibleFriends()),
             c = i.size === p.Q && i.values().every((e) => e === f.Fe.REDEEMED),
-            d = () =>
+            d = i.size === p.Q,
+            y = () =>
                 !1 === l
                     ? g.intl.format(g.t["zWhX/f"], { helpdeskArticle: u.Z.getArticleURL(m.BhN.REFERRAL_PROGRAM) })
                     : n.length === p.Q
@@ -167,7 +168,7 @@ let T = (e) => {
                     children: [
                         (0, r.jsx)(s.Eep, {
                             src: b.Z,
-                            height: 84,
+                            height: 96,
                             width: 144,
                         }),
                         (0, r.jsxs)("div", {
@@ -184,13 +185,13 @@ let T = (e) => {
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
-                                            children: d(),
+                                            children: y(),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "primary",
-                                    disabled: !1 === l || !0 === c,
+                                    disabled: !1 === l || !0 === d,
                                     text: g.intl.string(g.t.Lm2nFR),
                                     onClick: () =>
                                         T({
