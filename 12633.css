@@ -23942,6 +23942,11 @@ svg.radioIcon_c1e9c4 {
     white-space: var(--custom-display-name-styles-wrap)
 }
 
+.innerContainer_dfb989.chicle_dfb989 {
+    margin: -.05em;
+    padding: .05em
+}
+
 .underlineOnHover_dfb989:not(.pop_dfb989):hover {
     text-decoration: underline;
     -webkit-text-decoration-color: var(--custom-display-name-styles-main-color);
