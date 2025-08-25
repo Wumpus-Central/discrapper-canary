@@ -403,17 +403,17 @@ function Q(e) {
 function J() {
     return null != I && Q(I);
 }
-function $(e) {
-    let { channelId: t } = e;
+function $() {
     if (null == I) return !1;
-    if (I.type === O.aib.DMS && (0, E.R6)(I)) {
-        let e = c.Z.getChannel(t);
-        if (null == e || !e.isPrivate()) return !1;
-        let n = (0, E.Tm)(I),
-            r = T.get(n);
-        if (null == r) return !1;
-        let { type: i, filter: a } = r.mode;
-        return i === O.Sap.FILTER && a === O.dCx.FILTER_IN && Q(I);
+    if ((0, E.R6)(I)) {
+        var e;
+        let t = (0, E.Tm)(I),
+            n = T.get(t);
+        if (null == n) return !1;
+        let { type: r, filter: i, token: a } = n.mode,
+            o = null == a || null == (e = a.getFullMatch()) ? void 0 : e.trim(),
+            s = null == o || 0 === o.length;
+        if (r === O.Sap.FILTER && i === O.dCx.FILTER_IN && s) return Q(I);
     }
     return !1;
 }
