@@ -62649,10 +62649,6 @@ h3.improved__1689b:after {
     gap: 8px
 }
 
-.cta_e9b191 {
-    flex: 1 1 auto
-}
-
 .submenuWrapper_e9b191 {
     cursor: pointer;
     position: absolute;
@@ -90456,7 +90452,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
