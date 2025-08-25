@@ -9,5 +9,4 @@ e.exports = {
     activityActions: "activityActions__6da2d",
     protip: "protip__6da2d",
     white: "white__6da2d",
-    watchButton: "watchButton__6da2d",
 };

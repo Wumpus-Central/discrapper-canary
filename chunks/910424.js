@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -11,11 +11,9 @@ var i = n(442837),
     d = n(199902),
     f = n(592125),
     _ = n(585483),
-    p = n(915863),
-    h = n(981631),
-    m = n(388032),
-    g = n(603634);
-function E(e, t, n) {
+    p = n(981631),
+    h = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +26,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +37,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,103 +54,76 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e) {
-    let { isCurrentUser: t, color: n, look: E, applicationStream: y, onAction: v } = e,
-        { activeStream: I, watchingOtherStream: T } = (0, i.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(y),
+function y(e) {
+    let { isCurrentUser: t, applicationStream: n, onAction: m } = e,
+        { activeStream: E, watchingOtherStream: y } = (0, i.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
-                null != y &&
-                d.Z.getAllActiveStreamsForChannel(y.channelId).filter((e) => {
+                null != n &&
+                d.Z.getAllActiveStreamsForChannel(n.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== y.ownerId;
+                    return t !== n.ownerId;
                 }).length > 0,
         })),
-        S = (0, i.e7)([f.Z], () => f.Z.getChannel(null == y ? void 0 : y.channelId)),
-        [A, C] = (0, u.wq)(S),
-        N = (0, c.Aq)(),
-        R = null != I && null != y && I.state !== h.jm8.ENDED && I.ownerId === y.ownerId,
-        P = (e) => {
-            null != y &&
-                (null == v || v(),
-                s.default.selectVoiceChannel(y.channelId),
-                R || (0, l.iV)(y, { forceMultiple: e }),
-                N.dispatch(h.CkL.POPOUT_CLOSE),
-                _.S.dispatch(h.CkL.MODAL_CLOSE),
+        O = (0, i.e7)([f.Z], () => f.Z.getChannel(null == n ? void 0 : n.channelId)),
+        [v, I] = (0, u.wq)(O),
+        T = (0, c.Aq)(),
+        S = null != E && null != n && E.state !== p.jm8.ENDED && E.ownerId === n.ownerId,
+        A = (e) => {
+            null != n &&
+                (null == m || m(),
+                s.default.selectVoiceChannel(n.channelId),
+                S || (0, l.iV)(n, { forceMultiple: e }),
+                T.dispatch(p.CkL.POPOUT_CLOSE),
+                _.S.dispatch(p.CkL.MODAL_CLOSE),
                 o.Z.popAll());
         };
-    if (null == y) return null;
-    let w = (0, u.P9)(C);
-    t ? (w = m.intl.string(m.t.XvBdeX)) : R && (w = m.intl.string(m.t.JH1SJy));
-    let D = {
-        color: n,
-        look: E,
-    };
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsxs)(
-                p.Z,
-                O(
-                    b(
-                        {
-                            disabled: t || R || !A,
-                            onClick: () => P(!1),
-                        },
-                        D,
-                    ),
-                    {
-                        fullWidth: !0,
-                        children: [
-                            (0, r.jsx)(a.hGI, {
-                                size: "md",
-                                color: "currentColor",
-                                className: g.streamIcon,
-                            }),
-                            w,
-                        ],
-                    },
-                ),
-                "play",
-            ),
-            T && !R
-                ? (0, r.jsx)(a.ua7, {
-                      text: m.intl.string(m.t.wCrzur),
-                      children: (e) =>
-                          (0, r.jsx)(
-                              p.Z,
-                              O(
-                                  b(
-                                      O(b({}, e), {
-                                          onClick: () => {
-                                              var t;
-                                              null == (t = e.onClick) || t.call(e), P(!0);
-                                          },
-                                      }),
-                                      D,
-                                  ),
-                                  {
-                                      className: g.iconButton,
-                                      size: g.iconButtonSize,
-                                      children: (0, r.jsx)(a.OgY, {
-                                          size: "xs",
-                                          color: "currentColor",
-                                          className: g.iconSize,
-                                      }),
-                                  },
+    if (null == n) return null;
+    let C = (0, u.P9)(I);
+    return (
+        t ? (C = h.intl.string(h.t.XvBdeX)) : S && (C = h.intl.string(h.t.JH1SJy)),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(a.zxk, {
+                    size: "sm",
+                    variant: "active",
+                    icon: a.hGI,
+                    text: C,
+                    disabled: t || S || !v,
+                    onClick: () => A(!1),
+                    fullWidth: !0,
+                }),
+                y && !S
+                    ? (0, r.jsx)(a.ua7, {
+                          text: h.intl.string(h.t.wCrzur),
+                          children: (e) =>
+                              (0, r.jsx)(
+                                  a.hU,
+                                  b(g({}, e), {
+                                      variant: "secondary",
+                                      size: "sm",
+                                      icon: a.OgY,
+                                      "aria-label": h.intl.string(h.t.wCrzur),
+                                      onClick: () => {
+                                          var t;
+                                          null == (t = e.onClick) || t.call(e), A(!0);
+                                      },
+                                  }),
                               ),
-                          ),
-                  })
-                : null,
-        ],
-    });
+                      })
+                    : null,
+            ],
+        })
+    );
 }

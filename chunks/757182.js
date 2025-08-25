@@ -1,9 +1,9 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(655922),
-    a = n(420660),
-    o = n(915863),
+var i = n(481060),
+    a = n(655922),
+    o = n(420660),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -35,33 +35,10 @@ function c(e) {
     return e;
 }
 function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function d(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = d(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +46,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,27 +55,26 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
-    var { activity: t, onAction: n, ButtonComponent: l = o.Z } = e,
-        u = f(e, ["activity", "onAction", "ButtonComponent"]);
-    if (!(0, a.Z)(t)) return null;
+function f(e) {
+    var { activity: t, onAction: n, variant: l = "secondary", size: d = "sm" } = e,
+        f = u(e, ["activity", "onAction", "variant", "size"]);
+    if (!(0, o.Z)(t)) return null;
     let _ = () => {
         null == n || n();
-        let e = (0, i.Z)(t);
+        let e = (0, a.Z)(t);
         return window.open(null != e ? e : void 0);
     };
     return (0, r.jsx)(
-        l,
-        d(
-            c(
-                {
-                    onClick: _,
-                    fullWidth: !0,
-                },
-                u,
-            ),
-            { children: s.intl.string(s.t["I6JG4+"]) },
+        i.zxk,
+        c(
+            {
+                variant: l,
+                size: d,
+                text: s.intl.string(s.t["I6JG4+"]),
+                onClick: _,
+                fullWidth: !0,
+            },
+            f,
         ),
-        "play-activity",
     );
 }

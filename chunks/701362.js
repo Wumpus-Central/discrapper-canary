@@ -169,7 +169,6 @@ class L extends i.PureComponent {
                                             guildId: n.guildId,
                                             channelId: n.channelId,
                                             className: C.activityActions,
-                                            color: C.watchButton,
                                             onAction: a,
                                         }),
                                   !s &&

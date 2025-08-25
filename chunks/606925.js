@@ -1,42 +1,84 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(231757),
-    o = n(553795),
-    s = n(915863),
-    l = n(388032),
-    c = n(925499);
+    a = n(481060),
+    o = n(231757),
+    s = n(553795),
+    l = n(388032);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function u(e) {
-    let { platform: t, color: n, look: u, onAction: d, Icon: f } = e;
-    if ((0, i.e7)([o.Z], () => o.Z.getAccounts().some((e) => e.type === t.type))) return null;
-    let _ = () => {
-            null == d || d(),
-                (0, a.Z)({
-                    platformType: t.type,
-                    location: "Activity Action",
-                });
-        },
-        p =
-            null != f
-                ? (0, r.jsx)(f, { className: c.platformIcon })
-                : (0, r.jsx)("img", {
-                      alt: "",
-                      className: c.platformIcon,
-                      src: t.icon.whiteSVG,
-                  });
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function _(e) {
+    var { platform: t, variant: n = "secondary", size: c = "sm", onAction: f, icon: _ } = e,
+        p = d(e, ["platform", "variant", "size", "onAction", "icon"]);
+    if ((0, i.e7)([s.Z], () => s.Z.getAccounts().some((e) => e.type === t.type))) return null;
+    let h = () => {
+        null == f || f(),
+            (0, o.Z)({
+                platformType: t.type,
+                location: "Activity Action",
+            });
+    };
     return (0, r.jsx)(
-        s.Z,
-        {
-            onClick: _,
-            color: n,
-            look: u,
-            fullWidth: !0,
-            children: (0, r.jsxs)("div", {
-                className: c.flex,
-                children: [p, l.intl.format(l.t.XWSHTU, { platform: t.name })],
-            }),
-        },
-        "connect-platform-activity",
+        a.zxk,
+        u(
+            {
+                onClick: h,
+                variant: n,
+                size: c,
+                icon: _,
+                text: l.intl.format(l.t.XWSHTU, { platform: t.name }),
+                fullWidth: !0,
+            },
+            p,
+        ),
     );
 }

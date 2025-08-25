@@ -156,11 +156,14 @@ function L(e) {
             };
             X.push(
                 (0, r.jsx)(
-                    I.Ll,
+                    l.zxk,
                     {
-                        onClick: e,
-                        icon: l.iOO,
+                        variant: "primary",
+                        size: "md",
+                        fullWidth: !0,
                         text: N.intl.string(N.t.eU3inJ),
+                        icon: l.iOO,
+                        onClick: e,
                     },
                     "listen-along",
                 ),
