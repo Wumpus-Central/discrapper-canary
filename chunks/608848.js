@@ -3,7 +3,6 @@ e.exports = {
     headerContent: "headerContent__4909b",
     appIcon: "appIcon__4909b",
     headerButtons: "headerButtons__4909b",
-    secondaryBtn: "secondaryBtn__4909b",
     details: "details__4909b",
     row: "row__4909b",
     rowContent: "rowContent__4909b",

@@ -1,131 +1,114 @@
-i.d(t, { Z: () => C }), i(388685);
-var n = i(951288),
-    a = i(647438),
-    s = i(481060),
-    l = i(153867),
-    r = i(626135),
-    o = i(981631),
-    d = i(388032),
-    c = i(167739);
-let _ = [
+e.d(i, { Z: () => I }), e(388685);
+var n = e(951288),
+    s = e(647438),
+    a = e(103866),
+    l = e(213734),
+    r = e(37148),
+    c = e(481060),
+    d = e(153867),
+    o = e(626135),
+    C = e(981631),
+    _ = e(388032),
+    u = e(167739);
+let N = [
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH",
-        nameGetter: () => d.intl.string(d.t["+RZgNT"]),
+        nameGetter: () => _.intl.string(_.t["+RZgNT"]),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE",
-        nameGetter: () => d.intl.string(d.t.kgPXgo),
+        nameGetter: () => _.intl.string(_.t.kgPXgo),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH",
-        nameGetter: () => d.intl.string(d.t.vujsUF),
+        nameGetter: () => _.intl.string(_.t.vujsUF),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE",
-        nameGetter: () => d.intl.string(d.t.AYAOLC),
+        nameGetter: () => _.intl.string(_.t.AYAOLC),
     },
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER",
-        nameGetter: () => d.intl.string(d.t.wZLu3d),
+        nameGetter: () => _.intl.string(_.t.wZLu3d),
     },
 ];
-function C(e) {
-    let { application: t, subscriptionId: i, onClose: C } = e,
-        [u, N] = a.useState(!1),
-        [x, m] = a.useState(null),
-        [S, h] = a.useState(""),
-        I = a.useCallback(() => {
+function I(t) {
+    let { application: i, subscriptionId: e, onClose: I } = t,
+        [S, E] = s.useState(!1),
+        [x, A] = s.useState(null),
+        [O, T] = s.useState(""),
+        p = s.useCallback(() => {
             null != x &&
-                (r.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                (o.default.track(C.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
                     answer: x,
-                    application_id: t.id,
-                    reason: S,
-                    subscription_id: i,
+                    application_id: i.id,
+                    reason: O,
+                    subscription_id: e,
                 }),
-                C());
-        }, [t.id, i, x, C, S]);
+                I());
+        }, [i.id, e, x, I, O]);
     return (
-        a.useEffect(() => {
-            l.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: u });
-        }, [u]),
+        s.useEffect(() => {
+            d.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: S });
+        }, [S]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsxs)(s.xBx, {
-                    className: c.headerContainer,
-                    separator: !1,
-                    children: [
-                        (0, n.jsxs)("div", {
-                            className: c.titleContainer,
-                            children: [
-                                (0, n.jsx)(s.Text, {
-                                    className: c.headerTitle,
-                                    variant: "text-lg/semibold",
-                                    children: d.intl.string(d.t.zPxMdX),
-                                }),
-                                (0, n.jsx)(s.olH, {
-                                    className: c.modalCloseButton,
-                                    onClick: C,
-                                }),
-                            ],
-                        }),
-                        (0, n.jsx)(s.LZC, { size: 8 }),
-                        (0, n.jsx)(s.Text, {
-                            className: c.headerSubtitle,
-                            variant: "text-md/medium",
-                            children: d.intl.string(d.t.QJGdBw),
-                        }),
-                    ],
+                (0, n.jsx)(r.x, {
+                    title: _.intl.string(_.t.zPxMdX),
+                    subtitle: _.intl.string(_.t.QJGdBw),
                 }),
-                (0, n.jsxs)(s.hzk, {
+                (0, n.jsxs)(a.f, {
                     children: [
                         (0, n.jsx)("div", {
-                            className: c.answerChoicesContainer,
-                            children: (0, n.jsx)(s.FXm, {
+                            className: u.answerChoicesContainer,
+                            children: (0, n.jsx)(c.FXm, {
                                 value: x,
-                                options: _.map((e) => {
-                                    let { nameGetter: t, value: i } = e;
+                                options: N.map((t) => {
+                                    let { nameGetter: i, value: e } = t;
                                     return {
-                                        name: t(),
-                                        value: i,
+                                        name: i(),
+                                        value: e,
                                     };
                                 }),
-                                onChange: (e) => m(e.value),
+                                onChange: (t) => A(t.value),
                                 withTransparentBackground: !0,
                             }),
                         }),
                         "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER" === x &&
                             (0, n.jsx)("div", {
-                                className: c.otherField,
-                                children: (0, n.jsx)(s.oil, {
+                                className: u.otherField,
+                                children: (0, n.jsx)(c.oil, {
                                     autoFocus: !0,
-                                    placeholder: d.intl.string(d.t.s6tM8f),
-                                    value: S,
-                                    onChange: h,
+                                    placeholder: _.intl.string(_.t.s6tM8f),
+                                    value: O,
+                                    onChange: T,
                                 }),
                             }),
                     ],
                 }),
-                (0, n.jsxs)(s.mzw, {
-                    className: c.footer,
-                    children: [
-                        (0, n.jsx)(s.zxk, {
-                            variant: "primary",
-                            text: d.intl.string(d.t.geKm7u),
-                            onClick: I,
-                            disabled: null == x,
-                        }),
-                        (0, n.jsx)(s.XZJ, {
-                            type: s.XZJ.Types.INVERTED,
-                            value: u,
-                            onChange: (e, t) => N(t),
-                            size: 20,
-                            className: c.__invalid_checkbox,
-                            children: (0, n.jsx)(s.Text, {
-                                variant: "text-sm/medium",
-                                children: d.intl.string(d.t["3vPFQk"]),
+                (0, n.jsx)(l.m, {
+                    children: (0, n.jsxs)("div", {
+                        className: u.footer,
+                        children: [
+                            (0, n.jsx)(c.XZJ, {
+                                type: c.XZJ.Types.INVERTED,
+                                value: S,
+                                onChange: (t, i) => E(i),
+                                size: 20,
+                                className: u.__invalid_checkbox,
+                                children: (0, n.jsx)(c.Text, {
+                                    variant: "text-sm/medium",
+                                    children: _.intl.string(_.t["3vPFQk"]),
+                                }),
                             }),
-                        }),
-                    ],
+                            (0, n.jsx)(c.zxk, {
+                                variant: "primary",
+                                text: _.intl.string(_.t.geKm7u),
+                                onClick: p,
+                                disabled: null == x,
+                            }),
+                        ],
+                    }),
                 }),
             ],
         })

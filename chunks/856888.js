@@ -1,20 +1,19 @@
-n.d(t, { Z: () => f }), n(642613), n(388685);
+n.d(t, { Z: () => d }), n(642613), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(755721),
-    s = n(481060),
-    l = n(78839),
-    c = n(851718),
-    u = n(388032),
-    d = n(886112);
-function f(e) {
+    o = n(481060),
+    s = n(78839),
+    l = n(851718),
+    c = n(388032),
+    u = n(886112);
+function d(e) {
     let { onGoBack: t } = e,
-        n = (0, a.Wu)([l.Z], () => {
+        n = (0, a.Wu)([s.Z], () => {
             var e, t;
             return null !=
                 (t =
-                    null == (e = l.Z.getActiveApplicationSubscriptions())
+                    null == (e = s.Z.getActiveApplicationSubscriptions())
                         ? void 0
                         : e.slice().sort((e, t) => {
                               var n, r, i, a;
@@ -30,18 +29,18 @@ function f(e) {
                 ? t
                 : [];
         }),
-        [o, s] = i.useState();
+        [o, d] = i.useState();
     null == o &&
-        (o = (0, r.jsx)(_, {
+        (o = (0, r.jsx)(f, {
             onBack: t,
-            title: u.intl.string(u.t["DB/m9f"]),
+            title: c.intl.string(c.t["DB/m9f"]),
         }));
-    let f = (e, t) => {
-        s(
-            (0, r.jsx)(_, {
+    let _ = (e, t) => {
+        d(
+            (0, r.jsx)(f, {
                 title: e,
                 onBack: () => {
-                    t(), s(void 0);
+                    t(), d(void 0);
                 },
             }),
         );
@@ -50,27 +49,27 @@ function f(e) {
         children: [
             o,
             (0, r.jsx)("div", {
-                className: d.subscriptionsContainer,
-                children: (0, r.jsx)(c.Z, {
+                className: u.subscriptionsContainer,
+                children: (0, r.jsx)(l.Z, {
                     subscriptions: n,
-                    updateHeader: f,
+                    updateHeader: _,
                 }),
             }),
         ],
     });
 }
-function _(e) {
+function f(e) {
     let { onBack: t, title: n } = e;
     return (0, r.jsxs)("div", {
-        className: d.title,
+        className: u.title,
         children: [
-            (0, r.jsx)(o.zx, {
-                look: o.zx.Looks.BLANK,
+            (0, r.jsx)(o.hU, {
+                "aria-label": c.intl.string(c.t["13/7kZ"]),
+                icon: () => (0, r.jsx)(o.j9r, { size: "sm" }),
                 onClick: t,
-                size: o.zx.Sizes.ICON,
-                children: (0, r.jsx)(s.j9r, { size: "sm" }),
+                variant: "icon-only",
             }),
-            (0, r.jsx)(s.X6q, {
+            (0, r.jsx)(o.X6q, {
                 variant: "heading-lg/semibold",
                 children: n,
             }),

@@ -1,50 +1,36 @@
-i.d(e, { default: () => d });
-var n = i(951288);
-i(647438);
-var r = i(755721),
-    a = i(481060),
-    s = i(313201),
-    l = i(388032),
-    o = i(758590),
-    c = i(365627);
+e.d(i, { default: () => d });
+var a = e(951288);
+e(647438);
+var n = e(667202),
+    r = e(481060),
+    s = e(313201),
+    l = e(388032),
+    o = e(758590),
+    c = e(365627);
 function d(t) {
-    let { transitionState: e, onClose: i, storeListing: d, subscription: u } = t,
+    let { transitionState: i, onClose: e, storeListing: d, subscription: u } = t,
         m = (0, s.Dt)();
-    return (0, n.jsxs)(a.Y0X, {
-        transitionState: e,
-        "aria-labelledby": m,
-        parentComponent: "SubscriptionRestartedModal",
-        children: [
-            (0, n.jsxs)(a.hzk, {
-                className: o.contentContainer,
-                children: [
-                    (0, n.jsx)("img", {
-                        src: c,
-                        alt: "",
-                    }),
-                    (0, n.jsx)(a.X6q, {
-                        className: o.title,
-                        variant: "heading-xl/bold",
-                        color: "header-primary",
-                        id: m,
-                        children: l.intl.format(l.t["wLFT6+"], { tier: d.summary }),
-                    }),
-                    (0, n.jsx)(a.Text, {
-                        className: o.subtitle,
-                        variant: "text-md/medium",
-                        color: "header-secondary",
-                        children: l.intl.format(l.t.OsAK9v, { timestamp: null == u ? void 0 : u.currentPeriodEnd }),
-                    }),
-                ],
-            }),
-            (0, n.jsx)(a.mzw, {
-                children: (0, n.jsx)(r.zx, {
-                    size: r.zx.Sizes.MEDIUM,
-                    grow: !1,
-                    onClick: i,
-                    children: l.intl.string(l.t["JtWl+f"]),
-                }),
-            }),
+    return (0, a.jsx)(n.I, {
+        actions: [
+            {
+                variant: "secondary",
+                onClick: e,
+                text: l.intl.string(l.t["JtWl+f"]),
+            },
         ],
+        "aria-labelledby": m,
+        graphic: {
+            type: "image",
+            src: c,
+        },
+        onClose: e,
+        transitionState: i,
+        title: l.intl.formatToPlainString(l.t["wLFT6+"], { tier: d.summary }),
+        children: (0, a.jsx)(r.Text, {
+            className: o.subtitle,
+            variant: "text-md/medium",
+            color: "header-secondary",
+            children: l.intl.format(l.t.OsAK9v, { timestamp: null == u ? void 0 : u.currentPeriodEnd }),
+        }),
     });
 }
