@@ -155,6 +155,7 @@ function ef(e) {
                 id: c.id,
                 linkType: p.Un.RICH_PRESENCE_INVITE,
                 onView: h,
+                referrerId: f.author.id,
             },
         });
     }
@@ -217,6 +218,7 @@ function ef(e) {
                 id: c.id,
                 linkType: p.Un.RICH_PRESENCE_INVITE,
                 onView: h,
+                referrerId: f.author.id,
             },
         });
     }
@@ -514,6 +516,7 @@ function eh(e) {
                 id: I.id,
                 linkType: p.Un.RICH_PRESENCE_INVITE,
                 onView: R,
+                referrerId: N.author.id,
             },
         });
     }
@@ -570,6 +573,7 @@ function eh(e) {
             id: I.id,
             linkType: p.Un.RICH_PRESENCE_INVITE,
             onView: R,
+            referrerId: N.author.id,
         },
         footer: eS,
     });
