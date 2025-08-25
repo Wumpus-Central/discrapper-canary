@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(913527),
     l = n.n(s),
     c = n(442837),
@@ -36,14 +36,14 @@ var r = n(951288),
     x = n(483444),
     L = n(626135),
     j = n(63063),
-    M = n(74538),
-    k = n(140465),
+    k = n(74538),
+    M = n(140465),
     U = n(695349),
     G = n(46062),
     B = n(347896),
     Z = n(717401),
-    V = n(533525),
-    F = n(232076),
+    F = n(533525),
+    V = n(232076),
     H = n(736519),
     Y = n(117791),
     W = n(767714),
@@ -59,25 +59,25 @@ var r = n(951288),
     en = n(881188),
     er = n(434691);
 let ei = "to_subscriptions_button",
-    ea = "subscriptions settings",
-    eo = "to_premium_home_button",
+    eo = "subscriptions settings",
+    ea = "to_premium_home_button",
     es = "premium home page",
     el = "gifting_button",
     ec = "payment modal";
 function eu(e) {
-    let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: i, theme: a } = e,
-        o = t.hasActiveTrial,
+    let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: i, theme: o } = e,
+        a = t.hasActiveTrial,
         s = t.planIdFromItems === J.Xh.PREMIUM_YEAR_TIER_2,
-        c = n || o,
+        c = n || a,
         u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
         f = J.GP[t.planIdFromItems],
-        p = M.ZP.formatPriceString(M.ZP.getDefaultPrice(f.id), f.interval),
+        p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(f.id), f.interval),
         { enabled: h } = G.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" }),
         m = () => {
             var e, t, n;
             return h
                 ? ""
-                : o
+                : a
                   ? ee.intl.format(ee.t["2CGBrq"], {
                         remainingTime: u,
                         price: p,
@@ -96,15 +96,15 @@ function eu(e) {
     return c
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (o || !s) &&
+                  (a || !s) &&
                       (0, r.jsx)(K.Cy, {
-                          text: o ? ee.intl.string(ee.t.qYKftb) : ee.intl.string(ee.t.EyjDRE),
+                          text: a ? ee.intl.string(ee.t.qYKftb) : ee.intl.string(ee.t.EyjDRE),
                           className: et.topRimPillWithSparkles,
-                          colorOptions: (0, d.wj)(a)
+                          colorOptions: (0, d.wj)(o)
                               ? K.VE.PREMIUM_TIER_2_WHITE_FILL
                               : K.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
-                  (o || !s) && (0, r.jsx)("div", { className: et.rimGlowTier2 }),
+                  (a || !s) && (0, r.jsx)("div", { className: et.rimGlowTier2 }),
                   (0, r.jsx)(_.X6q, {
                       variant: "heading-md/normal",
                       color: "always-white",
@@ -122,15 +122,15 @@ function eu(e) {
             });
 }
 function ed() {
-    let e = (0, k.t7)(),
-        t = (0, k.lr)(),
+    let e = (0, M.t7)(),
+        t = (0, M.lr)(),
         n = (0, y.ZP)(),
         i = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
-        a = (0, S.Z)(),
+        o = (0, S.Z)(),
         s = (0, U.W)(),
         l = null !== i && null !== i.planIdFromItems;
-    if (!l && !a.isFractionalPremiumActive) return null;
-    let u = a.isFractionalPremiumActive,
+    if (!l && !o.isFractionalPremiumActive) return null;
+    let u = o.isFractionalPremiumActive,
         p = null !== i && i.hasActiveTrial,
         h = e || p,
         g = () =>
@@ -198,7 +198,7 @@ function ed() {
                               color: f.zx.Colors.WHITE,
                               onClick: () => {
                                   L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: eo,
+                                      cta_type: ea,
                                       target: es,
                                   }),
                                       (0, m.xf)(),
@@ -219,7 +219,7 @@ function ed() {
                               color: f.zx.Colors.WHITE,
                               onClick: () => {
                                   L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: eo,
+                                      cta_type: ea,
                                       target: es,
                                   }),
                                       (0, m.xf)(),
@@ -238,7 +238,7 @@ function ed() {
                               onClick: () => {
                                   L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: ei,
-                                      target: ea,
+                                      target: eo,
                                   }),
                                       E.Z.open($.oAB.SUBSCRIPTIONS);
                               },
@@ -251,7 +251,7 @@ function ed() {
                       ],
                   });
     return (0, r.jsxs)("div", {
-        className: o()(et.tierCard, { [et.withTier2Rim]: h }),
+        className: a()(et.tierCard, { [et.withTier2Rim]: h }),
         children: [
             (0, r.jsxs)("div", {
                 className: et.tierInfo,
@@ -275,13 +275,14 @@ function ed() {
 }
 function ef(e) {
     var t, n;
-    let { className: i, config: a } = e,
-        s = (0, c.e7)([O.Z], () => O.Z.useReducedMotion) ? a.getStaticImageUrl() : a.getAnimatedImageUrl(),
-        l = (0, Z.Tl)(null != (t = a.gradientConfig) ? t : void 0),
-        u = { color: null != (n = a.textColor) ? n : "var(--always-white)" };
+    let { className: i, config: o } = e,
+        s = (0, c.e7)([O.Z], () => O.Z.useReducedMotion) ? o.getStaticImageUrl() : o.getAnimatedImageUrl(),
+        l = null != o.getBackgroundImageUrl ? o.getBackgroundImageUrl() : void 0,
+        u = (0, Z.Tl)(null != (t = o.gradientConfig) ? t : void 0),
+        d = { color: null != (n = o.textColor) ? n : "var(--always-white)" };
     return (0, r.jsxs)("div", {
-        className: o()(et.giftCardPromotion, i),
-        style: l,
+        className: a()(et.giftCardPromotion, i),
+        style: null != l ? { backgroundImage: "url(".concat(l, ")") } : u,
         children: [
             (0, r.jsx)(N.Z, {
                 className: et.videoAsset,
@@ -294,35 +295,29 @@ function ef(e) {
             (0, r.jsxs)("div", {
                 className: et.giftInfoPromotion,
                 children: [
-                    null != a.getBackgroundImageUrl &&
-                        (0, r.jsx)("img", {
-                            alt: "",
-                            "aria-hidden": !0,
-                            className: et.giftCardPromotionBannerImage,
-                            src: a.getBackgroundImageUrl(),
-                        }),
                     (0, r.jsx)(_.X6q, {
                         className: et.giftInfoTitlePromotion,
-                        style: u,
+                        style: d,
                         variant: "text-lg/bold",
-                        children: a.title(),
+                        children: o.title(),
                     }),
                     (0, r.jsx)(_.Text, {
                         className: et.giftText,
-                        style: u,
+                        style: d,
                         variant: "text-sm/medium",
-                        children: a.body(),
+                        children: o.body(),
                     }),
-                    null != a.additionalTerm &&
+                    null != o.additionalTerm &&
                         (0, r.jsx)(_.Text, {
                             className: et.giftAdditionalTerm,
-                            style: u,
+                            style: d,
                             variant: "text-xxs/normal",
-                            children: a.additionalTerm(),
+                            children: o.additionalTerm(),
                         }),
                     (0, r.jsx)(Y.Z, {
                         variant: "secondary",
                         size: "md",
+                        fullWidth: !0,
                         onClick: () => {
                             L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: el,
@@ -362,7 +357,7 @@ function e_() {
                               children: ee.intl.string(ee.t.yQ06u7),
                           }),
                           (0, r.jsx)(H.Z, {
-                              className: o()(et.giftCardButton, et.giftCardButtonColor),
+                              className: a()(et.giftCardButton, et.giftCardButtonColor),
                               textOptions: {
                                   textOverride: ee.intl.string(ee.t.Ve9Ge3),
                                   textClassName: et.giftButtonCTA,
@@ -384,15 +379,15 @@ let ep = function () {
     let e = "PremiumManagementSettings",
         t = (0, T.Q)(),
         { analyticsLocations: n } = (0, I.ZP)(v.Z.PREMIUM_SETTINGS),
-        a = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
-        o = (0, c.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
+        o = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
+        a = (0, c.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
         s = (0, A.V)(J.nS),
         [l, d] = i.useState(!0),
         f = (0, S.Z)({ forceFetch: !0 }),
         m = (0, c.e7)([w.Z], () => w.Z.enabled),
         E = i.useRef(null);
-    (0, F.B)(e);
-    let y = (0, V.b)(e);
+    (0, V.B)(e);
+    let y = (0, F.b)(e);
     i.useEffect(() => {
         p.Z.wait(async () => {
             m || t || (await Promise.all([h.jg(), h.tZ(), (0, g.Y2)(null, null, $.JjL.DISCOVERY)])), d(!1);
@@ -401,7 +396,7 @@ let ep = function () {
     let [O, N] = i.useState(!1);
     if (m) return (0, r.jsx)(b.Z, {});
     if (t) return (0, r.jsx)(C.c8, {});
-    let P = o && null !== a && s,
+    let P = a && null !== o && s,
         x = f.fetched && f.isFractionalPremiumActive;
     if (!P && !x && !l)
         return (0, r.jsx)(R.Z, {
@@ -409,7 +404,7 @@ let ep = function () {
             note: null,
         });
     if ((!P && !x) || l) return (0, r.jsx)(_.$jN, {});
-    let j = !!(null == a ? void 0 : a.hasActiveTrial);
+    let j = !!(null == o ? void 0 : o.hasActiveTrial);
     return (0, r.jsx)(I.Gt, {
         value: n,
         children: (0, r.jsxs)(r.Fragment, {

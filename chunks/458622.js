@@ -12,7 +12,6 @@ e.exports = {
     videoAsset: "videoAsset_a45ed3",
     giftInfoPromotion: "giftInfoPromotion_a45ed3",
     giftInfoTitlePromotion: "giftInfoTitlePromotion_a45ed3",
-    giftCardPromotionBannerImage: "giftCardPromotionBannerImage_a45ed3",
     giftInfo: "giftInfo_a45ed3",
     giftImage: "giftImage_a45ed3",
     giftTitle: "giftTitle_a45ed3",

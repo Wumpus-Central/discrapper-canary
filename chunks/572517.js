@@ -11,35 +11,36 @@ var r = n(951288),
     p = n(897942),
     u = n(432483);
 function x() {
-    var e;
-    let t = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        n = (0, a.ZP)(),
-        x = (0, l.wj)(n),
-        h = (0, d.Z)(),
-        _ = null == h ? void 0 : h.planSelectionBanner,
-        { claimableRewards: f } = (0, C.wD)();
-    if (null == _ || null == f) return null;
-    let j =
-            null == (e = _.gradientConfig)
+    var e, t;
+    let n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        x = (0, a.ZP)(),
+        h = (0, l.wj)(x),
+        _ = (0, d.Z)(),
+        f = null == _ ? void 0 : _.planSelectionBanner,
+        { claimableRewards: j } = (0, C.wD)();
+    if (null == f || null == j) return null;
+    let m = null == (e = f.getBackgroundImageUrl) ? void 0 : e.call(f, h),
+        L =
+            null == (t = f.gradientConfig)
                 ? void 0
-                : e.call(_, {
-                      isDarkMode: x,
+                : t.call(f, {
+                      isDarkMode: h,
                       isAndroid: !1,
                   }),
-        m = (0, c.Tl)(j);
+        g = (0, c.Tl)(L);
     return (0, r.jsxs)("div", {
         className: u.promotionalFooterBanner,
-        style: m,
+        style: null != m ? { backgroundImage: "url(".concat(m, ")") } : g,
         children: [
             (0, r.jsx)(p.Z, {
-                claimableRewards: f,
-                maxRewardImageSrc: _.getImageUrl(x, t),
+                claimableRewards: j,
+                maxRewardImageSrc: f.getImageUrl(h, n),
                 size: s.EFr.SIZE_40,
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
                 className: u.bannerText,
-                children: _.desktopBannerText(f.length),
+                children: f.desktopBannerText(j.length),
             }),
         ],
     });

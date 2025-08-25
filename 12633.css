@@ -63677,13 +63677,6 @@ h3.improved__1689b:after {
     margin-bottom: 8px
 }
 
-.giftCardPromotionBannerImage_a45ed3 {
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0
-}
-
 .giftInfo_a45ed3 {
     max-width: 50%
 }
@@ -75113,7 +75106,10 @@ html .progress__61462 {
 .avatar__72cd3 {
     align-items: center;
     display: flex;
-    margin-right: var(--space-16)
+    position: absolute;
+    right: var(--space-8);
+    top: -40px;
+    z-index: 1
 }
 
 .boxBackdrop_abac7b {
