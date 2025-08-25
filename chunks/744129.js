@@ -216,6 +216,7 @@ function Z(e) {
                 isGift: d,
                 enablePremiumBrandRefresh: !0,
                 isApplicationHome: T,
+                firstFeatureItemClassName: "inCard" === E ? D.firstFeatureItemContainer : void 0,
             }),
             n,
             h && (0, r.jsx)(O.f, {}),

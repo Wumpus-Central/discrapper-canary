@@ -63410,6 +63410,10 @@ h3.improved__1689b:after {
     z-index: 0
 }
 
+.firstFeatureItemContainer__6df1a {
+    max-width: 250px
+}
+
 .featureItem__6df1a {
     align-items: center;
     color: var(--text-default);
@@ -76510,7 +76514,7 @@ html .progress__61462 {
 }
 
 .buttonContainer_d38e00 {
-    background-color: var(--background-surface-higher);
+    background-color: var(--background-surface-highest);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-low);
     display: flex;
@@ -76544,7 +76548,8 @@ html .progress__61462 {
     align-items: center;
     display: flex;
     gap: var(--space-4);
-    justify-content: center
+    justify-content: center;
+    margin-bottom: var(--space-4)
 }
 
 .table_cbfae2 {

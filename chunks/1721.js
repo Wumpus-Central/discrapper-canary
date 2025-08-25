@@ -14,6 +14,7 @@ var r = {
     bigCloud: "bigCloud__6df1a",
     smallCloud: "smallCloud__6df1a",
     divider: "divider__6df1a",
+    firstFeatureItemContainer: "firstFeatureItemContainer__6df1a",
     featureItem: "featureItem__6df1a",
     featureItemApplicationHome: "featureItemApplicationHome__6df1a",
     promotionalBackgroundImage: "promotionalBackgroundImage__6df1a",
