@@ -595,11 +595,6 @@ let i = {
         inlineRequire: () => n(345765).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
-    GuildLeaderboardManager: {
-        actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE", "WINDOW_FOCUS", "CHANNEL_SELECT"],
-        inlineRequire: () => n(434382).Z,
-        neverLoadBeforeConnectionOpen: !0,
-    },
     RunningGameDetectionManager: {
         actions: ["RUNNING_GAME_DELETE_ENTRY", "RUNNING_GAME_TOGGLE_DETECTION"],
         inlineRequire: () => n(611184).Z,
@@ -627,12 +622,6 @@ let i = {
             "MOD_VIEW_SEARCH_MESSAGES_SUCCESS",
         ],
         inlineRequire: () => n(35260).Z,
-    },
-    LeagueOfLegendsLifecycleManager: {
-        actions: ["RUNNING_GAMES_CHANGE"],
-        inlineRequire: () => n(614571).Z,
-        neverLoadBeforeConnectionOpen: !0,
-        hasStoreChangeListeners: !0,
     },
     SharedSpacesWarningManager: {
         actions: ["CHANNEL_SELECT", "APP_STATE_UPDATE"],

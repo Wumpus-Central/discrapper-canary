@@ -1,16 +1,15 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(647438),
     i = n(876215),
     l = n(442837),
-    a = n(676316),
-    o = n(592125),
-    s = n(146282),
-    c = n(442853),
-    u = n(520951),
-    d = n(567493),
-    p = n(897674),
-    h = n(206583);
-let f = new Set([
+    a = n(592125),
+    o = n(146282),
+    s = n(442853),
+    c = n(520951),
+    u = n(567493),
+    d = n(897674),
+    p = n(206583);
+let h = new Set([
     i.s.PLAYED_GAME,
     i.s.WATCHED_MEDIA,
     i.s.TOP_GAME,
@@ -18,47 +17,41 @@ let f = new Set([
     i.s.LISTENED_SESSION,
     i.s.LAUNCHED_ACTIVITY,
 ]);
-function m(e) {
-    let t = (0, l.e7)([o.Z], () => o.Z.getChannel(e)),
+function f(e) {
+    let t = (0, l.e7)([a.Z], () => a.Z.getChannel(e)),
         n = null == t ? void 0 : t.guild_id,
-        i = (0, p.Z)({ id: h.YN.GLOBAL_FEED });
-    (i = (0, c.Z)({
+        i = (0, d.Z)({ id: p.YN.GLOBAL_FEED });
+    (i = (0, s.Z)({
         entries: i,
         channelId: e,
     })),
-        (i = r.useMemo(() => (null == i ? void 0 : i.filter((e) => f.has(e.content_type))), [i]));
-    let { entries: m, filteredIds: g } = (0, u.Z)(i);
-    i = m;
-    let b = (0, d.im)(n);
-    i = r.useMemo(() => {
-        if (null == i) return b;
-        let e = new Set();
-        for (let t of b) {
-            let n = "".concat(t.author_id, ":").concat(t.extra.application_id);
-            e.add(n);
-        }
-        return [
-            ...b,
-            ...i.filter((t) => {
-                if ("application_id" in t.extra) {
-                    let n = "".concat(t.author_id, ":").concat(t.extra.application_id);
-                    return !e.has(n);
-                }
-                return !0;
-            }),
-        ];
-    }, [i, b]);
-    let { entriesWithLeaderboard: _, hasLeaderboardEntry: y } = (0, a.Z)({
-        entries: i,
-        channelId: e,
-    });
+        (i = r.useMemo(() => (null == i ? void 0 : i.filter((e) => h.has(e.content_type))), [i]));
+    let { entries: f, filteredIds: m } = (0, c.Z)(i);
+    i = f;
+    let g = (0, u.im)(n);
     return (
-        (i = _),
+        (i = r.useMemo(() => {
+            if (null == i) return g;
+            let e = new Set();
+            for (let t of g) {
+                let n = "".concat(t.author_id, ":").concat(t.extra.application_id);
+                e.add(n);
+            }
+            return [
+                ...g,
+                ...i.filter((t) => {
+                    if ("application_id" in t.extra) {
+                        let n = "".concat(t.author_id, ":").concat(t.extra.application_id);
+                        return !e.has(n);
+                    }
+                    return !0;
+                }),
+            ];
+        }, [i, g])),
         {
-            requestId: (0, l.e7)([s.Z], () => s.Z.getFeedRequestId(h.YN.GLOBAL_FEED)),
+            requestId: (0, l.e7)([o.Z], () => o.Z.getFeedRequestId(p.YN.GLOBAL_FEED)),
             entries: i,
-            impressionCappedEntryIds: g,
-            hasLeaderboardEntry: y,
+            impressionCappedEntryIds: m,
         }
     );
 }

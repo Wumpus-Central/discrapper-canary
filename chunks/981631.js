@@ -32,7 +32,7 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => rn,
-    DJj: () => ek,
+    DJj: () => eM,
     DZw: () => ex,
     E07: () => tC,
     EKQ: () => E.EK,
@@ -43,7 +43,7 @@ n.d(t, {
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
-    FQ1: () => rk,
+    FQ1: () => rM,
     Fc: () => ta,
     FoC: () => J,
     FsG: () => b.Fs,
@@ -74,7 +74,7 @@ n.d(t, {
     Jn9: () => rX,
     JuI: () => eX,
     JwP: () => nh,
-    K3D: () => rM,
+    K3D: () => rk,
     KA4: () => tw,
     KFR: () => nL,
     KJ3: () => rD,
@@ -114,7 +114,7 @@ n.d(t, {
     PUi: () => nG,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => M,
+    PrB: () => k,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -133,7 +133,7 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t3,
     RcX: () => tm,
-    Rg9: () => nM,
+    Rg9: () => nk,
     S7T: () => E.S7,
     S9g: () => nR,
     SOq: () => n6,
@@ -141,7 +141,7 @@ n.d(t, {
     STv: () => ey,
     SaU: () => tF,
     Sap: () => na,
-    Sbl: () => tM,
+    Sbl: () => tk,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => rJ,
@@ -180,7 +180,7 @@ n.d(t, {
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => eM,
+    Z8P: () => ek,
     Z9p: () => ng,
     ZUi: () => W,
     ZY5: () => tU,
@@ -202,7 +202,7 @@ n.d(t, {
     b4C: () => rF,
     b8q: () => tG,
     bL: () => eD,
-    c2C: () => nk,
+    c2C: () => nM,
     d4z: () => o.d,
     dAT: () => tq,
     dCx: () => nr,
@@ -277,12 +277,12 @@ n.d(t, {
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
-    pM4: () => k,
+    pM4: () => M,
     pNK: () => N,
     pTL: () => rq,
     pjP: () => n8,
     pmI: () => t9,
-    q5t: () => tk,
+    q5t: () => tM,
     q9n: () => nY,
     qAy: () => tZ,
     qWG: () => rH,
@@ -668,10 +668,10 @@ var v = (function (e) {
     j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -820,7 +820,6 @@ var v = (function (e) {
             (e.ACTIVITY_FEED_ENABLED_BY_USER = "ACTIVITY_FEED_ENABLED_BY_USER"),
             (e.ACTIVITY_FEED_DISABLED_BY_USER = "ACTIVITY_FEED_DISABLED_BY_USER"),
             (e.SUMMARIES_ENABLED_GA = "SUMMARIES_ENABLED_GA"),
-            (e.LEADERBOARD_ENABLED = "LEADERBOARD_ENABLED"),
             (e.SUMMARIES_ENABLED_BY_USER = "SUMMARIES_ENABLED_BY_USER"),
             (e.SUMMARIES_OPT_OUT_EXPERIENCE = "SUMMARIES_OPT_OUT_EXPERIENCE"),
             (e.CHANNEL_ICON_EMOJIS_GENERATED = "CHANNEL_ICON_EMOJIS_GENERATED"),
@@ -1922,9 +1921,6 @@ let eE = "@me",
         VOICE_PUBLIC_KEYS: () => "/voice/public-keys",
         VOICE_MATCH_PUBLIC_KEY: (e) => "/voice/".concat(e, "/match-public-key"),
         ACCOUNT_REVERT: "/auth/revert",
-        GUILD_LEADERBOARD: (e, t) => "/guilds/".concat(e, "/leaderboards/").concat(t),
-        UPDATE_MY_LOL_LEADERBOARD: () => "/users/@me/update-league-of-legends-leaderboard",
-        GUILD_LEADERBOARD_SETTINGS: (e, t) => "/guilds/".concat(e, "/leaderboards/").concat(t, "/settings"),
         VIRTUAL_CURRENCY_SKU_REDEEM: (e) => "/virtual-currency/skus/".concat(e, "/redeem"),
         VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
         IGNORE_USER: (e) => "/users/@me/relationships/".concat(e, "/ignore"),
@@ -2124,8 +2120,8 @@ var ew = (function (e) {
 let ex = 100,
     eL = 200,
     ej = 50,
-    eM = 50,
-    ek = 25,
+    ek = 50,
+    eM = 25,
     eU = 200,
     eG = 100,
     eB = 250,
@@ -2512,7 +2508,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2595,7 +2591,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -3060,8 +3056,6 @@ var tB = (function (e) {
             (e.REVERSE_TRIAL_UPSELL_MODAL = "Reverse trial Upsell Modal"),
             (e.WEB_SETTING_TREE_TOOL = "Web Setting Tree Tool"),
             (e.THIRD_PARTY_ACCESS = "Third Party Access"),
-            (e.GUILD_LEADERBOARD_SETTINGS_MODAL = "Guild Leaderboard Setting"),
-            (e.GUILD_LEADERBOARD_ACCESS_MODAL = "Guild Leaderboard Access Modal"),
             (e.VOICE_FILTERS_FLOATING_UPSELL = "Voice Filters Floating Upsell"),
             (e.VOICE_FILTERS_UPSELL_MODAL = "Voice Filters Upsell Modal"),
             (e.EDIT_CUSTOM_STATUS_MODAL = "Edit Custom Status Modal"),
@@ -5036,10 +5030,6 @@ var nb = (function (e) {
             (e.MEMBERLIST_POPOUT_SHARE_TO_CHANNEL_TOGGLED = "memberlist_popout_share_to_channel_toggled"),
             (e.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED = "ranking_items_seen"),
             (e.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED = "ranking_item_interacted"),
-            (e.LEADERBOARD_MEMBERLIST_CARD_VIEWED = "leaderboard_memberlist_card_viewed"),
-            (e.LEADERBOARD_POPOUT_VIEWED = "leaderboard_popout_viewed"),
-            (e.LEADERBOARD_USER_DATA_REFRESH_REQUESTED = "leaderboard_user_data_refresh_requested"),
-            (e.LEADERBOARD_USER_OPT_OUT_UPDATED = "leaderboard_user_opt_out_updated"),
             (e.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING = "league_of_legends_match_data_not_fetching"),
             (e.GAME_PROFILE_ACTION = "game_profile_action"),
             (e.GAME_PROFILE_OPEN = "game_profile_open"),
@@ -5599,8 +5589,8 @@ var nw = (function (e) {
             e
         );
     })({});
-let nM = 50;
-var nk = (function (e) {
+let nk = 50;
+var nM = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5871,7 +5861,6 @@ var nK = (function (e) {
             (e.END_TO_END_ENCRYPTION = "25968222946071"),
             (e.SCREEN_SHARING_MACOS = "26459694693783"),
             (e.SOCIAL_LAYER_CONNECTIONS = "27893392334359"),
-            (e.GUILD_LEADERBOARD = "27615657704983"),
             (e.FRACTIONAL_PREMIUM_ABOUT = "26362805097623"),
             (e.HD_STREAMING_POTION = "27343254089623"),
             (e.STEALTH_REMEDIATION_FEATURE_GUIDE = "28084948873623"),
@@ -6575,10 +6564,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rM = (function (e) {
+    rk = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rU = (function (e) {

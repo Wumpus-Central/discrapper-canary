@@ -1,8 +1,0 @@
-n.r(t),
-    n.d(t, {
-        default: () => i,
-        metadata: () => r,
-    });
-let r = { fileBytes: 27566 },
-    i =
-        "https://cdn.discordapp.com/assets/content/cb7e3ec0658c4e8cf86f2829b12203af68cfc9ab95b98579957427134d00c6e0.jpg";

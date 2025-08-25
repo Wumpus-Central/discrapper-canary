@@ -1,10 +1,7 @@
-n.d(t, { Y: () => p });
-var r = n(961742),
-    i = n(27273),
-    a = n(262068);
-let o = {};
-async function s(e) {
-    let t = o[e];
+n(961742), n(27273), n(262068);
+let r = null;
+async function i(e) {
+    let t = r[e];
     if (null != t) return t;
     let n = await fetch(e);
     return (
@@ -12,24 +9,24 @@ async function s(e) {
             url: e,
             cssText: await n.text(),
         }),
-        (o[e] = t),
+        (r[e] = t),
         t
     );
 }
-async function l(e, t) {
+async function a(e, t) {
     let n = e.cssText,
         r = /url\(["']?([^"')]+)["']?\)/g;
     return Promise.all(
-        (n.match(/url\([^)]+\)/g) || []).map(async (a) => {
-            let o = a.replace(r, "$1");
+        (n.match(/url\([^)]+\)/g) || []).map(async (i) => {
+            let a = i.replace(r, "$1");
             return (
-                o.startsWith("https://") || (o = new URL(o, e.url).href),
-                (0, i.cd)(o, t.fetchRequestInit, ({ result: e }) => ((n = n.replace(a, `url(${e})`)), [a, e]))
+                a.startsWith("https://") || (a = new URL(a, e.url).href),
+                fetchAsDataURL(a, t.fetchRequestInit, ({ result: e }) => ((n = n.replace(i, `url(${e})`)), [i, e]))
             );
         }),
     ).then(() => n);
 }
-function c(e) {
+function o(e) {
     if (null == e) return [];
     let t = [],
         n = /(\/\*[\s\S]*?\*\/)/gi,
@@ -56,23 +53,23 @@ function c(e) {
     }
     return t;
 }
-async function u(e, t) {
+async function s(e, t) {
     let n = [],
-        i = [];
+        r = [];
     return (
         e.forEach((n) => {
             if ("cssRules" in n)
                 try {
-                    (0, r.qo)(n.cssRules || []).forEach((e, r) => {
+                    toArray(n.cssRules || []).forEach((e, s) => {
                         if (e.type === CSSRule.IMPORT_RULE) {
-                            let a = r + 1,
-                                o = e.href,
-                                u = s(o)
-                                    .then((e) => l(e, t))
+                            let l = s + 1,
+                                c = e.href,
+                                u = i(c)
+                                    .then((e) => a(e, t))
                                     .then((e) =>
-                                        c(e).forEach((e) => {
+                                        o(e).forEach((e) => {
                                             try {
-                                                n.insertRule(e, e.startsWith("@import") ? (a += 1) : n.cssRules.length);
+                                                n.insertRule(e, e.startsWith("@import") ? (l += 1) : n.cssRules.length);
                                             } catch (t) {
                                                 console.error("Error inserting rule from remote css", {
                                                     rule: e,
@@ -84,33 +81,33 @@ async function u(e, t) {
                                     .catch((e) => {
                                         console.error("Error loading remote css", e.toString());
                                     });
-                            i.push(u);
+                            r.push(u);
                         }
                     });
-                } catch (a) {
-                    let r = e.find((e) => null == e.href) || document.styleSheets[0];
+                } catch (l) {
+                    let s = e.find((e) => null == e.href) || document.styleSheets[0];
                     null != n.href &&
-                        i.push(
-                            s(n.href)
-                                .then((e) => l(e, t))
+                        r.push(
+                            i(n.href)
+                                .then((e) => a(e, t))
                                 .then((e) =>
-                                    c(e).forEach((e) => {
-                                        r.insertRule(e, n.cssRules.length);
+                                    o(e).forEach((e) => {
+                                        s.insertRule(e, n.cssRules.length);
                                     }),
                                 )
                                 .catch((e) => {
                                     console.error("Error loading remote stylesheet", e);
                                 }),
                         ),
-                        console.error("Error inlining remote css file", a);
+                        console.error("Error inlining remote css file", l);
                 }
         }),
-        Promise.all(i).then(
+        Promise.all(r).then(
             () => (
                 e.forEach((e) => {
                     if ("cssRules" in e)
                         try {
-                            (0, r.qo)(e.cssRules || []).forEach((e) => {
+                            toArray(e.cssRules || []).forEach((e) => {
                                 n.push(e);
                             });
                         } catch (t) {
@@ -122,30 +119,13 @@ async function u(e, t) {
         )
     );
 }
-function d(e) {
-    return e.filter((e) => e.type === CSSRule.FONT_FACE_RULE).filter((e) => (0, a.w7)(e.style.getPropertyValue("src")));
+function l(e) {
+    return e
+        .filter((e) => e.type === CSSRule.FONT_FACE_RULE)
+        .filter((e) => shouldEmbed(e.style.getPropertyValue("src")));
 }
-async function f(e, t) {
+async function c(e, t) {
     if (null == e.ownerDocument) throw Error("Provided element is not within a Document");
-    let n = (0, r.qo)(e.ownerDocument.styleSheets);
-    return d(await u(n, t));
-}
-async function _(e, t) {
-    let n = await f(e, t);
-    return (
-        await Promise.all(
-            n.map((e) => {
-                let n = e.parentStyleSheet ? e.parentStyleSheet.href : null;
-                return (0, a.vg)(e.cssText, n, t);
-            }),
-        )
-    ).join("\n");
-}
-async function p(e, t) {
-    let n = null != t.fontEmbedCSS ? t.fontEmbedCSS : t.skipFonts ? null : await _(e, t);
-    if (n) {
-        let t = document.createElement("style"),
-            r = document.createTextNode(n);
-        t.appendChild(r), e.firstChild ? e.insertBefore(t, e.firstChild) : e.appendChild(t);
-    }
+    let n = toArray(e.ownerDocument.styleSheets);
+    return l(await s(n, t));
 }
