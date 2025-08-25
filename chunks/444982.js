@@ -78,25 +78,15 @@ let S = {
                 : null;
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.UPvOiY) }),
-        renderButtons: (e, t) =>
+        renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(g.ls, {
-                        onClick: (o) => {
+                        onClick: (t) => {
                             (0, d.js)(e) &&
-                                (0, r.jW)(o, async () => {
-                                    let { default: r } = await n.e("26775").then(n.bind(n, 740579));
-                                    return (
-                                        t(!0),
-                                        (n) =>
-                                            (0, i.jsx)(
-                                                r,
-                                                _(E({}, n), {
-                                                    widget: e,
-                                                    onClose: () => t(!1),
-                                                }),
-                                            )
-                                    );
+                                (0, r.jW)(t, async () => {
+                                    let { default: t } = await n.e("26775").then(n.bind(n, 740579));
+                                    return (n) => (0, i.jsx)(t, _(E({}, n), { widget: e }));
                                 });
                         },
                     }),
@@ -126,14 +116,14 @@ let S = {
                 : null;
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.nFv3GR) }),
-        renderButtons: (e, t) =>
+        renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(g.ls, {
                         onClick: (e) => {
                             (0, r.jW)(e, async () => {
                                 let { default: e } = await n.e("32382").then(n.bind(n, 955280));
-                                return t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) }));
+                                return (t) => (0, i.jsx)(e, E({}, t));
                             });
                         },
                     }),
@@ -154,14 +144,14 @@ let S = {
             });
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: "Click Zone Tester" }),
-        renderButtons: (e, t) =>
+        renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(g.ls, {
                         onClick: (e) => {
                             (0, r.jW)(e, async () => {
                                 let { default: e } = await n.e("38813").then(n.bind(n, 541501));
-                                return t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) }));
+                                return (t) => (0, i.jsx)(e, E({}, t));
                             });
                         },
                     }),
@@ -223,33 +213,23 @@ let S = {
                 : null;
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t["386XRk"]) }),
-        renderButtons(e, t) {
-            var o;
+        renderButtons(e) {
+            var t;
             return (0, d.ZL)(e)
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(g.ls, {
-                              onClick: (o) => {
+                              onClick: (t) => {
                                   (0, d.ZL)(e) &&
-                                      (0, r.jW)(o, async () => {
-                                          let { default: r } = await n.e("34684").then(n.bind(n, 68738));
-                                          return (
-                                              t(!0),
-                                              (n) =>
-                                                  (0, i.jsx)(
-                                                      r,
-                                                      _(E({}, n), {
-                                                          widget: e,
-                                                          onClose: () => t(!1),
-                                                      }),
-                                                  )
-                                          );
+                                      (0, r.jW)(t, async () => {
+                                          let { default: t } = await n.e("34684").then(n.bind(n, 68738));
+                                          return (n) => (0, i.jsx)(t, _(E({}, n), { widget: e }));
                                       });
                               },
                           }),
                           (0, i.jsx)(g.GY, {
                               widgetId: e.id,
-                              showAllStreams: null == (o = e.meta.showAllStreams) || o,
+                              showAllStreams: null == (t = e.meta.showAllStreams) || t,
                           }),
                           (0, i.jsx)(g.RT, {
                               id: e.id,
@@ -277,14 +257,14 @@ let S = {
             });
         },
         renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.gnKWdX) }),
-        renderButtons: (e, t) =>
+        renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(g.ls, {
                         onClick: (e) => {
                             (0, r.jW)(e, async () => {
                                 let { default: e } = await n.e("94706").then(n.bind(n, 168133));
-                                return t(!0), (n) => (0, i.jsx)(e, _(E({}, n), { onClose: () => t(!1) }));
+                                return (t) => (0, i.jsx)(e, E({}, t));
                             });
                         },
                     }),

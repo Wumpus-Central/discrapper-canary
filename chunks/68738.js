@@ -15,7 +15,13 @@ function s(t) {
         o.useEffect(() => {
             b.current = s;
         }),
-        o.useEffect(() => () => b.current(), []),
+        o.useEffect(
+            () => () => {
+                var t;
+                return null == (t = b.current) ? void 0 : t.call(b);
+            },
+            [],
+        ),
         (0, n.jsxs)(i.v2r, {
             navId: "overlay-go-live-widget-context-menu",
             onClose: a.Zy,

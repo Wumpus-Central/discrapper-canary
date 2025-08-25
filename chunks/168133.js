@@ -1,32 +1,38 @@
-e.d(i, { default: () => u });
+e.d(i, { default: () => f });
 var n = e(951288),
     a = e(647438),
     c = e(442837),
-    o = e(481060),
-    s = e(239091),
-    l = e(13245),
+    l = e(481060),
+    o = e(239091),
+    s = e(13245),
     r = e(486016),
     d = e(624864),
-    f = e(388032);
-function u(t) {
+    u = e(388032);
+function f(t) {
     let { onSelect: i, onClose: e } = t,
-        u = (0, c.e7)([d.Z], () => d.Z.isNotificationDisabled(r.OverlayNotificationDisabledSetting.TEXT_CHAT)),
-        b = a.useRef(e);
+        f = (0, c.e7)([d.Z], () => d.Z.isNotificationDisabled(r.OverlayNotificationDisabledSetting.TEXT_CHAT)),
+        v = a.useRef(e);
     return (
         a.useEffect(() => {
-            b.current = e;
+            v.current = e;
         }),
-        a.useEffect(() => () => b.current(), []),
-        (0, n.jsx)(o.v2r, {
+        a.useEffect(
+            () => () => {
+                var t;
+                return null == (t = v.current) ? void 0 : t.call(v);
+            },
+            [],
+        ),
+        (0, n.jsx)(l.v2r, {
             navId: "overlay-notifications-widget-context-menu",
-            onClose: s.Zy,
-            "aria-label": f.intl.string(f.t.tPfVWl),
+            onClose: o.Zy,
+            "aria-label": u.intl.string(u.t.tPfVWl),
             onSelect: i,
-            children: (0, n.jsx)(o.S89, {
-                label: f.intl.string(f.t.Fy5kPj),
-                checked: u,
+            children: (0, n.jsx)(l.S89, {
+                label: u.intl.string(u.t.Fy5kPj),
+                checked: f,
                 id: "overlay-text-chat-notifications",
-                action: () => l.Z.setNotificationDisabledSetting(r.OverlayNotificationDisabledSetting.TEXT_CHAT, !u),
+                action: () => s.Z.setNotificationDisabledSetting(r.OverlayNotificationDisabledSetting.TEXT_CHAT, !f),
             }),
         })
     );

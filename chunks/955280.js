@@ -8,8 +8,8 @@ var n = a(951288),
     c = a(13245),
     u = a(355863),
     d = a(237997),
-    p = a(610394),
-    v = a(340101),
+    v = a(610394),
+    p = a(340101),
     g = a(501787),
     m = a(981631),
     y = a(388032);
@@ -29,12 +29,18 @@ function f(e) {
     l.useEffect(() => {
         S.current = b;
     }),
-        l.useEffect(() => () => S.current(), []);
-    let h = (0, r.e7)([p.ZP, u.Z], () => {
-            let e = p.ZP.getWidgetByType(m.Odu.VOICE_V3);
+        l.useEffect(
+            () => () => {
+                var e;
+                return null == (e = S.current) ? void 0 : e.call(S);
+            },
+            [],
+        );
+    let h = (0, r.e7)([v.ZP, u.Z], () => {
+            let e = v.ZP.getWidgetByType(m.Odu.VOICE_V3);
             if (null == e) return null;
             let t = u.Z.getWidget(e.id);
-            return null != t && (0, v.Aw)(t) ? t : null;
+            return null != t && (0, p.Aw)(t) ? t : null;
         }),
         k = null != (a = null == h || null == (t = h.meta) ? void 0 : t.voiceStatesMaxShown) ? a : g.At;
     function x(e) {
