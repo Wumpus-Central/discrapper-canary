@@ -27,10 +27,10 @@ var i,
     N = n(974180),
     w = n(70956),
     Z = n(129724),
-    P = n(145597),
-    T = n(486016),
-    A = n(32300),
-    k = n(371651),
+    T = n(145597),
+    P = n(486016),
+    k = n(32300),
+    A = n(371651),
     D = n(624864),
     R = n(610394),
     L = n(340101),
@@ -185,8 +185,8 @@ function em(e, t) {
 }
 function eg() {
     if (
-        !(0, A.Yo)("OverlayNotificationStore") ||
-        D.Z.isNotificationDisabled(T.OverlayNotificationDisabledSetting.NOW_PLAYING)
+        !(0, k.Yo)("OverlayNotificationStore") ||
+        D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.NOW_PLAYING)
     )
         return !1;
     let e = v.Z.usersPlaying,
@@ -258,7 +258,7 @@ function eg() {
             t.add(n);
     let r = new Set();
     for (let e of n) t.has(e) || r.add(e);
-    let o = R.ZP.isOverlayV3EnabledForPID((0, P.getPID)()) || null != R.ZP.getFocusedPID();
+    let o = R.ZP.isOverlayV3EnabledForPID((0, T.getPID)()) || null != R.ZP.getFocusedPID();
     for (let e of r)
         if (
             !(function (e) {
@@ -322,8 +322,8 @@ let eb = new eO(s.Z, {
         var t;
         let { nudges: n } = e;
         ep(0);
-        let i = null != (t = R.ZP.getFocusedPID()) ? t : P.UNSET_PID;
-        if (k.default.hasChangedRenderMode(i)) return;
+        let i = null != (t = R.ZP.getFocusedPID()) ? t : T.UNSET_PID;
+        if (A.default.hasChangedRenderMode(i)) return;
         let r = (0, Y.Z)((0, M.pL)(), n);
         null != r &&
             em(r, {
@@ -391,10 +391,13 @@ let eb = new eO(s.Z, {
                         l = (0, G.Z)(e, n, a, r);
                         break;
                     case Q.mFx.STREAM_REQUEST:
-                        let { enableRequestToStreamOverlayNotification: c } = f.A.getCurrentConfig({
-                            guildId: e.guild_id,
-                            location: "showActivityNotification",
-                        });
+                        let { enableRequestToStreamOverlayNotification: c } = f.A.getCurrentConfig(
+                            {
+                                guildId: e.guild_id,
+                                location: "showActivityNotification",
+                            },
+                            { autoTrackExposure: !1 },
+                        );
                         if (!c || null == (r = x.Z.getApplicationActivity(s)) || r.application_id !== s) return !1;
                         l = (0, B.Z)(e, n, a, r);
                 }
@@ -421,7 +424,7 @@ let eb = new eO(s.Z, {
             if (!1 !== e) return e;
         }
         if (
-            D.Z.isNotificationDisabled(T.OverlayNotificationDisabledSetting.TEXT_CHAT) ||
+            D.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.TEXT_CHAT) ||
             I.Z.disableNotifications ||
             !(0, p.eF)(l, r)
         )

@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(574176),
     g = n(106301),
     b = n(882522),
-    _ = n(512384),
-    y = n(763624),
+    y = n(512384),
+    _ = n(763624),
     C = n(463421),
-    x = n(470956),
-    v = n(597998),
+    v = n(470956),
+    x = n(597998),
     O = n(199902),
     j = n(314897),
     E = n(271383),
@@ -35,8 +35,8 @@ var r = n(951288),
     D = n(541675);
 let L = i.memo((e) => {
     var t, n, i, l;
-    let { mute: a, deaf: s, user: v, channel: I, sessionId: P, nick: D } = e,
-        L = v.id,
+    let { mute: a, deaf: s, user: x, channel: I, sessionId: P, nick: D } = e,
+        L = x.id,
         k = (0, o.e7)([j.default], () => j.default.getId() === L, [L]),
         [U, B, F] = (0, o.Wu)(
             [S.Z],
@@ -46,8 +46,8 @@ let L = i.memo((e) => {
                     : [!S.Z.isSupported() || S.Z.isLocalMute(L), !1, S.Z.isLocalVideoDisabled(L)],
             [k, L],
         ),
-        G = (0, o.e7)([T.Z], () => T.Z.isPrioritySpeaker(L)),
-        H = (0, c.Z)({
+        H = (0, o.e7)([T.Z], () => T.Z.isPrioritySpeaker(L)),
+        G = (0, c.Z)({
             userId: L,
             checkSoundSharing: !0,
         }),
@@ -71,23 +71,26 @@ let L = i.memo((e) => {
             [I, L],
         ),
         J = (0, o.e7)([Z.Z], () => Z.Z.getSessionById(P)),
-        $ = A.ZP.useName(v),
+        $ = A.ZP.useName(x),
         ee = (0, o.e7)([N.Z], () => N.Z.getVoicePlatformForChannel(I.id, L), [I.id, L]),
         { enableHangStatus: et } = m.n.useExperiment({
             guildId: I.guild_id,
             location: "VoiceUsers",
         }),
-        en = (0, f.ZP)(I, !0, v),
+        en = (0, f.ZP)(I, !0, x),
         er = (0, o.e7)([g.Z], () => (k ? g.Z.getHangStatusActivity() : null), [k]),
         ei = (0, b.j)(L),
-        el = (0, x.Eu)(I.id, L),
-        { enableVCStatusIcons: ea, enableRequestToStream: eo } = y.A.useExperiment({
-            guildId: I.guild_id,
-            location: "VoiceUsers",
-        });
-    return (0, r.jsx)(_.Z, {
+        el = (0, v.Eu)(I.id, L),
+        { enableVCStatusIcons: ea, enableRequestToStream: eo } = _.A.useExperiment(
+            {
+                guildId: I.guild_id,
+                location: "VoiceUsers",
+            },
+            { autoTrackExposure: (null == Y ? void 0 : Y.session_id) != null },
+        );
+    return (0, r.jsx)(y.Z, {
         shakeLocation: M.oZ.VOICE_USER,
-        isShaking: H,
+        isShaking: G,
         children: (0, r.jsx)(
             w.ZP,
             ((i = (function (e) {
@@ -126,9 +129,9 @@ let L = i.memo((e) => {
                     localVideoDisabled: F,
                     mute: a || U,
                     deaf: s || B,
-                    speaking: H,
+                    speaking: G,
                     ringing: z,
-                    priority: G,
+                    priority: H,
                     embeddedApplication: q[0],
                     isStreaming: null != X && X.channelId === I.id,
                     isWatching: null != Q && Q.state !== R.jm8.ENDED,
@@ -169,13 +172,13 @@ let k = [],
                 location: m,
                 numAudience: g,
                 withGuildIcon: b = !1,
-                className: _,
-                children: y,
+                className: y,
+                children: _,
             } = e,
             [C, O] = i.useState(null),
             [E, S] = i.useState(!1),
             Z = i.useRef(null),
-            T = (0, x.Es)(l.id, null != c ? c : k),
+            T = (0, v.Es)(l.id, null != c ? c : k),
             N = i.useRef(
                 new s.sW(50, () => {
                     O(Z.current), (Z.current = null);
@@ -258,14 +261,14 @@ let k = [],
                 i
             );
         })();
-        return null == F && null == y
+        return null == F && null == _
             ? null
-            : (0, r.jsxs)(v.eJ, {
-                  className: a()(_, D.list, {
+            : (0, r.jsxs)(x.eJ, {
+                  className: a()(y, D.list, {
                       [D.collapsed]: u,
                       [D.withGuildIcon]: b,
                   }),
                   collapsed: u,
-                  children: [F, y],
+                  children: [F, _],
               });
     };

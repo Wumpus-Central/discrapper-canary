@@ -13,10 +13,13 @@ var l = n(951288),
     m = n(658805),
     Z = n(388032);
 function E(e, t) {
-    let { enableRequestToStream: n } = d.A.useExperiment({
-            guildId: t.guild_id,
-            location: "useRequestToStreamItem",
-        }),
+    let { enableRequestToStream: n } = d.A.useExperiment(
+            {
+                guildId: t.guild_id,
+                location: "useRequestToStreamItem",
+            },
+            { autoTrackExposure: !1 },
+        ),
         E = (0, i.e7)([s.default], () => s.default.getId()),
         P = (0, g.Z)(e, t.guild_id)[0],
         v = (0, i.e7)([u.Z], () => null != u.Z.getStreamForUser(e, t.getGuildId())),

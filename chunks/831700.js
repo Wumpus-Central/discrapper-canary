@@ -497,10 +497,13 @@ function ei(e) {
             },
             { autoTrackExposure: !1 },
         ),
-        { enableOpenTIVForPing: M } = w.A.useExperiment({
-            guildId: n.guild_id,
-            location: "VoiceChannel",
-        }),
+        { enableOpenTIVForPing: M } = w.A.useExperiment(
+            {
+                guildId: n.guild_id,
+                location: "VoiceChannel",
+            },
+            { autoTrackExposure: !1 },
+        ),
         F = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
