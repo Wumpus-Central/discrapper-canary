@@ -1,19 +1,18 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(512722),
     a = n.n(i),
     o = n(399606),
-    s = n(481060),
-    l = n(607070),
+    s = n(159691),
+    l = n(481060),
     c = n(430824),
-    u = n(506071),
-    d = n(267101),
-    f = n(240864),
-    _ = n(57949),
-    p = n(400916),
-    h = n(388032);
-function m(e, t, n) {
+    u = n(267101),
+    d = n(240864),
+    f = n(57949),
+    _ = n(400916),
+    p = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,34 +53,32 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
+function b(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
-        m = (0, o.e7)([f.Z], () => f.Z.getGuildProduct(n)),
-        E = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        y = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        O = (0, u.n)();
-    if ((a()(null != E, "guild cannot be null"), a()(null != m, "guildProductListing cannot be null"), (0, d.SO)(E)))
-        return (0, r.jsx)(s.ua7, {
-            text: h.intl.string(h.t.sAJr9f),
+        h = (0, o.e7)([d.Z], () => d.Z.getGuildProduct(n)),
+        g = (0, o.e7)([c.Z], () => c.Z.getGuild(t), [t]);
+    if ((a()(null != g, "guild cannot be null"), a()(null != h, "guildProductListing cannot be null"), (0, u.SO)(g)))
+        return (0, r.jsx)(l.ua7, {
+            text: p.intl.string(p.t.sAJr9f),
             children: (e) =>
                 (0, r.jsx)(
-                    s.zxk,
-                    b(
-                        g(
+                    s.zx,
+                    E(
+                        m(
                             {
                                 variant: "primary",
-                                text: h.intl.string(h.t.xUi3BA),
+                                text: p.intl.string(p.t.xUi3BA),
                             },
                             e,
                         ),
@@ -89,29 +86,27 @@ function y(e) {
                     ),
                 ),
         });
-    if (m.has_entitlement)
-        return null != m.attachments
-            ? (0, r.jsx)(p.Z, {
-                  guildId: E.id,
-                  productId: m.id,
+    if (h.has_entitlement)
+        return null != h.attachments
+            ? (0, r.jsx)(_.Z, {
+                  guildId: g.id,
+                  productId: h.id,
               })
-            : (0, r.jsx)(s.zxk, {
+            : (0, r.jsx)(s.zx, {
                   variant: "secondary",
-                  text: h.intl.string(h.t.RcTOGB),
+                  text: p.intl.string(p.t.RcTOGB),
                   disabled: !0,
               });
     {
         let e = () =>
-            (0, _.z)({
-                guildProductListing: m,
-                guildId: E.id,
+            (0, f.z)({
+                guildProductListing: h,
+                guildId: g.id,
                 sourceAnalyticsLocations: i,
             });
-        return (0, r.jsx)(s.gtL, {
-            shineSize: s.gtL.ShineSizes.SMALL,
-            pauseAnimation: y || !O,
+        return (0, r.jsx)(s.zx, {
+            text: p.intl.string(p.t.xUi3BA),
             onClick: e,
-            children: h.intl.string(h.t.xUi3BA),
         });
     }
 }

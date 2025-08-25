@@ -1,4 +1,4 @@
-n.d(t, { default: () => v });
+n.d(e, { default: () => v });
 var a = n(951288);
 n(647438);
 var r = n(512722),
@@ -15,18 +15,18 @@ var r = n(512722),
     x = n(388032),
     _ = n(819994);
 let j = (0, o.Mg)(s.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
-function g(e) {
-    let { guildProductListing: t, guildId: n, onClose: r } = e,
+function g(t) {
+    let { guildProductListing: e, guildId: n, onClose: r } = t,
         l = (0, i.e7)([u.Z], () => {
-            var e;
-            return null == (e = u.Z.getGuild(n)) ? void 0 : e.name;
+            var t;
+            return null == (t = u.Z.getGuild(n)) ? void 0 : t.name;
         });
     return (0, a.jsxs)(c.xBx, {
         className: _.header,
         children: [
             (0, a.jsx)(d.Z, {
                 className: _.headerImage,
-                listing: t,
+                listing: e,
                 imageSize: j,
                 alt: "",
             }),
@@ -40,7 +40,7 @@ function g(e) {
                     (0, a.jsx)(c.X6q, {
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: t.name,
+                        children: e.name,
                     }),
                     (0, a.jsx)(c.LZC, { size: 8 }),
                     (0, a.jsx)(c.Text, {
@@ -53,7 +53,7 @@ function g(e) {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         className: _.__invalid_description,
-                        children: x.intl.format(x.t["6dOuaG"], { count: t.attachments_count }),
+                        children: x.intl.format(x.t["6dOuaG"], { count: e.attachments_count }),
                     }),
                 ],
             }),
@@ -64,31 +64,29 @@ function g(e) {
         ],
     });
 }
-function p(e) {
-    let { attachment: t, guildId: n, productId: r } = e;
+function p(t) {
+    let { attachment: e, guildId: n, productId: r } = t;
     return (0, a.jsxs)("li", {
         className: _.attachmentRow,
         children: [
-            (0, a.jsx)(f.Z, { attachment: t }),
+            (0, a.jsx)(f.Z, { attachment: e }),
             (0, a.jsx)(h.Z, {
                 className: _.attachmentDownloadButton,
+                icon: c._8t,
+                text: void 0,
                 guildId: n,
                 productId: r,
-                attachmentId: t.id,
-                children: (0, a.jsx)(c._8t, {
-                    size: "md",
-                    color: "currentColor",
-                }),
+                attachmentId: e.id,
             }),
         ],
     });
 }
-function v(e) {
-    var t;
-    let { guildId: n, productId: r, onClose: o, transitionState: s } = e,
+function v(t) {
+    var e;
+    let { guildId: n, productId: r, onClose: o, transitionState: s } = t,
         d = (0, i.e7)([m.Z], () => m.Z.getGuildProduct(r));
     l()(null != d, "guildProductListing cannot be null");
-    let u = null != (t = d.attachments) ? t : [];
+    let u = null != (e = d.attachments) ? e : [];
     return (0, a.jsxs)(c.Y0X, {
         className: _.modal,
         size: c.CgR.MEDIUM,
@@ -104,15 +102,15 @@ function v(e) {
             (0, a.jsx)(c.hzk, {
                 children: (0, a.jsx)("ul", {
                     className: _.__invalid_attachmentsList,
-                    children: u.map((e) =>
+                    children: u.map((t) =>
                         (0, a.jsx)(
                             p,
                             {
                                 guildId: n,
                                 productId: d.id,
-                                attachment: e,
+                                attachment: t,
                             },
-                            e.id,
+                            t.id,
                         ),
                     ),
                 }),

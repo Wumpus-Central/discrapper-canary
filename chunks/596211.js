@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(755721),
+var i = n(159691),
     a = n(406877);
 function o(e, t, n) {
     return (
@@ -86,7 +86,7 @@ function f(e) {
     return (0, r.jsx)(
         i.zx,
         c(s({}, l), {
-            submitting: d,
+            loading: d,
             onClick: _,
         }),
     );

@@ -67754,12 +67754,6 @@ html .progress__61462 {
     opacity: .5
 }
 
-.textWithIcon__6e421 {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
 .container__652b4 {
     background-position: 50%;
     background-size: cover;
@@ -90481,7 +90475,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
