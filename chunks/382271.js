@@ -125,16 +125,12 @@ let C = (e, t) => {
                           rive: d.p8m,
                           type: "rive",
                       },
-            p = () => {
-                let e = t.filter((e) => e.status === b.Fz.SUCCESS).length;
-                return 0 === e
+            p = () =>
+                0 === t.filter((e) => e.status === b.Fz.SUCCESS).length
                     ? v.intl.string(v.t["7VBEub"])
                     : !0 === a
                       ? v.intl.string(v.t.GP5lbm)
-                      : o > 0
-                        ? v.intl.formatToPlainString(v.t.iWtOfH, { numReferrals: e })
-                        : v.intl.string(v.t.tKCltb);
-            },
+                      : v.intl.string(v.t.tKCltb),
             h = () =>
                 !0 === a
                     ? v.intl.format(v.t["4gJJfH"], { helpdeskArticle: g.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM) })
