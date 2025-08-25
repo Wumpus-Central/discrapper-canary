@@ -1,6 +1,6 @@
 i.d(t, {
-    G: () => Z,
-    d5: () => C,
+    G: () => I,
+    d5: () => P,
 }),
     i(388685),
     i(415506);
@@ -26,7 +26,7 @@ var n = i(481060),
     E = i(959517),
     T = i(474936),
     w = i(388032);
-function I(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(i);
@@ -51,7 +51,7 @@ function I(e) {
     }
     return e;
 }
-function Z(e, t, i) {
+function I(e, t, i) {
     let n = f.default.getCurrentUser(),
         r = e.getGuildId(),
         s = O.dg(r),
@@ -87,7 +87,7 @@ function Z(e, t, i) {
         help: w.intl.formatToPlainString(w.t.tUOJdH, { maxSize: O.Ng(O.OC()) }),
     });
 }
-async function P(e, t, i) {
+async function Z(e, t, i) {
     let { currentGuildId: r } = i,
         s = (0, p.U)({ location: "UploadPrompt.maybeCompressOversizedFiles" }),
         o = (e) => ({
@@ -96,6 +96,7 @@ async function P(e, t, i) {
                 originalContentType: e.type,
                 compressTimeMs: 0,
                 preCompressionSize: e.size,
+                earlyClipboardCompressionAttempted: !1,
             },
         });
     if ("clipboard" !== t || !s.compressOversizedClipboard || !(0, y.Bf)(e, r)) return e.map(o);
@@ -113,6 +114,7 @@ async function P(e, t, i) {
                           originalContentType: e.type,
                           compressTimeMs: t.compressTimeMs,
                           preCompressionSize: e.size,
+                          earlyClipboardCompressionAttempted: !0,
                           convertedMimeType: t.success ? "image/webp" : void 0,
                           conversionFailureReason: t.success ? void 0 : t.reason,
                           hashTimeMs: t.hashTimeMs,
@@ -121,7 +123,7 @@ async function P(e, t, i) {
               }),
           ));
 }
-async function C(e, t, i) {
+async function P(e, t, i) {
     let {
         filesMetadata: n,
         requireConfirm: c = !0,
@@ -133,26 +135,26 @@ async function C(e, t, i) {
     if (null != n && n.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
     let O = t.getGuildId(),
         b = Array.from(e),
-        T = await P(b, f, {
+        T = await Z(b, f, {
             channel: t,
             currentGuildId: O,
         }),
-        C = T.map((e) => e.file),
+        P = T.map((e) => e.file),
         j = T.map((e) => e.compressionMetadata);
-    if ((0, y.Bf)(C, O))
-        return void Z(
+    if ((0, y.Bf)(P, O))
+        return void I(
             t,
             b,
-            C.map((e) => e.size),
+            P.map((e) => e.size),
         );
-    if (m.Z.getUploadCount(t.id, i) + C.length > S.dN1) {
+    if (m.Z.getUploadCount(t.id, i) + P.length > S.dN1) {
         (0, l.openUploadError)({
             title: w.intl.string(w.t.wOr6hI),
             help: w.intl.formatToPlainString(w.t["qqyp/f"], { limit: S.dN1 }),
         }),
             v.default.track(S.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: m.Z.getUploadCount(t.id, i),
-                new_count: C.length,
+                new_count: P.length,
             });
         return;
     }
@@ -162,9 +164,9 @@ async function C(e, t, i) {
             r.Z.updateChatOpen(t.id, !0),
         c)
     ) {
-        let e = C.map((e, t) => {
+        let e = P.map((e, t) => {
             let i = j[t];
-            return I(
+            return C(
                 {
                     file: e,
                     platform: d.ow.WEB,
@@ -182,11 +184,11 @@ async function C(e, t, i) {
             draftType: i,
         });
     } else {
-        let e = C.map((e, i) => {
+        let e = P.map((e, i) => {
             let r = null != n ? n[i] : {},
                 s = j[i];
             return new a.nH(
-                I(
+                C(
                     {
                         file: e,
                         platform: d.ow.WEB,

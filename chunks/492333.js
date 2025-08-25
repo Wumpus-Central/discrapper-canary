@@ -2,6 +2,7 @@ e.exports = {
     container: "container_dfb989",
     inProfile: "inProfile_dfb989",
     innerContainer: "innerContainer_dfb989",
+    chicle: "chicle_dfb989",
     underlineOnHover: "underlineOnHover_dfb989",
     pop: "pop_dfb989",
     glowContainer: "glowContainer_dfb989",

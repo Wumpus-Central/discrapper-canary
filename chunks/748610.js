@@ -321,4 +321,7 @@ let g = {
             cursorScope: n,
         });
     },
+    markSearchTokensRefreshed: function () {
+        a.Z.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
+    },
 };

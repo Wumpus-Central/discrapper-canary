@@ -1,29 +1,29 @@
 n.d(t, {
-    $G: () => x,
-    AH: () => A,
-    BU: () => B,
-    Fr: () => W,
-    Fz: () => Y,
-    Ko: () => R,
-    Pe: () => K,
-    R6: () => z,
-    Tm: () => I,
-    UP: () => L,
-    Vj: () => N,
-    WU: () => H,
-    X$: () => Q,
-    X3: () => q,
-    b7: () => S,
-    cl: () => Z,
-    g9: () => M,
-    i3: () => G,
-    jW: () => D,
-    kG: () => F,
-    nI: () => j,
-    nl: () => X,
-    qc: () => k,
-    s5: () => T,
-    zH: () => C,
+    $G: () => L,
+    AH: () => C,
+    BU: () => Z,
+    Fr: () => K,
+    Fz: () => W,
+    Ko: () => P,
+    Pe: () => z,
+    R6: () => q,
+    Tm: () => T,
+    UP: () => j,
+    Vj: () => R,
+    WU: () => Y,
+    X$: () => J,
+    X3: () => X,
+    b7: () => A,
+    cl: () => V,
+    g9: () => k,
+    i3: () => B,
+    jW: () => x,
+    kG: () => H,
+    nI: () => M,
+    nl: () => Q,
+    qc: () => U,
+    s5: () => S,
+    zH: () => N,
 }),
     n(539854),
     n(997841),
@@ -48,14 +48,15 @@ var a = n(349033),
 n(630388);
 var _ = n(709054),
     p = n(51144),
-    h = n(945577),
-    m = n(494573),
-    g = n(731267),
-    E = n(532428);
+    h = n(748610),
+    m = n(945577),
+    g = n(494573),
+    E = n(731267),
+    b = n(532428);
 n(723642);
-var b = n(981631),
-    y = n(388032);
-function O(e, t, n) {
+var y = n(981631),
+    O = n(388032);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,7 +69,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -79,67 +80,67 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e) {
-    switch (e.type) {
-        case b.aib.GUILD:
-            return e.guildId;
-        case b.aib.GUILD_CHANNEL:
-        case b.aib.CHANNEL:
-        case b.aib.THREAD:
-            return e.channelId;
-        case b.aib.DMS:
-            return e.type;
-        case b.aib.FAVORITES:
-            return b.I_8;
-    }
-}
 function T(e) {
     switch (e.type) {
-        case b.aib.GUILD_CHANNEL:
-        case b.aib.GUILD:
-        case b.aib.THREAD:
+        case y.aib.GUILD:
             return e.guildId;
-        case b.aib.CHANNEL:
-            var t;
-            let n = s.Z.getChannel(e.channelId);
-            return null != (t = null == n ? void 0 : n.guild_id) ? t : null;
-        case b.aib.FAVORITES:
-            return b.I_8;
-        default:
-            return null;
+        case y.aib.GUILD_CHANNEL:
+        case y.aib.CHANNEL:
+        case y.aib.THREAD:
+            return e.channelId;
+        case y.aib.DMS:
+            return e.type;
+        case y.aib.FAVORITES:
+            return y.I_8;
     }
 }
 function S(e) {
-    return e.type === b.aib.GUILD || e.type === b.aib.GUILD_CHANNEL || e.type === b.aib.THREAD;
+    switch (e.type) {
+        case y.aib.GUILD_CHANNEL:
+        case y.aib.GUILD:
+        case y.aib.THREAD:
+            return e.guildId;
+        case y.aib.CHANNEL:
+            var t;
+            let n = s.Z.getChannel(e.channelId);
+            return null != (t = null == n ? void 0 : n.guild_id) ? t : null;
+        case y.aib.FAVORITES:
+            return y.I_8;
+        default:
+            return null;
+    }
 }
 function A(e) {
+    return e.type === y.aib.GUILD || e.type === y.aib.GUILD_CHANNEL || e.type === y.aib.THREAD;
+}
+function C(e) {
     switch (e.type) {
-        case b.aib.GUILD_CHANNEL:
-        case b.aib.CHANNEL:
-        case b.aib.THREAD:
+        case y.aib.GUILD_CHANNEL:
+        case y.aib.CHANNEL:
+        case y.aib.THREAD:
             return e.channelId;
         default:
             return null;
     }
 }
-function C(e) {
+function N(e) {
     switch (e) {
-        case b.QIO.MOST_RELEVANT:
+        case y.QIO.MOST_RELEVANT:
             return {
                 sort_by: "relevance",
                 sort_order: "desc",
             };
-        case b.QIO.OLDEST:
+        case y.QIO.OLDEST:
             return {
                 sort_by: "timestamp",
                 sort_order: "asc",
             };
-        case b.QIO.NEWEST:
+        case y.QIO.NEWEST:
         default:
             return {
                 sort_by: "timestamp",
@@ -147,89 +148,89 @@ function C(e) {
             };
     }
 }
-function N(e) {
-    return null == e.sort_by || null == e.sort_order
-        ? b.QIO.NEWEST
-        : "relevance" === e.sort_by
-          ? b.QIO.MOST_RELEVANT
-          : "asc" === e.sort_order
-            ? b.QIO.OLDEST
-            : b.QIO.NEWEST;
-}
 function R(e) {
+    return null == e.sort_by || null == e.sort_order
+        ? y.QIO.NEWEST
+        : "relevance" === e.sort_by
+          ? y.QIO.MOST_RELEVANT
+          : "asc" === e.sort_order
+            ? y.QIO.OLDEST
+            : y.QIO.NEWEST;
+}
+function P(e) {
     switch (e) {
-        case b.dCx.FILTER_FROM:
-            return y.intl.string(y.t.E466pK);
-        case b.dCx.FILTER_MENTIONS:
-            return y.intl.string(y.t.BYvFWl);
-        case b.dCx.FILTER_HAS:
-            return y.intl.string(y.t.bhSYbW);
-        case b.dCx.FILTER_BEFORE:
-        case b.dCx.FILTER_ON:
-        case b.dCx.FILTER_AFTER:
-            return y.intl.string(y.t.Zbbc1N);
-        case b.dCx.FILTER_IN:
-            return y.intl.string(y.t["GpM+//"]);
-        case b.dCx.FILTER_FILE_TYPE:
-            return y.intl.string(y.t.FXcAFR);
-        case b.dCx.FILTER_FILE_NAME:
-            return y.intl.string(y.t.uAbFDA);
-        case b.dCx.FILTER_PINNED:
-            return y.intl.string(y.t.UJxL3d);
-        case b.dCx.FILTER_AUTHOR_TYPE:
-            return y.intl.string(y.t.qCQzBg);
+        case y.dCx.FILTER_FROM:
+            return O.intl.string(O.t.E466pK);
+        case y.dCx.FILTER_MENTIONS:
+            return O.intl.string(O.t.BYvFWl);
+        case y.dCx.FILTER_HAS:
+            return O.intl.string(O.t.bhSYbW);
+        case y.dCx.FILTER_BEFORE:
+        case y.dCx.FILTER_ON:
+        case y.dCx.FILTER_AFTER:
+            return O.intl.string(O.t.Zbbc1N);
+        case y.dCx.FILTER_IN:
+            return O.intl.string(O.t["GpM+//"]);
+        case y.dCx.FILTER_FILE_TYPE:
+            return O.intl.string(O.t.FXcAFR);
+        case y.dCx.FILTER_FILE_NAME:
+            return O.intl.string(O.t.uAbFDA);
+        case y.dCx.FILTER_PINNED:
+            return O.intl.string(O.t.UJxL3d);
+        case y.dCx.FILTER_AUTHOR_TYPE:
+            return O.intl.string(O.t.qCQzBg);
     }
 }
-let P = {
-    [b.dCx.FILTER_BEFORE]: !0,
-    [b.dCx.FILTER_AFTER]: !0,
-    [b.dCx.FILTER_ON]: !0,
+let w = {
+    [y.dCx.FILTER_BEFORE]: !0,
+    [y.dCx.FILTER_AFTER]: !0,
+    [y.dCx.FILTER_ON]: !0,
 };
-function w(e) {
-    let t = E.ZP[e],
+function D(e) {
+    let t = b.ZP[e],
         n = null != t ? t.queryKey : null;
     return null == n && (n = "content"), n;
 }
-function D(e, t) {
+function x(e, t) {
     if (c.Z.didAgree(t)) {
         let t = f.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function x(e) {
+function L(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
-        if (b.TNx.test(n)) return;
+        if (y.TNx.test(n)) return;
         switch (n) {
-            case b.dCx.ANSWER_BEFORE:
-            case b.dCx.ANSWER_ON:
-            case b.dCx.ANSWER_AFTER:
+            case y.dCx.ANSWER_BEFORE:
+            case y.dCx.ANSWER_ON:
+            case y.dCx.ANSWER_AFTER:
                 let r = e.getData("start"),
                     i = e.getData("end");
                 r && (t.min_id = _.default.fromTimestamp(r)), i && (t.max_id = _.default.fromTimestamp(i));
                 return;
         }
-        let a = w(n);
+        let a = D(n);
         null == t[a] && (t[a] = new Set());
         let o = t[a];
         switch (n) {
-            case b.dCx.ANSWER_USERNAME_FROM:
-            case b.dCx.ANSWER_USERNAME_MENTIONS:
+            case y.dCx.ANSWER_USERNAME_FROM:
+            case y.dCx.ANSWER_USERNAME_MENTIONS:
                 o.add(e.getData("userId"));
                 break;
-            case b.dCx.ANSWER_FILE_TYPE:
-            case b.dCx.ANSWER_FILE_NAME:
+            case y.dCx.ANSWER_FILE_TYPE:
+            case y.dCx.ANSWER_FILE_NAME:
                 o.add(e.getMatch(1));
                 break;
-            case b.dCx.ANSWER_IN:
+            case y.dCx.ANSWER_IN:
                 var s;
                 for (let t of null != (s = e.getData("channels")) ? s : []) o.add(t.id);
                 break;
-            case b.dCx.ANSWER_HAS:
+            case y.dCx.ANSWER_HAS:
                 o.add(e.getData("has"));
                 break;
-            case b.dCx.ANSWER_PINNED:
+            case y.dCx.ANSWER_PINNED:
                 o.add(e.getData("pinned"));
                 break;
             default:
@@ -240,7 +241,7 @@ function x(e) {
         r instanceof Set && (t[n] = Array.from(r));
     if (t.content) {
         delete t.contents;
-        let e = g.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
+        let e = E.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
         if (e.enabled) {
             let n = [],
                 r = e.brackets
@@ -264,7 +265,7 @@ function x(e) {
     }
     return t;
 }
-function L(e) {
+function j(e) {
     var t;
     return (null == e ? void 0 : e.contents) != null && e.contents.length > 0
         ? null == e || null == (t = e.contents)
@@ -274,13 +275,13 @@ function L(e) {
           ? void 0
           : e.content;
 }
-function j(e) {
+function M(e) {
     return e
         .map((e) => (e.type === a.ZP.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
         .join(" ")
         .trim();
 }
-function M(e, t, n) {
+function k(e, t, n) {
     let r,
         i,
         a = e.find((a, o) =>
@@ -298,56 +299,56 @@ function M(e, t, n) {
               anchorOffset: n,
           };
 }
-function k(e, t) {
+function U(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
     if (0 === t.length)
         return {
-            type: b.Sap.EMPTY,
+            type: y.Sap.EMPTY,
             filter: null,
             token: null,
         };
     if (null == r)
         return {
-            type: b.Sap.FILTER_ALL,
+            type: y.Sap.FILTER_ALL,
             filter: null,
             token: null,
         };
-    if ((0, E._m)(r.type)) {
+    if ((0, b._m)(r.type)) {
         if (null == i || i.type === a.ZP.NON_TOKEN_TYPE)
             return {
-                type: b.Sap.FILTER,
+                type: y.Sap.FILTER,
                 filter: r.type,
                 token: i,
             };
-        if (null != i && !b.KA4.test(i.type))
+        if (null != i && !y.KA4.test(i.type))
             return {
-                type: b.Sap.FILTER,
+                type: y.Sap.FILTER,
                 filter: r.type,
                 token: null,
             };
     }
-    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && (0, E._m)(o.type)
+    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && (0, b._m)(o.type)
         ? {
-              type: b.Sap.FILTER,
+              type: y.Sap.FILTER,
               filter: o.type,
               token: r,
           }
         : (r.type === a.ZP.NON_TOKEN_TYPE && (n = r),
           {
-              type: b.Sap.FILTER_ALL,
+              type: y.Sap.FILTER_ALL,
               filter: null,
               token: n,
           });
 }
-function U(e) {
+function G(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => "\\".concat(t));
         return '"'.concat(t, '"');
     }
 }
-function G(e, t) {
+function B(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -356,10 +357,10 @@ function G(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = U(i)), t.type === b.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = G(i)), t.type === y.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
-                        let e = E.ZP[r];
+                        let e = b.ZP[r];
                         (null == e ? void 0 : e.key) != null &&
                             (null == e ? void 0 : e.key) !== "" &&
                             (i = "".concat(e.key, " ").concat(i));
@@ -378,39 +379,39 @@ function G(e, t) {
         })
     );
 }
-function B(e) {
+function Z(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function Z(e) {
+function V(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let V = new a.ZP();
-function F(e) {
-    return V.tokenize(e);
+let F = new a.ZP();
+function H(e) {
+    return F.tokenize(e);
 }
-function H() {
-    return V.clearCache();
+function Y() {
+    return F.clearCache();
 }
-function Y(e) {
-    return null != e ? P[e] : null;
+function W(e) {
+    return null != e ? w[e] : null;
 }
-function W(e, t) {
-    let n = b.TNx.test(e.type);
-    return (null != t || !n) && (null == t || !n || !!b.KA4.test(t.type));
+function K(e, t) {
+    let n = y.TNx.test(e.type);
+    return (null != t || !n) && (null == t || !n || !!y.KA4.test(t.type));
 }
-function K() {
-    (0, E.WK)(), V.reset(), i()(E.ZP).forOwn((e, t) => V.addRule(v({ type: t }, e)));
-}
-function z(e) {
-    if (S(e)) return !0;
-    {
-        let t = (0, h.ad)({ location: "isChannelFilterSupported" }),
-            n = (0, m.J)({ location: "isChannelFilterSupported" }),
-            r = t || n;
-        return e.type === b.aib.DMS && r && !d.Z.hidePersonalInformation;
-    }
+function z() {
+    (0, b.WK)(), F.reset(), i()(b.ZP).forOwn((e, t) => F.addRule(I({ type: t }, e))), h.Z.markSearchTokensRefreshed();
 }
 function q(e) {
+    if (A(e)) return !0;
+    {
+        let t = (0, m.ad)({ location: "isChannelFilterSupported" }),
+            n = (0, g.J)({ location: "isChannelFilterSupported" }),
+            r = t || n;
+        return e.type === y.aib.DMS && r && !d.Z.hidePersonalInformation;
+    }
+}
+function X(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, o.F6)(e, f.default, u.Z);
@@ -425,9 +426,9 @@ function q(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = U(t)), n) ? "#".concat(t) : t;
+    return ((t = G(t)), n) ? "#".concat(t) : t;
 }
-function X(e) {
+function Q(e) {
     var t;
     if (e.isGroupDM()) return (0, o.F6)(e, f.default, u.Z);
     if (e.isDM()) {
@@ -438,7 +439,7 @@ function X(e) {
     let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
-function Q() {
+function J() {
     var e, t;
     return null != (t = null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

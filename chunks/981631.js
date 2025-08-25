@@ -5827,7 +5827,6 @@ var nK = (function (e) {
             (e.SOUNDBOARD = "12612888127767"),
             (e.GUILD_BOOSTING_FAQ = "360028038352"),
             (e.NITRO = "115000435108"),
-            (e.ACTIVITIES = "4422142836759"),
             (e.VOICE_MESSAGES = "13091096725527"),
             (e.SAFE_DIRECT_MESSAGING = "115000068672"),
             (e.PAID_TERMS = "4410339366295"),

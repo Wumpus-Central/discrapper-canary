@@ -23,9 +23,9 @@ var r = n(951288),
     j = n(594174),
     E = n(979651),
     S = n(585483),
-    I = n(63063),
-    P = n(665149),
-    Z = n(981631),
+    I = n(665149),
+    P = n(981631),
+    Z = n(701488),
     T = n(921944),
     N = n(65154),
     A = n(388032),
@@ -45,10 +45,10 @@ function R(e, t, n) {
 }
 class M extends i.PureComponent {
     componentDidMount() {
-        S.S.subscribe(Z.CkL.CALL_START, this.handleVoiceClick);
+        S.S.subscribe(P.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        S.S.unsubscribe(Z.CkL.CALL_START, this.handleVoiceClick);
+        S.S.unsubscribe(P.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e,
@@ -62,7 +62,7 @@ class M extends i.PureComponent {
                 mode: c,
                 isProvisional: u,
             } = this.props;
-        if (n || (i && c === Z.WtW.VOICE)) return null;
+        if (n || (i && c === P.WtW.VOICE)) return null;
         let d = s.isManaged(),
             p = null,
             h = !1;
@@ -72,13 +72,13 @@ class M extends i.PureComponent {
                 : v.Z.supports(N.AN.VIDEO)
                   ? a
                       ? ((p = A.intl.string(A.t.PHzjvb)), (e = o.ua7.Colors.RED), (h = !0))
-                      : i && c === Z.WtW.VIDEO
+                      : i && c === P.WtW.VIDEO
                         ? ((t = this.handleJoinVideoCall),
                           (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.W68MhI)))
                         : ((t = this.handleStartVideoCall),
                           (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.oCqlGB)))
                   : ((h = !0), (t = this.handleBrowserNotSupported), (p = A.intl.string(A.t.UVpg3d))),
-            (0, r.jsx)(P.ZP.Icon, {
+            (0, r.jsx)(I.ZP.Icon, {
                 icon: o.Odl,
                 onClick: t,
                 disabled: h || l,
@@ -117,7 +117,7 @@ class M extends i.PureComponent {
                       : f
                         ? A.intl.string(A.t.S0W8Z2)
                         : A.intl.string(A.t.focH1t));
-        let _ = (0, r.jsx)(P.ZP.Icon, {
+        let _ = (0, r.jsx)(I.ZP.Icon, {
             ref: this.iconRef,
             icon: o.Csw,
             onClick: this.handleVoiceClick,
@@ -152,7 +152,7 @@ class M extends i.PureComponent {
                                               children: A.intl.string(A.t.xAW71d),
                                           }),
                                           (0, r.jsx)(o.eee, {
-                                              href: I.Z.getArticleURL(Z.BhN.ACTIVITIES),
+                                              href: Z.sI,
                                               children: A.intl.string(A.t.hvVgAQ),
                                           }),
                                       ],
@@ -219,15 +219,15 @@ function D(e) {
         })),
         _ = n.getRecipientId(),
         { notFriend: y, isBlocked: v } = (0, l.cj)([O.Z], () => ({
-            notFriend: n.type === Z.d4z.DM && null != _ && !O.Z.isFriend(_),
-            isBlocked: n.type === Z.d4z.DM && null != _ && O.Z.isBlocked(_),
+            notFriend: n.type === P.d4z.DM && null != _ && !O.Z.isFriend(_),
+            isBlocked: n.type === P.d4z.DM && null != _ && O.Z.isBlocked(_),
         })),
         S = (0, l.e7)([j.default], () => j.default.getUser(_)),
         I = (0, u.bp)(),
-        P = [],
+        Z = [],
         T = (0, p.Z)(n.id),
         N = (0, l.e7)([x.Z], () => x.Z.hasLayers());
-    T && !N && P.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
+    T && !N && Z.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [A, w] = i.useState(!1);
     return (i.useEffect(() => {
         let e = setTimeout(() => {
@@ -249,7 +249,7 @@ function D(e) {
               appContext: I,
               canShowTooltip: A,
               canShowActivityGdmTooltip: T,
-              dismissibleContentTypes: P,
+              dismissibleContentTypes: Z,
               useReducedMotion: f,
           });
 }
