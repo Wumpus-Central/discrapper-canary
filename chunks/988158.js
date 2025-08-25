@@ -1,46 +1,46 @@
-n.d(e, {
-    X: () => i,
-    h: () => r,
+e.d(a, {
+    X: () => r,
+    h: () => i,
 }),
-    n(704826),
-    n(35282),
-    n(388685);
-var a = n(647438),
-    l = n(902676);
-function r(t) {
-    let { protocol: e, hostname: n } = a.useMemo(
+    e(704826),
+    e(35282),
+    e(388685);
+var n = e(647438),
+    l = e(902676);
+function i(t) {
+    let { protocol: a, hostname: e } = n.useMemo(
             () => ({
                 protocol: (0, l.E)(t),
                 hostname: (0, l.F)(t),
             }),
             [t],
         ),
-        r = "//" === t.substr(e.length, 2) ? "//" : "",
-        i = "".concat(e).concat(r).concat(n);
+        i = "//" === t.substr(a.length, 2) ? "//" : "",
+        r = "".concat(a).concat(i).concat(e);
     return {
-        protocol: e,
-        authorityPrefix: r,
-        hostname: n,
-        theRestOfTheUrl: t.replace(i, ""),
+        protocol: a,
+        authorityPrefix: i,
+        hostname: e,
+        theRestOfTheUrl: t.replace(r, ""),
     };
 }
-function i(t) {
-    let { url: e, trustUrl: n, onConfirm: l, onCancel: i, onClose: s } = t,
-        [o, c] = a.useState(!1),
-        { protocol: d, authorityPrefix: u, hostname: m, theRestOfTheUrl: x } = r(e),
-        p = a.useCallback(() => {
-            o && n(e), null == s || s(), l();
-        }, [e, o, n, l, s]);
+function r(t) {
+    let { url: a, trustUrl: e, onConfirm: l, onCancel: r, onClose: s } = t,
+        [o, c] = n.useState(!1),
+        { protocol: d, authorityPrefix: u, hostname: x, theRestOfTheUrl: h } = i(a),
+        m = n.useCallback(() => {
+            o && e(a), null == s || s(), l();
+        }, [a, o, e, l, s]);
     return {
         protocol: d,
         authorityPrefix: u,
-        hostname: m,
-        theRestOfTheUrl: x,
+        hostname: x,
+        theRestOfTheUrl: h,
         shouldTrustUrl: o,
         setShouldTrustUrl: c,
-        handleConfirm: p,
-        handleCancel: a.useCallback(() => {
-            null == s || s(), i();
-        }, [i, s]),
+        handleConfirm: m,
+        handleCancel: n.useCallback(() => {
+            null == s || s(), r();
+        }, [r, s]),
     };
 }
