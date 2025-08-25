@@ -18,5 +18,14 @@ let r = (0, n(818083).B)({
                 hasNewStrings: !0,
             },
         },
+        {
+            id: 2,
+            label: "Identical to T1",
+            config: {
+                showTempStatusOptions: !0,
+                expiringStatusProfileFeedback: !0,
+                hasNewStrings: !0,
+            },
+        },
     ],
 });
