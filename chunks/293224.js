@@ -36,8 +36,8 @@ var i = n(951288),
     N = n(565138),
     w = n(853170),
     Z = n(917405),
-    P = n(763296),
-    T = n(603074),
+    T = n(763296),
+    P = n(603074),
     A = n(879815),
     k = n(189771),
     D = n(294629),
@@ -212,6 +212,7 @@ function ec(e) {
         { showRefreshedAudioContextMenu: C } = (0, w.e)({ location: "MicrophoneActionButton" });
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e,
                 n = E(t);
@@ -308,6 +309,7 @@ function eu(e) {
         { showRefreshedAudioContextMenu: S } = (0, w.e)({ location: "HeadphonesActionButton" });
     return (0, i.jsx)(d.yRy, {
         targetElementRef: o,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return S
@@ -394,6 +396,7 @@ function ed(e) {
         j = null == n || !m;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(E.Z, {
@@ -480,6 +483,7 @@ function ep(e) {
     let S = ea(l);
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(L.Z, {
@@ -553,14 +557,15 @@ function ef(e) {
             events: { onClick: E, onMouseEnter: _, onMouseLeave: S },
         } = (0, c.j)(),
         x = ea(a),
-        I = (0, o.e7)([P.Z, B.default], () => P.Z.isUserPlayingSounds(B.default.getId()), []) ? "green" : void 0;
+        I = (0, o.e7)([T.Z, B.default], () => T.Z.isUserPlayingSounds(B.default.getId()), []) ? "green" : void 0;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: s,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return y || null == l
                 ? (0, i.jsx)(i.Fragment, {})
-                : (0, i.jsx)(T.Z, {
+                : (0, i.jsx)(P.Z, {
                       guildId: u,
                       channel: l,
                       onClose: x(t),
@@ -643,6 +648,7 @@ function eh(e) {
         v = s ? g : d.Csw;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
+        clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(M.Z, {
