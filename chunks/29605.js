@@ -457,19 +457,19 @@ let Y = d().throttle(b.OQ, 1000),
             }, [f, et]);
         let ei = i.useMemo(
                 () =>
-                    ee.isV2SpeedrunExperimentEnabled && null != et
+                    ee.isEmojiEditingExperimentEnabled && null != et
                         ? new Set(
                               d()
                                   .differenceBy(f, et, "id")
                                   .map((e) => e.id),
                           )
                         : new Set(),
-                [ee.isV2SpeedrunExperimentEnabled, f, et],
+                [ee.isEmojiEditingExperimentEnabled, f, et],
             ),
             el = i.useCallback(
                 function () {
                     let { emoji: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (ee.isV2SpeedrunExperimentEnabled && null != e)
+                    if (ee.isEmojiEditingExperimentEnabled && null != e)
                         return void (0, N.i)({
                             guildId: t.id,
                             emoji: e,
@@ -483,7 +483,7 @@ let Y = d().throttle(b.OQ, 1000),
                         },
                     });
                 },
-                [ee.isV2SpeedrunExperimentEnabled, t],
+                [ee.isEmojiEditingExperimentEnabled, t],
             ),
             ea = (e, n, r) =>
                 (0, I.G)({
@@ -514,7 +514,7 @@ let Y = d().throttle(b.OQ, 1000),
                 });
             },
             ed = (0, y.l)(t),
-            eu = ee.isV2SpeedrunExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
+            eu = ee.isEmojiEditingExperimentEnabled ? (e) => el({ emoji: e }) : void 0;
         return (0, r.jsxs)("div", {
             className: z.emojiSettings,
             children: [

@@ -30784,6 +30784,35 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     transition: opacity .3s
 }
 
+.emojiErrorItem__67954 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1px;
+    padding: 16px
+}
+
+.fileIcon__67954 {
+    margin-right: 18px
+}
+
+.fileName__67954 {
+    color: var(--text-default);
+    font-size: 16px;
+    margin-bottom: 4px;
+    max-width: 256px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+    white-space: nowrap
+}
+
+.fileInfo__67954 {
+    flex: 1
+}
+
 .diversitySelector_a45a2a {
     position: relative
 }
@@ -90452,7 +90481,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

@@ -66,12 +66,26 @@ let a = (0, i.B)({
         kind: "user",
         id: "2025-08-emoji_studio_speedrun",
         label: "Emoji Studio V2 Speedrun",
-        defaultConfig: { enabled: !1 },
+        defaultConfig: {
+            isEmojiEditingExperimentEnabled: !1,
+            isSelectFileBeforeEmojiStudioExperimentEnabled: !1,
+        },
         treatments: [
             {
                 id: 1,
-                label: "Enabled - Instant Upload, Emoji Editing Support",
-                config: { enabled: !0 },
+                label: "Emoji Editing",
+                config: {
+                    isEmojiEditingExperimentEnabled: !0,
+                    isSelectFileBeforeEmojiStudioExperimentEnabled: !1,
+                },
+            },
+            {
+                id: 2,
+                label: "Select Image File Before Emoji Studio",
+                config: {
+                    isEmojiEditingExperimentEnabled: !1,
+                    isSelectFileBeforeEmojiStudioExperimentEnabled: !0,
+                },
             },
         ],
     });
@@ -99,7 +113,7 @@ function c(e) {
                 disable: c || i,
             },
         ),
-        { enabled: p } = l.useExperiment(
+        { isEmojiEditingExperimentEnabled: p, isSelectFileBeforeEmojiStudioExperimentEnabled: h } = l.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -109,8 +123,9 @@ function c(e) {
     return {
         enabled: u,
         isMobileEnabled: f,
-        isEntrypointEnabled: d || _ || p,
+        isEntrypointEnabled: d || _ || p || h,
         isEntrypointExperimentEnabled: _,
-        isV2SpeedrunExperimentEnabled: p,
+        isEmojiEditingExperimentEnabled: p,
+        isSelectFileBeforeEmojiStudioExperimentEnabled: h,
     };
 }

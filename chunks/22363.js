@@ -41,7 +41,6 @@ let p = (e) => {
                     autoFocus: E,
                     defaultSearchPlaceholder: (0, s.nV)(i, O),
                 }),
-                T && (0, r.jsx)(l.Z, { channel: t }),
                 i === f.Hz.REACTION
                     ? (0, r.jsx)(o.Z, {
                           checked: O,
@@ -55,6 +54,7 @@ let p = (e) => {
                           className: _.diversitySelector,
                           selectedSurrogate: y,
                       }),
+                T && (0, r.jsx)(l.Z, { channel: t }),
             ],
         });
     return (0, r.jsx)("div", {
