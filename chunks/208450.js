@@ -74,6 +74,7 @@ class Y extends i.PureComponent {
                 r = O.g9(e, t);
             v.Z.updateAutocompleteQuery(n, e, r), null != this._editorRef && y.iE(this._editorRef.editor);
         }
+        n !== e.searchContext && v.Z.openSearchScreen(n);
     }
     componentWillUnmount() {
         b.S.unsubscribe(U.CkL.PERFORM_SEARCH, this.search),
