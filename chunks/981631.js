@@ -4909,6 +4909,7 @@ var nb = (function (e) {
             (e.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED = "custom_themes_surprise_button_clicked"),
             (e.CUSTOM_THEMES_UPDATED = "custom_themes_updated"),
             (e.CUSTOM_THEMES_COACHMARK_NOT_SHOWN_REASON = "custom_themes_coachmark_not_shown_reason"),
+            (e.CUSTOM_THEMES_BANNER_CLICKED = "custom_themes_banner_clicked"),
             (e.GUILD_DROPDOWN_MENU_VIEWED = "guild_dropdown_menu_viewed"),
             (e.VOICE_MESSAGE_PLAYBACK_ENDED = "voice_message_playback_ended"),
             (e.VOICE_MESSAGE_PLAYBACK_FAILED = "voice_message_playback_failed"),

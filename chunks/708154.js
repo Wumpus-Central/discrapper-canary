@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(990547),
@@ -7,11 +7,12 @@ var i = n(990547),
     s = n(906732),
     l = n(213609),
     c = n(550385),
-    u = n(119475),
-    d = n(388032),
-    f = n(574876),
-    _ = n(374291);
-function p() {
+    u = n(507962),
+    d = n(119475),
+    f = n(388032),
+    _ = n(574876),
+    p = n(758335);
+function h() {
     let { analyticsLocations: e } = (0, s.ZP)();
     (0, l.Z)({
         name: i.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
@@ -19,31 +20,31 @@ function p() {
         properties: { location_stack: e },
     });
     let t = () => {
-        (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.CLIENT_THEMES_EDITOR });
+        (0, u.DI)(u.Ln.PREVIEW_THEMES), (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.CLIENT_THEMES_EDITOR });
     };
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: _.container,
         children: [
             (0, r.jsxs)("div", {
-                className: f.topContent,
+                className: _.topContent,
                 children: [
                     (0, r.jsx)("img", {
-                        src: _.Z,
-                        className: f.bannerImage,
+                        src: p.Z,
+                        className: _.bannerImage,
                         alt: "",
                     }),
                     (0, r.jsxs)("div", {
-                        className: f.textContent,
+                        className: _.textContent,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-primary",
-                                children: d.intl.string(u.default.XP4jzM),
+                                children: f.intl.string(d.default.XP4jzM),
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-tertiary",
-                                children: d.intl.string(u.default.MJYvmJ),
+                                children: f.intl.string(d.default.MJYvmJ),
                             }),
                         ],
                     }),
@@ -52,7 +53,7 @@ function p() {
             (0, r.jsx)(a.z, {
                 variant: "secondary",
                 size: "sm",
-                text: d.intl.string(u.default.eGxkmp),
+                text: f.intl.string(d.default.eGxkmp),
                 onClick: t,
                 fullWidth: !0,
             }),
