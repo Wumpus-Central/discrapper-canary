@@ -127,7 +127,7 @@ function R(e) {
     function N() {
         let e = 16,
             t = 16;
-        if (((i || n) && ((e = 32), (t = 24)), a))
+        if (((i || n) && ((e = "38%"), (t = "auto")), a))
             return (0, r.jsx)(_.dz2, {
                 size: "custom",
                 width: e,
@@ -136,7 +136,7 @@ function R(e) {
             });
     }
     return (
-        i && !a ? (C = !0) : (i || a) && (C = (0, c.Bd)(null != A ? A : m.p6O) > 0.1),
+        i && !a ? (C = !0) : (i || a) && (C = (0, c.Bd)(null != A ? A : m.p6O) > 0.2),
         (0, r.jsx)(f.t, {
             offset: -2,
             children: (0, r.jsxs)(
@@ -175,7 +175,6 @@ function R(e) {
                                 ? (0, r.jsx)(_.vdY, {
                                       size: "custom",
                                       className: E.colorPickerDropper,
-                                      colorClass: E.colorPickerDropperFg,
                                       width: 14,
                                       height: 14,
                                       color: (0, h.Lq)(C ? m.Ilk.WHITE_500 : m.Ilk.BLACK_500),
@@ -287,10 +286,10 @@ function D(e) {
             },
             [n, a],
         ),
-        M = (e) => {
+        k = (e) => {
             a((0, c._i)(e));
         },
-        k = (0, r.jsxs)(r.Fragment, {
+        M = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -298,7 +297,7 @@ function D(e) {
                         onChange: j,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return M(t);
+                            return k(t);
                         },
                         color: w.pending.hsl,
                     }),
@@ -342,7 +341,7 @@ function D(e) {
     return (0, r.jsx)(U, {
         "aria-label": g.intl.string(g.t.WTqQ5e),
         className: o()(E.customColorPicker, O),
-        children: k,
+        children: M,
     });
 }
 let x = i.memo(D);

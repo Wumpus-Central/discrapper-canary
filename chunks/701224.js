@@ -11,7 +11,6 @@ e.exports = {
     gradientPreset: "gradientPreset__459fb",
     disabled: "disabled__459fb",
     colorPickerDropper: "colorPickerDropper__459fb",
-    colorPickerDropperFg: "colorPickerDropperFg__459fb",
     suggestedColors: "suggestedColors__459fb",
     suggestedColor: "suggestedColor__459fb",
     noColor: "noColor__459fb",
