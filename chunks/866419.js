@@ -1,11 +1,12 @@
 n.d(t, {
-    Bv: () => h,
-    SK: () => b,
-    _m: () => _,
-    ft: () => g,
-    jJ: () => m,
-    lT: () => E,
-    zu: () => f,
+    Bv: () => g,
+    SK: () => O,
+    YZ: () => v,
+    _m: () => h,
+    ft: () => b,
+    jJ: () => E,
+    lT: () => y,
+    zu: () => p,
 }),
     n(49124);
 var r = n(647438),
@@ -15,28 +16,29 @@ var r = n(647438),
     s = n(695346);
 n(581883);
 var l = n(233398),
-    c = n(238302);
-n(803038);
-var u = n(469115),
-    d = n(231338);
-function f() {
+    c = n(238302),
+    u = n(803038),
+    d = n(893712),
+    f = n(469115),
+    _ = n(231338);
+function p() {
     return !1;
 }
-var _ = (function (e) {
+var h = (function (e) {
     return (e.RESET_BUTTON = "reset_button"), (e.EDITOR_CLOSE = "editor_close"), e;
 })({});
-function p(e) {
-    return (0, i.wj)(e) ? d.BR.DARK : d.BR.LIGHT;
+function m(e) {
+    return (0, i.wj)(e) ? _.BR.DARK : _.BR.LIGHT;
 }
-function h(e) {
+function g(e) {
     let t = s.L1.getSetting(),
         n =
             null != t.backgroundGradientPresetId &&
-            t.backgroundGradientPresetId in u.qt &&
-            u.qt[t.backgroundGradientPresetId].theme !== e;
+            t.backgroundGradientPresetId in f.qt &&
+            f.qt[t.backgroundGradientPresetId].theme !== e;
     (0, a.y)(e), n && (0, c.kj)();
 }
-function m() {
+function E() {
     let e = r.useRef(null);
     return (
         r.useEffect(() => {
@@ -50,20 +52,20 @@ function m() {
                 gradientAngle: null != (r = null == d ? void 0 : d.gradientAngle) ? r : 0,
                 chassisMixAmount: null != (i = null == d ? void 0 : d.baseMix) ? i : l.BH,
             }),
-                "reset_button" === t ? h(p(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)();
+                "reset_button" === t ? g(m(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)();
             let f = s.L1.getSetting().backgroundGradientPresetId;
             null != f && (0, c.zO)(f);
         }, [])
     );
 }
-function g() {
-    let e = p(o.Z.theme);
-    e !== o.Z.theme && h(e);
-}
-function E(e, t, n) {
-    0 === e.length && n([t]), g();
-}
 function b() {
+    let e = m(o.Z.theme);
+    e !== o.Z.theme && g(e);
+}
+function y(e, t, n) {
+    0 === e.length && n([t]), b();
+}
+function O() {
     var e, t, n;
     let { colors: r, chassisMixAmount: i, gradientAngle: a } = (0, l.Ig)(),
         o = s.L1.getSetting().customUserThemeSettings,
@@ -71,4 +73,9 @@ function b() {
         u = null != (t = null == o ? void 0 : o.gradientAngle) ? t : 0,
         d = null != (n = null == o ? void 0 : o.baseMix) ? n : l.BH;
     return JSON.stringify(r) === JSON.stringify(c) && i === d && a === u;
+}
+function v() {
+    let e = d.L.useExperiment({ location: "CustomThemesUtils" }).enabled,
+        t = u.Mc.useExperiment({ location: "CustomThemesUtils" }).v2EditorEnabled;
+    return e && t;
 }

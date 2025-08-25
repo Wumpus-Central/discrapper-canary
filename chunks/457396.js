@@ -13,7 +13,7 @@ var r = n(951288),
     c = n(515753),
     u = n(927359),
     d = n(975298),
-    p = n(803038),
+    p = n(866419),
     f = n(211644),
     h = n(266454),
     g = n(243778),
@@ -106,7 +106,7 @@ let V = (e) => {
             }),
             eb = (0, S.Z)({ location: "NitroTabButton" }),
             e_ = (null == er ? void 0 : er.trial_id) === M.a7,
-            eO = p.Mc.useExperiment({ location: "NitroTabButton" }).v2EditorEnabled,
+            eO = (0, p.YZ)(),
             eE = [];
         (0, f.Kl)() &&
             (ea && eE.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
