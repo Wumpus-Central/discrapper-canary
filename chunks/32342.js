@@ -1,123 +1,114 @@
-a.d(t, { default: () => _ }), a(388685);
-var n = a(951288),
-    r = a(647438),
-    s = a(481060),
-    i = a(782568),
-    l = a(313201),
-    o = a(53365),
-    d = a(377176),
-    c = a(577275),
-    x = a(981631),
-    m = a(829857),
-    h = a(388032),
-    u = a(170538);
-function p(e) {
-    let { selectedTeamId: t, onSetSelectedTeamId: a, teamOptions: r } = e;
-    return (0, n.jsx)("div", {
-        className: u.teamSetup,
+n.d(e, { default: () => x }), n(388685);
+var i = n(951288),
+    a = n(647438),
+    s = n(82659),
+    l = n(481060),
+    r = n(782568),
+    o = n(53365),
+    d = n(377176),
+    c = n(577275),
+    u = n(981631),
+    p = n(829857),
+    m = n(388032),
+    h = n(170538);
+function g(t) {
+    let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: a } = t;
+    return (0, i.jsx)("div", {
+        className: h.teamSetup,
         children:
-            0 === r.length
-                ? (0, n.jsx)(s.Text, {
-                      variant: "text-md/normal",
-                      color: "header-secondary",
-                      children: h.intl.format(h.t.Jyy4pa, {}),
-                  })
-                : (0, n.jsxs)(n.Fragment, {
-                      children: [
-                          (0, n.jsx)(s.Text, {
-                              variant: "text-md/normal",
-                              className: u.teamBodyText,
-                              color: "header-secondary",
-                              children: h.intl.string(h.t.U1Vz29),
-                          }),
-                          (0, n.jsx)(s.q4e, {
-                              options: r,
-                              placeholder: h.intl.string(h.t.QXf93N),
-                              value: t,
-                              onChange: a,
-                              "aria-label": h.intl.string(h.t.QXf93N),
-                          }),
-                      ],
-                  }),
+            0 !== a.length &&
+            (0, i.jsx)(l.q4e, {
+                options: a,
+                placeholder: m.intl.string(m.t.QXf93N),
+                value: e,
+                onChange: n,
+                "aria-label": m.intl.string(m.t.QXf93N),
+            }),
     });
 }
-function _(e) {
-    let { guildId: t, requireTeamSetup: a, onClose: _, transitionState: g } = e,
-        j = (0, l.Dt)(),
-        [f, b] = r.useState(),
-        [y, C] = r.useState(!1),
-        { teams: T } = (0, c.Z)(),
-        v = T.filter((e) => e.payout_account_status === m.C.ACTIVE),
-        k = r.useMemo(
+function x(t) {
+    let { guildId: e, requireTeamSetup: n, onClose: h, transitionState: x } = t,
+        [f, C] = a.useState(),
+        [y, T] = a.useState(!1),
+        { teams: v } = (0, c.Z)(),
+        E = v.filter((t) => t.payout_account_status === p.C.ACTIVE),
+        S = a.useMemo(
             () =>
-                v.map((e) => ({
-                    label: e.name,
-                    value: e.id,
+                E.map((t) => ({
+                    label: t.name,
+                    value: t.id,
                 })),
-            [v],
+            [E],
         ),
-        N = r.useCallback(() => {
-            (0, i.Z)(x.EYA.DEVELOPER_PORTAL_TEAMS);
+        j = () => {
+            T((t) => !t);
+        },
+        b = () => {
+            h(), (0, o.df)(e, f);
+        },
+        k = a.useCallback(() => {
+            (0, r.Z)(u.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
-    return (0, n.jsxs)(s.Y0X, {
-        "aria-labelledby": j,
-        size: s.CgR.DYNAMIC,
-        transitionState: g,
-        parentComponent: "CreatorMonetizationNewOwnerOnboardingModal",
-        children: [
-            (0, n.jsx)(s.xBx, {
-                separator: !1,
-                className: u.header,
-                children: (0, n.jsx)(s.X6q, {
-                    variant: "heading-xl/semibold",
-                    children: a ? h.intl.string(h.t.inJKQk) : h.intl.string(h.t.GfObDA),
+    if (!n)
+        return (0, i.jsx)(s.Modal, {
+            title: m.intl.string(m.t.GfObDA),
+            actions: [
+                {
+                    variant: "primary",
+                    text: m.intl.string(m.t.geKm7u),
+                    onClick: b,
+                    disabled: !y,
+                },
+            ],
+            onClose: h,
+            transitionState: x,
+            size: "md",
+            children: (0, i.jsx)(l.XZJ, {
+                onChange: j,
+                size: 20,
+                type: l.XZJ.Types.INVERTED,
+                value: y,
+                children: (0, i.jsx)(l.Text, {
+                    variant: "text-md/normal",
+                    color: "header-secondary",
+                    children: (0, d.f)(),
                 }),
             }),
-            (0, n.jsxs)(s.hzk, {
-                className: u.content,
-                children: [
-                    a &&
-                        (0, n.jsx)(p, {
-                            selectedTeamId: f,
-                            onSetSelectedTeamId: b,
-                            teamOptions: k,
-                        }),
-                    (0, n.jsx)(s.XZJ, {
-                        onChange: () => {
-                            C((e) => !e);
-                        },
-                        size: 20,
-                        type: s.XZJ.Types.INVERTED,
-                        value: y,
-                        children: (0, n.jsx)(s.Text, {
-                            variant: "text-md/normal",
-                            color: "header-secondary",
-                            children: (0, d.f)(),
-                        }),
+        });
+    {
+        let t = 0 === S.length;
+        return (0, i.jsxs)(s.Modal, {
+            title: m.intl.string(m.t.inJKQk),
+            subtitle: t ? m.intl.format(m.t.Jyy4pa, {}) : m.intl.string(m.t.U1Vz29),
+            actions: [
+                {
+                    variant: "primary",
+                    text: t ? m.intl.string(m.t.JddVgI) : m.intl.string(m.t.geKm7u),
+                    onClick: t ? k : b,
+                },
+            ],
+            onClose: h,
+            transitionState: x,
+            size: "md",
+            children: [
+                !t &&
+                    (0, i.jsx)(g, {
+                        selectedTeamId: f,
+                        onSetSelectedTeamId: C,
+                        teamOptions: S,
                     }),
-                ],
-            }),
-            (0, n.jsx)(s.mzw, {
-                className: u.footer,
-                children: (0, n.jsx)("div", {
-                    className: u.buttons,
-                    children:
-                        a && 0 === k.length
-                            ? (0, n.jsx)(s.zxk, {
-                                  variant: "primary",
-                                  text: h.intl.string(h.t.JddVgI),
-                                  onClick: N,
-                              })
-                            : (0, n.jsx)(s.zxk, {
-                                  variant: "primary",
-                                  text: h.intl.string(h.t.geKm7u),
-                                  disabled: !y || (a && null == f),
-                                  onClick: () => {
-                                      _(), (0, o.df)(t, f);
-                                  },
-                              }),
+                (0, i.jsx)(l.XZJ, {
+                    onChange: j,
+                    size: 20,
+                    type: l.XZJ.Types.INVERTED,
+                    value: y,
+                    children: (0, i.jsx)(l.Text, {
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: (0, d.f)(),
+                    }),
                 }),
-            }),
-        ],
-    });
+            ],
+        });
+    }
 }
