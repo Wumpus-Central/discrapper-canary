@@ -59128,8 +59128,9 @@ h3.improved__1689b:after {
 .churnDiscountBannerDetails__32fe3 {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
     height: 100%;
+    max-width: 420px;
     padding-right: 12px
 }
 
@@ -59161,7 +59162,8 @@ h3.improved__1689b:after {
 
 .churnDiscountBannerImage__32fe3 {
     max-height: 140px;
-    max-width: 250px
+    max-width: 250px;
+    padding-left: 20px
 }
 
 .activeSubButtons__32fe3 {
@@ -59170,7 +59172,7 @@ h3.improved__1689b:after {
 }
 
 .churnDiscountBannerButton__32fe3 {
-    margin-top: 6px;
+    margin-top: 12px;
     position: relative
 }
 
@@ -90454,7 +90456,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

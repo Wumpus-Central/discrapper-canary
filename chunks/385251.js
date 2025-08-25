@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var r = n(951288);
 n(647438);
 var i = n(304789),
@@ -11,16 +11,17 @@ var i = n(304789),
     d = n(589072),
     f = n(74538),
     _ = n(937615),
-    p = n(230916),
-    h = n(165583),
-    m = n(382791),
-    g = n(45474),
-    E = n(474936),
-    b = n(981631),
-    y = n(388032),
-    O = n(355758),
-    v = n(22767);
-function I(e, t, n) {
+    p = n(66683),
+    h = n(230916),
+    m = n(165583),
+    g = n(382791),
+    E = n(45474),
+    b = n(474936),
+    y = n(981631),
+    O = n(388032),
+    v = n(355758),
+    I = n(22767);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +45,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,72 +62,78 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = {
-    page: b.ZY5.USER_SETTINGS,
-    section: b.jXE.SETTINGS_PREMIUM,
-    object: b.qAy.CARD,
+let N = {
+    page: y.ZY5.USER_SETTINGS,
+    section: y.jXE.SETTINGS_PREMIUM,
+    object: y.qAy.CARD,
 };
-function N(e) {
-    let { premiumSubscription: t, discountInfo: n, invoicePreview: i } = e,
-        o = f.ZP.getPlanIdFromInvoice(t, i),
-        s = u.Z.get(o);
-    if (null == s || null == i || null == n || null == n.duration || null == n.percentage) return null;
-    let l = i.invoiceItems.find((e) => {
+function R(e) {
+    let { premiumSubscription: t, discountInfo: n, invoicePreview: i, isDiscountActive: o } = e,
+        s = f.ZP.getPlanIdFromInvoice(t, i),
+        l = u.Z.get(s);
+    if (null == l || null == i || null == n || null == n.duration || null == n.percentage) return null;
+    let c = i.invoiceItems.find((e) => {
         let { subscriptionPlanId: t } = e;
-        return t === s.id;
+        return t === l.id;
     });
-    if (null == l) return null;
-    let c = (0, _.T4)(l.amount, i.currency),
-        d = (0, f.aS)(E.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+    if (null == c) return null;
+    let d = (0, _.T4)(c.amount, i.currency),
+        p = (0, f.aS)(b.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId,
         }),
-        p = (0, _.T4)(d.amount, d.currency);
+        h = (0, _.T4)(p.amount, p.currency);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: "heading-xl/semibold",
                 color: "text-primary",
-                children: y.intl.format(y.t["50bA2N"], { percent: n.percentage }),
+                children: O.intl.format(O.t["50bA2N"], { percent: n.percentage }),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: y.intl.format(y.t.N43FMz, {
-                    numMonths: n.duration,
-                    discountedPrice: c,
-                    billingPeriod: y.intl.string(y.t.FPybU1),
-                    fullPrice: p,
-                }),
+                children: o
+                    ? O.intl.format(O.t["3Ziutb"], {
+                          percent: n.percentage,
+                          numMonths: n.duration,
+                          regularPrice: h,
+                      })
+                    : O.intl.format(O.t.N43FMz, {
+                          numMonths: n.duration,
+                          discountedPrice: d,
+                          billingPeriod: O.intl.string(O.t.FPybU1),
+                          fullPrice: h,
+                      }),
             }),
         ],
     });
 }
-function R(e) {
+function P(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
-        i = (0, p._)(n, E.Xh.PREMIUM_MONTH_TIER_2, t);
+        i = (0, h._)(n, b.Xh.PREMIUM_MONTH_TIER_2, t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: "heading-xl/semibold",
                 color: "text-primary",
-                children: y.intl.format(y.t.sFO20N, { percent: t.discount.amount }),
+                children: O.intl.format(O.t.sFO20N, { percent: t.discount.amount }),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
-                children: y.intl.format(y.t["PH7Q+f"], {
+                children: O.intl.format(O.t["PH7Q+f"], {
                     numMonths: t.discount.user_usage_limit,
                     discountedPrice: i,
                     billingPeriod: (0, f.JP)(t.discount.user_usage_limit_interval),
@@ -135,22 +142,20 @@ function R(e) {
         ],
     });
 }
-let P = function (e) {
+let w = function (e) {
     let {
             subscription: t,
-            currentInvoicePreview: u,
-            renewalInvoicePreview: _,
-            isLoading: p,
-            analyticsLocation: E,
-            discountInfo: I,
-            renewalChurnDiscountInfo: S,
-            discountOffer: P,
+            invoicePreview: u,
+            isLoading: _,
+            analyticsLocation: h,
+            discountInfo: b,
+            renewalChurnDiscountInfo: T,
+            discountOffer: A,
         } = e,
         { analyticsLocations: w } = (0, s.ZP)(o.Z.CHURN_DISCOUNT_SUBSCRIPTION_HEADER),
-        D = null;
-    D = null != I ? u : _;
-    let x = () => {
-            t.status !== b.O0b.CANCELED && L();
+        { showDiscountBadge: D } = (0, p.k)({ location: "Subscription Details" }),
+        x = () => {
+            t.status !== y.O0b.CANCELED && L();
         },
         L = (e) => {
             (0, a.ZDy)(async () => {
@@ -158,9 +163,9 @@ let P = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         i,
-                        A(T({}, n), {
+                        C(S({}, n), {
                             premiumSubscription: t,
-                            analyticsLocation: E,
+                            analyticsLocation: h,
                             analyticsLocations: w,
                             initialStep: e,
                         }),
@@ -175,28 +180,31 @@ let P = function (e) {
                       variant: "expressive",
                       icon: a.SrA,
                       size: "md",
-                      text: y.intl.string(y.t.zrCzVF),
-                      loading: p,
-                      onClick: () => L(g.R.CONFIRM_DISCOUNT),
+                      text:
+                          D && null != A
+                              ? O.intl.format(O.t.XIVblZ, { percent: A.discount.amount })
+                              : O.intl.string(O.t.zrCzVF),
+                      loading: _,
+                      onClick: () => L(E.R.CONFIRM_DISCOUNT),
                   })
                 : (0, r.jsxs)("div", {
-                      className: O.activeSubButtons,
+                      className: v.activeSubButtons,
                       children: [
                           (0, r.jsx)(a.ua7, {
                               text: n,
                               children: (n) =>
                                   (0, r.jsx)(
                                       a.zxk,
-                                      A(T({}, n), {
+                                      C(S({}, n), {
                                           variant: "expressive",
                                           disabled: e,
-                                          text: y.intl.string(y.t["dylp//"]),
+                                          text: O.intl.string(O.t["dylp//"]),
                                           size: "md",
                                           onClick: () => {
                                               (0, l.Z)({
                                                   analyticsLocations: w,
-                                                  analyticsLocation: E,
-                                                  analyticsObject: C,
+                                                  analyticsLocation: h,
+                                                  analyticsObject: N,
                                                   subscription: t,
                                               });
                                           },
@@ -206,75 +214,77 @@ let P = function (e) {
                           (0, r.jsx)(a.zxk, {
                               variant: "secondary",
                               size: "md",
-                              text: y.intl.string(y.t["ETE/oK"]),
-                              loading: p,
+                              text: O.intl.string(O.t["ETE/oK"]),
+                              loading: _,
                               onClick: x,
                           }),
                       ],
                   });
         },
-        M = f.ZP.getPlanIdFromInvoice(t, _),
-        k = (0, h.eQ)(null == P ? void 0 : P.expires_at);
+        M = f.ZP.getPlanIdFromInvoice(t, u),
+        k = (0, m.eQ)(null == A ? void 0 : A.expires_at);
     return (0, c.Q0)(M)
         ? null
         : (0, r.jsx)("div", {
-              className: O.churnDiscountBannerBackground,
+              className: v.churnDiscountBannerBackground,
               children: (0, r.jsx)(i.$, {
                   color: "nitro-pink",
-                  className: O.headerGradient,
+                  className: v.headerGradient,
                   children: (0, r.jsxs)("div", {
-                      className: O.churnDiscountBanner,
+                      className: v.churnDiscountBanner,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: O.headerLabel,
+                              className: v.headerLabel,
                               children: [
                                   (0, r.jsx)(d.Z, {
                                       color: "currentcolor",
-                                      className: O.churnDiscountBannerWordMark,
-                                      "aria-label": y.intl.string(y.t.lpNrPj),
+                                      className: v.churnDiscountBannerWordMark,
+                                      "aria-label": O.intl.string(O.t.lpNrPj),
                                   }),
-                                  null != P &&
-                                      (0, r.jsx)(m.mn, {
-                                          text: y.intl.formatToPlainString(y.t.AYcXGR, {
-                                              discountOfferAmount: P.discount.amount,
+                                  null != A &&
+                                      D &&
+                                      (0, r.jsx)(g.mn, {
+                                          text: O.intl.formatToPlainString(O.t.AYcXGR, {
+                                              discountOfferAmount: A.discount.amount,
                                           }),
-                                          className: O.churnDiscountPill,
-                                          colorOptions: m.VE.PREMIUM_TIER_2_MOD_BACKGROUND_FILL,
+                                          className: v.churnDiscountPill,
+                                          colorOptions: g.VE.PREMIUM_TIER_2_MOD_BACKGROUND_FILL,
                                       }),
                                   (0, r.jsx)(a.Text, {
-                                      className: O.churnDiscountBannerExpiryDate,
+                                      className: v.churnDiscountBannerExpiryDate,
                                       variant: "text-sm/medium",
                                       color: "text-primary",
-                                      children: null != P && k,
+                                      children: null != A && k,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", { className: O.selectPlanDivider }),
+                          (0, r.jsx)("div", { className: v.selectPlanDivider }),
                           (0, r.jsxs)("div", {
-                              className: O.churnDiscountBannerContent,
+                              className: v.churnDiscountBannerContent,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: O.churnDiscountBannerDetails,
+                                      className: v.churnDiscountBannerDetails,
                                       children: [
-                                          null != P
-                                              ? (0, r.jsx)(R, {
-                                                    discountOffer: P,
+                                          null != A
+                                              ? (0, r.jsx)(P, {
+                                                    discountOffer: A,
                                                     premiumSubscription: t,
                                                 })
-                                              : (0, r.jsx)(N, {
+                                              : (0, r.jsx)(R, {
                                                     premiumSubscription: t,
-                                                    discountInfo: null != I ? I : S,
-                                                    invoicePreview: D,
+                                                    discountInfo: null != b ? b : T,
+                                                    invoicePreview: u,
+                                                    isDiscountActive: null != b,
                                                 }),
                                           (0, r.jsx)("div", {
-                                              className: O.churnDiscountBannerButton,
+                                              className: v.churnDiscountBannerButton,
                                               children: j(),
                                           }),
                                       ],
                                   }),
                                   (0, r.jsx)("img", {
-                                      className: O.churnDiscountBannerImage,
-                                      src: v,
+                                      className: v.churnDiscountBannerImage,
+                                      src: I,
                                       alt: "",
                                       draggable: !1,
                                   }),

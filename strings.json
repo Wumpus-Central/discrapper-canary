@@ -3537,6 +3537,7 @@
   "3Q4wCw": "Before you say goodbye, enjoy Nitro for !!{discountedPrice}!!/!!{billingPeriod}!! for {numMonths, plural, one {1 month} other {!!{numMonths}!! months} }.",
   "3yZP0N": "Stick with Nitro and save {percent}%",
   "AD6odn": "Something went wrong. Try again.",
+  "XIVblZ": "Claim {percent}% Discount",
   "PH7Q+f": "Before you say goodbye, get Nitro for **!!{discountedPrice}!!/!!{billingPeriod}!! for {numMonths, plural, one {1 month} other {!!{numMonths}!! months} }** and keep enjoying your perks.",
   "u8bQ1t": "Discount ends {expiryDate, date, medium}",
   "sFO20N": "Stick around and save {percent}% on Nitro",
