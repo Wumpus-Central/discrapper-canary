@@ -1,12 +1,12 @@
 n.d(t, {
-    NA: () => eo,
+    NA: () => ea,
     ZP: () => el,
-    y$: () => ea,
+    y$: () => eo,
 });
 var r = n(230711),
     i = n(100527),
-    a = n(906732),
-    o = n(803038),
+    o = n(906732),
+    a = n(866419),
     s = n(550385),
     l = n(300284),
     c = n(526167),
@@ -36,14 +36,14 @@ var r = n(230711),
     x = n(491878),
     L = n(751049),
     j = n(518971),
-    M = n(85726),
-    k = n(281652),
+    k = n(85726),
+    M = n(281652),
     U = n(982935),
     G = n(831399),
     B = n(91342),
     Z = n(181708),
-    V = n(290650),
-    F = n(751125),
+    F = n(290650),
+    V = n(751125),
     H = n(357003),
     Y = n(904505),
     W = n(712626),
@@ -86,10 +86,10 @@ function ei(e) {
     }
     return e;
 }
-var ea = (function (e) {
+var eo = (function (e) {
         return (e.SMALL = "small"), (e.MEDIUM = "medium"), (e.LARGE = "large"), e;
     })({}),
-    eo = (function (e) {
+    ea = (function (e) {
         return (
             (e.REFERRAL_PROGRAM = "referralProgram"),
             (e.SERVER_PROFILES = "serverProfiles"),
@@ -120,7 +120,7 @@ let es = (e, t) =>
                 },
                 customThemes: {
                     thumbnail: U.Z,
-                    assetUrl: e ? k.Z : G.Z,
+                    assetUrl: e ? M.Z : G.Z,
                 },
             },
             t
@@ -135,7 +135,7 @@ let es = (e, t) =>
                       },
                       yourSpace: {
                           thumbnail: j.Z,
-                          assetUrl: e ? L.Z : M.Z,
+                          assetUrl: e ? L.Z : k.Z,
                       },
                       emojis: {
                           thumbnail: I.Z,
@@ -165,12 +165,12 @@ let es = (e, t) =>
                       },
                       noLimits: {
                           thumbnail: E,
-                          assetUrl: e ? V.ZP : F.ZP,
+                          assetUrl: e ? F.ZP : V.ZP,
                       },
                   },
         ),
     el = () => {
-        let { analyticsLocations: e } = (0, a.ZP)(i.Z.PREMIUM_MARKETING_BENTO_BOX),
+        let { analyticsLocations: e } = (0, o.ZP)(i.Z.PREMIUM_MARKETING_BENTO_BOX),
             t = (0, l.Z)({
                 scrollPosition: p.Y_.TRY_IT_OUT,
                 analyticsLocations: e,
@@ -184,7 +184,7 @@ let es = (e, t) =>
             g = (0, c.rO)(),
             E = u.Z.getArticleURL(_.BhN.REFERRAL_PROGRAM),
             b = (0, f.Z)({ location: "WhatsNewSection" }),
-            y = o.Mc.useExperiment({ location: "useBentoBoxes" }).v2EditorEnabled,
+            y = (0, a.YZ)("useBentoBoxes"),
             O = es(g, (0, d.ZP)({ location: "useBentoBoxes" })),
             v = {
                 name: "voiceFilters",

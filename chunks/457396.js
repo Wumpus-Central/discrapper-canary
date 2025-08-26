@@ -106,7 +106,7 @@ let V = (e) => {
             }),
             eb = (0, S.Z)({ location: "NitroTabButton" }),
             e_ = (null == er ? void 0 : er.trial_id) === M.a7,
-            eO = (0, p.YZ)(),
+            eO = (0, p.YZ)("NitroTabButton"),
             eE = [];
         (0, f.Kl)() &&
             (ea && eE.push(o.z.BOGO_2025_NITRO_TAB_BADGE),

@@ -11,8 +11,8 @@ n.d(t, {
     n(49124);
 var r = n(647438),
     i = n(780384),
-    a = n(781391),
-    o = n(210887),
+    o = n(781391),
+    a = n(210887),
     s = n(695346);
 n(581883);
 var l = n(233398),
@@ -36,13 +36,13 @@ function g(e) {
             null != t.backgroundGradientPresetId &&
             t.backgroundGradientPresetId in f.qt &&
             f.qt[t.backgroundGradientPresetId].theme !== e;
-    (0, a.y)(e), n && (0, c.kj)();
+    (0, o.y)(e), n && (0, c.kj)();
 }
 function E() {
     let e = r.useRef(null);
     return (
         r.useEffect(() => {
-            e.current = o.Z.theme;
+            e.current = a.Z.theme;
         }, []),
         r.useCallback((t) => {
             var n, r, i, u;
@@ -52,30 +52,30 @@ function E() {
                 gradientAngle: null != (r = null == d ? void 0 : d.gradientAngle) ? r : 0,
                 chassisMixAmount: null != (i = null == d ? void 0 : d.baseMix) ? i : l.BH,
             }),
-                "reset_button" === t ? g(m(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)();
+                "reset_button" === t ? g(m(null != (u = e.current) ? u : a.Z.theme)) : (0, o.UD)();
             let f = s.L1.getSetting().backgroundGradientPresetId;
             null != f && (0, c.zO)(f);
         }, [])
     );
 }
 function b() {
-    let e = m(o.Z.theme);
-    e !== o.Z.theme && g(e);
+    let e = m(a.Z.theme);
+    e !== a.Z.theme && g(e);
 }
 function y(e, t, n) {
     0 === e.length && n([t]), b();
 }
 function O() {
     var e, t, n;
-    let { colors: r, chassisMixAmount: i, gradientAngle: a } = (0, l.Ig)(),
-        o = s.L1.getSetting().customUserThemeSettings,
-        c = null != (e = null == o ? void 0 : o.colors) ? e : [l.Dp],
-        u = null != (t = null == o ? void 0 : o.gradientAngle) ? t : 0,
-        d = null != (n = null == o ? void 0 : o.baseMix) ? n : l.BH;
-    return JSON.stringify(r) === JSON.stringify(c) && i === d && a === u;
+    let { colors: r, chassisMixAmount: i, gradientAngle: o } = (0, l.Ig)(),
+        a = s.L1.getSetting().customUserThemeSettings,
+        c = null != (e = null == a ? void 0 : a.colors) ? e : [l.Dp],
+        u = null != (t = null == a ? void 0 : a.gradientAngle) ? t : 0,
+        d = null != (n = null == a ? void 0 : a.baseMix) ? n : l.BH;
+    return JSON.stringify(r) === JSON.stringify(c) && i === d && o === u;
 }
-function v() {
-    let e = d.L.useExperiment({ location: "CustomThemesUtils" }).enabled,
-        t = u.Mc.useExperiment({ location: "CustomThemesUtils" }).v2EditorEnabled;
-    return e && t;
+function v(e) {
+    let t = d.L.useExperiment({ location: e }).enabled,
+        n = u.Mc.useExperiment({ location: e }).v2EditorEnabled;
+    return t && n;
 }
