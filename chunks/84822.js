@@ -41,6 +41,7 @@ e.exports = {
     gameSection: "gameSection__00943",
     gameSectionIcon: "gameSectionIcon__00943",
     activitySection: "activitySection__00943",
+    activitySectionWithButtons: "activitySectionWithButtons__00943",
     activitySectionAssets: "activitySectionAssets__00943",
     largeImageMask: "largeImageMask__00943",
     largeImage: "largeImage__00943",
@@ -55,4 +56,6 @@ e.exports = {
     embeddedActivityImageOverlay: "embeddedActivityImageOverlay__00943",
     embeddedActivityJoinWrapper: "embeddedActivityJoinWrapper__00943",
     embeddedActivityIcon: "embeddedActivityIcon__00943",
+    cloudPlaySectionSeparator: "cloudPlaySectionSeparator__00943",
+    cloudPlaySection: "cloudPlaySection__00943",
 };

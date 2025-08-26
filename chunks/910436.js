@@ -126,6 +126,7 @@ function E(e) {
                         {
                             activity: x,
                             getAssetImage: h.xF,
+                            user: w,
                         },
                         "rich-presence-".concat(null != (g = x.session_id) ? g : t, "-").concat(w.id),
                     ),
@@ -171,6 +172,7 @@ function E(e) {
                                 {
                                     activity: x,
                                     getAssetImage: h.xF,
+                                    user: w,
                                 },
                                 "rich-presence-".concat(null != (S = x.session_id) ? S : t, "-").concat(w.id),
                             ),
