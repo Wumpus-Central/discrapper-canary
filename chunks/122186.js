@@ -45,7 +45,7 @@ function v(e) {
         o = i.useCallback(() => {
             if (null != l) {
                 var e;
-                return null != (e = (0, h.fr)(l)) ? e : g.intl.string(g.t.Y2WKTk);
+                return null != (e = (0, h.fr)(l, x.Si.TIER_2)) ? e : g.intl.string(g.t.Y2WKTk);
             }
             return g.intl.string(g.t.Y2WKTk);
         }, [l]);

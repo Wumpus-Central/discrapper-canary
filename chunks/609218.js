@@ -1,12 +1,12 @@
 n.d(t, {
     Z: () => U,
-    p: () => k,
+    p: () => M,
 }),
     n(953529);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(446673),
     c = n(304789),
@@ -36,8 +36,8 @@ var r = n(951288),
     x = n(428946),
     L = n(42948),
     j = n(109194),
-    M = n(352812),
-    k = (function (e) {
+    k = n(352812),
+    M = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.PARENT_CONTAINER = 1)] = "PARENT_CONTAINER"),
@@ -49,14 +49,14 @@ function U(e) {
     let {
             containerContext: t,
             image: n,
-            title: a,
-            description: k,
+            title: o,
+            description: M,
             enableSocialProof: U,
             analyticsLocationSection: G,
             upsellViewedTrackingData: B,
             onClose: Z,
-            onDisplay: V,
-            onLearnMore: F,
+            onDisplay: F,
+            onLearnMore: V,
             isEmojiPickerOverlay: H = !1,
         } = e,
         Y = (0, s.e7)([b.Z], () => b.Z.affinities),
@@ -65,8 +65,8 @@ function U(e) {
         !W && U && f.MH();
     }, [W, U]),
         i.useEffect(() => {
-            m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, B), null == V || V();
-        }, [V, B]);
+            m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, B), null == F || F();
+        }, [F, B]);
     let K = Y.length > 1 && U,
         z = () => (2 === t ? w.hasTabParentContainer : 1 === t ? w.hasParentContainer : w.noParentContainer),
         q = () => {
@@ -74,7 +74,7 @@ function U(e) {
                 location_section: G,
                 location_object: N.qAy.NAVIGATION_LINK,
             }),
-                null == F || F(),
+                null == V || V(),
                 (0, p.Z)(),
                 Z(),
                 (0, _.xf)(),
@@ -83,7 +83,7 @@ function U(e) {
         X = (0, v.N)(),
         Q = i.useCallback(() => {
             var e;
-            return null != (e = (0, E.fr)(X)) ? e : R.intl.string(R.t.pj0XBA);
+            return null != (e = (0, E.fr)(X, C.Si.TIER_2)) ? e : R.intl.string(R.t.pj0XBA);
         }, [X]),
         J = (0, y.ZP)({ location: "PremiumUpsellPickerOverlay" }),
         $ = (0, O.Z)({ location: "PremiumUpsellPickerOverlay" }),
@@ -91,7 +91,7 @@ function U(e) {
         et = (0, S.Z)(C.Si.TIER_2);
     if (ee) {
         let e;
-        e = H ? ((0, g.rO)() ? x.Z : L.Z) : (0, g.rO)() ? j.Z : M.Z;
+        e = H ? ((0, g.rO)() ? x.Z : L.Z) : (0, g.rO)() ? j.Z : k.Z;
         let t = H ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -125,16 +125,16 @@ function U(e) {
                                         }),
                                         null != et && (0, r.jsx)(l.C, { type: { text: et } }),
                                         (0, r.jsx)(d.X6q, {
-                                            className: o()(P.title, { [P.withBadge]: null != et }),
+                                            className: a()(P.title, { [P.withBadge]: null != et }),
                                             variant: "heading-xl/bold",
                                             color: "header-primary",
-                                            children: a,
+                                            children: o,
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
                                             className: P.body,
-                                            children: k,
+                                            children: M,
                                         }),
                                     ],
                                 }),
@@ -178,7 +178,7 @@ function U(e) {
                 isVisible: !0,
             }),
             (0, r.jsxs)("div", {
-                className: o()(w.container, z()),
+                className: a()(w.container, z()),
                 children: [
                     (0, r.jsx)(d.olH, {
                         "data-migration-pending": !0,
@@ -196,15 +196,15 @@ function U(e) {
                                 alt: "Nitro Perk",
                             }),
                             (0, r.jsx)(d.X6q, {
-                                className: o()(w.title, { [w.titleNoSocialProof]: !K }),
+                                className: a()(w.title, { [w.titleNoSocialProof]: !K }),
                                 variant: "heading-xl/bold",
-                                children: a,
+                                children: o,
                             }),
                             K && (0, r.jsx)(A.Z, { affinities: Y }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 className: w.body,
-                                children: k,
+                                children: M,
                             }),
                         ],
                     }),
