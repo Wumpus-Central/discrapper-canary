@@ -36423,7 +36423,7 @@ body .headerAnimation_b54a5b {
 
 .paymentModalLockIcon__9a648 {
     color: var(--primary-500);
-    padding: 0 var(--modal-horizontal-padding)
+    padding: 0 var(--space-16)
 }
 
 .theme-dark .paymentModalLockIcon__9a648 {
@@ -36432,6 +36432,10 @@ body .headerAnimation_b54a5b {
 
 .lockIcon__9a648 {
     margin-right: 2px
+}
+
+.lockIconText__9a648 {
+    white-space: nowrap
 }
 
 .primaryIcon__962c6 {
@@ -43124,8 +43128,7 @@ body .headerAnimation_b54a5b {
 
 .discountFooterText_e125f1 {
     color: var(--black);
-    margin-right: auto;
-    min-width: 190px
+    margin-right: auto
 }
 
 .shopPageContainer__4485d {
