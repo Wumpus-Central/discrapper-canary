@@ -49236,6 +49236,7 @@ img.thumbnail__0f2e8 {
 
 .breadcrumb_c2a763 {
     align-items: center;
+    border: 1px solid var(--border-faint);
     border-radius: var(--radius-xs);
     cursor: pointer;
     display: flex;
@@ -49284,10 +49285,21 @@ img.thumbnail__0f2e8 {
 }
 
 .displayCountText_c2a763 {
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    border-radius: var(--radius-xs);
+    display: flex;
+    height: 24px;
+    justify-content: center;
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    width: 24px
+}
+
+.displayCountTextColor_c2a763 {
+    color: var(--neutral-9)
 }
 
 .roleDot__57082 {
