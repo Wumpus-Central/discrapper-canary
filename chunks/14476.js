@@ -13,50 +13,59 @@ var r = n(951288),
     x = n(388032),
     h = n(632939);
 let _ = (e) => {
-    let { skuId: t, assetId: n, user: l, onSelect: _, productName: f, a11yLabel: j, selectedSkuId: m } = e,
-        L = i.useRef(null),
-        g = (0, d.Z)(L),
-        b = (0, u.m)(L),
-        y = g || b,
-        S = (0, c.ZP)(),
-        E = (0, o.wj)(S),
-        O = {
+    let { skuId: t, assetId: n, user: l, claimed: _, onSelect: f, productName: j, a11yLabel: m, selectedSkuId: L } = e,
+        g = i.useRef(null),
+        b = (0, d.Z)(g),
+        y = (0, u.m)(g),
+        S = !_ && (b || y),
+        E = (0, c.ZP)(),
+        O = (0, o.wj)(E),
+        P = {
             type: a.Z.AVATAR_DECORATION,
-            label: j,
+            label: m,
             asset: n,
         };
     return (0, r.jsx)(C.tEY, {
         children: (0, r.jsxs)(C.kL8, {
-            ref: L,
-            "aria-label": null != f ? f : "",
+            ref: g,
+            "aria-label": null != j ? j : "",
             onClick: () => {
-                null != t && null != _ && _(t);
+                null != t && null != f && f(t);
             },
-            className: s()(E ? h.shopCardDark : h.shopCard, {
-                [h.shopCardAnimation]: y,
-                [E ? h.shopCardDarkHighlighted : h.shopCardHighlighted]: y,
-                [h.shopCardSelected]: m === t,
+            className: s()(O ? h.shopCardDark : h.shopCard, {
+                [h.shopCardAnimation]: S,
+                [O ? h.shopCardDarkHighlighted : h.shopCardHighlighted]: S,
+                [h.shopCardSelected]: L === t,
             }),
             children: [
                 (0, r.jsx)("div", {
-                    className: h.preview,
+                    className: s()(h.preview, { [h.shopCardClaimed]: _ }),
                     children: (0, r.jsx)(p.R, {
-                        item: O,
+                        item: P,
                         user: l,
-                        isHighlighted: y,
+                        isHighlighted: S,
                         avatarSize: C.EFr.SIZE_120,
+                        isPurchased: _,
                     }),
                 }),
+                _ &&
+                    (0, r.jsx)(C.dz2, {
+                        size: "custom",
+                        width: 48,
+                        height: 48,
+                        color: C.TVs.colors.WHITE,
+                        className: h.claimedIcon,
+                    }),
                 (0, r.jsxs)("div", {
                     className: h.productName,
                     children: [
                         (0, r.jsx)(C.X6q, {
                             variant: "text-lg/bold",
-                            children: f,
+                            children: j,
                         }),
                         (0, r.jsx)(C.Text, {
                             variant: "text-md/normal",
-                            children: x.intl.string(x.t.QQsaCQ),
+                            children: _ ? x.intl.string(x.t["6cfuDg"]) : x.intl.string(x.t.QQsaCQ),
                         }),
                     ],
                 }),

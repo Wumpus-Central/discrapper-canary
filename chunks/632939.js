@@ -5,6 +5,8 @@ e.exports = {
     shopCardDarkHighlighted: "shopCardDarkHighlighted_bab2bc",
     shopCardAnimation: "shopCardAnimation_bab2bc",
     shopCardSelected: "shopCardSelected_bab2bc",
+    shopCardClaimed: "shopCardClaimed_bab2bc",
+    claimedIcon: "claimedIcon_bab2bc",
     preview: "preview_bab2bc",
     productName: "productName_bab2bc",
 };

@@ -27,8 +27,8 @@ function L(e) {
         } = (0, u.wD)(),
         O = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         [P, v] = i.useState(null),
-        w = Math.floor(2 * Math.random()),
-        [M, I] = i.useState(w);
+        I = Math.floor(2 * Math.random()),
+        [w, M] = i.useState(I);
     i.useEffect(() => {
         null != S && S.length > 0 && null == y && b(S[0]);
     }, [S, y, b]),
@@ -69,7 +69,7 @@ function L(e) {
                                             });
                                     }
                                     return e;
-                                })({}, e.variants[M])),
+                                })({}, e.variants[w])),
                                 (n = n = { name: e.name }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -85,12 +85,12 @@ function L(e) {
                                       }),
                                 t);
                       }),
-            [E, S, M],
+            [E, S, w],
         ),
-        A = (e) => {
+        k = (e) => {
             b(Z.find((t) => t.skuId === e)), v(e);
         },
-        k = Z.map((e) =>
+        A = Z.map((e) =>
             (0, r.jsx)(
                 C.c,
                 {
@@ -98,8 +98,9 @@ function L(e) {
                     assetId: e.assetId,
                     productName: e.name,
                     a11yLabel: e.a11yLabel,
+                    claimed: null != S && !S.includes(e),
                     user: O,
-                    onSelect: A,
+                    onSelect: k,
                     selectedSkuId: null != P ? P : void 0,
                 },
                 e.skuId,
@@ -136,7 +137,7 @@ function L(e) {
                     variant: "text-md/normal",
                     color: "text-secondary",
                     className: m.subtitle,
-                    children: j.intl.format(j.t.xGzXNT, { rewardCount: Z.length }),
+                    children: j.intl.format(j.t.xGzXNT, { rewardCount: 2 * Z.length }),
                 }),
             ],
         });
@@ -163,11 +164,11 @@ function L(e) {
                                     value: 1,
                                 },
                             ],
-                            value: M,
+                            value: w,
                             look: "pill",
                             onChange: (e) => {
                                 let { value: t } = e;
-                                I(t);
+                                M(t);
                             },
                         }),
                 ],
@@ -175,7 +176,7 @@ function L(e) {
             (0, r.jsx)(o.hzk, {
                 children: (0, r.jsx)("div", {
                     className: m.cardsGrid,
-                    children: k,
+                    children: A,
                 }),
             }),
             T,
