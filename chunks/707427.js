@@ -187,13 +187,14 @@ let { Themes: r } = n(15202).V,
                 gradient: {
                     light: {
                         color: "gradient.mid",
-                        opacity: 0.4,
-                        lightness: "*0.75",
+                        opacity: 0.9,
+                        lightness: "*0.5",
+                        saturation: "*0.2",
                     },
                     dark: {
                         color: "gradient.mid",
-                        opacity: 0.3,
-                        lightness: 0.75,
+                        opacity: 0.8,
+                        lightness: "*0.5",
                         saturation: "*1.2",
                     },
                 },
