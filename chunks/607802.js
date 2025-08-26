@@ -1,29 +1,29 @@
 n.d(t, {
-    $G: () => L,
-    AH: () => C,
-    BU: () => Z,
-    Fr: () => K,
-    Fz: () => W,
-    Ko: () => P,
-    Pe: () => z,
-    R6: () => q,
-    Tm: () => T,
-    UP: () => j,
-    Vj: () => R,
-    WU: () => Y,
-    X$: () => J,
-    X3: () => X,
-    b7: () => A,
-    cl: () => V,
-    g9: () => k,
-    i3: () => B,
-    jW: () => x,
-    kG: () => H,
-    nI: () => M,
-    nl: () => Q,
-    qc: () => U,
-    s5: () => S,
-    zH: () => N,
+    $G: () => x,
+    AH: () => A,
+    BU: () => B,
+    Fr: () => W,
+    Fz: () => Y,
+    Ko: () => R,
+    Pe: () => K,
+    R6: () => z,
+    Tm: () => I,
+    UP: () => L,
+    Vj: () => N,
+    WU: () => H,
+    X$: () => Q,
+    X3: () => q,
+    b7: () => S,
+    cl: () => Z,
+    g9: () => M,
+    i3: () => G,
+    jW: () => D,
+    kG: () => V,
+    nI: () => j,
+    nl: () => X,
+    qc: () => k,
+    s5: () => T,
+    zH: () => C,
 }),
     n(539854),
     n(997841),
@@ -37,8 +37,8 @@ n.d(t, {
 var r = n(392711),
     i = n.n(r);
 n(913527);
-var a = n(349033),
-    o = n(933557),
+var o = n(349033),
+    a = n(933557),
     s = n(592125),
     l = n(984933),
     c = n(731290),
@@ -50,13 +50,12 @@ var _ = n(709054),
     p = n(51144),
     h = n(748610),
     m = n(945577),
-    g = n(494573),
-    E = n(731267),
-    b = n(532428);
+    g = n(731267),
+    E = n(532428);
 n(723642);
-var y = n(981631),
-    O = n(388032);
-function v(e, t, n) {
+var b = n(981631),
+    y = n(388032);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -69,7 +68,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,67 +79,67 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e) {
+function I(e) {
     switch (e.type) {
-        case y.aib.GUILD:
+        case b.aib.GUILD:
             return e.guildId;
-        case y.aib.GUILD_CHANNEL:
-        case y.aib.CHANNEL:
-        case y.aib.THREAD:
+        case b.aib.GUILD_CHANNEL:
+        case b.aib.CHANNEL:
+        case b.aib.THREAD:
             return e.channelId;
-        case y.aib.DMS:
+        case b.aib.DMS:
             return e.type;
-        case y.aib.FAVORITES:
-            return y.I_8;
+        case b.aib.FAVORITES:
+            return b.I_8;
     }
 }
-function S(e) {
+function T(e) {
     switch (e.type) {
-        case y.aib.GUILD_CHANNEL:
-        case y.aib.GUILD:
-        case y.aib.THREAD:
+        case b.aib.GUILD_CHANNEL:
+        case b.aib.GUILD:
+        case b.aib.THREAD:
             return e.guildId;
-        case y.aib.CHANNEL:
+        case b.aib.CHANNEL:
             var t;
             let n = s.Z.getChannel(e.channelId);
             return null != (t = null == n ? void 0 : n.guild_id) ? t : null;
-        case y.aib.FAVORITES:
-            return y.I_8;
+        case b.aib.FAVORITES:
+            return b.I_8;
         default:
             return null;
     }
 }
-function A(e) {
-    return e.type === y.aib.GUILD || e.type === y.aib.GUILD_CHANNEL || e.type === y.aib.THREAD;
+function S(e) {
+    return e.type === b.aib.GUILD || e.type === b.aib.GUILD_CHANNEL || e.type === b.aib.THREAD;
 }
-function C(e) {
+function A(e) {
     switch (e.type) {
-        case y.aib.GUILD_CHANNEL:
-        case y.aib.CHANNEL:
-        case y.aib.THREAD:
+        case b.aib.GUILD_CHANNEL:
+        case b.aib.CHANNEL:
+        case b.aib.THREAD:
             return e.channelId;
         default:
             return null;
     }
 }
-function N(e) {
+function C(e) {
     switch (e) {
-        case y.QIO.MOST_RELEVANT:
+        case b.QIO.MOST_RELEVANT:
             return {
                 sort_by: "relevance",
                 sort_order: "desc",
             };
-        case y.QIO.OLDEST:
+        case b.QIO.OLDEST:
             return {
                 sort_by: "timestamp",
                 sort_order: "asc",
             };
-        case y.QIO.NEWEST:
+        case b.QIO.NEWEST:
         default:
             return {
                 sort_by: "timestamp",
@@ -148,100 +147,100 @@ function N(e) {
             };
     }
 }
-function R(e) {
+function N(e) {
     return null == e.sort_by || null == e.sort_order
-        ? y.QIO.NEWEST
+        ? b.QIO.NEWEST
         : "relevance" === e.sort_by
-          ? y.QIO.MOST_RELEVANT
+          ? b.QIO.MOST_RELEVANT
           : "asc" === e.sort_order
-            ? y.QIO.OLDEST
-            : y.QIO.NEWEST;
+            ? b.QIO.OLDEST
+            : b.QIO.NEWEST;
 }
-function P(e) {
+function R(e) {
     switch (e) {
-        case y.dCx.FILTER_FROM:
-            return O.intl.string(O.t.E466pK);
-        case y.dCx.FILTER_MENTIONS:
-            return O.intl.string(O.t.BYvFWl);
-        case y.dCx.FILTER_HAS:
-            return O.intl.string(O.t.bhSYbW);
-        case y.dCx.FILTER_BEFORE:
-        case y.dCx.FILTER_ON:
-        case y.dCx.FILTER_AFTER:
-            return O.intl.string(O.t.Zbbc1N);
-        case y.dCx.FILTER_IN:
-            return O.intl.string(O.t["GpM+//"]);
-        case y.dCx.FILTER_FILE_TYPE:
-            return O.intl.string(O.t.FXcAFR);
-        case y.dCx.FILTER_FILE_NAME:
-            return O.intl.string(O.t.uAbFDA);
-        case y.dCx.FILTER_PINNED:
-            return O.intl.string(O.t.UJxL3d);
-        case y.dCx.FILTER_AUTHOR_TYPE:
-            return O.intl.string(O.t.qCQzBg);
+        case b.dCx.FILTER_FROM:
+            return y.intl.string(y.t.E466pK);
+        case b.dCx.FILTER_MENTIONS:
+            return y.intl.string(y.t.BYvFWl);
+        case b.dCx.FILTER_HAS:
+            return y.intl.string(y.t.bhSYbW);
+        case b.dCx.FILTER_BEFORE:
+        case b.dCx.FILTER_ON:
+        case b.dCx.FILTER_AFTER:
+            return y.intl.string(y.t.Zbbc1N);
+        case b.dCx.FILTER_IN:
+            return y.intl.string(y.t["GpM+//"]);
+        case b.dCx.FILTER_FILE_TYPE:
+            return y.intl.string(y.t.FXcAFR);
+        case b.dCx.FILTER_FILE_NAME:
+            return y.intl.string(y.t.uAbFDA);
+        case b.dCx.FILTER_PINNED:
+            return y.intl.string(y.t.UJxL3d);
+        case b.dCx.FILTER_AUTHOR_TYPE:
+            return y.intl.string(y.t.qCQzBg);
     }
 }
-let w = {
-    [y.dCx.FILTER_BEFORE]: !0,
-    [y.dCx.FILTER_AFTER]: !0,
-    [y.dCx.FILTER_ON]: !0,
+let P = {
+    [b.dCx.FILTER_BEFORE]: !0,
+    [b.dCx.FILTER_AFTER]: !0,
+    [b.dCx.FILTER_ON]: !0,
 };
-function D(e) {
-    let t = b.ZP[e],
+function w(e) {
+    let t = E.ZP[e],
         n = null != t ? t.queryKey : null;
     return null == n && (n = "content"), n;
 }
-function x(e, t) {
+function D(e, t) {
     if (c.Z.didAgree(t)) {
         let t = f.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function L(e) {
+function x(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
-        if (y.TNx.test(n)) return;
+        if (b.TNx.test(n)) return;
         switch (n) {
-            case y.dCx.ANSWER_BEFORE:
-            case y.dCx.ANSWER_ON:
-            case y.dCx.ANSWER_AFTER:
+            case b.dCx.ANSWER_BEFORE:
+            case b.dCx.ANSWER_ON:
+            case b.dCx.ANSWER_AFTER:
                 let r = e.getData("start"),
                     i = e.getData("end");
                 r && (t.min_id = _.default.fromTimestamp(r)), i && (t.max_id = _.default.fromTimestamp(i));
                 return;
         }
-        let a = D(n);
-        null == t[a] && (t[a] = new Set());
-        let o = t[a];
+        let o = w(n);
+        null == t[o] && (t[o] = new Set());
+        let a = t[o];
         switch (n) {
-            case y.dCx.ANSWER_USERNAME_FROM:
-            case y.dCx.ANSWER_USERNAME_MENTIONS:
-                o.add(e.getData("userId"));
+            case b.dCx.ANSWER_USERNAME_FROM:
+            case b.dCx.ANSWER_USERNAME_MENTIONS:
+                a.add(e.getData("userId"));
                 break;
-            case y.dCx.ANSWER_FILE_TYPE:
-            case y.dCx.ANSWER_FILE_NAME:
-                o.add(e.getMatch(1));
+            case b.dCx.ANSWER_FILE_TYPE:
+            case b.dCx.ANSWER_FILE_NAME:
+                a.add(e.getMatch(1));
                 break;
-            case y.dCx.ANSWER_IN:
+            case b.dCx.ANSWER_IN:
                 var s;
-                for (let t of null != (s = e.getData("channels")) ? s : []) o.add(t.id);
+                for (let t of null != (s = e.getData("channels")) ? s : []) a.add(t.id);
                 break;
-            case y.dCx.ANSWER_HAS:
-                o.add(e.getData("has"));
+            case b.dCx.ANSWER_HAS:
+                a.add(e.getData("has"));
                 break;
-            case y.dCx.ANSWER_PINNED:
-                o.add(e.getData("pinned"));
+            case b.dCx.ANSWER_PINNED:
+                a.add(e.getData("pinned"));
                 break;
             default:
-                o.add(e.getFullMatch().trim());
+                a.add(e.getFullMatch().trim());
         }
     }),
     Object.entries(t)))
         r instanceof Set && (t[n] = Array.from(r));
     if (t.content) {
         delete t.contents;
-        let e = E.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
+        let e = g.Z.getCurrentConfig({ location: "getSearchQueryFromTokens" });
         if (e.enabled) {
             let n = [],
                 r = e.brackets
@@ -255,9 +254,9 @@ function L(e) {
                     for (let r of t) {
                         let t = e.brackets && r.startsWith("[") && r.endsWith("]"),
                             i = e.quotes && r.startsWith('"') && r.endsWith('"'),
-                            a = r.includes("://"),
-                            o = t || i || a ? 0 : 2;
-                        n.push("".concat(o, "|").concat(r));
+                            o = r.includes("://"),
+                            a = t || i || o ? 0 : 2;
+                        n.push("".concat(a, "|").concat(r));
                     }
             }
             n.length > 0 && (t.contents = n), delete t.content;
@@ -265,7 +264,7 @@ function L(e) {
     }
     return t;
 }
-function j(e) {
+function L(e) {
     var t;
     return (null == e ? void 0 : e.contents) != null && e.contents.length > 0
         ? null == e || null == (t = e.contents)
@@ -275,80 +274,80 @@ function j(e) {
           ? void 0
           : e.content;
 }
-function M(e) {
+function j(e) {
     return e
-        .map((e) => (e.type === a.ZP.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
+        .map((e) => (e.type === o.ZP.NON_TOKEN_TYPE ? e.getFullMatch() : ""))
         .join(" ")
         .trim();
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r,
         i,
-        a = e.find((a, o) =>
-            t >= a.start && t <= a.end && n >= a.start && n <= a.end
-                ? (null != e[o + 1] && (i = e[o + 1]), !0)
-                : ((r = a), !1),
+        o = e.find((o, a) =>
+            t >= o.start && t <= o.end && n >= o.start && n <= o.end
+                ? (null != e[a + 1] && (i = e[a + 1]), !0)
+                : ((r = o), !1),
         );
-    return null == a
+    return null == o
         ? null
         : {
               previousToken: r,
-              currentToken: a,
+              currentToken: o,
               nextToken: i,
               focusOffset: t,
               anchorOffset: n,
           };
 }
-function U(e, t) {
+function k(e, t) {
     let n,
-        { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
+        { currentToken: r, nextToken: i, previousToken: a } = (e = null != e ? e : {});
     if (0 === t.length)
         return {
-            type: y.Sap.EMPTY,
+            type: b.Sap.EMPTY,
             filter: null,
             token: null,
         };
     if (null == r)
         return {
-            type: y.Sap.FILTER_ALL,
+            type: b.Sap.FILTER_ALL,
             filter: null,
             token: null,
         };
-    if ((0, b._m)(r.type)) {
-        if (null == i || i.type === a.ZP.NON_TOKEN_TYPE)
+    if ((0, E._m)(r.type)) {
+        if (null == i || i.type === o.ZP.NON_TOKEN_TYPE)
             return {
-                type: y.Sap.FILTER,
+                type: b.Sap.FILTER,
                 filter: r.type,
                 token: i,
             };
-        if (null != i && !y.KA4.test(i.type))
+        if (null != i && !b.KA4.test(i.type))
             return {
-                type: y.Sap.FILTER,
+                type: b.Sap.FILTER,
                 filter: r.type,
                 token: null,
             };
     }
-    return r.type === a.ZP.NON_TOKEN_TYPE && null != o && (0, b._m)(o.type)
+    return r.type === o.ZP.NON_TOKEN_TYPE && null != a && (0, E._m)(a.type)
         ? {
-              type: y.Sap.FILTER,
-              filter: o.type,
+              type: b.Sap.FILTER,
+              filter: a.type,
               token: r,
           }
-        : (r.type === a.ZP.NON_TOKEN_TYPE && (n = r),
+        : (r.type === o.ZP.NON_TOKEN_TYPE && (n = r),
           {
-              type: y.Sap.FILTER_ALL,
+              type: b.Sap.FILTER_ALL,
               filter: null,
               token: n,
           });
 }
-function G(e) {
+function U(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => "\\".concat(t));
         return '"'.concat(t, '"');
     }
 }
-function B(e, t) {
+function G(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -357,10 +356,10 @@ function B(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = G(i)), t.type === y.Sap.FILTER_ALL)) {
-                        var a;
-                        r = null != (a = n.group) ? a : r;
-                        let e = b.ZP[r];
+                    if ((null != n.channel && (i = U(i)), t.type === b.Sap.FILTER_ALL)) {
+                        var o;
+                        r = null != (o = n.group) ? o : r;
+                        let e = E.ZP[r];
                         (null == e ? void 0 : e.key) != null &&
                             (null == e ? void 0 : e.key) !== "" &&
                             (i = "".concat(e.key, " ").concat(i));
@@ -379,42 +378,40 @@ function B(e, t) {
         })
     );
 }
-function Z(e) {
+function B(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function V(e) {
+function Z(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let F = new a.ZP();
-function H(e) {
+let F = new o.ZP();
+function V(e) {
     return F.tokenize(e);
 }
-function Y() {
+function H() {
     return F.clearCache();
 }
-function W(e) {
-    return null != e ? w[e] : null;
+function Y(e) {
+    return null != e ? P[e] : null;
 }
-function K(e, t) {
-    let n = y.TNx.test(e.type);
-    return (null != t || !n) && (null == t || !n || !!y.KA4.test(t.type));
+function W(e, t) {
+    let n = b.TNx.test(e.type);
+    return (null != t || !n) && (null == t || !n || !!b.KA4.test(t.type));
 }
-function z() {
-    (0, b.WK)(), F.reset(), i()(b.ZP).forOwn((e, t) => F.addRule(I({ type: t }, e))), h.Z.markSearchTokensRefreshed();
+function K() {
+    (0, E.WK)(), F.reset(), i()(E.ZP).forOwn((e, t) => F.addRule(v({ type: t }, e))), h.Z.markSearchTokensRefreshed();
 }
-function q(e) {
-    if (A(e)) return !0;
+function z(e) {
+    if (S(e)) return !0;
     {
-        let t = (0, m.ad)({ location: "isChannelFilterSupported" }),
-            n = (0, g.J)({ location: "isChannelFilterSupported" }),
-            r = t || n;
-        return e.type === y.aib.DMS && r && !d.Z.hidePersonalInformation;
+        let t = (0, m.ad)({ location: "isChannelFilterSupported" }) || !1;
+        return e.type === b.aib.DMS && !d.Z.hidePersonalInformation && t;
     }
 }
-function X(e) {
+function q(e) {
     let t = e.name,
         n = !1;
-    if (e.isGroupDM()) t = (0, o.F6)(e, f.default, u.Z);
+    if (e.isGroupDM()) t = (0, a.F6)(e, f.default, u.Z);
     else if (e.isDM()) {
         let n = e.getRecipientId(),
             r = f.default.getUser(n),
@@ -426,11 +423,11 @@ function X(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = G(t)), n) ? "#".concat(t) : t;
+    return ((t = U(t)), n) ? "#".concat(t) : t;
 }
-function Q(e) {
+function X(e) {
     var t;
-    if (e.isGroupDM()) return (0, o.F6)(e, f.default, u.Z);
+    if (e.isGroupDM()) return (0, a.F6)(e, f.default, u.Z);
     if (e.isDM()) {
         let t = e.getRecipientId(),
             n = f.default.getUser(t);
@@ -439,7 +436,7 @@ function Q(e) {
     let n = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return null != (t = null == n ? void 0 : n.name) ? t : e.name;
 }
-function J() {
+function Q() {
     var e, t;
     return null != (t = null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }
