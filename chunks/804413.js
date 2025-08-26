@@ -1,20 +1,18 @@
-n.d(t, { Z: () => l });
-var r = n(792481),
-    i = n(74538),
-    a = n(848572),
+n.d(t, { Z: () => s });
+var r = n(74538),
+    i = n(848572),
     o = n(474936);
-let s = 604800000;
-function l() {
-    let e = (0, a.GG)(),
-        t = r.X.useExperiment({ location: "useRecentlyLeveledTenureBadge" }).bypassTimeLimit,
-        n = (0, i.EK)();
-    if (null == e || !n) return null;
-    let l = new Date().getTime();
-    for (let n = o.Qh.length - 1; n >= 0; n--) {
-        let r = o.vK[o.Qh[n]],
+let a = 604800000;
+function s() {
+    let e = (0, i.GG)(),
+        t = (0, r.EK)();
+    if (null == e || !t) return null;
+    let n = new Date().getTime();
+    for (let t = o.Qh.length - 1; t >= 0; t--) {
+        let r = o.vK[o.Qh[t]],
             i = new Date(e);
-        if ((i.setMonth(e.getMonth() + r.tenureReqNumMonths), i.setHours(i.getHours() + 30), l > i.getTime()))
-            if (l - i.getTime() < s || t) return r.id;
+        if ((i.setMonth(e.getMonth() + r.tenureReqNumMonths), i.setHours(i.getHours() + 30), n > i.getTime()))
+            if (n - i.getTime() < a) return r.id;
             else break;
     }
     return null;
