@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(512722),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(410575),
     c = n(906732),
@@ -17,9 +17,9 @@ var i = n(512722),
 function g(e) {
     let { onClose: t, onSelect: n, minimal: i = !1, appContext: g, onInteraction: E } = e,
         { analyticsLocations: b } = (0, c.ZP)(),
-        y = (0, o.e7)([d.default], () => {
+        y = (0, a.e7)([d.default], () => {
             let e = d.default.getCurrentUser();
-            return a()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
+            return o()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
         O = (0, u.M)({
             deviceType: h.h7.VIDEO_INPUT,
@@ -34,6 +34,7 @@ function g(e) {
         children: (0, r.jsxs)(s.v2r, {
             onClose: t,
             navId: "video-device-context",
+            variant: "fixed",
             "aria-label": m.intl.string(m.t.F122Gx),
             onSelect: n,
             onInteraction: E,

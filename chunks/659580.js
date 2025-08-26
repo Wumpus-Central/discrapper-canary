@@ -2,8 +2,8 @@ n.d(t, { default: () => S });
 var r = n(951288);
 n(647438);
 var i = n(990547),
-    a = n(442837),
-    o = n(46973),
+    o = n(442837),
+    a = n(46973),
     s = n(481060),
     l = n(846027),
     c = n(410575),
@@ -54,14 +54,14 @@ function S(e) {
             analyticsLocations: j,
             asSubmenu: w,
         }),
-        G = (0, a.e7)([g.Z], () => g.Z.getActiveInputProfile()),
+        G = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
         B = (0, h.Z)(j),
         Z = (0, _.Z)(j),
-        V = (0, p.Z)(j),
-        F = (0, m.Z)(j),
-        H = o.Yn.DEFAULT,
+        F = (0, p.Z)(j),
+        V = (0, m.Z)(j),
+        H = a.Yn.DEFAULT,
         Y = g.Z.isSelfDeaf(H),
-        W = (0, a.e7)([g.Z], () => g.Z.getMode()),
+        W = (0, o.e7)([g.Z], () => g.Z.getMode()),
         K = W === y.pM4.VOICE_ACTIVITY ? y.pM4.PUSH_TO_TALK : y.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: y.qAy.CONTEXT_MENU,
@@ -71,6 +71,7 @@ function S(e) {
             className: T.menu,
             onClose: t,
             navId: "audio-device-context",
+            variant: "fixed",
             "aria-label": I.intl.string(I.t.ZR1Ss7),
             children: [
                 S && k,
@@ -84,8 +85,8 @@ function S(e) {
                     : null,
                 (0, r.jsxs)(s.kSQ, {
                     children: [
-                        N ? V : null,
-                        R ? F : null,
+                        N ? F : null,
+                        R ? V : null,
                         w ? (0, r.jsx)(s.Clw, {}) : null,
                         w && P
                             ? (0, r.jsx)(

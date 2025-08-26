@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(990547),
-    a = n(442837),
-    o = n(46973),
+    o = n(442837),
+    a = n(46973),
     s = n(481060),
     l = n(846027),
     c = n(284056),
@@ -57,22 +57,22 @@ function C(e) {
             analyticsLocations: U,
             asSubmenu: !0,
         }),
-        V = (0, a.e7)([g.Z], () => g.Z.getActiveInputProfile()),
-        F = (0, h.Z)(U),
+        F = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
+        V = (0, h.Z)(U),
         H = (0, p.Z)(U),
         Y = (0, m.Z)(U),
-        W = o.Yn.DEFAULT,
+        W = a.Yn.DEFAULT,
         K = g.Z.isSelfDeaf(W),
-        z = (0, a.e7)([g.Z], () => g.Z.getMode()),
+        z = (0, o.e7)([g.Z], () => g.Z.getMode()),
         q = z === v.pM4.VOICE_ACTIVITY ? v.pM4.PUSH_TO_TALK : v.pM4.VOICE_ACTIVITY,
-        X = (0, a.e7)([g.Z, b.ZP], () => {
+        X = (0, o.e7)([g.Z, b.ZP], () => {
             var e;
             let t = (null == (e = g.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
                 n = null != b.ZP.getKeybindForAction(v.kg4.PUSH_TO_TALK, !1, !0),
                 r = null != b.ZP.getKeybindForAction(v.kg4.PUSH_TO_TALK_PRIORITY, !1, !0);
             return t || n || r;
         }),
-        Q = (0, a.e7)([E.Z], () => null != E.Z.getChannelId());
+        Q = (0, o.e7)([E.Z], () => null != E.Z.getChannelId());
     return (0, r.jsx)(u.Z, {
         object: v.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(s.v2r, {
@@ -80,11 +80,12 @@ function C(e) {
             onInteraction: n,
             onClose: N,
             navId: "audio-device-context",
+            variant: "fixed",
             "aria-label": S.intl.string(S.t.ZR1Ss7),
             className: A.menu,
             children: [
                 (0, r.jsxs)(s.kSQ, {
-                    children: [L && B, w && F, D && Z],
+                    children: [L && B, w && V, D && Z],
                 }),
                 (0, r.jsxs)(s.kSQ, {
                     children: [
@@ -112,7 +113,7 @@ function C(e) {
                                   id: "input-mode",
                                   label: S.intl.string(S.t.Q8gkVF),
                                   action: () => l.Z.setMode(q, void 0, void 0, { analyticsLocations: U }),
-                                  disabled: V === I._.STUDIO,
+                                  disabled: F === I._.STUDIO,
                               })
                             : null,
                         P &&
