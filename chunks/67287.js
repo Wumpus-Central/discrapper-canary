@@ -1,10 +1,11 @@
-n.d(t, { Z: () => s });
-var i = n(509613),
-    l = n(906467),
-    r = n(82334),
-    o = n(388032);
-let s = (0, i.vB)("Developer", {
-    useTitle: () => o.intl.string(o.t.CbItOD),
-    getLayout: () => [r.Z],
-    usePredicate: () => l.Z.isDeveloper,
+n.d(t, { Z: () => o });
+var l = n(509613),
+    i = n(906467),
+    r = n(869235),
+    s = n(965557),
+    a = n(388032);
+let o = (0, l.vB)(r.t.DEVELOPER_SETTINGS_SECTION, {
+    useLabel: () => a.intl.string(a.t.CbItOD),
+    getLayout: () => [s.Z],
+    usePredicate: () => i.Z.isDeveloper,
 });
