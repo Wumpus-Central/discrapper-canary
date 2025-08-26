@@ -62372,6 +62372,34 @@ h3.improved__1689b:after {
     padding-top: 10px
 }
 
+.errorBoundary__8d6f9 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    place-content: center;
+    place-items: center
+}
+
+.errorBoundaryIcon__8d6f9 {
+    color: var(--text-primary);
+    height: 24px;
+    width: 24px
+}
+
+.errorMessageWrapper__8d6f9 {
+    background-color: var(--background-base-lower) !important;
+    margin-top: 12px;
+    padding: 12px
+}
+
+.errorMessage__8d6f9 {
+    color: var(--text-default);
+    text-align: left;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
 .clickable__2debe {
     cursor: pointer;
     display: flex

@@ -13,8 +13,8 @@ n.d(t, {
     n(539854);
 var r = n(647438),
     i = n(442837),
-    a = n(704215),
-    o = n(493544),
+    o = n(704215),
+    a = n(493544),
     s = n(211242),
     l = n(924557),
     c = n(706140),
@@ -44,8 +44,8 @@ var r = n(647438),
     x = n(168308),
     L = n(839469),
     j = n(726985),
-    k = n(46140),
-    M = n(388032);
+    M = n(46140),
+    k = n(388032);
 function U(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ function F(e) {
         r = I.Z.isDeveloper,
         i = [
             {
-                header: M.intl.string(M.t.cduTBA),
+                header: k.intl.string(k.t.cduTBA),
                 settings: n
                     ? [
                           j.s6.ACCOUNT,
@@ -130,12 +130,12 @@ function F(e) {
                       ],
             },
             {
-                header: M.intl.string(M.t["4uOdGh"]),
+                header: k.intl.string(k.t["4uOdGh"]),
                 divider: !0,
                 settings: [j.s6.PREMIUM, j.s6.GUILD_BOOSTING, j.s6.SUBSCRIPTIONS, j.s6.GIFT_INVENTORY, j.s6.BILLING],
             },
             {
-                header: M.intl.string(M.t.f2n1TE),
+                header: k.intl.string(k.t.f2n1TE),
                 divider: !0,
                 settings: [
                     j.s6.APPEARANCE,
@@ -173,6 +173,7 @@ function F(e) {
                           j.s6.SHOP_KEEPER,
                           j.s6.WEB_SETTING_TREE_TOOL,
                           j.s6.QUEST_PREVIEW_TOOL,
+                          j.s6.QUEST_PREVIEW_TOOL_2,
                           j.s6.QUEST_MINOR_REWARD_CAPPING_CONFIG,
                       ]
                     : [],
@@ -186,12 +187,12 @@ function F(e) {
                 settings: [j.s6.SOCIAL_LINKS, j.s6.CLIENT_DEBUG_INFO],
             },
         ],
-        a = {
-            header: M.intl.string(M.t.SmHCFR),
+        o = {
+            header: k.intl.string(k.t.SmHCFR),
             divider: !0,
             settings: [j.s6.ACTIVITY_PRIVACY, j.s6.REGISTERED_GAMES, j.s6.OVERLAY],
         };
-    return t ? i : i.toSpliced(3, 0, a);
+    return t ? i : i.toSpliced(3, 0, o);
 }
 function V() {
     let { shouldMergeGameSettings: e } = R.b.useExperiment({ location: "settings" }),
@@ -203,7 +204,7 @@ function V() {
     return r.useMemo(
         () => [
             {
-                header: M.intl.string(M.t.zkoeq6),
+                header: k.intl.string(k.t.zkoeq6),
                 settings: [
                     ...n
                         .map((e) => {
@@ -219,27 +220,27 @@ function V() {
     );
 }
 function H() {
-    var e, t, n, o;
+    var e, t, n, a;
     let I = (0, g.YO)().length,
         P = (0, m.U)(),
         L = (0, i.e7)([C.Z], () => C.Z.getProps().impressionSource),
         j = (0, h.gU)(),
-        M = (0, x.bC)(),
+        k = (0, x.bC)(),
         U = (0, l.Go)(),
-        [G] = (0, c.cv)(U ? [a.z.CLIPS_SETTINGS_BETA_TAG] : []),
+        [G] = (0, c.cv)(U ? [o.z.CLIPS_SETTINGS_BETA_TAG] : []),
         { shouldMergeGameSettings: B } = R.b.useExperiment({ location: "settings" }),
         Z = (0, f.Xo)({ location: "settings" }),
         F = null != (n = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
         V = (0, O.y0)({ location: "settings" }),
         H = (0, y.v4)({ location: "settings" }),
         Y = (0, s.Q)(),
-        W = (0, E.Z)({ location: k.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        W = (0, E.Z)({ location: M.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         K = (0, i.e7)([T.Z], () => T.Z.hasLibraryApplication()),
         z = (0, i.e7)([v.default], () => v.default.hasTOTPEnabled()),
         q = w.Sb.useSetting(),
         X = (0, _.Z)(),
         { hypeSquadRemoved: Q } = d.Z.useExperiment({ location: "settings" }),
-        J = null == (o = (0, p.Z)()) || o,
+        J = null == (a = (0, p.Z)()) || a,
         $ = (null == (t = (0, b.s)()) ? void 0 : t.length) > 0,
         { hasBlockedUsers: ee, hasIgnoredUsers: et } = (0, i.cj)([A.Z], () => ({
             hasBlockedUsers: A.Z.getBlockedIDs().length > 0,
@@ -249,7 +250,7 @@ function H() {
         {
             inputMode: er,
             activeInputProfile: ei,
-            isInputProfileCustom: ea,
+            isInputProfileCustom: eo,
         } = (0, i.cj)([S.Z], () => ({
             activeInputProfile: S.Z.getActiveInputProfile(),
             inputMode: S.Z.getMode(),
@@ -262,8 +263,8 @@ function H() {
                 showPrepaidPaymentPastDueWarning: P,
                 impressionSource: L,
                 numOfPendingFamilyRequests: j,
-                isOverlaySupported: M,
-                isClipsBetaTagShowing: G === a.z.CLIPS_SETTINGS_BETA_TAG,
+                isOverlaySupported: k,
+                isClipsBetaTagShowing: G === o.z.CLIPS_SETTINGS_BETA_TAG,
                 shouldMergeGameSettings: B,
                 isKeywordFilteringEnabled: Z,
                 isStaff: F,
@@ -283,9 +284,9 @@ function H() {
                 isEligibleForSensitiveContentDefaults: en,
                 inputMode: er,
                 activeInputProfile: ei,
-                isInputProfileCustom: ea,
+                isInputProfileCustom: eo,
             }),
-        [q, G, ee, et, K, $, z, Q, L, J, W, H, V, Z, M, F, X, j, Y, B, P, I, en, er, ei, ea],
+        [q, G, ee, et, K, $, z, Q, L, J, W, H, V, Z, k, F, X, j, Y, B, P, I, en, er, ei, eo],
     );
 }
 function Y(e) {
@@ -298,7 +299,7 @@ function Y(e) {
                 return n.section === r.section;
             }),
         ),
-        a = Object.fromEntries(
+        o = Object.fromEntries(
             Object.entries(i)
                 .filter((e) => {
                     let [t, { parent: n, section: i }] = e;
@@ -309,17 +310,17 @@ function Y(e) {
                     return [t, n];
                 }),
         ),
-        o = new Set(),
+        a = new Set(),
         s = (e) => {
             let t = i[e];
             if (null == t) return;
-            o.add(e);
+            a.add(e);
             let n = t.parent;
             null != n && s(n);
         },
         l = (e) => {
-            for (let t of (o.add(e),
-            Object.entries(a)
+            for (let t of (a.add(e),
+            Object.entries(o)
                 .filter((t) => {
                     let [n, r] = t;
                     return r === e;
@@ -331,14 +332,14 @@ function Y(e) {
                 l(t);
         };
     for (let e of t.filter((e) => e in i))
-        if (!o.has(e)) {
+        if (!a.has(e)) {
             if (null != i[e].element && null == i[e].parent) {
-                o.clear();
+                a.clear();
                 break;
             }
-            Object.values(a).includes(e) && l(e), s(e);
+            Object.values(o).includes(e) && l(e), s(e);
         }
-    return o;
+    return a;
 }
 function W(e, t, n) {
     return (e === j.s6.SEARCH_NO_RESULTS && 0 === t.size) || n.has(e) || t.has(e);
@@ -346,18 +347,18 @@ function W(e, t, n) {
 function K(e, t, n) {
     let r = [],
         i = Q(t),
-        a = z(t, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
+        o = z(t, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
     return (
         e.forEach((e) => {
             0 !== e.settings.length &&
-                (!0 === e.divider && r.push({ section: o.ID.DIVIDER }),
+                (!0 === e.divider && r.push({ section: a.ID.DIVIDER }),
                 null != e.header &&
                     r.push({
-                        section: o.ID.HEADER,
+                        section: a.ID.HEADER,
                         label: e.header,
                     }),
                 e.settings.forEach((e) => {
-                    r.push(Z(G({}, t[e]), { tabPredicate: () => null == n || W(e, n, a) }));
+                    r.push(Z(G({}, t[e]), { tabPredicate: () => null == n || W(e, n, o) }));
                 }));
         }),
         r
@@ -402,7 +403,7 @@ function Q(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [t, n] = e;
-            return n.section !== o.ID.CUSTOM && null != n.searchableTitles && (null == n.predicate || n.predicate());
+            return n.section !== a.ID.CUSTOM && null != n.searchableTitles && (null == n.predicate || n.predicate());
         }),
     );
 }

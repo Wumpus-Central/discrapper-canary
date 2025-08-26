@@ -1,4 +1,7 @@
-n.d(t, { X: () => i });
+n.d(t, {
+    T: () => o,
+    X: () => i,
+});
 let r = (0, n(818083).B)({
     id: "2024-04_quest_preview_tool",
     kind: "user",
@@ -29,4 +32,8 @@ let r = (0, n(818083).B)({
 function i(e) {
     let { location: t } = e;
     return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+}
+function o(e) {
+    let { location: t } = e;
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).v2Enabled;
 }

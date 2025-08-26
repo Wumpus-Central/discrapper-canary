@@ -1,6 +1,6 @@
 n.d(t, {
     CF: () => i,
-    QF: () => a,
+    QF: () => o,
     s6: () => r,
 });
 var r = (function (e) {
@@ -318,6 +318,7 @@ var r = (function (e) {
         (e.INTL_TESTING = "INTL_TESTING"),
         (e.SHOP_KEEPER = "SHOP_KEEPER"),
         (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
+        (e.QUEST_PREVIEW_TOOL_2 = "QUEST_PREVIEW_TOOL_2"),
         (e.QUEST_MINOR_REWARD_CAPPING_CONFIG = "QUEST_MINOR_REWARD_CAPPING_CONFIG"),
         (e.LOGOUT = "LOGOUT"),
         (e.SOCIAL_LINKS = "SOCIAL_LINKS"),
@@ -330,4 +331,4 @@ var r = (function (e) {
     );
 })({});
 let i = "",
-    a = [];
+    o = [];
