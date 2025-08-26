@@ -1,49 +1,19 @@
 n.d(t, {
-    C: () => s,
-    Z: () => o,
+    C: () => o,
+    Z: () => i,
 });
-var r = n(818083),
-    i = n(154579);
-let a = (0, r.B)({
-    kind: "user",
-    id: "2025-07_search_author_type_filter",
-    label: "Search Author Type Filter",
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "Enabled",
-            config: { enabled: !0 },
-        },
-    ],
-});
-function o(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        r = (0, i.ro)({
-            location: t,
-            autoTrackExposure: n,
-        }),
-        { enabled: o } = a.getCurrentConfig(
-            { location: t },
-            {
-                autoTrackExposure: n,
-                disable: r,
-            },
-        );
-    return o;
+var r = n(154579);
+function i(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e;
+    return !(0, r.ro)({
+        location: t,
+        autoTrackExposure: n,
+    });
 }
-function s(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        r = (0, i.ro)({
-            location: t,
-            autoTrackExposure: n,
-        }),
-        { enabled: o } = a.useExperiment(
-            { location: t },
-            {
-                autoTrackExposure: n,
-                disable: r,
-            },
-        );
-    return o;
+function o(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e;
+    return !(0, r.nd)({
+        location: t,
+        autoTrackExposure: n,
+    });
 }
