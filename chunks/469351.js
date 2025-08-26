@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(278074),
     a = n(399606),
-    s = n(755721),
+    s = n(159691),
     o = n(481060),
     c = n(76535),
     d = n(395586),
@@ -97,11 +97,10 @@ function w(e) {
                     ? (0, r.jsx)("div", {
                           className: P.previewButton,
                           children: (0, r.jsx)(s.zx, {
+                              text: T.intl.string(T.t.vM81yc),
+                              variant: "secondary",
                               onClick: M,
-                              color: s.zx.Colors.PRIMARY,
-                              size: s.zx.Sizes.SMALL,
-                              look: s.zx.Looks.OUTLINED,
-                              children: T.intl.string(T.t.vM81yc),
+                              size: "sm",
                           }),
                       })
                     : null,

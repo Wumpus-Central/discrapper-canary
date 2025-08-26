@@ -1,7 +1,7 @@
 n.d(t, { Z: () => j });
 var r = n(951288);
 n(647438);
-var i = n(755721),
+var i = n(159691),
     l = n(481060),
     a = n(724598),
     s = n(674180),
@@ -127,25 +127,11 @@ function j(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(i.zx, {
-                className: f.addButton,
-                innerClassName: f.addButtonInner,
+            (0, r.jsx)(i.zx, {
+                text: h.intl.string(h.t.riG6DQ),
+                icon: l.qJs,
                 onClick: () => a(null),
                 disabled: n,
-                children: [
-                    (0, r.jsx)(l.qJs, {
-                        size: "custom",
-                        color: "currentColor",
-                        width: 20,
-                        height: 20,
-                        "aria-hidden": !0,
-                    }),
-                    (0, r.jsx)(l.LZC, {
-                        size: 6,
-                        horizontal: !0,
-                    }),
-                    h.intl.string(h.t.riG6DQ),
-                ],
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(x, {

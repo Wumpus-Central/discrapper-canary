@@ -8,5 +8,4 @@ e.exports = {
     attachedRoleCloseIcon: "attachedRoleCloseIcon_e3f977",
     detachWarningHeading: "detachWarningHeading_e3f977",
     reattachRoleRow: "reattachRoleRow_e3f977",
-    restoreDetachedRoleButtonInner: "restoreDetachedRoleButtonInner_e3f977",
 };
