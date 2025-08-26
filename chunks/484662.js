@@ -50,10 +50,16 @@ function m() {
                                 variant: "primary",
                                 text: "Open Safety Flow",
                                 onClick: () => {
-                                    (0, l.q4)(() => (0, a.jsx)(s.Z, {}), {
-                                        layerKey: c.CV,
-                                        Layer: i.ZP,
-                                    });
+                                    (0, l.q4)(
+                                        (e) => {
+                                            let { closeLayer: t } = e;
+                                            return (0, a.jsx)(s.Z, { onClose: t });
+                                        },
+                                        {
+                                            layerKey: c.CV,
+                                            Layer: i.ZP,
+                                        },
+                                    );
                                 },
                             }),
                         }),

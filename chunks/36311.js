@@ -14,19 +14,19 @@ var r = n(951288),
     m = n(601964),
     g = n(594174),
     b = n(63063),
-    _ = n(981631),
-    y = n(723359),
+    y = n(981631),
+    _ = n(723359),
     C = n(388032),
-    x = n(118177);
-function v(e) {
+    v = n(118177);
+function x(e) {
     let { guild: t, channelId: n } = e,
         l = (0, o.e7)([g.default], () => {
             var e;
             return (null == (e = g.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         a = (0, h.Kt)(),
-        { verifyAgreementButtonText: c, verifyGateDescription: v } = (0, h.a1)(
-            (0, m.Y2)(t) ? y.L0.NSFW_SERVER : y.L0.NSFW_CHANNEL,
+        { verifyAgreementButtonText: c, verifyGateDescription: x } = (0, h.a1)(
+            (0, m.Y2)(t) ? _.L0.NSFW_SERVER : _.L0.NSFW_CHANNEL,
         ),
         O = i.useCallback(() => {
             null != t && u.Z.nsfwReturnToSafety(t.id);
@@ -35,7 +35,7 @@ function v(e) {
             null != t && u.Z.nsfwAgree(t.id);
         }, [t]),
         E = i.useCallback(() => {
-            d.Z.showAgeVerificationGetStartedModal(p.cU.NSFW_GUILD);
+            d.Z.showAgeVerificationGetStartedModal({ entryPoint: p.cU.NSFW_GUILD });
         }, []),
         S = (0, m.Y2)(t),
         I = C.intl.string(S ? C.t.xi46lp : C.t.ZmwvDQ);
@@ -47,11 +47,11 @@ function v(e) {
               onAgree: E,
               onDisagree: O,
               title: I,
-              description: v,
+              description: x,
               agreement: c,
               agreementButtonColor: s.zx.Colors.BRAND,
               disagreement: C.intl.string(C.t["/g10LC"]),
-              imageClassName: x.ageGatedImage,
+              imageClassName: v.ageGatedImage,
           })
         : l
           ? (0, r.jsx)(f.Z, {
@@ -62,11 +62,11 @@ function v(e) {
                 onDisagree: O,
                 title: C.intl.string(S ? C.t["H0SG/v"] : C.t.NEabBQ),
                 description: C.intl.format(S ? C.t["6++3cX"] : C.t["2kHZen"], {
-                    helpURL: b.Z.getArticleURL(_.BhN.NSFW_AGE_GATING),
+                    helpURL: b.Z.getArticleURL(y.BhN.NSFW_AGE_GATING),
                 }),
                 agreement: null,
                 disagreement: C.intl.string(C.t["/g10LC"]),
-                imageClassName: x.ageGatedImage,
+                imageClassName: v.ageGatedImage,
             })
           : (0, r.jsx)(f.Z, {
                 guildId: null == t ? void 0 : t.id,
@@ -90,10 +90,10 @@ let O = function (e) {
         }, []),
         (0, r.jsx)(c.Den, {
             ref: o,
-            className: x.scroller,
+            className: v.scroller,
             children: (0, r.jsx)("div", {
-                className: a()(l, x.wrapper),
-                children: (0, r.jsx)(v, {
+                className: a()(l, v.wrapper),
+                children: (0, r.jsx)(x, {
                     guild: t,
                     channelId: n,
                 }),

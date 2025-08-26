@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(856597),
     f = n(241945),
     p = n(388032),
-    y = n(104940);
-let m = n(575703);
+    m = n(104940);
+let y = n(575703);
 function h(e) {
     let { task: t, handleSubmit: n, disabled: l } = e,
         [c, s] = i.useState(t),
@@ -31,7 +31,7 @@ function h(e) {
             children: (0, r.jsxs)(a.Kqy, {
                 direction: "horizontal",
                 justify: "start",
-                className: y.body,
+                className: m.body,
                 children: [
                     (0, r.jsx)(d.Z, {}),
                     (0, r.jsx)(u.Z, {
@@ -43,21 +43,22 @@ function h(e) {
         })
     );
 }
-let g = function () {
-    let [e, t] = i.useState(null),
-        [n, o] = i.useState(!0),
-        [u, d] = i.useState(null),
-        [g, b] = i.useState(!1),
-        j = i.useCallback(async () => {
-            o(!0), d(null);
+let g = function (e) {
+    let { onClose: t } = e,
+        [n, o] = i.useState(null),
+        [u, d] = i.useState(!0),
+        [g, b] = i.useState(null),
+        [v, j] = i.useState(!1),
+        x = i.useCallback(async () => {
+            d(!0), b(null);
             try {
                 var e;
                 let n = await (0, c.PA)();
-                if (null == n) return;
+                if (null == n) return void t();
                 !(0, l.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
                 s.VZ.has(n.ui_component.component.type)
-                    ? t(n)
-                    : t({
+                    ? o(n)
+                    : o({
                           task_id: n.task_id,
                           task_type: s.UA.REFRESH_APP,
                           assignment_id: n.assignment_id,
@@ -73,71 +74,68 @@ let g = function () {
                           },
                       });
             } catch (e) {
-                d(p.intl.string(f.default["/f++3t"]));
+                b(p.intl.string(f.default["/f++3t"]));
             } finally {
-                o(!1);
+                d(!1);
             }
-        }, []),
-        v = i.useCallback(
-            async (t) => {
-                if (null !== e) {
-                    b(!0);
+        }, [t]),
+        E = i.useCallback(
+            async (e) => {
+                if (null !== n) {
+                    j(!0);
                     try {
-                        let n = {
-                            task_id: e.task_id,
-                            flow_id: e.flow_context.flow_id,
-                            data: t,
+                        let t = {
+                            task_id: n.task_id,
+                            flow_id: n.flow_context.flow_id,
+                            data: e,
                         };
-                        await (0, c.Wl)(n), j();
+                        await (0, c.Wl)(t), x();
                     } catch (e) {
-                        d(p.intl.string(f.default["+QRSxc"]));
+                        b(p.intl.string(f.default["+QRSxc"]));
                     } finally {
-                        b(!1);
+                        j(!1);
                     }
                 }
             },
-            [e, j],
+            [n, x],
         );
     return (
         i.useEffect(() => {
-            j();
-        }, [j]),
+            x();
+        }, [x]),
         (0, r.jsxs)("div", {
-            className: y.background,
+            className: m.background,
             children: [
-                (0, r.jsx)(a.y5t, {
-                    forceLevel: 6,
-                    children: (0, r.jsx)("img", {
-                        className: y.artwork,
-                        src: m,
-                        alt: "",
-                    }),
+                (0, r.jsx)("img", {
+                    className: m.artwork,
+                    src: y,
+                    alt: "",
                 }),
                 (0, r.jsx)("div", {
-                    className: y.safetyFlow,
+                    className: m.safetyFlow,
                     children: (0, r.jsxs)("div", {
-                        className: y.container,
+                        className: m.container,
                         children: [
-                            n &&
+                            u &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
                                     children: p.intl.string(f.default.v0H5Tk),
                                 }),
-                            null !== u &&
+                            null !== g &&
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     color: "text-danger",
-                                    className: y.error,
-                                    children: u,
+                                    className: m.error,
+                                    children: g,
                                 }),
-                            !n &&
-                                null === u &&
-                                null != e &&
+                            !u &&
+                                null === g &&
+                                null != n &&
                                 (0, r.jsx)(h, {
-                                    task: e,
-                                    handleSubmit: v,
-                                    disabled: g,
+                                    task: n,
+                                    handleSubmit: E,
+                                    disabled: v,
                                 }),
                         ],
                     }),

@@ -1,7 +1,7 @@
 n.d(e, { default: () => f });
-var l = n(951288),
-    r = n(647438),
-    i = n(82659),
+var r = n(951288),
+    i = n(647438),
+    l = n(82659),
     o = n(481060),
     a = n(230711),
     E = n(782568),
@@ -17,10 +17,10 @@ var l = n(951288),
 let f = (t) => {
     let { channelId: e, messageId: f, transitionState: g, onClose: L } = t,
         v = (0, u.Z)(),
-        O = (0, _.Jm)(),
-        P = (0, d.m8)(),
-        h = r.useMemo(() => O && P, [O, P]),
-        M = r.useCallback(
+        P = (0, _.Jm)(),
+        O = (0, d.m8)(),
+        h = i.useMemo(() => P && O, [P, O]),
+        M = i.useCallback(
             (t) => {
                 (0, d.aP)({
                     action: t,
@@ -30,35 +30,35 @@ let f = (t) => {
             },
             [e, f],
         ),
-        T = r.useCallback(() => {
+        T = i.useCallback(() => {
             L(),
                 M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, o.ZDy)(async () => {
                     let { default: t } = await n(788679);
                     return (n) =>
-                        (0, l.jsx)(
+                        (0, r.jsx)(
                             t,
                             (function (t) {
                                 for (var e = 1; e < arguments.length; e++) {
                                     var n = null != arguments[e] ? arguments[e] : {},
-                                        l = Object.keys(n);
+                                        r = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (l = l.concat(
+                                        (r = r.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (t) {
                                                 return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                             }),
                                         )),
-                                        l.forEach(function (e) {
-                                            var l;
-                                            (l = n[e]),
+                                        r.forEach(function (e) {
+                                            var r;
+                                            (r = n[e]),
                                                 e in t
                                                     ? Object.defineProperty(t, e, {
-                                                          value: l,
+                                                          value: r,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (t[e] = l);
+                                                    : (t[e] = r);
                                         });
                                 }
                                 return t;
@@ -73,14 +73,14 @@ let f = (t) => {
                 });
         }, [e, f, L, M]);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             (0, d.aP)({
                 action: d.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
                 channelId: e,
                 messageId: f,
             });
         }, [e, f]),
-        (0, l.jsx)(i.Modal, {
+        (0, r.jsx)(l.Modal, {
             title: R.intl.string(R.t.sGW77u),
             subtitle: (function () {
                 if (h)
@@ -96,7 +96,7 @@ let f = (t) => {
             })(),
             actions: [
                 (function () {
-                    if (!P && !h)
+                    if (!O && !h)
                         return {
                             text: R.intl.string(R.t.ZH7P2t),
                             onClick: T,
@@ -109,7 +109,9 @@ let f = (t) => {
                           onClick: function () {
                               L(),
                                   M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
-                                  s.Z.showAgeVerificationGetStartedModal(I.cU.SENSITIVE_MEDIA_LEARN_MORE);
+                                  s.Z.showAgeVerificationGetStartedModal({
+                                      entryPoint: I.cU.SENSITIVE_MEDIA_LEARN_MORE,
+                                  });
                           },
                       }
                     : v

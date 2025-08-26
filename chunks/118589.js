@@ -8,12 +8,17 @@ n.d(t, {
 var r,
     i = n(241945),
     a = n(388032),
-    l = (((r = {})[(r.REFRESH_APP = -1)] = "REFRESH_APP"), (r[(r.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"), r);
+    l =
+        (((r = {})[(r.REFRESH_APP = -1)] = "REFRESH_APP"),
+        (r[(r.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
+        (r[(r.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
+        r);
 let c = {
         EMAIL_VERIFICATION: "email_verification",
         PHONE_VERIFICATION: "phone_verification",
         GENERIC_CALL_TO_ACTION: "generic_call_to_action",
         REFRESH_APP: "refresh_app",
+        AGE_VERIFICATION: "age_verification",
     },
     o = new Set(Object.values(c));
 a.intl.string(i.default["Qm6K/v"]);

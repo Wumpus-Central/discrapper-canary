@@ -2,8 +2,8 @@ n.d(t, { I: () => m });
 var r = n(951288);
 n(647438);
 var i = n(168107),
-    a = n(480916),
-    o = n(81643),
+    o = n(480916),
+    a = n(81643),
     s = n(925513),
     l = n(880257),
     c = n(907995),
@@ -24,7 +24,7 @@ function p() {
 }
 function h() {
     let e = () => {
-        i.Z.showAgeVerificationGetStartedModal(a.cU.CONTENT_AND_SOCIAL_NOTICE);
+        i.Z.showAgeVerificationGetStartedModal({ entryPoint: o.cU.CONTENT_AND_SOCIAL_NOTICE });
     };
     return (0, r.jsx)(c.f, {
         label: _.t.OX4ybm,
@@ -35,6 +35,6 @@ function h() {
 function m() {
     var e;
     let t = null == (e = (0, l.Z)()) || e,
-        n = (0, o.l6)();
+        n = (0, a.l6)();
     return (0, d.pY)("ContentAndSocialNotice") && !n ? (0, r.jsx)(h, {}) : t ? null : (0, r.jsx)(p, {});
 }

@@ -35,8 +35,8 @@ function C(t) {
         [w, k] = i.useState(null),
         [M, G] = i.useState(!1),
         [O, F] = i.useState(0),
-        V = i.useRef(null),
         P = i.useRef(null),
+        V = i.useRef(null),
         U = (0, h.Dt)(),
         D = (0, A.Kt)() && o !== j.L0.FAMILY_CENTER,
         { verifyAgreementButtonText: Y, verifyGateDescription: W } = (0, A.a1)(o),
@@ -89,10 +89,10 @@ function C(t) {
         ),
         tt = i.useCallback(() => {
             var t;
-            null == (t = P.current) || t.focus();
-        }, [P]),
+            null == (t = V.current) || t.focus();
+        }, [V]),
         te = i.useCallback(() => {
-            E.Z.showAgeVerificationGetStartedModal(y.cU.NSFW_AGE_GATE);
+            E.Z.showAgeVerificationGetStartedModal({ entryPoint: y.cU.NSFW_AGE_GATE });
         }, []);
     return D
         ? (0, r.jsxs)(d.Y0X, {
@@ -210,7 +210,7 @@ function C(t) {
                                         onPopulated: tt,
                                         error: w,
                                         value: I,
-                                        ref: V,
+                                        ref: P,
                                         autoFocus: !0,
                                     }),
                                 }),
@@ -223,7 +223,7 @@ function C(t) {
                                     variant: "primary",
                                     size: "sm",
                                     text: L.intl.string(L.t.uBFuoq),
-                                    buttonRef: P,
+                                    buttonRef: V,
                                     loading: M,
                                     disabled: null == I,
                                     onClick: J,

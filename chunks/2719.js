@@ -1,8 +1,8 @@
 n.d(t, { Z: () => ei }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(512722),
     l = n.n(s),
     c = n(442837),
@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(726985),
     B = n(981631),
     Z = n(815660),
-    V = n(801461),
-    F = n(388032),
+    F = n(801461),
+    V = n(388032),
     H = n(378846);
 function Y(e, t, n) {
     return (
@@ -95,22 +95,22 @@ function z(e, t) {
 }
 let q = M.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
 function X(e) {
-    var t, a;
+    var t, o;
     let { className: s, user: l } = e,
         c = i.useRef(null),
         d = (0, T.o9)(),
         _ = (0, S.b)(),
         p = (0, v.gS)(),
-        h = null != (a = null == p || null == (t = p.nick) ? void 0 : t[0]) ? a : null,
+        h = null != (o = null == p || null == (t = p.nick) ? void 0 : t[0]) ? o : null,
         [m, g] = i.useState(!1);
     i.useEffect(() => {
         g(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [l.username]);
     let E = !l.isClaimed(),
         b = (d && !l.hasUniqueUsername() && !l.hasVerifiedEmailOrPhone()) || E,
-        y = b ? F.intl.string(F.t["7Ngnys"]) : void 0;
+        y = b ? V.intl.string(V.t["7Ngnys"]) : void 0;
     return (0, r.jsxs)("div", {
-        className: o()(H.field, s),
+        className: a()(H.field, s),
         children: [
             (0, r.jsx)("div", {
                 className: H.constrainedRow,
@@ -119,7 +119,7 @@ function X(e) {
                     children: [
                         (0, r.jsx)(f.vwX, {
                             className: H.fieldTitle,
-                            children: F.intl.string(F.t.qqhR3N),
+                            children: V.intl.string(V.t.qqhR3N),
                         }),
                         (0, r.jsxs)("div", {
                             className: H.usernameInnerRow,
@@ -147,7 +147,7 @@ function X(e) {
                 (0, r.jsx)("div", {
                     className: H.pomeloWarning,
                     children: (0, r.jsx)(f.ua7, {
-                        text: F.intl.string(F.t.HHC5Z2),
+                        text: V.intl.string(V.t.HHC5Z2),
                         children: (e) =>
                             (0, r.jsx)(
                                 f.Mgn,
@@ -201,18 +201,18 @@ function X(e) {
                                     {
                                         variant: "secondary",
                                         size: "sm",
-                                        text: m ? F.intl.string(F.t["16kTw8"]) : F.intl.string(F.t.bt75u7),
+                                        text: m ? V.intl.string(V.t["16kTw8"]) : V.intl.string(V.t.bt75u7),
                                     },
                                     e,
                                 ),
                                 {
                                     disabled: b,
-                                    "aria-label": F.intl.string(F.t["JECa9/"]),
+                                    "aria-label": V.intl.string(V.t["JECa9/"]),
                                     onClick: () =>
                                         (0, f.ZDy)(async () => {
                                             if (_) {
                                                 let { default: e } = await n.e("85342").then(n.bind(n, 193049));
-                                                return (t) => (0, r.jsx)(e, W({ source: V.Kq.USER_SETTINGS_EDIT }, t));
+                                                return (t) => (0, r.jsx)(e, W({ source: F.Kq.USER_SETTINGS_EDIT }, t));
                                             }
                                             {
                                                 let { default: e } = await Promise.all([
@@ -232,10 +232,10 @@ function X(e) {
 }
 function Q(e) {
     var t, n;
-    let { user: a, className: s } = e,
+    let { user: o, className: s } = e,
         l = (0, v.gS)(),
         c = null != (n = null == l || null == (t = l.nick) ? void 0 : t[0]) ? n : null,
-        d = j.ZP.getGlobalName(a),
+        d = j.ZP.getGlobalName(o),
         _ = i.useRef(null),
         [p, h] = i.useState(!1);
     return (
@@ -243,7 +243,7 @@ function Q(e) {
             h(null != _.current && _.current.scrollWidth > _.current.clientWidth);
         }, [d]),
         (0, r.jsxs)("div", {
-            className: o()(H.field, s),
+            className: a()(H.field, s),
             children: [
                 (0, r.jsx)("div", {
                     className: H.constrainedRow,
@@ -252,7 +252,7 @@ function Q(e) {
                         children: [
                             (0, r.jsx)(f.vwX, {
                                 className: H.fieldTitle,
-                                children: F.intl.string(F.t["9AjdkJ"]),
+                                children: V.intl.string(V.t["9AjdkJ"]),
                             }),
                             (0, r.jsx)("div", {
                                 className: H.usernameInnerRow,
@@ -261,7 +261,7 @@ function Q(e) {
                                     tag: "span",
                                     color: "header-primary",
                                     variant: "text-md/normal",
-                                    children: null == d ? F.intl.string(F.t.ep5kjI) : d,
+                                    children: null == d ? V.intl.string(V.t.ep5kjI) : d,
                                 }),
                             }),
                         ],
@@ -296,8 +296,8 @@ function Q(e) {
                     children: (0, r.jsx)(f.zxk, {
                         variant: "secondary",
                         size: "sm",
-                        text: p ? F.intl.string(F.t["16kTw8"]) : F.intl.string(F.t.bt75u7),
-                        "aria-label": F.intl.string(F.t.YXeWYG),
+                        text: p ? V.intl.string(V.t["16kTw8"]) : V.intl.string(V.t.bt75u7),
+                        "aria-label": V.intl.string(V.t.YXeWYG),
                         onClick: en,
                     }),
                 }),
@@ -306,7 +306,7 @@ function Q(e) {
     );
 }
 function J(e) {
-    let { text: t, censor: n, revealLabel: a, hideLabel: o } = e,
+    let { text: t, censor: n, revealLabel: o, hideLabel: a } = e,
         [s, l] = i.useState(!1),
         c = s ? t : n(t);
     return (0, r.jsxs)(r.Fragment, {
@@ -316,23 +316,23 @@ function J(e) {
                 look: d.zx.Looks.LINK,
                 size: d.zx.Sizes.MIN,
                 color: d.zx.Colors.LINK,
-                "aria-label": s ? o : a,
+                "aria-label": s ? a : o,
                 onClick: () => l(!s),
-                children: s ? F.intl.string(F.t.fgq1go) : F.intl.string(F.t.dcztdX),
+                children: s ? V.intl.string(V.t.fgq1go) : V.intl.string(V.t.dcztdX),
             }),
         ],
     });
 }
 function $(e) {
     let t,
-        { className: i, user: a } = e;
-    if (a.isClaimed())
-        if (null == a.email)
+        { className: i, user: o } = e;
+    if (o.isClaimed())
+        if (null == o.email)
             t = {
-                buttonText: F.intl.string(F.t.OYkgVl),
-                buttonAriaLabel: F.intl.string(F.t["pvBD+f"]),
+                buttonText: V.intl.string(V.t.OYkgVl),
+                buttonAriaLabel: V.intl.string(V.t["pvBD+f"]),
                 buttonColor: d.zx.Colors.PRIMARY,
-                valueMessage: F.intl.string(F.t["8SfTNz"]),
+                valueMessage: V.intl.string(V.t["8SfTNz"]),
                 handleClick: () =>
                     (0, f.ZDy)(async () => {
                         let { default: e } = await n.e("9343").then(n.bind(n, 642298));
@@ -340,16 +340,16 @@ function $(e) {
                     }),
             };
         else {
-            let { email: e } = a;
+            let { email: e } = o;
             t = {
-                buttonText: F.intl.string(F.t.bt75u7),
-                buttonAriaLabel: F.intl.string(F.t["8peUT0"]),
+                buttonText: V.intl.string(V.t.bt75u7),
+                buttonAriaLabel: V.intl.string(V.t["8peUT0"]),
                 buttonColor: d.zx.Colors.PRIMARY,
                 valueMessage: (0, r.jsx)(J, {
                     text: e,
                     censor: U.E,
-                    revealLabel: F.intl.string(F.t["Zvx+yc"]),
-                    hideLabel: F.intl.string(F.t.nqTD4e),
+                    revealLabel: V.intl.string(V.t["Zvx+yc"]),
+                    hideLabel: V.intl.string(V.t.nqTD4e),
                 }),
                 handleClick: () =>
                     (0, f.ZDy)(async () => {
@@ -360,14 +360,14 @@ function $(e) {
         }
     else
         t = {
-            buttonText: F.intl.string(F.t.BleMPD),
-            buttonAriaLabel: F.intl.string(F.t.BleMPD),
+            buttonText: V.intl.string(V.t.BleMPD),
+            buttonAriaLabel: V.intl.string(V.t.BleMPD),
             buttonColor: d.zx.Colors.BRAND,
-            valueMessage: F.intl.string(F.t.qxk9zs),
+            valueMessage: V.intl.string(V.t.qxk9zs),
             handleClick: () => b.Z.openClaimAccountModal(),
         };
     return (0, r.jsxs)("div", {
-        className: o()(H.field, i),
+        className: a()(H.field, i),
         children: [
             (0, r.jsx)("div", {
                 className: H.constrainedRow,
@@ -375,7 +375,7 @@ function $(e) {
                     children: [
                         (0, r.jsx)(f.vwX, {
                             className: H.fieldTitle,
-                            children: F.intl.string(F.t.tlZllJ),
+                            children: V.intl.string(V.t.tlZllJ),
                         }),
                         (0, r.jsx)("div", {
                             children: (0, r.jsx)(f.Text, {
@@ -404,9 +404,9 @@ function $(e) {
 }
 function ee(e) {
     let t,
-        { className: i, user: a } = e;
-    if (!a.isClaimed()) return null;
-    let { phone: s, email: l } = a,
+        { className: i, user: o } = e;
+    if (!o.isClaimed()) return null;
+    let { phone: s, email: l } = o,
         c = null != s,
         u = null != l;
     function _() {
@@ -423,9 +423,9 @@ function ee(e) {
             (0, r.jsx)(
                 h.Z,
                 z(W({}, e), {
-                    title: F.intl.string(F.t["3CTiKi"]),
-                    children: a.hasFlag(B.xW$.MFA_SMS) ? F.intl.string(F.t.jrhJys) : void 0,
-                    actionText: F.intl.string(F.t.N86XcH),
+                    title: V.intl.string(V.t["3CTiKi"]),
+                    children: o.hasFlag(B.xW$.MFA_SMS) ? V.intl.string(V.t.jrhJys) : void 0,
+                    actionText: V.intl.string(V.t.N86XcH),
                     handleSubmit: (e) => I.Z.removePhone(e, I.L.USER_SETTINGS_UPDATE),
                 }),
             ),
@@ -436,12 +436,12 @@ function ee(e) {
             ? (0, r.jsx)(J, {
                   text: s,
                   censor: U.n,
-                  revealLabel: F.intl.string(F.t.eY3xlZ),
-                  hideLabel: F.intl.string(F.t.jllbv7),
+                  revealLabel: V.intl.string(V.t.eY3xlZ),
+                  hideLabel: V.intl.string(V.t.jllbv7),
               })
-            : F.intl.string(F.t.I5kDqq)),
+            : V.intl.string(V.t.I5kDqq)),
         (0, r.jsxs)("div", {
-            className: o()(H.field, i),
+            className: a()(H.field, i),
             children: [
                 (0, r.jsx)("div", {
                     className: H.constrainedRow,
@@ -449,7 +449,7 @@ function ee(e) {
                         children: [
                             (0, r.jsx)(f.vwX, {
                                 className: H.fieldTitle,
-                                children: F.intl.string(F.t.kerONj),
+                                children: V.intl.string(V.t.kerONj),
                             }),
                             (0, r.jsx)("div", {
                                 children: (0, r.jsx)(f.Text, {
@@ -467,13 +467,13 @@ function ee(e) {
                     children: [
                         c && u
                             ? (0, r.jsx)(d.zx, {
-                                  className: o()(H.fieldButton, H.removeButton),
+                                  className: a()(H.fieldButton, H.removeButton),
                                   size: d.zx.Sizes.SMALL,
                                   look: d.zx.Looks.LINK,
                                   color: d.zx.Colors.PRIMARY,
-                                  "aria-label": F.intl.string(F.t.Rpn4Aw),
+                                  "aria-label": V.intl.string(V.t.Rpn4Aw),
                                   onClick: p,
-                                  children: F.intl.string(F.t.N86XcH),
+                                  children: V.intl.string(V.t.N86XcH),
                               })
                             : null,
                         (0, r.jsx)("div", {
@@ -482,8 +482,8 @@ function ee(e) {
                             children: (0, r.jsx)(f.zxk, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: c ? F.intl.string(F.t.bt75u7) : F.intl.string(F.t.OYkgVl),
-                                "aria-label": c ? F.intl.string(F.t.YDabSU) : F.intl.string(F.t.SfUuEx),
+                                text: c ? V.intl.string(V.t.bt75u7) : V.intl.string(V.t.OYkgVl),
+                                "aria-label": c ? V.intl.string(V.t.YDabSU) : V.intl.string(V.t.SfUuEx),
                                 onClick: _,
                             }),
                         }),
@@ -497,20 +497,20 @@ function et(e) {
     let { user: t } = e,
         n = (0, y.Z)({
             id: t.id,
-            label: F.intl.string(F.t["/AXYnJ"]),
+            label: V.intl.string(V.t["/AXYnJ"]),
         }),
-        a = k.Sb.useSetting(),
-        o = i.useRef(null);
-    return a && L.wS
+        o = k.Sb.useSetting(),
+        a = i.useRef(null);
+    return o && L.wS
         ? (0, r.jsx)(f.yRy, {
-              targetElementRef: o,
+              targetElementRef: a,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(f.v2r, {
                       onClose: t,
                       onSelect: void 0,
                       navId: "copy-id",
-                      "aria-label": F.intl.string(F.t.RANhlJ),
+                      "aria-label": V.intl.string(V.t.RANhlJ),
                       children: n,
                   });
               },
@@ -518,9 +518,9 @@ function et(e) {
                   (0, r.jsx)(
                       f.P3F,
                       z(W({}, e), {
-                          innerRef: o,
+                          innerRef: a,
                           className: H.overflowMenuButton,
-                          "aria-label": F.intl.string(F.t.DEoVWV),
+                          "aria-label": V.intl.string(V.t.DEoVWV),
                           children: (0, r.jsx)(f.xhG, {
                               size: "md",
                               color: "currentColor",
@@ -537,14 +537,14 @@ function en() {
 function er(e) {
     let { className: t } = e,
         n = (0, E.l6)(),
-        a = (0, E.Jm)(),
-        s = !n || a,
+        o = (0, E.Jm)(),
+        s = !n || o,
         l = i.useMemo(
-            () => (n ? (a ? F.intl.string(F.t.sK0dmJ) : F.intl.string(F.t.XxRj7e)) : F.intl.string(F.t.UX0OdX)),
-            [n, a],
+            () => (n ? (o ? V.intl.string(V.t.sK0dmJ) : V.intl.string(V.t.XxRj7e)) : V.intl.string(V.t.UX0OdX)),
+            [n, o],
         );
     return (0, r.jsxs)("div", {
-        className: o()(H.field, t),
+        className: a()(H.field, t),
         children: [
             (0, r.jsx)("div", {
                 className: H.constrainedRow,
@@ -552,7 +552,7 @@ function er(e) {
                     children: [
                         (0, r.jsx)(f.vwX, {
                             className: H.fieldTitle,
-                            children: F.intl.string(F.t["/52UY2"]),
+                            children: V.intl.string(V.t["/52UY2"]),
                         }),
                         (0, r.jsx)("div", {
                             children: (0, r.jsx)(f.Text, {
@@ -572,9 +572,9 @@ function er(e) {
                     children: (0, r.jsx)(f.zxk, {
                         variant: "secondary",
                         size: "sm",
-                        text: a ? F.intl.string(F.t.KPGVWl) : F.intl.string(F.t.yNGjyM),
-                        "aria-label": a ? F.intl.string(F.t.KPGVWl) : F.intl.string(F.t.yNGjyM),
-                        onClick: () => m.Z.showAgeVerificationGetStartedModal(g.cU.ACCOUNT_AGE_GROUP),
+                        text: o ? V.intl.string(V.t.KPGVWl) : V.intl.string(V.t.yNGjyM),
+                        "aria-label": o ? V.intl.string(V.t.KPGVWl) : V.intl.string(V.t.yNGjyM),
+                        onClick: () => m.Z.showAgeVerificationGetStartedModal({ entryPoint: g.cU.ACCOUNT_AGE_GROUP }),
                     }),
                 }),
         ],
@@ -588,9 +588,9 @@ function ei() {
         }),
         n = (0, N.ZP)(t.id),
         i = (0, C.Z)(n),
-        a = k.co.useSetting(),
-        o = (0, c.e7)([D.Z], () => D.Z.getErrors()),
-        s = null == o || null == (e = o.avatar) ? void 0 : e[0],
+        o = k.co.useSetting(),
+        a = (0, c.e7)([D.Z], () => D.Z.getErrors()),
+        s = null == a || null == (e = a.avatar) ? void 0 : e[0],
         { avatarSrc: u, avatarDecorationSrc: d } = (0, R.Z)({
             userId: null == t ? void 0 : t.id,
             size: f.EFr.SIZE_80,
@@ -615,7 +615,7 @@ function ei() {
                         className: H.avatar,
                         src: u,
                         avatarDecoration: d,
-                        status: a,
+                        status: o,
                         size: f.EFr.SIZE_80,
                         "aria-label": t.username,
                     }),
@@ -643,7 +643,7 @@ function ei() {
                     (0, r.jsx)(f.zxk, {
                         variant: "primary",
                         size: "sm",
-                        text: F.intl.string(F.t["2p2aY2"]),
+                        text: V.intl.string(V.t["2p2aY2"]),
                         onClick: en,
                     }),
                 ],

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(951288),
     i = n(647438),
-    a = n(755721),
-    o = n(168107),
+    o = n(755721),
+    a = n(168107),
     s = n(480916),
     l = n(430824),
     c = n(626135),
@@ -48,7 +48,8 @@ function S(e) {
         });
     }
     function D(e, t) {
-        if ((0, f.SI)()) return void o.Z.showAgeVerificationGetStartedModal(s.cU.MESSAGE_REQUESTS_SETTINGS);
+        if ((0, f.SI)())
+            return void a.Z.showAgeVerificationGetStartedModal({ entryPoint: s.cU.MESSAGE_REQUESTS_SETTINGS });
         t ? P(e) : x(!e);
     }
     function x(e) {
@@ -63,7 +64,7 @@ function S(e) {
             body: T.intl.string(T.t["Ry2z7+"]),
             confirmText: T.intl.string(T.t.gm1Ven),
             cancelText: T.intl.string(T.t.p89ACg),
-            confirmButtonColor: a.zx.Colors.BRAND,
+            confirmButtonColor: o.zx.Colors.BRAND,
             onConfirm: n,
             onCancel: t,
         });

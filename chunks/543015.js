@@ -616,7 +616,7 @@ function eb(e) {
                     s &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        b.Z.showAgeVerificationGetStartedModal(j.cU.FORUM_POST_MEDIA_PREVIEW));
+                        b.Z.showAgeVerificationGetStartedModal({ entryPoint: j.cU.FORUM_POST_MEDIA_PREVIEW }));
             },
             children: [
                 (0, r.jsx)(ep, {

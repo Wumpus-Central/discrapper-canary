@@ -1,11 +1,12 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(704454),
-    o = n(81643),
-    s = n(469775);
-function l(e, t, n) {
+    o = n(704454),
+    a = n(429142),
+    s = n(81643),
+    l = n(469775);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,77 +47,83 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = _(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
 function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        i = p(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
     return i;
 }
-function p(e) {
-    if (null != e) return (0, o.AY)(e) ? i.fCB.LIGHTBOX : void 0;
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
-let h = {
+function h(e) {
+    if (null != e) return (0, s.AY)(e) ? i.fCB.LIGHTBOX : void 0;
+}
+let m = {
     showAgeVerification: (e) => {
-        var { onClose: t, entryPoint: a } = e,
-            o = f(e, ["onClose", "entryPoint"]);
+        var { onClose: t, entryPoint: o } = e,
+            s = _(e, ["onClose", "entryPoint"]);
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("12014").then(n.bind(n, 879367));
-                return (t) => (0, r.jsx)(e, c({}, o, t));
+                return (t) => (0, r.jsx)(e, u({}, s, t));
             },
             {
-                modalKey: s.zJ,
+                modalKey: l.zJ,
                 onCloseCallback: t,
-                backdropStyle: p(a),
+                backdropStyle: h(o),
+                Layer: a.ZP,
             },
         );
     },
     showAgeVerificationGetStartedModal: (e) => {
-        if ((0, o.kJ)() && (0, a.G7)("age_verification_utils"))
+        let { onClose: t, entryPoint: c } = e;
+        if ((0, s.kJ)() && (0, o.G7)("age_verification_utils"))
             return void (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await n.e("22447").then(n.bind(n, 686768));
-                    return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
+                    let { default: e } = await n.e("22447").then(n.bind(n, 686768));
+                    return (t) => (0, r.jsx)(e, f(u({}, t), { entryPoint: c }));
                 },
                 {
-                    modalKey: s.ux,
-                    backdropStyle: p(e),
+                    modalKey: l.ux,
+                    backdropStyle: h(c),
+                    Layer: a.ZP,
+                    onCloseCallback: t,
                 },
             );
         (0, i.ZDy)(
             async () => {
-                let { default: t } = await n.e("80144").then(n.bind(n, 634997));
-                return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
+                let { default: e } = await n.e("80144").then(n.bind(n, 634997));
+                return (t) => (0, r.jsx)(e, f(u({}, t), { entryPoint: c }));
             },
             {
-                modalKey: s.ux,
-                backdropStyle: p(e),
+                modalKey: l.ux,
+                backdropStyle: h(c),
+                Layer: a.ZP,
+                onCloseCallback: t,
             },
         );
     },

@@ -1,2 +1,6 @@
-n.d(t, { o: () => r });
-let r = { refresh_app: n(945128).Z };
+n.d(t, { o: () => i });
+var r = n(32574);
+let i = {
+    refresh_app: n(945128).Z,
+    age_verification: r.Z,
+};

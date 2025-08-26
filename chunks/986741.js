@@ -1,43 +1,45 @@
-i.d(t, { default: () => l }), i(388685);
-var a = i(951288),
-    n = i(647438),
-    r = i(82659),
+i.d(e, { default: () => u }), i(388685);
+var n = i(951288),
+    r = i(647438),
+    a = i(82659),
     o = i(481060),
     c = i(168107),
-    s = i(277021);
-let l = function (e) {
-    let { onClose: t, transitionState: i } = e,
-        [l, u] = n.useState(""),
-        [d, f] = n.useState(!1),
-        h = n.useCallback(() => {
+    s = i(480916),
+    l = i(277021);
+let u = function (t) {
+    let { onClose: e, transitionState: i } = t,
+        [u, d] = r.useState(""),
+        [f, h] = r.useState(!1),
+        p = r.useCallback(() => {
             console.log("Scan complete");
         }, []),
-        p = async () => {
-            f(!0), u("");
+        w = async () => {
+            h(!0), d("");
             try {
-                let e = await (0, s.Q)();
+                let t = await (0, l.Q)();
                 c.Z.showAgeVerification({
-                    webviewUrl: e.verification_webview_url,
-                    onComplete: h,
-                    onClose: t,
+                    webviewUrl: t.verification_webview_url,
+                    onComplete: p,
+                    onClose: e,
+                    entryPoint: s.cU.DEV_TOOLS_QUICK_ACTIONS,
                 });
-            } catch (e) {
-                u(e.message);
+            } catch (t) {
+                d(t.message);
             } finally {
-                f(!1);
+                h(!1);
             }
         };
-    return (0, a.jsx)(r.Modal, {
+    return (0, n.jsx)(a.Modal, {
         transitionState: i,
-        onClose: t,
+        onClose: e,
         title: "Age Verification Test Tool",
         actions: [
             {
                 text: "Trigger Age Verification Test",
-                onClick: p,
-                loading: d,
+                onClick: w,
+                loading: f,
             },
         ],
-        children: (0, a.jsx)("div", { children: "" !== l && (0, a.jsx)(o.pdY, { error: l }) }),
+        children: (0, n.jsx)("div", { children: "" !== u && (0, n.jsx)(o.pdY, { error: u }) }),
     });
 };

@@ -2,8 +2,8 @@ n.d(t, { I: () => g }), n(290780), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(524437),
-    a = n(481060),
-    o = n(168107),
+    o = n(481060),
+    a = n(168107),
     s = n(480916),
     l = n(247206),
     c = n(925513),
@@ -21,7 +21,9 @@ function g() {
         b = (e) => {
             let t = Object.values(e);
             if ((0, l.Ks)() && t.includes(i.Q4.SHOW))
-                return void o.Z.showAgeVerificationGetStartedModal(s.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
+                return void a.Z.showAgeVerificationGetStartedModal({
+                    entryPoint: s.cU.SENSITIVE_MEDIA_FILTER_SETTINGS,
+                });
             (0, c.Jr)(e);
         },
         y = [
@@ -52,12 +54,12 @@ function g() {
                 (0, r.jsxs)("div", {
                     className: m.selectItemRow,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
                             children: h.intl.string(h.t["+uI23N"]),
                         }),
-                        (0, r.jsx)(a.q4e, {
-                            look: a.qQH.CUSTOM,
+                        (0, r.jsx)(o.q4e, {
+                            look: o.qQH.CUSTOM,
                             options: y,
                             value: g,
                             onChange: (e) => b({ goreContentFriendDm: e }),
@@ -72,12 +74,12 @@ function g() {
                 (0, r.jsxs)("div", {
                     className: m.selectItemRow,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
                             children: h.intl.string(h.t["Yh+HX1"]),
                         }),
-                        (0, r.jsx)(a.q4e, {
-                            look: a.qQH.CUSTOM,
+                        (0, r.jsx)(o.q4e, {
+                            look: o.qQH.CUSTOM,
                             options: y,
                             value: E,
                             onChange: (e) => b({ goreContentNonFriendDm: e }),
@@ -92,12 +94,12 @@ function g() {
                 (0, r.jsxs)("div", {
                     className: m.selectItemRow,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
                             children: h.intl.string(h.t["FP+a4+"]),
                         }),
-                        (0, r.jsx)(a.q4e, {
-                            look: a.qQH.CUSTOM,
+                        (0, r.jsx)(o.q4e, {
+                            look: o.qQH.CUSTOM,
                             options: O,
                             value: n,
                             onChange: (e) => b({ goreContentGuilds: e }),
@@ -110,7 +112,7 @@ function g() {
                         }),
                     ],
                 }),
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     color: "text-muted",
                     children: h.intl.string(h.t.XgH9en),

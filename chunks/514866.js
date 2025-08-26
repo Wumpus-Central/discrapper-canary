@@ -91,7 +91,10 @@ function j() {
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Modal",
-                                onClick: () => o.Z.showAgeVerificationGetStartedModal(c.cU.DEV_TOOLS_QUICK_ACTIONS),
+                                onClick: () =>
+                                    o.Z.showAgeVerificationGetStartedModal({
+                                        entryPoint: c.cU.DEV_TOOLS_QUICK_ACTIONS,
+                                    }),
                             }),
                         }),
                         (0, a.jsx)("div", {

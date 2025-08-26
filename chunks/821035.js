@@ -2,8 +2,8 @@ n.d(t, { P: () => y }), n(290780), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(524437),
-    a = n(481060),
-    o = n(168107),
+    o = n(481060),
+    a = n(168107),
     s = n(480916),
     l = n(247206),
     c = n(656577),
@@ -25,7 +25,9 @@ function y(e) {
         T = (e) => {
             let t = Object.values(e);
             if ((0, l.Ks)() && t.includes(i.Q4.SHOW))
-                return void o.Z.showAgeVerificationGetStartedModal(s.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
+                return void a.Z.showAgeVerificationGetStartedModal({
+                    entryPoint: s.cU.SENSITIVE_MEDIA_FILTER_SETTINGS,
+                });
             (0, c.zj)(e);
         },
         S = [
@@ -59,12 +61,12 @@ function y(e) {
                           (0, r.jsxs)("div", {
                               className: b.selectItemRow,
                               children: [
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: "text-md/medium",
                                       children: E.intl.string(E.t["+uI23N"]),
                                   }),
-                                  (0, r.jsx)(a.q4e, {
-                                      look: a.qQH.CUSTOM,
+                                  (0, r.jsx)(o.q4e, {
+                                      look: o.qQH.CUSTOM,
                                       options: S,
                                       value: v,
                                       onChange: (e) => T({ explicitContentFriendDm: e }),
@@ -79,12 +81,12 @@ function y(e) {
                           (0, r.jsxs)("div", {
                               className: b.selectItemRow,
                               children: [
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: "text-md/medium",
                                       children: E.intl.string(E.t["Yh+HX1"]),
                                   }),
-                                  (0, r.jsx)(a.q4e, {
-                                      look: a.qQH.CUSTOM,
+                                  (0, r.jsx)(o.q4e, {
+                                      look: o.qQH.CUSTOM,
                                       options: S,
                                       value: I,
                                       onChange: (e) => T({ explicitContentNonFriendDm: e }),
@@ -99,13 +101,13 @@ function y(e) {
                           (0, r.jsxs)("div", {
                               className: b.selectItemRow,
                               children: [
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: "text-md/medium",
                                       color: y ? "text-primary" : "text-muted",
                                       children: E.intl.string(E.t["FP+a4+"]),
                                   }),
-                                  (0, r.jsx)(a.q4e, {
-                                      look: a.qQH.CUSTOM,
+                                  (0, r.jsx)(o.q4e, {
+                                      look: o.qQH.CUSTOM,
                                       options: A,
                                       value: O,
                                       onChange: (e) => T({ explicitContentGuilds: e }),
@@ -118,7 +120,7 @@ function y(e) {
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: "text-sm/normal",
                               color: "text-muted",
                               children: E.intl.string(E.t.Wnojv7),
@@ -133,31 +135,31 @@ function y(e) {
                                   learnMoreLink: _.Z.getArticleURL(g.BhN.EXPLICIT_MEDIA_REDACTION),
                               }),
                           }),
-                          (0, r.jsx)(a.xJW, {
-                              tag: a.RB0.H3,
+                          (0, r.jsx)(o.xJW, {
+                              tag: o.RB0.H3,
                               title: E.intl.string(E.t["6k0AgI"]),
                               titleClassName: b.selectItemTitle,
-                              children: (0, r.jsx)(a.q4e, {
+                              children: (0, r.jsx)(o.q4e, {
                                   options: S,
                                   value: v,
                                   onChange: (e) => T({ explicitContentFriendDm: e }),
                               }),
                           }),
-                          (0, r.jsx)(a.xJW, {
-                              tag: a.RB0.H3,
+                          (0, r.jsx)(o.xJW, {
+                              tag: o.RB0.H3,
                               title: E.intl.string(E.t.D2EGSk),
                               titleClassName: b.selectItemTitle,
-                              children: (0, r.jsx)(a.q4e, {
+                              children: (0, r.jsx)(o.q4e, {
                                   options: S,
                                   value: I,
                                   onChange: (e) => T({ explicitContentNonFriendDm: e }),
                               }),
                           }),
-                          (0, r.jsx)(a.xJW, {
-                              tag: a.RB0.H3,
+                          (0, r.jsx)(o.xJW, {
+                              tag: o.RB0.H3,
                               title: E.intl.string(E.t["FP+a4+"]),
                               titleClassName: b.selectItemTitle,
-                              children: (0, r.jsx)(a.q4e, {
+                              children: (0, r.jsx)(o.q4e, {
                                   options: A,
                                   value: O,
                                   onChange: (e) => T({ explicitContentGuilds: e }),

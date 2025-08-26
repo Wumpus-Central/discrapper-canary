@@ -628,7 +628,7 @@ function ev(e) {
                     l &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        v.Z.showAgeVerificationGetStartedModal(O.cU.FORUM_POST_MEDIA_PREVIEW));
+                        v.Z.showAgeVerificationGetStartedModal({ entryPoint: O.cU.FORUM_POST_MEDIA_PREVIEW }));
             },
             children: [
                 (0, r.jsx)(ex, {

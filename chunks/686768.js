@@ -15,11 +15,11 @@ var o = e(951288),
 let b = function (n) {
     let { transitionState: t, entryPoint: e, onClose: b } = n,
         { loading: h, initiateAgeVerification: p } = (0, u.WD)(b, !0),
-        j = r.useMemo(() => (0, i.Z)(), []);
+        R = r.useMemo(() => (0, i.Z)(), []);
     r.useEffect(() => {
-        (0, d.lA)(j, d.d_.RETRY, e);
-    }, [j, e]);
-    let R = r.useMemo(
+        (0, d.lA)(R, d.d_.RETRY, e);
+    }, [R, e]);
+    let j = r.useMemo(
         () => [
             {
                 title: _.intl.string(_.t.FYkioq),
@@ -29,7 +29,7 @@ let b = function (n) {
                 buttonIcon: a.Gr1,
                 buttonLoading: h,
                 onButtonPress: () => {
-                    p(), (0, d.x3)(j, d.d_.RETRY, d.sU.GET_STARTED);
+                    p(d.cU.RETRY_MODAL), (0, d.x3)(R, d.d_.RETRY, d.sU.GET_STARTED);
                 },
             },
             {
@@ -38,11 +38,11 @@ let b = function (n) {
                 buttonText: _.intl.string(_.t["LZO+HR"]),
                 buttonIcon: a.Gr1,
                 onButtonPress: () => {
-                    c.Z.openUrl(m.sQ.APPEALS_LINK), (0, d.x3)(j, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
+                    c.Z.openUrl(m.sQ.APPEALS_LINK), (0, d.x3)(R, d.d_.RETRY, d.sU.MANUAL_REVIEW_REQUEST);
                 },
             },
         ],
-        [p, j, h],
+        [p, R, h],
     );
     return (0, o.jsx)(a.Y0X, {
         transitionState: t,
@@ -69,7 +69,7 @@ let b = function (n) {
                         }),
                     ],
                 }),
-                R.map((n, t) =>
+                j.map((n, t) =>
                     (0, o.jsx)(
                         l.JZ,
                         (function (n) {
@@ -107,7 +107,7 @@ let b = function (n) {
                     children: _.intl.format(_.t["L+FgkZ"], {
                         handleOnHelpUrlHook: () => {
                             c.Z.openUrl(s.Z.getArticleURL(x.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                                (0, d.x3)(j, d.d_.RETRY, d.sU.LEARN_MORE);
+                                (0, d.x3)(R, d.d_.RETRY, d.sU.LEARN_MORE);
                         },
                     }),
                 }),

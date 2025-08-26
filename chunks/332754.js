@@ -37,10 +37,16 @@ let E = {
             t === m.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
             u.Z.isEmailReverification(t)
                 ? (0, s.bu)({ location: "verification-legacy" })
-                    ? (0, a.q4)(() => (0, r.jsx)(c.Z, {}), {
-                          layerKey: _.CV,
-                          Layer: o.ZP,
-                      })
+                    ? (0, a.q4)(
+                          (e) => {
+                              let { closeLayer: t } = e;
+                              return (0, r.jsx)(c.Z, { onClose: t });
+                          },
+                          {
+                              layerKey: _.CV,
+                              Layer: o.ZP,
+                          },
+                      )
                     : (0, a.q4)(() => (0, r.jsx)(d.Z, {}), {
                           layerKey: _.CV,
                           Layer: o.ZP,
@@ -83,10 +89,16 @@ let E = {
                     )
                   : t === m.c2C.REQUIRE_SAFETY_FLOWS
                     ? (0, s.bu)({ location: "verification-safety-flows" }) &&
-                      (0, a.q4)(() => (0, r.jsx)(c.Z, {}), {
-                          layerKey: _.CV,
-                          Layer: o.ZP,
-                      })
+                      (0, a.q4)(
+                          (e) => {
+                              let { closeLayer: t } = e;
+                              return (0, r.jsx)(c.Z, { onClose: t });
+                          },
+                          {
+                              layerKey: _.CV,
+                              Layer: o.ZP,
+                          },
+                      )
                     : null == t && ((0, a.ob)(_.CV), (0, i.nfh)(_.f1) && (0, i.Mr3)(_.f1)));
     },
     handleAuthenticationStoreChanged() {

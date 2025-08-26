@@ -13,29 +13,29 @@ var r = t(951288),
     m = t(168107),
     f = t(480916),
     R = t(81643),
-    h = t(469775),
-    E = t(981631),
-    b = t(800530),
-    A = t(388032),
+    E = t(469775),
+    h = t(981631),
+    A = t(800530),
+    b = t(388032),
     p = t(678189);
 let C = function (e) {
     let { transitionState: n, entryPoint: t, onClose: C } = e,
-        [v, j] = o.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = o.useRef(v),
-        [T, M] = (0, c.US)([v], void 0, !0),
+        [T, v] = o.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        j = o.useRef(T),
+        [I, M] = (0, c.US)([T], void 0, !0),
         { loading: N, initiateAgeVerification: g } = (0, R.WD)(C),
-        w = o.useMemo(() => (0, i.Z)(), []),
-        G = o.useRef(!1);
+        G = o.useMemo(() => (0, i.Z)(), []),
+        U = o.useRef(!1);
     return (
         o.useEffect(() => {
-            I.current = T;
-        }, [T]),
+            j.current = I;
+        }, [I]),
         o.useLayoutEffect(
             () => () => {
-                if (G.current) return;
-                let e = I.current;
+                if (U.current) return;
+                let e = j.current;
                 null != e &&
-                    ((G.current = !0),
+                    ((U.current = !0),
                     x.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -44,34 +44,34 @@ let C = function (e) {
             [],
         ),
         o.useEffect(() => {
-            (0, f.lA)(w, f.d_.PRIMARY, t);
-        }, [w, t]),
+            (0, f.lA)(G, f.d_.PRIMARY, t);
+        }, [G, t]),
         (0, r.jsxs)(s.Modal, {
             transitionState: n,
             onClose: C,
-            title: A.intl.string(A.t.JHNunp),
-            subtitle: A.intl.string(A.t["+BLIGh"]),
+            title: b.intl.string(b.t.JHNunp),
+            subtitle: b.intl.string(b.t["+BLIGh"]),
             actions: [
                 {
-                    text: A.intl.string(A.t.SJMnkZ),
+                    text: b.intl.string(b.t.SJMnkZ),
                     loading: N,
                     icon: l.Gr1,
                     iconPosition: "end",
                     onClick: async () => {
-                        (0, f.x3)(w, f.d_.PRIMARY, f.sU.GET_STARTED),
-                            j(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE),
-                            await g();
+                        (0, f.x3)(G, f.d_.PRIMARY, f.sU.GET_STARTED),
+                            v(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE),
+                            await g(f.cU.GET_STARTED_MODAL);
                     },
                 },
             ],
             actionBarInput: (0, r.jsxs)(d.Z, {
                 onClick: () => {
-                    m.Z.openUrl(_.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, f.x3)(w, f.d_.PRIMARY, f.sU.LEARN_MORE);
+                    m.Z.openUrl(_.Z.getArticleURL(h.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, f.x3)(G, f.d_.PRIMARY, f.sU.LEARN_MORE);
                 },
                 className: p.learnMoreButton,
                 children: [
-                    A.intl.string(A.t["aA6q//"]),
+                    b.intl.string(b.t["aA6q//"]),
                     (0, r.jsx)(l.Gr1, {
                         size: "xs",
                         color: "currentColor",
@@ -79,7 +79,7 @@ let C = function (e) {
                 ],
             }),
             children: [
-                (0, h.uH)(w).map((e, n) => {
+                (0, E.uH)(G).map((e, n) => {
                     let { title: t, description: o } = e;
                     return (0, r.jsx)(
                         u.JZ,
@@ -96,9 +96,9 @@ let C = function (e) {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     className: p.requestContainer,
-                    children: A.intl.format(A.t.pJAxgY, {
+                    children: b.intl.format(b.t.pJAxgY, {
                         handleOnRequestHook: () => {
-                            m.Z.openUrl(b.sQ.APPEALS_LINK), (0, f.x3)(w, f.d_.PRIMARY, f.sU.MANUAL_REVIEW_REQUEST);
+                            m.Z.openUrl(A.sQ.APPEALS_LINK), (0, f.x3)(G, f.d_.PRIMARY, f.sU.MANUAL_REVIEW_REQUEST);
                         },
                     }),
                 }),
