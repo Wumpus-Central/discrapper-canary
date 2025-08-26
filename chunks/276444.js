@@ -1,8 +1,8 @@
 n.d(t, { Z: () => W }), n(388685);
 var r,
     i = n(275726),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(594174),
     l = n(281494),
     c = n(885145),
@@ -59,12 +59,9 @@ function P(e) {
     (C = null), (m = !0);
 }
 function w(e) {
-    let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
-    (S =
-        !0 === c.Z.getCurrentConfig({ location: "handleReferralsRemainingFetchSuccess" }).enabled
-            ? null == r
-            : null == r && a),
-        (A = a),
+    let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: o } = e;
+    (S = !0 === c.Z.getCurrentConfig({ location: "handleReferralsRemainingFetchSuccess" }).enabled || (null == r && o)),
+        (A = o),
         (m = !1),
         (_ = t),
         (p = new Set(n)),
@@ -86,11 +83,11 @@ function L(e) {
 function j(e) {
     g.add(e);
 }
-function M(e) {
+function k(e) {
     let { userTrialOffer: t } = e;
     null != t && (g.delete(t.id), E.add(t.id), b.set(t.id, t));
 }
-function k(e) {
+function M(e) {
     let { userTrialOfferId: t } = e;
     g.delete(t), E.add(t);
 }
@@ -104,24 +101,24 @@ function G(e) {
 }
 function B(e) {
     let { userTrialOfferId: t } = e;
-    m || (0, l.C$)(), g.has(t) || (j(t), o.Z.wait(() => (0, l.IB)(t).catch(u.VqG)));
+    m || (0, l.C$)(), g.has(t) || (j(t), a.Z.wait(() => (0, l.IB)(t).catch(u.VqG)));
 }
 function Z(e) {
     let t = e.type === i.u.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    E.has(t) || g.has(t) || (j(t), o.Z.wait(() => (0, l.IB)(t).catch(u.VqG)));
+    E.has(t) || g.has(t) || (j(t), a.Z.wait(() => (0, l.IB)(t).catch(u.VqG)));
 }
-function V() {
+function F() {
     I = !0;
 }
-function F(e) {
+function V(e) {
     let { users: t, nextIndex: n } = e;
     (I = !1), (v = t), (T = n);
 }
 function H() {
     I = !1;
 }
-class Y extends (r = a.ZP.Store) {
+class Y extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(s.default), this.syncWith([s.default], R);
     }
@@ -169,17 +166,17 @@ class Y extends (r = a.ZP.Store) {
     }
 }
 d(Y, "displayName", "ReferralTrialStore");
-let W = new Y(o.Z, {
+let W = new Y(a.Z, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: B,
     BILLING_REFERRALS_REMAINING_FETCH_START: P,
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: w,
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: D,
     BILLING_CREATE_REFERRAL_SUCCESS: x,
     CREATE_REFERRALS_SUCCESS: L,
-    BILLING_REFERRAL_RESOLVE_SUCCESS: M,
-    BILLING_REFERRAL_RESOLVE_FAIL: k,
-    REFERRALS_FETCH_ELIGIBLE_USER_START: V,
-    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: F,
+    BILLING_REFERRAL_RESOLVE_SUCCESS: k,
+    BILLING_REFERRAL_RESOLVE_FAIL: M,
+    REFERRALS_FETCH_ELIGIBLE_USER_START: F,
+    REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: V,
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: H,
     LOAD_MESSAGES_SUCCESS: G,
     MESSAGE_CREATE: U,
