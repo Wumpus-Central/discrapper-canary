@@ -14,8 +14,8 @@ n.d(t, { Z: () => S }),
     n(642613);
 var r = n(392711),
     i = n.n(r),
-    a = n(159635),
-    o = n.n(a),
+    o = n(159635),
+    a = n.n(o),
     s = n(159299),
     l = n(675478),
     c = n(709302),
@@ -161,60 +161,63 @@ class S {
     queryTextChannels(e, t) {
         if (!this._include(E.h8.TEXT_CHANNEL)) return [];
         let n = T(E.h8.TEXT_CHANNEL, this.options),
-            { blacklist: r } = this.options,
-            i = null != r ? (e) => !r.has("channel:".concat(e.id)) : void 0;
+            { allowSnowflake: r, blacklist: i } = this.options,
+            o = null != i ? (e) => !i.has("channel:".concat(e.id)) : void 0;
         return _.ZP.queryChannels({
             query: e,
             guildId: null,
             limit: t,
             fuzzy: !0,
-            filter: i,
+            allowSnowflake: r,
+            filter: o,
             boosters: n,
         });
     }
     queryVoiceChannels(e, t) {
         if (!this._include(E.h8.VOICE_CHANNEL)) return [];
-        let { voiceChannelGuildFilter: n } = this.options,
-            r = T(E.h8.VOICE_CHANNEL, this.options);
+        let { allowSnowflake: n, voiceChannelGuildFilter: r } = this.options,
+            i = T(E.h8.VOICE_CHANNEL, this.options);
         return _.ZP.queryChannels({
             query: e,
-            guildId: n,
+            guildId: r,
             limit: t,
             fuzzy: !0,
             type: u.Zb,
-            boosters: r,
+            allowSnowflake: n,
+            boosters: i,
         });
     }
     queryGuilds(e, t) {
         if (!this._include(E.h8.GUILD)) return [];
         let n = T(E.h8.GUILD, this.options),
-            { blacklist: r } = this.options,
-            i = null != r ? (e) => !r.has("guild:".concat(e.id)) : void 0;
+            { allowSnowflake: r, blacklist: i } = this.options,
+            o = null != i ? (e) => !i.has("guild:".concat(e.id)) : void 0;
         return _.ZP.queryGuilds({
             query: e,
             limit: t,
             fuzzy: !0,
-            filter: i,
+            filter: o,
             boosters: n,
+            allowSnowflake: r,
         });
     }
     queryUsers(e, t, n) {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(E.h8.USER)) return;
-        let { userFilters: i } = this.options,
+        let { allowSnowflake: i, userFilters: o } = this.options,
             a = T(E.h8.USER, this.options);
-        if ((null == i ? void 0 : i.thread) != null) {
-            let t = s.Z.getMemberListSections(i.thread),
+        if ((null == o ? void 0 : o.thread) != null) {
+            let t = s.Z.getMemberListSections(o.thread),
                 r = [];
             for (let e in t) {
                 let n = t[e];
                 for (let e of n.userIds) {
-                    var o, l, c;
-                    (null == i || !i.friends || d.Z.isFriend(e)) &&
-                        ((null != (c = null == (o = this._userBlacklist) ? void 0 : o.includes(e)) && c) ||
+                    var l, c, u;
+                    (null == o || !o.friends || d.Z.isFriend(e)) &&
+                        ((null != (u = null == (l = this._userBlacklist) ? void 0 : l.includes(e)) && u) ||
                             r.push({
                                 userId: e,
-                                nick: null == (l = n.usersById[e]) ? void 0 : l.displayName,
+                                nick: null == (c = n.usersById[e]) ? void 0 : c.displayName,
                             }));
                 }
             }
@@ -223,6 +226,7 @@ class S {
                 users: r,
                 limit: n,
                 boosters: a,
+                allowSnowflake: i,
             });
             return;
         }
@@ -230,7 +234,7 @@ class S {
             r.setLimit(n),
             r.setQuery({
                 query: e,
-                filters: i,
+                filters: o,
                 blacklist: this._userBlacklist,
                 boosters: a,
             });
@@ -260,14 +264,14 @@ class S {
     queryLink(e, t) {
         let n;
         if (!this._include(E.h8.LINK)) return [];
-        let r = o().sanitizeUrl(e);
+        let r = a().sanitizeUrl(e);
         try {
             n = new URL(r);
         } catch (e) {
             return [];
         }
-        let { pathname: i, hostname: a = "", host: s } = n,
-            l = h.Z.isDiscordHostname(a) || window.location.host === s;
+        let { pathname: i, hostname: o = "", host: s } = n,
+            l = h.Z.isDiscordHostname(o) || window.location.host === s;
         return null !== i && l && h.Z.isAppRoute(i)
             ? [
                   {

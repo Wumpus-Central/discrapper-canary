@@ -205,6 +205,7 @@ function q(e) {
                 : new u.ZP(J, L, null != i ? x : D, {
                       frecencyBoosters: !0,
                       blacklist: a,
+                      allowSnowflake: !0,
                   })),
         (B = null),
         (Z = n.length),
