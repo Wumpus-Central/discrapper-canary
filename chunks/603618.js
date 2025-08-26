@@ -34,8 +34,8 @@ var i = n(951288),
     N = n(93127),
     w = n(752048),
     Z = n(409057),
-    P = n(199902),
-    T = n(592125),
+    T = n(199902),
+    P = n(592125),
     A = n(293273),
     k = n(158776),
     D = n(699516),
@@ -120,11 +120,11 @@ function X(e) {
                     else {
                         var i;
                         let e = await m.Z.getOrEnsurePrivateChannel(a.id),
-                            n = null != (i = T.Z.getChannel(e)) ? i : null;
+                            n = null != (i = P.Z.getChannel(e)) ? i : null;
                         l()(null != n, "Send channel must be defined"),
                             (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
                             (0, b.i)(G.IlC.OVERLAY, !0),
-                            "fake_inventory_item" in t.extra && !0 === t.extra.fake_inventory_item
+                            !0 === t.extra.fake_inventory_item
                                 ? await (0, x.k)({
                                       channel: n,
                                       content: H.intl.formatToPlainString(H.t.UVBA9v, { gameName: t.extra.game_name }),
@@ -161,7 +161,7 @@ function X(e) {
             var e;
             if (null == a) return;
             let t = await m.Z.getOrEnsurePrivateChannel(a.id),
-                n = null != (e = T.Z.getChannel(t)) ? e : null;
+                n = null != (e = P.Z.getChannel(t)) ? e : null;
             l()(null != n, "Send channel must be defined"),
                 (0, C.uL)(G.Z5c.CHANNEL(n.guild_id, n.id)),
                 (0, b.i)(G.IlC.OVERLAY, !0),
@@ -277,7 +277,7 @@ function q(e) {
 function J(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
         o = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
-        l = (0, u.e7)([P.Z], () => (null != o ? P.Z.getAnyStreamForUser(o.id) : null), [o]),
+        l = (0, u.e7)([T.Z], () => (null != o ? T.Z.getAnyStreamForUser(o.id) : null), [o]),
         { isMobileOnline: a, status: s } = (0, u.cj)(
             [k.Z],
             () =>

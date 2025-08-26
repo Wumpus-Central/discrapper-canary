@@ -1,13 +1,11 @@
 n.d(t, {
     $f: () => l,
     G: () => s,
-    Hw: () => c,
     Kd: () => i,
     YN: () => r,
-    k4: () => o,
-    kG: () => d,
-    xP: () => a,
-    yh: () => u,
+    k4: () => a,
+    kG: () => c,
+    xP: () => o,
 });
 var r = (function (e) {
         return (e.GLOBAL_FEED = "global feed"), (e.GAME_PROFILE_FEED = "game profile feed"), e;
@@ -15,7 +13,7 @@ var r = (function (e) {
     i = (function (e) {
         return (e[(e.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST"), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (
             (e[(e.CARD_POPOUT_OPEN = 2)] = "CARD_POPOUT_OPEN"),
             (e[(e.REACTION_EMOJI_REACT_SENT = 3)] = "REACTION_EMOJI_REACT_SENT"),
@@ -28,12 +26,10 @@ var r = (function (e) {
             e
         );
     })({});
-let o = 10000,
+let a = 10000,
     s = 7,
-    l = "https://www.igdb.com/about",
-    c = ["1395438911366627454"],
-    u = ["432980957394370572", "1402418703554842694", "1377010135989223574"];
-var d = (function (e) {
+    l = "https://www.igdb.com/about";
+var c = (function (e) {
     return (
         (e[(e.SPOTIFY = 1)] = "SPOTIFY"),
         (e[(e.CRUNCHYROLL = 2)] = "CRUNCHYROLL"),
