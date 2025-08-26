@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685), n(539854), n(953529);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(668781),
     c = n(141795),
@@ -44,22 +44,22 @@ function y(e) {
 }
 let O = (e) => {
     let { files: t, channelId: n, showLargeMessageDialog: r, draftType: i } = e,
-        o = [...g(n, i)];
-    if (o.length + t.length > f.dN1 && i !== d.d.SlashCommand && i !== d.d.ApplicationLauncherCommand)
+        a = [...g(n, i)];
+    if (a.length + t.length > f.dN1 && i !== d.d.SlashCommand && i !== d.d.ApplicationLauncherCommand)
         return void l.Z.show({
             title: _.intl.string(_.t.wOr6hI),
             body: _.intl.formatToPlainString(_.t["qqyp/f"], { limit: f.dN1 }),
         });
-    a().forEach(t, (e) => {
-        let t = new c.nH(e, n, r, o.length);
-        t.upload(), o.push(t);
+    o().forEach(t, (e) => {
+        let t = new c.nH(e, n, r, a.length);
+        t.upload(), a.push(t);
     }),
-        b(n, i, o);
+        b(n, i, a);
 };
 function v(e) {
     let { channelId: t, id: n, draftType: r } = e,
         i = [...g(t, r)],
-        a = i.findIndex((e) =>
+        o = i.findIndex((e) =>
             (0, u.TC)(
                 {
                     uri: n,
@@ -68,26 +68,26 @@ function v(e) {
                 e,
             ),
         );
-    a > -1 && (i.splice(a, 1)[0].cancel(), b(t, r, i));
+    o > -1 && (i.splice(o, 1)[0].removeFromMsgDraft(), b(t, r, i));
 }
 function I(e) {
     let { channelId: t, attachmentIds: n, draftType: r } = e,
         i = [...g(t, r)];
     n.forEach((e) => {
         let t = i.findIndex((t) => e === t.id);
-        t > -1 && i.splice(t, 1)[0].cancel();
+        t > -1 && i.splice(t, 1)[0].removeFromMsgDraft();
     }),
         b(t, r, i);
 }
 function T(e) {
-    let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: o, draftType: s } = e,
+    let { channelId: t, id: n, filename: r, description: i, spoiler: o, thumbnail: a, draftType: s } = e,
         l = [...g(t, s)].map(
             (e) => (
                 e.id === n &&
                     (void 0 !== r && (e.filename = r),
-                    void 0 !== a && (e.spoiler = a),
+                    void 0 !== o && (e.spoiler = o),
                     void 0 !== i && (e.description = i),
-                    void 0 !== o && (e.isThumbnail = o)),
+                    void 0 !== a && (e.isThumbnail = a)),
                 e
             ),
         );
@@ -95,9 +95,9 @@ function T(e) {
 }
 function S(e) {
     let { channelId: t, id: n, file: r, draftType: i } = e,
-        a = [...g(t, i)].filter((e) => e.id !== n),
-        o = new c.nH(r, t);
-    o.upload(), a.push(o), b(t, i, a);
+        o = [...g(t, i)].filter((e) => e.id !== n),
+        a = new c.nH(r, t);
+    a.upload(), o.push(a), b(t, i, o);
 }
 function A(e) {
     let { channelId: t, uploads: n, draftType: r } = e;
@@ -111,7 +111,7 @@ function N(e) {
     let { baseChannelId: t } = e;
     b(t, d.d.FirstThreadMessage, []);
 }
-class R extends (r = o.ZP.Store) {
+class R extends (r = a.ZP.Store) {
     getFirstUpload(e, t) {
         let n = g(e, t);
         return n.length > 0 ? n[0] : null;
