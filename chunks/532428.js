@@ -308,6 +308,16 @@ function eo(e) {
         case A.aib.GUILD:
         case A.aib.GUILD_CHANNEL:
         case A.aib.THREAD:
+            if (0 === n.trim().length) {
+                let e = p.Z.getCurrentlySelectedChannelId(r.guildId);
+                return g.ZP.getRecentlyTalked(e, i).map((e) => {
+                    let { record: t } = e;
+                    return {
+                        user: t,
+                        text: b.ZP.getUserTag(t),
+                    };
+                });
+            }
             t = g.ZP.queryGuildUsers(w(R({}, a), { guildId: r.guildId }));
             break;
         case A.aib.CHANNEL:
