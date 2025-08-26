@@ -1,18 +1,16 @@
 n.d(t, {
     ZO: () => u,
     df: () => d,
-    hF: () => f,
-    j2: () => _,
-    qD: () => p,
+    qD: () => f,
 }),
     n(415506);
 var r = n(544891),
     i = n(570140),
-    a = n(881052),
-    o = n(710845),
+    o = n(881052),
+    a = n(710845),
     s = n(960048),
     l = n(981631);
-let c = new o.Z("VirtualCurrencyActionCreators");
+let c = new a.Z("VirtualCurrencyActionCreators");
 async function u() {
     i.Z.wait(() => {
         i.Z.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
@@ -31,7 +29,7 @@ async function u() {
             e.body
         );
     } catch (t) {
-        let e = t instanceof a.HF ? t : new a.HF(t);
+        let e = t instanceof o.HF ? t : new o.HF(t);
         i.Z.dispatch({
             type: "VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL",
             error: e,
@@ -42,7 +40,7 @@ async function d(e) {
     let {
         skuId: t,
         loadId: n,
-        onRedeemStart: o,
+        onRedeemStart: a,
         onRedeemSucceed: d,
         onRedeemFail: f,
         shouldRefetchBalance: _ = !0,
@@ -53,33 +51,33 @@ async function d(e) {
             skuId: t,
         });
     }),
-        null == o || o();
+        null == a || a();
     try {
         let e = { checkout_session_id: n },
-            a = (
+            o = (
                 await r.tn.post({
                     url: l.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(t),
                     body: e,
                     rejectWithError: !1,
                 })
             ).body;
-        if (null == a || !Array.isArray(a)) {
+        if (null == o || !Array.isArray(o)) {
             let e = "Could not read entitlements from Virtual Currency redemption response. Response: ",
-                t = Error(e, a);
-            throw (c.error(e, a), s.Z.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
+                t = Error(e, o);
+            throw (c.error(e, o), s.Z.captureException(t, { tags: { app_context: "virtual_currency" } }), t);
         }
         return (
             i.Z.dispatch({
                 type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS",
                 skuId: t,
-                entitlements: a,
+                entitlements: o,
             }),
             _ && u(),
-            null == d || d(a),
-            a
+            null == d || d(o),
+            o
         );
     } catch (n) {
-        let e = n instanceof a.HF ? n : new a.HF(n);
+        let e = n instanceof o.HF ? n : new o.HF(n);
         i.Z.dispatch({
             type: "VIRTUAL_CURRENCY_REDEEM_FAIL",
             skuId: t,
@@ -90,17 +88,6 @@ async function d(e) {
     }
 }
 function f(e) {
-    let { earnedOrbsQuantity: t, dedupeKey: n } = e;
-    return i.Z.dispatch({
-        type: "VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN",
-        earnedOrbsQuantity: t,
-        dedupeKey: n,
-    });
-}
-function _() {
-    return i.Z.dispatch({ type: "VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE" });
-}
-function p(e) {
     return i.Z.dispatch({
         type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY",
         balancePillOverlay: e,

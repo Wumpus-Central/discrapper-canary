@@ -1,4 +1,4 @@
-n.d(t, { default: () => k }), n(388685);
+n.d(t, { default: () => Z }), n(388685);
 var r = n(951288),
     c = n(647438),
     s = n(120356),
@@ -13,32 +13,31 @@ var r = n(951288),
     m = n(100527),
     p = n(335131),
     h = n(70097),
-    O = n(507808),
-    j = n(43747),
-    y = n(511050),
-    x = n(82856),
-    g = n(960919),
-    v = n(272008),
-    _ = n(497505),
-    C = n(46140),
-    S = n(981631),
-    N = n(215023),
-    w = n(388032),
+    j = n(507808),
+    O = n(43747),
+    y = n(82856),
+    x = n(960919),
+    g = n(272008),
+    v = n(497505),
+    _ = n(46140),
+    C = n(981631),
+    S = n(215023),
+    N = n(388032),
     P = n(378658),
-    B = n(557256),
-    T = n(582425),
-    A = n(345554),
-    E = n(88490),
-    I = n(466674);
-function R() {
+    w = n(557256),
+    B = n(582425),
+    T = n(345554),
+    A = n(88490),
+    E = n(466674);
+function I() {
     let e = (0, i.e7)([b.Z], () => b.Z.useReducedMotion),
         [t, n] = c.useState(!e),
         [s, l] = c.useState(!1),
         u = c.useRef(null),
         m = (0, f.ZP)(),
         p = (0, d.apv)(m),
-        O = p ? A.Z : T.Z,
-        j = p ? I.Z : E.Z;
+        j = p ? T.Z : B.Z,
+        O = p ? E.Z : A.Z;
     c.useEffect(() => {
         if (!t && !e) {
             var n;
@@ -67,7 +66,7 @@ function R() {
                 className: a()(P.videoAsset, { [P.hidden]: t }),
                 controls: !1,
                 children: (0, r.jsx)("source", {
-                    src: j,
+                    src: O,
                     type: "video/webm",
                 }),
             }),
@@ -82,14 +81,14 @@ function R() {
                     n(!1);
                 },
                 children: (0, r.jsx)("source", {
-                    src: O,
+                    src: j,
                     type: "video/webm",
                 }),
             }),
         ],
     });
 }
-function Z(e) {
+function R(e) {
     let { transitionState: t, balance: n, onSubmit: c, onClose: s, state: a } = e;
     return (0, r.jsxs)(d.Y0X, {
         "data-migration-pending": !0,
@@ -114,16 +113,16 @@ function Z(e) {
                 : "success" === a
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(R, {}),
+                            (0, r.jsx)(I, {}),
                             (0, r.jsx)(d.X6q, {
                                 variant: "heading-lg/medium",
                                 className: P.title,
-                                children: w.intl.format(w.t["8l9H0t"], {
+                                children: N.intl.format(N.t["8l9H0t"], {
                                     balanceHook: () =>
                                         (0, r.jsxs)("span", {
                                             className: P.orbsBalance,
                                             children: [
-                                                (0, r.jsx)(g.Z, {
+                                                (0, r.jsx)(x.Z, {
                                                     shouldUseThemeColor: !0,
                                                     className: P.orbsBalanceIcon,
                                                 }),
@@ -135,19 +134,19 @@ function Z(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 className: P.subtext,
-                                children: w.intl.string(w.t.EDUOIC),
+                                children: N.intl.string(N.t.EDUOIC),
                             }),
                             (0, r.jsx)(l.zx, {
                                 className: P.ctaBtn,
                                 onClick: c,
-                                children: w.intl.string(w.t.WYchdX),
+                                children: N.intl.string(N.t.WYchdX),
                             }),
                             (0, r.jsx)(l.zx, {
                                 look: l.iL.LINK,
                                 color: l.Tt.CUSTOM,
                                 className: P.orbsTermsButton,
-                                onClick: () => window.open(S.EYA.PAID_TERMS_ORBS),
-                                children: w.intl.string(w.t["7kTAgI"]),
+                                onClick: () => window.open(C.EYA.PAID_TERMS_ORBS),
+                                children: N.intl.string(N.t["7kTAgI"]),
                             }),
                         ],
                     })
@@ -157,7 +156,7 @@ function Z(e) {
                             (0, r.jsx)("img", {
                                 alt: "",
                                 className: P.errorImage,
-                                src: B,
+                                src: w,
                             }),
                             (0, r.jsxs)("div", {
                                 className: P.errorContentContainer,
@@ -165,26 +164,26 @@ function Z(e) {
                                     (0, r.jsx)(d.X6q, {
                                         variant: "heading-xl/medium",
                                         className: P.errorHeader,
-                                        children: w.intl.string(w.t.tWYWJy),
+                                        children: N.intl.string(N.t.tWYWJy),
                                     }),
                                     (0, r.jsx)(d.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: w.intl.string(w.t.JNQRU1),
+                                        children: N.intl.string(N.t.JNQRU1),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(l.zx, {
                                 className: P.ctaBtn,
                                 onClick: s,
-                                children: w.intl.string(w.t.cpT0Cg),
+                                children: N.intl.string(N.t.cpT0Cg),
                             }),
                         ],
                     }),
         ],
     });
 }
-function k(e) {
+function Z(e) {
     var t,
         n,
         { quest: s, onClose: a } = e,
@@ -209,11 +208,11 @@ function k(e) {
             }
             return c;
         })(e, ["quest", "onClose"]);
-    let { balance: i } = (0, j.A)(),
+    let { balance: i } = (0, O.A)(),
         l = (function (e, t, n) {
             let [r, s] = c.useState("loading"),
                 [a, o] = c.useState(!1),
-                { balance: i } = (0, j.A)(),
+                { balance: i } = (0, O.A)(),
                 l = (0, u.Z)(i),
                 [d, f] = c.useState(!1);
             return (c.useEffect(() => {
@@ -233,7 +232,7 @@ function k(e) {
                 !a && null != i && null != l && i > l && o(!0);
             }, [i, l, a]),
             c.useEffect(() => {
-                (0, v.QB)(e, _.y$.CROSS_PLATFORM, n)
+                (0, g.QB)(e, v.y$.CROSS_PLATFORM, n)
                     .then((e) => {
                         if ((null == e ? void 0 : e.claimedAt) != null) return void s("success");
                         s("error");
@@ -248,27 +247,25 @@ function k(e) {
                   ? "success"
                   : "loading";
         })(s.id, s.preview, o.location),
-        { openIntroToOrbsClaimedCoachmark: d } = (0, y.Z)({ location: "QuestsOrbsRewardModal" }),
-        f = c.useCallback(() => {
+        d = c.useCallback(() => {
             a(),
-                (0, O.Y)({
-                    pageType: S.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                    sectionType: S.jXE.ORBS_REWARD_MODAL,
-                    ctaObject: S.qAy.CTA_TO_ORBS_SHOP,
+                (0, j.Y)({
+                    pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                    sectionType: C.jXE.ORBS_REWARD_MODAL,
+                    ctaObject: C.qAy.CTA_TO_ORBS_SHOP,
                 }),
                 (0, p.mK)({
                     openInLayer: !1,
-                    tab: N.AW.ORBS,
+                    tab: S.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: s.id === C.V6 ? m.Z.INTRO_TO_ORBS_QUEST : m.Z.QUEST_HOME_PAGE,
-                }),
-                d({ delayMS: 300 });
-        }, [a, d, s.id]);
+                    analyticsSource: s.id === _.V6 ? m.Z.INTRO_TO_ORBS_QUEST : m.Z.QUEST_HOME_PAGE,
+                });
+        }, [a, s.id]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(x.o, {}),
+            (0, r.jsx)(y.o, {}),
             (0, r.jsx)(
-                Z,
+                R,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -298,7 +295,7 @@ function k(e) {
                     {
                         balance: i,
                         onClose: a,
-                        onSubmit: f,
+                        onSubmit: d,
                         state: l,
                     }),
                 Object.getOwnPropertyDescriptors

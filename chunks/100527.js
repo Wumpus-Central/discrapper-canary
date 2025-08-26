@@ -42,7 +42,6 @@ var r = (function (e) {
         (e.PAYMENT_FLOW_TEST_PAGE = "payment flow test page"),
         (e.REVENUE_STORYBOOK_TEST_PAGE = "revenue storybook test page"),
         (e.VIRTUAL_CURRENCY_BALANCE_WIDGET = "virtual currency balance widget"),
-        (e.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK = "virtual currency earned orbs coachmark"),
         (e.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE = "virtual currency orb profile badge"),
         (e.INTRO_TO_ORBS_QUEST = "intro to orbs quest"),
         (e.INTRO_TO_ORBS_QUEST_BANNER = "intro to orbs quest banner"),

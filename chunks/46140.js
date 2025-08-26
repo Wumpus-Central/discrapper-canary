@@ -24,8 +24,8 @@ n.d(t, {
     n(388685);
 var r = n(754700),
     i = n(758846),
-    a = n(70956),
-    o = n(497505),
+    o = n(70956),
+    a = n(497505),
     s = n(438954),
     l = n(670081),
     c = (function (e) {
@@ -59,7 +59,6 @@ var r = n(754700),
             (e.DISCOVERY_SIDEBAR = "discovery_sidebar"),
             (e.DISCOVERY_COMPASS = "discovery_compass"),
             (e.BADGE = "badge"),
-            (e.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK = "virtual_currency_earned_orbs_coachmark"),
             (e.COLLECTIBLES_SHOP_HEADER_BAR = "collectibles_shop_header_bar"),
             (e.ORBS_ANNOUNCEMENT_MODAL = "orbs_announcement_modal"),
             (e.CONFLICT_CHECKS = "conflict_checks"),
@@ -69,7 +68,7 @@ var r = n(754700),
             e
         );
     })({});
-let u = a.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
+let u = o.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
     d = {
         tension: 900,
         friction: 45,
@@ -106,7 +105,7 @@ var b = (function (e) {
     );
 })({});
 let y = "1333839522189938740",
-    O = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),
+    O = new Set([a.Ok.DESKTOP_ACCOUNT_PANEL_AREA, a.Ok.MOBILE_HOME_DOCK_AREA]),
     v = new Set([
         r.X.STREAM_ON_DESKTOP,
         r.X.PLAY_ON_DESKTOP,
