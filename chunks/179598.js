@@ -7,7 +7,6 @@ e.exports = {
     descriptionArea: "descriptionArea__7fffd",
     thumbnailLabel: "thumbnailLabel__7fffd",
     productPreview: "productPreview__7fffd",
-    productPreviewCtaButton: "productPreviewCtaButton__7fffd",
     previewHeading: "previewHeading__7fffd",
     footerActionButtons: "footerActionButtons__7fffd",
     footerActionLeftButtons: "footerActionLeftButtons__7fffd",
