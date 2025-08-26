@@ -1,7 +1,6 @@
 e.exports = {
-    modalRoot: "modalRoot__7169d",
-    header: "header__7169d",
-    headerSubtitle: "headerSubtitle__7169d",
-    headerSubtitleIcon: "headerSubtitleIcon__7169d",
-    error: "error__7169d",
+    channelName: "channelName__7169d",
+    channelIcon: "channelIcon__7169d",
+    description: "description__7169d",
+    subtext: "subtext__7169d",
 };

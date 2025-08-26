@@ -245,7 +245,7 @@ function W(e) {
         h = (0, y.nG)(l.id);
     function g() {
         (0, c.ZDy)(async () => {
-            let { default: e } = await n.e("46786").then(n.bind(n, 388131));
+            let { default: e } = await Promise.all([n.e("46786"), n.e("46187")]).then(n.bind(n, 388131));
             return (t) => (0, i.jsx)(e, H(U({}, t), { channelId: l.id }));
         });
     }
