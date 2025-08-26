@@ -1,7 +1,7 @@
 n.d(t, { qt: () => c });
 var r = n(203311),
     i = n(818083);
-let a = (0, i.B)({
+let o = (0, i.B)({
         kind: "user",
         id: "2025-04_emoji_studio",
         label: "Emoji Studio",
@@ -36,7 +36,7 @@ let a = (0, i.B)({
             },
         ],
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: "user",
         id: "2025-07_emoji_studio_mobile",
         label: "Emoji Studio (Mobile)",
@@ -81,7 +81,7 @@ let a = (0, i.B)({
             },
             {
                 id: 2,
-                label: "Select Image File Before Emoji Studio",
+                label: '"Speedrun": Select Image File Before Emoji Studio',
                 config: {
                     isEmojiEditingExperimentEnabled: !1,
                     isSelectFileBeforeEmojiStudioExperimentEnabled: !0,
@@ -92,14 +92,14 @@ let a = (0, i.B)({
 function c(e) {
     let { location: t, autoTrackExposure: n, disable: i = !1 } = e,
         c = (0, r.$u)(t),
-        { enabled: u, showExpressionPickerButton: d } = a.useExperiment(
+        { enabled: u, showExpressionPickerButton: d } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: c || i,
             },
         ),
-        { enabled: f } = o.useExperiment(
+        { enabled: f } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -124,7 +124,8 @@ function c(e) {
         enabled: u,
         isMobileEnabled: f,
         isEntrypointEnabled: d || _ || p || h,
-        isEntrypointExperimentEnabled: _,
+        isEntrypointEnabledInDMs: d || p || h,
+        isEntrypointOnlyExperimentEnabled: _,
         isEmojiEditingExperimentEnabled: p,
         isSelectFileBeforeEmojiStudioExperimentEnabled: h,
     };

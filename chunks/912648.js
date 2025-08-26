@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(755721),
+    o = n(442837),
+    a = n(755721),
     s = n(100527),
     l = n(906732),
     c = n(556019),
@@ -20,7 +20,7 @@ function E(e) {
         [E, b] = i.useState(!1),
         y = (0, l.ZP)(s.Z.EMOJI_PICKER),
         [O, v] = i.useState(!1),
-        I = (0, a.e7)([h.Z], () => h.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        I = (0, o.e7)([h.Z], () => h.Z.getGuild(null == t ? void 0 : t.guild_id)),
         T = (0, c.qt)({
             autoTrackExposure: !1,
             location: s.Z.EMOJI_PICKER,
@@ -43,7 +43,7 @@ function E(e) {
                 return;
             }
             if (null == t) return void v(!1);
-            let n = T.isEntrypointExperimentEnabled || T.isEmojiEditingExperimentEnabled;
+            let n = T.isEntrypointOnlyExperimentEnabled || T.isEmojiEditingExperimentEnabled;
             f.K({
                 guildId: t.guild_id,
                 autoOpenFileInput: n,
@@ -71,10 +71,10 @@ function E(e) {
             },
             [t],
         );
-    return (0, r.jsxs)(o.zx, {
+    return (0, r.jsxs)(a.zx, {
         tabIndex: -1,
-        color: o.zx.Colors.PRIMARY,
-        size: o.zx.Sizes.MEDIUM,
+        color: a.zx.Colors.PRIMARY,
+        size: a.zx.Sizes.MEDIUM,
         onClick: N,
         disabled: C,
         submitting: E,
