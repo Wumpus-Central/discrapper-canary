@@ -474,6 +474,7 @@ var r = (function (e) {
         (e.APP_LAUNCHER_FRIENDS_TAB_JOIN_BUTTON = "app launcher friends who play tab join friend"),
         (e.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU = "report to mod channel context menu"),
         (e.GAME_PROFILE = "game profile"),
+        (e.CONFERENCE_MODE = "conference mode"),
         (e.GO_LIVE_KEYBIND = "go live keybind"),
         (e.OVERLAY_VOICE_WIDGET = "overlay voice widget"),
         (e.REQUEST_TO_STREAM_INVITE_EMBED = "request to stream invite embed"),

@@ -2093,6 +2093,7 @@ let eE = "@me",
         QUESTS: (e) => "/quests/".concat(e),
         ACCOUNT_REVERT: (e) => "/wasntme/".concat(e),
         POWERUP_STORE: (e) => "/channels/".concat(e, "/boosts"),
+        CONFERENCE_MODE: "/conference-mode",
     }),
     eR = (0, f.Ft)(eC),
     eP = (0, f.Ft)(eN, [":", "?", "@"]);
