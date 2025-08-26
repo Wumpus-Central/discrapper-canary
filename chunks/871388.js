@@ -1,57 +1,56 @@
-A.d(t, { B: () => o });
-var n = A(951288);
-A(647438);
-var r = A(481060),
-    l = A(120651),
-    a = A(388032);
-function o(e, t, A) {
-    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+t.d(A, { B: () => o });
+var r = t(951288);
+t(647438);
+var n = t(481060),
+    l = t(120651),
+    a = t(388032);
+function o(e, A) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     (0, l.Z)({
         title: e,
         body:
-            "string" == typeof t
-                ? t
+            "string" == typeof A
+                ? A
                 : a.intl.format(
-                      t,
+                      A,
                       (function (e) {
-                          for (var t = 1; t < arguments.length; t++) {
-                              var A = null != arguments[t] ? arguments[t] : {},
-                                  n = Object.keys(A);
+                          for (var A = 1; A < arguments.length; A++) {
+                              var t = null != arguments[A] ? arguments[A] : {},
+                                  r = Object.keys(t);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (n = n.concat(
-                                      Object.getOwnPropertySymbols(A).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(A, e).enumerable;
+                                  (r = r.concat(
+                                      Object.getOwnPropertySymbols(t).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                       }),
                                   )),
-                                  n.forEach(function (t) {
-                                      var n;
-                                      (n = A[t]),
-                                          t in e
-                                              ? Object.defineProperty(e, t, {
-                                                    value: n,
+                                  r.forEach(function (A) {
+                                      var r;
+                                      (r = t[A]),
+                                          A in e
+                                              ? Object.defineProperty(e, A, {
+                                                    value: r,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[t] = n);
+                                              : (e[A] = r);
                                   });
                           }
                           return e;
                       })(
                           {
                               highlightHook: (e) =>
-                                  (0, n.jsx)(r.Text, {
+                                  (0, r.jsx)(n.Text, {
                                       variant: "text-md/normal",
                                       color: "text-default",
                                       style: { display: "inline" },
                                       children: e,
                                   }),
                           },
-                          o,
+                          t,
                       ),
                   ),
         cta: a.intl.string(a.t["NX+WJC"]),
         onConfirm: () => {},
-        iconVariant: A,
     });
 }
