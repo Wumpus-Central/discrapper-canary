@@ -1,8 +1,8 @@
 n.d(t, { D: () => m });
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(507274),
     l = n(838331),
     c = n(938922);
@@ -64,9 +64,9 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,22 +75,25 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
     var {
             children: t,
             placeholder: n,
-            value: a,
+            value: o,
             onChange: u,
             onClose: f,
             showScrollbar: h,
             className: m,
             multiSelect: g,
+            emptyStateText: E,
+            emptyStateHeader: b,
+            onQueryChange: y,
         } = e,
-        E = p(e, [
+        O = p(e, [
             "children",
             "placeholder",
             "value",
@@ -99,25 +102,31 @@ function m(e) {
             "showScrollbar",
             "className",
             "multiSelect",
+            "emptyStateText",
+            "emptyStateHeader",
+            "onQueryChange",
         ]);
-    let b = i.useCallback(
+    let v = i.useCallback(
         (e) => {
             u(e), g || null == f || f();
         },
         [u, f, g],
     );
     return (0, r.jsx)(s.V, {
-        className: o()(c.container, m, { [c.scroller]: h }),
+        className: a()(c.container, m, { [c.scroller]: h }),
         children: (0, r.jsx)(
             l.hQ,
-            _(d({}, E), {
+            _(d({}, O), {
                 showScrollbar: h,
-                value: a,
+                value: o,
                 multiSelect: g,
-                onChange: b,
+                onChange: v,
                 placeholder: n,
                 children: t,
                 listClassName: c.list,
+                emptyStateText: E,
+                emptyStateHeader: b,
+                onQueryChange: y,
             }),
         ),
     });

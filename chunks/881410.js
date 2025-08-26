@@ -1,7 +1,7 @@
 r.d(t, { Z: () => f }), r(388685), r(781311);
 var n = r(951288),
-    i = r(647438),
-    a = r(423802),
+    a = r(647438),
+    i = r(423802),
     l = r(481060),
     o = r(510231),
     c = r(86419),
@@ -35,25 +35,33 @@ function d(e) {
 function f(e) {
     let { disabled: t, widgetType: r, widget: f } = e,
         [g] = (0, l.ynZ)(),
-        b = i.useRef(null),
-        p = i.useMemo(() => new Set(f.games.map((e) => e.applicationId)), [f.games]),
-        m = i.useCallback(
+        [b, p] = a.useState(""),
+        m = a.useRef(null),
+        O = a.useMemo(() => new Set(f.games.map((e) => e.applicationId)), [f.games]),
+        j = a.useCallback(
             (e) => {
                 (0, c.ES)(r, { applicationId: e });
             },
             [r],
         ),
-        { options: O, matchSorterOptions: j } = (0, o.h)(),
-        y = i.useCallback(
+        { options: y, matchSorterOptions: v } = (0, o.h)(),
+        x = a.useMemo(
+            () =>
+                "" !== b.trim()
+                    ? s.intl.formatToPlainString(s.t.ZoearK, { searchTerm: b.trim() })
+                    : s.intl.string(s.t.QwSXv7),
+            [b],
+        ),
+        h = a.useCallback(
             (e) => {
                 var t, r;
                 return "" === e.trim()
-                    ? O
-                    : (0, a.Lu)(
-                          O,
+                    ? y
+                    : (0, i.Lu)(
+                          y,
                           e,
-                          ((t = d({}, j)),
-                          (r = r = { threshold: a.Lu.rankings.CONTAINS }),
+                          ((t = d({}, v)),
+                          (r = r = { threshold: i.Lu.rankings.CONTAINS }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                               : (function (e, t) {
@@ -69,10 +77,10 @@ function f(e) {
                           t),
                       );
             },
-            [O, j],
+            [y, v],
         );
     return (0, n.jsx)(l.yRy, {
-        targetElementRef: b,
+        targetElementRef: m,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
@@ -83,18 +91,21 @@ function f(e) {
                 autoFocus: !0,
                 value: g,
                 onChange: (e) => {
-                    m(e), t();
+                    j(e), t();
                 },
                 onClose: t,
                 multiSelect: !1,
                 showScrollbar: !0,
                 maxVisibleItems: 7,
+                emptyStateText: x,
+                emptyStateHeader: "",
+                onQueryChange: p,
                 children: (e) =>
-                    y(e).map((e) =>
+                    h(e).map((e) =>
                         (0, n.jsx)(
                             l.lo1,
                             {
-                                disabled: p.has(e.value),
+                                disabled: O.has(e.value),
                                 value: String(e.value),
                                 children: (0, n.jsx)(l.lo1.Label, {
                                     children: (0, n.jsx)(l.Text, {
@@ -111,7 +122,7 @@ function f(e) {
         },
         children: (e) =>
             (0, n.jsx)("div", {
-                ref: b,
+                ref: m,
                 children: (0, n.jsx)(
                     l.zxk,
                     d(
