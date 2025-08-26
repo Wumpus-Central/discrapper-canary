@@ -3,8 +3,8 @@ var l = n(951288),
     i = n(647438),
     r = n(120356),
     s = n.n(r),
-    o = n(873546),
-    u = n(861066),
+    u = n(873546),
+    o = n(861066),
     a = n(481060),
     c = n(59662),
     d = n(36361),
@@ -12,7 +12,7 @@ var l = n(951288),
     g = n(214779);
 function v(e) {
     let { icon: t, label: n, onClick: i } = e;
-    return (0, l.jsx)(u.h, {
+    return (0, l.jsx)(o.h, {
         onClick: i,
         icon: t,
         size: "sm",
@@ -29,7 +29,7 @@ function m(e) {
             (0, l.jsxs)("div", {
                 className: g.contentHeaderLeft,
                 children: [
-                    o.tq &&
+                    u.tq &&
                         (0, l.jsx)(v, {
                             icon: a.yFM,
                             onClick: () => i(!0),
@@ -56,7 +56,7 @@ let j = i.memo(function (e) {
         { showNavigationMobile: r } = (0, c.t)();
     return (0, l.jsxs)("div", {
         className: s()(g.content, {
-            [g.mobile]: o.tq,
+            [g.mobile]: u.tq,
             [g.mobileNavigationOpen]: r,
         }),
         children: [
@@ -64,7 +64,10 @@ let j = i.memo(function (e) {
                 title: i,
                 onClose: t,
             }),
-            null != n && (0, l.jsx)(d.Z, { node: n }),
+            (0, l.jsx)("div", {
+                className: g.contentBody,
+                children: null != n && (0, l.jsx)(d.Z, { node: n }),
+            }),
         ],
     });
 });
