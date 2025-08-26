@@ -1,7 +1,7 @@
 r.d(t, { Z: () => C });
 var n = r(951288),
     i = r(647438),
-    o = r(755721),
+    o = r(159691),
     l = r(481060),
     s = r(891561),
     c = r(333866),
@@ -28,7 +28,6 @@ function u(e) {
             [s, o],
         );
     return (0, n.jsx)("div", {
-        className: d.__invalid_container,
         children: (0, n.jsxs)(l.v2r, {
             navId: "sort-and-view",
             "aria-label": a.intl.string(a.t["4jfWTE"]),
@@ -71,12 +70,11 @@ function C() {
         },
         position: "bottom",
         align: "left",
-        children: (e, i) => {
-            var s, c;
-            let { isShown: u } = i;
-            return (0, n.jsxs)(
+        children: (e) => {
+            var i, s;
+            return (0, n.jsx)(
                 o.zx,
-                ((s = (function (e) {
+                ((i = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
@@ -101,43 +99,15 @@ function C() {
                     }
                     return e;
                 })({}, e)),
-                (c = c =
+                (s = s =
                     {
+                        text: t,
+                        icon: l.uVW,
+                        variant: "secondary",
                         buttonRef: r,
-                        size: o.zx.Sizes.MIN,
-                        color: o.zx.Colors.CUSTOM,
-                        className: d.sortDropdown,
-                        innerClassName: d.sortDropdownInner,
-                        children: [
-                            (0, n.jsx)(l.uVW, {
-                                size: "xs",
-                                color: "currentColor",
-                                "aria-label": a.intl.string(a.t["5cmFc3"]),
-                            }),
-                            (0, n.jsx)(l.LZC, {
-                                size: 8,
-                                horizontal: !0,
-                            }),
-                            (0, n.jsx)(l.Text, {
-                                variant: "text-sm/medium",
-                                color: "header-primary",
-                                children: t,
-                            }),
-                            u
-                                ? (0, n.jsx)(l.u04, {
-                                      size: "custom",
-                                      color: "currentColor",
-                                      width: 20,
-                                  })
-                                : (0, n.jsx)(l.CJ0, {
-                                      size: "custom",
-                                      color: "currentColor",
-                                      width: 20,
-                                  }),
-                        ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(c))
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
                           var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -145,10 +115,10 @@ function C() {
                               r.push.apply(r, n);
                           }
                           return r;
-                      })(Object(c)).forEach(function (e) {
-                          Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(c, e));
+                      })(Object(s)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                s),
+                i),
             );
         },
     });
