@@ -152,7 +152,7 @@ let eZ = (0, u.Un)({
         renderLoader: ew,
     }),
     eG = (0, u.Un)({
-        createPromise: () => Promise.all([n.e("97844"), n.e("44799")]).then(n.bind(n, 393357)),
+        createPromise: () => Promise.all([n.e("55616"), n.e("97844"), n.e("44799")]).then(n.bind(n, 393357)),
         webpackId: 393357,
         name: "GuildPowerupsPage",
         renderLoader: ew,

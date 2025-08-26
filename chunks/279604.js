@@ -1,7 +1,7 @@
 n.d(t, {
     KE: () => O,
     KT: () => b,
-    ZP: () => j,
+    ZP: () => v,
     _C: () => y,
 }),
     n(388685),
@@ -67,9 +67,12 @@ function O(e, t) {
                             ),
                         );
                 case f.Us.PERK: {
-                    let { default: i } = await Promise.all([n.e("42926"), n.e("97844"), n.e("52549")]).then(
-                        n.bind(n, 326055),
-                    );
+                    let { default: i } = await Promise.all([
+                        n.e("55616"),
+                        n.e("42926"),
+                        n.e("97844"),
+                        n.e("93704"),
+                    ]).then(n.bind(n, 326055));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -95,11 +98,11 @@ function y(e, t) {
             var t, n;
             return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        j = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        v = (0, l.e7)([h.Z], () => h.Z.getStateForGuild(e)),
+        v = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        j = (0, l.e7)([h.Z], () => h.Z.getStateForGuild(e)),
         x = i.useMemo(
             () =>
-                null != t && t.type === f.Us.LEVEL && null != v
+                null != t && t.type === f.Us.LEVEL && null != j
                     ? (function (e, t) {
                           let n = f.T1[e.skuId];
                           return null == n
@@ -114,12 +117,12 @@ function y(e, t) {
                                         return t.allPowerups[n];
                                     })
                                     .filter(d.lm);
-                      })(t, v)
+                      })(t, j)
                     : [],
-            [t, v],
+            [t, j],
         ),
         C = null == x ? void 0 : x.reduce((e, t) => e + t.cost, 0),
-        E = Math.max((null != (p = null == j ? void 0 : j.premiumSubscriberCount) ? p : 0) - y + C, 0);
+        S = Math.max((null != (p = null == v ? void 0 : v.premiumSubscriberCount) ? p : 0) - y + C, 0);
     return {
         onActivate: i.useCallback(
             function (e) {
@@ -127,16 +130,16 @@ function y(e, t) {
                 let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 e.stopPropagation();
                 let { shouldCloseAllModals: a = !0 } = l;
-                if (null != j && null != t)
-                    return E < t.cost
+                if (null != v && null != t)
+                    return S < t.cost
                         ? void (0, s.u)({
                               analyticsLocation: {
                                   page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
                                   section: g.jXE.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
-                              numberOfBoostsToAdd: t.cost - E,
+                              numberOfBoostsToAdd: t.cost - S,
                               analyticsLocations: b,
-                              guild: j,
+                              guild: v,
                               intent: t.type === f.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () => {
                                   var e;
@@ -154,7 +157,7 @@ function y(e, t) {
                                                             e,
                                                             m(
                                                                 {
-                                                                    guildId: j.id,
+                                                                    guildId: v.id,
                                                                     powerup: t,
                                                                 },
                                                                 n,
@@ -177,7 +180,7 @@ function y(e, t) {
                                                 e,
                                                 m(
                                                     {
-                                                        guildId: j.id,
+                                                        guildId: v.id,
                                                         powerup: t,
                                                     },
                                                     n,
@@ -186,7 +189,7 @@ function y(e, t) {
                                     });
                             });
             },
-            [O, t, E, b, j],
+            [O, t, S, b, v],
         ),
     };
 }
@@ -217,7 +220,7 @@ function _(e, t) {
         ),
     };
 }
-function j(e, t) {
+function v(e, t) {
     let { isLoading: l, error: a, onToggle: s } = _(e, t),
         { onActivate: c } = y(e, t),
         u = i.useCallback((e) => (e.stopPropagation(), s(!1)), [s]);

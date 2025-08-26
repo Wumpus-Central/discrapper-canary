@@ -1,107 +1,88 @@
-n.d(t, { Z: () => C }), n(539854), n(388685);
+n.d(t, { Z: () => b }), n(539854), n(388685);
 var r = n(951288),
-    o = n(793030),
-    i = n(442837),
+    i = n(793030),
+    o = n(442837),
     l = n(704215),
-    s = n(243778),
-    a = n(430824),
-    c = n(232062),
+    a = n(243778),
+    s = n(430824),
     u = n(618460),
-    d = n(105529),
-    p = n(800869),
-    m = n(366751),
-    f = n(309945),
-    _ = n(385902),
-    x = n(234368),
-    g = n(981631),
-    v = n(989308),
-    b = n(388032),
-    h = n(547885);
-function j() {
+    c = n(800869),
+    d = n(366751),
+    p = n(309945),
+    f = n(385902),
+    m = n(981631),
+    _ = n(989308),
+    g = n(388032),
+    v = n(547885);
+function x() {
     return (0, r.jsx)("div", {
-        className: h.staffContainer,
-        children: (0, r.jsx)(o.xv, {
+        className: v.staffContainer,
+        children: (0, r.jsx)(i.xv, {
             variant: "text-sm/medium",
-            children: b.intl.string(v.default.l9n4QU),
+            children: g.intl.string(_.default.l9n4QU),
         }),
     });
 }
-function C(e) {
+function b(e) {
     let { guildId: t } = e,
-        n = (0, i.e7)([a.Z], () => {
+        n = (0, o.e7)([s.Z], () => {
             var e;
-            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = s.Z.getGuild(t)) ? void 0 : e.features.has(m.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
-        C = (0, u.Z)(t),
-        E = C.length > 0,
-        { shouldShow: I, notificationConfig: N } = (0, _._)(t, "GuildPowerupNotificationContainer"),
-        w = [];
-    I && w.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [Z, P] = (0, s.ZT)(w, t),
-        S = null != Z && null != N,
-        y = (0, c.W)(t, "GuildPowerupNotificationContainer"),
-        T = [];
-    S ||
-        E ||
-        (T.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK),
-        y && T.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let [O, A] = (0, s.US)(T),
-        R = ((e) => {
+        b = (0, u.Z)(t),
+        h = b.length > 0,
+        { shouldShow: C, notificationConfig: j } = (0, f._)(t, "GuildPowerupNotificationContainer"),
+        I = [];
+    C && I.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    let [E, w] = (0, a.ZT)(I, t),
+        Z = null != E && null != j,
+        N = [];
+    Z || h || N.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
+    let [P, T] = (0, a.US)(N),
+        y = ((e) => {
             let n = [];
             return (
-                E &&
+                h &&
                     n.push(
                         (0, r.jsx)(
-                            f.Z,
+                            p.Z,
                             {
                                 guildId: t,
-                                powerups: C,
+                                powerups: b,
                             },
                             "expiring-powerups",
                         ),
                     ),
-                S &&
+                Z &&
                     n.push(
                         (0, r.jsx)(
-                            m.Z,
+                            d.Z,
                             {
-                                notificationConfig: N,
+                                notificationConfig: j,
                                 markAsDismissed: (e) => {
-                                    P(e);
+                                    w(e);
                                 },
                             },
                             "rollback-notification",
                         ),
                     ),
                 null != e &&
-                    (e === l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK
-                        ? n.push((0, r.jsx)(p.Z, { markAsDismissed: A }, "info-card"))
-                        : e === l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL &&
-                          n.push(
-                              (0, r.jsx)(
-                                  d.Z,
-                                  {
-                                      guildId: t,
-                                      perk: x.rm.ENHANCED_ROLE_COLORS,
-                                      markAsDismissed: A,
-                                  },
-                                  "enhanced-role-colors-upsell",
-                              ),
-                          )),
+                    e === l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK &&
+                    n.push((0, r.jsx)(c.Z, { markAsDismissed: T }, "info-card")),
                 n
             );
-        })(O);
-    return 0 !== R.length || n
+        })(P);
+    return 0 !== y.length || n
         ? (0, r.jsxs)("div", {
-              className: h.container,
+              className: v.container,
               children: [
-                  (0, r.jsx)(o.xv, {
+                  (0, r.jsx)(i.xv, {
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: b.intl.string(v.default["3FRira"]),
+                      children: g.intl.string(_.default["3FRira"]),
                   }),
-                  n && (0, r.jsx)(j, {}),
-                  R.map((e) => e),
+                  n && (0, r.jsx)(x, {}),
+                  y.map((e) => e),
               ],
           })
         : null;
