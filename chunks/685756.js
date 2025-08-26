@@ -19,8 +19,8 @@ n.d(t, {
     n(997841);
 var r = n(512722),
     i = n.n(r),
-    a = n(261470),
-    o = n(47770),
+    o = n(261470),
+    a = n(47770),
     s = n(379649),
     l = n(710845),
     c = n(857192),
@@ -184,10 +184,12 @@ var D = (function (e) {
         (e.MLSProposals = "mls-proposals"),
         (e.MLSPrepareCommitTransition = "mls-prepare-commit-transition"),
         (e.MLSWelcome = "mls-welcome"),
+        (e.ReceiveMessage = "receive-message"),
+        (e.SendMessage = "send-message"),
         e
     );
 })({});
-class x extends o.Z {
+class x extends a.Z {
     createWebSocket() {
         this.logger.info("[CONNECT] ".concat(this.url)),
             null !== this.webSocket &&
@@ -215,7 +217,11 @@ class x extends o.Z {
             }),
             (e.onmessage = (e) => {
                 let { op: t, seq: n, d: r } = this.parseWebSocketMessage(e);
-                if ((n && (this.lastRecvSeqNum = n), c.default.isLoggingGatewayEvents))
+                if (
+                    (this.emit("receive-message", t, r),
+                    n && (this.lastRecvSeqNum = n),
+                    c.default.isLoggingGatewayEvents)
+                )
                     if (r instanceof Uint8Array) {
                         let e = [...r].map((e) => e.toString(16).padStart(2, "0")).join("");
                         this.logger.info("~> ".concat(t, ": 0x").concat(e));
@@ -329,7 +335,7 @@ class x extends o.Z {
             op: e,
             d: t,
         });
-        c.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(r));
+        c.default.isLoggingGatewayEvents && this.logger.info("<~ ".concat(r)), this.emit("send-message", e, t);
         try {
             n.send(r);
         } catch (e) {}
@@ -527,23 +533,23 @@ class x extends o.Z {
             channelId: n,
             userId: r,
             sessionId: i,
-            token: a,
-            maxDaveProtocolVersion: o,
+            token: o,
+            maxDaveProtocolVersion: a,
             video: s = !1,
             streamParameters: l,
         } = e;
         (this.serverId = t),
             (this.channelId = n),
             (this.sessionId = i),
-            (this.token = a),
+            (this.token = o),
             (this.connectionState = 2),
             this.send(0, {
                 server_id: t,
                 channel_id: n,
                 user_id: r,
                 session_id: i,
-                token: a,
-                max_dave_protocol_version: o,
+                token: o,
+                max_dave_protocol_version: a,
                 video: s,
                 streams: R(l),
             });
@@ -591,12 +597,12 @@ class x extends o.Z {
     }
     selectProtocol(e, t, n, r) {
         let i,
-            a = {};
+            o = {};
         null == n
             ? (i = null)
             : "sdp" in n && null != n.sdp && "" !== n.sdp
               ? ((i = n.sdp),
-                (a = m(p({}, n), {
+                (o = m(p({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                 })))
@@ -611,7 +617,7 @@ class x extends o.Z {
                     port: n.port,
                     mode: n.mode,
                 }),
-                (a = m(p({}, n), {
+                (o = m(p({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                     experiments: r,
@@ -623,7 +629,7 @@ class x extends o.Z {
                         protocol: e,
                         data: i,
                     },
-                    a,
+                    o,
                 ),
             );
     }
@@ -672,7 +678,7 @@ class x extends o.Z {
         super(),
             _(this, "url", void 0),
             _(this, "logger", void 0),
-            _(this, "backoff", new a.Z(1000, 5000)),
+            _(this, "backoff", new o.Z(1000, 5000)),
             _(this, "webSocket", void 0),
             _(this, "connectionState", void 0),
             _(this, "heartbeatInterval", void 0),
