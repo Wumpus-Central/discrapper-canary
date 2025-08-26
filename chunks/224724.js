@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(594174),
     l = n(621853),
     c = n(86419);
@@ -54,7 +54,7 @@ function S(e) {
     (_.suggestedGamesIds = _.suggestedGamesIds.filter((e) => e !== t)),
         (_.suggestedWishlistGamesIds = _.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
-class A extends a.ZP.Store {
+class A extends o.ZP.Store {
     getPendingWidgets() {
         return u;
     }
@@ -65,17 +65,16 @@ class A extends a.ZP.Store {
         return null !== u && (null === d || !i().isEqual(u, d));
     }
     hasSaveablePendingChanges() {
-        if (null == u) return !1;
+        let e = this.getSaveablePendingWidgets();
+        if (null == e) return !1;
         if (null == d) return !0;
-        let e = new Map(d.map((e) => [e.id, e])),
-            t = new Map(u.map((e) => [e.id, e]));
-        for (let [n, r] of t) {
-            let t = e.get(n);
-            if (null == t) {
-                if (r.games.length > 0) return !0;
-            } else if (!(0, c.ou)(r.games, t.games, r.type)) return !0;
+        let t = new Map(d.map((e) => [e.id, e])),
+            n = new Map(e.map((e) => [e.id, e]));
+        for (let [e, r] of n) {
+            let n = t.get(e);
+            if (null == n || !(0, c.ou)(r.games, n.games, r.type)) return !0;
         }
-        for (let [n] of e) if (!t.has(n)) return !0;
+        for (let [e] of t) if (!n.has(e)) return !0;
         return !1;
     }
     get isSubmitting() {
@@ -94,7 +93,7 @@ class A extends a.ZP.Store {
         return _;
     }
 }
-let C = new A(o.Z, {
+let C = new A(a.Z, {
     WIDGET_PENDING_SET: g,
     WIDGET_PENDING_SAVE_START: v,
     WIDGET_PENDING_SAVE_SUCCESS: I,
