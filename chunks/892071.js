@@ -5,8 +5,8 @@ n.d(t, {
     n(415506);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(873546),
     l = n(481060),
     c = n(597952),
@@ -28,7 +28,7 @@ function m(e) {
     let {
             rootClassName: t,
             lang: n,
-            theme: a,
+            theme: o,
             density: h,
             focused: m,
             fontScale: g,
@@ -52,9 +52,9 @@ function m(e) {
         L = (0, d.Z)("highlight_mana_components"),
         j = (0, d.Z)("highlight_void_toggleables"),
         M = (0, d.Z)("highlight_void_buttons"),
-        k = o()(
+        k = a()(
             (0, c.Z)(),
-            (0, l.QeD)(a),
+            (0, l.QeD)(o),
             "density-".concat(h),
             E,
             {
@@ -101,8 +101,8 @@ function m(e) {
                       y: 12,
                   }
                 : {
-                      x: 10,
-                      y: 10,
+                      x: 9,
+                      y: 8,
                   };
             _.ZP.setTrafficLightPosition(e);
         }, [R, G]),
