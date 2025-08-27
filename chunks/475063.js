@@ -1,17 +1,17 @@
-n.d(t, { K: () => R }), n(539854);
+n.d(t, { K: () => A }), n(953529);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
-    s = n(772848),
-    l = n(84735),
-    c = n(15127),
-    u = n(766646),
-    d = n(74655),
-    f = n(897037),
-    _ = n(377089),
-    p = n(680874),
-    h = n(388032),
+    a = n(120356),
+    o = n.n(a),
+    s = n(84735),
+    l = n(15127),
+    c = n(841878),
+    u = n(74655),
+    d = n(897037),
+    f = n(886025),
+    _ = n(440562),
+    p = n(377089),
+    h = n(680874),
     m = n(231282),
     g = n(154257);
 function E(e, t, n) {
@@ -72,9 +72,9 @@ function v(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,36 +83,35 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = (0, s.Z)(),
-    S = (0, s.Z)(),
-    A = (0, s.Z)(),
-    C = 10,
-    N = 7.23;
-function R(e) {
+let T = 10,
+    S = 7.23;
+function A(e) {
     var t,
         {
             value: n,
-            placeholder: o = "",
-            autoFocus: s = !1,
-            autosize: E = !1,
-            minLength: y,
-            maxLength: I,
-            error: R,
-            defaultDirty: D,
-            showCharacterCount: x,
-            showRemainingCharacterCount: L = !0,
-            "aria-labelledby": j,
-            rows: M = 3,
-            disabled: k,
-            helperText: U,
-            successMessage: G,
-            inputRef: B,
+            placeholder: a = "",
+            autoFocus: l = !1,
+            autosize: _ = !1,
+            minLength: h,
+            maxLength: E,
+            error: y,
+            defaultDirty: I,
+            showCharacterCount: A,
+            showRemainingCharacterCount: P = !0,
+            rows: w = 3,
+            disabled: D,
+            label: x,
+            hideLabel: L,
+            description: j,
+            helperText: M,
+            successMessage: k,
+            inputRef: U,
         } = e,
-        Z = v(e, [
+        G = v(e, [
             "value",
             "placeholder",
             "autoFocus",
@@ -123,124 +122,136 @@ function R(e) {
             "defaultDirty",
             "showCharacterCount",
             "showRemainingCharacterCount",
-            "aria-labelledby",
             "rows",
             "disabled",
+            "label",
+            "hideLabel",
+            "description",
             "helperText",
             "successMessage",
             "inputRef",
         ]);
-    let F = (0, _.U)("UserSettingsDesignSystems"),
-        V = F ? !1 !== x : x,
-        H = (0, f.m)({
+    let B = (0, p.U)("UserSettingsDesignSystems"),
+        Z = (0, d.m)({
             validateOn: "change",
-            error: R,
+            error: y,
             value: n,
-            minLength: y,
-            maxLength: I,
-            defaultDirty: D,
+            minLength: h,
+            maxLength: E,
+            defaultDirty: I,
         }),
-        Y = i.useContext(c.q3),
-        W = null != j ? j : null == Y ? void 0 : Y.titleId,
-        K = i.useMemo(() => {
-            let e = [],
-                t = null == Y ? void 0 : Y.errorId;
-            return (
-                null != t && e.push(t),
-                null != R ? e.push(T) : (null != I && e.push(A), null != y && e.push(S)),
-                e.length > 0 ? e.join(" ") : void 0
-            );
-        }, [R, null == Y ? void 0 : Y.errorId, I, y]),
-        z = i.useMemo(() => {
-            if (F) return;
-            if (null == I) return C;
-            let e = "".concat(I).length;
-            return N * (e += "".concat(I, " / ").length) + C;
-        }, [F, I]),
-        q = (e) => {
-            let { onChange: t } = Z;
-            null == t || t(e.currentTarget.value), H.setShouldValidate(!0);
+        F = i.useMemo(() => {
+            if (B) return;
+            if (null == E) return T;
+            let e = "".concat(E).length;
+            return S * (e += "".concat(E, " / ").length) + T;
+        }, [B, E]),
+        V = (e) => {
+            let { onChange: t } = G;
+            null == t || t(e.currentTarget.value), Z.setShouldValidate(!0);
         },
-        X = E ? p.l : "textarea";
-    return (0, r.jsxs)(d.U, {
-        validation: H,
-        disabled: k,
-        helperText: U,
-        successMessage: G,
-        characterCount: F && V ? (null != (t = null == n ? void 0 : n.length) ? t : 0) : void 0,
-        characterCountMaxLength: F && null != I ? I : void 0,
-        children: [
-            (0, r.jsx)(l.t, {
-                children: (0, r.jsx)(
-                    X,
-                    O(
-                        b(
-                            {
-                                className: a()(m.textArea, g.scrollbarDefault),
-                                "aria-labelledby": W,
-                                "aria-describedby": K,
-                                "aria-invalid": H.hasError,
-                                style: { paddingRight: z },
-                                placeholder: o,
-                                value: n,
-                                autoFocus: s,
-                                minLength: y,
-                                maxLength: I,
-                                rows: M,
-                                disabled: k,
-                            },
-                            Z,
-                        ),
-                        {
-                            onChange: q,
-                            ref: B,
-                        },
-                    ),
-                ),
-            }),
-            null != y &&
-                (0, r.jsx)(u.n, {
-                    id: S,
-                    children: h.intl.format(h.t["bmQU//"], { minLength: y }),
-                }),
-            null != I &&
-                (0, r.jsx)(u.n, {
-                    id: A,
-                    children: h.intl.format(h.t["+DFxLS"], { maxLength: I }),
-                }),
-            !F && V
-                ? (0, r.jsx)(P, {
+        H =
+            B && A
+                ? (0, r.jsx)(c.H, {
                       value: n,
-                      maxLength: I,
-                      hasError: H.hasError,
+                      maxLength: P && null != E ? E : void 0,
                   })
-                : null,
-            F || V || !1 === L
-                ? null
-                : (0, r.jsx)(w, {
-                      value: n,
-                      maxLength: I,
-                  }),
-        ],
+                : null;
+    return (0, r.jsx)(f.N, {
+        label: x,
+        hideLabel: L,
+        description: j,
+        helperText: M,
+        successMessage: k,
+        trailingContent: H,
+        errorMessage: Z.hasError && null != (t = Z.errorMessage) ? t : void 0,
+        children: (0, r.jsxs)(u.U, {
+            validation: Z,
+            disabled: D,
+            children: [
+                (0, r.jsx)(s.t, {
+                    children: (0, r.jsx)(
+                        C,
+                        O(
+                            b(
+                                {
+                                    autosize: _,
+                                    className: o()(m.textArea, g.scrollbarDefault),
+                                    style: { paddingRight: F },
+                                    placeholder: a,
+                                    value: n,
+                                    autoFocus: l,
+                                    minLength: h,
+                                    maxLength: E,
+                                    rows: w,
+                                    disabled: D,
+                                },
+                                G,
+                            ),
+                            {
+                                onChange: V,
+                                ref: U,
+                            },
+                        ),
+                    ),
+                }),
+                B
+                    ? null
+                    : (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              A
+                                  ? (0, r.jsx)(N, {
+                                        value: n,
+                                        maxLength: E,
+                                        hasError: Z.hasError,
+                                    })
+                                  : null,
+                              A || !1 === P
+                                  ? null
+                                  : (0, r.jsx)(R, {
+                                        value: n,
+                                        maxLength: E,
+                                    }),
+                          ],
+                      }),
+            ],
+        }),
     });
 }
-function P(e) {
+function C(e) {
+    var { "aria-labelledby": t, autosize: n } = e,
+        a = v(e, ["aria-labelledby", "autosize"]);
+    let o = (0, l.Gc)(),
+        s = i.useContext(_.U),
+        c = n ? h.l : "textarea";
+    return (0, r.jsx)(
+        c,
+        O(b({}, a), {
+            id: null == s ? void 0 : s.controlId,
+            "aria-labelledby": null != t ? t : o.titleId,
+            "aria-describedby": null == s ? void 0 : s.describedById,
+            "aria-errormessage": null == s ? void 0 : s.errorMessageId,
+            "aria-invalid": (null == s ? void 0 : s.errorMessageId) != null,
+        }),
+    );
+}
+function N(e) {
     var t;
-    let { value: n, maxLength: i, hasError: o } = e;
+    let { value: n, maxLength: i, hasError: a } = e;
     return (0, r.jsxs)("div", {
-        className: a()(m.maxLength, { [m.errorOverflow]: o }),
+        className: o()(m.maxLength, { [m.errorOverflow]: a }),
         "aria-hidden": "true",
         children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " ", null != i && "/ ".concat(i)],
     });
 }
-function w(e) {
+function R(e) {
     let { value: t, maxLength: n } = e,
-        o = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
-    return null == o
+        a = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
+    return null == a
         ? null
         : (0, r.jsx)("div", {
-              className: a()(m.maxLength, { [m.errorOverflow]: o < 0 }),
+              className: o()(m.maxLength, { [m.errorOverflow]: a < 0 }),
               "aria-hidden": "true",
-              children: o,
+              children: a,
           });
 }

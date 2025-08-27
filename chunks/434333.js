@@ -16,30 +16,28 @@ let u = {
     },
     d = i.forwardRef(function (e, t) {
         let {
-            role: n,
-            children: i,
-            className: a,
-            onDismiss: d,
-            backgroundColor: f = u.RED,
-            icon: _ = l.Mgn,
-            iconClassName: p,
+            children: n,
+            className: i,
+            onDismiss: a,
+            backgroundColor: d = u.RED,
+            icon: f = l.Mgn,
+            iconClassName: _,
         } = e;
         return (0, r.jsxs)("div", {
-            className: o()(c.error, a, f),
+            className: o()(c.error, i, d),
             ref: t,
             children: [
-                (0, r.jsx)(_, {
-                    className: o()(c.icon, p),
+                (0, r.jsx)(f, {
+                    className: o()(c.icon, _),
                     color: "currentColor",
                 }),
                 (0, r.jsx)("div", {
-                    role: n,
                     className: c.text,
-                    children: i,
+                    children: n,
                 }),
-                null != d
+                null != a
                     ? (0, r.jsx)(s.P, {
-                          onClick: d,
+                          onClick: a,
                           className: c.errorClose,
                           children: (0, r.jsx)(l.Dio, {
                               size: "md",

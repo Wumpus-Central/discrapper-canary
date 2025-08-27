@@ -28,36 +28,34 @@ function u(e, t) {
 }
 let d = i.forwardRef(function (e, t) {
     var n,
-        { children: u, className: d, titleClassName: f, title: _, icon: p, disabled: h, htmlFor: m, tag: g = "h5" } = e,
-        E = c(e, ["children", "className", "titleClassName", "title", "icon", "disabled", "htmlFor", "tag"]);
-    let b = i.useId(),
-        y = null != (n = E.titleId) ? n : b;
+        { children: u, className: d, titleClassName: f, title: _, disabled: p, htmlFor: h, tag: m = "h5" } = e,
+        g = c(e, ["children", "className", "titleClassName", "title", "disabled", "htmlFor", "tag"]);
+    let E = i.useId(),
+        b = null != (n = g.titleId) ? n : E;
     return (0, r.jsx)("div", {
         ref: t,
         className: d,
         children:
             null != _
                 ? (0, r.jsx)(a.y5t, {
-                      component: (0, r.jsxs)("div", {
+                      component: (0, r.jsx)("div", {
                           className: l.sectionTitle,
-                          children: [
-                              p,
+                          children:
                               null != _
                                   ? (0, r.jsx)(s.v, {
-                                        tag: g,
-                                        id: y,
-                                        htmlFor: m,
-                                        disabled: h,
+                                        tag: m,
+                                        id: b,
+                                        htmlFor: h,
+                                        disabled: p,
                                         className: f,
                                         children: _,
                                     })
                                   : null,
-                          ],
                       }),
                       children: (0, r.jsx)("div", {
                           className: l.children,
                           children: (0, r.jsx)(o.ol, {
-                              titleId: y,
+                              titleId: b,
                               children: u,
                           }),
                       }),

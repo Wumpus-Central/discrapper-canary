@@ -1,11 +1,10 @@
-n.d(t, { U: () => p });
+n.d(t, { U: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
-    s = n(353394);
-function l(e, t, n) {
+    a = n.n(i),
+    o = n(353394);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +17,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +28,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,55 +45,51 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
 function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function _(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var {
             as: t,
             readOnly: n,
             disabled: i,
-            fullWidth: l = !1,
-            children: u,
-            validation: _,
-            className: p,
-            helperText: h,
-            characterCount: m,
-            characterCountMaxLength: g,
-            successMessage: E,
-            ref: b,
-            containerClassName: y,
+            fullWidth: s = !1,
+            children: c,
+            validation: f,
+            className: _,
+            ref: p,
+            containerClassName: h,
         } = e,
-        O = f(e, [
+        m = d(e, [
             "as",
             "readOnly",
             "disabled",
@@ -102,94 +97,31 @@ function p(e) {
             "children",
             "validation",
             "className",
-            "helperText",
-            "characterCount",
-            "characterCountMaxLength",
-            "successMessage",
             "ref",
             "containerClassName",
         ]);
-    let v = null != t ? t : "div",
-        I = null == _ ? void 0 : _.hasError,
-        T = (0, r.jsx)("div", {}),
-        S = null != m;
-    return (
-        null != E && "" !== E
-            ? ((S = !0),
-              (T = (0, r.jsxs)("div", {
-                  className: s.statusMessageContainer,
-                  children: [
-                      (0, r.jsx)(a.owK, {
-                          size: "xs",
-                          color: a.TVs.colors.TEXT_FEEDBACK_POSITIVE,
-                      }),
-                      (0, r.jsx)(a.Text, {
-                          variant: "text-xs/normal",
-                          color: "text-feedback-positive",
-                          children: E,
-                      }),
-                  ],
-              })))
-            : I
-              ? ((S = !0),
-                (T = (0, r.jsxs)("div", {
-                    className: s.statusMessageContainer,
-                    children: [
-                        (0, r.jsx)(a.Mgn, {
-                            size: "xs",
-                            color: a.TVs.colors.TEXT_FEEDBACK_CRITICAL,
-                        }),
-                        (0, r.jsx)(a.Text, {
-                            variant: "text-xs/normal",
-                            color: "text-feedback-critical",
-                            children: null == _ ? void 0 : _.errorMessage,
-                        }),
-                    ],
-                })))
-              : null != h &&
-                ((S = !0),
-                (T = (0, r.jsx)(a.Text, {
-                    variant: "text-xs/normal",
-                    color: "text-secondary",
-                    children: h,
-                }))),
-        (0, r.jsxs)(
-            v,
-            d(
-                c(
-                    {
-                        ref: b,
-                        className: o()(s.container, y),
-                        "data-full-width": l,
-                    },
-                    O,
-                ),
+    let g = null != t ? t : "div",
+        E = null == f ? void 0 : f.hasError;
+    return (0, r.jsx)(
+        g,
+        u(
+            l(
                 {
-                    children: [
-                        (0, r.jsx)("div", {
-                            className: o()(s.wrapper, p),
-                            "data-error": I,
-                            "data-read-only": n,
-                            "data-disabled": i,
-                            children: u,
-                        }),
-                        S &&
-                            (0, r.jsxs)("div", {
-                                className: s.helperTextContainer,
-                                children: [
-                                    T,
-                                    null != m &&
-                                        (0, r.jsxs)(a.Text, {
-                                            variant: "text-xs/normal",
-                                            color: "text-secondary",
-                                            tabularNumbers: !0,
-                                            children: [m, null != g && " / ".concat(g)],
-                                        }),
-                                ],
-                            }),
-                    ],
+                    ref: p,
+                    className: a()(o.container, h),
+                    "data-full-width": s,
                 },
+                m,
             ),
-        )
+            {
+                children: (0, r.jsx)("div", {
+                    className: a()(o.wrapper, _),
+                    "data-error": E,
+                    "data-read-only": n,
+                    "data-disabled": i,
+                    children: c,
+                }),
+            },
+        ),
     );
 }

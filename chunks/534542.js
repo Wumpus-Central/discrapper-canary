@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => E,
+    R: () => g,
     g: () => p,
 });
 var r = n(951288);
@@ -92,28 +92,27 @@ let p = {
         SUCCESS: "success",
     },
     h = "modeDefault",
-    m = "modeDisabled",
-    g = "modeSelectable";
-function E(e) {
-    var { type: t = p.DEFAULT, className: n, disabled: i, selectable: l, children: u, style: _ } = e,
-        E = f(e, ["type", "className", "disabled", "selectable", "children", "style"]);
-    let b = h;
+    m = "modeDisabled";
+function g(e) {
+    var { type: t = p.DEFAULT, className: n, disabled: i, children: l, style: u } = e,
+        _ = f(e, ["type", "className", "disabled", "children", "style"]);
+    let g = h;
     return (
-        i ? (b = m) : l && (b = g),
+        i && (g = m),
         (0, r.jsx)(
             o.Text,
             d(
                 c(
                     {
                         variant: "text-sm/normal",
-                        className: a()(s[t], n, s[b]),
-                        style: _,
+                        className: a()(s[t], n, s[g]),
+                        style: u,
                     },
-                    E,
+                    _,
                 ),
-                { children: u },
+                { children: l },
             ),
         )
     );
 }
-E.Types = p;
+g.Types = p;

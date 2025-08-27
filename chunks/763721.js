@@ -1,4 +1,4 @@
-n.d(t, { z: () => m }), n(388685);
+n.d(t, { z: () => m }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(755721),
@@ -202,6 +202,26 @@ let h = [
                             },
                         ],
                     },
+                    label: {
+                        label: "Label",
+                        type: "text",
+                        defaultValue: "Example Label",
+                    },
+                    hideLabel: {
+                        label: "Hide Label",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
+                    description: {
+                        label: "Description",
+                        type: "text",
+                        defaultValue: "This is an example description",
+                    },
+                    required: {
+                        label: "Required",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
                     placeholder: {
                         label: "Placeholder",
                         type: "text",
@@ -348,6 +368,31 @@ let h = [
                     );
                 },
                 controls: {
+                    label: {
+                        label: "Label",
+                        type: "text",
+                        defaultValue: "Example Label",
+                    },
+                    hideLabel: {
+                        label: "Hide Label",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
+                    required: {
+                        label: "Required",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
+                    description: {
+                        label: "Description",
+                        type: "text",
+                        defaultValue: "This is an example description",
+                    },
+                    helperText: {
+                        label: "Helper Text",
+                        type: "text",
+                        defaultValue: void 0,
+                    },
                     placeholder: {
                         label: "Placeholder",
                         type: "text",
@@ -390,25 +435,33 @@ let h = [
                 id: "input-collection",
                 component: function (e) {
                     let {
-                            error: t,
-                            disabled: n,
-                            placeholder: i,
-                            value: c = "",
-                            readOnly: d,
-                            helperText: _,
-                            successMessage: p,
-                            showCharacterCount: m,
+                            label: t,
+                            hideLabel: n,
+                            description: i,
+                            required: c,
+                            error: d,
+                            disabled: _,
+                            placeholder: p,
+                            value: m = "",
+                            readOnly: g,
+                            helperText: E,
+                            successMessage: b,
+                            showCharacterCount: y,
                         } = e,
-                        g = (0, s.U)("UserSettingsDesignSystems"),
-                        E = {
-                            value: c,
-                            error: t,
-                            disabled: n,
-                            placeholder: i,
-                            readOnly: d,
-                            helperText: _,
-                            showCharacterCount: m,
-                            successMessage: p,
+                        O = (0, s.U)("UserSettingsDesignSystems"),
+                        v = {
+                            label: t,
+                            hideLabel: n,
+                            description: i,
+                            required: c,
+                            value: m,
+                            error: d,
+                            disabled: _,
+                            placeholder: p,
+                            readOnly: g,
+                            helperText: E,
+                            showCharacterCount: y,
+                            successMessage: b,
                         };
                     return (0, r.jsxs)(o.Kqy, {
                         children: [
@@ -418,9 +471,9 @@ let h = [
                                         title: "Text Input",
                                         children: (0, r.jsxs)(o.Kqy, {
                                             children: [
-                                                (0, r.jsx)(o.oil, u({}, E)),
-                                                (0, r.jsx)(o.oil, f(u({}, E), { clearable: !0 })),
-                                                g &&
+                                                (0, r.jsx)(o.oil, u({}, v)),
+                                                (0, r.jsx)(o.oil, f(u({}, v), { clearable: !0 })),
+                                                O &&
                                                     (0, r.jsxs)(r.Fragment, {
                                                         children: [
                                                             (0, r.jsx)(o.xJW, {
@@ -429,7 +482,7 @@ let h = [
                                                                     children: [
                                                                         (0, r.jsx)(
                                                                             o.oil,
-                                                                            f(u({}, E), {
+                                                                            f(u({}, v), {
                                                                                 leading: {
                                                                                     icon: o.lOy,
                                                                                     onClick: l.dG,
@@ -439,11 +492,11 @@ let h = [
                                                                         ),
                                                                         (0, r.jsx)(
                                                                             o.oil,
-                                                                            f(u({}, E), { leading: o.lOy }),
+                                                                            f(u({}, v), { leading: o.lOy }),
                                                                         ),
                                                                         (0, r.jsx)(
                                                                             o.oil,
-                                                                            f(u({}, E), {
+                                                                            f(u({}, v), {
                                                                                 leading: "https://discord.gg/",
                                                                             }),
                                                                         ),
@@ -456,7 +509,7 @@ let h = [
                                                                     children: [
                                                                         (0, r.jsx)(
                                                                             o.oil,
-                                                                            f(u({}, E), {
+                                                                            f(u({}, v), {
                                                                                 trailing: {
                                                                                     icon: o.lOy,
                                                                                     onClick: l.dG,
@@ -466,7 +519,7 @@ let h = [
                                                                         ),
                                                                         (0, r.jsx)(
                                                                             o.oil,
-                                                                            f(u({}, E), { trailing: o.lOy }),
+                                                                            f(u({}, v), { trailing: o.lOy }),
                                                                         ),
                                                                     ],
                                                                 }),
@@ -475,7 +528,7 @@ let h = [
                                                                 title: "Tags",
                                                                 children: (0, r.jsx)(
                                                                     o.oil,
-                                                                    f(u({}, E), {
+                                                                    f(u({}, v), {
                                                                         leading: {
                                                                             type: "tags",
                                                                             label: "Tags",
@@ -491,7 +544,7 @@ let h = [
                                     }),
                                     (0, r.jsx)(o.xJW, {
                                         title: "Text Input (Legacy)",
-                                        children: (0, r.jsx)(o.GSy, u({}, E)),
+                                        children: (0, r.jsx)(o.GSy, u({}, v)),
                                     }),
                                 ],
                             }),
@@ -500,28 +553,28 @@ let h = [
                                 children: (0, r.jsxs)(o.Kqy, {
                                     children: [
                                         (0, r.jsx)(o.E1j, {
-                                            query: c,
+                                            query: m,
                                             onChange: l.dG,
-                                            disabled: n,
-                                            placeholder: i,
+                                            disabled: _,
+                                            placeholder: p,
                                         }),
                                         (0, r.jsx)(o.E1j, {
-                                            query: c,
+                                            query: m,
                                             onChange: l.dG,
                                             size: "sm",
-                                            disabled: n,
-                                            placeholder: i,
+                                            disabled: _,
+                                            placeholder: p,
                                         }),
                                     ],
                                 }),
                             }),
                             (0, r.jsx)(o.xJW, {
                                 title: "Text Area",
-                                children: (0, r.jsx)(o.Kx8, u({}, E)),
+                                children: (0, r.jsx)(o.Kx8, u({}, v)),
                             }),
                             (0, r.jsx)(o.xJW, {
                                 title: "Text Area (Legacy)",
-                                children: (0, r.jsx)(a.iS, u({}, E)),
+                                children: (0, r.jsx)(a.iS, u({}, v)),
                             }),
                         ],
                     });
@@ -536,6 +589,26 @@ let h = [
                         label: "Placeholder",
                         type: "text",
                         defaultValue: "Enter some text...",
+                    },
+                    label: {
+                        label: "Label",
+                        type: "text",
+                        defaultValue: "Example Label",
+                    },
+                    hideLabel: {
+                        label: "Hide Label",
+                        type: "boolean",
+                        defaultValue: !1,
+                    },
+                    description: {
+                        label: "Description",
+                        type: "text",
+                        defaultValue: "This is an example description",
+                    },
+                    required: {
+                        label: "Required",
+                        type: "boolean",
+                        defaultValue: !1,
                     },
                     error: {
                         label: "Error Message",

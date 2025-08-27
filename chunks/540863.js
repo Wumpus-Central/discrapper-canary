@@ -78,20 +78,19 @@ function _(e, t) {
     return i;
 }
 let p = i.forwardRef(function (e, t) {
-    var n,
-        {
-            children: l,
-            disabled: u = !1,
-            className: _,
-            titleClassName: p,
-            tag: h = "h5",
-            required: m = !1,
-            style: g,
-            title: E,
-            error: b,
-            titleId: y,
+    var {
+            children: n,
+            disabled: l = !1,
+            className: u,
+            titleClassName: _,
+            tag: p = "h5",
+            required: h = !1,
+            style: m,
+            title: g,
+            error: E,
+            titleId: b,
         } = e,
-        O = f(e, [
+        y = f(e, [
             "children",
             "disabled",
             "className",
@@ -103,49 +102,49 @@ let p = i.forwardRef(function (e, t) {
             "error",
             "titleId",
         ]);
-    let v = i.useId(),
-        I = i.useId(),
-        T = null != y ? y : v,
-        S = null != b ? (null != (n = O.errorId) ? n : I) : void 0,
-        [A, C] = i.useState(void 0),
-        [N, R] = i.useState(void 0),
-        P = void 0 !== N;
+    let O = i.useId(),
+        v = i.useId(),
+        I = null != b ? b : O,
+        T = null != E ? v : void 0,
+        [S, A] = i.useState(void 0),
+        [C, N] = i.useState(void 0),
+        R = void 0 !== C;
     return (0, r.jsx)("div", {
         ref: t,
-        className: null != _ ? _ : void 0,
-        style: null != g ? g : void 0,
+        className: null != u ? u : void 0,
+        style: null != m ? m : void 0,
         children: (0, r.jsx)(a.ol, {
-            titleId: T,
-            errorId: S,
-            error: null != b ? b : void 0,
-            isFocused: A,
-            setIsFocused: C,
-            hasValue: N,
-            setHasValue: R,
+            titleId: I,
+            errorId: T,
+            error: null != E ? E : void 0,
+            isFocused: S,
+            setIsFocused: A,
+            hasValue: C,
+            setHasValue: N,
             children: (0, r.jsxs)("div", {
-                className: P ? s.fieldWrapper : void 0,
+                className: R ? s.fieldWrapper : void 0,
                 children: [
-                    null != E || null != b
+                    null != g || null != E
                         ? (0, r.jsx)(
                               o.v,
                               d(
                                   c(
                                       {
-                                          tag: h,
-                                          disabled: u,
-                                          required: m,
-                                          error: b,
-                                          className: p,
-                                          id: T,
-                                          errorId: S,
+                                          tag: p,
+                                          disabled: l,
+                                          required: h,
+                                          error: E,
+                                          className: _,
+                                          id: I,
+                                          errorId: T,
                                       },
-                                      O,
+                                      y,
                                   ),
-                                  { children: E },
+                                  { children: g },
                               ),
                           )
                         : null,
-                    l,
+                    n,
                 ],
             }),
         }),
