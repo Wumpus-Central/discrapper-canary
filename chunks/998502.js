@@ -263,6 +263,10 @@ let z = {
             null == (t = (n = this.getDiscordUtils()).setGameDetectionCallback) ||
                 t.call(n, (t, n) => e(t.map(Y), n.map(Y)));
         },
+        setGameDetectionErrorCallback(e) {
+            var t, n;
+            null == (t = (n = this.getDiscordUtils()).setGameDetectionErrorCallback) || t.call(n, e);
+        },
         setRobloxSubgameDetectionConfig(e, t) {
             var n, r;
             null == (n = (r = this.getDiscordUtils()).setRobloxSubgameDetectionConfig) || n.call(r, e, t);

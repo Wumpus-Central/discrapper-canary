@@ -4005,6 +4005,7 @@ var nb = (function (e) {
             (e.ROBLOX_SUBGAME_DETECTED = "roblox_subgame_detected"),
             (e.RUNNING_GAME_HEARTBEAT = "running_game_heartbeat"),
             (e.GAME_DETECTION_COMPARISON = "game_detection_comparison"),
+            (e.GAME_DETECTION_ERROR = "game_detection_error"),
             (e.ACTIVITY_UPDATED = "activity_updated"),
             (e.ACTIVITY_SESSION_JOINED = "activity_session_joined"),
             (e.ACTIVITY_SESSION_JOIN_FAILED = "activity_session_join_failed"),
