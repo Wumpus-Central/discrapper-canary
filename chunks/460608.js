@@ -1,64 +1,64 @@
-n.d(t, { Z: () => v }), n(642613), n(388685);
+n.d(t, { Z: () => x }), n(642613), n(388685);
 var r = n(951288),
-    o = n(647438),
-    i = n(597312),
+    i = n(647438),
+    o = n(597312),
     l = n(793030),
-    s = n(442837),
-    a = n(179360),
-    c = n(616780),
-    u = n(899667),
+    a = n(442837),
+    s = n(179360),
+    u = n(616780),
+    c = n(899667),
     d = n(720202),
     p = n(271383),
-    m = n(430824),
-    f = n(709054),
+    f = n(430824),
+    m = n(709054),
     _ = n(659679),
-    x = n(388032),
-    g = n(240379);
-function v(e) {
+    g = n(388032),
+    v = n(240379);
+function x(e) {
     let { guildId: t } = e,
-        n = (0, s.Wu)([u.Z], () => {
+        n = (0, a.Wu)([c.Z], () => {
             var e;
-            return null != (e = u.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
+            return null != (e = c.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
         }, [t]),
-        v = o.useMemo(
-            () => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)),
+        x = i.useMemo(
+            () => n.sort((e, t) => (m.default.extractTimestamp(e.id) < m.default.extractTimestamp(t.id) ? 1 : -1)),
             [n],
         ),
-        b = (0, s.Wu)([p.ZP], () => {
+        b = (0, a.Wu)([p.ZP], () => {
             let e = new Set();
             return (
-                v.forEach((n) => {
+                x.forEach((n) => {
                     null == p.ZP.getMember(t, n.userId) && e.add(n.userId);
                 }),
                 Array.from(e)
             );
-        }, [t, v]);
-    o.useEffect(() => {
+        }, [t, x]);
+    i.useEffect(() => {
         b.length > 0 && b.forEach((e) => d.Z.requestMember(t, e));
     }, [t, b]);
-    let h = o.useMemo(() => (b.length > 0 ? { [t]: b } : {}), [t, b]);
-    (0, c.$)(h);
-    let j = (0, s.e7)([m.Z], () => {
+    let h = i.useMemo(() => (b.length > 0 ? { [t]: b } : {}), [t, b]);
+    (0, u.$)(h, "GuildPowerupsRecentActivity");
+    let C = (0, a.e7)([f.Z], () => {
         var e;
-        return null == (e = m.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
+        return null == (e = f.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
     });
-    return (o.useEffect(() => {
-        j !== n.length && (0, a.C0)(t);
-    }, [t, j, n.length]),
-    0 === v.length)
+    return (i.useEffect(() => {
+        C !== n.length && (0, s.C0)(t);
+    }, [t, C, n.length]),
+    0 === x.length)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(l.X6, {
-                      className: g.header,
+                      className: v.header,
                       variant: "eyebrow",
                       color: "text-secondary",
-                      children: x.intl.string(x.t.yM9Krq),
+                      children: g.intl.string(g.t.yM9Krq),
                   }),
-                  (0, r.jsx)(i.zJ, {
-                      className: g.container,
+                  (0, r.jsx)(o.zJ, {
+                      className: v.container,
                       fade: !0,
-                      children: v.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, "boost-activity-".concat(t))),
+                      children: x.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, "boost-activity-".concat(t))),
                   }),
               ],
           });

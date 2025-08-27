@@ -158,7 +158,7 @@ function Z(e) {
             });
     }
     return (
-        (0, m.$)(p),
+        (0, m.$)(p, "GuildSettingsRolesEditMembers"),
         (0, r.jsx)("div", {
             className: T.contentWidth,
             children: (0, r.jsx)(h.Z, {

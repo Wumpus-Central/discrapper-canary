@@ -1,8 +1,8 @@
 n.d(t, { Z: () => z }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(202841),
-    o = n(442837),
+    o = n(202841),
+    a = n(442837),
     s = n(704215),
     l = n(481060),
     c = n(727637),
@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(161572),
     B = n(671955),
     Z = n(388032),
-    V = n(116649);
-function F(e, t, n) {
+    F = n(116649);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -96,7 +96,7 @@ function z(e) {
     var t;
     let {
             user: n,
-            currentUser: F,
+            currentUser: V,
             guildId: Y,
             channelId: z,
             messageId: q,
@@ -110,7 +110,7 @@ function z(e) {
             disableAutoFocus: er = !1,
         } = e,
         { analyticsLocations: ei } = (0, _.ZP)([...et, f.Z.USER_PROFILE_POPOUT]),
-        ea = (0, T.ZB)({
+        eo = (0, T.ZB)({
             layout: "POPOUT",
             userId: n.id,
             guildId: Y,
@@ -118,9 +118,9 @@ function z(e) {
             messageId: q,
             roleId: X,
         }),
-        eo = (0, o.e7)([v.Z], () => (null != Y ? v.Z.getGuild(Y) : null)),
+        ea = (0, a.e7)([v.Z], () => (null != Y ? v.Z.getGuild(Y) : null)),
         es = i.useMemo(() => (null != Y ? { [Y]: [n.id] } : {}), [Y, n.id]);
-    (0, d.$)(es);
+    (0, d.$)(es, "UserProfilePopout");
     let el = i.useRef(null),
         ec = (0, A.ZP)(n.id, Y),
         eu = (0, c.Z)(el),
@@ -146,7 +146,7 @@ function z(e) {
             },
         });
     let eE = (0, h.Z)({ location: "UserProfilePopout" }),
-        eb = n.id === F.id,
+        eb = n.id === V.id,
         [ey, eO] = (0, b.US)(eE && eb ? [s.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
         ev = ey === s.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         eI = (0, m.p)({ location: "UserProfilePopout" }),
@@ -161,7 +161,7 @@ function z(e) {
                                 hideRestrictedProfile: !0,
                                 customStatusPrompt: eT,
                             },
-                            ea,
+                            eo,
                             e,
                         ),
                         { appContext: en },
@@ -182,18 +182,18 @@ function z(e) {
                                           action: "PRESS_VIEW_PROFILE",
                                           analyticsLocations: ei,
                                       },
-                                      ea,
+                                      eo,
                                   ),
                               );
                       },
                   }),
         eC = er ? "div" : l.VqE,
         eN = (0, p.Dt)(),
-        eR = I.ZP.useName(null == eo ? void 0 : eo.id, z, n);
+        eR = I.ZP.useName(null == ea ? void 0 : ea.id, z, n);
     return (0, r.jsx)(_.Gt, {
         value: ei,
         children: (0, r.jsx)(T.Mt, {
-            value: ea,
+            value: eo,
             openedAt: Q,
             fetchStartedAt: null == ec ? void 0 : ec.fetchStartedAt,
             fetchEndedAt: null == ec ? void 0 : ec.fetchEndedAt,
@@ -216,9 +216,9 @@ function z(e) {
                             themeType: B.l.POPOUT,
                             children: [
                                 null != ed.interactionType &&
-                                    (0, r.jsx)(a.animated.div, {
+                                    (0, r.jsx)(o.animated.div, {
                                         style: ef,
-                                        className: V.backdrop,
+                                        className: F.backdrop,
                                     }),
                                 (0, r.jsxs)(x.Z, {
                                     children: [
@@ -246,7 +246,7 @@ function z(e) {
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: V.header,
+                                    className: F.header,
                                     children: [
                                         (0, r.jsx)(P.Z, {
                                             user: n,
@@ -256,7 +256,7 @@ function z(e) {
                                         }),
                                         (0, r.jsx)(w.Z, {
                                             userId: n.id,
-                                            className: V.toast,
+                                            className: F.toast,
                                             onClose: J,
                                         }),
                                         (0, r.jsx)(R.Z, {
@@ -297,9 +297,9 @@ function z(e) {
                                 }),
                                 (0, r.jsx)(U.Z, {
                                     user: n,
-                                    currentUser: F,
+                                    currentUser: V,
                                     displayProfile: ec,
-                                    guild: eo,
+                                    guild: ea,
                                     isHovering: null == ed.interactionType && eu,
                                     onOpenProfile: ee ? void 0 : eS,
                                     channelId: z,

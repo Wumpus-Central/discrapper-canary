@@ -93,7 +93,7 @@ function er(e) {
             config: { duration: 150 },
         }),
         eP = l.useMemo(() => (null != el ? { [el]: [t.id] } : {}), [el, t.id]);
-    (0, d.$)(eP);
+    (0, d.$)(eP, "UserProfileModalV2");
     let eT = (0, T.ZP)(t.id, eh ? el : void 0),
         eN = I.ZP.useName(null == eT ? void 0 : eT.guildId, eo, t),
         { relationshipType: eA, originApplicationId: eE } = (0, i.cj)([v.Z], () => ({

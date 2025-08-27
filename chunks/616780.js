@@ -1,10 +1,11 @@
-n.d(t, { $: () => u }), n(951288);
+n.d(t, { $: () => f }), n(951288);
 var r = n(647438),
     i = n(392711),
-    a = n.n(i);
+    o = n.n(i);
 n(902704);
-var o = n(941028);
-function s(e, t, n) {
+var a = n(941028),
+    s = n(960048);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -29,23 +30,36 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
+let d = !1;
+function f(e, t) {
     r.useEffect(
         () => (
-            a().forEach(e, (e, t) => (0, o.ym)(t, e)),
+            o().forEach(e, (e, n) => {
+                !d &&
+                    e.length > 50 &&
+                    ((d = !0),
+                    s.Z.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
+                        extra: {
+                            userIdsCount: e.length,
+                            guildId: n,
+                            reason: t,
+                        },
+                    })),
+                    (0, a.ym)(n, e);
+            }),
             () => {
-                a().forEach(e, (e, t) => (0, o.w5)(t, e));
+                o().forEach(e, (e, t) => (0, a.w5)(t, e));
             }
         ),
-        [e],
+        [e, t],
     );
 }

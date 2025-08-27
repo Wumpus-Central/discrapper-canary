@@ -58,18 +58,18 @@ function O(e, n) {
 }
 function h(e, n, h) {
     let j = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, o.$)(j), (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
+    (0, o.$)(j, "useThreadAdminActionItems"), (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
     let P = (0, r.e7)([g.Z], () => g.Z.getChannel(h)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         x = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        _ = (0, u.Z)(P, "Context Menu"),
-        y = (0, d.yw)(null == P ? void 0 : P.id);
+        y = (0, u.Z)(P, "Context Menu"),
+        _ = (0, d.yw)(null == P ? void 0 : P.id);
     return (null == x ? void 0 : x.id) === e.id
-        ? [_]
+        ? [y]
         : null == v || null == P || null == x
           ? []
           : [
-                y
+                _
                     ? (0, l.jsx)(a.sNh, {
                           id: "remove",
                           label: P.isForumPost()
@@ -82,7 +82,7 @@ function h(e, n, h) {
                 (0, s.BK)(e, v)
                     ? (0, l.jsx)(a.sNh, {
                           id: "kick",
-                          label: y
+                          label: _
                               ? p.intl.formatToPlainString(p.t["1Ie87u"], { user: e.username })
                               : p.intl.formatToPlainString(p.t["9l/iTU"], { user: e.username }),
                           color: "danger",
@@ -103,7 +103,7 @@ function h(e, n, h) {
                 (0, s.mm)(e, v)
                     ? (0, l.jsx)(a.sNh, {
                           id: "ban",
-                          label: y
+                          label: _
                               ? p.intl.formatToPlainString(p.t.i62APT, { user: e.username })
                               : p.intl.formatToPlainString(p.t.WnpUBg, { user: e.username }),
                           color: "danger",
