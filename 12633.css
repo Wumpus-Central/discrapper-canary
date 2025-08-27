@@ -15191,7 +15191,7 @@ svg.radioIcon_c1e9c4 {
 }
 
 .authBox__921c5 {
-    background-color: var(--background-base-lower);
+    background-color: var(--modal-background);
     border-radius: var(--radius-sm);
     box-shadow: var(--legacy-elevation-high);
     box-sizing: border-box;

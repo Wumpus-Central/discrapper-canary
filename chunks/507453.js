@@ -64,6 +64,7 @@ let o = {
             children: [
                 (0, l.jsx)(r.X6q, {
                     variant: "heading-xl/semibold",
+                    color: "header-primary",
                     children: s.intl.string(s.t.saHocH),
                 }),
                 null != t &&
