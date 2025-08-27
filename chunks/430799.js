@@ -41,6 +41,7 @@ e.exports = {
     contentFooterButtonCont: "contentFooterButtonCont_de2fa0",
     claimBtn: "claimBtn_de2fa0",
     portraitCtaBtn: "portraitCtaBtn_de2fa0",
+    portraitCtaBtnWrapper: "portraitCtaBtnWrapper_de2fa0",
     progressCont: "progressCont_de2fa0",
     questProgressRewardTile: "questProgressRewardTile_de2fa0",
     transcriptOverlay: "transcriptOverlay_de2fa0",
@@ -70,6 +71,4 @@ e.exports = {
     playPauseAnimation: "playPauseAnimation_de2fa0",
     transcriptBodySpinner: "transcriptBodySpinner_de2fa0",
     pauseText: "pauseText_de2fa0",
-    copyLinkBtn: "copyLinkBtn_de2fa0",
-    footerBtn: "footerBtn_de2fa0",
 };
