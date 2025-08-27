@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(472816), n(794429), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(224706),
@@ -16,16 +16,16 @@ var r = n(951288),
 let g = 4;
 function E(e) {
     let { widgets: t, onClick: n } = e,
-        o = (0, i.useMemo)(() => t.map((e) => e.games.map((e) => e.applicationId)).flat(), [t]),
-        a = (0, s.e7)([u.Z], () => u.Z.canFetchDetectableGames()),
+        a = (0, i.useMemo)(() => [...new Set(t.map((e) => e.games.map((e) => e.applicationId)).flat())], [t]),
+        o = (0, s.e7)([u.Z], () => u.Z.canFetchDetectableGames()),
         [E, y] = (0, i.useState)([]),
         { themeType: O } = (0, _.z)(),
         v = O === p.l.SIDEBAR;
     return (
         (0, i.useEffect)(() => {
-            if (a) return void c.Z.getDetectableGames();
+            if (o) return void c.Z.getDetectableGames();
             y(
-                o
+                a
                     .map((e) => u.Z.getDetectableGame(e))
                     .filter((e) => null != e)
                     .map((e) => {
@@ -45,7 +45,7 @@ function E(e) {
                     .filter((e) => "" !== e.image)
                     .slice(0, g),
             );
-        }, [o, a]),
+        }, [a, o]),
         (0, r.jsx)(l.P3F, {
             "aria-label": h.intl.string(h.t.JjiwFx),
             onClick: n,
@@ -65,8 +65,8 @@ function E(e) {
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === E.length - 1 && o.length > g,
-                                    gameCount: o.length - E.length,
+                                    displayCount: t === E.length - 1 && a.length > g,
+                                    gameCount: a.length - E.length,
                                 },
                                 t,
                             ),
@@ -78,12 +78,12 @@ function E(e) {
     );
 }
 function b(e) {
-    let { iconUrl: t, name: n, displayCount: i, gameCount: o } = e;
+    let { iconUrl: t, name: n, displayCount: i, gameCount: a } = e;
     return (0, r.jsxs)("div", {
         className: m.icon,
         children: [
             (0, r.jsx)("img", {
-                className: a()({ [m.displayCount]: i }),
+                className: o()({ [m.displayCount]: i }),
                 src: t,
                 alt: n,
             }),
@@ -93,7 +93,7 @@ function b(e) {
                     children: (0, r.jsxs)(l.Text, {
                         variant: "text-xs/medium",
                         className: m.displayCountTextColor,
-                        children: ["+", o],
+                        children: ["+", a],
                     }),
                 }),
         ],
