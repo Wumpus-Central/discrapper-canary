@@ -1,8 +1,8 @@
 n.d(t, { Z: () => G }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(523238),
+    o = n(442837),
+    a = n(523238),
     s = n(317381),
     l = n(988980),
     c = n(16609),
@@ -60,8 +60,8 @@ class U extends i.PureComponent {
                 pipWindows: t,
                 pipWidth: n,
                 maxX: i,
-                maxY: a,
-                theme: o,
+                maxY: o,
+                theme: a,
                 dockedRect: s,
                 appContext: l,
                 roundCorners: c,
@@ -85,9 +85,9 @@ class U extends i.PureComponent {
                     pipWindows: t,
                     pipWidth: n,
                     maxX: i,
-                    maxY: a,
+                    maxY: o,
                     dockedRect: s,
-                    theme: o,
+                    theme: a,
                     onWindowMove: this.handleWindowMove,
                     onWindowResize: this.handleWindowResize,
                     appContext: l,
@@ -102,15 +102,15 @@ class U extends i.PureComponent {
     constructor(...e) {
         super(...e),
             L(this, "handleWindowMove", (e, t) => {
-                o.Ao(e, t);
+                a.Ao(e, t);
             }),
             L(this, "handleWindowResize", (e) => {
-                o.d7(e, w.cL.VIDEO);
+                a.d7(e, w.cL.VIDEO);
             });
     }
 }
-let G = a.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z], (e) => {
-    var t, n, r, i, a, o, d;
+let G = o.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z], (e) => {
+    var t, n, r, i, o, a, d;
     let h,
         { popoutWindowKey: m, popoutWindowHasTitleBar: g = !1 } = e,
         I = b.Z.getWindowOpen(R.KJ3.CHANNEL_CALL_POPOUT),
@@ -122,12 +122,12 @@ let G = a.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z],
         G = M && U === P.Ez.PANEL,
         B = null != L && null != j && (null == (t = f.Z.getSelectedParticipant(j)) ? void 0 : t.type) === w.fO.ACTIVITY,
         Z = p.Z.getConnectedFrame(),
-        V = p.Z.getFrameLayoutMode() === D.U.FOCUSED,
-        F = null != m,
-        H = F ? b.Z.getWindow(m) : null,
-        Y = !!F && b.Z.isWindowFullScreen(m),
+        F = p.Z.getFrameLayoutMode() === D.U.FOCUSED,
+        V = null != m,
+        H = V ? b.Z.getWindow(m) : null,
+        Y = !!V && b.Z.isWindowFullScreen(m),
         W = C.Z.windowSize();
-    F &&
+    V &&
         (W =
             null == H
                 ? W
@@ -135,20 +135,20 @@ let G = a.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z],
                       width: H.innerWidth,
                       height: H.innerHeight,
                   });
-    let K = F ? R.IlC.POPOUT : R.IlC.APP,
+    let K = V ? R.IlC.POPOUT : R.IlC.APP,
         z = (e) => {
             if (
-                F &&
+                V &&
                 (0, E.Y)({
                     withTitleBar: g,
                     isFullScreen: Y,
                 })
             ) {
-                let t = (0, y.Q)({ location: "PictureInPicture" });
+                let t = (0, y.Qg)({ location: "PictureInPicture" });
                 return (
                     e -
                     (0, _.Y7)({
-                        isPopoutWindow: F,
+                        isPopoutWindow: V,
                         isSearchDesktopTopLevelEnabled: t,
                     })
                 );
@@ -156,19 +156,19 @@ let G = a.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z],
             return e;
         };
     h =
-        (null != L && x) || (F && M)
+        (null != L && x) || (V && M)
             ? null
-            : F || !I || M
+            : V || !I || M
               ? null != L && G
                   ? null != (n = S.Z.pipActivityWindow)
                       ? n
                       : S.Z.pipVideoWindow
-                  : null != Z && V
+                  : null != Z && F
                     ? null != (i = null != (r = S.Z.pipFrameWindow) ? r : S.Z.pipVideoWindow)
                         ? i
                         : S.Z.pipActivityWindow
-                    : null != (o = null != (a = S.Z.pipVideoWindow) ? a : S.Z.pipActivityWindow)
-                      ? o
+                    : null != (a = null != (o = S.Z.pipVideoWindow) ? o : S.Z.pipActivityWindow)
+                      ? a
                       : S.Z.pipFrameWindow
               : null;
     let q = Array.from(S.Z.pipWindows.values()),
@@ -181,21 +181,21 @@ let G = a.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z],
         en = A.Z.getChannelId() === et,
         er = null != et && f.Z.getChatOpen(et),
         ei = G || B,
-        ea = ei && null != L && (0, l.q)(L.applicationId),
-        eo = !ei && null != h && en && er;
+        eo = ei && null != L && (0, l.q)(L.applicationId),
+        ea = !ei && null != h && en && er;
     return {
         selectedPIPWindow: h,
         pipWindows: 0 === $.length ? k : $,
         pipWidth: X,
-        maxX: W.width - (eo ? ee : 0),
+        maxX: W.width - (ea ? ee : 0),
         maxY: W.height,
         theme: O.Z.theme,
         dockedRect: S.Z.getDockedRect(null != (d = null == h ? void 0 : h.id) ? d : ""),
         getDockedRectPositionY: z,
         appContext: K,
-        roundCorners: !ea,
+        roundCorners: !eo,
         windowSize: W,
-        inPopoutWindow: F,
+        inPopoutWindow: V,
         activityPIPWindow: J,
         chatOpen: er,
         callChatSidebarWidth: ee,

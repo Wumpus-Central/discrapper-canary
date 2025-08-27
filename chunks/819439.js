@@ -1,13 +1,14 @@
 n.d(t, {
-    $: () => o,
-    Q: () => s,
+    $V: () => a,
+    Qg: () => s,
+    ef: () => l,
 });
 var r = n(818083);
 let i = {
         enabled: !1,
         inExperiment: !1,
     },
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: "user",
         id: "2025-08_desktop_top_level_search_v1",
         label: "Desktop Top Level Search v1",
@@ -31,13 +32,18 @@ let i = {
             },
         ],
     });
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = a.useExperiment({ location: t }, { autoTrackExposure: n });
+        { enabled: r } = o.useExperiment({ location: t }, { autoTrackExposure: n });
     return r;
 }
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+        { enabled: r } = o.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return r;
+}
+function l(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { inExperiment: r } = o.useExperiment({ location: t }, { autoTrackExposure: n });
     return r;
 }

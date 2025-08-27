@@ -1,8 +1,8 @@
 n.d(t, { w: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(892071);
 function S(e) {
     let { windowKey: t, children: n } = e,
-        a = null != t,
+        o = null != t,
         [S] = i.useState(() => v.ZP.getEnableHardwareAcceleration()),
         {
             locale: A,
@@ -46,8 +46,8 @@ function S(e) {
             return {
                 locale: b.default.locale,
                 theme: y.Z.theme,
-                focused: a ? m.Z.getWindowFocused(t) : O.Z.isFocused(),
-                currentWindow: a && null != (e = m.Z.getWindow(t)) ? e : window,
+                focused: o ? m.Z.getWindowFocused(t) : O.Z.isFocused(),
+                currentWindow: o && null != (e = m.Z.getWindow(t)) ? e : window,
                 fontScale: c.Z.fontScale,
                 fontScaleClass: c.Z.fontScaleClass,
                 keyboardModeEnabled: c.Z.keyboardModeEnabled,
@@ -62,23 +62,23 @@ function S(e) {
             };
         }),
         Z = u.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
-        V = (0, p.Z)(R, __OVERLAY__ || N),
-        F = 0;
-    1 !== x && (F = (0, l.OdO)(F, l.bgu.REDUCE_SATURATION_ENABLED));
+        F = (0, p.Z)(R, __OVERLAY__ || N),
+        V = 0;
+    1 !== x && (V = (0, l.OdO)(V, l.bgu.REDUCE_SATURATION_ENABLED));
     let H = (0, I.A)(),
         Y = (0, h.Ml)("RootThemeContextProvider"),
         W = (0, h.CL)("RootThemeContextProvider"),
         K = (0, h.VM)("RootThemeContextProvider"),
         z = f.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
         q = (0, d.Z)("RootThemeContextProvider"),
-        X = (0, E.$)({ location: "RootThemeContextProvider" }),
+        X = (0, E.$V)({ location: "RootThemeContextProvider" }),
         Q = (0, _.On)({
-            isPopoutWindow: a,
+            isPopoutWindow: o,
             isSearchDesktopTopLevelEnabled: X,
         });
     return (0, r.jsx)(l.wMY, {
         theme: C,
-        flags: F,
+        flags: V,
         saturation: x,
         density: H,
         children: (0, r.jsx)(T.cE, {
@@ -89,7 +89,7 @@ function S(e) {
             fontScale: P,
             fontScaleClass: w,
             keyboardModeEnabled: D,
-            mouseMode: V,
+            mouseMode: F,
             saturation: x,
             desaturateUserColors: L,
             useForcedColors: j,
@@ -98,8 +98,8 @@ function S(e) {
             alwaysShowLinkDecorations: U,
             hardwareAccelerationEnabled: S,
             highContrastMode: Z && B,
-            isPopoutWindow: a,
-            rootClassName: o()(Q, {
+            isPopoutWindow: o,
+            rootClassName: a()(Q, {
                 "confetti-mode": G,
                 "refresh-fast-follow-avatars": Y && !q,
                 "refresh-fast-follow-guild-bg": W,

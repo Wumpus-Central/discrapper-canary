@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(951288);
 n(647438);
 var i = n(873546),
-    a = n(442837),
-    o = n(475179),
+    o = n(442837),
+    a = n(475179),
     s = n(100527),
     l = n(906732),
     c = n(358221),
@@ -82,9 +82,9 @@ function C(e, t) {
         r,
         i = N(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -93,8 +93,8 @@ function N(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 async function R(e) {
@@ -131,12 +131,12 @@ function P(e) {
             disableDoubleClick: L,
         } = e,
         j = null == s || (0, O.AB)(s) ? null : s,
-        M = (0, a.e7)([m.Z], () => m.Z.isInChannel(j) || !1),
-        k = (0, a.e7)([c.Z], () => null != j && c.Z.getParticipantsListOpen(j)),
+        M = (0, o.e7)([m.Z], () => m.Z.isInChannel(j) || !1),
+        k = (0, o.e7)([c.Z], () => null != j && c.Z.getParticipantsListOpen(j)),
         { enabled: U, inInbox: G } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: B } = (0, u.Z)({ location: "HeaderBar" }),
-        Z = (0, _.$)({ location: "HeaderBar" });
-    function V() {
+        Z = (0, _.$V)({ location: "HeaderBar" });
+    function F() {
         if (null == S) return null;
         let e = null != s && !D && !Z;
         return i.tq
@@ -166,7 +166,7 @@ function P(e) {
                               className: v.controlButtonWrapper,
                               children: [
                                   (0, r.jsx)(b.ZP.Divider, {}),
-                                  (0, r.jsx)(h.Z, { onClick: () => o.Z.toggleParticipantsList(j, !k) }),
+                                  (0, r.jsx)(h.Z, { onClick: () => a.Z.toggleParticipantsList(j, !k) }),
                               ],
                           }),
                   ],
@@ -175,7 +175,7 @@ function P(e) {
     return (0, r.jsx)(b.ZP, {
         className: n,
         innerClassName: E,
-        toolbar: V(),
+        toolbar: F(),
         transparent: I,
         showToolbar: T,
         onDoubleClick: () => R(L),
@@ -187,13 +187,13 @@ function P(e) {
     });
 }
 function w(e) {
-    let { children: t, className: n, "aria-label": i, "aria-labelledby": a, role: o, disableDoubleClick: s } = e;
+    let { children: t, className: n, "aria-label": i, "aria-labelledby": o, role: a, disableDoubleClick: s } = e;
     return (0, r.jsx)(b.ZP, {
         className: n,
         onDoubleClick: () => R(s),
         "aria-label": i,
-        "aria-labelledby": a,
-        role: o,
+        "aria-labelledby": o,
+        role: a,
         children: t,
     });
 }

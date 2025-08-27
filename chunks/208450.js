@@ -509,7 +509,7 @@ function W(e) {
             location: "Search",
         }),
         F = k || Z,
-        V = (0, A.$)({ location: "Search" }),
+        V = (0, A.$V)({ location: "Search" }),
         W = i.useMemo(
             () =>
                 t.type === U.aib.DMS
@@ -531,23 +531,29 @@ function W(e) {
                           })
                         : G.intl.string(G.t["5h0QOD"]),
             [t.type, F, L, V],
-        );
-    return (0, r.jsx)(Y, {
-        className: n,
-        searchPopoutClassName: s,
-        searchBarContainerClassName: o,
-        searchBarClassName: a,
-        searchContext: t,
-        isSearching: v,
-        editorState: b,
-        hasResults: C,
-        keyboardModeEnabled: f,
-        onSearch: x,
-        isSearchActive: S,
-        placeholder: W,
-        popoutAlignment: l,
-        isSearchFiltersRedesignEnabled: F,
-    });
+        ),
+        K = (0, A.ef)({ location: "Search" });
+    return (
+        i.useEffect(() => {
+            K && (0, M.O2)({ searchContext: t });
+        }, [K, t]),
+        (0, r.jsx)(Y, {
+            className: n,
+            searchPopoutClassName: s,
+            searchBarContainerClassName: o,
+            searchBarClassName: a,
+            searchContext: t,
+            isSearching: v,
+            editorState: b,
+            hasResults: C,
+            keyboardModeEnabled: f,
+            onSearch: x,
+            isSearchActive: S,
+            placeholder: W,
+            popoutAlignment: l,
+            isSearchFiltersRedesignEnabled: F,
+        })
+    );
 }
 function K(e) {
     let { className: t, guildId: n, channelId: i } = e,
