@@ -115,23 +115,25 @@ function K() {
             });
     }
     let i = [],
-        o = [];
+        o = new Set(),
+        a = [];
     for (let e = 1; e < V.length; e += 1) {
         let t = W(V[e]);
         null != t &&
             ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) ||
                 O.Z.can(N.Plq.VIEW_CHANNEL, t.record)) &&
-            o.push(t);
+            (a.push(t), o.add(t.record.id));
     }
-    o.length > 0 && i.push((0, u.o6)(R.intl.string(R.t["80lOZ2"])), ...o);
-    let s = Y((e) => e === r || V.includes(e));
-    s.length > 0 && i.push((0, u.o6)(R.intl.string(R.t["4B63jY"])), ...s);
+    a.length > 0 && i.push((0, u.o6)(R.intl.string(R.t["80lOZ2"])), ...a);
+    let s = Y((e) => e === r || V.includes(e) || o.has(e));
+    if (s.length > 0) for (let e of (i.push((0, u.o6)(R.intl.string(R.t["4B63jY"]))), s)) o.add(e.record.id), i.push(e);
     let l = v.ZP.getMentionChannelIds()
-        .filter((e) => e !== r && !V.includes(e))
+        .filter((e) => e !== r && !V.includes(e) && !o.has(e))
         .map((e) => W(e))
         .filter(C.lm)
         .reverse();
-    if ((l.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t["61Df19"]))), (i = i.concat(l))), null != n)) {
+    if (l.length > 0) for (let e of (i.push((0, u.o6)(R.intl.string(R.t["61Df19"]))), l)) o.add(e.record.id), i.push(e);
+    if (null != n) {
         let e = E.ZP.getSelectableChannelIds(n)
             .filter((e) => {
                 let t = m.Z.getChannel(e);
@@ -140,6 +142,7 @@ function K() {
                         null == t ||
                         e === r ||
                         V.includes(e) ||
+                        o.has(e) ||
                         S.ZP.isChannelMuted(t.guild_id, e) ||
                         (null != t.parent_id && S.ZP.isChannelMuted(t.guild_id, t.parent_id))
                     ) && (0, f.d)(t)
@@ -150,14 +153,12 @@ function K() {
         Object.values(_.Z.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
             for (let n in t) {
                 let t = W(n);
-                null != t && e.push(t);
+                null == t || o.has(t.record.id) || e.push(t);
             }
         }),
             e.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t.ieCAhI))), (i = i.concat(e)));
     }
-    return a()(i)
-        .uniqBy((e) => e.record.id)
-        .value();
+    return i;
 }
 function z(e, t) {
     switch (U) {
