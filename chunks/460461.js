@@ -1,6 +1,6 @@
 n.d(t, {
-    J: () => T,
-    Z: () => w,
+    J: () => P,
+    Z: () => R,
 }),
     n(953529),
     n(388685),
@@ -17,52 +17,53 @@ n.d(t, {
     n(433524);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(755721),
-    s = n(481060),
-    o = n(484614),
-    c = n(852860),
-    d = n(688465),
-    u = n(970061),
-    m = n(456268),
-    g = n(134432),
-    p = n(813197),
-    h = n(208567),
-    f = n(496675),
-    b = n(768581),
-    x = n(63063),
-    j = n(434404),
-    v = n(999382),
-    _ = n(718157),
-    O = n(450474),
-    y = n(190287),
-    C = n(465520),
-    N = n(981631),
-    E = n(388032),
-    I = n(539981);
-let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
-    T = () => {
+    l = n(345074),
+    a = n(442837),
+    s = n(755721),
+    o = n(481060),
+    c = n(484614),
+    d = n(852860),
+    u = n(688465),
+    m = n(970061),
+    g = n(456268),
+    p = n(134432),
+    h = n(813197),
+    f = n(208567),
+    b = n(496675),
+    x = n(768581),
+    j = n(63063),
+    v = n(434404),
+    _ = n(999382),
+    O = n(718157),
+    y = n(450474),
+    C = n(190287),
+    N = n(465520),
+    E = n(981631),
+    I = n(388032),
+    S = n(539981);
+let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
+    P = () => {
         let {
             guild: e,
             guildMetadata: t,
             submitting: n,
-        } = (0, l.cj)([v.Z], () => ({
-            submitting: v.Z.isSubmitting(),
-            guild: v.Z.getGuild(),
-            guildMetadata: v.Z.getMetadata(),
+        } = (0, a.cj)([_.Z], () => ({
+            submitting: _.Z.isSubmitting(),
+            guild: _.Z.getGuild(),
+            guildMetadata: _.Z.getMetadata(),
         }));
-        return (0, r.jsx)(c.Z, {
+        return (0, r.jsx)(d.Z, {
             submitting: n,
             onReset: () => {
-                null != e && j.Z.init(e.id);
+                null != e && v.Z.init(e.id);
             },
             onSave: () => {
                 null != e &&
-                    (j.Z.saveGuild(e.id, {
+                    (v.Z.saveGuild(e.id, {
                         discoverySplash: e.discoverySplash,
                         description: e.description,
                     }),
-                    (0, m.Vv)({
+                    (0, g.Vv)({
                         guildId: e.id,
                         primaryCategoryId: t.primaryCategoryId,
                         keywords: t.keywords,
@@ -77,41 +78,41 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             },
         });
     },
-    P = () => {
+    w = () => {
         var e;
         let t = i.useRef(null),
-            c = (0, l.e7)([v.Z], () => v.Z.getGuild()),
-            [T, P] = i.useState(!1);
+            d = (0, a.e7)([_.Z], () => _.Z.getGuild()),
+            [P, w] = i.useState(!1);
         i.useEffect(() => {
-            T || null == c || ((0, m.le)(), (0, m.aC)(c.id), (0, m.i3)(c.id), P(!0));
-        }, [c, T]);
-        let { canManageGuild: w } = (0, l.cj)([f.Z], () => ({ canManageGuild: f.Z.can(N.Plq.MANAGE_GUILD, c) })),
-            R = (0, l.e7)([v.Z], () => v.Z.isGuildMetadataLoaded()),
-            Z = (0, l.e7)([v.Z], () => (null != c ? v.Z.getMetadata() : null)),
-            D = (0, l.e7)([v.Z], () => (null != c && (null == Z ? void 0 : Z.isPublished) ? v.Z.getSlug() : null)),
-            [A, L] = i.useState([!0]),
-            [k, M] = i.useState(!0),
-            [G, U] = i.useState([!1]),
-            [B, F] = i.useState([""]);
+            P || null == d || ((0, g.le)(), (0, g.aC)(d.id), (0, g.i3)(d.id), w(!0));
+        }, [d, P]);
+        let { canManageGuild: R } = (0, a.cj)([b.Z], () => ({ canManageGuild: b.Z.can(E.Plq.MANAGE_GUILD, d) })),
+            Z = (0, a.e7)([_.Z], () => _.Z.isGuildMetadataLoaded()),
+            D = (0, a.e7)([_.Z], () => (null != d ? _.Z.getMetadata() : null)),
+            A = (0, a.e7)([_.Z], () => (null != d && (null == D ? void 0 : D.isPublished) ? _.Z.getSlug() : null)),
+            [L, k] = i.useState([!0]),
+            [M, G] = i.useState(!0),
+            [U, B] = i.useState([!1]),
+            [F, H] = i.useState([""]);
         i.useEffect(() => {
-            if (null !== Z) {
+            if (null !== D) {
                 let e = [],
                     t = [];
-                Z.socialLinks.forEach((n, r) => {
+                D.socialLinks.forEach((n, r) => {
                     if ("" !== n) {
                         let i = ((e) => {
                             try {
                                 var t, n, r, i;
                                 let l = new URL(e).hostname.split(".");
                                 if (3 === l.length && "bandcamp" === l[1].toLowerCase())
-                                    return C.z.bandcamp.presentation;
+                                    return N.z.bandcamp.presentation;
                                 let a = null != (n = null == (t = l.shift()) ? void 0 : t.toLowerCase()) ? n : "";
                                 if (
                                     ("www" === a &&
                                         (a = null != (i = null == (r = l.shift()) ? void 0 : r.toLowerCase()) ? i : ""),
-                                    a in C.z)
+                                    a in N.z)
                                 )
-                                    return C.z[a].presentation;
+                                    return N.z[a].presentation;
                                 return null;
                             } catch (e) {
                                 return null;
@@ -120,51 +121,51 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         null !== i ? ((t[r] = i), (e[r] = !0)) : (e[r] = !1);
                     } else e[r] = !0;
                 }),
-                    F(t),
-                    L(e),
-                    M(e.every((e) => !0 === e));
+                    H(t),
+                    k(e),
+                    G(e.every((e) => !0 === e));
             }
-        }, [Z]);
-        let H = (0, l.e7)([v.Z], () => (null != c ? v.Z.getErrors() : null));
-        if (null == c || null == Z) return null;
-        let z = (e) => {
-                j.Z.updateGuild({ discoverySplash: e });
+        }, [D]);
+        let z = (0, a.e7)([_.Z], () => (null != d ? _.Z.getErrors() : null));
+        if (null == d || null == D) return null;
+        let W = (e) => {
+                v.Z.updateGuild({ discoverySplash: e });
             },
-            W = (e) => {
+            V = (e) => {
                 let t = () => {
-                    (0, m.W1)(c.id, e),
+                    (0, g.W1)(d.id, e),
                         e
-                            ? (0, m.Vv)({
-                                  guildId: c.id,
-                                  primaryCategoryId: Z.primaryCategoryId,
-                                  keywords: Z.keywords,
-                                  emojiDiscoverabilityEnabled: Z.emojiDiscoverabilityEnabled,
-                                  partnerActionedTimestamp: Z.partnerActionedTimestamp,
-                                  partnerApplicationTimestamp: Z.partnerApplicationTimestamp,
+                            ? (0, g.Vv)({
+                                  guildId: d.id,
+                                  primaryCategoryId: D.primaryCategoryId,
+                                  keywords: D.keywords,
+                                  emojiDiscoverabilityEnabled: D.emojiDiscoverabilityEnabled,
+                                  partnerActionedTimestamp: D.partnerActionedTimestamp,
+                                  partnerApplicationTimestamp: D.partnerApplicationTimestamp,
                                   isPublished: !0,
-                                  reasonsToJoin: Z.reasonsToJoin,
-                                  socialLinks: Z.socialLinks,
-                                  about: Z.about,
+                                  reasonsToJoin: D.reasonsToJoin,
+                                  socialLinks: D.socialLinks,
+                                  about: D.about,
                               })
-                            : (0, m.Vv)({
-                                  guildId: c.id,
-                                  primaryCategoryId: Z.primaryCategoryId,
-                                  keywords: Z.keywords,
-                                  emojiDiscoverabilityEnabled: Z.emojiDiscoverabilityEnabled,
-                                  partnerActionedTimestamp: Z.partnerActionedTimestamp,
-                                  partnerApplicationTimestamp: Z.partnerApplicationTimestamp,
+                            : (0, g.Vv)({
+                                  guildId: d.id,
+                                  primaryCategoryId: D.primaryCategoryId,
+                                  keywords: D.keywords,
+                                  emojiDiscoverabilityEnabled: D.emojiDiscoverabilityEnabled,
+                                  partnerActionedTimestamp: D.partnerActionedTimestamp,
+                                  partnerApplicationTimestamp: D.partnerApplicationTimestamp,
                                   isPublished: !1,
-                                  reasonsToJoin: Z.reasonsToJoin,
-                                  socialLinks: Z.socialLinks,
-                                  about: Z.about,
+                                  reasonsToJoin: D.reasonsToJoin,
+                                  socialLinks: D.socialLinks,
+                                  about: D.about,
                               }),
-                        j.Z.saveGuild(c.id, {
-                            discoverySplash: c.discoverySplash,
-                            description: c.description,
+                        v.Z.saveGuild(d.id, {
+                            discoverySplash: d.discoverySplash,
+                            description: d.description,
                         });
                 };
                 if (e) return void t();
-                null != c.vanityURLCode
+                null != d.vanityURLCode
                     ? n
                           .e("66731")
                           .then(n.bind(n, 241485))
@@ -173,232 +174,232 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           })
                     : t();
             },
-            V = (e) => {
+            K = (e) => {
                 let { reason: t = "", emoji_name: n = "" } = e;
                 return null !== t && t.length >= 10 && t.length <= 128 && null !== n;
             },
-            K = [
+            Y = [
                 {
-                    title: E.intl.string(E.t["/SWsHx"]),
+                    title: I.intl.string(I.t["/SWsHx"]),
                     items: [
                         {
-                            description: E.intl.string(E.t.DU8jFx),
-                            completed: null !== c.discoverySplash && "" !== c.discoverySplash,
+                            description: I.intl.string(I.t.DU8jFx),
+                            completed: null !== d.discoverySplash && "" !== d.discoverySplash,
                         },
                         {
-                            description: E.intl.string(E.t.SW5OHx),
-                            completed: null !== c.description && "" !== c.description,
+                            description: I.intl.string(I.t.SW5OHx),
+                            completed: null !== d.description && "" !== d.description,
                         },
                         {
-                            description: E.intl.string(E.t.m3b3WF),
-                            completed: null !== Z.about && Z.about.length >= 300 && Z.about.length <= 2400,
+                            description: I.intl.string(I.t.m3b3WF),
+                            completed: null !== D.about && D.about.length >= 300 && D.about.length <= 2400,
                         },
                         {
-                            description: E.intl.string(E.t.qpx5MD),
+                            description: I.intl.string(I.t.qpx5MD),
                             completed:
-                                null !== Z.reasonsToJoin &&
-                                Z.reasonsToJoin.every(
+                                null !== D.reasonsToJoin &&
+                                D.reasonsToJoin.every(
                                     (e) =>
                                         ((e) => {
                                             let { reason: t = "", emoji_name: n = "" } = e;
                                             return (null === t || "" === t) && null === n;
-                                        })(e) || V(e),
+                                        })(e) || K(e),
                                 ) &&
-                                Z.reasonsToJoin.filter(V).length >= 2,
+                                D.reasonsToJoin.filter(K).length >= 2,
                         },
                     ],
                 },
             ],
-            Y = (e, t) => {
-                let n = [...G];
-                (n[e] = t), U(n);
+            X = (e, t) => {
+                let n = [...U];
+                (n[e] = t), B(n);
             };
         return (0, r.jsx)("div", {
-            className: I.settingsColumn,
+            className: S.settingsColumn,
             children: (0, r.jsx)("div", {
-                className: I.settingsContainer,
-                children: (0, r.jsx)(s.w0Z, {
-                    className: I.settingsScroller,
+                className: S.settingsContainer,
+                children: (0, r.jsx)(o.w0Z, {
+                    className: S.settingsScroller,
                     children: (0, r.jsx)("main", {
                         ref: t,
-                        className: I.settingsContent,
-                        children: (0, r.jsx)(s.JcV, {
+                        className: S.settingsContent,
+                        children: (0, r.jsx)(o.JcV, {
                             containerRef: t,
                             children: (0, r.jsxs)("div", {
-                                className: I.container,
+                                className: S.container,
                                 children: [
-                                    (0, r.jsxs)(s.hjN, {
-                                        className: I.mainContent,
+                                    (0, r.jsxs)(o.hjN, {
+                                        className: S.mainContent,
                                         title: (0, r.jsxs)("div", {
                                             children: [
-                                                E.intl.string(E.t.kGlQGB),
+                                                I.intl.string(I.t.kGlQGB),
                                                 " ",
-                                                (0, r.jsx)(d.Z, { className: I.betaTag }),
+                                                (0, r.jsx)(u.Z, { className: S.betaTag }),
                                             ],
                                         }),
-                                        tag: s.RB0.H1,
+                                        tag: o.RB0.H1,
                                         children: [
-                                            (0, r.jsxs)(s.R94, {
-                                                className: I.tabMainDescription,
-                                                type: s.geA.DESCRIPTION,
+                                            (0, r.jsxs)(o.R94, {
+                                                className: S.tabMainDescription,
+                                                type: o.geA.DESCRIPTION,
                                                 children: [
-                                                    E.intl.format(E.t["+ScrMT"], {
+                                                    I.intl.format(I.t["+ScrMT"], {
                                                         discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT,
                                                     }),
                                                     " ",
-                                                    E.intl.format(E.t.T6WtKy, {
-                                                        learnMoreURL: x.Z.getArticleURL(N.BhN.SERVER_WEB_PAGES),
+                                                    I.intl.format(I.t.T6WtKy, {
+                                                        learnMoreURL: j.Z.getArticleURL(E.BhN.SERVER_WEB_PAGES),
                                                     }),
                                                 ],
                                             }),
                                             (() => {
-                                                if (!Z.isPublished || null == D) return;
-                                                let e = S + D;
-                                                return (0, r.jsxs)(s.hjN, {
-                                                    className: I.noDividerFormSection,
+                                                if (!D.isPublished || null == A) return;
+                                                let e = T + A;
+                                                return (0, r.jsxs)(o.hjN, {
+                                                    className: S.noDividerFormSection,
                                                     children: [
-                                                        (0, r.jsx)(s.vwX, {
-                                                            className: I.formTitle,
-                                                            children: E.intl.string(E.t.safBZ2),
+                                                        (0, r.jsx)(o.vwX, {
+                                                            className: S.formTitle,
+                                                            children: I.intl.string(I.t.safBZ2),
                                                         }),
-                                                        (0, r.jsx)(o.Z, { value: e }),
+                                                        (0, r.jsx)(c.Z, { value: e }),
                                                         (0, r.jsx)("div", {
                                                             "data-button-hoisted-classname-wrapper": !0,
-                                                            className: I.viewPageButton,
-                                                            children: (0, r.jsx)(s.zxk, {
+                                                            className: S.viewPageButton,
+                                                            children: (0, r.jsx)(o.zxk, {
                                                                 variant: "primary",
                                                                 size: "sm",
-                                                                text: E.intl.string(E.t.NI8iGB),
+                                                                text: I.intl.string(I.t.NI8iGB),
                                                                 onClick: () => window.open(e),
                                                             }),
                                                         }),
                                                     ],
                                                 });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: I.divider }),
+                                            (0, r.jsx)(o.$i$, { className: S.divider }),
                                             (() => {
-                                                if (null != c)
+                                                if (null != d)
                                                     return (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsxs)(s.hjN, {
+                                                            (0, r.jsxs)(o.hjN, {
                                                                 children: [
-                                                                    (0, r.jsx)(s.vwX, {
-                                                                        className: I.formTitle,
-                                                                        children: E.intl.string(E.t.GjPpSk),
+                                                                    (0, r.jsx)(o.vwX, {
+                                                                        className: S.formTitle,
+                                                                        children: I.intl.string(I.t.GjPpSk),
                                                                     }),
-                                                                    (0, r.jsx)(s.R94, {
-                                                                        type: s.geA.DESCRIPTION,
-                                                                        className: I.description,
-                                                                        children: E.intl.string(E.t.MVXonJ),
+                                                                    (0, r.jsx)(o.R94, {
+                                                                        type: o.geA.DESCRIPTION,
+                                                                        className: S.description,
+                                                                        children: I.intl.string(I.t.MVXonJ),
                                                                     }),
                                                                 ],
                                                             }),
-                                                            (0, r.jsx)(_.E, {
-                                                                guildId: c.id,
-                                                                guildMetadata: Z,
-                                                                isDisabled: !w,
+                                                            (0, r.jsx)(O.E, {
+                                                                guildId: d.id,
+                                                                guildMetadata: D,
+                                                                isDisabled: !R,
                                                             }),
-                                                            (0, r.jsxs)(s.hjN, {
-                                                                className: I.noDividerFormSection,
+                                                            (0, r.jsxs)(o.hjN, {
+                                                                className: S.noDividerFormSection,
                                                                 children: [
-                                                                    (0, r.jsx)(s.vwX, {
-                                                                        className: I.formTitle,
-                                                                        children: E.intl.string(E.t.oOPlPD),
+                                                                    (0, r.jsx)(o.vwX, {
+                                                                        className: S.formTitle,
+                                                                        children: I.intl.string(I.t.oOPlPD),
                                                                     }),
-                                                                    (0, r.jsx)(O.Z, {
-                                                                        guild: c,
-                                                                        guildMetadata: Z,
-                                                                        disabled: !w,
+                                                                    (0, r.jsx)(y.Z, {
+                                                                        guild: d,
+                                                                        guildMetadata: D,
+                                                                        disabled: !R,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            (null == H ? void 0 : H.category) != null
-                                                                ? (0, r.jsx)(s.Text, {
+                                                            (null == z ? void 0 : z.category) != null
+                                                                ? (0, r.jsx)(o.Text, {
                                                                       color: "text-danger",
-                                                                      className: I.error,
+                                                                      className: S.error,
                                                                       variant: "text-sm/normal",
-                                                                      children: H.category,
+                                                                      children: z.category,
                                                                   })
                                                                 : null,
                                                         ],
                                                     });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: I.divider }),
+                                            (0, r.jsx)(o.$i$, { className: S.divider }),
                                             (() => {
-                                                if (null != c)
+                                                if (null != d)
                                                     return (0, r.jsxs)(r.Fragment, {
                                                         children: [
-                                                            (0, r.jsxs)(s.hjN, {
-                                                                className: I.twoColumnFormSection,
+                                                            (0, r.jsxs)(o.hjN, {
+                                                                className: S.twoColumnFormSection,
                                                                 children: [
                                                                     (0, r.jsxs)("div", {
                                                                         children: [
-                                                                            (0, r.jsx)(s.vwX, {
-                                                                                className: I.formTitle,
-                                                                                children: E.intl.string(E.t["8bT/Cg"]),
+                                                                            (0, r.jsx)(o.vwX, {
+                                                                                className: S.formTitle,
+                                                                                children: I.intl.string(I.t["8bT/Cg"]),
                                                                             }),
-                                                                            (0, r.jsx)(s.R94, {
-                                                                                type: s.geA.DESCRIPTION,
-                                                                                className: I.formDescription,
-                                                                                children: E.intl.string(E.t.WCWT7O),
+                                                                            (0, r.jsx)(o.R94, {
+                                                                                type: o.geA.DESCRIPTION,
+                                                                                className: S.formDescription,
+                                                                                children: I.intl.string(I.t.WCWT7O),
                                                                             }),
-                                                                            (0, r.jsxs)(a.zx, {
-                                                                                size: a.zx.Sizes.SMALL,
-                                                                                color: a.zx.Colors.PRIMARY,
+                                                                            (0, r.jsxs)(s.zx, {
+                                                                                size: s.zx.Sizes.SMALL,
+                                                                                color: s.zx.Colors.PRIMARY,
                                                                                 children: [
-                                                                                    E.intl.string(E.t.yG2pUl),
-                                                                                    (0, r.jsx)(p.ZP, {
-                                                                                        disabled: !w,
-                                                                                        onChange: z,
+                                                                                    I.intl.string(I.t.yG2pUl),
+                                                                                    (0, r.jsx)(h.ZP, {
+                                                                                        disabled: !R,
+                                                                                        onChange: W,
                                                                                     }),
                                                                                 ],
                                                                             }),
                                                                         ],
                                                                     }),
-                                                                    (0, r.jsx)(h.Z, {
-                                                                        image: c.discoverySplash,
+                                                                    (0, r.jsx)(f.Z, {
+                                                                        image: d.discoverySplash,
                                                                         makeURL: (e) =>
-                                                                            b.ZP.getGuildDiscoverySplashURL({
-                                                                                id: c.id,
+                                                                            x.ZP.getGuildDiscoverySplashURL({
+                                                                                id: d.id,
                                                                                 splash: e,
-                                                                                size: 512 * (0, g.x_)(),
+                                                                                size: 512 * (0, p.x_)(),
                                                                             }),
-                                                                        disabled: !w,
-                                                                        onChange: z,
-                                                                        hint: E.intl.string(E.t.uPvxqK),
-                                                                        imageClassName: I.imageUploaderInnerSquare,
+                                                                        disabled: !R,
+                                                                        onChange: W,
+                                                                        hint: I.intl.string(I.t.uPvxqK),
+                                                                        imageClassName: S.imageUploaderInnerSquare,
                                                                         hideSize: !0,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            (null == H ? void 0 : H.discovery_splash) != null
-                                                                ? (0, r.jsx)(s.Text, {
+                                                            (null == z ? void 0 : z.discovery_splash) != null
+                                                                ? (0, r.jsx)(o.Text, {
                                                                       color: "text-danger",
                                                                       variant: "text-sm/normal",
-                                                                      children: H.discovery_splash,
+                                                                      children: z.discovery_splash,
                                                                   })
                                                                 : null,
                                                         ],
                                                     });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: I.divider }),
-                                            (0, r.jsxs)(s.hjN, {
+                                            (0, r.jsx)(o.$i$, { className: S.divider }),
+                                            (0, r.jsxs)(o.hjN, {
                                                 children: [
-                                                    (0, r.jsx)(s.vwX, {
-                                                        className: I.formTitle,
-                                                        children: E.intl.string(E.t["RSfm+v"]),
+                                                    (0, r.jsx)(o.vwX, {
+                                                        className: S.formTitle,
+                                                        children: I.intl.string(I.t["RSfm+v"]),
                                                     }),
-                                                    (0, r.jsx)(s.R94, {
-                                                        className: I.description,
-                                                        type: s.geA.DESCRIPTION,
-                                                        children: E.intl.string(E.t.IBi6h4),
+                                                    (0, r.jsx)(o.R94, {
+                                                        className: S.description,
+                                                        type: o.geA.DESCRIPTION,
+                                                        children: I.intl.string(I.t.IBi6h4),
                                                     }),
-                                                    (0, r.jsx)(s.Kx8, {
-                                                        value: null !== c.description ? c.description : "",
-                                                        placeholder: E.intl.string(E.t.rFa9Ul),
+                                                    (0, r.jsx)(o.Kx8, {
+                                                        value: null !== d.description ? d.description : "",
+                                                        placeholder: I.intl.string(I.t.rFa9Ul),
                                                         onChange: (e) => {
                                                             var t;
-                                                            j.Z.updateGuild({
+                                                            v.Z.updateGuild({
                                                                 description:
                                                                     null !=
                                                                     (t = null == e ? void 0 : e.replaceAll("\n", ""))
@@ -406,128 +407,128 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                         : "",
                                                             });
                                                         },
-                                                        maxLength: 120,
-                                                        disabled: !w,
+                                                        maxLength: l.Us,
+                                                        disabled: !R,
                                                     }),
                                                 ],
                                             }),
-                                            (0, r.jsx)(s.$i$, { className: I.divider }),
+                                            (0, r.jsx)(o.$i$, { className: S.divider }),
                                             (() => {
-                                                if (null == Z) return null;
+                                                if (null == D) return null;
                                                 let e =
-                                                    0 === Z.reasonsToJoin.length
+                                                    0 === D.reasonsToJoin.length
                                                         ? [, , , ,].fill({
                                                               reason: "",
                                                               emoji_name: null,
                                                           })
-                                                        : Z.reasonsToJoin;
-                                                return (0, r.jsxs)(s.hjN, {
+                                                        : D.reasonsToJoin;
+                                                return (0, r.jsxs)(o.hjN, {
                                                     children: [
-                                                        (0, r.jsx)(s.vwX, {
-                                                            className: I.formTitle,
-                                                            children: E.intl.string(E.t.vUmXsb),
+                                                        (0, r.jsx)(o.vwX, {
+                                                            className: S.formTitle,
+                                                            children: I.intl.string(I.t.vUmXsb),
                                                         }),
-                                                        (0, r.jsx)(s.R94, {
-                                                            type: s.geA.DESCRIPTION,
-                                                            className: I.description,
-                                                            children: E.intl.string(E.t.esnBnZ),
+                                                        (0, r.jsx)(o.R94, {
+                                                            type: o.geA.DESCRIPTION,
+                                                            className: S.description,
+                                                            children: I.intl.string(I.t.esnBnZ),
                                                         }),
                                                         (0, r.jsx)("div", {
-                                                            className: I.reasonToJoin,
-                                                            children: (0, r.jsx)(y.Z, {
+                                                            className: S.reasonToJoin,
+                                                            children: (0, r.jsx)(C.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
-                                                                guildId: c.id,
+                                                                guildId: d.id,
                                                                 reasons: e,
                                                             }),
                                                         }),
-                                                        (null == H ? void 0 : H.reasons_to_join) != null
-                                                            ? (0, r.jsx)(s.Text, {
+                                                        (null == z ? void 0 : z.reasons_to_join) != null
+                                                            ? (0, r.jsx)(o.Text, {
                                                                   color: "text-danger",
                                                                   variant: "text-sm/normal",
-                                                                  children: H.reasons_to_join,
+                                                                  children: z.reasons_to_join,
                                                               })
                                                             : null,
                                                     ],
                                                 });
                                             })(),
-                                            (0, r.jsx)(s.$i$, { className: I.divider }),
+                                            (0, r.jsx)(o.$i$, { className: S.divider }),
                                             (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, r.jsxs)(s.hjN, {
+                                                    (0, r.jsxs)(o.hjN, {
                                                         children: [
-                                                            (0, r.jsx)(s.vwX, {
-                                                                className: I.formTitle,
-                                                                children: E.intl.string(E.t["lu+BmJ"]),
+                                                            (0, r.jsx)(o.vwX, {
+                                                                className: S.formTitle,
+                                                                children: I.intl.string(I.t["lu+BmJ"]),
                                                             }),
-                                                            (0, r.jsx)(s.R94, {
-                                                                className: I.description,
-                                                                type: s.geA.DESCRIPTION,
-                                                                children: E.intl.string(E.t.ozSi8v),
+                                                            (0, r.jsx)(o.R94, {
+                                                                className: S.description,
+                                                                type: o.geA.DESCRIPTION,
+                                                                children: I.intl.string(I.t.ozSi8v),
                                                             }),
                                                             (0, r.jsx)(
-                                                                s.Kx8,
+                                                                o.Kx8,
                                                                 {
                                                                     showCharacterCount: !0,
                                                                     rows: 10,
-                                                                    value: Z.about,
-                                                                    placeholder: E.intl.string(E.t.TduTbm),
+                                                                    value: D.about,
+                                                                    placeholder: I.intl.string(I.t.TduTbm),
                                                                     onChange: (e) => {
-                                                                        (0, m.mA)(c.id, e);
+                                                                        (0, g.mA)(d.id, e);
                                                                     },
                                                                     minLength: 300,
                                                                     maxLength: 2400,
-                                                                    disabled: !w,
+                                                                    disabled: !R,
                                                                     defaultDirty:
-                                                                        (null == (e = Z.about) ? void 0 : e.length) > 0,
+                                                                        (null == (e = D.about) ? void 0 : e.length) > 0,
                                                                 },
-                                                                "text-area-".concat(R),
+                                                                "text-area-".concat(Z),
                                                             ),
                                                         ],
                                                     }),
-                                                    (null == H ? void 0 : H.about) != null
-                                                        ? (0, r.jsx)(s.Text, {
+                                                    (null == z ? void 0 : z.about) != null
+                                                        ? (0, r.jsx)(o.Text, {
                                                               color: "text-danger",
                                                               variant: "text-sm/normal",
-                                                              children: H.about,
+                                                              children: z.about,
                                                           })
                                                         : null,
                                                 ],
                                             }),
-                                            (0, r.jsx)(s.$i$, { className: I.divider }),
-                                            (0, r.jsxs)(s.hjN, {
+                                            (0, r.jsx)(o.$i$, { className: S.divider }),
+                                            (0, r.jsxs)(o.hjN, {
                                                 children: [
-                                                    (0, r.jsx)(s.vwX, {
-                                                        className: I.formTitle,
-                                                        children: E.intl.string(E.t.V5mNyc),
+                                                    (0, r.jsx)(o.vwX, {
+                                                        className: S.formTitle,
+                                                        children: I.intl.string(I.t.V5mNyc),
                                                     }),
-                                                    (0, r.jsx)(s.R94, {
-                                                        className: I.description,
-                                                        type: s.geA.DESCRIPTION,
-                                                        children: E.intl.string(E.t.d3kA9f),
+                                                    (0, r.jsx)(o.R94, {
+                                                        className: S.description,
+                                                        type: o.geA.DESCRIPTION,
+                                                        children: I.intl.string(I.t.d3kA9f),
                                                     }),
-                                                    Z.socialLinks.map((e, t) => {
-                                                        let n = B[t],
-                                                            i = Object.values(C.z).find((e) => e.presentation === n),
+                                                    D.socialLinks.map((e, t) => {
+                                                        let n = F[t],
+                                                            i = Object.values(N.z).find((e) => e.presentation === n),
                                                             l = null != i ? "".concat(i.baseUrl) : void 0;
                                                         return (0, r.jsxs)(
                                                             "div",
                                                             {
-                                                                className: I.socialLinksContainer,
-                                                                onMouseOver: () => Y(t, !0),
-                                                                onFocus: () => Y(t, !0),
-                                                                onMouseOut: () => Y(t, !1),
-                                                                onBlur: () => Y(t, !1),
+                                                                className: S.socialLinksContainer,
+                                                                onMouseOver: () => X(t, !0),
+                                                                onFocus: () => X(t, !0),
+                                                                onMouseOut: () => X(t, !1),
+                                                                onBlur: () => X(t, !1),
                                                                 children: [
-                                                                    (0, r.jsx)(s.q4e, {
-                                                                        className: Z.isPublished
-                                                                            ? I.socialLinksDropdownMax
-                                                                            : I.socialLinksDropdownMin,
+                                                                    (0, r.jsx)(o.q4e, {
+                                                                        className: D.isPublished
+                                                                            ? S.socialLinksDropdownMax
+                                                                            : S.socialLinksDropdownMin,
                                                                         options: ((e) => {
-                                                                            let t = Object.entries(C.z)
+                                                                            let t = Object.entries(N.z)
                                                                                 .filter(
                                                                                     (e) =>
-                                                                                        !B.includes(e[1].presentation),
+                                                                                        !F.includes(e[1].presentation),
                                                                                 )
                                                                                 .map((e) => ({
                                                                                     label: e[1].presentation,
@@ -539,29 +540,29 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                       label: e,
                                                                                       value: e,
                                                                                   });
-                                                                        })(B[t]),
-                                                                        placeholder: E.intl.string(E.t.xSALIC),
-                                                                        value: B[t],
+                                                                        })(F[t]),
+                                                                        placeholder: I.intl.string(I.t.xSALIC),
+                                                                        value: F[t],
                                                                         onChange: (e) =>
                                                                             ((e, t) => {
-                                                                                let n = [...Z.socialLinks],
-                                                                                    r = [...B],
-                                                                                    i = [...A];
+                                                                                let n = [...D.socialLinks],
+                                                                                    r = [...F],
+                                                                                    i = [...L];
                                                                                 (r[t] = e),
-                                                                                    (n[t] = C.z[e].baseUrl),
+                                                                                    (n[t] = N.z[e].baseUrl),
                                                                                     (i[t] = !0),
-                                                                                    L(i),
-                                                                                    F(r),
-                                                                                    M(i.every((e) => !0 === e)),
-                                                                                    (0, m.t$)(c.id, n);
+                                                                                    k(i),
+                                                                                    H(r),
+                                                                                    G(i.every((e) => !0 === e)),
+                                                                                    (0, g.t$)(d.id, n);
                                                                             })(e, t),
-                                                                        isDisabled: !w,
+                                                                        isDisabled: !R,
                                                                     }),
-                                                                    (0, r.jsx)(s.oil, {
+                                                                    (0, r.jsx)(o.oil, {
                                                                         value: e.replace(null != l ? l : "", ""),
                                                                         onChange: (e) =>
                                                                             ((e, t) => {
-                                                                                let n = [...Z.socialLinks],
+                                                                                let n = [...D.socialLinks],
                                                                                     r = n[t],
                                                                                     i = e;
                                                                                 0 === r.length &&
@@ -572,33 +573,33 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                         i,
                                                                                     ) ||
                                                                                         ((n[t] = i),
-                                                                                        (0, m.t$)(c.id, n));
+                                                                                        (0, g.t$)(d.id, n));
                                                                             })("".concat(l).concat(e), t),
                                                                         placeholder:
                                                                             null != l
                                                                                 ? void 0
-                                                                                : E.intl.string(E.t.Q6o4pK),
+                                                                                : I.intl.string(I.t.Q6o4pK),
                                                                         maxLength: 150,
-                                                                        disabled: !w || null == B[t],
+                                                                        disabled: !R || null == F[t],
                                                                         fullWidth: !0,
                                                                         leading: l,
-                                                                        trailing: w
+                                                                        trailing: R
                                                                             ? {
-                                                                                  icon: s.XHJ,
-                                                                                  "aria-label": E.intl.string(
-                                                                                      E.t.N86XcH,
+                                                                                  icon: o.XHJ,
+                                                                                  "aria-label": I.intl.string(
+                                                                                      I.t.N86XcH,
                                                                                   ),
                                                                                   onClick: () =>
                                                                                       ((e) => {
-                                                                                          let t = [...G];
-                                                                                          t.splice(e, 1), U(t);
-                                                                                          let n = [...A];
-                                                                                          n.splice(e, 1), L(n);
-                                                                                          let r = [...B];
-                                                                                          r.splice(e, 1), F(r);
-                                                                                          let i = [...Z.socialLinks];
+                                                                                          let t = [...U];
+                                                                                          t.splice(e, 1), B(t);
+                                                                                          let n = [...L];
+                                                                                          n.splice(e, 1), k(n);
+                                                                                          let r = [...F];
+                                                                                          r.splice(e, 1), H(r);
+                                                                                          let i = [...D.socialLinks];
                                                                                           i.splice(e, 1),
-                                                                                              (0, m.t$)(c.id, i);
+                                                                                              (0, g.t$)(d.id, i);
                                                                                       })(t),
                                                                               }
                                                                             : void 0,
@@ -608,71 +609,71 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             "social-container-" + t,
                                                         );
                                                     }),
-                                                    (null == H ? void 0 : H.social_links) != null
-                                                        ? (0, r.jsx)(s.Text, {
+                                                    (null == z ? void 0 : z.social_links) != null
+                                                        ? (0, r.jsx)(o.Text, {
                                                               color: "text-danger",
                                                               variant: "text-sm/normal",
-                                                              children: H.social_links,
+                                                              children: z.social_links,
                                                           })
                                                         : null,
-                                                    (0, r.jsx)(s.zxk, {
+                                                    (0, r.jsx)(o.zxk, {
                                                         variant: "secondary",
                                                         size: "sm",
-                                                        text: E.intl.string(E.t.QvovjY),
+                                                        text: I.intl.string(I.t.QvovjY),
                                                         onClick: () => {
-                                                            if (Z.socialLinks.length < 9) {
-                                                                let e = [...Z.socialLinks];
-                                                                (0, m.t$)(c.id, e.concat("")), F(B.concat(""));
+                                                            if (D.socialLinks.length < 9) {
+                                                                let e = [...D.socialLinks];
+                                                                (0, g.t$)(d.id, e.concat("")), H(F.concat(""));
                                                             }
                                                         },
-                                                        disabled: !w || Z.socialLinks.length >= 9,
+                                                        disabled: !R || D.socialLinks.length >= 9,
                                                     }),
                                                 ],
                                             }),
-                                            Z.isPublished &&
+                                            D.isPublished &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [
-                                                        (0, r.jsx)(s.$i$, { className: I.divider }),
-                                                        (0, r.jsxs)(s.hjN, {
+                                                        (0, r.jsx)(o.$i$, { className: S.divider }),
+                                                        (0, r.jsxs)(o.hjN, {
                                                             children: [
-                                                                (0, r.jsx)(s.vwX, {
-                                                                    className: I.formTitle,
-                                                                    children: E.intl.string(E.t["5yF7e3"]),
+                                                                (0, r.jsx)(o.vwX, {
+                                                                    className: S.formTitle,
+                                                                    children: I.intl.string(I.t["5yF7e3"]),
                                                                 }),
-                                                                (0, r.jsx)(s.R94, {
-                                                                    className: I.description,
-                                                                    type: s.geA.DESCRIPTION,
-                                                                    children: E.intl.string(E.t.eOFvqa),
+                                                                (0, r.jsx)(o.R94, {
+                                                                    className: S.description,
+                                                                    type: o.geA.DESCRIPTION,
+                                                                    children: I.intl.string(I.t.eOFvqa),
                                                                 }),
-                                                                (0, r.jsx)(s.zxk, {
+                                                                (0, r.jsx)(o.zxk, {
                                                                     variant: "critical-primary",
                                                                     size: "sm",
-                                                                    text: E.intl.string(E.t["DCHd/P"]),
-                                                                    onClick: () => W(!1),
-                                                                    disabled: !w,
+                                                                    text: I.intl.string(I.t["DCHd/P"]),
+                                                                    onClick: () => V(!1),
+                                                                    disabled: !R,
                                                                 }),
                                                             ],
                                                         }),
                                                     ],
                                                 }),
-                                            (null == H ? void 0 : H.is_published) != null
-                                                ? (0, r.jsx)(s.Text, {
+                                            (null == z ? void 0 : z.is_published) != null
+                                                ? (0, r.jsx)(o.Text, {
                                                       color: "text-danger",
                                                       variant: "text-sm/normal",
-                                                      children: H.is_published,
+                                                      children: z.is_published,
                                                   })
                                                 : null,
                                         ],
                                     }),
-                                    !Z.isPublished &&
+                                    !D.isPublished &&
                                         (0, r.jsx)("div", {
-                                            className: I.checklist,
-                                            children: (0, r.jsx)(u.Z, {
-                                                title: E.intl.string(E.t["2kCyn5"]),
-                                                children: K,
-                                                buttonLabel: E.intl.string(E.t.tVK6S0),
-                                                buttonCallback: () => W(!0),
-                                                disabled: !w || !k,
+                                            className: S.checklist,
+                                            children: (0, r.jsx)(m.Z, {
+                                                title: I.intl.string(I.t["2kCyn5"]),
+                                                children: Y,
+                                                buttonLabel: I.intl.string(I.t.tVK6S0),
+                                                buttonCallback: () => V(!0),
+                                                disabled: !R || !M,
                                             }),
                                         }),
                                 ],
@@ -683,4 +684,4 @@ let S = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
             }),
         });
     },
-    w = () => (null == (0, l.e7)([v.Z], () => v.Z.getGuild()) ? null : (0, r.jsx)(P, {}));
+    R = () => (null == (0, a.e7)([_.Z], () => _.Z.getGuild()) ? null : (0, r.jsx)(w, {}));
