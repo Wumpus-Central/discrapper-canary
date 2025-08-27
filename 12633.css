@@ -80314,7 +80314,7 @@ div.nagbar_d74ef8 {
 }
 
 .headerContainer__7db08 {
-    background-color: var(--background-base-low);
+    background-color: var(--custom-settings-content-background, var(--background-base-low));
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -89671,7 +89671,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
