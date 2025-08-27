@@ -73,8 +73,8 @@ function V(e) {
     }
     return e;
 }
-let Y = d().throttle(b.OQ, 1000),
-    K = (e) => {
+let K = d().throttle(b.OQ, 1000),
+    Y = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: s = !1, isNewlyAdded: o = !1 } = e,
             [c, d] = i.useState(n.name),
             m = Z.ZP.getEmojiURL({
@@ -148,16 +148,15 @@ let Y = d().throttle(b.OQ, 1000),
                             autoComplete: "off",
                             value: null != c ? c : "",
                             onBlur: () => {
-                                if (c !== n.name) {
-                                    let e = D.ZP.sanitizeEmojiName(c);
-                                    e !== n.name &&
-                                        (0, b.dv)({
-                                            guildId: t,
-                                            emojiId: n.id,
-                                            name: e,
-                                        }),
-                                        d(e);
-                                }
+                                if (c === n.name) return;
+                                let e = D.ZP.sanitizeEmojiName(c);
+                                e !== n.name &&
+                                    (0, b.dv)({
+                                        guildId: t,
+                                        emojiId: n.id,
+                                        name: e,
+                                    }),
+                                    d(e);
                             },
                             onChange: (e) => {
                                 d(e.target.value);
@@ -317,7 +316,7 @@ let Y = d().throttle(b.OQ, 1000),
                       o.map((e) => {
                           var t;
                           return (0, r.jsx)(
-                              K,
+                              Y,
                               {
                                   guildId: n.id,
                                   emoji: e,
@@ -424,7 +423,7 @@ let Y = d().throttle(b.OQ, 1000),
                 maxEmojiSlots: L,
                 availableEmojiSlots: F,
                 staticEmoji: W,
-                totalStaticEmoji: K,
+                totalStaticEmoji: Y,
                 animatedEmoji: q,
                 totalAnimatedEmoji: J,
             } = (0, E.t)({ guild: t }),
@@ -443,14 +442,14 @@ let Y = d().throttle(b.OQ, 1000),
                         var t;
                         null == (t = e.current) || t.activateUploadDialogue();
                     }
-                    U.m({ autoOpen: !1 });
+                    U.ml({ autoOpen: !1 });
                 }
             }, [b, er]),
             i.useEffect(() => {
-                Y(t.id);
+                K(t.id);
             }, [t.id]),
             i.useEffect(() => {
-                null != x && x < u && Y(t.id);
+                null != x && x < u && K(t.id);
             }, [u, x, t.id]),
             i.useEffect(() => {
                 if (null != f && null == et) return void en(f);
@@ -485,8 +484,8 @@ let Y = d().throttle(b.OQ, 1000),
                 },
                 [ee.isEmojiEditingExperimentEnabled, t],
             ),
-            ea = (e, n, r) =>
-                (0, I.G)({
+            ea = async (e, n, r) => {
+                let i = await (0, I.G)({
                     data: e,
                     file: n,
                     image: r,
@@ -494,7 +493,17 @@ let Y = d().throttle(b.OQ, 1000),
                     uploadId: l,
                     hideErrorModal: !0,
                     analyticsLocation: { page: B.ZY5.GUILD_SETTINGS },
-                }),
+                });
+                if ("object" != typeof i || !("id" in i)) return i;
+                U.MK({
+                    emojiId: i.id,
+                    userImage: {
+                        data: e,
+                        file: n,
+                        image: r,
+                    },
+                });
+            },
             es = async (e) => {
                 a((0, m.Z)()),
                     R.default.track(B.rMx.EMOJI_UPLOAD_STARTED, {
@@ -530,7 +539,7 @@ let Y = d().throttle(b.OQ, 1000),
                     children: [
                         (0, r.jsx)(Q, {
                             guild: t,
-                            staticEmojiCount: K,
+                            staticEmojiCount: Y,
                             animatedEmojiCount: J,
                         }),
                         (0, r.jsxs)(h.hjN, {

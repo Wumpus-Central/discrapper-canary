@@ -59,18 +59,21 @@ let h = (e, t, n, r) => (
             }
         }
         try {
-            await (0, a.rS)({
+            let e = await (0, a.rS)({
                 guildId: f,
                 image: t,
                 name: O,
                 roles: x,
                 analyticsLocation: _,
-            }),
+            });
+            return (
                 o.default.track(m.rMx.EMOJI_UPLOAD_COMPLETED, {
                     guild_id: f,
                     upload_id: b,
                 }),
-                (0, i.showToast)((0, i.createToast)(g.intl.string(g.t.r0w9m5), i.ToastType.SUCCESS));
+                (0, i.showToast)((0, i.createToast)(g.intl.string(g.t.r0w9m5), i.ToastType.SUCCESS)),
+                e
+            );
         } catch (a) {
             let e,
                 n,

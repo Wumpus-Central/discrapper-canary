@@ -1,6 +1,6 @@
 i.d(t, {
-    CreateEmojiWithRolesModal: () => E,
-    UpdateEmojiRolesModal: () => C,
+    CreateEmojiWithRolesModal: () => C,
+    UpdateEmojiRolesModal: () => R,
 }),
     i(388685),
     i(35282),
@@ -17,15 +17,16 @@ var n = i(951288),
     m = i(80932),
     h = i(935369),
     b = i(730089),
-    f = i(626135),
-    p = i(768581),
+    f = i(806774),
+    p = i(626135),
+    j = i(768581),
     g = i(176354),
-    j = i(584825),
-    x = i(46887),
-    v = i(981631),
-    y = i(388032),
-    S = i(815976);
-function w(e) {
+    x = i(584825),
+    v = i(46887),
+    y = i(981631),
+    S = i(388032),
+    w = i(815976);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var i = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(i);
@@ -50,7 +51,7 @@ function w(e) {
     }
     return e;
 }
-function _(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var i,
         n,
@@ -70,28 +71,28 @@ function _(e, t) {
     }
     return r;
 }
-let k = (e) => {
+let O = (e) => {
     let { className: t, onChange: i, textVariant: r = "text-md/normal", label: l, value: s, isArchived: o = !1 } = e;
     return (0, n.jsx)(u.XZJ, {
         size: 24,
-        className: a()(S.checklistRow, t),
+        className: a()(w.checklistRow, t),
         value: s,
         onChange: i,
         type: u.XZJ.Types.INVERTED,
         children: (0, n.jsxs)("div", {
-            className: S.checklistLabel,
+            className: w.checklistLabel,
             children: [
                 (0, n.jsx)(u.Text, {
                     color: "interactive-active",
                     variant: r,
                     children: l,
                 }),
-                o && (0, n.jsx)(u.IGR, { text: y.intl.string(y.t.nhbtEh) }),
+                o && (0, n.jsx)(u.IGR, { text: S.intl.string(S.t.nhbtEh) }),
             ],
         }),
     });
 };
-function O(e) {
+function E(e) {
     let {
             transitionState: t,
             onClose: i,
@@ -116,26 +117,26 @@ function O(e) {
                 ),
             [a, b],
         ),
-        g = b.size > 0;
+        j = b.size > 0;
     return (0, n.jsx)(d.Modal, {
         onClose: i,
         transitionState: t,
-        title: y.intl.string(y.t.nP7nDQ),
-        subtitle: y.intl.string(y.t.I4SYUF),
+        title: S.intl.string(S.t.nP7nDQ),
+        subtitle: S.intl.string(S.t.I4SYUF),
         preview: !0,
         actions: [
             {
-                text: y.intl.string(y.t["ETE/oK"]),
+                text: S.intl.string(S.t["ETE/oK"]),
                 variant: "secondary",
                 onClick: i,
             },
             {
-                text: y.intl.string(y.t.R3BPHx),
+                text: S.intl.string(S.t.R3BPHx),
                 variant: "primary",
                 onClick: () => {
                     h(Array.from(b), i);
                 },
-                disabled: !g,
+                disabled: !j,
                 loading: m,
             },
         ],
@@ -162,10 +163,10 @@ function O(e) {
                 (0, n.jsxs)("div", {
                     children: [
                         (0, n.jsx)(
-                            k,
+                            O,
                             {
-                                className: S.selectAllCheckbox,
-                                label: y.intl.string(y.t["Ve/y5+"]),
+                                className: w.selectAllCheckbox,
+                                label: S.intl.string(S.t["Ve/y5+"]),
                                 textVariant: "text-md/semibold",
                                 value: p,
                                 onChange: () => {
@@ -186,9 +187,9 @@ function O(e) {
                         a.map((e, t) =>
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    0 !== t && (0, n.jsx)("div", { className: S.seperator }),
+                                    0 !== t && (0, n.jsx)("div", { className: w.seperator }),
                                     (0, n.jsx)(
-                                        k,
+                                        O,
                                         {
                                             onChange: () => {
                                                 let t;
@@ -215,24 +216,33 @@ function O(e) {
         }),
     });
 }
-function E(e) {
+function C(e) {
     var { guildId: t, data: i, file: l } = e,
-        a = _(e, ["guildId", "data", "file"]);
+        a = k(e, ["guildId", "data", "file"]);
     let [s, o] = r.useState(!1),
         d = async (e, n) => {
             try {
                 o(!0);
                 let r = (0, c.Z)();
-                f.default.track(v.rMx.EMOJI_UPLOAD_STARTED, {
+                p.default.track(y.rMx.EMOJI_UPLOAD_STARTED, {
                     guild_id: t,
                     upload_id: r,
-                }),
-                    await (0, b.G)({
-                        guildId: t,
-                        uploadId: r,
-                        data: i,
-                        file: l,
-                        roles: e,
+                });
+                let a = await (0, b.G)({
+                    guildId: t,
+                    uploadId: r,
+                    data: i,
+                    file: l,
+                    roles: e,
+                });
+                "object" == typeof a &&
+                    "id" in a &&
+                    f.MK({
+                        emojiId: a.id,
+                        userImage: {
+                            data: i,
+                            file: l,
+                        },
                     }),
                     n();
             } catch (e) {
@@ -240,14 +250,14 @@ function E(e) {
                 o(!1);
             }
         },
-        u = (0, j.qi)(t, {
+        u = (0, x.qi)(t, {
             includeSoftDeleted: !0,
             sortDeletedListingsLast: !0,
         }),
         m = g.ZP.sanitizeEmojiName(l.name.split(".")[0]);
     return (0, n.jsx)(
-        O,
-        w(
+        E,
+        _(
             {
                 emojiName: m,
                 emojiUrl: i,
@@ -259,10 +269,10 @@ function E(e) {
         ),
     );
 }
-function C(e) {
+function R(e) {
     var { emoji: t, guildId: i } = e,
-        l = _(e, ["emoji", "guildId"]);
-    let a = p.ZP.getEmojiURL({
+        l = k(e, ["emoji", "guildId"]);
+    let a = j.ZP.getEmojiURL({
             id: t.id,
             animated: t.animated,
             size: 40,
@@ -276,9 +286,9 @@ function C(e) {
                     roles: e,
                 })) && n();
         },
-        d = (0, j.qi)(i, { includeSoftDeleted: !0 });
+        d = (0, x.qi)(i, { includeSoftDeleted: !0 });
     d.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
-    let u = (0, x.Z)(i),
+    let u = (0, v.Z)(i),
         b = r.useMemo(() => {
             let e = new Set(
                 u.map((e) => {
@@ -289,8 +299,8 @@ function C(e) {
             return t.roles.filter((t) => e.has(t));
         }, [t.roles, u]);
     return (0, n.jsx)(
-        O,
-        w(
+        E,
+        _(
             {
                 emojiName: t.name,
                 emojiUrl: a,
