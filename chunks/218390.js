@@ -36,8 +36,8 @@ var r = n(951288),
     x = n(483444),
     L = n(626135),
     j = n(63063),
-    k = n(74538),
-    M = n(140465),
+    M = n(74538),
+    k = n(140465),
     U = n(695349),
     G = n(46062),
     B = n(347896),
@@ -71,7 +71,7 @@ function eu(e) {
         c = n || a,
         u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
         f = J.GP[t.planIdFromItems],
-        p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(f.id), f.interval),
+        p = M.ZP.formatPriceString(M.ZP.getDefaultPrice(f.id), f.interval),
         { enabled: h } = G.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" }),
         m = () => {
             var e, t, n;
@@ -122,8 +122,8 @@ function eu(e) {
             });
 }
 function ed() {
-    let e = (0, M.t7)(),
-        t = (0, M.lr)(),
+    let e = (0, k.t7)(),
+        t = (0, k.lr)(),
         n = (0, y.ZP)(),
         i = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
         o = (0, S.Z)(),
@@ -315,7 +315,7 @@ function ef(e) {
                             children: o.additionalTerm(),
                         }),
                     (0, r.jsx)(Y.Z, {
-                        variant: "secondary",
+                        variant: "overlay-secondary",
                         size: "md",
                         fullWidth: !0,
                         onClick: () => {
@@ -331,108 +331,107 @@ function ef(e) {
     });
 }
 function e_() {
-    var e;
-    let t = null == (e = (0, B.Z)()) ? void 0 : e.billingSettingsMarketingBanner;
-    return null != t
-        ? (0, r.jsx)(ef, { config: t })
-        : (0, r.jsxs)("div", {
-              className: et.giftCard,
-              children: [
-                  (0, r.jsx)("img", {
-                      className: et.giftImage,
-                      alt: "",
-                      src: er,
-                  }),
-                  (0, r.jsxs)("div", {
-                      className: et.giftInfo,
-                      children: [
-                          (0, r.jsx)(_.X6q, {
-                              className: et.giftTitle,
-                              variant: "heading-xl/extrabold",
-                              children: ee.intl.string(ee.t["3KomGR"]),
-                          }),
-                          (0, r.jsx)(_.Text, {
-                              className: et.giftText,
-                              variant: "text-sm/normal",
-                              children: ee.intl.string(ee.t.yQ06u7),
-                          }),
-                          (0, r.jsx)(H.Z, {
-                              className: a()(et.giftCardButton, et.giftCardButtonColor),
-                              textOptions: {
-                                  textOverride: ee.intl.string(ee.t.Ve9Ge3),
-                                  textClassName: et.giftButtonCTA,
-                              },
-                              color: f.zx.Colors.CUSTOM,
-                              onClick: () => {
-                                  L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: el,
-                                      target: ec,
-                                  });
-                              },
-                          }),
-                      ],
-                  }),
-              ],
-          });
+    return (0, r.jsxs)("div", {
+        className: et.giftCard,
+        children: [
+            (0, r.jsx)("img", {
+                className: et.giftImage,
+                alt: "",
+                src: er,
+            }),
+            (0, r.jsxs)("div", {
+                className: et.giftInfo,
+                children: [
+                    (0, r.jsx)(_.X6q, {
+                        className: et.giftTitle,
+                        variant: "heading-xl/extrabold",
+                        children: ee.intl.string(ee.t["3KomGR"]),
+                    }),
+                    (0, r.jsx)(_.Text, {
+                        className: et.giftText,
+                        variant: "text-sm/normal",
+                        children: ee.intl.string(ee.t.yQ06u7),
+                    }),
+                    (0, r.jsx)(H.Z, {
+                        className: a()(et.giftCardButton, et.giftCardButtonColor),
+                        textOptions: {
+                            textOverride: ee.intl.string(ee.t.Ve9Ge3),
+                            textClassName: et.giftButtonCTA,
+                        },
+                        color: f.zx.Colors.CUSTOM,
+                        onClick: () => {
+                            L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                cta_type: el,
+                                target: ec,
+                            });
+                        },
+                    }),
+                ],
+            }),
+        ],
+    });
 }
 let ep = function () {
-    let e = "PremiumManagementSettings",
-        t = (0, T.Q)(),
-        { analyticsLocations: n } = (0, I.ZP)(v.Z.PREMIUM_SETTINGS),
-        o = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
-        a = (0, c.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
-        s = (0, A.V)(J.nS),
-        [l, d] = i.useState(!0),
-        f = (0, S.Z)({ forceFetch: !0 }),
-        m = (0, c.e7)([w.Z], () => w.Z.enabled),
-        E = i.useRef(null);
-    (0, V.B)(e);
-    let y = (0, F.b)(e);
+    var e;
+    let t = "PremiumManagementSettings",
+        n = (0, T.Q)(),
+        { analyticsLocations: o } = (0, I.ZP)(v.Z.PREMIUM_SETTINGS),
+        a = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
+        s = (0, c.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
+        l = (0, A.V)(J.nS),
+        [d, f] = i.useState(!0),
+        m = (0, S.Z)({ forceFetch: !0 }),
+        E = null == (e = (0, B.Z)()) ? void 0 : e.billingSettingsMarketingBanner,
+        y = (0, c.e7)([w.Z], () => w.Z.enabled),
+        O = i.useRef(null);
+    (0, V.B)(t);
+    let N = (0, F.b)(t);
     i.useEffect(() => {
         p.Z.wait(async () => {
-            m || t || (await Promise.all([h.jg(), h.tZ(), (0, g.Y2)(null, null, $.JjL.DISCOVERY)])), d(!1);
+            y || n || (await Promise.all([h.jg(), h.tZ(), (0, g.Y2)(null, null, $.JjL.DISCOVERY)])), f(!1);
         });
-    }, [m, t]);
-    let [O, N] = i.useState(!1);
-    if (m) return (0, r.jsx)(b.Z, {});
-    if (t) return (0, r.jsx)(C.c8, {});
-    let P = a && null !== o && s,
-        x = f.fetched && f.isFractionalPremiumActive;
-    if (!P && !x && !l)
+    }, [y, n]);
+    let [P, x] = i.useState(!1);
+    if (y) return (0, r.jsx)(b.Z, {});
+    if (n) return (0, r.jsx)(C.c8, {});
+    let j = s && null !== a && l,
+        M = m.fetched && m.isFractionalPremiumActive;
+    if (!j && !M && !d)
         return (0, r.jsx)(R.Z, {
             title: ee.intl.string(ee.t.dyq9TU),
             note: null,
         });
-    if ((!P && !x) || l) return (0, r.jsx)(_.$jN, {});
-    let j = !!(null == o ? void 0 : o.hasActiveTrial);
+    if ((!j && !M) || d) return (0, r.jsx)(_.$jN, {});
+    let k = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(I.Gt, {
-        value: n,
+        value: o,
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     children: [
+                        null != E && (0, r.jsx)(ef, { config: E }),
                         (0, r.jsx)(ed, {}),
-                        y && (0, r.jsx)(Q.Z, { isInSettings: !0 }),
-                        (0, r.jsx)(e_, {}),
+                        N && (0, r.jsx)(Q.Z, { isInSettings: !0 }),
+                        null == E && (0, r.jsx)(e_, {}),
                         (0, r.jsx)(X.Z, {
                             hideCTAs: !0,
                             headingOverride: ee.intl.string(ee.t.dnVvQU),
-                            hidePill: !j,
+                            hidePill: !k,
                             selectedPlanColumnClassName: et.tier2PlanComparisonTableBackground,
                             selectedPlanTier: J.p9.TIER_2,
                         }),
                     ],
                 }),
                 (0, r.jsx)(u.$, {
-                    innerRef: E,
+                    innerRef: O,
                     onChange: (e) => {
                         e &&
-                            !O &&
-                            (L.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: n }),
-                            N(!0));
+                            !P &&
+                            (L.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: o }),
+                            x(!0));
                     },
                     children: (0, r.jsx)("div", {
-                        ref: E,
+                        ref: O,
                         className: et.bottomOfPageVisibilitySensor,
                     }),
                 }),

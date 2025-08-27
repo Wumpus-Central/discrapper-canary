@@ -63603,6 +63603,7 @@ h3.improved__1689b:after {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 25px;
     position: relative;
     width: 100%
 }
@@ -63650,8 +63651,7 @@ h3.improved__1689b:after {
 
 .giftCard_a45ed3 {
     background: var(--background-secondary-alt);
-    margin-bottom: 80px;
-    margin-top: 80px;
+    margin: 25px 0;
     padding: 40px
 }
 
@@ -63669,7 +63669,7 @@ h3.improved__1689b:after {
 }
 
 .giftCardPromotion_a45ed3 {
-    margin: 80px 0;
+    margin-bottom: 25px;
     padding: 0 30px
 }
 
@@ -77287,8 +77287,7 @@ html .progress__61462 {
 }
 
 .giftPromoCard__94da4 {
-    margin-bottom: 80px;
-    margin-top: -36px
+    margin-bottom: 25px
 }
 
 .perkCardsContainerSpacingSettings__94da4 {

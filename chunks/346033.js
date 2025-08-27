@@ -1,8 +1,8 @@
 n.d(t, { Z: () => B }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(622535),
     c = n(780384),
@@ -43,14 +43,14 @@ let G = (e) => {
         var e, t;
         (0, h.z)(p.X);
         let n = i.useRef(null),
-            a = i.useRef(null),
+            o = i.useRef(null),
             N = i.useRef(null),
             B = (0, d.ZP)(),
             Z = (0, c.wj)(B),
-            [V, F] = i.useState(!1),
+            [F, V] = i.useState(!1),
             [H, Y] = i.useState(!1),
             [W, K] = i.useState(!1),
-            z = !V && !H,
+            z = !F && !H,
             [q, X] = i.useState(!1),
             Q = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             J = null != Q ? (0, E.Af)(Q) : null,
@@ -60,8 +60,8 @@ let G = (e) => {
             en = null == et || null == (e = et.subscription_trial) ? void 0 : e.sku_id,
             er = (0, y.Nx)(),
             ei = (0, b.Vi)(),
-            ea = null != ei && ei,
-            eo = null == (t = (0, O.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
+            eo = null != ei && ei,
+            ea = null == (t = (0, O.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
             { analyticsLocations: es } = (0, _.ZP)(f.Z.PREMIUM_MARKETING);
         i.useEffect(() => {
             X(!0);
@@ -98,7 +98,7 @@ let G = (e) => {
                                   showIcon: !1,
                                   subscriptionTier: x.Si.TIER_2,
                                   className: M.subButton,
-                                  hasActivePromotion: ea,
+                                  hasActivePromotion: eo,
                                   textOptions: { textClassName: M.subButtonText },
                                   buttonShineClassName: M.buttonShine,
                               }),
@@ -111,38 +111,40 @@ let G = (e) => {
             children: [
                 (0, r.jsx)(C.Z, {
                     premiumSubscription: Q,
-                    className: o()(k.existingSubscriberSpacing, { [k.zIndex1]: er }),
+                    className: a()(k.existingSubscriberSpacing, { [k.zIndex1]: er }),
                 }),
                 (0, r.jsx)(G, { inOfferExperience: er }),
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(l.$, {
-                        innerRef: a,
-                        onChange: (e) => F(e),
-                        threshold: 0,
-                        active: !0,
-                        children: (0, r.jsx)(R.ZP, {
-                            ref: a,
-                            subscriptionTier: ee,
-                            className: o()({
-                                [k.settingsHeroNoBackground]: er,
-                                [k.trialMarketingMargin]: er,
-                                [k.settingsHeroBogoHeight]: ei,
-                                [k.noTopPaddingOverride]: null != Q,
+                (0, r.jsxs)("div", {
+                    children: [
+                        null != ea &&
+                            (0, r.jsx)(S.C, {
+                                className: k.giftPromoCard,
+                                config: ea,
                             }),
-                            isDarkMode: Z,
+                        (0, r.jsx)(l.$, {
+                            innerRef: o,
+                            onChange: (e) => V(e),
+                            threshold: 0,
+                            active: !0,
+                            children: (0, r.jsx)(R.ZP, {
+                                ref: o,
+                                subscriptionTier: ee,
+                                className: a()({
+                                    [k.settingsHeroNoBackground]: er,
+                                    [k.trialMarketingMargin]: er,
+                                    [k.settingsHeroBogoHeight]: ei,
+                                    [k.noTopPaddingOverride]: null != Q,
+                                }),
+                                isDarkMode: Z,
+                            }),
                         }),
-                    }),
+                    ],
                 }),
                 (0, r.jsx)("div", {
                     className: k.promoBannerContainer,
                     children: (0, r.jsx)(I.Z, { variant: I.C.NITRO_SETTINGS }),
                 }),
                 el,
-                null != eo &&
-                    (0, r.jsx)(S.C, {
-                        className: k.giftPromoCard,
-                        config: eo,
-                    }),
                 (0, r.jsx)(P.Z, { className: k.perkCardsContainerSpacingSettings }),
                 (0, r.jsx)("div", {
                     className: k.planComparisonTableContainer,
