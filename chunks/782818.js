@@ -76,7 +76,6 @@ function A(e) {
             }),
             (0, r.jsx)(o.ua7, {
                 text: j.intl.string(j.t.N86XcH),
-                delay: 340,
                 children: (e) => {
                     var t, a;
                     return (0, r.jsx)(
