@@ -1,7 +1,6 @@
 e.exports = {
     modal: "modal_cf1d1c",
     closeBtn: "closeBtn_cf1d1c",
-    orbsTermsButton: "orbsTermsButton_cf1d1c",
     spinnerContainer: "spinnerContainer_cf1d1c",
     errorContainer: "errorContainer_cf1d1c",
     errorImage: "errorImage_cf1d1c",
@@ -14,7 +13,7 @@ e.exports = {
     hidden: "hidden_cf1d1c",
     title: "title_cf1d1c",
     subtext: "subtext_cf1d1c",
-    ctaBtn: "ctaBtn_cf1d1c",
+    buttonContainer: "buttonContainer_cf1d1c",
     orbsBalance: "orbsBalance_cf1d1c",
     orbsBalanceIcon: "orbsBalanceIcon_cf1d1c",
 };
