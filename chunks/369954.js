@@ -1,86 +1,95 @@
-n.d(t, { J: () => E });
-var r = n(951288);
-n(647438);
-var i = n(793030),
+n.d(t, { J: () => v });
+var r = n(951288),
+    i = n(647438),
+    o = n(793030),
     a = n(481060),
-    o = n(493683),
-    s = n(37234),
-    l = n(511010),
-    c = n(981312),
-    u = n(277537),
-    d = n(841409),
-    f = n(631885),
-    _ = n(292352),
-    p = n(345909),
-    h = n(388032),
-    m = n(271650);
-let g = (e) => {
-        let { title: t, buttonText: n, onButtonPress: o } = e;
-        return (0, r.jsxs)(i.Kq, {
+    s = n(493683),
+    l = n(37234),
+    c = n(511010),
+    u = n(981312),
+    d = n(260722),
+    f = n(277537),
+    _ = n(841409),
+    p = n(780985),
+    h = n(631885),
+    m = n(292352),
+    g = n(345909),
+    E = n(388032),
+    b = n(271650);
+let y = (e) => {
+        let { title: t, buttonText: n, onButtonPress: i } = e;
+        return (0, r.jsxs)(o.Kq, {
             justify: "space-between",
             direction: "horizontal",
             align: "center",
             gap: 32,
             children: [
-                (0, r.jsx)(i.xv, {
+                (0, r.jsx)(o.xv, {
                     variant: "text-sm/semibold",
                     color: "interactive-active",
                     children: t,
                 }),
                 (0, r.jsx)(a.zxk, {
                     text: n,
-                    onClick: o,
+                    onClick: i,
                     variant: "secondary",
                     size: "sm",
                 }),
             ],
         });
     },
-    E = () => {
-        let e = (0, c.U)(),
-            t = (0, f.mq)(_.ne.ACTIVE),
-            n = (0, u.PO)("settings-controls"),
-            { handleTabChange: a } = (0, d.Z)();
-        if (!n || 0 === t.length) return null;
-        let E = (e) => {
-                a(e);
-            },
-            b = () => {
-                (0, s.xf)(), o.Z.openPrivateChannel({ recipientIds: t.map((e) => e.id) });
-            };
-        return (0, r.jsxs)(i.Kq, {
+    O = () => {
+        let e = (0, p.cz)(),
+            t = (0, p.$r)(),
+            { handleTabChange: n } = (0, _.Z)();
+        i.useEffect(() => {
+            (null == e ? void 0 : e.id) != null && t && d.ZP.fetchTeenSettingsAndConsents(null == e ? void 0 : e.id);
+        }, [null == e ? void 0 : e.id, t]);
+        let o = (e) => {
+            n(e);
+        };
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(y, {
+                    title: E.intl.string(E.t["+o1pDQ"]),
+                    buttonText: E.intl.string(E.t.bt75u7),
+                    onButtonPress: () => o(m.dG.CONTENT_AND_SOCIAL),
+                }),
+                (0, r.jsx)(c.Z, { className: b.divider }),
+                (0, r.jsx)(y, {
+                    title: E.intl.string(E.t.OAuOHB),
+                    buttonText: E.intl.string(E.t.bt75u7),
+                    onButtonPress: () => o(m.dG.DATA_AND_PRIVACY),
+                }),
+            ],
+        });
+    },
+    v = () => {
+        let e = (0, u.U)(),
+            t = (0, h.mq)(m.ne.ACTIVE);
+        if (!(0, f.PO)("settings-controls") || 0 === t.length) return null;
+        let n = () => {
+            (0, l.xf)(), s.Z.openPrivateChannel({ recipientIds: t.map((e) => e.id) });
+        };
+        return (0, r.jsxs)(o.Kq, {
             padding: { top: 24 },
             gap: 4,
-            className: m.container,
+            className: b.container,
             children: [
-                (0, r.jsx)(i.xv, {
+                (0, r.jsx)(o.xv, {
                     variant: "eyebrow",
                     color: "text-secondary",
-                    children: h.intl.string(p.default.ahKIJC),
+                    children: E.intl.string(g.default.ahKIJC),
                 }),
-                (0, r.jsx)(i.Kq, {
+                (0, r.jsx)(o.Kq, {
                     gap: 8,
                     children: e
-                        ? (0, r.jsx)(g, {
-                              title: h.intl.string(p.default.X9rW0t),
-                              buttonText: h.intl.formatToPlainString(p.default.w0JA3N, { count: t.length }),
-                              onButtonPress: b,
+                        ? (0, r.jsx)(y, {
+                              title: E.intl.string(g.default.X9rW0t),
+                              buttonText: E.intl.formatToPlainString(g.default.w0JA3N, { count: t.length }),
+                              onButtonPress: n,
                           })
-                        : (0, r.jsxs)(r.Fragment, {
-                              children: [
-                                  (0, r.jsx)(g, {
-                                      title: h.intl.string(h.t["+o1pDQ"]),
-                                      buttonText: h.intl.string(h.t.bt75u7),
-                                      onButtonPress: () => E(_.dG.CONTENT_AND_SOCIAL),
-                                  }),
-                                  (0, r.jsx)(l.Z, { className: m.divider }),
-                                  (0, r.jsx)(g, {
-                                      title: h.intl.string(h.t.OAuOHB),
-                                      buttonText: h.intl.string(h.t.bt75u7),
-                                      onButtonPress: () => E(_.dG.DATA_AND_PRIVACY),
-                                  }),
-                              ],
-                          }),
+                        : (0, r.jsx)(O, {}),
                 }),
             ],
         });

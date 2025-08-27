@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
 var i = n(399606),
-    a = n(481060),
-    o = n(594174),
+    o = n(481060),
+    a = n(594174),
     s = n(277537),
     l = n(785681),
     c = n(780985),
@@ -21,8 +21,8 @@ let y = () => {
     let e = (0, u.mq)(m.ne.ACTIVE),
         t = e.length > 0,
         n = (0, s.PO)("family_center_activity_page"),
-        y = (0, c.c)(),
-        O = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        y = (0, c.cz)(),
+        O = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         v = (0, l.o)(E.intl.string(g.default["5RZ8Tk"]), E.intl.string(g.default.bmhCnJ)),
         I = (0, l.o)(E.intl.string(g.default.XKnFFh), E.intl.string(g.default["68zfxM"])),
         T = (0, l.o)(E.intl.string(g.default["Rm/6a2"]), E.intl.string(g.default["1xPTwM"]));
@@ -43,17 +43,17 @@ let y = () => {
                                     className: b.featureCards,
                                     children: [
                                         (0, r.jsx)(p.Z, {
-                                            icon: a.eQA,
+                                            icon: o.eQA,
                                             header: E.intl.string(g.default["001l3t"]),
                                             description: v,
                                         }),
                                         (0, r.jsx)(p.Z, {
-                                            icon: a.tEF,
+                                            icon: o.tEF,
                                             header: E.intl.string(g.default.yipAeH),
                                             description: I,
                                         }),
                                         (0, r.jsx)(p.Z, {
-                                            icon: a.IkH,
+                                            icon: o.IkH,
                                             header: E.intl.string(g.default.hhOuMT),
                                             description: T,
                                         }),
