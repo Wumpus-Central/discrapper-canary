@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(959078),
     l = n(442837),
     c = n(481060),
@@ -82,7 +82,7 @@ function N(e) {
 }
 function R(e) {
     let { quest: t, useReducedMotion: n } = e,
-        o = (0, p.n)(),
+        a = (0, p.n)(),
         l = (0, E.k3)(t.id, g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR_V2),
         u = (0, E.g2)({ useReducedMotion: n }),
         b = (0, f.O5)(),
@@ -109,20 +109,20 @@ function R(e) {
                 n = () =>
                     (0, r.jsx)(r.Fragment, {
                         children: I.map((e, n) => {
-                            if (e.type === s.K.EXPIRED_CREDENTIAL && o) {
+                            if (e.type === s.K.EXPIRED_CREDENTIAL && a) {
                                 let i = d.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                    o = (0, h.C9)(e),
-                                    a = (0, h._j)(e);
+                                    a = (0, h.C9)(e),
+                                    o = (0, h._j)(e);
                                 return (0, r.jsx)(
                                     N,
                                     {
-                                        children: O.intl.format(o, {
+                                        children: O.intl.format(a, {
                                             account_name: null == i ? void 0 : i.name,
                                             onClick: () => {
                                                 (0, h.fY)(
                                                     {
                                                         quest: t,
-                                                        platformType: a,
+                                                        platformType: o,
                                                     },
                                                     {
                                                         content: g.jn.QUEST_BAR,
@@ -147,7 +147,7 @@ function R(e) {
                         ? O.intl.string(O.t.N33EuL)
                         : O.intl.formatToPlainString(O.t["28Ql29"], { gameTitle: i })
                     : (0, h.Pb)(t)
-                      ? O.intl.string(O.t["6HNovr"])
+                      ? O.intl.string(O.t.YstzGB)
                       : O.intl.formatToPlainString(O.t.gX0Qc3, { gameTitle: i }),
                 renderBody: e
                     ? n
@@ -161,7 +161,7 @@ function R(e) {
                                   : O.intl.format(O.t.GXqvCw, { gameTitle: i }),
                           }),
             };
-        }, [I, t, o, y]);
+        }, [I, t, a, y]);
     function P() {
         return 0 === I.length ? null : (0, r.jsx)(N, { children: l });
     }
@@ -183,14 +183,14 @@ function R(e) {
                         children: A,
                     }),
                     (0, r.jsx)(c.P3F, {
-                        className: a()(v.microphoneUnitRefreshIconWrapper, { [v.disabled]: T }),
+                        className: o()(v.microphoneUnitRefreshIconWrapper, { [v.disabled]: T }),
                         onClick: () => S(),
                         children: u.render(),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: a()({ [v.opacity_50]: T }),
+                className: o()({ [v.opacity_50]: T }),
                 children: [R(), P()],
             }),
         ],
@@ -198,11 +198,11 @@ function R(e) {
 }
 let P = function (e) {
     let { quest: t, taskDetails: n } = e,
-        o = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        a = (0, m.z6)(),
+        a = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        o = (0, m.z6)(),
         s = i.useMemo(
-            () => (0, h.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
-            [a.xboxAndPlaystationAccounts, t],
+            () => (0, h.B3)(t).filter((e) => o.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+            [o.xboxAndPlaystationAccounts, t],
         ),
         {
             steps: c,
@@ -212,7 +212,7 @@ let P = function (e) {
         } = i.useMemo(() => {
             var e;
             let i = s.length > 0,
-                o = i && (0, h.Bz)(t),
+                a = i && (0, h.Bz)(t),
                 l = t.config.messages.gameTitle,
                 c = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return {
@@ -221,12 +221,12 @@ let P = function (e) {
                         renderContent: () =>
                             (0, r.jsx)(
                                 b.Q,
-                                A(T({}, a), {
+                                A(T({}, o), {
                                     quest: t,
                                     sourceQuestContent: g.jn.QUEST_BAR_V2,
                                 }),
                             ),
-                        isComplete: i || o || c,
+                        isComplete: i || a || c,
                     },
                     {
                         renderContent: () =>
@@ -235,7 +235,7 @@ let P = function (e) {
                                     ? O.intl.string(O.t["5tXqFR"])
                                     : O.intl.formatToPlainString(O.t["+8JB6e"], { gameTitle: l }),
                             }),
-                        isComplete: o || c,
+                        isComplete: a || c,
                     },
                     {
                         renderContent: () =>
@@ -246,10 +246,10 @@ let P = function (e) {
                     },
                 ],
                 hasConnectedAccounts: i,
-                isProgressingQuestForLaunchedGame: o,
+                isProgressingQuestForLaunchedGame: a,
                 isQuestComplete: c,
             };
-        }, [a, s.length, t, n.targetMinutes]),
+        }, [o, s.length, t, n.targetMinutes]),
         p = d && !f && !_;
     return (0, r.jsx)(y.ZP, {
         heading: O.intl.string(O.t.UPWlJi),
@@ -257,7 +257,7 @@ let P = function (e) {
         children:
             p &&
             (0, r.jsx)(R, {
-                useReducedMotion: o,
+                useReducedMotion: a,
                 quest: t,
             }),
     });
