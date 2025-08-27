@@ -420,12 +420,12 @@ class $ extends (r = a.ZP.Store) {
 }
 O($, "displayName", "SearchAutocompleteStore");
 let ee = new $(s.Z, {
+        SEARCH_AUTOCOMPLETE_INITIALIZE: U,
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: G,
         SEARCH_EDITOR_STATE_CLEAR: D,
         CHANNEL_CREATE: W,
         CHANNEL_DELETE: W,
         STREAMER_MODE_UPDATE: Q,
-        SEARCH_SCREEN_OPEN: U,
         CHANNEL_SELECT: J,
         LOGOUT: q,
         SEARCH_HISTORY_WEB_CLEAR_ITEMS: z,
