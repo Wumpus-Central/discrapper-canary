@@ -43,22 +43,22 @@ function j(t) {
                       (0, l.jsx)(
                           s.sNh,
                           {
-                              id: "copy",
-                              label: S.intl.string(S.t.OpuAlJ),
-                              hint: (0, p.isMac)() ? "\u2318C" : "Ctrl+C",
-                              action: () => setTimeout(() => g.ZP.copy(), 0),
-                          },
-                          "copy",
-                      ),
-                      (0, l.jsx)(
-                          s.sNh,
-                          {
                               id: "cut",
                               label: S.intl.string(S.t.pNPVhY),
                               hint: (0, p.isMac)() ? "\u2318X" : "Ctrl+X",
                               action: () => setTimeout(() => g.ZP.cut(), 0),
                           },
                           "cut",
+                      ),
+                      (0, l.jsx)(
+                          s.sNh,
+                          {
+                              id: "copy",
+                              label: S.intl.string(S.t.OpuAlJ),
+                              hint: (0, p.isMac)() ? "\u2318C" : "Ctrl+C",
+                              action: () => setTimeout(() => g.ZP.copy(), 0),
+                          },
+                          "copy",
                       ),
                   ]
                 : null,

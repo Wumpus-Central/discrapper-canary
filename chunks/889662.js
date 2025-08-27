@@ -25,22 +25,22 @@ function b(t) {
                   (0, r.jsx)(
                       i.sNh,
                       {
-                          id: "copy",
-                          label: p.intl.string(p.t.OpuAlJ),
-                          hint: (0, a.isMac)() ? "\u2318C" : "Ctrl+C",
-                          action: () => u.ZP.copy(e),
-                      },
-                      "copy",
-                  ),
-                  (0, r.jsx)(
-                      i.sNh,
-                      {
                           id: "cut",
                           label: p.intl.string(p.t.pNPVhY),
                           hint: (0, a.isMac)() ? "\u2318X" : "Ctrl+X",
                           action: () => setTimeout(() => u.ZP.cut(), 0),
                       },
                       "cut",
+                  ),
+                  (0, r.jsx)(
+                      i.sNh,
+                      {
+                          id: "copy",
+                          label: p.intl.string(p.t.OpuAlJ),
+                          hint: (0, a.isMac)() ? "\u2318C" : "Ctrl+C",
+                          action: () => u.ZP.copy(e),
+                      },
+                      "copy",
                   ),
               ]
             : null;
