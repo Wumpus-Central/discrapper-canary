@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(539854), n(781311);
+n.d(t, { Z: () => G }), n(539854), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -10,25 +10,23 @@ var r = n(951288),
     d = n(833664),
     f = n(545957),
     _ = n(933557),
-    p = n(359588),
-    h = n(74340),
-    m = n(482798),
-    g = n(687516),
-    E = n(106301),
-    b = n(314897),
-    y = n(699516),
-    O = n(802529),
-    v = n(11133),
-    I = n(303524),
-    T = n(329520),
-    S = n(233023),
-    A = n(868781),
-    C = n(122943),
-    N = n(556638),
-    R = n(981631),
-    P = n(388032),
-    w = n(80568);
-function D(e, t, n) {
+    p = n(482798),
+    h = n(687516),
+    m = n(106301),
+    g = n(314897),
+    E = n(699516),
+    b = n(802529),
+    y = n(11133),
+    O = n(303524),
+    v = n(329520),
+    I = n(233023),
+    T = n(868781),
+    S = n(122943),
+    A = n(556638),
+    C = n(981631),
+    N = n(388032),
+    R = n(80568);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +39,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +50,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,100 +67,100 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e) {
+function L(e) {
     let t = (null == e ? void 0 : e.name) === "" ? null : null == e ? void 0 : e.name;
-    return null != t ? P.intl.formatToPlainString(P.t["0wJXSk"], { name: t }) : P.intl.string(P.t.eXan7O);
+    return null != t ? N.intl.formatToPlainString(N.t["0wJXSk"], { name: t }) : N.intl.string(N.t.eXan7O);
 }
-function k(e, t) {
+function j(e, t) {
     return (
         (e.isDM() || e.isGroupDM()
-            ? P.intl.string(P.t["9FaEzs"])
+            ? N.intl.string(N.t["9FaEzs"])
             : e.isGuildStageVoice()
-              ? P.intl.string(P.t.QygGCA)
-              : P.intl.string(P.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
+              ? N.intl.string(N.t.QygGCA)
+              : N.intl.string(N.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
-function U(e) {
+function M(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: a } = (0, O.f)({ location: "StackedActivityStatus" }),
-        { enableTopNavButton: o } = (0, m.Cq)({ location: "StackedActivityStatus" }),
+        { descriptiveTextEnabled: a } = (0, b.f)({ location: "StackedActivityStatus" }),
+        { enableTopNavButton: o } = (0, p.Cq)({ location: "StackedActivityStatus" }),
         s = (0, _.ZP)(r),
         l = a || o;
     return (
-        null != t && i.push(M(t)),
+        null != t && i.push(L(t)),
         n.forEach((e) => {
-            let { tooltip: t } = (0, v.Z)(e, l);
+            let { tooltip: t } = (0, y.Z)(e, l);
             null != t && i.push(t);
         }),
-        null == t && null != r && i.push(k(r, s)),
+        null == t && null != r && i.push(j(r, s)),
         i.length > 0 ? i.join(", ") : ""
     );
 }
-function G(e) {
+function k(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         s = a - 1;
     return (0, r.jsxs)(l.xv, {
         variant: t,
-        className: o()(n, w.activityCounter),
+        className: o()(n, R.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
 }
-function B(e) {
+function U(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xv, {
         variant: t,
-        className: o()(w.dot, n),
-        children: N.l,
+        className: o()(R.dot, n),
+        children: A.l,
     });
 }
-function Z(e) {
+function G(e) {
     let {
         user: t,
         activities: n,
         applicationStream: a,
         voiceChannel: l,
         textClassName: _,
-        iconClassName: m,
-        textSize: O = "xs",
-        animateEmoji: v = !0,
-        hasQuest: P = !1,
-        hideEmoji: D = !1,
-        hideTooltip: L = !1,
+        iconClassName: p,
+        textSize: b = "xs",
+        animateEmoji: y = !0,
+        hasQuest: N = !1,
+        hideEmoji: P = !1,
+        hideTooltip: D = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
-    let M = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        k = (0, g.Cf)(M),
-        Z = i.useMemo(() => {
+    let L = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        j = (0, h.Cf)(L),
+        G = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
                     ? void 0
                     : n.find((e) => {
                           let { type: t } = e;
-                          return t === R.IIU.CUSTOM_STATUS;
+                          return t === C.IIU.CUSTOM_STATUS;
                       });
             if (null == r) return null;
             let i = null != (t = null == (e = r.state) ? void 0 : e.trim()) ? t : null;
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
-        V = (0, c.e7)([b.default], () => b.default.getId() === (null == t ? void 0 : t.id)),
-        F = (0, c.e7)([E.Z], () =>
-            V ? E.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === R.IIU.HANG_STATUS) : null,
+        B = (0, c.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
+        Z = (0, c.e7)([m.Z], () =>
+            B ? m.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === C.IIU.HANG_STATUS) : null,
         ),
-        H = i.useMemo(() => {
+        F = i.useMemo(() => {
             var e;
             return (0, s.uniqWith)(
                 null !=
@@ -172,9 +170,9 @@ function Z(e) {
                             : n.filter((e) => {
                                   let { type: t, name: n } = e;
                                   return (
-                                      t !== R.IIU.CUSTOM_STATUS &&
-                                      t !== R.IIU.HANG_STATUS &&
-                                      n !== (null == k ? void 0 : k.name)
+                                      t !== C.IIU.CUSTOM_STATUS &&
+                                      t !== C.IIU.HANG_STATUS &&
+                                      n !== (null == j ? void 0 : j.name)
                                   );
                               }))
                     ? e
@@ -183,60 +181,59 @@ function Z(e) {
                     (null != e.application_id && null != t.application_id && e.application_id === t.application_id) ||
                     (null != e.name && null != t.name && e.name === t.name),
             );
-        }, [n, null == k ? void 0 : k.name]),
-        Y = null == n ? void 0 : n.find((e) => e.name === (null == k ? void 0 : k.name)),
-        W = (null == t ? void 0 : t.bot) === !0,
-        K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        z = (0, p.Z)({ location: "ActivityStatus" }) && null != Z ? (0, h.Z)(Z) : null,
-        q = (null == Z ? void 0 : Z.state) != null || null != z,
-        X = null != M,
-        Q = !X && null != l,
-        J = H.length + (X || Q ? 1 : 0),
-        $ = J > 1,
-        ee = (null == Z ? void 0 : Z.state) != null && "xs" === O,
-        et = U({
-            streamActivity: Y,
-            otherActivities: H,
-            voiceActivityChannel: Q ? l : null,
+        }, [n, null == j ? void 0 : j.name]),
+        V = null == n ? void 0 : n.find((e) => e.name === (null == j ? void 0 : j.name)),
+        H = (null == t ? void 0 : t.bot) === !0,
+        Y = (0, c.e7)([E.Z], () => E.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
+        W = (null == G ? void 0 : G.state) != null,
+        K = null != L,
+        z = !K && null != l,
+        q = F.length + (K || z ? 1 : 0),
+        X = q > 1,
+        Q = (null == G ? void 0 : G.state) != null && "xs" === b,
+        J = M({
+            streamActivity: V,
+            otherActivities: F,
+            voiceActivityChannel: z ? l : null,
         });
-    if (K) return null;
-    let en = function () {
+    if (Y) return null;
+    let $ = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || L;
-            if (null != M)
-                return (0, r.jsx)(T.Z, {
-                    stream: M,
-                    game: Y,
-                    textVariant: "text-".concat(O, "/medium"),
+                t = !0 === e || D;
+            if (null != L)
+                return (0, r.jsx)(v.Z, {
+                    stream: L,
+                    game: V,
+                    textVariant: "text-".concat(b, "/medium"),
                     textClassName: _,
-                    iconClassName: m,
-                    hideText: ee,
-                    hideIcon: W,
+                    iconClassName: p,
+                    hideText: Q,
+                    hideIcon: H,
                     hideTooltip: t,
                 });
-            let n = null == H ? void 0 : H[0];
+            let n = null == F ? void 0 : F[0];
             return null != n
-                ? (0, r.jsx)(A.Z, {
+                ? (0, r.jsx)(T.Z, {
                       activity: n,
-                      textVariant: "text-".concat(O, "/medium"),
+                      textVariant: "text-".concat(b, "/medium"),
                       textClassName: _,
-                      iconClassName: m,
-                      hideText: ee,
-                      hideIcon: W,
+                      iconClassName: p,
+                      hideText: Q,
+                      hideIcon: H,
                       hideTooltip: t,
                   })
                 : null != l
-                  ? (0, r.jsx)(C.Z, {
+                  ? (0, r.jsx)(S.Z, {
                         channel: l,
-                        textVariant: "text-".concat(O, "/medium"),
+                        textVariant: "text-".concat(b, "/medium"),
                         textClassName: _,
-                        iconClassName: m,
-                        hideText: ee,
+                        iconClassName: p,
+                        hideText: Q,
                         hideTooltip: t,
                     })
                   : null;
         },
-        er = () => {
+        ee = () => {
             let e = [],
                 t = {
                     textVariant: "text-sm/medium",
@@ -246,14 +243,14 @@ function Z(e) {
                     canTruncate: !1,
                 };
             return (
-                null != M &&
+                null != L &&
                     e.push(
                         (0, r.jsx)(
-                            T.Z,
-                            j(
-                                x(
+                            v.Z,
+                            x(
+                                w(
                                     {
-                                        stream: M,
+                                        stream: L,
                                         game: null == n ? void 0 : n.find(d.Z),
                                     },
                                     t,
@@ -263,74 +260,74 @@ function Z(e) {
                             "stream",
                         ),
                     ),
-                H.forEach((n, i) => {
-                    e.push((0, r.jsx)(A.Z, x({ activity: n }, t), "activity-".concat(i)));
+                F.forEach((n, i) => {
+                    e.push((0, r.jsx)(T.Z, w({ activity: n }, t), "activity-".concat(i)));
                 }),
-                Q && e.push((0, r.jsx)(C.Z, j(x({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                z && e.push((0, r.jsx)(S.Z, x(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
-        ei = () =>
-            (0, r.jsx)(G, {
-                textVariant: "text-".concat(O, "/medium"),
+        et = () =>
+            (0, r.jsx)(k, {
+                textVariant: "text-".concat(b, "/medium"),
                 className: _,
-                hasCustomStatusText: q,
-                totalActivityCount: J,
+                hasCustomStatusText: W,
+                totalActivityCount: q,
             }),
-        ea = () =>
-            0 === J
+        en = () =>
+            0 === q
                 ? null
-                : $ && !W
-                  ? L
+                : X && !H
+                  ? D
                       ? (0, r.jsxs)("div", {
-                            className: o()(w.activityContainer, ee && w.iconOnly),
-                            children: [en(), ei()],
+                            className: o()(R.activityContainer, Q && R.iconOnly),
+                            children: [$(), et()],
                         })
                       : (0, r.jsx)(u.ua7, {
-                            tooltipContentClassName: o()(w.container, w.activitiesTooltip, w.hasMultipleActivities),
-                            delay: N.X,
-                            text: er(),
-                            "aria-label": et,
+                            tooltipContentClassName: o()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
+                            delay: A.X,
+                            text: ee(),
+                            "aria-label": J,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    j(x({ className: o()(w.activityContainer, ee && w.iconOnly) }, e), {
-                                        children: [en(!0), ei()],
+                                    x(w({ className: o()(R.activityContainer, Q && R.iconOnly) }, e), {
+                                        children: [$(!0), et()],
                                     }),
                                 ),
                         })
-                  : en(),
-        eo = o()(w.container, {
-            [w.textXs]: "xs" === O,
-            [w.textSm]: "sm" === O,
+                  : $(),
+        er = o()(R.container, {
+            [R.textXs]: "xs" === b,
+            [R.textSm]: "sm" === b,
         }),
-        es = () =>
-            null == Z && null == F
+        ei = () =>
+            null == G && null == Z
                 ? null
-                : (0, r.jsx)(S.Z, {
-                      customStatusActivity: Z,
-                      textSize: O,
-                      animateEmoji: v,
-                      hideEmoji: D,
-                      hideTooltip: L,
+                : (0, r.jsx)(I.Z, {
+                      customStatusActivity: G,
+                      textSize: b,
+                      animateEmoji: y,
+                      hideEmoji: P,
+                      hideTooltip: D,
                       textClassName: _,
-                      iconClassName: m,
-                      tooltipClassName: eo,
+                      iconClassName: p,
+                      tooltipClassName: er,
                       voiceChannel: l,
-                      hangStatus: F,
+                      hangStatus: Z,
                   });
     return (0, r.jsxs)("div", {
-        className: eo,
+        className: er,
         children: [
-            ea(),
-            null != Z &&
-                J > 0 &&
-                (0, r.jsx)(B, {
-                    textVariant: "text-".concat(O, "/normal"),
+            en(),
+            null != G &&
+                q > 0 &&
+                (0, r.jsx)(U, {
+                    textVariant: "text-".concat(b, "/normal"),
                     className: _,
                 }),
-            es(),
-            P && (0, r.jsx)(I.Z, {}),
+            ei(),
+            N && (0, r.jsx)(O.Z, {}),
         ],
     });
 }

@@ -1,51 +1,47 @@
-n.d(e, { Z: () => d }), n(781311);
-var l = n(913527),
-    a = n.n(l),
-    r = n(381499),
+n.d(e, { Z: () => c }), n(781311);
+var r = n(913527),
+    a = n.n(r),
     i = n(695346),
-    o = n(626135),
-    s = n(337953),
-    u = n(875425),
-    c = n(981631);
-function d(t) {
+    l = n(626135),
+    o = n(337953),
+    s = n(875425),
+    u = n(981631);
+function c(t) {
     let {
             text: e,
             emojiInfo: n,
-            clearAfter: l,
-            analyticsContext: d,
-            createdAtMs: m,
-            prompt: f,
-            customStatusLabel: p,
-            analyticsLocations: h,
+            clearAfter: r,
+            analyticsContext: c,
+            createdAtMs: d,
+            prompt: m,
+            analyticsLocations: f,
         } = t,
-        b = e.trim();
-    if (!(b.length > 0) && null == n) return i.Ok.updateSetting(void 0);
+        p = e.trim();
+    if (!(p.length > 0) && null == n) return i.Ok.updateSetting(void 0);
     {
         let t = i.Ok.updateSetting({
-            text: b.length > 0 ? b : "",
+            text: p.length > 0 ? p : "",
             expiresAtMs:
-                null != l && l !== u.FO.DONT_CLEAR
+                null != r && r !== s.FO.DONT_CLEAR
                     ? String(
                           a()()
-                              .add((0, s.Z)(l), "ms")
+                              .add((0, o.Z)(r), "ms")
                               .toDate()
                               .getTime(),
                       )
                     : "0",
             emojiId: null != n && null != n.id ? n.id : "0",
             emojiName: null != n ? n.name : "",
-            createdAtMs: String(null != m ? m : a()().toDate().getTime()),
-            label: null != p ? r.Gm.create({ value: p }) : void 0,
+            createdAtMs: String(null != d ? d : a()().toDate().getTime()),
         });
         return (
-            o.default.track(c.rMx.CUSTOM_STATUS_UPDATED, {
-                location: null != d ? d.location : null,
+            l.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
+                location: null != c ? c.location : null,
                 emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
-                text_len: b.length,
-                clear_after: null != l ? "".concat(l) : null,
-                prompt_type: null == f ? void 0 : f.value,
-                label: null != p ? p : null,
-                location_stack: h,
+                text_len: p.length,
+                clear_after: null != r ? "".concat(r) : null,
+                prompt_type: null == m ? void 0 : m.value,
+                location_stack: f,
             }),
             t
         );

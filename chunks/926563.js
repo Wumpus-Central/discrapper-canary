@@ -1,9 +1,9 @@
 n.d(e, { Z: () => b });
-var l = n(951288);
+var r = n(951288);
 n(647438);
 var a = n(481060),
-    r = n(680295),
-    i = n(687158),
+    i = n(680295),
+    l = n(687158),
     o = n(899007),
     s = n(648052),
     u = n(867176),
@@ -14,60 +14,51 @@ var a = n(481060),
     p = n(671955),
     h = n(580792);
 function b(t) {
-    let {
-            user: e,
-            previewText: n,
-            previewEmoji: b,
-            previewStatus: S,
-            placeHolderText: g,
-            transitionState: j,
-            label: O,
-        } = t,
-        v = (0, i.ZP)(e.id);
-    return (0, l.jsxs)(c.Z, {
+    let { user: e, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: g, transitionState: O } = t,
+        j = (0, l.ZP)(e.id);
+    return (0, r.jsxs)(c.Z, {
         user: e,
-        displayProfile: v,
+        displayProfile: j,
         themeType: p.l.POPOUT,
         className: h.profilePreviewContainer,
         children: [
-            (0, l.jsxs)("header", {
+            (0, r.jsxs)("header", {
                 children: [
-                    (0, l.jsx)(u.Z, {
+                    (0, r.jsx)(u.Z, {
                         user: e,
-                        displayProfile: v,
+                        displayProfile: j,
                         themeType: p.l.POPOUT,
                     }),
-                    (0, l.jsx)("div", {
+                    (0, r.jsx)("div", {
                         inert: !0,
-                        children: (0, l.jsx)(o.Z, {
+                        children: (0, r.jsx)(o.Z, {
                             user: e,
-                            displayProfile: v,
+                            displayProfile: j,
                             themeType: p.l.POPOUT,
                             previewStatus: S,
                             className: h.avatar,
                         }),
                     }),
-                    (0, l.jsx)(m.Z, {
+                    (0, r.jsx)(m.Z, {
                         user: e,
                         themeType: p.l.POPOUT,
                         previewText: n,
                         previewEmoji: b,
                         placeholderText: g,
-                        hasEntered: j === a.Dvm.ENTERED,
-                        previewLabel: O,
+                        hasEntered: O === a.Dvm.ENTERED,
                     }),
                 ],
             }),
-            (null == v ? void 0 : v.profileEffect) != null && (0, l.jsx)(r.Z, { profileEffectId: v.profileEffect.id }),
-            (0, l.jsx)("div", {
+            (null == j ? void 0 : j.profileEffect) != null && (0, r.jsx)(i.Z, { profileEffectId: j.profileEffect.id }),
+            (0, r.jsx)("div", {
                 className: h.usernameContainer,
                 inert: !0,
-                children: (0, l.jsx)(d.Z, {
+                children: (0, r.jsx)(d.Z, {
                     user: e,
                     nickname: f.ZP.getName(null, null, e),
-                    pronouns: null == v ? void 0 : v.pronouns,
-                    tags: (0, l.jsx)(s.Z, {
-                        displayProfile: v,
+                    pronouns: null == j ? void 0 : j.pronouns,
+                    tags: (0, r.jsx)(s.Z, {
+                        displayProfile: j,
                         themeType: p.l.POPOUT,
                     }),
                 }),
