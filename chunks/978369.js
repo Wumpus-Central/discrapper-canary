@@ -1,25 +1,25 @@
 r.d(t, { Z: () => f }), r(539854), r(388685);
 var n = r(951288),
-    l = r(647438),
+    a = r(647438),
     i = r(481060),
-    a = r(785717),
+    l = r(785717),
     o = r(86419),
     c = r(286957),
     s = r(388032),
     u = r(44258);
-let d = l.memo(function (e) {
-    let { currentTags: t, onTagSelect: r, onNoneSelect: l, onClose: a } = e;
+let d = a.memo(function (e) {
+    let { currentTags: t, onTagSelect: r, onNoneSelect: a, onClose: l } = e;
     return (0, n.jsx)(i.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOj),
-        onClose: a,
+        onClose: l,
         onSelect: () => {},
         children: Object.entries(c.aE).map((e) => {
-            let [a, o] = e,
-                u = ((e, a) => {
+            let [l, o] = e,
+                u = ((e, l) => {
                     let o = [];
                     return (
-                        a.type === c.kd.RADIO &&
+                        l.type === c.kd.RADIO &&
                             o.push(
                                 (0, n.jsx)(
                                     i.k5B,
@@ -27,62 +27,62 @@ let d = l.memo(function (e) {
                                         id: "".concat(e, "-none"),
                                         group: e,
                                         label: s.intl.string(s.t.PoWNfX),
-                                        checked: !a.tags.some((e) => t.includes(e)),
-                                        action: () => l(a.tags),
+                                        checked: !l.tags.some((e) => t.includes(e)),
+                                        action: () => a(l.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        a.tags.forEach((l) => {
-                            let s = c.XV[l];
+                        l.tags.forEach((a) => {
+                            let s = c.XV[a];
                             null != s &&
-                                (a.type === c.kd.RADIO
+                                (l.type === c.kd.RADIO
                                     ? o.push(
                                           (0, n.jsx)(
                                               i.k5B,
                                               {
-                                                  id: l,
+                                                  id: a,
                                                   group: e,
                                                   label: s.getText(),
-                                                  checked: t.includes(l),
-                                                  action: () => r(l, !0),
+                                                  checked: t.includes(a),
+                                                  action: () => r(a, !0),
                                               },
-                                              l,
+                                              a,
                                           ),
                                       )
                                     : o.push(
                                           (0, n.jsx)(
                                               i.S89,
                                               {
-                                                  id: l,
+                                                  id: a,
                                                   label: s.getText(),
-                                                  checked: t.includes(l),
-                                                  action: () => r(l, !1),
+                                                  checked: t.includes(a),
+                                                  action: () => r(a, !1),
                                               },
-                                              l,
+                                              a,
                                           ),
                                       ));
                         }),
                         o
                     );
-                })(a, o);
+                })(l, o);
             return (0, n.jsx)(
                 i.kSQ,
                 {
                     label: o.getLabel(),
                     children: u,
                 },
-                a,
+                l,
             );
         }),
     });
 });
 function f(e) {
     let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
-        b = (0, l.useRef)(null),
-        { trackUserProfileAction: p } = (0, a.KZ)(),
-        m = (0, l.useMemo)(() => (null != t ? t : []), [t]),
-        O = (0, l.useCallback)(
+        b = (0, a.useRef)(null),
+        { trackUserProfileAction: p } = (0, l.KZ)(),
+        m = (0, a.useMemo)(() => (null != t ? t : []), [t]),
+        O = (0, a.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = new Set(m);
@@ -93,22 +93,19 @@ function f(e) {
                             n.delete(e);
                         }),
                         n.add(e),
-                        p({ action: "ADD_GAME_TAGS" }));
-                } else
-                    n.has(e)
-                        ? (n.delete(e), p({ action: "REMOVE_GAME_TAGS" }))
-                        : (n.add(e), p({ action: "ADD_GAME_TAGS" }));
+                        p({ action: "EDIT_ACTION" }));
+                } else n.has(e) ? n.delete(e) : n.add(e), p({ action: "EDIT_ACTION" });
                 (0, o.n$)(r, f, Array.from(n));
             },
             [m, p, r, f],
         ),
-        j = (0, l.useCallback)(
+        j = (0, a.useCallback)(
             (e) => {
                 let t = new Set(m);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    p({ action: "REMOVE_GAME_TAGS" }),
+                    p({ action: "EDIT_ACTION" }),
                     (0, o.n$)(r, f, Array.from(t));
             },
             [m, p, r, f],

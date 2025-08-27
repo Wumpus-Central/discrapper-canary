@@ -1,49 +1,52 @@
-r.d(t, { Z: () => u }), r(388685);
+r.d(t, { Z: () => d }), r(388685);
 var n = r(951288),
-    i = r(647438),
-    a = r(399606),
-    l = r(224724),
-    o = r(86419),
-    c = r(206599),
-    s = r(977416);
-function u(e) {
+    a = r(647438),
+    i = r(399606),
+    l = r(785717),
+    o = r(224724),
+    c = r(86419),
+    s = r(206599),
+    u = r(977416);
+function d(e) {
     var { widgetType: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                i = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        i = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
-                    return i;
+                        a = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
             }
-            return i;
+            return a;
         })(e, ["widgetType"]);
-    let { games: u, isGameFetching: d, onAddGame: f } = (0, c.K)(t),
-        [g] = (0, a.Wu)([l.Z], () => [l.Z.suggestedFetchIsLoading]),
-        b = i.useCallback(
+    let { games: d, isGameFetching: f, onAddGame: g } = (0, s.K)(t),
+        [b] = (0, i.Wu)([o.Z], () => [o.Z.suggestedFetchIsLoading]),
+        { trackUserProfileAction: p } = (0, l.KZ)(),
+        m = a.useCallback(
             (e, r, n) => {
-                f(e),
-                    (0, o.ES)(t, {
+                g(e),
+                    (0, c.ES)(t, {
                         applicationId: e,
                         gameName: r,
                         imageSrc: n,
-                    });
+                    }),
+                    p({ action: "EDIT_ACTION" });
             },
-            [f, t],
+            [g, t, p],
         );
     return (0, n.jsx)(
-        s.Z,
+        u.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -70,10 +73,10 @@ function u(e) {
             return e;
         })(
             {
-                games: u,
-                isGameFetching: d,
-                isSuggestedGamesLoading: g,
-                onClick: b,
+                games: d,
+                isGameFetching: f,
+                isSuggestedGamesLoading: b,
+                onClick: m,
             },
             r,
         ),

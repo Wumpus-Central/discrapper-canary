@@ -106,6 +106,7 @@ var o = (function (e) {
             (e.SET_VOLUME = "SET_VOLUME"),
             (e.EDIT_PROFILE = "EDIT_PROFILE"),
             (e.EDIT_GUILD_PROFILE = "EDIT_GUILD_PROFILE"),
+            (e.EDIT_ACTION = "EDIT_ACTION"),
             (e.VOICE_CALL = "VOICE_CALL"),
             (e.VIDEO_CALL = "VIDEO_CALL"),
             (e.MUTE = "MUTE"),

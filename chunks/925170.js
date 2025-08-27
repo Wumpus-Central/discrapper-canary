@@ -13,8 +13,8 @@ var n = r(951288),
 function d(e) {
     var t,
         r,
-        { onClose: d } = e,
-        O = (function (e, t) {
+        { onClose: d, trackUserProfileAction: O } = e,
+        y = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -34,21 +34,21 @@ function d(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ["onClose"]);
-    let y = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        g = (0, u.Z)(),
-        j = o.useRef(new Set(g)),
-        m = p.rR.filter((e) => j.current.has(e)),
-        h = m.length > 0,
-        [w, v] = o.useState(!1),
-        P = {
+        })(e, ["onClose", "trackUserProfileAction"]);
+    let g = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        j = (0, u.Z)(),
+        m = o.useRef(new Set(j)),
+        h = p.rR.filter((e) => m.current.has(e)),
+        w = h.length > 0,
+        [v, P] = o.useState(!1),
+        k = {
             onClick: () => d(),
             text: f.intl.string(f.t.cpT0Cg),
         },
         x = o.useCallback(() => {
-            v(!0), d();
+            P(!0), d();
         }, [d]);
-    return null == y
+    return null == g
         ? null
         : (0, n.jsx)(
               l.Modal,
@@ -79,25 +79,26 @@ function d(e) {
               })(
                   {
                       title: f.intl.string(f.t.grUgR0),
-                      actions: h ? [] : [P],
-                      size: h ? "md" : "sm",
+                      actions: w ? [] : [k],
+                      size: w ? "md" : "sm",
                       onClose: d,
                   },
-                  O,
+                  y,
               )),
               (r = r =
                   {
-                      children: h
+                      children: w
                           ? (0, n.jsx)("ul", {
                                 "aria-label": f.intl.string(f.t["+EIBSE"]),
                                 className: b.options,
-                                children: m.map((e) =>
+                                children: h.map((e) =>
                                     (0, n.jsx)(
                                         a.Z,
                                         {
                                             widgetType: e,
                                             onAddWidget: x,
-                                            loading: w,
+                                            loading: v,
+                                            trackUserProfileAction: O,
                                         },
                                         e,
                                     ),

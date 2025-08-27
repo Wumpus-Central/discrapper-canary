@@ -1,13 +1,14 @@
-r.d(t, { Z: () => f }), r(388685), r(781311);
+r.d(t, { Z: () => g }), r(388685), r(781311);
 var n = r(951288),
     a = r(647438),
     i = r(423802),
     l = r(481060),
     o = r(510231),
-    c = r(86419),
-    s = r(388032),
-    u = r(302627);
-function d(e) {
+    c = r(785717),
+    s = r(86419),
+    u = r(388032),
+    d = r(302627);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -32,35 +33,36 @@ function d(e) {
     }
     return e;
 }
-function f(e) {
-    let { disabled: t, widgetType: r, widget: f } = e,
-        [g] = (0, l.ynZ)(),
-        [b, p] = a.useState(""),
-        m = a.useRef(null),
-        O = a.useMemo(() => new Set(f.games.map((e) => e.applicationId)), [f.games]),
-        j = a.useCallback(
+function g(e) {
+    let { disabled: t, widgetType: r, widget: g } = e,
+        [b] = (0, l.ynZ)(),
+        [p, m] = a.useState(""),
+        O = a.useRef(null),
+        j = a.useMemo(() => new Set(g.games.map((e) => e.applicationId)), [g.games]),
+        { trackUserProfileAction: y } = (0, c.KZ)(),
+        v = a.useCallback(
             (e) => {
-                (0, c.ES)(r, { applicationId: e });
+                (0, s.ES)(r, { applicationId: e }), y({ action: "EDIT_ACTION" });
             },
-            [r],
+            [r, y],
         ),
-        { options: y, matchSorterOptions: v } = (0, o.h)(),
-        x = a.useMemo(
+        { options: x, matchSorterOptions: h } = (0, o.h)(),
+        _ = a.useMemo(
             () =>
-                "" !== b.trim()
-                    ? s.intl.formatToPlainString(s.t.ZoearK, { searchTerm: b.trim() })
-                    : s.intl.string(s.t.QwSXv7),
-            [b],
+                "" !== p.trim()
+                    ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: p.trim() })
+                    : u.intl.string(u.t.QwSXv7),
+            [p],
         ),
-        h = a.useCallback(
+        P = a.useCallback(
             (e) => {
                 var t, r;
                 return "" === e.trim()
-                    ? y
+                    ? x
                     : (0, i.Lu)(
-                          y,
+                          x,
                           e,
-                          ((t = d({}, v)),
+                          ((t = f({}, h)),
                           (r = r = { threshold: i.Lu.rankings.CONTAINS }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -77,35 +79,35 @@ function f(e) {
                           t),
                       );
             },
-            [y, v],
+            [x, h],
         );
     return (0, n.jsx)(l.yRy, {
-        targetElementRef: m,
+        targetElementRef: O,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, n.jsx)(l.DBG, {
-                className: u.gameSearchCombobox,
-                placeholder: s.intl.string(s.t["5h0QOD"]),
+                className: d.gameSearchCombobox,
+                placeholder: u.intl.string(u.t["5h0QOD"]),
                 autoFocus: !0,
-                value: g,
+                value: b,
                 onChange: (e) => {
-                    j(e), t();
+                    v(e), t();
                 },
                 onClose: t,
                 multiSelect: !1,
                 showScrollbar: !0,
                 maxVisibleItems: 7,
-                emptyStateText: x,
+                emptyStateText: _,
                 emptyStateHeader: "",
-                onQueryChange: p,
+                onQueryChange: m,
                 children: (e) =>
-                    h(e).map((e) =>
+                    P(e).map((e) =>
                         (0, n.jsx)(
                             l.lo1,
                             {
-                                disabled: O.has(e.value),
+                                disabled: j.has(e.value),
                                 value: String(e.value),
                                 children: (0, n.jsx)(l.lo1.Label, {
                                     children: (0, n.jsx)(l.Text, {
@@ -122,15 +124,15 @@ function f(e) {
         },
         children: (e) =>
             (0, n.jsx)("div", {
-                ref: m,
+                ref: O,
                 children: (0, n.jsx)(
                     l.zxk,
-                    d(
+                    f(
                         {
                             variant: "secondary",
                             size: "sm",
                             icon: l.qJs,
-                            text: s.intl.string(s.t.SgTOtb),
+                            text: u.intl.string(u.t.SgTOtb),
                             disabled: t,
                         },
                         e,

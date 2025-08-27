@@ -1,14 +1,15 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => p });
 var n = r(951288),
-    i = r(647438),
-    a = r(481060),
+    a = r(647438),
+    i = r(481060),
     l = r(239091),
     o = r(314897),
-    c = r(86419),
-    s = r(872269),
-    u = r(228168),
-    d = r(388032);
-function f(e) {
+    c = r(785717),
+    s = r(86419),
+    u = r(872269),
+    d = r(228168),
+    f = r(388032);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -33,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,62 +52,64 @@ function g(e, t) {
         e
     );
 }
-function b(e) {
+function p(e) {
     let { widget: t } = e,
-        b = i.useRef(null),
-        p = (e) => {
+        p = a.useRef(null),
+        { trackUserProfileAction: m } = (0, c.KZ)(),
+        O = (e) => {
             if (e.shiftKey) {
-                (0, c.y8)(t.type), (0, s.L$)(u.qb.WIDGET_REMOVED);
+                (0, s.y8)(t.type), m({ action: "EDIT_ACTION" }), (0, u.L$)(d.qb.WIDGET_REMOVED);
                 return;
             }
-            (0, a.ZDy)(
+            (0, i.ZDy)(
                 async () => {
                     let { default: e } = await r.e("70887").then(r.bind(r, 37668));
                     return (r) =>
                         (0, n.jsx)(
                             e,
-                            g(f({}, r), {
+                            b(g({}, r), {
                                 userId: o.default.getId(),
                                 widget: t,
+                                trackUserProfileAction: m,
                             }),
                         );
                 },
                 { stackingBehavior: "stack" },
             );
         };
-    return (0, n.jsx)(a.yRy, {
-        targetElementRef: b,
+    return (0, n.jsx)(i.yRy, {
+        targetElementRef: p,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(a.v2r, {
+            return (0, n.jsx)(i.v2r, {
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
                     (0, l.Zy)(), t();
                 },
                 onSelect: () => {},
-                "aria-label": d.intl.string(d.t.xpSHSk),
-                children: (0, n.jsx)(a.kSQ, {
-                    children: (0, n.jsx)(a.sNh, {
+                "aria-label": f.intl.string(f.t.xpSHSk),
+                children: (0, n.jsx)(i.kSQ, {
+                    children: (0, n.jsx)(i.sNh, {
                         id: "remove-widget",
-                        label: d.intl.string(d.t.Mm07YW),
-                        action: p,
+                        label: f.intl.string(f.t.Mm07YW),
+                        action: O,
                         color: "danger",
-                        icon: a.XHJ,
+                        icon: i.XHJ,
                     }),
                 }),
             });
         },
         children: (e) =>
             (0, n.jsx)(
-                a.hU,
-                g(f({}, e), {
-                    buttonRef: b,
-                    icon: a.xhG,
+                i.hU,
+                b(g({}, e), {
+                    buttonRef: p,
+                    icon: i.xhG,
                     variant: "secondary",
-                    "aria-label": d.intl.string(d.t.xpSHSk),
+                    "aria-label": f.intl.string(f.t.xpSHSk),
                     size: "sm",
                 }),
             ),

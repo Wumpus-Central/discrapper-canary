@@ -1,19 +1,21 @@
-r.d(t, { Z: () => u });
+r.d(t, { Z: () => d });
 var n = r(951288);
 r(647438);
-var i = r(120356),
-    a = r.n(i),
+var a = r(120356),
+    i = r.n(a),
     l = r(481060),
-    o = r(86419),
-    c = r(388032),
-    s = r(51708);
-function u(e) {
-    let { game: t, widgetType: r, iconSize: i = "refresh_sm", className: u } = e,
-        d = () => {
-            (0, o.$b)(r, t.applicationId);
+    o = r(785717),
+    c = r(86419),
+    s = r(388032),
+    u = r(51708);
+function d(e) {
+    let { game: t, widgetType: r, iconSize: a = "refresh_sm", className: d } = e,
+        { trackUserProfileAction: f } = (0, o.KZ)(),
+        g = () => {
+            (0, c.$b)(r, t.applicationId), f({ action: "EDIT_ACTION" });
         };
     return (0, n.jsx)(l.ua7, {
-        text: c.intl.string(c.t.HUvyDQ),
+        text: s.intl.string(s.t.HUvyDQ),
         children: (e) => {
             var t, r;
             return (0, n.jsx)(
@@ -45,12 +47,12 @@ function u(e) {
                 })({}, e)),
                 (r = r =
                     {
-                        onClick: d,
-                        "aria-label": c.intl.string(c.t.HUvyDQ),
-                        className: a()(u, s.clickable),
+                        onClick: g,
+                        "aria-label": s.intl.string(s.t.HUvyDQ),
+                        className: i()(d, u.clickable),
                         children: (0, n.jsx)(l.XHJ, {
-                            size: i,
-                            className: s.icon,
+                            size: a,
+                            className: u.icon,
                             color: l.TVs.colors.STATUS_DANGER,
                         }),
                     }),

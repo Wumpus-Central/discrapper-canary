@@ -1,43 +1,46 @@
-r.d(t, { Z: () => s });
+r.d(t, { Z: () => u });
 var n = r(951288);
 r(647438);
-var i = r(481060),
-    a = r(299560),
-    l = r(247397),
-    o = r(388032),
-    c = r(958461);
-function s() {
+var a = r(481060),
+    i = r(785717),
+    l = r(299560),
+    o = r(247397),
+    c = r(388032),
+    s = r(958461);
+function u() {
+    let { trackUserProfileAction: e } = (0, i.KZ)();
     return (0, n.jsxs)("div", {
-        className: c.empty,
+        className: s.empty,
         children: [
             (0, n.jsxs)("div", {
-                className: c.textContainer,
+                className: s.textContainer,
                 children: [
-                    (0, n.jsx)(i.X6q, {
+                    (0, n.jsx)(a.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: o.intl.string(o.t.oqalCw),
+                        children: c.intl.string(c.t.oqalCw),
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: o.intl.string(o.t.O9SQ1d),
+                        children: c.intl.string(c.t.O9SQ1d),
                     }),
                 ],
             }),
             (0, n.jsx)("ul", {
-                className: c.widgetGrid,
-                "aria-label": o.intl.string(o.t["+EIBSE"]),
-                children: l.rR.map((e) =>
+                className: s.widgetGrid,
+                "aria-label": c.intl.string(c.t["+EIBSE"]),
+                children: o.rR.map((t) =>
                     (0, n.jsx)(
                         "li",
                         {
-                            children: (0, n.jsx)(a.Z, {
-                                widgetType: e,
+                            children: (0, n.jsx)(l.Z, {
+                                widgetType: t,
                                 size: "small",
+                                trackUserProfileAction: e,
                             }),
                         },
-                        e,
+                        t,
                     ),
                 ),
             }),
