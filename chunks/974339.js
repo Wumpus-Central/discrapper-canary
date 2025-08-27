@@ -119,52 +119,53 @@ let P = (e) => {
 };
 function C(e) {
     var t, r;
-    let { id: l, sectionIndex: o, rowIndex: c, rows: u, children: d, showCheckbox: x, showRowLabel: h } = e,
-        g = (0, s.JA)(l),
-        { selectedSection: p, selectedRow: w, onSelectionChange: j, pendingAdditions: O, onRowClick: S } = E(),
-        R = u[c],
-        T = v(R),
-        P = R.disabled || T in O,
-        C = R.disabled;
-    return (0, n.jsxs)(
+    let { id: o, sectionIndex: c, rowIndex: u, rows: d, children: x, showCheckbox: h, showRowLabel: g } = e,
+        p = (0, s.JA)(o),
+        { selectedSection: w, selectedRow: j, onSelectionChange: O, pendingAdditions: S, onRowClick: R } = E(),
+        T = d[u],
+        P = v(T),
+        C = T.disabled || P in S,
+        k = T.disabled;
+    return (0, l.createElement)(
         a.P3F,
-        ((t = y({}, g)),
+        ((t = y({}, p)),
         (r = r =
             {
-                id: l,
+                id: o,
+                key: P,
                 role: "option",
-                className: i()(f.clickableRow, { [f.selectedRow]: p === o && w === c }),
+                className: i()(f.clickableRow, { [f.selectedRow]: w === c && j === u }),
                 onClick: (e) => {
-                    C || (e.preventDefault(), R.rowType !== b.aC.EMPTY_STATE && S(R));
+                    k || (e.preventDefault(), T.rowType !== b.aC.EMPTY_STATE && R(T));
                 },
-                onMouseEnter: () => j(o, c, !1),
-                "aria-disabled": C,
-                "aria-selected": P,
-                "aria-setsize": u.length,
-                "aria-posinset": c + 1,
+                onMouseEnter: () => O(c, u, !1),
+                "aria-disabled": k,
+                "aria-selected": C,
+                "aria-setsize": d.length,
+                "aria-posinset": u + 1,
                 children: [
-                    x
+                    h
                         ? (0, n.jsx)(a.XZJ, {
                               className: f.checkbox,
                               displayOnly: !0,
                               size: 18,
-                              value: P,
+                              value: C,
                               type: a.XZJ.Types.INVERTED,
-                              disabled: C,
+                              disabled: k,
                               children: (0, n.jsx)("div", {
                                   className: f.rowBody,
-                                  children: d,
+                                  children: x,
                               }),
                           })
                         : (0, n.jsx)("div", {
                               className: f.rowBody,
-                              children: d,
+                              children: x,
                           }),
-                    h
+                    g
                         ? (0, n.jsx)(a.Text, {
                               color: "text-muted",
                               variant: "text-xs/normal",
-                              children: m.zB(R.rowType),
+                              children: m.zB(T.rowType),
                           })
                         : null,
                 ],
