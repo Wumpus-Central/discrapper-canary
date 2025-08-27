@@ -8,7 +8,6 @@ e.exports = {
     controlsContainer: "controlsContainer__7db08",
     wrapper: "wrapper__7db08",
     guildRowWrapper: "guildRowWrapper__7db08",
-    sortOrderSelect: "sortOrderSelect__7db08",
     noResultsContainer: "noResultsContainer__7db08",
     noResultsText: "noResultsText__7db08",
     headerContainer: "headerContainer__7db08",

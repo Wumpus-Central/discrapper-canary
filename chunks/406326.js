@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -38,7 +38,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,14 +56,14 @@ function _(e, t) {
         e
     );
 }
-function y(e) {
+function _(e) {
     let {
             searchContext: t,
             searchMode: l,
             onSearchModeChange: s,
-            totalResults: y,
-            isIndexing: x,
-            isSearching: v,
+            totalResults: _,
+            isIndexing: v,
+            isSearching: x,
             documentsIndexed: O,
         } = e,
         j = (0, d.UX)({ location: "SearchHeader" }),
@@ -105,7 +105,7 @@ function y(e) {
         N = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("37979").then(n.bind(n, 238088));
-                return (n) => (0, r.jsx)(e, _(b({}, n), { searchContext: t }));
+                return (n) => (0, r.jsx)(e, y(b({}, n), { searchContext: t }));
             });
         }, [t]),
         A = i.useMemo(() => (P > 0 ? m.intl.format(m.t.uaR4sL, { filterCount: P }) : m.intl.string(m.t.UdhTtr)), [P]);
@@ -116,10 +116,10 @@ function y(e) {
                 className: g.totalResults,
                 role: "status",
                 children: (0, r.jsx)(C, {
-                    totalResults: y,
+                    totalResults: _,
                     subtitle: Z,
-                    isIndexing: x,
-                    isSearching: v,
+                    isIndexing: v,
+                    isSearching: x,
                     documentsIndexed: O,
                 }),
             }),
@@ -131,9 +131,8 @@ function y(e) {
                               options: T,
                               value: l,
                               onChange: s,
-                              look: o.qQH.CUSTOM,
-                              className: g.searchModeSelect,
                               popoutWidth: 130,
+                              size: "sm",
                           }),
                           (0, r.jsx)(o.zxk, {
                               variant: "secondary",
@@ -173,7 +172,7 @@ function y(e) {
 function C(e) {
     let { totalResults: t, subtitle: n, isSearching: i, isIndexing: l, documentsIndexed: a } = e;
     return l
-        ? (0, r.jsx)(v, { documentsIndexed: a })
+        ? (0, r.jsx)(x, { documentsIndexed: a })
         : i
           ? (0, r.jsx)(O, {})
           : (0, r.jsx)(j, {
@@ -181,7 +180,7 @@ function C(e) {
                 subtitle: n,
             });
 }
-function x() {
+function v() {
     return (0, r.jsx)("div", {
         className: g.spinnerWrapper,
         children: (0, r.jsx)(o.$jN, {
@@ -191,14 +190,14 @@ function x() {
         }),
     });
 }
-function v(e) {
+function x(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(o.ua7, {
         text: m.intl.formatToPlainString(m.t["4Y3O+P"], { count: t }),
         children: (e) =>
             (0, r.jsxs)(
                 "div",
-                _(b({ className: g.totalResultsWrapper }, e), {
+                y(b({ className: g.totalResultsWrapper }, e), {
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
@@ -209,7 +208,7 @@ function v(e) {
                                 children: m.intl.string(m.t["G3EA+/"]),
                             }),
                         }),
-                        (0, r.jsx)(x, {}),
+                        (0, r.jsx)(v, {}),
                     ],
                 }),
             ),
@@ -223,7 +222,7 @@ function O() {
                 color: "header-secondary",
                 children: m.intl.string(m.t.uixzLS),
             }),
-            (0, r.jsx)(x, {}),
+            (0, r.jsx)(v, {}),
         ],
     });
 }

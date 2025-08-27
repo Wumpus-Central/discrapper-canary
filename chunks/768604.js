@@ -59,7 +59,8 @@ function g() {
                             children: h.intl.string(h.t["+uI23N"]),
                         }),
                         (0, r.jsx)(o.q4e, {
-                            look: o.qQH.CUSTOM,
+                            variant: "text-only",
+                            className: m.select,
                             options: y,
                             value: g,
                             onChange: (e) => b({ goreContentFriendDm: e }),
@@ -79,7 +80,8 @@ function g() {
                             children: h.intl.string(h.t["Yh+HX1"]),
                         }),
                         (0, r.jsx)(o.q4e, {
-                            look: o.qQH.CUSTOM,
+                            variant: "text-only",
+                            className: m.select,
                             options: y,
                             value: E,
                             onChange: (e) => b({ goreContentNonFriendDm: e }),
@@ -99,7 +101,8 @@ function g() {
                             children: h.intl.string(h.t["FP+a4+"]),
                         }),
                         (0, r.jsx)(o.q4e, {
-                            look: o.qQH.CUSTOM,
+                            variant: "text-only",
+                            className: m.select,
                             options: O,
                             value: n,
                             onChange: (e) => b({ goreContentGuilds: e }),

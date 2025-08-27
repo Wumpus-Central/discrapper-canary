@@ -92,10 +92,8 @@ let C = () => {
         ),
         y = O(e);
     return (0, r.jsx)("div", {
-        className: s()({ [b.shopTakeOver]: C }),
+        className: s()(h.container, { [b.shopTakeOver]: C }),
         children: (0, r.jsx)(c.PhF, {
-            look: c.qQH.CUSTOM,
-            className: h.custom,
             options: S.map(O),
             select: x,
             isSelected: (e) => e === y.value,

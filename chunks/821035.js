@@ -66,7 +66,8 @@ function y(e) {
                                       children: E.intl.string(E.t["+uI23N"]),
                                   }),
                                   (0, r.jsx)(o.q4e, {
-                                      look: o.qQH.CUSTOM,
+                                      variant: "text-only",
+                                      className: b.select,
                                       options: S,
                                       value: v,
                                       onChange: (e) => T({ explicitContentFriendDm: e }),
@@ -86,7 +87,8 @@ function y(e) {
                                       children: E.intl.string(E.t["Yh+HX1"]),
                                   }),
                                   (0, r.jsx)(o.q4e, {
-                                      look: o.qQH.CUSTOM,
+                                      variant: "text-only",
+                                      className: b.select,
                                       options: S,
                                       value: I,
                                       onChange: (e) => T({ explicitContentNonFriendDm: e }),
@@ -107,7 +109,8 @@ function y(e) {
                                       children: E.intl.string(E.t["FP+a4+"]),
                                   }),
                                   (0, r.jsx)(o.q4e, {
-                                      look: o.qQH.CUSTOM,
+                                      variant: "text-only",
+                                      className: b.select,
                                       options: A,
                                       value: O,
                                       onChange: (e) => T({ explicitContentGuilds: e }),
@@ -140,6 +143,8 @@ function y(e) {
                               title: E.intl.string(E.t["6k0AgI"]),
                               titleClassName: b.selectItemTitle,
                               children: (0, r.jsx)(o.q4e, {
+                                  variant: "text-only",
+                                  className: b.select,
                                   options: S,
                                   value: v,
                                   onChange: (e) => T({ explicitContentFriendDm: e }),
@@ -150,6 +155,8 @@ function y(e) {
                               title: E.intl.string(E.t.D2EGSk),
                               titleClassName: b.selectItemTitle,
                               children: (0, r.jsx)(o.q4e, {
+                                  variant: "text-only",
+                                  className: b.select,
                                   options: S,
                                   value: I,
                                   onChange: (e) => T({ explicitContentNonFriendDm: e }),
@@ -160,6 +167,8 @@ function y(e) {
                               title: E.intl.string(E.t["FP+a4+"]),
                               titleClassName: b.selectItemTitle,
                               children: (0, r.jsx)(o.q4e, {
+                                  variant: "text-only",
+                                  className: b.select,
                                   options: A,
                                   value: O,
                                   onChange: (e) => T({ explicitContentGuilds: e }),

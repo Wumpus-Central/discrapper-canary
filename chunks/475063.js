@@ -1,13 +1,13 @@
 n.d(t, { K: () => R }), n(539854);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(772848),
     l = n(84735),
     c = n(15127),
     u = n(766646),
-    d = n(557818),
+    d = n(74655),
     f = n(897037),
     _ = n(377089),
     p = n(680874),
@@ -72,9 +72,9 @@ function v(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,8 +83,8 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let T = (0, s.Z)(),
@@ -96,7 +96,7 @@ function R(e) {
     var t,
         {
             value: n,
-            placeholder: a = "",
+            placeholder: o = "",
             autoFocus: s = !1,
             autosize: E = !1,
             minLength: y,
@@ -106,8 +106,8 @@ function R(e) {
             showCharacterCount: x,
             showRemainingCharacterCount: L = !0,
             "aria-labelledby": j,
-            rows: k = 3,
-            disabled: M,
+            rows: M = 3,
+            disabled: k,
             helperText: U,
             successMessage: G,
             inputRef: B,
@@ -130,8 +130,8 @@ function R(e) {
             "successMessage",
             "inputRef",
         ]);
-    let V = (0, _.U)("UserSettingsDesignSystems"),
-        F = V ? !1 !== x : x,
+    let F = (0, _.U)("UserSettingsDesignSystems"),
+        V = F ? !1 !== x : x,
         H = (0, f.m)({
             validateOn: "change",
             error: R,
@@ -152,23 +152,23 @@ function R(e) {
             );
         }, [R, null == Y ? void 0 : Y.errorId, I, y]),
         z = i.useMemo(() => {
-            if (V) return;
+            if (F) return;
             if (null == I) return C;
             let e = "".concat(I).length;
             return N * (e += "".concat(I, " / ").length) + C;
-        }, [V, I]),
+        }, [F, I]),
         q = (e) => {
             let { onChange: t } = Z;
             null == t || t(e.currentTarget.value), H.setShouldValidate(!0);
         },
         X = E ? p.l : "textarea";
-    return (0, r.jsxs)(d.J, {
+    return (0, r.jsxs)(d.U, {
         validation: H,
-        disabled: M,
+        disabled: k,
         helperText: U,
         successMessage: G,
-        characterCount: V && F ? (null != (t = null == n ? void 0 : n.length) ? t : 0) : void 0,
-        characterCountMaxLength: V && null != I ? I : void 0,
+        characterCount: F && V ? (null != (t = null == n ? void 0 : n.length) ? t : 0) : void 0,
+        characterCountMaxLength: F && null != I ? I : void 0,
         children: [
             (0, r.jsx)(l.t, {
                 children: (0, r.jsx)(
@@ -176,18 +176,18 @@ function R(e) {
                     O(
                         b(
                             {
-                                className: o()(m.textArea, g.scrollbarDefault),
+                                className: a()(m.textArea, g.scrollbarDefault),
                                 "aria-labelledby": W,
                                 "aria-describedby": K,
                                 "aria-invalid": H.hasError,
                                 style: { paddingRight: z },
-                                placeholder: a,
+                                placeholder: o,
                                 value: n,
                                 autoFocus: s,
                                 minLength: y,
                                 maxLength: I,
-                                rows: k,
-                                disabled: M,
+                                rows: M,
+                                disabled: k,
                             },
                             Z,
                         ),
@@ -208,14 +208,14 @@ function R(e) {
                     id: A,
                     children: h.intl.format(h.t["+DFxLS"], { maxLength: I }),
                 }),
-            !V && F
+            !F && V
                 ? (0, r.jsx)(P, {
                       value: n,
                       maxLength: I,
                       hasError: H.hasError,
                   })
                 : null,
-            V || F || !1 === L
+            F || V || !1 === L
                 ? null
                 : (0, r.jsx)(w, {
                       value: n,
@@ -226,21 +226,21 @@ function R(e) {
 }
 function P(e) {
     var t;
-    let { value: n, maxLength: i, hasError: a } = e;
+    let { value: n, maxLength: i, hasError: o } = e;
     return (0, r.jsxs)("div", {
-        className: o()(m.maxLength, { [m.errorOverflow]: a }),
+        className: a()(m.maxLength, { [m.errorOverflow]: o }),
         "aria-hidden": "true",
         children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " ", null != i && "/ ".concat(i)],
     });
 }
 function w(e) {
     let { value: t, maxLength: n } = e,
-        a = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
-    return null == a
+        o = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
+    return null == o
         ? null
         : (0, r.jsx)("div", {
-              className: o()(m.maxLength, { [m.errorOverflow]: a < 0 }),
+              className: a()(m.maxLength, { [m.errorOverflow]: o < 0 }),
               "aria-hidden": "true",
-              children: a,
+              children: o,
           });
 }

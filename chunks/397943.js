@@ -1,34 +1,32 @@
-n.d(t, { M: () => l }), n(388685);
+n.d(t, { M: () => s }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(921349),
-    o = n(563040),
-    s = n(487055);
-function l(e) {
-    let { value: t, onChange: n, hideValue: l, disabled: c = !1 } = e,
-        u = i.useRef(null),
-        d = i.useMemo(() => new o.tR(), []),
-        [f, _] = i.useState("");
-    function p(e) {
-        null != t && n((0, o.rK)(t, d.selectValue(e)));
+    o = n(921349),
+    a = n(563040);
+function s(e) {
+    let { value: t, onChange: n, hideValue: s, disabled: l = !1 } = e,
+        c = i.useRef(null),
+        u = i.useMemo(() => new a.tR(), []),
+        [d, f] = i.useState("");
+    function _(e) {
+        null != t && n((0, a.rK)(t, u.selectValue(e)));
     }
-    function h(e) {
+    function p(e) {
         if ("Enter" === e.key) {
-            let e = (0, o.tj)(t, f);
+            let e = (0, a.tj)(t, d);
             if (null != e) {
                 var n;
-                p(e), null == (n = u.current) || n.close();
+                _(e), null == (n = c.current) || n.close();
             }
         }
     }
-    return (0, r.jsx)(a.V, {
-        ref: u,
-        className: s.select,
-        options: d.getOptions(f),
-        value: l ? void 0 : d.lookupByValue(t),
-        onChange: p,
-        isDisabled: c,
-        onSearchChange: _,
-        onKeyDown: h,
+    return (0, r.jsx)(o.V, {
+        ref: c,
+        options: u.getOptions(d),
+        value: s ? void 0 : u.lookupByValue(t),
+        onChange: _,
+        isDisabled: l,
+        onSearchChange: f,
+        onKeyDown: p,
     });
 }

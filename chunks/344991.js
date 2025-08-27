@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(512722),
     l = n.n(s),
     c = n(481060),
@@ -84,7 +84,7 @@ var v = (function (e) {
     return (e[(e.PILL_ICON_SIZE = 16)] = "PILL_ICON_SIZE"), (e[(e.ROW_ICON_SIZE = 24)] = "ROW_ICON_SIZE"), e;
 })({});
 function I(e) {
-    let { selectActionComponent: t, queryOptions: n, renderIcon: a, renderOptionLabel: s, defaultValues: g } = e,
+    let { selectActionComponent: t, queryOptions: n, renderIcon: o, renderOptionLabel: s, defaultValues: g } = e,
         { type: b, placeholder: v, maxValues: I, disabled: T } = t,
         [S, A] = i.useState(!1),
         [C, N] = i.useState(!1),
@@ -106,7 +106,7 @@ function I(e) {
             executeStateUpdate: G,
             visualState: B,
             isDisabled: Z,
-            error: V,
+            error: F,
         } = k.useComponentState(
             t,
             R.size > 0
@@ -116,7 +116,7 @@ function I(e) {
                   }
                 : void 0,
         ),
-        F = null != k.modal,
+        V = null != k.modal,
         H = I > 1,
         Y = B === _.gH.LOADING;
     i.useEffect(() => {
@@ -150,10 +150,10 @@ function I(e) {
         X = (e, t) => {
             let { inPill: n } = t,
                 i = n ? 16 : 24,
-                o = a(e, i);
-            return null != o
+                a = o(e, i);
+            return null != a
                 ? (0, r.jsx)(O, {
-                      icon: o,
+                      icon: a,
                       iconSize: i,
                   })
                 : null;
@@ -162,7 +162,7 @@ function I(e) {
         J = {
             isProcessing: Y,
             isDisabled: T || B === _.gH.DISABLED || Z,
-            wrapperClassName: o()(h.select, { [h.inModal]: F }),
+            wrapperClassName: a()(h.select, { [h.inModal]: V }),
             options: q,
             placeholder: Q ? (null != v ? v : p.intl.string(p.t.Otr6W1)) : void 0,
             onClose: () => A(!1),
@@ -181,17 +181,11 @@ function I(e) {
                           c.VcW,
                           E(
                               {
-                                  className: h.badges,
                                   value: Array.from(R.values()),
                                   onChange: K,
                                   multi: !0,
-                                  inputClassNames: o()({
-                                      [h.soloInput]: 0 === R.size,
-                                      [h.inlineInput]: R.size > 0,
-                                      [h.hidden]: !Q,
-                                  }),
+                                  inputClassNames: a()({ [h.hidden]: !Q }),
                                   closeOnSelect: !1,
-                                  centerCaret: !0,
                               },
                               J,
                           ),
@@ -201,18 +195,16 @@ function I(e) {
                           c.VcW,
                           E(
                               {
-                                  className: h.singleSelect,
                                   value: [...R.values()][0],
                                   onChange: z,
                                   clearable: !0,
-                                  centerCaret: !0,
                               },
                               J,
                           ),
                           j,
                       ),
             }),
-            null == V || F ? null : (0, r.jsx)(d.st, y(E({}, (0, d.c4)(V)), { className: m.error })),
+            null == F || V ? null : (0, r.jsx)(d.st, y(E({}, (0, d.c4)(F)), { className: m.error })),
         ],
     });
 }
