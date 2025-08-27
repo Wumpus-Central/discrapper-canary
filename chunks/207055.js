@@ -138,7 +138,7 @@ let L = i.memo((e) => {
                     isGuest: V,
                     isSelf: k,
                     requestToStreamActivity: eo ? Y : void 0,
-                    application: ea && (null == Y ? void 0 : Y.session_id) != null ? K : void 0,
+                    application: (ea || et) && (null == Y ? void 0 : Y.session_id) != null ? K : void 0,
                     showHangStatus: en && et && (k || null != ei),
                     hangStatusActivity: k ? er : ei,
                 }),

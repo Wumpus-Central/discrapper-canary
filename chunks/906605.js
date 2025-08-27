@@ -1,6 +1,7 @@
 n.d(t, {
-    Sc: () => _,
-    UP: () => p,
+    Sc: () => p,
+    UP: () => h,
+    XE: () => _,
     Zx: () => d,
     _s: () => f,
 }),
@@ -15,7 +16,7 @@ var r = n(570140),
     u = n(981631);
 function d(e, t) {
     var n;
-    if (null == e) return void _(t);
+    if (null == e) return void p(t);
     r.Z.dispatch({
         type: "UPDATE_HANG_STATUS",
         status: e,
@@ -30,7 +31,7 @@ function d(e, t) {
 }
 function f(e, t, n) {
     var i;
-    if ("" === e || null == t) return void _(n);
+    if ("" === e || null == t) return void p(n);
     r.Z.dispatch({
         type: "UPDATE_HANG_STATUS_CUSTOM",
         emoji: t,
@@ -44,7 +45,22 @@ function f(e, t, n) {
             media_session_id: o.Z.getMediaSessionId(),
         });
 }
-function _(e) {
+function _(e, t) {
+    var n;
+    if (null == e) return void p(t);
+    r.Z.dispatch({
+        type: "UPDATE_HANG_STATUS_GAME_ACTIVITY",
+        applicationId: e,
+        saveAsDefault: t,
+    }),
+        l.default.track(u.rMx.SET_HANG_STATUS, {
+            status_type: "game_activity",
+            channel_id: s.Z.getVoiceChannelId(),
+            guild_id: null == (n = a.Z.getChannel(s.Z.getVoiceChannelId())) ? void 0 : n.guild_id,
+            media_session_id: o.Z.getMediaSessionId(),
+        });
+}
+function p(e) {
     var t;
     r.Z.dispatch({
         type: "CLEAR_HANG_STATUS",
@@ -56,7 +72,7 @@ function _(e) {
             media_session_id: o.Z.getMediaSessionId(),
         });
 }
-function p() {
+function h() {
     let e = [c.Z.getCustomHangStatus(), ...c.Z.getRecentCustomStatuses()].filter((e) => {
         var t;
         return (

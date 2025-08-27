@@ -385,17 +385,19 @@ function B() {
             () => ({
                 hangStatus: d.Z.getCurrentHangStatus(),
                 customHangStatus: d.Z.getCustomHangStatus(),
+                gameActivityHangStatus: d.Z.getGameActivityHangStatus(),
                 inVoice: null != I.Z.getVoiceChannelId(),
             }),
             (e, t) => {
                 var n, r;
-                let { hangStatus: i, customHangStatus: a } = t;
+                let { hangStatus: i, customHangStatus: a, gameActivityHangStatus: o } = t;
                 if (
                     e.inVoice &&
                     ((null != i && i !== e.hangStatus) ||
                         (null != a &&
                             (a.status !== (null == (n = e.customHangStatus) ? void 0 : n.status) ||
-                                !(0, l.isEqual)(a.emoji, null == (r = e.customHangStatus) ? void 0 : r.emoji))))
+                                !(0, l.isEqual)(a.emoji, null == (r = e.customHangStatus) ? void 0 : r.emoji))) ||
+                        (null != o && e.gameActivityHangStatus !== o))
                 )
                     return "hang_status_select";
             },
