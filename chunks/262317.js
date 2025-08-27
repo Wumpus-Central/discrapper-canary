@@ -215,7 +215,7 @@ let F = (0, h.$)(function (e) {
         },
         eN = (e) =>
             eh
-                ? (0, r.jsx)(O.$, L({}, e))
+                ? (0, r.jsx)(O.$, k(L({}, e), { channel: U }))
                 : null != em
                   ? (0, r.jsx)(
                         j.I,
