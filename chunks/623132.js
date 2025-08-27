@@ -309,6 +309,7 @@ function A(e) {
                               widgetType: l,
                               applicationId: b,
                               disableInteraction: u,
+                              className: P.tags,
                           }),
                           !u &&
                               (0, n.jsx)(C, {
