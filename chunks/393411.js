@@ -95,7 +95,7 @@ let G = new p.Z("SubscriptionHeader.tsx"),
         object: D.qAy.CARD,
     },
     Z = [D.O0b.PAUSED, D.O0b.PAUSE_PENDING, D.O0b.BILLING_RETRY];
-function V(e) {
+function F(e) {
     let {
         wordMark: t,
         subscriptionInfo: n,
@@ -141,7 +141,7 @@ function V(e) {
         ],
     });
 }
-function F(e) {
+function V(e) {
     let {
         wordMark: t,
         subscriptionInfo: n,
@@ -202,7 +202,7 @@ function H() {
 }
 function Y() {
     let { analyticsLocations: e } = (0, f.ZP)(d.Z.ACCOUNT_CREDIT_BANNER);
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(F, {
         wordMark: (0, r.jsx)(H, {}),
         subscriptionInfo: (0, r.jsx)("div", {
             className: L.planInfo,
@@ -247,7 +247,9 @@ let W = function (e) {
         },
         er = (e) => {
             (0, c.ZDy)(async () => {
-                let { default: t } = await Promise.all([n.e("58067"), n.e("81709")]).then(n.bind(n, 833569));
+                let { default: t } = await Promise.all([n.e("58067"), n.e("81709"), n.e("70349")]).then(
+                    n.bind(n, 833569),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         t,
@@ -516,7 +518,7 @@ let W = function (e) {
                 "aria-label": x.intl.string(x.t.lpNrPj),
             });
     }
-    let eh = Z.includes(i.status) && !K ? F : V;
+    let eh = Z.includes(i.status) && !K ? V : F;
     return (0, r.jsx)(eh, {
         wordMark: ep,
         subscriptionInfo: el(eu),

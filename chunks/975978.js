@@ -217,7 +217,7 @@ let C = (e) => {
             C = null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id,
             N = (0, _.Ng)(),
             P = null != N && (0, _.Wp)(N, E.Si.TIER_2),
-            D = (0, h.A)(E.Xh.PREMIUM_MONTH_TIER_2),
+            D = (0, h.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
             x = "".concat(D, "/").concat((0, d.eP)(E.rV.MONTH)),
             L = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_0),
             j = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_2),

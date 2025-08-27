@@ -264,7 +264,7 @@ let w = () =>
             A = null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id,
             C = (0, m.Ng)(),
             R = null != C && (0, m.Wp)(C, y.Si.TIER_2),
-            x = (0, E.A)(y.Xh.PREMIUM_MONTH_TIER_2),
+            x = (0, E.Aq)(y.Xh.PREMIUM_MONTH_TIER_2),
             L = "".concat(x, "/").concat((0, h.eP)(y.rV.MONTH)),
             j = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_0),
             k = (0, h.CY)(y.Xh.PREMIUM_MONTH_TIER_2),

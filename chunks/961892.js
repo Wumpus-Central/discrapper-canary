@@ -1,0 +1,41 @@
+n.d(t, { Z: () => h }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    a = n.n(l),
+    o = n(704215),
+    s = n(481060),
+    c = n(243778),
+    u = n(227140),
+    d = n(921944),
+    p = n(388032),
+    f = n(716651);
+let h = (e) => {
+    let { isSelected: t, discountOffer: n } = e,
+        [l, h] = (0, c.US)([o.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
+    return (i.useEffect(() => {
+        t && l === o.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && h(d.L.TAKE_ACTION);
+    }, [t, h, l]),
+    l === o.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
+        ? (0, r.jsx)(u.Z, {
+              copy: p.intl.format(p.t.AYcXGR, { discountOfferAmount: n.discount.amount }),
+              showStars: !1,
+          })
+        : (0, r.jsxs)("div", {
+              className: a()(f.churnDiscountBadge, f.churnDiscountAcknowledgedBadge),
+              children: [
+                  (0, r.jsx)(s.T39, {
+                      size: "custom",
+                      width: 14,
+                      height: 14,
+                      color: "currentColor",
+                      className: f.churnDiscountBadgeIcon,
+                  }),
+                  (0, r.jsx)(s.Text, {
+                      variant: "eyebrow",
+                      color: "text-secondary",
+                      children: p.intl.format(p.t.AYcXGR, { discountOfferAmount: n.discount.amount }),
+                  }),
+              ],
+          });
+};

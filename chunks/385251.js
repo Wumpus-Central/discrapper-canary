@@ -122,7 +122,7 @@ function R(e) {
 }
 function P(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
-        i = (0, h._)(n, b.Xh.PREMIUM_MONTH_TIER_2, t);
+        i = (0, h._n)(n, b.Xh.PREMIUM_MONTH_TIER_2, t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6q, {
@@ -159,7 +159,9 @@ let w = function (e) {
         },
         L = (e) => {
             (0, a.ZDy)(async () => {
-                let { default: i } = await Promise.all([n.e("58067"), n.e("81709")]).then(n.bind(n, 833569));
+                let { default: i } = await Promise.all([n.e("58067"), n.e("81709"), n.e("70349")]).then(
+                    n.bind(n, 833569),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         i,

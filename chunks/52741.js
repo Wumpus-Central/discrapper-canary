@@ -21,7 +21,7 @@ var i = n(120356),
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,
-        o = (0, m.A)(i);
+        o = (0, m.Aq)(i);
     return (0, r.jsx)(r.Fragment, {
         children: b.intl.format(b.t.sJTwHR, {
             numMonths: null != (t = a.discount.user_usage_limit) ? t : E.rt,
@@ -90,7 +90,7 @@ function v(e) {
             E.rV.MONTH,
         );
         if (o === E.C.PREMIUM_TRIAL) {
-            var G, B, Z, V;
+            var G, B, Z, F;
             return (0, r.jsx)(c.X6q, {
                 variant: N,
                 color: R,
@@ -103,7 +103,7 @@ function v(e) {
                     ),
                     duration: (0, f.if)({
                         intervalType: null != (Z = null == U ? void 0 : U.interval) ? Z : E.rV.DAY,
-                        intervalCount: null != (V = null == U ? void 0 : U.interval_count) ? V : 30,
+                        intervalCount: null != (F = null == U ? void 0 : U.interval_count) ? F : 30,
                         capitalize: !1,
                     }),
                     price: e,
