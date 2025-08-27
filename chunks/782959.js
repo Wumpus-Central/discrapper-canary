@@ -42,9 +42,7 @@ function h(e) {
                 s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, f({}, (0, o.hH)(t))),
                     h(d.L.PRIMARY),
                     (0, a.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("46786"), n.e("45094"), n.e("21914")]).then(
-                            n.bind(n, 218613),
-                        );
+                        let { default: e } = await Promise.all([n.e("45094"), n.e("67133")]).then(n.bind(n, 218613));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(

@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(868814),
     x = n(981631),
     j = n(388032),
-    v = n(813878);
-function _(e) {
+    _ = n(813878);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,9 +65,9 @@ function y(e) {
         l = (0, f.Mf)(i.id);
     return "null" === i.id
         ? (0, r.jsx)("div", {
-              className: a()(v.categoryRow, v.uncategorized),
+              className: a()(_.categoryRow, _.uncategorized),
               children: (0, r.jsx)(o.Text, {
-                  className: v.categoryText,
+                  className: _.categoryText,
                   color: "text-muted",
                   variant: "text-xs/semibold",
                   lineClamp: 1,
@@ -75,7 +75,7 @@ function y(e) {
               }),
           })
         : (0, r.jsxs)(o.P3F, {
-              className: a()(v.categoryRow, { [v.uncategorized]: "null" === i.id }),
+              className: a()(_.categoryRow, { [_.uncategorized]: "null" === i.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e("90508"), n.e("68294"), n.e("8965")]).then(
@@ -84,7 +84,7 @@ function y(e) {
                       return (n) =>
                           (0, r.jsx)(
                               e,
-                              O(_({}, n), {
+                              O(v({}, n), {
                                   channel: i,
                                   guild: t,
                               }),
@@ -100,7 +100,7 @@ function y(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    O(_({}, n), {
+                                    O(v({}, n), {
                                         guildId: t.id,
                                         startingChannelId: i.id,
                                     }),
@@ -110,7 +110,7 @@ function y(e) {
               ),
               children: [
                   (0, r.jsx)(o.Text, {
-                      className: v.categoryText,
+                      className: _.categoryText,
                       color: "text-muted",
                       variant: "text-xs/semibold",
                       lineClamp: 1,
@@ -120,14 +120,14 @@ function y(e) {
                       "aria-checked": l,
                       value: l,
                       type: o.XZJ.Types.INVERTED,
-                      className: v.checkbox,
+                      className: _.checkbox,
                       displayOnly: !0,
                   }),
               ],
           });
 }
 let C = i.memo(function () {
-        return (0, r.jsx)("div", { className: v.separator });
+        return (0, r.jsx)("div", { className: _.separator });
     }),
     N = i.memo(function (e) {
         let { index: t } = e;
@@ -135,7 +135,7 @@ let C = i.memo(function () {
             o.Text,
             {
                 variant: "text-xs/normal",
-                className: v.subtitleSeparator,
+                className: _.subtitleSeparator,
                 children: "\xB7",
             },
             "separator-".concat(t),
@@ -167,7 +167,7 @@ let C = i.memo(function () {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          O(_({}, n), {
+                                          O(v({}, n), {
                                               guildId: l.id,
                                               startingChannelId: t.id,
                                           }),
@@ -191,7 +191,7 @@ let C = i.memo(function () {
                           return (n) =>
                               (0, r.jsx)(
                                   e,
-                                  O(_({}, n), {
+                                  O(v({}, n), {
                                       channel: t,
                                       guild: l,
                                   }),
@@ -202,7 +202,7 @@ let C = i.memo(function () {
                               n.e("5410"),
                               n.e("79695"),
                               n.e("90508"),
-                              n.e("7590"),
+                              n.e("33285"),
                               n.e("68294"),
                               n.e("99534"),
                               n.e("76676"),
@@ -214,7 +214,7 @@ let C = i.memo(function () {
                               n.e("18320"),
                               n.e("97755"),
                               n.e("1268"),
-                              n.e("5665"),
+                              n.e("68197"),
                               n.e("93077"),
                               n.e("55196"),
                               n.e("14350"),
@@ -222,7 +222,7 @@ let C = i.memo(function () {
                           return (n) =>
                               (0, r.jsx)(
                                   e,
-                                  O(_({}, n), {
+                                  O(v({}, n), {
                                       channel: t,
                                       guild: l,
                                   }),
@@ -239,12 +239,12 @@ let C = i.memo(function () {
                         (0, r.jsxs)(
                             o.P3F,
                             O(
-                                _(
+                                v(
                                     {
-                                        className: a()(v.channelRow, {
-                                            [v.firstChannel]: p,
-                                            [v.lastChannel]: y,
-                                            [v.disabled]: S,
+                                        className: a()(_.channelRow, {
+                                            [_.firstChannel]: p,
+                                            [_.lastChannel]: y,
+                                            [_.disabled]: S,
                                         }),
                                     },
                                     e,
@@ -254,18 +254,18 @@ let C = i.memo(function () {
                                     onContextMenu: D,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: v.channelInfo,
+                                            className: _.channelInfo,
                                             children: (0, r.jsxs)("div", {
-                                                className: v.channelName,
+                                                className: _.channelName,
                                                 children: [
                                                     (0, r.jsx)(g._W, {
                                                         channel: t,
                                                         guild: l,
                                                     }),
                                                     (0, r.jsx)(d.Z, {
-                                                        className: v.__invalid_name,
+                                                        className: _.__invalid_name,
                                                         children: (0, r.jsx)(o.Text, {
-                                                            className: v.channelText,
+                                                            className: _.channelText,
                                                             variant: "text-md/medium",
                                                             lineClamp: 1,
                                                             color: S ? "text-muted" : "text-default",
@@ -278,7 +278,7 @@ let C = i.memo(function () {
                                                                   (0, r.jsx)(N, { index: 0 }),
                                                                   (0, r.jsx)(o.Text, {
                                                                       variant: "text-xs/medium",
-                                                                      className: v.channelSubtitle,
+                                                                      className: _.channelSubtitle,
                                                                       color: "text-brand",
                                                                       children: j.intl.string(j.t.mPxmeH),
                                                                   }),
@@ -289,7 +289,7 @@ let C = i.memo(function () {
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: v.channelActions,
+                                            className: _.channelActions,
                                             children: (0, u.s)(t.guild_id, t.id)
                                                 ? (0, r.jsx)(o.XZJ, {
                                                       "aria-checked": I,
@@ -299,7 +299,7 @@ let C = i.memo(function () {
                                                       color: R
                                                           ? s.Z.colors.BG_BRAND.css
                                                           : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                                      innerClassName: v.checkboxInner,
+                                                      innerClassName: _.checkboxInner,
                                                       displayOnly: !0,
                                                   })
                                                 : (0, r.jsx)(o.zxk, {

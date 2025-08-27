@@ -86,7 +86,7 @@ function x(e) {
         s = i.useCallback(() => {
             if (null != t)
                 return (0, a.ZDy)(async () => {
-                    let { default: e } = await n.e("14653").then(n.bind(n, 380716));
+                    let { default: e } = await n.e("7590").then(n.bind(n, 380716));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -141,11 +141,11 @@ let j = function (e) {
             },
             [n],
         ),
-        v = n.map((e) => h(p({}, e), { id: e.channelId })),
-        _ = i.useCallback((e) => {
+        _ = n.map((e) => h(p({}, e), { id: e.channelId })),
+        v = i.useCallback((e) => {
             (0, c.hS)(e);
         }, []),
-        { handleDragStart: O, handleDragReset: y, handleDragComplete: C } = (0, s.Z)(v, _);
+        { handleDragStart: O, handleDragReset: y, handleDragComplete: C } = (0, s.Z)(_, v);
     return (0, r.jsxs)("div", {
         className: g.section,
         children: [

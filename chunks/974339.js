@@ -1,19 +1,19 @@
-r.d(t, { Z: () => Z }), r(388685);
+r.d(t, { Z: () => $ }), r(388685);
 var n = r(951288),
     l = r(647438),
     o = r(120356),
-    i = r.n(o);
-if (12633 == r.j) var s = r(91192);
-var a = r(481060),
+    i = r.n(o),
+    s = r(91192),
+    a = r(481060),
     c = r(385499),
     u = r(313201),
     d = r(565138),
     m = r(605436),
     x = r(537383),
-    b = r(71080),
-    h = r(388032),
-    f = r(613007);
-function y(e) {
+    h = r(71080),
+    b = r(388032),
+    w = r(613007);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -38,7 +38,7 @@ function y(e) {
     }
     return e;
 }
-function g(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -58,60 +58,57 @@ function g(e, t) {
     }
     return l;
 }
-function p(e) {
+function g(e) {
     var t = (function (e, t) {
-        if ("object" !== w(e) || null === e) return e;
+        if ("object" !== p(e) || null === e) return e;
         var r = e[Symbol.toPrimitive];
         if (void 0 !== r) {
             var n = r.call(e, t || "default");
-            if ("object" !== w(n)) return n;
+            if ("object" !== p(n)) return n;
             throw TypeError("@@toPrimitive must return a primitive value.");
         }
         return ("string" === t ? String : Number)(e);
     })(e, "string");
-    return "symbol" === w(t) ? t : String(t);
+    return "symbol" === p(t) ? t : String(t);
 }
-function w(e) {
+function p(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
 let j = (0, u.hQ)(),
-    O = (0, u.hQ)();
+    S = (0, u.hQ)();
 function v(e) {
     return "".concat(e.rowType, ":").concat(e.id);
 }
-let S =
-        12633 == r.j
-            ? l.createContext({
-                  searchRef: { current: null },
-                  selectedSection: 0,
-                  selectedRow: -1,
-                  roles: [],
-                  members: [],
-                  users: [],
-                  guilds: [],
-                  pendingAdditions: {},
-                  isAtMaxPendingRows: !1,
-                  onSelectionChange: () => {},
-                  onRowClick: () => {},
-                  query: "",
-                  onQueryChange: () => {},
-                  onQueryClick: () => {},
-                  onRemovePendingAddition: () => {},
-              })
-            : null,
-    E = () => l.useContext(S),
-    R = 12633 == r.j ? [] : null;
+let E = l.createContext({
+        searchRef: { current: null },
+        selectedSection: 0,
+        selectedRow: -1,
+        roles: [],
+        members: [],
+        users: [],
+        guilds: [],
+        pendingAdditions: {},
+        isAtMaxPendingRows: !1,
+        onSelectionChange: () => {},
+        onRowClick: () => {},
+        query: "",
+        onQueryChange: () => {},
+        onQueryClick: () => {},
+        onRemovePendingAddition: () => {},
+    }),
+    R = () => l.useContext(E),
+    O = [];
 function T(e) {
-    let { roles: t = R, members: r = R, users: n = R, guilds: o = R } = e;
+    let { roles: t = O, members: r = O, users: n = O, guilds: o = O } = e;
     return l.useMemo(() => [t.length, r.length, n.length, o.length], [t.length, r.length, n.length, o.length]);
 }
-let P = (e) => {
+let k = (e) => {
     let { title: t } = e;
     return (0, n.jsx)(
         a.vwX,
         {
             tag: "h5",
-            className: i()(f.sectionTitle, f.rowHeight),
+            className: i()(w.sectionTitle, w.rowHeight),
             children: t,
         },
         t,
@@ -119,53 +116,60 @@ let P = (e) => {
 };
 function C(e) {
     var t, r;
-    let { id: o, sectionIndex: c, rowIndex: u, rows: d, children: x, showCheckbox: h, showRowLabel: g } = e,
-        p = (0, s.JA)(o),
-        { selectedSection: w, selectedRow: j, onSelectionChange: O, pendingAdditions: S, onRowClick: R } = E(),
-        T = d[u],
-        P = v(T),
-        C = T.disabled || P in S,
-        k = T.disabled;
+    let { id: o, sectionIndex: c, rowIndex: u, rows: d, children: x, showCheckbox: b, showRowLabel: y } = e,
+        g = (0, s.JA)(o),
+        {
+            selectedSection: p,
+            selectedRow: j,
+            onSelectionChange: S,
+            pendingAdditions: E,
+            onRowClick: O,
+            isAtMaxPendingRows: T,
+        } = R(),
+        k = d[u],
+        C = v(k),
+        P = k.disabled || C in E,
+        L = k.disabled || (!P && T);
     return (0, l.createElement)(
         a.P3F,
-        ((t = y({}, p)),
+        ((t = f({}, g)),
         (r = r =
             {
                 id: o,
-                key: P,
+                key: C,
                 role: "option",
-                className: i()(f.clickableRow, { [f.selectedRow]: w === c && j === u }),
+                className: i()(w.clickableRow, { [w.selectedRow]: p === c && j === u }),
                 onClick: (e) => {
-                    k || (e.preventDefault(), T.rowType !== b.aC.EMPTY_STATE && R(T));
+                    L || (e.preventDefault(), k.rowType !== h.aC.EMPTY_STATE && O(k));
                 },
-                onMouseEnter: () => O(c, u, !1),
-                "aria-disabled": k,
-                "aria-selected": C,
+                onMouseEnter: () => S(c, u, !1),
+                "aria-disabled": L,
+                "aria-selected": P,
                 "aria-setsize": d.length,
                 "aria-posinset": u + 1,
                 children: [
-                    h
+                    b
                         ? (0, n.jsx)(a.XZJ, {
-                              className: f.checkbox,
+                              className: w.checkbox,
                               displayOnly: !0,
                               size: 18,
-                              value: C,
+                              value: P,
                               type: a.XZJ.Types.INVERTED,
-                              disabled: k,
+                              disabled: L,
                               children: (0, n.jsx)("div", {
-                                  className: f.rowBody,
+                                  className: w.rowBody,
                                   children: x,
                               }),
                           })
                         : (0, n.jsx)("div", {
-                              className: f.rowBody,
+                              className: w.rowBody,
                               children: x,
                           }),
-                    g
+                    y
                         ? (0, n.jsx)(a.Text, {
                               color: "text-muted",
                               variant: "text-xs/normal",
-                              children: m.zB(T.rowType),
+                              children: m.zB(k.rowType),
                           })
                         : null,
                 ],
@@ -185,22 +189,22 @@ function C(e) {
         t),
     );
 }
-let k = (e) => {
+let P = (e) => {
         let { index: t, disabledText: r } = e,
-            { roles: l } = E(),
+            { roles: l } = R(),
             o = l[t];
         return null == o
             ? null
             : (0, n.jsxs)(C, {
                   id: "roles-row-".concat(t),
-                  sectionIndex: b.m$.ROLES,
+                  sectionIndex: h.m$.ROLES,
                   rowIndex: t,
                   rows: l,
                   showCheckbox: !0,
                   showRowLabel: !0,
                   children: [
                       (0, n.jsx)("div", {
-                          className: i()(f.rowHeight, f.alignCenter),
+                          className: i()(w.rowHeight, w.alignCenter),
                           children: (0, n.jsx)(a.lZ8, {
                               size: "custom",
                               color: o.colorString,
@@ -208,11 +212,11 @@ let k = (e) => {
                           }),
                       }),
                       (0, n.jsxs)("div", {
-                          className: f.rowLabel,
+                          className: w.rowLabel,
                           children: [
                               (0, n.jsx)(a.Text, {
                                   variant: "text-sm/medium",
-                                  color: o.rowType === b.aC.EMPTY_STATE ? "text-muted" : "text-default",
+                                  color: o.rowType === h.aC.EMPTY_STATE ? "text-muted" : "text-default",
                                   children: o.name,
                               }),
                               o.disabled && null != r
@@ -227,15 +231,15 @@ let k = (e) => {
                   ],
               });
     },
-    I = (e) => {
+    L = (e) => {
         let { index: t } = e,
-            { members: r } = E(),
+            { members: r } = R(),
             l = r[t];
         return null == l
             ? null
             : (0, n.jsxs)(C, {
                   id: "members-row-".concat(t),
-                  sectionIndex: b.m$.MEMBERS,
+                  sectionIndex: h.m$.MEMBERS,
                   rowIndex: t,
                   rows: r,
                   showCheckbox: !0,
@@ -247,14 +251,14 @@ let k = (e) => {
                           "aria-label": "",
                       }),
                       (0, n.jsx)(a.Text, {
-                          className: f.rowLabel,
+                          className: w.rowLabel,
                           variant: "text-sm/normal",
                           children: l.name,
                       }),
                       null != l.nickname
                           ? (0, n.jsx)(a.Text, {
                                 color: "text-muted",
-                                className: f.rowLabelSubText,
+                                className: w.rowLabelSubText,
                                 variant: "text-sm/normal",
                                 "aria-hidden": !0,
                                 children: l.username,
@@ -264,15 +268,15 @@ let k = (e) => {
                   ],
               });
     },
-    L = (e) => {
+    I = (e) => {
         let { index: t, disabledText: r } = e,
-            { users: l } = E(),
+            { users: l } = R(),
             o = l[t];
         return null == o
             ? null
             : (0, n.jsxs)(C, {
                   id: "users-row-".concat(t),
-                  sectionIndex: b.m$.USERS,
+                  sectionIndex: h.m$.USERS,
                   rowIndex: t,
                   rows: l,
                   showCheckbox: !0,
@@ -284,7 +288,7 @@ let k = (e) => {
                           "aria-label": "",
                       }),
                       (0, n.jsxs)("div", {
-                          className: f.rowLabel,
+                          className: w.rowLabel,
                           children: [
                               (0, n.jsx)(a.Text, {
                                   variant: "text-sm/normal",
@@ -304,13 +308,13 @@ let k = (e) => {
     },
     M = (e) => {
         let { index: t } = e,
-            { guilds: r } = E(),
+            { guilds: r } = R(),
             l = r[t];
         return null == l
             ? null
             : (0, n.jsxs)(C, {
                   id: "guilds-row-".concat(t),
-                  sectionIndex: b.m$.GUILDS,
+                  sectionIndex: h.m$.GUILDS,
                   rowIndex: t,
                   rows: r,
                   showCheckbox: !0,
@@ -322,7 +326,7 @@ let k = (e) => {
                           size: d.Z.Sizes.SMALLER,
                       }),
                       (0, n.jsx)("div", {
-                          className: f.rowLabel,
+                          className: w.rowLabel,
                           children: (0, n.jsx)(a.Text, {
                               variant: "text-sm/medium",
                               color: "text-default",
@@ -332,207 +336,204 @@ let k = (e) => {
                   ],
               });
     },
-    Z =
-        12633 == r.j
-            ? {
-                  SECTION_HEIGHT: 32,
-                  ROW_HEIGHT: 40,
-                  Provider: (e) => {
-                      let {
-                              children: t,
-                              listRef: r,
-                              query: o,
-                              setQuery: i,
-                              pendingAdditions: s,
-                              setPendingAdditions: a,
-                              roles: c = R,
-                              members: u = R,
-                              users: d = R,
-                              guilds: m = R,
-                              getRichTag: x,
-                              maxPendingRows: h,
-                          } = e,
-                          f = l.useRef(null),
-                          [w, j] = l.useState({
-                              section: 0,
-                              row: -1,
-                          });
-                      function O(e) {
-                          var t;
-                          let r = v(e);
-                          a((t) => {
-                              if (r in t) {
-                                  let { [r]: e } = t;
-                                  return g(t, [r].map(p));
-                              }
-                              {
-                                  let n = x(e);
-                                  if (null != n) {
-                                      let l = y({}, t);
-                                      return (
-                                          (l[r] = {
-                                              display: n,
-                                              row: e,
-                                          }),
-                                          l
-                                      );
-                                  }
-                              }
-                              return t;
-                          }),
-                              i(""),
-                              null == (t = f.current) || t.focus();
-                      }
-                      l.useEffect(() => {
-                          var e;
-                          null == (e = f.current) || e.focus();
-                      }, []);
-                      let E = null != h && Object.keys(s).length >= h;
-                      return (0, n.jsx)(S.Provider, {
-                          value: {
-                              searchRef: f,
-                              selectedSection: w.section,
-                              selectedRow: w.row,
-                              roles: c,
-                              members: u,
-                              users: d,
-                              guilds: m,
-                              pendingAdditions: s,
-                              isAtMaxPendingRows: E,
-                              onSelectionChange: function (e, t) {
-                                  let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                                  if (
-                                      (j((r) =>
-                                          r.section === e && r.row === t
-                                              ? r
-                                              : {
-                                                    section: null != e ? e : 0,
-                                                    row: null != t ? t : -1,
-                                                },
-                                      ),
-                                      n)
-                                  ) {
-                                      var l;
-                                      null == r ||
-                                          null == (l = r.current) ||
-                                          l.scrollToIndex({
-                                              section: null != e ? e : 0,
-                                              row: null != t ? t : 0,
-                                              padding: 8,
-                                          });
-                                  }
-                              },
-                              onRowClick: O,
-                              query: o,
-                              onQueryChange: i,
-                              onQueryClick: function (e, t) {
-                                  if (null == t) return;
-                                  i("");
-                                  let r = [];
-                                  switch (e) {
-                                      case b.m$.ROLES:
-                                          r = c;
-                                          break;
-                                      case b.m$.MEMBERS:
-                                          r = u;
-                                          break;
-                                      case b.m$.USERS:
-                                          r = d;
-                                          break;
-                                      case b.m$.GUILDS:
-                                          r = m;
-                                  }
-                                  let n = r[t];
-                                  null != n && n.rowType !== b.aC.EMPTY_STATE && O(n);
-                              },
-                              onRemovePendingAddition: function (e) {
-                                  a((t) => {
-                                      let { [e]: r } = t;
-                                      return g(t, [e].map(p));
-                                  });
-                              },
-                          },
-                          children: t,
-                      });
-                  },
-                  SearchBox: (e) => {
-                      let { placeholderText: t, focusSearchAfterReady: r, isReady: o } = e,
-                          {
-                              searchRef: i,
-                              selectedSection: s,
-                              selectedRow: a,
-                              pendingAdditions: c,
-                              query: u,
-                              onSelectionChange: d,
-                              onQueryChange: m,
-                              onQueryClick: b,
-                              onRemovePendingAddition: h,
-                              roles: f,
-                              members: y,
-                              users: g,
-                              guilds: p,
-                          } = E(),
-                          { keys: w, tags: v } = l.useMemo(() => {
-                              let e = Object.keys(c),
-                                  t = e.map((e) => c[e].display);
-                              return {
-                                  keys: e,
-                                  tags: t,
-                              };
-                          }, [c]),
-                          S = T({
-                              roles: f,
-                              members: y,
-                              users: g,
-                              guilds: p,
-                          });
-                      return (0, n.jsx)(x.Z, {
-                          ref: i,
-                          query: u,
-                          onQueryChange: m,
-                          selectedSection: s,
-                          selectedRow: a,
-                          onSelectionChange: d,
-                          onSelect: b,
-                          tags: v,
-                          sections: S,
-                          onRemoveTag: (e) => h(w[e]),
-                          placeholder: t,
-                          focusAfterReady: r,
-                          isReady: o,
-                          "aria-labelledby": j,
-                          "aria-controls": O,
-                      });
-                  },
-                  renderSection: (e) => {
-                      let { section: t } = e;
-                      switch (t) {
-                          case b.m$.ROLES:
-                              return (0, n.jsx)(P, { title: h.intl.string(h.t.LPJmLy) });
-                          case b.m$.MEMBERS:
-                              return (0, n.jsx)(P, { title: h.intl.string(h.t["9Oq93t"]) });
-                          case b.m$.USERS:
-                              return (0, n.jsx)(P, { title: h.intl.string(h.t.nqDUBQ) });
-                          case b.m$.GUILDS:
-                              return (0, n.jsx)(P, { title: h.intl.string(h.t["7hB4kp"]) });
-                          default:
-                              return null;
-                      }
-                  },
-                  renderRow: (e) => {
-                      let { section: t, row: r } = e;
-                      switch (t) {
-                          case b.m$.ROLES:
-                              return (0, n.jsx)(k, { index: r });
-                          case b.m$.MEMBERS:
-                              return (0, n.jsx)(I, { index: r });
-                          case b.m$.USERS:
-                              return (0, n.jsx)(L, { index: r });
-                          case b.m$.GUILDS:
-                              return (0, n.jsx)(M, { index: r });
-                      }
-                      return null;
-                  },
-                  useSections: T,
-              }
-            : null;
+    $ = {
+        SECTION_HEIGHT: 32,
+        ROW_HEIGHT: 40,
+        Provider: (e) => {
+            let {
+                    children: t,
+                    listRef: r,
+                    query: o,
+                    setQuery: i,
+                    pendingAdditions: s,
+                    setPendingAdditions: a,
+                    roles: c = O,
+                    members: u = O,
+                    users: d = O,
+                    guilds: m = O,
+                    getRichTag: x,
+                    maxPendingRows: b,
+                } = e,
+                w = l.useRef(null),
+                [p, j] = l.useState({
+                    section: 0,
+                    row: -1,
+                });
+            function S(e) {
+                var t;
+                let r = v(e);
+                a((t) => {
+                    if (r in t) {
+                        let { [r]: e } = t;
+                        return y(t, [r].map(g));
+                    }
+                    {
+                        let n = x(e);
+                        if (null != n) {
+                            let l = f({}, t);
+                            return (
+                                (l[r] = {
+                                    display: n,
+                                    row: e,
+                                }),
+                                l
+                            );
+                        }
+                    }
+                    return t;
+                }),
+                    i(""),
+                    null == (t = w.current) || t.focus();
+            }
+            l.useEffect(() => {
+                var e;
+                null == (e = w.current) || e.focus();
+            }, []);
+            let R = null != b && Object.keys(s).length >= b;
+            return (0, n.jsx)(E.Provider, {
+                value: {
+                    searchRef: w,
+                    selectedSection: p.section,
+                    selectedRow: p.row,
+                    roles: c,
+                    members: u,
+                    users: d,
+                    guilds: m,
+                    pendingAdditions: s,
+                    isAtMaxPendingRows: R,
+                    onSelectionChange: function (e, t) {
+                        let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+                        if (
+                            (j((r) =>
+                                r.section === e && r.row === t
+                                    ? r
+                                    : {
+                                          section: null != e ? e : 0,
+                                          row: null != t ? t : -1,
+                                      },
+                            ),
+                            n)
+                        ) {
+                            var l;
+                            null == r ||
+                                null == (l = r.current) ||
+                                l.scrollToIndex({
+                                    section: null != e ? e : 0,
+                                    row: null != t ? t : 0,
+                                    padding: 8,
+                                });
+                        }
+                    },
+                    onRowClick: S,
+                    query: o,
+                    onQueryChange: i,
+                    onQueryClick: function (e, t) {
+                        if (null == t) return;
+                        i("");
+                        let r = [];
+                        switch (e) {
+                            case h.m$.ROLES:
+                                r = c;
+                                break;
+                            case h.m$.MEMBERS:
+                                r = u;
+                                break;
+                            case h.m$.USERS:
+                                r = d;
+                                break;
+                            case h.m$.GUILDS:
+                                r = m;
+                        }
+                        let n = r[t];
+                        null != n && n.rowType !== h.aC.EMPTY_STATE && S(n);
+                    },
+                    onRemovePendingAddition: function (e) {
+                        a((t) => {
+                            let { [e]: r } = t;
+                            return y(t, [e].map(g));
+                        });
+                    },
+                },
+                children: t,
+            });
+        },
+        SearchBox: (e) => {
+            let { placeholderText: t, focusSearchAfterReady: r, isReady: o } = e,
+                {
+                    searchRef: i,
+                    selectedSection: s,
+                    selectedRow: a,
+                    pendingAdditions: c,
+                    query: u,
+                    onSelectionChange: d,
+                    onQueryChange: m,
+                    onQueryClick: h,
+                    onRemovePendingAddition: b,
+                    roles: w,
+                    members: f,
+                    users: y,
+                    guilds: g,
+                } = R(),
+                { keys: p, tags: v } = l.useMemo(() => {
+                    let e = Object.keys(c),
+                        t = e.map((e) => c[e].display);
+                    return {
+                        keys: e,
+                        tags: t,
+                    };
+                }, [c]),
+                E = T({
+                    roles: w,
+                    members: f,
+                    users: y,
+                    guilds: g,
+                });
+            return (0, n.jsx)(x.Z, {
+                ref: i,
+                query: u,
+                onQueryChange: m,
+                selectedSection: s,
+                selectedRow: a,
+                onSelectionChange: d,
+                onSelect: h,
+                tags: v,
+                sections: E,
+                onRemoveTag: (e) => b(p[e]),
+                placeholder: t,
+                focusAfterReady: r,
+                isReady: o,
+                "aria-labelledby": j,
+                "aria-controls": S,
+            });
+        },
+        renderSection: (e) => {
+            let { section: t } = e;
+            switch (t) {
+                case h.m$.ROLES:
+                    return (0, n.jsx)(k, { title: b.intl.string(b.t.LPJmLy) });
+                case h.m$.MEMBERS:
+                    return (0, n.jsx)(k, { title: b.intl.string(b.t["9Oq93t"]) });
+                case h.m$.USERS:
+                    return (0, n.jsx)(k, { title: b.intl.string(b.t.nqDUBQ) });
+                case h.m$.GUILDS:
+                    return (0, n.jsx)(k, { title: b.intl.string(b.t["7hB4kp"]) });
+                default:
+                    return null;
+            }
+        },
+        renderRow: (e) => {
+            let { section: t, row: r } = e;
+            switch (t) {
+                case h.m$.ROLES:
+                    return (0, n.jsx)(P, { index: r });
+                case h.m$.MEMBERS:
+                    return (0, n.jsx)(L, { index: r });
+                case h.m$.USERS:
+                    return (0, n.jsx)(I, { index: r });
+                case h.m$.GUILDS:
+                    return (0, n.jsx)(M, { index: r });
+            }
+            return null;
+        },
+        useSections: T,
+    };
