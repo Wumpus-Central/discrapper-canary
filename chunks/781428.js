@@ -21,16 +21,16 @@ var r,
     x = n(379760),
     v = n(600164),
     E = n(100159),
-    b = n(473855),
-    j = n(124860),
+    j = n(473855),
+    b = n(124860),
     I = n(86779),
     N = n(726745),
-    y = n(913583),
-    O = n(144114),
+    O = n(913583),
+    y = n(144114),
     S = n(541692),
     C = n(952802),
-    Z = n(703656),
-    A = n(108427),
+    A = n(703656),
+    Z = n(108427),
     T = n(901375),
     P = n(314897),
     R = n(117240),
@@ -116,7 +116,7 @@ class X extends (r = l.PureComponent) {
                         },
                         null != n ? (0, E.Z)(n, !1, !1) : {},
                     ),
-                    { source: (0, Z.At)() },
+                    { source: (0, A.At)() },
                 ),
                 { flush: !0 },
             ),
@@ -127,7 +127,7 @@ class X extends (r = l.PureComponent) {
                     giftCodeSKUId: this.giftCodeSKUId,
                 }),
             f.Z.getLocationMetadata(),
-            (0, A.e)("login");
+            (0, Z.e)("login");
     }
     componentDidUpdate(e, t) {
         let { authenticated: n, location: r, handoffAvailable: i } = this.props,
@@ -136,7 +136,8 @@ class X extends (r = l.PureComponent) {
             (!n ||
                 e.authenticated ||
                 (l && (i || o)) ||
-                (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(n, r)),
+                (this.state.conditionalMediationAbortController.abort("Transitioning to authenticated state"),
+                this.loginOrSSO(n, r)),
             t.errors !== this.state.errors)
         ) {
             var s, a, c;
@@ -517,7 +518,7 @@ class X extends (r = l.PureComponent) {
             onSubmit: this.handleLogin,
             tag: "form",
             className: s()(this.props.authBoxClassName, K.horizontalAuthBox),
-            children: () => [(0, i.jsx)(b.Z, { guildTemplate: e }, "template"), this.renderDefaultForm(!1)],
+            children: () => [(0, i.jsx)(j.Z, { guildTemplate: e }, "template"), this.renderDefaultForm(!1)],
         });
     }
     renderMFA() {
@@ -527,7 +528,7 @@ class X extends (r = l.PureComponent) {
         };
         return (0, i.jsx)(_.ZP, {
             style: { padding: 0 },
-            children: (0, i.jsx)(j.Cd, {
+            children: (0, i.jsx)(b.Cd, {
                 mfaFinish: this.handleTokenSubmitMFA,
                 mfaChallenge: e,
                 onEarlyClose: () => {
@@ -571,7 +572,7 @@ class X extends (r = l.PureComponent) {
         let e = () => {
             this.setState((e) => Y(q({}, e), { dismissedChooseAccount: !0 }));
         };
-        return (0, i.jsx)(y.Z, { onDismiss: e });
+        return (0, i.jsx)(O.Z, { onDismiss: e });
     }
     render() {
         let { authenticated: e, invite: t, guildTemplate: n, loginStatus: r, handoffAvailable: l } = this.props,
@@ -621,7 +622,9 @@ class X extends (r = l.PureComponent) {
                     });
             }),
             W(this, "loginReset", () => {
-                this.setState({ errors: {} }), f.Z.loginReset();
+                this.state.conditionalMediationAbortController.abort("Login state reset"),
+                    this.setState({ errors: {} }),
+                    f.Z.loginReset();
             }),
             W(this, "setLoginRef", (e) => {
                 this.loginRef = e;
@@ -645,8 +648,11 @@ class X extends (r = l.PureComponent) {
                 return null;
             }),
             W(this, "handleLogin", async (e) => {
-                let { password: t, undelete: n } = this.state;
-                null == e || e.preventDefault(), D.S.dispatch(G.CkL.WAVE_EMPHASIZE), this.setState({ errors: {} });
+                let { password: t, undelete: n, conditionalMediationAbortController: r } = this.state;
+                null == e || e.preventDefault(),
+                    r.abort("Starting password login"),
+                    D.S.dispatch(G.CkL.WAVE_EMPHASIZE),
+                    this.setState({ errors: {} });
                 try {
                     await f.Z.login({
                         login: this.getFullLogin(),
@@ -665,7 +671,7 @@ class X extends (r = l.PureComponent) {
                 let t = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    let { token: n } = await O.Z.verifyPhone(t, e, !1);
+                    let { token: n } = await y.Z.verifyPhone(t, e, !1);
                     await f.Z.authorizeIPAddress(n), this.handleLogin();
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -675,7 +681,7 @@ class X extends (r = l.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await O.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await y.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(G.Z5c.RESET, {
                         search: (0, a.stringify)({
                             token: n,
@@ -733,7 +739,7 @@ class X extends (r = l.PureComponent) {
                 }
             }),
             W(this, "handleResendCode", () => {
-                O.Z.resendCode(this.getFullLogin());
+                y.Z.resendCode(this.getFullLogin());
             }),
             W(this, "handleReset", (e) => {
                 null != e && e.preventDefault(),
