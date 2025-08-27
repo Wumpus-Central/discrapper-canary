@@ -1,7 +1,10 @@
-n.d(t, { n: () => l });
+n.d(t, {
+    e: () => a,
+    n: () => o,
+});
 var r = n(818083),
     i = n(987338);
-let l = (0, r.B)({
+let o = (0, r.B)({
     id: "2025-08_custom_theme_share_send",
     kind: "user",
     label: "Custom Theme Share Send",
@@ -15,3 +18,6 @@ let l = (0, r.B)({
         },
     ],
 });
+function a(e) {
+    return o.useExperiment({ location: e }).enabled;
+}

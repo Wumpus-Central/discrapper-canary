@@ -66307,7 +66307,6 @@ html .progress__61462 {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
-    margin-top: var(--space-20);
     max-width: 432px;
     padding: var(--space-12);
     width: 100%
@@ -66337,13 +66336,21 @@ html .progress__61462 {
 .sharedTitle__7473d {
     align-items: center;
     display: flex;
-    gap: var(--space-6);
-    justify-content: space-between
+    gap: var(--space-6)
 }
 
 .sharedBy__7473d {
+    flex-wrap: wrap
+}
+
+.avatarContainer__7473d,
+.sharedBy__7473d {
     display: flex;
     gap: var(--space-4)
+}
+
+.avatarContainer__7473d {
+    flex-wrap: nowrap
 }
 
 .left_caab99 {

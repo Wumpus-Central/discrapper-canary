@@ -1,11 +1,11 @@
 n.d(t, {
-    Ie: () => R,
+    Ie: () => P,
     OW: () => c,
     gy: () => u,
 });
 var r = n(873546),
     i = n(703558);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -245,7 +245,7 @@ let d = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 },
     },
-    E = l(o({}, d), {
+    E = l(a({}, d), {
         analyticsName: "create_announcement_post",
         stickers: { allowSending: !1 },
         gifts: {},
@@ -407,6 +407,19 @@ let d = {
         },
     },
     R = {
+        analyticsName: "atomic_reator_reply_input",
+        drafts: { type: i.d.ChannelMessage },
+        permissions: { requireSendMessages: !0 },
+        users: { allowMentioning: !0 },
+        submit: {
+            useDisabledStylesOnSubmit: !0,
+            disableEnterToSubmit: !0,
+        },
+        disableAutoFocus: !0,
+        showCharacterCount: !0,
+        layout: 1,
+    },
+    P = {
         NORMAL: d,
         OVERLAY: f,
         OVERLAY_INLINE_REPLY: v,
@@ -425,21 +438,25 @@ let d = {
         CREATE_POLL: y,
         FORUM_CHANNEL_GUIDELINES: C,
         CHANNEL_TOPIC: N,
-        ATOMIC_REACTOR_REPLY_INPUT: {
-            analyticsName: "atomic_reator_reply_input",
+        ATOMIC_REACTOR_REPLY_INPUT: R,
+        FORWARD_MESSAGE_INPUT: {
+            analyticsName: "forward_message_input",
             drafts: { type: i.d.ChannelMessage },
+            emojis: { button: !0 },
+            soundmoji: { allowSending: !0 },
             permissions: { requireSendMessages: !0 },
+            submit: { useDisabledStylesOnSubmit: !0 },
             users: { allowMentioning: !0 },
-            submit: {
-                useDisabledStylesOnSubmit: !0,
-                disableEnterToSubmit: !0,
+            autocomplete: {
+                alwaysUseLayer: !0,
+                small: !0,
             },
             disableAutoFocus: !0,
             showCharacterCount: !0,
             layout: 1,
         },
-        FORWARD_MESSAGE_INPUT: {
-            analyticsName: "forward_message_input",
+        SHARE_CUSTOM_CLIENT_THEME_INPUT: {
+            analyticsName: "share_custom_client_theme_input",
             drafts: { type: i.d.ChannelMessage },
             emojis: { button: !0 },
             soundmoji: { allowSending: !0 },

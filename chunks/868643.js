@@ -28,6 +28,7 @@ function d(e) {
         e.state !== c.yb.SEND_FAILED &&
         !!c.V$x.FORWARDABLE.has(e.type) &&
         null == e.poll &&
+        null == e.sharedClientTheme &&
         null == e.activity &&
         null == e.call &&
         null == e.activityInstance &&

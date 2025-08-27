@@ -1,8 +1,8 @@
 n.d(t, { q: () => b }), n(35282);
 var r = n(951288),
     i = n(647438),
-    a = n(657707),
-    o = n(974674),
+    o = n(657707),
+    a = n(974674),
     s = n(159691),
     l = n(481060),
     c = n(550385),
@@ -55,16 +55,18 @@ let E = (e) => e.map((e) => "#".concat(e)),
                       n,
                   )
                 : (0, r.jsxs)(
-                      i.Fragment,
+                      "span",
                       {
+                          className: g.avatarContainer,
                           children: [
-                              (0, r.jsx)(o.qE, {
+                              (0, r.jsx)(a.qE, {
                                   "aria-label": t.username,
                                   src: t.getAvatarURL(null, 20),
                                   size: l.EFr.SIZE_20,
                               }),
                               " ",
                               t.username,
+                              " ",
                           ],
                       },
                       n,
@@ -72,7 +74,7 @@ let E = (e) => e.map((e) => "#".concat(e)),
         ),
     v = (e) => {
         let { sharedClientTheme: t, from: n } = e,
-            o = i.useMemo(() => {
+            a = i.useMemo(() => {
                 var e;
                 return (0, d.yz)(E(t.colors), null != (e = t.gradient_angle) ? e : 0);
             }, [t.colors, t.gradient_angle]);
@@ -81,7 +83,7 @@ let E = (e) => e.map((e) => "#".concat(e)),
             children: [
                 (0, r.jsx)("div", {
                     className: g.colorPreview,
-                    style: { background: "".concat(o) },
+                    style: { background: "".concat(a) },
                 }),
                 (0, r.jsxs)("div", {
                     className: g.sharedByContainer,
@@ -89,7 +91,7 @@ let E = (e) => e.map((e) => "#".concat(e)),
                         (0, r.jsxs)(l.X6q, {
                             variant: "heading-md/semibold",
                             className: g.sharedTitle,
-                            children: [m.intl.string(h.default.KSBBpK), " ", (0, r.jsx)(a.SrA, {})],
+                            children: [m.intl.string(h.default.KSBBpK), " ", (0, r.jsx)(o.SrA, {})],
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
