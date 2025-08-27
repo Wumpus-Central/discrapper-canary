@@ -1,6 +1,6 @@
 n.d(t, {
     dR: () => d,
-    qK: () => p,
+    qK: () => h,
 }),
     n(980754),
     n(388685),
@@ -9,8 +9,8 @@ n.d(t, {
     n(415506);
 var r = n(230367),
     i = n(320215),
-    a = n(240773),
-    o = n(495852),
+    o = n(240773),
+    a = n(495852),
     s = n(552018),
     l = n(381499),
     c = n(835913),
@@ -39,6 +39,9 @@ var r = n(230367),
         );
     })({}),
     p = (function (e) {
+        return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.HOLDOUT = 1)] = "HOLDOUT"), e;
+    })({}),
+    h = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.CONTROL = 1)] = "CONTROL"),
@@ -47,7 +50,7 @@ var r = n(230367),
             e
         );
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.ACTIVE = 1)] = "ACTIVE"),
@@ -56,7 +59,7 @@ var r = n(230367),
             e
         );
     })({}),
-    m = (function (e) {
+    g = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.DRAFT = 1)] = "DRAFT"),
@@ -69,7 +72,7 @@ var r = n(230367),
             e
         );
     })({});
-class g extends o.C {
+class E extends a.C {
     create(e) {
         let t = {
             id: "0",
@@ -92,9 +95,11 @@ class g extends o.C {
             assignmentMode: 0,
             enableEditRawJsonUi: !1,
             winningVariationId: 0,
+            type: 0,
+            isTemplate: !1,
         };
         return (
-            globalThis.Object.defineProperty(t, a.C, {
+            globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
                 value: this,
             }),
@@ -103,96 +108,102 @@ class g extends o.C {
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
-            o = e.pos + t;
-        for (; e.pos < o; ) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.id = e.fixed64().toString();
+                    o.id = e.fixed64().toString();
                     break;
                 case 2:
-                    a.name = e.string();
+                    o.name = e.string();
                     break;
                 case 3:
-                    a.createdAt = c.E.internalBinaryRead(e, e.uint32(), n, a.createdAt);
+                    o.createdAt = c.E.internalBinaryRead(e, e.uint32(), n, o.createdAt);
                     break;
                 case 4:
-                    a.creatorId = e.fixed64().toString();
+                    o.creatorId = e.fixed64().toString();
                     break;
                 case 5:
-                    a.version = e.int32();
+                    o.version = e.int32();
                     break;
                 case 6:
-                    a.editedAt = c.E.internalBinaryRead(e, e.uint32(), n, a.editedAt);
+                    o.editedAt = c.E.internalBinaryRead(e, e.uint32(), n, o.editedAt);
                     break;
                 case 7:
-                    a.editorId = e.fixed64().toString();
+                    o.editorId = e.fixed64().toString();
                     break;
                 case 8:
-                    a.title = e.string();
+                    o.title = e.string();
                     break;
                 case 9:
-                    a.description = e.string();
+                    o.description = e.string();
                     break;
                 case 10:
-                    a.hypothesis = l.Gm.internalBinaryRead(e, e.uint32(), n, a.hypothesis);
+                    o.hypothesis = l.Gm.internalBinaryRead(e, e.uint32(), n, o.hypothesis);
                     break;
                 case 11:
-                    a.techSpecLink = l.Gm.internalBinaryRead(e, e.uint32(), n, a.techSpecLink);
+                    o.techSpecLink = l.Gm.internalBinaryRead(e, e.uint32(), n, o.techSpecLink);
                     break;
                 case 12:
-                    a.revision = e.int32();
+                    o.revision = e.int32();
                     break;
                 case 13:
-                    a.hashKey = e.string();
+                    o.hashKey = e.string();
                     break;
                 case 14:
-                    a.unitType = e.int32();
+                    o.unitType = e.int32();
                     break;
                 case 15:
-                    a.variations.push(b.internalBinaryRead(e, e.uint32(), n));
+                    o.variations.push(y.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 16:
-                    a.rules.push(s.$9.internalBinaryRead(e, e.uint32(), n));
+                    o.rules.push(s.$9.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 18:
-                    a.phase = e.int32();
+                    o.phase = e.int32();
                     break;
                 case 19:
                     if (i === r.TD.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) a.surfaces.push(e.int32());
-                    else a.surfaces.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t; ) o.surfaces.push(e.int32());
+                    else o.surfaces.push(e.int32());
                     break;
                 case 20:
-                    a.owningTeamName = e.string();
+                    o.owningTeamName = e.string();
                     break;
                 case 21:
-                    a.cachedNotificationChannelId = e.fixed64().toString();
+                    o.cachedNotificationChannelId = e.fixed64().toString();
                     break;
                 case 22:
-                    a.exposureTracking = e.int32();
+                    o.exposureTracking = e.int32();
                     break;
                 case 25:
-                    a.assignmentMode = e.int32();
+                    o.assignmentMode = e.int32();
                     break;
                 case 23:
-                    a.enableEditRawJsonUi = e.bool();
+                    o.enableEditRawJsonUi = e.bool();
                     break;
                 case 24:
-                    a.winningVariationId = e.int32();
+                    o.winningVariationId = e.int32();
+                    break;
+                case 26:
+                    o.type = e.int32();
+                    break;
+                case 27:
+                    o.isTemplate = e.bool();
                     break;
                 default:
-                    let o = n.readUnknownField;
-                    if ("throw" === o)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(
                             "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
                         );
                     let u = e.skip(i);
-                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, u);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, u);
             }
         }
-        return a;
+        return o;
     }
     internalBinaryWrite(e, t, n) {
         "0" !== e.id && t.tag(1, r.TD.Bit64).fixed64(e.id),
@@ -211,7 +222,7 @@ class g extends o.C {
             "" !== e.hashKey && t.tag(13, r.TD.LengthDelimited).string(e.hashKey),
             0 !== e.unitType && t.tag(14, r.TD.Varint).int32(e.unitType);
         for (let i = 0; i < e.variations.length; i++)
-            b.internalBinaryWrite(e.variations[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
+            y.internalBinaryWrite(e.variations[i], t.tag(15, r.TD.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
             s.$9.internalBinaryWrite(e.rules[i], t.tag(16, r.TD.LengthDelimited).fork(), n).join();
         if ((0 !== e.phase && t.tag(18, r.TD.Varint).int32(e.phase), e.surfaces.length)) {
@@ -224,7 +235,9 @@ class g extends o.C {
             0 !== e.exposureTracking && t.tag(22, r.TD.Varint).int32(e.exposureTracking),
             0 !== e.assignmentMode && t.tag(25, r.TD.Varint).int32(e.assignmentMode),
             !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi),
-            0 !== e.winningVariationId && t.tag(24, r.TD.Varint).int32(e.winningVariationId);
+            0 !== e.winningVariationId && t.tag(24, r.TD.Varint).int32(e.winningVariationId),
+            0 !== e.type && t.tag(26, r.TD.Varint).int32(e.type),
+            !1 !== e.isTemplate && t.tag(27, r.TD.Varint).bool(e.isTemplate);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -319,7 +332,7 @@ class g extends o.C {
                 name: "variations",
                 kind: "message",
                 repeat: 1,
-                T: () => b,
+                T: () => y,
             },
             {
                 no: 16,
@@ -332,7 +345,7 @@ class g extends o.C {
                 no: 18,
                 name: "phase",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Phase", m],
+                T: () => ["discord_protos.discord_experimentation.v1.Phase", g],
             },
             {
                 no: 19,
@@ -377,11 +390,23 @@ class g extends o.C {
                 kind: "scalar",
                 T: 5,
             },
+            {
+                no: 26,
+                name: "type",
+                kind: "enum",
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", p],
+            },
+            {
+                no: 27,
+                name: "is_template",
+                kind: "scalar",
+                T: 8,
+            },
         ]);
     }
 }
-new g();
-class E extends o.C {
+new E();
+class b extends a.C {
     create(e) {
         let t = {
             id: 0,
@@ -391,7 +416,7 @@ class E extends o.C {
             type: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, a.C, {
+            globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
                 value: this,
             }),
@@ -400,47 +425,47 @@ class E extends o.C {
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
-            o = e.pos + t;
-        for (; e.pos < o; ) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.id = e.int32();
+                    o.id = e.int32();
                     break;
                 case 2:
-                    a.label = e.string();
+                    o.label = e.string();
                     break;
                 case 3:
-                    a.targetAllocation = e.int32();
+                    o.targetAllocation = e.int32();
                     break;
                 case 4:
-                    a.buckets.push(O.internalBinaryRead(e, e.uint32(), n));
+                    o.buckets.push(v.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 5:
-                    a.type = e.int32();
+                    o.type = e.int32();
                     break;
                 case 6:
-                    a.configuration = l.Gm.internalBinaryRead(e, e.uint32(), n, a.configuration);
+                    o.configuration = l.Gm.internalBinaryRead(e, e.uint32(), n, o.configuration);
                     break;
                 default:
-                    let o = n.readUnknownField;
-                    if ("throw" === o)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(
                             "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
                         );
                     let s = e.skip(i);
-                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
         }
-        return a;
+        return o;
     }
     internalBinaryWrite(e, t, n) {
         0 !== e.id && t.tag(1, r.TD.Varint).int32(e.id),
             "" !== e.label && t.tag(2, r.TD.LengthDelimited).string(e.label),
             0 !== e.targetAllocation && t.tag(3, r.TD.Varint).int32(e.targetAllocation);
         for (let i = 0; i < e.buckets.length; i++)
-            O.internalBinaryWrite(e.buckets[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+            v.internalBinaryWrite(e.buckets[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, r.TD.Varint).int32(e.type),
             e.configuration &&
                 l.Gm.internalBinaryWrite(e.configuration, t.tag(6, r.TD.LengthDelimited).fork(), n).join();
@@ -472,13 +497,13 @@ class E extends o.C {
                 name: "buckets",
                 kind: "message",
                 repeat: 1,
-                T: () => O,
+                T: () => v,
             },
             {
                 no: 5,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", p],
+                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", h],
             },
             {
                 no: 6,
@@ -489,8 +514,8 @@ class E extends o.C {
         ]);
     }
 }
-let b = new E();
-class y extends o.C {
+let y = new b();
+class O extends a.C {
     create(e) {
         let t = {
             start: 0,
@@ -498,7 +523,7 @@ class y extends o.C {
             type: 0,
         };
         return (
-            globalThis.Object.defineProperty(t, a.C, {
+            globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
                 value: this,
             }),
@@ -507,31 +532,31 @@ class y extends o.C {
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
-            o = e.pos + t;
-        for (; e.pos < o; ) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.start = e.int32();
+                    o.start = e.int32();
                     break;
                 case 2:
-                    a.stop = e.int32();
+                    o.stop = e.int32();
                     break;
                 case 3:
-                    a.type = e.int32();
+                    o.type = e.int32();
                     break;
                 default:
-                    let o = n.readUnknownField;
-                    if ("throw" === o)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(
                             "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
                         );
                     let s = e.skip(i);
-                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
         }
-        return a;
+        return o;
     }
     internalBinaryWrite(e, t, n) {
         0 !== e.start && t.tag(1, r.TD.Varint).int32(e.start),
@@ -558,9 +583,9 @@ class y extends o.C {
                 no: 3,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", h],
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", m],
             },
         ]);
     }
 }
-let O = new y();
+let v = new O();
