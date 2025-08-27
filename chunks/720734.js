@@ -43,8 +43,8 @@ var r = n(951288),
     G = n(55311),
     B = n(575175),
     Z = n(522651),
-    V = n(795318),
-    F = n(338390),
+    F = n(795318),
+    V = n(338390),
     H = n(64220),
     Y = n(427217),
     W = n(243778),
@@ -97,8 +97,8 @@ var r = n(951288),
     eG = n(19780),
     eB = n(914010),
     eZ = n(885110),
-    eV = n(246946),
-    eF = n(594174),
+    eF = n(246946),
+    eV = n(594174),
     eH = n(78839),
     eY = n(626135),
     eW = n(768581),
@@ -274,7 +274,7 @@ function tI(e) {
             size: (0, w.y9)(m.EFr.SIZE_32),
         }),
         y = (0, m.dQu)(m.TVs.modules.guildbar.AVATAR_SIZE),
-        O = (0, F.Z)("Account") ? 32 : y,
+        O = (0, V.Z)("Account") ? 32 : y,
         { updateOpenPopoutRef: v, highlightBadge: I, setHighlightBadge: T } = tv(),
         S = (0, ea.A)(f);
     return null == s
@@ -605,12 +605,12 @@ class tA extends i.PureComponent {
                                     user: t,
                                     premiumSubscription: this.props.premiumSubscription,
                                     webBuildOverride: this.props.webBuildOverride,
-                                    onInteraction: (0, V.u)("UserSettingsCogContextMenu", N.Z.ACCOUNT),
+                                    onInteraction: (0, F.u)("UserSettingsCogContextMenu", N.Z.ACCOUNT),
                                 }),
                             );
                     });
             }),
-            ta(this, "audioOnInteractionHandler", (0, V.u)("AudioDeviceMenu", N.Z.ACCOUNT)),
+            ta(this, "audioOnInteractionHandler", (0, F.u)("AudioDeviceMenu", N.Z.ACCOUNT)),
             ta(this, "handleInputAudioContextMenu", (e, t) => {
                 this.dismissTooltips(),
                     (0, g.jW)(e, async () => {
@@ -872,7 +872,7 @@ function tN(e) {
 }
 function tR() {
     var e;
-    let t = (0, u.e7)([eF.default], () => eF.default.getCurrentUser()),
+    let t = (0, u.e7)([eV.default], () => eV.default.getCurrentUser()),
         n = (0, u.e7)([eL.default], () => eL.default.getId()),
         {
             activities: i,
@@ -894,7 +894,7 @@ function tR() {
         s = (0, u.e7)([ex.Z], () => ex.Z.getAnyStreamForUser(n)),
         c = (0, y.Z)({ userId: n }),
         f = e0.ZP.useUserTag(t, { decoration: "never" }),
-        _ = (0, u.e7)([eV.Z], () => eV.Z.hidePersonalInformation),
+        _ = (0, u.e7)([eF.Z], () => eF.Z.hidePersonalInformation),
         p = (0, u.e7)([eG.Z, ej.Z], () => {
             let e = eG.Z.getChannelId();
             return null != e ? ej.Z.getChannel(e) : null;
@@ -921,11 +921,11 @@ function tR() {
         U = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e9.rL,
         { voiceActivityStatusEnabled: G } = (0, I.U)({ location: "Account" }),
         [B, Z] = (0, ee.G)(null != M ? M : null),
-        V = K.J.useExperiment({ location: "Account" }).enabled,
-        { analyticsLocations: F } = (0, R.ZP)(N.Z.ACCOUNT),
+        F = K.J.useExperiment({ location: "Account" }).enabled,
+        { analyticsLocations: V } = (0, R.ZP)(N.Z.ACCOUNT),
         H = (0, ei.K)({ user: t }),
         Y = (0, ed.Ws)({ location: tt.dr.CONFLICT_CHECKS }),
-        W = (0, u.e7)([ef.Z, eF.default, eM.Z], () => {
+        W = (0, u.e7)([ef.Z, eV.default, eM.Z], () => {
             let e,
                 t = ef.Z.getSyncingWith(),
                 n = ef.Z.getActivity(),
@@ -936,7 +936,7 @@ function tR() {
             ) {
                 var i;
                 r = l()(Array.from(null != (i = eM.Z.getParty(e)) ? i : []))
-                    .map((e) => eF.default.getUser(e))
+                    .map((e) => eV.default.getUser(e))
                     .filter(eQ.lm)
                     .value();
             }
@@ -950,13 +950,13 @@ function tR() {
     !P &&
         (k && X.settings.push(d.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
         U && X.avatar.push(d.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP),
-        V && X.avatar.push(d.z.DISPLAY_NAME_STYLES_COACHMARK),
+        F && X.avatar.push(d.z.DISPLAY_NAME_STYLES_COACHMARK),
         q && X.avatar.push(d.z.WIDGETS_RTC_UPSELL_COACHMARK));
     let Q = (0, z.Y)({ location: "AccountConnected" }),
         { shouldShowTooltip: $, dismissTooltip: et } = tN(tn.h7.AUDIO_INPUT),
         { shouldShowTooltip: en, dismissTooltip: er } = tN(tn.h7.AUDIO_OUTPUT);
     return (0, r.jsx)(R.Gt, {
-        value: F,
+        value: V,
         children: (0, r.jsx)(tA, {
             currentUser: t,
             activities: i,
@@ -1053,7 +1053,7 @@ function tP(e) {
                             tooltipClassName: ti.accountButtonsTooltip,
                             tooltipContentClassName: ti.accountButtonsTooltipContent,
                             tooltipPositionKeyStemOverride: n,
-                            "aria-label": y && a,
+                            "aria-label": y ? a : void 0,
                             onClick: l,
                             onContextMenu: c,
                             icon: (0, r.jsx)(I, {
@@ -1096,7 +1096,7 @@ function tw(e) {
         L = null != P,
         j = (0, eI.z)(P),
         G = (0, u.e7)([eG.Z], () => eG.Z.isConnected()),
-        { Component: B, events: Z, play: F } = C,
+        { Component: B, events: Z, play: V } = C,
         H = a || s ? m.v0G : B,
         Y = (0, M.Z)(n, a, s, l),
         K = x ? tr.intl.string(tr.t.ARRV6u) : null;
@@ -1128,7 +1128,7 @@ function tw(e) {
             location: N.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0,
         });
-    i.useEffect(() => () => F(), [T, F]);
+    i.useEffect(() => () => V(), [T, V]);
     let Q = i.useCallback(
             (e) => {
                 E(e, z);
@@ -1187,7 +1187,7 @@ function tw(e) {
                               value: z,
                               children: eu
                                   ? (0, r.jsx)(U.Z, {
-                                        onInteraction: (0, V.u)("AudioDeviceMenu", N.Z.ACCOUNT),
+                                        onInteraction: (0, F.u)("AudioDeviceMenu", N.Z.ACCOUNT),
                                         onClose: t,
                                         maybeRenderPTTCheckbox: !0,
                                         renderInputProfiles: ed.length > 0,
@@ -1197,7 +1197,7 @@ function tw(e) {
                                         renderSettingsButton: !0,
                                     })
                                   : (0, r.jsx)(k.default, {
-                                        onInteraction: (0, V.u)("AudioDeviceMenu", N.Z.ACCOUNT),
+                                        onInteraction: (0, F.u)("AudioDeviceMenu", N.Z.ACCOUNT),
                                         onClose: t,
                                         renderInputDevices: !0,
                                         renderInputProfiles: ed.length > 0,
@@ -1493,7 +1493,7 @@ function tD(e) {
                           (0, r.jsx)(R.Gt, {
                               value: T,
                               children: (0, r.jsx)(U.Z, {
-                                  onInteraction: (0, V.u)("AudioDeviceMenu", N.Z.ACCOUNT),
+                                  onInteraction: (0, F.u)("AudioDeviceMenu", N.Z.ACCOUNT),
                                   onClose: t,
                                   renderOutputDevices: !0,
                                   renderOutputVolume: !0,
