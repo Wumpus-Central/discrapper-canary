@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(84735),
     l = n(437337),
-    c = n(981729),
+    c = n(28664),
     u = n(770102),
     d = n(534542),
     f = n(171931);
@@ -57,7 +57,8 @@ function _(e) {
                             className: f.control,
                             children:
                                 null != _
-                                    ? (0, r.jsx)(c.DY, {
+                                    ? (0, r.jsx)(c.u, {
+                                          asContainer: !0,
                                           text: _,
                                           children: T,
                                       })

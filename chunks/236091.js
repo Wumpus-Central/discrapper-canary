@@ -1,50 +1,47 @@
-n.d(t, { Z: () => b });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    l = n.n(i),
-    a = n(442837),
-    o = n(692547),
-    s = n(481060),
-    c = n(358221),
-    u = n(594190),
-    d = n(199902),
-    p = n(924557),
-    h = n(435064),
-    f = n(354459),
-    m = n(388032),
-    g = n(363862);
-let b = (e) => {
-    let { className: t, channelId: n } = e,
-        i = (0, p.Go)(),
-        b = h.Z.isDecoupledGameClippingEnabled();
-    return (0, a.e7)([d.Z, c.Z, h.Z, u.ZP], () => {
+n.d(t, { Z: () => g });
+var r = n(951288),
+    i = n(442837),
+    l = n(692547),
+    a = n(28664),
+    o = n(481060),
+    s = n(358221),
+    c = n(594190),
+    u = n(199902),
+    d = n(924557),
+    p = n(435064),
+    h = n(354459),
+    f = n(388032),
+    m = n(363862);
+let g = (e) => {
+    let { channelId: t } = e,
+        n = (0, d.Go)(),
+        g = p.Z.isDecoupledGameClippingEnabled();
+    return (0, i.e7)([u.Z, s.Z, p.Z, c.ZP], () => {
         var e;
-        if (null == n) return !1;
-        let t = d.Z.getCurrentUserActiveStream(),
-            r = null == (e = u.ZP.getVisibleGame()) ? void 0 : e.windowHandle;
+        if (null == t) return !1;
+        let r = u.Z.getCurrentUserActiveStream(),
+            i = null == (e = c.ZP.getVisibleGame()) ? void 0 : e.windowHandle;
         return (
-            (null != t && !!h.Z.getSettings().clipsEnabled && !!i) ||
-            (null != r && !!h.Z.getSettings().decoupledClipsEnabled && !!b) ||
-            c.Z.getParticipants(n).some((e) => e.type === f.fO.USER && h.Z.isClipsEnabledForUser(e.user.id))
+            (null != r && !!p.Z.getSettings().clipsEnabled && !!n) ||
+            (null != i && !!p.Z.getSettings().decoupledClipsEnabled && !!g) ||
+            s.Z.getParticipants(t).some((e) => e.type === h.fO.USER && p.Z.isClipsEnabledForUser(e.user.id))
         );
     })
-        ? (0, r.jsxs)(s.DY3, {
-              text: m.intl.string(m.t.DJXW3N),
-              color: s.FGA.GREY,
-              className: l()(t, g.clipsEnabledIndicator),
+        ? (0, r.jsxs)(a.u, {
+              asContainer: !0,
+              text: f.intl.string(f.t.DJXW3N),
               children: [
-                  (0, r.jsx)(s.G2e, {
-                      icon: s.AlX,
-                      shape: s.Dv2.ROUND_LEFT,
-                      color: o.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: g.clipBadgeIcon,
+                  (0, r.jsx)(o.G2e, {
+                      icon: o.AlX,
+                      shape: o.Dv2.ROUND_LEFT,
+                      color: l.Z.unsafe_rawColors.PRIMARY_500.css,
+                      className: m.clipBadgeIcon,
                   }),
-                  (0, r.jsx)(s.IGR, {
-                      text: m.intl.string(m.t.pCMkDQ),
-                      shape: s.Dv2.ROUND_RIGHT,
-                      color: o.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: g.clipBadgeText,
+                  (0, r.jsx)(o.IGR, {
+                      text: f.intl.string(f.t.pCMkDQ),
+                      shape: o.Dv2.ROUND_RIGHT,
+                      color: l.Z.unsafe_rawColors.PRIMARY_500.css,
+                      className: m.clipBadgeText,
                   }),
               ],
           })

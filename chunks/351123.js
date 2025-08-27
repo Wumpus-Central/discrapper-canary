@@ -1,43 +1,44 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var i = n(951288),
     l = n(647438),
     r = n(120356),
     s = n.n(r),
     a = n(442837),
-    o = n(755721),
-    c = n(481060),
-    d = n(668781),
-    u = n(493683),
-    h = n(787014),
-    g = n(741361),
-    m = n(911969),
-    p = n(385499),
-    f = n(134433),
-    x = n(600164),
-    j = n(156699),
-    b = n(693196),
-    v = n(434404),
-    y = n(200498),
-    C = n(146085),
-    N = n(192079),
-    S = n(277053),
-    O = n(271383),
-    E = n(485386),
-    w = n(430824),
-    T = n(496675),
-    Z = n(594174),
-    R = n(903386),
-    I = n(700785),
-    _ = n(605436),
-    P = n(27544),
-    A = n(415236),
-    L = n(182905),
-    D = n(71080),
-    M = n(981631),
-    k = n(231338),
-    B = n(388032),
-    V = n(411851);
-function U(e) {
+    o = n(28664),
+    c = n(755721),
+    d = n(481060),
+    u = n(668781),
+    h = n(493683),
+    g = n(787014),
+    m = n(741361),
+    p = n(911969),
+    f = n(385499),
+    x = n(134433),
+    j = n(600164),
+    b = n(156699),
+    v = n(693196),
+    y = n(434404),
+    C = n(200498),
+    N = n(146085),
+    S = n(192079),
+    O = n(277053),
+    E = n(271383),
+    w = n(485386),
+    T = n(430824),
+    Z = n(496675),
+    R = n(594174),
+    I = n(903386),
+    _ = n(700785),
+    P = n(605436),
+    A = n(27544),
+    L = n(415236),
+    D = n(182905),
+    M = n(71080),
+    k = n(981631),
+    B = n(231338),
+    V = n(388032),
+    U = n(411851);
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,7 +63,7 @@ function U(e) {
     }
     return e;
 }
-function H(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,215 +81,215 @@ function H(e, t) {
         e
     );
 }
-function G(e) {
+function W(e) {
     let { channel: t, roles: n, members: l, disabledReason: r, getRemoveTooltipHint: a } = e;
-    return (0, i.jsx)(c.aVo, {
-        className: V.roleMemberList,
+    return (0, i.jsx)(d.aVo, {
+        className: U.roleMemberList,
         sections: [n.length, l.length],
         renderRow: function (e) {
-            let o,
-                h,
-                j,
-                { section: b, row: v } = e,
-                C = !1;
-            switch (b) {
-                case D.m$.ROLES:
-                    var N;
-                    (j =
-                        (h = n[v]).rowType === D.aC.ROLE &&
-                        (null == (N = h.tags) ? void 0 : N.guild_connections) === null
-                            ? (0, i.jsx)(f.Z, {
-                                  className: V.shield,
-                                  color: h.colorString,
+            let c,
+                g,
+                b,
+                { section: v, row: y } = e,
+                N = !1;
+            switch (v) {
+                case M.m$.ROLES:
+                    var S;
+                    (b =
+                        (g = n[y]).rowType === M.aC.ROLE &&
+                        (null == (S = g.tags) ? void 0 : S.guild_connections) === null
+                            ? (0, i.jsx)(x.Z, {
+                                  className: U.shield,
+                                  color: g.colorString,
                                   size: 20,
                               })
-                            : (0, i.jsx)(c.lZ8, {
+                            : (0, i.jsx)(d.lZ8, {
                                   size: "custom",
-                                  className: V.shield,
-                                  color: h.colorString,
+                                  className: U.shield,
+                                  color: g.colorString,
                                   height: 20,
                               })),
-                        (o = (0, i.jsxs)(i.Fragment, {
+                        (c = (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)("div", {
-                                    className: V.rowHeight,
-                                    children: j,
+                                    className: U.rowHeight,
+                                    children: b,
                                 }),
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(d.Text, {
                                     variant: "text-sm/normal",
-                                    className: V.rowLabel,
-                                    color: h.disabled ? "text-muted" : "text-default",
-                                    children: h.name,
+                                    className: U.rowLabel,
+                                    color: g.disabled ? "text-muted" : "text-default",
+                                    children: g.name,
                                 }),
                             ],
                         })),
-                        (C = h.disabled);
+                        (N = g.disabled);
                     break;
-                case D.m$.MEMBERS:
-                    (h = l[v]),
-                        (o = (0, i.jsxs)(i.Fragment, {
+                case M.m$.MEMBERS:
+                    (g = l[y]),
+                        (c = (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(c.qEK, {
-                                    src: h.avatarURL,
-                                    size: c.EFr.SIZE_24,
+                                (0, i.jsx)(d.qEK, {
+                                    src: g.avatarURL,
+                                    size: d.EFr.SIZE_24,
                                     "aria-hidden": !0,
                                 }),
-                                (0, i.jsx)(c.Text, {
-                                    className: V.rowLabel,
+                                (0, i.jsx)(d.Text, {
+                                    className: U.rowLabel,
                                     variant: "text-sm/normal",
-                                    children: h.name,
+                                    children: g.name,
                                 }),
-                                h.bot &&
-                                    (0, i.jsx)(p.Z, {
-                                        verified: h.verifiedBot,
-                                        className: V.rowBotTag,
+                                g.bot &&
+                                    (0, i.jsx)(f.Z, {
+                                        verified: g.verifiedBot,
+                                        className: U.rowBotTag,
                                     }),
-                                null != h.nickname &&
-                                    (0, i.jsx)(c.Text, {
+                                null != g.nickname &&
+                                    (0, i.jsx)(d.Text, {
                                         color: "text-muted",
-                                        className: V.rowLabelSubText,
+                                        className: U.rowLabelSubText,
                                         variant: "text-sm/normal",
-                                        children: h.username,
+                                        children: g.username,
                                     }),
                             ],
                         })),
-                        (C = h.disabled);
+                        (N = g.disabled);
                     break;
                 default:
-                    h = null;
+                    g = null;
             }
-            if (null == h) return null;
-            let S = !C && null == r && null != h.id;
+            if (null == g) return null;
+            let O = !N && null == r && null != g.id;
             return (0, i.jsxs)(
-                x.Z,
+                j.Z,
                 {
-                    justify: x.Z.Justify.BETWEEN,
-                    align: x.Z.Align.CENTER,
-                    className: V.memberRow,
+                    justify: j.Z.Justify.BETWEEN,
+                    align: j.Z.Align.CENTER,
+                    className: U.memberRow,
                     children: [
-                        (0, i.jsx)(x.Z, {
-                            justify: x.Z.Justify.START,
-                            align: x.Z.Align.CENTER,
-                            className: V.__invalid_memberRowBody,
-                            children: o,
+                        (0, i.jsx)(j.Z, {
+                            justify: j.Z.Justify.START,
+                            align: j.Z.Align.CENTER,
+                            className: U.__invalid_memberRowBody,
+                            children: c,
                         }),
-                        (0, i.jsx)(c.Text, {
+                        (0, i.jsx)(d.Text, {
                             color: "text-muted",
                             variant: "text-xs/normal",
-                            children: _.zB(h.rowType),
+                            children: P.zB(g.rowType),
                         }),
-                        h.rowType !== D.aC.EMPTY_STATE &&
-                            (0, i.jsx)(c.DY3, {
-                                className: V.removeIconContainer,
-                                text: null != r ? r : a(h.rowType, h.disabled),
-                                children: (0, i.jsx)(c.P3F, {
+                        g.rowType !== M.aC.EMPTY_STATE &&
+                            (0, i.jsx)(o.u, {
+                                asContainer: !0,
+                                text: null != r ? r : a(g.rowType, g.disabled),
+                                children: (0, i.jsx)(d.P3F, {
                                     onClick: () => {
                                         var e, n, i;
                                         return (
-                                            S &&
-                                            null != h &&
-                                            ((e = h.id),
-                                            (n = h.name),
-                                            (i = h.rowType),
-                                            void d.Z.show({
-                                                title: B.intl.string(B.t.GuPYQE),
-                                                body: B.intl.format(B.t.xERCnZ, { name: n }),
-                                                cancelText: B.intl.string(B.t["ETE/oK"]),
+                                            O &&
+                                            null != g &&
+                                            ((e = g.id),
+                                            (n = g.name),
+                                            (i = g.rowType),
+                                            void u.Z.show({
+                                                title: V.intl.string(V.t.GuPYQE),
+                                                body: V.intl.format(V.t.xERCnZ, { name: n }),
+                                                cancelText: V.intl.string(V.t["ETE/oK"]),
                                                 onConfirm: () =>
                                                     (function (e, n) {
                                                         if (t.isGuildStageVoice()) {
-                                                            let i = (0, y._L)(
+                                                            let i = (0, C._L)(
                                                                 e,
-                                                                n === D.aC.ROLE ? m.BN.ROLE : m.BN.MEMBER,
+                                                                n === M.aC.ROLE ? p.BN.ROLE : p.BN.MEMBER,
                                                                 t,
                                                             );
-                                                            (0, y.Os)(i)
-                                                                ? u.Z.clearPermissionOverwrite(t.id, i.id)
-                                                                : (0, g.hw)(t.id, [i]);
-                                                        } else u.Z.clearPermissionOverwrite(t.id, e);
+                                                            (0, C.Os)(i)
+                                                                ? h.Z.clearPermissionOverwrite(t.id, i.id)
+                                                                : (0, m.hw)(t.id, [i]);
+                                                        } else h.Z.clearPermissionOverwrite(t.id, e);
                                                     })(e, i),
                                             }))
                                         );
                                     },
-                                    "aria-disabled": !S,
-                                    "aria-label": B.intl.string(B.t.N86XcH),
-                                    children: (0, i.jsx)(c.k$p, {
+                                    "aria-disabled": !O,
+                                    "aria-label": V.intl.string(V.t.N86XcH),
+                                    children: (0, i.jsx)(d.k$p, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: s()(V.removeIcon, { [V.disabledRemoveIcon]: C || r }),
+                                        className: s()(U.removeIcon, { [U.disabledRemoveIcon]: N || r }),
                                     }),
                                 }),
                             }),
                     ],
                 },
-                h.id,
+                g.id,
             );
         },
         rowHeight: 40,
         renderSection: function (e) {
             let { section: t } = e;
             switch (t) {
-                case D.m$.ROLES:
-                    return (0, i.jsx)(z, { title: B.intl.string(B.t.LPJmLy) }, "roles-title");
-                case D.m$.MEMBERS:
-                    return (0, i.jsx)(z, { title: B.intl.string(B.t["9Oq93t"]) }, "members-title");
+                case M.m$.ROLES:
+                    return (0, i.jsx)(X, { title: V.intl.string(V.t.LPJmLy) }, "roles-title");
+                case M.m$.MEMBERS:
+                    return (0, i.jsx)(X, { title: V.intl.string(V.t["9Oq93t"]) }, "members-title");
             }
         },
         sectionHeight: 49,
     });
 }
-function W(e) {
+function F(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
-        o = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
-        d = _.RZ(t, o, l, C.yP, r),
-        u = (0, a.e7)([O.ZP], () => _.cR(O.ZP.getMemberIds(t.id), l, t, C.yP, r)),
-        h = (0, y.nG)(l.id);
+        o = (0, a.e7)([w.Z], () => w.Z.getSortedRoles(t.id)),
+        c = P.RZ(t, o, l, N.yP, r),
+        u = (0, a.e7)([E.ZP], () => P.cR(E.ZP.getMemberIds(t.id), l, t, N.yP, r)),
+        h = (0, C.nG)(l.id);
     function g() {
-        (0, c.ZDy)(async () => {
+        (0, d.ZDy)(async () => {
             let { default: e } = await n.e("46786").then(n.bind(n, 388131));
-            return (t) => (0, i.jsx)(e, H(U({}, t), { channelId: l.id }));
+            return (t) => (0, i.jsx)(e, G(H({}, t), { channelId: l.id }));
         });
     }
     return (0, i.jsxs)("div", {
-        className: s()(V.settingCard, V.active),
+        className: s()(U.settingCard, U.active),
         children: [
-            (0, i.jsx)(A.Z, {
-                label: B.intl.string(B.t.StpcFR),
-                description: B.intl.string(B.t.f7VbhI),
-                icon: (0, i.jsx)(c.ewx, {
+            (0, i.jsx)(L.Z, {
+                label: V.intl.string(V.t.StpcFR),
+                description: V.intl.string(V.t.f7VbhI),
+                icon: (0, i.jsx)(d.ewx, {
                     size: "custom",
                     color: "currentColor",
-                    className: V.cardIcon,
+                    className: U.cardIcon,
                     height: 20,
                     width: 20,
                 }),
                 id: "StageModeratorSettingCard",
             }),
             (0, i.jsxs)("div", {
-                className: V.cardFolder,
+                className: U.cardFolder,
                 children: [
-                    (0, i.jsxs)(x.Z, {
-                        justify: x.Z.Justify.BETWEEN,
-                        align: x.Z.Align.CENTER,
-                        className: V.folderHeader,
+                    (0, i.jsxs)(j.Z, {
+                        justify: j.Z.Justify.BETWEEN,
+                        align: j.Z.Align.CENTER,
+                        className: U.folderHeader,
                         children: [
-                            (0, i.jsx)(c.vwX, {
+                            (0, i.jsx)(d.vwX, {
                                 tag: "h5",
-                                className: V.folderTitle,
-                                children: B.intl.string(B.t["7BWDRU"]),
+                                className: U.folderTitle,
+                                children: V.intl.string(V.t["7BWDRU"]),
                             }),
-                            (0, i.jsx)(c.ua7, {
-                                text: B.intl.string(B.t.arRuER),
+                            (0, i.jsx)(d.ua7, {
+                                text: V.intl.string(V.t.arRuER),
                                 shouldShow: !h,
                                 children: (e) =>
                                     (0, i.jsx)(
-                                        c.zxk,
-                                        H(
-                                            U(
+                                        d.zxk,
+                                        G(
+                                            H(
                                                 {
                                                     variant: "primary",
                                                     size: "sm",
-                                                    text: B.intl.string(B.t.dMJ3Y2),
+                                                    text: V.intl.string(V.t.dMJ3Y2),
                                                 },
                                                 e,
                                             ),
@@ -301,69 +302,69 @@ function W(e) {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(G, {
+                    (0, i.jsx)(W, {
                         channel: l,
-                        roles: d,
+                        roles: c,
                         members: u,
-                        disabledReason: h ? null : B.intl.string(B.t.arRuER),
-                        getRemoveTooltipHint: N.kk,
+                        disabledReason: h ? null : V.intl.string(V.t.arRuER),
+                        getRemoveTooltipHint: S.kk,
                     }),
                 ],
             }),
         ],
     });
 }
-function F(e) {
-    let { guild: t, channel: l, isPrivateGuildChannel: r, roles: d, members: u } = e,
-        h = (0, a.e7)([T.Z], () => T.Z.can(k.Pl.ADMINISTRATOR, t)),
-        g = I.Uu(k.Pl.VIEW_CHANNEL, t),
-        m = I.Uu(k.Pl.ADMINISTRATOR, t);
+function z(e) {
+    let { guild: t, channel: l, isPrivateGuildChannel: r, roles: o, members: u } = e,
+        h = (0, a.e7)([Z.Z], () => Z.Z.can(B.Pl.ADMINISTRATOR, t)),
+        g = _.Uu(B.Pl.VIEW_CHANNEL, t),
+        m = _.Uu(B.Pl.ADMINISTRATOR, t);
     async function p() {
         let e = l.accessPermissions,
-            s = Z.default.getCurrentUser();
-        if (!r && null != (await (0, b.T)(t.id, l.id)))
-            return void (0, c.ZDy)(async () => {
+            s = R.default.getCurrentUser();
+        if (!r && null != (await (0, v.T)(t.id, l.id)))
+            return void (0, d.ZDy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
                 return (n) =>
                     (0, i.jsx)(
                         e,
-                        H(U({}, n), {
-                            confirmButtonColor: o.Tt.BRAND,
-                            header: B.intl.string(B.t.ZzdgUl),
-                            confirmText: B.intl.string(B.t.BddRzc),
-                            children: (0, i.jsx)(c.Text, {
+                        G(H({}, n), {
+                            confirmButtonColor: c.Tt.BRAND,
+                            header: V.intl.string(V.t.ZzdgUl),
+                            confirmText: V.intl.string(V.t.BddRzc),
+                            children: (0, i.jsx)(d.Text, {
                                 variant: "text-md/normal",
-                                children: B.intl.format(B.t.DwY2vL, {
+                                children: V.intl.format(V.t.DwY2vL, {
                                     onClick: () => {
-                                        v.Z.open(t.id, M.pNK.ONBOARDING), n.onClose();
+                                        y.Z.open(t.id, k.pNK.ONBOARDING), n.onClose();
                                     },
                                 }),
                             }),
                         }),
                     );
             });
-        _.$e(l, e, r), r || null == s || h || _.Yh(l, e);
+        P.$e(l, e, r), r || null == s || h || P.Yh(l, e);
     }
     let f = {
-        title: B.intl.string(B.t.aUI70t),
-        subtitle: B.intl.string(B.t.hfbjIC),
-        formLabel: B.intl.string(B.t.P6eCbG),
+        title: V.intl.string(V.t.aUI70t),
+        subtitle: V.intl.string(V.t.hfbjIC),
+        formLabel: V.intl.string(V.t.P6eCbG),
     };
     return (
         l.isCategory()
-            ? ((f.title = B.intl.string(B.t.lEPAZ2)),
-              (f.subtitle = B.intl.string(B.t["RQUk6+"])),
-              (f.formLabel = B.intl.string(B.t["8VIxJi"])))
-            : l.type === M.d4z.GUILD_VOICE && (f.subtitle = B.intl.string(B.t.cLjvKi)),
+            ? ((f.title = V.intl.string(V.t.lEPAZ2)),
+              (f.subtitle = V.intl.string(V.t["RQUk6+"])),
+              (f.formLabel = V.intl.string(V.t["8VIxJi"])))
+            : l.type === k.d4z.GUILD_VOICE && (f.subtitle = V.intl.string(V.t.cLjvKi)),
         (0, i.jsxs)("div", {
-            className: s()(V.settingCard, { [V.active]: r }),
+            className: s()(U.settingCard, { [U.active]: r }),
             children: [
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(L.Z, {
                     description: f.subtitle,
-                    icon: (0, i.jsx)(c.mBM, {
+                    icon: (0, i.jsx)(d.mBM, {
                         size: "custom",
                         color: "currentColor",
-                        className: V.cardIcon,
+                        className: U.cardIcon,
                         height: 20,
                         width: 20,
                     }),
@@ -373,52 +374,52 @@ function F(e) {
                     value: r,
                 }),
                 (0, i.jsxs)("div", {
-                    className: V.cardFolder,
+                    className: U.cardFolder,
                     children: [
                         m &&
                             (0, i.jsx)("div", {
-                                className: V.adminWarning,
-                                children: (0, i.jsx)(c.Wn, {
-                                    messageType: c.QYI.WARNING,
-                                    children: B.intl.string(B.t["5f3HIC"]),
+                                className: U.adminWarning,
+                                children: (0, i.jsx)(d.Wn, {
+                                    messageType: d.QYI.WARNING,
+                                    children: V.intl.string(V.t["5f3HIC"]),
                                 }),
                             }),
                         !g &&
                             !m &&
                             !r &&
                             (0, i.jsx)("div", {
-                                className: V.adminWarning,
-                                children: (0, i.jsx)(c.Wn, {
-                                    messageType: c.QYI.WARNING,
-                                    children: B.intl.string(B.t.ZAk4Q0),
+                                className: U.adminWarning,
+                                children: (0, i.jsx)(d.Wn, {
+                                    messageType: d.QYI.WARNING,
+                                    children: V.intl.string(V.t.ZAk4Q0),
                                 }),
                             }),
                         r &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsxs)(x.Z, {
-                                        justify: x.Z.Justify.BETWEEN,
-                                        align: x.Z.Align.CENTER,
-                                        className: V.folderHeader,
+                                    (0, i.jsxs)(j.Z, {
+                                        justify: j.Z.Justify.BETWEEN,
+                                        align: j.Z.Align.CENTER,
+                                        className: U.folderHeader,
                                         children: [
-                                            (0, i.jsx)(c.vwX, {
+                                            (0, i.jsx)(d.vwX, {
                                                 tag: "h5",
-                                                className: V.folderTitle,
+                                                className: U.folderTitle,
                                                 children: f.formLabel,
                                             }),
-                                            (0, i.jsx)(c.zxk, {
+                                            (0, i.jsx)(d.zxk, {
                                                 variant: "primary",
                                                 size: "sm",
-                                                text: B.intl.string(B.t.dMJ3Y2),
+                                                text: V.intl.string(V.t.dMJ3Y2),
                                                 onClick: function () {
-                                                    (0, c.ZDy)(async () => {
+                                                    (0, d.ZDy)(async () => {
                                                         let { default: e } = await Promise.resolve().then(
                                                             n.bind(n, 185413),
                                                         );
                                                         return (t) =>
                                                             (0, i.jsx)(
                                                                 e,
-                                                                H(U({}, t), {
+                                                                G(H({}, t), {
                                                                     channelId: l.id,
                                                                     inSettings: !0,
                                                                 }),
@@ -428,11 +429,11 @@ function F(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(G, {
+                                    (0, i.jsx)(W, {
                                         channel: l,
-                                        roles: d,
+                                        roles: o,
                                         members: u,
-                                        getRemoveTooltipHint: _.yv,
+                                        getRemoveTooltipHint: P.yv,
                                     }),
                                 ],
                             }),
@@ -442,50 +443,50 @@ function F(e) {
         })
     );
 }
-function z(e) {
+function X(e) {
     let { title: t } = e;
     return (0, i.jsxs)("div", {
         children: [
-            (0, i.jsx)(c.$i$, { className: V.divider }),
-            (0, i.jsx)(c.vwX, {
-                className: s()(V.folderTitle, V.sectionTitle),
+            (0, i.jsx)(d.$i$, { className: U.divider }),
+            (0, i.jsx)(d.vwX, {
+                className: s()(U.folderTitle, U.sectionTitle),
                 tag: "h5",
                 children: t,
             }),
         ],
     });
 }
-let X = a.ZP.connectStores([S.Z, T.Z, O.ZP, w.Z, E.Z], () => {
+let Y = a.ZP.connectStores([O.Z, Z.Z, E.ZP, T.Z, w.Z], () => {
     let e,
-        t = S.Z.channel,
-        n = S.Z.category,
+        t = O.Z.channel,
+        n = O.Z.category,
         i = [],
         l = [],
         r = {},
         s = !1;
     if (null != t) {
-        e = w.Z.getGuild(t.getGuildId());
-        let n = O.ZP.getMemberIds(null == e ? void 0 : e.id);
+        e = T.Z.getGuild(t.getGuildId());
+        let n = E.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let a = E.Z.getSortedRoles(e.id);
-            (r = S.Z.editedPermissionIds.reduce((e, t) => {
-                let n = S.Z.getPermissionOverwrite(t);
+            let a = w.Z.getSortedRoles(e.id);
+            (r = O.Z.editedPermissionIds.reduce((e, t) => {
+                let n = O.Z.getPermissionOverwrite(t);
                 return null != n && (e[t] = n), e;
             }, {})),
-                (i = _.kA(e, a, t, t.accessPermissions, r)),
-                (l = _.cR(n, t, e, t.accessPermissions, r)),
-                (s = _.Yk(t, r));
+                (i = P.kA(e, a, t, t.accessPermissions, r)),
+                (l = P.cR(n, t, e, t.accessPermissions, r)),
+                (s = P.Yk(t, r));
         }
     }
     return {
-        canSyncChannel: null != n && T.Z.can(k.Pl.MANAGE_ROLES, n),
+        canSyncChannel: null != n && Z.Z.can(B.Pl.MANAGE_ROLES, n),
         category: n,
         channel: t,
         filteredMembers: l,
         filteredRoles: i,
         guild: e,
         isPrivateGuildChannel: s,
-        locked: S.Z.locked,
+        locked: O.Z.locked,
         permissionUpdates: r,
     };
 })(function (e) {
@@ -495,54 +496,54 @@ let X = a.ZP.connectStores([S.Z, T.Z, O.ZP, w.Z, E.Z], () => {
             channel: s,
             filteredMembers: a,
             filteredRoles: o,
-            guild: d,
+            guild: c,
             isPrivateGuildChannel: u,
-            locked: g,
+            locked: h,
             permissionUpdates: m,
         } = e,
-        [p, f] = l.useState(!I.Uu(k.Pl.SEND_MESSAGES, s));
-    if (null == s || null == d) return null;
+        [p, f] = l.useState(!_.Uu(B.Pl.SEND_MESSAGES, s));
+    if (null == s || null == c) return null;
     let x = {
-        title: B.intl.string(B.t.BAZMBg),
-        subtitle: B.intl.string(B.t.XLrZys),
+        title: V.intl.string(V.t.BAZMBg),
+        subtitle: V.intl.string(V.t.XLrZys),
     };
     return (
-        s.isCategory() && ((x.title = B.intl.string(B.t["/uELTk"])), (x.subtitle = B.intl.string(B.t["8iAg3d"]))),
+        s.isCategory() && ((x.title = V.intl.string(V.t["/uELTk"])), (x.subtitle = V.intl.string(V.t["8iAg3d"]))),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(c.vwX, {
+                (0, i.jsx)(d.vwX, {
                     tag: "h1",
                     children: x.title,
                 }),
-                (0, i.jsx)(c.R94, { children: x.subtitle }),
+                (0, i.jsx)(d.R94, { children: x.subtitle }),
                 null != r && t
-                    ? g
-                        ? (0, i.jsx)(L.Z, {
+                    ? h
+                        ? (0, i.jsx)(D.Z, {
                               canSync: !1,
-                              icon: c.DuK,
-                              noticeText: B.intl.format(B.t.ETJqLi, { categoryName: r.name }),
+                              icon: d.DuK,
+                              noticeText: V.intl.format(V.t.ETJqLi, { categoryName: r.name }),
                           })
-                        : (0, i.jsx)(L.Z, {
-                              buttonText: B.intl.string(B.t.NVwuHh),
+                        : (0, i.jsx)(D.Z, {
+                              buttonText: V.intl.string(V.t.NVwuHh),
                               canSync: !0,
-                              icon: (0, c.GSL)(R.Z),
-                              noticeText: B.intl.format(B.t.OIhm0N, { categoryName: r.name }),
+                              icon: (0, d.GSL)(I.Z),
+                              noticeText: V.intl.format(V.t.OIhm0N, { categoryName: r.name }),
                               onClick: function () {
                                   null != r &&
-                                      (0, c.ZDy)(async () => {
+                                      (0, d.ZDy)(async () => {
                                           let { default: e } = await Promise.resolve().then(n.bind(n, 170509));
                                           return (t) =>
                                               (0, i.jsx)(
                                                   e,
-                                                  H(U({}, t), {
+                                                  G(H({}, t), {
                                                       channel: s,
                                                       category: r,
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
-                                                              t = U({}, r.permissionOverwrites);
-                                                          null != e && null == t[e] && (t[e] = I.we(e)),
-                                                              (await (0, j.u)(s, t[e].deny, t[e].allow)) &&
-                                                                  (0, h.wk)(s.id, {
+                                                              t = H({}, r.permissionOverwrites);
+                                                          null != e && null == t[e] && (t[e] = _.we(e)),
+                                                              (await (0, b.u)(s, t[e].deny, t[e].allow)) &&
+                                                                  (0, g.wk)(s.id, {
                                                                       permissionOverwrites: Object.values(t),
                                                                   });
                                                       },
@@ -553,21 +554,21 @@ let X = a.ZP.connectStores([S.Z, T.Z, O.ZP, w.Z, E.Z], () => {
                           })
                     : null,
                 s.isGuildStageVoice()
-                    ? (0, i.jsx)(W, {
-                          guild: d,
+                    ? (0, i.jsx)(F, {
+                          guild: c,
                           channel: s,
                           permissionUpdates: m,
                       })
                     : null,
-                (0, i.jsx)(F, {
+                (0, i.jsx)(z, {
                     channel: s,
-                    guild: d,
+                    guild: c,
                     isPrivateGuildChannel: u,
                     roles: o,
                     members: a,
                 }),
                 !1,
-                (0, i.jsx)(P.Z, {}),
+                (0, i.jsx)(A.Z, {}),
             ],
         })
     );

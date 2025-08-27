@@ -1,22 +1,23 @@
-n.d(t, { Z: () => h }), n(415506), n(953529);
+n.d(t, { Z: () => x }), n(415506), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(149765),
-    s = n(481060),
-    c = n(208884),
-    d = n(453628),
-    u = n(996987),
-    p = n(231338),
-    m = n(388032),
-    b = n(557806),
-    g = n(197571);
-class f extends r.PureComponent {
+    s = n(28664),
+    c = n(481060),
+    d = n(208884),
+    u = n(453628),
+    p = n(996987),
+    m = n(231338),
+    b = n(388032),
+    g = n(557806),
+    f = n(197571);
+class h extends r.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
-        return o.e$(t, e) ? d.y.ALLOW : o.e$(n, e) ? d.y.DENY : d.y.PASSTHROUGH;
+        return o.e$(t, e) ? u.y.ALLOW : o.e$(n, e) ? u.y.DENY : u.y.PASSTHROUGH;
     }
     getPermissionValue(e, t) {
         return o.e$(t, e);
@@ -26,10 +27,10 @@ class f extends r.PureComponent {
         n(e, t);
     }
     renderDisabledIndicator(e) {
-        return (0, i.jsx)(s.ua7, {
+        return (0, i.jsx)(c.ua7, {
             text: e,
             position: "top",
-            color: s.ua7.Colors.RED,
+            color: c.ua7.Colors.RED,
             children: (e) => {
                 var t, n;
                 return (0, i.jsx)(
@@ -61,10 +62,10 @@ class f extends r.PureComponent {
                     })({}, e)),
                     (n = n =
                         {
-                            children: (0, i.jsx)(s.t6m, {
+                            children: (0, i.jsx)(c.t6m, {
                                 size: "sm",
                                 color: "currentColor",
-                                className: b.icon,
+                                className: g.icon,
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
@@ -85,31 +86,34 @@ class f extends r.PureComponent {
         });
     }
     renderTitleAccessory(e, t) {
-        return e === p.Pl.MANAGE_MESSAGES && t
-            ? (0, i.jsx)(s.DY3, {
-                  text: m.intl.string(m.t["2XIdPj"]),
-                  className: b.accessory,
-                  children: (0, i.jsx)(s.aNP, { color: s.TVs.colors.STATUS_WARNING }),
+        return e === m.Pl.MANAGE_MESSAGES && t
+            ? (0, i.jsx)("div", {
+                  className: g.accessory,
+                  children: (0, i.jsx)(s.u, {
+                      asContainer: !0,
+                      text: b.intl.string(b.t["2XIdPj"]),
+                      children: (0, i.jsx)(c.aNP, { color: c.TVs.colors.STATUS_WARNING }),
+                  }),
               })
             : null;
     }
     renderComponent(e) {
         var t;
         let { title: n, description: r, helpdeskArticleId: l, flag: o } = e,
-            { permissions: d, locked: p, permissionRender: m } = this.props,
-            g = null != (t = this.props.inPinPermissionExperiment) && t,
+            { permissions: s, locked: u, permissionRender: m } = this.props,
+            b = null != (t = this.props.inPinPermissionExperiment) && t,
             f = null == m ? void 0 : m(o),
-            h = !!(p || f),
+            h = !!(u || f),
             x = "string" == typeof f ? this.renderDisabledIndicator(f) : null,
-            j = a()({ [b.title]: null != x });
-        return null == d
+            j = a()({ [g.title]: null != x });
+        return null == s
             ? (0, i.jsxs)(
-                  u.Z,
+                  p.Z,
                   {
                       disabled: h,
                       value: this.getOverwriteValue(o),
                       onChange: (e) => this.handleChange(o, e),
-                      note: (0, c._u)(r),
+                      note: (0, d._u)(r),
                       helpdeskArticleId: l,
                       children: [
                           x,
@@ -117,25 +121,25 @@ class f extends r.PureComponent {
                               className: j,
                               children: n,
                           }),
-                          this.renderTitleAccessory(o, g),
+                          this.renderTitleAccessory(o, b),
                       ],
                   },
                   String(o),
               )
             : (0, i.jsxs)(
-                  s.j7V,
+                  c.j7V,
                   {
                       disabled: h,
-                      value: this.getPermissionValue(o, d),
+                      value: this.getPermissionValue(o, s),
                       onChange: (e) => this.handleChange(o, e),
-                      note: (0, c._u)(r),
+                      note: (0, d._u)(r),
                       children: [
                           x,
                           (0, i.jsx)("span", {
                               className: j,
                               children: n,
                           }),
-                          this.renderTitleAccessory(o, g),
+                          this.renderTitleAccessory(o, b),
                       ],
                   },
                   String(o),
@@ -143,20 +147,20 @@ class f extends r.PureComponent {
     }
     render() {
         let { spec: e, className: t } = this.props;
-        return (0, i.jsx)(s.hjN, {
+        return (0, i.jsx)(c.hjN, {
             className: t,
-            children: (0, i.jsxs)(s.y5t, {
-                component: (0, i.jsx)(s.vwX, {
-                    tag: s.RB0.H5,
-                    className: null != e.description ? g.marginBottom8 : g.marginBottom20,
+            children: (0, i.jsxs)(c.y5t, {
+                component: (0, i.jsx)(c.vwX, {
+                    tag: c.RB0.H5,
+                    className: null != e.description ? f.marginBottom8 : f.marginBottom20,
                     children: e.title,
                 }),
                 children: [
                     null != e.description &&
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            className: g.marginBottom20,
+                            className: f.marginBottom20,
                             children: e.description,
                         }),
                     e.permissions.map(this.renderComponent, this),
@@ -165,4 +169,4 @@ class f extends r.PureComponent {
         });
     }
 }
-let h = f;
+let x = h;

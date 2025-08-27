@@ -1,18 +1,19 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(481060),
-    c = n(607070),
-    u = n(906732),
-    d = n(951394),
-    f = n(695346),
-    _ = n(785717),
-    p = n(388032),
-    h = n(81064);
-function m(e, t, n) {
+    l = n(28664),
+    c = n(481060),
+    u = n(607070),
+    d = n(906732),
+    f = n(951394),
+    _ = n(695346),
+    p = n(785717),
+    h = n(388032),
+    m = n(81064);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,79 +54,81 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = 300,
-    O = (e) =>
-        (0, l.ZDy)(async () => {
+let O = 300,
+    v = (e) =>
+        (0, c.ZDy)(async () => {
             let { default: t } = await n.e("31649").then(n.bind(n, 475613));
             return (n) =>
                 (0, r.jsx)(
                     t,
-                    b(g({}, n), {
+                    y(E({}, n), {
                         sourceAnalyticsLocations: e,
                         location: "UserProfileCustomStatusBubbleEditBar",
                     }),
                 );
         });
-function v(e) {
+function I(e) {
     let { isVisible: t, isExpandable: n, onCloseProfile: a } = e,
-        { analyticsLocations: m } = (0, u.ZP)(),
-        { trackUserProfileAction: g } = (0, _.KZ)(),
-        E = i.useRef(null),
+        { analyticsLocations: g } = (0, d.ZP)(),
+        { trackUserProfileAction: E } = (0, p.KZ)(),
         b = i.useRef(null),
-        [v, I] = (0, s.Wu)([c.Z], () => [c.Z.useReducedMotion, c.Z.keyboardModeEnabled]),
-        T = !n || v || I ? 0 : y,
-        S = () => {
-            g({ action: "PRESS_EDIT_CUSTOM_STATUS" }), O(m), null == a || a();
-        },
+        y = i.useRef(null),
+        [I, T] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
+        S = !n || I || T ? 0 : O,
         A = () => {
-            g({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), f.Ok.updateSetting(void 0);
+            E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), v(g), null == a || a();
+        },
+        C = () => {
+            E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), _.Ok.updateSetting(void 0);
         };
-    return (0, r.jsxs)(d.ZP, {
-        className: o()(h.popover, {
-            [h.visible]: t,
-            [h.expandable]: n,
+    return (0, r.jsxs)(f.ZP, {
+        className: o()(m.popover, {
+            [m.visible]: t,
+            [m.expandable]: n,
         }),
         children: [
-            (0, r.jsx)(l.DY3, {
-                targetElementRef: E,
-                text: p.intl.string(p.t.bt75u7),
-                delay: T,
+            (0, r.jsx)(l.u, {
+                asContainer: !0,
+                targetElementRef: b,
+                text: h.intl.string(h.t.bt75u7),
+                delay: S,
                 "aria-label": !1,
-                children: (0, r.jsx)(d.zx, {
-                    ref: E,
-                    className: o()(h.button, h.left),
-                    "aria-label": p.intl.string(p.t.QdHxoq),
+                children: (0, r.jsx)(f.zx, {
+                    ref: b,
+                    className: o()(m.button, m.left),
+                    "aria-label": h.intl.string(h.t.QdHxoq),
                     "aria-haspopup": "dialog",
-                    onClick: S,
-                    children: (0, r.jsx)(l.vdY, {
+                    onClick: A,
+                    children: (0, r.jsx)(c.vdY, {
                         size: "xs",
-                        colorClass: h.icon,
+                        colorClass: m.icon,
                     }),
                 }),
             }),
-            (0, r.jsx)(l.DY3, {
-                text: p.intl.string(p.t.VkKicX),
-                delay: T,
+            (0, r.jsx)(l.u, {
+                asContainer: !0,
+                text: h.intl.string(h.t.VkKicX),
+                delay: S,
                 "aria-label": !1,
-                children: (0, r.jsx)(d.zx, {
-                    ref: b,
-                    className: o()(h.button, h.right),
-                    "aria-label": p.intl.string(p.t.wfYTHR),
-                    onClick: A,
-                    children: (0, r.jsx)(l.XHJ, {
+                children: (0, r.jsx)(f.zx, {
+                    ref: y,
+                    className: o()(m.button, m.right),
+                    "aria-label": h.intl.string(h.t.wfYTHR),
+                    onClick: C,
+                    children: (0, r.jsx)(c.XHJ, {
                         size: "xs",
-                        colorClass: h.icon,
+                        colorClass: m.icon,
                     }),
                 }),
             }),

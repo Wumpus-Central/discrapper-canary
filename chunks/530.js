@@ -1,130 +1,131 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(129861),
-    l = n(406943),
-    c = n(385499),
-    u = n(181430),
-    d = n(821795),
-    f = n(892567),
-    _ = n(172751),
-    p = n(228168),
-    h = n(388032),
-    m = n(954677);
-function g(e) {
+    o = n(28664),
+    s = n(481060),
+    l = n(129861),
+    c = n(406943),
+    u = n(385499),
+    d = n(181430),
+    f = n(821795),
+    _ = n(892567),
+    p = n(172751),
+    h = n(228168),
+    m = n(388032),
+    g = n(954677);
+function E(e) {
     let {
             user: t,
             usernameIcon: n,
             tags: i,
-            nickname: g,
-            nicknameIcons: E,
-            displayNameStyles: b = t.displayNameStyles,
-            pronouns: y,
-            className: O,
-            tagClassName: v,
-            isTryItOut: I,
-            onOpenProfile: T,
-            onClose: S,
-            nicknameVariant: A = "heading-lg/bold",
+            nickname: E,
+            nicknameIcons: b,
+            displayNameStyles: y = t.displayNameStyles,
+            pronouns: O,
+            className: v,
+            tagClassName: I,
+            isTryItOut: T,
+            onOpenProfile: S,
+            onClose: A,
+            nicknameVariant: C = "heading-lg/bold",
         } = e,
-        C = (e) =>
-            null == T
+        N = (e) =>
+            null == S
                 ? e
-                : (0, r.jsx)(o.kL8, {
-                      onClick: T,
-                      className: m.clickableUsername,
-                      "aria-label": h.intl.string(h.t["+Xp3ho"]),
+                : (0, r.jsx)(s.kL8, {
+                      onClick: S,
+                      className: g.clickableUsername,
+                      "aria-label": m.intl.string(m.t["+Xp3ho"]),
                       children: e,
                   }),
-        N = null != y && y.length > 0,
-        R = (0, l.D)(t),
-        P = (0, u.Y)({ location: "UserProfileUsername" }) && null != b;
+        R = null != O && O.length > 0,
+        P = (0, c.D)(t),
+        w = (0, d.Y)({ location: "UserProfileUsername" }) && null != y;
     return (0, r.jsxs)("div", {
-        className: a()(m.container, { [m.bot]: null != R }, O),
+        className: a()(g.container, { [g.bot]: null != P }, v),
         children: [
             (0, r.jsxs)("div", {
-                className: m.usernameRow,
+                className: g.usernameRow,
                 children: [
-                    C(
-                        P
-                            ? (0, r.jsx)(o.Text, {
-                                  variant: A,
-                                  children: (0, r.jsx)(f.Z, {
-                                      userName: g,
-                                      displayNameStyles: b,
-                                      effectDisplayType: d.F.ANIMATED,
-                                      textClassName: m.nicknameWithDisplayNameStyles,
+                    N(
+                        w
+                            ? (0, r.jsx)(s.Text, {
+                                  variant: C,
+                                  children: (0, r.jsx)(_.Z, {
+                                      userName: E,
+                                      displayNameStyles: y,
+                                      effectDisplayType: f.F.ANIMATED,
+                                      textClassName: g.nicknameWithDisplayNameStyles,
                                       shouldWrap: !0,
                                       loop: !0,
                                       inProfile: !0,
-                                      shouldUnderlineOnHover: null != T,
+                                      shouldUnderlineOnHover: null != S,
                                   }),
                               })
-                            : (0, r.jsx)(o.Text, {
-                                  className: m.nickname,
-                                  variant: A,
-                                  children: g,
+                            : (0, r.jsx)(s.Text, {
+                                  className: g.nickname,
+                                  variant: C,
+                                  children: E,
                               }),
                     ),
-                    null != R &&
-                        (0, r.jsx)(c.Z, {
-                            type: R,
+                    null != P &&
+                        (0, r.jsx)(u.Z, {
+                            type: P,
                             verified: t.isVerifiedBot(),
                         }),
-                    null != E &&
+                    null != b &&
                         (0, r.jsx)("div", {
-                            className: m.nicknameIcons,
-                            children: E,
+                            className: g.nicknameIcons,
+                            children: b,
                         }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: a()(m.tags, {
-                    [m.pronouns]: N,
-                    [m.bot]: null != R,
+                className: a()(g.tags, {
+                    [g.pronouns]: R,
+                    [g.bot]: null != P,
                 }),
                 children: [
                     !t.isProvisional &&
-                        C(
-                            (0, r.jsx)(s.Z, {
+                        N(
+                            (0, r.jsx)(l.Z, {
                                 user: t,
                                 usernameIcon: n,
                                 forceUsername: !0,
-                                forcePomelo: I,
-                                className: a()(m.userTag, v),
-                                usernameClass: m.userTagUsername,
-                                discriminatorClass: m.userTagDiscriminator,
+                                forcePomelo: T,
+                                className: a()(g.userTag, I),
+                                usernameClass: g.userTagUsername,
+                                discriminatorClass: g.userTagDiscriminator,
                                 hideBotTag: !0,
                             }),
                         ),
-                    N &&
+                    R &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
                                     "aria-hidden": "true",
-                                    className: m.dotSpacer,
+                                    className: g.dotSpacer,
                                 }),
-                                (0, r.jsx)(o.DY3, {
-                                    className: m.pronounsTooltip,
-                                    text: h.intl.string(h.t.GI2A8P),
-                                    delay: p.vB,
-                                    children: (0, r.jsx)(o.Text, {
-                                        className: a()(m.pronounsText, v),
+                                (0, r.jsx)(o.u, {
+                                    asContainer: !0,
+                                    text: m.intl.string(m.t.GI2A8P),
+                                    delay: h.vB,
+                                    children: (0, r.jsx)(s.Text, {
+                                        className: a()(g.pronounsText, I),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
-                                        children: y,
+                                        children: O,
                                     }),
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(_.ZP, {
+                    (0, r.jsx)(p.ZP, {
                         userId: t.id,
-                        onClose: S,
-                        containerClassName: m.guildTagContainer,
-                        className: m.guildTag,
+                        onClose: A,
+                        containerClassName: g.guildTagContainer,
+                        className: g.guildTag,
                     }),
                     i,
                 ],

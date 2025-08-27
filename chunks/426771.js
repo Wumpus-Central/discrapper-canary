@@ -1,29 +1,30 @@
-n.d(t, { Z: () => x }), n(388685), n(953529);
+n.d(t, { Z: () => v }), n(388685), n(953529);
 var r = n(951288),
-    o = n(647438),
-    i = n(442837),
-    l = n(481060),
+    i = n(647438),
+    o = n(442837),
+    l = n(28664),
+    a = n(481060),
     s = n(607070),
-    a = n(973772),
+    u = n(973772),
     c = n(838968),
-    u = n(857666),
-    d = n(279475),
-    p = n(535396),
+    d = n(857666),
+    p = n(279475),
+    f = n(535396),
     m = n(989308),
-    f = n(388032),
-    _ = n(639560);
-function x(e) {
-    var t, n, x;
-    let g,
-        { guildId: v, group: b, powerups: h } = e,
-        [j, C] = o.useState(!1),
-        E = (0, a.Gv)(v, h),
-        I = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        N = (0, u.Z)(b, v);
-    if (void 0 === N || h.length <= 0) return null;
-    let w = E.some((e) => e.type !== p.A3.INACTIVE),
-        Z = (0, d.d)(w),
-        P = E.reduce(
+    _ = n(388032),
+    g = n(639560);
+function v(e) {
+    var t, n, v;
+    let x,
+        { guildId: b, group: h, powerups: C } = e,
+        [j, I] = i.useState(!1),
+        E = (0, u.Gv)(b, C),
+        w = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        Z = (0, d.Z)(h, b);
+    if (void 0 === Z || C.length <= 0) return null;
+    let N = E.some((e) => e.type !== f.A3.INACTIVE),
+        P = (0, p.d)(N),
+        y = E.reduce(
             (e, t) => {
                 let { sourceEntitlement: n } = t,
                     r = null == n ? void 0 : n.ends_at;
@@ -31,82 +32,83 @@ function x(e) {
             },
             void 0,
         );
-    void 0 !== P
-        ? (g = {
+    void 0 !== y
+        ? (x = {
               type: "expiring",
-              expiringAt: P,
+              expiringAt: y,
           })
-        : w &&
-          (g = {
+        : N &&
+          (x = {
               type: "active",
-              statusText: f.intl.string(m.default.FFLkm5),
+              statusText: _.intl.string(m.default.FFLkm5),
           });
-    let S = E.reduce((e, t) => {
+    let T = E.reduce((e, t) => {
             let { type: n, powerup: r } = t;
-            return n === p.A3.POWERUP_ACTIVATED ? e + r.cost : e;
+            return n === f.A3.POWERUP_ACTIVATED ? e + r.cost : e;
         }, 0),
-        y = E.reduce(
+        S = E.reduce(
             (e, t) => {
                 var n, r;
-                let { powerup: o } = t;
-                return e < (null != (n = null == o ? void 0 : o.cost) ? n : 0)
+                let { powerup: i } = t;
+                return e < (null != (n = null == i ? void 0 : i.cost) ? n : 0)
                     ? e
-                    : null != (r = null == o ? void 0 : o.cost)
+                    : null != (r = null == i ? void 0 : i.cost)
                       ? r
                       : 0;
             },
-            null != (x = null == (n = E[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
+            null != (v = null == (n = E[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? v : 0,
         ),
-        T = E.reduce((e, t) => {
+        A = E.reduce((e, t) => {
             var n;
             let { powerup: r } = t;
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
-        O = w ? S : y,
-        A = !w && T > O ? "+" : void 0,
-        R = !I && j ? N.image.animatedUrl : N.image.staticUrl,
-        L = null != N.viewCta && "" !== N.viewCta ? N.viewCta : f.intl.string(m.default["27GkOj"]),
-        k = null != N.viewCtaTooltip && "" !== N.viewCtaTooltip ? N.viewCtaTooltip : void 0;
+        O = N ? T : S,
+        k = !N && A > O ? "+" : void 0,
+        R = !w && j ? Z.image.animatedUrl : Z.image.staticUrl,
+        L = null != Z.viewCta && "" !== Z.viewCta ? Z.viewCta : _.intl.string(m.default["27GkOj"]),
+        U = null != Z.viewCtaTooltip && "" !== Z.viewCtaTooltip ? Z.viewCtaTooltip : void 0;
     return (0, r.jsxs)(c.aB, {
-        label: N.title,
-        isActive: w,
-        badge: N.badge,
-        onClick: () => N.openModal(h),
-        onMouseOver: () => C(!0),
-        onMouseLeave: () => C(!1),
+        label: Z.title,
+        isActive: N,
+        badge: Z.badge,
+        onClick: () => Z.openModal(C),
+        onMouseOver: () => I(!0),
+        onMouseLeave: () => I(!1),
         children: [
             (0, r.jsx)("img", {
                 alt: "",
                 src: R,
-                className: _.image,
+                className: g.image,
             }),
             (0, r.jsx)(c.Q9, {
-                title: N.title,
-                textColor: Z,
+                title: Z.title,
+                textColor: P,
                 footer: (0, r.jsx)(c.uf, {
-                    status: g,
+                    status: x,
                     cost: O,
-                    costDecorator: A,
+                    costDecorator: k,
                 }),
-                children: (0, r.jsx)(l.Text, {
-                    className: _.description,
-                    color: Z,
+                children: (0, r.jsx)(a.Text, {
+                    className: g.description,
+                    color: P,
                     variant: "text-sm/medium",
-                    children: N.description,
+                    children: Z.description,
                 }),
             }),
             (0, r.jsx)(c.N4, {
                 children:
-                    null != k
-                        ? (0, r.jsx)(l.DY3, {
-                              text: k,
+                    null != U
+                        ? (0, r.jsx)(l.u, {
+                              asContainer: !0,
+                              text: U,
                               delay: 100,
-                              children: (0, r.jsx)(l.zxk, {
+                              children: (0, r.jsx)(a.zxk, {
                                   text: L,
                                   fullWidth: !0,
                               }),
                           })
-                        : (0, r.jsx)(l.zxk, {
+                        : (0, r.jsx)(a.zxk, {
                               text: L,
                               fullWidth: !0,
                           }),

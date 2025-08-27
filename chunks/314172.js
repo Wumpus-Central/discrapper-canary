@@ -1,17 +1,18 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(235874),
-    o = n(481060),
-    s = n(944613),
-    l = n(607070),
-    c = n(345162),
-    u = n(496675),
-    d = n(981631),
-    f = n(388032),
-    _ = n(880033);
-function p(e, t, n) {
+    o = n(28664),
+    s = n(481060),
+    l = n(944613),
+    c = n(607070),
+    u = n(345162),
+    d = n(496675),
+    f = n(981631),
+    _ = n(388032),
+    p = n(880033);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +36,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,64 +53,65 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e) {
-    let { guild: t, guildMember: n, numRoles: p, highestRole: m, onAddRole: E, buttonRef: b } = e,
-        y = (0, i.e7)([l.Z], () => l.Z.roleStyle);
-    if (!(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_ROLES, t))) return null;
-    let O = (e) => !(0, c.fI)(e) && !e.managed && u.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
+function b(e) {
+    let { guild: t, guildMember: n, numRoles: h, highestRole: g, onAddRole: b, buttonRef: y } = e,
+        O = (0, i.e7)([c.Z], () => c.Z.roleStyle);
+    if (!(0, i.e7)([d.Z], () => d.Z.can(f.Plq.MANAGE_ROLES, t))) return null;
+    let v = (e) => !(0, u.fI)(e) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(a.y, {
-        targetElementRef: b,
+        targetElementRef: y,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(s.Z, {
+            return (0, r.jsx)(l.Z, {
                 guild: t,
-                roleStyle: y,
-                roleFilter: O,
-                onSelect: E,
+                roleStyle: O,
+                roleFilter: v,
+                onSelect: b,
                 onClose: n,
             });
         },
         children: (e) =>
-            (0, r.jsx)(o.DY3, {
-                text: f.intl.string(f.t.icyMgY),
+            (0, r.jsx)(o.u, {
+                asContainer: !0,
+                text: _.intl.string(_.t.icyMgY),
                 "aria-label": !1,
-                shouldShow: p > 0,
+                shouldShow: h > 0,
                 children: (0, r.jsxs)(
-                    o.P3F,
-                    g(
-                        h(
+                    s.P3F,
+                    E(
+                        m(
                             {
-                                innerRef: b,
-                                className: _.button,
+                                innerRef: y,
+                                className: p.button,
                                 role: "button",
-                                "aria-label": f.intl.string(f.t.icyMgY),
+                                "aria-label": _.intl.string(_.t.icyMgY),
                             },
                             e,
                         ),
                         {
                             children: [
-                                (0, r.jsx)(o.qJs, {
+                                (0, r.jsx)(s.qJs, {
                                     size: "xs",
                                     color: "currentColor",
                                 }),
-                                0 === p &&
-                                    (0, r.jsx)(o.Text, {
+                                0 === h &&
+                                    (0, r.jsx)(s.Text, {
                                         variant: "text-xs/normal",
                                         color: "none",
-                                        children: f.intl.string(f.t.icyMgY),
+                                        children: _.intl.string(_.t.icyMgY),
                                     }),
                             ],
                         },

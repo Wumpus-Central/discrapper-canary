@@ -10,7 +10,6 @@ e.exports = {
     tags: "tags__63ed3",
     pronouns: "pronouns__63ed3",
     userTag: "userTag__63ed3",
-    pronounsTooltip: "pronounsTooltip__63ed3",
     pronounsText: "pronounsText__63ed3 userTag__63ed3",
     userTagDiscriminator: "userTagDiscriminator__63ed3",
     dotSpacer: "dotSpacer__63ed3",

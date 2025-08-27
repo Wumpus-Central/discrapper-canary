@@ -1,82 +1,85 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
-var i = n(755721),
-    a = n(481060),
-    o = n(620662),
-    s = n(503438),
-    l = n(829820),
-    c = n(395361),
-    u = n(652853),
-    d = n(475413),
-    f = n(981631),
-    _ = n(671955),
-    p = n(388032),
-    h = n(704543);
-function m(e) {
-    var t, n, m, g;
-    let { user: E, activity: b, onAction: y } = e,
-        { themeType: O } = (0, u.z)(),
-        v = (0, l.Ih)(b, E),
-        I = (0, l.Fe)(b, E);
-    if (!(0, s.Z)(b) || (!(0, o.Z)(b, f.xjy.PLAY) && !(0, o.Z)(b, f.xjy.SYNC))) return null;
-    let T = (e) => {
-            null == e || e.stopPropagation(), null == y || y({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), v.onClick();
+var i = n(28664),
+    a = n(755721),
+    o = n(481060),
+    s = n(620662),
+    l = n(503438),
+    c = n(829820),
+    u = n(395361),
+    d = n(652853),
+    f = n(475413),
+    _ = n(981631),
+    p = n(671955),
+    h = n(388032),
+    m = n(704543);
+function g(e) {
+    var t, n, g, E;
+    let { user: b, activity: y, onAction: O } = e,
+        { themeType: v } = (0, d.z)(),
+        I = (0, c.Ih)(y, b),
+        T = (0, c.Fe)(y, b);
+    if (!(0, l.Z)(y) || (!(0, s.Z)(y, _.xjy.PLAY) && !(0, s.Z)(y, _.xjy.SYNC))) return null;
+    let S = (e) => {
+            null == e || e.stopPropagation(), null == O || O({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), I.onClick();
         },
-        S = (e) => {
-            e.stopPropagation(), null == y || y({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), I.onClick();
+        A = (e) => {
+            e.stopPropagation(), null == O || O({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), T.onClick();
         };
-    return O === _.l.MODAL_V2
+    return v === p.l.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(a.DY3, {
-                      text: I.tooltip,
-                      children: (0, r.jsx)(d.tG, {
-                          text: null != (t = I.label) ? t : p.intl.string(p.t.eU3inJ),
-                          disabled: I.disabled,
-                          submitting: I.loading,
-                          size: i.Ph.TINY,
+                  (0, r.jsx)(i.u, {
+                      asContainer: !0,
+                      text: T.tooltip,
+                      children: (0, r.jsx)(f.tG, {
+                          text: null != (t = T.label) ? t : h.intl.string(h.t.eU3inJ),
+                          disabled: T.disabled,
+                          submitting: T.loading,
+                          size: a.Ph.TINY,
                           themeColor: "secondary",
-                          onClick: S,
+                          onClick: A,
                       }),
                   }),
-                  (0, r.jsx)(a.DY3, {
-                      text: v.tooltip,
-                      children: (0, r.jsx)(d.tG, {
-                          text: null != (n = v.label) ? n : p.intl.string(p.t.rRffNz),
-                          disabled: v.disabled,
-                          submitting: v.loading,
-                          size: i.Ph.TINY,
+                  (0, r.jsx)(i.u, {
+                      asContainer: !0,
+                      text: I.tooltip,
+                      children: (0, r.jsx)(f.tG, {
+                          text: null != (n = I.label) ? n : h.intl.string(h.t.rRffNz),
+                          disabled: I.disabled,
+                          submitting: I.loading,
+                          size: a.Ph.TINY,
                           themeColor: "secondary",
-                          onClick: T,
+                          onClick: S,
                       }),
                   }),
               ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(a.DY3, {
-                      text: v.tooltip,
-                      className: h.primaryButton,
-                      children: (0, r.jsx)(d.tG, {
-                          icon: () => (0, r.jsx)(c.Z, {}),
-                          text: null != (m = v.label) ? m : p.intl.string(p.t.rRffNz),
-                          disabled: v.disabled,
-                          submitting: v.loading,
-                          wrapperClassName: h.primaryButton,
+                  (0, r.jsx)(i.u, {
+                      asContainer: !0,
+                      text: I.tooltip,
+                      children: (0, r.jsx)(f.tG, {
+                          icon: () => (0, r.jsx)(u.Z, {}),
+                          text: null != (g = I.label) ? g : h.intl.string(h.t.rRffNz),
+                          disabled: I.disabled,
+                          submitting: I.loading,
+                          wrapperClassName: m.primaryButton,
                           themeColor: "secondary",
                           fullWidth: !0,
-                          onClick: T,
+                          onClick: S,
                       }),
                   }),
-                  (0, r.jsx)(d.ef, {
-                      icon: a.iOO,
-                      tooltipText: null != (g = I.tooltip) ? g : p.intl.string(p.t.eU3inJ),
-                      disabled: I.disabled,
-                      submitting: I.loading,
+                  (0, r.jsx)(f.ef, {
+                      icon: o.iOO,
+                      tooltipText: null != (E = T.tooltip) ? E : h.intl.string(h.t.eU3inJ),
+                      disabled: T.disabled,
+                      submitting: T.loading,
                       themeColor: "secondary",
                       fullWidth: !0,
-                      onClick: S,
+                      onClick: A,
                   }),
               ],
           });

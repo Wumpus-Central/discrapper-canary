@@ -15,7 +15,6 @@ e.exports = {
     rowLabel: "rowLabel__1a4ef",
     rowBotTag: "rowBotTag__1a4ef",
     rowLabelSubText: "rowLabelSubText__1a4ef",
-    removeIconContainer: "removeIconContainer__1a4ef",
     removeIcon: "removeIcon__1a4ef",
     disabledRemoveIcon: "disabledRemoveIcon__1a4ef",
 };

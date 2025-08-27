@@ -1,7 +1,6 @@
 e.exports = {
     popover: "popover__2d0ab",
     visible: "visible__2d0ab",
-    tooltipContainer: "tooltipContainer__2d0ab",
     button: "button__2d0ab",
     activityPopover: "activityPopover__2d0ab",
     statusPopover: "statusPopover__2d0ab",

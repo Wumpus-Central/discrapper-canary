@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
+    s = n(28664),
     o = n(884338),
     a = n(933557),
     c = n(471445),
@@ -24,7 +24,8 @@ function m(e) {
                 if (null == e || e === o.ag) return null;
                 let n = d.ZP.getName(t.guild_id, t.id, e),
                     i = e.getAvatarURL(t.guild_id, 24);
-                return (0, r.jsx)(s.DY3, {
+                return (0, r.jsx)(s.u, {
+                    asContainer: !0,
                     text: n,
                     children: (0, r.jsx)("img", {
                         src: null != i ? i : void 0,
@@ -58,7 +59,8 @@ function m(e) {
                               });
                 })(n.slice(4), t);
                 return (0, r.jsx)("div", {
-                    children: (0, r.jsx)(s.DY3, {
+                    children: (0, r.jsx)(s.u, {
+                        asContainer: !0,
                         text: i,
                         children: (0, r.jsx)("div", {
                             className: f.userListOverflow,
