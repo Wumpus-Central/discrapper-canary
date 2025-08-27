@@ -27,9 +27,9 @@ n.r(t),
     n(413496),
     n(433524),
     n(388685);
-var a,
-    o = n(348327),
-    s = n.n(o),
+var o,
+    a = n(348327),
+    s = n.n(a),
     l = n(512722),
     c = n.n(l),
     u = n(264344),
@@ -107,7 +107,7 @@ if (null != P) {
         t = P.remoteApp.getVersion(),
         n = P.process.platform,
         i = P.os.release,
-        o = P.os.arch,
+        a = P.os.arch,
         s = P.os.appArch,
         l = P.remoteApp.getReleaseChannel(),
         c = (0, _.qf)();
@@ -131,18 +131,21 @@ if (null != P) {
             release_channel: l || "unknown",
             client_version: t,
             os_version: i,
-            os_arch: o,
+            os_arch: a,
             app_arch: s,
             system_locale: c,
             has_client_mods: (0, f.e)(),
             client_launch_id: g.s,
         }),
-        (null == (a = d().name) ? void 0 : a.toLocaleLowerCase()) === "electron" &&
+        (null == (o = d().name) ? void 0 : o.toLocaleLowerCase()) === "electron" &&
             ((r.browser_user_agent = d().ua || ""), (r.browser_version = d().version || "")),
         "linux" === n)
     ) {
         let e = P.crashReporter.getMetadata();
-        (r.window_manager = e.wm), (r.distro = e.distro);
+        (r.window_manager = e.wm),
+            (r.distro = e.distro),
+            (r.runtime_environment = e.runtime_environment),
+            (r.display_server = e.display_server);
     } else
         "darwin" === n
             ? (r.os_sdk_version = null == i ? void 0 : i.split(".")[0])
@@ -260,11 +263,11 @@ function Z() {
         },
     );
 }
-function V() {
+function F() {
     let e = {};
     return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, x(window.location.href), j()));
 }
-function F(e, t) {
+function V(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n["".concat(r).concat(t)] = e[r])), n;
 }
@@ -272,9 +275,9 @@ function H() {
     let e = p.K.get(A);
     null == e && ((e = B()), p.K.set(A, e));
     let t = p.K.get(C);
-    null == t && ((t = V()), p.K.set(C, t));
+    null == t && ((t = F()), p.K.set(C, t));
     let n = h.x.get(C);
-    return null == n && ((n = F(V(), "_current")), h.x.set(C, n)), I({}, e, Z(), t, n);
+    return null == n && ((n = V(F(), "_current")), h.x.set(C, n)), I({}, e, Z(), t, n);
 }
 function Y() {
     try {
@@ -287,11 +290,11 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("436507", 10);
+    let i = parseInt("437886", 10);
     isNaN(i) || (n.client_build_number = i);
-    let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
+    let o = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (
-        isNaN(a) || (n.native_build_number = a),
+        isNaN(o) || (n.native_build_number = o),
         (n.client_event_source = Y()),
         (n.has_client_mods = (0, f.e)()),
         (n.client_launch_id = g.s),
@@ -313,31 +316,31 @@ function z(e) {
 z(W());
 let q = (e) => {
     let { analyticEventConfigs: t, dispatcher: r, TRACK_ACTION_NAME: i } = e,
-        a = (0, m.$)(r, i);
+        o = (0, m.$)(r, i);
     return function (e, r) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
-        let o = null != r ? r : {},
+        let a = null != r ? r : {},
             l = t[e];
         if ("function" == typeof l) {
             var u;
-            l = null != (u = l(o)) ? u : null;
+            l = null != (u = l(a)) ? u : null;
         }
         if (null != l)
             if ("throttlePeriod" in l) {
-                let t = [e, ...l.throttleKeys(o)].join("_");
+                let t = [e, ...l.throttleKeys(a)].join("_");
                 if (K(t) || ("number" == typeof l.throttlePercent && Math.random() > l.throttlePercent))
                     return Promise.resolve();
                 if (l.deduplicate) {
                     let e = R[t];
-                    if (s()(e, o)) return Promise.resolve();
-                    R[t] = o;
+                    if (s()(e, a)) return Promise.resolve();
+                    R[t] = a;
                 }
                 N[t] = Date.now() + l.throttlePeriod;
             } else if ("throttlePercent" in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else c()(!1, "Unsupported analytics event config: ".concat(l));
-        return a(e, r, i);
+        return o(e, r, i);
     };
 };
 function X() {
