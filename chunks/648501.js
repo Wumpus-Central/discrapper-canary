@@ -22,8 +22,8 @@ var i = n(442837),
     j = n(687352),
     x = n(876548),
     C = n(25601),
-    E = n(981631),
-    S = n(490897),
+    S = n(981631),
+    E = n(490897),
     P = n(388032),
     I = n(885525);
 function N(e) {
@@ -31,8 +31,8 @@ function N(e) {
     let {
             channel: n,
             isChannelSelected: N,
-            isChannelCollapsed: Z,
-            voiceStates: w,
+            isChannelCollapsed: w,
+            voiceStates: Z,
             enableConnectedUserLimit: T,
             enableActivities: A,
             isSubscriptionGated: R,
@@ -44,21 +44,21 @@ function N(e) {
         U = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         G = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, a.ZP)(n),
-        F = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
+        F = (0, i.e7)([g.Z], () => !g.Z.can(S.Plq.CONNECT, n)),
         V = (0, s.P)(n),
         H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
         z = (0, p.PK)(n.id) && n.isGuildStageVoice(),
         W = (0, v.ZP)({
             channel: n,
             locked: F,
-            video: H || z,
+            video: (H || z) && null == V,
             selected: N,
         }),
         K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
         Y = (0, u.n2)(n.guild_id, n.id),
         q = (0, i.e7)([f.Z], () => {
             var e, t;
-            return null != (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.oNc.COMMUNITY)) && t;
+            return null != (t = null == (e = f.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(S.oNc.COMMUNITY)) && t;
         });
     if ((0, _.Z)(U))
         return (0, r.jsx)(C.Z, {
@@ -72,7 +72,7 @@ function N(e) {
             color: l.Z.unsafe_rawColors.BRAND_260.css,
             className: I.newChannel,
         });
-    if (!L && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
+    if (!L && k === E.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
@@ -84,14 +84,14 @@ function N(e) {
             color: "text-muted",
             children: (0, o.NGo)(Y),
         });
-    let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
+    let X = null != (t = null == Z ? void 0 : Z.length) ? t : 0;
     return null != T && T && W
         ? (0, r.jsx)(x.Z, {
               userCount: X,
               video: H || z,
               channel: n,
           })
-        : Z && (0, O.a)(w) && q
+        : w && (0, O.a)(Z) && q
           ? (0, r.jsx)(o.IGR, {
                 text: P.intl.string(P.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css,
