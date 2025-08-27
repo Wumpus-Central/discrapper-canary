@@ -1,18 +1,18 @@
 n.r(t),
     n.d(t, {
-        enrollAndStartVideoQuestWithErrorHandling: () => J,
-        loadVideoQuestModal: () => K,
-        maybeShowSurveyForQuest: () => W,
+        enrollAndStartVideoQuestWithErrorHandling: () => $,
+        loadVideoQuestModal: () => z,
+        maybeShowSurveyForQuest: () => K,
         navigateToQuestHome: () => Y,
-        openAppWithQuest: () => X,
+        openAppWithQuest: () => Q,
         openDisclosureModal: () => H,
-        openPushToPhoneModal: () => Q,
+        openPushToPhoneModal: () => J,
         openQuestInGameRewardModal: () => Z,
-        openQuestMinorEnrollmentBlockModal: () => F,
-        openQuestOrbsRewardModal: () => V,
+        openQuestMinorEnrollmentBlockModal: () => V,
+        openQuestOrbsRewardModal: () => F,
         openQuestsNitroRewardModal: () => B,
         openQuestsRewardCodeModal: () => G,
-        openVideoQuestModal: () => z,
+        openVideoQuestModal: () => q,
     });
 var r = n(951288);
 n(647438);
@@ -154,7 +154,7 @@ function Z(e, t, i) {
             );
     });
 }
-function V(e, t) {
+function F(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await n.e("20565").then(n.bind(n, 383294));
         return (n) =>
@@ -167,7 +167,7 @@ function V(e, t) {
             );
     });
 }
-function F(e, t, i) {
+function V(e, t, i) {
     (0, s.ZDy)(async () => {
         let { default: a } = await n.e("58641").then(n.bind(n, 828664));
         return (n) =>
@@ -213,10 +213,11 @@ function Y() {
     let n = null != t ? "#".concat(t) : "";
     u.Z.setState({ selectedTab: w.GlobalDiscoveryTab.QUESTS }), (0, c.xf)(), (0, f.uL)(P.Z5c.QUEST_HOME + n);
 }
-function W(e) {
+let W = 0.2;
+function K(e) {
     let t = (0, S.T)({ quest: e }),
         n = { location: R.dr.QUESTS_BAR };
-    if (!(0, T.j)(n)) return;
+    if (!(0, T.j)(n) || Math.random() > W) return;
     let r = (0, A.Z)({ entityName: e.config.messages.gameTitle });
     t.log("Showing survey ".concat(r.id)),
         (0, C.C)({
@@ -224,10 +225,10 @@ function W(e) {
             survey: r,
         });
 }
-function K() {
+function z() {
     return Promise.all([n.e("66816"), n.e("32249")]).then(n.bind(n, 536687));
 }
-function z(e) {
+function q(e) {
     var t;
     let {
         quest: n,
@@ -240,7 +241,7 @@ function z(e) {
     if ((0, g.HJ)(n)) {
         let e = n.config.features.includes(R.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE),
             { enabled: t } = v.S.getCurrentConfig({ location: R.dr.VIDEO_MODAL }, { autoTrackExposure: e });
-        if (t && e) return void Q(n);
+        if (t && e) return void J(n);
     }
     let d = (0, i.Z)();
     if (
@@ -268,7 +269,7 @@ function z(e) {
     }
     (0, s.ZDy)(
         async () => {
-            let { default: e } = await K();
+            let { default: e } = await z();
             return (t) =>
                 (0, r.jsx)(
                     e,
@@ -293,7 +294,7 @@ function z(e) {
         },
     );
 }
-function q(e) {
+function X(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
         r = "quest";
@@ -309,8 +310,8 @@ function q(e) {
     }
     return "discord://";
 }
-function X(e) {
-    let t = q(e),
+function Q(e) {
+    let t = X(e),
         n = (0, a.zS)(t);
     null != n &&
         p.default.track(P.rMx.DEEP_LINK_CLICKED, {
@@ -326,7 +327,7 @@ function X(e) {
                 });
         });
 }
-function Q(e) {
+function J(e) {
     (0, s.ZDy)(async () => {
         let { default: t } = await Promise.all([n.e("7784"), n.e("33628")]).then(n.bind(n, 570387));
         return (n) =>
@@ -339,7 +340,7 @@ function Q(e) {
             );
     });
 }
-async function J(e, t) {
+async function $(e, t) {
     let { type: n } = await (0, E.AH)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
@@ -349,7 +350,7 @@ async function J(e, t) {
     });
     switch (n) {
         case E.wF.SUCCESS:
-            z({
+            q({
                 quest: e,
                 questContent: t.questContent,
                 sourceQuestContent: t.sourceQuestContent,
