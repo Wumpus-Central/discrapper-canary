@@ -8,4 +8,7 @@ e.exports = {
     scrollerInner: "scrollerInner__36d07",
     scrollerAllowSticky: "scrollerAllowSticky__36d07",
     navigationDescription: "navigationDescription__36d07",
+    gradientDefault: "gradientDefault__36d07",
+    typingGradientNotAtBottom: "typingGradientNotAtBottom__36d07",
+    typingGradientAtBottom: "typingGradientAtBottom__36d07",
 };
