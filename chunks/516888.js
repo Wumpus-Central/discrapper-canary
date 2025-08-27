@@ -1,12 +1,12 @@
 n.d(t, { f: () => h }), n(953529), n(415506);
 var r = n(512722),
     i = n.n(r),
-    a = n(442837),
-    o = n(579092),
+    o = n(442837),
+    a = n(579092),
     s = n(570140),
     l = n(311929),
     c = n(823379),
-    u = n(544407);
+    u = n(854586);
 function d(e, t, n) {
     return (
         t in e
@@ -20,10 +20,10 @@ function d(e, t, n) {
         e
     );
 }
-let f = new o.Yd("KvStore"),
+let f = new a.Yd("KvStore"),
     _ = Object.prototype.hasOwnProperty,
     p = Symbol("version");
-class h extends a.yh {
+class h extends o.yh {
     getMode() {
         return this.mode;
     }
@@ -49,18 +49,17 @@ class h extends a.yh {
                             });
                     }),
                     this.addChangeListener(() => {
-                        i()(
-                            null != this.shadowState,
-                            "Shadow state must be set in dual-read mode before running validation.",
-                        ),
-                            (0, u.t)(
-                                this.getName(),
-                                {
-                                    root: this.root,
-                                    derived: this.derived,
-                                },
-                                this.shadowState,
-                            );
+                        let e = this.shadowState;
+                        i()(null != e, "Shadow state must be set in dual-read mode before running validation."),
+                            (0, u.tL)(this.getName(), "Kv", (t) => {
+                                t(
+                                    {
+                                        root: this.root,
+                                        derived: this.derived,
+                                    },
+                                    e,
+                                );
+                            });
                     });
                 break;
             case "libdiscore":
@@ -129,11 +128,11 @@ class h extends a.yh {
                     },
                 };
             for (let i in e) {
-                let a = e[i],
-                    o = (e) => {
-                        if (((t = !1), a(e, r), !t)) return !1;
+                let o = e[i],
+                    a = (e) => {
+                        if (((t = !1), o(e, r), !t)) return !1;
                     };
-                n[i] = o;
+                n[i] = a;
             }
         }
         super(s.Z, n),
