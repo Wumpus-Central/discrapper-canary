@@ -1,11 +1,12 @@
 n.d(t, {
-    IS: () => d,
-    MH: () => p,
-    UE: () => _,
+    IS: () => f,
+    MH: () => h,
+    UE: () => p,
     as: () => l,
-    fP: () => u,
+    fP: () => d,
+    j7: () => u,
     m1: () => c,
-    wz: () => f,
+    wz: () => _,
 });
 var r = n(772848),
     i = n(146282),
@@ -48,10 +49,13 @@ var r = n(772848),
             (e.QuestBar = "quest_bar"),
             e
         );
+    })({}),
+    u = (function (e) {
+        return (e.FullProfile = "full_profile"), (e.MiniProfile = "mini_profile"), e;
     })({});
-let u = () => (0, r.Z)(),
-    d = (e) => {
-        let { viewId: t, source: n, gameName: r, applicationId: l, authorId: c } = e;
+let d = () => (0, r.Z)(),
+    f = (e) => {
+        let { viewId: t, source: n, gameName: r, applicationId: l, authorId: c, profileType: u } = e;
         return (
             a.default.track(o.rMx.GAME_PROFILE_OPEN, {
                 view_id: t,
@@ -60,11 +64,12 @@ let u = () => (0, r.Z)(),
                 application_id: l,
                 author_id: c,
                 request_id: i.Z.getFeedRequestId(s.YN.GLOBAL_FEED),
+                profile_type: u,
             }),
             t
         );
     },
-    f = (e) => {
+    _ = (e) => {
         let {
             viewId: t,
             gameName: n,
@@ -85,7 +90,7 @@ let u = () => (0, r.Z)(),
             official_guild_id: d,
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let {
             gameName: t,
             applicationId: n,
@@ -105,7 +110,7 @@ let u = () => (0, r.Z)(),
             official_guild_id: c,
         });
     },
-    p = (e) => {
+    h = (e) => {
         let {
             viewId: t,
             applicationId: n,

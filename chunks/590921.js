@@ -82,6 +82,7 @@ var a = (function (e) {
             (e.COMMAND_SUGGESTION = "COMMAND_SUGGESTION"),
             (e.CHOICE = "CHOICE"),
             (e.EMOJI_UPSELL = "EMOJI_UPSELL"),
+            (e.GAME_MENTION = "GAME_MENTION"),
             e
         );
     })({}),

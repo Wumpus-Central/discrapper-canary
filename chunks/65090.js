@@ -148,16 +148,17 @@ let E = {
             } = e,
             s = t[i],
             l = n[i - t.length],
-            c = r[i - t.length - n.length];
+            c = r[i - t.length - n.length],
+            d = !1;
         return (
             null != s
                 ? a.insertText(_(s.user, o, a.hidePersonalInformation), p(s.user))
                 : null != l
                   ? null != l.inlineAutocompleteType
-                      ? a.insertAutocompleteInput(l.inlineAutocompleteType)
+                      ? (a.insertAutocompleteInput(l.inlineAutocompleteType), (d = !0))
                       : a.insertText(h(l))
                   : null != c && a.insertText(m(c), g(c)),
-            { type: u.z2.MENTION }
+            { type: d ? u.z2.GAME_MENTION : u.z2.MENTION }
         );
     },
 };

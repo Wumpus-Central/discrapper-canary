@@ -77,8 +77,8 @@ function d(e, t) {
     return i;
 }
 function f(e) {
-    var { applicationId: t, name: n, position: o = "right", onClose: l, targetElementRef: d } = e,
-        f = u(e, ["applicationId", "name", "position", "onClose", "targetElementRef"]);
+    var { applicationId: t, name: n, position: o = "right", onClose: l, targetElementRef: d, source: f } = e,
+        _ = u(e, ["applicationId", "name", "position", "onClose", "targetElementRef", "source"]);
     return (0, r.jsx)(
         i.yRy,
         s(
@@ -95,10 +95,11 @@ function f(e) {
                             },
                             applicationId: t,
                             name: n,
+                            source: f,
                         }),
                     ),
             },
-            f,
+            _,
         ),
     );
 }

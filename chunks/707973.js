@@ -65,6 +65,12 @@ let p = {
                 options: r,
             } = e,
             i = t[n];
-        return r.replaceInlineInput("gameMentionInput", f(i), _(i)), { type: c.z2.MENTION };
+        return (
+            r.replaceInlineInput("gameMentionInput", f(i), _(i)),
+            {
+                type: c.z2.GAME_MENTION,
+                metadata: { applicationId: i.id },
+            }
+        );
     },
 };

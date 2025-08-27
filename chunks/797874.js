@@ -119,6 +119,7 @@ let T = function (e) {
     return (0, r.jsx)(f.Z, {
         applicationId: t,
         targetElementRef: y,
+        source: u.m1.GameMention,
         children: (e) => {
             var n;
             return (0, r.jsx)(l.DY3, {

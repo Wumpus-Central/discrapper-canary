@@ -16,7 +16,7 @@ let v = (0, a.Z)(
     (0, c.Z)(
         function (t) {
             let { game: e, guildId: n, context: c, onSelect: a } = t,
-                l = (0, f.Z)(e.id),
+                l = (0, f.Z)(e.id, e.name),
                 d = (0, b.Z)(e),
                 v = (0, s.Z)(e, n, c),
                 Z = (0, u.Z)({

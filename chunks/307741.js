@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => T });
+n.d(t, { ZP: () => S });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,16 +6,17 @@ var r = n(951288),
     s = n(793030),
     l = n(442837),
     c = n(481060),
-    u = n(406763),
-    d = n(893642),
-    f = n(768581),
-    _ = n(814225),
-    p = n(810568),
-    h = n(168524),
-    m = n(715318),
-    g = n(388032),
-    E = n(488463);
-function b(e) {
+    u = n(26732),
+    d = n(406763),
+    f = n(893642),
+    _ = n(768581),
+    p = n(814225),
+    h = n(810568),
+    m = n(168524),
+    g = n(715318),
+    E = n(388032),
+    b = n(488463);
+function y(e) {
     let { detectedGame: t } = e,
         n = i.useMemo(() => {
             if (null == t) return "";
@@ -31,41 +32,41 @@ function b(e) {
             return "";
         }, [t]);
     return (0, r.jsx)("div", {
-        className: E.gameArtHero,
+        className: b.gameArtHero,
         style:
             null != n && n.length > 0
                 ? { backgroundImage: 'url("'.concat(n, '")') }
                 : { backgroundColor: c.TVs.colors.BG_BRAND.css },
     });
 }
-function y(e) {
+function O(e) {
     let { application: t } = e,
-        n = null == t ? void 0 : t.getIconURL(160, f.$k ? "webp" : "png");
+        n = null == t ? void 0 : t.getIconURL(160, _.$k ? "webp" : "png");
     return (0, r.jsx)("div", {
-        className: E.iconContainer,
+        className: b.iconContainer,
         children:
             null != n && n.length > 0
                 ? (0, r.jsx)("img", {
-                      className: E.gameIcon,
+                      className: b.gameIcon,
                       src: n,
                       height: 80,
-                      alt: g.intl.formatToPlainString(g.t["nh+jWl"], { game: t.name }),
+                      alt: E.intl.formatToPlainString(E.t["nh+jWl"], { game: t.name }),
                   })
                 : (0, r.jsx)(c.IMN, {
                       size: "lg",
-                      className: E.gameIconFallback,
+                      className: b.gameIconFallback,
                       color: c.TVs.colors.BACKGROUND_SURFACE_HIGH,
                       style: { backgroundColor: c.TVs.colors.BG_BRAND.css },
                   }),
     });
 }
-function O(e) {
+function v(e) {
     var t;
     let { application: n, detectedGame: a } = e,
-        o = i.useMemo(() => (null == a ? void 0 : a.genres.map(_.P3).join(", ")), [a]),
+        o = i.useMemo(() => (null == a ? void 0 : a.genres.map(p.P3).join(", ")), [a]),
         l = null != (t = a.name) ? t : null == n ? void 0 : n.name;
     return (0, r.jsxs)("div", {
-        className: E.headingContainer,
+        className: b.headingContainer,
         children: [
             (0, r.jsx)(s.X6, {
                 variant: "heading-lg/bold",
@@ -80,14 +81,14 @@ function O(e) {
         ],
     });
 }
-function v(e) {
+function I(e) {
     var t;
     let { detectedGame: n, openFullGameProfile: i } = e;
     return (0, r.jsxs)("div", {
-        className: E.bodyContainer,
+        className: b.bodyContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: E.summaryContainer,
+                className: b.summaryContainer,
                 children: [
                     (0, r.jsx)(s.xv, {
                         variant: "text-sm/medium",
@@ -96,12 +97,12 @@ function v(e) {
                         children: null != (t = n.summaryLocalized) ? t : n.summary,
                     }),
                     (0, r.jsx)(c.P3F, {
-                        className: E.clickable,
+                        className: b.clickable,
                         onClick: i,
                         children: (0, r.jsx)(s.xv, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: g.intl.string(g.t.lBeKY2),
+                            children: E.intl.string(E.t.lBeKY2),
                         }),
                     }),
                 ],
@@ -116,13 +117,13 @@ function v(e) {
         ],
     });
 }
-function I(e) {
+function T(e) {
     let { application: t } = e,
-        n = i.useMemo(() => (0, p.fP)(), []),
-        a = (0, l.e7)([d.Z], () => d.Z.getMute(t.id)),
-        o = i.useMemo(() => (a ? g.intl.string(g.t.tpvw4e) : g.intl.string(g.t["6EwEws"])), [a]);
+        n = i.useMemo(() => (0, h.fP)(), []),
+        a = (0, l.e7)([f.Z], () => f.Z.getMute(t.id)),
+        o = i.useMemo(() => (a ? E.intl.string(E.t.tpvw4e) : E.intl.string(E.t["6EwEws"])), [a]);
     return (0, r.jsxs)("div", {
-        className: E.actionButtonsContainer,
+        className: b.actionButtonsContainer,
         children: [
             (0, r.jsx)(c.DY3, {
                 element: "span",
@@ -130,9 +131,17 @@ function I(e) {
                 "aria-label": o,
                 delay: 750,
                 children: (0, r.jsx)(c.P3F, {
-                    className: E.actionButton,
+                    className: b.actionButton,
                     "aria-label": o,
-                    onClick: () => (0, u.X)(t.id, !a),
+                    onClick: () => {
+                        (0, u.Eq)({
+                            gameName: t.name,
+                            applicationId: t.id,
+                            label: a ? u.$_.UNMUTED : u.$_.MUTED,
+                            source: u.UE.MINI_GAME_PROFILE_BELL_ICON,
+                        }),
+                            (0, d.X)(t.id, !a);
+                    },
                     children: a
                         ? (0, r.jsx)(c.owu, {
                               size: "xs",
@@ -144,21 +153,21 @@ function I(e) {
                           }),
                 }),
             }),
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(g.Z, {
                 applicationId: t.id,
                 viewId: n,
-                className: E.actionButton,
+                className: b.actionButton,
             }),
         ],
     });
 }
-function T(e) {
+function S(e) {
     let { application: t, detectedGame: n, className: a, onClose: s } = e,
-        l = (0, h.Z)(
+        l = (0, m.Z)(
             {
                 location: "MiniGameProfile",
                 applicationId: t.id,
-                source: p.m1.MiniGameProfile,
+                source: h.m1.MiniGameProfile,
                 trackEntryPointImpression: !0,
                 sourceUserId: void 0,
             },
@@ -171,16 +180,16 @@ function T(e) {
             [s, l],
         );
     return (0, r.jsxs)("div", {
-        className: o()(E.container, a),
+        className: o()(b.container, a),
         children: [
-            (0, r.jsx)(b, { detectedGame: n }),
-            (0, r.jsx)(I, { application: t }),
-            (0, r.jsx)(y, { application: t }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(y, { detectedGame: n }),
+            (0, r.jsx)(T, { application: t }),
+            (0, r.jsx)(O, { application: t }),
+            (0, r.jsx)(v, {
                 application: t,
                 detectedGame: n,
             }),
-            (0, r.jsx)(v, {
+            (0, r.jsx)(I, {
                 application: t,
                 detectedGame: n,
                 openFullGameProfile: c,

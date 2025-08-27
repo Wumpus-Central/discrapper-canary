@@ -345,6 +345,7 @@ let K = (e) => {
             applicationId: r,
             gameName: null != M ? M : "",
             authorId: s,
+            profileType: N.j7.FullProfile,
         }),
             (0, v.Jn)();
     }),
