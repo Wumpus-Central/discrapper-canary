@@ -5074,6 +5074,7 @@ var nb = (function (e) {
             (e.CDM_READY_COMPLETE = "cdm_ready_complete"),
             (e.DESKTOP_TTI = "desktop_tti"),
             (e.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY = "desktop_perf_attributed_module_memory"),
+            (e.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK = "desktop_perf_attributed_module_memory_callstack"),
             (e.RTC_PANEL_VIEWED = "rtc_panel_viewed"),
             (e.E2EE_USER_VERIFICATION_VIEWED = "e2ee_user_verification_viewed"),
             (e.E2EE_USER_VERIFIED = "e2ee_user_verified"),

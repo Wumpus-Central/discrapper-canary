@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(579806),
     i = n(710845),
-    a = n(77450),
-    o = n(998502);
+    o = n(77450),
+    a = n(998502);
 function s(e, t, n) {
     return (
         t in e
@@ -17,7 +17,7 @@ function s(e, t, n) {
     );
 }
 let l = new i.Z("ProcessUtilsElectron");
-class c extends a.h {
+class c extends o.h {
     setupReportingTimer() {
         var e, t;
         let n = null === r.Z || void 0 === r.Z || null == (e = r.Z.processUtils) ? void 0 : e.setMemoryInformation;
@@ -29,10 +29,10 @@ class c extends a.h {
             l.error("usedJSHeapSize is not available."),
             setInterval(() => {
                 var e, t, r;
-                let a = null != (t = null == (e = performance.memory) ? void 0 : e.usedJSHeapSize) ? t : 0;
+                let o = null != (t = null == (e = performance.memory) ? void 0 : e.usedJSHeapSize) ? t : 0;
                 n({
                     memoryUsageKB: null != (r = this.lastMemoryUsageKB) ? r : 0,
-                    usedJSHeapSizeKB: i(a),
+                    usedJSHeapSizeKB: i(o),
                 });
             }, 10000);
     }
@@ -63,7 +63,7 @@ class c extends a.h {
     }
     static getCurrentMemoryUsageKBCore() {
         try {
-            let e = o.ZP.getDiscordMemoryUsage();
+            let e = a.ZP.getDiscordMemoryUsage();
             if (null == e) return 0;
             let t = Object.values(e).reduce((e, t) => e + t, 0);
             return Math.ceil(t / 1024);
@@ -72,11 +72,11 @@ class c extends a.h {
         }
     }
     getMemoryUsageDetails() {
-        return o.ZP.getDiscordMemoryUsage();
+        return a.ZP.getDiscordMemoryUsage();
     }
     getMemoryUsageElectronRenderer() {
         try {
-            return o.ZP.getDiscordMemoryUsageElectronRenderer();
+            return a.ZP.getDiscordMemoryUsageElectronRenderer();
         } catch (e) {
             return null;
         }
@@ -89,20 +89,42 @@ class c extends a.h {
     }
     getMemoryUsageElectronProcessTypeDetails() {
         try {
-            return o.ZP.getDiscordMemoryUsageElectronProcessTypeDetails();
+            return a.ZP.getDiscordMemoryUsageElectronProcessTypeDetails();
         } catch (e) {
             return null;
         }
     }
     enablePerfMemoryHooks(e) {
-        return o.ZP.enablePerfMemoryHooks(e);
+        try {
+            return a.ZP.enablePerfMemoryHooks(e);
+        } catch (e) {
+            return null;
+        }
     }
     disablePerfMemoryHooks() {
-        return o.ZP.disablePerfMemoryHooks();
+        try {
+            return a.ZP.disablePerfMemoryHooks();
+        } catch (e) {
+            return null;
+        }
     }
     getPerfAttributedMemory() {
         try {
-            return o.ZP.getPerfAttributedMemory();
+            return a.ZP.getPerfAttributedMemory();
+        } catch (e) {
+            return null;
+        }
+    }
+    getPerfAttributedMemoryCallstacks(e) {
+        try {
+            return a.ZP.getPerfAttributedMemoryCallstacks(e);
+        } catch (e) {
+            return null;
+        }
+    }
+    getPerfAttributedMemoryStats() {
+        try {
+            return a.ZP.getPerfAttributedMemoryStats();
         } catch (e) {
             return null;
         }

@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => q,
-    jK: () => F,
+    jK: () => V,
     tS: () => H,
     xG: () => W,
 }),
@@ -12,8 +12,8 @@ n.d(t, {
     n(539854);
 var r,
     i,
-    a,
     o,
+    a,
     s = n(512722),
     l = n.n(s),
     c = n(719711),
@@ -93,7 +93,7 @@ null != I &&
         .split(".")
         .map((e) => parseInt(e))),
     (P = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
-    (R = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
+    (R = null == (o = (a = I.remoteApp).getBuildNumber) ? void 0 : o.call(a)));
 let D = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -130,10 +130,10 @@ async function Z(e) {
     let r = await n.arrayBuffer();
     return l()(null != r, "Data is null"), r;
 }
-function V(e) {
+function F(e) {
     return Z(e);
 }
-var F = (function (e) {
+var V = (function (e) {
         return (
             (e[(e.Camera = 0)] = "Camera"),
             (e[(e.Microphone = 1)] = "Microphone"),
@@ -147,7 +147,7 @@ var F = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
 function Y(e) {
-    var t, n, r, i, a, o, s, l, c;
+    var t, n, r, i, o, a, s, l, c;
     return {
         id: w[null != (t = e.id) ? t : ""],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : "", 10),
@@ -156,7 +156,7 @@ function Y(e) {
         processName: null != (i = e.name) ? i : "",
         hidden: e.hidden,
         elevated: e.elevated,
-        sandboxed: null != (a = e.sandboxed) && a,
+        sandboxed: null != (o = e.sandboxed) && o,
         lastFocused: e.lastFocused,
         exePath: e.exePath,
         exeName: e.exeName,
@@ -164,7 +164,7 @@ function Y(e) {
         distributor: e.distributor,
         sku: e.sku,
         pid: e.pid,
-        pidPath: null != (o = e.pidPath) ? o : [],
+        pidPath: null != (a = e.pidPath) ? a : [],
         gameMetadata: e.gameMetadata,
         windowHandle: null != (s = e.windowHandle) ? s : null,
         fullscreenType: null != (l = e.fullscreenType) ? l : _.Jx.UNKNOWN,
@@ -172,15 +172,15 @@ function Y(e) {
     };
 }
 function W(e, t) {
-    var n, r, i, a;
+    var n, r, i, o;
     if (null != t && A(t)) {
-        let e = null == (a = t.split("/")[1]) ? void 0 : a.toLowerCase();
+        let e = null == (o = t.split("/")[1]) ? void 0 : o.toLowerCase();
         if ("jpeg" === e) return "jpg";
         if (null != e) return e;
     }
-    let o = m.Z.toURLSafe(e);
-    if (null == o) return;
-    let s = null == (i = o.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
+    let a = m.Z.toURLSafe(e);
+    if (null == a) return;
+    let s = null == (i = a.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
     return null != s && s.length <= C ? s : void 0;
 }
 function K(e) {
@@ -396,7 +396,7 @@ let z = {
         async copyImage(e, t) {
             l()(h.isPlatformEmbedded, "Copy image method called outside native app"),
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
-            let n = await V(e),
+            let n = await F(e),
                 r = W(e, t),
                 i = null != r && T.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
@@ -411,13 +411,13 @@ let z = {
             return null == n || S.has(n);
         },
         async saveImage(e, t, n) {
-            var r, i, a;
+            var r, i, o;
             l()(h.isPlatformEmbedded, "Save image method called outside native app");
-            let o = m.Z.toURLSafe(e);
-            if (null == o) return;
-            let s = null != (r = o.pathname.split("/").pop()) ? r : "unknown";
+            let a = m.Z.toURLSafe(e);
+            if (null == a) return;
+            let s = null != (r = a.pathname.split("/").pop()) ? r : "unknown";
             s = B(s);
-            let c = o.searchParams.get("format");
+            let c = a.searchParams.get("format");
             if (null != c) {
                 let e = c.replace(U, "").toLowerCase();
                 if (e.length > 0) {
@@ -425,11 +425,11 @@ let z = {
                     s = "".concat(t, ".").concat(e);
                 }
             } else if (!s.includes(".")) {
-                let r = null != (a = null != (i = W(e, t)) ? i : n) ? a : "png";
+                let r = null != (o = null != (i = W(e, t)) ? i : n) ? o : "png";
                 s = "".concat(s, ".").concat(r);
             }
             let u = f.K.get(L),
-                d = await V(e),
+                d = await F(e),
                 _ = E.from(d),
                 p = await I.fileManager.saveWithDialog(_, s, null != u ? u : void 0);
             null != p && f.K.set(L, p);
@@ -441,9 +441,9 @@ let z = {
             if (null == r) return null;
             let i = null != (n = null != t ? t : r.pathname.split("/").pop()) ? n : "unknown";
             null == t && (i = B(i));
-            let a = await Z(e),
-                o = E.from(a);
-            return I.fileManager.saveWithDialog(o, i);
+            let o = await Z(e),
+                a = E.from(o);
+            return I.fileManager.saveWithDialog(a, i);
         },
         async downloadVoiceFilterFile(e, t, n) {
             l()(h.isPlatformEmbedded, "Download voice filter file method called outside native app");
@@ -662,6 +662,14 @@ let z = {
             let { getPerfAttributedMemory: e } = this.getDiscordUtils();
             return null == e ? void 0 : e();
         },
+        getPerfAttributedMemoryCallstacks(e) {
+            let { getPerfAttributedMemoryCallstacks: t } = this.getDiscordUtils();
+            return null == t ? void 0 : t(e);
+        },
+        getPerfAttributedMemoryStats() {
+            let { getPerfAttributedMemoryStats: e } = this.getDiscordUtils();
+            return null == e ? void 0 : e();
+        },
         showOpenDialog: (e) => I.fileManager.showOpenDialog({ properties: e }),
         flushStorageData: () =>
             h.isPlatformEmbedded
@@ -702,8 +710,8 @@ let z = {
             if (null == I.http) return Promise.reject(Error("HTTP module not available"));
             let {
                     method: i,
-                    maxBps: a,
-                    token: o,
+                    maxBps: o,
+                    token: a,
                     chunkInterval: s,
                     contentType: l,
                 } = y(
@@ -716,7 +724,7 @@ let z = {
                 ),
                 c = t;
             "application/json" === l && (c = JSON.stringify(t));
-            let d = (s / 1000) * a,
+            let d = (s / 1000) * o,
                 f = Math.ceil(c.length / d),
                 _ = Array(f);
             for (let e = 0; e < f; e++) {
@@ -732,7 +740,7 @@ let z = {
                             method: i,
                             chunkInterval: s,
                             contentType: l,
-                            token: o,
+                            token: a,
                         },
                         (n, r) => (null != n ? t(n) : r.status >= 400 ? t(Error(r.body)) : void e(r)),
                     );
@@ -779,8 +787,8 @@ let z = {
         GetWindowFullscreenTypeByPid(e, t, n) {
             var r;
             let { getWindowFullscreenTypeByPid: i } = this.getDiscordUtils(),
-                a = 0 !== e && null != i && null != t ? i(e, t) : null;
-            return -1 === a && (a = null), null != (r = null != a ? a : n) ? r : _.Jx.UNKNOWN;
+                o = 0 !== e && null != i && null != t ? i(e, t) : null;
+            return -1 === o && (o = null), null != (r = null != o ? o : n) ? r : _.Jx.UNKNOWN;
         },
         GetWindowFullscreenTypeExtraByPid(e, t) {
             let { getWindowFullscreenTypeExtraByPid: n } = this.getDiscordUtils();
@@ -812,12 +820,12 @@ let z = {
         },
         isModuleVersionAtLeast(e, t) {
             var n, r, i;
-            let a = [...(null != N ? N : [0, 0, 0])];
-            a.push(null != (r = null == (n = this.moduleVersions) ? void 0 : n[e]) ? r : 0);
-            let o = null != (i = t[this.releaseChannel]) ? i : t.stable;
-            for (let [e, t] of a.entries())
-                if (t > o[e]) break;
-                else if (t < o[e]) return !1;
+            let o = [...(null != N ? N : [0, 0, 0])];
+            o.push(null != (r = null == (n = this.moduleVersions) ? void 0 : n[e]) ? r : 0);
+            let a = null != (i = t[this.releaseChannel]) ? i : t.stable;
+            for (let [e, t] of o.entries())
+                if (t > a[e]) break;
+                else if (t < a[e]) return !1;
             return !0;
         },
         fetchRiotGamesLiveClientData: (e, t) =>
