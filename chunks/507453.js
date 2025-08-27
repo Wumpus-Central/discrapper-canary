@@ -32,6 +32,7 @@ let o = {
             ? (0, l.jsx)(r.mzw, {
                   children: (0, l.jsxs)(r.hE2, {
                       fullWidth: !0,
+                      direction: "vertical",
                       children: [
                           i,
                           c &&
