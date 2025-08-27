@@ -16,7 +16,7 @@ var r = n(951288),
     l = n(607070),
     c = n(981631),
     u = n(842926);
-let d = RegExp("\\p{Emoji_Presentation}", "gu");
+let d = RegExp("\\p{Extended_Pictographic}", "gu");
 function f(e) {
     var t, n, r;
     let { colorStrings: i, useReducedMotion: a, roleStyle: s, includeConvenienceGlow: l, animateGradient: d } = e,
