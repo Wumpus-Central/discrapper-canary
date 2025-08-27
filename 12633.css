@@ -27663,35 +27663,7 @@ div.modalHeader_c28af8 {
     margin-top: 24px
 }
 
-.headerImage__8da80 {
-    left: 140px;
-    position: absolute;
-    top: -68px;
-    width: 180px
-}
-
-.header__8da80 {
-    align-items: center;
-    display: flex;
-    flex-direction: column
-}
-
-.title__8da80 {
-    padding-top: 59px;
-    text-align: center
-}
-
-.modalCloseButton__8da80 {
-    position: absolute;
-    right: 16px;
-    top: 16px
-}
-
-.content__8da80 {
-    padding-bottom: 16px
-}
-
-.tooltip__8da80 {
+.helper__8da80 {
     align-items: center;
     background: var(--background-base-lowest);
     border: 1px solid hsla(0, 0%, 100%, .04);
@@ -27703,20 +27675,8 @@ div.modalHeader_c28af8 {
 }
 
 .infoFilledIcon__8da80 {
+    color: var(--header-secondary);
     margin-right: 8px
-}
-
-.infoFilledIcon__8da80,
-.tooltipText__8da80 {
-    color: var(--header-secondary)
-}
-
-.tooltipText__8da80 {
-    text-align: center
-}
-
-.modalFooter__8da80 {
-    display: flex
 }
 
 .wrapper__4413f {
