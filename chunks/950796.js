@@ -1,114 +1,124 @@
 n.d(t, {
-    Dg: () => I,
-    On: () => h,
-    TF: () => v,
-    Y7: () => m,
+    Dg: () => A,
+    On: () => E,
+    TF: () => S,
+    Y7: () => b,
 });
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
-    l = n(428548),
-    c = n(679219),
-    u = n(939039),
-    d = n(358085),
-    f = n(998502),
-    _ = n(388032),
-    p = n(107009);
-function h(e) {
+    l = n(51596),
+    c = n(823385),
+    u = n(428548),
+    d = n(679219),
+    f = n(939039),
+    _ = n(358085),
+    p = n(998502),
+    h = n(388032),
+    m = n(107009);
+let g = 1000;
+function E(e) {
     let { isPopoutWindow: t, isSearchDesktopTopLevelEnabled: n } = e;
     return t ? "refresh-title-bar-small" : n ? "refresh-title-bar-large" : void 0;
 }
-function m(e) {
+function b(e) {
     let { isPopoutWindow: t, isSearchDesktopTopLevelEnabled: n } = e;
     return t ? 16 : n ? 32 : 24;
 }
-let g = (e) => f.ZP.close(e),
-    E = (e) => f.ZP.minimize(e),
-    b = (e) => f.ZP.maximize(e);
-function y(e) {
+let y = (e) => p.ZP.close(e),
+    O = (e) => p.ZP.minimize(e),
+    v = (e) => p.ZP.maximize(e);
+function I(e) {
     e.stopPropagation();
 }
-function O(e) {
+function T(e) {
     let { windowKey: t, showDivider: n } = e,
         i = (0, r.jsx)(s.P3F, {
-            className: a()(p.winButton, p.winButtonClose),
-            onClick: () => g(t),
-            "aria-label": _.intl.string(_.t.ZdNUj4),
-            tabIndex: -1,
-            children: (0, r.jsx)(l.Z, {}),
-        }),
-        o = (0, r.jsx)(s.P3F, {
-            className: a()(p.winButton, p.winButtonMinMax),
-            onClick: () => b(t),
-            "aria-label": _.intl.string(_.t.G1u0hI),
-            tabIndex: -1,
-            children: (0, r.jsx)(c.Z, {}),
-        }),
-        d = (0, r.jsx)(s.P3F, {
-            className: a()(p.winButton, p.winButtonMinMax),
-            onClick: () => E(t),
-            "aria-label": _.intl.string(_.t.CxOC4e),
+            className: o()(m.winButton, m.winButtonClose),
+            onClick: () => y(t),
+            "aria-label": h.intl.string(h.t.ZdNUj4),
             tabIndex: -1,
             children: (0, r.jsx)(u.Z, {}),
+        }),
+        a = (0, r.jsx)(s.P3F, {
+            className: o()(m.winButton, m.winButtonMinMax),
+            onClick: () => v(t),
+            "aria-label": h.intl.string(h.t.G1u0hI),
+            tabIndex: -1,
+            children: (0, r.jsx)(d.Z, {}),
+        }),
+        l = (0, r.jsx)(s.P3F, {
+            className: o()(m.winButton, m.winButtonMinMax),
+            onClick: () => O(t),
+            "aria-label": h.intl.string(h.t.CxOC4e),
+            tabIndex: -1,
+            children: (0, r.jsx)(f.Z, {}),
         });
     return (0, r.jsxs)("div", {
-        className: a()(p.winButtons, { [p.winButtonsWithDivider]: n }),
-        children: [d, o, i],
+        className: o()(m.winButtons, { [m.winButtonsWithDivider]: n }),
+        children: [l, a, i],
     });
 }
-function v(e) {
-    let { leading: t, title: n, trailing: o, windowKey: s, className: l } = e,
-        c = (0, d.getPlatform)(),
-        u = i.useCallback(() => b(s), [s]);
+function S(e) {
+    let { leading: t, title: n, trailing: a, windowKey: s, className: l } = e,
+        c = (0, _.getPlatform)(),
+        u = i.useCallback(() => v(s), [s]);
     return (0, r.jsxs)("div", {
-        className: a()(p.bar, l),
+        className: o()(m.bar, l),
         onDoubleClick: u,
         children: [
             (0, r.jsx)("div", {
-                className: p.leading,
-                onDoubleClick: y,
+                className: m.leading,
+                onDoubleClick: I,
                 children: t,
             }),
             (0, r.jsx)("div", {
-                className: p.title,
+                className: m.title,
                 children: n,
             }),
             (0, r.jsxs)("div", {
-                className: p.trailing,
-                onDoubleClick: y,
+                className: m.trailing,
+                onDoubleClick: I,
                 children: [
-                    o,
-                    c === d.PlatformTypes.WINDOWS &&
-                        (0, r.jsx)(O, {
+                    a,
+                    c === _.PlatformTypes.WINDOWS &&
+                        (0, r.jsx)(T, {
                             windowKey: s,
-                            showDivider: null != o,
+                            showDivider: null != a,
                         }),
                 ],
             }),
         ],
     });
 }
-function I(e) {
-    let { fixed: t = !1, show: n, windowKey: o } = e,
-        s = (0, d.getPlatform)(),
-        l = i.useCallback(() => b(o), [o]),
-        c = s === d.PlatformTypes.WINDOWS;
-    return s === d.PlatformTypes.WEB
+function A(e) {
+    let { fixed: t = !1, show: n, windowKey: a } = e,
+        s = (0, _.getPlatform)(),
+        u = i.useCallback(() => {
+            c.Z.isOpen() && (0, l.Cp)();
+        }, []),
+        d = i.useCallback(() => {
+            let e = c.Z.getLastShowTimestamp();
+            (null != e && Date.now() - e < g) || v(a);
+        }, [a]),
+        f = s === _.PlatformTypes.WINDOWS;
+    return s === _.PlatformTypes.WEB
         ? null
         : (0, r.jsx)("div", {
-              className: a()(p.bar, p.systemBar, {
-                  [p.fixed]: t,
-                  [p.show]: n,
+              className: o()(m.bar, m.systemBar, {
+                  [m.fixed]: t,
+                  [m.show]: n,
               }),
-              onDoubleClick: l,
+              onClick: u,
+              onDoubleClick: d,
               children:
-                  c &&
+                  f &&
                   (0, r.jsx)("div", {
-                      className: p.trailing,
-                      onDoubleClick: y,
-                      children: (0, r.jsx)(O, { windowKey: o }),
+                      className: m.trailing,
+                      onDoubleClick: I,
+                      children: (0, r.jsx)(T, { windowKey: a }),
                   }),
           });
 }
