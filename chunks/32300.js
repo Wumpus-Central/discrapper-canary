@@ -1,26 +1,28 @@
 n.d(t, {
-    J0: () => E,
-    NW: () => l,
-    OV: () => a,
-    Rb: () => s,
-    Se: () => _,
-    XE: () => c,
-    YB: () => m,
-    Yo: () => u,
-    dj: () => d,
-    hS: () => p,
-    mB: () => h,
-    o4: () => o,
-    qA: () => g,
-    td: () => f,
+    J0: () => b,
+    NW: () => c,
+    OV: () => o,
+    Rb: () => l,
+    Se: () => p,
+    XE: () => u,
+    YB: () => g,
+    Yo: () => d,
+    dj: () => f,
+    hS: () => h,
+    mB: () => m,
+    o4: () => s,
+    qA: () => E,
+    tU: () => O,
+    td: () => _,
 });
 var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+    i = n(427164),
+    a = n(987338);
+let o = (0, r.B)({
     kind: "user",
     id: "2024-10_overlay_v3",
     label: "Overlay V3 Shared Context OOP",
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: {
         overlayV3tech: !1,
         overlayV3UI: !1,
@@ -70,28 +72,28 @@ let a = (0, r.B)({
         },
     ],
 });
-function o(e) {
-    return a.useExperiment({ location: e });
-}
 function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return o.useExperiment({ location: e });
 }
 function l(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return s(e, t).overlayV3tech;
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return o.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 function c(e) {
-    return o(e).overlayV3tech;
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return l(e, t).overlayV3tech;
 }
 function u(e) {
-    return s(e).allowNowPlaying;
+    return s(e).overlayV3tech;
 }
-let d = (0, r.B)({
+function d(e) {
+    return l(e).allowNowPlaying;
+}
+let f = (0, r.B)({
     kind: "user",
     id: "2025-06_overlay_raf_manager",
     label: "Overlay RAF Manager",
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: { enabled: !1 },
     treatments: [
         {
@@ -101,15 +103,15 @@ let d = (0, r.B)({
         },
     ],
 });
-function f(e) {
+function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return d.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return f.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let _ = (0, r.B)({
+let p = (0, r.B)({
     kind: "user",
     id: "2025-06_overlay_render_timeout",
     label: "Overlay Render Timeout",
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: {
         shortTimeout: 8000,
         longTimeout: 12000,
@@ -141,15 +143,15 @@ let _ = (0, r.B)({
         },
     ],
 });
-function p(e) {
+function h(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return _.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return p.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let h = (0, r.B)({
+let m = (0, r.B)({
     kind: "user",
     id: "2025-07_overlay_default_disable",
     label: "Overlay Default Disable",
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: { enabled: !1 },
     treatments: [
         {
@@ -159,15 +161,15 @@ let h = (0, r.B)({
         },
     ],
 });
-function m(e) {
+function g(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return h.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
+    return m.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
 }
-let g = (0, r.B)({
+let E = (0, r.B)({
     kind: "user",
     id: "2025-07_overlay_oop_nudge",
     label: "Overlay OOP Nudge",
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     defaultConfig: {
         useContextualNudge: !1,
         disableNudge: !1,
@@ -191,7 +193,16 @@ let g = (0, r.B)({
         },
     ],
 });
-function E(e) {
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return g.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return E.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+}
+let y = (0, i.le)({
+    name: "2025-08-overlay-v3-one-click-go-live",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+function O(e) {
+    return y.getConfig({ location: e });
 }

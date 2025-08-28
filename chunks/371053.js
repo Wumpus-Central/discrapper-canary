@@ -1,29 +1,107 @@
-n.d(t, { g: () => g }), n(388685);
+n.d(t, {
+    N: () => b,
+    P: () => O,
+}),
+    n(388685);
 var i = n(951288),
     r = n(647438),
     o = n(442837),
     l = n(481060),
-    a = n(74299),
-    s = n(562224),
-    c = n(592125),
-    u = n(131951),
-    d = n(944486),
-    p = n(594174),
-    f = n(145597),
-    h = n(981631),
-    m = n(388032);
-function g(e, t) {
-    let g = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId()),
-        y = (0, o.e7)([c.Z], () => c.Z.getChannel(g), [g]),
-        O = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        b = null == y ? void 0 : y.getGuildId(),
-        v = (0, o.e7)([u.Z], () => (0, a.Z)(u.Z));
+    a = n(102172),
+    s = n(74299),
+    c = n(562224),
+    u = n(592125),
+    d = n(430824),
+    p = n(131951),
+    f = n(496675),
+    h = n(944486),
+    m = n(594174),
+    g = n(145597),
+    y = n(388032);
+function O(e) {
+    let {
+            pid: t,
+            analyticsLocation: n,
+            allowOneClickGoLive: i = !1,
+            onBeforeShowModal: l,
+            onOneClickGoLive: c,
+            appContext: g,
+        } = e,
+        y = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId()),
+        O = (0, o.e7)([u.Z], () => u.Z.getChannel(y), [y]),
+        b = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        E = null == O ? void 0 : O.getGuildId(),
+        _ = (0, o.e7)([p.Z], () => (0, s.Z)(p.Z)),
+        S = (0, o.e7)([d.Z, f.Z], () => null != O && (0, a.JL)(O, d.Z, f.Z));
     return r.useCallback(async () => {
-        if (!v || null == g) return;
-        let [r] = await (0, s.Z)(e);
-        if (!r) {
-            if (null == O)
-                return void (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.OKnWyc), l.ToastType.FAILURE));
+        await v({
+            pid: t,
+            voiceChannelId: y,
+            user: b,
+            targetGuildId: E,
+            canGoLive: _,
+            canStream: S,
+            analyticsLocation: n,
+            allowOneClickGoLive: i,
+            onBeforeShowModal: l,
+            onOneClickGoLive: c,
+            appContext: g,
+        });
+    }, [t, y, b, E, _, S, n, i, l, c, g]);
+}
+async function b(e) {
+    let {
+            pid: t,
+            analyticsLocation: n,
+            allowOneClickGoLive: i = !1,
+            onBeforeShowModal: r,
+            onOneClickGoLive: o,
+            appContext: l,
+        } = e,
+        c = h.Z.getVoiceChannelId(),
+        g = u.Z.getChannel(c),
+        y = m.default.getCurrentUser(),
+        O = null == g ? void 0 : g.getGuildId(),
+        b = null != g && (0, a.JL)(g, d.Z, f.Z),
+        E = (0, s.Z)(p.Z);
+    await v({
+        pid: t,
+        voiceChannelId: c,
+        user: y,
+        targetGuildId: O,
+        canGoLive: E,
+        canStream: b,
+        analyticsLocation: n,
+        allowOneClickGoLive: i,
+        onBeforeShowModal: r,
+        onOneClickGoLive: o,
+        appContext: l,
+    });
+}
+async function v(e) {
+    let {
+        pid: t,
+        voiceChannelId: r,
+        user: o,
+        targetGuildId: a,
+        canGoLive: s,
+        canStream: u,
+        analyticsLocation: d,
+        allowOneClickGoLive: p,
+        onBeforeShowModal: f,
+        onOneClickGoLive: h,
+        appContext: m,
+    } = e;
+    if (s && u) {
+        if (p && null !== r) {
+            let [e] = await (0, c.Z)(t);
+            if (e) {
+                null == h || h();
+                return;
+            }
+        }
+        if (null == o) return void (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.OKnWyc), l.ToastType.FAILURE));
+        null == f || f(),
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("38697"), n.e("46746"), n.e("79839")]).then(
@@ -60,10 +138,11 @@ function g(e, t) {
                             })({}, t)),
                             (r = r =
                                 {
-                                    sourcePID: (0, f.getPID)(),
+                                    sourcePID: (0, g.getPID)(),
                                     selectSource: !1,
-                                    guildId: b,
-                                    analyticsLocation: h.Sbl.UNLOCKED_OVERLAY,
+                                    guildId: a,
+                                    selectGuild: null == a,
+                                    analyticsLocation: d,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -81,8 +160,7 @@ function g(e, t) {
                         );
                     };
                 },
-                { contextKey: null != t ? (0, l.VnL)(t) : void 0 },
+                { contextKey: null != m ? (0, l.VnL)(m) : void 0 },
             );
-        }
-    }, [v, b, g, t, e, O]);
+    }
 }

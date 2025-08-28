@@ -29,17 +29,17 @@ var i = n(951288),
     E = n(793865),
     _ = n(55311),
     S = n(575175),
-    x = n(933557),
-    I = n(471445),
+    I = n(933557),
+    x = n(471445),
     j = n(74299),
     C = n(803647),
     N = n(565138),
-    w = n(853170),
-    Z = n(917405),
-    T = n(763296),
-    P = n(603074),
-    A = n(879815),
-    k = n(189771),
+    Z = n(853170),
+    w = n(917405),
+    P = n(763296),
+    T = n(603074),
+    k = n(879815),
+    A = n(189771),
     D = n(294629),
     R = n(67844),
     L = n(544384),
@@ -48,8 +48,8 @@ var i = n(951288),
     U = n(871499),
     V = n(875527),
     W = n(306609),
-    F = n(8404),
-    G = n(199902),
+    G = n(8404),
+    F = n(199902),
     B = n(314897),
     H = n(430824),
     Y = n(131951),
@@ -59,9 +59,9 @@ var i = n(951288),
     q = n(979651),
     J = n(145597),
     $ = n(444295),
-    ee = n(624864),
-    et = n(388627),
-    en = n(810632),
+    ee = n(371053),
+    et = n(624864),
+    en = n(388627),
     ei = n(981631),
     er = n(388032),
     eo = n(131714);
@@ -193,7 +193,7 @@ function ec(e) {
         { suppress: s, selfMute: c, mute: u } = (0, D.Z)(n),
         p = c || u || s,
         f = (0, O.Z)(c, u, s, !1),
-        { Component: h, play: g, events: y } = (0, F.b)(p);
+        { Component: h, play: g, events: y } = (0, G.b)(p);
     r.useEffect(() => () => g(), [g, p]);
     let E = ea(l),
         _ = (e) => (t) => {
@@ -203,13 +203,13 @@ function ec(e) {
                     value: $.bk.SETTINGS_OPENED,
                 });
         },
-        x = null == (t = (0, et.II)()) ? void 0 : t.id,
-        I = (0, o.e7)([ee.Z], () => ee.Z.isLimitedInteractionOverrideEnabled(x)),
+        I = null == (t = (0, en.II)()) ? void 0 : t.id,
+        x = (0, o.e7)([et.Z], () => et.Z.isLimitedInteractionOverrideEnabled(I)),
         j = (0, V.Hu)({
             location: m.Z.OVERLAY,
             autoTrackExposure: !0,
         }),
-        { showRefreshedAudioContextMenu: C } = (0, w.e)({ location: "MicrophoneActionButton" });
+        { showRefreshedAudioContextMenu: C } = (0, Z.e)({ location: "MicrophoneActionButton" });
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
         clickTrap: !0,
@@ -221,7 +221,7 @@ function ec(e) {
                       wide: !0,
                       showOutputDevices: !0,
                       onSettingsButtonClick: n,
-                      showSearchBar: !I,
+                      showSearchBar: !x,
                   })
                 : C
                   ? (0, i.jsx)(v.Z, {
@@ -281,7 +281,7 @@ function ec(e) {
 function eu(e) {
     let { voiceChannel: t, locked: n } = e,
         o = r.useRef(null),
-        { selfDeaf: l, deaf: s } = (0, A.Z)(t),
+        { selfDeaf: l, deaf: s } = (0, k.Z)(t),
         c = l || s,
         {
             Component: u,
@@ -306,7 +306,7 @@ function eu(e) {
                 });
         },
         E = ea(n),
-        { showRefreshedAudioContextMenu: S } = (0, w.e)({ location: "HeadphonesActionButton" });
+        { showRefreshedAudioContextMenu: S } = (0, Z.e)({ location: "HeadphonesActionButton" });
     return (0, i.jsx)(d.yRy, {
         targetElementRef: o,
         clickTrap: !0,
@@ -358,7 +358,7 @@ function ed(e) {
         c = (0, o.e7)([Y.Z], () => Object.values(Y.Z.getVideoDevices())[0]),
         f = null == (t = null == c ? void 0 : c.disabled) || t,
         h = !1 === f,
-        m = (0, k.Z)(n),
+        m = (0, A.Z)(n),
         g = (e) => {
             p.Z.setVideoEnabled(e);
         },
@@ -382,7 +382,7 @@ function ed(e) {
             play: v,
             events: { onMouseEnter: _, onMouseLeave: S },
         } = (0, u.o)(s ? "disable" : "enable"),
-        x =
+        I =
             null != n
                 ? (0, R.X)({
                       enabled: s,
@@ -392,7 +392,7 @@ function ed(e) {
                   })
                 : void 0;
     r.useEffect(() => () => v(), [s, v]);
-    let I = ea(l),
+    let x = ea(l),
         j = null == n || !m;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: a,
@@ -400,7 +400,7 @@ function ed(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(E.Z, {
-                onClose: I(t),
+                onClose: x(t),
                 appContext: ei.IlC.OVERLAY,
             });
         },
@@ -413,7 +413,7 @@ function ed(e) {
             return (0, i.jsx)(es, {
                 ref: a,
                 iconComponent: b,
-                tooltip: x,
+                tooltip: I,
                 onClick: O,
                 isActive: s,
                 highlightedColor: "green",
@@ -433,10 +433,14 @@ function ep(e) {
         { voiceChannel: n, locked: l } = e,
         a = r.useRef(null),
         c = (0, o.e7)([X.default], () => X.default.getCurrentUser()),
-        u = (0, k.Z)(n),
+        u = (0, A.Z)(n),
         p = (0, o.cj)([Y.Z], () => (0, j.Z)(Y.Z)),
-        f = (0, o.e7)([G.Z], () => G.Z.getCurrentUserActiveStream()),
-        h = (0, en.g)((0, J.getPID)()),
+        f = (0, o.e7)([F.Z], () => F.Z.getCurrentUserActiveStream()),
+        h = (0, ee.P)({
+            pid: (0, J.getPID)(),
+            allowOneClickGoLive: !0,
+            analyticsLocation: ei.Sbl.UNLOCKED_OVERLAY,
+        }),
         m = () => {
             h(),
                 (0, $.Ws)(ei.Odu.QUICK_ACTIONS, {
@@ -448,7 +452,7 @@ function ep(e) {
         g = null != f;
     if (g) t = er.intl.string(er.t.S5anIS);
     else if (null != n) {
-        let e = (0, et.pL)();
+        let e = (0, en.pL)();
         t = u
             ? null != e
                 ? er.intl.format(er.t.AB5gT0, { game: e.name })
@@ -556,8 +560,8 @@ function ef(e) {
             Component: v,
             events: { onClick: E, onMouseEnter: _, onMouseLeave: S },
         } = (0, c.j)(),
-        x = ea(a),
-        I = (0, o.e7)([T.Z, B.default], () => T.Z.isUserPlayingSounds(B.default.getId()), []) ? "green" : void 0;
+        I = ea(a),
+        x = (0, o.e7)([P.Z, B.default], () => P.Z.isUserPlayingSounds(B.default.getId()), []) ? "green" : void 0;
     return (0, i.jsx)(d.yRy, {
         targetElementRef: s,
         clickTrap: !0,
@@ -565,10 +569,10 @@ function ef(e) {
             let { closePopout: t } = e;
             return y || null == l
                 ? (0, i.jsx)(i.Fragment, {})
-                : (0, i.jsx)(P.Z, {
+                : (0, i.jsx)(T.Z, {
                       guildId: u,
                       channel: l,
-                      onClose: x(t),
+                      onClose: I(t),
                       analyticsSource: "action bar button",
                   });
         },
@@ -597,8 +601,8 @@ function ef(e) {
                         }),
                         n(e);
                 },
-                highlightedColor: I,
-                defaultColor: I,
+                highlightedColor: x,
+                defaultColor: x,
                 onContextMenu: b,
                 onMouseEnter: _,
                 onMouseLeave: S,
@@ -716,8 +720,8 @@ function em(e) {
 }
 function eg(e) {
     let { voiceChannel: t } = e,
-        n = (0, I.KS)(t),
-        r = (0, x.ZP)(t);
+        n = (0, x.KS)(t),
+        r = (0, I.ZP)(t);
     return (0, i.jsxs)("div", {
         className: eo.voiceChannelNameContainer,
         children: [
@@ -758,7 +762,7 @@ function ey(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(
-                    Z.Z,
+                    w.Z,
                     ((t = el({}, a)),
                     (n = n =
                         {
