@@ -53,7 +53,7 @@ function I(e) {
     }
     return e;
 }
-let T = 25,
+let T = 26,
     S = 15 * h.Z.Millis.MINUTE,
     A = h.Z.Millis.SECOND,
     C = "LAST_CLIENT_HEARTBEAT_SESSION",
@@ -79,11 +79,11 @@ function U() {
         (P = {
             type: "timeout",
             id: setTimeout(() => {
-                V(),
+                F(),
                     (P = {
                         type: "interval",
                         id: setInterval(() => {
-                            V();
+                            F();
                         }, S),
                     });
             }, e),
@@ -122,7 +122,7 @@ function Z() {
         is_system_locked: f.Z.getSystemLocked(),
     };
 }
-async function V() {
+async function F() {
     let e = Date.now(),
         t = await eo(),
         n = Date.now();
@@ -145,7 +145,7 @@ async function V() {
     );
     p.default.track(O.rMx.CLIENT_HEARTBEAT, r), (x = performance.now()), (0, l.Z)();
 }
-function F() {
+function V() {
     if (!(null != k && (0, y.y)()) || performance.now() - x <= S) return;
     let e = { client_heartbeat_version: T };
     p.default.track(O.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
@@ -174,7 +174,7 @@ function z() {
     null == w &&
         (w = {
             id: setInterval(() => {
-                F();
+                V();
             }, S),
             type: "interval",
         });
@@ -223,15 +223,17 @@ function ee() {
     k !== e && ((k = e), Q()), K();
 }
 function et() {
-    (j = _.Z.getState()), K();
+    let e = _.Z.getState();
+    j !== e && ((j = e), K());
 }
 function en(e) {
     let { focused: t } = e;
-    (M = t), K();
+    M !== t && ((M = t), K());
 }
 function er(e) {
-    let { state: t } = e;
-    (M = t === O.$7l.ACTIVE), K();
+    let { state: t } = e,
+        n = t === O.$7l.ACTIVE;
+    M !== n && ((M = n), K());
 }
 function ei() {
     (j = _.Z.getState()), (M = (0, E.H)()), ee();
