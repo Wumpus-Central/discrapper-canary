@@ -1,13 +1,12 @@
-n.d(t, { f: () => u });
+n.d(t, { f: () => c });
 var r = n(870289),
-    l = n(909688),
-    a = n(587792),
-    s = n(483942),
-    i = n(91641),
-    o = n(166350),
-    c = n(987338);
-let u = new i.E(
-    [o.NR, o.ZI, o.Ob, o.uc, o.m1, s.Jg, s.zk, s.xs, s.d3, s.nS, s.OP, a.g, l.j, r.KS],
-    c.$P.COLLECTIBLES_SHOP_OPEN,
+    l = n(587792),
+    a = n(483942),
+    s = n(91641),
+    i = n(166350),
+    o = n(987338);
+let c = new s.E(
+    [i.NR, i.ZI, i.Ob, i.uc, i.m1, a.Jg, a.zk, a.xs, a.d3, a.nS, a.OP, l.g, r.KS],
+    o.$P.COLLECTIBLES_SHOP_OPEN,
     { location: "collectibles shop open" },
 );
