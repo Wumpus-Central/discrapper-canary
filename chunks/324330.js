@@ -1,6 +1,7 @@
 n.d(t, {
-    $: () => h,
-    Z: () => f,
+    $r: () => b,
+    JA: () => h,
+    ZP: () => x,
 });
 var r = n(951288);
 n(647438);
@@ -15,20 +16,23 @@ var i = n(392711),
     m = n(981631),
     g = n(388032),
     p = n(703662);
+function f(e) {
+    if (null == e) return !1;
+    let t = e.features.has(m.oNc.COMMUNITY),
+        n = e.features.has(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+    return t || n;
+}
 function h() {
-    var e, t;
-    let n = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
-        i = null != (e = null == n ? void 0 : n.features.has(m.oNc.COMMUNITY)) && e,
-        s = null != (t = null == n ? void 0 : n.features.has(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && t,
-        c = i || s;
-    return (0, r.jsxs)(a.P3F, {
-        onClick: (e) => {
-            null != n && (c ? (e.preventDefault(), d.Z.close(), (0, o._X)(n.id)) : d.Z.open(n.id, m.pNK.MEMBERS));
-        },
+    let e = u.Z.getProps().guild;
+    null != e && (f(e) ? (d.Z.close(), (0, o._X)(e.id)) : d.Z.open(e.id, m.pNK.MEMBERS));
+}
+function b() {
+    let e = f((0, l.e7)([u.Z], () => u.Z.getProps().guild, []));
+    return (0, r.jsxs)("div", {
         className: p.rowContainer,
         children: [
             (0, r.jsx)("div", { children: g.intl.string(g.t["9Oq93t"]) }),
-            c &&
+            e &&
                 (0, r.jsx)(a.rgF, {
                     size: "xs",
                     color: "currentColor",
@@ -37,7 +41,7 @@ function h() {
         ],
     });
 }
-function f() {
+function x() {
     var e;
     let { guild: t } = (0, l.e7)([u.Z], () => u.Z.getProps(), [], i.isEqual),
         n = null != (e = null == t ? void 0 : t.id) ? e : m.lds;

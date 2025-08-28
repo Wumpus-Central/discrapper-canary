@@ -1,36 +1,38 @@
-n.d(t, { K: () => m });
+n.d(t, {
+    K: () => m,
+    O: () => u,
+});
 var r = n(951288),
-    i = n(647438),
-    l = n(481060),
-    a = n(37234),
-    s = n(749681),
-    o = n(258971),
-    c = n(49898),
-    d = n(388032),
-    u = n(386103);
-function m(e) {
-    let t = i.useCallback(() => {
-        (0, s.transitionToGlobalDiscovery)({
-            tab: c.GlobalDiscoveryTab.APPS,
-            newSessionState: {
-                guildId: e.guildId,
-                entrypoint: {
-                    name: o.xF.GUILD_SETTINGS,
-                    guildSettingsSection: e.section,
-                },
+    i = n(481060),
+    l = n(37234),
+    a = n(749681),
+    s = n(258971),
+    o = n(49898),
+    c = n(388032),
+    d = n(386103);
+function u(e) {
+    let { guildId: t, section: n } = e;
+    (0, a.transitionToGlobalDiscovery)({
+        tab: o.GlobalDiscoveryTab.APPS,
+        newSessionState: {
+            guildId: t,
+            entrypoint: {
+                name: s.xF.GUILD_SETTINGS,
+                guildSettingsSection: n,
             },
-        }),
-            (0, a.xf)();
-    }, [e.guildId, e.section]);
-    return (0, r.jsxs)(l.P3F, {
-        onClick: t,
-        className: u.rowContainer,
+        },
+    }),
+        (0, l.xf)();
+}
+function m() {
+    return (0, r.jsxs)("div", {
+        className: d.rowContainer,
         children: [
-            (0, r.jsx)("div", { children: d.intl.string(d.t.AKcFUl) }),
-            (0, r.jsx)(l.rgF, {
+            (0, r.jsx)("div", { children: c.intl.string(c.t.AKcFUl) }),
+            (0, r.jsx)(i.rgF, {
                 size: "xs",
                 color: "currentColor",
-                className: u.linkIcon,
+                className: d.linkIcon,
             }),
         ],
     });
