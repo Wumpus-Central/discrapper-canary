@@ -1,36 +1,37 @@
-n.d(t, { Z: () => s }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
-    l = n(241945),
-    c = n(388032),
-    o = n(58571);
-let s = (e) => {
+    l = n(118589),
+    c = n(241945),
+    o = n(388032),
+    s = n(58571);
+let u = (e) => {
     let { onSubmit: t, disabled: n } = e,
-        s = i.useCallback(async () => {
-            await t({}), window.location.reload();
+        u = i.useCallback(async () => {
+            await t({ type: l.rY.Empty }), window.location.reload();
         }, [t]);
     return (0, r.jsxs)("div", {
-        className: o.container,
+        className: s.container,
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: "heading-lg/bold",
-                className: o.title,
-                children: c.intl.string(l.default.v52itr),
+                className: s.title,
+                children: o.intl.string(c.default.v52itr),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                className: o.description,
-                children: c.intl.string(l.default["5am8Dw"]),
+                className: s.description,
+                children: o.intl.string(c.default["5am8Dw"]),
             }),
             (0, r.jsx)(a.Kqy, {
                 direction: "horizontal",
                 justify: "end",
                 children: (0, r.jsx)(a.zxk, {
                     variant: "primary",
-                    text: c.intl.string(l.default.GDsHl5),
-                    onClick: s,
+                    text: o.intl.string(c.default.GDsHl5),
+                    onClick: u,
                     disabled: n,
                 }),
             }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -7,11 +7,12 @@ var i = n(442837),
     c = n(168107),
     o = n(480916),
     s = n(594174),
-    u = n(62272);
-let d = function (e) {
+    u = n(118589),
+    d = n(62272);
+let f = function (e) {
     let { onSubmit: t } = e,
         n = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    return (0, r.jsx)(u.Q, {
+    return (0, r.jsx)(d.Q, {
         title: "Lorem ipsum dolor",
         actions: [
             {
@@ -21,9 +22,9 @@ let d = function (e) {
                     (null == n ? void 0 : n.ageVerificationStatus) === l.F$.UNVERIFIED
                         ? c.Z.showAgeVerificationGetStartedModal({
                               entryPoint: o.cU.SAFETY_FLOWS,
-                              onClose: () => t({ type: "empty" }),
+                              onClose: () => t({ type: u.rY.Empty }),
                           })
-                        : t({ type: "empty" });
+                        : t({ type: u.rY.Empty });
                 },
             },
         ],

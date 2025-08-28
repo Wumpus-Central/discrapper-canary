@@ -1,9 +1,17 @@
-n.d(t, { i: () => e7 }), n(539854), n(388685);
+n.d(t, {
+    $Z: () => e3,
+    OF: () => e8,
+    W8: () => e5,
+    c$: () => e4,
+    iE: () => e7,
+}),
+    n(539854),
+    n(388685);
 var r = n(951288);
 n(647438);
 var i = n(990547),
-    o = n(704215),
-    a = n(692547),
+    a = n(704215),
+    o = n(692547),
     s = n(481060),
     l = n(570140),
     c = n(893776),
@@ -56,8 +64,8 @@ var i = n(990547),
     en = n(321614),
     er = n(498639),
     ei = n(748717),
-    eo = n(419636),
-    ea = n(799071),
+    ea = n(419636),
+    eo = n(799071),
     es = n(154022),
     el = n(393681),
     ec = n(309739),
@@ -157,39 +165,39 @@ function e2(e, t) {
     );
 }
 let e3 = () => {
-        let e = [o.z.CLIENT_THEMES_SETTINGS_BADGE, o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
+        let e = [a.z.CLIENT_THEMES_SETTINGS_BADGE, a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
         return (
             b.Mc.getCurrentConfig({ location: "getAppearanceDCs" }).enabled &&
-                e.push(o.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE),
+                e.push(a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE),
             e
         );
     },
     e4 = () => {
         let e = e3(),
             [t] = (0, A.US)(e);
-        return t === o.z.CLIENT_THEMES_SETTINGS_BADGE || t === o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
+        return t === a.z.CLIENT_THEMES_SETTINGS_BADGE || t === a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
             ? (0, r.jsx)(s.lBU, { text: eq.intl.string(eq.t.y2b7CA) })
-            : t === o.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE
+            : t === a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE
               ? (0, r.jsx)(s.IGR, { text: eq.intl.string(eq.t.y2b7CA) })
               : null;
     },
     e8 = () => {
         let e = [];
         return (
-            (0, F.h)("SettingsRendererConfig") && e.push(o.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
+            (0, F.h)("SettingsRendererConfig") && e.push(a.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
             C.J.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
-                e.push(o.z.DISPLAY_NAME_STYLES_NEW_BADGE),
+                e.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE),
             e
         );
     },
-    e6 = () => {
+    e5 = () => {
         let e = e8(),
             [t] = (0, A.US)(e);
-        return t === o.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === o.z.WIDGETS_USER_SETTINGS_NEW_BADGE
+        return t === a.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.z.WIDGETS_USER_SETTINGS_NEW_BADGE
             ? (0, r.jsx)(s.IGR, { text: eq.intl.string(eq.t.y2b7CA) })
             : null;
     },
-    e5 = eL.Z,
+    e6 = eL.Z,
     e7 = (e) => {
         let {
             unseenGiftCount: t,
@@ -206,8 +214,8 @@ let e3 = () => {
             paymentsBlocked: tn,
             isEligibleForQuests: tr,
             isStricterMessageRequestsEnabled: ti,
-            hasLibraryApplication: to,
-            hasTOTPEnabled: ta,
+            hasLibraryApplication: ta,
+            hasTOTPEnabled: to,
             developerMode: ts,
             isAdultUser: tl,
             hasSecureFramesVerifiedUserIds: tc,
@@ -298,13 +306,13 @@ let e3 = () => {
                 searchableTitles: [eq.intl.string(eq.t.cDgKtb)],
                 section: eW.oAB.ACCOUNT,
                 parent: eH.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !ta,
+                predicate: () => !to,
             },
             [eH.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [eq.intl.string(eq.t["D+aE7u"])],
                 section: eW.oAB.ACCOUNT,
                 parent: eH.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => ta,
+                predicate: () => to,
             },
             [eH.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [eq.intl.string(eq.t.fZSi1N)],
@@ -371,7 +379,7 @@ let e3 = () => {
                 label: eq.intl.string(eq.t["vi7f+v"]),
                 ariaLabel: eq.intl.string(eq.t["vi7f+v"]),
                 element: M.Z,
-                newIndicator: (0, r.jsx)(e6, {}),
+                newIndicator: (0, r.jsx)(e5, {}),
                 newIndicatorDismissibleContentTypes: [...e8()],
                 notice: {
                     stores: [K.Z, P.Z],
@@ -632,7 +640,7 @@ let e3 = () => {
                     text: eq.intl.string(eq.t.y2b7CA),
                     color: T.Z.BG_BRAND,
                 }),
-                newIndicatorDismissibleContentTypes: [o.z.FAMILY_CENTER_NEW_BADGE],
+                newIndicatorDismissibleContentTypes: [a.z.FAMILY_CENTER_NEW_BADGE],
                 url: eW.Z5c.SETTINGS("family-center"),
             },
             [eH.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY]: {
@@ -653,7 +661,7 @@ let e3 = () => {
                 label: eq.intl.string(eq.t["+1h0k5"]),
                 ariaLabel: eq.intl.string(eq.t["+1h0k5"]),
                 element: eR.Z,
-                newIndicatorDismissibleContentTypes: [o.z.AUTH_SESSIONS_NEW],
+                newIndicatorDismissibleContentTypes: [a.z.AUTH_SESSIONS_NEW],
                 impressionName: i.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: A },
             },
@@ -665,7 +673,7 @@ let e3 = () => {
                 element: ep.Z,
                 impressionName: i.ImpressionNames.USER_SETTINGS_CONNECTIONS,
                 impressionProperties: { source: A },
-                newIndicatorDismissibleContentTypes: [o.z.NEW_CRUNCHYROLL_CONNECTION],
+                newIndicatorDismissibleContentTypes: [a.z.NEW_CRUNCHYROLL_CONNECTION],
                 url: eW.Z5c.SETTINGS("connections"),
             },
             [eH.s6.THIRD_PARTY_ACCESS]: {
@@ -741,7 +749,7 @@ let e3 = () => {
                 icon: b
                     ? (0, r.jsx)(s.Mgn, {
                           size: "xs",
-                          color: a.Z.unsafe_rawColors.YELLOW_300.css,
+                          color: o.Z.unsafe_rawColors.YELLOW_300.css,
                       })
                     : null,
             },
@@ -1568,7 +1576,7 @@ let e3 = () => {
                 section: eW.oAB.LINUX,
                 searchableTitles: [eq.intl.string(eq.t["7pPjTU"])],
                 label: eq.intl.string(eq.t["7pPjTU"]),
-                element: e5,
+                element: e6,
                 predicate: () => Q.isPlatformEmbedded && (0, Q.isLinux)(),
             },
             [eH.s6.STREAMER_MODE]: {
@@ -1650,7 +1658,7 @@ let e3 = () => {
                 section: eW.oAB.ADVANCED,
                 searchableTitles: [eq.intl.string(eq.t.fi3UQE)],
                 parent: eH.s6.SETTINGS_ADVANCED,
-                predicate: () => to,
+                predicate: () => ta,
             },
             [eH.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
                 section: eW.oAB.ADVANCED,
@@ -2074,7 +2082,7 @@ let e3 = () => {
                 section: eW.oAB.TEXT_COMPONENT,
                 searchableTitles: ["Text Components"],
                 label: "Text Components",
-                element: ea.Z,
+                element: eo.Z,
                 predicate: () => H.Z.isDeveloper,
             },
             [eH.s6.INTL_TESTING]: {
@@ -2156,7 +2164,7 @@ let e3 = () => {
             },
             [eH.s6.SOCIAL_LINKS]: {
                 section: _.ID.CUSTOM,
-                element: eo.Z,
+                element: ea.Z,
             },
             [eH.s6.CLIENT_DEBUG_INFO]: {
                 section: _.ID.CUSTOM,

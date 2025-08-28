@@ -1,4 +1,9 @@
-n.d(t, { Z: () => E }), n(539854), n(388685);
+n.d(t, {
+    Z: () => b,
+    x: () => E,
+}),
+    n(539854),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -14,44 +19,49 @@ var r = n(951288),
     h = n(921944),
     m = n(474936),
     g = n(563042);
-function E(e) {
-    let t,
-        { decoration: n, label: a, isSelected: E } = e,
-        b = (0, d.N)(),
-        y = (0, u.Ng)(),
-        O = (0, c.Vi)(),
-        v = (null == b ? void 0 : b.trial_id) === m.a7,
-        I = [];
-    O && I.push(s.z.BOGO_2025_NITRO_TAB_BADGE);
-    let [T, S] = (0, l.US)(I, void 0, !0);
+function E() {
+    let e,
+        t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        n = (0, d.N)(),
+        a = (0, u.Ng)(),
+        o = (0, c.Vi)(),
+        p = (null == n ? void 0 : n.trial_id) === m.a7,
+        g = [];
+    o && g.push(s.z.BOGO_2025_NITRO_TAB_BADGE);
+    let [E, b] = (0, l.US)(g, void 0, !0);
     return (
         i.useEffect(() => {
-            !0 === E && T === s.z.BOGO_2025_NITRO_TAB_BADGE && S(h.L.AUTO_DISMISS);
-        }, [S, E, T]),
-        (t = O
-            ? (0, r.jsx)(f.Z, {})
-            : null != y
-              ? (0, r.jsx)(_.GN, {
-                    isTabSelected: E,
-                    userDiscount: y,
+            !0 === t && E === s.z.BOGO_2025_NITRO_TAB_BADGE && b(h.L.AUTO_DISMISS);
+        }, [b, t, E]),
+        o
+            ? (e = (0, r.jsx)(f.Z, {}))
+            : null != a
+              ? (e = (0, r.jsx)(_.GN, {
+                    isTabSelected: t,
+                    userDiscount: a,
                     includesAmountOff: !1,
-                })
-              : null == b || v
-                ? null != n
-                    ? n
-                    : (0, r.jsx)(p.Z, { isSelected: E })
-                : (0, r.jsx)(_.$H, {
-                      isTabSelected: E,
-                      trialOffer: b,
-                  })),
-        (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsxs)("div", {
-                    className: o()(g.premiumLabel, { [g.selected]: E && !O }),
-                    children: [a, t],
-                }),
-                (0, r.jsx)("div", { className: o()(g.background, { [g.selectedBackground]: !O && E }) }),
-            ],
-        })
+                }))
+              : null == n ||
+                p ||
+                (e = (0, r.jsx)(_.$H, {
+                    isTabSelected: t,
+                    trialOffer: n,
+                })),
+        e
     );
+}
+function b(e) {
+    var t, n;
+    let { decoration: i, label: a, isSelected: s } = e,
+        l = (0, c.Vi)(),
+        u = null != (n = null != (t = E(s)) ? t : i) ? n : (0, r.jsx)(p.Z, { isSelected: s });
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsxs)("div", {
+                className: o()(g.premiumLabel, { [g.selected]: s && !l }),
+                children: [a, u],
+            }),
+            (0, r.jsx)("div", { className: o()(g.background, { [g.selectedBackground]: !l && s }) }),
+        ],
+    });
 }

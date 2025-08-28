@@ -1,29 +1,29 @@
-n.d(t, { ZP: () => S }), n(415506), n(539854), n(388685);
+n.d(t, { ZP: () => A }), n(415506), n(539854), n(388685);
 var i = n(951288),
-    l = n(647438),
-    r = n(442837),
-    s = n(481060),
+    r = n(647438),
+    l = n(442837),
+    o = n(481060),
     a = n(292556),
-    o = n(734934),
+    s = n(734934),
     u = n(509613),
     c = n(460181),
     d = n(292959),
     _ = n(869235),
     E = n(388032),
     N = n(745734);
-let T = l.createContext(void 0);
-function I(e) {
+let g = r.createContext(void 0);
+function f(e) {
     let { sound: t } = e,
         { handlePreviewSound: n } = (function () {
-            let e = l.useContext(T);
+            let e = r.useContext(g);
             if (null == e) throw Error("useSoundPlayback must be used within a SoundPlaybackProvider");
             return e;
         })();
-    return (0, i.jsx)(s.P3F, {
+    return (0, i.jsx)(o.P3F, {
         className: N.soundIcon,
         onClick: (e) => n(t, e),
         "aria-label": E.intl.string(E.t.Kd4uxM),
-        children: (0, i.jsx)(s.gj8, {
+        children: (0, i.jsx)(o.gj8, {
             size: "xs",
             color: "currentColor",
             className: N.icon,
@@ -31,12 +31,12 @@ function I(e) {
         }),
     });
 }
-let A = [
+let O = [
         {
             useLabel: () => E.intl.string(E.t.jD1qzM),
             sound: "message1",
-            useDisabled: o.p,
-            useTooltip: () => ((0, o.p)() ? E.intl.string(E.t.cIRG0t) : void 0),
+            useDisabled: s.p,
+            useTooltip: () => ((0, s.p)() ? E.intl.string(E.t.cIRG0t) : void 0),
         },
         {
             useLabel: () => E.intl.string(E.t.XBrJT0),
@@ -136,12 +136,12 @@ let A = [
                 let t = e.useLabel();
                 return (0, i.jsxs)("div", {
                     className: N.soundRow,
-                    children: [(0, i.jsx)("span", { children: t }), (0, i.jsx)(I, { sound: e.sound })],
+                    children: [(0, i.jsx)("span", { children: t }), (0, i.jsx)(f, { sound: e.sound })],
                 });
             },
             useValue: () => {
                 var t;
-                let n = (0, r.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
+                let n = (0, l.e7)([d.Z], () => d.Z.isSoundDisabled(e.sound)),
                     i = null == (t = e.useDisabled) ? void 0 : t.call(e);
                 return !n && !i;
             },
@@ -152,24 +152,24 @@ let A = [
             useDisabled: () => {
                 var t;
                 let n = null == (t = e.useDisabled) ? void 0 : t.call(e),
-                    i = (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds());
+                    i = (0, l.e7)([d.Z], () => d.Z.getDisableAllSounds());
                 return n || i;
             },
             useTooltip: e.useTooltip,
         }),
     })),
-    g = (0, u.qs)(_.t.SELECTED_CHANNEL_NOTIFICATIONS, {
+    I = (0, u.qs)(_.t.SELECTED_CHANNEL_NOTIFICATIONS, {
         useTitle: () => E.intl.string(E.t.TzjwV1),
-        useValue: () => (0, r.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
+        useValue: () => (0, l.e7)([d.Z], () => d.Z.getNotifyMessagesInSelectedChannel()),
         setValue: (e) => a.default.setNotifyMessagesInSelectedChannel(e),
     }),
-    O = (0, u.qs)(_.t.DISABLE_ALL_NOTIFICATION_SOUNDS, {
+    T = (0, u.qs)(_.t.DISABLE_ALL_NOTIFICATION_SOUNDS, {
         useTitle: () => E.intl.string(E.t["2ZhCOT"]),
         useSubtitle: () => E.intl.string(E.t["+B0XLC"]),
-        useValue: () => (0, r.e7)([d.Z], () => d.Z.getDisableAllSounds()),
+        useValue: () => (0, l.e7)([d.Z], () => d.Z.getDisableAllSounds()),
         setValue: (e) => a.default.toggleDisableAllSounds(e),
     }),
-    S = (0, u.$l)(_.t.NOTIFICATION_SOUNDS_SETTINGS_LIST, {
+    A = (0, u.$l)(_.t.NOTIFICATION_SOUNDS_LIST, {
         collapseAfter: 4,
         useCollapsibleTitle: (e, t) =>
             e
@@ -177,25 +177,25 @@ let A = [
                 : E.intl.formatToPlainString(E.t.ji1uNj, { count: t }),
         ContextProvider: function (e) {
             let { children: t } = e,
-                n = l.useRef(null),
-                r = l.useCallback((e, t) => {
+                n = r.useRef(null),
+                l = r.useCallback((e, t) => {
                     t.stopPropagation(),
                         t.preventDefault(),
                         null != n.current && n.current.stop(),
                         (n.current = (0, c.GN)(e));
                 }, []);
-            l.useEffect(
+            r.useEffect(
                 () => () => {
                     var e;
                     null == (e = n.current) || e.stop();
                 },
                 [],
             );
-            let s = l.useMemo(() => ({ handlePreviewSound: r }), [r]);
-            return (0, i.jsx)(T.Provider, {
-                value: s,
+            let o = r.useMemo(() => ({ handlePreviewSound: l }), [l]);
+            return (0, i.jsx)(g.Provider, {
+                value: o,
                 children: t,
             });
         },
-        getLayout: () => [A[0].node, g, A[1].node, O, ...A.slice(2).map((e) => e.node)],
+        getLayout: () => [O[0].node, I, O[1].node, T, ...O.slice(2).map((e) => e.node)],
     });

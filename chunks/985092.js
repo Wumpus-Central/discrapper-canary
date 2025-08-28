@@ -1,22 +1,30 @@
-n.d(t, { Z: () => T });
-var l = n(657707),
-    i = n(778825),
-    r = n(398140),
-    s = n(564344),
-    a = n(509613),
-    o = n(25990),
-    u = n(869235),
-    c = n(388032);
-let d = (0, a.x1)(u.t.PROFILE_PANE, {
+n.d(t, { Z: () => g });
+var i = n(951288),
+    r = n(657707),
+    l = n(778825),
+    o = n(398140),
+    a = n(564344),
+    s = n(509613),
+    u = n(25990),
+    c = n(620163),
+    d = n(869235),
+    _ = n(726985),
+    E = n(388032);
+let N = (0, s.x1)(d.t.PROFILE_PANE, {
         getLayout: () => [],
-        render: s.Z,
+        render: a.Z,
     }),
-    T = (0, a.wf)(u.t.PROFILE_SETTINGS_PANEL, {
-        icon: l.tBG,
-        useTitle: () => c.intl.string(c.t.LYju5O),
-        getLayout: () => [d],
+    g = (0, s.wf)(d.t.PROFILE_PANEL, {
+        icon: r.tBG,
+        useTitle: () => E.intl.string(E.t["vi7f+v"]),
+        getLayout: () => [N],
         notice: {
-            stores: [i.Z, o.Z],
-            element: r.Z,
+            stores: [l.Z, u.Z],
+            element: o.Z,
         },
+        trailing: {
+            newIndicatorDismissibleContentTypes: (0, c.OF)(),
+            newIndicatorBadgeOverride: (0, i.jsx)(c.W8, {}),
+        },
+        legacySearchKey: _.s6.PROFILE_CUSTOMIZATION,
     });
