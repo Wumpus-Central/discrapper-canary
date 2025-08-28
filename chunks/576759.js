@@ -1,53 +1,57 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(704215),
     a = n(755721),
     o = n(481060),
     s = n(206074),
-    l = n(728345),
-    c = n(377171),
-    u = n(243778),
-    d = n(483517),
-    f = n(652853),
-    _ = n(994102),
-    p = n(671955),
-    h = n(388032),
-    m = n(114004);
-function g(e) {
-    let { applicationId: t, onAction: n, onClose: g } = e,
-        { data: E } = (0, l.IX)(t),
-        b = (0, s.q)(E, "UserProfileActivityCard"),
-        { themeType: y } = (0, f.z)(),
-        O = y === p.l.MODAL || y === p.l.MODAL_V2,
-        v = b && O && null != E,
-        I = v ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
-        [T] = (0, u.US)(I);
-    return v
+    l = n(100527),
+    c = n(906732),
+    u = n(728345),
+    d = n(377171),
+    f = n(243778),
+    _ = n(483517),
+    p = n(652853),
+    h = n(994102),
+    m = n(671955),
+    g = n(388032),
+    E = n(114004);
+function b(e) {
+    let { applicationId: t, onAction: n, onClose: b } = e,
+        { analyticsLocations: y } = (0, c.ZP)(l.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { data: O } = (0, u.IX)(t),
+        v = (0, s.q)(O, l.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { themeType: I } = (0, p.z)(),
+        T = I === m.l.MODAL || I === m.l.MODAL_V2,
+        S = v && T && null != O,
+        A = S ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
+        [C] = (0, f.US)(A);
+    return S
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(d.Z, { className: m.cloudPlayDivider }),
+                  (0, r.jsx)(_.Z, { className: E.cloudPlayDivider }),
                   (0, r.jsxs)("div", {
-                      className: m.cloudPlaySection,
+                      className: E.cloudPlaySection,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: m.cloudPlaySectionTextContainer,
+                              className: E.cloudPlaySectionTextContainer,
                               children: [
-                                  T === i.z.CLOUD_PLAY_NEW_BADGE &&
+                                  C === i.z.CLOUD_PLAY_NEW_BADGE &&
                                       (0, r.jsx)(o.IGR, {
-                                          text: h.intl.string(h.t.y2b7CA),
-                                          color: c.Z.BG_BRAND,
+                                          text: g.intl.string(g.t.y2b7CA),
+                                          color: d.Z.BG_BRAND,
                                       }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xs/medium",
-                                      children: h.intl.string(h.t.IQjdmZ),
+                                      children: g.intl.string(g.t.IQjdmZ),
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(_.Z, {
-                              application: E,
+                          (0, r.jsx)(h.Z, {
+                              application: O,
                               onAction: n,
-                              onClose: g,
+                              onClose: b,
                               size: a.Ph.SMALL,
+                              analyticsLocations: y,
                           }),
                       ],
                   }),

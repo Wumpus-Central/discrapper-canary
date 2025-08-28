@@ -1,56 +1,65 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(879690),
-    o = n(704215),
-    s = n(907862),
-    l = n(481060),
-    c = n(206074),
-    u = n(728345),
-    d = n(266454),
-    f = n(243778),
-    _ = n(921944),
-    p = n(388032),
-    h = n(204794);
-let m = (0, a.U)((e) => ({
+    o = n(990547),
+    s = n(704215),
+    l = n(907862),
+    c = n(481060),
+    u = n(206074),
+    d = n(100527),
+    f = n(906732),
+    _ = n(213609),
+    p = n(728345),
+    h = n(266454),
+    m = n(243778),
+    g = n(921944),
+    E = n(388032),
+    b = n(204794);
+let y = (0, a.U)((e) => ({
         activeEntryId: null,
         setActiveEntryId: (t) => e({ activeEntryId: t }),
     })),
-    g = (e) => {
+    O = (e) => {
         let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: a } = e,
-            { data: g } = (0, u.IX)(t.extra.application_id),
-            E = (0, c.q)(g, "CloudPlayPopover"),
-            b = (0, d.Nj)(o.z.CLOUD_PLAY_NEW_BADGE),
-            y = E && !b && n,
-            { activeEntryId: O, setActiveEntryId: v } = m(),
-            I = O === t.id,
-            T = y && I ? [o.z.CLOUD_PLAY_POPOVER] : [],
-            [S, A] = (0, f.US)(T),
-            C = S === o.z.CLOUD_PLAY_POPOVER,
-            N = (0, c.Z)({
-                application: g,
-                location: "CloudPlayDismissibleContentPopover",
-            });
+            { data: O } = (0, p.IX)(t.extra.application_id),
+            { analyticsLocations: v } = (0, f.ZP)(d.Z.CLOUD_PLAY_POPOVER),
+            I = (0, u.Z)({
+                application: O,
+                analyticsLocations: v,
+            }),
+            T = (0, h.Nj)(s.z.CLOUD_PLAY_NEW_BADGE),
+            S = null != I && !T && n,
+            { activeEntryId: A, setActiveEntryId: C } = y(),
+            N = A === t.id,
+            R = S && N ? [s.z.CLOUD_PLAY_POPOVER] : [],
+            [P, w] = (0, m.US)(R),
+            D = P === s.z.CLOUD_PLAY_POPOVER;
         i.useEffect(() => {
-            y && null === O && v(t.id);
-        }, [O, y, t.id, v]);
-        let R = () => {
-            null == N || N();
+            S && null === A && C(t.id);
+        }, [A, S, t.id, C]);
+        let x = () => {
+            null == I || I();
         };
         i.useEffect(
             () => () => {
-                C && (A(_.L.USER_DISMISS), v(null));
+                D && (w(g.L.USER_DISMISS), C(null));
             },
-            [C, A, v],
-        );
-        let P = () => {
-            A(_.L.USER_DISMISS), v(null);
+            [D, w, C],
+        ),
+            (0, _.Z)({
+                name: o.ImpressionNames.CLOUD_PLAY_CTA,
+                type: o.ImpressionTypes.VIEW,
+                properties: { location_stack: v },
+            });
+        let L = () => {
+            w(g.L.USER_DISMISS), C(null);
         };
-        return (0, r.jsx)(s.J2, {
-            title: p.intl.string(p.t["+WNDtb"]),
+        return (0, r.jsx)(l.J2, {
+            title: E.intl.string(E.t["+WNDtb"]),
             body: "",
             targetElementRef: a,
-            shouldShow: C,
+            shouldShow: D,
             position: "left",
             caretConfig: {
                 position: "right",
@@ -59,21 +68,21 @@ let m = (0, a.U)((e) => ({
             gradientColor: "pink",
             graphic: {
                 type: "image",
-                src: h.Z,
+                src: b.Z,
             },
             actions: [
                 {
-                    icon: l.v3n,
-                    text: p.intl.string(p.t["jaYS/v"]),
-                    onClick: R,
+                    icon: c.v3n,
+                    text: E.intl.string(E.t["jaYS/v"]),
+                    onClick: x,
                 },
             ],
-            onRequestClose: P,
+            onRequestClose: L,
         });
     },
-    E = (e) => {
+    v = (e) => {
         let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: i } = e;
-        return (0, r.jsx)(g, {
+        return (0, r.jsx)(O, {
             entry: t,
             targetElementRef: i,
             isFirstApplicationOccurrence: n,

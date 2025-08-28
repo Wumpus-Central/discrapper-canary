@@ -27,47 +27,47 @@ function m(e, t) {
     return !!n && null != e && (!!h(e) || (null != i && null != l && null != a && !!(0, o.ye)(a)));
 }
 function g(e) {
-    let { application: t, location: n, analyticsLocations: o } = e,
-        u = m(t, n),
-        { bot: d } = null != t ? t : { bot: null },
-        g = (0, f.Z)(t),
-        E = null == g ? void 0 : g.id,
-        { data: b } = (0, s.IX)(E),
-        { bot: y } = null != b ? b : { bot: null };
+    let { application: t, analyticsLocations: n } = e,
+        o = m(t, n.length > 0 ? n[n.length - 1] : ""),
+        { bot: u } = null != t ? t : { bot: null },
+        d = (0, f.Z)(t),
+        g = null == d ? void 0 : d.id,
+        { data: E } = (0, s.IX)(g),
+        { bot: b } = null != E ? E : { bot: null };
     return r.useMemo(() => {
-        if (!u || null == t) return null;
+        if (!o || null == t) return null;
         let e = () => {
             (0, l.Q3)(i.z.CLOUD_PLAY_NEW_BADGE, { dismissAction: p.L.TAKE_ACTION }),
                 (0, l.Q3)(i.z.CLOUD_PLAY_POPOVER, { dismissAction: p.L.TAKE_ACTION });
         };
-        return h(t) && null != d
+        return h(t) && null != u
             ? () => {
                   e(),
                       c.default.track(_.rMx.CLOUD_PLAY_CTA_CLICKED, {
                           source_application_id: t.id,
                           launching_application_id: t.id,
-                          location_stack: null != o ? o : [],
+                          location_stack: n,
                       }),
                       (0, a.W)({
                           appId: t.id,
-                          botId: d.id,
-                          analyticsLocations: null != o ? o : [],
+                          botId: u.id,
+                          analyticsLocations: null != n ? n : [],
                       });
               }
-            : null != E && null != y
+            : null != g && null != b
               ? () => {
                     e(),
                         c.default.track(_.rMx.CLOUD_PLAY_CTA_CLICKED, {
                             source_application_id: t.id,
-                            launching_application_id: E,
-                            location_stack: null != o ? o : [],
+                            launching_application_id: g,
+                            location_stack: n,
                         }),
                         (0, a.W)({
-                            appId: E,
-                            botId: y.id,
-                            analyticsLocations: null != o ? o : [],
+                            appId: g,
+                            botId: b.id,
+                            analyticsLocations: null != n ? n : [],
                         });
                 }
               : void 0;
-    }, [u, t, d, E, y, o]);
+    }, [o, t, u, g, b, n]);
 }

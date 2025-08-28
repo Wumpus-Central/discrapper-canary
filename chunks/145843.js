@@ -1,26 +1,34 @@
-n.d(t, { Z: () => s });
-var r = n(951288);
-n(647438);
-var i = n(481060),
-    a = n(206074),
-    o = n(388032);
-function s(e) {
-    let { application: t, location: n } = e,
-        s = (0, a.Z)({
+n.d(t, { Z: () => u });
+var r = n(951288),
+    i = n(990547),
+    a = n(481060),
+    o = n(906732),
+    s = n(213609),
+    l = n(206074),
+    c = n(388032);
+function u(e) {
+    let { application: t, analyticsLocation: n } = e,
+        { analyticsLocations: u } = (0, o.ZP)(n),
+        d = (0, l.Z)({
             application: t,
-            location: n,
-        }),
-        l = () => {
-            null == s || s();
-        };
+            analyticsLocations: u,
+        });
+    (0, s.Z)({
+        name: i.ImpressionNames.CLOUD_PLAY_CTA,
+        type: i.ImpressionTypes.VIEW,
+        properties: { location_stack: u },
+    });
+    let f = () => {
+        null == d || d();
+    };
     return (0, r.jsx)(
-        i.zxk,
+        a.zxk,
         {
             variant: "primary",
             size: "md",
-            icon: i.v3n,
-            text: o.intl.string(o.t["jaYS/v"]),
-            onClick: l,
+            icon: a.v3n,
+            text: c.intl.string(c.t["jaYS/v"]),
+            onClick: f,
             fullWidth: !0,
         },
         "cloud-play",

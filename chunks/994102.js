@@ -1,14 +1,15 @@
-n.d(t, { Z: () => h });
-var r = n(951288);
-n(647438);
-var i = n(755721),
-    a = n(481060),
-    o = n(206074),
-    s = n(652853),
-    l = n(475413),
-    c = n(671955),
-    u = n(388032);
-function d(e, t, n) {
+n.d(t, { Z: () => g });
+var r = n(951288),
+    i = n(990547),
+    a = n(755721),
+    o = n(481060),
+    s = n(206074),
+    l = n(213609),
+    c = n(652853),
+    u = n(475413),
+    d = n(671955),
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +33,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,43 +50,52 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
-    let { application: t, onAction: n, onClose: d, size: _ } = e,
-        { themeType: h } = (0, s.z)(),
-        m = (0, o.Z)({
+function g(e) {
+    let { application: t, analyticsLocations: n, onAction: _, onClose: h, size: g } = e,
+        { themeType: E } = (0, c.z)(),
+        b = (0, s.Z)({
             application: t,
-            location: "User Profile Activity",
+            analyticsLocations: n,
         });
-    return null == m
+    return ((0, l.Z)(
+        {
+            name: i.ImpressionNames.CLOUD_PLAY_CTA,
+            type: i.ImpressionTypes.VIEW,
+            properties: { location_stack: n },
+        },
+        { disableTrack: null == b },
+        [b],
+    ),
+    null == b)
         ? null
-        : (0, r.jsx)(a.ua7, {
-              text: u.intl.string(u.t.JVwWvb),
+        : (0, r.jsx)(o.ua7, {
+              text: f.intl.string(f.t.JVwWvb),
               position: "top",
               children: (e) =>
                   (0, r.jsx)(
-                      l.tG,
-                      p(f({}, e), {
-                          icon: a.v3n,
-                          text: u.intl.string(u.t["jaYS/v"]),
-                          size: null != _ ? _ : h === c.l.MODAL_V2 ? i.Ph.TINY : i.Ph.SMALL,
-                          fullWidth: h !== c.l.MODAL_V2,
+                      u.tG,
+                      m(p({}, e), {
+                          icon: o.v3n,
+                          text: f.intl.string(f.t["jaYS/v"]),
+                          size: null != g ? g : E === d.l.MODAL_V2 ? a.Ph.TINY : a.Ph.SMALL,
+                          fullWidth: E !== d.l.MODAL_V2,
                           themeColor: "secondary",
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  null == n || n({ action: "PRESS_CLOUD_PLAY_BUTTON" }),
-                                  m(),
-                                  null == d || d();
+                                  null == _ || _({ action: "PRESS_CLOUD_PLAY_BUTTON" }),
+                                  b(),
+                                  null == h || h();
                           },
                       }),
                   ),

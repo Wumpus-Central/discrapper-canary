@@ -47,6 +47,7 @@ var r = (function (e) {
             (e.CHAT_WALLPAPER_WALLPAPER_OPTION = "impression_chat_wallpaper_wallpaper_option"),
             (e.CLIP_EDITOR_VIEWED = "impression_clip_editor_viewed"),
             (e.CLIP_GALLERY_VIEWED = "impression_clip_gallery_viewed"),
+            (e.CLOUD_PLAY_CTA = "impression_cloud_play_cta"),
             (e.CLYDE_AI_PROFILE_EMBED_VIEWED = "impression_clyde_ai_profile_embed_viewed"),
             (e.COLLECTIBLES_EXPIRY_MODAL = "impression_collectibles_expiry_modal"),
             (e.CONFETTI_POTION_MODAL = "impression_confetti_potion_modal"),

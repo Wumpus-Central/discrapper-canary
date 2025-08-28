@@ -451,6 +451,8 @@ var r = (function (e) {
         (e.USER_PROFILE_ACTIVITY_CONTEXT_MENU = "user profile activity context menu"),
         (e.USER_PROFILE_OVERFLOW_MENU = "user profile overflow menu"),
         (e.USER_PROFILE_CUSTOM_STATUS_BUBBLE = "user profile custom status bubble"),
+        (e.USER_PROFILE_ACTIVITY_BUTTONS = "user profile activity buttons"),
+        (e.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION = "user profile cloud play section"),
         (e.BLOCKED_PROFILE_MODAL = "blocked profile modal"),
         (e.IGNORED_PROFILE_MODAL = "ignored profile modal"),
         (e.BLOCKED_PROFILE_POPOUT = "blocked profile popout"),
@@ -481,6 +483,9 @@ var r = (function (e) {
         (e.GO_LIVE_KEYBIND = "go live keybind"),
         (e.OVERLAY_VOICE_WIDGET = "overlay voice widget"),
         (e.REQUEST_TO_STREAM_INVITE_EMBED = "request to stream invite embed"),
+        (e.MEMBER_LIST_GAMING_CONTENT_POPOUT = "member list gaming content popout"),
+        (e.CLOUD_PLAY_POPOVER = "cloud play popover"),
+        (e.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION = "now playing item rich presence section"),
         e
     );
 })(r || {});
