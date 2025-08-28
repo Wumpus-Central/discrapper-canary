@@ -1,41 +1,38 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var l = n(951288),
     i = n(647438),
-    r = n(755721),
-    a = n(481060),
-    o = n(984168),
-    s = n(314734),
-    c = n(388032),
-    u = n(54701);
-function d(e) {
+    r = n(481060),
+    a = n(984168),
+    o = n(314734),
+    s = n(388032);
+function c(e) {
     let t,
-        { sortOrder: n, onSortOptionClick: d } = e,
-        p = i.useRef(null);
+        { sortOrder: n, onSortOptionClick: c } = e,
+        u = i.useRef(null);
     switch (n) {
-        case s.bS.POPULAR:
-            t = c.intl.string(c.t.SzxiqK);
+        case o.bS.POPULAR:
+            t = s.intl.string(s.t.SzxiqK);
             break;
-        case s.bS.ALPHABETICAL:
-            t = c.intl.string(c.t.m8xstr);
+        case o.bS.ALPHABETICAL:
+            t = s.intl.string(s.t.m8xstr);
     }
-    return (0, l.jsx)(a.yRy, {
-        targetElementRef: p,
+    return (0, l.jsx)(r.yRy, {
+        targetElementRef: u,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(o.Z, {
+            return (0, l.jsx)(a.Z, {
                 sortOrder: n,
-                onSortOptionClick: d,
+                onSortOptionClick: c,
                 closePopout: t,
             });
         },
         position: "bottom",
         align: "left",
-        children: (e, n) => {
-            var i, o;
-            let { isShown: s } = n;
-            return (0, l.jsxs)(
-                r.zx,
-                ((i = (function (e) {
+        children: (e) => {
+            var n, i;
+            return (0, l.jsx)(
+                r.zxk,
+                ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             l = Object.keys(n);
@@ -60,40 +57,17 @@ function d(e) {
                     }
                     return e;
                 })({}, e)),
-                (o = o =
+                (i = i =
                     {
-                        buttonRef: p,
-                        size: r.zx.Sizes.MIN,
-                        color: r.zx.Colors.CUSTOM,
-                        className: u.sortDropdown,
-                        innerClassName: u.sortDropdownInner,
-                        "aria-label": c.intl.string(c.t.yeYaHR),
-                        children: [
-                            (0, l.jsx)(a.uVW, {
-                                size: "xs",
-                                color: "currentColor",
-                                className: u.sortIconMargin,
-                            }),
-                            (0, l.jsx)(a.Text, {
-                                variant: "text-sm/medium",
-                                color: "text-default",
-                                children: t,
-                            }),
-                            s
-                                ? (0, l.jsx)(a.u04, {
-                                      size: "custom",
-                                      color: "currentColor",
-                                      width: 20,
-                                  })
-                                : (0, l.jsx)(a.CJ0, {
-                                      size: "custom",
-                                      color: "currentColor",
-                                      width: 20,
-                                  }),
-                        ],
+                        buttonRef: u,
+                        size: "sm",
+                        variant: "secondary",
+                        "aria-label": s.intl.string(s.t.yeYaHR),
+                        icon: r.uVW,
+                        text: t,
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -101,10 +75,10 @@ function d(e) {
                               n.push.apply(n, l);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
-                i),
+                n),
             );
         },
     });
