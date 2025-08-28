@@ -1,28 +1,30 @@
 n.d(t, {
-    J: () => l,
-    L: () => r,
+    J: () => r,
+    L: () => i,
 }),
     n(647438);
-var i,
-    l =
-        (((i = {})[(i.ROOT = 0)] = "ROOT"),
-        (i[(i.SECTION = 1)] = "SECTION"),
-        (i[(i.PANEL = 2)] = "PANEL"),
-        (i[(i.PANE = 3)] = "PANE"),
-        (i[(i.SPLIT = 4)] = "SPLIT"),
-        (i[(i.CATEGORY = 5)] = "CATEGORY"),
-        (i[(i.ACCORDION = 6)] = "ACCORDION"),
-        (i[(i.LIST = 7)] = "LIST"),
-        (i[(i.STATIC = 8)] = "STATIC"),
-        (i[(i.BUTTON = 9)] = "BUTTON"),
-        (i[(i.TOGGLE = 10)] = "TOGGLE"),
-        (i[(i.SLIDER = 11)] = "SLIDER"),
-        (i[(i.SELECT = 12)] = "SELECT"),
-        (i[(i.RADIO = 13)] = "RADIO"),
-        (i[(i.CHECKBOX = 14)] = "CHECKBOX"),
-        (i[(i.NAVIGATOR = 15)] = "NAVIGATOR"),
-        (i[(i.CUSTOM = 16)] = "CUSTOM"),
-        i);
-function r(e) {
+var r = (function (e) {
+    return (
+        (e[(e.ROOT = 0)] = "ROOT"),
+        (e[(e.SECTION = 1)] = "SECTION"),
+        (e[(e.PANEL = 2)] = "PANEL"),
+        (e[(e.PANE = 3)] = "PANE"),
+        (e[(e.SPLIT = 4)] = "SPLIT"),
+        (e[(e.CATEGORY = 5)] = "CATEGORY"),
+        (e[(e.ACCORDION = 6)] = "ACCORDION"),
+        (e[(e.LIST = 7)] = "LIST"),
+        (e[(e.STATIC = 8)] = "STATIC"),
+        (e[(e.BUTTON = 9)] = "BUTTON"),
+        (e[(e.TOGGLE = 10)] = "TOGGLE"),
+        (e[(e.SLIDER = 11)] = "SLIDER"),
+        (e[(e.SELECT = 12)] = "SELECT"),
+        (e[(e.RADIO = 13)] = "RADIO"),
+        (e[(e.CHECKBOX = 14)] = "CHECKBOX"),
+        (e[(e.NAVIGATOR = 15)] = "NAVIGATOR"),
+        (e[(e.CUSTOM = 16)] = "CUSTOM"),
+        e
+    );
+})({});
+function i(e) {
     return "layout" in e;
 }

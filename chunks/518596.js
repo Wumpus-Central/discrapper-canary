@@ -1,55 +1,81 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(481060),
-    l = n(570140),
-    a = n(37234),
-    o = n(526665),
-    s = n(981631);
-function c() {
+    a = n(570140),
+    o = n(37234),
+    s = n(526665),
+    l = n(837061),
+    c = n(981631);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let p = "USER_SETTINGS_MODAL_MODAL_KEY";
+function h() {
     var e;
-    arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    let t = arguments.length > 1 ? arguments[1] : void 0;
-    l.Z.dispatch({
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
+        u = arguments.length > 1 ? arguments[1] : void 0;
+    a.Z.dispatch({
         type: "USER_SETTINGS_MODAL_OPEN",
-        section: null != (e = null == t ? void 0 : t.section) ? e : null,
-        subsection: null == t ? void 0 : t.subsection,
+        section: null != (e = null == u ? void 0 : u.section) ? e : null,
+        subsection: null == u ? void 0 : u.subsection,
         openWithoutBackstack: !1,
     }),
-        (0, o.yP)("openUserSettings")
+        (0, s.yP)("openUserSettings")
             ? (0, i.ZDy)(
                   async () => {
                       let { default: e } = await n.e("47129").then(n.bind(n, 245286));
-                      return (t) =>
-                          (0, r.jsx)(
-                              e,
-                              (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              }),
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              (r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0,
-                                                        })
-                                                      : (e[t] = r);
-                                          });
-                                  }
-                                  return e;
-                              })({}, t),
-                          );
+                      return (n) => (0, r.jsx)(e, _(d({}, n), { target: t }));
                   },
-                  { modalKey: "USER_SETTINGS_MODAL_MODAL_KEY" },
+                  { modalKey: p },
               )
-            : (0, a.jN)(s.S9g.USER_SETTINGS);
+            : (0, o.jN)(c.S9g.USER_SETTINGS);
 }
