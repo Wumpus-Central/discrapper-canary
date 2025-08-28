@@ -19,6 +19,7 @@ n.d(t, {
     lE: () => g,
     mq: () => l,
     nS: () => N,
+    oK: () => P,
     ur: () => _,
     xs: () => A,
     yR: () => y,
@@ -399,3 +400,17 @@ let o = (0, i.Z)({
         defaultConfig: { isEnabled: !1 },
         variations: { 0: { isEnabled: !0 } },
     });
+let P = (0, i.Z)({
+    id: "2025-07_apex_cluster_randomization_aa",
+    kind: "user",
+    label: "Apex Cluster Randomization AA",
+    defaultConfig: { isEnabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: "AA test enabled. Noop on UI effect.",
+            config: { isEnabled: !0 },
+        },
+    ],
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+});
