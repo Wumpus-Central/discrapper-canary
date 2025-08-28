@@ -1,14 +1,15 @@
-n.d(t, { default: () => b });
-var o = n(951288),
-    r = n(481060),
+n.d(t, { default: () => s });
+var o = n(951288);
+n(647438);
+var r = n(481060),
     i = n(82084),
     a = n(131051),
     c = n(996733),
-    l = n(604227),
-    s = n(920952);
-function b(e) {
+    b = n(914578),
+    l = n(920952);
+function s(e) {
     let t = (0, c.Z7)(),
-        n = (0, a.Z)(s.Z, t);
+        n = (0, a.Z)(l.Z, t);
     return (0, o.jsx)(
         i.Z,
         (function (e) {
@@ -39,7 +40,7 @@ function b(e) {
             {
                 root: n,
                 sidebarHeader: _,
-                sidebarFooter: l.Z,
+                sidebarFooter: b.Z,
             },
             e,
         ),

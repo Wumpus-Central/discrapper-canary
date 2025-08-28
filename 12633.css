@@ -62269,6 +62269,17 @@ h3.improved__1689b:after {
     text-transform: none
 }
 
+.compactInfo__2debe {
+    display: inline
+}
+
+.compactInfo__2debe>:not(:last-child):after {
+    color: var(--text-muted);
+    content: "•";
+    font-size: 10px;
+    margin: 0 var(--space-4)
+}
+
 .iconContainer__7ee90 {
     margin: 0 16px 8px 4px
 }
@@ -89671,7 +89682,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

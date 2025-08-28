@@ -76,7 +76,7 @@ let N = (0, g.Un)({
         webpackId: 72493,
     }),
     P = (0, g.Un)({
-        createPromise: () => Promise.all([n.e("76210"), n.e("36878")]).then(n.bind(n, 604960)),
+        createPromise: () => Promise.all([n.e("5550"), n.e("36878")]).then(n.bind(n, 604960)),
         webpackId: 604960,
         name: "UserSettingsV2",
     }),
@@ -105,7 +105,7 @@ let N = (0, g.Un)({
                 n.e("6850"),
                 n.e("58227"),
                 n.e("54408"),
-                n.e("42926"),
+                n.e("90746"),
                 n.e("88479"),
                 n.e("95140"),
             ]).then(n.bind(n, 994763)),
