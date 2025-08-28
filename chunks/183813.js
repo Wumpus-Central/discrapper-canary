@@ -1,4 +1,4 @@
-n.d(t, { S: () => b }), n(388685), n(361932), n(187205);
+n.d(t, { S: () => g }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -17,10 +17,10 @@ var r = n(951288),
     j = n(27034),
     m = n(981631),
     L = n(388032),
-    g = n(950174);
-function b(e) {
+    b = n(950174);
+function g(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: l, selectedSkuId: b, step: y } = (0, h.JL)(),
+        { selectedPlan: l, selectedSkuId: g, step: y } = (0, h.JL)(),
         {
             setSelectedGiftingPromotionReward: S,
             selectedGiftingPromotionReward: E,
@@ -28,16 +28,16 @@ function b(e) {
             claimableVariants: P,
         } = (0, _.wD)(),
         O = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        [I, w] = i.useState(null),
+        [w, I] = i.useState(null),
         k = Math.floor(Math.random() * d.mo),
-        [M, Z] = i.useState(k);
+        [M, T] = i.useState(k);
     i.useEffect(() => {
         null != v && v.length > 0 && null == E && S(v[0]);
     }, [v, E, S]),
         s()(null != l, "Expected plan to selected"),
-        s()(null != b, "Expected selectedSkuId"),
+        s()(null != g, "Expected selectedSkuId"),
         s()(null != y, "Step should be set");
-    let T = i.useMemo(
+    let Z = i.useMemo(
             () =>
                 null == P
                     ? null != v
@@ -90,9 +90,9 @@ function b(e) {
             [P, v, M],
         ),
         A = (e) => {
-            S(T.find((t) => t.skuId === e)), w(e);
+            S(Z.find((t) => t.skuId === e)), I(e);
         },
-        B = T.map((e) =>
+        N = Z.map((e) =>
             (0, r.jsx)(
                 C.c,
                 {
@@ -103,14 +103,15 @@ function b(e) {
                     claimed: null != v && !v.some((t) => t.skuId === e.skuId),
                     user: O,
                     onSelect: A,
-                    selectedSkuId: null != I ? I : void 0,
+                    selectedSkuId: null != w ? w : void 0,
+                    category: M,
                 },
                 e.skuId,
             ),
         ),
-        N = (0, r.jsx)(j.O3, {
+        B = (0, r.jsx)(j.O3, {
             children: (0, r.jsx)(o.mzw, {
-                className: g.modalFooter,
+                className: b.modalFooter,
                 children: (0, r.jsx)(p.y, {
                     onStepChange: (e) => {
                         null != O &&
@@ -132,19 +133,19 @@ function b(e) {
         U = (0, r.jsxs)(o.X6q, {
             variant: "heading-lg/bold",
             color: "header-primary",
-            className: g.title,
+            className: b.title,
             children: [
                 L.intl.string(L.t["Rp0+ZG"]),
                 (0, r.jsx)(o.Text, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    className: g.subtitle,
-                    children: L.intl.format(L.t.xGzXNT, { rewardCount: T.length * d.mo }),
+                    className: b.subtitle,
+                    children: L.intl.format(L.t.xGzXNT, { rewardCount: Z.length * d.mo }),
                 }),
             ],
         });
     return (0, r.jsxs)("div", {
-        className: g.container,
+        className: b.container,
         children: [
             (0, r.jsx)(o.xBx, { children: (0, r.jsx)(o.olH, { onClick: n }) }),
             (0, r.jsxs)(o.Kqy, {
@@ -157,17 +158,17 @@ function b(e) {
                         P.length > 1 &&
                         (0, r.jsx)(c.Z, {
                             defaultCategory: M,
-                            onCategoryChange: Z,
+                            onCategoryChange: T,
                         }),
                 ],
             }),
             (0, r.jsx)(o.hzk, {
                 children: (0, r.jsx)("div", {
-                    className: g.cardsGrid,
-                    children: B,
+                    className: b.cardsGrid,
+                    children: N,
                 }),
             }),
-            N,
+            B,
         ],
     });
 }
