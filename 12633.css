@@ -66184,6 +66184,8 @@ html .progress__61462 {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 432px;
     padding: var(--space-12);
     width: 100%
@@ -66193,12 +66195,18 @@ html .progress__61462 {
 .themePreviewContainer__7473d {
     align-items: center;
     display: flex;
-    gap: var(--space-12);
-    justify-content: space-between
+    gap: var(--space-12)
+}
+
+.themePreviewContainer__7473d {
+    flex-grow: 2;
+    justify-content: flex-start
 }
 
 .colorPreview__7473d {
     border-radius: var(--radius-sm);
+    flex-grow: 0;
+    flex-shrink: 0;
     height: 60px;
     overflow: hidden;
     width: 60px
