@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(997841), n(388685), n(642613);
+n.d(t, { Z: () => K }), n(539854), n(388685), n(642613), n(997841);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -37,40 +37,49 @@ let T = !1,
     A = v.Skl.UNKNOWN,
     C = 0,
     N = [],
-    R = !1,
-    P = !0,
-    w = Object.freeze([]),
+    R = [],
+    P = !1,
+    w = !0,
     D = Object.freeze([]),
-    x = [];
-function L(e) {
+    x = Object.freeze([]),
+    L = [],
+    j = [];
+function M(e) {
+    if (0 === e.length) return e;
+    let t = [],
+        n = [];
+    for (let r of e) r.type === v.IIU.PLAYING ? n.push(r) : t.push(r);
+    return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(y.f)[0]].sort(y.f);
+}
+function k(e) {
     return (0, h.OT)(e, E.Z);
 }
-function j(e) {
+function U(e) {
     let t = m.Z.getGameByName(e);
-    return null != t ? L(t.id) : f.G6.getSetting();
+    return null != t ? k(t.id) : f.G6.getSetting();
 }
-function M(e) {
+function G(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
         case v.IIU.LISTENING:
             if ((0, u.Z)(e)) return d.Z.shouldShowActivity();
-            if (null != e.application_id) return L(e.application_id);
+            if (null != e.application_id) return k(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? L(e.application_id) : j(e.name);
+            return null != e.application_id ? k(e.application_id) : U(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
-            return null == e.application_id || L(e.application_id);
+            return null == e.application_id || k(e.application_id);
     }
 }
-function k() {
-    (P = !0), (A = S), U();
+function B() {
+    (w = !0), (A = S), Z();
 }
-function U() {
+function Z() {
     var e;
-    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) S = A;
+    if (((C = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), w)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
@@ -78,39 +87,41 @@ function U() {
     }
     S === v.Skl.ONLINE && C > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(M);
-    a()(N, n) || ((N = n), (t = !0));
+        n = w || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(G);
+    a()(N, n) || ((N = n), (R = M(n)), (t = !0));
     let r = O.Z.getRemoteActivities();
-    w !== r && ((w = r), (t = !0));
+    D !== r && ((D = r), (t = !0));
     let i = O.Z.getHiddenActivities();
-    D !== i && (D = i),
+    x !== i && (x = i),
         t &&
-            (x = s()([...N, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
-                .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
-                .value());
+            (j = M(
+                (L = s()([...N, ...D.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
+                    .uniqBy((e) => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+                    .value()),
+            ));
 }
-function G(e) {
-    return (T = e.invisible), U();
-}
-function B() {
-    return (T = !1), U();
-}
-function Z() {
-    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(S, x);
+function F(e) {
+    return (T = e.invisible), Z();
 }
 function V() {
-    Z();
+    return (T = !1), Z();
 }
-class F extends (r = l.ZP.Store) {
+function H() {
+    (w = !1), (A = v.Skl.UNKNOWN), Z(), y.Z.setCurrentUserOnConnectionOpen(S, L);
+}
+function Y() {
+    H();
+}
+class W extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
+        this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], Z);
     }
     getLocalPresence() {
         return {
             status: S,
             since: C,
-            activities: N,
-            afk: R,
+            activities: R,
+            afk: P,
         };
     }
     getStatus() {
@@ -118,14 +129,18 @@ class F extends (r = l.ZP.Store) {
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? x : N;
+        return e ? j : R;
+    }
+    getUnfilteredActivities() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+        return e ? L : N;
     }
     getHiddenActivities() {
-        return D;
+        return x;
     }
     getPrimaryActivity() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? x[0] : N[0];
+        return this.getActivities(e)[0];
     }
     getApplicationActivity(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -136,27 +151,27 @@ class F extends (r = l.ZP.Store) {
         return this.getActivities(t).find(e);
     }
 }
-I(F, "displayName", "SelfPresenceStore");
-let H = new F(c.Z, {
-    START_SESSION: U,
-    CONNECTION_OPEN: V,
-    CONNECTION_OPEN_SUPPLEMENTAL: Z,
-    OVERLAY_INITIALIZE: Z,
-    CONNECTION_CLOSED: U,
-    IDLE: U,
-    AFK: U,
-    RUNNING_GAMES_CHANGE: U,
-    STREAMING_UPDATE: U,
-    USER_SETTINGS_PROTO_UPDATE: U,
-    LOCAL_ACTIVITY_UPDATE: U,
-    SPOTIFY_PLAYER_STATE: U,
-    SPOTIFY_PLAYER_PLAY: U,
-    USER_CONNECTIONS_UPDATE: U,
-    SESSIONS_REPLACE: U,
-    RPC_APP_DISCONNECTED: U,
-    LIBRARY_FETCH_SUCCESS: U,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
-    LOGOUT: k,
-    FORCE_INVISIBLE: G,
-    WINDOW_FOCUS: B,
+I(W, "displayName", "SelfPresenceStore");
+let K = new W(c.Z, {
+    START_SESSION: Z,
+    CONNECTION_OPEN: Y,
+    CONNECTION_OPEN_SUPPLEMENTAL: H,
+    OVERLAY_INITIALIZE: H,
+    CONNECTION_CLOSED: Z,
+    IDLE: Z,
+    AFK: Z,
+    RUNNING_GAMES_CHANGE: Z,
+    STREAMING_UPDATE: Z,
+    USER_SETTINGS_PROTO_UPDATE: Z,
+    LOCAL_ACTIVITY_UPDATE: Z,
+    SPOTIFY_PLAYER_STATE: Z,
+    SPOTIFY_PLAYER_PLAY: Z,
+    USER_CONNECTIONS_UPDATE: Z,
+    SESSIONS_REPLACE: Z,
+    RPC_APP_DISCONNECTED: Z,
+    LIBRARY_FETCH_SUCCESS: Z,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: Z,
+    LOGOUT: B,
+    FORCE_INVISIBLE: F,
+    WINDOW_FOCUS: V,
 });
