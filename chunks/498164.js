@@ -1,33 +1,34 @@
-n.d(t, { Z: () => Z }), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => w }), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(951288);
 n(647438);
-var i = n(756647),
-    l = n(481060),
-    a = n(570140),
-    o = n(355467),
-    s = n(899742),
-    c = n(493683),
-    u = n(457330),
-    d = n(533307),
-    p = n(317381),
-    f = n(122613),
-    h = n(649256),
-    g = n(100527),
-    m = n(728345),
-    b = n(962220),
-    _ = n(69580),
-    O = n(703656),
-    E = n(553795),
-    y = n(594174),
-    v = n(626135),
-    I = n(585483),
-    C = n(591759),
-    S = n(998502),
-    N = n(996106),
-    T = n(109815),
-    P = n(186901),
-    j = n(981631);
-function x(e) {
+var i = n(772848),
+    l = n(756647),
+    a = n(481060),
+    o = n(570140),
+    s = n(355467),
+    c = n(899742),
+    u = n(493683),
+    d = n(457330),
+    p = n(533307),
+    f = n(317381),
+    h = n(122613),
+    g = n(649256),
+    m = n(100527),
+    b = n(728345),
+    _ = n(962220),
+    O = n(69580),
+    E = n(703656),
+    y = n(553795),
+    v = n(594174),
+    I = n(626135),
+    C = n(585483),
+    S = n(591759),
+    N = n(998502),
+    T = n(996106),
+    P = n(109815),
+    j = n(186901),
+    x = n(981631);
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,45 +53,45 @@ function x(e) {
     }
     return e;
 }
-function A(e, t) {
+function Z(e, t) {
     null != e &&
-        v.default.track(j.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
+        I.default.track(x.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
-            fingerprint: (0, i.s)(e),
+            fingerprint: (0, l.s)(e),
             link_type: t,
         });
 }
-let Z = {
-    [j.Etm.INVITE_BROWSER]: {
-        scope: P.cE,
+let w = {
+    [x.Etm.INVITE_BROWSER]: {
+        scope: j.cE,
         async handler(e) {
             let {
                 args: { code: t },
             } = e;
-            return await (0, T.T)(t, "Desktop Modal");
+            return await (0, P.T)(t, "Desktop Modal");
         },
     },
-    [j.Etm.GUILD_TEMPLATE_BROWSER]: {
-        scope: P.cE,
+    [x.Etm.GUILD_TEMPLATE_BROWSER]: {
+        scope: j.cE,
         async handler(e) {
             let {
                 args: { code: t },
             } = e;
-            if (null == y.default.getCurrentUser()) return;
-            let { guildTemplate: i } = await b.Z.resolveGuildTemplate(t);
+            if (null == v.default.getCurrentUser()) return;
+            let { guildTemplate: i } = await _.Z.resolveGuildTemplate(t);
             if (null == i)
-                throw new N.Z({ errorCode: j.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
+                throw new T.Z({ errorCode: x.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
             return (
-                S.ZP.focus(),
-                (0, l.ZDy)(async () => {
+                N.ZP.focus(),
+                (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
                     return (t) => {
                         var n, l;
                         return (0, r.jsx)(
                             e,
-                            ((n = x({}, t)),
+                            ((n = A({}, t)),
                             (l = l = { guildTemplate: i }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -115,172 +116,201 @@ let Z = {
             );
         },
     },
-    [j.Etm.GIFT_CODE_BROWSER]: {
-        scope: P.cE,
+    [x.Etm.GIFT_CODE_BROWSER]: {
+        scope: j.cE,
         handler(e) {
             let {
                 args: { code: t },
             } = e;
             return new Promise((e, i) => {
-                a.Z.wait(() => {
-                    d.Z.resolveGiftCode(t, !0, !0)
+                o.Z.wait(() => {
+                    p.Z.resolveGiftCode(t, !0, !0)
                         .then((i) => {
-                            let { giftCode: a } = i;
-                            S.ZP.focus(),
-                                v.default.track(j.rMx.OPEN_MODAL, {
+                            let { giftCode: l } = i;
+                            N.ZP.focus(),
+                                I.default.track(x.rMx.OPEN_MODAL, {
                                     type: "gift_accept",
-                                    location: j.SaU,
+                                    location: x.SaU,
                                 }),
-                                (0, l.ZDy)(async () => {
+                                (0, a.ZDy)(async () => {
                                     let { default: e } = await n.e("38029").then(n.bind(n, 409858));
-                                    return (n) => (0, r.jsx)(e, x({ code: t }, n));
+                                    return (n) => (0, r.jsx)(e, A({ code: t }, n));
                                 }),
-                                e({ giftCode: a });
+                                e({ giftCode: l });
                         })
                         .catch(() =>
-                            i(new N.Z({ errorCode: j.lTL.INVALID_GIFT_CODE }, "Invalid gift code: ".concat(t))),
+                            i(new T.Z({ errorCode: x.lTL.INVALID_GIFT_CODE }, "Invalid gift code: ".concat(t))),
                         );
                 });
             });
         },
     },
-    [j.Etm.DEEP_LINK]: {
+    [x.Etm.DEEP_LINK]: {
         scope: {
-            [P.Gp.ANY]: [P.cE, P.lH],
+            [j.Gp.ANY]: [j.cE, j.lH],
         },
         handler(e) {
             let {
                 args: { type: t, params: n },
             } = e;
-            switch ((S.ZP.focus(), t)) {
-                case P.jE.USER_SETTINGS:
-                    null != n && ((0, O.dL)(j.Z5c.SETTINGS(n.section, n.subsection)), A(n.fingerprint, (0, P.O)(t)));
+            switch ((N.ZP.focus(), t)) {
+                case j.jE.USER_SETTINGS:
+                    null != n && ((0, E.dL)(x.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.CHANGELOG:
+                case j.jE.CHANGELOG:
                     null != n &&
-                        ((0, O.dL)(C.Z.formatPathWithQuery(j.Z5c.CHANGELOGS(n.date), n.query)),
-                        A(n.fingerprint, (0, P.O)(t)));
+                        ((0, E.dL)(S.Z.formatPathWithQuery(x.Z5c.CHANGELOGS(n.date), n.query)),
+                        Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.LIBRARY:
-                    (0, O.dL)(j.Z5c.APPLICATION_LIBRARY), null != n && A(n.fingerprint, (0, P.O)(t));
+                case j.jE.LIBRARY:
+                    (0, E.dL)(x.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, (0, j.O)(t));
                     break;
-                case P.jE.STORE_HOME:
-                    (0, O.dL)(j.Z5c.APPLICATION_STORE), null != n && A(n.fingerprint, (0, P.O)(t));
+                case j.jE.STORE_HOME:
+                    (0, E.dL)(x.Z5c.APPLICATION_STORE), null != n && Z(n.fingerprint, (0, j.O)(t));
                     break;
-                case P.jE.STORE_LISTING:
+                case j.jE.STORE_LISTING:
                     null != n &&
-                        ((0, O.dL)(j.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)),
-                        A(n.fingerprint, (0, P.O)(t)));
+                        ((0, E.dL)(x.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)),
+                        Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.PICK_GUILD_SETTINGS:
+                case j.jE.PICK_GUILD_SETTINGS:
                     null != n &&
-                        ((0, O.dL)({
-                            pathname: j.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
+                        ((0, E.dL)({
+                            pathname: x.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search,
                         }),
-                        A(n.fingerprint, (0, P.O)(t)));
+                        Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.CHANNEL:
+                case j.jE.CHANNEL:
                     null != n &&
-                        ((0, O.dL)({
-                            pathname: j.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
+                        ((0, E.dL)({
+                            pathname: x.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search,
                         }),
-                        A(n.fingerprint, (0, P.O)(t)));
+                        Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.QUEST_HOME:
+                case j.jE.QUEST_HOME:
                     null != n
-                        ? ((0, O.dL)({
-                              pathname: j.Z5c.QUEST_HOME,
+                        ? ((0, E.dL)({
+                              pathname: x.Z5c.QUEST_HOME,
                               hash: n.questId,
                           }),
-                          A(n.fingerprint, (0, P.O)(t)))
-                        : (0, O.dL)(j.Z5c.QUEST_HOME);
+                          Z(n.fingerprint, (0, j.O)(t)))
+                        : (0, E.dL)(x.Z5c.QUEST_HOME);
                     break;
-                case P.jE.DISCOVERY_GAME_RESULTS:
+                case j.jE.DISCOVERY_GAME_RESULTS:
                     null != n &&
-                        ((0, O.dL)({
-                            pathname: j.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                        ((0, E.dL)({
+                            pathname: x.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: "?game=".concat(n.gameId),
                         }),
-                        A(n.fingerprint, (0, P.O)(t)));
+                        Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.OAUTH2:
-                    let r = new URL(j.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
+                case j.jE.OAUTH2:
+                    let r = new URL(x.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
                     r.search = n.search;
-                    let i = (0, _.getOAuth2AuthorizeProps)(r.toString());
-                    if (null != i) return (0, _.openOAuth2ModalWithCreateGuildModal)(i), !0;
+                    let l = (0, O.getOAuth2AuthorizeProps)(r.toString());
+                    if (null != l) return (0, O.openOAuth2ModalWithCreateGuildModal)(l), !0;
                     return !1;
-                case P.jE.SHOP:
+                case j.jE.SHOP:
                     null != n &&
-                        ((0, O.dL)({
-                            pathname: j.Z5c.COLLECTIBLES_SHOP,
+                        ((0, E.dL)({
+                            pathname: x.Z5c.COLLECTIBLES_SHOP,
                             search: n.search,
                         }),
-                        A(n.fingerprint, (0, P.O)(t)));
+                        Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.FEATURES:
-                case P.jE.SHOP:
+                case j.jE.FEATURES:
+                case j.jE.SHOP:
                     (null == n ? void 0 : n.path) != null &&
-                        ((0, O.dL)({ pathname: n.path }), A(n.fingerprint, (0, P.O)(t)));
+                        ((0, E.dL)({ pathname: n.path }), Z(n.fingerprint, (0, j.O)(t)));
                     break;
-                case P.jE.ACTIVITIES:
-                    if (null != n)
+                case j.jE.ACTIVITIES:
+                    if (null != n) {
+                        let e = n.attemptId || (0, i.Z)();
                         return (
-                            (async function (e, t) {
-                                var r, i;
-                                let l = p.ZP.getCurrentEmbeddedActivity();
-                                if ((null == l ? void 0 : l.applicationId) === e) return;
-                                let a = await m.ZP.fetchApplication(n.applicationId),
-                                    o = null == a || null == (r = a.bot) ? void 0 : r.id;
-                                if (null == o) return;
-                                let s = await c.Z.openPrivateChannel({ recipientIds: o }),
-                                    u = new URL(t),
-                                    d = null != (i = u.searchParams.get("referrer_id")) ? i : void 0,
-                                    { customId: b } = await (0, h.ur)(
-                                        e,
-                                        u.searchParams.get("link_id"),
-                                        u.searchParams.get("custom_id"),
-                                    );
-                                await (0, f.Z)({
-                                    targetApplicationId: e,
-                                    channelId: s,
-                                    analyticsLocations: [g.Z.DEEPLINK],
-                                    customId: b,
-                                    referrerId: d,
-                                });
-                            })(n.applicationId, n.url),
-                            A(n.fingerprint, (0, P.O)(t)),
+                            (async function (e, t, n) {
+                                try {
+                                    var r, i;
+                                    let l = f.ZP.getCurrentEmbeddedActivity();
+                                    if ((null == l ? void 0 : l.applicationId) === e)
+                                        return void I.default.track(x.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                            application_id: e,
+                                            success: !1,
+                                            failure_reason: "activity_already_running",
+                                            attempt_id: n,
+                                        });
+                                    let a = await b.ZP.fetchApplication(e),
+                                        o = null == a || null == (r = a.bot) ? void 0 : r.id;
+                                    if (null == o)
+                                        return void I.default.track(x.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                            application_id: e,
+                                            success: !1,
+                                            failure_reason: "no_bot_user",
+                                            attempt_id: n,
+                                        });
+                                    let s = await u.Z.openPrivateChannel({ recipientIds: o }),
+                                        c = new URL(t),
+                                        d = null != (i = c.searchParams.get("referrer_id")) ? i : void 0,
+                                        { customId: p } = await (0, g.ur)(
+                                            e,
+                                            c.searchParams.get("link_id"),
+                                            c.searchParams.get("custom_id"),
+                                        );
+                                    await (0, h.Z)({
+                                        targetApplicationId: e,
+                                        channelId: s,
+                                        analyticsLocations: [m.Z.DEEPLINK],
+                                        customId: p,
+                                        referrerId: d,
+                                    }),
+                                        I.default.track(x.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                            application_id: e,
+                                            success: !0,
+                                            failure_reason: null,
+                                            attempt_id: n,
+                                        });
+                                } catch (t) {
+                                    I.default.track(x.rMx.ACTIVITY_DEEP_LINK_RECEIVED, {
+                                        application_id: e,
+                                        success: !1,
+                                        failure_reason: "launch_failed",
+                                        attempt_id: n,
+                                    });
+                                }
+                            })(n.applicationId, n.url, e),
+                            Z(n.fingerprint, (0, j.O)(t)),
                             !0
                         );
+                    }
                     return !1;
             }
         },
     },
-    [j.Etm.BROWSER_HANDOFF]: {
-        scope: P.CN,
+    [x.Etm.BROWSER_HANDOFF]: {
+        scope: j.CN,
         handler(e) {
             let {
                 args: { handoffToken: t, fingerprint: n },
             } = e;
-            S.ZP.focus(null, !0), (0, s.lx)(t, n);
+            N.ZP.focus(null, !0), (0, c.lx)(t, n);
         },
     },
-    [j.Etm.CONNECTIONS_CALLBACK]: {
-        scope: P.cE,
+    [x.Etm.CONNECTIONS_CALLBACK]: {
+        scope: j.cE,
         handler: async (e) => {
             let {
                 args: { providerType: t, code: n, openid_params: r, iss: i, state: l },
             } = e;
-            if (!E.Z.hasPendingAuthorizedState(l))
-                throw new N.Z(
-                    { errorCode: j.lTL.INVALID_CONNECTION_CALLBACK_STATE },
+            if (!y.Z.hasPendingAuthorizedState(l))
+                throw new T.Z(
+                    { errorCode: x.lTL.INVALID_CONNECTION_CALLBACK_STATE },
                     "Provider authorization did not originate from this discord client",
                 );
             try {
                 return (
-                    E.Z.deletePendingAuthorizedState(l),
-                    await u.Z.callback(t, {
+                    y.Z.deletePendingAuthorizedState(l),
+                    await d.Z.callback(t, {
                         code: n,
                         openid_params: r,
                         iss: i,
@@ -289,32 +319,32 @@ let Z = {
                 );
             } catch (e) {
                 if ((null == e ? void 0 : e.status) === 400)
-                    throw new N.Z({ errorCode: j.lTL.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
-                throw (I.S.dispatch(j.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    throw new T.Z({ errorCode: x.lTL.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
+                throw (C.S.dispatch(x.CkL.CONNECTIONS_CALLBACK_ERROR), e);
             }
         },
     },
-    [j.Etm.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
-        scope: P.cE,
+    [x.Etm.BRAINTREE_POPUP_BRIDGE_CALLBACK]: {
+        scope: j.cE,
         handler(e) {
             let {
                 args: { state: t, path: n, query: r },
             } = e;
-            return (0, o.rt)({
-                paymentSourceType: j.HeQ.PAYPAL,
+            return (0, s.rt)({
+                paymentSourceType: x.HeQ.PAYPAL,
                 state: t,
                 path: n,
                 query: r,
             });
         },
     },
-    [j.Etm.BILLING_POPUP_BRIDGE_CALLBACK]: {
-        scope: P.cE,
+    [x.Etm.BILLING_POPUP_BRIDGE_CALLBACK]: {
+        scope: j.cE,
         handler(e) {
             let {
                 args: { state: t, path: n, query: r, payment_source_type: i },
             } = e;
-            return (0, o.rt)({
+            return (0, s.rt)({
                 paymentSourceType: i,
                 state: t,
                 path: n,

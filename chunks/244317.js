@@ -1,75 +1,94 @@
-n.d(t, { Z: () => h }), n(35282), n(388685);
+n.d(t, { Z: () => m }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(873546),
-    a = n(680018),
-    o = n(481060),
-    s = n(358085),
-    c = n(289341),
-    u = n(981631),
-    d = n(186901),
-    p = n(388032),
-    f = n(87805);
-function h(e) {
+    l = n(772848),
+    a = n(873546),
+    o = n(680018),
+    s = n(481060),
+    c = n(626135),
+    u = n(358085),
+    d = n(289341),
+    p = n(981631),
+    f = n(186901),
+    h = n(388032),
+    g = n(87805);
+function m(e) {
     let { applicationId: t } = e.match.params,
-        [h, g] = i.useState(!1),
-        m = i.useRef(!1),
-        [b, _] = i.useState(null),
-        O = !s.isPlatformEmbedded && !l.tq && !h;
+        [m, b] = i.useState(!1),
+        _ = i.useRef(!1),
+        [O, E] = i.useState(null),
+        y = !u.isPlatformEmbedded && !a.tq && !m,
+        v = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
-        O &&
-            !0 !== m.current &&
+        y &&
+            !0 !== _.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
                 .then((e) => {
                     let { default: n } = e;
-                    n.request(u.Etm.DEEP_LINK, {
-                        type: d.jE.ACTIVITIES,
+                    n.request(p.Etm.DEEP_LINK, {
+                        type: f.jE.ACTIVITIES,
                         params: {
                             applicationId: t,
                             url: location.href,
+                            attemptId: v,
                         },
                     })
                         .then((e) => {
-                            _(null != e && e);
+                            let n = null != e && e;
+                            E(n),
+                                c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
+                                    application_id: t,
+                                    source_url: location.href,
+                                    attempt_id: v,
+                                    rpc_success: n,
+                                });
                         })
-                        .catch(() => _(!1))
+                        .catch(() => {
+                            E(!1),
+                                c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
+                                    application_id: t,
+                                    source_url: location.href,
+                                    attempt_id: v,
+                                    rpc_success: !1,
+                                });
+                        })
                         .then(() => n.disconnect());
                 }),
-            (m.current = !0));
-    }, [t, O]),
-    O && !1 !== b)
-        ? !0 === b
+            (_.current = !0));
+    }, [t, y, v]),
+    y && !1 !== O)
+        ? !0 === O
             ? (0, r.jsxs)("div", {
-                  className: f.container,
+                  className: g.container,
                   children: [
-                      (0, r.jsx)(o.X6q, {
+                      (0, r.jsx)(s.X6q, {
                           variant: "heading-xxl/bold",
-                          children: p.intl.string(p.t.csrAMD),
+                          children: h.intl.string(h.t.csrAMD),
                       }),
-                      (0, r.jsx)(o.Text, {
+                      (0, r.jsx)(s.Text, {
                           variant: "text-xs/semibold",
-                          children: p.intl.string(p.t["m1+IBg"]),
+                          children: h.intl.string(h.t["m1+IBg"]),
                       }),
-                      (0, r.jsx)(a.z, {
+                      (0, r.jsx)(o.z, {
                           variant: "primary",
-                          text: p.intl.string(p.t.fIv16O),
-                          onClick: () => g(!0),
+                          text: h.intl.string(h.t.fIv16O),
+                          onClick: () => b(!0),
                       }),
                   ],
               })
             : (0, r.jsxs)("div", {
-                  className: f.container,
+                  className: g.container,
                   children: [
-                      (0, r.jsx)(o.X6q, {
+                      (0, r.jsx)(s.X6q, {
                           variant: "heading-xxl/bold",
-                          children: p.intl.string(p.t["Z+hCVV"]),
+                          children: h.intl.string(h.t["Z+hCVV"]),
                       }),
-                      (0, r.jsx)(o.$jN, {}),
+                      (0, r.jsx)(s.$jN, {}),
                   ],
               })
         : (0, r.jsx)(
-              c.Z,
+              d.Z,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

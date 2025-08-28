@@ -57,6 +57,8 @@ function u(e) {
             return "discovery_game";
         case "SHOP":
             return "shop";
+        case "ACTIVITIES":
+            return "activities";
         default:
             return e;
     }
