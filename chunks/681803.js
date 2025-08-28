@@ -127,22 +127,31 @@ function E(e) {
 function b(e) {
     var t,
         n,
-        { ref: a, returnRef: s, modal: l = !0, trackingProps: u } = e,
-        f = p(e, ["ref", "returnRef", "modal", "trackingProps"]);
-    let h = i.useRef(null);
-    i.useImperativeHandle(a, () => h.current),
+        { ref: a, returnRef: s, modal: l = !0, setDialogRef: u, trackingProps: f } = e,
+        h = p(e, ["ref", "returnRef", "modal", "setDialogRef", "trackingProps"]);
+    let m = i.useRef(null);
+    i.useImperativeHandle(a, () => m.current),
+        i.useEffect(
+            () => (
+                null == u || u(m.current),
+                () => {
+                    null == u || u(null);
+                }
+            ),
+            [],
+        ),
         i.useContext(c.Z)(
             {
-                type: null == u ? void 0 : u.impressionType,
-                name: null == u || null == (t = u.impression) ? void 0 : t.impressionName,
-                properties: null == u || null == (n = u.impression) ? void 0 : n.impressionProperties,
+                type: null == f ? void 0 : f.impressionType,
+                name: null == f || null == (t = f.impression) ? void 0 : t.impressionName,
+                properties: null == f || null == (n = f.impression) ? void 0 : n.impressionProperties,
             },
-            { disableTrack: null == u ? void 0 : u.disableTrack },
+            { disableTrack: null == f ? void 0 : f.disableTrack },
         ),
-        (0, o.T)(h, {
+        (0, o.T)(m, {
             returnRef: s,
             disable: !l,
         });
-    let m = l ? g : E;
-    return (0, r.jsx)(m, _(d({}, f), { ref: h }));
+    let b = l ? g : E;
+    return (0, r.jsx)(b, _(d({}, h), { ref: m }));
 }

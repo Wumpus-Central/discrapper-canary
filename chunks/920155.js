@@ -1,4 +1,8 @@
-n.d(t, { m: () => I }), n(388685);
+n.d(t, {
+    m: () => S,
+    q: () => A,
+}),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -64,10 +68,31 @@ function b(e, t) {
         e
     );
 }
-let y = 10,
-    O = 4,
-    v = p.Vq;
-function I(e) {
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = O(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function O(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let v = 10,
+    I = 4,
+    T = p.Vq;
+function S(e) {
     var t;
     let {
             children: n,
@@ -75,88 +100,98 @@ function I(e) {
             shouldShow: p = !0,
             onRequestClose: m,
             position: E = "top",
-            align: I = "center",
-            hasVideo: T = !1,
-            gradientColor: S,
-            caretConfig: A,
+            align: O = "center",
+            hasVideo: S = !1,
+            gradientColor: C,
+            onPositionChange: N,
         } = e,
-        [C, N] = i.useState(p),
-        R = (0, l.e7)([f.Z], () => f.Z.getLayers()),
-        P = null != (t = R[R.length - 1]) ? t : "base",
-        w = i.useMemo(() => {
+        [R, P] = i.useState(p),
+        [w, D] = i.useState(E),
+        x = i.useRef(E),
+        L = (0, l.e7)([f.Z], () => f.Z.getLayers()),
+        j = null != (t = L[L.length - 1]) ? t : "base",
+        M = i.useMemo(() => {
             var e;
             return (
                 null == a.current ||
-                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === P
+                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === j
             );
-        }, [a, P]);
+        }, [a, j]);
     i.useEffect(() => {
-        N(w && p);
-    }, [w, p]);
-    let D = () => {
-            N(!1);
+        P(M && p);
+    }, [M, p]);
+    let k = () => {
+            P(!1);
         },
-        x = (e) => {
-            switch (e) {
-                case "top":
-                    return "bottom";
-                case "bottom":
-                default:
-                    return "top";
-                case "left":
-                    return "right";
-                case "right":
-                    return "left";
-            }
-        },
-        L = (0, _.i)({
+        U = (0, _.i)({
             shouldShow: p,
-            caretPosition: (null == A ? void 0 : A.position) != null ? A.position : x(E),
-            onExitComplete: D,
+            caretPosition: A(w),
+            onExitComplete: k,
         }),
-        j = (e) =>
-            L((t, i) => {
-                if (!i) return null;
-                let l = (0, r.jsx)(
-                    u.V,
-                    b(g({}, e), {
-                        modal: !1,
-                        className: o()(null != S ? h.popoverContentWithGradient : h.popover, {
-                            [h["popover--video"]]: T,
+        G = (e) => {
+            var { setPopoutRef: t, position: i } = e,
+                l = y(e, ["setPopoutRef", "position"]);
+            return (
+                null != i && i !== x.current && ((x.current = i), D(i), null == N || N(i)),
+                U((e, i) => {
+                    if (!i) return null;
+                    let c = (0, r.jsx)(
+                        u.V,
+                        b(g({}, l), {
+                            setDialogRef: t,
+                            modal: !1,
+                            className: o()(null != C ? h.popoverContentWithGradient : h.popover, {
+                                [h["popover--video"]]: S,
+                            }),
+                            returnRef: a,
+                            children: n,
                         }),
-                        returnRef: a,
-                        children: n,
-                    }),
-                );
-                return (0, r.jsx)(s.animated.div, {
-                    "data-mana-component": "popover",
-                    style: t,
-                    children:
-                        null != S
-                            ? (0, r.jsx)(d.$, {
-                                  offsetBottom: 0.4,
-                                  color: S,
-                                  className: h.popoverGradientWrapper,
-                                  children: l,
-                              })
-                            : l,
-                });
-            });
+                    );
+                    return (0, r.jsx)(s.animated.div, {
+                        "data-mana-component": "popover",
+                        style: e,
+                        children:
+                            null != C
+                                ? (0, r.jsx)(d.$, {
+                                      offsetBottom: 0.4,
+                                      color: C,
+                                      className: h.popoverGradientWrapper,
+                                      children: c,
+                                  })
+                                : c,
+                    });
+                })
+            );
+        };
     return (0, r.jsx)(c.H, {
         targetElementRef: a,
-        shouldShow: C,
+        shouldShow: R,
         onRequestClose: m,
-        position: E,
-        align: I,
-        spacing: y + O,
+        position: w,
+        align: O,
+        spacing: v + I,
         layerContext: void 0,
         positionKey: void 0,
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: !0,
+        nudgeAlignIntoViewport: "top" === w || "bottom" === w,
         closeOnClickOutside: !1,
-        renderPopout: j,
-        children: v,
+        scrollBehavior: "sticky",
+        renderPopout: G,
+        children: T,
     });
 }
+let A = (e) => {
+    switch (e) {
+        case "top":
+            return "bottom";
+        case "bottom":
+        default:
+            return "top";
+        case "left":
+            return "right";
+        case "right":
+            return "left";
+    }
+};

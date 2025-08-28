@@ -202,7 +202,7 @@ function N(e) {
         onRequestClose: () => d(!1),
         animationPosition: "bottom",
         positionKey: f,
-        closeOnScroll: !0,
+        scrollBehavior: "close",
         children: (e) =>
             (0, r.jsx)(c.ua7, {
                 onTooltipHide: () => {

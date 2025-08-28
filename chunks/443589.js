@@ -77,7 +77,7 @@ function T(e) {
         targetElementRef: M,
         animation: u.yRy.Animation.FADE,
         nudgeAlignIntoViewport: !1,
-        closeOnScroll: !0,
+        scrollBehavior: "close",
         shouldShow: j,
         position: "right",
         align: "top",

@@ -1,7 +1,8 @@
 n.d(t, {
     J: () => y,
     Z: () => O,
-});
+}),
+    n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -88,13 +89,10 @@ function b(e, t) {
 }
 function y(e) {
     var t,
+        n,
         {
-            title: n,
-            body: a,
-            caretConfig: p = {
-                position: "bottom",
-                align: "center",
-            },
+            title: a,
+            body: p,
             badge: m,
             graphic: b,
             size: y = "md",
@@ -103,11 +101,12 @@ function y(e) {
             gradientColor: I,
             onRequestClose: T,
             popoverRef: S,
+            position: A,
+            caretConfig: C,
         } = e,
-        A = E(e, [
+        N = E(e, [
             "title",
             "body",
-            "caretConfig",
             "badge",
             "graphic",
             "size",
@@ -116,24 +115,40 @@ function y(e) {
             "gradientColor",
             "onRequestClose",
             "popoverRef",
+            "position",
+            "caretConfig",
         ]);
-    let C = i.useCallback(() => {
-            null == T || T();
+    let [R, P] = i.useState(null != A ? A : "top"),
+        [w, D] = i.useState({
+            position: (0, l.q)(R),
+            align: null != (t = null == C ? void 0 : C.align) ? t : "center",
+            customOffset: null == C ? void 0 : C.customOffset,
+        }),
+        x = i.useCallback(
+            (e, t) => {
+                null == T || T(t);
+            },
+            [T],
+        ),
+        L = i.useCallback(() => {
+            null == T || T("user:explicit");
         }, [T]),
-        N = i.useCallback(() => {
-            null == T || T();
-        }, [T]);
+        j = i.useCallback((e) => {
+            P(e), D((t) => g(h({}, t), { position: (0, l.q)(e) }));
+        }, []);
     return (0, r.jsx)(
         l.m,
-        g(h({}, A), {
-            onRequestClose: C,
+        g(h({}, N), {
+            position: R,
+            onRequestClose: x,
             gradientColor: I,
-            caretConfig: p,
+            onPositionChange: j,
+            caretConfig: w,
             children: (0, r.jsxs)("div", {
                 ref: S,
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: N,
+                        onClick: L,
                         variant: null != I ? "color-mix" : void 0,
                     }),
                     null != b &&
@@ -142,19 +157,19 @@ function y(e) {
                             children: (0, r.jsx)(
                                 s.z,
                                 g(h({}, b), {
-                                    aspectRatio: null != (t = b.aspectRatio) ? t : "sm" === y ? "2/1" : "16/9",
+                                    aspectRatio: null != (n = b.aspectRatio) ? n : "sm" === y ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
                     (0, r.jsx)(f.Y, {
-                        title: n,
-                        body: a,
+                        title: a,
+                        body: p,
                         badge: m,
                         textLink: v,
                         hasBottomMargin: null != O,
                     }),
                     null != O && O.length > 0 ? (0, r.jsx)(c.k, { actions: O }) : null,
-                    (0, r.jsx)(u.$, { caretConfig: p }),
+                    (0, r.jsx)(u.$, { caretConfig: w }),
                 ],
             }),
         }),
