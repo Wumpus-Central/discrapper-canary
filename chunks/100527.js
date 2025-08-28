@@ -332,6 +332,7 @@ var r = (function (e) {
         (e.COLLECTIBLES_MOBILE_SHOP_ALL_BUTTON = "collectibles mobile shop all button"),
         (e.COLLECTIBLES_SHOP_MOBILE_FEATURED_PAGE_MENU_ITEM = "collectibles shop mobile featured page menu item"),
         (e.COLLECTIBLES_SHOP_MOBILE_SHOP_ALL_MENU_ITEM = "collectibles shop mobile shop all menu item"),
+        (e.COLLECTIBLES_SHOP_MOBILE_ORBS_MENU_ITEM = "collectibles shop mobile orbs menu item"),
         (e.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = "collectibles profile settings upsell"),
         (e.COLLECTIBLES_PAYMENT_MODAL = "collectibles payment modal"),
         (e.COLLECTIBLES_COLLECTED_MODAL = "collectibles collected modal"),
