@@ -36,4 +36,5 @@ e.exports = {
     fadeOut: "fadeOut_c3d04b",
     externalProductDimmed: "externalProductDimmed_c3d04b",
     orbIconAligned: "orbIconAligned_c3d04b",
+    thumbnailVariant: "thumbnailVariant_c3d04b",
 };
