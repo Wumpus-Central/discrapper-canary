@@ -16,5 +16,5 @@ var i = n(509613),
     I = n(388032);
 let f = (0, i.vB)(r.t.APP_SECTION, {
     useLabel: () => I.intl.string(I.t.f2n1TE),
-    getLayout: () => [a.Z, l.Z, g.ZP, E.Z, s.Z, c.Z, u.Z, _.Z, O.Z, d.Z, N.Z, o.Z],
+    getLayout: () => [a.Z, l.Z, g.Z, E.Z, s.Z, c.Z, u.Z, _.Z, O.Z, d.Z, N.Z, o.Z],
 });

@@ -1,21 +1,19 @@
-n.d(t, { ZP: () => c });
+n.d(t, { Z: () => d });
 var i = n(657707),
-    l = n(509613),
-    r = n(869235),
-    s = n(388032);
-let a = (0, l.k4)(r.t.VOICE_CATEGORY, {
-        useTitle: () => s.intl.string(s.t.K3lovL),
+    r = n(509613),
+    l = n(131951),
+    o = n(604224),
+    a = n(869235),
+    s = n(726985),
+    u = n(388032);
+let c = (0, r.x1)(a.t.VOICE_AND_VIDEO_PANE, {
         getLayout: () => [],
+        render: o.Z,
     }),
-    o = (0, l.k4)(r.t.CAMERA_CATEGORY, {
-        useTitle: () => s.intl.string(s.t.FlNoSU),
-        getLayout: () => [],
-    }),
-    u = (0, l.x1)(r.t.VOICE_AND_VIDEO_PANE, {
-        getLayout: () => [a, o],
-    }),
-    c = (0, l.wf)(r.t.VOICE_AND_VIDEO_PANEL, {
+    d = (0, r.wf)(a.t.VOICE_AND_VIDEO_PANEL, {
         icon: i.S6n,
-        useTitle: () => s.intl.string(s.t.B1fFpa),
-        getLayout: () => [u],
+        useTitle: () => u.intl.string(u.t.B1fFpa),
+        getLayout: () => [c],
+        usePredicate: () => l.Z.isSupported(),
+        legacySearchKey: s.s6.VOICE_AND_VIDEO,
     });
