@@ -1,8 +1,8 @@
 n.d(t, { Z: () => et }), n(388685), n(704826), n(35282), n(781311);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(704215),
     c = n(680018),
@@ -90,15 +90,15 @@ let F = 0,
     V = 5000;
 function H(e) {
     let [t, n] = i.useState(0),
-        [r, o] = i.useState(!1),
-        a = i.useRef(e);
+        [r, a] = i.useState(!1),
+        o = i.useRef(e);
     return (
         i.useEffect(() => {
-            e === a.current || r || n((e) => e + 1), (a.current = e), o(!1);
+            e === o.current || r || n((e) => e + 1), (o.current = e), a(!1);
         }, [e, r]),
         {
             key: t,
-            handleInternalChange: i.useCallback((e) => (o(!0), e), []),
+            handleInternalChange: i.useCallback((e) => (a(!0), e), []),
         }
     );
 }
@@ -183,7 +183,7 @@ function z(e) {
 }
 function q(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
-        { key: o, handleInternalChange: s } = H(t),
+        { key: a, handleInternalChange: s } = H(t),
         [l, c] = i.useState("".concat(Math.round(t), "\xB0"));
     i.useEffect(() => {
         c("".concat(Math.round(t), "\xB0"));
@@ -197,7 +197,7 @@ function q(e) {
         c("".concat(i, "\xB0")), (0, N.Ac)(), n(i);
     };
     return (0, r.jsxs)("div", {
-        className: a()(k.sliderContainer, k.gradientDirectionSliderContainer),
+        className: o()(k.sliderContainer, k.gradientDirectionSliderContainer),
         children: [
             (0, r.jsxs)("div", {
                 className: k.controlLabelContainer,
@@ -228,14 +228,14 @@ function q(e) {
                     onValueRender: () => null,
                     keyboardStep: 1,
                 },
-                o,
+                a,
             ),
         ],
     });
 }
 function X(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
-        { key: o, handleInternalChange: a } = H(t),
+        { key: a, handleInternalChange: o } = H(t),
         [s, l] = i.useState("".concat(Math.round(t), "%"));
     i.useEffect(() => {
         l("".concat(Math.round(t), "%"));
@@ -275,20 +275,20 @@ function X(e) {
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, N.z3)(), a(e), n(e);
+                        (0, N.z3)(), o(e), n(e);
                     },
                     onValueRender: () => null,
                     keyboardStep: 1,
                 },
-                o,
+                a,
             ),
         ],
     });
 }
 function Q(e) {
     let { isCoachmark: t } = e,
-        [n, o] = i.useState(!1),
-        a = i.useRef(!1),
+        [n, a] = i.useState(!1),
+        o = i.useRef(!1),
         [s, l] = i.useState(!1),
         u = i.useRef(null),
         _ = i.useCallback(() => {
@@ -304,9 +304,9 @@ function Q(e) {
     i.useEffect(() => {
         if (t)
             return (
-                (a.current = !1),
+                (o.current = !1),
                 (u.current = setTimeout(() => {
-                    a.current || o(!0);
+                    o.current || a(!0);
                 }, V)),
                 () => {
                     null != u.current && clearTimeout(u.current);
@@ -314,10 +314,10 @@ function Q(e) {
             );
     }, [t]);
     let p = i.useCallback(() => {
-            a.current = !0;
+            o.current = !0;
         }, []),
         h = i.useCallback(() => {
-            o(!1);
+            a(!1);
         }, []),
         m = n && !s;
     return (0, r.jsx)(d.i_, {
@@ -387,33 +387,35 @@ function $(e) {
     );
 }
 function ee(e) {
-    let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        o = (0, O.m)(L.p9.TIER_2);
-    (0, N.hf)(o, m.Z.CUSTOM_THEMES_EDITOR);
-    let s = () => {
+    var t;
+    let { onSaveTheme: n, canApply: i, metadata: a } = e,
+        s = (0, O.m)(L.p9.TIER_2),
+        u = (null == (t = (0, E.oq)().metadata) ? void 0 : t.from) === E.tE.SHARE_MESSAGE;
+    (0, N.hf)(s, m.Z.CUSTOM_THEMES_EDITOR);
+    let d = () => {
             (0, N.Vb)(),
                 (0, b.Q3)(l.z.CUSTOM_THEME_COACHMARK),
-                (null == i ? void 0 : i.from) === E.tE.SETTING
+                (null == a ? void 0 : a.from) === E.tE.SETTING
                     ? (p.Z.open(), (0, E.Ll)())
-                    : (null == i ? void 0 : i.from) === E.tE.CLIENT_THEMES_EDITOR
+                    : (null == a ? void 0 : a.from) === E.tE.CLIENT_THEMES_EDITOR
                       ? (0, E.XO)(E.wh.CLIENT_THEMES)
                       : (0, E.Ll)();
         },
-        u = a()(k.footerContainer, { [k.footerContainerNonPremium]: !o });
+        f = o()(k.footerContainer, { [k.footerContainerNonPremium]: !s });
     return (0, r.jsx)("div", {
-        className: u,
-        children: o
+        className: f,
+        children: s
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(P.q, {}),
                       (0, r.jsx)(c.z, {
                           variant: "secondary",
-                          onClick: s,
+                          onClick: d,
                           text: M.intl.string(M.t["13/7kZ"]),
                       }),
                       (0, r.jsx)(J, {
-                          disabled: !n,
-                          onApply: t,
+                          disabled: !i,
+                          onApply: n,
                       }),
                   ],
               })
@@ -430,8 +432,8 @@ function ee(e) {
                       }),
                       (0, r.jsx)(c.z, {
                           variant: "secondary",
-                          onClick: s,
-                          text: M.intl.string(M.t.Olc2Ky),
+                          onClick: d,
+                          text: u ? M.intl.string(M.t["13/7kZ"]) : M.intl.string(M.t.Olc2Ky),
                           fullWidth: !0,
                       }),
                   ],
@@ -440,7 +442,7 @@ function ee(e) {
 }
 function et(e) {
     var t;
-    let { metadata: n, markAsDismissed: o, isCoachmark: a } = e,
+    let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
         u = C.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
         d = (0, A.jJ)(),
         p = (0, A.SK)(),
@@ -469,7 +471,7 @@ function et(e) {
                     },
                 }),
                 (0, N.u7)(O, S, P, Z, V),
-                null == o || o(x.L.TAKE_ACTION),
+                null == a || a(x.L.TAKE_ACTION),
                 F || (0, b.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, E.Ll)(),
                 (0, v.UD)();
@@ -485,7 +487,7 @@ function et(e) {
         [d],
     ),
     (0, h.ZP)(() => {
-        a || (0, A.lT)(O, G, D);
+        o || (0, A.lT)(O, G, D);
     }),
     u)
         ? (0, r.jsxs)("div", {
@@ -497,8 +499,8 @@ function et(e) {
                           className: k.editorBody,
                           children: [
                               (0, r.jsx)(K, {
-                                  markAsDismissed: o,
-                                  isCoachmark: a,
+                                  markAsDismissed: a,
+                                  isCoachmark: o,
                               }),
                               (0, r.jsxs)("div", {
                                   className: k.section,
@@ -553,7 +555,7 @@ function et(e) {
                               (0, r.jsxs)("div", {
                                   className: k.resetButton,
                                   children: [
-                                      (0, r.jsx)(Q, { isCoachmark: a }),
+                                      (0, r.jsx)(Q, { isCoachmark: o }),
                                       (0, r.jsx)(c.z, {
                                           variant: "secondary",
                                           onClick: Y,
@@ -566,7 +568,7 @@ function et(e) {
                           ],
                       }),
                   }),
-                  a
+                  o
                       ? (0, r.jsx)($, {
                             onSaveTheme: H,
                             canApply: W,

@@ -1,9 +1,13 @@
 n.d(t, {
-    C$: () => u,
-    tj: () => l,
+    C$: () => p,
+    fm: () => _,
+    sf: () => f,
+    tj: () => u,
 });
-var r = n(879690);
-function i(e, t, n) {
+var r = n(647438),
+    i = n(101186),
+    a = n(879690);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +20,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +31,12 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                i(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function a(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -44,19 +48,19 @@ function a(e, t) {
     }
     return n;
 }
-function s(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let l = "custom-themes-share-modal",
-    c = {
+let u = "custom-themes-share-modal",
+    d = {
         searchText: "",
         selectedDestinations: [],
         message: {},
@@ -67,15 +71,18 @@ let l = "custom-themes-share-modal",
         sending: !1,
         canSend: () => !1,
     },
-    u = (0, r.U)((e, t) =>
-        s(o({}, c), {
-            canSend: () => !t().sending && t().selectedDestinations.length > 0,
-            updateSearchText: (t) => e({ searchText: t }),
-            updateSelectShareDestinations: (t) => e({ selectedDestinations: t }),
-            updateMessage: (t) => e({ message: t }),
-            updateChannel: (t) => e({ channel: t }),
-            updateSending: (t) => e({ sending: t }),
-            updateMessageText: (t) => e({ messageText: t }),
-            setSend: (t) => e({ send: t }),
-        }),
-    );
+    f = () =>
+        (0, i.M)()((e, t) =>
+            c(s({}, d), {
+                canSend: () => !t().sending && t().selectedDestinations.length > 0,
+                updateSearchText: (t) => e({ searchText: t }),
+                updateSelectShareDestinations: (t) => e({ selectedDestinations: t }),
+                updateMessage: (t) => e({ message: t }),
+                updateChannel: (t) => e({ channel: t }),
+                updateSending: (t) => e({ sending: t }),
+                updateMessageText: (t) => e({ messageText: t }),
+                setSend: (t) => e({ send: t }),
+            }),
+        ),
+    _ = (0, r.createContext)(null),
+    p = () => (0, a.o)((0, r.useContext)(_));

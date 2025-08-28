@@ -1,9 +1,9 @@
-n.d(t, { q: () => p });
+n.d(t, { q: () => m });
 var r = n(951288);
 n(647438);
 var i = n(952265),
-    o = n(159691),
-    a = n(481060),
+    a = n(159691),
+    o = n(481060),
     s = n(479661),
     l = n(135102),
     c = n(119475),
@@ -37,7 +37,30 @@ function f(e) {
     }
     return e;
 }
-let _ = () => {
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let h = () => {
         (0, i.ZD)(
             async () => {
                 let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("47051"), n.e("26196")]).then(
@@ -48,14 +71,21 @@ let _ = () => {
             { modalKey: l.tj },
         );
     },
-    p = () =>
+    m = () =>
         (0, s.e)("client_themes_editor")
-            ? (0, r.jsx)(o.hU, {
-                  "aria-label": u.intl.string(c.default.zgFs8P),
-                  icon: a.aAc,
-                  variant: "icon-only",
-                  onClick: () => {
-                      _();
-                  },
+            ? (0, r.jsx)(o.ua7, {
+                  text: u.intl.string(u.t.RDE0SU),
+                  children: (e) =>
+                      (0, r.jsx)(
+                          a.hU,
+                          p(f({}, e), {
+                              "aria-label": u.intl.string(c.default.zgFs8P),
+                              icon: o.aAc,
+                              variant: "icon-only",
+                              onClick: () => {
+                                  h();
+                              },
+                          }),
+                      ),
               })
             : null;

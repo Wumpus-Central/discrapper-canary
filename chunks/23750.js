@@ -382,7 +382,7 @@ class m extends p {
             (this.roleSubscriptionData = e.roleSubscriptionData),
             (this.purchaseNotification = e.purchaseNotification),
             (this.poll = e.poll),
-            (this.sharedClientTheme = e.shared_client_theme),
+            (this.sharedClientTheme = e.shared_client_theme || e.sharedClientTheme),
             (this.potions = e.potions),
             (this.referralTrialOfferId = e.referralTrialOfferId || null),
             (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo),

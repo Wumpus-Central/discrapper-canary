@@ -48,8 +48,8 @@ var r,
     G = n(364097),
     B = n(939170),
     Z = n(187506),
-    V = n(954654),
-    F = n(41776),
+    F = n(954654),
+    V = n(41776),
     H = n(628238),
     Y = n(454585),
     W = n(768494),
@@ -102,8 +102,8 @@ var r,
     eG = n(453687),
     eB = n(128854),
     eZ = n(101578),
-    eV = n(524444),
-    eF = n(319323),
+    eF = n(524444),
+    eV = n(319323),
     eH = n(884182),
     eY = n(546432),
     eW = n(920888),
@@ -171,7 +171,7 @@ function e8(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = e6(e, t);
+        i = e5(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -179,7 +179,7 @@ function e8(e, t) {
     }
     return i;
 }
-function e6(e, t) {
+function e5(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -188,7 +188,7 @@ function e6(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function e5() {
+function e6() {
     return (0, i.jsxs)("div", {
         className: e$.nitroFileSizeUpsell,
         children: [
@@ -279,7 +279,7 @@ class tr extends (r = a.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eQ.Lw);
-        return (0, eN.M)("attachment") && t ? (0, i.jsx)(e5, {}) : null;
+        return (0, eN.M)("attachment") && t ? (0, i.jsx)(e6, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
@@ -514,9 +514,9 @@ class tr extends (r = a.Component) {
             ? e.embeds.map((t, n) => {
                   if (eq.b.has(t.type) || (0, eO.l3)(t) || ((0, B.b)(t) && !(0, Z.M)(e)) || (0, eO.jz)(t)) return null;
                   let r = {
-                      renderImageComponent: eV.Yi,
-                      renderVideoComponent: eV.lV,
-                      renderLinkComponent: eV.iT,
+                      renderImageComponent: eF.Yi,
+                      renderVideoComponent: eF.lV,
+                      renderLinkComponent: eF.iT,
                   };
                   if (
                       t.type === eX.hBH.ARTICLE &&
@@ -563,7 +563,7 @@ class tr extends (r = a.Component) {
                       },
             shouldHideMediaOptions: r,
             enabledContentHarmTypeFlags: n,
-            children: (0, i.jsx)(V.ZP, {
+            children: (0, i.jsx)(F.ZP, {
                 message: e,
                 shouldDisableInteractiveComponents: a,
             }),
@@ -692,7 +692,7 @@ class tr extends (r = a.Component) {
         let t = e.applicationId;
         return e.type !== l.u.INTERACTION_PREMIUM_UPSELL || null == t
             ? null
-            : (0, i.jsx)(eF.Z, {
+            : (0, i.jsx)(eV.Z, {
                   applicationId: t,
                   guildId: this.props.channel.guild_id,
               });
@@ -746,12 +746,7 @@ class tr extends (r = a.Component) {
             });
     }
     renderShareClientTheme(e) {
-        return null != e.sharedClientTheme
-            ? (0, i.jsx)(T.q, {
-                  from: e.author,
-                  sharedClientTheme: e.sharedClientTheme,
-              })
-            : null;
+        return null != e.sharedClientTheme ? (0, i.jsx)(T.q, { message: e }) : null;
     }
     renderReportedMessage(e) {
         if (e.messageSnapshots.length > 0 && (0, er.Gi)(e, this.props.channel)) return (0, i.jsx)(ei.Z, { message: e });
@@ -956,7 +951,7 @@ function ti(e) {
         f = ed.nc.useSetting() && !1 !== e.renderReactions,
         _ = ed.QK.useSetting(),
         p = (0, c.e7)([eh.Z], () => null == n.guild_id || eh.Z.canChatInGuild(n.guild_id), [n]),
-        h = (0, c.e7)([F.Z], () => null != n.guild_id && F.Z.isLurking(n.guild_id), [n]),
+        h = (0, c.e7)([V.Z], () => null != n.guild_id && V.Z.isLurking(n.guild_id), [n]),
         m = (0, c.e7)([ep.ZP], () => ep.ZP.isCurrentUserGuest(n.guild_id), [n]),
         g = (0, c.e7)([ep.ZP, eg.default], () => {
             var e, t;
