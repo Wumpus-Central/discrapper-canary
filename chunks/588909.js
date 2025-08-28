@@ -104,52 +104,52 @@ function Z(e, t) {
             }
             case b.nc.GO_LIVE_VOICE:
             case b.nc.GO_LIVE_NON_VOICE: {
-                _.confirmText = S.intl.string(S.t.pEuzio);
-                let { enabled: e } = (0, h.tU)("welcomeNotification");
-                _.onConfirmClick = e
-                    ? (e, t) => {
-                          a.Z.updateNotificationStatus(t);
-                          let n = () => {
-                                  u("unlock"), a.Z.setInputLocked(!1, (0, f.getPID)());
-                              },
-                              i = () => {
-                                  u("confirm");
-                              };
-                          (0, g.N)({
-                              pid: (0, f.getPID)(),
-                              analyticsLocation: v.Sbl.OVERLAY_NUDGE,
-                              allowOneClickGoLive: !0,
-                              onBeforeShowModal: n,
-                              onOneClickGoLive: i,
-                              appContext: v.IlC.POPOUT,
-                          });
-                      }
-                    : (e, t) => {
-                          u("unlock"),
-                              a.Z.updateNotificationStatus(t),
-                              a.Z.setInputLocked(!1, (0, f.getPID)()),
-                              (0, o.ZD)(
-                                  async () => {
-                                      let { default: e } = await Promise.all([
-                                          n.e("38697"),
-                                          n.e("46746"),
-                                          n.e("79839"),
-                                      ]).then(n.bind(n, 60594));
-                                      return (t) =>
-                                          (0, i.jsx)(
-                                              e,
-                                              C(j({}, t), {
-                                                  selectSource: !1,
-                                                  sourcePID: (0, f.getPID)(),
-                                                  guildId: r.type === b.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
-                                                  selectGuild: r.type === b.nc.GO_LIVE_NON_VOICE,
-                                                  analyticsLocation: v.Sbl.OVERLAY_NUDGE,
-                                              }),
-                                          );
+                let { oneClickGoLiveEnabled: e, useStreamCtaCopy: t } = (0, h.tU)("welcomeNotification");
+                (_.confirmText = S.intl.string(t ? S.t.pEuzio : S.t.U76Ft7)),
+                    (_.onConfirmClick = e
+                        ? (e, t) => {
+                              a.Z.updateNotificationStatus(t);
+                              let n = () => {
+                                      u("unlock"), a.Z.setInputLocked(!1, (0, f.getPID)());
                                   },
-                                  { contextKey: E.u1 },
-                              );
-                      };
+                                  i = () => {
+                                      u("confirm");
+                                  };
+                              (0, g.N)({
+                                  pid: (0, f.getPID)(),
+                                  analyticsLocation: v.Sbl.OVERLAY_NUDGE,
+                                  allowOneClickGoLive: !0,
+                                  onBeforeShowModal: n,
+                                  onOneClickGoLive: i,
+                                  appContext: v.IlC.POPOUT,
+                              });
+                          }
+                        : (e, t) => {
+                              u("unlock"),
+                                  a.Z.updateNotificationStatus(t),
+                                  a.Z.setInputLocked(!1, (0, f.getPID)()),
+                                  (0, o.ZD)(
+                                      async () => {
+                                          let { default: e } = await Promise.all([
+                                              n.e("38697"),
+                                              n.e("46746"),
+                                              n.e("79839"),
+                                          ]).then(n.bind(n, 60594));
+                                          return (t) =>
+                                              (0, i.jsx)(
+                                                  e,
+                                                  C(j({}, t), {
+                                                      selectSource: !1,
+                                                      sourcePID: (0, f.getPID)(),
+                                                      guildId: r.type === b.nc.GO_LIVE_VOICE ? r.voiceGuild.id : void 0,
+                                                      selectGuild: r.type === b.nc.GO_LIVE_NON_VOICE,
+                                                      analyticsLocation: v.Sbl.OVERLAY_NUDGE,
+                                                  }),
+                                              );
+                                      },
+                                      { contextKey: E.u1 },
+                                  );
+                          });
                 break;
             }
             case b.nc.CONTENT_INVENTORY:

@@ -200,8 +200,20 @@ function b(e) {
 let y = (0, i.le)({
     name: "2025-08-overlay-v3-one-click-go-live",
     kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
+    defaultConfig: {
+        oneClickGoLiveEnabled: !1,
+        useStreamCtaCopy: !1,
+    },
+    variations: {
+        1: {
+            oneClickGoLiveEnabled: !1,
+            useStreamCtaCopy: !0,
+        },
+        2: {
+            oneClickGoLiveEnabled: !0,
+            useStreamCtaCopy: !0,
+        },
+    },
 });
 function O(e) {
     return y.getConfig({ location: e });
