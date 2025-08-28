@@ -308,7 +308,7 @@ let A = (e) => {
             role: E,
             scrollable: b,
             transparent: y = !1,
-            showToolbar: O = !0,
+            hidden: O = !1,
         } = e,
         v = i.useRef(null),
         I = i.useContext(u.Z);
@@ -317,7 +317,7 @@ let A = (e) => {
             [_.themed]: !y,
             [_.transparent]: y,
             [_.themedMobile]: l.tq,
-            [_.showToolbar]: O,
+            [_.hidden]: O,
         }),
         "aria-label": m,
         "aria-labelledby": g,
@@ -327,13 +327,10 @@ let A = (e) => {
             containerRef: v,
             children: [
                 (0, r.jsxs)("div", {
-                    className: o()(_.upperContainer, { [_.showToolbar]: O }),
+                    className: _.upperContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: o()(_.children, n, {
-                                [_.scrollable]: b,
-                                [_.showToolbar]: O,
-                            }),
+                            className: o()(_.children, n, { [_.scrollable]: b }),
                             onDoubleClick: h,
                             children: [
                                 l.tq && null != I
@@ -347,7 +344,7 @@ let A = (e) => {
                         }),
                         null != p
                             ? (0, r.jsx)("div", {
-                                  className: o()(_.toolbar, a, { [_.showToolbar]: O }),
+                                  className: o()(_.toolbar, a),
                                   children: p,
                               })
                             : null,
