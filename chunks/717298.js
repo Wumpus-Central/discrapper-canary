@@ -1,331 +1,238 @@
-n.d(t, { Z: () => ee }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    o = n(202841),
-    a = n(209739),
-    c = n.n(a),
-    d = n(990547),
-    u = n(435935),
-    f = n(268146),
-    m = n(442837),
-    h = n(481060),
-    p = n(668781),
-    x = n(579806),
-    g = n(89425),
-    _ = n(100527),
-    v = n(906732),
-    j = n(594190),
-    S = n(72897),
-    b = n(695346),
-    C = n(131951),
-    y = n(19780),
-    O = n(594174),
-    I = n(449224),
-    Z = n(358085),
-    w = n(74538),
-    N = n(668519),
-    T = n(299570),
-    E = n(960861),
-    P = n(989941),
-    R = n(562224),
-    A = n(586290),
-    M = n(544753),
-    k = n(853030),
-    L = n(560749),
-    D = n(311924),
-    B = n(485299),
-    U = n(615161),
-    G = n(289989),
-    W = n(328242),
-    F = n(565574),
-    H = n(286420),
-    z = n(173044),
-    V = n(801604),
-    Y = n(577257),
-    J = n(70722),
-    X = n(65154),
-    K = n(637824),
-    q = n(388032),
-    Q = n(468918);
-function $(e) {
-    return e * (2 - e);
-}
-function ee(e) {
+    o = n(209739),
+    a = n.n(o),
+    c = n(990547),
+    d = n(435935),
+    u = n(268146),
+    f = n(442837),
+    m = n(481060),
+    h = n(668781),
+    p = n(579806),
+    x = n(89425),
+    g = n(100527),
+    _ = n(906732),
+    v = n(594190),
+    j = n(695346),
+    b = n(131951),
+    C = n(19780),
+    S = n(594174),
+    y = n(449224),
+    O = n(358085),
+    Z = n(74538),
+    w = n(299570),
+    I = n(960861),
+    N = n(989941),
+    T = n(562224),
+    P = n(544753),
+    E = n(853030),
+    R = n(560749),
+    A = n(485299),
+    k = n(615161),
+    M = n(289989),
+    D = n(328242),
+    L = n(565574),
+    B = n(286420),
+    G = n(173044),
+    U = n(801604),
+    W = n(577257),
+    F = n(70722),
+    z = n(637824),
+    H = n(388032),
+    V = n(468918);
+function J(e) {
     var t;
-    let {
-            onClose: n,
-            transitionState: l,
-            sourceApplication: a,
-            analyticsLocations: ee = [],
-            selectSource: et = !0,
-        } = e,
-        {
-            twoClickVariant: en,
-            twoStepModal: er,
-            showSDHDUpsell: ei,
-            footerSlideIn: el,
-        } = (0, N.a)({
-            location: "golivemodalv2",
-            autoTrackExposure: !1,
-        }),
-        es = i.useRef(performance.now()),
-        eo = (0, m.e7)(
-            [C.Z],
+    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: J = [], selectSource: Y = !0 } = e,
+        X = i.useRef(performance.now()),
+        K = (0, f.e7)(
+            [b.Z],
             () =>
-                C.Z.getUseSystemScreensharePicker() &&
-                ((0, Z.isLinux)() ||
-                    ((0, Z.isMac)() && c().satisfies(null === x.Z || void 0 === x.Z ? void 0 : x.Z.os.release, J.jR))),
+                b.Z.getUseSystemScreensharePicker() &&
+                ((0, O.isLinux)() ||
+                    ((0, O.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, F.jR))),
         ),
-        { analyticsLocations: ea } = (0, v.ZP)(ee, _.Z.GO_LIVE_MODAL_V2),
-        ec = (0, m.e7)([O.default], () => O.default.getCurrentUser()),
-        ed = (0, M.Z)(),
-        { state: eu, dispatch: ef } = (0, U.Ti)(
-            a,
-            ec,
-            ed,
-            (0, Z.isWindows)() && null != a && et ? "confirm" : "source_select",
-        ),
-        [em, eh] = (0, S.Ls)(X.h7.AUDIO_INPUT, { location: "GoLiveModalV2" }),
-        ep = em.concat(eh);
-    (0, Y.Z)(eo, ef, "confirm" === eu.modalStep);
-    let ex = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, ec),
-        eg = el && !eo,
-        e_ = (0, h.q_F)(
-            {
-                height: eg && null == eu.selectedSource ? 0 : 76 + 40 * !!ex,
-                config: {
-                    easing: $,
-                    duration: 200,
-                },
-            },
-            "respect-motion-settings",
-        ),
-        ev = !(0, Z.isLinux)(),
-        ej = "confirm" === eu.modalStep,
-        eS = !et && null != a && !ej,
-        eb = ej || (!eS && en && (!eo || eu.sourceType === f.vA.CAMERA)),
-        eC = eo && eu.sourceType !== f.vA.CAMERA,
-        ey = eo || !(0, Z.isWindows)() || !er || ej,
-        eO = ei && ex,
-        eI = ej && er,
-        eZ = i.useMemo(() => {
+        { analyticsLocations: q } = (0, _.ZP)(J, g.Z.GO_LIVE_MODAL_V2),
+        Q = (0, f.e7)([S.default], () => S.default.getCurrentUser()),
+        $ = (0, P.Z)(),
+        { state: ee, dispatch: et } = (0, k.Ti)(
+            o,
+            Q,
+            $,
+            (0, O.isWindows)() && null != o && Y ? "confirm" : "source_select",
+        );
+    (0, W.Z)(K, et, "confirm" === ee.modalStep);
+    let en = !Z.ZP.canStreamQuality(Z.ZP.StreamQuality.HIGH, Q),
+        er = !(0, O.isLinux)(),
+        ei = "confirm" === ee.modalStep,
+        el = !Y && null != o && !ei,
+        es = K && ee.sourceType !== u.vA.CAMERA,
+        eo = i.useMemo(() => {
             let e = [
                 {
-                    name: q.intl.string(q.t.tHoi7u),
-                    value: f.vA.WINDOW,
-                    icon: h.GON,
+                    name: H.intl.string(H.t.tHoi7u),
+                    value: u.vA.WINDOW,
+                    icon: m.GON,
                 },
                 {
-                    name: q.intl.string(q.t.MhJ43N),
-                    value: f.vA.CAMERA,
-                    icon: h.Odl,
+                    name: H.intl.string(H.t.MhJ43N),
+                    value: u.vA.CAMERA,
+                    icon: m.Odl,
                 },
             ];
             return (
-                eo ||
+                K ||
                     e.splice(1, 0, {
-                        name: q.intl.string(q.t.slM8rK),
-                        value: f.vA.SCREEN,
-                        icon: h.pzj,
+                        name: H.intl.string(H.t.slM8rK),
+                        value: u.vA.SCREEN,
+                        icon: m.pzj,
                     }),
                 e
             );
-        }, [eo]),
-        { sourceType: ew } = eu,
-        eN = i.useCallback(
+        }, [K]),
+        { sourceType: ea } = ee,
+        ec = i.useCallback(
             async (e) => {
-                b.eo.updateSetting(eu.notifyFriends), b.I0.updateSetting(eu.hidePreview);
-                let [t, r] = await (0, R.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
-                    preset: eu.preset,
-                    fps: eu.fps,
-                    resolution: eu.resolution,
-                    soundshareEnabled: !eu.muteStreamAudio,
-                    previewDisabled: eu.hidePreview,
-                    goLiveModalDurationMs: performance.now() - es.current,
-                    audioSourceId: eu.audioSourceId,
-                    analyticsLocations: ea,
+                j.eo.updateSetting(ee.notifyFriends), j.I0.updateSetting(ee.hidePreview);
+                let [t, r] = await (0, T.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
+                    preset: ee.preset,
+                    fps: ee.fps,
+                    resolution: ee.resolution,
+                    soundshareEnabled: !ee.muteStreamAudio,
+                    previewDisabled: ee.hidePreview,
+                    goLiveModalDurationMs: performance.now() - X.current,
+                    audioSourceId: ee.audioSourceId,
+                    analyticsLocations: q,
                 });
                 if (t) return n();
                 "no permission" === r &&
-                    p.Z.show({
-                        title: q.intl.string(q.t["X+mXen"]),
-                        body: q.intl.string(q.t.MIJCzs),
+                    h.Z.show({
+                        title: H.intl.string(H.t["X+mXen"]),
+                        body: H.intl.string(H.t.MIJCzs),
                     }),
                     n();
             },
-            [n, eu, ea],
+            [n, ee, q],
         );
-    async function eT(e) {
-        if ((0, Z.isWindows)() && er && "source_select" === eu.modalStep) {
-            ef({
-                type: "set_step",
-                step: "confirm",
-            }),
-                ef({
-                    type: "set_selected_channel",
-                    channelId: e,
-                });
-            return;
-        }
-        (await (0, g.Z)({ channelId: e })) && null != a && eN(a);
+    async function ed(e) {
+        (await (0, x.Z)({ channelId: e })) && null != o && ec(o);
     }
-    let eE = i.useCallback(() => {
-            var e;
-            eN({
-                id: "prepicked:" + eu.nativeSourceType,
-                name: null != (e = E.ZP.getLastPickedContentTitle()) ? e : q.intl.string(q.t["KKcy9/"]),
-                url: "",
-            });
-        }, [eN, eu.nativeSourceType]),
-        eP = (0, r.jsxs)(h.mzw, {
-            className: s()(Q.footer, { [Q.footerShadow]: !ex && ej }),
-            separator: !1,
-            direction: u.k.Direction.VERTICAL,
-            children: [
-                (0, r.jsxs)("div", {
-                    className: Q.footerContent,
-                    children: [
-                        (0, r.jsx)(V.Z, { nativePickerEnabled: eo }),
-                        (0, r.jsxs)("div", {
-                            className: Q.rightButtonGroup,
-                            children: [
-                                eO && (0, r.jsx)(H.Z, { onClose: n }),
-                                eC &&
-                                    !eb &&
-                                    (0, r.jsx)(k.Z, {
-                                        mainCTADisabled: !ev && "" === eu.nativeSourceType,
-                                        mainCTAOnClick: () => {
-                                            (0, T.t)(), (0, T.T)(eu.nativeSourceType);
-                                        },
-                                        align: "right",
-                                        ctaText: q.intl.string(q.t.FiBjwc),
-                                        hideOptionsButton: !eO,
-                                    }),
-                                eb &&
-                                    !eC &&
-                                    (0, r.jsx)(k.Z, {
-                                        mainCTADisabled: null == eu.selectedSource,
-                                        mainCTAOnClick: () => {
-                                            null != eu.selectedChannel
-                                                ? eT(eu.selectedChannel)
-                                                : null != eu.selectedSource && eN(eu.selectedSource);
-                                        },
-                                        align: "right",
-                                        hideOptionsButton: !eO,
-                                        ctaText: q.intl.string(K.default["5AyH/v"]),
-                                    }),
-                                (!eO || !(eb || eC)) &&
-                                    (0, r.jsx)(F.Z, {
-                                        useSimplifiedMenu: eI,
-                                        align: "right",
-                                    }),
-                            ],
-                        }),
-                    ],
-                }),
-                ex && (0, r.jsx)(z.Z, { onClose: n }),
-            ],
-        }),
-        eR = eg
-            ? (0, r.jsx)(o.animated.div, {
-                  style: e_,
-                  children: eP,
-              })
-            : eP;
-    return (0, r.jsx)(U.Yw, {
-        state: eu,
-        dispatch: ef,
-        children: (0, r.jsxs)(h.Y0X, {
+    let eu = i.useCallback(() => {
+        var e;
+        ec({
+            id: "prepicked:" + ee.nativeSourceType,
+            name: null != (e = I.ZP.getLastPickedContentTitle()) ? e : H.intl.string(H.t["KKcy9/"]),
+            url: "",
+        });
+    }, [ec, ee.nativeSourceType]);
+    return (0, r.jsx)(k.Yw, {
+        state: ee,
+        dispatch: et,
+        children: (0, r.jsxs)(m.Y0X, {
             impression: {
-                impressionName: d.ImpressionNames.GO_LIVE_MODAL,
+                impressionName: c.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
-                    location_stack: ea,
-                    application_id: (0, Z.isWindows)() ? (null == (t = (0, P.Z)(j.ZP, I.Z)) ? void 0 : t.id) : void 0,
-                    parent_media_session_id: y.Z.getMediaSessionId(),
+                    location_stack: q,
+                    application_id: (0, O.isWindows)() ? (null == (t = (0, N.Z)(v.ZP, y.Z)) ? void 0 : t.id) : void 0,
+                    parent_media_session_id: C.Z.getMediaSessionId(),
                 },
             },
-            className: s()(Q.root, {
-                [Q.nativePicker]: eo && null == a,
-                [Q.channelSelector]: eS,
-                [Q.confirmStep]: ej,
+            className: s()(V.root, {
+                [V.nativePicker]: K && null == o,
+                [V.channelSelector]: el,
+                [V.confirmStep]: ei,
             }),
-            size: h.CgR.DYNAMIC,
+            size: m.CgR.DYNAMIC,
             transitionState: l,
             parentComponent: "GoLiveModalV2",
             children: [
-                eS
-                    ? (0, r.jsx)(L.Z, {
-                          className: s()(Q.channelSelectorComponent, { [Q.withFooter]: ey }),
-                          onSelectChannel: eT,
+                el
+                    ? (0, r.jsx)(R.Z, {
+                          className: s()(V.channelSelectorComponent, V.withFooter),
+                          onSelectChannel: ed,
                       })
-                    : ej
-                      ? (0, r.jsx)(B.Z, { hideBackButton: null != a })
+                    : ei
+                      ? (0, r.jsx)(A.Z, { hideBackButton: null != o })
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(h.xBx, {
+                                (0, r.jsx)(m.xBx, {
                                     separator: !1,
-                                    className: Q.header,
-                                    children: (0, r.jsx)(h.sY7, {
-                                        className: Q.segmentedControl,
-                                        value: ew,
+                                    className: V.header,
+                                    children: (0, r.jsx)(m.sY7, {
+                                        className: V.segmentedControl,
+                                        value: ea,
                                         look: "pill",
-                                        optionClassName: Q.segmentedControlOption,
+                                        optionClassName: V.segmentedControlOption,
                                         onChange: (e) => {
                                             let { value: t } = e;
-                                            return ef({
+                                            return et({
                                                 type: "set_source_type",
                                                 sourceType: t,
                                             });
                                         },
-                                        options: eZ,
+                                        options: eo,
                                     }),
                                 }),
-                                (0, r.jsx)(h.hzk, {
-                                    className: Q.content,
+                                (0, r.jsx)(m.hzk, {
+                                    className: V.content,
                                     children:
-                                        eo && ew !== f.vA.CAMERA
-                                            ? (0, r.jsx)(G.Z, { onSourceSelect: eE })
-                                            : (0, r.jsx)(W.Z, {
+                                        K && ea !== u.vA.CAMERA
+                                            ? (0, r.jsx)(M.Z, { onSourceSelect: eu })
+                                            : (0, r.jsx)(D.Z, {
                                                   onClick: function (e) {
-                                                      function t() {
-                                                          var t;
-                                                          if (
-                                                              !(null == (t = e.id) ? void 0 : t.startsWith(f.vA.CAMERA))
-                                                          )
-                                                              return;
-                                                          let n = (0, A.K)(e.id, eu.deviceSources, ep);
-                                                          ef({
-                                                              type: "set_audio_source",
-                                                              audioSourceId: null != n ? n : void 0,
-                                                          });
-                                                      }
-                                                      if (er && (0, Z.isWindows)()) {
-                                                          t(),
-                                                              ef({
-                                                                  type: "set_selected_source",
-                                                                  source: e,
-                                                              }),
-                                                              ef({
-                                                                  type: "set_step",
-                                                                  step: "confirm",
-                                                              });
-                                                          return;
-                                                      }
-                                                      if (!en) return eN(e);
-                                                      t(),
-                                                          ef({
-                                                              type: "set_selected_source",
-                                                              source: e,
-                                                          });
+                                                      return ec(e);
                                                   },
                                               }),
                                 }),
                             ],
                         }),
-                eI && (0, r.jsx)(D.Z, {}),
-                ey && eR,
+                (0, r.jsxs)(m.mzw, {
+                    className: s()(V.footer, { [V.footerShadow]: !en && ei }),
+                    separator: !1,
+                    direction: d.k.Direction.VERTICAL,
+                    children: [
+                        (0, r.jsxs)("div", {
+                            className: V.footerContent,
+                            children: [
+                                (0, r.jsx)(U.Z, {}),
+                                (0, r.jsxs)("div", {
+                                    className: V.rightButtonGroup,
+                                    children: [
+                                        en && (0, r.jsx)(B.Z, { onClose: n }),
+                                        es &&
+                                            !ei &&
+                                            (0, r.jsx)(E.Z, {
+                                                mainCTADisabled: !er && "" === ee.nativeSourceType,
+                                                mainCTAOnClick: () => {
+                                                    (0, w.t)(), (0, w.T)(ee.nativeSourceType);
+                                                },
+                                                align: "right",
+                                                ctaText: H.intl.string(H.t.FiBjwc),
+                                                hideOptionsButton: !en,
+                                            }),
+                                        ei &&
+                                            !es &&
+                                            (0, r.jsx)(E.Z, {
+                                                mainCTADisabled: null == ee.selectedSource,
+                                                mainCTAOnClick: () => {
+                                                    null != ee.selectedChannel
+                                                        ? ed(ee.selectedChannel)
+                                                        : null != ee.selectedSource && ec(ee.selectedSource);
+                                                },
+                                                align: "right",
+                                                hideOptionsButton: !en,
+                                                ctaText: H.intl.string(z.default["5AyH/v"]),
+                                            }),
+                                        (!en || !(ei || es)) && (0, r.jsx)(L.Z, { align: "right" }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        en && (0, r.jsx)(G.Z, { onClose: n }),
+                    ],
+                }),
             ],
         }),
     });

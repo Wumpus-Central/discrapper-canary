@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -6,13 +6,12 @@ var i = n(120356),
     s = n(268146),
     o = n(481060),
     a = n(63063),
-    c = n(668519),
-    d = n(855403),
-    u = n(615161),
-    f = n(637824),
-    m = n(388032),
-    h = n(602804);
-function p(e) {
+    c = n(855403),
+    d = n(615161),
+    u = n(637824),
+    f = n(388032),
+    m = n(602804);
+function h(e) {
     let { source: t } = e;
     return t.id.startsWith(s.vA.SCREEN)
         ? (0, r.jsx)(o.pzj, { size: "xs" })
@@ -20,126 +19,120 @@ function p(e) {
           ? null != t.icon && "" !== t.icon
               ? (0, r.jsx)("img", {
                     src: t.icon,
-                    className: h.sourceIcon,
+                    className: m.sourceIcon,
                     alt: "",
                 })
               : (0, r.jsx)(o.GON, { size: "xs" })
           : (0, r.jsx)(o.Odl, { size: "xs" });
 }
-function x(e) {
-    let { source: t, selected: n, twoClickVariant: i, onClick: s } = e,
-        { url: a, name: c } = t;
+function p(e) {
+    let { source: t, selected: n, onClick: i } = e,
+        { url: s, name: a } = t;
     return (0, r.jsxs)(o.P3F, {
-        onClick: () => s(t),
-        className: l()(h.source, { [h.selectedSource]: n }),
+        onClick: () => i(t),
+        className: l()(m.source, { [m.selectedSource]: n }),
         children: [
             (0, r.jsx)("div", {
-                className: h.sourcePreviewContainer,
+                className: m.sourcePreviewContainer,
                 children: (0, r.jsxs)("div", {
-                    className: h.sourcePreview,
+                    className: m.sourcePreview,
                     children: [
                         (0, r.jsx)("img", {
-                            src: a,
-                            className: h.sourcePreviewImage,
+                            src: s,
+                            className: m.sourcePreviewImage,
                             alt: "",
                         }),
-                        !i &&
-                            (0, r.jsx)("div", {
-                                className: h.sourceOverlay,
-                                children: (0, r.jsx)("div", {
-                                    className: h.sourceOverlayCTA,
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: "text-sm/medium",
-                                        color: "button-filled-white-text",
-                                        children: m.intl.string(m.t.z7WGho),
-                                    }),
+                        (0, r.jsx)("div", {
+                            className: m.sourceOverlay,
+                            children: (0, r.jsx)("div", {
+                                className: m.sourceOverlayCTA,
+                                children: (0, r.jsx)(o.Text, {
+                                    variant: "text-sm/medium",
+                                    color: "button-filled-white-text",
+                                    children: f.intl.string(f.t.z7WGho),
                                 }),
                             }),
+                        }),
                     ],
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: h.sourceNameContainer,
+                className: m.sourceNameContainer,
                 children: [
-                    (0, r.jsx)(p, { source: t }),
+                    (0, r.jsx)(h, { source: t }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/medium",
-                        className: h.sourceName,
-                        children: c,
+                        className: m.sourceName,
+                        children: a,
                     }),
                 ],
             }),
         ],
     });
 }
-function g(e) {
+function x(e) {
     var t;
     let { onClick: n } = e,
-        { twoClickVariant: i } = (0, c.a)({
-            autoTrackExposure: !1,
-            location: "sourcegrid",
-        }),
         [
             {
-                windowSources: l,
-                deviceSources: a,
-                screenSources: f,
-                sourceType: m,
-                fetchingSources: p,
-                selectedSource: g,
+                windowSources: i,
+                deviceSources: l,
+                screenSources: a,
+                sourceType: u,
+                fetchingSources: f,
+                selectedSource: h,
             },
-        ] = (0, u.E_)();
-    return p
+        ] = (0, d.E_)();
+    return f
         ? (0, r.jsx)("div", {
-              className: h.loading,
+              className: m.loading,
               children: (0, r.jsx)(o.$jN, {}),
           })
-        : ((t = m === s.vA.WINDOW ? l : m === s.vA.SCREEN ? f : a),
-          m === s.vA.CAMERA && 0 === t.length
-              ? (0, r.jsx)(_, {})
+        : ((t = u === s.vA.WINDOW ? i : u === s.vA.SCREEN ? a : l),
+          u === s.vA.CAMERA && 0 === t.length
+              ? (0, r.jsx)(g, {})
               : (0, r.jsx)("div", {
-                    className: h.root,
+                    className: m.root,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            x,
+                            p,
                             {
                                 onClick: n,
                                 source: e,
                                 selected:
-                                    null != g && "windowHandle" in g
-                                        ? (0, d.Z)(e.id, g.windowHandle)
-                                        : (null == g ? void 0 : g.id) === e.id,
-                                twoClickVariant: i,
+                                    null != h && "windowHandle" in h
+                                        ? (0, c.Z)(e.id, h.windowHandle)
+                                        : (null == h ? void 0 : h.id) === e.id,
                             },
                             e.id,
                         ),
                     ),
                 }));
 }
-function _() {
+function g() {
     return (0, r.jsxs)("div", {
-        className: h.emptyState,
+        className: m.emptyState,
         children: [
             (0, r.jsx)(o.Odl, {
                 size: "md",
                 color: o.TVs.colors.ICON_MUTED,
-                className: h.emptyIcon,
+                className: m.emptyIcon,
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-lg/medium",
                 color: "header-primary",
-                className: h.emptyHeader,
-                children: m.intl.string(f.default["/z3YaW"]),
+                className: m.emptyHeader,
+                children: f.intl.string(u.default["/z3YaW"]),
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: h.emptyBody,
-                children: m.intl.string(f.default.agwSGB),
+                className: m.emptyBody,
+                children: f.intl.string(u.default.agwSGB),
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/semibold",
-                children: m.intl.format(f.default.xpVzr6, { helpdeskURL: a.Z.getArticleURL(360040816151) }),
+                children: f.intl.format(u.default.xpVzr6, { helpdeskURL: a.Z.getArticleURL(360040816151) }),
             }),
         ],
     });
