@@ -58,24 +58,32 @@ function f(e, t) {
     );
 }
 async function _(e) {
-    let { nextStatus: t, prevStatus: n, analyticsContext: c, durationMillis: d } = e;
-    null == n && (n = o.Z.getStatus()),
+    let { nextStatus: t, prevStatus: n, analyticsContext: c, durationMillis: d, disableTracking: _ = !1 } = e;
+    if (
+        (null == n && (n = o.Z.getStatus()),
         await a.hW.updateAsync(
             "status",
             (e) => {
                 (e.status = r.Gm.create({ value: t })),
-                    (e.statusExpiresAtMs = null != d ? "".concat(Date.now() + d) : "0");
+                    (e.statusExpiresAtMs = null != d ? "".concat(Date.now() + d) : "0"),
+                    (e.statusCreatedAtMs =
+                        n === t && null != e.statusCreatedAtMs
+                            ? e.statusCreatedAtMs
+                            : r.wA.create({ value: "".concat(Date.now()) }));
             },
             a.fy.INFREQUENT_USER_ACTION,
-        );
-    let _ = u(
+        ),
+        _)
+    )
+        return;
+    let p = u(
         {
             next_status: t,
             prev_status: n,
         },
         i.Z.getGlobalStats(),
     );
-    null != d && (_ = f(u({}, _), { expire_duration_minutes: null != d ? d / 60000 : null })),
-        null != c && (_ = u({}, _, c)),
-        s.default.track(l.rMx.USER_STATUS_UPDATED, _);
+    null != d && (p = f(u({}, p), { expire_duration_minutes: null != d ? d / 60000 : null })),
+        null != c && (p = u({}, p, c)),
+        s.default.track(l.rMx.USER_STATUS_UPDATED, p);
 }

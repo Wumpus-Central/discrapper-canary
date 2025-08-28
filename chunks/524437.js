@@ -4,7 +4,7 @@ n.d(t, {
     E5: () => g,
     Fm: () => eE,
     GI: () => E,
-    JY: () => eV,
+    JY: () => eF,
     LX: () => P,
     Me: () => eu,
     Ns: () => p,
@@ -348,7 +348,7 @@ class w extends o.C {
                     a.safetySettings = e2.internalBinaryRead(e, e.uint32(), n, a.safetySettings);
                     break;
                 case 22:
-                    a.icymiSettings = e6.internalBinaryRead(e, e.uint32(), n, a.icymiSettings);
+                    a.icymiSettings = e5.internalBinaryRead(e, e.uint32(), n, a.icymiSettings);
                     break;
                 case 23:
                     a.applications = e7.internalBinaryRead(e, e.uint32(), n, a.applications);
@@ -396,7 +396,7 @@ class w extends o.C {
             e.safetySettings &&
                 e2.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(),
             e.icymiSettings &&
-                e6.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
+                e5.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
             e.applications && e7.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(),
             e.ads && to.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(),
             e.inAppFeedbackSettings &&
@@ -536,7 +536,7 @@ class w extends o.C {
                 no: 22,
                 name: "icymi_settings",
                 kind: "message",
-                T: () => e6,
+                T: () => e5,
             },
             {
                 no: 23,
@@ -1098,8 +1098,8 @@ class Z extends o.C {
         ]);
     }
 }
-let V = new Z();
-class F extends o.C {
+let F = new Z();
+class V extends o.C {
     create(e) {
         let t = { collapsedInInbox: !1 };
         return (
@@ -1121,7 +1121,7 @@ class F extends o.C {
                     a.collapsedInInbox = e.bool();
                     break;
                 case 2:
-                    a.iconEmoji = V.internalBinaryRead(e, e.uint32(), n, a.iconEmoji);
+                    a.iconEmoji = F.internalBinaryRead(e, e.uint32(), n, a.iconEmoji);
                     break;
                 case 3:
                     a.customNotificationSoundConfig = W.internalBinaryRead(
@@ -1145,7 +1145,7 @@ class F extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         !1 !== e.collapsedInInbox && t.tag(1, r.TD.Varint).bool(e.collapsedInInbox),
-            e.iconEmoji && V.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
+            e.iconEmoji && F.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.customNotificationSoundConfig &&
                 W.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
@@ -1163,7 +1163,7 @@ class F extends o.C {
                 no: 2,
                 name: "icon_emoji",
                 kind: "message",
-                T: () => V,
+                T: () => F,
             },
             {
                 no: 3,
@@ -1174,7 +1174,7 @@ class F extends o.C {
         ]);
     }
 }
-let H = new F();
+let H = new V();
 class Y extends o.C {
     create(e) {
         let t = {};
@@ -3192,6 +3192,9 @@ class eb extends o.C {
                 case 4:
                     a.statusExpiresAtMs = e.fixed64().toString();
                     break;
+                case 5:
+                    a.statusCreatedAtMs = s.wA.internalBinaryRead(e, e.uint32(), n, a.statusCreatedAtMs);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -3209,7 +3212,9 @@ class eb extends o.C {
             e.customStatus && ev.internalBinaryWrite(e.customStatus, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.showCurrentGame &&
                 s.D5.internalBinaryWrite(e.showCurrentGame, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
-            "0" !== e.statusExpiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.statusExpiresAtMs);
+            "0" !== e.statusExpiresAtMs && t.tag(4, r.TD.Bit64).fixed64(e.statusExpiresAtMs),
+            e.statusCreatedAtMs &&
+                s.wA.internalBinaryWrite(e.statusCreatedAtMs, t.tag(5, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -3238,6 +3243,12 @@ class eb extends o.C {
                 name: "status_expires_at_ms",
                 kind: "scalar",
                 T: 6,
+            },
+            {
+                no: 5,
+                name: "status_created_at_ms",
+                kind: "message",
+                T: () => s.wA,
             },
         ]);
     }
@@ -4239,8 +4250,8 @@ class eZ extends o.C {
         ]);
     }
 }
-let eV = new eZ();
-class eF extends o.C {
+let eF = new eZ();
+class eV extends o.C {
     create(e) {
         let t = {
             user: {},
@@ -4291,7 +4302,7 @@ class eF extends o.C {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    o = eV.internalBinaryRead(t, t.uint32(), n);
+                    o = eF.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -4299,7 +4310,7 @@ class eF extends o.C {
                     );
             }
         }
-        e[null != a ? a : "0"] = null != o ? o : eV.create();
+        e[null != a ? a : "0"] = null != o ? o : eF.create();
     }
     binaryReadMap2(e, t, n) {
         let r = t.uint32(),
@@ -4313,7 +4324,7 @@ class eF extends o.C {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    o = eV.internalBinaryRead(t, t.uint32(), n);
+                    o = eF.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -4321,18 +4332,18 @@ class eF extends o.C {
                     );
             }
         }
-        e[null != a ? a : "0"] = null != o ? o : eV.create();
+        e[null != a ? a : "0"] = null != o ? o : eF.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.user))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                eV.internalBinaryWrite(e.user[i], t, n),
+                eF.internalBinaryWrite(e.user[i], t, n),
                 t.join().join();
         for (let i of Object.keys(e.stream))
             t.tag(2, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                eV.internalBinaryWrite(e.stream[i], t, n),
+                eF.internalBinaryWrite(e.stream[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -4346,7 +4357,7 @@ class eF extends o.C {
                 K: 6,
                 V: {
                     kind: "message",
-                    T: () => eV,
+                    T: () => eF,
                 },
             },
             {
@@ -4356,13 +4367,13 @@ class eF extends o.C {
                 K: 6,
                 V: {
                     kind: "message",
-                    T: () => eV,
+                    T: () => eF,
                 },
             },
         ]);
     }
 }
-let eH = new eF();
+let eH = new eV();
 class eY extends o.C {
     create(e) {
         let t = {};
@@ -4825,8 +4836,8 @@ class e8 extends o.C {
         ]);
     }
 }
-let e6 = new e8();
-class e5 extends o.C {
+let e5 = new e8();
+class e6 extends o.C {
     create(e) {
         let t = { appSettings: {} };
         return (
@@ -4902,7 +4913,7 @@ class e5 extends o.C {
         ]);
     }
 }
-let e7 = new e5();
+let e7 = new e6();
 class e9 extends o.C {
     create(e) {
         let t = {};

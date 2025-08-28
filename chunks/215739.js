@@ -30,6 +30,12 @@ class p extends i.Z {
                 POST_CONNECTION_OPEN: () => this.handleUpdateProto(),
             }),
             u(this, "handleUpdateProto", () => {
+                this.manageExpiringCustomStatus(),
+                    this.manageExpiringStatus(),
+                    this.lazilyMigrateStatusCreatedAt(),
+                    this.manageExpiringFocusMode();
+            }),
+            u(this, "manageExpiringCustomStatus", () => {
                 let e = s.Ok.getSetting();
                 if (null == e) _.stop();
                 else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
@@ -44,16 +50,17 @@ class p extends i.Z {
                           )
                         : (s.Ok.updateSetting(void 0), _.stop());
                 } else null != _ && _.stop();
-                let t = s.Cr.getSetting();
-                if (null != t && "0" !== t && l.Z.getStatus() !== c.Skl.ONLINE) {
-                    let e = new Date(Number(t)).getTime() - new Date().getTime();
-                    e > 0
+            }),
+            u(this, "manageExpiringStatus", () => {
+                let e = s.Cr.getSetting();
+                if (null != e && "0" !== e && l.Z.getStatus() !== c.Skl.ONLINE) {
+                    let t = new Date(Number(e)).getTime() - new Date().getTime();
+                    t > 0
                         ? d.start(
-                              e,
+                              t,
                               () => {
                                   (0, a.Z)({
                                       nextStatus: c.Skl.ONLINE,
-                                      prevStatus: l.Z.getStatus(),
                                       analyticsContext: { location: { object: c.qAy.CUSTOM_STATUS_MANAGER } },
                                   });
                               },
@@ -61,17 +68,29 @@ class p extends i.Z {
                           )
                         : ((0, a.Z)({
                               nextStatus: c.Skl.ONLINE,
-                              prevStatus: l.Z.getStatus(),
                               analyticsContext: { location: { object: c.qAy.CUSTOM_STATUS_MANAGER } },
                           }),
                           d.stop());
                 } else null != d && d.stop();
-                let n = s.fv.getSetting();
-                if (null != n && "0" !== n) {
-                    let e = new Date(Number(n)).getTime() - new Date().getTime();
-                    e > 0
+            }),
+            u(this, "lazilyMigrateStatusCreatedAt", () => {
+                if (l.Z.getStatus() !== c.Skl.ONLINE && null == s.P4.getSetting()) {
+                    let e = s.Cr.getSetting(),
+                        t = "0" !== e ? new Date(Number(e)).getTime() - new Date().getTime() : void 0;
+                    (0, a.Z)({
+                        nextStatus: l.Z.getStatus(),
+                        durationMillis: null != t && t > 0 ? t : void 0,
+                        disableTracking: !0,
+                    });
+                }
+            }),
+            u(this, "manageExpiringFocusMode", () => {
+                let e = s.fv.getSetting();
+                if (null != e && "0" !== e) {
+                    let t = new Date(Number(e)).getTime() - new Date().getTime();
+                    t > 0
                         ? f.start(
-                              e,
+                              t,
                               () => {
                                   (0, o.oW)(!1);
                               },
