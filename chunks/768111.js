@@ -1,47 +1,48 @@
-t.d(n, { Z: () => u }), t(539854);
+t.d(n, { Z: () => f }), t(539854);
 var r = t(447448),
-    l = t(585305),
-    o = t(806729),
-    i = t(517157),
-    c = t(708108),
-    s = t(146078),
-    a = t(228168),
-    d = t(388032);
-function u(e) {
+    l = t(461133),
+    o = t(585305),
+    i = t(806729),
+    c = t(517157),
+    s = t(708108),
+    a = t(146078),
+    d = t(228168),
+    u = t(388032);
+function f(e) {
     let { user: n, currentUser: t } = e,
-        { mutualFriendsCount: u, mutualGuilds: f } = (0, o.Z)(n),
-        m = null == f ? void 0 : f.length,
-        p = (0, l.Z)(n),
-        h = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
-        x = (0, i.Z)(n.id),
-        b = [],
-        j = n.id === (null == t ? void 0 : t.id),
-        g = x.length > 0;
+        { mutualFriendsCount: f, mutualGuilds: m } = (0, i.Z)(n),
+        p = null == m ? void 0 : m.length,
+        h = (0, o.Z)(n),
+        x = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
+        b = (0, l.P)({ location: "useUserProfileModalV2TabBarItems" }),
+        j = (0, c.Z)(n.id),
+        g = [],
+        v = n.id === (null == t ? void 0 : t.id),
+        y = j.length > 0;
     return (
-        h &&
-            (g || j) &&
-            b.push({
-                text: d.intl.string(d.t.laViw8),
-                section: a.oh.WIDGETS,
+        ((v && x) || (y && b)) &&
+            g.push({
+                text: u.intl.string(u.t.laViw8),
+                section: d.oh.WIDGETS,
                 subsection: void 0,
             }),
-        b.push({
-            text: d.intl.string(d.t.chq59f),
-            section: a.oh.ACTIVITY,
+        g.push({
+            text: u.intl.string(u.t.chq59f),
+            section: d.oh.ACTIVITY,
             subsection: void 0,
         }),
         n.id !== (null == t ? void 0 : t.id) &&
-            p &&
-            (b.push({
-                text: (0, c.Z)(u),
-                section: a.oh.MUTUAL_FRIENDS,
+            h &&
+            (g.push({
+                text: (0, s.Z)(f),
+                section: d.oh.MUTUAL_FRIENDS,
                 subsection: void 0,
             }),
-            b.push({
-                text: (0, s.Z)(m),
-                section: a.oh.MUTUAL_GUILDS,
+            g.push({
+                text: (0, a.Z)(p),
+                section: d.oh.MUTUAL_GUILDS,
                 subsection: void 0,
             })),
-        b
+        g
     );
 }
