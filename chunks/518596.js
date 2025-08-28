@@ -18,7 +18,7 @@ function c() {
         (0, o.yP)("openUserSettings")
             ? (0, i.ZDy)(
                   async () => {
-                      let { default: e } = await Promise.all([n.e("5550"), n.e("51651")]).then(n.bind(n, 245286));
+                      let { default: e } = await n.e("47129").then(n.bind(n, 245286));
                       return (t) =>
                           (0, r.jsx)(
                               e,
