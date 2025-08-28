@@ -98,7 +98,7 @@ function L(e) {
                     assetId: e.assetId,
                     productName: e.name,
                     a11yLabel: e.a11yLabel,
-                    claimed: null != S && !S.includes(e),
+                    claimed: null != S && !S.some((t) => t.skuId === e.skuId),
                     user: O,
                     onSelect: k,
                     selectedSkuId: null != P ? P : void 0,
