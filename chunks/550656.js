@@ -28,15 +28,17 @@ function E(e) {
             layerContext: T,
             animationStyle: S,
             positionKey: A,
+            onMouseEnter: C,
+            onMouseLeave: N,
         } = e,
-        C = i.useRef(null),
-        { isRichTooltip: N } = (0, f.nr)(),
-        R = i.useMemo(() => (("left" === y || "right" === y ? g : m).includes(O) ? O : "center"), [y, O]);
+        R = i.useRef(null),
+        { isRichTooltip: P } = (0, f.nr)(),
+        w = i.useMemo(() => (("left" === y || "right" === y ? g : m).includes(O) ? O : "center"), [y, O]);
     if (!n) return null;
-    let P = (0, r.jsx)(c.j, {
+    let D = (0, r.jsx)(c.j, {
         targetRef: a,
         position: y,
-        align: R,
+        align: w,
         spacing: v,
         positionKey: A,
         autoInvert: !0,
@@ -53,10 +55,12 @@ function E(e) {
                     customOffset: "custom" === h ? m : void 0,
                 },
                 O = (0, r.jsxs)("div", {
-                    ref: C,
+                    ref: R,
                     id: E,
-                    className: o()(p.tooltip, { [p.richTooltip]: N }),
+                    className: o()(p.tooltip, { [p.richTooltip]: P }),
                     role: "tooltip",
+                    onMouseEnter: C,
+                    onMouseLeave: N,
                     "data-position": f,
                     children: [
                         (0, r.jsx)(d._, { caretConfig: g }),
@@ -83,7 +87,7 @@ function E(e) {
     return null != T
         ? (0, r.jsx)(l.mh, {
               layerContext: T,
-              children: P,
+              children: D,
           })
-        : P;
+        : D;
 }

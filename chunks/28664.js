@@ -112,8 +112,10 @@ function b(e) {
             isRendered: O,
             triggerProps: I,
             handleExitComplete: T,
+            onTooltipMouseEnter: S,
+            onTooltipMouseLeave: A,
         } = (0, c.l)(_({ targetElementRef: g.targetElementRef }, h)),
-        S = i.useMemo(
+        C = i.useMemo(
             () => ({
                 triggerHandlers: I,
                 triggerRef: g.triggerRef,
@@ -130,11 +132,13 @@ function b(e) {
                 onAnimationRest: u,
                 handleExitComplete: T,
                 positionKey: "string" == typeof n ? n : void 0,
+                onTooltipMouseEnter: S,
+                onTooltipMouseLeave: A,
             }),
-            [I, g.triggerRef, g.targetElementRef, b, y, O, n, a, o, s, p, l, u, T],
+            [I, g.triggerRef, g.targetElementRef, b, y, O, n, a, o, s, p, l, u, T, S, A],
         );
     return (0, r.jsxs)(E.Provider, {
-        value: S,
+        value: C,
         children: [t, (0, r.jsx)(v, {})],
     });
 }
@@ -216,8 +220,8 @@ function v() {
         caretPosition: null != (e = null == b ? void 0 : b.position) ? e : (0, l.Av)(h),
         onExitComplete: c,
         onAnimationRest: d,
-    })((e, t) =>
-        t
+    })((e, i) =>
+        i
             ? (0, r.jsx)(s.N, {
                   isVisible: n,
                   isRendered: o,
@@ -232,6 +236,8 @@ function v() {
                   animationStyle: e,
                   positionKey: O,
                   "data-mana-component": "tooltip",
+                  onMouseEnter: t.onTooltipMouseEnter,
+                  onMouseLeave: t.onTooltipMouseLeave,
               })
             : null,
     );

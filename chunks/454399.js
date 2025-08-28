@@ -145,8 +145,10 @@ function O(e) {
             isRendered: N,
             triggerProps: R,
             handleExitComplete: P,
+            onTooltipMouseEnter: w,
+            onTooltipMouseLeave: D,
         } = (0, u.l)(h({ targetElementRef: I.targetElementRef }, v)),
-        w = i.useMemo(
+        x = i.useMemo(
             () => ({
                 triggerProps: g(h({}, R), {
                     "aria-describedby": S,
@@ -165,12 +167,14 @@ function O(e) {
                 layerContext: O,
                 onAnimationRest: c,
                 handleExitComplete: P,
-                positionKey: "".concat(n, "|").concat(o),
+                positionKey: "string" == typeof n && "string" == typeof o ? "".concat(n, "|").concat(o) : void 0,
+                onTooltipMouseEnter: w,
+                onTooltipMouseLeave: D,
             }),
-            [R, I.triggerRef, I.targetElementRef, S, C, N, A, d, p, m, b, O, c, P, n, o],
+            [R, I.triggerRef, I.targetElementRef, S, C, N, A, d, p, m, b, O, c, P, n, o, w, D],
         );
     return (0, r.jsxs)(y.Provider, {
-        value: w,
+        value: x,
         children: [t, (0, r.jsx)(T, {})],
     });
 }
@@ -250,8 +254,8 @@ function T() {
         caretPosition: null != (e = null == b ? void 0 : b.position) ? e : (0, c.Av)(m),
         onExitComplete: u,
         onAnimationRest: f,
-    })((e, t) =>
-        t
+    })((e, i) =>
+        i
             ? (0, r.jsx)(l.pn, {
                   isRichTooltip: !0,
                   children: (0, r.jsx)(s.N, {
@@ -268,6 +272,8 @@ function T() {
                       animationStyle: e,
                       positionKey: v,
                       "data-mana-component": "rich-tooltip",
+                      onMouseEnter: t.onTooltipMouseEnter,
+                      onMouseLeave: t.onTooltipMouseLeave,
                   }),
               })
             : null,
