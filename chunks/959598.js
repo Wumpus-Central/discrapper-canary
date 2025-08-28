@@ -43,7 +43,7 @@ var r = {
     "./abc-ginto-nord-discord/abcgintonorddiscord-700-bolditalic.woff2": ["390070"],
     "./abc-ginto-nord/abcgintonord-800-extrabolditalic.woff2": ["858855"],
     "./abc-ginto-normal/abcgintonormal-700-bold.woff2": ["394248"],
-    "./biorhyme/biorhyme-400-normal.woff2": ["321483"],
+    "./biorhyme/biorhyme-400-normal.woff2": ["321483", "5753"],
     "./gg-mono/ggmono-700-bold.woff2": ["757883"],
     "./noto-sans/notosans-400-normal.woff2": ["134131"],
     "./abc-ginto-normal/abcgintonormal-400-normalitalic.woff2": ["590102"],

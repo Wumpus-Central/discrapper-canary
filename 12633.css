@@ -89671,7 +89671,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -102226,18 +102226,12 @@ html.disable-forced-colors * {
 }
 
 @font-face {
-    font-family: BioRhyme;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/assets/f75115b65a230189.woff2) format("woff2")
-}
-
-@font-face {
     ascent-override: 100%;
     font-family: Cherry Bomb One;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/c064d4440a5d10c4.woff2) format("woff2")
+    src: url(/assets/c064d4440a5d10c4.woff2) format("woff2");
+    unicode-range: u+0000-003f, u+0041-ffff
 }
 
 @font-face {
@@ -102245,7 +102239,8 @@ html.disable-forced-colors * {
     font-family: Chicle;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/b66e881bcbf066bd.woff2) format("woff2")
+    src: url(/assets/b66e881bcbf066bd.woff2) format("woff2");
+    unicode-range: u+0000-003f, u+0041-ffff
 }
 
 @font-face {
@@ -102280,14 +102275,16 @@ html.disable-forced-colors * {
     font-family: Sinistre;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/bccdc9cd3d272519.woff2) format("woff2")
+    src: url(/assets/bccdc9cd3d272519.woff2) format("woff2");
+    unicode-range: u+0000-003f, u+0041-ffff
 }
 
 @font-face {
     font-family: Zilla Slab;
     font-style: normal;
     font-weight: 600;
-    src: url(/assets/4f94f359293a357d.woff2) format("woff2")
+    src: url(/assets/4f94f359293a357d.woff2) format("woff2");
+    unicode-range: u+0000-003f, u+0041-ffff
 }
 
 :root {
