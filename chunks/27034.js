@@ -99,6 +99,7 @@ function E(e) {
                                   onSlideReady: (e) => A(e),
                                   width: m,
                                   overflow: R ? "visible" : void 0,
+                                  shouldUseMediaQueryToSetHeight: !0,
                                   children: v
                                       .filter((e) => null != e.key)
                                       .map((e) =>

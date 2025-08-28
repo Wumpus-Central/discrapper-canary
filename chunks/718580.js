@@ -1,20 +1,23 @@
 n.d(t, {
-    H: () => S,
-    M: () => T,
+    H: () => N,
+    M: () => C,
 });
 var r = n(951288),
     i = n(647438),
-    a = n(202841),
-    o = n(990547),
-    s = n(873546),
-    l = n(186325),
-    c = n(481060),
-    u = n(393238),
-    d = n(699682),
-    f = n(793903),
-    _ = n(906732),
-    p = n(237617);
-function h(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(202841),
+    l = n(990547),
+    c = n(873546),
+    u = n(186325),
+    d = n(481060),
+    f = n(393238),
+    _ = n(699682),
+    p = n(793903),
+    h = n(906732),
+    m = n(237617),
+    g = n(430723);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +30,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +41,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +58,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +81,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,16 +90,16 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = {
+let T = {
     mass: 1,
     tension: 300,
     friction: 28,
     clamp: !0,
 };
-function v(e, t) {
+function S(e, t) {
     return null == e ? null : e.index > t.index ? "backwards" : e.index < t.index ? "forwards" : null;
 }
-function I(e, t) {
+function A(e, t) {
     return (n) => {
         if (0 === n) return "auto";
         let r = "forwards" === t.current,
@@ -111,112 +114,113 @@ function I(e, t) {
         );
     };
 }
-function T(e) {
+function C(e) {
     return null;
 }
-function S(e) {
+function N(e) {
     var t,
         n,
-        h,
-        { contentDisplay: g, fadeInOut: y = !1 } = e,
-        T = b(e, ["contentDisplay", "fadeInOut"]);
-    let S = {},
-        { analyticsLocations: A } = (0, _.ZP)();
-    i.Children.forEach(T.children, (e, t) => {
-        S[e.props.id] = {
+        a,
+        { contentDisplay: E, fadeInOut: y = !1 } = e,
+        I = v(e, ["contentDisplay", "fadeInOut"]);
+    let C = {},
+        { analyticsLocations: N } = (0, h.ZP)();
+    i.Children.forEach(I.children, (e, t) => {
+        C[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
             impressionProperties: e.props.impressionProperties,
             index: t,
         };
     });
-    let C = T.activeSlide,
-        N = (0, d.Z)(T.activeSlide),
-        R = null != (t = T.directionOverride) ? t : v(null != N ? S[N] : null, S[C]),
-        { reducedMotion: P } = i.useContext(l.S),
-        w = i.useContext(f.Z),
-        D = S[C].impressionName,
-        x = E(m({}, S[C].impressionProperties), { location_stack: A });
-    w({
-        type: o.ImpressionTypes.MODAL,
-        name: D,
-        properties: x,
+    let R = I.activeSlide,
+        P = (0, _.Z)(I.activeSlide),
+        w = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
+        { reducedMotion: D } = i.useContext(u.S),
+        x = i.useContext(p.Z),
+        L = C[R].impressionName,
+        j = O(b({}, C[R].impressionProperties), { location_stack: N });
+    x({
+        type: l.ImpressionTypes.MODAL,
+        name: L,
+        properties: j,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: L, width: j = 0, height: M = 0 } = (0, u.ZP)(C),
-        k = m({}, O, T.springConfig, P.enabled ? { clamp: !0 } : null),
-        U = (0, c.q_F)(
+    let { ref: M, width: k = 0, height: U = 0 } = (0, f.ZP)(R),
+        G = b({}, T, I.springConfig, D.enabled ? { clamp: !0 } : null),
+        B = (0, d.q_F)(
             {
-                width: null != (n = T.width) ? n : j,
-                height: M,
-                config: k,
+                width: null != (n = I.width) ? n : k,
+                height: U,
+                config: G,
             },
-            null == N ? "animate-never" : "respect-motion-settings",
+            null == P ? "animate-never" : "respect-motion-settings",
         ),
-        G = (0, c.Yzy)(
-            C,
+        Z = (0, d.Yzy)(
+            R,
             {
                 value: 0,
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: k,
+                config: G,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === C && null != T.onSlideReady && T.onSlideReady(n);
+                    n === R && null != I.onSlideReady && I.onSlideReady(n);
                 },
             },
-            null == N ? "animate-never" : "respect-motion-settings",
+            null == P ? "animate-never" : "respect-motion-settings",
         ),
-        B = (0, p.Z)(R),
-        { width: Z, centered: V = !0 } = T,
-        F = s.tq ? "100%" : U.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
-        H = s.tq ? "100%" : U.height.to((e) => Math.round(e)),
-        Y = s.tq
+        F = (0, m.Z)(w),
+        { width: V, centered: H = !0 } = I,
+        Y = c.tq ? "100%" : B.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
+        W = c.tq && !I.shouldUseMediaQueryToSetHeight ? "100%" : B.height.to((e) => Math.round(e)),
+        K = c.tq
             ? {}
-            : V
+            : H
               ? {
                     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
                     top: "50%",
                 }
               : { transform: "scale(1.0, 1.0)" },
-        W = s.tq ? {} : { overflow: null != (h = T.overflow) ? h : "hidden" };
-    return (0, r.jsx)(a.animated.div, {
-        style: m(
+        z = c.tq ? {} : { overflow: null != (a = I.overflow) ? a : "hidden" };
+    return (0, r.jsx)(s.animated.div, {
+        style: b(
             {
                 position: "relative",
-                minWidth: F,
-                minHeight: H,
+                minWidth: Y,
+                minHeight: W,
             },
-            W,
+            z,
         ),
-        children: G((e, t, n) => {
+        className: o()({ [g.animatedDivDynamicHeight]: I.shouldUseMediaQueryToSetHeight }),
+        children: Z((e, t, n) => {
             let { key: i } = n,
-                o = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
+                a = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
             return (0, r.jsx)(
-                a.animated.div,
+                s.animated.div,
                 {
-                    ref: t === C ? L : null,
-                    style: m(
+                    ref: t === R ? M : null,
+                    style: b(
                         {
                             position: "absolute",
-                            display: g,
+                            display: E,
                             flexDirection: "column",
                             backfaceVisibility: "hidden",
-                            width: s.tq ? "100%" : Z,
+                            width: c.tq ? "100%" : V,
                         },
-                        Y,
-                        P.enabled
-                            ? o
-                            : m(
+                        K,
+                        D.enabled
+                            ? a
+                            : b(
                                   {
-                                      left: e.value.to(I("left", B)),
-                                      right: e.value.to(I("right", B)),
+                                      left: e.value.to(A("left", F)),
+                                      right: e.value.to(A("right", F)),
                                   },
-                                  y && o,
+                                  y && a,
                               ),
                     ),
-                    children: S[t].children,
+                    children: C[t].children,
                 },
                 i,
             );
