@@ -203,12 +203,12 @@ class x extends _.Z {
                                 ),
                             ),
                             t.getEncryptionModes((r) => {
-                                var i, a, c, u, d, f, _, p, h, g, E, b, y;
+                                var i, a, c, u, d, f, _, p, h, g, E, b, y, O;
                                 this.logger.info("Encryption modes: ".concat(r));
-                                let O = A(T({}, this.getConnectionTransportOptions()), {
+                                let I = A(T({}, this.getConnectionTransportOptions()), {
                                     callMinBitRate: e.callMinBitrate,
                                 });
-                                t.setTransportOptions(O),
+                                t.setTransportOptions(I),
                                     t.setSelfMute(this.selfMute || this.context === v.Yn.STREAM),
                                     t.setSelfDeafen(this.selfDeaf),
                                     t.setOnSpeakingCallback(this.handleSpeakingNative),
@@ -239,12 +239,14 @@ class x extends _.Z {
                                     this.videoSupported &&
                                         (t.setOnVideoCallback(this.handleVideo),
                                         null == (h = t.setOnFirstFrameCallback) || h.call(t, this.handleFirstFrame),
-                                        null == (g = t.setOnDesktopSourceEnded) ||
-                                            g.call(t, this.handleDesktopSourceEnded),
-                                        null == (E = t.setOnSoundshare) || E.call(t, this.handleSoundshare),
-                                        null == (b = t.setOnSoundshareEnded) || b.call(t, this.handleSoundshareEnded),
-                                        null == (y = t.setOnSoundshareFailed) ||
-                                            y.call(t, this.handleSoundshareFailed)),
+                                        null == (g = t.setOnFirstFrameDeliveredStatsCallback) ||
+                                            g.call(t, this.handleFirstFrameStats),
+                                        null == (E = t.setOnDesktopSourceEnded) ||
+                                            E.call(t, this.handleDesktopSourceEnded),
+                                        null == (b = t.setOnSoundshare) || b.call(t, this.handleSoundshare),
+                                        null == (y = t.setOnSoundshareEnded) || y.call(t, this.handleSoundshareEnded),
+                                        null == (O = t.setOnSoundshareFailed) ||
+                                            O.call(t, this.handleSoundshareFailed)),
                                     null == (p = t.setOnMLSFailureCallback) || p.call(t, this.handleMLSFailure),
                                     this.setConnectionState(v.$j.CONNECTED),
                                     this.emit(m.Sh.Connected, o, {
@@ -254,8 +256,8 @@ class x extends _.Z {
                                         codecs: this.codecs,
                                     }),
                                     this.on(m.Sh.Stats, this.handleStats);
-                                let I = this.getUserOptions();
-                                for (let e of (I.forEach((e) => {
+                                let S = this.getUserOptions();
+                                for (let e of (S.forEach((e) => {
                                     var t, n;
                                     return this.logger.info(
                                         "Creating user: "
@@ -266,8 +268,8 @@ class x extends _.Z {
                                             ),
                                     );
                                 }),
-                                this.mergeUsers(I),
-                                this.emit(m.Sh.RemoteStreamsReady, I.length),
+                                this.mergeUsers(S),
+                                this.emit(m.Sh.RemoteStreamsReady, S.length),
                                 Object.keys(this.localSpeakingFlags)))
                                     e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
                             });
@@ -1266,6 +1268,9 @@ class x extends _.Z {
             }),
             I(this, "handleFirstFrame", (e, t, n) => {
                 this.emit(m.Sh.FirstFrame, e, t, n);
+            }),
+            I(this, "handleFirstFrameStats", (e) => {
+                this.emit(m.Sh.FirstFrameStats, e);
             }),
             I(this, "handleNoInput", (e) => {
                 this.emit(m.Sh.Silence, !e);

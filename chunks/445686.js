@@ -37,6 +37,7 @@ var r = (function (e) {
         (e.VideoPermission = "video-permission"),
         (e.Stats = "stats"),
         (e.FirstFrame = "first-frame"),
+        (e.FirstFrameStats = "first-frame-stats"),
         (e.VideoEncoderFallback = "video-encoder-fallback"),
         (e.RemoteStreamsReady = "remote-streams-ready"),
         (e.MLSFailure = "mls-failure"),
