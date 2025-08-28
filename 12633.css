@@ -74508,19 +74508,6 @@ html .progress__61462 {
     margin-right: 8px
 }
 
-.headerBar__0920e:before {
-    bottom: 0;
-    box-shadow: var(--elevation-low);
-    content: "";
-    display: none;
-    height: 1px;
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    z-index: 1
-}
-
 .homeBody__0920e {
     box-sizing: border-box;
     margin: 0 auto;
@@ -74621,10 +74608,6 @@ html .progress__61462 {
     font-weight: var(--font-weight-medium);
     margin: 32px 0 20px;
     padding-bottom: 10px
-}
-
-.headerBar__0920e {
-    transform: translateZ(0)
 }
 
 .theme-dark .categoryHeader__0920e,

@@ -28,7 +28,7 @@ let y = (e) => {
                 children: (e) =>
                     (0, r.jsxs)(_.Z, {
                         isAuthenticated: t,
-                        className: a()(b.headerBar, e, {
+                        className: a()(e, {
                             [b.headerBarV2LightBackground]: !i && !(0, l.wj)(s),
                             [b.headerBarV2DarkBackground]: !i && (0, l.wj)(s),
                         }),
