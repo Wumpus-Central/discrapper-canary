@@ -1,70 +1,72 @@
-t.d(n, { Z: () => p }), t(388685);
+t.d(n, { Z: () => b }), t(388685);
 var r = t(951288),
     l = t(647438),
-    o = t(481060),
-    i = t(785717),
-    c = t(128156),
-    s = t(311044),
-    a = t(408986),
-    d = t(778414),
-    u = t(228168),
-    f = t(883101);
-function m(e) {
+    o = t(120356),
+    i = t.n(o),
+    c = t(481060),
+    s = t(785717),
+    a = t(128156),
+    d = t(311044),
+    u = t(408986),
+    f = t(778414),
+    m = t(228168),
+    p = t(883101);
+function h(e) {
     let {
         user: n,
         currentUser: t,
         section: l,
         subsection: o,
         displayProfile: i,
-        guildId: f,
-        channelId: m,
+        guildId: c,
+        channelId: s,
         onClose: p,
     } = e;
-    return l === u.oh.ACTIVITY
-        ? (0, r.jsx)(c.Z, {
+    return l === m.oh.ACTIVITY
+        ? (0, r.jsx)(a.Z, {
               user: n,
               currentUser: t,
               displayProfile: i,
-              guildId: f,
-              channelId: m,
+              guildId: c,
+              channelId: s,
               subsection: o,
               onClose: p,
           })
-        : l === u.oh.MUTUAL_FRIENDS
-          ? (0, r.jsx)(s.Z, {
+        : l === m.oh.MUTUAL_FRIENDS
+          ? (0, r.jsx)(d.Z, {
                 user: n,
-                guildId: f,
-                channelId: m,
+                guildId: c,
+                channelId: s,
                 onClose: p,
             })
-          : l === u.oh.MUTUAL_GUILDS
-            ? (0, r.jsx)(a.Z, {
+          : l === m.oh.MUTUAL_GUILDS
+            ? (0, r.jsx)(u.Z, {
                   user: n,
                   onClose: p,
               })
-            : l === u.oh.WIDGETS
-              ? (0, r.jsx)(d.C, {
+            : l === m.oh.WIDGETS
+              ? (0, r.jsx)(f.C, {
                     user: n,
-                    guildId: f,
-                    channelId: m,
+                    guildId: c,
+                    channelId: s,
                 })
               : null;
 }
-function p(e) {
-    var n, t, c;
+function b(e) {
+    var n, t, o;
     let {
-            user: s,
-            currentUser: a,
-            displayProfile: d,
-            guildId: u,
-            channelId: p,
-            items: h,
-            initialSection: x,
-            initialSubsection: b,
-            onClose: j,
+            user: a,
+            currentUser: d,
+            displayProfile: u,
+            guildId: f,
+            channelId: b,
+            items: x,
+            initialSection: j,
+            initialSubsection: g,
+            onClose: v,
         } = e,
-        { trackUserProfileAction: g } = (0, i.KZ)(),
-        [{ section: v, subsection: y, text: O }, I] = l.useState(
+        { trackUserProfileAction: y } = (0, s.KZ)(),
+        [{ section: O, subsection: I, text: _ }, Z] = l.useState(
             ((t = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
@@ -92,16 +94,16 @@ function p(e) {
             })(
                 {},
                 null !=
-                    (n = h.find((e) => {
+                    (n = x.find((e) => {
                         let { section: n } = e;
-                        return n === x;
+                        return n === j;
                     }))
                     ? n
-                    : h[0],
+                    : x[0],
             )),
-            (c = c = { subsection: b }),
+            (o = o = { subsection: g }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(c))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
                 : (function (e, n) {
                       var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -109,38 +111,38 @@ function p(e) {
                           t.push.apply(t, r);
                       }
                       return t;
-                  })(Object(c)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(c, e));
+                  })(Object(o)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
                   }),
             t),
         );
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: p.container,
         children: [
-            (0, r.jsx)(o.Ttm, {
+            (0, r.jsx)(c.Ttm, {
                 orientation: "horizontal",
-                className: f.scroller,
+                className: p.scroller,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, r.jsx)(o.njP, {
+                children: (0, r.jsx)(c.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: v,
+                    selectedItem: O,
                     onItemSelect: (e) => {
-                        g({
+                        y({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            I((n) => {
+                            Z((n) => {
                                 var t;
-                                return null != (t = h.find((n) => n.section === e)) ? t : n;
+                                return null != (t = x.find((n) => n.section === e)) ? t : n;
                             });
                     },
-                    children: h.map((e) =>
+                    children: x.map((e) =>
                         (0, r.jsx)(
-                            o.njP.Item,
+                            c.njP.Item,
                             {
-                                className: f.tabBarItem,
+                                className: p.tabBarItem,
                                 id: e.section,
                                 "aria-label": e.text,
                                 children: e.text,
@@ -150,19 +152,19 @@ function p(e) {
                     ),
                 }),
             }),
-            (0, r.jsx)(o.njP.Panel, {
-                id: v,
-                "aria-label": O,
-                className: f.tabBarPanel,
-                children: (0, r.jsx)(m, {
-                    user: s,
-                    currentUser: a,
-                    displayProfile: d,
-                    guildId: u,
-                    channelId: p,
-                    section: v,
-                    subsection: y,
-                    onClose: j,
+            (0, r.jsx)(c.njP.Panel, {
+                id: O,
+                "aria-label": _,
+                className: i()(p.tabBarPanel, { [p.noGutter]: O !== m.oh.WIDGETS }),
+                children: (0, r.jsx)(h, {
+                    user: a,
+                    currentUser: d,
+                    displayProfile: u,
+                    guildId: f,
+                    channelId: b,
+                    section: O,
+                    subsection: I,
+                    onClose: v,
                 }),
             }),
         ],

@@ -2,11 +2,11 @@ r.d(t, { Z: () => o });
 var n = r(951288);
 r(647438);
 var i = r(750312),
-    a = r(189988),
-    l = r(30344);
+    l = r(189988),
+    a = r(30344);
 function o(e) {
-    var { user: t, widget: r, containerClassName: o, disableInteraction: c } = e,
-        s = (function (e, t) {
+    var { user: t, widget: r, containerClassName: o, disableInteraction: c, index: s } = e,
+        u = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -15,27 +15,28 @@ function o(e) {
                     var r,
                         n,
                         i = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["user", "widget", "containerClassName", "disableInteraction"]);
+        })(e, ["user", "widget", "containerClassName", "disableInteraction", "index"]);
     return (0, n.jsx)(i.Z, {
         userId: t.id,
         widget: r,
         className: o,
         disableInteraction: c,
+        index: s,
         children:
             r.games.length > 0
                 ? (0, n.jsx)(
-                      l.Z,
+                      a.Z,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
@@ -67,9 +68,9 @@ function o(e) {
                               disableInteraction: c,
                               widgetType: r.type,
                           },
-                          s,
+                          u,
                       ),
                   )
-                : (0, n.jsx)(a.Z, { widgetType: r.type }),
+                : (0, n.jsx)(l.Z, { widgetType: r.type }),
     });
 }

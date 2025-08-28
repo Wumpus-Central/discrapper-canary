@@ -2,11 +2,11 @@ r.d(t, { Z: () => o });
 var n = r(951288);
 r(647438);
 var i = r(750312),
-    a = r(189988),
-    l = r(623132);
+    l = r(189988),
+    a = r(623132);
 function o(e) {
-    var { user: t, widget: r, isGameFetching: o, containerClassName: c, disableInteraction: s } = e,
-        u = (function (e, t) {
+    var { user: t, widget: r, isGameFetching: o, containerClassName: c, disableInteraction: s, index: u } = e,
+        d = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -15,28 +15,29 @@ function o(e) {
                     var r,
                         n,
                         i = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["user", "widget", "isGameFetching", "containerClassName", "disableInteraction"]);
-    let d = r.games[0];
+        })(e, ["user", "widget", "isGameFetching", "containerClassName", "disableInteraction", "index"]);
+    let f = r.games[0];
     return (0, n.jsx)(i.Z, {
         userId: t.id,
         widget: r,
         className: c,
         disableInteraction: s,
+        index: u,
         children:
-            null != d
+            null != f
                 ? (0, n.jsx)(
-                      l.Z,
+                      a.Z,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
@@ -64,14 +65,14 @@ function o(e) {
                       })(
                           {
                               user: t,
-                              game: d,
+                              game: f,
                               widgetType: r.type,
-                              loading: o(d.applicationId),
+                              loading: o(f.applicationId),
                               disableInteraction: s,
                           },
-                          u,
+                          d,
                       ),
                   )
-                : (0, n.jsx)(a.Z, { widgetType: r.type }),
+                : (0, n.jsx)(l.Z, { widgetType: r.type }),
     });
 }

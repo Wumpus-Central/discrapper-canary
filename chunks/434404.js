@@ -107,8 +107,8 @@ let R = new s.Z("GuildSettingsActionCreators"),
             var a;
             await Promise.all([
                 n.e("57804"),
+                n.e("96253"),
                 n.e("1806"),
-                n.e("53414"),
                 n.e("36599"),
                 n.e("60962"),
                 n.e("58175"),
@@ -128,7 +128,7 @@ let R = new s.Z("GuildSettingsActionCreators"),
                 n.e("39206"),
                 n.e("10576"),
                 n.e("56534"),
-                n.e("11699"),
+                n.e("62712"),
             ]).then(n.bind(n, 994763)),
                 (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) &&
                     (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)),

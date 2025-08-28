@@ -3,4 +3,5 @@ e.exports = {
     scroller: "scroller__37bfc",
     tabBarItem: "tabBarItem__37bfc",
     tabBarPanel: "tabBarPanel__37bfc",
+    noGutter: "noGutter__37bfc",
 };

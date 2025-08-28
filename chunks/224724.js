@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(594174),
     l = n(621853),
     c = n(86419);
@@ -54,7 +54,7 @@ function S(e) {
     (_.suggestedGamesIds = _.suggestedGamesIds.filter((e) => e !== t)),
         (_.suggestedWishlistGamesIds = _.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
-class A extends o.ZP.Store {
+class A extends a.ZP.Store {
     getPendingWidgets() {
         return u;
     }
@@ -75,6 +75,10 @@ class A extends o.ZP.Store {
             if (null == n || !(0, c.ou)(r.games, n.games, r.type)) return !0;
         }
         for (let [e] of t) if (!n.has(e)) return !0;
+        for (let t = 0; t < e.length; t++) {
+            var r, i;
+            if ((null == (r = e[t]) ? void 0 : r.id) !== (null == (i = d[t]) ? void 0 : i.id)) return !0;
+        }
         return !1;
     }
     get isSubmitting() {
@@ -93,7 +97,7 @@ class A extends o.ZP.Store {
         return _;
     }
 }
-let C = new A(a.Z, {
+let C = new A(o.Z, {
     WIDGET_PENDING_SET: g,
     WIDGET_PENDING_SAVE_START: v,
     WIDGET_PENDING_SAVE_SUCCESS: I,
