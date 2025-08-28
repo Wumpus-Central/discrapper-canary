@@ -1,8 +1,10 @@
-n.d(t, { I: () => c });
+n.d(t, { I: () => f });
 var r = n(951288);
 n(647438);
-var i = n(481060);
-function a(e, t, n) {
+var i = n(481060),
+    a = n(626135),
+    o = n(981631);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +17,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,12 +28,12 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -43,28 +45,37 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = (e) => {
-    let { analyticsLocations: t, guild: a } = e;
-    (0, i.ZDy)(async () => {
-        let { default: e } = await n.e("47495").then(n.bind(n, 766950));
-        return (n) =>
-            (0, r.jsx)(
-                e,
-                l(o({}, n), {
-                    guild: a,
-                    analyticsLocations: t,
-                }),
-            );
-    }, {});
-};
+let d = "display-name-styles-modal",
+    f = (e) => {
+        let { analyticsLocations: t, guild: s } = e;
+        (0, i.ZDy)(
+            async () => {
+                let { default: e } = await n.e("47495").then(n.bind(n, 766950));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        u(l({}, n), {
+                            guild: s,
+                            analyticsLocations: t,
+                        }),
+                    );
+            },
+            {
+                modalKey: d,
+                onCloseRequest: () => {
+                    a.default.track(o.rMx.DISPLAY_NAME_STYLES_CLOSED), (0, i.Mr3)(d);
+                },
+            },
+        );
+    };
