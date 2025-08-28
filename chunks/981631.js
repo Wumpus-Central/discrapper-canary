@@ -848,6 +848,7 @@ var v = (function (e) {
             (e.GUILD_TAGS_BADGE_PACK_PETS = "GUILD_TAGS_BADGE_PACK_PETS"),
             (e.GUILD_TAGS_BADGE_PACK_FLEX = "GUILD_TAGS_BADGE_PACK_FLEX"),
             (e.GAME_SERVER_HOSTING = "GAME_SERVER_HOSTING"),
+            (e.AGE_VERIFICATION_LARGE_GUILD = "AGE_VERIFICATION_LARGE_GUILD"),
             e
         );
     })({});
