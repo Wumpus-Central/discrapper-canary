@@ -1,10 +1,13 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
-    a = n(793030),
-    o = n(256139),
-    s = n(866040);
-function l(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(793030),
+    l = n(7284),
+    c = n(256139),
+    u = n(866040);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +20,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +31,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,34 +48,35 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e) {
-    let { user: t, text: n, channel: l, textClassName: u, onPopoutClosed: f } = e,
-        _ = i.useMemo(() => [t], [t]),
-        p = i.useRef(null);
-    return (0, r.jsx)(s.Z, {
-        targetElementRef: p,
-        participants: _,
-        channel: l,
-        onPopoutClosed: f,
+function h(e) {
+    let { user: t, text: n, channel: a, textClassName: d, onPopoutClosed: _, enableDisplayNameStyles: h = !1 } = e,
+        m = i.useMemo(() => [t], [t]),
+        g = i.useRef(null),
+        E = (0, l.j)({ displayNameStyles: null == t ? void 0 : t.displayNameStyles });
+    return (0, r.jsx)(u.Z, {
+        targetElementRef: g,
+        participants: m,
+        channel: a,
+        onPopoutClosed: _,
         children: (e) =>
             (0, r.jsx)(
-                o.Z,
-                d(c({}, e), {
+                c.Z,
+                p(f({}, e), {
                     tag: "span",
-                    children: (0, r.jsx)(a.xv, {
-                        ref: p,
-                        className: u,
+                    children: (0, r.jsx)(s.xv, {
+                        ref: g,
+                        className: h ? o()(d, E) : d,
                         variant: "text-sm/semibold",
                         color: "text-primary",
                         lineClamp: 1,
