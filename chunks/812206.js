@@ -56,26 +56,26 @@ function u(e, t) {
     );
 }
 let d = [],
-    f = {},
-    _ = {},
-    p = {},
-    h = {},
-    m = {},
+    f = new Map(),
+    _ = new Map(),
+    p = new Map(),
+    h = new Map(),
+    m = new Map(),
     g = { botUserIdToAppUsage: {} },
     E = 10;
 function b(e) {
-    let t = f[e.id];
-    h[e.id] = Date.now();
+    let t = f.get(e.id);
+    h.set(e.id, Date.now());
     let n = e;
     for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)),
-    (f[e.id] = n),
-    (p[e.name.toLowerCase()] = n),
+    f.set(e.id, n),
+    p.set(e.name.toLowerCase(), n),
     e.aliases))
-        p[r.toLowerCase()] = n;
-    delete m[e.id];
+        p.set(r.toLowerCase(), n);
+    m.delete(e.id);
 }
 function y() {
-    (f = {}), (_ = {}), (p = {}), (h = {}), (m = {});
+    f.clear(), _.clear(), p.clear(), h.clear(), m.clear();
 }
 function O(e) {
     let { applications: t } = e;
@@ -83,8 +83,8 @@ function O(e) {
 }
 function v(e) {
     let { applicationId: t } = e,
-        n = m[t];
-    return (m[t] = !0), !0 !== n;
+        n = m.get(t);
+    return m.set(t, !0), !0 !== n;
 }
 function I(e) {
     let { application: t } = e;
@@ -120,15 +120,15 @@ function A(e) {
 }
 function C(e) {
     let { applicationId: t } = e,
-        n = m[t];
-    return (m[t] = !1), !1 !== n;
+        n = m.get(t);
+    return m.set(t, !1), !1 !== n;
 }
 function N(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
-        let t = m[e];
-        (m[e] = !0), (n = !0 !== t);
+        let t = m.get(e);
+        m.set(e, !0), (n = !0 !== t);
     }
     return n;
 }
@@ -171,8 +171,8 @@ function j(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
-        let t = m[e];
-        (m[e] = !1), (n = !1 !== t);
+        let t = m.get(e);
+        m.set(e, !1), (n = !1 !== t);
     }
     return n;
 }
@@ -187,7 +187,7 @@ function k(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
-    _[t] = r;
+    _.set(t, r);
 }
 function U(e) {
     let { payments: t } = e,
@@ -216,12 +216,12 @@ function Z(e) {
     if (null == t.target_application) return !1;
     b(o.ZP.createFromServer(t.target_application));
 }
-function V(e) {
+function F(e) {
     let { storeListing: t } = e;
     if (null == t.sku.application) return !1;
     b(o.ZP.createFromServer(t.sku.application));
 }
-function F(e) {
+function V(e) {
     let { messages: t } = e;
     t.forEach((e) => H(e));
 }
@@ -273,39 +273,39 @@ class z extends (r = i.ZP.PersistedStore) {
         return g;
     }
     _getAllApplications() {
-        return Object.values(f);
+        return Array.from(f.values());
     }
     getApplications() {
         return f;
     }
     getGuildApplication(e, t) {
         if (null != e) {
-            for (let n of Object.values(f)) if (n.guildId === e && n.type === t) return n;
+            for (let n of f.values()) if (n.guildId === e && n.type === t) return n;
         }
     }
     getGuildApplicationIds(e) {
         var t;
-        return null == e ? d : null != (t = _[e]) ? t : d;
+        return null == e ? d : null != (t = _.get(e)) ? t : d;
     }
     getApplication(e) {
-        if (null != e) return f[e];
+        if (null != e) return f.get(e);
     }
     getApplicationByName(e) {
         if (null == e) return;
         let t = e.toLowerCase();
-        return Object.prototype.hasOwnProperty.call(p, t) ? p[t] : void 0;
+        return p.has(t) ? p.get(t) : void 0;
     }
     getApplicationLastUpdated(e) {
-        return h[e];
+        return h.get(e);
     }
     isFetchingApplication(e) {
-        return !0 === m[e];
+        return !0 === m.get(e);
     }
     didFetchingApplicationFail(e) {
-        return !1 === m[e];
+        return !1 === m.get(e);
     }
     getFetchingOrFailedFetchingIds() {
-        return Object.keys(m);
+        return Array.from(m.keys());
     }
     getAppIdForBotUserId(e) {
         var t;
@@ -332,8 +332,8 @@ let q = new z(a.Z, {
     INVITE_RESOLVE_SUCCESS: Z,
     GIFT_CODE_RESOLVE_SUCCESS: B,
     LIBRARY_FETCH_SUCCESS: R,
-    STORE_LISTING_FETCH_SUCCESS: V,
-    LOAD_MESSAGES_SUCCESS: F,
+    STORE_LISTING_FETCH_SUCCESS: F,
+    LOAD_MESSAGES_SUCCESS: V,
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: D,
     USER_PROFILE_FETCH_SUCCESS: x,
     APP_DM_OPEN: L,
