@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(213609),
     _ = n(706140),
     p = n(626135),
-    h = n(404615),
+    h = n(176782),
     m = n(238108),
     g = n(22189),
     E = n(391110),
@@ -86,10 +86,10 @@ let R = i.memo((e) => {
         j = (0, g.Z)(),
         [M, k] = (0, _.cv)(null != a && n ? [a] : []),
         { easterEggLevel: U, isEasterEggTriggered: G, onHover: B, onUnhover: Z } = (0, m.Z)(5),
-        V = (0, s.debounce)(() => {
+        F = (0, s.debounce)(() => {
             p.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, s.snakeCase)(t) });
         }, 800),
-        F = (0, s.debounce)(() => {
+        V = (0, s.debounce)(() => {
             null != y &&
                 p.default.track(O.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, s.snakeCase)(t),
@@ -97,9 +97,9 @@ let R = i.memo((e) => {
                 });
         }, 800),
         H = () => {
-            null == y || y(), F();
+            null == y || y(), V();
         };
-    e = N(A({ onMouseEnter: V }, e), { onCtaClick: null != y ? H : void 0 });
+    e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
     let Y = M !== a || null == a || D,
         W = (e) => {
             C &&
@@ -240,7 +240,11 @@ let P = i.forwardRef((e, t) => {
             [T.nitroGradientBackground]: N,
         }),
         onMouseEnter: _,
-        style: { backgroundImage: null != I ? "url(".concat(I, ")") : void 0 },
+        style: {
+            backgroundImage: null != I ? "url(".concat(I, ")") : void 0,
+            backgroundPosition: null != I ? "bottom right" : void 0,
+            backgroundRepeat: null != I ? "no-repeat" : void 0,
+        },
         onClick: v,
         children: [
             null != S &&
