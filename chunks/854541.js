@@ -202,11 +202,11 @@ class P extends i.PureComponent {
 }
 class w extends i.PureComponent {
     render() {
-        let { customColor: e, value: t, disabled: n, "aria-label": i } = this.props;
+        let { customColor: e, value: t, disabled: n, "aria-label": i, presets: a } = this.props;
         return (0, r.jsx)(R, {
             isCustom: !0,
             color: e,
-            isSelected: t === e,
+            isSelected: t === e && !a.includes(e),
             disabled: n,
             "aria-label": i,
         });
@@ -286,10 +286,10 @@ function D(e) {
             },
             [n, a],
         ),
-        k = (e) => {
+        M = (e) => {
             a((0, c._i)(e));
         },
-        M = (0, r.jsxs)(r.Fragment, {
+        k = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -297,7 +297,7 @@ function D(e) {
                         onChange: j,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return k(t);
+                            return M(t);
                         },
                         color: w.pending.hsl,
                     }),
@@ -341,7 +341,7 @@ function D(e) {
     return (0, r.jsx)(U, {
         "aria-label": g.intl.string(g.t.WTqQ5e),
         className: o()(E.customColorPicker, O),
-        children: M,
+        children: k,
     });
 }
 let x = i.memo(D);
@@ -410,17 +410,17 @@ function L(e) {
         navigator: N,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
-                var { ref: a } = e,
-                    s = I(e, ["ref"]);
+                var { ref: s } = e,
+                    l = I(e, ["ref"]);
                 return (0, r.jsxs)(
                     "div",
                     v(
                         y(
                             {
                                 className: o()(E.container, t, { [E.gradient]: m }),
-                                ref: a,
+                                ref: s,
                             },
-                            s,
+                            l,
                         ),
                         {
                             children: [
@@ -443,6 +443,7 @@ function L(e) {
                                                     value: c,
                                                     customColor: i,
                                                     disabled: d,
+                                                    presets: a,
                                                 }),
                                             }),
                                         ],
