@@ -318,6 +318,7 @@ function eo(e) {
             query: (t = t.trim().split("#")[0]),
             limit: r,
             request: !1,
+            boosters: (0, g.Cq)(c.h8.USER),
         },
         o = [];
     switch (n.type) {
