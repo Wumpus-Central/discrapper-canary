@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(417363),
     B = n(768581),
     Z = n(823379),
-    V = n(358085),
-    F = n(804739),
+    F = n(358085),
+    V = n(804739),
     H = n(758371),
     Y = n(931271),
     W = n(565201),
@@ -98,7 +98,7 @@ function ed(e, t, n, r) {
         null == e ||
         !(0, J.Z)(e, n, r.id) ||
         !(0, Q.Z)(e, ei.xjy.SYNC) ||
-        !V.isPlatformEmbedded ||
+        !F.isPlatformEmbedded ||
         (0, q.g)(t, e)
     );
 }
@@ -235,7 +235,7 @@ function e_(e, t) {
         isGameLaunchable: (0, s.e7)(
             [x.Z, T.Z, G.Z, P.Z],
             () =>
-                (0, F.t)({
+                (0, V.t)({
                     LibraryApplicationStore: x.Z,
                     LaunchableGameStore: T.Z,
                     DispatchApplicationStore: G.Z,
@@ -340,8 +340,8 @@ function eh(e) {
             bot: j,
         }),
         { staticBannerSrc: k, videoBannerSrc: G, bannerAspectRatio: Z } = (0, m.E)(I),
-        V = !(0, J.Z)(w, N, I.id),
-        F = (0, z.H)(N),
+        F = !(0, J.Z)(w, N, I.id),
+        V = (0, z.H)(N),
         K = (0, s.e7)([D.Z], () => D.Z.getGameByName(I.name), [I.name]),
         { openGameProfileModal: X, isGameLaunchable: ee } = e_(I.id, N.author.id),
         { openGameProfileModal: en, isGameLaunchable: er } = e_(null == K ? void 0 : K.id, N.author.id),
@@ -365,7 +365,7 @@ function eh(e) {
                       },
             [ea],
         ),
-        { canJoin: ec, isRemoteJoin: eu } = (0, Y.h)({
+        { canJoin: ec, remoteJoinPlatform: eu } = (0, Y.h)({
             presenceActivity: w,
             currentUserPresenceActivity: A,
             currentUserId: S,
@@ -401,7 +401,7 @@ function eh(e) {
                                   source: ei.Sbl.MESSAGE_EMBED,
                                   analyticsLocations: O,
                                   embedded: (0, Q.Z)(w, ei.xjy.EMBEDDED),
-                                  remotePartyId: eu ? (null == (e = w.party) ? void 0 : e.id) : void 0,
+                                  remotePartyId: null != eu ? (null == (e = w.party) ? void 0 : e.id) : void 0,
                               }),
                                   (0, $.Z)({
                                       type: ei.q5t.JOIN,
@@ -478,8 +478,8 @@ function eh(e) {
         eO = i.useMemo(() => (null != X ? X : null != en ? en : null != ey && L ? ey : void 0), [L, X, en, ey]),
         ev = i.useMemo(() => {
             let e = [];
-            return V || null == eE ? V && null != eb && e.push(eb) : e.push(eE), e;
-        }, [eb, V, eE]),
+            return F || null == eE ? F && null != eb && e.push(eb) : e.push(eE), e;
+        }, [eb, F, eE]),
         eI = (0, H.dQ)(I.name, null == (t = N.activity) ? void 0 : t.type),
         eT = (0, v.N)(I.id).some((e) => (0, b.ig)(e) === a.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
@@ -493,7 +493,7 @@ function eh(e) {
               })
             : null,
         eS = (0, r.jsx)(ep, { presenceActivity: w });
-    if (V) {
+    if (F) {
         let e = (0, r.jsx)(l.Text, {
             variant: "text-xs/medium",
             className: es.description,
@@ -552,11 +552,11 @@ function eh(e) {
             className: es.tagline,
             color: "none",
             lineClamp: 2,
-            children: [F ? (0, H.$v)(N, I, T, S, V) : eC, F ? null : eT],
+            children: [V ? (0, H.$v)(N, I, T, S, F) : eC, V ? null : eT],
         }),
         eR = (0, r.jsxs)("div", {
             className: es.info,
-            children: [eN, C || F ? null : P],
+            children: [eN, C || V ? null : P],
         });
     return (0, r.jsx)(_.W, {
         header: eI,
