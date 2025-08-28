@@ -20,17 +20,17 @@ var i = n(951288),
     E = n(944486),
     _ = n(556296),
     S = n(808506),
-    x = n(237997),
-    I = n(451478),
+    I = n(237997),
+    x = n(451478),
     j = n(585483),
     C = n(358085),
     N = n(13140),
-    w = n(145597),
-    Z = n(830917),
+    Z = n(145597),
+    w = n(830917),
     P = n(486016),
     T = n(32300),
-    A = n(681603),
-    k = n(915614),
+    k = n(681603),
+    A = n(915614),
     D = n(268861),
     R = n(690336),
     L = n(333031),
@@ -39,8 +39,8 @@ var i = n(951288),
     U = n(610394),
     V = n(388627),
     W = n(319414),
-    F = n(561064),
-    G = n(987650),
+    G = n(561064),
+    F = n(987650),
     B = n(757744),
     H = n(981631),
     Y = n(977594);
@@ -128,7 +128,7 @@ let $ = r.memo(function (e) {
                 ? null
                 : (0, i.jsx)(L.Z, {
                       className: Y.closeContainer,
-                      children: (0, i.jsx)(k.Z, {
+                      children: (0, i.jsx)(A.Z, {
                           keybind: t,
                           onClick: n,
                           IconComponent: c.Uz9,
@@ -141,24 +141,24 @@ let $ = r.memo(function (e) {
         return t && n
             ? (0, i.jsx)(L.Z, {
                   className: Y.closeContainer,
-                  children: (0, i.jsx)(k.Z, {
-                      onClick: () => d.Z.setInputLocked(!1, (0, w.getPID)()),
+                  children: (0, i.jsx)(A.Z, {
+                      onClick: () => d.Z.setInputLocked(!1, (0, Z.getPID)()),
                       IconComponent: c.d$P,
                   }),
               })
             : null;
     });
 function et() {
-    d.Z.setInputLocked(!0, (0, w.getPID)());
+    d.Z.setInputLocked(!0, (0, Z.getPID)());
 }
 function en() {
-    d.Z.setFocusedPID(w.DEV_PID);
+    d.Z.setFocusedPID(Z.DEV_PID);
 }
 function ei() {
     d.Z.setFocusedPID(null);
 }
 function er(e) {
-    let t = U.ZP.isInputLocked((0, w.getPID)());
+    let t = U.ZP.isInputLocked((0, Z.getPID)());
     "alt" !== e.key.toLowerCase() ||
         t ||
         ("keyup" === e.type.toLowerCase()
@@ -167,21 +167,21 @@ function er(e) {
 }
 function eo(e) {
     let { isEmbeddedActivity: t } = e,
-        n = (0, F.Z)(),
+        n = (0, G.Z)(),
         {
             locked: o,
             focused: u,
             incompatibleApp: m,
             hasZeroSizeDimension: C,
-            keybind: k,
-        } = (0, a.cj)([U.ZP, x.default, I.Z, _.ZP], () => {
-            let e = I.Z.windowSize((0, Z.ZY)(n)),
+            keybind: A,
+        } = (0, a.cj)([U.ZP, I.default, x.Z, _.ZP], () => {
+            let e = x.Z.windowSize((0, w.ZY)(n)),
                 t = _.ZP.getOverlayKeybind(),
-                i = (0, w.getPID)();
+                i = (0, Z.getPID)();
             return {
                 locked: U.ZP.isInputLocked(i),
                 focused: U.ZP.isFocused(i),
-                incompatibleApp: x.default.incompatibleApp,
+                incompatibleApp: I.default.incompatibleApp,
                 hasZeroSizeDimension: 0 === e.height || 0 === e.width,
                 keybind: null != t ? (0, N.BB)(t.shortcut, !0) : "???",
             };
@@ -209,11 +209,11 @@ function eo(e) {
             );
     })(
         () => {
-            d.Z.overlayReady((0, w.getPID)()),
+            d.Z.overlayReady((0, Z.getPID)()),
                 n.addEventListener("keydown", er),
                 n.addEventListener("keyup", er),
                 Q &&
-                    (n.document.hasFocus() && d.Z.setFocusedPID(w.DEV_PID),
+                    (n.document.hasFocus() && d.Z.setFocusedPID(Z.DEV_PID),
                     n.addEventListener("focus", en),
                     n.addEventListener("blur", ei));
         },
@@ -236,30 +236,30 @@ function eo(e) {
                 a = (0, g.Z)(v.Z) && !o && null != t,
                 s = l && null != r && null != n,
                 { allowActivityWidget: c } = (0, T.Rb)("overlay"),
-                u = null != (e = S.default.getFocusedPID()) ? e : (0, w.getPID)();
+                u = null != (e = S.default.getFocusedPID()) ? e : (0, Z.getPID)();
             if (M.default.hasChangedRenderMode(u)) return;
             let p = z.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.WELCOME_GENERAL),
                 f = z.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE),
                 h = z.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.GAME_ACTIVITY),
                 m = [];
-            p || m.push({ type: G.nc.WELCOME }),
+            p || m.push({ type: F.nc.WELCOME }),
                 !f &&
                     (a && s
                         ? m.push({
-                              type: G.nc.GO_LIVE_VOICE,
+                              type: F.nc.GO_LIVE_VOICE,
                               game: t,
                               voiceChannelId: n,
                               voiceGuild: r,
                           })
                         : a &&
                           m.push({
-                              type: G.nc.GO_LIVE_NON_VOICE,
+                              type: F.nc.GO_LIVE_NON_VOICE,
                               game: t,
                           })),
                 c &&
                     !h &&
                     m.push({
-                        type: G.nc.CONTENT_INVENTORY,
+                        type: F.nc.CONTENT_INVENTORY,
                         entries: [],
                     }),
                 0 !== m.length &&
@@ -289,37 +289,33 @@ function eo(e) {
             children:
                 C || m
                     ? null
-                    : (0, i.jsx)(c.f6W, {
-                          theme: H.BRd.MIDNIGHT,
-                          children: (e) =>
-                              (0, i.jsxs)("div", {
-                                  id: "overlay-container",
-                                  className: l()(Y.overlay, e),
-                                  children: [
-                                      !t && K,
-                                      (0, i.jsx)($, {
-                                          locked: o,
-                                          keybind: k,
-                                          onClick: et,
-                                      }),
-                                      (0, i.jsx)(R.Z, {
-                                          className: l()({
-                                              [Y.layoutLocked]: o,
-                                              [Y.layoutUnlocked]: !o,
-                                          }),
-                                      }),
-                                      (0, i.jsx)(W.Z, {}),
-                                      !t &&
-                                          Q &&
-                                          (0, i.jsx)(ee, {
-                                              locked: o,
-                                              focused: u,
-                                          }),
-                                      (0, i.jsx)(A.Z, {}),
-                                      (0, i.jsx)(D.Z, { locked: o }),
-                                      (0, i.jsx)(c.Ixi, {}),
-                                  ],
+                    : (0, i.jsxs)("div", {
+                          id: "overlay-container",
+                          className: Y.overlay,
+                          children: [
+                              !t && K,
+                              (0, i.jsx)($, {
+                                  locked: o,
+                                  keybind: A,
+                                  onClick: et,
                               }),
+                              (0, i.jsx)(R.Z, {
+                                  className: l()({
+                                      [Y.layoutLocked]: o,
+                                      [Y.layoutUnlocked]: !o,
+                                  }),
+                              }),
+                              (0, i.jsx)(W.Z, {}),
+                              !t &&
+                                  Q &&
+                                  (0, i.jsx)(ee, {
+                                      locked: o,
+                                      focused: u,
+                                  }),
+                              (0, i.jsx)(k.Z, {}),
+                              (0, i.jsx)(D.Z, { locked: o }),
+                              (0, i.jsx)(c.Ixi, {}),
+                          ],
                       }),
         })
     );

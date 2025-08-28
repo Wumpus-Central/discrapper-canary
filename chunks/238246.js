@@ -43,8 +43,8 @@ var R = n(587061),
     G = n(928518),
     B = n(981631),
     Z = n(501787),
-    V = n(413943);
-function F(e, t, n) {
+    F = n(413943);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,7 +68,7 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -173,19 +173,21 @@ class z extends (r = a.Component) {
             guestWindow: c,
             clientThemesClassName: u,
             contentClassName: f,
-            hideModals: _ = !1,
+            themeOverride: _,
+            hideModals: m = !1,
         } = this.props;
         (0, j.getPlatform)();
-        let m = K({
+        let g = K({
                 withTitleBar: o,
                 isFullScreen: a,
             }),
-            g = r === Z.$J ? D.Z : A.Z;
+            b = r === Z.$J ? D.Z : A.Z;
         return (0, i.jsx)(d.VK, {
             children: (0, i.jsx)(
                 x.w,
                 {
                     windowKey: r,
+                    themeOverride: _,
                     children: (0, i.jsx)(y.Z, {
                         children: (0, i.jsxs)(p.JcV, {
                             containerRef: this.rootRef,
@@ -193,7 +195,7 @@ class z extends (r = a.Component) {
                                 (0, i.jsx)(q, {
                                     guestWindow: c,
                                     className: u,
-                                    children: (0, i.jsxs)(g, {
+                                    children: (0, i.jsxs)(b, {
                                         children: [
                                             (0, i.jsx)(C.Co, {}),
                                             (0, i.jsx)(E.Wu, {
@@ -203,17 +205,17 @@ class z extends (r = a.Component) {
                                                     children: (0, i.jsxs)(w.yP, {
                                                         children: [
                                                             (0, i.jsxs)("div", {
-                                                                className: V.popout,
+                                                                className: F.popout,
                                                                 children: [
-                                                                    m && (0, i.jsx)(N.TF, { windowKey: r }),
+                                                                    g && (0, i.jsx)(N.TF, { windowKey: r }),
                                                                     null,
                                                                     (0, i.jsx)("div", {
-                                                                        className: s()(V.content, f),
+                                                                        className: s()(F.content, f),
                                                                         children: n,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !_ && (0, i.jsx)(p.nKe, {}),
+                                                            !m && (0, i.jsx)(p.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
                                                             (0, i.jsx)(w.Un, {}),
                                                         ],
@@ -234,10 +236,10 @@ class z extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            F(this, "rootRef", a.createRef()),
-            F(this, "_cleanupWindowActionCreators", void 0),
-            F(this, "_combokeys", null),
-            F(this, "beforeUnload", (e) => {
+            V(this, "rootRef", a.createRef()),
+            V(this, "_cleanupWindowActionCreators", void 0),
+            V(this, "_combokeys", null),
+            V(this, "beforeUnload", (e) => {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
                         G.Z.unmountWindow(this.props.windowKey),
@@ -250,13 +252,13 @@ class z extends (r = a.Component) {
                       })
                     : n();
             }),
-            F(this, "handleBlur", () => {
+            V(this, "handleBlur", () => {
                 var e, t;
                 null == (e = (t = this.props).onBlur) || e.call(t);
             });
     }
 }
-F(z, "defaultProps", { withTitleBar: !0 });
+V(z, "defaultProps", { withTitleBar: !0 });
 let q = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
             { lang: l, style: c, className: d } = (0, L.vP)();

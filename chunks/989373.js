@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => E }), n(415506), n(388685);
+n.r(t), n.d(t, { default: () => B }), n(415506), n(388685);
 var a = n(951288),
     o = n(647438),
     r = n(442837),
@@ -47,7 +47,7 @@ async function x(e, t) {
             }
     }
 }
-let E = o.memo(function (e) {
+let B = o.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         l = (function (e, t) {
             let n = (0, r.e7)([_.Z], () => _.Z.getWindow(e)),
@@ -60,7 +60,7 @@ let E = o.memo(function (e) {
                 }),
                 [v, g] = o.useState(m),
                 [y, S] = o.useState(!1),
-                E = o.useCallback(() => {
+                B = o.useCallback(() => {
                     let e = (0, h.getPID)(),
                         n = null != f.Z.getVoiceChannelId();
                     i.Z.track(w.rMx.OVERLAY_INITIALIZED, {
@@ -88,7 +88,7 @@ let E = o.memo(function (e) {
                     }
                 );
             });
-            let B = o.useCallback(
+            let E = o.useCallback(
                 (e, t) => {
                     null == a.current &&
                         ((u.current = () => {
@@ -103,18 +103,18 @@ let E = o.memo(function (e) {
                                 return;
                             }
                             l.current = e.setTimeout(() => {
-                                g(!0), S(!0), E(), (u.current = null);
+                                g(!0), S(!0), B(), (u.current = null);
                             }, 100);
                         })));
                 },
-                [E],
+                [B],
             );
             return (
                 o.useEffect(() => {
-                    (!v || null == n) && m && m && null != n && B(n, e);
-                }, [B, v, m, e, n]),
+                    (!v || null == n) && m && m && null != n && E(n, e);
+                }, [E, v, m, e, n]),
                 (0, c.Ng)(() => {
-                    v && null != n && B(n, e);
+                    v && null != n && E(n, e);
                 }),
                 (0, c.zq)(() => {
                     null != u.current && u.current();
@@ -126,6 +126,7 @@ let E = o.memo(function (e) {
         v = (0, r.e7)([s.default], () => s.default.isInputLocked(m), [m]);
     return l
         ? (0, a.jsx)(u.Z, {
+              themeOverride: w.BRd.MIDNIGHT,
               withTitleBar: t,
               windowKey: n,
               title: "Discord Overlay",
