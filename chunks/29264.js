@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => m }), n(415506);
 var r = n(951288);
 n(647438);
 var i = n(481060),
@@ -39,7 +39,7 @@ function b(e) {
 function p(e, t) {
     (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE)), c.Z.captureException(t);
 }
-function O(e, t, n) {
+function m(e, t, n) {
     if (
         (0, a.Z)(null == t ? void 0 : t.getChannelId()) ||
         (null == n ? void 0 : n.shouldHideMediaOptions) === !0 ||
@@ -49,17 +49,19 @@ function O(e, t, n) {
     )
         return null;
     let c = (0, l.s$)(e, null == n ? void 0 : n.contentType, null == n ? void 0 : n.originalContentType, l.wV),
-        O = async () => {
+        m = async () => {
             try {
-                await u.ZP.saveImage(c, null == n ? void 0 : n.contentType, l.wV),
-                    o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, b({}, (0, d.v)())),
-                    (0, i.showToast)((0, i.createToast)(g.intl.string(g.t.cqpdJS), i.ToastType.SUCCESS));
+                let e = await u.ZP.saveImage(c, null == n ? void 0 : n.contentType, l.wV);
+                if (e === u.mQ.ERRORED) throw Error("NativeUtils.saveImage errored for ".concat(c));
+                e === u.mQ.SAVED &&
+                    (o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, b({}, (0, d.v)())),
+                    (0, i.showToast)((0, i.createToast)(g.intl.string(g.t.cqpdJS), i.ToastType.SUCCESS)));
             } catch (e) {
                 o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, b({}, (0, d.v)())),
                     p(g.intl.string(g.t["8Ve/S0"]), e);
             }
         },
-        y = async () => {
+        O = async () => {
             try {
                 await u.ZP.copyImage(c, null == n ? void 0 : n.contentType),
                     o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, b({}, (0, d.v)())),
@@ -76,7 +78,7 @@ function O(e, t, n) {
                   {
                       id: "copy-image",
                       label: g.intl.string(g.t.tvUqWl),
-                      action: y,
+                      action: O,
                   },
                   "copy-image",
               )
@@ -86,7 +88,7 @@ function O(e, t, n) {
             {
                 id: "save-image",
                 label: g.intl.string(g.t.PeXhgI),
-                action: O,
+                action: m,
             },
             "save-image",
         ),

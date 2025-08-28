@@ -1,8 +1,9 @@
 n.d(t, {
-    ZP: () => q,
-    jK: () => V,
-    tS: () => H,
-    xG: () => W,
+    ZP: () => X,
+    jK: () => H,
+    mQ: () => B,
+    tS: () => Y,
+    xG: () => K,
 }),
     n(388685),
     n(35282),
@@ -12,8 +13,8 @@ n.d(t, {
     n(539854);
 var r,
     i,
-    o,
     a,
+    o,
     s = n(512722),
     l = n.n(s),
     c = n(719711),
@@ -93,7 +94,7 @@ null != I &&
         .split(".")
         .map((e) => parseInt(e))),
     (P = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
-    (R = null == (o = (a = I.remoteApp).getBuildNumber) ? void 0 : o.call(a)));
+    (R = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
 let D = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -109,7 +110,10 @@ let D = new Set([
     k = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
-function B(e) {
+var B = (function (e) {
+    return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
+})({});
+function Z(e) {
     try {
         let t = decodeURIComponent(e);
         return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(j, "_");
@@ -120,7 +124,7 @@ function B(e) {
             .replace(j, "_");
     }
 }
-async function Z(e) {
+async function F(e) {
     let t = {
             method: "GET",
             mode: "cors",
@@ -130,10 +134,10 @@ async function Z(e) {
     let r = await n.arrayBuffer();
     return l()(null != r, "Data is null"), r;
 }
-function F(e) {
-    return Z(e);
+function V(e) {
+    return F(e);
 }
-var V = (function (e) {
+var H = (function (e) {
         return (
             (e[(e.Camera = 0)] = "Camera"),
             (e[(e.Microphone = 1)] = "Microphone"),
@@ -143,11 +147,11 @@ var V = (function (e) {
             e
         );
     })({}),
-    H = (function (e) {
+    Y = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
-function Y(e) {
-    var t, n, r, i, o, a, s, l, c;
+function W(e) {
+    var t, n, r, i, a, o, s, l, c;
     return {
         id: w[null != (t = e.id) ? t : ""],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : "", 10),
@@ -156,7 +160,7 @@ function Y(e) {
         processName: null != (i = e.name) ? i : "",
         hidden: e.hidden,
         elevated: e.elevated,
-        sandboxed: null != (o = e.sandboxed) && o,
+        sandboxed: null != (a = e.sandboxed) && a,
         lastFocused: e.lastFocused,
         exePath: e.exePath,
         exeName: e.exeName,
@@ -164,32 +168,32 @@ function Y(e) {
         distributor: e.distributor,
         sku: e.sku,
         pid: e.pid,
-        pidPath: null != (a = e.pidPath) ? a : [],
+        pidPath: null != (o = e.pidPath) ? o : [],
         gameMetadata: e.gameMetadata,
         windowHandle: null != (s = e.windowHandle) ? s : null,
         fullscreenType: null != (l = e.fullscreenType) ? l : _.Jx.UNKNOWN,
         isLauncher: null != (c = e.isLauncher) && c,
     };
 }
-function W(e, t) {
-    var n, r, i, o;
+function K(e, t) {
+    var n, r, i, a;
     if (null != t && A(t)) {
-        let e = null == (o = t.split("/")[1]) ? void 0 : o.toLowerCase();
+        let e = null == (a = t.split("/")[1]) ? void 0 : a.toLowerCase();
         if ("jpeg" === e) return "jpg";
         if (null != e) return e;
     }
-    let a = m.Z.toURLSafe(e);
-    if (null == a) return;
-    let s = null == (i = a.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
+    let o = m.Z.toURLSafe(e);
+    if (null == o) return;
+    let s = null == (i = o.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
     return null != s && s.length <= C ? s : void 0;
 }
-function K(e) {
+function z(e) {
     if ((0, h.isDesktop)())
         try {
-            z.send(e);
+            q.send(e);
         } catch (e) {}
 }
-let z = {
+let q = {
         requireModule: (e) => I.nativeModules.requireModule(e),
         ensureModule: (e) =>
             h.isPlatformEmbedded
@@ -254,14 +258,14 @@ let z = {
                             })
                         );
                     }),
-                    (e) => n(e.map(Y)),
+                    (e) => n(e.map(W)),
                 );
             } catch (e) {}
         },
         setGameDetectionCallback(e) {
             var t, n;
             null == (t = (n = this.getDiscordUtils()).setGameDetectionCallback) ||
-                t.call(n, (t, n) => e(t.map(Y), n.map(Y)));
+                t.call(n, (t, n) => e(t.map(W), n.map(W)));
         },
         setGameDetectionErrorCallback(e) {
             var t, n;
@@ -277,7 +281,7 @@ let z = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map(Y));
+                e(t.map(W));
             });
         },
         clearCandidateGamesCallback() {
@@ -400,8 +404,8 @@ let z = {
         async copyImage(e, t) {
             l()(h.isPlatformEmbedded, "Copy image method called outside native app"),
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
-            let n = await F(e),
-                r = W(e, t),
+            let n = await V(e),
+                r = K(e, t),
                 i = null != r && T.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
         },
@@ -411,32 +415,42 @@ let z = {
         },
         canSaveImage(e, t) {
             if (null == e || !h.isPlatformEmbedded) return !1;
-            let n = W(e, t);
+            let n = K(e, t);
             return null == n || S.has(n);
         },
         async saveImage(e, t, n) {
-            var r, i, o;
+            var r, i, a;
+            let o, s;
             l()(h.isPlatformEmbedded, "Save image method called outside native app");
-            let a = m.Z.toURLSafe(e);
-            if (null == a) return;
-            let s = null != (r = a.pathname.split("/").pop()) ? r : "unknown";
-            s = B(s);
-            let c = a.searchParams.get("format");
-            if (null != c) {
-                let e = c.replace(U, "").toLowerCase();
+            let c = m.Z.toURLSafe(e);
+            if (null == c) return "errored";
+            let u = null != (r = c.pathname.split("/").pop()) ? r : "unknown";
+            u = Z(u);
+            let d = c.searchParams.get("format");
+            if (null != d) {
+                let e = d.replace(U, "").toLowerCase();
                 if (e.length > 0) {
-                    let t = s.replace(G, "");
-                    s = "".concat(t, ".").concat(e);
+                    let t = u.replace(G, "");
+                    u = "".concat(t, ".").concat(e);
                 }
-            } else if (!s.includes(".")) {
-                let r = null != (o = null != (i = W(e, t)) ? i : n) ? o : "png";
-                s = "".concat(s, ".").concat(r);
+            } else if (!u.includes(".")) {
+                let r = null != (a = null != (i = K(e, t)) ? i : n) ? a : "png";
+                u = "".concat(u, ".").concat(r);
             }
-            let u = f.K.get(L),
-                d = await F(e),
-                _ = E.from(d),
-                p = await I.fileManager.saveWithDialog(_, s, null != u ? u : void 0);
-            null != p && f.K.set(L, p);
+            let _ = await V(e),
+                p = E.from(_),
+                g = f.K.get(L);
+            if (("string" != typeof g && (g = void 0), "function" == typeof I.fileManager.saveWithDialog2)) {
+                if (null == (o = await I.fileManager.saveWithDialog2(p, u, null != g ? g : void 0))) return "errored";
+                if (o.canceledByUser) return "canceled";
+                s = o.directory;
+            } else
+                try {
+                    s = await I.fileManager.saveWithDialog(p, u, null != g ? g : void 0);
+                } catch (e) {
+                    return "errored";
+                }
+            return null == s || "" === s ? "errored" : (f.K.set(L, s), "saved");
         },
         async saveFile(e, t) {
             var n;
@@ -444,10 +458,11 @@ let z = {
             let r = m.Z.toURLSafe(e);
             if (null == r) return null;
             let i = null != (n = null != t ? t : r.pathname.split("/").pop()) ? n : "unknown";
-            null == t && (i = B(i));
-            let o = await Z(e),
-                a = E.from(o);
-            return I.fileManager.saveWithDialog(a, i);
+            null == t && (i = Z(i));
+            let a = await F(e),
+                o = E.from(a),
+                s = await I.fileManager.saveWithDialog(o, i, void 0);
+            return null == s ? null : s;
         },
         async downloadVoiceFilterFile(e, t, n) {
             l()(h.isPlatformEmbedded, "Download voice filter file method called outside native app");
@@ -468,7 +483,7 @@ let z = {
                 t = arguments.length > 1 ? arguments[1] : void 0;
             if (!h.isPlatformEmbedded) return !1;
             if (null != e) {
-                let n = W(e, t);
+                let n = K(e, t);
                 if (null != n && !T.has(n)) return !1;
             }
             return "function" == typeof I.clipboard.copyImage;
@@ -714,8 +729,8 @@ let z = {
             if (null == I.http) return Promise.reject(Error("HTTP module not available"));
             let {
                     method: i,
-                    maxBps: o,
-                    token: a,
+                    maxBps: a,
+                    token: o,
                     chunkInterval: s,
                     contentType: l,
                 } = y(
@@ -728,7 +743,7 @@ let z = {
                 ),
                 c = t;
             "application/json" === l && (c = JSON.stringify(t));
-            let d = (s / 1000) * o,
+            let d = (s / 1000) * a,
                 f = Math.ceil(c.length / d),
                 _ = Array(f);
             for (let e = 0; e < f; e++) {
@@ -744,7 +759,7 @@ let z = {
                             method: i,
                             chunkInterval: s,
                             contentType: l,
-                            token: a,
+                            token: o,
                         },
                         (n, r) => (null != n ? t(n) : r.status >= 400 ? t(Error(r.body)) : void e(r)),
                     );
@@ -791,8 +806,8 @@ let z = {
         GetWindowFullscreenTypeByPid(e, t, n) {
             var r;
             let { getWindowFullscreenTypeByPid: i } = this.getDiscordUtils(),
-                o = 0 !== e && null != i && null != t ? i(e, t) : null;
-            return -1 === o && (o = null), null != (r = null != o ? o : n) ? r : _.Jx.UNKNOWN;
+                a = 0 !== e && null != i && null != t ? i(e, t) : null;
+            return -1 === a && (a = null), null != (r = null != a ? a : n) ? r : _.Jx.UNKNOWN;
         },
         GetWindowFullscreenTypeExtraByPid(e, t) {
             let { getWindowFullscreenTypeExtraByPid: n } = this.getDiscordUtils();
@@ -824,12 +839,12 @@ let z = {
         },
         isModuleVersionAtLeast(e, t) {
             var n, r, i;
-            let o = [...(null != N ? N : [0, 0, 0])];
-            o.push(null != (r = null == (n = this.moduleVersions) ? void 0 : n[e]) ? r : 0);
-            let a = null != (i = t[this.releaseChannel]) ? i : t.stable;
-            for (let [e, t] of o.entries())
-                if (t > a[e]) break;
-                else if (t < a[e]) return !1;
+            let a = [...(null != N ? N : [0, 0, 0])];
+            a.push(null != (r = null == (n = this.moduleVersions) ? void 0 : n[e]) ? r : 0);
+            let o = null != (i = t[this.releaseChannel]) ? i : t.stable;
+            for (let [e, t] of a.entries())
+                if (t > o[e]) break;
+                else if (t < o[e]) return !1;
             return !0;
         },
         fetchRiotGamesLiveClientData: (e, t) =>
@@ -842,10 +857,10 @@ let z = {
             (0, h.isDesktop)() && this.send("APP_VIEWED");
         },
         appLoaded() {
-            K("APP_LOADED");
+            z("APP_LOADED");
         },
         indexLoadedAsync() {
-            K("DISCORD_APP_ASYNC_INDEX_TSX_LOADED");
+            z("DISCORD_APP_ASYNC_INDEX_TSX_LOADED");
         },
     },
-    q = z;
+    X = q;

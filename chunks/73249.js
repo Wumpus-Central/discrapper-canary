@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => k }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -23,8 +23,8 @@ var r = n(951288),
     T = n(312097),
     j = n(388032),
     C = n(152514);
-function P() {
-    return (P =
+function D() {
+    return (D =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -34,7 +34,7 @@ function P() {
             return e;
         }).apply(this, arguments);
 }
-function D(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function D(e) {
 function x() {
     (0, s.Mr3)(T.Q);
 }
-let L = i.forwardRef(function (e, t) {
+let w = i.forwardRef(function (e, t) {
     var { tooltipText: n } = e,
         i = (function (e, t) {
             if (null == e) return {};
@@ -91,7 +91,7 @@ let L = i.forwardRef(function (e, t) {
         children: (e) => {
             var l,
                 o,
-                a = P(
+                a = D(
                     {},
                     (function (e) {
                         if (null == e) throw TypeError("Cannot destructure " + e);
@@ -100,8 +100,8 @@ let L = i.forwardRef(function (e, t) {
                 );
             return (0, r.jsx)(
                 s.hU,
-                D(
-                    ((l = D({}, a)),
+                P(
+                    ((l = P({}, a)),
                     (o = o =
                         {
                             buttonRef: t,
@@ -128,9 +128,9 @@ let L = i.forwardRef(function (e, t) {
         },
     });
 });
-function w() {
+function L() {
     let { zoomed: e, setZoomed: t } = (0, _.Y)();
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(w, {
         onClick: () => {
             (0, S.yg)(e ? S.uG.ZOOM_OUT_BUTTON_PRESSED : S.uG.ZOOM_IN_BUTTON_PRESSED), t(!e);
         },
@@ -161,7 +161,7 @@ function R(e) {
             }
         }, [o, a]);
     return null != o && null != a && (0, d.h)(o)
-        ? (0, r.jsx)(L, {
+        ? (0, r.jsx)(w, {
               onClick: c,
               tooltipText: j.intl.string(j.t.I3ltXF),
               icon: s.WZu,
@@ -181,9 +181,11 @@ function M(e) {
         if (((0, S.yg)(S.uG.SAVE_MEDIA_PRESSED), "VIDEO" === t.type && (0, g.q)({ href: d }), "IMAGE" === t.type)) {
             l(!0);
             try {
-                await h.ZP.saveImage(d, t.contentType, f.wV),
-                    (0, S.rm)(d, !0),
-                    (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.cqpdJS), s.ToastType.SUCCESS));
+                let e = await h.ZP.saveImage(d, t.contentType, f.wV);
+                if (e === h.mQ.ERRORED) throw Error("DesktopNativeUtils.saveImage errored for ".concat(d));
+                e === h.mQ.SAVED &&
+                    ((0, S.rm)(d, !0),
+                    (0, s.showToast)((0, s.createToast)(j.intl.string(j.t.cqpdJS), s.ToastType.SUCCESS)));
             } catch (e) {
                 (0, S.rm)(d, !1),
                     (0, s.showToast)((0, s.createToast)(j.intl.string(j.t["8Ve/S0"]), s.ToastType.FAILURE));
@@ -192,7 +194,7 @@ function M(e) {
             }
         }
     }
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(w, {
         onClick: p,
         tooltipText: j.intl.string("VIDEO" === t.type ? j.t.JVuuz8 : j.t["S/xNKS"]),
         loading: n,
@@ -203,7 +205,7 @@ function I(e) {
     let { item: t } = e;
     if (!(0, f.Jj)(t.url)) return null;
     let n = (0, f.s$)((0, f.lT)(t.original, t.url), t.contentType, t.originalContentType);
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(w, {
         onClick: () => {
             (0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, S.jc)(n), (0, g.q)({ href: n });
         },
@@ -339,7 +341,7 @@ function A(e, t, n) {
         null != i
             ? (0, r.jsx)(
                   s.sNh,
-                  D(
+                  P(
                       {
                           action: () => l(i),
                           label: e,
@@ -385,7 +387,7 @@ function Z(e) {
                   }),
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(L, {
+                  return (0, r.jsx)(w, {
                       ref: o,
                       tooltipText: j.intl.string(j.t.UKOtz8),
                       onClick: () => {
@@ -418,7 +420,7 @@ let k = i.memo(function (e) {
                     onClick: (e) => e.stopPropagation(),
                     onMouseLeave: u,
                     children: [
-                        "IMAGE" === t.type && (0, r.jsx)(w, {}),
+                        "IMAGE" === t.type && (0, r.jsx)(L, {}),
                         !n &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
