@@ -310,7 +310,12 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     OverlayWindowRAFManager: {
-        actions: ["OVERLAY_UPDATE_OVERLAY_STATE"],
+        actions: [
+            "OVERLAY_UPDATE_OVERLAY_METHOD",
+            "WINDOW_FOCUS",
+            "WINDOW_VISIBILITY_CHANGE",
+            "OVERLAY_RENDER_DEBUG_MODE",
+        ],
         inlineRequire: () => n(556809).Z,
         neverLoadBeforeConnectionOpen: !0,
     },

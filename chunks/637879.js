@@ -1,20 +1,23 @@
-n.d(t, { c: () => v });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    a = n(481060),
-    o = n(592125),
-    s = n(944486),
-    l = n(585483),
-    c = n(607802),
-    u = n(532428),
-    d = n(579612),
-    f = n(315322),
-    _ = n(723642),
-    p = n(981631),
-    h = n(388032),
-    m = n(493090);
-function g(e, t, n) {
+n.d(t, {
+    N_: () => S,
+    c2: () => I,
+});
+var r = n(951288),
+    i = n(647438),
+    a = n(442837),
+    o = n(481060),
+    s = n(592125),
+    l = n(944486),
+    c = n(585483),
+    u = n(607802),
+    d = n(532428),
+    f = n(579612),
+    _ = n(315322),
+    p = n(723642),
+    h = n(981631),
+    m = n(388032),
+    g = n(493090);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +30,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +41,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,18 +58,18 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e) {
+function v(e) {
     let { navId: t, index: n, selected: r } = e;
     return {
         id: "".concat(t, "-").concat(n),
@@ -75,55 +78,55 @@ function O(e) {
         "aria-selected": r,
     };
 }
-function v(e) {
-    let { searchContext: t, navId: n, index: a, selected: l } = e,
-        c = (0, i.e7)([s.Z, o.Z], () => {
-            let e = s.Z.getChannelId();
-            return o.Z.getChannel(e);
+function I(e) {
+    let { searchContext: t, navId: n, index: i, selected: o } = e,
+        c = (0, a.e7)([l.Z, s.Z], () => {
+            let e = l.Z.getChannelId();
+            return s.Z.getChannel(e);
         });
     return null == c
         ? null
         : (0, r.jsx)(
-              I,
+              T,
               {
                   searchContext: t,
                   selectedChannel: c,
                   navId: n,
-                  index: a,
-                  selected: l,
+                  index: i,
+                  selected: o,
               },
               c.id,
           );
 }
-function I(e) {
-    let { searchContext: t, selectedChannel: n, navId: i, index: o, selected: s } = e,
-        g = (0, c.nl)(n),
-        b = (0, r.jsxs)("div", {
-            className: m.channelNameContainer,
+function T(e) {
+    let { searchContext: t, selectedChannel: n, navId: i, index: a, selected: s } = e,
+        l = (0, u.nl)(n),
+        E = (0, r.jsxs)("div", {
+            className: g.channelNameContainer,
             children: [
-                (0, r.jsx)(d.MC, {
+                (0, r.jsx)(f.MC, {
                     channel: n,
-                    className: m.channelNameIcon,
+                    className: g.channelNameIcon,
                 }),
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-sm/semibold",
                     color: "text-primary",
-                    className: m.channelName,
-                    children: g,
+                    className: g.channelName,
+                    children: l,
                 }),
             ],
         }),
-        v = () => {
+        y = () => {
             var e;
-            (0, f.tA)({
+            (0, _.tA)({
                 searchContext: t,
-                searchAutocompleteSelectAction: _.ZW.CLICK,
+                searchAutocompleteSelectAction: p.ZW.CLICK,
             });
-            let r = p.dCx.FILTER_IN,
-                i = u.ZP[r],
-                a = (0, c.X3)(n),
+            let r = h.dCx.FILTER_IN,
+                i = d.ZP[r],
+                a = (0, u.X3)(n),
                 o = "".concat(null != (e = null == i ? void 0 : i.key) ? e : r.toString(), " ").concat(a);
-            l.S.dispatch(p.CkL.SET_SEARCH_QUERY, {
+            c.S.dispatch(h.CkL.SET_SEARCH_QUERY, {
                 query: o,
                 anchor: 0,
                 focus: 0,
@@ -132,30 +135,72 @@ function I(e) {
             });
         };
     return (0, r.jsxs)(
-        a.P3F,
-        y(
-            E(
+        o.P3F,
+        O(
+            b(
                 {
-                    className: m.item,
-                    onClick: v,
+                    className: g.item,
+                    onClick: y,
                 },
-                O({
+                v({
                     navId: i,
-                    index: o,
+                    index: a,
                     selected: s,
                 }),
             ),
             {
                 children: [
-                    (0, r.jsx)(d.MC, {
+                    (0, r.jsx)(f.MC, {
                         channel: n,
-                        className: m.itemIcon,
+                        className: g.itemIcon,
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         variant: "text-sm/medium",
                         color: "text-primary",
-                        className: m.itemText,
-                        children: h.intl.format(h.t["VGEH//"], { channelName: b }),
+                        className: g.itemText,
+                        children: m.intl.format(m.t["VGEH//"], { channelName: E }),
+                    }),
+                ],
+            },
+        ),
+    );
+}
+function S(e) {
+    let { searchContext: t, label: a, navId: s, index: l, selected: c } = e,
+        u = i.useCallback(() => {
+            (0, o.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e("36745"), n.e("37979")]).then(n.bind(n, 238088));
+                return (n) => (0, r.jsx)(e, O(b({}, n), { searchContext: t }));
+            });
+        }, [t]);
+    return (0, r.jsxs)(
+        o.P3F,
+        O(
+            b(
+                {
+                    className: g.item,
+                    onClick: u,
+                },
+                v({
+                    navId: s,
+                    index: l,
+                    selected: c,
+                }),
+            ),
+            {
+                children: [
+                    (0, r.jsx)(o.gXV, {
+                        size: "custom",
+                        color: "currentColor",
+                        width: 20,
+                        height: 20,
+                        className: g.itemIcon,
+                    }),
+                    (0, r.jsx)(o.Text, {
+                        variant: "text-sm/medium",
+                        color: "text-primary",
+                        className: g.itemText,
+                        children: a,
                     }),
                 ],
             },
