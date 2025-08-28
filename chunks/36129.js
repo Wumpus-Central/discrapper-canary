@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(781391),
     f = n(575196),
     _ = n(233398),
-    p = n(629452),
-    h = n(874893),
+    p = n(47760),
+    h = n(629452),
     m = n(119475),
     g = n(388032),
     E = n(306518);
@@ -20,11 +20,11 @@ let b = (e) => e.map((e) => "#".concat(e)),
         let { message: t } = e,
             { sharedClientTheme: n } = t,
             { setAll: i } = (0, _.Ig)();
-        return (0, p.b)("Share Client Theme Widget") && void 0 !== n
+        return (0, h.b)("Share Client Theme Widget") && void 0 !== n
             ? (0, r.jsxs)("div", {
                   className: E.container,
                   children: [
-                      (0, r.jsx)(I, { message: t }),
+                      (0, r.jsx)(v, { message: t }),
                       (0, r.jsx)(s.zx, {
                           text: g.intl.string(g.t.SKNnqq),
                           fullWidth: !0,
@@ -36,15 +36,14 @@ let b = (e) => e.map((e) => "#".concat(e)),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
-                                  (0, d.y)(O(n.base_theme));
+                                  (0, d.y)((0, p.e)(n.base_theme));
                           },
                       }),
                   ],
               })
             : null;
     },
-    O = (e) => h.yW[e],
-    v = (e, t, n) =>
+    O = (e, t, n) =>
         e.split(" ").map((e, a) =>
             "__USERNAME__" !== e
                 ? (0, r.jsxs)(
@@ -72,7 +71,7 @@ let b = (e) => e.map((e) => "#".concat(e)),
                       a,
                   ),
         ),
-    I = (e) => {
+    v = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
             o = (0, u.ZP)(t),
@@ -101,7 +100,7 @@ let b = (e) => e.map((e) => "#".concat(e)),
                                   variant: "text-sm/medium",
                                   color: "text-secondary",
                                   className: E.sharedBy,
-                                  children: v(
+                                  children: O(
                                       "".concat(g.intl.format(m.default.fQPSER, { username: "__USERNAME__" })),
                                       t.author,
                                       o.nick,

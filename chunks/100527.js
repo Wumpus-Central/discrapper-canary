@@ -289,6 +289,7 @@ var r = (function (e) {
         (e.CUSTOM_THEMES_EDITOR = "custom themes editor"),
         (e.AUTOMOD_PROFILE_QUARANTINE_ALERT = "automod profile quarantine alert"),
         (e.SHARE_NITRO_EMBED = "share nitro embed"),
+        (e.SHARE_CUSTOM_CLIENT_THEME_EMBED = "share custom client theme embed"),
         (e.EMBEDDED_ACTIVITY_MESSAGE = "embedded activity message"),
         (e.REFERRAL_TRIALS_COMPOSER_BUTTON = "referral trials composer button"),
         (e.REFERRAL_TRIALS_POPOUT = "referral trials popout"),

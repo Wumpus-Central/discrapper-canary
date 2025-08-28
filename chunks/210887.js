@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r,
     i = n(442837),
     a = n(780384),
@@ -125,6 +125,9 @@ function x(e) {
 function L() {
     return (T = null), A();
 }
+function j() {
+    return A();
+}
 m(C, "displayName", "ThemeStore"),
     m(C, "persistKey", "ThemeStore"),
     m(C, "migrations", [
@@ -134,7 +137,7 @@ m(C, "displayName", "ThemeStore"),
         },
         (e) => e,
     ]);
-let j = new C(o.Z, {
+let M = new C(o.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: N,
     LOGOUT: P,
@@ -148,4 +151,5 @@ let j = new C(o.Z, {
     UPDATE_THEME_PREFERENCES: D,
     SET_THEME_OVERRIDE: x,
     CLEAR_THEME_OVERRIDE: L,
+    REFRESH_THEME: j,
 });
