@@ -58262,7 +58262,6 @@ h3.improved__1689b:after {
     color: var(--white-500);
     display: flex;
     flex-direction: column;
-    max-width: 660px;
     padding: 16px;
     position: relative
 }
@@ -63229,7 +63228,6 @@ h3.improved__1689b:after {
     background: var(--background-secondary-alt);
     border-radius: var(--radius-lg);
     margin-bottom: -40px;
-    max-width: 660px;
     min-height: 292px
 }
 
@@ -84160,9 +84158,9 @@ div.nagbar_d74ef8 {
     box-sizing: border-box;
     height: 208px;
     margin: 32px 0;
+    min-width: 660px;
     padding: 24px 32px 32px;
-    position: relative;
-    width: 660px
+    position: relative
 }
 
 .theme-dark .container_c50183 {
