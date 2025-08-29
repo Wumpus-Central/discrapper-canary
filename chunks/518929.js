@@ -77,4 +77,30 @@ function o(e) {
                 config: { contentGenerationEnabled: !0 },
             },
         ],
+    }),
+    (0, r.B)({
+        kind: "user",
+        id: "2025-08_icymi_conversations",
+        label: "New conversations experience in ICYMI",
+        defaultConfig: { newConversationsEnabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "New conversations experience in ICYMI",
+                config: { newConversationsEnabled: !0 },
+            },
+        ],
+    }),
+    (0, r.B)({
+        kind: "user",
+        id: "2025-08_icymi_ux_refresh",
+        label: "UX refresh in ICYMI",
+        defaultConfig: { newUXEnabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "UX refresh in ICYMI",
+                config: { newUXEnabled: !0 },
+            },
+        ],
     });
