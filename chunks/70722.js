@@ -1,6 +1,7 @@
 n.d(t, {
     C7: () => o,
     Ec: () => a,
+    Mm: () => g,
     T6: () => c,
     ZM: () => p,
     c5: () => _,
@@ -12,7 +13,8 @@ n.d(t, {
     tB: () => m,
     yG: () => s,
     zj: () => f,
-});
+}),
+    n(388685);
 var r = n(214627),
     i = (function (e) {
         return (
@@ -43,4 +45,5 @@ let a = ">=19.0.0",
 var h = (function (e) {
     return (e.GUILD = "guild"), (e.CALL = "call"), e;
 })({});
-let m = r.T.StreamNotificationsGuildMaxSize;
+let m = r.T.StreamNotificationsGuildMaxSize,
+    g = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
