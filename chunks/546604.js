@@ -1,113 +1,87 @@
-n.d(t, { default: () => b }), n(953529);
+n.d(t, { default: () => v }), n(953529);
 var r = n(951288);
 n(647438);
 var a = n(512722),
     i = n.n(a),
     s = n(990547),
     l = n(442837),
-    o = n(481060),
-    c = n(100527),
-    d = n(213609),
-    u = n(240657),
-    m = n(809086),
-    x = n(430824),
-    f = n(240864),
-    h = n(942833),
+    o = n(82659),
+    c = n(481060),
+    d = n(100527),
+    u = n(213609),
+    m = n(240657),
+    x = n(809086),
+    f = n(430824),
+    h = n(240864),
+    p = n(942833),
     j = n(409110),
-    _ = n(226060),
-    p = n(388032),
+    _ = n(843880),
+    b = n(388032),
     g = n(791873);
-function b(e) {
+function v(e) {
     var t, n;
-    let { transitionState: a, guildProductListingId: b, analyticsLocation: v, guildId: Z, onClose: N } = e,
-        C = (0, l.e7)([f.Z], () => f.Z.getGuildProduct(b));
-    i()(null != C, "guildProductListing cannot be null"),
-        (0, d.Z)({
+    let { transitionState: a, guildProductListingId: v, analyticsLocation: Z, guildId: N, onClose: O } = e,
+        y = (0, l.e7)([h.Z], () => h.Z.getGuildProduct(v));
+    i()(null != y, "guildProductListing cannot be null"),
+        (0, u.Z)({
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
             properties: {
-                guild_product_listing_id: b,
-                has_entitlement: !0 === C.has_entitlement,
-                location: v,
+                guild_product_listing_id: v,
+                has_entitlement: !0 === y.has_entitlement,
+                location: Z,
             },
         });
-    let I = null != (t = (0, h.C)(C)) ? t : "",
-        y = (0, h.k)(C),
-        O = (0, l.e7)([x.Z], () => x.Z.getGuild(Z));
-    return (0, r.jsxs)(o.Y0X, {
-        className: g.modal,
-        size: o.CgR.MEDIUM,
+    let C = null != (t = (0, p.C)(y)) ? t : "",
+        I = (0, p.k)(y),
+        L = (0, l.e7)([f.Z], () => f.Z.getGuild(N)),
+        D = (0, _.Z)({
+            guildId: N,
+            guildProductListingId: v,
+            sourceAnalyticsLocations: d.Z.GUILD_PRODUCT_INFO_MODAL,
+        });
+    return (0, r.jsxs)(o.Modal, {
+        title: y.name,
+        subtitle: b.intl.format(b.t.xImSen, {
+            productType: C,
+            personName: null != (n = null == L ? void 0 : L.name) ? n : "",
+        }),
+        size: "md",
         transitionState: a,
-        "aria-label": C.name,
-        parentComponent: "GuildProductInfoModal",
+        onClose: O,
+        "aria-label": y.name,
+        actions: [D],
+        actionBarInput: (0, r.jsx)(c.Text, {
+            tag: "div",
+            variant: "heading-xl/semibold",
+            color: "header-primary",
+            children: I,
+        }),
         children: [
-            (0, r.jsxs)(o.xBx, {
-                separator: !1,
-                children: [
-                    (0, r.jsx)(m.e, {
-                        height: 267,
-                        listing: C,
-                        className: g.headerImage,
-                        alt: "",
-                    }),
-                    (0, r.jsx)(o.olH, {
-                        className: g.closeButton,
-                        onClick: N,
-                        withCircleBackground: !0,
-                    }),
-                ],
+            (0, r.jsx)(x.e, {
+                height: 267,
+                listing: y,
+                className: g.headerImage,
+                alt: "",
             }),
-            (0, r.jsx)(o.hzk, {
-                children: (0, r.jsxs)("div", {
-                    className: g.body,
-                    children: [
-                        (0, r.jsx)(o.X6q, {
-                            variant: "heading-xl/medium",
-                            color: "header-primary",
-                            children: C.name,
-                        }),
-                        (0, r.jsx)(o.LZC, { size: 4 }),
-                        (0, r.jsx)(o.Text, {
-                            variant: "text-sm/normal",
-                            color: "header-secondary",
-                            children: p.intl.format(p.t.xImSen, {
-                                productType: I,
-                                personName: null != (n = null == O ? void 0 : O.name) ? n : "",
-                            }),
-                        }),
-                        (0, r.jsx)(o.LZC, { size: 16 }),
-                        (0, r.jsx)(j.Z, { listing: C }),
-                        (0, r.jsx)(o.LZC, { size: 16 }),
-                        (0, r.jsx)("div", { className: g.seperator }),
-                        (0, r.jsx)(o.LZC, { size: 16 }),
-                        (0, r.jsx)(o.X6q, {
-                            variant: "heading-lg/medium",
-                            color: "header-primary",
-                            children: p.intl.string(p.t.TNnDJi),
-                        }),
-                        (0, r.jsx)(o.LZC, { size: 12 }),
-                        (0, r.jsx)(u.Z, {
-                            className: g.description,
-                            variant: "text-md/normal",
-                            color: "text-muted",
-                            text: C.description,
-                        }),
-                    ],
-                }),
-            }),
-            (0, r.jsxs)(o.mzw, {
-                className: g.footer,
+            (0, r.jsxs)("div", {
+                className: g.body,
                 children: [
-                    (0, r.jsx)(_.Z, {
-                        guildId: Z,
-                        guildProductListingId: b,
-                        sourceAnalyticsLocations: c.Z.GUILD_PRODUCT_INFO_MODAL,
-                    }),
-                    (0, r.jsx)(o.Text, {
-                        tag: "div",
-                        variant: "heading-xl/semibold",
+                    (0, r.jsx)(j.Z, { listing: y }),
+                    (0, r.jsx)(c.LZC, { size: 16 }),
+                    (0, r.jsx)("div", { className: g.seperator }),
+                    (0, r.jsx)(c.LZC, { size: 16 }),
+                    (0, r.jsx)(c.X6q, {
+                        variant: "heading-lg/medium",
                         color: "header-primary",
-                        children: y,
+                        children: b.intl.string(b.t.TNnDJi),
+                    }),
+                    (0, r.jsx)(c.LZC, { size: 12 }),
+                    (0, r.jsx)(m.Z, {
+                        className: g.description,
+                        variant: "text-md/normal",
+                        color: "text-muted",
+                        text: y.description,
                     }),
                 ],
             }),
