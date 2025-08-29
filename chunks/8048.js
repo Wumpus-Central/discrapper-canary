@@ -1,31 +1,31 @@
-i.d(t, { default: () => h });
-var r = i(512722),
-    n = i.n(r),
+i.r(e), i.d(e, { default: () => o });
+var n = i(512722),
+    r = i.n(n),
     a = i(839766);
-function s(e, t, i) {
+function s(t, e, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
+        e in t
+            ? Object.defineProperty(t, e, {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = i),
-        e
+            : (t[e] = i),
+        t
     );
 }
-let o = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope;
-class h {
-    setState(e, t) {
-        null != t && (e || t === this.currentFrame || this.draw(t), (this.currentFrame = t)),
-            e && !this.animate && this.resumeAnimation(),
-            (this.animate = e),
+let h = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope;
+class o {
+    setState(t, e) {
+        null != e && (t || e === this.currentFrame || this.draw(e), (this.currentFrame = e)),
+            t && !this.animate && this.resumeAnimation(),
+            (this.animate = t),
             this.scheduleOrCancelTick();
     }
-    setVisibility(e) {
-        let t = this.visible;
-        (this.visible = e), this.visible && !t && this.resumeAnimation(), this.scheduleOrCancelTick();
+    setVisibility(t) {
+        let e = this.visible;
+        (this.visible = t), this.visible && !e && this.resumeAnimation(), this.scheduleOrCancelTick();
     }
     resumeAnimation() {
         this.currentFrameTime = performance.now();
@@ -33,10 +33,10 @@ class h {
     clear() {
         this.canvasContext.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
-    draw(e) {
+    draw(t) {
         return (
             null != this.animation &&
-            (this.clear(), this.animation.drawInto(this.canvasContext, e, this.canvas.width, this.canvas.height), !0)
+            (this.clear(), this.animation.drawInto(this.canvasContext, t, this.canvas.width, this.canvas.height), !0)
         );
     }
     drop() {
@@ -52,25 +52,25 @@ class h {
                 ? this.requestAnimationFrame(this.animate && this.visible ? this.onAnimationTick : null)
                 : this.requestAnimationFrame(this.onInitialAnimationTick));
     }
-    requestAnimationFrame(e) {
-        null != e && null == this.requestAnimationFrameId && (this.requestAnimationFrameId = requestAnimationFrame(e)),
-            null != e &&
+    requestAnimationFrame(t) {
+        null != t && null == this.requestAnimationFrameId && (this.requestAnimationFrameId = requestAnimationFrame(t)),
+            null != t &&
                 null != this.requestAnimationFrameId &&
                 (cancelAnimationFrame(this.requestAnimationFrameId),
-                (this.requestAnimationFrameId = requestAnimationFrame(e))),
-            null == e &&
+                (this.requestAnimationFrameId = requestAnimationFrame(t))),
+            null == t &&
                 null != this.requestAnimationFrameId &&
                 (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = null));
     }
     constructor({
-        canvas: e,
-        id: t,
+        canvas: t,
+        id: e,
         assetUrl: i,
-        assetData: r,
-        isVisible: h,
+        assetData: n,
+        isVisible: o,
         shouldAnimate: l,
-        onInitialDraw: u,
-        onError: c,
+        onInitialDraw: c,
+        onError: u,
     }) {
         s(this, "canvas", void 0),
             s(this, "canvasContext", void 0),
@@ -86,51 +86,51 @@ class h {
             s(this, "hasInitialFrame", void 0),
             s(this, "onInitialDraw", void 0),
             s(this, "onError", void 0),
-            s(this, "onInitialAnimationTick", (e) => {
-                if (((this.requestAnimationFrameId = null), (performance.now() - e < 30 || o) && this.draw(0))) {
-                    var t;
+            s(this, "onInitialAnimationTick", (t) => {
+                if (((this.requestAnimationFrameId = null), (performance.now() - t < 30 || h) && this.draw(0))) {
+                    var e;
                     this.resumeAnimation(),
-                        null == (t = this.onInitialDraw) || t.call(this),
+                        null == (e = this.onInitialDraw) || e.call(this),
                         (this.hasInitialFrame = !0);
                 }
                 this.scheduleOrCancelTick();
             }),
-            s(this, "onAnimationTick", (e) => {
+            s(this, "onAnimationTick", (t) => {
                 this.requestAnimationFrameId = null;
-                let t = performance.now(),
-                    i = Math.floor(((o ? t : e) - this.currentFrameTime) / this.frameDuration);
+                let e = performance.now(),
+                    i = Math.floor(((h ? e : t) - this.currentFrameTime) / this.frameDuration);
                 i > 0 &&
-                    ((t - e < 12 || o) && (this.draw(this.currentFrame), (this.currentFrame += i)),
+                    ((e - t < 12 || h) && (this.draw(this.currentFrame), (this.currentFrame += i)),
                     (this.currentFrameTime += i * this.frameDuration)),
                     this.scheduleOrCancelTick();
             });
-        let d = e.getContext("2d");
-        n()(null != d, "couldn't get canvas 2d context."),
-            (this.canvas = e),
-            (this.canvasContext = d),
+        let m = t.getContext("2d");
+        r()(null != m, "couldn't get canvas 2d context."),
+            (this.canvas = t),
+            (this.canvasContext = m),
             (this.animation = null),
             (this.dropped = !1),
             (this.currentFrame = 0),
             (this.currentFrameTime = 0),
             (this.frameDuration = 1000),
             (this.animate = l),
-            (this.visible = h),
+            (this.visible = o),
             (this.requestAnimationFrameId = null),
             (this.hasInitialFrame = !1),
-            (this.onInitialDraw = u),
-            (this.onError = c),
-            (this.key = "".concat(t, ":").concat(e.width, ":").concat(e.height)),
-            a.Z.create(this.key, e.width, e.height, i, r)
-                .then((e) => {
-                    null != e &&
+            (this.onInitialDraw = c),
+            (this.onError = u),
+            (this.key = "".concat(e, ":").concat(t.width, ":").concat(t.height)),
+            a.Z.create(this.key, t.width, t.height, i, n)
+                .then((t) => {
+                    null != t &&
                         (this.dropped
                             ? a.Z.drop(this.key)
-                            : ((this.animation = e),
-                              (this.frameDuration = 1000 / e.frameRate),
+                            : ((this.animation = t),
+                              (this.frameDuration = 1000 / t.frameRate),
                               this.scheduleOrCancelTick()));
                 })
-                .catch((e) => {
-                    null == c || c();
+                .catch((t) => {
+                    null == u || u();
                 });
     }
 }
