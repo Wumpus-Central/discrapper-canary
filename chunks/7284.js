@@ -1,6 +1,6 @@
 n.d(t, {
-    j: () => _,
-    y: () => f,
+    U: () => _,
+    j: () => p,
 });
 var r = n(120356),
     i = n.n(r),
@@ -44,12 +44,12 @@ let d = {
             name: c.default.KMR8ra,
             className: u.zillaSlab,
         },
-        [a.C.BIO_RHYME]: d,
-        [a.C.BANGERS]: d,
-        [a.C.COMPAGNON]: d,
-        [a.C.RIBES]: d,
     };
 function _(e) {
+    var t;
+    return null != (t = f[e]) ? t : d;
+}
+function p(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
         { includeNonProfile: a } = s.f.useExperiment({ location: "useDisplayNameStylesFont" });
