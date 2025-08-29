@@ -27,23 +27,25 @@ let g = (e) => {
             s.Z.getParticipants(t).some((e) => e.type === h.fO.USER && p.Z.isClipsEnabledForUser(e.user.id))
         );
     })
-        ? (0, r.jsxs)(a.u, {
-              asContainer: !0,
+        ? (0, r.jsx)(a.u, {
               text: f.intl.string(f.t.DJXW3N),
-              children: [
-                  (0, r.jsx)(o.G2e, {
-                      icon: o.AlX,
-                      shape: o.Dv2.ROUND_LEFT,
-                      color: l.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: m.clipBadgeIcon,
-                  }),
-                  (0, r.jsx)(o.IGR, {
-                      text: f.intl.string(f.t.pCMkDQ),
-                      shape: o.Dv2.ROUND_RIGHT,
-                      color: l.Z.unsafe_rawColors.PRIMARY_500.css,
-                      className: m.clipBadgeText,
-                  }),
-              ],
+              children: (0, r.jsxs)("div", {
+                  className: m.clipsEnabledIndicator,
+                  children: [
+                      (0, r.jsx)(o.G2e, {
+                          icon: o.AlX,
+                          shape: o.Dv2.ROUND_LEFT,
+                          color: l.Z.unsafe_rawColors.PRIMARY_500.css,
+                          className: m.clipBadgeIcon,
+                      }),
+                      (0, r.jsx)(o.IGR, {
+                          text: f.intl.string(f.t.pCMkDQ),
+                          shape: o.Dv2.ROUND_RIGHT,
+                          color: l.Z.unsafe_rawColors.PRIMARY_500.css,
+                          className: m.clipBadgeText,
+                      }),
+                  ],
+              }),
           })
         : null;
 };
