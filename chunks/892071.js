@@ -5,8 +5,8 @@ n.d(t, {
     n(415506);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(873546),
     l = n(481060),
     c = n(597952),
@@ -18,6 +18,7 @@ let p = i.createContext({
     lang: "",
     style: "",
     className: "",
+    focused: !1,
 });
 function h() {
     let e = i.useContext(p);
@@ -28,7 +29,7 @@ function m(e) {
     let {
             rootClassName: t,
             lang: n,
-            theme: o,
+            theme: a,
             density: h,
             focused: m,
             fontScale: g,
@@ -52,9 +53,9 @@ function m(e) {
         L = (0, d.Z)("highlight_mana_components"),
         j = (0, d.Z)("highlight_void_toggleables"),
         M = (0, d.Z)("highlight_void_buttons"),
-        k = a()(
+        k = o()(
             (0, c.Z)(),
-            (0, l.QeD)(o),
+            (0, l.QeD)(a),
             "density-".concat(h),
             E,
             {
@@ -88,8 +89,9 @@ function m(e) {
                 lang: n,
                 style: D,
                 className: k,
+                focused: m,
             }),
-            [n, D, k],
+            [n, D, k, m],
         ),
         G = (0, f.$V)({ location: "RootElementContextProvider" });
     return (
@@ -98,11 +100,11 @@ function m(e) {
             let e = G
                 ? {
                       x: 10,
-                      y: 12,
+                      y: 13,
                   }
                 : {
                       x: 9,
-                      y: 8,
+                      y: 9,
                   };
             _.ZP.setTrafficLightPosition(e);
         }, [R, G]),
