@@ -52,6 +52,7 @@ let f = Object.assign(
                         theme: null != p ? p : E,
                         primaryColor: b,
                         secondaryColor: y,
+                        userId: n.id,
                         children: h,
                     }),
                 }),

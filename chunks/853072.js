@@ -1,24 +1,26 @@
-r.d(t, { Z: () => o }), r(388685);
+r.d(t, { Z: () => c }), r(388685);
 var n = r(442837),
     i = r(567409),
-    a = r(594174),
-    l = r(823379);
-function o(e) {
-    let t = (0, i.N)(e);
-    return (0, n.Wu)([a.default], () => {
-        let e = a.default.getCurrentUser(),
-            r = new Set();
+    l = r(594174),
+    a = r(823379),
+    o = r(652853);
+function c(e) {
+    let { userId: t } = (0, o.z)(),
+        r = (0, i.N)(e);
+    return (0, n.Wu)([l.default], () => {
+        let e = l.default.getCurrentUser(),
+            n = new Set();
         return (
-            t.forEach((e) => {
-                r.add(e.author_id),
+            r.forEach((e) => {
+                n.add(e.author_id),
                     e.participants.forEach((e) => {
-                        r.add(e);
+                        n.add(e);
                     });
             }),
-            Array.from(r)
-                .filter((t) => t !== (null == e ? void 0 : e.id))
-                .map((e) => a.default.getUser(e))
-                .filter(l.lm)
+            Array.from(n)
+                .filter((r) => r !== (null == e ? void 0 : e.id) && r !== t)
+                .map((e) => l.default.getUser(e))
+                .filter(a.lm)
         );
-    }, [t]);
+    }, [r, t]);
 }

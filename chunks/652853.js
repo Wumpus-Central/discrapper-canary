@@ -11,21 +11,23 @@ let s = i.createContext({
     themeType: null,
     primaryColor: null,
     secondaryColor: null,
+    userId: null,
 });
 function l(e) {
-    let { theme: t, themeType: n, primaryColor: a, secondaryColor: o, children: l } = e,
-        c = i.useMemo(
+    let { theme: t, themeType: n, primaryColor: a, secondaryColor: o, userId: l, children: c } = e,
+        u = i.useMemo(
             () => ({
                 theme: t,
                 themeType: n,
                 primaryColor: a,
                 secondaryColor: o,
+                userId: l,
             }),
-            [t, n, a, o],
+            [t, n, a, o, l],
         );
     return (0, r.jsx)(s.Provider, {
-        value: c,
-        children: l,
+        value: u,
+        children: c,
     });
 }
 let c = () => i.useContext(s);
