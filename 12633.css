@@ -57233,20 +57233,11 @@ h3.improved__1689b:after {
     text-align: center
 }
 
-.openDiscordButton_e64651 {
-    margin-bottom: 8px;
-    margin-top: 24px
-}
-
-.doneButton_e64651,
-.openDiscordButton_e64651 {
-    font-weight: var(--font-weight-semibold);
-    width: 100%
-}
-
-.doneButton_e64651 {
-    background: var(--background-accent);
-    color: var(--white-500)
+.actions_e64651 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    row-gap: 8px
 }
 
 .container__24a95 {

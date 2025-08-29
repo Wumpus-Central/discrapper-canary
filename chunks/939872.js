@@ -2,7 +2,7 @@ n.d(t, { m: () => f });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(755721),
+    a = n(159691),
     o = n(481060),
     s = n(17894),
     l = n(430824),
@@ -34,16 +34,22 @@ let f = (e) => {
                     color: "header-secondary",
                     children: u.intl.format(u.t.TnhFHh, { benefits: p.asString() }),
                 }),
-            (0, r.jsx)(a.zx, {
-                className: d.openDiscordButton,
-                onClick: () => (0, s.Z)("role_sub_mweb_success_modal"),
-                children: u.intl.string(u.t.WWvswM),
-            }),
-            (0, r.jsx)(a.zx, {
-                className: d.doneButton,
-                look: a.zx.Looks.BLANK,
-                onClick: () => t(!0),
-                children: u.intl.string(u.t.y84Dho),
+            (0, r.jsxs)("div", {
+                className: d.actions,
+                children: [
+                    (0, r.jsx)(a.zx, {
+                        variant: "primary",
+                        text: u.intl.string(u.t.WWvswM),
+                        fullWidth: !0,
+                        onClick: () => (0, s.Z)("role_sub_mweb_success_modal"),
+                    }),
+                    (0, r.jsx)(a.zx, {
+                        variant: "secondary",
+                        text: u.intl.string(u.t.y84Dho),
+                        fullWidth: !0,
+                        onClick: () => t(!0),
+                    }),
+                ],
             }),
         ],
     });
