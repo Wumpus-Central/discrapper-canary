@@ -1,7 +1,7 @@
 n.d(t, {
     O5: () => K,
     V6: () => W,
-    ZP: () => ek,
+    ZP: () => eU,
 }),
     n(35282),
     n(388685),
@@ -97,21 +97,21 @@ let R = new f.Z("GuildMemberStore"),
         removed: [],
     };
 function Z(e, t) {
-    if (null == t.communicationDisabledUntil || !(0, _.b)(t)) return V(e, t.userId);
+    if (null == t.communicationDisabledUntil || !(0, _.b)(t)) return F(e, t.userId);
     let n = Y(e, t.userId);
-    L[n] !== t.communicationDisabledUntil && (0, _.b)(t) && ((L[n] = t.communicationDisabledUntil), F(n));
+    L[n] !== t.communicationDisabledUntil && (0, _.b)(t) && ((L[n] = t.communicationDisabledUntil), V(n));
 }
-function V(e, t) {
+function F(e, t) {
     if (null != t) {
         let n = Y(e, t);
-        null != L[n] && F(n), H(Y(e, t));
+        null != L[n] && V(n), H(Y(e, t));
     } else
         for (let t in L) {
             let n = t;
-            K(n) === e && (F(t), H(n));
+            K(n) === e && (V(t), H(n));
         }
 }
-function F(e) {
+function V(e) {
     (M += 1), (U[e] = M);
 }
 function H(e) {
@@ -451,7 +451,7 @@ function eE(e) {
 function eb(e, t) {
     let n = P[e];
     if (null == n || null == n[t]) return !1;
-    delete n[t], V(e, t), k++;
+    delete n[t], F(e, t), k++;
 }
 function ey(e) {
     let { guild: t } = e;
@@ -497,7 +497,7 @@ function ev(e) {
 }
 function eI(e) {
     let { guild: t } = e;
-    delete P[t.id], delete w[t.id], V(t.id);
+    delete P[t.id], delete w[t.id], F(t.id);
 }
 function eT(e) {
     let t = P[e.guildId];
@@ -602,26 +602,41 @@ function eN(e, t) {
             .filter((e) => null != e),
     });
 }
-function eR(e) {
-    let { message: t, guildId: n } = e;
-    return eN(t.resolved, n);
+function eR(e, t) {
+    var n;
+    let r = !1;
+    return (
+        null == (n = e.message_snapshots) ||
+            n.forEach((t) => {
+                var n, i;
+                eN(
+                    null == (n = t.message) ? void 0 : n.resolved,
+                    null == (i = e.message_reference) ? void 0 : i.guild_id,
+                ) && (r = !0);
+            }),
+        eN(e.resolved, t) || r
+    );
 }
 function eP(e) {
-    let t = O.Z.getChannel(e.channel_id);
-    eN(e.resolved, null == t ? void 0 : t.guild_id);
+    let { message: t, guildId: n } = e;
+    return eR(t, n);
 }
 function ew(e) {
-    let { messages: t } = e;
-    t.forEach((e) => eP(e));
+    let t = O.Z.getChannel(e.channel_id);
+    eR(e, null == t ? void 0 : t.guild_id);
 }
 function eD(e) {
+    let { messages: t } = e;
+    t.forEach((e) => ew(e));
+}
+function ex(e) {
     let { pins: t } = e;
     t.forEach((e) => {
         let { message: t } = e;
-        return eP(t);
+        return ew(t);
     });
 }
-function ex(e) {
+function eL(e) {
     let { data: t } = e,
         n = [];
     t.forEach((e) => {
@@ -632,18 +647,18 @@ function ex(e) {
             });
         });
     }),
-        ew({ messages: n });
+        eD({ messages: n });
 }
-function eL(e) {
+function ej(e) {
     let { location: t, participants: n } = e,
         r = (0, c.j)(t);
     return null != r && eO(r, n);
 }
-function ej(e) {
+function eM(e) {
     let t = O.Z.getChannel(e.channelId);
     return eN(e.resolved, null == t ? void 0 : t.guild_id);
 }
-class eM extends (r = o.ZP.Store) {
+class ek extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(I.Z, v.Z, y.default, h.Z);
     }
@@ -756,8 +771,8 @@ class eM extends (r = o.ZP.Store) {
         return k;
     }
 }
-S(eM, "displayName", "GuildMemberStore");
-let ek = new eM(s.Z, {
+S(ek, "displayName", "GuildMemberStore");
+let eU = new ek(s.Z, {
     CONNECTION_OPEN: X,
     CONNECTION_OPEN_SUPPLEMENTAL: Q,
     OVERLAY_INITIALIZE: $,
@@ -785,15 +800,15 @@ let ek = new eM(s.Z, {
     PASSIVE_UPDATE_V2: ec,
     CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES: eA,
     LOCAL_MESSAGES_LOADED: er,
-    MESSAGE_CREATE: eR,
-    MESSAGE_UPDATE: eR,
-    LOAD_MESSAGES_SUCCESS: ew,
-    LOAD_MESSAGES_AROUND_SUCCESS: ew,
-    LOAD_RECENT_MENTIONS_SUCCESS: ew,
-    LOAD_PINNED_MESSAGES_SUCCESS: eD,
-    SEARCH_MESSAGES_SUCCESS: ex,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: ex,
+    MESSAGE_CREATE: eP,
+    MESSAGE_UPDATE: eP,
+    LOAD_MESSAGES_SUCCESS: eD,
+    LOAD_MESSAGES_AROUND_SUCCESS: eD,
+    LOAD_RECENT_MENTIONS_SUCCESS: eD,
+    LOAD_PINNED_MESSAGES_SUCCESS: ex,
+    SEARCH_MESSAGES_SUCCESS: eL,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: eL,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: em,
-    EMBEDDED_ACTIVITY_UPDATE_V2: eL,
-    INTERACTION_MODAL_CREATE: ej,
+    EMBEDDED_ACTIVITY_UPDATE_V2: ej,
+    INTERACTION_MODAL_CREATE: eM,
 });

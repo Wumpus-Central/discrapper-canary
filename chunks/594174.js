@@ -170,11 +170,16 @@ function D(e, t) {
             N(e.interaction_metadata.user, t),
         null != e.message_snapshots &&
             e.message_snapshots.forEach((e) => {
-                var n, r, i, a;
+                var n, r, i, a, o, s, l;
                 (null == (r = e.moderator_report) || null == (n = r.reported_member) ? void 0 : n.user) != null &&
                     N(e.moderator_report.reported_member.user, t),
                     (null == (a = e.moderator_report) || null == (i = a.reporting_member) ? void 0 : i.user) != null &&
-                        N(e.moderator_report.reporting_member.user, t);
+                        N(e.moderator_report.reporting_member.user, t),
+                    Object.values(
+                        null != (l = null == (s = e.message) || null == (o = s.resolved) ? void 0 : o.users) ? l : {},
+                    ).forEach((e) => {
+                        C(e) && N(e, t);
+                    });
             });
 }
 function x(e) {
@@ -250,7 +255,7 @@ function Z(e) {
     let { messages: t } = e;
     return t.forEach((e) => D(e, !0)), !1;
 }
-function V(e) {
+function F(e) {
     let { pins: t } = e;
     return (
         t.forEach((e) => {
@@ -260,7 +265,7 @@ function V(e) {
         !1
     );
 }
-function F(e) {
+function V(e) {
     let { mostRecentMessages: t } = e;
     return null == t || t.forEach((e) => D(e, !1)), !1;
 }
@@ -620,8 +625,8 @@ class eL extends m.Z {
             LOAD_MESSAGES_SUCCESS: Z,
             LOAD_MESSAGES_AROUND_SUCCESS: Z,
             LOAD_RECENT_MENTIONS_SUCCESS: Z,
-            LOAD_PINNED_MESSAGES_SUCCESS: V,
-            THREAD_LIST_SYNC: F,
+            LOAD_PINNED_MESSAGES_SUCCESS: F,
+            THREAD_LIST_SYNC: V,
             MESSAGE_CREATE: Q,
             MESSAGE_UPDATE: Q,
             GUILD_SETTINGS_LOADED_BANS: en,
