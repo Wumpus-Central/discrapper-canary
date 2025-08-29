@@ -97,7 +97,7 @@ function y(e) {
             children: [
                 (0, r.jsx)(a.zxk, {
                     size: "sm",
-                    variant: "active",
+                    variant: S ? "secondary" : "active",
                     icon: a.hGI,
                     text: C,
                     disabled: t || S || !v,
