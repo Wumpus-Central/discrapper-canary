@@ -11,13 +11,13 @@ var r = n(951288),
     m = n(613464),
     g = n(434404),
     p = n(6025),
-    h = n(892001),
-    f = n(433355),
+    f = n(892001),
+    h = n(433355),
     b = n(430824),
     x = n(893966),
     j = n(527379),
-    v = n(305473),
-    _ = n(113679),
+    _ = n(305473),
+    v = n(113679),
     O = n(440857),
     y = n(472596),
     C = n(598948),
@@ -33,7 +33,7 @@ function R(e) {
         n = (0, s.e7)([b.Z], () => b.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
         R = (0, u.m)(t),
-        Z = (0, s.e7)([f.ZP], () => f.ZP.getGuildSidebarState(t), [t]),
+        Z = (0, s.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
@@ -42,7 +42,7 @@ function R(e) {
         k = i.useCallback(
             (e) => {
                 null != e &&
-                    (0, h.openUserProfileModal)({
+                    (0, f.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
                         sourceAnalyticsLocations: l,
@@ -65,7 +65,7 @@ function R(e) {
                 children: (0, r.jsx)("div", {
                     className: w.customContainer,
                     children: (0, r.jsx)(o.w0Z, {
-                        className: w.customScroller,
+                        className: a()(w.customScroller, P.settingsVerticalScroller),
                         orientation: "auto",
                         children: (0, r.jsx)(o.w0Z, {
                             className: P.settingsHorizontalScroller,
@@ -96,8 +96,8 @@ function R(e) {
                                             children: (0, r.jsxs)("div", {
                                                 className: P.tableContainer,
                                                 children: [
-                                                    (0, r.jsx)(_.Z, { guild: n }),
                                                     (0, r.jsx)(v.Z, { guild: n }),
+                                                    (0, r.jsx)(_.Z, { guild: n }),
                                                     A
                                                         ? (0, r.jsxs)("div", {
                                                               className: P.mainTableContainer,
