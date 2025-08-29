@@ -97,7 +97,7 @@ function v(e) {
             )
     );
 }
-function I(e, t) {
+function I(e, t, n) {
     return (
         s.Z.dispatch({
             type: "EMOJI_DELETE",
@@ -106,6 +106,7 @@ function I(e, t) {
         }),
         a.tn.del({
             url: g.ANM.GUILD_EMOJI(e, t),
+            body: null != n ? { replaced_by: n } : void 0,
             oldFormErrors: !0,
             rejectWithError: !1,
         })
