@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => m,
-    Z: () => E,
+    F: () => h,
+    Z: () => g,
 }),
     n(539854),
     n(388685);
@@ -10,11 +10,10 @@ var r,
     o = n(120356),
     s = n.n(o),
     l = n(481060),
-    c = n(565138),
-    u = n(981631),
-    d = n(388032),
-    f = n(599684);
-function _(e, t, n) {
+    c = n(981631),
+    u = n(388032),
+    d = n(599684);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,20 +37,20 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-let h = Object.freeze({
-    SMALL: f.small,
-    MEDIUM: f.medium,
-    LARGE: f.large,
+let p = Object.freeze({
+    SMALL: d.small,
+    MEDIUM: d.medium,
+    LARGE: d.large,
 });
-var m = (function (e) {
-    return (e.MEMBER = "MEMBER"), (e.ROLE = "ROLE"), (e.CHANNEL = "CHANNEL"), (e.GUILD = "GUILD"), (e.USER = "USER"), e;
+var h = (function (e) {
+    return (e.MEMBER = "MEMBER"), (e.ROLE = "ROLE"), (e.CHANNEL = "CHANNEL"), (e.USER = "USER"), e;
 })({});
-class g extends (r = a.Component) {
+class m extends (r = a.Component) {
     componentDidMount() {
         let e = this.containerRef.current;
         null != e && (this.previousHeight = e.offsetHeight);
@@ -81,44 +80,44 @@ class g extends (r = a.Component) {
             onSelectionChange: o,
             onSelect: s,
             onRemoveTag: l,
-            preventEscapePropagation: c,
+            preventEscapePropagation: u,
         } = this.props;
         if (0 !== r.length) {
             switch (e.keyCode) {
-                case u.yXg.BACKSPACE:
+                case c.yXg.BACKSPACE:
                     (null == i || 0 === i.length) &&
                         null != a &&
                         a.length > 0 &&
                         (e.preventDefault(), e.stopPropagation(), null == l || l(a.length - 1));
                     break;
-                case u.yXg.ARROW_DOWN:
+                case c.yXg.ARROW_DOWN:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t
                             ? ((t = 0), (n = 0))
                             : ((t += 1) >= r.length && (t = r.length - 1), n >= r[t] && (n = r[t] - 1));
                     break;
-                case u.yXg.ARROW_UP:
+                case c.yXg.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
                         (t -= 1),
                         t < 0 ? ((t = 0), (n = 0)) : n >= r[t] && (n = r[t] - 1);
                     break;
-                case u.yXg.ARROW_LEFT:
+                case c.yXg.ARROW_LEFT:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
                         (n -= 1),
                         n < 0 && ((t -= 1) >= 0 ? (n = r[t] - 1) : t < 0 && ((t = 0), (n = 0)));
                     break;
-                case u.yXg.ARROW_RIGHT:
+                case c.yXg.ARROW_RIGHT:
                     e.preventDefault(),
                         e.stopPropagation(),
                         -1 === t && (t = 0),
                         (n += 1),
                         n >= r[t] && ((n = 0), (t += 1) >= r.length && ((t = r.length - 1), (n = r[t] - 1)));
                     break;
-                case u.yXg.ENTER:
+                case c.yXg.ENTER:
                     if (
                         (e.preventDefault(),
                         e.stopPropagation(),
@@ -129,8 +128,8 @@ class g extends (r = a.Component) {
                         return;
                     null != s && s(t, n, e);
                     return;
-                case u.yXg.ESCAPE:
-                    e.preventDefault(), c && e.stopPropagation(), null != s && s(null, null, e);
+                case c.yXg.ESCAPE:
+                    e.preventDefault(), u && e.stopPropagation(), null != s && s(null, null, e);
                     return;
                 default:
                     return;
@@ -149,10 +148,10 @@ class g extends (r = a.Component) {
                 tags: s,
                 preventEscapePropagation: l,
             } = this.props,
-            { current: c } = this.ref;
-        if (null != c)
+            { current: u } = this.ref;
+        if (null != u)
             switch (e.keyCode) {
-                case u.yXg.BACKSPACE:
+                case c.yXg.BACKSPACE:
                     if ((null == o || 0 === o.length) && null != s && s.length > 0) {
                         var d, f;
                         e.preventDefault(),
@@ -160,61 +159,61 @@ class g extends (r = a.Component) {
                             null == (d = (f = this.props).onRemoveTag) || d.call(f, s.length - 1);
                     }
                     break;
-                case u.yXg.ARROW_DOWN:
+                case c.yXg.ARROW_DOWN:
                     e.preventDefault(),
                         e.stopPropagation(),
                         t.length > n && ++r >= t[n] && (++n >= t.length && (n = 0), (r = 0)),
                         null == a || a(n, r);
                     break;
-                case u.yXg.ARROW_UP:
+                case c.yXg.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
                         --r < 0 && (--n < 0 && (n = t.length - 1), (r = t[n] - 1)),
                         null == a || a(n, r);
                     break;
-                case u.yXg.ENTER:
+                case c.yXg.ENTER:
                     e.preventDefault(), e.stopPropagation(), t.length > n && t[n] > r && (null == i || i(n, r, e));
                     break;
-                case u.yXg.ESCAPE:
-                    e.preventDefault(), l && e.stopPropagation(), null == i || i(null, null, e), c.blur();
+                case c.yXg.ESCAPE:
+                    e.preventDefault(), l && e.stopPropagation(), null == i || i(null, null, e), u.blur();
             }
     }
     render() {
         let {
                 autoFocus: e,
                 query: t,
-                placeholder: n = d.intl.string(d.t.LzcpeX),
+                placeholder: n = u.intl.string(u.t.LzcpeX),
                 themeOverride: r,
                 disabled: a,
                 size: o,
-                maxHeight: u,
-                tags: _,
-                onActivate: h,
-                className: m,
-                inputProps: g,
-                focusAfterReady: E,
+                maxHeight: c,
+                tags: f,
+                onActivate: p,
+                className: h,
+                inputProps: m,
+                focusAfterReady: g,
             } = this.props,
-            b = !1,
-            y = [];
+            E = !1,
+            b = [];
         return (
-            null != _ &&
-                _.length > 0 &&
-                ("string" == typeof _[0]
-                    ? _.forEach((e, t) =>
-                          y.push(
+            null != f &&
+                f.length > 0 &&
+                ("string" == typeof f[0]
+                    ? f.forEach((e, t) =>
+                          b.push(
                               (0, i.jsxs)(
                                   l.eee,
                                   {
                                       focusProps: { offset: 4 },
-                                      className: f.tag,
+                                      className: d.tag,
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           e,
                                           (0, i.jsx)(l.Dio, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: f.close,
-                                              "aria-label": d.intl.string(d.t.N86XcH),
+                                              className: d.close,
+                                              "aria-label": u.intl.string(u.t.N86XcH),
                                           }),
                                       ],
                                   },
@@ -222,13 +221,13 @@ class g extends (r = a.Component) {
                               ),
                           ),
                       )
-                    : ((b = !0),
-                      _.forEach((e, t) =>
-                          y.push(
+                    : ((E = !0),
+                      f.forEach((e, t) =>
+                          b.push(
                               (0, i.jsxs)(
                                   l.eee,
                                   {
-                                      className: s()(f.tag, f.richTag),
+                                      className: s()(d.tag, d.richTag),
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           ("MEMBER" === e.type || "USER" === e.type) &&
@@ -241,25 +240,18 @@ class g extends (r = a.Component) {
                                           "ROLE" === e.type &&
                                               null != e.color &&
                                               (0, i.jsx)("span", {
-                                                  className: f.tagRoleColor,
+                                                  className: d.tagRoleColor,
                                                   style: { backgroundColor: e.color },
                                               }),
-                                          "GUILD" === e.type &&
-                                              null != e.guild &&
-                                              (0, i.jsx)(c.Z, {
-                                                  guild: e.guild,
-                                                  active: !0,
-                                                  size: c.Z.Sizes.SMOL,
-                                              }),
                                           (0, i.jsx)("span", {
-                                              className: f.tagLabel,
+                                              className: d.tagLabel,
                                               children: e.label,
                                           }),
                                           (0, i.jsx)(l.Dio, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: f.close,
-                                              "aria-label": d.intl.string(d.t.N86XcH),
+                                              className: d.close,
+                                              "aria-label": u.intl.string(u.t.N86XcH),
                                           }),
                                       ],
                                   },
@@ -275,17 +267,17 @@ class g extends (r = a.Component) {
                     children: (r) =>
                         (0, i.jsx)("div", {
                             ref: this.containerRef,
-                            className: s()(m, f.container, o, r, { [f.disabled]: a }),
+                            className: s()(h, d.container, o, r, { [d.disabled]: a }),
                             children: (0, i.jsxs)(l.zJl, {
-                                className: f.inner,
-                                style: { maxHeight: u },
+                                className: d.inner,
+                                style: { maxHeight: c },
                                 children: [
-                                    y,
+                                    b,
                                     (0, i.jsx)(
                                         "input",
-                                        p(
+                                        _(
                                             {
-                                                className: s()(f.input, { [f.richTagInput]: b }),
+                                                className: s()(d.input, { [d.richTagInput]: E }),
                                                 type: "text",
                                                 ref: this.ref,
                                                 spellCheck: "false",
@@ -296,11 +288,11 @@ class g extends (r = a.Component) {
                                                 onFocus: this.handleFocus,
                                                 disabled: a,
                                                 "aria-disabled": a,
-                                                autoFocus: !E && e,
-                                                onMouseDown: h,
+                                                autoFocus: !g && e,
+                                                onMouseDown: p,
                                             },
                                             this.defaultInputProps,
-                                            g,
+                                            m,
                                         ),
                                     ),
                                 ],
@@ -312,49 +304,49 @@ class g extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "defaultInputProps", {
+            f(this, "defaultInputProps", {
                 role: "combobox",
                 "aria-haspopup": "listbox",
                 "aria-autocomplete": "list",
             }),
-            _(this, "ref", a.createRef()),
-            _(this, "containerRef", a.createRef()),
-            _(this, "previousHeight", 0),
-            _(this, "handleKeyDown", (e) => {
+            f(this, "ref", a.createRef()),
+            f(this, "containerRef", a.createRef()),
+            f(this, "previousHeight", 0),
+            f(this, "handleKeyDown", (e) => {
                 let { onActivate: t, onKeyDown: n, onQueryChange: r, useKeyboardNavigation: i } = this.props;
                 null != n && n(e);
                 let { current: a } = this.ref;
                 if (null == a || null != t) {
-                    e.keyCode !== u.yXg.TAB && null != t && t(e);
+                    e.keyCode !== c.yXg.TAB && null != t && t(e);
                     return;
                 }
-                if (e.keyCode === u.yXg.ESCAPE && null != a.value && "" !== a.value && a.value.length > 0) {
+                if (e.keyCode === c.yXg.ESCAPE && null != a.value && "" !== a.value && a.value.length > 0) {
                     (a.value = ""), null != r && r("");
                     return;
                 }
                 i && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e));
             }),
-            _(this, "handleChange", (e) => {
+            f(this, "handleChange", (e) => {
                 let { onQueryChange: t } = this.props;
                 null != t && t(e.currentTarget.value);
             }),
-            _(this, "handleFocus", (e) => {
+            f(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props;
                 null != t && t(e);
             }),
-            _(this, "handleRemoveTag", (e) => {
+            f(this, "handleRemoveTag", (e) => {
                 let { onRemoveTag: t } = this.props;
                 null == t || t(e);
             }),
-            _(this, "focus", () => {
+            f(this, "focus", () => {
                 let { current: e } = this.ref;
                 null != e && e.focus();
             });
     }
 }
-_(g, "Sizes", h),
-    _(g, "defaultProps", {
-        size: h.SMALL,
+f(m, "Sizes", p),
+    f(m, "defaultProps", {
+        size: p.SMALL,
         query: "",
         sections: [],
         selectedSection: 0,
@@ -366,4 +358,4 @@ _(g, "Sizes", h),
         preventEscapePropagation: !0,
         useKeyboardNavigation: !0,
     });
-let E = g;
+let g = m;

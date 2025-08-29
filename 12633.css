@@ -11201,6 +11201,14 @@ svg.radioIcon_c1e9c4 {
     margin-top: 1px
 }
 
+.roleDot__41e17 {
+    display: block
+}
+
+.roleDotInline__41e17 {
+    height: 18px
+}
+
 .tagGroup_ae0825 {
     display: flex;
     flex-wrap: wrap;
@@ -89751,7 +89759,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

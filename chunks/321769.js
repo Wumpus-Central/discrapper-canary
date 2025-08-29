@@ -1,89 +1,133 @@
-n.d(t, { E: () => l }), n(388685);
+n.d(t, { E: () => c }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(481060),
-    o = n(753450);
-let s = [
+    a = n(442837),
+    o = n(481060),
+    s = n(594174),
+    l = n(753450);
+let c = {
+    title: "TagGroup",
+    stories: [
         {
-            id: "strength",
-            label: "Strength",
-        },
-        {
-            id: "dexterity",
-            label: "Dexterity",
-            isDisabled: !0,
-        },
-        {
-            id: "wisdom",
-            label: "Wisdom",
-        },
-        {
-            id: "charisma",
-            label: "Charisma",
-        },
-    ],
-    l = {
-        title: "TagGroup",
-        stories: [
-            {
-                name: "TagGroup",
-                id: "tag-group",
-                component: function (e) {
-                    let { selectionMode: t, removeable: n } = e,
-                        [l, c] = i.useState(s),
-                        u = i.useCallback(
-                            (e) => {
-                                c(l.filter((t) => !e.has(t.id)));
-                            },
-                            [l],
-                        ),
-                        d = i.useCallback(() => {
-                            c(s);
-                        }, []);
-                    return (0, r.jsx)(a.Kqy, {
-                        gap: 24,
-                        children: (0, r.jsx)(o.Q, {
-                            label: "Categories",
-                            selectionMode: t,
-                            items: l,
-                            disabledKeys: ["dexterity"],
-                            onRemove: n ? u : void 0,
-                            children:
-                                n &&
-                                (0, r.jsx)(a.zxk, {
-                                    disabled: l.length === s.length,
-                                    text: "Reset",
-                                    onClick: d,
-                                }),
-                        }),
-                    });
-                },
-                controls: {
-                    selectionMode: {
-                        label: "Selection Mode",
-                        type: "select",
-                        defaultValue: "multiple",
-                        options: [
+            name: "TagGroup",
+            id: "tag-group",
+            component: function (e) {
+                let { selectionMode: t, removeable: n, layout: c } = e,
+                    u = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
+                    d = i.useMemo(
+                        () => [
                             {
-                                label: "None",
-                                value: "none",
+                                id: "strength",
+                                label: "Strength",
+                                icon: o.z0B,
                             },
                             {
-                                label: "Single",
-                                value: "single",
+                                id: "dexterity",
+                                label: "Dexterity",
+                                icon: {
+                                    type: "role",
+                                    color: "#ff44aa",
+                                },
                             },
                             {
-                                label: "Multiple",
-                                value: "multiple",
+                                id: "wisdom",
+                                label: "Wisdom",
+                                icon: {
+                                    type: "avatar",
+                                    src: null == u ? void 0 : u.getAvatarURL(void 0, 16),
+                                },
+                            },
+                            {
+                                id: "charisma",
+                                label: "Charisma",
                             },
                         ],
-                    },
-                    removeable: {
-                        label: "Removeable",
-                        type: "boolean",
-                        defaultValue: !1,
-                    },
+                        [u],
+                    ),
+                    [f, _] = i.useState(d),
+                    p = i.useCallback(
+                        (e) => {
+                            _(f.filter((t) => !e.has(t.id)));
+                        },
+                        [f],
+                    ),
+                    h = i.useCallback(() => {
+                        _(d);
+                    }, [d]),
+                    m = (0, r.jsx)(l.Q, {
+                        label: "Categories",
+                        selectionMode: t,
+                        layout: c,
+                        items: f,
+                        onRemove: n ? p : void 0,
+                    }),
+                    g =
+                        n &&
+                        (0, r.jsx)(o.zxk, {
+                            disabled: f.length === d.length,
+                            text: "Reset",
+                            onClick: h,
+                        });
+                return "inline" === c
+                    ? (0, r.jsxs)(o.Kqy, {
+                          gap: 24,
+                          children: [
+                              (0, r.jsx)("div", {
+                                  style: {
+                                      display: "flex",
+                                      gap: 4,
+                                  },
+                                  children: m,
+                              }),
+                              g,
+                          ],
+                      })
+                    : (0, r.jsxs)(o.Kqy, {
+                          gap: 24,
+                          children: [m, g],
+                      });
+            },
+            controls: {
+                selectionMode: {
+                    label: "Selection Mode",
+                    type: "select",
+                    defaultValue: "multiple",
+                    options: [
+                        {
+                            label: "None",
+                            value: "none",
+                        },
+                        {
+                            label: "Single",
+                            value: "single",
+                        },
+                        {
+                            label: "Multiple",
+                            value: "multiple",
+                        },
+                    ],
+                },
+                removeable: {
+                    label: "Removeable",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                layout: {
+                    label: "Layout",
+                    type: "select",
+                    defaultValue: "default",
+                    options: [
+                        {
+                            label: "Default",
+                            value: "default",
+                        },
+                        {
+                            label: "Inline",
+                            value: "inline",
+                        },
+                    ],
                 },
             },
-        ],
-    };
+        },
+    ],
+};

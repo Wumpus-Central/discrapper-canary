@@ -82,10 +82,15 @@ let h = [
         {
             id: "strength",
             label: "Strength",
+            icon: o.lOy,
         },
         {
             id: "wisdom",
             label: "Wisdom",
+            icon: {
+                type: "role",
+                color: o.TVs.unsafe_rawColors.BRAND_500.css,
+            },
         },
         {
             id: "charisma",
