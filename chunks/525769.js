@@ -56,6 +56,7 @@ var r = (function (e) {
             (e.CONTACT_SYNC_START = "impression_contact_sync_start"),
             (e.CONTACT_SYNC_SUGGESTIONS = "impression_contact_sync_suggestions"),
             (e.CREATOR_PROMO_PAGE_GUILD_HEADER_UPSELL = "impression_creator_promo_page_guild_header_upsell"),
+            (e.CUSTOM_THEME_SHARE = "impression_custom_theme_share"),
             (e.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER = "impression_custom_themes_appearance_settings_banner"),
             (e.CUSTOM_THEMES_PREVIEW_THEMES_BANNER = "impression_custom_themes_preview_themes_banner"),
             (e.DIRECTORY_ADD_GUILD_CONFIRMATION = "impression_directory_add_guild_confirmation"),

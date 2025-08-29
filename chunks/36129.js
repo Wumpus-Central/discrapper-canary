@@ -1,49 +1,57 @@
-n.d(t, { q: () => y }), n(35282);
+n.d(t, { q: () => C }), n(35282);
 var r = n(951288),
     i = n(647438),
-    a = n(657707),
-    o = n(974674),
-    s = n(159691),
-    l = n(481060),
-    c = n(550385),
-    u = n(739566),
-    d = n(781391),
-    f = n(575196),
-    _ = n(233398),
-    p = n(47760),
-    h = n(629452),
-    m = n(119475),
-    g = n(388032),
-    E = n(306518);
-let b = (e) => e.map((e) => "#".concat(e)),
-    y = (e) => {
+    a = n(392711),
+    o = n(990547),
+    s = n(525769),
+    l = n(657707),
+    c = n(974674),
+    u = n(159691),
+    d = n(481060),
+    f = n(213609),
+    _ = n(312871),
+    p = n(550385),
+    h = n(739566),
+    m = n(781391),
+    g = n(626135),
+    E = n(575196),
+    b = n(233398),
+    y = n(47760),
+    O = n(629452),
+    v = n(981631),
+    I = n(119475),
+    T = n(388032),
+    S = n(306518);
+let A = (e) => e.map((e) => "#".concat(e)),
+    C = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
-            { setAll: i } = (0, _.Ig)();
-        return (0, h.b)("Share Client Theme Widget") && void 0 !== n
+            { setAll: i } = (0, b.Ig)();
+        return (0, O.b)("Share Client Theme Widget") && void 0 !== n
             ? (0, r.jsxs)("div", {
-                  className: E.container,
+                  className: S.container,
                   children: [
-                      (0, r.jsx)(v, { message: t }),
-                      (0, r.jsx)(s.zx, {
-                          text: g.intl.string(g.t.SKNnqq),
+                      (0, r.jsx)(R, { message: t }),
+                      (0, r.jsx)(u.zx, {
+                          text: T.intl.string(T.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",
                           onClick: () => {
-                              (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.SHARE_MESSAGE }),
+                              g.default.track(v.rMx.CUSTOM_THEME_SHARE_PREVIEWED, {}),
+                                  (0, p.XO)(p.wh.CUSTOM_THEME, { from: p.tE.SHARE_MESSAGE }),
                                   i({
-                                      colors: b(n.colors),
+                                      colors: A(n.colors),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
-                                  (0, d.y)((0, p.e)(n.base_theme));
+                                  (0, m.y)((0, y.e)(n.base_theme));
                           },
                       }),
                   ],
               })
             : null;
     },
-    O = (e, t, n) =>
+    N = (e, t, n) =>
         e.split(" ").map((e, a) =>
             "__USERNAME__" !== e
                 ? (0, r.jsxs)(
@@ -56,12 +64,12 @@ let b = (e) => e.map((e) => "#".concat(e)),
                 : (0, r.jsxs)(
                       "span",
                       {
-                          className: E.avatarContainer,
+                          className: S.avatarContainer,
                           children: [
-                              (0, r.jsx)(o.qE, {
+                              (0, r.jsx)(c.qE, {
                                   "aria-label": n,
                                   src: t.getAvatarURL(null, 20),
-                                  size: l.EFr.SIZE_20,
+                                  size: d.EFr.SIZE_20,
                               }),
                               " ",
                               n,
@@ -71,39 +79,58 @@ let b = (e) => e.map((e) => "#".concat(e)),
                       a,
                   ),
         ),
-    v = (e) => {
+    R = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
-            o = (0, u.ZP)(t),
-            s = i.useMemo(() => {
+            c = (0, h.ZP)(t),
+            u = i.useMemo(
+                () =>
+                    (0, a.once)(() => {
+                        (0, f.h)({
+                            type: o.ImpressionTypes.VIEW,
+                            name: s.z.CUSTOM_THEME_SHARE,
+                            properties: {},
+                        });
+                    }),
+                [],
+            ),
+            p = (0, _.Z)({
+                onVisible: () => {
+                    u();
+                },
+                threshold: 1,
+                minTimeVisibleMs: 200,
+            }),
+            m = i.useMemo(() => {
                 var e;
-                return void 0 === n ? "" : (0, f.yz)(b(n.colors), null != (e = n.gradient_angle) ? e : 0);
+                return void 0 === n ? "" : (0, E.yz)(A(n.colors), null != (e = n.gradient_angle) ? e : 0);
             }, [n]);
         return void 0 === n
             ? null
             : (0, r.jsxs)("div", {
-                  className: E.themePreviewContainer,
+                  className: S.themePreviewContainer,
+                  ref: p,
                   children: [
                       (0, r.jsx)("div", {
-                          className: E.colorPreview,
-                          style: { background: "".concat(s) },
+                          className: S.colorPreview,
+                          style: { background: "".concat(m) },
                       }),
                       (0, r.jsxs)("div", {
-                          className: E.sharedByContainer,
+                          className: S.sharedByContainer,
                           children: [
-                              (0, r.jsxs)(l.X6q, {
+                              (0, r.jsxs)(d.X6q, {
                                   variant: "heading-md/semibold",
-                                  className: E.sharedTitle,
-                                  children: [g.intl.string(m.default.KSBBpK), " ", (0, r.jsx)(a.SrA, {})],
+                                  className: S.sharedTitle,
+                                  children: [T.intl.string(I.default.KSBBpK), " ", (0, r.jsx)(l.SrA, {})],
                               }),
-                              (0, r.jsx)(l.Text, {
+                              (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
                                   color: "text-secondary",
-                                  className: E.sharedBy,
-                                  children: O(
-                                      "".concat(g.intl.format(m.default.fQPSER, { username: "__USERNAME__" })),
+                                  className: S.sharedBy,
+                                  children: N(
+                                      "".concat(T.intl.format(I.default.fQPSER, { username: "__USERNAME__" })),
                                       t.author,
-                                      o.nick,
+                                      c.nick,
                                   ),
                               }),
                           ],

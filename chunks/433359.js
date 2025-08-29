@@ -1,4 +1,4 @@
-n.d(t, { CustomThemesShareModalWrapper: () => g }), n(388685), n(704826), n(35282);
+n.d(t, { CustomThemesShareModalWrapper: () => C }), n(388685), n(704826), n(35282);
 var a = n(951288),
     r = n(647438),
     o = n(879690),
@@ -8,35 +8,37 @@ var a = n(951288),
     u = n(3148),
     c = n(210887),
     d = n(131704),
-    _ = n(233398),
-    f = n(824988),
-    p = n(135102),
-    h = n(975919),
-    b = n(595830);
-let g = (e) => {
+    _ = n(626135),
+    f = n(233398),
+    p = n(824988),
+    h = n(135102),
+    b = n(975919),
+    g = n(595830),
+    m = n(981631);
+let C = (e) => {
     let { transitionState: t, onClose: n } = e,
-        g = (0, r.useRef)((0, p.sf)()).current,
+        C = (0, r.useRef)((0, h.sf)()).current,
         {
-            selectedDestinations: m,
-            messageText: C,
-            canSend: y,
-            setSend: M,
-            updateMessage: w,
-            updateChannel: x,
-        } = (0, o.o)(g),
-        [I, S] = r.useState(!1),
-        { colors: j, chassisMixAmount: O, gradientAngle: k } = (0, _.Ig)(),
-        v = (0, l.e7)([c.Z], () => c.Z.theme),
-        E = (0, r.useMemo)(
+            selectedDestinations: M,
+            messageText: y,
+            canSend: x,
+            setSend: w,
+            updateMessage: S,
+            updateChannel: E,
+        } = (0, o.o)(C),
+        [I, O] = r.useState(!1),
+        { colors: j, chassisMixAmount: k, gradientAngle: v } = (0, f.Ig)(),
+        P = (0, l.e7)([c.Z], () => c.Z.theme),
+        W = (0, r.useMemo)(
             () => ({
                 colors: j.map((e) => e.replace("#", "")),
-                gradient_angle: k,
-                base_mix: O,
-                base_theme: (0, f.h)(v),
+                gradient_angle: v,
+                base_mix: k,
+                base_theme: (0, p.h)(P),
             }),
-            [j, k, O, v],
+            [j, v, k, P],
         ),
-        P = r.useMemo(
+        T = r.useMemo(
             () =>
                 (0, d.kt)({
                     id: "1",
@@ -44,7 +46,7 @@ let g = (e) => {
                 }),
             [],
         ),
-        W = r.useMemo(
+        D = r.useMemo(
             () =>
                 (0, i.e5)(
                     (function (e) {
@@ -74,27 +76,27 @@ let g = (e) => {
                     })(
                         {},
                         (0, u.ZP)({
-                            channelId: P.id,
+                            channelId: T.id,
                             content: "",
                         }),
                     ),
                 ),
-            [P],
+            [T],
         );
     (0, r.useEffect)(() => {
-        w(W), x(P), S(!0);
-    }, [W, P, w, x]);
-    let D = r.useCallback(async () => {
-        if (!y()) return Promise.reject();
-        await (0, b.O)(m, E, C), await n();
-    }, [E, m, C, y, n]);
+        S(D), E(T), O(!0);
+    }, [D, T, S, E]);
+    let L = r.useCallback(async () => {
+        if (!x()) return Promise.reject();
+        await (0, g.O)(M, W, y), _.default.track(m.rMx.CUSTOM_THEME_SHARED, { num_destinations: M.length }), await n();
+    }, [W, M, y, x, n]);
     return ((0, r.useEffect)(() => {
-        M(D);
-    }, [D, M]),
+        w(L);
+    }, [L, w]),
     I)
-        ? (0, a.jsx)(p.fm.Provider, {
-              value: g,
-              children: (0, a.jsx)(h._, {
+        ? (0, a.jsx)(h.fm.Provider, {
+              value: C,
+              children: (0, a.jsx)(b._, {
                   transitionState: t,
                   onClose: n,
               }),
