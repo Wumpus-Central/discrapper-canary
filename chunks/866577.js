@@ -84,7 +84,7 @@ let _ = 10,
             },
             r = {
                 opacity: 1,
-                transform: "translate3d(0, 0, 0)",
+                transform: "translate3d(0px, 0px, 0)",
             },
             i = {
                 opacity: 0,
@@ -100,19 +100,19 @@ let _ = 10,
         switch (e) {
             case "top":
                 (n.transform = "translate3d(0, -".concat(_, "px, 0)")),
-                    (i.transform = "translate3d(0, ".concat(_, "px, 0)"));
+                    (i.transform = "translate3d(0, -".concat(_, "px, 0)"));
                 break;
             case "bottom":
                 (n.transform = "translate3d(0, ".concat(_, "px, 0)")),
-                    (i.transform = "translate3d(0, -".concat(_, "px, 0)"));
+                    (i.transform = "translate3d(0, ".concat(_, "px, 0)"));
                 break;
             case "left":
                 (n.transform = "translate3d(-".concat(_, "px, 0, 0)")),
-                    (i.transform = "translate3d(".concat(_, "px, 0, 0)"));
+                    (i.transform = "translate3d(-".concat(_, "px, 0, 0)"));
                 break;
             case "right":
                 (n.transform = "translate3d(".concat(_, "px, 0, 0)")),
-                    (i.transform = "translate3d(-".concat(_, "px, 0, 0)"));
+                    (i.transform = "translate3d(".concat(_, "px, 0, 0)"));
         }
         return {
             from: n,

@@ -118,7 +118,7 @@ function S(e) {
             );
         }, [a, j]);
     i.useEffect(() => {
-        P(M && p);
+        M && p ? P(!0) : M || P(!1);
     }, [M, p]);
     let k = () => {
             P(!1);
