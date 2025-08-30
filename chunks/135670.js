@@ -149,6 +149,10 @@ class c extends r.Z {
     }
     setSidechainCompression(e) {}
     setSidechainCompressionStrength(e) {}
+    getSystemMicrophoneMode() {
+        return Promise.resolve("");
+    }
+    showSystemCaptureConfigurationUI(e) {}
     setNativeDesktopVideoSourcePickerActive(e) {}
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}

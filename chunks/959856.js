@@ -323,6 +323,10 @@ class N extends s.Z {
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}
     setMaybePreprocessMute(e) {}
+    getSystemMicrophoneMode() {
+        return Promise.resolve("");
+    }
+    showSystemCaptureConfigurationUI(e) {}
     fetchAsyncResources(e) {
         return e.fetchDave
             ? (0, y.IT)()

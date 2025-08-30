@@ -635,6 +635,16 @@ class v extends a.Z {
         var e, t;
         null == (e = (t = (0, d.zS)()).releaseNativeDesktopVideoSourcePickerStream) || e.call(t);
     }
+    async getSystemMicrophoneMode() {
+        var e, t, n;
+        return null != (n = await (null == (e = (t = (0, d.zS)()).getSystemMicrophoneMode) ? void 0 : e.call(t)))
+            ? n
+            : "";
+    }
+    showSystemCaptureConfigurationUI(e) {
+        var t, n;
+        null == (t = (n = (0, d.zS)()).showSystemCaptureConfigurationUI) || t.call(n, e);
+    }
     fetchAsyncResources(e) {
         return Promise.resolve();
     }
@@ -651,7 +661,7 @@ class v extends a.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, r, i, a, c, p;
+        var e, t, n, r, i, a, c, p, g;
         super(),
             (e = this),
             m(this, "Video", _.Z),
@@ -736,26 +746,31 @@ class v extends a.Z {
             }),
             m(this, "handleVideoCodecErrorCallback", (e) => {
                 this.emit(s.aB.VideoCodecError, e);
+            }),
+            m(this, "handleSystemMicrophoneModeChangeCallback", (e) => {
+                this.emit(s.aB.SystemMicrophoneModeChange, e);
             });
-        let g = (0, d.zS)();
-        g.setDeviceChangeCallback(this.handleDeviceChange),
-            g.setVolumeChangeCallback(this.handleVolumeChange),
-            g.setOnVoiceCallback(this.handleVoiceActivity),
-            null == (t = g.setVideoInputInitializationCallback) || t.call(g, this.handleVideoInputInitialization),
-            null == (n = g.setAudioInputInitializationCallback) || n.call(g, this.handleAudioInputInitialization),
-            g.setTransportOptions({
+        let E = (0, d.zS)();
+        E.setDeviceChangeCallback(this.handleDeviceChange),
+            E.setVolumeChangeCallback(this.handleVolumeChange),
+            E.setOnVoiceCallback(this.handleVoiceActivity),
+            null == (t = E.setVideoInputInitializationCallback) || t.call(E, this.handleVideoInputInitialization),
+            null == (n = E.setAudioInputInitializationCallback) || n.call(E, this.handleAudioInputInitialization),
+            E.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1,
             }),
-            null == (r = g.setNativeScreenSharePickerCallbacks) ||
+            null == (r = E.setNativeScreenSharePickerCallbacks) ||
                 r.call(
-                    g,
+                    E,
                     this.handleNativeScreenSharePickerUpdate,
                     this.handleNativeScreenSharePickerCancel,
                     this.handleNativeScreenSharePickerError,
                 ),
-            null == (i = g.setAudioDeviceModuleErrorCallback) || i.call(g, this.handleAudioDeviceModuleErrorCallback),
-            null == (a = g.setVideoCodecErrorCallback) || a.call(g, this.handleVideoCodecErrorCallback),
+            null == (i = E.setAudioDeviceModuleErrorCallback) || i.call(E, this.handleAudioDeviceModuleErrorCallback),
+            null == (a = E.setVideoCodecErrorCallback) || a.call(E, this.handleVideoCodecErrorCallback),
+            null == (c = E.setSystemMicrophoneModeChangeCallback) ||
+                c.call(E, this.handleSystemMicrophoneModeChangeCallback),
             this.on("removeListener", this.handleRemoveListener),
             this.on("newListener", this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -764,13 +779,13 @@ class v extends a.Z {
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice &&
                   (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
-            null != g.pingVoiceThread &&
+            null != E.pingVoiceThread &&
                 "undefined" != typeof window &&
                 "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL &&
                 this.watchdogTick(),
-            null != g.setActiveSinksChangeCallback && g.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            null == (c = g.setLoopbackPlaybackGainMultiplier) || c.call(g, h.Jk),
-            null == (p = g.setVoiceFiltersFailedCallback) || p.call(g, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
+            null != E.setActiveSinksChangeCallback && E.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            null == (p = E.setLoopbackPlaybackGainMultiplier) || p.call(E, h.Jk),
+            null == (g = E.setVoiceFiltersFailedCallback) || g.call(E, (e) => this.emit(s.aB.VoiceFiltersFailed, e)),
             (0, l.Z)(this),
             I(this);
     }
