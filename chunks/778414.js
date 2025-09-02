@@ -1,134 +1,134 @@
-r.d(t, {
-    C: () => T,
-    Z: () => I,
+n.d(t, {
+    C: () => N,
+    Z: () => S,
 }),
-    r(388685);
-var n = r(951288),
-    i = r(647438),
-    l = r(296009),
-    a = r(442837),
-    o = r(481060),
-    c = r(355467),
-    s = r(981312),
-    u = r(314897),
-    d = r(351402),
-    f = r(206599),
-    g = r(5136),
-    p = r(747101),
-    b = r(517157),
-    m = r(985748),
-    O = r(566007),
-    j = r(173951),
-    y = r(455731),
-    x = r(430790),
-    v = r(640078),
-    h = r(795990),
-    _ = r(388032),
-    w = r(830202);
-function P(e) {
+    n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(296009),
+    a = n(442837),
+    o = n(481060),
+    c = n(355467),
+    s = n(981312),
+    u = n(314897),
+    d = n(351402),
+    f = n(206599),
+    g = n(5136),
+    b = n(747101),
+    p = n(517157),
+    m = n(985748),
+    O = n(566007),
+    j = n(173951),
+    y = n(455731),
+    x = n(430790),
+    v = n(640078),
+    h = n(661462),
+    _ = n(795990),
+    P = n(388032),
+    w = n(830202);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function I(e) {
+function S(e) {
     var { widget: t } = e,
-        r = (function (e, t) {
+        n = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 i = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         i = {},
                         l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["widget"]);
     switch (t.type) {
         case l.l.FAVORITE_GAMES:
-            return (0, n.jsx)(O.Z, P({ widget: t }, r));
+            return (0, r.jsx)(O.Z, I({ widget: t }, n));
         case l.l.CURRENT_GAMES:
-            return (0, n.jsx)(m.Z, P({ widget: t }, r));
+            return (0, r.jsx)(m.Z, I({ widget: t }, n));
         case l.l.WANT_TO_PLAY_GAMES:
-            return (0, n.jsx)(y.Z, P({ widget: t }, r));
+            return (0, r.jsx)(y.Z, I({ widget: t }, n));
         case l.l.PLAYED_GAMES:
-            return (0, n.jsx)(j.Z, P({ widget: t }, r));
+            return (0, r.jsx)(j.Z, I({ widget: t }, n));
         default:
             return null;
     }
 }
-function S() {
-    return (0, n.jsxs)("div", {
+function E() {
+    return (0, r.jsxs)("div", {
         className: w.ukTeenDisclaimer,
         children: [
-            (0, n.jsx)(o.d3s, { size: "xs" }),
-            (0, n.jsx)(o.Text, {
-                "aria-label": _.intl.string(_.t["7blcz8"]),
+            (0, r.jsx)(o.d3s, { size: "xs" }),
+            (0, r.jsx)(o.Text, {
+                "aria-label": P.intl.string(P.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: _.intl.string(_.t["7blcz8"]),
+                children: P.intl.string(P.t["7blcz8"]),
             }),
         ],
     });
 }
-function E(e) {
-    let { user: t, guildId: r, channelId: l } = e,
-        o = (0, b.Z)(t.id),
-        { widgets: g, isGameFetching: m } = (0, p.Z)(o),
+function T(e) {
+    let { user: t, guildId: n, channelId: l } = e,
+        o = (0, p.Z)(t.id),
+        { widgets: g, isGameFetching: m } = (0, b.Z)(o),
         O = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         j = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
-                r = (0, s.U)();
+                n = (0, s.U)();
             return (
                 i.useEffect(() => {
-                    null == e && null == t && r && (0, c.GE)();
-                }, [e, t, r]),
-                "GB" === e && r
+                    null == e && null == t && n && (0, c.GE)();
+                }, [e, t, n]),
+                "GB" === e && n
             );
         })(),
         y = 0 === g.length && O;
     return ((0, f.J)(O, g), y)
-        ? (0, n.jsx)(h.Z, {})
-        : (0, n.jsxs)("div", {
-              className: w.widgets,
+        ? (0, r.jsx)(_.Z, {})
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  O && j && (0, n.jsx)(S, {}),
+                  O && j && (0, r.jsx)(E, {}),
                   g.map((e, i) =>
-                      (0, n.jsx)(
-                          I,
+                      (0, r.jsx)(
+                          S,
                           {
                               widget: e,
                               user: t,
-                              guildId: r,
+                              guildId: n,
                               channelId: l,
                               isGameFetching: m,
                               index: i,
@@ -136,20 +136,20 @@ function E(e) {
                           e.id,
                       ),
                   ),
-                  O && (0, n.jsx)(x.Z, {}),
+                  O && (0, r.jsx)(x.Z, {}),
               ],
           });
 }
-function T(e) {
+function N(e) {
     let t = i.useRef(null);
     return (
         (0, g.r)({ container: t.current }),
-        (0, n.jsxs)(o.Ttm, {
+        (0, r.jsxs)(h.F, {
             "data-scroller": !0,
-            ref: t,
+            scrollerRef: t,
             className: w.scroller,
             fade: !0,
-            children: [(0, n.jsx)(v.Z, { scrollerRef: t }), (0, n.jsx)(E, P({}, e))],
+            children: [(0, r.jsx)(v.Z, { scrollerRef: t }), (0, r.jsx)(T, I({}, e)), (0, r.jsx)(o.c43, {})],
         })
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -6,51 +6,53 @@ var r = n(951288),
     o = n(481060),
     s = n(176299),
     c = n(512847),
-    u = n(612226),
-    d = n(714338),
-    p = n(607070),
-    f = n(317858),
-    h = n(635395),
-    g = n(5560),
-    m = n(451478),
-    b = n(585483),
-    _ = n(145604),
-    O = n(718813),
-    E = n(981631),
-    y = n(3484);
-let v = i.memo(function () {
-    let e = i.useRef(null),
-        t = i.useCallback((t) => {
-            let { duration: n, intensity: r } = t;
-            if (p.Z.useReducedMotion || !m.Z.isFocused()) return;
-            let { current: i } = e;
+    u = n(350810),
+    d = n(612226),
+    p = n(714338),
+    f = n(607070),
+    h = n(317858),
+    g = n(635395),
+    m = n(5560),
+    b = n(451478),
+    _ = n(585483),
+    O = n(145604),
+    E = n(718813),
+    y = n(981631),
+    v = n(3484);
+let I = i.memo(function () {
+    let e = (0, u.Z)(),
+        t = i.useRef(null),
+        n = i.useCallback((e) => {
+            let { duration: n, intensity: r } = e;
+            if (f.Z.useReducedMotion || !b.Z.isFocused()) return;
+            let { current: i } = t;
             a()(null != i, "Shakeable is shaken when not mounted"), i.shake(n, r);
         }, []);
     return (
-        i.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []),
+        i.useEffect(() => (p.Z.setLayout(d.ZP), p.Z.enable(), () => p.Z.disable()), []),
         i.useEffect(
             () => (
-                b.S.subscribe(E.CkL.SHAKE_APP, t),
+                _.S.subscribe(y.CkL.SHAKE_APP, n),
                 () => {
-                    b.S.unsubscribe(E.CkL.SHAKE_APP, t);
+                    _.S.unsubscribe(y.CkL.SHAKE_APP, n);
                 }
             ),
-            [t],
+            [n],
         ),
-        (0, f.Z)(),
+        (0, h.Z)(),
         (0, r.jsxs)(o.F0h, {
-            ref: e,
-            className: y.app,
+            ref: t,
+            className: v.app,
             children: [
-                (0, r.jsx)(O.Z, {
-                    className: y.layers,
+                (0, r.jsx)(E.Z, {
+                    className: v.layers,
                     children: (0, r.jsx)(s.Z, {}),
                 }),
-                (0, r.jsx)(h.Z, {}),
-                (0, r.jsx)(c.Z, {}),
-                (0, r.jsx)(_.Z, {}),
                 (0, r.jsx)(g.Z, {}),
-                (0, r.jsx)(o.c43, {}),
+                (0, r.jsx)(c.Z, {}),
+                (0, r.jsx)(O.Z, {}),
+                (0, r.jsx)(m.Z, {}),
+                !e && (0, r.jsx)(o.c43, {}),
             ],
         })
     );

@@ -1,164 +1,165 @@
-t.d(n, { Z: () => Z });
-var r = t(951288);
-t(647438);
-var l = t(442837),
-    o = t(481060),
-    i = t(468363),
-    c = t(353647),
-    s = t(566898),
-    a = t(158776),
-    d = t(885110),
-    u = t(63063),
-    f = t(209698),
-    m = t(369566),
-    p = t(29899),
-    h = t(151545),
-    x = t(527790),
-    b = t(769140),
-    j = t(864141),
-    g = t(264481),
-    v = t(693408),
-    y = t(228168),
-    O = t(981631),
-    I = t(388032),
-    _ = t(158069);
-function Z(e) {
-    let { user: n, currentUser: t, displayProfile: Z, guildId: P, channelId: T, subsection: N, onClose: A } = e,
-        { voiceActivityStatusEnabled: E } = (0, i.U)({ location: "UserProfileModalV2Activity" }),
-        C = (0, f.b)({ location: "UserProfileModalV2Activity" }),
-        { live: S, recent: w, stream: D } = (0, m.Z)(n.id),
-        { voiceChannel: L, voiceActivity: B } = (0, p.Z)({
-            userId: n.id,
-            guildId: P,
+n.d(t, { Z: () => I });
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    l = n(481060),
+    a = n(468363),
+    o = n(353647),
+    c = n(566898),
+    s = n(158776),
+    u = n(885110),
+    d = n(63063),
+    f = n(209698),
+    g = n(369566),
+    b = n(29899),
+    p = n(151545),
+    m = n(527790),
+    O = n(769140),
+    j = n(864141),
+    y = n(264481),
+    x = n(693408),
+    v = n(661462),
+    h = n(228168),
+    _ = n(981631),
+    P = n(388032),
+    w = n(158069);
+function I(e) {
+    let { user: t, currentUser: n, displayProfile: I, guildId: S, channelId: E, subsection: T, onClose: N } = e,
+        { voiceActivityStatusEnabled: C } = (0, a.U)({ location: "UserProfileModalV2Activity" }),
+        A = (0, f.b)({ location: "UserProfileModalV2Activity" }),
+        { live: k, recent: Z, stream: D } = (0, g.Z)(t.id),
+        { voiceChannel: L, voiceActivity: R } = (0, b.Z)({
+            userId: t.id,
+            guildId: S,
         }),
-        R = (0, l.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
-        U = n.id === t.id,
-        M = (0, l.e7)([d.Z, a.Z], () => {
-            let e = U ? d.Z.getStatus() : a.Z.getStatus(n.id);
-            return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
+        G = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
+        B = t.id === n.id,
+        F = (0, i.e7)([u.Z, s.Z], () => {
+            let e = B ? u.Z.getStatus() : s.Z.getStatus(t.id);
+            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
-        k = S.length > 0 || null != D,
-        G = E && null == D && null == B && null != L,
-        F = !M && (k || G),
-        V = w.length > 0;
-    if (!F && !V && R)
+        M = k.length > 0 || null != D,
+        U = C && null == D && null == R && null != L,
+        z = !F && (M || U),
+        K = Z.length > 0;
+    if (!z && !K && G)
         return (0, r.jsx)("div", {
-            className: _.cards,
-            children: Array.from({ length: 8 }).map((e, n) =>
+            className: w.cards,
+            children: Array.from({ length: 8 }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: _.loadingItem,
+                        className: w.loadingItem,
                         children: [
-                            (0, r.jsx)(s.ZT, {
+                            (0, r.jsx)(c.ZT, {
                                 width: 60,
                                 opacity: 0.08,
                             }),
-                            (0, r.jsx)(s.ZT, {
+                            (0, r.jsx)(c.ZT, {
                                 width: 135,
                                 opacity: 0.08,
                             }),
                         ],
                     },
-                    n,
+                    t,
                 ),
             ),
         });
-    if (!F && !V && !R) {
-        var Y;
-        return U
-            ? (0, r.jsx)(g.Uf, { onClose: A })
-            : (0, r.jsx)(g.P9, {
-                  user: n,
-                  guildId: null != (Y = null == Z ? void 0 : Z.guildId) ? Y : P,
-                  channelId: T,
-                  onClose: A,
+    if (!z && !K && !G) {
+        var W;
+        return B
+            ? (0, r.jsx)(y.Uf, { onClose: N })
+            : (0, r.jsx)(y.P9, {
+                  user: t,
+                  guildId: null != (W = null == I ? void 0 : I.guildId) ? W : S,
+                  channelId: E,
+                  onClose: N,
               });
     }
-    return (0, r.jsxs)(o.Ttm, {
-        className: _.scroller,
+    return (0, r.jsxs)(v.F, {
+        className: w.scroller,
         fade: !0,
         children: [
-            F
-                ? (0, r.jsx)(v.Z, {
-                      heading: I.intl.string(I.t.J6STd3),
+            z
+                ? (0, r.jsx)(x.Z, {
+                      heading: P.intl.string(P.t.J6STd3),
                       children: (0, r.jsxs)("ul", {
-                          className: _.cards,
+                          className: w.cards,
                           children: [
-                              !C &&
-                                  G &&
+                              !A &&
+                                  U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(j.Z, {
-                                          user: n,
-                                          currentUser: t,
+                                          user: t,
+                                          currentUser: n,
                                           voiceChannel: L,
-                                          onClose: A,
+                                          onClose: N,
                                       }),
                                   }),
                               null != D &&
                                   (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(b.Z, {
-                                          user: n,
-                                          currentUser: t,
+                                      children: (0, r.jsx)(O.Z, {
+                                          user: t,
+                                          currentUser: n,
                                           stream: D,
-                                          onClose: A,
+                                          onClose: N,
                                       }),
                                   }),
-                              S.map((e, l) =>
+                              k.map((e, i) =>
                                   (0, r.jsx)(
                                       "li",
                                       {
-                                          children: (0, r.jsx)(h.Z, {
-                                              user: n,
-                                              currentUser: t,
+                                          children: (0, r.jsx)(p.Z, {
+                                              user: t,
+                                              currentUser: n,
                                               activity: e,
-                                              onClose: A,
+                                              onClose: N,
                                           }),
                                       },
-                                      "live-".concat(l),
+                                      "live-".concat(i),
                                   ),
                               ),
-                              C &&
-                                  G &&
+                              A &&
+                                  U &&
                                   (0, r.jsx)("li", {
                                       children: (0, r.jsx)(j.Z, {
-                                          user: n,
-                                          currentUser: t,
+                                          user: t,
+                                          currentUser: n,
                                           voiceChannel: L,
-                                          onClose: A,
+                                          onClose: N,
                                       }),
                                   }),
                           ],
                       }),
                   })
                 : null,
-            V
-                ? (0, r.jsx)(v.Z, {
-                      heading: I.intl.string(I.t.jzgEoK),
-                      introText: U
-                          ? I.intl.format(I.t["4bk9Ag"], {
-                                learnMoreHook: (e, n) =>
+            K
+                ? (0, r.jsx)(x.Z, {
+                      heading: P.intl.string(P.t.jzgEoK),
+                      introText: B
+                          ? P.intl.format(P.t["4bk9Ag"], {
+                                learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        o.eee,
+                                        l.eee,
                                         {
-                                            href: u.Z.getArticleURL(O.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: d.Z.getArticleURL(_.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,
                                         },
-                                        n,
+                                        t,
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: N === y.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: T === h.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
-                          className: _.cards,
-                          children: w.map((e) =>
+                          className: w.cards,
+                          children: Z.map((e) =>
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(x.Z, {
-                                          user: n,
+                                      children: (0, r.jsx)(m.Z, {
+                                          user: t,
                                           entry: e,
-                                          onClose: A,
+                                          onClose: N,
                                       }),
                                   },
                                   e.id,

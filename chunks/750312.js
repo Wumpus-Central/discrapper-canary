@@ -1,64 +1,65 @@
-r.d(t, { Z: () => O }), r(388685);
-var n = r(951288),
-    i = r(647438),
-    l = r(120356),
-    a = r.n(l),
-    o = r(793030),
-    c = r(442837),
-    s = r(313201),
-    u = r(314897),
-    d = r(556045),
-    f = r(403239),
-    g = r(471892),
-    p = r(840367),
-    b = r(272289),
-    m = r(415734);
+n.d(t, { Z: () => O }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    a = n.n(l),
+    o = n(793030),
+    c = n(442837),
+    s = n(313201),
+    u = n(314897),
+    d = n(556045),
+    f = n(403239),
+    g = n(781040),
+    b = n(840367),
+    p = n(272289),
+    m = n(415734);
 function O(e) {
-    let { userId: t, widget: r, children: l, disableInteraction: O, className: y, index: x } = e,
+    let { userId: t, widget: n, children: l, disableInteraction: O, className: y, index: x } = e,
         v = (0, s.Dt)(),
         h = (0, c.e7)([u.default], () => u.default.getId() === t),
-        { shouldShowSuggestions: _, handleDismissSuggestions: w } = (0, d.h)(r),
-        P = h && !O && _,
+        { shouldShowSuggestions: _, handleDismissSuggestions: P } = (0, d.h)(n),
+        w = h && !O && _,
         I = i.useRef(null),
         S = i.useRef(null),
-        { isDragging: E } = (0, f.q)({
+        E = h && null != x && !O,
+        { isDragging: T } = (0, f.q)({
             dropRef: I,
             dragRef: S,
             userId: t,
-            widget: r,
+            widget: n,
             index: x,
+            disableInteraction: !E,
         }),
-        [T, N] = i.useState(!1);
-    return (0, n.jsx)(j, {
+        [N, C] = i.useState(!1);
+    return (0, r.jsx)(j, {
         ref: I,
-        enable: !O,
-        onMouseEnter: () => N(!0),
-        onMouseLeave: () => N(!1),
-        dragClick:
-            h &&
-            (0, n.jsx)("div", {
-                ref: S,
-                className: a()(m.dragClick, { [m.opacity]: T || E }),
-                children: (0, n.jsx)(g.Z, { widget: r }),
-            }),
-        children: (0, n.jsxs)("section", {
-            className: a()(m.container, y, { [m.isDragging]: E }),
+        disableInteraction: !E,
+        onMouseEnter: () => C(!0),
+        onMouseLeave: () => C(!1),
+        children: (0, r.jsxs)("section", {
+            className: a()(m.container, y, { [m.isDragging]: T }),
             "aria-labelledby": v,
             children: [
-                (0, n.jsx)(p.Z, {
+                E &&
+                    (0, r.jsx)(g.Z, {
+                        buttonRef: S,
+                        widget: n,
+                        className: a()(m.dragHandleButton, { [m.opacity]: N || T }),
+                    }),
+                (0, r.jsx)(b.Z, {
                     userId: t,
                     headingId: v,
-                    widget: r,
+                    widget: n,
                     disableInteraction: O,
                 }),
-                (0, n.jsxs)(o.y5, {
+                (0, r.jsxs)(o.y5, {
                     children: [
                         l,
-                        P &&
-                            (0, n.jsx)(b.Z, {
+                        w &&
+                            (0, r.jsx)(p.Z, {
                                 userId: t,
-                                widgetType: r.type,
-                                onDismiss: w,
+                                widgetType: n.type,
+                                onDismiss: P,
                                 className: m.suggestedGames,
                             }),
                     ],
@@ -68,14 +69,14 @@ function O(e) {
     });
 }
 let j = (e) => {
-    let { ref: t, children: r, enable: i, onMouseEnter: l, onMouseLeave: a, dragClick: o } = e;
+    let { ref: t, children: n, disableInteraction: i, onMouseEnter: l, onMouseLeave: a } = e;
     return i
-        ? (0, n.jsxs)("div", {
+        ? n
+        : (0, r.jsx)("div", {
               ref: t,
-              className: m.hitbox,
+              className: m.dragAndDropHitbox,
               onMouseEnter: l,
               onMouseLeave: a,
-              children: [o, r],
-          })
-        : r;
+              children: n,
+          });
 };
