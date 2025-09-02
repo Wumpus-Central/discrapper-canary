@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(566620),
     y = n(317381),
     _ = n(889441),
-    j = n(736409),
-    v = n(835473),
+    v = n(736409),
+    j = n(835473),
     x = n(413523),
     C = n(933557),
     E = n(194082),
@@ -26,8 +26,8 @@ var r = n(951288),
     P = n(436774),
     I = n(594190),
     N = n(925329),
-    w = n(102172),
-    Z = n(74299),
+    Z = n(102172),
+    w = n(74299),
     T = n(914923),
     A = n(662304),
     R = n(989941),
@@ -203,9 +203,9 @@ class ec extends i.PureComponent {
                     (0, r.jsx)(N.Z, {
                         className: el.gameIcon,
                         game: t,
-                        size: N.Z.Sizes.SMALL,
+                        size: N.A.SMALL,
                     }),
-                    (0, r.jsx)(j.j, {
+                    (0, r.jsx)(v.j, {
                         isForceShowSharingPopout: a,
                         setIsForceShowSharingPopout: s,
                         children: (0, r.jsxs)("div", {
@@ -305,12 +305,12 @@ let eu = (0, g.Z)(function (e) {
         h = (0, c.e7)([F.Z], () => F.Z.getChannel(p)),
         f = (0, c.e7)([H.Z], () => H.Z.getGuild(null == h ? void 0 : h.guild_id)),
         [g, O] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
-        j = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        v = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         x = (0, c.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
         E = (0, c.e7)([H.Z, W.Z, V.ZP], () =>
-            null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(V.ZP.getChannels(o), H.Z, W.Z).length > 0,
+            null != d ? Z.JL(d, H.Z, W.Z, !1) : null != o && Z.h_(V.ZP.getChannels(o), H.Z, W.Z).length > 0,
         ),
-        [P] = (0, v.Z)([
+        [P] = (0, j.Z)([
             null !=
             (l =
                 null != O && null != O.id
@@ -326,7 +326,7 @@ let eu = (0, g.Z)(function (e) {
         N = (0, c.e7)([S.Z], () => S.Z.getFakeGameData()),
         T = (0, c.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
         A = (0, _.Z)() && null != T && (0, b.R)(),
-        D = (0, c.e7)([z.Z], () => (0, Z.Z)(z.Z) && (0, J.isWindows)()),
+        D = (0, c.e7)([z.Z], () => (0, w.Z)(z.Z) && (0, J.isWindows)()),
         k = (0, c.e7)([K.Z], () => (null != s ? K.Z.findActivity(s, (e) => e.type === er.IIU.PLAYING) : null)),
         U = null != g && g.ownerId === s && g.state !== er.jm8.ENDED,
         $ = (0, c.e7)([X.default, Y.Z], () => (null != h ? (0, C.F6)(h, X.default, Y.Z) : void 0)),
@@ -345,7 +345,7 @@ let eu = (0, g.Z)(function (e) {
                 userId: s,
                 runningGame: null != N ? N : u,
                 application: P,
-                useReducedMotion: j,
+                useReducedMotion: v,
                 isStreaming: U,
                 channel: h,
                 canStream: E,

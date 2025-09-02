@@ -66,7 +66,7 @@ function z(e) {
                 null != _
                     ? (0, r.jsx)(p.Z, {
                           game: _,
-                          size: p.Z.Sizes.XSMALL,
+                          size: p.A.XSMALL,
                           className: F.selectedIcon,
                       })
                     : (0, r.jsx)(v, { className: F.selectedIcon }),

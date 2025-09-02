@@ -86,7 +86,7 @@ let p = (e) => {
                 children: [
                     (0, n.jsx)(s.Z, {
                         game: p,
-                        size: s.Z.Sizes.XLARGE,
+                        size: s.A.XLARGE,
                     }),
                     (0, n.jsxs)("div", {
                         className: d.metadata,

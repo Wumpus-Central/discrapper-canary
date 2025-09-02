@@ -27,7 +27,7 @@ function x(e) {
                       children: [
                           (0, i.jsx)(u.Z, {
                               game: r,
-                              size: u.Z.Sizes.XSMALL,
+                              size: u.A.XSMALL,
                           }),
                           (0, i.jsx)(o.X6q, {
                               variant: "heading-md/semibold",

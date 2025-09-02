@@ -52,8 +52,8 @@ function M(e) {
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, P.wD)(),
         Z = null == G ? void 0 : G.giftPurchaseConfirmation,
-        V = (0, b.tK)(null == B ? void 0 : B.skuId),
-        F = (0, b.a5)(s) && null != V && null != Z,
+        F = (0, b.tK)(null == B ? void 0 : B.skuId),
+        V = (0, b.a5)(s) && null != F && null != Z,
         H = () => (null != s ? s.skuId : null != a ? a.id : null),
         Y = () => {
             let e;
@@ -64,12 +64,12 @@ function M(e) {
                   : ((e =
                         s.interval === D.rV.MONTH
                             ? M
-                                ? F
+                                ? V
                                     ? Z.monthGiftText
                                     : x.t["4ZJ+7e"]
                                 : x.t["P+z55e"]
                             : M
-                              ? F
+                              ? V
                                   ? Z.yearGiftText
                                   : x.t.p0pZXF
                               : x.t.bXqk3t),
@@ -185,7 +185,7 @@ function M(e) {
                       ? (0, r.jsx)(m.Z, {
                             game: n,
                             className: L.__invalid_icon,
-                            size: m.Z.Sizes.LARGE,
+                            size: m.A.LARGE,
                             skuId: H(),
                         })
                       : null,
@@ -193,13 +193,13 @@ function M(e) {
               ],
           })
         : (0, r.jsxs)("div", {
-              className: o()(L.confirmation, { [L.seasonalConfirmationPadding]: F }),
+              className: o()(L.confirmation, { [L.seasonalConfirmationPadding]: V }),
               children: [
                   null != n
                       ? (0, r.jsx)(m.Z, {
                             game: n,
                             className: L.__invalid_icon,
-                            size: m.Z.Sizes.LARGE,
+                            size: m.A.LARGE,
                             skuId: H(),
                         })
                       : null,

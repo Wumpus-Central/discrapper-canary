@@ -457,7 +457,7 @@ let Y = () =>
                         (0, r.jsx)(C.Z, {
                             game: e.application,
                             className: k.__invalid_gameIcon,
-                            size: C.Z.Sizes.SMALL,
+                            size: C.A.SMALL,
                         }),
                         (0, r.jsx)("div", {
                             className: k.nameCellText,

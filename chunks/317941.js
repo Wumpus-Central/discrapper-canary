@@ -201,7 +201,7 @@ class x extends i.PureComponent {
                                               })
                                             : (0, r.jsx)(h.Z, {
                                                   game: t,
-                                                  size: h.Z.Sizes.MEDIUM,
+                                                  size: h.A.MEDIUM,
                                                   skuId: o.id,
                                               }),
                                         (0, r.jsxs)("div", {

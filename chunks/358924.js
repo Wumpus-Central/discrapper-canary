@@ -748,7 +748,7 @@ let eO = (e) => {
                     children: [
                         (0, i.jsx)(D.Z, {
                             game: m,
-                            size: D.Z.Sizes.XSMALL,
+                            size: D.A.XSMALL,
                             className: er.embeddedActivityIcon,
                         }),
                         (0, i.jsx)("div", {

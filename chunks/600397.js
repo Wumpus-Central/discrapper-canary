@@ -32,7 +32,7 @@ function p(e) {
                 children: [
                     (0, r.jsx)(o.Z, {
                         game: E,
-                        size: o.Z.Sizes.XXSMALL,
+                        size: o.A.XXSMALL,
                         className: _.inlineIcon,
                     }),
                     " ",

@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(91430),
     B = n(474936),
     Z = n(981631),
-    V = n(526761),
-    F = n(726985),
+    F = n(526761),
+    V = n(726985),
     H = n(388032),
     Y = n(49122);
 function W() {
@@ -51,7 +51,7 @@ function W() {
             children: [
                 (0, r.jsx)(y.Z, {
                     game: null,
-                    size: y.Z.Sizes.SMALL,
+                    size: y.A.SMALL,
                     className: Y.noItemsIcon,
                 }),
                 (0, r.jsx)("span", {
@@ -159,9 +159,9 @@ let X = function () {
     A.Z.enabled)
         ? (0, r.jsx)(h.Z, {})
         : f && y
-          ? w === V.cP
+          ? w === F.cP
               ? (0, r.jsx)(v.Z, { onGoBack: () => p.Z.clearSubsection() })
-              : w === V.XZ
+              : w === F.XZ
                 ? (0, r.jsx)(T.Z, { onGoBack: () => p.Z.clearSubsection() })
                 : (0, r.jsx)("div", {
                       className: Y.container,
@@ -179,7 +179,7 @@ let X = function () {
                                   : (0, r.jsx)(G.MM, {}),
                               W && z(M, H),
                               (0, r.jsx)(S.F, {
-                                  setting: F.s6.SUBSCRIPTIONS_CREDITS,
+                                  setting: V.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, r.jsx)(K, {}),
                               }),
                               L > 0 &&
@@ -189,7 +189,7 @@ let X = function () {
                                           (0, r.jsx)(O.Z, {
                                               count: L,
                                               onClickManageSubscription: () =>
-                                                  p.Z.setSection(Z.oAB.SUBSCRIPTIONS, V.cP),
+                                                  p.Z.setSection(Z.oAB.SUBSCRIPTIONS, F.cP),
                                           }),
                                       ],
                                   }),
@@ -200,7 +200,7 @@ let X = function () {
                                           (0, r.jsx)(I.Z, {
                                               count: x,
                                               onClickManageSubscription: () => {
-                                                  p.Z.setSection(Z.oAB.SUBSCRIPTIONS, V.XZ),
+                                                  p.Z.setSection(Z.oAB.SUBSCRIPTIONS, F.XZ),
                                                       D.default.track(
                                                           Z.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED,
                                                       );

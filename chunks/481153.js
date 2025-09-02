@@ -68,7 +68,7 @@ let N = s.ZP.connectStores([m.Z, c.Z, g.Z, p.default], (e) => {
                                   children: [
                                       s.productLine !== x.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {
-                                              size: d.Z.Sizes.MEDIUM,
+                                              size: d.A.MEDIUM,
                                               className: b.applicationIcon,
                                               game: c,
                                               skuId: s.id,

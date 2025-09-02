@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(610394),
     B = n(957148),
     Z = n(340101),
-    V = n(243487),
-    F = n(430561),
+    F = n(243487),
+    V = n(430561),
     H = n(509003),
     Y = n(894300),
     W = n(131704),
@@ -415,8 +415,8 @@ function ej(e) {
         },
         G = C && N,
         Z = !D && !L,
-        V = !g && !D && y && !C,
-        F = !y && !L && g && !N,
+        F = !g && !D && y && !C,
+        V = !y && !L && g && !N,
         H = (null == u ? void 0 : u.overlayMethod) === x.gl.Disabled,
         W = (null == u ? void 0 : u.state) === x.mM.OVERLAY_RENDERING && !H,
         K = (null == u ? void 0 : u.state) != null && ex.has(u.state) && !H,
@@ -514,8 +514,8 @@ function ej(e) {
                     return [ed.intl.string(ed.t["9DUS5u"]), null];
                 case ee:
                     return [ed.intl.string(ed.t.nQ9EdH), null];
-                case V:
                 case F:
+                case V:
                     return [ed.intl.string(ed.t.VWUn0d), null];
                 case K:
                     if (z) return [ed.intl.string(ed.t["s8+CFh"]), null];
@@ -608,7 +608,7 @@ function ej(e) {
               icon: (0, r.jsx)(R.Z, {
                   game: s,
                   pid: null == o ? void 0 : o.pid,
-                  size: R.Z.Sizes.MEDIUM,
+                  size: R.A.MEDIUM,
               }),
               "aria-label": ed.intl.string(ed.t["87O5GB"]),
               action: (0, r.jsx)(h.P3F, {
@@ -672,7 +672,7 @@ function eM(e) {
     return (0, r.jsx)(R.Z, {
         game: o,
         pid: a,
-        size: R.Z.Sizes.SMALL,
+        size: R.A.SMALL,
     });
 }
 function ek(e) {
@@ -973,7 +973,7 @@ let eZ = (e, t) =>
     ]
         .filter((e) => !1 !== e)
         .filter(Boolean);
-function eV() {
+function eF() {
     let { allowActivityWidget: e, allowNowPlaying: t } = (0, L.o4)("user_settings"),
         n = eZ(e, t),
         i = (e) => (t) => {
@@ -1022,7 +1022,7 @@ function eV() {
         ],
     });
 }
-function eF(e) {
+function eV(e) {
     let t = eH(e.username);
     return (t.user = e), t;
 }
@@ -1100,7 +1100,7 @@ function eW() {
             return null != t && (0, Z.Aw)(t) ? t : null;
         }),
         d = null != (t = null == u || null == (e = u.meta) ? void 0 : e.voiceStatesMaxShown) ? t : eu.At,
-        f = [null != l ? eF(l) : null, ...c].filter(er.lm),
+        f = [null != l ? eV(l) : null, ...c].filter(er.lm),
         p = [new Map(f.map((e) => [e.user.id, e])), f.map((e) => e.user.id)];
     function m(e) {
         null != u &&
@@ -1161,7 +1161,7 @@ function eW() {
                         children: [
                             (0, r.jsx)("div", {
                                 className: ef.voiceWidgetContainer,
-                                children: (0, r.jsx)(V.kI, {
+                                children: (0, r.jsx)(F.kI, {
                                     id: "voice-widget",
                                     title: ed.intl.string(ed.t.KNJ6Vl),
                                     channel: eY(),
@@ -1185,9 +1185,9 @@ function eW() {
                             (0, r.jsxs)("div", {
                                 className: ef.widgetHeaderContainer,
                                 children: [
-                                    (0, r.jsx)(F.PI, { children: ed.intl.string(ed.t.KNJ6Vl) }),
-                                    (0, r.jsx)(F.ls, {}),
-                                    (0, r.jsx)(F.RT, {
+                                    (0, r.jsx)(V.PI, { children: ed.intl.string(ed.t.KNJ6Vl) }),
+                                    (0, r.jsx)(V.ls, {}),
+                                    (0, r.jsx)(V.RT, {
                                         id: null != (t = null == u ? void 0 : u.id) ? t : "voice-widget",
                                         pinned: null != (i = null == u ? void 0 : u.pinned) && i,
                                     }),
@@ -1421,7 +1421,7 @@ function eq(e) {
                       title: ed.intl.string(ed.t.r1TZfn),
                       children: [(0, r.jsx)(eW, {}), (0, r.jsx)("div", { className: ef.settingsDivider })],
                   }),
-                  (0, r.jsx)(h.hjN, { children: (0, r.jsx)(eV, {}) }),
+                  (0, r.jsx)(h.hjN, { children: (0, r.jsx)(eF, {}) }),
               ],
           });
 }

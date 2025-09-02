@@ -102,7 +102,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                     children: [
                         (0, i.jsx)(E.Z, {
                             game: e.application,
-                            size: E.Z.Sizes.SMALL,
+                            size: E.A.SMALL,
                             className: x.gameIcon,
                         }),
                         (0, i.jsxs)("div", {

@@ -1,109 +1,111 @@
-n.d(t, { Z: () => g });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
-    s = n(829968),
-    l = n(565138),
-    c = n(474936),
-    u = n(388032),
-    d = n(520816);
-let f = {
-    XXSMALL: d.xxsmall,
-    XSMALL: d.xsmall,
-    SMALL: d.small,
-    MEDIUM: d.medium,
-    LARGE: d.large,
-    XLARGE: d.xlarge,
+n.d(t, {
+    A: () => _,
+    Z: () => g,
+});
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(829968),
+    c = n(565138),
+    u = n(474936),
+    d = n(388032),
+    f = n(520816);
+let _ = {
+    XXSMALL: f.xxsmall,
+    XSMALL: f.xsmall,
+    SMALL: f.small,
+    MEDIUM: f.medium,
+    LARGE: f.large,
+    XLARGE: f.xlarge,
 };
-function _(e) {
+function p(e) {
     switch (e) {
-        case f.XXSMALL:
+        case _.XXSMALL:
             return 16;
-        case f.XSMALL:
+        case _.XSMALL:
             return 24;
-        case f.SMALL:
+        case _.SMALL:
             return 30;
-        case f.MEDIUM:
+        case _.MEDIUM:
             return 40;
-        case f.LARGE:
+        case _.LARGE:
             return 60;
         default:
             return 80;
     }
 }
-function p(e) {
+function h(e) {
     if (null == e) return null;
     switch (e) {
-        case c.Si.GUILD:
+        case u.Si.GUILD:
             return n(632342);
-        case c.Si.TIER_0:
+        case u.Si.TIER_0:
             return n(467596);
-        case c.Si.TIER_1:
+        case u.Si.TIER_1:
             return n(670957);
-        case c.Si.TIER_2:
-        case c.Si.LEGACY:
+        case u.Si.TIER_2:
+        case u.Si.LEGACY:
             return n(480768);
         default:
             return null;
     }
 }
-function h(e) {
+function m(e) {
     switch (e) {
-        case f.XSMALL:
-            return l.Z.Sizes.SMALLER;
-        case f.SMALL:
-            return l.Z.Sizes.SMALL;
-        case f.LARGE:
-            return l.Z.Sizes.LARGE;
+        case _.XSMALL:
+            return c.Z.Sizes.SMALLER;
+        case _.SMALL:
+            return c.Z.Sizes.SMALL;
+        case _.LARGE:
+            return c.Z.Sizes.LARGE;
         default:
-        case f.MEDIUM:
-            return l.Z.Sizes.MEDIUM;
+        case _.MEDIUM:
+            return c.Z.Sizes.MEDIUM;
     }
 }
-let m = (e) => {
-    let t,
+let g = i.forwardRef(function (e, t) {
+    let n,
         {
-            game: n,
-            guild: i,
-            skuId: c,
-            pid: m,
-            className: g,
-            guildClassName: E,
-            size: b = f.MEDIUM,
-            allowUnknownGameIcon: y = !0,
+            game: i,
+            guild: a,
+            skuId: u,
+            pid: g,
+            className: E,
+            guildClassName: b,
+            size: y = _.MEDIUM,
+            allowUnknownGameIcon: O = !0,
         } = e;
     if (
-        (null != c && (t = p(c)),
-        null != n && null == t && (t = n.getIconURL(_(b))),
-        void 0 === (t = (0, s.Z)(m, t)) && null != i)
+        (null != u && (n = h(u)),
+        null != i && null == n && (n = i.getIconURL(p(y))),
+        void 0 === (n = (0, l.Z)(g, n)) && null != a)
     ) {
-        let e = h(b);
-        return (0, r.jsx)(l.Z, {
-            className: a()(d.gameIcon, E, g),
-            guild: i,
+        let e = m(y);
+        return (0, r.jsx)(c.Z, {
+            className: o()(f.gameIcon, b, E),
+            guild: a,
             size: e,
         });
     }
-    if (void 0 === t || "" === t)
-        return y
-            ? (0, r.jsx)(o.IMN, {
+    if (void 0 === n || "" === n)
+        return O
+            ? (0, r.jsx)(s.IMN, {
                   size: "md",
                   color: "currentColor",
-                  className: a()(d.gameIcon, b, g),
+                  className: o()(f.gameIcon, y, E),
               })
             : null;
-    let O = null == n ? void 0 : n.name,
-        v =
-            null != O && "" !== O
-                ? u.intl.formatToPlainString(u.t.tiKyYm, { applicationName: O })
-                : u.intl.string(u.t["2B/phI"]);
+    let v = null == i ? void 0 : i.name,
+        I =
+            null != v && "" !== v
+                ? d.intl.formatToPlainString(d.t.tiKyYm, { applicationName: v })
+                : d.intl.string(d.t["2B/phI"]);
     return (0, r.jsx)("img", {
-        alt: v,
-        src: t,
-        className: a()(d.gameIcon, b, g),
+        ref: t,
+        alt: I,
+        src: n,
+        className: o()(f.gameIcon, y, E),
     });
-};
-m.Sizes = f;
-let g = m;
+});

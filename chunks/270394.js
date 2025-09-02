@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(997841), n(388685);
+n.d(t, { Z: () => V }), n(997841), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(120356),
@@ -222,7 +222,7 @@ function K(e) {
         })
     );
 }
-function V(e) {
+function q(e) {
     let { applicationId: t, channel: r, showChannel: l = !1, inviteDisabled: a = !1 } = e,
         o = (0, _.q)(t),
         s = (0, p.e7)([A.default], () => {
@@ -240,7 +240,7 @@ function V(e) {
             children: [
                 (0, i.jsx)(S.Z, {
                     game: o,
-                    size: S.Z.Sizes.XXSMALL,
+                    size: S.A.XXSMALL,
                 }),
                 (0, i.jsx)(g.Text, {
                     className: W.linkedChannelJoinSourceText,
@@ -271,7 +271,7 @@ function V(e) {
         },
     });
 }
-function q(e) {
+function V(e) {
     let {
         invites: t,
         guild: l,
@@ -502,7 +502,7 @@ function q(e) {
                     case "channel":
                         var r;
                         return (0, i.jsx)(
-                            V,
+                            q,
                             {
                                 applicationId: null == (r = e.data.linkedLobby) ? void 0 : r.application_id,
                                 channel: e.data,

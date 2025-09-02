@@ -29,7 +29,7 @@ function h(e) {
         children: [
             (0, r.jsx)(l.Z, {
                 game: t,
-                size: l.Z.Sizes.XXSMALL,
+                size: l.A.XXSMALL,
             }),
             (0, r.jsx)("span", { children: t.name }),
         ],
@@ -84,7 +84,7 @@ function m(e) {
                         label: n.name,
                         icon: (0, r.jsx)(l.Z, {
                             game: n,
-                            size: l.Z.Sizes.XXSMALL,
+                            size: l.A.XXSMALL,
                         }),
                         action: () => m(n),
                     },

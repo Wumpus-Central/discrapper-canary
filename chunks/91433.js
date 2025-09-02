@@ -51,7 +51,7 @@ function E(e) {
                                         {
                                             className: g.gameIcon,
                                             game: w,
-                                            size: u.Z.Sizes.XXSMALL,
+                                            size: u.A.XXSMALL,
                                         },
                                         null == w ? void 0 : w.id,
                                     ),

@@ -300,7 +300,7 @@ class J extends r.Component {
                                     !j &&
                                     (null == r.giftStyle || (g && b)) &&
                                     (0, n.jsx)(x.Z, {
-                                        size: x.Z.Sizes.LARGE,
+                                        size: x.A.LARGE,
                                         game: t,
                                         skuId: r.skuId,
                                     }),

@@ -20,8 +20,8 @@ var l = s(951288),
     T = s(94692),
     C = s(981631),
     Z = s(388032),
-    S = s(912278);
-function L(t, e, s) {
+    L = s(912278);
+function S(t, e, s) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -76,7 +76,7 @@ class b extends n.Component {
             children: [
                 null != r
                     ? (0, l.jsx)("div", {
-                          className: S.splash,
+                          className: L.splash,
                           style: { backgroundImage: "url(".concat(r, ")") },
                       })
                     : null,
@@ -103,25 +103,25 @@ class b extends n.Component {
                             children: [
                                 (0, l.jsx)(m.Z, {
                                     game: t,
-                                    size: m.Z.Sizes.MEDIUM,
-                                    className: S.gameIcon,
+                                    size: m.A.MEDIUM,
+                                    className: L.gameIcon,
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: S.gameName,
+                                    className: L.gameName,
                                     children: null != t && t.name,
                                 }),
                                 null != e
                                     ? (0, l.jsx)("div", {
-                                          className: S.installSize,
+                                          className: L.installSize,
                                           children: (0, A.BU)(e, { useKibibytes: !0 }),
                                       })
                                     : null,
                             ],
                         }),
-                        (0, l.jsx)("div", { className: S.divider }),
+                        (0, l.jsx)("div", { className: L.divider }),
                         (0, l.jsx)(T.Z, {
                             autoFocus: !0,
-                            className: S.selector,
+                            className: L.selector,
                             value: n,
                             requiredDiskKB: e,
                             onChange: this.handleChangePath,
@@ -131,7 +131,7 @@ class b extends n.Component {
                             applicationName: t.name,
                             disabled: a,
                             onChange: this.handlePurchaseTermsChange,
-                            className: S.terms,
+                            className: L.terms,
                         }),
                     ],
                 }),
@@ -141,20 +141,20 @@ class b extends n.Component {
     }
     constructor(...t) {
         super(...t),
-            L(this, "state", {
+            S(this, "state", {
                 selectedInstallationPath: this.props.defaultInstallationPath,
                 hasError: !1,
                 isInstalling: !1,
                 hasAcceptedNeccessaryTerms: !1,
             }),
-            L(this, "isUnmounted", !1),
-            L(this, "handleChangePath", (t, e) => {
+            S(this, "isUnmounted", !1),
+            S(this, "handleChangePath", (t, e) => {
                 this.setState({
                     selectedInstallationPath: t,
                     hasError: e,
                 });
             }),
-            L(this, "install", (t, e) => {
+            S(this, "install", (t, e) => {
                 let { application: s, branchId: l, analyticsLocation: n } = this.props;
                 if (null == s) return null;
                 (0, u.LO)({
@@ -168,16 +168,16 @@ class b extends n.Component {
                     (0, g.uL)(C.Z5c.APPLICATION_LIBRARY),
                     this.close();
             }),
-            L(this, "handleInstall", () => {
+            S(this, "handleInstall", () => {
                 let { application: t, buildId: e, manifestIds: s, hasPreviouslyAcceptedStoreTerms: l } = this.props;
                 if (null != e && null != s)
                     l || (0, d.B)(), null != t && null != t.eulaId && (0, d.D)(t.eulaId), this.install(e, s);
                 else throw Error("Unexpected missing build info for non-premium product");
             }),
-            L(this, "handlePurchaseTermsChange", (t) => {
+            S(this, "handlePurchaseTermsChange", (t) => {
                 this.setState({ hasAcceptedNeccessaryTerms: t });
             }),
-            L(this, "close", () => {
+            S(this, "close", () => {
                 this.props.onClose();
             });
     }

@@ -121,7 +121,6 @@ let Y = (e) => {
             ? (0, r.jsx)(
                   l.u,
                   {
-                      asContainer: !0,
                       text: k.intl.string(k.t.qstQub),
                       children: (0, r.jsx)(c.svS, { className: o()(U.icon, n) }),
                   },
@@ -130,11 +129,10 @@ let Y = (e) => {
             : (0, r.jsx)(
                   l.u,
                   {
-                      asContainer: !0,
                       text: (0, v.O8)(t),
                       children: (0, r.jsx)(I.Z, {
                           hangStatusActivity: t,
-                          className: o()(U.hangStatusIcon, n),
+                          className: o()(U.icon, n),
                       }),
                   },
                   "hang-status",
@@ -194,7 +192,6 @@ function K(e) {
                   (0, r.jsx)(
                       l.u,
                       {
-                          asContainer: !0,
                           text: k.intl.string(k.t["PXMZ//"]),
                           children: (0, r.jsx)(c.Amn, {
                               size: "md",
@@ -210,7 +207,6 @@ function K(e) {
                   (0, r.jsx)(
                       l.u,
                       {
-                          asContainer: !0,
                           text: k.intl.string(k.t.FlNoSU),
                           children: (0, r.jsx)(c.Odl, {
                               size: "md",
@@ -226,7 +222,6 @@ function K(e) {
                 (0, r.jsx)(
                     l.u,
                     {
-                        asContainer: !0,
                         text: k.intl.string(k.t.HFwRpq),
                         children: (0, r.jsx)(c.Mgn, {
                             className: o()(U.icon, y),
@@ -242,7 +237,6 @@ function K(e) {
             (0, r.jsx)(
                 l.u,
                 {
-                    asContainer: !0,
                     text: (0, _.Z)(O.name),
                     children: (0, r.jsx)(W, {
                         size: "md",
@@ -254,33 +248,14 @@ function K(e) {
             ),
         ),
         v === M.YE.XBOX || I === j.wR.XBOX
-            ? V.push(
-                  (0, r.jsx)(
-                      "div",
-                      {
-                          className: U.iconSpacing,
-                          children: (0, r.jsx)(P.Z, { className: o()(U.icon, y) }),
-                      },
-                      "xbox",
-                  ),
-              )
+            ? V.push((0, r.jsx)(P.Z, { className: o()(U.icon, y) }, "xbox"))
             : (v === M.YE.PLAYSTATION || I === j.wR.PLAYSTATION) &&
-              V.push(
-                  (0, r.jsx)(
-                      "div",
-                      {
-                          className: U.iconSpacing,
-                          children: (0, r.jsx)(R.Z, { className: o()(U.icon, y) }),
-                      },
-                      "playstation",
-                  ),
-              ),
+              V.push((0, r.jsx)(R.Z, { className: o()(U.icon, y) }, "playstation")),
         b &&
             V.push(
                 (0, r.jsx)(
                     l.u,
                     {
-                        asContainer: !0,
                         text: k.intl.string(k.t.JH1SJy),
                         children: (0, r.jsx)(c.tEF, {
                             size: "xs",
@@ -291,17 +266,7 @@ function K(e) {
                     "watch",
                 ),
             ),
-        m &&
-            V.push(
-                (0, r.jsx)(
-                    "div",
-                    {
-                        className: o()(U.iconSpacing, U.liveIconSpacing),
-                        children: (0, r.jsx)(E.ZP, { size: E.ZP.Sizes.SMALL }),
-                    },
-                    "stream",
-                ),
-            );
+        m && V.push((0, r.jsx)(E.ZP, { size: E.ZP.Sizes.SMALL }, "stream"));
     let K = null != T && !(0, w.yE)(T.flags, L.udG.EMBEDDED),
         z = null == D && K;
     return 0 !== V.length || null != H || x || z
@@ -540,17 +505,14 @@ function X(e) {
         });
     };
     return (0, r.jsx)(l.u, {
-        asContainer: !0,
         text: k.intl.formatToPlainString(k.t.Sq9xJy, { game: t.name }),
         "aria-label": k.intl.formatToPlainString(k.t.Sq9xJy, { game: t.name }),
-        children: (0, r.jsx)("div", {
+        children: (0, r.jsx)(y.Z, {
             ref: _,
-            children: (0, r.jsx)(y.Z, {
-                className: o()(U.icon, U.gameIcon, n),
-                game: t,
-                size: y.Z.Sizes.XSMALL,
-                onMouseEnter: h,
-            }),
+            className: o()(U.icon, U.gameIcon, n),
+            game: t,
+            size: y.A.XSMALL,
+            onMouseEnter: h,
         }),
     });
 }
@@ -569,7 +531,6 @@ function Q(e) {
             (0, r.jsx)(
                 l.u,
                 {
-                    asContainer: !0,
                     text: n(),
                     children: s,
                 },
@@ -587,7 +548,6 @@ function Q(e) {
             (0, r.jsx)(
                 l.u,
                 {
-                    asContainer: !0,
                     text: u ? k.intl.string(k.t.btxSdH) : k.intl.string(k.t.NjmiOD),
                     children: n,
                 },

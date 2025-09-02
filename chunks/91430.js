@@ -236,7 +236,7 @@ function X() {
                     children: [
                         (0, r.jsx)(O.Z, {
                             game: null,
-                            size: O.Z.Sizes.SMALL,
+                            size: O.A.SMALL,
                             className: V.noItemsIcon,
                         }),
                         (0, r.jsx)("span", {

@@ -567,7 +567,7 @@ class eh extends (r = a.PureComponent) {
                     guildClassName: q.guildDescriptionIcon,
                     game: o,
                     guild: s,
-                    size: y.Z.Sizes.XSMALL,
+                    size: y.A.XSMALL,
                     skuId: null != a ? a : null == f ? void 0 : f.id,
                 }));
         } else if (null != f) {
@@ -599,7 +599,7 @@ class eh extends (r = a.PureComponent) {
                               guildClassName: q.guildDescriptionIcon,
                               game: o,
                               guild: s,
-                              size: y.Z.Sizes.XSMALL,
+                              size: y.A.XSMALL,
                               skuId: f.id,
                           });
         } else
