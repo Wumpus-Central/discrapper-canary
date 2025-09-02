@@ -8,4 +8,5 @@ e.exports = {
     addButton: "addButton__25a50 tag__25a50 button__25a50",
     caret: "caret__25a50",
     removeButton: "removeButton__25a50",
+    gameTagsMenu: "gameTagsMenu__25a50",
 };
