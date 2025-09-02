@@ -1,47 +1,42 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(755721),
-    s = n(481060),
-    l = n(873115),
-    c = n(219929),
-    u = n(618541),
-    d = n(975060),
-    f = n(388032),
-    _ = n(632236);
-class p extends i.PureComponent {
+    o = n(481060),
+    s = n(873115),
+    l = n(219929),
+    c = n(618541),
+    u = n(975060),
+    d = n(388032),
+    f = n(632236);
+class _ extends i.PureComponent {
     componentDidMount() {
-        null != this.props.paypalClient && l.f6();
+        null != this.props.paypalClient && s.f6();
     }
     componentWillUnmount() {
-        l.Nj().then(() => l.Dz());
+        s.Nj().then(() => s.Dz());
     }
     render() {
         let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
-        return (0, r.jsx)(s.hjN, {
+        return (0, r.jsx)(o.hjN, {
             className: t,
-            title: f.intl.string(f.t.QQBAoq),
-            children: (0, r.jsxs)("div", {
-                className: _.inputWrapper,
-                children: [
-                    (0, r.jsx)(c.ZP, {
-                        type: c.ZP.Types.PAYPAL,
-                        className: _.paypalIcon,
-                    }),
-                    (0, r.jsx)(o.Is, {
-                        value: e,
-                        editable: !1,
-                        readOnly: !0,
-                        placeholder: null == n ? f.intl.string(f.t.dte2Mz) : f.intl.string(f.t.hopw7e),
-                        inputClassName: _.paypalInput,
-                    }),
-                ],
+            title: d.intl.string(d.t.QQBAoq),
+            children: (0, r.jsx)("div", {
+                className: f.inputWrapper,
+                children: (0, r.jsx)(o.oil, {
+                    leading: {
+                        type: "image",
+                        src: (0, l.hx)(l.ZP.Types.PAYPAL),
+                    },
+                    value: e,
+                    readOnly: !0,
+                    placeholder: null == n ? d.intl.string(d.t.dte2Mz) : d.intl.string(d.t.hopw7e),
+                }),
             }),
         });
     }
 }
-let h = a.ZP.connectStores([u.Z, d.Z], () => ({
-    braintreeEmail: d.Z.braintreeEmail,
-    paypalClient: u.Z.getPayPalClient(),
-}))(p);
+let p = a.ZP.connectStores([c.Z, u.Z], () => ({
+    braintreeEmail: u.Z.braintreeEmail,
+    paypalClient: c.Z.getPayPalClient(),
+}))(_);

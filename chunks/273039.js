@@ -6,27 +6,26 @@ var l = n(951288),
     s = n(225433),
     a = n(683608);
 function c(e) {
-    let { hasSetEmoji: t, onClick: n, children: r, className: c, buttonClassName: u, look: d } = e,
-        [m, j] = i.useState(!1),
-        v = i.useCallback(() => {
-            n(), j(!1);
-        }, [n, j]);
+    let { hasSetEmoji: t, onClick: n, children: r, className: c, buttonClassName: u } = e,
+        [d, m] = i.useState(!1),
+        j = i.useCallback(() => {
+            n(), m(!1);
+        }, [n, m]);
     return (0, l.jsxs)("div", {
         className: o()(a.container, c),
         onMouseEnter: () => {
-            if (t) return void j(!0);
-            j(!1);
+            if (t) return void m(!0);
+            m(!1);
         },
         onMouseLeave: () => {
-            j(!1);
+            m(!1);
         },
         children: [
             r,
-            t && m
+            t && d
                 ? (0, l.jsx)(s.Z, {
-                      onClick: v,
+                      onClick: j,
                       className: o()(a.removeButton, u),
-                      look: d,
                   })
                 : null,
         ],

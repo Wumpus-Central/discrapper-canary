@@ -1,35 +1,24 @@
-n.d(t, { k: () => d });
+n.d(t, { k: () => s });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(219929),
-    c = n(388032),
-    u = n(358458);
-let d = (e) => {
-    let { className: t, submitting: n, stripePaymentMethod: i } = e,
-        { card: d } = null != i ? i : {},
-        f = null != d ? l.ZP.getType(d.brand) : l.ZP.Types.UNKNOWN;
-    return (0, r.jsx)(s.hjN, {
+var i = n(481060),
+    a = n(219929),
+    o = n(388032);
+let s = (e) => {
+    let { className: t, submitting: n, stripePaymentMethod: s } = e,
+        { card: l } = null != s ? s : {},
+        c = null != l ? a.ZP.getType(l.brand) : a.ZP.Types.UNKNOWN;
+    return (0, r.jsx)(i.hjN, {
         className: t,
-        title: c.intl.string(c.t.mmDvV1),
-        children: (0, r.jsxs)("div", {
-            className: u.cardNumberWrapper,
-            children: [
-                (0, r.jsx)(l.ZP, {
-                    className: a()(u.cardIcon, { [u.submitting]: n }),
-                    type: f,
-                }),
-                (0, r.jsx)(o.Is, {
-                    value: n && null != d ? c.intl.formatToPlainString(c.t.bCynoK, d) : void 0,
-                    editable: !1,
-                    readOnly: !0,
-                    placeholder: c.intl.string(c.t["bWMH7+"]),
-                    inputClassName: u.cardNumberInput,
-                }),
-            ],
+        title: o.intl.string(o.t.mmDvV1),
+        children: (0, r.jsx)(i.oil, {
+            leading: {
+                type: "image",
+                src: (0, a.hx)(c),
+            },
+            value: n && null != l ? o.intl.formatToPlainString(o.t.bCynoK, l) : void 0,
+            readOnly: !0,
+            placeholder: o.intl.string(o.t["bWMH7+"]),
         }),
     });
 };

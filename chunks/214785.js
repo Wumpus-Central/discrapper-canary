@@ -25,6 +25,7 @@ var r = {
     secondary: "secondary__6af3a",
     "icon-only": "icon-only__6af3a",
     "color-mix": "color-mix__6af3a",
+    "input-accessory": "input-accessory__6af3a icon-only__6af3a",
     "critical-primary": "critical-primary__6af3a",
     "critical-secondary": "critical-secondary__6af3a",
     active: "active__6af3a",

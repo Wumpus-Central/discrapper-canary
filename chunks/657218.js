@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(541716),
     _ = n(752305),
     C = n(893718),
-    v = n(303628),
-    x = n(313201),
+    x = n(303628),
+    v = n(313201),
     O = n(967128),
     j = n(665149),
     E = n(294218),
@@ -213,9 +213,9 @@ function Q(e) {
         })(t, f),
         C = (0, k.vH)(t),
         {
-            isGeneratingAI: v,
-            enableAIFeatures: x,
-            renderAiGenerateButton: j,
+            isGeneratingAI: x,
+            enableAIFeatures: v,
+            getThreadNameInputAccessory: j,
         } = (0, G.U)({
             parentChannel: t,
             parentMessageId: n,
@@ -331,7 +331,7 @@ function Q(e) {
             privateThreadMode: C,
             textAreaState: b,
             location: l,
-            enableAIFeatures: x,
+            enableAIFeatures: v,
         }),
         A = (0, k.oD)(p, C) ? c.qtY : c.or_;
     return (0, r.jsx)("div", {
@@ -356,7 +356,7 @@ function Q(e) {
                                     channelId: "create-thread-null",
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: W.iconWrapper,
+                                            className: a()(W.iconWrapper, z.iconWrapper),
                                             children: (0, r.jsx)(A, { className: W.icon }),
                                         }),
                                         (0, r.jsx)($, {
@@ -366,9 +366,9 @@ function Q(e) {
                                             updateThreadSettings: g,
                                             error: E,
                                             disabled: N,
-                                            isGeneratingAI: v,
-                                            enableAIFeatures: x,
-                                            renderAiGenerateButton: j,
+                                            isGeneratingAI: x,
+                                            enableAIFeatures: v,
+                                            getThreadNameInputAccessory: j,
                                         }),
                                         t.type === F.d4z.GUILD_TEXT
                                             ? (0, r.jsx)(J, {
@@ -456,46 +456,35 @@ function $(e) {
             parentChannel: n,
             parentMessageId: i,
             threadSettings: l,
-            updateThreadSettings: o,
-            error: u,
-            disabled: p,
-            isGeneratingAI: h,
-            enableAIFeatures: f,
-            renderAiGenerateButton: m,
+            updateThreadSettings: a,
+            error: o,
+            disabled: s,
+            isGeneratingAI: u,
+            enableAIFeatures: p,
+            getThreadNameInputAccessory: h,
         } = e,
-        g = null != (t = l.name) ? t : "",
-        b = (0, L.Op)(u, { content: g }),
-        y = (0, k.Od)(n, i),
-        _ = null != i && !f,
-        C = (0, x.Dt)(),
-        v = f ? V.intl.string(V.t["Nb2/RE"]) : "" !== y ? y : V.intl.string(V.t["Nb2/RE"]);
-    return (0, r.jsx)(c.hjN, {
-        tag: "label",
-        htmlFor: C,
-        title: V.intl.string(_ ? V.t.JPvIiI : V.t.j3XWjI),
-        className: z.formSection,
-        children: (0, r.jsxs)("div", {
-            className: z.threadNameContainer,
-            children: [
-                (0, r.jsx)(s.Is, {
-                    value: g,
-                    id: C,
-                    placeholder: v,
-                    maxLength: F.HN8,
-                    onChange: (e) => {
-                        o({ name: (0, U.Z)(e, !1) }), "" !== e ? d.Z.startTyping(n.id) : d.Z.stopTyping(n.id);
-                    },
-                    onBlur: () => {
-                        let e = (0, U.Z)(g, !0);
-                        e !== g && o({ name: e });
-                    },
-                    error: b,
-                    disabled: p || h,
-                    inputClassName: a()({ [z.threadNameInputWithAI]: f }),
-                }),
-                m(p),
-            ],
-        }),
+        f = null != (t = l.name) ? t : "",
+        m = (0, L.Op)(o, { content: f }),
+        g = (0, k.Od)(n, i),
+        b = null != i && !p,
+        y = (0, v.Dt)(),
+        _ = p ? V.intl.string(V.t["Nb2/RE"]) : "" !== g ? g : V.intl.string(V.t["Nb2/RE"]);
+    return (0, r.jsx)(c.oil, {
+        label: V.intl.string(b ? V.t.JPvIiI : V.t.j3XWjI),
+        trailing: h(s),
+        value: f,
+        id: y,
+        placeholder: _,
+        maxLength: F.HN8,
+        onChange: (e) => {
+            a({ name: (0, U.Z)(e, !1) }), "" !== e ? d.Z.startTyping(n.id) : d.Z.stopTyping(n.id);
+        },
+        onBlur: () => {
+            let e = (0, U.Z)(f, !0);
+            e !== f && a({ name: e });
+        },
+        error: m,
+        disabled: s || u,
     });
 }
 function ee(e) {
@@ -534,17 +523,17 @@ function ee(e) {
             handler: g,
         });
     let _ = (0, o.e7)([A.Z], () => A.Z.can(F.Plq.ATTACH_FILES, t)),
-        x = (0, L.Op)(p, { content: n.textValue });
+        v = (0, L.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(x.Z, {
                 channelId: t.id,
                 type: Y,
                 canAttachFiles: _,
             }),
             (0, r.jsx)("div", {
                 className: z.starterMessageError,
-                children: (0, r.jsx)(c.pdY, { error: x }),
+                children: (0, r.jsx)(c.pdY, { error: v }),
             }),
             (0, r.jsx)(C.ZP, {
                 type: Y,
@@ -554,7 +543,7 @@ function ee(e) {
                 richValue: n.richValue,
                 focused: h,
                 className: a()(z.channelTextArea, z.channelTextAreaWithTypingIndicator),
-                innerClassName: a()(z.channelTextAreaInner, { [z.channelTextAreaInnerError]: null != x }),
+                innerClassName: a()(z.channelTextAreaInner, { [z.channelTextAreaInnerError]: null != v }),
                 onFocus: m,
                 onBlur: g,
                 onChange: b,

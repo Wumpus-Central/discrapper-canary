@@ -11,13 +11,13 @@ var r = n(951288),
     m = n(345861),
     g = n(650774),
     p = n(434404),
-    h = n(999382),
-    f = n(718157),
+    f = n(999382),
+    h = n(718157),
     b = n(450474),
     x = n(166184),
     j = n(936735),
-    v = n(654351),
-    _ = n(557359),
+    _ = n(654351),
+    v = n(557359),
     O = n(386885),
     y = n(203377),
     C = n(929834),
@@ -41,10 +41,10 @@ function S(e) {
         u = i.useCallback(() => {
             p.Z.updateGuild({ discoverySplash: null });
         }, []),
-        h = i.useCallback((e) => {
+        f = i.useCallback((e) => {
             p.Z.updateGuild({ description: e });
         }, []),
-        { memberCount: f, onlineCount: b } = (0, a.cj)([g.Z], () => ({
+        { memberCount: h, onlineCount: b } = (0, a.cj)([g.Z], () => ({
             memberCount: g.Z.getMemberCount(n.id),
             onlineCount: g.Z.getOnlineCount(n.id),
         }));
@@ -126,7 +126,7 @@ function S(e) {
                                 children: (0, r.jsx)(o.Kx8, {
                                     value: null != (t = n.description) ? t : "",
                                     placeholder: N.intl.string(N.t.Nvfows),
-                                    onChange: h,
+                                    onChange: f,
                                     maxLength: l.Us,
                                 }),
                             }),
@@ -137,7 +137,7 @@ function S(e) {
             (0, r.jsx)(x.Z, {
                 className: E.preview,
                 guild: n,
-                memberCount: f,
+                memberCount: h,
                 presenceCount: b,
             }),
         ],
@@ -178,7 +178,7 @@ function T(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: E.editableSection,
-                        children: (0, r.jsx)(f.E, {
+                        children: (0, r.jsx)(h.E, {
                             guildId: t.id,
                             guildMetadata: n,
                         }),
@@ -223,21 +223,22 @@ function P(e) {
         [s, m] = i.useState(null),
         g = i.useCallback(
             (e) => {
-                let r = [...n.keywords];
-                r.splice(e, 1), m(null), (0, d.zH)(t, r);
+                let r = Array.from(e),
+                    i = [...n.keywords].filter((e) => !r.includes(e));
+                m(null), (0, d.zH)(t, i);
             },
             [t, n],
         ),
         p = i.useCallback(
             (e) => {
                 let { keywords: r } = n;
-                r.length >= y.G7 || (m(null), (0, d.zH)(t, [...r, e]));
+                !(r.length >= y.G7) && (r.includes(e) || (m(null), (0, d.zH)(t, [...r, e])));
             },
             [t, n],
         ),
-        h = i.useMemo(
+        f = i.useMemo(
             () =>
-                (0, v.P5)(n.primaryCategoryId)
+                (0, _.P5)(n.primaryCategoryId)
                     .filter((e) => !n.keywords.includes(e))
                     .map((e) => {
                         let t = n.keywords.length >= y.G7;
@@ -250,26 +251,26 @@ function P(e) {
                     }),
             [n.keywords, n.primaryCategoryId, p],
         ),
-        f = null != a ? a : s;
+        h = null != a ? a : s,
+        b = i.useMemo(
+            () =>
+                n.keywords.map((e) => ({
+                    id: e,
+                    label: e,
+                })),
+            [n.keywords],
+        );
     return (0, r.jsxs)("div", {
         className: E.sectionContainer,
         children: [
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsxs)(o.X6q, {
-                        variant: "text-md/semibold",
-                        color: "header-primary",
-                        className: E.header,
-                        children: [N.intl.string(N.t["0PJZXl"]), l ? (0, r.jsx)(I, {}) : null],
-                    }),
-                    (0, r.jsx)(o.Text, {
-                        variant: "text-sm/medium",
-                        color: "text-secondary",
-                        children: N.intl.string(N.t.ztiTDA),
-                    }),
                     (0, r.jsx)(c.Z, {
-                        className: E.editableSection,
-                        tags: n.keywords,
+                        required: l,
+                        label: N.intl.string(N.t["0PJZXl"]),
+                        description: N.intl.string(N.t.ztiTDA),
+                        tagsLabel: N.intl.string(N.t["0PJZXl"]),
+                        tags: b,
                         onRemoveTag: g,
                         onAddTag: p,
                         onAddTagError: m,
@@ -277,17 +278,17 @@ function P(e) {
                         maxTaxLength: y._0,
                         placeholder: n.keywords.length < 1 ? N.intl.string(N.t.EL4Lho) : void 0,
                     }),
-                    null != f
+                    null != h
                         ? (0, r.jsx)(o.Text, {
                               color: "text-danger",
                               variant: "text-sm/normal",
                               className: E.error,
-                              children: f,
+                              children: h,
                           })
                         : null,
                 ],
             }),
-            h.length > 0
+            f.length > 0
                 ? (0, r.jsxs)("div", {
                       children: [
                           (0, r.jsx)(o.X6q, {
@@ -298,7 +299,7 @@ function P(e) {
                           }),
                           (0, r.jsx)("div", {
                               className: E.editableSection,
-                              children: (0, r.jsx)(u.j, { pills: h }),
+                              children: (0, r.jsx)(u.j, { pills: f }),
                           }),
                       ],
                   })
@@ -391,8 +392,8 @@ function D(e) {
             errors: l,
             guildMetadata: s,
             guild: o,
-        } = (0, a.cj)([h.Z], () => {
-            let { errors: e, guildMetadata: t, guild: n } = h.Z.getProps();
+        } = (0, a.cj)([f.Z], () => {
+            let { errors: e, guildMetadata: t, guild: n } = f.Z.getProps();
             return {
                 errors: e,
                 guildMetadata: t,
@@ -431,7 +432,7 @@ function D(e) {
             (0, r.jsx)(R, { preferredLocale: o.preferredLocale }),
             (0, r.jsx)(Z, {}),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(_.A, {
+                children: (0, r.jsx)(v.A, {
                     requireTerms: t,
                     rules: n,
                 }),

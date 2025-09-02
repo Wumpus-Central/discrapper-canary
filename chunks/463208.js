@@ -1,20 +1,22 @@
-n.d(t, { o: () => C }), n(953529);
+n.d(t, { o: () => R }), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(84735),
     l = n(15127),
-    c = n(886025),
-    u = n(440562),
-    d = n(753450),
-    f = n(481060),
-    _ = n(841878),
-    p = n(74655),
-    h = n(897037),
-    m = n(388032),
-    g = n(430490);
-function E(e, t, n) {
+    c = n(378215),
+    u = n(886025),
+    d = n(440562),
+    f = n(753450),
+    _ = n(681715),
+    p = n(481060),
+    h = n(841878),
+    m = n(74655),
+    g = n(897037),
+    E = n(388032),
+    b = n(430490);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +29,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +40,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +57,22 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +80,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,7 +89,7 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function T(e, t) {
+function A(e, t) {
     let n = i.useContext(l.q3);
     return (
         i.useEffect(() => {
@@ -104,77 +106,91 @@ function T(e, t) {
         n
     );
 }
-function S(e) {
+function C(e) {
     let { accessory: t, inputSize: n, disabled: i } = e;
     if ("string" == typeof t)
-        return (0, r.jsx)(f.Text, {
+        return (0, r.jsx)(p.Text, {
             variant: "text-md/normal",
             color: "input-placeholder-text",
-            className: g.leadingText,
+            className: b.leadingText,
             children: t,
         });
-    let a = "md" === n ? "sm" : "xs";
     if ("icon" in t) {
-        let { icon: e, onClick: n, "aria-label": o } = t;
-        return (0, r.jsx)(f.P3F, {
-            className: g.iconButton,
-            onClick: n,
-            "aria-label": o,
-            "aria-disabled": i,
-            children: (0, r.jsx)(e, {
-                size: a,
-                color: "currentColor",
-            }),
-        });
+        let { tooltip: e } = t,
+            a = T(t, ["tooltip"]),
+            o = "md" === n ? "sm" : "xs",
+            s = (0, r.jsx)(
+                c.H,
+                I(O({}, a), {
+                    size: o,
+                    variant: "input-accessory",
+                }),
+            );
+        return null != e
+            ? (0, r.jsx)(_.u, {
+                  asContainer: !0,
+                  text: e,
+                  shouldShow: !i,
+                  children: s,
+              })
+            : s;
     }
     if ("button" in t)
         return (0, r.jsx)("div", {
-            className: g.icon,
+            className: b.icon,
             children: t.button,
         });
     if ("type" in t && "tags" === t.type) {
         let { type: e } = t,
-            n = v(t, ["type"]);
-        return (0, r.jsx)(d.Q, O(b({}, n), { layout: "inline" }));
+            n = T(t, ["type"]);
+        return (0, r.jsx)(f.Q, I(O({}, n), { layout: "inline" }));
     }
-    let o = t;
+    if ("type" in t && "image" === t.type)
+        return (0, r.jsx)("img", {
+            "aria-hidden": !0,
+            alt: "",
+            src: t.src,
+            className: b.image,
+        });
+    let a = t,
+        o = "md" === n ? "xs" : "xxs";
     return (0, r.jsx)("div", {
-        className: g.icon,
-        children: (0, r.jsx)(o, {
-            size: a,
-            color: f.TVs.colors.ICON_PRIMARY,
+        className: b.icon,
+        children: (0, r.jsx)(a, {
+            size: o,
+            color: p.TVs.colors.ICON_PRIMARY,
         }),
     });
 }
-function A(e) {
+function N(e) {
     let { inputSize: t, onClick: n } = e,
         i = "md" === t ? "xs" : "xxs";
-    return (0, r.jsx)(f.P3F, {
-        className: g.clearButton,
+    return (0, r.jsx)(p.P3F, {
+        className: b.clearButton,
         onClick: n,
-        "aria-label": m.intl.string(m.t.VkKicX),
-        children: (0, r.jsx)(f.k$p, {
+        "aria-label": E.intl.string(E.t.VkKicX),
+        children: (0, r.jsx)(p.k$p, {
             size: i,
             color: "currentColor",
         }),
     });
 }
-function C(e) {
+function R(e) {
     var t;
     let {
             disabled: n = !1,
             editable: a,
             inputRef: l,
-            focusProps: u,
+            focusProps: c,
             name: d = "",
             type: f = "text",
-            placeholder: m = "",
-            maxLength: E,
-            value: y,
-            defaultValue: I,
-            minLength: C,
-            error: R,
-            defaultDirty: P = !1,
+            placeholder: _ = "",
+            maxLength: p,
+            value: E,
+            defaultValue: y,
+            minLength: v,
+            error: S,
+            defaultDirty: R = !1,
             leading: w,
             trailing: D,
             validateOn: x = "change",
@@ -190,7 +206,7 @@ function C(e) {
             required: V,
             id: H,
         } = e,
-        Y = v(e, [
+        Y = T(e, [
             "disabled",
             "editable",
             "inputRef",
@@ -219,16 +235,16 @@ function C(e) {
             "required",
             "id",
         ]),
-        W = (0, h.m)({
+        W = (0, g.m)({
             validateOn: x,
-            error: R,
-            value: y,
-            minLength: C,
-            maxLength: E,
-            defaultDirty: P,
+            error: S,
+            value: E,
+            minLength: v,
+            maxLength: p,
+            defaultDirty: R,
         }),
         { setShouldValidate: K } = W,
-        z = T(y, I),
+        z = A(E, y),
         q = "object" == typeof w && "type" in w && "tags" === w.type,
         X = (e) => {
             var t, n;
@@ -254,29 +270,29 @@ function C(e) {
         et = Y.readOnly;
     null == et && !1 === a && (et = !0);
     let en = null;
-    ("boolean" == typeof M ? M && null != y && "" !== y && !et : M.show)
-        ? (en = (0, r.jsx)(A, {
+    ("boolean" == typeof M ? M && null != E && "" !== E && !et : M.show)
+        ? (en = (0, r.jsx)(N, {
               inputSize: L,
               onClick: $,
           }))
         : null != D &&
-          (en = (0, r.jsx)(S, {
+          (en = (0, r.jsx)(C, {
               accessory: D,
               inputSize: L,
           }));
     let er = null;
     null != w &&
-        (er = (0, r.jsx)(S, {
+        (er = (0, r.jsx)(C, {
             accessory: w,
             inputSize: L,
         }));
     let ei = U
-        ? (0, r.jsx)(_.H, {
-              value: y,
-              maxLength: E,
+        ? (0, r.jsx)(h.H, {
+              value: E,
+              maxLength: p,
           })
         : null;
-    return (0, r.jsx)(c.N, {
+    return (0, r.jsx)(u.N, {
         id: H,
         label: B,
         required: V,
@@ -286,38 +302,38 @@ function C(e) {
         errorMessage: W.hasError && null != (t = W.errorMessage) ? t : void 0,
         successMessage: G,
         trailingContent: ei,
-        children: (0, r.jsxs)(p.U, {
+        children: (0, r.jsxs)(m.U, {
             ref: ee,
             disabled: n,
             validation: W,
             fullWidth: j,
             readOnly: et,
-            className: o()(g.container, g[L], {
-                [g.hasLeading]: null != er,
-                [g.hasTrailing]: null != en,
-                [g.hasTags]: q,
+            className: o()(b.container, b[L], {
+                [b.hasLeading]: null != er,
+                [b.hasTrailing]: null != en,
+                [b.hasTags]: q,
             }),
             children: [
                 er,
                 (0, r.jsx)(
                     s.t,
-                    O(b({ ringTarget: ee }, u), {
+                    I(O({ ringTarget: ee }, c), {
                         children: (0, r.jsx)(
-                            N,
-                            O(
-                                b(
+                            P,
+                            I(
+                                O(
                                     {
                                         name: d,
-                                        className: g.input,
+                                        className: b.input,
                                         disabled: n,
                                         readOnly: et,
                                         "aria-required": V,
                                         type: f,
-                                        placeholder: m,
-                                        maxLength: E,
-                                        minLength: C,
-                                        value: y,
-                                        defaultValue: I,
+                                        placeholder: _,
+                                        maxLength: p,
+                                        minLength: v,
+                                        value: E,
+                                        defaultValue: y,
                                     },
                                     Y,
                                 ),
@@ -336,14 +352,14 @@ function C(e) {
         }),
     });
 }
-function N(e) {
+function P(e) {
     var { value: t, defaultValue: n, "aria-labelledby": a } = e,
-        o = v(e, ["value", "defaultValue", "aria-labelledby"]);
-    let s = T(t, n),
-        l = i.useContext(u.U);
+        o = T(e, ["value", "defaultValue", "aria-labelledby"]);
+    let s = A(t, n),
+        l = i.useContext(d.U);
     return (0, r.jsx)(
         "input",
-        O(b({}, o), {
+        I(O({}, o), {
             value: t,
             defaultValue: n,
             id: null == l ? void 0 : l.controlId,

@@ -18,6 +18,5 @@ e.exports = {
     privateThreadFormTitleText: "privateThreadFormTitleText_fb64c9",
     submitContainer: "submitContainer_fb64c9",
     messagePreview: "messagePreview_fb64c9",
-    threadNameInputWithAI: "threadNameInputWithAI_fb64c9",
-    threadNameContainer: "threadNameContainer_fb64c9",
+    iconWrapper: "iconWrapper_fb64c9",
 };

@@ -1,7 +1,7 @@
-n.d(t, { h: () => c });
+n.d(t, { h: () => s });
 var r = n(951288);
 n(647438);
-var i = n(780605);
+var i = n(378215);
 function a(e, t, n) {
     return (
         t in e
@@ -31,35 +31,6 @@ function o(e) {
     }
     return e;
 }
-function s(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function l(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function c(e) {
-    return (0, r.jsx)(
-        i.Y,
-        l(o({}, e), {
-            text: void 0,
-            fullWidth: !1,
-        }),
-    );
+function s(e) {
+    return (0, r.jsx)(i.H, o({}, e));
 }

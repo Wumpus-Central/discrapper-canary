@@ -1,29 +1,25 @@
-n.d(t, { Z: () => m }), n(388685), n(781311);
+n.d(t, { Z: () => o }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
-    l = n(120356),
-    a = n.n(l),
-    s = n(755721),
-    o = n(481060),
-    c = n(981631),
-    d = n(388032),
-    u = n(35378);
-let m = (e) => {
+    l = n(481060),
+    a = n(981631),
+    s = n(388032);
+let o = (e) => {
     var t,
         n,
         {
-            className: l,
-            tags: m,
-            value: g,
-            onRemoveTag: p,
-            onAddTag: h,
-            onAddTagError: f,
-            maxTaxLength: b,
-            maxTags: x,
-            disabled: j,
-            placeholder: v,
+            tags: o,
+            tagsLabel: c,
+            value: d,
+            onRemoveTag: u,
+            onAddTag: m,
+            onAddTagError: g,
+            maxTaxLength: p,
+            maxTags: f,
+            disabled: h,
+            placeholder: b,
         } = e,
-        _ = (function (e, t) {
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -44,8 +40,8 @@ let m = (e) => {
             }
             return i;
         })(e, [
-            "className",
             "tags",
+            "tagsLabel",
             "value",
             "onRemoveTag",
             "onAddTag",
@@ -55,114 +51,92 @@ let m = (e) => {
             "disabled",
             "placeholder",
         ]);
-    let [O, y] = i.useState(null != g ? g : ""),
-        C = m.map((e, t) =>
-            (0, r.jsxs)(
-                "span",
-                {
-                    className: u.tag,
-                    children: [
-                        e,
-                        !j &&
-                            (0, r.jsx)(o.P3F, {
-                                className: u.closeWrapper,
-                                onClick: () => p(t),
-                                children: (0, r.jsx)(o.Dio, {
-                                    size: "xs",
-                                    color: "currentColor",
-                                    className: u.close,
-                                }),
-                            }),
-                    ],
-                },
-                t,
-            ),
-        ),
-        N = i.useCallback(() => {
-            let e = O.trim();
+    let [j, _] = i.useState(null != d ? d : ""),
+        v = i.useCallback(() => {
+            let e = j.trim();
             if (0 !== e.length) {
-                if (null != x && m.length >= x) {
-                    null == f || f(d.intl.string(d.t.Xx7XeH));
+                if (null != f && o.length >= f) {
+                    null == g || g(s.intl.string(s.t.Xx7XeH));
                     return;
                 }
-                h(e), y("");
+                m(e), _("");
             }
-        }, [O, x, h, f, m.length]),
-        E = i.useCallback(
+        }, [j, f, m, g, o.length]),
+        O = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
-                    case c.yXg.BACKSPACE:
-                        0 === O.length && m.length > 0 && (e.preventDefault(), e.stopPropagation(), p(m.length - 1));
+                    case a.yXg.BACKSPACE:
+                        0 === j.length &&
+                            o.length > 0 &&
+                            (e.preventDefault(), e.stopPropagation(), null == u || u(new Set([o[o.length - 1].id])));
                         break;
-                    case c.yXg.ENTER:
-                    case c.yXg.TAB:
-                    case c.yXg.COMMA:
-                        e.preventDefault(), e.stopPropagation(), N();
+                    case a.yXg.ENTER:
+                    case a.yXg.TAB:
+                    case a.yXg.COMMA:
+                        e.preventDefault(), e.stopPropagation(), v();
                 }
             },
-            [N, O.length, p, m.length],
+            [v, j.length, u, o],
         );
-    return (0, r.jsxs)("div", {
-        className: a()(l, u.inputWrapper, { [u.disabled]: j }),
-        children: [
-            C,
-            (0, r.jsx)(
-                s.Is,
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                }),
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (e[t] = r);
-                            });
-                    }
-                    return e;
-                })(
-                    {
-                        className: u.inputOuter,
-                        inputClassName: u.inputInner,
-                    },
-                    _,
-                )),
-                (n = n =
-                    {
-                        value: O,
-                        onKeyDown: E,
-                        onChange: y,
-                        maxLength: b,
-                        disabled: j,
-                        onBlur: N,
-                        placeholder: v,
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t),
-            ),
-        ],
-    });
+    return (0, r.jsx)(
+        l.oil,
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                leading: {
+                    type: "tags",
+                    label: c,
+                    items: o,
+                    onRemove: u,
+                },
+            },
+            x,
+        )),
+        (n = n =
+            {
+                value: j,
+                onKeyDown: O,
+                onChange: _,
+                maxLength: p,
+                disabled: h,
+                onBlur: v,
+                placeholder: b,
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
+    );
 };
