@@ -1,7 +1,7 @@
 n.d(t, { Y0: () => i });
 let r = (0, n(427164).le)({
     kind: "user",
-    name: "2025-08-remix-negative",
+    name: "2025-08-sleepy-panda",
     defaultConfig: { isEnabled: !0 },
     variations: { 1: { isEnabled: !1 } },
 });
