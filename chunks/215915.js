@@ -1,4 +1,4 @@
-n.d(t, { Q: () => u });
+n.d(t, { E: () => u });
 var r,
     i,
     l = n(442837),
@@ -7,7 +7,7 @@ var r,
     a = n(751823);
 let c = { smarterSourceOrdering: !1 },
     d = (0, s.Z)({
-        name: "2025-08-go-live-followups",
+        name: "2025-08-go-live-source-ordering",
         kind: "user",
         defaultConfig: c,
         variations: {
