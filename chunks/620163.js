@@ -1,7 +1,7 @@
 n.d(t, {
     $Z: () => e3,
     OF: () => e8,
-    W8: () => e5,
+    W8: () => e6,
     c$: () => e4,
     iE: () => e7,
 }),
@@ -190,14 +190,14 @@ let e3 = () => {
             e
         );
     },
-    e5 = () => {
+    e6 = () => {
         let e = e8(),
             [t] = (0, A.US)(e);
         return t === a.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.z.WIDGETS_USER_SETTINGS_NEW_BADGE
             ? (0, r.jsx)(s.IGR, { text: eq.intl.string(eq.t.y2b7CA) })
             : null;
     },
-    e6 = eL.Z,
+    e5 = eL.Z,
     e7 = (e) => {
         let {
             unseenGiftCount: t,
@@ -226,6 +226,7 @@ let e3 = () => {
             inputMode: tp,
             activeInputProfile: th,
             isInputProfileCustom: tm,
+            isDataUsage3PToggleEnabled: tg,
         } = e;
         return Object.freeze({
             [eH.s6.SEARCH_NO_RESULTS]: {
@@ -379,7 +380,7 @@ let e3 = () => {
                 label: eq.intl.string(eq.t["vi7f+v"]),
                 ariaLabel: eq.intl.string(eq.t["vi7f+v"]),
                 element: M.Z,
-                newIndicator: (0, r.jsx)(e5, {}),
+                newIndicator: (0, r.jsx)(e6, {}),
                 newIndicatorDismissibleContentTypes: [...e8()],
                 notice: {
                     stores: [K.Z, P.Z],
@@ -598,8 +599,14 @@ let e3 = () => {
             },
             [eH.s6.PRIVACY_DATA_QUESTS_V2]: {
                 section: eW.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eq.intl.string(eq.t.VkS7YW)],
+                searchableTitles: [eq.intl.string(eq.t.VkS7YW), eq.intl.string(eq.t.sJYh5u)],
                 parent: eH.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+            },
+            [eH.s6.PRIVACY_DATA_QUESTS_3P]: {
+                section: eW.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eq.intl.string(eq.t.CyLYKS)],
+                parent: eH.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+                predicate: () => tg,
             },
             [eH.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
                 section: eW.oAB.DATA_AND_PRIVACY,
@@ -1576,7 +1583,7 @@ let e3 = () => {
                 section: eW.oAB.LINUX,
                 searchableTitles: [eq.intl.string(eq.t["7pPjTU"])],
                 label: eq.intl.string(eq.t["7pPjTU"]),
-                element: e6,
+                element: e5,
                 predicate: () => Q.isPlatformEmbedded && (0, Q.isLinux)(),
             },
             [eH.s6.STREAMER_MODE]: {
