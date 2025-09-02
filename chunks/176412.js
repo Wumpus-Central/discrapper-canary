@@ -1,32 +1,31 @@
 n.d(t, {
-    Bm: () => w,
-    P7: () => P,
-    X: () => D,
-    ae: () => R,
+    Bm: () => P,
+    P7: () => R,
+    X: () => w,
+    ae: () => N,
 });
 var r = n(647438),
     i = n(392711),
     a = n.n(i),
     o = n(442837),
     s = n(25209),
-    l = n(755721),
-    c = n(2052),
-    u = n(542094),
-    d = n(513202),
-    f = n(367907),
-    _ = n(213459),
-    p = n(895924),
-    h = n(691424),
-    m = n(428595),
-    g = n(364458),
-    E = n(585483),
-    b = n(499254),
-    y = n(541099),
-    O = n(827498),
-    v = n(346683),
-    I = n(981631),
-    T = n(388032);
-function S(e, t, n) {
+    l = n(2052),
+    c = n(542094),
+    u = n(513202),
+    d = n(367907),
+    f = n(213459),
+    _ = n(895924),
+    p = n(691424),
+    h = n(428595),
+    m = n(364458),
+    g = n(585483),
+    E = n(499254),
+    b = n(541099),
+    y = n(827498),
+    O = n(346683),
+    v = n(981631),
+    I = n(388032);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +38,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +50,12 @@ function A(e, t) {
     }
     return n;
 }
-let C = (function (e, t) {
+let A = (function (e, t) {
         return (
             (t = null != t ? t : {}),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                : A(Object(t)).forEach(function (n) {
+                : S(Object(t)).forEach(function (n) {
                       Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                   }),
             e
@@ -73,18 +72,18 @@ let C = (function (e, t) {
                         }),
                     )),
                     r.forEach(function (t) {
-                        S(e, t, n[t]);
+                        T(e, t, n[t]);
                     });
             }
             return e;
-        })({}, m.Z.RULES.commandMention),
-        { parse: (e, t, n) => ({ content: m.Z.RULES.commandMention.parse(e, t, n).content }) },
+        })({}, h.Z.RULES.commandMention),
+        { parse: (e, t, n) => ({ content: h.Z.RULES.commandMention.parse(e, t, n).content }) },
     ),
-    N = a().pick(
-        (0, g.Z)([
-            m.Z.RULES,
-            { commandMention: C },
-            (0, h.Z)({
+    C = a().pick(
+        (0, m.Z)([
+            h.Z.RULES,
+            { commandMention: A },
+            (0, p.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1,
             }),
@@ -106,84 +105,82 @@ let C = (function (e, t) {
             "spoiler",
         ],
     ),
-    R = s.w4(N);
-function P(e) {
+    N = s.w4(C);
+function R(e) {
     let {
             context: t,
             application: n,
             location: i,
             sectionName: a,
             commandName: s,
-            autoDismissOnClick: h = !0,
-            launchingComponentId: m,
-            submitting: g = !1,
-            fetchesApplication: E = !0,
-            onConfirmActivityLaunchChecksAlertOpen: S,
+            autoDismissOnClick: p = !0,
+            launchingComponentId: h,
+            submitting: m = !1,
+            fetchesApplication: g = !0,
+            onConfirmActivityLaunchChecksAlertOpen: T,
         } = e,
-        A = (0, c.O)(),
-        C = (0, u.Qv)({
+        S = (0, l.O)(),
+        A = (0, c.Qv)({
             context: t,
             applicationId: n.id,
-            fetchesApplication: E,
+            fetchesApplication: g,
         }),
-        N = (0, v.Q)(C),
-        R = (0, o.e7)([y.Z], () => y.Z.entrypoint()),
-        P = r.useMemo(() => {
+        C = (0, O.Q)(A),
+        N = (0, o.e7)([b.Z], () => b.Z.entrypoint()),
+        R = r.useMemo(() => {
             var e, r, i;
             if ("channel" !== t.type)
                 return null != (i = null == (e = n.bot) ? void 0 : e.id)
                     ? i
-                    : null == (r = (0, _.If)(t, n.id).descriptor)
+                    : null == (r = (0, f.If)(t, n.id).descriptor)
                       ? void 0
                       : r.botId;
         }, [t, n.id, n.bot]),
-        w = (0, u.w1)({
+        P = (0, c.w1)({
             application: n,
-            botUserIdForAppDM: P,
-            embeddedActivitiesManager: d.Z,
+            botUserIdForAppDM: R,
+            embeddedActivitiesManager: u.Z,
             context: t,
-            locationObject: A.location,
+            locationObject: S.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                h && b.yT(O.ti.ACTIVITY),
-                    (0, f.yw)(I.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                p && E.yT(y.ti.ACTIVITY),
+                    (0, d.yw)(v.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
                         section_name: a,
-                        action: N,
-                        source: R,
+                        action: C,
+                        source: N,
                     });
             },
-            launchingComponentId: m,
-            commandOrigin: p.bB.APPLICATION_LAUNCHER,
+            launchingComponentId: h,
+            commandOrigin: _.bB.APPLICATION_LAUNCHER,
             sectionName: a,
-            source: R,
-            fetchesApplication: E,
-            onConfirmActivityLaunchChecksAlertOpen: S,
+            source: N,
+            fetchesApplication: g,
+            onConfirmActivityLaunchChecksAlertOpen: T,
         }),
-        D = "primary",
-        x = l.Tt.BRAND,
-        L = null != s ? s : T.intl.string(T.t.zKX8Nj);
+        w = "primary",
+        D = null != s ? s : I.intl.string(I.t.zKX8Nj);
     return (
-        N === u.JS.JOIN
-            ? ((D = "active"), (x = l.Tt.GREEN), (L = T.intl.string(T.t.d9PsMj)))
-            : N !== u.JS.LEAVE || g || ((D = "critical-primary"), (L = T.intl.string(T.t["Hi1/aW"]))),
+        C === c.JS.JOIN
+            ? ((w = "active"), (D = I.intl.string(I.t.d9PsMj)))
+            : C !== c.JS.LEAVE || m || ((w = "critical-primary"), (D = I.intl.string(I.t["Hi1/aW"]))),
         {
-            onActivityItemSelected: w,
-            activityAction: N,
-            buttonVariant: D,
-            buttonColor: x,
-            buttonText: L,
+            onActivityItemSelected: P,
+            activityAction: C,
+            buttonVariant: w,
+            buttonText: D,
         }
     );
 }
-function w(e, t) {
-    let n = y.Z.entrypoint(),
+function P(e, t) {
+    let n = b.Z.entrypoint(),
         a = r.useMemo(
             () =>
                 (0, i.debounce)(
                     (e, t) => {
-                        (0, f.yw)(I.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, d.yw)(v.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: t,
                         });
@@ -200,6 +197,6 @@ function w(e, t) {
         null != e && a(e, n);
     }, [e, t, n, a]);
 }
-function D(e) {
-    E.S.dispatchToLastSubscribed(I.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+function w(e) {
+    g.S.dispatchToLastSubscribed(v.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }
