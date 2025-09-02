@@ -1,53 +1,47 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(481060),
-    o = n(622822),
-    s = n(665149),
-    c = n(731290),
-    u = n(594174),
-    d = n(91159),
-    p = n(593130),
-    h = n(388032),
-    f = n(568592);
-function m(e) {
+    l = n(481060),
+    a = n(622822),
+    o = n(665149),
+    s = n(91159),
+    c = n(593130),
+    u = n(388032),
+    d = n(568592);
+function p(e) {
     let { channel: t } = e,
-        [n, m] = i.useState(!1),
-        g = i.useRef(null),
-        b = (0, l.e7)([c.Z, u.default], () => {
-            let e = u.default.getCurrentUser();
-            return null == e || ((0, o.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
-        }, [t]),
-        _ = i.useCallback(() => {
-            m(!1);
+        [n, p] = i.useState(!1),
+        h = i.useRef(null),
+        f = (0, a.$5)(t),
+        m = i.useCallback(() => {
+            p(!1);
         }, []),
-        y = i.useCallback(() => {
-            n || (0, d.U4)("Popout"), m(!n);
+        g = i.useCallback(() => {
+            n || (0, s.U4)("Popout"), p(!n);
         }, [n]);
-    return (0, r.jsx)(a.yRy, {
-        targetElementRef: g,
-        animation: a.yRy.Animation.NONE,
+    return (0, r.jsx)(l.yRy, {
+        targetElementRef: h,
+        animation: l.yRy.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: _,
+        onRequestClose: m,
         renderPopout: function () {
-            return (0, r.jsx)(a.VqE, {
-                children: (0, r.jsx)(p.Z, {
-                    className: f.browser,
+            return (0, r.jsx)(l.VqE, {
+                children: (0, r.jsx)(c.Z, {
+                    className: d.browser,
                     channel: t,
-                    onClose: _,
+                    onClose: m,
                 }),
             });
         },
         clickTrap: !0,
         children: (e, t) => {
             var n, i;
-            let { isShown: l } = t;
+            let { isShown: a } = t;
             return (0, r.jsx)(
-                s.JO,
+                o.JO,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,14 +69,14 @@ function m(e) {
                 })({}, e)),
                 (i = i =
                     {
-                        ref: g,
-                        className: f.icon,
-                        onClick: y,
-                        icon: a.or_,
-                        "aria-label": h.intl.string(h.t.B2panJ),
-                        tooltip: l ? null : h.intl.string(h.t.B2panJ),
-                        disabled: b,
-                        selected: l,
+                        ref: h,
+                        className: d.icon,
+                        onClick: g,
+                        icon: l.or_,
+                        "aria-label": u.intl.string(u.t.B2panJ),
+                        tooltip: a ? null : u.intl.string(u.t.B2panJ),
+                        disabled: f,
+                        selected: a,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

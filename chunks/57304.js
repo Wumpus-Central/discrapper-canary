@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -6,14 +6,12 @@ var r = n(951288),
     o = n(23536),
     s = n(40851),
     c = n(622822),
-    u = n(731290),
-    d = n(306680),
-    p = n(594174),
-    h = n(585483),
-    f = n(665149),
-    m = n(981631),
-    g = n(388032);
-function b(e) {
+    u = n(306680),
+    d = n(585483),
+    p = n(665149),
+    h = n(981631),
+    f = n(388032);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +36,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,46 +54,43 @@ function _(e, t) {
         e
     );
 }
-let y = function (e) {
+let b = function (e) {
     let { channel: t } = e,
-        n = (0, l.e7)([u.Z, p.default], () => {
-            let e = p.default.getCurrentUser();
-            return null == e || ((0, c.aC)(t) && (!e.nsfwAllowed || !u.Z.didAgree(t.getGuildId())));
-        }, [t]),
-        [y, C] = i.useState(!1),
-        x = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
-        v = (0, s.Aq)(),
-        O = i.useRef(null),
-        j = i.useCallback(() => {
-            n || C((e) => !e);
+        n = (0, c.$5)(t),
+        [b, y] = i.useState(!1),
+        _ = (0, l.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
+        C = (0, s.Aq)(),
+        x = i.useRef(null),
+        v = i.useCallback(() => {
+            n || y((e) => !e);
         }, [n]);
-    function E(e) {
-        (null == e ? void 0 : e.shiftKey) || v.dispatch(m.CkL.POPOUT_CLOSE);
+    function O(e) {
+        (null == e ? void 0 : e.shiftKey) || C.dispatch(h.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, j),
+                d.S.subscribe(h.CkL.TOGGLE_CHANNEL_PINS, v),
                 () => {
-                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, j);
+                    d.S.unsubscribe(h.CkL.TOGGLE_CHANNEL_PINS, v);
                 }
             ),
-            [j],
+            [v],
         ),
         (0, r.jsx)(a.yRy, {
-            targetElementRef: O,
-            shouldShow: y,
+            targetElementRef: x,
+            shouldShow: b,
             animation: a.yRy.Animation.NONE,
             position: "bottom",
             align: "right",
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => C(!1),
+            onRequestClose: () => y(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
                     o.Z,
-                    _(b({}, e), {
-                        onJump: E,
+                    g(m({}, e), {
+                        onJump: O,
                         channel: t,
                     }),
                 );
@@ -104,16 +99,16 @@ let y = function (e) {
             children: (e, t) => {
                 let { isShown: i } = t;
                 return (0, r.jsx)(
-                    f.JO,
-                    _(b({}, e), {
-                        ref: O,
-                        onClick: j,
-                        tooltip: i ? null : g.intl.string(g.t["mp1N//"]),
+                    p.JO,
+                    g(m({}, e), {
+                        ref: x,
+                        onClick: v,
+                        tooltip: i ? null : f.intl.string(f.t["mp1N//"]),
                         icon: a.qQX,
                         iconSize: 20,
-                        "aria-label": g.intl.string(g.t["mp1N//"]),
+                        "aria-label": f.intl.string(f.t["mp1N//"]),
                         disabled: n,
-                        showBadge: x,
+                        showBadge: _,
                         selected: i,
                     }),
                 );

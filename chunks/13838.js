@@ -27,16 +27,14 @@ var r = n(392711),
     P = n(981631);
 let j = (e) => (0, I.Z)(e).required().keys({ channel_id: e.string().required() });
 function x(e) {
-    var t;
     let {
-            args: { channel_id: n },
-            socket: r,
+            args: { channel_id: t },
+            socket: n,
         } = e,
-        i = f.Z.getChannel(n);
-    if (null == i || !(0, y.zM)(i, r.application.id, r.authorization.scopes))
-        throw new E.Z({ errorCode: P.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(n));
-    if ((0, s.aC)(i) && (null == (t = _.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) !== !0)
-        throw new E.Z({ errorCode: P.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(i.id));
+        r = f.Z.getChannel(t);
+    if (null == r || !(0, y.zM)(r, n.application.id, n.authorization.scopes))
+        throw new E.Z({ errorCode: P.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
+    if ((0, s.ft)(r)) throw new E.Z({ errorCode: P.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
 }
 let A = (e) => (0, I.Z)(e).keys({ channel_id: e.string().allow(null) });
 function Z(e) {
