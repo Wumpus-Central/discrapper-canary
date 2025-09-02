@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(442837),
-    a = n(755721),
+    a = n(442837),
+    o = n(755721),
     s = n(100527),
     l = n(906732),
     c = n(556019),
@@ -20,17 +20,19 @@ function E(e) {
         [E, b] = i.useState(!1),
         y = (0, l.ZP)(s.Z.EMOJI_PICKER),
         [O, v] = i.useState(!1),
-        I = (0, o.e7)([h.Z], () => h.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        T = (0, c.qt)({
+        I = (0, a.e7)([h.Z], () => h.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        S = (0, c.qt)({
             autoTrackExposure: !1,
             location: s.Z.EMOJI_PICKER,
         }),
-        { availableEmojiSlots: S } = (0, d.t)({ guild: null != I ? I : null }),
+        { availableEmojiSlots: T } = (0, d.t)({ guild: null != I ? I : null }),
         { canCreateExpressions: A } = (0, p.XJ)(I),
-        C = O || E || 0 === S || !A,
-        N = i.useCallback(async () => {
-            if (C || T.isSelectFileBeforeEmojiStudioExperimentEnabled) return;
-            if ((v(!0), T.enabled)) {
+        C = 0 === T || !A,
+        N = !S.isSelectFileBeforeEmojiStudioExperimentEnabled && C,
+        R = O || E || N,
+        P = i.useCallback(async () => {
+            if (R || S.isSelectFileBeforeEmojiStudioExperimentEnabled) return;
+            if ((v(!0), S.enabled)) {
                 var e;
                 await (0, u.i)({
                     guildId: null != (e = null == t ? void 0 : t.guild_id) ? e : null,
@@ -43,15 +45,15 @@ function E(e) {
                 return;
             }
             if (null == t) return void v(!1);
-            let n = T.isEntrypointOnlyExperimentEnabled || T.isEmojiEditingExperimentEnabled;
+            let n = S.isEntrypointOnlyExperimentEnabled || S.isEmojiEditingExperimentEnabled;
             f.Ku({
                 guildId: t.guild_id,
                 autoOpenFileInput: n,
                 analyticsLocation: y,
             }),
                 v(!1);
-        }, [t, y, T, C]),
-        R = i.useCallback(
+        }, [t, y, S, R]),
+        w = i.useCallback(
             async (e, n, r) => {
                 var i;
                 v(!0),
@@ -71,22 +73,22 @@ function E(e) {
             },
             [t],
         );
-    return (0, r.jsxs)(a.zx, {
+    return (0, r.jsxs)(o.zx, {
         tabIndex: -1,
-        color: a.zx.Colors.PRIMARY,
-        size: a.zx.Sizes.MEDIUM,
-        onClick: N,
-        disabled: C,
+        color: o.zx.Colors.PRIMARY,
+        size: o.zx.Sizes.MEDIUM,
+        onClick: P,
+        disabled: R,
         submitting: E,
         focusProps: { within: !0 },
         children: [
             g.intl.string(g.t.iMJO39),
-            T.isSelectFileBeforeEmojiStudioExperimentEnabled
+            S.isSelectFileBeforeEmojiStudioExperimentEnabled
                 ? (0, r.jsx)(_.ZP, {
                       ref: n,
                       tabIndex: 0,
-                      disabled: C,
-                      onChange: R,
+                      disabled: R,
+                      onChange: w,
                       setLoading: b,
                   })
                 : null,
