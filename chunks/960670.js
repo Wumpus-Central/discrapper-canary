@@ -1,14 +1,15 @@
-r.d(t, { default: () => a }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(951288),
     o = r(647438),
-    c = r(481060),
-    i = r(388032),
-    l = r(905935);
-function a(e) {
+    c = r(755721),
+    i = r(481060),
+    l = r(388032),
+    a = r(905935);
+function b(e) {
     var t,
         r,
-        { header: a, body: s, onSubmit: b } = e,
-        u = (function (e, t) {
+        { header: b, body: s, onSubmit: u } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -29,9 +30,9 @@ function a(e) {
             }
             return o;
         })(e, ["header", "body", "onSubmit"]);
-    let [p, f] = o.useState(!1);
+    let [f, O] = o.useState(!1);
     return (0, n.jsxs)(
-        c.ConfirmModal,
+        i.ConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -58,30 +59,30 @@ function a(e) {
             return e;
         })(
             {
-                header: a,
-                confirmText: i.intl.string(i.t["26C4oq"]),
-                cancelText: i.intl.string(i.t["ETE/oK"]),
+                header: b,
+                confirmText: l.intl.string(l.t["26C4oq"]),
+                cancelText: l.intl.string(l.t["ETE/oK"]),
                 onConfirm: () => {
-                    b(null, p);
+                    u(null, f);
                 },
             },
-            u,
+            p,
         )),
         (r = r =
             {
                 children: [
-                    (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: "text-md/normal",
                         children: s,
                     }),
-                    (0, n.jsx)(c.XZJ, {
-                        type: c.XZJ.Types.INVERTED,
-                        value: p,
-                        onChange: () => f((e) => !e),
-                        className: l.checkbox,
-                        children: (0, n.jsx)(c.Text, {
+                    (0, n.jsx)(c.$q, {
+                        type: c.M0.INVERTED,
+                        value: f,
+                        onChange: () => O((e) => !e),
+                        className: a.checkbox,
+                        children: (0, n.jsx)(i.Text, {
                             variant: "text-md/normal",
-                            children: i.intl.string(i.t.bq3JXl),
+                            children: l.intl.string(l.t.bq3JXl),
                         }),
                     }),
                 ],

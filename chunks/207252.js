@@ -13,17 +13,17 @@ var c = n(951288),
     m = n(112847),
     _ = n(516954);
 function b(e) {
-    let { guildId: t, transitionState: n, onClose: b, onConfirm: g } = e,
-        k = (0, a.Dt)(),
+    let { guildId: t, transitionState: n, onClose: b, onConfirm: k } = e,
+        g = (0, a.Dt)(),
         C = (0, r.e7)([d.Z], () => d.Z.theme),
         p = (0, l.wj)(C) ? m : _,
         { rules: y, rulesAccepted: E } = (0, u.V)(t),
         f = i.useCallback(() => {
-            b(), g();
-        }, [b, g]);
+            b(), k();
+        }, [b, k]);
     return (0, c.jsxs)(s.Y0X, {
         transitionState: n,
-        "aria-labelledby": k,
+        "aria-labelledby": g,
         className: x.modal,
         parentComponent: "GuildSettingsJoinRulesDiscoveryModal",
         children: [
@@ -45,7 +45,7 @@ function b(e) {
                             (0, c.jsx)(s.X6q, {
                                 variant: "heading-xxl/semibold",
                                 color: "header-primary",
-                                id: k,
+                                id: g,
                                 children: h.intl.string(h.t.Q8OFNz),
                             }),
                         ],
@@ -60,12 +60,12 @@ function b(e) {
                         className: x.checkboxContainer,
                         children: y.map((e) =>
                             (0, c.jsxs)(
-                                s.XZJ,
+                                o.$q,
                                 {
                                     className: x.checkbox,
                                     reverse: !0,
                                     value: e.checked,
-                                    align: s.XZJ.Aligns.CENTER,
+                                    align: o.wb.CENTER,
                                     onChange: e.onCheck,
                                     children: [
                                         (0, c.jsx)(s.Text, {

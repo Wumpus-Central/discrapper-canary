@@ -76,7 +76,7 @@ function Z(e, t) {
     }
     return n;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function V(e, t) {
         e
     );
 }
-let F = 88,
+let V = 88,
     H = "remove-wallpaper",
     Y = 0.5,
     W = 250;
@@ -230,7 +230,7 @@ function q(e) {
                     className: o()(d, t && U.wallpaperSelected),
                     children: (0, r.jsx)(
                         _.P3F,
-                        V(B({}, e, p), {
+                        F(B({}, e, p), {
                             className: U.wallpaperSelectionClickableContainer,
                             tabIndex: p.tabIndex,
                             onClick: t ? L.dG4 : () => n(a),
@@ -277,8 +277,8 @@ function X(e) {
                   (0, r.jsx)("img", {
                       src: (0, E.I)(o.icon),
                       alt: s,
-                      width: F,
-                      height: F,
+                      width: V,
+                      height: V,
                       draggable: !1,
                       className: U.wallpaperImage,
                   }),
@@ -309,8 +309,8 @@ function J(e) {
         className: U.footerContainerStack,
         padding: 16,
         children: [
-            (0, r.jsx)(_.XZJ, {
-                type: _.XZJ.Types.INVERTED,
+            (0, r.jsx)(f.$q, {
+                type: f.M0.INVERTED,
                 value: i,
                 onChange: (e, t) => {
                     S.default.track(L.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), a(t);
@@ -389,12 +389,12 @@ let ee = function (e) {
     let G = (0, u.e7)([C.Z], () => C.Z.isFetchingWallpapers),
         B = (0, u.e7)([C.Z], () => C.Z.failedToFetchWallpapers),
         Z = (0, u.e7)([C.Z], () => C.Z.getWallpaperById(null == g ? void 0 : g.wallpaperId)),
-        V = i.useRef(null),
-        F = i.useRef(null);
-    (0, _.Tbt)(F),
+        F = i.useRef(null),
+        V = i.useRef(null);
+    (0, _.Tbt)(V),
         i.useEffect(() => {
-            F.current = V.current;
-        }, [V]),
+            V.current = F.current;
+        }, [F]),
         i.useEffect(() => {
             null != Z && y(Z.isBlurred && E);
         }, [Z, E]);
@@ -461,7 +461,7 @@ let ee = function (e) {
     i.useEffect(() => {
         let e = (e) => {
             var t;
-            F.current = (null == (t = V.current) ? void 0 : t.contains(e.target)) ? V.current : null;
+            V.current = (null == (t = F.current) ? void 0 : t.contains(e.target)) ? F.current : null;
         };
         return (
             document.addEventListener("mousedown", e),
@@ -469,7 +469,7 @@ let ee = function (e) {
                 document.removeEventListener("mousedown", e);
             }
         );
-    }, [V]);
+    }, [F]);
     let ei = null == c && (null == s ? void 0 : s.pickerType) !== A.j.COACHMARK,
         ea = null;
     return (
@@ -545,7 +545,7 @@ let ee = function (e) {
                 topOffset: 88,
                 children: (0, r.jsxs)("div", {
                     className: U.container,
-                    ref: V,
+                    ref: F,
                     onKeyDown: er,
                     children: [
                         (null == s ? void 0 : s.pickerType) === A.j.COACHMARK
@@ -559,7 +559,7 @@ let ee = function (e) {
                               }),
                         (0, r.jsx)("div", { className: U.divider }),
                         (0, r.jsx)(_.JcV, {
-                            containerRef: V,
+                            containerRef: F,
                             children: ea,
                         }),
                     ],

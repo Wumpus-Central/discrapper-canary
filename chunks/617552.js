@@ -1,12 +1,13 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(82659),
-    o = n(481060),
-    s = n(153867),
-    l = n(740492),
-    c = n(388032);
-function u(e, t, n) {
+    o = n(755721),
+    s = n(481060),
+    l = n(153867),
+    c = n(740492),
+    u = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,22 +48,22 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +71,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,67 +80,67 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function g(e) {
     var { onConfirm: t, onCancel: n } = e,
-        l = p(e, ["onConfirm", "onCancel"]);
-    let [u, f] = i.useState(!1);
+        c = h(e, ["onConfirm", "onCancel"]);
+    let [d, _] = i.useState(!1);
     i.useEffect(
         () => () => {
-            u && s.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 });
+            d && l.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 });
         },
-        [u],
+        [d],
     );
-    let h = () => {
-            null == n || n(), l.onClose();
+    let m = () => {
+            null == n || n(), c.onClose();
         },
-        m = () => {
-            t(), l.onClose();
+        g = () => {
+            t(), c.onClose();
         };
     return (0, r.jsx)(
         a.Modal,
-        _(d({}, l), {
+        p(f({}, c), {
             size: "md",
-            title: c.intl.string(c.t.ye21jI),
-            subtitle: c.intl.string(c.t.hbagWF),
+            title: u.intl.string(u.t.ye21jI),
+            subtitle: u.intl.string(u.t.hbagWF),
             actions: [
                 {
-                    text: c.intl.string(c.t.B8pz39),
-                    onClick: h,
+                    text: u.intl.string(u.t.B8pz39),
+                    onClick: m,
                     variant: "secondary",
                 },
                 {
-                    text: c.intl.string(c.t.makWn5),
-                    onClick: m,
+                    text: u.intl.string(u.t.makWn5),
+                    onClick: g,
                     variant: "primary",
                 },
             ],
-            actionBarInput: (0, r.jsx)(o.XZJ, {
-                value: u,
-                onChange: (e, t) => f(t),
-                type: o.XZJ.Types.DEFAULT,
-                children: (0, r.jsx)(o.Text, {
+            actionBarInput: (0, r.jsx)(o.$q, {
+                value: d,
+                onChange: (e, t) => _(t),
+                type: o.M0.DEFAULT,
+                children: (0, r.jsx)(s.Text, {
                     variant: "text-sm/normal",
                     color: "text-secondary",
-                    children: c.intl.string(c.t.wGAwOT),
+                    children: u.intl.string(u.t.wGAwOT),
                 }),
             }),
         }),
     );
 }
-function g(e) {
+function E(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: i = !1 } = e;
-    l.ZP.disableEmbeddedActivityPopOutAlert
+    c.ZP.disableEmbeddedActivityPopOutAlert
         ? t()
-        : (0, o.h7j)(
+        : (0, s.h7j)(
               (e) =>
                   (0, r.jsx)(
-                      m,
-                      _(d({}, e), {
+                      g,
+                      p(f({}, e), {
                           onConfirm: t,
                           onCancel: n,
                       }),
                   ),
               {},
-              i ? o.u1M : void 0,
+              i ? s.u1M : void 0,
           );
 }

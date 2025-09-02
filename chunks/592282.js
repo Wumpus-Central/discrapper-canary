@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(761224),
     c = n(670596),
     u = n(743236),
-    d = n(481060),
+    d = n(755721),
     f = n(939350),
     _ = n(334405);
 function p(e, t, n) {
@@ -118,8 +118,8 @@ function E(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: _.iconContainer,
-                        children: (0, r.jsx)(d.FZ5, {
-                            shape: d.XZJ.Shapes.BOX,
+                        children: (0, r.jsx)(d.Ik, {
+                            shape: d.zV.BOX,
                             size: 20,
                             value: a,
                             disabled: m,

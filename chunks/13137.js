@@ -1,180 +1,181 @@
-n.d(t, { Z: () => y }), n(388685);
-var o = n(951288),
-    r = n(647438),
+n.d(t, { Z: () => j }), n(388685);
+var r = n(951288),
+    l = n(647438),
     i = n(120356),
-    l = n.n(i),
+    o = n.n(i),
     a = n(392711),
     s = n.n(a),
-    c = n(481060),
-    u = n(493773),
-    d = n(110924),
-    b = n(600164),
-    m = n(313201),
+    c = n(755721),
+    u = n(481060),
+    m = n(493773),
+    b = n(110924),
+    d = n(600164),
+    f = n(313201),
     p = n(572539),
-    f = n(63063),
-    _ = n(764920),
-    O = n(531578),
-    g = n(388032),
+    _ = n(63063),
+    O = n(764920),
+    g = n(531578),
+    y = n(388032),
     h = n(50312);
 let v = (e) =>
     s().shuffle(
         e.map((e) => {
-            var t, n, o;
+            var t, n, r;
             return (
                 (n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            o = Object.keys(n);
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (o = o.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            o.forEach(function (t) {
-                                var o;
-                                (o = n[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: o,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = o);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })({}, e)),
-                (o = o =
+                (r = r =
                     {
                         problemOptions: s()
                             .shuffle(e.problemOptions)
                             .concat(null != (t = e.freeformConfig) ? t : []),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var o = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, o);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(r)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
                 n
             );
         }),
     );
-function y(e) {
+function j(e) {
     var t;
     let n,
         i,
         {
             onMount: a,
-            onSubmit: y,
-            onClose: j,
-            ratingHeader: w,
-            ratingBody: x,
-            ratingOptions: C,
-            ratingEmojiKind: E,
-            initialRating: P = null,
-            categoriesHeader: k,
-            optionsTree: S,
-            hideDontShowAgainCheckbox: D,
-            impression: L,
-            transitionState: R,
+            onSubmit: j,
+            onClose: x,
+            ratingHeader: S,
+            ratingBody: w,
+            ratingOptions: E,
+            ratingEmojiKind: k,
+            initialRating: C = null,
+            categoriesHeader: P,
+            optionsTree: R,
+            hideDontShowAgainCheckbox: T,
+            impression: N,
+            transitionState: L,
         } = e,
-        N = (0, d.Z)(S),
-        [F, I] = r.useState(v(S));
-    r.useEffect(() => {
-        s().isEqual(N, S) || I(v(S));
-    }, [S, N]);
-    let Z = (0, m.Dt)(),
-        [T, B] = r.useState(!1),
-        [A, M] = r.useState(P),
-        [V, H] = r.useState(null),
-        [U, K] = r.useState(null),
-        [z, J] = r.useState("");
-    (0, u.ZP)(() => (null == a ? void 0 : a())),
-        (0, u.zq)(() => {
+        F = (0, b.Z)(R),
+        [D, I] = l.useState(v(R));
+    l.useEffect(() => {
+        s().isEqual(F, R) || I(v(R));
+    }, [R, F]);
+    let B = (0, f.Dt)(),
+        [M, Z] = l.useState(!1),
+        [H, A] = l.useState(C),
+        [V, z] = l.useState(null),
+        [X, Y] = l.useState(null),
+        [K, U] = l.useState("");
+    (0, m.ZP)(() => (null == a ? void 0 : a())),
+        (0, m.zq)(() => {
             var e;
-            y({
-                rating: A,
+            j({
+                rating: H,
                 category: null != (e = null == V ? void 0 : V.value) ? e : null,
-                problem: U,
-                dontShowAgain: T,
-                feedback: z,
+                problem: X,
+                dontShowAgain: M,
+                feedback: K,
             });
         });
-    let X = !0,
-        W = !1;
+    let G = !0,
+        q = !1;
     return (
-        null == A
-            ? ((n = (0, o.jsxs)(o.Fragment, {
+        null == H
+            ? ((n = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, o.jsx)(c.xJW, {
-                          className: l()(h.problemInfo, h.ratingSelectorContainer),
-                          children: (0, o.jsx)(_.Z, {
-                              ratingOptions: C,
-                              emojiKind: E,
-                              selectedRating: A,
+                      (0, r.jsx)(u.xJW, {
+                          className: o()(h.problemInfo, h.ratingSelectorContainer),
+                          children: (0, r.jsx)(O.Z, {
+                              ratingOptions: E,
+                              emojiKind: k,
+                              selectedRating: H,
                               onChangeRating: function (e) {
-                                  M(e), e === O.aZ.GOOD && j();
+                                  A(e), e === g.aZ.GOOD && x();
                               },
                           }),
                       }),
-                      !D &&
-                          (0, o.jsx)(c.mzw, {
+                      !T &&
+                          (0, r.jsx)(u.mzw, {
                               className: h.footer,
-                              direction: b.Z.Direction.HORIZONTAL,
-                              children: (0, o.jsx)(c.XZJ, {
-                                  type: c.XZJ.Types.INVERTED,
+                              direction: d.Z.Direction.HORIZONTAL,
+                              children: (0, r.jsx)(c.$q, {
+                                  type: c.M0.INVERTED,
                                   size: 18,
-                                  value: T,
-                                  onChange: () => B(!T),
-                                  children: (0, o.jsx)(c.Text, {
+                                  value: M,
+                                  onChange: () => Z(!M),
+                                  children: (0, r.jsx)(u.Text, {
                                       variant: "text-sm/normal",
-                                      children: g.intl.string(g.t["5E9SBw"]),
+                                      children: y.intl.string(y.t["5E9SBw"]),
                                   }),
                               }),
                           }),
                   ],
               })),
-              (X = !1))
-            : A !== O.aZ.GOOD && null == V
-              ? ((n = (0, o.jsx)(c.hzk, {
+              (G = !1))
+            : H !== g.aZ.GOOD && null == V
+              ? ((n = (0, r.jsx)(u.hzk, {
                     className: h.__invalid_content,
-                    children: (0, o.jsx)(c.xJW, {
-                        title: k,
+                    children: (0, r.jsx)(u.xJW, {
+                        title: P,
                         titleClassName: h.noTitleCase,
-                        className: l()(h.problemInfo, h.presetList, { [h.marginBottom16]: D }),
-                        children: (0, o.jsx)(p.Z, {
-                            options: F,
-                            onClick: H,
+                        className: o()(h.problemInfo, h.presetList, { [h.marginBottom16]: T }),
+                        children: (0, r.jsx)(p.Z, {
+                            options: D,
+                            onClick: z,
                             hideCaret: () => !0,
                         }),
                     }),
                 })),
-                (i = () => M(null)))
-              : null != V && null == U
-                ? ((n = (0, o.jsx)(c.hzk, {
+                (i = () => A(null)))
+              : null != V && null == X
+                ? ((n = (0, r.jsx)(u.hzk, {
                       className: h.__invalid_content,
-                      children: (0, o.jsx)(c.xJW, {
+                      children: (0, r.jsx)(u.xJW, {
                           title: V.problemsHeader,
                           titleClassName: h.noTitleCase,
-                          className: l()(h.problemInfo, h.presetList, { [h.marginBottom16]: D }),
-                          children: (0, o.jsx)(p.Z, {
+                          className: o()(h.problemInfo, h.presetList, { [h.marginBottom16]: T }),
+                          children: (0, r.jsx)(p.Z, {
                               options: V.problemOptions,
                               onClick: function (e) {
                                   var t;
-                                  K(e),
+                                  Y(e),
                                       null != V &&
                                           null != e &&
                                           (null == (t = V.freeformConfig) ? void 0 : t.value) !== e.value &&
-                                          j();
+                                          x();
                               },
                               hideCaret: (e) => {
                                   var t;
@@ -184,79 +185,79 @@ function y(e) {
                           }),
                       }),
                   })),
-                  (i = () => H(null)))
+                  (i = () => z(null)))
                 : null != V &&
-                  null != U &&
-                  (null == (t = V.freeformConfig) ? void 0 : t.value) === U.value &&
-                  ((n = (0, o.jsx)(c.hzk, {
+                  null != X &&
+                  (null == (t = V.freeformConfig) ? void 0 : t.value) === X.value &&
+                  ((n = (0, r.jsx)(u.hzk, {
                       className: h.__invalid_content,
-                      children: (0, o.jsxs)(c.xJW, {
-                          title: g.intl.string(g.t.h95hcn),
+                      children: (0, r.jsxs)(u.xJW, {
+                          title: y.intl.string(y.t.h95hcn),
                           titleClassName: h.noTitleCase,
                           className: h.problemInfo,
                           children: [
-                              (0, o.jsx)(c.Kx8, {
-                                  value: z,
-                                  maxLength: O.iF,
-                                  onChange: J,
+                              (0, r.jsx)(u.Kx8, {
+                                  value: K,
+                                  maxLength: g.iF,
+                                  onChange: U,
                               }),
                               !V.freeformConfig.hideHelpdeskLink &&
-                                  (0, o.jsx)(c.Text, {
+                                  (0, r.jsx)(u.Text, {
                                       className: h.helpdeskLink,
                                       variant: "text-xs/normal",
                                       color: "text-muted",
-                                      children: g.intl.format(g.t.ybi2tL, { helpdeskURL: f.Z.getSubmitRequestURL() }),
+                                      children: y.intl.format(y.t.ybi2tL, { helpdeskURL: _.Z.getSubmitRequestURL() }),
                                   }),
                           ],
                       }),
                   })),
                   (i = () => {
-                      J(""), K(null);
+                      U(""), Y(null);
                   }),
-                  (W = !0)),
-        (0, o.jsxs)(c.Y0X, {
-            impression: L,
-            transitionState: R,
+                  (q = !0)),
+        (0, r.jsxs)(u.Y0X, {
+            impression: N,
+            transitionState: L,
             className: h.modalRoot,
-            "aria-labelledby": Z,
+            "aria-labelledby": B,
             parentComponent: "FeedbackModalV2",
             children: [
-                (0, o.jsxs)(c.xBx, {
+                (0, r.jsxs)(u.xBx, {
                     separator: !1,
                     className: h.headerContainer,
                     children: [
-                        (0, o.jsx)(c.X6q, {
-                            id: Z,
+                        (0, r.jsx)(u.X6q, {
+                            id: B,
                             variant: "heading-xl/extrabold",
                             color: "none",
-                            children: w,
+                            children: S,
                         }),
-                        (0, o.jsx)(c.Text, {
+                        (0, r.jsx)(u.Text, {
                             variant: "text-md/normal",
                             color: "none",
                             className: h.ratingBody,
-                            children: x,
+                            children: w,
                         }),
                     ],
                 }),
                 n,
-                X &&
-                    (0, o.jsxs)(c.mzw, {
+                G &&
+                    (0, r.jsxs)(u.mzw, {
                         className: h.footer,
-                        direction: b.Z.Direction.HORIZONTAL,
+                        direction: d.Z.Direction.HORIZONTAL,
                         children: [
-                            (0, o.jsx)(c.zxk, {
+                            (0, r.jsx)(u.zxk, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: g.intl.string(g.t["13/7kZ"]),
+                                text: y.intl.string(y.t["13/7kZ"]),
                                 onClick: i,
                             }),
-                            W &&
-                                (0, o.jsx)(c.zxk, {
+                            q &&
+                                (0, r.jsx)(u.zxk, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: g.intl.string(g.t.geKm7u),
-                                    onClick: j,
+                                    text: y.intl.string(y.t.geKm7u),
+                                    onClick: x,
                                 }),
                         ],
                     }),

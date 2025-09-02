@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(997841), n(388685);
+n.d(t, { Z: () => Z }), n(997841), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(699516),
     y = n(594174),
     _ = n(630388),
-    j = n(970257),
-    v = n(981631),
+    v = n(970257),
+    j = n(981631),
     x = n(388032),
     C = n(764295),
     E = n(477425);
@@ -75,8 +75,8 @@ class N extends i.PureComponent {
             t,
             { report: n, resolveFlag: i } = this.state,
             l = this.props,
-            { channel: o, message: s, showContextMenuHint: u, moderatorReportData: d } = l,
-            p = (function (e, t) {
+            { channel: o, message: u, showContextMenuHint: d, moderatorReportData: p } = l,
+            g = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -97,13 +97,13 @@ class N extends i.PureComponent {
                 }
                 return i;
             })(l, ["channel", "message", "showContextMenuHint", "moderatorReportData"]),
-            g = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(s.flags, v.iLy.CROSSPOSTED);
-        u &&
+            b = o.type === j.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(u.flags, j.iLy.CROSSPOSTED);
+        d &&
             (e = (0, r.jsx)(h.Z, {
                 className: E.spacingTop,
                 children: x.intl.format(x.t.IxY7Ex, {}),
             })),
-            (0, j.vc)(s) &&
+            (0, v.vc)(u) &&
                 (t = (0, r.jsx)(c.j7V, {
                     value: n,
                     onChange: this.handleToggleReport,
@@ -111,14 +111,14 @@ class N extends i.PureComponent {
                     className: E.spacingTop,
                     children: x.intl.string(x.t.x0jzo6),
                 }));
-        let b = g ? x.intl.string(x.t["2kHABQ"]) : x.intl.string(x.t.AMvpS0),
-            O = (0, r.jsxs)(r.Fragment, {
+        let O = b ? x.intl.string(x.t["2kHABQ"]) : x.intl.string(x.t.AMvpS0),
+            y = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
                         className: E.message,
                         children: (0, r.jsx)(m.Z, {
                             channel: o,
-                            message: s,
+                            message: u,
                             disableInteraction: !0,
                         }),
                     }),
@@ -126,13 +126,13 @@ class N extends i.PureComponent {
                     e,
                 ],
             });
-        if ((null == d ? void 0 : d.moderatorReportChannelId) != null) {
-            let { isFlagResolved: e } = d;
+        if ((null == p ? void 0 : p.moderatorReportChannelId) != null) {
+            let { isFlagResolved: e } = p;
             return (0, r.jsx)(f.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsxs)(
                     c.Y0X,
-                    I(P({ parentComponent: "DeleteModal" }, p), {
+                    I(P({ parentComponent: "DeleteModal" }, g), {
                         children: [
                             (0, r.jsx)(c.xBx, {
                                 separator: !1,
@@ -142,7 +142,7 @@ class N extends i.PureComponent {
                                     children: [
                                         (0, r.jsx)(c.olH, {
                                             className: E.closeButton,
-                                            onClick: p.onClose,
+                                            onClick: g.onClose,
                                         }),
                                         (0, r.jsx)(c.X6q, {
                                             variant: "heading-xl/bold",
@@ -156,9 +156,9 @@ class N extends i.PureComponent {
                                     (0, r.jsx)(c.X6q, {
                                         variant: "heading-md/medium",
                                         className: E.spacing,
-                                        children: b,
+                                        children: O,
                                     }),
-                                    O,
+                                    y,
                                 ],
                             }),
                             (0, r.jsxs)(c.mzw, {
@@ -171,7 +171,7 @@ class N extends i.PureComponent {
                                         onClick: this.handleDelete,
                                     }),
                                     !e &&
-                                        (0, r.jsx)(c.XZJ, {
+                                        (0, r.jsx)(s.$q, {
                                             value: i,
                                             onChange: (e, t) => this.handleToggleResolveFlag(t),
                                             children: x.intl.string(C.default["8yIKen"]),
@@ -186,12 +186,12 @@ class N extends i.PureComponent {
         return (0, r.jsx)(f.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(a.Modal, {
-                title: g ? x.intl.string(x.t.aIz1oa) : x.intl.string(x.t.MWMcg4),
-                subtitle: b,
+                title: b ? x.intl.string(x.t.aIz1oa) : x.intl.string(x.t.MWMcg4),
+                subtitle: O,
                 actions: [
                     {
                         text: x.intl.string(x.t["ETE/oK"]),
-                        onClick: p.onClose,
+                        onClick: g.onClose,
                         variant: "secondary",
                     },
                     {
@@ -200,9 +200,9 @@ class N extends i.PureComponent {
                         variant: "critical-primary",
                     },
                 ],
-                onClose: p.onClose,
-                transitionState: p.transitionState,
-                children: O,
+                onClose: g.onClose,
+                transitionState: g.transitionState,
+                children: y,
             }),
         });
     }
@@ -244,7 +244,7 @@ class N extends i.PureComponent {
             });
     }
 }
-let w = {
+let Z = {
     confirmPin: function (e, t) {
         (0, c.h7j)((n) => {
             let i,

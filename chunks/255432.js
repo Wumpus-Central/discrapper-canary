@@ -2,11 +2,11 @@ n.d(t, { a: () => h }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    a = n(178940),
-    o = n(540863),
-    s = n(619307),
-    l = n(993365),
-    c = n(463208),
+    a = n(540863),
+    o = n(619307),
+    s = n(993365),
+    l = n(463208),
+    c = n(755721),
     u = n(624315);
 function d(e, t, n) {
     return (
@@ -77,33 +77,33 @@ function h(e) {
                       let [i, u] = e,
                           d = null != (t = n[i]) ? t : u.defaultValue;
                       return (0, r.jsxs)(
-                          o.x,
+                          a.x,
                           {
                               title: "boolean" === u.type ? void 0 : u.label,
                               children: [
                                   "select" === u.type &&
                                       null != u.options &&
-                                      (0, r.jsx)(s.q4, {
+                                      (0, r.jsx)(o.q4, {
                                           value: d,
                                           onChange: (e) => _(i, e),
                                           options: u.options,
                                       }),
                                   "boolean" === u.type &&
-                                      (0, r.jsx)(a.X, {
+                                      (0, r.jsx)(c.$q, {
                                           value: d,
                                           onChange: (e, t) => _(i, t),
-                                          children: (0, r.jsx)(l.x, {
+                                          children: (0, r.jsx)(s.x, {
                                               variant: "text-md/medium",
                                               children: u.label,
                                           }),
                                       }),
                                   "text" === u.type &&
-                                      (0, r.jsx)(c.o, {
+                                      (0, r.jsx)(l.o, {
                                           value: d,
                                           onChange: (e) => _(i, e),
                                       }),
                                   "number" === u.type &&
-                                      (0, r.jsx)(c.o, {
+                                      (0, r.jsx)(l.o, {
                                           type: "number",
                                           value: String(d),
                                           min: u.minValue,

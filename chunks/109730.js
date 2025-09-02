@@ -42,24 +42,24 @@ function f(t) {
         A = null != (l = null != (e = null == v ? void 0 : v[0]) ? e : null == D ? void 0 : D[0]) ? l : null,
         j = (0, a.e7)([g.default], () => g.default.getUser(f), [f]),
         [K, b] = s.useState(O.UK.DURATION_60_SEC),
-        [M, Z] = s.useState(""),
-        [k, P] = s.useState(!1),
+        [M, k] = s.useState(""),
+        [P, Z] = s.useState(!1),
         [w, B] = s.useState(!1),
-        L = (0, a.e7)([h.Z], () => {
+        q = (0, a.e7)([h.Z], () => {
             var t;
             return null == (t = h.Z.getChannel(y)) ? void 0 : t.isArchivedThread();
         }),
-        q = (0, _.sE)(U, {
+        L = (0, _.sE)(U, {
             location: A,
             targetUserId: f,
         }),
         W = s.useCallback(async () => {
             if (null != j) {
-                P(!0);
+                Z(!0);
                 try {
                     await c.Z.setCommunicationDisabledDuration(U, f, K, M, A, y),
                         w && null != y && T.Z.resolveFlag(y),
-                        q(_.jQ.TIMEOUT),
+                        L(_.jQ.TIMEOUT),
                         (0, o.showToast)(
                             (0, o.createToast)(
                                 E.intl.formatToPlainString(E.t.O9C3Nj, { user: p.ZP.getName(U, null, j) }),
@@ -70,10 +70,10 @@ function f(t) {
                 } catch (t) {
                     (0, o.showToast)((0, o.createToast)(E.intl.string(E.t.epyCur), o.ToastType.FAILURE));
                 } finally {
-                    P(!1);
+                    Z(!1);
                 }
             }
-        }, [U, j, f, I, K, M, A, q, y, w]);
+        }, [U, j, f, I, K, M, A, L, y, w]);
     return ((0, u.ZP)(() => {
         null != j &&
             x.default.track(m.rMx.OPEN_MODAL, {
@@ -100,13 +100,13 @@ function f(t) {
                   {
                       text: E.intl.string(E.t.MlPTIi),
                       onClick: W,
-                      loading: k,
+                      loading: P,
                   },
               ],
               actionBarInput:
-                  null == y || L
+                  null == y || q
                       ? void 0
-                      : (0, n.jsx)(o.XZJ, {
+                      : (0, n.jsx)(i.$q, {
                             value: w,
                             onChange: (t, e) => {
                                 B(e);
@@ -151,7 +151,7 @@ function f(t) {
                               }),
                               (0, n.jsx)(o.Kx8, {
                                   value: M,
-                                  onChange: (t) => Z(t),
+                                  onChange: (t) => k(t),
                                   placeholder: E.intl.string(E.t.GakiHx),
                                   rows: 4,
                                   maxLength: O.GN,

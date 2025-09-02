@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
     a = n(149765),
-    o = n(178940),
-    s = n(993365),
+    o = n(993365),
+    s = n(755721),
     l = n(481060),
     c = n(422559),
     u = n(388032),
@@ -24,11 +24,11 @@ function f(e) {
                     "li",
                     {
                         className: d.permission,
-                        children: (0, r.jsx)(o.X, {
+                        children: (0, r.jsx)(s.$q, {
                             value: n,
                             onChange: (t, n) => _(n, e),
-                            type: o.X.Types.INVERTED,
-                            children: (0, r.jsx)(s.x, {
+                            type: s.M0.INVERTED,
+                            children: (0, r.jsx)(o.x, {
                                 variant: "text-md/normal",
                                 children: t,
                             }),
@@ -54,7 +54,7 @@ function f(e) {
                                     className: d.icon,
                                 }),
                             }),
-                            (0, r.jsx)(s.x, {
+                            (0, r.jsx)(o.x, {
                                 variant: "text-md/normal",
                                 children: t,
                             }),
@@ -69,7 +69,7 @@ function f(e) {
             g.length > 0
                 ? (0, r.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(s.x, {
+                          (0, r.jsx)(o.x, {
                               variant: "text-sm/medium",
                               color: "header-secondary",
                               children: u.intl.format(u.t.sOaT2t, {
@@ -87,7 +87,7 @@ function f(e) {
             E.length > 0
                 ? (0, r.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(s.x, {
+                          (0, r.jsx)(o.x, {
                               variant: "text-sm/medium",
                               color: "header-secondary",
                               children: u.intl.format(u.t.fsOkFx, { applicationName: t.name }),

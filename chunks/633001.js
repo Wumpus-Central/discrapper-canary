@@ -129,7 +129,7 @@ let X = {
             ),
     },
     Y = {};
-function J(e) {
+function q(e) {
     let { id: t } = e,
         [n, l] = r.useState(!1);
     return (
@@ -157,7 +157,7 @@ function J(e) {
         })
     );
 }
-let q = r.memo(function (e) {
+let J = r.memo(function (e) {
         let { trackedGame: t } = e,
             n = (0, d.e7)([v.ZP], () => v.ZP.getGameOrTransformedSubgameForPID(t.pid)),
             r = (0, d.e7)([P.Z], () => P.Z.getGameForPID(t.pid)),
@@ -189,7 +189,7 @@ let q = r.memo(function (e) {
                     (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
                         color: "text-primary",
-                        children: (0, a.jsx)(J, { id: t.applicationId }),
+                        children: (0, a.jsx)(q, { id: t.applicationId }),
                     }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
@@ -450,7 +450,7 @@ function en() {
             (0, a.jsxs)("div", {
                 className: V.panelHeader,
                 children: [
-                    (0, a.jsx)(m.XZJ, {
+                    (0, a.jsx)(u.$q, {
                         value: e,
                         onChange: () =>
                             void h.Z.setRenderDebugMode(
@@ -458,8 +458,8 @@ function en() {
                                 g.GO.TrackFocusPIDs,
                             ),
                         size: 18,
-                        type: m.XZJ.Types.INVERTED,
-                        shape: m.XZJ.Shapes.BOX,
+                        type: u.M0.INVERTED,
+                        shape: u.zV.BOX,
                         children: (0, a.jsx)(m.Text, {
                             tag: "span",
                             variant: "text-md/normal",
@@ -701,15 +701,15 @@ let ea = r.memo(function (e) {
             s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
             o = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.DisabledGPUBoost)),
             c = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ForceGPUBoost)),
-            u = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.OverlayRafManagerForceEnabled)),
-            x = (e) => {
+            x = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.OverlayRafManagerForceEnabled)),
+            p = (e) => {
                 h.Z.setRenderDebugMode(!C.ZP.hasRenderDebugMode(e), e);
             },
-            [p, f] = r.useState({});
+            [f, v] = r.useState({});
         return (
             r.useEffect(() => {
                 let e = setInterval(() => {
-                    f({});
+                    v({});
                 }, 200);
                 return () => clearInterval(e);
             }, []),
@@ -723,12 +723,12 @@ let ea = r.memo(function (e) {
                             (0, a.jsx)(
                                 "div",
                                 K(W({}, e), {
-                                    children: (0, a.jsx)(m.XZJ, {
+                                    children: (0, a.jsx)(u.$q, {
                                         value: i,
-                                        onChange: () => void x(g.GO.ClickZones),
+                                        onChange: () => void p(g.GO.ClickZones),
                                         size: 18,
-                                        type: m.XZJ.Types.INVERTED,
-                                        shape: m.XZJ.Shapes.BOX,
+                                        type: u.M0.INVERTED,
+                                        shape: u.zV.BOX,
                                         children: (0, a.jsx)(m.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -746,12 +746,12 @@ let ea = r.memo(function (e) {
                             (0, a.jsx)(
                                 "div",
                                 K(W({}, e), {
-                                    children: (0, a.jsx)(m.XZJ, {
+                                    children: (0, a.jsx)(u.$q, {
                                         value: s,
-                                        onChange: () => void x(g.GO.WidgetAreas),
+                                        onChange: () => void p(g.GO.WidgetAreas),
                                         size: 18,
-                                        type: m.XZJ.Types.INVERTED,
-                                        shape: m.XZJ.Shapes.BOX,
+                                        type: u.M0.INVERTED,
+                                        shape: u.zV.BOX,
                                         children: (0, a.jsx)(m.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -769,12 +769,12 @@ let ea = r.memo(function (e) {
                             (0, a.jsx)(
                                 "div",
                                 K(W({}, e), {
-                                    children: (0, a.jsx)(m.XZJ, {
+                                    children: (0, a.jsx)(u.$q, {
                                         value: o,
-                                        onChange: () => void x(g.GO.DisabledGPUBoost),
+                                        onChange: () => void p(g.GO.DisabledGPUBoost),
                                         size: 18,
-                                        type: m.XZJ.Types.INVERTED,
-                                        shape: m.XZJ.Shapes.BOX,
+                                        type: u.M0.INVERTED,
+                                        shape: u.zV.BOX,
                                         children: (0, a.jsx)(m.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -792,13 +792,13 @@ let ea = r.memo(function (e) {
                             (0, a.jsx)(
                                 "div",
                                 K(W({}, e), {
-                                    children: (0, a.jsx)(m.XZJ, {
+                                    children: (0, a.jsx)(u.$q, {
                                         value: c,
-                                        onChange: () => void x(g.GO.ForceGPUBoost),
+                                        onChange: () => void p(g.GO.ForceGPUBoost),
                                         size: 18,
                                         disabled: o,
-                                        type: m.XZJ.Types.INVERTED,
-                                        shape: m.XZJ.Shapes.BOX,
+                                        type: u.M0.INVERTED,
+                                        shape: u.zV.BOX,
                                         children: (0, a.jsx)(m.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -816,12 +816,12 @@ let ea = r.memo(function (e) {
                             (0, a.jsx)(
                                 "div",
                                 K(W({}, n), {
-                                    children: (0, a.jsx)(m.XZJ, {
+                                    children: (0, a.jsx)(u.$q, {
                                         value: null != e,
                                         onChange: () => t(),
                                         size: 18,
-                                        type: m.XZJ.Types.INVERTED,
-                                        shape: m.XZJ.Shapes.BOX,
+                                        type: u.M0.INVERTED,
+                                        shape: u.zV.BOX,
                                         children: (0, a.jsx)(m.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -839,12 +839,12 @@ let ea = r.memo(function (e) {
                             (0, a.jsx)(
                                 "div",
                                 K(W({}, e), {
-                                    children: (0, a.jsx)(m.XZJ, {
+                                    children: (0, a.jsx)(u.$q, {
                                         value: null != n,
                                         onChange: () => l(),
                                         size: 18,
-                                        type: m.XZJ.Types.INVERTED,
-                                        shape: m.XZJ.Shapes.BOX,
+                                        type: u.M0.INVERTED,
+                                        shape: u.zV.BOX,
                                         children: (0, a.jsx)(m.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -855,12 +855,12 @@ let ea = r.memo(function (e) {
                                 }),
                             ),
                     }),
-                    (0, a.jsx)(m.XZJ, {
-                        value: u,
-                        onChange: () => void x(g.GO.OverlayRafManagerForceEnabled),
+                    (0, a.jsx)(u.$q, {
+                        value: x,
+                        onChange: () => void p(g.GO.OverlayRafManagerForceEnabled),
                         size: 18,
-                        type: m.XZJ.Types.INVERTED,
-                        shape: m.XZJ.Shapes.BOX,
+                        type: u.M0.INVERTED,
+                        shape: u.zV.BOX,
                         children: (0, a.jsxs)(m.Text, {
                             tag: "span",
                             variant: "text-md/normal",
@@ -933,7 +933,7 @@ let ea = r.memo(function (e) {
                                                 color: "text-default",
                                                 children: "No running games",
                                             }),
-                                        Object.values(e).map((e) => (0, a.jsx)(q, { trackedGame: e }, e.pid)),
+                                        Object.values(e).map((e) => (0, a.jsx)(J, { trackedGame: e }, e.pid)),
                                     ],
                                 }),
                             }),

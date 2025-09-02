@@ -1,34 +1,35 @@
-n.d(t, { Z: () => U }), n(388685);
+n.d(t, { Z: () => G }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(512722),
     o = n.n(a),
     s = n(442837),
-    l = n(481060),
-    c = n(816814),
-    u = n(240872),
-    d = n(23645),
-    f = n(712364),
-    _ = n(279837),
-    p = n(600164),
-    h = n(144114),
-    m = n(921801),
-    g = n(607018),
-    E = n(778764),
-    b = n(314897),
-    y = n(325067),
-    O = n(594174),
-    v = n(572004),
-    I = n(287880),
-    T = n(714565),
-    S = n(202858),
-    A = n(726985),
-    C = n(981631),
-    N = n(815660),
-    R = n(388032),
-    P = n(343396),
-    w = n(197571);
-function D(e, t, n) {
+    l = n(755721),
+    c = n(481060),
+    u = n(816814),
+    d = n(240872),
+    f = n(23645),
+    _ = n(712364),
+    p = n(279837),
+    h = n(600164),
+    m = n(144114),
+    g = n(921801),
+    E = n(607018),
+    b = n(778764),
+    y = n(314897),
+    O = n(325067),
+    v = n(594174),
+    I = n(572004),
+    T = n(287880),
+    S = n(714565),
+    A = n(202858),
+    C = n(726985),
+    N = n(981631),
+    R = n(815660),
+    P = n(388032),
+    w = n(343396),
+    D = n(197571);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +42,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +53,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,18 +70,18 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e) {
+function k(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -88,36 +89,36 @@ function M(e) {
         o = i.useRef(null),
         s = i.useCallback(
             (e) => {
-                if ("c" === e.key && e.metaKey && v.wS) {
+                if ("c" === e.key && e.metaKey && I.wS) {
                     var t;
                     e.preventDefault(),
                         e.stopPropagation(),
-                        (0, v.JG)(a),
+                        (0, I.JG)(a),
                         null == o || null == (t = o.current) || t.focus();
                 }
             },
             [a],
         );
     return (0, r.jsx)("li", {
-        className: w.marginBottom20,
-        children: (0, r.jsx)(l.P3F, {
+        className: D.marginBottom20,
+        children: (0, r.jsx)(c.P3F, {
             innerRef: o,
-            className: P.backupCode,
+            className: w.backupCode,
             onKeyDown: s,
-            children: (0, r.jsx)(l.XZJ, {
+            children: (0, r.jsx)(l.$q, {
                 displayOnly: !0,
                 readOnly: !0,
-                className: P.codeCheckbox,
+                className: w.codeCheckbox,
                 value: n,
                 children: (0, r.jsx)("span", {
-                    className: P.code,
+                    className: w.code,
                     children: a,
                 }),
             }),
         }),
     });
 }
-class k extends i.PureComponent {
+class U extends i.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4));
     }
@@ -127,68 +128,68 @@ class k extends i.PureComponent {
             { revealed: n } = this.state,
             { currentUser: i, togglingSMS: a, hasTOTPEnabled: o } = this.props,
             s = null != i.phone,
-            c = i.hasFlag(C.xW$.MFA_SMS);
+            l = i.hasFlag(N.xW$.MFA_SMS);
         if (o) {
-            if (s || c) {
+            if (s || l) {
                 let e = n ? i.phone : this.maskPhoneNumber(i.phone);
-                t = (0, r.jsxs)(l.R94, {
-                    type: l.R94.Types.DESCRIPTION,
-                    className: w.marginBottom8,
+                t = (0, r.jsxs)(c.R94, {
+                    type: c.R94.Types.DESCRIPTION,
+                    className: D.marginBottom8,
                     children: [
-                        R.intl.format(R.t.PXVoEB, { phoneNumber: e }),
-                        (0, r.jsx)(l.eee, {
+                        P.intl.format(P.t.PXVoEB, { phoneNumber: e }),
+                        (0, r.jsx)(c.eee, {
                             onClick: this.togglePhoneNumberVisibility,
-                            className: P.phoneRevealer,
-                            children: n ? R.intl.string(R.t.FfltIC) : R.intl.string(R.t.llArAg),
+                            className: w.phoneRevealer,
+                            children: n ? P.intl.string(P.t.FfltIC) : P.intl.string(P.t.llArAg),
                         }),
                     ],
                 });
             }
-            if (c)
-                e = (0, r.jsx)(p.Z, {
-                    className: s ? "" : w.marginTop8,
-                    children: (0, r.jsx)(l.zxk, {
+            if (l)
+                e = (0, r.jsx)(h.Z, {
+                    className: s ? "" : D.marginTop8,
+                    children: (0, r.jsx)(c.zxk, {
                         variant: "critical-secondary",
                         size: "sm",
-                        text: R.intl.string(R.t.KLWnio),
+                        text: P.intl.string(P.t.KLWnio),
                         loading: a,
                         onClick: this.handleDisableSMS,
                     }),
                 });
             else {
-                let t = (0, T.c)(i);
-                e = (0, r.jsxs)(l.hE2, {
+                let t = (0, S.c)(i);
+                e = (0, r.jsxs)(c.hE2, {
                     size: "sm",
-                    className: s ? "" : w.marginTop8,
+                    className: s ? "" : D.marginTop8,
                     children: [
-                        (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(c.zxk, {
                             variant: "primary",
                             size: "sm",
-                            text: null != t ? t : R.intl.string(R.t.DZQe29),
+                            text: null != t ? t : P.intl.string(P.t.DZQe29),
                             onClick: this.handleEnableSMS,
                             loading: a,
                             disabled: null != t,
                         }),
                         s
-                            ? (0, r.jsx)(l.zxk, {
+                            ? (0, r.jsx)(c.zxk, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: R.intl.string(R.t.Ulqq6O),
+                                  text: P.intl.string(P.t.Ulqq6O),
                                   onClick: this.handleChangePhoneNumber,
                               })
                             : null,
                     ],
                 });
             }
-            return (0, r.jsx)(m.F, {
-                setting: A.s6.ACCOUNT_SMS_BACKUP,
-                children: (0, r.jsxs)(l.hjN, {
-                    className: w.marginTop40,
-                    title: R.intl.string(R.t.uHAJ5u),
+            return (0, r.jsx)(g.F, {
+                setting: C.s6.ACCOUNT_SMS_BACKUP,
+                children: (0, r.jsxs)(c.hjN, {
+                    className: D.marginTop40,
+                    title: P.intl.string(P.t.uHAJ5u),
                     children: [
-                        (0, r.jsx)(l.R94, {
-                            type: l.R94.Types.DESCRIPTION,
-                            children: R.intl.string(R.t.fspJ4O),
+                        (0, r.jsx)(c.R94, {
+                            type: c.R94.Types.DESCRIPTION,
+                            children: P.intl.string(P.t.fspJ4O),
                         }),
                         t,
                         e,
@@ -200,207 +201,207 @@ class k extends i.PureComponent {
     renderEnabled() {
         let e,
             { backupCodes: t } = this.props,
-            n = (0, r.jsx)(m.F, {
-                setting: A.s6.ACCOUNT_VIEW_BACKUP_CODES,
-                children: (0, r.jsx)(l.zxk, {
+            n = (0, r.jsx)(g.F, {
+                setting: C.s6.ACCOUNT_VIEW_BACKUP_CODES,
+                children: (0, r.jsx)(c.zxk, {
                     variant: "primary",
                     size: "sm",
-                    text: R.intl.string(R.t.xZEzbm),
+                    text: P.intl.string(P.t.xZEzbm),
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
                 }),
             });
         if (t.length > 0) {
-            n = (0, r.jsx)(d.Z, {
+            n = (0, r.jsx)(f.Z, {
                 fileContents: this.getDownloadFileContents,
                 contentType: "text/plain",
                 fileName: "discord_backup_codes.txt",
-                children: (0, r.jsx)(l.zxk, {
+                children: (0, r.jsx)(c.zxk, {
                     variant: "primary",
                     size: "sm",
-                    text: R.intl.string(R.t.qZZUy8),
+                    text: P.intl.string(P.t.qZZUy8),
                 }),
             });
-            let i = (e) => e.map((e) => (0, r.jsx)(M, { code: e }, e.code));
-            e = (0, r.jsxs)(l.hjN, {
-                title: R.intl.string(R.t.GfqHPj),
+            let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
+            e = (0, r.jsxs)(c.hjN, {
+                title: P.intl.string(P.t.GfqHPj),
                 children: [
-                    (0, r.jsx)(l.R94, {
-                        type: l.R94.Types.DESCRIPTION,
-                        className: w.marginBottom20,
-                        children: R.intl.format(R.t.OhmvYm, {}),
+                    (0, r.jsx)(c.R94, {
+                        type: c.R94.Types.DESCRIPTION,
+                        className: D.marginBottom20,
+                        children: P.intl.format(P.t.OhmvYm, {}),
                     }),
-                    (0, r.jsxs)(p.Z, {
+                    (0, r.jsxs)(h.Z, {
                         children: [
-                            (0, r.jsx)(p.Z.Child, {
+                            (0, r.jsx)(h.Z.Child, {
                                 children: (0, r.jsx)("ul", {
-                                    className: P.checkboxGroup,
+                                    className: w.checkboxGroup,
                                     children: i(t.slice(0, t.length / 2)),
                                 }),
                             }),
-                            (0, r.jsx)(p.Z.Child, {
+                            (0, r.jsx)(h.Z.Child, {
                                 children: (0, r.jsx)("ul", {
-                                    className: P.checkboxGroup,
+                                    className: w.checkboxGroup,
                                     children: i(t.slice(t.length / 2)),
                                 }),
                             }),
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        children: (0, r.jsx)(l.Avr, {
+                        children: (0, r.jsx)(c.Avr, {
                             textVariant: "text-sm/medium",
                             onClick: this.generateBackupCodes,
-                            text: R.intl.string(R.t.RIThUl),
+                            text: P.intl.string(P.t.RIThUl),
                         }),
                     }),
-                    (0, r.jsx)(l.$i$, { className: w.marginTop20 }),
+                    (0, r.jsx)(c.$i$, { className: D.marginTop20 }),
                 ],
             });
         }
-        return (0, r.jsxs)(l.hjN, {
+        return (0, r.jsxs)(c.hjN, {
             children: [
-                (0, r.jsx)(l.vwX, { children: R.intl.string(R.t.EPVq09) }),
-                (0, r.jsx)(l.R94, {
-                    type: l.R94.Types.DESCRIPTION,
-                    className: w.marginBottom20,
-                    children: R.intl.string(R.t.bQwxiY),
+                (0, r.jsx)(c.vwX, { children: P.intl.string(P.t.EPVq09) }),
+                (0, r.jsx)(c.R94, {
+                    type: c.R94.Types.DESCRIPTION,
+                    className: D.marginBottom20,
+                    children: P.intl.string(P.t.bQwxiY),
                 }),
-                (0, r.jsxs)(l.hE2, {
+                (0, r.jsxs)(c.hE2, {
                     size: "sm",
-                    className: w.marginBottom20,
+                    className: D.marginBottom20,
                     children: [
                         n,
-                        (0, r.jsx)(m.F, {
-                            setting: A.s6.ACCOUNT_REMOVE_2FA,
-                            children: (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(g.F, {
+                            setting: C.s6.ACCOUNT_REMOVE_2FA,
+                            children: (0, r.jsx)(c.zxk, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: R.intl.string(R.t["D+aE7u"]),
+                                text: P.intl.string(P.t["D+aE7u"]),
                                 onClick: this.handleDisableMFA,
                             }),
                         }),
-                        (0, r.jsx)(m.F, {
-                            setting: A.s6.ACCOUNT_ENABLE_2FA,
-                            children: (0, r.jsx)(l.zxk, {
+                        (0, r.jsx)(g.F, {
+                            setting: C.s6.ACCOUNT_ENABLE_2FA,
+                            children: (0, r.jsx)(c.zxk, {
                                 variant: "primary",
                                 size: "sm",
-                                text: R.intl.string(R.t.cDgKtb),
-                                onClick: S.ZP.enableMFA,
+                                text: P.intl.string(P.t.cDgKtb),
+                                onClick: A.ZP.enableMFA,
                             }),
                         }),
                     ],
                 }),
                 e,
                 this.renderMFASMS(),
-                (0, r.jsx)(m.F, {
-                    setting: A.s6.ACCOUNT_SECURITY_KEYS,
-                    children: (0, r.jsx)(E.Z, {}),
+                (0, r.jsx)(g.F, {
+                    setting: C.s6.ACCOUNT_SECURITY_KEYS,
+                    children: (0, r.jsx)(b.Z, {}),
                 }),
             ],
         });
     }
     renderDisabled() {
-        return (0, r.jsxs)(l.hjN, {
-            title: R.intl.string(R.t.EPVq09),
+        return (0, r.jsxs)(c.hjN, {
+            title: P.intl.string(P.t.EPVq09),
             children: [
-                (0, r.jsx)(l.R94, {
-                    type: l.R94.Types.DESCRIPTION,
-                    className: w.marginBottom20,
-                    children: R.intl.string(R.t["8aDa1t"]),
+                (0, r.jsx)(c.R94, {
+                    type: c.R94.Types.DESCRIPTION,
+                    className: D.marginBottom20,
+                    children: P.intl.string(P.t["8aDa1t"]),
                 }),
-                (0, r.jsx)(l.xJW, {
-                    children: (0, r.jsx)(l.zxk, {
+                (0, r.jsx)(c.xJW, {
+                    children: (0, r.jsx)(c.zxk, {
                         variant: "primary",
                         size: "sm",
-                        text: R.intl.string(R.t.cDgKtb),
-                        onClick: S.ZP.enableMFA,
+                        text: P.intl.string(P.t.cDgKtb),
+                        onClick: A.ZP.enableMFA,
                     }),
                 }),
-                (0, r.jsx)(E.Z, {}),
+                (0, r.jsx)(b.Z, {}),
             ],
         });
     }
     render() {
         let { currentUser: e } = this.props;
-        return I.uZ
+        return T.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
                     : this.renderDisabled()
-                : (0, r.jsx)(l.hjN, {
-                      title: R.intl.string(R.t.EPVq09),
-                      children: (0, r.jsx)(l.R94, {
-                          type: l.R94.Types.DESCRIPTION,
-                          children: R.intl.string(R.t.uggF7u),
+                : (0, r.jsx)(c.hjN, {
+                      title: P.intl.string(P.t.EPVq09),
+                      children: (0, r.jsx)(c.R94, {
+                          type: c.R94.Types.DESCRIPTION,
+                          children: P.intl.string(P.t.uggF7u),
                       }),
                   })
-            : (0, r.jsx)(l.hjN, {
-                  title: R.intl.string(R.t.EPVq09),
-                  children: (0, r.jsx)(l.R94, {
-                      type: l.R94.Types.DESCRIPTION,
-                      children: R.intl.string(R.t.PhHhsr),
+            : (0, r.jsx)(c.hjN, {
+                  title: P.intl.string(P.t.EPVq09),
+                  children: (0, r.jsx)(c.R94, {
+                      type: c.R94.Types.DESCRIPTION,
+                      children: P.intl.string(P.t.PhHhsr),
                   }),
               });
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.h7j)((t) => (0, r.jsx)(g.default, x({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: N.M });
+        (0, c.h7j)((t) => (0, r.jsx)(E.default, L({ reason: m.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: R.M });
     }
     constructor(...e) {
         super(...e),
-            D(this, "state", {
+            x(this, "state", {
                 revealed: !1,
                 password: "",
             }),
-            D(this, "togglePhoneNumberVisibility", (e) => {
+            x(this, "togglePhoneNumberVisibility", (e) => {
                 e.preventDefault(), this.setState({ revealed: !this.state.revealed });
             }),
-            D(this, "handleDisableMFA", () => {
-                u.Z.show({
-                    title: R.intl.string(R.t["D+aE7u"]),
-                    body: R.intl.string(R.t.EA4ZEh),
-                    cancelText: R.intl.string(R.t["ETE/oK"]),
-                    onConfirm: () => c.Z.disable(),
+            x(this, "handleDisableMFA", () => {
+                d.Z.show({
+                    title: P.intl.string(P.t["D+aE7u"]),
+                    body: P.intl.string(P.t.EA4ZEh),
+                    cancelText: P.intl.string(P.t["ETE/oK"]),
+                    onConfirm: () => u.Z.disable(),
                 });
             }),
-            D(this, "generateBackupCodes", async () => {
-                let e = y.Z.getVerificationKey();
-                await c.Z.confirmViewBackupCodes(e, !0);
+            x(this, "generateBackupCodes", async () => {
+                let e = O.Z.getVerificationKey();
+                await u.Z.confirmViewBackupCodes(e, !0);
             }),
-            D(this, "sendMFABackupCodesVerificationKeyEmail", () => {
-                (0, l.h7j)((e) =>
+            x(this, "sendMFABackupCodesVerificationKeyEmail", () => {
+                (0, c.h7j)((e) =>
                     (0, r.jsx)(
-                        _.Z,
-                        j(x({}, e), {
+                        p.Z,
+                        M(L({}, e), {
                             handleSubmit: (e) =>
-                                c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
+                                u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
                                 }),
-                            title: R.intl.string(R.t.PsQmzc),
-                            actionText: R.intl.string(R.t.ajkYcH),
+                            title: P.intl.string(P.t.PsQmzc),
+                            actionText: P.intl.string(P.t.ajkYcH),
                         }),
                     ),
                 );
             }),
-            D(this, "viewBackupCodes", (e) => {
-                (0, l.h7j)((t) =>
+            x(this, "viewBackupCodes", (e) => {
+                (0, c.h7j)((t) =>
                     (0, r.jsx)(
-                        f.Z,
-                        j(x({}, t), {
-                            handleSubmit: (e) => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
+                        _.Z,
+                        M(L({}, t), {
+                            handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                             maxLength: 8,
-                            title: R.intl.string(R.t.mGppp6),
-                            label: R.intl.string(R.t.TjGb4e),
+                            title: P.intl.string(P.t.mGppp6),
+                            label: P.intl.string(P.t.TjGb4e),
                             forceNoPlaceholder: !0,
-                            retryPrompt: R.intl.string(R.t.PZgmxs),
-                            retrySuccessMessage: R.intl.string(R.t.j4qu8v),
-                            onRetry: () => c.Z.sendMFABackupCodesVerificationKeyEmail(e),
-                            actionText: R.intl.string(R.t.piW6YW),
-                            helpMessage: R.intl.string(R.t["37S9yc"]),
+                            retryPrompt: P.intl.string(P.t.PZgmxs),
+                            retrySuccessMessage: P.intl.string(P.t.j4qu8v),
+                            onRetry: () => u.Z.sendMFABackupCodesVerificationKeyEmail(e),
+                            actionText: P.intl.string(P.t.piW6YW),
+                            helpMessage: P.intl.string(P.t["37S9yc"]),
                         }),
                     ),
                 );
             }),
-            D(this, "getDownloadFileContents", () => {
+            x(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
@@ -410,36 +411,36 @@ class k extends i.PureComponent {
                                 .concat(t ? "(used)" : "");
                         })
                         .join("\r\n"),
-                    t = R.intl.formatToPlainString(R.t.uYWwh4, { email: this.props.currentUser.email });
+                    t = P.intl.formatToPlainString(P.t.uYWwh4, { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             }),
-            D(this, "handleChangePhoneNumber", () => {
+            x(this, "handleChangePhoneNumber", () => {
                 this.openPhoneVerificationModal();
             }),
-            D(this, "handleEnableSMS", () => {
+            x(this, "handleEnableSMS", () => {
                 let { currentUser: e } = this.props;
-                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: c.Z.enableSMS }) : c.Z.enableSMS();
+                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: u.Z.enableSMS }) : u.Z.enableSMS();
             }),
-            D(this, "handleDisableSMS", () => {
-                (0, l.h7j)((e) =>
+            x(this, "handleDisableSMS", () => {
+                (0, c.h7j)((e) =>
                     (0, r.jsx)(
-                        _.Z,
-                        j(x({}, e), {
-                            handleSubmit: c.Z.disableSMS,
-                            title: R.intl.string(R.t.KLWnio),
-                            children: R.intl.string(R.t["W0/Dub"]),
+                        p.Z,
+                        M(L({}, e), {
+                            handleSubmit: u.Z.disableSMS,
+                            title: P.intl.string(P.t.KLWnio),
+                            children: P.intl.string(P.t["W0/Dub"]),
                         }),
                     ),
                 );
             });
     }
 }
-function U(e) {
-    let t = (0, s.e7)([O.default], () => O.default.getCurrentUser());
+function G(e) {
+    let t = (0, s.e7)([v.default], () => v.default.getCurrentUser());
     o()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-    let n = (0, s.cj)([y.Z, b.default], () => ({
-        togglingSMS: y.Z.togglingSMS,
-        hasTOTPEnabled: b.default.hasTOTPEnabled(),
+    let n = (0, s.cj)([O.Z, y.default], () => ({
+        togglingSMS: O.Z.togglingSMS,
+        hasTOTPEnabled: y.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(k, x({ currentUser: t }, n, e));
+    return (0, r.jsx)(U, L({ currentUser: t }, n, e));
 }

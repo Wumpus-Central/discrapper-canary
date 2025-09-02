@@ -1,16 +1,17 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
-    a = n(467319),
-    s = n(456677),
-    o = n(55889),
-    c = n(300453),
-    d = n(620436),
-    u = n(273504),
-    m = n(388032),
-    g = n(290135);
-function p(e) {
+    l = n(755721),
+    a = n(481060),
+    s = n(467319),
+    o = n(456677),
+    c = n(55889),
+    d = n(300453),
+    u = n(620436),
+    m = n(273504),
+    g = n(388032),
+    p = n(290135);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,107 +54,107 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function b(e) {
     var t, n;
-    let { rule: f, onChangeRule: b } = e,
-        [x, j] = i.useState(null == (t = f.triggerMetadata) ? void 0 : t.mentionTotalLimit),
-        v = (0, a.a)(f.guildId, !1);
+    let { rule: b, onChangeRule: x } = e,
+        [j, _] = i.useState(null == (t = b.triggerMetadata) ? void 0 : t.mentionTotalLimit),
+        v = (0, s.a)(b.guildId, !1);
     return (0, r.jsxs)("div", {
-        className: g.cardContentsContainer,
+        className: p.cardContentsContainer,
         children: [
-            (0, r.jsxs)(c.Z, {
+            (0, r.jsxs)(d.Z, {
                 step: 1,
-                header: m.intl.string(m.t.IGfuTU),
+                header: g.intl.string(g.t.IGfuTU),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: g.mentionLimitContainer,
+                        className: p.mentionLimitContainer,
                         children: [
                             (0, r.jsx)("div", {
-                                className: g.mentionLimitIconContainer,
-                                children: (0, r.jsx)(l.lOy, {
+                                className: p.mentionLimitIconContainer,
+                                children: (0, r.jsx)(a.lOy, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: g.mentionLimitIcon,
+                                    className: p.mentionLimitIcon,
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: g.mentionLimitTextContainer,
+                                className: p.mentionLimitTextContainer,
                                 children: [
-                                    (0, r.jsx)(l.X6q, {
+                                    (0, r.jsx)(a.X6q, {
                                         variant: "heading-sm/semibold",
-                                        children: m.intl.string(m.t["s/26oa"]),
+                                        children: g.intl.string(g.t["s/26oa"]),
                                     }),
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         color: "interactive-normal",
                                         variant: "text-xs/medium",
-                                        className: g.descriptionHint,
-                                        children: m.intl.string(m.t["8uW4/P"]),
+                                        className: p.descriptionHint,
+                                        children: g.intl.string(g.t["8uW4/P"]),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: g.stepperContainer,
-                                children: (0, r.jsx)(l.FiK, {
-                                    value: x,
+                                className: p.stepperContainer,
+                                children: (0, r.jsx)(a.FiK, {
+                                    value: j,
                                     onChange: (e) => {
-                                        j(e),
-                                            b(
-                                                h(p({}, f), {
-                                                    triggerMetadata: h(p({}, f.triggerMetadata), {
+                                        _(e),
+                                            x(
+                                                h(f({}, b), {
+                                                    triggerMetadata: h(f({}, b.triggerMetadata), {
                                                         mentionTotalLimit: e,
                                                     }),
                                                 }),
                                             );
                                     },
-                                    minValue: u.Vg,
-                                    maxValue: u.Lg,
-                                    className: g.stepper,
+                                    minValue: m.Vg,
+                                    maxValue: m.Lg,
+                                    className: p.stepper,
                                 }),
                             }),
                         ],
                     }),
                     v
                         ? (0, r.jsxs)("div", {
-                              className: g.mentionLimitContainer,
+                              className: p.mentionLimitContainer,
                               children: [
                                   (0, r.jsx)("div", {
-                                      className: g.mentionLimitIconContainer,
-                                      children: (0, r.jsx)(l.S4f, {
+                                      className: p.mentionLimitIconContainer,
+                                      children: (0, r.jsx)(a.S4f, {
                                           size: "md",
                                           color: "currentColor",
-                                          className: g.mentionLimitIcon,
+                                          className: p.mentionLimitIcon,
                                       }),
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: g.mentionLimitTextContainer,
+                                      className: p.mentionLimitTextContainer,
                                       children: [
-                                          (0, r.jsx)(l.X6q, {
+                                          (0, r.jsx)(a.X6q, {
                                               variant: "heading-sm/semibold",
-                                              children: m.intl.string(m.t.XnuC9v),
+                                              children: g.intl.string(g.t.XnuC9v),
                                           }),
-                                          (0, r.jsx)(l.Text, {
+                                          (0, r.jsx)(a.Text, {
                                               color: "interactive-normal",
                                               variant: "text-xs/medium",
-                                              className: g.descriptionHint,
-                                              children: m.intl.string(m.t.EDBe5u),
+                                              className: p.descriptionHint,
+                                              children: g.intl.string(g.t.EDBe5u),
                                           }),
                                       ],
                                   }),
                                   (0, r.jsx)("div", {
-                                      children: (0, r.jsx)(l.XZJ, {
-                                          type: l.XZJ.Types.INVERTED,
+                                      children: (0, r.jsx)(l.$q, {
+                                          type: l.M0.INVERTED,
                                           value:
-                                              null == (n = f.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
+                                              null == (n = b.triggerMetadata) ? void 0 : n.mentionRaidProtectionEnabled,
                                           onChange: (e, t) => {
-                                              b(
-                                                  h(p({}, f), {
-                                                      triggerMetadata: h(p({}, f.triggerMetadata), {
+                                              x(
+                                                  h(f({}, b), {
+                                                      triggerMetadata: h(f({}, b.triggerMetadata), {
                                                           mentionRaidProtectionEnabled: t,
                                                       }),
                                                   }),
                                               );
                                           },
-                                          className: g.__invalid_actionCheckbox,
+                                          className: p.__invalid_actionCheckbox,
                                       }),
                                   }),
                               ],
@@ -161,22 +162,22 @@ function f(e) {
                         : null,
                 ],
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.ARROW_DOWN }),
-            (0, r.jsx)(c.Z, {
+            (0, r.jsx)(u.Z, { type: u.Z.Type.ARROW_DOWN }),
+            (0, r.jsx)(d.Z, {
                 step: 2,
-                header: m.intl.string(m.t["18TOiY"]),
-                children: (0, r.jsx)(s.Z, {
-                    rule: f,
-                    onChangeRule: b,
+                header: g.intl.string(g.t["18TOiY"]),
+                children: (0, r.jsx)(o.Z, {
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
-            (0, r.jsx)(d.Z, { type: d.Z.Type.CROSS }),
-            (0, r.jsx)(c.Z, {
+            (0, r.jsx)(u.Z, { type: u.Z.Type.CROSS }),
+            (0, r.jsx)(d.Z, {
                 step: 3,
-                header: m.intl.string(m.t.eq3gjo),
-                children: (0, r.jsx)(o.Z, {
-                    rule: f,
-                    onChangeRule: b,
+                header: g.intl.string(g.t.eq3gjo),
+                children: (0, r.jsx)(c.Z, {
+                    rule: b,
+                    onChangeRule: x,
                 }),
             }),
         ],

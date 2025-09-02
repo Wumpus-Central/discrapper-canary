@@ -51,9 +51,9 @@ function u(e) {
                         variant: "text-md/normal",
                         children: l.intl.format(l.t["0eydys"], {}),
                     }),
-                    (0, n.jsx)(i.XZJ, {
+                    (0, n.jsx)(c.$q, {
                         className: p.checkboxMargin,
-                        type: i.XZJ.Types.INVERTED,
+                        type: c.M0.INVERTED,
                         value: u,
                         onChange: () => {
                             (0, s.E)(), b(!0);

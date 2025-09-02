@@ -1,73 +1,74 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(481060),
-    a = n(933557),
-    s = n(592125),
-    o = n(699516),
-    c = n(594174),
-    d = n(556012),
-    u = n(388032),
-    m = n(464992);
-function g(e) {
+    l = n(755721),
+    a = n(481060),
+    s = n(933557),
+    o = n(592125),
+    c = n(699516),
+    d = n(594174),
+    u = n(556012),
+    m = n(388032),
+    g = n(464992);
+function p(e) {
     var t;
-    let { action: n, triggerType: g, toggled: p, onToggleAction: h } = e,
-        f = (e) => () => h(e),
-        b = (0, d.c)(n.type, n, g),
-        x = null == (t = n.metadata) ? void 0 : t.channelId,
-        j = (0, i.e7)([c.default, o.Z, s.Z], () => {
-            let e = s.Z.getChannel(x);
-            return null == e ? null : (0, a.F6)(e, c.default, o.Z);
-        }, [x]);
-    if (null == b) return null;
-    let { headerText: v, descriptionText: _, icon: O } = b;
+    let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
+        b = (e) => () => h(e),
+        x = (0, u.c)(n.type, n, p),
+        j = null == (t = n.metadata) ? void 0 : t.channelId,
+        _ = (0, i.e7)([d.default, c.Z, o.Z], () => {
+            let e = o.Z.getChannel(j);
+            return null == e ? null : (0, s.F6)(e, d.default, c.Z);
+        }, [j]);
+    if (null == x) return null;
+    let { headerText: v, descriptionText: O, icon: y } = x;
     return (0, r.jsxs)("div", {
-        className: m.actionContainer,
+        className: g.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: m.actionIconContainer,
-                children: (0, r.jsx)(O, {
+                className: g.actionIconContainer,
+                children: (0, r.jsx)(y, {
                     size: "md",
                     color: "currentColor",
-                    className: m.actionIcon,
+                    className: g.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: m.actionTextContainer,
+                className: g.actionTextContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: "heading-sm/semibold",
                         children: v,
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
-                        children: _,
+                        children: O,
                     }),
-                    p &&
-                        (0, r.jsxs)(l.Text, {
+                    f &&
+                        (0, r.jsxs)(a.Text, {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != j && u.intl.format(u.t["8Sr/am"], { channelName: j }),
-                                (0, r.jsx)(l.P3F, {
-                                    onClick: f(!0),
-                                    className: m.editChannel,
+                                null != _ && m.intl.format(m.t["8Sr/am"], { channelName: _ }),
+                                (0, r.jsx)(a.P3F, {
+                                    onClick: b(!0),
+                                    className: g.editChannel,
                                     tag: "span",
                                     role: "link",
-                                    children: u.intl.string(u.t["3gUsJS"]),
+                                    children: m.intl.string(m.t["3gUsJS"]),
                                 }),
                             ],
                         }),
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(l.XZJ, {
-                    type: l.XZJ.Types.INVERTED,
-                    value: p,
-                    onChange: f(!1),
-                    className: m.__invalid_actionCheckbox,
+                children: (0, r.jsx)(l.$q, {
+                    type: l.M0.INVERTED,
+                    value: f,
+                    onChange: b(!1),
+                    className: g.__invalid_actionCheckbox,
                 }),
             }),
         ],

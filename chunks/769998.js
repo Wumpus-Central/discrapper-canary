@@ -1,75 +1,76 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(481060),
-    a = n(430824),
-    s = n(496675),
-    o = n(556012),
-    c = n(273504),
-    d = n(981631),
-    u = n(590433),
-    m = n(388032),
-    g = n(464992);
-function p(e) {
+    l = n(755721),
+    a = n(481060),
+    s = n(430824),
+    o = n(496675),
+    c = n(556012),
+    d = n(273504),
+    u = n(981631),
+    m = n(590433),
+    g = n(388032),
+    p = n(464992);
+function f(e) {
     var t;
-    let { action: n, triggerType: p, guildId: h, toggled: f, onToggleAction: b } = e,
-        x = (e) => () => b(e),
-        j = (0, o.c)(n.type, n, p),
+    let { action: n, triggerType: f, guildId: h, toggled: b, onToggleAction: x } = e,
+        j = (e) => () => x(e),
+        _ = (0, c.c)(n.type, n, f),
         v = null == (t = n.metadata) ? void 0 : t.durationSeconds,
-        _ = null != v ? (0, u.L9)(v) : null,
-        O = (0, i.e7)([s.Z, a.Z], () => s.Z.can(d.Plq.MODERATE_MEMBERS, a.Z.getGuild(h)), [h]);
-    if (null == j) return null;
-    let { headerText: y, descriptionText: C, icon: N } = j;
+        O = null != v ? (0, m.L9)(v) : null,
+        y = (0, i.e7)([o.Z, s.Z], () => o.Z.can(u.Plq.MODERATE_MEMBERS, s.Z.getGuild(h)), [h]);
+    if (null == _) return null;
+    let { headerText: C, descriptionText: N, icon: E } = _;
     return (0, r.jsxs)("div", {
-        className: g.actionContainer,
+        className: p.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: g.actionIconContainer,
-                children: (0, r.jsx)(N, {
+                className: p.actionIconContainer,
+                children: (0, r.jsx)(E, {
                     size: "md",
                     color: "currentColor",
-                    className: g.actionIcon,
+                    className: p.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: g.actionTextContainer,
+                className: p.actionTextContainer,
                 children: [
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: "heading-sm/semibold",
-                        children: y,
-                    }),
-                    (0, r.jsx)(l.Text, {
-                        color: "interactive-normal",
-                        variant: "text-xs/medium",
                         children: C,
                     }),
-                    f &&
-                        (0, r.jsxs)(l.Text, {
+                    (0, r.jsx)(a.Text, {
+                        color: "interactive-normal",
+                        variant: "text-xs/medium",
+                        children: N,
+                    }),
+                    b &&
+                        (0, r.jsxs)(a.Text, {
                             color: "interactive-normal",
                             variant: "text-xs/medium",
                             children: [
-                                null === _
+                                null === O
                                     ? null
-                                    : p === c.fX.MENTION_SPAM
-                                      ? m.intl.format(m.t.i3lsKC, { friendlyDurationString: _ })
-                                      : m.intl.format(m.t.mvHxzc, { friendlyDurationString: _ }),
-                                O &&
-                                    (0, r.jsx)(l.P3F, {
-                                        onClick: x(!0),
-                                        className: g.editChannel,
+                                    : f === d.fX.MENTION_SPAM
+                                      ? g.intl.format(g.t.i3lsKC, { friendlyDurationString: O })
+                                      : g.intl.format(g.t.mvHxzc, { friendlyDurationString: O }),
+                                y &&
+                                    (0, r.jsx)(a.P3F, {
+                                        onClick: j(!0),
+                                        className: p.editChannel,
                                         tag: "span",
                                         role: "link",
-                                        children: m.intl.string(m.t["0B95RE"]),
+                                        children: g.intl.string(g.t["0B95RE"]),
                                     }),
                             ],
                         }),
                 ],
             }),
-            (0, r.jsx)(l.ua7, {
-                text: m.intl.format(m.t.wx6Vb2, {}),
-                "aria-label": m.intl.formatToMarkdownString(m.t.wx6Vb2, {}),
-                shouldShow: !O,
+            (0, r.jsx)(a.ua7, {
+                text: g.intl.format(g.t.wx6Vb2, {}),
+                "aria-label": g.intl.formatToMarkdownString(g.t.wx6Vb2, {}),
+                shouldShow: !y,
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(
@@ -101,12 +102,12 @@ function p(e) {
                         })({}, e)),
                         (n = n =
                             {
-                                children: (0, r.jsx)(l.XZJ, {
-                                    type: l.XZJ.Types.INVERTED,
-                                    value: f,
-                                    onChange: x(!1),
-                                    disabled: !O,
-                                    className: g.__invalid_actionCheckbox,
+                                children: (0, r.jsx)(l.$q, {
+                                    type: l.M0.INVERTED,
+                                    value: b,
+                                    onChange: j(!1),
+                                    disabled: !y,
+                                    className: p.__invalid_actionCheckbox,
                                 }),
                             }),
                         Object.getOwnPropertyDescriptors

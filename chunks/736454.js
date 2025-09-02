@@ -9,8 +9,8 @@ var n = r(951288),
 function u(e) {
     var t,
         r,
-        { onSubmit: u, onClose: p } = e,
-        b = (function (e, t) {
+        { onSubmit: u, onClose: b } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -65,9 +65,9 @@ function u(e) {
                 confirmText: s.intl.string(s.t.rimG2d),
                 cancelText: s.intl.string(s.t["ETE/oK"]),
                 onConfirm: u,
-                onClose: () => (f && l.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), p()),
+                onClose: () => (f && l.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), b()),
             },
-            b,
+            p,
         )),
         (r = r =
             {
@@ -76,8 +76,8 @@ function u(e) {
                         variant: "text-md/normal",
                         children: s.intl.string(s.t.Jz3oqK),
                     }),
-                    (0, n.jsx)(i.XZJ, {
-                        type: i.XZJ.Types.INVERTED,
+                    (0, n.jsx)(c.$q, {
+                        type: c.M0.INVERTED,
                         value: f,
                         onChange: (e, t) => O(t),
                         className: a.checkbox,

@@ -1,68 +1,69 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(481060),
-    a = n(670362),
-    o = n(46140),
-    s = n(388032),
-    c = n(477813);
-let u = function (e) {
-    let { onChange: t, optionClassName: n, selectedFilters: u } = e,
-        d = i.useMemo(
+    l = n(755721),
+    a = n(481060),
+    o = n(670362),
+    s = n(46140),
+    c = n(388032),
+    u = n(477813);
+let d = function (e) {
+    let { onChange: t, optionClassName: n, selectedFilters: d } = e,
+        p = i.useMemo(
             () => [
                 {
-                    heading: s.intl.string(s.t.vjLqAQ),
-                    options: [o.j5.REWARD_VIRTUAL_CURRENCY, o.j5.REWARD_COLLECTIBLE, o.j5.REWARD_IN_GAME],
+                    heading: c.intl.string(c.t.vjLqAQ),
+                    options: [s.j5.REWARD_VIRTUAL_CURRENCY, s.j5.REWARD_COLLECTIBLE, s.j5.REWARD_IN_GAME],
                 },
                 {
-                    heading: s.intl.string(s.t.Hufmsr),
-                    options: [o.j5.QUEST_TYPE_VIDEO, o.j5.QUEST_TYPE_PLAY],
+                    heading: c.intl.string(c.t.Hufmsr),
+                    options: [s.j5.QUEST_TYPE_VIDEO, s.j5.QUEST_TYPE_PLAY],
                 },
             ],
             [],
         );
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(o.Z, {
         renderPopout: (e, i) => {
-            let { closePopout: p } = e;
+            let { closePopout: f } = e;
             return (0, r.jsxs)("div", {
                 children: [
-                    d.map((e, d) =>
+                    p.map((e, p) =>
                         (0, r.jsxs)(
                             "div",
                             {
-                                className: c.filterOptionGroup,
+                                className: u.filterOptionGroup,
                                 children: [
-                                    (0, r.jsx)(a.g, {
+                                    (0, r.jsx)(o.g, {
                                         id: i,
                                         children: e.heading,
                                     }),
                                     e.options.map((e, i) =>
                                         (0, r.jsx)(
-                                            l.XZJ,
+                                            l.$q,
                                             {
                                                 className: n,
-                                                innerClassName: c.checkboxInput,
+                                                innerClassName: u.checkboxInput,
                                                 onChange: (n) => {
-                                                    let r = new Set(u);
+                                                    let r = new Set(d);
                                                     n.currentTarget.checked ? r.add(e) : r.delete(e), t(r);
                                                 },
                                                 reverse: !0,
-                                                type: l.XZJ.Types.INVERTED,
-                                                value: u.has(e),
-                                                children: (0, r.jsx)(l.Text, {
+                                                type: l.M0.INVERTED,
+                                                value: d.has(e),
+                                                children: (0, r.jsx)(a.Text, {
                                                     variant: "text-md/normal",
                                                     children: (function (e) {
                                                         switch (e) {
-                                                            case o.j5.REWARD_VIRTUAL_CURRENCY:
-                                                                return s.intl.string(s.t.ElYQFR);
-                                                            case o.j5.REWARD_COLLECTIBLE:
-                                                                return s.intl.string(s.t.Jg17Ul);
-                                                            case o.j5.REWARD_IN_GAME:
-                                                                return s.intl.string(s.t["O/J2kp"]);
-                                                            case o.j5.QUEST_TYPE_VIDEO:
-                                                                return s.intl.string(s.t.e0iISE);
-                                                            case o.j5.QUEST_TYPE_PLAY:
-                                                                return s.intl.string(s.t["1nJR4u"]);
+                                                            case s.j5.REWARD_VIRTUAL_CURRENCY:
+                                                                return c.intl.string(c.t.ElYQFR);
+                                                            case s.j5.REWARD_COLLECTIBLE:
+                                                                return c.intl.string(c.t.Jg17Ul);
+                                                            case s.j5.REWARD_IN_GAME:
+                                                                return c.intl.string(c.t["O/J2kp"]);
+                                                            case s.j5.QUEST_TYPE_VIDEO:
+                                                                return c.intl.string(c.t.e0iISE);
+                                                            case s.j5.QUEST_TYPE_PLAY:
+                                                                return c.intl.string(c.t["1nJR4u"]);
                                                         }
                                                     })(e),
                                                 }),
@@ -72,18 +73,18 @@ let u = function (e) {
                                     ),
                                 ],
                             },
-                            d,
+                            p,
                         ),
                     ),
                     (0, r.jsx)("div", {
-                        className: c.filterOptionGroup,
-                        children: (0, r.jsx)(l.zxk, {
+                        className: u.filterOptionGroup,
+                        children: (0, r.jsx)(a.zxk, {
                             fullWidth: !0,
                             onClick: () => {
-                                t(new Set()), p();
+                                t(new Set()), f();
                             },
                             size: "sm",
-                            text: s.intl.string(s.t.VkKicX),
+                            text: c.intl.string(c.t.VkKicX),
                             variant: "secondary",
                         }),
                     }),
@@ -93,7 +94,7 @@ let u = function (e) {
         children: (e, t) => {
             var n, i;
             return (0, r.jsx)(
-                l.zxk,
+                a.zxk,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -123,8 +124,8 @@ let u = function (e) {
                     {
                         buttonRef: t,
                         size: "sm",
-                        text: s.intl.formatToPlainString(s.t.CEfkXl, { numSelectedFilters: u.size }),
-                        icon: l.gXV,
+                        text: c.intl.formatToPlainString(c.t.CEfkXl, { numSelectedFilters: d.size }),
+                        icon: a.gXV,
                         iconPosition: "end",
                         variant: "secondary",
                     }),

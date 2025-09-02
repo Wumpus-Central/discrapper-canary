@@ -36,8 +36,8 @@ function I(e) {
             problems: h,
             transitionState: I,
             feedbackProblems: L = {},
-            otherKey: T,
-            hasCloseButton: D,
+            otherKey: D,
+            hasCloseButton: T,
             onSubmit: x,
             onClose: y,
             canDismissForever: M = !0,
@@ -46,32 +46,32 @@ function I(e) {
         k = (0, c.Z)(h),
         [j, A] = a.useState(!1),
         [P, B] = a.useState(null),
-        [U, $] = a.useState(u().shuffle(h)),
+        [$, U] = a.useState(u().shuffle(h)),
         [F, Z] = a.useState(""),
         [w, H] = a.useState(!1),
-        J = (0, O.Dt)(),
-        G = (0, f.Z)(j),
+        G = (0, O.Dt)(),
+        J = (0, f.Z)(j),
         z = (0, f.Z)(P),
         K = (0, f.Z)(x),
         Y = (0, f.Z)(F),
-        X = (0, f.Z)(w),
-        Q = null != P ? L[P] : null,
-        V = null != Q;
+        Q = (0, f.Z)(w),
+        V = null != P ? L[P] : null,
+        X = null != V;
     return (
         a.useEffect(() => {
-            u().isEqual(k, h) || $((0, g.Bi)(h, T));
-        }, [h, k, T]),
+            u().isEqual(k, h) || U((0, g.Bi)(h, D));
+        }, [h, k, D]),
         (0, b.ZP)(() => () => {
             K.current({
                 problem: z.current,
-                dontShowAgain: G.current,
+                dontShowAgain: J.current,
                 feedback: Y.current,
-                closeClicked: X.current,
+                closeClicked: Q.current,
             });
         }),
         (0, l.jsxs)(s.Y0X, {
             transitionState: I,
-            "aria-labelledby": J,
+            "aria-labelledby": G,
             parentComponent: "SimpleFeedbackModal",
             children: [
                 (0, l.jsx)(_.Z, {}),
@@ -80,7 +80,7 @@ function I(e) {
                     className: r()(m.headerContainer, p.headerContainer),
                     children: [
                         (0, l.jsx)(s.X6q, {
-                            id: J,
+                            id: G,
                             variant: "heading-xl/bold",
                             color: "header-primary",
                             className: m.header,
@@ -90,9 +90,9 @@ function I(e) {
                             variant: "text-sm/medium",
                             color: "header-secondary",
                             className: r()(m.ratingBody, p.headerBody),
-                            children: null != (t = null == Q ? void 0 : Q.subheader) ? t : o,
+                            children: null != (t = null == V ? void 0 : V.subheader) ? t : o,
                         }),
-                        D
+                        T
                             ? (0, l.jsx)(s.olH, {
                                   className: m.modalCloseButton,
                                   onClick: function () {
@@ -105,19 +105,19 @@ function I(e) {
                 (0, l.jsxs)(s.hzk, {
                     className: p.modalContent,
                     children: [
-                        V
+                        X
                             ? null
                             : (0, l.jsx)(s.xJW, {
                                   className: m.problemInfo,
                                   children: (0, l.jsx)(v.Z, {
-                                      options: U,
+                                      options: $,
                                       onClick: function (e) {
                                           let { value: t } = e;
                                           B(t), Object.keys(L).includes(t) || y();
                                       },
                                   }),
                               }),
-                        V
+                        X
                             ? (0, l.jsxs)(s.xJW, {
                                   className: m.problemInfo,
                                   children: [
@@ -125,7 +125,7 @@ function I(e) {
                                           value: F,
                                           maxLength: S.iF,
                                           onChange: Z,
-                                          placeholder: null != (n = Q.hint) ? n : N.intl.string(N.t.h95hcn),
+                                          placeholder: null != (n = V.hint) ? n : N.intl.string(N.t.h95hcn),
                                       }),
                                       R ? (0, l.jsx)(C, {}) : null,
                                   ],
@@ -133,11 +133,11 @@ function I(e) {
                             : null,
                     ],
                 }),
-                M || V
+                M || X
                     ? (0, l.jsx)(s.mzw, {
-                          className: r()(m.footer, V ? p.submitFooter : p.modalFooter),
+                          className: r()(m.footer, X ? p.submitFooter : p.modalFooter),
                           direction: E.Z.Direction.HORIZONTAL,
-                          children: V
+                          children: X
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsx)(d.zx, {
@@ -159,9 +159,9 @@ function I(e) {
                                     ],
                                 })
                               : M
-                                ? (0, l.jsx)(s.XZJ, {
+                                ? (0, l.jsx)(d.$q, {
                                       size: 24,
-                                      type: s.XZJ.Types.INVERTED,
+                                      type: d.M0.INVERTED,
                                       value: j,
                                       onChange: () => A(!j),
                                       children: (0, l.jsx)(s.Text, {

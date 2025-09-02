@@ -2,7 +2,7 @@ n.d(t, { _: () => s }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(993365),
-    o = n(178940);
+    o = n(755721);
 let s = {
     title: "Checkbox",
     stories: [
@@ -12,7 +12,7 @@ let s = {
             component: function (e) {
                 let { disabled: t, readOnly: n, type: s, label: l, size: c, align: u } = e,
                     [d, f] = i.useState(!1);
-                return (0, r.jsx)(o.X, {
+                return (0, r.jsx)(o.$q, {
                     value: d,
                     onChange: (e, t) => f(t),
                     disabled: t,
@@ -40,15 +40,15 @@ let s = {
                 type: {
                     type: "select",
                     label: "Type",
-                    defaultValue: o.X.Types.DEFAULT,
+                    defaultValue: o.M0.DEFAULT,
                     options: [
                         {
                             label: "Default",
-                            value: o.X.Types.DEFAULT,
+                            value: o.M0.DEFAULT,
                         },
                         {
                             label: "Row",
-                            value: o.X.Types.ROW,
+                            value: o.M0.ROW,
                         },
                     ],
                 },

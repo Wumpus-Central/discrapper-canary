@@ -11,13 +11,13 @@ var r = n(951288),
     m = n(692547),
     g = n(755721),
     p = n(481060),
-    h = n(984933),
-    f = n(63063),
+    f = n(984933),
+    h = n(63063),
     b = n(709054),
     x = n(434404),
     j = n(118215),
-    v = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    v = n(388032),
     O = n(125049);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -85,11 +85,11 @@ let N = (e) => {
               })),
               (u = null != s ? s : i))
             : l
-              ? ((d = (0, r.jsx)(p.XZJ, {
+              ? ((d = (0, r.jsx)(g.$q, {
                     readOnly: !0,
-                    shape: p.XZJ.Shapes.ROUND,
+                    shape: g.zV.ROUND,
                     size: 20,
-                    type: p.XZJ.Types.INVERTED,
+                    type: g.M0.INVERTED,
                     value: !0,
                 })),
                 (u = i))
@@ -146,14 +146,14 @@ let I = (e) => {
     let { guild: t, guildId: l, className: s, headerContent: o, failedItemsOnly: c = !1 } = e,
         [m, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
         { nsfwProperties: S } = null != m ? m : {},
-        T = null == t ? void 0 : t.features.has(v.oNc.PARTNERED),
+        T = null == t ? void 0 : t.features.has(_.oNc.PARTNERED),
         P = null == S ? void 0 : S.channels_banned_keywords,
         w = (0, u.e7)(
-            [h.ZP],
+            [f.ZP],
             () => {
                 var e, n, r;
                 if (null == P) return [];
-                let i = null != (n = (null != (e = h.ZP.getChannels(t.id)) ? e : {})[h.sH]) ? n : [],
+                let i = null != (n = (null != (e = f.ZP.getChannels(t.id)) ? e : {})[f.sH]) ? n : [],
                     l =
                         null !=
                         (r =
@@ -180,39 +180,39 @@ let I = (e) => {
                     className: O.loadingText,
                     variant: "heading-md/semibold",
                     color: "header-secondary",
-                    children: _.intl.string(_.t.e1gm0d),
+                    children: v.intl.string(v.t.e1gm0d),
                 }),
                 (0, r.jsx)(p.$jN, { className: O.__invalid_spinner }),
             ],
         });
-    let R = T ? _.t["WH+1Y2"] : _.t.a4MYDA,
+    let R = T ? v.t["WH+1Y2"] : v.t.a4MYDA,
         Z = [
             {
-                name: _.intl.string(_.t.yvk9p6),
-                failingName: _.intl.string(_.t["IY/UT0"]),
-                description: _.intl.string(_.t.hSLSMz),
-                failingDescription: _.intl.format(_.t.odsGg4, {
-                    termsURL: v.EYA.TERMS,
-                    guidelinesURL: f.Z.getArticleURL(v.BhN.PUBLIC_GUILD_GUILDLINES),
+                name: v.intl.string(v.t.yvk9p6),
+                failingName: v.intl.string(v.t["IY/UT0"]),
+                description: v.intl.string(v.t.hSLSMz),
+                failingDescription: v.intl.format(v.t.odsGg4, {
+                    termsURL: _.EYA.TERMS,
+                    guidelinesURL: h.Z.getArticleURL(_.BhN.PUBLIC_GUILD_GUILDLINES),
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment,
             },
             {
-                name: _.intl.formatToPlainString(_.t.NYovAw, { minMembers: m.minimumGuildSize }),
-                failingName: _.intl.formatToPlainString(_.t.wvJwYm, {
+                name: v.intl.formatToPlainString(v.t.NYovAw, { minMembers: m.minimumGuildSize }),
+                failingName: v.intl.formatToPlainString(v.t.wvJwYm, {
                     minMembers: m.minimumGuildSize.toLocaleString(),
                 }),
                 description: null,
-                failingDescription: _.intl.format(R, { minMembers: m.minimumGuildSize.toLocaleString() }),
+                failingDescription: v.intl.format(R, { minMembers: m.minimumGuildSize.toLocaleString() }),
                 checked: null == m ? void 0 : m.size,
             },
             {
-                name: _.intl.string(_.t.PtxOCA),
-                failingName: _.intl.string(_.t.JPF5IC),
-                description: _.intl.formatToPlainString(_.t.VT0bQE, {
+                name: v.intl.string(v.t.PtxOCA),
+                failingName: v.intl.string(v.t.JPF5IC),
+                description: v.intl.formatToPlainString(v.t.VT0bQE, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
                 }),
-                failingDescription: _.intl.formatToPlainString(_.t.jYwM1d, {
+                failingDescription: v.intl.formatToPlainString(v.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
                     passDate: d()(b.default.extractTimestamp(l)).add(m.minimumGuildAge, "days").format("LL"),
                 }),
@@ -220,31 +220,31 @@ let I = (e) => {
             },
             {
                 name: (null == m ? void 0 : m.healthScorePending)
-                    ? _.intl.string(_.t.G77ud3)
-                    : _.intl.string(_.t["95nW0N"]),
-                failingName: _.intl.string(_.t["+GHxPz"]),
-                description: _.intl.string(_.t.rTWJwc),
+                    ? v.intl.string(v.t.G77ud3)
+                    : v.intl.string(v.t["95nW0N"]),
+                failingName: v.intl.string(v.t["+GHxPz"]),
+                description: v.intl.string(v.t.rTWJwc),
                 failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(p.Text, {
                             color: "text-muted",
                             className: O.healthFailingDescription,
                             variant: "text-sm/normal",
-                            children: _.intl.string(_.t.LjqS0N),
+                            children: v.intl.string(v.t.LjqS0N),
                         }),
                         (null == m ? void 0 : m.engagementHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/normal",
-                                  children: _.intl.string(_.t["X8Lt7+"]),
+                                  children: v.intl.string(v.t["X8Lt7+"]),
                               }),
                         (null == m ? void 0 : m.retentionHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/normal",
-                                  children: _.intl.string(_.t["esdy8/"]),
+                                  children: v.intl.string(v.t["esdy8/"]),
                               }),
                         (() => {
                             if (null == m || null == m.healthScore) return !1;
@@ -266,12 +266,12 @@ let I = (e) => {
                                         let { default: e } = await n.e("23401").then(n.bind(n, 666599));
                                         return (t) => (0, r.jsx)(e, C(y({}, t), { guildChecklist: m }));
                                     }),
-                                children: _.intl.string(_.t.qyiTHx),
+                                children: v.intl.string(v.t.qyiTHx),
                             }),
                     ],
                 }),
                 pendingDescription: (null == m ? void 0 : m.size)
-                    ? _.intl.format(_.t.ALtXIC, {
+                    ? v.intl.format(v.t.ALtXIC, {
                           checkBackHook: (e, t) =>
                               (0, r.jsx)(
                                   "strong",
@@ -282,21 +282,21 @@ let I = (e) => {
                                   t,
                               ),
                       })
-                    : _.intl.formatToPlainString(_.t["6S/96O"], { minMembers: 200 }),
+                    : v.intl.formatToPlainString(v.t["6S/96O"], { minMembers: 200 }),
                 checked: null == m ? void 0 : m.healthy,
                 pending: null == m ? void 0 : m.healthScorePending,
             },
             {
-                name: _.intl.string(_.t["/cghSE"]),
-                failingName: _.intl.string(_.t["0HJNa2"]),
-                description: _.intl.string(_.t.Pbu9AQ),
+                name: v.intl.string(v.t["/cghSE"]),
+                failingName: v.intl.string(v.t["0HJNa2"]),
+                description: v.intl.string(v.t.Pbu9AQ),
                 failingDescription: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (null == S ? void 0 : S.channels) != null
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: _.intl.format(_.t["T+DQYW"], {
+                                  children: v.intl.format(v.t["T+DQYW"], {
                                       channelHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -332,7 +332,7 @@ let I = (e) => {
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: _.intl.format(_.t.KVD8Ex, {
+                                  children: v.intl.format(v.t.KVD8Ex, {
                                       nameHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -349,7 +349,7 @@ let I = (e) => {
                             ? (0, r.jsx)(p.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: _.intl.format(_.t["/W9Ken"], {
+                                  children: v.intl.format(v.t["/W9Ken"], {
                                       descriptionHook: (e, t) =>
                                           (0, r.jsx)(
                                               "span",
@@ -367,11 +367,11 @@ let I = (e) => {
                 checked: null == S || 0 === Object.keys(S).length,
             },
             {
-                name: _.intl.string(_.t.lSXnLy),
-                failingName: _.intl.string(_.t.awA3PT),
-                description: _.intl.string(_.t.QbBJ7e),
-                failingDescription: _.intl.format(_.t.kBXInZ, {
-                    onClick: () => x.Z.setSection(v.pNK.SAFETY, v.KsC.SAFETY_PERMISSIONS),
+                name: v.intl.string(v.t.lSXnLy),
+                failingName: v.intl.string(v.t.awA3PT),
+                description: v.intl.string(v.t.QbBJ7e),
+                failingDescription: v.intl.format(v.t.kBXInZ, {
+                    onClick: () => x.Z.setSection(_.pNK.SAFETY, _.KsC.SAFETY_PERMISSIONS),
                 }),
                 checked: null == m ? void 0 : m.protected,
             },

@@ -51,8 +51,8 @@ var i = n(951288),
     z = n(903223),
     X = n(594174),
     Y = n(934415),
-    J = n(70956),
-    q = n(630388),
+    q = n(70956),
+    J = n(630388),
     $ = n(63063),
     Q = n(129724),
     K = n(732335),
@@ -273,7 +273,7 @@ class eR extends l.PureComponent {
         return (0, Q.A)(e, !0);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, Q.A)(e * J.Z.Seconds.MINUTE, !0);
+        return (0, Q.A)(e * q.Z.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
         var n, l, r, d, h, p;
@@ -368,10 +368,10 @@ class eR extends l.PureComponent {
                                   (0, i.jsx)(P.Z, { channel: e }),
                               ],
                           }),
-                          (0, i.jsx)(m.XZJ, {
+                          (0, i.jsx)(g.$q, {
                               disabled: !b || D,
                               value: e.hasFlag(ei.zZ.REQUIRE_TAG),
-                              type: m.XZJ.Types.INVERTED,
+                              type: g.M0.INVERTED,
                               onChange: (e, t) => this.handleRequireTagChanged(t),
                               children: (0, i.jsx)(m.Text, {
                                   variant: "text-sm/normal",
@@ -550,8 +550,8 @@ class eR extends l.PureComponent {
                       ],
                   })
                 : null,
-            J = R ? C : b,
-            q = V.X_.has(e.type)
+            q = R ? C : b,
+            J = V.X_.has(e.type)
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsxs)(m.xJW, {
@@ -579,7 +579,7 @@ class eR extends l.PureComponent {
                                             stickToMarkers: !0,
                                             onValueChange: this.handleChangeSlowmode,
                                             onMarkerRender: this.getCooldownSliderMarker,
-                                            disabled: !J,
+                                            disabled: !q,
                                             equidistant: !0,
                                             "aria-labelledby": ef,
                                             "aria-describedby": ex,
@@ -607,7 +607,7 @@ class eR extends l.PureComponent {
                                                     stickToMarkers: !0,
                                                     onValueChange: this.handleChangeThreadMessageSlowmode,
                                                     onMarkerRender: this.getCooldownSliderMarker,
-                                                    disabled: !J,
+                                                    disabled: !q,
                                                     equidistant: !0,
                                                     "aria-labelledby": ef,
                                                     "aria-describedby": ex,
@@ -802,7 +802,7 @@ class eR extends l.PureComponent {
                     H,
                     G,
                     W,
-                    q,
+                    J,
                     Q,
                     F,
                     z,
@@ -1070,7 +1070,7 @@ class eR extends l.PureComponent {
             ed(this, "handleRequireTagChanged", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, q.mB)(t.flags, ei.zZ.REQUIRE_TAG, e);
+                let n = (0, J.mB)(t.flags, ei.zZ.REQUIRE_TAG, e);
                 (0, p.pW)({ flags: n });
             }),
             ed(this, "handleChangeName", (e) => {
@@ -1160,7 +1160,7 @@ class eR extends l.PureComponent {
             ed(this, "handleActiveChannelsRemovedChange", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, q.mB)(t.flags, ei.zZ.ACTIVE_CHANNELS_REMOVED, !e);
+                let n = (0, J.mB)(t.flags, ei.zZ.ACTIVE_CHANNELS_REMOVED, !e);
                 (0, p.pW)({ flags: n });
             }),
             ed(this, "handleNewsChange", (e) => {
@@ -1190,13 +1190,13 @@ class eR extends l.PureComponent {
             ed(this, "handleChannelSummariesToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, q.mB)(t.flags, ei.zZ.SUMMARIES_DISABLED, !e);
+                let n = (0, J.mB)(t.flags, ei.zZ.SUMMARIES_DISABLED, !e);
                 (0, p.pW)({ flags: n });
             }),
             ed(this, "handleShowMediaOptionsToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, q.mB)(t.flags, ei.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
+                let n = (0, J.mB)(t.flags, ei.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
                 (0, p.pW)({ flags: n });
             });
         let r = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : "";

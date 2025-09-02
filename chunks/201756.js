@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => R });
 var r = n(951288),
     l = n(647438),
     o = n(120356),
@@ -6,23 +6,24 @@ var r = n(951288),
     a = n(498607),
     s = n.n(a),
     c = n(399606),
-    u = n(481060),
-    d = n(430824),
-    C = n(496675),
-    m = n(588215),
-    b = n(241559),
-    p = n(893966),
-    f = n(256003),
-    h = n(170323),
-    j = n(434368),
-    g = n(42170),
-    x = n(123846),
-    v = n(42551),
-    y = n(981631),
-    O = n(388032),
-    _ = n(494409),
-    H = n(266631);
-function w(e) {
+    u = n(755721),
+    d = n(481060),
+    C = n(430824),
+    m = n(496675),
+    b = n(588215),
+    p = n(241559),
+    f = n(893966),
+    h = n(256003),
+    j = n(170323),
+    g = n(434368),
+    x = n(42170),
+    v = n(123846),
+    y = n(42551),
+    O = n(981631),
+    _ = n(388032),
+    H = n(494409),
+    w = n(266631);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +48,7 @@ function w(e) {
     }
     return e;
 }
-function N(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +66,7 @@ function N(e, t) {
         e
     );
 }
-function S(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,31 +88,31 @@ function S(e, t) {
 }
 let Z = l.forwardRef(function (e, t) {
     var { label: n, onFilter: l, isFiltered: o, isSorted: a, className: s } = e,
-        c = S(e, ["label", "onFilter", "isFiltered", "isSorted", "className"]);
-    let d = o ? "header-primary" : "header-secondary";
+        c = D(e, ["label", "onFilter", "isFiltered", "isSorted", "className"]);
+    let u = o ? "header-primary" : "header-secondary";
     return (
-        a && (d = "text-brand"),
+        a && (u = "text-brand"),
         (0, r.jsx)("th", {
-            className: i()(_.tableHeaderCellContainer, s),
+            className: i()(H.tableHeaderCellContainer, s),
             children: (0, r.jsxs)(
-                u.P3F,
-                N(w({}, c), {
+                d.P3F,
+                S(N({}, c), {
                     innerRef: t,
                     onClick: l,
-                    className: i()(_.tableHeaderCell, { [_.tableHeaderCellWithFilter]: null != l }),
+                    className: i()(H.tableHeaderCell, { [H.tableHeaderCellWithFilter]: null != l }),
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, r.jsx)(d.Text, {
                             variant: "eyebrow",
-                            color: d,
+                            color: u,
                             children: n,
                         }),
                         null != l &&
                             (0, r.jsx)("div", {
-                                className: _.filterIconButton,
-                                children: (0, r.jsx)(u.gXV, {
+                                className: H.filterIconButton,
+                                children: (0, r.jsx)(d.gXV, {
                                     size: "custom",
-                                    className: _.filterIcon,
-                                    color: o ? u.TVs.colors.CONTROL_BRAND_FOREGROUND.css : u.TVs.colors.TEXT_MUTED.css,
+                                    className: H.filterIcon,
+                                    color: o ? d.TVs.colors.CONTROL_BRAND_FOREGROUND.css : d.TVs.colors.TEXT_MUTED.css,
                                     width: 16,
                                     height: 16,
                                 }),
@@ -122,119 +123,119 @@ let Z = l.forwardRef(function (e, t) {
         })
     );
 });
-function D(e) {
+function R(e) {
     let { guildId: t, currentPagedMembers: n } = e,
         o = l.useRef(null),
         a = l.useRef(null),
-        D = l.useRef(null),
         R = l.useRef(null),
         L = l.useRef(null),
-        I = (0, c.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], s()),
-        P = (0, c.e7)([C.Z, d.Z], () => C.Z.can(y.Plq.MANAGE_GUILD, d.Z.getGuild(t)), [t]),
-        { selectedUserIds: M, addUsers: V, clearSelection: E } = (0, f.Z)(t),
-        T =
-            I.requireUnusualDmActivity ||
-            I.requireCommunicationDisabled ||
-            I.requireUnusualAccountActivity ||
-            I.requireUsernameQuarantined,
-        k = I.selectedRoleIds.size > 0,
-        A = null != I.selectedJoinDateOption.afterDate,
-        B = I.selectedSort === m.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        U = null != I.selectedAccountAgeOption.afterDate,
-        F = I.selectedSort === m.d$.ORDER_BY_USER_ID_ASC || I.selectedSort === m.d$.ORDER_BY_USER_ID_DESC,
-        q = null != I.selectedSourceInviteCode && "" !== I.selectedSourceInviteCode,
-        z = null != I.selectedJoinSourceType,
-        G = q || z,
-        Y = (0, b.xC)(t),
-        W = l.useMemo(() => n.filter((e) => (0, b.rX)(t, Y, e)), [Y, n, t]),
-        X = W.length > 0,
-        J = 0 === W.filter((e) => !M.has(e)).length,
-        K = l.useCallback(() => {
-            X && (J ? E() : V(W));
-        }, [X, J, E, V, W]);
+        I = l.useRef(null),
+        P = (0, c.e7)([f.Z], () => f.Z.getSearchStateByGuildId(t), [t], s()),
+        M = (0, c.e7)([m.Z, C.Z], () => m.Z.can(O.Plq.MANAGE_GUILD, C.Z.getGuild(t)), [t]),
+        { selectedUserIds: V, addUsers: E, clearSelection: T } = (0, h.Z)(t),
+        k =
+            P.requireUnusualDmActivity ||
+            P.requireCommunicationDisabled ||
+            P.requireUnusualAccountActivity ||
+            P.requireUsernameQuarantined,
+        A = P.selectedRoleIds.size > 0,
+        B = null != P.selectedJoinDateOption.afterDate,
+        U = P.selectedSort === b.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        F = null != P.selectedAccountAgeOption.afterDate,
+        q = P.selectedSort === b.d$.ORDER_BY_USER_ID_ASC || P.selectedSort === b.d$.ORDER_BY_USER_ID_DESC,
+        z = null != P.selectedSourceInviteCode && "" !== P.selectedSourceInviteCode,
+        G = null != P.selectedJoinSourceType,
+        Y = z || G,
+        W = (0, p.xC)(t),
+        K = l.useMemo(() => n.filter((e) => (0, p.rX)(t, W, e)), [W, n, t]),
+        Q = K.length > 0,
+        X = 0 === K.filter((e) => !V.has(e)).length,
+        J = l.useCallback(() => {
+            Q && (X ? T() : E(K));
+        }, [Q, X, T, E, K]);
     return (0, r.jsx)("thead", {
         children: (0, r.jsxs)("tr", {
-            className: _.tableHeaderRow,
+            className: H.tableHeaderRow,
             children: [
-                Y &&
+                W &&
                     (0, r.jsx)("th", {
-                        className: i()(_.tableHeaderCellContainer, H.xsmallCol),
-                        children: (0, r.jsx)(u.ua7, {
-                            shouldShow: !X,
-                            text: O.intl.string(O.t.tJEY0N),
+                        className: i()(H.tableHeaderCellContainer, w.xsmallCol),
+                        children: (0, r.jsx)(d.ua7, {
+                            shouldShow: !Q,
+                            text: _.intl.string(_.t.tJEY0N),
                             children: (e) =>
                                 (0, r.jsx)(
-                                    u.P3F,
-                                    N(w({}, e), {
-                                        onClick: K,
-                                        className: _.tableHeaderCell,
-                                        children: (0, r.jsx)(u.XZJ, {
-                                            type: u.XZJ.Types.INVERTED,
-                                            value: J,
-                                            disabled: !X,
+                                    d.P3F,
+                                    S(N({}, e), {
+                                        onClick: J,
+                                        className: H.tableHeaderCell,
+                                        children: (0, r.jsx)(u.$q, {
+                                            type: u.M0.INVERTED,
+                                            value: X,
+                                            disabled: !Q,
                                         }),
                                     }),
                                 ),
                         }),
                     }),
-                (0, r.jsx)(Z, { label: O.intl.string(O.t.Es7n9f) }),
-                P
+                (0, r.jsx)(Z, { label: _.intl.string(_.t.Es7n9f) }),
+                M
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(u.yRy, {
+                              (0, r.jsx)(d.yRy, {
                                   targetElementRef: o,
-                                  animation: u.yRy.Animation.FADE,
+                                  animation: d.yRy.Animation.FADE,
                                   position: "bottom",
                                   spacing: 4,
                                   align: "left",
                                   renderPopout: () =>
-                                      (0, r.jsx)(g.Z, {
+                                      (0, r.jsx)(x.Z, {
                                           guildId: t,
-                                          onClose: y.dG4,
+                                          onClose: O.dG4,
                                       }),
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = S(e, ["onClick"]);
+                                          n = D(e, ["onClick"]);
                                       return (0, r.jsx)(
                                           Z,
-                                          w(
+                                          N(
                                               {
                                                   ref: o,
-                                                  label: O.intl.string(O.t.xcKP1N),
+                                                  label: _.intl.string(_.t.xcKP1N),
                                                   onFilter: t,
-                                                  isFiltered: A,
-                                                  isSorted: B,
-                                                  className: H.smallCol,
+                                                  isFiltered: B,
+                                                  isSorted: U,
+                                                  className: w.smallCol,
                                               },
                                               n,
                                           ),
                                       );
                                   },
                               }),
-                              (0, r.jsx)(u.yRy, {
+                              (0, r.jsx)(d.yRy, {
                                   targetElementRef: a,
-                                  animation: u.yRy.Animation.FADE,
+                                  animation: d.yRy.Animation.FADE,
                                   position: "bottom",
                                   spacing: 4,
                                   align: "left",
                                   renderPopout: () =>
-                                      (0, r.jsx)(h.Z, {
+                                      (0, r.jsx)(j.Z, {
                                           guildId: t,
-                                          onClose: y.dG4,
+                                          onClose: O.dG4,
                                       }),
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = S(e, ["onClick"]);
+                                          n = D(e, ["onClick"]);
                                       return (0, r.jsx)(
                                           Z,
-                                          w(
+                                          N(
                                               {
                                                   ref: a,
-                                                  label: O.intl.string(O.t.sPph4O),
+                                                  label: _.intl.string(_.t.sPph4O),
                                                   onFilter: t,
-                                                  isFiltered: U,
-                                                  isSorted: F,
-                                                  className: H.smallCol,
+                                                  isFiltered: F,
+                                                  isSorted: q,
+                                                  className: w.smallCol,
                                               },
                                               n,
                                           ),
@@ -246,112 +247,112 @@ function D(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(Z, {
-                                  label: O.intl.string(O.t.xcKP1N),
-                                  className: H.smallCol,
+                                  label: _.intl.string(_.t.xcKP1N),
+                                  className: w.smallCol,
                               }),
                               (0, r.jsx)(Z, {
-                                  label: O.intl.string(O.t.sPph4O),
-                                  className: H.smallCol,
+                                  label: _.intl.string(_.t.sPph4O),
+                                  className: w.smallCol,
                               }),
                           ],
                       }),
-                P
-                    ? (0, r.jsx)(u.yRy, {
-                          targetElementRef: D,
-                          animation: u.yRy.Animation.FADE,
+                M
+                    ? (0, r.jsx)(d.yRy, {
+                          targetElementRef: R,
+                          animation: d.yRy.Animation.FADE,
                           position: "bottom",
                           spacing: 4,
                           align: "left",
                           renderPopout: () =>
-                              (0, r.jsx)(x.Z, {
+                              (0, r.jsx)(v.Z, {
                                   guildId: t,
-                                  onClose: y.dG4,
+                                  onClose: O.dG4,
                               }),
                           children: (e) => {
                               var { onClick: t } = e,
-                                  n = S(e, ["onClick"]);
+                                  n = D(e, ["onClick"]);
                               return (0, r.jsx)(
                                   Z,
-                                  w(
+                                  N(
                                       {
-                                          ref: D,
-                                          label: O.intl.string(O.t.yn0w19),
+                                          ref: R,
+                                          label: _.intl.string(_.t.yn0w19),
                                           onFilter: t,
-                                          isFiltered: G,
-                                          className: H.smallCol,
+                                          isFiltered: Y,
+                                          className: w.smallCol,
                                       },
                                       n,
                                   ),
                               );
                           },
                       })
-                    : P &&
+                    : M &&
                       (0, r.jsx)(Z, {
-                          label: O.intl.string(O.t.yn0w19),
-                          className: H.smallCol,
+                          label: _.intl.string(_.t.yn0w19),
+                          className: w.smallCol,
                       }),
-                (0, r.jsx)(u.yRy, {
-                    targetElementRef: R,
-                    animation: u.yRy.Animation.FADE,
+                (0, r.jsx)(d.yRy, {
+                    targetElementRef: L,
+                    animation: d.yRy.Animation.FADE,
                     position: "bottom",
                     spacing: 4,
                     align: "left",
                     renderPopout: (e) => {
                         let { closePopout: n } = e;
-                        return (0, r.jsx)(v.Z, {
+                        return (0, r.jsx)(y.Z, {
                             guildId: t,
                             onClose: n,
                         });
                     },
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = S(e, ["onClick"]);
+                            n = D(e, ["onClick"]);
                         return (0, r.jsx)(
                             Z,
-                            w(
+                            N(
                                 {
-                                    ref: R,
-                                    label: O.intl.string(O.t["2SZsWV"]),
+                                    ref: L,
+                                    label: _.intl.string(_.t["2SZsWV"]),
                                     onFilter: t,
-                                    isFiltered: k,
-                                    className: H.mediumCol,
+                                    isFiltered: A,
+                                    className: w.mediumCol,
                                 },
                                 n,
                             ),
                         );
                     },
                 }),
-                (0, r.jsx)(u.ua7, {
-                    text: O.intl.string(O.t["2cRO3d"]),
+                (0, r.jsx)(d.ua7, {
+                    text: _.intl.string(_.t["2cRO3d"]),
                     position: "top",
                     align: "left",
                     shouldShow: !0,
-                    color: u.ua7.Colors.BRAND,
+                    color: d.ua7.Colors.BRAND,
                     children: (e) =>
-                        (0, r.jsx)(u.yRy, {
-                            targetElementRef: L,
-                            animation: u.yRy.Animation.FADE,
+                        (0, r.jsx)(d.yRy, {
+                            targetElementRef: I,
+                            animation: d.yRy.Animation.FADE,
                             position: "bottom",
                             spacing: 4,
                             align: "left",
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
-                                return (0, r.jsx)(j.Z, {
+                                return (0, r.jsx)(g.Z, {
                                     guildId: t,
                                     onClose: n,
                                 });
                             },
                             children: (t) =>
                                 (0, r.jsx)(Z, {
-                                    ref: L,
-                                    label: O.intl.string(O.t["7V375+"]),
-                                    "aria-label": O.intl.string(O.t["2cRO3d"]),
+                                    ref: I,
+                                    label: _.intl.string(_.t["7V375+"]),
+                                    "aria-label": _.intl.string(_.t["2cRO3d"]),
                                     onFilter: (n) => {
                                         var r, l;
                                         null == (r = t.onClick) || r.call(t, n), null == (l = e.onClick) || l.call(e);
                                     },
-                                    isFiltered: T,
-                                    className: H.smallCol,
+                                    isFiltered: k,
+                                    className: w.smallCol,
                                     onMouseEnter: () => {
                                         var n, r;
                                         null == (n = e.onMouseEnter) || n.call(e),
@@ -368,8 +369,8 @@ function D(e) {
                         }),
                 }),
                 (0, r.jsx)(Z, {
-                    label: O.intl.string(O.t["5Q9xGh"]),
-                    className: H.smallCol,
+                    label: _.intl.string(_.t["5Q9xGh"]),
+                    className: w.smallCol,
                 }),
             ],
         }),

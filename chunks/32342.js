@@ -1,111 +1,112 @@
-n.d(e, { default: () => x }), n(388685);
+n.d(e, { default: () => f }), n(388685);
 var i = n(951288),
     a = n(647438),
-    s = n(82659),
-    l = n(481060),
-    r = n(782568),
-    o = n(53365),
-    d = n(377176),
-    c = n(577275),
-    u = n(981631),
+    l = n(82659),
+    s = n(755721),
+    r = n(481060),
+    o = n(782568),
+    d = n(53365),
+    c = n(377176),
+    u = n(577275),
+    m = n(981631),
     p = n(829857),
-    m = n(388032),
-    h = n(170538);
-function g(t) {
+    h = n(388032),
+    g = n(170538);
+function x(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: a } = t;
     return (0, i.jsx)("div", {
-        className: h.teamSetup,
+        className: g.teamSetup,
         children:
             0 !== a.length &&
-            (0, i.jsx)(l.q4e, {
+            (0, i.jsx)(r.q4e, {
                 options: a,
-                placeholder: m.intl.string(m.t.QXf93N),
+                placeholder: h.intl.string(h.t.QXf93N),
                 value: e,
                 onChange: n,
-                "aria-label": m.intl.string(m.t.QXf93N),
+                "aria-label": h.intl.string(h.t.QXf93N),
             }),
     });
 }
-function x(t) {
-    let { guildId: e, requireTeamSetup: n, onClose: h, transitionState: x } = t,
-        [f, C] = a.useState(),
-        [y, T] = a.useState(!1),
-        { teams: v } = (0, c.Z)(),
-        E = v.filter((t) => t.payout_account_status === p.C.ACTIVE),
-        S = a.useMemo(
+function f(t) {
+    let { guildId: e, requireTeamSetup: n, onClose: g, transitionState: f } = t,
+        [C, v] = a.useState(),
+        [E, S] = a.useState(!1),
+        { teams: j } = (0, u.Z)(),
+        y = j.filter((t) => t.payout_account_status === p.C.ACTIVE),
+        T = a.useMemo(
             () =>
-                E.map((t) => ({
+                y.map((t) => ({
                     label: t.name,
                     value: t.id,
                 })),
-            [E],
+            [y],
         ),
-        j = () => {
-            T((t) => !t);
-        },
         b = () => {
-            h(), (0, o.df)(e, f);
+            S((t) => !t);
         },
-        k = a.useCallback(() => {
-            (0, r.Z)(u.EYA.DEVELOPER_PORTAL_TEAMS);
+        k = () => {
+            g(), (0, d.df)(e, C);
+        },
+        _ = a.useCallback(() => {
+            (0, o.Z)(m.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
     if (!n)
-        return (0, i.jsx)(s.Modal, {
-            title: m.intl.string(m.t.GfObDA),
+        return (0, i.jsx)(l.Modal, {
+            title: h.intl.string(h.t.GfObDA),
             actions: [
                 {
                     variant: "primary",
-                    text: m.intl.string(m.t.geKm7u),
-                    onClick: b,
-                    disabled: !y,
+                    text: h.intl.string(h.t.geKm7u),
+                    onClick: k,
+                    disabled: !E,
                 },
             ],
-            onClose: h,
-            transitionState: x,
+            onClose: g,
+            transitionState: f,
             size: "md",
-            children: (0, i.jsx)(l.XZJ, {
-                onChange: j,
+            children: (0, i.jsx)(s.$q, {
+                onChange: b,
                 size: 20,
-                type: l.XZJ.Types.INVERTED,
-                value: y,
-                children: (0, i.jsx)(l.Text, {
+                type: s.M0.INVERTED,
+                value: E,
+                children: (0, i.jsx)(r.Text, {
                     variant: "text-md/normal",
                     color: "header-secondary",
-                    children: (0, d.f)(),
+                    children: (0, c.f)(),
                 }),
             }),
         });
     {
-        let t = 0 === S.length;
-        return (0, i.jsxs)(s.Modal, {
-            title: m.intl.string(m.t.inJKQk),
-            subtitle: t ? m.intl.format(m.t.Jyy4pa, {}) : m.intl.string(m.t.U1Vz29),
+        let t = 0 === T.length;
+        return (0, i.jsxs)(l.Modal, {
+            title: h.intl.string(h.t.inJKQk),
+            subtitle: t ? h.intl.format(h.t.Jyy4pa, {}) : h.intl.string(h.t.U1Vz29),
             actions: [
                 {
                     variant: "primary",
-                    text: t ? m.intl.string(m.t.JddVgI) : m.intl.string(m.t.geKm7u),
-                    onClick: t ? k : b,
+                    text: t ? h.intl.string(h.t.JddVgI) : h.intl.string(h.t.geKm7u),
+                    onClick: t ? _ : k,
                 },
             ],
-            onClose: h,
-            transitionState: x,
+            onClose: g,
+            transitionState: f,
             size: "md",
             children: [
                 !t &&
-                    (0, i.jsx)(g, {
-                        selectedTeamId: f,
-                        onSetSelectedTeamId: C,
-                        teamOptions: S,
+                    (0, i.jsx)(x, {
+                        selectedTeamId: C,
+                        onSetSelectedTeamId: v,
+                        teamOptions: T,
                     }),
-                (0, i.jsx)(l.XZJ, {
-                    onChange: j,
+                (0, i.jsx)(s.$q, {
+                    onChange: b,
                     size: 20,
-                    type: l.XZJ.Types.INVERTED,
-                    value: y,
-                    children: (0, i.jsx)(l.Text, {
+                    type: s.M0.INVERTED,
+                    value: E,
+                    children: (0, i.jsx)(r.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: (0, d.f)(),
+                        children: (0, c.f)(),
                     }),
                 }),
             ],

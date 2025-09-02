@@ -1,18 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => c });
 var l = n(951288);
 n(647438);
-var i = n(481060),
-    r = n(388032),
-    a = n(788931);
-function o(e) {
+var r = n(755721),
+    i = n(481060),
+    a = n(388032),
+    o = n(788931);
+function c(e) {
     let { sendStartNotification: t, setSendStartNotification: n } = e,
-        o = t ? r.intl.string(r.t.xAT8lJ) : r.intl.string(r.t["Y+18hY"]);
+        c = t ? a.intl.string(a.t.xAT8lJ) : a.intl.string(a.t["Y+18hY"]);
     return (0, l.jsx)("div", {
-        className: a.notificationToggle,
-        children: (0, l.jsx)(i.XZJ, {
-            type: i.XZJ.Types.INVERTED,
+        className: o.notificationToggle,
+        children: (0, l.jsx)(r.$q, {
+            type: r.M0.INVERTED,
             size: 14,
-            className: a.__invalid_checkbox,
+            className: o.__invalid_checkbox,
             value: t,
             onChange: function () {
                 n(!t);
@@ -22,9 +23,9 @@ function o(e) {
                 variant: "text-sm/normal",
                 children: (0, l.jsx)(i.ua7, {
                     position: "bottom",
-                    tooltipClassName: a.tooltip,
-                    text: r.intl.string(r.t["4A/xnZ"]),
-                    "aria-label": r.intl.string(r.t["4A/xnZ"]),
+                    tooltipClassName: o.tooltip,
+                    text: a.intl.string(a.t["4A/xnZ"]),
+                    "aria-label": a.intl.string(a.t["4A/xnZ"]),
                     children: (e) => {
                         var t, n;
                         return (0, l.jsx)(
@@ -54,7 +55,7 @@ function o(e) {
                                 }
                                 return e;
                             })({}, e)),
-                            (n = n = { children: o }),
+                            (n = n = { children: c }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {

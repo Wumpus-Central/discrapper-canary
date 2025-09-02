@@ -2,8 +2,8 @@ e.d(i, { Z: () => I }), e(388685);
 var n = e(951288),
     s = e(647438),
     a = e(103866),
-    l = e(213734),
-    r = e(37148),
+    l = e(37148),
+    r = e(755721),
     c = e(481060),
     d = e(153867),
     o = e(626135),
@@ -37,7 +37,7 @@ function I(t) {
         [S, E] = s.useState(!1),
         [x, A] = s.useState(null),
         [O, T] = s.useState(""),
-        p = s.useCallback(() => {
+        h = s.useCallback(() => {
             null != x &&
                 (o.default.track(C.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
                     answer: x,
@@ -53,7 +53,7 @@ function I(t) {
         }, [S]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(r.x, {
+                (0, n.jsx)(l.x, {
                     title: _.intl.string(_.t.zPxMdX),
                     subtitle: _.intl.string(_.t.QJGdBw),
                 }),
@@ -86,12 +86,12 @@ function I(t) {
                             }),
                     ],
                 }),
-                (0, n.jsx)(l.m, {
+                (0, n.jsx)(c.mzw, {
                     children: (0, n.jsxs)("div", {
                         className: u.footer,
                         children: [
-                            (0, n.jsx)(c.XZJ, {
-                                type: c.XZJ.Types.INVERTED,
+                            (0, n.jsx)(r.$q, {
+                                type: r.M0.INVERTED,
                                 value: S,
                                 onChange: (t, i) => E(i),
                                 size: 20,
@@ -104,7 +104,7 @@ function I(t) {
                             (0, n.jsx)(c.zxk, {
                                 variant: "primary",
                                 text: _.intl.string(_.t.geKm7u),
-                                onClick: p,
+                                onClick: h,
                                 disabled: null == x,
                             }),
                         ],

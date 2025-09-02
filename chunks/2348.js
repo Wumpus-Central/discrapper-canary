@@ -1,23 +1,24 @@
-n.d(t, { Z: () => I }), n(539854);
+n.d(t, { Z: () => S }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
     s = n(692547),
-    o = n(481060),
-    c = n(239091),
-    d = n(111028),
-    u = n(977258),
-    m = n(637853),
-    g = n(473403),
-    p = n(216306),
+    o = n(755721),
+    c = n(481060),
+    d = n(239091),
+    u = n(111028),
+    m = n(977258),
+    g = n(637853),
+    p = n(473403),
+    f = n(216306),
     h = n(743475),
-    f = n(827907),
-    b = n(868814),
-    x = n(981631),
-    j = n(388032),
-    _ = n(813878);
-function v(e) {
+    b = n(827907),
+    x = n(868814),
+    j = n(981631),
+    _ = n(388032),
+    v = n(813878);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,31 +61,31 @@ function O(e, t) {
         e
     );
 }
-function y(e) {
+function C(e) {
     let { guild: t, channel: i } = e,
-        l = (0, f.Mf)(i.id);
+        l = (0, b.Mf)(i.id);
     return "null" === i.id
         ? (0, r.jsx)("div", {
-              className: a()(_.categoryRow, _.uncategorized),
-              children: (0, r.jsx)(o.Text, {
-                  className: _.categoryText,
+              className: a()(v.categoryRow, v.uncategorized),
+              children: (0, r.jsx)(c.Text, {
+                  className: v.categoryText,
                   color: "text-muted",
                   variant: "text-xs/semibold",
                   lineClamp: 1,
                   children: i.name,
               }),
           })
-        : (0, r.jsxs)(o.P3F, {
-              className: a()(_.categoryRow, { [_.uncategorized]: "null" === i.id }),
+        : (0, r.jsxs)(c.P3F, {
+              className: a()(v.categoryRow, { [v.uncategorized]: "null" === i.id }),
               onContextMenu: (e) => {
-                  (0, c.jW)(e, async () => {
+                  (0, d.jW)(e, async () => {
                       let { default: e } = await Promise.all([n.e("90508"), n.e("68294"), n.e("8965")]).then(
                           n.bind(n, 139035),
                       );
                       return (n) =>
                           (0, r.jsx)(
                               e,
-                              O(v({}, n), {
+                              y(O({}, n), {
                                   channel: i,
                                   guild: t,
                               }),
@@ -93,14 +94,14 @@ function y(e) {
               },
               onClick: (e) => (
                   e.stopPropagation(),
-                  (0, u.s)(t.id, i.id)
+                  (0, m.s)(t.id, i.id)
                       ? (0, h.pt)(i.id)
-                      : (0, o.ZDy)(async () => {
+                      : (0, c.ZDy)(async () => {
                             let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    O(v({}, n), {
+                                    y(O({}, n), {
                                         guildId: t.id,
                                         startingChannelId: i.id,
                                     }),
@@ -109,65 +110,65 @@ function y(e) {
                   !0
               ),
               children: [
-                  (0, r.jsx)(o.Text, {
-                      className: _.categoryText,
+                  (0, r.jsx)(c.Text, {
+                      className: v.categoryText,
                       color: "text-muted",
                       variant: "text-xs/semibold",
                       lineClamp: 1,
                       children: i.name,
                   }),
-                  (0, r.jsx)(o.XZJ, {
+                  (0, r.jsx)(o.$q, {
                       "aria-checked": l,
                       value: l,
-                      type: o.XZJ.Types.INVERTED,
-                      className: _.checkbox,
+                      type: o.M0.INVERTED,
+                      className: v.checkbox,
                       displayOnly: !0,
                   }),
               ],
           });
 }
-let C = i.memo(function () {
-        return (0, r.jsx)("div", { className: _.separator });
+let N = i.memo(function () {
+        return (0, r.jsx)("div", { className: v.separator });
     }),
-    N = i.memo(function (e) {
+    E = i.memo(function (e) {
         let { index: t } = e;
         return (0, r.jsx)(
-            o.Text,
+            c.Text,
             {
                 variant: "text-xs/normal",
-                className: _.subtitleSeparator,
+                className: v.subtitleSeparator,
                 children: "\xB7",
             },
             "separator-".concat(t),
         );
     }),
-    E = i.memo(function (e) {
+    I = i.memo(function (e) {
         let {
                 channel: t,
                 category: i,
                 guild: l,
-                isFirstChannel: p,
-                isLastChannel: y,
-                tooltipDirection: E = "right",
+                isFirstChannel: f,
+                isLastChannel: C,
+                tooltipDirection: I = "right",
             } = e,
-            I = (0, f.Mf)(t.id, i.id),
-            S = (0, f.t4)(t.id, i.id),
-            T = (0, f.EH)(t.id, i.id),
-            P = (0, f.lL)(l.id, i.id),
-            w = null != (0, b.Z)(l).find((e) => e.id === t.id),
-            R = (0, m.mn)(t.id),
-            Z = (e) => {
-                if (!S)
+            S = (0, b.Mf)(t.id, i.id),
+            T = (0, b.t4)(t.id, i.id),
+            P = (0, b.EH)(t.id, i.id),
+            w = (0, b.lL)(l.id, i.id),
+            R = null != (0, x.Z)(l).find((e) => e.id === t.id),
+            Z = (0, g.mn)(t.id),
+            D = (e) => {
+                if (!T)
                     return (
                         e.stopPropagation(),
-                        (0, u.s)(l.id, t.id)
+                        (0, m.s)(l.id, t.id)
                             ? (0, h.pt)(t.id)
-                            : (0, o.ZDy)(async () => {
+                            : (0, c.ZDy)(async () => {
                                   let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          O(v({}, n), {
+                                          y(O({}, n), {
                                               guildId: l.id,
                                               startingChannelId: t.id,
                                           }),
@@ -176,9 +177,9 @@ let C = i.memo(function () {
                         !0
                     );
             },
-            D = (e) => {
+            A = (e) => {
                 t.isGuildVocal()
-                    ? (0, c.jW)(e, async () => {
+                    ? (0, d.jW)(e, async () => {
                           let { default: e } = await Promise.all([
                               n.e("79695"),
                               n.e("90508"),
@@ -191,13 +192,13 @@ let C = i.memo(function () {
                           return (n) =>
                               (0, r.jsx)(
                                   e,
-                                  O(v({}, n), {
+                                  y(O({}, n), {
                                       channel: t,
                                       guild: l,
                                   }),
                               );
                       })
-                    : (0, c.jW)(e, async () => {
+                    : (0, d.jW)(e, async () => {
                           let { default: e } = await Promise.all([
                               n.e("5410"),
                               n.e("79695"),
@@ -215,7 +216,7 @@ let C = i.memo(function () {
                               n.e("97755"),
                               n.e("1268"),
                               n.e("36745"),
-                              n.e("68197"),
+                              n.e("56011"),
                               n.e("93077"),
                               n.e("55196"),
                               n.e("14350"),
@@ -223,7 +224,7 @@ let C = i.memo(function () {
                           return (n) =>
                               (0, r.jsx)(
                                   e,
-                                  O(v({}, n), {
+                                  y(O({}, n), {
                                       channel: t,
                                       guild: l,
                                   }),
@@ -232,56 +233,56 @@ let C = i.memo(function () {
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.ua7, {
-                    text: null != T ? T : P,
+                (0, r.jsx)(c.ua7, {
+                    text: null != P ? P : w,
                     delay: 500,
-                    position: E,
+                    position: I,
                     children: (e) =>
                         (0, r.jsxs)(
-                            o.P3F,
-                            O(
-                                v(
+                            c.P3F,
+                            y(
+                                O(
                                     {
-                                        className: a()(_.channelRow, {
-                                            [_.firstChannel]: p,
-                                            [_.lastChannel]: y,
-                                            [_.disabled]: S,
+                                        className: a()(v.channelRow, {
+                                            [v.firstChannel]: f,
+                                            [v.lastChannel]: C,
+                                            [v.disabled]: T,
                                         }),
                                     },
                                     e,
                                 ),
                                 {
-                                    onClick: Z,
-                                    onContextMenu: D,
+                                    onClick: D,
+                                    onContextMenu: A,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: _.channelInfo,
+                                            className: v.channelInfo,
                                             children: (0, r.jsxs)("div", {
-                                                className: _.channelName,
+                                                className: v.channelName,
                                                 children: [
-                                                    (0, r.jsx)(g._W, {
+                                                    (0, r.jsx)(p._W, {
                                                         channel: t,
                                                         guild: l,
                                                     }),
-                                                    (0, r.jsx)(d.Z, {
-                                                        className: _.__invalid_name,
-                                                        children: (0, r.jsx)(o.Text, {
-                                                            className: _.channelText,
+                                                    (0, r.jsx)(u.Z, {
+                                                        className: v.__invalid_name,
+                                                        children: (0, r.jsx)(c.Text, {
+                                                            className: v.channelText,
                                                             variant: "text-md/medium",
                                                             lineClamp: 1,
-                                                            color: S ? "text-muted" : "text-default",
+                                                            color: T ? "text-muted" : "text-default",
                                                             children: t.name,
                                                         }),
                                                     }),
-                                                    w
+                                                    R
                                                         ? (0, r.jsxs)(r.Fragment, {
                                                               children: [
-                                                                  (0, r.jsx)(N, { index: 0 }),
-                                                                  (0, r.jsx)(o.Text, {
+                                                                  (0, r.jsx)(E, { index: 0 }),
+                                                                  (0, r.jsx)(c.Text, {
                                                                       variant: "text-xs/medium",
-                                                                      className: _.channelSubtitle,
+                                                                      className: v.channelSubtitle,
                                                                       color: "text-brand",
-                                                                      children: j.intl.string(j.t.mPxmeH),
+                                                                      children: _.intl.string(_.t.mPxmeH),
                                                                   }),
                                                               ],
                                                           })
@@ -290,25 +291,25 @@ let C = i.memo(function () {
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: _.channelActions,
-                                            children: (0, u.s)(t.guild_id, t.id)
-                                                ? (0, r.jsx)(o.XZJ, {
-                                                      "aria-checked": I,
-                                                      value: I,
-                                                      type: o.XZJ.Types.INVERTED,
-                                                      disabled: S,
-                                                      color: R
+                                            className: v.channelActions,
+                                            children: (0, m.s)(t.guild_id, t.id)
+                                                ? (0, r.jsx)(o.$q, {
+                                                      "aria-checked": S,
+                                                      value: S,
+                                                      type: o.M0.INVERTED,
+                                                      disabled: T,
+                                                      color: Z
                                                           ? s.Z.colors.BG_BRAND.css
                                                           : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                                      innerClassName: _.checkboxInner,
+                                                      innerClassName: v.checkboxInner,
                                                       displayOnly: !0,
                                                   })
-                                                : (0, r.jsx)(o.zxk, {
+                                                : (0, r.jsx)(c.zxk, {
                                                       size: "sm",
                                                       variant: "secondary",
-                                                      text: j.intl.string(j.t.zA9d1N),
-                                                      icon: o.mBM,
-                                                      onClick: x.dG4,
+                                                      text: _.intl.string(_.t.zA9d1N),
+                                                      icon: c.mBM,
+                                                      onClick: j.dG4,
                                                   }),
                                         }),
                                     ],
@@ -316,17 +317,17 @@ let C = i.memo(function () {
                             ),
                         ),
                 }),
-                !y && (0, r.jsx)(C, {}),
+                !C && (0, r.jsx)(N, {}),
             ],
         });
     });
-function I(e) {
+function S(e) {
     let { categories: t, guild: n, className: l, hasSidebar: a } = e,
         s = i.useCallback(
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
-                    y,
+                    C,
                     {
                         channel: i.channel,
                         guild: n,
@@ -343,7 +344,7 @@ function I(e) {
                 return null == s
                     ? null
                     : (0, r.jsx)(
-                          E,
+                          I,
                           {
                               category: l.channel,
                               channel: s.channel,
@@ -357,7 +358,7 @@ function I(e) {
             },
             [t, n, a],
         ),
-        c = (0, p.tn)(n.id, t, 64);
+        c = (0, f.tn)(n.id, t, 64);
     return (0, r.jsx)("div", {
         className: l,
         children: c.map((e, t) => {

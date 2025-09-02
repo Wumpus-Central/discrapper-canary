@@ -1,37 +1,38 @@
-n.d(t, { Z: () => m }), n(35282);
+n.d(t, { Z: () => g }), n(35282);
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(91192),
     o = n(442837),
-    s = n(481060),
-    c = n(129861),
-    u = n(700582),
-    d = n(600164),
-    p = n(158776),
-    h = n(51144),
-    f = n(469407);
-function m(e) {
+    s = n(755721),
+    c = n(481060),
+    u = n(129861),
+    d = n(700582),
+    p = n(600164),
+    h = n(158776),
+    f = n(51144),
+    m = n(469407);
+function g(e) {
     var t, n;
     let {
             user: i,
-            row: m,
-            hideDiscriminator: g,
-            comparator: b,
+            row: g,
+            hideDiscriminator: b,
+            comparator: y,
             selected: _,
-            checked: y,
-            disabled: C = !1,
+            checked: C,
+            disabled: v = !1,
             inlineUsername: x = !0,
-            onClick: v,
-            onMouseEnter: O,
-            "aria-setsize": j,
-            "aria-posinset": E,
+            onClick: O,
+            onMouseEnter: j,
+            "aria-setsize": E,
+            "aria-posinset": S,
         } = e,
-        S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
-        I = (0, a.JA)(String(i.id));
+        I = (0, o.e7)([h.Z], () => h.Z.getStatus(i.id)),
+        P = (0, a.JA)(String(i.id));
     return (0, r.jsx)(
-        s.P3F,
+        c.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,73 +59,73 @@ function m(e) {
             return e;
         })(
             {
-                id: "user-row-".concat(m),
-                className: l()(f.friendWrapper, { [f.disabled]: C }),
+                id: "user-row-".concat(g),
+                className: l()(m.friendWrapper, { [m.disabled]: v }),
                 onClick: () => {
-                    null != v && v(i.id);
+                    null != O && O(i.id);
                 },
                 onMouseEnter: () => {
-                    null != O && O(m);
+                    null != j && j(g);
                 },
             },
-            I,
+            P,
         )),
         (n = n =
             {
                 role: "option",
-                "aria-selected": y,
-                "aria-disabled": C,
-                "aria-setsize": j,
-                "aria-posinset": E,
-                children: (0, r.jsxs)(d.Z, {
-                    align: d.Z.Align.CENTER,
-                    className: l()(f.friend, {
-                        [f.friendSelected]: _,
-                        [f.twoRows]: !x,
+                "aria-selected": C,
+                "aria-disabled": v,
+                "aria-setsize": E,
+                "aria-posinset": S,
+                children: (0, r.jsxs)(p.Z, {
+                    align: p.Z.Align.CENTER,
+                    className: l()(m.friend, {
+                        [m.friendSelected]: _,
+                        [m.twoRows]: !x,
                     }),
                     children: [
-                        (0, r.jsx)(u.Z, {
+                        (0, r.jsx)(d.Z, {
                             user: i,
-                            status: S,
-                            className: f.avatar,
+                            status: I,
+                            className: m.avatar,
                         }),
-                        (0, r.jsxs)(d.Z, {
-                            className: f.match,
-                            align: d.Z.Align.BASELINE,
-                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                        (0, r.jsxs)(p.Z, {
+                            className: m.match,
+                            align: p.Z.Align.BASELINE,
+                            direction: x ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(c.Text, {
                                     tag: "strong",
-                                    className: f.nickname,
+                                    className: m.nickname,
                                     "aria-hidden": !0,
                                     variant: "text-md/medium",
                                     children:
-                                        null != b && b === i.tag
-                                            ? h.ZP.getName(i)
-                                            : null != b && "" !== b
-                                              ? b
-                                              : h.ZP.getName(i),
+                                        null != y && y === i.tag
+                                            ? f.ZP.getName(i)
+                                            : null != y && "" !== y
+                                              ? y
+                                              : f.ZP.getName(i),
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: (0, r.jsx)(c.Z, {
+                                    children: (0, r.jsx)(u.Z, {
                                         user: i,
-                                        hideDiscriminator: g,
-                                        className: f.discordTag,
-                                        usernameClass: f.__invalid_weightMedium,
-                                        discriminatorClass: f.__invalid_weightMedium,
+                                        hideDiscriminator: b,
+                                        className: m.discordTag,
+                                        usernameClass: m.__invalid_weightMedium,
+                                        discriminatorClass: m.__invalid_weightMedium,
                                         forceUsername: !0,
                                     }),
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(s.XZJ, {
+                        (0, r.jsx)(s.$q, {
                             displayOnly: !0,
                             size: 22,
-                            value: y,
-                            disabled: C,
-                            className: f.checkbox,
+                            value: C,
+                            disabled: v,
+                            className: m.checkbox,
                         }),
                     ],
                 }),

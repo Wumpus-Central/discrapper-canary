@@ -200,8 +200,8 @@ function G(e) {
                             ],
                         }),
                         "toggle" === l &&
-                            (0, r.jsx)(h.XZJ, {
-                                type: h.XZJ.Types.INVERTED,
+                            (0, r.jsx)(f.$q, {
+                                type: f.M0.INVERTED,
                                 displayOnly: !0,
                                 size: 24,
                                 value: d,
@@ -267,7 +267,7 @@ function H(e) {
         }),
     );
 }
-function W(e) {
+function q(e) {
     var { channel: t, subLabel: n } = e,
         l = U(e, ["channel", "subLabel"]);
     let i = (0, y.ZP)(t),
@@ -286,7 +286,7 @@ function W(e) {
         }),
     );
 }
-function q(e) {
+function W(e) {
     var { channel: t, subLabel: n } = e,
         l = U(e, ["channel", "subLabel"]);
     let i = (0, d.e7)([Z.Z], () => Z.Z.getGuild(null == t ? void 0 : t.guild_id)),
@@ -407,9 +407,9 @@ function V(e) {
                 return c === p.h8.USER
                     ? (0, r.jsx)(H, k({ user: f }, E))
                     : c === p.h8.GROUP_DM
-                      ? (0, r.jsx)(W, k({ channel: f }, E))
+                      ? (0, r.jsx)(q, k({ channel: f }, E))
                       : c === p.h8.TEXT_CHANNEL || c === p.h8.VOICE_CHANNEL
-                        ? (0, r.jsx)(q, k({ channel: f }, E))
+                        ? (0, r.jsx)(W, k({ channel: f }, E))
                         : void (0, A.vE)(c);
             },
             [o, u, l, s, t, n, y, d],

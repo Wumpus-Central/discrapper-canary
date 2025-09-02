@@ -1,56 +1,57 @@
-n.d(r, { default: () => l }), n(388685);
+n.d(r, { default: () => A }), n(388685);
 var i = n(951288),
     e = n(647438),
     a = n(82659),
-    E = n(481060),
-    o = n(53365),
-    T = n(377176),
-    c = n(388032);
-function l(t) {
-    let { guildId: r, transitionState: n, onClose: l } = t,
-        [A, _] = e.useState(!1),
-        [u, N] = e.useState(!1),
-        s = async () => {
-            _(!0);
+    E = n(755721),
+    o = n(481060),
+    T = n(53365),
+    c = n(377176),
+    l = n(388032);
+function A(t) {
+    let { guildId: r, transitionState: n, onClose: A } = t,
+        [_, u] = e.useState(!1),
+        [N, s] = e.useState(!1),
+        O = async () => {
+            u(!0);
             try {
-                await (0, o.zo)(r), l();
+                await (0, T.zo)(r), A();
             } finally {
-                _(!1);
+                u(!1);
             }
         },
-        O = c.intl.string(c.t["22itmp"]);
+        I = l.intl.string(l.t["22itmp"]);
     return (0, i.jsx)(a.Modal, {
         size: "md",
         transitionState: n,
-        onClose: l,
-        "aria-label": O,
-        title: O,
-        subtitle: c.intl.string(c.t.kdbm9P),
+        onClose: A,
+        "aria-label": I,
+        title: I,
+        subtitle: l.intl.string(l.t.kdbm9P),
         actions: [
             {
                 variant: "secondary",
-                onClick: l,
-                text: c.intl.string(c.t["ETE/oK"]),
+                onClick: A,
+                text: l.intl.string(l.t["ETE/oK"]),
             },
             {
                 variant: "primary",
-                text: c.intl.string(c.t["cY+Ooa"]),
-                disabled: !u,
-                onClick: s,
-                loading: A,
+                text: l.intl.string(l.t["cY+Ooa"]),
+                disabled: !N,
+                onClick: O,
+                loading: _,
             },
         ],
-        children: (0, i.jsx)(E.XZJ, {
+        children: (0, i.jsx)(E.$q, {
             onChange: () => {
-                N((t) => !t);
+                s((t) => !t);
             },
             size: 20,
-            type: E.XZJ.Types.INVERTED,
-            value: u,
-            children: (0, i.jsx)(E.Text, {
+            type: E.M0.INVERTED,
+            value: N,
+            children: (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
-                children: (0, T.f)(),
+                children: (0, c.f)(),
             }),
         }),
     });

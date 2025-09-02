@@ -228,7 +228,7 @@ class R extends i.Component {
                                         ],
                                     }),
                                     !0 !== i &&
-                                        (0, r.jsx)(l.XZJ, {
+                                        (0, r.jsx)(s.$q, {
                                             value: a,
                                             onChange: (e, t) => this.setState({ hasSpoiler: t }),
                                             children: (0, r.jsx)(l.Text, {

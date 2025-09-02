@@ -1,127 +1,128 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
     s = n(442837),
     o = n(28664),
-    c = n(481060),
-    d = n(603211),
-    u = n(710344),
-    m = n(637853),
-    g = n(259580),
-    p = n(823379),
+    c = n(755721),
+    d = n(481060),
+    u = n(603211),
+    m = n(710344),
+    g = n(637853),
+    p = n(259580),
+    f = n(823379),
     h = n(889369),
-    f = n(570961),
-    b = n(208665),
-    x = n(976983),
-    j = n(290511),
-    _ = n(388032),
-    v = n(814939);
-let O = { optionErrors: [] };
-function y(e) {
+    b = n(570961),
+    x = n(208665),
+    j = n(976983),
+    _ = n(290511),
+    v = n(388032),
+    O = n(814939);
+let y = { optionErrors: [] };
+function C(e) {
     var t;
     let {
             guild: n,
             prompt: l,
-            disableAutofocus: u,
-            promptIndex: x,
-            dragIndex: y,
-            includeCount: E,
-            singleColumn: I,
-            onPromptDragComplete: S,
-            onPromptDragStart: T,
-            onPromptDragReset: P,
+            disableAutofocus: m,
+            promptIndex: j,
+            dragIndex: C,
+            includeCount: I,
+            singleColumn: S,
+            onPromptDragComplete: T,
+            onPromptDragStart: P,
+            onPromptDragReset: w,
         } = e,
-        w = (0, s.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
+        R = (0, s.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
         {
-            drag: R,
-            dragSourcePosition: Z,
-            drop: D,
-            setIsDraggable: A,
-        } = (0, d.Z)({
+            drag: Z,
+            dragSourcePosition: D,
+            drop: A,
+            setIsDraggable: L,
+        } = (0, u.Z)({
             type: "ONBOARDING_PROMPT_CARD",
-            index: y,
+            index: C,
             optionId: l.id,
-            onDragStart: T,
-            onDragComplete: S,
-            onDragReset: P,
+            onDragStart: P,
+            onDragComplete: T,
+            onDragReset: w,
         }),
-        L = (0, s.cj)([b.Z], () => {
+        k = (0, s.cj)([x.Z], () => {
             var e;
-            return null != (e = b.Z.errors[x]) ? e : O;
+            return null != (e = x.Z.errors[j]) ? e : y;
         }),
-        [k, M] = i.useState(!1),
-        [G, U] = i.useState(!1),
-        B = null != (t = L.options) ? t : L.optionErrors.filter(p.lm)[0],
-        F = L.config,
-        H = l.options.length >= j.fY,
-        z = (0, m.kl)(n.id, Array.from(w), [l]).length - w.size,
-        W = i.useRef(null),
-        V = i.useRef(x);
+        [M, G] = i.useState(!1),
+        [U, B] = i.useState(!1),
+        F = null != (t = k.options) ? t : k.optionErrors.filter(f.lm)[0],
+        H = k.config,
+        z = l.options.length >= _.fY,
+        W = (0, g.kl)(n.id, Array.from(R), [l]).length - R.size,
+        V = i.useRef(null),
+        K = i.useRef(j);
     return (i.useEffect(() => {
-        V.current = x;
+        K.current = j;
     }),
     i.useLayoutEffect(() => {
         setTimeout(() => {
-            if (0 === V.current && !u) {
+            if (0 === K.current && !m) {
                 var e;
-                null == (e = W.current) || e.focus();
+                null == (e = V.current) || e.focus();
             }
         }, 0);
-    }, [u]),
-    k)
-        ? (0, r.jsx)(c.tEY, {
+    }, [m]),
+    M)
+        ? (0, r.jsx)(d.tEY, {
               children: (0, r.jsxs)("div", {
                   tabIndex: 0,
-                  onFocus: () => U(!0),
-                  onBlur: () => U(!1),
-                  onMouseLeave: () => U(!1),
-                  className: a()(v.container, {
-                      [v.dropIndicatorBefore]: null != Z && x < Z,
-                      [v.dropIndicatorAfter]: null != Z && x > Z,
-                      [v.containerFocused]: G,
+                  onFocus: () => B(!0),
+                  onBlur: () => B(!1),
+                  onMouseLeave: () => B(!1),
+                  className: a()(O.container, {
+                      [O.dropIndicatorBefore]: null != D && j < D,
+                      [O.dropIndicatorAfter]: null != D && j > D,
+                      [O.containerFocused]: U,
                   }),
                   ref: (e) => {
-                      R(D(e));
+                      Z(A(e));
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: v.dragContainer,
-                          onMouseEnter: () => A(!0),
-                          onMouseLeave: () => A(!1),
-                          children: (0, r.jsx)(c.Vni, {
+                          className: O.dragContainer,
+                          onMouseEnter: () => L(!0),
+                          onMouseLeave: () => L(!1),
+                          children: (0, r.jsx)(d.Vni, {
                               size: "xs",
                               color: "currentColor",
-                              className: v.dragIcon,
+                              className: O.dragIcon,
                           }),
                       }),
-                      (0, r.jsx)(c.Text, {
+                      (0, r.jsx)(d.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: _.intl.format(_.t.yjS3zs, { index: x + 1 }),
+                          children: v.intl.format(v.t.yjS3zs, { index: j + 1 }),
                       }),
-                      (0, r.jsx)(c.Text, {
+                      (0, r.jsx)(d.Text, {
                           variant: "text-lg/semibold",
                           color: "text-default",
                           children: l.title,
                       }),
-                      (0, r.jsx)(c.P3F, {
-                          className: v.collapseButton,
-                          onClick: () => M(!1),
-                          children: (0, r.jsx)(g.Z, {
-                              direction: g.Z.Directions.DOWN,
+                      (0, r.jsx)(d.P3F, {
+                          className: O.collapseButton,
+                          onClick: () => G(!1),
+                          children: (0, r.jsx)(p.Z, {
+                              direction: p.Z.Directions.DOWN,
                               height: 16,
                               width: 16,
                           }),
                       }),
                       (0, r.jsx)(o.u, {
                           asContainer: !0,
-                          text: _.intl.string(_.t["Ku+86e"]),
-                          children: (0, r.jsx)(c.P3F, {
-                              className: v.closeIcon,
-                              onClick: () => (0, f.fi)(n, l.id),
-                              children: (0, r.jsx)(c.XHJ, {
+                          text: v.intl.string(v.t["Ku+86e"]),
+                          children: (0, r.jsx)(d.P3F, {
+                              className: O.closeIcon,
+                              onClick: () => (0, b.fi)(n, l.id),
+                              children: (0, r.jsx)(d.XHJ, {
                                   size: "xs",
                                   color: "currentColor",
                               }),
@@ -130,122 +131,122 @@ function y(e) {
                   ],
               }),
           })
-        : (0, r.jsx)(c.tEY, {
+        : (0, r.jsx)(d.tEY, {
               children: (0, r.jsxs)("div", {
                   tabIndex: 0,
-                  onFocus: () => U(!0),
-                  onBlur: () => U(!1),
-                  className: a()(v.container, {
-                      [v.dropIndicatorBefore]: null != Z && x < Z,
-                      [v.dropIndicatorAfter]: null != Z && x > Z,
-                      [v.containerFocused]: G,
+                  onFocus: () => B(!0),
+                  onBlur: () => B(!1),
+                  className: a()(O.container, {
+                      [O.dropIndicatorBefore]: null != D && j < D,
+                      [O.dropIndicatorAfter]: null != D && j > D,
+                      [O.containerFocused]: U,
                   }),
                   ref: (e) => {
-                      R(D(e));
+                      Z(A(e));
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: v.dragContainer,
-                          onMouseEnter: () => A(!0),
-                          onMouseLeave: () => A(!1),
-                          children: (0, r.jsx)(c.Vni, {
+                          className: O.dragContainer,
+                          onMouseEnter: () => L(!0),
+                          onMouseLeave: () => L(!1),
+                          children: (0, r.jsx)(d.Vni, {
                               size: "xs",
                               color: "currentColor",
-                              className: v.dragIcon,
+                              className: O.dragIcon,
                           }),
                       }),
-                      (0, r.jsxs)(c.Kqy, {
+                      (0, r.jsxs)(d.Kqy, {
                           gap: 16,
                           children: [
-                              (0, r.jsx)(c.xJW, {
-                                  title: _.intl.format(_.t.yjS3zs, { index: x + 1 }),
-                                  children: (0, r.jsx)(c.oil, {
-                                      inputRef: W,
+                              (0, r.jsx)(d.xJW, {
+                                  title: v.intl.format(v.t.yjS3zs, { index: j + 1 }),
+                                  children: (0, r.jsx)(d.oil, {
+                                      inputRef: V,
                                       value: l.title,
-                                      onChange: (e) => (0, f.Kk)(n, l.id, { title: e }),
-                                      placeholder: _.intl.string(_.t.QMCuCg),
-                                      maxLength: j.iU,
-                                      error: L.title,
+                                      onChange: (e) => (0, b.Kk)(n, l.id, { title: e }),
+                                      placeholder: v.intl.string(v.t.QMCuCg),
+                                      maxLength: _.iU,
+                                      error: k.title,
                                   }),
                               }),
-                              (0, r.jsx)(C, {
+                              (0, r.jsx)(N, {
                                   prompt: l,
                                   guild: n,
                               }),
-                              (0, r.jsxs)(c.xJW, {
-                                  title: H
-                                      ? _.intl.formatToPlainString(_.t.AbvhZG, {
+                              (0, r.jsxs)(d.xJW, {
+                                  title: z
+                                      ? v.intl.formatToPlainString(v.t.AbvhZG, {
                                             count: l.options.length,
-                                            total: j.qm,
+                                            total: _.qm,
                                         })
-                                      : _.intl.formatToPlainString(_.t.b7VxYW, {
+                                      : v.intl.formatToPlainString(v.t.b7VxYW, {
                                             count: l.options.length,
-                                            total: j.qm,
+                                            total: _.qm,
                                         }),
                                   children: [
-                                      (0, r.jsx)(N, {
+                                      (0, r.jsx)(E, {
                                           guild: n,
                                           prompt: l,
-                                          promptIndex: x,
-                                          errors: L,
-                                          singleColumn: I,
+                                          promptIndex: j,
+                                          errors: k,
+                                          singleColumn: S,
                                       }),
-                                      null != B ? (0, r.jsx)(c.pdY, { error: B }) : null,
+                                      null != F ? (0, r.jsx)(d.pdY, { error: F }) : null,
                                   ],
                               }),
                           ],
                       }),
                       (0, r.jsxs)("div", {
-                          className: v.buttons,
+                          className: O.buttons,
                           children: [
                               (0, r.jsxs)("div", {
-                                  className: v.checkboxes,
+                                  className: O.checkboxes,
                                   children: [
-                                      (0, r.jsx)(c.XZJ, {
+                                      (0, r.jsx)(c.$q, {
                                           size: 20,
-                                          type: c.XZJ.Types.INVERTED,
+                                          type: c.M0.INVERTED,
                                           value: !l.singleSelect,
-                                          onChange: (e, t) => (0, f.Kk)(n, l.id, { singleSelect: !t }),
-                                          children: (0, r.jsx)(c.Text, {
+                                          onChange: (e, t) => (0, b.Kk)(n, l.id, { singleSelect: !t }),
+                                          children: (0, r.jsx)(d.Text, {
                                               variant: "text-sm/normal",
                                               color: "interactive-normal",
-                                              children: _.intl.string(_.t.uCebZW),
+                                              children: v.intl.string(v.t.uCebZW),
                                           }),
                                       }),
                                       l.inOnboarding
-                                          ? (0, r.jsx)(c.XZJ, {
+                                          ? (0, r.jsx)(c.$q, {
                                                 size: 20,
-                                                type: c.XZJ.Types.INVERTED,
+                                                type: c.M0.INVERTED,
                                                 value: l.inOnboarding && l.required,
-                                                onChange: (e, t) => (0, f.Kk)(n, l.id, { required: t }),
+                                                onChange: (e, t) => (0, b.Kk)(n, l.id, { required: t }),
                                                 disabled: !l.inOnboarding,
-                                                children: (0, r.jsx)(c.Text, {
+                                                children: (0, r.jsx)(d.Text, {
                                                     variant: "text-sm/normal",
                                                     color: "interactive-normal",
-                                                    children: E
-                                                        ? _.intl.formatToPlainString(_.t["0re8T0"], { count: z })
-                                                        : _.intl.string(_.t.Ur8Vrq),
+                                                    children: I
+                                                        ? v.intl.formatToPlainString(v.t["0re8T0"], { count: W })
+                                                        : v.intl.string(v.t.Ur8Vrq),
                                                 }),
                                             })
                                           : null,
                                   ],
                               }),
-                              (0, r.jsx)(c.P3F, {
-                                  className: v.collapseButton,
-                                  onClick: () => M(!0),
-                                  children: (0, r.jsx)(g.Z, {
-                                      direction: g.Z.Directions.UP,
+                              (0, r.jsx)(d.P3F, {
+                                  className: O.collapseButton,
+                                  onClick: () => G(!0),
+                                  children: (0, r.jsx)(p.Z, {
+                                      direction: p.Z.Directions.UP,
                                       height: 16,
                                       width: 16,
                                   }),
                               }),
                               (0, r.jsx)(o.u, {
                                   asContainer: !0,
-                                  text: _.intl.string(_.t["Ku+86e"]),
-                                  children: (0, r.jsx)(c.P3F, {
-                                      className: v.closeIcon,
-                                      onClick: () => (0, f.fi)(n, l.id),
-                                      children: (0, r.jsx)(c.XHJ, {
+                                  text: v.intl.string(v.t["Ku+86e"]),
+                                  children: (0, r.jsx)(d.P3F, {
+                                      className: O.closeIcon,
+                                      onClick: () => (0, b.fi)(n, l.id),
+                                      children: (0, r.jsx)(d.XHJ, {
                                           size: "xs",
                                           color: "currentColor",
                                       }),
@@ -253,12 +254,12 @@ function y(e) {
                               }),
                           ],
                       }),
-                      null != F ? (0, r.jsx)(c.pdY, { error: F }) : null,
+                      null != H ? (0, r.jsx)(d.pdY, { error: H }) : null,
                   ],
               }),
           });
 }
-function C(e) {
+function N(e) {
     let { prompt: t, guild: n } = e,
         [l, a] = i.useState(!1);
     if (
@@ -269,48 +270,48 @@ function C(e) {
     )
         return null;
     function s(e) {
-        return (0, r.jsx)(c.P3F, {
-            className: v.example,
-            onClick: () => (0, f.Kk)(n, t.id, { title: e }),
-            children: (0, r.jsx)(c.Text, {
+        return (0, r.jsx)(d.P3F, {
+            className: O.example,
+            onClick: () => (0, b.Kk)(n, t.id, { title: e }),
+            children: (0, r.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 children: e,
             }),
         });
     }
     return (0, r.jsxs)("div", {
-        className: v.examplesSection,
+        className: O.examplesSection,
         children: [
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: _.intl.string(_.t.ECnSLi),
+                children: v.intl.string(v.t.ECnSLi),
             }),
             (0, r.jsxs)("div", {
-                className: v.examples,
+                className: O.examples,
                 children: [
-                    s(_.intl.string(_.t["7GZMJS"])),
-                    s(_.intl.string(_.t.nItydn)),
-                    s(_.intl.string(_.t.evuYbm)),
-                    s(_.intl.string(_.t.XWRuOj)),
+                    s(v.intl.string(v.t["7GZMJS"])),
+                    s(v.intl.string(v.t.nItydn)),
+                    s(v.intl.string(v.t.evuYbm)),
+                    s(v.intl.string(v.t.XWRuOj)),
                 ],
             }),
         ],
     });
 }
-function N(e) {
+function E(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: a } = e,
         {
             handleDragStart: s,
             handleDragReset: o,
             handleDragComplete: c,
-        } = (0, u.Z)(n.options, (e) => (0, f.Kk)(t, n.id, { options: e }));
+        } = (0, m.Z)(n.options, (e) => (0, b.Kk)(t, n.id, { options: e }));
     return (0, r.jsxs)("div", {
-        className: v.options,
+        className: O.options,
         children: [
             n.options.map((e, d) =>
                 (0, r.jsx)(
-                    x.Z,
+                    j.Z,
                     {
                         guild: t,
                         prompt: n,
@@ -325,8 +326,8 @@ function N(e) {
                     e.id,
                 ),
             ),
-            n.options.length < j.qm
-                ? (0, r.jsx)(x.B, {
+            n.options.length < _.qm
+                ? (0, r.jsx)(j.B, {
                       guild: t,
                       prompt: n,
                       promptIndex: i,

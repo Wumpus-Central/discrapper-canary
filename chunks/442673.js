@@ -1,87 +1,88 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => f }), r(388685);
 var n = r(951288),
     o = r(647438),
-    i = r(481060),
-    s = r(985002),
-    a = r(880257),
-    c = r(957656),
-    l = r(345909),
-    d = r(388032),
-    u = r(601582);
-let b = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: b, onClose: f } = e,
-        h = o.useCallback(() => {
-            f();
-        }, [f]),
-        p = (0, a.Z)(),
-        [j, x] = o.useState(!1),
-        [m, g] = o.useState(!1),
-        y = o.useCallback(() => {
-            g(!0), x(!1);
+    i = r(755721),
+    s = r(481060),
+    a = r(985002),
+    c = r(880257),
+    l = r(957656),
+    d = r(345909),
+    u = r(388032),
+    b = r(601582);
+let f = (e) => {
+    let { currentUser: t, otherUser: r, transitionState: f, onClose: h } = e,
+        p = o.useCallback(() => {
+            h();
+        }, [h]),
+        j = (0, c.Z)(),
+        [x, m] = o.useState(!1),
+        [g, y] = o.useState(!1),
+        O = o.useCallback(() => {
+            y(!0), m(!1);
         }, []),
-        { disconnectLinkRequest: O, isDisconnectLoading: v } = (0, s.G)({
-            onSuccess: h,
-            onError: y,
+        { disconnectLinkRequest: v, isDisconnectLoading: k } = (0, a.G)({
+            onSuccess: p,
+            onError: O,
         });
-    return (0, n.jsx)(c.Z, {
-        transitionState: b,
+    return (0, n.jsx)(l.Z, {
+        transitionState: f,
         children: (0, n.jsxs)("form", {
             onSubmit: (e) => {
-                e.preventDefault(), O(r);
+                e.preventDefault(), v(r);
             },
             children: [
-                (0, n.jsx)(c.Z.Error, { error: m ? d.intl.string(l.default.krIDd3) : void 0 }),
-                (0, n.jsxs)(i.hzk, {
+                (0, n.jsx)(l.Z.Error, { error: g ? u.intl.string(d.default.krIDd3) : void 0 }),
+                (0, n.jsxs)(s.hzk, {
                     "data-migration-pending": !0,
                     children: [
-                        (0, n.jsx)(c.Z.Header, {
+                        (0, n.jsx)(l.Z.Header, {
                             currentUser: t,
                             otherUser: r,
-                            header: d.intl.formatToPlainString(l.default.NMSTb2, { isAdult: String(p) }),
-                            icon: (0, n.jsx)(i.Dio, {
+                            header: u.intl.formatToPlainString(d.default.NMSTb2, { isAdult: String(j) }),
+                            icon: (0, n.jsx)(s.Dio, {
                                 size: "md",
                                 color: "currentColor",
-                                className: u.closeIcon,
+                                className: b.closeIcon,
                             }),
                         }),
-                        (0, n.jsx)(c.Z.Notice, {
-                            notice: p ? d.intl.string(l.default.EvMGLS) : d.intl.string(l.default.f1SUeX),
+                        (0, n.jsx)(l.Z.Notice, {
+                            notice: j ? u.intl.string(d.default.EvMGLS) : u.intl.string(d.default.f1SUeX),
                         }),
-                        (0, n.jsx)(i.XZJ, {
-                            className: u.acknowledgementCheckbox,
-                            type: i.XZJ.Types.INVERTED,
-                            value: j,
+                        (0, n.jsx)(i.$q, {
+                            className: b.acknowledgementCheckbox,
+                            type: i.M0.INVERTED,
+                            value: x,
                             onChange: (e, t) => {
-                                x(t), g(!1);
+                                m(t), y(!1);
                             },
-                            children: (0, n.jsx)(i.Text, {
+                            children: (0, n.jsx)(s.Text, {
                                 variant: "text-xs/semibold",
-                                children: p ? d.intl.string(l.default["/MYCeX"]) : d.intl.string(l.default.VJaHUV),
+                                children: j ? u.intl.string(d.default["/MYCeX"]) : u.intl.string(d.default.VJaHUV),
                             }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(i.mzw, {
+                (0, n.jsx)(s.mzw, {
                     "data-migration-pending": !0,
-                    children: (0, n.jsx)(c.Z.ButtonFooter, {
-                        children: (0, n.jsxs)(i.hE2, {
+                    children: (0, n.jsx)(l.Z.ButtonFooter, {
+                        children: (0, n.jsxs)(s.hE2, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, n.jsx)(i.zxk, {
+                                (0, n.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: d.intl.string(d.t["ETE/oK"]),
+                                    text: u.intl.string(u.t["ETE/oK"]),
                                     type: "button",
-                                    onClick: f,
-                                    disabled: v,
+                                    onClick: h,
+                                    disabled: k,
                                 }),
-                                (0, n.jsx)(i.zxk, {
+                                (0, n.jsx)(s.zxk, {
                                     variant: "critical-primary",
                                     size: "sm",
-                                    text: d.intl.string(l.default["c5L+sr"]),
+                                    text: u.intl.string(d.default["c5L+sr"]),
                                     type: "submit",
-                                    disabled: !j || v,
-                                    loading: v,
+                                    disabled: !x || k,
+                                    loading: k,
                                 }),
                             ],
                         }),

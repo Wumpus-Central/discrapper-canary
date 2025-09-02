@@ -1,49 +1,50 @@
-n.d(t, { default: () => h }), n(35282), n(388685);
+n.d(t, { default: () => m }), n(35282), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(512722),
     s = n.n(l),
     a = n(442837),
     o = n(82659),
-    u = n(481060),
-    c = n(749210),
-    d = n(430824),
+    u = n(755721),
+    c = n(481060),
+    d = n(749210),
+    b = n(430824),
     p = n(399860),
-    b = n(335049),
-    f = n(689079),
-    g = n(388032),
+    f = n(335049),
+    g = n(689079),
+    h = n(388032),
     y = n(320692);
-function h(e) {
+function m(e) {
     let {
             editPermissions: t,
             guildId: n,
             hasMemberSearch: l,
-            headerText: h,
-            onClose: m,
-            overwrittenKeys: k,
-            search: j,
-            searchPlaceholderText: C,
-            selectedPermissionCount: v,
-            transitionState: E,
+            headerText: m,
+            onClose: k,
+            overwrittenKeys: j,
+            search: C,
+            searchPlaceholderText: v,
+            selectedPermissionCount: E,
+            transitionState: w,
         } = e,
-        w = (0, a.e7)([d.Z], () => d.Z.getGuild(n), [n]);
-    s()(null != w, "");
-    let [O, x] = r.useState(null),
-        { query: T, results: Z, setQuery: M } = j(n),
-        [P, S] = r.useState({}),
-        _ = r.useMemo(() => Object.keys(P).length, [P]),
-        q = _ + v >= f._n,
-        I = r.useMemo(
+        O = (0, a.e7)([b.Z], () => b.Z.getGuild(n), [n]);
+    s()(null != O, "");
+    let [x, M] = r.useState(null),
+        { query: T, results: P, setQuery: S } = C(n),
+        [Z, _] = r.useState({}),
+        q = r.useMemo(() => Object.keys(Z).length, [Z]),
+        I = q + E >= g._n,
+        N = r.useMemo(
             () =>
-                Z.filter((e) => {
+                P.filter((e) => {
                     let t = (0, p.rE)(e.id, e.type);
-                    return !k.includes(t);
+                    return !j.includes(t);
                 }),
-            [k, Z],
+            [j, P],
         ),
-        N = r.useCallback(
+        D = r.useCallback(
             (e, t) => {
-                S((n) => {
+                _((n) => {
                     let i = (0, p.rE)(e, t),
                         r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -73,7 +74,7 @@ function h(e) {
                     return (
                         i in n
                             ? delete r[i]
-                            : q ||
+                            : I ||
                               (r[i] = {
                                   id: e,
                                   permission: !0,
@@ -83,43 +84,43 @@ function h(e) {
                     );
                 });
             },
-            [q, S],
+            [I, _],
         ),
-        X = r.useCallback(() => {
-            t(P, []), m();
-        }, [t, m, P]);
-    r.useEffect(() => () => clearTimeout(O), [O]);
-    let D = r.useCallback(
+        H = r.useCallback(() => {
+            t(Z, []), k();
+        }, [t, k, Z]);
+    r.useEffect(() => () => clearTimeout(x), [x]);
+    let R = r.useCallback(
             (e) => {
-                M(e),
+                S(e),
                     l &&
-                        x((t) =>
+                        M((t) =>
                             (clearTimeout(t), 0 === e.length)
                                 ? null
                                 : setTimeout(() => {
-                                      c.Z.requestMembers(n, e, 200, !1);
+                                      d.Z.requestMembers(n, e, 200, !1);
                                   }, 500),
                         );
             },
-            [n, l, M, x],
+            [n, l, S, M],
         ),
-        H = r.useCallback(
+        V = r.useCallback(
             (e) => {
-                let t = I[e.rowIndex],
+                let t = N[e.rowIndex],
                     n = (0, p.rE)(t.id, t.type),
-                    r = n in P,
-                    l = q && !r;
+                    r = n in Z,
+                    l = I && !r;
                 return (0, i.jsx)(
                     "div",
                     {
                         className: y.item,
-                        children: (0, i.jsx)(u.XZJ, {
-                            type: u.XZJ.Types.INVERTED,
+                        children: (0, i.jsx)(u.$q, {
+                            type: u.M0.INVERTED,
                             disabled: l,
                             value: r,
-                            onChange: () => N(t.id, t.type),
-                            children: (0, i.jsx)(b.Z, {
-                                guild: w,
+                            onChange: () => D(t.id, t.type),
+                            children: (0, i.jsx)(f.Z, {
+                                guild: O,
                                 id: t.id,
                                 type: t.type,
                                 isLocked: !1,
@@ -129,41 +130,41 @@ function h(e) {
                     n,
                 );
             },
-            [I, w, q, N, P],
+            [N, O, I, D, Z],
         );
     return (
         r.useEffect(() => {
-            c.Z.requestMembers(n, void 0, 200, !1);
+            d.Z.requestMembers(n, void 0, 200, !1);
         }, [n]),
         (0, i.jsx)(o.Modal, {
-            "aria-label": g.intl.string(g.t["N+InBQ"]),
-            transitionState: E,
-            title: h,
-            subtitle: q ? g.intl.string(g.t.XTwtW1) : void 0,
-            onClose: m,
-            input: (0, i.jsx)(u.E1j, {
+            "aria-label": h.intl.string(h.t["N+InBQ"]),
+            transitionState: w,
+            title: m,
+            subtitle: I ? h.intl.string(h.t.XTwtW1) : void 0,
+            onClose: k,
+            input: (0, i.jsx)(c.E1j, {
                 query: T,
-                placeholder: C,
-                "aria-label": C,
-                onChange: D,
-                onClear: () => M(""),
+                placeholder: v,
+                "aria-label": v,
+                onChange: R,
+                onClear: () => S(""),
             }),
             actions: [
                 {
-                    text: g.intl.string(g.t["ETE/oK"]),
-                    onClick: m,
+                    text: h.intl.string(h.t["ETE/oK"]),
+                    onClick: k,
                     variant: "secondary",
                 },
                 {
-                    text: g.intl.string(g.t.OYkgVl),
-                    onClick: X,
+                    text: h.intl.string(h.t.OYkgVl),
+                    onClick: H,
                     variant: "primary",
-                    disabled: 0 === _,
+                    disabled: 0 === q,
                 },
             ],
             listProps: {
-                renderRow: H,
-                sections: [I.length],
+                renderRow: V,
+                sections: [N.length],
                 rowHeight: 36,
                 sectionHeight: 36,
             },
