@@ -1,8 +1,9 @@
 n.d(t, {
     SD: () => m,
+    cd: () => v,
     kS: () => E,
     np: () => O,
-    uZ: () => v,
+    uZ: () => T,
 }),
     n(388685),
     n(953529);
@@ -101,15 +102,56 @@ function O(e) {
         .join("\n");
     return "" !== t ? t : null;
 }
-function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return e.map((e, n) => I(e, t, [n])).filter((e) => null != e);
+function v(e, t) {
+    function n(e) {
+        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        for (let i of e) {
+            let e = I(i);
+            if (e.some((e) => e.id === t.id)) return [i, ...r];
+            let a = n(e, [i, ...r]);
+            if (null != a) return a;
+        }
+        return null;
+    }
+    return n(e);
 }
-function I(e, t, n) {
-    var a, o, l, d, h, m, E, b, y, O, v, S, A;
+function I(e) {
+    switch (e.type) {
+        case i.re.ACTION_ROW:
+            return e.components;
+        case i.re.SECTION:
+            return [...e.components, e.accessory];
+        case i.re.CONTAINER:
+            return e.components;
+        case i.re.LABEL:
+            return [e.component];
+        case i.re.BUTTON:
+        case i.re.STRING_SELECT:
+        case i.re.TEXT_INPUT:
+        case i.re.USER_SELECT:
+        case i.re.ROLE_SELECT:
+        case i.re.MENTIONABLE_SELECT:
+        case i.re.CHANNEL_SELECT:
+        case i.re.TEXT_DISPLAY:
+        case i.re.THUMBNAIL:
+        case i.re.MEDIA_GALLERY:
+        case i.re.FILE:
+        case i.re.SEPARATOR:
+        case i.re.CONTENT_INVENTORY_ENTRY:
+            return [];
+        default:
+            return _.warn("getComponentChildren: Unknown component type", e.type), [];
+    }
+}
+function T(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return e.map((e, n) => S(e, t, [n])).filter((e) => null != e);
+}
+function S(e, t, n) {
+    var a, o, l, d, h, m, E, b, y, O, v, I, T;
     if (!g(e.type)) return null;
     function C(e, r) {
-        let i = I(e, t, [...n, r]);
+        let i = S(e, t, [...n, r]);
         return null == i ? null : i;
     }
     let { includeEmojiSrc: N } = t;
@@ -118,7 +160,7 @@ function I(e, t, n) {
             let t = e.components.map((e, t) => C(e, t)).filter(c.lm);
             return {
                 type: i.re.ACTION_ROW,
-                id: T(n),
+                id: A(n),
                 components: t,
             };
         }
@@ -126,7 +168,7 @@ function I(e, t, n) {
             let t = null != e.emoji ? p(e.emoji, N) : void 0;
             return {
                 type: i.re.BUTTON,
-                id: T(n),
+                id: A(n),
                 customId: e.custom_id,
                 style: e.style,
                 disabled: e.disabled,
@@ -139,7 +181,7 @@ function I(e, t, n) {
         case i.re.STRING_SELECT:
             return {
                 type: i.re.STRING_SELECT,
-                id: T(n),
+                id: A(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (a = e.required) && a,
@@ -158,7 +200,7 @@ function I(e, t, n) {
         case i.re.TEXT_INPUT:
             return {
                 type: e.type,
-                id: T(n),
+                id: A(n),
                 style: e.style,
                 customId: e.custom_id,
                 label: e.label,
@@ -172,7 +214,7 @@ function I(e, t, n) {
         case i.re.USER_SELECT:
             return {
                 type: i.re.USER_SELECT,
-                id: T(n),
+                id: A(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (d = e.required) && d,
@@ -184,7 +226,7 @@ function I(e, t, n) {
         case i.re.ROLE_SELECT:
             return {
                 type: i.re.ROLE_SELECT,
-                id: T(n),
+                id: A(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (m = e.required) && m,
@@ -196,7 +238,7 @@ function I(e, t, n) {
         case i.re.MENTIONABLE_SELECT:
             return {
                 type: i.re.MENTIONABLE_SELECT,
-                id: T(n),
+                id: A(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (b = e.required) && b,
@@ -208,7 +250,7 @@ function I(e, t, n) {
         case i.re.CHANNEL_SELECT:
             return {
                 type: i.re.CHANNEL_SELECT,
-                id: T(n),
+                id: A(n),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (O = e.required) && O,
@@ -224,7 +266,7 @@ function I(e, t, n) {
             if (0 === t.length || null == r) return null;
             return {
                 type: i.re.SECTION,
-                id: T(n),
+                id: A(n),
                 components: t,
                 accessory: r,
             };
@@ -232,13 +274,13 @@ function I(e, t, n) {
         case i.re.TEXT_DISPLAY:
             return {
                 type: i.re.TEXT_DISPLAY,
-                id: T(n),
+                id: A(n),
                 content: e.content,
             };
         case i.re.THUMBNAIL:
             return {
                 type: i.re.THUMBNAIL,
-                id: T(n),
+                id: A(n),
                 media: (0, s.ym)(e.media),
                 description: e.description,
                 spoiler: e.spoiler,
@@ -246,7 +288,7 @@ function I(e, t, n) {
         case i.re.MEDIA_GALLERY:
             return {
                 type: i.re.MEDIA_GALLERY,
-                id: T(n),
+                id: A(n),
                 items: e.items.map((e) => ({
                     media: (0, s.ym)(e.media),
                     description: e.description,
@@ -256,7 +298,7 @@ function I(e, t, n) {
         case i.re.FILE:
             return {
                 type: i.re.FILE,
-                id: T(n),
+                id: A(n),
                 file: (0, s.ym)(e.file),
                 name: e.name,
                 size: e.size,
@@ -265,22 +307,22 @@ function I(e, t, n) {
         case i.re.SEPARATOR:
             return {
                 type: i.re.SEPARATOR,
-                id: T(n),
-                divider: null == (S = e.divider) || S,
-                spacing: null != (A = e.spacing) ? A : i.US.SMALL,
+                id: A(n),
+                divider: null == (I = e.divider) || I,
+                spacing: null != (T = e.spacing) ? T : i.US.SMALL,
             };
         case i.re.CONTENT_INVENTORY_ENTRY:
             if (null == e.content_inventory_entry) return null;
             return {
                 type: i.re.CONTENT_INVENTORY_ENTRY,
-                id: T(n),
+                id: A(n),
                 contentInventoryEntry: e.content_inventory_entry,
             };
         case i.re.CONTAINER: {
             let t = e.components.map((e, t) => C(e, t)).filter(c.lm);
             return {
                 type: i.re.CONTAINER,
-                id: T(n),
+                id: A(n),
                 accentColor: null != e.accent_color ? (0, r.ho)(e.accent_color, !0) : void 0,
                 spoiler: e.spoiler,
                 components: t,
@@ -291,7 +333,7 @@ function I(e, t, n) {
             if (null == t) return null;
             return {
                 type: i.re.LABEL,
-                id: T(n),
+                id: A(n),
                 label: e.label,
                 description: e.description,
                 component: t,
@@ -301,6 +343,6 @@ function I(e, t, n) {
             return _.warn("transformComponent: Unknown component type", e.type), null;
     }
 }
-function T(e) {
+function A(e) {
     return (0, u.FF)(e.join(","));
 }
