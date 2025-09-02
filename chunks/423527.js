@@ -21,12 +21,12 @@ var r,
     j = n(481230),
     I = n(388905),
     N = n(853268),
-    y = n(639946),
-    O = n(616952),
+    O = n(639946),
+    y = n(616952),
     S = n(792766),
     C = n(692483),
-    Z = n(100159),
-    A = n(473855),
+    A = n(100159),
+    Z = n(473855),
     T = n(726745),
     P = n(929809),
     R = n(541692),
@@ -138,7 +138,7 @@ class eu extends (r = l.PureComponent) {
                     location: null != t ? "Invite Register Page" : "Non-Invite Register Page",
                     registration_source: this.registrationSource,
                 },
-                null != e ? (0, Z.Z)(e, !1, !1) : {},
+                null != e ? (0, A.Z)(e, !1, !1) : {},
             ),
             { flush: !0 },
         ),
@@ -328,7 +328,7 @@ class eu extends (r = l.PureComponent) {
     renderInviteHeader() {
         let { invite: e } = this.props;
         return (null == e ? void 0 : e.guild_scheduled_event) != null
-            ? (0, i.jsx)(y.r, {
+            ? (0, i.jsx)(O.r, {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
@@ -424,16 +424,18 @@ class eu extends (r = l.PureComponent) {
                                         children: en.intl.string(en.t["330TCQ"]),
                                     }),
                                 }),
-                                (0, i.jsx)(x.Z, {
-                                    label: en.intl.string(en.t.rhBeKS),
-                                    labelTag: f.RB0.H3,
-                                    wrapperClassName: er.inviteBirthdayInput,
-                                    name: "date_of_birth",
-                                    onChange: this.handleBirthdayChange,
-                                    ref: this.dateOfBirthRef,
-                                    error: null != a ? a : ec(l),
-                                    value: c,
-                                }),
+                                $.a
+                                    ? null
+                                    : (0, i.jsx)(x.Z, {
+                                          label: en.intl.string(en.t.rhBeKS),
+                                          labelTag: f.RB0.H3,
+                                          wrapperClassName: er.inviteBirthdayInput,
+                                          name: "date_of_birth",
+                                          onChange: this.handleBirthdayChange,
+                                          ref: this.dateOfBirthRef,
+                                          error: null != a ? a : ec(l),
+                                          value: c,
+                                      }),
                                 this.renderConsentComponent(),
                                 this.renderInviteButton(),
                                 $.a
@@ -490,10 +492,10 @@ class eu extends (r = l.PureComponent) {
                 registering: _,
                 apiErrors: { email: v, username: E, global_name: b, password: j, date_of_birth: N } = {},
             } = this.state,
-            { consentRequired: y, authBoxClassName: S, hasLoggedInAccounts: C } = this.props,
-            Z = this.renderErrorMessage(),
-            A = (0, i.jsx)(f.ua7, {
-                text: !c && y ? en.intl.string(en.t.AY4IVF) : null,
+            { consentRequired: O, authBoxClassName: S, hasLoggedInAccounts: C } = this.props,
+            A = this.renderErrorMessage(),
+            Z = (0, i.jsx)(f.ua7, {
+                text: !c && O ? en.intl.string(en.t.AY4IVF) : null,
                 children: (e) =>
                     (0, i.jsx)(
                         "div",
@@ -630,10 +632,10 @@ class eu extends (r = l.PureComponent) {
                         onFocus: this.trackInputFocus,
                         onBlur: this.trackInputBlur,
                     }),
-                    (0, i.jsx)(O.Z, {}),
+                    (0, i.jsx)(y.Z, {}),
                     this.renderConsentComponent(),
-                    A,
                     Z,
+                    A,
                     $.a
                         ? null
                         : (0, i.jsx)(I.zx, {
@@ -711,7 +713,7 @@ class eu extends (r = l.PureComponent) {
                 ? this.renderInviteResolving()
                 : this.renderInvite()
             : null != l
-              ? this.renderFull(() => (0, i.jsx)(A.Z, { guildTemplate: l }), !0)
+              ? this.renderFull(() => (0, i.jsx)(Z.Z, { guildTemplate: l }), !0)
               : null != n
                 ? this.renderFull(() => (0, i.jsx)(q.Z, { giftCode: n }))
                 : null != r && o && r.state === X.r2o.RESOLVED
@@ -770,13 +772,15 @@ class eu extends (r = l.PureComponent) {
                 let s = this.inGuildOrChannelInviteFlow(),
                     a = !1;
                 s
-                    ? 0 === l.length &&
-                      (this.setState({ globalNameClientError: en.intl.string(en.t.EkokLy) }), (a = !0))
+                    ? (0 === l.length &&
+                          (this.setState({ globalNameClientError: en.intl.string(en.t.EkokLy) }), (a = !0)),
+                      null != i ||
+                          $.a ||
+                          (this.setState({ dateOfBirthClientError: en.intl.string(en.t.EkokLy) }), (a = !0)))
                     : (0 === t.length && (this.setState({ emailClientError: en.intl.string(en.t.EkokLy) }), (a = !0)),
                       0 === n.length && (this.setState({ usernameClientError: en.intl.string(en.t.EkokLy) }), (a = !0)),
-                      0 === r.length &&
-                          (this.setState({ passwordClientError: en.intl.string(en.t.EkokLy) }), (a = !0))),
-                    null == i && (this.setState({ dateOfBirthClientError: en.intl.string(en.t.EkokLy) }), (a = !0)),
+                      0 === r.length && (this.setState({ passwordClientError: en.intl.string(en.t.EkokLy) }), (a = !0)),
+                      null == i && (this.setState({ dateOfBirthClientError: en.intl.string(en.t.EkokLy) }), (a = !0))),
                     a || this.handleRegister();
             }),
             el(this, "trackInputFocus", (e) => {
