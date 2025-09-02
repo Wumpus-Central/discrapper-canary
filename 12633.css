@@ -11356,6 +11356,35 @@ svg.radioIcon_c1e9c4 {
     height: 100%
 }
 
+.richTooltipContent_a89985 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-12);
+    max-width: 272px;
+    padding: var(--space-12)
+}
+
+.assetContainer_a89985 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: var(--space-48)
+}
+
+.assetContainer_a89985>* {
+    height: auto;
+    max-width: 100%
+}
+
+.textContent_a89985 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
 .heading-sm\/normal__0f084 {
     font-family: var(--font-display);
     font-size: 14px;
@@ -12381,6 +12410,11 @@ svg.radioIcon_c1e9c4 {
     border-color: var(--border-subtle)
 }
 
+.input-accessory__0f084 {
+    border-radius: var(--radius-xs);
+    color: var(--icon-primary)
+}
+
 .theme-light .color-mix__0f084:before {
     mix-blend-mode: difference
 }
@@ -12567,6 +12601,11 @@ svg.radioIcon_c1e9c4 {
     box-sizing: border-box;
     display: flex;
     justify-content: center
+}
+
+.image__0f084 {
+    height: 100%;
+    padding: 0 var(--space-4)
 }
 
 .iconButton__0f084 {
@@ -14824,6 +14863,11 @@ svg.radioIcon_c1e9c4 {
 .color-mix__6af3a:active:before {
     background-color: var(--control-background-icon-only-active);
     border-color: var(--border-subtle)
+}
+
+.input-accessory__6af3a {
+    border-radius: var(--radius-xs);
+    color: var(--icon-primary)
 }
 
 .theme-light .color-mix__6af3a:before {
@@ -21215,35 +21259,6 @@ svg.radioIcon_c1e9c4 {
     justify-content: space-between;
     overflow: hidden;
     padding: var(--space-12)
-}
-
-.richTooltipContent_a89985 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    gap: var(--space-12);
-    max-width: 272px;
-    padding: var(--space-12)
-}
-
-.assetContainer_a89985 {
-    align-items: center;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    width: var(--space-48)
-}
-
-.assetContainer_a89985>* {
-    height: auto;
-    max-width: 100%
-}
-
-.textContent_a89985 {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    min-width: 0
 }
 
 .btnHamburger__006d6 {
@@ -37325,36 +37340,6 @@ body .headerAnimation_b54a5b {
 
 .theme-light .cardFormHeader__3e8d5.unionpay_monochrome__3e8d5:before {
     background-image: url(/assets/d1fe91ba5e5f4702.svg)
-}
-
-.cardNumberWrapper__4ea5a {
-    position: relative
-}
-
-.cardIcon__4ea5a {
-    left: 10px;
-    position: absolute;
-    top: 9px
-}
-
-.cardIcon__4ea5a.submitting__4ea5a {
-    animation: pulse__4ea5a .75s ease-in-out infinite alternate
-}
-
-.cardNumberInput__4ea5a {
-    padding-left: 55px
-}
-
-@keyframes pulse__4ea5a {
-    0% {
-        opacity: 1;
-        transform: scale(1)
-    }
-
-    to {
-        opacity: .6;
-        transform: scale(.9)
-    }
 }
 
 .body_af4c15 {
@@ -62245,13 +62230,13 @@ h3.improved__1689b:after {
     grid-column: span 2
 }
 
-.fileUploadButton__8b203 {
-    margin: 6px;
-    padding: 4px 8px
-}
-
 .fileUpload__8b203 {
-    display: flex
+    box-sizing: border-box;
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: auto 1fr auto;
+    min-height: var(--control-input-height-md);
+    padding: 0 var(--space-4) 0 var(--space-8)
 }
 
 .fileUploadInput__8b203 {
@@ -82499,42 +82484,15 @@ div.nagbar_d74ef8 {
 }
 
 .button_e18686 {
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-low);
-    cursor: pointer;
-    height: 24px;
-    overflow: hidden;
-    text-indent: -9999em;
-    transition: opacity .1s ease-in-out, box-shadow .1s ease-in-out, transform .2s ease;
-    width: 24px
-}
-
-.button_e18686:active {
-    transform: translateY(1px)
+    align-items: center;
+    color: var(--icon-secondary);
+    display: flex;
+    justify-content: center;
+    transition: color .2s ease
 }
 
 .button_e18686:hover {
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high)
-}
-
-.default_e18686 {
-    background-color: var(--background-secondary-alt);
-    background-image: url(/assets/14c3c4a641591d42.svg)
-}
-
-.default_e18686:hover {
-    background-color: var(--background-base-lower)
-}
-
-.filled_e18686 {
-    background-color: var(--button-danger-background);
-    background-image: url(/assets/cc9937ea92f932c3.svg)
-}
-
-.filled_e18686:hover {
-    background-color: var(--button-danger-background-hover)
+    color: var(--icon-primary)
 }
 
 .enable-forced-colors .button_e18686 {
@@ -89804,7 +89762,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

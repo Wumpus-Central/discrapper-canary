@@ -119,12 +119,14 @@ function C(e) {
                       (0, r.jsx)(o.u, {
                           asContainer: !0,
                           text: v.intl.string(v.t["Ku+86e"]),
-                          children: (0, r.jsx)(d.P3F, {
+                          children: (0, r.jsx)("div", {
                               className: O.closeIcon,
-                              onClick: () => (0, b.fi)(n, l.id),
-                              children: (0, r.jsx)(d.XHJ, {
-                                  size: "xs",
-                                  color: "currentColor",
+                              children: (0, r.jsx)(d.hU, {
+                                  size: "sm",
+                                  icon: d.XHJ,
+                                  variant: "icon-only",
+                                  onClick: () => (0, b.fi)(n, l.id),
+                                  "aria-label": v.intl.string(v.t["Ku+86e"]),
                               }),
                           }),
                       }),
@@ -243,12 +245,14 @@ function C(e) {
                               (0, r.jsx)(o.u, {
                                   asContainer: !0,
                                   text: v.intl.string(v.t["Ku+86e"]),
-                                  children: (0, r.jsx)(d.P3F, {
+                                  children: (0, r.jsx)("div", {
                                       className: O.closeIcon,
-                                      onClick: () => (0, b.fi)(n, l.id),
-                                      children: (0, r.jsx)(d.XHJ, {
-                                          size: "xs",
-                                          color: "currentColor",
+                                      children: (0, r.jsx)(d.hU, {
+                                          size: "sm",
+                                          icon: d.XHJ,
+                                          variant: "icon-only",
+                                          onClick: () => (0, b.fi)(n, l.id),
+                                          "aria-label": v.intl.string(v.t["Ku+86e"]),
                                       }),
                                   }),
                               }),
