@@ -11,7 +11,7 @@ function C(e) {
         p = i.useMemo(
             () => [
                 {
-                    name: o.intl.string(o.t.XtIgwc),
+                    name: o.intl.string(o.t["6Zuiv7"]),
                     value: s.KN.Trick,
                     key: "Trick",
                     icon: (0, r.jsx)(l.yDF, {
@@ -20,7 +20,7 @@ function C(e) {
                     }),
                 },
                 {
-                    name: o.intl.string(o.t["baye/P"]),
+                    name: o.intl.string(o.t["2UeOlZ"]),
                     value: s.KN.Treat,
                     key: "Treat",
                     icon: (0, r.jsx)(l.sq, {
