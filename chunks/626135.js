@@ -11,19 +11,19 @@ n.r(t),
         expandLocation: () => F,
         getAnalyticsEventsRecording: () => ee,
         getNewAnalyticsLoadId: () => es,
-        isGameApplicationType: () => eo,
+        isGameApplicationType: () => ea,
         launchSignature: () => U,
         setUTMContext: () => K,
         startRecordingAnalyticsEvents: () => J,
         stopRecordingAnalyticsEvents: () => $,
-        trackNetworkAction: () => ea,
+        trackNetworkAction: () => eo,
     }),
     n(539854),
     n(388685);
 var r = n(647438),
     i = n(772848),
-    o = n(990547),
-    a = n(548345),
+    a = n(990547),
+    o = n(548345),
     s = n(668757),
     l = n(570140),
     c = n(565384),
@@ -95,9 +95,9 @@ function T(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -106,8 +106,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let A = { location: {} },
@@ -122,8 +122,8 @@ let A = { location: {} },
     j = 86400000,
     M = 0.001,
     k = performance.now(),
-    U = (0, s.X6)() ? (0, s.Ub)((0, a.R)()) : null;
-o.extendSuperProperties({ launch_signature: U });
+    U = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
+a.extendSuperProperties({ launch_signature: U });
 let G = [];
 function B(e) {
     G.push(e);
@@ -365,7 +365,7 @@ let Z = {
     },
     [m.rMx.SEARCH_BAR_VIEWED]: {
         throttlePeriod: L,
-        throttleKeys: () => [],
+        throttleKeys: (e) => [e.search_type],
     },
 };
 function F(e) {
@@ -394,7 +394,7 @@ let H = () => g.E.NONE;
 function Y(e) {
     H = e;
 }
-let W = (0, o.trackMaker)({
+let W = (0, a.trackMaker)({
     analyticEventConfigs: Z,
     dispatcher: l.Z,
     TRACK_ACTION_NAME: "TRACK",
@@ -404,32 +404,32 @@ function K(e) {
 }
 function z(e) {
     var t, n, r, i;
-    let o = null != e ? e : {};
-    if (null != o.location) {
-        let { location: e } = o;
-        o = O({}, T(o, ["location"]), F(e));
+    let a = null != e ? e : {};
+    if (null != a.location) {
+        let { location: e } = a;
+        a = O({}, T(a, ["location"]), F(e));
     }
-    if (null != o.source) {
-        let { source: e } = o;
-        o = O({}, T(o, ["source"]), V(e));
+    if (null != a.source) {
+        let { source: e } = a;
+        a = O({}, T(a, ["source"]), V(e));
     }
-    (o.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()),
-        (o.client_performance_memory = p.Z.getCurrentMemoryUsageKB()),
-        (o.cpu_core_count = p.Z.getCPUCoreCount()),
-        (o.accessibility_features = H()),
-        (o.rendered_locale = b.intl.currentLocale),
-        (o.uptime_app = Math.floor((performance.now() - k) / 1000));
-    let a = p.Z.getProcessUptime();
-    null != a && (o.uptime_process_renderer = Math.floor(a));
+    (a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()),
+        (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()),
+        (a.cpu_core_count = p.Z.getCPUCoreCount()),
+        (a.accessibility_features = H()),
+        (a.rendered_locale = b.intl.currentLocale),
+        (a.uptime_app = Math.floor((performance.now() - k) / 1000));
+    let o = p.Z.getProcessUptime();
+    null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = N;
     return (
-        (o.utm_source = null != (t = o.utm_source) ? t : s),
-        (o.utm_medium = null != (n = o.utm_medium) ? n : l),
-        (o.utm_campaign = null != (r = o.utm_campaign) ? r : c),
-        (o.utm_content = null != (i = o.utm_content) ? i : u),
-        (o.launch_signature = U),
-        G.forEach((e) => e(o)),
-        o
+        (a.utm_source = null != (t = a.utm_source) ? t : s),
+        (a.utm_medium = null != (n = a.utm_medium) ? n : l),
+        (a.utm_campaign = null != (r = a.utm_campaign) ? r : c),
+        (a.utm_content = null != (i = a.utm_content) ? i : u),
+        (a.launch_signature = U),
+        G.forEach((e) => e(a)),
+        a
     );
 }
 function q(e, t) {
@@ -478,23 +478,23 @@ function er(e, t) {
         })
     );
 }
-let ei = (0, o.trackMaker)({
+let ei = (0, a.trackMaker)({
     analyticEventConfigs: Z,
     dispatcher: l.Z,
     TRACK_ACTION_NAME: "TRACK",
 });
-function eo(e) {
+function ea(e) {
     return e === E.wW.GAME || e === E.wW.DEPRECATED_GAME;
 }
-function ea(e, t) {
+function eo(e, t) {
     let n = z(O({ location: (0, c.k$)() }, t));
     (0, c.dT)(e, O({ type: "action" }, t)), q(e, n), ei(e, n);
 }
 function es() {
     return (0, i.Z)();
 }
-let el = I(O({}, o), {
-    getCampaignParams: o.getCampaignParams,
+let el = I(O({}, a), {
+    getCampaignParams: a.getCampaignParams,
     setSystemAccessibilityFeatures: Y,
     expandEventProperties: z,
     track: er,

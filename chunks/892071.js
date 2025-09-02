@@ -93,7 +93,7 @@ function m(e) {
             }),
             [n, D, k, m],
         ),
-        G = (0, f.$V)({ location: "RootElementContextProvider" });
+        G = (0, f.$)({ location: "RootElementContextProvider" });
     return (
         i.useLayoutEffect(() => {
             if (R) return;

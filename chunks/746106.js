@@ -71,7 +71,7 @@ function S(e) {
         z = (0, h.VM)("RootThemeContextProvider"),
         q = f.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
         X = (0, d.Z)("RootThemeContextProvider"),
-        Q = (0, E.$V)({ location: "RootThemeContextProvider" }),
+        Q = (0, E.$)({ location: "RootThemeContextProvider" }),
         J = (0, _.On)({
             isPopoutWindow: S,
             isSearchDesktopTopLevelEnabled: Q,

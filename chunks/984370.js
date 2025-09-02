@@ -135,7 +135,7 @@ function P(e) {
         k = (0, a.e7)([c.Z], () => null != j && c.Z.getParticipantsListOpen(j)),
         { enabled: U, inInbox: G } = d.Z.useExperiment({ location: "HeaderBar" }),
         { hasParticipantsPanel: B } = (0, u.Z)({ location: "HeaderBar" }),
-        Z = (0, _.$V)({ location: "HeaderBar" });
+        Z = (0, _.$)({ location: "HeaderBar" });
     function F() {
         if (null == S) return null;
         let e = null != s && !D && !Z;
