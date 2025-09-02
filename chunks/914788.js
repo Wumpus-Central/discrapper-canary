@@ -163,11 +163,11 @@ function Z(e) {
     let { linkedUsers: t } = e;
     P(t, !0);
 }
-function V(e) {
+function F(e) {
     let { linkCode: t } = e;
     y = t;
 }
-function F(e) {
+function V(e) {
     let { tab: t } = e;
     O = t;
 }
@@ -211,7 +211,7 @@ function z(e) {
     }, R());
 }
 function q() {
-    (h = null), (m = null), (g = {}), (E = N()), (b = R()), (A = {}), (I = !1), (T = null);
+    (h = null), (m = null), (g = {}), (E = N()), (b = R()), (A = {}), (I = !1), (T = null), (O = C());
 }
 class X extends i.Z {
     initialize() {
@@ -288,8 +288,8 @@ class X extends i.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: k,
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: B,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Z,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: V,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: F,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: F,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: V,
             SET_LOCATION_METADATA: Y,
             LOGOUT: q,
         });

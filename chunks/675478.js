@@ -1,18 +1,18 @@
 n.d(t, {
-    BU: () => x,
-    Cd: () => k,
-    DZ: () => P,
-    PS: () => D,
-    T6: () => C,
-    Z1: () => B,
-    aj: () => w,
+    BU: () => L,
+    Cd: () => U,
+    DZ: () => w,
+    PS: () => x,
+    T6: () => N,
+    Z1: () => Z,
+    aj: () => D,
     bE: () => V,
-    fy: () => y.fy,
-    hW: () => R,
-    m9: () => U,
-    nm: () => L,
-    sr: () => Z,
-    w9: () => G,
+    fy: () => O.fy,
+    hW: () => P,
+    m9: () => G,
+    nm: () => j,
+    sr: () => F,
+    w9: () => B,
 }),
     n(415506),
     n(388685),
@@ -44,10 +44,11 @@ var r = n(512722),
     m = n(915486),
     g = n(262847),
     E = n(581883),
-    b = n(48481),
-    y = n(526761),
-    O = n(981631);
-function v(e, t, n) {
+    b = n(28926),
+    y = n(48481),
+    O = n(526761),
+    v = n(981631);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +61,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,29 +72,29 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-let T = 5000,
-    S = "UserSettingsProtoLastWriteTimes",
-    A = Date.now();
-function C() {}
+let S = 5000,
+    A = "UserSettingsProtoLastWriteTimes",
+    C = Date.now();
+function N() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
-    A = Date.now();
+    C = Date.now();
 }),
     u.Z.subscribe("CONNECTION_CLOSED", () => {
-        A = Date.now();
+        C = Date.now();
     }),
     "undefined" != typeof document &&
         (document.addEventListener("mousedown", () => {
-            A = 0;
+            C = 0;
         }),
         document.addEventListener("keydown", () => {
-            A = 0;
+            C = 0;
         }));
-class N {
+class R {
     getEditInfo() {
         return E.Z.getFullState()[this.type];
     }
@@ -102,32 +103,28 @@ class N {
     }
     async updateAsync(e, t, n) {
         await this.loadIfNecessary();
-        let r = this.ProtoClass.fields.find((t) => t.localName === e);
-        if (null == r) throw Error("Unknown proto field name ".concat(String(e)));
-        let i = r.T(),
-            a = this.getCurrentValue()[e],
-            o = null != a ? i.fromBinary(i.toBinary(a), b.Uc) : i.create();
-        if (!1 === t(o)) return;
-        let s = this.ProtoClass.create();
-        (s[e] = o),
-            __OVERLAY__
+        let r = (0, b.H)(this.ProtoClass, e),
+            i = this.getCurrentValue()[e],
+            a = (0, b.r)(i, t, r, this.ProtoClass, e);
+        null != a &&
+            (__OVERLAY__
                 ? u.Z.dispatch({
                       type: "USER_SETTINGS_PROTO_ENQUEUE_UPDATE",
                       settings: {
                           type: this.type,
-                          proto: s,
+                          proto: a,
                       },
                       delaySeconds: n,
-                      jitter: n === y.fy.AUTOMATED || n === y.fy.DAILY,
+                      jitter: n === O.fy.AUTOMATED || n === O.fy.DAILY,
                       partial: !0,
                       resetEditInfo: !1,
                       local: !0,
                   })
                 : (this.logger.log("Updating ".concat(String(e), " with delay ").concat(n)),
-                  this.markDirty(s, {
+                  this.markDirty(a, {
                       delaySeconds: n,
-                      jitter: n === y.fy.AUTOMATED || n === y.fy.DAILY,
-                  }));
+                      jitter: n === O.fy.AUTOMATED || n === O.fy.DAILY,
+                  })));
     }
     markDirty(e, t) {
         var n;
@@ -165,7 +162,7 @@ class N {
         null != t.cleanup && (a.cleanupFuncs = [...r.cleanupFuncs, ...t.cleanup]),
             null == r.protoToSave
                 ? (a.protoToSave = e)
-                : (a.protoToSave = (0, b.re)(this.ProtoClass, r.protoToSave, e)),
+                : (a.protoToSave = (0, y.re)(this.ProtoClass, r.protoToSave, e)),
             this.dispatchChanges(a);
     }
     dispatchChanges(e) {
@@ -179,8 +176,8 @@ class N {
     }
     saveLastSendTime() {
         var e;
-        let t = null != (e = c.K.get(S)) ? e : {};
-        (t[this.type] = Date.now()), c.K.set(S, t);
+        let t = null != (e = c.K.get(A)) ? e : {};
+        (t[this.type] = Date.now()), c.K.set(A, t);
     }
     loadIfUncached(e, t) {
         (E.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
@@ -198,17 +195,17 @@ class N {
                 let {
                         body: { settings: t },
                     } = await a.tn.get({
-                        url: O.ANM.USER_SETTINGS_PROTO(this.type),
+                        url: v.ANM.USER_SETTINGS_PROTO(this.type),
                         rejectWithError: !1,
                     }),
-                    n = (0, b.d5)(this.ProtoClass, t);
+                    n = (0, y.d5)(this.ProtoClass, t);
                 if (null == n)
                     return void this.dispatchChanges({
                         loading: !1,
                         loaded: !0,
                     });
                 let r = g.Z[this.type],
-                    { proto: i, isDirty: o, cleanupFuncs: s } = (0, b.xt)(n, r);
+                    { proto: i, isDirty: o, cleanupFuncs: s } = (0, y.xt)(n, r);
                 return (
                     await u.Z.dispatch({
                         type: "USER_SETTINGS_PROTO_UPDATE",
@@ -237,7 +234,7 @@ class N {
             this.markDirty(e, {
                 cleanup: t,
                 dispatch: !1,
-                delaySeconds: y.fy.AUTOMATED,
+                delaySeconds: O.fy.AUTOMATED,
                 jitter: !0,
             });
     }
@@ -258,7 +255,7 @@ class N {
         i()(null != e.protoToSave, "protoToSave cannot be null"),
             i()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
             i()(null == e.timeout, "timeout must not be set already");
-        let t = T + Math.floor(Math.random() * T),
+        let t = S + Math.floor(Math.random() * S),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({
             timeout: n,
@@ -266,12 +263,12 @@ class N {
         });
     }
     constructor(e, t) {
-        v(this, "ProtoClass", void 0),
-            v(this, "type", void 0),
-            v(this, "logger", void 0),
-            v(this, "beforeSendCallbacks", void 0),
-            v(this, "lastSendTime", void 0),
-            v(this, "persistChanges", void 0),
+        I(this, "ProtoClass", void 0),
+            I(this, "type", void 0),
+            I(this, "logger", void 0),
+            I(this, "beforeSendCallbacks", void 0),
+            I(this, "lastSendTime", void 0),
+            I(this, "persistChanges", void 0),
             (this.ProtoClass = e),
             (this.type = t),
             (this.beforeSendCallbacks = []),
@@ -285,13 +282,13 @@ class N {
                     let { processProto: n } = t;
                     return n(e.protoToSave);
                 });
-                let t = (0, b.xU)(this.ProtoClass, e.protoToSave);
+                let t = (0, y.xU)(this.ProtoClass, e.protoToSave);
                 if (null == t || "" === t)
                     return void this.logger.log("Not persisting proto because there is nothing to change");
                 try {
                     this.saveLastSendTime();
                     let { body: n } = await a.tn.patch({
-                        url: O.ANM.USER_SETTINGS_PROTO(this.type),
+                        url: v.ANM.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: t,
                             required_data_version: e.offlineEditDataVersion,
@@ -300,7 +297,7 @@ class N {
                     });
                     n.out_of_date && this.logger.log("Proto was out of date, discarding changes"),
                         this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e());
-                    let r = (0, b.d5)(this.ProtoClass, n.settings);
+                    let r = (0, y.d5)(this.ProtoClass, n.settings);
                     if (null == r) return;
                     u.Z.dispatch({
                         type: "USER_SETTINGS_PROTO_UPDATE",
@@ -328,7 +325,7 @@ class N {
                         });
                     } else if (
                         400 === e.status &&
-                        (null == (n = e.body) ? void 0 : n.code) === O.evJ.INVALID_USER_SETTINGS_DATA
+                        (null == (n = e.body) ? void 0 : n.code) === v.evJ.INVALID_USER_SETTINGS_DATA
                     )
                         throw (this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e);
                     else throw (this.logger.log("Unknown user settings error"), e);
@@ -337,86 +334,86 @@ class N {
             (this.logger = new d.Z(this.ProtoClass.typeName));
     }
 }
-let R = new N(l.o8, y.yP.PRELOADED_USER_SETTINGS),
-    P = new N(s.ji, y.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    w = {
-        [y.yP.PRELOADED_USER_SETTINGS]: R,
-        [y.yP.FRECENCY_AND_FAVORITES_SETTINGS]: P,
+let P = new R(l.o8, O.yP.PRELOADED_USER_SETTINGS),
+    w = new R(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    D = {
+        [O.yP.PRELOADED_USER_SETTINGS]: P,
+        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: w,
     };
-function D(e, t, n) {
-    return R.updateAsync("guilds", (n) => (0, b.u0)(n, e, t), n);
+function x(e, t, n) {
+    return P.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
 }
-function x(e, t, n, r) {
-    return D(e, (e) => (0, b.uL)(e, t, n), r);
+function L(e, t, n, r) {
+    return x(e, (e) => (0, y.uL)(e, t, n), r);
 }
-function L(e) {
+function j(e) {
     return (
-        j(e),
-        R.updateAsync(
+        M(e),
+        P.updateAsync(
             "userContent",
             (t) => {
                 if ((0, m.jl)(t.dismissedContents, e)) return !1;
                 t.dismissedContents = (0, m.GV)(t.dismissedContents, e);
             },
-            y.fy.INFREQUENT_USER_ACTION,
+            O.fy.INFREQUENT_USER_ACTION,
         )
     );
 }
-function j(e) {
-    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) &&
-        (M(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
-}
 function M(e) {
+    !E.Z.hasLoaded(O.yP.PRELOADED_USER_SETTINGS) &&
+        (k(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+}
+function k(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
 }
-async function k(e, t) {
-    return await R.updateAsync(
+async function U(e, t) {
+    return await P.updateAsync(
         "userContent",
         (n) => {
-            n.recurringDismissibleContentStates[e] = I({}, n.recurringDismissibleContentStates[e], t);
+            n.recurringDismissibleContentStates[e] = T({}, n.recurringDismissibleContentStates[e], t);
         },
-        y.fy.INFREQUENT_USER_ACTION,
+        O.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function U(e, t, n) {
-    return await D(
+async function G(e, t, n) {
+    return await x(
         t,
         (t) => {
-            t.guildDismissibleContentStates[e] = I({}, t.guildDismissibleContentStates[e], n);
+            t.guildDismissibleContentStates[e] = T({}, t.guildDismissibleContentStates[e], n);
         },
-        y.fy.INFREQUENT_USER_ACTION,
+        O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function G(e) {
-    return R.updateAsync(
+function B(e) {
+    return P.updateAsync(
         "userContent",
         (t) => {
             if (!(0, m.jl)(t.dismissedContents, e)) return !1;
             t.dismissedContents = (0, m.jx)(t.dismissedContents, e);
         },
-        y.fy.INFREQUENT_USER_ACTION,
+        O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function B(e) {
-    return k(e, {
+function Z(e) {
+    return U(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: "0",
         lastDismissedObjectId: "0",
     });
 }
-function Z() {
-    return R.updateAsync(
+function F() {
+    return P.updateAsync(
         "userContent",
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
         },
-        y.fy.INFREQUENT_USER_ACTION,
+        O.fy.INFREQUENT_USER_ACTION,
     );
 }
 function V() {
-    return R.updateAsync(
+    return P.updateAsync(
         "userContent",
         (e) => {
             let t = new Uint8Array();
@@ -424,6 +421,6 @@ function V() {
                 (0, f.O2)(n) ? (t = (0, m.GV)(t, n)) : (e.recurringDismissibleContentStates[n] = (0, _.F8)(n));
             e.dismissedContents = t;
         },
-        y.fy.INFREQUENT_USER_ACTION,
+        O.fy.INFREQUENT_USER_ACTION,
     );
 }
