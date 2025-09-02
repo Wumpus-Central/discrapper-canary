@@ -19,4 +19,7 @@ e.exports = {
     pillContainer: "pillContainer__3ce43",
     pillIcon: "pillIcon__3ce43",
     referralBanner: "referralBanner__3ce43",
+    churnEntrypointButtons: "churnEntrypointButtons__3ce43",
+    churnEntrypointDescriptionBrandRefresh: "churnEntrypointDescriptionBrandRefresh__3ce43",
+    churnEntrypointDescription: "churnEntrypointDescription__3ce43",
 };

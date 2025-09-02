@@ -115,27 +115,30 @@ let W = (e) => {
             eS = (0, N.Z)({ location: "NitroTabButton" }),
             eN = (null == ec ? void 0 : ec.trial_id) === V.a7,
             eT = (0, p.YZ)("NitroTabButton"),
-            eP = [];
+            eP = [],
+            ej = [];
         (0, f.Kl)() &&
             (ef && eP.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
             eS && eP.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             ep && eP.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
             eT && eP.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE));
-        let [ej, ex] = (0, g.US)(eP, void 0, !0);
+        let [ex, eA] = (0, g.US)(eP, void 0, !0);
+        eO && ej.push(o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK);
+        let [eZ, ew] = (0, g.US)(ej, void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === q && null != ej && ex(F.L.AUTO_DISMISS);
-            }, [ex, q, ej]),
+                !0 === q && null != ex && eA(F.L.AUTO_DISMISS);
+            }, [eA, q, ex]),
             !W({ selected: q }))
         )
             return null;
-        let eA = () => {
+        let eL = () => {
             eI === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eC(F.L.TAKE_ACTION),
                 _.default.track(H.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: E,
                     has_premium: en,
                 }),
-                null != ej && ex(F.L.USER_DISMISS);
+                null != ex && eA(F.L.USER_DISMISS);
         };
         if (
             (eE === V.a$.NONE ||
@@ -160,7 +163,7 @@ let W = (e) => {
             })),
                 (E = 4);
         } else
-            ej === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE || ej === o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE
+            ex === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE || ex === o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE
                 ? ((n = (0, r.jsx)(D._y, {
                       isTabSelected: q,
                       badgeCopy: z.intl.string(z.t.y2b7CA),
@@ -203,15 +206,15 @@ let W = (e) => {
                               isTabSelected: q,
                           })),
                           (E = 4));
-        let eZ = z.intl.string(z.t.Ipxkoq);
-        er && ea && (eZ = z.intl.string(z.t["4gwVVl"])),
+        let eR = z.intl.string(z.t.Ipxkoq);
+        er && ea && (eR = z.intl.string(z.t["4gwVVl"])),
             !en &&
                 ei &&
                 (el === C.Rx.TRY_NITRO && null != ec
-                    ? (eZ = z.intl.string(z.t["3O6A4e"]))
+                    ? (eR = z.intl.string(z.t["3O6A4e"]))
                     : el === C.Rx.JOIN_NITRO
-                      ? (eZ = z.intl.string(z.t.brBiOz))
-                      : el === C.Rx.GET_NITRO && (eZ = z.intl.string(z.t.GayC1t))),
+                      ? (eR = z.intl.string(z.t.brBiOz))
+                      : el === C.Rx.GET_NITRO && (eR = z.intl.string(z.t.GayC1t))),
             em &&
                 eb.cohort !== S.xI.Control &&
                 ((n = (0, r.jsx)(D._y, {
@@ -220,14 +223,14 @@ let W = (e) => {
                     offerExpiresAt: null,
                 })),
                 (E = 4),
-                (eA = () => {
+                (eL = () => {
                     _.default.track(H.rMx.NITRO_TAB_VISITED, {
                         badge_decorator: E,
                         has_premium: en,
                     }),
                         (0, Z.ZL)();
                 }));
-        let ew = (0, r.jsx)(
+        let eD = (0, r.jsx)(
             c.Qj,
             ((Y = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -259,9 +262,9 @@ let W = (e) => {
                     selected: q,
                     route: X,
                     icon: s.SrA,
-                    text: eZ,
+                    text: eR,
                     locationState: J,
-                    onClick: eA,
+                    onClick: eL,
                 },
                 $,
                 es,
@@ -286,15 +289,16 @@ let W = (e) => {
             Y),
         );
         return em && eb.cohort === S.xI.Static
-            ? (0, r.jsx)(w.X, { children: ew })
+            ? (0, r.jsx)(w.X, { children: eD })
             : e_
-              ? (0, r.jsx)(k.C, { children: ew })
-              : eO && 8 === E
+              ? (0, r.jsx)(k.C, { children: eD })
+              : eO && eZ === o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === E
                 ? (0, r.jsx)(L.Z, {
                       targetElementRef: Q,
                       discountOffer: ed,
                       premiumSubscription: et,
-                      children: ew,
+                      dismissCoachmark: ew,
+                      children: eD,
                   })
-                : ew;
+                : eD;
     };

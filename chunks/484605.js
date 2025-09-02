@@ -1,27 +1,23 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(704215),
-    a = n(264418),
-    o = n(481060),
-    s = n(100527),
-    c = n(906732),
-    u = n(243778),
-    d = n(74538),
-    p = n(230916),
-    f = n(45474),
-    h = n(474936),
-    g = n(921944),
-    m = n(388032),
-    b = n(22767);
-let _ = (e) => {
-    let { targetElementRef: t, discountOffer: _, premiumSubscription: O, children: E } = e,
-        { analyticsLocations: y } = (0, c.ZP)(s.Z.CHURN_DISCOUNT_POPOVER),
-        [v, I] = (0, u.US)([l.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK], void 0, !0),
-        [C, S] = i.useState(!1),
-        N = C && v === l.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK,
-        T = (0, p.W7)(O, h.Xh.PREMIUM_MONTH_TIER_2, _),
-        P = (0, r.jsx)(a.Z, {
+    l = n(264418),
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
+    c = n(74538),
+    u = n(230916),
+    d = n(45474),
+    p = n(474936),
+    f = n(921944),
+    h = n(388032),
+    g = n(22767);
+let m = (e) => {
+    let { targetElementRef: t, discountOffer: m, premiumSubscription: b, dismissCoachmark: _, children: O } = e,
+        { analyticsLocations: E } = (0, s.ZP)(o.Z.CHURN_DISCOUNT_POPOVER),
+        [y, v] = i.useState(!1),
+        I = (0, u.W7)(p.Xh.PREMIUM_MONTH_TIER_2, m, b),
+        C = (0, r.jsx)(l.Z, {
             targetElementRef: t,
             position: "right",
             align: "top",
@@ -30,23 +26,23 @@ let _ = (e) => {
                 position: "left",
                 align: "start",
             },
-            title: m.intl.format(m.t["3yZP0N"], { percent: _.discount.amount }).toString(),
-            body: m.intl.format(m.t["3Q4wCw"], {
-                discountedPrice: T,
-                billingPeriod: (0, d.JP)(_.discount.user_usage_limit_interval),
-                numMonths: _.discount.user_usage_limit,
+            title: h.intl.format(h.t["3yZP0N"], { percent: m.discount.amount }).toString(),
+            body: h.intl.format(h.t["3Q4wCw"], {
+                discountedPrice: I,
+                billingPeriod: (0, c.JP)(m.discount.user_usage_limit_interval),
+                numMonths: m.discount.user_usage_limit,
             }),
             graphic: {
                 type: "image",
-                src: b,
+                src: g,
             },
             gradientColor: "nitro-pink",
             actions: [
                 {
-                    text: m.intl.string(m.t.zrCzVF),
+                    text: h.intl.string(h.t.zrCzVF),
                     variant: "expressive",
                     onClick: () => {
-                        (0, o.ZDy)(async () => {
+                        (0, a.ZDy)(async () => {
                             let { default: e } = await Promise.all([n.e("58067"), n.e("81709"), n.e("98361")]).then(
                                 n.bind(n, 833569),
                             );
@@ -81,9 +77,9 @@ let _ = (e) => {
                                     })({}, t)),
                                     (i = i =
                                         {
-                                            premiumSubscription: O,
-                                            analyticsLocations: y,
-                                            initialStep: f.R.CONFIRM_DISCOUNT,
+                                            premiumSubscription: b,
+                                            analyticsLocations: E,
+                                            initialStep: d.R.CONFIRM_DISCOUNT,
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -105,16 +101,16 @@ let _ = (e) => {
                 },
             ],
             onRequestClose: () => {
-                I(g.L.USER_DISMISS);
+                _(f.L.USER_DISMISS);
             },
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                onMouseEnter: () => S(!0),
-                children: E,
+                onMouseEnter: () => v(!0),
+                children: O,
             }),
-            N && P,
+            y && C,
         ],
     });
 };
