@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -185,7 +185,7 @@ let G = (e) => {
                   ],
               });
     },
-    V = (e) => {
+    F = (e) => {
         let { subscription: t } = e,
             {
                 listing: n,
@@ -198,8 +198,8 @@ let G = (e) => {
             [v, T] = i.useState(!1),
             j = (0, E.Dt)(),
             { analyticsLocations: k } = (0, h.ZP)(),
-            { shouldHideGuildPurchaseEntryPoints: V } = (0, b.uP)(null == l ? void 0 : l.id),
-            F = (null == t ? void 0 : t.paymentGateway) === P.gg$.APPLE_PARTNER;
+            { shouldHideGuildPurchaseEntryPoints: F } = (0, b.uP)(null == l ? void 0 : l.id),
+            V = (null == t ? void 0 : t.paymentGateway) === P.gg$.APPLE_PARTNER;
         if (null == a || null == n || null == O) return null;
         let H = () => {
                 null != l &&
@@ -212,7 +212,6 @@ let G = (e) => {
             Y = () => {
                 null != l &&
                     (0, N.h)({
-                        guildId: l.id,
                         groupListing: a,
                         listing: n,
                         subscription: t,
@@ -234,7 +233,7 @@ let G = (e) => {
                 nextRenewalLabel: J,
                 isTrial: $,
             } = O,
-            ee = n.soft_deleted || null == l || F,
+            ee = n.soft_deleted || null == l || V,
             et = () =>
                 p
                     ? (0, r.jsxs)("div", {
@@ -267,7 +266,7 @@ let G = (e) => {
                               }),
                               (0, r.jsx)(c.LZC, { size: 16 }),
                               !K &&
-                                  !F &&
+                                  !V &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(c.vwX, { children: x.intl.string(x.t.wmMFvL) }),
@@ -279,7 +278,7 @@ let G = (e) => {
                                       isTrial: $,
                                       isCancelled: K,
                                       isResubscribing: v,
-                                      shouldHideRoleSubscriptionEntryPoints: V,
+                                      shouldHideRoleSubscriptionEntryPoints: F,
                                       onCancelSubscriptionClick: Y,
                                       onChangePlanClick: H,
                                       onResubscribeClick: W,
@@ -312,7 +311,7 @@ let G = (e) => {
                           })
                         : null,
             er = () =>
-                F
+                V
                     ? (0, r.jsx)(c.ua7, {
                           text: x.intl.string(x.t.nv1IqK),
                           children: (e) =>

@@ -57549,46 +57549,10 @@ h3.improved__1689b:after {
     }
 }
 
-.headerImage__25f6c {
-    height: 146px;
-    object-fit: cover;
-    width: 100%
-}
-
-.closeButton__25f6c {
-    position: absolute;
-    right: 16px;
-    top: 16px
-}
-
-.content__25f6c {
-    padding: 16px
-}
-
-.title__25f6c {
-    color: var(--interactive-active);
-    margin-bottom: 2px
-}
-
-.description__25f6c {
-    color: var(--interactive-normal);
-    margin-bottom: 16px
-}
-
 .benefits__25f6c {
     background-color: var(--background-base-lower);
     border-radius: 8px;
     padding: 16px
-}
-
-.footer__25f6c {
-    justify-content: space-between
-}
-
-.goBackButton__25f6c {
-    color: var(--interactive-active);
-    min-width: auto;
-    padding: 0
 }
 
 .container_e2461d {
