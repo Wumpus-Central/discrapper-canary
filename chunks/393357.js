@@ -1,45 +1,35 @@
-n.r(t), n.d(t, { default: () => _ });
+n.r(t), n.d(t, { default: () => f });
 var r = n(951288);
 n(647438);
-var o = n(990547),
-    i = n(442837),
+var i = n(990547),
+    o = n(442837),
     l = n(906732),
-    s = n(213609),
-    a = n(353926),
-    c = n(443002),
+    a = n(213609),
+    s = n(353926),
     u = n(703656),
-    d = n(430824),
-    p = n(639777),
-    m = n(504392),
-    f = n(981631);
-function _(e) {
+    c = n(430824),
+    d = n(639777),
+    p = n(504392);
+function f(e) {
     let { guildId: t, powerupListingId: n } = e,
-        _ = (0, i.e7)([d.Z], () => d.Z.getGuild(t)),
-        x = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
-        g = (0, p.Z)(t),
-        v = (0, u.At)(),
-        b = !x || null == g || null == _,
-        h = (0, l.ZP)(null != v ? v : []);
-    return ((0, s.Z)(
+        f = (0, o.e7)([c.Z], () => c.Z.getGuild(t)),
+        m = (0, o.e7)([s.Z], () => s.Z.hasLoadedExperiments),
+        _ = (0, d.Z)(t),
+        g = (0, u.At)(),
+        v = !m || null == _ || null == f,
+        x = (0, l.ZP)(null != g ? g : []);
+    return ((0, a.Z)(
         {
-            type: o.ImpressionTypes.VIEW,
-            name: o.ImpressionNames.BOOST_SHOP_OPENED,
-            properties: { location_stack: h.analyticsLocations },
+            type: i.ImpressionTypes.VIEW,
+            name: i.ImpressionNames.BOOST_SHOP_OPENED,
+            properties: { location_stack: x.analyticsLocations },
         },
-        { disableTrack: b },
+        { disableTrack: v },
     ),
-    b)
+    v)
         ? null
-        : g
-          ? (0, r.jsx)(m.Z, {
-                guildId: t,
-                powerupListingId: n,
-            })
-          : (0, r.jsx)(c.Z, {
-                analyticsLocation: {
-                    section: f.jXE.CHANNEL_LIST,
-                    object: f.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM,
-                },
-                guild: _,
-            });
+        : (0, r.jsx)(p.Z, {
+              guildId: t,
+              powerupListingId: n,
+          });
 }
