@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => R });
 var r = n(951288);
 n(647438);
 var i = n(620662),
@@ -10,118 +10,107 @@ var i = n(620662),
     u = n(100527),
     d = n(906732),
     f = n(584057),
-    _ = n(355281),
-    p = n(509003),
-    h = n(750154),
-    m = n(374129),
-    g = n(639351),
-    E = n(652853),
-    b = n(103479),
-    y = n(191764),
-    O = n(238607),
-    v = n(414402),
-    I = n(934393),
-    T = n(195990),
-    S = n(803663),
-    A = n(585253),
-    C = n(715547),
-    N = n(994102),
-    R = n(981631),
-    P = n(671955),
-    w = n(723701);
-function D(e) {
-    let { user: t, activity: n, onAction: D, onClose: x, application: L } = e,
-        { themeType: j } = (0, E.z)(),
-        M = (0, c.q)(L, "UserProfileActivityButtons"),
-        k = (0, f.L)(null != n ? n : void 0, void 0),
-        { showPlayButton: U } = _.m.useConfig({ location: "UserProfileActivityButtons" }),
-        { analyticsLocations: G } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS);
-    if (U && null != L && (0, p.bP)(L))
-        return (0, r.jsx)(T.Z, {
-            user: t,
-            application: L,
-            onAction: D,
-            onClose: x,
-        });
+    _ = n(750154),
+    p = n(374129),
+    h = n(639351),
+    m = n(652853),
+    g = n(103479),
+    E = n(191764),
+    b = n(238607),
+    y = n(414402),
+    O = n(934393),
+    v = n(803663),
+    I = n(585253),
+    T = n(715547),
+    S = n(994102),
+    A = n(981631),
+    C = n(671955),
+    N = n(723701);
+function R(e) {
+    let { user: t, activity: n, onAction: R, onClose: P, application: w } = e,
+        { themeType: D } = (0, m.z)(),
+        x = (0, c.q)(w, "UserProfileActivityButtons"),
+        L = (0, f.L)(null != n ? n : void 0, void 0),
+        { analyticsLocations: j } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS);
     if ((0, s.Z)(n))
-        return (0, r.jsx)(I.Z, {
-            platformType: R.ABu.XBOX,
-            icon: () => (0, r.jsx)(g.Z, {}),
-            onAction: D,
+        return (0, r.jsx)(O.Z, {
+            platformType: A.ABu.XBOX,
+            icon: () => (0, r.jsx)(h.Z, {}),
+            onAction: R,
         });
     if ((0, o.Z)(n))
-        return (0, r.jsx)(I.Z, {
-            platformType: R.ABu.PLAYSTATION,
-            icon: () => (0, r.jsx)(m.Z, {}),
-            onAction: D,
+        return (0, r.jsx)(O.Z, {
+            platformType: A.ABu.PLAYSTATION,
+            icon: () => (0, r.jsx)(p.Z, {}),
+            onAction: R,
         });
     if ((0, l.Z)(n))
-        return (0, r.jsx)(C.Z, {
+        return (0, r.jsx)(T.Z, {
             activity: n,
-            onAction: D,
+            onAction: R,
         });
-    let B = j === P.l.MODAL || j === P.l.MODAL_V2;
-    if (!k && M && null != L && !B)
-        return (0, r.jsx)(N.Z, {
-            application: L,
-            onAction: D,
-            onClose: x,
-            analyticsLocations: G,
+    let M = D === C.l.MODAL || D === C.l.MODAL_V2;
+    if (!L && x && null != w && !M)
+        return (0, r.jsx)(S.Z, {
+            application: w,
+            onAction: R,
+            onClose: P,
+            analyticsLocations: j,
         });
-    let Z = (0, i.Z)(n, R.xjy.JOIN) || (0, a.Z)(n),
-        F = (null == n ? void 0 : n.application_id) != null;
-    return Z && F
+    let k = (0, i.Z)(n, A.xjy.JOIN) || (0, a.Z)(n),
+        U = (null == n ? void 0 : n.application_id) != null;
+    return k && U
         ? (0, r.jsxs)("div", {
-              className: w.buttonContainer,
+              className: N.buttonContainer,
               children: [
-                  (0, r.jsx)(O.Z, {
+                  (0, r.jsx)(b.Z, {
                       user: t,
                       activity: n,
-                      onAction: D,
-                      onClose: x,
+                      onAction: R,
+                      onClose: P,
                   }),
-                  (0, r.jsx)(A.Z, {
+                  (0, r.jsx)(I.Z, {
                       activity: n,
-                      onAction: D,
+                      onAction: R,
                   }),
               ],
           })
-        : Z
-          ? (0, r.jsx)(O.Z, {
+        : k
+          ? (0, r.jsx)(b.Z, {
                 user: t,
                 activity: n,
-                onAction: D,
-                onClose: x,
+                onAction: R,
+                onClose: P,
             })
-          : (null == n ? void 0 : n.type) === R.IIU.HANG_STATUS
-            ? (0, r.jsx)(y.Z, {
+          : (null == n ? void 0 : n.type) === A.IIU.HANG_STATUS
+            ? (0, r.jsx)(E.Z, {
                   user: t,
                   activity: n,
-                  onAction: D,
-                  onClose: x,
+                  onAction: R,
+                  onClose: P,
               })
             : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
-              ? (0, r.jsx)(b.Z, {
+              ? (0, r.jsx)(g.Z, {
                     user: t,
                     activity: n,
-                    onAction: D,
+                    onAction: R,
                 })
-              : F
-                ? (0, r.jsx)(A.Z, {
+              : U
+                ? (0, r.jsx)(I.Z, {
                       activity: n,
-                      onAction: D,
+                      onAction: R,
                   })
-                : (0, i.Z)(n, R.xjy.INSTANCE)
-                  ? (0, r.jsx)(v.Z, {
+                : (0, i.Z)(n, A.xjy.INSTANCE)
+                  ? (0, r.jsx)(y.Z, {
                         user: t,
                         activity: n,
-                        onAction: D,
+                        onAction: R,
                     })
-                  : (0, h.dS)(n)
-                    ? (0, r.jsx)(S.Z, {
+                  : (0, _.dS)(n)
+                    ? (0, r.jsx)(v.Z, {
                           activity: n,
-                          onAction: D,
-                          onClose: x,
+                          onAction: R,
+                          onClose: P,
                       })
                     : null;
 }

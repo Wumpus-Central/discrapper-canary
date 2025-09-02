@@ -1,32 +1,22 @@
 n.d(t, {
-    FT: () => S,
-    I8: () => O,
-    Jc: () => A,
-    LK: () => I,
-    ON: () => y,
-    bP: () => N,
-    le: () => C,
-    oK: () => w,
-    sD: () => v,
-    x3: () => E,
-    xr: () => R,
-    yA: () => b,
-    yb: () => P,
+    FT: () => h,
+    Jc: () => m,
+    LK: () => _,
+    bP: () => E,
+    le: () => g,
+    sD: () => f,
+    x3: () => d,
 }),
     n(49124),
-    n(415506);
-var r = n(392711),
-    i = n.n(r),
-    a = n(782568),
-    o = n(594190),
-    s = n(104755),
-    l = n(355281),
-    c = n(210817),
-    u = n(817788),
-    d = n(543696),
-    f = n(981631),
-    _ = n(388032);
-function p(e, t, n) {
+    n(392711),
+    n(782568),
+    n(594190);
+var r = n(355281);
+n(210817);
+var i = n(817788),
+    a = n(981631),
+    o = n(388032);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +29,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +40,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,136 +57,61 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e) {
-    if (e.distributor === f.GQo.ROBLOX && null != e.sku) {
+function d(e) {
+    if (e.distributor === a.GQo.ROBLOX && null != e.sku) {
         var t, n;
         return ""
             .concat(e.sku, ":")
-            .concat(null != (n = null == (t = e.gameMetadata) ? void 0 : t[u.wF.PLACE_ID]) ? n : "");
+            .concat(null != (n = null == (t = e.gameMetadata) ? void 0 : t[i.wF.PLACE_ID]) ? n : "");
     }
     return null;
 }
-function b(e, t) {
-    return (null == e && null != t) || (null != e && null == t) || (null != e && null != t && !i().isEqual(e, t));
-}
-function y(e, t) {
-    var n, r, i;
-    let a = h({}, e),
-        s = t.subgameInfo,
-        l = t.application,
-        c = Number(null == (n = e.gameMetadata) ? void 0 : n[u.wF.ROBLOX_TIME_STARTED]);
-    if (((isNaN(c) || 0 === c) && (c = null != (r = e.start) ? r : Date.now()), null == s))
-        C(e) && ((a.id = u.eB), (a.name = f.EOG[f.GQo.ROBLOX])),
-            (a.gameMetadata = void 0),
-            (a.sku = void 0),
-            (a.start = c),
-            (a.lastFocused = Math.floor(c / 1000));
-    else {
-        let t = {};
-        null != l &&
-        (0, o.ik)({
-            exePath: e.exePath,
-            name: l.name,
-            id: l.id,
-            distributor: f.GQo.ROBLOX,
-        }) &&
-        (0, o.ik)({
-            exePath: e.exePath,
-            name: f.EOG[f.GQo.ROBLOX],
-            id: u.eB,
-            distributor: f.GQo.ROBLOX,
-        })
-            ? ((a.id = l.id),
-              (a.name = l.name),
-              (a.gameName = l.name),
-              (a.start = Date.now()),
-              (a.lastFocused = Math.floor(Date.now() / 1000)))
-            : ((a.id = u.eB), (a.name = f.EOG[f.GQo.ROBLOX]), (a.start = c)),
-            (t[u.wF.ROBLOX_TIME_STARTED] = c.toString()),
-            (a.sku = null != (i = s.universeId) ? i : void 0),
-            null != s.placeId && (t[u.wF.PLACE_ID] = s.placeId),
-            (a.gameMetadata = Object.keys(t).length > 0 ? t : void 0);
-    }
-    return a;
-}
-function O(e) {
-    return null == e[u.SQ.UNIVERSE_ID] || null == e[u.SQ.PLACE_ID]
-        ? null
-        : {
-              universeId: e[u.SQ.UNIVERSE_ID],
-              placeId: e[u.SQ.PLACE_ID],
-          };
-}
-function v(e) {
-    return e.distributor === f.GQo.ROBLOX && null != e.gameMetadata && null != e.gameMetadata[u.wF.PLACE_ID]
-        ? JSON.stringify({ placeId: e.gameMetadata[u.wF.PLACE_ID] })
+function f(e) {
+    return e.distributor === a.GQo.ROBLOX && null != e.gameMetadata && null != e.gameMetadata[i.wF.PLACE_ID]
+        ? JSON.stringify({ placeId: e.gameMetadata[i.wF.PLACE_ID] })
         : null;
 }
-function I(e) {
-    return e.distributor !== f.GQo.ROBLOX ||
+function _(e) {
+    return e.distributor !== a.GQo.ROBLOX ||
         null == e.gameMetadata ||
-        null == e.gameMetadata[u.wF.ROBLOX_TIME_STARTED] ||
-        e.id === u.eB ||
+        null == e.gameMetadata[i.wF.ROBLOX_TIME_STARTED] ||
+        e.id === i.eB ||
         null == e.gameName
         ? {}
         : {
               name: e.gameName,
-              sync_id: e.gameMetadata[u.wF.ROBLOX_TIME_STARTED],
+              sync_id: e.gameMetadata[i.wF.ROBLOX_TIME_STARTED],
           };
 }
-function T(e) {
+function p(e) {
     var t;
-    return (null == (t = e.metadata) ? void 0 : t.distributor) === f.GQo.ROBLOX && e.application_id !== u.eB;
+    return (null == (t = e.metadata) ? void 0 : t.distributor) === a.GQo.ROBLOX && e.application_id !== i.eB;
 }
-function S(e) {
-    if (!T(e)) return e;
-    let t = l.m.getConfig({ location: "transformRobloxSubgameNames" }).alternativeTitle ? _.t.HjVwGx : _.t.G6BGd3;
-    return g(h({}, e), { name: _.intl.formatToPlainString(t, { subgameName: e.name }) });
+function h(e) {
+    if (!p(e)) return e;
+    let t = r.m.getConfig({ location: "transformRobloxSubgameNames" }).alternativeTitle ? o.t.HjVwGx : o.t.G6BGd3;
+    return u(l({}, e), { name: o.intl.formatToPlainString(t, { subgameName: e.name }) });
 }
-function A(e) {
-    if (e.type !== f.IIU.PLAYING || !T(e)) return e;
+function m(e) {
+    if (e.type !== a.IIU.PLAYING || !p(e)) return e;
     let t = Number(e.sync_id),
-        n = h({}, e);
-    return (n.application_id = u.eB), (n.name = f.EOG[f.GQo.ROBLOX]), isNaN(t) || (n.timestamps = { start: t }), n;
+        n = l({}, e);
+    return (n.application_id = i.eB), (n.name = a.EOG[a.GQo.ROBLOX]), isNaN(t) || (n.timestamps = { start: t }), n;
 }
-function C(e) {
-    return e.distributor === f.GQo.ROBLOX && e.id !== u.eB;
+function g(e) {
+    return e.distributor === a.GQo.ROBLOX && e.id !== i.eB;
 }
-function N(e) {
-    return e.thirdPartySkus.some((e) => e.distributor === f.GQo.ROBLOX);
-}
-async function R(e) {
-    var t;
-    let n = null == (t = d.Z.getSupplementalData(e)) ? void 0 : t.rootPlaceId;
-    if (null != n) return await P(n);
-    try {
-        let t = await (0, s.v)([e]);
-        if (null != t[e] && null != t[e].rootPlaceId) return await P(t[e].rootPlaceId);
-    } catch (e) {
-        return Promise.reject(e);
-    }
-    return Promise.reject(Error("Failed to find root place id for activity"));
-}
-async function P(e) {
-    let t = await c.Z.getRobloxSubgameURL(e);
-    return await (0, a.Z)(t);
-}
-function w(e) {
-    return e.distributor !== f.GQo.ROBLOX || e.id === u.eB
-        ? e
-        : g(h({}, e), {
-              id: u.eB,
-              name: f.EOG[f.GQo.ROBLOX],
-          });
+function E(e) {
+    return e.thirdPartySkus.some((e) => e.distributor === a.GQo.ROBLOX);
 }
