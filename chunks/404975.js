@@ -1,45 +1,50 @@
-n.d(t, { P: () => f }), n(361932), n(187205);
-var l = n(951288),
+n.d(t, { P: () => y }), n(361932), n(187205);
+var r = n(951288),
     i = n(120356),
-    r = n.n(i),
-    s = n(873546),
-    u = n(481060),
-    o = n(243778),
-    a = n(59662),
-    c = n(829210),
-    d = n(845435);
-function f(e) {
+    l = n.n(i),
+    o = n(873546),
+    s = n(481060),
+    a = n(243778),
+    u = n(59662),
+    c = n(28682),
+    d = n(829210),
+    g = n(854014),
+    f = n(845435);
+function y(e) {
     let { root: t, header: n, footer: i } = e,
-        { showNavigationMobile: c } = (0, a.t)(),
-        f = t.layout
+        { showNavigationMobile: d } = (0, u.t)(),
+        g = t.layout
             .flatMap((e) => e.layout)
             .flatMap((e) => {
                 var t;
-                return null == (t = e.trailing) ? void 0 : t.newIndicatorDismissibleContentTypes;
+                return e.type === c.J.PANEL &&
+                    (null == (t = e.trailing) ? void 0 : t.newIndicatorDismissibleContentTypes) != null
+                    ? e.trailing.newIndicatorDismissibleContentTypes
+                    : [];
             })
             .filter((e) => null != e);
-    return (0, l.jsx)(o.ZP, {
-        contentTypes: f,
+    return (0, r.jsx)(a.ZP, {
+        contentTypes: g,
         children: (e) => {
-            let { visibleContent: o } = e;
-            return (0, l.jsxs)("div", {
-                className: r()(d.sidebar, {
-                    [d.mobile]: s.tq,
-                    [d.mobileNavigationOpen]: c,
+            let { visibleContent: a } = e;
+            return (0, r.jsxs)("div", {
+                className: l()(f.sidebar, {
+                    [f.mobile]: o.tq,
+                    [f.mobileNavigationOpen]: d,
                 }),
                 children: [
-                    null != n && (0, l.jsx)(n, {}),
-                    (0, l.jsx)(u.zJl, {
-                        className: d.navScroller,
+                    null != n && (0, r.jsx)(n, {}),
+                    (0, r.jsx)(s.zJl, {
+                        className: f.navScroller,
                         fade: !0,
-                        children: (0, l.jsx)("nav", {
-                            className: d.nav,
+                        children: (0, r.jsx)("nav", {
+                            className: f.nav,
                             children: t.layout.map((e) =>
-                                (0, l.jsx)(
-                                    g,
+                                (0, r.jsx)(
+                                    O,
                                     {
                                         section: e,
-                                        visibleContent: o,
+                                        visibleContent: a,
                                     },
                                     e.key,
                                 ),
@@ -47,37 +52,44 @@ function f(e) {
                         }),
                     }),
                     null != i &&
-                        (0, l.jsx)("footer", {
-                            className: d.footer,
-                            children: (0, l.jsx)(i, {}),
+                        (0, r.jsx)("footer", {
+                            className: f.footer,
+                            children: (0, r.jsx)(i, {}),
                         }),
                 ],
             });
         },
     });
 }
-function g(e) {
+function O(e) {
     var t;
     let { section: n, visibleContent: i } = e,
-        r = null == (t = n.useLabel) ? void 0 : t.call(n);
-    return (0, l.jsxs)("ul", {
-        className: d.section,
+        l = null == (t = n.useLabel) ? void 0 : t.call(n);
+    return (0, r.jsxs)("ul", {
+        className: f.section,
         children: [
-            null != r &&
-                (0, l.jsx)(u.X6q, {
-                    className: d.label,
+            null != l &&
+                (0, r.jsx)(s.X6q, {
+                    className: f.label,
                     variant: "heading-sm/medium",
                     color: "text-tertiary",
-                    children: r,
+                    children: l,
                 }),
             n.layout.map((e) =>
-                (0, l.jsx)(
+                (0, r.jsx)(
                     "li",
                     {
-                        children: (0, l.jsx)(c.Z, {
-                            node: e,
-                            visibleContent: i,
-                        }),
+                        children:
+                            e.type === c.J.PANEL
+                                ? (0, r.jsx)(d.Z, {
+                                      node: e,
+                                      visibleContent: i,
+                                  })
+                                : (0, r.jsx)(g.Z, {
+                                      icon: e.icon,
+                                      title: e.useTitle(),
+                                      onClick: e.onClick,
+                                  }),
                     },
                     e.key,
                 ),

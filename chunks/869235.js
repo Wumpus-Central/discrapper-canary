@@ -93,6 +93,7 @@ var r = (function (e) {
         (e.DEVELOPER_OPTIONS_PANEL = "developer_options_panel"),
         (e.DEVELOPER_OPTIONS_PANE = "developer_options_pane"),
         (e.LOGOUT_SECTION = "logout_section"),
+        (e.LOGOUT_SIDEBAR_ITEM = "logout_sidebar_item"),
         e
     );
 })({});
