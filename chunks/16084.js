@@ -193,6 +193,7 @@ async function A(e, t, n) {
             sku_subscription_plan_id: v,
             gateway_checkout_context: await (0, f.cn)(r),
             load_id: I,
+            gift_info_options: y,
         };
         if (C) e.test_mode = !0;
         else {
@@ -205,7 +206,7 @@ async function A(e, t, n) {
                     (0, i.K0)() +
                     g.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(r.type, null != t ? t : "", "success");
             }
-            (e.gift_info_options = y), null != T && (e.country_code = T);
+            null != T && (e.country_code = T);
         }
         null != l && (e.expected_amount = l),
             null != u && (e.expected_currency = u),
