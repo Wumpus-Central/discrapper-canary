@@ -1,7 +1,7 @@
 n.d(t, {
     hi: () => f,
     s2: () => _,
-    sU: () => p,
+    sU: () => h,
 });
 var r = n(442837),
     i = n(481060),
@@ -28,10 +28,13 @@ function _(e) {
     return !!o.isPlatformEmbedded && e.canShowAdminWarning && !u() && d();
 }
 function p() {
+    o.isPlatformEmbedded && s.ZP.InputEventServiceSetAllowed(!0);
+}
+function h() {
     o.isPlatformEmbedded &&
         s.ZP.InstallSystemService()
             .then(() => {
-                (0, i.showToast)((0, i.createToast)(c.intl.string(c.t.kQnWb2), i.ToastType.SUCCESS));
+                (0, i.showToast)((0, i.createToast)(c.intl.string(c.t.kQnWb2), i.ToastType.SUCCESS)), p();
             })
             .catch((e) => {
                 (0, i.showToast)((0, i.createToast)(c.intl.string(c.t.sdKYCA), i.ToastType.FAILURE)), console.error(e);
