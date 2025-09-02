@@ -3838,6 +3838,7 @@ var nb = (function (e) {
             (e.APP_LAUNCH_COMPLETED = "app_launch_completed"),
             (e.APP_LANDING_VIEWED = "app_landing_viewed"),
             (e.RPC_OPEN_EXTERNAL_LINK_CALLED = "rpc_open_external_link_called"),
+            (e.RPC_QUEST_START_TIMER_CALLED = "rpc_quest_start_timer_called"),
             (e.APP_MODULES_UPDATED = "app_modules_updated"),
             (e.APP_FIRST_LAUNCHED = "app_first_launched"),
             (e.APP_FIRST_LOGIN = "app_first_login"),

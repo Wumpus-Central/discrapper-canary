@@ -1,32 +1,33 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(243814),
     i = n(570140),
     l = n(569984),
-    a = n(996106),
-    o = n(914946),
-    s = n(981631);
-let c = {
-    [s.Etm.GET_QUEST_ENROLLMENT_STATUS]: {
+    a = n(626135),
+    o = n(996106),
+    s = n(914946),
+    c = n(981631);
+let u = {
+    [c.Etm.GET_QUEST_ENROLLMENT_STATUS]: {
         scope: r.x.IDENTIFY,
         handler(e) {
             var t, n, r;
             let {
                 socket: i,
-                args: { quest_id: c },
+                args: { quest_id: a },
             } = e;
-            (0, o.bu)(i.transport);
-            let u = (0, o._f)(i.application),
-                d = l.Z.getQuest(c);
+            (0, s.bu)(i.transport);
+            let u = (0, s._f)(i.application),
+                d = l.Z.getQuest(a);
             if (null == d || d.config.application.id !== u)
-                throw new a.Z({ errorCode: s.lTL.INVALID_COMMAND }, "Quest not found: ".concat(c));
+                throw new o.Z({ errorCode: c.lTL.INVALID_COMMAND }, "Quest not found: ".concat(a));
             return {
-                quest_id: c,
+                quest_id: a,
                 is_enrolled: (null == (t = d.userStatus) ? void 0 : t.enrolledAt) != null,
                 enrolled_at: null != (r = null == (n = d.userStatus) ? void 0 : n.enrolledAt) ? r : null,
             };
         },
     },
-    [s.Etm.QUEST_START_TIMER]: {
+    [c.Etm.QUEST_START_TIMER]: {
         scope: r.x.IDENTIFY,
         handler(e) {
             var t;
@@ -34,18 +35,22 @@ let c = {
                 socket: n,
                 args: { quest_id: r },
             } = e;
-            (0, o.bu)(n.transport);
-            let c = (0, o._f)(n.application),
-                u = l.Z.getQuest(r);
-            if (null == u || u.config.application.id !== c)
-                throw new a.Z({ errorCode: s.lTL.INVALID_COMMAND }, "Quest not found: ".concat(r));
-            if ((null == (t = u.userStatus) ? void 0 : t.enrolledAt) == null)
-                throw new a.Z({ errorCode: s.lTL.INVALID_COMMAND }, "User is not enrolled in quest");
+            (0, s.bu)(n.transport);
+            let u = (0, s._f)(n.application),
+                d = l.Z.getQuest(r);
+            if (null == d || d.config.application.id !== u)
+                throw new o.Z({ errorCode: c.lTL.INVALID_COMMAND }, "Quest not found: ".concat(r));
+            if ((null == (t = d.userStatus) ? void 0 : t.enrolledAt) == null)
+                throw new o.Z({ errorCode: c.lTL.INVALID_COMMAND }, "User is not enrolled in quest");
             return (
+                a.default.track(c.rMx.RPC_QUEST_START_TIMER_CALLED, {
+                    application_id: u,
+                    quest_id: r,
+                }),
                 i.Z.dispatch({
                     type: "QUEST_APPLICATION_START_TIMER",
                     questId: r,
-                    applicationId: c,
+                    applicationId: u,
                 }),
                 { success: !0 }
             );
