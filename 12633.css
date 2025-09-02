@@ -77257,6 +77257,68 @@ html .progress__61462 {
     position: absolute
 }
 
+.wrapper__89573 {
+    bottom: 0;
+    left: 0;
+    margin-bottom: 42px;
+    opacity: 0;
+    pointer-events: none;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    z-index: 10
+}
+
+.innerWrapper__89573,
+.wrapper__89573 {
+    display: flex;
+    justify-content: center
+}
+
+.innerWrapper__89573 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 16px;
+    pointer-events: all;
+    position: relative
+}
+
+.innerWrapper__89573:after,
+.innerWrapper__89573:before {
+    content: "";
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.invisible__89573>.innerWrapper__89573 {
+    pointer-events: none
+}
+
+.tier2Gradient__89573 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    color: var(--white-500)
+}
+
+.descriptionContainer__89573 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
+    width: 320px
+}
+
+.nitroIcon__89573 {
+    border-radius: var(--radius-sm);
+    filter: saturate(var(--saturation-factor, 1));
+    height: 48px;
+    width: 48px
+}
+
 .container__1f2ac {
     height: 100%;
     justify-content: space-between
@@ -78410,6 +78472,21 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .referralBanner__3ce43 {
     margin: 40px auto 0
+}
+
+.churnEntrypointButtons__3ce43 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 380px
+}
+
+.churnEntrypointDescriptionBrandRefresh__3ce43 {
+    margin-top: 16px
+}
+
+.churnEntrypointDescription__3ce43 {
+    margin-bottom: 16px
 }
 
 .container__555fb {
