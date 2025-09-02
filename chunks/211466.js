@@ -22,7 +22,7 @@ function p() {
             },
             {
                 title: _.intl.string(_.t["16/3Bg"]),
-                component: l.I,
+                component: () => (0, r.jsx)(l.I, {}),
                 orientation: "vertical",
                 setting: d.s6.GORE_MEDIA_REDACTION,
             },

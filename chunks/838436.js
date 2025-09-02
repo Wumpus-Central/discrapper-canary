@@ -1,6 +1,6 @@
 n.d(t, {
     H: () => p,
-    U: () => g,
+    U: () => E,
 }),
     n(953529);
 var r = n(951288);
@@ -66,6 +66,13 @@ function p(e) {
     });
 }
 function h(e) {
+    let { className: t, children: n } = e;
+    return (0, r.jsx)("div", {
+        className: a()(d.container, t),
+        children: n,
+    });
+}
+function m(e) {
     let { setting: t, className: n, children: i } = e;
     return (0, r.jsx)(s.F, {
         setting: t,
@@ -75,7 +82,7 @@ function h(e) {
         }),
     });
 }
-function m(e) {
+function g(e) {
     let { setting: t, className: n, children: i, scrollPosition: o, scrollHighlightDelay: f } = e,
         _ = (0, l.a)(o);
     return (0, r.jsx)(s.F, {
@@ -95,6 +102,10 @@ function m(e) {
         }),
     });
 }
-function g(e) {
-    return null != e.scrollPosition ? (0, r.jsx)(m, _({}, e)) : (0, r.jsx)(h, _({}, e));
+function E(e) {
+    return null != e.scrollPosition
+        ? (0, r.jsx)(g, _({}, e))
+        : null != e.setting
+          ? (0, r.jsx)(m, _({}, e))
+          : (0, r.jsx)(h, _({}, e));
 }
