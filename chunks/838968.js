@@ -1,18 +1,18 @@
 n.d(t, {
-    N4: () => v,
+    N4: () => _,
     P2: () => f,
     Q9: () => b,
     aB: () => h,
-    c: () => x,
-    rL: () => _,
-    uf: () => g,
+    c: () => v,
+    rL: () => g,
+    uf: () => x,
 });
 var r = n(951288),
     o = n(647438),
     i = n(120356),
     l = n.n(i),
-    s = n(481060),
-    a = n(377171),
+    a = n(481060),
+    s = n(377171),
     c = n(192371),
     u = n(834209),
     d = n(989308),
@@ -23,11 +23,11 @@ function f(e) {
     return (0, r.jsxs)("div", {
         className: m.inline,
         children: [
-            (0, r.jsx)(s.owK, {
+            (0, r.jsx)(a.owK, {
                 size: "xs",
-                color: s.TVs.colors.STATUS_POSITIVE,
+                color: a.TVs.colors.STATUS_POSITIVE,
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 color: "text-feedback-positive",
                 variant: "text-sm/bold",
                 children: t,
@@ -35,16 +35,16 @@ function f(e) {
         ],
     });
 }
-function _(e) {
+function g(e) {
     let { dateString: t } = e;
     return (0, r.jsxs)("div", {
         className: m.inline,
         children: [
-            (0, r.jsx)(s.Mgn, {
+            (0, r.jsx)(a.Mgn, {
                 size: "xs",
-                color: s.TVs.colors.STATUS_WARNING,
+                color: a.TVs.colors.STATUS_WARNING,
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
                 children: p.intl.formatToMarkdownString(d.default["ol/ao6"], { dateString: (0, c.Z)(t) }),
@@ -52,16 +52,16 @@ function _(e) {
         ],
     });
 }
-function x(e) {
+function v(e) {
     let { removingAt: t } = e;
     return (0, r.jsxs)("div", {
         className: m.rollbackInline,
         children: [
-            (0, r.jsx)(s.Mgn, {
+            (0, r.jsx)(a.Mgn, {
                 size: "xs",
-                color: s.TVs.colors.STATUS_WARNING,
+                color: a.TVs.colors.STATUS_WARNING,
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
                 children: p.intl.formatToPlainString(d.default["6e2ry8"], { dateString: (0, u.Z)(t) }),
@@ -69,21 +69,21 @@ function x(e) {
         ],
     });
 }
-function g(e) {
+function x(e) {
     let { cost: t, costDecorator: n, status: o, className: i } = e,
-        a = void 0 !== t ? m.labelContainer : m.labelContainerEnd;
+        s = void 0 !== t ? m.labelContainer : m.labelContainerEnd;
     return (0, r.jsxs)("div", {
-        className: l()(a, i),
+        className: l()(s, i),
         children: [
             void 0 !== t &&
                 (0, r.jsxs)("div", {
                     className: l()(m.inline, m.inlineBoost),
                     children: [
-                        (0, r.jsx)(s.$Eu, {
+                        (0, r.jsx)(a.$Eu, {
                             size: "sm",
-                            color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                            color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         }),
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             className: m.price,
                             tag: "div",
                             variant: "heading-md/semibold",
@@ -95,13 +95,13 @@ function g(e) {
                         }),
                     ],
                 }),
-            (null == o ? void 0 : o.type) === "expiring" && (0, r.jsx)(_, { dateString: o.expiringAt }),
-            (null == o ? void 0 : o.type) === "removing" && (0, r.jsx)(x, { removingAt: o.removingAt }),
+            (null == o ? void 0 : o.type) === "expiring" && (0, r.jsx)(g, { dateString: o.expiringAt }),
+            (null == o ? void 0 : o.type) === "removing" && (0, r.jsx)(v, { removingAt: o.removingAt }),
             (null == o ? void 0 : o.type) === "active" && (0, r.jsx)(f, { text: o.statusText }),
         ],
     });
 }
-function v(e) {
+function _(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: m.buttonContainer,
@@ -117,7 +117,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: m.headerContainer,
-                        children: (0, r.jsx)(s.X6q, {
+                        children: (0, r.jsx)(a.X6q, {
                             color: n,
                             variant: "heading-md/bold",
                             children: t,
@@ -139,18 +139,18 @@ let h = o.forwardRef(function (e, t) {
         badge: u,
         canRollback: d,
         onClick: f,
-        onMouseOver: _,
-        onMouseLeave: x,
-        children: g,
+        onMouseOver: g,
+        onMouseLeave: v,
+        children: x,
     } = e;
     return (0, r.jsx)("div", {
         className: l()(m.parentContainer, { [m.rollbackInactive]: d && !i }),
         ref: t,
-        children: (0, r.jsxs)(s.kL8, {
+        children: (0, r.jsxs)(a.kL8, {
             "aria-label": o,
             onClick: f,
-            onMouseOver: _,
-            onMouseLeave: x,
+            onMouseOver: g,
+            onMouseLeave: v,
             className: l()(
                 m.container,
                 {
@@ -160,18 +160,18 @@ let h = o.forwardRef(function (e, t) {
                 n,
             ),
             children: [
+                x,
                 "new" === u &&
-                    (0, r.jsx)(s.IGR, {
+                    (0, r.jsx)(a.IGR, {
                         className: m.new,
                         text: p.intl.string(p.t.y2b7CA),
                     }),
                 "beta" === u &&
-                    (0, r.jsx)(s.IGR, {
+                    (0, r.jsx)(a.IGR, {
                         className: m.new,
                         text: p.intl.string(p.t.oW0eUV),
-                        color: a.Z.BG_BRAND,
+                        color: s.Z.BG_BRAND,
                     }),
-                g,
             ],
         }),
     });

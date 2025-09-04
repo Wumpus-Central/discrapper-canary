@@ -1,271 +1,290 @@
-n.d(t, { default: () => j });
-var r = n(951288),
-    o = n(647438),
-    a = n(494497),
-    i = n(442837),
-    s = n(481060),
-    c = n(14263),
-    l = n(650774),
-    d = n(485386),
-    u = n(430824),
-    m = n(870246),
-    f = n(158638),
-    b = n(795338),
-    p = n(17622),
-    x = n(279604),
-    g = n(535396),
-    k = n(989308),
-    v = n(388032),
-    h = n(514186);
-function j(e) {
-    var t,
+r.d(t, {
+    default: () => N,
+    f: () => I,
+});
+var n = r(951288),
+    a = r(647438),
+    o = r(494497),
+    i = r(442837),
+    s = r(481060),
+    l = r(14263),
+    c = r(650774),
+    u = r(485386),
+    d = r(430824),
+    m = r(870246),
+    f = r(158638),
+    p = r(795338),
+    x = r(17622),
+    g = r(279604),
+    b = r(535396),
+    v = r(989308),
+    j = r(388032),
+    h = r(514186);
+function k(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                }),
+            )),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = n);
+            });
+    }
+    return e;
+}
+function O(e, t) {
+    if (null == e) return {};
+    var r,
         n,
-        { guildId: j, powerup: _ } = e,
-        I = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                o = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        o = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
-            }
-            return o;
-        })(e, ["guildId", "powerup"]);
-    let { onDeactivate: O, error: C, isLoading: T } = (0, x.ZP)(j, _),
-        { onClose: N } = I,
-        y = o.useCallback(
+            var r,
+                n,
+                a = {},
+                o = Object.keys(e);
+            for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+            return a;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < o.length; n++)
+            (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+    }
+    return a;
+}
+function I(e) {
+    var t,
+        r,
+        { size: a, title: o, body: i, warningText: l, error: c, isLoading: u, onDeactivate: d } = e,
+        m = O(e, ["size", "title", "body", "warningText", "error", "isLoading", "onDeactivate"]);
+    return (0, n.jsxs)(
+        s.Y0X,
+        ((t = k(
+            {
+                className: h.modal,
+                size: a,
+            },
+            m,
+        )),
+        (r = r =
+            {
+                parentComponent: "GuildPowerupDeactivateModal",
+                children: [
+                    (0, n.jsxs)(s.hzk, {
+                        className: h.modalContentContainer,
+                        scrollbarType: "none",
+                        children: [
+                            (0, n.jsxs)("div", {
+                                className: h.headerContainer,
+                                children: [
+                                    (0, n.jsxs)("div", {
+                                        className: h.header,
+                                        children: [
+                                            (0, n.jsx)(s.X6q, {
+                                                variant: "heading-md/semibold",
+                                                children: j.intl.formatToPlainString(v.default.iEBw1N, { perk: o }),
+                                            }),
+                                            (0, n.jsx)(s.Text, {
+                                                variant: "text-sm/medium",
+                                                children: j.intl.formatToPlainString(v.default["7o0K+/"], { perk: o }),
+                                            }),
+                                        ],
+                                    }),
+                                    (0, n.jsx)(s.olH, { onClick: m.onClose }),
+                                ],
+                            }),
+                            i,
+                            (0, n.jsxs)("div", {
+                                className: h.warningContainer,
+                                children: [
+                                    (0, n.jsx)(s.Text, {
+                                        color: "text-danger",
+                                        variant: "eyebrow",
+                                        children: j.intl.string(v.default.OVt5CA),
+                                    }),
+                                    (0, n.jsx)(s.Text, {
+                                        className: h.warningText,
+                                        tag: "span",
+                                        variant: "text-sm/medium",
+                                        children: l,
+                                    }),
+                                ],
+                            }),
+                            null != c &&
+                                (0, n.jsx)(s.Text, {
+                                    className: h.errorText,
+                                    color: "text-danger",
+                                    variant: "text-sm/semibold",
+                                    children: c,
+                                }),
+                        ],
+                    }),
+                    (0, n.jsxs)(s.mzw, {
+                        className: h.footer,
+                        children: [
+                            (0, n.jsx)("div", {
+                                "data-button-hoisted-classname-wrapper": !0,
+                                className: h.button,
+                                children: (0, n.jsx)(s.zxk, {
+                                    variant: "critical-primary",
+                                    text: j.intl.string(v.default.PYPdl5),
+                                    loading: u,
+                                    onClick: d,
+                                }),
+                            }),
+                            (0, n.jsx)("div", {
+                                "data-button-hoisted-classname-wrapper": !0,
+                                className: h.button,
+                                children: (0, n.jsx)(s.zxk, {
+                                    variant: "secondary",
+                                    text: j.intl.string(j.t["ETE/oK"]),
+                                    onClick: m.onClose,
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(r)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+              }),
+        t),
+    );
+}
+function N(e) {
+    var { guildId: t, powerup: r } = e,
+        N = O(e, ["guildId", "powerup"]);
+    let { onDeactivate: y, error: E, isLoading: T } = (0, g.ZP)(t, r),
+        { onClose: S } = N,
+        w = a.useCallback(
             (e) => {
-                O(e).then(() => {
-                    null == N || N();
+                y(e).then(() => {
+                    null == S || S();
                 });
             },
-            [N, O],
+            [S, y],
         ),
-        E = (function (e, t) {
-            let n = (0, i.e7)([l.Z], () => l.Z.getMemberCount(e)),
-                m = (0, c.Z)(e),
-                b = (0, i.e7)([u.Z], () => {
+        P = (function (e, t) {
+            let r = (0, i.e7)([c.Z], () => c.Z.getMemberCount(e)),
+                m = (0, l.Z)(e),
+                p = (0, i.e7)([d.Z], () => {
                     var t;
-                    return (null == (t = u.Z.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
+                    return (null == (t = d.Z.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
                 }),
-                p = (0, f.g1)(e, "Powerup Deactivate Modal"),
-                x = (0, i.e7)(
-                    [d.Z],
+                x = (0, f.g1)(e, "Powerup Deactivate Modal"),
+                g = (0, i.e7)(
+                    [u.Z],
                     () =>
-                        t.skuId !== a.If || null == m
+                        t.skuId !== o.If || null == m
                             ? 0
-                            : d.Z.getSortedRoles(e).reduce((e, t) => {
-                                  var n, r;
-                                  return (null == (n = t.colorStrings) ? void 0 : n.secondaryColor) == null
+                            : u.Z.getSortedRoles(e).reduce((e, t) => {
+                                  var r, n;
+                                  return (null == (r = t.colorStrings) ? void 0 : r.secondaryColor) == null
                                       ? e
-                                      : e + (null != (r = m[t.id]) ? r : 0);
+                                      : e + (null != (n = m[t.id]) ? n : 0);
                               }, 0),
                     [e, t.skuId, m],
                 );
-            return o.useMemo(() => {
+            return a.useMemo(() => {
                 let e;
                 switch (t.skuId) {
-                    case a.If:
+                    case o.If:
                         e =
-                            x > 0
-                                ? v.intl.formatToPlainString(k.default["4jSvr6"], {
+                            g > 0
+                                ? j.intl.formatToPlainString(v.default["4jSvr6"], {
                                       perk: t.title,
-                                      memberCount: x,
+                                      memberCount: g,
                                   })
-                                : v.intl.formatToPlainString(k.default.cavtEh, { perk: t.title });
+                                : j.intl.formatToPlainString(v.default.cavtEh, { perk: t.title });
                         break;
-                    case a.A$:
-                        e = b
-                            ? (0, r.jsx)(s.Text, {
+                    case o.A$:
+                        e = p
+                            ? (0, n.jsx)(s.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/semibold",
-                                  children: v.intl.string(k.default.hN75yc),
+                                  children: j.intl.string(v.default.hN75yc),
                               })
-                            : (0, r.jsx)(s.Text, {
+                            : (0, n.jsx)(s.Text, {
                                   color: "text-danger",
                                   variant: "text-sm/semibold",
-                                  children: v.intl.string(k.default.Du91RU),
+                                  children: j.intl.string(v.default.Du91RU),
                               });
                         break;
-                    case a.MB:
-                    case a.Vk:
-                        e = v.intl.string(k.default.Vf2ZcX);
+                    case o.MB:
+                    case o.Vk:
+                        e = j.intl.string(v.default.Vf2ZcX);
                         break;
                     default:
-                        e = v.intl.formatToPlainString(k.default["4jSvr6"], {
+                        e = j.intl.formatToPlainString(v.default["4jSvr6"], {
                             perk: t.title,
-                            memberCount: n,
+                            memberCount: r,
                         });
                 }
                 return (
-                    b &&
-                        t.skuId === a.XW &&
-                        (e = (0, r.jsxs)(r.Fragment, {
+                    p &&
+                        t.skuId === o.XW &&
+                        (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
-                                (0, r.jsx)(s.Text, {
+                                (0, n.jsx)(s.Text, {
                                     color: "text-danger",
                                     variant: "text-sm/semibold",
-                                    children: p ? v.intl.string(k.default.TkNA7e) : v.intl.string(k.default.M4XL5u),
+                                    children: x ? j.intl.string(v.default.TkNA7e) : j.intl.string(v.default.M4XL5u),
                                 }),
                             ],
                         })),
                     e
                 );
-            }, [t, x, n, b, p]);
-        })(j, _);
+            }, [t, g, r, p, x]);
+        })(t, r);
     return (
-        (0, m.$)(j, _, m.w.DEACTIVATE),
-        (0, r.jsxs)(
-            s.Y0X,
-            ((t = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            }),
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0,
-                                      })
-                                    : (e[t] = r);
-                        });
-                }
-                return e;
-            })(
+        (0, m.$)(t, r, m.w.DEACTIVATE),
+        (0, n.jsx)(
+            I,
+            k(
                 {
-                    className: h.modal,
-                    size: _.type === g.Us.LEVEL ? s.CgR.MEDIUM : s.CgR.SMALL,
+                    size: r.type === b.Us.LEVEL ? s.CgR.MEDIUM : s.CgR.SMALL,
+                    title: r.title,
+                    body: (() => {
+                        switch (r.type) {
+                            case b.Us.LEVEL:
+                                return (0, n.jsx)(x.Z, { powerup: r });
+                            case b.Us.PERK:
+                                return (0, n.jsx)(p.m, {
+                                    className: h.image,
+                                    powerup: r,
+                                });
+                        }
+                    })(),
+                    warningText: P,
+                    error: E,
+                    isLoading: T,
+                    onDeactivate: w,
                 },
-                I,
-            )),
-            (n = n =
-                {
-                    parentComponent: "GuildPowerupDeactivateModal",
-                    children: [
-                        (0, r.jsxs)(s.hzk, {
-                            className: h.modalContentContainer,
-                            scrollbarType: "none",
-                            children: [
-                                (0, r.jsxs)("div", {
-                                    className: h.headerContainer,
-                                    children: [
-                                        (0, r.jsxs)("div", {
-                                            className: h.header,
-                                            children: [
-                                                (0, r.jsx)(s.X6q, {
-                                                    variant: "heading-md/semibold",
-                                                    children: v.intl.formatToPlainString(k.default.iEBw1N, {
-                                                        perk: _.title,
-                                                    }),
-                                                }),
-                                                (0, r.jsx)(s.Text, {
-                                                    variant: "text-sm/medium",
-                                                    children: v.intl.formatToPlainString(k.default["7o0K+/"], {
-                                                        perk: _.title,
-                                                    }),
-                                                }),
-                                            ],
-                                        }),
-                                        (0, r.jsx)(s.olH, { onClick: I.onClose }),
-                                    ],
-                                }),
-                                (() => {
-                                    switch (_.type) {
-                                        case g.Us.LEVEL:
-                                            return (0, r.jsx)(p.Z, { powerup: _ });
-                                        case g.Us.PERK:
-                                            return (0, r.jsx)(b.m, {
-                                                className: h.image,
-                                                powerup: _,
-                                            });
-                                    }
-                                })(),
-                                (0, r.jsxs)("div", {
-                                    className: h.warningContainer,
-                                    children: [
-                                        (0, r.jsx)(s.Text, {
-                                            color: "text-danger",
-                                            variant: "eyebrow",
-                                            children: v.intl.string(k.default.OVt5CA),
-                                        }),
-                                        (0, r.jsx)(s.Text, {
-                                            className: h.warningText,
-                                            tag: "span",
-                                            variant: "text-sm/medium",
-                                            children: E,
-                                        }),
-                                    ],
-                                }),
-                                null != C &&
-                                    (0, r.jsx)(s.Text, {
-                                        className: h.errorText,
-                                        color: "text-danger",
-                                        variant: "text-sm/semibold",
-                                        children: C,
-                                    }),
-                            ],
-                        }),
-                        (0, r.jsxs)(s.mzw, {
-                            className: h.footer,
-                            children: [
-                                (0, r.jsx)("div", {
-                                    "data-button-hoisted-classname-wrapper": !0,
-                                    className: h.button,
-                                    children: (0, r.jsx)(s.zxk, {
-                                        variant: "critical-primary",
-                                        text: v.intl.string(k.default.PYPdl5),
-                                        loading: T,
-                                        onClick: y,
-                                    }),
-                                }),
-                                (0, r.jsx)("div", {
-                                    "data-button-hoisted-classname-wrapper": !0,
-                                    className: h.button,
-                                    children: (0, r.jsx)(s.zxk, {
-                                        variant: "secondary",
-                                        text: v.intl.string(v.t["ETE/oK"]),
-                                        onClick: I.onClose,
-                                    }),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            t),
+                N,
+            ),
         )
     );
 }

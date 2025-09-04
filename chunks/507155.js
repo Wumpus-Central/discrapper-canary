@@ -76,7 +76,7 @@ function x(e) {
                             ],
                         }),
                         _ &&
-                            (0, n.jsx)(p.Z, {
+                            (0, n.jsx)(p.ZP, {
                                 compact: !0,
                                 iconSize: "md",
                                 guildId: r,

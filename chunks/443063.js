@@ -15,6 +15,7 @@ var r = (function (e) {
         (e.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR = "guild-new-member-actions-progress-bar"),
         (e.GUILD_MOD_DASH_MEMBER_SAFETY = "guild-mod-dash-member-safety"),
         (e.GUILD_BOOSTS = "guild-boosts"),
+        (e.PORTKEY = "portkey"),
         e
     );
 })({});

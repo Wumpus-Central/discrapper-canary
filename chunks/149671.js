@@ -1,0 +1,15 @@
+e.exports = {
+    title: "title__8303d",
+    contentContainer: "contentContainer__8303d",
+    settingsContainer: "settingsContainer__8303d",
+    sectionContainer: "sectionContainer__8303d",
+    sectionHeader: "sectionHeader__8303d",
+    sectionHeaderIcon: "sectionHeaderIcon__8303d",
+    footerContainer: "footerContainer__8303d",
+    gameDetailsContainer: "gameDetailsContainer__8303d",
+    planOptionContainer: "planOptionContainer__8303d",
+    planCostContainer: "planCostContainer__8303d",
+    planOption: "planOption__8303d",
+    planValue: "planValue__8303d",
+    planOptionSpacer: "planOptionSpacer__8303d",
+};

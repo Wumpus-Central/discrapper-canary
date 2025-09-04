@@ -106,22 +106,10 @@ let u = "1340102344645283891",
             boostPrice: 5,
             includedInLevel: s.Eu4.TIER_3,
         },
-        [s.oNc.GUILD_TAGS]: {
-            boostPrice: 3,
-            includedInLevel: void 0,
-        },
-        [s.oNc.ENHANCED_ROLE_COLORS]: {
-            boostPrice: 3,
-            includedInLevel: void 0,
-        },
-        [s.oNc.GUILD_TAGS_BADGE_PACK_PETS]: {
-            boostPrice: 3,
-            includedInLevel: void 0,
-        },
-        [s.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: {
-            boostPrice: 5,
-            includedInLevel: void 0,
-        },
+        [s.oNc.GUILD_TAGS]: { boostPrice: 3 },
+        [s.oNc.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
+        [s.oNc.GUILD_TAGS_BADGE_PACK_PETS]: { boostPrice: 3 },
+        [s.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: { boostPrice: 5 },
     },
     O = { [r.A$]: s.Eu4.TIER_3 };
 var v = (function (e) {

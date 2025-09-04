@@ -1,5 +1,5 @@
 n.d(t, {
-    S: () => s,
+    S: () => a,
     z: () => i,
 }),
     n(388685),
@@ -14,47 +14,50 @@ let i = {
         for (let t of r) e[t] = n;
         return e;
     }, {});
-function s(e) {
-    let t = [],
-        n = e.reduce((e, t) => {
+function a(e, t, n) {
+    let i = [],
+        a = t.reduce((e, t) => {
             if (t.type !== o.Us.PERK) return e;
             let n = l[t.skuId];
             return null == n || (null != e[n] || (e[n] = []), e[n].push(t)), e;
         }, {});
-    for (let r of e) {
-        if (r.type === o.Us.LEVEL) {
-            t.push({
+    for (let e of t) {
+        if (e.type === o.Us.LEVEL) {
+            i.push({
                 type: "singleLevel",
-                powerup: r,
+                powerup: e,
             });
             continue;
         }
-        let e = l[r.skuId];
-        if (null != e) {
-            let r = n[e];
-            void 0 !== r &&
-                (t.push({
+        let t = l[e.skuId];
+        if (null != t) {
+            let e = a[t];
+            void 0 !== e &&
+                (i.push({
                     type: "multiPerk",
-                    group: e,
-                    powerups: r,
+                    group: t,
+                    powerups: e,
                 }),
-                (n[e] = void 0));
+                (a[t] = void 0));
             continue;
         }
-        t.push({
+        i.push({
             type: "singlePerk",
-            powerup: r,
+            powerup: e,
         });
     }
-    return (function (e) {
-        let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN),
-            n = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);
-        if (-1 !== t && -1 !== n && n !== t + 1) {
-            let t = [...e],
-                [o] = t.splice(n, 1),
-                i = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
-            return t.splice(i + 1, 0, o), t;
-        }
-        return e;
-    })(t);
+    return (
+        n && e === o.Us.PERK && i.push({ type: "portkey" }),
+        (function (e) {
+            let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN),
+                n = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);
+            if (-1 !== t && -1 !== n && n !== t + 1) {
+                let t = [...e],
+                    [o] = t.splice(n, 1),
+                    i = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
+                return t.splice(i + 1, 0, o), t;
+            }
+            return e;
+        })(i)
+    );
 }

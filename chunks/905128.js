@@ -1,11 +1,12 @@
-n.d(t, { Z: () => C }), n(388685), n(467055);
+n.d(t, { Z: () => R }), n(388685), n(467055);
 var r,
     i = n(442837),
     a = n(570140),
     o = n(430824),
-    s = n(535396),
-    l = n(981631);
-function c(e, t, n) {
+    s = n(693587),
+    l = n(535396),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +19,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +30,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,60 +47,67 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = 86400000,
-    p = 3600000,
-    h = {};
-function m() {
+let p = 86400000,
+    h = 3600000,
+    m = {};
+function g() {
     return {
         allPowerups: {},
         powerupCatalog: {},
         unlockedPowerups: {},
     };
 }
-function g(e) {
+function E(e) {
     let {
         guild: { id: t },
     } = e;
-    h[t] = f(u({}, b(t)), { appliedBoosts: E(t) });
+    m[t] = _(d({}, O(t)), { appliedBoosts: y(t) });
 }
-function E(e) {
+function b(e) {
+    let { guildId: t } = e;
+    m[t] = _(d({}, O(t)), { appliedBoosts: y(t) });
+}
+function y(e) {
     var t, n;
     let r = o.Z.getGuild(e),
         i =
-            (null == r ? void 0 : r.features.has(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0
+            (null == r ? void 0 : r.features.has(c.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0
                 ? 0
-                : l.oCV[null != (t = null == r ? void 0 : r.premiumTier) ? t : l.Eu4.NONE];
-    for (let [e, t] of Object.entries(s.Hk)) {
+                : c.oCV[null != (t = null == r ? void 0 : r.premiumTier) ? t : c.Eu4.NONE];
+    for (let [e, t] of Object.entries(l.Hk)) {
         let a = e;
         (null == r || null == (n = r.premiumFeatures) ? void 0 : n.features.includes(a)) &&
             (null == t.includedInLevel || r.premiumTier < t.includedInLevel) &&
             (i += t.boostPrice);
     }
+    let a = s.Z.getStateForGuild(e);
+    if ((null == a ? void 0 : a.instances) != null && Object.keys(a.instances).length > 0)
+        for (let e of Object.values(a.instances)) i += e.plan.cost;
     return i;
 }
-function b(e) {
-    if (null == h[e]) {
-        let t = E(e);
-        h[e] = f(u({}, m()), { appliedBoosts: t });
+function O(e) {
+    if (null == m[e]) {
+        let t = y(e);
+        m[e] = _(d({}, g()), { appliedBoosts: t });
     }
-    return h[e];
+    return m[e];
 }
-function y(e) {
+function v(e) {
     let { guildId: t, allPowerups: n, powerupCatalog: r } = e,
-        i = b(t);
-    h = f(u({}, h), {
-        [t]: f(u({}, i), {
+        i = O(t);
+    m = _(d({}, m), {
+        [t]: _(d({}, i), {
             allPowerups: n,
             powerupCatalog: r,
             catalogFetchCooldown: Date.now(),
@@ -107,12 +115,12 @@ function y(e) {
         }),
     });
 }
-function O(e) {
+function I(e) {
     let { guildId: t, unlockedPowerups: n } = e,
-        r = b(t),
-        i = E(t);
-    h = f(u({}, h), {
-        [t]: f(u({}, r), {
+        r = O(t),
+        i = y(t);
+    m = _(d({}, m), {
+        [t]: _(d({}, r), {
             unlockedPowerups: n,
             appliedBoosts: i,
             unlockedPowerupsFetchCooldown: Date.now(),
@@ -120,55 +128,55 @@ function O(e) {
         }),
     });
 }
-function v(e, t) {
+function T(e, t) {
     let { guildId: n, entitlements: r } = e,
-        i = b(n);
+        i = O(n);
     r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
     }),
-        (h = f(u({}, h), { [n]: f(u({}, i), { appliedBoosts: E(n) }) }));
+        (m = _(d({}, m), { [n]: _(d({}, i), { appliedBoosts: y(n) }) }));
 }
-function I(e) {
-    v(e, !0);
+function S(e) {
+    T(e, !0);
 }
-function T(e) {
-    v(e, !1);
+function A(e) {
+    T(e, !1);
 }
-function S() {
-    h = {};
+function C() {
+    m = {};
 }
-class A extends (r = i.ZP.PersistedStore) {
+class N extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e);
+        null != e && (m = e);
     }
     getState() {
-        return h;
+        return m;
     }
     getStateForGuild(e) {
-        return null != e ? h[e] : void 0;
+        return null != e ? m[e] : void 0;
     }
     shouldFetchCatalogForGuild(e) {
         var t;
-        let n = null == (t = h[e]) ? void 0 : t.catalogFetchCooldown;
-        return null == n || n + _ < Date.now();
+        let n = null == (t = m[e]) ? void 0 : t.catalogFetchCooldown;
+        return null == n || n + p < Date.now();
     }
     shouldFetchPowerupsForGuild(e) {
         var t;
-        let n = null == (t = h[e]) ? void 0 : t.unlockedPowerupsFetchCooldown;
-        return null == n || n + p < Date.now();
+        let n = null == (t = m[e]) ? void 0 : t.unlockedPowerupsFetchCooldown;
+        return null == n || n + h < Date.now();
     }
     hasFetchedPowerupCatalog(e) {
         var t;
-        return null != e && (null == (t = h[e]) ? void 0 : t.hasFetchedPowerupCatalog) === !0;
+        return null != e && (null == (t = m[e]) ? void 0 : t.hasFetchedPowerupCatalog) === !0;
     }
     hasFetchedUnlockedPowerups(e) {
         var t;
-        return null != e && (null == (t = h[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
+        return null != e && (null == (t = m[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
     }
 }
-c(A, "displayName", "GuildPowerupsStore"),
-    c(A, "persistKey", "GuildPowerupsStore"),
-    c(A, "migrations", [
+u(N, "displayName", "GuildPowerupsStore"),
+    u(N, "persistKey", "GuildPowerupsStore"),
+    u(N, "migrations", [
         (e) =>
             null == e
                 ? e
@@ -184,7 +192,7 @@ c(A, "displayName", "GuildPowerupsStore"),
                                   o = a;
                               return [
                                   i,
-                                  f(u({}, o), {
+                                  _(d({}, o), {
                                       allPowerups: null != (t = o.allPowerups) ? t : {},
                                       powerupCatalog: null != (n = o.powerupCatalog) ? n : {},
                                       unlockedPowerups: null != (r = o.unlockedPowerups) ? r : {},
@@ -193,11 +201,12 @@ c(A, "displayName", "GuildPowerupsStore"),
                           }),
                   ),
     ]);
-let C = new A(a.Z, {
-    LOGOUT: S,
-    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: y,
-    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: O,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: I,
-    GUILD_POWERUP_ENTITLEMENTS_DELETE: T,
-    GUILD_UPDATE: g,
+let R = new N(a.Z, {
+    LOGOUT: C,
+    GUILD_POWERUP_CATALOG_FETCH_SUCCESS: v,
+    GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS: I,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: S,
+    GUILD_POWERUP_ENTITLEMENTS_DELETE: A,
+    GUILD_UPDATE: E,
+    PORTKEY_FETCH_INSTANCES_SUCCESS: b,
 });

@@ -23,6 +23,7 @@ var r = (function (e) {
         (e.CUSTOMIZE_COMMUNITY = "customize-community"),
         (e.MEMBER_SAFETY = "member-safety"),
         (e.GUILD_BOOSTS = "boosts"),
+        (e.PORTKEY = "portkey"),
         (e.REPORT_TO_MOD = "report-to-mod"),
         e
     );

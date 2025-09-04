@@ -1,164 +1,136 @@
-n.d(t, { default: () => j }), n(388685), n(953529);
-var r = n(951288),
-    o = n(647438),
-    a = n(238651),
-    c = n(442837),
-    i = n(481060),
-    s = n(607070),
-    l = n(530618),
-    u = n(372654),
-    p = n(262212),
-    f = n(795338),
-    d = n(535396),
-    b = n(989308),
-    m = n(388032),
-    _ = n(477487);
-function j(e) {
+r.d(t, { default: () => f }), r(953529), r(388685);
+var n = r(951288),
+    o = r(647438),
+    c = r(238651),
+    s = r(442837),
+    a = r(481060),
+    i = r(607070),
+    l = r(530618),
+    u = r(372654),
+    p = r(477487);
+function f(e) {
     var t,
-        n,
-        { guildId: j, powerup: y } = e,
-        O = (function (e, t) {
+        r,
+        { title: f, description: b, image: O, button: d } = e,
+        j = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 o = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         o = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        c = Object.keys(e);
+                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var c = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < c.length; n++)
+                    (r = c[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ["guildId", "powerup"]);
-    let g = (0, c.e7)([s.Z], () => s.Z.useReducedMotion),
-        C = o.useRef(null),
-        x = o.useRef(new a.qA()),
-        [v, h] = o.useState(null),
-        w = d.uc.has(y.skuId);
-    return (0, r.jsxs)(r.Fragment, {
+        })(e, ["title", "description", "image", "button"]);
+    let y = (0, s.e7)([i.Z], () => i.Z.useReducedMotion),
+        m = o.useRef(null),
+        g = o.useRef(new c.qA()),
+        [h, v] = o.useState(null);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)(a.O_, {
-                ref: h,
-                className: _.confettiCanvas,
-                environment: x.current,
+            (0, n.jsx)(c.O_, {
+                ref: v,
+                className: p.confettiCanvas,
+                environment: g.current,
             }),
-            (0, r.jsxs)(
-                i.Y0X,
+            (0, n.jsxs)(
+                a.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = n);
                             });
                     }
                     return e;
                 })(
                     {
-                        className: _.modal,
-                        size: i.CgR.DYNAMIC,
+                        className: p.modal,
+                        size: a.CgR.DYNAMIC,
                     },
-                    O,
+                    j,
                 )),
-                (n = n =
+                (r = r =
                     {
                         parentComponent: "GuildPowerupActivateModal",
                         children: [
-                            (0, r.jsx)(i.hzk, {
-                                className: _.modalContentContainer,
+                            (0, n.jsx)(a.hzk, {
+                                className: p.modalContentContainer,
                                 scrollbarType: "none",
-                                children: (0, r.jsxs)("div", {
-                                    className: _.container,
-                                    ref: C,
+                                children: (0, n.jsxs)("div", {
+                                    className: p.container,
+                                    ref: m,
                                     children: [
-                                        (0, r.jsx)(f.m, {
-                                            className: _.image,
-                                            powerup: y,
-                                        }),
-                                        (0, r.jsxs)("div", {
-                                            className: _.contentContainer,
+                                        O,
+                                        (0, n.jsxs)("div", {
+                                            className: p.contentContainer,
                                             children: [
-                                                (0, r.jsx)(i.X6q, {
+                                                (0, n.jsx)(a.X6q, {
                                                     variant: "heading-xl/extrabold",
-                                                    children: m.intl.formatToPlainString(b.default.lFuOFB, {
-                                                        perkName: y.title,
-                                                    }),
+                                                    children: f,
                                                 }),
-                                                (0, r.jsx)(i.Text, {
+                                                (0, n.jsx)(a.Text, {
                                                     tag: "span",
-                                                    className: _.description,
+                                                    className: p.description,
                                                     variant: "text-sm/normal",
-                                                    children: m.intl.formatToPlainString(b.default.y3wHoq, {
-                                                        perkName: y.title,
-                                                    }),
+                                                    children: b,
                                                 }),
-                                                w
-                                                    ? (0, r.jsx)(p.ms, {
-                                                          className: _.button,
-                                                          guildId: j,
-                                                          powerup: y,
-                                                          onClick: O.onClose,
-                                                      })
-                                                    : (0, r.jsx)("div", {
-                                                          "data-button-hoisted-classname-wrapper": !0,
-                                                          className: _.button,
-                                                          children: (0, r.jsx)(i.zxk, {
-                                                              variant: "primary",
-                                                              text: m.intl.string(m.t.cpT0Cg),
-                                                              onClick: O.onClose,
-                                                          }),
-                                                      }),
+                                                d,
                                             ],
                                         }),
                                     ],
                                 }),
                             }),
-                            (0, r.jsx)(i.olH, {
-                                className: _.close,
-                                onClick: O.onClose,
+                            (0, n.jsx)(a.olH, {
+                                className: p.close,
+                                onClick: j.onClose,
                             }),
-                            !g &&
-                                (0, r.jsx)(l.Z, {
-                                    confettiTarget: C.current,
-                                    confettiCanvas: v,
+                            !y &&
+                                (0, n.jsx)(l.Z, {
+                                    confettiTarget: m.current,
+                                    confettiCanvas: h,
                                     sprites: (0, u.vK)(),
                                 }),
                         ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                     : (function (e, t) {
-                          var n = Object.keys(e);
+                          var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var n = Object.getOwnPropertySymbols(e);
+                              r.push.apply(r, n);
                           }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          return r;
+                      })(Object(r)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
                 t),
             ),

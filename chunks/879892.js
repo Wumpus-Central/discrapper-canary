@@ -93,20 +93,21 @@ async function v(e) {
             analyticsSourceLocation: g,
             numberOfBoostsToAdd: y,
             onClose: v,
-            closeLayer: I,
-            onSubscriptionConfirmation: T,
-            onSubscribeComplete: S,
-            guild: A,
-            handleSubscribeModalClose: C,
-            disablePremiumUpsell: N,
-            inPopout: R,
-            applicationId: P,
-            intent: w,
+            onLoading: I,
+            closeLayer: T,
+            onSubscriptionConfirmation: S,
+            onSubscribeComplete: A,
+            guild: C,
+            handleSubscribeModalClose: N,
+            disablePremiumUpsell: R,
+            inPopout: P,
+            applicationId: w,
+            intent: D,
         } = e,
-        D = R ? i.u1M : i.z1l,
-        x = l.default.getCurrentUser();
-    if (null == x) return;
-    if (!x.verified)
+        x = P ? i.u1M : i.z1l,
+        L = l.default.getCurrentUser();
+    if (null == L) return;
+    if (!L.verified)
         return void (0, i.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
@@ -116,20 +117,20 @@ async function v(e) {
                     return (0, r.jsx)(e, E(m({}, i), { onClose: n }));
                 };
             },
-            { contextKey: D },
+            { contextKey: x },
         );
-    let L = [];
-    u.Z.isLoadedForPremiumSKUs() || L.push((0, s.Y2)()),
-        c.Z.hasFetched || (L.push(a.jg()), L.push((0, o.X8)())),
-        L.length > 0 && (await Promise.allSettled(L));
-    let j = (0, f.vx)(c.Z.boostSlots),
-        M = j.length,
-        k = (e) => {
-            null == v || v(), null == C || C(e);
+    let j = [];
+    u.Z.isLoadedForPremiumSKUs() || j.push((0, s.Y2)()),
+        c.Z.hasFetched || (j.push(a.jg()), j.push((0, o.X8)())),
+        j.length > 0 && (null == I || I(!0), await Promise.allSettled(j), null == I || I(!1));
+    let k = (0, f.vx)(c.Z.boostSlots),
+        M = k.length,
+        U = (e) => {
+            null == v || v(), null == N || N(e);
         },
-        U = () => {
+        G = () => {
             null == v || v(),
-                null == I || I(),
+                null == T || T(),
                 d.default.track(p.rMx.MODAL_DISMISSED, {
                     type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_section: h.section,
@@ -137,7 +138,7 @@ async function v(e) {
         };
     if (M > 0 && (null == y || M >= y)) {
         let e;
-        1 === M ? (e = j.slice(0, 1)) : null != y && (e = j.slice(0, y)),
+        1 === M ? (e = k.slice(0, 1)) : null != y && (e = k.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.resolve().then(n.bind(n, 760558));
@@ -148,9 +149,9 @@ async function v(e) {
                             t,
                             E(m({}, a), {
                                 onClose: (e) => {
-                                    i(), k(e);
+                                    i(), U(e);
                                 },
-                                selectedGuild: A,
+                                selectedGuild: C,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                                 guildBoostSlots: e,
                             }),
@@ -160,9 +161,9 @@ async function v(e) {
                 {
                     modalKey: O,
                     onCloseRequest: () => {
-                        (0, i.Mr3)(O), k(!1);
+                        (0, i.Mr3)(O), U(!1);
                     },
-                    contextKey: D,
+                    contextKey: x,
                 },
             );
     } else
@@ -170,15 +171,15 @@ async function v(e) {
             analyticsLocations: t,
             analyticsLocation: h,
             analyticsSourceLocation: g,
-            guildId: A.id,
-            closeLayer: U,
+            guildId: C.id,
+            closeLayer: G,
             totalNumberOfSlotsToAssign: null != y ? y : 1,
-            onCloseModal: k,
-            disablePremiumUpsell: N,
-            onSubscriptionConfirmation: T,
-            onSubscribeComplete: S,
-            inPopout: R,
-            applicationId: P,
-            intent: w,
+            onCloseModal: U,
+            disablePremiumUpsell: R,
+            onSubscriptionConfirmation: S,
+            onSubscribeComplete: A,
+            inPopout: P,
+            applicationId: w,
+            intent: D,
         });
 }

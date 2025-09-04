@@ -1,0 +1,15 @@
+e.exports = {
+    card: "card_acb40e",
+    serverHeader: "serverHeader_acb40e",
+    gameImage: "gameImage_acb40e",
+    serverInfo: "serverInfo_acb40e",
+    serverDetails: "serverDetails_acb40e",
+    detailsGrid: "detailsGrid_acb40e",
+    detailItem: "detailItem_acb40e",
+    serverIpContainer: "serverIpContainer_acb40e",
+    copyButton: "copyButton_acb40e",
+    statusContainer: "statusContainer_acb40e",
+    statusIndicator: "statusIndicator_acb40e",
+    serverActions: "serverActions_acb40e",
+    overflowMenu: "overflowMenu_acb40e",
+};
