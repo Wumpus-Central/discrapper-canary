@@ -75864,6 +75864,29 @@ html .progress__61462 {
     }
 }
 
+.container__8ab7a {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-radius: var(--radius-lg);
+    display: flex;
+    padding: var(--space-12) var(--space-24);
+    width: 608px
+}
+
+.image__8ab7a {
+    height: 96px;
+    width: 96px
+}
+
+.body__8ab7a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: var(--space-24);
+    margin-right: var(--space-32);
+    text-align: left
+}
+
 .attributionBannerContainer_afe9b4 {
     align-items: center;
     display: flex;
@@ -89811,7 +89834,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
