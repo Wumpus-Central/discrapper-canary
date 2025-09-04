@@ -98,13 +98,15 @@ function N(e) {
             : "NONE";
 }
 function R(e, t, n) {
-    let r = E.r.build(e.config);
+    var r, i;
+    let a = E.r.build(e.config);
     return v(
         {
             quest_id: e.id,
-            quest_type: r.questType,
-            game_id: r.application.id,
-            game_name: r.application.name,
+            quest_type: a.questType,
+            game_id: a.application.id,
+            game_name: a.application.name,
+            application_ids: null != (i = null == (r = a.applications) ? void 0 : r.map((e) => e.id)) ? i : [],
             client_ad_session_id: (0, o.Gy)(n).uuid,
         },
         (0, p.qe)(e.id, t),

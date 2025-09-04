@@ -346,27 +346,45 @@ class Y extends i.PureComponent {
         );
     }
     renderKeybinds(e) {
-        return e.map((e) =>
-            (0, r.jsx)(
-                "div",
+        return e.map((t, n) =>
+            (0, r.jsxs)(
+                i.Fragment,
                 {
-                    className: j.row,
-                    children: (0, r.jsx)(
-                        H,
-                        {
-                            keybind: e,
-                            keybindDescriptions: this.keybindDescriptions,
-                            keybindActionTypes: this.keybindActionTypes,
-                        },
-                        e.id,
-                    ),
+                    children: [
+                        (0, r.jsx)(
+                            H,
+                            {
+                                keybind: t,
+                                keybindDescriptions: this.keybindDescriptions,
+                                keybindActionTypes: this.keybindActionTypes,
+                            },
+                            t.id,
+                        ),
+                        n !== e.length - 1 ? (0, r.jsx)(f.$i$, {}) : null,
+                    ],
                 },
-                e.id,
+                t.id,
             ),
         );
     }
     renderEmpty(e) {
         if (0 === e.length) return null;
+    }
+    renderKeybindWarning() {
+        return (0, r.jsxs)("div", {
+            className: j.warning,
+            children: [
+                (0, r.jsx)(f.d3s, {
+                    size: "xs",
+                    color: u.Z.colors.ICON_SECONDARY,
+                }),
+                (0, r.jsx)(f.Text, {
+                    variant: "text-sm/medium",
+                    color: "text-secondary",
+                    children: L.intl.string(L.t.NoKjWF),
+                }),
+            ],
+        });
     }
     render() {
         let e = this.props.enableClips,
@@ -392,24 +410,17 @@ class Y extends i.PureComponent {
                     children: R.isPlatformEmbedded
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsxs)(y.Z, {
-                                      justify: y.Z.Justify.BETWEEN,
-                                      className: k.marginBottom20,
+                                  (0, r.jsxs)("div", {
+                                      className: j.ctaContainer,
                                       children: [
-                                          (0, r.jsx)(y.Z.Child, {
-                                              grow: 0,
-                                              children: (0, r.jsx)(f.Wn, {
-                                                  messageType: f.QYI.WARNING,
-                                                  children: L.intl.string(L.t.NoKjWF),
-                                              }),
-                                          }),
-                                          (0, r.jsx)(y.Z.Child, {
-                                              wrap: !0,
-                                              grow: 0,
-                                              children: (0, r.jsx)(d.zx, {
-                                                  size: d.Ph.LARGE,
+                                          this.renderKeybindWarning(),
+                                          (0, r.jsx)("div", {
+                                              className: j.addButton,
+                                              children: (0, r.jsx)(f.zxk, {
+                                                  size: "md",
                                                   onClick: this.handleAddKeybind,
-                                                  children: L.intl.string(L.t.zk6Xbm),
+                                                  text: L.intl.string(L.t.zk6Xbm),
+                                                  variant: "primary",
                                               }),
                                           }),
                                       ],
@@ -419,9 +430,8 @@ class Y extends i.PureComponent {
                                       sourcePage: "keybinds",
                                   }),
                                   (0, r.jsx)(f.$i$, {}),
-                                  (0, r.jsxs)(f.hjN, {
-                                      children: [this.renderKeybinds(t), this.renderEmpty(t)],
-                                  }),
+                                  this.renderKeybinds(t),
+                                  this.renderEmpty(t),
                               ],
                           })
                         : (0, r.jsx)(f.Wn, {
@@ -445,10 +455,7 @@ class Y extends i.PureComponent {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: j.defaultKeybindShortcutGroup,
-                                    children: (0, r.jsx)(f.M2$, {
-                                        shortcut: m._.binds["0"],
-                                        className: j.__invalid_defaultKeybindShortcut,
-                                    }),
+                                    children: (0, r.jsx)(f.M2$, { shortcut: m._.binds["0"] }),
                                 }),
                             ],
                         }),
