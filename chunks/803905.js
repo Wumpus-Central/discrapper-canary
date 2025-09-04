@@ -1,8 +1,7 @@
 n.d(t, {
     $0: () => R,
-    AN: () => M,
+    AN: () => k,
     Ct: () => A,
-    DU: () => Z,
     EQ: () => B,
     Ej: () => T,
     ME: () => m,
@@ -14,12 +13,12 @@ n.d(t, {
     _G: () => O,
     _O: () => S,
     _y: () => g,
-    do: () => k,
+    do: () => M,
     g7: () => P,
     g_: () => p,
     hs: () => b,
     j4: () => N,
-    ks: () => H,
+    ks: () => V,
     lX: () => y,
     m_: () => h,
     tj: () => E,
@@ -48,7 +47,7 @@ function f(e, t) {
         let n = d[t.premiumType];
         if (null == n)
             return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = F[n];
+        let r = Z[n];
         if (null == r)
             return (
                 u.warn(
@@ -94,15 +93,14 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     x = new _("fancyVoiceChannelReactions"),
     L = new _("installPremiumApplications"),
     j = new _("redeemPremiumPerks"),
-    M = new _(r.q.VIDEO_FILTER_ASSETS);
+    k = new _(r.q.VIDEO_FILTER_ASSETS);
 new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
-let k = new _(r.q.INCREASED_GUILD_LIMIT),
+let M = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
     G = new _("increasedVideoUploadQuality"),
     B = new _("uploadLargeFiles"),
-    Z = new _(r.q.CHAT_WALLPAPERS),
-    F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, M, G, B, A]),
+    Z = Object.freeze({
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, N, P, x, G, B, A]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
             p,
@@ -123,8 +121,8 @@ let k = new _(r.q.INCREASED_GUILD_LIMIT),
             x,
             L,
             j,
-            M,
             k,
+            M,
             U,
             G,
             B,
@@ -132,10 +130,9 @@ let k = new _(r.q.INCREASED_GUILD_LIMIT),
             S,
             D,
             b,
-            Z,
         ]),
     }),
-    V = [N, R];
-function H(e, t, n) {
-    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && V.includes(e))) && e.getFeatureValue(t);
+    F = [N, R];
+function V(e, t, n) {
+    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && F.includes(e))) && e.getFeatureValue(t);
 }

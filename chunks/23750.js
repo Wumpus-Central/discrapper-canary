@@ -342,7 +342,6 @@ class m extends p {
             u(this, "messageSnapshots", void 0),
             u(this, "isUnsupported", void 0),
             u(this, "changelogId", void 0),
-            u(this, "chatWallpaperInfo", void 0),
             u(this, "colorString", void 0),
             u(this, "nick", void 0),
             (this.id = e.id),
@@ -389,8 +388,7 @@ class m extends p {
             (this.giftingPrompt = e.giftingPrompt || null),
             (this.messageSnapshots = e.messageSnapshots || []),
             (this.isUnsupported = e.isUnsupported || !1),
-            (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null),
-            (this.chatWallpaperInfo = e.chatWallpaperInfo || null);
+            (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null);
     }
 }
 function g(e) {

@@ -32,18 +32,18 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => rn,
-    DJj: () => ek,
+    DJj: () => eM,
     DZw: () => ex,
     E07: () => tC,
     EKQ: () => E.EK,
     EOG: () => n2,
     ETv: () => E.ET,
     EYA: () => tA,
-    EkH: () => S,
+    EkH: () => T,
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
-    FQ1: () => rk,
+    FQ1: () => rM,
     Fc: () => ta,
     FoC: () => J,
     FsG: () => b.Fs,
@@ -74,7 +74,7 @@ n.d(t, {
     Jn9: () => rX,
     JuI: () => eX,
     JwP: () => nh,
-    K3D: () => rM,
+    K3D: () => rk,
     KA4: () => tw,
     KFR: () => nL,
     KJ3: () => rD,
@@ -114,7 +114,7 @@ n.d(t, {
     PUi: () => nG,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => M,
+    PrB: () => k,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -133,16 +133,16 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t3,
     RcX: () => tm,
-    Rg9: () => nM,
+    Rg9: () => nk,
     S7T: () => E.S7,
     S9g: () => nR,
     SOq: () => n6,
-    SRg: () => nT,
+    SRg: () => nS,
     STv: () => ey,
     SaU: () => tV,
     Sap: () => na,
-    Sbl: () => tM,
-    Sc2: () => eT,
+    Sbl: () => tk,
+    Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => rJ,
     TC2: () => E.TC,
@@ -180,7 +180,7 @@ n.d(t, {
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => eM,
+    Z8P: () => ek,
     Z9p: () => ng,
     ZUi: () => W,
     ZY5: () => tU,
@@ -191,7 +191,7 @@ n.d(t, {
     _s_: () => C,
     _vf: () => eo,
     a5g: () => tX,
-    aIL: () => eS,
+    aIL: () => eT,
     aIt: () => rd,
     aO5: () => E.aO,
     aZC: () => t0,
@@ -202,7 +202,7 @@ n.d(t, {
     b4C: () => rV,
     b8q: () => tG,
     bL: () => eD,
-    c2C: () => nk,
+    c2C: () => nM,
     d4z: () => o.d,
     dAT: () => tq,
     dCx: () => nr,
@@ -254,7 +254,7 @@ n.d(t, {
     kGb: () => r_,
     kNB: () => ru,
     kVF: () => U,
-    kg4: () => T,
+    kg4: () => S,
     kod: () => eI,
     l$U: () => ez,
     l4R: () => u.l,
@@ -277,12 +277,12 @@ n.d(t, {
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
-    pM4: () => k,
+    pM4: () => M,
     pNK: () => N,
     pTL: () => rq,
     pjP: () => n8,
     pmI: () => t9,
-    q5t: () => tk,
+    q5t: () => tM,
     q9n: () => nY,
     qAy: () => tZ,
     qWG: () => rH,
@@ -296,10 +296,10 @@ n.d(t, {
     rsA: () => nP,
     rtL: () => ni,
     rxP: () => E.rx,
-    s9s: () => rT,
+    s9s: () => rS,
     sFg: () => eu,
     sHY: () => rs,
-    scU: () => tS,
+    scU: () => tT,
     si2: () => rj,
     t4x: () => tK,
     tG9: () => eV,
@@ -314,7 +314,7 @@ n.d(t, {
     uaV: () => c.u,
     udG: () => nI,
     vB8: () => nw,
-    vID: () => nS,
+    vID: () => nT,
     vTt: () => ns,
     vbS: () => t8,
     vpv: () => tR,
@@ -342,10 +342,10 @@ n.d(t, {
     ylB: () => rF,
     yqN: () => nE,
     ys_: () => e5,
-    z7k: () => tT,
+    z7k: () => tS,
     zMe: () => E.zM,
     zUn: () => nj,
-    zYc: () => rS,
+    zYc: () => rT,
     zo9: () => r0,
 }),
     n(388685),
@@ -417,7 +417,7 @@ var v = (function (e) {
     I = (function (e) {
         return (e.OPEN = "OPEN"), (e.SUBMITTING = "SUBMITTING"), (e.CLOSED = "CLOSED"), e;
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (
             (e.SERVER_NEXT = "SERVER_NEXT"),
             (e.SERVER_PREV = "SERVER_PREV"),
@@ -484,7 +484,7 @@ var v = (function (e) {
             e
         );
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (
             (e.UNASSIGNED = "UNASSIGNED"),
             (e.PUSH_TO_TALK = "PUSH_TO_TALK"),
@@ -669,10 +669,10 @@ var v = (function (e) {
     j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -1102,8 +1102,8 @@ let eE = "@me",
     eO = "@guilds-empty-nux",
     ev = "",
     eI = "null",
-    eS = "0",
-    eT = "null",
+    eT = "0",
+    eS = "null",
     eA = "1096190356233670716",
     eC = Object.freeze({
         USER: (e) => "/users/".concat(e),
@@ -1721,7 +1721,6 @@ let eE = "@me",
         CLAIM_OUTBOUND_PROMOTION_CODE: (e) => "/outbound-promotions/".concat(e, "/claim"),
         HUB_EMAIL_VERIFY_SEND: "/guilds/automations/email-domain-lookup",
         GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD: (e) => "/guilds/".concat(e, "/products/attachments"),
-        CHAT_WALLPAPERS: "/chat-wallpapers",
         GUILD_ROLE_SUBSCRIPTIONS_SETTINGS: (e) => "/guilds/".concat(e, "/role-subscriptions/settings"),
         GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS: (e, t) =>
             "/guilds/".concat(e, "/role-subscriptions/group-listings").concat(null != t ? "/".concat(t) : ""),
@@ -2132,8 +2131,8 @@ var ew = (function (e) {
 let ex = 100,
     eL = 200,
     ej = 50,
-    eM = 50,
-    ek = 25,
+    ek = 50,
+    eM = 25,
     eU = 200,
     eG = 100,
     eB = 250,
@@ -2231,8 +2230,8 @@ let tn = 128,
     tO = 480,
     tv = 650,
     tI = "DEVICE_TOKEN",
-    tS = "DEVICE_VOIP_TOKEN",
-    tT = "first_run_date_key",
+    tT = "DEVICE_VOIP_TOKEN",
+    tS = "first_run_date_key",
     tA = Object.freeze({
         API_DOCS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/intro"),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: "".concat(
@@ -2520,7 +2519,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2603,7 +2602,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -5286,7 +5285,7 @@ var nb = (function (e) {
             e
         );
     })({}),
-    nS = (function (e) {
+    nT = (function (e) {
         return (
             (e.MFA_WARNING = "MFA_WARNING"),
             (e.INVITE = "INVITE"),
@@ -5314,7 +5313,7 @@ var nb = (function (e) {
             e
         );
     })({});
-let nT = Object.freeze({
+let nS = Object.freeze({
         STORAGE_MANIFEST: (e, t) => "".concat(e, "/storage/").concat(t, "/MANIFEST"),
         INSTALL_DIR: (e) => "".concat(e, "/content"),
         ROOT_PATTERN: ["**/*"],
@@ -5617,8 +5616,8 @@ var nw = (function (e) {
             e
         );
     })({});
-let nM = 50;
-var nk = (function (e) {
+let nk = 50;
+var nM = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5902,7 +5901,6 @@ var nK = (function (e) {
             (e.TIGGER_PAWTECT_LEARN_MORE = "30326565624343"),
             (e.PERMADECOS = "29790581779735"),
             (e.VIRTUAL_CURRENCY_LEARN_MORE = "30593690165783"),
-            (e.DM_WALLPAPERS = "30608198149015-DM-Wallpapers"),
             (e.AV_ERROR_CODES = "30952914470807"),
             (e.SERVER_TAGS = "31444248479639"),
             (e.NSFW_SERVER_AGE_RESTRICTION = "1500005292701"),
@@ -6508,7 +6506,7 @@ var rI = (function (e) {
             e
         );
     })({}),
-    rS = (function (e) {
+    rT = (function (e) {
         return (
             (e.EMPTY_MESSAGE = "EMPTY_MESSAGE"),
             (e.MESSAGE_TOO_LONG = "MESSAGE_TOO_LONG"),
@@ -6518,7 +6516,7 @@ var rI = (function (e) {
             e
         );
     })({}),
-    rT = (function (e) {
+    rS = (function (e) {
         return (e[(e.IMG = 1)] = "IMG"), (e[(e.YOUTUBE_VIDEO = 2)] = "YOUTUBE_VIDEO"), (e[(e.VIDEO = 3)] = "VIDEO"), e;
     })({}),
     rA = (function (e) {
@@ -6592,10 +6590,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rM = (function (e) {
+    rk = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rU = (function (e) {

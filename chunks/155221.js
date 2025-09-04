@@ -90,12 +90,12 @@ let j = (0, h.Un)({
         webpackId: 576184,
         name: "UnsupportedBrowser",
     }),
-    M = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => Promise.all([n.e("32996"), n.e("74023")]).then(n.bind(n, 431583)),
         webpackId: 431583,
         name: "DownloadApps",
     }),
-    k = (0, h.Un)({
+    M = (0, h.Un)({
         createPromise: () => n.e("81226").then(n.bind(n, 484097)),
         webpackId: 484097,
         name: "InviteProxy",
@@ -135,7 +135,7 @@ let j = (0, h.Un)({
             Promise.all([
                 n.e("57804"),
                 n.e("96253"),
-                n.e("5410"),
+                n.e("79255"),
                 n.e("35535"),
                 n.e("50439"),
                 n.e("90508"),
@@ -214,7 +214,7 @@ let j = (0, h.Un)({
             Promise.all([
                 n.e("57804"),
                 n.e("96253"),
-                n.e("5410"),
+                n.e("79255"),
                 n.e("35535"),
                 n.e("61859"),
                 n.e("90508"),
@@ -319,7 +319,7 @@ class ei extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: N.Z5c.APPS,
-                                      component: M,
+                                      component: k,
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: er(
@@ -338,7 +338,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: N.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: k,
+                                      component: M,
                                   }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.INVITE(""),
@@ -405,7 +405,7 @@ class ei extends i.Component {
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       path: N.Z5c.INVITE_PROXY(O.Hw.channelId()),
-                                      component: k,
+                                      component: M,
                                   }),
                                   (0, r.jsx)(o.l_, {
                                       from: N.Z5c.GIFT_CODE(""),

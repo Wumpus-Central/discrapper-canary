@@ -314,13 +314,6 @@ let A = {
             );
         }
     },
-    setWallpaper: async (e, t) =>
-        await r.tn.patch({
-            url: y.ANM.CHANNEL(e),
-            body: { wallpaper_id: t },
-            oldFormErrors: !0,
-            rejectWithError: !0,
-        }),
     async updateChannel(e, t, n) {
         let i = "icon" in t,
             a = p.Z.getChannel(e),
