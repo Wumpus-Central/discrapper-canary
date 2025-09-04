@@ -41,6 +41,10 @@ let m = {
         },
         getAriaLabel: () => h.intl.string(h.t.NtoBi4),
     },
+    [o.l.APPLICATION]: {
+        placeholder: { variant: "details" },
+        getAriaLabel: () => "",
+    },
 };
 function b(e) {
     let { widgetType: t, onAddWidget: n, size: l = "default", loading: o = !1, trackUserProfileEditAction: c } = e,

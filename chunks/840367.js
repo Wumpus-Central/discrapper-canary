@@ -1,65 +1,65 @@
-r.d(t, { Z: () => g });
+r.d(t, { Z: () => f });
 var n = r(951288);
 r(647438);
-var i = r(624238),
-    l = r(442837),
-    a = r(481060),
-    o = r(314897),
-    c = r(86419),
-    s = r(881410),
-    u = r(825354),
-    d = r(388032),
-    f = r(635318);
-function g(e) {
-    var t;
-    let { userId: r, headingId: s, widget: u, disableInteraction: g = !1 } = e,
-        p = (0, l.e7)([o.default], () => o.default.getId() === r),
-        m = (0, c.kQ)(u),
-        O = (0, c.Nc)(u.type),
-        y =
-            p && u.games.length > 0
-                ? ((t = u.type),
-                  1 === i.k[t] ? d.intl.string(d.t.wiXdER) : d.intl.format(d.t["zR1+09"], { numGames: i.k[t] }))
+var i = r(442837),
+    l = r(481060),
+    a = r(314897),
+    o = r(86419),
+    c = r(881410),
+    s = r(825354),
+    u = r(388032),
+    d = r(635318);
+function f(e) {
+    let { userId: t, headingId: r, widget: c, disableInteraction: s = !1 } = e,
+        f = (0, i.e7)([a.default], () => a.default.getId() === t),
+        b = (0, o.kQ)(c),
+        p = (0, o.Nc)(c.type),
+        m =
+            f && c.games.length > 0
+                ? (function (e) {
+                      let t = (0, o.Gv)(e);
+                      return 1 === t ? u.intl.string(u.t.wiXdER) : u.intl.format(u.t["zR1+09"], { numGames: t });
+                  })(c.type)
                 : void 0;
     return (0, n.jsxs)("div", {
-        className: f.headerRow,
+        className: d.headerRow,
         children: [
             (0, n.jsxs)("div", {
-                className: f.title,
+                className: d.title,
                 children: [
-                    (0, n.jsx)(a.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: s,
-                        children: O,
+                        id: r,
+                        children: p,
                     }),
-                    null != y &&
-                        (0, n.jsx)(a.Text, {
+                    null != m &&
+                        (0, n.jsx)(l.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: y,
+                            children: m,
                         }),
                 ],
             }),
-            (0, n.jsx)(b, {
-                widget: u,
-                disabled: m,
-                disabledInteraction: g,
-                userId: r,
+            (0, n.jsx)(g, {
+                widget: c,
+                disabled: b,
+                disabledInteraction: s,
+                userId: t,
             }),
         ],
     });
 }
-function b(e) {
-    let { widget: t, disabled: r, disabledInteraction: i, userId: a } = e,
-        d = (0, l.e7)([o.default], () => o.default.getId() === a),
-        g = (0, c.vI)(t.type) && t.games.some((e) => null != e.comment);
-    return i
+function g(e) {
+    let { widget: t, disabled: r, disabledInteraction: l, userId: u } = e,
+        f = (0, i.e7)([a.default], () => a.default.getId() === u),
+        g = (0, o.vI)(t.type) && t.games.some((e) => null != e.comment);
+    return l
         ? null
-        : d
+        : f
           ? (0, n.jsx)("div", {
-                className: f.actions,
-                children: (0, n.jsx)(s.Z, {
+                className: d.actions,
+                children: (0, n.jsx)(c.Z, {
                     disabled: r,
                     widgetType: t.type,
                     widget: t,
@@ -67,11 +67,11 @@ function b(e) {
             })
           : g
             ? (0, n.jsx)("div", {
-                  className: f.actions,
-                  children: (0, n.jsx)(u.Z, {
+                  className: d.actions,
+                  children: (0, n.jsx)(s.Z, {
                       widget: t,
-                      userId: a,
-                      className: f.menuButton,
+                      userId: u,
+                      className: d.menuButton,
                   }),
               })
             : null;
