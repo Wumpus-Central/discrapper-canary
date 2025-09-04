@@ -44,6 +44,7 @@ function b(e) {
         h = i.useCallback(
             (e) => {
                 (0, s.ES)(r, { applicationId: e }),
+                    o.uvj.announce(u.intl.string(u.t.q0U3DA)),
                     v({
                         action: "GAME_ADDED",
                         gameId: e,
