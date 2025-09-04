@@ -1,4 +1,4 @@
-n.d(t, { S: () => g }), n(388685), n(361932), n(187205);
+n.d(t, { S: () => b }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -17,12 +17,12 @@ var r = n(951288),
     j = n(27034),
     m = n(981631),
     L = n(388032),
-    b = n(950174);
-function g(e) {
+    g = n(950174);
+function b(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: l, selectedSkuId: g, step: y } = (0, h.JL)(),
+        { selectedPlan: l, selectedSkuId: b, step: S } = (0, h.JL)(),
         {
-            setSelectedGiftingPromotionReward: S,
+            setSelectedGiftingPromotionReward: y,
             selectedGiftingPromotionReward: v,
             claimableRewards: E,
             claimableVariants: O,
@@ -32,11 +32,11 @@ function g(e) {
         k = Math.floor(Math.random() * d.mo),
         [M, Z] = i.useState(k);
     i.useEffect(() => {
-        null != E && E.length > 0 && null == v && S(E[0]);
-    }, [E, v, S]),
+        null != E && E.length > 0 && null == v && y(E[0]);
+    }, [E, v, y]),
         s()(null != l, "Expected plan to selected"),
-        s()(null != g, "Expected selectedSkuId"),
-        s()(null != y, "Step should be set");
+        s()(null != b, "Expected selectedSkuId"),
+        s()(null != S, "Step should be set");
     let T = i.useMemo(
             () =>
                 null == O
@@ -90,9 +90,9 @@ function g(e) {
             [O, E, M],
         ),
         A = (e) => {
-            S(T.find((t) => t.skuId === e)), I(e);
+            y(T.find((t) => t.skuId === e)), I(e);
         },
-        N = T.map((e) =>
+        B = T.map((e) =>
             (0, r.jsx)(
                 C.c,
                 {
@@ -100,7 +100,7 @@ function g(e) {
                     assetId: e.assetId,
                     productName: e.name,
                     a11yLabel: e.a11yLabel,
-                    claimed: null != E && !E.some((t) => t.skuId === e.skuId),
+                    claimed: null != E && E.every((t) => t.skuId !== e.skuId),
                     user: P,
                     onSelect: A,
                     selectedSkuId: null != w ? w : void 0,
@@ -109,9 +109,9 @@ function g(e) {
                 e.skuId,
             ),
         ),
-        B = (0, r.jsx)(j.O3, {
+        N = (0, r.jsx)(j.O3, {
             children: (0, r.jsx)(o.mzw, {
-                className: b.modalFooter,
+                className: g.modalFooter,
                 children: (0, r.jsx)(p.y, {
                     onStepChange: (e) => {
                         null != P &&
@@ -133,42 +133,41 @@ function g(e) {
         U = (0, r.jsxs)(o.X6q, {
             variant: "heading-lg/bold",
             color: "header-primary",
-            className: b.title,
+            className: g.title,
             children: [
                 L.intl.string(L.t["3JCuX1"]),
                 (0, r.jsx)(o.Text, {
                     variant: "text-md/normal",
                     color: "text-secondary",
-                    className: b.subtitle,
+                    className: g.subtitle,
                     children: L.intl.string(L.t.MhwtRU),
                 }),
             ],
         });
-    return (0, r.jsxs)("div", {
-        className: b.container,
+    return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.xBx, { children: (0, r.jsx)(o.olH, { onClick: n }) }),
-            (0, r.jsxs)(o.Kqy, {
-                direction: "vertical",
-                justify: "center",
-                align: "center",
-                children: [
-                    U,
-                    null != O &&
-                        O.length > 1 &&
-                        (0, r.jsx)(c.Z, {
-                            defaultCategory: M,
-                            onCategoryChange: Z,
-                        }),
-                ],
-            }),
             (0, r.jsx)(o.hzk, {
-                children: (0, r.jsx)("div", {
-                    className: b.cardsGrid,
-                    children: N,
+                children: (0, r.jsxs)(o.Kqy, {
+                    direction: "vertical",
+                    justify: "center",
+                    align: "center",
+                    children: [
+                        U,
+                        null != O &&
+                            O.length > 1 &&
+                            (0, r.jsx)(c.Z, {
+                                defaultCategory: M,
+                                onCategoryChange: Z,
+                            }),
+                        (0, r.jsx)("div", {
+                            className: g.giftRewardShopCardsGrid,
+                            children: B,
+                        }),
+                    ],
                 }),
             }),
-            B,
+            N,
         ],
     });
 }
