@@ -1,9 +1,9 @@
-r.d(t, { Z: () => g }), r(388685), r(781311);
+r.d(t, { Z: () => b }), r(388685), r(781311);
 var n = r(951288),
     i = r(647438),
     l = r(423802),
-    a = r(481060),
-    o = r(510231),
+    o = r(481060),
+    a = r(510231),
     c = r(785717),
     s = r(86419),
     u = r(388032),
@@ -33,32 +33,26 @@ function f(e) {
     }
     return e;
 }
-function g(e) {
-    let { disabled: t, widgetType: r, widget: g } = e,
-        [b] = (0, a.ynZ)(),
-        [p, m] = i.useState(""),
-        O = i.useRef(null),
-        y = i.useMemo(() => new Set(g.games.map((e) => e.applicationId)), [g.games]),
-        { trackUserProfileEditAction: j } = (0, c.KZ)(),
-        v = i.useCallback(
+function b(e) {
+    let { disabled: t, widgetType: r, widget: b } = e,
+        [p] = (0, o.ynZ)(),
+        [g, O] = i.useState(""),
+        y = i.useRef(null),
+        j = i.useRef(""),
+        m = i.useMemo(() => new Set(b.games.map((e) => e.applicationId)), [b.games]),
+        { trackUserProfileEditAction: v } = (0, c.KZ)(),
+        h = i.useCallback(
             (e) => {
                 (0, s.ES)(r, { applicationId: e }),
-                    j({
+                    v({
                         action: "GAME_ADDED",
                         gameId: e,
                         widgetEdited: r,
                     });
             },
-            [r, j],
+            [r, v],
         ),
-        { options: x, matchSorterOptions: h } = (0, o.h)(),
-        w = i.useMemo(
-            () =>
-                "" !== p.trim()
-                    ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: p.trim() })
-                    : u.intl.string(u.t.QwSXv7),
-            [p],
-        ),
+        { options: x, matchSorterOptions: w } = (0, a.h)(),
         P = i.useCallback(
             (e) => {
                 var t, r;
@@ -67,7 +61,7 @@ function g(e) {
                     : (0, l.Lu)(
                           x,
                           e,
-                          ((t = f({}, h)),
+                          ((t = f({}, w)),
                           (r = r = { threshold: l.Lu.rankings.CONTAINS }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -84,44 +78,75 @@ function g(e) {
                           t),
                       );
             },
-            [x, h],
+            [x, w],
+        ),
+        S = i.useCallback(
+            (e) => {
+                "" === g.trim() &&
+                    "" !== e.trim() &&
+                    v({
+                        action: "GAME_SEARCH_SESSION_STARTED",
+                        widgetEdited: r,
+                        numCharacters: e.trim().length,
+                        numResults: P(e).length,
+                    }),
+                    O(e),
+                    (j.current = e);
+            },
+            [g, v, r, P],
+        ),
+        E = i.useMemo(
+            () =>
+                "" !== g.trim()
+                    ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: g.trim() })
+                    : u.intl.string(u.t.QwSXv7),
+            [g],
         );
-    return (0, n.jsx)(a.yRy, {
-        targetElementRef: O,
+    return (0, n.jsx)(o.yRy, {
+        targetElementRef: y,
         position: "bottom",
         align: "center",
         onRequestOpen: () => {
-            j({
+            v({
                 action: "PRESS_ADD_GAME",
                 widgetEdited: r,
+            }),
+                O(""),
+                (j.current = "");
+        },
+        onRequestClose: () => {
+            v({
+                action: "GAME_SEARCH_SESSION_ENDED",
+                widgetEdited: r,
+                numCharacters: j.current.trim().length,
+                numResults: P(j.current).length,
             });
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(a.DBG, {
+            return (0, n.jsx)(o.DBG, {
                 className: d.gameSearchCombobox,
                 placeholder: u.intl.string(u.t["5h0QOD"]),
                 autoFocus: !0,
-                value: b,
+                value: p,
                 onChange: (e) => {
-                    v(e), t();
+                    h(e), t();
                 },
-                onClose: t,
                 multiSelect: !1,
                 showScrollbar: !0,
                 maxVisibleItems: 7,
-                emptyStateText: w,
+                emptyStateText: E,
                 emptyStateHeader: "",
-                onQueryChange: m,
+                onQueryChange: S,
                 children: (e) =>
                     P(e).map((e) =>
                         (0, n.jsx)(
-                            a.lo1,
+                            o.lo1,
                             {
-                                disabled: y.has(e.value),
+                                disabled: m.has(e.value),
                                 value: String(e.value),
-                                children: (0, n.jsx)(a.lo1.Label, {
-                                    children: (0, n.jsx)(a.Text, {
+                                children: (0, n.jsx)(o.lo1.Label, {
+                                    children: (0, n.jsx)(o.Text, {
                                         variant: "text-md/medium",
                                         color: "header-secondary",
                                         children: e.label,
@@ -135,14 +160,14 @@ function g(e) {
         },
         children: (e) =>
             (0, n.jsx)("div", {
-                ref: O,
+                ref: y,
                 children: (0, n.jsx)(
-                    a.zxk,
+                    o.zxk,
                     f(
                         {
                             variant: "secondary",
                             size: "sm",
-                            icon: a.qJs,
+                            icon: o.qJs,
                             text: u.intl.string(u.t.SgTOtb),
                             disabled: t,
                         },
