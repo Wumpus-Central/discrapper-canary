@@ -1,73 +1,44 @@
-n.d(t, { Z: () => h });
+n.d(t, { default: () => p });
 var r = n(951288);
 n(647438);
 var i = n(990547),
-    l = n(481060),
-    a = n(313201),
-    o = n(703656),
-    s = n(63063),
-    c = n(758119),
-    u = n(981631),
-    d = n(388032),
-    p = n(754912);
-function f() {
-    (0, c.qV)(), (0, o.uL)(u.Z5c.LOGIN, { source: "existing_user_age_gate_underage" });
+    l = n(82659),
+    a = n(703656),
+    o = n(63063),
+    s = n(758119),
+    c = n(981631),
+    u = n(388032);
+function d() {
+    return (0, s.qV)(), (0, a.uL)(c.Z5c.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
 }
-function h(e) {
-    let { underageMessage: t, transitionState: o } = e,
-        c = (0, a.Dt)();
-    return (0, r.jsxs)(l.Y0X, {
-        transitionState: o,
-        size: l.CgR.SMALL,
-        "aria-labelledby": c,
-        impression: {
-            impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
-            impressionProperties: { existing_user: !0 },
-        },
-        parentComponent: "ExistingUserAgeGateUnderage",
-        children: [
-            (0, r.jsx)(l.hzk, {
-                children: (0, r.jsxs)("div", {
-                    className: p.container,
-                    children: [
-                        (0, r.jsx)("img", {
-                            alt: "",
-                            src: n(231443),
-                            className: p.img,
-                        }),
-                        (0, r.jsx)(l.X6q, {
-                            variant: "heading-xl/semibold",
-                            className: p.title,
-                            id: c,
-                            children: d.intl.string(d.t["NR/zrK"]),
-                        }),
-                        (0, r.jsx)(l.Text, {
-                            color: "header-secondary",
-                            className: p.subtitle,
-                            variant: "text-sm/normal",
-                            children: d.intl.format(d.t.b0QzXV, {
-                                underageMessage: null != t ? t : d.intl.string(d.t.WqEH4O),
-                                helpURL: s.Z.getArticleURL(u.BhN.AGE_GATE),
-                            }),
-                        }),
-                        (0, r.jsx)(l.Text, {
-                            color: "header-secondary",
-                            className: p.subtitle,
-                            variant: "text-sm/normal",
-                            children: d.intl.format(d.t["3axQdH"], { days: 30 }),
-                        }),
-                    ],
-                }),
-            }),
-            (0, r.jsx)(l.mzw, {
-                children: (0, r.jsx)(l.zxk, {
-                    variant: "primary",
-                    size: "sm",
-                    text: d.intl.string(d.t.szzQ6O),
-                    fullWidth: !0,
-                    onClick: f,
-                }),
-            }),
+function p(e) {
+    let { underageMessage: t, transitionState: n } = e;
+    return (0, r.jsx)(l.Modal, {
+        transitionState: n,
+        onClose: d,
+        title: u.intl.string(u.t["NR/zrK"]),
+        subtitle: u.intl.format(u.t.ukclMz, {
+            underageMessage: null != t ? t : u.intl.string(u.t.WqEH4O),
+            days: 30,
+        }),
+        actions: [
+            {
+                text: u.intl.string(u.t.hvVgAQ),
+                onClick: () => {
+                    window.open(o.Z.getArticleURL(c.BhN.AGE_GATE), "_blank");
+                },
+                variant: "secondary",
+            },
+            {
+                text: u.intl.string(u.t.szzQ6O),
+                onClick: d,
+            },
         ],
+        trackingProps: {
+            impression: {
+                impressionName: i.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+                impressionProperties: { existing_user: !0 },
+            },
+        },
     });
 }

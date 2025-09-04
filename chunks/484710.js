@@ -17,6 +17,7 @@ var r = (function (e) {
             (e.GENERIC_ERROR = "GENERIC_ERROR"),
             (e.REPORT_TO_MOD_SUCCESS = "REPORT_TO_MOD_SUCCESS"),
             (e.SAFETY_FEEDBACK_SUCCESS = "SAFETY_FEEDBACK_SUCCESS"),
+            (e.EXISTING_USER_AGE_GATE_SUCCESS = "EXISTING_USER_AGE_GATE_SUCCESS"),
             e
         );
     })({}),

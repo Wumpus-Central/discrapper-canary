@@ -39,6 +39,8 @@ function u(e, t, n) {
             return l.intl.string(c.default.iBypeX);
         case s.wQ.SAFETY_FEEDBACK_SUCCESS:
             return l.intl.string(l.t.TcFR5u);
+        case s.wQ.EXISTING_USER_AGE_GATE_SUCCESS:
+            return l.intl.string(l.t.susqq6);
         default:
             return l.intl.string(l.t["+c5xtb"]);
     }
