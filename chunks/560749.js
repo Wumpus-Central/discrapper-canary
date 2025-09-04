@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(35282), n(539854), n(388685), n(387201), n(642613);
+n.d(t, { Z: () => T }), n(35282), n(539854), n(388685), n(387201), n(642613);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,21 +18,21 @@ var r = n(951288),
     v = n(430824),
     j = n(496675),
     b = n(914010),
-    C = n(594174),
-    S = n(938475),
-    y = n(823379),
+    y = n(594174),
+    C = n(938475),
+    S = n(823379),
     O = n(102172),
-    Z = n(981631),
-    w = n(637824),
+    w = n(981631),
+    Z = n(637824),
     I = n(388032),
     N = n(603410);
-function T(e) {
+function P(e) {
     let { result: t, onSelectChannel: n } = e,
         i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        l = (0, o.Wu)([S.ZP, C.default], () =>
-            S.ZP.getVoiceStatesForChannel(t.record)
-                .map((e) => C.default.getUser(e.user.id))
-                .filter(y.lm),
+        l = (0, o.Wu)([C.ZP, y.default], () =>
+            C.ZP.getVoiceStatesForChannel(t.record)
+                .map((e) => y.default.getUser(e.user.id))
+                .filter(S.lm),
         );
     return (0, r.jsxs)(a.P3F, {
         className: N.channelResult,
@@ -78,10 +78,10 @@ function T(e) {
         ],
     });
 }
-function P(e) {
+function T(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: u, results: p } = (0, m.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        C = (0, o.Wu)([b.Z, _.ZP, x.Z, v.Z, j.Z], () => {
+        y = (0, o.Wu)([b.Z, _.ZP, x.Z, v.Z, j.Z], () => {
             let e = [],
                 t = b.Z.getGuildId();
             if (null == t) return e;
@@ -91,36 +91,37 @@ function P(e) {
             }
             return e;
         }),
-        S = (0, o.Wu)([f.Z, x.Z, g.Z, v.Z, j.Z], () => {
+        C = (0, o.Wu)([f.Z, x.Z, g.Z, v.Z, j.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
                 let r = x.Z.getChannel(n);
-                (null == r ? void 0 : r.type) === Z.d4z.GUILD_VOICE &&
+                (null == r ? void 0 : r.type) === w.d4z.GUILD_VOICE &&
                     (0, O.JL)(r, v.Z, j.Z) &&
                     (t.add(r.id), e.push(r));
             }
             for (let n of g.Z.getFrequentlyWithoutFetchingLatest())
                 n instanceof h.Sf &&
-                    n.type === Z.d4z.GUILD_VOICE &&
+                    n.type === w.d4z.GUILD_VOICE &&
                     !t.has(n.id) &&
                     (0, O.JL)(n, v.Z, j.Z) &&
                     (t.add(n.id), e.push(n));
             return e;
         }),
-        P = i.useMemo(() => {
-            let e = new Set(S.map((e) => e.id)),
-                t = new Set(C.map((e) => e.id));
+        T = i.useMemo(() => {
+            let e = new Set(C.map((e) => e.id)),
+                t = new Set(y.map((e) => e.id));
             return [
-                ...C.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
+                ...y
+                    .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, d.Z)(e.id))
-                    .filter(y.lm),
-                ...S.filter((e) => !t.has(e.id))
+                    .filter(S.lm),
+                ...C.filter((e) => !t.has(e.id))
                     .map((e) => (0, d.Z)(e.id))
-                    .filter(y.lm),
+                    .filter(S.lm),
             ];
-        }, [S, C]),
-        R = "" !== u ? p : P;
+        }, [C, y]),
+        R = "" !== u ? p : T;
     return (0, r.jsxs)("div", {
         className: s()(N.root, n),
         children: [
@@ -146,7 +147,7 @@ function P(e) {
                           return (0, r.jsx)(a.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: I.intl.string(w.default.FZ9Fl5),
+                              children: I.intl.string(Z.default.FZ9Fl5),
                           });
                       },
                       sections: [R.length],
@@ -156,7 +157,7 @@ function P(e) {
                           let { rowIndex: n } = e,
                               i = R[n];
                           return (0, r.jsx)(
-                              T,
+                              P,
                               {
                                   result: i,
                                   onSelectChannel: t,
@@ -182,12 +183,12 @@ function E() {
                 className: N.emptyHeader,
                 variant: "text-lg/medium",
                 color: "header-primary",
-                children: I.intl.string(w.default.sWGfr6),
+                children: I.intl.string(Z.default.sWGfr6),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                children: I.intl.string(w.default.nBRtt7),
+                children: I.intl.string(Z.default.nBRtt7),
             }),
         ],
     });

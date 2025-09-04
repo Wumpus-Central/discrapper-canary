@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => Z }), n(388685), n(415506);
+n.d(t, { ZP: () => w }), n(388685), n(415506);
 var r = n(951288);
 n(647438);
 var i = n(268146),
@@ -19,7 +19,7 @@ var i = n(268146),
     v = n(637824),
     j = n(388032),
     b = n(355669);
-let C = [
+let y = [
         {
             value: g.tI.PRESET_VIDEO,
             canUse: (e) => !0,
@@ -33,7 +33,7 @@ let C = [
             canUse: (e) => !0,
         },
     ],
-    S = [
+    C = [
         {
             value: g.LY.RESOLUTION_720,
             canUse: (e) => !0,
@@ -51,7 +51,7 @@ let C = [
             canUse: (e) => e !== i.vA.CAMERA,
         },
     ],
-    y = [g.ws.FPS_15, g.ws.FPS_30, g.ws.FPS_60];
+    S = [g.ws.FPS_15, g.ws.FPS_30, g.ws.FPS_60];
 function O(e) {
     let { label: t } = e;
     return (0, r.jsxs)("div", {
@@ -65,16 +65,16 @@ function O(e) {
         ],
     });
 }
-function Z(e) {
+function w(e) {
     var t, n;
-    let { onClose: b, onSelect: Z } = e,
+    let { onClose: b, onSelect: w } = e,
         [
             {
-                audioSourceId: w,
+                audioSourceId: Z,
                 notifyFriends: I,
                 hidePreview: N,
-                muteStreamAudio: T,
-                preset: P,
+                muteStreamAudio: P,
+                preset: T,
                 resolution: E,
                 fps: R,
                 sourceType: A,
@@ -86,9 +86,9 @@ function Z(e) {
         L = (0, m.Z)(),
         [B, G] = null != (t = (0, x.Z)(g.tI.PRESET_VIDEO)) ? t : [g.LY.RESOLUTION_720, g.ws.FPS_30],
         [U, W] = null != (n = (0, x.Z)(g.tI.PRESET_DOCUMENTS)) ? n : [g.LY.RESOLUTION_SOURCE, g.ws.FPS_15],
-        F = (0, o.M)({
+        z = (0, o.M)({
             deviceType: _.h7.AUDIO_INPUT,
-            selectedDeviceId: w,
+            selectedDeviceId: Z,
             analyticsLocations: [s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION],
             asSubmenu: !0,
             onDeviceSelect: (e) => (
@@ -112,58 +112,60 @@ function Z(e) {
         "aria-label": j.intl.string(j.t["+1H47u"]),
         navId: "stream-options",
         onClose: b,
-        onSelect: Z,
+        onSelect: w,
         children: [
             (0, r.jsx)(l.kSQ, {
                 label: j.intl.string(v.default.P2pjm5),
-                children: C.filter((e) => {
-                    let { canUse: t } = e;
-                    return t(A);
-                }).map((e) => {
-                    let { value: t } = e;
-                    return (0, r.jsx)(
-                        l.k5B,
-                        {
-                            group: "preset",
-                            id: "stream-preset-".concat(t),
-                            checked: P === t,
-                            label: (0, u.L)(t),
-                            subtext: (function (e) {
-                                switch (e) {
-                                    case g.tI.PRESET_VIDEO:
-                                        return j.intl.format(v.default.G5O1Mz, {
-                                            resolution: (0, f.M)(B),
-                                            frameRate: G,
-                                        });
-                                    case g.tI.PRESET_DOCUMENTS:
-                                        return j.intl.format(v.default["8tcFLy"], {
-                                            resolution: (0, f.M)(U),
-                                            frameRate: W,
-                                        });
-                                    case g.tI.PRESET_CUSTOM:
-                                        return;
-                                    default:
-                                        throw Error("No case implemented for ".concat(e));
-                                }
-                            })(t),
-                            action: () =>
-                                M({
-                                    type: "set_preset",
-                                    preset: t,
-                                }),
-                        },
-                        t,
-                    );
-                }),
+                children: y
+                    .filter((e) => {
+                        let { canUse: t } = e;
+                        return t(A);
+                    })
+                    .map((e) => {
+                        let { value: t } = e;
+                        return (0, r.jsx)(
+                            l.k5B,
+                            {
+                                group: "preset",
+                                id: "stream-preset-".concat(t),
+                                checked: T === t,
+                                label: (0, u.L)(t),
+                                subtext: (function (e) {
+                                    switch (e) {
+                                        case g.tI.PRESET_VIDEO:
+                                            return j.intl.format(v.default.G5O1Mz, {
+                                                resolution: (0, f.M)(B),
+                                                frameRate: G,
+                                            });
+                                        case g.tI.PRESET_DOCUMENTS:
+                                            return j.intl.format(v.default["8tcFLy"], {
+                                                resolution: (0, f.M)(U),
+                                                frameRate: W,
+                                            });
+                                        case g.tI.PRESET_CUSTOM:
+                                            return;
+                                        default:
+                                            throw Error("No case implemented for ".concat(e));
+                                    }
+                                })(t),
+                                action: () =>
+                                    M({
+                                        type: "set_preset",
+                                        preset: t,
+                                    }),
+                            },
+                            t,
+                        );
+                    }),
             }),
-            P === g.tI.PRESET_CUSTOM &&
+            T === g.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.Clw, {}),
                         (0, r.jsx)(l.sNh, {
                             id: "resolution",
                             label: j.intl.string(v.default.IG5n0d),
-                            children: S.filter((e) => {
+                            children: C.filter((e) => {
                                 let { canUse: t } = e;
                                 return t(A);
                             }).map((e) => {
@@ -180,7 +182,7 @@ function Z(e) {
                                                 : (0, f.M)(t),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, d.Z)(P, e, R, a.default.getCurrentUser(), L))
+                                                if (!(0, d.Z)(T, e, R, a.default.getCurrentUser(), L))
                                                     return (
                                                         b(),
                                                         (0, p.E)({
@@ -200,7 +202,7 @@ function Z(e) {
                         (0, r.jsx)(l.sNh, {
                             id: "frame-rate",
                             label: j.intl.string(j.t.SkkeIi),
-                            children: y.map((e) =>
+                            children: S.map((e) =>
                                 (0, r.jsx)(
                                     l.k5B,
                                     {
@@ -213,7 +215,7 @@ function Z(e) {
                                                 : "".concat(e, "fps"),
                                         action: () =>
                                             (function (e) {
-                                                if (!(0, d.Z)(P, E, e, a.default.getCurrentUser(), L))
+                                                if (!(0, d.Z)(T, E, e, a.default.getCurrentUser(), L))
                                                     return (
                                                         b(),
                                                         (0, p.E)({
@@ -235,15 +237,15 @@ function Z(e) {
             (0, r.jsx)(l.Clw, {}),
             (0, r.jsx)(l.S89, {
                 id: "stream-option-mute",
-                checked: T,
+                checked: P,
                 label: j.intl.string(v.default["b0+Ira"]),
                 action: () =>
                     M({
                         type: "set_mute_audio",
-                        value: !T,
+                        value: !P,
                     }),
             }),
-            A === i.vA.CAMERA && F,
+            A === i.vA.CAMERA && z,
             (0, r.jsxs)(l.sNh, {
                 id: "advanced-items",
                 label: j.intl.string(v.default.eYyK1t),
