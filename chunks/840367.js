@@ -1,31 +1,30 @@
-r.d(t, { Z: () => c });
+r.d(t, { Z: () => a });
 var n = r(951288);
 r(647438);
 var i = r(481060),
-    l = r(86419),
-    o = r(825354),
-    a = r(635318);
-function c(e) {
+    l = r(825354),
+    o = r(635318);
+function a(e) {
     let {
         userId: t,
         headingId: r,
         widget: l,
-        disableInteraction: o = !1,
-        title: c,
+        disableInteraction: a = !1,
+        title: s,
         subtitle: u,
         actionButtons: d = [],
     } = e;
     return (0, n.jsxs)("div", {
-        className: a.headerRow,
+        className: o.headerRow,
         children: [
             (0, n.jsxs)("div", {
-                className: a.title,
+                className: o.title,
                 children: [
                     (0, n.jsx)(i.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
                         id: r,
-                        children: c,
+                        children: s,
                     }),
                     null != u &&
                         (0, n.jsx)(i.Text, {
@@ -35,33 +34,30 @@ function c(e) {
                         }),
                 ],
             }),
-            (0, n.jsx)(s, {
+            (0, n.jsx)(c, {
                 widget: l,
                 actionButtons: d,
-                disabledInteraction: o,
+                disabledInteraction: a,
                 userId: t,
             }),
         ],
     });
 }
-function s(e) {
-    let { widget: t, actionButtons: r, disabledInteraction: i, userId: c } = e,
-        s = (0, l.vI)(t.type) && t.games.some((e) => null != e.comment);
+function c(e) {
+    let { widget: t, actionButtons: r, disabledInteraction: i, userId: a } = e;
     return i
         ? null
         : null != r && r.length > 0
           ? (0, n.jsx)("div", {
-                className: a.actions,
+                className: o.actions,
                 children: r,
             })
-          : s
-            ? (0, n.jsx)("div", {
-                  className: a.actions,
-                  children: (0, n.jsx)(o.Z, {
-                      widget: t,
-                      userId: c,
-                      className: a.menuButton,
-                  }),
-              })
-            : null;
+          : (0, n.jsx)("div", {
+                className: o.actions,
+                children: (0, n.jsx)(l.Z, {
+                    widget: t,
+                    userId: a,
+                    className: o.menuButton,
+                }),
+            });
 }
