@@ -1,39 +1,38 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => b });
 var i = n(951288);
 n(647438);
 var r = n(442837),
-    l = n(481060),
-    s = n(87051),
+    s = n(481060),
+    l = n(87051),
     o = n(778123),
-    a = n(122074),
     c = n(9156),
-    u = n(621600),
-    d = n(981631),
-    g = n(388032);
-function b() {
+    a = n(621600),
+    u = n(981631),
+    d = n(388032);
+function g() {
     return [
         {
-            setting: d.bL.ALL_MESSAGES,
-            label: g.intl.string(g.t["n/bTaW"]),
+            setting: u.bL.ALL_MESSAGES,
+            label: d.intl.string(d.t["n/bTaW"]),
         },
         {
-            setting: d.bL.ONLY_MENTIONS,
-            label: g.intl.format(g.t.L2hmY2, {}),
+            setting: u.bL.ONLY_MENTIONS,
+            label: d.intl.format(d.t.L2hmY2, {}),
         },
         {
-            setting: d.bL.NO_MESSAGES,
-            label: g.intl.string(g.t.CtVGyc),
+            setting: u.bL.NO_MESSAGES,
+            label: d.intl.string(d.t.CtVGyc),
         },
     ];
 }
-function p(e) {
-    var t, p;
-    let f = (function (e) {
+function b(e) {
+    var t, b;
+    let p = (function (e) {
             let {
                     suppressEveryone: t,
                     suppressRoles: n,
-                    mobilePush: p,
-                    messageNotifications: f,
+                    mobilePush: b,
+                    messageNotifications: p,
                     notifyHighlights: S,
                 } = (0, r.cj)(
                     [c.ZP],
@@ -46,90 +45,85 @@ function p(e) {
                     }),
                     [e.id],
                 ),
-                O = S === d.gLR.DISABLED,
-                h = (0, o.Z)(e.id);
+                h = S === u.gLR.DISABLED,
+                f = (0, o.Z)(e.id);
             function E(t, n) {
-                s.Z.updateGuildNotificationSettings(e.id, t, n);
+                l.Z.updateGuildNotificationSettings(e.id, t, n);
             }
-            let y = (0, a.ng)(e.id, !0);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(l.kSQ, {
-                        children: b().map((e) => {
+                    (0, i.jsx)(s.kSQ, {
+                        children: g().map((e) => {
                             let { setting: t, label: n } = e;
                             return (0, i.jsx)(
-                                l.k5B,
+                                s.k5B,
                                 {
                                     group: "guild-notifications",
                                     id: "".concat(t),
                                     label: n,
-                                    action: () => E({ message_notifications: t }, u.UE.notifications(t)),
-                                    checked: t === f,
+                                    action: () => E({ message_notifications: t }, a.UE.notifications(t)),
+                                    checked: t === p,
                                 },
                                 t,
                             );
                         }),
                     }),
-                    null != y && (0, i.jsx)(l.kSQ, { children: y }),
-                    (0, i.jsxs)(l.kSQ, {
+                    (0, i.jsxs)(s.kSQ, {
                         children: [
-                            (0, i.jsx)(l.S89, {
+                            (0, i.jsx)(s.S89, {
                                 id: "suppress-everyone",
-                                label: g.intl.format(g.t.OWiWAg, {}),
-                                action: () => E({ suppress_everyone: !t }, u.UE.suppressEveryone(!t)),
+                                label: d.intl.format(d.t.OWiWAg, {}),
+                                action: () => E({ suppress_everyone: !t }, a.UE.suppressEveryone(!t)),
                                 checked: t,
                             }),
-                            (0, i.jsx)(l.S89, {
+                            (0, i.jsx)(s.S89, {
                                 id: "suppress-roles",
-                                label: g.intl.string(g.t["O/QdoK"]),
-                                action: () => E({ suppress_roles: !n }, u.UE.suppressRoles(!n)),
+                                label: d.intl.string(d.t["O/QdoK"]),
+                                action: () => E({ suppress_roles: !n }, a.UE.suppressRoles(!n)),
                                 checked: n,
                             }),
-                            (0, i.jsx)(l.S89, {
+                            (0, i.jsx)(s.S89, {
                                 id: "suppress-highlights",
-                                label: g.intl.string(g.t.gPuteH),
+                                label: d.intl.string(d.t.gPuteH),
                                 action: () => {
-                                    E({ notify_highlights: O ? d.gLR.ENABLED : d.gLR.DISABLED }, u.UE.highlights(O));
+                                    E({ notify_highlights: h ? u.gLR.ENABLED : u.gLR.DISABLED }, a.UE.highlights(h));
                                 },
-                                checked: O,
+                                checked: h,
                             }),
-                            h,
+                            f,
                         ],
                     }),
-                    (0, i.jsx)(l.kSQ, {
-                        children: (0, i.jsx)(l.S89, {
+                    (0, i.jsx)(s.kSQ, {
+                        children: (0, i.jsx)(s.S89, {
                             id: "mobile-push",
-                            label: g.intl.string(g.t["h1DL6+"]),
-                            action: () => E({ mobile_push: !p }, u.UE.mobilePush(!p)),
-                            checked: p,
+                            label: d.intl.string(d.t["h1DL6+"]),
+                            action: () => E({ mobile_push: !b }, a.UE.mobilePush(!b)),
+                            checked: b,
                         }),
                     }),
                 ],
             });
         })(e),
         S = (0, r.e7)([c.ZP], () => c.ZP.getMessageNotifications(e.id), [e.id]),
-        O =
-            null == (p = b()) ||
+        h =
+            null == (b = g()) ||
             null ==
-                (t = p.find((e) => {
+                (t = b.find((e) => {
                     let { setting: t } = e;
                     return t === S;
                 }))
                 ? void 0
-                : t.label,
-        h = (0, a.U)();
-    return null != f
-        ? (0, i.jsx)(l.sNh, {
+                : t.label;
+    return null != p
+        ? (0, i.jsx)(s.sNh, {
               id: "guild-notifications",
-              label: (0, i.jsxs)(i.Fragment, {
-                  children: [h, g.intl.string(g.t.h850Sk)],
-              }),
-              subtext: O,
+              label: d.intl.string(d.t.h850Sk),
+              subtext: h,
               action: () =>
-                  (0, l.ZDy)(async () => {
-                      let { default: t } = await Promise.all([n.e("15076"), n.e("76634")]).then(n.bind(n, 907941));
+                  (0, s.ZDy)(async () => {
+                      let { default: t } = await Promise.all([n.e("15076"), n.e("25759")]).then(n.bind(n, 907941));
                       return (n) => {
-                          var r, l;
+                          var r, s;
                           return (0, i.jsx)(
                               t,
                               ((r = (function (e) {
@@ -157,9 +151,9 @@ function p(e) {
                                   }
                                   return e;
                               })({}, n)),
-                              (l = l = { guildId: e.id }),
+                              (s = s = { guildId: e.id }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                                  ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -167,14 +161,14 @@ function p(e) {
                                             n.push.apply(n, i);
                                         }
                                         return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                                    })(Object(s)).forEach(function (e) {
+                                        Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
                                     }),
                               r),
                           );
                       };
                   }),
-              children: f,
+              children: p,
           })
         : null;
 }

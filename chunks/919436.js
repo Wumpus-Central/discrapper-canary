@@ -247,7 +247,7 @@ class R extends (r = l.PureComponent) {
                               n.e("79695"),
                               n.e("98783"),
                               n.e("56826"),
-                              n.e("92799"),
+                              n.e("31899"),
                           ]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, i.jsx)(
@@ -259,9 +259,7 @@ class R extends (r = l.PureComponent) {
                               );
                       })
                     : (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e("79695"), n.e("25421"), n.e("20230")]).then(
-                              n.bind(n, 354741),
-                          );
+                          let { default: e } = await Promise.all([n.e("79695"), n.e("22981")]).then(n.bind(n, 354741));
                           return (n) =>
                               (0, i.jsx)(
                                   e,

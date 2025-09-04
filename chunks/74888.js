@@ -1,41 +1,39 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => p });
 var i = n(951288);
 n(647438);
 var s = n(120356),
     l = n.n(s),
     r = n(82659),
     a = n(481060),
-    o = n(11352),
-    d = n(610617),
-    c = n(413684),
-    u = n(298812),
-    h = n(200115),
-    g = n(406205),
-    m = n(388032),
-    x = n(101105);
-function p(e) {
+    o = n(413684),
+    d = n(298812),
+    c = n(200115),
+    u = n(406205),
+    h = n(388032),
+    g = n(101105);
+function m(e) {
     return (0, i.jsx)("div", {
-        className: x.sectionHeader,
+        className: g.sectionHeader,
         children: (0, i.jsx)(a.X6q, {
             variant: "text-xs/bold",
-            className: x.sectionHeaderTitle,
+            className: g.sectionHeaderTitle,
             color: "text-muted",
             children: e.title,
         }),
     });
 }
-function v(e) {
+function x(e) {
     return (0, i.jsxs)("div", {
         children: [
-            null != e.title && (0, i.jsx)(p, { title: e.title }),
+            null != e.title && (0, i.jsx)(m, { title: e.title }),
             (0, i.jsx)("div", {
-                className: l()(x.sectionContent, { [x.sectionContentPadding]: !0 !== e.noPadding }),
+                className: l()(g.sectionContent, { [g.sectionContentPadding]: !0 !== e.noPadding }),
                 children: e.children,
             }),
         ],
     });
 }
-function j(e) {
+function p(e) {
     var t,
         n,
         { guildId: s } = e,
@@ -60,7 +58,6 @@ function j(e) {
             }
             return s;
         })(e, ["guildId"]);
-    let a = o.Y.useExperiment({ location: "notification_settings_modal_redesign" }, { autoTrackExposure: !0 }).enabled;
     return (0, i.jsxs)(
         r.Modal,
         ((t = (function (e) {
@@ -90,37 +87,29 @@ function j(e) {
         })({}, l)),
         (n = n =
             {
-                title: m.intl.string(m.t.h850Sk),
+                title: h.intl.string(h.t.h850Sk),
                 actions: [
                     {
-                        text: m.intl.string(m.t.i4jeWV),
+                        text: h.intl.string(h.t.i4jeWV),
                         onClick: l.onClose,
                     },
                 ],
                 children: [
-                    (0, i.jsx)(v, {
+                    (0, i.jsx)(x, {
                         noPadding: !0,
-                        children: (0, i.jsx)(h.Z, { guildId: s }),
-                    }),
-                    (0, i.jsx)(v, {
-                        title: m.intl.string(m.t["R9Ej9/"]),
-                        noPadding: !0,
-                        children: (0, i.jsx)(g.Z, { guildId: s }),
-                    }),
-                    a &&
-                        (0, i.jsx)(v, {
-                            children: (0, i.jsx)(d.Z, {
-                                onClose: l.onClose,
-                                guildId: s,
-                                isRedesign: !0,
-                            }),
-                        }),
-                    (0, i.jsx)(v, {
-                        title: m.intl.string(m.t["31DySk"]),
                         children: (0, i.jsx)(c.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(p, { title: m.intl.string(m.t.JrySi4) }),
-                    (0, i.jsx)(u.Z, { guildId: s }),
+                    (0, i.jsx)(x, {
+                        title: h.intl.string(h.t["R9Ej9/"]),
+                        noPadding: !0,
+                        children: (0, i.jsx)(u.Z, { guildId: s }),
+                    }),
+                    (0, i.jsx)(x, {
+                        title: h.intl.string(h.t["31DySk"]),
+                        children: (0, i.jsx)(o.Z, { guildId: s }),
+                    }),
+                    (0, i.jsx)(m, { title: h.intl.string(h.t.JrySi4) }),
+                    (0, i.jsx)(d.Z, { guildId: s }),
                 ],
             }),
         Object.getOwnPropertyDescriptors

@@ -101,7 +101,7 @@ function C() {
         y = i.useRef(!1),
         v = (0, s.Z)(() => {
             let e = "call_ringing";
-            return o === b.YC.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)("call_ringing", o);
+            return o === b.Y.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)("call_ringing", o);
         }, [o]);
     return (
         i.useEffect(

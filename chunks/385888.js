@@ -26,5 +26,4 @@ e.exports = {
     channelName: "channelName__856b5",
     channelNameByline: "channelNameByline__856b5 lighten__856b5",
     highlightsLink: "highlightsLink__856b5",
-    customNotificationSoundsDivider: "customNotificationSoundsDivider__856b5",
 };

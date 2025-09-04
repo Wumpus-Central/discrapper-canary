@@ -17,7 +17,7 @@ function s(e, t, n) {
     );
 }
 let l = {
-    soundpack: o.YC.CLASSIC,
+    soundpack: o.Y.CLASSIC,
     lastSoundpackExperimentId: null,
 };
 function c(e) {
@@ -29,7 +29,7 @@ function c(e) {
 }
 class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && ((l = e), Object.values(o.YC).includes(l.soundpack) || (l.soundpack = o.YC.CLASSIC));
+        null != e && ((l = e), Object.values(o.Y).includes(l.soundpack) || (l.soundpack = o.Y.CLASSIC));
     }
     getState() {
         return l;

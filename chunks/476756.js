@@ -16,7 +16,7 @@ function _() {
     a()(null != t, "should not render this without a holiday soundpack");
     let n = [
         {
-            value: d.YC.CLASSIC,
+            value: d.Y.CLASSIC,
             label: f.intl.string(f.t.p3Hg5e),
         },
         {

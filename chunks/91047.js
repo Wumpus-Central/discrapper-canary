@@ -101,10 +101,9 @@ function d(e, t, a) {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
                     n.e("90508"),
-                    n.e("70205"),
                     n.e("98783"),
                     n.e("56826"),
-                    n.e("68136"),
+                    n.e("8074"),
                 ]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(

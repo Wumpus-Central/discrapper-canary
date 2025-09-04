@@ -25,8 +25,8 @@ var r = n(951288),
     O = n(893607),
     v = n(314897),
     I = n(626135),
-    S = n(361207),
-    T = n(690032),
+    T = n(361207),
+    S = n(690032),
     A = n(358085),
     C = n(998502),
     N = n(981631),
@@ -139,7 +139,6 @@ let j = (0, h.Un)({
                 n.e("35535"),
                 n.e("50439"),
                 n.e("90508"),
-                n.e("70205"),
                 n.e("49049"),
                 n.e("33285"),
                 n.e("38697"),
@@ -162,8 +161,8 @@ let j = (0, h.Un)({
                 n.e("36745"),
                 n.e("62987"),
                 n.e("86383"),
+                n.e("60831"),
                 n.e("74449"),
-                n.e("84927"),
                 n.e("24920"),
                 n.e("77803"),
                 n.e("11160"),
@@ -219,7 +218,6 @@ let j = (0, h.Un)({
                 n.e("35535"),
                 n.e("61859"),
                 n.e("90508"),
-                n.e("70205"),
                 n.e("49049"),
                 n.e("33285"),
                 n.e("38697"),
@@ -239,7 +237,7 @@ let j = (0, h.Un)({
                 n.e("97755"),
                 n.e("36745"),
                 n.e("62987"),
-                n.e("84927"),
+                n.e("60831"),
                 n.e("24920"),
                 n.e("11160"),
                 n.e("63141"),
@@ -481,7 +479,7 @@ class ei extends i.Component {
                                                       referring_location: o,
                                                       qr_code: !0,
                                                   }),
-                                              (window.location.href = (0, S.Gn)(
+                                              (window.location.href = (0, T.Gn)(
                                                   null != o && "" !== o ? o : "qr_code",
                                                   r,
                                               )),
@@ -494,7 +492,7 @@ class ei extends i.Component {
                                       render: () => {
                                           var e, t;
                                           let n = null == (e = I.default.getSuperProperties()) ? void 0 : e.os,
-                                              i = (0, T.o)(null != (t = window.location.search) ? t : "");
+                                              i = (0, S.o)(null != (t = window.location.search) ? t : "");
                                           if ("iOS" !== n && "Android" !== n)
                                               return (0, r.jsx)(o.l_, {
                                                   to:
@@ -503,7 +501,7 @@ class ei extends i.Component {
                                                           : N.Z5c.APP,
                                               });
                                           {
-                                              let e = (0, S.Gn)("app_open_from_email", n, i.mobile),
+                                              let e = (0, T.Gn)("app_open_from_email", n, i.mobile),
                                                   t = (0, c.zS)(e);
                                               null != t &&
                                                   I.default.track(N.rMx.DEEP_LINK_CLICKED, {

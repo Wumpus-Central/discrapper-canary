@@ -1,32 +1,27 @@
-n.d(t, { Z: () => h }), n(388685), n(997841);
+n.d(t, { Z: () => f }), n(388685), n(997841);
 var i = n(951288),
     r = n(647438),
-    l = n(442837),
-    s = n(481060),
+    s = n(442837),
+    l = n(481060),
     o = n(87051),
-    a = n(113449),
-    c = n(748756),
+    c = n(113449),
+    a = n(748756),
     u = n(686660),
-    d = n(122074),
-    g = n(9156),
-    b = n(621600),
-    p = n(981631),
-    f = n(490897),
+    d = n(9156),
+    g = n(621600),
+    b = n(981631),
+    p = n(490897),
     S = n(526761),
-    O = n(388032);
-function h(e) {
-    let t = (0, d.ng)(e, !0),
-        h = (0, d.U)();
-    return (0, i.jsxs)(s.sNh, {
+    h = n(388032);
+function f(e) {
+    return (0, i.jsxs)(l.sNh, {
         id: "notification",
-        label: (0, i.jsxs)(i.Fragment, {
-            children: [h, O.intl.string(O.t.HcoRu7)],
-        }),
+        label: h.intl.string(h.t.HcoRu7),
         action: () => {
-            (0, s.ZDy)(async () => {
-                let { default: t } = await Promise.all([n.e("15076"), n.e("76634")]).then(n.bind(n, 907941));
+            (0, l.ZDy)(async () => {
+                let { default: t } = await Promise.all([n.e("15076"), n.e("25759")]).then(n.bind(n, 907941));
                 return (n) => {
-                    var r, l;
+                    var r, s;
                     return (0, i.jsx)(
                         t,
                         ((r = (function (e) {
@@ -54,9 +49,9 @@ function h(e) {
                             }
                             return e;
                         })({}, n)),
-                        (l = l = { guildId: e }),
+                        (s = s = { guildId: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -64,8 +59,8 @@ function h(e) {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                              })(Object(s)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
                               }),
                         r),
                     );
@@ -75,92 +70,92 @@ function h(e) {
         children: [
             (function (e) {
                 let [t, n] = r.useState(!1),
-                    [d, h] = r.useState(!1),
-                    E = (0, l.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
-                    y = (0, l.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
-                    j = d ? u.s8.CUSTOM : (0, u.gs)(E, y),
+                    [f, E] = r.useState(!1),
+                    O = (0, s.e7)([d.ZP], () => d.ZP.getGuildUnreadSetting(e)),
+                    y = (0, s.e7)([d.ZP], () => d.ZP.getMessageNotifications(e)),
+                    j = f ? u.s8.CUSTOM : (0, u.gs)(O, y),
                     _ = (t) => {
-                        h(!1);
+                        E(!1);
                         let n = { message_notifications: t };
-                        t === p.bL.ALL_MESSAGES &&
-                            E !== f.i.ALL_MESSAGES &&
-                            (n.flags = (0, a.Q4)(g.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)),
-                            o.Z.updateGuildNotificationSettings(e, n, b.UE.notifications(t));
+                        t === b.bL.ALL_MESSAGES &&
+                            O !== p.i.ALL_MESSAGES &&
+                            (n.flags = (0, c.Q4)(d.ZP.getGuildFlags(e), S.vc.UNREADS_ALL_MESSAGES)),
+                            o.Z.updateGuildNotificationSettings(e, n, g.UE.notifications(t));
                     },
                     N = (t) => {
-                        h(!1);
-                        let n = g.ZP.getGuildFlags(e);
+                        E(!1);
+                        let n = d.ZP.getGuildFlags(e);
                         o.Z.updateGuildNotificationSettings(
                             e,
                             {
-                                flags: (0, a.Q4)(
+                                flags: (0, c.Q4)(
                                     n,
-                                    t === f.i.ALL_MESSAGES ? S.vc.UNREADS_ALL_MESSAGES : S.vc.UNREADS_ONLY_MENTIONS,
+                                    t === p.i.ALL_MESSAGES ? S.vc.UNREADS_ALL_MESSAGES : S.vc.UNREADS_ONLY_MENTIONS,
                                 ),
                             },
-                            b.UE.unreads(t),
+                            g.UE.unreads(t),
                         );
                     };
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsxs)(s.kSQ, {
+                        (0, i.jsxs)(l.kSQ, {
                             children: [
-                                (0, i.jsx)(s.k5B, {
+                                (0, i.jsx)(l.k5B, {
                                     id: "everything",
                                     group: "notification-preset",
                                     checked: j === u.s8.ALL_MESSAGES,
-                                    label: O.intl.string(O.t.hZrr6u),
-                                    action: () => ((0, c.V)(e, u.s8.ALL_MESSAGES), h(!1)),
+                                    label: h.intl.string(h.t.hZrr6u),
+                                    action: () => ((0, a.V)(e, u.s8.ALL_MESSAGES), E(!1)),
                                 }),
-                                (0, i.jsx)(s.k5B, {
+                                (0, i.jsx)(l.k5B, {
                                     id: "essentials",
                                     group: "notification-preset",
                                     checked: j === u.s8.MENTIONS,
-                                    label: O.intl.string(O.t.y59NJi),
-                                    action: () => ((0, c.V)(e, u.s8.MENTIONS), h(!1)),
+                                    label: h.intl.string(h.t.y59NJi),
+                                    action: () => ((0, a.V)(e, u.s8.MENTIONS), E(!1)),
                                 }),
-                                (0, i.jsx)(s.k5B, {
+                                (0, i.jsx)(l.k5B, {
                                     id: "nothing",
                                     group: "notification-preset",
                                     checked: j === u.s8.NOTHING,
-                                    label: O.intl.string(O.t["pGn/bG"]),
-                                    action: () => ((0, c.V)(e, u.s8.NOTHING), h(!1)),
+                                    label: h.intl.string(h.t["pGn/bG"]),
+                                    action: () => ((0, a.V)(e, u.s8.NOTHING), E(!1)),
                                 }),
-                                (0, i.jsx)(s.k5B, {
+                                (0, i.jsx)(l.k5B, {
                                     id: "custom",
                                     group: "notification-preset",
                                     checked: j === u.s8.CUSTOM,
-                                    action: () => (n(!0), h(!0)),
-                                    label: O.intl.string(O.t["32yow8"]),
+                                    action: () => (n(!0), E(!0)),
+                                    label: h.intl.string(h.t["32yow8"]),
                                 }),
                             ],
                         }),
                         (j === u.s8.CUSTOM || t) &&
-                            (0, i.jsxs)(s.kSQ, {
+                            (0, i.jsxs)(l.kSQ, {
                                 children: [
                                     (0, i.jsxs)(
-                                        s.sNh,
+                                        l.sNh,
                                         {
                                             id: "unread_setting",
                                             label: "Unread Badges",
                                             children: [
-                                                (0, i.jsx)(s.k5B, {
+                                                (0, i.jsx)(l.k5B, {
                                                     id: "unread_setting_all_messages",
                                                     group: "unread_setting",
-                                                    checked: E === f.i.ALL_MESSAGES,
-                                                    label: O.intl.string(O.t["HVah//"]),
-                                                    action: () => N(f.i.ALL_MESSAGES),
+                                                    checked: O === p.i.ALL_MESSAGES,
+                                                    label: h.intl.string(h.t["HVah//"]),
+                                                    action: () => N(p.i.ALL_MESSAGES),
                                                 }),
-                                                (0, i.jsx)(s.k5B, {
+                                                (0, i.jsx)(l.k5B, {
                                                     id: "unread_setting_mention_only",
                                                     group: "unread_setting",
-                                                    checked: E === f.i.ONLY_MENTIONS,
-                                                    label: O.intl.string(O.t["tu+ZWF"]),
-                                                    action: () => N(f.i.ONLY_MENTIONS),
-                                                    disabled: E !== f.i.ONLY_MENTIONS && y === p.bL.ALL_MESSAGES,
+                                                    checked: O === p.i.ONLY_MENTIONS,
+                                                    label: h.intl.string(h.t["tu+ZWF"]),
+                                                    action: () => N(p.i.ONLY_MENTIONS),
+                                                    disabled: O !== p.i.ONLY_MENTIONS && y === b.bL.ALL_MESSAGES,
                                                     subtext:
-                                                        E !== f.i.ONLY_MENTIONS && y === p.bL.ALL_MESSAGES
-                                                            ? O.intl.string(O.t.eP8yWV)
+                                                        O !== p.i.ONLY_MENTIONS && y === b.bL.ALL_MESSAGES
+                                                            ? h.intl.string(h.t.eP8yWV)
                                                             : void 0,
                                                 }),
                                             ],
@@ -168,35 +163,35 @@ function h(e) {
                                         "unread_setting",
                                     ),
                                     (0, i.jsxs)(
-                                        s.sNh,
+                                        l.sNh,
                                         {
                                             id: "push_settings",
-                                            label: O.intl.string(O.t.HcoRu7),
+                                            label: h.intl.string(h.t.HcoRu7),
                                             children: [
-                                                (0, i.jsx)(s.k5B, {
+                                                (0, i.jsx)(l.k5B, {
                                                     group: "notification-preset",
                                                     id: "push_settings_everything",
-                                                    label: O.intl.string(O.t["HVah//"]),
-                                                    checked: y === p.bL.ALL_MESSAGES,
-                                                    action: () => _(p.bL.ALL_MESSAGES),
+                                                    label: h.intl.string(h.t["HVah//"]),
+                                                    checked: y === b.bL.ALL_MESSAGES,
+                                                    action: () => _(b.bL.ALL_MESSAGES),
                                                     subtext:
-                                                        E !== f.i.ALL_MESSAGES && y !== p.bL.ALL_MESSAGES
-                                                            ? O.intl.string(O.t.idXSbG)
+                                                        O !== p.i.ALL_MESSAGES && y !== b.bL.ALL_MESSAGES
+                                                            ? h.intl.string(h.t.idXSbG)
                                                             : void 0,
                                                 }),
-                                                (0, i.jsx)(s.k5B, {
+                                                (0, i.jsx)(l.k5B, {
                                                     group: "notification-preset",
                                                     id: "push_settings_everything_mention",
-                                                    checked: y === p.bL.ONLY_MENTIONS,
-                                                    label: O.intl.string(O.t["tu+ZWF"]),
-                                                    action: () => _(p.bL.ONLY_MENTIONS),
+                                                    checked: y === b.bL.ONLY_MENTIONS,
+                                                    label: h.intl.string(h.t["tu+ZWF"]),
+                                                    action: () => _(b.bL.ONLY_MENTIONS),
                                                 }),
-                                                (0, i.jsx)(s.k5B, {
+                                                (0, i.jsx)(l.k5B, {
                                                     group: "notification-preset",
                                                     id: "push_settings_everything_nothing",
-                                                    label: O.intl.string(O.t.X4wWUl),
-                                                    checked: y === p.bL.NO_MESSAGES,
-                                                    action: () => _(p.bL.NO_MESSAGES),
+                                                    label: h.intl.string(h.t.X4wWUl),
+                                                    checked: y === b.bL.NO_MESSAGES,
+                                                    action: () => _(b.bL.NO_MESSAGES),
                                                 }),
                                             ],
                                         },
@@ -207,76 +202,75 @@ function h(e) {
                     ],
                 });
             })(e),
-            null != t && (0, i.jsx)(s.kSQ, { children: t }),
             (function (e) {
-                let t = (0, l.cj)([g.ZP], () => ({
-                        highligths: g.ZP.getNotifyHighlights(e),
-                        mobilePush: g.ZP.isMobilePushEnabled(e),
-                        suppressRoles: g.ZP.isSuppressRolesEnabled(e),
-                        suppressEveryone: g.ZP.isSuppressEveryoneEnabled(e),
-                        muteScheduledEvents: g.ZP.isMuteScheduledEventsEnabled(e),
+                let t = (0, s.cj)([d.ZP], () => ({
+                        highligths: d.ZP.getNotifyHighlights(e),
+                        mobilePush: d.ZP.isMobilePushEnabled(e),
+                        suppressRoles: d.ZP.isSuppressRolesEnabled(e),
+                        suppressEveryone: d.ZP.isSuppressEveryoneEnabled(e),
+                        muteScheduledEvents: d.ZP.isMuteScheduledEventsEnabled(e),
                     })),
                     n = o.Z.updateGuildNotificationSettings;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsxs)(s.kSQ, {
+                        (0, i.jsxs)(l.kSQ, {
                             children: [
-                                (0, i.jsx)(s.S89, {
+                                (0, i.jsx)(l.S89, {
                                     id: "mention",
                                     checked: t.suppressEveryone,
-                                    label: O.intl.format(O.t.OWiWAg, {}),
+                                    label: h.intl.format(h.t.OWiWAg, {}),
                                     action: () =>
                                         n(
                                             e,
                                             { suppress_everyone: !t.suppressEveryone },
-                                            b.UE.suppressEveryone(!t.suppressEveryone),
+                                            g.UE.suppressEveryone(!t.suppressEveryone),
                                         ),
                                 }),
-                                (0, i.jsx)(s.S89, {
+                                (0, i.jsx)(l.S89, {
                                     id: "roles",
                                     checked: t.suppressRoles,
-                                    label: O.intl.string(O.t["O/QdoK"]),
+                                    label: h.intl.string(h.t["O/QdoK"]),
                                     action: () =>
                                         n(
                                             e,
                                             { suppress_roles: !t.suppressRoles },
-                                            b.UE.suppressRoles(!t.suppressRoles),
+                                            g.UE.suppressRoles(!t.suppressRoles),
                                         ),
                                 }),
-                                (0, i.jsx)(s.S89, {
+                                (0, i.jsx)(l.S89, {
                                     id: "hightlight",
-                                    label: O.intl.string(O.t.gPuteH),
-                                    checked: t.highligths === p.gLR.ENABLED,
+                                    label: h.intl.string(h.t.gPuteH),
+                                    checked: t.highligths === b.gLR.ENABLED,
                                     action: () =>
                                         n(
                                             e,
                                             {
                                                 notify_highlights:
-                                                    t.highligths === p.gLR.ENABLED ? p.gLR.DISABLED : p.gLR.ENABLED,
+                                                    t.highligths === b.gLR.ENABLED ? b.gLR.DISABLED : b.gLR.ENABLED,
                                             },
-                                            b.UE.highlights(t.highligths !== p.gLR.ENABLED),
+                                            g.UE.highlights(t.highligths !== b.gLR.ENABLED),
                                         ),
                                 }),
                             ],
                         }),
-                        (0, i.jsxs)(s.kSQ, {
+                        (0, i.jsxs)(l.kSQ, {
                             children: [
-                                (0, i.jsx)(s.S89, {
+                                (0, i.jsx)(l.S89, {
                                     id: "event",
                                     checked: t.muteScheduledEvents,
-                                    label: O.intl.string(O.t.ONG3Y2),
+                                    label: h.intl.string(h.t.ONG3Y2),
                                     action: () =>
                                         n(
                                             e,
                                             { mute_scheduled_events: !t.muteScheduledEvents },
-                                            b.UE.mutedEvents(!t.muteScheduledEvents),
+                                            g.UE.mutedEvents(!t.muteScheduledEvents),
                                         ),
                                 }),
-                                (0, i.jsx)(s.S89, {
+                                (0, i.jsx)(l.S89, {
                                     id: "mobile_push",
                                     checked: t.mobilePush,
-                                    label: O.intl.string(O.t["h1DL6+"]),
-                                    action: () => n(e, { mobile_push: !t.mobilePush }, b.UE.mobilePush(!t.mobilePush)),
+                                    label: h.intl.string(h.t["h1DL6+"]),
+                                    action: () => n(e, { mobile_push: !t.mobilePush }, g.UE.mobilePush(!t.mobilePush)),
                                 }),
                             ],
                         }),

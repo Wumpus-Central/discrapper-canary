@@ -33,9 +33,9 @@ class f extends r.Z {
             t = a.Z.getLastSoundpackExperimentId(),
             n = s.Z.experiment.definition.id,
             r = l.Z.isEligible();
-        r || (null == t && e === u.YC.CLASSIC)
+        r || (null == t && e === u.Y.CLASSIC)
             ? r && null != s.Z.soundpack && n !== t && e !== s.Z.soundpack && (0, i.c)(s.Z.soundpack, n)
-            : (0, i.c)(u.YC.CLASSIC, null);
+            : (0, i.c)(u.Y.CLASSIC, null);
     }
     updateRingtone() {
         if (l.Z.isEligible()) {

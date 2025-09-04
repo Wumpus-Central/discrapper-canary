@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(431),
     y = n(774343),
     _ = n(417363),
-    j = n(941128),
-    v = n(780570),
+    v = n(941128),
+    j = n(780570),
     x = n(278464),
     C = n(276952),
     E = n(682662),
@@ -26,8 +26,8 @@ var r = n(951288),
     P = n(674552),
     I = n(981631),
     N = n(474936),
-    w = n(871465),
-    Z = n(388032),
+    Z = n(871465),
+    w = n(388032),
     T = n(815141);
 let A = {
     origin: {
@@ -45,17 +45,17 @@ function R(e) {
     var t, n;
     let { selected: o, user: p, badge: h, link: m, showProgressBadge: b } = e,
         [O, y] = i.useState(!1),
-        [_, j] = i.useState(!1),
-        [v, x] = i.useState(null),
+        [_, v] = i.useState(!1),
+        [j, x] = i.useState(null),
         [N, R] = i.useState(0),
         D = (0, l.Ie)("home"),
         M = (0, d.oq)().activePanel === d.wh.APP_ICON,
         L = () => {
-            x(null), R(0), clearTimeout(v);
+            x(null), R(0), clearTimeout(j);
         };
     if (null == p) return null;
-    let k = Z.intl.string(Z.t.YUU0RE);
-    _ && (k = a.K.get(I.wli) ? Z.intl.string(Z.t.nkq1l5) : Z.intl.string(Z.t.Be8Q5O));
+    let k = w.intl.string(w.t.YUU0RE);
+    _ && (k = a.K.get(I.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
     let U = null;
     !o &&
         b &&
@@ -102,21 +102,21 @@ function R(e) {
                         onClick: () => {
                             if (
                                 !__OVERLAY__ &&
-                                (null != v && clearTimeout(v), x(setTimeout(L, 500)), R(N + 1), 15 === N)
+                                (null != j && clearTimeout(j), x(setTimeout(L, 500)), R(N + 1), 15 === N)
                             ) {
                                 L();
                                 let e = !a.K.get(I.wli);
                                 a.K.set(I.wli, e),
-                                    e && a.K.set(w.O5, !0),
+                                    e && a.K.set(Z.O, !0),
                                     e ? (0, f.GN)("discodo") : (0, f.GN)("user_leave"),
-                                    j(!0),
+                                    v(!0),
                                     setTimeout(() => {
-                                        j(!1);
+                                        v(!1);
                                     }, 1000);
                             }
                         },
                         selected: G,
-                        ariaLabel: Z.intl.string(Z.t.YUU0RE),
+                        ariaLabel: w.intl.string(w.t.YUU0RE),
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": o,
                     },
@@ -178,10 +178,10 @@ function R(e) {
 }
 function D() {
     let e = (0, x.n)(),
-        t = (0, o.e7)([j.Z, _.Z], () => {
-            let e = (0, c.E)(j.Z.activeItems, _.Z),
-                { total: t, progress: n } = v.lK(e),
-                r = v.xI(n, t);
+        t = (0, o.e7)([v.Z, _.Z], () => {
+            let e = (0, c.E)(v.Z.activeItems, _.Z),
+                { total: t, progress: n } = j.lK(e),
+                r = j.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, h.If)(),

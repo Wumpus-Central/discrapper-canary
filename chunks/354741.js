@@ -1,71 +1,69 @@
-n.r(t), n.d(t, { default: () => _ });
-var r = n(951288);
+n.r(t), n.d(t, { default: () => y });
+var i = n(951288);
 n(647438);
-var i = n(481060),
+var r = n(481060),
     l = n(239091),
     a = n(883385),
     o = n(108843),
-    c = n(947440),
-    u = n(100527),
-    s = n(299206),
-    d = n(895563),
+    d = n(947440),
+    c = n(100527),
+    u = n(299206),
+    s = n(895563),
     f = n(489618),
-    O = n(769409),
-    b = n(122074),
-    h = n(314897),
-    j = n(858687),
-    y = n(461535),
+    h = n(769409),
+    v = n(314897),
+    O = n(858687),
+    b = n(461535),
     g = n(776568),
     p = n(981631),
-    m = n(388032);
-let _ = (0, o.Z)(
+    _ = n(388032);
+let y = (0, o.Z)(
     (0, a.Z)(
         function (e) {
             let { channel: t, selected: a, onSelect: o } = e,
-                _ = t.isOwner(h.default.getId()),
-                v = (0, y.Z)(t),
-                N = (0, g.ZP)(t),
-                S = (0, b.Uf)(p.aIL, t.id, "top"),
-                { rearrangeContextMenu: x } = f.Z.useExperiment({ location: u.Z.GROUP_DM_CONTEXT_MENU }),
-                C = (0, j.Z)(t, a),
-                P = (0, s.Z)({
+                p = t.isOwner(v.default.getId()),
+                y = (0, b.Z)(t),
+                E = (0, g.ZP)(t),
+                { rearrangeContextMenu: C } = f.Z.useExperiment({ location: c.Z.GROUP_DM_CONTEXT_MENU }),
+                m = (0, O.Z)(t, a),
+                Z = (0, u.Z)({
                     id: t.id,
-                    label: m.intl.string(m.t.gFHI3t),
+                    label: _.intl.string(_.t.gFHI3t),
                 }),
-                E = (0, c.Z)(t),
-                T = (0, d.l)(t),
-                I = (0, d.P)(t),
-                U = _
-                    ? (0, r.jsx)(i.sNh, {
+                j = (0, d.Z)(t),
+                A = (0, s.l)(t),
+                N = (0, s.P)(t),
+                P = p
+                    ? (0, i.jsx)(r.sNh, {
                           id: "instant-invites",
-                          label: m.intl.string(m.t.ngRFjY),
+                          label: _.intl.string(_.t.ngRFjY),
                           action: () =>
-                              (0, i.ZDy)(async () => {
+                              (0, r.ZDy)(async () => {
                                   let { default: e } = await n.e("97573").then(n.bind(n, 892382));
                                   return (n) =>
-                                      (0, r.jsx)(
+                                      (0, i.jsx)(
                                           e,
                                           (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
-                                                      r = Object.keys(n);
+                                                      i = Object.keys(n);
                                                   "function" == typeof Object.getOwnPropertySymbols &&
-                                                      (r = r.concat(
+                                                      (i = i.concat(
                                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                           }),
                                                       )),
-                                                      r.forEach(function (t) {
-                                                          var r;
-                                                          (r = n[t]),
+                                                      i.forEach(function (t) {
+                                                          var i;
+                                                          (i = n[t]),
                                                               t in e
                                                                   ? Object.defineProperty(e, t, {
-                                                                        value: r,
+                                                                        value: i,
                                                                         enumerable: !0,
                                                                         configurable: !0,
                                                                         writable: !0,
                                                                     })
-                                                                  : (e[t] = r);
+                                                                  : (e[t] = i);
                                                       });
                                               }
                                               return e;
@@ -76,37 +74,37 @@ let _ = (0, o.Z)(
                     : null;
             return null == t || t.isManaged()
                 ? null
-                : (0, r.jsxs)(i.v2r, {
+                : (0, i.jsxs)(r.v2r, {
                       navId: "gdm-context",
-                      "aria-label": m.intl.string(m.t.Xm41aW),
+                      "aria-label": _.intl.string(_.t.Xm41aW),
                       onClose: l.Zy,
                       onSelect: o,
                       children: [
-                          (0, r.jsxs)(i.kSQ, {
-                              children: [v, S, T],
+                          (0, i.jsxs)(r.kSQ, {
+                              children: [y, A],
                           }),
-                          (0, r.jsxs)(i.kSQ, {
+                          (0, i.jsxs)(r.kSQ, {
                               children: [
-                                  !x && U,
-                                  (0, r.jsx)(i.sNh, {
+                                  !C && P,
+                                  (0, i.jsx)(r.sNh, {
                                       id: "edit-gdm",
-                                      label: m.intl.string(m.t["5Q9+/P"]),
-                                      action: () => (0, O.B)(t.id, u.Z.GROUP_DM_CONTEXT_MENU),
-                                      subtext: x ? m.intl.string(m.t.pPwcQU) : void 0,
+                                      label: _.intl.string(_.t["5Q9+/P"]),
+                                      action: () => (0, h.B)(t.id, c.Z.GROUP_DM_CONTEXT_MENU),
+                                      subtext: C ? _.intl.string(_.t.pPwcQU) : void 0,
                                   }),
-                                  x && U,
+                                  C && P,
                               ],
                           }),
-                          (0, r.jsx)(i.kSQ, { children: E }),
-                          (0, r.jsx)(i.kSQ, { children: !x && N }),
-                          (0, r.jsxs)(i.kSQ, {
-                              children: [x && N, I, C],
+                          (0, i.jsx)(r.kSQ, { children: j }),
+                          (0, i.jsx)(r.kSQ, { children: !C && E }),
+                          (0, i.jsxs)(r.kSQ, {
+                              children: [C && E, N, m],
                           }),
-                          (0, r.jsx)(i.kSQ, { children: P }),
+                          (0, i.jsx)(r.kSQ, { children: Z }),
                       ],
                   });
         },
         { object: p.qAy.CONTEXT_MENU },
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_MENU],
+    [c.Z.CONTEXT_MENU, c.Z.GROUP_DM_MENU],
 );

@@ -15,7 +15,7 @@ let c = {
     startTimeMs: 1734631200000,
     endTimeMs: 1735952400000,
     isDesktopOnly: !0,
-    soundpack: i.YC.WINTER_HOLIDAY,
+    soundpack: i.Y.WINTER_HOLIDAY,
     soundpackLabel: a.t.Z5OQNj,
     appSpinnerSources: {
         webmDark: o,

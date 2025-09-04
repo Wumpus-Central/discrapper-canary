@@ -21,13 +21,13 @@ var r,
     j = n(430824),
     x = n(306680),
     C = n(944486),
-    S = n(938475),
-    E = n(483360),
+    E = n(938475),
+    S = n(483360),
     P = n(459273),
     I = n(585483),
     N = n(63063),
-    w = n(51596),
-    Z = n(823385),
+    Z = n(51596),
+    w = n(823385),
     T = n(415795),
     A = n(670512),
     R = n(558631),
@@ -122,11 +122,11 @@ let V = s.ZP.connectStores([x.ZP, _.Z], (e) => {
             category: _.Z.getChannel(t.parent_id),
         };
     })(F),
-    H = s.ZP.connectStores([S.ZP], (e) => {
+    H = s.ZP.connectStores([E.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(F),
     z = s.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
@@ -181,10 +181,10 @@ class q extends l.PureComponent {
                   }));
     }
     close() {
-        (0, w.Cp)();
+        (0, Z.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, w.yC)(e);
+        this.setState({ query: e }), (0, Z.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -303,10 +303,10 @@ class q extends l.PureComponent {
                 !1 !== e && this.setState({ mouseFocusDisabled: !1 });
             }),
             k(this, "focusResult", (e) => {
-                this.state.mouseFocusDisabled || (0, w.tF)(this.props.results.indexOf(e));
+                this.state.mouseFocusDisabled || (0, Z.tF)(this.props.results.indexOf(e));
             }),
             k(this, "selectResult", (e) => {
-                (0, w.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
+                (0, Z.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             k(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -325,19 +325,19 @@ class q extends l.PureComponent {
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("54408"),
-                                n.e("42926"),
+                                n.e("90746"),
                                 n.e("88479"),
                                 n.e("56534"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("35237"),
+                                n.e("63933"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
                                     G(U({}, n), {
                                         guild: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: Z.Cp,
                                         hideSettings: !0,
                                     }),
                                 );
@@ -364,7 +364,7 @@ class q extends l.PureComponent {
                                             G(U({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -383,7 +383,7 @@ class q extends l.PureComponent {
                                             G(U({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -397,7 +397,7 @@ class q extends l.PureComponent {
                                             e,
                                             G(U({}, t), {
                                                 channel: r,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -410,7 +410,7 @@ class q extends l.PureComponent {
                                             G(U({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -423,7 +423,7 @@ class q extends l.PureComponent {
                         break;
                     case f.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("57789"), n.e("81239")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("22981")]).then(
                                 n.bind(n, 354741),
                             );
                             return (n) =>
@@ -432,7 +432,7 @@ class q extends l.PureComponent {
                                     G(U({}, n), {
                                         channel: t.record,
                                         selected: C.Z.getChannelId() === t.record.id,
-                                        onSelect: w.Cp,
+                                        onSelect: Z.Cp,
                                     }),
                                 );
                         });
@@ -446,7 +446,7 @@ class q extends l.PureComponent {
                                     e,
                                     G(U({}, n), {
                                         user: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: Z.Cp,
                                     }),
                                 );
                         });
@@ -460,11 +460,11 @@ class q extends l.PureComponent {
                     { selectedIndex: l } = this.props;
                 switch (i) {
                     case "escape":
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, w.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, Z.Cp)();
                         return;
                     case "k":
                         (!0 === e.ctrlKey || !0 === e.metaKey) &&
-                            (e.preventDefault(), e.stopPropagation(), (0, w.Cp)());
+                            (e.preventDefault(), e.stopPropagation(), (0, Z.Cp)());
                         return;
                     case "enter": {
                         if (-1 === l) return;
@@ -490,7 +490,7 @@ class q extends l.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, w.tF)(l);
+                e.preventDefault(), (0, Z.tF)(l);
             }),
             k(this, "handleGlobalPaste", (e) => {
                 var t, n;
@@ -646,7 +646,7 @@ class q extends l.PureComponent {
     }
 }
 function X(e) {
-    let t = (0, s.cj)([Z.Z], () => Z.Z.getProps()),
+    let t = (0, s.cj)([w.Z], () => w.Z.getProps()),
         n = (0, y.Pt)(),
         r = R.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
         o = l.useMemo(
@@ -676,7 +676,7 @@ function X(e) {
                 searchableTitles: [M.intl.string(M.t["3D5yo6"])],
                 path: D.Z5c.SETTINGS("account"),
             }),
-                (0, E.gF)(e);
+                (0, S.gF)(e);
         }, [o, r]),
         (0, i.jsx)(q, U({}, t, e))
     );

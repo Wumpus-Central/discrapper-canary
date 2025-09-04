@@ -22,7 +22,6 @@ n.d(t, {
     ks: () => H,
     lX: () => y,
     m_: () => h,
-    qH: () => D,
     tj: () => E,
     uw: () => C,
     wN: () => G,
@@ -49,7 +48,7 @@ function f(e, t) {
         let n = d[t.premiumType];
         if (null == n)
             return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = V[n];
+        let r = F[n];
         if (null == r)
             return (
                 u.warn(
@@ -102,7 +101,7 @@ let k = new _(r.q.INCREASED_GUILD_LIMIT),
     G = new _("increasedVideoUploadQuality"),
     B = new _("uploadLargeFiles"),
     Z = new _(r.q.CHAT_WALLPAPERS),
-    V = Object.freeze({
+    F = Object.freeze({
         [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, M, G, B, A]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, N, P, x, G, B, A]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
@@ -136,7 +135,7 @@ let k = new _(r.q.INCREASED_GUILD_LIMIT),
             Z,
         ]),
     }),
-    F = [N, R];
+    V = [N, R];
 function H(e, t, n) {
-    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && F.includes(e))) && e.getFeatureValue(t);
+    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && V.includes(e))) && e.getFeatureValue(t);
 }

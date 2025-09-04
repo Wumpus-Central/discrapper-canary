@@ -1,4 +1,4 @@
-n.d(t, { j: () => y });
+n.d(t, { j: () => _ });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -55,7 +55,7 @@ function b(e, t) {
         e
     );
 }
-let _ = (e) => {
+let y = (e) => {
         let { channel: t } = e;
         return (0, d.m$)({ channelId: t.id })
             ? (0, r.jsx)(l.ua7, {
@@ -72,7 +72,7 @@ let _ = (e) => {
               })
             : null;
     },
-    y = i.memo(function (e) {
+    _ = i.memo(function (e) {
         let { channel: t } = e,
             i = t.id,
             d = (0, s.ZP)(t);
@@ -82,8 +82,8 @@ let _ = (e) => {
                     text: f.intl.string(f.t["5Q9+/P"]),
                     position: "bottom",
                     children: (e) => {
-                        var { onMouseEnter: s, onClick: _ } = e,
-                            y = (function (e, t) {
+                        var { onMouseEnter: s, onClick: y } = e,
+                            _ = (function (e, t) {
                                 if (null == e) return {};
                                 var n,
                                     r,
@@ -108,16 +108,16 @@ let _ = (e) => {
                             })(e, ["onMouseEnter", "onClick"]);
                         return (0, r.jsxs)(
                             l.P3F,
-                            b(g({}, y), {
+                            b(g({}, _), {
                                 className: m.hoverableContainer,
                                 onClick: () => {
-                                    null == _ || _(), (0, u.B)(i, o.Z.HEADER_BAR);
+                                    null == y || y(), (0, u.B)(i, o.Z.HEADER_BAR);
                                 },
                                 onContextMenu: (e) =>
                                     (0, a.jW)(
                                         e,
                                         () =>
-                                            Promise.all([n.e("79695"), n.e("70205"), n.e("57789"), n.e("71696")])
+                                            Promise.all([n.e("79695"), n.e("22981")])
                                                 .then(n.bind(n, 354741))
                                                 .then((e) => {
                                                     let { default: n } = e;
@@ -166,7 +166,7 @@ let _ = (e) => {
                         );
                     },
                 }),
-                (0, r.jsx)(_, { channel: t }),
+                (0, r.jsx)(y, { channel: t }),
             ],
         });
     });
