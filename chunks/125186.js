@@ -1,7 +1,8 @@
 n.d(t, {
-    lG: () => p,
-    ub: () => h,
+    lG: () => d,
+    ub: () => f,
 }),
+    n(415506),
     n(410992),
     n(227481),
     n(730884),
@@ -14,52 +15,21 @@ n.d(t, {
     n(121784),
     n(644351),
     n(146733),
-    n(953529),
-    n(388685),
-    n(415506),
     n(190126),
     n(368063),
     n(65234),
     n(111804),
     n(490233),
-    n(97749);
+    n(97749),
+    n(388685);
 var r = n(108131),
     i = n.n(r),
-    a = n(605387),
-    o = n.n(a);
-let s = new (n(710845).Z)("WebP"),
-    l = n(4667),
-    c = 0;
-function u(e) {
-    if (4 !== e.ctype && 6 !== e.ctype) return !1;
-    let t = new Uint8Array(o().toRGBA8(e));
-    for (let e = 3; e < t.length; e += 4) if (t[e] < 255) return !0;
-    return !1;
-}
-async function d(e) {
-    let t = await l.load(e, {
-        async: !0,
-        expanded: !0,
-        includeUnknown: !0,
-    });
-    if (null == t.icc) return s.verbose("[webp] no ICC profile detected - assuming sRGB"), !0;
-    let n = t.icc;
-    for (let e of Object.keys(n)) {
-        var r;
-        if (
-            "ICC Description" === e &&
-            (null == (r = n[e]) ? void 0 : r.description) != null &&
-            "" !== n[e].description
-        ) {
-            if (n[e].description.toLowerCase().includes("srgb"))
-                return s.verbose("[webp] sRGB ICC profile description found: ".concat(n[e].description)), !0;
-            return s.verbose("[webp] non sRGB ICC profile description found: ".concat(n[e].description)), !1;
-        }
-    }
-    return s.verbose("[webp] ICC profile detected but could not parse description - assuming non-sRGB"), !1;
-}
-async function f(e) {
-    let t;
+    a = n(710845),
+    o = n(803675);
+let s = new a.Z("WebP"),
+    l = 0;
+async function c(e) {
+    let t, n;
     if ("image/webp" === e.type) return s.verbose("[WebP] File already WebP format"), "already_webp";
     if (!["image/png"].includes(e.type))
         return s.verbose("[WebP] Unsupported format: ".concat(e.type)), "unsupported_format";
@@ -77,25 +47,25 @@ async function f(e) {
         return s.warn("[WebP] Failed to read file data:", e), "conversion_failed";
     }
     try {
-        let e = o().decode(t);
-        if (u(e)) return s.verbose("[webp] png uses actual transparency - skipping conversion"), "has_transparency";
-        if (null != e.tabs.acTL)
-            return s.verbose("[webp] png is animated (apng) - skipping conversion"), "animated_image";
+        if (((n = o.x.create(t)), null == n)) throw Error("DiscordImage.create returned null");
+        if (n.hasTransparency())
+            return s.verbose("[webp] png uses actual transparency - skipping conversion"), "has_transparency";
+        if (n.isAnimated()) return s.verbose("[webp] png is animated (apng) - skipping conversion"), "animated_image";
     } catch (e) {
         return s.warn("[WebP] PNG analysis failed:", e), "corrupted_file";
     }
     try {
-        if (!(await d(t))) return "icc_non_srgb_profile";
+        if (!(await n.hasSrgbIccProfile())) return "icc_non_srgb_profile";
     } catch (e) {
         return s.warn("[WebP] ICC profile detection failed:", e), "icc_detection_failed";
     }
     return null;
 }
-function _(e) {
+function u(e) {
     let t = new Uint8Array(e.data.buffer);
     return i()(t).toString(16);
 }
-async function p(e) {
+async function d(e) {
     let t, n;
     if (null == e) throw Error("file is null or undefined");
     s.verbose("[WebP] Starting conversion for: ".concat(e.name));
@@ -113,22 +83,22 @@ async function p(e) {
             };
         };
     try {
-        let a = await f(e);
+        let a = await c(e);
         if (null != a) return s.verbose("[WebP] Conversion rejected: ".concat(a)), i(a);
         let o = document.createElement("canvas"),
-            l = o.getContext("2d");
-        if (null == l) throw Error("could not get canvas context");
-        let u = new Image(),
-            d = URL.createObjectURL(e);
+            d = o.getContext("2d");
+        if (null == d) throw Error("could not get canvas context");
+        let f = new Image(),
+            _ = URL.createObjectURL(e);
         try {
             await new Promise((e, t) => {
-                (u.onload = () => e()), (u.onerror = () => t(Error("failed to load image"))), (u.src = d);
+                (f.onload = () => e()), (f.onerror = () => t(Error("failed to load image"))), (f.src = _);
             }),
-                (o.width = u.width),
-                (o.height = u.height),
-                l.drawImage(u, 0, 0);
+                (o.width = f.width),
+                (o.height = f.height),
+                d.drawImage(f, 0, 0);
         } finally {
-            URL.revokeObjectURL(d);
+            URL.revokeObjectURL(_);
         }
         let p = await new Promise((e) => {
             o.toBlob(e, "image/webp", 1);
@@ -136,22 +106,22 @@ async function p(e) {
         if (null == p) throw Error("failed to convert to webp");
         {
             let n = performance.now(),
-                r = await l.getImageData(0, 0, o.width, o.height);
-            l.clearRect(0, 0, o.width, o.height);
+                r = await d.getImageData(0, 0, o.width, o.height);
+            d.clearRect(0, 0, o.width, o.height);
             let a = new Image(),
-                c = URL.createObjectURL(p);
+                l = URL.createObjectURL(p);
             try {
                 await new Promise((e, t) => {
-                    (a.onload = () => e()), (a.onerror = () => t(Error("failed to load image"))), (a.src = c);
+                    (a.onload = () => e()), (a.onerror = () => t(Error("failed to load image"))), (a.src = l);
                 }),
-                    l.drawImage(a, 0, 0);
+                    d.drawImage(a, 0, 0);
             } finally {
-                URL.revokeObjectURL(c);
+                URL.revokeObjectURL(l);
             }
-            let u = await l.getImageData(0, 0, o.width, o.height),
-                d = _(r),
-                f = _(u),
-                h = d === f;
+            let c = await d.getImageData(0, 0, o.width, o.height),
+                f = u(r),
+                _ = u(c),
+                h = f === _;
             if (
                 ((t = performance.now() - n),
                 s.verbose(
@@ -160,9 +130,9 @@ async function p(e) {
                         "fileLength={".concat(e.size, "} ") +
                         "width=".concat(a.width, " ") +
                         "height=".concat(a.height, " ") +
-                        "pixelHash=".concat(d, " ") +
+                        "pixelHash=".concat(f, " ") +
                         "mezzanineFileLength={".concat(p.size, "} ") +
-                        "mezzaninePixelHash=".concat(f, " ") +
+                        "mezzaninePixelHash=".concat(_, " ") +
                         "match=".concat(h, " ") +
                         "elapsed_ms=".concat(Math.round(t)),
                 ),
@@ -172,9 +142,9 @@ async function p(e) {
         }
         let h = e.size > 0 ? p.size / e.size : 1,
             m = 1 - h;
-        if (m < c)
+        if (m < l)
             return (
-                s.verbose("[WebP] Insufficient savings: ".concat(Math.round(100 * m), "% < ").concat(100 * c, "%")),
+                s.verbose("[WebP] Insufficient savings: ".concat(Math.round(100 * m), "% < ").concat(100 * l, "%")),
                 i("insufficient_savings", p.size)
             );
         let g = e.name.lastIndexOf("."),
@@ -201,6 +171,6 @@ async function p(e) {
         return s.error("[WebP] Conversion failed for ".concat(e.name, ":"), t), i("conversion_failed");
     }
 }
-function h(e) {
+function f(e) {
     return e.success && null != e.convertedFile ? e.convertedFile : e.originalFile;
 }
