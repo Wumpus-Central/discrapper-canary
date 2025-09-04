@@ -3865,6 +3865,7 @@ var nb = (function (e) {
             (e.REGISTER_INPUT_FOCUS = "register_input_focus"),
             (e.REGISTER_INPUT_BLUR = "register_input_blur"),
             (e.SESSION_START = "session_start"),
+            (e.APP_BACK_FORWARD_NAVIGATED = "app_back_forward_navigated"),
             (e.EXTERNAL_FINGERPRINT_DROPPED = "external_fingerprint_dropped"),
             (e.EXTERNAL_DYNAMIC_LINK_RECEIVED = "external_dynamic_link_received"),
             (e.DEEP_LINK_CLICKED = "deep_link_clicked"),
