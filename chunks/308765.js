@@ -383,6 +383,11 @@ let i = {
         ],
         inlineRequire: () => n(485287).ZP,
     },
+    SprigEventManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(402804).Z,
+        hasStoreChangeListeners: !0,
+    },
     SubscriptionManager: {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(892264).Z,

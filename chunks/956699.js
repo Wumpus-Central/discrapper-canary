@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eI }), n(388685), n(49124), n(35282), n(781311), n(415506);
+n.d(t, { Z: () => eO }), n(388685), n(49124), n(35282), n(781311), n(415506);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -32,27 +32,25 @@ var r = n(951288),
     x = n(371651),
     L = n(398269),
     j = n(921801),
-    M = n(309056),
-    k = n(55937),
-    U = n(857192),
-    G = n(558724),
-    B = n(808506),
-    Z = n(626135),
-    F = n(709054),
-    V = n(998502),
-    H = n(210887),
-    Y = n(695346),
-    W = n(306052),
-    K = n(10298),
-    z = n(526156),
-    q = n(726985),
-    X = n(981631),
-    Q = n(908442),
-    J = n(674336),
-    $ = n(620842),
-    ee = n(197571),
-    et = n(154257);
-function en(e, t, n) {
+    M = n(857192),
+    k = n(558724),
+    U = n(808506),
+    G = n(626135),
+    B = n(709054),
+    Z = n(998502),
+    F = n(210887),
+    V = n(695346),
+    H = n(306052),
+    Y = n(10298),
+    W = n(526156),
+    K = n(726985),
+    z = n(981631),
+    q = n(908442),
+    X = n(674336),
+    Q = n(620842),
+    J = n(197571),
+    $ = n(154257);
+function ee(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -65,7 +63,7 @@ function en(e, t, n) {
         e
     );
 }
-function er(e) {
+function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,12 +74,12 @@ function er(e) {
                 }),
             )),
             r.forEach(function (t) {
-                en(e, t, n[t]);
+                ee(e, t, n[t]);
             });
     }
     return e;
 }
-function ei(e, t) {
+function en(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -93,19 +91,19 @@ function ei(e, t) {
     }
     return n;
 }
-function ea(e, t) {
+function er(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ei(Object(t)).forEach(function (n) {
+            : en(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let eo = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
-    es = [
+let ei = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
+    ea = [
         {
             value: "branch",
             label: "Branch Name",
@@ -115,10 +113,10 @@ let eo = ["discord_web", "discord_marketing", "discord_developers", "discord_ios
             label: "Commit SHA",
         },
     ];
-function el(e) {
+function eo(e) {
     return "discord_ios" in e || "discord_android" in e;
 }
-function ec(e) {
+function es(e) {
     return new Promise((t) => {
         (0, _.h7j)((n) => {
             let i = (e) => {
@@ -126,7 +124,7 @@ function ec(e) {
             };
             return (0, r.jsxs)(
                 _.Y0X,
-                ea(er({}, n), {
+                er(et({}, n), {
                     "aria-label": "Choose A Project to Override",
                     parentComponent: "UserSettingsDeveloperOptions",
                     children: [
@@ -139,7 +137,7 @@ function ec(e) {
                         }),
                         (0, r.jsx)(_.hzk, {
                             children: (0, r.jsx)("div", {
-                                className: J.buildOverrideList,
+                                className: X.buildOverrideList,
                                 children: e.map((e) =>
                                     (0, r.jsx)(
                                         _.zxk,
@@ -167,28 +165,28 @@ function ec(e) {
         });
     });
 }
-class eu extends i.Component {
+class el extends i.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: i, error: a } = this.props,
             s = "branch" === t ? "Branch Name" : "Commit SHA";
         return (0, r.jsxs)(S.Z, {
             direction: S.Z.Direction.VERTICAL,
-            className: o()(J.buildOverrideGroup, ee.marginBottom20, $.card, J.row),
+            className: o()(X.buildOverrideGroup, J.marginBottom20, Q.card, X.row),
             children: [
                 (0, r.jsx)(E.Z, {
-                    className: o()(J.removeBuildOverride, { [J.removeBuildOverrideDisabled]: i }),
+                    className: o()(X.removeBuildOverride, { [X.removeBuildOverrideDisabled]: i }),
                     onClick: i ? void 0 : this.handleRemoveBuildOverride,
                 }),
                 (0, r.jsxs)(S.Z, {
-                    className: ee.marginBottom8,
+                    className: J.marginBottom8,
                     children: [
                         (0, r.jsx)(S.Z.Child, {
                             basis: "50%",
                             children: (0, r.jsx)(_.xJW, {
                                 title: "Override Type",
-                                className: J.item,
+                                className: X.item,
                                 children: (0, r.jsx)(_.q4e, {
-                                    options: es,
+                                    options: ea,
                                     onChange: this.handleOverrideTypeChanged,
                                     value: t,
                                     isDisabled: i,
@@ -199,7 +197,7 @@ class eu extends i.Component {
                             basis: "50%",
                             children: (0, r.jsx)(_.xJW, {
                                 title: s,
-                                className: J.item,
+                                className: X.item,
                                 children: (0, r.jsx)(_.oil, {
                                     value: n,
                                     onChange: this.handleOverrideIdChanged,
@@ -214,13 +212,13 @@ class eu extends i.Component {
                         null != a &&
                             "" !== a &&
                             (0, r.jsx)(_.R94, {
-                                className: J.item,
+                                className: X.item,
                                 style: { color: f.Z.unsafe_rawColors.RED_400.css },
                                 type: _.R94.Types.DESCRIPTION,
                                 children: a,
                             }),
                         (0, r.jsxs)(_.R94, {
-                            className: J.item,
+                            className: X.item,
                             type: _.R94.Types.DESCRIPTION,
                             children: [
                                 "This controls the build that will be served for the ",
@@ -235,13 +233,13 @@ class eu extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            en(this, "handleRemoveBuildOverride", () => {
+            ee(this, "handleRemoveBuildOverride", () => {
                 this.props.onBuildOverrideRemoved(this.props.project);
             }),
-            en(this, "handleOverrideIdChanged", (e) => {
+            ee(this, "handleOverrideIdChanged", (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, { id: e });
             }),
-            en(this, "handleOverrideTypeChanged", (e) => {
+            ee(this, "handleOverrideTypeChanged", (e) => {
                 this.props.onBuildOverrideUpdated(this.props.project, {
                     type: e,
                     id: "",
@@ -249,7 +247,7 @@ class eu extends i.Component {
             });
     }
 }
-class ed extends i.Component {
+class ec extends i.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
         let e = await (0, O.Ce)();
@@ -271,12 +269,12 @@ class ed extends i.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let t = Object.keys(e);
-        return l().without(eo, ...t);
+        return l().without(ei, ...t);
     }
     renderEmpty() {
         return (0, r.jsx)(_.ubH, {
-            theme: H.Z.theme,
-            className: o()(ee.marginTop40, ee.marginBottom20),
+            theme: F.Z.theme,
+            className: o()(J.marginTop40, J.marginBottom20),
             children: (0, r.jsx)(_.OZU, { children: "You have no build overrides configured." }),
         });
     }
@@ -286,7 +284,7 @@ class ed extends i.Component {
             ? null
             : l().map(e, (e, i) =>
                   (0, r.jsx)(
-                      eu,
+                      el,
                       {
                           project: i,
                           overrideType: e.type,
@@ -345,7 +343,7 @@ class ed extends i.Component {
                     children: (0, r.jsx)(_.zxk, {
                         variant: "active",
                         text: "Save Build Overrides",
-                        disabled: el(null != t ? t : {}),
+                        disabled: eo(null != t ? t : {}),
                         onClick: this.handleSaveChanges,
                         loading: e,
                     }),
@@ -366,13 +364,13 @@ class ed extends i.Component {
         let e,
             { loading: t, saving: n, buildOverrides: i } = this.state;
         e = t
-            ? (0, r.jsx)(_.$jN, { className: ee.marginTop20 })
+            ? (0, r.jsx)(_.$jN, { className: J.marginTop20 })
             : null != i && 0 === Object.keys(i).length
               ? this.renderEmpty()
               : this.renderItems();
         let a = !n && !t && this.getAvailableProjects().length > 0,
             o =
-                el(null != i ? i : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                eo(null != i ? i : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, r.jsx)(_.Text, {
                           color: "text-danger",
                           variant: "text-md/normal",
@@ -381,12 +379,12 @@ class ed extends i.Component {
                       })
                     : null;
         return (0, r.jsx)(j.F, {
-            setting: q.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+            setting: K.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
             children: (0, r.jsxs)(_.hjN, {
-                className: ee.marginTop60,
+                className: J.marginTop60,
                 children: [
                     (0, r.jsxs)(S.Z, {
-                        className: ee.marginBottom20,
+                        className: J.marginBottom20,
                         children: [
                             (0, r.jsx)(S.Z.Child, {
                                 children: (0, r.jsx)(_.vwX, {
@@ -428,7 +426,7 @@ class ed extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            en(this, "state", {
+            ee(this, "state", {
                 loading: !0,
                 buildOverrides: {},
                 loadedBuildOverrides: {},
@@ -436,10 +434,10 @@ class ed extends i.Component {
                 saving: !1,
                 didSave: !1,
             }),
-            en(this, "handleAddBuildOverride", async () => {
-                let e = await ec(this.getAvailableProjects());
+            ee(this, "handleAddBuildOverride", async () => {
+                let e = await es(this.getAvailableProjects());
                 if (null == e) return;
-                let t = ea(er({}, this.state.buildOverrides), {
+                let t = er(et({}, this.state.buildOverrides), {
                     [e]: {
                         type: "branch",
                         id: "",
@@ -447,24 +445,24 @@ class ed extends i.Component {
                 });
                 this.setState({ buildOverrides: t });
             }),
-            en(this, "handleBuildOverrideUpdated", (e, t) => {
+            ee(this, "handleBuildOverrideUpdated", (e, t) => {
                 let { buildOverrides: n } = this.state,
-                    r = er({}, null != n ? n[e] : {}, t),
-                    i = ea(er({}, this.state.buildOverrides), { [e]: r });
+                    r = et({}, null != n ? n[e] : {}, t),
+                    i = er(et({}, this.state.buildOverrides), { [e]: r });
                 this.setState({ buildOverrides: i });
             }),
-            en(this, "handleBuildOverrideRemoved", (e) => {
-                let t = er({}, this.state.buildOverrides);
+            ee(this, "handleBuildOverrideRemoved", (e) => {
+                let t = et({}, this.state.buildOverrides);
                 delete t[e], this.setState({ buildOverrides: t });
             }),
-            en(this, "handleDiscardChanges", () => {
+            ee(this, "handleDiscardChanges", () => {
                 this.setState({
                     buildOverrides: l().cloneDeep(this.state.loadedBuildOverrides),
                     errors: {},
                     didSave: !1,
                 });
             }),
-            en(this, "handleSaveChanges", async () => {
+            ee(this, "handleSaveChanges", async () => {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
                 this.setState({ saving: !0 });
@@ -491,16 +489,16 @@ class ed extends i.Component {
                         didSave: !1,
                     });
             }),
-            en(this, "handleLinkGeneration", () => {
+            ee(this, "handleLinkGeneration", () => {
                 let { buildOverrides: e } = this.state;
-                (0, _.h7j)((t) => (0, r.jsx)(ef, ea(er({}, t), { buildOverrides: e })));
+                (0, _.h7j)((t) => (0, r.jsx)(eu, er(et({}, t), { buildOverrides: e })));
             });
     }
 }
-class ef extends i.Component {
+class eu extends i.Component {
     isMobile() {
         var e;
-        return el(null != (e = this.props.buildOverrides) ? e : {});
+        return eo(null != (e = this.props.buildOverrides) ? e : {});
     }
     renderSettingsForm() {
         let {
@@ -515,7 +513,7 @@ class ef extends i.Component {
                 experiments: c,
                 experimentsError: u,
             } = this.state,
-            d = Q.S6.find((t) => t.value === e),
+            d = q.S6.find((t) => t.value === e),
             f = a.map((e) => ({
                 label: e,
                 value: e,
@@ -525,10 +523,10 @@ class ef extends i.Component {
             children: [
                 (0, r.jsx)(_.xJW, {
                     title: "Expire After",
-                    className: ee.marginBottom20,
+                    className: J.marginBottom20,
                     children: (0, r.jsx)(_.q4e, {
                         value: null != d ? d.value : null,
-                        options: Q.S6,
+                        options: q.S6,
                         onChange: this.handleExpirationChange,
                     }),
                 }),
@@ -536,10 +534,10 @@ class ef extends i.Component {
                     ? null
                     : (0, r.jsx)(_.xJW, {
                           title: "Release Channel",
-                          className: ee.marginBottom20,
+                          className: J.marginBottom20,
                           children: (0, r.jsx)(_.q4e, {
                               value: t,
-                              options: Q.F$,
+                              options: q.F$,
                               onChange: this.handleReleaseChannelChange,
                           }),
                       }),
@@ -548,7 +546,7 @@ class ef extends i.Component {
                           children: [
                               (0, r.jsx)(_.xJW, {
                                   title: "Add allowed app version (required)",
-                                  className: ee.marginBottom20,
+                                  className: J.marginBottom20,
                                   children: (0, r.jsxs)(S.Z, {
                                       direction: S.Z.Direction.HORIZONTAL,
                                       children: [
@@ -574,7 +572,7 @@ class ef extends i.Component {
                               }),
                               (0, r.jsx)(_.xJW, {
                                   title: "Remove allowed app version",
-                                  className: ee.marginBottom20,
+                                  className: J.marginBottom20,
                                   children: (0, r.jsx)(_.q4e, {
                                       value: null,
                                       options: f,
@@ -589,7 +587,7 @@ class ef extends i.Component {
                     ? null
                     : (0, r.jsxs)(_.xJW, {
                           title: "Limit to User IDs (optional)",
-                          className: ee.marginBottom20,
+                          className: J.marginBottom20,
                           children: [
                               (0, r.jsx)(S.Z, {
                                   direction: S.Z.Direction.HORIZONTAL,
@@ -607,14 +605,14 @@ class ef extends i.Component {
                               (0, r.jsx)(_.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-muted",
-                                  className: ee.marginTop8,
+                                  className: J.marginTop8,
                                   children: "User IDs can be separated by whitespace or commas.",
                               }),
                           ],
                       }),
                 (0, r.jsxs)(_.xJW, {
                     title: "Client Experiment Override",
-                    className: ee.marginBottom20,
+                    className: J.marginBottom20,
                     children: [
                         (0, r.jsx)(S.Z, {
                             direction: S.Z.Direction.HORIZONTAL,
@@ -632,7 +630,7 @@ class ef extends i.Component {
                         (0, r.jsx)(_.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            className: ee.marginTop8,
+                            className: J.marginTop8,
                             children:
                                 "Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well.",
                         }),
@@ -660,8 +658,8 @@ class ef extends i.Component {
                         : (0, r.jsx)("code", {
                               className: "hljs scroller "
                                   .concat(i.language, " ")
-                                  .concat(et.scrollbarGhost, " ")
-                                  .concat(J.codebox),
+                                  .concat($.scrollbarGhost, " ")
+                                  .concat(X.codebox),
                               dangerouslySetInnerHTML: { __html: i.value },
                           });
                 },
@@ -700,7 +698,7 @@ class ef extends i.Component {
                 (0, r.jsx)(_.Text, {
                     variant: "text-md/normal",
                     color: i,
-                    className: o()(ee.marginBottom8, ee.marginTop8),
+                    className: o()(J.marginBottom8, J.marginTop8),
                     children: t,
                 }),
             ],
@@ -740,7 +738,7 @@ class ef extends i.Component {
         var t;
         super(...e),
             (t = this),
-            en(this, "state", {
+            ee(this, "state", {
                 ttlSeconds: 3600,
                 releaseChannel: "all",
                 userIds: new Set(),
@@ -754,17 +752,17 @@ class ef extends i.Component {
                 status: 0,
                 allowLoggedOut: !1,
             }),
-            en(this, "setUserEntryError", (e) => {
+            ee(this, "setUserEntryError", (e) => {
                 this.setState({ userIdEntryError: e });
             }),
-            en(this, "setStatusMessage", function (e) {
+            ee(this, "setStatusMessage", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                 t.setState({
                     statusText: e,
                     status: n,
                 });
             }),
-            en(this, "handleUserIDEntry", (e) => {
+            ee(this, "handleUserIDEntry", (e) => {
                 if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
                 let t = new Set(e.split(/[,\s]+/).filter(Boolean));
                 this.setState({
@@ -772,16 +770,16 @@ class ef extends i.Component {
                     userIds: t,
                 });
             }),
-            en(this, "setAllowedVersionError", (e) => {
+            ee(this, "setAllowedVersionError", (e) => {
                 this.setState({ allowedVersionEntryError: e });
             }),
-            en(this, "handleAllowedVersionEntry", (e) => {
+            ee(this, "handleAllowedVersionEntry", (e) => {
                 this.setState({ allowedVersionEntry: e });
             }),
-            en(this, "handleAllowedVersionEnter", (e) => {
-                e.charCode === X.yXg.ENTER && this.handleAddAllowedVersion();
+            ee(this, "handleAllowedVersionEnter", (e) => {
+                e.charCode === z.yXg.ENTER && this.handleAddAllowedVersion();
             }),
-            en(this, "handleAddAllowedVersion", () => {
+            ee(this, "handleAddAllowedVersion", () => {
                 let { allowedVersions: e, allowedVersionEntry: t } = this.state;
                 return 0 === (t = t.trim()).length
                     ? this.setAllowedVersionError("Enter a valid version number!")
@@ -793,20 +791,20 @@ class ef extends i.Component {
                             allowedVersionEntryError: "",
                         });
             }),
-            en(this, "handleRemoveAllowedVersion", (e) => {
+            ee(this, "handleRemoveAllowedVersion", (e) => {
                 let { allowedVersions: t } = this.state;
                 (t = t.filter((t) => t !== e)), this.setState({ allowedVersions: t });
             }),
-            en(this, "handleAllowLoggedOut", (e) => {
+            ee(this, "handleAllowLoggedOut", (e) => {
                 this.setState({ allowLoggedOut: e });
             }),
-            en(this, "handleExpirationChange", (e) => {
+            ee(this, "handleExpirationChange", (e) => {
                 this.setState({ ttlSeconds: e });
             }),
-            en(this, "handleReleaseChannelChange", (e) => {
+            ee(this, "handleReleaseChannelChange", (e) => {
                 this.setState({ releaseChannel: e });
             }),
-            en(this, "handleExperiments", (e) => {
+            ee(this, "handleExperiments", (e) => {
                 if (0 === e.trim().length) return void this.setState({ experimentsError: void 0 });
                 try {
                     let t = JSON.parse(e);
@@ -829,7 +827,7 @@ class ef extends i.Component {
                     experimentsError: void 0,
                 });
             }),
-            en(this, "generatePayload", () => ({
+            ee(this, "generatePayload", () => ({
                 overrides: this.props.buildOverrides,
                 meta: {
                     release_channel: "all" === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -840,7 +838,7 @@ class ef extends i.Component {
                     experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments),
                 },
             })),
-            en(this, "handleGenerateLink", async () => {
+            ee(this, "handleGenerateLink", async () => {
                 if (this.isMobile() && 0 === this.state.allowedVersions.length)
                     return void this.setAllowedVersionError("You must add at least one allowed version for iOS");
                 this.setStatusMessage(null);
@@ -857,19 +855,19 @@ class ef extends i.Component {
             });
     }
 }
-function e_() {
+function ed() {
     let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, T.i)(),
         o = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         s = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
-        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, u.cj)([U.default], () => ({
-            cssDebuggingEnabled: U.default.cssDebuggingEnabled,
-            layoutDebuggingEnabled: U.default.layoutDebuggingEnabled,
+        { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, u.cj)([M.default], () => ({
+            cssDebuggingEnabled: M.default.cssDebuggingEnabled,
+            layoutDebuggingEnabled: M.default.layoutDebuggingEnabled,
         })),
         d = (0, C.Z)("highlight_void_toggleables");
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+                setting: K.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
                 children: (0, r.jsx)(_.j7V, {
                     value: l,
                     note: "Display raw colors as pink. Toggling this will refresh the browser.",
@@ -880,7 +878,7 @@ function e_() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
+                setting: K.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
                 children: (0, r.jsx)(_.j7V, {
                     value: c,
                     note: "Renders a grid on top of the app to help debug layout alignment issues.",
@@ -891,14 +889,14 @@ function e_() {
                 }),
             }),
             (0, r.jsxs)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+                setting: K.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
                 children: [
                     (0, r.jsxs)(_.hjN, {
-                        className: ee.marginBottom20,
+                        className: J.marginBottom20,
                         children: [
                             (0, r.jsx)(_.vwX, { children: "Horizontal Grid Spacing" }),
                             (0, r.jsx)(_.R94, {
-                                className: ee.marginBottom20,
+                                className: J.marginBottom20,
                                 type: _.geA.DESCRIPTION,
                                 children:
                                     "Adjust the spacing between horizontal grid lines. Set to 0 to disable horizontal grid lines.",
@@ -916,11 +914,11 @@ function e_() {
                         ],
                     }),
                     (0, r.jsxs)(_.hjN, {
-                        className: ee.marginBottom20,
+                        className: J.marginBottom20,
                         children: [
                             (0, r.jsx)(_.vwX, { children: "Vertical Grid Spacing" }),
                             (0, r.jsx)(_.R94, {
-                                className: ee.marginBottom20,
+                                className: J.marginBottom20,
                                 type: _.geA.DESCRIPTION,
                                 children:
                                     "Adjust the spacing between vertical grid lines. Set to 0 to disable vertical grid lines.",
@@ -940,7 +938,7 @@ function e_() {
                 ],
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES,
+                setting: K.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES,
                 children: (0, r.jsx)(_.j7V, {
                     value: d,
                     note: "Highlights toggleable components: Checkbox (green), RadioGroup (yellow), Switch (blue)",
@@ -951,7 +949,7 @@ function e_() {
         ],
     });
 }
-function ep() {
+function ef() {
     let {
             isTracingRequests: e,
             isForcedCanary: t,
@@ -962,23 +960,23 @@ function ep() {
             disableAppCollectionsCache: s,
             preventPopoutClose: l,
             logKeyboardMismatches: c,
-        } = (0, u.cj)([U.default], () => ({
-            isTracingRequests: U.default.isTracingRequests,
-            isForcedCanary: U.default.isForcedCanary,
-            isAxeEnabled: U.default.isAxeEnabled,
-            isSourceMapsEnabled: U.default.sourceMapsEnabled,
-            isIdleStatusIndicatorEnabled: U.default.isIdleStatusIndicatorEnabled,
-            onlyShowPreviewAppCollections: U.default.onlyShowPreviewAppCollections,
-            disableAppCollectionsCache: U.default.disableAppCollectionsCache,
-            preventPopoutClose: U.default.preventPopoutClose,
-            logKeyboardMismatches: U.default.logKeyboardMismatches,
+        } = (0, u.cj)([M.default], () => ({
+            isTracingRequests: M.default.isTracingRequests,
+            isForcedCanary: M.default.isForcedCanary,
+            isAxeEnabled: M.default.isAxeEnabled,
+            isSourceMapsEnabled: M.default.sourceMapsEnabled,
+            isIdleStatusIndicatorEnabled: M.default.isIdleStatusIndicatorEnabled,
+            onlyShowPreviewAppCollections: M.default.onlyShowPreviewAppCollections,
+            disableAppCollectionsCache: M.default.disableAppCollectionsCache,
+            preventPopoutClose: M.default.preventPopoutClose,
+            logKeyboardMismatches: M.default.logKeyboardMismatches,
         })),
         d = (0, P.Z)("go_back_to_regular_input"),
-        f = Y.zY.useSetting();
+        f = V.zY.useSetting();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+                setting: K.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
                 children: (0, r.jsx)(_.j7V, {
                     value: e,
                     note: "Force trace all client requests with APM",
@@ -987,7 +985,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
+                setting: K.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
                 children: (0, r.jsx)(_.j7V, {
                     value: t,
                     note: "Force all API requests to canary instances",
@@ -996,16 +994,16 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
+                setting: K.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
                 children: (0, r.jsx)(_.j7V, {
                     value: f,
                     note: "Make user targetable for all active ads",
-                    onChange: (e) => Y.zY.updateSetting(e),
+                    onChange: (e) => V.zY.updateSetting(e),
                     children: "Ads auto-targeting",
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
+                setting: K.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
                 children: (0, r.jsx)(_.j7V, {
                     value: i,
                     note: "Only enable on devices you trust.",
@@ -1014,7 +1012,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+                setting: K.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                 children: (0, r.jsx)(_.j7V, {
                     value: a,
                     note: "Displays a floating idle status indicator",
@@ -1023,7 +1021,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+                setting: K.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
                 children: (0, r.jsx)(_.j7V, {
                     value: n,
                     note: "Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development",
@@ -1032,7 +1030,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
+                setting: K.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
                 children: (0, r.jsx)(_.j7V, {
                     value: l,
                     note: "This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.",
@@ -1041,7 +1039,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
+                setting: K.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
                 children: (0, r.jsx)(_.j7V, {
                     value: c,
                     note: "Logs mismatches in detected keyboard codes to the console",
@@ -1050,7 +1048,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+                setting: K.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                 children: (0, r.jsx)(_.j7V, {
                     value: o,
                     note: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
@@ -1059,7 +1057,7 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
+                setting: K.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
                 children: (0, r.jsx)(_.j7V, {
                     value: s,
                     note: "Disable application collections cache so that you can see updates to collections immediately.",
@@ -1068,12 +1066,12 @@ function ep() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
+                setting: K.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
                 children: (0, r.jsx)(_.j7V, {
                     value: d,
                     note: "Disable aligning chat input to the bottom of the screen",
                     onChange: (e) => {
-                        Z.default.track(X.rMx.GUILD_JOIN_FEEDBACK, {
+                        G.default.track(z.rMx.GUILD_JOIN_FEEDBACK, {
                             reason: "disable-align-chat-input",
                             rating: e ? "yes" : "no",
                         }),
@@ -1085,23 +1083,23 @@ function ep() {
         ],
     });
 }
-function eh() {
+function e_() {
     let {
         isLoggingGatewayEvents: e,
         isLoggingOverlayEvents: t,
         isLoggingAnalyticsEvents: n,
         isAnalyticsDebuggerEnabled: i,
-    } = (0, u.cj)([U.default], () => ({
-        isLoggingGatewayEvents: U.default.isLoggingGatewayEvents,
-        isLoggingOverlayEvents: U.default.isLoggingOverlayEvents,
-        isLoggingAnalyticsEvents: U.default.isLoggingAnalyticsEvents,
-        isAnalyticsDebuggerEnabled: U.default.isAnalyticsDebuggerEnabled,
+    } = (0, u.cj)([M.default], () => ({
+        isLoggingGatewayEvents: M.default.isLoggingGatewayEvents,
+        isLoggingOverlayEvents: M.default.isLoggingOverlayEvents,
+        isLoggingAnalyticsEvents: M.default.isLoggingAnalyticsEvents,
+        isAnalyticsDebuggerEnabled: M.default.isAnalyticsDebuggerEnabled,
     }));
     return (0, r.jsxs)(j.F, {
-        setting: q.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+        setting: K.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
         children: [
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+                setting: K.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
                 children: (0, r.jsx)(_.j7V, {
                     value: e,
                     note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
@@ -1110,7 +1108,7 @@ function eh() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+                setting: K.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
                 children: (0, r.jsx)(_.j7V, {
                     value: t,
                     note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
@@ -1119,7 +1117,7 @@ function eh() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+                setting: K.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
                 children: (0, r.jsx)(_.j7V, {
                     value: n,
                     note: "Logs all analytics events to the developer console",
@@ -1128,7 +1126,7 @@ function eh() {
                 }),
             }),
             (0, r.jsx)(j.F, {
-                setting: q.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+                setting: K.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
                 children: (0, r.jsx)(_.j7V, {
                     value: i,
                     note: "Displays a floating debugger with viewed impressions",
@@ -1139,13 +1137,13 @@ function eh() {
         ],
     });
 }
-function em() {
+function ep() {
     throw Error("Send help");
 }
-function eg(e) {
-    V.ZP.triggerJSException(e);
+function eh(e) {
+    Z.ZP.triggerJSException(e);
 }
-function eE() {
+function em() {
     let e = (0, D.XE)("developer_settings"),
         t = (0, u.e7)([x.default], () => x.default.getForcedRenderMode()),
         [n, a] = i.useState(!1),
@@ -1153,7 +1151,7 @@ function eE() {
         l = e || t === w.R5.OUT_OF_PROCESS_V3 || t === w.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (i.useEffect(() => {
         (async () => {
-            s(await (0, B.getOverlayURL)());
+            s(await (0, U.getOverlayURL)());
         })();
     }, []),
     n)
@@ -1161,10 +1159,10 @@ function eE() {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: [J.buttonsContainer, ee.marginBottom20].join(" "),
+                      className: [X.buttonsContainer, J.marginBottom20].join(" "),
                       children: [
                           (0, r.jsx)(j.F, {
-                              setting: q.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+                              setting: K.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: l
                                   ? (0, r.jsx)(_.zxk, {
                                         variant: "primary",
@@ -1179,7 +1177,7 @@ function eE() {
                                     }),
                           }),
                           (0, r.jsx)(j.F, {
-                              setting: q.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
+                              setting: K.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
                               children: (0, r.jsx)(_.zxk, {
                                   variant: "primary",
                                   text: "Reset Socket",
@@ -1189,7 +1187,7 @@ function eE() {
                               }),
                           }),
                           (0, r.jsx)(j.F, {
-                              setting: q.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
+                              setting: K.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, r.jsx)(_.zxk, {
                                   variant: "primary",
                                   text: "Clear Caches",
@@ -1206,12 +1204,12 @@ function eE() {
                       ],
                   }),
                   (0, r.jsx)(j.F, {
-                      setting: q.s6.DEVELOPER_OPTIONS_CRASHES,
+                      setting: K.s6.DEVELOPER_OPTIONS_CRASHES,
                       children: (0, r.jsx)(_.hjN, {
                           title: "Crashes",
                           tag: _.RB0.H1,
                           children: (0, r.jsxs)("div", {
-                              className: J.buttonsContainer,
+                              className: X.buttonsContainer,
                               children: [
                                   (0, r.jsx)(_.q4e, {
                                       value: void 0,
@@ -1241,7 +1239,7 @@ function eE() {
                                               label: "Out of Memory",
                                           },
                                       ],
-                                      onChange: (e) => null != e && V.ZP.crash(e),
+                                      onChange: (e) => null != e && Z.ZP.crash(e),
                                   }),
                                   (0, r.jsx)(_.q4e, {
                                       value: void 0,
@@ -1263,7 +1261,7 @@ function eE() {
                                               label: "Exception in main process",
                                           },
                                       ],
-                                      onChange: (e) => (null != e ? eg(e) : void 0),
+                                      onChange: (e) => (null != e ? eh(e) : void 0),
                                   }),
                                   (0, r.jsx)(_.zxk, {
                                       variant: "primary",
@@ -1273,7 +1271,7 @@ function eE() {
                                   (0, r.jsx)(_.zxk, {
                                       variant: "primary",
                                       text: "onClick Throw",
-                                      onClick: em,
+                                      onClick: ep,
                                   }),
                               ],
                           }),
@@ -1282,22 +1280,22 @@ function eE() {
               ],
           });
 }
-function eb() {
-    let e = (0, u.e7)([G.Z], () => G.Z.getSurveyOverride()),
+function eg() {
+    let e = (0, u.e7)([k.Z], () => k.Z.getSurveyOverride()),
         [t, n] = i.useState(null != e ? e : ""),
         a = (e) => {
             e.preventDefault(), t.length > 0 ? g.Xq(t) : g.Xq(null);
         };
     return (0, r.jsx)(j.F, {
-        setting: q.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+        setting: K.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
         children: (0, r.jsxs)(_.hjN, {
             tag: _.RB0.H1,
             title: "Survey Override",
-            className: ee.marginTop60,
+            className: J.marginTop60,
             children: [
                 (0, r.jsx)(_.vwX, { children: "Copy the ID of the Survey you want to test:" }),
                 (0, r.jsx)("form", {
-                    className: J.surveyOverride,
+                    className: X.surveyOverride,
                     onSubmit: a,
                     children: (0, r.jsxs)(_.Kqy, {
                         direction: "horizontal",
@@ -1320,7 +1318,7 @@ function eb() {
         }),
     });
 }
-function ey() {
+function eE() {
     var e;
     let t = (0, u.e7)([v.Z], () => v.Z.overrideId()),
         [n, a] = i.useState(null != (e = v.Z.overrideId()) ? e : ""),
@@ -1329,14 +1327,14 @@ function ey() {
         },
         s = () => {
             let e = new Date("2018-01-01");
-            Y.l4.updateSetting(F.default.fromTimestamp(e.getTime())), d.K.set("lastChangeLogDate", e);
+            V.l4.updateSetting(B.default.fromTimestamp(e.getTime())), d.K.set("lastChangeLogDate", e);
         };
     return (0, r.jsx)(j.F, {
-        setting: q.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+        setting: K.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, r.jsx)(_.hjN, {
             tag: _.RB0.H1,
             title: "Changelog",
-            className: ee.marginTop60,
+            className: J.marginTop60,
             children: (0, r.jsxs)(_.Kqy, {
                 gap: 16,
                 children: [
@@ -1386,67 +1384,61 @@ function ey() {
         }),
     });
 }
-function eO() {
+function eb() {
     return (0, r.jsx)(j.F, {
-        setting: q.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        setting: K.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         children: (0, r.jsx)(_.hjN, {
             tag: _.RB0.H1,
             title: "Client-Side Overrides",
-            className: ee.marginTop60,
+            className: J.marginTop60,
             children: (0, r.jsx)(_.Kqy, {
                 gap: 16,
                 children: (0, r.jsx)("div", {
-                    className: [J.buttonsContainer, ee.marginBottom20].join(" "),
-                    children: (0, r.jsx)(W.g, {}),
+                    className: [X.buttonsContainer, J.marginBottom20].join(" "),
+                    children: (0, r.jsx)(H.g, {}),
                 }),
             }),
         }),
     });
 }
-function ev() {
+function ey() {
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(ed, {}), (0, r.jsx)(eb, {}), (0, r.jsx)(ey, {}), (0, r.jsx)(eO, {})],
+        children: [(0, r.jsx)(ec, {}), (0, r.jsx)(eg, {}), (0, r.jsx)(eE, {}), (0, r.jsx)(eb, {})],
     });
 }
-let eI = function () {
-    return (
-        i.useEffect(() => {
-            M.k.getConfig({ location: "UserSettingsModalDeveloperOptions" }).fireSprigEvents &&
-                k.x("user_developer_settings_opened", { placeholder: "value" });
-        }, []),
-        (0, r.jsx)(K.N, {
-            header: "Developer Options",
-            children: (0, r.jsx)(z.Z, {
-                parentSetting: q.s6.DEVELOPER_OPTIONS,
-                settingsSection: X.oAB.DEVELOPER_OPTIONS,
-                tabs: [
-                    {
-                        title: "Overrides",
-                        component: ev,
-                        setting: q.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
-                    },
-                    {
-                        title: "Manual Triggers",
-                        component: eE,
-                        setting: q.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
-                    },
-                    {
-                        title: "Developer Flags",
-                        component: ep,
-                        setting: q.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                    },
-                    {
-                        title: "Logging",
-                        component: eh,
-                        setting: q.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
-                    },
-                    {
-                        title: "Design Tools",
-                        component: e_,
-                        setting: q.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                    },
-                ],
-            }),
-        })
-    );
+let eO = function () {
+    return (0, r.jsx)(Y.N, {
+        header: "Developer Options",
+        children: (0, r.jsx)(W.Z, {
+            parentSetting: K.s6.DEVELOPER_OPTIONS,
+            settingsSection: z.oAB.DEVELOPER_OPTIONS,
+            tabs: [
+                {
+                    title: "Overrides",
+                    component: ey,
+                    setting: K.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                },
+                {
+                    title: "Manual Triggers",
+                    component: em,
+                    setting: K.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                },
+                {
+                    title: "Developer Flags",
+                    component: ef,
+                    setting: K.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                },
+                {
+                    title: "Logging",
+                    component: e_,
+                    setting: K.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+                },
+                {
+                    title: "Design Tools",
+                    component: ed,
+                    setting: K.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                },
+            ],
+        }),
+    });
 };
