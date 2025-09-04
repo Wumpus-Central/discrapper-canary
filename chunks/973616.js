@@ -170,7 +170,7 @@ class h extends i.Z {
 }
 class m extends h {
     static createFromServer(e) {
-        var t, n;
+        var t, n, i;
         return new m(
             f(u({}, e), {
                 coverImage: e.cover_image,
@@ -180,7 +180,7 @@ class m extends h {
                 roleConnectionsVerificationUrl: e.role_connections_verification_url,
                 overlayWarn: e.overlay_warn,
                 overlayCompatibilityHook: e.overlay_compatibility_hook,
-                overlayMethods: null != (t = e.overlay_methods) ? t : r.e.DEFAULT,
+                overlayMethods: null != (n = e.overlay_methods) ? n : r.e.DEFAULT,
                 hook: e.hook,
                 storeListingSkuId: e.store_listing_sku_id,
                 guildId: e.guild_id,
@@ -189,7 +189,7 @@ class m extends h {
                 developers: null != e.developers ? e.developers.map(o.Z.createFromServer) : [],
                 eulaId: e.eula_id,
                 slug: e.slug,
-                flags: null != (n = e.flags) ? n : 0,
+                flags: null != (i = e.flags) ? i : 0,
                 maxParticipants: e.max_participants,
                 tags: e.tags,
                 embeddedActivityConfig: e.embedded_activity_config,
@@ -207,7 +207,14 @@ class m extends h {
                 isDiscoverable: e.is_discoverable,
                 directoryEntry: e.directory_entry,
                 categories: e.categories,
-                linkedGames: e.linked_games,
+                linkedGames:
+                    null == (t = e.linked_games)
+                        ? void 0
+                        : t.map((e) =>
+                              f(u({}, e), {
+                                  application: null != e.application ? m.createFromServer(e.application) : void 0,
+                              }),
+                          ),
             }),
         );
     }
@@ -233,8 +240,8 @@ class m extends h {
             O,
             v,
             I,
-            T,
             S,
+            T,
             A,
             C,
             N,
@@ -251,8 +258,8 @@ class m extends h {
             G,
             B,
             Z,
-            V,
             F,
+            V,
             H,
             Y;
         return new m({
@@ -277,8 +284,8 @@ class m extends h {
             hashes: null != (O = e.hashes) ? O : this.hashes,
             description: null != (v = e.description) ? v : this.description,
             eulaId: null != (I = e.eulaId) ? I : this.eulaId,
-            slug: null != (T = e.slug) ? T : this.slug,
-            coverImage: null != (S = e.coverImage) ? S : this.coverImage,
+            slug: null != (S = e.slug) ? S : this.slug,
+            coverImage: null != (T = e.coverImage) ? T : this.coverImage,
             bot: null != (A = e.bot) ? A : this.bot,
             flags: null != (C = e.flags) ? C : this.flags,
             maxParticipants: null != (N = e.maxParticipants) ? N : this.maxParticipants,
@@ -301,8 +308,8 @@ class m extends h {
             isVerified: null != (G = e.isVerified) ? G : this.isVerified,
             customInstallUrl: null != (B = e.customInstallUrl) ? B : this.customInstallUrl,
             installParams: null != (Z = e.installParams) ? Z : this.installParams,
-            isDiscoverable: null != (V = e.isDiscoverable) ? V : this.isDiscoverable,
-            directoryEntry: null != (F = e.directoryEntry) ? F : this.directoryEntry,
+            isDiscoverable: null != (F = e.isDiscoverable) ? F : this.isDiscoverable,
+            directoryEntry: null != (V = e.directoryEntry) ? V : this.directoryEntry,
             categories: null != (H = e.categories) ? H : this.categories,
             linkedGames: null != (Y = e.linkedGames) ? Y : this.linkedGames,
         });
@@ -327,7 +334,7 @@ class m extends h {
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, a, o, s, l, u, d, f, _, h, m, g, E, b, y, O;
+        var t, n, i, a, o, s, l, d, _, h, g, E, b, y, O, v, I, S, T;
         super(e),
             c(this, "overlay", void 0),
             c(this, "overlayWarn", void 0),
@@ -359,35 +366,46 @@ class m extends h {
             c(this, "directoryEntry", void 0),
             c(this, "categories", void 0),
             c(this, "linkedGames", void 0),
-            (this.overlay = null != (t = e.overlay) && t),
-            (this.overlayWarn = null != (n = e.overlayWarn) && n),
-            (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i),
-            (this.overlayMethods = null != (a = e.overlayMethods) ? a : r.e.DEFAULT),
-            (this.hook = null == (o = e.hook) || o),
-            (this.aliases = null != (s = e.aliases) ? s : []),
-            (this.publishers = null != (l = e.publishers) ? l : []),
-            (this.developers = null != (u = e.developers) ? u : []),
+            (this.overlay = null != (n = e.overlay) && n),
+            (this.overlayWarn = null != (i = e.overlayWarn) && i),
+            (this.overlayCompatibilityHook = null != (a = e.overlayCompatibilityHook) && a),
+            (this.overlayMethods = null != (o = e.overlayMethods) ? o : r.e.DEFAULT),
+            (this.hook = null == (s = e.hook) || s),
+            (this.aliases = null != (l = e.aliases) ? l : []),
+            (this.publishers = null != (d = e.publishers) ? d : []),
+            (this.developers = null != (_ = e.developers) ? _ : []),
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (null != (d = e.executables) ? d : []).map(p)),
-            (this.hashes = null != (f = e.hashes) ? f : []),
+            (this.executables = (null != (h = e.executables) ? h : []).map(p)),
+            (this.hashes = null != (g = e.hashes) ? g : []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
-            (this.flags = null != (_ = e.flags) ? _ : 0),
-            (this.tags = null != (h = e.tags) ? h : []),
+            (this.flags = null != (E = e.flags) ? E : 0),
+            (this.tags = null != (b = e.tags) ? b : []),
             (this.maxParticipants = e.maxParticipants),
-            (this.embeddedActivityConfig = null != (m = e.embedded_activity_config) ? m : e.embeddedActivityConfig),
+            (this.embeddedActivityConfig = null != (y = e.embedded_activity_config) ? y : e.embeddedActivityConfig),
             (this.team = e.team),
             (this.integrationTypesConfig = e.integrationTypesConfig),
             (this.storefront_available = e.storefront_available),
             (this.termsOfServiceUrl = e.termsOfServiceUrl),
             (this.privacyPolicyUrl = e.privacyPolicyUrl),
-            (this.isDiscoverable = null != (g = e.is_discoverable) ? g : e.isDiscoverable),
-            (this.customInstallUrl = null != (E = e.custom_install_url) ? E : e.customInstallUrl),
-            (this.installParams = null != (b = e.install_params) ? b : e.installParams),
-            (this.directoryEntry = null != (y = e.directory_entry) ? y : e.directoryEntry),
+            (this.isDiscoverable = null != (O = e.is_discoverable) ? O : e.isDiscoverable),
+            (this.customInstallUrl = null != (v = e.custom_install_url) ? v : e.customInstallUrl),
+            (this.installParams = null != (I = e.install_params) ? I : e.installParams),
+            (this.directoryEntry = null != (S = e.directory_entry) ? S : e.directoryEntry),
             (this.categories = e.categories),
-            (this.linkedGames = null != (O = e.linked_games) ? O : e.linkedGames);
+            (this.linkedGames =
+                null !=
+                (T =
+                    null == (t = e.linked_games)
+                        ? void 0
+                        : t.map((e) =>
+                              f(u({}, e), {
+                                  application: null != e.application ? m.createFromServer(e.application) : void 0,
+                              }),
+                          ))
+                    ? T
+                    : e.linkedGames);
     }
 }

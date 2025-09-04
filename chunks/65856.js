@@ -143,6 +143,17 @@ class b {
                 message: i,
             });
     }
+    listenIsSubscribed(e) {
+        return (
+            this.isSubscribedListeners.add(e),
+            () => {
+                this.isSubscribedListeners.delete(e);
+            }
+        );
+    }
+    dispatchIsSubscribedUpdate() {
+        this.isSubscribedListeners.forEach((e) => e());
+    }
     isSubscribed(e, t) {
         return void 0 !== this.subscriptions.find((n) => n.socket.application.id === e && n.evt === t);
     }
@@ -153,7 +164,7 @@ class b {
         let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
             i = this.dispatch.bind(this, e, null, _.Etm.DISPATCH, t);
         null == this.getSubscription(e, t, n) &&
-            this.subscriptions.push({
+            (this.subscriptions.push({
                 update: r,
                 dispatch: i,
                 prevState: r
@@ -165,13 +176,15 @@ class b {
                 socket: e,
                 evt: t,
                 args: n,
-            });
+            }),
+            this.dispatchIsSubscribedUpdate());
     }
     removeSubscription(e, t, n) {
-        o().remove(this.subscriptions, (r) => r.socket === e && r.evt === t && o().isEqual(r.args, n));
+        o().remove(this.subscriptions, (r) => r.socket === e && r.evt === t && o().isEqual(r.args, n)),
+            this.dispatchIsSubscribedUpdate();
     }
     removeSubscriptions(e) {
-        o().remove(this.subscriptions, (t) => t.socket === e);
+        o().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate();
     }
     dispatchToSubscriptions(e, t, n, r) {
         (null != r && "" !== r && E(r)) ||
@@ -212,6 +225,7 @@ class b {
             p(this, "commands", {}),
             p(this, "sockets", new Set()),
             p(this, "subscriptions", []),
+            p(this, "isSubscribedListeners", new Set()),
             (this.getJoi = e);
     }
 }

@@ -72,6 +72,10 @@ function b(e) {
     p.set(e.name.toLowerCase(), n),
     e.aliases))
         p.set(r.toLowerCase(), n);
+    if (null != e.linkedGames)
+        for (let t of e.linkedGames)
+            null != t.application &&
+                b(t.application instanceof o.ZP ? t.application : o.ZP.createFromServer(t.application));
     m.delete(e.id);
 }
 function y() {
@@ -88,13 +92,13 @@ function v(e) {
 }
 function I(e) {
     let { application: t } = e;
-    S(t);
-}
-function T(e) {
-    let { application: t } = e;
-    S(t);
+    T(t);
 }
 function S(e) {
+    let { application: t } = e;
+    T(t);
+}
+function T(e) {
     b(o.ZP.createFromServer(e));
 }
 function A(e) {
@@ -313,7 +317,7 @@ let z = new K(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: O,
     APPLICATION_FETCH: v,
-    APPLICATION_FETCH_SUCCESS: T,
+    APPLICATION_FETCH_SUCCESS: S,
     APPLICATION_FETCH_FAIL: C,
     APPLICATIONS_FETCH: N,
     APPLICATIONS_FETCH_SUCCESS: P,

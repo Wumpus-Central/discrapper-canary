@@ -38,6 +38,7 @@ var r = (function (e) {
         (e[(e.ORBS_REHEAT_COACHMARK_CTA = 34)] = "ORBS_REHEAT_COACHMARK_CTA"),
         (e[(e.INVALID_QUEST_EMBED = 35)] = "INVALID_QUEST_EMBED"),
         (e[(e.NOT_SHAREABLE_QUEST_EMBED = 36)] = "NOT_SHAREABLE_QUEST_EMBED"),
+        (e[(e.QUEST_HOME_MOVE_CALLOUT_DISCOVER = 37)] = "QUEST_HOME_MOVE_CALLOUT_DISCOVER"),
         e
     );
 })({});

@@ -82,6 +82,7 @@ function h(e) {
             return (0, o.navigateToQuestHome)({
                 fromContent: e.questContent,
                 questId: e.questId,
+                forceDiscoveryQuestHomeRoute: !0,
             });
         default:
             throw Error("[transitionToGlobalDiscovery] Unhandled tab type: ".concat(E));

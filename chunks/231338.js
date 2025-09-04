@@ -8,7 +8,7 @@ n.d(t, {
     BR: () => r.Z,
     BZ: () => z,
     Cw: () => w,
-    Cy: () => V,
+    Cy: () => F,
     EK: () => eE,
     ET: () => ey,
     Et: () => q,
@@ -24,7 +24,7 @@ n.d(t, {
     Pl: () => G,
     Py: () => D,
     Q: () => eg,
-    QL: () => T,
+    QL: () => S,
     RG: () => eb,
     RK: () => ea,
     S7: () => U,
@@ -42,7 +42,7 @@ n.d(t, {
     XM: () => et,
     Zu: () => k,
     aO: () => ev,
-    aV: () => S,
+    aV: () => T,
     am: () => ec,
     cN: () => ef,
     dG: () => B,
@@ -64,16 +64,16 @@ n.d(t, {
     xr: () => d,
     yA: () => er,
     yX: () => ei,
-    yY: () => F,
+    yY: () => V,
     zM: () => X,
 }),
     n(388685);
 var r = n(290926),
     i = n(149765),
-    a = n(860911);
+    a = n(860911),
+    o = n(691324);
 n(674746);
-var o = n(691324),
-    s = n(481677);
+var s = n(481677);
 n(722770);
 let l = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
     c = location.protocol + "//discord.gg",
@@ -186,7 +186,7 @@ var v = (function (e) {
             e
         );
     })({});
-let T = new Map([
+let S = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -195,7 +195,7 @@ let T = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    S = new Map([
+    T = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
@@ -312,8 +312,8 @@ let G = Object.freeze({
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
     Z = () => null,
-    V = () => Promise.resolve(),
-    F = [
+    F = () => Promise.resolve(),
+    V = [
         G.KICK_MEMBERS,
         G.BAN_MEMBERS,
         G.ADMINISTRATOR,
@@ -324,7 +324,7 @@ let G = Object.freeze({
         G.MANAGE_THREADS,
         G.MODERATE_MEMBERS,
     ],
-    H = i.$e(...F),
+    H = i.$e(...V),
     Y = 1,
     W = 6463,
     K = 10,
@@ -458,6 +458,7 @@ var q = (function (e) {
             (e.VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE = "VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE"),
             (e.SCREENSHARE_STATE_UPDATE = "SCREENSHARE_STATE_UPDATE"),
             (e.VIDEO_STATE_UPDATE = "VIDEO_STATE_UPDATE"),
+            (e.AUTHORIZE_REQUEST = "AUTHORIZE_REQUEST"),
             (e.QUEST_ENROLLMENT_STATUS_UPDATE = "QUEST_ENROLLMENT_STATUS_UPDATE"),
             (e.READY = "READY"),
             (e.ERROR = "ERROR"),

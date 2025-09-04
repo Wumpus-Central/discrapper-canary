@@ -2,6 +2,7 @@ n.d(t, {
     $d: () => s,
     CD: () => o,
     DL: () => i,
+    m8: () => l,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -31,4 +32,13 @@ let i = (0, r.le)({
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
+    }),
+    l = (0, r.le)({
+        name: "2025-08-quest-home-v2-entrypoint-relocation",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: {
+            1: { enabled: !1 },
+            2: { enabled: !0 },
+        },
     });

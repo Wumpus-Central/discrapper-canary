@@ -9,4 +9,7 @@ e.exports = {
     orbsGradient: "orbsGradient__955a3",
     bannerContainer: "bannerContainer__955a3",
     orbsContainer: "orbsContainer__955a3",
+    redirectNoticeBannerAsset: "redirectNoticeBannerAsset__955a3",
+    redirectNoticeBannerContainer: "redirectNoticeBannerContainer__955a3",
+    redirectNoticeContainer: "redirectNoticeContainer__955a3",
 };

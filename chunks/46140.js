@@ -67,6 +67,12 @@ var r = n(754700),
             (e.VIDEO_MODAL = "video_modal"),
             (e.VIDEO_MODAL_MOBILE = "video_modal_mobile"),
             (e.GAME_WIDGETS_POPOVER = "game_widgets_popover"),
+            (e.PRIVATE_CHANNELS_LIST = "private_channels_list"),
+            (e.INTERNAL_TOOLING = "internal_tooling"),
+            (e.QUEST_HOME_MOVED_CALLOUT = "quest_home_moved_callout"),
+            (e.IN_APP_NAVIGATION = "in_app_navigation"),
+            (e.NAVIGATE_TO_QUEST_HOME_UTIL = "navigate_to_quest_home_util"),
+            (e.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
             e
         );
     })({});
