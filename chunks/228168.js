@@ -154,6 +154,7 @@ var o = (function (e) {
             (e.MANAGE_APP = "MANAGE_APP"),
             (e.PRESS_REMOVE_FROM_THREAD = "PRESS_REMOVE_FROM_THREAD"),
             (e.PRESS_LEAVE_THREAD = "PRESS_LEAVE_THREAD"),
+            (e.VIEW_WIDGET = "VIEW_WIDGET"),
             e
         );
     })({});
