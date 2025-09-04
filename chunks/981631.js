@@ -4438,6 +4438,7 @@ var nb = (function (e) {
             (e.REACTION_PICKER_TAB_CLICKED = "reaction_picker_tab_clicked"),
             (e.SUPER_REACTION_BALANCE_VIEWED = "super_reaction_balance_viewed"),
             (e.SUPER_REACTION_NOTIFICATIONS_ENABLED = "super_reaction_notifications_enabled"),
+            (e.DOUBLE_TAP_REACT_EMOJI_UPDATED = "double_tap_react_emoji_updated"),
             (e.STICKER_PACK_VIEW_ALL = "sticker_pack_view_all"),
             (e.STICKER_SEARCH_VIEW_ALL = "sticker_search_view_all"),
             (e.STICKER_SUGGESTIONS_ENABLED_TOGGLED = "sticker_suggestions_enabled_toggled"),

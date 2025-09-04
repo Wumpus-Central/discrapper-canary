@@ -282,6 +282,7 @@ var r = (function (e) {
         (e.BURST_REACTION_TUTORIAL_COACHMARK = "super reaction tutorial coachmark"),
         (e.MESSAGE_REACTIONS = "message reactions"),
         (e.MESSAGE_PREVIEW_REACTIONS = "message preview reactions"),
+        (e.DOUBLE_TAP_TO_REACT_ACTION_SHEET = "double tap to react action sheet"),
         (e.APP_ICON_SELECTOR = "app icon selector"),
         (e.APP_ICON_EDITOR = "app icon editor"),
         (e.APP_ICON_NEW_STYLES_COACHMARK = "app icon new styles coachmark"),
