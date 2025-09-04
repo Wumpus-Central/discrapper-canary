@@ -20,8 +20,8 @@ var i,
     O = n(131951),
     v = n(158776),
     I = n(19780),
-    T = n(981631),
-    S = n(70722);
+    S = n(981631),
+    T = n(70722);
 function A(e, t, n) {
     return (
         t in e
@@ -41,7 +41,7 @@ let C = {},
     P = {},
     w = {},
     D = {},
-    x = T.hVg.THEATRE,
+    x = S.hVg.THEATRE,
     L = {};
 function j(e, t, n, i) {
     return (
@@ -128,41 +128,41 @@ function B(e) {
         delete w[n];
 }
 function Z(e) {
-    var t, n, r;
-    let { streamKey: i, rtcServerId: a, rtcChannelId: o, region: s, viewerIds: l } = e,
-        c = L[i],
-        u = (0, m.my)(i);
-    if (null == c && null != a) {
-        null == R[i] && (N[i] = null), null == N[i] && null == P[i] && (N[i] = (0, g.L2)(u, v.Z));
+    var t, n, r, i;
+    let { streamKey: a, rtcServerId: o, rtcChannelId: s, region: l, viewerIds: c } = e,
+        u = L[a],
+        _ = (0, m.my)(a);
+    if (null == u && null != o) {
+        null == R[a] && (N[a] = null), null == N[a] && null == P[a] && (N[a] = (0, g.L2)(_, v.Z));
         let e = new h.A({
-            streamRegion: s,
-            streamApplication: N[i],
-            streamSourceType: J(P[i]),
-            actionContext: null == (t = C[i]) ? void 0 : t.appContext,
-            numViewers: null != l ? l.length : 0,
-            goLiveModalDurationMs: w[i],
-            analyticsLocations: null == (n = C[i]) ? void 0 : n.analyticsLocations,
+            streamRegion: l,
+            streamApplication: N[a],
+            streamSourceType: J(P[a]),
+            actionContext: null == (t = C[a]) ? void 0 : t.appContext,
+            numViewers: null != c ? c.length : 0,
+            goLiveModalDurationMs: w[a],
+            analyticsLocations: null == (n = C[a]) ? void 0 : n.analyticsLocations,
         });
-        (c = j(i, a, o, e)), (L[i] = c);
+        (u = j(a, o, s, e)), (L[a] = u);
     }
-    delete D[i],
+    delete D[a],
         d.Z.dispatch({
             type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
-            mediaEngineConnectionId: c.getMediaEngineConnectionId(),
+            mediaEngineConnectionId: u.getMediaEngineConnectionId(),
         }),
         (0, p.Bx)({
-            guildId: u.guildId,
+            guildId: _.guildId,
             location: "StreamRTCConnectionStore",
         }) &&
-            u.ownerId === y.default.getId() &&
-            (0, f.zf)(i, null == (r = N[i]) ? void 0 : r.id);
+            _.ownerId === y.default.getId() &&
+            (0, f.zf)(a, null == (r = N[a]) ? void 0 : r.id, null == (i = N[a]) ? void 0 : i.name);
 }
-function V(e) {
+function F(e) {
     let t = L[e.streamKey];
     if (null == t) return !1;
     t.connect(e.endpoint, e.token);
 }
-function F(e) {
+function V(e) {
     let { connectionStats: t } = e;
     l().forEach(L, (e, n) => {
         e.updateStats(t);
@@ -195,7 +195,7 @@ function K() {
 function z(e) {
     let { context: t, wants: n, userId: r, guildId: i, channelId: a } = e,
         o = (0, m.V9)({
-            streamType: null == i ? S.lo.CALL : S.lo.GUILD,
+            streamType: null == i ? T.lo.CALL : T.lo.GUILD,
             guildId: i,
             channelId: a,
             ownerId: r,
@@ -251,7 +251,7 @@ class $ extends (i = c.ZP.Store) {
     }
     getQuality(e) {
         var t, n;
-        return (0, E.Z)(O.Z) && null != e && null != (n = null == (t = L[e]) ? void 0 : t.quality) ? n : T.IE4.UNKNOWN;
+        return (0, E.Z)(O.Z) && null != e && null != (n = null == (t = L[e]) ? void 0 : t.quality) ? n : S.IE4.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
@@ -324,10 +324,10 @@ let ee = new $(
               STREAM_START: G,
               STREAM_STOP: B,
               STREAM_CREATE: Z,
-              STREAM_SERVER_UPDATE: V,
+              STREAM_SERVER_UPDATE: F,
               STREAM_UPDATE: H,
               STREAM_DELETE: Y,
-              MEDIA_ENGINE_CONNECTION_STATS: F,
+              MEDIA_ENGINE_CONNECTION_STATS: V,
               STREAM_LAYOUT_UPDATE: W,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: X,
               VIDEO_SIZE_UPDATE: Q,

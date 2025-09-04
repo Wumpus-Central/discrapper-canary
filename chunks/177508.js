@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(103866),
     v = n(213734),
     I = n(37148),
-    T = n(907862),
-    S = n(466590),
+    S = n(907862),
+    T = n(466590),
     A = n(681715),
     C = n(755721),
     N = n(481060),
@@ -572,7 +572,7 @@ function ep() {
                 children: [
                     (0, r.jsx)(N.xJW, {
                         title: "Button size",
-                        children: (0, r.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.Gu, {
                             onChange: (e) => {
                                 let { value: n } = e;
                                 return t(n);
@@ -592,7 +592,7 @@ function ep() {
                     }),
                     (0, r.jsx)(N.xJW, {
                         title: "Icon position",
-                        children: (0, r.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.Gu, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return a(t);
@@ -616,7 +616,7 @@ function ep() {
                     }),
                     (0, r.jsx)(N.xJW, {
                         title: "Loading animation",
-                        children: (0, r.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.Gu, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return l("on" === t);
@@ -1451,7 +1451,7 @@ function ey() {
                 variant: "heading-xl/semibold",
                 children: "Popovers",
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: Q,
                 shouldShow: e,
                 onRequestClose: eE,
@@ -1474,7 +1474,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: J,
                 shouldShow: n,
                 onRequestClose: eE,
@@ -1496,7 +1496,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: $,
                 shouldShow: o,
                 onRequestClose: eE,
@@ -1513,7 +1513,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: ee,
                 shouldShow: l,
                 onRequestClose: eE,
@@ -1540,7 +1540,7 @@ function ey() {
                     external: !0,
                 },
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: et,
                 shouldShow: u,
                 onRequestClose: eE,
@@ -1568,7 +1568,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: en,
                 shouldShow: f,
                 onRequestClose: eE,
@@ -1584,7 +1584,7 @@ function ey() {
                 },
                 badge: "new",
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: er,
                 shouldShow: p,
                 onRequestClose: eE,
@@ -1606,7 +1606,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: ei,
                 shouldShow: m,
                 onRequestClose: eE,
@@ -1628,7 +1628,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: ea,
                 shouldShow: E,
                 onRequestClose: eE,
@@ -1651,7 +1651,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: eo,
                 shouldShow: y,
                 onRequestClose: eE,
@@ -1674,7 +1674,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: es,
                 shouldShow: v,
                 onRequestClose: eE,
@@ -1698,7 +1698,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: el,
                 shouldShow: A,
                 onRequestClose: eE,
@@ -1722,7 +1722,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: ec,
                 shouldShow: R,
                 onRequestClose: eE,
@@ -1749,7 +1749,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: eu,
                 shouldShow: w,
                 onRequestClose: eE,
@@ -1772,7 +1772,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.Mb, {
+            (0, r.jsx)(S.Mb, {
                 targetElementRef: ed,
                 shouldShow: x,
                 onRequestClose: eE,
@@ -1789,7 +1789,7 @@ function ey() {
                     onClick: eE,
                 },
             }),
-            (0, r.jsx)(T.Mb, {
+            (0, r.jsx)(S.Mb, {
                 targetElementRef: ef,
                 shouldShow: j,
                 onRequestClose: eE,
@@ -1807,7 +1807,7 @@ function ey() {
                     onClick: eE,
                 },
             }),
-            (0, r.jsx)(T.Mb, {
+            (0, r.jsx)(S.Mb, {
                 targetElementRef: e_,
                 shouldShow: k,
                 onRequestClose: eE,
@@ -1824,7 +1824,7 @@ function ey() {
                     onClick: eE,
                 },
             }),
-            (0, r.jsx)(S.e, {
+            (0, r.jsx)(T.e, {
                 targetElementRef: ep,
                 shouldShow: G,
                 onRequestClose: eE,
@@ -1872,7 +1872,7 @@ function ey() {
                 ],
                 onStepChange: (e) => {},
             }),
-            (0, r.jsx)(T.J2, {
+            (0, r.jsx)(S.J2, {
                 targetElementRef: eh,
                 shouldShow: Z,
                 onRequestClose: eE,
@@ -1896,7 +1896,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.e, {
+            (0, r.jsx)(T.e, {
                 targetElementRef: em,
                 shouldShow: H,
                 onRequestClose: eE,
@@ -1947,7 +1947,7 @@ function ey() {
                 ],
                 onStepChange: (e) => {},
             }),
-            (0, r.jsx)(T.Mb, {
+            (0, r.jsx)(S.Mb, {
                 targetElementRef: eg,
                 shouldShow: W,
                 onRequestClose: eE,
@@ -2328,6 +2328,13 @@ function eO() {
                         onChange: (e) => a(e),
                         children: "FormSwitch with a label",
                     }),
+                    (0, r.jsx)(N.j7V, {
+                        disabled: !0,
+                        hideBorder: !0,
+                        value: n,
+                        onChange: (e) => a(e),
+                        children: "FormSwitch with a label",
+                    }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -2338,7 +2345,7 @@ function eO() {
                         children: "Radio Buttons",
                     }),
                     (0, r.jsx)(N.xJW, {
-                        children: (0, r.jsx)(N.FXm, {
+                        children: (0, r.jsx)(C.Gu, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return s(t);
@@ -2652,7 +2659,7 @@ function eI() {
         ],
     });
 }
-function eT(e) {
+function eS(e) {
     let { transitionState: t } = e,
         [n, a] = i.useState(!1),
         [o, s] = i.useState(N.CgR.SMALL),
@@ -2738,12 +2745,12 @@ function eT(e) {
         ],
     });
 }
-function eS(e) {
+function eT(e) {
     let { transitionState: t, onClose: n, modalCount: a = 1 } = e,
         [o, s] = i.useState("replace"),
         l = () => {
             let e = a + 1;
-            (0, N.h7j)((t) => (0, r.jsx)(eS, $(Q({}, t), { modalCount: e })), { stackingBehavior: o });
+            (0, N.h7j)((t) => (0, r.jsx)(eT, $(Q({}, t), { modalCount: e })), { stackingBehavior: o });
         },
         c = a < 3;
     return (0, r.jsxs)(N.Y0X, {
@@ -2908,7 +2915,7 @@ function eC(e) {
         [_, p] = i.useState(!1),
         [h, m] = i.useState(!1),
         [E, b] = i.useState(!1),
-        [T, S] = i.useState(!1);
+        [S, T] = i.useState(!1);
     return (0, r.jsxs)(g.I, {
         transitionState: t,
         onClose: n,
@@ -3007,8 +3014,8 @@ function eC(e) {
                                         }),
                                     }),
                                     (0, r.jsx)(C.$q, {
-                                        value: T,
-                                        onChange: (e, t) => S(t),
+                                        value: S,
+                                        onChange: (e, t) => T(t),
                                         children: (0, r.jsx)(N.Text, {
                                             variant: "text-md/medium",
                                             children: "Full Width Actions",
@@ -3038,10 +3045,11 @@ function eC(e) {
                 leading: E
                     ? (0, r.jsx)(y.B, {
                           value: !1,
-                          onChange: () => {},
+                          onChange: (e, t) => {},
+                          text: "Don't show again",
                       })
                     : void 0,
-                actionsFullWidth: T,
+                actionsFullWidth: S,
                 actions: [
                     {
                         variant: "secondary",
@@ -3347,10 +3355,10 @@ function ew(e) {
 }
 function eD() {
     let e = () => {
-            (0, N.h7j)((e) => (0, r.jsx)(eT, Q({}, e)));
+            (0, N.h7j)((e) => (0, r.jsx)(eS, Q({}, e)));
         },
         t = () => {
-            (0, N.h7j)((e) => (0, r.jsx)(eS, Q({}, e)));
+            (0, N.h7j)((e) => (0, r.jsx)(eT, Q({}, e)));
         },
         n = () => {
             (0, N.h7j)((e) => (0, r.jsx)(eA, Q({}, e)));

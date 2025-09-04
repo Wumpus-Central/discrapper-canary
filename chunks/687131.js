@@ -8,7 +8,7 @@ var r = n(797258),
 function c(e) {
     let { platform: t } = e;
     return (
-        !!(0, s.Dp)(e) ||
+        !!(0, s.D)(e) ||
         ((0, a.isAndroid)()
             ? t === l.M7m.ANDROID
             : (0, a.isIOS)()

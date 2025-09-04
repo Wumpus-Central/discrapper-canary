@@ -1,6 +1,6 @@
 n.d(t, {
     N: () => b,
-    P: () => O,
+    P: () => v,
 }),
     n(388685);
 var i = n(951288),
@@ -17,8 +17,9 @@ var i = n(951288),
     h = n(944486),
     m = n(594174),
     g = n(145597),
-    y = n(388032);
-function O(e) {
+    y = n(981631),
+    O = n(388032);
+function v(e) {
     let {
             pid: t,
             analyticsLocation: n,
@@ -29,25 +30,25 @@ function O(e) {
         } = e,
         y = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId()),
         O = (0, o.e7)([u.Z], () => u.Z.getChannel(y), [y]),
-        b = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
-        E = null == O ? void 0 : O.getGuildId(),
+        v = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
+        b = null == O ? void 0 : O.getGuildId(),
         _ = (0, o.e7)([p.Z], () => (0, s.Z)(p.Z)),
-        S = (0, o.e7)([d.Z, f.Z], () => null != O && (0, a.JL)(O, d.Z, f.Z));
+        I = (0, o.e7)([d.Z, f.Z], () => null != O && (0, a.JL)(O, d.Z, f.Z));
     return r.useCallback(async () => {
-        await v({
+        await E({
             pid: t,
             voiceChannelId: y,
-            user: b,
-            targetGuildId: E,
+            user: v,
+            targetGuildId: b,
             canGoLive: _,
-            canStream: S,
+            canStream: I,
             analyticsLocation: n,
             allowOneClickGoLive: i,
             onBeforeShowModal: l,
             onOneClickGoLive: c,
             appContext: g,
         });
-    }, [t, y, b, E, _, S, n, i, l, c, g]);
+    }, [t, y, v, b, _, I, n, i, l, c, g]);
 }
 async function b(e) {
     let {
@@ -62,15 +63,15 @@ async function b(e) {
         g = u.Z.getChannel(c),
         y = m.default.getCurrentUser(),
         O = null == g ? void 0 : g.getGuildId(),
-        b = null != g && (0, a.JL)(g, d.Z, f.Z),
-        E = (0, s.Z)(p.Z);
-    await v({
+        v = null != g && (0, a.JL)(g, d.Z, f.Z),
+        b = (0, s.Z)(p.Z);
+    await E({
         pid: t,
         voiceChannelId: c,
         user: y,
         targetGuildId: O,
-        canGoLive: E,
-        canStream: b,
+        canGoLive: b,
+        canStream: v,
         analyticsLocation: n,
         allowOneClickGoLive: i,
         onBeforeShowModal: r,
@@ -78,7 +79,7 @@ async function b(e) {
         appContext: l,
     });
 }
-async function v(e) {
+async function E(e) {
     let {
         pid: t,
         voiceChannelId: r,
@@ -100,7 +101,10 @@ async function v(e) {
                 return;
             }
         }
-        if (null == o) return void (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.OKnWyc), l.ToastType.FAILURE));
+        if (null == o)
+            return void (0, l.showToast)(
+                (0, l.createToast)(O.intl.string(O.t.OKnWyc), l.ToastType.FAILURE, { appContext: y.IlC.OVERLAY }),
+            );
         null == f || f(),
             (0, l.ZDy)(
                 async () => {

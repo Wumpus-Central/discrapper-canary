@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -6,11 +6,12 @@ var i = n(120356),
     a = n(442837),
     o = n(481060),
     s = n(185514),
-    c = n(365355),
-    u = n(891304),
-    d = n(388032),
-    p = n(861265);
-function f(e) {
+    c = n(719961),
+    u = n(365355),
+    d = n(891304),
+    p = n(388032),
+    f = n(861265);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,37 +54,40 @@ function h(e, t) {
         e
     );
 }
-let g = s.Nx.binds["0"],
-    m = s.On.binds["0"],
-    b = (e) => {
+let m = s.Nx.binds["0"],
+    b = s.On.binds["0"],
+    _ = (e) => {
         let { firstElementFocusJumpSectionProps: t = {} } = e,
-            n = (0, a.e7)([c.Z], () => c.Z.canGoBack),
-            i = (0, a.e7)([c.Z], () => c.Z.canGoForward);
+            { titlebarIconSize: n } = (0, c.T)({ location: "BackForwardButtons" }),
+            { canGoBack: i, canGoForward: s } = (0, a.cj)([u.Z], () => ({
+                canGoBack: u.Z.canGoBack,
+                canGoForward: u.Z.canGoForward,
+            }));
         return (0, r.jsxs)("div", {
-            className: p.backForwardButtons,
+            className: f.backForwardButtons,
             children: [
                 (0, r.jsx)(o.ua7, {
-                    "aria-label": d.intl.string(d.t.B9vzIC),
-                    tooltipContentClassName: p.navigationTooltip,
-                    shouldShow: n,
+                    "aria-label": p.intl.string(p.t.B9vzIC),
+                    tooltipContentClassName: f.navigationTooltip,
+                    shouldShow: i,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [d.intl.string(d.t.B9vzIC), (0, r.jsx)(o.M2$, { shortcut: g })],
+                        children: [p.intl.string(p.t.B9vzIC), (0, r.jsx)(o.M2$, { shortcut: m })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
                             o.P3F,
-                            h(
-                                f(
-                                    h(f({}, e), {
-                                        "aria-disabled": !n,
-                                        className: l()(p.button, p.back, { [p.disabled]: !n }),
-                                        onClick: () => (0, u.Hm)("arrow"),
+                            g(
+                                h(
+                                    g(h({}, e), {
+                                        "aria-disabled": !i,
+                                        className: l()(f.button, f.back, { [f.disabled]: !i }),
+                                        onClick: () => (0, d.Hm)("arrow"),
                                     }),
                                     t,
                                 ),
                                 {
                                     children: (0, r.jsx)(o.whL, {
-                                        size: "sm",
+                                        size: n,
                                         color: "currentColor",
                                     }),
                                 },
@@ -91,21 +95,21 @@ let g = s.Nx.binds["0"],
                         ),
                 }),
                 (0, r.jsx)(o.ua7, {
-                    "aria-label": d.intl.string(d.t["9KJ29f"]),
-                    tooltipContentClassName: p.navigationTooltip,
-                    shouldShow: i,
+                    "aria-label": p.intl.string(p.t["9KJ29f"]),
+                    tooltipContentClassName: f.navigationTooltip,
+                    shouldShow: s,
                     text: (0, r.jsxs)(r.Fragment, {
-                        children: [d.intl.string(d.t["9KJ29f"]), (0, r.jsx)(o.M2$, { shortcut: m })],
+                        children: [p.intl.string(p.t["9KJ29f"]), (0, r.jsx)(o.M2$, { shortcut: b })],
                     }),
                     children: (e) =>
                         (0, r.jsx)(
                             o.P3F,
-                            h(f({}, e), {
-                                "aria-disabled": !i,
-                                className: l()(p.button, p.forward, { [p.disabled]: !i }),
-                                onClick: () => (0, u.TL)("arrow"),
+                            g(h({}, e), {
+                                "aria-disabled": !s,
+                                className: l()(f.button, f.forward, { [f.disabled]: !s }),
+                                onClick: () => (0, d.TL)("arrow"),
                                 children: (0, r.jsx)(o.ZSh, {
-                                    size: "sm",
+                                    size: n,
                                     color: "currentColor",
                                 }),
                             }),

@@ -1,57 +1,58 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(399606),
-    a = n(481060),
-    s = n(279542),
-    o = n(496675),
-    c = n(140031),
-    d = n(981631),
-    u = n(388032),
-    m = n(49465);
-function g(e) {
+    a = n(755721),
+    s = n(481060),
+    o = n(279542),
+    c = n(496675),
+    d = n(140031),
+    u = n(981631),
+    m = n(388032),
+    g = n(49465);
+function p(e) {
     let { guild: t } = e,
         n = i.useId(),
-        g = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
-        p = t.features.has(d.oNc.COMMUNITY),
-        [h, f] = i.useState(t.features.has(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        b = i.useCallback(
+        p = (0, l.e7)([c.Z], () => null != t && c.Z.can(u.Plq.MANAGE_GUILD, t), [t]),
+        f = t.features.has(u.oNc.COMMUNITY),
+        [h, b] = i.useState(t.features.has(u.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        x = i.useCallback(
             async (e) => {
-                f(e), await (0, s.fp)(t, e);
+                b(e), await (0, o.fp)(t, e);
             },
             [t],
         );
-    return p
+    return f
         ? null
         : (0, r.jsxs)("div", {
-              className: m.bannerContainer,
+              className: g.bannerContainer,
               children: [
-                  (0, r.jsx)(c.Z, {
+                  (0, r.jsx)(d.Z, {
                       width: 64,
                       height: 64,
                   }),
                   (0, r.jsxs)("div", {
-                      className: m.headingContainer,
+                      className: g.headingContainer,
                       children: [
-                          (0, r.jsx)(a.X6q, {
+                          (0, r.jsx)(s.X6q, {
                               variant: "heading-lg/semibold",
                               color: "always-white",
-                              children: u.intl.string(u.t.jDarm5),
+                              children: m.intl.string(m.t.jDarm5),
                           }),
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
                               color: "always-white",
-                              children: u.intl.string(u.t["/ee7yM"]),
+                              children: m.intl.string(m.t["/ee7yM"]),
                           }),
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: m.buttonContainer,
-                      children: (0, r.jsx)(a.rsf, {
+                      className: g.buttonContainer,
+                      children: (0, r.jsx)(a.T2, {
                           id: n,
                           checked: h,
-                          onChange: b,
-                          disabled: !g,
+                          onChange: x,
+                          disabled: !p,
                       }),
                   }),
               ],

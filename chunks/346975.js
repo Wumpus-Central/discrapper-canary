@@ -457,7 +457,7 @@ function eN(e) {
         i.useEffect(() => {
             var e, t;
             let { editorHeight: n, isGridLayout: r } = eJ.current,
-                i = r ? e8 : ea,
+                i = r ? e6 : ea,
                 a = null == (e = i.current) ? void 0 : e.getScrollerState();
             null != a && !eX && a.scrollTop > n && (null == (t = i.current) || t.scrollTo({ to: 0 }));
         }, [eX]);
@@ -560,9 +560,9 @@ function eN(e) {
             observePostVisibilityAnalytics: es,
             isShowingSearchResult: e_,
         }),
-        e8 = i.useRef(null),
+        e6 = i.useRef(null),
         {
-            updateMasonryListScrollerRef: e6,
+            updateMasonryListScrollerRef: e8,
             getItemKey: e1,
             renderGridSection: e4,
             renderGridItem: e9,
@@ -705,7 +705,7 @@ function eN(e) {
                 ),
             };
         })({
-            masonryListScrollerRef: e8,
+            masonryListScrollerRef: e6,
             threadIdsBySection: eU,
             goToThread: eV,
             renderSectionOrItem: eW,
@@ -748,7 +748,7 @@ function eN(e) {
             }
         }, [s, n, r, a, l, t]);
     })({
-        masonryListScrollerRef: e8,
+        masonryListScrollerRef: e6,
         containerWidth: eM,
         isGridLayout: eo,
         threadIdsBySection: eU,
@@ -759,7 +759,7 @@ function eN(e) {
             var e, n;
             if (e_) return;
             let r = eo
-                ? null == (e = e8.current)
+                ? null == (e = e6.current)
                     ? void 0
                     : e.getScrollerState()
                 : null == (n = ea.current)
@@ -832,7 +832,7 @@ function eN(e) {
                                                       null != (t = null == e ? void 0 : e.getScrollerNode())
                                                           ? t
                                                           : null),
-                                                      e6(e);
+                                                      e8(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
@@ -1421,7 +1421,10 @@ function ek(e) {
                             className: ep.sortDropdownText,
                             variant: "text-sm/medium",
                             color: "interactive-normal",
-                            children: n ? ex.intl.string(ex.t.JxU0ws) : ex.intl.string(ex.t.xyYt8P),
+                            children: (0, r.jsx)("span", {
+                                className: ep.sortDropdownTextHighContrastForcedColor,
+                                children: n ? ex.intl.string(ex.t.JxU0ws) : ex.intl.string(ex.t.xyYt8P),
+                            }),
                         }),
                         i
                             ? (0, r.jsx)(p.u04, {

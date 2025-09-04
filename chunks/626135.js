@@ -89,11 +89,11 @@ function I(e, t) {
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -101,7 +101,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -367,6 +367,10 @@ let Z = {
         throttlePeriod: L,
         throttleKeys: (e) => [e.search_type],
     },
+    [m.rMx.AD_IDENTIFIER_FETCHED]: {
+        throttlePeriod: j,
+        throttleKeys: () => [],
+    },
 };
 function F(e) {
     return "string" == typeof e
@@ -407,11 +411,11 @@ function z(e) {
     let a = null != e ? e : {};
     if (null != a.location) {
         let { location: e } = a;
-        a = O({}, T(a, ["location"]), F(e));
+        a = O({}, S(a, ["location"]), F(e));
     }
     if (null != a.source) {
         let { source: e } = a;
-        a = O({}, T(a, ["source"]), V(e));
+        a = O({}, S(a, ["source"]), V(e));
     }
     (a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()),
         (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()),

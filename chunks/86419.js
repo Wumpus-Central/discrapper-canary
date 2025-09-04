@@ -1,19 +1,20 @@
 n.d(t, {
-    $b: () => x,
-    Bu: () => w,
-    ES: () => D,
-    M8: () => b,
-    RZ: () => P,
-    X6: () => j,
-    kQ: () => M,
-    n$: () => R,
-    np: () => v,
+    $b: () => L,
+    Bu: () => D,
+    ES: () => x,
+    M8: () => y,
+    Nc: () => E,
+    RZ: () => w,
+    X6: () => M,
+    kQ: () => U,
+    n$: () => P,
+    np: () => I,
     ou: () => V,
-    qH: () => C,
+    qH: () => N,
     tk: () => k,
-    vH: () => L,
-    vI: () => E,
-    y8: () => N,
+    vH: () => j,
+    vI: () => b,
+    y8: () => R,
 }),
     n(388685),
     n(642613),
@@ -26,7 +27,7 @@ var r = n(624238),
     l = n(621853),
     c = n(592183),
     u = n(224724),
-    d = n(247397),
+    d = n(286957),
     f = n(925434),
     _ = n(570911);
 function p(e, t, n) {
@@ -81,29 +82,30 @@ function g(e, t) {
         e
     );
 }
-function E(e) {
+let E = (e) => d.Wk[e]();
+function b(e) {
     return d.S5.includes(e);
 }
-function b(e) {
+function y(e) {
     return d.uX.includes(e);
 }
-function y(e) {
+function O(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-function O(e, t) {
+function v(e, t) {
     return [...e].sort(() => 0.5 - Math.random()).slice(0, t);
 }
-function v(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set(),
         n = _.J6.filter((e) => !t.has(e)),
-        r = { applicationId: y(n.length > 0 ? n : _.J6) };
+        r = { applicationId: O(n.length > 0 ? n : _.J6) };
     return (
-        E(e) && (r.comment = Math.random() > 0.5 ? y(f.x) : void 0),
-        b(e) && (r.tags = Math.random() > 0.3 ? O(f.T, f.T.length) : void 0),
+        b(e) && (r.comment = Math.random() > 0.5 ? O(f.x) : void 0),
+        y(e) && (r.tags = Math.random() > 0.3 ? v(f.T, f.T.length) : void 0),
         r
     );
 }
-function I() {
+function S() {
     var e;
     let t = s.default.getCurrentUser(),
         n = null != t ? l.Z.getUserProfile(t.id) : null;
@@ -111,18 +113,18 @@ function I() {
 }
 function T() {
     var e;
-    return u.Z.hasPendingChanges() ? (null != (e = u.Z.getPendingWidgets()) ? e : []) : I();
+    return u.Z.hasPendingChanges() ? (null != (e = u.Z.getPendingWidgets()) ? e : []) : S();
 }
-function S(e) {
+function A(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-        r = I().find((t) => t.type === e);
+        r = S().find((t) => t.type === e);
     return g(h({}, { id: null != (t = null == r ? void 0 : r.id) ? t : e }), {
         type: e,
         games: n,
     });
 }
-function A(e, t) {
+function C(e, t) {
     let n = e.findIndex((e) => e.id === t.id);
     if (-1 === n) return [...e, t];
     {
@@ -130,17 +132,17 @@ function A(e, t) {
         return (r[n] = t), r;
     }
 }
-function C(e) {
+function N(e) {
     let t = T();
     if (null != t.find((t) => t.type === e)) return;
-    let n = S(e);
+    let n = A(e);
     c.Z.setPendingWidgets([...t, n]);
 }
-function N(e) {
+function R(e) {
     let t = T().filter((t) => t.type !== e);
     c.Z.setPendingWidgets(t);
 }
-function R(e, t, n) {
+function P(e, t, n) {
     let r = Object.values(i._).length;
     if (n.length > r) return;
     let a = T(),
@@ -150,18 +152,18 @@ function R(e, t, n) {
     if (null == s) return;
     let l = g(h({}, s), { tags: n }),
         u = o.games.map((e) => (e.applicationId === t ? l : e)),
-        d = A(a, g(h({}, o), { games: u }));
+        d = C(a, g(h({}, o), { games: u }));
     c.Z.setPendingWidgets(d);
 }
-function P(e, t, n) {
+function w(e, t, n) {
     let r = T().find((t) => t.type === e);
     if (null == r) return;
     let i = r.games.find((e) => e.applicationId === t);
     if (null == i || null == i.tags || 0 === i.tags.length) return;
     let a = i.tags.filter((e) => e !== n);
-    R(e, t, a.length > 0 ? a : []);
+    P(e, t, a.length > 0 ? a : []);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r = T(),
         i = r.find((t) => t.type === e);
     if (null == i) return;
@@ -169,10 +171,10 @@ function w(e, t, n) {
     if (null == a || n === a.comment) return;
     let o = g(h({}, a), { comment: n }),
         s = i.games.map((e) => (e.applicationId === t ? o : e)),
-        l = A(r, g(h({}, i), { games: s }));
+        l = C(r, g(h({}, i), { games: s }));
     c.Z.setPendingWidgets(l);
 }
-function D(e, t) {
+function x(e, t) {
     var n, i, a;
     let s,
         l = T(),
@@ -184,23 +186,23 @@ function D(e, t) {
             comment: t.comment,
             tags: t.tags,
         },
-        _ = A(l, S(e, (s = null != u ? [...(null != (a = u.games) ? a : []), f] : [f])));
+        _ = C(l, A(e, (s = null != u ? [...(null != (a = u.games) ? a : []), f] : [f])));
     c.Z.setPendingWidgets(_), o.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
-function x(e, t) {
+function L(e, t) {
     let n = T(),
         r = n.find((t) => t.type === e);
     if (null == r) return;
-    let i = A(
+    let i = C(
         n,
-        S(
+        A(
             e,
             (null != r.games ? r.games : []).filter((e) => e.applicationId !== t),
         ),
     );
     c.Z.setPendingWidgets(i);
 }
-function L(e) {
+function j(e) {
     let t = (e) => ({
             game_id: e.applicationId,
             comment: e.comment,
@@ -215,7 +217,7 @@ function L(e) {
         },
     };
 }
-async function j() {
+async function M() {
     let e = u.Z.getPendingWidgets();
     if (null !== e)
         try {
@@ -231,26 +233,26 @@ async function k() {
         console.error("Failed to clear saved widgets", e);
     }
 }
-function M(e) {
+function U(e) {
     let t = r.k[e.type];
     return e.games.length >= t;
 }
-function U(e) {
+function G(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
-function G(e, t) {
-    return e.applicationId === t.applicationId && U(e.comment) === U(t.comment);
-}
 function B(e, t) {
+    return e.applicationId === t.applicationId && G(e.comment) === G(t.comment);
+}
+function Z(e, t) {
     if (e.applicationId !== t.applicationId) return !1;
-    let n = U(e.tags),
-        r = U(t.tags);
+    let n = G(e.tags),
+        r = G(t.tags);
     return (
         (null === n && null === r) ||
         (null !== n && null !== r && n.length === r.length && n.every((e, t) => e === r[t]))
     );
 }
-function Z(e, t) {
+function F(e, t) {
     return e.applicationId === t.applicationId;
 }
 function V(e, t, n) {
@@ -258,14 +260,14 @@ function V(e, t, n) {
     if (e.length !== t.length) return !1;
     switch (n) {
         case a.l.FAVORITE_GAMES:
-            r = G;
+            r = B;
             break;
         case a.l.CURRENT_GAMES:
-            r = B;
+            r = Z;
             break;
         case a.l.WANT_TO_PLAY_GAMES:
         case a.l.PLAYED_GAMES:
-            r = Z;
+            r = F;
             break;
         default:
             throw Error("Unknown widget type: ".concat(n));

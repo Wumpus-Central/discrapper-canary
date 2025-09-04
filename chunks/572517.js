@@ -14,32 +14,38 @@ function x() {
     var e, t;
     let n = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         x = (0, a.ZP)(),
-        h = (0, l.wj)(x),
-        _ = (0, d.Z)(),
-        f = null == _ ? void 0 : _.planSelectionBanner,
+        _ = (0, l.wj)(x),
+        h = (0, d.Z)(),
+        f = null == h ? void 0 : h.planSelectionBanner,
         { claimableRewards: j } = (0, C.wD)();
     if (null == f || null == j) return null;
-    let m = null == (e = f.getBackgroundImageUrl) ? void 0 : e.call(f, h),
-        L =
+    let m = null == (e = f.getBackgroundImageUrl) ? void 0 : e.call(f, _),
+        L = (0, c.Yr)(m),
+        b =
             null == (t = f.gradientConfig)
                 ? void 0
                 : t.call(f, {
-                      isDarkMode: h,
+                      isDarkMode: _,
                       isAndroid: !1,
                   }),
-        g = (0, c.Tl)(L);
+        g = (0, c.Tl)(b);
     return (0, r.jsxs)("div", {
         className: u.promotionalFooterBanner,
-        style: null != m ? { backgroundImage: "url(".concat(m, ")") } : g,
+        style: null != L ? L : g,
         children: [
-            (0, r.jsx)(p.Z, {
-                claimableRewards: j,
-                maxRewardImageSrc: f.getImageUrl(h, n),
-                size: s.EFr.SIZE_40,
+            (0, r.jsx)("div", {
+                className: u.avatar,
+                children: (0, r.jsx)(p.Z, {
+                    claimableRewards: j,
+                    maxRewardImageSrc: f.getImageUrl(_, n),
+                    size: s.EFr.SIZE_40,
+                    imageScaling: 2,
+                }),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
                 className: u.bannerText,
+                color: "always-white",
                 children: f.desktopBannerText(j.length),
             }),
         ],

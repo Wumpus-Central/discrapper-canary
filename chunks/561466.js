@@ -1,10 +1,11 @@
 n.d(t, {
-    az: () => a,
-    pC: () => i,
-    si: () => o,
+    az: () => o,
+    pC: () => a,
+    si: () => s,
 });
-let r = 3000;
-var i = (function (e) {
+var r = n(981631);
+let i = 3000;
+var a = (function (e) {
         return (
             (e.MESSAGE = "message"),
             (e.SUCCESS = "success"),
@@ -20,11 +21,12 @@ var i = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e[(e.TOP = 0)] = "TOP"), (e[(e.BOTTOM = 1)] = "BOTTOM"), e;
     })({});
-let o = {
+let s = {
     position: 0,
     component: null,
-    duration: r,
+    duration: i,
+    appContext: r.IlC.APP,
 };

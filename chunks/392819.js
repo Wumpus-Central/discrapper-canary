@@ -7,7 +7,7 @@ function s(e) {
     let { shouldSubscribe: t, subscribeToGroupId: n, authorId: s } = e,
         l = r.useContext(i.d);
     r.useEffect(() => {
-        if (!t || null == l || null == n) return;
+        if (!t || null == l || null == n || null == s) return;
         let { setAnimate: e } = l;
         return (
             a.S.subscribeKeyed(o.LPv.ANIMATE_CHAT_AVATAR, "".concat(n, ":").concat(s), e),

@@ -1,25 +1,30 @@
 r.d(t, { Z: () => d });
 var n = r(951288);
 r(647438);
-var a = r(120356),
-    i = r.n(a),
-    l = r(481060),
+var i = r(120356),
+    l = r.n(i),
+    a = r(481060),
     o = r(785717),
     c = r(86419),
     s = r(388032),
     u = r(51708);
 function d(e) {
-    let { game: t, widgetType: r, iconSize: a = "refresh_sm", className: d } = e,
-        { trackUserProfileAction: f } = (0, o.KZ)(),
+    let { game: t, widgetType: r, iconSize: i = "refresh_sm", className: d } = e,
+        { trackUserProfileEditAction: f } = (0, o.KZ)(),
         g = () => {
-            (0, c.$b)(r, t.applicationId), f({ action: "EDIT_ACTION" });
+            (0, c.$b)(r, t.applicationId),
+                f({
+                    action: "GAME_REMOVED",
+                    gameId: t.applicationId,
+                    widgetEdited: r,
+                });
         };
-    return (0, n.jsx)(l.ua7, {
+    return (0, n.jsx)(a.ua7, {
         text: s.intl.string(s.t.HUvyDQ),
         children: (e) => {
             var t, r;
             return (0, n.jsx)(
-                l.P3F,
+                a.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -49,11 +54,11 @@ function d(e) {
                     {
                         onClick: g,
                         "aria-label": s.intl.string(s.t.HUvyDQ),
-                        className: i()(d, u.clickable),
-                        children: (0, n.jsx)(l.XHJ, {
-                            size: a,
+                        className: l()(d, u.clickable),
+                        children: (0, n.jsx)(a.XHJ, {
+                            size: i,
                             className: u.icon,
-                            color: l.TVs.colors.STATUS_DANGER,
+                            color: a.TVs.colors.STATUS_DANGER,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

@@ -1,30 +1,36 @@
 n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(434404),
-    l = n(970731),
+var i = n(907862),
+    l = n(434404),
     a = n(981631),
-    o = n(388032),
-    s = n(501130),
+    o = n(921944),
+    s = n(388032),
     c = n(930128);
 function u(e) {
-    let { guild: t, markAsDismissed: n } = e;
-    return (0, r.jsx)(l.ZP, {
-        header: o.intl.string(o.t.Hgd22t),
-        content: o.intl.string(o.t.SorTPD),
-        asset: (0, r.jsx)("div", {
-            className: s.image,
-            children: (0, r.jsx)("img", {
-                alt: "",
-                src: c,
-            }),
-        }),
-        buttonCTA: o.intl.string(o.t["9l+df3"]),
-        onClick: (e) => {
-            i.Z.open(t.id, a.pNK.DISCOVERY_LANDING_PAGE);
+    let { guild: t, markAsDismissed: n, targetElementRef: u } = e;
+    return (0, r.jsx)(i.J2, {
+        targetElementRef: u,
+        title: s.intl.string(s.t.Hgd22t),
+        body: s.intl.string(s.t.SorTPD),
+        graphic: {
+            type: "image",
+            src: c,
         },
-        secondaryButtonCTA: o.intl.string(o.t.duVdqq),
-        onSecondaryClick: () => {},
-        markAsDismissed: n,
+        actions: [
+            {
+                text: s.intl.string(s.t["9l+df3"]),
+                variant: "primary",
+                onClick: (e) => {
+                    l.Z.open(t.id, a.pNK.DISCOVERY_LANDING_PAGE);
+                },
+            },
+        ],
+        onRequestClose: () => n(o.L.USER_DISMISS),
+        position: "bottom",
+        caretConfig: {
+            position: "top",
+            align: "center",
+        },
     });
 }

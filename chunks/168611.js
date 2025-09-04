@@ -43,7 +43,13 @@ let b = new m(a.Z, {
     CONNECTION_OPEN: f,
     VOICE_CHANNEL_START_TIME_UPDATE: function (e) {
         let { guildId: t, id: n, voiceStartTime: r } = e;
-        if (!u.W.getCurrentConfig({ location: "VoiceChannelStartTimeStore" }).enabled) return !1;
+        if (
+            !u.W.getCurrentConfig({
+                guildId: t,
+                location: "VoiceChannelStartTimeStore",
+            }).enabled
+        )
+            return !1;
         null == p[t] && (p[t] = {}), (p[t][n] = null != r ? h(r) : void 0);
     },
     CHANNEL_INFO: function (e) {

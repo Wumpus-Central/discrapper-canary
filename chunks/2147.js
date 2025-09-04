@@ -667,7 +667,7 @@ class eR extends l.PureComponent {
                       children: (0, i.jsx)(m.j7V, {
                           note: ea.intl.string(ea.t["9eUgwc"]),
                           onChange: this.handleNSFWChange,
-                          value: (0, y.aC)(e),
+                          value: (0, y.qF)(e),
                           hideBorder: !0,
                           disabled: !b || null != e.linkedLobby || ed,
                           disabledText: null != e.linkedLobby ? ea.intl.string(ea.t.l6uSVV) : null,
@@ -897,7 +897,7 @@ class eR extends l.PureComponent {
             children: [
                 (0, i.jsx)(m.xJW, {
                     title: ea.intl.string(ea.t.jhJEJi),
-                    children: (0, i.jsx)(m.FXm, {
+                    children: (0, i.jsx)(g.Gu, {
                         onChange: (e) => {
                             let { value: t } = e;
                             return this.handleVideoQualityModeChange(t);

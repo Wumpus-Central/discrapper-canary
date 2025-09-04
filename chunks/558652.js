@@ -12,10 +12,10 @@ var r = n(951288),
     f = n(981631),
     h = n(388032),
     g = n(872058);
-let m = new Set();
+let m = [];
 function b() {
     let { enabled: e } = s.$d.useConfig({ location: p.dr.QUEST_HOME_DESKTOP }),
-        [t, n] = i.useState(p._v.SUGGESTED),
+        [t, n] = i.useState(p.yq.SUGGESTED),
         [b, _] = i.useState(m),
         { quests: O, isFetchingCurrentQuests: E } = (0, o.bA)(
             o.e5.ALL,
@@ -37,7 +37,7 @@ function b() {
         i.useEffect(() => {
             e &&
                 a.default.track(f.rMx.QUEST_HOME_FILTERS_CHANGED, {
-                    filters: Array.from(b),
+                    filters: b.map((e) => e.filter),
                     num_quests_visible: O.length,
                 });
         }, [b, e, O.length]),
@@ -71,7 +71,7 @@ function b() {
                 (0, r.jsx)(d.Z, {
                     quests: O,
                     isFetching: E,
-                    hasFiltersApplied: b.size > 0,
+                    hasFiltersApplied: b.length > 0,
                     onClearFilters: y,
                 }),
             ],

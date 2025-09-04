@@ -29,8 +29,8 @@ var r = n(951288),
     S = n(870041),
     N = n(963590),
     T = n(767870),
-    P = n(331972),
-    j = n(104494),
+    j = n(331972),
+    P = n(104494),
     x = n(639119),
     A = n(655525),
     Z = n(93237),
@@ -52,7 +52,7 @@ let W = (e) => {
             n = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
             r = (0, a.e7)([b.Z], () => b.Z.getPremiumTypeSubscription()),
             i = (0, x.N)(),
-            l = (0, j.Ng)(),
+            l = (0, P.Ng)(),
             o = (0, y.Vi)(),
             s = (0, U.V)(),
             c = (0, O.Qo)(n, r),
@@ -65,7 +65,7 @@ let W = (e) => {
         let t, n, E;
         var Y,
             K,
-            { selected: q, nitroTabButtonRef: Q, route: X, locationState: J } = e,
+            { selected: q, nitroTabButtonRef: X, route: Q, locationState: J } = e,
             $ = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -97,15 +97,15 @@ let W = (e) => {
         C.VL.useConfig({ location: "NitroTabButton" }), C.CF.useConfig({ location: "NitroTabButton" });
         let es = (0, l.JA)("nitro"),
             ec = (0, x.N)(),
-            eu = (0, j.Ng)(),
-            ed = (0, P.$)("nitro tab"),
+            eu = (0, P.Ng)(),
+            ed = (0, j.$)("nitro tab"),
             ep = (0, v.W)(),
             ef = (0, y.Vi)(),
             eh = (0, Z.HI)({ trialOffer: ec }),
             eg = (0, U.V)(),
             em = (0, Z.eW)(),
             eb = S.ZP.useExperiment({ location: "NitroTabButton" }),
-            e_ = (0, G.Kn)("NitroTabButton") && eb.cohort === S.xI.Control,
+            e_ = (0, G.Kn)() && eb.cohort === S.xI.Control,
             eO = eo && null != ed && null != et && et.status === H.O0b.CANCELED,
             { fractionalState: eE, startsAt: ey, endsAt: ev } = (0, d.Z)({ forceFetch: !0 }),
             [eI, eC] = (0, g.bf)(eE !== V.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
@@ -115,16 +115,16 @@ let W = (e) => {
             eS = (0, N.Z)({ location: "NitroTabButton" }),
             eN = (null == ec ? void 0 : ec.trial_id) === V.a7,
             eT = (0, p.YZ)("NitroTabButton"),
-            eP = [],
-            ej = [];
+            ej = [],
+            eP = [];
         (0, f.Kl)() &&
-            (ef && eP.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
-            eS && eP.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
-            ep && eP.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
-            eT && eP.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE));
-        let [ex, eA] = (0, g.US)(eP, void 0, !0);
-        eO && ej.push(o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK);
-        let [eZ, ew] = (0, g.US)(ej, void 0, !0);
+            (ef && ej.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
+            eS && ej.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
+            ep && ej.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
+            eT && ej.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE));
+        let [ex, eA] = (0, g.US)(ej, void 0, !0);
+        eO && eP.push(o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK);
+        let [eZ, ew] = (0, g.US)(eP, void 0, !0);
         if (
             (i.useEffect(() => {
                 !0 === q && null != ex && eA(F.L.AUTO_DISMISS);
@@ -258,9 +258,9 @@ let W = (e) => {
                 return e;
             })(
                 {
-                    listItemRef: Q,
+                    listItemRef: X,
                     selected: q,
-                    route: X,
+                    route: Q,
                     icon: s.SrA,
                     text: eR,
                     locationState: J,
@@ -294,7 +294,7 @@ let W = (e) => {
               ? (0, r.jsx)(k.C, { children: eD })
               : eO && eZ === o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === E
                 ? (0, r.jsx)(L.Z, {
-                      targetElementRef: Q,
+                      targetElementRef: X,
                       discountOffer: ed,
                       premiumSubscription: et,
                       dismissCoachmark: ew,

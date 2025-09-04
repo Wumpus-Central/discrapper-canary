@@ -15,22 +15,22 @@ var i = n(951288),
     g = n(74299),
     y = n(199902),
     O = n(592125),
-    b = n(430824),
-    v = n(131951),
+    v = n(430824),
+    b = n(131951),
     E = n(944486),
     _ = n(556296),
-    S = n(808506),
-    I = n(237997),
+    I = n(808506),
+    S = n(237997),
     x = n(451478),
     j = n(585483),
     C = n(358085),
     N = n(13140),
-    Z = n(145597),
-    w = n(830917),
+    w = n(145597),
+    Z = n(830917),
     P = n(486016),
     T = n(32300),
-    k = n(681603),
-    A = n(915614),
+    A = n(681603),
+    k = n(915614),
     D = n(268861),
     R = n(690336),
     L = n(333031),
@@ -128,7 +128,7 @@ let $ = r.memo(function (e) {
                 ? null
                 : (0, i.jsx)(L.Z, {
                       className: Y.closeContainer,
-                      children: (0, i.jsx)(A.Z, {
+                      children: (0, i.jsx)(k.Z, {
                           keybind: t,
                           onClick: n,
                           IconComponent: c.Uz9,
@@ -141,24 +141,24 @@ let $ = r.memo(function (e) {
         return t && n
             ? (0, i.jsx)(L.Z, {
                   className: Y.closeContainer,
-                  children: (0, i.jsx)(A.Z, {
-                      onClick: () => d.Z.setInputLocked(!1, (0, Z.getPID)()),
+                  children: (0, i.jsx)(k.Z, {
+                      onClick: () => d.Z.setInputLocked(!1, (0, w.getPID)()),
                       IconComponent: c.d$P,
                   }),
               })
             : null;
     });
 function et() {
-    d.Z.setInputLocked(!0, (0, Z.getPID)());
+    d.Z.setInputLocked(!0, (0, w.getPID)());
 }
 function en() {
-    d.Z.setFocusedPID(Z.DEV_PID);
+    d.Z.setFocusedPID(w.DEV_PID);
 }
 function ei() {
     d.Z.setFocusedPID(null);
 }
 function er(e) {
-    let t = U.ZP.isInputLocked((0, Z.getPID)());
+    let t = U.ZP.isInputLocked((0, w.getPID)());
     "alt" !== e.key.toLowerCase() ||
         t ||
         ("keyup" === e.type.toLowerCase()
@@ -173,15 +173,15 @@ function eo(e) {
             focused: u,
             incompatibleApp: m,
             hasZeroSizeDimension: C,
-            keybind: A,
-        } = (0, a.cj)([U.ZP, I.default, x.Z, _.ZP], () => {
-            let e = x.Z.windowSize((0, w.ZY)(n)),
+            keybind: k,
+        } = (0, a.cj)([U.ZP, S.default, x.Z, _.ZP], () => {
+            let e = x.Z.windowSize((0, Z.ZY)(n)),
                 t = _.ZP.getOverlayKeybind(),
-                i = (0, Z.getPID)();
+                i = (0, w.getPID)();
             return {
                 locked: U.ZP.isInputLocked(i),
                 focused: U.ZP.isFocused(i),
-                incompatibleApp: I.default.incompatibleApp,
+                incompatibleApp: S.default.incompatibleApp,
                 hasZeroSizeDimension: 0 === e.height || 0 === e.width,
                 keybind: null != t ? (0, N.BB)(t.shortcut, !0) : "???",
             };
@@ -209,11 +209,11 @@ function eo(e) {
             );
     })(
         () => {
-            d.Z.overlayReady((0, Z.getPID)()),
+            d.Z.overlayReady((0, w.getPID)()),
                 n.addEventListener("keydown", er),
                 n.addEventListener("keyup", er),
                 Q &&
-                    (n.document.hasFocus() && d.Z.setFocusedPID(Z.DEV_PID),
+                    (n.document.hasFocus() && d.Z.setFocusedPID(w.DEV_PID),
                     n.addEventListener("focus", en),
                     n.addEventListener("blur", ei));
         },
@@ -230,13 +230,13 @@ function eo(e) {
             let t = (0, V.pL)(),
                 n = E.Z.getVoiceChannelId(),
                 i = O.Z.getChannel(n),
-                r = null != i ? b.Z.getGuild(i.guild_id) : null,
+                r = null != i ? v.Z.getGuild(i.guild_id) : null,
                 o = null != y.Z.getCurrentUserActiveStream(),
                 l = null != n,
-                a = (0, g.Z)(v.Z) && !o && null != t,
+                a = (0, g.Z)(b.Z) && !o && null != t,
                 s = l && null != r && null != n,
                 { allowActivityWidget: c } = (0, T.Rb)("overlay"),
-                u = null != (e = S.default.getFocusedPID()) ? e : (0, Z.getPID)();
+                u = null != (e = I.default.getFocusedPID()) ? e : (0, w.getPID)();
             if (M.default.hasChangedRenderMode(u)) return;
             let p = z.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.WELCOME_GENERAL),
                 f = z.Z.isNotificationDisabled(P.OverlayNotificationDisabledSetting.GO_LIVE_NUDGE),
@@ -296,7 +296,7 @@ function eo(e) {
                               !t && K,
                               (0, i.jsx)($, {
                                   locked: o,
-                                  keybind: A,
+                                  keybind: k,
                                   onClick: et,
                               }),
                               (0, i.jsx)(R.Z, {
@@ -312,9 +312,9 @@ function eo(e) {
                                       locked: o,
                                       focused: u,
                                   }),
-                              (0, i.jsx)(k.Z, {}),
+                              (0, i.jsx)(A.Z, {}),
                               (0, i.jsx)(D.Z, { locked: o }),
-                              (0, i.jsx)(c.Ixi, {}),
+                              (0, i.jsx)(c.Ixi, { appContext: H.IlC.OVERLAY }),
                           ],
                       }),
         })

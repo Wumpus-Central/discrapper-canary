@@ -15,7 +15,7 @@ function u(e) {
     return null != (t = c.gQ.get(e)) ? t : 0;
 }
 function d(e) {
-    return (null == e ? void 0 : e.themes) != null && e.themes.includes(s.u.EROTIC);
+    return (null == e ? void 0 : e.themes) != null && e.themes.includes(s.J8.EROTIC);
 }
 function f() {
     let e = (0, o.e7)([l.Z], () => l.Z.games),

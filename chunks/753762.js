@@ -9,6 +9,7 @@ let l = (0, r.B)({
     defaultConfig: {
         enabled: !1,
         backButtonBadge: !1,
+        animateBetweenServers: !1,
     },
     treatments: [
         {
@@ -17,14 +18,25 @@ let l = (0, r.B)({
             config: {
                 enabled: !0,
                 backButtonBadge: !1,
+                animateBetweenServers: !1,
             },
         },
         {
             id: 2,
-            label: "You Bar",
+            label: "You Bar with badged back button",
             config: {
                 enabled: !0,
                 backButtonBadge: !0,
+                animateBetweenServers: !1,
+            },
+        },
+        {
+            id: 3,
+            label: "You Bar with badged back button and animate between servers",
+            config: {
+                enabled: !0,
+                backButtonBadge: !0,
+                animateBetweenServers: !0,
             },
         },
     ],

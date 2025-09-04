@@ -1,10 +1,7 @@
-n.d(t, {
-    t: () => s,
-    v: () => l,
-});
+n.d(t, { t: () => a });
 var r = n(818083),
     i = n(358085);
-let a = (0, r.B)({
+let l = (0, r.B)({
     kind: "user",
     id: "2025-03_fast_travel",
     label: "Fast Travel",
@@ -43,16 +40,9 @@ let a = (0, r.B)({
         },
     ],
 });
-function o() {
-    return {
+function a(e) {
+    return l.useExperiment(e, {
         autoTrackExposure: !0,
         disable: !(0, i.isDesktop)(),
-    };
-}
-function s(e) {
-    return a.useExperiment(e, o());
-}
-function l(e) {
-    let { backForwardButtons: t } = a.getCurrentConfig(e, o());
-    return t;
+    });
 }

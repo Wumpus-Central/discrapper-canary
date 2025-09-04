@@ -21,8 +21,8 @@ var i = n(120356),
     O = n(695349),
     v = n(219673),
     I = n(504692),
-    T = n(104494),
-    S = n(639119),
+    S = n(104494),
+    T = n(639119),
     A = n(8647),
     C = n(533525),
     N = n(647277),
@@ -134,9 +134,9 @@ let $ = (e, t, i) => {
               : p && (L = P.cohort === I.S$.Control ? (0, r.jsx)(Z.Z, {}) : (0, r.jsx)(N._, {}));
         let U = (0, o.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
             K = null != U && U.status === V.O0b.CANCELED && null != y && x,
-            z = (0, S.N)(),
-            q = (0, T.Ng)(),
-            X = (0, T.Wp)(q, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
+            z = (0, T.N)(),
+            q = (0, S.Ng)(),
+            X = (0, S.Wp)(q, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
             Q = null != U && U.status !== V.O0b.ACCOUNT_HOLD && U.hasAnyPremiumNitro,
             J = (0, _.Z)().isFractionalPremiumActive && !Q && null == L && !K,
             ee = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
@@ -212,9 +212,9 @@ let $ = (e, t, i) => {
             { enabled: y } = v.b.useConfig({ location: "Hero Heading" }),
             O = (0, o.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
             I = null != O && O.status === V.O0b.CANCELED && null != p && y,
-            A = (0, S.N)(),
-            C = (0, T.Ng)(),
-            N = (0, T.Wp)(C, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
+            A = (0, T.N)(),
+            C = (0, S.Ng)(),
+            N = (0, S.Wp)(C, F.Si.TIER_2) ? F.Si.TIER_2 : void 0,
             D = null != O && O.status !== V.O0b.ACCOUNT_HOLD && O.hasAnyPremiumNitro,
             x = (0, _.Z)().isFractionalPremiumActive && !D && !I;
         return (0, r.jsxs)("div", {
@@ -402,39 +402,38 @@ let $ = (e, t, i) => {
     eo = (e) => {
         let {
                 className: t,
-                location: n,
-                enablePremiumBrandRefresh: i,
-                buttonVisibilityRef: o,
-                userDiscountOffer: s,
-                discountedPrice: c,
+                enablePremiumBrandRefresh: n,
+                buttonVisibilityRef: i,
+                userDiscountOffer: o,
+                discountedPrice: s,
             } = e,
-            { analyticsLocations: h } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
-            m = (0, O.W)(),
-            E = (0, b.Vi)(),
-            v = (0, y._O)(),
-            I = H.intl.string(H.t.qYKftb),
-            T = (0, C.b)(n),
+            { analyticsLocations: c } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
+            h = (0, O.W)(),
+            m = (0, b.Vi)(),
+            E = (0, y._O)(),
+            v = H.intl.string(H.t.qYKftb),
+            I = (0, C.b)(),
             S = (0, r.jsx)(et, { className: t }),
-            A = H.intl.string(H.t.ifwQZW),
-            { fractionalState: N, endsAt: R } = (0, _.Z)(),
-            P = (0, f.ZP)(R, f.aj.CREDITS_ENDS_IN);
-        m || E
-            ? (S = (0, r.jsx)(er, { isEligibleForBogoPromotion: E }))
-            : T && ((I = H.intl.string(H.t.qYKftb)), (S = (0, r.jsx)(en, {})));
-        let w = null;
-        if (N === F.a$.NONE || m)
-            w = i
+            T = H.intl.string(H.t.ifwQZW),
+            { fractionalState: A, endsAt: N } = (0, _.Z)(),
+            R = (0, f.ZP)(N, f.aj.CREDITS_ENDS_IN);
+        h || m
+            ? (S = (0, r.jsx)(er, { isEligibleForBogoPromotion: m }))
+            : I && ((v = H.intl.string(H.t.qYKftb)), (S = (0, r.jsx)(en, {})));
+        let P = null;
+        if (A === F.a$.NONE || h)
+            P = n
                 ? (0, r.jsx)(U.Z, {
                       enablePremiumBrandRefresh: !0,
-                      text: I,
+                      text: v,
                   })
                 : (0, r.jsx)(L.Cy, {
-                      className: a()(Y.trialPill, { [Y.hidden]: !v }),
-                      text: I,
+                      className: a()(Y.trialPill, { [Y.hidden]: !E }),
+                      text: v,
                       colorOptions: L.VE.PREMIUM_TIER_2_WHITE_FILL,
                   });
         else {
-            v = !0;
+            E = !0;
             let e = (0, r.jsx)("div", {
                     className: Y.pillIcon,
                     children: (0, r.jsx)(l.d3s, {
@@ -443,7 +442,7 @@ let $ = (e, t, i) => {
                     }),
                 }),
                 t = H.intl.format(H.t["yR+oDA"], { helpCenterLink: g.Z.getArticleURL(V.BhN.FRACTIONAL_PREMIUM_ABOUT) });
-            w = (0, r.jsx)(p.Z, {
+            P = (0, r.jsx)(p.Z, {
                 text: t,
                 "aria-label": t.toString(),
                 tooltipClassName: Y.tooltip,
@@ -455,14 +454,14 @@ let $ = (e, t, i) => {
                             className: Y.pillContainer,
                             children: (0, r.jsx)("div", {
                                 className: Y.flexCentered,
-                                children: i
+                                children: n
                                     ? (0, r.jsx)(U.Z, {
                                           enablePremiumBrandRefresh: !0,
-                                          text: P,
+                                          text: R,
                                       })
                                     : (0, r.jsx)(L.mn, {
-                                          className: a()(Y.trialPill, { [Y.hidden]: !v }),
-                                          text: P,
+                                          className: a()(Y.trialPill, { [Y.hidden]: !E }),
+                                          text: R,
                                           colorOptions: L.VE.PREMIUM_TIER_2_WHITE_FILL,
                                           icon: e,
                                           gap: !1,
@@ -473,22 +472,22 @@ let $ = (e, t, i) => {
             });
         }
         return (0, r.jsx)(d.Gt, {
-            value: h,
+            value: c,
             children: (0, r.jsx)(ei.Provider, {
                 value: {
-                    headingText: A,
-                    headingTop: w,
-                    showPill: v,
-                    userDiscountOffer: s,
-                    discountedPrice: c,
-                    buttonVisibilityRef: o,
+                    headingText: T,
+                    headingTop: P,
+                    showPill: E,
+                    userDiscountOffer: o,
+                    discountedPrice: s,
+                    buttonVisibilityRef: i,
                 },
-                children: i
+                children: n
                     ? (0, r.jsx)(ee, {
                           className: t,
-                          isEligibleForBogoPromotion: E,
-                          isInReverseTrial: m,
-                          shouldShowReferralProgressBar: T,
+                          isEligibleForBogoPromotion: m,
+                          isInReverseTrial: h,
+                          shouldShowReferralProgressBar: I,
                       })
                     : S,
             }),

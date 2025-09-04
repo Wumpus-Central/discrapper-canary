@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ee });
+n.d(t, { Z: () => $ });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(213609),
     v = n(613413),
     I = n(559407),
-    T = n(556766),
-    S = n(195302),
+    S = n(556766),
+    T = n(195302),
     A = n(260035),
     C = n(482215),
     N = n(366841),
@@ -38,15 +38,14 @@ var r = n(951288),
     G = n(819640),
     B = n(358085),
     Z = n(663993),
-    V = n(766127),
     F = n(823453),
-    H = n(744048),
-    Y = n(628123),
-    W = n(436774),
-    K = n(686546),
-    z = n(950796),
-    q = n(981631),
-    X = n(302821);
+    V = n(744048),
+    H = n(628123),
+    Y = n(436774),
+    W = n(686546),
+    K = n(950796),
+    z = n(981631),
+    q = n(302821);
 n(167666),
     Promise.resolve()
         .then(n.bind(n, 62883))
@@ -66,27 +65,27 @@ n(167666),
             Promise.all([n.e("50448"), n.e("80451"), n.e("30634"), n.e("58493")]).then(n.bind(n, 80753)),
         webpackId: 80753,
     });
-let Q = (0, Z.Un)({
+let X = (0, Z.Un)({
         createPromise: () => n.e("67110").then(n.bind(n, 177741)),
         webpackId: 177741,
     }),
-    J = (0, Z.Un)({
+    Q = (0, Z.Un)({
         createPromise: () => n.e("13474").then(n.bind(n, 420541)),
         webpackId: 420541,
     }),
-    $ = i.memo(function () {
+    J = i.memo(function () {
         let e = (0, c.e7)([G.Z], () => G.Z.hasLayers()),
             t = (0, k.wy)("AppSkeleton"),
-            n = (0, c.e7)([G.Z], () => G.Z.getLayers().includes(q.S9g.USER_SETTINGS)),
+            n = (0, c.e7)([G.Z], () => G.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL),
             a = (0, c.e7)([U.default], () => U.default.isAuthenticated());
         if (!n || !t)
-            return (0, r.jsx)(z.Dg, {
+            return (0, r.jsx)(K.Dg, {
                 fixed: !0,
                 show: e || i || !a,
             });
     }),
-    ee = function (e) {
+    $ = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
             a = (0, B.getPlatform)(),
             u = l.tq || l.Em,
@@ -103,38 +102,38 @@ let Q = (0, Z.Un)({
                         children: [
                             (0, r.jsx)(F.Z, { skipsSettingDefaultPageTitle: n }),
                             (0, r.jsx)(h.T, {
-                                children: (0, r.jsx)(Y.Z, {
+                                children: (0, r.jsx)(H.Z, {
                                     children: (0, r.jsxs)(d.JcV, {
                                         containerRef: k,
                                         children: [
-                                            (0, r.jsx)(K.Co, {}),
-                                            (0, r.jsx)(W.ZP, {}),
+                                            (0, r.jsx)(W.Co, {}),
+                                            (0, r.jsx)(Y.ZP, {}),
                                             (0, r.jsx)(s.OU, {}),
                                             (0, r.jsx)(g.Wu, {
-                                                appContext: q.IlC.APP,
+                                                appContext: z.IlC.APP,
                                                 renderWindow: window,
                                                 children: (0, r.jsxs)(w.yP, {
                                                     children: [
-                                                        null != a ? (0, r.jsx)($, {}) : null,
+                                                        null != a ? (0, r.jsx)(J, {}) : null,
                                                         (0, r.jsxs)("div", {
                                                             className: o()(
-                                                                X.appAsidePanelWrapper,
-                                                                u && X.mobileAppAsidePanelWrapper,
+                                                                q.appAsidePanelWrapper,
+                                                                u && q.mobileAppAsidePanelWrapper,
                                                             ),
                                                             children: [
                                                                 (0, r.jsx)(C.K, {}),
                                                                 (0, r.jsx)("div", {
-                                                                    className: X.notAppAsidePanel,
+                                                                    className: q.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
                                                                     children: (0, r.jsx)(A.m, {
                                                                         children: (0, r.jsx)(x.OR, {
                                                                             children: (0, r.jsx)(y.Z.Provider, {
                                                                                 value: O.Z,
-                                                                                children: (0, r.jsxs)(S.p, {
+                                                                                children: (0, r.jsxs)(T.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)("div", {
                                                                                             className: o()(
-                                                                                                u ? X.mobileApp : X.app,
+                                                                                                u ? q.mobileApp : q.app,
                                                                                             ),
                                                                                             children: t,
                                                                                         }),
@@ -146,11 +145,13 @@ let Q = (0, Z.Un)({
                                                                                         (0, r.jsx)(D.Ox, {}),
                                                                                         (0, r.jsx)(w.Un, {}),
                                                                                         (0, r.jsx)(x.ot, {}),
-                                                                                        (0, r.jsx)(d.Ixi, {}),
+                                                                                        (0, r.jsx)(d.Ixi, {
+                                                                                            appContext: z.IlC.APP,
+                                                                                        }),
                                                                                         (0, r.jsx)(v.Z, {}),
                                                                                         (0, r.jsx)(L.Z, {}),
+                                                                                        (0, r.jsx)(X, {}),
                                                                                         (0, r.jsx)(Q, {}),
-                                                                                        (0, r.jsx)(J, {}),
                                                                                         (0, r.jsx)(M.Z, {}),
                                                                                     ],
                                                                                 }),
@@ -158,9 +159,8 @@ let Q = (0, Z.Un)({
                                                                         }),
                                                                     }),
                                                                 }),
-                                                                (0, r.jsx)(T.Z, {}),
-                                                                (0, r.jsx)(H.Z, {}),
-                                                                (0, r.jsx)(V.Z, {}),
+                                                                (0, r.jsx)(S.Z, {}),
+                                                                (0, r.jsx)(V.Z, { mobile: u }),
                                                                 (0, r.jsx)(R.Z, { mobile: u }),
                                                             ],
                                                         }),

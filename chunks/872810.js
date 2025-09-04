@@ -1,5 +1,5 @@
 n.d(t, {
-    L6: () => V,
+    L6: () => F,
     Rc: () => B,
     WH: () => R,
     aP: () => M,
@@ -36,8 +36,8 @@ var r = n(512722),
 n(26151), n(493683);
 var I = n(475179);
 n(287734);
-var T = n(981631),
-    S = n(70722);
+var S = n(981631),
+    T = n(70722);
 function A(e, t, n) {
     return (
         t in e
@@ -73,10 +73,10 @@ function R(e, t, n) {
         C(
             {
                 type: "STREAM_START",
-                streamType: null != e ? S.lo.GUILD : S.lo.CALL,
+                streamType: null != e ? T.lo.GUILD : T.lo.CALL,
                 guildId: e,
                 channelId: t,
-                appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP,
+                appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP,
             },
             n,
         ),
@@ -123,7 +123,7 @@ function L(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && w(n, r)) return;
     D(e, t);
-    let i = d.Z.getWindowOpen(T.KJ3.CHANNEL_CALL_POPOUT),
+    let i = d.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
         a = g.Z.getVoiceChannelId();
     (i && a === r) || (0, u.Z)(e);
 }
@@ -134,7 +134,7 @@ function j(e) {
         s.Z.dispatch({
             type: "STREAM_STOP",
             streamKey: e,
-            appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP,
+            appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP,
         });
 }
 function M(e) {
@@ -148,7 +148,7 @@ function M(e) {
 async function k(e, t, n) {
     if (!f.Z.shouldFetchPreview(e, t, n)) return;
     let r = (0, c.V9)({
-        streamType: null != e ? S.lo.GUILD : S.lo.CALL,
+        streamType: null != e ? T.lo.GUILD : T.lo.CALL,
         guildId: e,
         channelId: t,
         ownerId: n,
@@ -159,7 +159,7 @@ async function k(e, t, n) {
     });
     try {
         let e = await o.tn.get({
-            url: T.ANM.STREAM_PREVIEW(r),
+            url: S.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -182,26 +182,39 @@ async function k(e, t, n) {
 async function U(e) {
     try {
         await v.Z.post({
-            url: T.ANM.STREAM_NOTIFY(e),
+            url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
             rejectWithError: !0,
         });
     } catch (e) {}
 }
-function G(e, t) {}
+async function G(e, t, n) {
+    try {
+        await v.Z.post({
+            url: S.ANM.STREAM_NOTIFY_V2(e),
+            body: {
+                application_id: t,
+                game_title: n,
+            },
+            oldFormErrors: !0,
+            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
+            rejectWithError: !0,
+        });
+    } catch (e) {}
+}
 function B(e) {
     (0, O.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(C({ type: "STREAM_UPDATE_SETTINGS" }, e));
 }
 function Z(e, t) {
     o.tn.patch({
-        url: T.ANM.STREAM(e),
+        url: S.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0,
         rejectWithError: !0,
     });
 }
-function V() {
+function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = _.Z.getCurrentUserActiveStream();
     null != t && j((0, c.V9)(t), e);

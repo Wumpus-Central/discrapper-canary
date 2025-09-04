@@ -1,31 +1,32 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     l = n(647438),
     o = n(392711),
     i = n.n(o),
     a = n(442837),
-    s = n(481060),
-    c = n(48210),
-    u = n(345162),
-    d = n(485386),
-    C = n(496675),
-    m = n(388032),
-    b = n(792353);
-let p = (e) => {
+    s = n(755721),
+    c = n(481060),
+    u = n(48210),
+    d = n(345162),
+    C = n(485386),
+    m = n(496675),
+    b = n(388032),
+    p = n(792353);
+let f = (e) => {
     let { guild: t, transitionState: n, onClose: o } = e,
-        [p, f] = l.useState(7),
-        [h, j] = l.useState(null),
-        [g, x] = l.useState([]),
-        v = l.useCallback(async () => {
-            j(null), j(await c.Z.updateEstimate(t.id, p, g));
-        }, [p, t.id, g]);
+        [f, h] = l.useState(7),
+        [j, g] = l.useState(null),
+        [x, v] = l.useState([]),
+        y = l.useCallback(async () => {
+            g(null), g(await u.Z.updateEstimate(t.id, f, x));
+        }, [f, t.id, x]);
     l.useEffect(() => {
-        v();
-    }, [v]);
-    let y = (0, a.Wu)([C.Z, d.Z], () => {
-        let e = C.Z.getHighestRole(t);
-        return i()(d.Z.getSortedRoles(t.id))
-            .filter((n) => !(0, u.fI)(n) && C.Z.isRoleHigher(t, e, n))
+        y();
+    }, [y]);
+    let O = (0, a.Wu)([m.Z, C.Z], () => {
+        let e = m.Z.getHighestRole(t);
+        return i()(C.Z.getSortedRoles(t.id))
+            .filter((n) => !(0, d.fI)(n) && m.Z.isRoleHigher(t, e, n))
             .map((e) => {
                 let { id: t, name: n } = e;
                 return {
@@ -35,84 +36,84 @@ let p = (e) => {
             })
             .value();
     }, [t]);
-    return (0, r.jsxs)(s.Y0X, {
+    return (0, r.jsxs)(c.Y0X, {
         transitionState: n,
         parentComponent: "PruneGuild",
         children: [
-            (0, r.jsx)(s.xBx, {
+            (0, r.jsx)(c.xBx, {
                 separator: !1,
-                children: (0, r.jsxs)(s.X6q, {
+                children: (0, r.jsxs)(c.X6q, {
                     variant: "heading-lg/semibold",
-                    children: [m.intl.string(m.t.zbyz7u), "\u2014", null != t ? t.name : ""],
+                    children: [b.intl.string(b.t.zbyz7u), "\u2014", null != t ? t.name : ""],
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: b.content,
+                className: p.content,
                 children: [
-                    (0, r.jsx)(s.xJW, {
-                        title: m.intl.string(m.t.YccTvL),
-                        children: (0, r.jsx)(s.FXm, {
-                            value: p,
+                    (0, r.jsx)(c.xJW, {
+                        title: b.intl.string(b.t.YccTvL),
+                        children: (0, r.jsx)(s.Gu, {
+                            value: f,
                             options: [
                                 {
-                                    name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 7 }),
+                                    name: b.intl.formatToPlainString(b.t.FM1dHR, { days: 7 }),
                                     value: 7,
                                 },
                                 {
-                                    name: m.intl.formatToPlainString(m.t.FM1dHR, { days: 30 }),
+                                    name: b.intl.formatToPlainString(b.t.FM1dHR, { days: 30 }),
                                     value: 30,
                                 },
                             ],
                             onChange: (e) => {
                                 let { value: t } = e;
-                                f(t);
+                                h(t);
                             },
-                            className: b.spacing,
+                            className: p.spacing,
                         }),
                     }),
-                    (0, r.jsx)(s.xJW, {
-                        title: m.intl.string(m.t.buoe19),
-                        children: (0, r.jsx)(s.zJl, {
-                            className: b.scroller,
-                            children: (0, r.jsx)(s.VcW, {
+                    (0, r.jsx)(c.xJW, {
+                        title: b.intl.string(b.t.buoe19),
+                        children: (0, r.jsx)(c.zJl, {
+                            className: p.scroller,
+                            children: (0, r.jsx)(c.VcW, {
                                 maxVisibleItems: 10,
                                 multi: !0,
-                                value: g,
-                                onChange: (e) => x(e),
-                                options: y,
+                                value: x,
+                                onChange: (e) => v(e),
+                                options: O,
                             }),
                         }),
                     }),
-                    (0, r.jsx)(s.R94, {
-                        type: s.R94.Types.DESCRIPTION,
-                        className: b.spacing,
+                    (0, r.jsx)(c.R94, {
+                        type: c.R94.Types.DESCRIPTION,
+                        className: p.spacing,
                         children:
-                            g.length > 0
-                                ? m.intl.format(m.t["5WxHHh"], {
-                                      members: h,
-                                      days: p,
+                            x.length > 0
+                                ? b.intl.format(b.t["5WxHHh"], {
+                                      members: j,
+                                      days: f,
                                   })
-                                : m.intl.format(m.t.f13az8, {
-                                      members: h,
-                                      days: p,
+                                : b.intl.format(b.t.f13az8, {
+                                      members: j,
+                                      days: f,
                                   }),
                     }),
                 ],
             }),
-            (0, r.jsx)(s.mzw, {
-                children: (0, r.jsxs)(s.hE2, {
+            (0, r.jsx)(c.mzw, {
+                children: (0, r.jsxs)(c.hE2, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(c.zxk, {
                             variant: "primary",
-                            text: m.intl.string(m.t["2mIlKS"]),
+                            text: b.intl.string(b.t["2mIlKS"]),
                             onClick: () => {
-                                c.Z.prune(t.id, p, g), o();
+                                u.Z.prune(t.id, f, x), o();
                             },
                         }),
-                        (0, r.jsx)(s.zxk, {
+                        (0, r.jsx)(c.zxk, {
                             variant: "secondary",
-                            text: m.intl.string(m.t["ETE/oK"]),
+                            text: b.intl.string(b.t["ETE/oK"]),
                             onClick: o,
                         }),
                     ],

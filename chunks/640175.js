@@ -2,7 +2,7 @@ n.d(t, { z: () => u });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
+    a = n(755721),
     s = n(650774),
     o = n(434404),
     c = n(981631),
@@ -28,7 +28,7 @@ function u(e) {
             let { value: t } = e;
             o.Z.updateGuild({ defaultMessageNotifications: t });
         }, []);
-    return (0, r.jsx)(a.FXm, {
+    return (0, r.jsx)(a.Gu, {
         options: g,
         value: n,
         disabled: !u,

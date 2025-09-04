@@ -9,43 +9,44 @@ var i = n(951288),
     c = n(442837),
     u = n(704215),
     h = n(433517),
-    g = n(481060),
-    m = n(243778),
-    x = n(430824),
+    g = n(755721),
+    m = n(481060),
+    x = n(243778),
+    v = n(430824),
     p = n(9156),
-    v = n(594174),
-    j = n(74538),
-    N = n(671105),
-    S = n(552958),
-    f = n(213931),
-    b = n(940165),
-    O = n(820408),
-    E = n(921944),
-    C = n(871465),
-    Z = n(388032),
-    _ = n(226339);
+    j = n(594174),
+    N = n(74538),
+    S = n(671105),
+    f = n(552958),
+    b = n(213931),
+    O = n(940165),
+    E = n(820408),
+    C = n(921944),
+    Z = n(871465),
+    _ = n(388032),
+    L = n(226339);
 function y(e) {
     let { guildId: t, onClose: n, isRedesign: l = !1 } = e,
-        a = (0, c.e7)([x.Z], () => x.Z.getGuild(t)),
-        y = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
-        { playSound: L, isPlaying: T, soundpackPlaying: P } = (0, S.Z)(),
-        M = (0, N.OR)(t),
-        w = j.ZP.canUseCustomNotificationSounds(y),
-        I = w ? M : C.YC.CLASSIC,
-        A = s.useRef(0),
-        G = s.useRef(-1),
-        [R, U] = s.useState(!1),
-        D = (0, C.LB)(),
-        k = s.useCallback(() => {
-            clearTimeout(G.current),
-                (A.current += 1),
-                A.current > 10 && (U(!0), h.K.set(C.CZ, !0)),
-                (G.current = setTimeout(() => {
-                    A.current = 0;
+        a = (0, c.e7)([v.Z], () => v.Z.getGuild(t)),
+        y = (0, c.e7)([j.default], () => j.default.getCurrentUser()),
+        { playSound: T, isPlaying: P, soundpackPlaying: M } = (0, f.Z)(),
+        w = (0, S.OR)(t),
+        I = N.ZP.canUseCustomNotificationSounds(y),
+        A = I ? w : Z.YC.CLASSIC,
+        G = s.useRef(0),
+        R = s.useRef(-1),
+        [U, D] = s.useState(!1),
+        k = (0, Z.LB)(),
+        V = s.useCallback(() => {
+            clearTimeout(R.current),
+                (G.current += 1),
+                G.current > 10 && (D(!0), h.K.set(Z.CZ, !0)),
+                (R.current = setTimeout(() => {
+                    G.current = 0;
                 }, 1000));
         }, []),
-        [W, V] = o().partition(D, (e) => !e.requirePremium || (e.requirePremium && w)),
-        X = W.map((e) => {
+        [W, z] = o().partition(k, (e) => !e.requirePremium || (e.requirePremium && I)),
+        Y = W.map((e) => {
             var t;
             return {
                 name: e.label,
@@ -53,56 +54,56 @@ function y(e) {
                 desc: e.description,
                 radioBarClassName:
                     ((t = e.value),
-                    r()(_.option, {
-                        [_.optionRedesign]: l,
-                        [_.optionPlaying]: t === P && T,
+                    r()(L.option, {
+                        [L.optionRedesign]: l,
+                        [L.optionPlaying]: t === M && P,
                     })),
             };
         }),
-        [J, Y] = (0, m.US)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
-        B = J === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
+        [B, F] = (0, x.US)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]),
+        q = B === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE;
     s.useEffect(
         () => () => {
-            Y(E.L.AUTO_DISMISS);
+            F(C.L.AUTO_DISMISS);
         },
-        [Y],
+        [F],
     );
-    let F = j.ZP.canUseCustomNotificationSounds(y),
-        z = (0, c.e7)([p.ZP], () => p.ZP.isMuted(t), [t]);
+    let H = N.ZP.canUseCustomNotificationSounds(y),
+        X = (0, c.e7)([p.ZP], () => p.ZP.isMuted(t), [t]);
     return null == y
         ? null
         : (0, i.jsxs)("div", {
               children: [
                   (0, i.jsxs)("div", {
-                      className: _.header,
+                      className: L.header,
                       children: [
-                          (0, i.jsx)(g.X6q, {
+                          (0, i.jsx)(m.X6q, {
                               variant: "heading-md/semibold",
-                              children: Z.intl.string(Z.t.mrqSOj),
+                              children: _.intl.string(_.t.mrqSOj),
                           }),
-                          (0, i.jsx)(g.P3F, {
-                              onClick: k,
-                              className: _.nitroWheelContainer,
-                              children: (0, i.jsx)(g.SrA, {
+                          (0, i.jsx)(m.P3F, {
+                              onClick: V,
+                              className: L.nitroWheelContainer,
+                              children: (0, i.jsx)(m.SrA, {
                                   size: "md",
                                   color: "currentColor",
-                                  className: _.nitroWheel,
+                                  className: L.nitroWheel,
                               }),
                           }),
-                          B &&
-                              (0, i.jsx)(g.IGR, {
-                                  className: _.newBadge,
-                                  text: Z.intl.string(Z.t.y2b7CA),
+                          q &&
+                              (0, i.jsx)(m.IGR, {
+                                  className: L.newBadge,
+                                  text: _.intl.string(_.t.y2b7CA),
                               }),
                       ],
                   }),
-                  (0, i.jsx)(g.Text, {
-                      className: _.subheader,
+                  (0, i.jsx)(m.Text, {
+                      className: L.subheader,
                       variant: "text-sm/normal",
-                      children: Z.intl.format(Z.t.LuYDy8, {
+                      children: _.intl.format(_.t.LuYDy8, {
                           guildName: (e, t) =>
                               (0, i.jsx)(
-                                  g.Text,
+                                  m.Text,
                                   {
                                       tag: "span",
                                       variant: "text-sm/medium",
@@ -112,43 +113,43 @@ function y(e) {
                               ),
                       }),
                   }),
-                  z &&
+                  X &&
                       (0, i.jsxs)("div", {
-                          className: _.warningContainer,
+                          className: L.warningContainer,
                           children: [
-                              (0, i.jsx)(g.Mgn, {
+                              (0, i.jsx)(m.Mgn, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: d.Z.STATUS_WARNING,
                               }),
-                              (0, i.jsx)(g.Text, {
-                                  className: _.warningLabel,
+                              (0, i.jsx)(m.Text, {
+                                  className: L.warningLabel,
                                   variant: "text-sm/medium",
-                                  children: Z.intl.string(Z.t["a9G/ER"]),
+                                  children: _.intl.string(_.t["a9G/ER"]),
                               }),
                           ],
                       }),
-                  (0, i.jsx)(g.xJW, {
-                      className: _.optionsContainer,
-                      title: Z.intl.string(Z.t.xxvoAg),
+                  (0, i.jsx)(m.xJW, {
+                      className: L.optionsContainer,
+                      title: _.intl.string(_.t.xxvoAg),
                       children: (0, i.jsxs)("div", {
-                          className: r()({ [_.options]: !F }),
+                          className: r()({ [L.options]: !H }),
                           children: [
-                              (0, i.jsx)(g.FXm, {
-                                  className: r()({ [_.options]: F }),
-                                  value: null != I ? I : C.YC.CLASSIC,
+                              (0, i.jsx)(g.Gu, {
+                                  className: r()({ [L.options]: H }),
+                                  value: null != A ? A : Z.YC.CLASSIC,
                                   onChange: (e) => {
-                                      L(e.value), w && (0, f.t)(t, I, e.value, "notificationSettings");
+                                      T(e.value), I && (0, b.t)(t, A, e.value, "notificationSettings");
                                   },
-                                  options: X,
-                                  radioItemClassName: _.option,
+                                  options: Y,
+                                  radioItemClassName: L.option,
                               }),
-                              V.map((e, t) =>
+                              z.map((e, t) =>
                                   (0, i.jsx)(
-                                      b.Z,
+                                      O.Z,
                                       {
-                                          className: _.playableOption,
+                                          className: L.playableOption,
                                           label: e.label,
                                           description: e.description,
                                           soundpack: e.value,
@@ -160,7 +161,7 @@ function y(e) {
                           ],
                       }),
                   }),
-                  !F && (0, i.jsx)(O.Z, { onClose: n }),
+                  !H && (0, i.jsx)(E.Z, { onClose: n }),
               ],
           });
 }

@@ -3,9 +3,9 @@ function r(e) {
 }
 Object.defineProperty(t, "__esModule", { value: !0 });
 var i = n(698091),
-    a = r(n(117374)),
-    o = r(n(570571)),
-    s = r(n(88410)),
+    a = r(n(64995)),
+    o = r(n(377421)),
+    s = r(n(866330)),
     l = n(239189),
     c = n(647438),
     u = n(947870),
@@ -278,17 +278,17 @@ var i = n(698091),
                         ref:
                             o &&
                             function (e) {
-                                a.current = T(r, e);
+                                a.current = S(r, e);
                             },
                     }),
                 )
             );
         });
     };
-function T(e, t) {
+function S(e, t) {
     return e && (i.is.fun(e) ? e(t) : (e.current = t)), t;
 }
-var S = Symbol.for("AnimatedComponent"),
+var T = Symbol.for("AnimatedComponent"),
     A = function (e, t) {
         var n = void 0 === t ? {} : t,
             r = n.applyAnimatedValues,
@@ -318,7 +318,7 @@ var S = Symbol.for("AnimatedComponent"),
             },
             u = function (e) {
                 var t = C(e) || "Anonymous";
-                return ((e = i.is.str(e) ? I(e, c) : e[S] || (e[S] = I(e, c))).displayName = "Animated(" + t + ")"), e;
+                return ((e = i.is.str(e) ? I(e, c) : e[T] || (e[T] = I(e, c))).displayName = "Animated(" + t + ")"), e;
             };
         return (
             i.each(e, function (e, t) {

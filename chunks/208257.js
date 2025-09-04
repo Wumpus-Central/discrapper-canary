@@ -1,13 +1,13 @@
 n.d(t, { t: () => o }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(538534);
+    a = n(695046);
 let o = {
-    title: "RadioGroup",
+    title: "VoidRadioGroup",
     stories: [
         {
             id: "radiogroup",
-            name: "RadioGroup",
+            name: "VoidRadioGroup",
             component: function (e) {
                 let {
                         optionCount: t,
@@ -22,7 +22,7 @@ let o = {
                         value: "option".concat(t + 1),
                         name: "Option ".concat(t + 1),
                     }));
-                return (0, r.jsx)(a.Ee, {
+                return (0, r.jsx)(a.Gu, {
                     value: u,
                     onChange: (e) => {
                         let { value: t } = e;

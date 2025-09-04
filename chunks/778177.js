@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(699516),
     v = n(944486),
     I = n(246946),
-    T = n(594174),
-    S = n(585483),
+    S = n(594174),
+    T = n(585483),
     A = n(63063),
     C = n(51144),
     N = n(748610),
@@ -65,7 +65,7 @@ function Z(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,12 +77,12 @@ function V(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -128,7 +128,7 @@ let q = (e, t, n) => {
         var i, a, o;
         let { user: s, text: l } = n;
         if (null == s) return (0, r.jsx)("strong", { children: l });
-        let c = T.default.getUser(s.id),
+        let c = S.default.getUser(s.id),
             u = (0, P.AH)(e),
             d = (0, P.s5)(e),
             f = b.Z.getChannel(u),
@@ -236,12 +236,12 @@ let q = (e, t, n) => {
     J = (e) =>
         (0, r.jsx)(
             Q,
-            F(Z({}, e), {
+            V(Z({}, e), {
                 className: G.user,
                 renderResult: q,
             }),
         ),
-    $ = (e) => (0, r.jsx)(Q, F(Z({}, e), { renderResult: X }));
+    $ = (e) => (0, r.jsx)(Q, V(Z({}, e), { renderResult: X }));
 function ee(e) {
     return (0, P.kG)(e).map((e, t, n) => ((0, P.Fr)(e, n[t + 1]) ? e : new m.WU(e.getFullMatch(), m.Xe)));
 }
@@ -275,7 +275,7 @@ function et(e) {
             });
     return (0, r.jsxs)(
         p.P3F,
-        F(
+        V(
             Z(
                 {
                     className: G.option,
@@ -349,7 +349,7 @@ let en = {
                 children: (e) =>
                     (0, r.jsx)(
                         "div",
-                        F(Z({ className: G.searchLearnMore }, e), {
+                        V(Z({ className: G.searchLearnMore }, e), {
                             children: (0, r.jsx)(p.eee, {
                                 href: A.Z.getArticleURL(k.BhN.USING_SEARCH),
                                 title: U.intl.string(U.t.hvVgAQ),
@@ -372,7 +372,7 @@ let en = {
                 b = (0, P.Ko)(null != (t = n.token) ? t : "");
             return (0, r.jsxs)(
                 p.P3F,
-                F(
+                V(
                     Z(
                         {
                             className: o()(G.option, G.searchOption),
@@ -420,7 +420,9 @@ class er extends i.PureComponent {
               : this.keepCurrentOptionSelected(e, t);
     }
     setSelectedIndex(e) {
-        this.setState({ selectedIndex: e }, () => this.props.onSelectedIndexChanged(e));
+        this.setState({ selectedIndex: e }, () => {
+            this.props.onSelectedIndexChanged(e), this.scrollSelectedIndexIntoView();
+        });
     }
     render() {
         let { selectedIndex: e } = this.state,
@@ -453,6 +455,18 @@ class er extends i.PureComponent {
             B(this, "state", {
                 dateHint: (0, w.Pr)(),
                 selectedIndex: -1,
+            }),
+            B(this, "scrollSelectedIndexIntoView", () => {
+                let { navId: e, resultsState: t } = this.props;
+                if ((0, P.Fz)(t.mode.filter)) return;
+                let { selectedIndex: n } = this.state;
+                if (null == n) return;
+                let r = document.getElementById("".concat(e, "-").concat(n));
+                null != r &&
+                    r.scrollIntoView({
+                        block: "nearest",
+                        inline: "nearest",
+                    });
             }),
             B(this, "handleDateChange", (e) => {
                 let t = (0, P.Tm)(this.props.searchContext);
@@ -565,7 +579,7 @@ class er extends i.PureComponent {
                     ? (a = r.token.start)
                     : (null == i ? void 0 : i.currentToken) != null && (a = i.currentToken.end);
                 let o = null != r.token ? r.token.end : a;
-                S.S.dispatch(k.CkL.SET_SEARCH_QUERY, {
+                T.S.dispatch(k.CkL.SET_SEARCH_QUERY, {
                     query: e,
                     anchor: a,
                     focus: o,
@@ -631,7 +645,7 @@ class er extends i.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             B(this, "performSearch", (e) => {
-                S.S.dispatch(k.CkL.PERFORM_SEARCH, null != e ? e : {});
+                T.S.dispatch(k.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
             B(this, "renderAutocompletes", () => {
                 let { selectedIndex: e } = this.state,

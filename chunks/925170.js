@@ -7,13 +7,13 @@ var n = r(951288),
     s = r(594174),
     u = r(810473),
     a = r(299560),
-    p = r(247397),
+    p = r(286957),
     f = r(388032),
     b = r(32442);
 function d(e) {
     var t,
         r,
-        { onClose: d, trackUserProfileAction: O } = e,
+        { onClose: d, trackUserProfileEditAction: O } = e,
         y = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -34,7 +34,7 @@ function d(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ["onClose", "trackUserProfileAction"]);
+        })(e, ["onClose", "trackUserProfileEditAction"]);
     let g = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         j = (0, u.Z)(),
         m = o.useRef(new Set(j)),
@@ -98,7 +98,7 @@ function d(e) {
                                             widgetType: e,
                                             onAddWidget: x,
                                             loading: v,
-                                            trackUserProfileAction: O,
+                                            trackUserProfileEditAction: O,
                                         },
                                         e,
                                     ),

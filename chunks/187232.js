@@ -1,17 +1,17 @@
-n.d(t, { p: () => S });
+n.d(t, { p: () => T });
 var r = n(100527),
     i = n(717401),
     a = n(474936),
     o = n(981631),
     s = n(388032),
-    l = n(59144),
-    c = n(700366),
-    u = n(154658),
+    l = n(154658),
+    c = n(362290),
+    u = n(873048),
     d = n(306225),
-    f = n(103865),
-    _ = n(29653),
-    p = n(955604),
-    h = n(692557);
+    f = n(28986),
+    _ = n(194950),
+    p = n(103865),
+    h = n(29653);
 let m = {
         skuId: "1287835633485877369",
         assetId: "a_33656b7ed12cde00c1826b654cf65590",
@@ -44,10 +44,10 @@ let m = {
         skuId: "1287835633762701382",
         assetId: "a_604d1f0f336d41089acc3f82f458a99e",
     },
-    T = {
+    S = {
         gradient: ["rgb(35, 86, 53)", "rgb(3, 15, 40)"],
     },
-    S = {
+    T = {
         variants: [
             {
                 listingId: "1303067552619958292",
@@ -91,35 +91,35 @@ let m = {
         },
         dismissibleContentVersion: 4,
         firstTimeNotice: {
-            getImageUrl: () => c.Z,
-            title: () => "Gift Nitro. Get a reward.",
-            description: () => "Choose between 4 avatar decos in either a trick or treat theme.",
+            getImageUrl: (e, t) => (t ? _.Z : f.Z),
+            title: () => s.intl.string(s.t.UPFiIi),
+            description: () => s.intl.string(s.t["F/5kFB"]),
             cta: () => s.intl.string(s.t.RzWDqa),
             analyticsLocation: r.Z.GIFTING_PROMOTION_COACHMARK,
             analyticsPage: o.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         eligiblePlanIds: [a.Xh.PREMIUM_YEAR_TIER_2, a.Xh.PREMIUM_MONTH_TIER_2],
         planSelection: {
-            heading: () => "Choose a FREE reward",
-            subheading: () => "Yours to keep if you dare...",
-            gradientConfig: T,
-            getImageUrl: () => p.Z,
-            getBannerImageUrl: () => _.Z,
-            getBackgroundImageUrl: () => u.Z,
+            heading: () => s.intl.string(s.t.ruVnPj),
+            subheading: () => s.intl.string(s.t.q4BJSE),
+            mobileSubheading: (e) => s.intl.formatToPlainString(s.t.eDBuFx, { rewardCount: e }),
+            gradientConfig: S,
+            getImageUrl: () => f.Z,
+            getBannerImageUrl: () => h.Z,
+            getBackgroundImageUrl: () => l.Z,
         },
         planSelectionBanner: {
-            desktopBannerText: () => "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase.",
-            mobileBannerText: () => "Free reward for YOU! Choose one you love!",
-            getImageUrl: () => h.Z,
-            gradientConfig: () => T,
+            desktopBannerText: () => s.intl.string(s.t.mMgymZ),
+            mobileBannerText: () => s.intl.string(s.t.dAqTcH),
+            getImageUrl: () => _.Z,
+            gradientConfig: () => S,
             getBackgroundImageUrl: () => d.Z,
         },
         billingSettingsMarketingBanner: {
-            getAnimatedImageUrl: () => l.Z,
-            getStaticImageUrl: () => "",
-            title: () => "Gift Nitro, Get Treated",
-            body: () =>
-                "All treat, no jumpscare. Gift Nitro this October and get this exclusive, spooky avatar decoration for free.",
-            getBackgroundImageUrl: () => f.Z,
+            getAnimatedImageUrl: () => c.Z,
+            getStaticImageUrl: () => u.Z,
+            title: () => s.intl.string(s.t.CGgAyM),
+            body: () => s.intl.string(s.t["9rInzc"]),
+            getBackgroundImageUrl: () => p.Z,
         },
     };

@@ -9,38 +9,40 @@ var r = n(951288),
     u = n(897942),
     d = n(897159);
 function f() {
-    let e = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        { claimableRewards: t } = (0, s.wD)(),
-        n = (0, l.Z)(),
-        f = null == n ? void 0 : n.planSelection;
-    if (null == f || null == t || 0 === t.length) return null;
-    let _ = (0, c.Tl)(f.gradientConfig);
+    var e;
+    let t = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        { claimableRewards: n } = (0, s.wD)(),
+        f = (0, l.Z)(),
+        _ = null == f ? void 0 : f.planSelection;
+    if (null == _ || null == n || 0 === n.length) return null;
+    let p = (0, c.Yr)(null == (e = _.getBannerImageUrl) ? void 0 : e.call(_)),
+        h = (0, c.Tl)(_.gradientConfig, 180);
     return (0, r.jsxs)("div", {
         className: d.promotionalGiftMessage,
-        style: _,
+        style: null != p ? p : h,
         children: [
             (0, r.jsxs)("div", {
                 className: d.promotionalTextSection,
                 children: [
                     (0, r.jsx)(a.Text, {
-                        className: d.promotionalGiftMessageText,
                         variant: "text-sm/semibold",
-                        children: f.heading(),
+                        color: "always-white",
+                        children: _.heading(),
                     }),
-                    null != f.subheading &&
-                        t.length > 1 &&
+                    null != _.subheading &&
+                        n.length > 1 &&
                         (0, r.jsx)(a.Text, {
-                            className: d.promotionalGiftMessageText,
                             variant: "text-sm/normal",
-                            children: f.subheading(t.length),
+                            color: "always-white",
+                            children: _.subheading(n.length),
                         }),
                 ],
             }),
             (0, r.jsx)("div", {
                 className: d.avatar,
                 children: (0, r.jsx)(u.Z, {
-                    maxRewardImageSrc: f.getImageUrl(!0, e),
-                    claimableRewards: t,
+                    maxRewardImageSrc: _.getImageUrl(!0, t),
+                    claimableRewards: n,
                     size: a.EFr.SIZE_80,
                 }),
             }),

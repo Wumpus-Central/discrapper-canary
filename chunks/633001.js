@@ -27,8 +27,8 @@ var a = n(951288),
     S = n(355863),
     P = n(449224),
     w = n(808506),
-    I = n(572004),
-    k = n(55935),
+    k = n(572004),
+    I = n(55935),
     R = n(70956),
     Z = n(136015),
     A = n(145597),
@@ -150,7 +150,7 @@ function q(e) {
             color: u.zx.Colors.LINK,
             size: u.zx.Sizes.MIN,
             onClick: function () {
-                (0, I.JG)(t, () => l(!0));
+                (0, k.JG)(t, () => l(!0));
             },
             className: V.copyId,
             children: ["Application Id: ", t, " ", n ? G.intl.string(G.t["t5VZ8/"]) : null],
@@ -1072,7 +1072,7 @@ let eu = [
         cellClassName: V.rightColumn,
         render(e) {
             let { timestamp: t } = e;
-            return (0, k.vc)(o()(t), "h:mm:ss.SSS");
+            return (0, I.vc)(o()(t), "h:mm:ss.SSS");
         },
     },
 ];
@@ -1132,7 +1132,7 @@ let eh = ["__webpack_require__", "fn"],
                                         (0, a.jsx)(m.P3F, {
                                             tag: "span",
                                             className: V.copyEventButton,
-                                            onClick: () => (0, I.JG)(s),
+                                            onClick: () => (0, k.JG)(s),
                                             children: (0, a.jsx)(m.TIy, {
                                                 color: "currentColor",
                                                 size: "sm",
@@ -1144,7 +1144,7 @@ let eh = ["__webpack_require__", "fn"],
                                     icon: m.TIy,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
-                                        (0, I.JG)(ex(r));
+                                        (0, k.JG)(ex(r));
                                     },
                                 }),
                                 (0, a.jsx)(b.Z.Icon, {
@@ -1162,8 +1162,8 @@ let eh = ["__webpack_require__", "fn"],
                                     copyValue: f.toISOString(),
                                     children: (0, a.jsx)("time", {
                                         dateTime: f.toISOString(),
-                                        title: (0, k.vc)(f, "LLLL"),
-                                        children: (0, k.vc)(f, "L h:mm:ss.SSS"),
+                                        title: (0, I.vc)(f, "LLLL"),
+                                        children: (0, I.vc)(f, "L h:mm:ss.SSS"),
                                     }),
                                 }),
                                 (0, a.jsx)(L.Z9, {
@@ -1243,30 +1243,30 @@ function eb() {
         { ref: n, height: l } = (0, f.ZP)(),
         s = (0, d.e7)([C.ZP], () => C.ZP.DEV_isOverlayModuleLoggingEnabled()),
         [o, c] = r.useState(s),
-        [u, x] = r.useState(Object.keys(ec)),
-        [p, v] = r.useState(""),
-        b = r.useMemo(
+        [x, p] = r.useState(Object.keys(ec)),
+        [v, b] = r.useState(""),
+        j = r.useMemo(
             () =>
                 0 === t
                     ? []
                     : e.filter((e) => {
-                          for (let t of u) {
+                          for (let t of x) {
                               let { filter: n } = ec[t];
                               if (n(e)) return !0;
                           }
                           return !1;
                       }),
-            [e, u, t],
+            [e, x, t],
         ),
-        [j, g] = r.useState(b),
-        [_, y] = r.useState(null),
-        N = r.useMemo(() => e.find((e) => e.key === _), [e, _]),
-        E = r.useCallback((e) => {
-            g(e);
+        [g, _] = r.useState(j),
+        [y, N] = r.useState(null),
+        E = r.useMemo(() => e.find((e) => e.key === y), [e, y]),
+        T = r.useCallback((e) => {
+            _(e);
         }, []),
-        { renderSelectedTab: T } = (0, U.ZP)({ tabs: ef }, []);
-    (0, O.BO)(p, b, E, ev, [e]);
-    let S = r.useCallback((e) => {
+        { renderSelectedTab: S } = (0, U.ZP)({ tabs: ef }, []);
+    (0, O.BO)(v, j, T, ev, [e]);
+    let P = r.useCallback((e) => {
         c(e), h.Z.setModuleLogging(e);
     }, []);
     r.useEffect(() => {
@@ -1278,23 +1278,23 @@ function eb() {
             clearTimeout(e);
         };
     }, []);
-    let [P, w] = r.useState(!1),
-        k = r.useRef(null),
-        R = r.useCallback(() => {
-            (0, I.JG)(JSON.stringify(e)), w(!0);
+    let [w, I] = r.useState(!1),
+        R = r.useRef(null),
+        A = r.useCallback(() => {
+            (0, k.JG)(JSON.stringify(e)), I(!0);
         }, [e]);
     return (
         r.useEffect(() => {
-            if (P)
+            if (w)
                 return (
-                    (k.current = setTimeout(() => {
-                        w(!1);
+                    (R.current = setTimeout(() => {
+                        I(!1);
                     }, 4000)),
                     () => {
-                        null != k.current && clearTimeout(k.current);
+                        null != R.current && clearTimeout(R.current);
                     }
                 );
-        }, [P]),
+        }, [w]),
         (0, a.jsxs)("div", {
             ref: n,
             className: V.panelContainer,
@@ -1309,9 +1309,9 @@ function eb() {
                                     title: "Toggles the Polling of Native",
                                     className: V.pollBreadcrumbs,
                                     children: [
-                                        (0, a.jsx)(m.rsf, {
+                                        (0, a.jsx)(u.T2, {
                                             checked: o,
-                                            onChange: (e) => S(e),
+                                            onChange: (e) => P(e),
                                         }),
                                         (0, a.jsx)(m.Text, {
                                             variant: "text-md/normal",
@@ -1325,9 +1325,9 @@ function eb() {
                                     return (0, a.jsx)(
                                         m.P3F,
                                         {
-                                            className: i()(V.filter, u.includes(t) && V.activeFilter),
+                                            className: i()(V.filter, x.includes(t) && V.activeFilter),
                                             onClick: () => {
-                                                x((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
+                                                p((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                             },
                                             children: (0, a.jsx)(m.Text, {
                                                 variant: "text-sm/normal",
@@ -1340,14 +1340,14 @@ function eb() {
                                 }),
                                 (0, a.jsxs)(m.P3F, {
                                     className: V.copyAll,
-                                    onClick: R,
+                                    onClick: A,
                                     children: [
                                         (0, a.jsx)(m.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
-                                            children: P ? "Copied" : "Copy All",
+                                            children: w ? "Copied" : "Copy All",
                                         }),
-                                        P
+                                        w
                                             ? (0, a.jsx)(m.dz2, {
                                                   size: "sm",
                                                   color: m.TVs.unsafe_rawColors.GREEN_330.css,
@@ -1364,9 +1364,9 @@ function eb() {
                             className: V.toolbar,
                             children: (0, a.jsx)(m.E1j, {
                                 className: V.searchBar,
-                                query: p,
-                                onChange: v,
-                                onClear: () => v(""),
+                                query: v,
+                                onChange: b,
+                                onClear: () => b(""),
                                 placeholder: "Regex search by breadcrumb name and data",
                             }),
                         }),
@@ -1376,19 +1376,19 @@ function eb() {
                     className: i()(V.panelGroup, V.tableContainer),
                     children: (0, a.jsx)(F.Z, {
                         columns: eu,
-                        data: j,
-                        selectedRowKey: null != _ ? _ : void 0,
-                        onClickRow: (e) => y(e.key),
+                        data: g,
+                        selectedRowKey: null != y ? y : void 0,
+                        onClickRow: (e) => N(e.key),
                     }),
                 }),
-                null != N &&
+                null != E &&
                     (0, a.jsx)(M.Z, {
                         className: i()(V.panelGroup, V.subPanel),
                         minHeight: 100,
                         initialHeight: null != l ? l / 3 : 300,
-                        children: T({
-                            breadcrumb: N,
-                            onClose: () => y(null),
+                        children: S({
+                            breadcrumb: E,
+                            onClose: () => N(null),
                         }),
                     }),
             ],

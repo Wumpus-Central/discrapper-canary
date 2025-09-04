@@ -1,84 +1,77 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => g });
 var n = r(951288);
 r(647438);
 var i = r(624238),
-    l = r(296009),
-    a = r(442837),
-    o = r(481060),
-    c = r(314897),
-    s = r(86419),
-    u = r(881410),
-    d = r(825354),
-    f = r(388032),
-    g = r(635318);
-let p = {
-    [l.l.FAVORITE_GAMES]: () => f.intl.string(f.t.sUQar6),
-    [l.l.CURRENT_GAMES]: () => f.intl.string(f.t.SqNnur),
-    [l.l.WANT_TO_PLAY_GAMES]: () => f.intl.string(f.t.bWSQwc),
-    [l.l.PLAYED_GAMES]: () => f.intl.string(f.t.scOKER),
-};
-function b(e) {
+    l = r(442837),
+    a = r(481060),
+    o = r(314897),
+    c = r(86419),
+    s = r(881410),
+    u = r(825354),
+    d = r(388032),
+    f = r(635318);
+function g(e) {
     var t;
-    let { userId: r, headingId: l, widget: u, disableInteraction: d = !1 } = e,
-        b = (0, a.e7)([c.default], () => c.default.getId() === r),
-        O = (0, s.kQ)(u),
-        j = p[u.type](),
+    let { userId: r, headingId: s, widget: u, disableInteraction: g = !1 } = e,
+        p = (0, l.e7)([o.default], () => o.default.getId() === r),
+        m = (0, c.kQ)(u),
+        O = (0, c.Nc)(u.type),
         y =
-            b && u.games.length > 0
+            p && u.games.length > 0
                 ? ((t = u.type),
-                  1 === i.k[t] ? f.intl.string(f.t.wiXdER) : f.intl.format(f.t["zR1+09"], { numGames: i.k[t] }))
+                  1 === i.k[t] ? d.intl.string(d.t.wiXdER) : d.intl.format(d.t["zR1+09"], { numGames: i.k[t] }))
                 : void 0;
     return (0, n.jsxs)("div", {
-        className: g.headerRow,
+        className: f.headerRow,
         children: [
             (0, n.jsxs)("div", {
-                className: g.title,
+                className: f.title,
                 children: [
-                    (0, n.jsx)(o.X6q, {
+                    (0, n.jsx)(a.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: l,
-                        children: j,
+                        id: s,
+                        children: O,
                     }),
                     null != y &&
-                        (0, n.jsx)(o.Text, {
+                        (0, n.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
                             children: y,
                         }),
                 ],
             }),
-            (0, n.jsx)(m, {
+            (0, n.jsx)(b, {
                 widget: u,
-                disabled: O,
-                disabledInteraction: d,
+                disabled: m,
+                disabledInteraction: g,
                 userId: r,
             }),
         ],
     });
 }
-function m(e) {
-    let { widget: t, disabled: r, disabledInteraction: i, userId: l } = e,
-        o = (0, a.e7)([c.default], () => c.default.getId() === l),
-        f = (0, s.vI)(t.type) && t.games.some((e) => null != e.comment);
+function b(e) {
+    let { widget: t, disabled: r, disabledInteraction: i, userId: a } = e,
+        d = (0, l.e7)([o.default], () => o.default.getId() === a),
+        g = (0, c.vI)(t.type) && t.games.some((e) => null != e.comment);
     return i
         ? null
-        : o
+        : d
           ? (0, n.jsx)("div", {
-                className: g.actions,
-                children: (0, n.jsx)(u.Z, {
+                className: f.actions,
+                children: (0, n.jsx)(s.Z, {
                     disabled: r,
                     widgetType: t.type,
                     widget: t,
                 }),
             })
-          : f
+          : g
             ? (0, n.jsx)("div", {
-                  className: g.actions,
-                  children: (0, n.jsx)(d.Z, {
+                  className: f.actions,
+                  children: (0, n.jsx)(u.Z, {
                       widget: t,
-                      userId: l,
-                      className: g.menuButton,
+                      userId: a,
+                      className: f.menuButton,
                   }),
               })
             : null;

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(612659),
     v = n(781391),
     I = n(210887),
-    T = n(626135),
-    S = n(233398),
+    S = n(626135),
+    T = n(233398),
     A = n(263198),
     C = n(866419),
     N = n(803038),
@@ -216,21 +216,36 @@ function X(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(
-                f.iRW,
-                {
-                    initialValue: t,
-                    defaultValue: 0,
-                    minValue: 0,
-                    maxValue: 360,
-                    onValueChange: (e) => {
-                        (0, R.fR)(), s(e), n(e);
-                    },
-                    onValueRender: () => null,
-                    keyboardStep: 1,
-                },
-                a,
-            ),
+            (0, r.jsxs)("div", {
+                className: U.sliderWrapper,
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: U.angleIndicatorOverlay,
+                        children: [
+                            (0, r.jsx)("div", { className: U.angleIndicatorDot }),
+                            (0, r.jsx)("div", { className: U.angleIndicatorDot }),
+                            (0, r.jsx)("div", { className: U.angleIndicatorLargeDot }),
+                            (0, r.jsx)("div", { className: U.angleIndicatorDot }),
+                            (0, r.jsx)("div", { className: U.angleIndicatorDot }),
+                        ],
+                    }),
+                    (0, r.jsx)(
+                        f.iRW,
+                        {
+                            initialValue: t,
+                            defaultValue: 0,
+                            minValue: 0,
+                            maxValue: 360,
+                            onValueChange: (e) => {
+                                (0, R.fR)(), s(e), n(e);
+                            },
+                            onValueRender: () => null,
+                            keyboardStep: 1,
+                        },
+                        a,
+                    ),
+                ],
+            }),
         ],
     });
 }
@@ -263,7 +278,7 @@ function Q(e) {
                         type: "text",
                         value: s,
                         onChange: (e) => c(e.target.value),
-                        placeholder: "".concat(S.BH, "%"),
+                        placeholder: "".concat(T.BH, "%"),
                         className: U.controlLabelInput,
                     }),
                 ],
@@ -272,7 +287,7 @@ function Q(e) {
                 f.iRW,
                 {
                     initialValue: t,
-                    defaultValue: S.BH,
+                    defaultValue: T.BH,
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
@@ -287,62 +302,77 @@ function Q(e) {
     });
 }
 function J(e) {
-    let { isCoachmark: t } = e,
-        [n, a] = i.useState(!1),
-        o = i.useRef(!1),
-        [s, l] = i.useState(!1),
-        u = i.useRef(null),
-        _ = i.useCallback(() => {
+    let { isCoachmark: t, isMobile: n } = e,
+        [a, o] = i.useState(!1),
+        s = i.useRef(!1),
+        [l, u] = i.useState(!1),
+        _ = i.useRef(null),
+        p = i.useRef(null),
+        h = i.useCallback(() => {
             var e;
             (0, R.Om)();
             let t = (0, A.C)();
-            S.Ig.getState().setAll({
+            T.Ig.getState().setAll({
                 colors: t.colors,
-                gradientAngle: null != (e = t.angle) ? e : S.Ig.getState().gradientAngle,
+                gradientAngle: null != (e = t.angle) ? e : T.Ig.getState().gradientAngle,
                 chassisMixAmount: t.intensity,
             });
         }, []);
     i.useEffect(() => {
         if (t)
             return (
-                (o.current = !1),
-                (u.current = setTimeout(() => {
-                    o.current || a(!0);
+                (s.current = !1),
+                (_.current = setTimeout(() => {
+                    s.current || o(!0);
                 }, H)),
                 () => {
-                    null != u.current && clearTimeout(u.current);
+                    null != _.current && clearTimeout(_.current);
                 }
             );
     }, [t]);
-    let p = i.useCallback(() => {
-            o.current = !0;
+    let m = i.useCallback(() => {
+            s.current = !0;
         }, []),
-        h = i.useCallback(() => {
-            a(!1);
+        g = i.useCallback(() => {
+            o(!1);
         }, []),
-        m = n && !s;
-    return (0, r.jsx)(d.i_, {
-        title: k.intl.string(M.default.NJ9m8f),
-        body: k.intl.string(M.default["6pabtb"]),
-        position: "left",
-        asset: m ? (0, r.jsx)(f.$2U, {}) : void 0,
-        forceOpen: n,
-        onTooltipShow: p,
-        onTooltipHide: h,
-        children: (0, r.jsx)(c.z, {
-            variant: "secondary",
-            onClick: _,
-            onMouseEnter: () => l(!0),
-            onMouseLeave: () => l(!1),
-            icon: {
-                type: "rive",
-                asset: f.xhK,
-                riveProps: { dataBinding: { fill: f.TVs.colors.ICON_PRIMARY } },
-            },
-            text: k.intl.string(M.default.c9MBEB),
-            fullWidth: !0,
-        }),
-    });
+        E = a && !l,
+        b = () =>
+            (0, r.jsx)(c.z, {
+                buttonRef: p,
+                variant: "secondary",
+                onClick: h,
+                onMouseEnter: () => u(!0),
+                onMouseLeave: () => u(!1),
+                icon: n
+                    ? {
+                          type: "icon",
+                          asset: f.$2U,
+                      }
+                    : {
+                          type: "rive",
+                          asset: f.xhK,
+                          riveProps: {
+                              dataBinding: { fill: f.TVs.colors.ICON_PRIMARY },
+                              eventTargetRef: p,
+                          },
+                      },
+                text: k.intl.string(M.default.c9MBEB),
+                fullWidth: !0,
+            });
+    return n
+        ? b()
+        : (0, r.jsx)(d.i_, {
+              title: k.intl.string(M.default.NJ9m8f),
+              body: k.intl.string(M.default["6pabtb"]),
+              position: "left",
+              asset: E ? (0, r.jsx)(f.$2U, {}) : void 0,
+              forceOpen: a,
+              onTooltipShow: m,
+              onTooltipHide: g,
+              targetElementRef: p,
+              children: b(),
+          });
 }
 function $(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
@@ -417,7 +447,7 @@ function et(e) {
                       (0, r.jsx)($, {
                           disabled: !i,
                           onApply: () => {
-                              u && T.default.track(x.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
+                              u && S.default.track(x.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
                           },
                       }),
                   ],
@@ -445,57 +475,57 @@ function et(e) {
 }
 function en(e) {
     var t;
-    let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
-        u = N.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
-        d = (0, C.jJ)(),
-        p = (0, C.SK)(),
-        y = i.useRef(!1),
+    let { metadata: n, markAsDismissed: a, isCoachmark: o, isMobile: u } = e,
+        d = N.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
+        p = (0, C.jJ)(),
+        y = (0, C.SK)(),
+        O = i.useRef(!1),
         {
-            colors: O,
-            chassisMixAmount: T,
-            gradientAngle: A,
-            setColors: w,
-            setChassisMixAmount: x,
-            setGradientAngle: j,
-        } = (0, S.Ig)(),
-        [G, B] = i.useState(null != (t = O[0]) ? t : S.Dp),
-        Z = (0, s.e7)([I.Z], () => I.Z.theme),
-        F = (0, b.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: V } = (0, g.ZP)(m.Z.CUSTOM_THEMES_EDITOR),
-        H = async () => {
-            (y.current = !0),
+            colors: S,
+            chassisMixAmount: A,
+            gradientAngle: w,
+            setColors: x,
+            setChassisMixAmount: j,
+            setGradientAngle: G,
+        } = (0, T.Ig)(),
+        [B, Z] = i.useState(null != (t = S[0]) ? t : T.Dp),
+        F = (0, s.e7)([I.Z], () => I.Z.theme),
+        V = (0, b.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: H } = (0, g.ZP)(m.Z.CUSTOM_THEMES_EDITOR),
+        Y = async () => {
+            (O.current = !0),
                 await (0, _.ZI)({
-                    theme: Z,
+                    theme: F,
                     customUserThemeSettings: {
-                        colors: O,
+                        colors: S,
                         gradientColorStops: [],
-                        gradientAngle: A,
-                        baseMix: T,
+                        gradientAngle: w,
+                        baseMix: A,
                     },
                 }),
-                (0, R.u7)(O, T, A, Z, V),
+                (0, R.u7)(S, A, w, F, H),
                 null == a || a(L.L.TAKE_ACTION),
-                F || (0, b.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                V || (0, b.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, E.Ll)(),
                 (0, v.UD)();
         },
-        Y = () => {
-            d(C._m.RESET_BUTTON), (0, R.uf)();
+        W = () => {
+            p(C._m.RESET_BUTTON), (0, R.uf)();
         },
-        W = O.length > 0;
+        K = S.length > 0;
     return (i.useEffect(
         () => () => {
-            y.current || d(C._m.EDITOR_CLOSE);
+            O.current || p(C._m.EDITOR_CLOSE);
         },
-        [d],
+        [p],
     ),
     (0, h.ZP)(() => {
-        o || (0, C.lT)(O, G, w);
+        o || (0, C.lT)(S, B, x);
     }),
-    u)
+    d)
         ? (0, r.jsxs)("div", {
-              className: U.container,
-              "data-app-right-panel": !0,
+              className: u ? U.mobileContainer : U.container,
+              "data-app-right-panel": !u,
               children: [
                   (0, r.jsx)(f.Ttm, {
                       children: (0, r.jsxs)("div", {
@@ -526,11 +556,11 @@ function en(e) {
                                       }),
                                       (0, r.jsx)(P.U, {
                                           onChange: (e) => {
-                                              B(e), 0 === O.length && (0, C.lT)(O, e, w);
+                                              Z(e), 0 === S.length && (0, C.lT)(S, e, x);
                                           },
-                                          value: G,
-                                          colors: O,
-                                          setColors: w,
+                                          value: B,
+                                          colors: S,
+                                          setColors: x,
                                       }),
                                   ],
                               }),
@@ -542,15 +572,15 @@ function en(e) {
                                           color: "text-secondary",
                                           children: k.intl.string(M.default.F1t0c3),
                                       }),
-                                      O.length > 1 &&
+                                      S.length > 1 &&
                                           (0, r.jsx)(X, {
-                                              gradientAngle: A,
-                                              setGradientAngle: j,
+                                              gradientAngle: w,
+                                              setGradientAngle: G,
                                           }),
                                       (0, r.jsx)(Q, {
-                                          chassisMixAmount: T,
+                                          chassisMixAmount: A,
                                           setChassisMixAmount: (e) => {
-                                              x(e), 0 === O.length && (0, C.lT)(O, G, w);
+                                              j(e), 0 === S.length && (0, C.lT)(S, B, x);
                                           },
                                       }),
                                   ],
@@ -558,11 +588,14 @@ function en(e) {
                               (0, r.jsxs)("div", {
                                   className: U.resetButton,
                                   children: [
-                                      (0, r.jsx)(J, { isCoachmark: o }),
+                                      (0, r.jsx)(J, {
+                                          isCoachmark: o,
+                                          isMobile: u,
+                                      }),
                                       (0, r.jsx)(c.z, {
                                           variant: "secondary",
-                                          onClick: Y,
-                                          disabled: p,
+                                          onClick: W,
+                                          disabled: y,
                                           text: k.intl.string(k.t.yBZMsb),
                                           fullWidth: !0,
                                       }),
@@ -573,12 +606,12 @@ function en(e) {
                   }),
                   o
                       ? (0, r.jsx)(ee, {
-                            onSaveTheme: H,
-                            canApply: W,
+                            onSaveTheme: Y,
+                            canApply: K,
                         })
                       : (0, r.jsx)(et, {
-                            onSaveTheme: H,
-                            canApply: W,
+                            onSaveTheme: Y,
+                            canApply: K,
                             metadata: n,
                         }),
               ],

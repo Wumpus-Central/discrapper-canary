@@ -1,62 +1,55 @@
-r.d(t, { S: () => b });
+r.d(t, { S: () => p });
 var n = r(951288);
 r(647438);
 var i = r(120356),
-    a = r.n(i),
-    l = r(594174),
-    o = r(971082),
-    c = r(817053),
-    s = r(533815),
-    u = r(853072),
-    d = r(388032),
-    f = r(932366),
-    g = r(133458);
-function b(e) {
-    let {
-            game: t,
-            userId: r,
-            widgetType: i,
-            guildId: b,
-            channelId: p,
-            loading: m = !1,
-            disableInteraction: O = !1,
-        } = e,
-        j = (0, u.Z)(t.applicationId),
-        y = j.length > 0,
-        v = l.default.getCurrentUser(),
+    l = r.n(i),
+    a = r(594174),
+    o = r(747101),
+    c = r(971082),
+    s = r(817053),
+    u = r(533815),
+    d = r(853072),
+    f = r(388032),
+    g = r(932366),
+    b = r(133458);
+function p(e) {
+    let { game: t, userId: r, widgetType: i, guildId: p, channelId: m, disableInteraction: O = !1 } = e,
+        y = (0, d.Z)(t.applicationId),
+        j = y.length > 0,
+        v = a.default.getCurrentUser(),
         x = (null == v ? void 0 : v.id) === r;
-    return m
-        ? (0, n.jsx)("div", { className: f.loadingCover })
+    return (0, o.kO)(t.applicationId)
+        ? (0, n.jsx)("div", { className: g.loadingCover })
         : (0, n.jsxs)("div", {
-              className: g.container,
+              className: b.container,
               children: [
-                  (0, n.jsx)(c.Z, {
+                  (0, n.jsx)(s.Z, {
                       imageSrc: t.imageSrc,
                       gameName: t.gameName,
                       applicationId: t.applicationId,
                       userId: r,
                       disableInteraction: O,
-                      className: a()(
-                          y ? g.socialProofBackdrop : void 0,
-                          (null == t ? void 0 : t.imageSrc) == null || O ? void 0 : f.hoverActiveEffect,
+                      className: l()(
+                          j ? b.socialProofBackdrop : void 0,
+                          (null == t ? void 0 : t.imageSrc) == null || O ? void 0 : g.hoverActiveEffect,
                       ),
                   }),
                   !O &&
                       x &&
-                      (0, n.jsx)(s.Z, {
+                      (0, n.jsx)(u.Z, {
                           game: t,
                           widgetType: i,
-                          className: g.removeGameButton,
+                          className: b.removeGameButton,
                           iconSize: "xs",
                       }),
                   !O &&
-                      y &&
-                      (0, n.jsx)(o.Z, {
-                          label: d.intl.formatToPlainString(d.t.ujhJdH, { numFriends: j.length }),
-                          className: g.socialProof,
-                          users: j,
-                          guildId: b,
-                          channelId: p,
+                      j &&
+                      (0, n.jsx)(c.Z, {
+                          label: f.intl.formatToPlainString(f.t.ujhJdH, { numFriends: y.length }),
+                          className: b.socialProof,
+                          users: y,
+                          guildId: p,
+                          channelId: m,
                           visuallyHideLabel: !0,
                       }),
               ],

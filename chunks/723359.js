@@ -18,6 +18,7 @@ var o = (function (e) {
             (e.NSFW_SERVER_INVITE = "NSFW Server Invite"),
             (e.NSFW_SERVER_INVITE_EMBED = "NSFW Server Invite Embed"),
             (e.NSFW_VOICE_CHANNEL = "NSFW Voice Channel"),
+            (e.LARGE_GUILD = "Large Guild"),
             (e.FAMILY_CENTER = "Family Center"),
             (e.REGISTER = "Register"),
             (e.DEEP_LINK_PROMPT = "Deep Link Prompt"),

@@ -5,15 +5,16 @@ var r = n(951288),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(481060),
-    u = n(583901),
-    d = n(997945),
-    f = n(630117),
-    _ = n(441319),
-    p = n(981631),
-    h = n(388032),
-    m = n(63224);
-function g(e, t, n) {
+    c = n(755721),
+    u = n(481060),
+    d = n(583901),
+    f = n(997945),
+    _ = n(630117),
+    p = n(441319),
+    h = n(981631),
+    m = n(388032),
+    g = n(63224);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,58 +55,58 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = () => [
-        h.intl.string(h.t.EgWTY2),
-        h.intl.string(h.t.umBn5e),
-        h.intl.string(h.t.dG1wDw),
-        h.intl.string(h.t.SesI4e),
-        h.intl.string(h.t.RnMLvr),
+let v = () => [
+        m.intl.string(m.t.EgWTY2),
+        m.intl.string(m.t.umBn5e),
+        m.intl.string(m.t.dG1wDw),
+        m.intl.string(m.t.SesI4e),
+        m.intl.string(m.t.RnMLvr),
     ],
-    v = () => {
+    I = () => {
         var e;
-        return null != (e = l().sample(O())) ? e : h.intl.string(h.t.EgWTY2);
+        return null != (e = l().sample(v())) ? e : m.intl.string(m.t.EgWTY2);
     };
-function I(e) {
-    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: f, locked: h = !1 } = e,
-        [g, b] = i.useState((0, _.aW)(t).name),
-        O = t === d.Ru.PIRATE,
-        I = (0, c.xUy)({
-            label: g,
+function S(e) {
+    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: _, locked: m = !1 } = e,
+        [E, y] = i.useState((0, p.aW)(t).name),
+        v = t === f.Ru.PIRATE,
+        S = (0, c.jm)({
+            label: E,
             isSelected: s,
         });
-    return (0, r.jsx)(c.ua7, {
-        text: g,
-        onTooltipShow: () => O && b(v()),
+    return (0, r.jsx)(u.ua7, {
+        text: E,
+        onTooltipShow: () => v && y(I()),
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: m.appIconSelectionContainer,
+                className: g.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(
-                        c.P3F,
-                        y(E({}, e, I), {
-                            tabIndex: null != l ? l : I.tabIndex,
-                            className: o()(m.appIconSelection, { [m.selected]: s }, n),
-                            onClick: s ? p.dG4 : () => (null == a ? void 0 : a(t)),
-                            children: f,
+                        u.P3F,
+                        O(b({}, e, S), {
+                            tabIndex: null != l ? l : S.tabIndex,
+                            className: o()(g.appIconSelection, { [g.selected]: s }, n),
+                            onClick: s ? h.dG4 : () => (null == a ? void 0 : a(t)),
+                            children: _,
                         }),
                     ),
-                    s && (0, r.jsx)(u.oK, {}),
-                    h &&
+                    s && (0, r.jsx)(d.oK, {}),
+                    m &&
                         (0, r.jsx)("div", {
-                            className: m.lockedBadgeContainer,
-                            children: (0, r.jsx)(c.mBM, {
-                                className: m.lockedBadge,
+                            className: g.lockedBadgeContainer,
+                            children: (0, r.jsx)(u.mBM, {
+                                className: g.lockedBadge,
                                 color: "currentColor",
                             }),
                         }),
@@ -115,16 +116,16 @@ function I(e) {
 }
 function T(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: o, locked: s } = e;
-    return (0, r.jsx)(I, {
+    return (0, r.jsx)(S, {
         onSelect: i ? void 0 : o,
         isSelected: n,
         id: t.id,
-        className: i ? m.disabled : void 0,
+        className: i ? g.disabled : void 0,
         tabIndex: a,
         locked: s,
-        children: (0, r.jsx)(f.Z, {
+        children: (0, r.jsx)(_.Z, {
             id: t.id,
-            width: _.M9,
+            width: p.M9,
         }),
     });
 }

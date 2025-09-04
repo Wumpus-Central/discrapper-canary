@@ -1,7 +1,7 @@
 n.d(t, { v: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(572721),
+    a = n(252762),
     o = n(995803),
     s = n(442837),
     l = n(481060),
@@ -22,112 +22,114 @@ function f(e) {
             ref: g,
             artboardProperties: E,
             dataBinding: b,
+            touchScrollEnabled: y = !0,
         } = e,
-        y = i.useContext(l.Sfi),
-        O = _(),
-        [v, I] = i.useState(void 0),
+        O = i.useContext(l.Sfi),
+        v = _(),
+        [I, S] = i.useState(void 0),
         T = i.useRef(null),
-        { rive: S, RiveComponent: A } = (0, o.useRive)({
+        { rive: A, RiveComponent: C } = (0, o.useRive)({
             eventTarget: null == f ? void 0 : f.current,
             buffer: t,
             autoplay: n,
-            stateMachines: v,
+            stateMachines: I,
             artboard: h,
             useOffscreenRenderer: !0,
             layout: new o.Layout({
                 fit: null != s ? d.L[s] : o.Fit.Cover,
                 alignment: null != c ? d.E[c] : o.Alignment.Center,
             }),
+            isTouchScrollEnabled: y,
         });
     i.useImperativeHandle(
         g,
         () => ({
-            play: () => (null == S ? void 0 : S.play()),
-            pause: () => (null == S ? void 0 : S.pause()),
-            stop: () => (null == S ? void 0 : S.stop()),
+            play: () => (null == A ? void 0 : A.play()),
+            pause: () => (null == A ? void 0 : A.pause()),
+            stop: () => (null == A ? void 0 : A.stop()),
         }),
-        [S],
+        [A],
     ),
         p({
-            rive: S,
+            rive: A,
             artboard: h,
             artboardProperties: E,
             dataBinding: b,
         }),
         i.useEffect(() => {
-            if (null != S && "short-loop" === m && y.reducedMotion.enabled) {
+            if (null != A && "short-loop" === m && O.reducedMotion.enabled) {
                 let e = () => {
-                        S.isPlaying &&
+                        A.isPlaying &&
                             (T.current = setTimeout(() => {
-                                S.pause();
+                                A.pause();
                             }, 5000));
                     },
                     t = () => {
                         clearTimeout(T.current);
                     };
                 return (
-                    S.on(o.EventType.Play, e),
-                    S.on(o.EventType.Pause, t),
-                    S.on(o.EventType.Stop, t),
+                    A.on(o.EventType.Play, e),
+                    A.on(o.EventType.Pause, t),
+                    A.on(o.EventType.Stop, t),
                     () => {
-                        S.off(o.EventType.Play, e), S.off(o.EventType.Pause, t), S.off(o.EventType.Stop, t);
+                        A.off(o.EventType.Play, e), A.off(o.EventType.Pause, t), A.off(o.EventType.Stop, t);
                     }
                 );
             }
-        }, [S, m, y.reducedMotion.enabled]),
+        }, [A, m, O.reducedMotion.enabled]),
         i.useLayoutEffect(() => {
-            null != S &&
+            null != A &&
                 "layout" === s &&
-                (S.resizeDrawingSurfaceToCanvas(),
+                (A.resizeDrawingSurfaceToCanvas(),
                 setTimeout(() => {
-                    S.resizeDrawingSurfaceToCanvas();
+                    A.resizeDrawingSurfaceToCanvas();
                 }, 100));
-        }, [S, s]),
+        }, [A, s]),
         i.useEffect(() => {
-            null != S &&
-                null == v &&
-                (I(S.stateMachineNames),
-                S.reset({
-                    stateMachines: S.stateMachineNames,
+            null != A &&
+                null == I &&
+                (S(A.stateMachineNames),
+                A.reset({
+                    stateMachines: A.stateMachineNames,
                     autoplay: n,
                     artboard: h,
                     autoBind: !0,
                 }),
-                S.setupRiveListeners());
-        }, [S, n, v, h]);
-    let C = i.useRef(0);
+                A.setupRiveListeners());
+        }, [A, n, I, h]);
+    let N = i.useRef(0);
     i.useEffect(() => {
-        if (null == S) return;
-        S.play();
+        if (null == A) return;
+        A.play();
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
-                ((C.current = t.data),
+                ((N.current = t.data),
                 t.data > 0 &&
-                    ("halt" === m && y.reducedMotion.enabled && S.isPlaying && S.pause(),
-                    S.off(o.EventType.Advance, e)));
+                    ("halt" === m && O.reducedMotion.enabled && A.isPlaying && A.pause(),
+                    A.off(o.EventType.Advance, e)));
         };
         return (
-            S.on(o.EventType.Advance, e),
+            A.on(o.EventType.Advance, e),
             () => {
-                S.off(o.EventType.Advance, e);
+                A.off(o.EventType.Advance, e);
             }
         );
-    }, [S, y.reducedMotion.enabled, m]);
-    let N = i.useRef(!1);
+    }, [A, O.reducedMotion.enabled, m]);
+    let R = i.useRef(!1);
     return (
         i.useEffect(() => {
-            if (null != S)
+            if (null != A)
                 return (
-                    !O && N.current && S.isPlaying && C.current > 0
-                        ? S.pause()
-                        : O && !S.isPlaying && N.current && S.play(),
+                    !v && R.current && A.isPlaying && N.current > 0
+                        ? A.pause()
+                        : v && !A.isPlaying && R.current && A.play(),
                     () => {
-                        null != S && O && (N.current = null != S.frameRequestId);
+                        null != A && v && (R.current = null != A.frameRequestId);
                     }
                 );
-        }, [S, O]),
-        (0, r.jsx)(A, {
+        }, [A, v]),
+        (0, r.jsx)(C, {
             className: a,
             style: u,
         })
@@ -190,8 +192,8 @@ function p(e) {
                         (null == (c = t.viewModelInstance) || null == (l = c.trigger(h)) || l.trigger());
                     break;
                 case "string":
-                    let T = null == (u = t.viewModelInstance) ? void 0 : u.string(h);
-                    null != T && (T.value = m);
+                    let S = null == (u = t.viewModelInstance) ? void 0 : u.string(h);
+                    null != S && (S.value = m);
                     break;
                 default:
                     console.warn("Unknown property type: ".concat(g));

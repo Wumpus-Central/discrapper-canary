@@ -17,20 +17,20 @@ var r,
     O = n(367907),
     y = n(906732),
     _ = n(453542),
-    j = n(702321),
-    v = n(46148),
-    x = n(82295),
-    C = n(313201),
-    E = n(860144),
-    S = n(214852),
-    P = n(518311),
-    I = n(355298),
-    N = n(869404),
-    w = n(333984),
+    v = n(702321),
+    j = n(82295),
+    x = n(313201),
+    C = n(860144),
+    E = n(214852),
+    S = n(518311),
+    P = n(355298),
+    I = n(869404),
+    N = n(333984),
     Z = n(984802),
-    T = n(592125),
-    A = n(158776),
-    R = n(55589),
+    w = n(592125),
+    T = n(158776),
+    A = n(55589),
+    R = n(515753),
     D = n(981631),
     M = n(388032),
     L = n(777126);
@@ -239,7 +239,7 @@ class F extends (r = l.Component) {
                 totalRowCount: n.length,
             };
         {
-            let e = t.filter((e) => null != e),
+            let e = t.filter((e) => null != e && !1 !== e),
                 r = e.length;
             return {
                 preRenderedChildren: r,
@@ -362,10 +362,10 @@ class F extends (r = l.Component) {
                 let o = Math.round((t.offsetHeight - 44 * i) / 44),
                     a = o > n.length ? n.slice(0, o + 1) : n,
                     s = a.map((e) => (null != r[e] ? r[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, j.Z)(e)),
+                    c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && A.Z.isMobileOnline(e))
+                        num_users_visible_with_mobile_indicator: s.filter((e) => null != e && T.Z.isMobileOnline(e))
                             .length,
                     };
                 (this.hasReportedAnalytics = !0),
@@ -399,7 +399,7 @@ class F extends (r = l.Component) {
                 return null == s
                     ? null
                     : (0, i.jsx)(
-                          v.W,
+                          R.ZP,
                           {
                               channel: s,
                               selected: s.id === l,
@@ -433,7 +433,7 @@ class F extends (r = l.Component) {
                     { showDMHeader: n, createDMCTAButtonVariant: r } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          x.Z,
+                          j.Z,
                           {
                               className: a()(L.privateChannelsHeaderContainer, { [L.tall]: "side" === r }),
                               children: [
@@ -442,7 +442,7 @@ class F extends (r = l.Component) {
                                       children: M.intl.string(M.t.YUU0RE),
                                   }),
                                   null == r &&
-                                      (0, i.jsx)(P.Z, {
+                                      (0, i.jsx)(S.Z, {
                                           location: "PrivateChannelsList-CreateDMButton",
                                           tooltip: M.intl.string(M.t["6Urw1t"]),
                                           tooltipPosition: "top",
@@ -453,7 +453,7 @@ class F extends (r = l.Component) {
                                           subscribeToGlobalHotkey: !0,
                                       }),
                                   "side" === r &&
-                                      (0, i.jsx)(P.l, {
+                                      (0, i.jsx)(S.l, {
                                           popoutAlign: "left",
                                           icon: f.kL_,
                                           text: M.intl.string(M.t["6Urw1t"]),
@@ -490,22 +490,22 @@ let V = (e) => {
     let { density: t } = (0, f.TCT)(),
         { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: s, createDMCTAButtonVariant: c } = e,
         h = l.Children.count(o),
-        g = T.Z.getMutablePrivateChannels(),
-        O = (0, N.k1)(g),
-        _ = (0, p.Wu)([R.Z, I.Z, w.Z], () => {
-            let e = R.Z.getPrivateChannelIds();
-            return (0, N.tU)(e, [I.Z, w.Z]);
+        g = w.Z.getMutablePrivateChannels(),
+        O = (0, I.k1)(g),
+        _ = (0, p.Wu)([A.Z, P.Z, N.Z], () => {
+            let e = A.Z.getPrivateChannelIds();
+            return (0, I.tU)(e, [P.Z, N.Z]);
         }, []);
-    (0, S.z)(E.R);
-    let { analyticsLocations: j } = (0, y.ZP)(b.Z.CONTACTS_LIST),
-        v = (0, Z.Ll)(),
-        { keyboardModeEnabled: x, version: P } = (0, p.cj)([m.Z, T.Z], () => ({
+    (0, E.z)(C.R);
+    let { analyticsLocations: v } = (0, y.ZP)(b.Z.CONTACTS_LIST),
+        j = (0, Z.Ll)(),
+        { keyboardModeEnabled: S, version: T } = (0, p.cj)([m.Z, w.Z], () => ({
             keyboardModeEnabled: m.Z.keyboardModeEnabled,
             version:
-                null != n ? "".concat(n, ":").concat(T.Z.getPrivateChannelsVersion()) : T.Z.getPrivateChannelsVersion(),
+                null != n ? "".concat(n, ":").concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion(),
         })),
-        A = l.useRef(null),
-        D = null != s ? s : A,
+        R = l.useRef(null),
+        D = null != s ? s : R,
         M = l.useCallback(
             (e) => {
                 let t = D.current,
@@ -548,17 +548,17 @@ let V = (e) => {
                 }),
             [D],
         ),
-        B = (0, C.Dt)(),
+        B = (0, x.Dt)(),
         V = (0, d.ZP)({
             id: "private-channels-".concat(B),
-            isEnabled: x,
+            isEnabled: S,
             scrollToStart: L,
             scrollToEnd: k,
             defaultFocused: (h + +!!a).toString(),
             setFocus: M,
         });
     return (0, i.jsx)(y.Gt, {
-        value: j,
+        value: v,
         children: (0, i.jsx)(u.bG, {
             navigator: V,
             children: (0, i.jsx)(
@@ -568,8 +568,8 @@ let V = (e) => {
                     channels: O,
                     privateChannelIds: _,
                     listRef: D,
-                    theme: null != v ? v : r,
-                    version: P,
+                    theme: null != j ? j : r,
+                    version: T,
                     createDMCTAButtonVariant: c,
                 }),
             ),

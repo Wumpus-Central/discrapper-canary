@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826);
+n.d(t, { Z: () => Z }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282), n(704826), n(290780);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,23 +18,25 @@ var r = n(951288),
     O = n(108427),
     E = n(210887),
     y = n(974042),
-    v = n(849862),
-    I = n(666286),
-    C = n(596957),
-    S = n(981631),
-    N = n(723359),
-    T = n(388032),
-    P = n(236202);
-function j() {
+    v = n(365113),
+    I = n(849862),
+    C = n(666286),
+    S = n(596957),
+    N = n(576360),
+    T = n(981631),
+    j = n(723359),
+    P = n(388032),
+    x = n(236202);
+function A() {
     return (0, r.jsx)("div", {
-        className: P.inviteToolbar,
+        className: x.inviteToolbar,
         children: (0, r.jsx)(b.Z, {
-            tooltip: T.intl.string(T.t.HfOgAw),
+            tooltip: P.intl.string(P.t.HfOgAw),
             location: "PeoplePageHeaderToolbar-CreateDMButton",
         }),
     });
 }
-let x = function (e) {
+let Z = function (e) {
     let { initialSection: t } = e,
         n = (0, o.TH)(),
         l = (0, o.k6)();
@@ -42,145 +44,159 @@ let x = function (e) {
         "true" === new URLSearchParams(n.search).get("confirm-age") &&
             u.Z.dispatch({
                 type: "AGE_GATE_MODAL_OPEN",
-                source: N.L0.DEEP_LINK_PROMPT,
+                source: j.L0.DEEP_LINK_PROMPT,
             }).then(() => {
-                l.replace(S.Z5c.ME);
+                l.replace(T.Z5c.ME);
             });
     }, [l, n]),
         i.useEffect(() => {
-            d.Y(S.Z5c.FRIENDS), (0, O.e)("friends");
+            d.Y(T.Z5c.FRIENDS), (0, O.e)("friends");
         }, []);
     let b = (0, s.e7)([E.Z], () => E.Z.theme),
-        x = (0, v.If)(),
-        { section: A, rows: Z } = (0, s.cj)([y.ZP], () => y.ZP.getState()),
-        w = (0, s.e7)([g.Z], () => g.Z.getSuggestionCount()),
-        L = i.useMemo(() => Z.getRelationshipCounts(), [Z]);
+        Z = (0, I.If)(),
+        { section: w, rows: L } = (0, s.cj)([y.ZP], () => y.ZP.getState()),
+        R = (0, s.e7)([g.Z], () => g.Z.getSuggestionCount()),
+        D = i.useMemo(() => L.getRelationshipCounts(), [L]);
     i.useEffect(() => {
         null != t && p.Z.setInitialSection(t),
-            0 === L[S.OGo.FRIEND] &&
-                0 === L[S.OGo.PENDING_INCOMING] &&
-                0 === L[S.OGo.PENDING_OUTGOING] &&
-                0 === L[S.OGo.BLOCKED] &&
-                p.Z.transitionToSection(S.pJs.ADD_FRIEND);
-    }, [t, L]);
-    let R = (e) => {
+            0 === D[T.OGo.FRIEND] &&
+                0 === D[T.OGo.PENDING_INCOMING] &&
+                0 === D[T.OGo.PENDING_OUTGOING] &&
+                0 === D[T.OGo.BLOCKED] &&
+                p.Z.transitionToSection(T.pJs.ADD_FRIEND);
+    }, [t, D]);
+    let k = (e) => {
             p.Z.transitionToSection(e, { explicit: !0 });
         },
-        D = (0, h.Dt)(),
-        k = (0, h.Dt)(),
-        M = [
+        M = (0, h.Dt)(),
+        U = (0, h.Dt)(),
+        G = [
             {
-                id: S.pJs.ONLINE,
-                show: Z.filter(S.pJs.ONLINE).length > 0,
-                content: T.intl.string(T.t.b9w3bG),
-                className: P.item,
+                id: T.pJs.ONLINE,
+                show: L.filter(T.pJs.ONLINE).length > 0,
+                content: P.intl.string(P.t.b9w3bG),
+                className: x.item,
             },
             {
-                id: S.pJs.ALL,
-                show: L[S.OGo.FRIEND] > 0,
-                content: T.intl.string(T.t.PfjFjY),
-                className: P.item,
+                id: T.pJs.ALL,
+                show: D[T.OGo.FRIEND] > 0,
+                content: P.intl.string(P.t.PfjFjY),
+                className: x.item,
             },
             {
-                id: S.pJs.PENDING,
-                show: Z.filter(S.pJs.PENDING).length > 0,
+                id: T.pJs.PENDING,
+                show: L.filter(T.pJs.PENDING).length > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        T.intl.string(T.t.p6IHGB),
-                        x > 0 &&
+                        P.intl.string(P.t.p6IHGB),
+                        Z > 0 &&
                             (0, r.jsx)(c.mAB, {
-                                count: x,
-                                className: P.badge,
+                                count: Z,
+                                className: x.badge,
                             }),
                     ],
                 }),
-                ariaLabel: T.intl.formatToPlainString(T.t.OAC0Z2, { count: x.toString() }),
-                className: P.item,
+                ariaLabel: P.intl.formatToPlainString(P.t.OAC0Z2, { count: Z.toString() }),
+                className: x.item,
             },
             {
-                id: S.pJs.SUGGESTIONS,
-                show: w > 0,
+                id: T.pJs.SUGGESTIONS,
+                show: R > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        T.intl.string(T.t["8rSi19"]),
+                        P.intl.string(P.t["8rSi19"]),
                         (0, r.jsx)(c.mAB, {
-                            count: w,
-                            className: P.badge,
+                            count: R,
+                            className: x.badge,
                         }),
                     ],
                 }),
-                ariaLabel: T.intl.formatToPlainString(T.t.AbMQp6, { count: w.toString() }),
-                className: P.item,
+                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp6, { count: R.toString() }),
+                className: x.item,
             },
             {
-                id: S.pJs.ADD_FRIEND,
+                id: T.pJs.ADD_FRIEND,
                 show: !0,
-                content: (0, r.jsx)("span", { children: T.intl.string(T.t.j0wbEx) }),
-                ariaLabel: T.intl.string(T.t.j0wbEx),
-                className: a()(P.item, P.addFriend),
+                content: (0, r.jsx)("span", { children: P.intl.string(P.t.j0wbEx) }),
+                ariaLabel: P.intl.string(P.t.j0wbEx),
+                className: a()(x.item, x.addFriend),
             },
         ];
-    return (0, r.jsxs)("main", {
-        className: P.container,
-        "aria-label": T.intl.string(T.t.TdEu5e),
-        children: [
-            (0, r.jsx)(f.yY, { location: T.intl.string(T.t.TdEu5e) }),
-            (0, r.jsx)(c.f6W, {
-                theme: b,
-                children: (e) =>
-                    (0, r.jsxs)(m.Z, {
-                        className: e,
-                        toolbar: (0, r.jsx)(j, {}),
-                        role: "navigation",
-                        "aria-labelledby": D,
-                        scrollable: !0,
-                        children: [
-                            (0, r.jsx)(m.Z.Icon, {
-                                icon: c.iFz,
-                                "aria-hidden": !0,
-                            }),
-                            (0, r.jsx)(m.Z.Title, {
-                                id: D,
-                                children: T.intl.string(T.t.TdEu5e),
-                            }),
-                            (0, r.jsx)(m.Z.Divider, {}),
-                            (0, r.jsx)(c.njP, {
-                                "aria-label": T.intl.string(T.t.TdEu5e),
-                                selectedItem: A,
-                                type: "top-pill",
-                                onItemSelect: R,
-                                className: P.tabBar,
-                                children: M.filter((e) => e.show).map((e) =>
-                                    (0, r.jsx)(
-                                        c.njP.Item,
-                                        {
-                                            id: e.id,
-                                            className: e.className,
-                                            "aria-label": e.ariaLabel,
-                                            children: e.content,
-                                        },
-                                        e.id,
+    return (
+        v.o.useConfig({ location: "friendstore" }).landOnProfilePage &&
+            G.unshift({
+                id: T.pJs.YOU,
+                show: !0,
+                content: P.intl.string(P.t.LuZzxs),
+                className: x.item,
+            }),
+        (0, r.jsxs)("main", {
+            className: x.container,
+            "aria-label": P.intl.string(P.t.TdEu5e),
+            children: [
+                (0, r.jsx)(f.yY, { location: P.intl.string(P.t.TdEu5e) }),
+                (0, r.jsx)(c.f6W, {
+                    theme: b,
+                    children: (e) =>
+                        (0, r.jsxs)(m.Z, {
+                            className: e,
+                            toolbar: (0, r.jsx)(A, {}),
+                            role: "navigation",
+                            "aria-labelledby": M,
+                            scrollable: !0,
+                            children: [
+                                (0, r.jsx)(m.Z.Icon, {
+                                    icon: c.iFz,
+                                    "aria-hidden": !0,
+                                }),
+                                (0, r.jsx)(m.Z.Title, {
+                                    id: M,
+                                    children: P.intl.string(P.t.TdEu5e),
+                                }),
+                                (0, r.jsx)(m.Z.Divider, {}),
+                                (0, r.jsx)(c.njP, {
+                                    "aria-label": P.intl.string(P.t.TdEu5e),
+                                    selectedItem: w,
+                                    type: "top-pill",
+                                    onItemSelect: k,
+                                    className: x.tabBar,
+                                    children: G.filter((e) => e.show).map((e) =>
+                                        (0, r.jsx)(
+                                            c.njP.Item,
+                                            {
+                                                id: e.id,
+                                                className: e.className,
+                                                "aria-label": e.ariaLabel,
+                                                children: e.content,
+                                            },
+                                            e.id,
+                                        ),
                                     ),
-                                ),
-                            }),
-                        ],
-                    }),
-            }),
-            (0, r.jsxs)("div", {
-                className: P.tabBody,
-                children: [
-                    (0, r.jsx)(c.njP.Panel, {
-                        id: A,
-                        className: P.peopleColumn,
-                        "aria-labelledby": k,
-                        children: A === S.pJs.ADD_FRIEND ? (0, r.jsx)(I.Z, {}) : (0, r.jsx)(C.Z, { titleId: k }),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: P.nowPlayingColumn,
-                        children: (0, r.jsx)(_.Z, {}),
-                    }),
-                ],
-            }),
-        ],
-    });
+                                }),
+                            ],
+                        }),
+                }),
+                (0, r.jsxs)("div", {
+                    className: x.tabBody,
+                    children: [
+                        (0, r.jsx)(c.njP.Panel, {
+                            id: w,
+                            className: x.peopleColumn,
+                            "aria-labelledby": U,
+                            children:
+                                w === T.pJs.ADD_FRIEND
+                                    ? (0, r.jsx)(C.Z, {})
+                                    : w === T.pJs.YOU
+                                      ? (0, r.jsx)(N.Z, {})
+                                      : (0, r.jsx)(S.Z, { titleId: U }),
+                        }),
+                        (0, r.jsx)("div", {
+                            className: x.nowPlayingColumn,
+                            children: (0, r.jsx)(_.Z, {}),
+                        }),
+                    ],
+                }),
+            ],
+        })
+    );
 };

@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__5a2df",
+    mobileContainer: "mobileContainer__5a2df",
     editorBody: "editorBody__5a2df",
     section: "section__5a2df",
     resetButton: "resetButton__5a2df",
@@ -7,6 +8,10 @@ e.exports = {
     closeButton: "closeButton__5a2df",
     sliderContainer: "sliderContainer__5a2df",
     gradientDirectionSliderContainer: "gradientDirectionSliderContainer__5a2df",
+    angleIndicatorOverlay: "angleIndicatorOverlay__5a2df",
+    angleIndicatorDot: "angleIndicatorDot__5a2df",
+    angleIndicatorLargeDot: "angleIndicatorLargeDot__5a2df",
+    sliderWrapper: "sliderWrapper__5a2df",
     footerContainer: "footerContainer__5a2df",
     footerContainerNonPremium: "footerContainerNonPremium__5a2df",
     coachmarkHeaderContainer: "coachmarkHeaderContainer__5a2df",

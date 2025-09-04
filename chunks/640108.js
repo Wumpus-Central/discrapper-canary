@@ -25,8 +25,8 @@ var r,
     O = n(181058),
     v = n(626135),
     I = n(70956),
-    T = n(36703),
-    S = n(228488),
+    S = n(36703),
+    T = n(228488),
     A = n(58737),
     C = n(540026),
     N = n(528472),
@@ -91,8 +91,8 @@ function B(e, t) {
     );
 }
 let Z = 3000,
-    V = 1000,
-    F = "-:--",
+    F = 1000,
+    V = "-:--",
     H = {
         friction: 14,
         tension: 200,
@@ -126,8 +126,8 @@ function z(e) {
 }
 let q = (e) => {
     let { current: t, duration: n } = e,
-        r = null != t ? K(t) : F,
-        i = null != n ? K(n) : F;
+        r = null != t ? K(t) : V,
+        i = null != n ? K(n) : V;
     return (
         (r = r.padStart(i.length, "0")),
         (0, a.jsxs)("div", {
@@ -633,13 +633,13 @@ class et extends (i = o.PureComponent) {
             ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a)))
             : !a && t.playing && (u.pause(), null == d || d.pop(a), null == n || n()),
             a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
-        let f = (0, S.fn)(u.parentNode, u);
+        let f = (0, T.fn)(u.parentNode, u);
         o && !t.fullscreen && null != f
-            ? ((0, S.Dj)(f), f.addEventListener(S.NO, this.handleFullScreenExit))
+            ? ((0, T.Dj)(f), f.addEventListener(T.NO, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
               null != f &&
-              (f.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(f, f.ownerDocument)),
+              (f.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(f, f.ownerDocument)),
             l === C.Z.Types.DURATION && t.dragging !== C.Z.Types.DURATION && a
                 ? u.pause()
                 : l !== C.Z.Types.DURATION && t.dragging === C.Z.Types.DURATION && a && u.play(),
@@ -650,8 +650,8 @@ class et extends (i = o.PureComponent) {
         this._unmounted = !0;
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, S.fn)(e.parentNode, e);
-        null != t && (t.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(t));
+        let t = (0, T.fn)(e.parentNode, e);
+        null != t && (t.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -696,35 +696,37 @@ class et extends (i = o.PureComponent) {
     }
     updateControlsVisibility() {
         let { dragging: e, fullscreen: t } = this.state,
-            n = t ? V : Z,
+            n = t ? F : Z,
             r = Math.max(0, Date.now() - this._lastMove) > n;
         r !== this.state.hideControls && null == e && this.setState({ hideControls: r });
     }
     renderVideo() {
-        let { src: e, poster: t, forceExternal: n, responsive: r, mediaLayoutType: i } = this.props,
-            { playing: o, fullscreen: s } = this.state,
-            l = this.getWidth(),
-            c = this.getHeight();
-        return n
+        let { alt: e, src: t, poster: n, forceExternal: r, responsive: i, mediaLayoutType: o } = this.props,
+            { playing: s, fullscreen: l } = this.state,
+            c = this.getWidth(),
+            u = this.getHeight();
+        return r
             ? (0, a.jsx)(h.Z, {
+                  alt: e,
                   className: j.video,
                   controls: !1,
-                  height: c,
-                  poster: t,
-                  width: l,
-                  responsive: r && !s,
-                  mediaLayoutType: i,
+                  height: u,
+                  poster: n,
+                  width: c,
+                  responsive: i && !l,
+                  mediaLayoutType: o,
                   playsInline: !0,
-                  autoPlay: o,
+                  autoPlay: s,
               })
             : (0, a.jsx)(h.Z, {
+                  alt: e,
                   className: j.video,
                   controls: !1,
                   playsInline: !0,
-                  autoPlay: o,
-                  height: c,
-                  responsive: r && !s,
-                  mediaLayoutType: s ? x.hV.STATIC : i,
+                  autoPlay: s,
+                  height: u,
+                  responsive: i && !l,
+                  mediaLayoutType: l ? x.hV.STATIC : o,
                   onClick: this.handleVideoClick,
                   onEnded: this.handleEnded,
                   onError: this.handleError,
@@ -736,11 +738,11 @@ class et extends (i = o.PureComponent) {
                   onTimeUpdate: this._analytics.onTimeUpdate,
                   onLoadedMetadata: this.handleLoaded,
                   onProgress: this.handleBuffer,
-                  poster: t,
+                  poster: n,
                   preload: this.state.preload,
                   ref: this.mediaRef,
-                  width: l,
-                  src: e,
+                  width: c,
+                  src: t,
               });
     }
     renderAudio() {
@@ -787,7 +789,7 @@ class et extends (i = o.PureComponent) {
                   buffers: c,
                   currentTime: u,
                   duration: d,
-                  volume: (0, T.P)(g, 1),
+                  volume: (0, S.P)(g, 1),
                   hide: t === Y.VIDEO && _,
                   muted: p,
                   autoPlay: n,
@@ -815,7 +817,7 @@ class et extends (i = o.PureComponent) {
                                 iconClassName: j.controlIcon,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, S.fn)(null == e ? void 0 : e.parentNode, e),
+                                node: (0, T.fn)(null == e ? void 0 : e.parentNode, e),
                             })
                           : null,
               })
@@ -976,8 +978,8 @@ class et extends (i = o.PureComponent) {
             k(this, "handleFullScreenExit", () => {
                 let { current: e } = this.mediaRef;
                 if (null == e) return;
-                let t = (0, S.fn)(e.parentNode, e);
-                (null != t && (0, S.rB)(t, null == t ? void 0 : t.ownerDocument)) || this.setState({ fullscreen: !1 });
+                let t = (0, T.fn)(e.parentNode, e);
+                (null != t && (0, T.rB)(t, null == t ? void 0 : t.ownerDocument)) || this.setState({ fullscreen: !1 });
             }),
             k(this, "toggleFullscreen", () => {
                 let e = !this.state.fullscreen;
@@ -1010,7 +1012,7 @@ class et extends (i = o.PureComponent) {
                 let { current: n } = this.mediaRef;
                 if (t === C.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
                 else if (t === C.Z.Types.VOLUME) {
-                    let t = (0, T.A)(e, 1);
+                    let t = (0, S.A)(e, 1);
                     0 === t
                         ? this.setState({
                               muted: !0,

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(533694),
     v = n(345114),
     I = n(924301),
-    T = n(225890),
-    S = n(434404),
+    S = n(225890),
+    T = n(434404),
     A = n(507435),
     C = n(686380),
     N = n(504733),
@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(523746),
     B = n(592125),
     Z = n(430824),
-    V = n(496675),
-    F = n(158776),
+    F = n(496675),
+    V = n(158776),
     H = n(944486),
     Y = n(594174),
     W = n(979651),
@@ -67,15 +67,15 @@ var r = n(951288),
     ep = n(522860),
     eh = n(600397),
     em = n(73352),
-    eg = n(507962),
+    eg = n(377499),
     eE = n(857640),
     eb = n(614972),
     ey = n(701181),
     eO = n(29338),
     ev = n(461135),
     eI = n(296571),
-    eT = n(587737),
-    eS = n(482239),
+    eS = n(587737),
+    eT = n(482239),
     eA = n(328749),
     eC = n(4305),
     eN = n(910548),
@@ -152,6 +152,7 @@ function ek(e) {
             channelId: d,
             guildId: o.guild_id,
             messageId: t.id,
+            enableDisplayNameStyles: !0,
         });
     return (0, r.jsx)(ei.Z, {
         compact: n,
@@ -238,7 +239,7 @@ function eZ(e) {
             messageId: t.id,
         });
     return n.isThread()
-        ? (0, r.jsx)(eT.Z, {
+        ? (0, r.jsx)(eS.Z, {
               message: t,
               channel: n,
               compact: i,
@@ -254,7 +255,7 @@ function eZ(e) {
               otherUsernameHook: d,
           });
 }
-function eV(e) {
+function eF(e) {
     let { message: t, channel: a, compact: l } = e,
         c = (0, en.l)({
             user: t.author,
@@ -303,7 +304,7 @@ function eV(e) {
         onContextMenuThread: f,
     });
 }
-function eF(e) {
+function eV(e) {
     let { message: t, channel: n, compact: i } = e,
         { author: o } = t,
         s = t.getChannelId(),
@@ -321,7 +322,7 @@ function eF(e) {
             messageId: t.id,
         });
     return n.isThread()
-        ? (0, r.jsx)(eS.Z, {
+        ? (0, r.jsx)(eT.Z, {
               message: t,
               channel: n,
               compact: i,
@@ -423,7 +424,7 @@ function eK(e) {
             messageReference: c,
         } = t,
         d = t.getChannelId(),
-        f = (0, a.e7)([F.Z], () => F.Z.findActivity(l, (e) => e.type === eR.IIU.PLAYING), [l]),
+        f = (0, a.e7)([V.Z], () => V.Z.findActivity(l, (e) => e.type === eR.IIU.PLAYING), [l]),
         _ = (0, a.e7)([B.Z], () => (null != c ? B.Z.getChannel(c.channel_id) : null), [c]),
         p = null == c ? void 0 : c.guild_id,
         h = (0, en.l)({
@@ -459,7 +460,7 @@ function ez(e) {
         o = (0, a.e7)([B.Z], () => B.Z.getChannel(i), [i]),
         s = null != o ? o.getGuildId() : null,
         l = () => {
-            null != s && S.Z.open(s, eR.pNK.ACCESS, eR.KsC.ACCESS_DISCOVERABLE);
+            null != s && T.Z.open(s, eR.pNK.ACCESS, eR.KsC.ACCESS_DISCOVERABLE);
         };
     return (0, r.jsx)(ed.FJ, {
         message: t,
@@ -538,7 +539,7 @@ function e$(e) {
                 usernameHook: o,
             }),
             null != s && s.name === t.content
-                ? (0, r.jsx)(T.Z, { code: "".concat(n.guild_id, "-").concat(s.id) })
+                ? (0, r.jsx)(S.Z, { code: "".concat(n.guild_id, "-").concat(s.id) })
                 : null,
         ],
     });
@@ -594,7 +595,7 @@ function e3(e) {
             guildId: s.guild_id,
             messageId: i.id,
         }),
-        d = (0, a.e7)([V.Z], () => V.Z.can(eR.Plq.MUTE_MEMBERS, s)),
+        d = (0, a.e7)([F.Z], () => F.Z.can(eR.Plq.MUTE_MEMBERS, s)),
         f = () => {
             (0, D.DT)(s, i.author.id, !1), l.Z.deleteMessage(s.id, i.id, !0);
         },
@@ -740,7 +741,7 @@ let to = Object.freeze({
     [eR.uaV.CHAT_INPUT_COMMAND]: void 0,
     [eR.uaV.CONTEXT_MENU_COMMAND]: void 0,
     [eR.uaV.RECIPIENT_ADD]: eZ,
-    [eR.uaV.RECIPIENT_REMOVE]: eF,
+    [eR.uaV.RECIPIENT_REMOVE]: eV,
     [eR.uaV.CALL]: ek,
     [eR.uaV.CHANNEL_NAME_CHANGE]: eU,
     [eR.uaV.CHANNEL_ICON_CHANGE]: eG,
@@ -756,7 +757,7 @@ let to = Object.freeze({
     [eR.uaV.GUILD_DISCOVERY_REQUALIFIED]: ed.xe,
     [eR.uaV.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ed.HL,
     [eR.uaV.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ed.Yc,
-    [eR.uaV.THREAD_CREATED]: eV,
+    [eR.uaV.THREAD_CREATED]: eF,
     [eR.uaV.THREAD_STARTER_MESSAGE]: eA.Z,
     [eR.uaV.GUILD_INVITE_REMINDER]: void 0,
     [eR.uaV.AUTO_MODERATION_ACTION]: eq,

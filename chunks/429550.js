@@ -1,6 +1,6 @@
-n.d(t, { Z: () => r });
-function r(e, t) {
+function a(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+    for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
+    return a;
 }
+r.d(t, { Z: () => a });

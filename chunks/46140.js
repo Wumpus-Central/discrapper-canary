@@ -1,6 +1,6 @@
 n.d(t, {
     Dp: () => E,
-    Jp: () => S,
+    Jp: () => T,
     Lv: () => I,
     NH: () => m,
     Ot: () => u,
@@ -10,22 +10,23 @@ n.d(t, {
     Uo: () => h,
     V6: () => y,
     V_: () => b,
+    XJ: () => C,
     XZ: () => d,
-    _v: () => A,
     a_: () => s.a,
     cd: () => _,
     dr: () => c,
-    j5: () => C,
     l$: () => v,
     tD: () => p,
-    tt: () => T,
+    tt: () => S,
     v6: () => O,
+    vy: () => N,
+    yq: () => A,
 }),
     n(388685);
 var r = n(754700),
     i = n(758846),
-    o = n(70956),
-    a = n(497505),
+    a = n(70956),
+    o = n(497505),
     s = n(438954),
     l = n(670081),
     c = (function (e) {
@@ -69,7 +70,7 @@ var r = n(754700),
             e
         );
     })({});
-let u = o.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
+let u = a.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
     d = {
         tension: 900,
         friction: 45,
@@ -106,7 +107,7 @@ var b = (function (e) {
     );
 })({});
 let y = "1333839522189938740",
-    O = new Set([a.Ok.DESKTOP_ACCOUNT_PANEL_AREA, a.Ok.MOBILE_HOME_DOCK_AREA]),
+    O = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),
     v = new Set([
         r.X.STREAM_ON_DESKTOP,
         r.X.PLAY_ON_DESKTOP,
@@ -121,14 +122,14 @@ let y = "1333839522189938740",
         r.X.PLAY_ON_PLAYSTATION,
         r.X.PLAY_ON_DESKTOP_V2,
     ]),
-    T = new Set([
+    S = new Set([
         r.X.STREAM_ON_DESKTOP,
         r.X.PLAY_ON_DESKTOP,
         r.X.PLAY_ON_XBOX,
         r.X.PLAY_ON_PLAYSTATION,
         r.X.PLAY_ON_DESKTOP_V2,
     ]),
-    S = { is_targeted: !1 };
+    T = { is_targeted: !1 };
 var A = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
@@ -143,8 +144,30 @@ var A = (function (e) {
             (e.REWARD_VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.REWARD_COLLECTIBLE = "reward_collectible"),
             (e.REWARD_IN_GAME = "reward_in_game"),
-            (e.QUEST_TYPE_VIDEO = "quest_type_video"),
-            (e.QUEST_TYPE_PLAY = "quest_type_play"),
+            (e.TASK_VIDEO = "task_video"),
+            (e.TASK_PLAY = "task_play"),
             e
         );
     })({});
+let N = [
+    {
+        group: "task",
+        filter: "task_play",
+    },
+    {
+        group: "task",
+        filter: "task_video",
+    },
+    {
+        group: "reward",
+        filter: "reward_virtual_currency",
+    },
+    {
+        group: "reward",
+        filter: "reward_collectible",
+    },
+    {
+        group: "reward",
+        filter: "reward_in_game",
+    },
+];

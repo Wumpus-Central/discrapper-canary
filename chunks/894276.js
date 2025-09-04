@@ -42,19 +42,22 @@ class u {
         this.inner = e;
     }
     getCurrentConfig() {
-        return (
-            i()(null != this.inner, "experiment must be set before calling getCurrentConfig"),
-            this.inner.getCurrentConfig({ location: "default" })
-        );
+        return (i()(null != this.inner, "experiment must be set before calling getCurrentConfig"),
+        "getCurrentConfig" in this.inner)
+            ? this.inner.getCurrentConfig({ location: "default" })
+            : this.inner.getConfig({ location: "default" });
     }
-    constructor(e) {
+    constructor(e, t) {
+        var n;
         s(this, "id", void 0),
             s(this, "inner", void 0),
             s(this, "cachedConfig", void 0),
+            s(this, "legacyExperiment", void 0),
             (this.id = e),
             (this.inner = null),
             (this.cachedConfig = c),
-            l.push(this);
+            l.push(this),
+            (this.legacyExperiment = null != (n = null == t ? void 0 : t.legacyExperiment) && n);
     }
 }
 class d extends u {
@@ -96,8 +99,8 @@ class d extends u {
             },
         ];
     }
-    constructor(e, t, n = "Kv") {
-        super(e), s(this, "storeName", void 0), s(this, "type", void 0), (this.storeName = t), (this.type = n);
+    constructor(e, t, n, r) {
+        super(e, r), s(this, "storeName", void 0), s(this, "type", void 0), (this.storeName = t), (this.type = n);
     }
 }
 class f extends u {
@@ -150,7 +153,7 @@ class f extends u {
         super(...e), s(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), s(this, "emissionsCount", 0);
     }
 }
-let _ = new d("2025-05_libdiscore_notestore_v2", "NoteStore"),
-    p = new d("2025-07_libdiscore_guildstore_v2", "GuildStore"),
-    h = new d("2025-08_libdiscore_guildrolestore", "GuildRoleStore", "Kkv");
-new f("2025-07_libdiscore_telemetry");
+let _ = new d("2025-05_libdiscore_notestore_v2", "NoteStore", "Kv", { legacyExperiment: !0 }),
+    p = new d("2025-07_libdiscore_guildstore_v2", "GuildStore", "Kv", { legacyExperiment: !0 }),
+    h = new d("2025-09-libdiscore-guildrolestore", "GuildRoleStore", "Kkv");
+new f("2025-09-libdiscore-telemetry");

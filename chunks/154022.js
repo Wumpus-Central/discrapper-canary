@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(377171),
     v = n(313201),
     I = n(243778),
-    T = n(594928),
-    S = n(829716),
+    S = n(594928),
+    T = n(829716),
     A = n(786761),
     C = n(3148),
     N = n(739566),
@@ -112,7 +112,7 @@ let en = (0, v.hQ)(),
 function es(e) {
     let t = g.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
         n = y.Z.useConfig({ location: "UserSettingsAccessibility" }).enableShopTakeOver,
-        i = T.f.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
+        i = S.f.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
         a = (0, D.Z)();
     return (0, r.jsxs)(f.hjN, {
         tag: f.RB0.H1,
@@ -388,7 +388,7 @@ function e_() {
                         className: X.marginBottom8,
                         children: K.intl.string(K.t["86hjzc"]),
                     }),
-                    (0, r.jsx)(f.FXm, {
+                    (0, r.jsx)(d.Gu, {
                         options: [
                             {
                                 name: K.intl.string(K.t.YEOEi4),
@@ -425,7 +425,7 @@ function ep() {
             onChange: n,
             note: K.intl.format(z.default.L8U56u, {
                 onClickOpenModal() {
-                    (0, S.I)({ analyticsLocations: t });
+                    (0, T.I)({ analyticsLocations: t });
                 },
             }),
             children: K.intl.string(z.default["2gFUEx"]),
@@ -579,7 +579,7 @@ function eE() {
                 className: X.marginBottom8,
                 children: null != t ? (0, P.Z)(t) : K.intl.string(K.t.GRa6U1),
             }),
-            (0, r.jsx)(f.FXm, {
+            (0, r.jsx)(d.Gu, {
                 options: [
                     {
                         name: K.intl.string(K.t["Xp+X2d"]),

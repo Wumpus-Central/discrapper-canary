@@ -387,6 +387,10 @@ let i = {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(892264).Z,
     },
+    SystemServiceManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(711926).Z,
+    },
     VoiceFiltersCatalogManager: {
         actions: [
             "POST_CONNECTION_OPEN",
@@ -681,11 +685,6 @@ let i = {
             "STREAM_CLOSE",
         ],
         inlineRequire: () => n(550643).Z,
-        neverLoadBeforeConnectionOpen: !0,
-    },
-    ChatWallpaperPickerManager: {
-        actions: ["CHANNEL_SELECT"],
-        inlineRequire: () => n(153799).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
     ApplicationStreamingManager: {

@@ -80,8 +80,8 @@ function v(e, t) {
     );
 }
 let I = window.DiscordNative,
-    T = new Set(["jpg", "jpeg", "png"]),
-    S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
+    S = new Set(["jpg", "jpeg", "png"]),
+    T = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     A = (e) => e.startsWith("image/"),
     C = 5,
     N = null,
@@ -301,7 +301,7 @@ let q = {
             this.getDiscordUtils().setObserverDebugCallback((t) => e(t), t, n);
         },
         clearObserverDebugCallback() {
-            this.getDiscordUtils().setObserverDebugCallback(null, p.l.NONE, 0);
+            this.getDiscordUtils().setObserverDebugCallback(null, p.ls.NONE, 0);
         },
         shouldDisplayNotifications() {
             return this.getDiscordUtils().shouldDisplayNotifications();
@@ -406,7 +406,7 @@ let q = {
                 l()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
             let n = await V(e),
                 r = K(e, t),
-                i = null != r && T.has(r) ? "image.".concat(r) : e;
+                i = null != r && S.has(r) ? "image.".concat(r) : e;
             I.clipboard.copyImage(E.from(n), i);
         },
         async copyImageBlob(e, t) {
@@ -416,7 +416,7 @@ let q = {
         canSaveImage(e, t) {
             if (null == e || !h.isPlatformEmbedded) return !1;
             let n = K(e, t);
-            return null == n || S.has(n);
+            return null == n || T.has(n);
         },
         async saveImage(e, t, n) {
             var r, i, a;
@@ -484,7 +484,7 @@ let q = {
             if (!h.isPlatformEmbedded) return !1;
             if (null != e) {
                 let n = K(e, t);
-                if (null != n && !T.has(n)) return !1;
+                if (null != n && !S.has(n)) return !1;
             }
             return "function" == typeof I.clipboard.copyImage;
         },

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685), n(415506), n(49124);
 var r = n(836560),
     i = n(392711),
-    o = n.n(i),
-    a = n(710845),
+    a = n.n(i),
+    o = n(710845),
     s = n(510990),
     l = n(983544),
     c = n(596956),
@@ -61,7 +61,7 @@ function m(e, t) {
         e
     );
 }
-let g = new a.Z("UploaderBase.tsx");
+let g = new o.Z("UploaderBase.tsx");
 class E extends r.EventEmitter {
     _fileSize() {
         return this.files.reduce((e, t) => {
@@ -133,8 +133,8 @@ class E extends r.EventEmitter {
     }
     _addAttachmentsToPayload(e, t, n) {
         let r = p({}, e),
-            i = [...o().get(r, t, []), ...n];
-        return o().set(r, t, i);
+            i = [...a().get(r, t, []), ...n];
+        return a().set(r, t, i);
     }
     clearProcessingMessageInterval() {
         null != this.processingMessageChangeInterval &&
@@ -156,7 +156,7 @@ class E extends r.EventEmitter {
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
             (this._file = m(p({}, this._file), { items: this.files })),
-            await (0, s.V)(t),
+            await (0, s.V_)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
             0 === this.files.length && this.cancel();
@@ -197,11 +197,11 @@ class E extends r.EventEmitter {
             _(this, "_handleProgress", (e, t, n) => {
                 let r = Date.now(),
                     i = (0, c.SB)(e, t),
-                    o = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1000));
+                    a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1000));
                 if (null != n) {
-                    var a;
-                    null == (a = this._file.items) ||
-                        a.forEach((e) => {
+                    var o;
+                    null == (o = this._file.items) ||
+                        o.forEach((e) => {
                             e.item.progress = n[e.id];
                         });
                 }
@@ -210,7 +210,7 @@ class E extends r.EventEmitter {
                     (this._file = m(p({}, this._file), {
                         currentSize: t,
                         progress: i,
-                        rate: o,
+                        rate: a,
                     })),
                     this.emit("progress", this._file);
             }),
@@ -240,7 +240,7 @@ class E extends r.EventEmitter {
                     this.emit("complete", this._file, e),
                     this.removeAllListeners();
             }),
-            (this.id = o().uniqueId("Uploader")),
+            (this.id = a().uniqueId("Uploader")),
             (this._file = {
                 id: this.id,
                 name: "",

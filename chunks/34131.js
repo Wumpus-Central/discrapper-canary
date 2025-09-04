@@ -1,31 +1,34 @@
 n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(70097),
+var i = n(907862),
     l = n(434404),
-    a = n(970731),
-    o = n(981631),
+    a = n(981631),
+    o = n(921944),
     s = n(388032),
     c = n(766958);
 function u(e) {
-    let { guildId: t, markAsDismissed: n } = e;
+    let { guildId: t, markAsDismissed: n, targetElementRef: u } = e;
     return (0, r.jsx)("div", {
         className: c.container,
-        children: (0, r.jsx)(a.ZP, {
-            header: s.intl.string(s.t.gCgirq),
-            content: s.intl.string(s.t.fLMZFx),
-            asset: (0, r.jsx)(i.Z, {
-                className: c.video,
-                src: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
-                autoPlay: !0,
-                loop: !0,
-            }),
-            buttonCTA: s.intl.string(s.t.BQq86u),
-            onClick: () => {
-                l.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+        children: (0, r.jsx)(i.Mb, {
+            targetElementRef: u,
+            title: s.intl.string(s.t.gCgirq),
+            body: s.intl.string(s.t.fLMZFx),
+            assetUrl: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
+            action: {
+                text: s.intl.string(s.t.BQq86u),
+                variant: "primary",
+                onClick: () => {
+                    l.Z.open(t, a.pNK.ROLE_SUBSCRIPTIONS, void 0, a.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                },
             },
-            secondaryButtonCTA: s.intl.string(s.t.WAI6xs),
-            markAsDismissed: n,
+            onRequestClose: () => n(o.L.USER_DISMISS),
+            position: "bottom",
+            caretConfig: {
+                position: "top",
+                align: "center",
+            },
         }),
     });
 }

@@ -1,18 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => c });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(824804);
-function o(e) {
+    a = n(755721),
+    s = n(481060),
+    o = n(824804);
+function c(e) {
     var t, n;
-    let { checked: i, onChange: o, disabled: c, className: d, tooltipProps: u } = e,
-        m = (e) => {
+    let { checked: i, onChange: c, disabled: d, className: u, tooltipProps: m } = e,
+        g = (e) => {
             e.stopPropagation(), e.preventDefault();
         };
     return (0, r.jsx)(
-        a.P3F,
+        s.P3F,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -39,19 +40,19 @@ function o(e) {
             return e;
         })(
             {
-                onClick: m,
-                onMouseDown: m,
-                onMouseUp: m,
-                className: l()(s.switch, d),
+                onClick: g,
+                onMouseDown: g,
+                onMouseUp: g,
+                className: l()(o.switch, u),
             },
-            u,
+            m,
         )),
         (n = n =
             {
-                children: (0, r.jsx)(a.rsf, {
+                children: (0, r.jsx)(a.T2, {
                     checked: i,
-                    onChange: o,
-                    disabled: c,
+                    onChange: c,
+                    disabled: d,
                 }),
             }),
         Object.getOwnPropertyDescriptors

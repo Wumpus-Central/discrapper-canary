@@ -1,19 +1,21 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(738018),
-    o = n(607802),
-    s = n(208450),
-    c = n(921667);
-let u = i.memo(function (e) {
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    s = n(738018),
+    c = n(607802),
+    u = n(208450),
+    d = n(921667);
+let p = i.memo(function (e) {
     let { searchContext: t, focusSectionProps: n } = e,
-        i = (0, l.e7)([a.Z], () => {
-            let { mode: e } = a.Z.getState(t);
-            return (0, o.Fz)(e.filter);
+        i = (0, o.e7)([s.Z], () => {
+            let { mode: e } = s.Z.getState(t);
+            return (0, c.Fz)(e.filter);
         });
     return (0, r.jsx)(
-        s.o,
+        u.o,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -41,10 +43,10 @@ let u = i.memo(function (e) {
         })(
             {
                 searchContext: t,
-                className: c.appTitleSearch,
-                searchBarContainerClassName: c.appTitleSearchBarContainer,
-                searchBarClassName: c.appTitleSearchBar,
-                searchPopoutClassName: i ? c.appTitleSearchPopoutDatePicker : c.appTitleSearchPopout,
+                className: d.appTitleSearch,
+                searchBarContainerClassName: d.appTitleSearchBarContainer,
+                searchBarClassName: d.appTitleSearchBar,
+                searchPopoutClassName: a()(d.appTitleSearchPopout, { [d.appTitleSearchPopoutDatePicker]: i }),
                 popoutAlignment: "center",
             },
             n,

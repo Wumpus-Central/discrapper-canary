@@ -15,7 +15,7 @@ var a = n(951288),
     f = n(4912),
     v = n(572004),
     b = n(55935),
-    j = n(185910),
+    j = n(428530),
     g = n(257785),
     _ = n(484036),
     y = n(681619),
@@ -264,22 +264,22 @@ function Z() {
                     .toReversed(),
             [l],
         ),
-        [c, d] = r.useState(o),
-        [x, h] = r.useState(o),
-        [f, v] = r.useState(!1),
-        [b, j] = r.useState(),
-        g = r.useCallback((e) => {
-            h(e);
+        [c, x] = r.useState(o),
+        [h, f] = r.useState(o),
+        [v, b] = r.useState(!1),
+        [j, g] = r.useState(),
+        _ = r.useCallback((e) => {
+            f(e);
         }, []);
-    (0, p.BO)(t, f ? c : o, g, R);
-    let _ = r.useCallback(
+    (0, p.BO)(t, v ? c : o, _, R);
+    let C = r.useCallback(
             (e) => {
-                d(o), v(e);
+                x(o), b(e);
             },
             [o],
         ),
-        C = t.trim().length > 0,
-        N = r.useMemo(() => (C ? x : f ? c : o), [o, x, C, f, c]);
+        N = t.trim().length > 0,
+        T = r.useMemo(() => (N ? h : v ? c : o), [o, h, N, v, c]);
     return (0, a.jsxs)("div", {
         ref: e,
         className: i()(O.panel, E.panel),
@@ -290,9 +290,9 @@ function Z() {
                     (0, a.jsx)("div", {
                         title: "Toggles the flow of Actions",
                         className: E.pausedEvents,
-                        children: (0, a.jsx)(u.rsf, {
-                            checked: !f,
-                            onChange: (e) => _(!e),
+                        children: (0, a.jsx)(d.T2, {
+                            checked: !v,
+                            onChange: (e) => C(!e),
                         }),
                     }),
                     (0, a.jsx)(u.E1j, {
@@ -307,13 +307,13 @@ function Z() {
             }),
             (0, a.jsx)(y.Z, {
                 columns: I,
-                data: N,
-                selectedRowKey: null == b ? void 0 : b.id.toString(),
-                onClickRow: (e) => j(e.actionLog),
+                data: T,
+                selectedRowKey: null == j ? void 0 : j.id.toString(),
+                onClickRow: (e) => g(e.actionLog),
             }),
-            null != b &&
+            null != j &&
                 (0, a.jsx)(k, {
-                    actionLog: b,
+                    actionLog: j,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),
         ],

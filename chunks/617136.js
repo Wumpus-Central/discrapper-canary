@@ -1,7 +1,7 @@
 n.d(t, {
     Ic: () => L,
-    O5: () => k,
-    Zk: () => M,
+    O5: () => M,
+    Zk: () => k,
     _3: () => x,
     _F: () => j,
     _b: () => C,
@@ -70,7 +70,7 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,11 +81,11 @@ function T(e, t) {
         e
     );
 }
-let S = Object.keys(m.jn),
+let T = Object.keys(m.jn),
     A = new Set([y.rMx.QUEST_CONTENT_VIEWED, y.rMx.QUEST_CONTENT_CLICKED]);
 function C(e) {
     var t;
-    return null != (t = S.find((t) => m.jn[t] === e)) ? t : "";
+    return null != (t = T.find((t) => m.jn[t] === e)) ? t : "";
 }
 function N(e) {
     var t, n, r;
@@ -202,11 +202,11 @@ async function x(e) {
             sourceQuestContent: d,
         } = e,
         _ = h.Z.getQuest(t),
-        m = await (0, a.S)();
+        m = await (0, a.S)(C(n));
     w({
         questId: t,
         event: y.rMx.QUEST_CONTENT_CLICKED,
-        properties: T(v({}, P(n, o, s), (0, l.Z)()), {
+        properties: S(v({}, P(n, o, s), (0, l.Z)()), {
             cta_name: r,
             quest_status: null != _ ? N(_) : null,
             impression_id: c,
@@ -238,12 +238,12 @@ function j() {
     let e = (0, _.WD)();
     return r.useCallback(
         (t) => {
-            w(T(v({}, t), { properties: T(v({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
+            w(S(v({}, t), { properties: S(v({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
         },
         [e],
     );
 }
-function k() {
+function M() {
     let e = j();
     return r.useCallback(
         (t) => {
@@ -257,11 +257,11 @@ function k() {
                     sourceQuestContent: d,
                 } = t,
                 _ = h.Z.getQuest(n);
-            (0, a.S)().then((t) => {
+            (0, a.S)(C(r)).then((t) => {
                 e({
                     questId: n,
                     event: y.rMx.QUEST_CONTENT_CLICKED,
-                    properties: T(v({}, P(r, s, c), (0, l.Z)()), {
+                    properties: S(v({}, P(r, s, c), (0, l.Z)()), {
                         cta_name: o,
                         quest_status: null != _ ? N(_) : null,
                         click_id: (0, i.Z)(),
@@ -277,7 +277,7 @@ function k() {
         [e],
     );
 }
-function M(e, t) {
+function k(e, t) {
     r.useEffect(() => {
         U(t, e);
     }, [e, t]);

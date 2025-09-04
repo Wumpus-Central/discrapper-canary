@@ -92,8 +92,12 @@ let b = {
         return (t) => (0, a.jsx)(e, v(f({}, t), { entryPoint: s.cU.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
     },
     ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([n.e("71172"), n.e("1337"), n.e("26328")]).then(n.bind(n, 746882));
+        let { default: e } = await Promise.all([n.e("1716"), n.e("53837")]).then(n.bind(n, 746882));
         return (t) => (0, a.jsx)(e, v(f({}, t), { source: m.L0.NSFW_SERVER }));
+    },
+    NewUserAgeGate: async () => {
+        let { default: e } = await n.e("76323").then(n.bind(n, 298237));
+        return (t) => (0, a.jsx)(e, f({}, t));
     },
     AutomatedUnderageAppealModal: async () => {
         let { default: e } = await n.e("75435").then(n.bind(n, 751744));

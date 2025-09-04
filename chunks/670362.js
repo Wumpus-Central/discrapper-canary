@@ -30,6 +30,7 @@ let c = function (e) {
                 "aria-labelledby": s,
                 children: n(e, s),
             }),
+        scrollBehavior: "close",
         targetElementRef: c,
         children: (e) => t(e, c),
     });

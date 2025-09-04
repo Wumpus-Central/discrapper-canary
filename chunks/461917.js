@@ -1,7 +1,9 @@
 e.exports = {
     container: "container__68a18",
+    mobileContainer: "mobileContainer__68a18",
     containerInner: "containerInner__68a18",
     editorBody: "editorBody__68a18",
+    mobileEditorBody: "mobileEditorBody__68a18",
     headerContainer: "headerContainer__68a18",
     closeButton: "closeButton__68a18",
     sliderContainer: "sliderContainer__68a18",

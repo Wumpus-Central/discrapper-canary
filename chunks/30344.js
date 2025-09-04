@@ -1,11 +1,11 @@
-r.d(t, { Z: () => l });
+r.d(t, { Z: () => a });
 var n = r(951288);
 r(647438);
 var i = r(890814),
-    a = r(753436);
-function l(e) {
-    var { games: t, isGameFetching: r } = e,
-        l = (function (e, t) {
+    l = r(753436);
+function a(e) {
+    var { games: t } = e,
+        r = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -14,23 +14,23 @@ function l(e) {
                     var r,
                         n,
                         i = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["games", "isGameFetching"]);
+        })(e, ["games"]);
     return (0, n.jsx)(i.Z, {
         games: t,
         renderGame: (e) =>
             (0, n.jsx)(
-                a.S,
+                l.S,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -55,13 +55,7 @@ function l(e) {
                             });
                     }
                     return e;
-                })(
-                    {
-                        game: e,
-                        loading: r(e.applicationId),
-                    },
-                    l,
-                ),
+                })({ game: e }, r),
             ),
     });
 }

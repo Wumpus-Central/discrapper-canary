@@ -74,8 +74,8 @@ function S(t) {
             };
         }),
         [A, K] = l.useState(!1),
-        [F, U] = l.useState(!1),
-        Y = (0, p.sE)(e, {
+        [U, Y] = l.useState(!1),
+        F = (0, p.sE)(e, {
             location: i,
             targetUserId: null == n ? void 0 : n.id,
             targets: b,
@@ -89,11 +89,11 @@ function S(t) {
             } else {
                 if (null == n) return;
                 d.Z.banUser(e, null == n ? void 0 : n.id, k, t, T).then(() => {
-                    F && null != T && g.Z.resolveFlag(T);
+                    U && null != T && g.Z.resolveFlag(T);
                 });
             }
-            Y(p.jQ.BAN), P();
-        }, [w, M, S, Y, P, b, R, A, e, k, n, T, F]),
+            F(p.jQ.BAN), P();
+        }, [w, M, S, F, P, b, R, A, e, k, n, T, U]),
         B = l.useCallback((t) => {
             E(t);
         }, []),
@@ -101,13 +101,13 @@ function S(t) {
             let { value: e } = t;
             Z(e), K(!1), N(null);
         }, []),
-        X = l.useCallback(
+        q = l.useCallback(
             (t) => {
                 N(t), A && K(!1);
             },
             [A],
         ),
-        q = I && !D && null != T,
+        G = I && !D && null != T,
         L = [
             {
                 name: j.intl.string(j.t.tamLhY),
@@ -126,7 +126,7 @@ function S(t) {
                 value: "other",
             },
         ],
-        G = (() => {
+        X = (() => {
             if (null != S && null != b)
                 return j.intl.formatToPlainString(j.t.HVJexc, { count: null == b ? void 0 : b.size });
             if (null == n) return "";
@@ -137,7 +137,7 @@ function S(t) {
     return (0, r.jsx)(s.Modal, {
         onClose: P,
         transitionState: _,
-        title: G,
+        title: X,
         subtitle: null != H ? H : void 0,
         actions: (() => {
             let t = [];
@@ -156,10 +156,10 @@ function S(t) {
                 t
             );
         })(),
-        actionBarInput: q
+        actionBarInput: G
             ? (0, r.jsx)(u.$q, {
-                  value: F,
-                  onChange: (t, e) => U(e),
+                  value: U,
+                  onChange: (t, e) => Y(e),
                   children: (0, r.jsx)(c.Text, {
                       variant: "text-md/normal",
                       color: "text-default",
@@ -188,7 +188,7 @@ function S(t) {
                                         className: O.error,
                                         children: j.intl.string(j.t.IrYX19),
                                     }),
-                                (0, r.jsx)(c.FXm, {
+                                (0, r.jsx)(u.Gu, {
                                     className: O.radioGroup,
                                     value: M,
                                     options: L.map((t) => {
@@ -248,7 +248,7 @@ function S(t) {
                             className: a()(O.reasonFreeText, { [O.hidden]: "other" !== M }),
                             children: (0, r.jsx)(c.Kx8, {
                                 maxLength: m.GNZ,
-                                onChange: X,
+                                onChange: q,
                                 value: null != w ? w : "",
                                 rows: 5,
                                 autoFocus: !0,

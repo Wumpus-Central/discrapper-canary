@@ -2,7 +2,7 @@ n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    l = n(481060),
+    l = n(755721),
     s = n(984933),
     o = n(430824),
     a = n(496675),
@@ -43,7 +43,7 @@ function x(e) {
     return (0, r.jsx)(m.Z, {
         title: h.intl.string(h.t["eg7R/v"]),
         scrollerInnerClassName: p.channelSelectScrollerInner,
-        children: (0, r.jsx)(l.FXm, {
+        children: (0, r.jsx)(l.Gu, {
             options: j,
             value: t,
             itemInfoClassName: p.channelInfoWrapper,

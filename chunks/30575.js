@@ -70,7 +70,7 @@ function f(e) {
                               modelName: f.model.name,
                           })
                         : N.intl.format(N.t.Z7XQcn, { name: n.displayName }),
-                    (0, i.jsx)(l.FXm, {
+                    (0, i.jsx)(o.Gu, {
                         value: x,
                         className: p.options,
                         onChange: (e) => {

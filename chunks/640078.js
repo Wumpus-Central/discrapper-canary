@@ -1,15 +1,15 @@
-r.d(t, { Z: () => s });
-var n = r(951288),
-    i = r(323946),
-    l = r(442837),
-    a = r(594174),
-    o = r(778414),
-    c = r(836717);
-let s = function (e) {
+n.d(t, { Z: () => c });
+var r = n(951288),
+    i = n(323946),
+    l = n(442837),
+    a = n(594174),
+    o = n(778414),
+    s = n(836717);
+let c = function (e) {
     var t;
-    let { scrollerRef: r } = e,
+    let { scrollerRef: n } = e,
         {
-            isDragging: s,
+            isDragging: c,
             item: u,
             sourceClientOffset: d,
         } = (0, i.f)((e) => ({
@@ -17,19 +17,18 @@ let s = function (e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        f = (0, l.e7)([a.default], () => a.default.getCurrentUser());
-    if (!0 !== s || null == d || null == u.widget) return null;
-    let g = null == r || null == (t = r.current) ? void 0 : t.getBoundingClientRect();
-    if (null == g || null == f) return null;
-    let p = d.x - g.left,
-        b = d.y - g.top;
-    return (0, n.jsx)("div", {
-        className: c.container,
-        style: { transform: "translate(".concat(p, "px, ").concat(b, "px)") },
-        children: (0, n.jsx)(o.Z, {
+        p = (0, l.e7)([a.default], () => a.default.getCurrentUser());
+    if (!0 !== c || null == d || null == u.widget) return null;
+    let f = null == n || null == (t = n.current) ? void 0 : t.getBoundingClientRect();
+    if (null == f || null == p) return null;
+    let h = d.x - f.left,
+        g = d.y - f.top;
+    return (0, r.jsx)("div", {
+        className: s.container,
+        style: { transform: "translate(".concat(h, "px, ").concat(g, "px)") },
+        children: (0, r.jsx)(o.Z, {
             widget: u.widget,
-            user: f,
-            isGameFetching: () => !1,
+            user: p,
             disableInteraction: !0,
         }),
     });

@@ -9,7 +9,10 @@ function s(e) {
             hasRequestedStartTimes: o.Z.hasRequestedStartTimes(e.guild_id),
             startTime: o.Z.getStartTime(e),
         })),
-        { enabled: s } = l.W.useExperiment({ location: "useStartTime" });
+        { enabled: s } = l.W.useExperiment({
+            guildId: e.guild_id,
+            location: "useStartTime",
+        });
     if (!s) return;
     let c = e.type === a.d4z.GUILD_VOICE;
     return !t && c && (0, i.i)(e.guild_id), n;

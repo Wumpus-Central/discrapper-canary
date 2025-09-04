@@ -1,11 +1,12 @@
-n.d(t, { Z: () => p }), n(388685), n(49124);
+n.d(t, { Z: () => g }), n(388685), n(49124), n(467055);
 var r = n(668757),
     i = n(902704),
     a = n(147913),
     o = n(818083),
     s = n(353926),
-    l = n(894276);
-function c(e, t, n) {
+    l = n(427164),
+    c = n(894276);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,40 +19,54 @@ function c(e, t, n) {
         e
     );
 }
-let u = null;
-function d() {
+let d = null;
+function f() {
     if (!(0, r.X6)()) return;
     let e = {};
-    for (let t of l.Re) e[t.id] = t.getCurrentConfig();
-    (null != u && (0, i.Z)(u, e)) || ((0, r.Md)().flushToCache(JSON.stringify(e)), (u = e));
+    for (let t of c.Re) e[t.id] = t.getCurrentConfig();
+    (null != d && (0, i.Z)(d, e)) || ((0, r.Md)().flushToCache(JSON.stringify(e)), (d = e));
 }
-function f() {
-    l.Re.forEach((e) =>
-        e.setExperiment(
-            (0, o.B)({
-                kind: "user",
-                id: e.id,
-                label: e.getLabel(),
-                defaultConfig: { treatmentId: -1 },
-                treatments: e.getTreatments().map((e) => {
-                    let { treatmentId: t, label: n } = e;
-                    return {
-                        id: t,
-                        label: n,
-                        config: { treatmentId: t },
-                    };
-                }),
+function _(e) {
+    return (0, o.B)({
+        kind: "user",
+        id: e.id,
+        label: e.getLabel(),
+        defaultConfig: { treatmentId: -1 },
+        treatments: e.getTreatments().map((e) => {
+            let { treatmentId: t, label: n } = e;
+            return {
+                id: t,
+                label: n,
+                config: { treatmentId: t },
+            };
+        }),
+    });
+}
+function p(e) {
+    return (0, l.le)({
+        kind: "user",
+        name: e.id,
+        defaultConfig: { treatmentId: -1 },
+        variations: Object.fromEntries(
+            e.getTreatments().map((e) => {
+                let { treatmentId: t } = e;
+                return [t, { treatmentId: t }];
             }),
         ),
-    );
+    });
 }
-class _ extends a.Z {
+function h() {
+    c.Re.forEach((e) => {
+        e.setExperiment(e.legacyExperiment ? _(e) : p(e));
+    });
+}
+class m extends a.Z {
     _initialize() {
-        f();
+        h();
     }
     _terminate() {}
     constructor(...e) {
-        super(...e), c(this, "actions", {}), c(this, "stores", new Map().set(s.Z, d));
+        super(...e), u(this, "actions", {}), u(this, "stores", new Map().set(s.Z, f));
     }
 }
-let p = new _();
+let g = new m();

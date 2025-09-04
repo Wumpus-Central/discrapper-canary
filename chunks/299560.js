@@ -1,82 +1,88 @@
-r.d(t, { Z: () => j });
-var n = r(951288),
-    a = r(647438),
-    i = r(120356),
-    l = r.n(i),
-    o = r(296009),
-    c = r(481060),
-    s = r(804919),
-    u = r(86419),
-    d = r(872269),
-    f = r(248554),
-    g = r(228168),
-    b = r(247397),
-    p = r(388032),
-    m = r(229870);
-let O = {
+n.d(t, { Z: () => b });
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    a = n.n(l),
+    o = n(296009),
+    s = n(481060),
+    c = n(804919),
+    u = n(86419),
+    d = n(872269),
+    p = n(248554),
+    f = n(228168),
+    h = n(388032),
+    g = n(229870);
+let m = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {
             variant: "details",
-            applicationId: s.L.LEAGUE_OF_LEGENDS,
+            applicationId: c.L.LEAGUE_OF_LEGENDS,
         },
-        getAriaLabel: () => p.intl.string(p.t.xJtdIi),
+        getAriaLabel: () => h.intl.string(h.t.xJtdIi),
     },
     [o.l.CURRENT_GAMES]: {
         placeholder: {
             variant: "details",
-            applicationId: s.L.VALORANT,
+            applicationId: c.L.VALORANT,
         },
-        getAriaLabel: () => p.intl.string(p.t.Ae8tRk),
+        getAriaLabel: () => h.intl.string(h.t.Ae8tRk),
     },
     [o.l.PLAYED_GAMES]: {
         placeholder: {
             variant: "grid",
-            applicationIds: [s.L.PEAK, s.L.APEX_LEGENDS, s.L.REPO, s.L.BALDURS_GATE_3],
+            applicationIds: [c.L.PEAK, c.L.APEX_LEGENDS, c.L.REPO, c.L.BALDURS_GATE_3],
         },
-        getAriaLabel: () => p.intl.string(p.t["pBR+4u"]),
+        getAriaLabel: () => h.intl.string(h.t["pBR+4u"]),
     },
     [o.l.WANT_TO_PLAY_GAMES]: {
         placeholder: {
             variant: "grid",
-            applicationIds: [s.L.MARVEL_RIVALS, s.L.WORLD_OF_WARCRAFT, s.L.RUST, s.L.DELTA_FORCE],
+            applicationIds: [c.L.MARVEL_RIVALS, c.L.WORLD_OF_WARCRAFT, c.L.RUST, c.L.DELTA_FORCE],
         },
-        getAriaLabel: () => p.intl.string(p.t.NtoBi4),
+        getAriaLabel: () => h.intl.string(h.t.NtoBi4),
     },
 };
-function j(e) {
-    let { widgetType: t, onAddWidget: r, size: i = "default", loading: o = !1, trackUserProfileAction: s } = e,
-        { placeholder: j, getAriaLabel: y } = O[t],
-        v = "small" === i,
-        x = a.useCallback(() => {
-            o || ((0, u.qH)(t), s({ action: "EDIT_ACTION" }), (0, d.L$)(g.qb.WIDGET_ADDED), null == r || r());
-        }, [t, r, o, s]);
-    return (0, n.jsxs)(c.P3F, {
-        className: l()(m.addButtonContainer, v && m.sizeSmall, o && m.loading),
-        onClick: x,
-        "aria-label": y(),
+function b(e) {
+    let { widgetType: t, onAddWidget: n, size: l = "default", loading: o = !1, trackUserProfileEditAction: c } = e,
+        { placeholder: h, getAriaLabel: b } = m[t],
+        _ = "small" === l,
+        O = i.useCallback(() => {
+            o ||
+                ((0, u.qH)(t),
+                c({
+                    action: "WIDGET_ADDED",
+                    widgetEdited: t,
+                }),
+                (0, d.L$)(f.qb.WIDGET_ADDED),
+                null == n || n());
+        }, [t, n, o, c]);
+    return (0, r.jsxs)(s.P3F, {
+        className: a()(g.addButtonContainer, _ && g.sizeSmall, o && g.loading),
+        onClick: O,
+        "aria-label": b(),
         "aria-busy": o,
         children: [
-            "details" === j.variant
-                ? (0, n.jsx)(f.i, {
-                      applicationId: j.applicationId,
-                      size: i,
+            "details" === h.variant
+                ? (0, r.jsx)(p.i, {
+                      applicationId: h.applicationId,
+                      size: l,
                   })
-                : (0, n.jsx)(f.c, {
-                      applicationIds: j.applicationIds,
-                      size: i,
+                : (0, r.jsx)(p.c, {
+                      applicationIds: h.applicationIds,
+                      size: l,
                   }),
-            (0, n.jsxs)("div", {
-                className: m.overlay,
+            (0, r.jsxs)("div", {
+                className: g.overlay,
                 children: [
-                    (0, n.jsx)(c.oFk, {
+                    (0, r.jsx)(s.oFk, {
                         size: "md",
                         color: "currentColor",
-                        className: m.addButton,
+                        className: g.addButton,
                     }),
-                    (0, n.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: p.intl.string(b.NP[t]),
+                        children: (0, u.Nc)(t),
                     }),
                 ],
             }),

@@ -39,7 +39,7 @@ n.d(t, {
     EOG: () => n2,
     ETv: () => E.ET,
     EYA: () => tA,
-    EkH: () => T,
+    EkH: () => S,
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
@@ -54,7 +54,7 @@ n.d(t, {
     GU0: () => eg,
     GZQ: () => E.GZ,
     H0J: () => E.H0,
-    HGf: () => n6,
+    HGf: () => n5,
     HN8: () => eH,
     HeQ: () => E.He,
     Hqc: () => nA,
@@ -136,13 +136,13 @@ n.d(t, {
     Rg9: () => nM,
     S7T: () => E.S7,
     S9g: () => nR,
-    SOq: () => n5,
-    SRg: () => nS,
+    SOq: () => n6,
+    SRg: () => nT,
     STv: () => ey,
     SaU: () => tV,
     Sap: () => na,
     Sbl: () => tM,
-    Sc2: () => eS,
+    Sc2: () => eT,
     Skl: () => E.Sk,
     T23: () => rJ,
     TC2: () => E.TC,
@@ -176,7 +176,7 @@ n.d(t, {
     XAJ: () => eA,
     XKF: () => n4,
     XmY: () => e3,
-    Xyh: () => e5,
+    Xyh: () => e6,
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
@@ -191,7 +191,7 @@ n.d(t, {
     _s_: () => C,
     _vf: () => eo,
     a5g: () => tX,
-    aIL: () => eT,
+    aIL: () => eS,
     aIt: () => rd,
     aO5: () => E.aO,
     aZC: () => t0,
@@ -227,7 +227,7 @@ n.d(t, {
     fMv: () => b.fM,
     fo$: () => tc,
     frH: () => E.fr,
-    fzT: () => t5,
+    fzT: () => t6,
     gLR: () => rQ,
     gg$: () => E.gg,
     gkr: () => rm,
@@ -254,7 +254,7 @@ n.d(t, {
     kGb: () => r_,
     kNB: () => ru,
     kVF: () => U,
-    kg4: () => S,
+    kg4: () => T,
     kod: () => eI,
     l$U: () => ez,
     l4R: () => u.l,
@@ -273,7 +273,7 @@ n.d(t, {
     oNc: () => Z,
     o_z: () => eO,
     p3w: () => tE,
-    p6O: () => t6,
+    p6O: () => t5,
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
@@ -296,10 +296,10 @@ n.d(t, {
     rsA: () => nP,
     rtL: () => ni,
     rxP: () => E.rx,
-    s9s: () => rS,
+    s9s: () => rT,
     sFg: () => eu,
     sHY: () => rs,
-    scU: () => tT,
+    scU: () => tS,
     si2: () => rj,
     t4x: () => tK,
     tG9: () => eV,
@@ -314,7 +314,7 @@ n.d(t, {
     uaV: () => c.u,
     udG: () => nI,
     vB8: () => nw,
-    vID: () => nT,
+    vID: () => nS,
     vTt: () => ns,
     vbS: () => t8,
     vpv: () => tR,
@@ -341,11 +341,11 @@ n.d(t, {
     yb: () => z,
     ylB: () => rF,
     yqN: () => nE,
-    ys_: () => e6,
-    z7k: () => tS,
+    ys_: () => e5,
+    z7k: () => tT,
     zMe: () => E.zM,
     zUn: () => nj,
-    zYc: () => rT,
+    zYc: () => rS,
     zo9: () => r0,
 }),
     n(388685),
@@ -417,7 +417,7 @@ var v = (function (e) {
     I = (function (e) {
         return (e.OPEN = "OPEN"), (e.SUBMITTING = "SUBMITTING"), (e.CLOSED = "CLOSED"), e;
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (
             (e.SERVER_NEXT = "SERVER_NEXT"),
             (e.SERVER_PREV = "SERVER_PREV"),
@@ -484,7 +484,7 @@ var v = (function (e) {
             e
         );
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (
             (e.UNASSIGNED = "UNASSIGNED"),
             (e.PUSH_TO_TALK = "PUSH_TO_TALK"),
@@ -659,6 +659,7 @@ var v = (function (e) {
             (e.PENDING_IGNORED = "PENDING_IGNORED"),
             (e.SPAM = "SPAM"),
             (e.SUGGESTIONS = "SUGGESTIONS"),
+            (e.YOU = "YOU"),
             e
         );
     })({}),
@@ -1101,8 +1102,8 @@ let eE = "@me",
     eO = "@guilds-empty-nux",
     ev = "",
     eI = "null",
-    eT = "0",
-    eS = "null",
+    eS = "0",
+    eT = "null",
     eA = "1096190356233670716",
     eC = Object.freeze({
         USER: (e) => "/users/".concat(e),
@@ -1527,6 +1528,8 @@ let eE = "@me",
         BILLING_INVOICE_MANUAL_PAYMENT: (e, t) =>
             "/users/@me/billing/subscriptions/".concat(e, "/invoices/").concat(t, "/pay"),
         BILLING_SUBSCRIPTION_REWARDS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/rewards"),
+        BILLING_SUBSCRIPTION_PROMOTION_REWARD: (e) =>
+            "/users/@me/billing/subscriptions/".concat(e, "/promotion-reward"),
         Billing_SUBSCRIPTION_REWARD_ELIGIBILITY: (e) =>
             "/users/@me/billing/subscriptions/".concat(e, "/reward-eligibility"),
         BILLING_COUNTRY_CODE: "/users/@me/billing/country-code",
@@ -1613,6 +1616,7 @@ let eE = "@me",
         GUILD_DISCOVERY_UPDATE_CATEGORY: (e, t) => "/guilds/".concat(e, "/discovery-categories/").concat(t),
         STREAM_PREVIEW: (e) => "/streams/".concat(e, "/preview"),
         STREAM_NOTIFY: (e) => "/streams/".concat(e, "/notify"),
+        STREAM_NOTIFY_V2: (e) => "/streams/".concat(e, "/notify-v2"),
         STREAM: (e) => "/streams/".concat(e, "/stream"),
         GUILD_PREVIEW: (e) => "/guilds/".concat(e, "/preview"),
         USER_AFFINITIES: "/users/@me/affinities/users",
@@ -2166,8 +2170,8 @@ let ex = 100,
     e3 = (e) => "||".concat(e, "||"),
     e4 = /^\|\|([\s\S]+?)\|\|/,
     e8 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
-    e5 = /^\d{17,19}$/;
-var e6 = (function (e) {
+    e6 = /^\d{17,19}$/;
+var e5 = (function (e) {
         return (
             (e.MESSAGE = "MESSAGE"),
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
@@ -2226,8 +2230,8 @@ let tn = 128,
     tO = 480,
     tv = 650,
     tI = "DEVICE_TOKEN",
-    tT = "DEVICE_VOIP_TOKEN",
-    tS = "first_run_date_key",
+    tS = "DEVICE_VOIP_TOKEN",
+    tT = "first_run_date_key",
     tA = Object.freeze({
         API_DOCS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/developers/docs/intro"),
         API_DOCS_GAME_AND_SERVER_MANAGEMENT: "".concat(
@@ -3661,13 +3665,13 @@ Object.freeze({
 });
 let t4 = new Set(["facebook", "contacts"]),
     t8 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
-    t5 = Object.freeze({
+    t6 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    t6 = 10070709,
-    t7 = (0, d.Rf)(t6),
+    t5 = 10070709,
+    t7 = (0, d.Rf)(t5),
     t9 = [
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
@@ -3887,6 +3891,7 @@ var nb = (function (e) {
             (e.ATT_APP_STATE_CHECKED = "att_app_state_checked"),
             (e.ATT_APP_STATE_CHECKED_OVERRIDE = "att_app_state_checked_override"),
             (e.ATT_PROMPT_ERROR = "att_prompt_error"),
+            (e.AD_IDENTIFIER_FETCHED = "ad_identifier_fetched"),
             (e.AD_USER_FETCH_DURATION = "ad_user_fetch_duration"),
             (e.HEADLESS_TASK_INVOKED = "headless_task_invoked"),
             (e.HEADLESS_TASK_COMPLETED = "headless_task_completed"),
@@ -4368,8 +4373,6 @@ var nb = (function (e) {
             (e.USER_STATUS_UPDATED = "user_status_updated"),
             (e.CUSTOM_STATUS_UPDATED = "custom_status_updated"),
             (e.CUSTOM_STATUS_RANDOMIZER_CLICKED = "custom_status_randomizer_clicked"),
-            (e.CUSTOM_STATUS_LABEL_CLICKED = "custom_status_label_clicked"),
-            (e.CUSTOM_STATUS_TOOLBAR_CLICKED = "custom_status_toolbar_clicked"),
             (e.ACTIVITY_STATUS_ICON_TOOLTIP_SHOWN = "activity_status_icon_tooltip_shown"),
             (e.TEXT_COPIED = "text_copied"),
             (e.TEXT_SHARED = "text_shared"),
@@ -4878,6 +4881,7 @@ var nb = (function (e) {
             (e.USER_PROFILE_RECENT_GAMES_VIEWED = "user_profile_recent_games_viewed"),
             (e.USER_PROFILE_RECENT_GAMES_SETTING_DISABLED = "user_profile_recent_games_setting_disabled"),
             (e.USER_PROFILE_BADGE_HOVERED = "user_profile_badge_hovered"),
+            (e.USER_PROFILE_EDIT_ACTION = "user_profile_edit_action"),
             (e.DM_PROFILE_TOGGLED = "dm_profile_toggled"),
             (e.PREMIUM_WOW_MOMENT_VIEWED = "premium_wow_moment_viewed"),
             (e.PREMIUM_WOW_MOMENT_MEDIA_PREFETCH_TRIGGER = "premium_wow_moment_media_prefetch_trigger"),
@@ -5279,7 +5283,7 @@ var nb = (function (e) {
             e
         );
     })({}),
-    nT = (function (e) {
+    nS = (function (e) {
         return (
             (e.MFA_WARNING = "MFA_WARNING"),
             (e.INVITE = "INVITE"),
@@ -5307,7 +5311,7 @@ var nb = (function (e) {
             e
         );
     })({});
-let nS = Object.freeze({
+let nT = Object.freeze({
         STORAGE_MANIFEST: (e, t) => "".concat(e, "/storage/").concat(t, "/MANIFEST"),
         INSTALL_DIR: (e) => "".concat(e, "/content"),
         ROOT_PATTERN: ["**/*"],
@@ -5970,7 +5974,7 @@ let n2 = Object.freeze({
 var n8 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
-    n5 = (function (e) {
+    n6 = (function (e) {
         return (
             (e[(e.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
             (e[(e.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
@@ -5978,7 +5982,7 @@ var n8 = (function (e) {
             e
         );
     })({});
-let n6 = 14,
+let n5 = 14,
     n7 = 6,
     n9 = 30;
 var re = (function (e) {
@@ -6501,7 +6505,7 @@ var rI = (function (e) {
             e
         );
     })({}),
-    rT = (function (e) {
+    rS = (function (e) {
         return (
             (e.EMPTY_MESSAGE = "EMPTY_MESSAGE"),
             (e.MESSAGE_TOO_LONG = "MESSAGE_TOO_LONG"),
@@ -6511,7 +6515,7 @@ var rI = (function (e) {
             e
         );
     })({}),
-    rS = (function (e) {
+    rT = (function (e) {
         return (e[(e.IMG = 1)] = "IMG"), (e[(e.YOUTUBE_VIDEO = 2)] = "YOUTUBE_VIDEO"), (e[(e.VIDEO = 3)] = "VIDEO"), e;
     })({}),
     rA = (function (e) {

@@ -1,19 +1,20 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
     s = n(866442),
-    o = n(481060),
-    c = n(499513),
-    d = n(229190),
-    u = n(510918),
-    m = n(434404),
-    g = n(131085),
-    p = n(899926),
+    o = n(755721),
+    c = n(481060),
+    d = n(499513),
+    u = n(229190),
+    m = n(510918),
+    g = n(434404),
+    p = n(131085),
+    f = n(899926),
     h = n(388032),
-    f = n(616397);
-function b(e) {
+    b = n(616397);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +39,7 @@ function b(e) {
     }
     return e;
 }
-function x(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,18 +57,18 @@ function x(e, t) {
         e
     );
 }
-function j(e) {
+function _(e) {
     let { palette: t, badge: n, isSelected: i, onClick: l } = e,
-        s = (0, o.xUy)({
+        s = (0, o.jm)({
             isSelected: i,
-            label: (0, c.Z)(t.primary, t.secondary),
+            label: (0, d.Z)(t.primary, t.secondary),
         });
     return (0, r.jsx)(
-        o.P3F,
-        x(b({}, s), {
-            className: a()(f.pickerItem, { [f.pickerItemSelected]: i }),
+        c.P3F,
+        j(x({}, s), {
+            className: a()(b.pickerItem, { [b.pickerItemSelected]: i }),
             onClick: l,
-            children: (0, r.jsx)(u.v, {
+            children: (0, r.jsx)(m.v, {
                 badge: n,
                 width: 32,
                 height: 32,
@@ -83,43 +84,43 @@ function v(e) {
             primary: n,
             secondary: i,
             isSelected: l,
-            showColorPopout: c,
-            setShowColorPopout: u,
-            palettePopoutTargetRef: m,
-            handleChange: p,
+            showColorPopout: d,
+            setShowColorPopout: m,
+            palettePopoutTargetRef: g,
+            handleChange: f,
         } = e,
-        j = (0, o.xUy)({
+        _ = (0, o.jm)({
             isSelected: l,
             label: h.intl.formatToPlainString(h.t.hr4D2d, {
                 primaryColor: n,
                 secondaryColor: i,
             }),
         });
-    return (0, r.jsx)(d.Z, {
-        popoutTargetRef: m,
-        showSecondaryColor: g.ER[t] >= 2,
+    return (0, r.jsx)(u.Z, {
+        popoutTargetRef: g,
+        showSecondaryColor: p.ER[t] >= 2,
         palette: {
             primary: n,
             secondary: i,
         },
         onPrimaryColorChange: (e) => {
-            p({ primary: (0, s.Rf)(e) });
+            f({ primary: (0, s.Rf)(e) });
         },
         onSecondaryColorChange: (e) => {
-            p({ secondary: (0, s.Rf)(e) });
+            f({ secondary: (0, s.Rf)(e) });
         },
-        shouldShow: c,
-        onRequestClose: () => u(!1),
+        shouldShow: d,
+        onRequestClose: () => m(!1),
         children: (e) =>
             (0, r.jsx)(
-                o.P3F,
-                x(b({}, e, j), {
-                    innerRef: m,
+                c.P3F,
+                j(x({}, e, _), {
+                    innerRef: g,
                     onClick: () => {
-                        u((e) => !e);
+                        m((e) => !e);
                     },
-                    className: a()(f.pickerItem, { [f.pickerItemSelected]: l }),
-                    children: (0, r.jsx)(o.ilE, {
+                    className: a()(b.pickerItem, { [b.pickerItemSelected]: l }),
+                    children: (0, r.jsx)(c.ilE, {
                         size: "custom",
                         width: 20,
                         height: 20,
@@ -128,50 +129,50 @@ function v(e) {
             ),
     });
 }
-let _ = function (e) {
+let O = function (e) {
     let { className: t, guildId: n, badge: l, primaryColor: a, secondaryColor: s } = e,
-        [c, d] = i.useState(!1),
-        u = i.useRef(null),
-        _ = i.useId(),
+        [d, u] = i.useState(!1),
+        m = i.useRef(null),
         O = i.useId(),
-        y = i.useMemo(() => g.Ek.every((e) => e.primary !== a || e.secondary !== s), [a, s]),
-        C = (0, o.arW)({
+        y = i.useId(),
+        C = i.useMemo(() => p.Ek.every((e) => e.primary !== a || e.secondary !== s), [a, s]),
+        N = (0, o.Jb)({
             orientation: "horizontal",
             isDisabled: !1,
-            labelledBy: _,
+            labelledBy: O,
         });
-    function N(e) {
+    function E(e) {
         let t = {};
         void 0 !== e.primary && (t.badgeColorPrimary = e.primary),
             void 0 !== e.secondary && (t.badgeColorSecondary = e.secondary),
-            m.Z.updateGuildProfile(n, t);
+            g.Z.updateGuildProfile(n, t);
     }
     return (0, r.jsxs)("div", {
         className: t,
         children: [
-            (0, r.jsx)(o.vwX, {
-                id: _,
-                className: f.sectionTitle,
-                children: h.intl.string(p.default.zSbMdX),
-            }),
-            (0, r.jsx)(o.nn4, {
+            (0, r.jsx)(c.vwX, {
                 id: O,
+                className: b.sectionTitle,
+                children: h.intl.string(f.default.zSbMdX),
+            }),
+            (0, r.jsx)(c.nn4, {
+                id: y,
                 children: h.intl.string(h.t.ovbW0d),
             }),
             (0, r.jsxs)(
                 "div",
-                x(b({}, C), {
-                    "aria-describedby": O,
-                    className: f.pickerGrid,
+                j(x({}, N), {
+                    "aria-describedby": y,
+                    className: b.pickerGrid,
                     children: [
-                        g.Ek.map((e) =>
+                        p.Ek.map((e) =>
                             (0, r.jsx)(
-                                j,
+                                _,
                                 {
                                     palette: e,
                                     badge: l,
                                     isSelected: e.primary === a && e.secondary === s,
-                                    onClick: () => N(e),
+                                    onClick: () => E(e),
                                 },
                                 "".concat(e.primary).concat(e.secondary),
                             ),
@@ -180,11 +181,11 @@ let _ = function (e) {
                             badge: l,
                             primary: a,
                             secondary: s,
-                            isSelected: y,
-                            showColorPopout: c,
-                            setShowColorPopout: d,
-                            palettePopoutTargetRef: u,
-                            handleChange: N,
+                            isSelected: C,
+                            showColorPopout: d,
+                            setShowColorPopout: u,
+                            palettePopoutTargetRef: m,
+                            handleChange: E,
                         }),
                     ],
                 }),

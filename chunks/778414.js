@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => N,
-    Z: () => S,
+    C: () => T,
+    Z: () => C,
 }),
     n(388685);
 var r = n(951288),
@@ -8,24 +8,21 @@ var r = n(951288),
     l = n(296009),
     a = n(442837),
     o = n(481060),
-    c = n(355467),
-    s = n(981312),
+    s = n(355467),
+    c = n(981312),
     u = n(314897),
     d = n(351402),
-    f = n(206599),
-    g = n(5136),
-    b = n(747101),
-    p = n(517157),
-    m = n(985748),
-    O = n(566007),
-    j = n(173951),
-    y = n(455731),
-    x = n(430790),
-    v = n(640078),
-    h = n(661462),
-    _ = n(795990),
-    P = n(388032),
-    w = n(830202);
+    p = n(206599),
+    f = n(5136),
+    h = n(747101),
+    g = n(517157),
+    m = n(430790),
+    b = n(640078),
+    _ = n(190862),
+    O = n(661462),
+    E = n(795990),
+    y = n(388032),
+    v = n(830202);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function S(e) {
+function C(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -76,80 +73,75 @@ function S(e) {
         })(e, ["widget"]);
     switch (t.type) {
         case l.l.FAVORITE_GAMES:
-            return (0, r.jsx)(O.Z, I({ widget: t }, n));
         case l.l.CURRENT_GAMES:
-            return (0, r.jsx)(m.Z, I({ widget: t }, n));
         case l.l.WANT_TO_PLAY_GAMES:
-            return (0, r.jsx)(y.Z, I({ widget: t }, n));
         case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(j.Z, I({ widget: t }, n));
+            return (0, r.jsx)(_.Z, I({ widget: t }, n));
         default:
             return null;
     }
 }
-function E() {
+function S() {
     return (0, r.jsxs)("div", {
-        className: w.ukTeenDisclaimer,
+        className: v.ukTeenDisclaimer,
         children: [
             (0, r.jsx)(o.d3s, { size: "xs" }),
             (0, r.jsx)(o.Text, {
-                "aria-label": P.intl.string(P.t["7blcz8"]),
+                "aria-label": y.intl.string(y.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: P.intl.string(P.t["7blcz8"]),
+                children: y.intl.string(y.t["7blcz8"]),
             }),
         ],
     });
 }
-function T(e) {
+function N(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        o = (0, p.Z)(t.id),
-        { widgets: g, isGameFetching: m } = (0, b.Z)(o),
-        O = (0, a.e7)([u.default], () => u.default.getId() === t.id),
-        j = (() => {
+        o = (0, g.Z)(t.id),
+        f = (0, a.e7)([u.default], () => u.default.getId() === t.id),
+        b = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
-                n = (0, s.U)();
+                n = (0, c.U)();
             return (
                 i.useEffect(() => {
-                    null == e && null == t && n && (0, c.GE)();
+                    null == e && null == t && n && (0, s.GE)();
                 }, [e, t, n]),
                 "GB" === e && n
             );
         })(),
-        y = 0 === g.length && O;
-    return ((0, f.J)(O, g), y)
-        ? (0, r.jsx)(_.Z, {})
+        _ = 0 === o.length && f;
+    return ((0, h.ZP)(o), (0, p.J)(f, o), _)
+        ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  O && j && (0, r.jsx)(E, {}),
-                  g.map((e, i) =>
+                  f && b && (0, r.jsx)(S, {}),
+                  o.map((e, i) =>
                       (0, r.jsx)(
-                          S,
+                          C,
                           {
                               widget: e,
                               user: t,
                               guildId: n,
                               channelId: l,
-                              isGameFetching: m,
                               index: i,
                           },
                           e.id,
                       ),
                   ),
-                  O && (0, r.jsx)(x.Z, {}),
+                  f && (0, r.jsx)(m.Z, {}),
               ],
           });
 }
-function N(e) {
+function T(e) {
     let t = i.useRef(null);
     return (
-        (0, g.r)({ container: t.current }),
-        (0, r.jsxs)(h.F, {
+        (0, f.r)({ container: t.current }),
+        (0, r.jsxs)(O.F, {
             "data-scroller": !0,
             scrollerRef: t,
-            className: w.scroller,
+            className: v.scroller,
             fade: !0,
-            children: [(0, r.jsx)(v.Z, { scrollerRef: t }), (0, r.jsx)(T, I({}, e)), (0, r.jsx)(o.c43, {})],
+            children: [(0, r.jsx)(b.Z, { scrollerRef: t }), (0, r.jsx)(N, I({}, e)), (0, r.jsx)(o.c43, {})],
         })
     );
 }

@@ -1,43 +1,43 @@
-r.d(t, { Z: () => u });
-var n = r(951288);
-r(647438);
-var a = r(481060),
-    i = r(785717),
-    l = r(299560),
-    o = r(247397),
-    c = r(388032),
-    s = r(958461);
+n.d(t, { Z: () => u });
+var r = n(951288);
+n(647438);
+var i = n(481060),
+    l = n(785717),
+    a = n(299560),
+    o = n(286957),
+    s = n(388032),
+    c = n(958461);
 function u() {
-    let { trackUserProfileAction: e } = (0, i.KZ)();
-    return (0, n.jsxs)("div", {
-        className: s.empty,
+    let { trackUserProfileEditAction: e } = (0, l.KZ)();
+    return (0, r.jsxs)("div", {
+        className: c.empty,
         children: [
-            (0, n.jsxs)("div", {
-                className: s.textContainer,
+            (0, r.jsxs)("div", {
+                className: c.textContainer,
                 children: [
-                    (0, n.jsx)(a.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        children: c.intl.string(c.t.oqalCw),
+                        children: s.intl.string(s.t.oqalCw),
                     }),
-                    (0, n.jsx)(a.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: c.intl.string(c.t.O9SQ1d),
+                        children: s.intl.string(s.t.O9SQ1d),
                     }),
                 ],
             }),
-            (0, n.jsx)("ul", {
-                className: s.widgetGrid,
-                "aria-label": c.intl.string(c.t["+EIBSE"]),
+            (0, r.jsx)("ul", {
+                className: c.widgetGrid,
+                "aria-label": s.intl.string(s.t["+EIBSE"]),
                 children: o.rR.map((t) =>
-                    (0, n.jsx)(
+                    (0, r.jsx)(
                         "li",
                         {
-                            children: (0, n.jsx)(l.Z, {
+                            children: (0, r.jsx)(a.Z, {
                                 widgetType: t,
                                 size: "small",
-                                trackUserProfileAction: e,
+                                trackUserProfileEditAction: e,
                             }),
                         },
                         t,

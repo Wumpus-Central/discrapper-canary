@@ -1,7 +1,7 @@
 n.d(t, { I: () => g });
 var r = n(951288),
     i = n(647438),
-    a = n(202841),
+    a = n(261616),
     o = n(481060),
     s = n(345332),
     l = n(417153),
@@ -114,24 +114,25 @@ let h = {
             },
         },
     };
-function g() {
-    var e, t, n, u;
-    let d = (0, l.Es)((e) => e.currentToast),
-        _ = i.useRef(null != (n = null == d || null == (e = d.options) ? void 0 : e.position) ? n : c.si.position),
-        p = i.useRef(null != (u = null == d || null == (t = d.options) ? void 0 : t.duration) ? u : c.si.duration);
+function g(e) {
+    var t, n, u, d;
+    let { appContext: _ } = e,
+        p = (0, l.Es)((e) => e.currentToastMap.get(_)),
+        h = i.useRef(null != (u = null == p || null == (t = p.options) ? void 0 : t.position) ? u : c.si.position),
+        g = i.useRef(null != (d = null == p || null == (n = p.options) ? void 0 : n.duration) ? d : c.si.duration);
     i.useEffect(() => {
-        if (null != d) {
+        if (null != p) {
             var e, t, n, r;
-            (_.current = null != (n = null == (e = d.options) ? void 0 : e.position) ? n : c.si.position),
-                (p.current = null != (r = null == (t = d.options) ? void 0 : t.duration) ? r : c.si.duration);
+            (h.current = null != (n = null == (e = p.options) ? void 0 : e.position) ? n : c.si.position),
+                (g.current = null != (r = null == (t = p.options) ? void 0 : t.duration) ? r : c.si.duration);
         }
-    }, [d]);
-    let h = i.useMemo(() => {
+    }, [p]);
+    let E = i.useMemo(() => {
             var e, t;
-            return m[null != (t = null == d || null == (e = d.options) ? void 0 : e.position) ? t : _.current];
-        }, [d]),
-        g = (0, o.Yzy)(
-            d,
+            return m[null != (t = null == p || null == (e = p.options) ? void 0 : e.position) ? t : h.current];
+        }, [p]),
+        b = (0, o.Yzy)(
+            p,
             f(
                 {
                     keys: (e) => {
@@ -139,20 +140,20 @@ function g() {
                         return null != (t = null == e ? void 0 : e.id) ? t : "";
                     },
                 },
-                h.transition,
+                E.transition,
             ),
         );
     return (
         i.useEffect(() => {
-            null != d &&
+            null != p &&
                 setTimeout(() => {
-                    (0, l.z5)();
-                }, p.current);
-        }, [d]),
+                    (0, l.z5)(_);
+                }, g.current);
+        }, [p, _]),
         (0, r.jsx)("div", {
-            className: h.styles,
-            children: g((e, t) =>
-                null === t
+            className: E.styles,
+            children: b((e, t) =>
+                null == t
                     ? null
                     : (0, r.jsx)(
                           a.animated.div,

@@ -66,7 +66,12 @@ function d(e) {
 }
 function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.si,
-        { position: r = c.si.position, component: i = c.si.component, duration: o = c.si.duration } = n;
+        {
+            position: r = c.si.position,
+            component: i = c.si.component,
+            duration: o = c.si.duration,
+            appContext: s = c.si.appContext,
+        } = n;
     return {
         message: e,
         id: (0, a.Z)(),
@@ -75,6 +80,7 @@ function f(e, t) {
             position: r,
             component: i,
             duration: o,
+            appContext: s,
         },
     };
 }

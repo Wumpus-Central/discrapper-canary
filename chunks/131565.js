@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(788900),
@@ -14,20 +14,20 @@ var r = n(951288),
     m = n(981631),
     g = n(173893),
     b = n(413135).Buffer;
-function _(e) {
+function y(e) {
     let { chatWallpaperState: t } = e,
         n = c.qM.useExperiment({ location: "channel_chat_wallpaper" }).enabled,
         d = (0, h.Z)(t.wallpaperId),
         f = null != d ? (0, a.I)(d.asset) : null,
-        _ = (null == d ? void 0 : d.thumbhash) != null ? (0, l.xS)(b.from(d.thumbhash, "base64")) : void 0,
-        [y, C] = i.useState(_);
+        y = (null == d ? void 0 : d.thumbhash) != null ? (0, l.xS)(b.from(d.thumbhash, "base64")) : void 0,
+        [_, C] = i.useState(y);
     return (i.useEffect(() => {
         null == f && t.isViewable && u.Z.shouldFetchWallpapers && (0, p.k9)();
     }, [f, t.isViewable]),
     i.useEffect(() => {
         if (null == f) return void C(void 0);
         let e = performance.now();
-        C(_),
+        C(y),
             (0, o.p)(f, (t) => {
                 if (t === f) {
                     C(void 0);
@@ -38,15 +38,15 @@ function _(e) {
                     });
                 }
             });
-    }, [f, _]),
+    }, [f, y]),
     t.isViewable && null != d)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != y &&
+                  null != _ &&
                       (0, r.jsx)("div", {
                           className: g.thumbhashContainer,
                           children: (0, r.jsx)("img", {
-                              src: y,
+                              src: _,
                               alt: "",
                               "aria-hidden": !0,
                           }),
@@ -62,10 +62,10 @@ function _(e) {
           })
         : null;
 }
-function y(e) {
+function _(e) {
     let { channel: t } = e,
         n = (0, f.Z)(t.id);
-    return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || (d.t(t) && !n.isPreview)
+    return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || d.t(t)
         ? null
-        : (0, r.jsx)(_, { chatWallpaperState: n });
+        : (0, r.jsx)(y, { chatWallpaperState: n });
 }

@@ -1,8 +1,8 @@
 r.d(t, { Z: () => g }), r(388685), r(781311);
 var n = r(951288),
-    a = r(647438),
-    i = r(423802),
-    l = r(481060),
+    i = r(647438),
+    l = r(423802),
+    a = r(481060),
     o = r(510231),
     c = r(785717),
     s = r(86419),
@@ -35,35 +35,40 @@ function f(e) {
 }
 function g(e) {
     let { disabled: t, widgetType: r, widget: g } = e,
-        [b] = (0, l.ynZ)(),
-        [p, m] = a.useState(""),
-        O = a.useRef(null),
-        j = a.useMemo(() => new Set(g.games.map((e) => e.applicationId)), [g.games]),
-        { trackUserProfileAction: y } = (0, c.KZ)(),
-        v = a.useCallback(
+        [b] = (0, a.ynZ)(),
+        [p, m] = i.useState(""),
+        O = i.useRef(null),
+        y = i.useMemo(() => new Set(g.games.map((e) => e.applicationId)), [g.games]),
+        { trackUserProfileEditAction: j } = (0, c.KZ)(),
+        v = i.useCallback(
             (e) => {
-                (0, s.ES)(r, { applicationId: e }), y({ action: "EDIT_ACTION" });
+                (0, s.ES)(r, { applicationId: e }),
+                    j({
+                        action: "GAME_ADDED",
+                        gameId: e,
+                        widgetEdited: r,
+                    });
             },
-            [r, y],
+            [r, j],
         ),
         { options: x, matchSorterOptions: h } = (0, o.h)(),
-        _ = a.useMemo(
+        w = i.useMemo(
             () =>
                 "" !== p.trim()
                     ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: p.trim() })
                     : u.intl.string(u.t.QwSXv7),
             [p],
         ),
-        P = a.useCallback(
+        P = i.useCallback(
             (e) => {
                 var t, r;
                 return "" === e.trim()
                     ? x
-                    : (0, i.Lu)(
+                    : (0, l.Lu)(
                           x,
                           e,
                           ((t = f({}, h)),
-                          (r = r = { threshold: i.Lu.rankings.CONTAINS }),
+                          (r = r = { threshold: l.Lu.rankings.CONTAINS }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                               : (function (e, t) {
@@ -81,13 +86,19 @@ function g(e) {
             },
             [x, h],
         );
-    return (0, n.jsx)(l.yRy, {
+    return (0, n.jsx)(a.yRy, {
         targetElementRef: O,
         position: "bottom",
         align: "center",
+        onRequestOpen: () => {
+            j({
+                action: "PRESS_ADD_GAME",
+                widgetEdited: r,
+            });
+        },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(l.DBG, {
+            return (0, n.jsx)(a.DBG, {
                 className: d.gameSearchCombobox,
                 placeholder: u.intl.string(u.t["5h0QOD"]),
                 autoFocus: !0,
@@ -99,18 +110,18 @@ function g(e) {
                 multiSelect: !1,
                 showScrollbar: !0,
                 maxVisibleItems: 7,
-                emptyStateText: _,
+                emptyStateText: w,
                 emptyStateHeader: "",
                 onQueryChange: m,
                 children: (e) =>
                     P(e).map((e) =>
                         (0, n.jsx)(
-                            l.lo1,
+                            a.lo1,
                             {
-                                disabled: j.has(e.value),
+                                disabled: y.has(e.value),
                                 value: String(e.value),
-                                children: (0, n.jsx)(l.lo1.Label, {
-                                    children: (0, n.jsx)(l.Text, {
+                                children: (0, n.jsx)(a.lo1.Label, {
+                                    children: (0, n.jsx)(a.Text, {
                                         variant: "text-md/medium",
                                         color: "header-secondary",
                                         children: e.label,
@@ -126,12 +137,12 @@ function g(e) {
             (0, n.jsx)("div", {
                 ref: O,
                 children: (0, n.jsx)(
-                    l.zxk,
+                    a.zxk,
                     f(
                         {
                             variant: "secondary",
                             size: "sm",
-                            icon: l.qJs,
+                            icon: a.qJs,
                             text: u.intl.string(u.t.SgTOtb),
                             disabled: t,
                         },

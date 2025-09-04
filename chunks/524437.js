@@ -23,8 +23,8 @@ n.d(t, {
     c$: () => tn,
     dp: () => te,
     f9: () => L,
-    hg: () => T,
-    l1: () => S,
+    hg: () => S,
+    l1: () => T,
     n9: () => A,
     nI: () => d,
     o8: () => D,
@@ -204,10 +204,10 @@ var r = n(230367),
             e
         );
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (e[(e.AUTO = 0)] = "AUTO"), (e[(e.H12 = 1)] = "H12"), (e[(e.H23 = 2)] = "H23"), e;
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (
             (e[(e.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
             (e[(e.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = "LAUNCH_PAD_GESTURE_FULL_SCREEN"),
@@ -318,7 +318,7 @@ class w extends o.C {
                     a.status = ey.internalBinaryRead(e, e.uint32(), n, a.status);
                     break;
                 case 12:
-                    a.localization = eT.internalBinaryRead(e, e.uint32(), n, a.localization);
+                    a.localization = eS.internalBinaryRead(e, e.uint32(), n, a.localization);
                     break;
                 case 13:
                     a.appearance = eN.internalBinaryRead(e, e.uint32(), n, a.appearance);
@@ -348,7 +348,7 @@ class w extends o.C {
                     a.safetySettings = e2.internalBinaryRead(e, e.uint32(), n, a.safetySettings);
                     break;
                 case 22:
-                    a.icymiSettings = e5.internalBinaryRead(e, e.uint32(), n, a.icymiSettings);
+                    a.icymiSettings = e6.internalBinaryRead(e, e.uint32(), n, a.icymiSettings);
                     break;
                 case 23:
                     a.applications = e7.internalBinaryRead(e, e.uint32(), n, a.applications);
@@ -383,7 +383,7 @@ class w extends o.C {
             e.debug && em.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.gameLibrary && eE.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             e.status && ey.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
-            e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
+            e.localization && eS.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.appearance && eN.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(),
             e.guildFolders && eL.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eU.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
@@ -396,7 +396,7 @@ class w extends o.C {
             e.safetySettings &&
                 e2.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(),
             e.icymiSettings &&
-                e5.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
+                e6.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(),
             e.applications && e7.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(),
             e.ads && to.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(),
             e.inAppFeedbackSettings &&
@@ -476,7 +476,7 @@ class w extends o.C {
                 no: 12,
                 name: "localization",
                 kind: "message",
-                T: () => eT,
+                T: () => eS,
             },
             {
                 no: 13,
@@ -536,7 +536,7 @@ class w extends o.C {
                 no: 22,
                 name: "icymi_settings",
                 kind: "message",
-                T: () => e5,
+                T: () => e6,
             },
             {
                 no: 23,
@@ -3420,8 +3420,8 @@ class eI extends o.C {
         ]);
     }
 }
-let eT = new eI();
-class eS extends o.C {
+let eS = new eI();
+class eT extends o.C {
     create(e) {
         let t = {};
         return (
@@ -3481,7 +3481,7 @@ class eS extends o.C {
         ]);
     }
 }
-let eA = new eS();
+let eA = new eT();
 class eC extends o.C {
     create(e) {
         let t = {
@@ -3639,7 +3639,7 @@ class eC extends o.C {
                 no: 9,
                 name: "timestamp_hour_cycle",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.TimestampHourCycle", T],
+                T: () => ["discord_protos.discord_users.v1.TimestampHourCycle", S],
             },
             {
                 no: 10,
@@ -3651,7 +3651,7 @@ class eC extends o.C {
                 no: 11,
                 name: "launch_pad_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.LaunchPadMode", S],
+                T: () => ["discord_protos.discord_users.v1.LaunchPadMode", T],
             },
             {
                 no: 12,
@@ -4836,8 +4836,8 @@ class e8 extends o.C {
         ]);
     }
 }
-let e5 = new e8();
-class e6 extends o.C {
+let e6 = new e8();
+class e5 extends o.C {
     create(e) {
         let t = { appSettings: {} };
         return (
@@ -4913,7 +4913,7 @@ class e6 extends o.C {
         ]);
     }
 }
-let e7 = new e6();
+let e7 = new e5();
 class e9 extends o.C {
     create(e) {
         let t = {};
@@ -5202,6 +5202,9 @@ class tc extends o.C {
                 case 2:
                     a.emojiName = s.Gm.internalBinaryRead(e, e.uint32(), n, a.emojiName);
                     break;
+                case 3:
+                    a.animated = s.D5.internalBinaryRead(e, e.uint32(), n, a.animated);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -5216,7 +5219,8 @@ class tc extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         e.emojiId && s.wA.internalBinaryWrite(e.emojiId, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
-            e.emojiName && s.Gm.internalBinaryWrite(e.emojiName, t.tag(2, r.TD.LengthDelimited).fork(), n).join();
+            e.emojiName && s.Gm.internalBinaryWrite(e.emojiName, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
+            e.animated && s.D5.internalBinaryWrite(e.animated, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -5233,6 +5237,12 @@ class tc extends o.C {
                 name: "emoji_name",
                 kind: "message",
                 T: () => s.Gm,
+            },
+            {
+                no: 3,
+                name: "animated",
+                kind: "message",
+                T: () => s.D5,
             },
         ]);
     }

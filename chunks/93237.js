@@ -42,7 +42,7 @@ let _ = () => (0, a.zu)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
     g = () => (0, a.zu)(i.z.REFERRAL_PROGRAM_POPOVER),
     E = () => {
         let e = c.ZP.useExperiment({ location: "useIsReferralProgramPopoverShowable" }),
-            t = (0, u.b)("useIsReferralProgramPopoverShowable", e.cohort === c.xI.Control),
+            t = (0, u.b)(e.cohort === c.xI.Control),
             n = g(),
             i = (0, r.e7)([l.Z], () => l.Z.getReferralsRemaining());
         return t && !1 === n && null !== i && i > 0 && e.cohort !== c.xI.Control;

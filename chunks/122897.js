@@ -2,7 +2,7 @@ n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(524437),
-    a = n(481060),
+    a = n(755721),
     o = n(63063),
     s = n(78451),
     l = n(695346),
@@ -25,7 +25,7 @@ function m() {
                 header: _.intl.string(_.t.tiCXaG),
                 description: _.intl.format(_.t.RvjRRE, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
             }),
-            (0, r.jsx)(a.FXm, {
+            (0, r.jsx)(a.Gu, {
                 className: p.radioGroup,
                 radioItemClassName: p.radioGroupItem,
                 value: e,

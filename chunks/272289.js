@@ -1,52 +1,53 @@
-r.d(t, { Z: () => d }), r(388685);
+r.d(t, { Z: () => s });
 var n = r(951288),
-    a = r(647438),
-    i = r(399606),
+    i = r(647438),
     l = r(785717),
-    o = r(224724),
-    c = r(86419),
-    s = r(206599),
-    u = r(977416);
-function d(e) {
+    a = r(86419),
+    o = r(206599),
+    c = r(977416);
+function s(e) {
     var { widgetType: t } = e,
         r = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                a = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        a = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
-                    return a;
+                        i = {},
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return a;
+            return i;
         })(e, ["widgetType"]);
-    let { games: d, isGameFetching: f, onAddGame: g } = (0, s.K)(t),
-        [b] = (0, i.Wu)([o.Z], () => [o.Z.suggestedFetchIsLoading]),
-        { trackUserProfileAction: p } = (0, l.KZ)(),
-        m = a.useCallback(
+    let { games: s, onAddGame: u } = (0, o.K)(t),
+        { trackUserProfileEditAction: d } = (0, l.KZ)(),
+        f = i.useCallback(
             (e, r, n) => {
-                g(e),
-                    (0, c.ES)(t, {
+                u(e),
+                    (0, a.ES)(t, {
                         applicationId: e,
                         gameName: r,
                         imageSrc: n,
                     }),
-                    p({ action: "EDIT_ACTION" });
+                    d({
+                        action: "GAME_ADDED",
+                        gameId: e,
+                        widgetEdited: t,
+                    });
             },
-            [g, t, p],
+            [u, t, d],
         );
     return (0, n.jsx)(
-        u.Z,
+        c.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -73,10 +74,8 @@ function d(e) {
             return e;
         })(
             {
-                games: d,
-                isGameFetching: f,
-                isSuggestedGamesLoading: b,
-                onClick: m,
+                games: s,
+                onClick: f,
             },
             r,
         ),

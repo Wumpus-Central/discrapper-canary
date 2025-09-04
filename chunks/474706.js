@@ -14,27 +14,27 @@ function f() {
         { claimableRewards: n } = (0, s.wD)(),
         f = (0, l.Z)(),
         _ = null == f ? void 0 : f.planSelection,
-        p = null == _ || null == (e = _.getBannerImageUrl) ? void 0 : e.call(_),
+        p = (0, c.Yr)(null == _ || null == (e = _.getBannerImageUrl) ? void 0 : e.call(_)),
         h = (0, c.Tl)(null == _ ? void 0 : _.gradientConfig);
     return null == _ || null == n || 0 === n.length
         ? null
         : (0, r.jsxs)("div", {
               className: d.container,
-              style: null != p ? { backgroundImage: "url(".concat(p, ")") } : h,
+              style: null != p ? p : h,
               children: [
                   (0, r.jsxs)("div", {
                       className: d.textSection,
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-md/medium",
-                              color: "text-primary",
+                              color: "always-white",
                               children: _.heading(),
                           }),
                           null != _.subheading &&
                               n.length > 1 &&
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/medium",
-                                  className: d.subheading,
+                                  color: "always-white",
                                   children: _.subheading(n.length),
                               }),
                       ],
@@ -45,7 +45,7 @@ function f() {
                           maxRewardImageSrc: _.getImageUrl(!0, t),
                           claimableRewards: n,
                           size: a.EFr.SIZE_48,
-                          imageScaling: 2.1,
+                          imageScaling: 2.4,
                       }),
                   }),
               ],

@@ -5,7 +5,7 @@ var i = r(750312),
     l = r(189988),
     a = r(623132);
 function o(e) {
-    var { user: t, widget: r, isGameFetching: o, containerClassName: c, disableInteraction: s, index: u } = e,
+    var { user: t, widget: r, containerClassName: o, disableInteraction: c, index: s, trailingContent: u } = e,
         d = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -26,14 +26,15 @@ function o(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["user", "widget", "isGameFetching", "containerClassName", "disableInteraction", "index"]);
+        })(e, ["user", "widget", "containerClassName", "disableInteraction", "index", "trailingContent"]);
     let f = r.games[0];
     return (0, n.jsx)(i.Z, {
         userId: t.id,
         widget: r,
-        className: c,
-        disableInteraction: s,
-        index: u,
+        className: o,
+        disableInteraction: c,
+        index: s,
+        trailingContent: u,
         children:
             null != f
                 ? (0, n.jsx)(
@@ -67,8 +68,7 @@ function o(e) {
                               user: t,
                               game: f,
                               widgetType: r.type,
-                              loading: o(f.applicationId),
-                              disableInteraction: s,
+                              disableInteraction: c,
                           },
                           d,
                       ),

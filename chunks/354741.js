@@ -1,43 +1,41 @@
-n.r(t), n.d(t, { default: () => v });
+n.r(t), n.d(t, { default: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(239091),
-    l = n(883385),
+    l = n(239091),
+    a = n(883385),
     o = n(108843),
-    d = n(947440),
-    c = n(100527),
-    s = n(658138),
-    u = n(299206),
-    b = n(895563),
+    c = n(947440),
+    u = n(100527),
+    s = n(299206),
+    d = n(895563),
     f = n(489618),
-    h = n(769409),
-    p = n(122074),
-    g = n(314897),
+    O = n(769409),
+    b = n(122074),
+    h = n(314897),
     j = n(858687),
-    O = n(461535),
-    y = n(776568),
-    _ = n(981631),
+    y = n(461535),
+    g = n(776568),
+    p = n(981631),
     m = n(388032);
-let v = (0, o.Z)(
-    (0, l.Z)(
+let _ = (0, o.Z)(
+    (0, a.Z)(
         function (e) {
-            let { channel: t, selected: l, onSelect: o } = e,
-                v = t.isOwner(g.default.getId()),
-                x = (0, O.Z)(t),
-                Z = (0, y.ZP)(t),
-                P = (0, p.Uf)(_.aIL, t.id, "top"),
-                { rearrangeContextMenu: C } = f.Z.useExperiment({ location: c.Z.GROUP_DM_CONTEXT_MENU }),
-                w = (0, j.Z)(t, l),
-                S = (0, u.Z)({
+            let { channel: t, selected: a, onSelect: o } = e,
+                _ = t.isOwner(h.default.getId()),
+                v = (0, y.Z)(t),
+                N = (0, g.ZP)(t),
+                S = (0, b.Uf)(p.aIL, t.id, "top"),
+                { rearrangeContextMenu: x } = f.Z.useExperiment({ location: u.Z.GROUP_DM_CONTEXT_MENU }),
+                C = (0, j.Z)(t, a),
+                P = (0, s.Z)({
                     id: t.id,
                     label: m.intl.string(m.t.gFHI3t),
                 }),
-                k = (0, d.Z)(t),
-                E = (0, b.l)(t),
-                N = (0, b.P)(t),
-                M = (0, s.D)(t),
-                T = v
+                E = (0, c.Z)(t),
+                T = (0, d.l)(t),
+                I = (0, d.P)(t),
+                U = _
                     ? (0, r.jsx)(i.sNh, {
                           id: "instant-invites",
                           label: m.intl.string(m.t.ngRFjY),
@@ -81,35 +79,34 @@ let v = (0, o.Z)(
                 : (0, r.jsxs)(i.v2r, {
                       navId: "gdm-context",
                       "aria-label": m.intl.string(m.t.Xm41aW),
-                      onClose: a.Zy,
+                      onClose: l.Zy,
                       onSelect: o,
                       children: [
                           (0, r.jsxs)(i.kSQ, {
-                              children: [x, P, E],
+                              children: [v, S, T],
                           }),
                           (0, r.jsxs)(i.kSQ, {
                               children: [
-                                  !C && T,
+                                  !x && U,
                                   (0, r.jsx)(i.sNh, {
                                       id: "edit-gdm",
                                       label: m.intl.string(m.t["5Q9+/P"]),
-                                      action: () => (0, h.B)(t.id, c.Z.GROUP_DM_CONTEXT_MENU),
-                                      subtext: C ? m.intl.string(m.t.pPwcQU) : void 0,
+                                      action: () => (0, O.B)(t.id, u.Z.GROUP_DM_CONTEXT_MENU),
+                                      subtext: x ? m.intl.string(m.t.pPwcQU) : void 0,
                                   }),
-                                  M,
-                                  C && T,
+                                  x && U,
                               ],
                           }),
-                          (0, r.jsx)(i.kSQ, { children: k }),
-                          (0, r.jsx)(i.kSQ, { children: !C && Z }),
+                          (0, r.jsx)(i.kSQ, { children: E }),
+                          (0, r.jsx)(i.kSQ, { children: !x && N }),
                           (0, r.jsxs)(i.kSQ, {
-                              children: [C && Z, N, w],
+                              children: [x && N, I, C],
                           }),
-                          (0, r.jsx)(i.kSQ, { children: S }),
+                          (0, r.jsx)(i.kSQ, { children: P }),
                       ],
                   });
         },
-        { object: _.qAy.CONTEXT_MENU },
+        { object: p.qAy.CONTEXT_MENU },
     ),
-    [c.Z.CONTEXT_MENU, c.Z.GROUP_DM_MENU],
+    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_MENU],
 );

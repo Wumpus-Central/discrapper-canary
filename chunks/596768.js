@@ -160,7 +160,7 @@ function S() {
                     (0, a.jsx)("div", {
                         title: "Enables tracking of all triggers",
                         className: N.triggersEnable,
-                        children: (0, a.jsx)(x.rsf, {
+                        children: (0, a.jsx)(m.T2, {
                             checked: S,
                             onChange: P,
                             className: N.__invalid_toolbarSwitch,

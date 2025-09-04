@@ -91,24 +91,31 @@ async function E(e) {
             "customStatusPrompt",
             "disableActionsForPreview",
         ]);
-    let T = l.default.getUser(a);
-    if (null == T) return;
-    let S = l.default.getCurrentUser();
+    let S = l.default.getUser(a);
     if (null == S) return;
+    let T = l.default.getCurrentUser();
+    if (null == T) return;
     let A = g(a, b ? h : void 0);
     m.add(
         await (0, i.ZDy)(
             async () => {
                 let e = (
-                    await Promise.all([n.e("96253"), n.e("62880"), n.e("8188"), n.e("93979")]).then(n.bind(n, 866035))
+                    await Promise.all([
+                        n.e("96253"),
+                        n.e("74449"),
+                        n.e("62880"),
+                        n.e("72164"),
+                        n.e("30355"),
+                        n.e("49979"),
+                    ]).then(n.bind(n, 866035))
                 ).default;
                 return (t) =>
                     (0, r.jsx)(
                         e,
                         _(
                             {
-                                user: T,
-                                currentUser: S,
+                                user: S,
+                                currentUser: T,
                                 guildId: h,
                                 initialSection: o,
                                 initialSubsection: f,

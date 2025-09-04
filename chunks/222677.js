@@ -1,7 +1,7 @@
 n.d(t, {
     $E: () => x,
     T6: () => w,
-    TW: () => T,
+    TW: () => S,
     U0: () => R,
     WO: () => L,
     rU: () => P,
@@ -76,7 +76,7 @@ function I(e, t) {
         e
     );
 }
-var T = (function (e) {
+var S = (function (e) {
     return (
         (e.MESSAGE = "Message"),
         (e.FORUM_TOOLBAR = "Forum Toolbar"),
@@ -86,10 +86,11 @@ var T = (function (e) {
         (e.MESSAGE_CONTEXT_MENU = "Message Context Menu"),
         (e.MESSAGE_REACTION_PICKER = "Message Reaction Picker"),
         (e.MESSAGE_SHORTCUT = "Message Shortcut"),
+        (e.DOUBLE_TAP = "Double Tap"),
         e
     );
 })({});
-function S(e, t, n) {
+function T(e, t, n) {
     let { headers: r, status: i, body: a } = e;
     if (429 === i) {
         if (n.isRetry) return !0;
@@ -236,7 +237,7 @@ async function P(e, t, n) {
                     : i.uv.announce(b.intl.formatToPlainString(b.t.ol4acH, { name: n.name }));
             })
             .catch((r) => {
-                S(
+                T(
                     r,
                     () =>
                         P(e, t, n, a, {
@@ -272,7 +273,7 @@ async function D(e, t, n) {
                 rejectWithError: !1,
             })
             .catch((n) => {
-                S(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
+                T(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
             });
 }
 async function x(e, t, n, i) {
@@ -286,7 +287,7 @@ async function x(e, t, n, i) {
             rejectWithError: !1,
         })
         .catch((r) => {
-            S(r, () => x(e, t, n, { isRetry: !0 }), { isRetry: a });
+            T(r, () => x(e, t, n, { isRetry: !0 }), { isRetry: a });
         });
 }
 async function L(e) {
@@ -322,7 +323,7 @@ async function L(e) {
             })
             .catch(async (e) => {
                 if (
-                    S(
+                    T(
                         e,
                         () =>
                             L({

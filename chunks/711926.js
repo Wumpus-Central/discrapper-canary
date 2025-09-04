@@ -1,0 +1,34 @@
+n.d(t, { Z: () => l }), n(388685);
+var r = n(147913),
+    i = n(765504),
+    a = n(865066);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+class s extends r.Z {
+    handlePostConnectionOpen() {
+        let { enabled: e } = i.Z.getConfig({ location: "can-install" });
+        e && (0, a.Yz)();
+    }
+    handleLogout() {
+        (0, a.wt)();
+    }
+    constructor(...e) {
+        super(...e),
+            o(this, "actions", {
+                POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
+                LOGOUT: this.handleLogout,
+            });
+    }
+}
+let l = new s();

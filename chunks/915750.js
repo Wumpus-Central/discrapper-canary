@@ -31,8 +31,8 @@ var r = n(951288),
     O = n(569984),
     v = n(811399),
     I = n(882198),
-    T = n(5881),
-    S = n(981631);
+    S = n(5881),
+    T = n(981631);
 function A(e, t, n) {
     return (
         t in e
@@ -183,7 +183,7 @@ class L {
             A(this, "isRunning", !1),
             A(this, "onMinViewTimeReached", () => {
                 this.quests.forEach((e) => {
-                    (0, T.T)().info(
+                    (0, S.T)().info(
                         ""
                             .concat(e.config.messages.questName, " Quest viewed for at least ")
                             .concat(this.minViewTimeSeconds, "s at ")
@@ -197,10 +197,10 @@ class L {
                         (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
                     }
                     let r = (0, y.jY)(this.questContent);
-                    (0, u.S)().then((n) => {
+                    (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
-                            event: S.rMx.QUEST_CONTENT_VIEWED,
+                            event: T.rMx.QUEST_CONTENT_VIEWED,
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                             properties: C(
                                 {
@@ -226,7 +226,7 @@ class L {
                 p.quests.forEach((t) => {
                     if (null != p.lastBeatTime) {
                         let n = Math.round(Date.now() - p.lastBeatTime);
-                        (0, T.T)().info(
+                        (0, S.T)().info(
                             ""
                                 .concat(t.config.messages.questName, " Quest impression ")
                                 .concat(e ? "terminal " : "", "heartbeat: ")
@@ -235,7 +235,7 @@ class L {
                         ),
                             (0, b.dA)({
                                 questId: t.id,
-                                event: S.rMx.QUEST_CONTENT_VIEW_TIME,
+                                event: T.rMx.QUEST_CONTENT_VIEW_TIME,
                                 properties: C(
                                     {
                                         is_termination_beat: e,
@@ -286,7 +286,7 @@ class L {
                         1000 * this.minViewTimeSeconds,
                     )),
                     this.quests.forEach((e) => {
-                        (0, T.T)().info(
+                        (0, S.T)().info(
                             ""
                                 .concat(e.config.messages.questName, " Quest became visible at ")
                                 .concat((0, b._b)(this.questContent)),
@@ -294,7 +294,7 @@ class L {
                         ),
                             (0, b.dA)({
                                 questId: e.id,
-                                event: S.rMx.QUEST_CONTENT_LOADED,
+                                event: T.rMx.QUEST_CONTENT_LOADED,
                                 properties: C(
                                     { triggered_by_status_change: this.triggeredByStatusChange },
                                     this.commonProperties(e),

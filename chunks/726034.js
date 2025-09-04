@@ -20,14 +20,14 @@ var r = n(951288),
     O = n(266454),
     v = n(784238),
     I = n(767714),
-    T = n(612659),
-    S = n(781391),
+    S = n(612659),
+    T = n(781391),
     A = n(210887),
     C = n(233398),
     N = n(263198),
     R = n(866419),
     P = n(803038),
-    w = n(771934),
+    w = n(507962),
     D = n(877865),
     x = n(536847),
     L = n(981631),
@@ -65,7 +65,7 @@ function Z(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,12 +77,12 @@ function V(e, t) {
     }
     return n;
 }
-function F(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
+            : F(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -152,7 +152,7 @@ function K(e) {
 }
 function z(e) {
     let { markAsDismissed: t } = e,
-        n = (0, T.m)(M.p9.TIER_2);
+        n = (0, S.m)(M.p9.TIER_2);
     return (0, r.jsxs)("div", {
         className: G.coachmarkHeaderContainer,
         children: [
@@ -254,7 +254,7 @@ function Q(e) {
             "with-text" === t
                 ? (0, r.jsx)(
                       c.z,
-                      F(Z({}, e), {
+                      V(Z({}, e), {
                           variant: "secondary",
                           onClick: n,
                           icon: p.T$Z,
@@ -266,7 +266,7 @@ function Q(e) {
                       className: G.surpriseMeButton,
                       children: (0, r.jsx)(
                           d.h,
-                          F(Z({}, e), {
+                          V(Z({}, e), {
                               variant: "icon-only",
                               size: "md",
                               onClick: n,
@@ -285,7 +285,7 @@ function J(e) {
         children: (e) =>
             (0, r.jsx)(
                 c.z,
-                F(Z({}, e), {
+                V(Z({}, e), {
                     variant: "primary",
                     onClick: t,
                     disabled: n,
@@ -297,7 +297,7 @@ function J(e) {
 }
 function $(e) {
     let { onSaveTheme: t, canApply: n } = e,
-        i = (0, T.m)(M.p9.TIER_2);
+        i = (0, S.m)(M.p9.TIER_2);
     return (
         (0, w.hf)(i, E.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsxs)("div", {
@@ -326,7 +326,7 @@ function $(e) {
 }
 function ee(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        a = (0, T.m)(M.p9.TIER_2);
+        a = (0, S.m)(M.p9.TIER_2);
     (0, w.hf)(a, E.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
         (0, w.Vb)(),
@@ -367,90 +367,90 @@ function ee(e) {
 }
 function et(e) {
     var t;
-    let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
-        u = P.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
-        d = (0, R.jJ)(),
-        f = i.useRef(!1),
+    let { metadata: n, markAsDismissed: a, isCoachmark: u, isMobile: d } = e,
+        f = P.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
+        _ = (0, R.jJ)(),
+        m = i.useRef(!1),
         {
-            colors: _,
-            chassisMixAmount: m,
-            gradientAngle: v,
-            setColors: I,
-            setChassisMixAmount: T,
-            setGradientAngle: N,
+            colors: v,
+            chassisMixAmount: I,
+            gradientAngle: S,
+            setColors: N,
+            setChassisMixAmount: L,
+            setGradientAngle: M,
         } = (0, C.Ig)(),
-        [L, M] = i.useState(null != (t = _[0]) ? t : C.Dp),
-        k = (0, s.e7)([A.Z], () => A.Z.theme),
-        B = (0, O.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: Z } = (0, b.ZP)(E.Z.CUSTOM_THEMES_EDITOR),
-        V = async () => {
-            (f.current = !0),
+        [k, B] = i.useState(null != (t = v[0]) ? t : C.Dp),
+        Z = (0, s.e7)([A.Z], () => A.Z.theme),
+        F = (0, O.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: V } = (0, b.ZP)(E.Z.CUSTOM_THEMES_EDITOR),
+        H = async () => {
+            (m.current = !0),
                 await (0, h.ZI)({
-                    theme: k,
+                    theme: Z,
                     customUserThemeSettings: {
-                        colors: _,
+                        colors: v,
                         gradientColorStops: [],
-                        gradientAngle: v,
-                        baseMix: m,
+                        gradientAngle: S,
+                        baseMix: I,
                     },
                 }),
-                (0, w.u7)(_, m, v, k, Z),
+                (0, w.u7)(v, I, S, Z, V),
                 null == a || a(j.L.TAKE_ACTION),
-                B || (0, O.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                F || (0, O.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, y.Ll)(),
-                (0, S.UD)();
+                (0, T.UD)();
         },
-        F = () => {
-            d(R._m.RESET_BUTTON), (0, w.uf)();
+        Y = () => {
+            _(R._m.RESET_BUTTON), (0, w.uf)();
         },
-        H = _.length > 0;
+        W = v.length > 0;
     return (i.useEffect(
         () => () => {
-            f.current || d(R._m.EDITOR_CLOSE);
+            m.current || _(R._m.EDITOR_CLOSE);
         },
-        [d],
+        [_],
     ),
     (0, g.ZP)(() => {
-        o || (0, R.lT)(_, L, I);
+        u || (0, R.lT)(v, k, N);
     }),
-    u)
+    f)
         ? (0, r.jsx)("div", {
-              className: G.container,
-              "data-app-right-panel": !0,
+              className: o()(G.container, { [G.mobileContainer]: d }),
+              "data-app-right-panel": !d,
               children: (0, r.jsxs)("div", {
                   className: G.containerInner,
                   children: [
                       (0, r.jsx)(p.Ttm, {
                           children: (0, r.jsxs)("div", {
-                              className: G.editorBody,
+                              className: o()(G.editorBody, { [G.mobileEditorBody]: d }),
                               children: [
                                   (0, r.jsx)(K, {
                                       markAsDismissed: a,
-                                      isCoachmark: o,
+                                      isCoachmark: u,
                                   }),
                                   (0, r.jsx)(x.o, {}),
                                   (0, r.jsx)(D.U, {
                                       onChange: (e) => {
-                                          M(e), 0 === _.length && (0, R.lT)(_, e, I);
+                                          B(e), 0 === v.length && (0, R.lT)(v, e, N);
                                       },
-                                      value: L,
-                                      colors: _,
-                                      setColors: I,
+                                      value: k,
+                                      colors: v,
+                                      setColors: N,
                                   }),
-                                  _.length > 1 &&
+                                  v.length > 1 &&
                                       (0, r.jsx)(q, {
-                                          gradientAngle: v,
-                                          setGradientAngle: N,
+                                          gradientAngle: S,
+                                          setGradientAngle: M,
                                       }),
                                   (0, r.jsx)(X, {
-                                      chassisMixAmount: m,
+                                      chassisMixAmount: I,
                                       setChassisMixAmount: (e) => {
-                                          T(e), 0 === _.length && (0, R.lT)(_, L, I);
+                                          L(e), 0 === v.length && (0, R.lT)(v, k, N);
                                       },
                                   }),
                                   (0, r.jsx)(c.z, {
                                       variant: "secondary",
-                                      onClick: F,
+                                      onClick: Y,
                                       icon: p.Oe7,
                                       text: U.intl.string(U.t.yBZMsb),
                                       fullWidth: !0,
@@ -458,14 +458,14 @@ function et(e) {
                               ],
                           }),
                       }),
-                      o
+                      u
                           ? (0, r.jsx)($, {
-                                onSaveTheme: V,
-                                canApply: H,
+                                onSaveTheme: H,
+                                canApply: W,
                             })
                           : (0, r.jsx)(ee, {
-                                onSaveTheme: V,
-                                canApply: H,
+                                onSaveTheme: H,
+                                canApply: W,
                                 metadata: n,
                             }),
                   ],

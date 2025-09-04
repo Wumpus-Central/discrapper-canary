@@ -1,39 +1,40 @@
-n.d(t, { Z: () => a }), n(953529);
+n.d(t, { Z: () => o }), n(953529);
 var i = n(951288);
 n(647438);
-var l = n(481060),
-    r = n(600164),
-    s = n(488127);
-function a(e) {
-    let { description: t, icon: n, id: a, label: o, onChange: c, value: d } = e;
+var l = n(755721),
+    r = n(481060),
+    s = n(600164),
+    a = n(488127);
+function o(e) {
+    let { description: t, icon: n, id: o, label: c, onChange: d, value: u } = e;
     return (0, i.jsxs)("div", {
-        className: s.cardContent,
+        className: a.cardContent,
         children: [
-            (0, i.jsxs)(r.Z, {
-                justify: r.Z.Justify.BETWEEN,
-                align: r.Z.Align.CENTER,
+            (0, i.jsxs)(s.Z, {
+                justify: s.Z.Justify.BETWEEN,
+                align: s.Z.Align.CENTER,
                 children: [
                     n,
-                    (0, i.jsx)(r.Z.Child, {
+                    (0, i.jsx)(s.Z.Child, {
                         grow: 1,
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, i.jsx)(r.Text, {
                             variant: "text-md/semibold",
-                            children: o,
+                            children: c,
                         }),
                     }),
-                    null != c &&
-                        null != d &&
-                        (0, i.jsx)(l.rsf, {
-                            id: a,
-                            checked: d,
-                            onChange: c,
+                    null != d &&
+                        null != u &&
+                        (0, i.jsx)(l.T2, {
+                            id: o,
+                            checked: u,
+                            onChange: d,
                         }),
                 ],
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "text-default",
-                className: s.cardDescription,
+                className: a.cardDescription,
                 children: t,
             }),
         ],

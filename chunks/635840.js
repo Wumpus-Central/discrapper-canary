@@ -61,7 +61,7 @@ function I(t) {
                     children: [
                         (0, n.jsx)("div", {
                             className: u.answerChoicesContainer,
-                            children: (0, n.jsx)(c.FXm, {
+                            children: (0, n.jsx)(r.Gu, {
                                 value: x,
                                 options: N.map((t) => {
                                     let { nameGetter: i, value: e } = t;

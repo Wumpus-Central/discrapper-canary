@@ -97,8 +97,8 @@ class m extends i.Component {
                 autoPlay: O,
                 autoMute: v,
                 responsive: I,
-                mediaLayoutType: T,
-                mimeType: S,
+                mediaLayoutType: S,
+                mimeType: T,
                 renderOverlayContent: A,
                 renderLinkComponent: C,
                 onClick: N,
@@ -158,7 +158,7 @@ class m extends i.Component {
                     minHeight: s.ZP.minHeight,
                     shouldLink: !1,
                     shouldAnimate: !1,
-                    mediaLayoutType: T,
+                    mediaLayoutType: S,
                     responsive: I,
                     children: (e) => {
                         let {
@@ -167,6 +167,7 @@ class m extends i.Component {
                             } = e,
                             d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
                         return (0, r.jsx)(s.ZP, {
+                            alt: k,
                             className: u,
                             forceExternal: d,
                             src: t,
@@ -178,7 +179,7 @@ class m extends i.Component {
                             autoPlay: null != O && O,
                             autoMute: null != v && v,
                             type: s.ZP.Types.VIDEO,
-                            mediaLayoutType: T,
+                            mediaLayoutType: S,
                             fileName: h,
                             fileSize: null == n ? void 0 : (0, a.Ng)(n),
                             fileSizeBytes: null == n ? void 0 : n,
@@ -193,7 +194,7 @@ class m extends i.Component {
                             onMute: j,
                             onControlsShow: D,
                             onControlsHide: x,
-                            mimeType: S,
+                            mimeType: T,
                             downloadable: b,
                             disableArrowKeySeek: M,
                         });

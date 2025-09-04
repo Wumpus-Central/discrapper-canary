@@ -1,71 +1,74 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
     o = n(948789),
     s = n(442837),
-    c = n(481060),
-    u = n(686546),
-    d = n(336219),
-    p = n(264783),
-    f = n(944486),
-    h = n(358085),
-    g = n(821020),
-    m = n(370774),
-    b = n(128008),
-    _ = n(961040),
-    O = n(981631),
-    E = n(388032),
-    y = n(445202);
-let v = {
-        cozy: 6,
-        default: 4,
-        compact: 2,
+    c = n(212605),
+    u = n(481060),
+    d = n(686546),
+    p = n(719961),
+    f = n(264783),
+    h = n(944486),
+    g = n(358085),
+    m = n(821020),
+    b = n(370774),
+    _ = n(128008),
+    O = n(961040),
+    E = n(981631),
+    y = n(388032),
+    v = n(445202);
+let I = {
+        cozy: 0,
+        default: 0,
+        compact: 0,
     },
-    I = {
+    C = {
         cozy: 36,
         default: 24,
         compact: 14,
     },
-    C = {
+    S = {
         cozy: 95,
         default: 84,
         compact: 72,
     };
-function S(e) {
+function N(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: o, focusSectionProps: s } = e,
-        [f, g] = i.useState(!1),
-        _ = (0, m.D)(),
-        O = n || _,
-        S = n || O,
-        N = (0, r.jsx)(c.Dkj, {
-            className: y.icon,
-            color: f || S ? c.TVs.colors.ICON_PRIMARY : c.TVs.colors.ICON_TERTIARY,
-            size: "custom",
-            height: 20,
-            width: 20,
+        [h, m] = i.useState(!1),
+        O = (0, b.D)(),
+        E = n || O,
+        N = n || E,
+        {
+            backForwardButtons: T,
+            titlebarIconSize: j,
+            titlebarHoverHighlight: P,
+        } = (0, p.T)({ location: "NotificationsInboxTitleBarButton" }),
+        x = (0, r.jsx)(u.Dkj, {
+            className: v.icon,
+            color: h || N ? u.TVs.colors.ICON_PRIMARY : u.TVs.colors.ICON_TERTIARY,
+            size: j,
         }),
-        { badge: T, badgeType: P } = (0, b.h6)({ isSelected: O }),
-        { backForwardButtons: j } = (0, d.t)({ location: "AppTitleBar" }),
-        x = (0, h.isDesktop)() && j,
-        A = (0, p.A)(),
-        Z = (0, h.isMac)() ? v[A] : x ? I[A] : C[A];
-    return (0, r.jsxs)(c.Kqy, {
+        { badge: A, badgeType: Z } = (0, _.h6)({ isSelected: E }),
+        w = (0, g.isDesktop)() && T,
+        L = (0, f.A)(),
+        R = (0, g.isMac)() ? I[L] : w ? C[L] : S[L];
+    return (0, r.jsxs)(u.Kqy, {
         gap: 0,
         direction: "horizontal",
         children: [
-            (0, r.jsx)(c.LZC, {
-                size: Z,
+            (0, r.jsx)(u.LZC, {
+                size: R,
                 horizontal: !0,
             }),
-            (0, r.jsx)(c.ua7, {
-                shouldShow: !S,
-                text: E.intl.string(E.t.HcoRu7),
+            (0, r.jsx)(u.ua7, {
+                shouldShow: !N,
+                text: y.intl.string(y.t.HcoRu7),
                 children: (e) => {
                     var n, i;
                     return (0, r.jsxs)(
-                        c.P3F,
+                        u.P3F,
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -93,7 +96,7 @@ function S(e) {
                         })(
                             {
                                 innerRef: o,
-                                className: y.clickableContainer,
+                                className: a()(v.clickableContainer, { [v.withHoverHighlight]: P }),
                             },
                             s,
                             e,
@@ -103,11 +106,11 @@ function S(e) {
                             {
                                 onMouseEnter: () => {
                                     var t;
-                                    g(!0), null == (t = e.onMouseEnter) || t.call(e);
+                                    m(!0), null == (t = e.onMouseEnter) || t.call(e);
                                 },
                                 onMouseLeave: () => {
                                     var t;
-                                    g(!1), null == (t = e.onMouseLeave) || t.call(e);
+                                    m(!1), null == (t = e.onMouseLeave) || t.call(e);
                                 },
                                 onClick: () => {
                                     var n, r;
@@ -117,23 +120,23 @@ function S(e) {
                                 },
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: a()(y.iconWrapper, null),
+                                        className: a()(v.iconWrapper, null),
                                         children:
-                                            "unread" === P
+                                            "unread" === Z
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          (0, r.jsx)(u.ZP, {
-                                                              width: 20,
-                                                              height: 20,
-                                                              mask: u.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                              children: N,
+                                                          (0, r.jsx)(d.ZP, {
+                                                              width: c.Z[j],
+                                                              height: c.Z[j],
+                                                              mask: d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                                              children: x,
                                                           }),
-                                                          (0, r.jsx)("div", { className: y.unreadDot }),
+                                                          (0, r.jsx)("div", { className: a()(v.unreadDot, v[j]) }),
                                                       ],
                                                   })
-                                                : N,
+                                                : x,
                                     }),
-                                    T,
+                                    A,
                                 ],
                             }),
                         Object.getOwnPropertyDescriptors
@@ -155,28 +158,28 @@ function S(e) {
         ],
     });
 }
-function N() {
+function T() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
-        { notificationCenterVariant: n } = (0, g.pN)({ location: "NotificationsInboxButton" }),
-        l = (0, s.e7)([f.Z], () => f.Z.getChannelId()),
-        a = i.useMemo(() => O.Z5c.CHANNEL(O.STv, null != l ? l : void 0), [l]),
-        c = (0, b.mv)();
-    return n === g.jP.SIDEBAR
-        ? (0, r.jsx)(S, {
+        { notificationCenterVariant: n } = (0, m.pN)({ location: "NotificationsInboxButton" }),
+        l = (0, s.e7)([h.Z], () => h.Z.getChannelId()),
+        a = i.useMemo(() => E.Z5c.CHANNEL(E.STv, null != l ? l : void 0), [l]),
+        c = (0, _.mv)();
+    return n === m.jP.SIDEBAR
+        ? (0, r.jsx)(N, {
               onClick: () => {
                   c(), (0, o.uL)(a);
               },
               focusSectionProps: e,
           })
-        : n === g.jP.POPOUT
-          ? (0, r.jsx)(_.Z, {
+        : n === m.jP.POPOUT
+          ? (0, r.jsx)(O.Z, {
                 targetElementRef: t,
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 spacing: 2,
                 children: (n, i, l) =>
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(N, {
                         ref: t,
                         selectedOverride: i,
                         onClick: () => {

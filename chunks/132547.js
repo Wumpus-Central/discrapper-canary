@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(47280),
     v = n(331972),
     I = n(230916),
-    T = n(373539),
-    S = n(560223),
+    S = n(373539),
+    T = n(560223),
     A = n(347475),
     C = n(342414),
     N = n(391110),
@@ -86,20 +86,19 @@ let M = (e) => {
                                           children: (0, r.jsx)(C.Z, {
                                               buttonVisibilityRef: Z,
                                               className: L.heroHeading,
-                                              location: N.MQ.HOME,
                                               enablePremiumBrandRefresh: ee,
                                               userDiscountOffer: B,
                                               discountedPrice: K,
                                           }),
                                       }),
-                                      (0, r.jsx)(S.Z, {
+                                      (0, r.jsx)(T.Z, {
                                           variant: N.gM.WHATS_NEW,
                                           className: L.whatsNew,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
                                           shouldAutoScroll: $,
                                       }),
-                                      (0, r.jsx)(S.Z, {
+                                      (0, r.jsx)(T.Z, {
                                           className: L.perksDiscoverability,
                                           variant: N.gM.PERKS_DISCOVERABILITY,
                                           noBackground: !0,
@@ -145,7 +144,7 @@ let M = (e) => {
                           }),
                           W &&
                               null != K &&
-                              (0, r.jsx)(T.Z, {
+                              (0, r.jsx)(S.Z, {
                                   isVisible: z && U,
                                   premiumSubscription: M,
                                   churnDiscountOffer: B,

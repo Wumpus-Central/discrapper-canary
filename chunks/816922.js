@@ -47,6 +47,7 @@ n.r(
         sortDropdown: "sortDropdown_f369db",
         sortDropdownInner: "sortDropdownInner_f369db",
         sortDropdownText: "sortDropdownText_f369db",
+        sortDropdownTextHighContrastForcedColor: "sortDropdownTextHighContrastForcedColor_f369db",
         clear: "clear_f369db",
         matchingPosts: "matchingPosts_f369db",
         startPostHelp: "startPostHelp_f369db",

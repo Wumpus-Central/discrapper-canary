@@ -2,19 +2,20 @@ n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(481060),
-    s = n(570140),
-    l = n(313201),
-    c = n(587446),
-    u = n(996073),
-    d = n(737604),
-    f = n(401460),
-    _ = n(441319),
-    p = n(526761),
-    h = n(388032),
-    m = n(339637),
-    g = n(226518);
-function E(e, t, n) {
+    o = n(755721),
+    s = n(481060),
+    l = n(570140),
+    c = n(313201),
+    u = n(587446),
+    d = n(996073),
+    f = n(737604),
+    _ = n(401460),
+    p = n(441319),
+    h = n(526761),
+    m = n(388032),
+    g = n(339637),
+    E = n(226518);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,22 +56,22 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +79,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,19 +89,19 @@ function I(e, t) {
     return i;
 }
 function T(e) {
-    let { className: t, disabled: n, isEditor: E, renderCTAButtons: y } = e,
-        [I] = (0, a.Wu)([d.Z], () => [d.Z.getCurrentDesktopIcon()]),
+    let { className: t, disabled: n, isEditor: b, renderCTAButtons: O } = e,
+        [S] = (0, a.Wu)([f.Z], () => [f.Z.getCurrentDesktopIcon()]),
         T = i.useRef(null);
-    (0, u.Z)(T, p.h1.CUSTOM_APP_ICONS);
-    let S = (0, l.Dt)(),
-        A = (0, o.arW)({
+    (0, d.Z)(T, h.h1.CUSTOM_APP_ICONS);
+    let A = (0, c.Dt)(),
+        C = (0, o.Jb)({
             orientation: "horizontal",
-            labelledBy: S,
+            labelledBy: A,
         }),
-        { ref: C } = A,
-        N = v(A, ["ref"]),
-        R = (e) => {
-            s.Z.dispatch({
+        { ref: N } = C,
+        R = I(C, ["ref"]),
+        P = (e) => {
+            l.Z.dispatch({
                 type: "APP_ICON_UPDATED",
                 id: e,
             });
@@ -109,54 +110,54 @@ function T(e) {
         ref: T,
         children: (0, r.jsx)(
             "div",
-            O(b({}, N), {
-                ref: C,
-                className: m.__invalid_container,
+            v(y({}, R), {
+                ref: N,
+                className: g.__invalid_container,
                 children: (0, r.jsxs)("div", {
                     className: t,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: m.header,
+                            className: g.header,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: m.headings,
+                                    className: g.headings,
                                     children: [
-                                        !E &&
+                                        !b &&
                                             (0, r.jsxs)("div", {
-                                                className: m.title,
+                                                className: g.title,
                                                 children: [
-                                                    (0, r.jsx)(o.X6q, {
-                                                        className: m.titleText,
+                                                    (0, r.jsx)(s.X6q, {
+                                                        className: g.titleText,
                                                         variant: "text-lg/medium",
-                                                        children: h.intl.string(h.t.NThqT0),
+                                                        children: m.intl.string(m.t.NThqT0),
                                                     }),
-                                                    (0, r.jsx)(c.Z, { className: m.premiumIcon }),
+                                                    (0, r.jsx)(u.Z, { className: g.premiumIcon }),
                                                 ],
                                             }),
-                                        (0, r.jsx)(o.X6q, {
+                                        (0, r.jsx)(s.X6q, {
                                             variant: "text-sm/normal",
-                                            className: g.subtext,
-                                            children: h.intl.string(h.t.IgENJi),
+                                            className: E.subtext,
+                                            children: m.intl.string(m.t.IgENJi),
                                         }),
                                     ],
                                 }),
-                                null == y ? void 0 : y(),
+                                null == O ? void 0 : O(),
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: m.presets,
-                            children: (0, _.wu)()
+                            className: g.presets,
+                            children: (0, p.wu)()
                                 .filter((e) => {
                                     let { isHidden: t } = e;
                                     return !t;
                                 })
                                 .map((e, t) =>
                                     (0, r.jsx)(
-                                        f.Z,
+                                        _.Z,
                                         {
                                             icon: e,
-                                            isSelected: I === e.id,
-                                            onSelect: (e) => R(e),
+                                            isSelected: S === e.id,
+                                            onSelect: (e) => P(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,
                                             locked: !1,

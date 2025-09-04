@@ -14,10 +14,10 @@ let l = (e) => {
             ? s.intl.format(s.t["TYu+MD"], { helpdeskArticle: r })
             : s.intl.format(s.t["omMr+f"], { helpdeskArticle: r });
     },
-    c = (e) => {
-        let t = (0, a.b)(e),
-            n = (0, i.Nj)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
-        return t && !n;
+    c = () => {
+        let e = (0, a.b)(),
+            t = (0, i.Nj)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+        return e && !t;
     },
     u = (e) => {
         let { hasSentAll: t } = e;

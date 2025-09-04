@@ -5,8 +5,8 @@ var i = r(750312),
     l = r(189988),
     a = r(30344);
 function o(e) {
-    var { user: t, widget: r, containerClassName: o, disableInteraction: c, index: s } = e,
-        u = (function (e, t) {
+    var { user: t, widget: r, containerClassName: o, disableInteraction: c, index: s, trailingContent: u } = e,
+        d = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -26,13 +26,14 @@ function o(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["user", "widget", "containerClassName", "disableInteraction", "index"]);
+        })(e, ["user", "widget", "containerClassName", "disableInteraction", "index", "trailingContent"]);
     return (0, n.jsx)(i.Z, {
         userId: t.id,
         widget: r,
         className: o,
         disableInteraction: c,
         index: s,
+        trailingContent: u,
         children:
             r.games.length > 0
                 ? (0, n.jsx)(
@@ -68,7 +69,7 @@ function o(e) {
                               widgetType: r.type,
                               disableInteraction: c,
                           },
-                          u,
+                          d,
                       ),
                   )
                 : (0, n.jsx)(l.Z, { widgetType: r.type }),

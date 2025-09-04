@@ -484,7 +484,10 @@ function ei(e) {
         g = (0, f.ZP)(n),
         O = (0, _.ZP)(n),
         y = (0, P.qY)(n.id),
-        { enabled: v } = m.W.useExperiment({ location: "VoiceChannel" }),
+        { enabled: v } = m.W.useExperiment({
+            guildId: t.id,
+            location: "VoiceChannel",
+        }),
         j = (0, a.e7)([b.Z], () => !!v && null != b.Z.getStartTime(n), [n, v]),
         { isSubscriptionGated: C, needSubscriptionToAccess: E } = (0, S.Z)(n.id),
         I = (0, x.Z)(),

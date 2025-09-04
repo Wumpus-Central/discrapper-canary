@@ -1,260 +1,261 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(481060),
-    s = n(100527),
-    l = n(906732),
-    c = n(454585),
-    u = n(125900),
-    d = n(921801),
-    f = n(626135),
-    _ = n(695346),
-    p = n(726985),
-    h = n(981631),
-    m = n(388032),
-    g = n(197571);
-function E() {
-    let e = _.fq.useSetting(),
-        t = _.eR.useSetting(),
-        n = (0, u.V2)({ location: "UserSettingsTextImages" }),
-        i = _.R$.useSetting(),
-        E = _.cC.useSetting(),
-        b = _.vF.useSetting(),
-        y = _.H1.useSetting(),
-        O = _.ev.useSetting(),
-        v = _.x4.useSetting(),
-        I = _.RS.useSetting(),
-        T = _.NA.useSetting(),
-        S = _.nc.useSetting(),
-        { analyticsLocations: A } = (0, l.ZP)(s.Z.TEXT_AND_IMAGES),
-        C = () =>
-            (0, r.jsxs)(o.xJW, {
-                title: m.intl.string(m.t.QgwmV1),
+    o = n(755721),
+    s = n(481060),
+    l = n(100527),
+    c = n(906732),
+    u = n(454585),
+    d = n(125900),
+    f = n(921801),
+    _ = n(626135),
+    p = n(695346),
+    h = n(726985),
+    m = n(981631),
+    g = n(388032),
+    E = n(197571);
+function b() {
+    let e = p.fq.useSetting(),
+        t = p.eR.useSetting(),
+        n = (0, d.V2)({ location: "UserSettingsTextImages" }),
+        i = p.R$.useSetting(),
+        b = p.cC.useSetting(),
+        y = p.vF.useSetting(),
+        O = p.H1.useSetting(),
+        v = p.ev.useSetting(),
+        I = p.x4.useSetting(),
+        S = p.RS.useSetting(),
+        T = p.NA.useSetting(),
+        A = p.nc.useSetting(),
+        { analyticsLocations: C } = (0, c.ZP)(l.Z.TEXT_AND_IMAGES),
+        N = () =>
+            (0, r.jsxs)(s.xJW, {
+                title: g.intl.string(g.t.QgwmV1),
                 children: [
-                    (0, r.jsx)(o.R94, {
-                        type: o.R94.Types.DESCRIPTION,
-                        className: g.marginBottom8,
-                        children: m.intl.string(m.t.TYnRkZ),
+                    (0, r.jsx)(s.R94, {
+                        type: s.R94.Types.DESCRIPTION,
+                        className: E.marginBottom8,
+                        children: g.intl.string(g.t.TYnRkZ),
                     }),
-                    (0, r.jsx)(o.FXm, {
+                    (0, r.jsx)(o.Gu, {
                         options: [
                             {
-                                name: m.intl.string(m.t["KFH/mZ"]),
-                                value: h.A2N.ON_CLICK,
+                                name: g.intl.string(g.t["KFH/mZ"]),
+                                value: m.A2N.ON_CLICK,
                             },
                             {
-                                name: m.intl.string(m.t.K5VTBA),
-                                value: h.A2N.IF_MODERATOR,
+                                name: g.intl.string(g.t.K5VTBA),
+                                value: m.A2N.IF_MODERATOR,
                             },
                             {
-                                name: m.intl.string(m.t.Pe1RbG),
-                                value: h.A2N.ALWAYS,
+                                name: g.intl.string(g.t.Pe1RbG),
+                                value: m.A2N.ALWAYS,
                             },
                         ],
-                        onChange: (e) => _.cC.updateSetting(e.value),
-                        value: E,
+                        onChange: (e) => p.cC.updateSetting(e.value),
+                        value: b,
                     }),
                 ],
             });
-    return (0, r.jsxs)(o.hjN, {
-        tag: o.RB0.H1,
-        title: m.intl.string(m.t["/VQax8"]),
+    return (0, r.jsxs)(s.hjN, {
+        tag: s.RB0.H1,
+        title: g.intl.string(g.t["/VQax8"]),
         children: [
-            (0, r.jsxs)(d.F, {
-                setting: p.s6.CHAT_INLINE_MEDIA,
+            (0, r.jsxs)(f.F, {
+                setting: h.s6.CHAT_INLINE_MEDIA,
                 children: [
-                    (0, r.jsx)(o.vwX, {
-                        className: g.marginBottom8,
-                        children: m.intl.string(m.t.U68Dgo),
+                    (0, r.jsx)(s.vwX, {
+                        className: E.marginBottom8,
+                        children: g.intl.string(g.t.U68Dgo),
                     }),
-                    (0, r.jsx)(d.F, {
-                        setting: p.s6.CHAT_INLINE_MEDIA_LINKS,
-                        children: (0, r.jsx)(o.j7V, {
-                            className: a()(g.marginTop8, g.marginBottom20),
-                            value: I,
-                            onChange: _.RS.updateSetting,
-                            children: m.intl.string(m.t.U47N1t),
-                        }),
-                    }),
-                    (0, r.jsx)(d.F, {
-                        setting: p.s6.CHAT_INLINE_MEDIA_UPLOADS,
-                        children: (0, r.jsx)(o.j7V, {
-                            className: a()(g.marginTop8, g.marginBottom20),
-                            value: v,
-                            note: m.intl.formatToPlainString(m.t.qjjvqK, { maxSize: 10 }),
-                            onChange: _.x4.updateSetting,
-                            children: m.intl.string(m.t.VP11Nj),
-                        }),
-                    }),
-                    (0, r.jsx)(d.F, {
-                        setting: p.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
-                        children: (0, r.jsx)(o.j7V, {
-                            className: a()(g.marginTop8, g.marginBottom40),
-                            value: y,
-                            note: m.intl.string(m.t.T0rbtL),
-                            onChange: _.H1.updateSetting,
-                            children: m.intl.string(m.t["w8j+yc"]),
-                        }),
-                    }),
-                ],
-            }),
-            (0, r.jsxs)(d.F, {
-                setting: p.s6.CHAT_EMBEDS,
-                children: [
-                    (0, r.jsx)(o.vwX, {
-                        className: g.marginBottom8,
-                        children: m.intl.string(m.t.PWZOn5),
-                    }),
-                    (0, r.jsx)(d.F, {
-                        setting: p.s6.CHAT_EMBEDS_LINK_PREVIEWS,
-                        children: (0, r.jsx)(o.j7V, {
-                            className: a()(g.marginTop8, g.marginBottom40),
-                            value: T,
-                            onChange: _.NA.updateSetting,
-                            children: m.intl.string(m.t.xX0ZTE),
-                        }),
-                    }),
-                ],
-            }),
-            (0, r.jsxs)(d.F, {
-                setting: p.s6.CHAT_EMOJI,
-                children: [
-                    (0, r.jsx)(o.vwX, {
-                        className: g.marginBottom8,
-                        children: m.intl.string(m.t.sMOuub),
-                    }),
-                    (0, r.jsx)(d.F, {
-                        setting: p.s6.CHAT_EMOJI_REACTIONS,
-                        children: (0, r.jsx)(o.j7V, {
-                            className: a()(g.marginTop8, g.marginBottom20),
+                    (0, r.jsx)(f.F, {
+                        setting: h.s6.CHAT_INLINE_MEDIA_LINKS,
+                        children: (0, r.jsx)(s.j7V, {
+                            className: a()(E.marginTop8, E.marginBottom20),
                             value: S,
-                            onChange: _.nc.updateSetting,
-                            children: m.intl.string(m.t.Iv24sr),
+                            onChange: p.RS.updateSetting,
+                            children: g.intl.string(g.t.U47N1t),
                         }),
                     }),
-                    (0, r.jsx)(d.F, {
-                        setting: p.s6.CHAT_EMOJI_EMOTICONS,
-                        children: (0, r.jsx)(o.j7V, {
-                            className: g.marginBottom40,
+                    (0, r.jsx)(f.F, {
+                        setting: h.s6.CHAT_INLINE_MEDIA_UPLOADS,
+                        children: (0, r.jsx)(s.j7V, {
+                            className: a()(E.marginTop8, E.marginBottom20),
+                            value: I,
+                            note: g.intl.formatToPlainString(g.t.qjjvqK, { maxSize: 10 }),
+                            onChange: p.x4.updateSetting,
+                            children: g.intl.string(g.t.VP11Nj),
+                        }),
+                    }),
+                    (0, r.jsx)(f.F, {
+                        setting: h.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
+                        children: (0, r.jsx)(s.j7V, {
+                            className: a()(E.marginTop8, E.marginBottom40),
                             value: O,
-                            note: c.Z.parse(m.intl.string(m.t["20dvub"])),
-                            onChange: _.ev.updateSetting,
-                            children: m.intl.string(m.t["79qal5"]),
+                            note: g.intl.string(g.t.T0rbtL),
+                            onChange: p.H1.updateSetting,
+                            children: g.intl.string(g.t["w8j+yc"]),
                         }),
                     }),
                 ],
             }),
-            (0, r.jsx)(d.F, {
-                setting: p.s6.CHAT_STICKERS,
-                children: (0, r.jsxs)(o.hjN, {
-                    className: g.marginBottom8,
-                    children: [
-                        (0, r.jsx)(o.vwX, {
-                            className: g.marginBottom8,
-                            children: m.intl.string(m.t["6NtAuL"]),
+            (0, r.jsxs)(f.F, {
+                setting: h.s6.CHAT_EMBEDS,
+                children: [
+                    (0, r.jsx)(s.vwX, {
+                        className: E.marginBottom8,
+                        children: g.intl.string(g.t.PWZOn5),
+                    }),
+                    (0, r.jsx)(f.F, {
+                        setting: h.s6.CHAT_EMBEDS_LINK_PREVIEWS,
+                        children: (0, r.jsx)(s.j7V, {
+                            className: a()(E.marginTop8, E.marginBottom40),
+                            value: T,
+                            onChange: p.NA.updateSetting,
+                            children: g.intl.string(g.t.xX0ZTE),
                         }),
-                        (0, r.jsx)(d.F, {
-                            setting: p.s6.CHAT_STICKERS_AUTOCOMPLETE,
-                            children: (0, r.jsx)(o.j7V, {
-                                className: g.marginBottom40,
+                    }),
+                ],
+            }),
+            (0, r.jsxs)(f.F, {
+                setting: h.s6.CHAT_EMOJI,
+                children: [
+                    (0, r.jsx)(s.vwX, {
+                        className: E.marginBottom8,
+                        children: g.intl.string(g.t.sMOuub),
+                    }),
+                    (0, r.jsx)(f.F, {
+                        setting: h.s6.CHAT_EMOJI_REACTIONS,
+                        children: (0, r.jsx)(s.j7V, {
+                            className: a()(E.marginTop8, E.marginBottom20),
+                            value: A,
+                            onChange: p.nc.updateSetting,
+                            children: g.intl.string(g.t.Iv24sr),
+                        }),
+                    }),
+                    (0, r.jsx)(f.F, {
+                        setting: h.s6.CHAT_EMOJI_EMOTICONS,
+                        children: (0, r.jsx)(s.j7V, {
+                            className: E.marginBottom40,
+                            value: v,
+                            note: u.Z.parse(g.intl.string(g.t["20dvub"])),
+                            onChange: p.ev.updateSetting,
+                            children: g.intl.string(g.t["79qal5"]),
+                        }),
+                    }),
+                ],
+            }),
+            (0, r.jsx)(f.F, {
+                setting: h.s6.CHAT_STICKERS,
+                children: (0, r.jsxs)(s.hjN, {
+                    className: E.marginBottom8,
+                    children: [
+                        (0, r.jsx)(s.vwX, {
+                            className: E.marginBottom8,
+                            children: g.intl.string(g.t["6NtAuL"]),
+                        }),
+                        (0, r.jsx)(f.F, {
+                            setting: h.s6.CHAT_STICKERS_AUTOCOMPLETE,
+                            children: (0, r.jsx)(s.j7V, {
+                                className: E.marginBottom40,
                                 value: e,
-                                note: m.intl.string(m.t["/eVrj4"]),
+                                note: g.intl.string(g.t["/eVrj4"]),
                                 onChange: (e) => {
-                                    f.default.track(h.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+                                    _.default.track(m.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                         enabled: e,
-                                        location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                        location_stack: A,
+                                        location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                        location_stack: C,
                                     }),
-                                        _.fq.updateSetting(e);
+                                        p.fq.updateSetting(e);
                                 },
-                                children: m.intl.string(m.t["29xPVV"]),
+                                children: g.intl.string(g.t["29xPVV"]),
                             }),
                         }),
                     ],
                 }),
             }),
             n &&
-                (0, r.jsx)(d.F, {
-                    setting: p.s6.CHAT_SOUNDMOJI,
-                    children: (0, r.jsxs)(o.hjN, {
-                        className: g.marginBottom8,
+                (0, r.jsx)(f.F, {
+                    setting: h.s6.CHAT_SOUNDMOJI,
+                    children: (0, r.jsxs)(s.hjN, {
+                        className: E.marginBottom8,
                         children: [
-                            (0, r.jsx)(o.vwX, {
-                                className: g.marginBottom8,
-                                children: m.intl.string(m.t.EHlAMT),
+                            (0, r.jsx)(s.vwX, {
+                                className: E.marginBottom8,
+                                children: g.intl.string(g.t.EHlAMT),
                             }),
-                            (0, r.jsx)(d.F, {
-                                setting: p.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
-                                children: (0, r.jsx)(o.j7V, {
-                                    className: g.marginBottom40,
+                            (0, r.jsx)(f.F, {
+                                setting: h.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
+                                children: (0, r.jsx)(s.j7V, {
+                                    className: E.marginBottom40,
                                     value: t,
-                                    note: m.intl.string(m.t.hrSIhI),
+                                    note: g.intl.string(g.t.hrSIhI),
                                     onChange: (e) => {
-                                        f.default.track(h.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                        _.default.track(m.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
                                             checked: e,
-                                            location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                            location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
                                         }),
-                                            _.eR.updateSetting(e);
+                                            p.eR.updateSetting(e);
                                     },
-                                    children: m.intl.string(m.t["CtYr+f"]),
+                                    children: g.intl.string(g.t["CtYr+f"]),
                                 }),
                             }),
                         ],
                     }),
                 }),
-            (0, r.jsx)(d.F, {
-                setting: p.s6.CHAT_TEXT_BOX,
-                children: (0, r.jsxs)(o.hjN, {
-                    className: g.marginBottom8,
+            (0, r.jsx)(f.F, {
+                setting: h.s6.CHAT_TEXT_BOX,
+                children: (0, r.jsxs)(s.hjN, {
+                    className: E.marginBottom8,
                     children: [
-                        (0, r.jsx)(o.vwX, {
-                            className: g.marginBottom8,
-                            children: m.intl.string(m.t.afR0pK),
+                        (0, r.jsx)(s.vwX, {
+                            className: E.marginBottom8,
+                            children: g.intl.string(g.t.afR0pK),
                         }),
-                        (0, r.jsx)(d.F, {
-                            setting: p.s6.CHAT_TEXT_BOX_PREVIEW,
-                            children: (0, r.jsx)(o.j7V, {
-                                className: a()(g.marginTop8, g.marginBottom40),
+                        (0, r.jsx)(f.F, {
+                            setting: h.s6.CHAT_TEXT_BOX_PREVIEW,
+                            children: (0, r.jsx)(s.j7V, {
+                                className: a()(E.marginTop8, E.marginBottom40),
                                 value: i,
                                 onChange: (e) => {
-                                    f.default.track(h.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                                    _.default.track(m.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
-                                        location: { section: h.jXE.SETTINGS_TEXT_AND_IMAGES },
+                                        location: { section: m.jXE.SETTINGS_TEXT_AND_IMAGES },
                                     }),
-                                        _.R$.updateSetting(e);
+                                        p.R$.updateSetting(e);
                                 },
-                                children: m.intl.string(m.t.AqGrEB),
+                                children: g.intl.string(g.t.AqGrEB),
                             }),
                         }),
                     ],
                 }),
             }),
-            (0, r.jsx)(d.F, {
-                setting: p.s6.CHAT_THREADS,
-                children: (0, r.jsxs)(o.hjN, {
-                    className: g.marginBottom40,
+            (0, r.jsx)(f.F, {
+                setting: h.s6.CHAT_THREADS,
+                children: (0, r.jsxs)(s.hjN, {
+                    className: E.marginBottom40,
                     children: [
-                        (0, r.jsx)(o.vwX, {
-                            className: g.marginBottom8,
-                            children: m.intl.string(m.t.B2panJ),
+                        (0, r.jsx)(s.vwX, {
+                            className: E.marginBottom8,
+                            children: g.intl.string(g.t.B2panJ),
                         }),
-                        (0, r.jsx)(d.F, {
-                            setting: p.s6.CHAT_THREADS_SPLIT_VIEW,
-                            children: (0, r.jsx)(o.j7V, {
-                                className: g.marginTop8,
-                                value: b,
-                                onChange: _.vF.updateSetting,
-                                children: m.intl.string(m.t.AInv5u),
+                        (0, r.jsx)(f.F, {
+                            setting: h.s6.CHAT_THREADS_SPLIT_VIEW,
+                            children: (0, r.jsx)(s.j7V, {
+                                className: E.marginTop8,
+                                value: y,
+                                onChange: p.vF.updateSetting,
+                                children: g.intl.string(g.t.AInv5u),
                             }),
                         }),
                     ],
                 }),
             }),
-            (0, r.jsx)(d.F, {
-                setting: p.s6.CHAT_SPOILERS,
-                children: C(),
+            (0, r.jsx)(f.F, {
+                setting: h.s6.CHAT_SPOILERS,
+                children: N(),
             }),
         ],
     });

@@ -23,27 +23,27 @@ function g(e) {
         { selectedPlan: l, selectedSkuId: g, step: y } = (0, h.JL)(),
         {
             setSelectedGiftingPromotionReward: S,
-            selectedGiftingPromotionReward: E,
-            claimableRewards: v,
-            claimableVariants: P,
+            selectedGiftingPromotionReward: v,
+            claimableRewards: E,
+            claimableVariants: O,
         } = (0, _.wD)(),
-        O = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        P = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         [w, I] = i.useState(null),
         k = Math.floor(Math.random() * d.mo),
-        [M, T] = i.useState(k);
+        [M, Z] = i.useState(k);
     i.useEffect(() => {
-        null != v && v.length > 0 && null == E && S(v[0]);
-    }, [v, E, S]),
+        null != E && E.length > 0 && null == v && S(E[0]);
+    }, [E, v, S]),
         s()(null != l, "Expected plan to selected"),
         s()(null != g, "Expected selectedSkuId"),
         s()(null != y, "Step should be set");
-    let Z = i.useMemo(
+    let T = i.useMemo(
             () =>
-                null == P
-                    ? null != v
-                        ? v
+                null == O
+                    ? null != E
+                        ? E
                         : []
-                    : P.flatMap((e) => {
+                    : O.flatMap((e) => {
                           var t, n;
                           return e.variants.length < d.mo
                               ? []
@@ -87,12 +87,12 @@ function g(e) {
                                       }),
                                 t);
                       }),
-            [P, v, M],
+            [O, E, M],
         ),
         A = (e) => {
-            S(Z.find((t) => t.skuId === e)), I(e);
+            S(T.find((t) => t.skuId === e)), I(e);
         },
-        N = Z.map((e) =>
+        N = T.map((e) =>
             (0, r.jsx)(
                 C.c,
                 {
@@ -100,8 +100,8 @@ function g(e) {
                     assetId: e.assetId,
                     productName: e.name,
                     a11yLabel: e.a11yLabel,
-                    claimed: null != v && !v.some((t) => t.skuId === e.skuId),
-                    user: O,
+                    claimed: null != E && !E.some((t) => t.skuId === e.skuId),
+                    user: P,
                     onSelect: A,
                     selectedSkuId: null != w ? w : void 0,
                     category: M,
@@ -114,11 +114,11 @@ function g(e) {
                 className: b.modalFooter,
                 children: (0, r.jsx)(p.y, {
                     onStepChange: (e) => {
-                        null != O &&
-                            null != E &&
+                        null != P &&
+                            null != v &&
                             x.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: O.id,
-                                reward_sku_id: E.skuId,
+                                user_id: P.id,
+                                reward_sku_id: v.skuId,
                             }),
                             t(e);
                     },
@@ -135,12 +135,12 @@ function g(e) {
             color: "header-primary",
             className: b.title,
             children: [
-                L.intl.string(L.t["Rp0+ZG"]),
+                L.intl.string(L.t["3JCuX1"]),
                 (0, r.jsx)(o.Text, {
                     variant: "text-md/normal",
                     color: "text-secondary",
                     className: b.subtitle,
-                    children: L.intl.format(L.t.xGzXNT, { rewardCount: Z.length * d.mo }),
+                    children: L.intl.string(L.t.MhwtRU),
                 }),
             ],
         });
@@ -154,11 +154,11 @@ function g(e) {
                 align: "center",
                 children: [
                     U,
-                    null != P &&
-                        P.length > 1 &&
+                    null != O &&
+                        O.length > 1 &&
                         (0, r.jsx)(c.Z, {
                             defaultCategory: M,
-                            onCategoryChange: T,
+                            onCategoryChange: Z,
                         }),
                 ],
             }),

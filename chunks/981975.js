@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(539854), n(472816), n(794429);
+n.d(t, { Z: () => R }), n(388685), n(539854), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -6,24 +6,25 @@ var r = n(951288),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
-    d = n(481060),
-    u = n(570140),
-    m = n(275759),
-    g = n(313201),
-    p = n(63063),
+    d = n(755721),
+    u = n(481060),
+    m = n(570140),
+    g = n(275759),
+    p = n(313201),
+    f = n(63063),
     h = n(243730),
-    f = n(764260),
-    b = n(946724),
-    x = n(95242),
-    j = n(530198),
+    b = n(764260),
+    x = n(946724),
+    j = n(95242),
+    _ = n(530198),
     v = n(420966),
-    _ = n(203377),
-    O = n(981631),
-    y = n(856651),
-    C = n(388032),
-    N = n(144563),
-    E = n(21321);
-function I(e) {
+    O = n(203377),
+    y = n(981631),
+    C = n(856651),
+    N = n(388032),
+    E = n(144563),
+    I = n(21321);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,60 +49,60 @@ function I(e) {
     }
     return e;
 }
-let S = (0, g.hQ)();
-function T(e, t) {
-    return t !== m.O1.AND
+let T = (0, p.hQ)();
+function P(e, t) {
+    return t !== g.O1.AND
         ? Object.values(o().groupBy(e, (e) => "".concat(e.connectionType, ":").concat(e.applicationId)))
         : 0 === e.length
           ? []
           : [[...e]];
 }
-function P(e) {
+function w(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, r.jsxs)("div", {
-        className: N.headerNoConfigContainer,
+        className: E.headerNoConfigContainer,
         children: [
-            (0, r.jsx)(d.X6q, {
-                className: N.headerHeading,
+            (0, r.jsx)(u.X6q, {
+                className: E.headerHeading,
                 variant: "eyebrow",
-                children: C.intl.string(C.t.nMir29),
+                children: N.intl.string(N.t.nMir29),
             }),
-            (0, r.jsx)(d.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                className: N.headerNoConfigSubtitle,
-                children: C.intl.format(C.t.q5f7tL, {
-                    helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN),
+                className: E.headerNoConfigSubtitle,
+                children: N.intl.format(N.t.q5f7tL, {
+                    helpdeskArticleUrl: f.Z.getArticleURL(y.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
-            (0, r.jsx)(d.zxk, {
+            (0, r.jsx)(u.zxk, {
                 disabled: n,
                 onClick: t,
-                text: C.intl.string(C.t["OSvW5+"]),
+                text: N.intl.string(N.t["OSvW5+"]),
                 fullWidth: !0,
                 variant: "primary",
             }),
         ],
     });
 }
-function w(e) {
+function R(e) {
     let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
-        { headerHeight: g, headerRef: w } = (0, x.Z)(0),
-        { scrolledToTop: R, handleScroll: Z } = (0, v.V)(),
-        D = (0, c.e7)([h.Z], () => {
+        { headerHeight: p, headerRef: R } = (0, j.Z)(0),
+        { scrolledToTop: Z, handleScroll: D } = (0, v.V)(),
+        A = (0, c.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
-        A = (0, c.Wu)([b.Z], () => {
+        L = (0, c.Wu)([x.Z], () => {
             var e;
-            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
-        L = A.length > 1 ? m.O1.OR : m.O1.AND,
-        k = i.useMemo(() => (L === m.O1.OR ? A.flat() : null != A && A.length > 0 ? A[0] : []), [L, A]),
-        M = i.useMemo(() => new Set(k.map((e) => e.connectionType)), [k]);
-    function G(e) {
+        k = L.length > 1 ? g.O1.OR : g.O1.AND,
+        M = i.useMemo(() => (k === g.O1.OR ? L.flat() : null != L && L.length > 0 ? L[0] : []), [k, L]),
+        G = i.useMemo(() => new Set(M.map((e) => e.connectionType)), [M]);
+    function U(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            r = [...k];
+            r = [...M];
         r.push({
             connectionType: e,
             connectionMetadataField: void 0,
@@ -109,94 +110,94 @@ function w(e) {
             operator: void 0,
             value: void 0,
         }),
-            (0, f.d_)(n.id, T(r, L));
+            (0, b.d_)(n.id, P(r, k));
     }
-    function U() {
-        u.Z.dispatch({
+    function B() {
+        m.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
-            onComplete: (e) => G(e),
-            excludedPlatformTypes: M,
+            onComplete: (e) => U(e),
+            excludedPlatformTypes: G,
             integrations: o,
-            onCompleteApplication: (e) => G(y.Kt, e),
+            onCompleteApplication: (e) => U(C.Kt, e),
         });
     }
-    let B = null;
-    if (0 === k.length)
-        B = (0, r.jsx)(P, {
-            handleAddVerificationClicked: U,
+    let F = null;
+    if (0 === M.length)
+        F = (0, r.jsx)(w, {
+            handleAddVerificationClicked: B,
             locked: l,
         });
-    else if (k.length > 0) {
-        var F;
+    else if (M.length > 0) {
+        var H;
         let e = null;
-        k.length < 10 &&
-            (e = (0, r.jsx)(d.zxk, {
+        M.length < 10 &&
+            (e = (0, r.jsx)(u.zxk, {
                 disabled: l,
-                onClick: U,
-                text: C.intl.string(C.t["OSvW5+"]),
-                icon: d.oFk,
+                onClick: B,
+                text: N.intl.string(N.t["OSvW5+"]),
+                icon: u.oFk,
                 fullWidth: !0,
                 variant: "secondary",
             })),
-            (B = (0, r.jsxs)(r.Fragment, {
+            (F = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((F = () => (0, f.d_)(n.id, [])),
+                    ((H = () => (0, b.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)("div", {
-                                className: N.headerTitleContainer,
+                                className: E.headerTitleContainer,
                                 children: [
                                     (0, r.jsx)("div", {
-                                        className: N.headerTitleTextContainer,
-                                        children: (0, r.jsx)(d.X6q, {
+                                        className: E.headerTitleTextContainer,
+                                        children: (0, r.jsx)(u.X6q, {
                                             variant: "eyebrow",
-                                            children: C.intl.string(C.t.nMir29),
+                                            children: N.intl.string(N.t.nMir29),
                                         }),
                                     }),
-                                    (0, r.jsx)(d.Avr, {
+                                    (0, r.jsx)(u.Avr, {
                                         variant: "critical",
-                                        onClick: F,
+                                        onClick: H,
                                         disabled: l,
-                                        text: C.intl.string(C.t.ntW1cX),
+                                        text: N.intl.string(N.t.ntW1cX),
                                         textVariant: "text-sm/semibold",
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(d.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: "text-sm/normal",
-                                children: C.intl.format(C.t.q5f7tL, {
-                                    helpdeskArticleUrl: p.Z.getArticleURL(O.BhN.CONNECTION_DETAILS_ADMIN),
+                                children: N.intl.format(N.t.q5f7tL, {
+                                    helpdeskArticleUrl: f.Z.getArticleURL(y.BhN.CONNECTION_DETAILS_ADMIN),
                                 }),
                             }),
                         ],
                     })),
                     (function (e, t, n, i, l) {
-                        let a = T(i, m.O1.OR);
-                        return (0, r.jsx)(d.xJW, {
-                            className: N.operatorContainer,
-                            title: C.intl.string(C.t.Xs7PHR),
-                            children: (0, r.jsx)(d.FXm, {
+                        let a = P(i, g.O1.OR);
+                        return (0, r.jsx)(u.xJW, {
+                            className: E.operatorContainer,
+                            title: N.intl.string(N.t.Xs7PHR),
+                            children: (0, r.jsx)(d.Gu, {
                                 options: [
                                     {
-                                        name: C.intl.string(C.t["W3iY5+"]),
-                                        value: m.O1.OR,
+                                        name: N.intl.string(N.t["W3iY5+"]),
+                                        value: g.O1.OR,
                                     },
                                     {
-                                        name: C.intl.string(C.t.gHXS9P),
-                                        value: m.O1.AND,
+                                        name: N.intl.string(N.t.gHXS9P),
+                                        value: g.O1.AND,
                                     },
                                 ],
                                 onChange: (e) => l(i, e.value),
                                 value: n,
                                 disabled: e || a.length < 2,
-                                "aria-labelledby": S,
+                                "aria-labelledby": T,
                             }),
                         });
-                    })(l, n.id, L, k, (e, t) => (0, f.d_)(n.id, T(e, t))),
+                    })(l, n.id, k, M, (e, t) => (0, b.d_)(n.id, P(e, t))),
                     (function (e, t, n, i, l) {
                         function a(n, r) {
                             let i = [];
-                            for (let t of e) i.push(I({}, t));
+                            for (let t of e) i.push(S({}, t));
                             if (null == n) {
                                 let t = e[r];
                                 null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value
@@ -253,7 +254,7 @@ function w(e) {
                                               }),
                                         e
                                     );
-                                })(I({}, t[0].configuration), {
+                                })(S({}, t[0].configuration), {
                                     connectionMetadataField: void 0,
                                     operator: void 0,
                                     value: void 0,
@@ -265,10 +266,10 @@ function w(e) {
                             });
                         }
                         return (0, r.jsx)("div", {
-                            className: N.configurationsContainer,
+                            className: E.configurationsContainer,
                             children: Array.from(s.values()).map((e) =>
                                 (0, r.jsx)(
-                                    j.Z,
+                                    _.Z,
                                     {
                                         configurationItems: e,
                                         onConfigurationChange: a,
@@ -279,48 +280,48 @@ function w(e) {
                                 ),
                             ),
                         });
-                    })(k, (e) => (0, f.d_)(n.id, T(e, L)), l, n.id, o),
+                    })(M, (e) => (0, b.d_)(n.id, P(e, k)), l, n.id, o),
                     e,
                 ],
             }));
     }
-    return (0, r.jsx)(d.yWw, {
-        className: N.scroller,
-        style: { scrollPaddingTop: g },
-        onScroll: Z,
+    return (0, r.jsx)(u.yWw, {
+        className: E.scroller,
+        style: { scrollPaddingTop: p },
+        onScroll: D,
         children: (0, r.jsxs)("div", {
-            className: E.contentWidth,
+            className: I.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !R }),
-                    ref: w,
+                    className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !Z }),
+                    ref: R,
                     children: (0, r.jsx)(v.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: _.ZI.VERIFICATIONS,
+                        selectedSection: O.ZI.VERIFICATIONS,
                         setSelectedSection: s,
                     }),
                 }),
-                (null != D ? D : 0) > 0
+                (null != A ? A : 0) > 0
                     ? (0, r.jsxs)("div", {
-                          className: N.warningContainer,
+                          className: E.warningContainer,
                           children: [
-                              (0, r.jsx)(d.Mgn, {
+                              (0, r.jsx)(u.Mgn, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  className: N.warningIcon,
+                                  className: E.warningIcon,
                               }),
-                              (0, r.jsx)(d.Text, {
+                              (0, r.jsx)(u.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
-                                  children: C.intl.string(C.t["2aFeeX"]),
+                                  children: N.intl.string(N.t["2aFeeX"]),
                               }),
                           ],
                       })
                     : null,
-                B,
+                F,
             ],
         }),
     });

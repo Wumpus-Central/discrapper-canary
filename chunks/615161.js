@@ -169,18 +169,20 @@ function C(e, t, n) {
     );
     return (
         i.useEffect(() => {
+            var e, t;
             a.Z.hasPermission(h.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
                 I({
                     type: "set_has_permission",
                     value: e,
                 }),
             ),
-                o.Z.window.getMediaSourceId().then((e) => {
-                    I({
-                        type: "set_discord_source_id",
-                        sourceId: null != e ? e : "",
+                null == (e = (t = o.Z.window).getMediaSourceId) ||
+                    e.call(t).then((e) => {
+                        I({
+                            type: "set_discord_source_id",
+                            sourceId: null != e ? e : "",
+                        });
                     });
-                });
         }, []),
         {
             state: Z,

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(74299),
     v = n(577153),
     I = n(365023),
-    T = n(610394),
-    S = n(825655),
+    S = n(610394),
+    T = n(825655),
     A = n(131951),
     C = n(556296),
     N = n(63063),
@@ -170,7 +170,7 @@ class H extends i.PureComponent {
                                         (0, r.jsx)(
                                             "div",
                                             Z(G({}, e), {
-                                                children: (0, r.jsx)(f.rsf, {
+                                                children: (0, r.jsx)(d.T2, {
                                                     checked: t,
                                                     onChange: this.handleEnableDisable,
                                                 }),
@@ -414,7 +414,7 @@ class Y extends i.PureComponent {
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(S.Z, {
+                                  (0, r.jsx)(T.Z, {
                                       className: j.systemServiceUpsell,
                                       sourcePage: "keybinds",
                                   }),
@@ -533,7 +533,7 @@ class Y extends i.PureComponent {
 function W() {
     let e = (0, c.e7)([C.ZP], () => C.ZP.getState()),
         t = (0, c.e7)([A.Z], () => (0, O.Z)(A.Z)),
-        n = (0, c.e7)([T.ZP], () => T.ZP.isSupported()),
+        n = (0, c.e7)([S.ZP], () => S.ZP.isSupported()),
         i = (0, b.Go)();
     return (0, r.jsx)(Y, {
         keybinds: e,

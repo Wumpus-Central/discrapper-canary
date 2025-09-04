@@ -2,38 +2,43 @@ i.d(e, { default: () => b });
 var n = i(951288),
     r = i(647438),
     s = i(442837),
-    a = i(82659),
-    l = i(481060),
-    c = i(594174),
-    d = i(63063),
+    l = i(82659),
+    a = i(481060),
+    d = i(594174),
+    c = i(63063),
     o = i(86419),
     u = i(778414),
     x = i(872269),
     h = i(228168),
     p = i(388032),
-    g = i(107669);
-function w(t) {
+    w = i(107669);
+function g(t) {
     let { widget: e, user: i } = t;
     return (0, n.jsx)(u.Z, {
         widget: e,
         user: i,
-        isGameFetching: () => !1,
         disableInteraction: !0,
     });
 }
 function b(t) {
-    let { transitionState: e, widget: i, userId: u, onClose: b, trackUserProfileAction: m } = t,
-        v = r.useCallback(() => {
-            (0, o.y8)(i.type), m({ action: "EDIT_ACTION" }), b(), (0, x.L$)(h.qb.WIDGET_REMOVED);
-        }, [i.type, b, m]),
-        f = (0, s.e7)([c.default], () => c.default.getUser(u));
+    let { transitionState: e, widget: i, userId: u, onClose: b, trackUserProfileEditAction: v } = t,
+        E = r.useCallback(() => {
+            (0, o.y8)(i.type),
+                v({
+                    action: "WIDGET_REMOVED",
+                    widgetEdited: i.type,
+                }),
+                b(),
+                (0, x.L$)(h.qb.WIDGET_REMOVED);
+        }, [i.type, b, v]),
+        f = (0, s.e7)([d.default], () => d.default.getUser(u));
     return null == f
         ? null
-        : (0, n.jsxs)(a.Modal, {
+        : (0, n.jsxs)(l.Modal, {
               transitionState: e,
               onClose: b,
               title: p.intl.string(p.t.Mm07YW),
-              subtitle: p.intl.format(p.t["x+djIy"], { helpUrl: d.w }),
+              subtitle: p.intl.format(p.t["x+djIy"], { helpUrl: c.w }),
               actions: [
                   {
                       variant: "secondary",
@@ -43,20 +48,20 @@ function b(t) {
                   {
                       variant: "critical-primary",
                       text: p.intl.string(p.t.Mm07YW),
-                      onClick: v,
+                      onClick: E,
                   },
               ],
               children: [
                   (0, n.jsx)("div", {
-                      className: g.widgetPreview,
-                      children: (0, n.jsx)(w, {
+                      className: w.widgetPreview,
+                      children: (0, n.jsx)(g, {
                           widget: i,
                           user: f,
                       }),
                   }),
                   (0, n.jsx)("div", {
-                      className: g.hintText,
-                      children: (0, n.jsx)(l.Text, {
+                      className: w.hintText,
+                      children: (0, n.jsx)(a.Text, {
                           color: "text-secondary",
                           variant: "text-sm/normal",
                           children: p.intl.string(p.t.bQNGeX),

@@ -4,5 +4,4 @@ e.exports = {
     dragAndDropHitbox: "dragAndDropHitbox__62dd3",
     opacity: "opacity__62dd3",
     isDragging: "isDragging__62dd3",
-    suggestedGames: "suggestedGames__62dd3",
 };

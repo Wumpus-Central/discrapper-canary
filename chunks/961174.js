@@ -1,5 +1,4 @@
 e.exports = {
-    wrapper: "wrapper__4a3a5",
     header: "header__4a3a5",
     secondaryHeader: "secondaryHeader__4a3a5",
     icon: "icon__4a3a5",

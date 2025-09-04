@@ -1,82 +1,69 @@
-n.d(t, { Z: () => O }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    l = n(120356),
-    a = n.n(l),
-    o = n(793030),
-    c = n(442837),
-    s = n(313201),
-    u = n(314897),
-    d = n(556045),
-    f = n(403239),
-    g = n(781040),
-    b = n(840367),
-    p = n(272289),
-    m = n(415734);
-function O(e) {
-    let { userId: t, widget: n, children: l, disableInteraction: O, className: y, index: x } = e,
+r.d(t, { Z: () => p }), r(388685);
+var n = r(951288),
+    i = r(647438),
+    l = r(120356),
+    a = r.n(l),
+    o = r(793030),
+    c = r(442837),
+    s = r(313201),
+    u = r(314897),
+    d = r(403239),
+    f = r(781040),
+    g = r(840367),
+    b = r(415734);
+function p(e) {
+    let { userId: t, widget: r, children: l, disableInteraction: p, className: O, index: y, trailingContent: j } = e,
         v = (0, s.Dt)(),
-        h = (0, c.e7)([u.default], () => u.default.getId() === t),
-        { shouldShowSuggestions: _, handleDismissSuggestions: P } = (0, d.h)(n),
-        w = h && !O && _,
-        I = i.useRef(null),
-        S = i.useRef(null),
-        E = h && null != x && !O,
-        { isDragging: T } = (0, f.q)({
-            dropRef: I,
-            dragRef: S,
+        x = (0, c.e7)([u.default], () => u.default.getId() === t),
+        h = i.useRef(null),
+        w = i.useRef(null),
+        P = x && null != y && !p,
+        { isDragging: S } = (0, d.q)({
+            dropRef: h,
+            dragRef: w,
             userId: t,
-            widget: n,
-            index: x,
-            disableInteraction: !E,
+            widget: r,
+            index: y,
+            disableInteraction: !P,
         }),
-        [N, C] = i.useState(!1);
-    return (0, r.jsx)(j, {
-        ref: I,
-        disableInteraction: !E,
-        onMouseEnter: () => C(!0),
-        onMouseLeave: () => C(!1),
-        children: (0, r.jsxs)("section", {
-            className: a()(m.container, y, { [m.isDragging]: T }),
+        [E, I] = i.useState(!1);
+    return (0, n.jsx)(m, {
+        ref: h,
+        disableInteraction: !P,
+        onMouseEnter: () => I(!0),
+        onMouseLeave: () => I(!1),
+        children: (0, n.jsxs)("section", {
+            className: a()(b.container, O, { [b.isDragging]: S }),
             "aria-labelledby": v,
             children: [
-                E &&
-                    (0, r.jsx)(g.Z, {
-                        buttonRef: S,
-                        widget: n,
-                        className: a()(m.dragHandleButton, { [m.opacity]: N || T }),
+                P &&
+                    (0, n.jsx)(f.Z, {
+                        buttonRef: w,
+                        widget: r,
+                        className: a()(b.dragHandleButton, { [b.opacity]: E || S }),
                     }),
-                (0, r.jsx)(b.Z, {
+                (0, n.jsx)(g.Z, {
                     userId: t,
                     headingId: v,
-                    widget: n,
-                    disableInteraction: O,
+                    widget: r,
+                    disableInteraction: p,
                 }),
-                (0, r.jsxs)(o.y5, {
-                    children: [
-                        l,
-                        w &&
-                            (0, r.jsx)(p.Z, {
-                                userId: t,
-                                widgetType: n.type,
-                                onDismiss: P,
-                                className: m.suggestedGames,
-                            }),
-                    ],
+                (0, n.jsxs)(o.y5, {
+                    children: [l, j],
                 }),
             ],
         }),
     });
 }
-let j = (e) => {
-    let { ref: t, children: n, disableInteraction: i, onMouseEnter: l, onMouseLeave: a } = e;
+let m = (e) => {
+    let { ref: t, children: r, disableInteraction: i, onMouseEnter: l, onMouseLeave: a } = e;
     return i
-        ? n
-        : (0, r.jsx)("div", {
+        ? r
+        : (0, n.jsx)("div", {
               ref: t,
-              className: m.dragAndDropHitbox,
+              className: b.dragAndDropHitbox,
               onMouseEnter: l,
               onMouseLeave: a,
-              children: n,
+              children: r,
           });
 };

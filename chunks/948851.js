@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => c });
 var l = n(951288);
 n(647438);
 var i = n(533800),
@@ -7,44 +7,44 @@ var i = n(533800),
     a = n(971130),
     o = n(388032),
     u = n(337709);
-let d = a.ZP.getMaxAgeOptions,
-    c = a.ZP.getMaxUsesOptions;
-function h(e) {
+let d = a.ZP.getMaxUsesOptions;
+function c(e) {
     var t;
     let {
             shouldHideTemporaryInviteToggle: n,
-            maxAge: a,
+            maxAgeOptions: c,
+            maxAge: g,
             maxUses: h,
-            temporary: g,
-            onGenerateNewLink: m,
-            onToggleTemporary: p,
-            onSelectMaxAge: v,
+            temporary: m,
+            onGenerateNewLink: p,
+            onToggleTemporary: v,
+            onSelectMaxAge: x,
             onSelectMaxUses: I,
-            isGuestInviteCreationToggleEnabled: x,
-            inviteFlags: f,
+            isGuestInviteCreationToggleEnabled: f,
+            inviteFlags: j,
             onSetInviteFlags: N,
         } = e,
-        j = d.find((e) => e.value === a),
-        _ = c.find((e) => e.value === h);
+        _ = a.ZP.getMaxAgeOptionByValue(g),
+        E = d.find((e) => e.value === h);
     return (0, l.jsx)("div", {
         className: u.settingsContent,
         children: (0, l.jsxs)("form", {
-            onSubmit: m,
+            onSubmit: p,
             className: u.settingsForm,
             children: [
                 (0, l.jsx)(r.xJW, {
                     title: o.intl.string(o.t["60qw29"]),
                     children: (0, l.jsx)(r.VcW, {
-                        options: d,
-                        value: null != (t = null == j ? void 0 : j.value) ? t : d[0].value,
-                        onChange: v,
+                        options: c,
+                        value: null != (t = null == _ ? void 0 : _.value) ? t : c[0].value,
+                        onChange: x,
                     }),
                 }),
                 (0, l.jsx)(r.xJW, {
                     title: o.intl.string(o.t.jDqWHR),
                     children: (0, l.jsx)(r.VcW, {
-                        options: c,
-                        value: null == _ ? void 0 : _.value,
+                        options: d,
+                        value: null == E ? void 0 : E.value,
                         onChange: I,
                     }),
                 }),
@@ -52,8 +52,8 @@ function h(e) {
                     (0, l.jsx)(r.xJW, {
                         children: (0, l.jsx)(r.j7V, {
                             className: u.switch,
-                            value: g,
-                            onChange: (e) => p(e),
+                            value: m,
+                            onChange: (e) => v(e),
                             note: o.intl.string(o.t.UN5IRU),
                             hideBorder: !0,
                             children: (0, l.jsx)(r.Text, {
@@ -62,12 +62,12 @@ function h(e) {
                             }),
                         }),
                     }),
-                x &&
+                f &&
                     (0, l.jsx)(r.xJW, {
                         children: (0, l.jsx)(r.j7V, {
                             className: u.switch,
-                            value: (0, s.yE)(f, i.$.IS_GUEST_INVITE),
-                            onChange: (e) => N((0, s.mB)(f, i.$.IS_GUEST_INVITE, e)),
+                            value: (0, s.yE)(j, i.$.IS_GUEST_INVITE),
+                            onChange: (e) => N((0, s.mB)(j, i.$.IS_GUEST_INVITE, e)),
                             note: o.intl.string(o.t["/FeTKy"]),
                             hideBorder: !0,
                             children: (0, l.jsx)(r.Text, {
