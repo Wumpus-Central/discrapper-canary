@@ -40,28 +40,26 @@ class f {
             (this.analyticsId = null),
             (this.documentsIndexed = 0);
     }
-    handleSearchSuccess(e, t, n) {
-        var r;
-        let { analyticsId: i, cursor: a, totalResults: o, doingHistoricalIndex: s, documentsIndexed: l } = e;
-        (this.analyticsId = i),
+    handleSearchSuccess(e, t) {
+        var n;
+        let { analyticsId: r, cursor: i, totalResults: a, doingHistoricalIndex: o, documentsIndexed: s } = e;
+        (this.analyticsId = r),
             (this.isFetching = !1),
             (this.isIndexing = !1),
             (this.isInitialFetchComplete = !0),
-            (this.isHistoricalIndexing = s),
+            (this.isHistoricalIndexing = o),
             (this.error = null),
-            (this.documentsIndexed = l),
-            (this.cursor = a),
-            (this.rawMessages = n);
-        let c = [...(null != (r = this.messages) ? r : [])],
-            u = [];
+            (this.documentsIndexed = s),
+            (this.cursor = i);
+        let l = [...(null != (n = this.messages) ? n : [])],
+            c = [];
         return (
             t.forEach((e) => {
-                this.messageIds.has(e.id) || (this.messageIds.add(e.id), c.push(e), u.push(e));
+                this.messageIds.has(e.id) || (this.messageIds.add(e.id), l.push(e), c.push(e));
             }),
-            (this.messages = c),
-            (this.hasNextPage = null != this.cursor),
-            (this.totalResults = o),
-            u
+            (this.messages = l),
+            (this.totalResults = a),
+            c
         );
     }
     constructor() {
@@ -70,11 +68,9 @@ class f {
             d(this, "isFetching", !1),
             d(this, "analyticsId", null),
             d(this, "error", null),
-            d(this, "rawMessages", null),
             d(this, "messages", null),
             d(this, "documentsIndexed", 0),
             d(this, "totalResults", null),
-            d(this, "hasNextPage", !1),
             d(this, "messageIds", new Set()),
             d(this, "isInitialFetchComplete", !1),
             d(this, "cursor", null);
@@ -115,7 +111,7 @@ function v(e) {
                 let [t] = e;
                 return (0, s.e5)(t);
             });
-        t.handleSearchSuccess(e, n, e.messages).forEach((e) => {
+        t.handleSearchSuccess(e, n).forEach((e) => {
             var t;
             p.set(e.id, e);
             let n = null != (t = h.get(e.id)) ? t : 0;
@@ -201,9 +197,6 @@ class D extends (r = i.ZP.Store) {
     getIsFetching(e) {
         return b(e, (e) => e.isFetching);
     }
-    getHasNextPage(e) {
-        return b(e, (e) => e.hasNextPage);
-    }
     getError(e) {
         return b(e, (e) => e.error);
     }
@@ -215,9 +208,6 @@ class D extends (r = i.ZP.Store) {
     }
     getAnalyticsId(e) {
         return b(e, (e) => e.analyticsId);
-    }
-    getRawMessages(e) {
-        return b(e, (e) => e.rawMessages);
     }
     hasSearchState(e) {
         return _.has(e);

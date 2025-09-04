@@ -1,372 +1,370 @@
-t.d(e, { Z: () => S }), t(35282), t(539854), t(388685);
-var n = t(951288),
-    r = t(647438),
-    l = t(120356),
-    i = t.n(l),
-    s = t(837969),
-    a = t(481060),
-    o = t(904245),
-    g = t(963374),
-    c = t(607070),
-    f = t(933557),
-    v = t(471445),
-    h = t(95398),
-    u = t(905405),
-    d = t(255269),
-    E = t(937889),
-    C = t(804063),
-    B = t(703656),
-    w = t(359110),
-    D = t(695346),
-    M = t(131704),
-    p = t(592125),
-    I = t(430824),
-    H = t(496675),
-    b = t(699516),
-    Q = t(944486),
-    O = t(594174),
-    P = t(607802),
-    V = t(101695),
-    j = t(683101),
-    m = t(981631),
-    T = t(388032),
-    y = t(858283);
-function L(A) {
-    for (var e = 1; e < arguments.length; e++) {
-        var t = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(t);
+n.d(t, { Z: () => k }), n(35282), n(539854), n(388685);
+var r = n(951288),
+    l = n(647438),
+    i = n(120356),
+    a = n.n(i),
+    s = n(837969),
+    o = n(481060),
+    u = n(904245),
+    c = n(963374),
+    d = n(607070),
+    E = n(933557),
+    _ = n(471445),
+    A = n(95398),
+    m = n(905405),
+    T = n(255269),
+    I = n(937889),
+    g = n(804063),
+    f = n(703656),
+    h = n(359110),
+    N = n(695346),
+    O = n(131704),
+    p = n(592125),
+    R = n(430824),
+    S = n(496675),
+    C = n(699516),
+    D = n(944486),
+    L = n(594174),
+    b = n(607802),
+    U = n(101695),
+    v = n(683101),
+    M = n(981631),
+    x = n(388032),
+    P = n(858283);
+function j(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(t).filter(function (A) {
-                    return Object.getOwnPropertyDescriptor(t, A).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (e) {
-                var n;
-                (n = t[e]),
-                    e in A
-                        ? Object.defineProperty(A, e, {
-                              value: n,
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (A[e] = n);
+                        : (e[t] = r);
             });
     }
-    return A;
+    return e;
 }
-function x(A, e) {
+function y(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(A, Object.getOwnPropertyDescriptors(e))
-            : (function (A, e) {
-                  var t = Object.keys(A);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(A);
-                      t.push.apply(t, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return t;
-              })(Object(e)).forEach(function (t) {
-                  Object.defineProperty(A, t, Object.getOwnPropertyDescriptor(e, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        A
+        e
     );
 }
-function N(A) {
-    let { parentChannel: e, onSelectChannel: t } = A;
-    if ((null == e ? void 0 : e.name) == null) return null;
-    let r = null != e ? (0, v.KS)(e) : null;
-    if (null == r) return null;
-    let l = (0, n.jsxs)(n.Fragment, {
+function w(e) {
+    let { parentChannel: t, onSelectChannel: n } = e;
+    if ((null == t ? void 0 : t.name) == null) return null;
+    let l = null != t ? (0, _.KS)(t) : null;
+    if (null == l) return null;
+    let i = (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(r, {
-                className: y.parentChannelNameIcon,
+            (0, r.jsx)(l, {
+                className: P.parentChannelNameIcon,
                 size: "xxs",
                 color: "currentColor",
             }),
-            (0, n.jsx)(a.Text, {
-                className: y.parentChannelNameText,
+            (0, r.jsx)(o.Text, {
+                className: P.parentChannelNameText,
                 variant: "text-xs/medium",
                 color: "header-secondary",
-                children: e.name,
+                children: t.name,
             }),
         ],
     });
-    return (0, M.Em)(e.type)
-        ? (0, n.jsx)(a.P3F, {
-              className: i()(y.parentChannelName, y.parentChannelNameClickable),
-              onClick: (A) => {
-                  A.stopPropagation(), t(e.id);
+    return (0, O.Em)(t.type)
+        ? (0, r.jsx)(o.P3F, {
+              className: a()(P.parentChannelName, P.parentChannelNameClickable),
+              onClick: (e) => {
+                  e.stopPropagation(), n(t.id);
               },
-              children: l,
+              children: i,
           })
-        : (0, n.jsx)("div", {
-              className: y.parentChannelName,
-              children: l,
+        : (0, r.jsx)("div", {
+              className: P.parentChannelName,
+              children: i,
           });
 }
-function Z(A) {
-    var e, t, l;
+function G(e) {
+    var t, n, i;
     let {
-            channel: i,
-            results: s,
-            highlighter: o,
-            startIndex: g,
-            resultRefs: c,
-            totalResults: C,
-            scrollTo: B,
-            renderEmbeds: M,
-            offset: P,
-            jumpToMessage: V,
-            listNavigator: T,
-            favoriteSearch: Z,
-        } = A,
-        S = D.cC.useSetting(),
-        R = (0, u.p)(),
-        G = r.useCallback((A) => {
-            if (A === Q.Z.getChannelId()) return;
-            let e = p.Z.getChannel(A);
-            null != e && (H.Z.can(m.Plq.VIEW_CHANNEL, e) || e.isPrivate()) && (0, w.Kh)(e.id);
+            channel: a,
+            messages: s,
+            highlighter: u,
+            startIndex: c,
+            resultRefs: d,
+            totalResults: g,
+            scrollTo: f,
+            renderEmbeds: O,
+            offset: b,
+            jumpToMessage: U,
+            listNavigator: x,
+            favoriteSearch: G,
+        } = e,
+        k = N.cC.useSetting(),
+        F = (0, m.p)(),
+        Z = l.useCallback((e) => {
+            if (e === D.Z.getChannelId()) return;
+            let t = p.Z.getChannel(e);
+            null != t && (S.Z.can(M.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.Kh)(t.id);
         }, []),
-        U = null != i ? (0, f.F6)(i, O.default, b.Z, !1) : "???",
-        F = Z && null != i.guild_id ? (null == (e = I.Z.getGuild(i.guild_id)) ? void 0 : e.name) : null,
-        k = (null == i ? void 0 : i.parent_id) != null ? p.Z.getChannel(i.parent_id) : null,
-        X = null != (t = null == k ? void 0 : k.name) ? t : null,
-        z = null != (l = (0, v.KS)(i)) ? l : a.VL1,
-        K = H.Z.can(m.Plq.MANAGE_MESSAGES, i),
-        { content: Y } = (0, E.ZP)(
+        z = null != a ? (0, E.F6)(a, L.default, C.Z, !1) : "???",
+        B = G && null != a.guild_id ? (null == (t = R.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
+        V = (null == a ? void 0 : a.parent_id) != null ? p.Z.getChannel(a.parent_id) : null,
+        H = null != (n = null == V ? void 0 : V.name) ? n : null,
+        K = null != (i = (0, _.KS)(a)) ? i : o.VL1,
+        W = S.Z.can(M.Plq.MANAGE_MESSAGES, a),
+        { content: q } = (0, I.ZP)(
             {
-                content: U,
+                content: z,
                 embeds: [],
             },
             {
-                postProcessor: o,
-                shouldFilterKeywords: R,
+                postProcessor: u,
+                shouldFilterKeywords: F,
             },
         ),
-        W = r.useRef(null),
-        [J, q] = r.useState(!1);
-    r.useEffect(() => {
-        let A = W.current;
-        null != A && null != A.offsetWidth && null != A.scrollWidth && q(A.offsetWidth < A.scrollWidth);
+        Y = l.useRef(null),
+        [J, X] = l.useState(!1);
+    l.useEffect(() => {
+        let e = Y.current;
+        null != e && null != e.offsetWidth && null != e.scrollWidth && X(e.offsetWidth < e.scrollWidth);
     }, []);
-    let _ = [U, X, F].filter((A) => null != A).join(", ");
-    return (0, n.jsx)(h.aQ.Provider, {
-        value: (0, d.Z)(S, K),
-        children: (0, n.jsxs)("ul", {
+    let Q = [z, H, B].filter((e) => null != e).join(", ");
+    return (0, r.jsx)(A.aQ.Provider, {
+        value: (0, T.Z)(k, W),
+        children: (0, r.jsxs)("ul", {
             role: "group",
-            className: y.searchResultGroup,
-            "aria-label": _,
+            className: P.searchResultGroup,
+            "aria-label": Q,
             children: [
-                (0, n.jsx)(a.P3F, {
-                    onClick: () => G(i.id),
-                    children: (0, n.jsxs)("div", {
-                        className: y.channelNameContainer,
+                (0, r.jsx)(o.P3F, {
+                    onClick: () => Z(a.id),
+                    children: (0, r.jsxs)("div", {
+                        className: P.channelNameContainer,
                         children: [
-                            (0, n.jsx)(z, {
-                                className: y.channelNameIcon,
+                            (0, r.jsx)(K, {
+                                className: P.channelNameIcon,
                                 size: "xs",
                                 color: "currentColor",
                             }),
-                            (0, n.jsx)(a.ua7, {
-                                text: U,
+                            (0, r.jsx)(o.ua7, {
+                                text: z,
                                 shouldShow: J,
-                                children: (A) =>
-                                    (0, n.jsxs)(
+                                children: (e) =>
+                                    (0, r.jsxs)(
                                         "span",
-                                        x(L({}, A), {
-                                            ref: W,
-                                            className: y.channelNameText,
-                                            children: [Z && null !== F && "".concat(F, " : "), Y],
+                                        y(j({}, e), {
+                                            ref: Y,
+                                            className: P.channelNameText,
+                                            children: [G && null !== B && "".concat(B, " : "), q],
                                         }),
                                     ),
                             }),
-                            (0, n.jsx)(N, {
-                                parentChannel: k,
-                                onSelectChannel: G,
+                            (0, r.jsx)(w, {
+                                parentChannel: V,
+                                onSelectChannel: Z,
                             }),
                         ],
                     }),
                 }),
-                s.map((A, e) => {
-                    let t = g + e;
-                    return (0, n.jsx)(
-                        j.Z,
+                s.map((e, t) => {
+                    let n = c + t;
+                    return (0, r.jsx)(
+                        v.Z,
                         {
-                            ref: (A) => {
-                                c.current[t] = A;
+                            ref: (e) => {
+                                d.current[n] = e;
                             },
-                            totalResults: C,
-                            scrollTo: B,
-                            renderEmbeds: M,
-                            searchOffset: P,
+                            totalResults: g,
+                            scrollTo: f,
+                            renderEmbeds: O,
+                            searchOffset: b,
                             pageResultsLength: s.length,
-                            result: A,
-                            index: t,
-                            onJump: V,
-                            listItemProps: T.getItemProps({ index: t }),
+                            message: e,
+                            index: n,
+                            onJump: U,
+                            listItemProps: x.getItemProps({ index: n }),
                         },
-                        "search-result-".concat(t),
+                        "search-result-".concat(n),
                     );
                 }),
             ],
         }),
     });
 }
-let S = r.memo(function (A) {
-    var e;
+let k = l.memo(function (e) {
+    var t;
     let {
-            search: t,
-            renderEmbeds: l,
-            scrollTo: i,
-            searchResults: f,
-            blockCount: v,
-            ignoreCount: h,
-            onPageChange: u,
-            onClick: d,
-            paginationTotalCount: E,
-            renderPageWrapper: w,
-            onBlockedResultsClick: D,
-            searchRequestAnalyticsId: M,
-            searchResultsQuery: I,
-            isFavoritesSearch: H,
-        } = A,
-        { offset: Q, totalResults: O, isSearching: j, showBlockedResults: N } = t,
-        S = r.useCallback(
-            (A, e) => {
-                if ((null == d || d(A, e), (0, C.Z)(A))) {
-                    let e = p.Z.getChannel(A.channel_id),
-                        t = null != e ? e.getGuildId() : null;
-                    o.Z.trackJump(A.channel_id, A.id, "Search Results", { search_id: M }),
-                        (0, B.uL)(m.Z5c.CHANNEL(t, A.channel_id, A.id));
+            search: n,
+            renderEmbeds: i,
+            scrollTo: a,
+            messages: E,
+            blockCount: _,
+            ignoreCount: A,
+            onPageChange: m,
+            onClick: T,
+            paginationTotalCount: I,
+            renderPageWrapper: h,
+            onBlockedResultsClick: N,
+            searchRequestAnalyticsId: O,
+            searchResultsQuery: R,
+            isFavoritesSearch: S,
+        } = e,
+        { offset: D, totalResults: L, isSearching: v, showBlockedResults: w } = n,
+        k = l.useCallback(
+            (e, t) => {
+                if ((null == T || T(e, t), (0, g.Z)(e))) {
+                    let t = p.Z.getChannel(e.channel_id),
+                        n = null != t ? t.getGuildId() : null;
+                    u.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: O }),
+                        (0, f.uL)(M.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
-            [d, M],
+            [T, O],
         ),
-        R = r.useMemo(() => {
-            let A;
-            if (null == f) return [];
-            let e = 0;
-            return f.reduce((t, n) => {
-                let r = n.find((A) => A.isSearchHit);
-                if (!N && null != r && (b.Z.isBlockedForMessage(r) || b.Z.isIgnoredForMessage(r))) return t;
-                let l = p.Z.getChannel(n[0].channel_id);
+        F = l.useMemo(() => {
+            let e,
+                t = 0;
+            return E.reduce((n, r) => {
+                if (!w && (C.Z.isBlockedForMessage(r) || C.Z.isIgnoredForMessage(r))) return n;
+                let l = p.Z.getChannel(r.channel_id);
                 return (
                     null == l ||
-                        ((null == A || A !== l.id) &&
-                            t.push({
+                        ((null == e || e !== l.id) &&
+                            n.push({
                                 channel: l,
-                                results: [],
-                                startIndex: e,
+                                messages: [],
+                                startIndex: t,
                             }),
-                        (e += 1),
-                        t[t.length - 1].results.push(n),
-                        (A = null == l ? void 0 : l.id)),
-                    t
+                        (t += 1),
+                        n[n.length - 1].messages.push(r),
+                        (e = null == l ? void 0 : l.id)),
+                    n
                 );
             }, []);
-        }, [f, N]),
-        G = r.useRef([]),
-        U = R.reduce((A, e) => A + 1 + e.results.length, 0),
-        F = r.useCallback(
-            (A, e) => {
-                if (!c.Z.keyboardModeEnabled) return;
-                let t = G.current,
-                    n = null != e ? t[e] : void 0;
-                if (null == n || null == n.hitRef.current) return;
-                let r = n.hitRef.current.getClientRects()[0];
-                i(r.top - 0.5 * r.height, !1, () => {
-                    var e;
-                    null == (e = document.getElementById(A)) || e.focus();
+        }, [E, w]),
+        Z = l.useRef([]),
+        z = F.reduce((e, t) => e + 1 + t.messages.length, 0),
+        B = l.useCallback(
+            (e, t) => {
+                if (!d.Z.keyboardModeEnabled) return;
+                let n = Z.current,
+                    r = null != t ? n[t] : void 0;
+                if (null == r || null == r.hitRef.current) return;
+                let l = r.hitRef.current.getClientRects()[0];
+                a(l.top - 0.5 * l.height, !1, () => {
+                    var t;
+                    null == (t = document.getElementById(e)) || t.focus();
                 });
             },
-            [i],
+            [a],
         ),
-        k = r.useCallback((A) => {
-            let e = G.current[A];
-            null == e || e.jumpTo();
+        V = l.useCallback((e) => {
+            let t = Z.current[e];
+            null == t || t.jumpTo();
         }, []),
-        X = (0, s.ZP)({
+        H = (0, s.ZP)({
             navId: "search-results",
-            itemCount: U,
+            itemCount: z,
             focusedIndex: 0,
-            setFocus: F,
-            onSelect: k,
+            setFocus: B,
+            onSelect: V,
         }),
-        z = (0, g.nC)(null != (e = (0, P.UP)(I)) ? e : ""),
-        K = R.map((A) => {
-            let { channel: e, results: t, startIndex: r } = A;
-            return (0, n.jsx)(
-                Z,
+        K = (0, c.nC)(null != (t = (0, b.UP)(R)) ? t : ""),
+        W = F.map((e) => {
+            let { channel: t, messages: n, startIndex: l } = e;
+            return (0, r.jsx)(
+                G,
                 {
-                    channel: e,
-                    results: t,
-                    highlighter: z,
-                    startIndex: r,
-                    resultRefs: G,
-                    totalResults: O,
-                    scrollTo: i,
-                    renderEmbeds: l,
-                    offset: Q,
-                    jumpToMessage: S,
-                    listNavigator: X,
-                    favoriteSearch: null != H && H,
+                    channel: t,
+                    messages: n,
+                    highlighter: K,
+                    startIndex: l,
+                    resultRefs: Z,
+                    totalResults: L,
+                    scrollTo: a,
+                    renderEmbeds: i,
+                    offset: D,
+                    jumpToMessage: k,
+                    listNavigator: H,
+                    favoriteSearch: null != S && S,
                 },
-                "".concat(e.id, "-").concat(r),
+                "".concat(t.id, "-").concat(l),
             );
         });
-    K.push();
-    let Y = r.useRef(null);
-    r.useLayoutEffect(() => {
-        var A;
-        null == (A = Y.current) || A.focus();
-    }, [f]);
-    let W = (0, a.mFp)();
-    return (0, n.jsxs)(n.Fragment, {
+    W.push();
+    let q = l.useRef(null);
+    l.useLayoutEffect(() => {
+        var e;
+        null == (e = q.current) || e.focus();
+    }, [E]);
+    let Y = (0, o.mFp)();
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(
+            (0, r.jsx)(
                 "div",
-                x(L({ ref: Y }, X.getContainerProps(), W), {
-                    "aria-busy": j,
-                    children: K,
+                y(j({ ref: q }, H.getContainerProps(), Y), {
+                    "aria-busy": v,
+                    children: W,
                 }),
             ),
-            v > 0 || h > 0
-                ? (0, n.jsxs)(a.P3F, {
+            _ > 0 || A > 0
+                ? (0, r.jsxs)(o.P3F, {
                       tag: "div",
-                      className: y.resultsBlocked,
+                      className: P.resultsBlocked,
                       onClick: () => {
-                          null == D || D(!N);
+                          null == N || N(!w);
                       },
                       children: [
-                          (0, n.jsx)("div", { className: y.resultsBlockedImage }),
-                          (0, n.jsx)("div", {
-                              className: y.__invalid_resultsBlockedText,
-                              children: N
-                                  ? v > 0 && h > 0
-                                      ? T.intl.formatToPlainString(T.t["OvJs9/"], { count: v + h })
-                                      : v > 0
-                                        ? T.intl.formatToPlainString(T.t["n/1QFR"], { count: v })
-                                        : T.intl.formatToPlainString(T.t.ypezTE, { count: h })
-                                  : v > 0 && h > 0
-                                    ? T.intl.formatToPlainString(T.t.EJHRcX, { count: v + h })
-                                    : v > 0
-                                      ? T.intl.formatToPlainString(T.t.HTE8JC, { count: v })
-                                      : T.intl.formatToPlainString(T.t.e7f8r6, { count: h }),
+                          (0, r.jsx)("div", { className: P.resultsBlockedImage }),
+                          (0, r.jsx)("div", {
+                              className: P.__invalid_resultsBlockedText,
+                              children: w
+                                  ? _ > 0 && A > 0
+                                      ? x.intl.formatToPlainString(x.t["OvJs9/"], { count: _ + A })
+                                      : _ > 0
+                                        ? x.intl.formatToPlainString(x.t["n/1QFR"], { count: _ })
+                                        : x.intl.formatToPlainString(x.t.ypezTE, { count: A })
+                                  : _ > 0 && A > 0
+                                    ? x.intl.formatToPlainString(x.t.EJHRcX, { count: _ + A })
+                                    : _ > 0
+                                      ? x.intl.formatToPlainString(x.t.HTE8JC, { count: _ })
+                                      : x.intl.formatToPlainString(x.t.e7f8r6, { count: A }),
                           }),
                       ],
                   })
                 : null,
-            !j &&
-                !H &&
-                (0, n.jsx)(V.Z, {
-                    renderPageWrapper: w,
-                    onPageChange: u,
-                    offset: Q,
-                    totalCount: null != E ? E : O,
-                    pageSize: m.vpv,
+            !v &&
+                !S &&
+                (0, r.jsx)(U.Z, {
+                    renderPageWrapper: h,
+                    onPageChange: m,
+                    offset: D,
+                    totalCount: null != I ? I : L,
+                    pageSize: M.vpv,
                 }),
         ],
     });

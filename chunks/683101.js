@@ -1,113 +1,109 @@
-t.d(e, { Z: () => E }), t(388685);
-var n = t(951288),
-    r = t(647438),
-    l = t(392711),
-    i = t.n(l),
-    s = t(374470),
-    a = t(481060),
-    o = t(239091),
-    g = t(294218),
-    c = t(592125),
-    f = t(388032),
-    v = t(374815);
-function h(A, e, t) {
+n.d(t, { Z: () => m }), n(388685);
+var r = n(951288),
+    l = n(647438),
+    i = n(374470),
+    a = n(481060),
+    s = n(239091),
+    o = n(294218),
+    u = n(592125),
+    c = n(388032),
+    d = n(374815);
+function E(e, t, n) {
     return (
-        e in A
-            ? Object.defineProperty(A, e, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (A[e] = t),
-        A
+            : (e[t] = n),
+        e
     );
 }
-function u(A) {
-    for (var e = 1; e < arguments.length; e++) {
-        var t = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(t);
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(t).filter(function (A) {
-                    return Object.getOwnPropertyDescriptor(t, A).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (e) {
-                h(A, e, t[e]);
+            r.forEach(function (t) {
+                E(e, t, n[t]);
             });
     }
-    return A;
+    return e;
 }
-function d(A, e) {
+function A(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(A, Object.getOwnPropertyDescriptors(e))
-            : (function (A, e) {
-                  var t = Object.keys(A);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(A);
-                      t.push.apply(t, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return t;
-              })(Object(e)).forEach(function (t) {
-                  Object.defineProperty(A, t, Object.getOwnPropertyDescriptor(e, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        A
+        e
     );
 }
-class E extends r.PureComponent {
+class m extends l.PureComponent {
     render() {
-        let { result: A, listItemProps: e, searchOffset: t, index: r, totalResults: l } = this.props,
-            s = i().find(A, (A) => A.isSearchHit);
+        let { message: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
+            s = u.Z.getChannel(e.channel_id);
         if (null == s) return null;
-        let o = c.Z.getChannel(s.channel_id);
-        if (null == o) return null;
-        let h = "search-result-".concat(s.id);
-        return (0, n.jsx)(a.tEY, {
+        let E = "search-result-".concat(e.id);
+        return (0, r.jsx)(a.tEY, {
             ringTarget: this.hitRef,
-            ringClassName: v.__invalid_searchResultFocusRing,
+            ringClassName: d.__invalid_searchResultFocusRing,
             offset: 4,
-            children: (0, n.jsxs)(
+            children: (0, r.jsxs)(
                 "li",
-                d(u({ className: v.container }, e), {
-                    "aria-posinset": 1 + t + r,
-                    "aria-setsize": l,
-                    "aria-labelledby": h,
+                A(_({ className: d.container }, t), {
+                    "aria-posinset": 1 + n + l,
+                    "aria-setsize": i,
+                    "aria-labelledby": E,
                     children: [
-                        (0, n.jsx)(a.P3F, {
+                        (0, r.jsx)(a.P3F, {
                             tabIndex: -1,
                             onClick: this.handleMessageClick,
                             innerRef: this.containerRef,
-                            className: v.searchResult,
+                            className: d.searchResult,
                             focusProps: { enabled: !1 },
-                            children: (0, n.jsx)(
+                            children: (0, r.jsx)(
                                 "div",
                                 {
                                     ref: this.hitRef,
-                                    className: v.message,
-                                    children: (0, n.jsx)(g.Z, {
-                                        id: h,
-                                        message: s,
-                                        channel: o,
-                                        onContextMenu: (A) => this.handleContextMenu(A, s),
+                                    className: d.message,
+                                    children: (0, r.jsx)(o.Z, {
+                                        id: E,
+                                        message: e,
+                                        channel: s,
+                                        onContextMenu: (t) => this.handleContextMenu(t, e),
                                         animateAvatar: !1,
                                         subscribeToComponentDispatch: !1,
                                         trackAnnouncementViews: !0,
                                         isSearchResult: !0,
                                     }),
                                 },
-                                s.id,
+                                e.id,
                             ),
                         }),
-                        (0, n.jsx)("div", {
-                            className: v.buttonsContainer,
+                        (0, r.jsx)("div", {
+                            className: d.buttonsContainer,
                             "aria-hidden": !0,
-                            children: (0, n.jsx)(a.P3F, {
-                                className: v.button,
+                            children: (0, r.jsx)(a.P3F, {
+                                className: d.button,
                                 onClick: this.jumpTo,
-                                children: f.intl.string(f.t.k5WiPT),
+                                children: c.intl.string(c.t.k5WiPT),
                             }),
                         }),
                     ],
@@ -115,51 +111,50 @@ class E extends r.PureComponent {
             ),
         });
     }
-    constructor(...A) {
-        super(...A),
-            h(this, "containerRef", r.createRef()),
-            h(this, "hitRef", r.createRef()),
-            h(this, "handleContextMenu", (A, e) => {
-                let r = c.Z.getChannel(e.channel_id);
-                null != r &&
-                    (A.stopPropagation(),
-                    (0, o.jW)(A, async () => {
-                        let { default: A } = await Promise.all([t.e("76676"), t.e("93077"), t.e("69363")]).then(
-                            t.bind(t, 858341),
+    constructor(...e) {
+        super(...e),
+            E(this, "containerRef", l.createRef()),
+            E(this, "hitRef", l.createRef()),
+            E(this, "handleContextMenu", (e, t) => {
+                let l = u.Z.getChannel(t.channel_id);
+                null != l &&
+                    (e.stopPropagation(),
+                    (0, s.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e("76676"), n.e("93077"), n.e("69363")]).then(
+                            n.bind(n, 858341),
                         );
-                        return (t) =>
-                            (0, n.jsx)(
-                                A,
-                                d(u({}, t), {
-                                    message: e,
-                                    channel: r,
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                A(_({}, n), {
+                                    message: t,
+                                    channel: l,
                                 }),
                             );
                     }));
             }),
-            h(this, "jumpTo", (A) => {
-                null != A && (A.preventDefault(), A.stopPropagation());
-                let { onJump: e, result: t, index: n } = this.props,
-                    r = t.find((A) => A.isSearchHit);
-                null != r && e(r, n);
+            E(this, "jumpTo", (e) => {
+                null != e && (e.preventDefault(), e.stopPropagation());
+                let { onJump: t, message: n, index: r } = this.props;
+                null != n && t(n, r);
             }),
-            h(this, "handleMessageClick", (A) => {
+            E(this, "handleMessageClick", (e) => {
                 if (
-                    (function (A, e) {
-                        var t;
-                        let n = null == (t = window) ? void 0 : t.getSelection();
-                        if (null != n && !n.isCollapsed) return !0;
-                        if (null == A || null == e) return !1;
-                        for (; (0, s.k)(A) && A !== e; ) {
-                            let { tagName: e } = A;
-                            if ("A" === e || "IMG" === e || "BUTTON" === e) return !0;
-                            A = A.parentNode;
+                    (function (e, t) {
+                        var n;
+                        let r = null == (n = window) ? void 0 : n.getSelection();
+                        if (null != r && !r.isCollapsed) return !0;
+                        if (null == e || null == t) return !1;
+                        for (; (0, i.k)(e) && e !== t; ) {
+                            let { tagName: t } = e;
+                            if ("A" === t || "IMG" === t || "BUTTON" === t) return !0;
+                            e = e.parentNode;
                         }
                         return !1;
-                    })(A.target, this.containerRef.current)
+                    })(e.target, this.containerRef.current)
                 )
-                    return void A.stopPropagation();
-                this.jumpTo(A);
+                    return void e.stopPropagation();
+                this.jumpTo(e);
             });
     }
 }

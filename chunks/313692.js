@@ -1,195 +1,196 @@
-t.d(e, { Z: () => b }), t(388685);
-var n = t(951288),
-    r = t(647438),
-    l = t(120356),
-    i = t.n(l),
-    s = t(392711),
-    a = t(399606),
-    o = t(481060),
-    g = t(493773),
-    c = t(963374),
-    f = t(735020),
-    v = t(786761),
-    h = t(937889),
-    u = t(619753),
-    d = t(433355),
-    E = t(271383),
-    C = t(594174),
-    B = t(189432),
-    w = t(356778),
-    D = t(370595),
-    M = t(50493),
-    p = t(981631),
-    I = t(87819),
-    H = t(125134);
-function b(A) {
-    var e, t;
-    let { userId: l, guildId: b, location: Q, className: O, onNavigate: P } = A,
-        V = r.useRef(null),
-        j = (0, a.e7)([d.ZP], () => d.ZP.getGuildSidebarState(b), [b]),
-        m = r.useRef(0),
-        [T, y] = r.useState(null != (e = null == j ? void 0 : j.details.additionalSearchQuery) ? e : {}),
-        L = (0, w.z0)(l, b, {
-            addtionalQuery: T,
+n.d(t, { Z: () => D }), n(388685);
+var r = n(951288),
+    l = n(647438),
+    i = n(120356),
+    a = n.n(i),
+    s = n(392711),
+    o = n(399606),
+    u = n(481060),
+    c = n(493773),
+    d = n(963374),
+    E = n(735020),
+    _ = n(786761),
+    A = n(937889),
+    m = n(619753),
+    T = n(23750),
+    I = n(433355),
+    g = n(271383),
+    f = n(594174),
+    h = n(189432),
+    N = n(356778),
+    O = n(370595),
+    p = n(50493),
+    R = n(981631),
+    S = n(87819),
+    C = n(125134);
+function D(e) {
+    var t, n;
+    let { userId: i, guildId: D, location: L, className: b, onNavigate: U } = e,
+        v = l.useRef(null),
+        M = (0, o.e7)([I.ZP], () => I.ZP.getGuildSidebarState(D), [D]),
+        x = l.useRef(0),
+        [P, j] = l.useState(null != (t = null == M ? void 0 : M.details.additionalSearchQuery) ? t : {}),
+        y = (0, N.z0)(i, D, {
+            addtionalQuery: P,
             shouldDispatch: !0,
         }),
-        x = (0, a.e7)([C.default], () => C.default.getUser(l), [l]),
-        N = (0, a.e7)([E.ZP], () => E.ZP.getMember(b, l), [b, l]);
-    (0, g.Ng)(() => {
-        let A = null == j ? void 0 : j.details.scrollOffset;
-        if (null != A) {
-            var e;
-            null == (e = V.current) ||
-                e.scrollTo({
-                    to: A,
+        w = (0, o.e7)([f.default], () => f.default.getUser(i), [i]),
+        G = (0, o.e7)([g.ZP], () => g.ZP.getMember(D, i), [D, i]);
+    (0, c.Ng)(() => {
+        let e = null == M ? void 0 : M.details.scrollOffset;
+        if (null != e) {
+            var t;
+            null == (t = v.current) ||
+                t.scrollTo({
+                    to: e,
                     animate: !1,
                 });
         }
     });
-    let Z = r.useCallback(
-            (A) => {
-                null != j &&
-                    ((m.current = A.target.scrollTop),
-                    (0, B.r)(b, l, j.baseChannelId, {
-                        modViewPanel: M.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: T,
-                        scrollOffset: m.current,
+    let k = l.useCallback(
+            (e) => {
+                null != M &&
+                    ((x.current = e.target.scrollTop),
+                    (0, h.r)(D, i, M.baseChannelId, {
+                        modViewPanel: p.k.MESSAGE_HISTORY,
+                        additionalSearchQuery: P,
+                        scrollOffset: x.current,
                     }));
             },
-            [b, l, j, T],
+            [D, i, M, P],
         ),
-        S = (0, s.throttle)(Z, 300),
-        R = r.useCallback(
-            (A) => {
-                var e, t;
-                if (null == j) return;
-                let n =
-                    ((e = (function (A) {
-                        for (var e = 1; e < arguments.length; e++) {
-                            var t = null != arguments[e] ? arguments[e] : {},
-                                n = Object.keys(t);
+        F = (0, s.throttle)(k, 300),
+        Z = l.useCallback(
+            (e) => {
+                var t, n;
+                if (null == M) return;
+                let r =
+                    ((t = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(t).filter(function (A) {
-                                        return Object.getOwnPropertyDescriptor(t, A).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     }),
                                 )),
-                                n.forEach(function (e) {
-                                    var n;
-                                    (n = t[e]),
-                                        e in A
-                                            ? Object.defineProperty(A, e, {
-                                                  value: n,
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (A[e] = n);
+                                            : (e[t] = r);
                                 });
                         }
-                        return A;
-                    })({}, T)),
-                    (t = t = { offset: 25 * A }),
+                        return e;
+                    })({}, P)),
+                    (n = n = { offset: 25 * e }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                        : (function (A, e) {
-                              var t = Object.keys(A);
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(A);
-                                  t.push.apply(t, n);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
-                              return t;
-                          })(Object(t)).forEach(function (A) {
-                              Object.defineProperty(e, A, Object.getOwnPropertyDescriptor(t, A));
+                              return n;
+                          })(Object(n)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    e);
-                y(n),
-                    (0, B.r)(b, l, j.baseChannelId, {
-                        modViewPanel: M.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: n,
-                        scrollOffset: m.current,
+                    t);
+                j(r),
+                    (0, h.r)(D, i, M.baseChannelId, {
+                        modViewPanel: p.k.MESSAGE_HISTORY,
+                        additionalSearchQuery: r,
+                        scrollOffset: x.current,
                     });
             },
-            [b, l, j, T],
+            [D, i, M, P],
         ),
-        G = null != (t = null == T ? void 0 : T.offset) ? t : 0,
-        U = (0, a.e7)([f.Z], () => {
-            if (null == L.result) return [];
-            let A = L.result.messages,
-                e = (0, c.nC)("");
-            return A.map((A) =>
-                A.map((A) => {
-                    let t = f.Z.getMessage(A.id, A.channel_id),
-                        n = (0, v.e5)(A);
+        z = null != (n = null == P ? void 0 : P.offset) ? n : 0,
+        B = (0, o.e7)([E.Z], () => {
+            if (null == y.result) return [];
+            let e = (0, d.nC)("");
+            return y.result.messages
+                .map((e) => {
+                    let [t] = e;
+                    return (0, _.e5)(t);
+                })
+                .map((t) => {
+                    let n = E.Z.getMessage(t.id, t.channel_id),
+                        r = new T.ZP(t);
                     return (
-                        null != t &&
-                            (n = n.merge({
-                                attachments: t.attachments,
-                                embeds: t.embeds,
+                        null != n &&
+                            (r = r.merge({
+                                attachments: n.attachments,
+                                embeds: n.embeds,
                             })),
-                        n.isSearchHit
-                            ? n.set(
-                                  "customRenderedContent",
-                                  (0, h.ZP)(n, {
-                                      postProcessor: e,
-                                      allowHeading: !0,
-                                      allowList: !0,
-                                  }),
-                              )
-                            : n
+                        (r = r.set(
+                            "customRenderedContent",
+                            (0, A.ZP)(r, {
+                                postProcessor: e,
+                                allowHeading: !0,
+                                allowList: !0,
+                            }),
+                        ))
                     );
-                }),
-            );
-        }, [L.result]),
-        F = r.useMemo(() => {
-            var A, e, t, n;
-            return null == L.result
+                });
+        }, [y.result]),
+        V = l.useMemo(() => {
+            var e, t, n, r;
+            return null == y.result
                 ? {
                       documentsIndexed: 0,
                       isSearching: !0,
                       isIndexing: !1,
                       isHistoricalIndexing: !1,
-                      offset: G,
+                      offset: z,
                       totalResults: 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1,
                   }
                 : {
-                      documentsIndexed: null != (A = L.result.documents_indexed) ? A : 0,
+                      documentsIndexed: null != (e = y.result.documents_indexed) ? e : 0,
                       isSearching: !1,
-                      isIndexing: null != (e = L.result.doing_deep_historical_index) && e,
-                      isHistoricalIndexing: null != (t = L.result.doing_deep_historical_index) && t,
-                      offset: G,
-                      totalResults: null != (n = L.result.total_results) ? n : 0,
+                      isIndexing: null != (t = y.result.doing_deep_historical_index) && t,
+                      isHistoricalIndexing: null != (n = y.result.doing_deep_historical_index) && n,
+                      offset: z,
+                      totalResults: null != (r = y.result.total_results) ? r : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1,
                   };
-        }, [L.result, G]);
-    return null == x || null == N || null == F
+        }, [y.result, z]);
+    return null == w || null == G || null == V
         ? null
-        : (0, n.jsxs)("div", {
-              className: i()(I.container, O),
+        : (0, r.jsxs)("div", {
+              className: a()(S.container, b),
               children: [
-                  (0, n.jsx)(D.Z, {
-                      guildId: b,
-                      userId: l,
-                      onNavigate: P,
+                  (0, r.jsx)(O.Z, {
+                      guildId: D,
+                      userId: i,
+                      onNavigate: U,
                   }),
-                  (0, n.jsx)(o.Den, {
-                      className: H.innerContainer,
-                      ref: V,
-                      onScroll: S,
-                      children: (0, n.jsx)(u.Z, {
-                          searchResults: U,
-                          search: F,
+                  (0, r.jsx)(u.Den, {
+                      className: C.innerContainer,
+                      ref: v,
+                      onScroll: F,
+                      children: (0, r.jsx)(m.Z, {
+                          messages: B,
+                          search: V,
                           renderEmbeds: !0,
                           blockCount: 0,
                           ignoreCount: 0,
-                          scrollTo: p.dG4,
-                          onPageChange: R,
-                          onBlockedResultsClick: p.dG4,
+                          scrollTo: R.dG4,
+                          onPageChange: Z,
+                          onBlockedResultsClick: R.dG4,
                       }),
                   }),
               ],
