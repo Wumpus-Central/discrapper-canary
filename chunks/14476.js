@@ -22,15 +22,15 @@ let f = (e) => {
             onSelect: j,
             productName: m,
             a11yLabel: L,
-            selectedSkuId: b,
-            category: g,
+            selectedSkuId: g,
+            category: b,
         } = e,
-        y = i.useRef(null),
-        S = (0, d.Z)(y),
-        E = (0, x.m)(y),
-        v = !f && (S || E),
-        P = (0, c.ZP)(),
-        O = (0, o.wj)(P),
+        S = i.useRef(null),
+        y = (0, d.Z)(S),
+        v = (0, x.m)(S),
+        E = !f && (y || v),
+        O = (0, c.ZP)(),
+        P = (0, o.wj)(O),
         w = {
             type: a.Z.AVATAR_DECORATION,
             label: L,
@@ -38,27 +38,27 @@ let f = (e) => {
         };
     return (0, r.jsx)(C.tEY, {
         children: (0, r.jsxs)(C.kL8, {
-            ref: y,
+            ref: S,
             "aria-label": null != m ? m : "",
             onClick: () => {
-                null != t && null != j && j(t);
+                null == t || null == j || f || j(t);
             },
-            className: s()(O ? h.shopCardDark : h.shopCard, {
-                [h.shopCardAnimation]: v,
-                [O ? h.shopCardDarkHighlighted : h.shopCardHighlighted]: v,
-                [h.shopCardSelected]: b === t,
+            className: s()(P ? h.shopCardDark : h.shopCard, {
+                [h.shopCardAnimation]: !f,
+                [P ? h.shopCardDarkHighlighted : h.shopCardHighlighted]: E,
+                [h.shopCardSelected]: g === t,
             }),
             children: [
                 (0, r.jsx)("div", {
                     className: s()(h.preview, {
-                        [h.previewTrick]: g === p.KN.Trick,
-                        [h.previewTreat]: g === p.KN.Treat,
+                        [h.previewTrick]: b === p.KN.Trick,
+                        [h.previewTreat]: b === p.KN.Treat,
                         [h.shopCardClaimed]: f,
                     }),
                     children: (0, r.jsx)(u.R, {
                         item: w,
                         user: l,
-                        isHighlighted: v,
+                        isHighlighted: E,
                         avatarSize: C.EFr.SIZE_120,
                         isPurchased: f,
                     }),
