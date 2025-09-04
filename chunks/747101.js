@@ -1,7 +1,7 @@
 r.d(t, {
-    FX: () => b,
+    FX: () => p,
     ZP: () => f,
-    kN: () => g,
+    kN: () => b,
     kO: () => u,
     qU: () => d,
 }),
@@ -10,8 +10,8 @@ r.d(t, {
 var n = r(647438),
     i = r(442837),
     l = r(224706),
-    a = r(669764),
-    o = r(77498);
+    o = r(669764),
+    a = r(77498);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -56,12 +56,12 @@ function s(e, t) {
     );
 }
 function u(e) {
-    return (0, i.e7)([a.Z], () => a.Z.isFetching(e));
+    return (0, i.e7)([o.Z], () => o.Z.isFetching(e));
 }
 function d(e) {
     n.useEffect(() => {
         if (e.length > 0) {
-            let t = e.filter((e) => a.Z.canFetch(e));
+            let t = e.filter((e) => o.Z.canFetch(e));
             t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
         }
     }, [e]);
@@ -85,20 +85,20 @@ function f(e) {
         ),
     );
 }
-function g(e) {
-    let [t, r] = (0, i.Wu)([a.Z], () => [a.Z.numNoDataAvailable(), a.Z.numSupplementalGames()]);
-    return (0, i.cj)([a.Z], () => {
+function b(e) {
+    let [t, r] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
+    return n.useMemo(() => {
         let t = {};
         return (
             e.forEach((e) => {
-                t[e] = a.Z.getGame(e);
+                t[e] = o.Z.getGame(e);
             }),
             t
         );
     }, [e, t, r]);
 }
-function b(e) {
-    let t = g(e.games.map((e) => e.applicationId));
+function p(e) {
+    let t = b(e.games.map((e) => e.applicationId));
     return n.useMemo(
         () =>
             s(c({}, e), {
@@ -109,7 +109,7 @@ function b(e) {
                             gameName: r.name,
                             imageSrc: r.coverImageUrl,
                         });
-                    let n = o.Z.getDetectableGame(e.applicationId);
+                    let n = a.Z.getDetectableGame(e.applicationId);
                     return s(c({}, e), { gameName: null == n ? void 0 : n.name });
                 }),
             }),

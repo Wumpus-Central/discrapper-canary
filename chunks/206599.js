@@ -14,7 +14,8 @@ var r = n(647438),
     c = n(747101);
 function u(e) {
     var t;
-    let { bump: n, bumpMultiple: i, gameIds: a } = (0, s.b)();
+    let [n, a] = (0, i.Wu)([l.Z], () => [l.Z.numNoDataAvailable(), l.Z.numSupplementalGames()]),
+        { bump: o, bumpMultiple: u, gameIds: d } = (0, s.b)();
     !(function (e) {
         var t, n;
         let { remove: i, peekedGameIds: a } = (0, s.b)();
@@ -29,29 +30,29 @@ function u(e) {
             }
         }, [a, i, e, o, u]);
     })(e);
-    let o = r.useMemo(() => {
+    let p = r.useMemo(() => {
             var t;
-            return null != (t = a[e]) ? t : [];
-        }, [a, e]),
-        u = r.useCallback(
+            return null != (t = d[e]) ? t : [];
+        }, [d, e]),
+        f = r.useCallback(
             (t) => {
-                n(t, e);
+                o(t, e);
             },
-            [n, e],
+            [o, e],
         );
-    (0, c.qU)(o);
-    let d = (0, c.kN)(o),
-        [p, f] = r.useState([]),
-        h = ((t = o.map((e) => l.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
+    (0, c.qU)(p);
+    let h = (0, c.kN)(p),
+        [g, m] = r.useState([]),
+        b = ((t = p.map((e) => l.Z.isFetching(e))), r.useMemo(() => t.join("\x1F"), [t]));
     return (
         r.useEffect(() => {
-            let t = o.filter((e) => l.Z.noDataAvailable(e));
-            t.length > 0 && i(t, e);
-        }, [h, o, e, i, d]),
+            let t = p.filter((e) => l.Z.noDataAvailable(e));
+            t.length > 0 && u(t, e);
+        }, [b, p, e, u, h]),
         r.useEffect(() => {
-            f(
-                o.map((e) => {
-                    let t = d[e];
+            m(
+                p.map((e) => {
+                    let t = h[e];
                     return {
                         applicationId: e,
                         gameName: null == t ? void 0 : t.name,
@@ -59,10 +60,10 @@ function u(e) {
                     };
                 }),
             );
-        }, [o, d, e]),
+        }, [p, h, e, n, a]),
         {
-            games: p,
-            onAddGame: u,
+            games: g,
+            onAddGame: f,
         }
     );
 }
