@@ -78174,6 +78174,47 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     text-align: left
 }
 
+.timerContainer__7cfe3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative
+}
+
+.timeUnitsOuterContainer__7cfe3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.timeUnitInnerContainer__7cfe3 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+.time__7cfe3 {
+    display: flex;
+    flex-direction: row;
+    gap: 2px
+}
+
+.timeBoxOutline__7cfe3 {
+    align-content: center;
+    background-color: var(--background-mod-strong);
+    border-radius: 6px;
+    height: 36px;
+    justify-content: center;
+    width: 24px
+}
+
+.unitDivider__7cfe3 {
+    margin: 0 6px;
+    position: relative;
+    top: 4px
+}
+
 .header__36b3e {
     font-size: 50px;
     font-style: italic;
@@ -78361,6 +78402,10 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     }
 }
 
+.churnDiscountContent__3ce43 {
+    top: 20px
+}
+
 .contentV2__3ce43 {
     min-width: 500px
 }
@@ -78472,11 +78517,17 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .churnEntrypointDescriptionBrandRefresh__3ce43 {
+    margin-bottom: -12px;
     margin-top: 16px
 }
 
 .churnEntrypointDescription__3ce43 {
-    margin-bottom: 16px
+    margin-bottom: 20px
+}
+
+.churnDiscountHeader__3ce43 {
+    margin-bottom: 16px;
+    max-width: 600px
 }
 
 .container__555fb {
@@ -89746,7 +89797,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

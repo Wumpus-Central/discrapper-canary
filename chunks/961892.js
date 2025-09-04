@@ -6,7 +6,7 @@ var r = n(951288),
     o = n(704215),
     s = n(481060),
     c = n(243778),
-    u = n(227140),
+    u = n(924540),
     d = n(921944),
     p = n(388032),
     f = n(716651);
@@ -17,9 +17,10 @@ let h = (e) => {
         t && l === o.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && h(d.L.TAKE_ACTION);
     }, [t, h, l]),
     l === o.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
-        ? (0, r.jsx)(u.Z, {
-              copy: p.intl.format(p.t.AYcXGR, { discountOfferAmount: n.discount.amount }),
-              showStars: !1,
+        ? (0, r.jsx)(u._y, {
+              badgeCopy: p.intl.format(p.t.AYcXGR, { discountOfferAmount: n.discount.amount }).toString(),
+              isTabSelected: t,
+              offerExpiresAt: null,
           })
         : (0, r.jsxs)("div", {
               className: a()(f.churnDiscountBadge, f.churnDiscountAcknowledgedBadge),

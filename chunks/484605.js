@@ -36,7 +36,6 @@ let m = (e) => {
                 type: "image",
                 src: g,
             },
-            gradientColor: "nitro-pink",
             actions: [
                 {
                     text: h.intl.string(h.t.zrCzVF),
@@ -98,6 +97,7 @@ let m = (e) => {
                             };
                         });
                     },
+                    icon: a.SrA,
                 },
             ],
             onRequestClose: () => {
