@@ -77,7 +77,9 @@ class h extends a.yh {
         return this.state.root[e];
     }
     setKvState(e) {
-        this.state = e;
+        (this.state = e),
+            i()("object" == typeof this.state.root, "must have root"),
+            i()("object" == typeof this.state.derived, "must have derived");
     }
     length() {
         return this.state.derived.length;
