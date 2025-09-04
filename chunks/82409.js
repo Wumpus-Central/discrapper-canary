@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(202841),
+    a = n(261616),
     s = n(442837),
     c = n(481060),
     u = n(570140),
@@ -18,8 +18,8 @@ var h = n(377171),
     O = n(430824),
     y = n(375954),
     _ = n(306680),
-    j = n(709054),
-    v = n(821020),
+    v = n(709054),
+    j = n(821020),
     x = n(948154),
     C = n(804932),
     E = n(725739),
@@ -27,8 +27,8 @@ var h = n(377171),
     P = n(370774),
     I = n(334426),
     N = n(862149),
-    w = n(207913),
-    Z = n(553984),
+    Z = n(207913),
+    w = n(553984),
     T = n(333834),
     A = n(982183),
     R = n(981631),
@@ -80,7 +80,7 @@ function G(e) {
         { selectedFilter: h } = (0, E.Z)(),
         I = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
         N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
-        w = (0, s.Wu)([_.ZP, O.Z, S.Z], () =>
+        Z = (0, s.Wu)([_.ZP, O.Z, S.Z], () =>
             N.filter(
                 (e) =>
                     !(0, P.YH)({
@@ -134,7 +134,7 @@ function G(e) {
                         null != r &&
                             null != i &&
                             l &&
-                            j.default.compare(i, r) >= 0 &&
+                            v.default.compare(i, r) >= 0 &&
                             d.In(
                                 e,
                                 {
@@ -167,14 +167,14 @@ function G(e) {
                 }),
             [K],
         ),
-        q = F(w, h, I),
+        q = F(Z, h, I),
         X = F(D, h, null);
     (0, p.ZP)(() => {
         var e;
         u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
-        let t = (0, v.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
+        let t = (0, j.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
             n = null == (e = S.Z.getDevOverrides().navOnClick) || e;
-        if (t !== v.jP.SIDEBAR || !1 === n) return;
+        if (t !== j.jP.SIDEBAR || !1 === n) return;
         let { message: r, isUnread: i } = (function (e, t) {
             var n, r, i;
             let l = null == (n = e[e.length - 1]) ? void 0 : n.message,
@@ -200,7 +200,7 @@ function G(e) {
                   }
                 : {
                       message: {
-                          id: j.default.atNextMillisecond(u),
+                          id: v.default.atNextMillisecond(u),
                           channel_id: c,
                       },
                       isUnread: null != (i = _.ZP.hasUnread(c)) && i,
@@ -219,9 +219,9 @@ function G(e) {
         (0, p.zq)(() => {
             u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: Q } = (0, v.pN)({ location: "NotificationsInboxSidebar" }),
-        { entrypoints: J } = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === v.v8.DROPDOWN && h !== A.V5.ALL,
+    let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
+        J = (0, g._k)({ location: "NotificationsInboxSidebar" }),
+        $ = Q === j.v8.DROPDOWN && h !== A.V5.ALL,
         ee = (0, A.H_)(h);
     return (0, r.jsx)("nav", {
         className: o()(M.container, { [M.panelSpacing]: l }),
@@ -242,7 +242,7 @@ function G(e) {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: Q === v.v8.DROPDOWN && !J && (0, r.jsx)(Z.p, {}),
+                            children: Q === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(w.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -287,7 +287,7 @@ function F(e, t, n) {
                 : e.filter((e) => {
                       let { id: r } = e;
                       return (
-                          !(j.default.age(r) > A.ib || (null != n && 0 >= j.default.compare(r, n))) && t === A.V5.ALL
+                          !(v.default.age(r) > A.ib || (null != n && 0 >= v.default.compare(r, n))) && t === A.V5.ALL
                       );
                   }),
         [e, t, n],
@@ -298,7 +298,7 @@ function V() {
 }
 function H(e, t) {
     return (0, r.jsx)(
-        w.Z,
+        Z.Z,
         {
             message: e[0],
             groupedMessages: e.slice(1),

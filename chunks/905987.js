@@ -91,7 +91,7 @@ function f(e) {
             n.forEach((e) => clearTimeout(e)), setTimeout(() => h(0), 150);
         };
     }, [t]);
-    let { entrypoints: u } = (0, d._k)({ location: "tips_tab" });
+    let u = (0, d._k)({ location: "tips_tab" });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
@@ -157,7 +157,9 @@ function f(e) {
                             className: _.bigMenu,
                             children: [
                                 (0, i.jsx)(C, {
-                                    text: u ? j.intl.string(j.t.Sd8Ix8) : j.intl.string(j.t.BN75l5),
+                                    text: u.isGuildEntrypointEnabled
+                                        ? j.intl.string(j.t.Sd8Ix8)
+                                        : j.intl.string(j.t.BN75l5),
                                     icon: (0, i.jsx)(c.ejJ, {
                                         size: "sm",
                                         className: _.icon,

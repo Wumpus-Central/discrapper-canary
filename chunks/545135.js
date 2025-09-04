@@ -77,7 +77,7 @@ function w(e) {
     let { guild: t, onSelect: r, hideSettings: a } = e,
         u = t.id,
         w = E.ZP.getDefaultChannel(u),
-        { entrypoints: I } = (0, b._k)({ location: "guild_context_menu" }),
+        I = (0, b._k)({ location: "guild_context_menu" }),
         U = (0, l.e7)([O.default], () => {
             let e = O.default.getCurrentUser();
             return s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, h.eM)(t, e);
@@ -85,7 +85,7 @@ function w(e) {
         T = (0, x.Z)({
             guild: t,
             source: G.t4x.GUILD_CONTEXT_MENU,
-            channel: I ? null : w,
+            channel: I.isGuildEntrypointEnabled ? null : w,
         }),
         R = (0, m.Z)(u),
         C = (0, P.Z)(t),

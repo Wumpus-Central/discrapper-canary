@@ -127,10 +127,10 @@ function T(e) {
 function S(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
         o = (0, l.Z)(t),
-        { entrypoints: d } = (0, _._k)({ location: "guild_status_badge" });
+        d = (0, _._k)({ location: "guild_status_badge" });
     return o
         ? (0, r.jsx)("div", {
-              className: a()(b.guildIconV2Container, { [b.invitesRefresh]: d }),
+              className: a()(b.guildIconV2Container, { [b.invitesRefresh]: d.isGuildEntrypointEnabled }),
               children: (0, r.jsx)(u.Z, {
                   guild: t,
                   size: 18,
@@ -141,7 +141,7 @@ function S(e) {
               }),
           })
         : (0, r.jsx)("div", {
-              className: a()(b.guildIconContainer, { [b.invitesRefresh]: d }),
+              className: a()(b.guildIconContainer, { [b.invitesRefresh]: d.isGuildEntrypointEnabled }),
               children: (0, r.jsx)(c.Z, {
                   guild: t,
                   size: 18,
