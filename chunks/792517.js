@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -6,58 +6,60 @@ var i = n(120356),
     o = n(442837),
     s = n(481060),
     l = n(872810),
-    c = n(199902),
-    u = n(314897),
-    d = n(685203),
-    f = n(112560),
-    _ = n(388032),
-    p = n(866752);
-let h = 175,
-    m = 195,
-    g = n(978538);
-function E(e) {
-    let { participant: t, width: n, noArt: i = !1, selected: E = !1 } = e,
-        b = n < m,
-        y = (0, o.e7)([c.Z, u.default], () =>
-            c.Z.getAllActiveStreams().some((e) => {
+    c = n(595816),
+    u = n(199902),
+    d = n(314897),
+    f = n(685203),
+    _ = n(112560),
+    p = n(388032),
+    h = n(866752);
+let m = 175,
+    g = 195,
+    E = n(978538);
+function b(e) {
+    let { participant: t, width: n, noArt: i = !1, selected: b = !1 } = e,
+        y = n < g,
+        { defaultWatchMultipleStreams: O } = (0, c.P)({ location: "StreamHidden" }),
+        v = (0, o.e7)([u.Z, d.default], () =>
+            u.Z.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
-                return t !== u.default.getId();
+                return t !== d.default.getId();
             }),
         );
     return (0, r.jsx)("div", {
-        className: a()(p.content, p.streamHidden, { [p.__invalid_small]: b }),
-        children: (0, r.jsx)(f.Z, {
-            className: p.streamHiddenEmptyState,
-            artURL: g,
+        className: a()(h.content, h.streamHidden, { [h.__invalid_small]: y }),
+        children: (0, r.jsx)(_.Z, {
+            className: h.streamHiddenEmptyState,
+            artURL: E,
             noArt: i,
-            selected: E,
-            size: (0, f.L)(n),
-            header: b ? null : _.intl.string(_.t.epU4ER),
-            description: E
+            selected: b,
+            size: (0, _.L)(n),
+            header: y ? null : p.intl.string(p.t.epU4ER),
+            description: b
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: a()(p.streamHiddenCTA, { [p.largePaddingTop]: !b }),
+                      className: a()(h.streamHiddenCTA, { [h.largePaddingTop]: !y }),
                       children: [
-                          (0, r.jsx)(d.a, {
-                              isSmall: b,
+                          (0, r.jsx)(f.a, {
+                              isSmall: y,
                               children: (0, r.jsx)(s.Text, {
-                                  variant: b ? "text-sm/semibold" : "text-md/semibold",
+                                  variant: y ? "text-sm/semibold" : "text-md/semibold",
                                   color: "none",
-                                  children: n < h ? _.intl.string(_.t["I6JG4+"]) : _.intl.string(_.t["7Xq/nZ"]),
+                                  children: n < m ? p.intl.string(p.t["I6JG4+"]) : p.intl.string(p.t["7Xq/nZ"]),
                               }),
                           }),
-                          y
-                              ? (0, r.jsx)(d.a, {
-                                    className: p.addCTA,
-                                    tooltip: _.intl.string(_.t.wCrzur),
+                          v && !O
+                              ? (0, r.jsx)(f.a, {
+                                    className: h.addCTA,
+                                    tooltip: p.intl.string(p.t.wCrzur),
                                     onClick: (e) => {
                                         e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 });
                                     },
-                                    isSmall: b,
+                                    isSmall: y,
                                     children: (0, r.jsx)(s.OgY, {
                                         size: "xs",
                                         color: "currentColor",
-                                        className: p.addStreamIcon,
+                                        className: h.addStreamIcon,
                                     }),
                                 })
                               : null,

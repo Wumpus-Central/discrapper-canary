@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -7,13 +7,14 @@ var i = n(442837),
     s = n(287734),
     l = n(872810),
     c = n(40851),
-    u = n(102172),
-    d = n(199902),
-    f = n(592125),
-    _ = n(585483),
-    p = n(981631),
-    h = n(388032);
-function m(e, t, n) {
+    u = n(595816),
+    d = n(102172),
+    f = n(199902),
+    _ = n(592125),
+    p = n(585483),
+    h = n(981631),
+    m = n(388032);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,75 +55,76 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
-    let { isCurrentUser: t, applicationStream: n, onAction: m } = e,
-        { activeStream: E, watchingOtherStream: y } = (0, i.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(n),
+function O(e) {
+    let { isCurrentUser: t, applicationStream: n, onAction: g } = e,
+        { defaultWatchMultipleStreams: b } = (0, u.P)({ location: "WatchStreamButton" }),
+        { activeStream: O, watchingOtherStream: v } = (0, i.cj)([f.Z], () => ({
+            activeStream: f.Z.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
                 null != n &&
-                d.Z.getAllActiveStreamsForChannel(n.channelId).filter((e) => {
+                f.Z.getAllActiveStreamsForChannel(n.channelId).filter((e) => {
                     let { ownerId: t } = e;
                     return t !== n.ownerId;
                 }).length > 0,
         })),
-        O = (0, i.e7)([f.Z], () => f.Z.getChannel(null == n ? void 0 : n.channelId)),
-        [v, I] = (0, u.wq)(O),
-        T = (0, c.Aq)(),
-        S = null != E && null != n && E.state !== p.jm8.ENDED && E.ownerId === n.ownerId,
-        A = (e) => {
+        I = (0, i.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
+        [T, S] = (0, d.wq)(I),
+        A = (0, c.Aq)(),
+        C = null != O && null != n && O.state !== h.jm8.ENDED && O.ownerId === n.ownerId,
+        N = (e) => {
             null != n &&
-                (null == m || m(),
+                (null == g || g(),
                 s.default.selectVoiceChannel(n.channelId),
-                S || (0, l.iV)(n, { forceMultiple: e }),
-                T.dispatch(p.CkL.POPOUT_CLOSE),
-                _.S.dispatch(p.CkL.MODAL_CLOSE),
+                C || (0, l.iV)(n, { forceMultiple: e }),
+                A.dispatch(h.CkL.POPOUT_CLOSE),
+                p.S.dispatch(h.CkL.MODAL_CLOSE),
                 o.Z.popAll());
         };
     if (null == n) return null;
-    let C = (0, u.P9)(I);
+    let R = (0, d.P9)(S);
     return (
-        t ? (C = h.intl.string(h.t.XvBdeX)) : S && (C = h.intl.string(h.t.JH1SJy)),
+        t ? (R = m.intl.string(m.t.XvBdeX)) : C && (R = m.intl.string(m.t.JH1SJy)),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.zxk, {
                     size: "sm",
-                    variant: S ? "secondary" : "active",
+                    variant: C ? "secondary" : "active",
                     icon: a.hGI,
-                    text: C,
-                    disabled: t || S || !v,
-                    onClick: () => A(!1),
+                    text: R,
+                    disabled: t || C || !T,
+                    onClick: () => N(!1),
                     fullWidth: !0,
                 }),
-                y && !S
-                    ? (0, r.jsx)(a.ua7, {
-                          text: h.intl.string(h.t.wCrzur),
+                !v || C || b
+                    ? null
+                    : (0, r.jsx)(a.ua7, {
+                          text: m.intl.string(m.t.wCrzur),
                           children: (e) =>
                               (0, r.jsx)(
                                   a.hU,
-                                  b(g({}, e), {
+                                  y(E({}, e), {
                                       variant: "secondary",
                                       size: "sm",
                                       icon: a.OgY,
-                                      "aria-label": h.intl.string(h.t.wCrzur),
+                                      "aria-label": m.intl.string(m.t.wCrzur),
                                       onClick: () => {
                                           var t;
-                                          null == (t = e.onClick) || t.call(e), A(!0);
+                                          null == (t = e.onClick) || t.call(e), N(!0);
                                       },
                                   }),
                               ),
-                      })
-                    : null,
+                      }),
             ],
         })
     );
