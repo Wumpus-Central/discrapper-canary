@@ -1,77 +1,66 @@
-r.d(t, { Z: () => f });
+r.d(t, { Z: () => c });
 var n = r(951288);
 r(647438);
-var i = r(442837),
-    l = r(481060),
-    a = r(314897),
-    o = r(86419),
-    c = r(881410),
-    s = r(825354),
-    u = r(388032),
-    d = r(635318);
-function f(e) {
-    let { userId: t, headingId: r, widget: c, disableInteraction: s = !1 } = e,
-        f = (0, i.e7)([a.default], () => a.default.getId() === t),
-        b = (0, o.kQ)(c),
-        p = (0, o.Nc)(c.type),
-        m =
-            f && c.games.length > 0
-                ? (function (e) {
-                      let t = (0, o.Gv)(e);
-                      return 1 === t ? u.intl.string(u.t.wiXdER) : u.intl.format(u.t["zR1+09"], { numGames: t });
-                  })(c.type)
-                : void 0;
+var i = r(481060),
+    l = r(86419),
+    o = r(825354),
+    a = r(635318);
+function c(e) {
+    let {
+        userId: t,
+        headingId: r,
+        widget: l,
+        disableInteraction: o = !1,
+        title: c,
+        subtitle: u,
+        actionButtons: d = [],
+    } = e;
     return (0, n.jsxs)("div", {
-        className: d.headerRow,
+        className: a.headerRow,
         children: [
             (0, n.jsxs)("div", {
-                className: d.title,
+                className: a.title,
                 children: [
-                    (0, n.jsx)(l.X6q, {
+                    (0, n.jsx)(i.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
                         id: r,
-                        children: p,
+                        children: c,
                     }),
-                    null != m &&
-                        (0, n.jsx)(l.Text, {
+                    null != u &&
+                        (0, n.jsx)(i.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: m,
+                            children: u,
                         }),
                 ],
             }),
-            (0, n.jsx)(g, {
-                widget: c,
-                disabled: b,
-                disabledInteraction: s,
+            (0, n.jsx)(s, {
+                widget: l,
+                actionButtons: d,
+                disabledInteraction: o,
                 userId: t,
             }),
         ],
     });
 }
-function g(e) {
-    let { widget: t, disabled: r, disabledInteraction: l, userId: u } = e,
-        f = (0, i.e7)([a.default], () => a.default.getId() === u),
-        g = (0, o.vI)(t.type) && t.games.some((e) => null != e.comment);
-    return l
+function s(e) {
+    let { widget: t, actionButtons: r, disabledInteraction: i, userId: c } = e,
+        s = (0, l.vI)(t.type) && t.games.some((e) => null != e.comment);
+    return i
         ? null
-        : f
+        : null != r && r.length > 0
           ? (0, n.jsx)("div", {
-                className: d.actions,
-                children: (0, n.jsx)(c.Z, {
-                    disabled: r,
-                    widgetType: t.type,
-                    widget: t,
-                }),
+                className: a.actions,
+                children: r,
             })
-          : g
+          : s
             ? (0, n.jsx)("div", {
-                  className: d.actions,
-                  children: (0, n.jsx)(s.Z, {
+                  className: a.actions,
+                  children: (0, n.jsx)(o.Z, {
                       widget: t,
-                      userId: u,
-                      className: d.menuButton,
+                      userId: c,
+                      className: a.menuButton,
                   }),
               })
             : null;

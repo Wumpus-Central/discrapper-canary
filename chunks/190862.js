@@ -1,17 +1,19 @@
-r.d(t, { Z: () => y });
+r.d(t, { Z: () => v });
 var n = r(951288),
     i = r(296009),
     l = r(442837),
-    a = r(314897),
-    o = r(747101),
-    c = r(556045),
-    s = r(985748),
-    u = r(566007),
-    d = r(173951),
-    f = r(455731),
+    o = r(314897),
+    a = r(86419),
+    c = r(747101),
+    s = r(556045),
+    u = r(881410),
+    d = r(985748),
+    f = r(566007),
+    b = r(173951),
+    p = r(455731),
     g = r(272289),
-    b = r(39642);
-function p(e) {
+    O = r(39642);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -36,7 +38,7 @@ function p(e) {
     }
     return e;
 }
-function m(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -56,47 +58,64 @@ function m(e, t) {
     }
     return i;
 }
-let O = (e) => {
+let m = (e) => {
         var { widget: t } = e,
-            r = m(e, ["widget"]);
+            r = j(e, ["widget"]);
         switch (t.type) {
             case i.l.FAVORITE_GAMES:
-                return (0, n.jsx)(u.Z, p({ widget: t }, r));
+                return (0, n.jsx)(f.Z, y({ widget: t }, r));
             case i.l.CURRENT_GAMES:
-                return (0, n.jsx)(s.Z, p({ widget: t }, r));
+                return (0, n.jsx)(d.Z, y({ widget: t }, r));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, n.jsx)(f.Z, p({ widget: t }, r));
+                return (0, n.jsx)(p.Z, y({ widget: t }, r));
             case i.l.PLAYED_GAMES:
-                return (0, n.jsx)(d.Z, p({ widget: t }, r));
+                return (0, n.jsx)(b.Z, y({ widget: t }, r));
             default:
                 return null;
         }
     },
-    y = (e) => {
+    v = (e) => {
         var { widget: t, user: r, disableInteraction: i } = e,
-            s = m(e, ["widget", "user", "disableInteraction"]);
-        let u = (0, o.FX)(t),
-            { shouldShowSuggestions: d, handleDismissSuggestions: f } = (0, c.h)(u),
-            y = (0, l.e7)([a.default], () => a.default.getId() === r.id);
+            d = j(e, ["widget", "user", "disableInteraction"]);
+        let f = (0, c.FX)(t),
+            { shouldShowSuggestions: b, handleDismissSuggestions: p } = (0, s.h)(f),
+            v = (0, l.e7)([o.default], () => o.default.getId() === r.id),
+            h = v && !i && b,
+            x = (0, a.A5)(f.type),
+            w = (0, a.Hy)(f, { isCurrentUser: v }),
+            P = (0, a.kQ)(f);
         return (0, n.jsx)(
-            O,
-            p(
+            m,
+            y(
                 {
-                    widget: u,
+                    widget: f,
                     user: r,
                     disableInteraction: i,
+                    headerTitle: x,
+                    headerSubtitle: w,
+                    headerActionButtons: v
+                        ? [
+                              (0, n.jsx)(
+                                  u.Z,
+                                  {
+                                      disabled: P,
+                                      widgetType: f.type,
+                                      widget: f,
+                                  },
+                                  "".concat(f.type, "-browse-games-popout"),
+                              ),
+                          ]
+                        : void 0,
                     trailingContent:
-                        y &&
-                        !i &&
-                        d &&
+                        h &&
                         (0, n.jsx)(g.Z, {
                             userId: r.id,
-                            widgetType: u.type,
-                            onDismiss: f,
-                            className: b.suggestedGames,
+                            widgetType: f.type,
+                            onDismiss: p,
+                            className: O.suggestedGames,
                         }),
                 },
-                s,
+                d,
             ),
         );
     };
