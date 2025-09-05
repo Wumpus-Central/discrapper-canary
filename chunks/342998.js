@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(243778),
     g = n(921944),
     E = n(388032),
-    b = n(204794);
+    b = n(427760);
 let y = (0, a.U)((e) => ({
         activeEntryId: null,
         setActiveEntryId: (t) => e({ activeEntryId: t }),
@@ -57,7 +57,7 @@ let y = (0, a.U)((e) => ({
         };
         return (0, r.jsx)(l.J2, {
             title: E.intl.string(E.t["+WNDtb"]),
-            body: "",
+            body: E.intl.string(E.t["5QKxGB"]),
             targetElementRef: a,
             shouldShow: D,
             position: "left",
