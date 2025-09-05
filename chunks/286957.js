@@ -1,141 +1,126 @@
-n.d(t, {
-    S5: () => c,
-    Wk: () => l,
-    XV: () => d,
-    aE: () => p,
-    kd: () => _,
-    rR: () => s,
-    uX: () => u,
-    zK: () => f,
+r.d(t, {
+    XV: () => a,
+    aE: () => u,
+    kd: () => s,
+    zK: () => c,
 });
-var r = n(379405),
-    i = n(296009),
-    a = n(481060),
-    o = n(388032);
-let s = [i.l.FAVORITE_GAMES, i.l.CURRENT_GAMES, i.l.WANT_TO_PLAY_GAMES, i.l.PLAYED_GAMES],
-    l = {
-        [i.l.FAVORITE_GAMES]: () => o.intl.string(o.t.sUQar6),
-        [i.l.CURRENT_GAMES]: () => o.intl.string(o.t.SqNnur),
-        [i.l.WANT_TO_PLAY_GAMES]: () => o.intl.string(o.t.bWSQwc),
-        [i.l.PLAYED_GAMES]: () => o.intl.string(o.t.scOKER),
-    },
-    c = [i.l.FAVORITE_GAMES],
-    u = [i.l.CURRENT_GAMES],
-    d = {
-        [r._.BETTER_THAN_YOU]: {
+var n,
+    i = r(379405),
+    l = r(481060),
+    o = r(388032);
+let a = {
+        [i._.BETTER_THAN_YOU]: {
             getText: () => o.intl.string(o.t.jbIRBA),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.NOOB]: {
+        [i._.NOOB]: {
             getText: () => o.intl.string(o.t.JCbfAw),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.LEARNING_THE_ROPES]: {
+        [i._.LEARNING_THE_ROPES]: {
             getText: () => o.intl.string(o.t.S1X0kp),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.GETTING_GOOD]: {
+        [i._.GETTING_GOOD]: {
             getText: () => o.intl.string(o.t.i4LREx),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.SKILLED]: {
+        [i._.SKILLED]: {
             getText: () => o.intl.string(o.t["BQmP7+"]),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.EXPERT]: {
+        [i._.EXPERT]: {
             getText: () => o.intl.string(o.t.RIOFc3),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.MASTER]: {
+        [i._.MASTER]: {
             getText: () => o.intl.string(o.t.E755U1),
-            icon: a.jrt,
+            icon: l.jrt,
         },
-        [r._.LIKE_IT]: {
+        [i._.LIKE_IT]: {
             getText: () => o.intl.string(o.t["AXQ+hY"]),
-            icon: a.lbB,
+            icon: l.lbB,
         },
-        [r._.LOVE_IT]: {
+        [i._.LOVE_IT]: {
             getText: () => o.intl.string(o.t["1rN7BA"]),
-            icon: a.lbB,
+            icon: l.lbB,
         },
-        [r._.KIND_OF_LOVE_IT]: {
+        [i._.KIND_OF_LOVE_IT]: {
             getText: () => o.intl.string(o.t.bCBpVl),
-            icon: a.lbB,
+            icon: l.lbB,
         },
-        [r._.KIND_OF_HATE_IT]: {
+        [i._.KIND_OF_HATE_IT]: {
             getText: () => o.intl.string(o.t["/WcmcH"]),
-            icon: a.kZ9,
+            icon: l.kZ9,
         },
-        [r._.FRUSTRATED]: {
+        [i._.FRUSTRATED]: {
             getText: () => o.intl.string(o.t.R98Ol5),
-            icon: a.kZ9,
+            icon: l.kZ9,
         },
-        [r._.RAGE_QUITTING]: {
+        [i._.RAGE_QUITTING]: {
             getText: () => o.intl.string(o.t["NXZ/MT"]),
-            icon: a.kZ9,
+            icon: l.kZ9,
         },
-        [r._.TOO_EASY]: {
+        [i._.TOO_EASY]: {
             getText: () => o.intl.string(o.t["8105aG"]),
-            icon: a.kZ9,
+            icon: l.kZ9,
         },
-        [r._.LFG]: {
+        [i._.LFG]: {
             getText: () => o.intl.string(o.t.DWWAAQ),
-            icon: a.iFz,
+            icon: l.iFz,
         },
-        [r._.OPEN_TO_PLAY]: {
+        [i._.OPEN_TO_PLAY]: {
             getText: () => o.intl.string(o.t.q30PoK),
-            icon: a.iFz,
+            icon: l.iFz,
         },
-        [r._.LOOKING_FOR_TIPS]: {
+        [i._.LOOKING_FOR_TIPS]: {
             getText: () => o.intl.string(o.t.KQDVvL),
-            icon: a.iFz,
+            icon: l.iFz,
         },
-        [r._.LOOKING_TO_LEARN]: {
+        [i._.LOOKING_TO_LEARN]: {
             getText: () => o.intl.string(o.t.zG3Hzc),
-            icon: a.iFz,
+            icon: l.iFz,
         },
-        [r._.OPEN_TO_TEACH]: {
+        [i._.OPEN_TO_TEACH]: {
             getText: () => o.intl.string(o.t["5HhQo6"]),
-            icon: a.iFz,
+            icon: l.iFz,
         },
     },
-    f = (e) => {
-        let t = d[e];
+    c = (e) => {
+        let t = a[e];
         return null != t ? t : null;
     };
-var _ = (function (e) {
-    return (e.RADIO = "radio"), (e.CHECKBOX = "checkbox"), e;
-})({});
-let p = {
+var s = (((n = {}).RADIO = "radio"), (n.CHECKBOX = "checkbox"), n);
+let u = {
     skill_level: {
         getLabel: () => o.intl.string(o.t.MKqADA),
         type: "radio",
         tags: [
-            r._.NOOB,
-            r._.LEARNING_THE_ROPES,
-            r._.GETTING_GOOD,
-            r._.SKILLED,
-            r._.EXPERT,
-            r._.MASTER,
-            r._.BETTER_THAN_YOU,
+            i._.NOOB,
+            i._.LEARNING_THE_ROPES,
+            i._.GETTING_GOOD,
+            i._.SKILLED,
+            i._.EXPERT,
+            i._.MASTER,
+            i._.BETTER_THAN_YOU,
         ],
     },
     rating: {
         getLabel: () => o.intl.string(o.t["7/umur"]),
         type: "checkbox",
         tags: [
-            r._.LIKE_IT,
-            r._.LOVE_IT,
-            r._.KIND_OF_LOVE_IT,
-            r._.KIND_OF_HATE_IT,
-            r._.FRUSTRATED,
-            r._.RAGE_QUITTING,
-            r._.TOO_EASY,
+            i._.LIKE_IT,
+            i._.LOVE_IT,
+            i._.KIND_OF_LOVE_IT,
+            i._.KIND_OF_HATE_IT,
+            i._.FRUSTRATED,
+            i._.RAGE_QUITTING,
+            i._.TOO_EASY,
         ],
     },
     looking_for: {
         getLabel: () => o.intl.string(o.t["5Dez19"]),
         type: "checkbox",
-        tags: [r._.LFG, r._.OPEN_TO_PLAY, r._.LOOKING_FOR_TIPS, r._.LOOKING_TO_LEARN, r._.OPEN_TO_TEACH],
+        tags: [i._.LFG, i._.OPEN_TO_PLAY, i._.LOOKING_FOR_TIPS, i._.LOOKING_TO_LEARN, i._.OPEN_TO_TEACH],
     },
 };

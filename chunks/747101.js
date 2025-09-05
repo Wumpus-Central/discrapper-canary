@@ -1,11 +1,10 @@
 r.d(t, {
-    FX: () => p,
+    FX: () => b,
     ZP: () => f,
-    kN: () => b,
+    kN: () => g,
     kO: () => u,
     qU: () => d,
 }),
-    r(539854),
     r(388685);
 var n = r(647438),
     i = r(442837),
@@ -71,21 +70,21 @@ function f(e) {
         n.useMemo(
             () =>
                 (function (e) {
-                    let t = [];
+                    let t = new Set();
                     return (
                         e.forEach((e) => {
                             e.games.forEach((e) => {
-                                t.push(e.applicationId);
+                                t.add(e.applicationId);
                             });
                         }),
-                        [...new Set(t)]
+                        [...t]
                     );
                 })(e),
             [e],
         ),
     );
 }
-function b(e) {
+function g(e) {
     let [t, r] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
     return n.useMemo(() => {
         let t = {};
@@ -97,8 +96,8 @@ function b(e) {
         );
     }, [e, t, r]);
 }
-function p(e) {
-    let t = b(e.games.map((e) => e.applicationId));
+function b(e) {
+    let t = g(e.games.map((e) => e.applicationId));
     return n.useMemo(
         () =>
             s(c({}, e), {

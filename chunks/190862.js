@@ -9,9 +9,9 @@ var n = r(951288),
     u = r(881410),
     d = r(985748),
     f = r(566007),
-    b = r(173951),
-    p = r(455731),
-    g = r(272289),
+    g = r(173951),
+    b = r(455731),
+    p = r(272289),
     O = r(517143);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -67,9 +67,9 @@ let m = (e) => {
             case i.l.CURRENT_GAMES:
                 return (0, n.jsx)(d.Z, y({ widget: t }, r));
             case i.l.WANT_TO_PLAY_GAMES:
-                return (0, n.jsx)(p.Z, y({ widget: t }, r));
-            case i.l.PLAYED_GAMES:
                 return (0, n.jsx)(b.Z, y({ widget: t }, r));
+            case i.l.PLAYED_GAMES:
+                return (0, n.jsx)(g.Z, y({ widget: t }, r));
             default:
                 return null;
         }
@@ -78,10 +78,10 @@ let m = (e) => {
         var { widget: t, user: r, disableInteraction: i } = e,
             d = j(e, ["widget", "user", "disableInteraction"]);
         let f = (0, c.FX)(t),
-            { shouldShowSuggestions: b, handleDismissSuggestions: p } = (0, s.h)(f),
+            { shouldShowSuggestions: g, handleDismissSuggestions: b } = (0, s.h)(f),
             v = (0, l.e7)([o.default], () => o.default.getId() === r.id),
-            h = v && !i && b,
-            x = (0, a.A5)(f.type),
+            x = v && !i && g,
+            h = (0, a.mR)(f),
             w = (0, a.Hy)(f, { isCurrentUser: v }),
             P = (0, a.kQ)(f);
         return (0, n.jsx)(
@@ -91,7 +91,7 @@ let m = (e) => {
                     widget: f,
                     user: r,
                     disableInteraction: i,
-                    headerTitle: x,
+                    headerTitle: h,
                     headerSubtitle: w,
                     headerActionButtons: v
                         ? [
@@ -107,11 +107,11 @@ let m = (e) => {
                           ]
                         : void 0,
                     trailingContent:
-                        h &&
-                        (0, n.jsx)(g.Z, {
+                        x &&
+                        (0, n.jsx)(p.Z, {
                             userId: r.id,
                             widgetType: f.type,
-                            onDismiss: p,
+                            onDismiss: b,
                             className: O.suggestedGames,
                         }),
                 },

@@ -1,19 +1,34 @@
-r.d(t, { Z: () => o });
-var n = r(442837),
-    i = r(314897),
-    a = r(621853),
-    l = r(224724);
-function o(e) {
-    let t = (0, n.e7)([i.default], () => {
-            let t = i.default.getId();
+n.d(t, { Z: () => c }), n(388685);
+var r = n(296009),
+    i = n(442837),
+    l = n(835473),
+    a = n(314897),
+    o = n(621853),
+    s = n(224724);
+function c(e) {
+    let t = (0, i.e7)([a.default], () => {
+            let t = a.default.getId();
             return null != e && t === e;
         }, [e]),
-        r = (0, n.e7)([l.Z], () => l.Z.getPendingWidgets()),
-        o = (0, n.Wu)([a.Z], () => {
+        n = (0, i.e7)([s.Z], () => s.Z.getPendingWidgets()),
+        c = (0, i.Wu)([o.Z], () => {
             var t;
             if (null == e) return [];
-            let r = a.Z.getUserProfile(e);
-            return null != (t = null == r ? void 0 : r.widgets) ? t : [];
+            let n = o.Z.getUserProfile(e);
+            return null != (t = null == n ? void 0 : n.widgets) ? t : [];
         }, [e]);
-    return t && null !== r ? r : o;
+    return ((0, l.Z)(
+        (function (e) {
+            let t = new Set();
+            return (
+                e.forEach((e) => {
+                    e.type === r.l.APPLICATION && t.add(e.applicationId);
+                }),
+                [...t]
+            );
+        })([...c, ...(null != n ? n : [])]),
+    ),
+    t && null !== n)
+        ? n
+        : c;
 }

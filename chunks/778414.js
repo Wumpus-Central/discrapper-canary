@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => T,
-    Z: () => C,
+    C: () => P,
+    Z: () => T,
 }),
     n(388685);
 var r = n(951288),
@@ -12,18 +12,20 @@ var r = n(951288),
     c = n(981312),
     u = n(314897),
     d = n(351402),
-    p = n(206599),
-    f = n(5136),
-    h = n(747101),
-    g = n(517157),
-    m = n(430790),
-    b = n(640078),
-    _ = n(190862),
-    O = n(661462),
-    E = n(795990),
-    y = n(388032),
-    v = n(830202);
-function I(e) {
+    p = n(836197),
+    f = n(206599),
+    h = n(5136),
+    g = n(747101),
+    m = n(517157),
+    b = n(860717),
+    _ = n(430790),
+    O = n(640078),
+    E = n(190862),
+    y = n(661462),
+    v = n(795990),
+    I = n(388032),
+    C = n(479283);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +50,7 @@ function I(e) {
     }
     return e;
 }
-function C(e) {
+function T(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -76,29 +78,31 @@ function C(e) {
         case l.l.CURRENT_GAMES:
         case l.l.WANT_TO_PLAY_GAMES:
         case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(_.Z, I({ widget: t }, n));
+            return (0, r.jsx)(E.Z, S({ widget: t }, n));
+        case l.l.APPLICATION:
+            return (0, r.jsx)(b.Z, S({ widget: t }, n));
         default:
             return null;
     }
 }
-function S() {
+function N() {
     return (0, r.jsxs)("div", {
-        className: v.ukTeenDisclaimer,
+        className: C.ukTeenDisclaimer,
         children: [
             (0, r.jsx)(o.d3s, { size: "xs" }),
             (0, r.jsx)(o.Text, {
-                "aria-label": y.intl.string(y.t["7blcz8"]),
+                "aria-label": I.intl.string(I.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: y.intl.string(y.t["7blcz8"]),
+                children: I.intl.string(I.t["7blcz8"]),
             }),
         ],
     });
 }
-function N(e) {
+function j(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        o = (0, g.Z)(t.id),
-        f = (0, a.e7)([u.default], () => u.default.getId() === t.id),
+        o = (0, m.Z)(t.id),
+        h = (0, a.e7)([u.default], () => u.default.getId() === t.id),
         b = (() => {
             let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
                 n = (0, c.U)();
@@ -109,15 +113,15 @@ function N(e) {
                 "GB" === e && n
             );
         })(),
-        _ = 0 === o.length && f;
-    return ((0, h.ZP)(o), (0, p.J)(f, o), _)
-        ? (0, r.jsx)(E.Z, {})
+        O = 0 === o.length && h;
+    return ((0, g.ZP)(o.filter(p.W)), (0, f.J)(h, o), O)
+        ? (0, r.jsx)(v.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  f && b && (0, r.jsx)(S, {}),
+                  h && b && (0, r.jsx)(N, {}),
                   o.map((e, i) =>
                       (0, r.jsx)(
-                          C,
+                          T,
                           {
                               widget: e,
                               user: t,
@@ -128,20 +132,20 @@ function N(e) {
                           e.id,
                       ),
                   ),
-                  f && (0, r.jsx)(m.Z, {}),
+                  h && (0, r.jsx)(_.Z, {}),
               ],
           });
 }
-function T(e) {
+function P(e) {
     let t = i.useRef(null);
     return (
-        (0, f.r)({ container: t.current }),
-        (0, r.jsxs)(O.F, {
+        (0, h.r)({ container: t.current }),
+        (0, r.jsxs)(y.F, {
             "data-scroller": !0,
             scrollerRef: t,
-            className: v.scroller,
+            className: C.scroller,
             fade: !0,
-            children: [(0, r.jsx)(b.Z, { scrollerRef: t }), (0, r.jsx)(N, I({}, e)), (0, r.jsx)(o.c43, {})],
+            children: [(0, r.jsx)(O.Z, { scrollerRef: t }), (0, r.jsx)(j, S({}, e)), (0, r.jsx)(o.c43, {})],
         })
     );
 }
