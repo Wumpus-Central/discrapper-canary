@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(611928),
     C = n(763433),
     S = n(283293),
-    N = n(507808),
-    T = n(822857),
+    T = n(507808),
+    N = n(822857),
     j = n(775451),
     P = n(451478),
     x = n(626135),
@@ -48,7 +48,7 @@ var r = n(951288),
     q = n(981631),
     Q = n(215023),
     X = n(388032),
-    J = n(728963),
+    J = n(838997),
     $ = n(13299),
     ee = n(606199),
     et = n(164792),
@@ -57,7 +57,7 @@ var r = n(951288),
     ei = n(431115);
 function el(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, T.WX)({ location: K.dr.QUEST_HOME_DESKTOP }),
+        { enabled: n } = (0, N.WX)({ location: K.dr.QUEST_HOME_DESKTOP }),
         l = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
         o = (0, u.e7)([P.Z], () => P.Z.isFocused()),
         { ref: s, inViewport: c } = (0, B.a)(),
@@ -173,6 +173,7 @@ function eo(e) {
                 }),
                 (0, r.jsx)(E.Z, {
                     title: X.intl.string(X.t.z8YP2N),
+                    titleColor: "always-white",
                     button: (0, r.jsx)(d.zxk, {
                         variant: "overlay-primary",
                         text: X.intl.string(X.t.GURBQk),
@@ -239,7 +240,7 @@ let es = function () {
                 },
             });
         }, [u]);
-    let { enabled: B } = (0, T.WX)({ location: K.dr.QUEST_HOME_DESKTOP }),
+    let { enabled: B } = (0, N.WX)({ location: K.dr.QUEST_HOME_DESKTOP }),
         $ = i.useCallback(() => {
             if (B) return void window.open(q.EYA.PAID_TERMS_ORBS);
             window.open(Z.Z.getArticleURL(q.BhN.QUESTS_LEARN_MORE));
@@ -249,7 +250,7 @@ let es = function () {
         et = B ? X.intl.format(X.t.U9FY0N, {}) : X.intl.string(X.t.oWCrBg),
         en = i.useRef(null),
         er = i.useCallback(() => {
-            (0, N.Y)({
+            (0, T.Y)({
                 pageType: q.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: q.jXE.ORBS_BALANCE_MENU,
                 ctaObject: q.qAy.CTA_TO_ORBS_SHOP,
