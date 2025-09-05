@@ -1,61 +1,44 @@
-i.d(t, { default: () => m });
-var n = i(951288);
-i(647438);
-var a = i(481060),
-    l = i(230711),
-    o = i(181211),
-    s = i(188879),
-    r = i(981631),
-    c = i(726985),
-    d = i(388032),
-    u = i(22860),
-    f = i(170143);
-let m = (e) => {
-    let { transitionState: t, onClose: i, classificationId: m, source: p } = e,
-        h = (0, o.Z)(),
-        g = () => {
-            i(), l.Z.open(r.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
+n.d(t, { default: () => u });
+var i = n(951288);
+n(647438);
+var a = n(481060),
+    l = n(230711),
+    o = n(181211),
+    r = n(188879),
+    s = n(981631),
+    c = n(726985),
+    d = n(22860);
+let u = (e) => {
+    let { transitionState: t, onClose: n, classificationId: u, source: m } = e,
+        p = (0, o.Z)(),
+        f = () => {
+            n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
-    return (0, n.jsxs)(a.Y0X, {
-        className: u.modalRoot,
+    return (0, i.jsxs)(a.Y0X, {
+        className: d.modalRoot,
         transitionState: t,
         parentComponent: "ClassificationDetailModal",
+        "data-migration-pending": !0,
         children: [
-            (0, n.jsxs)("div", {
-                className: u.modalHeader,
-                children: [
-                    (0, n.jsx)("img", {
-                        className: u.image,
-                        src: f,
-                        alt: "",
-                    }),
-                    (0, n.jsx)(a.olH, {
-                        className: u.modalClose,
-                        onClick: i,
-                    }),
-                ],
-            }),
-            (0, n.jsx)(a.hzk, {
-                className: u.modalContent,
-                children: h
-                    ? (0, n.jsx)(a.$jN, {})
-                    : (0, n.jsx)(s.Z, {
-                          classificationId: m,
-                          source: p,
-                          onError: g,
-                          onClose: g,
-                      }),
-            }),
-            (0, n.jsx)(a.mzw, {
-                children: (0, n.jsx)("div", {
-                    "data-button-hoisted-classname-wrapper": !0,
-                    children: (0, n.jsx)(a.zxk, {
-                        variant: "primary",
-                        text: d.intl.string(d.t.elrEjI),
-                        type: "button",
-                        onClick: g,
-                    }),
+            (0, i.jsx)("div", {
+                className: d.modalHeader,
+                children: (0, i.jsx)(a.olH, {
+                    "data-migration-pending": !0,
+                    className: d.modalClose,
+                    onClick: n,
                 }),
+            }),
+            (0, i.jsx)(a.hzk, {
+                "data-migration-pending": !0,
+                className: d.modalContent,
+                children: p
+                    ? (0, i.jsx)(a.$jN, {})
+                    : (0, i.jsx)(r.Z, {
+                          classificationId: u,
+                          source: m,
+                          onError: f,
+                          onClose: f,
+                      }),
             }),
         ],
     });
