@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => L,
-    y: () => k,
+    y: () => M,
 });
 var r = n(951288),
     i = n(647438),
@@ -260,36 +260,46 @@ let P = (e) => {
             h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
             m = (0, f.q8)(n),
             g = (0, f.Vl)(n),
-            E = u !== p.LI.SELECT && !l && !c;
-        if (h)
-            return (0, r.jsx)(L, {
-                quest: n,
-                sourceQuestContent: i,
-                useReducedMotion: a,
-                isExpanded: o,
-                shouldShowRewardsCTAWhenCollapsed: _,
-            });
-        if (m)
-            return (0, r.jsx)(R, {
-                quest: n,
-                sourceQuestContent: i,
-                taskDetails: d,
-            });
-        if (g) return (0, r.jsx)(D, { quest: n });
-        if (u === p.LI.CONSOLE && s)
-            return (0, r.jsx)(w, {
-                quest: n,
-                sourceQuestContent: i,
-            });
-        if (E && (0, f.Pb)(n)) return (0, r.jsx)(x, { taskDetails: d });
-        else if (E)
-            return (0, r.jsx)(P, {
-                quest: n,
-                sourceQuestContent: i,
-            });
-        return null;
+            E = u !== p.LI.SELECT && !l && !c,
+            b = null;
+        return (
+            h
+                ? (b = (0, r.jsx)(L, {
+                      quest: n,
+                      sourceQuestContent: i,
+                      useReducedMotion: a,
+                      isExpanded: o,
+                      shouldShowRewardsCTAWhenCollapsed: _,
+                  }))
+                : m
+                  ? (b = (0, r.jsx)(R, {
+                        quest: n,
+                        sourceQuestContent: i,
+                        taskDetails: d,
+                    }))
+                  : g
+                    ? (b = (0, r.jsx)(D, { quest: n }))
+                    : u === p.LI.CONSOLE && s
+                      ? (b = (0, r.jsx)(w, {
+                            quest: n,
+                            sourceQuestContent: i,
+                        }))
+                      : E && (0, f.Pb)(n)
+                        ? (b = (0, r.jsx)(x, { taskDetails: d }))
+                        : E &&
+                          (b = (0, r.jsx)(P, {
+                              quest: n,
+                              sourceQuestContent: i,
+                          })),
+            null == b
+                ? null
+                : (0, r.jsx)("div", {
+                      className: v.cta,
+                      children: b,
+                  })
+        );
     };
-function k(e) {
+function M(e) {
     return (0, r.jsxs)("div", {
         className: v.ctaButtons,
         children: [
@@ -304,10 +314,7 @@ function k(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(s.V7D, { className: v.backIcon }),
                 }),
-            (0, r.jsx)("div", {
-                className: v.cta,
-                children: (0, r.jsx)(j, T({}, e)),
-            }),
+            (0, r.jsx)(j, T({}, e)),
         ],
     });
 }
