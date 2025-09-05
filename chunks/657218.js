@@ -17,8 +17,8 @@ var r = n(951288),
     y = n(541716),
     _ = n(752305),
     C = n(893718),
-    x = n(303628),
-    v = n(313201),
+    v = n(303628),
+    x = n(313201),
     O = n(967128),
     j = n(665149),
     E = n(294218),
@@ -213,8 +213,8 @@ function Q(e) {
         })(t, f),
         C = (0, k.vH)(t),
         {
-            isGeneratingAI: x,
-            enableAIFeatures: v,
+            isGeneratingAI: v,
+            enableAIFeatures: x,
             getThreadNameInputAccessory: j,
         } = (0, G.U)({
             parentChannel: t,
@@ -281,23 +281,21 @@ function Q(e) {
                                     shouldRefocus: !0,
                                 }
                             );
-                        if (null == n) {
-                            let { valid: n } = await (0, M.v)({
-                                content: e,
-                                stickers: i,
-                                uploads: l,
-                                type: Y,
-                                channel: t,
-                            });
-                            if (!n)
-                                return (
-                                    f(!1),
-                                    {
-                                        shouldClear: !1,
-                                        shouldRefocus: !0,
-                                    }
-                                );
-                        }
+                        let { valid: _ } = await (0, M.v)({
+                            content: e,
+                            stickers: i,
+                            uploads: l,
+                            type: Y,
+                            channel: null == n ? t : null,
+                        });
+                        if (!_)
+                            return (
+                                f(!1),
+                                {
+                                    shouldClear: !1,
+                                    shouldRefocus: !0,
+                                }
+                            );
                         try {
                             await m(e, i, l);
                         } catch (e) {
@@ -331,7 +329,7 @@ function Q(e) {
             privateThreadMode: C,
             textAreaState: b,
             location: l,
-            enableAIFeatures: v,
+            enableAIFeatures: x,
         }),
         A = (0, k.oD)(p, C) ? c.qtY : c.or_;
     return (0, r.jsx)("div", {
@@ -366,8 +364,8 @@ function Q(e) {
                                             updateThreadSettings: g,
                                             error: E,
                                             disabled: N,
-                                            isGeneratingAI: x,
-                                            enableAIFeatures: v,
+                                            isGeneratingAI: v,
+                                            enableAIFeatures: x,
                                             getThreadNameInputAccessory: j,
                                         }),
                                         t.type === F.d4z.GUILD_TEXT
@@ -467,7 +465,7 @@ function $(e) {
         m = (0, L.Op)(o, { content: f }),
         g = (0, k.Od)(n, i),
         b = null != i && !p,
-        y = (0, v.Dt)(),
+        y = (0, x.Dt)(),
         _ = p ? V.intl.string(V.t["Nb2/RE"]) : "" !== g ? g : V.intl.string(V.t["Nb2/RE"]);
     return (0, r.jsx)(c.oil, {
         label: V.intl.string(b ? V.t.JPvIiI : V.t.j3XWjI),
@@ -523,17 +521,17 @@ function ee(e) {
             handler: g,
         });
     let _ = (0, o.e7)([A.Z], () => A.Z.can(F.Plq.ATTACH_FILES, t)),
-        v = (0, L.Op)(p, { content: n.textValue });
+        x = (0, L.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(x.Z, {
+            (0, r.jsx)(v.Z, {
                 channelId: t.id,
                 type: Y,
                 canAttachFiles: _,
             }),
             (0, r.jsx)("div", {
                 className: z.starterMessageError,
-                children: (0, r.jsx)(c.pdY, { error: v }),
+                children: (0, r.jsx)(c.pdY, { error: x }),
             }),
             (0, r.jsx)(C.ZP, {
                 type: Y,
@@ -543,7 +541,7 @@ function ee(e) {
                 richValue: n.richValue,
                 focused: h,
                 className: a()(z.channelTextArea, z.channelTextAreaWithTypingIndicator),
-                innerClassName: a()(z.channelTextAreaInner, { [z.channelTextAreaInnerError]: null != v }),
+                innerClassName: a()(z.channelTextAreaInner, { [z.channelTextAreaInnerError]: null != x }),
                 onFocus: m,
                 onBlur: g,
                 onChange: b,
