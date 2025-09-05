@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
-    o = n(392711),
-    a = n(218867),
+    a = n(392711),
+    o = n(218867),
     s = n(74538),
     l = n(28546),
     c = n(122567),
@@ -12,7 +12,7 @@ let f = 20,
     _ = i.forwardRef(function (e, t) {
         let {
                 categories: n,
-                store: o,
+                store: a,
                 hasSearchResults: c,
                 listPadding: _,
                 renderRow: h,
@@ -32,15 +32,21 @@ let f = 20,
             N = i.useRef(!1),
             R = i.useRef(null),
             P = (0, l.Iu)((e) => e.searchQuery),
-            w = o.useStore((e) => e.activeCategoryIndex),
-            D = n.map((e) =>
-                (0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 },
+            w = a.useStore((e) => e.activeCategoryIndex),
+            D = i.useMemo(
+                () =>
+                    n.map((e) =>
+                        (0, s._O)(e.categoryInfo)
+                            ? { isNitroLocked: e.categoryInfo.isNitroLocked }
+                            : { isNitroLocked: !1 },
+                    ),
+                [n],
             ),
             x = (0, u.Qs)({
                 activeCategoryIndex: w,
                 isScrolling: N,
                 listRef: R,
-                onActiveCategoryIndexChange: o.setActiveCategoryIndex,
+                onActiveCategoryIndexChange: a.setActiveCategoryIndex,
                 scrollOffset: f,
                 searchQuery: P,
             }),
@@ -58,6 +64,9 @@ let f = 20,
                 [x, P, D, C],
             );
         return (
+            i.useEffect(() => {
+                null != R.current && L(0);
+            }, [L, R]),
             (0, u.Xs)({
                 searchQuery: P,
                 activeCategoryIndex: w,
@@ -111,7 +120,7 @@ let f = 20,
                 children: [
                     P.length > 0 && !c && null != y
                         ? y()
-                        : (0, r.jsx)(a.Z, {
+                        : (0, r.jsx)(o.Z, {
                               role: "none presentation",
                               listPadding: _,
                               onScroll: L,
@@ -133,22 +142,22 @@ let f = 20,
             })
         );
     }),
-    p = (0, o.throttle)(h, 300, {
+    p = (0, a.throttle)(h, 300, {
         leading: !1,
         trailing: !0,
     });
 function h(e) {
     let { listRef: t, searchQuery: n, nitroLockedSectionStates: r, scrollTop: i } = e;
     if (null == t.current) return;
-    let o = (0, c.y)({
+    let a = (0, c.y)({
         listRef: t,
         searchQuery: n,
         nitroLockedSectionStates: r,
         scrollTop: i,
     });
     l.Iu.setState({
-        isNitroLockedSectionVisible: o.isNitroLockedSectionVisible,
-        areOnlyNitroLockedSectionsVisible: o.areOnlyNitroLockedSectionsVisible,
+        isNitroLockedSectionVisible: a.isNitroLockedSectionVisible,
+        areOnlyNitroLockedSectionsVisible: a.areOnlyNitroLockedSectionsVisible,
     });
 }
 let m = _;
