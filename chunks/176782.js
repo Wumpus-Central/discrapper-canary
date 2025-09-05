@@ -2,7 +2,7 @@ n.d(t, { _: () => l });
 var r = n(442837),
     i = n(607070),
     a = n(391110),
-    o = n(424373);
+    o = n(309253);
 let s = {
         subtitle: { onlyShowOnHover: !1 },
         description: {
@@ -30,6 +30,13 @@ let s = {
                         className: o.descriptionCTATenureReward,
                     },
                     cardContainer: { className: t ? o.nitroGradientBorderHover : void 0 },
+                },
+                [a.zW.PROMOTION_REDEMPTION]: {
+                    cardContainer: { className: o.nitroGradientBorderHover },
+                    perkImage: {
+                        disableHoverAnimation: !0,
+                        className: o.promotionRedemptionImage,
+                    },
                 },
                 [a.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: o.nitroGradientBorderHover } },
             };

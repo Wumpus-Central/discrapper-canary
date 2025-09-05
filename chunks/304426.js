@@ -1,7 +1,8 @@
 n.d(t, {
-    C: () => a,
-    m: () => i,
+    C: () => i,
+    m: () => r,
 });
-var r,
-    i = (((r = {}).NITRO_DROP = "NITRO_DROP"), r);
-let a = "NITRO_DROP";
+var r = (function (e) {
+    return (e.NITRO_DROP = "NITRO_DROP"), e;
+})({});
+let i = "NITRO_DROP";

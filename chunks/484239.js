@@ -5,78 +5,99 @@ var i = n(120356),
     a = n.n(i),
     o = n(755721),
     s = n(481060),
-    l = n(404615),
+    l = n(176782),
     c = n(743612),
-    u = n(505754);
+    u = n(759291);
 let d = (e) => {
-    var t;
+    var t, n, i, d;
     let {
-            title: n,
-            titleClassName: i,
-            buttonClassName: d,
-            perkImage: f,
-            isCarousel: _,
-            onCtaClick: p,
-            perkComponent: h,
-            subtitle: m = "",
-            descriptionCta: g = "",
-            cardVariant: E,
-            subtitleClassName: b,
-            imageOverlayText: y,
+            title: f,
+            titleClassName: _,
+            buttonClassName: p,
+            perkImage: h,
+            isCarousel: m,
+            onCtaClick: g,
+            perkComponent: E,
+            subtitle: b = "",
+            descriptionCta: y = "",
+            cta: O = "",
+            cardVariant: v,
+            subtitleClassName: I,
+            imageOverlayText: T,
         } = e,
-        O = (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-        v = (0, l._)(E),
-        I = null != y;
+        S = (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
+        A = (0, l._)(v),
+        C = null != T;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", { className: a()(u.cover, u.below) }),
             (0, r.jsx)(c.Z, {
-                title: n,
-                shouldShowElement: O,
-                cardVariantStyleInfo: v,
-                titleClassName: i,
-                subtitle: m,
-                subtitleClassName: b,
+                title: f,
+                shouldShowElement: S,
+                cardVariantStyleInfo: A,
+                titleClassName: _,
+                subtitle: b,
+                subtitleClassName: I,
             }),
-            null != f &&
+            null != h &&
                 (0, r.jsxs)("div", {
-                    className: a()(u.relative, { [u.cardImage]: !_ }),
+                    className: a()(
+                        u.relative,
+                        {
+                            [u.cardImage]: !m,
+                            [u.hoverCardImage]:
+                                !m && !(null == A || null == (t = A.perkImage) ? void 0 : t.disableHoverAnimation),
+                        },
+                        null == A || null == (n = A.perkImage) ? void 0 : n.className,
+                    ),
                     children: [
                         (0, r.jsx)("img", {
-                            src: f,
+                            src: h,
                             alt: "",
-                            className: _ ? (I ? u.carouselCardImageGrayscale : u.carouselCardImage) : "",
+                            className: m ? (C ? u.carouselCardImageGrayscale : u.carouselCardImage) : "",
                         }),
-                        I
+                        C
                             ? (0, r.jsx)("div", {
                                   className: u.imageOverlayTextContainer,
                                   children: (0, r.jsx)(s.Text, {
                                       className: u.imageOverlayText,
                                       variant: "text-md/bold",
-                                      children: y,
+                                      children: T,
                                   }),
                               })
                             : null,
                     ],
                 }),
-            null != h &&
+            null != E &&
                 (0, r.jsxs)("div", {
                     className: u.cardIllustrationNoHover,
                     children: [
-                        h,
-                        0 !== g.length &&
-                            null != p &&
+                        E,
+                        0 !== y.length &&
+                            null != g &&
                             (0, r.jsx)(o.zx, {
                                 "data-migration-pending": !0,
-                                className: d,
+                                className: p,
                                 fullWidth: !0,
-                                onClick: p,
+                                onClick: g,
                                 children: (0, r.jsx)("div", {
-                                    className: null == v || null == (t = v.descriptionCta) ? void 0 : t.className,
-                                    children: g,
+                                    className: null == A || null == (i = A.descriptionCta) ? void 0 : i.className,
+                                    children: y,
                                 }),
                             }),
                     ],
+                }),
+            "" !== O &&
+                null != g &&
+                (0, r.jsx)(o.zx, {
+                    "data-migration-pending": !0,
+                    className: p,
+                    fullWidth: !0,
+                    onClick: g,
+                    children: (0, r.jsx)("div", {
+                        className: null == A || null == (d = A.cta) ? void 0 : d.className,
+                        children: O,
+                    }),
                 }),
         ],
     });

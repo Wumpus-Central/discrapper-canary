@@ -17,7 +17,8 @@ var r = (function (e) {
         return (
             (e[(e.DEFAULT = 0)] = "DEFAULT"),
             (e[(e.REWARD = 1)] = "REWARD"),
-            (e[(e.NITRO_GRADIENT_HOVER_BORDER = 2)] = "NITRO_GRADIENT_HOVER_BORDER"),
+            (e[(e.PROMOTION_REDEMPTION = 2)] = "PROMOTION_REDEMPTION"),
+            (e[(e.NITRO_GRADIENT_HOVER_BORDER = 3)] = "NITRO_GRADIENT_HOVER_BORDER"),
             e
         );
     })({}),
