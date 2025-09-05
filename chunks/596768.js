@@ -15,14 +15,14 @@ var a = n(951288),
     f = n(55935),
     v = n(120816),
     b = n(31336),
-    j = n(257785),
-    g = n(484036),
+    g = n(257785),
+    j = n(484036),
     _ = n(681619),
     y = n(621060),
     C = n(388032),
-    N = n(599832),
-    E = n(451429);
-let O = [
+    N = n(529554),
+    E = n(866403);
+let T = [
         {
             key: "id",
             cellClassName: N.eventColumn,
@@ -48,7 +48,7 @@ let O = [
             },
         },
     ],
-    T = [
+    O = [
         {
             id: "details",
             name: "Details",
@@ -78,10 +78,10 @@ let O = [
                                 (0, a.jsx)(p.ZP.Title, { children: t }),
                             ],
                         }),
-                        (0, a.jsxs)(j.E, {
+                        (0, a.jsxs)(g.E, {
                             className: N.commonProperties,
                             children: [
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Timestamp (local)",
                                     children: (0, a.jsx)("time", {
                                         dateTime: s.toISOString(),
@@ -90,35 +90,35 @@ let O = [
                                     }),
                                 }),
                                 "guild" === n.type &&
-                                    (0, a.jsx)(j.Z9, {
+                                    (0, a.jsx)(g.Z9, {
                                         name: "Guild ID",
                                         children: (0, a.jsx)("code", { children: n.guildId }),
                                     }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Bucket",
                                     children: (0, a.jsx)("code", { children: n.bucket }),
                                 }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Revision",
                                     children: (0, a.jsx)("code", { children: n.revision }),
                                 }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Override",
-                                    children: (0, a.jsx)(j.wl, { value: n.override }),
+                                    children: (0, a.jsx)(g.wl, { value: n.override }),
                                 }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Exposure type",
                                     children: (0, a.jsx)("code", { children: r }),
                                 }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Excluded",
-                                    children: (0, a.jsx)(j.wl, { value: l }),
+                                    children: (0, a.jsx)(g.wl, { value: l }),
                                 }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Previously tracked",
-                                    children: (0, a.jsx)(j.wl, { value: c }),
+                                    children: (0, a.jsx)(g.wl, { value: c }),
                                 }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: "Location",
                                     children: (0, a.jsx)("code", { children: o }),
                                 }),
@@ -142,7 +142,7 @@ function S() {
         ),
         [c, d] = r.useState(void 0),
         p = s.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: j } = (0, y.ZP)({ tabs: T }, []),
+        { TabBar: f, renderSelectedTab: g } = (0, y.ZP)({ tabs: O }, []),
         S = (0, u.e7)([v.Z], () => v.Z.trackTriggers),
         P = r.useCallback((e) => {
             h.Z.dispatch({
@@ -163,7 +163,6 @@ function S() {
                         children: (0, a.jsx)(m.T2, {
                             checked: S,
                             onChange: P,
-                            className: N.__invalid_toolbarSwitch,
                         }),
                     }),
                     (0, a.jsx)(m.zx, {
@@ -191,17 +190,17 @@ function S() {
                 ],
             }),
             (0, a.jsx)(_.Z, {
-                columns: O,
+                columns: T,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key),
             }),
             null != p &&
-                (0, a.jsxs)(g.Z, {
+                (0, a.jsxs)(j.Z, {
                     className: N.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(f, {}), j({ loggedTrigger: p })],
+                    children: [(0, a.jsx)(f, {}), g({ loggedTrigger: p })],
                 }),
         ],
     });

@@ -11,6 +11,5 @@ e.exports = {
     ruleSubtextHeader: "ruleSubtextHeader_c5e6a1",
     ruleTextDescription: "ruleTextDescription_c5e6a1",
     actionContainer: "actionContainer_c5e6a1",
-    toggle: "toggle_c5e6a1",
     alphaBetaTag: "alphaBetaTag_c5e6a1",
 };

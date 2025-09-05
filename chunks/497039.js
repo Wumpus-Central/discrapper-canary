@@ -9,7 +9,7 @@ var r = n(951288),
     u = n(186325),
     d = n(84735),
     f = n(180035),
-    _ = n(580229);
+    _ = n(241179);
 function p(e, t, n) {
     return (
         t in e
@@ -71,13 +71,13 @@ let E = {
     O = "M6.56666 11.0013L6.56666 8.96683L13.5667 8.96683L13.5667 11.0013L6.56666 11.0013Z",
     v = "M13.5582 8.96683L13.5582 11.0013L6.56192 11.0013L6.56192 8.96683L13.5582 8.96683Z",
     I = "M7.89561 14.8538L6.30462 13.2629L14.3099 5.25755L15.9009 6.84854L7.89561 14.8538Z",
-    S = "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z";
-function T(e, t, n, i) {
+    T = "M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z";
+function S(e, t, n, i) {
     let a = e.to({
             output: [t, n],
         }),
         o = i ? [b, b, I, I] : [b, O, O, I],
-        l = i ? [y, y, S, S] : [y, v, v, S];
+        l = i ? [y, y, T, T] : [y, v, v, T];
     return (0, r.jsxs)("svg", {
         viewBox: "0 0 20 20",
         fill: "none",
@@ -100,48 +100,48 @@ function T(e, t, n, i) {
     });
 }
 function A(e) {
-    let { id: t, onChange: n, checked: a, disabled: p, className: m, focusProps: b, innerRef: y } = e,
-        { reducedMotion: O } = i.useContext(u.S),
-        v = i.useRef(null),
-        [I, S] = i.useState(!1),
-        A = (0, f.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
-        C = (0, f.d)(l.Z.colors.BG_BRAND).spring(),
-        { state: N, opacity: R } = (0, c.q)(
+    let { id: t, onChange: n, checked: a, disabled: p, focusProps: m, innerRef: b } = e,
+        { reducedMotion: y } = i.useContext(u.S),
+        O = i.useRef(null),
+        [v, I] = i.useState(!1),
+        T = (0, f.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
+        A = (0, f.d)(l.Z.colors.BG_BRAND).spring(),
+        { state: C, opacity: N } = (0, c.q)(
             {
                 config: E,
                 opacity: p ? 0.5 : 1,
-                state: I ? (a ? 0.7 : 0.3) : +!!a,
+                state: v ? (a ? 0.7 : 0.3) : +!!a,
             },
             "animate-always",
         );
+    function R(e) {
+        I(!1), null == n || n(e.currentTarget.checked, e);
+    }
     function P(e) {
-        S(!1), null == n || n(e.currentTarget.checked, e);
+        p || e.repeat || ((" " === e.key || "Enter" === e.key) && I(!0));
     }
     function w(e) {
-        p || e.repeat || ((" " === e.key || "Enter" === e.key) && S(!0));
-    }
-    function D(e) {
         var t;
-        p || !I || e.repeat || (S(!1), "Enter" === e.key && (null == (t = v.current) || t.click()));
+        p || !v || e.repeat || (I(!1), "Enter" === e.key && (null == (t = O.current) || t.click()));
     }
     return (0, r.jsx)(
         d.t,
-        g(h({}, b), {
+        g(h({}, m), {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
                 "data-toggleable-component": "switch",
-                className: o()(_.container, m, {
+                className: o()(_.container, {
                     [_.checked]: a,
                     [_.disabled]: p,
                 }),
-                onMouseDown: () => !p && S(!0),
-                onMouseUp: () => S(!1),
-                onMouseLeave: () => S(!1),
+                onMouseDown: () => !p && I(!0),
+                onMouseUp: () => I(!1),
+                onMouseLeave: () => I(!1),
                 style: {
-                    opacity: R,
-                    backgroundColor: N.to({
-                        output: [A, C],
+                    opacity: N,
+                    backgroundColor: C.to({
+                        output: [T, A],
                     }),
                 },
                 children: [
@@ -150,7 +150,7 @@ function A(e) {
                         viewBox: "0 0 28 20",
                         preserveAspectRatio: "xMinYMid meet",
                         style: {
-                            left: N.to({
+                            left: C.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [-4, 1, 8, 12],
                             }),
@@ -159,38 +159,38 @@ function A(e) {
                         children: [
                             (0, r.jsx)(s.animated.rect, {
                                 fill: "white",
-                                x: N.to({
+                                x: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4],
                                 }),
-                                y: N.to({
+                                y: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0],
                                 }),
-                                height: N.to({
+                                height: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20],
                                 }),
-                                width: N.to({
+                                width: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20],
                                 }),
                                 rx: "10",
                             }),
-                            T(N, A, C, O.enabled),
+                            S(C, T, A, y.enabled),
                         ],
                     }),
                     (0, r.jsx)("input", {
                         id: t,
                         type: "checkbox",
                         ref: (e) => {
-                            (v.current = e), null != y && (y.current = e);
+                            (O.current = e), null != b && (b.current = e);
                         },
                         className: _.input,
                         tabIndex: p ? -1 : 0,
-                        onKeyDown: w,
-                        onKeyUp: D,
-                        onChange: P,
+                        onKeyDown: P,
+                        onKeyUp: w,
+                        onChange: R,
                         checked: a,
                         disabled: p,
                     }),
