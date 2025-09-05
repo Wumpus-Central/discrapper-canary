@@ -68,7 +68,7 @@ let _ = (e, t, n, r) => {
     m = (e, t, n) => {
         let i = (0, r.e7)([s.Z], () => s.Z.get(e), [e]),
             { priceOptions: a, discountAmountOff: o } = _(e, t, n, null == i);
-        if (null == i) return null;
+        if (null == i || null == o) return null;
         let u = (0, l.aS)(e, !1, !1, a);
         return (0, c.T4)(u.amount - (null != o ? o : 0), u.currency);
     };

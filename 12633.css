@@ -76850,6 +76850,51 @@ html .progress__61462 {
     width: 100%
 }
 
+.container__97113 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-sm);
+    padding: var(--space-16) var(--space-24) var(--space-24);
+    width: 100%
+}
+
+.topSection__97113 {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: space-between;
+    width: 100%
+}
+
+.wordmark__97113 {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 23.643px;
+    text-transform: uppercase
+}
+
+.contentContainer__97113 {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-32);
+    width: 100%
+}
+
+.content__97113 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    width: 373px
+}
+
+.image__97113 {
+    height: 138px;
+    width: 138px
+}
+
 .container__60b20 {
     align-items: center;
     background-color: var(--background-base-lower);
@@ -77173,6 +77218,7 @@ html .progress__61462 {
 
 .promoBannerContainer__94da4 {
     justify-content: center;
+    margin-bottom: var(--space-24);
     max-width: 1052px;
     position: relative;
     width: 100%;
@@ -78185,7 +78231,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .timeBoxOutline__7cfe3 {
     align-content: center;
-    background-color: var(--background-mod-strong);
+    background-color: hsl(var(--opacity-24-hsl)/.23921568627450981);
     border-radius: 6px;
     height: 36px;
     justify-content: center;
@@ -89139,6 +89185,14 @@ html .invoiceCancelRow__968a4 {
     margin: var(--space-16) 0
 }
 
+.spinnerContainer__11ee8 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
 .churnFooterContainer__64988 {
     overflow-x: clip;
     position: relative
@@ -89794,7 +89848,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

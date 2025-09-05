@@ -27,8 +27,8 @@ var r = n(951288),
     I = n(219673),
     C = n(532245),
     S = n(870041),
-    N = n(963590),
-    T = n(767870),
+    T = n(963590),
+    N = n(767870),
     j = n(331972),
     P = n(104494),
     x = n(639119),
@@ -65,7 +65,7 @@ let W = (e) => {
         let t, n, E;
         var Y,
             K,
-            { selected: q, nitroTabButtonRef: X, route: Q, locationState: J } = e,
+            { selected: q, nitroTabButtonRef: Q, route: X, locationState: J } = e,
             $ = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -112,23 +112,23 @@ let W = (e) => {
                 showAfterTimestamp: ey.valueOf(),
                 cooldownDurationMs: 0,
             }),
-            eS = (0, N.Z)({ location: "NitroTabButton" }),
-            eN = (null == ec ? void 0 : ec.trial_id) === V.a7,
-            eT = (0, p.YZ)("NitroTabButton"),
+            eS = (0, T.Z)({ location: "NitroTabButton" }),
+            eT = (null == ec ? void 0 : ec.trial_id) === V.a7,
+            eN = (0, p.YZ)("NitroTabButton"),
             ej = [],
             eP = [];
         (0, f.Kl)() &&
             (ef && ej.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
             eS && ej.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             ep && ej.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
-            eT && ej.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE));
+            eN && ej.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE));
         let [ex, eA] = (0, g.US)(ej, void 0, !0);
         eO && eP.push(o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK);
         let [eZ, ew] = (0, g.US)(eP, void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === q && null != ex && eA(F.L.AUTO_DISMISS);
-            }, [eA, q, ex]),
+                !0 === q && null != ex && eA(F.L.AUTO_DISMISS), !0 === q && null != eZ && ew(F.L.AUTO_DISMISS);
+            }, [eA, q, ex, ew, eZ]),
             !W({ selected: q }))
         )
             return null;
@@ -144,7 +144,7 @@ let W = (e) => {
             (eE === V.a$.NONE ||
                 ep ||
                 ((E = 7),
-                (n = (0, r.jsx)(T.Z, {
+                (n = (0, r.jsx)(N.Z, {
                     className: "",
                     startsAt: ey,
                     endsAt: ev,
@@ -185,7 +185,7 @@ let W = (e) => {
                             includesAmountOff: !1,
                         })),
                         (E = 3))
-                      : null == ec || eN
+                      : null == ec || eT
                         ? e_
                             ? ((n = (0, r.jsx)(k.l, {
                                   isSelected: q,
@@ -258,9 +258,9 @@ let W = (e) => {
                 return e;
             })(
                 {
-                    listItemRef: X,
+                    listItemRef: Q,
                     selected: q,
-                    route: Q,
+                    route: X,
                     icon: s.SrA,
                     text: eR,
                     locationState: J,
@@ -294,7 +294,7 @@ let W = (e) => {
               ? (0, r.jsx)(k.C, { children: eD })
               : eO && eZ === o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === E
                 ? (0, r.jsx)(L.Z, {
-                      targetElementRef: X,
+                      targetElementRef: Q,
                       discountOffer: ed,
                       premiumSubscription: et,
                       dismissCoachmark: ew,
