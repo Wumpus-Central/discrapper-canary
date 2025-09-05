@@ -27756,54 +27756,6 @@ div.modalHeader_c28af8 {
     z-index: 2
 }
 
-.ctaButton__4413f {
-    background-color: var(--background-modifier-selected);
-    color: var(--text-default);
-    overflow: hidden
-}
-
-.ctaButton__4413f:hover {
-    background-color: var(--primary-500);
-    color: var(--primary-100)
-}
-
-.ctaButton__4413f:active {
-    background-color: var(--primary-400);
-    color: var(--primary-100)
-}
-
-@keyframes shine__4413f {
-    0% {
-        left: -12%
-    }
-
-    20% {
-        left: 110%
-    }
-
-    to {
-        left: 110%
-    }
-}
-
-.full-motion .ctaButton__4413f:after {
-    animation-delay: 1s;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: shine__4413f;
-    background-color: var(--white);
-    bottom: 0;
-    box-shadow: -8px 4px var(--opacity-white-48), 8px -4px var(--opacity-white-48);
-    content: "";
-    height: 120%;
-    left: -12%;
-    opacity: .3;
-    position: absolute;
-    top: 0;
-    transform: translateY(-4px) rotate(24deg);
-    width: 8px
-}
-
 .member__5d473 {
     margin-left: 8px;
     max-width: calc(var(--custom-member-list-width) - 16px);

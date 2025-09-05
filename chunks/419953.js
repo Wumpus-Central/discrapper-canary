@@ -10,6 +10,4 @@ e.exports = {
     imgWrapper: "imgWrapper__4413f",
     imgUnderlay: "imgUnderlay__4413f",
     assetTile: "assetTile__4413f",
-    ctaButton: "ctaButton__4413f",
-    shine: "shine__4413f",
 };
