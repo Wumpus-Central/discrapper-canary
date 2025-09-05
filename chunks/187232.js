@@ -1,4 +1,4 @@
-n.d(t, { p: () => T });
+n.d(t, { p: () => S });
 var r = n(100527),
     i = n(717401),
     a = n(474936),
@@ -44,10 +44,10 @@ let m = {
         skuId: "1287835633762701382",
         assetId: "a_604d1f0f336d41089acc3f82f458a99e",
     },
-    S = {
+    T = {
         gradient: ["rgb(35, 86, 53)", "rgb(3, 15, 40)"],
     },
-    T = {
+    S = {
         variants: [
             {
                 listingId: "1303067552619958292",
@@ -89,6 +89,28 @@ let m = {
                         }),
             },
         },
+        segmentedControlAnimations: {
+            trick: {
+                getAnimationData: () =>
+                    n
+                        .e("44538")
+                        .then(n.bind(n, 285517))
+                        .then((e) => {
+                            let { default: t } = e;
+                            return fetch(t).then((e) => e.json());
+                        }),
+            },
+            treat: {
+                getAnimationData: () =>
+                    n
+                        .e("35244")
+                        .then(n.bind(n, 220628))
+                        .then((e) => {
+                            let { default: t } = e;
+                            return fetch(t).then((e) => e.json());
+                        }),
+            },
+        },
         dismissibleContentVersion: 4,
         firstTimeNotice: {
             getImageUrl: (e, t) => (t ? _.Z : f.Z),
@@ -103,7 +125,7 @@ let m = {
             heading: () => s.intl.string(s.t.ruVnPj),
             subheading: () => s.intl.string(s.t.q4BJSE),
             mobileSubheading: (e) => s.intl.formatToPlainString(s.t.eDBuFx, { rewardCount: e }),
-            gradientConfig: S,
+            gradientConfig: T,
             getImageUrl: () => f.Z,
             getBannerImageUrl: () => h.Z,
             getBackgroundImageUrl: () => l.Z,
@@ -112,7 +134,7 @@ let m = {
             desktopBannerText: () => s.intl.string(s.t.mMgymZ),
             mobileBannerText: () => s.intl.string(s.t.dAqTcH),
             getImageUrl: () => _.Z,
-            gradientConfig: () => S,
+            gradientConfig: () => T,
             getBackgroundImageUrl: () => d.Z,
         },
         billingSettingsMarketingBanner: {
