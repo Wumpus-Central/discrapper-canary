@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r = n(951288),
     l = n(647438),
-    o = n(722770),
-    i = n(755721),
+    i = n(722770),
+    o = n(755721),
     a = n(481060),
     s = n(100527),
     c = n(666657),
@@ -30,8 +30,8 @@ function f(e) {
 }
 function h(e) {
     var t;
-    let { onHandleEnableLockdown: n, onHandleReportFalseAlarm: l, incidentData: s } = e,
-        c = null != (t = s.raidDetectedAt) ? t : s.dmSpamDetectedAt;
+    let { onHandleEnableLockdown: n, onHandleReportFalseAlarm: l, incidentData: o } = e,
+        s = null != (t = o.raidDetectedAt) ? t : o.dmSpamDetectedAt;
     return (0, r.jsxs)("div", {
         className: p.subheaderContainer,
         children: [
@@ -41,7 +41,7 @@ function h(e) {
                     (0, r.jsx)(a.b7C, {
                         size: "md",
                         className: p.shieldIcon,
-                        color: o.Z.RED_345,
+                        color: i.Z.RED_345,
                     }),
                     (0, r.jsxs)("div", {
                         className: p.subHeaderText,
@@ -50,13 +50,13 @@ function h(e) {
                                 className: p.heading,
                                 variant: "heading-lg/semibold",
                                 color: "text-danger",
-                                children: (0, u.kk)(s) ? b.intl.string(b.t.raRxxc) : b.intl.string(b.t["4nbAtb"]),
+                                children: (0, u.kk)(o) ? b.intl.string(b.t.raRxxc) : b.intl.string(b.t["4nbAtb"]),
                             }),
                             (0, r.jsx)(a.Text, {
                                 className: p.tagLine,
                                 variant: "text-sm/medium",
                                 children: b.intl.format(b.t["4QIIZm"], {
-                                    dateTime: new Date(null != c ? c : "").toLocaleString(b.intl.currentLocale, u.pQ),
+                                    dateTime: new Date(null != s ? s : "").toLocaleString(b.intl.currentLocale, u.pQ),
                                 }),
                             }),
                         ],
@@ -66,34 +66,17 @@ function h(e) {
             (0, r.jsxs)("div", {
                 className: p.buttonContainer,
                 children: [
-                    (0, r.jsx)(i.zx, {
-                        className: p.reportButton,
-                        color: i.zx.Colors.TRANSPARENT,
+                    (0, r.jsx)(a.zxk, {
+                        variant: "secondary",
                         onClick: l,
-                        children: (0, r.jsx)(a.Text, {
-                            variant: "text-sm/semibold",
-                            children: b.intl.string(b.t.ISiXbW),
-                        }),
+                        text: b.intl.string(b.t.ISiXbW),
+                        size: "sm",
                     }),
-                    (0, r.jsx)(a.gtL, {
-                        className: p.__invalid_lockdownButton,
-                        color: i.zx.Colors.RED,
+                    (0, r.jsx)(a.zxk, {
+                        variant: "critical-primary",
                         onClick: n,
-                        children: (0, r.jsxs)("div", {
-                            className: p.lockdownButtonInnerRaidDetected,
-                            children: [
-                                (0, r.jsx)(a.mBM, {
-                                    size: "xs",
-                                    color: "currentColor",
-                                    className: p.lockIcon,
-                                }),
-                                (0, r.jsx)(a.Text, {
-                                    className: p.lockdownButtonText,
-                                    variant: "text-sm/semibold",
-                                    children: b.intl.string(b.t.UgXhdn),
-                                }),
-                            ],
-                        }),
+                        size: "sm",
+                        text: b.intl.string(b.t.UgXhdn),
                     }),
                 ],
             }),
@@ -111,7 +94,7 @@ function j(e) {
                     (0, r.jsx)(a.b7C, {
                         size: "md",
                         className: p.shieldIcon,
-                        color: o.Z.BRAND_360,
+                        color: i.Z.BRAND_360,
                     }),
                     (0, r.jsxs)("div", {
                         className: p.subHeaderText,
@@ -131,31 +114,17 @@ function j(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(i.zx, {
-                className: p.lockdownNoticeButton,
-                color: i.zx.Colors.BRAND,
+            (0, r.jsx)(a.zxk, {
+                color: o.zx.Colors.BRAND,
                 onClick: t,
-                children: (0, r.jsxs)("div", {
-                    className: p.lockdownButtonInner,
-                    children: [
-                        (0, r.jsx)(a.mBM, {
-                            size: "xs",
-                            color: "currentColor",
-                            className: p.lockIcon,
-                        }),
-                        (0, r.jsx)(a.Text, {
-                            className: p.lockdownButtonText,
-                            variant: "text-sm/semibold",
-                            children: b.intl.string(b.t.e1bMNT),
-                        }),
-                    ],
-                }),
+                text: b.intl.string(b.t.e1bMNT),
+                size: "sm",
             }),
         ],
     });
 }
 function g(e) {
-    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: s } = e;
+    let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: o } = e;
     return (0, r.jsxs)("div", {
         className: p.subheaderContainer,
         children: [
@@ -165,7 +134,7 @@ function g(e) {
                     (0, r.jsx)(a.b7C, {
                         size: "md",
                         className: p.shieldIcon,
-                        color: o.Z.BRAND_360,
+                        color: i.Z.BRAND_360,
                     }),
                     (0, r.jsxs)("div", {
                         className: p.subHeaderText,
@@ -179,7 +148,7 @@ function g(e) {
                             (0, r.jsx)(a.Text, {
                                 className: p.tagLine,
                                 variant: "text-sm/medium",
-                                children: (0, u.OY)(l, s),
+                                children: (0, u.OY)(l, o),
                             }),
                         ],
                     }),
@@ -188,34 +157,16 @@ function g(e) {
             (0, r.jsxs)("div", {
                 className: p.buttonContainer,
                 children: [
-                    (0, r.jsx)(i.zx, {
-                        className: p.reportButton,
-                        color: i.zx.Colors.TRANSPARENT,
+                    (0, r.jsx)(a.zxk, {
                         onClick: n,
-                        children: (0, r.jsx)(a.Text, {
-                            variant: "text-sm/semibold",
-                            children: b.intl.string(b.t.ISiXbW),
-                        }),
+                        text: b.intl.string(b.t.ISiXbW),
+                        variant: "secondary",
+                        size: "sm",
                     }),
-                    (0, r.jsx)(i.zx, {
-                        className: p.__invalid_lockdownButton,
-                        color: i.zx.Colors.BRAND,
+                    (0, r.jsx)(a.zxk, {
                         onClick: t,
-                        children: (0, r.jsxs)("div", {
-                            className: p.lockdownButtonInnerRaidDetected,
-                            children: [
-                                (0, r.jsx)(a.mBM, {
-                                    size: "xs",
-                                    color: "currentColor",
-                                    className: p.lockIcon,
-                                }),
-                                (0, r.jsx)(a.Text, {
-                                    className: p.lockdownButtonText,
-                                    variant: "text-sm/semibold",
-                                    children: b.intl.string(b.t.e1bMNT),
-                                }),
-                            ],
-                        }),
+                        text: b.intl.string(b.t.e1bMNT),
+                        size: "sm",
                     }),
                 ],
             }),
@@ -223,7 +174,7 @@ function g(e) {
     });
 }
 function x(e) {
-    let { guild: t, incidentData: n, isUnderLockdown: o, isRaidDetected: i } = e,
+    let { guild: t, incidentData: n, isUnderLockdown: i, isRaidDetected: o } = e,
         b = l.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let e = {
@@ -232,7 +183,7 @@ function x(e) {
                     alertType: (0, u.T1)(n),
                 };
                 return (n) => {
-                    var l, o;
+                    var l, i;
                     return (0, r.jsx)(
                         d.default,
                         ((l = (function (e) {
@@ -260,13 +211,13 @@ function x(e) {
                             }
                             return e;
                         })({}, n)),
-                        (o = o =
+                        (i = i =
                             {
                                 guildId: t.id,
                                 analyticsData: e,
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -274,8 +225,8 @@ function x(e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(i)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
                         l),
                     );
@@ -288,11 +239,11 @@ function x(e) {
         }, [t.id]),
         f = (() => {
             switch (!0) {
-                case i && o:
+                case o && i:
                     return 3;
-                case i:
-                    return 1;
                 case o:
+                    return 1;
+                case i:
                     return 2;
                 default:
                     return 0;
