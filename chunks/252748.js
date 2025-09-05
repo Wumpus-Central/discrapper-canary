@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(472816), n(794429), n(388685);
+n.d(t, { Z: () => y }), n(472816), n(794429), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -8,28 +8,30 @@ var r = n(951288),
     c = n(224706),
     u = n(77498),
     d = n(768581),
-    f = n(836197),
-    _ = n(502762),
-    p = n(652853),
-    h = n(671955),
-    m = n(388032),
-    g = n(987364);
-let E = 4;
-function b(e) {
+    f = n(785717),
+    _ = n(836197),
+    p = n(502762),
+    h = n(652853),
+    m = n(671955),
+    g = n(388032),
+    E = n(350917);
+let b = 4;
+function y(e) {
     let { widgets: t, onClick: n } = e,
-        a = (0, i.useMemo)(
-            () => [...new Set(t.map((e) => ((0, f.W)(e) ? e.games.map((e) => e.applicationId) : [])).flat())],
+        { trackUserProfileAction: a } = (0, f.KZ)(),
+        o = (0, i.useMemo)(
+            () => [...new Set(t.map((e) => ((0, _.W)(e) ? e.games.map((e) => e.applicationId) : [])).flat())],
             [t],
         ),
-        o = (0, s.e7)([u.Z], () => u.Z.canFetchDetectableGames()),
-        [b, O] = (0, i.useState)([]),
-        { themeType: v } = (0, p.z)(),
-        I = v === h.l.SIDEBAR;
+        y = (0, s.e7)([u.Z], () => u.Z.canFetchDetectableGames()),
+        [v, I] = (0, i.useState)([]),
+        { themeType: T } = (0, h.z)(),
+        S = T === m.l.SIDEBAR;
     return (
         (0, i.useEffect)(() => {
-            if (o) return void c.Z.getDetectableGames();
-            O(
-                a
+            if (y) return void c.Z.getDetectableGames();
+            I(
+                o
                     .map((e) => u.Z.getDetectableGame(e))
                     .filter((e) => null != e)
                     .map((e) => {
@@ -47,30 +49,32 @@ function b(e) {
                         };
                     })
                     .filter((e) => "" !== e.image)
-                    .slice(0, E),
+                    .slice(0, b),
             );
-        }, [a, o]),
+        }, [o, y]),
         (0, r.jsx)(l.P3F, {
-            "aria-label": m.intl.string(m.t.JjiwFx),
-            onClick: n,
-            className: g.breadcrumb,
-            children: (0, r.jsxs)(_.Z.Overlay, {
-                className: g.innerContainer,
+            "aria-label": g.intl.string(g.t.JjiwFx),
+            onClick: () => {
+                a({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), n();
+            },
+            className: E.breadcrumb,
+            children: (0, r.jsxs)(p.Z.Overlay, {
+                className: E.innerContainer,
                 children: [
                     (0, r.jsx)(l.Text, {
-                        variant: I ? "text-sm/medium" : "text-xs/medium",
-                        children: m.intl.string(m.t.JjiwFx),
+                        variant: S ? "text-sm/medium" : "text-xs/medium",
+                        children: g.intl.string(g.t.JjiwFx),
                     }),
                     (0, r.jsx)("div", {
-                        className: g.icons,
-                        children: b.map((e, t) =>
+                        className: E.icons,
+                        children: v.map((e, t) =>
                             (0, r.jsx)(
-                                y,
+                                O,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === b.length - 1 && a.length > E,
-                                    gameCount: a.length - b.length,
+                                    displayCount: t === v.length - 1 && o.length > b,
+                                    gameCount: o.length - v.length,
                                 },
                                 t,
                             ),
@@ -81,22 +85,22 @@ function b(e) {
         })
     );
 }
-function y(e) {
+function O(e) {
     let { iconUrl: t, name: n, displayCount: i, gameCount: a } = e;
     return (0, r.jsxs)("div", {
-        className: g.icon,
+        className: E.icon,
         children: [
             (0, r.jsx)("img", {
-                className: o()({ [g.displayCount]: i }),
+                className: o()({ [E.displayCount]: i }),
                 src: t,
                 alt: n,
             }),
             i &&
                 (0, r.jsx)("div", {
-                    className: g.displayCountText,
+                    className: E.displayCountText,
                     children: (0, r.jsxs)(l.Text, {
                         variant: "text-xs/medium",
-                        className: g.displayCountTextColor,
+                        className: E.displayCountTextColor,
                         children: ["+", a],
                     }),
                 }),
