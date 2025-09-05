@@ -1,9 +1,9 @@
 n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
-var i = n(119837),
-    a = n(802433),
-    o = n(107225);
+var i = n(480210),
+    a = n(119837),
+    o = n(341225);
 let s = (e) => {
     var t, n, s, l;
     let {
@@ -23,12 +23,13 @@ let s = (e) => {
         (d || (b = !1),
         f < c.start && (b = !1),
         !c.loop && f > c.duration + c.start && (b = !1),
-        u === a.Q.PERSISTENT && !_ && null != m && f >= g && p(!0),
+        u === i.y.ANIMATION_TYPE_PERSISTENT && !_ && null != m && f >= g && p(!0),
         c.loop && void 0 !== c.loopDelay && c.loopDelay > 0)
     ) {
         let e = c.duration + c.loopDelay,
             t = Math.floor((f - c.start) / e);
-        f - c.start - t * e > c.duration && (u === a.Q.INTERMITTENT && !_ && null != m && t >= m && p(!0), (b = !1));
+        f - c.start - t * e > c.duration &&
+            (u === i.y.ANIMATION_TYPE_INTERMITTENT && !_ && null != m && t >= m && p(!0), (b = !1));
     }
     return b
         ? (0, r.jsx)("img", {
@@ -42,7 +43,7 @@ let s = (e) => {
               "aria-hidden": !0,
           })
         : (0, r.jsx)("img", {
-              src: i.td,
+              src: a.td,
               alt: "",
               "aria-hidden": !0,
           });

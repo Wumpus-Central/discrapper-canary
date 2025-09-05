@@ -1,26 +1,27 @@
 n.d(t, {
-    Z: () => T,
-    n: () => v,
+    Z: () => S,
+    n: () => I,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(607070),
-    c = n(619899),
-    u = n(451478),
-    d = n(119837),
-    f = n(802433),
-    _ = n(658312),
-    p = n(731896),
-    h = n(729436),
-    m = n(142145),
-    g = n(710867),
-    E = n(312904),
-    b = n(107225);
-function y(e, t, n) {
+    s = n(480210),
+    l = n(442837),
+    c = n(607070),
+    u = n(619899),
+    d = n(451478),
+    f = n(119837),
+    _ = n(802433),
+    p = n(658312),
+    h = n(731896),
+    m = n(729436),
+    g = n(142145),
+    E = n(710867),
+    b = n(312904),
+    y = n(341225);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,90 +45,91 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-let v = (e) => {
+let I = (e) => {
         let {
                 bannerAdjustment: t = 0,
                 maxLoops: n,
                 resetOnHover: a = !1,
-                isHovering: s = !1,
-                useOpacityOnHover: l = !0,
-                autoPlay: c = !0,
-                restartMethod: u,
-                urlQueryString: p,
-                profileEffectConfig: g,
-                noBorderRadius: y = !1,
-                introDelay: O = d.lG,
+                isHovering: l = !1,
+                useOpacityOnHover: c = !0,
+                autoPlay: u = !0,
+                restartMethod: d,
+                urlQueryString: h,
+                profileEffectConfig: E,
+                noBorderRadius: O = !1,
+                introDelay: v = f.lG,
             } = e,
-            v = i.useRef(null),
-            [I, T] = i.useState([]);
-        (0, E.Z)(g);
-        let [S, A] = i.useState(0),
-            [C, N] = i.useState(0),
-            { accessibilityLabel: R } = g,
-            [P, w] = i.useState(-O),
+            I = i.useRef(null),
+            [T, S] = i.useState([]);
+        (0, b.Z)(E);
+        let [A, C] = i.useState(0),
+            [N, R] = i.useState(0),
+            { accessibilityLabel: P } = E,
+            [w, D] = i.useState(-v),
             {
-                stop: D,
-                reset: x,
-                ticking: L,
-            } = (0, _.Z)((e) => {
-                w((t) => t + e);
+                stop: x,
+                reset: L,
+                ticking: j,
+            } = (0, p.Z)((e) => {
+                D((t) => t + e);
             }),
-            j = i.useRef(O);
+            M = i.useRef(v);
         i.useEffect(() => {
-            j.current = O;
+            M.current = v;
         }),
             i.useEffect(() => {
-                w(-j.current), T((0, h.H)(g.effects));
-            }, [g]),
+                D(-M.current), S((0, m.H)(E.effects));
+            }, [E]),
             i.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
-                I.forEach((n) => {
+                T.forEach((n) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
-                    A(t),
-                    N(e);
-            }, [N, I]);
-        let [M, k] = i.useState(!1);
+                    C(t),
+                    R(e);
+            }, [R, T]);
+        let [k, U] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === c || s || (D(), w(0)),
-                    !s && M && L.current && (D(), w(0)),
+                !0 === u || l || (x(), D(0)),
+                    !l && k && j.current && (x(), D(0)),
                     a &&
-                        s &&
-                        !L.current &&
-                        (x(), g.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0));
-            }, [s, M, S, a, D, x, L, g.animationType, c, u]),
+                        l &&
+                        !j.current &&
+                        (L(),
+                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? D(d === _.Q.FromStart ? 0 : A) : D(0));
+            }, [l, k, A, a, x, L, j, E.animationType, u, d]),
             (0, r.jsx)("div", {
-                ref: v,
-                className: o()(b.profileEffects, { [b.hovered]: s && l }),
-                "aria-label": R,
+                ref: I,
+                className: o()(y.profileEffects, { [y.hovered]: l && c }),
+                "aria-label": P,
                 role: "img",
                 children: (0, r.jsx)("div", {
-                    className: y ? b.innerNoRadius : b.inner,
-                    children: I.map((e, i) => {
+                    className: O ? y.innerNoRadius : y.inner,
+                    children: T.map((e, i) => {
                         if (
-                            !L.current &&
-                            g.animationType === f.Q.PERSISTENT &&
-                            null != g.staticFrameSrc &&
+                            !j.current &&
+                            E.animationType === s.y.ANIMATION_TYPE_PERSISTENT &&
+                            null != E.staticFrameSrc &&
                             0 === i &&
-                            !0 === c
+                            !0 === u
                         ) {
-                            var a, o, s, l;
-                            let { staticFrameSrc: n } = g;
+                            var a, o, l, c;
+                            let { staticFrameSrc: n } = E;
                             return (0, r.jsx)(
                                 "img",
                                 {
-                                    className: b.effect,
+                                    className: y.effect,
                                     style: {
-                                        top: null != (s = null == (a = e.position) ? void 0 : a.y) ? s : 0 - t,
-                                        left: null != (l = null == (o = e.position) ? void 0 : o.x) ? l : 0,
+                                        top: null != (l = null == (a = e.position) ? void 0 : a.y) ? l : 0 - t,
+                                        left: null != (c = null == (o = e.position) ? void 0 : o.x) ? c : 0,
                                     },
                                     src: n,
                                     alt: "",
@@ -137,17 +139,17 @@ let v = (e) => {
                             );
                         }
                         return (0, r.jsx)(
-                            m.Z,
+                            g.Z,
                             {
                                 layerConfig: e,
-                                animationType: g.animationType,
-                                ticking: L.current,
-                                time: P,
-                                hasPlayedThrough: M,
-                                setHasPlayedThrough: k,
-                                urlQueryString: p,
+                                animationType: E.animationType,
+                                ticking: j.current,
+                                time: w,
+                                hasPlayedThrough: k,
+                                setHasPlayedThrough: U,
+                                urlQueryString: h,
                                 maxLoops: n,
-                                loopEnd: C,
+                                loopEnd: N,
                                 bannerAdjustment: t,
                             },
                             e.src + i,
@@ -157,7 +159,7 @@ let v = (e) => {
             })
         );
     },
-    I = (e) => {
+    T = (e) => {
         let {
                 config: t,
                 useThumbnail: n,
@@ -168,14 +170,14 @@ let v = (e) => {
             } = e,
             { reducedMotionSrc: c, thumbnailPreviewSrc: u, accessibilityLabel: d } = t;
         return (0, r.jsx)("div", {
-            className: o()(b.profileEffects, { [b.hovered]: s && l }),
+            className: o()(y.profileEffects, { [y.hovered]: s && l }),
             "aria-label": d,
             role: "img",
             children: (0, r.jsx)("div", {
-                className: a ? b.innerNoRadius : b.inner,
+                className: a ? y.innerNoRadius : y.inner,
                 children: (0, r.jsx)("img", {
                     src: n && !s ? u : c,
-                    className: b.effect,
+                    className: y.effect,
                     style: { top: 0 - i },
                     alt: "",
                     "aria-hidden": !0,
@@ -183,31 +185,33 @@ let v = (e) => {
             }),
         });
     },
-    T = (e) => {
-        let t = (0, s.e7)([u.Z], () => u.Z.isFocused()),
-            n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
+    S = (e) => {
+        let t = (0, l.e7)([d.Z], () => d.Z.isFocused()),
+            n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             [a, o] = i.useState(!1),
-            d = (0, p.V)(e.profileEffectId),
-            _ = (0, c.ex)(null == d ? void 0 : d.config),
-            m = (0, h.C)(null == d ? void 0 : d.config),
-            E = null != _ ? _ : m;
-        return null != d && null != E && (t || e.shopPreview || d.config.animationType !== f.Q.INTERMITTENT)
+            f = (0, h.V)(e.profileEffectId),
+            _ = (0, u.ex)(null == f ? void 0 : f.config),
+            p = (0, m.C)(null == f ? void 0 : f.config),
+            g = null != _ ? _ : p;
+        return null != f &&
+            null != g &&
+            (t || e.shopPreview || f.config.animationType !== s.y.ANIMATION_TYPE_INTERMITTENT)
             ? (!t && e.shopPreview) ||
-              (!t && d.config.animationType === f.Q.PERSISTENT) ||
+              (!t && f.config.animationType === s.y.ANIMATION_TYPE_PERSISTENT) ||
               n ||
               (!1 === e.autoPlay && !1 === e.isHovering)
-                ? (0, r.jsx)(I, {
+                ? (0, r.jsx)(T, {
                       useThumbnail: e.useThumbnail,
-                      config: E,
+                      config: g,
                       bannerAdjustment: e.bannerAdjustment,
                       noBorderRadius: e.noBorderRadius,
                       isHovering: e.isHovering,
                       useOpacityOnHover: e.useOpacityOnHover,
                   })
                 : a
-                  ? (0, r.jsx)(v, O({ profileEffectConfig: E }, e))
-                  : (0, r.jsx)(g.Z, {
-                        profileEffectConfig: E,
+                  ? (0, r.jsx)(I, v({ profileEffectConfig: g }, e))
+                  : (0, r.jsx)(E.Z, {
+                        profileEffectConfig: g,
                         onReady: () => {
                             o(!0);
                         },
