@@ -158,46 +158,48 @@ function v(e) {
             upperBadge: m,
             lowerBadge: O,
             rounded: v = !1,
+            "aria-hidden": I,
         } = e,
-        [I, T] = i.useState(!1),
-        S = () => {
-            T(!0);
-        },
+        [T, S] = i.useState(!1),
         A = () => {
-            T(!1);
+            S(!0);
         },
-        C = null != m,
-        N = null != O,
-        R = i.useId(),
-        P = "".concat(R, "-upper_badge_masks"),
-        w = "".concat(R, "-lower_badge_masks"),
-        D = "".concat(R, "-blob_mask"),
-        x = "".concat(R, "-stroke_mask"),
-        L = "".concat(R, "-highlight_mask"),
-        j = (null == f ? void 0 : f.width) != null ? f.width : g,
+        C = () => {
+            S(!1);
+        },
+        N = null != m,
+        R = null != O,
+        P = i.useId(),
+        w = "".concat(P, "-upper_badge_masks"),
+        D = "".concat(P, "-lower_badge_masks"),
+        x = "".concat(P, "-blob_mask"),
+        L = "".concat(P, "-stroke_mask"),
+        j = "".concat(P, "-highlight_mask"),
+        k = (null == f ? void 0 : f.width) != null ? f.width : g,
         M = (null == f ? void 0 : f.height) != null ? f.height : g,
-        k = {
+        U = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
             x: d ? 0 : -4,
             y: d ? 0 : -4,
         },
-        U = d ? 20 : h,
-        G = v ? y(n) : b(n);
+        G = d ? 20 : h,
+        B = v ? y(n) : b(n);
     return (0, r.jsxs)(
         "div",
         {
             className: o()(a, u.wrapper),
             style: l,
-            onFocus: S,
-            onBlur: A,
+            onFocus: A,
+            onBlur: C,
+            "aria-hidden": I,
             children: [
                 (0, r.jsxs)(
                     "svg",
                     {
-                        width: k.width,
-                        height: k.height,
-                        viewBox: "".concat(k.x, " ").concat(k.y, " ").concat(k.width, " ").concat(k.height),
+                        width: U.width,
+                        height: U.height,
+                        viewBox: "".concat(U.x, " ").concat(U.y, " ").concat(U.width, " ").concat(U.height),
                         className: o()(u.svg, {
                             [u.noContain]: _,
                             [u.shiftSVG]: !d,
@@ -209,30 +211,30 @@ function v(e) {
                                 children: [
                                     _ &&
                                         (0, r.jsx)("path", {
-                                            d: G,
-                                            id: L,
+                                            d: B,
+                                            id: j,
                                         }),
                                     (0, r.jsx)("path", {
-                                        d: G,
-                                        id: D,
+                                        d: B,
+                                        id: x,
                                     }),
                                     null != m
                                         ? (0, r.jsx)("rect", {
-                                              id: P,
-                                              x: n - U + p,
+                                              id: w,
+                                              x: n - G + p,
                                               y: -p,
-                                              width: U,
-                                              height: U,
-                                              rx: U / 2,
-                                              ry: U / 2,
+                                              width: G,
+                                              height: G,
+                                              rx: G / 2,
+                                              ry: G / 2,
                                           })
                                         : null,
                                     null != O
                                         ? (0, r.jsx)("rect", {
-                                              id: w,
-                                              x: n - (j + 2 * p) + p,
+                                              id: D,
+                                              x: n - (k + 2 * p) + p,
                                               y: n - (M + 2 * p) + p,
-                                              width: j + 2 * p,
+                                              width: k + 2 * p,
                                               height: M + 2 * p,
                                               rx: h / 2,
                                               ry: h / 2,
@@ -241,7 +243,7 @@ function v(e) {
                                 ],
                             }),
                             (0, r.jsxs)("mask", {
-                                id: R,
+                                id: P,
                                 fill: "black",
                                 x: 0,
                                 y: 0,
@@ -250,31 +252,31 @@ function v(e) {
                                 children: [
                                     _ &&
                                         (0, r.jsx)("use", {
-                                            href: "#".concat(L),
+                                            href: "#".concat(j),
                                             fill: "black",
                                         }),
                                     (0, r.jsx)("use", {
-                                        href: "#".concat(D),
+                                        href: "#".concat(x),
                                         fill: "white",
                                         className: o()({ [u.isHighlighted]: _ }),
                                     }),
-                                    C
-                                        ? (0, r.jsx)("use", {
-                                              href: "#".concat(P),
-                                              fill: "black",
-                                          })
-                                        : null,
                                     N
                                         ? (0, r.jsx)("use", {
                                               href: "#".concat(w),
                                               fill: "black",
                                           })
                                         : null,
+                                    R
+                                        ? (0, r.jsx)("use", {
+                                              href: "#".concat(D),
+                                              fill: "black",
+                                          })
+                                        : null,
                                 ],
                             }),
-                            C || N
+                            N || R
                                 ? (0, r.jsxs)("mask", {
-                                      id: x,
+                                      id: L,
                                       children: [
                                           (0, r.jsx)("rect", {
                                               width: "150%",
@@ -283,34 +285,34 @@ function v(e) {
                                               y: "-25%",
                                               fill: "white",
                                           }),
-                                          C
-                                              ? (0, r.jsx)("use", {
-                                                    href: "#".concat(P),
-                                                    fill: "black",
-                                                })
-                                              : null,
                                           N
                                               ? (0, r.jsx)("use", {
                                                     href: "#".concat(w),
                                                     fill: "black",
                                                 })
                                               : null,
+                                          R
+                                              ? (0, r.jsx)("use", {
+                                                    href: "#".concat(D),
+                                                    fill: "black",
+                                                })
+                                              : null,
                                       ],
                                   })
                                 : null,
-                            I
+                            T
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)("g", {
                                               className: u.focusStroke,
-                                              mask: "url(#".concat(x, ")"),
-                                              children: (0, r.jsx)("use", { href: "#".concat(D) }),
+                                              mask: "url(#".concat(L, ")"),
+                                              children: (0, r.jsx)("use", { href: "#".concat(x) }),
                                           }),
                                           (0, r.jsxs)("g", {
                                               className: u.focusFill,
                                               children: [
-                                                  null != m ? (0, r.jsx)("use", { href: "#".concat(P) }) : null,
-                                                  null != O ? (0, r.jsx)("use", { href: "#".concat(w) }) : null,
+                                                  null != m ? (0, r.jsx)("use", { href: "#".concat(w) }) : null,
+                                                  null != O ? (0, r.jsx)("use", { href: "#".concat(D) }) : null,
                                               ],
                                           }),
                                       ],
@@ -318,16 +320,16 @@ function v(e) {
                                 : null,
                             _ &&
                                 (0, r.jsx)("path", {
-                                    d: G,
+                                    d: B,
                                     stroke: s.Z.BRAND_500,
                                     "stroke-width": E,
                                     className: u.highlight,
-                                    mask: "url(#".concat(x, ")"),
+                                    mask: "url(#".concat(L, ")"),
                                 }),
                             (0, r.jsx)(
                                 "foreignObject",
                                 {
-                                    mask: "url(#".concat(R, ")"),
+                                    mask: "url(#".concat(P, ")"),
                                     x: 0,
                                     y: 0,
                                     className: c,
@@ -355,6 +357,6 @@ function v(e) {
                     : null,
             ],
         },
-        "".concat(N, "-").concat(C),
+        "".concat(R, "-").concat(N),
     );
 }

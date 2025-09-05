@@ -9,15 +9,15 @@ var r = n(951288),
     u = n(565138),
     d = n(430824),
     p = n(674552),
-    h = n(388032),
-    f = n(106663);
+    f = n(388032),
+    h = n(106663);
 function g(e) {
     let { guildId: t, animate: n } = e,
         i = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]),
         l = (0, s.dQu)(s.TVs.modules.guildbar.AVATAR_SIZE);
     return null == i
         ? (0, r.jsx)("div", {
-              className: o()(f.folderPreviewGuildIcon, f.folderPreviewGuildIconError),
+              className: o()(h.folderPreviewGuildIcon, h.folderPreviewGuildIconError),
               children: (0, r.jsx)(s.Mgn, { color: "currentColor" }),
           })
         : (0, r.jsx)(u.Z, {
@@ -26,7 +26,7 @@ function g(e) {
               size: u.Z.Sizes.MINI,
               iconSize: l,
               lossless: !0,
-              className: f.folderPreviewGuildIcon,
+              className: h.folderPreviewGuildIcon,
               tabIndex: -1,
           });
 }
@@ -35,9 +35,9 @@ function m(e) {
         { children: l } = t,
         a = n && i,
         c = (0, r.jsx)("div", {
-            className: f.folderIconWrapper,
+            className: h.folderIconWrapper,
             children: (0, r.jsx)("div", {
-                className: f.folderIcon,
+                className: h.folderIcon,
                 children: (0, r.jsx)(s.ROc, {
                     size: "sm",
                     color: "currentColor",
@@ -45,9 +45,9 @@ function m(e) {
             }),
         }),
         u = (0, r.jsx)("div", {
-            className: f.folderPreviewWrapper,
+            className: h.folderPreviewWrapper,
             children: (0, r.jsx)("div", {
-                className: f.folderPreview,
+                className: h.folderPreview,
                 children: l.slice(0, 4).map((e) =>
                     (0, r.jsx)(
                         g,
@@ -63,8 +63,8 @@ function m(e) {
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
         className: o()({
-            [f.folderDragPreview]: a,
-            [f.folderButtonContent]: !a,
+            [h.folderDragPreview]: a,
+            [h.folderButtonContent]: !a,
         }),
         children: [!a && c, u],
     });
@@ -82,8 +82,8 @@ function b(e) {
             folderGroupId: O,
             folderButtonContent: y,
             onClick: _,
-            onContextMenu: j,
-            onHoverChange: v,
+            onContextMenu: v,
+            onHoverChange: j,
             onKeyDown: x,
             treeItemProps: { onFocus: C },
             "aria-setsize": E,
@@ -111,16 +111,16 @@ function b(e) {
             return i;
         })(e.treeItemProps, ["onFocus"]),
         [I, N] = i.useState(!1),
-        w = i.useCallback(() => {
-            a || N(!0), null == v || v(!0);
-        }, [a, v]),
         Z = i.useCallback(() => {
-            a || N(!1), null == v || v(!1);
-        }, [a, v]),
+            a || N(!0), null == j || j(!0);
+        }, [a, j]),
+        w = i.useCallback(() => {
+            a || N(!1), null == j || j(!1);
+        }, [a, j]),
         T = o || null == u ? null : (0, p.Or)(u),
         A = !o && d > 0 ? (0, p.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(s.tEY, {
-        children: (0, r.jsx)(
+        children: (0, r.jsxs)(
             s.P3F,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -148,11 +148,11 @@ function b(e) {
                 return e;
             })(
                 {
-                    className: f.folderButton,
+                    className: h.folderButton,
                     onClick: _,
-                    onContextMenu: j,
-                    onMouseEnter: w,
-                    onMouseLeave: Z,
+                    onContextMenu: v,
+                    onMouseEnter: Z,
+                    onMouseLeave: w,
                     onKeyDown: x,
                     onFocus: C,
                     focusProps: { enabled: !1 },
@@ -166,24 +166,25 @@ function b(e) {
                     "aria-posinset": S,
                     "aria-expanded": o,
                     "aria-owns": O,
-                    children: (0, r.jsxs)(s.aRk, {
-                        isFolder: !0,
-                        upperBadge: T,
-                        lowerBadge: A,
-                        lowerBadgeSize: { width: (0, s.OVM)(d) },
-                        children: [
-                            (0, r.jsx)(s.nn4, {
-                                children: h.intl.formatToPlainString(h.t["90/DwM"], {
-                                    folderName: b,
-                                    mentions: d,
-                                }),
+                    children: [
+                        (0, r.jsx)(s.nn4, {
+                            children: f.intl.formatToPlainString(f.t["90/DwM"], {
+                                folderName: b,
+                                mentions: d,
                             }),
-                            (0, r.jsx)("div", {
-                                className: f.folderButtonInner,
+                        }),
+                        (0, r.jsx)(s.aRk, {
+                            "aria-hidden": !0,
+                            isFolder: !0,
+                            upperBadge: T,
+                            lowerBadge: A,
+                            lowerBadgeSize: { width: (0, s.OVM)(d) },
+                            children: (0, r.jsx)("div", {
+                                className: h.folderButtonInner,
                                 children:
                                     null != y
                                         ? (0, r.jsx)("div", {
-                                              className: f.folderIconWrapper,
+                                              className: h.folderIconWrapper,
                                               children: y,
                                           })
                                         : (0, r.jsx)(m, {
@@ -192,8 +193,8 @@ function b(e) {
                                               sorting: a,
                                           }),
                             }),
-                        ],
-                    }),
+                        }),
+                    ],
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
