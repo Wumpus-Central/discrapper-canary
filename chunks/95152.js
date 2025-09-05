@@ -120,7 +120,8 @@ function C(e) {
         alt: "",
         style: {
             width: null != (n = _.width) ? n : "initial",
-            height: null != (a = _.height) ? a : S,
+            maxHeight: null != (a = _.height) ? a : S,
+            height: "unset",
             marginLeft: g,
             marginRight: g,
             marginTop: null != _.height ? S - _.height - 33 : -33,
