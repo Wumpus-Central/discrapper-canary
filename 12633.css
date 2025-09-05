@@ -59038,6 +59038,12 @@ h3.improved__1689b:after {
     border-color: var(--text-link)
 }
 
+.imageInputContainer__4cc0e {
+    height: 0;
+    position: relative;
+    width: 0
+}
+
 .buttonsContainer__89253 {
     display: flex
 }
