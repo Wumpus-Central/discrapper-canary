@@ -1,6 +1,6 @@
 n.d(t, {
     mw: () => j,
-    nH: () => k,
+    nH: () => M,
 }),
     n(415506),
     n(388685),
@@ -28,8 +28,8 @@ var r = n(392711),
     O = n(861990),
     v = n(476326),
     I = n(983544),
-    S = n(596956),
-    T = n(125186),
+    T = n(596956),
+    S = n(125186),
     A = n(981631);
 function C(e, t, n) {
     return (
@@ -144,7 +144,7 @@ var j = (function (e) {
         e
     );
 })({});
-class M {
+class k {
     constructor() {
         C(this, "numUploadAttempts", void 0),
             C(this, "timing", {}),
@@ -181,10 +181,10 @@ class M {
             C(this, "conversionFailureReason", void 0);
     }
 }
-class k extends v.ZP {
+class M extends v.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new k(t, n, r, i);
+            a = new M(t, n, r, i);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -249,8 +249,8 @@ class k extends v.ZP {
         let n = (0, _.m)({ location: "CloudUpload" });
         if (n.enableNewRetry)
             return (
-                (0, S.Z_)(this.item) &&
-                    ((this._uploadHttpClient = new S.Qn()),
+                (0, T.Z_)(this.item) &&
+                    ((this._uploadHttpClient = new T.Qn()),
                     (this._libdiscoreEnabled = !0),
                     w.log("Using libdiscore client for file upload")),
                 (this._resumptionEnabled = n.enableResumption),
@@ -585,9 +585,9 @@ class k extends v.ZP {
         if (this._aborted) return;
         let r = performance.now();
         try {
-            if (((n = await (0, T.lG)(this.item.file)), this._aborted)) return;
+            if (((n = await (0, S.lG)(this.item.file)), this._aborted)) return;
             if (n.success)
-                (this.item.file = (0, T.ub)(n)),
+                (this.item.file = (0, S.ub)(n)),
                     (this.currentSize = this.item.file.size),
                     (this.uploadAnalytics.convertedMimeType = "image/webp"),
                     null != n.hashTimeMs && (this.uploadAnalytics.timing.hashTimeMs = n.hashTimeMs),
@@ -649,7 +649,7 @@ class k extends v.ZP {
             (this.responseUrl = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new M()),
+            (this.uploadAnalytics = new k()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -704,6 +704,7 @@ class k extends v.ZP {
             pre_compression_file_size: this.preCompressionSize,
             final_state: e,
             mime_type: null != (r = this.mimeType) ? r : "unknown",
+            filename: this.filename,
             num_upload_attempts: null != (i = this.uploadAnalytics.numUploadAttempts) ? i : 1,
             error_code: this.error,
             video_upload_quality: p.ZP.videoUploadQuality,
@@ -768,7 +769,7 @@ class k extends v.ZP {
             C(this, "error", void 0),
             C(this, "reactNativeFilePrepped", !1),
             C(this, "startTime", void 0),
-            C(this, "uploadAnalytics", new M()),
+            C(this, "uploadAnalytics", new k()),
             C(this, "contentHash", void 0),
             C(this, "etag", void 0),
             C(this, "uploadAttempts", 0),
@@ -799,7 +800,7 @@ class k extends v.ZP {
                 (this.uploadAnalytics.conversionFailureReason = e.compressionMetadata.conversionFailureReason),
                 (this.uploadAnalytics.timing.hashTimeMs = e.compressionMetadata.hashTimeMs),
                 (this.mimeType = e.compressionMetadata.originalContentType)),
-            (this._uploadHttpClient = new S.LD()),
+            (this._uploadHttpClient = new T.LD()),
             (this._libdiscoreEnabled = !1),
             (this._resumptionEnabled = !1);
     }
