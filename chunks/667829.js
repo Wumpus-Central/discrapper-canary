@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685), n(539854), n(35282);
+n.d(t, { Z: () => G }), n(388685), n(539854), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -11,24 +11,25 @@ var r = n(951288),
     f = n(873546),
     _ = n(430742),
     p = n(166459),
-    h = n(911969),
-    m = n(476326),
-    g = n(998698),
-    E = n(710845),
-    b = n(117530),
-    y = n(459273),
-    O = n(403182),
-    v = n(541716),
-    I = n(752305),
-    T = n(30465),
-    S = n(330122),
-    A = n(140963),
-    C = n(4484),
-    N = n(925994),
-    R = n(981631),
-    P = n(388032),
-    w = n(564355);
-function D(e, t, n) {
+    h = n(531643),
+    m = n(911969),
+    g = n(476326),
+    E = n(998698),
+    b = n(710845),
+    y = n(117530),
+    O = n(459273),
+    v = n(403182),
+    I = n(541716),
+    T = n(752305),
+    S = n(30465),
+    A = n(330122),
+    C = n(140963),
+    N = n(4484),
+    R = n(925994),
+    P = n(981631),
+    w = n(388032),
+    D = n(744114);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +42,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +53,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,23 +70,23 @@ function L(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-new E.Z("ChannelEditor.tsx");
+new b.Z("ChannelEditor.tsx");
 let M = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    k = 1000;
-class U extends i.Component {
+    U = 1000;
+class G extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
         let a =
@@ -106,14 +107,14 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), U));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, N.sk)(this.props.richValue, { mode: "plain" })),
-                null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, R.sk)(this.props.richValue, { mode: "plain" })),
+                null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, T.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -227,7 +228,7 @@ class U extends i.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n } = this.props;
-        return e && !n ? P.intl.string(P.t.IYKTTU) : t;
+        return e && !n ? w.intl.string(w.t.IYKTTU) : t;
     }
     render() {
         var e, t, n, i, a, s;
@@ -243,31 +244,31 @@ class U extends i.Component {
                 type: g,
                 useSlate: E,
                 spellcheckEnabled: b,
-                useNewSlashCommands: O,
-                canOnlyUseTextCommands: T,
+                useNewSlashCommands: y,
+                canOnlyUseTextCommands: v,
                 className: S,
-                id: N,
-                required: P,
-                maxCharacterCount: D,
-                allowNewLines: L,
-                "aria-describedby": M,
-                "aria-labelledby": k,
+                id: A,
+                required: R,
+                maxCharacterCount: w,
+                allowNewLines: x,
+                "aria-describedby": j,
+                "aria-labelledby": M,
                 accessibilityLabel: U,
             } = this.props,
             { submitting: G, popup: B } = this.state,
             Z = {
                 channel: m,
-                className: o()(S, w.textArea, {
-                    [w.textAreaSlate]: E,
-                    [w.textAreaDisabled]: u || G,
+                className: o()(S, D.textArea, {
+                    [D.textAreaSlate]: E,
+                    [D.textAreaDisabled]: u || G,
                 }),
-                id: N,
+                id: A,
                 placeholder: this.getPlaceholder(),
-                required: P,
+                required: R,
                 accessibilityLabel: U,
                 disabled: u || !1,
                 submitting: G,
-                isEdit: g === v.Ie.EDIT,
+                isEdit: g === I.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -276,52 +277,52 @@ class U extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: L,
+                allowNewLines: x,
                 onChange: d,
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: o()({
-                    [w.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
-                    [w.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
-                    [w.textAreaForUserProfile]: g === v.Ie.USER_PROFILE,
-                    [w.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY,
+                    [D.textAreaForPostCreation]: g === I.Ie.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === I.Ie.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === I.Ie.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === I.Ie.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: b,
-                useNewSlashCommands: O,
+                useNewSlashCommands: y,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 "aria-controls": null != (a = B.id) ? a : void 0,
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== B.id || void 0,
                 "aria-activedescendant": null != (s = B.activeDescendant) ? s : void 0,
-                "aria-invalid": l.length > D,
-                "aria-describedby": M,
-                "aria-labelledby": k,
+                "aria-invalid": l.length > w,
+                "aria-describedby": j,
+                "aria-labelledby": M,
                 "aria-autocomplete": "list",
             },
-            V = E
+            F = E
                 ? (0, r.jsx)(
-                      C.Z,
-                      j(x({ ref: this.ref }, Z), {
+                      N.Z,
+                      k(L({ ref: this.ref }, Z), {
                           type: g,
-                          value: u ? (0, I.JM)("") : c,
+                          value: u ? (0, T.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
-                          canOnlyUseTextCommands: T,
+                          canOnlyUseTextCommands: v,
                       }),
                   )
-                : (0, r.jsx)(A.Z, j(x({ ref: this.ref }, Z), { value: u ? "" : l }));
+                : (0, r.jsx)(C.Z, k(L({ ref: this.ref }, Z), { value: u ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(y.d9, {
-                    event: R.CkL.INSERT_TEXT,
+                (0, r.jsx)(O.d9, {
+                    event: P.CkL.INSERT_TEXT,
                     handler: this.handleInsertText,
                 }),
-                (0, r.jsx)(y.d9, {
-                    event: R.CkL.CLEAR_TEXT,
+                (0, r.jsx)(O.d9, {
+                    event: P.CkL.CLEAR_TEXT,
                     handler: this.handleClearText,
                 }),
-                V,
+                F,
             ],
         });
     }
@@ -329,12 +330,12 @@ class U extends i.Component {
         var t;
         super(e),
             (t = this),
-            D(this, "ref", i.createRef()),
-            D(this, "_focusBlurQueue", Promise.resolve()),
-            D(this, "_unsubscribe", void 0),
-            D(this, "_initTimeoutId", null),
-            D(this, "_cachedEditorWindow", null),
-            D(this, "handleSelectionChange", () => {
+            x(this, "ref", i.createRef()),
+            x(this, "_focusBlurQueue", Promise.resolve()),
+            x(this, "_unsubscribe", void 0),
+            x(this, "_initTimeoutId", null),
+            x(this, "_cachedEditorWindow", null),
+            x(this, "handleSelectionChange", () => {
                 if (this.props.focused) {
                     var e, t, n;
                     this.props.onSelectionChanged(
@@ -342,7 +343,7 @@ class U extends i.Component {
                     );
                 }
             }),
-            D(this, "focus", () => {
+            x(this, "focus", () => {
                 var e;
                 null == (e = this._focusBlurQueue) ||
                     e.then(() => {
@@ -352,55 +353,55 @@ class U extends i.Component {
                         });
                     });
             }),
-            D(this, "saveCurrentText", function () {
+            x(this, "saveCurrentText", function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     { type: n, channel: r } = t.props;
                 n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(r.id));
             }),
-            D(this, "handleBeforeUnload", () => this.saveCurrentText()),
-            D(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
-            D(this, "handleEnter", (e) => {
+            x(this, "handleBeforeUnload", () => this.saveCurrentText()),
+            x(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
+            x(this, "handleEnter", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onEnter) ? void 0 : t.call(n, e);
             }),
-            D(this, "handleTab", () => {
+            x(this, "handleTab", () => {
                 var e, t;
                 return null == (e = (t = this.props).onTab) ? void 0 : e.call(t);
             }),
-            D(this, "handleMoveSelection", (e) => {
+            x(this, "handleMoveSelection", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onMoveSelection) ? void 0 : t.call(n, e);
             }),
-            D(this, "maybeShowAutocomplete", () => {
+            x(this, "maybeShowAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onMaybeShowAutocomplete) ? void 0 : e.call(t);
             }),
-            D(this, "hideAutocomplete", () => {
+            x(this, "hideAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onHideAutocomplete) ? void 0 : e.call(t);
             }),
-            D(this, "handleSaveCurrentText", (e) => {
+            x(this, "handleSaveCurrentText", (e) => {
                 _.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
             }),
-            D(this, "handleClearText", () => {
+            x(this, "handleClearText", () => {
                 var e, t;
-                null == (e = (t = this.props).onChange) || e.call(t, null, "", (0, I.JM)(""));
+                null == (e = (t = this.props).onChange) || e.call(t, null, "", (0, T.JM)(""));
             }),
-            D(this, "handleInsertText", (e) => {
+            x(this, "handleInsertText", (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;
                 this.props.disabled || (this.appendText(t, n, r), this.focus());
             }),
-            D(this, "handleFocus", (e) => {
+            x(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n || this.setState({ focused: !0 });
             }),
-            D(this, "handleBlur", (e) => {
+            x(this, "handleBlur", (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
-            D(this, "handlePaste", (e) => {
+            x(this, "handlePaste", (e) => {
                 var t, n, r;
                 let i = null == (n = e.target) || null == (t = n.ownerDocument) ? void 0 : t.defaultView,
                     {
@@ -411,71 +412,80 @@ class U extends i.Component {
                         maxCharacterCount: c,
                         type: u,
                     } = this.props,
-                    d = null != i ? (0, S.im)(i) : null,
-                    f = (0, S.Mo)(),
+                    d = null != i ? (0, A.im)(i) : null,
+                    f = (0, A.Mo)(),
                     _ = null != (r = null != d ? d : f) ? r : a,
-                    E = (0, S._K)(i, this._getEditorWindow()) ? a : _;
-                if (null == l || (!E.isPrivate() && !o) || (E.isPrivate() && E.isManaged())) return !1;
-                let y = async (e, t) => {
+                    b = (0, A._K)(i, this._getEditorWindow()) ? a : _;
+                if (null == l || (!b.isPrivate() && !o) || (b.isPrivate() && b.isManaged())) return !1;
+                let O = async (e, t) => {
                         var n, r;
-                        let i = g.Z.getActiveCommand(E.id);
+                        let i = E.Z.getActiveCommand(b.id);
                         if (null == i)
-                            return await l(e, E, u.drafts.type, {
+                            return await l(e, b, u.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: t,
                                 origin: "clipboard",
                             });
                         let a = null != (n = u.drafts.commandType) ? n : u.drafts.type,
                             o = null,
-                            s = g.Z.getActiveOption(E.id);
+                            s = E.Z.getActiveOption(b.id);
                         null !=
                             (o =
-                                (null == s ? void 0 : s.type) === h.jw.ATTACHMENT
+                                (null == s ? void 0 : s.type) === m.jw.ATTACHMENT
                                     ? s
                                     : null == (r = i.options)
                                       ? void 0
                                       : r.find((e) => {
-                                            if (e.type === h.jw.ATTACHMENT)
-                                                return null == b.Z.getUpload(E.id, e.name, a);
+                                            if (e.type === m.jw.ATTACHMENT)
+                                                return null == y.Z.getUpload(b.id, e.name, a);
                                         })) &&
                             p.Z.setFile({
-                                channelId: E.id,
+                                channelId: b.id,
                                 id: o.name,
                                 draftType: a,
                                 file: {
                                     id: o.name,
-                                    platform: m.ow.WEB,
+                                    platform: g.ow.WEB,
                                     file: e[0],
                                 },
                             });
                     },
-                    O = null != s ? s : c,
-                    { files: v } = G(e.clipboardData, u.uploadLongMessages ? O : null);
-                return (
-                    M(
-                        "onPaste",
-                        [...e.clipboardData.items].map((e) => {
-                            if ("file" !== e.kind)
-                                return {
-                                    kind: e.kind,
-                                    type: e.type,
-                                };
-                            {
-                                let t = e.getAsFile();
-                                return {
-                                    kind: e.kind,
-                                    type: e.type,
-                                    name: null == t ? void 0 : t.name,
-                                    path: null == t ? void 0 : t.path,
-                                };
-                            }
-                        }),
-                    ),
-                    0 !== v.length &&
-                        (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), y(v), this.focus(), !0)
-                );
+                    v = null != s ? s : c,
+                    { files: I, errors: T } = B(e.clipboardData, u.uploadLongMessages ? v : null);
+                return (M(
+                    "onPaste",
+                    [...e.clipboardData.items].map((e) => {
+                        if ("file" !== e.kind)
+                            return {
+                                kind: e.kind,
+                                type: e.type,
+                            };
+                        {
+                            let t = e.getAsFile();
+                            return {
+                                kind: e.kind,
+                                type: e.type,
+                                name: null == t ? void 0 : t.name,
+                                path: null == t ? void 0 : t.path,
+                            };
+                        }
+                    }),
+                ),
+                0 === I.length)
+                    ? ((null == T
+                          ? void 0
+                          : T.some((e) => {
+                                let { error: t } = e;
+                                return "is_directory" === t;
+                            })) &&
+                          (0, h.openUploadError)({
+                              title: w.intl.string(w.t.azO1PT),
+                              help: w.intl.string(w.t.Koklr6),
+                          }),
+                      !1)
+                    : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), O(I), this.focus(), !0);
             }),
-            (this._unsubscribe = T.p8.subscribe((e) => {
+            (this._unsubscribe = S.p8.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
@@ -483,46 +493,78 @@ class U extends i.Component {
             (this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: T.p8.getState(),
+                popup: S.p8.getState(),
             });
     }
 }
-function G(e, t) {
-    let n = [],
-        r = [],
-        i = null,
-        a = null;
+function B(e, t) {
+    var n, r, i, a, o;
+    let s = [],
+        l = [],
+        c = null,
+        u = null,
+        d = [];
     for (let t of e.items)
         if ("file" === t.kind) {
-            let e = t.getAsFile();
-            if (null == e) continue;
-            null != e.path && e.path.length > 0 ? n.push(e) : r.push(e);
+            let e =
+                null !=
+                (a =
+                    null != (i = null == (n = t.webkitGetAsEntry) ? void 0 : n.call(t))
+                        ? i
+                        : null == (r = t.getAsEntry)
+                          ? void 0
+                          : r.call(t))
+                    ? a
+                    : null;
+            if (null != e && !1 === e.isFile) {
+                d.push({
+                    item: t,
+                    error: "is_directory",
+                });
+                continue;
+            }
+            let o = t.getAsFile();
+            if (null == o) continue;
+            null != o.path && o.path.length > 0 ? s.push(o) : l.push(o);
         } else
             "string" === t.kind &&
-                ("text/plain" === t.type && null == i ? (i = t) : "text/html" === t.type && null == a && (a = t));
-    if (n.length > 0) return { files: n };
-    if (r.length > 0) {
-        if (1 === r.length && "image/png" === r[0].type && null != a) {
-            var o;
-            let t = r[0],
-                n = null != (o = B(e.getData(a.type))) ? o : t.name;
-            return { files: [(0, O.dp)(t, n, t.type)] };
+                ("text/plain" === t.type && null == c ? (c = t) : "text/html" === t.type && null == u && (u = t));
+    if (s.length > 0)
+        return {
+            files: s,
+            errors: d,
+        };
+    if (l.length > 0) {
+        if (1 === l.length && "image/png" === l[0].type && null != u) {
+            let t = l[0],
+                n = null != (o = Z(e.getData(u.type))) ? o : t.name;
+            return {
+                files: [(0, v.dp)(t, n, t.type)],
+                errors: d,
+            };
         }
-        return { files: r };
+        return {
+            files: l,
+            errors: d,
+        };
     }
-    if (null != i && null != t) {
-        let n = e.getData(i.type);
+    if (null != c && null != t) {
+        let n = e.getData(c.type);
         if (n.length > t) {
             let e = new Blob([n], { type: "text/plain" });
             return {
-                files: [(0, O.dp)(e, "message.txt", "text/plain")],
+                files: [(0, v.dp)(e, "message.txt", "text/plain")],
                 convertedStringToFile: !0,
+                errors: d,
             };
         }
     }
-    return { files: [] };
+    return {
+        files: [],
+        errors: d,
+    };
 }
-function B(e) {
+function Z(e) {
     let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
     if (null != t) {
         let e;
