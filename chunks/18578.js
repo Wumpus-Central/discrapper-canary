@@ -11,7 +11,7 @@ var r = n(951288),
     f = n(819838);
 function _(e) {
     var t, n, a;
-    let { videoActive: _, imageAsset: p, videoAsset: h, imageDimensions: m, onLoadComplete: g } = e,
+    let { showVideo: _, imageAsset: p, videoAsset: h, imageSize: m, onLoadComplete: g } = e,
         E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         b = null == p || p.asset.isAnimated ? null : p.asset.url,
         y = null != h && h.asset.isAnimated ? h.asset.url : null,

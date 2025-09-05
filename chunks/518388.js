@@ -4,8 +4,6 @@ e.exports = {
     contents: "contents_b5b7aa",
     heroAssetWrapper: "heroAssetWrapper_b5b7aa",
     heroAssetCont: "heroAssetCont_b5b7aa",
-    heroAsset: "heroAsset_b5b7aa",
-    heroAssetVideo: "heroAssetVideo_b5b7aa",
     overlay: "overlay_b5b7aa",
     darkThemeGradient: "darkThemeGradient_b5b7aa",
     lightThemeGradient: "lightThemeGradient_b5b7aa",
