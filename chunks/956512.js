@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => N });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -18,9 +18,10 @@ var i = n(442837),
     E = n(358085),
     b = n(709054),
     y = n(915553),
-    O = n(658805),
-    v = n(388032);
-function I(e, t, n) {
+    O = n(967249),
+    v = n(978595),
+    I = n(388032);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +45,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,84 +62,87 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e) {
+function N(e) {
     let t,
-        { currentUserId: I, message: S, application: C, channel: N, analyticsLocations: R, onView: P } = e,
-        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(C),
-        L = g.ZP.getApplicationIconURL({
-            id: C.id,
-            icon: C.icon,
+        { currentUserId: T, message: A, application: N, channel: R, analyticsLocations: P, onView: w } = e,
+        { staticBannerSrc: D, videoBannerSrc: x, bannerAspectRatio: L } = (0, d.E)(N),
+        j = g.ZP.getApplicationIconURL({
+            id: N.id,
+            icon: N.icon,
         }),
-        j = (0, i.e7)([f.ZP, h.Z], () =>
-            null != S.application
+        k = (0, i.e7)([f.ZP, h.Z], () =>
+            null != A.application
                 ? f.ZP.getVisibleRunningGames().find((e) => {
                       let { id: t } = e;
-                      if (null == S.application) return !1;
-                      if (t === S.application.id) return !0;
-                      let n = h.Z.getGameByName(S.application.name);
+                      if (null == A.application) return !1;
+                      if (t === A.application.id) return !0;
+                      let n = h.Z.getGameByName(A.application.name);
                       return null != n && t === n.id;
                   })
                 : null,
         ),
         M = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
-        k = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
-        U = b.default.extractTimestamp(S.id) + y.O < Date.now(),
-        G = (0, r.jsx)(r.Fragment, { children: (0, o._0)(S, N, I) }),
-        { newestAnalyticsLocation: B } = (0, l.ZP)(R, s.Z.REQUEST_TO_STREAM_INVITE_EMBED);
+        U = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
+        G = b.default.extractTimestamp(A.id) + y.O < Date.now(),
+        B = (0, r.jsx)(r.Fragment, { children: (0, o._0)(A, R, T) }),
+        { newestAnalyticsLocation: Z } = (0, l.ZP)(P, s.Z.REQUEST_TO_STREAM_INVITE_EMBED);
     return (
-        U
-            ? (t = v.intl.string(O.default.u4QmWl))
+        G
+            ? (t = I.intl.string(v.default.u4QmWl))
             : null != M
-              ? (t = v.intl.string(O.default.P0wwmJ))
-              : k !== N.id
-                ? (t = v.intl.string(O.default.qRXatr))
-                : null == j && (t = v.intl.string(O.default["43zohI"])),
+              ? (t = I.intl.string(v.default.P0wwmJ))
+              : U !== R.id
+                ? (t = I.intl.string(v.default.qRXatr))
+                : null == k && (t = I.intl.string(v.default["43zohI"])),
         (0, r.jsx)(c.W, {
-            header: v.intl.string(O.default.nAyuPj),
-            title: C.name,
-            staticBannerSrc: w,
-            videoBannerSrc: D,
-            bannerAspectRatio: x,
-            iconSrc: null != L ? L : void 0,
-            info: G,
+            header: I.intl.string(v.default.nAyuPj),
+            title: N.name,
+            staticBannerSrc: D,
+            videoBannerSrc: x,
+            bannerAspectRatio: L,
+            iconSrc: null != j ? j : void 0,
+            info: B,
             actions:
-                S.author.id === I
+                A.author.id === T
                     ? []
                     : [
                           {
-                              label: v.intl.string(O.default["5+172d"]),
+                              label: I.intl.string(v.default["5+172d"]),
                               trackingArea: u.j_.STREAM,
                               disabledReason: t,
                               onClick: () => {
-                                  null != j &&
+                                  null != k &&
                                       ((0, E.isWindows)()
-                                          ? (0, _.Z)(j.pid)
+                                          ? (0, _.Z)(k.pid)
                                           : (0, a.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("38697"),
                                                     n.e("46746"),
-                                                    n.e("79839"),
+                                                    n.e("39173"),
                                                 ]).then(n.bind(n, 60594));
-                                                return (t) => (0, r.jsx)(e, A(T({}, t), { analyticsLocation: B }));
+                                                return (t) => (0, r.jsx)(e, C(S({}, t), { analyticsLocation: Z }));
                                             }));
                               },
                           },
                       ],
             trackingConfig: {
-                id: C.id,
-                linkType: u.Un.REQUEST_TO_STREAM,
-                onView: P,
+                id: N.id,
+                linkType: O.U.REQUEST_TO_STREAM,
+                guildId: R.guild_id,
+                channelId: R.id,
+                messageId: A.id,
+                onView: w,
             },
         })
     );

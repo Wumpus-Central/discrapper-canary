@@ -5,7 +5,7 @@ var r = n(647438),
     o = n(434650),
     s = n(430824),
     l = n(63205),
-    c = n(529726),
+    c = n(765383),
     u = n(981631);
 let d = 0;
 function f(e) {
@@ -33,13 +33,14 @@ function f(e) {
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
+                          type: c.k.ANNOUNCEMENT,
                           messageId: b,
                           channelId: _.id,
                           guildId: _.guild_id,
                           sourceChannelId: y,
                           sourceGuildId: O,
                       })
-                    : c.Z.handleMessageLostVisibility(b);
+                    : c.Z.handleMessageLostVisibility(b, c.k.ANNOUNCEMENT);
             },
             [b, _.id, _.guild_id, y, O],
         ),
@@ -54,7 +55,7 @@ function f(e) {
     return (
         r.useEffect(
             () => () => {
-                c.Z.handleMessageLostVisibility(b);
+                c.Z.handleMessageLostVisibility(b, c.k.ANNOUNCEMENT);
             },
             [b],
         ),

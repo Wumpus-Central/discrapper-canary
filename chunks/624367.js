@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(100527),
@@ -7,32 +7,35 @@ var i = n(100527),
     s = n(230171),
     l = n(835473),
     c = n(365415),
-    u = n(50523);
-function d(e) {
-    let { applicationId: t, customId: n, referrerId: d, linkId: f } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(i.Z.ACTIVITY_BOOKMARK),
-        [p] = (0, l.Z)([t]),
-        h = null != p && (0, o.ye)(p),
-        { data: m, error: g } = (0, c.h)(null == p ? void 0 : p.id, f);
-    return null == p || !1 === h
+    u = n(50523),
+    d = n(967249);
+function f(e) {
+    let { applicationId: t, customId: n, referrerId: f, linkId: _, message: p } = e,
+        { analyticsLocations: h } = (0, a.ZP)(i.Z.ACTIVITY_BOOKMARK),
+        [m] = (0, l.Z)([t]),
+        g = null != m && (0, o.ye)(m),
+        { data: E, error: b } = (0, c.h)(null == m ? void 0 : m.id, _);
+    return null == m || !1 === g
         ? null
-        : null != f && null == g && null != m
+        : null != _ && null == b && null != E
           ? (0, r.jsx)(a.Gt, {
-                value: _,
+                value: h,
                 children: (0, r.jsx)(u.b, {
-                    application: p,
+                    application: m,
                     customId: n,
-                    customLink: m,
-                    referrerId: d,
+                    customLink: E,
+                    referrerId: f,
+                    message: p,
                 }),
             })
           : (0, r.jsx)(a.Gt, {
-                value: _,
+                value: h,
                 children: (0, r.jsx)(s.O, {
-                    app: p,
-                    linkType: s.U.ACTIVITY,
+                    app: m,
+                    linkType: d.U.ACTIVITY,
                     activityCustomId: n,
-                    activityReferrerId: d,
+                    activityReferrerId: f,
+                    message: p,
                 }),
             });
 }

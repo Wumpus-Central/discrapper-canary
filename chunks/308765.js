@@ -535,9 +535,9 @@ let i = {
         actions: ["GUILD_CREATE", "POST_CONNECTION_OPEN"],
         inlineRequire: () => n(109610).Z,
     },
-    AnnouncementViewTrackingManager: {
+    MessageViewTrackingManager: {
         actions: ["CHANNEL_SELECT"],
-        inlineRequire: () => n(529726).Z,
+        inlineRequire: () => n(765383).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
     DetectableGamesManager: {

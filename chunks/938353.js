@@ -42,8 +42,8 @@ var r,
     x = n(947849),
     L = n(10433),
     j = n(715903),
-    M = n(71619),
-    k = n(637618),
+    k = n(71619),
+    M = n(637618),
     U = n(225890),
     G = n(364097),
     B = n(939170),
@@ -96,8 +96,8 @@ var r,
     ex = n(384203),
     eL = n(633957),
     ej = n(530472),
-    eM = n(29909),
-    ek = n(782658),
+    ek = n(29909),
+    eM = n(782658),
     eU = n(219797),
     eG = n(453687),
     eB = n(128854),
@@ -113,7 +113,7 @@ var r,
     eX = n(981631),
     eQ = n(474936),
     eJ = n(388032),
-    e$ = n(636428),
+    e$ = n(448494),
     e0 = n(680674);
 function e1(e, t, n) {
     return (
@@ -171,7 +171,7 @@ function e8(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = e5(e, t);
+        i = e6(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -179,7 +179,7 @@ function e8(e, t) {
     }
     return i;
 }
-function e5(e, t) {
+function e6(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -188,7 +188,7 @@ function e5(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function e6() {
+function e5() {
     return (0, i.jsxs)("div", {
         className: e$.nitroFileSizeUpsell,
         children: [
@@ -212,7 +212,7 @@ let e7 = [eX.hBH.GIFV],
         let { url: t, proxyUrl: n, width: r, height: a, flags: o } = e,
             s = (0, ev.yE)(o, W.hR.IS_ANIMATED);
         return null != r && null != a && (K.uo.test(n) || (s && (K.YG.test(n) || K.FH.test(n))))
-            ? (0, i.jsx)(eM.Z, {
+            ? (0, i.jsx)(ek.Z, {
                   width: r,
                   height: a,
                   src: n,
@@ -279,7 +279,7 @@ class tr extends (r = a.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eQ.Lw);
-        return (0, eN.M)("attachment") && t ? (0, i.jsx)(e6, {}) : null;
+        return (0, eN.M)("attachment") && t ? (0, i.jsx)(e5, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
@@ -289,7 +289,7 @@ class tr extends (r = a.Component) {
                   if (n === S.g.INVITE)
                       return this.shouldRenderInvite(r)
                           ? (0, i.jsx)(
-                                ek.Z,
+                                eM.Z,
                                 {
                                     code: r,
                                     message: e,
@@ -331,7 +331,7 @@ class tr extends (r = a.Component) {
                           },
                           r,
                       );
-                  } else if (n === S.g.GUILD_PRODUCT) return (0, i.jsx)(k.Z, { code: r }, r);
+                  } else if (n === S.g.GUILD_PRODUCT) return (0, i.jsx)(M.Z, { code: r }, r);
                   else if (n === S.g.SERVER_SHOP) return (0, i.jsx)(A.Z, { guildId: r }, r);
                   else if (n === S.g.QUESTS_EMBED) return (0, i.jsx)(en.Z, { questId: r }, r);
                   else if (n === S.g.APP_DIRECTORY_STOREFRONT)
@@ -356,7 +356,15 @@ class tr extends (r = a.Component) {
                                 },
                                 r,
                             );
-                  } else if (n === S.g.APP_OAUTH2_LINK) return (0, i.jsx)(O.Z, { applicationId: r }, r);
+                  } else if (n === S.g.APP_OAUTH2_LINK)
+                      return (0, i.jsx)(
+                          O.Z,
+                          {
+                              applicationId: r,
+                              message: e,
+                          },
+                          r,
+                      );
                   else if (n === S.g.COLLECTIBLES_SHOP) return null;
                   else throw Error("Unknown coded link type: ".concat(n));
               });
@@ -705,6 +713,7 @@ class tr extends (r = a.Component) {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id,
+                  message: e,
               });
     }
     renderMediaPostEmbeds(e) {
@@ -975,7 +984,7 @@ function ti(e) {
             [p, n],
         ),
         y = (0, j.ux)(n.guild_id),
-        [, O] = (0, M.AB)(n.guild_id),
+        [, O] = (0, k.AB)(n.guild_id),
         v = (0, ec.$R)(n),
         I =
             (s === r.author.id || b) &&
@@ -1003,7 +1012,7 @@ function ti(e) {
         D = (0, Q.Z)(r),
         x = (0, R.v)(r),
         L = (0, eR._)(n),
-        k = (0, eS.ro)(r.id, r.channel_id),
+        M = (0, eS.ro)(r.id, r.channel_id),
         U = (0, C.m8)();
     return (0, i.jsx)(
         tr,
@@ -1037,7 +1046,7 @@ function ti(e) {
                 showMaskedLinks: P,
                 shouldHideMediaOptions: w,
                 enabledContentHarmTypeFlags: x,
-                ctaButtonType: k,
+                ctaButtonType: M,
                 shouldAgeVerify: U,
             },
         ),

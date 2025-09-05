@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(370210),
     h = n(981631),
     m = n(388032),
-    g = n(923289);
+    g = n(974766);
 function E(e) {
     let { code: t, message: n } = e,
         [E, b, y] = (0, o.Wu)(
@@ -87,5 +87,6 @@ function E(e) {
                 app: u.ZP.createFromServer(E),
                 linkType: l.U.APP_DISCOVERY,
                 onView: A,
+                message: n,
             });
 }
