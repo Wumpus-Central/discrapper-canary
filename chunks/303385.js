@@ -7,7 +7,7 @@ var i = n(261616),
     s = n(644646),
     l = n(46140),
     c = n(388032),
-    u = n(96656);
+    u = n(895758);
 let d = 48,
     f = (e) => {
         let { quest: t, expansionSpring: n, isFullyExpanded: f, partnerBranding: _, useReducedMotion: p } = e;

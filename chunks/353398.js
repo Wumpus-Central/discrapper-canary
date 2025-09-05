@@ -23,12 +23,12 @@ var r,
     b = n(881052),
     x = n(751189),
     j = n(409059),
-    _ = n(518936),
-    v = n(999382),
+    v = n(518936),
+    _ = n(999382),
     O = n(260539),
     y = n(388032),
-    C = n(232386),
-    N = n(10198);
+    C = n(86477),
+    N = n(197571);
 function E(e, t, n) {
     return (
         t in e
@@ -44,7 +44,7 @@ function E(e, t, n) {
 }
 class I extends (r = d.ZP.Store) {
     getTemplate() {
-        let e = v.Z.getProps().guild;
+        let e = _.Z.getProps().guild;
         if (null == e) return null;
         let t = j.Z.getForGuild(e.id);
         return null != t && t.state !== O.Rj.RESOLVING ? t : null;
@@ -80,7 +80,7 @@ class I extends (r = d.ZP.Store) {
             }),
             E(this, "save", async () => {
                 await x.Z.updateGuildTemplate(
-                    v.Z.getProps().guild.id,
+                    _.Z.getProps().guild.id,
                     this.getTemplate().code,
                     this.name,
                     this.description,
@@ -128,7 +128,7 @@ function w() {
     });
 }
 function R() {
-    let { guild: e } = v.Z.getProps();
+    let { guild: e } = _.Z.getProps();
     c()(null != e, "guild cannot be null");
     let t = (0, d.e7)([S], () => S.error),
         [n, r] = l.useState(!0),
@@ -366,7 +366,7 @@ function L(e) {
                       children: (0, i.jsx)(f.Z, {
                           buttonLook: m.zx.Looks.FILLED,
                           buttonColor: m.zx.Colors.BRAND,
-                          value: (0, _.Z)(n.code),
+                          value: (0, v.Z)(n.code),
                       }),
                   }),
                   n.isDirty &&
@@ -490,7 +490,7 @@ function U(e) {
             text: y.intl.string(y.t.YI3iV1),
             onClick: () =>
                 (0, g.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("10570")]).then(n.bind(n, 766775));
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
                     return (n) => {
                         var r, l;
                         return (0, i.jsx)(

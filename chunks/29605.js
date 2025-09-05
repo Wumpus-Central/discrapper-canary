@@ -22,8 +22,8 @@ var r = n(951288),
     b = n(80932),
     x = n(225433),
     j = n(599059),
-    _ = n(327802),
-    v = n(110924),
+    v = n(327802),
+    _ = n(110924),
     O = n(100527),
     y = n(200876),
     C = n(556019),
@@ -46,8 +46,8 @@ var r = n(951288),
     B = n(981631),
     F = n(185923),
     H = n(388032),
-    z = n(52116),
-    W = n(504401);
+    z = n(878341),
+    W = n(620842);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -123,7 +123,7 @@ let Y = d().throttle(b.OQ, 1000),
                 }),
                 o ? "respect-motion-settings" : "animate-never",
             ),
-            _ = L.ZP.useUserTag(n.user);
+            v = L.ZP.useUserTag(n.user);
         return (0, r.jsxs)("div", {
             className: a()(z.emojiRow, W.card),
             children: [
@@ -175,12 +175,12 @@ let Y = d().throttle(b.OQ, 1000),
                     children: [
                         (0, r.jsx)(f.qEK, {
                             src: n.user.getAvatarURL(t, 20),
-                            "aria-label": _,
+                            "aria-label": v,
                             size: f.EFr.SIZE_20,
                         }),
                         (0, r.jsx)(f.R94, {
                             className: z.emojiRowText,
-                            children: _,
+                            children: v,
                         }),
                     ],
                 }),
@@ -421,7 +421,7 @@ let Y = d().throttle(b.OQ, 1000),
                 emojis: M.Z.getEmojis(t.id),
                 autoOpen: M.Z.getEmojiFileInputAutoOpen(),
             })),
-            x = (0, v.Z)(u),
+            x = (0, _.Z)(u),
             [j, S] = i.useState(!1),
             [Z, D] = i.useState(!1),
             A = i.useRef(null),
@@ -535,7 +535,7 @@ let Y = d().throttle(b.OQ, 1000),
             children: [
                 0 === F
                     ? null
-                    : (0, r.jsx)(_.Z, {
+                    : (0, r.jsx)(v.Z, {
                           className: z.emojiUploadContainer,
                           onDrop: ec,
                       }),

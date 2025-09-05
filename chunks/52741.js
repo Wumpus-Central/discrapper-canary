@@ -17,7 +17,7 @@ var i = n(120356),
     g = n(504865),
     E = n(474936),
     b = n(388032),
-    y = n(40747);
+    y = n(560230);
 function O(e) {
     var t;
     let { defaultPriceString: n, subscriptionPlan: i, discountOffer: a } = e,

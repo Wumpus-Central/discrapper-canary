@@ -1,3 +1,29 @@
-a.exports = JSON.parse(
-    '{"o/An3t":["Użytkownik ",[1,"username"]," poprosił Cię o streamowanie ",[1,"applicationName"]],"DKHheX":"Poproś o streamowanie","8qq+Hx":["Poproś o streamowanie ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," prosi Cię o streamowanie ",[1,"applicationName"]],"7pndSk":["Poproszono o streamowanie ",[1,"applicationName"]],"P0wwmJ":"Użytkownik już streamuje","u4QmWl":"Prośba wygasła","qRXatr":"Użytkownika nie ma na kanale głosowym","43zohI":"Gra nie jest uruchomiona","fac+eH":"Brak uprawnień","8HU1Mz":"Prośba wysłana","5+172d":"Streamuj","UGbmBg":"Streamuj","jTbTAA":[[8,"$b",[[1,"username"]]]," chce oglądać, jak grasz w ",[8,"$b",[[1,"game"]]],". Rozpocząć transmisję na żywo?"]}',
-);
+n.d(t, { Z: () => s });
+var r = n(951288);
+n(647438);
+var i = n(481060),
+    l = n(921944),
+    a = n(388032),
+    o = n(46456);
+function s(e) {
+    let { markAsDismissed: t } = e;
+    return (0, r.jsxs)("div", {
+        className: o.container,
+        children: [
+            (0, r.jsx)("div", { className: o.pointer }),
+            (0, r.jsx)(i.Text, {
+                variant: "text-sm/normal",
+                className: o.content,
+                children: a.intl.string(a.t.rdzeVF),
+            }),
+            (0, r.jsx)(i.zxk, {
+                variant: "overlay-primary",
+                text: a.intl.string(a.t["NX+WJC"]),
+                fullWidth: !0,
+                onClick: () => {
+                    t(l.L.AUTO);
+                },
+            }),
+        ],
+    });
+}

@@ -16,10 +16,10 @@ var r = n(951288),
     b = n(984933),
     x = n(540457),
     j = n(681460),
-    _ = n(592286),
-    v = n(981631),
+    v = n(592286),
+    _ = n(981631),
     O = n(388032),
-    y = n(761560);
+    y = n(94228);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,7 +76,7 @@ function I(e) {
             isDropHovered: b,
             focused: x,
             onFocus: j,
-            previewEnabled: v,
+            previewEnabled: _,
             isDragEnabled: C,
             disabled: N,
         } = e,
@@ -146,7 +146,7 @@ function I(e) {
                         focused: x,
                         onChange: (e, n, r) => {
                             let i = N ? t.value : n;
-                            i.length > _.fn && (i = i.slice(0, _.fn)),
+                            i.length > v.fn && (i = i.slice(0, v.fn)),
                                 n !== i && ((n = i), (r = (0, p.JM)(i))),
                                 s(n),
                                 w({
@@ -155,9 +155,9 @@ function I(e) {
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: v,
-                        canMentionRoles: v,
-                        maxCharacterCount: _.fn,
+                        canMentionChannels: _,
+                        canMentionRoles: _,
+                        maxCharacterCount: v.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -194,14 +194,14 @@ function I(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l, disabled: a } = e,
         s = l.rulesChannelId,
-        c = l.features.has(v.oNc.PREVIEW_ENABLED),
+        c = l.features.has(_.oNc.PREVIEW_ENABLED),
         d = (0, u.e7)([h.Z], () => (null != s ? h.Z.getChannel(s) : null)),
         g = (0, u.e7)([b.ZP], () => b.ZP.getDefaultChannel(l.id)),
         [p, f] = i.useState(null),
         [E, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
-                if (!a && t.length !== _.X2)
+                if (!a && t.length !== v.X2)
                     if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
                         (r[t.length - 1] = N(C({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
@@ -240,9 +240,9 @@ function S(e) {
             },
             [a, p, t, n],
         ),
-        Z = t.length === _.X2,
+        Z = t.length === v.X2,
         D = i.useMemo(() => {
-            let e = Z ? O.intl.formatToPlainString(O.t.tU718P, { number: _.X2 }) : void 0;
+            let e = Z ? O.intl.formatToPlainString(O.t.tU718P, { number: v.X2 }) : void 0;
             return [
                 {
                     text: O.intl.string(O.t.DXq2oa),

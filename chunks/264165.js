@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(56121);
+    a = n(612597);
 let o = (e) => {
     let { aspectRatio: t, style: n, className: i, children: o } = e;
     return (0, r.jsx)("div", {

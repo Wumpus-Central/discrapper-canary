@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    m = n(866234);
+    m = n(31829);
 let g = function (e) {
     let {
             channelId: t,
@@ -22,8 +22,8 @@ let g = function (e) {
             onRemove: b,
             canRemove: x,
             title: j,
-            actionsLocation: _,
-            fieldStyle: v,
+            actionsLocation: v,
+            fieldStyle: _,
         } = e,
         O = n.values,
         y = O.slice(0, 1),
@@ -38,8 +38,8 @@ let g = function (e) {
         onRemove: b,
         title: j,
         canRemove: x,
-        actionsLocation: _,
-        fieldStyle: v,
+        actionsLocation: v,
+        fieldStyle: _,
         children: [
             (0, r.jsx)(c.EK, {
                 terms: y,

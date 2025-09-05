@@ -16,16 +16,16 @@ var r = n(951288),
     b = n(251625),
     x = n(226951),
     j = n(51144),
-    _ = n(434404),
-    v = n(372454),
+    v = n(434404),
+    _ = n(372454),
     O = n(999382),
     y = n(84613),
     C = n(740903),
     N = n(1080),
     E = n(981631),
     I = n(388032),
-    S = n(57652),
-    T = n(504401);
+    S = n(121884),
+    T = n(620842);
 function P(e, t, n) {
     return (
         t in e
@@ -234,13 +234,13 @@ class A extends i.PureComponent {
         });
     }
     handleModerationClick() {
-        _.Z.setSection(E.pNK.SAFETY), (0, y.K)(C.u.DM_AND_SPAM_PROTECTION);
+        v.Z.setSection(E.pNK.SAFETY), (0, y.K)(C.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
-        _.Z.setSearchQuery(e);
+        v.Z.setSearchQuery(e);
     }
     handleQueryClear() {
-        _.Z.setSearchQuery("");
+        v.Z.setSearchQuery("");
     }
     constructor(...e) {
         super(...e),
@@ -376,7 +376,7 @@ let L = o.ZP.connectStores([O.Z, p.Z, f.Z], () => {
 function k() {
     var e;
     let { guild: t } = (0, o.e7)([O.Z], () => O.Z.getProps(), [], s.isEqual),
-        { enabled: n } = v.T.useExperiment(
+        { enabled: n } = _.T.useExperiment(
             {
                 guildId: null != (e = null == t ? void 0 : t.id) ? e : E.lds,
                 location: "4d6318_1",

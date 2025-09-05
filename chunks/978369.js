@@ -6,7 +6,7 @@ var n = r(951288),
     a = r(86419),
     c = r(286957),
     s = r(388032),
-    u = r(200344);
+    u = r(44258);
 let d = i.memo(function (e) {
     let { currentTags: t, onTagSelect: r, onNoneSelect: i, onClose: o } = e;
     return (0, n.jsx)(l.v2r, {
@@ -79,9 +79,9 @@ let d = i.memo(function (e) {
     });
 });
 function f(e) {
-    let { tags: t, widgetType: r, applicationId: f, ref: b } = e,
-        p = (0, i.useRef)(null),
-        { trackUserProfileEditAction: g } = (0, o.KZ)(),
+    let { tags: t, widgetType: r, applicationId: f, ref: g } = e,
+        b = (0, i.useRef)(null),
+        { trackUserProfileEditAction: p } = (0, o.KZ)(),
         O = (0, i.useMemo)(() => (null != t ? t : []), [t]),
         y = (0, i.useCallback)(
             function (e) {
@@ -94,7 +94,7 @@ function f(e) {
                             n.delete(e);
                         }),
                         n.add(e),
-                        g({
+                        p({
                             action: "TAG_ADDED",
                             widgetEdited: r,
                             gameId: f,
@@ -102,20 +102,20 @@ function f(e) {
                 } else
                     n.has(e)
                         ? (n.delete(e),
-                          g({
+                          p({
                               action: "TAG_REMOVED",
                               widgetEdited: r,
                               gameId: f,
                           }))
                         : (n.add(e),
-                          g({
+                          p({
                               action: "TAG_ADDED",
                               widgetEdited: r,
                               gameId: f,
                           }));
                 (0, a.n$)(r, f, Array.from(n));
             },
-            [O, g, r, f],
+            [O, p, r, f],
         ),
         j = (0, i.useCallback)(
             (e) => {
@@ -123,21 +123,21 @@ function f(e) {
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    g({
+                    p({
                         action: "TAG_REMOVED",
                         widgetEdited: r,
                         gameId: f,
                     }),
                     (0, a.n$)(r, f, Array.from(t));
             },
-            [O, g, r, f],
+            [O, p, r, f],
         );
     return (0, n.jsx)(l.yRy, {
-        targetElementRef: p,
+        targetElementRef: b,
         position: "right",
         align: "top",
         onRequestOpen: () => {
-            g({
+            p({
                 action: "PRESS_ADD_TAG",
                 widgetEdited: r,
             });
@@ -155,9 +155,9 @@ function f(e) {
             var t, r;
             return (0, n.jsx)("div", {
                 ref: (e) => (
-                    null != e && ((p.current = e), (b.current = e)),
+                    null != e && ((b.current = e), (g.current = e)),
                     () => {
-                        (p.current = null), (b.current = null);
+                        (b.current = null), (g.current = null);
                     }
                 ),
                 children: (0, n.jsx)(

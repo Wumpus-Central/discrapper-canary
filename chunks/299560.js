@@ -13,7 +13,7 @@ var r = n(951288),
     h = n(248554),
     g = n(228168),
     m = n(388032),
-    b = n(73686);
+    b = n(229870);
 let _ = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {

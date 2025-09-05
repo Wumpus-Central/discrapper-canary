@@ -12,7 +12,7 @@ var r = n(951288),
     g = n(838221),
     p = n(246364),
     f = n(388032),
-    h = n(866234);
+    h = n(31829);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -113,15 +113,15 @@ function j(e) {
                   }),
     });
 }
-let _ = "FORM_FIELD";
-function v(e) {
+let v = "FORM_FIELD";
+function _(e) {
     let { index: t, field: n, isDropHovered: l, onDrop: d, fieldStyle: g } = e,
         f = (0, s.debounce)(async (e, t, n) => {
             await d(e, t, n);
         }),
         x = i.useRef(null),
-        [, v] = (0, o.c)({
-            type: _,
+        [, _] = (0, o.c)({
+            type: v,
             item: {
                 index: t,
                 field: n,
@@ -131,7 +131,7 @@ function v(e) {
             },
         }),
         [, O] = (0, c.L)({
-            accept: _,
+            accept: v,
             hover: (e, n) => {
                 var r;
                 let { index: i } = e,
@@ -149,12 +149,12 @@ function v(e) {
     return (
         i.useLayoutEffect(
             () => (
-                v(O(x)),
+                _(O(x)),
                 () => {
-                    O(null), v(null);
+                    O(null), _(null);
                 }
             ),
-            [v, O],
+            [_, O],
         ),
         (0, r.jsxs)("div", {
             ref: x,
@@ -180,7 +180,7 @@ function O(e) {
         children: [
             (0, r.jsx)("div", {
                 className: h.spacingContainer,
-                children: e.isDragEnabled ? (0, r.jsx)(v, b({}, e)) : (0, r.jsx)(j, b({}, e)),
+                children: e.isDragEnabled ? (0, r.jsx)(_, b({}, e)) : (0, r.jsx)(j, b({}, e)),
             }),
             "side" === e.actionsLocation &&
                 (0, r.jsxs)("div", {

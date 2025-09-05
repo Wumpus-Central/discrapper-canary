@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -9,8 +9,8 @@ var r = n(951288),
     d = n(434404),
     u = n(185923),
     m = n(388032),
-    g = n(988167),
-    p = n(998918);
+    g = n(83552),
+    p = n(270856);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -146,7 +146,7 @@ function x(e) {
     });
 }
 let j = [0, 1, 2, 3, 4];
-function _(e) {
+function v(e) {
     let { profile: t, canManageGuild: n } = e,
         a = i.useMemo(() => t.traits, [t]),
         s = i.useCallback(

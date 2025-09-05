@@ -15,9 +15,9 @@ var r,
     m = n(481060),
     g = n(624138),
     p = n(981631),
-    f = n(258640),
+    f = n(989308),
     h = n(388032),
-    b = n(301142);
+    b = n(31441);
 function x(e, t, n) {
     return (
         t in e
@@ -32,8 +32,8 @@ function x(e, t, n) {
     );
 }
 let j = -1,
-    _ = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    v = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    v = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    _ = (0, g.Mg)(u.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
     O = {
         tension: 140,
         friction: 30,
@@ -45,7 +45,7 @@ let j = -1,
 class C extends (r = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + v / 2;
+        return e[e.length - 1].y + _ / 2;
     }
     getProgressHeight(e) {
         let t,
@@ -133,7 +133,7 @@ class C extends (r = l.Component) {
             g = e.key === s[0].key,
             p = this.getTierDisabled(e);
         l = g ? b.tierFirst : p ? b.tierInProgress : u ? b.tierCurrent : d ? b.tierAccomplished : b.tierInProgress;
-        let f = e.y - (g ? 0 : v / 2),
+        let f = e.y - (g ? 0 : _ / 2),
             h = this.state.tierMarkerActive >= t,
             j = !g && u && h;
         return (0, i.jsx)(
@@ -210,7 +210,7 @@ class C extends (r = l.Component) {
                 (0, i.jsx)("rect", {
                     x: "0",
                     y: "0",
-                    width: _,
+                    width: v,
                     height: e,
                     fill: "white",
                 }),
@@ -218,9 +218,9 @@ class C extends (r = l.Component) {
                     (0, i.jsx)(
                         "circle",
                         {
-                            cx: _ / 2,
+                            cx: v / 2,
                             cy: e.y,
-                            r: _ / 2,
+                            r: v / 2,
                             fill: "black",
                         },
                         e.key,
@@ -269,8 +269,8 @@ class C extends (r = l.Component) {
             style: { height: r },
             children: [
                 (0, i.jsxs)("svg", {
-                    viewBox: "0 0 ".concat(_, " ").concat(r),
-                    width: _,
+                    viewBox: "0 0 ".concat(v, " ").concat(r),
+                    width: v,
                     height: r,
                     children: [this.renderProgressMask(r), this.renderProgressBar(r, n)],
                 }),

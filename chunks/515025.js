@@ -12,16 +12,16 @@ var r = n(951288),
     g = n(30513),
     p = n(200299),
     f = n(388032),
-    h = n(58597);
+    h = n(294806);
 function b(e) {
     let { guild: t, canManageGuild: n } = e,
         b = t.features.has(m.oNc.INVITE_SPLASH),
         x = n && b,
         { analyticsLocations: j } = (0, a.ZP)(),
-        _ = i.useCallback((e) => {
+        v = i.useCallback((e) => {
             d.Z.updateGuild({ splash: e });
         }, []),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -45,7 +45,7 @@ function b(e) {
                       })
                     : null,
             disabled: !x,
-            onChange: _,
+            onChange: v,
             hint: f.intl.string(f.t.uPvxqK),
             enabled: x,
             maxFileSizeBytes: p.B,
@@ -57,7 +57,7 @@ function b(e) {
               "aria-hidden": !0,
               tabIndex: -1,
               className: h.upsell,
-              onClick: v,
+              onClick: _,
               children: O,
           });
 }

@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(733026),
     x = n(246946),
     j = n(594174),
-    _ = n(626135),
-    v = n(136015),
+    v = n(626135),
+    _ = n(136015),
     O = n(51144),
     y = n(434404),
     C = n(999382),
@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(954532);
+    T = n(26682);
 function P(e, t, n) {
     return (
         t in e
@@ -79,19 +79,19 @@ function Z(e) {
         [g, h] = i.useState(!1),
         [b, x] = i.useState(null),
         { analyticsLocations: j } = (0, f.ZP)(),
-        v = null != (t = null == j ? void 0 : j[0]) ? t : null;
+        _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function y() {
         if (null != l) {
             x(null), h(!0);
             try {
                 await d.Z.unbanUser(l.id, a.id),
                     m(),
-                    _.default.track(
+                    v.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
                         R(w({}, (0, p.hH)(l.id)), {
                             target_user_id: a.id,
                             reason: s.reason,
-                            location: v,
+                            location: _,
                         }),
                     );
             } catch (e) {
@@ -362,8 +362,8 @@ function k() {
         p = null != u && u.trim().length > 0,
         f = (0, m.Z)(p),
         h = p !== f,
-        [x] = (0, s.e7)([C.Z], () => C.Z.getBans(), [], v.Q),
-        _ = null != (e = null == x ? void 0 : x.size) ? e : 0,
+        [x] = (0, s.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
+        v = null != (e = null == x ? void 0 : x.size) ? e : 0,
         O = (0, g.ZP)(),
         y = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
         N = i.useRef(null),
@@ -397,7 +397,7 @@ function k() {
             },
             [E],
         ),
-        Z = i.useMemo(() => P(x, u, _), [x, P, u, _]),
+        Z = i.useMemo(() => P(x, u, v), [x, P, u, v]),
         D = null != x,
         k = Z.length % 1000 == 0 && Z.length > 0 && D,
         M = 0 === Z.length,

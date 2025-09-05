@@ -14,11 +14,11 @@ var r = n(951288),
     f = n(303737),
     h = n(981631),
     b = n(388032),
-    x = n(506970);
+    x = n(858783);
 function j(e) {
     return String(e);
 }
-function _(e) {
+function v(e) {
     let { icon: t, title: n, subtitle: i, className: l } = e;
     return (0, r.jsxs)("div", {
         className: a()(x.label, l),
@@ -46,8 +46,8 @@ function _(e) {
         ],
     });
 }
-function v() {
-    return (0, r.jsx)(_, {
+function _() {
+    return (0, r.jsx)(v, {
         icon: (0, r.jsx)(o.qJs, {
             size: "md",
             color: "currentColor",
@@ -66,7 +66,7 @@ function O(e) {
     let a = (0, d.KS)(i),
         s = (0, c.F6)(i, p.default, g.Z),
         o = null != l ? (0, c.F6)(l, p.default, g.Z) : void 0;
-    return (0, r.jsx)(_, {
+    return (0, r.jsx)(v, {
         icon: null != a && (0, r.jsx)(a, { className: x.labelIcon }),
         title: s,
         subtitle: o,
@@ -74,18 +74,18 @@ function O(e) {
 }
 function y(e) {
     let { value: t } = e;
-    return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(v, {});
+    return null != t ? (0, r.jsx)(O, { channelId: t }) : (0, r.jsx)(_, {});
 }
 function C(e) {
-    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, "aria-labelledby": x, onChange: _ } = e,
-        v = b.intl.string(b.t.d7YJMD),
+    let { guildId: t, value: l, initialChannelId: a, omitChannelIds: d, "aria-labelledby": x, onChange: v } = e,
+        _ = b.intl.string(b.t.d7YJMD),
         O = (0, s.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         C = (0, f.m7)(null != l ? l : h.lds),
         N = i.useMemo(() => {
             let e = [
                     {
                         value: null,
-                        label: v,
+                        label: _,
                     },
                 ],
                 t = !1;
@@ -108,14 +108,14 @@ function C(e) {
                     }),
                 e
             );
-        }, [v, l, C, O, d, a]);
+        }, [_, l, C, O, d, a]);
     return (0, r.jsx)(o.PhF, {
         placeholder: b.intl.string(b.t.r2pts7),
         options: N,
         select: function (e) {
             null == e
                 ? (0, o.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e("33285"), n.e("45094"), n.e("2112")]).then(
+                      let { default: e } = await Promise.all([n.e("33285"), n.e("45094"), n.e("31288")]).then(
                           n.bind(n, 797671),
                       );
                       return (n) => {
@@ -150,7 +150,7 @@ function C(e) {
                               (l = l =
                                   {
                                       guildId: t,
-                                      onSubmit: _,
+                                      onSubmit: v,
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -168,7 +168,7 @@ function C(e) {
                           );
                       };
                   })
-                : _(e);
+                : v(e);
         },
         isSelected: (e) => null != l && j(e) === j(l),
         serialize: j,

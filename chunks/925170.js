@@ -1,54 +1,54 @@
-r.d(t, { default: () => d }), r(388685);
+r.d(t, { default: () => b }), r(388685);
 var n = r(951288),
-    o = r(647438),
-    i = r(442837),
+    i = r(647438),
+    o = r(442837),
     l = r(82659),
     c = r(481060),
-    s = r(594174),
-    u = r(810473),
-    a = r(299560),
-    p = r(286957),
-    f = r(388032),
-    b = r(279994);
-function d(e) {
+    a = r(594174),
+    s = r(810473),
+    u = r(299560),
+    f = r(247397),
+    p = r(388032),
+    d = r(32442);
+function b(e) {
     var t,
         r,
-        { onClose: d, trackUserProfileEditAction: O } = e,
-        y = (function (e, t) {
+        { onClose: b, trackUserProfileEditAction: O } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                        i = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (r = o[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
-            return o;
+            return i;
         })(e, ["onClose", "trackUserProfileEditAction"]);
-    let g = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        j = (0, u.Z)(),
-        m = o.useRef(new Set(j)),
-        h = p.rR.filter((e) => m.current.has(e)),
-        w = h.length > 0,
-        [v, P] = o.useState(!1),
+    let y = (0, o.e7)([a.default], () => a.default.getCurrentUser()),
+        j = (0, s.Z)(),
+        m = i.useRef(new Set(j)),
+        h = f.rR.filter((e) => m.current.has(e)),
+        v = h.length > 0,
+        [w, P] = i.useState(!1),
         k = {
-            onClick: () => d(),
-            text: f.intl.string(f.t.cpT0Cg),
+            onClick: () => b(),
+            text: p.intl.string(p.t.cpT0Cg),
         },
-        x = o.useCallback(() => {
-            P(!0), d();
-        }, [d]);
-    return null == g
+        C = i.useCallback(() => {
+            P(!0), b();
+        }, [b]);
+    return null == y
         ? null
         : (0, n.jsx)(
               l.Modal,
@@ -78,26 +78,26 @@ function d(e) {
                   return e;
               })(
                   {
-                      title: f.intl.string(f.t.grUgR0),
-                      actions: w ? [] : [k],
-                      size: w ? "md" : "sm",
-                      onClose: d,
+                      title: p.intl.string(p.t.grUgR0),
+                      actions: v ? [] : [k],
+                      size: v ? "md" : "sm",
+                      onClose: b,
                   },
-                  y,
+                  g,
               )),
               (r = r =
                   {
-                      children: w
+                      children: v
                           ? (0, n.jsx)("ul", {
-                                "aria-label": f.intl.string(f.t["+EIBSE"]),
-                                className: b.options,
+                                "aria-label": p.intl.string(p.t["+EIBSE"]),
+                                className: d.options,
                                 children: h.map((e) =>
                                     (0, n.jsx)(
-                                        a.Z,
+                                        u.Z,
                                         {
                                             widgetType: e,
-                                            onAddWidget: x,
-                                            loading: v,
+                                            onAddWidget: C,
+                                            loading: w,
                                             trackUserProfileEditAction: O,
                                         },
                                         e,
@@ -107,7 +107,7 @@ function d(e) {
                           : (0, n.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "text-secondary",
-                                children: f.intl.string(f.t["1nkDOj"]),
+                                children: p.intl.string(p.t["1nkDOj"]),
                             }),
                   }),
               Object.getOwnPropertyDescriptors

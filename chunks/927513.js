@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(586502),
     u = n(787528),
     d = n(388032),
-    f = n(58858);
+    f = n(854826);
 let _ = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
         i = (0, c.Z)(),

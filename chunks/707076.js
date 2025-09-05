@@ -14,14 +14,14 @@ var i = n(120356),
     u = n(869764),
     m = n(150512),
     h = n(430824),
-    I = n(594174),
-    g = n(626135),
+    g = n(594174),
+    I = n(626135),
     N = n(999382),
-    S = n(983135),
-    f = n(84658),
+    f = n(983135),
+    S = n(84658),
     p = n(981631),
     E = n(388032),
-    T = n(72362);
+    T = n(473450);
 function O(e) {
     let { isTooltip: t = !1 } = e,
         n = [
@@ -138,7 +138,7 @@ function x() {
 function _() {
     let e = (0, s.e7)([N.Z], () => N.Z.getGuildId()),
         t = (0, s.e7)([h.Z], () => h.Z.getGuild(e)),
-        n = (0, s.e7)([I.default], () => I.default.getCurrentUser());
+        n = (0, s.e7)([g.default], () => g.default.getCurrentUser());
     return null == e || null == t || null == n
         ? null
         : (0, l.jsxs)("div", {
@@ -180,7 +180,7 @@ function _() {
                                   onClick: function () {
                                       if (null != e) {
                                           var t, n;
-                                          g.default.track(
+                                          I.default.track(
                                               p.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               ((t = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {
@@ -210,7 +210,7 @@ function _() {
                                               })({}, (0, o.hH)(e))),
                                               (n = n =
                                                   {
-                                                      step: f.PG[f.PG.LANDING],
+                                                      step: S.PG[S.PG.LANDING],
                                                       back: !1,
                                                       skip: !1,
                                                   }),
@@ -232,7 +232,7 @@ function _() {
                                                     }),
                                               t),
                                           ),
-                                              (0, S.IG)(e, f.PG.LANDING);
+                                              (0, f.IG)(e, S.PG.LANDING);
                                       }
                                   },
                                   disabled: !1,

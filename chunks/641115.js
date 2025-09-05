@@ -19,13 +19,13 @@ var r = n(951288),
     j = n(594174),
     b = n(74538),
     y = n(451467),
-    C = n(122186),
-    S = n(37113),
+    S = n(122186),
+    C = n(37113),
     O = n(981631),
     w = n(388032),
-    Z = n(79985),
-    I = n(763021),
-    N = n(10198);
+    Z = n(542257),
+    I = n(381994),
+    N = n(197571);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -173,7 +173,7 @@ function k(e) {
         W = (0, g.B4)(),
         z = !B && !U,
         [F, H] = i.useState(!1),
-        V = M ? S.z8 : S.WC,
+        V = M ? C.z8 : C.WC,
         Y = T(P({}, G), { section: O.jXE.STREAM_SETTINGS }),
         J = (0, r.jsx)(d.hE, {
             buttons: V.map((e) =>
@@ -181,7 +181,7 @@ function k(e) {
                     type: e,
                     selected: e.value === l,
                     needsPremium: !(0, y.Z)(n, e.value, s, D, k, L),
-                    needsDemo: W && e.value !== S.LY.RESOLUTION_720,
+                    needsDemo: W && e.value !== C.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
                     onClose: t,
@@ -190,12 +190,12 @@ function k(e) {
             ),
         }),
         X = (0, r.jsx)(d.hE, {
-            buttons: S.k0.map((e) =>
+            buttons: C.k0.map((e) =>
                 A({
                     type: e,
                     selected: e.value === s,
                     needsPremium: !(0, y.Z)(n, l, e.value, D, k, L),
-                    needsDemo: W && e.value === S.ws.FPS_60,
+                    needsDemo: W && e.value === C.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => x(e.value),
                     onClose: t,
@@ -205,24 +205,24 @@ function k(e) {
         }),
         K = [
             {
-                value: S.tI.PRESET_VIDEO,
+                value: C.tI.PRESET_VIDEO,
                 label: w.intl.string(w.t.HcwHc3),
             },
             ...(M
                 ? []
                 : [
                       {
-                          value: S.tI.PRESET_DOCUMENTS,
+                          value: C.tI.PRESET_DOCUMENTS,
                           label: w.intl.string(w.t["/RfohI"]),
                       },
                   ]),
             {
-                value: S.tI.PRESET_CUSTOM,
+                value: C.tI.PRESET_CUSTOM,
                 label: w.intl.string(w.t["+eOtrK"]),
             },
         ],
         q =
-            n === S.tI.PRESET_DOCUMENTS
+            n === C.tI.PRESET_DOCUMENTS
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(p.Z, {
@@ -237,13 +237,13 @@ function k(e) {
                               }),
                           }),
                           z
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(S.Z, {
                                     message: w.intl.string(w.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(S.c, {}),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -265,13 +265,13 @@ function k(e) {
                               ],
                           }),
                           z
-                              ? (0, r.jsx)(C.Z, {
+                              ? (0, r.jsx)(S.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                     glow: F,
                                 })
                               : null,
-                          W && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(S.c, {}),
                       ],
                   });
     return (0, r.jsx)(

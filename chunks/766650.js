@@ -7,7 +7,7 @@ var r = n(951288),
     o = n(481060),
     c = n(144114),
     u = n(317175),
-    d = n(597313);
+    d = n(33048);
 function p(e) {
     let { show: t, alpha2: n, countryCode: i } = e,
         p = s.useRef(null),

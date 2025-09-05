@@ -16,16 +16,16 @@ var r = n(951288),
     b = n(626135),
     x = n(243730),
     j = n(434404),
-    _ = n(946724),
-    v = n(130341),
+    v = n(946724),
+    _ = n(130341),
     O = n(95242),
     y = n(420966),
     C = n(566476),
     N = n(203377),
     E = n(981631),
     I = n(388032),
-    S = n(37134),
-    T = n(10083);
+    S = n(472039),
+    T = n(21321);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -104,7 +104,7 @@ function Z(e) {
     function b(e) {
         if ((e.stopPropagation(), !u)) {
             if (e.shiftKey) return void R(t, l, s);
-            let n = _.Z.getRole(s);
+            let n = v.Z.getRole(s);
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     o.Modal,
@@ -143,7 +143,7 @@ function Z(e) {
         let i = h.default.getUser(t.id);
         null != i &&
             (0, d.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
@@ -256,8 +256,8 @@ function A(e) {
         } = e,
         { analyticsLocations: m } = (0, p.ZP)(g.Z.MEMBER_LIST),
         f = i.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, v.rY)(t, f);
-    let h = i.useMemo(() => d.filter((e) => (0, v.eg)(f, e)), [d, f]),
+    (0, _.rY)(t, f);
+    let h = i.useMemo(() => d.filter((e) => (0, _.eg)(f, e)), [d, f]),
         b = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
     return (0, r.jsx)(p.Gt, {
         value: m,
@@ -323,12 +323,12 @@ function k(e) {
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
         { scrolledToTop: f, handleScroll: h } = (0, y.V)(),
         j = l.managed || o,
-        _ = (0, v.e)(t.id, l.id),
+        v = (0, _.e)(t.id, l.id),
         C =
             (0, s.e7)([x.Z], () => {
                 var e, n;
                 return null != (n = null == (e = x.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
-            }) > _.length,
+            }) > v.length,
         R = () => {
             b.default.track(E.rMx.OPEN_MODAL, {
                 type: "Add Role Members",
@@ -336,7 +336,7 @@ function k(e) {
                 location_section: "Members",
             }),
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("3291")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -388,7 +388,7 @@ function k(e) {
                 roleId: l.id,
                 locked: j,
                 onScroll: h,
-                roleMembers: _,
+                roleMembers: v,
                 handleAddClick: R,
             }),
         ],
