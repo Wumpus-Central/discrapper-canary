@@ -33,6 +33,9 @@ class s {
             o(this, "bannerTextColor", void 0),
             o(this, "bannerConfig", void 0),
             o(this, "logoConfig", void 0),
+            o(this, "mobileTitle", void 0),
+            o(this, "mobileSummary", void 0),
+            o(this, "mobileProductsTitle", void 0),
             (this.type = r.z.HERO),
             (this.categorySkuId = e.category_sku_id),
             (this.name = e.name),
@@ -46,6 +49,9 @@ class s {
             (this.unpublishedAt = null != e.unpublished_at ? new Date(e.unpublished_at) : null),
             (this.bannerTextColor = e.banner_text_color),
             (this.bannerConfig = null != e.config ? i.Z.fromServer(e.config) : void 0),
-            (this.logoConfig = null != e.logo_display_config ? a.X.fromServer(e.logo_display_config) : void 0);
+            (this.logoConfig = null != e.logo_display_config ? a.X.fromServer(e.logo_display_config) : void 0),
+            (this.mobileTitle = e.mobile_title),
+            (this.mobileSummary = e.mobile_summary),
+            (this.mobileProductsTitle = e.mobile_products_title);
     }
 }
