@@ -1,85 +1,107 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+    l = n(120356),
+    a = n.n(l),
+    o = n(261616),
     s = n(442837),
-    l = n(481060),
-    c = n(585483),
-    u = n(592183),
-    d = n(224724),
-    f = n(872269),
-    _ = n(228168),
-    p = n(981631),
-    h = n(388032),
-    m = n(461671);
-function g() {
-    let [e, t] = i.useState(!1),
-        n = (0, s.Wu)([d.Z], () => {
+    c = n(481060),
+    u = n(607070),
+    d = n(585483),
+    p = n(592183),
+    f = n(224724),
+    h = n(872269),
+    g = n(228168),
+    m = n(981631),
+    b = n(388032),
+    _ = n(461671);
+function O(e) {
+    let { className: t } = e,
+        [n, l] = i.useState(!1),
+        O = (0, s.Wu)([f.Z], () => {
             var e;
-            return null != (e = d.Z.getSaveablePendingWidgets()) ? e : [];
+            return null != (e = f.Z.getSaveablePendingWidgets()) ? e : [];
         }),
-        a = (0, s.e7)([d.Z], () => d.Z.hasSaveablePendingChanges()),
-        g = (0, s.e7)([d.Z], () => d.Z.isSubmitting);
+        E = (0, s.e7)([f.Z], () => f.Z.hasSaveablePendingChanges()),
+        y = (0, s.e7)([f.Z], () => f.Z.isSubmitting),
+        v = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        I = (0, c.Yzy)(E, {
+            from: {
+                opacity: 0,
+                y: 80 * !v,
+            },
+            enter: {
+                opacity: 1,
+                y: 0,
+            },
+            leave: {
+                opacity: 0,
+                y: 80 * !v,
+            },
+        });
     i.useEffect(() => {
         let e = null;
-        function n() {
-            t(!0), (e = setTimeout(() => t(!1), 500));
+        function t() {
+            l(!0), (e = setTimeout(() => l(!1), 500));
         }
         return (
-            c.S.subscribe(p.CkL.EMPHASIZE_NOTICE, n),
+            d.S.subscribe(m.CkL.EMPHASIZE_NOTICE, t),
             () => {
-                c.S.unsubscribe(p.CkL.EMPHASIZE_NOTICE, n), null !== e && clearTimeout(e);
+                d.S.unsubscribe(m.CkL.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
             }
         );
-    }, []);
-    let E = i.useCallback(async () => {
-            if (a)
-                try {
-                    await u.Z.savePendingWidgets(n);
-                } catch (e) {
-                    (0, f.L$)(_.qb.WIDGET_SAVE_FAILURE);
-                }
-        }, [a, n]),
-        b = i.useCallback(() => {
-            u.Z.clearPendingWidgets();
+    }, []),
+        i.useEffect(() => {
+            E && c.uvj.announce(b.intl.string(b.t["0Y/qkJ"]));
+        }, [E]);
+    let C = i.useCallback(async () => {
+            try {
+                await p.Z.savePendingWidgets(O);
+            } catch (e) {
+                (0, h.L$)(g.qb.WIDGET_SAVE_FAILURE);
+            }
+        }, [O]),
+        S = i.useCallback(() => {
+            p.Z.clearPendingWidgets();
         }, []);
-    return a
-        ? (0, r.jsx)("div", {
-              className: o()(m.container, { [m.visible]: a }),
-              role: "status",
-              children: (0, r.jsxs)("div", {
-                  className: o()(m.content, { [m.emphasized]: e }),
-                  children: [
-                      (0, r.jsx)("div", {
-                          className: m.message,
-                          children: (0, r.jsx)(l.Text, {
+    return I((e, i) =>
+        i
+            ? (0, r.jsx)(o.animated.div, {
+                  className: t,
+                  style: e,
+                  children: (0, r.jsxs)("section", {
+                      className: a()(_.content, { [_.emphasized]: n }),
+                      "aria-label": b.intl.string(b.t["odDw+/"]),
+                      children: [
+                          (0, r.jsx)(c.Text, {
                               variant: "text-md/medium",
                               color: "text-primary",
-                              children: h.intl.string(h.t["/lQiX1"]),
+                              className: _.message,
+                              children: b.intl.string(b.t["/lQiX1"]),
                           }),
-                      }),
-                      (0, r.jsxs)("div", {
-                          className: m.actions,
-                          children: [
-                              (0, r.jsx)(l.zxk, {
-                                  size: "sm",
-                                  variant: "secondary",
-                                  text: h.intl.string(h.t.yBZMsb),
-                                  onClick: b,
-                              }),
-                              (0, r.jsx)(l.zxk, {
-                                  size: "sm",
-                                  variant: "primary",
-                                  text: h.intl.string(h.t.R3BPHx),
-                                  onClick: E,
-                                  loading: g,
-                                  disabled: g,
-                              }),
-                          ],
-                      }),
-                  ],
-              }),
-          })
-        : null;
+                          (0, r.jsxs)("div", {
+                              className: _.actions,
+                              children: [
+                                  (0, r.jsx)(c.zxk, {
+                                      size: "sm",
+                                      variant: "secondary",
+                                      text: b.intl.string(b.t.yBZMsb),
+                                      onClick: S,
+                                      disabled: !E || y,
+                                  }),
+                                  (0, r.jsx)(c.zxk, {
+                                      size: "sm",
+                                      variant: "primary",
+                                      text: b.intl.string(b.t.R3BPHx),
+                                      onClick: C,
+                                      loading: y,
+                                      disabled: !E || y,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
+              })
+            : null,
+    );
 }

@@ -2,6 +2,7 @@ e.exports = {
     root: "root__9c3be",
     disabled: "disabled__9c3be",
     previewBar: "previewBar__9c3be",
+    editingToolbar: "editingToolbar__9c3be",
     toast: "toast__9c3be",
     interactionToast: "interactionToast__9c3be",
     backdrop: "backdrop__9c3be",

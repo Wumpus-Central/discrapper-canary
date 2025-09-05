@@ -1,38 +1,41 @@
-n.d(t, { c: () => _ });
+n.d(t, { c: () => h });
 var r = n(951288),
     i = n(647438),
-    a = n(202841),
-    o = n(442837),
-    s = n(710593),
-    l = n(481060),
-    c = n(607070),
-    u = n(79320),
-    d = n(388032),
-    f = n(110109);
-function _() {
-    let e = [
+    a = n(120356),
+    o = n.n(a),
+    s = n(261616),
+    l = n(442837),
+    c = n(710593),
+    u = n(481060),
+    d = n(607070),
+    f = n(79320),
+    _ = n(388032),
+    p = n(110109);
+function h(e) {
+    let { className: t } = e,
+        n = [
             {
                 keybinds: ["Spacebar", "Enter"],
-                name: d.intl.string(d.t["cs/HVF"]),
+                name: _.intl.string(_.t["cs/HVF"]),
             },
             {
                 keybinds: ["up", "down"],
-                name: d.intl.string(d.t.dmMqa2),
+                name: _.intl.string(_.t.dmMqa2),
             },
             {
                 keybinds: ["ESC"],
-                name: d.intl.string(d.t["1ioMJS"]),
+                name: _.intl.string(_.t["1ioMJS"]),
             },
         ],
-        t = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        n = (0, u.zP)();
-    return (0, l.Yzy)(
-        n,
+        a = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        h = (0, f.zP)();
+    return (0, u.Yzy)(
+        h,
         {
             enter: {
                 from: {
                     opacity: 0,
-                    y: 80 * !t,
+                    y: 80 * !a,
                 },
                 to: {
                     opacity: 1,
@@ -41,40 +44,40 @@ function _() {
             },
             leave: {
                 opacity: 0,
-                y: 80 * !t,
+                y: 80 * !a,
             },
-            config: a.config.stiff,
+            config: s.config.stiff,
         },
         "animate-always",
-    )((t, n) =>
-        n
+    )((e, a) =>
+        a
             ? (0, r.jsx)("div", {
-                  className: f.positioner,
-                  children: (0, r.jsx)(a.animated.div, {
-                      className: f.container,
-                      style: t,
-                      children: e.map((t, n) => {
-                          let { keybinds: a, name: o } = t;
+                  className: o()(p.positioner, t),
+                  children: (0, r.jsx)(s.animated.div, {
+                      className: p.container,
+                      style: e,
+                      children: n.map((e, t) => {
+                          let { keybinds: a, name: o } = e;
                           return (0, r.jsxs)(
                               i.Fragment,
                               {
                                   children: [
-                                      (0, r.jsx)(l.Text, {
+                                      (0, r.jsx)(u.Text, {
                                           variant: "text-md/semibold",
-                                          className: f.bindName,
+                                          className: p.bindName,
                                           children: o,
                                       }),
                                       a.map((e) =>
                                           (0, r.jsx)(
-                                              s.M,
+                                              c.M,
                                               {
                                                   shortcut: e,
-                                                  className: f.shortcut,
+                                                  className: p.shortcut,
                                               },
                                               e,
                                           ),
                                       ),
-                                      n < e.length - 1 ? (0, r.jsx)("span", { className: f.separator }) : null,
+                                      t < n.length - 1 ? (0, r.jsx)("span", { className: p.separator }) : null,
                                   ],
                               },
                               o,

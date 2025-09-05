@@ -1,31 +1,34 @@
 n.d(t, {
-    C: () => P,
-    Z: () => T,
+    C: () => w,
+    Z: () => x,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(296009),
-    a = n(442837),
-    o = n(481060),
-    s = n(355467),
-    c = n(981312),
-    u = n(314897),
-    d = n(351402),
-    p = n(836197),
-    f = n(206599),
-    h = n(5136),
-    g = n(747101),
-    m = n(517157),
-    b = n(860717),
-    _ = n(430790),
-    O = n(640078),
-    E = n(190862),
-    y = n(661462),
-    v = n(795990),
-    I = n(388032),
-    C = n(479283);
-function S(e) {
+    l = n(120356),
+    a = n.n(l),
+    o = n(296009),
+    s = n(442837),
+    c = n(481060),
+    u = n(355467),
+    d = n(981312),
+    p = n(314897),
+    f = n(351402),
+    h = n(836197),
+    g = n(206599),
+    m = n(5136),
+    b = n(747101),
+    _ = n(517157),
+    O = n(860717),
+    E = n(430790),
+    y = n(640078),
+    v = n(190862),
+    I = n(996921),
+    C = n(661462),
+    S = n(795990),
+    T = n(388032),
+    N = n(830202);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,78 +53,78 @@ function S(e) {
     }
     return e;
 }
-function T(e) {
-    var { widget: t } = e,
-        n = (function (e, t) {
+function P(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
+                i = {},
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
-        })(e, ["widget"]);
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function x(e) {
+    var { widget: t } = e,
+        n = P(e, ["widget"]);
     switch (t.type) {
-        case l.l.FAVORITE_GAMES:
-        case l.l.CURRENT_GAMES:
-        case l.l.WANT_TO_PLAY_GAMES:
-        case l.l.PLAYED_GAMES:
-            return (0, r.jsx)(E.Z, S({ widget: t }, n));
-        case l.l.APPLICATION:
-            return (0, r.jsx)(b.Z, S({ widget: t }, n));
+        case o.l.FAVORITE_GAMES:
+        case o.l.CURRENT_GAMES:
+        case o.l.WANT_TO_PLAY_GAMES:
+        case o.l.PLAYED_GAMES:
+            return (0, r.jsx)(v.Z, j({ widget: t }, n));
+        case o.l.APPLICATION:
+            return (0, r.jsx)(O.Z, j({ widget: t }, n));
         default:
             return null;
     }
 }
-function N() {
+function A() {
     return (0, r.jsxs)("div", {
-        className: C.ukTeenDisclaimer,
+        className: N.ukTeenDisclaimer,
         children: [
-            (0, r.jsx)(o.d3s, { size: "xs" }),
-            (0, r.jsx)(o.Text, {
-                "aria-label": I.intl.string(I.t["7blcz8"]),
+            (0, r.jsx)(c.d3s, { size: "xs" }),
+            (0, r.jsx)(c.Text, {
+                "aria-label": T.intl.string(T.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: I.intl.string(I.t["7blcz8"]),
+                children: T.intl.string(T.t["7blcz8"]),
             }),
         ],
     });
 }
-function j(e) {
+function Z(e) {
     let { user: t, guildId: n, channelId: l } = e,
-        o = (0, m.Z)(t.id),
-        h = (0, a.e7)([u.default], () => u.default.getId() === t.id),
-        b = (() => {
-            let [e, t] = (0, a.Wu)([d.Z], () => [d.Z.ipCountryCode, d.Z.ipCountryCodeRequest]),
-                n = (0, c.U)();
+        a = (0, _.Z)(t.id),
+        o = (0, s.e7)([p.default], () => p.default.getId() === t.id),
+        c = (() => {
+            let [e, t] = (0, s.Wu)([f.Z], () => [f.Z.ipCountryCode, f.Z.ipCountryCodeRequest]),
+                n = (0, d.U)();
             return (
                 i.useEffect(() => {
-                    null == e && null == t && n && (0, s.GE)();
+                    null == e && null == t && n && (0, u.GE)();
                 }, [e, t, n]),
                 "GB" === e && n
             );
         })(),
-        O = 0 === o.length && h;
-    return ((0, g.ZP)(o.filter(p.W)), (0, f.J)(h, o), O)
-        ? (0, r.jsx)(v.Z, {})
+        m = 0 === a.length && o;
+    return ((0, b.ZP)(a.filter(h.W)), (0, g.J)(o, a), m)
+        ? (0, r.jsx)(S.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  h && b && (0, r.jsx)(N, {}),
-                  o.map((e, i) =>
+                  o && c && (0, r.jsx)(A, {}),
+                  a.map((e, i) =>
                       (0, r.jsx)(
-                          T,
+                          x,
                           {
                               widget: e,
                               user: t,
@@ -132,20 +135,21 @@ function j(e) {
                           e.id,
                       ),
                   ),
-                  h && (0, r.jsx)(_.Z, {}),
+                  o && (0, r.jsx)(E.Z, {}),
               ],
           });
 }
-function P(e) {
-    let t = i.useRef(null);
-    return (
-        (0, h.r)({ container: t.current }),
-        (0, r.jsxs)(y.F, {
-            "data-scroller": !0,
-            scrollerRef: t,
-            className: C.scroller,
-            fade: !0,
-            children: [(0, r.jsx)(O.Z, { scrollerRef: t }), (0, r.jsx)(j, S({}, e)), (0, r.jsx)(o.c43, {})],
-        })
-    );
+function w(e) {
+    var { user: t } = e,
+        n = P(e, ["user"]);
+    let l = i.useRef(null);
+    (0, m.r)({ container: l.current });
+    let o = (0, I.h)(t.id);
+    return (0, r.jsxs)(C.F, {
+        "data-scroller": !0,
+        scrollerRef: l,
+        className: a()(N.scroller, { [N.hasToolbar]: o }),
+        fade: !0,
+        children: [(0, r.jsx)(y.Z, { scrollerRef: l }), (0, r.jsx)(Z, j({ user: t }, n))],
+    });
 }
