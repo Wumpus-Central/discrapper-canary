@@ -92,13 +92,13 @@ function v(e) {
 }
 function I(e) {
     let { application: t } = e;
-    T(t);
-}
-function S(e) {
-    let { application: t } = e;
-    T(t);
+    S(t);
 }
 function T(e) {
+    let { application: t } = e;
+    S(t);
+}
+function S(e) {
     b(o.ZP.createFromServer(e));
 }
 function A(e) {
@@ -183,13 +183,13 @@ function j(e) {
         (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function M(e) {
+function k(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) r.push(e.id), b(o.ZP.createFromServer(e));
     _.set(t, r);
 }
-function k(e) {
+function M(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -275,9 +275,6 @@ class K extends (r = i.ZP.PersistedStore) {
     _getAllApplications() {
         return Array.from(f.values());
     }
-    getApplications() {
-        return f;
-    }
     getGuildApplication(e, t) {
         if (null != e) {
             for (let n of f.values()) if (n.guildId === e && n.type === t) return n;
@@ -317,7 +314,7 @@ let z = new K(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: O,
     APPLICATION_FETCH: v,
-    APPLICATION_FETCH_SUCCESS: S,
+    APPLICATION_FETCH_SUCCESS: T,
     APPLICATION_FETCH_FAIL: C,
     APPLICATIONS_FETCH: N,
     APPLICATIONS_FETCH_SUCCESS: P,
@@ -326,8 +323,8 @@ let z = new K(a.Z, {
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: j,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: j,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: j,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: M,
-    BILLING_PAYMENTS_FETCH_SUCCESS: k,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: k,
+    BILLING_PAYMENTS_FETCH_SUCCESS: M,
     PAYMENT_UPDATE: U,
     INVITE_RESOLVE_SUCCESS: B,
     GIFT_CODE_RESOLVE_SUCCESS: G,
