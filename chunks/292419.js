@@ -144,81 +144,80 @@ function I(e) {
     }
 }
 function T(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return e.map((e, n) => S(e, t, [n])).filter((e) => null != e);
+    return e.map((e, t) => S(e, [t])).filter((e) => null != e);
 }
-function S(e, t, n) {
-    var a, o, l, d, h, m, E, b, y, O, v, I, T;
+function S(e, t) {
+    var n, a, o, l, d, h, m, E, b, y, O, v, I;
     if (!g(e.type)) return null;
-    function C(e, r) {
-        let i = S(e, t, [...n, r]);
-        return null == i ? null : i;
+    function T(e, n) {
+        let r = S(e, [...t, n]);
+        return null == r ? null : r;
     }
-    let { includeEmojiSrc: N } = t;
+    let C = !1;
     switch (e.type) {
         case i.re.ACTION_ROW: {
-            let t = e.components.map((e, t) => C(e, t)).filter(c.lm);
+            let n = e.components.map((e, t) => T(e, t)).filter(c.lm);
             return {
                 type: i.re.ACTION_ROW,
-                id: A(n),
-                components: t,
+                id: A(t),
+                components: n,
             };
         }
         case i.re.BUTTON: {
-            let t = null != e.emoji ? p(e.emoji, N) : void 0;
+            let n = null != e.emoji ? p(e.emoji, C) : void 0;
             return {
                 type: i.re.BUTTON,
-                id: A(n),
+                id: A(t),
                 customId: e.custom_id,
                 style: e.style,
                 disabled: e.disabled,
                 url: e.url,
                 label: e.label,
-                emoji: t,
+                emoji: n,
                 skuId: e.sku_id,
             };
         }
         case i.re.STRING_SELECT:
             return {
                 type: i.re.STRING_SELECT,
-                id: A(n),
+                id: A(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (a = e.required) && a,
+                required: null != (n = e.required) && n,
                 options: e.options.map((e) => ({
                     type: u.tM.STRING,
                     label: e.label,
                     value: e.value,
                     default: e.default,
                     description: e.description,
-                    emoji: null != e.emoji ? p(e.emoji, N) : void 0,
+                    emoji: null != e.emoji ? p(e.emoji, C) : void 0,
                 })),
-                placeholder: null != (o = e.placeholder) ? o : f.intl.string(f.t.Otr6W1),
+                placeholder: null != (a = e.placeholder) ? a : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
             };
         case i.re.TEXT_INPUT:
             return {
                 type: e.type,
-                id: A(n),
+                id: A(t),
                 style: e.style,
                 customId: e.custom_id,
                 label: e.label,
                 value: e.value,
                 placeholder: e.placeholder,
                 disabled: e.disabled,
-                required: null != (l = e.required) && l,
+                required: null != (o = e.required) && o,
                 minLength: e.min_length,
                 maxLength: e.max_length,
             };
         case i.re.USER_SELECT:
             return {
                 type: i.re.USER_SELECT,
-                id: A(n),
+                id: A(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (d = e.required) && d,
-                placeholder: null != (h = e.placeholder) ? h : f.intl.string(f.t.Otr6W1),
+                required: null != (l = e.required) && l,
+                placeholder: null != (d = e.placeholder) ? d : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
@@ -226,11 +225,11 @@ function S(e, t, n) {
         case i.re.ROLE_SELECT:
             return {
                 type: i.re.ROLE_SELECT,
-                id: A(n),
+                id: A(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (m = e.required) && m,
-                placeholder: null != (E = e.placeholder) ? E : f.intl.string(f.t.Otr6W1),
+                required: null != (h = e.required) && h,
+                placeholder: null != (m = e.placeholder) ? m : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
@@ -238,11 +237,11 @@ function S(e, t, n) {
         case i.re.MENTIONABLE_SELECT:
             return {
                 type: i.re.MENTIONABLE_SELECT,
-                id: A(n),
+                id: A(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (b = e.required) && b,
-                placeholder: null != (y = e.placeholder) ? y : f.intl.string(f.t.Otr6W1),
+                required: null != (E = e.required) && E,
+                placeholder: null != (b = e.placeholder) ? b : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 defaultValues: e.default_values,
@@ -250,37 +249,37 @@ function S(e, t, n) {
         case i.re.CHANNEL_SELECT:
             return {
                 type: i.re.CHANNEL_SELECT,
-                id: A(n),
+                id: A(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
-                required: null != (O = e.required) && O,
-                placeholder: null != (v = e.placeholder) ? v : f.intl.string(f.t.Otr6W1),
+                required: null != (y = e.required) && y,
+                placeholder: null != (O = e.placeholder) ? O : f.intl.string(f.t.Otr6W1),
                 minValues: e.min_values,
                 maxValues: e.max_values,
                 channelTypes: e.channel_types,
                 defaultValues: e.default_values,
             };
         case i.re.SECTION: {
-            let t = e.components.map((e, t) => C(e, t)).filter(c.lm),
-                r = C(e.accessory, t.length);
-            if (0 === t.length || null == r) return null;
+            let n = e.components.map((e, t) => T(e, t)).filter(c.lm),
+                r = T(e.accessory, n.length);
+            if (0 === n.length || null == r) return null;
             return {
                 type: i.re.SECTION,
-                id: A(n),
-                components: t,
+                id: A(t),
+                components: n,
                 accessory: r,
             };
         }
         case i.re.TEXT_DISPLAY:
             return {
                 type: i.re.TEXT_DISPLAY,
-                id: A(n),
+                id: A(t),
                 content: e.content,
             };
         case i.re.THUMBNAIL:
             return {
                 type: i.re.THUMBNAIL,
-                id: A(n),
+                id: A(t),
                 media: (0, s.ym)(e.media),
                 description: e.description,
                 spoiler: e.spoiler,
@@ -288,7 +287,7 @@ function S(e, t, n) {
         case i.re.MEDIA_GALLERY:
             return {
                 type: i.re.MEDIA_GALLERY,
-                id: A(n),
+                id: A(t),
                 items: e.items.map((e) => ({
                     media: (0, s.ym)(e.media),
                     description: e.description,
@@ -298,7 +297,7 @@ function S(e, t, n) {
         case i.re.FILE:
             return {
                 type: i.re.FILE,
-                id: A(n),
+                id: A(t),
                 file: (0, s.ym)(e.file),
                 name: e.name,
                 size: e.size,
@@ -307,36 +306,36 @@ function S(e, t, n) {
         case i.re.SEPARATOR:
             return {
                 type: i.re.SEPARATOR,
-                id: A(n),
-                divider: null == (I = e.divider) || I,
-                spacing: null != (T = e.spacing) ? T : i.US.SMALL,
+                id: A(t),
+                divider: null == (v = e.divider) || v,
+                spacing: null != (I = e.spacing) ? I : i.US.SMALL,
             };
         case i.re.CONTENT_INVENTORY_ENTRY:
             if (null == e.content_inventory_entry) return null;
             return {
                 type: i.re.CONTENT_INVENTORY_ENTRY,
-                id: A(n),
+                id: A(t),
                 contentInventoryEntry: e.content_inventory_entry,
             };
         case i.re.CONTAINER: {
-            let t = e.components.map((e, t) => C(e, t)).filter(c.lm);
+            let n = e.components.map((e, t) => T(e, t)).filter(c.lm);
             return {
                 type: i.re.CONTAINER,
-                id: A(n),
+                id: A(t),
                 accentColor: null != e.accent_color ? (0, r.ho)(e.accent_color, !0) : void 0,
                 spoiler: e.spoiler,
-                components: t,
+                components: n,
             };
         }
         case i.re.LABEL: {
-            let t = C(e.component, 0);
-            if (null == t) return null;
+            let n = T(e.component, 0);
+            if (null == n) return null;
             return {
                 type: i.re.LABEL,
-                id: A(n),
+                id: A(t),
                 label: e.label,
                 description: e.description,
-                component: t,
+                component: n,
             };
         }
         default:
