@@ -1,9 +1,4 @@
 e.exports = {
-    modal: "modal_e59759",
-    container: "container_e59759",
-    header: "header_e59759",
-    headerIcon: "headerIcon_e59759",
-    verifiedRoles: "verifiedRoles_e59759",
     verifiedRole: "verifiedRole_e59759",
     verifiedRoleNameDescriptionContainer: "verifiedRoleNameDescriptionContainer_e59759",
     verifiedRoleDescription: "verifiedRoleDescription_e59759",

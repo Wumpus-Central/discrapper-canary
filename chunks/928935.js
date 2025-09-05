@@ -1,7 +1,4 @@
 n.exports = {
-    container: "container__750de",
-    header: "header__750de",
-    title: "title__750de",
     connectionsContainer: "connectionsContainer__750de",
     accountBtn: "accountBtn__750de",
     accountBtnInner: "accountBtnInner__750de",

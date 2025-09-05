@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => Z,
-    g: () => A,
+    default: () => x,
+    g: () => P,
 }),
     n(388685),
     n(472816),
@@ -10,8 +10,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(435935),
-    s = n(442837),
+    o = n(442837),
+    s = n(82659),
     c = n(780384),
     u = n(481060),
     d = n(239091),
@@ -20,20 +20,18 @@ var r = n(951288),
     h = n(726542),
     g = n(884338),
     m = n(367907),
-    b = n(313201),
-    _ = n(598077),
-    O = n(314897),
-    E = n(271383),
-    y = n(485386),
-    v = n(626135),
-    I = n(63063),
-    C = n(134433),
-    S = n(225104),
-    N = n(981631),
-    T = n(388032),
-    P = n(375563),
-    j = n(245141);
-function x(e) {
+    b = n(598077),
+    _ = n(314897),
+    O = n(271383),
+    E = n(485386),
+    y = n(626135),
+    v = n(63063),
+    I = n(225104),
+    C = n(981631),
+    S = n(388032),
+    T = n(479306),
+    N = n(562721);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,13 +56,13 @@ function x(e) {
     }
     return e;
 }
-function A(e, t) {
+function P(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await n.e("38413").then(n.bind(n, 107807));
         return (n) =>
             (0, r.jsx)(
                 i,
-                x(
+                j(
                     {
                         role: e,
                         guildId: t,
@@ -74,22 +72,21 @@ function A(e, t) {
             );
     });
 }
-let Z = function (e) {
-    let { guildId: t, transitionState: l, onClose: Z } = e,
-        w = (0, s.e7)([y.Z], () => y.Z.getSortedRoles(t)),
-        L = (0, s.e7)([O.default], () => O.default.getId()),
-        R = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, L)),
-        [D, k] = i.useState([]),
-        M = (0, f.ZP)(),
-        U = (0, b.Dt)();
+let x = function (e) {
+    let { guildId: t, transitionState: l, onClose: x } = e,
+        A = (0, o.e7)([E.Z], () => E.Z.getSortedRoles(t)),
+        Z = (0, o.e7)([_.default], () => _.default.getId()),
+        w = (0, o.e7)([O.ZP], () => O.ZP.getMember(t, Z)),
+        [L, R] = i.useState([]),
+        D = (0, f.ZP)();
     if (
         (i.useEffect(() => {
-            0 !== D.length &&
-                v.default.track(
-                    N.rMx.PASSPORT_ENTRY_VIEWED,
-                    x(
+            0 !== L.length &&
+                y.default.track(
+                    C.rMx.PASSPORT_ENTRY_VIEWED,
+                    j(
                         {
-                            role_ids: D.map((e) => {
+                            role_ids: L.map((e) => {
                                 let { role_id: t } = e;
                                 return t;
                             }),
@@ -97,184 +94,146 @@ let Z = function (e) {
                         (0, m.hH)(t),
                     ),
                 );
-        }, [t, D]),
+        }, [t, L]),
         i.useEffect(() => {
-            p.Z.getGuildRoleConnectionsConfigurations(t).then((e) => k(e));
+            p.Z.getGuildRoleConnectionsConfigurations(t).then((e) => R(e));
         }, [t]),
-        null == R)
+        null == w)
     )
         return null;
-    let G = w.filter((e) => null === e.tags.guild_connections);
-    return (0, r.jsxs)(u.Y0X, {
+    let k = A.filter((e) => null === e.tags.guild_connections);
+    return (0, r.jsx)(s.Modal, {
         transitionState: l,
-        "aria-labelledby": U,
-        className: P.modal,
-        parentComponent: "GuildRoleConnectionsModal",
-        children: [
-            (0, r.jsxs)(u.xBx, {
-                separator: !1,
-                justify: o.k.Justify.BETWEEN,
-                children: [
-                    (0, r.jsxs)("div", {
-                        className: P.header,
+        title: S.intl.string(S.t.ghtnsr),
+        onClose: x,
+        subtitle: S.intl.format(S.t["Y+TsER"], { helpdeskArticleUrl: v.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
+        actions: [],
+        children: (0, r.jsx)(u.Kqy, {
+            children: k.map((e) => {
+                let l = w.roles.includes(e.id),
+                    o = (function (e) {
+                        let n = L.find((t) => {
+                            let { role_id: n } = t;
+                            return n === e;
+                        });
+                        if (null == n) return [];
+                        let i = {};
+                        for (let e of n.rules.flat()) {
+                            let o;
+                            if (null != e.application_id) {
+                                var l;
+                                let i = null == (l = n.applications) ? void 0 : l[e.application_id];
+                                o =
+                                    (null == i ? void 0 : i.bot) != null
+                                        ? (0, r.jsx)("img", {
+                                              src: new b.Z(i.bot).getAvatarURL(t, 24),
+                                              alt: "",
+                                              className: a()(T.botAvatar, N.avatar),
+                                          })
+                                        : null;
+                            } else {
+                                let t = h.Z.get(e.connection_type);
+                                o = (0, r.jsx)("img", {
+                                    src: (0, c.ap)(D) ? t.icon.lightSVG : t.icon.darkSVG,
+                                    alt: "",
+                                    className: N.avatar,
+                                });
+                            }
+                            null != o && (i["".concat(e.connection_type, ":").concat(e.application_id)] = o);
+                        }
+                        return Object.values(i);
+                    })(e.id);
+                return (0, r.jsxs)(
+                    u.P3F,
+                    {
+                        className: a()(T.verifiedRole, l ? T.verifiedRoleHasRole : null),
+                        onClick: l ? void 0 : () => P(e, t),
+                        onContextMenu: l
+                            ? (i) => {
+                                  var l;
+                                  return (
+                                      (l = e.id),
+                                      void (0, d.jW)(i, async () => {
+                                          let { default: e } = await n.e("60079").then(n.bind(n, 850902));
+                                          return (n) => {
+                                              var i, a;
+                                              return (0, r.jsx)(
+                                                  e,
+                                                  ((i = j({}, n)),
+                                                  (a = a =
+                                                      {
+                                                          roleId: l,
+                                                          onLeaveRole: () => p.Z.unassignGuildRoleConnection(t, l),
+                                                      }),
+                                                  Object.getOwnPropertyDescriptors
+                                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                                      : (function (e, t) {
+                                                            var n = Object.keys(e);
+                                                            if (Object.getOwnPropertySymbols) {
+                                                                var r = Object.getOwnPropertySymbols(e);
+                                                                n.push.apply(n, r);
+                                                            }
+                                                            return n;
+                                                        })(Object(a)).forEach(function (e) {
+                                                            Object.defineProperty(
+                                                                i,
+                                                                e,
+                                                                Object.getOwnPropertyDescriptor(a, e),
+                                                            );
+                                                        }),
+                                                  i),
+                                              );
+                                          };
+                                      })
+                                  );
+                              }
+                            : void 0,
                         children: [
-                            (0, r.jsx)(C.Z, {
-                                className: P.headerIcon,
+                            l
+                                ? (0, r.jsx)("div", {
+                                      className: T.roleCheckmark,
+                                      children: (0, r.jsx)(u.kmB, {
+                                          size: "xs",
+                                          color: "currentColor",
+                                      }),
+                                  })
+                                : null,
+                            (0, r.jsx)(I.Z, {
+                                guildId: t,
+                                role: e,
                                 size: 24,
                             }),
-                            (0, r.jsx)(u.X6q, {
-                                variant: "text-lg/semibold",
-                                children: T.intl.string(T.t.ghtnsr),
+                            (0, r.jsxs)("div", {
+                                className: T.verifiedRoleNameDescriptionContainer,
+                                children: [
+                                    (0, r.jsx)(u.Text, {
+                                        variant: "text-md/medium",
+                                        color: "header-primary",
+                                        className: T.verifiedRoleName,
+                                        children: e.name,
+                                    }),
+                                    void 0 !== e.description
+                                        ? (0, r.jsx)(u.Text, {
+                                              variant: "text-xs/normal",
+                                              color: "header-secondary",
+                                              className: T.verifiedRoleDescription,
+                                              children: e.description,
+                                          })
+                                        : null,
+                                ],
+                            }),
+                            (0, r.jsx)(g.ZP, {
+                                showUserPopout: !1,
+                                guildId: t,
+                                users: o.map(() => null),
+                                renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: o[n] }, n),
+                                max: 3,
                             }),
                         ],
-                    }),
-                    (0, r.jsx)(u.olH, { onClick: Z }),
-                ],
+                    },
+                    e.id,
+                );
             }),
-            (0, r.jsxs)(u.hzk, {
-                className: P.container,
-                children: [
-                    (0, r.jsx)(u.X6q, {
-                        variant: "heading-md/medium",
-                        children: T.intl.format(T.t["Y+TsER"], {
-                            helpdeskArticleUrl: I.Z.getArticleURL(N.BhN.CONNECTION_DETAILS),
-                        }),
-                    }),
-                    (0, r.jsx)("div", {
-                        className: P.verifiedRoles,
-                        children: G.map((e) => {
-                            let l = R.roles.includes(e.id),
-                                o = (function (e) {
-                                    let n = D.find((t) => {
-                                        let { role_id: n } = t;
-                                        return n === e;
-                                    });
-                                    if (null == n) return [];
-                                    let i = {};
-                                    for (let e of n.rules.flat()) {
-                                        let o;
-                                        if (null != e.application_id) {
-                                            var l;
-                                            let i = null == (l = n.applications) ? void 0 : l[e.application_id];
-                                            o =
-                                                (null == i ? void 0 : i.bot) != null
-                                                    ? (0, r.jsx)("img", {
-                                                          src: new _.Z(i.bot).getAvatarURL(t, 24),
-                                                          alt: "",
-                                                          className: a()(P.botAvatar, j.avatar),
-                                                      })
-                                                    : null;
-                                        } else {
-                                            let t = h.Z.get(e.connection_type);
-                                            o = (0, r.jsx)("img", {
-                                                src: (0, c.ap)(M) ? t.icon.lightSVG : t.icon.darkSVG,
-                                                alt: "",
-                                                className: j.avatar,
-                                            });
-                                        }
-                                        null != o &&
-                                            (i["".concat(e.connection_type, ":").concat(e.application_id)] = o);
-                                    }
-                                    return Object.values(i);
-                                })(e.id);
-                            return (0, r.jsxs)(
-                                u.P3F,
-                                {
-                                    className: a()(P.verifiedRole, l ? P.verifiedRoleHasRole : null),
-                                    onClick: l ? void 0 : () => A(e, t),
-                                    onContextMenu: l
-                                        ? (i) => {
-                                              var l;
-                                              return (
-                                                  (l = e.id),
-                                                  void (0, d.jW)(i, async () => {
-                                                      let { default: e } = await n.e("60079").then(n.bind(n, 850902));
-                                                      return (n) => {
-                                                          var i, a;
-                                                          return (0, r.jsx)(
-                                                              e,
-                                                              ((i = x({}, n)),
-                                                              (a = a =
-                                                                  {
-                                                                      roleId: l,
-                                                                      onLeaveRole: () =>
-                                                                          p.Z.unassignGuildRoleConnection(t, l),
-                                                                  }),
-                                                              Object.getOwnPropertyDescriptors
-                                                                  ? Object.defineProperties(
-                                                                        i,
-                                                                        Object.getOwnPropertyDescriptors(a),
-                                                                    )
-                                                                  : (function (e, t) {
-                                                                        var n = Object.keys(e);
-                                                                        if (Object.getOwnPropertySymbols) {
-                                                                            var r = Object.getOwnPropertySymbols(e);
-                                                                            n.push.apply(n, r);
-                                                                        }
-                                                                        return n;
-                                                                    })(Object(a)).forEach(function (e) {
-                                                                        Object.defineProperty(
-                                                                            i,
-                                                                            e,
-                                                                            Object.getOwnPropertyDescriptor(a, e),
-                                                                        );
-                                                                    }),
-                                                              i),
-                                                          );
-                                                      };
-                                                  })
-                                              );
-                                          }
-                                        : void 0,
-                                    children: [
-                                        l
-                                            ? (0, r.jsx)("div", {
-                                                  className: P.roleCheckmark,
-                                                  children: (0, r.jsx)(u.kmB, {
-                                                      size: "xs",
-                                                      color: "currentColor",
-                                                  }),
-                                              })
-                                            : null,
-                                        (0, r.jsx)(S.Z, {
-                                            guildId: t,
-                                            role: e,
-                                            size: 24,
-                                        }),
-                                        (0, r.jsxs)("div", {
-                                            className: P.verifiedRoleNameDescriptionContainer,
-                                            children: [
-                                                (0, r.jsx)(u.Text, {
-                                                    variant: "text-md/medium",
-                                                    color: "header-primary",
-                                                    className: P.verifiedRoleName,
-                                                    children: e.name,
-                                                }),
-                                                void 0 !== e.description
-                                                    ? (0, r.jsx)(u.Text, {
-                                                          variant: "text-xs/normal",
-                                                          color: "header-secondary",
-                                                          className: P.verifiedRoleDescription,
-                                                          children: e.description,
-                                                      })
-                                                    : null,
-                                            ],
-                                        }),
-                                        (0, r.jsx)(g.ZP, {
-                                            showUserPopout: !1,
-                                            guildId: t,
-                                            users: o.map(() => null),
-                                            renderUser: (e, t, n) => (0, r.jsx)(i.Fragment, { children: o[n] }, n),
-                                            max: 3,
-                                        }),
-                                    ],
-                                },
-                                e.id,
-                            );
-                        }),
-                    }),
-                ],
-            }),
-        ],
+        }),
     });
 };
