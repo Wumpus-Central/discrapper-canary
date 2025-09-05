@@ -20,8 +20,8 @@ var r,
     O = n(581883),
     v = n(630388),
     I = n(199902),
-    S = n(272053),
-    T = n(77498),
+    T = n(272053),
+    S = n(77498),
     A = n(797258),
     C = n(981631);
 function N(e, t, n) {
@@ -86,7 +86,7 @@ function L() {
         e.push((0, _.I)(t));
     let n = m.Z.getActivities();
     e.push(...n);
-    let r = S.Z.getStream();
+    let r = T.Z.getStream();
     null != r && e.push(R({ type: C.IIU.STREAMING }, r));
     let i = new Set();
     s().forEach(x, (t) => {
@@ -99,30 +99,29 @@ function L() {
         u = null != I.Z.getCurrentUserActiveStream(),
         d = l || (c && !u);
     if (null != o && null != o.name && !d) {
-        var f, O;
-        let t = T.Z.getGameByName(o.name);
+        var f;
+        let t = S.Z.getGameByName(o.name);
         e.push(
             R(
                 {
                     type: C.IIU.PLAYING,
                     name: o.name,
                     application_id: null != (f = o.id) ? f : null == t ? void 0 : t.id,
-                    metadata: { distributor: null != (O = o.distributor) ? O : void 0 },
                     timestamps: { start: o.start },
                 },
                 (0, E.LK)(o),
             ),
         );
     }
-    let v = b.Z.getActivity();
-    null != v && e.push(R({ type: C.IIU.LISTENING }, v));
-    let N = h.Z.getCurrentHangStatus();
-    if (null != N) {
+    let O = b.Z.getActivity();
+    null != O && e.push(R({ type: C.IIU.LISTENING }, O));
+    let v = h.Z.getCurrentHangStatus();
+    if (null != v) {
         let t = h.Z.getCustomHangStatus();
         e.push({
             type: C.IIU.HANG_STATUS,
             name: "Hang Status",
-            state: N,
+            state: v,
             details: null == t ? void 0 : t.status,
             emoji: null == t ? void 0 : t.emoji,
         });
@@ -132,12 +131,12 @@ function L() {
 function j() {
     (x = {}), L();
 }
-function M(e) {
+function k(e) {
     let { socketId: t, pid: n, activity: r, partyPrivacy: i } = e;
     if (a()(x[t], [n, r, i])) return !1;
     null != r ? (x[t] = [n, r, i]) : delete x[t], L();
 }
-function k(e) {
+function M(e) {
     let { socketId: t } = e;
     delete x[t], L();
 }
@@ -167,7 +166,7 @@ function B() {
 }
 class Z extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, u.ZP, S.Z, I.Z, b.Z, O.Z, T.Z, h.Z, A.Z, f.Z), this.syncWith([m.Z, h.Z], () => L());
+        this.waitFor(p.ZP, u.ZP, T.Z, I.Z, b.Z, O.Z, S.Z, h.Z, A.Z, f.Z), this.syncWith([m.Z, h.Z], () => L());
     }
     getActivities() {
         return D;
@@ -198,8 +197,8 @@ let F = new Z(c.Z, {
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: L,
     OVERLAY_INITIALIZE: U,
     START_SESSION: j,
-    LOCAL_ACTIVITY_UPDATE: M,
-    RPC_APP_DISCONNECTED: k,
+    LOCAL_ACTIVITY_UPDATE: k,
+    RPC_APP_DISCONNECTED: M,
     RUNNING_GAMES_CHANGE: L,
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
     SPOTIFY_PLAYER_STATE: L,
