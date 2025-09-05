@@ -1,4 +1,4 @@
-r.d(t, { Z: () => g }), r(388685);
+r.d(t, { Z: () => y }), r(388685);
 var n = r(951288),
     i = r(647438),
     l = r(120356),
@@ -7,75 +7,83 @@ var n = r(951288),
     c = r(442837),
     s = r(313201),
     u = r(314897),
-    d = r(403239),
-    f = r(781040),
-    b = r(840367),
-    p = r(415734);
-function g(e) {
+    d = r(785717),
+    f = r(403239),
+    g = r(982072),
+    b = r(781040),
+    p = r(840367),
+    O = r(415734);
+function y(e) {
     let {
             userId: t,
             widget: r,
             children: l,
-            disableInteraction: g,
-            className: y,
-            index: j,
-            trailingContent: m,
-            headerTitle: v,
-            headerSubtitle: h,
-            headerActionButtons: x,
+            disableInteraction: y,
+            className: m,
+            index: v,
+            trailingContent: x,
+            headerTitle: h,
+            headerSubtitle: w,
+            headerActionButtons: P,
         } = e,
-        w = (0, s.Dt)(),
-        P = (0, c.e7)([u.default], () => u.default.getId() === t),
-        S = i.useRef(null),
-        E = i.useRef(null),
-        I = P && null != j && !g,
-        { isDragging: D } = (0, d.q)({
-            dropRef: S,
-            dragRef: E,
+        E = (0, s.Dt)(),
+        S = (0, c.e7)([u.default], () => u.default.getId() === t),
+        I = i.useRef(null),
+        T = i.useRef(null),
+        { trackUserProfileAction: D } = (0, d.KZ)(),
+        _ = (0, g.Z)({
+            widgetType: r.type,
+            onAction: D,
+        }),
+        N = S && null != v && !y,
+        { isDragging: k } = (0, f.q)({
+            dropRef: I,
+            dragRef: T,
             userId: t,
             widget: r,
-            index: j,
-            disableInteraction: !I,
+            index: v,
+            disableInteraction: !N,
         }),
-        [k, N] = i.useState(!1);
-    return (0, n.jsx)(O, {
-        ref: S,
-        disableInteraction: !I,
-        onMouseEnter: () => N(!0),
-        onMouseLeave: () => N(!1),
+        [Z, A] = i.useState(!1);
+    return (0, n.jsx)(j, {
+        ref: I,
+        disableInteraction: !N,
+        onMouseEnter: () => A(!0),
+        onMouseLeave: () => A(!1),
         children: (0, n.jsxs)("section", {
-            className: o()(p.container, y, { [p.isDragging]: D }),
-            "aria-labelledby": w,
+            ref: _,
+            className: o()(O.container, m, { [O.isDragging]: k }),
+            "aria-labelledby": E,
             children: [
-                I &&
-                    (0, n.jsx)(f.Z, {
-                        buttonRef: E,
+                N &&
+                    (0, n.jsx)(b.Z, {
+                        buttonRef: T,
                         widget: r,
-                        className: o()(p.dragHandleButton, { [p.opacity]: k || D }),
+                        className: o()(O.dragHandleButton, { [O.opacity]: Z || k }),
                     }),
-                (0, n.jsx)(b.Z, {
+                (0, n.jsx)(p.Z, {
                     userId: t,
-                    headingId: w,
-                    title: v,
-                    subtitle: h,
-                    actionButtons: x,
+                    headingId: E,
+                    title: h,
+                    subtitle: w,
+                    actionButtons: P,
                     widget: r,
-                    disableInteraction: g,
+                    disableInteraction: y,
                 }),
                 (0, n.jsxs)(a.y5, {
-                    children: [l, m],
+                    children: [l, x],
                 }),
             ],
         }),
     });
 }
-let O = (e) => {
+let j = (e) => {
     let { ref: t, children: r, disableInteraction: i, onMouseEnter: l, onMouseLeave: o } = e;
     return i
         ? r
         : (0, n.jsx)("div", {
               ref: t,
-              className: p.dragAndDropHitbox,
+              className: O.dragAndDropHitbox,
               onMouseEnter: l,
               onMouseLeave: o,
               children: r,

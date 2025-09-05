@@ -6,7 +6,7 @@ n.d(t, {
     RV: () => N,
     TY: () => D,
     pQ: () => C,
-    te: () => S,
+    te: () => T,
     z7: () => R,
 }),
     n(539854),
@@ -109,8 +109,8 @@ let v = (e) => {
             n = s.Z.isMobileOnline(e);
         return t === g.Sk.ONLINE && n ? "".concat(t, "-mobile") : t === g.Sk.ONLINE ? "".concat(t, "-desktop") : t;
     },
-    S = (e) => (null == e ? e : "VOICE" === e ? "VOICE" : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
-    T = (e) => {
+    T = (e) => (null == e ? e : "VOICE" === e ? "VOICE" : Object.keys(m.IIU)[Object.values(m.IIU).indexOf(e)]),
+    S = (e) => {
         var t, n, r;
         let { layout: i, userId: a, guildId: l, sessionId: u, sourceSessionId: d, showGuildProfile: f = !0 } = e,
             _ = c.default.getUser(a);
@@ -165,15 +165,25 @@ let v = (e) => {
         };
     },
     C = (e) => {
-        let { guildId: t, channelId: n, messageId: i, roleId: a, analyticsLocations: o, action: s, section: l } = e;
+        let {
+            guildId: t,
+            channelId: n,
+            messageId: i,
+            roleId: a,
+            widgetType: o,
+            analyticsLocations: s,
+            action: l,
+            section: c,
+        } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTION,
-            O(b({}, (0, r.hH)(t), (0, r.JS)(n), T(e), A(e)), {
-                location_stack: o,
-                profile_action: s,
-                profile_section: l,
+            O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
+                location_stack: s,
+                profile_action: l,
+                profile_section: c,
                 source_message_id: i,
                 source_role_id: a,
+                widget_type: o,
             }),
         );
     },
@@ -195,7 +205,7 @@ let v = (e) => {
             (null != d ? d : 0) <= 0 ||
             u.default.track(
                 m.rMx.USER_PROFILE_UI_VIEWED,
-                O(b({}, (0, r.hH)(t), (0, r.JS)(n), T(e), A(e)), {
+                O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
                     location_stack: i,
                     profile_ui: a,
                     view_started_at: o,
@@ -221,11 +231,11 @@ let v = (e) => {
         } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTIVITY_ACTION,
-            O(b({}, (0, r.hH)(t), (0, r.JS)(n), T(e), A(e)), {
+            O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
                 location_stack: i,
                 activity_action: a,
                 activity_display: o,
-                activity_type: S(null != l ? m.IIU.STREAMING : null == s ? void 0 : s.type),
+                activity_type: T(null != l ? m.IIU.STREAMING : null == s ? void 0 : s.type),
                 activity_name: null == s ? void 0 : s.name,
                 activity_platform: null == s ? void 0 : s.platform,
                 activity_session_id: null == s ? void 0 : s.session_id,
@@ -254,7 +264,7 @@ let v = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         u.default.track(
             m.rMx.USER_PROFILE_BADGE_PRESSED,
-            O(b({}, (0, r.hH)(t), (0, r.JS)(n), T(e), A(e)), {
+            O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
                 location_stack: i,
                 badge: a,
             }),
@@ -264,7 +274,7 @@ let v = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         u.default.track(
             m.rMx.USER_PROFILE_BADGE_HOVERED,
-            O(b({}, (0, r.hH)(t), (0, r.JS)(n), T(e), A(e)), {
+            O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
                 location_stack: i,
                 badge: a,
             }),
@@ -309,7 +319,7 @@ let v = (e) => {
         C(O(b({}, e), { action: a })),
             u.default.track(
                 m.rMx.USER_PROFILE_EDIT_ACTION,
-                O(b({}, (0, r.hH)(t), (0, r.JS)(n), T(e)), {
+                O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e)), {
                     location_stack: i,
                     edit_action: a,
                     widget_edited: o,
