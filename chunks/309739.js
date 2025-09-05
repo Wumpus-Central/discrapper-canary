@@ -1,8 +1,8 @@
 n.d(t, { Z: () => V }), n(388685), n(781311);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(658722),
     l = n.n(s),
     c = n(442837),
@@ -26,8 +26,8 @@ var r = n(951288),
     C = n(726985),
     N = n(981631),
     R = n(388032),
-    P = n(85240),
-    w = n(197571);
+    P = n(174546),
+    w = n(10198);
 function D(e, t, n) {
     return (
         t in e
@@ -80,7 +80,7 @@ function j(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     let t = () => {
         A.SE.updateSetting(e ? O.Z.getGuildIds() : []);
     };
@@ -108,16 +108,16 @@ function M(e) {
         ),
     );
 }
-function k() {
+function M() {
     let e = A.G6.useSetting(),
         t = A.no.useSetting(),
         n = (0, T.Yd)("activity privacy tab"),
         i = I.isPlatformEmbedded ? R.intl.string(R.t.MznbeH) : R.intl.string(R.t.oKqC4u),
-        o = (e) => {
-            A.no.updateSetting(e ? u.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : u.GI.ACTIVITY_STATUS_OFF), M(e);
+        a = (e) => {
+            A.no.updateSetting(e ? u.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : u.GI.ACTIVITY_STATUS_OFF), k(e);
         },
         s = (e) => {
-            A.no.updateSetting(e), M(e !== u.GI.ACTIVITY_STATUS_OFF);
+            A.no.updateSetting(e), k(e !== u.GI.ACTIVITY_STATUS_OFF);
         },
         l = [
             {
@@ -170,7 +170,7 @@ function k() {
                                       }),
                                   ],
                               }),
-                              (0, r.jsx)(_.$i$, { className: a()(w.marginBottom20, w.marginTop20) }),
+                              (0, r.jsx)(_.$i$, { className: o()(w.marginBottom20, w.marginTop20) }),
                           ],
                       })
                     : (0, r.jsx)(_.j7V, {
@@ -178,7 +178,7 @@ function k() {
                           note: R.intl.format(R.t["+5/xu7"], {
                               helpdeskArticle: v.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS),
                           }),
-                          onChange: (e) => o(!e),
+                          onChange: (e) => a(!e),
                           children: R.intl.string(R.t.D5GXTU),
                       }),
             ],
@@ -241,13 +241,13 @@ let B = (e) => {
 };
 function Z(e) {
     let { account: t } = e,
-        [n, o] = i.useState(t.showActivity),
-        a = (0, h.ZP)();
+        [n, a] = i.useState(t.showActivity),
+        o = (0, h.ZP)();
     function s(e) {
-        o(e), p.Z.setShowActivity(t.type, t.id, e);
+        a(e), p.Z.setShowActivity(t.type, t.id, e);
     }
     i.useEffect(() => {
-        o(t.showActivity);
+        a(t.showActivity);
     }, [t]);
     let l = m.Z.get(t.type);
     return (0, r.jsxs)(r.Fragment, {
@@ -263,7 +263,7 @@ function Z(e) {
                         (0, r.jsx)("img", {
                             alt: l.name,
                             className: P.connectionIcon,
-                            src: (0, d.wj)(a) ? l.icon.darkSVG : l.icon.lightSVG,
+                            src: (0, d.wj)(o) ? l.icon.darkSVG : l.icon.lightSVG,
                         }),
                         (0, r.jsxs)("div", {
                             children: [
@@ -288,8 +288,8 @@ function Z(e) {
 function F() {
     let e = (0, c.e7)([y.Z], () => y.Z.getAccounts()),
         t = i.useMemo(() => e.filter((e) => m.Z.isSupported(e.type) && N.vbS.has(e.type)), [e]),
-        [n, o] = i.useState(""),
-        a = i.useMemo(() => {
+        [n, a] = i.useState(""),
+        o = i.useMemo(() => {
             let e = n.trim().toLowerCase();
             return "" === e ? t : t.filter((t) => l()(e, m.Z.get(t.type).name.toLowerCase()));
         }, [t, n]);
@@ -309,10 +309,10 @@ function F() {
                           }),
                           (0, r.jsx)(_.E1j, {
                               query: n,
-                              onChange: o,
+                              onChange: a,
                               placeholder: R.intl.string(R.t.WPrtoa),
                           }),
-                          a.map((e) => (0, r.jsx)(Z, { account: e }, e.id)),
+                          o.map((e) => (0, r.jsx)(Z, { account: e }, e.id)),
                       ],
                   }),
               }),
@@ -321,13 +321,13 @@ function F() {
 function V(e) {
     let { className: t, showHeader: n = !0 } = e,
         { showRedesign: i } = S.b.useExperiment({ location: "activity privacy tab" }),
-        { showUpdatedSettingsPage: o } = (0, g.D)("activity privacy tab");
-    return o
+        { showUpdatedSettingsPage: a } = (0, g.D)("activity privacy tab");
+    return a
         ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(_.hjN, {
               className: t,
               tag: _.RB0.H1,
               title: n ? R.intl.string(R.t.Cq98yM) : null,
-              children: [(0, r.jsx)(k, {}), (0, r.jsx)(U, {}), (0, r.jsx)(G, {}), i && (0, r.jsx)(F, {})],
+              children: [(0, r.jsx)(M, {}), (0, r.jsx)(U, {}), (0, r.jsx)(G, {}), i && (0, r.jsx)(F, {})],
           });
 }

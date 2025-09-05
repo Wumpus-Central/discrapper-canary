@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(981631),
     T = n(474936),
     S = n(388032),
-    A = n(88785);
+    A = n(398726);
 function C(e) {
     let {
             user: t,
@@ -66,14 +66,14 @@ function C(e) {
         }),
         { product: x, purchase: L } = (0, d.Z)(null == w ? void 0 : w.skuId),
         j = y.ZP.canUseCollectibles(t),
-        M = i.useRef(null),
-        k = (0, _.Z)(l),
+        k = i.useRef(null),
+        M = (0, _.Z)(l),
         U =
             void 0 === N
                 ? (null == w ? void 0 : w.skuId) === (null == P ? void 0 : P.skuId)
                 : (null == w ? void 0 : w.skuId) === (null == N ? void 0 : N.skuId),
         G = (e) => {
-            D(e), null != e && k(e);
+            D(e), null != e && M(e);
         },
         B = () => {
             R(w), f();
@@ -89,8 +89,8 @@ function C(e) {
             },
             [l, f],
         ),
-        V = (0, p.M)(),
-        F = V && (0, u.G1)(x),
+        F = (0, p.M)(),
+        V = F && (0, u.G1)(x),
         H = () =>
             (null != L && (!(0, u.qS)(L) || j)) || null === w
                 ? (0, r.jsx)(o.zxk, {
@@ -107,11 +107,11 @@ function C(e) {
                     })
                   : (0, r.jsx)(m.Z, {
                         subscriptionTier: T.Si.TIER_2,
-                        showGradient: V,
+                        showGradient: F,
                         textOptions: {
                             textOverride: y.ZP.isPremium(t)
                                 ? S.intl.string(S.t.KXLX7u)
-                                : V
+                                : F
                                   ? S.intl.string(S.t.pj0XBA)
                                   : S.intl.string(S.t.mr4K7O),
                         },
@@ -143,7 +143,7 @@ function C(e) {
                         user: t,
                         guild: C,
                         pendingAvatarDecoration: w,
-                        selectedAvatarDecorationRef: M,
+                        selectedAvatarDecorationRef: k,
                         onSelect: G,
                         onOpenShop: Z,
                     }),
@@ -160,7 +160,7 @@ function C(e) {
                 className: A.modalFooter,
                 children: [
                     H(),
-                    F
+                    V
                         ? (0, r.jsx)(h.Z, {
                               product: x,
                               onSecondaryClick: f,

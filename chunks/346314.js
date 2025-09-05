@@ -14,7 +14,7 @@ var r = n(951288),
     d = n(607070),
     f = n(865672),
     _ = n(109161),
-    p = n(836484);
+    p = n(10515);
 function h(e, t, n) {
     return (
         t in e
@@ -135,7 +135,7 @@ function O(e) {
             className: o()(p.nameGlow, D, y),
             children: n,
         },
-        M = C
+        k = C
             ? (0, r.jsx)(_.F, {
                   color: a,
                   colors: N ? c : null,
@@ -149,7 +149,7 @@ function O(e) {
         onMouseEnter: T,
         onMouseLeave: S,
         children: [
-            "left" === d && M,
+            "left" === d && k,
             (0, r.jsxs)("span", {
                 className: p.nameContainer,
                 style: m({ color: A && !N && null != a ? a : void 0 }, R ? P : {}),
@@ -184,7 +184,7 @@ function O(e) {
                             : (0, r.jsx)("span", m({ "aria-hidden": !0 }, j))),
                 ],
             }),
-            "right" === d && M,
+            "right" === d && k,
         ],
     });
 }

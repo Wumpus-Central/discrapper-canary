@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(626135),
     p = n(981631),
     h = n(388032),
-    f = n(150599),
-    m = n(430864);
+    f = n(43948),
+    m = n(602009);
 function g(e) {
-    let { onClose: t, onConfirm: g, onCancel: b, channel: _, analyticsType: y, popoutText: C, animation: x } = e;
+    let { onClose: t, onConfirm: g, onCancel: b, channel: y, analyticsType: _, popoutText: C, animation: v } = e;
     i.useEffect(() => {
         d.default.track(
             p.rMx.OPEN_POPOUT,
@@ -41,10 +41,10 @@ function g(e) {
                         });
                 }
                 return e;
-            })({ type: y }, (0, c.v_)(_)),
+            })({ type: _ }, (0, c.v_)(y)),
         );
-    }, [y, _]);
-    let v = i.useCallback(() => {
+    }, [_, y]);
+    let x = i.useCallback(() => {
             null == g || g(), t();
         }, [g, t]),
         O = i.useCallback(() => {
@@ -57,11 +57,11 @@ function g(e) {
                 t = u.Z.theme,
                 r = !1;
             return (
-                null != x &&
+                null != v &&
                     (async () => {
                         let [{ default: i }, l] = await Promise.all([
                             Promise.resolve().then(n.t.bind(n, 500923, 23)),
-                            (0, a.wj)(t) ? x.dark() : x.light(),
+                            (0, a.wj)(t) ? v.dark() : v.light(),
                         ]);
                         r ||
                             null == j.current ||
@@ -77,17 +77,17 @@ function g(e) {
                     (r = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [x]),
+        }, [v]),
         (0, r.jsx)(s.VqE, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, r.jsxs)("form", {
                 className: f.contentWarningPopout,
-                onSubmit: v,
+                onSubmit: x,
                 children: [
                     (0, r.jsxs)("div", {
                         className: f.body,
                         children: [
-                            null != x &&
+                            null != v &&
                                 (0, r.jsx)("div", {
                                     className: f.animation,
                                     ref: j,
@@ -129,7 +129,7 @@ function g(e) {
                                                 children: [
                                                     (0, r.jsx)(o.zx, {
                                                         className: f.button,
-                                                        onClick: v,
+                                                        onClick: x,
                                                         type: "submit",
                                                         autoFocus: !0,
                                                         children: h.intl.string(h.t.KJnHq6),

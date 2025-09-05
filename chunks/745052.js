@@ -22,10 +22,10 @@ var r = n(951288),
     I = n(605236),
     C = n(243778),
     S = n(984370),
-    N = n(797614),
-    T = n(359110),
-    P = n(6025),
-    j = n(897473),
+    T = n(797614),
+    N = n(359110),
+    j = n(6025),
+    P = n(897473),
     x = n(108427),
     A = n(210887),
     Z = n(433355),
@@ -49,8 +49,8 @@ var r = n(951288),
     Q = n(921944),
     X = n(526761),
     J = n(388032),
-    $ = n(803882),
-    ee = n(97009);
+    $ = n(735516),
+    ee = n(161655);
 function et(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -166,7 +166,7 @@ function er() {
                 ),
             [t, g, c],
         );
-    return (n.length !== t && N.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && T.Z.increment({ name: s.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, r.jsx)(z.Z, { section: K.pS.REQUESTS })
         : (0, r.jsx)(o.bG, {
               navigator: f,
@@ -231,7 +231,7 @@ function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         i = (0, c.e7)([Z.ZP], () => Z.ZP.getSidebarState(Z.uZ)),
         l = (0, c.e7)([w.Z], () => w.Z.getChannel(null == i ? void 0 : i.channelId));
-    if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    if (null == i || i.type !== P.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - q.R7I;
     return (0, r.jsx)(O.Z, {
         sidebarType: O.y.MessageRequestSidebar,
@@ -323,14 +323,14 @@ let eo = (0, g.Z)(function (e) {
         f.Y(q.Z5c.MESSAGE_REQUESTS),
             (0, x.e)("message-requests"),
             R.default.track(q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
-            N.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
+            T.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW });
     });
     let l = (0, c.e7)([A.Z], () => A.Z.theme),
         o = (0, F.w)(),
         [u, d] = i.useState(!1),
         h = (0, c.e7)([Z.ZP], () => {
             let e = Z.ZP.getSidebarState(Z.uZ);
-            return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
+            return null != e && e.type === P.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         g = null == h ? void 0 : h.channelId,
         m = null != h,
@@ -338,7 +338,7 @@ let eo = (0, g.Z)(function (e) {
         O = (0, D.J)(g),
         E = i.useRef(null);
     i.useEffect(() => {
-        null != g && !_ && O && m && ((0, T.Kh)(g), P.Z.closeChannelSidebar(Z.uZ));
+        null != g && !_ && O && m && ((0, N.Kh)(g), j.Z.closeChannelSidebar(Z.uZ));
     }, [g, O, m, _]);
     let [y, I] = i.useState(K.pS.REQUESTS),
         C = (e) => {

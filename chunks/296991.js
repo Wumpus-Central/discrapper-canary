@@ -11,15 +11,15 @@ var r = n(951288),
     m = n(481060),
     g = n(541716),
     p = n(752305),
-    h = n(893718),
-    f = n(592125),
+    f = n(893718),
+    h = n(592125),
     b = n(984933),
     x = n(540457),
     j = n(681460),
-    v = n(592286),
-    _ = n(981631),
+    _ = n(592286),
+    v = n(981631),
     O = n(388032),
-    y = n(94228);
+    y = n(761560);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,11 +72,11 @@ function I(e) {
             onChange: s,
             onKeyDown: o,
             onClear: u,
-            onRuleReorder: f,
+            onRuleReorder: h,
             isDropHovered: b,
             focused: x,
             onFocus: j,
-            previewEnabled: _,
+            previewEnabled: v,
             isDragEnabled: C,
             disabled: N,
         } = e,
@@ -90,7 +90,7 @@ function I(e) {
                 index: l,
             },
             end: (e, t) => {
-                null == e || t.didDrop() || f(e.rule, null, !0);
+                null == e || t.didDrop() || h(e.rule, null, !0);
             },
         }),
         [, D] = (0, d.L)({
@@ -103,10 +103,10 @@ function I(e) {
                 if (null == i || null == a) return;
                 let s = (i.bottom - i.top) / 2,
                     o = a.y - i.top;
-                (r < l && o < s) || (r > l && o > s) || f(e.rule, l, !1);
+                (r < l && o < s) || (r > l && o > s) || h(e.rule, l, !1);
             },
             drop: (e) => {
-                f(e.rule, l, !0);
+                h(e.rule, l, !0);
             },
         });
     if (
@@ -136,7 +136,7 @@ function I(e) {
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(l),
-                    children: (0, r.jsx)(h.ZP, {
+                    children: (0, r.jsx)(f.ZP, {
                         innerClassName: y.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: T,
@@ -146,7 +146,7 @@ function I(e) {
                         focused: x,
                         onChange: (e, n, r) => {
                             let i = N ? t.value : n;
-                            i.length > v.fn && (i = i.slice(0, v.fn)),
+                            i.length > _.fn && (i = i.slice(0, _.fn)),
                                 n !== i && ((n = i), (r = (0, p.JM)(i))),
                                 s(n),
                                 w({
@@ -155,9 +155,9 @@ function I(e) {
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: _,
-                        canMentionRoles: _,
-                        maxCharacterCount: v.fn,
+                        canMentionChannels: v,
+                        canMentionRoles: v,
+                        maxCharacterCount: _.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -194,14 +194,14 @@ function I(e) {
 function S(e) {
     let { rules: t, setRules: n, guild: l, disabled: a } = e,
         s = l.rulesChannelId,
-        c = l.features.has(_.oNc.PREVIEW_ENABLED),
-        d = (0, u.e7)([f.Z], () => (null != s ? f.Z.getChannel(s) : null)),
+        c = l.features.has(v.oNc.PREVIEW_ENABLED),
+        d = (0, u.e7)([h.Z], () => (null != s ? h.Z.getChannel(s) : null)),
         g = (0, u.e7)([b.ZP], () => b.ZP.getDefaultChannel(l.id)),
-        [p, h] = i.useState(null),
+        [p, f] = i.useState(null),
         [E, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
-                if (!a && t.length !== v.X2)
+                if (!a && t.length !== _.X2)
                     if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
                         (r[t.length - 1] = N(C({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
@@ -236,13 +236,13 @@ function S(e) {
                     let i = [...t];
                     i.splice(l, 1), i.splice(r, 0, e), n(i);
                 }
-                i ? null !== p && h(null) : r !== p && h(r);
+                i ? null !== p && f(null) : r !== p && f(r);
             },
             [a, p, t, n],
         ),
-        Z = t.length === v.X2,
+        Z = t.length === _.X2,
         D = i.useMemo(() => {
-            let e = Z ? O.intl.formatToPlainString(O.t.tU718P, { number: v.X2 }) : void 0;
+            let e = Z ? O.intl.formatToPlainString(O.t.tU718P, { number: _.X2 }) : void 0;
             return [
                 {
                     text: O.intl.string(O.t.DXq2oa),

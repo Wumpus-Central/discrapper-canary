@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(185413),
     g = n(42311),
     b = n(626786),
-    _ = n(434404),
-    y = n(454585),
+    y = n(434404),
+    _ = n(454585),
     C = n(345162),
-    x = n(485386),
-    v = n(430824),
+    v = n(485386),
+    x = n(430824),
     O = n(496675),
     j = n(594174),
     E = n(700785),
@@ -28,17 +28,17 @@ var r = n(951288),
     Z = n(318374),
     T = n(981631),
     N = n(388032),
-    A = n(338518),
-    w = n(430864);
+    A = n(73288),
+    w = n(602009);
 function R(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         o = (0, f.ZP)(t, !0),
         R = t.guild_id,
-        M = (0, u.e7)([x.Z], () => (null != R ? x.Z.getSortedRoles(R) : void 0)),
-        D = (0, u.e7)([j.default, v.Z], () => {
+        M = (0, u.e7)([v.Z], () => (null != R ? v.Z.getSortedRoles(R) : void 0)),
+        D = (0, u.e7)([j.default, x.Z], () => {
             var e;
-            return j.default.getUser(null == (e = v.Z.getGuild(R)) ? void 0 : e.ownerId);
+            return j.default.getUser(null == (e = x.Z.getGuild(R)) ? void 0 : e.ownerId);
         }),
         L = i.useMemo(() => (null != M ? M.filter((e) => !(0, C.fI)(e)) : []), [M]),
         k = i.useMemo(
@@ -77,7 +77,7 @@ function R(e) {
                 .value();
         }, [t, D]),
         B = O.Z.can(T.Plq.MANAGE_CHANNELS, t) || O.Z.can(T.Plq.MANAGE_ROLES, t),
-        F = i.useCallback(() => l(!1), []);
+        G = i.useCallback(() => l(!1), []);
     return (0, r.jsxs)(P.ZP, {
         channelId: t.id,
         children: [
@@ -90,7 +90,7 @@ function R(e) {
                 className: w.markup,
                 children: N.intl.format(N.t.QuwqjI, {
                     channelName: o,
-                    topicHook: () => y.Z.parseTopic(t.topic, !0, { channelId: t.id }),
+                    topicHook: () => _.Z.parseTopic(t.topic, !0, { channelId: t.id }),
                 }),
             }),
             B
@@ -169,7 +169,7 @@ function R(e) {
                                       disabled: !B,
                                       verified: s,
                                       onClick: () => {
-                                          _.Z.open(t.guild_id, T.pNK.MEMBERS), _.Z.selectRole(e.id);
+                                          y.Z.open(t.guild_id, T.pNK.MEMBERS), y.Z.selectRole(e.id);
                                       },
                                   },
                                   e.id,
@@ -220,7 +220,7 @@ function R(e) {
                               })({}, e)),
                               (i = i =
                                   {
-                                      onClose: () => (F(), e.onClose()),
+                                      onClose: () => (G(), e.onClose()),
                                       channelId: t.id,
                                   }),
                               Object.getOwnPropertyDescriptors

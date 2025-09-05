@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(441319),
     h = n(981631),
     m = n(388032),
-    g = n(63224);
+    g = n(376930);
 function E(e, t, n) {
     return (
         t in e
@@ -77,11 +77,11 @@ let v = () => [
         var e;
         return null != (e = l().sample(v())) ? e : m.intl.string(m.t.EgWTY2);
     };
-function S(e) {
+function T(e) {
     let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: _, locked: m = !1 } = e,
         [E, y] = i.useState((0, p.aW)(t).name),
         v = t === f.Ru.PIRATE,
-        S = (0, c.jm)({
+        T = (0, c.jm)({
             label: E,
             isSelected: s,
         });
@@ -94,8 +94,8 @@ function S(e) {
                 children: [
                     (0, r.jsx)(
                         u.P3F,
-                        O(b({}, e, S), {
-                            tabIndex: null != l ? l : S.tabIndex,
+                        O(b({}, e, T), {
+                            tabIndex: null != l ? l : T.tabIndex,
                             className: o()(g.appIconSelection, { [g.selected]: s }, n),
                             onClick: s ? h.dG4 : () => (null == a ? void 0 : a(t)),
                             children: _,
@@ -114,9 +114,9 @@ function S(e) {
             }),
     });
 }
-function T(e) {
+function S(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: o, locked: s } = e;
-    return (0, r.jsx)(S, {
+    return (0, r.jsx)(T, {
         onSelect: i ? void 0 : o,
         isSelected: n,
         id: t.id,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685);
+n.d(t, { Z: () => Y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,16 +18,16 @@ var r = n(951288),
     v = n(594190),
     j = n(695346),
     b = n(131951),
-    C = n(19780),
-    S = n(594174),
-    y = n(449224),
+    y = n(19780),
+    C = n(594174),
+    S = n(449224),
     O = n(358085),
-    Z = n(74538),
-    w = n(299570),
+    w = n(74538),
+    Z = n(299570),
     I = n(960861),
     N = n(989941),
-    T = n(562224),
-    P = n(544753),
+    P = n(562224),
+    T = n(544753),
     E = n(853030),
     R = n(560749),
     A = n(485299),
@@ -36,38 +36,38 @@ var r = n(951288),
     D = n(328242),
     L = n(565574),
     B = n(286420),
-    G = n(173044),
+    G = n(51708),
     U = n(801604),
     W = n(577257),
-    F = n(70722),
-    z = n(637824),
+    z = n(70722),
+    F = n(137349),
     H = n(388032),
-    V = n(468918);
-function J(e) {
+    V = n(374079);
+function Y(e) {
     var t;
-    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: J = [], selectSource: Y = !0 } = e,
+    let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: Y = [], selectSource: J = !0 } = e,
         X = i.useRef(performance.now()),
         K = (0, f.e7)(
             [b.Z],
             () =>
                 b.Z.getUseSystemScreensharePicker() &&
                 ((0, O.isLinux)() ||
-                    ((0, O.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, F.jR))),
+                    ((0, O.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, z.jR))),
         ),
-        { analyticsLocations: q } = (0, _.ZP)(J, g.Z.GO_LIVE_MODAL_V2),
-        Q = (0, f.e7)([S.default], () => S.default.getCurrentUser()),
-        $ = (0, P.Z)(),
+        { analyticsLocations: q } = (0, _.ZP)(Y, g.Z.GO_LIVE_MODAL_V2),
+        Q = (0, f.e7)([C.default], () => C.default.getCurrentUser()),
+        $ = (0, T.Z)(),
         { state: ee, dispatch: et } = (0, k.Ti)(
             o,
             Q,
             $,
-            (0, O.isWindows)() && null != o && Y ? "confirm" : "source_select",
+            (0, O.isWindows)() && null != o && J ? "confirm" : "source_select",
         );
     (0, W.Z)(K, et, "confirm" === ee.modalStep);
-    let en = !Z.ZP.canStreamQuality(Z.ZP.StreamQuality.HIGH, Q),
+    let en = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, Q),
         er = !(0, O.isLinux)(),
         ei = "confirm" === ee.modalStep,
-        el = !Y && null != o && !ei,
+        el = !J && null != o && !ei,
         es = K && ee.sourceType !== u.vA.CAMERA,
         eo = i.useMemo(() => {
             let e = [
@@ -96,7 +96,7 @@ function J(e) {
         ec = i.useCallback(
             async (e) => {
                 j.eo.updateSetting(ee.notifyFriends), j.I0.updateSetting(ee.hidePreview);
-                let [t, r] = await (0, T.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
+                let [t, r] = await (0, P.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: ee.preset,
                     fps: ee.fps,
                     resolution: ee.resolution,
@@ -135,8 +135,8 @@ function J(e) {
                 impressionName: c.ImpressionNames.GO_LIVE_MODAL,
                 impressionProperties: {
                     location_stack: q,
-                    application_id: (0, O.isWindows)() ? (null == (t = (0, N.Z)(v.ZP, y.Z)) ? void 0 : t.id) : void 0,
-                    parent_media_session_id: C.Z.getMediaSessionId(),
+                    application_id: (0, O.isWindows)() ? (null == (t = (0, N.Z)(v.ZP, S.Z)) ? void 0 : t.id) : void 0,
+                    parent_media_session_id: y.Z.getMediaSessionId(),
                 },
             },
             className: s()(V.root, {
@@ -206,7 +206,7 @@ function J(e) {
                                             (0, r.jsx)(E.Z, {
                                                 mainCTADisabled: !er && "" === ee.nativeSourceType,
                                                 mainCTAOnClick: () => {
-                                                    (0, w.t)(), (0, w.T)(ee.nativeSourceType);
+                                                    (0, Z.t)(), (0, Z.T)(ee.nativeSourceType);
                                                 },
                                                 align: "right",
                                                 ctaText: H.intl.string(H.t.FiBjwc),
@@ -223,7 +223,7 @@ function J(e) {
                                                 },
                                                 align: "right",
                                                 hideOptionsButton: !en,
-                                                ctaText: H.intl.string(z.default["5AyH/v"]),
+                                                ctaText: H.intl.string(F.default["5AyH/v"]),
                                             }),
                                         (!en || !(ei || es)) && (0, r.jsx)(L.Z, { align: "right" }),
                                     ],

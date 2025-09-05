@@ -2,24 +2,24 @@ n.d(t, { Z: () => f }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    s = n(536285),
+    s = n.n(l),
+    o = n(536285),
     a = n(857458),
     c = n(388905),
     u = n(703656),
     d = n(388032),
-    h = n(197571);
+    h = n(10198);
 let f = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
         [f, p] = i.useState(0);
     i.useEffect(() => {
-        s.default.once("connected", () => {
+        o.default.once("connected", () => {
             p(1);
         }),
-            s.default.once("disconnected", () => {
+            o.default.once("disconnected", () => {
                 (0, u.uL)((0, a.M)());
             }),
-            s.default.connect();
+            o.default.connect();
     }, []),
         i.useEffect(() => {
             if (0 !== f) return;
@@ -52,7 +52,7 @@ let f = function (e) {
                         children: d.intl.string(d.t.UQvCf3),
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: o()(h.marginTop8, h.marginCenterHorz),
+                        className: s()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, u.uL)((0, a.M)()),

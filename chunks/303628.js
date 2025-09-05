@@ -18,8 +18,8 @@ var r = n(951288),
     b = n(444282),
     y = n(898463),
     O = n(981631),
-    v = n(83120),
-    I = n(154257);
+    v = n(300981),
+    I = n(525685);
 function T(e, t, n) {
     return (
         t in e
@@ -134,7 +134,7 @@ function w(e) {
                 ? e
                 : [];
         }, [x, L]),
-        [M, k] = i.useState([]);
+        [k, M] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -153,7 +153,7 @@ function w(e) {
     });
     let G = {
             isApplicationCommand: D,
-            previousUploadOptions: M,
+            previousUploadOptions: k,
             uploadOptions: j,
         },
         B = i.useRef(G);
@@ -170,7 +170,7 @@ function w(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    k(i);
+                    M(i);
             }
         }, [t, j.length, n]);
     let Z = w.filter((e) => e.filename !== a);

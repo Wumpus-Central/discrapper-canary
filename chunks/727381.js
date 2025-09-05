@@ -1,73 +1,73 @@
-t.d(e, { Z: () => w });
-var n = t(951288);
-t(647438);
-var r = t(120356),
-    l = t.n(r),
-    i = t(399606),
-    s = t(481060),
-    a = t(271383),
-    o = t(594174),
-    g = t(777288),
-    c = t(753042),
-    f = t(787469),
-    v = t(477718),
-    h = t(791176),
-    u = t(908474),
-    d = t(467014),
-    E = t(388032),
-    C = t(87819);
-function B() {
-    return (0, n.jsxs)("div", {
-        className: C.header,
+n.d(t, { Z: () => h });
+var r = n(951288);
+n(647438);
+var l = n(120356),
+    i = n.n(l),
+    a = n(399606),
+    s = n(481060),
+    o = n(271383),
+    u = n(594174),
+    c = n(777288),
+    d = n(753042),
+    E = n(787469),
+    _ = n(477718),
+    A = n(791176),
+    m = n(908474),
+    T = n(467014),
+    I = n(388032),
+    g = n(152540);
+function f() {
+    return (0, r.jsxs)("div", {
+        className: g.header,
         children: [
-            (0, n.jsxs)("div", {
-                className: C.headerTitle,
+            (0, r.jsxs)("div", {
+                className: g.headerTitle,
                 children: [
-                    (0, n.jsx)(g.Z, {
+                    (0, r.jsx)(c.Z, {
                         width: 16,
                         height: 16,
                     }),
-                    (0, n.jsx)(s.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-md/semibold",
-                        children: E.intl.string(E.t.cf5lgo),
+                        children: I.intl.string(I.t.cf5lgo),
                     }),
                 ],
             }),
-            (0, n.jsx)("div", {
-                children: (0, n.jsx)(s.M2$, {
+            (0, r.jsx)("div", {
+                children: (0, r.jsx)(s.M2$, {
                     shortcut: "esc",
-                    keyClassName: C.keyComboInner,
-                    className: C.keyComboContainer,
+                    keyClassName: g.keyComboInner,
+                    className: g.keyComboContainer,
                 }),
             }),
         ],
     });
 }
-function w(A) {
-    let { userId: e, guildId: t, location: r, className: g, onNavigate: E } = A,
-        w = (0, i.e7)([o.default], () => o.default.getUser(e), [e]),
-        D = (0, i.e7)([a.ZP], () => a.ZP.getMember(t, e), [t, e]);
-    return null == w || null == D
+function h(e) {
+    let { userId: t, guildId: n, location: l, className: c, onNavigate: I } = e,
+        h = (0, a.e7)([u.default], () => u.default.getUser(t), [t]),
+        N = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+    return null == h || null == N
         ? null
-        : (0, n.jsxs)("div", {
-              className: l()(C.container, g),
+        : (0, r.jsxs)("div", {
+              className: i()(g.container, c),
               children: [
-                  (0, n.jsx)(B, {}),
-                  (0, n.jsxs)(s.Ttm, {
-                      className: C.innerContainer,
+                  (0, r.jsx)(f, {}),
+                  (0, r.jsxs)(s.Ttm, {
+                      className: g.innerContainer,
                       children: [
-                          (0, n.jsx)(u.Z, { member: D }),
-                          (0, n.jsx)(d.Z, {
-                              userId: e,
-                              guildId: t,
+                          (0, r.jsx)(m.Z, { member: N }),
+                          (0, r.jsx)(T.Z, {
+                              userId: t,
+                              guildId: n,
                           }),
-                          (0, n.jsx)(h.Z, {
-                              member: D,
-                              onNavigate: E,
+                          (0, r.jsx)(A.Z, {
+                              member: N,
+                              onNavigate: I,
                           }),
-                          (0, n.jsx)(f.Z, { member: D }),
-                          (0, n.jsx)(c.Z, { member: D }),
-                          (0, n.jsx)(v.Z, { member: D }),
+                          (0, r.jsx)(E.Z, { member: N }),
+                          (0, r.jsx)(d.Z, { member: N }),
+                          (0, r.jsx)(_.Z, { member: N }),
                       ],
                   }),
               ],

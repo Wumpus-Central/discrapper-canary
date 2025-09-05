@@ -12,23 +12,23 @@ var r = n(951288),
     h = n(305342),
     f = n(981631),
     m = n(388032),
-    g = n(200813);
+    g = n(31428);
 function b(e) {
     let { guildId: t, channelId: n } = e,
         b = (0, u.C)({
             guildId: t,
             channelId: n,
         }),
-        _ = (0, c.GG)(t),
-        y = (0, c.YB)(t),
+        y = (0, c.GG)(t),
+        _ = (0, c.YB)(t),
         C = (0, l.e7)([s.Z], () => s.Z.getGuild(t), [t]),
-        x = null == C ? void 0 : C.name,
-        v = (0, l.e7)([o.Z], () => o.Z.getChannel(n)),
+        v = null == C ? void 0 : C.name,
+        x = (0, l.e7)([o.Z], () => o.Z.getChannel(n)),
         O = i.useMemo(() => {
             let e = {};
-            for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
+            for (let t of y) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
-        }, [_]);
+        }, [y]);
     return ((0, d.Z)({
         guildId: t,
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
@@ -46,15 +46,15 @@ function b(e) {
                       variant: "heading-xl/semibold",
                       className: g.joinCtaTitle,
                       children: m.intl.format(m.t.xHMpys, {
-                          serverName: x,
-                          channelName: null == v ? void 0 : v.name,
+                          serverName: v,
+                          channelName: null == x ? void 0 : x.name,
                       }),
                   }),
                   (0, r.jsx)(a.Text, {
                       className: g.joinCtaSubtitle,
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: null == y ? void 0 : y.description,
+                      children: null == _ ? void 0 : _.description,
                   }),
                   (0, r.jsx)(p.Z, {
                       guildId: t,

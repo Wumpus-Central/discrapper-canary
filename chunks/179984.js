@@ -28,12 +28,12 @@ var r = n(951288),
     R = n(21023),
     P = n(474936),
     w = n(388032),
-    D = n(17355),
+    D = n(213599),
     x = n(102655),
     L = n(768236),
     j = n(314907),
-    M = n(826701);
-function k(e, t, n) {
+    k = n(826701);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -106,7 +106,7 @@ let Z = () => {
         let t,
             { premiumType: n } = e,
             i = (0, d.ZP)();
-        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? x : L) : (0, l.wj)(i) ? j : M;
+        t = n === P.p9.TIER_0 ? ((0, l.wj)(i) ? x : L) : (0, l.wj)(i) ? j : k;
         let a = (0, E.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
@@ -186,9 +186,9 @@ let Z = () => {
                 headingOverride: x,
                 hidePill: L = !1,
                 selectedPlanColumnClassName: j,
-                selectedPlanTier: M = P.p9.TIER_2,
+                selectedPlanTier: k = P.p9.TIER_2,
             } = e,
-            { analyticsLocations: k } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: M } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             G = (0, s.e7)([g.Z], () => g.Z.hasFetchedSubscriptions()),
             W = (0, h.V)(P.nS),
             K = (0, d.ZP)(),
@@ -302,9 +302,9 @@ let Z = () => {
                   : el
                     ? (0, r.jsx)(Z, {})
                     : (0, r.jsx)(F, {}));
-        let ef = J === P.Si.TIER_0 || $ === P.p9.TIER_0 || M === P.p9.TIER_0;
+        let ef = J === P.Si.TIER_0 || $ === P.p9.TIER_0 || k === P.p9.TIER_0;
         return (0, r.jsx)(_.Gt, {
-            value: k,
+            value: M,
             children: (0, r.jsxs)("div", {
                 className: o()(D.root, a),
                 "data-testid": "v2-marketing-page-comparison-table",

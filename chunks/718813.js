@@ -17,7 +17,7 @@ var r,
     _ = n(819640),
     O = n(585483),
     E = n(981631),
-    y = n(256076);
+    y = n(590939);
 function v(e, t, n) {
     return (
         t in e
@@ -70,22 +70,22 @@ let S = (0, g.Un)({
         webpackId: 989804,
         name: "UserSettings",
     }),
-    N = (0, g.Un)({
+    T = (0, g.Un)({
         createPromise: () => n.e("79835").then(n.bind(n, 72493)),
         webpackId: 72493,
     }),
-    T = (0, g.Un)({
+    N = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("36599"), n.e("58175"), n.e("7654"), n.e("47463"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("36599"), n.e("58175"), n.e("7654"), n.e("8360"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    P = (0, g.Un)({
+    j = (0, g.Un)({
         createPromise: () => n.e("45620").then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
     }),
-    j = (0, g.Un)({
+    P = (0, g.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("1806"),
@@ -95,12 +95,12 @@ let S = (0, g.Un)({
                 n.e("55616"),
                 n.e("7654"),
                 n.e("44156"),
-                n.e("47463"),
+                n.e("8360"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("54408"),
                 n.e("90746"),
-                n.e("88479"),
+                n.e("54052"),
                 n.e("95140"),
             ]).then(n.bind(n, 994763)),
         webpackId: 994763,
@@ -108,10 +108,10 @@ let S = (0, g.Un)({
     }),
     x = {
         [E.S9g.USER_SETTINGS]: () => (0, i.jsx)(S, {}),
-        [E.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(T, {}),
-        [E.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(j, {}),
-        [E.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(P, {}),
-        [E.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(N, {}),
+        [E.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(N, {}),
+        [E.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(P, {}),
+        [E.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(j, {}),
+        [E.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(T, {}),
     },
     A = "SHOWN",
     Z = "HIDDEN",

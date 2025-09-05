@@ -35,14 +35,14 @@ var r = n(951288),
     x = n(132144),
     L = n(131130),
     j = n(458725),
-    M = n(492435),
-    k = n(353926),
+    k = n(492435),
+    M = n(353926),
     U = n(506357),
     G = n(36459),
     B = n(236069),
     Z = n(305325),
-    V = n(281956),
-    F = n(574650),
+    F = n(281956),
+    V = n(574650),
     H = n(665302),
     Y = n(434404),
     W = n(918658),
@@ -75,7 +75,7 @@ var r = n(951288),
     eb = n(610674),
     ey = n(65154),
     eO = n(388032),
-    ev = n(50953);
+    ev = n(522488);
 function eI(e, t, n) {
     return (
         t in e
@@ -223,15 +223,15 @@ let eL = i.memo(function () {
         S = (0, l.e7)([ed.ZP], () => ed.ZP.getNotice()),
         { analyticsLocations: j } = (0, A.ZP)(),
         ef = null == S ? void 0 : S.type,
-        em = (0, V.J)(h);
+        em = (0, F.J)(h);
     i.useEffect(() => {
         null != ef && ew(ef, h);
     }, [ef, h]),
         i.useEffect(() => {
             if (null != S && S.type === eg.kVF.SURVEY && null != S.metadata) {
                 let { metadata: e } = S,
-                    t = k.Z.getUserExperimentDescriptor(e.id);
-                null != t && (0, M.W9)(e.id, t),
+                    t = M.Z.getUserExperimentDescriptor(e.id);
+                null != t && (0, k.W9)(e.id, t),
                     (async () => {
                         var e, t;
                         (null == (e = S.metadata) ? void 0 : e.id) != null &&
@@ -261,17 +261,17 @@ let eL = i.memo(function () {
             dismissibleContent: eL,
             noticeType: S.type,
         });
-    let eM = null == (e = S.metadata) ? void 0 : e.premiumType;
+    let ek = null == (e = S.metadata) ? void 0 : e.premiumType;
     switch (S.type) {
         case eg.kVF.LURKING_GUILD:
             return (0, r.jsx)(K.Z, {});
         case eg.kVF.PENDING_MEMBER:
-            return (0, r.jsx)(F.Z, {});
+            return (0, r.jsx)(V.Z, {});
         case eg.kVF.INVITED_TO_SPEAK:
             return (0, r.jsx)(en.Z, {});
         case eg.kVF.GUILD_RAID_NOTIFICATION:
-            let { dismissUntil: ek } = S.metadata;
-            return (0, r.jsx)(U.Z, { onDismiss: () => eD(ek) });
+            let { dismissUntil: eM } = S.metadata;
+            return (0, r.jsx)(U.Z, { onDismiss: () => eD(eM) });
         case eg.kVF.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: eU } = S.metadata;
             return (0, r.jsxs)(c.qXd, {
@@ -469,13 +469,13 @@ let eL = i.memo(function () {
             return (0, r.jsx)(eN, {});
         case eg.kVF.HARDWARE_MUTE:
             if (null == S.metadata) return null;
-            let { vendor: eV, model: eF } = S.metadata;
+            let { vendor: eF, model: eV } = S.metadata;
             return (0, r.jsxs)(c.qXd, {
                 color: c.DM8.DANGER,
                 children: [
                     eO.intl.format(eO.t.qoDex8, {
-                        vendorName: eV.name,
-                        modelName: eF.name,
+                        vendorName: eF.name,
+                        modelName: eV.name,
                     }),
                     (0, r.jsx)(c.RyX, {
                         onClick: () => {
@@ -483,7 +483,7 @@ let eL = i.memo(function () {
                         },
                     }),
                     (0, r.jsx)(c.u3T, {
-                        href: eF.url,
+                        href: eV.url,
                         target: "_blank",
                         rel: "noreferrer noopener",
                         children: eO.intl.string(eO.t["Yl/Rio"]),
@@ -775,9 +775,9 @@ let eL = i.memo(function () {
         case eg.kVF.PREMIUM_UNCANCEL:
             return (0, r.jsxs)(c.qXd, {
                 color:
-                    eM === eE.p9.TIER_1
+                    ek === eE.p9.TIER_1
                         ? c.DM8.PREMIUM_TIER_1
-                        : eM === eE.p9.TIER_0
+                        : ek === eE.p9.TIER_0
                           ? c.DM8.PREMIUM_TIER_0
                           : c.DM8.PREMIUM_TIER_2,
                 children: [
@@ -797,9 +797,9 @@ let eL = i.memo(function () {
                         color: "currentColor",
                         className: ev.premiumIcon,
                     }),
-                    eM === eE.p9.TIER_1
+                    ek === eE.p9.TIER_1
                         ? eO.intl.formatToPlainString(eO.t.fXv4ws, { daysLeft: S.metadata.daysLeft })
-                        : eM === eE.p9.TIER_0
+                        : ek === eE.p9.TIER_0
                           ? eO.intl.formatToPlainString(eO.t.ZOHZMj, { daysLeft: S.metadata.daysLeft })
                           : eO.intl.formatToPlainString(eO.t.outyHh, { daysLeft: S.metadata.daysLeft }),
                     (0, r.jsx)(c.NoS, {
@@ -812,7 +812,7 @@ let eL = i.memo(function () {
                                     : e.currentPeriodEnd,
                             ),
                                 (0, c.ZDy)(async () => {
-                                    let { default: e } = await Promise.all([n.e("84992"), n.e("56158")]).then(
+                                    let { default: e } = await Promise.all([n.e("84992"), n.e("67569")]).then(
                                         n.bind(n, 561623),
                                     );
                                     return (t) =>
@@ -820,7 +820,7 @@ let eL = i.memo(function () {
                                             e,
                                             eA(eT({}, t), {
                                                 daysLeft: S.metadata.daysLeft,
-                                                premiumType: eM,
+                                                premiumType: ek,
                                                 analyticsSource: "Nag Bar",
                                                 premiumSubscription: S.metadata.premiumSubscription,
                                             }),
@@ -828,9 +828,9 @@ let eL = i.memo(function () {
                                 });
                         },
                         children:
-                            eM === eE.p9.TIER_1
+                            ek === eE.p9.TIER_1
                                 ? eO.intl.string(eO.t.BkbUPD)
-                                : eM === eE.p9.TIER_0
+                                : ek === eE.p9.TIER_0
                                   ? eO.intl.string(eO.t.Px978f)
                                   : eO.intl.string(eO.t.LW5tCA),
                     }),
@@ -934,9 +934,9 @@ let eL = i.memo(function () {
                             );
                         },
                     }),
-                    eM === eE.p9.TIER_1
+                    ek === eE.p9.TIER_1
                         ? eO.intl.formatToPlainString(eO.t.b6QUvb, { daysLeft: S.metadata.daysLeft })
-                        : eM === eE.p9.TIER_0
+                        : ek === eE.p9.TIER_0
                           ? eO.intl.formatToPlainString(eO.t["tURZ/P"], { daysLeft: S.metadata.daysLeft })
                           : eO.intl.formatToPlainString(eO.t.AyC74O, { daysLeft: S.metadata.daysLeft }),
                     (0, r.jsx)(c.NoS, {
@@ -951,9 +951,9 @@ let eL = i.memo(function () {
                                 I.Z.open(eg.oAB.SUBSCRIPTIONS);
                         },
                         children:
-                            eM === eE.p9.TIER_1
+                            ek === eE.p9.TIER_1
                                 ? eO.intl.string(eO.t.lboF5O)
-                                : eM === eE.p9.TIER_0
+                                : ek === eE.p9.TIER_0
                                   ? eO.intl.string(eO.t["4UPwOj"])
                                   : eO.intl.string(eO.t["P/VvGR"]),
                     }),

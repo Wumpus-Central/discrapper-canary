@@ -1,21 +1,21 @@
 n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(650774),
     l = n(626135),
     c = n(797670),
     u = n(304432),
     d = n(981631),
-    f = n(933554),
+    f = n(893867),
     _ = n(388032),
-    p = n(378976);
+    p = n(62023);
 function h(e) {
     let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: i } = e,
-        l = (0, o.e7)([s.Z], () => s.Z.getMemberCount(t.id));
+        l = (0, a.e7)([s.Z], () => s.Z.getMemberCount(t.id));
     return (0, r.jsx)("li", {
-        children: (0, r.jsx)(a.j7V, {
+        children: (0, r.jsx)(o.j7V, {
             className: p.guildRowWrapper,
             value: !n,
             onChange: (e) =>
@@ -36,7 +36,7 @@ function h(e) {
                     (0, r.jsxs)("div", {
                         className: p.guildRowTextContainer,
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 lineClamp: 1,
                                 color: "text-default",
@@ -46,7 +46,7 @@ function h(e) {
                                 className: p.memberDetailsContainer,
                                 children: [
                                     (0, r.jsx)("div", { className: p.memberCountDot }),
-                                    (0, r.jsx)(a.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-secondary",
                                         children: _.intl.format(_.t.zRl6XV, { count: l }),
@@ -65,7 +65,7 @@ let m = function () {
             guilds: e,
             searchQuery: t,
             setSearchQuery: n,
-            sortOrder: o,
+            sortOrder: a,
             setSortOrder: s,
             hasActivityRestrictedGuilds: c,
             onToggleAllActivityRestrictedGuilds: m,
@@ -77,7 +77,7 @@ let m = function () {
         O = () => {
             l.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                 interaction: "search_cleared",
-                sort_order: o,
+                sort_order: a,
                 activity_restricted_guild_count: b,
                 total_guild_count: y,
             }),
@@ -90,21 +90,21 @@ let m = function () {
             (0, r.jsxs)("div", {
                 className: p.headerContainer,
                 children: [
-                    (0, r.jsx)(a.E1j, {
+                    (0, r.jsx)(o.E1j, {
                         query: t,
                         onChange: n,
                         onClear: O,
                         onFocus: () =>
                             l.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: "search_focused",
-                                sort_order: o,
+                                sort_order: a,
                                 activity_restricted_guild_count: b,
                                 total_guild_count: y,
                             }),
                         onBlur: () =>
                             l.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: "search_blurred",
-                                sort_order: o,
+                                sort_order: a,
                                 activity_restricted_guild_count: b,
                                 total_guild_count: y,
                             }),
@@ -119,7 +119,7 @@ let m = function () {
                         (0, r.jsxs)("div", {
                             className: p.controlsContainer,
                             children: [
-                                (0, r.jsx)(a.PhF, {
+                                (0, r.jsx)(o.PhF, {
                                     variant: "text-only",
                                     popoutWidth: "auto",
                                     options: [
@@ -149,10 +149,10 @@ let m = function () {
                                         }),
                                             s(e);
                                     },
-                                    isSelected: (e) => o === e,
+                                    isSelected: (e) => a === e,
                                     serialize: String,
                                 }),
-                                (0, r.jsx)(a.Avr, {
+                                (0, r.jsx)(o.Avr, {
                                     variant: "primary",
                                     onClick: m,
                                     text: c ? _.intl.string(_.t["7lxcLC"]) : _.intl.string(_.t.zh6UEh),
@@ -161,7 +161,7 @@ let m = function () {
                         }),
                 ],
             }),
-            (0, r.jsx)(a.nn4, {
+            (0, r.jsx)(o.nn4, {
                 "aria-live": "polite",
                 role: "region",
                 children: _.intl.format(f.default.EvzDfX, { count: e.length }),
@@ -174,7 +174,7 @@ let m = function () {
                     0 === e.length &&
                         (0, r.jsx)("div", {
                             className: p.noResultsContainer,
-                            children: (0, r.jsx)(a.Text, {
+                            children: (0, r.jsx)(o.Text, {
                                 className: p.noResultsText,
                                 variant: "text-lg/medium",
                                 children: _.intl.string(_.t["Xe+fJC"]),

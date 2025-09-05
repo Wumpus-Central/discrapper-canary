@@ -17,14 +17,14 @@ var r = n(951288),
     m = n(100527),
     g = n(906732),
     b = n(213609),
-    _ = n(795318),
-    y = n(670188),
+    y = n(795318),
+    _ = n(670188),
     C = n(314897),
-    x = n(271383),
-    v = n(5192),
+    v = n(271383),
+    x = n(5192),
     O = n(590415),
     j = n(354459),
-    E = n(383519);
+    E = n(28594);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -90,7 +90,7 @@ let P = i.memo(function (e) {
                     className: E.text,
                     variant: "text-sm/normal",
                     color: "header-primary",
-                    children: v.ZP.getName(t, n, i),
+                    children: x.ZP.getName(t, n, i),
                 }),
                 l
                     ? (0, r.jsx)(p.$Eu, {
@@ -141,16 +141,16 @@ let P = i.memo(function (e) {
     N = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
-            v = l.getGuildId(),
+            x = l.getGuildId(),
             O = C.default.getId(),
             { newestAnalyticsLocation: P } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             T = (0, f.bp)(),
-            N = (0, u.e7)([x.ZP], () => {
+            N = (0, u.e7)([v.ZP], () => {
                 var e;
-                return null != v && (null == (e = x.ZP.getMember(v, o.id)) ? void 0 : e.premiumSince) != null;
-            }, [v, o.id]),
+                return null != x && (null == (e = v.ZP.getMember(x, o.id)) ? void 0 : e.premiumSince) != null;
+            }, [x, o.id]),
             A = i.useRef(null);
-        s()(null != v, "Channel cannot be guildless");
+        s()(null != x, "Channel cannot be guildless");
         let w = i.useCallback(
             (e) => {
                 (0, b.h)({
@@ -170,19 +170,19 @@ let P = i.memo(function (e) {
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
                                     I(S({}, t), {
                                         user: o,
-                                        guildId: v,
+                                        guildId: x,
                                         channel: l,
                                         showMediaItems: !0,
                                         showStageChannelItems: !0,
                                         showChatItems: !1,
-                                        onInteraction: (0, _.u)("GuildChannelUserContextMenu", P, {
+                                        onInteraction: (0, y.u)("GuildChannelUserContextMenu", P, {
                                             targetUserId: o.id,
                                             tileType: j.TH.USER,
                                         }),
@@ -192,9 +192,9 @@ let P = i.memo(function (e) {
                         { context: T },
                     );
             },
-            [o, O, T, v, l, P],
+            [o, O, T, x, l, P],
         );
-        return (0, r.jsx)(y.Z, {
+        return (0, r.jsx)(_.Z, {
             targetElementRef: A,
             user: o,
             guildId: l.guild_id,
@@ -218,7 +218,7 @@ let P = i.memo(function (e) {
                         {
                             children: (0, r.jsx)(Z, {
                                 participant: t,
-                                guildId: v,
+                                guildId: x,
                                 channel: l,
                                 isPremium: N,
                             }),

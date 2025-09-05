@@ -26,7 +26,7 @@ var r = n(951288),
     v = n(699516),
     y = n(594174),
     O = n(388032),
-    _ = n(9226);
+    _ = n(444573);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,8 +86,8 @@ function N(e) {
 function S(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let Z = (0, p.hQ)(),
-    D = (0, p.hQ)(),
+let D = (0, p.hQ)(),
+    Z = (0, p.hQ)(),
     R = "text-sm/medium";
 function L(e) {
     return 1 === e.type;
@@ -307,7 +307,7 @@ function k(e) {
             },
             [z, j],
         ),
-        X = l.useCallback(
+        K = l.useCallback(
             (e) => {
                 let { section: n, row: l } = e,
                     o = F[n][l];
@@ -328,7 +328,7 @@ function k(e) {
             },
             [t, W, F],
         ),
-        J = l.useMemo(
+        Q = l.useMemo(
             () =>
                 v.map((e) => {
                     var n;
@@ -343,7 +343,7 @@ function k(e) {
                 className: _.searchBox,
                 children: [
                     (0, r.jsx)(d.Z, {
-                        tags: J,
+                        tags: Q,
                         maxHeight: 98,
                         size: d.Z.Sizes.MEDIUM,
                         query: y,
@@ -386,8 +386,8 @@ function k(e) {
                         placeholder: null != b ? b : O.intl.string(O.t.uqHLzc),
                         sections: [v.length],
                         inputProps: {
-                            "aria-labelledby": Z,
-                            "aria-controls": D,
+                            "aria-labelledby": D,
+                            "aria-controls": Z,
                             "aria-expanded": A,
                             onFocus: (e) => Y(!0, 2, e),
                             onBlur: (e) => Y(!1, 2, e),
@@ -403,7 +403,7 @@ function k(e) {
                                 className: _.resultsListContainer,
                                 innerClassName: _.resultsList,
                                 sections: q,
-                                renderRow: X,
+                                renderRow: K,
                                 rowHeight: 34,
                                 renderSection: (e) => {
                                     let { section: t } = e;
@@ -444,7 +444,7 @@ function k(e) {
                                 footerHeight: (e) => (0 === e ? (0 === q[1] && q[0] > 0 ? 0 : 32) : 0),
                                 role: void 0,
                                 innerRole: "listbox",
-                                innerId: D,
+                                innerId: Z,
                                 innerAriaOrientation: "vertical",
                             }),
                         }),

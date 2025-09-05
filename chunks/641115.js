@@ -18,15 +18,15 @@ var r = n(951288),
     v = n(944486),
     j = n(594174),
     b = n(74538),
-    C = n(451467),
-    S = n(122186),
-    y = n(37113),
+    y = n(451467),
+    C = n(122186),
+    S = n(37113),
     O = n(981631),
-    Z = n(388032),
-    w = n(542257),
-    I = n(381994),
-    N = n(197571);
-function T(e) {
+    w = n(388032),
+    Z = n(79985),
+    I = n(763021),
+    N = n(10198);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function T(e) {
     }
     return e;
 }
-function P(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function E(e) {
     let { analyticsLocation: t } = e;
     (0, u.ZDy)(async () => {
         let { default: e } = await n.e("28479").then(n.bind(n, 78865));
-        return (n) => (0, r.jsx)(e, P(T({}, n), { analyticsSource: t }));
+        return (n) => (0, r.jsx)(e, T(P({}, n), { analyticsSource: t }));
     });
 }
 function R() {
@@ -88,7 +88,7 @@ function R() {
             (0, r.jsx)(u.Text, {
                 className: I.upsellText,
                 variant: "text-sm/medium",
-                children: Z.intl.string(Z.t.sEAnVF),
+                children: w.intl.string(w.t.sEAnVF),
             }),
         ],
     });
@@ -112,7 +112,7 @@ function A(e) {
             ? ((t = (0, r.jsx)(u.DY3, {
                   tooltipClassName: I.tooltip,
                   spacing: 6,
-                  "aria-label": Z.intl.string(Z.t.sEAnVF),
+                  "aria-label": w.intl.string(w.t.sEAnVF),
                   text: (0, r.jsx)(R, {}),
                   children: (0, r.jsx)("div", {
                       className: I.textContainer,
@@ -171,18 +171,18 @@ function k(e) {
         { location: G } = (0, m.O)(),
         U = (0, h.Zq)({ autoTrackExposure: !1 }),
         W = (0, g.B4)(),
-        F = !B && !U,
-        [z, H] = i.useState(!1),
-        V = M ? y.z8 : y.WC,
-        J = P(T({}, G), { section: O.jXE.STREAM_SETTINGS }),
-        Y = (0, r.jsx)(d.hE, {
+        z = !B && !U,
+        [F, H] = i.useState(!1),
+        V = M ? S.z8 : S.WC,
+        Y = T(P({}, G), { section: O.jXE.STREAM_SETTINGS }),
+        J = (0, r.jsx)(d.hE, {
             buttons: V.map((e) =>
                 A({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, C.Z)(n, e.value, s, D, k, L),
-                    needsDemo: W && e.value !== y.LY.RESOLUTION_720,
-                    analyticsLocation: J,
+                    needsPremium: !(0, y.Z)(n, e.value, s, D, k, L),
+                    needsDemo: W && e.value !== S.LY.RESOLUTION_720,
+                    analyticsLocation: Y,
                     onClick: () => o(e.value),
                     onClose: t,
                     setIsHovering: H,
@@ -190,13 +190,13 @@ function k(e) {
             ),
         }),
         X = (0, r.jsx)(d.hE, {
-            buttons: y.k0.map((e) =>
+            buttons: S.k0.map((e) =>
                 A({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, C.Z)(n, l, e.value, D, k, L),
-                    needsDemo: W && e.value === y.ws.FPS_60,
-                    analyticsLocation: J,
+                    needsPremium: !(0, y.Z)(n, l, e.value, D, k, L),
+                    needsDemo: W && e.value === S.ws.FPS_60,
+                    analyticsLocation: Y,
                     onClick: () => x(e.value),
                     onClose: t,
                     setIsHovering: H,
@@ -205,45 +205,45 @@ function k(e) {
         }),
         K = [
             {
-                value: y.tI.PRESET_VIDEO,
-                label: Z.intl.string(Z.t.HcwHc3),
+                value: S.tI.PRESET_VIDEO,
+                label: w.intl.string(w.t.HcwHc3),
             },
             ...(M
                 ? []
                 : [
                       {
-                          value: y.tI.PRESET_DOCUMENTS,
-                          label: Z.intl.string(Z.t["/RfohI"]),
+                          value: S.tI.PRESET_DOCUMENTS,
+                          label: w.intl.string(w.t["/RfohI"]),
                       },
                   ]),
             {
-                value: y.tI.PRESET_CUSTOM,
-                label: Z.intl.string(Z.t["+eOtrK"]),
+                value: S.tI.PRESET_CUSTOM,
+                label: w.intl.string(w.t["+eOtrK"]),
             },
         ],
         q =
-            n === y.tI.PRESET_DOCUMENTS
+            n === S.tI.PRESET_DOCUMENTS
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(p.Z, {
                               children: (0, r.jsx)(u.xJW, {
-                                  title: Z.intl.string(Z.t.rHyPXl),
-                                  titleClassName: w.formItemTitleSlim,
+                                  title: w.intl.string(w.t.rHyPXl),
+                                  titleClassName: Z.formItemTitleSlim,
                                   className: I.documentModeGroup,
                                   children: (0, r.jsx)(u.Text, {
                                       variant: "text-xs/normal",
-                                      children: Z.intl.format(Z.t["U+hmam"], { fps: s }),
+                                      children: w.intl.format(w.t["U+hmam"], { fps: s }),
                                   }),
                               }),
                           }),
-                          F
-                              ? (0, r.jsx)(S.Z, {
-                                    message: Z.intl.string(Z.t.deDogI),
+                          z
+                              ? (0, r.jsx)(C.Z, {
+                                    message: w.intl.string(w.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                 })
                               : null,
-                          W && (0, r.jsx)(S.c, {}),
+                          W && (0, r.jsx)(C.c, {}),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -251,36 +251,36 @@ function k(e) {
                           (0, r.jsxs)(p.Z, {
                               children: [
                                   (0, r.jsx)(u.xJW, {
-                                      title: Z.intl.string(Z.t.rHyPXl),
+                                      title: w.intl.string(w.t.rHyPXl),
                                       className: I.settingsGroup,
-                                      titleClassName: w.formItemTitleSlim,
-                                      children: Y,
+                                      titleClassName: Z.formItemTitleSlim,
+                                      children: J,
                                   }),
                                   (0, r.jsx)(u.xJW, {
-                                      title: Z.intl.string(Z.t.SkkeIi),
+                                      title: w.intl.string(w.t.SkkeIi),
                                       className: I.settingsGroup,
-                                      titleClassName: w.formItemTitleSlim,
+                                      titleClassName: Z.formItemTitleSlim,
                                       children: X,
                                   }),
                               ],
                           }),
-                          F
-                              ? (0, r.jsx)(S.Z, {
+                          z
+                              ? (0, r.jsx)(C.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: E,
-                                    glow: z,
+                                    glow: F,
                                 })
                               : null,
-                          W && (0, r.jsx)(S.c, {}),
+                          W && (0, r.jsx)(C.c, {}),
                       ],
                   });
     return (0, r.jsx)(
         f.Z,
-        P(T({}, J), {
+        T(P({}, Y), {
             children: (0, r.jsx)(u.xJW, {
-                title: Z.intl.string(Z.t.ax4FnZ),
-                titleClassName: w.formItemTitle,
-                className: w.modalContent,
+                title: w.intl.string(w.t.ax4FnZ),
+                titleClassName: Z.formItemTitle,
+                className: Z.modalContent,
                 children: (0, r.jsxs)("div", {
                     className: I.qualitySettingsContainer,
                     children: [

@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(981631),
     v = n(474936),
     I = n(671955),
-    T = n(66856);
+    T = n(111886);
 function S(e, t, n) {
     return (
         t in e
@@ -89,16 +89,16 @@ function P(e) {
         { theme: x } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: j } = (0, m.KZ)(),
-        M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        k = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
+        M = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
         { live: U } = (0, g.Z)(t.id),
         [G] = U,
         { status: B, isMobileOnline: Z } = (0, s.cj)([_.Z], () => ({
             status: (0, c.Z)(G) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id),
         })),
-        V = void 0 !== D ? D : B,
-        F = [I.l.MODAL, I.l.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        F = void 0 !== D ? D : B,
+        V = [I.l.MODAL, I.l.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
         H = o()(T.avatar, w),
         {
             avatarDecorationSrc: Y,
@@ -107,17 +107,17 @@ function P(e) {
         } = (0, E.Z)({
             userId: t.id,
             guildId: null != n ? n.guildId : a,
-            size: F,
+            size: V,
             animateOnHover: C,
         }),
         z = (0, r.jsx)(R, {
             src: W,
             avatarDecoration: Y,
-            size: F,
+            size: V,
             "aria-label": t.username,
             imageClassName: null != P ? T.overlay : void 0,
-            status: k ? O.Skl.UNKNOWN : V,
-            statusBackdropColor: M && !k ? (0, l.QFD)(x) : void 0,
+            status: M ? O.Skl.UNKNOWN : F,
+            statusBackdropColor: k && !M ? (0, l.QFD)(x) : void 0,
             isMobile: Z,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,

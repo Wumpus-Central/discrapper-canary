@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(726985),
     m = n(981631),
     g = n(388032),
-    E = n(197571);
+    E = n(10198);
 function b() {
     let e = p.fq.useSetting(),
         t = p.eR.useSetting(),
@@ -26,8 +26,8 @@ function b() {
         O = p.H1.useSetting(),
         v = p.ev.useSetting(),
         I = p.x4.useSetting(),
-        S = p.RS.useSetting(),
-        T = p.NA.useSetting(),
+        T = p.RS.useSetting(),
+        S = p.NA.useSetting(),
         A = p.nc.useSetting(),
         { analyticsLocations: C } = (0, c.ZP)(l.Z.TEXT_AND_IMAGES),
         N = () =>
@@ -74,7 +74,7 @@ function b() {
                         setting: h.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, r.jsx)(s.j7V, {
                             className: a()(E.marginTop8, E.marginBottom20),
-                            value: S,
+                            value: T,
                             onChange: p.RS.updateSetting,
                             children: g.intl.string(g.t.U47N1t),
                         }),
@@ -112,7 +112,7 @@ function b() {
                         setting: h.s6.CHAT_EMBEDS_LINK_PREVIEWS,
                         children: (0, r.jsx)(s.j7V, {
                             className: a()(E.marginTop8, E.marginBottom40),
-                            value: T,
+                            value: S,
                             onChange: p.NA.updateSetting,
                             children: g.intl.string(g.t.xX0ZTE),
                         }),

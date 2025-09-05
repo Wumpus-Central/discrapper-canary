@@ -16,21 +16,21 @@ var r = n(951288),
     v = n(124368),
     x = n(981631),
     p = n(388032),
-    b = n(715);
+    b = n(767146);
 function Z(e) {
     let { channel: t, className: n, onClose: a } = e,
         Z = (0, o.e7)([d.Z], () => d.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),
-        O = (0, h.cD)(t),
-        w = () => {
+        y = (0, h.cD)(t),
+        O = () => {
             a(), (0, j.R6)(t, void 0, "Thread Browser Empty State");
         },
-        N = l.useCallback(
+        S = l.useCallback(
             (e, t) => {
                 a(), (0, j.ok)(e, !t, v.on.BROWSER);
             },
             [a],
         ),
-        S = (function (e, t) {
+        N = (function (e, t) {
             let [n, r] = l.useState(""),
                 [a, s] = l.useState(!1),
                 [o, i] = l.useState(!1),
@@ -82,7 +82,7 @@ function Z(e) {
                                   children: [
                                       (0, r.jsx)("div", { className: b.divider }),
                                       (0, r.jsx)(
-                                          y,
+                                          w,
                                           (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -107,13 +107,13 @@ function Z(e) {
                                                       });
                                               }
                                               return e;
-                                          })({}, S),
+                                          })({}, N),
                                       ),
                                   ],
                               })
                             : null,
                         (0, r.jsx)("div", { className: b.spacer }),
-                        O
+                        y
                             ? (0, r.jsx)("div", {
                                   className: b.createButton,
                                   children: (0, r.jsx)(i.zx, {
@@ -136,23 +136,23 @@ function Z(e) {
                         }),
                     ],
                 }),
-                children: S.hasResults
+                children: N.hasResults
                     ? (0, r.jsx)(m.Z, {
                           channel: t,
-                          startThread: w,
-                          goToThread: N,
-                          threadIds: S.results,
+                          startThread: O,
+                          goToThread: S,
+                          threadIds: N.results,
                       })
                     : (0, r.jsx)(f.Z, {
                           channel: t,
-                          startThread: w,
-                          goToThread: N,
+                          startThread: O,
+                          goToThread: S,
                       }),
             }),
         })
     );
 }
-function y(e) {
+function w(e) {
     let { query: t, setQuery: n, submit: l, isLoading: a } = e;
     return (0, r.jsx)(c.E1j, {
         size: "sm",

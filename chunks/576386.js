@@ -9,7 +9,7 @@ var t = n(951288),
     c = n(377171),
     u = n(594174),
     x = n(388032),
-    p = n(24391);
+    p = n(801707);
 let m = (e) => {
         var l;
         let { nameplate: n, isPurchased: s = !1, isSelected: m = !1, onClick: v } = e,

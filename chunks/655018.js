@@ -20,8 +20,8 @@ var r = n(951288),
     v = n(505905),
     x = n(231338),
     O = n(388032),
-    j = n(787267),
-    E = n(334405);
+    j = n(34101),
+    E = n(515527);
 function S(e) {
     var t, n;
     let { channel: l, setPopoutRef: o } = e,
@@ -72,7 +72,7 @@ function S(e) {
             },
             [N, w, U],
         ),
-        F = i.useCallback(() => {
+        G = i.useCallback(() => {
             let e = null,
                 t = null;
             do {
@@ -130,7 +130,7 @@ function S(e) {
                             },
                             trailing: {
                                 icon: d.$2U,
-                                onClick: F,
+                                onClick: G,
                                 "aria-label": O.intl.string(O.t["5UAi5+"]),
                             },
                         }),

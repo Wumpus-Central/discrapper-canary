@@ -6,15 +6,15 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    o = n(692547),
-    s = n(481060),
+    s = n(692547),
+    o = n(481060),
     a = n(388905),
     c = n(600164),
     u = n(981631),
     d = n(388032),
-    h = n(736688),
-    f = n(149715),
-    p = n(197571);
+    h = n(108103),
+    f = n(465106),
+    p = n(10198);
 function g(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
@@ -28,9 +28,9 @@ function g(e) {
                 className: p.marginBottom40,
                 children: d.intl.string(d.t["poAv6+"]),
             }),
-            (0, r.jsxs)(s.Zbd, {
+            (0, r.jsxs)(o.Zbd, {
                 className: h.card,
-                type: s.Zbd.Types.CUSTOM,
+                type: o.Zbd.Types.CUSTOM,
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
@@ -48,11 +48,11 @@ function g(e) {
                         align: c.Z.Align.STRETCH,
                         grow: 0,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 tag: "strong",
                                 className: h.buttonTitle,
                                 variant: "text-md/normal",
-                                style: { color: o.Z.unsafe_rawColors.PRIMARY_300.css },
+                                style: { color: s.Z.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
                             (0, r.jsx)(a.zx, {

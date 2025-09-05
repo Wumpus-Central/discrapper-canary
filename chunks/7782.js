@@ -14,21 +14,21 @@ var r = n(951288),
     m = n(486622),
     g = n(488634),
     b = n(86203),
-    _ = n(6025),
-    y = n(621853),
+    y = n(6025),
+    _ = n(621853),
     C = n(892001),
-    x = n(433355),
-    v = n(699516),
+    v = n(433355),
+    x = n(699516),
     O = n(594174),
     j = n(768581),
     E = n(525541),
     S = n(981631),
     I = n(228168),
     P = n(388032),
-    Z = n(291738);
+    Z = n(90985);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
-            l = (0, s.e7)([y.Z], () => y.Z.getMutualGuilds(t), [t]),
+            l = (0, s.e7)([_.Z], () => _.Z.getMutualGuilds(t), [t]),
             a = i.useMemo(
                 () =>
                     null != l
@@ -202,10 +202,10 @@ let T = (e) => {
                 (0, c.showToast)((0, c.createToast)(P.intl.string(P.t.a2j0ho), c.ToastType.FAILURE));
             }, []),
             a = i.useCallback(() => {
-                _.Z.closeChannelSidebar(x.uZ);
+                y.Z.closeChannelSidebar(v.uZ);
             }, []),
             o = i.useCallback(() => {
-                _.Z.closeChannelSidebar(x.uZ);
+                y.Z.closeChannelSidebar(v.uZ);
             }, []),
             {
                 acceptMessageRequest: s,
@@ -246,11 +246,11 @@ let T = (e) => {
         let { userId: t, channel: n, showingBanner: i } = e,
             { channelId: l } = (0, g._)(),
             u = (0, s.e7)([f.Z], () => null != l && f.Z.isSpam(l), [l]),
-            d = (0, s.e7)([v.Z], () => v.Z.getRelationshipType(t), [t]),
+            d = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
             p = n.id === l,
             h = !o.tq && !p,
             m = !!o.tq || p || u,
-            _ =
+            y =
                 u || p
                     ? (0, r.jsxs)("div", {
                           className: Z.inline,
@@ -278,7 +278,7 @@ let T = (e) => {
                                   }),
                           ],
                       }),
-            y =
+            _ =
                 d !== S.OGo.PENDING_INCOMING || u || p
                     ? null
                     : (0, r.jsx)(c.Text, {
@@ -299,7 +299,7 @@ let T = (e) => {
                 !m && (0, r.jsx)("div", { className: Z.divider }),
                 (0, r.jsxs)("div", {
                     className: a()(Z.inline, Z.wrap),
-                    children: [y, _],
+                    children: [_, y],
                 }),
             ],
         });

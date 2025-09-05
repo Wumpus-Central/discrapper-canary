@@ -18,7 +18,7 @@ var i = n(442837),
     _ = n(332712),
     O = n(81471),
     E = n(388032),
-    y = n(79072);
+    y = n(418337);
 let v = (e) => {
         let { userId: t } = e,
             n = (0, _.O)(t);
@@ -55,7 +55,7 @@ function C(e) {
         _ = (0, i.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
         C = !m && f,
         S = (0, b.c)(n),
-        { avatarDecorationSrc: N } = (0, d.Z)({
+        { avatarDecorationSrc: T } = (0, d.Z)({
             user: c,
             size: (0, u.y9)(l.EFr.SIZE_40),
             onlyAnimateOnHover: !0,
@@ -65,7 +65,7 @@ function C(e) {
             (0, r.jsx)(I, {
                 className: y.avatar,
                 src: (0, p.x)(n, 40, C),
-                avatarDecoration: N,
+                avatarDecoration: T,
                 size: l.EFr.SIZE_40,
                 "aria-label": null != (t = null == c ? void 0 : c.username) ? t : E.intl.string(E.t["30mdIy"]),
             }),

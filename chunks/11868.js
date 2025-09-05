@@ -31,7 +31,7 @@ var r = n(951288),
     N = n(139712),
     R = n(765305),
     P = n(388032),
-    w = n(182279);
+    w = n(98435);
 let D = (e, t) => (n) => {
         n.stopPropagation(), d.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
@@ -49,7 +49,7 @@ let D = (e, t) => (n) => {
         return () => {};
     },
     j = (e, t) => t && [R.WX.STAGE_INSTANCE, R.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
-    M = i.memo(function (e) {
+    k = i.memo(function (e) {
         var t;
         let { guild: n, guildScheduledEvent: a, channel: o, isMember: l } = e,
             d = (0, s.e7)([m.Z], () => {
@@ -133,7 +133,7 @@ let D = (e, t) => (n) => {
             ],
         });
     }),
-    k = i.memo(function (e) {
+    M = i.memo(function (e) {
         let {
                 guildId: t,
                 guildScheduledEventId: n,
@@ -254,13 +254,13 @@ let D = (e, t) => (n) => {
                     (0, r.jsxs)("div", {
                         className: w.footerContainer,
                         children: [
-                            (0, r.jsx)(M, {
+                            (0, r.jsx)(k, {
                                 guild: a,
                                 channel: s,
                                 guildScheduledEvent: n,
                                 isMember: l,
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(M, {
                                 isActive: y,
                                 isEnded: C,
                                 isMember: l,

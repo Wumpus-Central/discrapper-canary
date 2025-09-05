@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(358085),
     b = n(288406),
     y = n(388032),
-    O = n(999642);
+    O = n(39162);
 function v(e, t, n) {
     return (
         t in e
@@ -188,21 +188,21 @@ function P(e) {
             isLargeSize: x,
             pulseItemKey: L,
             allowAnimatedEmoji: j,
-            setPulseItemKey: M,
-            messageId: k,
+            setPulseItemKey: k,
+            messageId: M,
             isBurstReaction: U,
             rowPosition: G,
             inNitroLockedSection: B,
         } = e,
-        [Z, V] = i.useState(""),
-        F = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        [Z, F] = i.useState(""),
+        V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         H = (0, s.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(p), [p]),
         Y = i.useRef(null),
         { emoji: W, size: K, isDisabled: z, columnIndex: q } = t,
         X = (e) => {
             if ((e.stopPropagation(), O.current || v.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && M(a),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && k(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 b(t, {
                     isFinalSelection: !e.shiftKey,
@@ -250,16 +250,16 @@ function P(e) {
                             if (
                                 null != Y.current &&
                                 null != G &&
-                                null != k &&
+                                null != M &&
                                 !e.shiftKey &&
                                 null != W.name &&
                                 U &&
-                                !F &&
+                                !V &&
                                 j
                             ) {
                                 let e = null == W.id ? _.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();
-                                (t.x = G.x + (q + 1) * K), V(N(q, f)), (0, m.U)(k, e, W.id, t);
+                                (t.x = G.x + (q + 1) * K), F(N(q, f)), (0, m.U)(M, e, W.id, t);
                             }
                             X(e);
                         },

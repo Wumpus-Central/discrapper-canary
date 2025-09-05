@@ -26,8 +26,8 @@ var r = n(951288),
     I = n(141321),
     C = n(819439),
     S = n(296241),
-    N = n(165017),
-    T = n(984802),
+    T = n(165017),
+    N = n(984802),
     j = n(592125),
     P = n(944486),
     x = n(914010),
@@ -38,7 +38,7 @@ var r = n(951288),
     R = n(950796),
     D = n(176505),
     k = n(741764),
-    M = n(82504);
+    M = n(851352);
 let U = (0, o.U)(() => ({ isOpen: !0 }));
 function G(e) {
     let { selectedChannelId: t, withFastTravel: n, focusSectionProps: i } = e,
@@ -47,7 +47,7 @@ function G(e) {
                 n = j.Z.getChannel(t);
             return null != e ? e : null == n ? void 0 : n.guild_id;
         }),
-        a = (0, N.H)({
+        a = (0, T.H)({
             guildId: l,
             channelId: t,
         });
@@ -93,11 +93,11 @@ let V = i.memo(function () {
         { backForwardButtons: o, titlebarIconSize: g } = (0, p.T)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: C } = u.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         S = null !== e && t === E.u3.TITLE_BAR_LEFT,
-        N = null === e;
+        T = null === e;
     i.useLayoutEffect(() => {
         Z.ZP.setMinimumSize(k.J, k.N);
     }, []);
-    let j = (0, T.Ll)(),
+    let j = (0, N.Ll)(),
         P = (0, s.e7)([A.Z, v.Z], () => (0, w.rB)()),
         x = (function (e) {
             let {
@@ -123,7 +123,7 @@ let V = i.memo(function () {
             showBackForwardButtons: o,
             showNotificationsInbox: S,
             titlebarFastTravel: n,
-            showRecentsButton: N,
+            showRecentsButton: T,
         });
     if (P) return null;
     let L = a()(M.button, { [M.smallButton]: "sm" === g });
@@ -156,7 +156,7 @@ let V = i.memo(function () {
                                     canShowReminder: !0,
                                     className: L,
                                 }),
-                                N &&
+                                T &&
                                     (0, r.jsx)(
                                         I.Z,
                                         ((i = (function (e) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(539854), n(953529);
+n.d(t, { Z: () => S }), n(388685), n(539854), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(243814),
@@ -19,7 +19,7 @@ var i = n(951288),
     v = n(725875),
     y = n(981631),
     O = n(388032),
-    _ = n(85541);
+    _ = n(156065);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -106,17 +106,17 @@ function N(e) {
         t),
     );
 }
-function Z(e) {
+function S(e) {
     var t;
     let {
             guild: n,
             applicationIntegration: s,
             selectableWebhookChannels: d,
-            editedWebhook: Z,
-            errors: S,
+            editedWebhook: S,
+            errors: Z,
             canNavigate: w,
         } = e,
-        { application: I, integration: T, webhooks: P } = s,
+        { application: I, integration: P, webhooks: T } = s,
         [E, k] = (0, a.Wu)(
             [m.Z],
             () => [m.Z.can(y.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(y.Plq.MANAGE_GUILD, I.bot.id, n)],
@@ -132,32 +132,32 @@ function Z(e) {
                             {
                                 guild: n,
                                 application: I,
-                                integration: T,
+                                integration: P,
                             },
                             e,
                         ),
                     ),
                 );
-        }, [I, w, n, T]),
+        }, [I, w, n, P]),
         R = r.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: O.intl.formatToPlainString(O.t.gcdJ8P, { timestamp: g.default.extractTimestamp(T.id) }),
+                    text: O.intl.formatToPlainString(O.t.gcdJ8P, { timestamp: g.default.extractTimestamp(P.id) }),
                 },
             ];
             return (
-                null != T.user &&
+                null != P.user &&
                     e.push({
                         icon: o.tBG,
-                        text: O.intl.formatToPlainString(O.t.qE7oqq, { user: f.ZP.getUserTag(T.user) }),
+                        text: O.intl.formatToPlainString(O.t.qE7oqq, { user: f.ZP.getUserTag(P.user) }),
                     }),
                 e
             );
-        }, [T.id, T.user]),
+        }, [P.id, P.user]),
         L = r.useMemo(() => {
             var e;
-            return null != I.bot && (null == (e = T.scopes) ? void 0 : e.includes(l.x.BOT))
+            return null != I.bot && (null == (e = P.scopes) ? void 0 : e.includes(l.x.BOT))
                 ? (0, i.jsx)(j.Z, {
                       guild: n,
                       applicationIntegration: s,
@@ -171,7 +171,7 @@ function Z(e) {
                           children: O.intl.string(O.t.pfLnzc),
                       }),
                   });
-        }, [I.bot, s, n, T.scopes]);
+        }, [I.bot, s, n, P.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Z, {
@@ -219,12 +219,12 @@ function Z(e) {
                         }),
                         title: O.intl.string(O.t["t9ZX/P"]),
                     }),
-                    P.length > 0
+                    T.length > 0
                         ? (0, i.jsx)(v.Z, {
-                              webhooks: P,
-                              editedWebhook: Z,
+                              webhooks: T,
+                              editedWebhook: S,
                               selectableWebhookChannels: d,
-                              errors: S,
+                              errors: Z,
                               canNavigate: w,
                           })
                         : (0, i.jsx)(o.Zbd, {

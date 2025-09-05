@@ -21,17 +21,17 @@ var l = n(951288),
     v = n(287008),
     y = n(484459),
     O = n(271383),
-    Z = n(485386),
-    N = n(430824),
+    N = n(485386),
+    Z = n(430824),
     I = n(306680),
     w = n(594174),
     P = n(823379),
     E = n(51144),
     S = n(998502),
     T = n(549817),
-    A = n(745752),
-    k = n(45966),
-    B = n(637853),
+    k = n(745752),
+    B = n(45966),
+    A = n(637853),
     R = n(905204),
     D = n(968644),
     L = n(521941),
@@ -40,13 +40,13 @@ var l = n(951288),
     U = n(588632),
     G = n(290511),
     W = n(981631),
-    F = n(176505),
-    q = n(490897),
+    q = n(176505),
+    F = n(490897),
     z = n(388032),
-    X = n(29858),
-    V = n(97009),
-    J = n(430864);
-function Q(e) {
+    X = n(563289),
+    V = n(161655),
+    Q = n(602009);
+function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -71,8 +71,8 @@ function Q(e) {
     }
     return e;
 }
-let Y = c.EFr.SIZE_80,
-    K = "required";
+let K = c.EFr.SIZE_80,
+    J = "required";
 function $(e) {
     var t, n, r;
     let { guild: i, user: s } = e,
@@ -87,20 +87,20 @@ function $(e) {
         }),
         { avatarDecorationSrc: g } = (0, f.Z)({
             user: s,
-            size: (0, p.y9)(Y),
+            size: (0, p.y9)(K),
             onlyAnimateOnHover: !h,
         }),
         x = (0, o.e7)([O.ZP], () => O.ZP.getSelfMember(i.id)),
         b = (0, o.Wu)([O.ZP], () => O.ZP.getMemberRoleWithPendingUpdates(i.id, s.id)),
-        N = (0, o.e7)([Z.Z], () => Z.Z.getSortedRoles(i.id)),
+        Z = (0, o.e7)([N.Z], () => N.Z.getSortedRoles(i.id)),
         I = (0, C.ZP)(i.id, s.id),
-        w = N.filter((e) => b.includes(e.id)),
+        w = Z.filter((e) => b.includes(e.id)),
         P = (0, j.ZP)(s.id, i.id);
     (0, m.ZP)(() => {
-        (0, y.Z)(s.id, s.getAvatarURL(i.id, (0, c.pxk)(Y)), { guildId: i.id });
+        (0, y.Z)(s.id, s.getAvatarURL(i.id, (0, c.pxk)(K)), { guildId: i.id });
     });
     let T = (0, _.parseBioReact)(null == P ? void 0 : P.bio),
-        A = S.ZP.getEnableHardwareAcceleration() ? c.Xo$ : c.qEK;
+        k = S.ZP.getEnableHardwareAcceleration() ? c.Xo$ : c.qEK;
     return (0, l.jsxs)("div", {
         className: X.profile,
         children: [
@@ -119,13 +119,13 @@ function $(e) {
                 children: [
                     (0, l.jsx)(
                         "div",
-                        ((n = Q({}, u)),
+                        ((n = Y({}, u)),
                         (r = r =
                             {
-                                children: (0, l.jsx)(A, {
+                                children: (0, l.jsx)(k, {
                                     src: d,
                                     avatarDecoration: g,
-                                    size: Y,
+                                    size: K,
                                     "aria-label": s.username,
                                 }),
                             }),
@@ -152,7 +152,7 @@ function $(e) {
                     (0, l.jsx)(c.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        className: a()(J.markup, X.bio),
+                        className: a()(Q.markup, X.bio),
                         children: T,
                     }),
                     null != w &&
@@ -207,9 +207,9 @@ function ee(e) {
         [s, d] = r.useState(null),
         [u, m] = r.useState(new Set()),
         h = null == n || null == (t = n.options) ? void 0 : t.filter((e) => u.has(e.id)),
-        p = (0, B.L6)(h),
-        f = (0, B.dX)(h),
-        x = (0, o.Wu)([k.Z], () => k.Z.getOnboardingResponsesForPrompt(i.id, n.id)),
+        p = (0, A.L6)(h),
+        f = (0, A.dX)(h),
+        x = (0, o.Wu)([B.Z], () => B.Z.getOnboardingResponsesForPrompt(i.id, n.id)),
         { helpText: _, helpTextAdditional: C } = (0, D.p)({
             guild: i,
             prompt: n,
@@ -227,7 +227,7 @@ function ee(e) {
                 ),
         }),
         { handleSelectOption: b } = (0, R.Z)(i.id),
-        j = n.options.map((e) => Q({ value: e.id }, e)),
+        j = n.options.map((e) => Y({ value: e.id }, e)),
         v = n.options.filter((e) => x.includes(e.id)).map((e) => e.id);
     return (0, l.jsxs)("div", {
         className: X.prompt,
@@ -247,7 +247,7 @@ function ee(e) {
                     n.title,
                     n.required
                         ? (0, l.jsx)("span", {
-                              className: a()(X.required, { [X.error]: (null == s ? void 0 : s.type) === K }),
+                              className: a()(X.required, { [X.error]: (null == s ? void 0 : s.type) === J }),
                               children: "*",
                           })
                         : null,
@@ -263,7 +263,7 @@ function ee(e) {
                     else {
                         let e = x.filter((e) => !l.includes(e)),
                             t = n.options.filter((t) => e.includes(t.id));
-                        if (x.length <= t.length && n.required) return void d({ type: K });
+                        if (x.length <= t.length && n.required) return void d({ type: J });
                         t.forEach((e) => {
                             b(n, e, !1), u.delete(e.id);
                         });
@@ -287,9 +287,9 @@ function et(e) {
         [s, d] = r.useState(null),
         [u, m] = r.useState(new Set()),
         h = null == n || null == (t = n.options) ? void 0 : t.filter((e) => u.has(e.id)),
-        p = (0, B.L6)(h),
-        f = (0, B.dX)(h),
-        x = (0, o.Wu)([k.Z], () => k.Z.getOnboardingResponsesForPrompt(i.id, n.id)),
+        p = (0, A.L6)(h),
+        f = (0, A.dX)(h),
+        x = (0, o.Wu)([B.Z], () => B.Z.getOnboardingResponsesForPrompt(i.id, n.id)),
         { helpText: _, helpTextAdditional: C } = (0, D.p)({
             guild: i,
             prompt: n,
@@ -325,7 +325,7 @@ function et(e) {
                     n.title,
                     n.required
                         ? (0, l.jsx)("span", {
-                              className: a()(X.required, { [X.error]: (null == s ? void 0 : s.type) === K }),
+                              className: a()(X.required, { [X.error]: (null == s ? void 0 : s.type) === J }),
                               children: "*",
                           })
                         : null,
@@ -342,7 +342,7 @@ function et(e) {
                             option: e,
                             onSelect: (t) =>
                                 ((e, t) => {
-                                    if (!t && 1 === x.length && n.required) return void d({ type: K });
+                                    if (!t && 1 === x.length && n.required) return void d({ type: J });
                                     b(n, e, null != t && t),
                                         n.singleSelect && t && n.options.forEach((e) => u.delete(e.id)),
                                         t ? u.add(e.id) : u.delete(e.id),
@@ -368,30 +368,30 @@ function et(e) {
 function en(e) {
     let { guildId: t, onBrowseChannels: n } = e,
         i = (0, s.wj)((0, h.ZP)()),
-        m = (0, o.e7)([N.Z], () => N.Z.getGuild(t)),
+        m = (0, o.e7)([Z.Z], () => Z.Z.getGuild(t)),
         p = (0, o.e7)([w.default], () => w.default.getCurrentUser()),
         f = (0, u.Z)("(min-width: 1344px)") && null != p,
         _ = r.useCallback(() => {
-            (0, b.uL)(W.Z5c.CHANNEL(t, F.oC.CHANNEL_BROWSER)), null == n || n();
+            (0, b.uL)(W.Z5c.CHANNEL(t, q.oC.CHANNEL_BROWSER)), null == n || n();
         }, [t, n]),
-        C = (0, o.e7)([I.ZP], () => I.ZP.hasUnread(t, q.W.GUILD_ONBOARDING_QUESTION)),
+        C = (0, o.e7)([I.ZP], () => I.ZP.hasUnread(t, F.W.GUILD_ONBOARDING_QUESTION)),
         {
             onboardingPromptsRaw: j,
             newOnboardingPrompts: v,
             onboardingPromptsWithNewAnswers: y,
             newAnswersCount: O,
-            onboardingPrompts: Z,
+            onboardingPrompts: N,
         } = (0, L.Z)(t);
     r.useEffect(() => {
         (null == m ? void 0 : m.id) != null &&
             !x.Z.isFullServerPreview(m.id) &&
-            (k.Z.shouldFetchPrompts(m.id) || C) &&
-            (0, A.eM)(m.id);
+            (B.Z.shouldFetchPrompts(m.id) || C) &&
+            (0, k.eM)(m.id);
     }, [null == m ? void 0 : m.id, C]),
         r.useEffect(() => {
             if ((null == m ? void 0 : m.id) != null && !x.Z.isFullServerPreview(m.id))
                 return () => {
-                    (0, d.Ju)(m.id, q.W.GUILD_ONBOARDING_QUESTION, k.Z.ackIdForGuild(m.id)),
+                    (0, d.Ju)(m.id, F.W.GUILD_ONBOARDING_QUESTION, B.Z.ackIdForGuild(m.id)),
                         T.Z.updateOnboardingResponses(m.id);
                 };
         }, [null == m ? void 0 : m.id]);
@@ -472,7 +472,7 @@ function en(e) {
                                 (0, l.jsx)("div", { className: X.sectionSeparator }),
                             ],
                         }),
-                    Z.length > 0 &&
+                    N.length > 0 &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsxs)("div", {
@@ -480,7 +480,7 @@ function en(e) {
                                         (0, l.jsx)(c.X6q, {
                                             variant: "heading-md/semibold",
                                             color: "header-primary",
-                                            children: z.intl.format(z.t["8IV8Ky"], { count: Z.length }),
+                                            children: z.intl.format(z.t["8IV8Ky"], { count: N.length }),
                                         }),
                                         (0, l.jsx)(c.Text, {
                                             variant: "text-xs/normal",
@@ -489,7 +489,7 @@ function en(e) {
                                         }),
                                     ],
                                 }),
-                                Z.map(E),
+                                N.map(E),
                             ],
                         }),
                 ],

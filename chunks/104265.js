@@ -3,7 +3,7 @@ var l = n(951288),
     r = n(647438),
     i = n(120356),
     a = n.n(i),
-    o = n(202841),
+    o = n(261616),
     s = n(399606),
     c = n(692547),
     d = n(780384),
@@ -13,14 +13,14 @@ var l = n(951288),
     p = n(339085),
     f = n(14263),
     g = n(388032),
-    x = n(830626);
+    x = n(46807);
 function _(e) {
     let { guildId: t, option: n, selected: i, onSelect: _, hideMemberCount: C, canBeNew: b } = e,
         j = (0, d.wj)((0, h.ZP)()),
         [v, y] = r.useState(!1),
         O = v && !C,
-        Z = r.useRef(null),
-        { reducedMotion: N } = r.useContext(u.Sfi),
+        N = r.useRef(null),
+        { reducedMotion: Z } = r.useContext(u.Sfi),
         I = (0, s.e7)([p.ZP], () => {
             var e, t, l, r;
             return (
@@ -38,28 +38,28 @@ function _(e) {
         E = b && !i && n.isUnseen,
         S = (0, u.q_F)(
             {
-                transform: i || N.enabled ? "scale(1)" : "scale(0.7)",
+                transform: i || Z.enabled ? "scale(1)" : "scale(0.7)",
                 opacity: +!!i,
                 config: { duration: 150 },
             },
             "animate-always",
         ),
         T = (0, u.dQu)(c.Z.colors.BORDER_SUBTLE),
-        A = (0, u.dQu)(c.Z.unsafe_rawColors.BRAND_500),
-        k = (0, u.q_F)(
+        k = (0, u.dQu)(c.Z.unsafe_rawColors.BRAND_500),
+        B = (0, u.q_F)(
             {
-                from: { color: A.spring() },
+                from: { color: k.spring() },
                 color: T.spring({ opacity: j ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500,
             },
             "animate-always",
         ),
-        B = (0, u.Yzy)(
+        A = (0, u.Yzy)(
             O,
             {
                 from: {
-                    transform: N.enabled ? "translateX(0)" : "translateX(8px)",
+                    transform: Z.enabled ? "translateX(0)" : "translateX(8px)",
                     opacity: 0,
                 },
                 enter: {
@@ -76,11 +76,11 @@ function _(e) {
     r.useEffect(() => {
         if (O)
             return (
-                (Z.current = setTimeout(() => {
-                    y(!1), (Z.current = null);
+                (N.current = setTimeout(() => {
+                    y(!1), (N.current = null);
                 }, 3000)),
                 () => {
-                    null != Z.current && clearTimeout(Z.current);
+                    null != N.current && clearTimeout(N.current);
                 }
             );
     }, [O]);
@@ -88,7 +88,7 @@ function _(e) {
             [x.selected]: i,
             [x.pressed]: R,
         }),
-        M = E ? { borderColor: k.color } : {};
+        M = E ? { borderColor: B.color } : {};
     return (0, l.jsx)(o.animated.div, {
         style: M,
         className: L,
@@ -135,7 +135,7 @@ function _(e) {
                         color: c.Z.unsafe_rawColors.WHITE_500.css,
                     }),
                 }),
-                B(
+                A(
                     (e, t) =>
                         P > 0 &&
                         t &&

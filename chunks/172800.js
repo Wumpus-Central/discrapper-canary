@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(149203),
     S = n(981631),
     A = n(388032),
-    C = n(999642);
+    C = n(39162);
 function N(e, t, n) {
     return (
         t in e
@@ -106,14 +106,14 @@ let L = (e) => {
             onInspect: x,
             surrogateCodePoint: L,
             getEmojiItemProps: j,
-            getEmojiRowProps: M,
-            isScrolling: k,
+            getEmojiRowProps: k,
+            isScrolling: M,
             isUsingKeyboardNavigation: U,
             rowIndex: G,
             allowAnimatedEmoji: B,
             showEmojiFavoriteTooltip: Z,
-            channelGuildId: V,
-            category: F,
+            channelGuildId: F,
+            category: V,
             selectedItemClassName: H,
             channelId: Y,
             messageId: W,
@@ -170,7 +170,7 @@ let L = (e) => {
                         b = D(h, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === _ && el.columnIndex === p,
                         O = () => {
-                            k.current || U.current || x(e);
+                            M.current || U.current || x(e);
                         };
                     return (0, i.createElement)(
                         "li",
@@ -203,7 +203,7 @@ let L = (e) => {
                         a = el.rowIndex === t && el.columnIndex === i,
                         o = (t) => {
                             t.stopPropagation(),
-                                k.current ||
+                                M.current ||
                                     U.current ||
                                     (N(e, {
                                         isFinalSelection: !0,
@@ -247,7 +247,7 @@ let L = (e) => {
                     if (Q) return null;
                     let t = (t) => {
                         t.stopPropagation(),
-                            k.current ||
+                            M.current ||
                                 U.current ||
                                 (N(e, {
                                     isFinalSelection: !0,
@@ -278,14 +278,14 @@ let L = (e) => {
                             descriptor: e,
                             emojiItemKey: t,
                             isInspected: o,
-                            isScrolling: k,
+                            isScrolling: M,
                             isUsingKeyboardNavigation: U,
                             surrogateCodePoint: L,
                             allowAnimatedEmoji: B,
                             selectedItemClassName: H,
                             onSelect: N,
                             onInspect: x,
-                            channelGuildId: V,
+                            channelGuildId: F,
                             getEmojiItemProps: j,
                             isMediumSize: ep,
                             isLargeSize: e_,
@@ -307,7 +307,7 @@ let L = (e) => {
         em = (e) =>
             (0, r.jsx)(
                 "ul",
-                w(R({}, M(G)), {
+                w(R({}, k(G)), {
                     className: o()(C.emojiListRow, {
                         [C.emojiListRowLargeSize]: e_,
                         [C.emojiListRowMediumSize]: ep,
@@ -316,7 +316,7 @@ let L = (e) => {
                     children: e.map(eh),
                 }),
             );
-    if (F === T.UX.SOUNDMOJI)
+    if (V === T.UX.SOUNDMOJI)
         return (0, r.jsx)("ul", {
             className: C.emojiListRow,
             ref: ef,
@@ -325,7 +325,7 @@ let L = (e) => {
                 onSelectSoundmoji: P,
             }),
         });
-    if (F !== T.En.TOP_GUILD_EMOJI) return em(t);
+    if (V !== T.En.TOP_GUILD_EMOJI) return em(t);
     let eg = t.filter((e) => {
             if (X && e.type === v.ld.CREATE_EMOJI) return !0;
             let t = e;

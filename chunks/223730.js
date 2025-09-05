@@ -11,20 +11,20 @@ var r = n(951288),
     c = n(88658),
     u = n(782896),
     d = n(981631),
-    p = n(933554),
-    h = n(388032),
-    f = n(95049);
+    p = n(893867),
+    f = n(388032),
+    h = n(905618);
 let g = () => {
     o.Z.open(d.oAB.ACTIVITY_PRIVACY);
 };
 function m(e) {
     let { children: t, onClick: n } = e;
     return (0, r.jsxs)(l.P3F, {
-        className: f.chevronButton,
+        className: h.chevronButton,
         onClick: n,
         children: [
             (0, r.jsx)("div", {
-                className: f.chevronButtonContent,
+                className: h.chevronButtonContent,
                 children: t,
             }),
             (0, r.jsx)(l.Fbu, {
@@ -39,7 +39,7 @@ function b(e) {
         n = a.G6.useSetting(),
         o = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
         d = (0, c._o)(),
-        f = o.filter((e) => !d.has(e));
+        h = o.filter((e) => !d.has(e));
     return 0 === o.length
         ? null
         : (0, r.jsxs)(m, {
@@ -49,23 +49,23 @@ function b(e) {
               children: [
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/semibold",
-                      children: h.intl.string(n ? p.default["3GrhnJ"] : p.default["54ycKC"]),
+                      children: f.intl.string(n ? p.default["3GrhnJ"] : p.default["54ycKC"]),
                   }),
-                  (0, r.jsx)(u.c, { guildIds: f }),
+                  (0, r.jsx)(u.c, { guildIds: h }),
               ],
           });
 }
 function O(e) {
     let { onClosePopout: t } = e;
     return (0, r.jsx)(l.P3F, {
-        className: f.customizeLink,
+        className: h.customizeLink,
         onClick: () => {
             t(), g();
         },
         children: (0, r.jsx)(l.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: h.intl.string(h.t["ZrN+DQ"]),
+            children: f.intl.string(f.t["ZrN+DQ"]),
         }),
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(314940), n(388685);
+n.d(t, { Z: () => y }), n(314940), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(834129),
     h = n(981631),
     f = n(388032),
-    m = n(378661),
-    g = n(360514);
+    m = n(77162),
+    g = n(5898);
 function b(e) {
     let { expanded: t, onClick: n, count: i, compact: l, collapsedReason: a } = e,
         u = (0, o.EQ)({ collapsedReason: a })
@@ -61,12 +61,12 @@ function b(e) {
         }),
     });
 }
-let _ = i.memo(function (e) {
+let y = i.memo(function (e) {
     var t;
     let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: c } = e,
         { hasJumpTarget: p = !1 } = n,
-        [f, _] = i.useState(p),
-        y = i.useCallback(() => _((e) => !e), []),
+        [f, y] = i.useState(p),
+        _ = i.useCallback(() => y((e) => !e), []),
         C = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)("div", {
         className: a()({
@@ -90,7 +90,7 @@ let _ = i.memo(function (e) {
                     count: C,
                     compact: o,
                     expanded: f,
-                    onClick: y,
+                    onClick: _,
                     collapsedReason: c,
                 },
                 "collapsed-message-item",

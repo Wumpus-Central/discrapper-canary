@@ -32,16 +32,16 @@ var r = n(951288),
     x = n(375954),
     L = n(496675),
     j = n(699516),
-    M = n(594174),
-    k = n(768581),
+    k = n(594174),
+    M = n(768581),
     U = n(176354),
     G = n(5192),
     B = n(709054),
     Z = n(91047),
-    V = n(981631),
-    F = n(388032),
-    H = n(575890),
-    Y = n(197571);
+    F = n(981631),
+    V = n(388032),
+    H = n(745581),
+    Y = n(10198);
 function W(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ function et(e, t, n, i) {
     let a =
         null == e.id
             ? U.ZP.getURL(e.name)
-            : k.ZP.getEmojiURL({
+            : M.ZP.getEmojiURL({
                   id: e.id,
                   animated: e.animated,
                   size: t,
@@ -176,8 +176,8 @@ let en = (e) => {
             d = i.useMemo(() => ee(t), [t]),
             _ = i.useMemo(() => et(t, J, H.emoji, o()(H.emoji, H.emojiText)), [t]),
             p = l === v.O.BURST,
-            h = p ? F.t.VmiNjY : F.t.cNfs19,
-            m = F.intl.formatToPlainString(h, {
+            h = p ? V.t.VmiNjY : V.t.cNfs19,
+            m = V.intl.formatToPlainString(h, {
                 name: d,
                 n: n,
             }),
@@ -247,9 +247,9 @@ function ei(e) {
             disableManage: c = !1,
         } = e,
         d = (0, u.e7)([R.default], () => R.default.getId()),
-        _ = (0, u.e7)([M.default], () => M.default.getUser(n.id), [n]),
+        _ = (0, u.e7)([k.default], () => k.default.getUser(n.id), [n]),
         m = (0, C.$R)(a),
-        E = (0, u.e7)([L.Z], () => L.Z.can(V.Plq.MANAGE_MESSAGES, a) && m) || d === n.id,
+        E = (0, u.e7)([L.Z], () => L.Z.can(F.Plq.MANAGE_MESSAGES, a) && m) || d === n.id,
         b = (0, u.e7)([w.ZP, P.Z, j.Z], () => G.ZP.getName(o, a.id, n));
     function y() {
         S.WO({
@@ -334,7 +334,7 @@ class ea extends i.PureComponent {
                 channelId: e.getChannelId(),
                 messageId: e.id,
                 emoji: t.emoji,
-                limit: V.pTL,
+                limit: F.pTL,
                 after: r,
                 type: n,
             }).then((e) => {
@@ -440,7 +440,7 @@ class ea extends i.PureComponent {
 }
 let eo = u.ZP.connectStores([D.Z], (e) => {
     let { message: t, reaction: n, reactionType: r } = e,
-        i = D.Z.getReactions(t.getChannelId(), t.id, n.emoji, V.pTL, r);
+        i = D.Z.getReactions(t.getChannelId(), t.id, n.emoji, F.pTL, r);
     if (null == i)
         return {
             reactors: [],
@@ -494,7 +494,7 @@ function ec(e) {
             disableTabs: o = !1,
             onClose: s,
             transitionState: l,
-            "aria-label": c = F.intl.string(F.t.gHp0Cw),
+            "aria-label": c = V.intl.string(V.t.gHp0Cw),
         } = e,
         _ = (0, u.e7)([P.Z], () => P.Z.getChannel(t.getChannelId())),
         p = null == _ ? void 0 : _.getGuildId(),

@@ -14,26 +14,26 @@ var r = n(951288),
     m = n(426171),
     _ = n(845796),
     h = n(841875),
-    b = n(312030),
-    C = n(795343),
+    C = n(312030),
+    b = n(795343),
     E = n(763891),
     S = n(215023),
     O = n(981631),
     v = n(388032),
-    x = n(452785);
+    x = n(25616);
 function y(e) {
     let { isFullScreen: t, tab: n, sortedCategories: a, initialCategoryId: c, onUnmount: u } = e;
     (0, g.A)();
     let p = (0, d.FF)("CollectiblesBrowse"),
         f = l.useRef(null),
         { handleScroll: _ } = (0, o.z)(f, n),
-        { setCategoryRef: b, handleScrollToCategory: C } = (0, m.xV)(f.current),
+        { setCategoryRef: C, handleScrollToCategory: b } = (0, m.xV)(f.current),
         [E, S] = l.useState(p),
         [O, v] = l.useState(!1);
     return (
         l.useEffect(() => {
-            null != c && C(c);
-        }, [c, C]),
+            null != c && b(c);
+        }, [c, b]),
         l.useEffect(
             () => () => {
                 null != u && u();
@@ -66,7 +66,7 @@ function y(e) {
                             tab: n,
                             scrollerRef: f,
                             sortedCategories: a,
-                            setCategoryRef: b,
+                            setCategoryRef: C,
                         }),
                     }),
                     E && !O && (0, r.jsx)("div", { className: x.divider }),
@@ -95,25 +95,25 @@ let T = (e) => {
         j = (0, d.FF)("CollectiblesBrowse"),
         k = l.useRef(null),
         I = (0, g.S)((e) => e.hasDefaultFilters()),
-        B = (0, u.sp)(),
-        { handlePageChange: N, currentPage: P } = (0, b.h)({
+        N = (0, u.sp)(),
+        { handlePageChange: B, currentPage: P } = (0, C.h)({
             scrollerRef: y,
             sortedCategories: T,
         }),
         A = l.useCallback(
             (e) => {
                 c.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
-                    page_section: null == B ? void 0 : B.pageSection,
-                    page_category: null == B ? void 0 : B.pageCategory,
+                    collectibles_shop_session_id: null == N ? void 0 : N.sessionId,
+                    page_section: null == N ? void 0 : N.pageSection,
+                    page_category: null == N ? void 0 : N.pageCategory,
                     page_index: e,
-                    page_size: null == B ? void 0 : B.pageSize,
+                    page_size: null == N ? void 0 : N.pageSize,
                     cta_name: "catalog page ".concat(e),
                     page_type: "catalog",
                 }),
-                    N(e);
+                    B(e);
             },
-            [B, N],
+            [N, B],
         ),
         R = l.useRef(null);
     return (
@@ -126,18 +126,18 @@ let T = (e) => {
                     k.current.contains(t) ||
                     R.current.contains(t) ||
                     (c.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
-                        page_section: null == B ? void 0 : B.pageSection,
-                        page_category: null == B ? void 0 : B.pageCategory,
-                        page_index: null == B ? void 0 : B.pageIndex,
-                        page_size: null == B ? void 0 : B.pageSize,
+                        collectibles_shop_session_id: null == N ? void 0 : N.sessionId,
+                        page_section: null == N ? void 0 : N.pageSection,
+                        page_category: null == N ? void 0 : N.pageCategory,
+                        page_index: null == N ? void 0 : N.pageIndex,
+                        page_size: null == N ? void 0 : N.pageSize,
                         cta_name: "filter bar hide outside click",
                         page_type: "catalog",
                     }),
                     o(!1));
             };
             return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
-        }, [n, a, o, B]),
+        }, [n, a, o, N]),
         (0, r.jsx)("div", {
             className: x.inventoryWrapper,
             children: (0, r.jsxs)("div", {
@@ -173,11 +173,11 @@ let T = (e) => {
                                                 onClick: () => {
                                                     let e = !a;
                                                     c.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                        collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
-                                                        page_section: null == B ? void 0 : B.pageSection,
-                                                        page_category: null == B ? void 0 : B.pageCategory,
-                                                        page_index: null == B ? void 0 : B.pageIndex,
-                                                        page_size: null == B ? void 0 : B.pageSize,
+                                                        collectibles_shop_session_id: null == N ? void 0 : N.sessionId,
+                                                        page_section: null == N ? void 0 : N.pageSection,
+                                                        page_category: null == N ? void 0 : N.pageCategory,
+                                                        page_index: null == N ? void 0 : N.pageIndex,
+                                                        page_size: null == N ? void 0 : N.pageSize,
                                                         cta_name: "filter bar ".concat(e ? "show" : "hide"),
                                                         page_type: "catalog",
                                                     }),
@@ -205,7 +205,7 @@ let T = (e) => {
                         }),
                     j && !I
                         ? (0, r.jsx)(
-                              C.Z,
+                              b.Z,
                               {
                                   isFullScreen: t,
                                   scrollerRef: y,

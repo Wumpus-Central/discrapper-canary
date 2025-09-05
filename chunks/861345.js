@@ -1,6 +1,6 @@
 n.d(t, {
     p: () => j,
-    s: () => v,
+    s: () => _,
 }),
     n(953529);
 var r = n(951288),
@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(528027),
     g = n(686807),
     p = n(157018),
-    h = n(828656),
-    f = n(388032),
-    b = n(172931);
+    f = n(828656),
+    h = n(388032),
+    b = n(28742);
 function x(e) {
     let {
             guildId: t,
@@ -32,14 +32,14 @@ function x(e) {
             onMove: x,
             disabled: j = !1,
         } = e,
-        v = i.useRef(null),
         _ = i.useRef(null),
-        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, h.Z)(v, d, u, x);
+        v = i.useRef(null),
+        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, f.Z)(_, d, u, x);
     return (
-        O(_),
-        y(C(v)),
+        O(v),
+        y(C(_)),
         (0, r.jsxs)("div", {
-            ref: v,
+            ref: _,
             className: a()(b.card, {
                 [b.cardDragging]: N,
                 [b.disabled]: j,
@@ -56,7 +56,7 @@ function x(e) {
                         }),
                         !j &&
                             (0, r.jsx)("div", {
-                                ref: _,
+                                ref: v,
                                 className: b.dragIconWrapper,
                                 "data-dnd-name": g,
                                 children: (0, r.jsx)(o.Vni, {
@@ -89,7 +89,7 @@ function x(e) {
                         (0, r.jsx)(o.P3F, {
                             className: b.cardActionButton,
                             onClick: j ? void 0 : p,
-                            "aria-label": f.intl.string(f.t.Eoo8h4),
+                            "aria-label": h.intl.string(h.t.Eoo8h4),
                             "aria-disabled": j,
                             children: (0, r.jsx)(o.vdY, {
                                 size: "xs",
@@ -105,12 +105,12 @@ function x(e) {
 function j(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
         m = (0, c.Dt)(),
-        { isDragging: h } = (0, s.f)((e) => ({ isDragging: e.getItemType() === m })),
-        f = (0, u.mY)();
+        { isDragging: f } = (0, s.f)((e) => ({ isDragging: e.getItemType() === m })),
+        h = (0, u.mY)();
     return 0 === t.length
         ? null
         : (0, r.jsx)("div", {
-              className: a()(b.container, { [b.isDragging]: h }),
+              className: a()(b.container, { [b.isDragging]: f }),
               children: t.map((e, t) =>
                   (0, r.jsxs)(
                       i.Fragment,
@@ -128,7 +128,7 @@ function j(e) {
                                   dndName: (0, p.Z)(e),
                                   onEdit: () => n(t),
                                   onMove: l,
-                                  disabled: f,
+                                  disabled: h,
                               }),
                           ],
                       },
@@ -137,7 +137,7 @@ function j(e) {
               ),
           });
 }
-function v(e) {
+function _(e) {
     let { onClick: t, children: n, disabled: i = !1 } = e;
     return (0, r.jsx)(o.P3F, {
         className: b.container,

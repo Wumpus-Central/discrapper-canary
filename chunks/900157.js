@@ -14,17 +14,17 @@ var r = n(951288),
     m = n(287746),
     g = n(541716),
     b = n(665149),
-    _ = n(910611),
-    y = n(359110),
+    y = n(910611),
+    _ = n(359110),
     C = n(592125),
-    x = n(703558),
-    v = n(430824),
+    v = n(703558),
+    x = n(430824),
     O = n(979651),
     j = n(664342),
     E = n(124368),
     S = n(981631),
     I = n(388032),
-    P = n(952899);
+    P = n(229);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function T(e, t) {
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
         A = (0, o.e7)([C.Z], () => C.Z.getChannel(t)),
-        w = (0, o.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
+        w = (0, o.e7)([x.Z], () => x.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
     var M = A;
     let D = (0, o.e7)([O.Z], () => null != M && !a().isEmpty(O.Z.getVoiceStatesForChannel(M.id)));
@@ -82,7 +82,7 @@ function N(e) {
                 type: "SIDEBAR_CLOSE",
                 baseChannelId: M.parent_id,
             }),
-            (0, y.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
+            (0, _.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
     }, [D, M]);
     let L = i.useRef(!1);
     if (
@@ -104,12 +104,12 @@ function N(e) {
         children: [
             (0, r.jsx)(u.Z, {
                 channel: A,
-                draftType: x.d.ChannelMessage,
+                draftType: v.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: k,
                 "aria-label": I.intl.string(I.t.Pwe8tL),
-                children: (0, _.ud)({
+                children: (0, y.ud)({
                     channel: A,
                     channelName: R,
                     guild: w,
@@ -121,7 +121,7 @@ function N(e) {
                         });
                     },
                     handleClick: function () {
-                        null != A && (0, y.Kh)(A.id);
+                        null != A && (0, _.Kh)(A.id);
                     },
                 }),
             }),

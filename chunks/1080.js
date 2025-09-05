@@ -11,13 +11,13 @@ var r = n(951288),
     m = n(110924),
     g = n(410030),
     p = n(367907),
-    h = n(906732),
-    f = n(218867),
+    f = n(906732),
+    h = n(218867),
     b = n(733026),
     x = n(246946),
     j = n(594174),
-    v = n(626135),
-    _ = n(136015),
+    _ = n(626135),
+    v = n(136015),
     O = n(51144),
     y = n(434404),
     C = n(999382),
@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(26682);
+    T = n(954532);
 function P(e, t, n) {
     return (
         t in e
@@ -76,26 +76,26 @@ function R(e, t) {
 function Z(e) {
     var t;
     let { transitionState: n, guild: l, user: a, ban: s, hideDiscriminator: c, onClose: m } = e,
-        [g, f] = i.useState(!1),
+        [g, h] = i.useState(!1),
         [b, x] = i.useState(null),
-        { analyticsLocations: j } = (0, h.ZP)(),
-        _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
+        { analyticsLocations: j } = (0, f.ZP)(),
+        v = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function y() {
         if (null != l) {
-            x(null), f(!0);
+            x(null), h(!0);
             try {
                 await d.Z.unbanUser(l.id, a.id),
                     m(),
-                    v.default.track(
+                    _.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
                         R(w({}, (0, p.hH)(l.id)), {
                             target_user_id: a.id,
                             reason: s.reason,
-                            location: _,
+                            location: v,
                         }),
                     );
             } catch (e) {
-                x(new u.Z(e)), f(!1);
+                x(new u.Z(e)), h(!1);
             }
         }
     }
@@ -267,7 +267,7 @@ let A = i.forwardRef(function (e, t) {
             },
             [a, n, l, c],
         );
-    return (0, r.jsx)(f.Z, {
+    return (0, r.jsx)(h.Z, {
         role: "listbox",
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
@@ -304,7 +304,7 @@ function L(e) {
                     c(!1);
                 }
         }, [t, s, l]),
-        h = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), p());
             },
@@ -333,7 +333,7 @@ function L(e) {
                             placeholder: S.intl.string(S.t.MiqUmZ),
                             "aria-label": S.intl.string(S.t.MiqUmZ),
                             onChange: m,
-                            onKeyDown: h,
+                            onKeyDown: f,
                             onClear: g,
                             isLoading: s,
                         }),
@@ -360,10 +360,10 @@ function k() {
     var e, t;
     let { guild: c, searchQuery: u } = (0, s.e7)([C.Z], () => C.Z.getProps(), [], l.isEqual),
         p = null != u && u.trim().length > 0,
-        h = (0, m.Z)(p),
-        f = p !== h,
-        [x] = (0, s.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
-        v = null != (e = null == x ? void 0 : x.size) ? e : 0,
+        f = (0, m.Z)(p),
+        h = p !== f,
+        [x] = (0, s.e7)([C.Z], () => C.Z.getBans(), [], v.Q),
+        _ = null != (e = null == x ? void 0 : x.size) ? e : 0,
         O = (0, g.ZP)(),
         y = null != (t = null == c ? void 0 : c.id) ? t : I.lds,
         N = i.useRef(null),
@@ -397,7 +397,7 @@ function k() {
             },
             [E],
         ),
-        Z = i.useMemo(() => P(x, u, v), [x, P, u, v]),
+        Z = i.useMemo(() => P(x, u, _), [x, P, u, _]),
         D = null != x,
         k = Z.length % 1000 == 0 && Z.length > 0 && D,
         M = 0 === Z.length,
@@ -406,8 +406,8 @@ function k() {
             pageSize: 100,
         });
     i.useEffect(() => {
-        f && 1 !== G.currentPage && U((e) => R(w({}, e), { currentPage: 1 }));
-    }, [f, G.currentPage]);
+        h && 1 !== G.currentPage && U((e) => R(w({}, e), { currentPage: 1 }));
+    }, [h, G.currentPage]);
     let B = i.useCallback(
             (e) => {
                 d.Z.fetchGuildBansBatch(y, 1000, e);

@@ -25,7 +25,7 @@ var r = n(771356),
     I = n(936643),
     T = n(357826),
     S = n(486527),
-    A = n(696162),
+    A = n(2482),
     C = n(711814),
     N = n(149334),
     R = n(409863),
@@ -35,13 +35,13 @@ var r = n(771356),
     x = n(58587),
     L = n(912609),
     j = n(565792),
-    M = n(583498),
-    k = n(442866),
+    k = n(583498),
+    M = n(442866),
     U = n(263984),
     G = n(591501),
     B = n(595867),
     Z = n(345272);
-function V(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function V(e, t, n) {
         e
     );
 }
-function F(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +65,7 @@ function F(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -96,7 +96,7 @@ function Y(e, t) {
 let W = {
         skye: {
             name: A.default.tzvUKy,
-            iconURL: k.Z,
+            iconURL: M.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(242, 96, 195, 0.50) 0%, rgba(242, 96, 195, 0.00) 100%)",
             baseColor: "#380527",
@@ -123,7 +123,7 @@ let W = {
         },
         sebastien: {
             name: A.default.NmbfHx,
-            iconURL: M.Z,
+            iconURL: k.Z,
             splashGradient:
                 "radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%)",
             baseColor: "#25300D",
@@ -232,8 +232,8 @@ let W = {
     },
     K = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return F(
-            Y(F({}, e), {
+        return V(
+            Y(V({}, e), {
                 previewSoundURLs: [],
                 underDevelopment: !0,
             }),

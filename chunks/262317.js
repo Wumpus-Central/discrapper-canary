@@ -1,6 +1,6 @@
 n.d(t, {
     XX: () => U,
-    ZP: () => F,
+    ZP: () => G,
     ul: () => B,
 }),
     n(388685);
@@ -37,7 +37,7 @@ var r = n(951288),
     w = n(927923),
     R = n(70722),
     M = n(388032),
-    D = n(92024);
+    D = n(2628);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -114,16 +114,16 @@ function B(e) {
         ],
     });
 }
-let F = (0, h.$)(function (e) {
+let G = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
             user: h,
             channel: U,
             mute: B,
-            localMute: F,
+            localMute: G,
             localVideoDisabled: H,
-            deaf: G,
+            deaf: F,
             video: V,
             embeddedApplication: z,
             serverMute: W,
@@ -195,7 +195,7 @@ let F = (0, h.$)(function (e) {
                     n.e("98783"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("52021"),
+                    n.e("19848"),
                 ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, r.jsx)(
@@ -267,14 +267,14 @@ let F = (0, h.$)(function (e) {
                                 speaking: X,
                                 disconnected: Q,
                                 mute: B,
-                                localMute: F,
+                                localMute: G,
                                 localVideoDisabled: H,
                                 isStreaming: ee,
                                 isGuest: en,
                                 video: V,
                                 priority: er,
                                 ringing: K,
-                                deaf: G,
+                                deaf: F,
                                 nick: Y,
                                 collapsed: l,
                                 overlap: l,

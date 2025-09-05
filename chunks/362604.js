@@ -16,7 +16,7 @@ var r = n(951288),
     g = n(115610),
     E = n(981631),
     b = n(388032),
-    y = n(38297);
+    y = n(247708);
 function O(e) {
     let { message: t, channel: a, compact: O } = e,
         v = (0, s.Wu)([_.Z], () => Array.from(_.Z.getAllGuildStickers().values()).flat()).slice(0, 20),

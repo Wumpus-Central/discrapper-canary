@@ -6,20 +6,20 @@ var i = n(780384),
     a = n(410030),
     s = n(293810),
     o = n(388032),
-    c = n(570734),
+    c = n(62435),
     d = n(934961),
     u = n(568294),
     m = n(867861),
     g = n(860790),
     p = n(268953),
-    h = n(487703),
-    f = n(458050),
+    f = n(487703),
+    h = n(458050),
     b = n(334364),
     x = n(431712);
 function j(e) {
     return (0, i.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
-function v() {
+function _() {
     let e = (0, a.ZP)(),
         t = { backgroundColor: (0, i.wj)(e) ? "#2e3638" : "var(--background-base-low)" };
     return (0, r.jsxs)("div", {
@@ -43,13 +43,13 @@ function v() {
             }),
             (0, r.jsx)("img", {
                 className: c.roundAvatar,
-                src: h,
+                src: f,
                 alt: o.intl.string(o.t.NgjpTE),
             }),
         ],
     });
 }
-function _() {
+function v() {
     let e = (0, a.ZP)();
     function t(e) {
         var t, n;
@@ -167,9 +167,9 @@ function O() {
                 children: o.intl.string(o.t["9CdmS0"]),
             }),
             (0, r.jsx)(l.LZC, { size: 32 }),
-            (0, r.jsx)(v, {}),
-            (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(_, {}),
+            (0, r.jsx)(l.LZC, { size: 24 }),
+            (0, r.jsx)(v, {}),
         ],
     });
 }
@@ -221,7 +221,7 @@ function C() {
             }),
             (0, r.jsx)("img", {
                 className: c.roleSubscriptionEarningIllo,
-                src: f,
+                src: h,
                 alt: o.intl.string(o.t.fD9Wv7),
             }),
         ],

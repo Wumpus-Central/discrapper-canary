@@ -1,30 +1,30 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(565138),
-    a = n(388032),
-    s = n(99563);
-let o = (e) => {
+    a = n(565138),
+    l = n(388032),
+    o = n(296654);
+let s = (e) => {
     let { guild: t } = e;
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: o.container,
         children: [
             (0, r.jsx)(i.X6q, {
-                className: s.header,
+                className: o.header,
                 variant: "heading-sm/semibold",
-                children: a.intl.string(a.t["0ox7Hh"]),
+                children: l.intl.string(l.t["0ox7Hh"]),
             }),
             (0, r.jsx)("div", {
-                className: s.guildContainer,
+                className: o.guildContainer,
                 children: (0, r.jsxs)("div", {
-                    className: s.guildInfo,
+                    className: o.guildInfo,
                     children: [
                         (0, r.jsx)("div", {
-                            className: s.guildIcon,
-                            children: (0, r.jsx)(l.Z, {
+                            className: o.guildIcon,
+                            children: (0, r.jsx)(a.Z, {
                                 guild: t,
-                                size: l.Z.Sizes.LARGE,
+                                size: a.Z.Sizes.LARGE,
                             }),
                         }),
                         (0, r.jsx)("div", {

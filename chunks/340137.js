@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -18,7 +18,7 @@ var r = n(951288),
     O = n(961040),
     E = n(981631),
     y = n(388032),
-    v = n(445202);
+    v = n(10663);
 let I = {
         cozy: 0,
         default: 0,
@@ -34,24 +34,24 @@ let I = {
         default: 84,
         compact: 72,
     };
-function N(e) {
+function T(e) {
     let { onClick: t, selectedOverride: n = !1, popoutProps: l, ref: o, focusSectionProps: s } = e,
         [h, m] = i.useState(!1),
         O = (0, b.D)(),
         E = n || O,
-        N = n || E,
+        T = n || E,
         {
-            backForwardButtons: T,
+            backForwardButtons: N,
             titlebarIconSize: j,
             titlebarHoverHighlight: P,
         } = (0, p.T)({ location: "NotificationsInboxTitleBarButton" }),
         x = (0, r.jsx)(u.Dkj, {
             className: v.icon,
-            color: h || N ? u.TVs.colors.ICON_PRIMARY : u.TVs.colors.ICON_TERTIARY,
+            color: h || T ? u.TVs.colors.ICON_PRIMARY : u.TVs.colors.ICON_TERTIARY,
             size: j,
         }),
         { badge: A, badgeType: Z } = (0, _.h6)({ isSelected: E }),
-        w = (0, g.isDesktop)() && T,
+        w = (0, g.isDesktop)() && N,
         L = (0, f.A)(),
         R = (0, g.isMac)() ? I[L] : w ? C[L] : S[L];
     return (0, r.jsxs)(u.Kqy, {
@@ -63,7 +63,7 @@ function N(e) {
                 horizontal: !0,
             }),
             (0, r.jsx)(u.ua7, {
-                shouldShow: !N,
+                shouldShow: !T,
                 text: y.intl.string(y.t.HcoRu7),
                 children: (e) => {
                     var n, i;
@@ -158,7 +158,7 @@ function N(e) {
         ],
     });
 }
-function T() {
+function N() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
         { notificationCenterVariant: n } = (0, m.pN)({ location: "NotificationsInboxButton" }),
@@ -166,7 +166,7 @@ function T() {
         a = i.useMemo(() => E.Z5c.CHANNEL(E.STv, null != l ? l : void 0), [l]),
         c = (0, _.mv)();
     return n === m.jP.SIDEBAR
-        ? (0, r.jsx)(N, {
+        ? (0, r.jsx)(T, {
               onClick: () => {
                   c(), (0, o.uL)(a);
               },
@@ -179,7 +179,7 @@ function T() {
                 popoutAlign: "left",
                 spacing: 2,
                 children: (n, i, l) =>
-                    (0, r.jsx)(N, {
+                    (0, r.jsx)(T, {
                         ref: t,
                         selectedOverride: i,
                         onClick: () => {

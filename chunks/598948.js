@@ -21,7 +21,7 @@ var r = n(951288),
     y = n(66747),
     O = n(852479),
     _ = n(420212),
-    H = n(655804);
+    H = n(47473);
 let w = {
         transform: "translate3d(15%, 0, 0)",
         opacity: 0.3,
@@ -34,12 +34,12 @@ let w = {
         transform: "translate3d(0, 0, 0)",
         opacity: 1,
     },
-    Z = {
+    D = {
         mass: 1.1,
         friction: 24,
         tension: 260,
     },
-    D = (e) => e.shiftKey || e.key === _.vn.SHIFT,
+    Z = (e) => e.shiftKey || e.key === _.vn.SHIFT,
     R = (e) => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
     L = l.memo(
         function (e) {
@@ -63,10 +63,10 @@ let w = {
             }, [L]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            D(e) && P(!0), R(e) && V(!0);
+                            Z(e) && P(!0), R(e) && V(!0);
                         },
                         t = (e) => {
-                            D(e) && P(!1), R(e) && V(!1);
+                            Z(e) && P(!1), R(e) && V(!1);
                         };
                     return (
                         window.addEventListener("keydown", e),
@@ -91,7 +91,7 @@ let w = {
                         return l || !o ? S : T ? N : w;
                     },
                     enter: S,
-                    config: Z,
+                    config: D,
                 }),
                 A = !f && a === x.po.LOADING;
             return (0, r.jsxs)("table", {

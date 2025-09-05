@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(377171),
     v = n(313201),
     I = n(243778),
-    S = n(594928),
-    T = n(829716),
+    T = n(594928),
+    S = n(829716),
     A = n(786761),
     C = n(3148),
     N = n(739566),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(28682),
     L = n(196051),
     j = n(441729),
-    M = n(626135),
-    k = n(63063),
+    k = n(626135),
+    M = n(63063),
     U = n(695346),
     G = n(263937),
     B = n(996073),
@@ -44,9 +44,9 @@ var r = n(951288),
     Y = n(611480),
     W = n(653477),
     K = n(388032),
-    z = n(693450),
-    q = n(953752),
-    X = n(197571),
+    z = n(62222),
+    q = n(133991),
+    X = n(10198),
     Q = n(328756);
 function J(e, t, n) {
     return (
@@ -112,7 +112,7 @@ let en = (0, v.hQ)(),
 function es(e) {
     let t = g.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
         n = y.Z.useConfig({ location: "UserSettingsAccessibility" }).enableShopTakeOver,
-        i = S.f.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
+        i = T.f.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
         a = (0, D.Z)();
     return (0, r.jsxs)(f.hjN, {
         tag: f.RB0.H1,
@@ -416,7 +416,7 @@ function ep() {
     let e = (0, c.e7)([m.Z], () => m.Z.displayNameStylesEnabled),
         { analyticsLocations: t } = (0, b.ZP)();
     function n(e) {
-        (0, h.X2)(e), M.default.track(H.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
+        (0, h.X2)(e), k.default.track(H.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
     }
     return (0, r.jsx)(f.xJW, {
         className: X.marginTop20,
@@ -425,7 +425,7 @@ function ep() {
             onChange: n,
             note: K.intl.format(z.default.L8U56u, {
                 onClickOpenModal() {
-                    (0, T.I)({ analyticsLocations: t });
+                    (0, S.I)({ analyticsLocations: t });
                 },
             }),
             children: K.intl.string(z.default["2gFUEx"]),
@@ -469,7 +469,7 @@ function em() {
         null != a.current && (clearTimeout(a.current), (a.current = null)),
             t !== e && (a.current = setTimeout(() => (0, h.qz)(t), 150));
     }, [t, e]);
-    let o = K.intl.format(K.t.GwEVEx, { learnMoreLink: k.Z.getArticleURL(H.BhN.FORCED_COLORS) });
+    let o = K.intl.format(K.t.GwEVEx, { learnMoreLink: M.Z.getArticleURL(H.BhN.FORCED_COLORS) });
     return (0, r.jsx)(f.xJW, {
         title: K.intl.string(K.t.TYyfOz),
         className: X.marginTop20,
@@ -520,7 +520,7 @@ function eg() {
             (0, r.jsx)(f.R94, {
                 type: f.R94.Types.DESCRIPTION,
                 className: X.marginBottom8,
-                children: K.intl.format(K.t["2l9U2t"], { helpdeskArticle: k.Z.getArticleURL(H.BhN.REDUCED_MOTION) }),
+                children: K.intl.format(K.t["2l9U2t"], { helpdeskArticle: M.Z.getArticleURL(H.BhN.REDUCED_MOTION) }),
             }),
             (0, r.jsx)(d.$q, {
                 className: o()(X.marginTop20, X.marginBottom20),
@@ -631,7 +631,7 @@ function eb() {
                         value: t,
                         note: K.intl.string(K.t.Q7wgHR),
                         onChange: (e) => {
-                            M.default.track(H.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            k.default.track(H.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
                                 location: { section: H.jXE.SETTINGS_ACCESSIBILITY },
                             }),

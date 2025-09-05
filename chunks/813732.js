@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(63063),
     L = n(74538),
     j = n(695349),
-    M = n(391077),
-    k = n(639056),
+    k = n(391077),
+    M = n(639056),
     U = n(52164),
     G = n(91430),
     B = n(474936),
@@ -41,7 +41,7 @@ var r = n(951288),
     F = n(526761),
     V = n(726985),
     H = n(388032),
-    Y = n(49122);
+    Y = n(304343);
 function W() {
     return (0, r.jsx)(l.Zbd, {
         className: Y.noItemsCard,
@@ -81,7 +81,7 @@ function K() {
                     children: H.intl.string(H.t.kNEjGh),
                 }),
                 null != e && L.ZP.hasAccountCredit(e)
-                    ? (0, r.jsx)(k.Z, {
+                    ? (0, r.jsx)(M.Z, {
                           className: Y.accountCredit,
                           entitlements: e,
                       })
@@ -105,7 +105,7 @@ function z(e, t) {
                     helpCenterLink: x.Z.getArticleURL(Z.BhN.FRACTIONAL_PREMIUM_ABOUT),
                 }),
             }),
-            (0, r.jsx)(M.Z, {
+            (0, r.jsx)(k.Z, {
                 className: Y.accountCredit,
                 fractionalPremiumInfo: e,
                 activationDate: t,
@@ -139,12 +139,12 @@ let X = function () {
                 .filter((e) => e.type === Z.NYc.GUILD)
                 .filter((e) => e.status !== Z.O0b.ENDED).length;
         }),
-        M = (0, m.Z)({ forceFetch: !0 }),
-        k = (0, j.W)(),
+        k = (0, m.Z)({ forceFetch: !0 }),
+        M = (0, j.W)(),
         H = null !== e ? e.currentPeriodEnd : void 0,
         W =
-            !(k && !(M.unactivatedUnits.length > 0)) &&
-            (M.fractionalState !== B.a$.NONE || M.unactivatedUnits.length > 0);
+            !(M && !(k.unactivatedUnits.length > 0)) &&
+            (k.fractionalState !== B.a$.NONE || k.unactivatedUnits.length > 0);
     return (i.useEffect(
         () => (
             c.Z.wait(() => {
@@ -177,7 +177,7 @@ let X = function () {
                                         subscriptions: t,
                                     })
                                   : (0, r.jsx)(G.MM, {}),
-                              W && z(M, H),
+                              W && z(k, H),
                               (0, r.jsx)(S.F, {
                                   setting: V.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, r.jsx)(K, {}),

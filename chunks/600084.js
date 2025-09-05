@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H });
+n.d(t, { Z: () => F });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(189156),
     g = n(878857),
     b = n(621853),
-    _ = n(484459),
-    y = n(131704),
+    y = n(484459),
+    _ = n(131704),
     C = n(881998),
-    x = n(984933),
-    v = n(496675),
+    v = n(984933),
+    x = n(496675),
     O = n(594174),
     j = n(51144),
     E = n(7782),
@@ -36,32 +36,32 @@ var r = n(951288),
     L = n(981631),
     k = n(176505),
     U = n(388032),
-    B = n(963392),
-    F = n(197571);
-function G(e) {
+    B = n(40036),
+    G = n(10198);
+function H(e) {
     let { canManageRoles: t, channel: n } = e,
         i = t && (0, p.Yk)(n),
-        a = (0, l.e7)([x.ZP], () => null != n.guild_id && n === x.ZP.getDefaultChannel(n.guild_id), [n]);
+        a = (0, l.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, r.jsx)(I.Z, { channel: n });
-    if (y.Ec.has(n.type)) return (0, r.jsx)(M.Z, { channel: n });
+    if (_.Ec.has(n.type)) return (0, r.jsx)(M.Z, { channel: n });
     if (a) return (0, r.jsx)(D.Z, { channel: n });
     if (i) return (0, r.jsx)(A.Z, { channel: n });
     return (0, r.jsx)(R.Z, { channel: n });
 }
-function H(e) {
+function F(e) {
     var t, n;
     let { channel: p, showingBanner: h } = e,
-        y = (0, d.ZP)(p),
-        { type: x } = p,
+        _ = (0, d.ZP)(p),
+        { type: v } = p,
         I = (0, l.e7)([O.default], () => (p.isPrivate() ? O.default.getUser(p.getRecipientId()) : null)),
         A = j.ZP.useUserTag(I),
-        { canManageRoles: R, canReadMessageHistory: M } = (0, l.cj)([v.Z], () => ({
-            canManageRoles: v.Z.can(L.Plq.MANAGE_ROLES, p),
-            canReadMessageHistory: v.Z.can(L.Plq.READ_MESSAGE_HISTORY, p),
+        { canManageRoles: R, canReadMessageHistory: M } = (0, l.cj)([x.Z], () => ({
+            canManageRoles: x.Z.can(L.Plq.MANAGE_ROLES, p),
+            canReadMessageHistory: x.Z.can(L.Plq.READ_MESSAGE_HISTORY, p),
         })),
-        D = (0, l.e7)([b.Z], () => (x === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, x]),
-        { systemDMRedesignEnabled: H } = g.Z.useExperiment(
+        D = (0, l.e7)([b.Z], () => (v === L.d4z.DM ? b.Z.getMutualGuilds(p.getRecipientId()) : null), [p, v]),
+        { systemDMRedesignEnabled: F } = g.Z.useExperiment(
             { location: "bf1a4f_1" },
             { autoTrackExposure: null != (t = p.isSystemDM()) && t },
         ),
@@ -73,23 +73,23 @@ function H(e) {
         q = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
         (i.useEffect(() => {
-            x === L.d4z.DM &&
+            v === L.d4z.DM &&
                 null == D &&
                 null != I &&
-                o.Z.wait(() => (0, _.Z)(p.getRecipientId(), I.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [D, x, p, I]),
+                o.Z.wait(() => (0, y.Z)(p.getRecipientId(), I.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+        }, [D, v, p, I]),
         i.useEffect(() => {
             (null == I ? void 0 : I.bot) && W === C.M.NOT_FETCHED && s.Z.fetch();
         }, [null == I ? void 0 : I.bot, W]),
         p.isSystemDM())
     )
-        return H
+        return F
             ? (0, r.jsx)(w.Z, { channel: p })
             : (0, r.jsx)(N.Z, {
                   channel: p,
                   children: U.intl.string(U.t.Rzvnio),
               });
-    if (x === L.d4z.DM) {
+    if (v === L.d4z.DM) {
         let e;
         return (
             null != I && null != V
@@ -125,10 +125,10 @@ function H(e) {
                         !I.isProvisional &&
                         (0, r.jsx)(a.X6q, {
                             variant: "heading-xl/medium",
-                            className: F.marginBottom20,
+                            className: G.marginBottom20,
                             children: A,
                         }),
-                    U.intl.format(U.t["Qvg+6+"], { username: y }),
+                    U.intl.format(U.t["Qvg+6+"], { username: _ }),
                     (null == I ? void 0 : I.isProvisional) && (0, r.jsx)(m.q, { userId: I.id }),
                     e,
                 ],
@@ -140,7 +140,7 @@ function H(e) {
             return (0, r.jsxs)(S.ZP, {
                 channelId: p.id,
                 children: [
-                    (0, r.jsx)(S.Ot, { children: U.intl.format(U.t.I3R7Vl, { channelName: y }) }),
+                    (0, r.jsx)(S.Ot, { children: U.intl.format(U.t.I3R7Vl, { channelName: _ }) }),
                     (0, r.jsx)(S.jz, { children: U.intl.string(U.t.M8Ao6O) }),
                 ],
             });
@@ -148,15 +148,15 @@ function H(e) {
         else
             return (0, r.jsx)(N.Z, {
                 channel: p,
-                children: U.intl.format(U.t.MFwcqK, { name: y }),
+                children: U.intl.format(U.t.MFwcqK, { name: _ }),
             });
     return M
-        ? (0, r.jsx)(G, {
+        ? (0, r.jsx)(H, {
               channel: p,
               canManageRoles: R,
           })
         : (0, r.jsx)(S.ZP, {
               channelId: p.id,
-              children: (0, r.jsx)(S.jz, { children: U.intl.format(U.t.hPVEQE, { channelName: y }) }),
+              children: (0, r.jsx)(S.jz, { children: U.intl.format(U.t.hPVEQE, { channelName: _ }) }),
           });
 }

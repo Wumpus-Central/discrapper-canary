@@ -23,9 +23,9 @@ var r = n(951288),
     T = n(37113),
     S = n(526761),
     A = n(388032),
-    C = n(556865),
-    N = n(749799),
-    R = n(197571);
+    C = n(298291),
+    N = n(622025),
+    R = n(10198);
 function P(e, t, n) {
     return (
         t in e
@@ -89,8 +89,8 @@ function L() {
         } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
         L = (0, s.e7)([g.Z], () => g.Z.getHardwareClassification()),
         j = (0, s.e7)([h.ZP], () => h.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        M = g.Z.isDecoupledGameClippingEnabled(),
-        k = (0, b.Z)(p.Z),
+        k = g.Z.isDecoupledGameClippingEnabled(),
+        M = (0, b.Z)(p.Z),
         { showClipsHeaderEntrypoint: U } = m.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
@@ -139,7 +139,7 @@ function L() {
             ],
             [G],
         ),
-        V = i.useMemo(
+        F = i.useMemo(
             () => [
                 {
                     value: T.ws.FPS_15,
@@ -156,7 +156,7 @@ function L() {
             ],
             [G],
         ),
-        F = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 c.Z.setKeybind(x(w({}, j), { shortcut: e }));
             },
@@ -205,8 +205,8 @@ function L() {
                         }),
                 ],
             }),
-            M &&
-                k &&
+            k &&
+                M &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.$i$, {}),
@@ -280,7 +280,7 @@ function L() {
                         title: A.intl.string(A.t["2wScLy"]),
                         note: A.intl.string(A.t["Rf9+f3"]),
                         value: D.frameRate,
-                        options: V,
+                        options: F,
                     }),
                     (0, r.jsx)(O.O, {
                         className: N.formItem,
@@ -290,7 +290,7 @@ function L() {
                             className: C.keyRecorder,
                             children: (0, r.jsx)(d.Z, {
                                 defaultValue: j.shortcut,
-                                onChange: F,
+                                onChange: V,
                             }),
                         }),
                     }),

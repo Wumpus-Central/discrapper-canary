@@ -1,9 +1,9 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => N });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(202841),
+    o = n(261616),
     s = n(990547),
     c = n(755721),
     u = n(481060),
@@ -21,12 +21,12 @@ var r = n(951288),
     v = n(474936),
     I = n(981631),
     C = n(388032),
-    S = n(427954),
-    N = n(286389);
-function T(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: T } = e,
-        { analyticsLocations: P } = (0, d.ZP)(),
-        { isHovered: j, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
+    S = n(3254),
+    T = n(952602);
+function N(e) {
+    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: N } = e,
+        { analyticsLocations: j } = (0, d.ZP)(),
+        { isHovered: P, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
         { enableEmojiCTA: w } = _.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -57,7 +57,7 @@ function T(e) {
                     initialPlanId: null,
                     giftRecipient: t,
                     analyticsLocation: (0, E.F)(n).actionButton,
-                    analyticsLocations: P,
+                    analyticsLocations: j,
                     analyticsObject: {
                         page: l,
                         section: I.jXE.FRIENDS_LIST_FRIEND_ROW,
@@ -78,7 +78,7 @@ function T(e) {
         animation: u.yRy.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         scrollBehavior: "close",
-        shouldShow: j,
+        shouldShow: P,
         position: "right",
         align: "top",
         spacing: 9,
@@ -104,7 +104,7 @@ function T(e) {
                       innerRef: M,
                       "aria-label": k(),
                       onClick: R,
-                      className: a()(N.actionButton, S.popoutButton, { [N.highlight]: T }),
+                      className: a()(T.actionButton, S.popoutButton, { [T.highlight]: N }),
                       onMouseEnter: L,
                       onMouseLeave: Z,
                       children: (0, r.jsx)(o.animated.div, {

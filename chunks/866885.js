@@ -32,9 +32,9 @@ var r = n(951288),
     x = n(918559),
     L = n(981631),
     j = n(354459),
-    M = n(505386),
-    k = n(186880),
-    U = n(315091);
+    k = n(51434),
+    M = n(533362),
+    U = n(285236);
 function G(e, t, n) {
     return (
         t in e
@@ -68,7 +68,7 @@ function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = V(e, t);
+        i = F(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -76,7 +76,7 @@ function Z(e, t) {
     }
     return i;
 }
-function V(e, t) {
+function F(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -85,14 +85,14 @@ function V(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function F(e) {
+function V(e) {
     var t, n, a;
     let { channel: _, isLoading: p } = e,
         [C, G] = i.useState(!1),
         B = (0, s.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
         Z = (0, s.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
-        V = (0, h.q)(null == B ? void 0 : B.applicationId),
-        F = null == B ? void 0 : B.launchId,
+        F = (0, h.q)(null == B ? void 0 : B.applicationId),
+        V = null == B ? void 0 : B.launchId,
         H = (0, s.e7)([v.Z], () => v.Z.getChannelId() === (null == _ ? void 0 : _.id)),
         { dockedRect: Y, isHidden: W } = (0, s.cj)([O.Z], () => {
             let e = O.Z.pipWindow;
@@ -186,7 +186,7 @@ function F(e) {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
-                                  className: M.clickShield,
+                                  className: k.clickShield,
                                   onDoubleClick: ei,
                               }),
                               (0, r.jsx)(w.YB, {
@@ -215,7 +215,7 @@ function F(e) {
                 });
             }
         }, [null == B ? void 0 : B.applicationId, en]),
-        null == B || null == F || ((0, R.Z)(null == _ ? void 0 : _.id) && null == z) || null == V)
+        null == B || null == V || ((0, R.Z)(null == _ ? void 0 : _.id) && null == z) || null == F)
     )
         return null;
     let es = Array.from(B.userIds)
@@ -240,14 +240,14 @@ function F(e) {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: s } = e;
                 return (0, r.jsxs)(b.Z, {
-                    className: o()(M.root, {
-                        [M.pipMode]: en,
+                    className: o()(k.root, {
+                        [k.pipMode]: en,
                         [U.elevationHigh]: en,
-                        [k.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [M.pipModeShort]: en && !C,
-                        [M.pipModeTall]: en && C,
-                        [M.hidden]: W,
-                        [M.multiPIPMode]: er,
+                        [M.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
+                        [k.pipModeShort]: en && !C,
+                        [k.pipModeTall]: en && C,
+                        [k.hidden]: W,
+                        [k.multiPIPMode]: er,
                     }),
                     noBorder: !en,
                     children: [
@@ -263,20 +263,20 @@ function F(e) {
                         }),
                         p
                             ? (0, r.jsx)(l.$jN, {
-                                  className: o()(M.iframe, {
-                                      [M.pipModeShort]: en && !C,
-                                      [M.pipModeTall]: en && C,
+                                  className: o()(k.iframe, {
+                                      [k.pipModeShort]: en && !C,
+                                      [k.pipModeTall]: en && C,
                                   }),
                               })
                             : (0, r.jsx)(P.J, {
-                                  allowPopups: (0, N.h)(V),
+                                  allowPopups: (0, N.h)(F),
                                   referrerPolicy: D.um.has(B.applicationId) ? "no-referrer" : "origin",
                                   url: B.url,
                                   queryParams: el,
-                                  className: o()(M.iframe, {
-                                      [M.pipModeShort]: en && !C,
-                                      [M.pipModeTall]: en && C,
-                                      [M.pipNonInteractive]:
+                                  className: o()(k.iframe, {
+                                      [k.pipModeShort]: en && !C,
+                                      [k.pipModeTall]: en && C,
+                                      [k.pipNonInteractive]:
                                           en && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
                                   }),
                                   shouldRefocus: !en && H,
@@ -304,7 +304,7 @@ let H = (e) => {
     return (0, r.jsx)(p.Gt, {
         value: a,
         children: (0, r.jsx)(
-            F,
+            V,
             B(
                 {
                     channel: t,

@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(225675),
     O = n(981631),
     v = n(388032),
-    I = n(124650);
+    I = n(95457);
 function T(e) {
     var t;
     return (0, r.jsx)("span", {
@@ -69,14 +69,14 @@ function S(e) {
             [a, n, R, L, A],
         );
     if (null == n || null == a || null == P) return null;
-    let M = {};
+    let k = {};
     return (P.roles.forEach((e) => {
         let t = S[e];
-        null != t && (M[t.id] = t);
+        null != t && (k[t.id] = t);
     }),
     s.e$(
         m.I0({
-            forceRoles: M,
+            forceRoles: k,
             context: a,
         }),
         s.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES),

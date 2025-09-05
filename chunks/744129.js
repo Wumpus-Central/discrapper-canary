@@ -1,7 +1,7 @@
 n.d(t, {
     IL: () => Z,
     UQ: () => B,
-    rz: () => F,
+    rz: () => V,
 });
 var r = n(951288);
 n(647438);
@@ -33,11 +33,11 @@ var i = n(120356),
     R = n(52741),
     P = n(474936),
     w = n(388032),
-    D = n(1721),
+    D = n(518520),
     x = n(895601),
     L = n(381126),
     j = n(234286);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -155,15 +155,15 @@ function Z(e) {
             isApplicationHome: T = !1,
         } = e,
         S = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
-        M = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-        k = (0, I.N)(),
-        U = null == k || null == (t = k.subscription_trial) ? void 0 : t.sku_id,
-        G = (null == S ? void 0 : S.hasActiveTrial) ? (null == M ? void 0 : M.premiumType) : null,
+        k = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
+        M = (0, I.N)(),
+        U = null == M || null == (t = M.subscription_trial) ? void 0 : t.sku_id,
+        G = (null == S ? void 0 : S.hasActiveTrial) ? (null == k ? void 0 : k.premiumType) : null,
         B = (0, v.Ng)(),
         Z = (0, y.t7)(),
-        V = null != U || null != G ? P.C.PREMIUM_TRIAL : null != B || Z ? P.C.PREMIUM_DISCOUNT : null,
-        F = (0, u.ap)((0, f.ZP)()),
-        H = (0, C.A1)(Z, G, B, k, U),
+        F = null != U || null != G ? P.C.PREMIUM_TRIAL : null != B || Z ? P.C.PREMIUM_DISCOUNT : null,
+        V = (0, u.ap)((0, f.ZP)()),
+        H = (0, C.A1)(Z, G, B, M, U),
         Y = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -195,12 +195,12 @@ function Z(e) {
             }),
             (0, r.jsx)(b.Z, {
                 className: D.wordmark,
-                color: F ? "black" : "white",
+                color: V ? "black" : "white",
             }),
             (0, r.jsx)(R.Z, {
                 isGift: d,
                 premiumTier: P.p9.TIER_2,
-                offerType: V,
+                offerType: F,
                 offerTierMatchesCard: U === P.Si.TIER_2 || (0, v.Wp)(B, P.Si.TIER_2),
                 showYearlyPrice: i,
                 priceOptions: p,
@@ -223,7 +223,7 @@ function Z(e) {
         ],
     });
 }
-let V = (e) => {
+let F = (e) => {
     let { subscriptionTier: t, isReducedMotion: n, tierCardProps: i, className: o } = e,
         s = t === P.Si.TIER_2,
         c = s ? Z : B,
@@ -237,7 +237,7 @@ let V = (e) => {
             children: (0, r.jsx)(
                 l.z,
                 G(
-                    k(
+                    M(
                         {
                             size: "md",
                             fullWidth: !0,
@@ -252,7 +252,7 @@ let V = (e) => {
             className: a()({ [D.premiumCardHover]: !n }),
             children: (0, r.jsx)(
                 c,
-                k(
+                M(
                     {
                         className: D.applicationHomeCard,
                         ctaButton: p,
@@ -280,7 +280,7 @@ let V = (e) => {
               }),
     });
 };
-function F(e) {
+function V(e) {
     let { innerRef: t, className: n } = e,
         { analyticsLocations: i } = (0, h.ZP)(p.Z.PREMIUM_MARKETING_TIER_CARD),
         l = (0, N.rS)(t),
@@ -300,12 +300,12 @@ function F(e) {
                     ref: l,
                     className: D.premiumCards,
                     children: [
-                        (0, r.jsx)(V, {
+                        (0, r.jsx)(F, {
                             subscriptionTier: P.Si.TIER_0,
                             isReducedMotion: c,
                             className: D.tier0CardOrder,
                         }),
-                        (0, r.jsx)(V, {
+                        (0, r.jsx)(F, {
                             subscriptionTier: P.Si.TIER_2,
                             isReducedMotion: c,
                             className: D.tier2CardOrder,

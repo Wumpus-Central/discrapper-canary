@@ -26,14 +26,14 @@ var r = n(951288),
     C = n(689079),
     N = n(981631),
     R = n(388032),
-    P = n(57507),
+    P = n(587222),
     w = n(239840);
 let D = 512,
     x = 7,
     L = 56,
     j = 16,
-    M = 32,
-    k = 20,
+    k = 32,
+    M = 20,
     U = 420,
     G = [8, 8, 0, 8],
     B = l().debounce(() => {
@@ -43,7 +43,7 @@ let D = 512,
         let { channel: n, canOnlyUseTextCommands: a } = e,
             s = i.useRef(!1),
             l = i.useRef(0),
-            [Z, F] = i.useState(0),
+            [Z, V] = i.useState(0),
             H = i.useRef(null),
             [Y, W] = i.useState(!1),
             K = m.Xn.useStore((e) => e.activeCategoryIndex);
@@ -87,11 +87,11 @@ let D = 512,
                         m.Xn.setActiveCategoryIndex(e);
                     }
                 },
-                scrollOffset: k,
+                scrollOffset: M,
                 searchQuery: "",
             }),
             er = (e) => {
-                let t = q.length * (M + j) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? x : 0)) * L - D;
+                let t = q.length * (k + j) + (X.reduce((e, t) => e + t.data.length, 0) - (Q ? x : 0)) * L - D;
                 Q && e + U > t && ee(), en(e), B(), (l.current = e);
             },
             ei = i.useRef(er);
@@ -137,7 +137,7 @@ let D = 512,
             t,
             () => ({
                 onTabOrEnter: (e) => {
-                    if (null == Z) return !e && (F(0), !0);
+                    if (null == Z) return !e && (V(0), !0);
                     if (null == Z) return !1;
                     let t = 0,
                         n = 0;
@@ -155,7 +155,7 @@ let D = 512,
                     let t = Q ? x : 0,
                         n = J.length + t,
                         r = null == Z ? 0 : Z + e;
-                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), F(r), W(!0), !0;
+                    return r >= n ? (r = n - 1) : r < 0 && (r = 0), V(r), W(!0), !0;
                 },
             }),
             [J.length, X, Q, z, el, Z],
@@ -235,7 +235,7 @@ let D = 512,
                             section: l,
                             onClick: () => el(o, l, (0, I.tI)(a.section)),
                             onHover: () => {
-                                F(null), W(!1);
+                                V(null), W(!1);
                             },
                         },
                         s,
@@ -256,7 +256,7 @@ let D = 512,
                 id: ef,
                 className: P.outerWrapper,
                 innerClassName: P.wrapper,
-                onMouseDown: V,
+                onMouseDown: F,
                 children: [
                     (0, r.jsx)(T.Z, {
                         className: P.rail,
@@ -278,7 +278,7 @@ let D = 512,
                         rowCount: q.length,
                         rowCountBySection: eo,
                         rowHeight: L,
-                        sectionHeaderHeight: M,
+                        sectionHeaderHeight: k,
                         sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,
@@ -287,6 +287,6 @@ let D = 512,
             })
         );
     });
-function V(e) {
+function F(e) {
     e.preventDefault();
 }

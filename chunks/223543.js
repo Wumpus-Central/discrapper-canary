@@ -2,17 +2,17 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(893776),
-    o = n(129293),
-    s = n(388905),
+    s = n(129293),
+    o = n(388905),
     a = n(108427),
     c = n(388032),
-    u = n(197571);
+    u = n(10198);
 function d(e) {
     let { location: t } = e,
         [d, h] = i.useState("submitting");
     return (i.useEffect(() => {
         (0, a.e)("authorize_payment");
-        let e = (0, o.Z)(t);
+        let e = (0, s.Z)(t);
         if (null == e) return void h("failed");
         (async () => {
             try {
@@ -23,42 +23,42 @@ function d(e) {
         })();
     }, [t]),
     "failed" === d)
-        ? (0, r.jsxs)(s.ZP, {
+        ? (0, r.jsxs)(o.ZP, {
               children: [
                   (0, r.jsx)("img", {
                       alt: "",
                       src: n(375673),
                       className: u.marginBottom20,
                   }),
-                  (0, r.jsx)(s.Dx, {
+                  (0, r.jsx)(o.Dx, {
                       className: u.marginBottom8,
                       children: c.intl.string(c.t.GHRpub),
                   }),
-                  (0, r.jsx)(s.DK, {
+                  (0, r.jsx)(o.DK, {
                       className: u.marginBottom40,
                       children: c.intl.string(c.t["1nO55u"]),
                   }),
               ],
           })
         : "succeeded" === d
-          ? (0, r.jsxs)(s.ZP, {
+          ? (0, r.jsxs)(o.ZP, {
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
                         src: n(73962),
                         className: u.marginBottom20,
                     }),
-                    (0, r.jsx)(s.Dx, {
+                    (0, r.jsx)(o.Dx, {
                         className: u.marginBottom8,
                         children: c.intl.string(c.t["ihHX5+"]),
                     }),
-                    (0, r.jsx)(s.DK, {
+                    (0, r.jsx)(o.DK, {
                         className: u.marginBottom40,
                         children: c.intl.string(c.t.pGPCv7),
                     }),
                 ],
             })
-          : (0, r.jsxs)(s.ZP, {
-                children: [(0, r.jsx)(s.Hh, {}), (0, r.jsx)(s.Dx, { children: c.intl.string(c.t.T3vC7u) })],
+          : (0, r.jsxs)(o.ZP, {
+                children: [(0, r.jsx)(o.Hh, {}), (0, r.jsx)(o.Dx, { children: c.intl.string(c.t.T3vC7u) })],
             });
 }

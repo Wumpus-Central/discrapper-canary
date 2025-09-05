@@ -1,7 +1,7 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(202841),
+    l = n(261616),
     a = n(722770),
     s = n(481060),
     o = n(236413),
@@ -9,7 +9,7 @@ var r = n(951288),
     d = n(65912),
     u = n(564488),
     m = n(388032),
-    g = n(32490);
+    g = n(593631);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,32 +53,32 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function h(e) {
     let { guildId: t, triggerType: n } = e,
-        f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [b] = i.useState(f),
+        h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
+        [b] = i.useState(h),
         [x, j] = i.useState(!1),
-        { editingRule: v, createNewEditingRule: _ } = (0, d.V)(),
+        { editingRule: _, createNewEditingRule: v } = (0, d.V)(),
         { getDefaultRuleName: O } = c.I6[n],
-        y = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [C, N] = i.useState(y ? v : b),
+        y = !(0, o.Vb)(_) && (null == _ ? void 0 : _.triggerType) === n,
+        [C, N] = i.useState(y ? _ : b),
         E = (0, s.q_F)({
             opacity: +!y,
             pointerEvents: y ? "none" : "all",
-            config: h(p({}, l.config.stiff), { clamp: !0 }),
+            config: f(p({}, l.config.stiff), { clamp: !0 }),
         }),
         I = (0, s.q_F)({
             opacity: +!!y,
             pointerEvents: y ? "all" : "none",
-            config: h(p({}, l.config.stiff), { clamp: !0 }),
+            config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                N(y ? v : b);
+                N(y ? _ : b);
             },
             onRest: () => {
-                N(y ? v : b), j(y);
+                N(y ? _ : b), j(y);
             },
         });
-    return null == v || y
+    return null == _ || y
         ? (0, r.jsxs)("div", {
               className: g.mainRuleContainer,
               style: { height: y ? "auto" : "60px" },
@@ -97,7 +97,7 @@ function f(e) {
                       children: (0, r.jsxs)(s.P3F, {
                           className: g.addAnotherRuleCardContainer,
                           onClick: () => {
-                              _(t, n);
+                              v(t, n);
                           },
                           children: [
                               (0, r.jsx)(s.oFk, {

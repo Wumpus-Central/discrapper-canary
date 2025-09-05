@@ -11,7 +11,7 @@ var r = n(951288),
     p = n(248554),
     f = n(228168),
     h = n(388032),
-    g = n(229870);
+    g = n(73686);
 let m = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {
@@ -86,7 +86,7 @@ function b(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: (0, u.Nc)(t),
+                        children: (0, u.A5)(t),
                     }),
                 ],
             }),

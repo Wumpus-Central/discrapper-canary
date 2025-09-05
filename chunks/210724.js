@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(261616),
     l = n(286379),
     c = n(442837),
     u = n(481060),
@@ -35,7 +35,7 @@ var r = n(951288),
     D = n(46140),
     x = n(743294),
     L = n(981631),
-    j = n(89855);
+    j = n(747961);
 let k = 75,
     M = 70;
 function U(e) {
@@ -59,11 +59,11 @@ function G(e) {
         }),
         G = (0, I.Z)({ location: D.dr.QUESTS_BAR }),
         B = (0, c.e7)([b.Z], () => null != b.Z.questEnrollmentBlockedUntil),
-        { isQuestBarVisible: Z, reason: V } = (0, N.qN)({
+        { isQuestBarVisible: Z, reason: F } = (0, N.qN)({
             quest: a,
             location: D.dr.QUESTS_BAR,
         }),
-        F = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        V = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         H = (0, c.e7)([p.Z], () => p.Z.hasLayers()),
         Y = i.useRef(null),
         W = i.useMemo(() => (0, g.q8)(a), [a]),
@@ -168,9 +168,9 @@ function G(e) {
     i.useEffect(() => {
         eT({
             expansionSpring: +!!ea,
-            immediate: F,
+            immediate: V,
         });
-    }, [ea, eT, F]);
+    }, [ea, eT, V]);
     let { visibilitySpring: eS } = (0, u.q_F)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!J },
@@ -234,13 +234,13 @@ function G(e) {
                     properties: {
                         content_id: y.jn.QUEST_BAR,
                         content_name: (0, h._b)(y.jn.QUEST_BAR),
-                        reason: V,
+                        reason: F,
                         impression_id: null == (e = Y.current) ? void 0 : e.getId(),
                     },
                     sourceQuestContent: y.jn.QUEST_BAR_V2,
                 });
             }
-        }, [J, ec, Q, a.id, V]),
+        }, [J, ec, Q, a.id, F]),
         i.useEffect(() => {
             (!Z || B) && m.Z.clearTracking(), J && ec && !Q && !X && G && m.Z.stopTracking(a.id);
         }, [Z, B, J, ec, Q, X, G, a.id]);
@@ -306,7 +306,7 @@ function G(e) {
                                     onCtxMenuOpened: ep,
                                     onCtxMenuSelection: em,
                                     quest: a,
-                                    useReducedMotion: F,
+                                    useReducedMotion: V,
                                     collapsedHeight: eC,
                                     shouldShowRewardsCTAWhenCollapsed: en,
                                 }),

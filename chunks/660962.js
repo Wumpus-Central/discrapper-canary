@@ -11,13 +11,13 @@ var r = n(951288),
     m = n(780384),
     g = n(481060),
     p = n(37234),
-    h = n(410030),
-    f = n(607070),
+    f = n(410030),
+    h = n(607070),
     b = n(100527),
     x = n(663993),
     j = n(243778),
-    v = n(518738),
-    _ = n(753206),
+    _ = n(518738),
+    v = n(753206),
     O = n(606318),
     y = n(402235),
     C = n(441536),
@@ -37,17 +37,17 @@ var r = n(951288),
     M = n(981631),
     G = n(141006),
     U = n(388032),
-    B = n(989308),
-    F = n(12574),
-    H = n(21321),
+    B = n(258640),
+    F = n(250302),
+    H = n(10083),
     z = n(179517),
     W = n(79829);
 let V = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
-    Y = o().debounce((e, t) => (0, S.Uv)(e, t), 200);
-function K(e) {
+    K = o().debounce((e, t) => (0, S.Uv)(e, t), 200);
+function Y(e) {
     let { role: t, disabled: n } = e,
         [l, a] = i.useState(t.name);
     return (
@@ -62,18 +62,18 @@ function K(e) {
                 value: l,
                 maxLength: M.VKK,
                 onChange: function (e) {
-                    a(e), Y(t.id, e);
+                    a(e), K(t.id, e);
                 },
                 disabled: n,
             }),
         })
     );
 }
-function X(e) {
+function q(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: s } = e,
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
-        d = (0, h.ZP)(),
-        f = (0, v.oC)(n, t),
+        d = (0, f.ZP)(),
+        h = (0, _.oC)(n, t),
         x = {
             dark: {
                 src: z,
@@ -107,7 +107,7 @@ function X(e) {
             (0, r.jsx)("div", {
                 className: F.roleStyleContainer,
                 children: k.pM.map((e) => {
-                    let { id: u, colors: p, labelString: h } = e;
+                    let { id: u, colors: p, labelString: f } = e;
                     return (0, r.jsxs)(
                         "button",
                         {
@@ -122,7 +122,7 @@ function X(e) {
                                 (0, r.jsx)(g.Rny, {
                                     children: (0, r.jsx)("div", {
                                         className: F.roleStyleMessageContainer,
-                                        children: (0, r.jsx)(_.Z, {
+                                        children: (0, r.jsx)(v.Z, {
                                             author: {
                                                 nick: o.author.username,
                                                 guildId: n,
@@ -133,7 +133,7 @@ function X(e) {
                                             },
                                             message: o,
                                             preview: !0,
-                                            roleIcon: null != f ? f : (0, m.ap)(d) ? x.light : x.dark,
+                                            roleIcon: null != h ? h : (0, m.ap)(d) ? x.light : x.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n,
@@ -142,7 +142,7 @@ function X(e) {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: F.roleStyleLabel,
-                                    children: U.intl.string(h),
+                                    children: U.intl.string(f),
                                 }),
                             ],
                         },
@@ -160,7 +160,7 @@ function X(e) {
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-sm/semibold",
                                     color: "button-outline-primary-text",
-                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(q, {}) }),
+                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) }),
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-xs/medium",
@@ -182,8 +182,8 @@ function X(e) {
         ],
     });
 }
-function q() {
-    let e = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
+function X() {
+    let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
             colorStrings: (0, O.DX)(G.SK),
             useReducedMotion: e,
@@ -222,7 +222,7 @@ function q() {
         children: U.intl.string(B.default["+/IHLi"]),
     });
 }
-function J(e) {
+function Q(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsxs)(g.xJW, {
@@ -273,7 +273,7 @@ function J(e) {
         ],
     });
 }
-function Q(e) {
+function J(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         s = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         o = {
@@ -292,7 +292,7 @@ function Q(e) {
             src: W,
             name: t.name,
         },
-        u = (0, v.oC)(n, t),
+        u = (0, _.oC)(n, t),
         p = [M.BRd.DARK, M.BRd.DARKER, M.BRd.MIDNIGHT, M.BRd.LIGHT];
     return (0, r.jsx)(g.Rny, {
         children: (0, r.jsx)("div", {
@@ -310,7 +310,7 @@ function Q(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: F.messageContainer,
-                                        children: (0, r.jsx)(_.Z, {
+                                        children: (0, r.jsx)(v.Z, {
                                             author: o,
                                             message: s,
                                             roleIcon: null != u ? u : (0, m.ap)(e) ? d : c,
@@ -366,12 +366,12 @@ function ee(e) {
         u = null != o && s ? o.currentStyle : T.g.SOLID,
         m = (0, E.fI)(n),
         p = i || m,
-        h = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
-        { headerHeight: f, headerRef: b } = (0, w.Z)(0),
+        f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
+        { headerHeight: h, headerRef: b } = (0, w.Z)(0),
         { scrolledToTop: x, handleScroll: j } = (0, Z.V)();
     return (0, r.jsx)(g.yWw, {
         className: F.scroller,
-        style: { scrollPaddingTop: f },
+        style: { scrollPaddingTop: h },
         onScroll: j,
         children: (0, r.jsxs)("div", {
             className: H.contentWidth,
@@ -386,7 +386,7 @@ function ee(e) {
                         setSelectedSection: l,
                     }),
                 }),
-                (0, r.jsx)(K, {
+                (0, r.jsx)(Y, {
                     role: n,
                     disabled: p,
                 }),
@@ -397,7 +397,7 @@ function ee(e) {
                 (0, r.jsx)(g.$i$, { className: F.divider }),
                 (s || c) &&
                     null != u &&
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(q, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,
@@ -406,7 +406,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(J, {
+                    (0, r.jsx)(Q, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -425,7 +425,7 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(Q, {
+                (0, r.jsx)(J, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,
@@ -436,7 +436,7 @@ function ee(e) {
                     role: n,
                     disabled: p,
                 }),
-                h
+                f
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(g.$i$, { className: F.divider }),

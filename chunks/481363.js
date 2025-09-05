@@ -5,7 +5,7 @@ var i = n(630388),
     l = n(901461),
     a = n(773176),
     o = n(981631),
-    s = n(360514);
+    s = n(5898);
 function c(e) {
     let {
             setPopout: t,
@@ -15,15 +15,15 @@ function c(e) {
             messageWindow: g,
         } = e,
         b = p.state === o.yb.SENDING,
-        _ = p.id === f,
-        y = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        y = p.id === f,
+        _ = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
         C = p.state === o.yb.SEND_FAILED;
-    return b || (y && !C)
+    return b || (_ && !C)
         ? null
         : (0, r.jsx)(a.Z, {
               className: s.buttons,
               innerClassName: s.buttonsInner,
-              isHeader: !m && _ && !(0, l.Z)(p),
+              isHeader: !m && y && !(0, l.Z)(p),
               isReply: !m && p.type === o.uaV.REPLY && null != p.messageReference,
               channel: h,
               message: p,

@@ -37,11 +37,11 @@ var r = n(951288),
     k = n(918559),
     U = n(981631),
     B = n(388032),
-    F = n(33985);
+    G = n(322678);
 let H = w.u8.SIZE_32,
-    G = {
-        [k.MI.NO_CHAT]: F.noChat,
-        [k.MI.RESIZABLE]: F.resizable,
+    F = {
+        [k.MI.NO_CHAT]: G.noChat,
+        [k.MI.RESIZABLE]: G.resizable,
     };
 function V(e) {
     var t, n, l;
@@ -198,7 +198,7 @@ function V(e) {
                     {
                         src: e.getAvatarURL(null == X ? void 0 : X.guild_id, H),
                         alt: i,
-                        className: F.avatar,
+                        className: G.avatar,
                     },
                     e.id,
                 ),
@@ -210,27 +210,27 @@ function V(e) {
         theme: U.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: a()(F.wrapper, G[et], e),
+                className: a()(G.wrapper, F[et], e),
                 ref: ee,
                 style: eb,
                 children: [
                     null == W ? void 0 : W(),
                     (0, r.jsxs)("div", {
-                        className: F.activityPanelContainer,
+                        className: G.activityPanelContainer,
                         children: [
                             en
                                 ? null
                                 : (0, r.jsx)("div", {
-                                      className: F.header,
+                                      className: G.header,
                                       children: (0, r.jsx)(s.x, {
                                           color: "header-primary",
                                           variant: "text-md/semibold",
-                                          className: F.headerTitle,
+                                          className: G.headerTitle,
                                           children: null == q ? void 0 : q.name,
                                       }),
                                   }),
                             (0, r.jsx)("div", {
-                                className: a()(F.activityContainer, { [F.activityContainerNoMargin]: ep }),
+                                className: a()(G.activityContainer, { [G.activityContainerNoMargin]: ep }),
                                 style: {
                                     paddingLeft: eu,
                                     paddingRight: eu,
@@ -239,13 +239,13 @@ function V(e) {
                                 },
                                 ref: ea,
                                 children: (0, r.jsx)(A.Z, {
-                                    className: F.iframe,
+                                    className: G.iframe,
                                     embedId: (0, M.Z)(z.id, q.id),
                                 }),
                             }),
                             null != ef
                                 ? (0, r.jsxs)("div", {
-                                      className: F.footer,
+                                      className: G.footer,
                                       children: [
                                           (0, r.jsx)(w.ZP, {
                                               renderIcon: !1,
@@ -255,10 +255,10 @@ function V(e) {
                                               renderUser: eC,
                                           }),
                                           (0, r.jsxs)("div", {
-                                              className: F.footerButtons,
+                                              className: G.footerButtons,
                                               children: [
                                                   (0, r.jsxs)("div", {
-                                                      className: F.buttonSection,
+                                                      className: G.buttonSection,
                                                       children: [
                                                           (0, r.jsx)(L.Z, { channelId: ef }),
                                                           (0, r.jsx)(b.d, {
@@ -271,7 +271,7 @@ function V(e) {
                                                       ],
                                                   }),
                                                   (0, r.jsx)("div", {
-                                                      className: F.leaveButtonContainer,
+                                                      className: G.leaveButtonContainer,
                                                       children: (0, r.jsx)(y.Z, {
                                                           applicationId: q.id,
                                                           location: z,

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(202841),
+    l = n(261616),
     a = n(442837),
     o = n(481060),
     s = n(570140),
@@ -18,7 +18,7 @@ var r = n(951288),
     O = n(151459),
     E = n(981631),
     y = n(388032),
-    v = n(10058);
+    v = n(319763);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -171,8 +171,8 @@ function S(e) {
                 e
             );
         })(),
-        N = i.useRef(null),
-        T = (0, o.Yzy)(S, {
+        T = i.useRef(null),
+        N = (0, o.Yzy)(S, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -206,11 +206,11 @@ function S(e) {
         children: [
             (0, r.jsx)("div", {
                 className: v.container,
-                children: T((e, t) =>
+                children: N((e, t) =>
                     null == t
                         ? null
                         : (0, r.jsx)(p.Z, {
-                              targetElementRef: N,
+                              targetElementRef: T,
                               position: "bottom",
                               align: "left",
                               userId: t.user.id,
@@ -221,7 +221,7 @@ function S(e) {
                                       C(
                                           I(
                                               {
-                                                  ref: N,
+                                                  ref: T,
                                                   className: v.activityWrapper,
                                                   style: e,
                                               },
@@ -274,7 +274,7 @@ function S(e) {
         ],
     });
 }
-function N(e) {
+function T(e) {
     let { className: t } = e,
         { enableTopNavButton: n } = (0, b.Cq)({ location: "friends-button" });
     return n ? (0, r.jsx)(S, { className: t }) : null;

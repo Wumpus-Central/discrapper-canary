@@ -6,15 +6,15 @@ n.d(t, {
 var i = n(951288);
 n(647438);
 var r = n(704215),
-    o = n(481060),
-    l = n(13245),
+    l = n(481060),
+    o = n(13245),
     s = n(312839),
     a = n(706140),
     c = n(809357),
     d = n(987650),
     u = n(921944),
     h = n(388032),
-    p = n(74912);
+    p = n(892701);
 function f() {
     let e = (0, c.Z)({
             location: "Overlay",
@@ -38,21 +38,21 @@ function g(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: p.iconContainer,
-                    children: (0, i.jsx)(o.S6n, {
+                    children: (0, i.jsx)(l.S6n, {
                         size: "custom",
                         color: "currentColor",
                         height: 28,
                         width: 28,
                     }),
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: "text-sm/normal",
                     children: h.intl.string(h.t.EFRNtL),
                 }),
             ],
         }),
         onDismissClick: (e, n) => {
-            r("dismiss"), t(u.L.DISMISS), l.Z.updateNotificationStatus(n);
+            r("dismiss"), t(u.L.DISMISS), o.Z.updateNotificationStatus(n);
         },
         onNotificationShow: () => {
             t(u.L.AUTO_DISMISS), n();

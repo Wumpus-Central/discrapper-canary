@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(981631),
     b = n(474936),
     y = n(231338),
-    O = n(315);
+    O = n(864976);
 function v(e, t) {
     return e in t;
 }
@@ -41,14 +41,14 @@ function I(e) {
             S === g.h8.CONFIRM &&
             null != x &&
             (null == R ? void 0 : R.productLine) !== E.POd.COLLECTIBLES,
-        M = null != n && null != S,
-        k = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
-        U = null != S && !k.includes(S) && null != T,
+        k = null != n && null != S,
+        M = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
+        U = null != S && !M.includes(S) && null != T,
         G = (0, u.N)(a),
         B = !D && null != G && null != T && b.nG[G.trial_id].skus.includes(T),
         Z = (0, c.Ng)(),
-        V = null == Z || null == (t = Z.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === T),
-        F = !D && null != Z && null != T && V;
+        F = null == Z || null == (t = Z.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === T),
+        V = !D && null != Z && null != T && F;
     return i.useMemo(() => {
         if (null == S) return;
         let e = null;
@@ -69,7 +69,7 @@ function I(e) {
                           }),
                       ],
                   }))
-                : M
+                : k
                   ? (e = n(null != A ? A : null, I, S))
                   : N === y.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(_.t, {
@@ -84,7 +84,7 @@ function I(e) {
                           premiumType: b.y7[T],
                           onClose: I,
                           showTrialBadge: B,
-                          showDiscountBadge: F,
+                          showDiscountBadge: V,
                           isGift: D,
                           giftRecipient: L,
                           isEligibleForTrial: B,
@@ -93,5 +93,5 @@ function I(e) {
                       }))),
             e
         );
-    }, [x, I, C, n, A, T, S, B, F, j, U, M, N, D, L, P, w]);
+    }, [x, I, C, n, A, T, S, B, V, j, U, k, N, D, L, P, w]);
 }

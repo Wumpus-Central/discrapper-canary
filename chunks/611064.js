@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => b,
-    Z: () => _,
+    Z: () => y,
 });
 var r = n(951288),
     i = n(647438),
@@ -14,16 +14,16 @@ var r = n(951288),
     p = n(809017),
     h = n(981631),
     f = n(388032),
-    m = n(532406),
-    g = n(32482);
+    m = n(489229),
+    g = n(854641);
 function b(e) {
     return (null == e ? void 0 : e.id) === p.G;
 }
-let _ = i.memo(function (e) {
+let y = i.memo(function (e) {
     let t,
-        { title: p, onToggleExpand: b, expanded: _, expandedCount: y } = e,
+        { title: p, onToggleExpand: b, expanded: y, expandedCount: _ } = e,
         C = (0, l.e7)([u.Z], () => u.Z.hidden),
-        x = i.useCallback((e) => {
+        v = i.useCallback((e) => {
             (0, o.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
                 return () => (0, r.jsx)(e, { closePopout: o.Zy });
@@ -35,15 +35,15 @@ let _ = i.memo(function (e) {
             (0, r.jsx)(a.nn4, {
                 children: f.intl.format(f.t.UaqbkZ, {
                     title: p,
-                    count: y,
+                    count: _,
                 }),
             }),
             (0, r.jsxs)(a.P3F, {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-                        return C ? (0, c.lY)() : y > 3 ? b() : (0, h.dG4)();
+                        return C ? (0, c.lY)() : _ > 3 ? b() : (0, h.dG4)();
                 },
-                onContextMenu: x,
+                onContextMenu: v,
                 tag: "span",
                 "aria-hidden": !0,
                 className: m.headerContainer,
@@ -52,16 +52,16 @@ let _ = i.memo(function (e) {
                         className: m.header,
                         children: [
                             (0, r.jsxs)("span", {
-                                children: [p, " \u2014 ", y],
+                                children: [p, " \u2014 ", _],
                             }),
                             (0, r.jsx)(d.Z, {}),
                         ],
                     }),
-                    y <= 3 && !C
+                    _ <= 3 && !C
                         ? null
                         : ((t = C
                               ? (0, r.jsx)(a.u04, { className: m.toggleExpandIcon })
-                              : _
+                              : y
                                 ? (0, r.jsx)(a.CJ0, { className: m.toggleExpandIcon })
                                 : (0, r.jsx)(a.Fbu, { className: m.toggleExpandIcon })),
                           (0, r.jsx)(a.tEY, {

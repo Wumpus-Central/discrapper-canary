@@ -15,8 +15,8 @@ var r = n(951288),
     m = n(745752),
     b = n(17181),
     _ = n(388032),
-    O = n(76531),
-    E = n(718215);
+    O = n(812070),
+    E = n(904885);
 function y(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: y, height: v } = (0, c.ZP)(),
@@ -40,7 +40,7 @@ function y(e) {
                       }),
             [C],
         ),
-        N = (0, d.N)(S);
+        T = (0, d.N)(S);
     return (0, r.jsxs)("div", {
         className: a()(O.outerWrapping, E.main, { [E.fullBorderWithGradient]: null == S }),
         ref: l,
@@ -54,14 +54,14 @@ function y(e) {
                       imageClassName: E.cover,
                   })
                 : (0, r.jsx)(p.Z, {}),
-            null != N &&
+            null != T &&
                 null != S &&
                 (0, r.jsx)("div", {
                     className: E.gradient,
                     style: {
                         background: "linear-gradient(180deg, "
-                            .concat((0, g.aD)(N, 0.16), " 0%, ")
-                            .concat((0, g.aD)(N, 1), " 100%)"),
+                            .concat((0, g.aD)(T, 0.16), " 0%, ")
+                            .concat((0, g.aD)(T, 1), " 100%)"),
                     },
                 }),
             null != S && (0, r.jsx)("div", { className: E.gradient }),

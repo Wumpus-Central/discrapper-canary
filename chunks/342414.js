@@ -21,8 +21,8 @@ var i = n(120356),
     O = n(695349),
     v = n(219673),
     I = n(504692),
-    S = n(104494),
-    T = n(639119),
+    T = n(104494),
+    S = n(639119),
     A = n(8647),
     C = n(533525),
     N = n(647277),
@@ -33,8 +33,8 @@ var i = n(120356),
     x = n(648613),
     L = n(508070),
     j = n(382791),
-    M = n(45474),
-    k = n(175418),
+    k = n(45474),
+    M = n(175418),
     U = n(164662),
     G = n(543581),
     B = n(84804),
@@ -43,8 +43,8 @@ var i = n(120356),
     V = n(474936),
     H = n(981631),
     Y = n(388032),
-    W = n(644219),
-    K = n(526980),
+    W = n(24202),
+    K = n(318271),
     z = n(872905),
     q = n(578478);
 function X(e, t, n) {
@@ -101,7 +101,7 @@ function $(e, t) {
 }
 let ee = (e, t, i) => {
         (0, l.ZDy)(async () => {
-            let { default: a } = await Promise.all([n.e("58067"), n.e("81709"), n.e("70349")]).then(n.bind(n, 833569));
+            let { default: a } = await Promise.all([n.e("58067"), n.e("81709"), n.e("78377")]).then(n.bind(n, 833569));
             return (n) =>
                 (0, r.jsx)(
                     a,
@@ -135,9 +135,9 @@ let ee = (e, t, i) => {
               : p && (G = P.cohort === I.S$.Control ? (0, r.jsx)(F.Z, {}) : (0, r.jsx)(N._, {}));
         let z = (0, o.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
             q = null != z && z.status === H.O0b.CANCELED && null != y && x,
-            X = (0, T.N)(),
-            Q = (0, S.Ng)(),
-            J = (0, S.Wp)(Q, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
+            X = (0, S.N)(),
+            Q = (0, T.Ng)(),
+            J = (0, T.Wp)(Q, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
             $ = null != z && z.status !== H.O0b.ACCOUNT_HOLD && z.hasAnyPremiumNitro,
             et = (0, _.Z)().isFractionalPremiumActive && !$ && null == G && !q,
             en = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
@@ -156,7 +156,7 @@ let ee = (e, t, i) => {
                         children: [
                             (0, r.jsx)(B.Z, { containerVisibilityPercentage: ei }),
                             q && j && null != y.expires_at && (0, r.jsx)(L.Z, { expiresAt: y.expires_at }),
-                            (0, r.jsx)(k.Z, {
+                            (0, r.jsx)(M.Z, {
                                 children: q ? Y.intl.format(Y.t["3yZP0N"], { percent: y.discount.amount }) : m,
                             }),
                             q &&
@@ -192,7 +192,7 @@ let ee = (e, t, i) => {
                                     icon: l.SrA,
                                     size: "md",
                                     text: Y.intl.string(Y.t.zrCzVF),
-                                    onClick: () => ee(R, z, M.R.CONFIRM_DISCOUNT),
+                                    onClick: () => ee(R, z, k.R.CONFIRM_DISCOUNT),
                                 }),
                             (0, r.jsx)(w.Z, {
                                 variant: et || q ? "secondary" : "expressive",
@@ -214,9 +214,9 @@ let ee = (e, t, i) => {
             { enabled: y, showCountdown: O } = v.b.useConfig({ location: "Hero Heading" }),
             I = (0, o.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
             A = null != I && I.status === H.O0b.CANCELED && null != p && y,
-            C = (0, T.N)(),
-            N = (0, S.Ng)(),
-            D = (0, S.Wp)(N, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
+            C = (0, S.N)(),
+            N = (0, T.Ng)(),
+            D = (0, T.Wp)(N, V.Si.TIER_2) ? V.Si.TIER_2 : void 0,
             x = null != I && I.status !== H.O0b.ACCOUNT_HOLD && I.hasAnyPremiumNitro,
             j = (0, _.Z)().isFractionalPremiumActive && !x && !A;
         return (0, r.jsxs)("div", {
@@ -274,7 +274,7 @@ let ee = (e, t, i) => {
                                                 icon: l.SrA,
                                                 size: "md",
                                                 text: Y.intl.string(Y.t.zrCzVF),
-                                                onClick: () => ee(b, I, M.R.CONFIRM_DISCOUNT),
+                                                onClick: () => ee(b, I, k.R.CONFIRM_DISCOUNT),
                                                 fullWidth: !0,
                                             }),
                                             (0, r.jsx)(w.Z, {
@@ -416,13 +416,13 @@ let ee = (e, t, i) => {
             E = (0, y._O)(),
             v = Y.intl.string(Y.t.qYKftb),
             I = (0, C.b)(),
-            S = (0, r.jsx)(en, { className: t }),
-            T = Y.intl.string(Y.t.ifwQZW),
+            T = (0, r.jsx)(en, { className: t }),
+            S = Y.intl.string(Y.t.ifwQZW),
             { fractionalState: A, endsAt: N } = (0, _.Z)(),
             R = (0, f.ZP)(N, f.aj.CREDITS_ENDS_IN);
         h || m
-            ? (S = (0, r.jsx)(ei, { isEligibleForBogoPromotion: m }))
-            : I && ((v = Y.intl.string(Y.t.qYKftb)), (S = (0, r.jsx)(er, {})));
+            ? (T = (0, r.jsx)(ei, { isEligibleForBogoPromotion: m }))
+            : I && ((v = Y.intl.string(Y.t.qYKftb)), (T = (0, r.jsx)(er, {})));
         let P = null;
         if (A === V.a$.NONE || h)
             P = n
@@ -478,7 +478,7 @@ let ee = (e, t, i) => {
             value: c,
             children: (0, r.jsx)(ea.Provider, {
                 value: {
-                    headingText: T,
+                    headingText: S,
                     headingTop: P,
                     showPill: E,
                     userDiscountOffer: o,
@@ -492,7 +492,7 @@ let ee = (e, t, i) => {
                           isInReverseTrial: h,
                           shouldShowReferralProgressBar: I,
                       })
-                    : S,
+                    : T,
             }),
         });
     };

@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(145807),
     S = n(56744),
     A = n(981631),
-    C = n(360514);
+    C = n(5898);
 function N(e, t, n) {
     return (
         t in e
@@ -107,8 +107,8 @@ function L(e) {
             onClick: x,
             hideSimpleEmbedContent: L = !0,
             channel: j,
-            isGroupStart: M,
-            animateAvatar: k,
+            isGroupStart: k,
+            animateAvatar: M,
             subscribeToComponentDispatch: U,
             renderThreadAccessory: G,
             trackAnnouncementViews: B = !1,
@@ -127,13 +127,13 @@ function L(e) {
             "renderThreadAccessory",
             "trackAnnouncementViews",
         ]),
-        V = i.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        F = i.isFirstMessageInForumPost(j),
+        F = i.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        V = i.isFirstMessageInForumPost(j),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         { content: Y, hasSpoilerEmbeds: W } = (0, E.Z)(i, {
             hideSimpleEmbedContent: L,
-            allowList: F || H,
-            allowHeading: F || H,
+            allowList: V || H,
+            allowHeading: V || H,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
@@ -163,9 +163,9 @@ function L(e) {
                 compact: a,
                 className: o()(N, {
                     [C.ephemeral]: (0, p.Pv)(i),
-                    [C.disableInteraction]: V,
+                    [C.disableInteraction]: F,
                 }),
-                disableInteraction: V,
+                disableInteraction: F,
                 childrenRepliedMessage: (0, S.Z)(i, j, K, z, a),
                 childrenExecutedCommand: (0, T.Z)(i, j, a),
                 childrenHeader: (0, v.Z)(
@@ -177,7 +177,7 @@ function L(e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, y.Q)(e, W),
                 childrenMessageContent: (0, O.Z)(e, Y),
-                childrenSystemMessage: (0, I.Z)(w(R({}, e), { disableInteraction: V })),
+                childrenSystemMessage: (0, I.Z)(w(R({}, e), { disableInteraction: F })),
                 onContextMenu: P,
                 onClick: x,
                 hasThread: G && null != Q && i.hasFlag(A.iLy.HAS_THREAD),

@@ -11,21 +11,21 @@ var r = n(951288),
     m = n(616780),
     g = n(100527),
     p = n(906732),
-    h = n(670188),
-    f = n(594174),
+    f = n(670188),
+    h = n(594174),
     b = n(626135),
     x = n(243730),
     j = n(434404),
-    v = n(946724),
-    _ = n(130341),
+    _ = n(946724),
+    v = n(130341),
     O = n(95242),
     y = n(420966),
     C = n(566476),
     N = n(203377),
     E = n(981631),
     I = n(388032),
-    S = n(472039),
-    T = n(21321);
+    S = n(37134),
+    T = n(10083);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -104,7 +104,7 @@ function Z(e) {
     function b(e) {
         if ((e.stopPropagation(), !u)) {
             if (e.shiftKey) return void R(t, l, s);
-            let n = v.Z.getRole(s);
+            let n = _.Z.getRole(s);
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     o.Modal,
@@ -140,10 +140,10 @@ function Z(e) {
         }
     }
     function x(e) {
-        let i = f.default.getUser(t.id);
+        let i = h.default.getUser(t.id);
         null != i &&
             (0, d.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("97445")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("26976"), n.e("71227")]).then(
                     n.bind(n, 415118),
                 );
                 return (t) =>
@@ -161,7 +161,7 @@ function Z(e) {
         (0, m.$)(p, "GuildSettingsRolesEditMembers"),
         (0, r.jsx)("div", {
             className: T.contentWidth,
-            children: (0, r.jsx)(h.Z, {
+            children: (0, r.jsx)(f.Z, {
                 targetElementRef: g,
                 userId: t.id,
                 guildId: l,
@@ -255,15 +255,15 @@ function A(e) {
             handleAddClick: u,
         } = e,
         { analyticsLocations: m } = (0, p.ZP)(g.Z.MEMBER_LIST),
-        h = i.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, _.rY)(t, h);
-    let f = i.useMemo(() => d.filter((e) => (0, _.eg)(h, e)), [d, h]),
-        b = i.useMemo(() => f.sort((e, t) => e.name.localeCompare(t.name)), [f]);
+        f = i.useMemo(() => l.trim().toLowerCase(), [l]);
+    (0, v.rY)(t, f);
+    let h = i.useMemo(() => d.filter((e) => (0, v.eg)(f, e)), [d, f]),
+        b = i.useMemo(() => h.sort((e, t) => e.name.localeCompare(t.name)), [h]);
     return (0, r.jsx)(p.Gt, {
         value: m,
         children: (0, r.jsx)(c._2F, {
             className: S.list,
-            sections: [Math.max(f.length, 1)],
+            sections: [Math.max(h.length, 1)],
             sectionHeight: a,
             renderSection: () => (0, r.jsx)("div", { style: { height: a } }, "section"),
             style: { scrollPaddingTop: a },
@@ -321,14 +321,14 @@ function k(e) {
     let { guild: t, role: l, locked: o, setSelectedSection: d } = e,
         [u, m] = i.useState(""),
         { headerHeight: g, headerRef: p } = (0, O.Z)(0),
-        { scrolledToTop: h, handleScroll: f } = (0, y.V)(),
+        { scrolledToTop: f, handleScroll: h } = (0, y.V)(),
         j = l.managed || o,
-        v = (0, _.e)(t.id, l.id),
+        _ = (0, v.e)(t.id, l.id),
         C =
             (0, s.e7)([x.Z], () => {
                 var e, n;
                 return null != (n = null == (e = x.Z.getRoleMemberCount(t.id)) ? void 0 : e[l.id]) ? n : 0;
-            }) > v.length,
+            }) > _.length,
         R = () => {
             b.default.track(E.rMx.OPEN_MODAL, {
                 type: "Add Role Members",
@@ -336,7 +336,7 @@ function k(e) {
                 location_section: "Members",
             }),
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("7590"), n.e("71993")]).then(n.bind(n, 24722));
+                    let { default: e } = await Promise.all([n.e("33285"), n.e("68226")]).then(n.bind(n, 24722));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -356,7 +356,7 @@ function k(e) {
                 children: (0, r.jsx)("div", {
                     className: T.contentWidth,
                     children: (0, r.jsxs)("div", {
-                        className: a()(T.header, { [T.stickyHeaderElevated]: !h }),
+                        className: a()(T.header, { [T.stickyHeaderElevated]: !f }),
                         children: [
                             (0, r.jsx)(y.Z, {
                                 guild: t,
@@ -387,8 +387,8 @@ function k(e) {
                 guildId: t.id,
                 roleId: l.id,
                 locked: j,
-                onScroll: f,
-                roleMembers: v,
+                onScroll: h,
+                roleMembers: _,
                 handleAddClick: R,
             }),
         ],

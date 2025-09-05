@@ -10,17 +10,17 @@ var i = n(442837),
     d = n(974513),
     u = n(290511),
     m = n(388032),
-    g = n(636942);
+    g = n(36040);
 function p(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         p = (0, i.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        h = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [f, b] = (0, o.VF)(t, h),
-        [x, j] = (0, d.OA)(t, [...h]),
-        v = p ? j.length : b.length,
-        _ = p ? x.length : f.length,
-        O = v < u.md,
-        y = _ >= u.X,
+        f = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
+        [h, b] = (0, o.VF)(t, f),
+        [x, j] = (0, d.OA)(t, [...f]),
+        _ = p ? j.length : b.length,
+        v = p ? x.length : h.length,
+        O = _ < u.md,
+        y = v >= u.X,
         C = j.length - b.length,
         N = (0, r.jsx)(a.owK, {
             size: "sm",
@@ -34,7 +34,7 @@ function p(e) {
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
         }),
-        I = [(Math.min(u.X, _) / u.md) * 100, (Math.min(u.md, v) / u.md) * 100],
+        I = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
         S =
             !O && y
                 ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css]
@@ -48,12 +48,12 @@ function p(e) {
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/bold",
                         color: "text-brand",
-                        children: m.intl.format(m.t.kvroKC, { count: _ }),
+                        children: m.intl.format(m.t.kvroKC, { count: v }),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/bold",
                         color: "text-muted",
-                        children: m.intl.format(m.t["0MjxJy"], { count: v }),
+                        children: m.intl.format(m.t["0MjxJy"], { count: _ }),
                     }),
                 ],
             }),

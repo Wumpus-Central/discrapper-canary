@@ -13,13 +13,13 @@ var r,
     u = n(246133),
     d = n(695346),
     p = n(885110),
-    h = n(63063),
-    f = n(316496),
+    f = n(63063),
+    h = n(316496),
     g = n(223730),
     m = n(981631),
-    b = n(933554),
+    b = n(893867),
     O = n(388032),
-    y = n(87587),
+    y = n(515438),
     _ = n(354810);
 function v(e) {
     let { closePopout: t } = e;
@@ -40,7 +40,7 @@ function v(e) {
 function j(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1, shouldShowCustomizeLink: r = !1, closePopout: l } = e,
         o = (0, a.e7)([p.Z], () => p.Z.getStatus()),
-        { showLinkToSettings: h } = (0, f.D)("popout");
+        { showLinkToSettings: f } = (0, h.D)("popout");
     return (0, i.jsxs)("div", {
         className: y.toggleContainer,
         children: [
@@ -70,7 +70,7 @@ function j(e) {
                                 }),
                             ],
                         }),
-                    r && h && (0, i.jsx)(g.K, { onClosePopout: l }),
+                    r && f && (0, i.jsx)(g.K, { onClosePopout: l }),
                 ],
             }),
             (0, i.jsx)(s.T2, {
@@ -140,7 +140,7 @@ function C(e) {
                 color: "text-secondary",
                 className: y.nuxContent,
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: h.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             (0, i.jsx)("div", {
@@ -164,7 +164,7 @@ function E(e) {
                 color: "text-secondary",
                 className: y.nuxContent,
                 children: O.intl.format(b.default["vtp/IS"], {
-                    learnMoreLink: h.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             (0, i.jsx)(v, { closePopout: t }),
@@ -182,7 +182,7 @@ function S(e) {
                 color: "text-secondary",
                 className: y.nuxContent,
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: h.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             (0, i.jsx)("div", {
@@ -199,7 +199,7 @@ function S(e) {
 function P(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting(),
-        { showLinkToSettings: r } = (0, f.D)("popout");
+        { showLinkToSettings: r } = (0, h.D)("popout");
     return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(j, {
@@ -211,7 +211,7 @@ function P(e) {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: h.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             r && (0, i.jsx)(g.y, { onClosePopout: t }),
@@ -232,7 +232,7 @@ function I(e) {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 children: O.intl.format(b.default["vtp/IS"], {
-                    learnMoreLink: h.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             (0, i.jsx)(v, { closePopout: t }),
@@ -242,7 +242,7 @@ function I(e) {
 function N(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting(),
-        { showLinkToSettings: r } = (0, f.D)("popout");
+        { showLinkToSettings: r } = (0, h.D)("popout");
     return (0, i.jsxs)(x, {
         children: [
             (0, i.jsx)(j, {
@@ -255,7 +255,7 @@ function N(e) {
                 variant: "text-xs/normal",
                 color: "text-secondary",
                 children: O.intl.format(b.default.nHDuwM, {
-                    learnMoreLink: h.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
+                    learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
             r && (0, i.jsx)(g.y, { onClosePopout: t }),

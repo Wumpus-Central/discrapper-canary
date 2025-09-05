@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(211644),
     C = n(266454),
     S = n(492162),
-    N = n(43740),
-    T = n(596557),
+    T = n(43740),
+    N = n(596557),
     j = n(817520),
     P = n(999309),
     x = n(408987),
@@ -60,7 +60,7 @@ var r = n(951288),
     eo = n(921944),
     es = n(647086),
     ec = n(388032),
-    eu = n(971606);
+    eu = n(500553);
 function ed(e, t, n) {
     return (
         t in e
@@ -260,7 +260,7 @@ class eb extends i.PureComponent {
                         animation: f.yRy.Animation.SCALE,
                         shouldShow: n,
                         onRequestClose: () => {
-                            (0, N.l)(!1);
+                            (0, T.l)(!1);
                         },
                         spacing: 4,
                         children: (i) => {
@@ -384,7 +384,7 @@ class eb extends i.PureComponent {
             }),
             ed(this, "handleHeaderMenuToggle", (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
-                e.stopPropagation(), (0, N.l)(!t), this.closeAllHeaderNotices();
+                e.stopPropagation(), (0, T.l)(!t), this.closeAllHeaderNotices();
             }),
             ed(this, "handleContextMenu", (e) => {
                 let { guild: t } = this.props;
@@ -406,15 +406,15 @@ class eb extends i.PureComponent {
                             n.e("55616"),
                             n.e("7654"),
                             n.e("44156"),
-                            n.e("47463"),
+                            n.e("8360"),
                             n.e("6850"),
                             n.e("58227"),
                             n.e("54408"),
                             n.e("90746"),
-                            n.e("88479"),
+                            n.e("54052"),
                             n.e("87154"),
                             n.e("33213"),
-                            n.e("1289"),
+                            n.e("8417"),
                         ]).then(n.bind(n, 545135));
                         return (n) => (0, r.jsx)(e, ef(ep({}, n), { guild: t }));
                     });
@@ -439,7 +439,7 @@ class eb extends i.PureComponent {
                 null != e && t && x.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             ed(this, "renderMenuPopout", async () => {
-                let { default: e } = await Promise.all([n.e("87154"), n.e("45141")]).then(n.bind(n, 859432));
+                let { default: e } = await Promise.all([n.e("87154"), n.e("41794")]).then(n.bind(n, 859432));
                 return (t) => {
                     let { closePopout: n } = t,
                         { guild: i } = this.props;
@@ -573,16 +573,16 @@ function e_(e) {
             () => null != o && null != x && g && !W.Z.hasLayers() && A.Z.shouldShowGuildTemplateDirtyTooltip(n),
         ),
         e_ = (0, c.e7)([B.Z], () => B.Z.getChannel(a)),
-        { isPopoutOpen: eO } = (0, N.y)(),
+        { isPopoutOpen: eO } = (0, T.y)(),
         eE = null != (t = null == o ? void 0 : o.features.has(el.oNc.COMMUNITY)) && t,
         ey = X.ZP.isNewUser(x),
         ev = M && !ey;
-    (0, T.Z)(o);
+    (0, N.Z)(o);
     let eI = (0, C.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eC = (0, R.Z)(n),
         eS = (0, j.Z)(n),
-        eN = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
-        eT = (0, c.e7)([K.Z], () => K.Z.desyncedVoiceStatesCount),
+        eT = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
+        eN = (0, c.e7)([K.Z], () => K.Z.desyncedVoiceStatesCount),
         ej = (0, k.Z)(n);
     return (0, r.jsx)(eb, {
         guildId: n,
@@ -593,8 +593,8 @@ function e_(e) {
         selectedChannel: e_,
         selectedVoiceChannelId: h,
         voiceStates: d,
-        rtcConnectedChannelId: eN,
-        rtcDesyncedVoiceStatesCount: eT,
+        rtcConnectedChannelId: eT,
+        rtcDesyncedVoiceStatesCount: eN,
         isUnavailable: m,
         user: x,
         hasChannelNotice: null != en || ee,

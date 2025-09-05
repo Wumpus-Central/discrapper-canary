@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(585483),
     g = n(630388),
     b = n(838440),
-    _ = n(930282),
-    y = n(955384),
+    y = n(930282),
+    _ = n(955384),
     C = n(981631),
-    x = n(224837),
-    v = n(360514);
+    v = n(224837),
+    x = n(5898);
 function O(e) {
     let { value: t, channel: n } = e;
     return (0, b.v)({
@@ -35,9 +35,9 @@ function j(e) {
         { id: u } = n,
         m = t.getGuildId(),
         b = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        _ = t.type === C.d4z.GUILD_ANNOUNCEMENT,
+        y = t.type === C.d4z.GUILD_ANNOUNCEMENT,
         j = null != b && b.features.has(C.oNc.NEWS),
-        S = _ && j,
+        S = y && j,
         {
             editingMessage: I,
             editingTextValue: P,
@@ -69,7 +69,7 @@ function j(e) {
                     t.splice(+!!e, 0, {
                         type: s.re.TEXT_DISPLAY,
                         content: l,
-                        id: "".concat(x.Kb),
+                        id: "".concat(v.Kb),
                     }),
                         (p.content = ""),
                         (p.components = t);
@@ -115,7 +115,7 @@ function j(e) {
                     })({}, e)),
                     (n = n =
                         {
-                            className: v.channelTextArea,
+                            className: x.channelTextArea,
                             key: u,
                         }),
                     Object.getOwnPropertyDescriptors
@@ -136,7 +136,7 @@ function j(e) {
             [u],
         );
     return null != P && null != Z
-        ? (0, r.jsx)(y.Z, {
+        ? (0, r.jsx)(_.Z, {
               ref: void 0,
               channel: t,
               message: n,
@@ -179,7 +179,7 @@ function E(e) {
         (0, r.jsx)(
             u.ZP,
             {
-                className: v.channelTextArea,
+                className: x.channelTextArea,
                 textValue: t,
                 richValue: n,
                 channel: a,
@@ -206,7 +206,7 @@ function S(e, t, n) {
               channel: l,
               message: i,
           })
-        : (0, r.jsx)(_.ZP, {
+        : (0, r.jsx)(y.ZP, {
               message: i,
               content: t,
               compact: null != a && a,

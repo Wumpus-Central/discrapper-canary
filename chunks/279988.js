@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    m = n(31829);
+    m = n(866234);
 let g = function (e) {
     let {
             channelId: t,
@@ -17,13 +17,13 @@ let g = function (e) {
             index: i,
             isDragEnabled: g,
             isDropHovered: p,
-            onDrop: h,
-            onEdit: f,
+            onDrop: f,
+            onEdit: h,
             onRemove: b,
             canRemove: x,
             title: j,
-            actionsLocation: v,
-            fieldStyle: _,
+            actionsLocation: _,
+            fieldStyle: v,
         } = e,
         O = n.values,
         y = O.slice(0, 1),
@@ -33,13 +33,13 @@ let g = function (e) {
         index: i,
         isDragEnabled: g,
         isDropHovered: p,
-        onDrop: h,
-        onEdit: f,
+        onDrop: f,
+        onEdit: h,
         onRemove: b,
         title: j,
         canRemove: x,
-        actionsLocation: v,
-        fieldStyle: _,
+        actionsLocation: _,
+        fieldStyle: v,
         children: [
             (0, r.jsx)(c.EK, {
                 terms: y,
@@ -48,7 +48,7 @@ let g = function (e) {
             0 !== C &&
                 (0, r.jsxs)(s.P3F, {
                     className: l()(m.fieldFooterContainer, m.clickable),
-                    onClick: f,
+                    onClick: h,
                     children: [
                         (0, r.jsx)(s.R94, {
                             className: m.clickable,

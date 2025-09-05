@@ -25,7 +25,7 @@ var i = n(620662),
     S = n(994102),
     A = n(981631),
     C = n(671955),
-    N = n(723701);
+    N = n(87747);
 function R(e) {
     let { user: t, activity: n, onAction: R, onClose: P, application: w } = e,
         { themeType: D } = (0, m.z)(),
@@ -49,17 +49,17 @@ function R(e) {
             activity: n,
             onAction: R,
         });
-    let M = D === C.l.MODAL || D === C.l.MODAL_V2;
-    if (!L && x && null != w && !M)
+    let k = D === C.l.MODAL || D === C.l.MODAL_V2;
+    if (!L && x && null != w && !k)
         return (0, r.jsx)(S.Z, {
             application: w,
             onAction: R,
             onClose: P,
             analyticsLocations: j,
         });
-    let k = (0, i.Z)(n, A.xjy.JOIN) || (0, a.Z)(n),
+    let M = (0, i.Z)(n, A.xjy.JOIN) || (0, a.Z)(n),
         U = (null == n ? void 0 : n.application_id) != null;
-    return k && U
+    return M && U
         ? (0, r.jsxs)("div", {
               className: N.buttonContainer,
               children: [
@@ -75,7 +75,7 @@ function R(e) {
                   }),
               ],
           })
-        : k
+        : M
           ? (0, r.jsx)(b.Z, {
                 user: t,
                 activity: n,

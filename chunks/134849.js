@@ -13,12 +13,12 @@ var i = n(951288),
     h = n(371467),
     m = n(981631),
     g = n(388032),
-    y = n(63452);
+    y = n(401176);
 let O = [];
-function b(e) {
+function v(e) {
     return e.notification.id;
 }
-function v(e, t, n, r) {
+function b(e, t, n, r) {
     let { index: o, notification: l, locked: a, pinned: s } = t;
     return (0, i.jsx)(
         p.Z,
@@ -71,8 +71,8 @@ let _ = r.memo(function (e) {
               value: _,
               children: (0, i.jsx)(l.W3x, {
                   items: y,
-                  renderItem: v,
-                  getItemKey: b,
+                  renderItem: b,
+                  getItemKey: v,
                   wrapChildren: E,
               }),
           })

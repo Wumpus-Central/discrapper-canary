@@ -9,11 +9,11 @@ var r,
     u = n(15127),
     d = n(766646),
     f = n(993365),
-    _ = n(179240),
+    _ = n(639317),
     p = n(388032),
-    h = n(8542),
-    m = n(979712),
-    g = n(154257);
+    h = n(258422),
+    m = n(219990),
+    g = n(525685);
 function E(e, t, n) {
     return (
         t in e
@@ -128,7 +128,7 @@ class T extends (r = a.Component) {
                 onInvalid: N,
                 inputRef: R,
             } = this.props,
-            P = A ? _.l : "textarea",
+            P = A ? _.g : "textarea",
             w = this.hasError(),
             D = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
             x = this.getAriaDescribedBy();

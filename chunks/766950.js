@@ -21,11 +21,11 @@ var r = n(951288),
     C = n(512070),
     O = n(299939),
     v = n(305813),
-    y = n(203872),
-    P = n(981631),
-    k = n(693450),
+    P = n(203872),
+    y = n(981631),
+    k = n(62222),
     N = n(388032),
-    E = n(300119);
+    E = n(845378);
 function T(e) {
     var t, n, T;
     let { transitionState: D, analyticsLocations: R, guild: A, onClose: w } = e,
@@ -34,8 +34,8 @@ function T(e) {
         B = void 0 !== L ? L : null == I ? void 0 : I.displayNameStyles,
         [M, G] = o.useState(null != (t = null == B ? void 0 : B.fontId) ? t : i.C.DEFAULT),
         [Z, Y] = o.useState(null != (n = null == B ? void 0 : B.effectId) ? n : a.m.SOLID),
-        H = (0, y.R)(Z),
-        z = (0, y.R)(a.m.GRADIENT),
+        H = (0, P.R)(Z),
+        z = (0, P.R)(a.m.GRADIENT),
         F = null != (T = null == B ? void 0 : B.colors) ? T : [],
         [U, K] = o.useState(F.length > 0 && Z !== a.m.GRADIENT ? F[0] : H.defaultColors[0]),
         [V, X] = o.useState(F.length > 0 && Z === a.m.GRADIENT ? F : z.defaultColors);
@@ -65,7 +65,7 @@ function T(e) {
                         effectId: Z,
                         colors: e,
                     }),
-                    b.default.track(P.rMx.DISPLAY_NAME_STYLES_APPLIED, {
+                    b.default.track(y.rMx.DISPLAY_NAME_STYLES_APPLIED, {
                         font_name: i.C[M],
                         effect_name: a.m[Z],
                         colors: W,
@@ -75,7 +75,7 @@ function T(e) {
         }, [$, M, Z, W, H, w]),
         Q = o.useCallback(() => {
             let { fontId: e, effectId: t, colors: n } = (0, j.aY)();
-            G(e), Y(t), t === a.m.GRADIENT ? X(n) : K(n[0]), b.default.track(P.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+            G(e), Y(t), t === a.m.GRADIENT ? X(n) : K(n[0]), b.default.track(y.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
         }, [X, K]),
         ee = o.useCallback(
             (e) => {

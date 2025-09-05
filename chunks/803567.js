@@ -18,11 +18,11 @@ var i = n(442837),
     E = n(726985),
     b = n(981631),
     y = n(388032),
-    O = n(197571);
+    O = n(10198);
 let v = n(775322),
     I = n(853453),
-    S = (0, u.hQ)(),
-    T = {
+    T = (0, u.hQ)(),
+    S = {
         page: b.ZY5.USER_SETTINGS,
         section: b.jXE.SETTINGS_VOICE_AND_VIDEO,
     };
@@ -72,7 +72,7 @@ function C() {
         (0, r.jsxs)(s.hjN, {
             children: [
                 (0, r.jsx)(s.vwX, {
-                    id: S,
+                    id: T,
                     tag: s.RB0.H3,
                     className: O.marginBottom8,
                     children: y.intl.string(y.t.t8QhiY),
@@ -88,7 +88,7 @@ function C() {
                         (0, r.jsx)(o.Gu, {
                             options: g,
                             onChange: (e) => {
-                                l.Z.setNoiseCancellation(2 === e.value, T), l.Z.setNoiseSuppression(1 === e.value, T);
+                                l.Z.setNoiseCancellation(2 === e.value, S), l.Z.setNoiseSuppression(1 === e.value, S);
                             },
                             value: p,
                         }),

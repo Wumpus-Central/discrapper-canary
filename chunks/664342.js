@@ -10,16 +10,16 @@ var r = n(951288),
     d = n(933793),
     p = n(13736),
     h = n(732393),
-    f = n(214906),
+    f = n(71991),
     m = n(612856),
     g = n(137591),
     b = n(299206),
-    _ = n(727429),
-    y = n(665149),
+    y = n(727429),
+    _ = n(665149),
     C = n(359110),
-    x = n(585483),
-    v = n(407908),
-    O = n(131694),
+    v = n(585483),
+    x = n(407908),
+    O = n(739830),
     j = n(488131),
     E = n(981631),
     S = n(388032);
@@ -88,7 +88,7 @@ function Z(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                y.ZP.Icon,
+                _.ZP.Icon,
                 P(I({}, e), {
                     ref: o,
                     onClick: s,
@@ -103,9 +103,9 @@ function Z(e) {
 }
 function T(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
-        _ = (0, c.Z)(t, "Sidebar Overflow"),
-        y = (0, d.Z)(t),
-        v = (0, f.Z)(t),
+        y = (0, c.Z)(t, "Sidebar Overflow"),
+        _ = (0, d.Z)(t),
+        x = (0, f.Z)(t),
         O = (0, m.Z)(t),
         j = (0, a.Z)(t),
         I = (0, u.Z)(t),
@@ -129,7 +129,7 @@ function T(e) {
         children: [
             (0, r.jsxs)(l.kSQ, {
                 children: [
-                    _,
+                    y,
                     (0, r.jsx)(l.sNh, {
                         id: "open",
                         label: S.intl.string(S.t.IxVmZm),
@@ -138,10 +138,10 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [v, O],
+                children: [x, O],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z, y, P],
+                children: [Z, _, P],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -152,7 +152,7 @@ function T(e) {
                         action: function () {
                             R(),
                                 setTimeout(() => {
-                                    x.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    v.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         },
                     }),
@@ -161,7 +161,7 @@ function T(e) {
                         label: S.intl.string(S.t["2BSH7u"]),
                         icon: l.rgF,
                         action: function () {
-                            R(), x.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
+                            R(), v.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
                         },
                     }),
                 ],
@@ -180,12 +180,12 @@ function N(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(O.Z, { channel: t }),
-            t.isModeratorReportChannel() ? (0, r.jsx)(v.Z, { channel: t }) : null,
+            t.isModeratorReportChannel() ? (0, r.jsx)(x.Z, { channel: t }) : null,
             (0, r.jsx)(Z, { channel: t }),
-            (0, r.jsx)(y.ZP.Icon, {
+            (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cg),
-                onClick: () => (0, j.vN)((0, _.e)(t), null != n ? n : t.parent_id),
+                onClick: () => (0, j.vN)((0, y.e)(t), null != n ? n : t.parent_id),
             }),
         ],
     });

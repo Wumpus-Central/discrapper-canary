@@ -14,14 +14,14 @@ var r = n(951288),
     m = n(159300),
     g = n(800329),
     b = n(470956),
-    _ = n(430824),
-    y = n(496675),
+    y = n(430824),
+    _ = n(496675),
     C = n(434488),
-    x = n(27457),
-    v = n(251564),
+    v = n(27457),
+    x = n(251564),
     O = n(695492),
     j = n(981631),
-    E = n(312439);
+    E = n(53155);
 function S(e) {
     let {
             participants: t,
@@ -34,33 +34,33 @@ function S(e) {
             totalNumberOfParticipants: N,
         } = e,
         A = (0, c.bp)() === j.IlC.POPOUT,
-        w = (0, o.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
-        { dismissedActivityEntryPointTileChannel: R } = (0, v.d)(),
+        w = (0, o.e7)([y.Z], () => y.Z.getGuild(P.guild_id), [P.guild_id]),
+        { dismissedActivityEntryPointTileChannel: R } = (0, x.d)(),
         M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
         D = (0, b.bt)(P.id, t),
         L = i.useCallback(() => {
             (0, a.j)(() => {
-                v.d.setState({ dismissedActivityEntryPointTileChannel: P.id });
+                x.d.setState({ dismissedActivityEntryPointTileChannel: P.id });
             });
         }, [P.id]);
     i.useEffect(() => {
         null != R &&
             P.id !== R &&
             (0, a.j)(() => {
-                v.d.setState({ dismissedActivityEntryPointTileChannel: null });
+                x.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [P.id, R]);
-    let k = (0, o.e7)([y.Z], () => P.isPrivate() || (0, m.b)(y.Z, w, P), [w, P]),
+    let k = (0, o.e7)([_.Z], () => P.isPrivate() || (0, m.b)(_.Z, w, P), [w, P]),
         U = (null == w ? void 0 : w.afkChannelId) === P.id,
         B = P.userLimit <= 0 || P.userLimit > 1,
-        F = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
-        G = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        H = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
+        G = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
+        H = (0, f.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        F = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
         V = null != R && R === P.id,
         z = D.map(
             (e) => (t) =>
                 (0, r.jsx)(
-                    x.ZP,
+                    v.ZP,
                     {
                         participant: e,
                         channel: P,
@@ -91,11 +91,11 @@ function S(e) {
     ),
         null != w &&
             !U &&
-            (!(M >= 2) || !F || H || G || V
+            (!(M >= 2) || !G || F || H || V
                 ? B &&
                   1 === M &&
                   k &&
-                  (F && !H
+                  (G && !F
                       ? z.push((e) =>
                             (0, r.jsx)(C.h, {
                                 channel: P,

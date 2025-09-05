@@ -1,24 +1,24 @@
 n.d(t, { I: () => o });
-var i = n(951288),
-    l = n(471141),
-    r = n(2644);
+var r = n(951288),
+    i = n(471141),
+    l = n(601857);
 function o(e) {
     var t;
     let { node: n } = e,
         { useValue: o, setValue: s, useTitle: a, useSubtitle: u, useDisabled: c, useTooltip: d } = n,
-        f = a(),
-        g = null == u ? void 0 : u(),
-        v = o(),
-        m = null != (t = null == c ? void 0 : c()) && t,
-        b = null == d ? void 0 : d();
-    return (0, i.jsx)(l.j, {
-        value: v,
+        g = a(),
+        f = null == u ? void 0 : u(),
+        y = o(),
+        O = null != (t = null == c ? void 0 : c()) && t,
+        v = null == d ? void 0 : d();
+    return (0, r.jsx)(i.j, {
+        value: y,
         onChange: (e) => s(e),
-        className: r.toggle,
-        note: g,
-        disabled: m,
-        tooltipNote: b,
+        className: l.toggle,
+        note: f,
+        disabled: O,
+        tooltipNote: v,
         hideBorder: !0,
-        children: f,
+        children: g,
     });
 }

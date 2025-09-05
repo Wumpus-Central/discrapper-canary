@@ -22,16 +22,16 @@ var i = n(951288),
     _ = n(496675),
     C = n(626135),
     N = n(768581),
-    Z = n(63063),
-    S = n(709054),
+    S = n(63063),
+    Z = n(709054),
     w = n(51144),
     I = n(466070),
-    T = n(585835),
-    P = n(997787),
+    P = n(585835),
+    T = n(997787),
     E = n(981631),
     k = n(49898),
     A = n(388032),
-    D = n(81187),
+    D = n(280219),
     R = n(509399),
     L = n(790904),
     M = n(609182);
@@ -66,8 +66,8 @@ function U(e) {
             builtInIntegrations: z,
             customWebhooks: F,
             followedChannelWebhooks: K,
-            isLoadingWebhooks: V,
-            canCreateWebhook: q,
+            isLoadingWebhooks: q,
+            canCreateWebhook: V,
             onManageBuiltIn: Y,
             onManageCustomWebhooks: $,
             onManageFollowedChannels: J,
@@ -141,8 +141,8 @@ function U(e) {
                 );
             });
         }, [G, ef, et]),
-        ex = (0, c.e7)([P.Z], () => {
-            if (null != U) return eh.find((e) => P.Z.canShowOverviewTooltip(U.id, e.integration.id));
+        ex = (0, c.e7)([T.Z], () => {
+            if (null != U) return eh.find((e) => T.Z.canShowOverviewTooltip(U.id, e.integration.id));
         }, [eh, U]),
         ej = r.useMemo(
             () => (void 0 !== ex ? [ex, ...eh.filter((e) => e.integration.id !== ex.integration.id)] : eh),
@@ -169,16 +169,16 @@ function U(e) {
                     ? a.push({
                           icon: u.T39,
                           text: A.intl.formatToPlainString(A.t.Nu9sam, {
-                              timestamp: S.default.extractTimestamp(l.id),
+                              timestamp: Z.default.extractTimestamp(l.id),
                               user: w.ZP.getUserTag(l.user),
                           }),
                       })
                     : a.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: S.default.extractTimestamp(l.id) }),
+                          text: A.intl.formatToPlainString(A.t.gcdJ8P, { timestamp: Z.default.extractTimestamp(l.id) }),
                       }),
                 (0, i.jsx)(
-                    T.Z,
+                    P.Z,
                     {
                         name: r.name,
                         imageSrc: null != (t = r.getIconURL(48)) ? t : N.pK["0"],
@@ -202,7 +202,7 @@ function U(e) {
                 )
             );
         }),
-        eZ = (0, i.jsx)("div", { className: D.footerImage });
+        eS = (0, i.jsx)("div", { className: D.footerImage });
     0 === eN.length &&
         ea &&
         ((eN = (function (e, t, n) {
@@ -265,8 +265,8 @@ function U(e) {
                 });
             return t > 0 ? l : a;
         })(ee, ef, null == U ? void 0 : U.id)),
-        (eZ = null));
-    let eS = Z.Z.getArticleURL(E.BhN.INTEGRATIONS),
+        (eS = null));
+    let eZ = S.Z.getArticleURL(E.BhN.INTEGRATIONS),
         ew = null != H ? A.t.YV0vh4 : A.t.FnZEJi,
         eI = [];
     if (el) {
@@ -275,12 +275,12 @@ function U(e) {
             ((n = F.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJC)),
             (0, i.jsx)(
-                T.Z,
+                P.Z,
                 {
                     name: A.intl.string(A.t.xOg4SE),
                     icon: u.tYf,
                     buttonText: e,
-                    buttonDisabled: !q,
+                    buttonDisabled: !V,
                     trailing: t,
                     onButtonClick: $,
                     hasNextSection: n > 0,
@@ -296,9 +296,9 @@ function U(e) {
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = J))
                         : ((r = A.intl.string(A.t["ZwSt+f"])),
-                          (a = () => open(Z.Z.getArticleURL(E.BhN.CHANNEL_FOLLOWING)))),
+                          (a = () => open(S.Z.getArticleURL(E.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        T.Z,
+                        P.Z,
                         {
                             name: A.intl.string(A.t.OrV60t),
                             icon: u.AsW,
@@ -317,7 +317,7 @@ function U(e) {
         eI.push(
             ((o = ec.length),
             (0, i.jsx)(
-                T.Z,
+                P.Z,
                 {
                     name: A.intl.string(A.t.tqtDXF),
                     icon: u.DuK,
@@ -350,7 +350,7 @@ function U(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            T.Z,
+                            P.Z,
                             {
                                 name: A.intl.string(A.t.q4pBGx),
                                 icon: s.icon.whiteSVG,
@@ -388,7 +388,7 @@ function U(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            T.Z,
+                            P.Z,
                             {
                                 name: A.intl.string(A.t.aS6cKy),
                                 icon: s.icon.whiteSVG,
@@ -405,16 +405,16 @@ function U(e) {
                     );
                 })(eu, em, Y),
             );
-    let eT = null != H && eo && null != es;
+    let eP = null != H && eo && null != es;
     return (0, i.jsxs)(u.hjN, {
-        className: a()(null != eZ ? D.footerPlaceholder : null),
+        className: a()(null != eS ? D.footerPlaceholder : null),
         children: [
             (0, i.jsx)(u.R94, {
                 type: u.geA.DESCRIPTION,
-                children: A.intl.format(ew, { helpdeskArticle: eS }),
+                children: A.intl.format(ew, { helpdeskArticle: eZ }),
             }),
             (0, i.jsx)(u.$i$, { className: D.divider }),
-            V || ei || null == U
+            q || ei || null == U
                 ? (0, i.jsx)(u.$jN, {
                       className: D.__invalid_spinner,
                       type: u.$jN.Type.SPINNING_CIRCLE,
@@ -422,7 +422,7 @@ function U(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           eI,
-                          eT &&
+                          eP &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       eI.length > 0 ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
@@ -445,7 +445,7 @@ function U(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eI.length > 0 || eT ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
+                                        eI.length > 0 || eP ? (0, i.jsx)(u.$i$, { className: D.divider }) : null,
                                         (0, i.jsx)(u.X6q, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,
@@ -461,7 +461,7 @@ function U(e) {
                                     ],
                                 })
                               : null,
-                          eZ,
+                          eS,
                       ],
                   }),
         ],

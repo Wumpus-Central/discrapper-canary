@@ -17,10 +17,10 @@ var r = n(951288),
     E = n(962100),
     b = n(981631),
     y = n(388032),
-    O = n(184767),
-    v = n(149715),
-    I = n(197571);
-function S(e, t, n) {
+    O = n(692941),
+    v = n(465106),
+    I = n(10198);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -58,7 +58,7 @@ function R(e) {
     let t,
         { inputMode: n } = e,
         { shortcut: i, delay: a, pttLatchingEnabled: _ } = (0, s.cj)([h.Z], () => h.Z.getModeOptions()),
-        { enableLatching: S } = (0, g.H)({ location: "PTTTools" });
+        { enableLatching: T } = (0, g.H)({ location: "PTTTools" });
     return (
         (t =
             m.isPlatformEmbedded || n !== b.pM4.PUSH_TO_TALK
@@ -110,7 +110,7 @@ function R(e) {
                         }),
                     ],
                 }),
-                S &&
+                T &&
                     (0, r.jsxs)(c.xJW, {
                         className: I.marginTop8,
                         children: [
@@ -170,7 +170,7 @@ function P() {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                T(
+                                S(
                                     {
                                         title: y.intl.string(y.t.Kdt0GR),
                                         confirmText: y.intl.string(y.t["1WjMbG"]),

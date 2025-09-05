@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(781311), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(781311), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -13,8 +13,8 @@ var r = n(951288),
     h = n(981631),
     g = n(420212),
     m = n(388032),
-    b = n(470840),
-    _ = n(197571);
+    b = n(118213),
+    _ = n(10198);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +68,7 @@ let y = n(349181),
     I = (0, p.hQ)(),
     C = "".concat(I, "-decription"),
     S = "".concat(I, "-error");
-function N(e, t) {
+function T(e, t) {
     switch (t.type) {
         case "RESET":
             return v;
@@ -86,19 +86,19 @@ function N(e, t) {
             });
     }
 }
-function T(e) {
+function N(e) {
     let { placeholder: t = m.intl.string(m.t["Rn/sLi"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [o, p] = i.useReducer(N, v),
-        { canSend: O, hint: E, success: T, error: P } = o;
+        [o, p] = i.useReducer(T, v),
+        { canSend: O, hint: E, success: N, error: j } = o;
     return (
         i.useEffect(() => {
-            null != T &&
+            null != N &&
                 (s()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [T, n]),
+        }, [N, n]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
@@ -155,8 +155,8 @@ function T(e) {
                     children: (0, r.jsxs)("div", {
                         ref: l,
                         className: a()(b.addFriendInputWrapper, {
-                            [b.success]: T,
-                            [b.error]: P,
+                            [b.success]: N,
+                            [b.error]: j,
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
@@ -199,8 +199,8 @@ function T(e) {
                                 "data-1p-ignore": !0,
                                 placeholder: t,
                                 "aria-label": t,
-                                "aria-invalid": null != P || void 0,
-                                "aria-describedby": null != P ? S : C,
+                                "aria-invalid": null != j || void 0,
+                                "aria-describedby": null != j ? S : C,
                             }),
                             null != E &&
                                 (0, r.jsx)("div", {
@@ -218,20 +218,20 @@ function T(e) {
                         ],
                     }),
                 }),
-                null != P &&
+                null != j &&
                     (0, r.jsx)(u.R94, {
                         role: "alert",
                         id: S,
                         type: u.R94.Types.ERROR,
                         className: _.marginTop8,
-                        children: P,
+                        children: j,
                     }),
-                null != T &&
+                null != N &&
                     (0, r.jsx)(u.R94, {
                         role: "status",
                         type: u.R94.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: T,
+                        children: N,
                     }),
             ],
         })

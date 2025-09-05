@@ -6,12 +6,12 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(261616),
     l = n(481060),
     c = n(686546),
     u = n(855981),
     d = n(55543),
-    f = n(807095);
+    f = n(20055);
 function _(e, t, n) {
     return (
         t in e
@@ -117,7 +117,7 @@ function y(e) {
             noHover: L,
         } = e,
         j = (0, l.Yzy)(null != g, m(p({}, b), { keys: (e) => (e ? "children" : "icon") })),
-        M = (e) => {
+        k = (e) => {
             let { component: t } = e;
             return null != R
                 ? (0, r.jsxs)("div", {
@@ -169,7 +169,7 @@ function y(e) {
                           {
                               style: e,
                               className: o()(f.buttonWrapper, a),
-                              children: M({ component: g }),
+                              children: k({ component: g }),
                           },
                           i,
                       )
@@ -179,7 +179,7 @@ function y(e) {
                             {
                                 style: e,
                                 className: o()(f.buttonWrapper, a),
-                                children: M({
+                                children: k({
                                     component: (0, r.jsx)(h, {
                                         className: o()(f.icon, _, { [f.pulseIcon]: C }),
                                         color: "currentColor",

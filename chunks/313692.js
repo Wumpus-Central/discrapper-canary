@@ -21,8 +21,8 @@ var r = n(951288),
     O = n(370595),
     p = n(50493),
     R = n(981631),
-    S = n(87819),
-    C = n(125134);
+    S = n(152540),
+    C = n(447334);
 function D(e) {
     var t, n;
     let { userId: i, guildId: D, location: L, className: b, onNavigate: U } = e,

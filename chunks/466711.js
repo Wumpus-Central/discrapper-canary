@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(981631),
     T = n(921944),
     S = n(388032),
-    A = n(30989),
-    C = n(564355);
+    A = n(276088),
+    C = n(744114);
 function N(e, t, n) {
     return (
         t in e
@@ -151,16 +151,16 @@ function j(e) {
         R = null != N ? b.default.age(N.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         j = null != n.firstTimeNotice && !s && C && R >= L,
-        [M, k] = (0, f.XR)(
+        [k, M] = (0, f.XR)(
             j ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        U = null != M,
+        U = null != k,
         G = v || U,
         B = (0, y.Ft)(l),
         Z = (0, p.IH)();
     if (s) return null;
-    let V = () => {
+    let F = () => {
             (0, _.Z)({
                 isGift: !0,
                 giftRecipient: null == B ? void 0 : B,
@@ -174,21 +174,21 @@ function j(e) {
                 },
             });
         },
-        F = () => {
-            S(!1), k(T.L.TAKE_ACTION), V();
+        V = () => {
+            S(!1), M(T.L.TAKE_ACTION), F();
         },
         H =
             void 0 !== P
                 ? (0, r.jsx)(D, {
                       config: P,
                       hovered: G,
-                      onClick: F,
+                      onClick: V,
                   })
                 : void 0 !== w && Z
                   ? (0, r.jsx)(x, {
                         config: w,
                         hovered: G,
-                        onClick: F,
+                        onClick: V,
                     })
                   : (0, r.jsx)(O.Z, {
                         disabled: s,
@@ -206,12 +206,12 @@ function j(e) {
             void 0 !== n.firstTimeNotice && U
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => S(!1),
-                      onCheckItOutClick: V,
-                      markAsDismissed: k,
+                      onCheckItOutClick: F,
+                      markAsDismissed: M,
                       config: n.firstTimeNotice,
                       children: H,
                   })
                 : H,
     });
 }
-let M = i.memo(j);
+let k = i.memo(j);

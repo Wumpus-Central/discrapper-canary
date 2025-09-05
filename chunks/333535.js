@@ -12,12 +12,12 @@ var r = n(951288),
     h = n(523900),
     f = n(981631),
     m = n(388032),
-    g = n(235391);
+    g = n(92321);
 function b(e) {
     let { threadId: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getChannel(t)),
         b = (0, l.e7)([s.Z], () => s.Z.getChannel(null == n ? void 0 : n.parent_id)),
-        _ = i.useCallback(() => {
+        y = i.useCallback(() => {
             null != n &&
                 null != b &&
                 ((0, o.yw)(f.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, b)));
@@ -46,7 +46,7 @@ function b(e) {
                         text: m.intl.string(m.t.C5UQCw),
                         variant: "primary",
                         icon: a.xPt,
-                        onClick: _,
+                        onClick: y,
                     }),
                 ],
             }),

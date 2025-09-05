@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(74299),
     v = n(577153),
     I = n(365023),
-    S = n(610394),
-    T = n(825655),
+    T = n(610394),
+    S = n(825655),
     A = n(131951),
     C = n(556296),
     N = n(63063),
@@ -31,9 +31,9 @@ var r = n(951288),
     D = n(981631),
     x = n(420212),
     L = n(388032),
-    j = n(894462),
-    M = n(620842),
-    k = n(197571);
+    j = n(958047),
+    k = n(504401),
+    M = n(10198);
 function U(e, t, n) {
     return (
         t in e
@@ -124,7 +124,7 @@ class H extends i.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)(y.Z, {
             direction: y.Z.Direction.VERTICAL,
-            className: o()(j.keybindGroup, M.card),
+            className: o()(j.keybindGroup, k.card),
             children: [
                 !e &&
                     (0, r.jsx)(p.Z, {
@@ -133,7 +133,7 @@ class H extends i.PureComponent {
                         onClick: this.handleDeleteKeybind,
                     }),
                 (0, r.jsxs)(y.Z, {
-                    className: k.marginBottom8,
+                    className: M.marginBottom8,
                     children: [
                         (0, r.jsx)(y.Z.Child, {
                             basis: "45%",
@@ -425,7 +425,7 @@ class Y extends i.PureComponent {
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)(T.Z, {
+                                  (0, r.jsx)(S.Z, {
                                       className: j.systemServiceUpsell,
                                       sourcePage: "keybinds",
                                   }),
@@ -444,7 +444,7 @@ class Y extends i.PureComponent {
                 (0, r.jsxs)(f.hjN, {
                     tag: f.RB0.H1,
                     title: L.intl.string(L.t.Lz5KHB),
-                    className: k.marginTop60,
+                    className: M.marginTop60,
                     children: [
                         (0, r.jsxs)("div", {
                             className: j.defaultKeybind,
@@ -540,7 +540,7 @@ class Y extends i.PureComponent {
 function W() {
     let e = (0, c.e7)([C.ZP], () => C.ZP.getState()),
         t = (0, c.e7)([A.Z], () => (0, O.Z)(A.Z)),
-        n = (0, c.e7)([S.ZP], () => S.ZP.isSupported()),
+        n = (0, c.e7)([T.ZP], () => T.ZP.isSupported()),
         i = (0, b.Go)();
     return (0, r.jsx)(Y, {
         keybinds: e,

@@ -9,22 +9,22 @@ var r = n(951288),
     u = n(493683),
     d = n(239091),
     p = n(111028),
-    h = n(569471),
-    f = n(488131),
+    f = n(569471),
+    h = n(488131),
     g = n(592125),
     m = n(306680),
     b = n(979651),
     O = n(938475),
     y = n(714794),
     _ = n(876548),
-    j = n(25601),
-    v = n(207055),
+    v = n(25601),
+    j = n(207055),
     x = n(981631),
     C = n(124368),
     E = n(388032),
-    S = n(55940),
-    P = n(509612),
-    I = n(113914);
+    S = n(33082),
+    P = n(516966),
+    I = n(95701);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -50,7 +50,7 @@ function N(e) {
     }
     return e;
 }
-function w(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,7 +68,7 @@ function w(e, t) {
         e
     );
 }
-function Z(e) {
+function w(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
             className: o()(I.spine, { [I.spineWithGuildIcon]: n }, { [I.invertedSpine]: i }),
@@ -79,7 +79,7 @@ function Z(e) {
         case "cozy":
             return (0, r.jsxs)(
                 "svg",
-                w(N({}, l), {
+                Z(N({}, l), {
                     width: "10",
                     height: "20",
                     viewBox: "0 0 10 20",
@@ -100,7 +100,7 @@ function Z(e) {
         case "compact":
             return (0, r.jsxs)(
                 "svg",
-                w(N({}, l), {
+                Z(N({}, l), {
                     width: "10",
                     height: "19",
                     viewBox: "0 0 10 19",
@@ -121,7 +121,7 @@ function Z(e) {
         default:
             return (0, r.jsxs)(
                 "svg",
-                w(N({}, l), {
+                Z(N({}, l), {
                     width: "10",
                     height: "19",
                     viewBox: "0 0 10 19",
@@ -154,28 +154,28 @@ let T = i.memo(function (e) {
             mentionCount: m.ZP.getMentionCount(t.id),
             isMentionLowImportance: m.ZP.getIsMentionLowImportance(t.id),
         })),
-        U = (0, s.e7)([h.Z], () => h.Z.isMuted(t.id)),
+        U = (0, s.e7)([f.Z], () => f.Z.isMuted(t.id)),
         G = i.useCallback(
             (e) => {
-                (0, f.ok)(t, !e.shiftKey, C.on.CHANNEL_LIST);
+                (0, h.ok)(t, !e.shiftKey, C.on.CHANNEL_LIST);
             },
             [t],
         ),
         B = i.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        F = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 let i = g.Z.getChannel(t.id);
                 null != i &&
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e("40157").then(n.bind(n, 422200));
-                        return (t) => (0, r.jsx)(e, w(N({}, t), { channel: i }));
+                        return (t) => (0, r.jsx)(e, Z(N({}, t), { channel: i }));
                     });
             },
             [t.id],
         ),
-        V = null == R ? 0 : R.length,
+        F = null == R ? 0 : R.length,
         H = (0, a.JA)(t.id),
         { role: z } = H,
         W = (function (e, t) {
@@ -213,10 +213,10 @@ let T = i.memo(function (e) {
         role: z,
         className: o()(S.containerDefault, { [S.selected]: l }),
         children: [
-            (0, r.jsx)(Z, { withGuildIcon: A }),
+            (0, r.jsx)(w, { withGuildIcon: A }),
             T
                 ? null
-                : (0, r.jsx)(Z, {
+                : (0, r.jsx)(w, {
                       withGuildIcon: A,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
@@ -237,12 +237,12 @@ let T = i.memo(function (e) {
                         [P.withGuildIcon]: A,
                     }),
                     onMouseDown: B,
-                    onContextMenu: F,
+                    onContextMenu: V,
                     children: [
                         !M || U || l ? null : (0, r.jsx)("div", { className: o()(P.unread, P.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
-                            w(N({}, W), {
+                            Z(N({}, W), {
                                 innerRef: K,
                                 className: P.link,
                                 onClick: G,
@@ -259,15 +259,15 @@ let T = i.memo(function (e) {
                                         (0, r.jsxs)("div", {
                                             className: P.children,
                                             children: [
-                                                V > 0 && t.userLimit > 0
+                                                F > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(_.Z, {
-                                                          userCount: V,
+                                                          userCount: F,
                                                           video: D,
                                                           channel: t,
                                                       })
                                                     : null,
                                                 (0, y.Z)(L)
-                                                    ? (0, r.jsx)(j.Z, {
+                                                    ? (0, r.jsx)(v.Z, {
                                                           mentionsCount: L,
                                                           isMentionLowImportance: k,
                                                       })
@@ -281,7 +281,7 @@ let T = i.memo(function (e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(j.Z, {
                 channel: t,
                 collapsed: !I,
                 collapsedMax: 6,

@@ -27,8 +27,8 @@ var r = n(951288),
     N = n(981631),
     R = n(815660),
     P = n(388032),
-    w = n(343396),
-    D = n(197571);
+    w = n(719766),
+    D = n(10198);
 function x(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function j(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -221,7 +221,7 @@ class U extends i.PureComponent {
                     text: P.intl.string(P.t.qZZUy8),
                 }),
             });
-            let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
+            let i = (e) => e.map((e) => (0, r.jsx)(M, { code: e }, e.code));
             e = (0, r.jsxs)(c.hjN, {
                 title: P.intl.string(P.t.GfqHPj),
                 children: [
@@ -371,7 +371,7 @@ class U extends i.PureComponent {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         p.Z,
-                        M(L({}, e), {
+                        k(L({}, e), {
                             handleSubmit: (e) =>
                                 u.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
@@ -386,7 +386,7 @@ class U extends i.PureComponent {
                 (0, c.h7j)((t) =>
                     (0, r.jsx)(
                         _.Z,
-                        M(L({}, t), {
+                        k(L({}, t), {
                             handleSubmit: (e) => u.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                             maxLength: 8,
                             title: P.intl.string(P.t.mGppp6),
@@ -425,7 +425,7 @@ class U extends i.PureComponent {
                 (0, c.h7j)((e) =>
                     (0, r.jsx)(
                         p.Z,
-                        M(L({}, e), {
+                        k(L({}, e), {
                             handleSubmit: u.Z.disableSMS,
                             title: P.intl.string(P.t.KLWnio),
                             children: P.intl.string(P.t["W0/Dub"]),

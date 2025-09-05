@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685), n(415506);
+n.d(t, { Z: () => F }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(924557),
     g = n(435064),
     b = n(712114),
-    _ = n(266454),
-    y = n(536442),
+    y = n(266454),
+    _ = n(536442),
     C = n(79390),
-    x = n(216789),
-    v = n(665906),
+    v = n(216789),
+    x = n(665906),
     O = n(695346),
     j = n(433355),
     E = n(819640),
@@ -36,8 +36,8 @@ var r = n(951288),
     L = n(356659),
     k = n(921944),
     U = n(388032),
-    B = n(90274);
-function F(e) {
+    B = n(935730);
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function F(e) {
     }
     return e;
 }
-function G(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,9 +80,9 @@ function G(e, t) {
         e
     );
 }
-let H = i.memo(function (e) {
+let F = i.memo(function (e) {
     var t, l;
-    let { className: H, channel: V, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
+    let { className: F, channel: V, draftType: z, editorTextContent: W, setValue: q, canOnlyUseTextCommands: Y } = e,
         K = (0, p.bp)(),
         X = i.useRef(null),
         Q = i.useRef(null),
@@ -95,7 +95,7 @@ let H = i.memo(function (e) {
             { location: "ChannelAttachButton" },
             { autoTrackExposure: !1 },
         ),
-        ei = (0, o.e7)([y.qc], () => y.qc.hasHotspot(y.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        ei = (0, o.e7)([_.qc], () => _.qc.hasHotspot(_.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
         el = (0, c.s9z)((e) => (0, c.DEQ)(e, L.Qr)),
         ea = (0, o.e7)([E.Z], () => E.Z.hasLayers()),
         eo = (0, o.e7)([g.Z], () => g.Z.hasClips()),
@@ -118,7 +118,7 @@ let H = i.memo(function (e) {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await n.e("57478").then(n.bind(n, 542055));
-                return (t) => (0, r.jsx)(e, G(F({}, t), { channelId: V.id }));
+                return (t) => (0, r.jsx)(e, H(G({}, t), { channelId: V.id }));
             },
             { modalKey: L.Qr },
         ),
@@ -136,26 +136,26 @@ let H = i.memo(function (e) {
             }
         );
     });
-    let eg = (0, v.NE)(V),
-        eb = (0, v.Xu)(V),
-        e_ = !O.dN.useSetting() && !(0, T.isAndroidWeb)() && null != window.ResizeObserver,
-        ey = (0, C.UI)(null != V ? V : void 0),
+    let eg = (0, x.NE)(V),
+        eb = (0, x.Xu)(V),
+        ey = !O.dN.useSetting() && !(0, T.isAndroidWeb)() && null != window.ResizeObserver,
+        e_ = (0, C.UI)(null != V ? V : void 0),
         eC = (0, h.qB)(),
-        ex = (0, x.Us)({ location: "ChannelAttachButton" }),
-        ev = null != (l = null == et ? void 0 : et.length) ? l : 0,
+        ev = (0, v.Us)({ location: "ChannelAttachButton" }),
+        ex = null != (l = null == et ? void 0 : et.length) ? l : 0,
         eO = (0, M.Z)({
             canAttachFiles: ep,
             canStartThreads: eg || eb,
-            useSlate: e_,
+            useSlate: ey,
             hasClips: eu,
             canUseApplicationCommands: !Y,
             channel: V,
             activities: J,
-            newClipsCount: ev,
-            canPostPolls: ey,
+            newClipsCount: ex,
+            canPostPolls: e_,
             canLaunchActivities: eC,
             appContext: K,
-            canSendScheduledMessages: ex,
+            canSendScheduledMessages: ev,
         }),
         ej = (0, f.Z)("ChannelAttachButton");
     if (0 === eO.length) return null;
@@ -179,19 +179,19 @@ let H = i.memo(function (e) {
             position: "top",
             positionKey: null != es ? es : "null",
             onRequestOpen: () => {
-                ef && (0, _.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: k.L.TAKE_ACTION }),
+                ef && (0, y.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: k.L.TAKE_ACTION }),
                     ec("attachMenu");
             },
             onRequestClose: () => {
                 (0, c.$sL)() ||
-                    (ef && (0, _.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), ec(null));
+                    (ef && (0, y.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), ec(null));
             },
             renderPopout: (e) => {
                 switch (es) {
                     case "recentClips":
                         return (0, r.jsx)(
                             b.Z,
-                            G(F({}, e), {
+                            H(G({}, e), {
                                 onOpenClips: em,
                                 lastClipsSession: ee,
                             }),
@@ -199,7 +199,7 @@ let H = i.memo(function (e) {
                     case "attachMenu":
                         return (0, r.jsx)(
                             R.Z,
-                            G(F({}, e), {
+                            H(G({}, e), {
                                 onClose: () => ec(null),
                                 options: eO,
                                 channel: V,
@@ -220,11 +220,11 @@ let H = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     w.Z,
-                    G(
-                        F(
+                    H(
+                        G(
                             {
                                 ref: Q,
-                                className: a()(B.attachButton, H),
+                                className: a()(B.attachButton, F),
                                 childClassName: B.attachButtonInner,
                                 isActive: !1,
                                 "aria-label": U.intl.string(U.t.d56gCQ),

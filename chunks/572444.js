@@ -33,9 +33,9 @@ var a = n(951288),
     h = n(131951),
     p = n(246992),
     f = n(65154),
-    v = n(653301),
-    b = n(451429);
-function j(e) {
+    v = n(25016),
+    b = n(866403);
+function g(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -66,10 +66,10 @@ function j(e) {
         ],
     });
 }
-function g(e) {
+function j(e) {
     let { recording: t, playing: n, onPlay: r, onStop: l } = e;
     return (0, a.jsx)(c.zF9, {
-        collapsibleContent: (0, a.jsx)(j, { recording: t }),
+        collapsibleContent: (0, a.jsx)(g, { recording: t }),
         children: (e) => {
             let { onClick: s } = e;
             return (0, a.jsxs)(c.P3F, {
@@ -112,19 +112,19 @@ function _() {
     let { name: e } = (0, x.p6)(f.h7.AUDIO_INPUT),
         [t, n] = r.useState(!1),
         [l, i] = r.useState([]),
-        j = (0, s.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),
+        g = (0, s.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),
         [_, y] = r.useState(null),
         C = r.useRef(null),
         N = r.useRef(null),
-        [E, O] = r.useState(0.5),
+        [E, T] = r.useState(0.5),
         {
-            krispModels: T,
+            krispModels: O,
             krispModelOverride: S,
             inputMode: P,
-            echoCancellation: w,
+            echoCancellation: I,
             autoThreshold: k,
-            vadUseKrisp: I,
-            vadKrispActivationThreshold: R,
+            vadUseKrisp: R,
+            vadKrispActivationThreshold: w,
             noiseCancellation: Z,
             noiseSuppression: A,
             noiseSuppressionSupported: D,
@@ -150,11 +150,11 @@ function _() {
             var e;
             null == (e = C.current) || e.stop(), (C.current = null), y(null);
         }, []);
-    function B() {
+    function G() {
         h.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function G(e) {
-        if ((t && B(), z(), null == U)) return;
+    function B(e) {
+        if ((t && G(), z(), null == U)) return;
         let n = U.createBufferSource();
         (n.buffer = e.audioBuffer),
             (N.current = U.createGain()),
@@ -221,7 +221,7 @@ function _() {
                                     title: "Krisp Suppression Level",
                                     tag: c.RB0.H3,
                                     children: (0, a.jsx)(c.iRW, {
-                                        initialValue: j,
+                                        initialValue: g,
                                         onValueChange: d.Z.setKrispSuppressionLevel,
                                         minValue: 0,
                                         maxValue: 100,
@@ -236,7 +236,7 @@ function _() {
                                             d.Z.setKrispModelOverride("");
                                         },
                                         isSelected: (e) => e === S,
-                                        options: T.map((e) => ({
+                                        options: O.map((e) => ({
                                             label: e,
                                             value: e,
                                         })),
@@ -279,18 +279,18 @@ function _() {
                                                 tag: c.RB0.H3,
                                                 children: (0, a.jsx)(c.j7V, {
                                                     hideBorder: !0,
-                                                    value: I,
+                                                    value: R,
                                                     onChange: (e) =>
                                                         d.Z.setMode(f.pM.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                                     children: "Use Krisp VAD",
                                                 }),
                                             }),
-                                            I &&
+                                            R &&
                                                 (0, a.jsx)(c.hjN, {
                                                     title: "Krisp VAD Activation Threshold",
                                                     tag: c.RB0.H3,
                                                     children: (0, a.jsx)(c.iRW, {
-                                                        initialValue: R,
+                                                        initialValue: w,
                                                         onValueChange: (e) =>
                                                             d.Z.setMode(f.pM.VOICE_ACTIVITY, {
                                                                 vadKrispActivationThreshold: e,
@@ -307,7 +307,7 @@ function _() {
                         tag: c.RB0.H3,
                         children: (0, a.jsx)(c.j7V, {
                             hideBorder: !0,
-                            value: w,
+                            value: I,
                             onChange: (e) => d.Z.setEchoCancellation(e),
                             children: "Echo Cancellation",
                         }),
@@ -318,7 +318,7 @@ function _() {
                         children: (0, a.jsx)(o.zx, {
                             color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                             onClick: t
-                                ? B
+                                ? G
                                 : function () {
                                       z(),
                                           n(!0),
@@ -342,8 +342,8 @@ function _() {
                                                       audioBuffer: l,
                                                       createdAt: Date.now(),
                                                       suppression: F,
-                                                      echoCancellation: w,
-                                                      krispSuppressionLevel: j,
+                                                      echoCancellation: I,
+                                                      krispSuppressionLevel: g,
                                                   },
                                               ]);
                                           });
@@ -357,7 +357,7 @@ function _() {
                         children: (0, a.jsx)(c.iRW, {
                             initialValue: E,
                             asValueChanges: function (e) {
-                                null != N.current && ((N.current.gain.value = e), O(e));
+                                null != N.current && ((N.current.gain.value = e), T(e));
                             },
                             minValue: 0,
                             maxValue: 1,
@@ -368,11 +368,11 @@ function _() {
                         tag: c.RB0.H3,
                         children: l.map((e, t) =>
                             (0, a.jsx)(
-                                g,
+                                j,
                                 {
                                     recording: e,
                                     playing: e === _,
-                                    onPlay: G,
+                                    onPlay: B,
                                     onStop: z,
                                 },
                                 t,

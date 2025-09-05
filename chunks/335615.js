@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(941028),
     g = n(144144),
     b = n(276264),
-    _ = n(607070),
-    y = n(100527),
+    y = n(607070),
+    _ = n(100527),
     C = n(367907),
-    x = n(906732),
-    v = n(493324),
+    v = n(906732),
+    x = n(493324),
     O = n(611064),
     j = n(677432),
     E = n(178762),
@@ -37,14 +37,14 @@ var r = n(951288),
     k = n(944486),
     U = n(111583),
     B = n(594174),
-    F = n(979651),
-    G = n(585483),
-    H = n(823379),
+    G = n(979651),
+    H = n(585483),
+    F = n(823379),
     V = n(51144),
     z = n(998502),
     W = n(981631),
     q = n(388032),
-    Y = n(32482);
+    Y = n(854641);
 function K(e, t, n) {
     return (
         t in e
@@ -137,11 +137,11 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 currentUser: p,
                 activities: h,
                 applicationStream: m,
-                status: _,
-                channel: y,
+                status: y,
+                channel: _,
                 guildId: C,
-                isTyping: x,
-                isMobileOnline: v,
+                isTyping: v,
+                isMobileOnline: x,
                 premiumSince: O,
                 nameplate: j,
             } = e,
@@ -175,33 +175,33 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("52021"),
+                                n.e("19848"),
                             ]).then(n.bind(n, 757387)),
-                            t = F.Z.isInChannel(k.Z.getVoiceChannelId(), u.id);
+                            t = G.Z.isInChannel(k.Z.getVoiceChannelId(), u.id);
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 Q(X({}, n), {
                                     user: u,
                                     guildId: C,
-                                    channel: y,
+                                    channel: _,
                                     showMediaItems: t,
                                 }),
                             );
                     });
                 },
-                [u, C, y],
+                [u, C, _],
             ),
             A = i.useCallback(() => {
                 let e = "@".concat(V.ZP.getUserTag(u, { decoration: "never" })),
                     t = "<@".concat(u.id, ">");
-                G.S.dispatch(W.CkL.TEXTAREA_FOCUS, { channelId: y.id }),
-                    G.S.dispatchToLastSubscribed(W.CkL.INSERT_TEXT, {
+                H.S.dispatch(W.CkL.TEXTAREA_FOCUS, { channelId: _.id }),
+                    H.S.dispatchToLastSubscribed(W.CkL.INSERT_TEXT, {
                         plainText: e,
                         rawText: t,
                     }),
-                    g.Z.startTyping(y.id);
-            }, [u, y.id]),
+                    g.Z.startTyping(_.id);
+            }, [u, _.id]),
             w = i.useCallback(
                 (e) => {
                     null != C &&
@@ -220,7 +220,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
             targetElementRef: S,
             user: u,
             guildId: C,
-            channelId: y.id,
+            channelId: _.id,
             roleId: o,
             position: d.tq ? "window_center" : "left",
             spacing: 16,
@@ -243,7 +243,7 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             user: u,
                             currentUser: p,
                             nick: c,
-                            status: _,
+                            status: y,
                             activities: h,
                             applicationStream: m,
                             isOwner: s,
@@ -251,10 +251,10 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: x,
-                            channel: y,
+                            isTyping: v,
+                            channel: _,
                             guildId: C,
-                            isMobile: v,
+                            isMobile: x,
                             onClickPremiumGuildIcon: w,
                             selected: I,
                             itemProps: E,
@@ -348,7 +348,7 @@ class el extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, v.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, x.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -631,7 +631,7 @@ class el extends i.Component {
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
-                    .filter(H.lm);
+                    .filter(F.lm);
                 if (0 === r.length) return;
                 let i = r.reduce(
                     (e, t) => {
@@ -667,8 +667,8 @@ class el extends i.Component {
 }
 function ea(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, x.ZP)(y.Z.MEMBER_LIST),
-        o = (0, p.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        { analyticsLocations: l } = (0, v.ZP)(_.Z.MEMBER_LIST),
+        o = (0, p.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         s = (0, p.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
@@ -682,7 +682,7 @@ function ea(e) {
         }),
         b = i.useRef(null),
         C = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
-        v = i.useCallback(
+        x = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -726,12 +726,12 @@ function ea(e) {
         ),
         E = (0, u.ZP)({
             id: "members-".concat(t.id),
-            setFocus: v,
+            setFocus: x,
             isEnabled: o,
             scrollToStart: O,
             scrollToEnd: j,
         });
-    return (0, r.jsx)(x.Gt, {
+    return (0, r.jsx)(v.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
             className: a()(Y.container, n),

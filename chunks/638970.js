@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(228168),
     S = n(231338),
     A = n(388032),
-    C = n(31948);
+    C = n(923805);
 function N(e, t, n) {
     return (
         t in e
@@ -103,23 +103,23 @@ let j = {
     animationPhase: "awaitingInput",
     height: "auto",
 };
-function M(e) {
+function k(e) {
     let { user: t, currentUser: n, guildId: a, onOpenUserProfileModal: m, onClose: N } = e,
         P = (0, _.Dt)(),
         { analyticsLocations: w } = (0, f.ZP)(),
-        { trackUserProfileAction: M } = (0, g.KZ)(),
-        { live: k, stream: U } = (0, E.Z)(t.id),
+        { trackUserProfileAction: k } = (0, g.KZ)(),
+        { live: M, stream: U } = (0, E.Z)(t.id),
         { voiceChannel: G, voiceActivity: B } = (0, b.Z)({
             userId: t.id,
             guildId: a,
         }),
         Z = t.id === n.id,
-        V = (0, s.e7)([h.Z, p.Z], () => {
+        F = (0, s.e7)([h.Z, p.Z], () => {
             let e = Z ? h.Z.getStatus() : p.Z.getStatus(t.id, a);
             return e === S.Sk.OFFLINE || e === S.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: F } = (0, d.U)({ location: "UserProfileStackedActivity" }),
-        H = F && null == U && null == B && null != G,
+        { voiceActivityStatusEnabled: V } = (0, d.U)({ location: "UserProfileStackedActivity" }),
+        H = V && null == U && null == B && null != G,
         Y = (0, y.yi)(),
         W = (null == Y ? void 0 : Y.interactionSource) === T.n_.ACTIVITY,
         K = i.useRef(null),
@@ -138,7 +138,7 @@ function M(e) {
             onClose: N,
         };
     null != U && er.push((0, r.jsx)(v.Z, R({ stream: U }, ei), "stream")),
-        k.forEach((e, t) => {
+        M.forEach((e, t) => {
             er.push((0, r.jsx)(O.Z, R({ activity: e }, ei), "live-".concat(t)));
         }),
         H && er.push((0, r.jsx)(I.Z, R({ voiceChannel: G }, ei), "voice"));
@@ -152,7 +152,7 @@ function M(e) {
                       color: l.zx.Colors.TRANSPARENT,
                       className: o()(C.viewAllButton, en && C.isShown),
                       onClick: () => {
-                          M({
+                          k({
                               action: "PRESS_VIEW_PROFILE",
                               analyticsLocations: w,
                           }),
@@ -167,7 +167,7 @@ function M(e) {
                 : null,
         ec = i.useCallback(() => {
             if (null == K.current || null == q.current) return;
-            M({
+            k({
                 action: "PRESS_SHOW_MORE_ACTIVITY",
                 analyticsLocations: w,
             });
@@ -191,11 +191,11 @@ function M(e) {
                                 null == (e = z.current) || e.focus();
                         }, D));
                 });
-        }, [w, M]);
+        }, [w, k]);
     return ((0, u.zq)(() => {
         null != X.current && window.clearTimeout(X.current);
     }),
-    V || 0 === er.length)
+    F || 0 === er.length)
         ? null
         : (0, r.jsxs)("section", {
               "aria-labelledby": P,

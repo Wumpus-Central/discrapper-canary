@@ -26,8 +26,8 @@ var r = n(951288),
     O = n(165583),
     v = n(587446),
     I = n(210887),
-    S = n(740492),
-    T = n(695346),
+    T = n(740492),
+    S = n(695346),
     A = n(626135),
     C = n(238302),
     N = n(514361),
@@ -38,10 +38,10 @@ var r = n(951288),
     x = n(981631),
     L = n(474936),
     j = n(874893),
-    M = n(526761),
-    k = n(231338),
+    k = n(526761),
+    M = n(231338),
     U = n(388032),
-    G = n(227674);
+    G = n(90290);
 function B(e, t, n) {
     return (
         t in e
@@ -119,8 +119,8 @@ var W = (function (e) {
     return (e.EDITOR = "EDITOR"), (e.SETTINGS = "SETTINGS"), e;
 })({});
 let K = Object.freeze({
-        EDITOR: M.fy.SLOW_USER_ACTION,
-        SETTINGS: M.fy.INFREQUENT_USER_ACTION,
+        EDITOR: k.fy.SLOW_USER_ACTION,
+        SETTINGS: k.fy.INFREQUENT_USER_ACTION,
     }),
     z = i.createContext({}),
     q = (e) => {
@@ -252,8 +252,8 @@ let K = Object.freeze({
             }),
             [y, O] = i.useState(!1),
             [v, I] = i.useState(-1),
-            S = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
-            T = R.Mc.useExperiment({ location: "GradientSelectors" }).enabled;
+            T = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
+            S = R.Mc.useExperiment({ location: "GradientSelectors" }).enabled;
         i.useEffect(() => {
             ((v === D.XV.length - 2 && "EDITOR" === o) || b === c.Us.EASTER_EGG) && O(!0);
         }, [v, o, b]);
@@ -288,7 +288,7 @@ let K = Object.freeze({
                         theme: e.theme,
                         useSystemTheme: E ? j.KW.OFF : void 0,
                     },
-                    M.fy.SLOW_USER_ACTION,
+                    k.fy.SLOW_USER_ACTION,
                 ),
                     (0, g.XO)(g.wh.CLIENT_THEMES),
                     (0, f.xf)();
@@ -311,7 +311,7 @@ let K = Object.freeze({
                         }),
                         (0, r.jsx)(d.Fmz, {
                             importData: t,
-                            shouldAnimate: !S,
+                            shouldAnimate: !T,
                             className: G.sparkles,
                         }),
                     ],
@@ -319,7 +319,7 @@ let K = Object.freeze({
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                T &&
+                S &&
                     (0, r.jsx)(P.Z, {
                         isDisabled: t,
                         onSelect: () => {
@@ -371,10 +371,10 @@ let K = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: a } = i.useContext(z),
             { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [s, c, u] = (0, l.Wu)([I.Z, S.ZP, N.Z], () => [
+            [s, c, u] = (0, l.Wu)([I.Z, T.ZP, N.Z], () => [
                 I.Z.theme,
-                null == N.Z.gradientPreset && null == T.L1.getSetting().customUserThemeSettings,
-                S.ZP.useSystemTheme === j.KW.ON,
+                null == N.Z.gradientPreset && null == S.L1.getSetting().customUserThemeSettings,
+                T.ZP.useSystemTheme === j.KW.ON,
             ]),
             d = (e) => {
                 (0, C.xs)(),
@@ -395,24 +395,24 @@ let K = Object.freeze({
                         onSelect: () => d("system"),
                     }),
                 (0, r.jsx)(w.bD, {
-                    theme: k.BR.LIGHT,
-                    isSelected: c && !u && s === k.BR.LIGHT,
-                    onSelect: () => d(k.BR.LIGHT),
+                    theme: M.BR.LIGHT,
+                    isSelected: c && !u && s === M.BR.LIGHT,
+                    onSelect: () => d(M.BR.LIGHT),
                 }),
                 (0, r.jsx)(w.bD, {
-                    theme: k.BR.DARK,
-                    isSelected: c && !u && s === k.BR.DARK,
-                    onSelect: () => d(k.BR.DARK),
+                    theme: M.BR.DARK,
+                    isSelected: c && !u && s === M.BR.DARK,
+                    onSelect: () => d(M.BR.DARK),
                 }),
                 (0, r.jsx)(w.bD, {
-                    theme: k.BR.DARKER,
-                    isSelected: c && !u && s === k.BR.DARKER,
-                    onSelect: () => d(k.BR.DARKER),
+                    theme: M.BR.DARKER,
+                    isSelected: c && !u && s === M.BR.DARKER,
+                    onSelect: () => d(M.BR.DARKER),
                 }),
                 (0, r.jsx)(w.bD, {
-                    theme: k.BR.MIDNIGHT,
-                    isSelected: c && !u && s === k.BR.MIDNIGHT,
-                    onSelect: () => d(k.BR.MIDNIGHT),
+                    theme: M.BR.MIDNIGHT,
+                    isSelected: c && !u && s === M.BR.MIDNIGHT,
+                    onSelect: () => d(M.BR.MIDNIGHT),
                 }),
                 !n &&
                     !t &&

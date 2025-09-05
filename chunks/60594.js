@@ -5,7 +5,7 @@ var r = n(951288),
     s = n.n(l),
     o = n(512722),
     a = n.n(o),
-    c = n(202841),
+    c = n(261616),
     d = n(209739),
     u = n.n(d),
     f = n(442837),
@@ -17,31 +17,31 @@ var r = n(951288),
     _ = n(579806),
     v = n(89425),
     j = n(812206),
-    S = n(600164),
-    b = n(313201),
+    b = n(600164),
+    y = n(313201),
     C = n(243778),
-    y = n(594190),
+    S = n(594190),
     O = n(751571),
-    I = n(970731),
+    w = n(970731),
     Z = n(695346),
-    w = n(361291),
+    I = n(361291),
     N = n(592125),
-    T = n(430824),
-    E = n(131951),
-    P = n(944486),
+    P = n(430824),
+    T = n(131951),
+    E = n(944486),
     R = n(594174),
     A = n(449224),
-    M = n(626135),
-    k = n(63063),
-    L = n(358085),
-    D = n(998502),
+    k = n(626135),
+    M = n(63063),
+    D = n(358085),
+    L = n(998502),
     B = n(668519),
-    U = n(451467),
-    G = n(537413),
+    G = n(451467),
+    U = n(537413),
     W = n(299570),
-    F = n(960861),
-    H = n(989941),
-    z = n(399299),
+    z = n(960861),
+    F = n(989941),
+    H = n(399299),
     V = n(351152),
     Y = n(567126),
     J = n(143135),
@@ -52,7 +52,7 @@ var r = n(951288),
     $ = n(921944),
     ee = n(761274),
     et = n(388032),
-    en = n(542257),
+    en = n(79985),
     er = n(402163);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -100,57 +100,57 @@ function el(e, t) {
 let es = (e) => {
     let { visibleContent: t, markAsDismissed: n } = e;
     return t === m.z.GO_LIVE_SYSTEM_PICKER_COACHMARK
-        ? (0, r.jsx)(I.ZP, {
+        ? (0, r.jsx)(w.ZP, {
               content: et.intl.string(et.t.sFyFJy),
               buttonCTA: et.intl.string(et.t["NX+WJC"]),
               onClick: () => {},
               onSecondaryClick: () => {
-                  open(k.Z.getArticleURL(Q.BhN.SCREEN_SHARING_MACOS));
+                  open(M.Z.getArticleURL(Q.BhN.SCREEN_SHARING_MACOS));
               },
               secondaryButtonCTA: et.intl.string(et.t.hvVgAQ),
-              caretPosition: I.DF.LEFT_CENTER,
+              caretPosition: w.DF.LEFT_CENTER,
               markAsDismissed: n,
           })
         : null;
 };
 function eo(e) {
-    var t, l, o, d, I;
+    var t, l, o, d, w;
     let {
-            selectGuild: k = !1,
+            selectGuild: M = !1,
             selectSource: B = !0,
             guildId: X,
             analyticsLocation: eo,
             onClose: ea,
             transitionState: ec,
         } = e,
-        { preset: ed, resolution: eu, fps: ef, soundshareEnabled: em } = (0, f.cj)([w.Z], () => w.Z.getState()),
+        { preset: ed, resolution: eu, fps: ef, soundshareEnabled: em } = (0, f.cj)([I.Z], () => I.Z.getState()),
         eh = i.useRef(null),
         ep = i.useRef(Date.now()),
-        ex = (0, f.e7)([P.Z, N.Z], () => N.Z.getChannel(P.Z.getVoiceChannelId())),
-        eg = (0, f.e7)([y.ZP, A.Z], () => ((0, L.isWindows)() ? (0, H.Z)(y.ZP, A.Z) : null)),
+        ex = (0, f.e7)([E.Z, N.Z], () => N.Z.getChannel(E.Z.getVoiceChannelId())),
+        eg = (0, f.e7)([S.ZP, A.Z], () => ((0, D.isWindows)() ? (0, F.Z)(S.ZP, A.Z) : null)),
         e_ = (0, f.e7)([R.default], () => {
             let e = R.default.getCurrentUser();
             return a()(null != e, "GoLiveModal: user cannot be undefined"), e;
         }),
         ev = null != (t = null == ex ? void 0 : ex.getGuildId()) ? t : X,
-        ej = (0, f.e7)([T.Z], () => {
+        ej = (0, f.e7)([P.Z], () => {
             var e;
-            return null != ev ? (null == (e = T.Z.getGuild(ev)) ? void 0 : e.premiumTier) : null;
+            return null != ev ? (null == (e = P.Z.getGuild(ev)) ? void 0 : e.premiumTier) : null;
         }),
-        [eS, eb] = null != (l = (0, G.Z)(ed, e_, ej)) ? l : [q.LY.RESOLUTION_720, q.ws.FPS_30],
-        { lastPickerAction: eC } = (0, f.e7)([F.ZP], () => F.ZP.getPickerState()),
-        ey = E.Z.getUseSystemScreensharePicker();
-    (0, F.UB)();
-    let eO = ey && (0, L.isMac)() && u().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, K.jR),
-        eI = [];
-    ec === h.Dvm.ENTERED && ey && (0, L.isMac)() && eI.push(m.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eZ, ew] = (0, C.US)(eI, void 0, !0);
-    ed !== q.tI.PRESET_CUSTOM && ((eu = eS), (ef = eb)), (0, U.Z)(ed, eu, ef, e_, ej) || ((eu = eS), (ef = eb));
-    let eN = (0, b.Dt)(),
-        [eT, eE] = i.useState(((I = B && !eO), k ? 0 : I ? 2 : 3)),
-        [eP, eR] = i.useState(eO),
-        [eA, eM] = i.useState(null),
-        [ek, eL] = i.useState(
+        [eb, ey] = null != (l = (0, U.Z)(ed, e_, ej)) ? l : [q.LY.RESOLUTION_720, q.ws.FPS_30],
+        { lastPickerAction: eC } = (0, f.e7)([z.ZP], () => z.ZP.getPickerState()),
+        eS = T.Z.getUseSystemScreensharePicker();
+    (0, z.UB)();
+    let eO = eS && (0, D.isMac)() && u().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, K.jR),
+        ew = [];
+    ec === h.Dvm.ENTERED && eS && (0, D.isMac)() && ew.push(m.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
+    let [eZ, eI] = (0, C.US)(ew, void 0, !0);
+    ed !== q.tI.PRESET_CUSTOM && ((eu = eb), (ef = ey)), (0, G.Z)(ed, eu, ef, e_, ej) || ((eu = eb), (ef = ey));
+    let eN = (0, y.Dt)(),
+        [eP, eT] = i.useState(((w = B && !eO), M ? 0 : w ? 2 : 3)),
+        [eE, eR] = i.useState(eO),
+        [eA, ek] = i.useState(null),
+        [eM, eD] = i.useState(
             eO
                 ? {
                       id: "prepicked:",
@@ -159,10 +159,10 @@ function eo(e) {
                   }
                 : null,
         ),
-        [eD, eB] = i.useState(null),
-        [eU, eG] = i.useState(ed),
-        [eW, eF] = i.useState(eu),
-        [eH, ez] = i.useState(ef),
+        [eL, eB] = i.useState(null),
+        [eG, eU] = i.useState(ed),
+        [eW, ez] = i.useState(eu),
+        [eF, eH] = i.useState(ef),
         [eV, eY] = i.useState(em),
         [eJ, eX] = i.useState(null != (o = Z.I0.getSetting()) && o),
         [eK, eq] = i.useState(null != X ? X : null),
@@ -170,16 +170,16 @@ function eo(e) {
         [e$, e1] = i.useState(eO ? "" : void 0);
     async function e0() {
         var e, t;
-        a()(null != eg || null != ek, "got nothing to stream");
+        a()(null != eg || null != eM, "got nothing to stream");
         let n = null != (e = null == ex ? void 0 : ex.id) ? e : eA;
         a()(null != n, "Received null target channel ID");
         let r = N.Z.getChannel(n),
             i = null != (t = null == r ? void 0 : r.getGuildId()) ? t : X;
         if (null == ex && !(await (0, v.Z)({ channelId: n }))) return;
-        let l = eU,
+        let l = eG,
             s = eW,
-            o = eH;
-        (0, U.Z)(l, s, o, e_, ej, r) || ((l = q.tI.PRESET_VIDEO), (s = q.LY.RESOLUTION_720), (o = q.ws.FPS_30)),
+            o = eF;
+        (0, G.Z)(l, s, o, e_, ej, r) || ((l = q.tI.PRESET_VIDEO), (s = q.LY.RESOLUTION_720), (o = q.ws.FPS_30)),
             (0, x.Rc)({
                 preset: l,
                 resolution: s,
@@ -187,26 +187,26 @@ function eo(e) {
                 soundshareEnabled: eV,
             });
         let c = {};
-        if (null == ek ? void 0 : ek.id.startsWith("prepicked:")) c = F.ZP.getStreamStartOptions();
+        if (null == eM ? void 0 : eM.id.startsWith("prepicked:")) c = z.ZP.getStreamStartOptions();
         else {
-            let e = (0, J.Z)(eg, ek, y.ZP.getRunningGames()),
-                t = !(0, L.isWindows)() || null == e || (null == ek ? void 0 : ek.id.startsWith("camera:"));
+            let e = (0, J.Z)(eg, eM, S.ZP.getRunningGames()),
+                t = !(0, D.isWindows)() || null == e || (null == eM ? void 0 : eM.id.startsWith("camera:"));
             (c.pid = t || null == e ? void 0 : e.pid),
-                null == c.pid && null != ek && ((c.sourceId = ek.id), (c.sourceName = ek.name));
+                null == c.pid && null != eM && ((c.sourceId = eM.id), (c.sourceName = eM.name));
         }
         (0, x.WH)(
             i,
             n,
             el(ei({}, c), {
-                audioSourceId: eD,
+                audioSourceId: eL,
                 sound: eV,
                 previewDisabled: eJ,
                 nativePickerStyleUsed: e$,
                 goLiveModalDurationMs: Date.now() - ep.current,
             }),
         ),
-            null != eZ && ew($.L.AUTO_DISMISS),
-            ey ||
+            null != eZ && eI($.L.AUTO_DISMISS),
+            eS ||
                 (async () => {
                     (await O.Z.hasPermission(ee.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 })) ||
                         p.Z.show({
@@ -219,9 +219,9 @@ function eo(e) {
         e0(), ea();
     }
     i.useEffect(() => {
-        let e = (0, L.isWindows)() ? (0, H.Z)(y.ZP, A.Z) : null,
+        let e = (0, D.isWindows)() ? (0, F.Z)(S.ZP, A.Z) : null,
             t = (null == e ? void 0 : e.id) != null ? j.Z.getApplication(e.id) : null;
-        M.default.track(Q.rMx.OPEN_MODAL, {
+        k.default.track(Q.rMx.OPEN_MODAL, {
             type: "Go Live Modal",
             application_id: null == t ? void 0 : t.id,
             application_name: null == e ? void 0 : e.name,
@@ -232,19 +232,19 @@ function eo(e) {
     let e5 = i.useCallback(
             (e, t, n) => {
                 var r;
-                let i = (0, G.Z)(e, e_, ej),
+                let i = (0, U.Z)(e, e_, ej),
                     [l, s] = null != i ? i : [t, n];
-                e !== eU && ((t = l), (n = s));
+                e !== eG && ((t = l), (n = s));
                 let o = null != (r = null == ex ? void 0 : ex.id) ? r : eA;
                 a()(null != o, "Received null target channel ID");
                 let c = N.Z.getChannel(o);
-                if (!(0, U.Z)(e, t, n, e_, ej, c)) {
-                    let [e, r] = (0, G.Z)(q.tI.PRESET_VIDEO, e_, ej);
+                if (!(0, G.Z)(e, t, n, e_, ej, c)) {
+                    let [e, r] = (0, U.Z)(q.tI.PRESET_VIDEO, e_, ej);
                     (t = e), (n = r);
                 }
-                n !== eH && ez(n), t !== eW && eF(t), l !== t || s !== n ? eG(q.tI.PRESET_CUSTOM) : e !== eU && eG(e);
+                n !== eF && eH(n), t !== eW && ez(t), l !== t || s !== n ? eU(q.tI.PRESET_CUSTOM) : e !== eG && eU(e);
             },
-            [ex, eA, e_, ej, eH, eW, eU],
+            [ex, eA, e_, ej, eF, eW, eG],
         ),
         e3 = i.useCallback(
             (e) => {
@@ -253,11 +253,11 @@ function eo(e) {
             [e$],
         );
     function e8(e) {
-        if ((e.preventDefault(), 1 === eT)) return e3();
-        if (2 === eT) return eE(3);
-        if (null != e$) return eE(1);
-        let t = (0, J.Z)(eg, ek, y.ZP.getRunningGames());
-        if (D.ZP.supportsFeature(Q.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)) {
+        if ((e.preventDefault(), 1 === eP)) return e3();
+        if (2 === eP) return eT(3);
+        if (null != e$) return eT(1);
+        let t = (0, J.Z)(eg, eM, S.ZP.getRunningGames());
+        if (L.ZP.supportsFeature(Q.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)) {
             var i;
             let e = null != (i = null == eg ? void 0 : eg.pid) ? i : null;
             (0, h.ZDy)(async () => {
@@ -275,24 +275,24 @@ function eo(e) {
     }
     let e4 = i.useCallback(
             (e) => {
-                eL(e),
+                eD(e),
                     null != e &&
-                        (ey && (null == e ? void 0 : e.id.startsWith("camera:")) !== !0
+                        (eS && (null == e ? void 0 : e.id.startsWith("camera:")) !== !0
                             ? e1(e.id.split(":")[1])
                             : e1(void 0),
-                        eE(3),
+                        eT(3),
                         eR(!0));
             },
-            [ey],
+            [eS],
         ),
         e7 = i.useCallback(
             (e) => {
                 eq(e);
-                eE(B ? 2 : 3);
+                eT(B ? 2 : 3);
             },
             [B],
         ),
-        e6 = !(1 === eT && ey && eC === F.Uc.Error),
+        e6 = !(1 === eP && eS && eC === z.Uc.Error),
         e9 = (function (e) {
             switch (e) {
                 case 2:
@@ -304,13 +304,13 @@ function eo(e) {
                 default:
                     return et.intl.string(et.t["1hKIam"]);
             }
-        })(eT),
+        })(eP),
         te = (0, r.jsx)(h.xBx, {
             className: en.modalHeader,
             separator: !1,
-            children: (0, r.jsxs)(S.Z, {
-                direction: S.Z.Direction.VERTICAL,
-                align: S.Z.Align.CENTER,
+            children: (0, r.jsxs)(b.Z, {
+                direction: b.Z.Direction.VERTICAL,
+                align: b.Z.Align.CENTER,
                 className: en.header,
                 children: [
                     (0, r.jsx)(h.X6q, {
@@ -331,8 +331,8 @@ function eo(e) {
             }),
         }),
         tt = i.useCallback(() => {
-            ey && (0, W.t)(), eE(2);
-        }, [ey]),
+            eS && (0, W.t)(), eT(2);
+        }, [eS]),
         tn = (function (e, t, n, r) {
             switch (e) {
                 case 2:
@@ -346,21 +346,21 @@ function eo(e) {
                 default:
                     return null;
             }
-        })(eT, k, B, eP),
-        tr = 1 !== eT && (3 !== eT || (null == ek && null == eg) || null == eQ),
+        })(eP, M, B, eE),
+        tr = 1 !== eP && (3 !== eP || (null == eM && null == eg) || null == eQ),
         ti = i.useCallback(() => {
-            null != tn && eE(tn);
+            null != tn && eT(tn);
         }, [tn]),
         tl =
-            1 === eT || (eO && 3 === eT)
+            1 === eP || (eO && 3 === eP)
                 ? et.intl.string(et.t.FiBjwc)
-                : ey && (3 !== eT || null != e$)
+                : eS && (3 !== eP || null != e$)
                   ? et.intl.string(et.t.PDTjLC)
                   : et.intl.string(et.t["UE/rPz"]),
         ts = (0, r.jsxs)(h.mzw, {
             className: en.modalFooter,
-            direction: S.Z.Direction.HORIZONTAL,
-            justify: null == tn ? S.Z.Justify.END : S.Z.Justify.BETWEEN,
+            direction: b.Z.Direction.HORIZONTAL,
+            justify: null == tn ? b.Z.Justify.END : b.Z.Justify.BETWEEN,
             children: [
                 null != tn
                     ? (0, r.jsx)("div", {
@@ -433,7 +433,7 @@ function eo(e) {
                     renderPopout: () =>
                         (0, r.jsx)(es, {
                             visibleContent: eZ,
-                            markAsDismissed: ew,
+                            markAsDismissed: eI,
                         }),
                     children: () => {
                         var e;
@@ -443,7 +443,7 @@ function eo(e) {
                             children: [
                                 (0, r.jsxs)(h.MyZ, {
                                     springConfig: el(ei({}, c.config.stiff), { clamp: !0 }),
-                                    activeSlide: eT,
+                                    activeSlide: eP,
                                     width: 480,
                                     children: [
                                         (0, r.jsx)(h.Mi4, {
@@ -457,10 +457,10 @@ function eo(e) {
                                             id: 2,
                                             children: (0, r.jsx)("div", {
                                                 className: en.modalSize,
-                                                children: ey
+                                                children: eS
                                                     ? (0, r.jsx)(Y.se, { onSourceSelect: e4 })
                                                     : (0, r.jsx)(Y.oA, {
-                                                          selectedSource: ek,
+                                                          selectedSource: eM,
                                                           onChangeSelectedSource: e4,
                                                       }),
                                             }),
@@ -469,31 +469,31 @@ function eo(e) {
                                             id: 3,
                                             children: (0, r.jsx)("div", {
                                                 className: en.modalSize,
-                                                children: (0, r.jsx)(z.Z, {
+                                                children: (0, r.jsx)(H.Z, {
                                                     selectedChannelId:
                                                         null != (e = null == ex ? void 0 : ex.id) ? e : eA,
-                                                    selectedPreset: eU,
+                                                    selectedPreset: eG,
                                                     selectedResolution: eW,
-                                                    selectedSource: ek,
-                                                    selectedFPS: eH,
+                                                    selectedSource: eM,
+                                                    selectedFPS: eF,
                                                     sound: eV,
                                                     previewDisabled: eJ,
-                                                    sourceChanged: eP,
+                                                    sourceChanged: eE,
                                                     selectSource: B,
-                                                    onChangeSelectedFPS: (e) => e5(eU, eW, e),
-                                                    onChangeSelectedResolution: (e) => e5(eU, e, eH),
-                                                    onChangeSelectedPreset: (e) => e5(e, eW, eH),
-                                                    onChangeSelectedChannelId: eM,
+                                                    onChangeSelectedFPS: (e) => e5(eG, eW, e),
+                                                    onChangeSelectedResolution: (e) => e5(eG, e, eF),
+                                                    onChangeSelectedPreset: (e) => e5(e, eW, eF),
+                                                    onChangeSelectedChannelId: ek,
                                                     onChangeSelectedSource: e4,
                                                     onChangeSource: () => tt(),
                                                     onChangeAudioDevice: (e) => eB(e),
-                                                    onChangeGuild: () => eE(0),
+                                                    onChangeGuild: () => eT(0),
                                                     onChangeSound: (e) => eY(e),
                                                     onChangePreviewDisabled: (e) => eX(e),
                                                     onClose: ea,
                                                     selectedGuildId: eK,
                                                     targetGuildPremiumTier: ej,
-                                                    selectGuild: k,
+                                                    selectGuild: M,
                                                 }),
                                             }),
                                         }),
@@ -521,7 +521,7 @@ function eo(e) {
 }
 function ea(e) {
     let { showRefreshedGoLiveModal: t } = (0, B.a)({ location: e.analyticsLocation }),
-        n = (0, f.e7)([y.ZP], () => (null != e.sourcePID ? y.ZP.getGameForPID(e.sourcePID) : void 0));
+        n = (0, f.e7)([S.ZP], () => (null != e.sourcePID ? S.ZP.getGameForPID(e.sourcePID) : void 0));
     return t
         ? (0, r.jsx)(
               X.Z,

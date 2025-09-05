@@ -8,7 +8,7 @@ var r = n(951288),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    s = n(202841),
+    s = n(261616),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -18,32 +18,32 @@ var r = n(951288),
     m = n(905405),
     g = n(937889),
     b = n(739566),
-    _ = n(267128),
-    y = n(378233),
+    y = n(267128),
+    _ = n(378233),
     C = n(419922),
-    x = n(375954),
-    v = n(699516),
+    v = n(375954),
+    x = n(699516),
     O = n(768581),
     j = n(70956),
     E = n(823379),
     S = n(981631),
     I = n(217702),
-    P = n(89019);
+    P = n(832063);
 let Z = 10 * j.Z.Millis.SECOND;
 function T(e) {
     var t;
     let { message: n } = e,
         { isBlocked: l, isIgnored: o } = (0, c.cj)(
-            [v.Z],
+            [x.Z],
             () => ({
-                isBlocked: v.Z.isBlockedForMessage(n),
-                isIgnored: v.Z.isIgnoredForMessage(n),
+                isBlocked: x.Z.isBlockedForMessage(n),
+                isIgnored: x.Z.isIgnoredForMessage(n),
             }),
             [n],
         ),
         s = (0, b.Uj)(n),
         d = i.useContext(f.Z),
-        [x, j] = i.useState(!1),
+        [v, j] = i.useState(!1),
         E = (0, m.p)(),
         S = i.useCallback(
             (e) => {
@@ -60,7 +60,7 @@ function T(e) {
         Z =
             null != n.content && "" !== n.content
                 ? (0, g.ZP)(n, {
-                      isInteracting: x,
+                      isInteracting: v,
                       shouldFilterKeywords: E,
                   }).content
                 : null,
@@ -69,12 +69,12 @@ function T(e) {
             renderedContent: N,
             trailingIcon: A,
             leadingIcon: w,
-        } = (0, _.f)(n, Z, l, o, P.messageContent, {
+        } = (0, y.f)(n, Z, l, o, P.messageContent, {
             trailingIconClass: P.messageContentTrailingIcon,
             leadingIconClass: P.messageContentLeadingIcon,
             iconSize: I.WW,
         }),
-        R = (0, y.cv)(n),
+        R = (0, _.cv)(n),
         M =
             R.length > 0
                 ? R.map((e) =>
@@ -84,7 +84,7 @@ function T(e) {
                               className: P.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: x,
+                              isInteracting: v,
                           },
                           e.id,
                       ),
@@ -172,7 +172,7 @@ function N(e) {
             let g = null != (t = h.current) ? t : o;
             return {
                 toastsHidden: u,
-                toastMessages: (0, c.Wu)([x.Z], () => g.map((e) => x.Z.getMessage(n, e)), [n, g]).filter(E.lm),
+                toastMessages: (0, c.Wu)([v.Z], () => g.map((e) => v.Z.getMessage(n, e)), [n, g]).filter(E.lm),
             };
         })({
             channelId: t,
@@ -182,12 +182,12 @@ function N(e) {
         }),
         m = i.useRef({}),
         [g, b] = i.useState({}),
-        _ = i.useCallback((e, t) => {
+        y = i.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        y = i.useRef(g);
+        _ = i.useRef(g);
     i.useLayoutEffect(() => {
-        y.current = g;
+        _.current = g;
     }),
         i.useLayoutEffect(() => {
             let e = {},
@@ -197,14 +197,14 @@ function N(e) {
                 let i = null != (n = m.current[r.id]) ? n : 0;
                 (e[r.id] = t), (t += i + 8);
             }
-            (0, o.isEqual)(e, y.current) || b(e);
+            (0, o.isEqual)(e, _.current) || b(e);
         }, [f]);
     let C = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id],
         })),
-        v = (0, u.Yzy)(C, {
+        x = (0, u.Yzy)(C, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -238,9 +238,9 @@ function N(e) {
                 onMouseLeave: () => {
                     p(!1);
                 },
-                children: v((e, t) =>
+                children: x((e, t) =>
                     (0, r.jsx)(s.animated.div, {
-                        ref: (e) => _(t.message.id, null != e ? e.offsetHeight : null),
+                        ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
                         className: P.toastWrapper,
                         style: e,
                         children: (0, r.jsx)(T, { message: t.message }),

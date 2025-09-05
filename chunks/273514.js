@@ -2,16 +2,16 @@ n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(565138),
-    a = n(592125),
-    s = n(430824),
-    o = n(388032),
-    c = n(238972);
+    a = n(565138),
+    l = n(592125),
+    o = n(430824),
+    s = n(388032),
+    c = n(50079);
 let d = (e) => {
     let { entry: t } = e,
-        n = a.Z.getChannel(t.channelId);
+        n = l.Z.getChannel(t.channelId);
     if (null == n) return null;
-    let d = s.Z.getGuild(n.guild_id);
+    let d = o.Z.getGuild(n.guild_id);
     return null == d
         ? null
         : (0, r.jsxs)("div", {
@@ -20,7 +20,7 @@ let d = (e) => {
                   (0, r.jsx)(i.X6q, {
                       className: c.header,
                       variant: "heading-sm/semibold",
-                      children: o.intl.string(o.t.nTe4HB),
+                      children: s.intl.string(s.t.nTe4HB),
                   }),
                   (0, r.jsxs)("div", {
                       className: c.guildContainer,
@@ -28,9 +28,9 @@ let d = (e) => {
                           (0, r.jsxs)("div", {
                               className: c.hubInfo,
                               children: [
-                                  (0, r.jsx)(l.Z, {
+                                  (0, r.jsx)(a.Z, {
                                       guild: d,
-                                      size: l.Z.Sizes.MINI,
+                                      size: a.Z.Sizes.MINI,
                                       className: c.hubIcon,
                                   }),
                                   (0, r.jsx)(i.Text, {

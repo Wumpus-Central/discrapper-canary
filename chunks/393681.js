@@ -32,17 +32,17 @@ var r = n(951288),
     x = n(210887),
     L = n(418632),
     j = n(10298),
-    M = n(526156),
-    k = n(730820),
+    k = n(526156),
+    M = n(730820),
     U = n(888256),
     G = n(2719),
     B = n(194530),
     Z = n(726985),
-    V = n(981631),
-    F = n(801461),
+    F = n(981631),
+    V = n(801461),
     H = n(388032),
-    Y = n(343396),
-    W = n(197571);
+    Y = n(719766),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -171,7 +171,7 @@ class Q extends i.PureComponent {
                       "",
                       (0, r.jsx)(b.Z, {
                           className: Y.noticeTextButton,
-                          onClick: () => (0, O.Z)(F.Kq.USER_SETTINGS),
+                          onClick: () => (0, O.Z)(V.Kq.USER_SETTINGS),
                           children: H.intl.string(H.t.LhlgY2),
                       }),
                   ],
@@ -237,7 +237,7 @@ class Q extends i.PureComponent {
                         children: [
                             (0, r.jsx)(E.Z.Child, {
                                 wrap: !0,
-                                children: (0, r.jsx)(k.Z, { backupCodes: e }),
+                                children: (0, r.jsx)(M.Z, { backupCodes: e }),
                             }),
                             t.mfaEnabled
                                 ? null
@@ -364,12 +364,12 @@ class Q extends i.PureComponent {
         let { subsection: e } = this.props;
         return (0, r.jsx)(j.N, {
             header: H.intl.string(H.t["JAIM/v"]),
-            children: (0, r.jsx)(M.Z, {
+            children: (0, r.jsx)(k.Z, {
                 parentSetting: Z.s6.ACCOUNT,
-                settingsSection: V.oAB.ACCOUNT,
+                settingsSection: F.oAB.ACCOUNT,
                 panelClassName: Y.tabPanel,
                 onTabChange: (e) => {
-                    w.default.track(V.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
+                    w.default.track(F.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
                         target_tab_name: e === Z.s6.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
                     });
                 },
@@ -393,14 +393,14 @@ class Q extends i.PureComponent {
         return this.props.hide ? (0, r.jsx)(h.Z, {}) : this.renderUnhidden();
     }
     handleDisableAccountError(e) {
-        if (e.body.code === V.evJ.INVALID_PASSWORD) throw e;
+        if (e.body.code === F.evJ.INVALID_PASSWORD) throw e;
         this.setState({
             shouldRenderDisableAccountErrorModal: !0,
             disableAccountErrorMessage: e.body.message,
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, p.ss)(e, t).then(V.dG4, this.handleDisableAccountError);
+        return (0, p.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         var e;

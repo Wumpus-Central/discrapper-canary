@@ -1,5 +1,5 @@
 n.d(t, {
-    TS: () => G,
+    TS: () => H,
     ud: () => k,
     v0: () => B,
 }),
@@ -19,11 +19,11 @@ var r = n(951288),
     m = n(565138),
     g = n(370774),
     b = n(703656),
-    _ = n(621853),
-    y = n(484459),
+    y = n(621853),
+    _ = n(484459),
     C = n(699516),
-    x = n(914010),
-    v = n(594174),
+    v = n(914010),
+    x = n(594174),
     O = n(768581),
     j = n(63063),
     E = n(374386),
@@ -35,7 +35,7 @@ var r = n(951288),
     N = n(981631),
     A = n(921944),
     w = n(388032),
-    R = n(97009);
+    R = n(161655);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -175,7 +175,7 @@ function k(e) {
             renderFollowButton: g,
         } = e,
         b = (0, h.KS)(t, o),
-        { prefix: _, level: y } = (function (e, t) {
+        { prefix: y, level: _ } = (function (e, t) {
             var n, r;
             switch (e) {
                 case N.d4z.DM:
@@ -217,11 +217,11 @@ function k(e) {
                     };
             }
         })(t.type, o),
-        x = (0, r.jsxs)(r.Fragment, {
+        v = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != _
+                null != y
                     ? (0, r.jsxs)(c.nn4, {
-                          children: [_, ":"],
+                          children: [y, ":"],
                       })
                     : null,
                 " ",
@@ -231,13 +231,13 @@ function k(e) {
     switch (t.type) {
         case N.d4z.DM:
             return (0, r.jsx)(T.Z, {
-                level: y,
+                level: _,
                 channel: t,
                 handleClick: u,
                 handleContextMenu: d,
             });
         case N.d4z.GROUP_DM:
-            if (t.isManaged()) return x;
+            if (t.isManaged()) return v;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.nn4, { children: w.intl.string(w.t["e5y+go"]) }),
@@ -252,33 +252,33 @@ function k(e) {
                 ? (0, r.jsxs)(L, {
                       channel: t,
                       children: [
-                          F(
+                          G(
                               b,
                               t.type === N.d4z.GUILD_ANNOUNCEMENT
                                   ? w.intl.string(w.t.l1dkSE)
                                   : w.intl.string(w.t.Pnajj4),
                           ),
                           (0, r.jsx)(Z.Z.Title, {
-                              level: y,
+                              level: _,
                               onContextMenu: d,
                               onClick: u,
-                              children: x,
+                              children: v,
                           }),
                       ],
                   })
                 : (0, r.jsxs)(i.Fragment, {
                       children: [
-                          F(
+                          G(
                               b,
                               t.type === N.d4z.GUILD_ANNOUNCEMENT
                                   ? w.intl.string(w.t.l1dkSE)
                                   : w.intl.string(w.t.Pnajj4),
                           ),
                           (0, r.jsx)(Z.Z.Title, {
-                              level: y,
+                              level: _,
                               onContextMenu: d,
                               onClick: u,
-                              children: x,
+                              children: v,
                           }),
                           null != g ? g() : null,
                       ],
@@ -286,24 +286,24 @@ function k(e) {
         case N.d4z.GUILD_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    F(b, w.intl.string(w.t.BVZqJi)),
+                    G(b, w.intl.string(w.t.BVZqJi)),
                     (0, r.jsx)(Z.Z.Title, {
-                        level: y,
+                        level: _,
                         onContextMenu: d,
                         onClick: u,
-                        children: x,
+                        children: v,
                     }),
                 ],
             });
         case N.d4z.GUILD_STAGE_VOICE:
             return (0, r.jsxs)(i.Fragment, {
                 children: [
-                    F(b, w.intl.string(w.t.EErMzM)),
+                    G(b, w.intl.string(w.t.EErMzM)),
                     (0, r.jsx)(Z.Z.Title, {
-                        level: y,
+                        level: _,
                         onContextMenu: d,
                         onClick: u,
-                        children: x,
+                        children: v,
                     }),
                 ],
             });
@@ -315,13 +315,13 @@ function k(e) {
                 let e = (0, h.KS)(l, o);
                 O = (0, r.jsxs)(i.Fragment, {
                     children: [
-                        F(e, w.intl.string(w.t.Pnajj4)),
+                        G(e, w.intl.string(w.t.Pnajj4)),
                         (0, r.jsx)(Z.Z.Title, {
-                            level: y,
+                            level: _,
                             onContextMenu: m,
                             onClick: f,
                             className: a()(R.parentChannelName, R.cursorPointer),
-                            children: (0, p.F6)(l, v.default, C.Z),
+                            children: (0, p.F6)(l, x.default, C.Z),
                         }),
                         (0, r.jsx)(Z.Z.Caret, {}),
                     ],
@@ -331,9 +331,9 @@ function k(e) {
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     O,
-                    F(j ? null : b, w.intl.string(w.t["7Xm5QE"])),
+                    G(j ? null : b, w.intl.string(w.t["7Xm5QE"])),
                     (0, r.jsx)(Z.Z.Title, {
-                        level: y,
+                        level: _,
                         onContextMenu: d,
                         onClick: u,
                         className: a()({
@@ -341,7 +341,7 @@ function k(e) {
                             [R.forumPostTitle]: j,
                             [R.forumPostSidebarTitle]: s && j,
                         }),
-                        children: x,
+                        children: v,
                     }),
                 ],
             });
@@ -358,13 +358,13 @@ function k(e) {
                           })
                         : null,
                     (0, r.jsxs)(Z.Z.Title, {
-                        level: y,
+                        level: _,
                         onContextMenu: d,
                         onClick: u,
                         children: [
-                            null != _
+                            null != y
                                 ? (0, r.jsxs)(c.nn4, {
-                                      children: [_, ":"],
+                                      children: [y, ":"],
                                   })
                                 : null,
                             " ",
@@ -380,16 +380,16 @@ function k(e) {
 let U = (e) => {
     var t, n, l;
     let { channel: a } = e,
-        s = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        c = (0, o.e7)([v.default], () => v.default.getUser(a.getRecipientId())),
+        s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        c = (0, o.e7)([x.default], () => x.default.getUser(a.getRecipientId())),
         u = (0, E.G)(),
-        p = (0, o.e7)([_.Z], () => (null != c ? _.Z.getUserProfile(c.id) : null)),
+        p = (0, o.e7)([y.Z], () => (null != c ? y.Z.getUserProfile(c.id) : null)),
         h = null != p && (null != (t = null == p ? void 0 : p.fetchEndedAt) ? t : 0) > 0;
     return (i.useEffect(() => {
         (null == s ? void 0 : s.isStaff()) &&
             null != c &&
             !c.isStaff() &&
-            (0, y.Z)(c.id, c.getAvatarURL(void 0, 80), {
+            (0, _.Z)(c.id, c.getAvatarURL(void 0, 80), {
                 dispatchWait: !0,
                 withMutualGuilds: !0,
                 withMutualFriendsCount: !0,
@@ -428,7 +428,7 @@ function B(e, t) {
             return null;
     }
 }
-function F(e, t) {
+function G(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null !== e &&
@@ -440,9 +440,9 @@ function F(e, t) {
         ],
     });
 }
-function G(e) {
+function H(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
-        a = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
+        a = (0, o.e7)([v.Z], () => v.Z.getGuildId()),
         s = (0, g.D)(),
         u = i.useRef(null);
     if ((a !== N.I_8 && !s) || null == t) return null;

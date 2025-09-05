@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(266076),
     g = n(187237),
     b = n(769409),
-    _ = n(518311),
-    y = n(518950),
+    y = n(518311),
+    _ = n(518950),
     C = n(967128),
-    x = n(388032),
-    v = n(963392);
+    v = n(388032),
+    x = n(40036);
 function O(e) {
     var t;
     let { channel: n, children: O, user: j } = e,
@@ -28,7 +28,7 @@ function O(e) {
             avatarDecorationSrc: I,
             eventHandlers: P,
             isAnimating: Z,
-        } = (0, y.Z)({
+        } = (0, _.Z)({
             userId: null == j ? void 0 : j.id,
             size: s.EFr.SIZE_80,
             animateOnHover: !0,
@@ -81,18 +81,18 @@ function O(e) {
             (0, r.jsx)(C.jz, { children: O }),
             n.isMultiUserDM() &&
                 (0, r.jsxs)(o.h, {
-                    className: v.buttonContainer,
+                    className: x.buttonContainer,
                     children: [
-                        (0, r.jsx)(_.l, {
+                        (0, r.jsx)(y.l, {
                             channel: n,
-                            text: x.intl.string(x.t["6Qgren"]),
+                            text: v.intl.string(v.t["6Qgren"]),
                             icon: s.ejJ,
                         }),
                         (0, r.jsx)(a.z, {
                             icon: s.vdY,
                             variant: "secondary",
-                            text: x.intl.string(x.t["5Q9+/P"]),
-                            "aria-label": x.intl.string(x.t["5Q9+/P"]),
+                            text: v.intl.string(v.t["5Q9+/P"]),
+                            "aria-label": v.intl.string(v.t["5Q9+/P"]),
                             onClick: () => (0, b.B)(n.id, u.Z.EMPTY_GROUP_DM),
                         }),
                     ],

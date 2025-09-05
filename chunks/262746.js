@@ -10,22 +10,22 @@ var r = n(951288),
     d = n(496675),
     p = n(993706),
     h = n(796263),
-    f = n(764295),
+    f = n(304726),
     m = n(388032);
 function g(e) {
     let { channel: t, user: g, guild: b } = e,
-        _ = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
-        y = null != g && null == _,
-        [C, x] = i.useState(y),
-        v = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
+        y = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
+        _ = null != g && null == y,
+        [C, v] = i.useState(_),
+        x = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
     if (
         ((0, c.ZP)(() => {
-            y && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => x(!1));
+            _ && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => v(!1));
         }),
-        !v)
+        !x)
     )
         return null;
-    let O = !0 === _ ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
+    let O = !0 === y ? m.intl.string(f.default.dpfwQ0) : m.intl.string(f.default.ASv23d),
         j = "ban-user-".concat(null == g ? void 0 : g.id);
     return (0, r.jsx)(
         h.Z,
@@ -35,7 +35,7 @@ function g(e) {
             onClick: () => {
                 null != g &&
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await n.e("4114").then(n.bind(n, 98746));
+                        let { default: e } = await n.e("43350").then(n.bind(n, 98746));
                         return (n) => {
                             var i, l;
                             return (0, r.jsx)(
@@ -88,7 +88,7 @@ function g(e) {
                         };
                     });
             },
-            disabled: !0 === _ || C,
+            disabled: !0 === y || C,
             submitting: C,
             color: a.zx.Colors.RED,
         },

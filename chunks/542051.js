@@ -14,7 +14,7 @@ var r,
     c = n(607802),
     u = n(579612),
     d = n(388032),
-    f = n(575209);
+    f = n(2442);
 function _(e, t, n) {
     return (
         t in e
@@ -207,7 +207,7 @@ class y extends (r = a.PureComponent) {
     render() {
         let { query: e, focusedIndex: t, navId: n, className: r } = this.props,
             a = "" === e.trim();
-        return (0, i.jsxs)("div", {
+        return (0, i.jsxs)(l.u2D, {
             className: s()(f.container, r),
             onMouseDown: E,
             role: "listbox",

@@ -14,18 +14,18 @@ var r = n(951288),
     m = n(850020),
     g = n(670188),
     b = n(158776),
-    _ = n(699516),
-    y = n(111583),
+    y = n(699516),
+    _ = n(111583),
     C = n(594174),
-    x = n(626135),
-    v = n(585483),
+    v = n(626135),
+    x = n(585483),
     O = n(233870),
     j = n(51144),
     E = n(998502),
     S = n(276264),
     I = n(981631),
     P = n(388032),
-    Z = n(32482);
+    Z = n(854641);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,15 +55,15 @@ let N = [],
     A = E.ZP.getEnableHardwareAcceleration();
 function w(e) {
     let { user: t, channel: o, status: u, activities: d } = e,
-        p = (0, a.e7)([y.Z], () => null != y.Z.getTypingUsers(o.id)[t.id]),
+        p = (0, a.e7)([_.Z], () => null != _.Z.getTypingUsers(o.id)[t.id]),
         f = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
-        x = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
-        O = (0, a.e7)([_.Z], () => _.Z.getNickname(t.id)),
+        v = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
+        O = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         E = (0, h.Z)(t.id),
         Z = i.useRef(null),
         N = (e) => {
             (0, s.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("49062")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("92775")]).then(
                     n.bind(n, 354589),
                 );
                 return (n) => {
@@ -96,8 +96,8 @@ function w(e) {
         w = () => {
             let e = "@".concat(j.ZP.getUserTag(t, { decoration: "never" })),
                 n = "<@".concat(t.id, ">");
-            v.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: o.id }),
-                v.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
+            x.S.dispatch(I.CkL.TEXTAREA_FOCUS, { channelId: o.id }),
+                x.S.dispatchToLastSubscribed(I.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n,
                 }),
@@ -156,7 +156,7 @@ function w(e) {
                         channel: o,
                         onContextMenu: N,
                         selected: M,
-                        isMobile: x,
+                        isMobile: v,
                         nick: O,
                         nameplate: R,
                         onClick: (e) => {
@@ -188,13 +188,13 @@ function M(e) {
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [_.Z, C.default, b.Z],
+            [y.Z, C.default, b.Z],
             () => {
                 let e = (0, O.T)(t.recipients, C.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    _.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
+                    y.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = b.Z.getStatus(t.id)) ? i : I.Skl.OFFLINE,
                               activities: null != (l = b.Z.getActivities(t.id)) ? l : N,
@@ -219,7 +219,7 @@ function M(e) {
             R,
         );
     i.useEffect(() => {
-        x.default.track(I.rMx.MEMBER_LIST_VIEWED, {
+        v.default.track(I.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id,

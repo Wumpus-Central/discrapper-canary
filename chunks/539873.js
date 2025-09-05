@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -13,8 +13,8 @@ var r = n(951288),
     p = n(441319),
     h = n(526761),
     m = n(388032),
-    g = n(339637),
-    E = n(226518);
+    g = n(871976),
+    E = n(5874);
 function b(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,11 +88,11 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function T(e) {
+function S(e) {
     let { className: t, disabled: n, isEditor: b, renderCTAButtons: O } = e,
-        [S] = (0, a.Wu)([f.Z], () => [f.Z.getCurrentDesktopIcon()]),
-        T = i.useRef(null);
-    (0, d.Z)(T, h.h1.CUSTOM_APP_ICONS);
+        [T] = (0, a.Wu)([f.Z], () => [f.Z.getCurrentDesktopIcon()]),
+        S = i.useRef(null);
+    (0, d.Z)(S, h.h1.CUSTOM_APP_ICONS);
     let A = (0, c.Dt)(),
         C = (0, o.Jb)({
             orientation: "horizontal",
@@ -107,7 +107,7 @@ function T(e) {
             });
         };
     return (0, r.jsx)("div", {
-        ref: T,
+        ref: S,
         children: (0, r.jsx)(
             "div",
             v(y({}, R), {
@@ -156,7 +156,7 @@ function T(e) {
                                         _.Z,
                                         {
                                             icon: e,
-                                            isSelected: S === e.id,
+                                            isSelected: T === e.id,
                                             onSelect: (e) => P(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,

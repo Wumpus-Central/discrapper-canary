@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(35282);
+n.d(t, { Z: () => E }), n(388685), n(35282);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -12,9 +12,9 @@ var r = n(951288),
     g = n(572456),
     b = n(434404),
     p = n(981631),
-    O = n(273504),
-    y = n(388032),
-    m = n(335260);
+    m = n(273504),
+    O = n(388032),
+    y = n(31593);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,10 +58,10 @@ function v(e, t) {
         e
     );
 }
-let j = O.fX.KEYWORD;
-function S(e, t) {
+let j = m.fX.KEYWORD;
+function E(e, t) {
     let { perGuildMaxCount: n } = c.I6[j],
-        { isLoading: S, saveRule: E, errorMessage: P } = (0, d.w)(),
+        { isLoading: E, saveRule: S, errorMessage: P } = (0, d.w)(),
         { createNewEditingRule: _ } = (0, d.V)(),
         [Z, T] = i.useState(!1),
         [w, I] = (0, s.I2)(t),
@@ -76,7 +76,7 @@ function S(e, t) {
     let C = e.split(" "),
         R = C.length;
     try {
-        (0, o.km)(C, O.RH);
+        (0, o.km)(C, m.RH);
     } catch (e) {
         return null;
     }
@@ -105,15 +105,15 @@ function S(e, t) {
                     ],
                 }),
             });
-            await E(i, x),
+            await S(i, x),
                 A(i),
                 null != P
-                    ? (0, l.showToast)((0, l.createToast)(y.intl.string(y.t.wH6L0t), l.ToastType.FAILURE))
-                    : (0, l.showToast)((0, l.createToast)(y.intl.string(y.t["0rdYm5"]), l.ToastType.SUCCESS));
+                    ? (0, l.showToast)((0, l.createToast)(O.intl.string(O.t.wH6L0t), l.ToastType.FAILURE))
+                    : (0, l.showToast)((0, l.createToast)(O.intl.string(O.t["0rdYm5"]), l.ToastType.SUCCESS));
         },
         G = (0, r.jsx)(l.sNh, {
             id: "automod-rules-loading",
-            label: y.intl.string(y.t.ZTNur6),
+            label: O.intl.string(O.t.ZTNur6),
         });
     return (
         w ||
@@ -122,9 +122,9 @@ function S(e, t) {
                     D &&
                         (0, r.jsx)(l.sNh, {
                             id: "add-first-rule",
-                            label: y.intl.string(y.t.f72Zqa),
+                            label: O.intl.string(O.t.f72Zqa),
                             action: L,
-                            disabled: S,
+                            disabled: E,
                         }),
                     x.map((e) => {
                         let t = (0, c.V9)(j).reduce((t, n) => {
@@ -143,13 +143,13 @@ function S(e, t) {
                                 label: e.name,
                                 subtext: (0, r.jsx)(l.Text, {
                                     color: "text-muted",
-                                    className: m.actionTextHeader,
+                                    className: y.actionTextHeader,
                                     variant: "text-xs/normal",
                                     children: t.slice(2),
                                 }),
                                 group: "automod-rule-selection",
                                 checked: !1,
-                                disabled: S,
+                                disabled: E,
                                 action: () => k(e),
                             },
                             e.id,
@@ -161,9 +161,9 @@ function S(e, t) {
                                 (0, r.jsx)(l.Clw, {}),
                                 (0, r.jsx)(l.sNh, {
                                     id: "add-another-rule",
-                                    label: y.intl.string(y.t["0K5jDA"]),
+                                    label: O.intl.string(O.t["0K5jDA"]),
                                     action: L,
-                                    disabled: S,
+                                    disabled: E,
                                 }),
                             ],
                         }),
@@ -171,7 +171,7 @@ function S(e, t) {
             })),
         (0, r.jsx)(l.sNh, {
             id: "guild-automod-add-selection",
-            label: y.intl.formatToPlainString(y.t.Kkjv1t, { keywordCount: R }),
+            label: O.intl.formatToPlainString(O.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
                 Z || (T(!0), I());
             },

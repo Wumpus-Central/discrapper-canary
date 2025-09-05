@@ -21,8 +21,8 @@ var l = n(951288),
     v = n(176505),
     y = n(921944),
     O = n(388032),
-    Z = n(126512),
-    N = n(97009);
+    N = n(380986),
+    Z = n(161655);
 function I(e) {
     let { guild: t } = e,
         n = (0, C.Z)(t);
@@ -36,8 +36,8 @@ function I(e) {
     return (
         (0, u.Tt)({ location: i }),
         (0, l.jsxs)(h.Z, {
-            className: Z.header,
-            innerClassname: Z.innerHeader,
+            className: N.header,
+            innerClassname: N.innerHeader,
             hideSearch: !0,
             channelId: v.oC.CUSTOMIZE_COMMUNITY,
             guildId: t.id,
@@ -68,15 +68,15 @@ function w(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(N.chat, { [N.threadSidebarOpen]: y }),
+                      className: a()(Z.chat, { [Z.threadSidebarOpen]: y }),
                       children: [
                           (0, l.jsx)(I, { guild: i }),
                           (0, l.jsxs)("div", {
-                              className: a()(N.content, Z.container),
+                              className: a()(Z.content, N.container),
                               children: [
                                   s &&
                                       (0, l.jsxs)(d.njP, {
-                                          className: Z.tabBar,
+                                          className: N.tabBar,
                                           type: "top",
                                           look: "brand",
                                           selectedItem: u,
@@ -85,7 +85,7 @@ function w(e) {
                                               (0, l.jsx)(
                                                   d.njP.Item,
                                                   {
-                                                      className: Z.tabBarItem,
+                                                      className: N.tabBarItem,
                                                       id: j.l7.CUSTOMIZE,
                                                       children: O.intl.string(O.t.H2cICQ),
                                                   },
@@ -94,7 +94,7 @@ function w(e) {
                                               (0, l.jsxs)(
                                                   d.njP.Item,
                                                   {
-                                                      className: Z.tabBarItem,
+                                                      className: N.tabBarItem,
                                                       id: j.l7.BROWSE,
                                                       "aria-label": O.intl.string(O.t.et6wam),
                                                       children: [
@@ -104,7 +104,7 @@ function w(e) {
                                                               color: w
                                                                   ? c.Z.unsafe_rawColors.BRAND_260.css
                                                                   : c.Z.colors.BACKGROUND_ACCENT.css,
-                                                              className: a()({ [Z.newBadge]: w }),
+                                                              className: a()({ [N.newBadge]: w }),
                                                           }),
                                                       ],
                                                   },

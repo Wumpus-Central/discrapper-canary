@@ -1,4 +1,4 @@
-n.d(t, { O: () => f });
+n.d(t, { O: () => h });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -11,20 +11,20 @@ var r = n(951288),
     m = n(486324),
     g = n(200299),
     p = n(388032),
-    h = n(278355);
-function f(e) {
+    f = n(35597);
+function h(e) {
     let { guild: t, canManageGuild: n } = e,
-        f = t.features.has(d.oNc.BANNER),
+        h = t.features.has(d.oNc.BANNER),
         b = t.features.has(d.oNc.ANIMATED_BANNER),
-        x = f && n,
+        x = h && n,
         { analyticsLocations: j } = (0, a.ZP)(),
-        v = i.useCallback(
+        _ = i.useCallback(
             (e, n) => {
                 (0, c.f4)(t, j, e, n);
             },
             [j, t],
         ),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -51,7 +51,7 @@ function f(e) {
                       )
                     : null,
             disabled: !x,
-            onChange: v,
+            onChange: _,
             hint: p.intl.string(p.t.uPvxqK),
             onOpenImageSelectModal: () =>
                 (0, c.mw)({
@@ -59,7 +59,7 @@ function f(e) {
                     maxFileSizeBytes: g.B,
                     onComplete: (e) => {
                         let { imageUri: t, file: n } = e;
-                        return v(t, n);
+                        return _(t, n);
                     },
                     analyticsLocation: {
                         page: d.ZY5.GUILD_SETTINGS,
@@ -69,13 +69,13 @@ function f(e) {
                 }),
             enabled: x,
         });
-    return f
+    return h
         ? O
         : (0, r.jsx)(l.P3F, {
               "aria-hidden": !0,
               tabIndex: -1,
-              className: h.upsell,
-              onClick: _,
+              className: f.upsell,
+              onClick: v,
               children: O,
           });
 }

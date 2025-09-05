@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => eC,
-    l: () => ex,
+    l: () => ev,
 }),
     n(642613),
     n(415506),
@@ -23,11 +23,11 @@ var r,
     m = n(570140),
     g = n(26151),
     b = n(493683),
-    _ = n(529103),
-    y = n(447543),
+    y = n(529103),
+    _ = n(447543),
     C = n(708690),
-    x = n(194359),
-    v = n(425493),
+    v = n(194359),
+    x = n(425493),
     O = n(794433),
     j = n(493773),
     E = n(40851),
@@ -46,9 +46,9 @@ var r,
     k = n(752048),
     U = n(131704),
     B = n(592125),
-    F = n(341165),
-    G = n(544610),
-    H = n(19780),
+    G = n(341165),
+    H = n(544610),
+    F = n(19780),
     V = n(306680),
     z = n(699516),
     W = n(246946),
@@ -64,8 +64,8 @@ var r,
     en = n(575464),
     er = n(981631),
     ei = n(388032),
-    el = n(918324),
-    ea = n(197571);
+    el = n(497072),
+    ea = n(10198);
 function eo(e, t, n) {
     return (
         t in e
@@ -285,7 +285,7 @@ class eg extends (r = l.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = ee.Z.getCurrentConfig({ location: "5326c5_1" }, { autoTrackExposure: !1 });
-        y.ZP.createInvite(e.id, { max_age: t }, er.t4x.GROUP_DM);
+        _.ZP.createInvite(e.id, { max_age: t }, er.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -586,7 +586,7 @@ class eg extends (r = l.PureComponent) {
     }
     handleAddFriend(e) {
         this.props.onClose(),
-            x.Z.sendRequest({
+            v.Z.sendRequest({
                 discordTag: $.ZP.getUserTag(e, { identifiable: "always" }),
                 context: { location: "Group DM" },
             });
@@ -629,7 +629,7 @@ class eg extends (r = l.PureComponent) {
                     children: (0, i.jsx)(f.JcV, {
                         containerRef: this._mobileCloseRef,
                         children: (0, i.jsx)("div", {
-                            children: (0, i.jsx)(v.Z, {
+                            children: (0, i.jsx)(x.Z, {
                                 className: el.mobileToolsCloseIcon,
                                 closeAction: this.props.onClose,
                                 keybind: "ESC",
@@ -721,7 +721,7 @@ class eg extends (r = l.PureComponent) {
                     this.forceFocus();
             }),
             eo(this, "handleAddFriendNavigation", () => {
-                _.Z.transitionToSection(er.pJs.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
+                y.Z.transitionToSection(er.pJs.ADD_FRIEND, { explicit: !0 }), this.props.onClose();
             }),
             eo(this, "handleScroll", () => {
                 let e = this.scrollerRef.current;
@@ -777,7 +777,7 @@ class eg extends (r = l.PureComponent) {
             eo(this, "pushToExistingDM", (e, t) => {
                 let n = this._searchCounter,
                     r = (0, I.v_)(e),
-                    i = H.Z.getChannelId() === e.id;
+                    i = F.Z.getChannelId() === e.id;
                 b.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void g.Z.call(n, !1, !0);
@@ -800,7 +800,7 @@ class eg extends (r = l.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = ev(Array.from(new Set([...e.recipients, ...r])));
+                    let t = ex(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, f.h7j)(
                               (n) =>
@@ -816,7 +816,7 @@ class eg extends (r = l.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = ev(r);
+                    let e = ex(r);
                     r.length > 1 && e.size > 0
                         ? (0, f.h7j)(
                               (t) =>
@@ -892,14 +892,14 @@ function eb(e) {
         ],
     });
 }
-function e_(e) {
+function ey(e) {
     var { channel: t } = e,
         n = eu(e, ["channel"]);
-    let r = (0, p.cj)([G.Z, F.Z, W.Z], () => {
+    let r = (0, p.cj)([H.Z, G.Z, W.Z], () => {
         let e;
         return (
-            null != t && null != (e = F.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-            ec(es({}, G.Z.getState()), {
+            null != t && null != (e = G.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            ec(es({}, H.Z.getState()), {
                 invite: e,
                 hideDiscriminator: W.Z.hidePersonalInformation,
                 hideInstantInvites: W.Z.hideInstantInvites,
@@ -908,7 +908,7 @@ function e_(e) {
     });
     return (0, i.jsx)(eg, es({ channel: t }, n, r));
 }
-function ey(e) {
+function e_(e) {
     let { channel: t, location: n, subscribeToGlobalHotkey: r, initialPopoutOpen: a } = e,
         [o, s] = l.useState(null != a && a),
         c = (0, w.a)(n),
@@ -920,7 +920,7 @@ function ey(e) {
                     () =>
                         Promise.resolve((e) =>
                             (0, i.jsx)(
-                                e_,
+                                ey,
                                 ec(es({}, e), {
                                     channel: t,
                                     inBornThisNamedExperiment: c,
@@ -949,7 +949,7 @@ function ey(e) {
             showModal: p,
             renderPopout: (e) =>
                 (0, i.jsx)(
-                    e_,
+                    ey,
                     ec(es({}, e), {
                         onClose: e.closePopout,
                         channel: t,
@@ -978,15 +978,15 @@ function eC(e) {
             location: g,
         } = e,
         b = l.useRef(null),
-        _ = null != s ? s : null == r ? f.kL_ : f.ejJ,
+        y = null != s ? s : null == r ? f.kL_ : f.ejJ,
         {
-            showModal: y,
+            showModal: _,
             renderPopout: C,
-            toggleVisible: x,
-            popoutOpen: v,
+            toggleVisible: v,
+            popoutOpen: x,
             setPopoutOpen: O,
             inBornThisNamedExperiment: j,
-        } = ey({
+        } = e_({
             initialPopoutOpen: null != r && r.isGroupDM() && 0 === r.recipients.length,
             channel: r,
             location: g,
@@ -998,8 +998,8 @@ function eC(e) {
         : j
           ? (0, i.jsx)(et.ZP.Icon, {
                 ref: b,
-                onClick: y,
-                icon: _,
+                onClick: _,
+                icon: y,
                 className: o,
                 iconClassName: a,
                 tooltip: c,
@@ -1009,7 +1009,7 @@ function eC(e) {
                 targetElementRef: b,
                 renderPopout: C,
                 position: d,
-                shouldShow: v,
+                shouldShow: x,
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: h,
@@ -1022,8 +1022,8 @@ function eC(e) {
                         et.ZP.Icon,
                         ec(es({}, e), {
                             ref: b,
-                            onClick: x,
-                            icon: _,
+                            onClick: v,
+                            icon: y,
                             className: o,
                             iconClassName: a,
                             tooltip: c,
@@ -1032,7 +1032,7 @@ function eC(e) {
                     ),
             });
 }
-function ex(e) {
+function ev(e) {
     var {
             channel: t,
             popoutPosition: n = "bottom",
@@ -1050,14 +1050,14 @@ function ex(e) {
             toggleVisible: m,
             popoutOpen: g,
             setPopoutOpen: b,
-            inBornThisNamedExperiment: _,
-        } = ey({
+            inBornThisNamedExperiment: y,
+        } = e_({
             initialPopoutOpen: !1,
             channel: t,
             location: "PrivateChannelRecipientsInviteTextButton",
             subscribeToGlobalHotkey: c,
         });
-    return _
+    return y
         ? (0, i.jsx)(
               f.zxk,
               ec(es({}, u), {
@@ -1097,7 +1097,7 @@ function ex(e) {
                   ),
           });
 }
-function ev(e) {
+function ex(e) {
     let t = eO(e);
     return new Set(
         (0, s.chain)(B.Z.getMutablePrivateChannels())

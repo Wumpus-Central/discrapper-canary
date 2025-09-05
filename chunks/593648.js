@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(476756),
     v = n(734934),
     I = n(223683),
-    S = n(312400),
-    T = n(115345),
+    T = n(312400),
+    S = n(115345),
     A = n(392888),
     C = n(106371),
     N = n(995774),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(9156),
     L = n(912101),
     j = n(358085),
-    M = n(709054),
-    k = n(45640),
+    k = n(709054),
+    M = n(45640),
     U = n(695346),
     G = n(675478),
     B = n(33656),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(981631),
     V = n(468788),
     H = n(388032),
-    Y = n(728495),
-    W = n(197571);
+    Y = n(285746),
+    W = n(10198);
 function K(e, t, n) {
     return (
         t in e
@@ -302,7 +302,7 @@ function $(e) {
 function ee() {
     let e = (0, c.e7)([b.Z], () => b.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
-        a = M.default.keys(e).map((t) => {
+        a = k.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -413,7 +413,7 @@ class et extends i.PureComponent {
                 focusMode: u,
             } = this.props,
             d = j.isPlatformEmbedded && (0, j.isWindows)(),
-            _ = k.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            _ = M.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
             p = l()
                 .range(_, 11)
                 .map((e) => ({
@@ -573,8 +573,8 @@ function er() {
         : null;
 }
 function ei() {
-    let e = S.xT.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }).enabled,
-        { manuallyOpen: t } = S.fs.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }),
+    let e = T.xT.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }).enabled,
+        { manuallyOpen: t } = T.fs.useExperiment({ location: "UserSettingsNotifications" }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([x.ZP], () => x.ZP.useNewNotifications),
         [a, s] = i.useState(!1);
     return e && (n || t)
@@ -661,13 +661,13 @@ async function ea(e) {
     e(!0);
     let t = await (0, I.Tn)();
     0 === t.length
-        ? await (0, T.oL)()
+        ? await (0, S.oL)()
         : _.Z.show({
               title: H.intl.string(H.t["cY+Ooa"]),
               body: H.intl.format(H.t["7zTJJS"], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: H.intl.string(H.t["ETE/oK"]),
               confirmText: H.intl.string(H.t.Rm96T0),
-              onConfirm: T.oL,
+              onConfirm: S.oL,
           }),
         e(!1);
 }

@@ -11,7 +11,7 @@ var i = n(524825),
     d = n(430824),
     p = n(594174),
     h = n(768581),
-    f = n(870515);
+    f = n(20372);
 function m() {
     let { guildId: e, channelId: t } = (0, c.Z)((e) => {
             let { guildId: t, channelId: n } = e;
@@ -24,9 +24,9 @@ function m() {
         m = (0, l.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
         g = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         b = null != m ? (0, o.x)(m) : null,
-        _ = null != g ? g.getAvatarURL(e, 80) : h.pK["0"],
-        y = (0, r.jsx)(a.qEK, {
-            src: _,
+        y = null != g ? g.getAvatarURL(e, 80) : h.pK["0"],
+        _ = (0, r.jsx)(a.qEK, {
+            src: y,
             "aria-hidden": !0,
             size: a.EFr.SIZE_80,
             className: f.avatarSizeOverride,
@@ -43,13 +43,13 @@ function m() {
                         size: a.EFr.SIZE_80,
                         className: f.avatarSizeOverride,
                     })
-                  : y),
+                  : _),
         (0, r.jsxs)("div", {
             className: f.container,
             children: [
                 (0, r.jsx)("div", {
                     className: f.personAvatar,
-                    children: y,
+                    children: _,
                 }),
                 (0, r.jsx)("div", {
                     className: f.guildAvatar,

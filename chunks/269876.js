@@ -14,20 +14,20 @@ var r = n(951288),
     h = n(131951),
     m = n(65154),
     g = n(388032),
-    E = n(192294),
-    b = n(89079),
-    y = n(149715),
-    O = n(197571);
+    E = n(558254),
+    b = n(43404),
+    y = n(465106),
+    O = n(10198);
 let v = (0, p.hQ)();
 function I() {
     let [e, t] = i.useState(-100),
         [n, a] = i.useState(!1),
-        { threshold: I, autoThreshold: S } = (0, s.cj)([h.Z], () => ({
+        { threshold: I, autoThreshold: T } = (0, s.cj)([h.Z], () => ({
             threshold: h.Z.getModeOptions().threshold,
             autoThreshold: h.Z.getModeOptions().autoThreshold,
         })),
         {
-            inputMode: T,
+            inputMode: S,
             automaticVADSupported: A,
             isEnabled: C,
         } = (0, s.cj)([h.Z], () => ({
@@ -39,7 +39,7 @@ function I() {
         t(e), a((n & m.Dg.VOICE) === m.Dg.VOICE);
     }
     function R(e, t) {
-        _.Z.setMode(T, {
+        _.Z.setMode(S, {
             threshold: e,
             autoThreshold: t,
         });
@@ -60,7 +60,7 @@ function I() {
         children: (0, r.jsx)(f.iRW, {
             initialValue: I + 100,
             onValueRender: (e) => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-            onValueChange: (e) => R(-((100 - e) * 1), S),
+            onValueChange: (e) => R(-((100 - e) * 1), T),
             barStyles: { background: u.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: u.Z.unsafe_rawColors.YELLOW_300.css },
             "aria-labelledby": v,
@@ -77,7 +77,7 @@ function I() {
         }),
     });
     return (
-        S &&
+        T &&
             (P = (0, r.jsxs)("section", {
                 className: E.inputSensitivityToggle,
                 children: [
@@ -115,7 +115,7 @@ function I() {
                                     }),
                                     (0, r.jsx)(d.T2, {
                                         id: e,
-                                        checked: S,
+                                        checked: T,
                                         onChange: (e) => R(I, e),
                                     }),
                                 ],

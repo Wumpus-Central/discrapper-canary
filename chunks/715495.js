@@ -14,7 +14,7 @@ var r = n(951288),
     h = n(711325),
     m = n(852630),
     g = n(731994),
-    E = n(30827);
+    E = n(761804);
 function b(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ function I() {
             },
             [w],
         ),
-        M = (0, i.useCallback)((e) => {
+        k = (0, i.useCallback)((e) => {
             p((t) =>
                 null == t
                     ? null
@@ -113,7 +113,7 @@ function I() {
                       }),
             );
         }, []),
-        k = (0, i.useCallback)(
+        M = (0, i.useCallback)(
             (e) => {
                 x(e);
             },
@@ -185,7 +185,7 @@ function I() {
                                     (0, r.jsx)(h.Z, {
                                         selected: null == u || null == (e = u.palette) ? void 0 : e.name,
                                         onSelect: (e) => {
-                                            (null == u ? void 0 : u.src) != null && D(u.src, u.src, e), M(e);
+                                            (null == u ? void 0 : u.src) != null && D(u.src, u.src, e), k(e);
                                         },
                                     }),
                             ],
@@ -248,7 +248,7 @@ function I() {
                                             {
                                                 src: t,
                                                 onSetStatic: j,
-                                                removeAsset: k,
+                                                removeAsset: M,
                                             },
                                             t,
                                         );
@@ -257,7 +257,7 @@ function I() {
                                 (0, r.jsx)(A, {
                                     label: "gradient override",
                                     onChange: (e) =>
-                                        M({
+                                        k({
                                             name: f._j,
                                             darkBackground: e,
                                             lightBackground: e,

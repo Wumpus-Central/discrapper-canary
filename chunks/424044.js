@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    o = n(481060),
-    s = n(893776),
+    s = n(481060),
+    o = n(893776),
     a = n(232567),
     c = n(129293),
     u = n(388905),
@@ -14,17 +14,17 @@ var r = n(951288),
     g = n(314897),
     m = n(981631),
     _ = n(388032),
-    x = n(197571);
+    x = n(10198);
 l.ZP.initialize();
-let v = (e) => {
+let E = (e) => {
     let { location: t } = e,
         n = (0, l.e7)([g.default], () => g.default.isAuthenticated()),
-        v = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        E = (0, f.oK)("RSL - Landing Page"),
-        [b, j] = i.useState(!1),
+        E = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        v = (0, f.oK)("RSL - Landing Page"),
+        [j, b] = i.useState(!1),
         [I, N] = i.useState(_.intl.string(_.t["9exy+f"])),
-        [y, O] = i.useState(!0),
-        S = (e) => {
+        [O, S] = i.useState(!0),
+        y = (e) => {
             switch (e) {
                 case m.evJ.INVALID_FORM_BODY:
                 case m.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,39 +46,39 @@ let v = (e) => {
     return (
         i.useEffect(() => {
             n
-                ? (O(!0),
+                ? (S(!0),
                   a
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => O(!1))
-                      .catch(() => O(!1)))
-                : O(!1);
+                      .then(() => S(!1))
+                      .catch(() => S(!1)))
+                : S(!1);
         }, [n]),
         i.useEffect(() => {
-            v || E || s.Z.getExperiments();
-        }, [v, E]),
+            E || v || o.Z.getExperiments();
+        }, [E, v]),
         i.useEffect(() => {
             let e = async (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? N(_.intl.string(_.t.e6mZMj)) : S(null == (t = n.body) ? void 0 : t.code);
+                    null != n ? N(_.intl.string(_.t.e6mZMj)) : y(null == (t = n.body) ? void 0 : t.code);
                 } catch (e) {
-                    S(null == (n = e.body) ? void 0 : n.code);
+                    y(null == (n = e.body) ? void 0 : n.code);
                 } finally {
-                    j(!1);
+                    b(!1);
                 }
             };
-            j(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
+            b(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
         }, [t]),
-        E &&
-            !y &&
+        v &&
+            !O &&
             (0, r.jsxs)(u.ZP, {
                 children: [
                     (0, r.jsx)(u.Dx, {
                         className: x.marginBottom8,
                         children: I,
                     }),
-                    b && (0, r.jsx)(o.$jN, {}),
+                    j && (0, r.jsx)(s.$jN, {}),
                 ],
             })
     );

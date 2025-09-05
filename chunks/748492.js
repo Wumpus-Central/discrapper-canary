@@ -1,8 +1,8 @@
 n.d(t, {
-    Ds: () => k,
+    Ds: () => M,
     YB: () => j,
     of: () => U,
-    q5: () => M,
+    q5: () => k,
 });
 var r = n(951288);
 n(647438);
@@ -34,8 +34,8 @@ var i = n(120356),
     R = n(981631),
     P = n(231338),
     w = n(388032),
-    D = n(702952),
-    x = n(186880);
+    D = n(44149),
+    x = n(533362);
 function L(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(y.Z, {
@@ -56,23 +56,23 @@ function j(e) {
             onJumpToChannel: w,
             idle: L,
             selectedParticipant: j,
-            embeddedActivity: M,
+            embeddedActivity: k,
         } = e,
-        k = (0, c.bp)() === R.IlC.POPOUT,
+        M = (0, c.bp)() === R.IlC.POPOUT,
         U = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
         G = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
         B = !1 === (null == (t = null == G ? void 0 : G.disabled) || t),
         Z = (0, d.Z)([s])[0],
-        V = (0, m.Z)(a),
-        { parentAnalyticsLocation: F } = (0, u.ZP)(),
+        F = (0, m.Z)(a),
+        { parentAnalyticsLocation: V } = (0, u.ZP)(),
         H = (e) => {
-            (0, _.v)(F, _.d.CAMERA, e), l.Z.setVideoEnabled(e);
+            (0, _.v)(V, _.d.CAMERA, e), l.Z.setVideoEnabled(e);
         },
         Y = () => {
             B ? H(!0) : (0, g.Z)();
         },
         W = () => {
-            (0, _.v)(F, _.d.POPOUT, !0), null != a && (0, N.Z)({ onConfirm: () => h.hP(a) });
+            (0, _.v)(V, _.d.POPOUT, !0), null != a && (0, N.Z)({ onConfirm: () => h.hP(a) });
         };
     return (0, r.jsxs)("div", {
         className: x.videoControls,
@@ -105,7 +105,7 @@ function j(e) {
                                 className: D.leftPipIcon,
                                 enabled: U,
                                 cameraUnavailable: !B,
-                                hasPermission: V,
+                                hasPermission: F,
                                 onChange: H,
                                 onCameraUnavailable: Y,
                             }),
@@ -128,7 +128,7 @@ function j(e) {
                         basis: "50%",
                         align: p.Z.Align.CENTER,
                         children: [
-                            k || (0, A.R)()
+                            M || (0, A.R)()
                                 ? null
                                 : (0, r.jsx)(v.Z, {
                                       className: D.rightPipIcon,
@@ -138,7 +138,7 @@ function j(e) {
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
-                                location: M.location,
+                                location: k.location,
                                 className: D.rightPipIcon,
                             }),
                         ],
@@ -148,7 +148,7 @@ function j(e) {
         ],
     });
 }
-function M(e) {
+function k(e) {
     var t, n;
     let {
             channel: i,
@@ -202,7 +202,7 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function M(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
         ? (0, r.jsx)(I.Z, {

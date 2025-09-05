@@ -25,8 +25,8 @@ var l = t(951288),
     N = t(981631),
     O = t(176505),
     P = t(388032),
-    w = t(31499),
-    E = t(97009);
+    w = t(462188),
+    E = t(161655);
 function S(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -52,7 +52,7 @@ function S(e) {
     }
     return e;
 }
-function A(e, n) {
+function k(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function A(e, n) {
         e
     );
 }
-let k = v.q + 300 + 64,
+let A = v.q + 300 + 64,
     M = r.memo(function (e) {
         let { guild: n } = e;
         return (0, l.jsxs)(h.Z, {
@@ -103,14 +103,14 @@ function L(e) {
         q = !G && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
         z = (0, d.Z)("(max-width: 1300px)"),
         F = h - N.PrS - D,
-        V = (H && F < k) || z || q;
+        V = (H && F < A) || z || q;
     return (r.useEffect(() => {
         if (W === b.P) (0, x.cP)(a.id);
         else if (null != W) {
             var e, n, t, l, r;
             p.default.track(
                 N.rMx.SERVER_GUIDE_VIEWED,
-                A(S({}, (0, u.hH)(a.id)), {
+                k(S({}, (0, u.hH)(a.id)), {
                     num_member_actions: null != (t = null == (e = W.newMemberActions) ? void 0 : e.length) ? t : 0,
                     num_member_actions_completed: Object.keys(null != (l = j.Z.getCompletedActions(a.id)) ? l : {})
                         .length,
@@ -141,7 +141,7 @@ function L(e) {
                           (0, l.jsx)(M, { guild: a }),
                           (0, l.jsx)(
                               c.yWw,
-                              A(S({}, B), {
+                              k(S({}, B), {
                                   children: (0, l.jsxs)("div", {
                                       className: i()(w.homeContainer, { [w.homeContainerCollapsed]: V }),
                                       children: [

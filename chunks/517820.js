@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(981631),
     x = n(674563),
     L = n(388032),
-    j = n(682392);
-function M(e, t, n) {
+    j = n(78642);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -108,12 +108,12 @@ function Z(e) {
                 compact: n,
             });
         case u.p.INTERACTION_BLOCKED:
-            return (0, r.jsx)(F, { compact: n });
-        default:
             return (0, r.jsx)(V, { compact: n });
+        default:
+            return (0, r.jsx)(F, { compact: n });
     }
 }
-function V(e) {
+function F(e) {
     let { compact: t } = e;
     return (0, r.jsx)(K, {
         compact: t,
@@ -137,7 +137,7 @@ function V(e) {
         }),
     });
 }
-function F(e) {
+function V(e) {
     let { compact: t } = e;
     return (0, r.jsx)(K, {
         compact: t,
@@ -217,7 +217,7 @@ function H(e) {
                                         (0, r.jsxs)(
                                             p.P3F,
                                             G(
-                                                k(
+                                                M(
                                                     {
                                                         innerRef: h,
                                                         className: j.alertsEnabledSubHeaderAvatarUsername,
@@ -228,7 +228,7 @@ function H(e) {
                                                     children: [
                                                         (0, r.jsx)(
                                                             "div",
-                                                            G(k({}, f), {
+                                                            G(M({}, f), {
                                                                 children: (0, r.jsx)(p.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(261616),
     l = n(722770),
     c = n(481060),
     u = n(393238),
@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(46140),
     T = n(231338),
     S = n(388032),
-    A = n(310696);
+    A = n(74576);
 function C(e, t, n) {
     return (
         t in e
@@ -87,20 +87,20 @@ let w = (0, s.animated)(c.CJ0),
                 isAnimating: x,
                 isExpanded: L,
                 contentPosition: j,
-                toggleExpanded: M,
-                sourceQuestContent: k,
+                toggleExpanded: k,
+                sourceQuestContent: M,
             } = e,
             { ref: U, height: G } = (0, u.ZP)(),
             [B, Z] = i.useState(null),
-            [V, F] = i.useState(null),
+            [F, V] = i.useState(null),
             H = (0, f.Z)((e) => {
                 let t = e.target;
-                Z(t.offsetWidth), F(t.scrollWidth);
+                Z(t.offsetWidth), V(t.scrollWidth);
             }),
             Y = (0, d.y)(H),
             W = (0, v.uq)(C),
             K = C === h.jn.QUESTS_EMBED,
-            z = (0, p.t5)(a, I.dr.QUESTS_CARD, C, k),
+            z = (0, p.t5)(a, I.dr.QUESTS_CARD, C, M),
             q = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
             X = (0, _.O5)(),
             Q = (0, p.B6)(a.config.expiresAt),
@@ -109,16 +109,16 @@ let w = (0, s.animated)(c.CJ0),
             ee = (e) => {
                 e.stopPropagation(),
                     e.currentTarget.blur(),
-                    M(),
+                    k(),
                     X({
                         questId: a.id,
                         questContent: C,
                         questContentCTA: L ? _.jZ.COLLAPSE : _.jZ.EXPAND,
                         questContentPosition: j,
-                        sourceQuestContent: k,
+                        sourceQuestContent: M,
                     });
             },
-            et = () => null != B && null != V && B < V,
+            et = () => null != B && null != F && B < F,
             en = (0, r.jsx)(g.ZP, {
                 className: A.partnerBranding,
                 logotypeClassName: $ ? A.partnerBrandingLogotypes : void 0,
@@ -183,7 +183,7 @@ let w = (0, s.animated)(c.CJ0),
                                                         questContent: C,
                                                         className: A.headerCollapsedRewardTile,
                                                         location: I.dr.QUESTS_CARD,
-                                                        sourceQuestContent: k,
+                                                        sourceQuestContent: M,
                                                     }),
                                                 }),
                                                 (0, r.jsxs)("div", {
@@ -297,7 +297,7 @@ let w = (0, s.animated)(c.CJ0),
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: W,
                                     showShareLink: !n && K,
-                                    sourceQuestContent: k,
+                                    sourceQuestContent: M,
                                     children: (e) =>
                                         (0, r.jsx)(s.animated.div, {
                                             style: {

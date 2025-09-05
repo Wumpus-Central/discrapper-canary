@@ -7,7 +7,7 @@ var r = n(951288),
     s = n(481060),
     c = n(346486),
     u = n(433355),
-    d = n(944701);
+    d = n(98484);
 let p = function (e) {
     let {
             message: t,
@@ -18,15 +18,15 @@ let p = function (e) {
             buttonSubmitting: m,
             onButtonClick: g,
             imageSrc: b,
-            animationSrc: _,
-            secondaryButtonText: y,
+            animationSrc: y,
+            secondaryButtonText: _,
             onSecondaryButtonClick: C,
-            children: x,
-            useReducedMotion: v = !1,
+            children: v,
+            useReducedMotion: x = !1,
         } = e,
         O = (0, a.e7)([u.ZP], () => u.ZP.getState().isMembersOpen);
     if (l.tq && O) return null;
-    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(x) });
+    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(v) });
     let j = null;
     return (
         null != b
@@ -35,10 +35,10 @@ let p = function (e) {
                   src: b,
                   className: d.image,
               }))
-            : null != _ &&
+            : null != y &&
               (j = (0, r.jsx)(s.Fmz, {
-                  importData: _,
-                  shouldAnimate: !v,
+                  importData: y,
+                  shouldAnimate: !x,
                   className: d.animation,
               })),
         (0, r.jsxs)("div", {
@@ -69,7 +69,7 @@ let p = function (e) {
                 (0, r.jsxs)("div", {
                     className: d.buttonContainer,
                     children: [
-                        null != y &&
+                        null != _ &&
                             (0, r.jsx)(o.zx, {
                                 className: d.button,
                                 size: o.zx.Sizes.SMALL,
@@ -77,7 +77,7 @@ let p = function (e) {
                                 look: o.zx.Looks.LINK,
                                 color: o.zx.Colors.PRIMARY,
                                 submitting: m,
-                                children: y,
+                                children: _,
                             }),
                         null != h &&
                             (0, r.jsx)(o.zx, {
