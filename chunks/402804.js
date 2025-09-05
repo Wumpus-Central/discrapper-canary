@@ -21,20 +21,13 @@ function c(e, t, n) {
 class u extends r.Z {
     handleConnectionOpen() {
         let e = i.default.getCurrentUser();
-        null != e &&
-            l.x("user_opened_desktop_app", {
-                user_id: e.id,
-                age_minutes: s.default.age(e.id) / o.Z.Millis.MINUTE,
-            });
+        null != e && l.x("user_opened_desktop_app", { age_minutes: s.default.age(e.id) / o.Z.Millis.MINUTE });
     }
     handleWindowChange() {
         let e = i.default.getCurrentUser();
         null != e &&
             a.Z.isAppFocused() &&
-            l.x("user_focussed_desktop_app", {
-                user_id: e.id,
-                age_minutes: s.default.age(e.id) / o.Z.Millis.MINUTE,
-            });
+            l.x("user_focussed_desktop_app", { age_minutes: s.default.age(e.id) / o.Z.Millis.MINUTE });
     }
     constructor(...e) {
         super(...e),
