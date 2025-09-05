@@ -1,16 +1,16 @@
 n.d(t, {
     DH: () => Z,
     Ks: () => B,
-    Ws: () => F,
+    Ws: () => V,
     g2: () => M,
     hf: () => k,
     k3: () => U,
-    qN: () => V,
+    qN: () => F,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(202841),
+    a = n(261616),
     o = n(442837),
     s = n(481060),
     l = n(100527),
@@ -403,7 +403,7 @@ function Z() {
             : null;
     });
 }
-function V(e) {
+function F(e) {
     var t;
     let { location: n, quest: r } = e,
         i = (0, I.Z)({ location: n }),
@@ -458,9 +458,9 @@ function V(e) {
                   reason: "quest_not_eligible_for_quests",
               };
 }
-function F(e) {
+function V(e) {
     let { location: t } = e,
-        { isQuestBarVisible: n } = V({
+        { isQuestBarVisible: n } = F({
             location: t,
             quest: Z(),
         }),
@@ -468,5 +468,8 @@ function F(e) {
             lastFetchedCurrentQuests: b.Z.lastFetchedCurrentQuests,
             lastFetchedQuestToDeliver: b.Z.lastFetchedQuestToDeliver,
         }));
-    return 0 !== r && 0 !== i && !n;
+    return {
+        isQuestBarEmpty: !n,
+        hasLoadedQuestBar: 0 !== r && 0 !== i,
+    };
 }

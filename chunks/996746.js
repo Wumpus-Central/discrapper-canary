@@ -36,6 +36,7 @@ function c(e) {
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,
         isQuestBarEmpty: !0,
+        hasLoadedQuestBar: !0,
         isListenAlongVisible: !1,
         isDisplayNameStylesEnabled: c,
     });

@@ -460,7 +460,7 @@ class tT extends i.PureComponent {
             markRecurringAvatarDcAsDismissed: a,
         } = this.props;
         if (null == t) return null;
-        if (!(null != this.avatarWithPopoutRef.current && this.props.isQuestBarEmpty))
+        if (!(null != this.avatarWithPopoutRef.current && this.props.isQuestBarEmpty && this.props.hasLoadedQuestBar))
             return this.renderAvatarWithPopout({ focusSectionProps: e });
         if (i === d.z.GUILD_TAG_AVAILABLE_COACHMARK) {
             var o;
@@ -920,8 +920,8 @@ function tC() {
         F = K.J.useExperiment({ location: "Account" }).enabled,
         { analyticsLocations: V } = (0, R.ZP)(N.Z.ACCOUNT),
         H = (0, ei.K)({ user: t }),
-        Y = (0, ed.Ws)({ location: te.dr.CONFLICT_CHECKS }),
-        W = (0, u.e7)([ef.Z, eV.default, ek.Z], () => {
+        { isQuestBarEmpty: Y, hasLoadedQuestBar: W } = (0, ed.Ws)({ location: te.dr.CONFLICT_CHECKS }),
+        q = (0, u.e7)([ef.Z, eV.default, ek.Z], () => {
             let e,
                 t = ef.Z.getSyncingWith(),
                 n = ef.Z.getActivity(),
@@ -938,19 +938,19 @@ function tC() {
             }
             return r.length > 1;
         }),
-        q = (0, e_.k)({ location: "AccountConnected" }),
-        X = {
+        X = (0, e_.k)({ location: "AccountConnected" }),
+        Q = {
             avatar: [],
             settings: [],
         };
     !P &&
-        (M && X.settings.push(d.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
-        U && X.avatar.push(d.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP),
-        F && X.avatar.push(d.z.DISPLAY_NAME_STYLES_COACHMARK),
-        q && X.avatar.push(d.z.WIDGETS_RTC_UPSELL_COACHMARK));
-    let Q = (0, z.Y)({ location: "AccountConnected" }),
-        { shouldShowTooltip: $, dismissTooltip: et } = tA(tt.h7.AUDIO_INPUT),
-        { shouldShowTooltip: en, dismissTooltip: er } = tA(tt.h7.AUDIO_OUTPUT);
+        (M && Q.settings.push(d.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
+        U && Q.avatar.push(d.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP),
+        F && Q.avatar.push(d.z.DISPLAY_NAME_STYLES_COACHMARK),
+        X && Q.avatar.push(d.z.WIDGETS_RTC_UPSELL_COACHMARK));
+    let $ = (0, z.Y)({ location: "AccountConnected" }),
+        { shouldShowTooltip: et, dismissTooltip: en } = tA(tt.h7.AUDIO_INPUT),
+        { shouldShowTooltip: er, dismissTooltip: ea } = tA(tt.h7.AUDIO_OUTPUT);
     return (0, r.jsx)(R.Gt, {
         value: V,
         children: (0, r.jsx)(tT, {
@@ -958,7 +958,7 @@ function tC() {
             activities: i,
             applicationStream: s,
             voiceChannel: p,
-            dismissibleContents: X,
+            dismissibleContents: Q,
             visibleRecurringAvatarDc: B,
             markRecurringAvatarDcAsDismissed: Z,
             userTag: f,
@@ -981,12 +981,13 @@ function tC() {
             nameplate: H,
             selectedGuildId: k,
             isQuestBarEmpty: Y,
-            isListenAlongVisible: W,
-            isDisplayNameStylesEnabled: Q,
-            shouldShowInputDeviceChangedTooltip: $,
-            shouldShowOutputDeviceChangedTooltip: en,
-            dismissInputDeviceChangedTooltip: et,
-            dismissOutputDeviceChangedTooltip: er,
+            hasLoadedQuestBar: W,
+            isListenAlongVisible: q,
+            isDisplayNameStylesEnabled: $,
+            shouldShowInputDeviceChangedTooltip: et,
+            shouldShowOutputDeviceChangedTooltip: er,
+            dismissInputDeviceChangedTooltip: en,
+            dismissOutputDeviceChangedTooltip: ea,
         }),
     });
 }

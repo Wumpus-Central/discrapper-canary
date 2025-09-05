@@ -1,4 +1,4 @@
-n.d(t, { j: () => j }), n(388685);
+n.d(t, { j: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -9,30 +9,30 @@ var r = n(951288),
     u = n(7093),
     d = n(667105),
     p = n(695346),
-    h = n(819640),
-    f = n(885110),
+    f = n(819640),
+    h = n(885110),
     g = n(626135),
     m = n(316496),
     b = n(55185),
     O = n(981631),
     y = n(921944),
     _ = n(46140);
-let j = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: j } = e,
-        [v, x] = (0, i.useState)(!1),
+let v = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
+        [j, x] = (0, i.useState)(!1),
         C = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)("SharingPrivacyPopout"),
-                i = (0, d.Ws)({ location: _.dr.CONFLICT_CHECKS }),
-                o = p.G6.useSetting(),
-                a = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(O.S9g.USER_SETTINGS)),
-                s = (0, l.e7)([f.Z], () => f.Z.getStatus()),
-                { isOpen: c } = (0, u.Z)();
-            if ((i || (!i && t)) && !a && !c && !__OVERLAY__ && n) {
-                if (r && o && s !== O.Skl.INVISIBLE) return t ? b.N.Activity : null;
-                if (!o && s === O.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
-                if (!o) return t ? b.N.Activity : b.N.ActivityNux;
-                if (s === O.Skl.INVISIBLE) return t ? b.N.Status : b.N.StatusNux;
+                { isQuestBarEmpty: i, hasLoadedQuestBar: o } = (0, d.Ws)({ location: _.dr.CONFLICT_CHECKS }),
+                a = p.G6.useSetting(),
+                s = (0, l.e7)([f.Z], () => f.Z.getLayers().includes(O.S9g.USER_SETTINGS)),
+                c = (0, l.e7)([h.Z], () => h.Z.getStatus()),
+                { isOpen: g } = (0, u.Z)();
+            if (((i && o) || t) && !s && !g && !__OVERLAY__ && n) {
+                if (r && a && c !== O.Skl.INVISIBLE) return t ? b.N.Activity : null;
+                if (!a && c === O.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
+                if (!a) return t ? b.N.Activity : b.N.ActivityNux;
+                if (c === O.Skl.INVISIBLE) return t ? b.N.Status : b.N.StatusNux;
             }
             return null;
         })({ isForceShowSharingPopout: n }),
@@ -40,14 +40,14 @@ let j = (e) => {
     return ((0, i.useEffect)(() => {
         n && g.default.track(O.rMx.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]),
-    null != C || v)
+    null != C || j)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          (0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: y.L.USER_DISMISS }), j(!1), x(!1);
+                          (0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: y.L.USER_DISMISS }), v(!1), x(!1);
                       };
                       return (0, r.jsx)(a.yRy, {
                           targetElementRef: E,
