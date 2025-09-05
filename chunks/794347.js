@@ -30,41 +30,42 @@ function g(e) {
             gradientStart: a = s.Z.unsafe_rawColors.YELLOW_260.css,
             gradientEnd: l = s.Z.unsafe_rawColors.GREEN_360.css,
             className: d,
-            children: _,
+            notchClassName: _,
+            children: p,
         } = e,
-        { ref: p, width: g } = (0, c.ZP)(),
-        E = i.useMemo(() => (null != g ? m(g) : 0), [g]),
-        b = i.useMemo(() => {
-            let e = Math.abs(m((E * (100 - Math.max(0, Math.min(100, n)))) / 100) - E);
+        { ref: g, width: E } = (0, c.ZP)(),
+        b = i.useMemo(() => (null != E ? m(E) : 0), [E]),
+        y = i.useMemo(() => {
+            let e = Math.abs(m((b * (100 - Math.max(0, Math.min(100, n)))) / 100) - b);
             return { transform: "translateX(".concat(e, "px)") };
-        }, [n, E]),
-        y = i.useMemo(
+        }, [n, b]),
+        O = i.useMemo(
             () => ({
-                width: "".concat(E, "px"),
+                width: "".concat(b, "px"),
                 background: n <= 0 ? "none" : "linear-gradient(to right, ".concat(a, ", ").concat(l, ")"),
             }),
-            [l, a, n, E],
+            [l, a, n, b],
         );
     return (0, r.jsxs)("div", {
         className: f.wrapper,
-        ref: p,
+        ref: g,
         children: [
             (0, r.jsxs)("div", {
                 className: o()(f.container, d),
-                style: y,
+                style: O,
                 children: [
                     (0, r.jsx)("div", {
                         className: f.progress,
-                        style: b,
+                        style: y,
                     }),
-                    0 !== E &&
+                    0 !== b &&
                         (0, r.jsx)(u.Z, {
-                            width: E,
-                            className: o()(f.notches, h[t]),
+                            width: b,
+                            className: o()(f.notches, h[t], _),
                         }),
                 ],
             }),
-            _,
+            p,
         ],
     });
 }

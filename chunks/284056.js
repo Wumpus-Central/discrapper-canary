@@ -204,6 +204,7 @@ class C extends i.PureComponent {
                         (0, r.jsx)(m.Z, {
                             progress: E || h ? b + 100 : 0,
                             notchBackground: i,
+                            notchClassName: this.props.notchClassName,
                             children: this.renderCaption(),
                         }),
                     ],

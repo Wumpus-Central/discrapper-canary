@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(990547),
-    o = n(442837),
-    a = n(46973),
+    a = n(442837),
+    o = n(46973),
     s = n(481060),
     l = n(846027),
     c = n(284056),
@@ -37,8 +37,8 @@ function C(e) {
             renderOutputVolume: x = !1,
             renderInputDevices: L = !1,
             renderInputVolume: j = !1,
-            maybeRenderInputMeter: M = !1,
-            renderSettingsButton: k = !1,
+            maybeRenderInputMeter: k = !1,
+            renderSettingsButton: M = !1,
         } = e,
         { analyticsLocations: U } = (0, d.ZP)();
     (0, f.Z)({
@@ -57,22 +57,22 @@ function C(e) {
             analyticsLocations: U,
             asSubmenu: !0,
         }),
-        F = (0, o.e7)([g.Z], () => g.Z.getActiveInputProfile()),
+        F = (0, a.e7)([g.Z], () => g.Z.getActiveInputProfile()),
         V = (0, h.Z)(U),
         H = (0, p.Z)(U),
         Y = (0, m.Z)(U),
-        W = a.Yn.DEFAULT,
+        W = o.Yn.DEFAULT,
         K = g.Z.isSelfDeaf(W),
-        z = (0, o.e7)([g.Z], () => g.Z.getMode()),
+        z = (0, a.e7)([g.Z], () => g.Z.getMode()),
         q = z === v.pM4.VOICE_ACTIVITY ? v.pM4.PUSH_TO_TALK : v.pM4.VOICE_ACTIVITY,
-        X = (0, o.e7)([g.Z, b.ZP], () => {
+        X = (0, a.e7)([g.Z, b.ZP], () => {
             var e;
             let t = (null == (e = g.Z.getModeOptions().shortcut) ? void 0 : e.length) > 0,
                 n = null != b.ZP.getKeybindForAction(v.kg4.PUSH_TO_TALK, !1, !0),
                 r = null != b.ZP.getKeybindForAction(v.kg4.PUSH_TO_TALK_PRIORITY, !1, !0);
             return t || n || r;
         }),
-        Q = (0, o.e7)([E.Z], () => null != E.Z.getChannelId());
+        Q = (0, a.e7)([E.Z], () => null != E.Z.getChannelId());
     return (0, r.jsx)(u.Z, {
         object: v.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(s.v2r, {
@@ -90,7 +90,7 @@ function C(e) {
                 (0, r.jsxs)(s.kSQ, {
                     children: [
                         j && H,
-                        M &&
+                        k &&
                             Q &&
                             (0, r.jsx)(s.II_, {
                                 id: "input-device-meter",
@@ -100,6 +100,7 @@ function C(e) {
                                         location: { section: v.jXE.CONTEXT_MENU },
                                         meterOnly: !0,
                                         containerClassName: A.customMenuItem,
+                                        notchClassName: A.customNotches,
                                     }),
                             }),
                         x && Y,
@@ -131,7 +132,7 @@ function C(e) {
                                 },
                                 "self-deafen",
                             ),
-                        k && G,
+                        M && G,
                     ],
                 }),
             ],
