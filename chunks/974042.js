@@ -49,7 +49,7 @@ function S(e) {
     }
     return e;
 }
-function N(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ function N(e, t) {
         e
     );
 }
-function T(e) {
+function N(e) {
     let t = y.default.getUser(e);
     return {
         user: t,
@@ -161,7 +161,7 @@ class A {
                 return (
                     r === v.OGo.FRIEND && e.add(n),
                     new x(
-                        N(
+                        T(
                             S(
                                 {
                                     key: n,
@@ -169,7 +169,7 @@ class A {
                                     userId: n,
                                     nickname: E.Z.getNickname(n),
                                 },
-                                T(n),
+                                N(n),
                                 j(n),
                                 P(n),
                             ),
@@ -196,7 +196,7 @@ class A {
                     (a === v.OGo.FRIEND && i.add(r),
                     n.push(
                         new x(
-                            N(
+                            T(
                                 S(
                                     {
                                         key: "".concat(r, "-").concat(l),
@@ -205,7 +205,7 @@ class A {
                                         applicationId: l,
                                         nickname: E.Z.getNickname(r),
                                     },
-                                    T(r),
+                                    N(r),
                                     j(r),
                                     P(r),
                                 ),
@@ -229,7 +229,7 @@ class A {
                             type: 99,
                             nickname: e.name,
                         },
-                        T(e.key),
+                        N(e.key),
                         j(e.key),
                         P(e.key),
                     ),
@@ -318,7 +318,7 @@ function U() {
     let e = R.getRelationshipCounts();
     0 === e[v.OGo.FRIEND]
         ? (L = 0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND)
-        : ((L = v.pJs.ONLINE), h.o.getConfig({ location: "friendstore" }).landOnProfilePage && (L = v.pJs.YOU));
+        : ((L = v.pJs.ONLINE), h.o.getConfig({ location: "friendstore" }).removeFriends && (L = v.pJs.YOU));
 }
 function G() {
     R = D ? new A() : R.reset();
@@ -335,7 +335,7 @@ class V extends (r = a.ZP.Store) {
             this.syncWith([f.Z], G),
             this.syncWith([p.Z], G),
             this.syncWith([g.Z], G),
-            this.syncWith([y.default], B(T)),
+            this.syncWith([y.default], B(N)),
             this.syncWith([O.Z, m.Z], B(j)),
             U();
     }
