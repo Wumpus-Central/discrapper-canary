@@ -1,6 +1,6 @@
 n.d(t, {
-    V: () => G,
-    Z: () => Z,
+    V: () => Z,
+    Z: () => V,
 }),
     n(415506),
     n(358797),
@@ -10,29 +10,31 @@ var r = n(990547),
     a = n(544891),
     o = n(570140),
     s = n(34756),
-    l = n(622822),
-    c = n(408987),
-    u = n(336197),
-    d = n(280837),
-    f = n(895886),
-    _ = n(35225),
-    p = n(703656),
-    h = n(601964),
-    m = n(314897),
-    g = n(664915),
-    E = n(984933),
-    b = n(430824),
-    y = n(944486),
-    O = n(914010),
-    v = n(594174),
-    I = n(626135),
-    T = n(700785),
-    S = n(74538),
-    A = n(573261),
-    C = n(668781),
-    N = n(981631),
-    R = n(388032);
-function P(e, t, n) {
+    l = n(758119),
+    c = n(622822),
+    u = n(408987),
+    d = n(336197),
+    f = n(280837),
+    _ = n(895886),
+    p = n(35225),
+    h = n(703656),
+    m = n(601964),
+    g = n(314897),
+    E = n(664915),
+    b = n(984933),
+    y = n(430824),
+    O = n(944486),
+    v = n(914010),
+    I = n(594174),
+    T = n(626135),
+    S = n(700785),
+    A = n(74538),
+    C = n(573261),
+    N = n(668781),
+    R = n(981631),
+    P = n(723359),
+    w = n(388032);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +47,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,12 +58,12 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -73,22 +75,22 @@ function D(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function L(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = j(e, t);
+        i = M(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -96,7 +98,7 @@ function L(e, t) {
     }
     return i;
 }
-function j(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,65 +107,66 @@ function j(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let M = (e) => {
-        C.Z.show({
-            title: R.intl.string(R.t.cTaRxM),
-            body: R.intl.formatToPlainString(R.t["VSd+Ag"], { quantity: e }),
+let U = (e) => {
+        N.Z.show({
+            title: w.intl.string(w.t.cTaRxM),
+            body: w.intl.formatToPlainString(w.t["VSd+Ag"], { quantity: e }),
         });
     },
-    k = (e) => {
+    G = (e) => {
         o.Z.dispatch({
             type: "GUILD_DELETE",
             guild: { id: e },
         });
     },
-    U = () => {
-        C.Z.show({
-            title: R.intl.string(R.t.ZZlox8),
-            body: R.intl.string(R.t.ZUEGFh),
+    B = () => {
+        N.Z.show({
+            title: w.intl.string(w.t.ZZlox8),
+            body: w.intl.string(w.t.ZUEGFh),
         });
     };
-function G(e) {
+function Z(e) {
     return new Promise((t) =>
-        b.Z.addConditionalChangeListener(() => {
-            let n = b.Z.getGuild(e);
+        y.Z.addConditionalChangeListener(() => {
+            let n = y.Z.getGuild(e);
             return null == n || (t(n), !1);
         }),
     );
 }
-function B(e, t) {
-    return null != t ? t : (0, _.V)(e);
+function F(e, t) {
+    return null != t ? t : (0, p.V)(e);
 }
-let Z = {
+let V = {
     joinGuild: async function (e) {
-        var t, r, i, s, l;
-        let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { source: u, loadId: d, lurkLocation: _ } = c,
-            h = null != (t = c.lurker) && t,
-            g = v.default.getCurrentUser();
-        if (null != (r = null == g ? void 0 : g.hasFlag(N.xW$.QUARANTINED)) && r)
-            return (0, f.default)(), new Promise((e, t) => t(Error()));
+        var t, r, i, s, u, d;
+        let f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { source: p, loadId: m, lurkLocation: E } = f,
+            b = null != (t = f.lurker) && t,
+            T = I.default.getCurrentUser();
+        if (null != (r = null == T ? void 0 : T.hasFlag(R.xW$.QUARANTINED)) && r)
+            return (0, _.default)(), new Promise((e, t) => t(Error()));
+        if ((0, c.hO)(e)) return (0, l.mN)(P.L0.JOIN_LARGE_GUILD_UNDERAGE), new Promise((e, t) => t(Error()));
         o.Z.wait(() =>
             o.Z.dispatch({
                 type: "GUILD_JOIN",
                 guildId: e,
-                lurker: h,
-                source: u,
-                loadId: d,
+                lurker: b,
+                source: p,
+                loadId: m,
             }),
         );
         try {
-            let t = O.Z.getGuildId(),
-                r = e === t && null != b.Z.getGuild(e) ? y.Z.getChannelId(e) : null,
+            let t = v.Z.getGuildId(),
+                r = e === t && null != y.Z.getGuild(e) ? O.Z.getChannelId(e) : null,
                 i = await a.tn.put({
-                    url: N.ANM.GUILD_JOIN(e),
+                    url: R.ANM.GUILD_JOIN(e),
                     query: {
-                        lurker: h,
-                        session_id: h ? m.default.getSessionId() : null,
-                        recommendation_load_id: d,
-                        location: h && null != _ ? _ : null,
+                        lurker: b,
+                        session_id: b ? g.default.getSessionId() : null,
+                        recommendation_load_id: m,
+                        location: b && null != E ? E : null,
                     },
-                    context: { source: u },
+                    context: { source: p },
                     oldFormErrors: !0,
                     body: {},
                     rejectWithError: !1,
@@ -175,9 +178,9 @@ let Z = {
                         guildId: e,
                         request: i.body.join_request,
                     }),
-                null == b.Z.getGuild(e) && i.body.show_verification_form)
+                null == y.Z.getGuild(e) && i.body.show_verification_form)
             )
-                return (0, p.uL)(N.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
+                return (0, h.uL)(R.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
             if (
                 (null != i.body.welcome_screen &&
                     o.Z.dispatch({
@@ -191,7 +194,7 @@ let Z = {
                         guildId: i.body.id,
                         count: i.body.approximate_presence_count,
                     }),
-                !h)
+                !b)
             ) {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 17181));
                 await t({
@@ -201,30 +204,34 @@ let Z = {
             }
             return i;
         } catch (t) {
-            if ((null == (i = t.body) ? void 0 : i.code) === N.evJ.TOO_MANY_USER_GUILDS) {
-                let e = v.default.getCurrentUser();
-                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? M(N.tHP) : M(N.DZw);
+            if (
+                ((null == (i = t.body) ? void 0 : i.code) === R.evJ.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
+                    (0, l.mN)(P.L0.JOIN_LARGE_GUILD_UNDERAGE),
+                (null == (s = t.body) ? void 0 : s.code) === R.evJ.TOO_MANY_USER_GUILDS)
+            ) {
+                let e = I.default.getCurrentUser();
+                A.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? U(R.tHP) : U(R.DZw);
             }
             throw (
-                ((null == (s = t.body) ? void 0 : s.code) === N.evJ.GUILD_AT_CAPACITY && U(),
-                h && (null == (l = t.body) ? void 0 : l.code) === N.evJ.UNKNOWN_GUILD && k(e),
+                ((null == (u = t.body) ? void 0 : u.code) === R.evJ.GUILD_AT_CAPACITY && B(),
+                b && (null == (d = t.body) ? void 0 : d.code) === R.evJ.UNKNOWN_GUILD && G(e),
                 t)
             );
         }
     },
-    waitForGuild: G,
+    waitForGuild: Z,
     async transitionToGuildSync(e, t, n, r) {
-        let i = B((await G(e)).id, n),
+        let i = F((await Z(e)).id, n),
             a = t;
         (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) &&
             null == t.welcomeModalChannelId &&
-            (a = x(w({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
-            (0, u.Z)(N.Z5c.CHANNEL(e, i, r), a),
+            (a = j(x({}, t), { welcomeModalChannelId: null != i ? i : void 0 })),
+            (0, d.Z)(R.Z5c.CHANNEL(e, i, r), a),
             await new Promise(setImmediate);
     },
-    deleteGuild: k,
+    deleteGuild: G,
     selectGuild(e) {
-        (0, d.a)(e);
+        (0, f.a)(e);
     },
     createGuild(e) {
         o.Z.dispatch({
@@ -234,21 +241,21 @@ let Z = {
     },
     setServerMute: (e, t, n) =>
         a.tn.patch({
-            url: N.ANM.GUILD_MEMBER(e, t),
+            url: R.ANM.GUILD_MEMBER(e, t),
             body: { mute: n },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
     setServerDeaf: (e, t, n) =>
         a.tn.patch({
-            url: N.ANM.GUILD_MEMBER(e, t),
+            url: R.ANM.GUILD_MEMBER(e, t),
             body: { deaf: n },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
     setChannel(e, t, n) {
         a.tn.patch({
-            url: N.ANM.GUILD_MEMBER(e, t),
+            url: R.ANM.GUILD_MEMBER(e, t),
             body: { channel_id: n },
             oldFormErrors: !0,
             rejectWithError: !0,
@@ -256,7 +263,7 @@ let Z = {
     },
     setMemberFlags(e, t, n) {
         a.tn.patch({
-            url: N.ANM.GUILD_MEMBER(e, t),
+            url: R.ANM.GUILD_MEMBER(e, t),
             body: { flags: n },
             oldFormErrors: !0,
             rejectWithError: !0,
@@ -265,7 +272,7 @@ let Z = {
     kickUser: (e, t, n, r) =>
         a.tn
             .del({
-                url: N.ANM.GUILD_MEMBER(e, t),
+                url: R.ANM.GUILD_MEMBER(e, t),
                 query: {
                     reason: n,
                     moderator_report_id: r,
@@ -290,8 +297,8 @@ let Z = {
             location: s,
             moderatorReportId: l,
         } = e;
-        return A.Z.patch({
-            url: N.ANM.GUILD_MEMBER(t, n),
+        return C.Z.patch({
+            url: R.ANM.GUILD_MEMBER(t, n),
             reason: o,
             body: {
                 communication_disabled_until: i,
@@ -314,7 +321,7 @@ let Z = {
     },
     banUser: (e, t, n, r, i) =>
         a.tn.put({
-            url: N.ANM.GUILD_BAN(e, t),
+            url: R.ANM.GUILD_BAN(e, t),
             reason: r,
             body: {
                 delete_message_seconds: n,
@@ -325,13 +332,13 @@ let Z = {
         }),
     unbanUser: (e, t) =>
         a.tn.del({
-            url: N.ANM.GUILD_BAN(e, t),
+            url: R.ANM.GUILD_BAN(e, t),
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
     banMultipleUsers: (e, t, n, r) =>
         a.tn.post({
-            url: N.ANM.BULK_GUILD_BAN(e),
+            url: R.ANM.BULK_GUILD_BAN(e),
             body: {
                 user_ids: t,
                 delete_message_seconds: n,
@@ -342,7 +349,7 @@ let Z = {
         }),
     async createRole(e, t, n, r) {
         let l = {
-            name: null != t && "" !== t ? t : R.intl.string(R.t.QBMHvL),
+            name: null != t && "" !== t ? t : w.intl.string(w.t.QBMHvL),
             color: null != n ? n : 0,
             colors:
                 null != r
@@ -352,11 +359,11 @@ let Z = {
                           secondary_color: null,
                           tertiary_color: null,
                       },
-            permissions: T.Hn,
+            permissions: S.Hn,
         };
         try {
             let t = await a.tn.post({
-                    url: N.ANM.GUILD_ROLES(e),
+                    url: R.ANM.GUILD_ROLES(e),
                     oldFormErrors: !0,
                     body: l,
                     rejectWithError: !1,
@@ -369,7 +376,7 @@ let Z = {
                     roleId: t.body.id,
                     role: n,
                 }),
-                c.Z.checkGuildTemplateDirty(e),
+                u.Z.checkGuildTemplateDirty(e),
                 n
             );
         } catch (e) {
@@ -378,22 +385,22 @@ let Z = {
     },
     async updateRole(e, t, n) {
         let { icon: r, unicodeEmoji: i } = n,
-            o = L(n, ["icon", "unicodeEmoji"]),
+            o = k(n, ["icon", "unicodeEmoji"]),
             s = null === r || (null == r ? void 0 : r.startsWith("data:")) ? r : void 0,
             l = await a.tn.patch({
-                url: N.ANM.GUILD_ROLE(e, t),
-                body: x(w({}, o), {
+                url: R.ANM.GUILD_ROLE(e, t),
+                body: j(x({}, o), {
                     icon: s,
                     unicode_emoji: i,
                 }),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             });
-        return c.Z.checkGuildTemplateDirty(e), l;
+        return u.Z.checkGuildTemplateDirty(e), l;
     },
     updateRolePermissions: (e, t, n) =>
         a.tn.patch({
-            url: N.ANM.GUILD_ROLE(e, t),
+            url: R.ANM.GUILD_ROLE(e, t),
             body: { permissions: n },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -401,31 +408,31 @@ let Z = {
     deleteRole(e, t) {
         a.tn
             .del({
-                url: N.ANM.GUILD_ROLE(e, t),
+                url: R.ANM.GUILD_ROLE(e, t),
                 oldFormErrors: !0,
                 rejectWithError: !0,
             })
             .then(() => {
-                c.Z.checkGuildTemplateDirty(e);
+                u.Z.checkGuildTemplateDirty(e);
             });
     },
     async batchChannelUpdate(e, t) {
         let n = await a.tn.patch({
-            url: N.ANM.GUILD_CHANNELS(e),
+            url: R.ANM.GUILD_CHANNELS(e),
             body: t,
             oldFormErrors: !0,
             rejectWithError: !1,
         });
-        return c.Z.checkGuildTemplateDirty(e), n;
+        return u.Z.checkGuildTemplateDirty(e), n;
     },
     async batchRoleUpdate(e, t) {
         let n = await a.tn.patch({
-            url: N.ANM.GUILD_ROLES(e),
+            url: R.ANM.GUILD_ROLES(e),
             body: t,
             oldFormErrors: !0,
             rejectWithError: !1,
         });
-        return c.Z.checkGuildTemplateDirty(e), n;
+        return u.Z.checkGuildTemplateDirty(e), n;
     },
     requestMembers(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
@@ -480,7 +487,7 @@ let Z = {
         });
     },
     createGuildFolderLocal(e, t) {
-        I.default.track(N.rMx.GUILD_FOLDER_CREATED),
+        T.default.track(R.rMx.GUILD_FOLDER_CREATED),
             o.Z.dispatch({
                 type: "GUILD_FOLDER_CREATE_LOCAL",
                 sourceIds: e,
@@ -502,8 +509,8 @@ let Z = {
         });
     },
     toggleGuildFolderExpand(e) {
-        let t = g.Z.isFolderExpanded(e);
-        I.default.track(N.rMx.GUILD_FOLDER_CLICKED, {
+        let t = E.Z.isFolderExpanded(e);
+        T.default.track(R.rMx.GUILD_FOLDER_CLICKED, {
             source: "sidebar",
             action: t ? "collapsed" : "expanded",
         }),
@@ -529,19 +536,20 @@ let Z = {
         });
     },
     nsfwReturnToSafety(e) {
-        let t = b.Z.getGuild(e),
-            n = (0, h.Y2)(t);
-        if (null == e || n) return void (0, p.uL)(N.Z5c.FRIENDS);
-        let r = E.ZP.getDefaultChannel(e);
-        null == r || (0, l.aC)(r) ? (0, p.uL)(N.Z5c.FRIENDS) : (0, p.uL)(N.Z5c.CHANNEL(e, r.id));
+        let t = y.Z.getGuild(e),
+            n = (0, m.Y2)(t),
+            r = (0, c.hO)(e);
+        if (null == e || n || r) return void (0, h.uL)(R.Z5c.FRIENDS);
+        let i = b.ZP.getDefaultChannel(e);
+        null == i || (0, c.Y3)(i) ? (0, h.uL)(R.Z5c.FRIENDS) : (0, h.uL)(R.Z5c.CHANNEL(e, i.id));
     },
     escapeToDefaultChannel(e) {
-        let t = E.ZP.getDefaultChannel(e);
-        null != t ? (0, p.uL)(N.Z5c.CHANNEL(e, t.id)) : (0, p.uL)(N.Z5c.FRIENDS);
+        let t = b.ZP.getDefaultChannel(e);
+        null != t ? (0, h.uL)(R.Z5c.CHANNEL(e, t.id)) : (0, h.uL)(R.Z5c.FRIENDS);
     },
     async fetchApplications(e, t) {
         let n = {
-            url: N.ANM.GUILD_APPLICATIONS(e),
+            url: R.ANM.GUILD_APPLICATIONS(e),
             oldFormErrors: !0,
             rejectWithError: !1,
         };
@@ -560,7 +568,7 @@ let Z = {
         null != n && (r.after = n),
             await a.tn
                 .get({
-                    url: N.ANM.GUILD_BANS(e),
+                    url: R.ANM.GUILD_BANS(e),
                     oldFormErrors: !0,
                     query: r,
                     rejectWithError: !1,
@@ -580,7 +588,7 @@ let Z = {
             null != t && t.trim().length > 0 && (i.query = t),
             await a.tn
                 .get({
-                    url: N.ANM.GUILD_BANS_SEARCH(e),
+                    url: R.ANM.GUILD_BANS_SEARCH(e),
                     oldFormErrors: !0,
                     query: i,
                     rejectWithError: !1,
@@ -597,7 +605,7 @@ let Z = {
     async fetchGuildBans(e) {
         await a.tn
             .get({
-                url: N.ANM.GUILD_BANS(e),
+                url: R.ANM.GUILD_BANS(e),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -611,7 +619,7 @@ let Z = {
     fetchGuildRoleConnectionsEligibility: (e, t) =>
         a.tn
             .get({
-                url: N.ANM.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
+                url: R.ANM.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
@@ -628,14 +636,14 @@ let Z = {
             }),
     async assignGuildRoleConnection(e, t) {
         await a.tn.post({
-            url: N.ANM.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
+            url: R.ANM.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
             oldFormErrors: !0,
             rejectWithError: !1,
         });
     },
     async unassignGuildRoleConnection(e, t) {
         await a.tn.post({
-            url: N.ANM.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
+            url: R.ANM.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -643,7 +651,7 @@ let Z = {
     getGuildRoleConnectionsConfigurations: async (e) =>
         (
             await a.tn.get({
-                url: N.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
+                url: R.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })

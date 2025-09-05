@@ -1,16 +1,17 @@
 n.d(t, {
-    AY: () => R,
-    F5: () => N,
-    Jm: () => y,
-    L0: () => I,
+    AY: () => P,
+    F5: () => R,
+    Jm: () => O,
+    L0: () => T,
     L5: () => b,
-    M$: () => O,
-    WD: () => C,
-    g0: () => v,
-    kJ: () => S,
-    l6: () => A,
-    pY: () => T,
+    M$: () => v,
+    WD: () => N,
+    g0: () => I,
+    kJ: () => A,
+    l6: () => C,
+    pY: () => S,
     sf: () => E,
+    yo: () => y,
 }),
     n(35282),
     n(388685);
@@ -38,20 +39,24 @@ function b() {
     return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
 }
 function y() {
-    let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
+    let e = f.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
 }
 function O() {
+    let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
+    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
+}
+function v() {
     let e = f.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }
-var v = (function (e) {
+var I = (function (e) {
         return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
     })({}),
-    I = (function (e) {
+    T = (function (e) {
         return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
-function T(e, t) {
+function S(e, t) {
     let n = d.Z.getMessage(e, t);
     if (
         null == n ||
@@ -64,21 +69,21 @@ function T(e, t) {
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return null == r ? void 0 : r.rawValue.split(",").includes("retry");
 }
-function S() {
+function A() {
     let e = f.default.getCurrentUser();
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function A() {
+function C() {
     let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function C(e) {
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [o, s] = r.useState(!1),
@@ -120,7 +125,7 @@ function C(e) {
         ),
     };
 }
-function N(e) {
+function R(e) {
     let t = (0, i.e7)([f.default], () => {
             var e;
             return null == (e = f.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus;
@@ -134,6 +139,6 @@ function N(e) {
         (l || c) && e();
     }, [e, l, c]);
 }
-function R(e) {
+function P(e) {
     return null != e && h.dx.has(e);
 }
