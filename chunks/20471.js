@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => h,
+    F: () => f,
     j: () => p,
 }),
     n(997841),
@@ -32,7 +32,7 @@ function p(e) {
     }
     return null;
 }
-function h(e) {
+function f(e) {
     let t = r.useMemo(() => p(e), [e]),
         n = (0, s.t)(null == t ? void 0 : t.id, "AUTHORIZE_REQUEST"),
         { hasAlreadyLinked: o, authorizedAppsFetchState: u } = (0, i.cj)([c.Z], () => ({
@@ -40,8 +40,8 @@ function h(e) {
             authorizedAppsFetchState: c.Z.getFetchState(),
         }));
     r.useEffect(() => {
-        u === c.M.NOT_FETCHED && l.Z.fetch();
-    }, [u]);
+        u === c.M.NOT_FETCHED && n && l.Z.fetch();
+    }, [u, n]);
     let d = r.useCallback(() => {
         null != t && n && a.Z.dispatchToSubscriptions("AUTHORIZE_REQUEST", (e) => e.socket.application.id === t.id, {});
     }, [n, t]);
