@@ -47,6 +47,9 @@ class s {
     isAnimated() {
         return null != this.img.tabs.acTL;
     }
+    isPng8() {
+        return 3 === this.img.ctype && this.img.depth <= 8;
+    }
     async hasSrgbIccProfile() {
         let e = await o.load(this.originalBuffer, {
             async: !0,
