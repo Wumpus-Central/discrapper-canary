@@ -49,7 +49,7 @@ let a = (0, r.B)({
     o = (0, r.B)({
         kind: "user",
         id: "2025-09_invite_refresh_entrypoints",
-        label: "Invites Refresh",
+        label: "Invites Refresh Entrypoints Only",
         defaultConfig: {
             isVoiceChannelEntrypointEnabled: !1,
             isInCallEntrypointEnabled: !1,
