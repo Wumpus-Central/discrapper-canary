@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(150039),
     h = n(993413),
     m = n(388032),
-    g = n(642588);
+    g = n(785735);
 function E(e) {
     let {
             user: t,
@@ -98,7 +98,9 @@ let b = "PALUE000000001",
                                 skuID: b,
                             });
                     },
-                    buttonCTA: "Upload Override",
+                    size: "sm",
+                    variant: "primary",
+                    text: m.intl.string(m.t.a9F1Qk),
                 }),
             ],
         });

@@ -1,23 +1,23 @@
-o.d(e, { default: () => C }), o(388685);
-var t = o(951288),
-    a = o(647438),
-    l = o(481060),
-    i = o(211266),
-    d = o(313201),
-    r = o(907040),
-    s = o(906411),
-    c = o(345861),
-    u = o(984933),
-    p = o(768581),
-    m = o(956664),
-    g = o(185923),
-    x = o(388032),
-    I = o(759415),
-    f = o(84717);
+a.d(e, { default: () => C }), a(388685);
+var t = a(951288),
+    o = a(647438),
+    l = a(481060),
+    i = a(211266),
+    d = a(313201),
+    r = a(907040),
+    s = a(906411),
+    c = a(345861),
+    u = a(984933),
+    p = a(768581),
+    m = a(956664),
+    x = a(185923),
+    g = a(388032),
+    I = a(647898),
+    f = a(84717);
 function h() {
     return [
         {
-            name: x.intl.string(x.t.Sp2NFx),
+            name: g.intl.string(g.t.Sp2NFx),
             extensions: ["jpg", "jpeg", "png"],
         },
     ];
@@ -29,24 +29,24 @@ async function j(n) {
             size: 48,
             forcePNG: !0,
         }),
-        o = await fetch(e),
-        t = await o.blob();
+        a = await fetch(e),
+        t = await a.blob();
     return await (0, m.fD)(t);
 }
 let C = function (n) {
-    let { guildId: e, onUploadIcon: o, onSelectUnicodeEmoji: p, onClose: m, transitionState: C } = n,
-        b = (0, d.Dt)(),
-        v = u.ZP.getDefaultChannel(e),
-        [N, _] = a.useState("tab-id-role-icon-file-upload"),
-        [y, k] = a.useState(!1),
+    let { guildId: e, onUploadIcon: a, onSelectUnicodeEmoji: p, onClose: m, transitionState: C } = n,
+        v = (0, d.Dt)(),
+        b = u.ZP.getDefaultChannel(e),
+        [N, y] = o.useState("tab-id-role-icon-file-upload"),
+        [_, k] = o.useState(!1),
         E = (0, i.Z)(h);
     return (
-        a.useEffect(() => {
+        o.useEffect(() => {
             k(!1);
         }, [N]),
         (0, t.jsx)(l.Y0X, {
             transitionState: C,
-            "aria-labelledby": b,
+            "aria-labelledby": v,
             size: l.CgR.MEDIUM,
             className: I.modalRoot,
             parentComponent: "CustomRoleIconUploadModal",
@@ -56,7 +56,7 @@ let C = function (n) {
                 children: [
                     (0, t.jsxs)(l.njP, {
                         selectedItem: N,
-                        onItemSelect: _,
+                        onItemSelect: y,
                         type: "top",
                         look: "grey",
                         "aria-label": "Expression Picker",
@@ -64,11 +64,11 @@ let C = function (n) {
                         children: [
                             (0, t.jsx)(l.njP.Item, {
                                 id: "tab-id-role-icon-file-upload",
-                                children: x.intl.string(x.t.royWSE),
+                                children: g.intl.string(g.t.royWSE),
                             }),
                             (0, t.jsx)(l.njP.Item, {
                                 id: "tab-id-role-icon-emoji",
-                                children: x.intl.string(x.t["/Ny2wc"]),
+                                children: g.intl.string(g.t["/Ny2wc"]),
                             }),
                         ],
                     }),
@@ -97,25 +97,27 @@ let C = function (n) {
                                       }),
                                       (0, t.jsx)("div", {
                                           className: I.uploadInfo,
-                                          children: x.intl.string(x.t["mz++Qk"]),
+                                          children: g.intl.string(g.t["mz++Qk"]),
                                       }),
                                       (0, t.jsx)(c.Z, {
-                                          buttonCTA: x.intl.string(x.t.sdCQY2),
                                           onChange: (n) => {
-                                              k(!1), o(n), m();
+                                              k(!1), a(n), m();
                                           },
                                           onFileSizeError: () => {
                                               k(!0);
                                           },
                                           maxFileSizeBytes: 256000,
                                           filters: E,
+                                          text: g.intl.string(g.t.sdCQY2),
+                                          size: "md",
+                                          variant: "primary",
                                       }),
-                                      y
+                                      _
                                           ? (0, t.jsx)(l.Text, {
                                                 className: I.uploadError,
                                                 color: "text-danger",
                                                 variant: "text-sm/normal",
-                                                children: x.intl.string(x.t.HFyKsb),
+                                                children: g.intl.string(g.t.HFyKsb),
                                             })
                                           : null,
                                   ],
@@ -129,19 +131,19 @@ let C = function (n) {
                               onSelectEmoji: async (n) => {
                                   let { emoji: e } = n;
                                   if ((null == e ? void 0 : e.id) != null)
-                                      (null == e ? void 0 : e.type) === s.B.GUILD && o(await j(e));
+                                      (null == e ? void 0 : e.type) === s.B.GUILD && a(await j(e));
                                   else if ((null == e ? void 0 : e.surrogates) != null) {
-                                      var t, a;
+                                      var t, o;
                                       p(
-                                          null != (a = null == (t = e.defaultDiversityChild) ? void 0 : t.surrogates)
-                                              ? a
+                                          null != (o = null == (t = e.defaultDiversityChild) ? void 0 : t.surrogates)
+                                              ? o
                                               : e.surrogates,
                                       );
                                   }
                                   m();
                               },
-                              pickerIntention: g.Hz.COMMUNITY_CONTENT,
-                              channel: v,
+                              pickerIntention: x.Hz.COMMUNITY_CONTENT,
+                              channel: b,
                           })
                         : null,
                 ],

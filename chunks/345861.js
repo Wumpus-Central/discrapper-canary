@@ -1,12 +1,10 @@
-n.d(t, { Z: () => h });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(813197);
-function c(e, t, n) {
+n.d(t, { Z: () => p });
+var r = n(951288),
+    i = n(647438),
+    a = n(481060),
+    o = n(813197),
+    s = n(444333);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +17,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +28,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,22 +45,22 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +68,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,61 +77,37 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
-    var {
-            buttonCTA: t,
-            onChange: n,
-            onFileSizeError: i,
-            "aria-label": c,
-            multiple: d = !1,
-            disabled: p = !1,
-            submitting: h = !1,
-            maxFileSizeBytes: m,
-            filters: g,
-            className: E,
-        } = e,
-        b = _(e, [
-            "buttonCTA",
-            "onChange",
-            "onFileSizeError",
-            "aria-label",
-            "multiple",
-            "disabled",
-            "submitting",
-            "maxFileSizeBytes",
-            "filters",
-            "className",
-        ]);
-    return (0, r.jsx)(s.tEY, {
-        within: !0,
-        children: (0, r.jsxs)("div", {
-            className: a()(
-                (0, o.nY)(
-                    f(u({}, b), {
-                        submitting: h,
-                        disabled: p,
-                    }),
-                ),
-                E,
-            ),
-            style: { width: "max-content" },
-            "aria-disabled": p,
-            children: [
-                (0, r.jsx)("span", {
+function p(e) {
+    var { onChange: t, onFileSizeError: n, multiple: l = !1, disabled: u = !1, maxFileSizeBytes: _, filters: p } = e,
+        h = f(e, ["onChange", "onFileSizeError", "multiple", "disabled", "maxFileSizeBytes", "filters"]);
+    let m = i.useRef(null),
+        g = () => {
+            var e;
+            null == (e = m.current) || e.activateUploadDialogue();
+        };
+    return (0, r.jsxs)("div", {
+        children: [
+            (0, r.jsx)("div", {
+                className: s.imageInputContainer,
+                children: (0, r.jsx)(o.ZP, {
+                    ref: m,
+                    onChange: t,
+                    onFileSizeError: n,
+                    multiple: l,
+                    maxFileSizeBytes: _,
+                    filters: p,
+                    disabled: u,
+                    tabIndex: -1,
                     "aria-hidden": !0,
-                    children: t,
                 }),
-                (0, r.jsx)(l.ZP, {
-                    tabIndex: 0,
-                    onChange: n,
-                    onFileSizeError: i,
-                    multiple: d,
-                    maxFileSizeBytes: m,
-                    filters: g,
-                    "aria-label": null != c ? c : t,
-                    disabled: p,
+            }),
+            (0, r.jsx)(
+                a.zxk,
+                d(c({}, h), {
+                    disabled: u,
+                    onClick: g,
                 }),
-            ],
-        }),
+            ),
+        ],
     });
 }

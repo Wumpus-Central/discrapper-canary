@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(211266),
     x = n(313201),
     j = n(345861),
-    _ = n(208567),
-    v = n(73346),
+    v = n(208567),
+    _ = n(73346),
     O = n(624138),
     y = n(584825),
     C = n(723047),
@@ -27,7 +27,7 @@ var r = n(951288),
     S = n(293810),
     T = n(333866),
     P = n(388032),
-    w = n(858760);
+    w = n(947091);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -137,7 +137,7 @@ function k(e) {
             var e;
             return (null == s || null == (e = s.cover_image_asset) ? void 0 : e.application_id) == null
                 ? null
-                : (0, v._W)(s.cover_image_asset.application_id, s.cover_image_asset, D);
+                : (0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, D);
         }, [s]),
         [m, h] = i.useState(a),
         [b, O] = i.useState(null != (t = null == s ? void 0 : s.description) ? t : ""),
@@ -166,7 +166,7 @@ function k(e) {
     i.useEffect(() => {
         var e;
         (null == s || null == (e = s.cover_image_asset) ? void 0 : e.application_id) != null &&
-            k((0, v._W)(s.cover_image_asset.application_id, s.cover_image_asset, D));
+            k((0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, D));
     }, [null == s ? void 0 : s.cover_image_asset]);
     let ee = (0, C.mY)(),
         et = i.useMemo(
@@ -266,7 +266,7 @@ function k(e) {
                         disabled: ee,
                         children: P.intl.string(P.t.i2rCwc),
                     }),
-                    (0, r.jsx)(_.Z, {
+                    (0, r.jsx)(v.Z, {
                         image: A,
                         hint: W,
                         showIcon: !0,
@@ -283,11 +283,11 @@ function k(e) {
                     (0, r.jsx)(p.LZC, { size: 16 }),
                     (0, r.jsx)(j.Z, {
                         onChange: Q,
-                        buttonCTA: W,
                         "aria-label": V,
                         disabled: ee,
-                        look: g.zx.Looks.OUTLINED,
-                        color: g.zx.Colors.PRIMARY,
+                        text: W,
+                        variant: "secondary",
+                        size: "md",
                     }),
                 ],
             }),
