@@ -116,12 +116,9 @@ function v(e) {
             }
             if (!R.isClaimed())
                 return void (0, a.ZDy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("58067"),
-                        n.e("88470"),
-                        n.e("76235"),
-                        n.e("69417"),
-                    ]).then(n.bind(n, 918995));
+                    let { default: e } = await Promise.all([n.e("88470"), n.e("77927"), n.e("69417")]).then(
+                        n.bind(n, 918995),
+                    );
                     return (t) => {
                         var { onClose: n } = t,
                             i = y(t, ["onClose"]);
