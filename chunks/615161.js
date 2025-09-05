@@ -1,6 +1,6 @@
 n.d(t, {
     E_: () => S,
-    Ti: () => C,
+    Ti: () => y,
     Yw: () => b,
 }),
     n(415506),
@@ -145,25 +145,26 @@ function b(e) {
         }),
     });
 }
-function C(e, t, n) {
+function y(e, t, n) {
     var r, l;
     let _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "source_select",
-        { preset: v, resolution: b, fps: C, soundshareEnabled: S } = (0, s.cj)([d.Z], () => d.Z.getState()),
-        y = (0, s.e7)([u.Z], () => u.Z.getInputDeviceId()),
+        { preset: v, resolution: b, fps: y, soundshareEnabled: S } = (0, s.cj)([d.Z], () => d.Z.getState()),
+        C = (0, s.e7)([u.Z], () => u.Z.getInputDeviceId()),
         O = null != (r = c.I0.useSetting()) && r,
         w = null != (l = c.eo.useSetting()) && l;
-    (0, f.Z)(m.tI.PRESET_CUSTOM, b, C, t, n) || ((b = m.LY.RESOLUTION_720), (C = m.ws.FPS_30));
+    v in m.tI || (v = m.tI.PRESET_VIDEO),
+        (0, f.Z)(m.tI.PRESET_CUSTOM, b, y, t, n) || ((b = m.LY.RESOLUTION_720), (y = m.ws.FPS_30));
     let [Z, I] = i.useReducer(
         j,
         x(p({}, g), {
             muteStreamAudio: !S,
             preset: v,
             resolution: b,
-            fps: C,
+            fps: y,
             hidePreview: O,
             notifyFriends: w,
             selectedSource: e,
-            audioSourceId: y,
+            audioSourceId: C,
             modalStep: _,
         }),
     );
