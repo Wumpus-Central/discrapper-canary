@@ -1,7 +1,7 @@
 n.d(t, {
     $y: () => O,
-    Kk: () => f,
-    NB: () => S,
+    Kk: () => S,
+    NB: () => f,
     en: () => j,
     fi: () => p,
     n_: () => x,
@@ -21,8 +21,8 @@ var l = n(544891),
     u = n(208665),
     m = n(981631),
     h = n(290511),
-    I = n(388032);
-function g(e) {
+    g = n(388032);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -65,13 +65,13 @@ function N(e, t) {
         e
     );
 }
-function S() {
+function f() {
     i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
 }
-function f(e, t, n) {
+function S(e, t, n) {
     E(
         e,
-        u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? g({}, e, n) : e)),
+        u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? I({}, e, n) : e)),
     );
 }
 function p(e, t) {
@@ -97,14 +97,15 @@ function E(e, t) {
     }
 }
 async function T(e, t) {
-    if (!u.Z.hasChanges()) return;
-    let n = u.Z.editedOnboardingPrompts;
+    let n = u.Z.getChangedPrompts();
+    if (0 === n.length) return;
     null != t && t.ignoreDefaultPrompt && 1 === n.length && (0, h.RF)(n[0]) && (n = []);
-    let l = n.map((t) => {
-            let n = t.options.map((t) => {
+    let l = u.Z.editedOnboardingPrompts.map((t) => {
+            if (!n.some((e) => e.id === t.id)) return t;
+            let l = t.options.map((t) => {
                 let n = null == t.roleIds ? t.roleIds : t.roleIds.filter((t) => null != c.Z.getRole(e.id, t)),
                     l = null == t.channelIds ? t.channelIds : t.channelIds.filter((e) => null != o.Z.getChannel(e));
-                return N(g({}, t), {
+                return N(I({}, t), {
                     roleIds: n,
                     channelIds: l,
                     emoji: (function (e) {
@@ -118,35 +119,35 @@ async function T(e, t) {
                     })(t),
                 });
             });
-            return N(g({}, t), {
-                options: n,
-                type: n.length >= h.fY ? h.FN.DROPDOWN : h.FN.MULTIPLE_CHOICE,
+            return N(I({}, t), {
+                options: l,
+                type: l.length >= h.fY ? h.FN.DROPDOWN : h.FN.MULTIPLE_CHOICE,
             });
         }),
         m = l.filter((e) => e.inOnboarding),
-        S = l.filter((e) => !0 !== e.inOnboarding),
-        f = l.map((t) => _(e, l, t));
-    if (f.filter(d.lm).length > 0)
+        f = l.filter((e) => !0 !== e.inOnboarding),
+        S = l.map((t) => (n.some((e) => e.id === t.id) ? _(e, l, t) : null));
+    if (S.filter(d.lm).length > 0)
         throw (
             (i.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
-                errors: f,
+                errors: S,
             }),
             Error("failed to locally validate prompts"))
         );
     if (m.length > h.b3)
         throw (
             (r.Z.show({
-                title: I.intl.string(I.t.iLdiqa),
-                body: I.intl.formatToPlainString(I.t["cTb/rq"], { numQuestions: h.b3 }),
+                title: g.intl.string(g.t.iLdiqa),
+                body: g.intl.formatToPlainString(g.t["cTb/rq"], { numQuestions: h.b3 }),
             }),
             i.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
-                errors: f,
+                errors: S,
             }),
             Error("too many prompts in onboarding"))
         );
-    let p = [...m, ...S];
+    let p = [...m, ...f];
     i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" });
     try {
         await x(e.id, { prompts: p.map(h.dr) }),
@@ -160,7 +161,7 @@ async function T(e, t) {
         let { fieldName: e, error: t } = null != (E = new s.Hx(n).getAnyErrorMessageAndField()) ? E : {};
         throw (
             (r.Z.show({
-                title: I.intl.string(I.t.iLdiqa),
+                title: g.intl.string(g.t.iLdiqa),
                 body: [e, t].filter(d.lm).join(": "),
             }),
             i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
@@ -180,7 +181,7 @@ async function O(e, t) {
         var n;
         let { fieldName: e, error: t } = null != (n = new s.Hx(l).getAnyErrorMessageAndField()) ? n : {};
         r.Z.show({
-            title: I.intl.string(I.t.iLdiqa),
+            title: g.intl.string(g.t.iLdiqa),
             body: [e, t].filter(d.lm).join(": "),
         });
     }
@@ -196,11 +197,11 @@ function _(e, t, n) {
     let l = { optionErrors: [] },
         i = !1;
     return (
-        n.title.length <= 0 && ((l.title = I.intl.string(I.t.h8Hg1d)), (i = !0)),
-        n.options.length <= 0 && ((l.options = I.intl.string(I.t["64tF+f"])), (i = !0)),
+        n.title.length <= 0 && ((l.title = g.intl.string(g.t.h8Hg1d)), (i = !0)),
+        n.options.length <= 0 && ((l.options = g.intl.string(g.t["64tF+f"])), (i = !0)),
         n.inOnboarding &&
             t.filter((e) => e.inOnboarding).length > h.b3 &&
-            ((l.config = I.intl.formatToPlainString(I.t["cTb/rq"], { numQuestions: h.b3 })), (i = !0)),
+            ((l.config = g.intl.formatToPlainString(g.t["cTb/rq"], { numQuestions: h.b3 })), (i = !0)),
         (l.optionErrors = n.options.map((l) => j(e, t, n, l))),
         (i = i || l.optionErrors.some((e) => null != e)) ? l : null
     );
@@ -212,10 +213,10 @@ function j(e, t, n, l) {
         for (let l of t)
             if (l.id !== n.id) {
                 for (let t of l.options)
-                    if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return I.intl.string(I.t.rKxyvb);
+                    if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return g.intl.string(g.t.rKxyvb);
             }
     }
     let a = (null != (r = l.roleIds) ? r : []).filter((t) => null != c.Z.getRole(e.id, t)),
         d = (null != (s = l.channelIds) ? s : []).filter((e) => null != o.Z.getChannel(e));
-    return 0 === a.length && 0 === d.length ? I.intl.string(I.t.F6SUWF) : null;
+    return 0 === a.length && 0 === d.length ? g.intl.string(g.t.F6SUWF) : null;
 }
