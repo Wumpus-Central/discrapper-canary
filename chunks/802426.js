@@ -33,7 +33,8 @@ function d(e) {
         })(e, ["modalConfig", "markAsDismissed"]);
     let b = o.useCallback(
         (e) => {
-            d.onPrimaryClick(e), p(i.L.TAKE_ACTION);
+            var t;
+            null == (t = d.onPrimaryClick) || t.call(d, e), p(i.L.TAKE_ACTION);
         },
         [d, p],
     );
@@ -122,15 +123,16 @@ function d(e) {
                                                         onClick: u.onClose,
                                                     }),
                                                 }),
-                                                (0, r.jsx)("div", {
-                                                    "data-button-hoisted-classname-wrapper": !0,
-                                                    className: l.button,
-                                                    children: (0, r.jsx)(a.zxk, {
-                                                        variant: "primary",
-                                                        text: d.primaryButtonText,
-                                                        onClick: b,
+                                                null != d.primaryButtonText &&
+                                                    (0, r.jsx)("div", {
+                                                        "data-button-hoisted-classname-wrapper": !0,
+                                                        className: l.button,
+                                                        children: (0, r.jsx)(a.zxk, {
+                                                            variant: "primary",
+                                                            text: d.primaryButtonText,
+                                                            onClick: b,
+                                                        }),
                                                     }),
-                                                }),
                                             ],
                                         }),
                                     ],
