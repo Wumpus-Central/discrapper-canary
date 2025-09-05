@@ -1,7 +1,7 @@
 n.d(t, {
     CJ: () => U,
-    Ee: () => k,
-    Il: () => M,
+    Ee: () => M,
+    Il: () => k,
     h4: () => G,
 }),
     n(388685),
@@ -235,7 +235,7 @@ function L(e, t, n) {
     );
 }
 let j = i.createContext(null);
-function M(e) {
+function k(e) {
     let {
             children: t,
             message: n,
@@ -251,6 +251,7 @@ function M(e) {
                     ? {
                           useComponentState: x.bind(null, n, u),
                           channelId: n.channel_id,
+                          containerId: n.id,
                           message: n,
                           validators: s,
                           getParents: (e) => (0, v.cd)(n.components, e),
@@ -259,6 +260,7 @@ function M(e) {
                       {
                           useComponentState: L.bind(null, a),
                           channelId: a.channelId,
+                          containerId: a.customId,
                           modal: a,
                           validators: s,
                           validationErrors: l,
@@ -272,7 +274,7 @@ function M(e) {
         children: t,
     });
 }
-function k(e, t) {
+function M(e, t) {
     return i.useContext(j).useComponentState(e, t);
 }
 function U() {
