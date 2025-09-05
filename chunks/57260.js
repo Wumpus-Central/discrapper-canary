@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(261616),
     l = n(481060),
     c = n(393238),
     u = n(484201);
@@ -45,9 +45,13 @@ function f(e) {
                         className: o()(u.header, { [u.toggled]: b }),
                         children: t({ onClick: S }),
                     }),
-                    (0, r.jsx)("div", {
-                        ref: y,
-                        children: a,
+                    (0, r.jsx)(l.Rny, {
+                        enabled: !b,
+                        children: (0, r.jsx)("div", {
+                            ref: y,
+                            "aria-hidden": !b,
+                            children: a,
+                        }),
                     }),
                 ],
             }),
