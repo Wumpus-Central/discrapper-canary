@@ -3,49 +3,49 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    s = n(261616),
-    a = n(481060),
+    a = n(261616),
+    s = n(481060),
     u = n(59662),
     c = n(854014),
     d = n(388032),
     g = n(643153);
 function f(e) {
-    var t, n, l, o, s;
+    var t, n, l, o, a;
     let { node: g, visibleContent: f } = e,
-        { currentPanel: v, navigateTo: O, setShowNavigationMobile: E } = (0, u.t)(),
-        { useTitle: b, trailing: N, stronglyDiscouragedCustomTab: p } = g,
-        T = b(),
-        _ = null != (o = null == N || null == (t = N.useDecoration) ? void 0 : t.call(N)) ? o : null,
-        m = null != (s = null == N || null == (n = N.useBadgeCount) ? void 0 : n.call(N)) ? s : null,
-        x = i.useMemo(() => g.layout.flatMap((e) => e.layout), [g]),
-        j = null != f && (null == N || null == (l = N.newIndicatorDismissibleContentTypes) ? void 0 : l.includes(f)),
-        I = (null == v ? void 0 : v.key) === g.key,
-        C = () => {
-            O(g), E(!1);
+        { currentPanel: O, navigateTo: E, setShowNavigationMobile: v } = (0, u.t)(),
+        { useTitle: b, trailing: T, stronglyDiscouragedCustomTab: N } = g,
+        p = b(),
+        I = null != (o = null == T || null == (t = T.useDecoration) ? void 0 : t.call(T)) ? o : null,
+        C = null != (a = null == T || null == (n = T.useBadgeCount) ? void 0 : n.call(T)) ? a : null,
+        j = i.useMemo(() => g.layout.flatMap((e) => e.layout), [g]),
+        m = null != f && (null == T || null == (l = T.newIndicatorDismissibleContentTypes) ? void 0 : l.includes(f)),
+        _ = (null == O ? void 0 : O.key) === g.key,
+        S = () => {
+            E(g.key), v(!1);
         };
-    return null != p
-        ? (0, r.jsx)(p, {
-              active: I,
-              onClick: C,
+    return null != N
+        ? (0, r.jsx)(N, {
+              active: _,
+              onClick: S,
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(c.Z, {
                       icon: g.icon,
-                      title: T,
-                      active: I,
+                      title: p,
+                      active: _,
                       trailing: (0, r.jsx)(() => {
-                          if (j) {
+                          if (m) {
                               var e;
-                              return null != (e = null == N ? void 0 : N.newIndicatorBadgeOverride)
+                              return null != (e = null == T ? void 0 : T.newIndicatorBadgeOverride)
                                   ? e
-                                  : (0, r.jsx)(a.IGR, { text: d.intl.string(d.t.y2b7CA) });
+                                  : (0, r.jsx)(s.IGR, { text: d.intl.string(d.t.y2b7CA) });
                           }
-                          return null != m && m > 0 ? (0, r.jsx)(a.mAB, { count: m }) : null != _ ? _ : null;
+                          return null != C && C > 0 ? (0, r.jsx)(s.mAB, { count: C }) : null != I ? I : null;
                       }, {}),
-                      onClick: C,
+                      onClick: S,
                   }),
-                  I && x.length > 1 && (0, r.jsx)(y, { categories: x }),
+                  _ && j.length > 1 && (0, r.jsx)(y, { categories: j }),
               ],
           });
 }
@@ -53,7 +53,7 @@ function y(e) {
     let { categories: t } = e,
         [n, l] = i.useState(0),
         { setShowNavigationMobile: c, navigateTo: d } = (0, u.t)(),
-        [f, y] = (0, a.q_F)(() => ({
+        [f, y] = (0, s.q_F)(() => ({
             y: 0,
             config: {
                 mass: 0.1,
@@ -61,7 +61,7 @@ function y(e) {
                 tension: 300,
             },
         })),
-        v = i.useMemo(
+        O = i.useMemo(
             () =>
                 t
                     .map((e) => {
@@ -69,7 +69,6 @@ function y(e) {
                         return {
                             title: null == (t = e.useTitle) ? void 0 : t.call(e),
                             key: e.key,
-                            type: e.type,
                         };
                     })
                     .filter((e) => {
@@ -83,32 +82,25 @@ function y(e) {
         children: [
             (0, r.jsx)("div", {
                 className: g.track,
-                children: (0, r.jsx)(s.animated.div, {
+                children: (0, r.jsx)(a.animated.div, {
                     className: g.thumb,
                     style: f,
                 }),
             }),
             (0, r.jsx)("ul", {
-                children: v.map((e, t) => {
-                    let { title: i, key: s, type: u } = e;
+                children: O.map((e, t) => {
+                    let { title: i, key: a } = e;
                     return (0, r.jsx)(
-                        a.P3F,
+                        s.P3F,
                         {
                             onClick: () => {
-                                var e;
-                                return (
-                                    (e = {
-                                        key: s,
-                                        type: u,
-                                    }),
-                                    void (l(t), y({ y: 36 * t }), c(!1), d(e))
-                                );
+                                l(t), y({ y: 36 * t }), c(!1), d(a);
                             },
                             tag: "li",
                             className: o()({ [g.active]: t === n }),
                             children: i,
                         },
-                        s,
+                        a,
                     );
                 }),
             }),

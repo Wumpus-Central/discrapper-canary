@@ -1,26 +1,26 @@
-n.d(t, { Z: () => N });
-var i = n(951288),
-    l = n(657707),
-    r = n(704215),
-    s = n(631885),
+n.d(t, { Z: () => y });
+var r = n(951288),
+    i = n(657707),
+    l = n(704215),
+    o = n(631885),
     a = n(509613),
-    o = n(54942),
-    u = n(869235),
+    s = n(313789),
+    u = n(54942),
     c = n(726985),
     d = n(388032),
-    _ = n(345909);
-let E = (0, a.x1)(u.t.FAMILY_CENTER_PANE, {
-        useTitle: () => d.intl.string(_.default.RZqaJi),
+    g = n(345909);
+let f = (0, a.x1)(s.n.FAMILY_CENTER_PANE, {
+        useTitle: () => d.intl.string(g.default.RZqaJi),
         getLayout: () => [],
-        render: () => (0, i.jsx)(o.Z, {}),
+        render: () => (0, r.jsx)(u.Z, {}),
     }),
-    N = (0, a.wf)(u.t.FAMILY_CENTER_PANEL, {
-        useTitle: () => d.intl.string(_.default.RZqaJi),
-        icon: l.BFJ,
-        getLayout: () => [E],
+    y = (0, a.wf)(s.n.FAMILY_CENTER_PANEL, {
+        useTitle: () => d.intl.string(g.default.RZqaJi),
+        icon: i.BFJ,
+        getLayout: () => [f],
         legacySearchKey: c.s6.PRIVACY_FAMILY_CENTER,
         trailing: {
-            useBadgeCount: s.gU,
-            newIndicatorDismissibleContentTypes: [r.z.FAMILY_CENTER_NEW_BADGE],
+            useBadgeCount: o.gU,
+            newIndicatorDismissibleContentTypes: [l.z.FAMILY_CENTER_NEW_BADGE],
         },
     });

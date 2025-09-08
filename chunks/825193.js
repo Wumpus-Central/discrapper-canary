@@ -1,17 +1,17 @@
 n.d(t, { Z: () => c });
-var i = n(657707),
-    r = n(509613),
-    l = n(64914),
-    o = n(869235),
+var r = n(657707),
+    i = n(509613),
+    l = n(313789),
+    o = n(64914),
     a = n(726985),
     s = n(388032);
-let u = (0, r.x1)(o.t.ADVANCED_PANE, {
+let u = (0, i.x1)(l.n.ADVANCED_PANE, {
         getLayout: () => [],
-        render: l.ZP,
+        render: o.ZP,
     }),
-    c = (0, r.wf)(o.t.ADVANCED_PANEL, {
+    c = (0, i.wf)(l.n.ADVANCED_PANEL, {
         useTitle: () => s.intl.string(s.t["8/udY2"]),
-        icon: i.xhG,
+        icon: r.xhG,
         getLayout: () => [u],
         legacySearchKey: a.s6.SETTINGS_ADVANCED,
     });
