@@ -1,7 +1,7 @@
 n.d(t, {
-    WS: () => _,
-    ZP: () => h,
-    zS: () => p,
+    WS: () => f,
+    ZP: () => p,
+    zS: () => _,
 }),
     n(413496),
     n(433524),
@@ -38,10 +38,9 @@ function l(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let c = "https://discordapp.page.link",
-    u = "https://discordapp.onelink.me",
-    d = "Hs5r";
-function f() {
+let c = "https://discordapp.onelink.me",
+    u = "Hs5r";
+function d() {
     var e, t;
     let n = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"],
         r = RegExp("(".concat(n.join("|"), ")"), "ig"),
@@ -49,28 +48,26 @@ function f() {
         o = (null === i() || void 0 === i() ? void 0 : i().name) === "Safari" && !a;
     return (null === i() || void 0 === i() || null == (t = i().os) ? void 0 : t.family) !== "iOS" || o;
 }
-function _() {
+function f() {
     return (0, a.Z)();
 }
-function p(e) {
-    let t = e.startsWith(u),
-        n = e.startsWith(c);
-    if (!t && !n) return null;
+function _(e) {
+    if (!e.startsWith(c)) return null;
     try {
         let t = new URL(e).searchParams,
-            r = n ? t.get("link") : t.get("deep_link_value");
-        if (null == r) return null;
-        let i = decodeURIComponent(r),
-            a = new URL(i).searchParams,
-            o = n ? t.get("utm_source") : t.get("pid"),
-            s = { utmSource: null != o ? o : void 0 };
-        for (let [e, t] of a.entries()) s[e] = t;
-        return s;
+            n = t.get("deep_link_value");
+        if (null == n) return null;
+        let r = decodeURIComponent(n),
+            i = new URL(r).searchParams,
+            a = t.get("pid"),
+            o = { utmSource: null != a ? a : void 0 };
+        for (let [e, t] of i.entries()) o[e] = t;
+        return o;
     } catch (e) {
         return null;
     }
 }
-function h(e, t) {
+function p(e, t) {
     let { utmSource: n, androidFallbackLink: r, iosFallbackLink: i } = t,
         a = s(t, ["utmSource", "androidFallbackLink", "iosFallbackLink"]),
         l = new URL(e);
@@ -78,16 +75,16 @@ function h(e, t) {
         let t = a[e];
         null != t && l.searchParams.set(e, t);
     }
-    let c = encodeURIComponent(l.toString()),
+    let f = encodeURIComponent(l.toString()),
         _ = encodeURIComponent("discord://app/open#".concat(l.toString())),
         p = encodeURIComponent((0, o.Z)()),
-        h = f() ? "true" : "false",
+        h = d() ? "true" : "false",
         m = null != r ? encodeURIComponent(r) : null,
         g = null != i ? encodeURIComponent(i) : null,
         E = ""
-            .concat(u, "/")
-            .concat(d, "/?deep_link_value=")
-            .concat(c, "&pid=")
+            .concat(c, "/")
+            .concat(u, "/?deep_link_value=")
+            .concat(f, "&pid=")
             .concat(n, "&af_force_deeplink=")
             .concat(h, "&af_og_description=")
             .concat(p, "&af_dp=")
