@@ -1,8 +1,9 @@
 n.d(t, {
     E: () => S,
     Jz: () => A,
-    Kf: () => C,
-    mG: () => P,
+    Kf: () => N,
+    _w: () => C,
+    mG: () => w,
 });
 var r = n(123463),
     i = n(321034),
@@ -113,7 +114,10 @@ function S() {
 function A() {
     return c;
 }
-function C() {
+function C(e) {
+    (c = e), h(e, null);
+}
+function N() {
     v();
     let [e, t] = (0, s.useState)(c);
     return (
@@ -132,8 +136,8 @@ function C() {
     );
 }
 "undefined" != typeof document && T();
-let N = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
-function R(e, t, n) {
+let R = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
+function P(e, t, n) {
     let r = (0, o.r3)(null == n ? void 0 : n.target),
         i = "undefined" != typeof window ? (0, o.kR)(null == n ? void 0 : n.target).HTMLInputElement : HTMLInputElement,
         a =
@@ -145,7 +149,7 @@ function R(e, t, n) {
     return !(
         (e =
             e ||
-            (r.activeElement instanceof i && !N.has(r.activeElement.type)) ||
+            (r.activeElement instanceof i && !R.has(r.activeElement.type)) ||
             r.activeElement instanceof a ||
             (r.activeElement instanceof s && r.activeElement.isContentEditable)) &&
         "keyboard" === t &&
@@ -153,11 +157,11 @@ function R(e, t, n) {
         !p[n.key]
     );
 }
-function P(e, t, n) {
+function w(e, t, n) {
     v(),
         (0, s.useEffect)(() => {
             let t = (t, r) => {
-                R(!!(null == n ? void 0 : n.isTextInput), t, r) && e(S());
+                P(!!(null == n ? void 0 : n.isTextInput), t, r) && e(S());
             };
             return (
                 u.add(t),

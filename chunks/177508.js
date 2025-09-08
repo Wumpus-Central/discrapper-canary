@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(103866),
     v = n(213734),
     I = n(37148),
-    S = n(907862),
-    T = n(466590),
+    T = n(907862),
+    S = n(466590),
     A = n(681715),
     C = n(755721),
     N = n(481060),
@@ -1451,7 +1451,7 @@ function ey() {
                 variant: "heading-xl/semibold",
                 children: "Popovers",
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: Q,
                 shouldShow: e,
                 onRequestClose: eE,
@@ -1474,7 +1474,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: J,
                 shouldShow: n,
                 onRequestClose: eE,
@@ -1496,7 +1496,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: $,
                 shouldShow: o,
                 onRequestClose: eE,
@@ -1513,7 +1513,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: ee,
                 shouldShow: l,
                 onRequestClose: eE,
@@ -1540,7 +1540,7 @@ function ey() {
                     external: !0,
                 },
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: et,
                 shouldShow: u,
                 onRequestClose: eE,
@@ -1568,7 +1568,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: en,
                 shouldShow: f,
                 onRequestClose: eE,
@@ -1584,7 +1584,7 @@ function ey() {
                 },
                 badge: "new",
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: er,
                 shouldShow: p,
                 onRequestClose: eE,
@@ -1606,7 +1606,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: ei,
                 shouldShow: m,
                 onRequestClose: eE,
@@ -1628,7 +1628,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: ea,
                 shouldShow: E,
                 onRequestClose: eE,
@@ -1651,7 +1651,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: eo,
                 shouldShow: y,
                 onRequestClose: eE,
@@ -1674,7 +1674,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: es,
                 shouldShow: v,
                 onRequestClose: eE,
@@ -1698,7 +1698,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: el,
                 shouldShow: A,
                 onRequestClose: eE,
@@ -1722,7 +1722,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: ec,
                 shouldShow: R,
                 onRequestClose: eE,
@@ -1749,7 +1749,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: eu,
                 shouldShow: w,
                 onRequestClose: eE,
@@ -1772,7 +1772,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(S.Mb, {
+            (0, r.jsx)(T.Mb, {
                 targetElementRef: ed,
                 shouldShow: x,
                 onRequestClose: eE,
@@ -1789,7 +1789,7 @@ function ey() {
                     onClick: eE,
                 },
             }),
-            (0, r.jsx)(S.Mb, {
+            (0, r.jsx)(T.Mb, {
                 targetElementRef: ef,
                 shouldShow: j,
                 onRequestClose: eE,
@@ -1807,7 +1807,7 @@ function ey() {
                     onClick: eE,
                 },
             }),
-            (0, r.jsx)(S.Mb, {
+            (0, r.jsx)(T.Mb, {
                 targetElementRef: e_,
                 shouldShow: k,
                 onRequestClose: eE,
@@ -1824,7 +1824,7 @@ function ey() {
                     onClick: eE,
                 },
             }),
-            (0, r.jsx)(T.e, {
+            (0, r.jsx)(S.e, {
                 targetElementRef: ep,
                 shouldShow: G,
                 onRequestClose: eE,
@@ -1872,7 +1872,7 @@ function ey() {
                 ],
                 onStepChange: (e) => {},
             }),
-            (0, r.jsx)(S.J2, {
+            (0, r.jsx)(T.J2, {
                 targetElementRef: eh,
                 shouldShow: Z,
                 onRequestClose: eE,
@@ -1896,7 +1896,7 @@ function ey() {
                     },
                 ],
             }),
-            (0, r.jsx)(T.e, {
+            (0, r.jsx)(S.e, {
                 targetElementRef: em,
                 shouldShow: H,
                 onRequestClose: eE,
@@ -1947,7 +1947,7 @@ function ey() {
                 ],
                 onStepChange: (e) => {},
             }),
-            (0, r.jsx)(S.Mb, {
+            (0, r.jsx)(T.Mb, {
                 targetElementRef: eg,
                 shouldShow: W,
                 onRequestClose: eE,
@@ -2278,18 +2278,20 @@ function eO() {
                         variant: "heading-xl/semibold",
                         children: "Checkboxes",
                     }),
-                    (0, r.jsx)(C.$q, {
+                    (0, r.jsx)(N.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
+                        label: "Checkbox input",
                         children: (0, r.jsx)(N.Text, {
                             variant: "text-md/medium",
                             children: "Checkbox input",
                         }),
                     }),
-                    (0, r.jsx)(C.$q, {
+                    (0, r.jsx)(N.XZJ, {
                         value: e,
                         onChange: (e, n) => t(n),
                         disabled: !0,
+                        label: "Disabled checkbox",
                         children: (0, r.jsx)(N.Text, {
                             variant: "text-md/medium",
                             children: "Disabled checkbox",
@@ -2659,7 +2661,7 @@ function eI() {
         ],
     });
 }
-function eS(e) {
+function eT(e) {
     let { transitionState: t } = e,
         [n, a] = i.useState(!1),
         [o, s] = i.useState(N.CgR.SMALL),
@@ -2745,12 +2747,12 @@ function eS(e) {
         ],
     });
 }
-function eT(e) {
+function eS(e) {
     let { transitionState: t, onClose: n, modalCount: a = 1 } = e,
         [o, s] = i.useState("replace"),
         l = () => {
             let e = a + 1;
-            (0, N.h7j)((t) => (0, r.jsx)(eT, $(Q({}, t), { modalCount: e })), { stackingBehavior: o });
+            (0, N.h7j)((t) => (0, r.jsx)(eS, $(Q({}, t), { modalCount: e })), { stackingBehavior: o });
         },
         c = a < 3;
     return (0, r.jsxs)(N.Y0X, {
@@ -2915,7 +2917,7 @@ function eC(e) {
         [_, p] = i.useState(!1),
         [h, m] = i.useState(!1),
         [E, b] = i.useState(!1),
-        [S, T] = i.useState(!1);
+        [T, S] = i.useState(!1);
     return (0, r.jsxs)(g.I, {
         transitionState: t,
         onClose: n,
@@ -3014,8 +3016,8 @@ function eC(e) {
                                         }),
                                     }),
                                     (0, r.jsx)(C.$q, {
-                                        value: S,
-                                        onChange: (e, t) => T(t),
+                                        value: T,
+                                        onChange: (e, t) => S(t),
                                         children: (0, r.jsx)(N.Text, {
                                             variant: "text-md/medium",
                                             children: "Full Width Actions",
@@ -3049,7 +3051,7 @@ function eC(e) {
                           text: "Don't show again",
                       })
                     : void 0,
-                actionsFullWidth: S,
+                actionsFullWidth: T,
                 actions: [
                     {
                         variant: "secondary",
@@ -3355,10 +3357,10 @@ function ew(e) {
 }
 function eD() {
     let e = () => {
-            (0, N.h7j)((e) => (0, r.jsx)(eS, Q({}, e)));
+            (0, N.h7j)((e) => (0, r.jsx)(eT, Q({}, e)));
         },
         t = () => {
-            (0, N.h7j)((e) => (0, r.jsx)(eT, Q({}, e)));
+            (0, N.h7j)((e) => (0, r.jsx)(eS, Q({}, e)));
         },
         n = () => {
             (0, N.h7j)((e) => (0, r.jsx)(eA, Q({}, e)));

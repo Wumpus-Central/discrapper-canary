@@ -6,7 +6,7 @@ var i = n(793030),
     o = n(619307),
     s = n(993365),
     l = n(463208),
-    c = n(755721),
+    c = n(481060),
     u = n(624315);
 function d(e, t, n) {
     return (
@@ -89,9 +89,10 @@ function h(e) {
                                           options: u.options,
                                       }),
                                   "boolean" === u.type &&
-                                      (0, r.jsx)(c.$q, {
+                                      (0, r.jsx)(c.XZJ, {
                                           value: d,
                                           onChange: (e, t) => _(i, t),
+                                          label: u.label,
                                           children: (0, r.jsx)(s.x, {
                                               variant: "text-md/medium",
                                               children: u.label,

@@ -1,6 +1,8 @@
 n.d(t, {
     aX: () => u,
+    jn: () => d,
     pE: () => f,
+    vl: () => p,
     xc: () => _,
     zt: () => c,
 });
@@ -126,4 +128,10 @@ function _(e = !0) {
         }, []),
         [i, t]
     );
+}
+function p(e) {
+    let t = /^(data-.*)$/,
+        n = {};
+    for (let r in e) t.test(r) || (n[r] = e[r]);
+    return n;
 }
