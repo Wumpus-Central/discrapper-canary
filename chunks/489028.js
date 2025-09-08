@@ -2,7 +2,7 @@ n.d(t, { Z: () => R }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(755721),
+    a = n(159691),
     s = n(481060),
     o = n(782568),
     c = n(223892),
@@ -31,11 +31,10 @@ function P(e) {
     return (0, r.jsx)("div", {
         className: T.selectTeamContainer,
         children: (0, r.jsx)(a.zx, {
+            text: S.intl.string(S.t["5k6FfX"]),
             disabled: !n,
             onClick: t,
-            className: T.enableTicketingButton,
             fullWidth: !0,
-            children: S.intl.string(S.t["5k6FfX"]),
         }),
     });
 }
@@ -77,11 +76,10 @@ function w(e) {
                         "aria-label": S.intl.string(S.t.QXf93N),
                     }),
                     (0, r.jsx)(a.zx, {
+                        text: S.intl.string(S.t["9HU3ZW"]),
                         onClick: b,
-                        className: T.enableTicketingButton,
-                        submitting: m,
+                        loading: m,
                         disabled: null == o || h || !l,
-                        children: S.intl.string(S.t["9HU3ZW"]),
                     }),
                 ],
             }),

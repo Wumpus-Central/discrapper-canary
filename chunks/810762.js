@@ -2,7 +2,7 @@ n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(873546),
-    a = n(755721),
+    a = n(159691),
     o = n(481060),
     s = n(270237),
     l = n(584825),
@@ -19,20 +19,12 @@ let _ = (e) => {
         : 0 === n.length
           ? null
           : (0, r.jsxs)("div", {
-                className: f.__invalid_container,
                 children: [
-                    (0, r.jsxs)(a.zx, {
-                        look: a.zx.Looks.BLANK,
-                        innerClassName: f.backButtonContents,
+                    (0, r.jsx)(a.zx, {
+                        text: d.intl.string(d.t.hqyhKS),
+                        icon: o.wj7,
+                        variant: "secondary",
                         onClick: t,
-                        children: [
-                            (0, r.jsx)(o.ZSh, {
-                                size: "md",
-                                color: "currentColor",
-                                className: f.arrowIcon,
-                            }),
-                            d.intl.string(d.t.hqyhKS),
-                        ],
                     }),
                     (0, r.jsx)(o.LZC, { size: 10 }),
                     (0, r.jsx)(o.vwX, {

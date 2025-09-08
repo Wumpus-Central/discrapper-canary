@@ -57745,20 +57745,6 @@ h3.improved__1689b:after {
     gap: 16px
 }
 
-.backButtonContents__8f372 {
-    align-items: center;
-    color: var(--text-link);
-    display: flex;
-    font-size: 16px
-}
-
-.arrowIcon__8f372 {
-    height: 20px;
-    margin-right: 4px;
-    transform: rotate(270deg);
-    width: 20px
-}
-
 .button_bf1984 {
     max-width: var(--custom-button-button-lg-width);
     min-width: -webkit-min-content;
@@ -89844,7 +89830,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

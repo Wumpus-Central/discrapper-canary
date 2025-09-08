@@ -2,7 +2,7 @@ n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(399606),
-    l = n(755721),
+    l = n(159691),
     a = n(481060),
     s = n(601964),
     o = n(430824),
@@ -25,8 +25,8 @@ function m(e) {
             }),
             (0, r.jsx)(a.LZC, { size: 16 }),
             (0, r.jsx)(l.zx, {
-                look: l.zx.Looks.FILLED,
-                color: null != f ? l.zx.Colors.PRIMARY : l.zx.Colors.BRAND,
+                text: null != f ? u.intl.string(u.t["/Fjq5O"]) : u.intl.string(u.t["6ih+b2"]),
+                variant: null != f ? "secondary" : "primary",
                 onClick: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e("83942").then(n.bind(n, 743582));
@@ -78,7 +78,6 @@ function m(e) {
                     });
                 },
                 disabled: h,
-                children: null != f ? u.intl.string(u.t["/Fjq5O"]) : u.intl.string(u.t["6ih+b2"]),
             }),
         ],
     });

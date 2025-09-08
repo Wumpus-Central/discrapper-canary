@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(755721),
+    o = n(159691),
     s = n(481060),
     l = n(388032),
     c = n(699533),
@@ -48,11 +48,10 @@ function f(e) {
                         ],
                     }),
                     (0, r.jsx)(o.zx, {
-                        color: o.zx.Colors.CUSTOM,
-                        size: o.zx.Sizes.SMALL,
-                        className: c.manageSubscriptionsButton,
+                        size: "sm",
+                        variant: "overlay-primary",
+                        text: l.intl.string(l.t["3a8Xxs"]),
                         onClick: t,
-                        children: l.intl.string(l.t["3a8Xxs"]),
                     }),
                 ],
             }),
