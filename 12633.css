@@ -2530,7 +2530,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .mana-text-inputs .wrapper__3412a:not([data-read-only=true]):has(input:focus, textarea:focus) {
-    outline: 1px solid var(--custom-input-focus-border-color)
+    outline: 1px solid var(--custom-input-focus-border-color);
+    outline-offset: -2px
 }
 
 .wrapper__3412a[data-error=true] {
@@ -89057,7 +89058,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
