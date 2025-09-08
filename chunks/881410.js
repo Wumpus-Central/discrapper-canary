@@ -99,7 +99,10 @@ function g(e) {
         S = i.useMemo(
             () =>
                 "" !== p.trim()
-                    ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: p.trim() })
+                    ? u.intl.format(u.t.ZoearK, {
+                          searchTerm: p.trim(),
+                          surveyUrl: "https://discord.sjc1.qualtrics.com/jfe/form/SV_0TIqLrxbsfJYS4C",
+                      })
                     : u.intl.string(u.t.QwSXv7),
             [p],
         );
