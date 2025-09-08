@@ -87,6 +87,8 @@ function m(e, t) {
                 overlay_app_id: null != m ? m.id : null,
                 overlay_render_method: null != y ? i.gl[y] : null,
                 media_session_id: l.Z.getMediaSessionId(),
+                overlay_game_elevated: null == g ? void 0 : g.elevated,
+                input_service_initialized: r.ZP.isInputServiceInitialized(),
             },
             t,
         )),

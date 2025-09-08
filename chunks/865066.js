@@ -41,6 +41,7 @@ function b() {
         a.Z.dispatch({
             type: "SYSTEM_SERVICE_INITIALIZE",
             initialized: !0,
+            modules: ["input-service"],
         }),
         _.info("System service initialized."));
 }
@@ -62,6 +63,7 @@ function O() {
         a.Z.dispatch({
             type: "SYSTEM_SERVICE_INITIALIZE",
             initialized: !1,
+            modules: ["input-service"],
         }),
         _.info("System service terminated."));
 }
