@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -12,30 +12,31 @@ var r = n(951288),
     _ = n(859235),
     p = n(898463),
     h = n(981631),
-    m = n(163514),
-    g = n(451328);
-function E(e) {
+    m = n(388032),
+    g = n(163514),
+    E = n(451328);
+function b(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
-        E = i.useRef(null),
-        [b, y] = i.useState(!1),
-        O = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        v = i.useRef(null),
-        I = (e) => {
+        b = i.useRef(null),
+        [y, O] = i.useState(!1),
+        v = f.Z.getUpload(t, n.name, d.d.SlashCommand),
+        I = i.useRef(null),
+        T = (e) => {
             if (e.which === h.yXg.ENTER) {
                 var t;
-                e.preventDefault(), null == (t = E.current) || t.activateUploadDialogue();
+                e.preventDefault(), null == (t = b.current) || t.activateUploadDialogue();
             }
         },
-        T = i.useCallback(() => {
-            y(!0);
-        }, []),
         S = i.useCallback(() => {
-            y(!1);
+            O(!0);
         }, []),
-        A = i.useCallback(
+        A = i.useCallback(() => {
+            O(!1);
+        }, []),
+        C = i.useCallback(
             (e) => {
                 var r;
-                y(!1);
+                O(!1);
                 let i = {
                     id: n.name,
                     file: null == (r = e.dataTransfer) ? void 0 : r.files[0],
@@ -52,20 +53,20 @@ function E(e) {
             [t, n],
         );
     i.useEffect(() => {
-        let e = v.current;
+        let e = I.current;
         return (
-            null == O &&
-                (null == e || e.addEventListener("dragover", T, !1),
-                null == e || e.addEventListener("dragleave", S, !1),
-                null == e || e.addEventListener("drop", A, !1)),
+            null == v &&
+                (null == e || e.addEventListener("dragover", S, !1),
+                null == e || e.addEventListener("dragleave", A, !1),
+                null == e || e.addEventListener("drop", C, !1)),
             () => {
-                null == e || e.removeEventListener("dragover", T, !1),
-                    null == e || e.removeEventListener("dragleave", S, !1),
-                    null == e || e.removeEventListener("drop", A, !1);
+                null == e || e.removeEventListener("dragover", S, !1),
+                    null == e || e.removeEventListener("dragleave", A, !1),
+                    null == e || e.removeEventListener("drop", C, !1);
             }
         );
-    }, [O, T, S, A]);
-    let C = (e) => {
+    }, [v, S, A, C]);
+    let N = (e) => {
         var r, i;
         if (null != t && (null == (i = e.currentTarget) || null == (r = i.files) ? void 0 : r[0]) != null) {
             let r = {
@@ -83,10 +84,10 @@ function E(e) {
                 (e.currentTarget.value = "");
         }
     };
-    return null != O
+    return null != v
         ? (0, r.jsx)(p.Z, {
               channelId: t,
-              upload: O,
+              upload: v,
               keyboardModeEnabled: a,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
@@ -100,7 +101,7 @@ function E(e) {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "text-brand",
-                          children: O.filename,
+                          children: v.filename,
                       }),
                   ],
               }),
@@ -110,41 +111,41 @@ function E(e) {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: a,
-              onKeyDown: I,
-              className: o()(m.emptyOption, { [m.emptyOptionActive]: b }),
+              onKeyDown: T,
+              className: o()(g.emptyOption, { [g.emptyOptionActive]: y }),
               draftType: d.d.SlashCommand,
-              ref: v,
+              ref: I,
               children: [
                   (0, r.jsx)("span", {
-                      className: o()(m.optionName, { [m.optionNameActive]: b }),
+                      className: o()(g.optionName, { [g.optionNameActive]: y }),
                       children: n.name,
                   }),
                   (0, r.jsx)(s.P3F, {
-                      className: m.clickContainer,
+                      className: g.clickContainer,
                       onClick: () => {
                           var e;
-                          return null == (e = E.current) ? void 0 : e.activateUploadDialogue();
+                          return null == (e = b.current) ? void 0 : e.activateUploadDialogue();
                       },
                       children: (0, r.jsxs)("div", {
-                          className: m.commandOptionContainer,
+                          className: g.commandOptionContainer,
                           children: [
                               (0, r.jsx)("img", {
-                                  src: g,
-                                  className: m.optionIcon,
+                                  src: E,
+                                  className: g.optionIcon,
                                   alt: "",
                               }),
                               (0, r.jsx)(s.Text, {
-                                  className: m.optionHelp,
+                                  className: g.optionHelp,
                                   variant: "text-sm/normal",
-                                  children: "Drag and drop or click to upload file",
+                                  children: m.intl.string(m.t.IJyOUV),
                               }),
                               (0, r.jsx)(c.Z, {
-                                  ref: E,
-                                  onChange: C,
+                                  ref: b,
+                                  onChange: N,
                                   multiple: !1,
                                   tabIndex: -1,
                                   "aria-hidden": !0,
-                                  className: m.fileInput,
+                                  className: g.fileInput,
                               }),
                           ],
                       }),
