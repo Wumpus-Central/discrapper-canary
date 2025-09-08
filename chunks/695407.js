@@ -1,121 +1,49 @@
-n.d(t, { n: () => m });
+n.d(t, { n: () => l });
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(1561),
-    l = n(84735),
-    c = n(670596),
-    u = n(922770),
-    d = n(481060),
-    f = n(388032),
-    _ = n(972674);
-let p = 18;
-function h(e, t, n) {
-    return t
-        ? (0, r.jsx)("div", {
-              className: _.iconContainer,
-              children: (0, r.jsx)(u.$, {
-                  type: u.$.Type.SPINNING_CIRCLE,
-                  className: _.icon,
-              }),
-          })
-        : e.length > 0
-          ? (0, r.jsx)(s.P, {
-                "aria-label": f.intl.string(f.t["78fJND"]),
-                className: o()(_.iconContainer, _.iconClickable),
-                onClick: (e) => {
-                    e.stopPropagation(), n("");
-                },
-                onMouseDown: (e) => {
-                    e.preventDefault(), e.stopPropagation();
-                },
-                focusProps: {
-                    offset: {
-                        top: -3,
-                        right: -3,
-                        bottom: -3,
-                        left: -3,
-                    },
-                },
-                children: (0, r.jsx)(d.Dio, {
-                    size: "custom",
-                    color: "currentColor",
-                    width: p,
-                    height: p,
-                    className: _.icon,
-                    "aria-label": f.intl.string(f.t.cpT0Cg),
-                }),
-            })
-          : (0, r.jsx)("div", {
-                className: _.iconContainer,
-                children: (0, r.jsx)(d._Ve, {
-                    size: "custom",
-                    color: "currentColor",
-                    width: p,
-                    height: p,
-                    className: _.icon,
-                    "aria-label": f.intl.string(f.t["5h0QOD"]),
-                }),
-            });
-}
-let m = i.forwardRef(function (e, t) {
+    a = n(670596),
+    o = n(481060),
+    s = n(388032);
+let l = i.forwardRef(function (e, t) {
     let {
             query: n,
-            onChange: a,
-            loading: o = !1,
-            disabled: s = !1,
-            placeholder: u = f.intl.string(f.t["5h0QOD"]),
+            onChange: l,
+            disabled: c = !1,
+            placeholder: u = s.intl.string(s.t["5h0QOD"]),
             "aria-label": d,
-            onInteraction: p,
+            onInteraction: f,
         } = e,
-        m = i.useRef(null),
-        g = i.useRef(null);
+        _ = i.useRef(null);
     i.useImperativeHandle(
         t,
         () => ({
             focus: () => {
                 var e;
-                return null == (e = g.current) ? void 0 : e.focus();
+                return null == (e = _.current) ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null == (e = g.current) ? void 0 : e.blur();
+                return null == (e = _.current) ? void 0 : e.blur();
             },
             activate: () => !1,
         }),
         [],
     );
-    let E = h(n, o, a),
-        b = (e) => {
-            a(e.currentTarget.value), null == p || p(c.U.SEARCH);
-        };
-    return (0, r.jsx)(l.t, {
-        focusTarget: g,
-        ringTarget: m,
-        offset: {
-            top: 2,
-            bottom: 2,
-            left: 4,
-            right: 4,
+    let p = (e) => {
+            l(e), null == f || f(a.U.SEARCH);
         },
-        children: (0, r.jsxs)("div", {
-            className: _.container,
-            ref: m,
-            children: [
-                (0, r.jsx)("input", {
-                    role: "searchbox",
-                    "aria-busy": o,
-                    ref: g,
-                    className: _.input,
-                    value: n,
-                    onChange: b,
-                    "aria-label": d,
-                    placeholder: u,
-                    disabled: s,
-                }),
-                E,
-            ],
-        }),
+        h = () => {
+            l(""), null == f || f(a.U.SEARCH);
+        };
+    return (0, r.jsx)(o.E1j, {
+        size: "sm",
+        disabled: c,
+        onChange: p,
+        onClear: h,
+        query: n,
+        placeholder: u,
+        autoFocus: !1,
+        "aria-label": d,
+        ref: _,
     });
 });

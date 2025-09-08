@@ -137,6 +137,7 @@ class b extends (r = a.PureComponent) {
             ? (0, i.jsx)(
                   c.oil,
                   m(p({}, T), {
+                      role: "searchbox",
                       onFocus: v,
                       onBlur: O,
                       value: t,
