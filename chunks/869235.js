@@ -1,6 +1,7 @@
 n.d(t, { t: () => r });
 var r = (function (e) {
     return (
+        (e.PROFILE_SECTION = "profile_section"),
         (e.USER_SECTION = "user_section"),
         (e.ACCOUNT_PANEL = "account_panel"),
         (e.ACCOUNT_PANE = "account_pane"),

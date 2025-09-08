@@ -22,29 +22,41 @@ function y(e) {
                     ? e.trailing.newIndicatorDismissibleContentTypes
                     : [];
             })
-            .filter((e) => null != e);
+            .filter((e) => null != e),
+        y = t.layout.filter((e) => e.hoisted),
+        O = t.layout.filter((e) => !e.hoisted);
     return (0, r.jsx)(a.ZP, {
         contentTypes: g,
         children: (e) => {
-            let { visibleContent: a } = e;
+            let { visibleContent: t } = e;
             return (0, r.jsxs)("div", {
                 className: l()(f.sidebar, {
                     [f.mobile]: o.tq,
                     [f.mobileNavigationOpen]: d,
                 }),
                 children: [
+                    y.map((e) =>
+                        (0, r.jsx)(
+                            v,
+                            {
+                                section: e,
+                                visibleContent: t,
+                            },
+                            e.key,
+                        ),
+                    ),
                     null != n && (0, r.jsx)(n, {}),
                     (0, r.jsx)(s.zJl, {
                         className: f.navScroller,
                         fade: !0,
                         children: (0, r.jsx)("nav", {
                             className: f.nav,
-                            children: t.layout.map((e) =>
+                            children: O.map((e) =>
                                 (0, r.jsx)(
-                                    O,
+                                    v,
                                     {
                                         section: e,
-                                        visibleContent: a,
+                                        visibleContent: t,
                                     },
                                     e.key,
                                 ),
@@ -61,7 +73,7 @@ function y(e) {
         },
     });
 }
-function O(e) {
+function v(e) {
     var t;
     let { section: n, visibleContent: i } = e,
         l = null == (t = n.useLabel) ? void 0 : t.call(n);

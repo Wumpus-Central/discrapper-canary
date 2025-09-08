@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(658722),
-    l = n.n(r),
-    i = n(904849),
+    i = n.n(r),
+    l = n(904849),
     o = n(28682);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -50,49 +50,50 @@ function u(e, t, n) {
     var r;
     let u = (function (e, t, n) {
             let r = new Set(),
-                i = function (e) {
+                l = function (e) {
                     var s;
                     let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         u = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                         c = (null == (s = e.usePredicate) ? void 0 : s.call(e)) === !1 || a,
                         d =
                             (function (e, t, n, r) {
-                                var i, o;
+                                var l, s;
                                 if (null != e.legacySearchKey) return t.length < 2 || r.has(e.legacySearchKey);
-                                let s = "useTitle" in e ? (null == (i = e.useTitle) ? void 0 : i.call(e, !1)) : void 0,
-                                    a =
+                                if (e.type === o.J.SECTION && e.hoisted) return !0;
+                                let a = "useTitle" in e ? (null == (l = e.useTitle) ? void 0 : l.call(e, !1)) : void 0,
+                                    u =
                                         "useSearchTerms" in e
-                                            ? null == (o = e.useSearchTerms)
+                                            ? null == (s = e.useSearchTerms)
                                                 ? void 0
-                                                : o.call(e)
+                                                : s.call(e)
                                             : void 0;
-                                if (n || (null == s && null == a)) return !1;
+                                if (n || (null == a && null == u)) return !1;
                                 if ("" === t) return !0;
-                                let u = t.toLowerCase();
-                                for (let e of null != a ? a : []) if (l()(u, e.toLowerCase())) return !0;
-                                return "string" == typeof s && l()(u, s.toLowerCase());
+                                let c = t.toLowerCase();
+                                for (let e of null != u ? u : []) if (i()(c, e.toLowerCase())) return !0;
+                                return "string" == typeof a && i()(c, a.toLowerCase());
                             })(e, t, c, n) || u,
                         g = !1;
-                    if ((0, o.L)(e)) for (let t of e.layout) g = i(t, c, d) || g;
+                    if ((0, o.L)(e)) for (let t of e.layout) g = l(t, c, d) || g;
                     return !c && (d || g) && r.add(e.key), d || g;
                 };
-            return i(e), r;
+            return l(e), r;
         })(e, null != t ? t : "", n),
-        c = new i.Z();
+        c = new l.Z();
     return {
         node:
             null !=
             (r = (function e(t, n, r) {
-                let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                 if (!n.has(t.key)) return null;
-                if (!(0, o.L)(t)) return r.register(t, l.panel, l.category, l.accordion), t;
-                let i = l;
-                t.type === o.J.PANEL && (i = a(s({}, l), { panel: t })),
-                    t.type === o.J.CATEGORY && (i = a(s({}, l), { category: t })),
-                    t.type === o.J.ACCORDION && (i = a(s({}, l), { accordion: t }));
-                let u = t.layout.map((t) => e(t, n, r, i)).filter((e) => null != e);
+                if (!(0, o.L)(t)) return r.register(t, i.panel, i.category, i.accordion), t;
+                let l = i;
+                t.type === o.J.PANEL && (l = a(s({}, i), { panel: t })),
+                    t.type === o.J.CATEGORY && (l = a(s({}, i), { category: t })),
+                    t.type === o.J.ACCORDION && (l = a(s({}, i), { accordion: t }));
+                let u = t.layout.map((t) => e(t, n, r, l)).filter((e) => null != e);
                 return 0 !== u.length || "render" in t
-                    ? (r.register(t, i.panel, i.category, i.accordion), a(s({}, t), { layout: u }))
+                    ? (r.register(t, l.panel, l.category, l.accordion), a(s({}, t), { layout: u }))
                     : null;
             })(e, u, c))
                 ? r

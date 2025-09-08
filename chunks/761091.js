@@ -30,7 +30,7 @@ function _(e) {
         P = [],
         I = e.features.has(y.oNc.HUB),
         N = e.features.has(y.oNc.COMMUNITY),
-        Z = (0, b.lN)(!(0, f.r1)(e.id)),
+        Z = (0, b.l)(!(0, f.r1)(e.id)),
         w = e.features.has(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         T = (0, g.Z)(e.id),
         A = (0, h.A0)(e.id, "useGuildActionRows"),
