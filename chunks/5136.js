@@ -1,43 +1,45 @@
-r.d(t, { r: () => l });
-var n = r(647438),
-    i = r(323946);
-function l(e) {
-    let { container: t, edgeDistance: r = 130, maxSpeed: l = 1700, power: a = 2.2 } = e,
-        o = (0, n.useRef)(null),
-        c = (0, n.useRef)(0),
-        s = (0, n.useCallback)(
+n.d(t, { r: () => a });
+var r = n(647438),
+    i = n(323946),
+    l = n(481060);
+function a(e) {
+    let { container: t, edgeDistance: n = 130, maxSpeed: a = 1700, power: o = 2.2 } = e,
+        s = (0, r.useRef)(null),
+        c = (0, r.useRef)(0),
+        u = (0, r.useCallback)(
             (e) => ({
                 isDragging: e.isDragging(),
                 clientOffset: e.getClientOffset(),
             }),
             [],
         ),
-        { isDragging: u, clientOffset: d } = (0, i.f)(s);
-    (0, n.useEffect)(
+        { isDragging: d, clientOffset: p } = (0, i.f)(u),
+        f = (0, l.zPA)();
+    (0, r.useEffect)(
         () => (
-            (o.current = requestAnimationFrame(function e(n) {
-                if (null == t) return;
-                if (((o.current = requestAnimationFrame(e)), !1 === u || null == d)) {
-                    (t.style.overflowAnchor = "auto"), (t.style.overscrollBehavior = "auto"), (c.current = n);
+            (s.current = requestAnimationFrame(function e(r) {
+                if (f || null == t) return;
+                if (((s.current = requestAnimationFrame(e)), !1 === d || null == p)) {
+                    (t.style.overflowAnchor = "auto"), (t.style.overscrollBehavior = "auto"), (c.current = r);
                     return;
                 }
                 (t.style.overflowAnchor = "none"), (t.style.overscrollBehavior = "contain");
-                let i = Math.min(32, 0 !== c.current ? n - c.current : 16) / 1000;
-                c.current = n;
-                let s = t.getBoundingClientRect(),
-                    f = d.y,
-                    g = f - s.top,
-                    p = s.bottom - f,
-                    b = 0;
-                g >= 0 && g < r
-                    ? (b = -l * Math.pow(1 - g / r, a))
-                    : p >= 0 && p < r && (b = l * Math.pow(1 - p / r, a)),
-                    0 !== b && (t.scrollTop += b * i);
+                let i = Math.min(32, 0 !== c.current ? r - c.current : 16) / 1000;
+                c.current = r;
+                let l = t.getBoundingClientRect(),
+                    u = p.y,
+                    h = u - l.top,
+                    g = l.bottom - u,
+                    m = 0;
+                h >= 0 && h < n
+                    ? (m = -a * Math.pow(1 - h / n, o))
+                    : g >= 0 && g < n && (m = a * Math.pow(1 - g / n, o)),
+                    0 !== m && (t.scrollTop += m * i);
             })),
             () => {
-                null !== o.current && cancelAnimationFrame(o.current), (o.current = null), (c.current = 0);
+                null !== s.current && cancelAnimationFrame(s.current), (s.current = null), (c.current = 0);
             }
         ),
-        [t, u, d, r, l, a],
+        [t, d, p, n, a, o, f],
     );
 }

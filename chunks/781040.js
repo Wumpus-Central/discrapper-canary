@@ -1,17 +1,20 @@
-r.d(t, { Z: () => j });
+r.d(t, { Z: () => h });
 var n = r(951288);
 r(647438);
-var i = r(323946),
-    l = r(481060),
-    a = r(239091),
-    o = r(314897),
-    c = r(785717),
-    s = r(86419),
-    u = r(872269),
-    d = r(228168),
-    f = r(388032),
-    g = r(176870);
-function b(e) {
+var i = r(120356),
+    l = r.n(i),
+    o = r(323946),
+    a = r(481060),
+    c = r(239091),
+    s = r(313201),
+    u = r(314897),
+    d = r(785717),
+    g = r(86419),
+    f = r(872269),
+    b = r(228168),
+    p = r(388032),
+    O = r(176870);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -36,7 +39,7 @@ function b(e) {
     }
     return e;
 }
-function p(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,84 +58,84 @@ function p(e, t) {
     );
 }
 let m = (e) => {
-        let { children: t } = e,
-            { isDragging: r } = (0, i.f)((e) => ({ isDragging: e.isDragging() }));
-        return (0, n.jsx)(l.ua7, {
-            "aria-label": f.intl.string(f.t.HWNJJC),
-            text: (0, n.jsx)(O, {}),
+        let { widgetTitle: t, children: r } = e,
+            { isDragging: i } = (0, o.f)((e) => ({ isDragging: e.isDragging() }));
+        return (0, n.jsx)(a.ua7, {
+            "aria-label": p.intl.formatToPlainString(p.t.HWNJJC, { widgetTitle: t }),
+            text: (0, n.jsx)(v, {}),
             position: "top",
-            shouldShow: !0 !== r,
-            children: t,
+            shouldShow: !0 !== i,
+            children: r,
         });
     },
-    O = () =>
+    v = () =>
         (0, n.jsxs)("div", {
-            className: g.dragClickTooltipText,
+            className: O.dragClickTooltipText,
             children: [
-                (0, n.jsx)(l.Text, {
+                (0, n.jsx)(a.Text, {
                     variant: "text-sm/normal",
-                    children: f.intl.format(f.t["7cdwho"], {
+                    children: p.intl.format(p.t["7cdwho"], {
                         emphasizeHook: (e) => (0, n.jsx)("strong", { children: e }),
                     }),
                 }),
-                (0, n.jsx)(l.Text, {
+                (0, n.jsx)(a.Text, {
                     variant: "text-sm/normal",
-                    children: f.intl.format(f.t["4e0rMz"], {
+                    children: p.intl.format(p.t["4e0rMz"], {
                         emphasizeHook: (e) => (0, n.jsx)("strong", { children: e }),
                     }),
                 }),
             ],
         }),
-    y = (e) => {
-        let { children: t, widget: i, targetRef: g } = e,
-            { trackUserProfileEditAction: m } = (0, c.KZ)(),
-            O = (e) => {
+    x = (e) => {
+        let { children: t, widget: i, targetRef: l } = e,
+            { trackUserProfileEditAction: o } = (0, d.KZ)(),
+            s = (e) => {
                 if (e.shiftKey) {
-                    (0, s.y8)(i.type),
-                        m({
+                    (0, g.y8)(i.type),
+                        o({
                             action: "WIDGET_REMOVED",
                             widgetEdited: i.type,
                         }),
-                        (0, u.L$)(d.qb.WIDGET_REMOVED);
+                        (0, f.L$)(b.qb.WIDGET_REMOVED);
                     return;
                 }
-                (0, l.ZDy)(
+                (0, a.ZDy)(
                     async () => {
                         let { default: e } = await r.e("70887").then(r.bind(r, 37668));
                         return (t) =>
                             (0, n.jsx)(
                                 e,
-                                p(b({}, t), {
-                                    userId: o.default.getId(),
+                                j(y({}, t), {
+                                    userId: u.default.getId(),
                                     widget: i,
-                                    trackUserProfileEditAction: m,
+                                    trackUserProfileEditAction: o,
                                 }),
                             );
                     },
                     { stackingBehavior: "stack" },
                 );
             };
-        return (0, n.jsx)(l.yRy, {
-            targetElementRef: g,
+        return (0, n.jsx)(a.yRy, {
+            targetElementRef: l,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, n.jsx)(l.v2r, {
+                return (0, n.jsx)(a.v2r, {
                     navId: "user-profile-widget-context-menu",
                     onClose: () => {
-                        (0, a.Zy)(), t();
+                        (0, c.Zy)(), t();
                     },
                     onSelect: () => {},
-                    "aria-label": f.intl.string(f.t.xpSHSk),
-                    children: (0, n.jsx)(l.kSQ, {
-                        children: (0, n.jsx)(l.sNh, {
+                    "aria-label": p.intl.string(p.t.xpSHSk),
+                    children: (0, n.jsx)(a.kSQ, {
+                        children: (0, n.jsx)(a.sNh, {
                             id: "remove-widget",
-                            label: f.intl.string(f.t.Mm07YW),
-                            action: O,
+                            label: p.intl.string(p.t.Mm07YW),
+                            action: s,
                             color: "danger",
-                            icon: l.XHJ,
+                            icon: a.XHJ,
                         }),
                     }),
                 });
@@ -140,26 +143,40 @@ let m = (e) => {
             children: t,
         });
     },
-    j = (e) => {
-        let { widget: t, className: r, buttonRef: i } = e;
+    h = (e) => {
+        let { widget: t, className: r, buttonRef: i } = e,
+            o = (0, g.mR)(t),
+            c = (0, s.Dt)();
         return (0, n.jsx)(m, {
+            widgetTitle: o,
             children: (e) =>
-                (0, n.jsx)(y, {
+                (0, n.jsx)(x, {
                     targetRef: i,
                     widget: t,
                     children: (t) =>
-                        (0, n.jsx)(
-                            l.P3F,
-                            p(
-                                b(
+                        (0, n.jsxs)(
+                            a.P3F,
+                            j(
+                                y(
                                     {
                                         innerRef: i,
-                                        className: r,
+                                        className: l()(O.dragHandleButton, r),
+                                        "data-dnd-name": o,
+                                        "aria-label": p.intl.formatToPlainString(p.t.HWNJJC, { widgetTitle: o }),
+                                        "aria-describedby": c,
                                     },
                                     e,
                                     t,
                                 ),
-                                { children: (0, n.jsx)(l.Vni, { size: "sm" }) },
+                                {
+                                    children: [
+                                        (0, n.jsx)(a.Vni, { size: "sm" }),
+                                        (0, n.jsx)(a.nn4, {
+                                            id: c,
+                                            children: p.intl.string(p.t.bsuqFh),
+                                        }),
+                                    ],
+                                },
                             ),
                         ),
                 }),

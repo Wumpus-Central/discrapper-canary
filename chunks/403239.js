@@ -1,54 +1,86 @@
-n.d(t, { q: () => s }), n(388685);
-var r = n(647438),
-    i = n(574981),
-    l = n(194630),
-    a = n(665379),
-    o = n(592183),
-    c = n(517157);
-function s(e) {
-    let { dropRef: t, dragRef: n, userId: s, widget: u, index: d, disableInteraction: f = !1 } = e,
-        g = (0, c.Z)(s),
-        b = (0, r.useCallback)(
+r.d(t, { q: () => d }), r(388685);
+var n = r(647438),
+    i = r(323946),
+    l = r(574981),
+    o = r(194630),
+    a = r(665379),
+    c = r(481060),
+    s = r(592183),
+    u = r(517157);
+function d(e) {
+    let { dropRef: t, dragRef: r, userId: d, widget: g, index: f, disableInteraction: b = !1 } = e,
+        p = (0, u.Z)(d),
+        O = (0, c.zPA)(),
+        { isDragging: y, currentItem: j } = (0, i.f)((e) => ({
+            isDragging: e.isDragging(),
+            currentItem: e.getItem(),
+        })),
+        m = (0, n.useCallback)(
             (e, t) => {
-                let n = g.slice(),
-                    [r] = n.splice(e, 1);
-                n.splice(t, 0, r), o.Z.setPendingWidgets(n);
+                let r = p.slice(),
+                    [n] = r.splice(e, 1);
+                r.splice(t, 0, n), s.Z.setPendingWidgets(r);
             },
-            [g],
+            [p],
         ),
-        [{ isDragging: p }, m, O] = (0, i.c)({
+        [, v, x] = (0, l.c)({
             type: "WIDGET",
             item: {
-                widgetId: u.id,
-                index: d,
-                widget: u,
+                widgetId: g.id,
+                index: f,
+                widget: g,
+                originalIndex: null != f ? f : 0,
             },
-            canDrag: () => !f,
+            canDrag: () => !b,
             collect: (e) => ({
                 handlerId: e.getHandlerId(),
                 isDragging: e.isDragging(),
             }),
         });
-    (0, r.useEffect)(() => {
-        O((0, a.r)(), { captureDraggingState: !0 });
-    }, [O]);
-    let [j, y] = (0, l.L)({
+    (0, n.useEffect)(() => {
+        x((0, a.r)(), { captureDraggingState: !0 });
+    }, [x]);
+    let [{ dragSourcePosition: h }, w] = (0, o.L)({
         accept: "WIDGET",
-        canDrop: () => !f,
-        collect: (e) => ({ handlerId: e.getHandlerId() }),
-        hover: (e, n) => {
-            var r;
-            if (f || null == t.current || !n.isOver({ shallow: !0 })) return;
+        canDrop: () => !b,
+        collect: (e) => {
+            let t = null,
+                r = e.getItem();
+            return (
+                null != r && e.isOver() && e.canDrop() && r.widgetId !== g.id && (t = r.originalIndex),
+                {
+                    handlerId: e.getHandlerId(),
+                    dragSourcePosition: t,
+                }
+            );
+        },
+        drop: (e) => {
+            let t = null != f ? f : 0;
+            m(e.index, t), (e.index = t);
+        },
+        hover: (e, r) => {
+            var n;
+            if (b || O || null == t.current || !r.isOver({ shallow: !0 })) return;
             let i = e.index,
-                l = null != d ? d : 0;
+                l = null != f ? f : 0;
             if (i === l) return;
-            let a = null == (r = t.current) ? void 0 : r.getBoundingClientRect(),
-                o = (a.bottom - a.top) / 2,
-                c = n.getClientOffset();
+            let o = null == (n = t.current) ? void 0 : n.getBoundingClientRect(),
+                a = (o.bottom - o.top) / 2,
+                c = r.getClientOffset();
             if (null == c) return;
-            let s = c.y - a.top;
-            (!(i < l) || !(s < o)) && ((i > l && s > o) || (b(i, l), (e.index = l)));
+            let s = c.y - o.top;
+            (!(i < l) || !(s < a)) && ((i > l && s > a) || (m(i, l), (e.index = l)));
         },
     });
-    return null == d || f ? { isDragging: !1 } : (m(n), y(t), { isDragging: p });
+    return null == f || b
+        ? {
+              isDragging: !1,
+              dragSourcePosition: null,
+          }
+        : (v(r),
+          w(t),
+          {
+              isDragging: y && (null == j ? void 0 : j.widgetId) === g.id,
+              dragSourcePosition: h,
+          });
 }
