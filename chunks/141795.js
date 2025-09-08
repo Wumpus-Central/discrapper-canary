@@ -1,6 +1,6 @@
 n.d(t, {
     mw: () => j,
-    nH: () => M,
+    nH: () => k,
 }),
     n(415506),
     n(388685),
@@ -144,7 +144,7 @@ var j = (function (e) {
         e
     );
 })({});
-class k {
+class M {
     constructor() {
         C(this, "numUploadAttempts", void 0),
             C(this, "timing", {}),
@@ -181,10 +181,10 @@ class k {
             C(this, "conversionFailureReason", void 0);
     }
 }
-class M extends v.ZP {
+class k extends v.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new M(t, n, r, i);
+            a = new k(t, n, r, i);
         return (
             Object.entries(e).forEach((e) => {
                 let [t, n] = e;
@@ -649,7 +649,7 @@ class M extends v.ZP {
             (this.responseUrl = void 0),
             (this.error = void 0),
             (this.startTime = void 0),
-            (this.uploadAnalytics = new k()),
+            (this.uploadAnalytics = new M()),
             (this.uploadAttempts = 0),
             (this._aborted = !1),
             (this._abortController = new AbortController()),
@@ -704,7 +704,6 @@ class M extends v.ZP {
             pre_compression_file_size: this.preCompressionSize,
             final_state: e,
             mime_type: null != (r = this.mimeType) ? r : "unknown",
-            filename: this.filename,
             num_upload_attempts: null != (i = this.uploadAnalytics.numUploadAttempts) ? i : 1,
             error_code: this.error,
             video_upload_quality: p.ZP.videoUploadQuality,
@@ -769,7 +768,7 @@ class M extends v.ZP {
             C(this, "error", void 0),
             C(this, "reactNativeFilePrepped", !1),
             C(this, "startTime", void 0),
-            C(this, "uploadAnalytics", new k()),
+            C(this, "uploadAnalytics", new M()),
             C(this, "contentHash", void 0),
             C(this, "etag", void 0),
             C(this, "uploadAttempts", 0),
