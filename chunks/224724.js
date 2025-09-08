@@ -1,111 +1,109 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(442837),
     o = n(570140),
     s = n(594174),
-    l = n(836197),
-    c = n(621853),
-    u = n(86419);
-let d = null,
-    f = null,
-    _ = !1,
-    p = {
+    l = n(621853);
+let c = null,
+    u = null,
+    d = !1,
+    f = {
         suggestedGamesIds: [],
         suggestedWishlistGamesIds: [],
     },
-    h = !1,
-    m = !1,
-    g = !1;
-function E(e) {
+    _ = !1,
+    p = !1,
+    h = !1;
+function m(e) {
     let { widgets: t } = e;
-    if (((d = t), null === f)) {
+    if (((c = t), null === u)) {
         let e = s.default.getCurrentUser();
         if (null != e) {
             var n;
-            let t = c.Z.getUserProfile(e.id);
-            f = null != (n = null == t ? void 0 : t.widgets) ? n : [];
+            let t = l.Z.getUserProfile(e.id);
+            u = null != (n = null == t ? void 0 : t.widgets) ? n : [];
         }
     }
 }
-function b() {
-    (d = null), (f = null);
+function g() {
+    (c = null), (u = null);
 }
-function y(e) {
+function E(e) {
     let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-    (p.suggestedGamesIds = t), (p.suggestedWishlistGamesIds = n), (m = !1), (h = !1);
+    (f.suggestedGamesIds = t), (f.suggestedWishlistGamesIds = n), (p = !1), (_ = !1);
 }
-function O() {
-    (h = !0), (m = !1);
+function b() {
+    (_ = !0), (p = !1);
 }
-function v() {
-    (m = !0), (h = !1), (g = !0);
+function y() {
+    (p = !0), (_ = !1), (h = !0);
+}
+function O(e) {
+    d = !0;
+}
+function v(e) {
+    (d = !1), null !== c && ((u = null), (c = null));
 }
 function I(e) {
-    _ = !0;
+    d = !1;
 }
 function T(e) {
-    (_ = !1), null !== d && ((f = null), (d = null));
-}
-function S(e) {
-    _ = !1;
-}
-function A(e) {
     let { applicationId: t } = e;
-    (p.suggestedGamesIds = p.suggestedGamesIds.filter((e) => e !== t)),
-        (p.suggestedWishlistGamesIds = p.suggestedWishlistGamesIds.filter((e) => e !== t));
+    (f.suggestedGamesIds = f.suggestedGamesIds.filter((e) => e !== t)),
+        (f.suggestedWishlistGamesIds = f.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
-class C extends a.ZP.Store {
+class S extends a.ZP.Store {
     getPendingWidgets() {
-        return d;
+        return c;
     }
     getSaveablePendingWidgets() {
-        return null == d ? null : d.filter((e) => !(0, l.W)(e) || e.games.length > 0);
+        return null == c ? null : c.filter((e) => e.isSaveable());
     }
     hasPendingChanges() {
-        return null !== d && (null === f || !i().isEqual(d, f));
+        return null !== c && (null === u || !i().isEqual(c, u));
     }
     hasSaveablePendingChanges() {
         let e = this.getSaveablePendingWidgets();
         if (null == e) return !1;
-        if (null == f) return !0;
-        let t = new Map(f.map((e) => [e.id, e])),
+        if (null == u) return !0;
+        let t = new Map(u.map((e) => [e.id, e])),
             n = new Map(e.map((e) => [e.id, e]));
         for (let [e, r] of n) {
             let n = t.get(e);
-            if (null == n || ((0, l.W)(r) && (0, l.W)(n) && !(0, u.ou)(r.games, n.games, r.type))) return !0;
+            if (null == n || !r.isEqual(n)) return !0;
         }
         for (let [e] of t) if (!n.has(e)) return !0;
         for (let t = 0; t < e.length; t++) {
             var r, i;
-            if ((null == (r = e[t]) ? void 0 : r.id) !== (null == (i = f[t]) ? void 0 : i.id)) return !0;
+            if ((null == (r = e[t]) ? void 0 : r.id) !== (null == (i = u[t]) ? void 0 : i.id)) return !0;
         }
         return !1;
     }
     get isSubmitting() {
-        return _;
+        return d;
     }
     get suggestedFetchError() {
-        return h;
+        return _;
     }
     get suggestedFetchIsLoading() {
-        return m;
-    }
-    get suggestedFetchAttempted() {
-        return g;
-    }
-    get suggestedGameIds() {
         return p;
     }
+    get suggestedFetchAttempted() {
+        return h;
+    }
+    get suggestedGameIds() {
+        return f;
+    }
 }
-let N = new C(o.Z, {
-    WIDGET_PENDING_SET: E,
-    WIDGET_PENDING_SAVE_START: I,
-    WIDGET_PENDING_SAVE_SUCCESS: T,
-    WIDGET_PENDING_SAVE_FAILURE: S,
-    WIDGET_SUGGESTED_FETCH_SUCCESS: y,
-    WIDGET_SUGGESTED_FETCH_FAILURE: O,
-    WIDGET_SUGGESTED_FETCH_START: v,
-    WIDGET_PENDING_CLEAR: b,
-    WIDGET_SUGGESTED_REMOVE_GAME: A,
+let A = new S(o.Z, {
+    WIDGET_PENDING_SET: m,
+    WIDGET_PENDING_SAVE_START: O,
+    WIDGET_PENDING_SAVE_SUCCESS: v,
+    WIDGET_PENDING_SAVE_FAILURE: I,
+    WIDGET_SUGGESTED_FETCH_SUCCESS: E,
+    WIDGET_SUGGESTED_FETCH_FAILURE: b,
+    WIDGET_SUGGESTED_FETCH_START: y,
+    WIDGET_PENDING_CLEAR: g,
+    WIDGET_SUGGESTED_REMOVE_GAME: T,
 });

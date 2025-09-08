@@ -1,9 +1,10 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var r = n(150039),
     i = n(768581),
     a = n(74538),
-    o = n(474936);
-function s(e, t, n) {
+    o = n(836197),
+    s = n(474936);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,10 +17,10 @@ function s(e, t, n) {
         e
     );
 }
-function l(e, t) {
+function c(e, t) {
     return null == t || "" === t ? e : t;
 }
-class c {
+class u {
     get premiumSince() {
         return this._userProfile.premiumSince;
     }
@@ -32,12 +33,16 @@ class c {
     get widgets() {
         return this._userProfile.widgets;
     }
+    get gameWidgets() {
+        var e;
+        return null == (e = this._userProfile.widgets) ? void 0 : e.filter(o.Wc);
+    }
     get primaryColor() {
         var e, t;
         return null != (t = null == (e = this.themeColors) ? void 0 : e[0]) ? t : this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return a.ZP.isPremiumAtLeast(this.premiumType, o.p9.TIER_2);
+        return a.ZP.isPremiumAtLeast(this.premiumType, s.p9.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -145,24 +150,24 @@ class c {
     }
     constructor(e, t) {
         var n, r, i, a;
-        s(this, "userId", void 0),
-            s(this, "guildId", void 0),
-            s(this, "banner", void 0),
-            s(this, "bio", void 0),
-            s(this, "pronouns", void 0),
-            s(this, "accentColor", void 0),
-            s(this, "themeColors", void 0),
-            s(this, "profileEffect", void 0),
-            s(this, "popoutAnimationParticleType", void 0),
-            s(this, "fetchStartedAt", void 0),
-            s(this, "fetchEndedAt", void 0),
-            s(this, "_userProfile", void 0),
-            s(this, "_guildMemberProfile", void 0),
+        l(this, "userId", void 0),
+            l(this, "guildId", void 0),
+            l(this, "banner", void 0),
+            l(this, "bio", void 0),
+            l(this, "pronouns", void 0),
+            l(this, "accentColor", void 0),
+            l(this, "themeColors", void 0),
+            l(this, "profileEffect", void 0),
+            l(this, "popoutAnimationParticleType", void 0),
+            l(this, "fetchStartedAt", void 0),
+            l(this, "fetchEndedAt", void 0),
+            l(this, "_userProfile", void 0),
+            l(this, "_guildMemberProfile", void 0),
             (this.userId = e.userId),
             (this.guildId = null == t ? void 0 : t.guildId),
             (this.banner = null != (n = null == t ? void 0 : t.banner) ? n : e.banner),
-            (this.bio = l(e.bio, null == t ? void 0 : t.bio)),
-            (this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns)),
+            (this.bio = c(e.bio, null == t ? void 0 : t.bio)),
+            (this.pronouns = c(e.pronouns, null == t ? void 0 : t.pronouns)),
             (this.accentColor = e.accentColor),
             (this.themeColors = null != (r = null == t ? void 0 : t.themeColors) ? r : e.themeColors),
             (this.profileEffect = null != (i = null == t ? void 0 : t.profileEffect) ? i : e.profileEffect),

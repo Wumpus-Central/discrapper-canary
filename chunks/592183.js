@@ -1,12 +1,11 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(544891),
     i = n(570140),
     a = n(594174),
     o = n(585483),
     s = n(960048),
-    l = n(86419),
-    c = n(981631);
-let u = {
+    l = n(981631);
+let c = {
     setPendingWidgets(e) {
         i.Z.dispatch({
             type: "WIDGET_PENDING_SET",
@@ -18,10 +17,10 @@ let u = {
         let n = null == (t = a.default.getCurrentUser()) ? void 0 : t.id;
         if (null == n) return;
         i.Z.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
-        let o = e.map(l.vH);
+        let o = e.map((e) => e.toSubmission());
         try {
             let e = await r.tn.put({
-                url: c.ANM.USER_PROFILE_WIDGETS,
+                url: l.ANM.USER_PROFILE_WIDGETS,
                 body: { widgets: o },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -44,9 +43,9 @@ let u = {
     async fetchSuggestedGames() {
         i.Z.dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
         try {
-            var e, t, n, a, o, l;
+            var e, t, n, a, o, c;
             let u = await r.tn.get({
-                url: c.ANM.USER_PROFILE_SUGGESTED_GAMES,
+                url: l.ANM.USER_PROFILE_SUGGESTED_GAMES,
                 rejectWithError: !0,
             });
             ((null == (e = u.body) ? void 0 : e.suggested_games) == null ||
@@ -56,7 +55,7 @@ let u = {
                     type: "WIDGET_SUGGESTED_FETCH_SUCCESS",
                     suggestedGamesIds: null != (o = null == (n = u.body) ? void 0 : n.suggested_games) ? o : [],
                     suggestedWishlistGamesIds:
-                        null != (l = null == (a = u.body) ? void 0 : a.suggested_wishlist_games) ? l : [],
+                        null != (c = null == (a = u.body) ? void 0 : a.suggested_wishlist_games) ? c : [],
                 });
         } catch (e) {
             throw (i.Z.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" }), s.Z.captureException(e), e);
@@ -69,6 +68,6 @@ let u = {
         });
     },
     notifyPendingWidgets() {
-        o.S.dispatch(c.CkL.SHAKE_PROFILE_MODAL), o.S.dispatch(c.CkL.EMPHASIZE_NOTICE);
+        o.S.dispatch(l.CkL.SHAKE_PROFILE_MODAL), o.S.dispatch(l.CkL.EMPHASIZE_NOTICE);
     },
 };

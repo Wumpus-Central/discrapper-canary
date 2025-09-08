@@ -7,13 +7,13 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(296009),
-    s = n(442837),
-    c = n(481060),
-    u = n(355467),
-    d = n(981312),
-    p = n(314897),
-    f = n(351402),
+    o = n(442837),
+    s = n(481060),
+    c = n(355467),
+    u = n(981312),
+    d = n(314897),
+    p = n(351402),
+    f = n(931847),
     h = n(836197),
     g = n(206599),
     m = n(5136),
@@ -76,24 +76,18 @@ function P(e, t) {
 function x(e) {
     var { widget: t } = e,
         n = P(e, ["widget"]);
-    switch (t.type) {
-        case o.l.FAVORITE_GAMES:
-        case o.l.CURRENT_GAMES:
-        case o.l.WANT_TO_PLAY_GAMES:
-        case o.l.PLAYED_GAMES:
-            return (0, r.jsx)(v.Z, j({ widget: t }, n));
-        case o.l.APPLICATION:
-            return (0, r.jsx)(O.Z, j({ widget: t }, n));
-        default:
-            return null;
-    }
+    return t instanceof f.q
+        ? (0, r.jsx)(O.Z, j({ widget: t }, n))
+        : t instanceof h.zy
+          ? (0, r.jsx)(v.Z, j({ widget: t }, n))
+          : null;
 }
 function A() {
     return (0, r.jsxs)("div", {
         className: N.ukTeenDisclaimer,
         children: [
-            (0, r.jsx)(c.d3s, { size: "xs" }),
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(s.d3s, { size: "xs" }),
+            (0, r.jsx)(s.Text, {
                 "aria-label": T.intl.string(T.t["7blcz8"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
@@ -105,23 +99,24 @@ function A() {
 function Z(e) {
     let { user: t, guildId: n, channelId: l } = e,
         a = (0, _.Z)(t.id),
-        o = (0, s.e7)([p.default], () => p.default.getId() === t.id),
-        c = (() => {
-            let [e, t] = (0, s.Wu)([f.Z], () => [f.Z.ipCountryCode, f.Z.ipCountryCodeRequest]),
-                n = (0, d.U)();
+        s = (0, o.e7)([d.default], () => d.default.getId() === t.id),
+        f = (() => {
+            let [e, t] = (0, o.Wu)([p.Z], () => [p.Z.ipCountryCode, p.Z.ipCountryCodeRequest]),
+                n = (0, u.U)();
             return (
                 i.useEffect(() => {
-                    null == e && null == t && n && (0, u.GE)();
+                    null == e && null == t && n && (0, c.GE)();
                 }, [e, t, n]),
                 "GB" === e && n
             );
         })(),
-        m = 0 === a.length && o;
-    return ((0, b.ZP)(a.filter(h.W)), (0, g.J)(o, a), m)
+        m = 0 === a.length && s,
+        O = a.filter(h.Wc);
+    return ((0, b.ZP)(O), (0, g.J)(s, O), m)
         ? (0, r.jsx)(S.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  o && c && (0, r.jsx)(A, {}),
+                  s && f && (0, r.jsx)(A, {}),
                   a.map((e, i) =>
                       (0, r.jsx)(
                           x,
@@ -135,7 +130,7 @@ function Z(e) {
                           e.id,
                       ),
                   ),
-                  o && (0, r.jsx)(E.Z, {}),
+                  s && (0, r.jsx)(E.Z, {}),
               ],
           });
 }

@@ -285,10 +285,11 @@ function N(e, t) {
         );
 }
 function R(e, t, n, r) {
+    var i;
     (0, u.m)(
         {
             name: l.b.WIDGET,
-            widget_id: t.id,
+            widget_id: null != (i = t.id) ? i : "",
             user_id: e,
             widget: t,
         },

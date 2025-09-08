@@ -138,7 +138,7 @@ function j(e) {
                   }),
             X &&
                 (0, r.jsx)(S.Z, {
-                    widgets: null == j ? void 0 : j.widgets,
+                    widgets: null == j ? void 0 : j.gameWidgets,
                     onClick: () => {
                         null == U || U({ section: P.oh.WIDGETS });
                     },

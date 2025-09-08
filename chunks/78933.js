@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(530),
     L = n(309494),
     j = n(4517),
-    k = n(252748),
-    M = n(420654),
+    M = n(252748),
+    k = n(420654),
     U = n(785184),
     G = n(695346),
     B = n(158776),
@@ -181,7 +181,7 @@ function ec(e) {
         },
         eL = (0, y.P)({ location: "UserProfileAccountPopout" }),
         ej = (null == eu ? void 0 : eu.widgets) != null && eu.widgets.length > 0,
-        ek = eL && ej;
+        eM = eL && ej;
     return (0, r.jsx)(f.Gt, {
         value: ed,
         children: (0, r.jsx)(b.Mt, {
@@ -250,15 +250,15 @@ function ec(e) {
                                             ],
                                         }),
                                     }),
-                                    (0, r.jsx)(M.Z, {
+                                    (0, r.jsx)(k.Z, {
                                         user: t,
                                         bio: null == eu ? void 0 : eu.bio,
                                         hidePersonalInformation: eb,
                                         onClose: n,
                                     }),
-                                    ek &&
-                                        (0, r.jsx)(k.Z, {
-                                            widgets: eu.widgets,
+                                    eM &&
+                                        (0, r.jsx)(M.Z, {
+                                            widgets: eu.gameWidgets,
                                             onClick: () => {
                                                 n(), ex({ section: J.oh.WIDGETS });
                                             },

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(202841),
+    l = n(261616),
     a = n(597312),
     o = n(481060),
     s = n(727637),
@@ -63,14 +63,14 @@ function D(e) {
         k = (0, g.ZP)(n.id),
         U = (0, c.ZP)(),
         B = i.useRef(Date.now()),
-        { analyticsLocations: F } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        { analyticsLocations: G } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
         H = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: n.id,
             channelId: w.id,
         }),
-        G = i.useRef(null),
-        V = (0, s.Z)(G),
+        F = i.useRef(null),
+        V = (0, s.Z)(F),
         z = (0, b.$m)(),
         W = (0, o.q_F)({
             opacity: +(null != z.interactionType),
@@ -80,7 +80,7 @@ function D(e) {
             (0, y.openUserProfileModal)(
                 M(
                     {
-                        sourceAnalyticsLocations: F,
+                        sourceAnalyticsLocations: G,
                         hideRestrictedProfile: !0,
                     },
                     H,
@@ -91,7 +91,7 @@ function D(e) {
         Y = (0, m.P)({ location: "UserProfileSidebar" }),
         K = (null == k ? void 0 : k.widgets) != null && k.widgets.length > 0;
     return (0, r.jsx)(d.Gt, {
-        value: F,
+        value: G,
         children: (0, r.jsx)(h.Mt, {
             value: H,
             openedAt: B.current,
@@ -101,7 +101,7 @@ function D(e) {
             children: (0, r.jsx)(b.NJ, {
                 value: z,
                 children: (0, r.jsxs)(x.Z, {
-                    ref: G,
+                    ref: F,
                     user: n,
                     displayProfile: k,
                     themeType: A.l.SIDEBAR,
@@ -171,7 +171,7 @@ function D(e) {
                                     (0, r.jsx)("div", {
                                         className: R.widgetBreadcrumb,
                                         children: (0, r.jsx)(P.Z, {
-                                            widgets: k.widgets,
+                                            widgets: k.gameWidgets,
                                             onClick: () => {
                                                 null == q || q({ section: N.oh.WIDGETS });
                                             },
@@ -186,7 +186,7 @@ function D(e) {
                         !D &&
                             (0, r.jsx)(L, {
                                 handleOpenProfile: q,
-                                analyticsLocations: F,
+                                analyticsLocations: G,
                                 context: H,
                             }),
                         (null == k ? void 0 : k.profileEffect) != null &&

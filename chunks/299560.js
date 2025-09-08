@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,113 +8,113 @@ var r = n(951288),
     c = n(812206),
     u = n(835473),
     d = n(804919),
-    p = n(86419),
-    f = n(872269),
-    h = n(248554),
-    g = n(228168),
-    m = n(388032),
-    b = n(229870);
-let _ = {
+    p = n(931847),
+    f = n(836197),
+    h = n(86419),
+    g = n(872269),
+    m = n(248554),
+    b = n(228168),
+    _ = n(388032),
+    O = n(229870);
+let E = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {
             variant: "details",
             applicationId: d.L.LEAGUE_OF_LEGENDS,
         },
-        getAriaLabel: () => m.intl.string(m.t.xJtdIi),
+        getAriaLabel: () => _.intl.string(_.t.xJtdIi),
     },
     [o.l.CURRENT_GAMES]: {
         placeholder: {
             variant: "details",
             applicationId: d.L.VALORANT,
         },
-        getAriaLabel: () => m.intl.string(m.t.Ae8tRk),
+        getAriaLabel: () => _.intl.string(_.t.Ae8tRk),
     },
     [o.l.PLAYED_GAMES]: {
         placeholder: {
             variant: "grid",
             applicationIds: [d.L.PEAK, d.L.APEX_LEGENDS, d.L.REPO, d.L.BALDURS_GATE_3],
         },
-        getAriaLabel: () => m.intl.string(m.t["pBR+4u"]),
+        getAriaLabel: () => _.intl.string(_.t["pBR+4u"]),
     },
     [o.l.WANT_TO_PLAY_GAMES]: {
         placeholder: {
             variant: "grid",
             applicationIds: [d.L.MARVEL_RIVALS, d.L.WORLD_OF_WARCRAFT, d.L.RUST, d.L.DELTA_FORCE],
         },
-        getAriaLabel: () => m.intl.string(m.t.NtoBi4),
+        getAriaLabel: () => _.intl.string(_.t.NtoBi4),
     },
     [o.l.APPLICATION]: {
         placeholder: { variant: "details" },
         getAriaLabel: (e) => {
             var t, n;
-            return m.intl.formatToPlainString(m.t.KfGahI, {
+            return _.intl.formatToPlainString(_.t.KfGahI, {
                 applicationName:
                     null != (n = null == (t = c.Z.getApplication(e.applicationId)) ? void 0 : t.name) ? n : "",
             });
         },
     },
 };
-function O(e) {
+function y(e) {
     let { widgetType: t, onAddWidget: n, size: l = "default", loading: c = !1, trackUserProfileEditAction: d } = e,
-        { placeholder: m, getAriaLabel: O } = _[t],
-        E = "small" === l,
-        y = i.useMemo(() => {
+        { placeholder: _, getAriaLabel: y } = E[t],
+        v = "small" === l,
+        I = i.useMemo(() => {
             switch (t) {
                 case o.l.CURRENT_GAMES:
                 case o.l.FAVORITE_GAMES:
                 case o.l.PLAYED_GAMES:
                 case o.l.WANT_TO_PLAY_GAMES:
-                    return {
-                        id: t,
+                    return new f.zy({
                         type: t,
                         games: [],
-                    };
+                    });
                 case o.l.APPLICATION:
-                    return {
-                        id: t,
+                    return new p.q({
                         type: t,
                         applicationId: "",
-                    };
+                    });
             }
         }, [t]);
-    (0, u.q)(y.type === o.l.APPLICATION ? y.applicationId : null);
-    let v = i.useCallback(() => {
+    (0, u.q)(I.type === o.l.APPLICATION ? I.applicationId : null);
+    let C = i.useCallback(() => {
         c ||
-            ((0, p.qH)(t, y),
+            ((0, h.qH)(t, I),
             d({
                 action: "WIDGET_ADDED",
                 widgetEdited: t,
             }),
-            (0, f.L$)(g.qb.WIDGET_ADDED),
+            (0, g.L$)(b.qb.WIDGET_ADDED),
             null == n || n());
-    }, [c, t, y, d, n]);
+    }, [c, t, I, d, n]);
     return (0, r.jsxs)(s.P3F, {
-        className: a()(b.addButtonContainer, E && b.sizeSmall, c && b.loading),
-        onClick: v,
-        "aria-label": O(y),
+        className: a()(O.addButtonContainer, v && O.sizeSmall, c && O.loading),
+        onClick: C,
+        "aria-label": y(I),
         "aria-busy": c,
         children: [
-            "details" === m.variant
-                ? (0, r.jsx)(h.i, {
-                      applicationId: m.applicationId,
+            "details" === _.variant
+                ? (0, r.jsx)(m.i, {
+                      applicationId: _.applicationId,
                       size: l,
                   })
-                : (0, r.jsx)(h.c, {
-                      applicationIds: m.applicationIds,
+                : (0, r.jsx)(m.c, {
+                      applicationIds: _.applicationIds,
                       size: l,
                   }),
             (0, r.jsxs)("div", {
-                className: b.overlay,
+                className: O.overlay,
                 children: [
                     (0, r.jsx)(s.oFk, {
                         size: "md",
                         color: "currentColor",
-                        className: b.addButton,
+                        className: O.addButton,
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: (0, p.mR)(y),
+                        children: (0, h.mR)(I),
                     }),
                 ],
             }),

@@ -1,17 +1,18 @@
 r.d(t, {
-    FX: () => b,
-    ZP: () => f,
-    kN: () => g,
-    kO: () => u,
-    qU: () => d,
+    FX: () => p,
+    ZP: () => g,
+    kN: () => b,
+    kO: () => d,
+    qU: () => f,
 }),
     r(388685);
 var n = r(647438),
     i = r(442837),
     l = r(224706),
     o = r(669764),
-    a = r(77498);
-function c(e) {
+    a = r(77498),
+    c = r(836197);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -36,7 +37,7 @@ function c(e) {
     }
     return e;
 }
-function s(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,10 +55,10 @@ function s(e, t) {
         e
     );
 }
-function u(e) {
+function d(e) {
     return (0, i.e7)([o.Z], () => o.Z.isFetching(e));
 }
-function d(e) {
+function f(e) {
     n.useEffect(() => {
         if (e.length > 0) {
             let t = e.filter((e) => o.Z.canFetch(e));
@@ -65,8 +66,8 @@ function d(e) {
         }
     }, [e]);
 }
-function f(e) {
-    d(
+function g(e) {
+    f(
         n.useMemo(
             () =>
                 (function (e) {
@@ -84,7 +85,7 @@ function f(e) {
         ),
     );
 }
-function g(e) {
+function b(e) {
     let [t, r] = (0, i.Wu)([o.Z], () => [o.Z.numNoDataAvailable(), o.Z.numSupplementalGames()]);
     return n.useMemo(() => {
         let t = {};
@@ -96,22 +97,24 @@ function g(e) {
         );
     }, [e, t, r]);
 }
-function b(e) {
-    let t = g(e.games.map((e) => e.applicationId));
+function p(e) {
+    let t = b(e.games.map((e) => e.applicationId));
     return n.useMemo(
         () =>
-            s(c({}, e), {
-                games: e.games.map((e) => {
-                    let r = t[e.applicationId];
-                    if (null != r)
-                        return s(c({}, e), {
-                            gameName: r.name,
-                            imageSrc: r.coverImageUrl,
-                        });
-                    let n = a.Z.getDetectableGame(e.applicationId);
-                    return s(c({}, e), { gameName: null == n ? void 0 : n.name });
+            new c.zy(
+                u(s({}, e), {
+                    games: e.games.map((e) => {
+                        let r = t[e.applicationId];
+                        if (null != r)
+                            return u(s({}, e), {
+                                gameName: r.name,
+                                imageSrc: r.coverImageUrl,
+                            });
+                        let n = a.Z.getDetectableGame(e.applicationId);
+                        return u(s({}, e), { gameName: null == n ? void 0 : n.name });
+                    }),
                 }),
-            }),
+            ),
         [e, t],
     );
 }
