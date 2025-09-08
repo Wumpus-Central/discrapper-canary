@@ -10,7 +10,6 @@ var i = (function (e) {
         (e.FOCUSING = "focusing"),
         (e.BRB = "brb"),
         (e.EATING = "eating"),
-        (e.IN_TRANSIT = "in-transit"),
         (e.WATCHING = "watching"),
         (e.CUSTOM = "custom"),
         e
