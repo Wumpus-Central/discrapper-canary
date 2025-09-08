@@ -156,27 +156,29 @@ let G = (0, h.$)(function (e) {
         ey = i.useRef(null),
         [e_, eC] = i.useState(!1),
         [ev, ex] = i.useState(!1),
-        eO = (null == eg ? void 0 : eg.session_id) != null,
-        ej = () => {
+        [eO, ej] = i.useState(!1),
+        eE = ev || eO,
+        eS = (null == eg ? void 0 : eg.session_id) != null,
+        eI = () => {
             eC(!e_);
         },
-        eE = () => {
-            (ee || eb || eO) && (null == el || el(h.id));
+        eP = () => {
+            (ee || eb || eS) && (null == el || el(h.id));
         },
-        eS = i.useMemo(
+        eZ = i.useMemo(
             () =>
                 new o.sW(500, () => {
                     ex(!0);
                 }),
             [],
         ),
-        eI = (e) => {
-            e && eo ? eS.delay() : !e && eS.isDelayed() && eS.cancel();
+        eT = (e) => {
+            e && eo ? eZ.delay() : !e && eZ.isDelayed() && eZ.cancel();
         },
-        eP = (e) => {
-            e && (eS.cancel(), ex(!1));
+        eN = (e) => {
+            e && (eZ.cancel(), ex(!1));
         },
-        eZ = () => {
+        eA = () => {
             if (!(ee && (0, C.p9)(U, A.Z, Z.Z, T.Z, b.Z)[0])) return;
             let e = {
                 streamType: R.lo.GUILD,
@@ -188,7 +190,7 @@ let G = (0, h.$)(function (e) {
                 et ? ((0, v.Z)(e), c.Z.selectParticipant(e.channelId, (0, _.V9)(e))) : (0, p.iV)(e),
                 null == el || el(h.id);
         },
-        eT = (e) => {
+        ew = (e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
@@ -213,9 +215,15 @@ let G = (0, h.$)(function (e) {
                     );
             });
         },
-        eN = (e) =>
+        eR = (e) =>
             eh
-                ? (0, r.jsx)(O.$, k(L({}, e), { channel: U }))
+                ? (0, r.jsx)(
+                      O.$,
+                      k(L({}, e), {
+                          channel: U,
+                          onEditStatus: ej,
+                      }),
+                  )
                 : null != em
                   ? (0, r.jsx)(
                         j.I,
@@ -225,30 +233,30 @@ let G = (0, h.$)(function (e) {
                         }),
                     )
                   : null,
-        eA = () =>
+        eM = () =>
             (0, r.jsx)(E.Z, {
                 userId: h.id,
                 channel: U,
             }),
-        ew = () =>
+        eD = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, r.jsx)(x.Z, {
                       user: h,
                       channel: U,
-                      onWatch: eZ,
+                      onWatch: eA,
                       previewIsOpen: eo,
                       location: ep,
                   }),
-        eR = (0, r.jsx)("div", {
+        eL = (0, r.jsx)("div", {
             className: D.draggable,
             "data-dnd-name": U.name,
             onMouseEnter: eu
                 ? void 0
                 : () => {
-                      (ee || eb || eO) && !e_ && (null == ei || ei(h.id));
+                      (ee || eb || eS) && !e_ && (null == ei || ei(h.id));
                   },
-            onMouseLeave: eu ? void 0 : eE,
+            onMouseLeave: eu ? void 0 : eP,
             children: (0, r.jsx)(S.Z, {
                 clickTrap:
                     (null == h ? void 0 : h.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && e_,
@@ -287,9 +295,9 @@ let G = (0, h.$)(function (e) {
                                 avatarContainerClass: a()({ [D.userAvatar]: !0 }),
                                 disabled: eu && !t,
                                 selected: e_,
-                                onClick: t ? void 0 : ej,
-                                onDoubleClick: eZ,
-                                onContextMenu: eT,
+                                onClick: t ? void 0 : eI,
+                                onDoubleClick: eA,
+                                onContextMenu: ew,
                                 guildId: U.guild_id,
                                 isSelf: eh,
                                 application: ef,
@@ -333,15 +341,15 @@ let G = (0, h.$)(function (e) {
                         }
                         let o = () => null;
                         return (
-                            eb && ev ? (o = eN) : ee ? (o = ew) : eO && h.id !== P.default.getId() && (o = eA),
+                            eb && eE ? (o = eR) : ee ? (o = eD) : eS && h.id !== P.default.getId() && (o = eM),
                             (0, r.jsx)(s.yRy, {
                                 targetElementRef: ey,
                                 position: "right",
                                 renderPopout: o,
-                                shouldShow: ea && !e_,
-                                onRequestClose: eE,
-                                align: eb && ev && !eh ? "center" : void 0,
-                                spacing: eb && ev ? 8 : 0,
+                                shouldShow: (ea || (eb && eO)) && !e_,
+                                onRequestClose: eP,
+                                align: eb && eE && !eh ? "center" : void 0,
+                                spacing: eb && eE ? 8 : 0,
                                 children: () =>
                                     (0, r.jsx)(
                                         I.ZP,
@@ -349,8 +357,8 @@ let G = (0, h.$)(function (e) {
                                             ref: ey,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,
-                                            handleHoverHangStatus: eI,
-                                            handleHoverIcons: eP,
+                                            handleHoverHangStatus: eT,
+                                            handleHoverIcons: eN,
                                         }),
                                     ),
                             })
@@ -358,5 +366,5 @@ let G = (0, h.$)(function (e) {
                     })(e),
             }),
         });
-    return $ ? J(eR) : eR;
+    return $ ? J(eL) : eL;
 });
