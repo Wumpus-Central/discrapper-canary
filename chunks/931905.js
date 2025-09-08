@@ -2,49 +2,49 @@ n.d(t, {
     h: () => c,
     m: () => u,
 });
-var i = n(951288);
+var r = n(951288);
 n(647438);
-var r = n(755721),
+var i = n(159691),
     l = n(481060),
     a = n(17894),
     o = n(388032),
     s = n(989646);
 let c = (e) => {
-    let { onConfirm: t, onCancel: n, title: r, subtitle: c, confirmCta: u, showOpenDiscord: d = !0 } = e;
-    return (0, i.jsxs)("div", {
+    let { onConfirm: t, onCancel: n, title: c, subtitle: u, confirmCta: d, showOpenDiscord: m = !0 } = e;
+    return (0, r.jsxs)("div", {
         className: s.confirmationContainer,
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(l.X6q, {
                 className: s.confirmationHeader,
                 variant: "heading-lg/extrabold",
-                children: r,
+                children: c,
             }),
-            null != c
-                ? (0, i.jsx)(l.Text, {
+            null != u
+                ? (0, r.jsx)(l.Text, {
                       className: s.confirmationSubtitle,
                       variant: "text-sm/normal",
                       color: "header-secondary",
-                      children: c,
+                      children: u,
                   })
                 : null,
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: s.buttonContainer,
                 children: [
-                    d &&
-                        (0, i.jsx)(l.zxk, {
+                    m &&
+                        (0, r.jsx)(i.zx, {
                             variant: "primary",
                             text: o.intl.string(o.t["8L5bZG"]),
                             fullWidth: !0,
                             onClick: () => (0, a.Z)("application_sub_mweb_success_modal"),
                         }),
-                    (0, i.jsx)(l.zxk, {
+                    (0, r.jsx)(i.zx, {
                         variant: "secondary",
-                        text: u,
+                        text: d,
                         fullWidth: !0,
                         onClick: t,
                     }),
                     null != n &&
-                        (0, i.jsx)(l.zxk, {
+                        (0, r.jsx)(i.zx, {
                             variant: "secondary",
                             text: o.intl.string(o.t.iAfxo6),
                             fullWidth: !0,
@@ -57,37 +57,36 @@ let c = (e) => {
 };
 function u(e) {
     let { onConfirm: t, tierName: n, subscription: c } = e;
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: s.confirmationContainer,
         children: [
-            (0, i.jsx)(l.X6q, {
+            (0, r.jsx)(l.X6q, {
                 className: s.confirmationHeader,
                 variant: "heading-lg/extrabold",
                 children: o.intl.format(o.t["wLFT6+"], { tier: n }),
             }),
-            (0, i.jsx)(l.Text, {
+            (0, r.jsx)(l.Text, {
                 className: s.confirmationSubtitle,
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: o.intl.format(o.t.OsAK9v, { timestamp: null == c ? void 0 : c.currentPeriodEnd }),
             }),
-            (0, i.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: s.buttonContainer,
                 children: [
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: s.__invalid_openDiscordButton,
-                        children: (0, i.jsx)(l.zxk, {
+                        children: (0, r.jsx)(i.zx, {
                             variant: "primary",
                             text: o.intl.string(o.t["8L5bZG"]),
                             onClick: () => (0, a.Z)("application_sub_mweb_success_modal"),
                         }),
                     }),
-                    (0, i.jsx)(r.zx, {
-                        className: s.__invalid_doneButton,
-                        look: r.zx.Looks.BLANK,
+                    (0, r.jsx)(i.zx, {
+                        variant: "secondary",
+                        text: o.intl.string(o.t.nlkyw8),
                         onClick: t,
-                        children: o.intl.string(o.t.nlkyw8),
                     }),
                 ],
             }),
