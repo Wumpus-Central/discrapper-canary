@@ -66,6 +66,7 @@ let E = {
             g(u.E.DARK_SIDEBAR, (0, i.Zp)()),
             g(u.E.SATURATION_LEVEL_DECREASED, c.Z.saturation < 1),
             g(u.E.ROLE_STYLE_ADJUSTED, "username" !== c.Z.roleStyle),
-            g(u.E.SYNC_PROFILE_THEME_WITH_USER_THEME, c.Z.syncProfileThemeWithUserTheme);
+            g(u.E.SYNC_PROFILE_THEME_WITH_USER_THEME, c.Z.syncProfileThemeWithUserTheme),
+            g(u.E.CONTRAST_LEVEL_INCREASED, c.Z.isHighContrastModeEnabled);
     },
 };
