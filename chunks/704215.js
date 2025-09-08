@@ -454,6 +454,8 @@ var r = (function (e) {
             (e[(e.CHURN_DISCOUNT_PREMIUM_TAB_BADGE = 592)] = "CHURN_DISCOUNT_PREMIUM_TAB_BADGE"),
             (e[(e.DOUBLE_TAP_TO_REACT_UPSELL = 593)] = "DOUBLE_TAP_TO_REACT_UPSELL"),
             (e[(e.NITRO_DROP_REWARD = 594)] = "NITRO_DROP_REWARD"),
+            (e[(e.SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_BADGE = 595)] =
+                "SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_BADGE"),
             e
         );
     })({}),
