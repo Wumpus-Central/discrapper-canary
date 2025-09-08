@@ -3,4 +3,5 @@ e.exports = {
     group: "group__7116a",
     separator: "separator__7116a",
     icon: "icon__7116a",
+    input: "input__7116a",
 };
