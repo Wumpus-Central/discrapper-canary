@@ -19,7 +19,7 @@ var i = n(442837),
     b = n(709054),
     y = n(915553),
     O = n(967249),
-    v = n(978595),
+    v = n(658805),
     I = n(388032);
 function T(e, t, n) {
     return (
@@ -81,18 +81,15 @@ function N(e) {
             id: N.id,
             icon: N.icon,
         }),
-        k = (0, i.e7)([f.ZP, h.Z], () =>
-            null != A.application
-                ? f.ZP.getVisibleRunningGames().find((e) => {
-                      let { id: t } = e;
-                      if (null == A.application) return !1;
-                      if (t === A.application.id) return !0;
-                      let n = h.Z.getGameByName(A.application.name);
-                      return null != n && t === n.id;
-                  })
-                : null,
+        M = (0, i.e7)([f.ZP, h.Z], () =>
+            f.ZP.getVisibleRunningGames().find((e) => {
+                let { id: t } = e;
+                if (t === N.id) return !0;
+                let n = h.Z.getGameByApplication(N);
+                return null != n && t === n.id;
+            }),
         ),
-        M = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
+        k = (0, i.e7)([p.Z], () => p.Z.getCurrentUserActiveStream()),
         U = (0, i.e7)([m.Z], () => m.Z.getChannelId()),
         G = b.default.extractTimestamp(A.id) + y.O < Date.now(),
         B = (0, r.jsx)(r.Fragment, { children: (0, o._0)(A, R, T) }),
@@ -100,11 +97,11 @@ function N(e) {
     return (
         G
             ? (t = I.intl.string(v.default.u4QmWl))
-            : null != M
+            : null != k
               ? (t = I.intl.string(v.default.P0wwmJ))
               : U !== R.id
                 ? (t = I.intl.string(v.default.qRXatr))
-                : null == k && (t = I.intl.string(v.default["43zohI"])),
+                : null == M && (t = I.intl.string(v.default["43zohI"])),
         (0, r.jsx)(c.W, {
             header: I.intl.string(v.default.nAyuPj),
             title: N.name,
@@ -122,9 +119,9 @@ function N(e) {
                               trackingArea: u.j_.STREAM,
                               disabledReason: t,
                               onClick: () => {
-                                  null != k &&
+                                  null != M &&
                                       ((0, E.isWindows)()
-                                          ? (0, _.Z)(k.pid)
+                                          ? (0, _.Z)(M.pid)
                                           : (0, a.ZDy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("38697"),

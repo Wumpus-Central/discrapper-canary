@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(831506),
     L = n(77498),
     j = n(283595),
-    k = n(293273),
-    M = n(158776),
+    M = n(293273),
+    k = n(158776),
     U = n(885110),
     G = n(594174),
     B = n(181106),
@@ -61,7 +61,7 @@ var r = n(951288),
     el = n(967249),
     ec = n(616922),
     eu = n(388032),
-    ed = n(463736);
+    ed = n(723295);
 let ef = 8;
 function e_(e) {
     let { partyMembers: t, partySize: n, maxPartySize: i, guildId: a, activityActionType: o } = e,
@@ -343,17 +343,17 @@ function eb(e) {
             presenceActivity: x,
         } = e,
         j = (0, v.A)(S),
-        k = (0, p.ye)(S),
-        { bot: M } = S,
+        M = (0, p.ye)(S),
+        { bot: k } = S,
         U = F.ZP.getApplicationIconURL({
             id: S.id,
             icon: S.icon,
-            bot: M,
+            bot: k,
         }),
         { staticBannerSrc: G, videoBannerSrc: Z, bannerAspectRatio: V } = (0, E.E)(S),
         H = !(0, et.Z)(x, P, S.id),
         Y = (0, X.H)(P),
-        q = (0, l.e7)([L.Z], () => L.Z.getGameByName(S.name), [S.name]),
+        q = (0, l.e7)([L.Z], () => L.Z.getGameByApplication(S), [S]),
         { openGameProfileModal: J, isGameLaunchable: $ } = eg(S.id, P.author.id),
         { openGameProfileModal: er, isGameLaunchable: ea } = eg(null == q ? void 0 : q.id, P.author.id),
         eo = (0, ei.Z)({
@@ -381,7 +381,7 @@ function eb(e) {
             currentUserId: C,
             message: P,
             application: S,
-            isEmbeddedApplication: k,
+            isEmbeddedApplication: M,
             isFrameApplication: j,
             isGameLaunchable: $,
         }),
@@ -486,7 +486,7 @@ function eb(e) {
             [S.id, $, ea, null == q ? void 0 : q.id, ec],
         ),
         eI = (0, b.G)(S),
-        eT = i.useMemo(() => (null != J ? J : null != er ? er : null != eI && k ? eI : void 0), [k, J, er, eI]),
+        eT = i.useMemo(() => (null != J ? J : null != er ? er : null != eI && M ? eI : void 0), [M, J, er, eI]),
         eS = i.useMemo(() => {
             let e = [];
             return H || null == eO ? H && null != ev && e.push(ev) : e.push(eO), e;
@@ -614,19 +614,19 @@ function ey(e) {
     let { analyticsLocations: a, app: o, channel: s, message: c, hideParty: u, onView: d } = e,
         f = (0, g.O)(o),
         _ = (0, l.e7)([w.default], () => w.default.getId()),
-        p = (0, l.e7)([M.Z], () => {
-            if (null == c.application) return M.Z.findActivity(c.author.id, (e) => e.type === es.IIU.LISTENING);
+        p = (0, l.e7)([k.Z], () => {
+            if (null == c.application) return k.Z.findActivity(c.author.id, (e) => e.type === es.IIU.LISTENING);
             {
                 let e = c.author.id;
                 return (
                     (0, X.H)(c) && (e = e === _ && s.isPrivate() ? s.getRecipientId() : _),
-                    M.Z.getApplicationActivity(e, c.application.id)
+                    k.Z.getApplicationActivity(e, c.application.id)
                 );
             }
         }, [c, s, _]),
-        h = (0, l.e7)([k.Z, U.Z], () => {
+        h = (0, l.e7)([M.Z, U.Z], () => {
             var e;
-            return null != (e = k.Z.getApplicationActivity(f.id)) ? e : U.Z.getApplicationActivity(f.id, !0);
+            return null != (e = M.Z.getApplicationActivity(f.id)) ? e : U.Z.getApplicationActivity(f.id, !0);
         }, [f.id]),
         m = (0, l.Wu)([x.Z], () => {
             var e;

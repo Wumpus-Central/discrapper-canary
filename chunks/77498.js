@@ -32,8 +32,8 @@ let g = "GameStoreReportedGames",
     O = {},
     v = {},
     I = null != (i = s.K.get(g)) ? i : {},
-    S = "",
-    T = null;
+    T = "",
+    S = null;
 function A(e) {
     var t, n, r, i, a, o, s, l, c;
     return {
@@ -85,20 +85,20 @@ function w() {
 }
 function D(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && S !== n && (S = n), t)) N(A(e));
-    (r = void 0), (T = Date.now());
+    for (let e of (null != n && T !== n && (T = n), t)) N(A(e));
+    (r = void 0), (S = Date.now());
 }
 class x extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
-            (null != e.detectableGamesEtag && (S = e.detectableGamesEtag),
+            (null != e.detectableGamesEtag && (T = e.detectableGamesEtag),
             null == (t = e.detectableGames) || t.forEach((e) => N(e)));
     }
     getState() {
         return (0, p.isDesktop)()
             ? {
-                  detectableGamesEtag: S,
+                  detectableGamesEtag: T,
                   detectableGames: y.values(),
               }
             : {
@@ -117,6 +117,14 @@ class x extends (a = o.ZP.PersistedStore) {
         let t = e.toLowerCase();
         return Object.prototype.hasOwnProperty.call(O, t) ? O[t] : null;
     }
+    getGameByApplication(e) {
+        let t = this.getDetectableGame(e.id);
+        if (null != t) return t;
+        if (null != e.linkedGames) {
+            for (let n of e.linkedGames) if (null != (t = this.getDetectableGame(n.id))) return t;
+        }
+        return this.getGameByName(e.name);
+    }
     isGameInDatabase(e) {
         return (
             null != this.getGameByName(e.name) ||
@@ -127,16 +135,16 @@ class x extends (a = o.ZP.PersistedStore) {
         return !0 === r;
     }
     get detectableGamesEtag() {
-        return S;
+        return T;
     }
     get lastFetched() {
-        return T;
+        return S;
     }
     get detectableGamesTtl() {
         return b;
     }
     canFetchDetectableGames() {
-        return !0 !== r && (null == T || Date.now() >= T + b);
+        return !0 !== r && (null == S || Date.now() >= S + b);
     }
     getGameByExecutable(e) {
         return v[e];

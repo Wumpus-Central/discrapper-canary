@@ -53,7 +53,7 @@ function g(e, t, n) {
         c.Z.isProtocolRegistered("steam").then(b);
     }, []);
     let y = (0, o.q)(e),
-        O = (0, i.e7)([s.Z], () => (null != y ? s.Z.getGameByName(y.name) : null)),
+        O = (0, i.e7)([s.Z], () => (null != y ? s.Z.getGameByApplication(y) : null)),
         v = null != (l = (0, o.q)(null == O ? void 0 : O.id)) ? l : y,
         I = (0, i.e7)([u.Z], () => (null != v ? u.Z.getGame(v.id) : null)),
         T = (0, r.useMemo)(() => {
