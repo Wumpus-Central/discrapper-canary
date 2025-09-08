@@ -1,137 +1,105 @@
-n.d(t, { GuildSubscriptionSelectionModal: () => m }), n(388685), n(290780), n(539854);
-var i = n(951288),
-    s = n(647438),
-    l = n(755721),
-    r = n(481060),
-    a = n(565138),
-    o = n(430824),
-    d = n(270144),
-    c = n(689011),
-    u = n(388032),
-    x = n(250117);
-function m(e) {
-    let { transitionState: t, onClose: n, sku: m, onSelect: p, currentGuildId: h } = e,
-        [j, _] = s.useState(),
-        { guilds: b, isFetching: g } = (0, d.CR)(m.applicationId, m.id, !0),
-        f = s.useMemo(() => {
-            if (!g && null != h)
+e.d(n, { GuildSubscriptionSelectionModal: () => p }), e(388685), e(290780), e(539854);
+var i = e(951288),
+    l = e(647438),
+    r = e(82659),
+    s = e(481060),
+    a = e(565138),
+    u = e(430824),
+    o = e(270144),
+    d = e(388032),
+    c = e(250117);
+function p(t) {
+    let { transitionState: n, onClose: e, sku: p, onSelect: x, currentGuildId: h } = t,
+        [g, f] = l.useState(),
+        { guilds: j, isFetching: v } = (0, o.CR)(p.applicationId, p.id, !0),
+        m = l.useMemo(() => {
+            if (!v && null != h)
                 return (
-                    b.findIndex((e) => {
-                        let { id: t } = e;
-                        return t === h;
+                    j.findIndex((t) => {
+                        let { id: n } = t;
+                        return n === h;
                     }) >= 0
                 );
-        }, [h, b, g]);
-    s.useLayoutEffect(() => {
-        f && _(h);
-    }, [h, f]);
-    let v = s.useMemo(() => {
-        let e = [];
-        for (let t of b) {
-            let n = {
-                value: t.id,
-                label: t.name,
+        }, [h, j, v]);
+    l.useLayoutEffect(() => {
+        m && f(h);
+    }, [h, m]);
+    let b = l.useMemo(() => {
+        let t = [];
+        for (let n of j) {
+            let e = {
+                value: n.id,
+                label: n.name,
             };
-            f && t.id === h ? e.unshift(n) : e.push(n);
+            m && n.id === h ? t.unshift(e) : t.push(e);
         }
-        return e;
-    }, [h, b, f]);
-    return (0, i.jsxs)(r.Y0X, {
-        transitionState: t,
-        size: r.CgR.SMALL,
-        className: x.modal,
-        parentComponent: "GuildSubscriptionSelectionModal",
-        children: [
-            (0, i.jsx)(c.t, { onClose: n }),
-            (0, i.jsxs)(r.hzk, {
-                className: x.content,
-                children: [
-                    (0, i.jsx)(r.Text, {
-                        variant: "text-sm/medium",
-                        className: x.breadCrumb,
-                        children: u.intl.string(u.t["xgtI/P"]),
-                    }),
-                    (0, i.jsxs)("div", {
-                        className: x.selectionBody,
-                        children: [
-                            (0, i.jsx)(r.Text, {
-                                variant: "text-md/medium",
-                                children: u.intl.string(u.t.rAXXxM),
-                            }),
-                            (0, i.jsx)(r.Text, {
-                                variant: "eyebrow",
-                                children: u.intl.string(u.t["5qyruL"]),
-                            }),
-                            g
-                                ? (0, i.jsx)(r.$jN, {
-                                      type: r.$jN.Type.PULSING_ELLIPSIS,
-                                      className: x.spinner,
-                                  })
-                                : v.length > 0
-                                  ? (0, i.jsx)(r.VcW, {
-                                        options: v,
-                                        value: j,
-                                        onChange: _,
-                                        renderOptionPrefix: (e) => {
-                                            let t = null == e ? void 0 : e.value,
-                                                n = null != t ? o.Z.getGuild(t) : null;
-                                            return null == n
-                                                ? null
-                                                : (0, i.jsx)(a.Z, {
-                                                      guild: n,
-                                                      size: a.Z.Sizes.MINI,
-                                                  });
-                                        },
-                                        renderOptionLabel: (e) => {
-                                            let { label: t, value: n } = e;
-                                            return (0, i.jsxs)("div", {
-                                                children: [
-                                                    (0, i.jsx)(r.Text, {
-                                                        variant: "text-md/normal",
-                                                        children: t,
-                                                    }),
-                                                    n === h &&
-                                                        (0, i.jsx)(r.Text, {
-                                                            variant: "text-xs/normal",
-                                                            color: "header-secondary",
-                                                            children: u.intl.string(u.t.RjtuAA),
-                                                        }),
-                                                ],
-                                            });
-                                        },
-                                    })
-                                  : (0, i.jsx)(r.Wn, {
-                                        messageType: r.QYI.WARNING,
-                                        children: (0, i.jsx)(r.Text, {
-                                            variant: "text-sm/normal",
-                                            children: u.intl.string(u.t.M2TbbG),
-                                        }),
-                                    }),
-                        ],
-                    }),
-                ],
-            }),
-            (0, i.jsxs)(r.mzw, {
-                className: x.footer,
-                children: [
-                    (0, i.jsx)(l.zx, {
-                        look: l.zx.Looks.BLANK,
-                        size: l.zx.Sizes.MIN,
-                        className: x.closeBtn,
-                        onClick: n,
-                        children: u.intl.string(u.t.cpT0Cg),
-                    }),
-                    (0, i.jsx)(r.zxk, {
-                        variant: "primary",
-                        size: "sm",
-                        text: u.intl.string(u.t["cY+Ooa"]),
-                        disabled: null == j,
-                        onClick: function () {
-                            null != j && (p(j), n());
-                        },
-                    }),
-                ],
-            }),
+        return t;
+    }, [h, j, m]);
+    return (0, i.jsx)(r.Modal, {
+        title: d.intl.string(d.t["xgtI/P"]),
+        subtitle: d.intl.string(d.t.rAXXxM),
+        transitionState: n,
+        onClose: e,
+        actions: [
+            {
+                variant: "secondary",
+                text: d.intl.string(d.t.cpT0Cg),
+                onClick: e,
+            },
+            {
+                variant: "primary",
+                text: d.intl.string(d.t["cY+Ooa"]),
+                disabled: null == g,
+                onClick: function () {
+                    null != g && (x(g), e());
+                },
+            },
         ],
+        children: v
+            ? (0, i.jsx)(s.$jN, {
+                  type: s.$jN.Type.PULSING_ELLIPSIS,
+                  className: c.spinner,
+              })
+            : b.length > 0
+              ? (0, i.jsx)(s.VcW, {
+                    "aria-label": d.intl.string(d.t["5qyruL"]),
+                    options: b,
+                    value: g,
+                    onChange: f,
+                    renderOptionPrefix: (t) => {
+                        let n = null == t ? void 0 : t.value,
+                            e = null != n ? u.Z.getGuild(n) : null;
+                        return null == e
+                            ? null
+                            : (0, i.jsx)(a.Z, {
+                                  guild: e,
+                                  size: a.Z.Sizes.MINI,
+                              });
+                    },
+                    renderOptionLabel: (t) => {
+                        let { label: n, value: e } = t;
+                        return (0, i.jsxs)("div", {
+                            children: [
+                                (0, i.jsx)(s.Text, {
+                                    variant: "text-md/normal",
+                                    children: n,
+                                }),
+                                e === h &&
+                                    (0, i.jsx)(s.Text, {
+                                        variant: "text-xs/normal",
+                                        color: "header-secondary",
+                                        children: d.intl.string(d.t.RjtuAA),
+                                    }),
+                            ],
+                        });
+                    },
+                })
+              : (0, i.jsx)(s.Wn, {
+                    messageType: s.QYI.WARNING,
+                    children: (0, i.jsx)(s.Text, {
+                        variant: "text-sm/normal",
+                        children: d.intl.string(d.t.M2TbbG),
+                    }),
+                }),
     });
 }
