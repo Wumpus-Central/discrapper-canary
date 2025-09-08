@@ -9,13 +9,4 @@ let i = [
         "Can't stop playing this",
         "Really long text to test the overflow logic lets make this a little bit longer of a comment to see if it works",
     ],
-    a = [
-        r._.LFG,
-        r._.NOOB,
-        r._.LEARNING_THE_ROPES,
-        r._.GETTING_GOOD,
-        r._.GOD_TIER,
-        r._.OPEN_TO_PLAY,
-        r._.LOOKING_FOR_TIPS,
-        r._.LIKE_IT,
-    ];
+    a = [r._.LFG, r._.CASUAL, r._.INTERMEDIATE, r._.OPEN_TO_PLAY, r._.LOOKING_FOR_TIPS, r._.OPEN_TO_TEACH];

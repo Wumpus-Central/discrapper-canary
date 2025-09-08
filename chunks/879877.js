@@ -3,7 +3,7 @@ var n = r(951288),
     i = r(647438),
     l = r(120356),
     o = r.n(l),
-    a = r(379405),
+    a = r(624238),
     c = r(28664),
     s = r(481060),
     u = r(259580),
@@ -18,15 +18,15 @@ function y(e) {
     let { tags: r, isCurrentUser: l, widgetType: c, applicationId: s, className: u, disableInteraction: y = !1 } = e,
         h = null != (t = null == r ? void 0 : r.filter((e) => null != (0, b.zK)(e))) ? t : [],
         w = h.length > 0,
-        P = Object.values(a._).length,
+        P = a.qH,
         E = l && !y && (0, f.M8)(c) && h.length < P,
         { trackUserProfileAction: S } = (0, d.KZ)(),
         I = (0, i.useRef)(new Map()),
-        T = (0, i.useRef)(null),
         D = (0, i.useRef)(null),
-        [_, N] = (0, i.useState)(0),
-        [k, Z] = (0, i.useState)(!1),
-        A = x(T, D, h, I, N);
+        T = (0, i.useRef)(null),
+        [N, k] = (0, i.useState)(0),
+        [_, Z] = (0, i.useState)(!1),
+        A = x(D, T, h, I, k);
     if (
         ((0, i.useEffect)(
             () => (
@@ -41,7 +41,7 @@ function y(e) {
         !w && !E)
     )
         return null;
-    let R = k ? h : h.slice(0, h.length - _);
+    let R = _ ? h : h.slice(0, h.length - N);
     return (0, n.jsxs)("div", {
         className: o()(O.tagListContainer, u),
         children: [
@@ -68,19 +68,19 @@ function y(e) {
                                 ),
                             ),
                         }),
-                        _ > 0 &&
-                            (k
+                        N > 0 &&
+                            (_
                                 ? (0, n.jsx)(v, {
                                       onClick: () => {
                                           Z(!1), S({ action: "COLLAPSE_GAME_TAGS" });
                                       },
                                   })
                                 : (0, n.jsx)(m, {
-                                      numHidden: _,
+                                      numHidden: N,
                                       onClick: () => {
                                           Z(!0), S({ action: "EXPAND_GAME_TAGS" });
                                       },
-                                      ref: T,
+                                      ref: D,
                                       disableInteraction: y,
                                   })),
                     ],
@@ -90,7 +90,7 @@ function y(e) {
                     tags: r,
                     widgetType: c,
                     applicationId: s,
-                    ref: D,
+                    ref: T,
                 }),
         ],
     });

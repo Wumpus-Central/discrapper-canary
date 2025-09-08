@@ -1,6 +1,7 @@
 n.d(t, {
-    k: () => r,
-    r: () => i,
+    kp: () => r,
+    qH: () => a,
+    rN: () => i,
 });
 let r = {
         favorite_games: 1,
@@ -8,4 +9,5 @@ let r = {
         want_to_play_games: 8,
         played_games: 8,
     },
-    i = 100;
+    i = 200,
+    a = 20;

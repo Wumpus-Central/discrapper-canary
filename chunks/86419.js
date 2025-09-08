@@ -1,7 +1,7 @@
 n.d(t, {
     $b: () => U,
-    Bu: () => k,
-    ES: () => M,
+    Bu: () => M,
+    ES: () => k,
     Gv: () => T,
     Hy: () => O,
     M8: () => I,
@@ -90,7 +90,9 @@ function O(e, t) {
     let { isCurrentUser: n } = t,
         i = e.games.length > 0;
     if (n && i)
-        return 1 === r.k[e.type] ? h.intl.string(h.t.wiXdER) : h.intl.format(h.t["zR1+09"], { numGames: r.k[e.type] });
+        return 1 === r.kp[e.type]
+            ? h.intl.string(h.t.wiXdER)
+            : h.intl.format(h.t["zR1+09"], { numGames: r.kp[e.type] });
 }
 function v(e) {
     return f.S5.includes(e);
@@ -99,7 +101,7 @@ function I(e) {
     return f.uX.includes(e);
 }
 function T(e) {
-    return e in r.k ? r.k[e] : 0;
+    return e in r.kp ? r.kp[e] : 0;
 }
 function S(e) {
     return e[Math.floor(Math.random() * e.length)];
@@ -174,7 +176,7 @@ function j(e, t, n) {
     let a = i.tags.filter((e) => e !== n);
     L(r.type, t, a.length > 0 ? a : []);
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r = R(),
         i = r.find((t) => t.type === e);
     if (null == i || !(0, l.W)(i)) return;
@@ -185,7 +187,7 @@ function k(e, t, n) {
         c = w(r, b(g({}, i), { games: s }));
     u.Z.setPendingWidgets(c);
 }
-function M(e, t) {
+function k(e, t) {
     var n, r, i;
     let a,
         s = R(),
