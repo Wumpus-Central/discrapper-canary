@@ -75649,23 +75649,6 @@ html .progress__61462 {
     margin-bottom: 30px
 }
 
-.header__1aec9 {
-    font-size: 72px;
-    font-style: italic;
-    font-weight: 900;
-    letter-spacing: -1.28px;
-    line-height: 100%;
-    text-transform: uppercase
-}
-
-@container premium-marketing-page-container (max-width: 720px) {
-    .header__1aec9.responsive__1aec9 {
-        font-size: 42px;
-        letter-spacing: -.84px;
-        line-height: 90%
-    }
-}
-
 .boltContainer__24d89,
 .carContainer__24d89,
 .hammerContainer__24d89,
@@ -75757,6 +75740,15 @@ html .progress__61462 {
     position: relative;
     text-align: center;
     z-index: 1
+}
+
+.footerHeader__15b9a {
+    font-size: 72px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -1.28px;
+    line-height: 100%;
+    text-transform: uppercase
 }
 
 @container premium-marketing-page-container (max-width: 960px) {
@@ -75897,7 +75889,7 @@ html .progress__61462 {
 .flyingWumpusContainer_d033b5 {
     pointer-events: none;
     position: absolute;
-    right: -125px;
+    right: -155px;
     top: 200px;
     z-index: 2
 }
@@ -75941,7 +75933,7 @@ html .progress__61462 {
 
 @container premium-marketing-page-container (max-width: 960px) {
     .flyingWumpusContainer_d033b5 {
-        right: -60px;
+        right: -100px;
         top: 170px
     }
 
@@ -75963,7 +75955,7 @@ html .progress__61462 {
 
 @container premium-marketing-page-container (max-width: 720px) {
     .flyingWumpusContainer_d033b5 {
-        right: -40px;
+        right: -80px;
         top: 180px
     }
 
@@ -76037,7 +76029,7 @@ html .progress__61462 {
 
 @container premium-marketing-page-container (max-width: 960px) {
     .marketingPageTextContainer__3849c {
-        max-width: 600px
+        max-width: 650px
     }
 }
 
@@ -76088,6 +76080,29 @@ html .progress__61462 {
 .affinitiesContainer__3849c,
 .referrerAttributionContainer__3849c {
     margin: 0 auto
+}
+
+.header__3849c {
+    font-size: 58px;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -1.16px;
+    line-height: 100%;
+    text-transform: uppercase
+}
+
+@container premium-marketing-page-container (max-width: 960px) {
+    .header__3849c {
+        font-size: 48px;
+        letter-spacing: -.96px
+    }
+}
+
+@container premium-marketing-page-container (max-width: 720px) {
+    .header__3849c {
+        font-size: 38px;
+        letter-spacing: -.76px
+    }
 }
 
 .wrapper_d38e00 {

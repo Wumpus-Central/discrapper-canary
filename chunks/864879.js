@@ -1,15 +1,15 @@
 n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(647438),
-    a = n(100527),
-    o = n(906732),
-    s = n(946749),
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
     l = n(6598),
     c = n(388032),
     u = n(998268);
 let d = i.forwardRef((e, t) => {
-    let { analyticsLocations: n } = (0, o.ZP)(a.Z.PREMIUM_MARKETING_FOOTER_CTA);
-    return (0, r.jsx)(o.Gt, {
+    let { analyticsLocations: n } = (0, s.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA);
+    return (0, r.jsx)(s.Gt, {
         value: n,
         children: (0, r.jsx)("div", {
             ref: t,
@@ -18,8 +18,10 @@ let d = i.forwardRef((e, t) => {
                 className: u.contentContainer,
                 children: [
                     (0, r.jsx)(l.Z, {}),
-                    (0, r.jsx)(s.Z, {
-                        responsive: !1,
+                    (0, r.jsx)(a.X6q, {
+                        variant: "display-md",
+                        color: "header-primary",
+                        className: u.footerHeader,
                         children: c.intl.string(c.t.lEw32t),
                     }),
                 ],
