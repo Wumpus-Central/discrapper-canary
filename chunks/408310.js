@@ -101,7 +101,6 @@ let d = (e) => {
                             onChange: d,
                             onClear: h,
                             onKeyDown: f,
-                            isLoading: b,
                         }),
                     ],
                 }),

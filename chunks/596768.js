@@ -8,7 +8,7 @@ var a = n(951288),
     c = n(913527),
     d = n.n(c),
     u = n(442837),
-    m = n(755721),
+    m = n(681715),
     x = n(481060),
     h = n(570140),
     p = n(665149),
@@ -20,8 +20,8 @@ var a = n(951288),
     _ = n(681619),
     y = n(621060),
     C = n(388032),
-    N = n(529554),
-    E = n(866403);
+    N = n(599832),
+    E = n(451429);
 let T = [
         {
             key: "id",
@@ -149,7 +149,8 @@ function S() {
                 type: "SET_TRACK_TRIGGERS",
                 enabled: e,
             });
-        }, []);
+        }, []),
+        I = S ? "Stop Tracking" : "Start Tracking";
     return (0, a.jsxs)("div", {
         ref: n,
         className: i()(E.panel, N.panel),
@@ -157,35 +158,29 @@ function S() {
             (0, a.jsxs)("div", {
                 className: N.toolbar,
                 children: [
-                    (0, a.jsx)("div", {
-                        title: "Enables tracking of all triggers",
-                        className: N.triggersEnable,
-                        children: (0, a.jsx)(m.T2, {
-                            checked: S,
-                            onChange: P,
-                        }),
-                    }),
-                    (0, a.jsx)(m.zx, {
-                        className: N.toolbarButton,
-                        look: m.zx.Looks.BLANK,
-                        size: m.zx.Sizes.ICON,
-                        onClick: b.Zw,
-                        children: (0, a.jsx)("span", {
-                            title: C.intl.string(C.t.VkKicX),
-                            children: (0, a.jsx)(x.XHJ, {
-                                size: "md",
-                                color: "currentColor",
-                                "aria-label": C.intl.string(C.t.VkKicX),
-                            }),
+                    (0, a.jsx)(m.u, {
+                        text: I,
+                        children: (0, a.jsx)(x.hU, {
+                            size: "sm",
+                            variant: S ? "active" : "primary",
+                            icon: S ? x.fpf : x.o1U,
+                            "aria-label": I,
+                            onClick: () => P(!S),
                         }),
                     }),
                     (0, a.jsx)(x.E1j, {
                         size: "sm",
-                        className: N.searchBar,
                         query: e,
                         onChange: t,
                         onClear: () => t(""),
                         placeholder: "Search by experiment id",
+                    }),
+                    (0, a.jsx)(x.hU, {
+                        size: "sm",
+                        variant: "icon-only",
+                        "aria-label": C.intl.string(C.t.VkKicX),
+                        icon: x.XHJ,
+                        onClick: b.Zw,
                     }),
                 ],
             }),

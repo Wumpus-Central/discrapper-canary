@@ -1,5 +1,6 @@
 e.exports = {
     combobox: "combobox__97e86",
+    header: "header__97e86",
     list: "list__97e86",
     scroller: "scroller__97e86",
     item: "item__97e86",
@@ -10,5 +11,4 @@ e.exports = {
     empty: "empty__97e86",
     selected: "selected__97e86",
     selectedBrand: "selectedBrand__97e86",
-    searchWithScrollbar: "searchWithScrollbar__97e86",
 };

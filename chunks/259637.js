@@ -9,7 +9,7 @@ var i = n(658722),
     c = n(339085),
     d = n(456269),
     u = n(388032),
-    m = n(613576);
+    m = n(183132);
 let h = (e) => {
     let { tag: t } = e,
         { id: n, name: i, emojiId: a, emojiName: d } = t,
@@ -51,7 +51,6 @@ function g(e) {
     let { parentChannel: t, appliedTags: n, maxTagsApplied: i, onSelectTag: l, onClose: o } = e,
         c = (0, d.Vm)(t);
     return (0, r.jsx)(s.DBG, {
-        showScrollbar: !0,
         value: n,
         onChange: (e) => {
             (!i || n.has(e)) && (l(e), o());

@@ -1,5 +1,4 @@
 e.exports = {
-    searchBar: "searchBar_a73dc3",
     settingsHeader: "settingsHeader_a73dc3",
     bannedUser: "bannedUser_a73dc3",
     bannedUserAvatar: "bannedUserAvatar_a73dc3",

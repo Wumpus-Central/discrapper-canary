@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(493544),
     g = n(479531),
     p = n(210887),
-    f = n(246946),
-    h = n(594174),
+    h = n(246946),
+    f = n(594174),
     b = n(251625),
     x = n(226951),
     j = n(51144),
@@ -76,14 +76,14 @@ function R(e, t) {
 function Z(e) {
     let { transitionState: t, guild: n, user: l, ban: a, hideDiscriminator: s, onClose: o } = e,
         [d, m] = i.useState(!1),
-        [p, f] = i.useState(null);
-    async function h() {
+        [p, h] = i.useState(null);
+    async function f() {
         if (null != n) {
-            f(null), m(!0);
+            h(null), m(!0);
             try {
                 await u.Z.unbanUser(n.id, l.id), o();
             } catch (e) {
-                f(new g.Z(e)), m(!1);
+                h(new g.Z(e)), m(!1);
             }
         }
     }
@@ -143,7 +143,7 @@ function Z(e) {
                         (0, r.jsx)(c.zxk, {
                             variant: "critical-secondary",
                             text: I.intl.string(I.t.UPcIa2),
-                            onClick: h,
+                            onClick: f,
                             loading: d,
                         }),
                         (0, r.jsx)(c.zxk, {
@@ -252,7 +252,7 @@ class A extends i.PureComponent {
                     let n = this.makeFilter(t),
                         r = [];
                     for (let t of e.keys()) {
-                        let e = h.default.getUser(t);
+                        let e = f.default.getUser(t);
                         null != e && n(e) && r.push(e);
                     }
                     return r.sort((e, t) => e.username.localeCompare(t.username));
@@ -345,7 +345,6 @@ class A extends i.PureComponent {
                                     null == t &&
                                         (0, r.jsx)(c.E1j, {
                                             size: "sm",
-                                            className: S.searchBar,
                                             query: null != a ? a : "",
                                             placeholder: I.intl.string(I.t.rTL1RE),
                                             "aria-label": I.intl.string(I.t.rTL1RE),
@@ -363,14 +362,14 @@ class A extends i.PureComponent {
             });
     }
 }
-let L = o.ZP.connectStores([O.Z, p.Z, f.Z], () => {
+let L = o.ZP.connectStores([O.Z, p.Z, h.Z], () => {
     let { bans: e, guild: t, searchQuery: n } = O.Z.getProps();
     return {
         searchQuery: null != n ? n : "",
         bans: e,
         guild: t,
         theme: p.Z.theme,
-        streamerMode: f.Z.hidePersonalInformation,
+        streamerMode: h.Z.hidePersonalInformation,
     };
 })(A);
 function k() {

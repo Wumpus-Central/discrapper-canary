@@ -6,7 +6,6 @@ e.exports = {
     channelItemContainer: "channelItemContainer__711d3",
     channelItemHighlighted: "channelItemHighlighted__711d3",
     searchBarContainer: "searchBarContainer__711d3",
-    searchBar: "searchBar__711d3",
     emptyChannelItem: "emptyChannelItem__711d3",
     channelItemIcon: "channelItemIcon__711d3",
     channelItemNameContainer: "channelItemNameContainer__711d3",

@@ -53,7 +53,6 @@ function m(e) {
                 : (0, l.jsx)("div", {
                       children: (0, l.jsx)(s.E1j, {
                           size: "sm",
-                          className: p.searchBar,
                           query: f,
                           onChange: c.a8,
                           onClear: function () {

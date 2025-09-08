@@ -485,7 +485,6 @@ function W(e) {
                             onChange: (e) => {
                                 p(e);
                             },
-                            className: P.searchBar,
                             inputProps: { "aria-label": Z.intl.string(Z.t.UyA6SU) },
                         }),
                     }),

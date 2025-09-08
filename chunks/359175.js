@@ -4,8 +4,6 @@ e.exports = {
     emojiPickerHasTabWrapper: "emojiPickerHasTabWrapper_c0e32c",
     emojiPicker: "emojiPicker_c0e32c",
     header: "header_c0e32c",
-    searchBar: "searchBar_c0e32c",
-    searchBarFullRow: "searchBarFullRow_c0e32c",
     diversitySelector: "diversitySelector_c0e32c",
     categoryList: "categoryList_c0e32c",
     bodyWrapper: "bodyWrapper_c0e32c",

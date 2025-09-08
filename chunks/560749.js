@@ -19,8 +19,8 @@ var r = n(951288),
     j = n(496675),
     b = n(914010),
     y = n(594174),
-    C = n(938475),
-    S = n(823379),
+    S = n(938475),
+    C = n(823379),
     O = n(102172),
     w = n(981631),
     Z = n(637824),
@@ -29,10 +29,10 @@ var r = n(951288),
 function P(e) {
     let { result: t, onSelectChannel: n } = e,
         i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        l = (0, o.Wu)([C.ZP, y.default], () =>
-            C.ZP.getVoiceStatesForChannel(t.record)
+        l = (0, o.Wu)([S.ZP, y.default], () =>
+            S.ZP.getVoiceStatesForChannel(t.record)
                 .map((e) => y.default.getUser(e.user.id))
-                .filter(S.lm),
+                .filter(C.lm),
         );
     return (0, r.jsxs)(a.P3F, {
         className: N.channelResult,
@@ -91,7 +91,7 @@ function T(e) {
             }
             return e;
         }),
-        C = (0, o.Wu)([f.Z, x.Z, g.Z, v.Z, j.Z], () => {
+        S = (0, o.Wu)([f.Z, x.Z, g.Z, v.Z, j.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
@@ -109,37 +109,39 @@ function T(e) {
             return e;
         }),
         T = i.useMemo(() => {
-            let e = new Set(C.map((e) => e.id)),
+            let e = new Set(S.map((e) => e.id)),
                 t = new Set(y.map((e) => e.id));
             return [
                 ...y
                     .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, d.Z)(e.id))
-                    .filter(S.lm),
-                ...C.filter((e) => !t.has(e.id))
+                    .filter(C.lm),
+                ...S.filter((e) => !t.has(e.id))
                     .map((e) => (0, d.Z)(e.id))
-                    .filter(S.lm),
+                    .filter(C.lm),
             ];
-        }, [C, y]),
+        }, [S, y]),
         R = "" !== u ? p : T;
     return (0, r.jsxs)("div", {
         className: s()(N.root, n),
         children: [
-            (0, r.jsx)(a.E1j, {
+            (0, r.jsx)("div", {
                 className: N.searchBar,
-                placeholder: I.intl.string(I.t["3jvv+/"]),
-                query: u,
-                onChange: (e) =>
-                    l({
-                        query: e,
-                        resultTypes: [c.h8.VOICE_CHANNEL],
-                    }),
-                onClear: () =>
-                    l({
-                        query: "",
-                        resultTypes: [c.h8.VOICE_CHANNEL],
-                    }),
-                autoFocus: !0,
+                children: (0, r.jsx)(a.E1j, {
+                    placeholder: I.intl.string(I.t["3jvv+/"]),
+                    query: u,
+                    onChange: (e) =>
+                        l({
+                            query: e,
+                            resultTypes: [c.h8.VOICE_CHANNEL],
+                        }),
+                    onClear: () =>
+                        l({
+                            query: "",
+                            resultTypes: [c.h8.VOICE_CHANNEL],
+                        }),
+                    autoFocus: !0,
+                }),
             }),
             R.length > 0
                 ? (0, r.jsx)(a.aVo, {

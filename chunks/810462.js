@@ -59,7 +59,6 @@ let d = i.forwardRef(function (e, t) {
             onClear: I,
             onKeyDown: f,
             onChange: v,
-            className: u.__invalid_searchBar,
             inputProps: {
                 "aria-haspopup": "grid",
                 "aria-controls": _,

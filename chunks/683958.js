@@ -1,4 +1,4 @@
-n.d(t, { ApplicationCommandShareModal: () => _ }), n(388685), n(35282);
+n.d(t, { ApplicationCommandShareModal: () => O }), n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(82659),
@@ -22,14 +22,14 @@ let S = [s.yU.CHAT],
     C = () => {
         (0, a.Mr3)(y.s);
     };
-function _(e) {
+function O(e) {
     var t,
         {
             applicationId: n,
             channel: s,
             command: y,
-            onClose: _,
-            requireLaunchChannel: O,
+            onClose: O,
+            requireLaunchChannel: _,
             onShareResult: E,
             previewMessage: P,
         } = e,
@@ -64,7 +64,7 @@ function _(e) {
         ]);
     let Z = r.useMemo(() => (null == s ? null : (0, u.dL)(s.id)), [s]),
         [L, N] = r.useState(!1),
-        { commands: T, loading: D } =
+        { commands: M, loading: T } =
             ((t = r.useMemo(
                 () =>
                     null == s
@@ -84,27 +84,27 @@ function _(e) {
                     allowApplicationState: !0,
                 },
             )),
-        M = r.useRef(0),
-        [A, k] = r.useState(O && null != Z ? [Z] : []),
+        D = r.useRef(0),
+        [A, k] = r.useState(_ && null != Z ? [Z] : []),
         I = A.length,
         R = I >= 5,
-        [F, U] = r.useState(""),
-        { results: q, updateSearchText: H } = (0, c.s)({
+        [F, q] = r.useState(""),
+        { results: U, updateSearchText: H } = (0, c.s)({
             selectedDestinations: A,
             originDestination: null != Z ? Z : void 0,
             includeMissingDMs: !0,
         }),
         z = r.useCallback(
             (e) => {
-                U(e), H(e);
+                q(e), H(e);
             },
             [H],
         ),
-        G = r.useCallback(() => (E(!1), _()), [E, _]),
+        G = r.useCallback(() => (E(!1), O()), [E, O]),
         [W] = (0, o.Z)([n]),
         V = r.useCallback(() => {
-            U("");
-        }, [U]),
+            q("");
+        }, [q]),
         X = r.useRef(null);
     r.useEffect(() => {
         if ("" === F) {
@@ -119,18 +119,18 @@ function _(e) {
                         let { type: n, id: l } = t;
                         return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return R ? t : (U(""), H(""), (M.current += 1), [e, ...t]);
+                    if (-1 === n) return R ? t : (q(""), H(""), (D.current += 1), [e, ...t]);
                     let l = [...t];
-                    return l.splice(n, 1), (M.current += 1), l;
+                    return l.splice(n, 1), (D.current += 1), l;
                 });
             },
             [R, H],
         ),
         [Y, B] = r.useMemo(() => {
-            if (D) return [null, !1];
-            let e = T.find((e) => e.untranslatedName === y.name);
+            if (T) return [null, !1];
+            let e = M.find((e) => e.untranslatedName === y.name);
             return void 0 !== e ? [e, !1] : [null, !0];
-        }, [y, T, D]),
+        }, [y, M, T]),
         Q = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -181,12 +181,12 @@ function _(e) {
         K = r.useCallback(() => {
             Q(A, { closeAfterSend: !0 });
         }, [Q, A]);
-    if (D)
+    if (T)
         return (0, l.jsx)(i.Modal, {
             title: v.intl.string(v.t.fuFvw8),
             "aria-label": v.intl.string(v.t.fuFvw8),
             transitionState: w.transitionState,
-            onClose: _,
+            onClose: O,
             actions: [],
             children: (0, l.jsx)(a.$jN, { className: x.spinnerContainer }),
         });
@@ -195,22 +195,22 @@ function _(e) {
             title: v.intl.string(v.t.fuFvw8),
             "aria-label": v.intl.string(v.t.fuFvw8),
             transitionState: w.transitionState,
-            onClose: _,
+            onClose: O,
             actions: [
                 {
                     text: v.intl.string(v.t.cpT0Cg),
-                    onClick: _,
+                    onClick: O,
                     variant: "primary",
                 },
             ],
             children: v.intl.string(v.t.yAk8ZW),
         });
     let $ =
-            q.length > 0
+            U.length > 0
                 ? (0, l.jsx)(g.F, {
                       paddingBottom: 16,
                       paddingTop: 16,
-                      rowData: q,
+                      rowData: U,
                       handleToggleDestination: J,
                       selectedDestinations: A,
                       disableSelection: R,
@@ -257,7 +257,6 @@ function _(e) {
             ],
             preview: void 0 !== P ? (0, l.jsx)(m.z, { previewMessage: P }) : null,
             input: (0, l.jsx)(a.E1j, {
-                className: x.search,
                 ref: X,
                 query: F,
                 onChange: z,

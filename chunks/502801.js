@@ -14,8 +14,8 @@ var i = n(951288),
     g = n(933557),
     _ = n(471445),
     f = n(734307),
-    b = n(359110),
-    v = n(752048),
+    v = n(359110),
+    b = n(752048),
     j = n(210887),
     p = n(131704),
     C = n(699516),
@@ -175,17 +175,17 @@ function H(e) {
         [j, p] = l.useState(null),
         Z = (0, r.Wu)([C.Z], () => C.Z.getFriendIDs()),
         y = (0, r.Wu)(
-            [v.Z, w.default],
+            [b.Z, w.default],
             () =>
                 Z.map((e) => w.default.getUser(e))
                     .filter(I.lm)
                     .sort((e, t) => {
                         var n, i, l, a;
                         return (
-                            (null != (l = null == (n = v.Z.getUserAffinity(t.id)) ? void 0 : n.communicationProbability)
+                            (null != (l = null == (n = b.Z.getUserAffinity(t.id)) ? void 0 : n.communicationProbability)
                                 ? l
                                 : 0) -
-                            (null != (a = null == (i = v.Z.getUserAffinity(e.id)) ? void 0 : i.communicationProbability)
+                            (null != (a = null == (i = b.Z.getUserAffinity(e.id)) ? void 0 : i.communicationProbability)
                                 ? a
                                 : 0)
                         );
@@ -204,7 +204,7 @@ function H(e) {
                     editMetadata: n,
                     analyticsLocations: L,
                 }),
-                    null == e && (0, b.Kh)(i),
+                    null == e && (0, v.Kh)(i),
                     d.pT();
             } catch (e) {
             } finally {
@@ -233,14 +233,16 @@ function H(e) {
                 className: s()(R.subtitle, R.contentPadding),
                 children: k.intl.string(k.t.Ey7mOT),
             }),
-            (0, i.jsx)(c.E1j, {
+            (0, i.jsx)("div", {
                 className: R.searchBar,
-                query: h,
-                onChange: g,
-                onClear: function () {
-                    g("");
-                },
-                placeholder: k.intl.string(k.t.CmSHY2),
+                children: (0, i.jsx)(c.E1j, {
+                    query: h,
+                    onChange: g,
+                    onClear: function () {
+                        g("");
+                    },
+                    placeholder: k.intl.string(k.t.CmSHY2),
+                }),
             }),
             (0, i.jsx)("div", { className: s()(R.divider, R.topDivider) }),
             (0, i.jsx)(E, {

@@ -6,7 +6,7 @@ var a = n(951288),
     s = n(442837),
     o = n(481060),
     c = n(665149),
-    d = n(185910),
+    d = n(428530),
     u = n(484036),
     m = n(681619),
     x = n(621060),
@@ -45,7 +45,7 @@ let b = [
             },
         },
     ],
-    j = [
+    g = [
         {
             id: "local",
             name: "Local Variables",
@@ -80,9 +80,9 @@ let b = [
             },
         },
     ];
-function g(e) {
+function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
     return (0, a.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,
@@ -133,7 +133,6 @@ function _() {
             (0, a.jsx)("div", {
                 className: p.toolbar,
                 children: (0, a.jsx)(o.E1j, {
-                    className: p.searchBar,
                     size: "sm",
                     query: t,
                     onChange: n,
@@ -149,7 +148,7 @@ function _() {
                 onClickRow: (e) => u(e.key),
             }),
             null != x &&
-                (0, a.jsx)(g, {
+                (0, a.jsx)(j, {
                     store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                 }),

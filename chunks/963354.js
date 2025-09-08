@@ -1,5 +1,4 @@
 e.exports = {
-    search: "search__506b8",
     destinationRow: "destinationRow__506b8",
     disabled: "disabled__506b8",
     identity: "identity__506b8",

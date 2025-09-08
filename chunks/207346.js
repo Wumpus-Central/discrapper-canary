@@ -31,7 +31,6 @@ function d(e) {
             (0, l.jsx)(a.E1j, {
                 autoFocus: !0,
                 placeholder: s.intl.string(s.t["5h0QOD"]),
-                className: u.queryInput,
                 query: t,
                 onChange: n,
                 onClear: () => n(""),

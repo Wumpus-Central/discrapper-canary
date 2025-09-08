@@ -109,7 +109,6 @@ class C extends i.PureComponent {
                 });
             default:
                 return (0, r.jsx)(c.E1j, {
-                    className: O.searchBar,
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,

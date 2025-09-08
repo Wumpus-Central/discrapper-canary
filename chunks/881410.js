@@ -1,4 +1,4 @@
-r.d(t, { Z: () => b }), r(388685), r(781311);
+r.d(t, { Z: () => g }), r(388685), r(781311);
 var n = r(951288),
     i = r(647438),
     l = r(423802),
@@ -33,15 +33,15 @@ function f(e) {
     }
     return e;
 }
-function b(e) {
-    let { disabled: t, widgetType: r, widget: b } = e,
-        [p] = (0, o.ynZ)(),
-        [g, O] = i.useState(""),
+function g(e) {
+    let { disabled: t, widgetType: r, widget: g } = e,
+        [b] = (0, o.ynZ)(),
+        [p, O] = i.useState(""),
         y = i.useRef(null),
         j = i.useRef(""),
-        m = i.useMemo(() => new Set(b.games.map((e) => e.applicationId)), [b.games]),
+        m = i.useMemo(() => new Set(g.games.map((e) => e.applicationId)), [g.games]),
         { trackUserProfileEditAction: v } = (0, c.KZ)(),
-        h = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 (0, s.ES)(r, { applicationId: e }),
                     o.uvj.announce(u.intl.string(u.t.q0U3DA)),
@@ -53,14 +53,14 @@ function b(e) {
             },
             [r, v],
         ),
-        { options: x, matchSorterOptions: w } = (0, a.h)(),
+        { options: h, matchSorterOptions: w } = (0, a.h)(),
         P = i.useCallback(
             (e) => {
                 var t, r;
                 return "" === e.trim()
-                    ? x
+                    ? h
                     : (0, l.Lu)(
-                          x,
+                          h,
                           e,
                           ((t = f({}, w)),
                           (r = r = { threshold: l.Lu.rankings.CONTAINS }),
@@ -79,11 +79,11 @@ function b(e) {
                           t),
                       );
             },
-            [x, w],
+            [h, w],
         ),
-        S = i.useCallback(
+        E = i.useCallback(
             (e) => {
-                "" === g.trim() &&
+                "" === p.trim() &&
                     "" !== e.trim() &&
                     v({
                         action: "GAME_SEARCH_SESSION_STARTED",
@@ -94,14 +94,14 @@ function b(e) {
                     O(e),
                     (j.current = e);
             },
-            [g, v, r, P],
+            [p, v, r, P],
         ),
-        E = i.useMemo(
+        S = i.useMemo(
             () =>
-                "" !== g.trim()
-                    ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: g.trim() })
+                "" !== p.trim()
+                    ? u.intl.formatToPlainString(u.t.ZoearK, { searchTerm: p.trim() })
                     : u.intl.string(u.t.QwSXv7),
-            [g],
+            [p],
         );
     return (0, n.jsx)(o.yRy, {
         targetElementRef: y,
@@ -129,16 +129,15 @@ function b(e) {
                 className: d.gameSearchCombobox,
                 placeholder: u.intl.string(u.t["5h0QOD"]),
                 autoFocus: !0,
-                value: p,
+                value: b,
                 onChange: (e) => {
-                    h(e), t();
+                    x(e), t();
                 },
                 multiSelect: !1,
-                showScrollbar: !0,
                 maxVisibleItems: 7,
-                emptyStateText: E,
+                emptyStateText: S,
                 emptyStateHeader: "",
-                onQueryChange: S,
+                onQueryChange: E,
                 children: (e) =>
                     P(e).map((e) =>
                         (0, n.jsx)(

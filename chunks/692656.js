@@ -7,7 +7,7 @@ var l = n(951288),
     s = n(754738),
     c = n(727241),
     u = n(973693),
-    d = n(706527),
+    d = n(912370),
     p = n(873199),
     m = n(442837),
     f = n(481060),
@@ -42,10 +42,10 @@ var l = n(951288),
     W = n(41558),
     F = n(105862),
     G = n(28147),
-    z = n(314734),
-    q = n(981631),
-    X = n(689079),
-    Y = n(388032),
+    q = n(314734),
+    z = n(981631),
+    Y = n(689079),
+    X = n(388032),
     Q = n(729755);
 let J = [],
     K = [, , , ,].fill(0).map((e, t) => t),
@@ -97,7 +97,7 @@ function et(e) {
             (0, l.jsx)(el, {
                 searchQuery: r,
                 setSearchQuery: a,
-                placeholder: h ? Y.intl.string(Y.t.ziyFv7) : Y.intl.string(Y.t["pw+r5e"]),
+                placeholder: h ? X.intl.string(X.t.ziyFv7) : X.intl.string(X.t["pw+r5e"]),
             }),
             (0, l.jsx)(f.Ttm, {
                 ref: o,
@@ -138,7 +138,7 @@ function et(e) {
                                   (0, l.jsx)(B.A, {
                                       type: R.LG.HOME_EMPTY,
                                       textContent:
-                                          n === R._b.TEXT ? Y.intl.string(Y.t.iKZctb) : Y.intl.string(Y.t.RL7Ncn),
+                                          n === R._b.TEXT ? X.intl.string(X.t.iKZctb) : X.intl.string(X.t.RL7Ncn),
                                   }),
                               A && (0, l.jsx)(F.Z, {}),
                           ],
@@ -154,7 +154,7 @@ function en() {
             (0, l.jsx)(f.Text, {
                 className: Q.developerShelfControlsLabel,
                 variant: "text-sm/normal",
-                children: Y.intl.string(Y.t.tZ3FNj),
+                children: X.intl.string(X.t.tZ3FNj),
             }),
             (0, l.jsx)(g.W, { hideSearch: !0 }),
         ],
@@ -168,7 +168,7 @@ function el(e) {
             () =>
                 a().debounce(
                     (e) => {
-                        (0, j.yw)(q.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
+                        (0, j.yw)(z.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
                             source: L.Z.entrypoint(),
                             location: C.Vh.APP_LAUNCHER_HOME,
@@ -185,7 +185,7 @@ function el(e) {
         d = i.useCallback(() => n(""), [n]),
         p = i.useCallback(() => {
             c(!0),
-                (0, j.yw)(q.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
+                (0, j.yw)(z.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
                     source: L.Z.entrypoint(),
                     location: C.Vh.APP_LAUNCHER_HOME,
                 });
@@ -216,10 +216,7 @@ function el(e) {
         (0, l.jsx)("div", {
             className: Q.searchBarContainer,
             children: (0, l.jsx)(f.E1j, {
-                ref: (e) => {
-                    var t;
-                    o.current = null != (t = null == e ? void 0 : e.containerRef.current) ? t : null;
-                },
+                ref: o,
                 placeholder: r,
                 query: t,
                 onChange: h,
@@ -244,9 +241,9 @@ function ei(e) {
             for (let t of o) null != t.application && e.push({ application: t.application });
             return e;
         }, [o]),
-        u = Y.intl.string(Y.t["s+UQpa"]),
+        u = X.intl.string(X.t["s+UQpa"]),
         d = u;
-    a && (d = Y.intl.string(Y.t["2pFD8P"]));
+    a && (d = X.intl.string(X.t["2pFD8P"]));
     let { items: p, handleViewMore: m } = eu({
         title: d,
         look: n === R._b.VOICE ? D.U4.LARGE_BANNER : D.U4.ROW,
@@ -257,7 +254,7 @@ function ei(e) {
     i.useEffect(() => {
         s ||
             (0 !== p.length &&
-                (0, j.yw)(q.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
+                (0, j.yw)(z.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
                     num: p.length,
                     section_name: R.L3.RECENT_APPS,
                     location: R.G0.HOME,
@@ -357,7 +354,7 @@ function er(e) {
                       ref: (e) => {
                           s.current = e;
                       },
-                      children: (0, l.jsx)(W.Z, { title: Y.intl.string(Y.t.shUONj) }),
+                      children: (0, l.jsx)(W.Z, { title: X.intl.string(X.t.shUONj) }),
                   }),
                   (0, l.jsx)("div", {
                       className: Q.sectionTwoColumnContentContainer,
@@ -388,7 +385,7 @@ function ea(e) {
         r = R.L3.APPS_IN_THIS_SERVER,
         { appsInThisServer: a, isLoading: o } = (0, w.Z)({ context: t }),
         { items: s, handleViewMore: c } = eu({
-            title: Y.intl.string(Y.t.KfkuGR),
+            title: X.intl.string(X.t.KfkuGR),
             look: D.U4.ROW,
             items: a,
             limit: 4,
@@ -412,7 +409,7 @@ function ea(e) {
                           u.current = e;
                       },
                       children: (0, l.jsx)(W.Z, {
-                          title: Y.intl.string(Y.t.KfkuGR),
+                          title: X.intl.string(X.t.KfkuGR),
                           buttonType: W.Z.buttonTypes.VIEW_MORE,
                           onClickViewButton: c,
                       }),
@@ -469,7 +466,7 @@ function eo(e) {
                     filters: { commandTypes: [h.yU.CHAT] },
                     options: {
                         placeholderCount: 0,
-                        limit: X.tn,
+                        limit: Y.tn,
                         includeFrecency: !0,
                     },
                     allowFetch: !0,
@@ -657,7 +654,7 @@ function es(e) {
                             (i = (0, _.$_)({
                                 itemId: r,
                                 hash: a,
-                                containerWidth: z.Gy,
+                                containerWidth: q.Gy,
                             })),
                         (0, l.jsx)(
                             D.kA,
@@ -705,7 +702,7 @@ function eu(e) {
                 : {
                       items: l.slice(0, r),
                       handleViewMore: () => {
-                          (0, j.yw)(q.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                          (0, j.yw)(z.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: a,
                               source: L.Z.entrypoint(),
                               num: l.length,

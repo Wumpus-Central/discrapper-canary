@@ -12,5 +12,4 @@ e.exports = {
     roleTooltipItem: "roleTooltipItem__3f11f",
     editable: "editable__3f11f",
     roleChiplet: "roleChiplet__3f11f",
-    searchBar: "searchBar__3f11f",
 };

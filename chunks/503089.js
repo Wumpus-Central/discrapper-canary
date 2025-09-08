@@ -161,7 +161,12 @@ class R extends i.PureComponent {
                     orientation: "vertical",
                     "aria-label": n,
                     children: [
-                        i ? (0, r.jsx)(f.Z, { style: b.searchBar }) : null,
+                        i
+                            ? (0, r.jsx)("div", {
+                                  className: b.searchBar,
+                                  children: (0, r.jsx)(f.Z, {}),
+                              })
+                            : null,
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {

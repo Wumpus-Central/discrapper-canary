@@ -41,11 +41,11 @@ var l,
     F = n(594174),
     z = n(938475),
     G = n(626135),
-    H = n(630388),
-    q = n(971130),
+    q = n(630388),
+    H = n(971130),
     W = n(301873),
-    Y = n(264229),
-    K = n(340541),
+    K = n(264229),
+    Y = n(340541),
     X = n(366980),
     Q = n(277364),
     J = n(265452),
@@ -107,7 +107,7 @@ function eg(e, t) {
         e
     );
 }
-let { INVITE_OPTIONS_FOREVER: eh, INVITE_OPTIONS_7_DAYS: em, INVITE_OPTIONS_UNLIMITED: ep } = q.ZP;
+let { INVITE_OPTIONS_FOREVER: eh, INVITE_OPTIONS_7_DAYS: em, INVITE_OPTIONS_UNLIMITED: ep } = H.ZP;
 class ev extends (l = r.PureComponent) {
     componentDidMount() {
         let {
@@ -181,7 +181,7 @@ class ev extends (l = r.PureComponent) {
     }
     componentWillUnmount() {
         let { inviteChannel: e, modalState: t } = this.props;
-        (0, H.yE)(t.flags, h.$.IS_GUEST_INVITE) && null != e && f.ZP.clearInviteFromStore(e.id);
+        (0, q.yE)(t.flags, h.$.IS_GUEST_INVITE) && null != e && f.ZP.clearInviteFromStore(e.id);
     }
     getInviteKey() {
         let { code: e, vanityURLCode: t, guildScheduledEvent: n, modalState: l } = this.props,
@@ -189,7 +189,7 @@ class ev extends (l = r.PureComponent) {
             r = i ? t : null != e ? e : t;
         return null == r
             ? r
-            : (0, Y.tV)({
+            : (0, K.tV)({
                   baseCode: r,
                   guildScheduledEventId: null == n ? void 0 : n.id,
               });
@@ -265,7 +265,7 @@ class ev extends (l = r.PureComponent) {
                       className: es.hubHeader,
                       children: [
                           (0, i.jsx)(I.X6q, {
-                              className: a()(es.hubInviteTitle, es.headerCloseButtonSpacing),
+                              className: es.headerCloseButtonSpacing,
                               id: this._headerId,
                               variant: "heading-xl/semibold",
                               color: "header-primary",
@@ -280,7 +280,6 @@ class ev extends (l = r.PureComponent) {
                               (0, i.jsx)(I.E1j, {
                                   size: "sm",
                                   query: g,
-                                  className: es.hubFriendSearch,
                                   onChange: this.handleQueryChange,
                                   placeholder: er.intl.string(er.t.CmSHY2),
                                   "aria-label": er.intl.string(er.t.CmSHY2),
@@ -290,23 +289,24 @@ class ev extends (l = r.PureComponent) {
                       ],
                   })
                 : n
-                  ? (0, i.jsxs)("div", {
-                        className: es.header,
+                  ? (0, i.jsxs)(I.Kqy, {
+                        gap: 4,
                         children: [
-                            (0, i.jsx)("div", {
-                                className: es.__invalid_headerTopRow,
-                                children: (0, i.jsx)(I.vwX, {
-                                    id: this._headerId,
-                                    tag: "h2",
-                                    className: a()(ea.marginBottom4, es.headerCloseButtonSpacing, es.headerText),
-                                    children: e,
-                                }),
+                            (0, i.jsxs)(I.Kqy, {
+                                gap: 0,
+                                children: [
+                                    (0, i.jsx)(I.vwX, {
+                                        id: this._headerId,
+                                        tag: "h2",
+                                        className: es.headerCloseButtonSpacing,
+                                        children: e,
+                                    }),
+                                    m,
+                                ],
                             }),
-                            m,
                             (0, i.jsx)(I.E1j, {
                                 size: "sm",
                                 query: g,
-                                className: es.searchBar,
                                 onChange: this.handleQueryChange,
                                 placeholder: er.intl.string(er.t.CmSHY2),
                                 autoFocus: !0,
@@ -603,10 +603,10 @@ class ev extends (l = r.PureComponent) {
             ed(this, "getRowHeight", (e, t) => {
                 if (e > 0) return 0;
                 switch (this.props.rows[t].type) {
-                    case q.bm.CHANNEL:
-                    case q.bm.GROUP_DM:
-                    case q.bm.DM:
-                    case q.bm.FRIEND:
+                    case H.bm.CHANNEL:
+                    case H.bm.GROUP_DM:
+                    case H.bm.DM:
+                    case H.bm.FRIEND:
                         return et.k;
                     default:
                         return 0;
@@ -620,8 +620,8 @@ class ev extends (l = r.PureComponent) {
                     s = this.props.rows[n],
                     a = "".concat(s.type, "-").concat(s.item.id);
                 switch (s.type) {
-                    case q.bm.GROUP_DM:
-                    case q.bm.CHANNEL:
+                    case H.bm.GROUP_DM:
+                    case H.bm.CHANNEL:
                         return (0, i.jsx)(
                             et.d,
                             {
@@ -632,8 +632,8 @@ class ev extends (l = r.PureComponent) {
                             },
                             a,
                         );
-                    case q.bm.DM:
-                    case q.bm.FRIEND:
+                    case H.bm.DM:
+                    case H.bm.FRIEND:
                         return (0, i.jsx)(
                             et.d,
                             {
@@ -700,7 +700,7 @@ let ex = r.forwardRef(function (e, t) {
                       targetApplicationId: c,
                   });
         }, [y, C, d, c]),
-        [G, q, Y, K] = (0, m.Wu)(
+        [G, H, K, Y] = (0, m.Wu)(
             [L.Z, z.ZP],
             () => [
                 L.Z.getInviteSuggestionRows(),
@@ -724,8 +724,8 @@ let ex = r.forwardRef(function (e, t) {
         [ee] = r.useState(() => {
             let e = new Set();
             return (
-                null != d && null != K
-                    ? K.forEach((t) => {
+                null != d && null != Y
+                    ? Y.forEach((t) => {
                           let { user: n } = t;
                           e.add(n.id);
                       })
@@ -833,9 +833,9 @@ let ex = r.forwardRef(function (e, t) {
                 ey !== eh.value && eZ !== eh.value && eS({ savedMaxAge: eh.value });
         }, [eI, J, y, o, null == es ? void 0 : es.id, C, d, ey, eC, eP, eS, eZ, ew]),
         eR = (0, N.Z)(y),
-        eD = (0, N.Z)((0, H.yE)(ew, h.$.IS_APPLICATION_BYPASS)),
+        eD = (0, N.Z)((0, q.yE)(ew, h.$.IS_APPLICATION_BYPASS)),
         ek = null != eR && eR !== y,
-        eL = null != eD && eD !== (0, H.yE)(ew, h.$.IS_APPLICATION_BYPASS);
+        eL = null != eD && eD !== (0, q.yE)(ew, h.$.IS_APPLICATION_BYPASS);
     r.useEffect(() => {
         !eI && (ek || eL) && eM();
     }, [eM, ek, eL, eI]);
@@ -855,8 +855,8 @@ let ex = r.forwardRef(function (e, t) {
             targetUserId: d,
             application: es,
             rows: G,
-            showFriends: q,
-            initialCounts: Y,
+            showFriends: H,
+            initialCounts: K,
             code: ea,
             source: o,
             welcomeToServer: x,
@@ -877,7 +877,7 @@ let ex = r.forwardRef(function (e, t) {
     });
 });
 function eI(e) {
-    let { modal: t } = (0, K._k)({ location: "instant_invite_modal" }),
+    let { modal: t } = (0, Y._k)({ location: "instant_invite_modal" }),
         n = t ? J.H : ex;
     return (0, i.jsx)(n, ec({}, e));
 }

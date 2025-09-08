@@ -16,8 +16,6 @@ e.exports = {
     copyPropertyButton: "copyPropertyButton_fb48ea",
     customPropertiesName: "customPropertiesName_fb48ea",
     emptyProperty: "emptyProperty_fb48ea",
-    searchBar: "searchBar_fb48ea",
-    triggersEnable: "triggersEnable_fb48ea",
     headerTitle: "headerTitle_fb48ea",
     copyEventButton: "copyEventButton_fb48ea",
 };

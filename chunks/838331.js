@@ -141,71 +141,69 @@ function P(e) {
             autoFocus: S = !1,
             maxVisibleItems: A = 5,
             itemToString: C = N,
-            showScrollbar: P = !1,
-            emptyStateText: w,
-            emptyStateHeader: D,
-            onQueryChange: x,
+            emptyStateText: P,
+            emptyStateHeader: w,
+            onQueryChange: D,
         } = e,
-        [L, j] = i.useState(""),
-        M = i.useCallback(
+        [x, L] = i.useState(""),
+        j = i.useCallback(
             (e) => {
-                j(e), null == x || x(e);
+                L(e), null == D || D(e);
             },
-            [x],
+            [D],
         ),
-        [k] = i.useState(!0),
-        [U, G] = i.useState(null),
-        B = i.useId(),
-        Z = i.useRef(null);
+        [M] = i.useState(!0),
+        [k, U] = i.useState(null),
+        G = i.useId(),
+        B = i.useRef(null);
     i.useLayoutEffect(() => {
-        let e = document.querySelector("[".concat(I, '="').concat(U, '"]')),
-            t = Z.current;
+        let e = document.querySelector("[".concat(I, '="').concat(k, '"]')),
+            t = B.current;
         null != t &&
             null != e &&
             t.scrollIntoViewNode({
                 node: e,
                 padding: 12,
             });
-    }, [U]);
-    let F = n(L),
-        V = 0 === F.length,
-        H = null != D ? D : h.intl.string(h.t["4o4z3d"]),
-        Y = i.useId(),
+    }, [k]);
+    let Z = n(x),
+        F = 0 === Z.length,
+        V = null != w ? w : h.intl.string(h.t["4o4z3d"]),
+        H = i.useId(),
+        Y = i.useCallback(
+            () =>
+                new Promise((e) => {
+                    let t = B.current;
+                    if (null == t) return e();
+                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
+                }),
+            [],
+        ),
         W = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = Z.current;
+                    let t = B.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             [],
         ),
-        K = i.useCallback(
-            () =>
-                new Promise((e) => {
-                    let t = Z.current;
-                    if (null == t) return e();
-                    t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
-                }),
-            [],
-        ),
-        z = i.useCallback((e, t) => {
-            G(t);
+        K = i.useCallback((e, t) => {
+            U(t);
             let n = document.querySelector(e),
-                r = Z.current;
+                r = B.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
         }, []),
-        q = (0, s.ZP)({
-            id: Y,
+        z = (0, s.ZP)({
+            id: H,
             isEnabled: !0,
             useVirtualFocus: !0,
-            scrollToStart: W,
-            scrollToEnd: K,
-            setFocus: z,
-        }),
-        X = P ? u.Tv : u.lW;
+            scrollToStart: Y,
+            scrollToEnd: W,
+            setFocus: K,
+        });
     return (0, r.jsx)(l.bG, {
-        navigator: q,
+        navigator: z,
         children: (0, r.jsx)(l.SJ, {
             children: (e) => {
                 var { ref: n, onKeyDown: i } = e,
@@ -214,65 +212,68 @@ function P(e) {
                     ref: n,
                     role: "combobox",
                     "aria-label": b,
-                    "aria-expanded": k,
-                    "aria-controls": k ? B : void 0,
-                    "aria-owns": B,
+                    "aria-expanded": M,
+                    "aria-controls": M ? G : void 0,
+                    "aria-owns": G,
                     "aria-haspopup": "listbox",
                     className: o()(m.combobox, _),
                     children: [
-                        (0, r.jsx)(d.E, {
-                            autoFocus: S,
-                            placeholder: t,
-                            query: L,
-                            onChange: M,
-                            onKeyDown: i,
-                            onBlur: () => G(null),
-                            onClear: () => M(""),
-                            className: o()({ [m.searchWithScrollbar]: P }),
-                            inputProps: {
-                                "aria-multiline": !1,
-                                "aria-activedescendant": null != U ? U : void 0,
-                            },
+                        (0, r.jsx)("div", {
+                            className: m.header,
+                            children: (0, r.jsx)(d.E, {
+                                size: "sm",
+                                autoFocus: S,
+                                placeholder: t,
+                                query: x,
+                                onChange: j,
+                                onKeyDown: i,
+                                onBlur: () => U(null),
+                                onClear: () => j(""),
+                                inputProps: {
+                                    "aria-multiline": !1,
+                                    "aria-activedescendant": null != k ? k : void 0,
+                                },
+                            }),
                         }),
                         (0, r.jsx)("div", {
                             children:
-                                k &&
-                                (V
+                                M &&
+                                (F
                                     ? (0, r.jsxs)("div", {
                                           className: m.empty,
                                           children: [
                                               (0, r.jsx)(p.X6q, {
                                                   variant: "heading-md/semibold",
-                                                  children: H,
+                                                  children: V,
                                               }),
                                               (0, r.jsx)(f.x, {
                                                   color: "text-muted",
                                                   variant: "text-md/normal",
-                                                  children: null != w ? w : h.intl.string(h.t.QwSXv7),
+                                                  children: null != P ? P : h.intl.string(h.t.QwSXv7),
                                               }),
                                           ],
                                       })
                                     : (0, r.jsx)(R.Provider, {
                                           value: {
-                                              activeDescendant: U,
+                                              activeDescendant: k,
                                               selected: a,
                                               setSelected: c,
                                               itemToString: C,
                                           },
                                           children: (0, r.jsx)(
-                                              X,
+                                              u.Tv,
                                               y(E({}, s), {
                                                   style: { maxHeight: A * (T + 6) },
                                                   "aria-multiselectable": v,
-                                                  id: B,
-                                                  ref: Z,
-                                                  className: o()(m.list, g, { [m.scroller]: P }),
-                                                  sections: [F.length],
+                                                  id: G,
+                                                  ref: B,
+                                                  className: o()(m.list, m.scroller, g),
+                                                  sections: [Z.length],
                                                   sectionHeight: 0,
                                                   rowHeight: T,
                                                   renderRow: (e) => {
                                                       let { row: t } = e;
-                                                      return F[t];
+                                                      return Z[t];
                                                   },
                                                   renderSection: () => null,
                                               }),

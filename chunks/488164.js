@@ -95,7 +95,6 @@ class _ extends i.PureComponent {
                     value: new Set([o.value]),
                     onChange: a,
                     onClose: t,
-                    showScrollbar: !0,
                     children: (e) => this.renderItems(e),
                 });
             });

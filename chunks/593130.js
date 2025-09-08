@@ -153,12 +153,11 @@ function Z(e) {
     );
 }
 function w(e) {
-    let { query: t, setQuery: n, submit: l, isLoading: a } = e;
+    let { query: t, setQuery: n, submit: l } = e;
     return (0, r.jsx)(c.E1j, {
         size: "sm",
         autoFocus: !0,
         query: t,
-        isLoading: a,
         onChange: (e) => n(e),
         onClear: () => n(""),
         onKeyDown: (e) => "Enter" === e.key && l(),

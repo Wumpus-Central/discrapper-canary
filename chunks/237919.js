@@ -39,8 +39,9 @@ class E extends i.Component {
         u.wX(null), u.JZ("");
     }
     focusInput() {
-        let { searchBarRef: e } = this;
-        null != e && e.focus();
+        var e;
+        let { searchBarRef: t } = this;
+        null != t && (null == (e = t.current) || e.focus());
     }
     updateActiveRow(e) {
         let { applicationViewItems: t, activeRowKey: n } = this.props,
@@ -59,16 +60,13 @@ class E extends i.Component {
                 [_.focused]: t,
             }),
             children: (0, r.jsx)(s.E1j, {
-                className: _.searchBar,
-                ref: this.setRef,
+                ref: this.searchBarRef,
                 onChange: u.JZ,
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
-                name: "filter",
                 onClear: () => {
                     this.reset(), this.focusInput();
                 },
-                maxLength: 100,
                 query: e,
                 placeholder: b.intl.string(b.t.aSxWSk),
             }),
@@ -76,29 +74,28 @@ class E extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            O(this, "searchBarRef", null),
+            O(this, "searchBarRef", i.createRef()),
             O(this, "state", { focused: !1 }),
-            O(this, "setRef", (e) => {
-                this.searchBarRef = e;
-            }),
             O(this, "handleKeyDown", (e) => {
-                var t;
-                let { activeRowKey: n, hasModalOpen: r, applicationViewItems: i } = this.props,
-                    { searchBarRef: l } = this;
-                if (r || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
-                let a = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
-                if (!(a !== l.inputRef.current && (0, h.VG)(a)))
+                var t, n, r;
+                let { activeRowKey: i, hasModalOpen: l, applicationViewItems: a } = this.props,
+                    { searchBarRef: o } = this;
+                if (l || e.ctrlKey || e.altKey || e.metaKey || null == o) return;
+                let s = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
+                if (!(s !== o.current && (0, h.VG)(s)))
                     switch (e.which) {
                         case m.yXg.ESCAPE:
-                            e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
+                            e.target !== o.current
+                                ? this.reset()
+                                : null != o.current && (null == (n = o.current) || n.blur());
                             break;
                         case m.yXg.ENTER:
-                            if (null != n) {
+                            if (null != i) {
                                 e.preventDefault();
-                                let t = i.find((e) => e.key === n);
+                                let t = a.find((e) => e.key === i);
                                 if (null == t) return;
-                                let r = t.libraryApplication;
-                                g.performDefaultLibraryApplicationAction(r, {
+                                let n = t.libraryApplication;
+                                g.performDefaultLibraryApplicationAction(n, {
                                     analyticsParams: {
                                         source: m.Sbl.APPLICATION_LIBRARY,
                                         location: {
@@ -117,7 +114,7 @@ class E extends i.Component {
                                 this.updateActiveRow(e.which === m.yXg.ARROW_DOWN ? 1 : -1);
                             break;
                         default:
-                            null != l.inputRef.current && e.target !== l.inputRef.current && l.focus();
+                            null != o.current && e.target !== o.current && (null == (r = o.current) || r.focus());
                     }
             });
     }

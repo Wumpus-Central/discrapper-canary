@@ -2,8 +2,7 @@ n.d(t, {
     I: () => j,
     Z: () => v,
 }),
-    n(388685),
-    n(35282);
+    n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(442837),
@@ -40,8 +39,8 @@ function v(e) {
         v = (0, i.e7)([u.ZP], () => u.ZP.getChannels(t)),
         y = (0, i.e7)([d.Z], () => d.Z.getCategories(t)),
         O = (0, f.Fo)(t, y, v, o),
-        Z = (0, i.e7)([h.Z], () => h.Z.canWithPartialContext(x.Plq.MANAGE_CHANNELS, { guildId: t })),
-        N = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(_.oC.CHANNEL_BROWSER)),
+        N = (0, i.e7)([h.Z], () => h.Z.canWithPartialContext(x.Plq.MANAGE_CHANNELS, { guildId: t })),
+        Z = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(_.oC.CHANNEL_BROWSER)),
         I = r.useCallback(() => s(""), [s]),
         w = r.useCallback(() => {
             (0, a.ZDy)(async () => {
@@ -106,7 +105,6 @@ function v(e) {
                       className: b.header,
                       children: [
                           (0, l.jsx)(a.E1j, {
-                              className: b.search,
                               query: o,
                               onChange: (e) => {
                                   "" === o &&
@@ -117,7 +115,7 @@ function v(e) {
                               onClear: I,
                               placeholder: C.intl.string(C.t.s5MnmJ),
                           }),
-                          Z
+                          N
                               ? (0, l.jsx)(a.zxk, {
                                     icon: a.qJs,
                                     onClick: w,
@@ -131,7 +129,7 @@ function v(e) {
                       channels: v,
                       categories: O,
                       guild: j,
-                      hasSidebar: N,
+                      hasSidebar: Z,
                   }),
               ],
           });

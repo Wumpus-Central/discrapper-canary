@@ -7,40 +7,38 @@ var r = n(951288),
     l = n(5967),
     c = n(996733),
     u = n(388032);
-function d(e) {
-    let { style: t } = e,
-        n = (0, c.Z7)(),
-        d = i.useCallback((e, t) => {
+function d() {
+    let e = (0, c.Z7)(),
+        t = i.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        f = i.useCallback(() => {
+        n = i.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)("");
         }, []),
-        _ = i.useRef(null),
-        p = (0, a.e7)([s.Z], () => s.Z.getSection());
+        d = i.useRef(null),
+        f = (0, a.e7)([s.Z], () => s.Z.getSection());
     return (
         i.useEffect(() => {
             let e = (e) => {
                 var t;
-                let n = _.current;
+                let n = d.current;
                 (null == (t = (0, l.uB)(e)) ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
             };
             return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
-        }, [p]),
+        }, [f]),
         (0, r.jsx)("div", {
             style: { marginBottom: "8px" },
             children: (0, r.jsx)(o.E1j, {
-                ref: _,
-                query: n,
-                onClear: f,
+                ref: d,
+                query: e,
+                onClear: n,
                 onChange: c.yN,
                 placeholder: u.intl.string(u.t["5h0QOD"]),
-                className: t,
                 inputProps: {
                     "aria-label": u.intl.string(u.t.pk9BWV),
                     "aria-expanded": !0,
-                    onFocus: (e) => d(!0, e),
-                    onBlur: (e) => d(!1, e),
+                    onFocus: (e) => t(!0, e),
+                    onBlur: (e) => t(!1, e),
                 },
             }),
         })

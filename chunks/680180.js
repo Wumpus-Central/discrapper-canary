@@ -36,18 +36,21 @@ function d(e) {
               className: c.searchIcon,
               onClick: _,
               children: (0, r.jsx)(s._Ve, {
-                  size: "md",
-                  color: s.TVs.colors.INTERACTIVE_NORMAL,
+                  size: "sm",
+                  color: s.TVs.colors.ICON_PRIMARY,
               }),
           })
-        : (0, r.jsx)(s.E1j, {
-              ref: g,
+        : (0, r.jsx)("div", {
               className: l()(c.searchBar, { [c.searchFloating]: t === o.GlobalDiscoverySearchBarState.FLOATING }),
-              query: n,
-              placeholder: i,
-              onChange: d,
-              onClear: p,
-              onKeyDown: f,
-              onBlur: m,
+              children: (0, r.jsx)(s.E1j, {
+                  size: "sm",
+                  ref: g,
+                  query: n,
+                  placeholder: i,
+                  onChange: d,
+                  onClear: p,
+                  onKeyDown: f,
+                  onBlur: m,
+              }),
           });
 }

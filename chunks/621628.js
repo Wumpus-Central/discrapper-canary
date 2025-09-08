@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(290780), n(642613);
+n.d(t, { Z: () => y }), n(388685), n(290780), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -13,9 +13,8 @@ var r = n(951288),
     p = n(68985),
     h = n(211644),
     m = n(87454),
-    g = n(471345),
-    E = n(197571);
-function b(e, t) {
+    g = n(197571);
+function E(e, t) {
     let [n, r] = i.useState(() => {
         let n = c.K.get(e);
         return null != n ? n : t;
@@ -27,7 +26,7 @@ function b(e, t) {
         [n, r]
     );
 }
-function y(e) {
+function b(e) {
     let { items: t, handleChange: n } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t
@@ -44,7 +43,7 @@ function y(e) {
             ),
     });
 }
-function O() {
+function y() {
     let e = (0, h.ZP)((e) => e.recentlyShown),
         {
             dailyCapReached: t,
@@ -56,23 +55,23 @@ function O() {
             newUserMinAgeRequiredOverridden: p.Z.newUserMinAgeRequiredOverridden,
         })),
         [c, m] = i.useState(""),
-        [O, v] = b("RecentDismissibleOverrides", []),
-        I = i.useCallback(
+        [y, O] = E("RecentDismissibleOverrides", []),
+        v = i.useCallback(
             (e) => {
-                v((t) => {
+                O((t) => {
                     let n = new Set(t);
                     n.delete(e);
                     let r = Array.from(n).slice(0, 4);
                     return r.unshift(e), r;
                 });
             },
-            [v],
+            [O],
         ),
-        T = e.map((e) => l.z[e]),
-        S = O.filter((e) => e.toLowerCase().includes(c.toLowerCase())).filter((e) => !T.includes(e)),
-        A = Object.keys(l.z)
-            .filter((e) => !T.includes(e))
-            .filter((e) => !O.includes(e))
+        I = e.map((e) => l.z[e]),
+        T = y.filter((e) => e.toLowerCase().includes(c.toLowerCase())).filter((e) => !I.includes(e)),
+        S = Object.keys(l.z)
+            .filter((e) => !I.includes(e))
+            .filter((e) => !y.includes(e))
             .filter((e) => e.toLowerCase().includes(c.toLowerCase()))
             .sort((e, t) => e.localeCompare(t));
     return (0, r.jsxs)(r.Fragment, {
@@ -80,11 +79,11 @@ function O() {
             (0, r.jsxs)(u.hjN, {
                 title: "Dismissible Content Fatigue",
                 tag: u.RB0.H1,
-                className: E.marginBottom60,
+                className: g.marginBottom60,
                 children: [
                     (0, r.jsx)(u.xJW, {
                         children: (0, r.jsxs)(u.R94, {
-                            className: E.marginBottom4,
+                            className: g.marginBottom4,
                             children: ["Daily Cap Reached: ", t ? "Yes" : "No"],
                         }),
                     }),
@@ -106,76 +105,77 @@ function O() {
                                 onClick: () => (0, _.EG)(),
                             }),
                             (0, r.jsx)(u.R94, {
-                                className: E.marginTop4,
+                                className: g.marginTop4,
                                 children: "This will reset the daily cap and content seen during session",
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsxs)(u.hjN, {
+            (0, r.jsx)(u.hjN, {
                 title: "Dismissible Contents",
                 tag: u.RB0.H1,
-                children: [
-                    (0, r.jsx)(u.E1j, {
-                        className: E.marginBottom20,
-                        query: c,
-                        onChange: m,
-                        onClear: () => m(""),
-                    }),
-                    (0, r.jsxs)(u.xJW, {
-                        className: g.buttonsContainer,
-                        children: [
-                            (0, r.jsx)(u.zxk, {
-                                variant: "primary",
-                                text: "Clear All Dismissed Contents",
-                                onClick: f.sr,
-                            }),
-                            (0, r.jsx)(u.zxk, {
-                                variant: "primary",
-                                text: "Check All Dismissed Contents",
-                                onClick: f.bE,
-                            }),
-                        ],
-                    }),
-                    e.length > 0
-                        ? (0, r.jsxs)("div", {
-                              className: E.marginBottom20,
-                              children: [
-                                  (0, r.jsx)("div", {
-                                      className: E.marginBottom20,
-                                      children: (0, r.jsx)(u.vwX, { children: "Recently Shown" }),
-                                  }),
-                                  (0, r.jsx)(y, {
-                                      items: T,
-                                      handleChange: I,
-                                  }),
-                              ],
-                          })
-                        : null,
-                    S.length > 0
-                        ? (0, r.jsxs)(r.Fragment, {
-                              children: [
-                                  (0, r.jsx)("div", {
-                                      className: E.marginBottom20,
-                                      children: (0, r.jsx)(u.vwX, { children: "Recent Overrides" }),
-                                  }),
-                                  (0, r.jsx)(y, {
-                                      items: S,
-                                      handleChange: I,
-                                  }),
-                              ],
-                          })
-                        : null,
-                    (0, r.jsx)(d.Z, {
-                        className: o()(E.marginBottom20, E.marginTop20),
-                        children: (0, r.jsx)(u.vwX, { children: "Available Dismissible Contents" }),
-                    }),
-                    (0, r.jsx)(y, {
-                        items: A,
-                        handleChange: I,
-                    }),
-                ],
+                children: (0, r.jsxs)(u.Kqy, {
+                    gap: 16,
+                    children: [
+                        (0, r.jsx)(u.E1j, {
+                            query: c,
+                            onChange: m,
+                            onClear: () => m(""),
+                        }),
+                        (0, r.jsxs)(u.hE2, {
+                            children: [
+                                (0, r.jsx)(u.zxk, {
+                                    variant: "critical-primary",
+                                    text: "Clear All Dismissed Contents",
+                                    onClick: f.sr,
+                                }),
+                                (0, r.jsx)(u.zxk, {
+                                    variant: "secondary",
+                                    text: "Check All Dismissed Contents",
+                                    onClick: f.bE,
+                                }),
+                            ],
+                        }),
+                        e.length > 0
+                            ? (0, r.jsxs)("div", {
+                                  className: g.marginBottom20,
+                                  children: [
+                                      (0, r.jsx)("div", {
+                                          className: g.marginBottom20,
+                                          children: (0, r.jsx)(u.vwX, { children: "Recently Shown" }),
+                                      }),
+                                      (0, r.jsx)(b, {
+                                          items: I,
+                                          handleChange: v,
+                                      }),
+                                  ],
+                              })
+                            : null,
+                        T.length > 0
+                            ? (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)("div", {
+                                          className: g.marginBottom20,
+                                          children: (0, r.jsx)(u.vwX, { children: "Recent Overrides" }),
+                                      }),
+                                      (0, r.jsx)(b, {
+                                          items: T,
+                                          handleChange: v,
+                                      }),
+                                  ],
+                              })
+                            : null,
+                        (0, r.jsx)(d.Z, {
+                            className: o()(g.marginBottom20, g.marginTop20),
+                            children: (0, r.jsx)(u.vwX, { children: "Available Dismissible Contents" }),
+                        }),
+                        (0, r.jsx)(b, {
+                            items: S,
+                            handleChange: v,
+                        }),
+                    ],
+                }),
             }),
         ],
     });

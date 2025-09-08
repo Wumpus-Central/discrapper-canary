@@ -1,4 +1,4 @@
-n.d(t, { m: () => I });
+n.d(t, { m: () => O });
 var r,
     i,
     a = n(951288),
@@ -62,51 +62,21 @@ function g(e, t) {
         e
     );
 }
-function E(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = b(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function b(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let y = () => (0, a.jsx)(u.$, { className: _.divider }),
-    O = (e) => {
+let E = () => (0, a.jsx)(u.$, { className: _.divider }),
+    b = (e) => {
         let { children: t } = e;
         return (0, a.jsx)("div", {
             className: _.popoutListEmpty,
             children: t,
         });
     };
-class v extends (r = o.PureComponent) {
+class y extends (r = o.PureComponent) {
     render() {
-        let e = this.props,
-            { className: t } = e,
-            n = E(e, ["className"]);
-        return (0, a.jsx)(
-            d.E,
-            g(h({}, n), {
-                size: "sm",
-                className: l()(_.popoutListInput, t),
-            }),
-        );
+        return (0, a.jsx)(d.E, g(h({}, this.props), { size: "sm" }));
     }
 }
-p(v, "defaultProps", { autoFocus: !0 });
-class I extends (i = o.PureComponent) {
+p(y, "defaultProps", { autoFocus: !0 });
+class O extends (i = o.PureComponent) {
     render() {
         let { className: e, children: t } = this.props;
         return (0, a.jsx)(c.V, {
@@ -116,4 +86,4 @@ class I extends (i = o.PureComponent) {
         });
     }
 }
-p(I, "SearchBar", v), p(I, "Item", f.Z), p(I, "Divider", y), p(I, "Empty", O);
+p(O, "SearchBar", y), p(O, "Item", f.Z), p(O, "Divider", E), p(O, "Empty", b);

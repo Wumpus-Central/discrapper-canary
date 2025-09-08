@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eg }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+n.d(t, { Z: () => ej }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
 var a = n(951288),
     r = n(647438),
     l = n(120356),
@@ -15,21 +15,21 @@ var a = n(951288),
     f = n(393238),
     v = n(594190),
     b = n(984370),
-    j = n(427860),
-    g = n(837268),
+    g = n(427860),
+    j = n(837268),
     _ = n(371651),
     y = n(829907),
     C = n(610394),
     N = n(556809),
     E = n(886118),
-    O = n(301801),
-    T = n(352527),
+    T = n(301801),
+    O = n(352527),
     S = n(355863),
     P = n(449224),
-    w = n(808506),
+    I = n(808506),
     k = n(572004),
-    I = n(55935),
-    R = n(70956),
+    R = n(55935),
+    w = n(70956),
     Z = n(136015),
     A = n(145597),
     D = n(246992),
@@ -38,8 +38,8 @@ var a = n(951288),
     F = n(681619),
     U = n(621060),
     z = n(981631),
-    B = n(757744),
-    G = n(388032),
+    G = n(757744),
+    B = n(388032),
     V = n(454741),
     H = n(451429);
 function W(e) {
@@ -85,7 +85,7 @@ function K(e, t) {
         e
     );
 }
-let X = {
+let Y = {
         [z.Odu.CLICK_ZONE_DEBUG]: (e) =>
             K(
                 W(
@@ -128,7 +128,7 @@ let X = {
                 { pinned: !0 },
             ),
     },
-    Y = {};
+    X = {};
 function q(e) {
     let { id: t } = e,
         [n, l] = r.useState(!1);
@@ -153,7 +153,7 @@ function q(e) {
                 (0, k.JG)(t, () => l(!0));
             },
             className: V.copyId,
-            children: ["Application Id: ", t, " ", n ? G.intl.string(G.t["t5VZ8/"]) : null],
+            children: ["Application Id: ", t, " ", n ? B.intl.string(B.t["t5VZ8/"]) : null],
         })
     );
 }
@@ -293,12 +293,12 @@ let J = r.memo(function (e) {
     }),
     $ = r.memo(function (e) {
         let { pid: t } = e,
-            n = (0, d.cj)([w.default], () => w.default.getOverlayPIDStatuses()),
+            n = (0, d.cj)([I.default], () => I.default.getOverlayPIDStatuses()),
             r = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
-            l = (0, d.e7)([w.default], () => w.default.isInputLocked(t), [t]),
-            i = (0, d.e7)([w.default], () => w.default.DEV_isInputLockedV3(t), [t]),
-            s = (0, d.e7)([w.default], () => w.default.DEV_isInputLocked(t), [t]),
-            o = (0, d.e7)([w.default], () => w.default.isReady(t), [t]);
+            l = (0, d.e7)([I.default], () => I.default.isInputLocked(t), [t]),
+            i = (0, d.e7)([I.default], () => I.default.DEV_isInputLockedV3(t), [t]),
+            s = (0, d.e7)([I.default], () => I.default.DEV_isInputLocked(t), [t]),
+            o = (0, d.e7)([I.default], () => I.default.isReady(t), [t]);
         return (0, a.jsxs)("div", {
             className: V.panelGroup,
             children: [
@@ -385,15 +385,15 @@ let J = r.memo(function (e) {
     });
 function Q(e) {
     let t,
-        n = ((t = Object.values((0, d.Wu)([S.Z], () => S.Z.getWidgetsForLayout(B.$S)))), t.find((t) => t.type === e));
+        n = ((t = Object.values((0, d.Wu)([S.Z], () => S.Z.getWidgetsForLayout(G.$S)))), t.find((t) => t.type === e));
     return [
         n,
         () => {
             if (null != n) (0, x.E9)(n.id);
             else {
-                let t = X[e];
+                let t = Y[e];
                 if (null == t) return;
-                let n = t(B.$S);
+                let n = t(G.$S);
                 (0, x.A4)(n);
             }
         },
@@ -430,7 +430,7 @@ let et = r.memo(function (e) {
         var e, n;
         if (null == t) return "Unknown";
         let a = null == (e = _.default.getTrackedGameByPid(t)) ? void 0 : e.gameName;
-        return null != a ? ((Y[t] = a), a) : null != (n = Y[t]) ? n : "Unknown";
+        return null != a ? ((X[t] = a), a) : null != (n = X[t]) ? n : "Unknown";
     }, [t]);
     return (0, a.jsx)(
         m.Text,
@@ -442,7 +442,7 @@ let et = r.memo(function (e) {
     );
 });
 function en() {
-    let e = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([_.default], () => _.default.getDevToolsFocusedPidsWithTimestamp(), []);
     return (0, a.jsxs)("div", {
         className: V.panelGroup,
@@ -454,8 +454,8 @@ function en() {
                         value: e,
                         onChange: () =>
                             void h.Z.setRenderDebugMode(
-                                !C.ZP.hasRenderDebugMode(g.GO.TrackFocusPIDs),
-                                g.GO.TrackFocusPIDs,
+                                !C.ZP.hasRenderDebugMode(j.GO.TrackFocusPIDs),
+                                j.GO.TrackFocusPIDs,
                             ),
                         size: 18,
                         type: u.M0.INVERTED,
@@ -493,7 +493,7 @@ function en() {
                             {
                                 children: (0, a.jsx)(m.ua7, {
                                     position: "left",
-                                    text: l === g.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
+                                    text: l === j.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
                                         var r;
                                         return (0, a.jsx)(
@@ -501,7 +501,7 @@ function en() {
                                             K(W({}, e), {
                                                 children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: l === g.d5.TRACK_FOCUS ? "text-default" : "text-danger",
+                                                    color: l === j.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
                                                         (0, a.jsx)(et, {
                                                             pid: n,
@@ -580,7 +580,7 @@ let ea = r.memo(function (e) {
                                 W({}, e),
                             ),
                         );
-                    }, +R.Z.Millis.SECOND)),
+                    }, +w.Z.Millis.SECOND)),
                     () => clearInterval(l.current)
                 ),
                 [],
@@ -644,9 +644,9 @@ let ea = r.memo(function (e) {
         let n = (0, d.cj)([_.default], () => _.default.getTrackedGames()),
             r = (0, A.getPID)(),
             l = (0, d.e7)([_.default], () => _.default.isOverlayOOPEnabledForPid(r), [r]),
-            [i, s] = (0, d.Wu)([T.Z], () => [T.Z.enabled, T.Z.keepOpen]),
-            o = (0, d.e7)([w.default], () => w.default.getFocusedPID()),
-            c = (0, d.e7)([w.default], () => w.default.isFocusedPidOutOfProcess());
+            [i, s] = (0, d.Wu)([O.Z], () => [O.Z.enabled, O.Z.keepOpen]),
+            o = (0, d.e7)([I.default], () => I.default.getFocusedPID()),
+            c = (0, d.e7)([I.default], () => I.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
             className: V.panelGroup,
             children: [
@@ -697,11 +697,11 @@ let ea = r.memo(function (e) {
     ei = r.memo(function () {
         let [e, t] = Q(z.Odu.CLICK_ZONE_DEBUG),
             [n, l] = Q(z.Odu.PERFORMANCE_DEBUG),
-            i = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ClickZones)),
-            s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.WidgetAreas)),
-            o = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.DisabledGPUBoost)),
-            c = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.ForceGPUBoost)),
-            x = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(g.GO.OverlayRafManagerForceEnabled)),
+            i = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.ClickZones)),
+            s = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.WidgetAreas)),
+            o = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.DisabledGPUBoost)),
+            c = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.ForceGPUBoost)),
+            x = (0, d.e7)([C.ZP], () => C.ZP.hasRenderDebugMode(j.GO.OverlayRafManagerForceEnabled)),
             p = (e) => {
                 h.Z.setRenderDebugMode(!C.ZP.hasRenderDebugMode(e), e);
             },
@@ -725,7 +725,7 @@ let ea = r.memo(function (e) {
                                 K(W({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: i,
-                                        onChange: () => void p(g.GO.ClickZones),
+                                        onChange: () => void p(j.GO.ClickZones),
                                         size: 18,
                                         type: u.M0.INVERTED,
                                         shape: u.zV.BOX,
@@ -748,7 +748,7 @@ let ea = r.memo(function (e) {
                                 K(W({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: s,
-                                        onChange: () => void p(g.GO.WidgetAreas),
+                                        onChange: () => void p(j.GO.WidgetAreas),
                                         size: 18,
                                         type: u.M0.INVERTED,
                                         shape: u.zV.BOX,
@@ -771,7 +771,7 @@ let ea = r.memo(function (e) {
                                 K(W({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: o,
-                                        onChange: () => void p(g.GO.DisabledGPUBoost),
+                                        onChange: () => void p(j.GO.DisabledGPUBoost),
                                         size: 18,
                                         type: u.M0.INVERTED,
                                         shape: u.zV.BOX,
@@ -794,7 +794,7 @@ let ea = r.memo(function (e) {
                                 K(W({}, e), {
                                     children: (0, a.jsx)(u.$q, {
                                         value: c,
-                                        onChange: () => void p(g.GO.ForceGPUBoost),
+                                        onChange: () => void p(j.GO.ForceGPUBoost),
                                         size: 18,
                                         disabled: o,
                                         type: u.M0.INVERTED,
@@ -857,7 +857,7 @@ let ea = r.memo(function (e) {
                     }),
                     (0, a.jsx)(u.$q, {
                         value: x,
-                        onChange: () => void p(g.GO.OverlayRafManagerForceEnabled),
+                        onChange: () => void p(j.GO.OverlayRafManagerForceEnabled),
                         size: 18,
                         type: u.M0.INVERTED,
                         shape: u.zV.BOX,
@@ -950,20 +950,20 @@ let ea = r.memo(function (e) {
             },
             i = [
                 {
-                    label: g.R5.UNSET,
-                    value: g.R5.UNSET,
+                    label: j.R5.UNSET,
+                    value: j.R5.UNSET,
                 },
                 {
-                    label: g.R5.IN_PROCESS_V2,
-                    value: g.R5.IN_PROCESS_V2,
+                    label: j.R5.IN_PROCESS_V2,
+                    value: j.R5.IN_PROCESS_V2,
                 },
                 {
-                    label: g.R5.OUT_OF_PROCESS_V3,
-                    value: g.R5.OUT_OF_PROCESS_V3,
+                    label: j.R5.OUT_OF_PROCESS_V3,
+                    value: j.R5.OUT_OF_PROCESS_V3,
                 },
                 {
-                    label: g.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-                    value: g.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    label: j.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    value: j.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
             ].map((t) => K(W({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, a.jsx)(m.ua7, {
@@ -988,30 +988,30 @@ let ea = r.memo(function (e) {
     ec = {
         native: {
             label: "Native",
-            filter: (e) => e.type === j.C7.NativeLegacy || e.type === j.C7.NativeOOP,
+            filter: (e) => e.type === g.C7.NativeLegacy || e.type === g.C7.NativeOOP,
         },
         render: {
             label: "Render",
-            filter: (e) => e.type === j.C7.Renderer,
+            filter: (e) => e.type === g.C7.Renderer,
         },
         client: {
             label: "Client",
-            filter: (e) => e.type === j.C7.OOPModule || e.type === j.C7.LegacyModule,
+            filter: (e) => e.type === g.C7.OOPModule || e.type === g.C7.LegacyModule,
         },
     };
 function ed(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : j.l6.Info;
-    if (t === j.l6.Error) return "var(--text-danger)";
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.l6.Info;
+    if (t === g.l6.Error) return "var(--text-danger)";
     switch (e) {
-        case j.C7.NativeLegacy:
+        case g.C7.NativeLegacy:
             return "var(--yellow-500)";
-        case j.C7.NativeOOP:
+        case g.C7.NativeOOP:
             return "var(--green-500)";
-        case j.C7.Renderer:
+        case g.C7.Renderer:
             return "var(--brand-500)";
-        case j.C7.LegacyModule:
+        case g.C7.LegacyModule:
             return "var(--yellow-300)";
-        case j.C7.OOPModule:
+        case g.C7.OOPModule:
             return "var(--green-300)";
         default:
             return "var(--gray-400)";
@@ -1046,11 +1046,11 @@ let eu = [
                         variant: "text-md/normal",
                         color: (function (e) {
                             switch (e) {
-                                case j.l6.Info:
+                                case g.l6.Info:
                                     return "text-primary";
-                                case j.l6.Warning:
+                                case g.l6.Warning:
                                     return "text-feedback-warning";
-                                case j.l6.Error:
+                                case g.l6.Error:
                                     return "text-danger";
                                 default:
                                     return "text-secondary";
@@ -1072,21 +1072,21 @@ let eu = [
         cellClassName: V.rightColumn,
         render(e) {
             let { timestamp: t } = e;
-            return (0, I.vc)(o()(t), "h:mm:ss.SSS");
+            return (0, R.vc)(o()(t), "h:mm:ss.SSS");
         },
     },
 ];
 function em(e) {
     switch (e) {
-        case j.C7.NativeLegacy:
+        case g.C7.NativeLegacy:
             return m.GON;
-        case j.C7.NativeOOP:
+        case g.C7.NativeOOP:
             return m.ljO;
-        case j.C7.Renderer:
+        case g.C7.Renderer:
             return m.n6r;
-        case j.C7.LegacyModule:
+        case g.C7.LegacyModule:
             return m.pzj;
-        case j.C7.OOPModule:
+        case g.C7.OOPModule:
             return m.m3e;
         default:
             return m.pzj;
@@ -1162,8 +1162,8 @@ let eh = ["__webpack_require__", "fn"],
                                     copyValue: f.toISOString(),
                                     children: (0, a.jsx)("time", {
                                         dateTime: f.toISOString(),
-                                        title: (0, I.vc)(f, "LLLL"),
-                                        children: (0, I.vc)(f, "L h:mm:ss.SSS"),
+                                        title: (0, R.vc)(f, "LLLL"),
+                                        children: (0, R.vc)(f, "L h:mm:ss.SSS"),
                                     }),
                                 }),
                                 (0, a.jsx)(L.Z9, {
@@ -1245,7 +1245,7 @@ function eb() {
         [o, c] = r.useState(s),
         [x, p] = r.useState(Object.keys(ec)),
         [v, b] = r.useState(""),
-        j = r.useMemo(
+        g = r.useMemo(
             () =>
                 0 === t
                     ? []
@@ -1258,14 +1258,14 @@ function eb() {
                       }),
             [e, x, t],
         ),
-        [g, _] = r.useState(j),
+        [j, _] = r.useState(g),
         [y, N] = r.useState(null),
         E = r.useMemo(() => e.find((e) => e.key === y), [e, y]),
-        T = r.useCallback((e) => {
+        O = r.useCallback((e) => {
             _(e);
         }, []),
         { renderSelectedTab: S } = (0, U.ZP)({ tabs: ef }, []);
-    (0, O.BO)(v, j, T, ev, [e]);
+    (0, T.BO)(v, g, O, ev, [e]);
     let P = r.useCallback((e) => {
         c(e), h.Z.setModuleLogging(e);
     }, []);
@@ -1278,23 +1278,23 @@ function eb() {
             clearTimeout(e);
         };
     }, []);
-    let [w, I] = r.useState(!1),
-        R = r.useRef(null),
+    let [I, R] = r.useState(!1),
+        w = r.useRef(null),
         A = r.useCallback(() => {
-            (0, k.JG)(JSON.stringify(e)), I(!0);
+            (0, k.JG)(JSON.stringify(e)), R(!0);
         }, [e]);
     return (
         r.useEffect(() => {
-            if (w)
+            if (I)
                 return (
-                    (R.current = setTimeout(() => {
-                        I(!1);
+                    (w.current = setTimeout(() => {
+                        R(!1);
                     }, 4000)),
                     () => {
-                        null != R.current && clearTimeout(R.current);
+                        null != w.current && clearTimeout(w.current);
                     }
                 );
-        }, [w]),
+        }, [I]),
         (0, a.jsxs)("div", {
             ref: n,
             className: V.panelContainer,
@@ -1345,9 +1345,9 @@ function eb() {
                                         (0, a.jsx)(m.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
-                                            children: w ? "Copied" : "Copy All",
+                                            children: I ? "Copied" : "Copy All",
                                         }),
-                                        w
+                                        I
                                             ? (0, a.jsx)(m.dz2, {
                                                   size: "sm",
                                                   color: m.TVs.unsafe_rawColors.GREEN_330.css,
@@ -1363,7 +1363,6 @@ function eb() {
                         (0, a.jsx)("div", {
                             className: V.toolbar,
                             children: (0, a.jsx)(m.E1j, {
-                                className: V.searchBar,
                                 query: v,
                                 onChange: b,
                                 onClear: () => b(""),
@@ -1376,7 +1375,7 @@ function eb() {
                     className: i()(V.panelGroup, V.tableContainer),
                     children: (0, a.jsx)(F.Z, {
                         columns: eu,
-                        data: g,
+                        data: j,
                         selectedRowKey: null != y ? y : void 0,
                         onClickRow: (e) => N(e.key),
                     }),
@@ -1395,7 +1394,7 @@ function eb() {
         })
     );
 }
-function ej() {
+function eg() {
     return (0, a.jsx)(m.w0Z, {
         children: (0, a.jsxs)("div", {
             className: i()(H.panel, V.subPanel),
@@ -1410,7 +1409,7 @@ function ej() {
         }),
     });
 }
-function eg() {
+function ej() {
     let [e, t] = r.useState("state");
     return (0, a.jsxs)("div", {
         className: i()(H.panel, V.panel),
@@ -1438,7 +1437,7 @@ function eg() {
                     }),
                 ],
             }),
-            "state" === e && (0, a.jsx)(ej, {}),
+            "state" === e && (0, a.jsx)(eg, {}),
             "logging" === e && (0, a.jsx)(eb, {}),
         ],
     });
