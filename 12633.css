@@ -9401,53 +9401,6 @@ svg.radioIcon_c1e9c4 {
     height: 100%
 }
 
-.container__24c2d {
-    align-items: center;
-    background-color: var(--background-base-lowest);
-    border-radius: 4px;
-    display: flex;
-    margin: 4px 2px;
-    padding: 4px
-}
-
-.input__24c2d {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: transparent;
-    border: none;
-    box-sizing: border-box;
-    color: var(--text-default);
-    flex: 1;
-    font-size: 14px;
-    font-weight: var(--font-weight-medium);
-    height: 20px;
-    line-height: 20px;
-    min-width: 48px;
-    padding: 2px 4px;
-    resize: none
-}
-
-.input__24c2d::-webkit-input-placeholder {
-    color: var(--text-muted);
-    opacity: 1
-}
-
-.iconContainer__24c2d {
-    margin-right: 3px;
-    position: relative
-}
-
-.icon__24c2d,
-.iconContainer__24c2d {
-    height: 18px;
-    width: 18px
-}
-
-.iconClickable__24c2d {
-    cursor: pointer
-}
-
 .slider_a562c8 {
     height: 40px;
     position: relative;
@@ -89866,7 +89819,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
