@@ -182,7 +182,10 @@ function B(e) {
         },
         eI = (0, u.EJ)(et + en),
         eT = {
-            className: o()([w.username, eE && eO, ed]),
+            className: o()(w.username, ed, {
+                [eO]: eE,
+                [w.usernameColorOnName]: "username" === es && null != er,
+            }),
             style: ev(),
             onClick: V,
             onContextMenu: H,
