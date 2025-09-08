@@ -1,17 +1,4 @@
-n.d(t, { Z: () => k }),
-    n(388685),
-    n(410992),
-    n(227481),
-    n(730884),
-    n(20464),
-    n(341884),
-    n(364341),
-    n(629680),
-    n(505025),
-    n(918970),
-    n(121784),
-    n(644351),
-    n(146733);
+n.d(t, { Z: () => I }), n(388685);
 var a = n(951288),
     r = n(913527),
     l = n.n(r),
@@ -20,13 +7,13 @@ var a = n(951288),
     o = n(704215),
     c = n(481060),
     d = n(179360),
-    u = n(621628),
+    u = n(87454),
     m = n(667815),
     x = n(645041),
     h = n(744993),
     p = n(713081),
-    v = n(675478),
-    f = n(581883),
+    f = n(675478),
+    v = n(581883),
     b = n(899667),
     g = n(430824),
     j = n(914010),
@@ -46,8 +33,8 @@ let C = [
         o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK,
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
-    T = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    E = [
+    E = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    T = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
@@ -87,27 +74,18 @@ async function P(e) {
         rejectWithError: !0,
     });
 }
-function k() {
-    var e;
-    let t = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
-        n = (0, i.e7)([g.Z], () => {
-            var e;
-            return null == (e = g.Z.getGuild(t)) ? void 0 : e.name;
+function I() {
+    let e = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
+        t = (0, i.e7)([g.Z], () => {
+            var t;
+            return null == (t = g.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        r = (0, i.Wu)([f.Z], () => [...N, ...T].filter((e) => null != t && (0, x.OY)(e, t))),
-        l =
-            null !=
-            (e = (0, i.e7)([f.Z], () => {
-                var e;
-                return null == (e = f.Z.settings.userContent) ? void 0 : e.dismissedContents;
-            }))
-                ? e
-                : new Uint8Array(),
-        s = (0, i.Wu)([b.Z], () => {
-            var e;
-            return null != t && null != (e = b.Z.getAppliedGuildBoostsForGuild(t)) ? e : [];
+        n = (0, i.Wu)([v.Z], () => [...N, ...E].filter((t) => null != e && (0, x.OY)(t, e))),
+        r = (0, i.Wu)([b.Z], () => {
+            var t;
+            return null != e && null != (t = b.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
         });
-    if (null != t)
+    if (null != e)
         return (0, a.jsxs)(c.zJl, {
             className: y.container,
             children: [
@@ -115,7 +93,7 @@ function k() {
                     className: y.section,
                     children: (0, a.jsx)(c.X6q, {
                         variant: "heading-md/normal",
-                        children: "Current guild: ".concat(n),
+                        children: "Current guild: ".concat(t),
                     }),
                 }),
                 (0, a.jsxs)("div", {
@@ -163,14 +141,14 @@ function k() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        S(t, s.slice(Math.floor(s.length / 2)), !1);
+                                        S(e, r.slice(Math.floor(r.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(c.zxk, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        S(t, s, !0);
+                                        S(e, r, !0);
                                     },
                                 }),
                             ],
@@ -187,12 +165,10 @@ function k() {
                         }),
                         C.map((e) =>
                             (0, a.jsx)(
-                                u.u,
+                                u.Z,
                                 {
                                     className: y.formSwitch,
-                                    contents: l,
                                     content: o.z[e],
-                                    onChange: () => {},
                                 },
                                 o.z[e],
                             ),
@@ -207,23 +183,23 @@ function k() {
                             className: y.header,
                             children: "Reset Guild Level DCs",
                         }),
-                        N.map((e) =>
+                        N.map((t) =>
                             (0, a.jsx)(
                                 c.j7V,
                                 {
                                     className: y.formSwitch,
                                     onChange: (n) => {
                                         n
-                                            ? (0, x.Qd)(e, t, !1)
-                                            : ((0, v.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(e, t));
+                                            ? (0, x.Qd)(t, e, !1)
+                                            : ((0, f.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(t, e));
                                     },
-                                    value: r.includes(e),
+                                    value: n.includes(t),
                                     children: (0, a.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: O(e),
+                                        children: O(t),
                                     }),
                                 },
-                                e,
+                                t,
                             ),
                         ),
                     ],
@@ -235,23 +211,23 @@ function k() {
                             variant: "eyebrow",
                             children: "Reset Server Tag Guild Level DCs",
                         }),
-                        T.map((e) =>
+                        E.map((t) =>
                             (0, a.jsx)(
                                 c.j7V,
                                 {
                                     className: y.formSwitch,
                                     onChange: (n) => {
                                         n
-                                            ? (0, x.Qd)(e, t, !1)
-                                            : ((0, v.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(e, t));
+                                            ? (0, x.Qd)(t, e, !1)
+                                            : ((0, f.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, x.c7)(t, e));
                                     },
-                                    value: r.includes(e),
+                                    value: n.includes(t),
                                     children: (0, a.jsx)(c.Text, {
                                         variant: "text-sm/normal",
-                                        children: O(e),
+                                        children: O(t),
                                     }),
                                 },
-                                e,
+                                t,
                             ),
                         ),
                     ],
@@ -264,14 +240,12 @@ function k() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        E.map((e) =>
+                        T.map((e) =>
                             (0, a.jsx)(
-                                u.u,
+                                u.Z,
                                 {
                                     className: y.formSwitch,
-                                    contents: l,
                                     content: o.z[e],
-                                    onChange: () => {},
                                 },
                                 o.z[e],
                             ),
@@ -290,7 +264,7 @@ function k() {
                             variant: "primary",
                             text: "Send System Message",
                             onClick: () => {
-                                P(t);
+                                P(e);
                             },
                         }),
                     ],
