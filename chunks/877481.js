@@ -207,10 +207,12 @@ let x = {
             .catch(() => !1),
     launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : P(R(e)).then(D)),
     isProtocolRegistered: (e) =>
-        C().then((t) => {
-            var n, r;
-            return null != (r = null == (n = t.isProtocolSchemeRegistered) ? void 0 : n.call(t, e)) && r;
-        }),
+        C()
+            .then((t) => {
+                var n, r;
+                return null != (r = null == (n = t.isProtocolSchemeRegistered) ? void 0 : n.call(t, e)) && r;
+            })
+            .catch(() => !1),
     setRecentGames(e) {
         C()
             .then((t) => {
