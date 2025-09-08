@@ -20,16 +20,9 @@ var r = n(951288),
     _ = n(388032),
     O = n(740328);
 function y(e) {
-    let { errorDetails: t, originalVanityURLCode: n } = e;
-    if (null != t)
-        return (0, r.jsx)(s.Text, {
-            variant: "text-md/normal",
-            color: "text-danger",
-            className: O.vanityInfo,
-            children: (0, h.i)(null == t ? void 0 : t.code),
-        });
-    if (null != n && n.length > 0) {
-        let e = (0, d.Z)(n);
+    let { originalVanityURLCode: t } = e;
+    if (null != t && t.length > 0) {
+        let e = (0, d.Z)(t);
         return (0, r.jsx)(s.Text, {
             variant: "text-sm/medium",
             color: "text-secondary",
@@ -43,7 +36,7 @@ function y(e) {
     return null;
 }
 function C(e) {
-    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: o, hasError: c } = e,
+    let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: o, errorDetails: c } = e,
         d = (null == t ? void 0 : t.features.has(j.oNc.VANITY_URL)) === !0,
         u = i.useCallback(() => {
             (0, p.Gy)("");
@@ -51,47 +44,47 @@ function C(e) {
         m = i.useCallback((e) => {
             (0, p.Gy)(e);
         }, []);
-    return null == n
-        ? (0, r.jsx)(s.$jN, {})
-        : (0, r.jsxs)(s.Zbd, {
-              editable: !0,
-              className: O.editVanityUrlCard,
-              children: [
-                  (0, r.jsxs)("div", {
-                      className: O.formTitleField,
-                      children: [
-                          (0, r.jsx)(s.X6q, {
-                              variant: "heading-sm/semibold",
-                              color: "text-default",
-                              children: _.intl.string(_.t["6oJyq6"]),
-                          }),
-                          n.length > 0
-                              ? (0, r.jsx)(s.Text, {
-                                    variant: "text-sm/medium",
-                                    color: "text-secondary",
-                                    children: _.intl.format(_.t.MVWOUV, { uses: l }),
-                                })
-                              : null,
-                      ],
-                  }),
-                  (0, r.jsx)(x.Z, {
-                      value: n,
-                      onChange: m,
-                      error: c,
-                      disabled: !d,
-                  }),
-                  null != o && o.length > 0
-                      ? (0, r.jsx)(a.zx, {
-                            className: O.removeVanityUrlButton,
-                            onClick: u,
-                            look: a.zx.Looks.LINK,
-                            size: a.zx.Sizes.MIN,
-                            color: a.zx.Colors.RED,
-                            children: _.intl.string(_.t["3ggb6O"]),
-                        })
-                      : null,
-              ],
-          });
+    if (null == n) return (0, r.jsx)(s.$jN, {});
+    let g = null != c ? (0, h.i)(c.code) : null;
+    return (0, r.jsxs)(s.Zbd, {
+        editable: !0,
+        className: O.editVanityUrlCard,
+        children: [
+            (0, r.jsxs)("div", {
+                className: O.formTitleField,
+                children: [
+                    (0, r.jsx)(s.X6q, {
+                        variant: "heading-sm/semibold",
+                        color: "text-default",
+                        children: _.intl.string(_.t["6oJyq6"]),
+                    }),
+                    n.length > 0
+                        ? (0, r.jsx)(s.Text, {
+                              variant: "text-sm/medium",
+                              color: "text-secondary",
+                              children: _.intl.format(_.t.MVWOUV, { uses: l }),
+                          })
+                        : null,
+                ],
+            }),
+            (0, r.jsx)(x.Z, {
+                value: n,
+                onChange: m,
+                error: g,
+                disabled: !d,
+            }),
+            null != o && o.length > 0
+                ? (0, r.jsx)(a.zx, {
+                      className: O.removeVanityUrlButton,
+                      onClick: u,
+                      look: a.zx.Looks.LINK,
+                      size: a.zx.Sizes.MIN,
+                      color: a.zx.Colors.RED,
+                      children: _.intl.string(_.t["3ggb6O"]),
+                  })
+                : null,
+        ],
+    });
 }
 function N(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: a, originalVanityURLCode: s, errorDetails: d } = e,
@@ -122,16 +115,13 @@ function N(e) {
                       vanityURLCode: n,
                       vanityURLUses: a,
                       originalVanityURLCode: s,
-                      hasError: null != d,
+                      errorDetails: d,
                   })
                 : (0, r.jsx)(f.P, {
                       onClick: _,
                       className: O.upsellButton,
                   }),
-            (0, r.jsx)(y, {
-                errorDetails: d,
-                originalVanityURLCode: s,
-            }),
+            (0, r.jsx)(y, { originalVanityURLCode: s }),
         ],
     });
 }

@@ -3,7 +3,6 @@ e.exports = {
     demo: "demo__89401",
     baseUrl: "baseUrl__89401",
     vanityCode: "vanityCode__89401",
-    vanityUrlInput: "vanityUrlInput__89401",
     previewCard: "previewCard__89401",
     avatar: "avatar__89401",
     previewCardMessage: "previewCardMessage__89401",

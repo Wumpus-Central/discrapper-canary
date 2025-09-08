@@ -87,7 +87,6 @@ function u() {
                         autoFocus: !0,
                         value: e,
                         onChange: t,
-                        className: d.vanityUrlInput,
                     }),
                 ],
             }),
