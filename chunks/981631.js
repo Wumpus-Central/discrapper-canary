@@ -32,7 +32,7 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => rn,
-    DJj: () => eM,
+    DJj: () => ek,
     DZw: () => ex,
     E07: () => tC,
     EKQ: () => E.EK,
@@ -43,7 +43,7 @@ n.d(t, {
     Etm: () => E.Et,
     Eu4: () => nl,
     FD8: () => eB,
-    FQ1: () => rM,
+    FQ1: () => rk,
     Fc: () => ta,
     FoC: () => J,
     FsG: () => b.Fs,
@@ -74,7 +74,7 @@ n.d(t, {
     Jn9: () => rX,
     JuI: () => eX,
     JwP: () => nh,
-    K3D: () => rk,
+    K3D: () => rM,
     KA4: () => tw,
     KFR: () => nL,
     KJ3: () => rD,
@@ -114,7 +114,7 @@ n.d(t, {
     PUi: () => nG,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => k,
+    PrB: () => M,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -133,7 +133,7 @@ n.d(t, {
     RK: () => E.RK,
     RYY: () => t3,
     RcX: () => tm,
-    Rg9: () => nk,
+    Rg9: () => nM,
     S7T: () => E.S7,
     S9g: () => nR,
     SOq: () => n6,
@@ -141,7 +141,7 @@ n.d(t, {
     STv: () => ey,
     SaU: () => tV,
     Sap: () => na,
-    Sbl: () => tk,
+    Sbl: () => tM,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => rJ,
@@ -180,7 +180,7 @@ n.d(t, {
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => ek,
+    Z8P: () => eM,
     Z9p: () => ng,
     ZUi: () => W,
     ZY5: () => tU,
@@ -202,7 +202,7 @@ n.d(t, {
     b4C: () => rV,
     b8q: () => tG,
     bL: () => eD,
-    c2C: () => nM,
+    c2C: () => nk,
     d4z: () => o.d,
     dAT: () => tq,
     dCx: () => nr,
@@ -277,12 +277,12 @@ n.d(t, {
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
-    pM4: () => M,
+    pM4: () => k,
     pNK: () => N,
     pTL: () => rq,
     pjP: () => n8,
     pmI: () => t9,
-    q5t: () => tM,
+    q5t: () => tk,
     q9n: () => nY,
     qAy: () => tZ,
     qWG: () => rH,
@@ -669,10 +669,10 @@ var v = (function (e) {
     j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -2063,6 +2063,10 @@ let eE = "@me",
                 .concat(n)
                 .concat(null != r ? "&payment_method_type=".concat(r) : "")
                 .concat(null != i ? "&deep_link_type=".concat(i) : ""),
+        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t) =>
+            "/billing/guild-subscriptions/purchase?guild_id="
+                .concat(e)
+                .concat(null != t ? "&deep_link_type=".concat(t) : ""),
         GUILD_BOOSTING_MARKETING: (e) => "/guilds/".concat(e, "/premium-guild-subscriptions"),
         GUILD_SETTINGS: (e, t, n) => {
             let r = "/guilds/".concat(e, "/settings").concat(null != t ? "/".concat(t) : "");
@@ -2131,8 +2135,8 @@ var ew = (function (e) {
 let ex = 100,
     eL = 200,
     ej = 50,
-    ek = 50,
-    eM = 25,
+    eM = 50,
+    ek = 25,
     eU = 200,
     eG = 100,
     eB = 250,
@@ -2521,7 +2525,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2604,7 +2608,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -5618,8 +5622,8 @@ var nw = (function (e) {
             e
         );
     })({});
-let nk = 50;
-var nM = (function (e) {
+let nM = 50;
+var nk = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -6592,10 +6596,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rM = (function (e) {
+    rk = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
     rU = (function (e) {

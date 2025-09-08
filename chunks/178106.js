@@ -68,15 +68,8 @@ function O(e, t) {
 }
 let v = [],
     I = new (s())({ max: m.zb }),
-    T = new u.ZP({
+    T = new u.Z({
         computeBonus: () => 100,
-        computeWeight: (e) => {
-            let t = 1;
-            return (
-                e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10),
-                t
-            );
-        },
         lookupKey: (e) => p.Z.getSoundById(e),
         afterCompute: () => {},
         numFrequentlyItems: m.O6,

@@ -1,24 +1,24 @@
 n.d(t, {
-    A3: () => D,
-    C1: () => W,
-    DV: () => V,
-    Gn: () => k,
-    IP: () => z,
-    J1: () => G,
-    MZ: () => K,
-    NJ: () => Y,
-    Nf: () => B,
-    PC: () => x,
-    Y1: () => Z,
-    ZF: () => w,
-    fe: () => U,
-    jA: () => L,
-    kI: () => P,
-    nV: () => q,
-    q5: () => H,
-    to: () => M,
-    wC: () => F,
-    y$: () => j,
+    A3: () => P,
+    C1: () => H,
+    DV: () => B,
+    Gn: () => j,
+    IP: () => W,
+    J1: () => k,
+    MZ: () => Y,
+    NJ: () => V,
+    Nf: () => U,
+    PC: () => w,
+    Y1: () => G,
+    ZF: () => R,
+    fe: () => M,
+    jA: () => D,
+    kI: () => N,
+    nV: () => K,
+    q5: () => F,
+    to: () => L,
+    wC: () => Z,
+    y$: () => x,
 }),
     n(290780),
     n(539854),
@@ -32,69 +32,58 @@ var r = n(647438),
     o = n(442837),
     s = n(367907),
     l = n(339085),
-    c = n(689789),
-    u = n(407477),
-    d = n(633302),
-    f = n(558217),
-    _ = n(125900),
-    p = n(675478),
-    h = n(430824),
-    m = n(771845),
-    g = n(594174),
-    E = n(626135),
-    b = n(70956),
-    y = n(176354),
-    O = n(111361),
-    v = n(304852),
-    I = n(199257),
-    T = n(149203),
-    S = n(981631),
-    A = n(185923),
-    C = n(957825),
-    N = n(474936),
-    R = n(388032);
-let P = function (e, t) {
+    c = n(633302),
+    u = n(558217),
+    d = n(125900),
+    f = n(675478),
+    _ = n(430824),
+    p = n(771845),
+    h = n(594174),
+    m = n(626135),
+    g = n(70956),
+    E = n(176354),
+    b = n(111361),
+    y = n(304852),
+    O = n(199257),
+    v = n(149203),
+    I = n(981631),
+    T = n(185923),
+    S = n(957825),
+    A = n(474936),
+    C = n(388032);
+let N = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId(),
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        (0, f.O)(n);
-        let a = (0, A.Gt)(e),
-            s = F(n),
-            d = H(n),
-            { canSplitFrecencyList: p } = (0, c.S)({
-                location: "useEmojiCategories",
-                autoTrackExposure: !0,
+        (0, u.O)(n);
+        let a = (0, T.Gt)(e),
+            s = Z(n),
+            c = F(n),
+            f = V(n),
+            { topEmojis: m, newlyAddedEmojis: g } = (0, O.Z)(n, e),
+            { allEmojis: I } = (0, y.Z)({
+                topEmojis: m,
+                newlyAddedEmojis: g,
             }),
-            E = (0, u.p3)({
-                location: "useEmojiCategories",
-                autoTrackExposure: !0,
-            });
-        u.Xb.useExperiment({ location: "useEmojiCategories" }, { autoTrackExposure: !0 });
-        let b = Y(n),
-            { topEmojis: S, newlyAddedEmojis: C } = (0, I.Z)(n, e),
-            { allEmojis: N } = (0, v.Z)({
-                topEmojis: S,
-                newlyAddedEmojis: C,
-            }),
-            P = (0, o.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
-            w = (0, o.e7)([h.Z], () => {
+            S = (0, o.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
+            A = (0, o.e7)([_.Z], () => {
                 var e;
-                return null == (e = h.Z.getGuild(n)) ? void 0 : e.name;
+                return null == (e = _.Z.getGuild(n)) ? void 0 : e.name;
             }),
-            D = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-            x = (0, O.I5)(D),
-            L = (0, _.g2)({ location: "useEmojiCategories" });
+            N = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+            R = (0, b.I5)(N),
+            P = (0, d.g2)({ location: "useEmojiCategories" });
         return r.useMemo(() => {
-            let r = P.getGroupedCustomEmoji(),
-                o = m.ZP.getFlattenedGuildIds(),
-                c = [],
-                u = {
-                    type: T.En.SOUNDMOJI,
-                    name: R.intl.string(R.t.f0Ezmp),
-                    id: T.UX.SOUNDMOJI,
+            let r = S.getGroupedCustomEmoji(),
+                o = p.ZP.getFlattenedGuildIds(),
+                u = [],
+                d = {
+                    type: v.En.SOUNDMOJI,
+                    name: C.intl.string(C.t.f0Ezmp),
+                    id: v.UX.SOUNDMOJI,
                     isNitroLocked: !1,
                 },
-                f = (r) =>
-                    y.ZP.getEmojiUnavailableReasons({
+                h = (r) =>
+                    E.ZP.getEmojiUnavailableReasons({
                         categoryEmojis: r,
                         channel: t,
                         guildId: n,
@@ -104,118 +93,118 @@ let P = function (e, t) {
                 ((e, t) => {
                     for (let i of e) {
                         let e;
-                        if ((t === T.En.GUILD && (e = h.Z.getGuild(i)), null == e)) continue;
+                        if ((t === v.En.GUILD && (e = _.Z.getGuild(i)), null == e)) continue;
                         let a = null == r ? void 0 : r[e.id];
                         if (null == a || 0 === a.length) continue;
                         let {
                             emojisDisabled: o,
                             emojisUnfiltered: s,
                             emojisPremiumLockedCount: l,
-                            emojiNitroLocked: u,
-                        } = f(a);
+                            emojiNitroLocked: c,
+                        } = h(a);
                         if (0 === s.length) continue;
                         let d = null;
-                        t === T.En.GUILD &&
+                        t === v.En.GUILD &&
                             (d = {
-                                type: T.En.GUILD,
+                                type: v.En.GUILD,
                                 guild: e,
-                                isNitroLocked: !x && u && l === a.length,
+                                isNitroLocked: !R && c && l === a.length,
                                 emojis: a,
                                 emojisDisabled: o,
                             }),
-                            null != d && (e.id === n ? c.unshift(d) : c.push(d));
+                            null != d && (e.id === n ? u.unshift(d) : u.push(d));
                     }
-                })(o, T.En.GUILD),
+                })(o, v.En.GUILD),
                 l.ZP.categories.reduce(
                     (t, r) => {
-                        if (r === T.UX.TOP_GUILD_EMOJI) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = f(N);
+                        if (r === v.UX.TOP_GUILD_EMOJI) {
+                            let { emojisDisabled: e, emojisUnfiltered: n } = h(I);
                             if (null == n || 0 === n.length) return t;
                             t.push({
-                                type: T.En.TOP_GUILD_EMOJI,
+                                type: v.En.TOP_GUILD_EMOJI,
                                 id: r,
-                                name: R.intl.formatToPlainString(R.t.W6Wi1d, { guildName: w }),
+                                name: C.intl.formatToPlainString(C.t.W6Wi1d, { guildName: A }),
                                 isNitroLocked: !1,
                                 emojis: n,
                                 emojisDisabled: e,
                             });
-                        } else if (r === T.UX.RECENT) {
-                            let { emojisDisabled: n, emojisUnfiltered: i } = f(e === A.Hz.REACTION && (p || E) ? d : s);
+                        } else if (r === v.UX.RECENT) {
+                            let { emojisDisabled: n, emojisUnfiltered: i } = h(e === T.Hz.REACTION ? c : s);
                             if (null == i || 0 === i.length) return t;
                             t.push({
-                                type: T.En.RECENT,
+                                type: v.En.RECENT,
                                 id: r,
-                                name: R.intl.string(R.t["5TvaSk"]),
+                                name: C.intl.string(C.t["5TvaSk"]),
                                 isNitroLocked: !1,
                                 emojis: i,
                                 emojisDisabled: n,
                             });
-                        } else if (r === T.UX.FAVORITES) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = f(b);
+                        } else if (r === v.UX.FAVORITES) {
+                            let { emojisDisabled: e, emojisUnfiltered: n } = h(f);
                             if (null == n || 0 === n.length) return t;
                             t.push({
-                                type: T.En.FAVORITES,
+                                type: v.En.FAVORITES,
                                 id: r,
-                                name: R.intl.string(R.t.y3LQCA),
+                                name: C.intl.string(C.t.y3LQCA),
                                 isNitroLocked: !1,
                                 emojis: n,
                                 emojisDisabled: e,
                             });
-                        } else if (r === T.UX.CUSTOM) {
-                            let e = c;
-                            a || (e = c.filter((e) => e.type === T.En.GUILD && e.guild.id === n)), t.push(...e);
+                        } else if (r === v.UX.CUSTOM) {
+                            let e = u;
+                            a || (e = u.filter((e) => e.type === v.En.GUILD && e.guild.id === n)), t.push(...e);
                         } else
                             t.push({
-                                type: T.En.UNICODE,
+                                type: v.En.UNICODE,
                                 id: r,
                                 name: r,
                                 isNitroLocked: !1,
                             });
                         return t;
                     },
-                    L && i ? [u] : [],
+                    P && i ? [d] : [],
                 )
             );
-        }, [P, t, n, e, x, N, w, p, E, d, s, b, a, L, i]);
+        }, [S, t, n, e, R, I, A, c, s, f, a, P, i]);
     },
-    w = () =>
-        d.ZP.getCategories().map((e) => ({
-            type: T.En.UNICODE,
+    R = () =>
+        c.ZP.getCategories().map((e) => ({
+            type: v.En.UNICODE,
             id: e,
             name: e,
             isNitroLocked: !1,
         })),
-    D = (e) => {
+    P = (e) => {
         let t = (null == e ? void 0 : e.getGuildId()) != null;
-        E.default.track(S.rMx.PREMIUM_PROMOTION_OPENED, {
-            location_page: t ? S.ZY5.GUILD_CHANNEL : S.ZY5.DM_CHANNEL,
-            location_section: null != e ? S.jXE.EMOJI_PICKER_POPOUT : S.jXE.CUSTOM_STATUS_MODAL,
+        m.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
+            location_page: t ? I.ZY5.GUILD_CHANNEL : I.ZY5.DM_CHANNEL,
+            location_section: null != e ? I.jXE.EMOJI_PICKER_POPOUT : I.jXE.CUSTOM_STATUS_MODAL,
         });
     },
-    x = (e, t) => {
-        s.ZP.trackWithMetadata(S.rMx.SEARCH_STARTED, {
-            search_type: null != t && t === A.Hz.REACTION ? S.aib.EMOJI_REACTION : S.aib.EMOJI,
+    w = (e, t) => {
+        s.ZP.trackWithMetadata(I.rMx.SEARCH_STARTED, {
+            search_type: null != t && t === T.Hz.REACTION ? I.aib.EMOJI_REACTION : I.aib.EMOJI,
             location: e,
         });
     },
-    L = (e, t, n, r, i) => {
-        s.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_VIEWED, {
-            search_type: null != i && i === A.Hz.REACTION ? S.aib.EMOJI_REACTION : S.aib.EMOJI,
+    D = (e, t, n, r, i) => {
+        s.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_VIEWED, {
+            search_type: null != i && i === T.Hz.REACTION ? I.aib.EMOJI_REACTION : I.aib.EMOJI,
             total_results: e,
             num_results_locked: t,
             query: r,
             location: n,
         });
     },
-    j = (e) => {
+    x = (e) => {
         var t, n, r;
         let { emoji: i, emojiSuggestions: o, searchQuery: l, isLocked: c, location: u, intention: d, index: f } = e,
             _ = null != (r = i.uniqueName) ? r : i.name,
             p = (0, a.EQ)(d)
-                .with(A.Hz.REACTION, () => S.aib.EMOJI_REACTION)
-                .with(A.Hz.AUTO_SUGGESTION, () => S.aib.EMOJI_AUTO_SUGGESTION)
-                .otherwise(() => S.aib.EMOJI);
-        s.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_SELECTED, {
+                .with(T.Hz.REACTION, () => I.aib.EMOJI_REACTION)
+                .with(T.Hz.AUTO_SUGGESTION, () => I.aib.EMOJI_AUTO_SUGGESTION)
+                .otherwise(() => I.aib.EMOJI);
+        s.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_SELECTED, {
             search_type: p,
             location: u,
             expression_guild_id: i.guildId,
@@ -239,16 +228,16 @@ let P = function (e, t) {
                           .filter((e) => null != e),
         });
     },
-    M = (e, t) => {
-        s.ZP.trackWithMetadata(S.rMx.SEARCH_RESULT_EMPTY, {
-            search_type: S.aib.EMOJI,
+    L = (e, t) => {
+        s.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_EMPTY, {
+            search_type: I.aib.EMOJI,
             query: t,
             location: e,
         });
     },
-    k = (e) => {
+    j = (e) => {
         let { emoji: t, subCategory: n, position: r, newlyAddedHighlight: i } = e;
-        s.ZP.trackWithMetadata(S.rMx.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
+        s.ZP.trackWithMetadata(I.rMx.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
             expression_section: null == n ? void 0 : n.toString(),
             newly_added_highlight: i,
             emoji_id: t.id,
@@ -257,7 +246,7 @@ let P = function (e, t) {
             emoji_position: r,
         });
     },
-    U = (e) => {
+    M = (e) => {
         var t;
         let n,
             {
@@ -265,23 +254,23 @@ let P = function (e, t) {
                 location: i,
                 pickerIntention: a,
                 category: o,
-                subCategory: l = T.t0.NONE,
+                subCategory: l = v.t0.NONE,
                 position: c,
                 newlyAddedHighlight: u,
                 isBurstReaction: d,
             } = e;
         switch (a) {
-            case A.Hz.REACTION:
-                n = d ? N.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : N.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+            case T.Hz.REACTION:
+                n = d ? A.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : A.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
                 break;
-            case A.Hz.STATUS:
-                n = N.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+            case T.Hz.STATUS:
+                n = A.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
                 break;
             default:
-                n = N.cd.EMOJI_PICKER_EMOJI_CLICKED;
+                n = A.cd.EMOJI_PICKER_EMOJI_CLICKED;
         }
         let f = null != (t = r.uniqueName) ? t : r.name;
-        s.ZP.trackWithMetadata(S.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
+        s.ZP.trackWithMetadata(I.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
             type: n,
             location: i,
             expression_id: r.id,
@@ -296,13 +285,13 @@ let P = function (e, t) {
             is_burst: d,
         });
     },
-    G = (e) => {
+    k = (e) => {
         var t;
         let { emoji: n, location: r } = e,
             i = null != (t = n.uniqueName) ? t : n.name;
-        s.ZP.trackWithMetadata(S.rMx.EXPRESSION_FAVORITED, {
+        s.ZP.trackWithMetadata(I.rMx.EXPRESSION_FAVORITED, {
             location: r,
-            expression_type: C.X1.EMOJI,
+            expression_type: S.X1.EMOJI,
             expression_id: n.id,
             expression_name: i,
             expression_guild_id: n.guildId,
@@ -313,8 +302,8 @@ let P = function (e, t) {
 (0, i.throttle)(
     (e) => {
         let { emojiSuggestions: t, analyticsLocation: n } = e;
-        s.ZP.trackWithMetadata(S.rMx.AUTO_SUGGEST_DISPLAYED, {
-            suggestion_type: S.Z9p.EMOJI,
+        s.ZP.trackWithMetadata(I.rMx.AUTO_SUGGEST_DISPLAYED, {
+            suggestion_type: I.Z9p.EMOJI,
             suggestion_quantity: t.results.length,
             custom_quantity: t.results.filter((e) => {
                 let { emoji: t } = e;
@@ -324,50 +313,50 @@ let P = function (e, t) {
             location: n,
         });
     },
-    b.Z.Millis.HALF_SECOND,
+    g.Z.Millis.HALF_SECOND,
     {
         leading: !1,
         trailing: !0,
     },
 );
-let B = (e, t) => (e.type !== T.En.GUILD ? e.id : null != t ? t.name : ""),
-    Z = (e, t) => {
+let U = (e, t) => (e.type !== v.En.GUILD ? e.id : null != t ? t.name : ""),
+    G = (e, t) => {
         switch (e) {
-            case T.UX.TOP_GUILD_EMOJI:
-                return R.intl.formatToPlainString(R.t.W6Wi1d, { guildName: t });
-            case T.UX.RECENT:
-                return R.intl.string(R.t["5TvaSk"]);
-            case T.UX.FAVORITES:
-                return R.intl.string(R.t.y3LQCA);
-            case T.UX.ACTIVITY:
-                return R.intl.string(R.t.O783tb);
-            case T.UX.FLAGS:
-                return R.intl.string(R.t.vvaizs);
-            case T.UX.FOOD:
-                return R.intl.string(R.t.ldm9aW);
-            case T.UX.NATURE:
-                return R.intl.string(R.t.egIBDA);
-            case T.UX.OBJECTS:
-                return R.intl.string(R.t.gWm7Mj);
-            case T.UX.PEOPLE:
-                return R.intl.string(R.t.GX594O);
-            case T.UX.SYMBOLS:
-                return R.intl.string(R.t.QXMYAQ);
-            case T.UX.TRAVEL:
-                return R.intl.string(R.t.w33hIC);
-            case T.UX.PREMIUM_UPSELL:
-                return R.intl.string(R.t.pAF6xM);
-            case T.UX.SOUNDMOJI:
-                return R.intl.string(R.t.f0Ezmp);
+            case v.UX.TOP_GUILD_EMOJI:
+                return C.intl.formatToPlainString(C.t.W6Wi1d, { guildName: t });
+            case v.UX.RECENT:
+                return C.intl.string(C.t["5TvaSk"]);
+            case v.UX.FAVORITES:
+                return C.intl.string(C.t.y3LQCA);
+            case v.UX.ACTIVITY:
+                return C.intl.string(C.t.O783tb);
+            case v.UX.FLAGS:
+                return C.intl.string(C.t.vvaizs);
+            case v.UX.FOOD:
+                return C.intl.string(C.t.ldm9aW);
+            case v.UX.NATURE:
+                return C.intl.string(C.t.egIBDA);
+            case v.UX.OBJECTS:
+                return C.intl.string(C.t.gWm7Mj);
+            case v.UX.PEOPLE:
+                return C.intl.string(C.t.GX594O);
+            case v.UX.SYMBOLS:
+                return C.intl.string(C.t.QXMYAQ);
+            case v.UX.TRAVEL:
+                return C.intl.string(C.t.w33hIC);
+            case v.UX.PREMIUM_UPSELL:
+                return C.intl.string(C.t.pAF6xM);
+            case v.UX.SOUNDMOJI:
+                return C.intl.string(C.t.f0Ezmp);
             default:
                 return null != t ? t : e;
         }
     };
-function V(e, t, n, i) {
+function B(e, t, n, i) {
     r.useEffect(() => {
-        p.DZ.loadIfNecessary();
+        f.DZ.loadIfNecessary();
     }, []);
-    let a = (0, A.Gt)(n);
+    let a = (0, T.Gt)(n);
     return (0, o.e7)(
         [l.ZP],
         () => {
@@ -387,36 +376,36 @@ function V(e, t, n, i) {
         o.pF,
     );
 }
-function F(e) {
+function Z(e) {
     return (
         r.useEffect(() => {
-            p.DZ.loadIfNecessary();
+            f.DZ.loadIfNecessary();
         }, []),
         (0, o.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
     );
 }
-function H(e) {
+function F(e) {
     return (
         r.useEffect(() => {
-            p.DZ.loadIfNecessary();
+            f.DZ.loadIfNecessary();
         }, []),
         (0, o.Wu)([l.ZP], () =>
             l.ZP.getDisambiguatedEmojiContext(e).getFrequentlyUsedReactionEmojisWithoutFetchingLatest(),
         )
     );
 }
-function Y(e) {
+function V(e) {
     return (
         r.useEffect(() => {
-            p.DZ.loadIfNecessary();
+            f.DZ.loadIfNecessary();
         }, []),
         (0, o.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
     );
 }
-function W(e, t) {
+function H(e, t) {
     return (
         r.useEffect(() => {
-            p.DZ.loadIfNecessary();
+            f.DZ.loadIfNecessary();
         }, []),
         (0, o.e7)(
             [l.ZP],
@@ -424,27 +413,27 @@ function W(e, t) {
         )
     );
 }
-function K(e) {
+function Y(e) {
     return (
         r.useEffect(() => {
-            p.DZ.loadIfNecessary();
+            f.DZ.loadIfNecessary();
         }, []),
         (0, o.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
     );
 }
-function z(e, t, n) {
-    if (null == n) return T.t0.NONE;
+function W(e, t, n) {
+    if (null == n) return v.t0.NONE;
     let r = e.map((e) => {
             var t, n;
             return null != (n = null != (t = e.id) ? t : e.uniqueName) ? n : e.name;
         }),
         i = t.map((e) => e.id);
-    return r.includes(n) ? T.t0.TOP_GUILD_EMOJI : i.includes(n) ? T.t0.NEWLY_ADDED_EMOJI : T.t0.NONE;
+    return r.includes(n) ? v.t0.TOP_GUILD_EMOJI : i.includes(n) ? v.t0.NEWLY_ADDED_EMOJI : v.t0.NONE;
 }
-function q(e, t) {
-    return e === A.Hz.REACTION
+function K(e, t) {
+    return e === T.Hz.REACTION
         ? t
-            ? R.intl.string(R.t["h7ES+v"])
-            : R.intl.string(R.t["6any2N"])
-        : R.intl.string(R.t.KgK5qq);
+            ? C.intl.string(C.t["h7ES+v"])
+            : C.intl.string(C.t["6any2N"])
+        : C.intl.string(C.t.KgK5qq);
 }

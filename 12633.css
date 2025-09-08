@@ -73144,19 +73144,16 @@ html .progress__61462 {
 }
 
 .popover_f84418 {
-    overflow: visible
-}
-
-.popoverReactionHoverBar_f84418 {
     background: var(--background-surface-high);
     border: 1px solid var(--border-faint);
     border-radius: 8px;
     box-shadow: var(--shadow-low) !important;
     height: auto;
+    overflow: visible;
     padding: 2px
 }
 
-.popoverReactionHoverBar_f84418:hover {
+.popover_f84418:hover {
     border: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-medium) !important
 }

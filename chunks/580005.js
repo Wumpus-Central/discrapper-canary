@@ -72,7 +72,7 @@ function b(e, t) {
 let y = 10,
     O = 100,
     v = 100,
-    I = new l.ZP({
+    I = new l.Z({
         computeBonus: () => O,
         computeWeight: (e) => {
             let t = 1;

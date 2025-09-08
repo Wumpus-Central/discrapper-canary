@@ -64,15 +64,8 @@ function m(e, t) {
 let g = { pendingUsages: [] };
 u.Z.Millis.DAY;
 let E = 20,
-    b = new l.ZP({
+    b = new l.Z({
         computeBonus: () => 100,
-        computeWeight: (e) => {
-            let t = 1;
-            return (
-                e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10),
-                t
-            );
-        },
         lookupKey: (e) => d.Z.getStickerById(e),
         afterCompute: () => {},
         numFrequentlyItems: E,

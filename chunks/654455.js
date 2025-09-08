@@ -68,9 +68,8 @@ function h(e, t) {
     );
 }
 let m = { pendingUsages: [] },
-    g = new l.ZP({
+    g = new l.Z({
         computeBonus: () => 1,
-        computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: u.yP,

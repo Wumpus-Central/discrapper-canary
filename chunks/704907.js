@@ -1,12 +1,4 @@
-n.d(t, {
-    KX: () => m,
-    M$: () => h,
-    ZP: () => E,
-}),
-    n(825670),
-    n(539854),
-    n(642613),
-    n(388685);
+n.d(t, { Z: () => m }), n(825670), n(539854), n(642613), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(913527),
@@ -64,53 +56,15 @@ function u(e, t) {
     );
 }
 let d = 10,
-    f = 1000,
-    _ = 32,
-    p = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
-    h = {
-        original: (e) => {
-            let t = 1;
-            return (
-                e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10),
-                t
-            );
-        },
-        safe: (e) => {
-            let t = 1;
-            return (
-                e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10),
-                t
-            );
-        },
-        day_recency: (e) => {
-            let t = 1;
-            return (
-                e <= 1
-                    ? (t = 100)
-                    : e <= 2
-                      ? (t = 70)
-                      : e <= 3
-                        ? (t = 50)
-                        : e <= 7
-                          ? (t = 20)
-                          : e <= 15
-                            ? (t = 15)
-                            : e <= 30
-                              ? (t = 10)
-                              : e <= 45
-                                ? (t = 5)
-                                : e <= 80 && (t = 2),
-                t
-            );
-        },
-    },
-    m = {
-        original: p,
-        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / f) * 0.8))),
-        day_recency: (e, t, n) =>
-            null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / f) * 0.95)),
+    f = 32,
+    _ = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
+    p = (e) => {
+        let t = 1;
+        return (
+            e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t
+        );
     };
-class g {
+class h {
     overwriteHistory(e, t) {
         (this.usageHistory = i().mapValues(null != e ? e : {}, (e) => u(l({}, e), { frecency: -1 }))),
             null == t ||
@@ -159,13 +113,6 @@ class g {
     getFrecency(e) {
         let t = this.getEntry(e);
         return null != t ? t.frecency : null;
-    }
-    replaceEntryComputeFunctions(e, t, n) {
-        (this.computeWeight = e),
-            (this.computeFrecency = t),
-            (this.calculateMaxTotalUse = n),
-            (this.usageHistory = i().mapValues(this.usageHistory, (e) => u(l({}, e), { frecency: -1 }))),
-            this.markDirty();
     }
     compute() {
         let e = o()(),
@@ -216,12 +163,13 @@ class g {
     }
     constructor({
         computeBonus: e,
-        computeWeight: t,
-        computeFrecency: n = p,
-        lookupKey: r,
-        afterCompute: i,
-        numFrequentlyItems: a = _,
-        maxSamples: o = d,
+        computeWeight: t = p,
+        computeFrecency: n = _,
+        calculateMaxTotalUse: r = !1,
+        lookupKey: i,
+        afterCompute: a,
+        numFrequentlyItems: o = f,
+        maxSamples: l = d,
     }) {
         s(this, "dirty", void 0),
             s(this, "_frequently", void 0),
@@ -230,21 +178,21 @@ class g {
             s(this, "computeBonus", void 0),
             s(this, "computeWeight", void 0),
             s(this, "computeFrecency", void 0),
+            s(this, "calculateMaxTotalUse", void 0),
             s(this, "lookupKey", void 0),
             s(this, "usageHistory", void 0),
             s(this, "afterCompute", void 0),
-            s(this, "calculateMaxTotalUse", void 0),
             (this.computeBonus = e),
             (this.computeWeight = t),
             (this.computeFrecency = n),
-            (this.afterCompute = i),
-            (this.lookupKey = r),
+            (this.calculateMaxTotalUse = r),
+            (this.afterCompute = a),
+            (this.lookupKey = i),
             (this.usageHistory = {}),
             (this.frequently = []),
-            (this.maxSamples = o),
-            (this.numFrequentlyItems = a),
-            (this.calculateMaxTotalUse = !1),
+            (this.maxSamples = l),
+            (this.numFrequentlyItems = o),
             (this.dirty = !1);
     }
 }
-let E = g;
+let m = h;

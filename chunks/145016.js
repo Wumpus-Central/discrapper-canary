@@ -20,15 +20,13 @@ function l(e, t, n) {
 let c = {
         afterCompute: () => {},
         computeBonus: () => 100,
-        computeFrecency: o.KX.original,
-        computeWeight: o.M$.original,
         lookupKey: (e) => e,
         maxSamples: 256,
         numFrequentlyItems: 1 / 0,
     },
-    u = new o.ZP(c),
-    d = new o.ZP(c),
-    f = new o.ZP(c);
+    u = new o.Z(c),
+    d = new o.Z(c),
+    f = new o.Z(c);
 function _(e) {
     let { id: t } = e;
     u.track(t);

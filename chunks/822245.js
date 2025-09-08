@@ -64,9 +64,8 @@ function g(e, t) {
 }
 let E = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
     b = { pendingUsages: [] },
-    y = new c.ZP({
+    y = new c.Z({
         computeBonus: () => 100,
-        computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
         numFrequentlyItems: f.yP,
