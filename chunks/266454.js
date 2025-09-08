@@ -44,5 +44,5 @@ function _(e, t) {
 }
 async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    (0, l.u9)(e, n), await (0, l.XM)(e, t), (0, l.ME)(e, n);
+    (0, l.u9)(e, n), await (0, l.XM)(e, t, 1), (0, l.ME)(e, n);
 }

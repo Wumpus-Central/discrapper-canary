@@ -22,8 +22,8 @@ n.d(t, {
     c$: () => tn,
     dp: () => te,
     f9: () => L,
-    hg: () => S,
-    l1: () => T,
+    hg: () => T,
+    l1: () => S,
     n9: () => A,
     nI: () => d,
     o8: () => D,
@@ -203,10 +203,10 @@ var r = n(230367),
             e
         );
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (e[(e.AUTO = 0)] = "AUTO"), (e[(e.H12 = 1)] = "H12"), (e[(e.H23 = 2)] = "H23"), e;
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (
             (e[(e.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
             (e[(e.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = "LAUNCH_PAD_GESTURE_FULL_SCREEN"),
@@ -317,7 +317,7 @@ class w extends o.C {
                     a.status = ey.internalBinaryRead(e, e.uint32(), n, a.status);
                     break;
                 case 12:
-                    a.localization = eS.internalBinaryRead(e, e.uint32(), n, a.localization);
+                    a.localization = eT.internalBinaryRead(e, e.uint32(), n, a.localization);
                     break;
                 case 13:
                     a.appearance = eN.internalBinaryRead(e, e.uint32(), n, a.appearance);
@@ -382,7 +382,7 @@ class w extends o.C {
             e.debug && em.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.gameLibrary && eE.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             e.status && ey.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
-            e.localization && eS.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
+            e.localization && eT.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.appearance && eN.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(),
             e.guildFolders && eL.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eU.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
@@ -475,7 +475,7 @@ class w extends o.C {
                 no: 12,
                 name: "localization",
                 kind: "message",
-                T: () => eS,
+                T: () => eT,
             },
             {
                 no: 13,
@@ -706,6 +706,7 @@ class k extends o.C {
             lastDismissedVersion: 0,
             lastDismissedAtMs: "0",
             lastDismissedObjectId: "0",
+            numTimesDismissed: 0,
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -734,6 +735,9 @@ class k extends o.C {
                 case 4:
                     a.lastDismissedObjectId = e.uint64().toString();
                     break;
+                case 5:
+                    a.numTimesDismissed = e.uint32();
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -750,7 +754,8 @@ class k extends o.C {
         !1 !== e.dismissed && t.tag(1, r.TD.Varint).bool(e.dismissed),
             0 !== e.lastDismissedVersion && t.tag(2, r.TD.Varint).uint32(e.lastDismissedVersion),
             "0" !== e.lastDismissedAtMs && t.tag(3, r.TD.Varint).uint64(e.lastDismissedAtMs),
-            "0" !== e.lastDismissedObjectId && t.tag(4, r.TD.Varint).uint64(e.lastDismissedObjectId);
+            "0" !== e.lastDismissedObjectId && t.tag(4, r.TD.Varint).uint64(e.lastDismissedObjectId),
+            0 !== e.numTimesDismissed && t.tag(5, r.TD.Varint).uint32(e.numTimesDismissed);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -779,6 +784,12 @@ class k extends o.C {
                 name: "last_dismissed_object_id",
                 kind: "scalar",
                 T: 4,
+            },
+            {
+                no: 5,
+                name: "num_times_dismissed",
+                kind: "scalar",
+                T: 13,
             },
         ]);
     }
@@ -1229,6 +1240,7 @@ class K extends o.C {
             lastDismissedVersion: 0,
             lastDismissedAtMs: "0",
             lastDismissedObjectId: "0",
+            numTimesDismissed: 0,
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -1254,6 +1266,9 @@ class K extends o.C {
                 case 3:
                     a.lastDismissedObjectId = e.uint64().toString();
                     break;
+                case 4:
+                    a.numTimesDismissed = e.uint32();
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -1269,7 +1284,8 @@ class K extends o.C {
     internalBinaryWrite(e, t, n) {
         0 !== e.lastDismissedVersion && t.tag(1, r.TD.Varint).uint32(e.lastDismissedVersion),
             "0" !== e.lastDismissedAtMs && t.tag(2, r.TD.Varint).uint64(e.lastDismissedAtMs),
-            "0" !== e.lastDismissedObjectId && t.tag(3, r.TD.Varint).uint64(e.lastDismissedObjectId);
+            "0" !== e.lastDismissedObjectId && t.tag(3, r.TD.Varint).uint64(e.lastDismissedObjectId),
+            0 !== e.numTimesDismissed && t.tag(4, r.TD.Varint).uint32(e.numTimesDismissed);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -1292,6 +1308,12 @@ class K extends o.C {
                 name: "last_dismissed_object_id",
                 kind: "scalar",
                 T: 4,
+            },
+            {
+                no: 4,
+                name: "num_times_dismissed",
+                kind: "scalar",
+                T: 13,
             },
         ]);
     }
@@ -3419,8 +3441,8 @@ class eI extends o.C {
         ]);
     }
 }
-let eS = new eI();
-class eT extends o.C {
+let eT = new eI();
+class eS extends o.C {
     create(e) {
         let t = {};
         return (
@@ -3480,7 +3502,7 @@ class eT extends o.C {
         ]);
     }
 }
-let eA = new eT();
+let eA = new eS();
 class eC extends o.C {
     create(e) {
         let t = {
@@ -3638,7 +3660,7 @@ class eC extends o.C {
                 no: 9,
                 name: "timestamp_hour_cycle",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.TimestampHourCycle", S],
+                T: () => ["discord_protos.discord_users.v1.TimestampHourCycle", T],
             },
             {
                 no: 10,
@@ -3650,7 +3672,7 @@ class eC extends o.C {
                 no: 11,
                 name: "launch_pad_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.LaunchPadMode", T],
+                T: () => ["discord_protos.discord_users.v1.LaunchPadMode", S],
             },
             {
                 no: 12,

@@ -1,18 +1,18 @@
 n.d(t, {
-    BU: () => L,
-    Cd: () => U,
-    DZ: () => w,
-    PS: () => x,
-    T6: () => N,
-    Z1: () => Z,
-    aj: () => D,
-    bE: () => V,
+    BU: () => j,
+    Cd: () => G,
+    DZ: () => D,
+    PS: () => L,
+    T6: () => R,
+    Z1: () => F,
+    aj: () => x,
+    bE: () => H,
     fy: () => O.fy,
-    hW: () => P,
-    m9: () => G,
-    nm: () => j,
-    sr: () => F,
-    w9: () => B,
+    hW: () => w,
+    m9: () => B,
+    nm: () => M,
+    sr: () => V,
+    w9: () => Z,
 }),
     n(415506),
     n(388685),
@@ -77,24 +77,36 @@ function T(e) {
     }
     return e;
 }
-let S = 5000,
-    A = "UserSettingsProtoLastWriteTimes",
-    C = Date.now();
-function N() {}
+function S(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+let A = 5000,
+    C = "UserSettingsProtoLastWriteTimes",
+    N = Date.now();
+function R() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
-    C = Date.now();
+    N = Date.now();
 }),
     u.Z.subscribe("CONNECTION_CLOSED", () => {
-        C = Date.now();
+        N = Date.now();
     }),
     "undefined" != typeof document &&
         (document.addEventListener("mousedown", () => {
-            C = 0;
+            N = 0;
         }),
         document.addEventListener("keydown", () => {
-            C = 0;
+            N = 0;
         }));
-class R {
+class P {
     getEditInfo() {
         return E.Z.getFullState()[this.type];
     }
@@ -176,8 +188,8 @@ class R {
     }
     saveLastSendTime() {
         var e;
-        let t = null != (e = c.K.get(A)) ? e : {};
-        (t[this.type] = Date.now()), c.K.set(A, t);
+        let t = null != (e = c.K.get(C)) ? e : {};
+        (t[this.type] = Date.now()), c.K.set(C, t);
     }
     loadIfUncached(e, t) {
         (E.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
@@ -255,7 +267,7 @@ class R {
         i()(null != e.protoToSave, "protoToSave cannot be null"),
             i()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
             i()(null == e.timeout, "timeout must not be set already");
-        let t = S + Math.floor(Math.random() * S),
+        let t = A + Math.floor(Math.random() * A),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({
             timeout: n,
@@ -334,22 +346,22 @@ class R {
             (this.logger = new d.Z(this.ProtoClass.typeName));
     }
 }
-let P = new R(l.o8, O.yP.PRELOADED_USER_SETTINGS),
-    w = new R(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    D = {
-        [O.yP.PRELOADED_USER_SETTINGS]: P,
-        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: w,
+let w = new P(l.o8, O.yP.PRELOADED_USER_SETTINGS),
+    D = new P(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    x = {
+        [O.yP.PRELOADED_USER_SETTINGS]: w,
+        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: D,
     };
-function x(e, t, n) {
-    return P.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
+function L(e, t, n) {
+    return w.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
 }
-function L(e, t, n, r) {
-    return x(e, (e) => (0, y.uL)(e, t, n), r);
+function j(e, t, n, r) {
+    return L(e, (e) => (0, y.uL)(e, t, n), r);
 }
-function j(e) {
+function M(e) {
     return (
-        M(e),
-        P.updateAsync(
+        k(e),
+        w.updateAsync(
             "userContent",
             (t) => {
                 if ((0, m.jl)(t.dismissedContents, e)) return !1;
@@ -359,17 +371,17 @@ function j(e) {
         )
     );
 }
-function M(e) {
-    !E.Z.hasLoaded(O.yP.PRELOADED_USER_SETTINGS) &&
-        (k(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
-}
 function k(e) {
+    !E.Z.hasLoaded(O.yP.PRELOADED_USER_SETTINGS) &&
+        (U(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+}
+function U(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
 }
-async function U(e, t) {
-    return await P.updateAsync(
+async function G(e, t) {
+    return await w.updateAsync(
         "userContent",
         (n) => {
             n.recurringDismissibleContentStates[e] = T({}, n.recurringDismissibleContentStates[e], t);
@@ -377,8 +389,8 @@ async function U(e, t) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function G(e, t, n) {
-    return await x(
+async function B(e, t, n) {
+    return await L(
         t,
         (t) => {
             t.guildDismissibleContentStates[e] = T({}, t.guildDismissibleContentStates[e], n);
@@ -386,8 +398,8 @@ async function G(e, t, n) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function B(e) {
-    return P.updateAsync(
+function Z(e) {
+    return w.updateAsync(
         "userContent",
         (t) => {
             if (!(0, m.jl)(t.dismissedContents, e)) return !1;
@@ -396,15 +408,16 @@ function B(e) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function Z(e) {
-    return U(e, {
+function F(e) {
+    return G(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: "0",
         lastDismissedObjectId: "0",
+        numTimesDismissed: 0,
     });
 }
-function F() {
-    return P.updateAsync(
+function V() {
+    return w.updateAsync(
         "userContent",
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
@@ -412,8 +425,8 @@ function F() {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function V() {
-    return P.updateAsync(
+function H() {
+    return w.updateAsync(
         "userContent",
         (e) => {
             let t = new Uint8Array();
