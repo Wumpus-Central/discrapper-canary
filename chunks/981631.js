@@ -5229,6 +5229,8 @@ var nb = (function (e) {
             (e.GUILD_CHANNEL_INTEGRITY_CHECK_EXECUTED = "guild_channel_integrity_check_executed"),
             (e.GUILD_CHANNEL_INTEGRITY_CHECK_COMPLETED = "guild_channel_integrity_check_completed"),
             (e.GUILD_CHANNEL_INTEGRITY_CHECK_FAILED = "guild_channel_integrity_check_failed"),
+            (e.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED = "system_service_initialize_attempted"),
+            (e.SYSTEM_SERVICE_INSTALL_ATTEMPTED = "system_service_install_attempted"),
             e
         );
     })({}),

@@ -56,7 +56,7 @@ function g(e) {
     )
         return null;
     function E() {
-        (0, d.sU)();
+        (0, d.sU)(n + (null != c ? "-with-game" : "-no-game"));
     }
     return (0, r.jsxs)("div", {
         className: a()(p.container, t),

@@ -18,7 +18,7 @@ function o(e, t, n) {
 class s extends r.Z {
     handlePostConnectionOpen() {
         let { enabled: e } = i.Z.getConfig({ location: "can-install" });
-        e && (0, a.Yz)();
+        e && (0, a.Yz)("startup");
     }
     handleLogout() {
         (0, a.wt)();

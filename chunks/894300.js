@@ -1,9 +1,12 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(951288),
     i = n(481060),
     a = n(865066),
     o = n(388032);
-function s(e) {
+function s() {
+    (0, a.sU)("overlay-settings");
+}
+function l(e) {
     let { className: t, game: n } = e;
     return (0, a.hi)() && null != n && n.elevated
         ? (0, r.jsx)("div", {
@@ -14,7 +17,7 @@ function s(e) {
                       variant: "secondary",
                       size: "sm",
                       text: o.intl.string(o.t["1iI46O"]),
-                      onClick: a.sU,
+                      onClick: s,
                   }),
                   children: o.intl.string(o.t.NP1FHx),
               }),

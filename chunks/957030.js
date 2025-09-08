@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(442837),
     a = n(481060),
@@ -8,6 +8,9 @@ var r = n(951288),
     c = n(981631),
     u = n(388032);
 function d() {
+    (0, l.sU)("nagbar");
+}
+function f() {
     let e = (0, i.e7)([s.ZP], () => s.ZP.getVisibleGame());
     return null == e
         ? null
@@ -20,7 +23,7 @@ function d() {
                   }),
                   u.intl.format(u.t.kxePRk, { gameName: e.name }),
                   (0, r.jsx)(a.NoS, {
-                      onClick: l.sU,
+                      onClick: d,
                       noticeType: c.kVF.SYSTEM_SERVICE_WARNING,
                       children: u.intl.string(u.t["1iI46O"]),
                   }),
