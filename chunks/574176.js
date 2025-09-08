@@ -7,6 +7,7 @@ let r = (0, n(818083).B)({
         enableHangStatus: !1,
         setDefaultStatus: !1,
         allowChannelTopic: !1,
+        defaultStatusVariant: "original",
     },
     treatments: [
         {
@@ -16,6 +17,7 @@ let r = (0, n(818083).B)({
                 enableHangStatus: !0,
                 setDefaultStatus: !1,
                 allowChannelTopic: !1,
+                defaultStatusVariant: "original",
             },
         },
         {
@@ -25,6 +27,7 @@ let r = (0, n(818083).B)({
                 enableHangStatus: !0,
                 setDefaultStatus: !0,
                 allowChannelTopic: !1,
+                defaultStatusVariant: "original",
             },
         },
         {
@@ -34,6 +37,37 @@ let r = (0, n(818083).B)({
                 enableHangStatus: !0,
                 setDefaultStatus: !1,
                 allowChannelTopic: !0,
+                defaultStatusVariant: "original",
+            },
+        },
+        {
+            id: 4,
+            label: "illocon hang statuses with channel topic",
+            config: {
+                enableHangStatus: !0,
+                setDefaultStatus: !0,
+                allowChannelTopic: !0,
+                defaultStatusVariant: "illocons",
+            },
+        },
+        {
+            id: 5,
+            label: "grey icon hang statuses with channel topic",
+            config: {
+                enableHangStatus: !0,
+                setDefaultStatus: !0,
+                allowChannelTopic: !0,
+                defaultStatusVariant: "icons",
+            },
+        },
+        {
+            id: 6,
+            label: "twemoji hang statuses with channel topic",
+            config: {
+                enableHangStatus: !0,
+                setDefaultStatus: !0,
+                allowChannelTopic: !0,
+                defaultStatusVariant: "twemoji",
             },
         },
     ],

@@ -1,5 +1,5 @@
 let r, i, a, o;
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var s,
     l = n(512722),
     c = n.n(l),
@@ -8,8 +8,10 @@ var s,
     f = n(442837),
     _ = n(570140),
     p = n(594190),
-    h = n(981631);
-function m(e, t, n) {
+    h = n(574176),
+    m = n(505905),
+    g = n(981631);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +35,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,135 +52,139 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = 7,
-    O = 28800000,
-    v = I();
-function I() {
+let v = 7,
+    I = 28800000,
+    T = S();
+function S() {
     return {
         recentCustomStatuses: [],
         currentDefaultStatus: null,
     };
 }
-function T() {
-    v = I();
+function A() {
+    T = S();
 }
-function S(e) {
-    let { status: t, saveAsDefault: n } = e;
-    c()(t !== h.tNA.CUSTOM, "Hang Status cannot be custom"),
+function C(e) {
+    let { status: t, guildId: n, saveAsDefault: s } = e;
+    c()(t !== m.tN.CUSTOM, "Hang Status cannot be custom"),
         (r = t),
         (i = null),
         (o = null),
-        n &&
-            (v.currentDefaultStatus = {
+        s &&
+            (T.currentDefaultStatus = {
                 status: t,
                 customHangStatus: i,
                 gameActivityHangStatus: o,
-                expiresAt: Date.now() + O,
-            }),
-        (a = {
-            type: h.IIU.HANG_STATUS,
-            name: "Hang Status",
-            state: r,
-        });
+                expiresAt: Date.now() + I,
+            });
+    let { defaultStatusVariant: l } = h.n.getCurrentConfig({
+        guildId: n,
+        location: "UpdateHangStatus",
+    });
+    a = {
+        type: g.IIU.HANG_STATUS,
+        name: "Hang Status",
+        state: "".concat(r, ":").concat(l),
+    };
 }
-function A(e) {
+function N(e) {
     let { status: t, emoji: n, saveAsDefault: s } = e;
-    (r = h.tNA.CUSTOM),
+    (r = m.tN.CUSTOM),
         (o = null),
         (i = {
             status: t,
             emoji: n,
         });
-    let l = [...v.recentCustomStatuses],
+    let l = [...T.recentCustomStatuses],
         c = l.findIndex((e) => e.status === t && d().isEqual(e.emoji, n));
-    -1 !== c ? l.splice(c, 1) : l.length === y && l.splice(y - 1, 1),
-        (v.recentCustomStatuses = [i, ...l]),
+    -1 !== c ? l.splice(c, 1) : l.length === v && l.splice(v - 1, 1),
+        (T.recentCustomStatuses = [i, ...l]),
         s &&
-            (v.currentDefaultStatus = {
+            (T.currentDefaultStatus = {
                 status: r,
                 customHangStatus: i,
                 gameActivityHangStatus: o,
-                expiresAt: Date.now() + O,
+                expiresAt: Date.now() + I,
             }),
         (a = {
-            type: h.IIU.HANG_STATUS,
+            type: g.IIU.HANG_STATUS,
             name: "Hang Status",
             state: r,
             details: t,
             emoji: n,
         });
 }
-function C(e) {
+function R(e) {
     let { applicationId: t, saveAsDefault: n } = e;
     (o = t),
         (r = null),
         (i = null),
         (a = null),
         n &&
-            (v.currentDefaultStatus = {
+            (T.currentDefaultStatus = {
                 status: r,
                 customHangStatus: i,
                 gameActivityHangStatus: o,
-                expiresAt: Date.now() + O,
+                expiresAt: Date.now() + I,
             });
 }
-function N(e) {
+function P(e) {
     let { saveAsDefault: t } = e;
     (r = null),
         (i = null),
         (o = null),
         t &&
-            (v.currentDefaultStatus = {
+            (T.currentDefaultStatus = {
                 status: null,
                 customHangStatus: null,
                 gameActivityHangStatus: null,
-                expiresAt: Date.now() + O,
+                expiresAt: Date.now() + I,
             }),
         (a = null);
 }
-function R() {
+function w() {
     if (null == o) return !1;
     if (!p.ZP.getRunningVerifiedApplicationIds().includes(o)) {
         var e;
         return (
             (o = null),
-            (null == (e = v.currentDefaultStatus) ? void 0 : e.gameActivityHangStatus) != null &&
-                (v.currentDefaultStatus.gameActivityHangStatus = null),
+            (null == (e = T.currentDefaultStatus) ? void 0 : e.gameActivityHangStatus) != null &&
+                (T.currentDefaultStatus.gameActivityHangStatus = null),
             !0
         );
     }
     return !1;
 }
-function P(e) {
+function D(e) {
     let { statuses: t } = e,
-        n = [...v.recentCustomStatuses];
+        n = [...T.recentCustomStatuses];
     t.forEach((e) => {
         let { status: t, emoji: s } = e,
             l = n.findIndex((e) => e.status === t && d().isEqual(e.emoji, s));
         -1 !== l && n.splice(l, 1),
             t === (null == i ? void 0 : i.status) &&
                 d().isEqual(s, null == i ? void 0 : i.emoji) &&
-                ((r = null), (i = null), (o = null), (v.currentDefaultStatus = null), (a = null));
+                ((r = null), (i = null), (o = null), (T.currentDefaultStatus = null), (a = null));
     }),
-        (v.recentCustomStatuses = n);
+        (T.recentCustomStatuses = n);
 }
-class w extends (s = f.ZP.PersistedStore) {
+class x extends (s = f.ZP.PersistedStore) {
     initialize(e) {
-        (v = g({}, I(), null != e ? e : {})), this.waitFor(p.ZP), this.syncWith([p.ZP], R);
+        (T = b({}, S(), null != e ? e : {})), this.waitFor(p.ZP), this.syncWith([p.ZP], w);
     }
     getState() {
-        return v;
+        return T;
     }
     getCurrentHangStatus() {
         return r;
@@ -190,31 +196,31 @@ class w extends (s = f.ZP.PersistedStore) {
         return o;
     }
     getRecentCustomStatuses() {
-        return v.recentCustomStatuses;
+        return T.recentCustomStatuses;
     }
     getCurrentDefaultStatus() {
-        return v.currentDefaultStatus;
+        return T.currentDefaultStatus;
     }
     getHangStatusActivity() {
         return null == r ? null : a;
     }
 }
-m(w, "displayName", "HangStatusStore"),
-    m(w, "persistKey", "HangStatusStore"),
-    m(w, "migrations", [
+E(x, "displayName", "HangStatusStore"),
+    E(x, "persistKey", "HangStatusStore"),
+    E(x, "migrations", [
         (e) => {
             if (null != e.currentDefaultStatus && null == e.currentDefaultStatus.gameActivityHangStatus) {
-                let t = b(g({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
-                return b(g({}, e), { currentDefaultStatus: t });
+                let t = O(b({}, e.currentDefaultStatus), { gameActivityHangStatus: null });
+                return O(b({}, e), { currentDefaultStatus: t });
             }
             return e;
         },
     ]);
-let D = new w(_.Z, {
-    LOGOUT: T,
-    UPDATE_HANG_STATUS: S,
-    UPDATE_HANG_STATUS_CUSTOM: A,
-    UPDATE_HANG_STATUS_GAME_ACTIVITY: C,
-    DELETE_INVALID_HANG_STATUSES: P,
-    CLEAR_HANG_STATUS: N,
+let L = new x(_.Z, {
+    LOGOUT: A,
+    UPDATE_HANG_STATUS: C,
+    UPDATE_HANG_STATUS_CUSTOM: N,
+    UPDATE_HANG_STATUS_GAME_ACTIVITY: R,
+    DELETE_INVALID_HANG_STATUSES: D,
+    CLEAR_HANG_STATUS: P,
 });

@@ -16,16 +16,18 @@ var r = n(570140),
     u = n(981631);
 function d(e, t) {
     var n;
-    if (null == e) return void p(t);
+    let i = null == (n = a.Z.getChannel(s.Z.getVoiceChannelId())) ? void 0 : n.guild_id;
+    if (null == e || null == i) return void p(t);
     r.Z.dispatch({
         type: "UPDATE_HANG_STATUS",
         status: e,
+        guildId: i,
         saveAsDefault: t,
     }),
         l.default.track(u.rMx.SET_HANG_STATUS, {
             status_type: e,
             channel_id: s.Z.getVoiceChannelId(),
-            guild_id: null == (n = a.Z.getChannel(s.Z.getVoiceChannelId())) ? void 0 : n.guild_id,
+            guild_id: i,
             media_session_id: o.Z.getMediaSessionId(),
         });
 }

@@ -38,7 +38,7 @@ var r = n(951288),
     G = n(671955),
     B = n(388032),
     Z = n(704543);
-function V(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function V(e, t, n) {
         e
     );
 }
-function F(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function F(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ function W(e) {
             user: t,
             currentUser: n,
             activity: i,
-            application: V,
+            application: F,
             voiceGuild: H,
             voiceChannel: W,
             className: K,
@@ -123,13 +123,13 @@ function W(e) {
         }),
         er = (0, T.Z)(i),
         ei = null != er.text && "" !== er.text,
-        { largeImage: ea, smallImage: eo } = (0, _.FO)(i, V),
+        { largeImage: ea, smallImage: eo } = (0, _.FO)(i, F),
         es = (0, M.Z)({
             location: "UserProfileActivityCard",
             user: t,
             currentUser: n,
             activity: i,
-            application: V,
+            application: F,
             entry: ee,
             onClose: z,
         }),
@@ -138,6 +138,7 @@ function W(e) {
                 t = $ === G.l.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
             return i.type === k.IIU.HANG_STATUS
                 ? (0, r.jsx)(b.Z, {
+                      size: $ !== G.l.MODAL_V2 ? 60 : 100,
                       hangStatusActivity: i,
                       className: a()(Z.hangStatusIcon, Z.image, { [Z.small]: $ !== G.l.MODAL_V2 }),
                   })
@@ -282,7 +283,7 @@ function W(e) {
                               variant: "text-xs/normal",
                               text: B.intl.formatToPlainString(B.t["u//9Bw"], {
                                   count: "0",
-                                  max: null != (a = null == V ? void 0 : V.getMaxParticipants()) ? a : 0,
+                                  max: null != (a = null == F ? void 0 : F.getMaxParticipants()) ? a : 0,
                               }),
                           }),
                       ],
@@ -362,7 +363,7 @@ function W(e) {
                           user: t,
                           onAction: et,
                           onClose: z,
-                          application: V,
+                          application: F,
                       }),
                   });
     return (0, r.jsx)(f.Gt, {
@@ -376,7 +377,7 @@ function W(e) {
             children: [
                 (0, r.jsx)(
                     w.Z,
-                    Y(F({ textId: Q }, er), {
+                    Y(V({ textId: Q }, er), {
                         contextMenu: (0, r.jsx)(j.Z, {
                             display: "live",
                             user: t,
@@ -416,7 +417,7 @@ function W(e) {
                 }),
                 $ !== G.l.MODAL && $ !== G.l.MODAL_V2 && em(),
                 (0, r.jsx)(R.Z, {
-                    applicationId: null == V ? void 0 : V.id,
+                    applicationId: null == F ? void 0 : F.id,
                     onAction: et,
                     onClose: z,
                 }),

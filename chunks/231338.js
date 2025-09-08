@@ -9,23 +9,23 @@ n.d(t, {
     BZ: () => z,
     Cw: () => w,
     Cy: () => F,
-    EK: () => eE,
-    ET: () => ey,
+    EK: () => eg,
+    ET: () => eb,
     Et: () => q,
     GZ: () => M,
     H0: () => A,
     He: () => I,
     Il: () => o.I,
     Jj: () => j,
-    MA: () => eO,
+    MA: () => ey,
     NY: () => x,
     OL: () => g,
-    OM: () => em,
+    OM: () => eh,
     Pl: () => G,
     Py: () => D,
-    Q: () => eg,
-    QL: () => S,
-    RG: () => eb,
+    Q: () => em,
+    QL: () => T,
+    RG: () => eE,
     RK: () => ea,
     S7: () => U,
     Sk: () => h,
@@ -41,8 +41,8 @@ n.d(t, {
     X7: () => P,
     XM: () => et,
     Zu: () => k,
-    aO: () => ev,
-    aV: () => T,
+    aO: () => eO,
+    aV: () => S,
     am: () => ec,
     cN: () => ef,
     dG: () => B,
@@ -55,9 +55,8 @@ n.d(t, {
     j_: () => ed,
     lT: () => Q,
     ld: () => N,
-    pK: () => eh,
+    pK: () => ep,
     rx: () => f,
-    tN: () => ep,
     tP: () => s.t,
     tx: () => e_,
     vS: () => $,
@@ -186,7 +185,7 @@ var v = (function (e) {
             e
         );
     })({});
-let S = new Map([
+let T = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -195,7 +194,7 @@ let S = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    T = new Map([
+    S = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
@@ -725,19 +724,6 @@ var ed = (function (e) {
     })({}),
     ep = (function (e) {
         return (
-            (e.CHILLING = "chilling"),
-            (e.GAMING = "gaming"),
-            (e.FOCUSING = "focusing"),
-            (e.BRB = "brb"),
-            (e.EATING = "eating"),
-            (e.IN_TRANSIT = "in-transit"),
-            (e.WATCHING = "watching"),
-            (e.CUSTOM = "custom"),
-            e
-        );
-    })({}),
-    eh = (function (e) {
-        return (
             (e.AED = "aed"),
             (e.AFN = "afn"),
             (e.ALL = "all"),
@@ -924,8 +910,8 @@ var ed = (function (e) {
             e
         );
     })({});
-let em = "US";
-var eg = (function (e) {
+let eh = "US";
+var em = (function (e) {
         return (
             (e[(e.SINGLE_PLAYER = 1)] = "SINGLE_PLAYER"),
             (e[(e.ONLINE_MULTIPLAYER = 2)] = "ONLINE_MULTIPLAYER"),
@@ -943,7 +929,7 @@ var eg = (function (e) {
             e
         );
     })({}),
-    eE = (function (e) {
+    eg = (function (e) {
         return (
             (e[(e.ACTION = 1)] = "ACTION"),
             (e[(e.ACTION_RPG = 2)] = "ACTION_RPG"),
@@ -1017,14 +1003,14 @@ var eg = (function (e) {
             e
         );
     })({}),
-    eb = (function (e) {
+    eE = (function (e) {
         return (
             (e[(e.GUILD_ROLE_SUBSCRIPTIONS = 1)] = "GUILD_ROLE_SUBSCRIPTIONS"),
             (e[(e.GUILD_PRODUCTS = 2)] = "GUILD_PRODUCTS"),
             e
         );
     })({}),
-    ey = (function (e) {
+    eb = (function (e) {
         return (
             (e.PERMISSION_DENIED = "PERMISSION_DENIED"),
             (e.PERMISSION_DISMISSED = "PERMISSION_DISMISSED"),
@@ -1032,9 +1018,9 @@ var eg = (function (e) {
             e
         );
     })({}),
-    eO = (function (e) {
+    ey = (function (e) {
         return (e.SWIPE = "SWIPE"), (e.BROWSER = "BROWSER"), (e.KEYBIND = "KEYBIND"), e;
     })({}),
-    ev = (function (e) {
+    eO = (function (e) {
         return (e[(e.IN_PROMPT = 1)] = "IN_PROMPT"), e;
     })({});

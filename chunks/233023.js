@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -10,55 +10,57 @@ var i = n(120356),
     u = n(584973),
     d = n(556638),
     f = n(80568);
-function _(e) {
+let _ = 14;
+function p(e) {
     let {
             customStatusActivity: t,
             textClassName: n,
             iconClassName: i,
-            tooltipClassName: _,
-            voiceChannel: p,
-            hangStatus: h,
-            textSize: m = "xs",
-            animateEmoji: g = !0,
-            hideEmoji: E = !1,
-            hideTooltip: b = !1,
+            tooltipClassName: p,
+            voiceChannel: h,
+            hangStatus: m,
+            textSize: g = "xs",
+            animateEmoji: E = !0,
+            hideEmoji: b = !1,
+            hideTooltip: y = !1,
         } = e,
-        y = (0, c.E)("ActivityStatus", p);
-    if (null == t && null == h) return null;
-    let O = null == t ? void 0 : t.emoji,
-        v = null == t ? void 0 : t.state,
-        I = null != v && "" !== v,
-        T = null;
-    null != h && y
-        ? (T = (0, r.jsx)(l.Z, {
+        O = (0, c.E)("ActivityStatus", h);
+    if (null == t && null == m) return null;
+    let v = null == t ? void 0 : t.emoji,
+        I = null == t ? void 0 : t.state,
+        T = null != I && "" !== I,
+        S = null;
+    null != m && O
+        ? (S = (0, r.jsx)(l.Z, {
+              size: _,
               className: a()(i, f.hangStatusIcon),
-              hangStatusActivity: h,
+              hangStatusActivity: m,
           }))
-        : null == O ||
-          E ||
-          (T = (0, r.jsx)(u.Z, {
-              emoji: O,
-              animate: g,
+        : null == v ||
+          b ||
+          (S = (0, r.jsx)(u.Z, {
+              emoji: v,
+              animate: E,
               className: i,
-              hideTooltip: b || I,
+              hideTooltip: y || T,
           }));
-    let S = I && (null != T ? " ".concat(v) : v),
-        A = () => {
-            let e = null != O && !E && !I;
-            return b || e
+    let A = T && (null != S ? " ".concat(I) : I),
+        C = () => {
+            let e = null != v && !b && !T;
+            return y || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [T, S],
+                      children: [S, A],
                   })
                 : (0, r.jsxs)(s.Z, {
                       delay: d.X,
-                      tooltipClassName: _,
-                      children: [T, S],
+                      tooltipClassName: p,
+                      children: [S, A],
                   });
         };
     return (0, r.jsx)(o.Text, {
-        variant: "text-".concat(m, "/medium"),
+        variant: "text-".concat(g, "/medium"),
         color: "none",
         className: a()(f.truncated, n),
-        children: A(),
+        children: C(),
     });
 }

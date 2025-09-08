@@ -1,4 +1,4 @@
-n.d(t, { I: () => x });
+n.d(t, { I: () => O });
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,77 +14,79 @@ var r = n(951288),
     m = n(833858),
     g = n(866071),
     b = n(223135),
-    y = n(981631),
-    _ = n(388032),
-    C = n(10359),
-    v = n(254477);
-function x(e) {
+    y = n(505905),
+    _ = n(981631),
+    C = n(388032),
+    v = n(10359),
+    x = n(254477);
+function O(e) {
     let { hangStatusActivity: t, channel: n, setPopoutRef: l } = e,
-        x = i.useRef(null),
-        O = (0, o.e7)([p.Z], () => p.Z.getVoiceChannelId() === n.id),
-        j = (0, o.e7)([u.Z], () => u.Z.can(y.Plq.CONNECT, n)),
-        E = (null == t ? void 0 : t.emoji) == null || (0, g.K)(t.emoji, n),
-        S = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId());
+        O = i.useRef(null),
+        j = (0, o.e7)([p.Z], () => p.Z.getVoiceChannelId() === n.id),
+        E = (0, o.e7)([u.Z], () => u.Z.can(_.Plq.CONNECT, n)),
+        S = (null == t ? void 0 : t.emoji) == null || (0, g.K)(t.emoji, n),
+        I = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId());
     i.useEffect(() => {
-        null == l || l(null == x ? void 0 : x.current);
-    }, [x, l]),
+        null == l || l(null == O ? void 0 : O.current);
+    }, [O, l]),
         i.useEffect(() => {
-            h.default.track(y.rMx.VIEW_HANG_STATUS, {
+            h.default.track(_.rMx.VIEW_HANG_STATUS, {
                 source: "HangStatusPopout",
                 guild_id: n.guild_id,
                 channel_id: n.id,
             });
         }, [n.guild_id, n.id]);
-    let I = i.useCallback(() => {
-            !O &&
-                j &&
+    let P = i.useCallback(() => {
+            !j &&
+                E &&
                 (c.default.selectVoiceChannel(n.id),
-                h.default.track(y.rMx.HANG_STATUS_CTA_CLICKED, {
+                h.default.track(_.rMx.HANG_STATUS_CTA_CLICKED, {
                     source: "HangStatusPopout",
                     guild_id: n.guild_id,
                     channel_id: n.id,
                 }));
-        }, [O, j, n.guild_id, n.id]),
-        P = i.useCallback(() => {
-            if (!O || !E) return;
+        }, [j, E, n.guild_id, n.id]),
+        Z = i.useCallback(() => {
+            if (!j || !S) return;
             let e = t.state;
-            if (e === y.tNA.CUSTOM) {
+            if (e === y.tN.CUSTOM) {
                 if (null == t.details || null == t.emoji) return;
                 (0, f._s)(t.details, t.emoji, !0);
             } else (0, f.Zx)(e, !0);
-            h.default.track(y.rMx.SWIPE_HANG_STATUS, {
+            h.default.track(_.rMx.SWIPE_HANG_STATUS, {
                 guild_id: n.guild_id,
                 channel_id: n.id,
-                media_session_id: S,
+                media_session_id: I,
             });
-        }, [O, E, t, S, n.guild_id, n.id]);
+        }, [j, S, t, I, n.guild_id, n.id]);
     return (0, r.jsxs)("div", {
-        ref: x,
-        className: a()(v.popover, C.container),
+        ref: O,
+        className: a()(x.popover, v.container),
         children: [
             (0, r.jsx)(b.Z, {
-                className: C.icon,
+                size: 32,
+                className: v.icon,
                 hangStatusActivity: t,
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
-                className: C.statusText,
+                className: v.statusText,
                 children: (0, m.O8)(t),
             }),
-            O
-                ? E &&
+            j
+                ? S &&
                   (0, r.jsx)(s.zxk, {
                       size: "sm",
                       variant: "secondary",
-                      text: _.intl.string(_.t["0eHzpq"]),
-                      onClick: P,
+                      text: C.intl.string(C.t["0eHzpq"]),
+                      onClick: Z,
                   })
-                : j &&
+                : E &&
                   (0, r.jsx)(s.zxk, {
                       size: "sm",
                       variant: "secondary",
-                      text: _.intl.string(_.t["B/dHXF"]),
-                      onClick: I,
+                      text: C.intl.string(C.t["B/dHXF"]),
+                      onClick: P,
                   }),
         ],
     });
