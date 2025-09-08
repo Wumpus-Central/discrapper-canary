@@ -172,6 +172,7 @@ function P(e) {
                                     size: 24,
                                     hangStatusActivity: i,
                                     fallbackVariant: A,
+                                    className: S.icon,
                                 }),
                                 setStatus: () => F(t),
                                 clearStatus: () => (0, f.Sc)(!1),
