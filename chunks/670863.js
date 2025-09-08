@@ -1,20 +1,26 @@
-n.d(t, { j: () => T }), n(388685);
+n.d(t, { j: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(481060),
-    s = n(846027),
-    l = n(906732),
-    c = n(962100),
-    u = n(131951),
-    d = n(626135),
-    f = n(72897),
-    _ = n(981631),
-    p = n(65154),
-    h = n(388032),
-    m = n(118896),
-    g = n(197571);
-function E(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(780384),
+    c = n(481060),
+    u = n(846027),
+    d = n(906732),
+    f = n(210887),
+    _ = n(962100),
+    p = n(463395),
+    h = n(131951),
+    m = n(626135),
+    g = n(568001),
+    E = n(72897),
+    b = n(981631),
+    y = n(65154),
+    O = n(388032),
+    v = n(118896),
+    I = n(197571);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +33,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,16 +44,16 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -55,7 +61,7 @@ function y(e, t) {
     }
     return i;
 }
-function O(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -64,46 +70,45 @@ function O(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = "SHOW_MORE";
-function I(e) {
+let N = "SHOW_MORE";
+function R(e) {
     return {
-        [p.h7.AUDIO_INPUT]: {
-            setDevice: s.Z.setInputDevice,
-            Icon: o.S6n,
-            getCanSetDevice: (e) => e.supports(p.AN.AUDIO_INPUT_DEVICE),
+        [y.h7.AUDIO_INPUT]: {
+            setDevice: u.Z.setInputDevice,
+            Icon: c.S6n,
+            getCanSetDevice: (e) => e.supports(y.AN.AUDIO_INPUT_DEVICE),
             getWarningMessage: () =>
-                h.intl.format(h.t["1iK6UV"], { onDownloadClick: () => (0, c.y)("Help Text Input Devices") }),
+                O.intl.format(O.t["1iK6UV"], { onDownloadClick: () => (0, _.y)("Help Text Input Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
         },
-        [p.h7.AUDIO_OUTPUT]: {
-            setDevice: s.Z.setOutputDevice,
-            Icon: o.VWR,
-            getCanSetDevice: (e) => e.supports(p.AN.AUDIO_OUTPUT_DEVICE),
+        [y.h7.AUDIO_OUTPUT]: {
+            setDevice: u.Z.setOutputDevice,
+            Icon: c.VWR,
+            getCanSetDevice: (e) => e.supports(y.AN.AUDIO_OUTPUT_DEVICE),
             getWarningMessage: () =>
-                h.intl.format(h.t.Ow0dbG, { onDownloadClick: () => (0, c.y)("Help Text Output Devices") }),
+                O.intl.format(O.t.Ow0dbG, { onDownloadClick: () => (0, _.y)("Help Text Output Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
         },
-        [p.h7.VIDEO_INPUT]: {
-            setDevice: s.Z.setVideoDevice,
-            Icon: o.xmR,
+        [y.h7.VIDEO_INPUT]: {
+            setDevice: u.Z.setVideoDevice,
+            Icon: c.xmR,
             getCanSetDevice: (e) => e.isVideoAvailable(),
             getWarningMessage: () =>
-                h.intl.format(h.t["1iK6UV"], { onDownloadClick: () => (0, c.y)("Help Text Video Devices") }),
+                O.intl.format(O.t["1iK6UV"], { onDownloadClick: () => (0, _.y)("Help Text Video Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
         },
     }[e];
 }
-function T(e) {
-    var t,
-        {
-            deviceType: n,
-            location: s,
-            showAllDevices: c = !1,
-            selectedDeviceId: p,
-            onSelectDevice: E,
-            hideDeviceTypeIcon: O = !1,
+function P(e) {
+    var {
+            deviceType: t,
+            location: a,
+            showAllDevices: u = !1,
+            selectedDeviceId: _,
+            onSelectDevice: y,
+            hideDeviceTypeIcon: T = !1,
         } = e,
-        T = y(e, [
+        C = A(e, [
             "deviceType",
             "location",
             "showAllDevices",
@@ -111,64 +116,98 @@ function T(e) {
             "onSelectDevice",
             "hideDeviceTypeIcon",
         ]);
-    let { setDevice: S, Icon: A, getCanSetDevice: C, getWarningMessage: N, getLocation: R } = I(n),
-        { analyticsLocations: P } = (0, l.ZP)(),
-        [w, D] = i.useState(c),
-        x = R(s),
-        [L, j] = (0, f.Ls)(n, { location: x }),
-        { id: k } = (0, f.p6)(n),
-        M = null != p ? p : k,
-        U = (0, a.e7)([u.Z], () => C(u.Z)),
-        G = (0, r.jsx)(o.R94, {
-            type: o.R94.Types.DESCRIPTION,
-            className: g.marginTop8,
-            children: N(),
+    let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = R(t),
+        { analyticsLocations: j } = (0, d.ZP)(),
+        M = (0, s.e7)([f.Z], () => f.Z.theme),
+        [k, U] = i.useState(u),
+        G = L(a),
+        [B, Z] = (0, E.Ls)(t, { location: G }),
+        { id: F } = (0, E.p6)(t),
+        V = null != _ ? _ : F,
+        H = (0, s.e7)([h.Z], () => D(h.Z)),
+        Y = (0, r.jsx)(c.R94, {
+            type: c.R94.Types.DESCRIPTION,
+            className: I.marginTop8,
+            children: x(),
         }),
-        B = i.useCallback(
+        W = i.useCallback(
             (e) => {
-                if (e === v)
-                    D(!0),
-                        d.default.track(_.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
-                            device_type: n,
-                            location: x,
-                            location_stack: P,
-                            shown_device_count: L.length,
-                            hidden_device_count: j.length,
+                if (e === N)
+                    U(!0),
+                        m.default.track(b.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
+                            device_type: t,
+                            location: G,
+                            location_stack: j,
+                            shown_device_count: B.length,
+                            hidden_device_count: Z.length,
                         });
                 else {
-                    var t;
-                    (null == (t = null == E ? void 0 : E(e)) || t) &&
-                        S(e, {
-                            location: x,
-                            analyticsLocations: P,
+                    var n;
+                    (null == (n = null == y ? void 0 : y(e)) || n) &&
+                        P(e, {
+                            location: G,
+                            analyticsLocations: j,
                         });
                 }
             },
-            [n, x, L.length, j.length, P, E, S],
+            [t, G, B.length, Z.length, j, y, P],
         );
-    function Z(e) {
-        let { label: t } = e;
+    function K(e) {
+        let t,
+            i,
+            { label: a, value: s } = e,
+            u = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            d = a,
+            f = (0, E.rX)(a);
+        null != f && ((0, g.M)({ location: "".concat(G, "/SingleSelectDevices") }), (d = f.prefix), (t = f.subName));
+        let _ = p.Z.getCertifiedDeviceName(s, d);
+        if (p.Z.isCertified(s)) {
+            let e = (0, l.ap)(M) ? n(561259) : n(887695);
+            i = (0, r.jsx)("img", {
+                src: e,
+                alt: O.intl.string(O.t.smSKsr),
+            });
+        }
         return (0, r.jsxs)("div", {
-            className: m.selectedDevice,
+            className: o()(v.deviceContainer, {
+                [v.multiLine]: u && null != t,
+                [v.withIcon]: !T,
+            }),
             children: [
-                !O &&
-                    (0, r.jsx)(A, {
-                        size: "custom",
-                        width: 20,
-                        height: 20,
-                        color: o.TVs.colors.INTERACTIVE_MUTED,
+                !T &&
+                    (0, r.jsx)("div", {
+                        className: v.deviceIcon,
+                        children: (0, r.jsx)(w, {
+                            size: "custom",
+                            width: 20,
+                            height: 20,
+                            color: c.TVs.colors.INTERACTIVE_MUTED,
+                        }),
                     }),
-                (0, r.jsx)(o.Text, {
-                    lineClamp: 1,
-                    variant: "text-md/normal",
-                    color: "text-secondary",
-                    children: t,
+                (0, r.jsx)(c.Text, {
+                    lineClamp: 2,
+                    variant: "text-md/medium",
+                    color: u ? "text-secondary" : "text-default",
+                    className: v.deviceLabel,
+                    children: _,
                 }),
+                null != t &&
+                    (0, r.jsx)(c.Text, {
+                        lineClamp: 2,
+                        variant: u ? "text-xs/medium" : "text-md/medium",
+                        color: "text-tertiary",
+                        className: v.deviceSubLabel,
+                        children: t,
+                    }),
+                null != i &&
+                    (0, r.jsx)("div", {
+                        className: v.deviceCertifiedPill,
+                        children: i,
+                    }),
             ],
         });
     }
-    let F = null != (t = T.renderOptionLabel) ? t : Z;
-    function V() {
+    function z() {
         let e = (e) => {
                 let { id: t, name: n } = e;
                 return {
@@ -176,15 +215,15 @@ function T(e) {
                     label: n,
                 };
             },
-            t = L.map(e);
-        if (w || 0 === j.length) {
-            let n = j.map(e);
+            t = B.map(e);
+        if (k || 0 === Z.length) {
+            let n = Z.map(e);
             return t.concat(n);
         }
         {
             let e = {
-                value: v,
-                label: h.intl.string(h.t.E99UMj),
+                value: N,
+                label: O.intl.string(O.t.E99UMj),
                 preventCloseOnSelect: !0,
             };
             return t.concat(e);
@@ -193,24 +232,25 @@ function T(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(
-                o.q4e,
-                b(
+                c.q4e,
+                S(
                     {
-                        value: M,
-                        onChange: B,
-                        options: V(),
-                        isDisabled: !U,
+                        value: V,
+                        onChange: W,
+                        options: z(),
+                        isDisabled: !H,
                         popoutPosition: "bottom",
-                        renderOptionLabel: F,
+                        renderOptionLabel: (e) => K(e, !0),
                         renderOptionValue: (e) => {
                             let [t] = e;
-                            return F(t);
+                            return K(t);
                         },
+                        optionClassName: v.singleSelectOption,
                     },
-                    T,
+                    C,
                 ),
             ),
-            !U && G,
+            !H && Y,
         ],
     });
 }

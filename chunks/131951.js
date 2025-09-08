@@ -948,9 +948,9 @@ function t2(e, t) {
         .value();
 }
 function t3(e, t) {
-    var n;
-    let r = null != (n = e[t]) ? n : p()(e).values().first();
-    return null != r ? r.id : t;
+    var n, r;
+    let i = null != (r = null != (n = e[t]) ? n : e[eI.w5]) ? r : p()(e).values().first();
+    return null != i ? i.id : t;
 }
 function t4(e) {
     let t = e$;
