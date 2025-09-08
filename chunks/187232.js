@@ -74,8 +74,8 @@ let g = {
             trinketsAnimation: {
                 getAnimationData: () =>
                     n
-                        .e("2561")
-                        .then(n.bind(n, 969666))
+                        .e("21723")
+                        .then(n.bind(n, 421344))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());
