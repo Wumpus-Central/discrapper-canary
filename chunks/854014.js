@@ -27,6 +27,7 @@ function u(e) {
                     (0, r.jsx)(t, {
                         color: "currentColor",
                         size: "refresh_sm",
+                        className: s.icon,
                     }),
                     n,
                 ],

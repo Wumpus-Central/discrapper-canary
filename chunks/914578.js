@@ -1,103 +1,115 @@
-n.d(t, { Z: () => N });
-var i = n(951288),
-    l = n(647438),
-    r = n(481060),
-    s = n(782568),
-    a = n(163379),
-    o = n(63063),
-    u = n(604227),
-    c = n(981631),
-    d = n(388032),
-    _ = n(989281);
-function E(e) {
+n.d(t, { Z: () => O });
+var r = n(951288),
+    i = n(647438),
+    l = n(120356),
+    o = n.n(l),
+    s = n(481060),
+    a = n(782568),
+    u = n(163379),
+    c = n(63063),
+    d = n(604227),
+    g = n(981631),
+    f = n(388032),
+    y = n(989281);
+function v(e) {
     let { onClose: t } = e;
-    return (0, i.jsx)(r.v2r, {
+    return (0, r.jsx)(s.v2r, {
         navId: "settings-footer-more-menu",
         onClose: t,
         onSelect: () => {},
         "aria-label": "More options",
-        children: (0, i.jsxs)(r.kSQ, {
+        children: (0, r.jsxs)(s.kSQ, {
             children: [
-                (0, i.jsx)(r.sNh, {
+                (0, r.jsx)(s.sNh, {
                     id: "changelog",
-                    label: d.intl.string(d.t.LRmNAg),
-                    action: () => (0, a.Z)(!0),
+                    label: f.intl.string(f.t.LRmNAg),
+                    action: () => (0, u.Z)(!0),
                 }),
-                (0, i.jsx)(r.sNh, {
+                (0, r.jsx)(s.sNh, {
                     id: "acknowledgements",
-                    label: d.intl.string(d.t["0nUKy8"]),
-                    action: () => (0, s.Z)(c.EYA.ACKNOWLEDGEMENTS),
+                    label: f.intl.string(f.t["0nUKy8"]),
+                    action: () => (0, a.Z)(g.EYA.ACKNOWLEDGEMENTS),
                 }),
-                (0, i.jsx)(r.sNh, {
+                (0, r.jsx)(s.sNh, {
                     id: "support",
-                    label: d.intl.string(d.t["Yl/Rio"]),
-                    action: () => (0, s.Z)(o.w),
+                    label: f.intl.string(f.t["Yl/Rio"]),
+                    action: () => (0, a.Z)(c.w),
                 }),
             ],
         }),
     });
 }
-function N() {
-    let e = l.useRef(null);
-    return (0, i.jsxs)("div", {
+function O() {
+    let e = i.useRef(null);
+    return (0, r.jsxs)("div", {
         children: [
-            (0, i.jsx)(u.Z, { compact: !0 }),
-            (0, i.jsxs)("div", {
-                className: _.links,
+            (0, r.jsx)(d.Z, { compact: !0 }),
+            (0, r.jsxs)("div", {
+                className: y.links,
                 children: [
-                    (0, i.jsx)(r.eee, {
-                        href: c.EYA.PRIVACY,
-                        children: (0, i.jsx)(r.Text, {
+                    (0, r.jsx)(s.eee, {
+                        href: g.EYA.PRIVACY,
+                        children: (0, r.jsx)(s.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
-                            color: "text-muted",
-                            children: d.intl.string(d.t["Knf/f3"]),
+                            color: "currentColor",
+                            children: f.intl.string(f.t["Knf/f3"]),
                         }),
                     }),
-                    (0, i.jsx)(r.eee, {
-                        href: c.EYA.TERMS,
-                        children: (0, i.jsx)(r.Text, {
+                    (0, r.jsx)("span", {
+                        className: y.bullet,
+                        "aria-hidden": "true",
+                        children: "\u2022",
+                    }),
+                    (0, r.jsx)(s.eee, {
+                        href: g.EYA.TERMS,
+                        children: (0, r.jsx)(s.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
-                            color: "text-muted",
-                            children: d.intl.string(d.t.uFSTGh),
+                            color: "currentColor",
+                            children: f.intl.string(f.t.uFSTGh),
                         }),
                     }),
-                    (0, i.jsx)(r.yRy, {
+                    (0, r.jsx)("span", {
+                        className: y.bullet,
+                        "aria-hidden": "true",
+                        children: "\u2022",
+                    }),
+                    (0, r.jsx)(s.yRy, {
                         targetElementRef: e,
                         position: "top",
                         align: "center",
                         spacing: 0,
-                        animation: r.yRy.Animation.NONE,
+                        animation: s.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(E, { onClose: t });
+                            return (0, r.jsx)(v, { onClose: t });
                         },
-                        children: (t) => {
-                            var n, l;
-                            return (0, i.jsx)(
-                                r.eee,
-                                ((n = (function (e) {
+                        children: (t, n) => {
+                            var i, l;
+                            return (0, r.jsx)(
+                                s.eee,
+                                ((i = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            i = Object.keys(n);
+                                            r = Object.keys(n);
                                         "function" == typeof Object.getOwnPropertySymbols &&
-                                            (i = i.concat(
+                                            (r = r.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 }),
                                             )),
-                                            i.forEach(function (t) {
-                                                var i;
-                                                (i = n[t]),
+                                            r.forEach(function (t) {
+                                                var r;
+                                                (r = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: i,
+                                                              value: r,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0,
                                                           })
-                                                        : (e[t] = i);
+                                                        : (e[t] = r);
                                             });
                                     }
                                     return e;
@@ -105,26 +117,28 @@ function N() {
                                 (l = l =
                                     {
                                         ref: e,
-                                        children: (0, i.jsx)(r.Text, {
+                                        useDefaultUnderlineStyles: !1,
+                                        className: o()(y.moreButton, { [y.active]: n.isShown }),
+                                        children: (0, r.jsx)(s.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
-                                            color: "text-muted",
-                                            children: d.intl.string(d.t.UKOtz8),
+                                            color: "currentColor",
+                                            children: f.intl.string(f.t.UKOtz8),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var i = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, i);
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
                                           }
                                           return n;
                                       })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
-                                n),
+                                i),
                             );
                         },
                     }),

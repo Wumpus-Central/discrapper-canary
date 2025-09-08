@@ -83,8 +83,8 @@ function y(e) {
     var t, n, i, o, s;
     let { compact: f = !1 } = e,
         h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        g = "438227",
-        y = "a96cbc9f5e2a9c1287d8100bf3c27396bb9dcba3".substring(0, 7),
+        g = "441782",
+        y = "35d9bc093690c5e4502f1289b3d1336160fb2a4a".substring(0, 7),
         O = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         v = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         I = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),
@@ -101,68 +101,62 @@ function y(e) {
               text: _.intl.string(_.t["9Al4QU"]),
               "aria-label": !1,
               children: (e) =>
-                  (0, r.jsx)(
+                  (0, r.jsxs)(
                       l.P3F,
                       E(m({}, e), {
                           "aria-label": _.intl.string(_.t["9Al4QU"]),
-                          className: p.clickable,
-                          children: (0, r.jsxs)("div", {
-                              className: p.compactInfo,
-                              "data-mtctest-ignore": "true",
-                              children: [
-                                  (0, r.jsxs)(l.Text, {
-                                      tag: "span",
-                                      variant: "text-xxs/normal",
-                                      color: "text-muted",
-                                      children: [
-                                          h,
-                                          " ",
-                                          g,
-                                          " ",
-                                          (0, r.jsxs)("span", {
-                                              className: p.versionHash,
-                                              children: ["(", y, ")"],
-                                          }),
-                                      ],
-                                  }),
-                                  null != T &&
-                                      (0, r.jsx)(l.Text, {
-                                          tag: "span",
-                                          variant: "text-xxs/normal",
-                                          color: "text-muted",
-                                          children: (0, r.jsxs)("span", {
-                                              className: p.versionHash,
-                                              children: ["Build Override: ", T.id],
-                                          }),
-                                      }),
-                                  null != O &&
+                          className: a()(p.clickable, p.compact),
+                          children: [
+                              (0, r.jsxs)("div", {
+                                  className: p.compactInfo,
+                                  "data-mtctest-ignore": "true",
+                                  children: [
                                       (0, r.jsxs)(l.Text, {
                                           tag: "span",
                                           variant: "text-xxs/normal",
                                           color: "text-muted",
                                           children: [
-                                              O,
-                                              null != I &&
-                                                  (0, r.jsxs)("span", {
-                                                      className: p.appArch,
-                                                      children: [" ", I.toLowerCase()],
-                                                  }),
-                                              null != v &&
-                                                  (0, r.jsxs)("span", {
-                                                      children: [" (", v, ")"],
-                                                  }),
+                                              h,
+                                              " ",
+                                              g,
+                                              " ",
+                                              (0, r.jsxs)("span", {
+                                                  className: p.versionHash,
+                                                  children: ["(", y, ")"],
+                                              }),
                                           ],
                                       }),
-                                  null != S &&
-                                      (0, r.jsx)(l.Text, {
-                                          tag: "span",
-                                          variant: "text-xxs/normal",
-                                          color: "text-muted",
-                                          className: p.os,
-                                          children: S,
+                                      null != O &&
+                                          (0, r.jsxs)(l.Text, {
+                                              tag: "span",
+                                              variant: "text-xxs/normal",
+                                              color: "text-muted",
+                                              children: [
+                                                  O,
+                                                  null != I &&
+                                                      (0, r.jsxs)("span", {
+                                                          className: p.appArch,
+                                                          children: [" ", I.toLowerCase()],
+                                                      }),
+                                                  null != v &&
+                                                      (0, r.jsxs)("span", {
+                                                          children: [" (", v, ")"],
+                                                      }),
+                                              ],
+                                          }),
+                                  ],
+                              }),
+                              null != T &&
+                                  (0, r.jsx)(l.Text, {
+                                      tag: "span",
+                                      variant: "text-xxs/normal",
+                                      color: "text-muted",
+                                      children: (0, r.jsxs)("span", {
+                                          className: p.versionHash,
+                                          children: ["Build Override: ", T.id],
                                       }),
-                              ],
-                          }),
+                                  }),
+                          ],
                       }),
                   ),
           })
@@ -175,7 +169,7 @@ function y(e) {
                       l.P3F,
                       E(m({}, e), {
                           "aria-label": _.intl.string(_.t["9Al4QU"]),
-                          className: p.clickable,
+                          className: a()(p.clickable, p.compact),
                           children: (0, r.jsxs)("div", {
                               className: p.info,
                               "data-mtctest-ignore": "true",

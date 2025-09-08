@@ -6,5 +6,5 @@ e.exports = {
     nav: "nav__409aa",
     section: "section__409aa",
     label: "label__409aa",
-    footer: "footer__409aa",
+    fixedContent: "fixedContent__409aa",
 };

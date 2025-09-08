@@ -5,5 +5,6 @@ e.exports = {
     appArch: "appArch__2debe",
     os: "os__2debe",
     versionHash: "versionHash__2debe",
+    compact: "compact__2debe",
     compactInfo: "compactInfo__2debe",
 };
