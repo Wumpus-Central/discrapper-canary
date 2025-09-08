@@ -65,7 +65,7 @@ let p = i.forwardRef(function (e, t) {
               title: _.intl.string(_.t.ZtCDc3),
               handleSubmit: R,
           })
-        : (0, r.jsx)(c.Z, {
+        : (0, r.jsx)(c.default, {
               onClose: p,
               transitionState: h,
               error: null == I ? void 0 : I.getAnyErrorMessage(),

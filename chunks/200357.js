@@ -1,18 +1,15 @@
-n.d(t, { Z: () => E }), n(388685), n(35282);
+n.d(t, { Z: () => E }), n(388685), n(361932), n(187205), n(35282);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(217986),
-    l = n(755721),
-    c = n(600164),
-    u = n(259580),
-    d = n(317175),
-    f = n(388032),
-    _ = n(984392),
-    p = n(315091),
-    h = n(197571);
-function m(e, t, n) {
+    l = n(886025),
+    c = n(481060),
+    u = n(133080),
+    d = n(388032),
+    f = n(984392);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,95 +22,103 @@ function m(e, t, n) {
         e
     );
 }
+let p = new Map(
+        s.Z.flatMap((e) => {
+            let { alpha2: t, phoneCountryCodes: n } = e,
+                r = (0, u.q9)(t);
+            return n.map((e) => [
+                "".concat(t, "-").concat(e),
+                {
+                    code: e,
+                    alpha2: t,
+                    name: r,
+                },
+            ]);
+        }),
+    ),
+    h = Array.from(p.entries()).map((e) => {
+        let [t, { name: n }] = e;
+        return {
+            value: t,
+            label: n,
+        };
+    });
+function m(e) {
+    return String.fromCodePoint(
+        ...e
+            .toUpperCase()
+            .split("")
+            .map((e) => 127397 + e.charCodeAt(0)),
+    );
+}
 class g extends i.PureComponent {
     render() {
-        let { countryCode: e, phone: t, open: n } = this.state,
-            { className: i, submitting: a } = this.props,
-            [, s] = e.split("+");
-        return (0, r.jsxs)(c.Z, {
-            className: o()(_.phoneField, p.elevationLow, i),
-            align: c.Z.Align.CENTER,
-            grow: 0,
-            children: [
-                (0, r.jsxs)(l.zx, {
-                    size: l.Ph.SMALL,
-                    className: _.countryButton,
-                    color: l.Tt.PRIMARY,
-                    innerClassName: _.countryButtonInner,
-                    onClick: this.handleTogglePopout,
-                    children: [
-                        (0, r.jsxs)(c.Z, {
-                            className: o()(_.countryCodeContainer, h.marginReset),
-                            justify: c.Z.Justify.CENTER,
-                            children: [
-                                (0, r.jsx)("div", {
-                                    className: _.plusSign,
-                                    children: "+",
-                                }),
-                                (0, r.jsx)("div", {
-                                    className: _.countryCode,
-                                    children: s,
-                                }),
-                            ],
+        let { countryCodeId: e, phone: t } = this.state,
+            { className: n, submitting: i, errorMessage: a } = this.props,
+            s = p.get(e);
+        return (0, r.jsx)("fieldset", {
+            children: (0, r.jsxs)("div", {
+                className: o()(f.phoneField, n),
+                children: [
+                    (0, r.jsx)(l.N, {
+                        label: d.intl.string(d.t["k+bvrK"]),
+                        children: (0, r.jsx)(c.VcW, {
+                            value: e,
+                            onChange: this.handleCountryChange,
+                            renderOptionPrefix: this.renderOptionPrefix,
+                            options: h,
+                            popoutWidth: 280,
+                            isDisabled: i,
                         }),
-                        (0, r.jsx)(u.Z, {
-                            expanded: n,
-                            width: 16,
-                            height: 16,
-                        }),
-                    ],
-                }),
-                (0, r.jsx)("input", {
-                    "aria-label": f.intl.string(f.t["64bX0N"]),
-                    className: _.inputField,
-                    value: t,
-                    onChange: this.handleChange,
-                    onKeyPress: this.handleKeyPress,
-                    autoFocus: !0,
-                }),
-                (0, r.jsx)(l.zx, {
-                    className: _.sendButton,
-                    size: l.Ph.SMALL,
-                    submitting: a,
-                    onClick: this.handleSubmit,
-                    children: f.intl.string(f.t.TXNS7e),
-                }),
-                n ? (0, r.jsx)(d.Z, { onClick: this.handleClick }) : null,
-            ],
+                    }),
+                    (0, r.jsx)(c.oil, {
+                        label: d.intl.string(d.t["64bX0N"]),
+                        error: a,
+                        leading: null == s ? void 0 : s.code,
+                        type: "tel",
+                        onChange: this.handlePhoneChange,
+                        autoFocus: !0,
+                        inputRef: this.inputRef,
+                        disabled: i,
+                        value: t,
+                    }),
+                ],
+            }),
         });
-    }
-    closePopout() {
-        this.state.open && this.setState({ open: !1 });
     }
     constructor(e) {
         super(e),
-            m(this, "handleChange", (e) => {
-                this.closePopout(), this.setState({ phone: e.currentTarget.value });
+            _(this, "inputRef", i.createRef()),
+            _(this, "renderOptionLabel", (e) => {
+                let { name: t } = p.get(e.value);
+                return t;
             }),
-            m(this, "handleKeyPress", (e) => {
-                this.closePopout(), 13 === e.which && (e.preventDefault(), this.handleSubmit());
+            _(this, "renderOptionPrefix", (e) => {
+                var t, n;
+                if (null != e) return m(null != (n = null == (t = p.get(e.value)) ? void 0 : t.alpha2) ? n : "");
             }),
-            m(this, "handleSubmit", () => {
-                let { onSubmit: e, submitting: t } = this.props,
-                    { countryCode: n, phone: r } = this.state;
-                t || null == e || e("".concat(n).concat(r));
+            _(this, "handleCountryChange", (e) => {
+                var t;
+                this.setState({ countryCodeId: e }),
+                    null == (t = this.inputRef.current) || t.focus(),
+                    this.handleChange(e, this.state.phone);
             }),
-            m(this, "handleTogglePopout", () => {
-                this.setState({ open: !this.state.open });
+            _(this, "handlePhoneChange", (e) => {
+                this.setState({ phone: e });
+                let { countryCodeId: t } = this.state;
+                this.handleChange(t, e);
             }),
-            m(this, "handleClick", (e) => {
-                let [t, n] = e.code.split(" ");
-                this.setState({
-                    open: !1,
-                    countryCode: t,
-                    phone: null != n ? n : "",
-                });
+            _(this, "handleChange", (e, t) => {
+                var n, r, i;
+                let a = null == (n = p.get(e)) ? void 0 : n.code;
+                null == (r = (i = this.props).onChange) || r.call(i, "".concat(a).concat(t));
             });
-        let [t, n] = s.Z.find((e) => "United States" === e.name).phoneCountryCode.split(" ");
+        let t = s.Z.find((e) => "United States" === e.name),
+            [n, r] = t.phoneCountryCode.split(" "),
+            a = "".concat(t.alpha2, "-").concat(t.phoneCountryCode);
         this.state = {
-            countryCode: t,
-            phone: null != n ? n : "",
-            open: !1,
+            countryCodeId: a,
+            phone: null != r ? r : "",
         };
     }
 }

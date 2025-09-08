@@ -122,6 +122,21 @@ let b = {
         let { default: e } = await n.e("40390").then(n.bind(n, 251871));
         return (t) => (0, a.jsx)(e, v(f({}, t), { guildId: "123" }));
     },
+    PhoneVerificationModal: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 145454));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                f(
+                    {
+                        error: null,
+                        working: !1,
+                        validPhone: !1,
+                    },
+                    t,
+                ),
+            );
+    },
 };
 function g() {
     let e = r.useMemo(
