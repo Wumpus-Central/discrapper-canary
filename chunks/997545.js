@@ -138,6 +138,7 @@ class x extends _.Z {
         this.logger.info(
             "Creating connection to ".concat(e.address, ":").concat(e.port, " with audio ssrc: ").concat(e.ssrc),
         ),
+            (this.beginInitializeAt = performance.now()),
             (this.audioSSRC = e.ssrc),
             (this.streamUserId = e.streamUserId),
             this.initializeStreamParameters(e.streamParameters),
@@ -164,9 +165,10 @@ class x extends _.Z {
                 this.transportInfo = a;
                 let { protocol: o, address: s, port: l } = a;
                 this.logger.info("Connected with local address ".concat(s, ":").concat(l, " and protocol: ").concat(o)),
-                    (this.onConnectStarted = performance.now()),
+                    (this.onConnectCallbackAt = performance.now()),
                     r((r) => {
-                        this.logger.info("Available codecs: ".concat(JSON.stringify(r)));
+                        (this.onVideoCodecsCallbackAt = performance.now()),
+                            this.logger.info("Available codecs: ".concat(JSON.stringify(r)));
                         let i = (0, g.DY)(this.experimentFlags);
                         this.logger.info("Experimental codecs: ".concat(JSON.stringify(i))),
                             (this.codecs = [
@@ -204,7 +206,8 @@ class x extends _.Z {
                             ),
                             t.getEncryptionModes((r) => {
                                 var i, a, c, u, d, f, _, p, h, g, E, b, y, O;
-                                this.logger.info("Encryption modes: ".concat(r));
+                                (this.onEncryptionModesCallbackAt = performance.now()),
+                                    this.logger.info("Encryption modes: ".concat(r));
                                 let I = A(T({}, this.getConnectionTransportOptions()), {
                                     callMinBitRate: e.callMinBitrate,
                                 });
@@ -1171,7 +1174,10 @@ class x extends _.Z {
             I(this, "lastExecutedTransitionId", -1),
             I(this, "logger", void 0),
             I(this, "transportInfo", void 0),
-            I(this, "onConnectStarted", void 0),
+            I(this, "beginInitializeAt", void 0),
+            I(this, "onConnectCallbackAt", void 0),
+            I(this, "onVideoCodecsCallbackAt", void 0),
+            I(this, "onEncryptionModesCallbackAt", void 0),
             I(this, "handleSpeakingNative", (e, t) => {
                 let n = v.Dg.NONE;
                 (n = "boolean" == typeof t ? (t ? v.Dg.VOICE : v.Dg.NONE) : t), this.handleSpeakingFlags(e, n);

@@ -991,7 +991,7 @@ class eC extends d.Z {
                           (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)),
                     this.state === es.hes.RTC_CONNECTED)
                 ) {
-                    var r, i, a, o, s, l, c, u, d, f;
+                    var r, i, a, o, s, l, c, u, d, f, p, h, m, E;
                     let e = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null;
                     if (this._connecting) {
                         let t = j.Z.getSettings(),
@@ -1016,31 +1016,41 @@ class eC extends d.Z {
                                 }),
                                 this.stateHistory.getVoiceConnectionSuccessStats(),
                             ),
-                        ),
-                            B.default.track(es.rMx.VOICE_CONNECTION_TTC_COLLECTED, {
-                                rtc_connection_id: n.rtc_connection_id,
-                                time_1_creation_to_connect: this._connectStartTime - this._createdTime,
-                                time_2_media_engine_connect: b,
-                                time_3_media_engine_create_native_connection:
-                                    null == (a = g.transportInfo) ? void 0 : a.createConnectionTime,
-                                time_4_media_engine_connect_to_socket:
-                                    null == (o = g.transportInfo) ? void 0 : o.connectTime,
-                                time_5_scheduling_connected_callback:
-                                    (null == (l = this._connection) || null == (s = l.transportInfo)
-                                        ? void 0
-                                        : s.connectCallbackScheduledMs) == null
-                                        ? -1
-                                        : performance.now() -
-                                          (null == (u = this._connection) || null == (c = u.transportInfo)
-                                              ? void 0
-                                              : c.connectCallbackScheduledMs),
-                                time_6_state_connected_to_end_measure:
-                                    (null == (d = this._connection) ? void 0 : d.onConnectStarted) == null
-                                        ? -1
-                                        : performance.now() -
-                                          (null == (f = this._connection) ? void 0 : f.onConnectStarted),
-                                connect_count: this._connectCount,
-                            });
+                        );
+                        let r = performance.now(),
+                            i = (e, t) => (null == e || null == t ? null : e - t);
+                        B.default.track(es.rMx.VOICE_CONNECTION_TTC_COLLECTED, {
+                            rtc_connection_id: n.rtc_connection_id,
+                            time_1_creation_to_connect: this._connectStartTime - this._createdTime,
+                            time_2_media_engine_connect: b,
+                            time_3_media_engine_create_native_connection:
+                                null == (a = g.transportInfo) ? void 0 : a.createConnectionTime,
+                            time_4_media_engine_connect_to_socket:
+                                null == (o = g.transportInfo) ? void 0 : o.connectTime,
+                            time_5_scheduling_connected_callback: i(
+                                null == (s = this._connection) ? void 0 : s.onConnectCallbackAt,
+                                null == (c = this._connection) || null == (l = c.transportInfo)
+                                    ? void 0
+                                    : l.connectCallbackScheduledMs,
+                            ),
+                            time_6_state_connected_to_end_measure: i(
+                                r,
+                                null == (u = this._connection) ? void 0 : u.onConnectCallbackAt,
+                            ),
+                            connect_count: this._connectCount,
+                            rtc_connecting_native_connect: i(
+                                null == (d = this._connection) ? void 0 : d.onConnectCallbackAt,
+                                null == (f = this._connection) ? void 0 : f.beginInitializeAt,
+                            ),
+                            rtc_connecting_native_codecs: i(
+                                null == (p = this._connection) ? void 0 : p.onVideoCodecsCallbackAt,
+                                null == (h = this._connection) ? void 0 : h.onConnectCallbackAt,
+                            ),
+                            rtc_connecting_native_crypto_modes: i(
+                                null == (m = this._connection) ? void 0 : m.onEncryptionModesCallbackAt,
+                                null == (E = this._connection) ? void 0 : E.onVideoCodecsCallbackAt,
+                            ),
+                        });
                     }
                     null == (r = this._localMediaSinkWantsManager) || r.setConnection(g),
                         null == (i = this._goLiveQualityManager) || i.update(),
