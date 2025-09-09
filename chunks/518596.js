@@ -78,7 +78,11 @@ function h() {
                       let { default: e } = await n.e("47129").then(n.bind(n, 245286));
                       return (n) => (0, r.jsx)(e, _(d({}, n), { target: t }));
                   },
-                  { modalKey: p },
+                  {
+                      modalKey: p,
+                      stackingBehavior: "replaceAll",
+                      stackNextByDefault: !0,
+                  },
               )
             : (0, o.jN)(c.S9g.USER_SETTINGS);
 }
