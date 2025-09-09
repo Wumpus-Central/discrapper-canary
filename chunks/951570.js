@@ -1,4 +1,5 @@
 n.d(t, {
+    G2: () => g,
     Q1: () => h,
     TO: () => _,
     h3: () => m,
@@ -45,4 +46,7 @@ function h() {
 }
 function m() {
     return Math.max(0, Math.ceil(i()(f).endOf("day").diff(i()(), "days", !0)));
+}
+function g() {
+    return "production" !== window.GLOBAL_ENV.PROJECT_ENV || 3 >= m();
 }

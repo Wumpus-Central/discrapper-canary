@@ -456,6 +456,8 @@ var r = (function (e) {
             (e[(e.NITRO_DROP_REWARD = 594)] = "NITRO_DROP_REWARD"),
             (e[(e.SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_BADGE = 595)] =
                 "SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_BADGE"),
+            (e[(e.SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_COACHMARK = 596)] =
+                "SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_COACHMARK"),
             e
         );
     })({}),
