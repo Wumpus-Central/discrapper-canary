@@ -8,6 +8,7 @@ n.d(t, {
     gC: () => eO,
     kv: () => e_,
     mW: () => ed,
+    nJ: () => eT,
     pu: () => eg,
     sN: () => em,
     tg: () => ey,
@@ -56,8 +57,8 @@ var r = n(990547),
     G = n(823379),
     B = n(573261),
     Z = n(595519),
-    V = n(317381),
-    F = n(729200),
+    F = n(317381),
+    V = n(729200),
     H = n(882347),
     Y = n(16609),
     W = n(224189),
@@ -102,7 +103,7 @@ function ea(e) {
     return e;
 }
 function eo(e) {
-    let t = V.ZP.getSelfEmbeddedActivityForLocation(e);
+    let t = F.ZP.getSelfEmbeddedActivityForLocation(e);
     null != t &&
         ed({
             location: t.location,
@@ -152,7 +153,7 @@ async function es(e) {
                     referrerId: g,
                 },
             }),
-            (0, F.g)())
+            (0, V.g)())
         ) {
             let e = await eI(a, null != r ? r : void 0);
             s.Z.dispatch({
@@ -290,7 +291,7 @@ async function ec(e) {
     if (f) {
         let e,
             n = E.Z.getApplication(t),
-            r = V.ZP.getCurrentEmbeddedActivity();
+            r = F.ZP.getCurrentEmbeddedActivity();
         (null == r ? void 0 : r.applicationId) != null &&
             (e = E.Z.getApplication(null == r ? void 0 : r.applicationId));
         let i = j.default.getCurrentUser();
@@ -415,7 +416,7 @@ async function eu(e) {
             }
         );
     }
-    let h = V.ZP.getCurrentEmbeddedActivity();
+    let h = F.ZP.getCurrentEmbeddedActivity();
     if (
         ((null == h ? void 0 : h.applicationId) != null &&
             (t = E.Z.getApplication(null == h ? void 0 : h.applicationId)),
@@ -490,7 +491,7 @@ async function eu(e) {
 }
 function ed(e) {
     let { location: t, applicationId: n, showFeedback: r = !0 } = e,
-        i = V.ZP.getSelfEmbeddedActivityForLocation(t);
+        i = F.ZP.getSelfEmbeddedActivityForLocation(t);
     s.Z.dispatch({
         type: "EMBEDDED_ACTIVITY_CLOSE",
         applicationId: n,
@@ -503,7 +504,7 @@ function ed(e) {
         var o;
         let e = O.Z.getSelectedParticipantId(a),
             t = null == (o = j.default.getCurrentUser()) ? void 0 : o.id,
-            r = V.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
+            r = F.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
         if (null == r || null == t || "" === t) return;
         e ===
             (0, y.gN)({
@@ -569,10 +570,10 @@ let ep = (e, t, n) => {
 async function eh(e) {
     var t, n, i, a;
     let { guildId: o, force: l = !1 } = e,
-        c = V.ZP.getShelfActivities(o),
+        c = F.ZP.getShelfActivities(o),
         u = c.map((e) => E.Z.getApplication(e.application_id)).filter(G.lm);
-    if (!l && !V.ZP.shouldFetchShelf(o)) {
-        if (null == (t = V.ZP.getShelfFetchStatus(o)) ? void 0 : t.isFetching) {
+    if (!l && !F.ZP.shouldFetchShelf(o)) {
+        if (null == (t = F.ZP.getShelfFetchStatus(o)) ? void 0 : t.isFetching) {
             let e,
                 t,
                 n = new Promise((t) => {
@@ -716,4 +717,49 @@ async function eI(e, t) {
             })
         ).body.ticket
     );
+}
+async function eT(e, t) {
+    s.Z.dispatch({
+        type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING",
+        applicationId: e,
+        refreshing: !0,
+    });
+    try {
+        let n = await eI(e, null != t ? t : void 0);
+        s.Z.dispatch({
+            type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET",
+            applicationId: e,
+            channelId: t,
+            proxyTicket: n,
+        }),
+            s.Z.dispatch({
+                type: "EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET",
+                applicationId: e,
+                proxyTicket: n,
+            });
+    } catch (l) {
+        var n;
+        let r = D.Z.getChannel(t),
+            a = null != (n = null == r ? void 0 : r.guild_id) ? n : null,
+            o = null != a ? i.E.GUILD_CHANNEL : i.E.PRIVATE_CHANNEL;
+        return (
+            s.Z.dispatch({
+                type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+                nonce: (0, N.r)(),
+                applicationId: e,
+                channelId: t,
+                guildId: a,
+                locationKind: o,
+                error: l instanceof I.Z || l instanceof _.Z || l instanceof T.Z ? l : new _.Z(l),
+            }),
+            !1
+        );
+    } finally {
+        s.Z.dispatch({
+            type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING",
+            applicationId: e,
+            refreshing: !1,
+        });
+    }
+    return !0;
 }
