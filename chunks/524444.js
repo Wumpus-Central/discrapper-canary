@@ -1,21 +1,21 @@
 n.d(t, {
-    A7: () => ea,
-    BO: () => ep,
-    DR: () => el,
-    G5: () => ed,
-    LE: () => eu,
-    Rp: () => ec,
-    SE: () => eg,
-    W_: () => em,
-    Y: () => eh,
-    Yi: () => et,
+    A7: () => eo,
+    BO: () => eh,
+    DR: () => ec,
+    G5: () => ef,
+    LE: () => ed,
+    Rp: () => eu,
+    SE: () => eE,
+    W_: () => eg,
+    Y: () => em,
+    Yi: () => en,
     b_: () => q,
-    hX: () => $,
-    iT: () => en,
-    lV: () => J,
-    ur: () => ei,
-    wj: () => ee,
-    xi: () => er,
+    hX: () => ee,
+    iT: () => er,
+    lV: () => $,
+    ur: () => ea,
+    wj: () => et,
+    xi: () => ei,
 }),
     n(388685);
 var r = n(951288),
@@ -57,8 +57,8 @@ var r = n(951288),
     G = n(420212),
     B = n(814249),
     Z = n(388032),
-    V = n(180376);
-function F(e, t, n) {
+    F = n(180376);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -82,7 +82,7 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -146,12 +146,17 @@ function J(e) {
             onVolumeChange: t,
             onMute: n,
             volume: a,
-            autoMute: o,
-            alt: s,
-            renderAdjacentContent: l,
-            renderOverlayContent: c,
+            autoMute: s,
+            alt: l,
+            renderAdjacentContent: c,
+            renderOverlayContent: u,
+            disableAltTextDisplay: f = !1,
+            hiddenSpoilers: _,
+            mosaicStyleAlt: p,
+            mediaLayoutType: h,
+            reducedSizeAltTextButton: m,
         } = e,
-        u = K(e, [
+        g = K(e, [
             "onVolumeChange",
             "onMute",
             "volume",
@@ -159,32 +164,103 @@ function J(e) {
             "alt",
             "renderAdjacentContent",
             "renderOverlayContent",
+            "disableAltTextDisplay",
+            "hiddenSpoilers",
+            "mosaicStyleAlt",
+            "mediaLayoutType",
+            "reducedSizeAltTextButton",
         ]);
-    let d = X(t),
-        f = Q(n);
-    return (
-        (a = null == a ? j.FC : a),
-        (o = null == o ? j.rs : o),
-        (0, r.jsxs)(i.Fragment, {
-            children: [
-                (0, r.jsx)(
-                    I.Z,
-                    W(H({}, u), {
-                        alt: s,
-                        volume: a,
-                        autoMute: o,
-                        onVolumeChange: d,
-                        onMute: f,
-                        renderLinkComponent: en,
-                        renderOverlayContent: c,
+    let E = X(t),
+        b = Q(n);
+    (a = null == a ? j.FC : a), (s = null == s ? j.rs : s);
+    let [y, O] = i.useState(!0),
+        [v, T] = i.useState(!1),
+        S = h === k.hV.MOSAIC || !0 === p,
+        A = (y || v) && !f && N.H1.getSetting() && null != l && "" !== l && !0 !== _,
+        C = (e) => {
+            let { altText: t } = e;
+            return (0, r.jsxs)(d.VqE, {
+                "aria-label": Z.intl.string(Z.t.fSiQ3N),
+                className: F.mediaMosaicAltTextPopout,
+                onKeyDown: (e) => {
+                    e.key === G.mR.Escape &&
+                        setTimeout(() => {
+                            var e;
+                            return null == (e = R.current) ? void 0 : e.focus();
+                        }, 0);
+                },
+                children: [
+                    (0, r.jsx)("span", {
+                        className: F.mediaMosaicAltTextPopoutTitle,
+                        children: Z.intl.string(Z.t.fSiQ3N),
                     }),
-                ),
-                null != l && l(),
-            ],
-        })
-    );
+                    (0, r.jsx)("span", {
+                        className: F.mediaMosaicAltTextPopoutDescription,
+                        children: t,
+                    }),
+                ],
+            });
+        },
+        R = i.useRef(null);
+    return (0, r.jsxs)(i.Fragment, {
+        children: [
+            (0, r.jsx)(
+                I.Z,
+                W(H({}, g), {
+                    alt: l,
+                    volume: a,
+                    autoMute: s,
+                    onVolumeChange: E,
+                    onMute: b,
+                    renderLinkComponent: er,
+                    renderOverlayContent: u,
+                    onControlsShow: () => O(!0),
+                    onControlsHide: () => O(!1),
+                }),
+            ),
+            null != c && c(),
+            S &&
+                A &&
+                (0, r.jsx)("div", {
+                    className: F.mediaMosaicVideoAltTextContainer,
+                    children: (0, r.jsx)(d.yRy, {
+                        targetElementRef: R,
+                        animation: d.yRy.Animation.FADE,
+                        renderPopout: () => (0, r.jsx)(C, { altText: l }),
+                        children: (e) =>
+                            (0, r.jsx)(d.tEY, {
+                                offset: 4,
+                                children: (0, r.jsx)(
+                                    "button",
+                                    W(H({}, e), {
+                                        type: "button",
+                                        ref: R,
+                                        "aria-label": Z.intl.string(Z.t.fSiQ3N),
+                                        onMouseEnter: () => T(!0),
+                                        onMouseLeave: () => T(!1),
+                                        className: o()(F.mediaMosaicAltText, {
+                                            [F.mediaMosaicVideoAltText]: !0,
+                                            [F.reducedSize]: m,
+                                        }),
+                                        children: Z.intl.string(Z.t.jCV1T0),
+                                    }),
+                                ),
+                            }),
+                    }),
+                }),
+            !S &&
+                A &&
+                (0, r.jsx)("span", {
+                    className: F.altText,
+                    children: l,
+                }),
+        ],
+    });
 }
 function $(e) {
+    return (0, r.jsx)(J, H({}, e));
+}
+function ee(e) {
     var { onVolumeChange: t, volume: n, onMute: a, onVolumeShow: o, onVolumeHide: s, renderAdjacentContent: l } = e,
         c = K(e, ["onVolumeChange", "volume", "onMute", "onVolumeShow", "onVolumeHide", "renderAdjacentContent"]);
     let u = X(t),
@@ -202,14 +278,14 @@ function $(e) {
                     onVolumeHide: s,
                     volume: n,
                     autoMute: f,
-                    renderLinkComponent: en,
+                    renderLinkComponent: er,
                 }),
             ),
             null != l && l(),
         ],
     });
 }
-function ee(e) {
+function et(e) {
     var { onVolumeChange: t, volume: n, onMute: i } = e,
         a = K(e, ["onVolumeChange", "volume", "onMute"]);
     let o = X(t),
@@ -226,7 +302,7 @@ function ee(e) {
         )
     );
 }
-function et(e) {
+function en(e) {
     let {
             alt: t,
             hiddenSpoilers: n,
@@ -245,7 +321,7 @@ function et(e) {
             let { altText: t } = e;
             return (0, r.jsxs)(d.VqE, {
                 "aria-label": Z.intl.string(Z.t.fSiQ3N),
-                className: V.mediaMosaicAltTextPopout,
+                className: F.mediaMosaicAltTextPopout,
                 onKeyDown: (e) => {
                     e.key === G.mR.Escape &&
                         setTimeout(() => {
@@ -255,11 +331,11 @@ function et(e) {
                 },
                 children: [
                     (0, r.jsx)("span", {
-                        className: V.mediaMosaicAltTextPopoutTitle,
+                        className: F.mediaMosaicAltTextPopoutTitle,
                         children: Z.intl.string(Z.t.fSiQ3N),
                     }),
                     (0, r.jsx)("span", {
-                        className: V.mediaMosaicAltTextPopoutDescription,
+                        className: F.mediaMosaicAltTextPopoutDescription,
                         children: t,
                     }),
                 ],
@@ -267,17 +343,17 @@ function et(e) {
         },
         b = i.createRef();
     return (0, r.jsxs)("div", {
-        className: o()(V.imageContent, s),
+        className: o()(F.imageContent, s),
         children: [
             (0, r.jsxs)("div", {
-                className: o()(V.imageContainer, l),
+                className: o()(F.imageContainer, l),
                 style: _,
                 children: [(0, r.jsx)(p.Z, H({}, e)), null != a && a()],
             }),
             m &&
                 g &&
                 (0, r.jsx)("div", {
-                    className: V.mediaMosaicAltTextContainer,
+                    className: F.mediaMosaicAltTextContainer,
                     children: (0, r.jsx)(d.yRy, {
                         targetElementRef: b,
                         animation: d.yRy.Animation.FADE,
@@ -291,7 +367,7 @@ function et(e) {
                                         type: "button",
                                         ref: b,
                                         "aria-label": Z.intl.string(Z.t.fSiQ3N),
-                                        className: o()(V.mediaMosaicAltText, { [V.reducedSize]: u }),
+                                        className: o()(F.mediaMosaicAltText, { [F.reducedSize]: u }),
                                         children: Z.intl.string(Z.t.jCV1T0),
                                     }),
                                 ),
@@ -301,29 +377,29 @@ function et(e) {
             !m &&
                 g &&
                 (0, r.jsx)("span", {
-                    className: V.altText,
+                    className: F.altText,
                     children: t,
                 }),
         ],
     });
 }
-function en(e) {
+function er(e) {
     return (0, r.jsx)(h.Z, H({}, e));
 }
-function er(e) {
+function ei(e) {
     var { renderAdjacentContent: t } = e,
         n = K(e, ["renderAdjacentContent"]);
     return (0, r.jsxs)(i.Fragment, {
         children: [(0, r.jsx)(T.Z, H({}, n)), null != t && t()],
     });
 }
-function ei(e) {
+function ea(e) {
     return (0, r.jsx)(E.Z, H({}, e));
 }
-var ea = (function (e) {
+var eo = (function (e) {
     return (e[(e.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (e[(e.REPLY = 1)] = "REPLY"), e;
 })({});
-function eo(e) {
+function es(e) {
     switch (e) {
         case 0:
             return Z.intl.string(Z.t["4EvBb2"]);
@@ -333,7 +409,7 @@ function eo(e) {
             return (0, L.vE)(e);
     }
 }
-function es(e) {
+function el(e) {
     switch (e) {
         case 0:
             return Z.intl.string(Z.t.gpoQsL);
@@ -343,7 +419,7 @@ function es(e) {
             return (0, L.vE)(e);
     }
 }
-let el = (e) => {
+let ec = (e) => {
         let { type: t = 0, onClick: n, className: i } = e;
         return (0, r.jsx)(b.G.Consumer, {
             children: (e) =>
@@ -351,11 +427,11 @@ let el = (e) => {
                     ? null
                     : (0, r.jsxs)("div", {
                           onClick: n,
-                          className: o()(V.jumpToPresentBar, i),
+                          className: o()(F.jumpToPresentBar, i),
                           children: [
                               (0, r.jsx)("div", {
-                                  className: V.barButtonMain,
-                                  children: eo(t),
+                                  className: F.barButtonMain,
+                                  children: es(t),
                               }),
                               null != n
                                   ? (0, r.jsx)(d.tEY, {
@@ -363,27 +439,27 @@ let el = (e) => {
                                         children: (0, r.jsx)(d.zxk, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: es(t),
+                                            text: el(t),
                                             onClick: n,
                                         }),
                                     })
                                   : (0, r.jsx)(d.$jN, {
                                         type: d.$jN.Type.PULSING_ELLIPSIS,
-                                        className: V.spinner,
-                                        itemClassName: V.spinnerItem,
+                                        className: F.spinner,
+                                        itemClassName: F.spinnerItem,
                                     }),
                           ],
                       }),
         });
     },
-    ec = (e) => {
+    eu = (e) => {
         let { onClick: t, loading: n, className: i } = e;
         return (0, r.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
                     : (0, r.jsxs)(d.P3F, {
-                          className: o()(V.messagesErrorBar, i),
+                          className: o()(F.messagesErrorBar, i),
                           onClick: t,
                           focusProps: {
                               offset: {
@@ -395,24 +471,24 @@ let el = (e) => {
                           },
                           children: [
                               (0, r.jsx)("div", {
-                                  className: V.barButtonMain,
+                                  className: F.barButtonMain,
                                   children: Z.intl.string(Z.t["1zUvl5"]),
                               }),
                               n
                                   ? (0, r.jsx)(d.$jN, {
                                         type: d.$jN.Type.PULSING_ELLIPSIS,
-                                        className: V.spinner,
-                                        itemClassName: V.spinnerItem,
+                                        className: F.spinner,
+                                        itemClassName: F.spinnerItem,
                                     })
                                   : (0, r.jsx)("div", {
-                                        className: V.barButtonAlt,
+                                        className: F.barButtonAlt,
                                         children: Z.intl.string(Z.t.TdQXAw),
                                     }),
                           ],
                       }),
         });
     };
-function eu(e) {
+function ed(e) {
     let { content: t, channelId: n } = e,
         [a] = i.useState(() => (0, y.hQ)("NewMessagesBarJumpToNewMessages_")),
         s = i.useCallback(() => {
@@ -442,19 +518,19 @@ function eu(e) {
     return c
         ? null
         : (0, r.jsxs)("div", {
-              className: o()(V.newMessagesBar, { [V.disableInteractions]: c }),
+              className: o()(F.newMessagesBar, { [F.disableInteractions]: c }),
               children: [
                   (0, r.jsx)(d.tEY, {
                       offset: 4,
                       children: (0, r.jsx)("button", {
                           type: "button",
-                          className: V.barButtonMain,
+                          className: F.barButtonMain,
                           onClick: s,
                           "aria-label": Z.intl.string(Z.t.z0Mkp6),
                           "aria-describedby": a,
                           children: (0, r.jsx)("span", {
                               id: a,
-                              className: V.span,
+                              className: F.span,
                               children: t,
                           }),
                       }),
@@ -464,13 +540,13 @@ function eu(e) {
                       children: (0, r.jsxs)("button", {
                           type: "button",
                           onClick: l,
-                          className: V.barButtonAlt,
+                          className: F.barButtonAlt,
                           children: [
                               Z.intl.string(Z.t.e6RscX),
                               (0, r.jsx)(d.eQA, {
                                   size: "md",
                                   color: "currentColor",
-                                  className: V.barButtonIcon,
+                                  className: F.barButtonIcon,
                               }),
                           ],
                       }),
@@ -478,7 +554,7 @@ function eu(e) {
               ],
           });
 }
-function ed(e) {
+function ef(e) {
     var t, n, a;
     let { channel: s, content: p, scrollManager: h } = e,
         { disableInteractions: E } = i.useContext(b.G),
@@ -527,10 +603,10 @@ function ed(e) {
                     : [];
             },
             [j],
-            e_,
+            ep,
         ),
-        F = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
-        H = null == j || null == (t = j[F]) ? void 0 : t.topic;
+        V = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
+        H = null == j || null == (t = j[V]) ? void 0 : t.topic;
     null == H && null == y && (null == j ? void 0 : j.length) >= 1 && (H = null == (a = j[0]) ? void 0 : a.topic);
     let Y = i.useMemo(
             () =>
@@ -698,35 +774,35 @@ function ed(e) {
             ? null
             : (0, r.jsxs)("div", {
                   ref: I,
-                  className: o()(V.newTopicsBarContainer, V.containerMarginTop),
+                  className: o()(F.newTopicsBarContainer, F.containerMarginTop),
                   children: [
                       (0, r.jsx)("div", {
-                          className: V.newTopicsBarTopicSection,
+                          className: F.newTopicsBarTopicSection,
                           children: (0, r.jsx)(d.P3F, {
-                              className: V.newTopicsBarTextClickable,
+                              className: F.newTopicsBarTextClickable,
                               "aria-label": Z.intl.string(Z.t.RT3MPz),
                               onClick: X,
                               children: (0, r.jsxs)("div", {
                                   className: o()({
-                                      [V.newTopicsBarTextUnselected]: !z,
-                                      [V.newTopicsBarTextSelected]: z,
+                                      [F.newTopicsBarTextUnselected]: !z,
+                                      [F.newTopicsBarTextSelected]: z,
                                   }),
                                   children: [
                                       (0, r.jsx)(d.sVe, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: V.newTopicsBarIcon,
+                                          className: F.newTopicsBarIcon,
                                       }),
                                       (0, r.jsx)(d.Text, {
                                           variant: "text-sm/medium",
-                                          className: o()(V.newTopicsBarCompact, V.newTopicsBarText),
+                                          className: o()(F.newTopicsBarCompact, F.newTopicsBarText),
                                           children: er,
                                       }),
                                       (0, r.jsx)(D.Z, {
                                           width: 16,
                                           height: 16,
                                           direction: D.Z.Directions.DOWN,
-                                          className: V.newTopicsBarCaret,
+                                          className: F.newTopicsBarCaret,
                                       }),
                                   ],
                               }),
@@ -734,38 +810,38 @@ function ed(e) {
                       }),
                       (0, r.jsx)(d.P3F, {
                           onClick: et,
-                          className: V.newTopicsBarInitial,
+                          className: F.newTopicsBarInitial,
                           children: p,
                       }),
                       (0, r.jsxs)(d.P3F, {
                           onClick: en,
-                          className: o()(V.barButtonAlt, V.flexEnd),
+                          className: o()(F.barButtonAlt, F.flexEnd),
                           children: [
                               (0, r.jsx)("div", {
-                                  className: V.newTopicsBarCompact,
+                                  className: F.newTopicsBarCompact,
                                   children: Z.intl.string(Z.t.e6RscX),
                               }),
                               (0, r.jsx)(d.eQA, {
                                   size: "md",
                                   color: "currentColor",
-                                  className: V.barButtonIcon,
+                                  className: F.barButtonIcon,
                               }),
                           ],
                       }),
                       z &&
                           (0, r.jsxs)("div", {
-                              className: V.topicsDropdown,
+                              className: F.topicsDropdown,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: V.topicsDropdownHeading,
+                                      className: F.topicsDropdownHeading,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: V.topicsDropdownHeadingText,
+                                              className: F.topicsDropdownHeadingText,
                                               children: [
                                                   (0, r.jsx)(d.sVe, {
                                                       size: "custom",
                                                       color: "currentColor",
-                                                      className: V.topicsPillHeadingIcon,
+                                                      className: F.topicsPillHeadingIcon,
                                                       width: 18,
                                                       height: 20,
                                                   }),
@@ -775,13 +851,13 @@ function ed(e) {
                                                       lineClamp: 1,
                                                       children: Z.intl.string(Z.t.q21fUl),
                                                   }),
-                                                  (0, r.jsx)(O.Z, { className: V.summariesBetaTag }),
+                                                  (0, r.jsx)(O.Z, { className: F.summariesBetaTag }),
                                               ],
                                           }),
                                           (0, r.jsx)(d.P3F, {
                                               "aria-label": Z.intl.string(Z.t.cpT0Cg),
                                               onClick: X,
-                                              className: V.topicsDropdownClose,
+                                              className: F.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
                                                   size: "md",
                                                   color: "currentColor",
@@ -791,7 +867,7 @@ function ed(e) {
                                   }),
                                   (0, r.jsx)(d.Ttm, {
                                       ref: R,
-                                      className: V.topicsScroller,
+                                      className: F.topicsScroller,
                                       fade: !0,
                                       children: ee,
                                   }),
@@ -801,13 +877,13 @@ function ed(e) {
               })
     );
 }
-function ef(e, t) {
+function e_(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }
-function e_(e, t) {
-    return null != t && e.length === t.length && !e.some((e, n) => !ef(e, t[n]));
+function ep(e, t) {
+    return null != t && e.length === t.length && !e.some((e, n) => !e_(e, t[n]));
 }
-function ep(e) {
+function eh(e) {
     var t, n, a;
     let { channel: s, scrollManager: _ } = e,
         { disableInteractions: p } = i.useContext(b.G),
@@ -856,14 +932,14 @@ function ep(e) {
                     : [];
             },
             [N],
-            e_,
+            ep,
         ),
         j = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
         M = null == N || null == (t = N[j]) ? void 0 : t.topic;
     null == M && null == h && (null == N ? void 0 : N.length) >= 1 && (M = null == (a = N[0]) ? void 0 : a.topic);
     let k = i.useMemo(() => l().get(N, j - 1), [j, N]),
         G = i.useMemo(() => l().get(N, j + 1), [j, N]),
-        F = i.useMemo(
+        V = i.useMemo(
             () =>
                 l().debounce((e) => {
                     var t;
@@ -884,9 +960,9 @@ function ep(e) {
         ),
         Y = i.useCallback(
             (e) => {
-                H(), F(e);
+                H(), V(e);
             },
-            [F, H],
+            [V, H],
         ),
         [W, K] = i.useState(!1),
         z = i.useCallback(() => {
@@ -1013,28 +1089,28 @@ function ep(e) {
             ? null
             : (0, r.jsxs)("div", {
                   ref: y,
-                  className: o()(V.topicsPillContainer, V.containerMarginTop),
+                  className: o()(F.topicsPillContainer, F.containerMarginTop),
                   children: [
                       (0, r.jsxs)("div", {
-                          className: V.topicsPill,
+                          className: F.topicsPill,
                           children: [
                               (0, r.jsx)(d.P3F, {
-                                  className: V.topicsPillText,
+                                  className: F.topicsPillText,
                                   "aria-label": Z.intl.string(Z.t.RT3MPz),
                                   onClick: z,
                                   children: (0, r.jsxs)("div", {
                                       className: o()({
-                                          [V.topicsPillTextUnselected]: !W,
-                                          [V.topicsPillTextSelected]: W,
+                                          [F.topicsPillTextUnselected]: !W,
+                                          [F.topicsPillTextSelected]: W,
                                       }),
                                       children: [
                                           (0, r.jsx)(d.sVe, {
                                               size: "xs",
                                               color: "currentColor",
-                                              className: V.topicsPillSummaryIcon,
+                                              className: F.topicsPillSummaryIcon,
                                           }),
                                           (0, r.jsx)(d.Text, {
-                                              className: V.topicsPillTextTitle,
+                                              className: F.topicsPillTextTitle,
                                               variant: "text-sm/medium",
                                               children: et,
                                           }),
@@ -1042,19 +1118,19 @@ function ep(e) {
                                               width: 16,
                                               height: 16,
                                               direction: D.Z.Directions.DOWN,
-                                              className: V.topicsPillDropdownCaret,
+                                              className: F.topicsPillDropdownCaret,
                                           }),
                                       ],
                                   }),
                               }),
                               (0, r.jsxs)("div", {
-                                  className: V.topicsPillCarets,
+                                  className: F.topicsPillCarets,
                                   children: [
                                       (0, r.jsx)(d.P3F, {
                                           "aria-label": Z.intl.string(Z.t["4huCnJ"]),
                                           onClick: Q,
-                                          className: o()(V.topicsPillCaret, V.topicsCaretLeft, {
-                                              [V.topicsPillCaretDisabled]: null == G,
+                                          className: o()(F.topicsPillCaret, F.topicsCaretLeft, {
+                                              [F.topicsPillCaretDisabled]: null == G,
                                           }),
                                           children: (0, r.jsx)(D.Z, {
                                               width: 16,
@@ -1065,8 +1141,8 @@ function ep(e) {
                                       (0, r.jsx)(d.P3F, {
                                           "aria-label": Z.intl.string(Z.t["58KOoK"]),
                                           onClick: X,
-                                          className: o()(V.topicsPillCaret, V.topicsCaretRight, {
-                                              [V.topicsPillCaretDisabled]: null == k,
+                                          className: o()(F.topicsPillCaret, F.topicsCaretRight, {
+                                              [F.topicsPillCaretDisabled]: null == k,
                                           }),
                                           children: (0, r.jsx)(D.Z, {
                                               width: 16,
@@ -1080,18 +1156,18 @@ function ep(e) {
                       }),
                       W &&
                           (0, r.jsxs)("div", {
-                              className: V.topicsDropdown,
+                              className: F.topicsDropdown,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: V.topicsDropdownHeading,
+                                      className: F.topicsDropdownHeading,
                                       children: [
                                           (0, r.jsxs)("div", {
-                                              className: V.topicsDropdownHeadingText,
+                                              className: F.topicsDropdownHeadingText,
                                               children: [
                                                   (0, r.jsx)(d.sVe, {
                                                       size: "custom",
                                                       color: "currentColor",
-                                                      className: V.topicsPillHeadingIcon,
+                                                      className: F.topicsPillHeadingIcon,
                                                       width: 18,
                                                       height: 20,
                                                   }),
@@ -1101,13 +1177,13 @@ function ep(e) {
                                                       lineClamp: 1,
                                                       children: Z.intl.string(Z.t.q21fUl),
                                                   }),
-                                                  (0, r.jsx)(O.Z, { className: V.summariesBetaTag }),
+                                                  (0, r.jsx)(O.Z, { className: F.summariesBetaTag }),
                                               ],
                                           }),
                                           (0, r.jsx)(d.P3F, {
                                               "aria-label": Z.intl.string(Z.t.cpT0Cg),
                                               onClick: z,
-                                              className: V.topicsDropdownClose,
+                                              className: F.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
                                                   size: "md",
                                                   color: "currentColor",
@@ -1117,7 +1193,7 @@ function ep(e) {
                                   }),
                                   (0, r.jsx)(d.Ttm, {
                                       ref: T,
-                                      className: V.topicsScroller,
+                                      className: F.topicsScroller,
                                       fade: !0,
                                       children: ee,
                                   }),
@@ -1127,21 +1203,21 @@ function ep(e) {
               })
     );
 }
-let eh = function (e) {
+let em = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return (0, r.jsxs)("div", {
-            className: V.tooltip,
+            className: F.tooltip,
             children: [
                 (0, r.jsx)(d.Text, {
                     color: "none",
                     variant: "text-sm/semibold",
                     lineClamp: 1,
-                    className: V.tooltipEmojiName,
+                    className: F.tooltipEmojiName,
                     children: e,
                 }),
                 t &&
                     (0, r.jsx)(d.Text, {
-                        className: V.clickCTA,
+                        className: F.clickCTA,
                         color: "text-muted",
                         variant: "text-sm/normal",
                         children: Z.intl.string(Z.t["515vjI"]),
@@ -1149,20 +1225,20 @@ let eh = function (e) {
             ],
         });
     },
-    em = (e) => {
+    eg = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
-            className: o()(V.popoutContainer, n),
+            className: o()(F.popoutContainer, n),
             children: t,
         });
     },
-    eg = (e) => {
+    eE = (e) => {
         let { className: t } = e;
-        return (0, r.jsx)(em, {
+        return (0, r.jsx)(eg, {
             className: t,
             children: (0, r.jsx)("div", {
-                className: V.popoutLoadingBackground,
-                children: (0, r.jsx)("div", { className: V.popoutLoadingForeground }),
+                className: F.popoutLoadingBackground,
+                children: (0, r.jsx)("div", { className: F.popoutLoadingForeground }),
             }),
         });
     };
