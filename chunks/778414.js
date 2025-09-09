@@ -127,7 +127,7 @@ function Z(e) {
                               channelId: l,
                               index: i,
                           },
-                          e.id,
+                          e.type,
                       ),
                   ),
                   s && (0, r.jsx)(E.Z, {}),

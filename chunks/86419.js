@@ -133,7 +133,7 @@ function P(e) {
 }
 function w(e) {
     let t = R(),
-        n = t.findIndex((t) => t.id === e.id);
+        n = t.findIndex((t) => t.type === e.type);
     if (-1 === n) return [...t, e];
     {
         let r = [...t];
