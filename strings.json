@@ -5706,6 +5706,8 @@
   "bp8vRE": "Double tap any message to react with **:!!{emojiName}!!:** instantly. You can personalize your default reaction emoji anytime.",
   "tdsiOz": "Change Default",
   "F6lRAA": "Double tap to react",
+  "5/l2ra": "React with $[:!!{emojiName}!!:]({{emojiNameHook}}) instantly. Or $[tap here]({{tapHereHook}}) to set another default emoji.",
+  "6RUX7e": "Double tap to react",
   "PbcQPT": "Double tap emoji cannot be used here.",
   "WZGLFh": "**:!!{emojiName}!!:** is not available. Head to Settings to set another default.",
   "LIIHR0": "Choose another emoji",
