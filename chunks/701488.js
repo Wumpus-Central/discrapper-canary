@@ -111,6 +111,8 @@ let N = {
         },
         has_csp_exception: !1,
         displays_advertisements: !1,
+        blocked_locales: [],
+        supported_locales: [],
     },
     P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
     w = [...P, i.d4z.GUILD_VOICE],
