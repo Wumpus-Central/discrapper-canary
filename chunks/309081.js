@@ -1,97 +1,87 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
-    a = n(647438),
-    l = n(120356),
-    i = n.n(l),
+    l = n(647438),
+    a = n(120356),
+    i = n.n(a),
     o = n(442837),
-    s = n(755721),
     c = n(481060),
-    u = n(596454),
-    d = n(313201),
-    f = n(907040),
-    m = n(906411),
-    p = n(592125),
-    b = n(358085),
-    g = n(79390),
-    h = n(35463),
-    j = n(489887),
-    w = n(185923),
-    v = n(957825),
-    x = n(388032),
-    O = n(514271);
-function y(e, t) {
+    s = n(596454),
+    u = n(907040),
+    d = n(906411),
+    f = n(592125),
+    m = n(358085),
+    p = n(79390),
+    b = n(35463),
+    g = n(489887),
+    j = n(185923),
+    O = n(957825),
+    h = n(388032),
+    y = n(514271);
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                a = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-            return a;
+                l = {},
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+            return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++)
-            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     }
-    return a;
+    return l;
 }
-let P = {
-    offset: {
-        top: -4,
-        bottom: -4,
-        left: 0,
-        right: -8,
-    },
-};
-function C(e) {
+function P(e) {
     let {
         hasUpload: t,
         mediaUrl: n,
-        mediaFilename: a,
-        imageClassName: l,
+        mediaFilename: l,
+        imageClassName: a,
         emoji: i,
         emojiClassName: o,
-        fallback: s,
+        fallback: c,
     } = e;
     return t
         ? (0, r.jsx)("img", {
               src: n,
-              alt: a,
-              className: l,
+              alt: l,
+              className: a,
           })
         : null != i
-          ? (0, r.jsx)(u.Z, {
+          ? (0, r.jsx)(s.Z, {
                 className: o,
                 emojiId: i.id,
-                emojiName: i.type === m.B.UNICODE ? i.optionallyDiverseSequence : i.name,
+                emojiName: i.type === d.B.UNICODE ? i.optionallyDiverseSequence : i.name,
                 animated: i.animated,
             })
-          : s;
+          : c;
 }
-function _(e) {
-    let { onSelect: t, onEditMedia: n, onDeleteMedia: a, closePopout: l } = e;
+function w(e) {
+    let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: a } = e;
     return (0, r.jsx)("div", {
-        className: O.menuContainer,
+        className: y.menuContainer,
         children: (0, r.jsx)(c.v2r, {
             navId: "poll-media-edit-menu",
-            onClose: l,
-            "aria-label": x.intl.string(x.t["cV+h7O"]),
+            onClose: a,
+            "aria-label": h.intl.string(h.t["cV+h7O"]),
             onSelect: t,
             children: (0, r.jsxs)(c.kSQ, {
                 children: [
                     (0, r.jsx)(c.sNh, {
                         id: "poll-media-replace",
-                        label: x.intl.string(x.t.CZeRhY),
+                        label: h.intl.string(h.t.CZeRhY),
                         action: n,
                     }),
                     (0, r.jsx)(c.sNh, {
                         id: "poll-media-delete",
-                        label: x.intl.string(x.t.IhMxgo),
-                        action: a,
+                        label: h.intl.string(h.t.IhMxgo),
+                        action: l,
                         color: "danger",
                     }),
                 ],
@@ -99,122 +89,122 @@ function _(e) {
         }),
     });
 }
-function R(e) {
+function x(e) {
     let {
             channelId: t,
             localCreationAnswerId: n,
-            buttonImage: l,
+            buttonImage: a,
             onEmojiSelect: s,
-            onEmojiRemove: u,
-            answerIndex: d,
-            shouldShowEmojiPicker: m,
-            toggleEmojiPicker: b,
-            containerRef: j,
+            onEmojiRemove: d,
+            answerIndex: m,
+            shouldShowEmojiPicker: g,
+            toggleEmojiPicker: x,
+            containerRef: C,
         } = e,
-        P = a.useRef(null),
-        R = (0, o.e7)([p.Z], () => p.Z.getChannel(t)),
+        k = l.useRef(null),
+        R = (0, o.e7)([f.Z], () => f.Z.getChannel(t)),
         {
             emoji: E,
-            isLoadingMedia: k,
-            hasUpload: A,
+            isLoadingMedia: _,
+            hasUpload: S,
             mediaUrl: D,
-            mediaFilename: S,
-        } = (0, h.Z)({
+            mediaFilename: A,
+        } = (0, b.Z)({
             channelId: t,
             localCreationAnswerId: n,
-            image: l,
+            image: a,
         }),
-        I = A || null != E,
-        N = a.useCallback(() => {
-            u(d);
-        }, [u, d]),
-        T = a.useMemo(
+        I = S || null != E,
+        N = l.useCallback(() => {
+            d(m);
+        }, [d, m]),
+        L = l.useMemo(
             () =>
-                A
-                    ? x.intl.formatToPlainString(x.t.vcC7Qk, {
-                          imageName: (0, g.fw)(S),
-                          answerNumber: d + 1,
+                S
+                    ? h.intl.formatToPlainString(h.t.vcC7Qk, {
+                          imageName: (0, p.fw)(A),
+                          answerNumber: m + 1,
                       })
                     : null != E
-                      ? x.intl.formatToPlainString(x.t.ncOAhY, {
+                      ? h.intl.formatToPlainString(h.t.ncOAhY, {
                             emojiName: E.name,
-                            answerNumber: d + 1,
+                            answerNumber: m + 1,
                         })
-                      : x.intl.formatToPlainString(x.t.emdpNj, { answerNumber: d + 1 }),
-            [A, E, d, S],
+                      : h.intl.formatToPlainString(h.t.emdpNj, { answerNumber: m + 1 }),
+            [S, E, m, A],
         ),
-        L = a.useCallback(
+        T = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)("div", {
-                    className: O.emojiPicker,
-                    children: (0, r.jsx)(f.Z, {
+                    className: y.emojiPicker,
+                    children: (0, r.jsx)(u.Z, {
                         channel: R,
-                        pickerIntention: w.Hz.POLLS,
+                        pickerIntention: j.Hz.POLLS,
                         closePopout: t,
                         onNavigateAway: t,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: r } = e;
-                            null != n && s(n, d), r && t();
+                            null != n && s(n, m), r && t();
                         },
                     }),
                 });
             },
-            [R, s, d],
+            [R, s, m],
         ),
-        B = a.useCallback(
+        U = l.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(_, {
+                return (0, r.jsx)(w, {
                     onSelect: t,
-                    onEditMedia: b,
+                    onEditMedia: x,
                     onDeleteMedia: N,
                     closePopout: t,
                 });
             },
-            [N, b],
+            [N, x],
         ),
-        U = k
-            ? (0, r.jsx)(c.$jN, { className: O.spinnerWrapperDefault })
-            : (0, r.jsx)(C, {
-                  hasUpload: A,
+        Z = _
+            ? (0, r.jsx)(c.$jN, { className: y.spinnerWrapperDefault })
+            : (0, r.jsx)(P, {
+                  hasUpload: S,
                   mediaUrl: D,
-                  mediaFilename: S,
-                  imageClassName: i()(O.media, O.gifDefault),
+                  mediaFilename: A,
+                  imageClassName: i()(y.media, y.gifDefault),
                   emoji: E,
-                  emojiClassName: i()(O.media, O.emojiDefault),
+                  emojiClassName: i()(y.media, y.emojiDefault),
                   fallback: (0, r.jsx)(c.EO4, {
-                      size: "md",
+                      size: "sm",
                       color: "currentColor",
-                      className: O.expressionPickerIconDefault,
+                      className: y.expressionPickerIconDefault,
                   }),
               }),
-        Z = i()(v.CT, O.expressionPickerButtonDefault, { [O.canEditMedia]: I });
+        B = i()(O.CT, y.expressionPickerButtonDefault, { [y.canEditMedia]: I });
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: j,
-        renderPopout: L,
-        shouldShow: m,
-        onRequestClose: b,
+        targetElementRef: C,
+        renderPopout: T,
+        shouldShow: g,
+        onRequestClose: x,
         animation: c.yRy.Animation.NONE,
         position: "bottom",
         spacing: 2,
         children: (e) => {
             var { "aria-controls": t, "aria-expanded": n } = e;
             return (
-                y(e, ["aria-controls", "aria-expanded"]),
+                v(e, ["aria-controls", "aria-expanded"]),
                 (0, r.jsx)(c.yRy, {
-                    targetElementRef: P,
+                    targetElementRef: k,
                     animation: c.yRy.Animation.NONE,
                     position: "bottom",
-                    renderPopout: B,
+                    renderPopout: U,
                     children: (e) => {
-                        var a,
-                            l,
+                        var l,
+                            a,
                             { onClick: i, "aria-controls": o, "aria-expanded": s } = e,
-                            u = y(e, ["onClick", "aria-controls", "aria-expanded"]);
+                            u = v(e, ["onClick", "aria-controls", "aria-expanded"]);
                         return (0, r.jsxs)(
                             c.P3F,
-                            ((a = (function (e) {
+                            ((l = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
@@ -238,27 +228,27 @@ function R(e) {
                                         });
                                 }
                                 return e;
-                            })({ innerRef: P }, u)),
-                            (l = l =
+                            })({ innerRef: k }, u)),
+                            (a = a =
                                 {
-                                    className: Z,
-                                    onClick: I && !m ? i : b,
-                                    "aria-label": T,
+                                    className: B,
+                                    onClick: I && !g ? i : x,
+                                    "aria-label": L,
                                     "aria-controls": null != t ? t : o,
                                     "aria-expanded": n || s,
                                     children: [
-                                        U,
+                                        Z,
                                         I &&
                                             (0, r.jsx)(c.vdY, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: O.editIcon,
+                                                className: y.editIcon,
                                                 "aria-hidden": !0,
                                             }),
                                     ],
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -266,10 +256,10 @@ function R(e) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            a),
+                            l),
                         );
                     },
                 })
@@ -277,142 +267,97 @@ function R(e) {
         },
     });
 }
-function E(e) {
-    var t;
-    let { value: n, id: a } = e,
-        l = (() => {
-            var e;
-            let t = null != (e = null == n ? void 0 : n.length) ? e : 0;
-            return j.WA - t;
-        })();
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsxs)("div", {
-                className: O.characterCount,
-                "aria-hidden": "true",
-                children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " / ", j.WA],
-            }),
-            (0, r.jsxs)(c.nn4, {
-                id: a,
-                children: [
-                    x.intl.format(x.t.fR1coa, { remainingCharacters: l }),
-                    " ",
-                    x.intl.format(x.t["+DFxLS"], { maxLength: j.WA }),
-                ],
-            }),
-        ],
-    });
-}
-let k = a.forwardRef(function (e, t) {
+function C(e) {
     let {
-            channelId: n,
-            answer: l,
-            index: o,
-            isLastAnswer: u,
-            onAnswerTextChange: f,
-            onEmojiSelect: m,
-            onEmojiRemove: p,
-            canRemoveAnswer: h,
-            onRemoveAnswer: w,
-            addAnswer: v,
-            submitPoll: y,
-            answerTextInputRefs: C,
-            error: _,
-            inputRef: k,
-            deleteButtonRef: A,
+            channelId: t,
+            answer: n,
+            index: a,
+            isLastAnswer: i,
+            onAnswerTextChange: o,
+            onEmojiSelect: s,
+            onEmojiRemove: u,
+            canRemoveAnswer: d,
+            onRemoveAnswer: f,
+            addAnswer: b,
+            submitPoll: j,
+            error: O,
+            ref: y,
+            answerRowRefs: v,
         } = e,
-        D = a.useRef(null),
-        S = (0, d.Dt)(),
-        I = (0, d.Dt)(),
-        N = null != _ && _.length > 0,
-        [T, L] = a.useState(!1),
-        B = a.useCallback(() => {
-            L((e) => !e);
+        P = l.useRef(null),
+        w = l.useRef(null),
+        C = l.useRef(null);
+    l.useImperativeHandle(y, () => ({
+        focusDeleteButton: () => {
+            var e;
+            return null == (e = w.current) ? void 0 : e.focus();
+        },
+        focusInput: () => {
+            var e;
+            return null == (e = C.current) ? void 0 : e.focus();
+        },
+    }));
+    let [k, R] = l.useState(!1),
+        E = l.useCallback(() => {
+            R((e) => !e);
         }, []),
-        U = a.useCallback(
+        _ = l.useCallback(
             (e) => {
                 let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
-                    n = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
+                    r = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
                 switch (e.key.toLowerCase()) {
                     case "enter":
-                        var r;
-                        u &&
+                        var l;
+                        i &&
                             (e.preventDefault(),
-                            ((0, g.cS)(l) || "macos" !== (0, b.getOS)() ? t : n) ? (e.stopPropagation(), y()) : v()),
-                            null == (r = C.current[o + 1]) || r.focus();
+                            ((0, p.cS)(n) || "macos" !== (0, m.getOS)() ? t : r) ? (e.stopPropagation(), j()) : b()),
+                            null == (l = v.current[a + 1]) || l.focusInput();
                         break;
                     case "e":
-                        ("macos" === (0, b.getOS)() ? n : t) && (e.preventDefault(), e.stopPropagation(), B());
+                        ("macos" === (0, m.getOS)() ? r : t) && (e.preventDefault(), e.stopPropagation(), E());
                 }
             },
-            [v, l, C, o, u, y, B],
+            [b, n, v, a, i, j, E],
         ),
-        Z = (0, r.jsx)(R, {
-            containerRef: D,
-            channelId: n,
-            buttonImage: l.image,
-            onEmojiSelect: m,
-            onEmojiRemove: p,
-            localCreationAnswerId: l.localCreationAnswerId,
-            answerIndex: o,
-            shouldShowEmojiPicker: T,
-            toggleEmojiPicker: B,
+        S = (0, r.jsx)(x, {
+            containerRef: P,
+            channelId: t,
+            buttonImage: n.image,
+            onEmojiSelect: s,
+            onEmojiRemove: u,
+            localCreationAnswerId: n.localCreationAnswerId,
+            answerIndex: a,
+            shouldShowEmojiPicker: k,
+            toggleEmojiPicker: E,
         });
-    return (0, r.jsxs)("div", {
-        ref: D,
-        className: i()(O.answerRow, { [O.hasDeleteButton]: h }),
-        children: [
-            (0, r.jsxs)("div", {
-                className: i()(O.defaultTextInputWrapper, { [O.hasError]: N }),
-                ref: t,
-                children: [
-                    Z,
-                    (0, r.jsx)(s.Is, {
-                        "aria-label": x.intl.formatToPlainString(x.t["3+V8Gx"], { answerNumber: o + 1 }),
-                        placeholder: x.intl.string(x.t.NNHVlp),
-                        value: l.text,
-                        className: O.defaultTextInput,
-                        inputClassName: O.defaultTextInput,
-                        onChange: (e) =>
-                            f({
-                                text: e,
-                                index: o,
-                                localCreationAnswerId: l.localCreationAnswerId,
-                            }),
-                        onKeyDown: U,
-                        maxLength: j.WA,
-                        "aria-invalid": N,
-                        "aria-describedby": N ? S : I,
-                        focusProps: P,
-                        inputRef: k,
-                    }),
-                    (0, r.jsx)(E, {
-                        value: l.text,
-                        id: I,
-                    }),
-                ],
-            }),
-            h &&
-                (0, r.jsx)(c.P3F, {
-                    onClick: () => w(o),
-                    className: O.removeAnswerButtonDefault,
-                    "aria-label": x.intl.formatToPlainString(x.t["22fjER"], { answerNumber: o + 1 }),
-                    ref: A,
-                    children: (0, r.jsx)(c.XHJ, {
-                        size: "md",
-                        color: "currentColor",
-                        className: O.trashIcon,
-                        "aria-hidden": !0,
-                    }),
+    return (0, r.jsx)("div", {
+        ref: P,
+        children: (0, r.jsx)(c.oil, {
+            error: O,
+            leading: {
+                type: "emoji",
+                button: S,
+            },
+            trailing: d
+                ? {
+                      "aria-label": h.intl.formatToPlainString(h.t["22fjER"], { answerNumber: a + 1 }),
+                      icon: c.XHJ,
+                      onClick: () => f(a),
+                      buttonRef: w,
+                  }
+                : void 0,
+            "aria-label": h.intl.formatToPlainString(h.t["3+V8Gx"], { answerNumber: a + 1 }),
+            placeholder: h.intl.string(h.t.NNHVlp),
+            value: n.text,
+            onChange: (e) =>
+                o({
+                    text: e,
+                    index: a,
+                    localCreationAnswerId: n.localCreationAnswerId,
                 }),
-            N &&
-                (0, r.jsx)(c.Text, {
-                    id: S,
-                    variant: "text-xs/medium",
-                    color: "text-danger",
-                    className: O.__invalid_errorText,
-                    children: _,
-                }),
-        ],
+            onKeyDown: _,
+            maxLength: g.WA,
+            inputRef: C,
+        }),
     });
-});
+}
