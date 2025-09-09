@@ -46,7 +46,7 @@ let a = {
             icon: l.iFz,
         },
         [i._.LOOKING_FOR_GROUP]: {
-            getText: () => o.intl.string(o.t["8o9MNT"]),
+            getText: () => o.intl.string(o.t.DWWAAQ),
             icon: l.iFz,
         },
         [i._.LOOKING_FOR_TIPS]: {
