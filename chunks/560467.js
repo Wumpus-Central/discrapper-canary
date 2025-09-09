@@ -1,95 +1,60 @@
 t.d(n, { Z: () => j });
-var r = t(951288),
+var a = t(951288),
     i = t(647438),
-    a = t(120356),
-    l = t.n(a),
-    o = t(681715),
-    s = t(481060),
+    r = t(120356),
+    l = t.n(r),
+    s = t(681715),
+    o = t(481060),
     c = t(642633),
     d = t(183369),
     u = t(422663),
-    m = t(555546),
-    g = t(473682),
+    m = t(473682),
     p = t(401561),
-    v = t(388032),
-    f = t(149671);
-function b(e) {
-    let { currentGame: n, planId: t, selected: a, className: o } = e,
-        c = i.useMemo(() => (null == n ? void 0 : n.plans.find((e) => e.id === t)), [null == n ? void 0 : n.plans, t]);
-    return null == c
-        ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsxs)("div", {
-                      className: l()(f.optionContainer, o),
-                      children: [
-                          (0, r.jsx)("span", { children: c.name }),
-                          (0, r.jsxs)("div", {
-                              className: f.labelContainer,
-                              children: [
-                                  (0, r.jsx)(s.$Eu, {
-                                      size: "xs",
-                                      color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                  }),
-                                  (0, r.jsx)(s.Text, {
-                                      variant: "text-xs/medium",
-                                      children: v.intl.format(p.default.FrRqub, { boostCount: c.cost }),
-                                  }),
-                              ],
-                          }),
-                      ],
-                  }),
-                  !a && (0, r.jsx)("div", { className: f.optionSpacer }),
-              ],
-          });
-}
-function x(e) {
-    let { currentGame: n, locationString: t, selected: a, className: o } = e,
-        c = i.useMemo(
-            () => (null == n ? void 0 : n.locations.find((e) => e.region === t)),
-            [null == n ? void 0 : n.locations, t],
-        ),
-        { pingText: d, pingCircleStyle: u } = (0, m.i)(null == c ? void 0 : c.pingUrl);
-    return null == c
-        ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsxs)("div", {
-                      className: l()(f.optionContainer, o),
-                      children: [
-                          (0, r.jsx)("span", { children: c.region }),
-                          (0, r.jsxs)("div", {
-                              className: f.labelContainer,
-                              children: [
-                                  (0, r.jsx)("div", { className: l()(f.pingCircle, u) }),
-                                  (0, r.jsx)(s.Text, {
-                                      variant: "text-xs/medium",
-                                      children: d,
-                                  }),
-                              ],
-                          }),
-                      ],
-                  }),
-                  !a && (0, r.jsx)("div", { className: f.optionSpacer }),
-              ],
-          });
+    x = t(388032),
+    g = t(149671);
+function v(e) {
+    let { plan: n, selected: t, className: i } = e;
+    return (0, a.jsxs)(a.Fragment, {
+        children: [
+            (0, a.jsxs)("div", {
+                className: l()(g.planOptionContainer, i),
+                children: [
+                    (0, a.jsx)("span", { children: n.name }),
+                    (0, a.jsxs)("div", {
+                        className: g.planCostContainer,
+                        children: [
+                            (0, a.jsx)(o.$Eu, {
+                                size: "xs",
+                                color: o.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                            }),
+                            (0, a.jsx)(o.Text, {
+                                variant: "text-xs/medium",
+                                children: x.intl.format(p.default.FrRqub, { boostCount: n.cost }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            !t && (0, a.jsx)("div", { className: g.planOptionSpacer }),
+        ],
+    });
 }
 function j() {
-    let { currentGame: e, location: n, setLocation: t, name: a, setName: l, planId: m, setPlanId: j } = (0, d.aj)(),
-        h = i.useMemo(() => {
+    let { currentGame: e, location: n, setLocation: t, name: r, setName: l, planId: j, setPlanId: b } = (0, d.aj)(),
+        f = i.useMemo(() => {
             var n;
             return null !=
                 (n =
                     null == e
                         ? void 0
                         : e.locations.map((e) => ({
-                              value: e.region,
-                              label: e.region,
+                              value: e,
+                              label: e,
                           })))
                 ? n
                 : [];
         }, [e]),
-        _ = i.useMemo(() => {
+        h = i.useMemo(() => {
             var n;
             return null !=
                 (n =
@@ -102,141 +67,140 @@ function j() {
                 ? n
                 : [];
         }, [e]),
-        C = void 0 === a || "" === a || void 0 === n || "" === n || void 0 === m;
+        _ = void 0 === r || "" === r || void 0 === n || "" === n || void 0 === j;
     return null == e
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, a.jsxs)("div", {
               children: [
-                  (0, r.jsx)(s.X6q, {
-                      className: f.title,
+                  (0, a.jsx)(o.X6q, {
+                      className: g.title,
                       variant: "heading-lg/semibold",
-                      children: v.intl.string(p.default.Eonh9P),
+                      children: x.intl.string(p.default.Eonh9P),
                   }),
-                  (0, r.jsxs)("div", {
-                      className: f.contentContainer,
+                  (0, a.jsxs)("div", {
+                      className: g.contentContainer,
                       children: [
-                          (0, r.jsxs)("div", {
-                              className: f.settingsContainer,
+                          (0, a.jsxs)("div", {
+                              className: g.settingsContainer,
                               children: [
-                                  (0, r.jsxs)("div", {
-                                      className: f.sectionContainer,
+                                  (0, a.jsxs)("div", {
+                                      className: g.sectionContainer,
                                       children: [
-                                          (0, r.jsxs)("div", {
-                                              className: f.sectionHeader,
+                                          (0, a.jsxs)("div", {
+                                              className: g.sectionHeader,
                                               children: [
-                                                  (0, r.jsx)(s.X6q, {
+                                                  (0, a.jsx)(o.X6q, {
                                                       variant: "heading-sm/semibold",
-                                                      children: v.intl.string(p.default["78avu7"]),
+                                                      children: x.intl.string(p.default["78avu7"]),
                                                   }),
-                                                  (0, r.jsx)(o.u, {
+                                                  (0, a.jsx)(s.u, {
                                                       position: "top",
-                                                      text: v.intl.string(p.default.hmt2ra),
-                                                      children: (0, r.jsx)(s.idN, {
-                                                          className: f.sectionHeaderIcon,
+                                                      text: x.intl.string(p.default.hmt2ra),
+                                                      children: (0, a.jsx)(o.idN, {
+                                                          className: g.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsx)(s.oil, {
-                                              value: a,
+                                          (0, a.jsx)(o.oil, {
+                                              value: r,
                                               onChange: l,
-                                              placeholder: v.intl.string(p.default.Kg0Zio),
+                                              placeholder: x.intl.string(p.default.Kg0Zio),
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsxs)("div", {
-                                      className: f.sectionContainer,
+                                  (0, a.jsxs)("div", {
+                                      className: g.sectionContainer,
                                       children: [
-                                          (0, r.jsxs)("div", {
-                                              className: f.sectionHeader,
+                                          (0, a.jsxs)("div", {
+                                              className: g.sectionHeader,
                                               children: [
-                                                  (0, r.jsx)(s.X6q, {
+                                                  (0, a.jsx)(o.X6q, {
                                                       variant: "heading-sm/semibold",
-                                                      children: v.intl.string(p.default.iccpNT),
+                                                      children: x.intl.string(p.default.iccpNT),
                                                   }),
-                                                  (0, r.jsx)(o.u, {
+                                                  (0, a.jsx)(s.u, {
                                                       position: "top",
-                                                      text: v.intl.string(p.default.wKyl39),
-                                                      children: (0, r.jsx)(s.idN, {
-                                                          className: f.sectionHeaderIcon,
+                                                      text: x.intl.string(p.default.wKyl39),
+                                                      children: (0, a.jsx)(o.idN, {
+                                                          className: g.sectionHeaderIcon,
                                                           size: "xs",
                                                       }),
                                                   }),
                                               ],
                                           }),
-                                          (0, r.jsx)(s.PhF, {
+                                          (0, a.jsx)(o.PhF, {
                                               serialize: (e) => e.toString(),
                                               isSelected: (e) => e === n,
-                                              options: h,
-                                              optionClassName: f.option,
+                                              options: f,
                                               select: (e) => t(e),
-                                              placeholder: v.intl.string(p.default["op6/kZ"]),
-                                              renderOptionLabel: (t) =>
-                                                  (0, r.jsx)(x, {
-                                                      currentGame: e,
-                                                      locationString: t.value,
-                                                      selected: (null == t ? void 0 : t.value) === n,
-                                                  }),
-                                              renderOptionValue: (t) => {
-                                                  var i, a;
-                                                  return (0, r.jsx)(x, {
-                                                      currentGame: e,
-                                                      locationString: null == (i = t[0]) ? void 0 : i.value,
-                                                      selected: (null == (a = t[0]) ? void 0 : a.value) === n,
-                                                      className: f.value,
-                                                  });
-                                              },
+                                              placeholder: x.intl.string(p.default["op6/kZ"]),
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsxs)("div", {
-                                      className: f.sectionContainer,
+                                  (0, a.jsxs)("div", {
+                                      className: g.sectionContainer,
                                       children: [
-                                          (0, r.jsx)("div", {
-                                              className: f.sectionHeader,
-                                              children: (0, r.jsx)(s.X6q, {
+                                          (0, a.jsx)("div", {
+                                              className: g.sectionHeader,
+                                              children: (0, a.jsx)(o.X6q, {
                                                   variant: "heading-sm/semibold",
-                                                  children: v.intl.string(p.default["3QONen"]),
+                                                  children: x.intl.string(p.default["3QONen"]),
                                               }),
                                           }),
-                                          (0, r.jsx)(s.PhF, {
+                                          (0, a.jsx)(o.PhF, {
                                               serialize: (e) => e.toString(),
-                                              isSelected: (e) => e === m,
-                                              options: _,
-                                              optionClassName: f.option,
-                                              select: (e) => j(e),
-                                              placeholder: v.intl.string(p.default["4QOSPj"]),
+                                              isSelected: (e) => e === j,
+                                              options: h,
+                                              optionClassName: g.planOption,
+                                              select: (e) => b(e),
+                                              placeholder: x.intl.string(p.default["4QOSPj"]),
                                               renderOptionValue: (n) => {
-                                                  var t, i;
-                                                  return (0, r.jsx)(b, {
-                                                      currentGame: e,
-                                                      planId: null == (t = n[0]) ? void 0 : t.value,
-                                                      selected: (null == (i = n[0]) ? void 0 : i.value) === m,
-                                                      className: f.value,
-                                                  });
+                                                  let t =
+                                                      null == e
+                                                          ? void 0
+                                                          : e.plans.find((e) => {
+                                                                var t;
+                                                                return e.id === (null == (t = n[0]) ? void 0 : t.value);
+                                                            });
+                                                  return null == t
+                                                      ? null
+                                                      : (0, a.jsx)(v, {
+                                                            plan: t,
+                                                            selected: !0,
+                                                            className: g.planValue,
+                                                        });
                                               },
-                                              renderOptionLabel: (n) =>
-                                                  (0, r.jsx)(b, {
-                                                      currentGame: e,
-                                                      planId: null == n ? void 0 : n.value,
-                                                      selected: (null == n ? void 0 : n.value) === m,
-                                                  }),
+                                              renderOptionLabel: (n) => {
+                                                  let t =
+                                                      null == e
+                                                          ? void 0
+                                                          : e.plans.find(
+                                                                (e) => e.id === (null == n ? void 0 : n.value),
+                                                            );
+                                                  return null == t
+                                                      ? null
+                                                      : (0, a.jsx)(v, {
+                                                            plan: t,
+                                                            selected: t.id === j,
+                                                        });
+                                              },
                                           }),
                                       ],
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", {
-                              className: f.gameDetailsContainer,
-                              children: (0, r.jsx)(c.Z, {}),
+                          (0, a.jsx)("div", {
+                              className: g.gameDetailsContainer,
+                              children: (0, a.jsx)(c.Z, {}),
                           }),
                       ],
                   }),
-                  (0, r.jsxs)(u.ok, {
-                      step: g.Vb.SERVER_SETTINGS,
-                      className: f.footerContainer,
-                      children: [(0, r.jsx)(u.VS, {}), (0, r.jsx)(u.oh, { disabled: C })],
+                  (0, a.jsxs)(u.ok, {
+                      step: m.Vb.SERVER_SETTINGS,
+                      className: g.footerContainer,
+                      children: [(0, a.jsx)(u.VS, {}), (0, a.jsx)(u.oh, { disabled: _ })],
                   }),
               ],
           });

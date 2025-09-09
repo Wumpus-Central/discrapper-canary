@@ -1,6 +1,5 @@
 n.d(t, {
     EC: () => i,
-    LG: () => o,
     g$: () => s,
     po: () => l,
 });
@@ -28,12 +27,5 @@ function s(e) {
     a.Z.dispatch({
         type: "PORTKEY_ACCEPT_TOS",
         acceptedToS: e,
-    });
-}
-function o(e, t) {
-    a.Z.dispatch({
-        type: "PORTKEY_LOCATION_PING_STATE_UPDATE",
-        pingUrl: e,
-        state: t,
     });
 }
