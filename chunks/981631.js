@@ -5215,6 +5215,7 @@ var nb = (function (e) {
             (e.NOTIFICATIONS_INBOX_UNMOUNTED = "notifications_inbox_unmounted"),
             (e.NOTIFICATIONS_INBOX_LOADED = "notifications_inbox_loaded"),
             (e.NOTIFICATIONS_INBOX_DATA_LOADED = "notifications_inbox_data_loaded"),
+            (e.CONTEXTUAL_REMINDER_ACTION = "contextual_reminder_action"),
             (e.MASKED_LINK_MODAL_CLICKED = "masked_link_modal_clicked"),
             (e.GAME_STORE_BUTTON_CLICKED = "game_store_button_clicked"),
             (e.ACTIVITY_SHARING_SETTINGS_INTERACTED = "activity_sharing_settings_interacted"),
