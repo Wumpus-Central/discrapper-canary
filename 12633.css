@@ -42677,11 +42677,6 @@ body .headerAnimation_b54a5b {
     color: var(--text-muted)
 }
 
-.ambient_cd30d9.badgeImage_cd30d9 {
-    min-height: 80px;
-    min-width: 80px
-}
-
 .tooltipWordmark_d4ff11 {
     color: var(--text-muted);
     margin-bottom: 4px
@@ -89071,7 +89066,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

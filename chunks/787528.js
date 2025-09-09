@@ -1,65 +1,64 @@
 n.d(t, {
-    J: () => I,
-    u: () => v,
+    J: () => v,
+    u: () => O,
 });
-var r = n(586502),
-    i = n(474936),
-    a = n(749472),
-    o = n(860691),
-    s = n(110149),
-    l = n(64649),
-    c = n(166870),
-    u = n(79914),
-    d = n(634071),
-    f = n(557821),
-    _ = n(111301),
-    p = n(841264),
-    h = n(678579),
-    m = n(545556),
-    g = n(684868),
-    E = n(971605),
-    b = n(16222),
-    y = n(347842);
-let O = {
-        [i.VU.PREMIUM_TENURE_1_MONTH]: {
-            standard: a,
+var r = n(474936),
+    i = n(749472),
+    a = n(860691),
+    o = n(110149),
+    s = n(64649),
+    l = n(166870),
+    c = n(79914),
+    u = n(634071),
+    d = n(557821),
+    f = n(111301),
+    _ = n(841264),
+    p = n(678579),
+    h = n(545556),
+    m = n(684868),
+    g = n(971605),
+    E = n(16222),
+    b = n(347842);
+let y = {
+        [r.VU.PREMIUM_TENURE_1_MONTH]: {
+            standard: i,
+            ambient: f.Z,
+        },
+        [r.VU.PREMIUM_TENURE_3_MONTH]: {
+            standard: d,
             ambient: _.Z,
         },
-        [i.VU.PREMIUM_TENURE_3_MONTH]: {
-            standard: f,
+        [r.VU.PREMIUM_TENURE_6_MONTH]: {
+            standard: s,
             ambient: p.Z,
         },
-        [i.VU.PREMIUM_TENURE_6_MONTH]: {
-            standard: l,
+        [r.VU.PREMIUM_TENURE_12_MONTH]: {
+            standard: c,
             ambient: h.Z,
         },
-        [i.VU.PREMIUM_TENURE_12_MONTH]: {
-            standard: u,
+        [r.VU.PREMIUM_TENURE_24_MONTH]: {
+            standard: a,
             ambient: m.Z,
         },
-        [i.VU.PREMIUM_TENURE_24_MONTH]: {
+        [r.VU.PREMIUM_TENURE_36_MONTH]: {
             standard: o,
             ambient: g.Z,
         },
-        [i.VU.PREMIUM_TENURE_36_MONTH]: {
-            standard: s,
+        [r.VU.PREMIUM_TENURE_60_MONTH]: {
+            standard: u,
             ambient: E.Z,
         },
-        [i.VU.PREMIUM_TENURE_60_MONTH]: {
-            standard: d,
+        [r.VU.PREMIUM_TENURE_72_MONTH]: {
+            standard: l,
             ambient: b.Z,
         },
-        [i.VU.PREMIUM_TENURE_72_MONTH]: {
-            standard: c,
-            ambient: y.Z,
-        },
     },
-    v = (e) => {
-        let t = (0, r.Z)();
-        return null != e ? I(e, { ambient: t }) : null;
+    O = function (e) {
+        let { ambient: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return null != e ? v(e, { ambient: t }) : null;
     };
-function I(e) {
+function v(e) {
     let { ambient: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = O[e];
+        n = y[e];
     return t ? n.ambient : n.standard;
 }

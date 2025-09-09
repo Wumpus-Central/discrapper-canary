@@ -1,38 +1,32 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => u }), n(953529);
 var r = n(951288),
-    i = n(120356),
-    a = n.n(i),
-    o = n(793030),
-    s = n(958783),
-    l = n(483444),
-    c = n(586502),
-    u = n(787528),
-    d = n(388032),
-    f = n(854826);
-let _ = (e) => {
+    i = n(793030),
+    a = n(958783),
+    o = n(483444),
+    s = n(787528),
+    l = n(388032),
+    c = n(854826);
+let u = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
-        i = (0, c.Z)(),
-        _ = (0, u.J)(n.id, { ambient: i });
-    return (0, r.jsxs)(s.Z, {
+        u = (0, s.J)(n.id);
+    return (0, r.jsxs)(a.Z, {
         assetComponent: (0, r.jsx)("img", {
-            src: _,
+            src: u,
             alt: "",
-            className: a()(f.badgeImage, { [f.ambient]: i }),
-            height: i ? 80 : void 0,
         }),
-        tooltipWordmarkComponent: (0, r.jsx)(l.Z, {
+        tooltipWordmarkComponent: (0, r.jsx)(o.Z, {
             width: 56,
-            className: f.tooltipWordmark,
+            className: c.tooltipWordmark,
         }),
         children: [
-            (0, r.jsx)(o.X6, {
+            (0, r.jsx)(i.X6, {
                 variant: "heading-xl/extrabold",
-                children: d.intl.string(n.nameUnformatted),
+                children: l.intl.string(n.nameUnformatted),
             }),
-            (0, r.jsx)(o.xv, {
+            (0, r.jsx)(i.xv, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                className: f.tooltipDescription,
+                className: c.tooltipDescription,
                 children: t.description,
             }),
         ],
