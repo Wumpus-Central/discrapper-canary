@@ -1,24 +1,25 @@
-n.d(t, { PT: () => x });
+n.d(t, { PT: () => v });
 var i = n(951288);
 n(647438);
-var a = n(442837),
-    l = n(481060),
-    s = n(225657),
-    r = n(600164),
+var l = n(442837),
+    a = n(481060),
+    r = n(225657),
+    s = n(600164),
     o = n(927699),
-    c = n(987716),
-    u = n(311821),
-    d = n(594174),
-    f = n(55563),
-    p = n(987209),
-    m = n(563132),
-    g = n(409813),
+    c = n(311821),
+    u = n(594174),
+    d = n(55563),
+    f = n(551428),
+    h = n(73346),
+    g = n(987209),
+    p = n(563132),
+    m = n(409813),
     b = n(27034),
-    h = n(474936),
-    y = n(388032),
-    j = n(323261);
-let x = {
-    key: g.h8.GIFT_CUSTOMIZATION,
+    j = n(474936),
+    x = n(388032),
+    y = n(323261);
+let v = {
+    key: m.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
             O,
@@ -50,75 +51,76 @@ let x = {
         ),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => y.intl.string(y.t["W685+f"]),
+        useBreadcrumbLabel: () => x.intl.string(x.t["W685+f"]),
     },
 };
-function v(e) {
-    let { onStepChange: t, onBackClick: n, showBackButton: a = !1, disabled: s = !1, loading: r = !1 } = e,
-        { hasPaymentSources: o } = (0, m.JL)(),
-        c = o ? g.h8.REVIEW : g.h8.ADD_PAYMENT_STEPS;
+function C(e) {
+    let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
+        { hasPaymentSources: o } = (0, p.JL)(),
+        u = o ? m.h8.REVIEW : m.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.zxk, {
-                onClick: () => t(c),
-                disabled: s,
-                loading: r,
-                text: y.intl.string(y.t.XiOHRU),
+            (0, i.jsx)(a.zxk, {
+                onClick: () => t(u),
+                disabled: r,
+                loading: s,
+                text: x.intl.string(x.t.XiOHRU),
             }),
-            a ? (0, i.jsx)(u.Z, { onClick: n }) : null,
+            l ? (0, i.jsx)(c.Z, { onClick: n }) : null,
         ],
     });
 }
 function O(e) {
     var t;
-    let { handleStepChange: n, handleClose: u } = e,
-        { customGiftMessage: g = "", setCustomGiftMessage: x, giftRecipient: O } = (0, p.wD)(),
-        { selectedSkuId: C } = (0, m.JL)(),
-        T = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        P = (0, a.e7)([f.Z], () => (null != C ? f.Z.get(C) : null), [C]),
+    let { handleStepChange: n, handleClose: c } = e,
+        { customGiftMessage: m = "", setCustomGiftMessage: v, giftRecipient: O } = (0, g.wD)(),
+        { selectedSkuId: I } = (0, p.JL)(),
+        T = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        _ = (0, l.e7)([d.Z], () => (null != I ? d.Z.get(I) : null), [I]),
+        E = (0, l.e7)([f.Z], () => (null != I ? f.Z.getForSKU(I) : null), [I]),
+        P =
+            (null == E ? void 0 : E.headerBackground) != null && (null == _ ? void 0 : _.applicationId) != null
+                ? (0, h._W)(_.applicationId, E.headerBackground, 256)
+                : void 0,
         k = async (e, t) => {};
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(b.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: j.stepBody,
+                    className: y.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: j.bodyColumnLeft,
+                            className: y.bodyColumnLeft,
                             children: [
-                                (0, i.jsx)(l.X6q, {
-                                    variant: "heading-lg/semibold",
-                                    color: "header-primary",
-                                    className: j.title,
-                                    children: y.intl.formatToPlainString(y.t.UIOtjo, {
-                                        skuName: null != (t = null == P ? void 0 : P.name) ? t : "this app",
+                                (null == _ ? void 0 : _.name) != null &&
+                                    (0, i.jsx)(a.X6q, {
+                                        variant: "heading-lg/semibold",
+                                        color: "header-primary",
+                                        children: _.name,
                                     }),
-                                }),
-                                (0, i.jsx)(l.Text, {
-                                    variant: "text-md/normal",
-                                    color: "header-secondary",
-                                    className: j.subtitle,
-                                    children: y.intl.string(y.t.GHZfIC),
-                                }),
-                                (0, i.jsx)(c.q, {}),
+                                null != P &&
+                                    (0, i.jsx)("img", {
+                                        src: P,
+                                        alt: null != (t = null == _ ? void 0 : _.name) ? t : "",
+                                        className: y.skuImage,
+                                    }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: j.bodyColumnRight,
+                            className: y.bodyColumnRight,
                             children: [
-                                (0, i.jsx)(s.Z, {
-                                    selectedSkuId: C,
+                                (0, i.jsx)(r.Z, {
+                                    selectedSkuId: I,
                                     validateSelectedGift: k,
-                                    className: j.sendTo,
                                 }),
                                 (0, i.jsx)(o.Z, {
-                                    sectionTitle: y.intl.string(y.t.B3miEx),
-                                    onTextChange: (e) => (null == x ? void 0 : x(e)),
-                                    pendingText: g,
-                                    currentText: g,
+                                    sectionTitle: x.intl.string(x.t.B3miEx),
+                                    onTextChange: (e) => (null == v ? void 0 : v(e)),
+                                    pendingText: m,
+                                    currentText: m,
                                     disableThemedBackground: !0,
-                                    className: j.customGiftMessageWrapper,
-                                    innerClassName: j.customGiftMessage,
+                                    className: y.customGiftMessageWrapper,
+                                    innerClassName: y.customGiftMessage,
                                 }),
                             ],
                         }),
@@ -126,14 +128,14 @@ function O(e) {
                 }),
             }),
             (0, i.jsx)(b.O3, {
-                children: (0, i.jsx)(l.mzw, {
+                children: (0, i.jsx)(a.mzw, {
                     "data-migration-pending": !0,
-                    justify: r.Z.Justify.BETWEEN,
-                    align: r.Z.Align.CENTER,
-                    children: (0, i.jsx)(v, {
+                    justify: s.Z.Justify.BETWEEN,
+                    align: s.Z.Align.CENTER,
+                    children: (0, i.jsx)(C, {
                         onStepChange: n,
-                        onBackClick: u,
-                        disabled: null == O || O.id === (null == T ? void 0 : T.id) || g.length > h.$n,
+                        onBackClick: c,
+                        disabled: null == O || O.id === (null == T ? void 0 : T.id) || m.length > j.$n,
                     }),
                 }),
             }),

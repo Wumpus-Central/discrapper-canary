@@ -33,7 +33,8 @@ function p(e) {
         let e = b[y];
         return O &&
             ((null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES ||
-                (null == e ? void 0 : e.productLine) === _.POd.APPLICATION)
+                (null == e ? void 0 : e.productLine) === _.POd.APPLICATION ||
+                (null == e ? void 0 : e.productLine) === _.POd.SOCIAL_LAYER_GAME_ITEM)
             ? void t(u.h8.GIFT_CUSTOMIZATION)
             : 0 === Object.keys(m).length
               ? void t(u.h8.ADD_PAYMENT_STEPS)

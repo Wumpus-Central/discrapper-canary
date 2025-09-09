@@ -6108,6 +6108,7 @@ var rn = (function (e) {
             (e[(e.GUILD_PRODUCT = 5)] = "GUILD_PRODUCT"),
             (e[(e.APPLICATION = 6)] = "APPLICATION"),
             (e[(e.COLLECTIBLES = 7)] = "COLLECTIBLES"),
+            (e[(e.SOCIAL_LAYER_GAME_ITEM = 14)] = "SOCIAL_LAYER_GAME_ITEM"),
             e
         );
     })({}),

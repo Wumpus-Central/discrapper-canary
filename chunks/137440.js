@@ -1,0 +1,34 @@
+n.d(t, { Z: () => c }), n(314940);
+var i = n(951288);
+n(647438);
+var l = n(278074),
+    a = n(481060),
+    r = n(409813),
+    s = n(388032),
+    o = n(790793);
+function c(e) {
+    let { step: t, onClose: n } = e,
+        c = (0, l.EQ)(t)
+            .with(r.h8.REVIEW, () => s.intl.string(s.t.JbRd5u))
+            .with(r.h8.ADD_PAYMENT_STEPS, () => s.intl.string(s.t.QiGOam))
+            .with(r.h8.GIFT_CUSTOMIZATION, () => s.intl.string(s.t["JCFN//"]))
+            .with(r.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => s.intl.string(s.t.lDbi6O))
+            .with(r.h8.CONFIRM, () => "")
+            .otherwise(() => null);
+    return null == c
+        ? null
+        : (0, i.jsxs)(a.xBx, {
+              className: o.headerContainerGift,
+              separator: t !== r.h8.CONFIRM,
+              children: [
+                  (0, i.jsx)(a.X6q, {
+                      variant: "heading-lg/semibold",
+                      children: c,
+                  }),
+                  (0, i.jsx)(a.olH, {
+                      onClick: n,
+                      className: o.closeButtonGift,
+                  }),
+              ],
+          });
+}

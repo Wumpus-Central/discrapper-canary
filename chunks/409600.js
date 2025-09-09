@@ -1,36 +1,43 @@
 n.d(t, { default: () => m }), n(388685);
 var i = n(951288);
 n(647438);
-var a = n(100527),
-    l = n(906732),
-    s = n(987209),
-    r = n(563132),
+var l = n(100527),
+    a = n(906732),
+    r = n(987209),
+    s = n(563132),
     o = n(107998),
     c = n(791785),
     u = n(961830),
     d = n(382263),
-    f = n(231338);
+    f = n(137440),
+    h = n(231338);
+let g = (e, t, n) =>
+    (0, i.jsx)(f.Z, {
+        step: n,
+        onClose: () => t(!1),
+    });
 function p(e) {
-    let { onClose: t, onComplete: n, transitionState: a, applicationId: s, analyticsLocationObject: o, skuId: u } = e,
-        {} = (0, r.JL)(),
-        { analyticsLocations: d } = (0, l.ZP)();
+    let { onClose: t, onComplete: n, transitionState: l, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
+        {} = (0, s.JL)(),
+        { analyticsLocations: d } = (0, a.ZP)();
     return (0, i.jsx)(c.PaymentModal, {
         onClose: t,
         onComplete: n,
-        applicationId: s,
+        applicationId: r,
         skuId: u,
+        renderHeader: g,
         initialPlanId: null,
         analyticsObject: o,
         analyticsLocations: d,
-        transitionState: a,
+        transitionState: l,
     });
 }
 function m(e) {
-    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: m, isGift: g = !1 } = e,
-        { analyticsLocations: b } = (0, l.ZP)(m, a.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, i.jsx)(l.Gt, {
-        value: b,
-        children: (0, i.jsx)(r.PaymentContextProvider, {
+    let { loadId: t, applicationId: n, skuId: c, analyticsLocations: f, isGift: g = !1 } = e,
+        { analyticsLocations: m } = (0, a.ZP)(f, l.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, i.jsx)(a.Gt, {
+        value: m,
+        children: (0, i.jsx)(s.PaymentContextProvider, {
             loadId: t,
             stepConfigs: (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -39,10 +46,10 @@ function m(e) {
             applicationId: n,
             skuIDs: [c],
             activeSubscription: null,
-            purchaseType: f.GZ.ONE_TIME,
+            purchaseType: h.GZ.ONE_TIME,
             isGift: g,
             children: (0, i.jsx)(o.c1, {
-                children: (0, i.jsx)(s.KB, {
+                children: (0, i.jsx)(r.KB, {
                     isGift: g,
                     children: (0, i.jsx)(
                         p,

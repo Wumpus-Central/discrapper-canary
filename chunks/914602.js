@@ -90,7 +90,12 @@ class y extends (r = a.PureComponent) {
                         (0, i.jsx)(f.Z, {
                             className: s()(g.splashContainer, { [g.splashContainerHorizontal]: l }),
                             video: null != c.previewVideo ? (0, _._W)(o.applicationId, c.previewVideo) : void 0,
-                            image: null != c.thumbnail ? (0, _._W)(o.applicationId, c.thumbnail, b) : null,
+                            image:
+                                null != c.thumbnail
+                                    ? (0, _._W)(o.applicationId, c.thumbnail, b)
+                                    : null != c.headerBackground
+                                      ? (0, _._W)(o.applicationId, c.headerBackground, b)
+                                      : void 0,
                             title: o.name,
                             playing: e,
                             muted: t,
