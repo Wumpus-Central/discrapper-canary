@@ -643,8 +643,8 @@ async function eh(e) {
     }
 }
 async function em(e) {
-    let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i } = e,
-        a = await d.ZP.createInvite(
+    let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i, inviteAnalyticsMetadata: a } = e,
+        o = await d.ZP.createInvite(
             t,
             {
                 target_type: en.Iq.EMBEDDED_APPLICATION,
@@ -652,11 +652,11 @@ async function em(e) {
             },
             i,
         );
-    null != D.Z.getChannel(n) && f.Z.sendInvite(n, a.code, i, null);
+    null != D.Z.getChannel(n) && f.Z.sendInvite(n, o.code, i, a);
 }
 async function eg(e) {
-    let { channelId: t, applicationId: n, userId: r, location: i, prefixedContent: a } = e,
-        o = await d.ZP.createInvite(
+    let { channelId: t, applicationId: n, userId: r, location: i, inviteAnalyticsMetadata: a, prefixedContent: o } = e,
+        s = await d.ZP.createInvite(
             t,
             {
                 target_type: en.Iq.EMBEDDED_APPLICATION,
@@ -668,7 +668,7 @@ async function eg(e) {
         let t,
             n = D.Z.getChannel(e);
         if (null == n) throw Error("Private channel not found");
-        null != a && (t = C.ZP.parse(n, a).content), f.Z.sendInvite(e, o.code, i, null, t);
+        null != o && (t = C.ZP.parse(n, o).content), f.Z.sendInvite(e, s.code, i, a, t);
     });
 }
 function eE() {

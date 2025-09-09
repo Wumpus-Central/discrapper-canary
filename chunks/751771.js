@@ -1,18 +1,18 @@
-let l, i, r, s, a, o;
+let l, i, r, a, s, o;
 n.d(t, { Z: () => C }), n(388685), n(642613);
 var u,
     d,
     c = n(442837),
-    h = n(570140),
-    g = n(823385),
+    g = n(570140),
+    h = n(823385),
     m = n(752048),
     p = n(823379),
     v = n(971130),
     I = n(592125),
     x = n(496675),
     f = n(699516),
-    N = n(981631),
-    j = n(245335);
+    j = n(981631),
+    N = n(245335);
 let _ = new Set(),
     E = [],
     S = new Map(),
@@ -22,20 +22,20 @@ let _ = new Set(),
         numGroupDms: 0,
         numChannels: 0,
     };
-function T(e) {
+function O(e) {
     let t = new Set(),
-        n = null == r || o === j.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
+        n = null == r || o === N.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
         l = (0, v.rh)(_, n);
     for (let e of (null == l || f.Z.isBlockedOrIgnored(l.id) || t.add(l.id), m.Z.getUserAffinities()))
         t.add(e.otherUserId);
     let i = new Set();
     return (
-        o === j.Iq.EMBEDDED_APPLICATION &&
-            g.Z.getChannelHistory()
+        o === N.Iq.EMBEDDED_APPLICATION &&
+            h.Z.getChannelHistory()
                 .map((e) => I.Z.getChannel(e))
                 .filter(p.lm)
-                .filter((e) => e.type === N.d4z.GUILD_TEXT)
-                .filter((e) => x.Z.can(N.Plq.SEND_MESSAGES, e))
+                .filter((e) => e.type === j.d4z.GUILD_TEXT)
+                .filter((e) => x.Z.can(j.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => i.add(e.id)),
         (0, v.an)({
@@ -49,14 +49,14 @@ function T(e) {
         })
     );
 }
-function O(e) {
+function y(e) {
     (E = e),
         (S = new Map()),
         e.forEach((e, t) => {
             S.set(e, { index: t });
         });
 }
-class y extends (u = c.ZP.Store) {
+class T extends (u = c.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, m.Z);
     }
@@ -72,49 +72,48 @@ class y extends (u = c.ZP.Store) {
     getSelectedInviteMetadata(e) {
         let t = S.get(e),
             n = m.Z.getUserAffinities().map((e) => e.otherUserId);
-        return null != t
-            ? {
-                  rowNum: t.index,
-                  isAffinitySuggestion: e.isSuggested,
-                  numTotal: E.length,
-                  numAffinityConnections: n.length,
-                  isFiltered: i,
-              }
-            : null;
+        if (null != t)
+            return {
+                rowNum: t.index,
+                isAffinitySuggestion: e.isSuggested,
+                numTotal: E.length,
+                numAffinityConnections: n.length,
+                isFiltered: i,
+            };
     }
 }
-(d = "displayName") in y
-    ? Object.defineProperty(y, d, {
+(d = "displayName") in T
+    ? Object.defineProperty(T, d, {
           value: "InviteSuggestionsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (y[d] = "InviteSuggestionsStore");
-let C = new y(h.Z, {
+    : (T[d] = "InviteSuggestionsStore");
+let C = new T(g.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: u, applicationId: d, inviteTargetType: c } = e;
         (r = null != u ? n : null),
-            (s = u),
-            (a = d),
+            (a = u),
+            (s = d),
             (o = c),
             (_ = new Set([
                 ...t,
                 ...f.Z.getBlockedOrIgnoredIDs(),
                 ...(0, v.Sz)({
-                    channel: s,
-                    applicationId: a,
+                    channel: a,
+                    applicationId: s,
                     inviteTargetType: c,
                 }),
             ])),
             (i = !1);
-        let { rows: h, counts: g } = T("");
-        O(h), (b = g), (l = E.length);
+        let { rows: g, counts: h } = O("");
+        y(g), (b = h), (l = E.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;
         i = "" !== t;
-        let { rows: n } = T(t);
-        n.sort((e, t) => (null != e.score && null != t.score ? e.score - t.score : 0)), O(n);
+        let { rows: n } = O(t);
+        n.sort((e, t) => (null != e.score && null != t.score ? e.score - t.score : 0)), y(n);
     },
 });

@@ -6,22 +6,22 @@ n.d(t, {
 var l = n(951288),
     i = n(647438),
     r = n(780384),
-    s = n(755721),
-    a = n(481060),
+    a = n(755721),
+    s = n(481060),
     o = n(630810),
     u = n(43267),
     d = n(933557),
     c = n(210887),
-    h = n(430824),
-    g = n(751771),
+    g = n(430824),
+    h = n(751771),
     m = n(699516),
     p = n(594174),
     v = n(768581),
     I = n(624138),
     x = n(51144),
     f = n(388032),
-    N = n(451964);
-function j(e, t, n) {
+    j = n(451964);
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ class E extends i.Component {
             null != r &&
             ((t = (0, u.x)(r)), (n = (0, d.F6)(r, p.default, m.Z)), null == t && null != r.guild_id)
         ) {
-            let n = h.Z.getGuild(r.guild_id);
+            let n = g.Z.getGuild(r.guild_id);
             null != n &&
                 (null != n.icon
                     ? (t = v.ZP.getGuildIconURL({
@@ -67,53 +67,53 @@ class E extends i.Component {
         }
         if (null == t || null == n)
             if (null != e)
-                return (0, l.jsx)(a.Text, {
+                return (0, l.jsx)(s.Text, {
                     variant: "text-md/medium",
-                    className: N.acronym,
+                    className: j.acronym,
                     "aria-hidden": !0,
                     children: e,
                 });
             else return null;
-        return (0, l.jsx)(a.qEK, {
+        return (0, l.jsx)(s.qEK, {
             src: t,
             "aria-label": n,
-            size: a.EFr.SIZE_32,
-            className: N.inviteRowAvatar,
+            size: s.EFr.SIZE_32,
+            className: j.inviteRowAvatar,
         });
     }
     render() {
         let e,
             { user: t, channel: n } = this.props,
-            { sending: i, invited: a, hovered: o } = this.state;
+            { sending: i, invited: s, hovered: o } = this.state;
         return (
-            (e = a
-                ? (0, l.jsx)(s.zx, {
-                      look: s.zx.Looks.LINK,
-                      size: s.zx.Sizes.SMALL,
+            (e = s
+                ? (0, l.jsx)(a.zx, {
+                      look: a.zx.Looks.LINK,
+                      size: a.zx.Sizes.SMALL,
                       disabled: !0,
-                      color: (0, r.wj)(c.Z.theme) ? s.zx.Colors.WHITE : s.zx.Colors.BRAND,
+                      color: (0, r.wj)(c.Z.theme) ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
                       children: f.intl.string(f.t["dVT14+"]),
                   })
-                : (0, l.jsx)(s.zx, {
-                      color: s.zx.Colors.GREEN,
-                      look: o ? s.zx.Looks.FILLED : s.zx.Looks.OUTLINED,
-                      className: N.inviteRowButton,
-                      size: s.zx.Sizes.SMALL,
+                : (0, l.jsx)(a.zx, {
+                      color: a.zx.Colors.GREEN,
+                      look: o ? a.zx.Looks.FILLED : a.zx.Looks.OUTLINED,
+                      className: j.inviteRowButton,
+                      size: a.zx.Sizes.SMALL,
                       submitting: i,
                       onClick: this.handleClickInvite,
                       children: f.intl.string(f.t.jYnGPD),
                   })),
             (0, l.jsxs)("div", {
-                className: N.inviteRow,
+                className: j.inviteRow,
                 onMouseEnter: this.handleMouseEnter,
                 onMouseLeave: this.handleMouseLeave,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: N.inviteRowInfo,
+                        className: j.inviteRowInfo,
                         children: [
                             this.renderUserOrChannel(),
                             (0, l.jsxs)("div", {
-                                className: N.inviteRowName,
+                                className: j.inviteRowName,
                                 children: [x.ZP.getName(t), null != n ? (0, d.F6)(n, p.default, m.Z, !0) : null],
                             }),
                         ],
@@ -125,23 +125,26 @@ class E extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            j(this, "state", {
+            N(this, "state", {
                 sending: !1,
                 invited: !1,
                 hovered: !1,
             }),
-            j(this, "handleMouseEnter", () => {
+            N(this, "handleMouseEnter", () => {
                 this.setState({ hovered: !0 });
             }),
-            j(this, "handleMouseLeave", () => {
+            N(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            j(this, "getSuggestedProps", () => {
-                var e;
-                let { row: t } = this.props;
-                return null != (e = null != t ? g.Z.getSelectedInviteMetadata(t) : null) ? e : null;
+            N(this, "getInviteAnalyticsMetadata", () => {
+                let { row: e, source: t } = this.props;
+                if (null != e)
+                    return {
+                        suggestionData: h.Z.getSelectedInviteMetadata(e),
+                        source: t,
+                    };
             }),
-            j(this, "handleClickInvite", () => {
+            N(this, "handleClickInvite", () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
                 null != n &&
                     (null != t
@@ -152,7 +155,7 @@ class E extends i.Component {
                                   channel: t,
                                   inviteKey: n,
                                   location: l,
-                                  suggested: this.getSuggestedProps(),
+                                  inviteAnalyticsMetadata: this.getInviteAnalyticsMetadata(),
                               },
                               (e) => {
                                   this.setState({
@@ -169,7 +172,7 @@ class E extends i.Component {
                                   user: e,
                                   inviteKey: n,
                                   location: l,
-                                  suggested: this.getSuggestedProps(),
+                                  inviteAnalyticsMetadata: this.getInviteAnalyticsMetadata(),
                               },
                               (e) => {
                                   this.setState({

@@ -32,8 +32,8 @@ var r = n(278074),
     x = n(467512),
     L = n(779832),
     j = n(786761),
-    k = n(459618),
-    M = n(541288),
+    M = n(459618),
+    k = n(541288),
     U = n(3148),
     G = n(48854),
     B = n(785359),
@@ -144,17 +144,24 @@ class eL {
     }
 }
 function ej(e) {
-    let { content: t, channelId: n, messageId: r, location: a, suggested: o = null, overrideProperties: s = {} } = e,
+    let {
+            content: t,
+            channelId: n,
+            messageId: r,
+            location: a,
+            inviteAnalyticsMetadata: o,
+            overrideProperties: s = {},
+        } = e,
         l = ei.default.getId();
     (0, y.ZP)(t).forEach((e) => {
         let { type: t, code: c, url: u } = e;
         if (t === b.g.INVITE)
-            ek({
+            eM({
                 inviteKey: c,
                 channelId: n,
                 messageId: r,
                 location: a,
-                suggested: o,
+                inviteAnalyticsMetadata: o,
                 overrideProperties: s,
             });
         else if (t === b.g.TEMPLATE) {
@@ -197,9 +204,16 @@ function ej(e) {
         else throw Error("Unknown coded link type: ".concat(t));
     });
 }
-function ek(e) {
+function eM(e) {
     var t, n;
-    let { inviteKey: r, channelId: i, messageId: a, location: o, suggested: s = null, overrideProperties: l = {} } = e,
+    let {
+            inviteKey: r,
+            channelId: i,
+            messageId: a,
+            location: o,
+            inviteAnalyticsMetadata: s,
+            overrideProperties: l = {},
+        } = e,
         c = ei.default.getId(),
         u = eo.Z.getInvite(r),
         f = (0, P.fU)(r),
@@ -226,11 +240,13 @@ function ek(e) {
             }
         }
         null != s &&
-            ((t.is_suggested = s.isAffinitySuggestion),
-            (t.row_num = s.rowNum),
-            (t.num_total = s.numTotal),
-            (t.num_affinity_connections = s.numAffinityConnections),
-            (t.is_filtered = s.isFiltered)),
+            (null != s.suggestionData &&
+                ((t.is_suggested = s.suggestionData.isAffinitySuggestion),
+                (t.row_num = s.suggestionData.rowNum),
+                (t.num_total = s.suggestionData.numTotal),
+                (t.num_affinity_connections = s.suggestionData.numAffinityConnections),
+                (t.is_filtered = s.suggestionData.isFiltered)),
+            (t.source = s.source)),
             (t = eC(
                 eR(eC({}, t), {
                     location: o,
@@ -266,7 +282,7 @@ function ek(e) {
             d.ZP.trackWithMetadata(eO.rMx.INVITE_SENT, e));
     }
 }
-function eM(e, t, n, r, i) {
+function ek(e, t, n, r, i) {
     (0, eh.Q_)(e).forEach((e) => {
         let a = ea.Z.getChannel(t);
         null != a &&
@@ -847,7 +863,7 @@ let eB = {
             i = eR(eC({}, i), { nonce: o });
             let s = () => eZ._sendMessage(e, t, i),
                 l = L.ZP.backgroundify(s, void 0);
-            return (k.Z.recordMessageSendAttempt(e, o, i), es.Z.isReady(e))
+            return (M.Z.recordMessageSendAttempt(e, o, i), es.Z.isReady(e))
                 ? l()
                 : r && e !== E.V
                   ? (eD.info("Waiting for channel ".concat(e, " to be ready before sending.")),
@@ -916,7 +932,7 @@ let eB = {
                     },
                     {
                         location: n,
-                        suggestedInvite: null != r ? r : void 0,
+                        inviteAnalyticsMetadata: r,
                     },
                 )
             );
@@ -932,7 +948,7 @@ let eB = {
                 },
                 {
                     location: n,
-                    suggestedInvite: null != r ? r : void 0,
+                    inviteAnalyticsMetadata: r,
                 },
             ),
         sendStickers(e, t) {
@@ -967,7 +983,7 @@ let eB = {
                 })
                 .then(
                     (n) => (
-                        M.Z.donateSentMessage(n.body.content, e),
+                        k.Z.donateSentMessage(n.body.content, e),
                         eZ.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: "STICKER_TRACK_USAGE",
@@ -1035,7 +1051,7 @@ let eB = {
                 {
                     activityAction: h,
                     location: m,
-                    suggestedInvite: g,
+                    inviteAnalyticsMetadata: g,
                     stickerIds: E,
                     confettiPotionData: b,
                     messageReference: y,
@@ -1176,7 +1192,7 @@ let eB = {
                         (o) => {
                             let c = Date.now() - i;
                             if (o.ok) {
-                                M.Z.donateSentMessage(d, e),
+                                k.Z.donateSentMessage(d, e),
                                     eZ.receiveMessage(e, o.body, !0, {
                                         sendAnalytics: {
                                             duration: c,
@@ -1208,7 +1224,7 @@ let eB = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                k.Z.recordMessageSendApiResponse(en),
+                                M.Z.recordMessageSendApiResponse(en),
                                     s.Z.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: ed.S.SendMessage,
@@ -1234,9 +1250,9 @@ let eB = {
                                         channelId: e,
                                         messageId: o.body.id,
                                         location: null != m ? m : "chat_input",
-                                        suggested: g,
+                                        inviteAnalyticsMetadata: g,
                                     }),
-                                    eM(d, e, o.body.id, null != m ? m : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
+                                    ek(d, e, o.body.id, null != m ? m : "chat_input", !!n.isGiftLinkSentOnBehalfOfUser),
                                     null != l &&
                                         s.Z.dispatch({
                                             type: "UPLOAD_COMPLETE",
@@ -1499,6 +1515,6 @@ let eB = {
                             confirmText: eS.intl.string(eS.t.BddRzc),
                         });
                 }),
-        trackInvite: ek,
+        trackInvite: eM,
     },
     eF = eZ;
