@@ -4,16 +4,16 @@ let r = (0, n(427164).le)({
     kind: "user",
     defaultConfig: {
         enabled: !1,
-        force: !1,
+        installStartup: !1,
     },
     variations: {
         1: {
             enabled: !0,
-            force: !1,
+            installStartup: !1,
         },
         2: {
             enabled: !0,
-            force: !0,
+            installStartup: !0,
         },
     },
 });
