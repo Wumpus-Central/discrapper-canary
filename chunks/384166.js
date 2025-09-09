@@ -67,7 +67,10 @@ function y(e) {
                 return;
             }
             for (let e of I) {
-                let t = { widgetEdited: e.type };
+                let t = {
+                    widgetEdited: e.type,
+                    isWidgetRemoved: !1,
+                };
                 (0, f.Wc)(e) &&
                     ((t.gameIds = e.games.map((e) => e.applicationId)),
                     (t.tags = e.games
@@ -82,7 +85,11 @@ function y(e) {
                     }, 0))),
                     n(t);
             }
-            for (let e of C) n({ widgetEdited: e.type });
+            for (let e of C)
+                n({
+                    widgetEdited: e.type,
+                    isWidgetRemoved: !0,
+                });
         }, [v, I, C, n]),
         x = i.useCallback(() => {
             h.Z.clearPendingWidgets();

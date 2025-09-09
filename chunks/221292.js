@@ -339,6 +339,7 @@ let v = (e) => {
             gameIds: o,
             tags: s,
             numCharactersCommentary: l,
+            isWidgetRemoved: c,
         } = e;
         C(O(b({}, e), { action: "EDIT_SAVED" })),
             u.default.track(
@@ -349,6 +350,7 @@ let v = (e) => {
                     game_ids: o,
                     tags: s,
                     num_characters_commentary: l,
+                    is_widget_removed: c,
                 }),
             );
     };
