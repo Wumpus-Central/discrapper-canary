@@ -83,7 +83,7 @@ let g = (e, t, n, r) => {
                     ? h.intl.string(h.t.APcKRk)
                     : D === _.Vt.FRACTIONAL_PREMIUM
                       ? h.intl.string(h.t.FhJ74u)
-                      : h.intl.string(h.t.jCRYDw)),
+                      : h.intl.string(h.t["Sxed/P"])),
                 Array.isArray(U) ? (U = [...U, " ".concat(e)]) : (U += " ".concat(e));
         } else if (I)
             if (null != s && (null == T ? void 0 : T.subscriptionPeriodEnd) != null)
@@ -110,8 +110,8 @@ let g = (e, t, n, r) => {
                 case f.POd.COLLECTIBLES:
                     (G = M),
                         (U = y
-                            ? h.intl.format(h.t.ofqyUl, { paidURL: f.EYA.PAID_TERMS })
-                            : h.intl.format(h.t.G3l0s7, { paidURL: f.EYA.PAID_TERMS }));
+                            ? h.intl.format(h.t.Amdf8f, { paidURL: f.EYA.PAID_TERMS })
+                            : h.intl.format(h.t["40vM4u"], { paidURL: f.EYA.PAID_TERMS }));
                     break;
                 case f.POd.GUILD_PRODUCT:
                     (G = M), (U = h.intl.format(h.t["GEAQ+v"], { paidURL: f.EYA.PAID_TERMS }));
