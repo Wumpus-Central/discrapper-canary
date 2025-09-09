@@ -263,13 +263,14 @@ class C extends (r = a.Component) {
 T(C, "defaultProps", { unread: !1 });
 class N extends a.Component {
     renderIcon() {
-        let { channel: e } = this.props;
+        let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
             className: I.dmIconContainer,
             children: (0, i.jsx)(o.qEK, {
                 src: (0, c.x)(e),
                 size: o.EFr.SIZE_20,
                 "aria-hidden": !0,
+                status: t,
             }),
         });
     }
@@ -336,13 +337,15 @@ class N extends a.Component {
 }
 class R extends a.Component {
     renderIcon() {
-        let { user: e } = this.props;
+        let { user: e, status: t, isMobile: n } = this.props;
         return (0, i.jsx)("div", {
             className: I.iconContainer,
             children: (0, i.jsx)(o.qEK, {
                 src: e.getAvatarURL(void 0, 20),
                 "aria-hidden": !0,
                 size: o.EFr.SIZE_20,
+                status: t,
+                isMobile: n,
             }),
         });
     }
