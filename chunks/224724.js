@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => A }), n(388685), n(539854);
 var r = n(392711),
     i = n.n(r),
     a = n(442837),
@@ -63,22 +63,48 @@ class S extends a.ZP.Store {
     hasPendingChanges() {
         return null !== c && (null === u || !i().isEqual(c, u));
     }
-    hasSaveablePendingChanges() {
+    getWidgetUpdates() {
         let e = this.getSaveablePendingWidgets();
-        if (null == e) return !1;
-        if (null == u) return !0;
+        if (null == e || null == u)
+            return {
+                changedWidgets: null != e ? e : [],
+                removedWidgets: [],
+                hasOrderChanges: !1,
+            };
         let t = new Map(u.map((e) => [e.id, e])),
-            n = new Map(e.map((e) => [e.id, e]));
-        for (let [e, r] of n) {
+            n = new Map(e.map((e) => [e.id, e])),
+            r = [],
+            i = [];
+        for (let [e, i] of n) {
             let n = t.get(e);
-            if (null == n || !r.isEqual(n)) return !0;
+            (null != n && i.isEqual(n)) || r.push(i);
         }
-        for (let [e] of t) if (!n.has(e)) return !0;
+        for (let [e, r] of t) n.has(e) || i.push(r);
+        let a = !1;
         for (let t = 0; t < e.length; t++) {
-            var r, i;
-            if ((null == (r = e[t]) ? void 0 : r.id) !== (null == (i = u[t]) ? void 0 : i.id)) return !0;
+            var o, s;
+            if ((null == (o = e[t]) ? void 0 : o.id) !== (null == (s = u[t]) ? void 0 : s.id)) {
+                a = !0;
+                break;
+            }
         }
-        return !1;
+        return {
+            changedWidgets: r,
+            removedWidgets: i,
+            hasOrderChanges: a,
+        };
+    }
+    getChangedWidgets() {
+        let { changedWidgets: e } = this.getWidgetUpdates();
+        return e;
+    }
+    getRemovedWidgets() {
+        let { removedWidgets: e } = this.getWidgetUpdates();
+        return e;
+    }
+    hasSaveablePendingChanges() {
+        let { changedWidgets: e, removedWidgets: t, hasOrderChanges: n } = this.getWidgetUpdates();
+        return e.length > 0 || t.length > 0 || n;
     }
     get isSubmitting() {
         return d;

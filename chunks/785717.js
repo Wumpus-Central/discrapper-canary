@@ -130,5 +130,11 @@ let u = i.createContext(null),
                 },
                 [e, t],
             ),
+            trackUserProfileEditSaved: i.useCallback(
+                (n) => {
+                    null != e && (0, s.V1)(c({ analyticsLocations: t }, e, n));
+                },
+                [e, t],
+            ),
         };
     };

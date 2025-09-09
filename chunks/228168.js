@@ -156,6 +156,7 @@ var o = (function (e) {
             (e.PRESS_LEAVE_THREAD = "PRESS_LEAVE_THREAD"),
             (e.VIEW_WIDGET = "VIEW_WIDGET"),
             (e.PRESS_GAME_WIDGET_BREADCRUMB = "PRESS_GAME_WIDGET_BREADCRUMB"),
+            (e.EDIT_SAVED = "EDIT_SAVED"),
             e
         );
     })({});
