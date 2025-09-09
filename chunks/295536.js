@@ -22,7 +22,7 @@ function p(e) {
                   label: f.name,
                   icon: (0, r.jsx)(a.Z, {
                       game: f,
-                      size: a.A.XSMALL,
+                      className: d.icon,
                   }),
                   setStatus: () => (0, c.XE)(f.id, !0),
               }),
