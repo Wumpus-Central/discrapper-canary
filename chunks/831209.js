@@ -355,6 +355,7 @@ var r = (function (e) {
         (e.FORUM_POST_EXTRA_MEDIA_COUNT_CONTAINER_BACKGROUND =
             "var(--forum-post-extra-media-count-container-background)"),
         (e.FORUM_POST_TAG_BACKGROUND = "var(--forum-post-tag-background)"),
+        (e.GRADIENT_PROGRESS_PILL_BACKGROUND = "var(--gradient-progress-pill-background)"),
         (e.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND =
             "var(--guild-notifications-bottom-sheet-pill-background)"),
         (e.HEADER_MUTED = "var(--header-muted)"),

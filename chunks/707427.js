@@ -2928,6 +2928,25 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.9,
                 },
             },
+            GRADIENT_PROGRESS_PILL_BACKGROUND: {
+                category: "generic",
+                [r.DARK]: {
+                    raw: "NEUTRAL_45",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_18",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_63",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_56",
+                    opacity: 1,
+                },
+            },
             GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {

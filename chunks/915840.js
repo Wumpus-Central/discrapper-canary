@@ -1784,6 +1784,24 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
             },
+            GRADIENT_PROGRESS_PILL_BACKGROUND: {
+                [r.DARK]: {
+                    raw: "NEUTRAL_34",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_30",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_44",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_41",
+                    opacity: 1,
+                },
+            },
             HEADER_MUTED: {
                 [r.DARK]: {
                     raw: "NEUTRAL_12",
