@@ -7,7 +7,7 @@ var r = n(879690),
     i = n(731965);
 let a = "#5865F2",
     o = 74,
-    s = (0, r.U)((e) => ({
+    s = (0, r.U)((e, t) => ({
         colors: [],
         chassisMixAmount: o,
         gradientAngle: 0,
@@ -36,4 +36,5 @@ let a = "#5865F2",
                 });
             });
         },
+        isEditorActive: () => t().colors.length > 0,
     }));

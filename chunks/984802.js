@@ -1,26 +1,35 @@
 n.d(t, {
-    A6: () => d,
-    Ll: () => f,
-    Zp: () => u,
+    A6: () => _,
+    Ll: () => p,
+    Zp: () => f,
 });
 var r = n(442837),
     i = n(780384),
-    a = n(514361),
-    o = n(210887),
-    s = n(740492),
-    l = n(981631);
-function c() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.Z,
-        { darkSidebar: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.ZP,
-        { gradientPreset: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Z;
-    return (0, i.ap)(e.theme) && t && null == n;
-}
-function u() {
-    return c();
-}
+    a = n(233398),
+    o = n(514361),
+    s = n(210887),
+    l = n(740492),
+    c = n(695346),
+    u = n(981631);
 function d() {
-    return (0, r.e7)([o.Z, s.ZP, a.Z], () => c(o.Z, s.ZP, a.Z));
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
+        { darkSidebar: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.ZP,
+        { gradientPreset: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        a = arguments.length > 4 ? arguments[4] : void 0,
+        c = null != r.customUserThemeSettings || a;
+    return (0, i.ap)(e.theme) && t && null == n && !c;
 }
 function f() {
-    return d() ? l.BRd.DARK : void 0;
+    let e = c.L1.getSetting(),
+        t = a.Ig.getState().isEditorActive();
+    return d(s.Z, l.ZP, o.Z, e, t);
+}
+function _() {
+    let e = c.L1.useSetting(),
+        t = (0, a.Ig)((e) => e.isEditorActive());
+    return (0, r.e7)([s.Z, l.ZP, o.Z], () => d(s.Z, l.ZP, o.Z, e, t));
+}
+function p() {
+    return _() ? u.BRd.DARK : void 0;
 }
