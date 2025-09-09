@@ -24,7 +24,6 @@ function u(e) {
                               title: null != d ? d : l.intl.string(l.t.Zb06yM),
                               hideDivider: !0,
                               className: c.preview,
-                              showViewFullProfileButton: !0,
                               children: u,
                           }),
                           null != f
@@ -41,7 +40,6 @@ function u(e) {
                       title: null != d ? d : l.intl.string(l.t.Zb06yM),
                       hideDivider: !0,
                       className: c.preview,
-                      showViewFullProfileButton: !0,
                       children: u,
                   });
     return (0, r.jsx)("div", {

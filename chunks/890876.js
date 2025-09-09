@@ -1,32 +1,27 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => l });
 var r = n(951288);
 n(647438);
-var i = n(892001),
-    a = n(732380),
-    o = n(955418),
-    s = n(388032),
-    l = n(116649);
-function c(e) {
-    let { user: t, hideMessageInput: n, hideViewFullProfileButton: c } = e;
+var i = n(732380),
+    a = n(955418),
+    o = n(388032),
+    s = n(116649);
+function l(e) {
+    let { user: t, hideMessageInput: n, hideExampleButton: l } = e;
     return n
-        ? c
+        ? l
             ? null
             : (0, r.jsx)("div", {
-                  className: l.footer,
-                  children: (0, r.jsx)(a.O1, {
+                  className: s.footer,
+                  children: (0, r.jsx)(i.O1, {
                       variant: "primary",
-                      text: s.intl.string(s.t["+Xp3ho"]),
-                      onClick: () =>
-                          (0, i.openUserProfileModal)({
-                              userId: t.id,
-                              disableActionsForPreview: !0,
-                          }),
+                      text: o.intl.string(o.t.hZkfwc),
+                      onClick: () => {},
                       fullWidth: !0,
                   }),
               })
         : (0, r.jsx)("div", {
-              className: l.footer,
+              className: s.footer,
               inert: !0,
-              children: (0, r.jsx)(o.Z, { user: t }),
+              children: (0, r.jsx)(a.Z, { user: t }),
           });
 }

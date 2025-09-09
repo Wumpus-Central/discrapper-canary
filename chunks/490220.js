@@ -72,6 +72,6 @@ function p(e) {
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         disabledInputs: p,
-        hideViewFullProfileButton: !0,
+        hideExampleButton: !0,
     });
 }

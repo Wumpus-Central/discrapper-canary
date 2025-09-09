@@ -70,8 +70,8 @@ function E(e, t) {
 function T(e) {
     let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: T, onClose: R } = e,
         A = (0, c.ZP)(),
-        w = (0, s.wjy)(A),
-        [I, L] = (0, o.useState)(w),
+        I = (0, s.wjy)(A),
+        [w, L] = (0, o.useState)(I),
         B = (0, b.ZP)(t.id, null),
         { bannerSrc: M } = (0, x.Z)({
             displayProfile: B,
@@ -83,8 +83,8 @@ function T(e) {
             userId: t.id,
             image: G.pendingAvatar,
         }),
-        Y = I ? O.BRd.DARK : O.BRd.LIGHT;
-    ((w && I) || (!w && !I)) && (Y = A);
+        Y = w ? O.BRd.DARK : O.BRd.LIGHT;
+    ((I && w) || (!I && !w)) && (Y = A);
     let H = (0, o.useCallback)(() => {
             S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), R();
         }, [R]),
@@ -146,7 +146,7 @@ function T(e) {
                                     hideBioSection: !0,
                                     containerClassName: k.profile,
                                     interactive: !1,
-                                    hideViewFullProfileButton: !0,
+                                    hideExampleButton: !0,
                                 }),
                             ),
                             (0, r.jsx)(m.Z, {
@@ -194,7 +194,7 @@ function T(e) {
                         }),
                     }),
                     (0, r.jsx)(D, {
-                        darkPreview: I,
+                        darkPreview: w,
                         onToggleTheme: z,
                     }),
                 ],

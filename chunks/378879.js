@@ -13,8 +13,8 @@ var a = n(481060),
     f = n(792254),
     p = n(790527),
     A = n(474936),
-    l = n(981631),
-    b = n(486324),
+    b = n(981631),
+    l = n(486324),
     u = n(388032),
     R = n(561870);
 function L(e) {
@@ -59,8 +59,8 @@ function Z(e) {
                             uploadType: t,
                             analyticsSource: o,
                             analyticsLocation: {
-                                section: l.jXE.USER_PROFILE,
-                                object: l.qAy.BUTTON_CTA,
+                                section: b.jXE.USER_PROFILE,
+                                object: b.qAy.BUTTON_CTA,
                             },
                             onSecondaryClick: a.pTH,
                         },
@@ -77,7 +77,7 @@ function g(e) {
             uploadType: n,
             imageSrc: a,
             onClose: r,
-            analyticsSource: l,
+            analyticsSource: b,
             analyticsLocation: Z,
             onSecondaryClick: g,
         } = e,
@@ -110,16 +110,16 @@ function g(e) {
             "analyticsLocation",
             "onSecondaryClick",
         ]);
-    let _ = (0, o.ZP)(t.id),
-        { primaryColor: m, secondaryColor: C } = (0, s.Z)({
+    let m = (0, o.ZP)(t.id),
+        { primaryColor: _, secondaryColor: C } = (0, s.Z)({
             user: t,
-            displayProfile: _,
-            pendingAvatarSrc: n === b.pC.AVATAR ? a : void 0,
+            displayProfile: m,
+            pendingAvatarSrc: n === l.pC.AVATAR ? a : void 0,
             isPreview: !0,
         }),
-        O = n === b.pC.AVATAR || n === b.pC.BANNER,
+        O = n === l.pC.AVATAR || n === l.pC.BANNER,
         h = null != a,
-        T = (0, f.Z)(n === b.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
+        T = (0, f.Z)(n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL);
     return O
         ? (0, c.jsx)(
               p.Z,
@@ -128,17 +128,17 @@ function g(e) {
                       artURL: h ? void 0 : T,
                       modalClassName: h ? R.modal : void 0,
                       modalContentClassName: h ? R.modalContent : void 0,
-                      type: n === b.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL,
-                      title: n === b.pC.AVATAR ? u.intl.string(u.t["X7tO6+"]) : u.intl.string(u.t.zXPa2N),
-                      body: n === b.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
-                      glowUp: n === b.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
+                      type: n === l.pC.AVATAR ? A.cd.ANIMATED_AVATAR_MODAL_UPSELL : A.cd.ANIMATED_BANNER_MODAL_UPSELL,
+                      title: n === l.pC.AVATAR ? u.intl.string(u.t["X7tO6+"]) : u.intl.string(u.t.zXPa2N),
+                      body: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
+                      glowUp: n === l.pC.AVATAR ? u.intl.string(u.t.ifCRdH) : u.intl.string(u.t.yQAnf3),
                       onSecondaryClick: () => {
                           null == g || g(), (0, i.$)(r);
                       },
                       secondaryCTA: u.intl.string(u.t.PcTCBw),
                       onClose: r,
                       enableArtBoxShadow: !1,
-                      analyticsSource: l,
+                      analyticsSource: b,
                       analyticsLocation: Z,
                       hideBackButton: !0,
                       showEnhancedUpsell: !0,
@@ -150,10 +150,10 @@ function g(e) {
                                     user: t,
                                     canUsePremiumCustomization: !0,
                                     disabledInputs: !0,
-                                    pendingAvatar: n === b.pC.AVATAR ? a : void 0,
-                                    pendingBanner: n === b.pC.BANNER ? a : void 0,
-                                    pendingThemeColors: [m, C],
-                                    hideViewFullProfileButton: !0,
+                                    pendingAvatar: n === l.pC.AVATAR ? a : void 0,
+                                    pendingBanner: n === l.pC.BANNER ? a : void 0,
+                                    pendingThemeColors: [_, C],
+                                    hideExampleButton: !0,
                                 }),
                             })
                           : void 0,

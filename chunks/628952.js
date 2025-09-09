@@ -119,7 +119,7 @@ let I = (e) => {
                                                 pendingProfileEffectId: P.type === s.Z.PROFILE_EFFECT ? P.id : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0,
-                                                hideViewFullProfileButton: !0,
+                                                hideExampleButton: !0,
                                             }),
                                         ),
                                     align: "center",

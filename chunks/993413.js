@@ -1,113 +1,82 @@
-n.d(t, { Z: () => b }), n(704826), n(35282), n(953529);
+n.d(t, { Z: () => p }), n(704826), n(35282), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(755721),
-    c = n(481060),
-    u = n(892001),
-    d = n(594174),
-    f = n(403182),
-    _ = n(587446),
-    p = n(504983),
-    h = n(388032),
-    m = n(607878);
-function g(e) {
+    s = n(481060),
+    l = n(403182),
+    c = n(587446),
+    u = n(504983),
+    d = n(607878);
+function f(e) {
     return e.replace(/[0-9.,]+ ?kb/g, (e) => {
         let t = 1024 * parseInt(e, 10);
-        return isNaN(t) ? e : (0, f.Ng)(t);
+        return isNaN(t) ? e : (0, l.Ng)(t);
     });
 }
-function E(e) {
+function _(e) {
     let { errors: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) =>
             (0, r.jsx)(
-                c.Text,
+                s.Text,
                 {
                     variant: "text-xs/normal",
                     color: "text-danger",
-                    className: m.errorMessage,
-                    children: g(e),
+                    className: d.errorMessage,
+                    children: f(e),
                 },
                 t,
             ),
         ),
     });
 }
-let b = i.forwardRef(function (e, t) {
+let p = i.forwardRef(function (e, t) {
     let {
-            title: n,
-            titleIcon: i,
-            titleId: a,
-            description: f,
-            children: g,
-            className: b,
-            errors: y,
-            disabled: O = !1,
-            hideDivider: v = !1,
-            showBorder: I = !1,
-            borderType: T,
-            hasBackground: S = !1,
-            forcedDivider: A = !1,
-            showPremiumIcon: C = !1,
-            showViewFullProfileButton: N = !1,
-        } = e,
-        R = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        P = () => {
-            null != R &&
-                (0, u.openUserProfileModal)({
-                    userId: R.id,
-                    disableActionsForPreview: !0,
-                });
-        };
+        title: n,
+        titleIcon: i,
+        titleId: a,
+        description: l,
+        children: f,
+        className: p,
+        errors: h,
+        disabled: m = !1,
+        hideDivider: g = !1,
+        showBorder: E = !1,
+        borderType: b,
+        hasBackground: y = !1,
+        forcedDivider: O = !1,
+        showPremiumIcon: v = !1,
+    } = e;
     return (0, r.jsx)("div", {
-        className: o()(m.customizationSection, b, {
-            [m.disabled]: O,
-            [m.hideDivider]: v,
-            [m.showBorder]: I,
-            [m.withDivider]: A,
+        className: o()(d.customizationSection, p, {
+            [d.disabled]: m,
+            [d.hideDivider]: g,
+            [d.showBorder]: E,
+            [d.withDivider]: O,
         }),
         ref: t,
-        children: (0, r.jsxs)(p.Z, {
-            className: m.customizationSectionBorder,
-            backgroundClassName: m.customizationSectionBackground,
-            isShown: I,
-            type: T,
-            hasBackground: S,
+        children: (0, r.jsxs)(u.Z, {
+            className: d.customizationSectionBorder,
+            backgroundClassName: d.customizationSectionBackground,
+            isShown: E,
+            type: b,
+            hasBackground: y,
             children: [
-                (0, r.jsxs)(c.vwX, {
-                    className: m.title,
+                (0, r.jsxs)(s.vwX, {
+                    className: d.title,
                     id: a,
-                    children: [
-                        n,
-                        C && (0, r.jsx)(_.Z, {}),
-                        i,
-                        N &&
-                            null != R &&
-                            (0, r.jsx)(l.zx, {
-                                look: l.zx.Looks.LINK,
-                                color: l.zx.Colors.TRANSPARENT,
-                                size: l.zx.Sizes.TINY,
-                                className: m.viewFullProfileButton,
-                                onClick: P,
-                                children: (0, r.jsx)(c.Text, {
-                                    variant: "text-xs/normal",
-                                    children: h.intl.string(h.t["+Xp3ho"]),
-                                }),
-                            }),
-                    ],
+                    children: [n, v && (0, r.jsx)(c.Z, {}), i],
                 }),
-                null != f
-                    ? (0, r.jsx)(c.R94, {
-                          type: c.R94.Types.DESCRIPTION,
-                          className: m.sectionDescription,
-                          children: f,
+                null != l
+                    ? (0, r.jsx)(s.R94, {
+                          type: s.R94.Types.DESCRIPTION,
+                          className: d.sectionDescription,
+                          children: l,
                       })
                     : null,
-                g,
-                null != y && (0, r.jsx)(E, { errors: y }),
+                f,
+                null != h && (0, r.jsx)(_, { errors: h }),
             ],
         }),
     });
