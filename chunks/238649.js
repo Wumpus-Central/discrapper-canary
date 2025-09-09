@@ -105,7 +105,9 @@ let C = (e, t) => {
                                         children: (0, r.jsx)(l.Text, {
                                             color: "text-tertiary",
                                             variant: "text-xs/medium",
-                                            children: S.intl.format(S.t.kt9wxs, { cheapestMonthlyPrice: R }),
+                                            children: k
+                                                ? S.intl.string(S.t["6V7qRk"])
+                                                : S.intl.format(S.t.kt9wxs, { cheapestMonthlyPrice: R }),
                                         }),
                                     }),
                                 ],
