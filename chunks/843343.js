@@ -1,26 +1,25 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(91192),
     l = n(442837),
     o = n(481060),
-    a = n(299379),
-    s = n(486472),
-    c = n(430824),
-    u = n(682662),
-    d = n(662146),
-    p = n(981631),
-    h = n(388032),
+    a = n(486472),
+    s = n(430824),
+    c = n(682662),
+    u = n(662146),
+    d = n(231338),
+    p = n(388032),
     f = n(419619);
-function g() {
+function h() {
     var e, t;
-    let n = (0, l.e7)([s.Z, c.Z], () => s.Z.unavailableGuilds.filter((e) => null == c.Z.getGuild(e)).length),
-        g = (0, i.Ie)("unavailable-guilds-button");
+    let n = (0, l.e7)([a.Z, s.Z], () => a.Z.unavailableGuilds.filter((e) => null == s.Z.getGuild(e)).length),
+        h = (0, i.Ie)("unavailable-guilds-button");
     return n <= 0
         ? null
-        : (0, r.jsx)(u.H, {
-              children: (0, r.jsx)(d.Z, {
-                  text: h.intl.format(h.t["TnH05+"], { count: n }),
+        : (0, r.jsx)(c.H, {
+              children: (0, r.jsx)(u.Z, {
+                  text: p.intl.format(p.t["TnH05+"], { count: n }),
                   color: o.ua7.Colors.RED,
                   children: (0, r.jsx)(
                       o.eee,
@@ -50,12 +49,12 @@ function g() {
                           return e;
                       })(
                           {
-                              href: (0, a.Z)(p.RK.TWITTER),
+                              href: d.yX.STATUS,
                               target: "_blank",
                               className: f.guildsError,
-                              "aria-label": h.intl.formatToPlainString(h.t["MEpX+/"], { count: n }),
+                              "aria-label": p.intl.formatToPlainString(p.t["MEpX+/"], { count: n }),
                           },
-                          g,
+                          h,
                       )),
                       (t = t =
                           {
