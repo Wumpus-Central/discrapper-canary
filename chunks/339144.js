@@ -12,8 +12,8 @@ var r = n(951288),
     u = n(636449),
     d = n(620662),
     p = n(513202),
-    h = n(906732),
-    f = n(20471),
+    f = n(906732),
+    h = n(20471),
     g = n(522651),
     m = n(311352),
     b = n(668519),
@@ -27,12 +27,18 @@ var r = n(951288),
     E = n(388032),
     S = n(258628);
 function P(e, t, n) {
-    return (
-        null != e &&
-        (null != n
-            ? n.applicationId === e.id
-            : null != t && t.application_id === e.id && t.type === C.IIU.PLAYING && (0, d.Z)(t, C.xjy.JOIN))
-    );
+    if (null == e) return !1;
+    if (null != n) return n.applicationId === e.id;
+    if (null != t) {
+        var r;
+        return (
+            (t.application_id === e.id ||
+                (null == (r = e.linkedGames) ? void 0 : r.some((e) => e.id === t.application_id))) &&
+            t.type === C.IIU.PLAYING &&
+            (0, d.Z)(t, C.xjy.JOIN)
+        );
+    }
+    return !1;
 }
 let I = i.memo(function (e) {
     let t,
@@ -56,9 +62,9 @@ let I = i.memo(function (e) {
             location: "Activity Panel",
             autoTrackExposure: !1,
         }),
-        { parentAnalyticsLocation: B } = (0, h.ZP)(),
-        F = P(k, L, M),
-        V = i.useCallback(() => {
+        { parentAnalyticsLocation: B } = (0, f.ZP)(),
+        V = P(k, L, M),
+        F = i.useCallback(() => {
             o()(null != L, "Received null activity"),
                 (0, g.v)(B, g.d.INVITE),
                 v.default.track(C.rMx.OPEN_MODAL, {
@@ -140,7 +146,7 @@ let I = i.memo(function (e) {
                 };
             });
         }, [A, w, D, G]),
-        { canStartAuthorization: K, startAuthorization: Y, hasAlreadyLinked: q } = (0, f.F)(k),
+        { canStartAuthorization: K, startAuthorization: Y, hasAlreadyLinked: q } = (0, h.F)(k),
         X = j.Z.useConfig({ location: "ActivityActions" }).enabled,
         Q =
             (null != D || null == M || (0, u.R)()) && (T || Z)
@@ -181,10 +187,10 @@ let I = i.memo(function (e) {
                   }))
                 : null,
         J =
-            F && null == M
+            V && null == M
                 ? (0, r.jsx)(x.Z, {
                       tooltipText: E.intl.string(E.t["hC/Ze3"]),
-                      onClick: V,
+                      onClick: F,
                       icon: s.ejJ,
                   })
                 : null,
