@@ -20,7 +20,7 @@ var r = n(951288),
     O = n(981631),
     v = n(921944),
     I = n(388032),
-    T = n(759291);
+    T = n(505754);
 function S(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ let R = i.memo((e) => {
             b === E.gM.CARD_CAROUSEL_SECOND_ROW ||
             b === E.gM.CARD_CAROUSEL_THIRD_ROW,
         j = (0, g.Z)(),
-        [k, M] = (0, _.cv)(null != a && n ? [a] : []),
+        [M, k] = (0, _.cv)(null != a && n ? [a] : []),
         { easterEggLevel: U, isEasterEggTriggered: G, onHover: B, onUnhover: Z } = (0, m.Z)(5),
         F = (0, s.debounce)(() => {
             p.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, s.snakeCase)(t) });
@@ -100,22 +100,22 @@ let R = i.memo((e) => {
             null == y || y(), V();
         };
     e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
-    let Y = k !== a || null == a || D,
+    let Y = M !== a || null == a || D,
         W = (e) => {
             C &&
                 "transform" === e.propertyName &&
                 e.target.classList.contains(T.flipCard) &&
                 (x(!0),
                 p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
-                null != a && M(v.L.TAKE_ACTION));
+                null != a && k(v.L.TAKE_ACTION));
         };
     return (i.useEffect(() => {
         S &&
             C &&
             (x(!0),
             p.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
-            null != a && M(v.L.TAKE_ACTION));
-    }, [S, C, a, t, M]),
+            null != a && k(v.L.TAKE_ACTION));
+    }, [S, C, a, t, k]),
     (0, f.Z)({
         type: l.ImpressionTypes.VIEW,
         name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD,
@@ -213,7 +213,7 @@ let P = i.forwardRef((e, t) => {
             subtitle: s = "",
             description: l = "",
             descriptionCta: c = "",
-            cta: d,
+            customContent: d,
             isPremiumGetCta: f,
             onCtaClick: _,
             onMouseEnter: p,
@@ -262,7 +262,7 @@ let P = i.forwardRef((e, t) => {
                 perkImage: C,
                 isCarousel: P,
                 descriptionCta: c,
-                cta: d,
+                customContent: d,
                 onCtaClick: _,
                 perkComponent: g,
                 subtitleClassName: T.cardSubtitle,
