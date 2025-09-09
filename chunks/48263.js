@@ -1,4 +1,4 @@
-t(388685), t(413496), t(433524), t(35282), t(539854), t(642613), t(415506);
+t(388685), t(49124), t(467055), t(413496), t(433524), t(35282), t(539854), t(642613), t(415506);
 var n = t(658722),
     l = t.n(n),
     o = t(954955),
@@ -34,7 +34,7 @@ function s(e) {
 let f = new Map(),
     p = new Map(),
     d = new Set(),
-    v = a()(
+    b = a()(
         () => {
             0 !== d.size &&
                 (d.forEach((e) => {
@@ -49,19 +49,19 @@ let f = new Map(),
             trailing: !0,
         },
     );
-function b(e, r, t) {
+function v(e, r, t) {
     return e * (null != r ? r : t);
 }
 function O(e, r) {
     var t;
-    let { query: n, limit: o, filters: a, blacklist: p, whitelist: d, boosters: v, boosterFallback: O } = r,
-        m = null != a && a.strict && null != (t = a.guild) ? t : null,
-        g = RegExp("^".concat(i.Z.escape(n)), "i"),
+    let { query: n, limit: o, filters: a, blacklist: p, whitelist: d, boosters: b, boosterFallback: O } = r,
+        g = null != a && a.strict && null != (t = a.guild) ? t : null,
+        m = RegExp("^".concat(i.Z.escape(n)), "i"),
         h = RegExp(i.Z.escape(n), "i"),
         w = [];
     if ("" === n) return y(n, w, e);
-    let j = n.toLocaleLowerCase(),
-        E = (0, c.Fv)(j);
+    let E = n.toLocaleLowerCase(),
+        j = (0, c.Fv)(E);
     f.forEach((e, r) => {
         let t;
         if (
@@ -87,37 +87,37 @@ function O(e, r) {
                 id: r,
                 username: o,
                 comparator: r,
-                score: b(10, v[r], O),
+                score: v(10, b[r], O),
             };
         else {
             let n = [e.username, e.friendNickname, e.globalName].filter((e) => null != e);
-            if (null != m) {
-                let r = e.nicknames[m];
+            if (null != g) {
+                let r = e.nicknames[g];
                 null != r && n.push(r);
             } else n.push(...Object.values(e.nicknames).filter((e) => null != e));
             n.forEach((e) => {
                 var n, a;
                 let i,
                     u = (0, c._I)(e.toLocaleLowerCase());
-                g.test(e)
+                m.test(e)
                     ? (i = {
                           comparator: e,
-                          score: b(10, v[r], O),
+                          score: v(10, b[r], O),
                       })
                     : h.test(e)
                       ? (i = {
                             comparator: e,
-                            score: b(5, v[r], O),
+                            score: v(5, b[r], O),
                         })
-                      : l()(j, u)
+                      : l()(E, u)
                         ? (i = {
                               comparator: e,
-                              score: b(1, v[r], O),
+                              score: v(1, b[r], O),
                           })
-                        : l()(E, (0, c.Fv)(u)) &&
+                        : l()(j, (0, c.Fv)(u)) &&
                           (i = {
                               comparator: e,
-                              score: b(1, v[r], O),
+                              score: v(1, b[r], O),
                           }),
                     null != i &&
                         (null == t || t.score < i.score) &&
@@ -209,7 +209,7 @@ self.addEventListener("message", (e) => {
                         let { filters: l } = e;
                         (null == l || l.friends === t || l.staff === t || n.has(l.guild)) && d.add(r);
                     }),
-                    v();
+                    b();
             })(r);
         case "QUERY_SET":
             return (function (e) {
@@ -219,7 +219,17 @@ self.addEventListener("message", (e) => {
         case "QUERY_CLEAR":
             return (function (e) {
                 let { uuid: r } = e;
-                p.delete(r), d.delete(r), 0 === d.size && v.cancel();
+                p.delete(r), d.delete(r), 0 === d.size && b.cancel();
+            })(r);
+        case "REQUEST_DEBUG_STATE":
+            return (function (e) {
+                let { uuid: r } = e,
+                    t = {
+                        type: "DEBUG_STATE",
+                        uuid: r,
+                        payload: { users: JSON.stringify(Object.fromEntries(f)) },
+                    };
+                self.postMessage(t);
             })(r);
     }
 });

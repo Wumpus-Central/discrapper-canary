@@ -95,6 +95,9 @@ class b extends (r = i.ZP.Store) {
     requestMember(e, t) {
         p(e, t);
     }
+    getDebugState(e) {
+        return u.getDebugState(e);
+    }
 }
 c(b, "displayName", "GuildMemberRequesterStore");
 let y = new b(a.Z, {

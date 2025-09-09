@@ -218,6 +218,29 @@ class A extends o.Z {
         if (null == n) throw Error("SearchContextManager: No webworker initialized");
         return new S(n, e, t);
     }
+    requestDebugState() {
+        this.initialize();
+        let { _worker: e } = this;
+        return null == e
+            ? Promise.resolve(null)
+            : new Promise((t) => {
+                  let n = (0, a.Z)(),
+                      r = (i) => {
+                          let a = i.data;
+                          if (null != a && "DEBUG_STATE" === a.type && a.uuid === n)
+                              try {
+                                  t(a.payload);
+                              } finally {
+                                  e.removeEventListener("message", r, !1);
+                              }
+                      };
+                  e.addEventListener("message", r, !1),
+                      e.postMessage({
+                          type: "REQUEST_DEBUG_STATE",
+                          uuid: n,
+                      });
+              });
+    }
     constructor(...e) {
         super(...e),
             b(this, "_worker", void 0),

@@ -1,64 +1,76 @@
 n.d(t, {
-    Ft: () => _,
-    R$: () => f,
+    Ft: () => p,
+    R$: () => _,
+    ZP: () => h,
 });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
-    s = n(686546),
-    l = n(451478),
-    c = n(768581),
-    u = n(624138),
-    d = n(272714);
-function f(e) {
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(686546),
+    c = n(451478),
+    u = n(768581),
+    d = n(624138),
+    f = n(272714);
+function _(e) {
     let { guildName: t, iconSize: n, className: i } = e,
-        o = (0, u.Zg)(t);
-    return (0, r.jsx)(s.ZP, {
-        mask: s.ZP.Masks.CLAN_ICON,
+        a = (0, d.Zg)(t);
+    return (0, r.jsx)(l.ZP, {
+        mask: l.ZP.Masks.CLAN_ICON,
         width: n,
         height: n,
         className: i,
         children: (0, r.jsx)("div", {
-            className: a()(d.guildIconImage, d.acronym),
-            children: o,
+            className: o()(f.guildIconImage, f.acronym),
+            children: a,
         }),
     });
 }
-function _(e) {
-    let { guildId: t, guildName: n, guildIcon: i, iconSize: f, className: _, acronymClassName: p, animate: h } = e,
-        m = (0, o.e7)([l.Z], () => l.Z.isFocused()),
-        g = (0, c.pU)(i)
+function p(e) {
+    let { guildId: t, guildName: n, guildIcon: i, iconSize: a, className: _, acronymClassName: p, animate: h } = e,
+        m = (0, s.e7)([c.Z], () => c.Z.isFocused()),
+        g = (0, u.pU)(i)
             ? i
-            : c.ZP.getGuildIconURL({
+            : u.ZP.getGuildIconURL({
                   id: t,
                   icon: i,
-                  size: f,
+                  size: a,
                   canAnimate: h && m,
               });
     if (null == g) {
-        let e = (0, u.Zg)(n);
-        return (0, r.jsx)(s.ZP, {
-            mask: s.ZP.Masks.CLAN_ICON,
-            width: f,
-            height: f,
+        let e = (0, d.Zg)(n);
+        return (0, r.jsx)(l.ZP, {
+            mask: l.ZP.Masks.CLAN_ICON,
+            width: a,
+            height: a,
             className: _,
             children: (0, r.jsx)("div", {
-                className: a()(d.guildIconImage, d.acronym, p),
+                className: o()(f.guildIconImage, f.acronym, p),
                 children: e,
             }),
         });
     }
-    return (0, r.jsx)(s.ZP, {
-        mask: s.ZP.Masks.CLAN_ICON,
-        width: f,
-        height: f,
+    return (0, r.jsx)(l.ZP, {
+        mask: l.ZP.Masks.CLAN_ICON,
+        width: a,
+        height: a,
         className: _,
         children: (0, r.jsx)("img", {
             src: g,
             alt: n,
-            className: d.guildIconImage,
+            className: f.guildIconImage,
         }),
     });
 }
+let h = i.memo(function (e) {
+    let { guild: t, iconSize: n, className: i, animate: a } = e;
+    return (0, r.jsx)(p, {
+        guildName: t.name,
+        guildId: t.id,
+        guildIcon: t.icon,
+        iconSize: n,
+        className: i,
+        animate: a,
+    });
+});

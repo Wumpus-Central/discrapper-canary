@@ -71,6 +71,23 @@ class l {
         let t = this._guildStates[e];
         return null == t && (t = this._guildStates[e] = new s(e, this._guildMemberExists)), t;
     }
+    getDebugState(e) {
+        let t = [],
+            n = [],
+            r = [];
+        return (
+            i().forEach(this._guildStates, (i) => {
+                i._pendingRequests.has(e) && t.push(i._guildId),
+                    i._unacknowledgedRequests.has(e) && n.push(i._guildId),
+                    i._sentRequests.has(e) && r.push(i._guildId);
+            }),
+            {
+                pendingRequestGuildIds: t,
+                unacknowledgedRequestGuildIds: n,
+                sentRequestGuildIds: r,
+            }
+        );
+    }
     constructor(e, t) {
         o(this, "_onChange", void 0),
             o(this, "_guildMemberExists", void 0),
