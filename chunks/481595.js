@@ -56,8 +56,8 @@ function U(e) {
             purchaseState: G,
             paymentSources: B,
             paymentSourceId: Z,
-            setHasAcceptedTerms: V,
-            skusById: F,
+            setHasAcceptedTerms: F,
+            skusById: V,
             skuPricePreviewsById: H,
             selectedSkuId: Y,
             isEmbeddedIAP: W,
@@ -74,7 +74,7 @@ function U(e) {
             hasFetchedPaymentSources: v.Z.hasFetchedPaymentSources,
         }));
     o()(null != Y, "Expected selectedSkuId");
-    let er = F[Y],
+    let er = V[Y],
         ei = null == er ? void 0 : er.eligiblePaymentGateways,
         ea = H[Y],
         eo = null != Z ? Z : I.c,
@@ -139,10 +139,7 @@ function U(e) {
             }),
             ee && (0, r.jsx)(D.Z, { sku: er }),
             null != $ ? (0, r.jsx)(b.s, { giftRecipient: $ }) : null,
-            (0, r.jsx)(c.vwX, {
-                tag: c.RB0.H5,
-                children: J ? j.intl.string(j.t.PEjaCw) : j.intl.string(j.t.sail9P),
-            }),
+            (0, r.jsx)(c.vwX, { children: J ? j.intl.string(j.t.PEjaCw) : j.intl.string(j.t.sail9P) }),
             null != es
                 ? (0, r.jsx)(x.B, {
                       sku: er,
@@ -160,10 +157,7 @@ function U(e) {
             (0, r.jsxs)("div", {
                 className: M.paymentSourceWrapper,
                 children: [
-                    (0, r.jsx)(c.vwX, {
-                        tag: c.RB0.H5,
-                        children: j.intl.string(j.t.mmDvV1),
-                    }),
+                    (0, r.jsx)(c.vwX, { children: j.intl.string(j.t.mmDvV1) }),
                     (0, r.jsx)(_.ZP, {
                         paymentSources: Object.values(B),
                         selectedPaymentSourceId: Z,
@@ -178,7 +172,7 @@ function U(e) {
                 isActive: t,
                 ref: n,
                 children: (0, r.jsx)(p.Z, {
-                    onChange: V,
+                    onChange: F,
                     forceShow: !0,
                     showWithdrawalWaiver: eu,
                     disabled: ed,

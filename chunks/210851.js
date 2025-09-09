@@ -55,7 +55,6 @@ let u = function (e) {
         (0, r.jsxs)(a.xJW, {
             children: [
                 (0, r.jsx)(a.vwX, {
-                    tag: a.RB0.H5,
                     children: (0, r.jsxs)("div", {
                         className: s.headingWithTooltip,
                         children: [

@@ -70,7 +70,6 @@ var r = {
     h3: "h3_b717a1 title_b717a1",
     h4: "h4_b717a1 title_b717a1",
     h5: "h5_b717a1 eyebrow_b717a1",
-    label: "label_b717a1 eyebrow_b717a1",
     legend: "legend_b717a1 eyebrow_b717a1",
     defaultMarginh4: "defaultMarginh4_b717a1",
     defaultMarginh1: "defaultMarginh1_b717a1",
@@ -84,6 +83,7 @@ var r = {
     errorMessage: "errorMessage_b717a1",
     errorSeparator: "errorSeparator_b717a1",
     defaultColor: "defaultColor_b717a1",
+    label: "label_b717a1",
     faded: "faded_b717a1",
     error: "error_b717a1",
 };

@@ -91,14 +91,14 @@ function N(e) {
         n = i.useRef(null),
         l = i.useRef(null),
         [o, p] = i.useReducer(T, v),
-        { canSend: O, hint: E, success: N, error: j } = o;
+        { canSend: O, hint: E, error: N, success: j } = o;
     return (
         i.useEffect(() => {
-            null != N &&
+            null != j &&
                 (s()(null != n.current, "Input is submitting when not mounted"),
                 (n.current.value = ""),
                 n.current.focus());
-        }, [N, n]),
+        }, [j, n]),
         (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(), s()(null != n.current, "Input is submitted when not mounted");
@@ -155,8 +155,8 @@ function N(e) {
                     children: (0, r.jsxs)("div", {
                         ref: l,
                         className: a()(b.addFriendInputWrapper, {
-                            [b.success]: N,
-                            [b.error]: j,
+                            [b.success]: j,
+                            [b.error]: N,
                         }),
                         children: [
                             (0, r.jsx)(c.Is, {
@@ -199,8 +199,8 @@ function N(e) {
                                 "data-1p-ignore": !0,
                                 placeholder: t,
                                 "aria-label": t,
-                                "aria-invalid": null != j || void 0,
-                                "aria-describedby": null != j ? S : C,
+                                "aria-invalid": null != N || void 0,
+                                "aria-describedby": null != N ? S : C,
                             }),
                             null != E &&
                                 (0, r.jsx)("div", {
@@ -218,20 +218,26 @@ function N(e) {
                         ],
                     }),
                 }),
-                null != j &&
-                    (0, r.jsx)(u.R94, {
-                        role: "alert",
-                        id: S,
-                        type: u.R94.Types.ERROR,
-                        className: _.marginTop8,
-                        children: j,
-                    }),
                 null != N &&
-                    (0, r.jsx)(u.R94, {
+                    (0, r.jsx)("div", {
+                        role: "alert",
+                        children: (0, r.jsx)(u.Text, {
+                            id: S,
+                            variant: "text-sm/normal",
+                            className: _.marginTop8,
+                            color: "text-feedback-critical",
+                            children: N,
+                        }),
+                    }),
+                null != j &&
+                    (0, r.jsx)("div", {
                         role: "status",
-                        type: u.R94.Types.SUCCESS,
-                        className: _.marginTop8,
-                        children: N,
+                        children: (0, r.jsx)(u.Text, {
+                            variant: "text-sm/normal",
+                            className: _.marginTop8,
+                            color: "text-feedback-positive",
+                            children: j,
+                        }),
                     }),
             ],
         })

@@ -26,7 +26,6 @@ function p() {
         children: [
             (0, r.jsx)(a.vwX, {
                 id: _,
-                tag: a.RB0.H5,
                 className: f.marginBottom8,
                 children: d.intl.string(d.t.oSdBvb),
             }),

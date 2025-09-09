@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(12574),
     H = n(21321),
     z = n(179517),
-    W = n(79829);
-let V = (0, x.Un)({
+    V = n(79829);
+let W = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
@@ -54,18 +54,16 @@ function Y(e) {
         i.useEffect(() => {
             a(t.name);
         }, [t.name]),
-        (0, r.jsx)(g.xJW, {
-            title: U.intl.string(U.t.dLbkBg),
+        (0, r.jsx)(g.oil, {
+            label: U.intl.string(U.t.dLbkBg),
             required: !0,
-            children: (0, r.jsx)(g.oil, {
-                type: "text",
-                value: l,
-                maxLength: M.VKK,
-                onChange: function (e) {
-                    a(e), K(t.id, e);
-                },
-                disabled: n,
-            }),
+            type: "text",
+            value: l,
+            maxLength: M.VKK,
+            onChange: function (e) {
+                a(e), K(t.id, e);
+            },
+            disabled: n,
         })
     );
 }
@@ -80,7 +78,7 @@ function q(e) {
                 name: t.name,
             },
             light: {
-                src: W,
+                src: V,
                 name: t.name,
             },
         };
@@ -234,7 +232,7 @@ function Q(e) {
                 className: F.colorDescription,
                 children: U.intl.string(U.t["9UCxlZ"]),
             }),
-            (0, r.jsx)(V, {
+            (0, r.jsx)(W, {
                 defaultColor: M.p6O,
                 colors: a === T.g.GRADIENT && s ? G.tl : M.pmI,
                 value: i.color,
@@ -289,7 +287,7 @@ function J(e) {
             name: t.name,
         },
         d = {
-            src: W,
+            src: V,
             name: t.name,
         },
         u = (0, v.oC)(n, t),

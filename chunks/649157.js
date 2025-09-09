@@ -106,13 +106,11 @@ function g() {
         tag: s.RB0.H1,
         title: u.intl.string(u.t.IHMsPj),
         children: (0, r.jsx)(s.hjN, {
-            children: (0, r.jsx)(s.xJW, {
-                title: u.intl.string(u.t["mx+sp6"]),
-                children: (0, r.jsx)(o.Gu, {
-                    onChange: g,
-                    options: h,
-                    value: t,
-                }),
+            children: (0, r.jsx)(o.Gu, {
+                label: u.intl.string(u.t["mx+sp6"]),
+                onChange: g,
+                options: h,
+                value: t,
             }),
         }),
     });

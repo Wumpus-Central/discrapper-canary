@@ -10,10 +10,7 @@ let c = function () {
     let e = (0, o.ZP)();
     return (0, r.jsxs)(i.xJW, {
         children: [
-            (0, r.jsx)(i.vwX, {
-                tag: i.RB0.H5,
-                children: "Theme",
-            }),
+            (0, r.jsx)(i.vwX, { children: "Theme" }),
             (0, r.jsxs)("div", {
                 style: {
                     display: "flex",

@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(570961),
     x = n(208665),
     j = n(976983),
-    _ = n(290511),
-    v = n(388032),
+    v = n(290511),
+    _ = n(388032),
     O = n(814939);
 let y = { optionErrors: [] };
 function C(e) {
@@ -56,9 +56,9 @@ function C(e) {
         [U, B] = i.useState(!1),
         F = null != (t = k.options) ? t : k.optionErrors.filter(f.lm)[0],
         H = k.config,
-        z = l.options.length >= _.fY,
-        W = (0, g.kl)(n.id, Array.from(R), [l]).length - R.size,
-        V = i.useRef(null),
+        z = l.options.length >= v.fY,
+        V = (0, g.kl)(n.id, Array.from(R), [l]).length - R.size,
+        W = i.useRef(null),
         K = i.useRef(j);
     return (i.useEffect(() => {
         K.current = j;
@@ -67,7 +67,7 @@ function C(e) {
         setTimeout(() => {
             if (0 === K.current && !m) {
                 var e;
-                null == (e = V.current) || e.focus();
+                null == (e = W.current) || e.focus();
             }
         }, 0);
     }, [m]),
@@ -100,7 +100,7 @@ function C(e) {
                       (0, r.jsx)(d.Text, {
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: v.intl.format(v.t.yjS3zs, { index: j + 1 }),
+                          children: _.intl.format(_.t.yjS3zs, { index: j + 1 }),
                       }),
                       (0, r.jsx)(d.Text, {
                           variant: "text-lg/semibold",
@@ -118,7 +118,7 @@ function C(e) {
                       }),
                       (0, r.jsx)(o.u, {
                           asContainer: !0,
-                          text: v.intl.string(v.t["Ku+86e"]),
+                          text: _.intl.string(_.t["Ku+86e"]),
                           children: (0, r.jsx)("div", {
                               className: O.closeIcon,
                               children: (0, r.jsx)(d.hU, {
@@ -126,7 +126,7 @@ function C(e) {
                                   icon: d.XHJ,
                                   variant: "icon-only",
                                   onClick: () => (0, b.fi)(n, l.id),
-                                  "aria-label": v.intl.string(v.t["Ku+86e"]),
+                                  "aria-label": _.intl.string(_.t["Ku+86e"]),
                               }),
                           }),
                       }),
@@ -160,16 +160,14 @@ function C(e) {
                       (0, r.jsxs)(d.Kqy, {
                           gap: 16,
                           children: [
-                              (0, r.jsx)(d.xJW, {
-                                  title: v.intl.format(v.t.yjS3zs, { index: j + 1 }),
-                                  children: (0, r.jsx)(d.oil, {
-                                      inputRef: V,
-                                      value: l.title,
-                                      onChange: (e) => (0, b.Kk)(n, l.id, { title: e }),
-                                      placeholder: v.intl.string(v.t.QMCuCg),
-                                      maxLength: _.iU,
-                                      error: k.title,
-                                  }),
+                              (0, r.jsx)(d.oil, {
+                                  label: _.intl.formatToPlainString(_.t.yjS3zs, { index: j + 1 }),
+                                  inputRef: W,
+                                  value: l.title,
+                                  onChange: (e) => (0, b.Kk)(n, l.id, { title: e }),
+                                  placeholder: _.intl.string(_.t.QMCuCg),
+                                  maxLength: v.iU,
+                                  error: k.title,
                               }),
                               (0, r.jsx)(N, {
                                   prompt: l,
@@ -177,13 +175,13 @@ function C(e) {
                               }),
                               (0, r.jsxs)(d.xJW, {
                                   title: z
-                                      ? v.intl.formatToPlainString(v.t.AbvhZG, {
+                                      ? _.intl.formatToPlainString(_.t.AbvhZG, {
                                             count: l.options.length,
-                                            total: _.qm,
+                                            total: v.qm,
                                         })
-                                      : v.intl.formatToPlainString(v.t.b7VxYW, {
+                                      : _.intl.formatToPlainString(_.t.b7VxYW, {
                                             count: l.options.length,
-                                            total: _.qm,
+                                            total: v.qm,
                                         }),
                                   children: [
                                       (0, r.jsx)(E, {
@@ -212,7 +210,7 @@ function C(e) {
                                           children: (0, r.jsx)(d.Text, {
                                               variant: "text-sm/normal",
                                               color: "interactive-normal",
-                                              children: v.intl.string(v.t.uCebZW),
+                                              children: _.intl.string(_.t.uCebZW),
                                           }),
                                       }),
                                       l.inOnboarding
@@ -226,8 +224,8 @@ function C(e) {
                                                     variant: "text-sm/normal",
                                                     color: "interactive-normal",
                                                     children: I
-                                                        ? v.intl.formatToPlainString(v.t["0re8T0"], { count: W })
-                                                        : v.intl.string(v.t.Ur8Vrq),
+                                                        ? _.intl.formatToPlainString(_.t["0re8T0"], { count: V })
+                                                        : _.intl.string(_.t.Ur8Vrq),
                                                 }),
                                             })
                                           : null,
@@ -244,7 +242,7 @@ function C(e) {
                               }),
                               (0, r.jsx)(o.u, {
                                   asContainer: !0,
-                                  text: v.intl.string(v.t["Ku+86e"]),
+                                  text: _.intl.string(_.t["Ku+86e"]),
                                   children: (0, r.jsx)("div", {
                                       className: O.closeIcon,
                                       children: (0, r.jsx)(d.hU, {
@@ -252,7 +250,7 @@ function C(e) {
                                           icon: d.XHJ,
                                           variant: "icon-only",
                                           onClick: () => (0, b.fi)(n, l.id),
-                                          "aria-label": v.intl.string(v.t["Ku+86e"]),
+                                          "aria-label": _.intl.string(_.t["Ku+86e"]),
                                       }),
                                   }),
                               }),
@@ -289,15 +287,15 @@ function N(e) {
             (0, r.jsx)(d.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: v.intl.string(v.t.ECnSLi),
+                children: _.intl.string(_.t.ECnSLi),
             }),
             (0, r.jsxs)("div", {
                 className: O.examples,
                 children: [
-                    s(v.intl.string(v.t["7GZMJS"])),
-                    s(v.intl.string(v.t.nItydn)),
-                    s(v.intl.string(v.t.evuYbm)),
-                    s(v.intl.string(v.t.XWRuOj)),
+                    s(_.intl.string(_.t["7GZMJS"])),
+                    s(_.intl.string(_.t.nItydn)),
+                    s(_.intl.string(_.t.evuYbm)),
+                    s(_.intl.string(_.t.XWRuOj)),
                 ],
             }),
         ],
@@ -330,7 +328,7 @@ function E(e) {
                     e.id,
                 ),
             ),
-            n.options.length < _.qm
+            n.options.length < v.qm
                 ? (0, r.jsx)(j.B, {
                       guild: t,
                       prompt: n,

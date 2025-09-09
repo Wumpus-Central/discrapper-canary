@@ -11,9 +11,9 @@ var a = n(951288),
 function x(e) {
     var t;
     let { isSlideReady: n, error: x, setEmailToken: u, setError: _, onNext: E, onClose: N } = e,
-        [h, p] = s.useState(!1),
+        [p, h] = s.useState(!1),
         [A, C] = s.useState(""),
-        [j, f] = s.useState(!1),
+        [f, j] = s.useState(!1),
         g = (0, r.e7)([c.Z], () => c.Z.getErrors()),
         S = s.useRef(null);
     s.useEffect(() => {
@@ -23,19 +23,19 @@ function x(e) {
         }
     }, [n]);
     let v = async (e) => {
-            e.preventDefault(), _(null), p(!0);
+            e.preventDefault(), _(null), h(!0);
             try {
                 let { token: e } = await (0, o.w)(A);
                 u(e), E();
             } catch (e) {
                 _(new l.Z(e).getAnyErrorMessage());
             } finally {
-                p(!1);
+                h(!1);
             }
         },
         O = async () => {
-            if (!j) {
-                f(!0);
+            if (!f) {
+                j(!0);
                 try {
                     await (0, o.i)(!0),
                         (0, i.showToast)((0, i.createToast)(d.intl.string(d.t["84yeo6"]), i.ToastType.SUCCESS));
@@ -43,7 +43,7 @@ function x(e) {
                     let e = new l.Z(t).getAnyErrorMessage();
                     null != e && (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE));
                 } finally {
-                    f(!1);
+                    j(!1);
                 }
             }
         };
@@ -74,14 +74,12 @@ function x(e) {
             (0, a.jsxs)(i.hzk, {
                 className: m.content,
                 children: [
-                    (0, a.jsx)(i.xJW, {
-                        title: d.intl.string(d.t["8mZX6O"]),
+                    (0, a.jsx)(i.oil, {
+                        label: d.intl.string(d.t["8mZX6O"]),
                         error: null != x ? x : null == g || null == (t = g.email_token) ? void 0 : t[0],
-                        children: (0, a.jsx)(i.oil, {
-                            value: A,
-                            onChange: C,
-                            inputRef: S,
-                        }),
+                        value: A,
+                        onChange: C,
+                        inputRef: S,
                     }),
                     (0, a.jsx)(i.Text, {
                         className: m.help,
@@ -95,7 +93,7 @@ function x(e) {
                     variant: "primary",
                     text: d.intl.string(d.t.PDTjLC),
                     type: "submit",
-                    loading: h,
+                    loading: p,
                 }),
             }),
         ],

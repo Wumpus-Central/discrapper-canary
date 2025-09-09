@@ -149,7 +149,6 @@ class C extends i.PureComponent {
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(_.vwX, {
-                                tag: _.RB0.H5,
                                 className: v.title,
                                 children: t,
                             }),

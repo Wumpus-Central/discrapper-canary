@@ -203,27 +203,23 @@ class R extends i.Component {
                                     (0, r.jsxs)(l.Kqy, {
                                         gap: 16,
                                         children: [
-                                            (0, r.jsx)(l.xJW, {
-                                                title: b.intl.string(b.t.ILJuBg),
-                                                children: (0, r.jsx)(l.oil, {
-                                                    value: this.state.filename,
-                                                    onChange: (e) => this.setState({ filename: e }),
-                                                    onKeyDown: (e) => {
-                                                        if (e.which === E.yXg.ENTER) return this.handleSubmit();
-                                                    },
-                                                }),
+                                            (0, r.jsx)(l.oil, {
+                                                label: b.intl.string(b.t.ILJuBg),
+                                                value: this.state.filename,
+                                                onChange: (e) => this.setState({ filename: e }),
+                                                onKeyDown: (e) => {
+                                                    if (e.which === E.yXg.ENTER) return this.handleSubmit();
+                                                },
                                             }),
                                             e.isImage
-                                                ? (0, r.jsx)(l.xJW, {
-                                                      title: b.intl.string(b.t.eOB2eX),
-                                                      children: (0, r.jsx)(l.oil, {
-                                                          placeholder: b.intl.string(b.t.RNH1jo),
-                                                          value: this.state.description,
-                                                          onChange: (e) => this.setState({ description: e }),
-                                                          onKeyDown: (e) => {
-                                                              if (e.which === E.yXg.ENTER) return this.handleSubmit();
-                                                          },
-                                                      }),
+                                                ? (0, r.jsx)(l.oil, {
+                                                      label: b.intl.string(b.t.eOB2eX),
+                                                      placeholder: b.intl.string(b.t.RNH1jo),
+                                                      value: this.state.description,
+                                                      onChange: (e) => this.setState({ description: e }),
+                                                      onKeyDown: (e) => {
+                                                          if (e.which === E.yXg.ENTER) return this.handleSubmit();
+                                                      },
                                                   })
                                                 : null,
                                         ],

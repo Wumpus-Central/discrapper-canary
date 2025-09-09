@@ -47,31 +47,31 @@ class m extends s.PureComponent {
                     ],
                 }),
                 (0, n.jsx)(i.hzk, {
-                    children: (0, n.jsxs)("form", {
+                    children: (0, n.jsx)("form", {
                         onSubmit: this.handleSubmit,
-                        children: [
-                            (0, n.jsx)(i.xJW, {
-                                title: h.intl.string(h.t.tGRbjI),
-                                className: p.formItem,
-                                children: (0, n.jsx)(i.oil, {
+                        children: (0, n.jsxs)(i.Kqy, {
+                            gap: 16,
+                            children: [
+                                (0, n.jsx)(i.oil, {
+                                    label: h.intl.string(h.t.tGRbjI),
                                     maxLength: c.dYL,
                                     value: t,
                                     onChange: this.handleNameChange,
                                     placeholder: h.intl.string(h.t.xV9hVl),
                                     autoFocus: !0,
                                 }),
-                            }),
-                            (0, n.jsx)(i.xJW, {
-                                title: h.intl.string(h.t.xpurRE),
-                                className: p.formItem,
-                                children: (0, n.jsx)(d, {
-                                    defaultColor: c.Wyy,
-                                    colors: c.pmI,
-                                    value: null != r ? r : c.Wyy,
-                                    onChange: this.handleColorChange,
+                                (0, n.jsx)(i.xJW, {
+                                    title: h.intl.string(h.t.xpurRE),
+                                    className: p.formItem,
+                                    children: (0, n.jsx)(d, {
+                                        defaultColor: c.Wyy,
+                                        colors: c.pmI,
+                                        value: null != r ? r : c.Wyy,
+                                        onChange: this.handleColorChange,
+                                    }),
                                 }),
-                            }),
-                        ],
+                            ],
+                        }),
                     }),
                 }),
                 (0, n.jsx)(i.mzw, {

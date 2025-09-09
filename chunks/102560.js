@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     l = n(647438),
-    o = n(392711),
-    i = n.n(o),
+    i = n(392711),
+    o = n.n(i),
     a = n(442837),
     s = n(755721),
     c = n(481060),
@@ -13,7 +13,7 @@ var r = n(951288),
     b = n(388032),
     p = n(792353);
 let f = (e) => {
-    let { guild: t, transitionState: n, onClose: o } = e,
+    let { guild: t, transitionState: n, onClose: i } = e,
         [f, h] = l.useState(7),
         [j, g] = l.useState(null),
         [x, v] = l.useState([]),
@@ -25,7 +25,7 @@ let f = (e) => {
     }, [y]);
     let O = (0, a.Wu)([m.Z, C.Z], () => {
         let e = m.Z.getHighestRole(t);
-        return i()(C.Z.getSortedRoles(t.id))
+        return o()(C.Z.getSortedRoles(t.id))
             .filter((n) => !(0, d.fI)(n) && m.Z.isRoleHigher(t, e, n))
             .map((e) => {
                 let { id: t, name: n } = e;
@@ -50,26 +50,24 @@ let f = (e) => {
             (0, r.jsxs)("div", {
                 className: p.content,
                 children: [
-                    (0, r.jsx)(c.xJW, {
-                        title: b.intl.string(b.t.YccTvL),
-                        children: (0, r.jsx)(s.Gu, {
-                            value: f,
-                            options: [
-                                {
-                                    name: b.intl.formatToPlainString(b.t.FM1dHR, { days: 7 }),
-                                    value: 7,
-                                },
-                                {
-                                    name: b.intl.formatToPlainString(b.t.FM1dHR, { days: 30 }),
-                                    value: 30,
-                                },
-                            ],
-                            onChange: (e) => {
-                                let { value: t } = e;
-                                h(t);
+                    (0, r.jsx)(s.Gu, {
+                        label: b.intl.string(b.t.YccTvL),
+                        value: f,
+                        options: [
+                            {
+                                name: b.intl.formatToPlainString(b.t.FM1dHR, { days: 7 }),
+                                value: 7,
                             },
-                            className: p.spacing,
-                        }),
+                            {
+                                name: b.intl.formatToPlainString(b.t.FM1dHR, { days: 30 }),
+                                value: 30,
+                            },
+                        ],
+                        onChange: (e) => {
+                            let { value: t } = e;
+                            h(t);
+                        },
+                        className: p.spacing,
                     }),
                     (0, r.jsx)(c.xJW, {
                         title: b.intl.string(b.t.buoe19),
@@ -108,13 +106,13 @@ let f = (e) => {
                             variant: "primary",
                             text: b.intl.string(b.t["2mIlKS"]),
                             onClick: () => {
-                                u.Z.prune(t.id, f, x), o();
+                                u.Z.prune(t.id, f, x), i();
                             },
                         }),
                         (0, r.jsx)(c.zxk, {
                             variant: "secondary",
                             text: b.intl.string(b.t["ETE/oK"]),
-                            onClick: o,
+                            onClick: i,
                         }),
                     ],
                 }),

@@ -1,15 +1,15 @@
-i.d(t, { Z: () => x }), i(388685);
+i.d(t, { Z: () => y }), i(388685);
 var n,
     s = i(951288),
     a = i(647438),
     l = i(120356),
-    o = i.n(l),
-    r = i(772848),
+    r = i.n(l),
+    o = i(772848),
     h = i(846519),
     d = i(755721),
     c = i(481060),
-    m = i(981631),
-    u = i(388032),
+    u = i(981631),
+    m = i(388032),
     g = i(831319),
     p = i(149715),
     f = i(197571);
@@ -47,40 +47,42 @@ class v extends (n = a.PureComponent) {
     renderInputs() {
         let { emailError: e, passwordError: t, submitting: i } = this.props,
             { email: n, password: a } = this.state;
-        return (0, s.jsxs)("div", {
+        return (0, s.jsx)("div", {
             className: g.container,
-            children: [
-                (0, s.jsx)(c.xJW, {
-                    title: u.intl.string(u.t.dI4d4e),
-                    className: f.marginBottom20,
-                    children: (0, s.jsx)(c.oil, {
-                        value: n,
-                        error: e,
-                        onChange: this.handleEmailChange,
-                        onKeyPress: this.handleKeyPress,
-                        autoFocus: !0,
+            children: (0, s.jsxs)(c.Kqy, {
+                gap: 40,
+                children: [
+                    (0, s.jsxs)(c.Kqy, {
+                        gap: 20,
+                        children: [
+                            (0, s.jsx)(c.oil, {
+                                label: m.intl.string(m.t.dI4d4e),
+                                value: n,
+                                error: e,
+                                onChange: this.handleEmailChange,
+                                onKeyPress: this.handleKeyPress,
+                                autoFocus: !0,
+                            }),
+                            (0, s.jsx)(c.oil, {
+                                label: m.intl.string(m.t["CIGa+/"]),
+                                type: "password",
+                                value: a,
+                                error: t,
+                                onChange: this.handlePasswordChange,
+                                onKeyPress: this.handleKeyPress,
+                            }),
+                        ],
                     }),
-                }),
-                (0, s.jsx)(c.xJW, {
-                    title: u.intl.string(u.t["CIGa+/"]),
-                    className: f.marginBottom40,
-                    children: (0, s.jsx)(c.oil, {
-                        type: "password",
-                        value: a,
-                        error: t,
-                        onChange: this.handlePasswordChange,
-                        onKeyPress: this.handleKeyPress,
+                    (0, s.jsx)(d.zx, {
+                        fullWidth: !0,
+                        size: d.zx.Sizes.LARGE,
+                        onClick: this.handleVerify,
+                        submitting: i,
+                        disabled: 0 === n.length || 0 === a.length,
+                        children: m.intl.string(m.t.v740sr),
                     }),
-                }),
-                (0, s.jsx)(d.zx, {
-                    fullWidth: !0,
-                    size: d.zx.Sizes.LARGE,
-                    onClick: this.handleVerify,
-                    submitting: i,
-                    disabled: 0 === n.length || 0 === a.length,
-                    children: u.intl.string(u.t.v740sr),
-                }),
-            ],
+                ],
+            }),
         });
     }
     renderActions() {
@@ -94,7 +96,7 @@ class v extends (n = a.PureComponent) {
                     size: d.zx.Sizes.LARGE,
                     color: d.Tt.PRIMARY,
                     onClick: this.handleResendEmail,
-                    children: u.intl.string(u.t.LdUkOz),
+                    children: m.intl.string(m.t.LdUkOz),
                 }),
                 e &&
                     (0, s.jsx)(d.zx, {
@@ -104,7 +106,7 @@ class v extends (n = a.PureComponent) {
                         look: d.iL.LINK,
                         color: d.Tt.LINK,
                         onClick: this.handleChangeEmailClick,
-                        children: u.intl.string(u.t.oP5zGB),
+                        children: m.intl.string(m.t.oP5zGB),
                     }),
             ],
         });
@@ -116,14 +118,14 @@ class v extends (n = a.PureComponent) {
         return (
             (e =
                 t && null != i
-                    ? u.intl.format(u.t.JqLgQE, { email: i })
+                    ? m.intl.format(m.t.JqLgQE, { email: i })
                     : n
-                      ? u.intl.string(u.t.tSXg8P)
-                      : u.intl.string(u.t.KW5DEh)),
+                      ? m.intl.string(m.t.tSXg8P)
+                      : m.intl.string(m.t.KW5DEh)),
             (0, s.jsxs)(c.Y0X, {
                 transitionState: a,
                 "aria-labelledby": this._headerId,
-                className: o()(g.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, f.marginTop60),
+                className: r()(g.emailVerificationModal, p.vertical, p.alignCenter, p.justifyCenter, f.marginTop60),
                 parentComponent: "EmailVerificationModal",
                 children: [
                     (0, s.jsx)("div", {
@@ -132,11 +134,11 @@ class v extends (n = a.PureComponent) {
                     }),
                     (0, s.jsx)("div", {
                         id: this._headerId,
-                        className: o()(g.title, f.marginBottom8),
-                        children: u.intl.string(u.t["1MPz29"]),
+                        className: r()(g.title, f.marginBottom8),
+                        children: m.intl.string(m.t["1MPz29"]),
                     }),
                     (0, s.jsx)("div", {
-                        className: o()(g.body, f.marginBottom20),
+                        className: r()(g.body, f.marginBottom20),
                         children: e,
                     }),
                     n ? this.renderActions() : this.renderInputs(),
@@ -149,7 +151,7 @@ class v extends (n = a.PureComponent) {
             C(this, "_lottieRef", void 0),
             C(this, "_animItem", null),
             C(this, "_timeout", new h.V7()),
-            C(this, "_headerId", (0, r.Z)()),
+            C(this, "_headerId", (0, o.Z)()),
             C(this, "state", {
                 resent: !1,
                 shouldClose: !1,
@@ -198,9 +200,9 @@ class v extends (n = a.PureComponent) {
 C(v, "defaultProps", {
     canResend: !1,
     canChange: !0,
-    onChangeEmailClick: m.dG4,
+    onChangeEmailClick: u.dG4,
     onVerify: (e, t) => {},
-    onResend: m.dG4,
-    onClose: m.dG4,
+    onResend: u.dG4,
+    onClose: u.dG4,
 });
-let x = v;
+let y = v;

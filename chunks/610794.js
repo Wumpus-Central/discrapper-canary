@@ -217,7 +217,6 @@ function T() {
               className: O.container,
               children: [
                   (0, r.jsx)(l.vwX, {
-                      tag: l.RB0.H5,
                       className: O.title,
                       children: y.intl.string(y.t.aw0GVV),
                   }),

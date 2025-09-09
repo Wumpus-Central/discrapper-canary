@@ -6,7 +6,6 @@ e.exports = {
     clipFormFooter: "clipFormFooter__54978",
     clipFormFooterButton: "clipFormFooterButton__54978",
     submittingWrapperFix: "submittingWrapperFix__54978",
-    clipFormItem: "clipFormItem__54978",
     clipFormSwitches: "clipFormSwitches__54978",
     userList: "userList__54978",
 };

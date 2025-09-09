@@ -64,20 +64,20 @@ let w = (e) => {
                     children: P.intl.string(P.t.SPlaR0),
                 }),
                 (0, r.jsx)("hr", { className: E.divider }),
-                (0, r.jsx)(a.xJW, {
-                    title: P.intl.string(P.t.dI4d4e),
+                (0, r.jsx)("div", {
                     className: E.formItem,
                     children: (0, r.jsx)(a.oil, {
+                        label: P.intl.string(P.t.dI4d4e),
                         value: n,
                         error: o,
                         onChange: i,
                         autoFocus: !0,
                     }),
                 }),
-                (0, r.jsx)(a.xJW, {
-                    title: P.intl.string(P.t["CIGa+/"]),
+                (0, r.jsx)("div", {
                     className: E.formItem,
                     children: (0, r.jsx)(a.oil, {
+                        label: P.intl.string(P.t["CIGa+/"]),
                         type: "password",
                         value: l,
                         error: c,
@@ -173,13 +173,13 @@ let w = (e) => {
             D = (0, y.N0)(q, null == R ? void 0 : R.guild, L),
             { guildProfile: B, fetchGuildProfile: U } = (0, m.u)(q),
             G = (0, i.e7)([g.ZP, x.default], () => g.ZP.isMember(q, x.default.getId())),
-            [J, K] = l.useState(!1);
+            [K, J] = l.useState(!1);
         l.useEffect(() => {
-            G && !J && null == B && U().finally(() => K(!0));
-        }, [U, B, J, G]);
+            G && !K && null == B && U().finally(() => J(!0));
+        }, [U, B, K, G]);
         let z = null == R ? void 0 : R.formFields.some((e) => e.field_type !== _.QJ.TERMS),
             [V, H] = l.useState(null != (o = null == R ? void 0 : R.formFields) ? o : []),
-            [W, Q] = l.useState(!1),
+            [Q, W] = l.useState(!1),
             [X, Y] = l.useState(null),
             [$, ee] = l.useState(""),
             [et, en] = l.useState(""),
@@ -251,25 +251,25 @@ let w = (e) => {
             })(null != (N = null == B ? void 0 : B.brandColorPrimary) ? N : "");
         if (null == D) return (0, r.jsx)(a.$jN, {});
         let ey = async () => {
-                Q(!0), el(null), es(null);
+                W(!0), el(null), es(null);
                 try {
                     await (0, c.S2)({
                         email: $,
                         password: et,
                     }),
-                        Q(!1),
+                        W(!1),
                         eh(y.KJ.EMAIL_CONFIRMATION);
                 } catch (n) {
                     var e, t;
                     el(null == n || null == (e = n.body) ? void 0 : e.email),
                         es(null == n || null == (t = n.body) ? void 0 : t.password);
                 } finally {
-                    Q(!1);
+                    W(!1);
                 }
             },
             eO = async () => {
                 var e, t, n, r;
-                Q(!0), Y(null);
+                W(!0), Y(null);
                 let l = null != em ? g.ZP.getMember(q, em.id) : null;
                 if (null != l && !l.isPending) {
                     null == k || k(!0);
@@ -328,7 +328,7 @@ let w = (e) => {
                         ? Y(P.intl.string(P.t.PD09Sk))
                         : Y(null == e ? void 0 : e.message);
                 } finally {
-                    Q(!1);
+                    W(!1);
                 }
             },
             eN = null != B;
@@ -419,7 +419,7 @@ let w = (e) => {
                                                         variant: "primary",
                                                         text: P.intl.string(P.t.PDTjLC),
                                                         type: "submit",
-                                                        loading: W,
+                                                        loading: Q,
                                                         onClick: ey,
                                                         disabled: 0 === $.length || 0 === et.length,
                                                     }),
@@ -448,7 +448,7 @@ let w = (e) => {
                                                             variant: "active",
                                                             text: P.intl.string(P.t.geKm7u),
                                                             type: "submit",
-                                                            loading: W,
+                                                            loading: Q,
                                                             onClick: eO,
                                                             disabled: eb,
                                                         }),

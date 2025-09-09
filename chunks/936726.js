@@ -46,7 +46,7 @@ function N(e) {
     }
     return e;
 }
-function Z(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function Z(e, t) {
         e
     );
 }
-function S(e, t) {
+function Z(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
@@ -81,13 +81,13 @@ function w(e) {
             channelOptions: h,
             isExpanded: w,
             isNew: I,
-            errors: T,
-            onToggleExpand: P,
+            errors: P,
+            onToggleExpand: T,
         } = e,
         [E, k] = r.useState(!1),
         [A] = r.useState(new s.V7());
     r.useEffect(() => () => A.stop(), [A]);
-    let D = r.useMemo(() => S(n, n.avatar), [n]),
+    let D = r.useMemo(() => Z(n, n.avatar), [n]),
         R = r.useCallback(() => {
             let e = "".concat((0, o.K0)(!1)).concat(O.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -96,7 +96,7 @@ function w(e) {
             (0, c.h7j)((e) =>
                 (0, i.jsx)(
                     c.ConfirmModal,
-                    Z(N({}, e), {
+                    S(N({}, e), {
                         header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
                         confirmText: _.intl.string(_.t["W+K1Fh"]),
                         cancelText: _.intl.string(_.t.xNhj0N),
@@ -161,15 +161,15 @@ function w(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => S(n, e),
+                                            makeURL: (e) => Z(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != T.avatar && "" !== T.avatar
+                                        null != P.avatar && "" !== P.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: "text-danger",
                                                   variant: "text-sm/normal",
-                                                  children: T.avatar,
+                                                  children: P.avatar,
                                               })
                                             : null,
                                     ],
@@ -182,16 +182,14 @@ function w(e) {
                                         children: [
                                             (0, i.jsx)(m.Z.Child, {
                                                 basis: "50%",
-                                                children: (0, i.jsx)(c.xJW, {
-                                                    title: _.intl.string(_.t.ukdxur),
-                                                    children: (0, i.jsx)(c.oil, {
-                                                        value: l.name,
-                                                        onChange: (e) => {
-                                                            u.Z.updateWebhook({ name: e });
-                                                        },
-                                                        maxLength: 80,
-                                                        error: T.name,
-                                                    }),
+                                                children: (0, i.jsx)(c.oil, {
+                                                    label: _.intl.string(_.t.ukdxur),
+                                                    value: l.name,
+                                                    onChange: (e) => {
+                                                        u.Z.updateWebhook({ name: e });
+                                                    },
+                                                    maxLength: 80,
+                                                    error: P.name,
                                                 }),
                                             }),
                                             (0, i.jsx)(m.Z.Child, {
@@ -264,7 +262,7 @@ function w(e) {
                                                         className: C.copyButton,
                                                         children: (0, i.jsx)(
                                                             c.zxk,
-                                                            Z(
+                                                            S(
                                                                 N(
                                                                     {
                                                                         variant: "secondary",
@@ -313,7 +311,7 @@ function w(e) {
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
                         "aria-expanded": w,
-                        onClick: P,
+                        onClick: T,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [

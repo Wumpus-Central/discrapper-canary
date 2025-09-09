@@ -132,16 +132,14 @@ function h(e) {
                                     children: [
                                         (0, i.jsx)(d.Z.Child, {
                                             basis: "50%",
-                                            children: (0, i.jsx)(a.xJW, {
-                                                title: g.intl.string(g.t.I1o5gY),
-                                                children: (0, i.jsx)(a.oil, {
-                                                    value: n.name,
-                                                    onChange: (e) => {
-                                                        s.Z.updateWebhook({ name: e });
-                                                    },
-                                                    maxLength: 80,
-                                                    error: j.name,
-                                                }),
+                                            children: (0, i.jsx)(a.oil, {
+                                                label: g.intl.string(g.t.I1o5gY),
+                                                value: n.name,
+                                                onChange: (e) => {
+                                                    s.Z.updateWebhook({ name: e });
+                                                },
+                                                maxLength: 80,
+                                                error: j.name,
                                             }),
                                         }),
                                         (0, i.jsx)(d.Z.Child, {

@@ -11,19 +11,19 @@ var a = n(951288),
 function x(e) {
     var t, n;
     let { emailToken: x, isSlideReady: u, onClose: _, onBack: E, onNext: N } = e,
-        [h, p] = s.useState(""),
+        [p, h] = s.useState(""),
         [A, C] = s.useState(""),
-        [j, f] = s.useState(!1),
+        [f, j] = s.useState(!1),
         g = (0, r.e7)([o.Z], () => o.Z.getErrors()),
         S = s.useRef(null);
     async function v(e) {
-        e.preventDefault(), f(!0);
+        e.preventDefault(), j(!0);
         let t = await (0, l.Mn)({
-            email: h,
+            email: p,
             emailToken: x,
             password: A,
         });
-        if ((f(!1), null == t ? void 0 : t.ok)) N(h);
+        if ((j(!1), null == t ? void 0 : t.ok)) N(p);
         else {
             var n, a;
             (null == t || null == (n = t.body) ? void 0 : n.username) != null
@@ -65,15 +65,13 @@ function x(e) {
                 (0, a.jsxs)(i.hzk, {
                     className: m.content,
                     children: [
-                        (0, a.jsx)(i.xJW, {
-                            title: d.intl.string(d.t["w/qqKC"]),
+                        (0, a.jsx)(i.oil, {
+                            label: d.intl.string(d.t["w/qqKC"]),
                             error: null == g || null == (t = g.email) ? void 0 : t[0],
-                            children: (0, a.jsx)(i.oil, {
-                                type: "email",
-                                value: h,
-                                onChange: p,
-                                inputRef: S,
-                            }),
+                            type: "email",
+                            value: p,
+                            onChange: h,
+                            inputRef: S,
                         }),
                         (0, a.jsx)(i.xJW, {
                             className: m.password,
@@ -93,7 +91,7 @@ function x(e) {
                             variant: "primary",
                             text: d.intl.string(d.t.i4jeWV),
                             type: "submit",
-                            loading: j,
+                            loading: f,
                         }),
                         null != E
                             ? (0, a.jsx)("div", {

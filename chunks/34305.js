@@ -109,18 +109,16 @@ class E extends i.PureComponent {
                     this.renderDiskUsageCircle(),
                     (0, r.jsxs)(u.Z.Child, {
                         children: [
-                            (0, r.jsx)(o.xJW, {
-                                title: m.intl.string(m.t.AJkKCA),
-                                children: (0, r.jsx)(o.oil, {
-                                    value: n,
-                                    placeholder: p.Z.getLabelFromPath(e),
-                                    onChange: this.handleLabelChange,
-                                }),
+                            (0, r.jsx)(o.oil, {
+                                label: m.intl.string(m.t.AJkKCA),
+                                value: n,
+                                placeholder: p.Z.getLabelFromPath(e),
+                                onChange: this.handleLabelChange,
                             }),
-                            (0, r.jsx)(o.xJW, {
-                                title: m.intl.string(m.t.lnUCwc),
+                            (0, r.jsx)("div", {
                                 className: _.marginTop20,
                                 children: (0, r.jsx)(o.oil, {
+                                    label: m.intl.string(m.t.lnUCwc),
                                     disabled: !0,
                                     value: e,
                                 }),

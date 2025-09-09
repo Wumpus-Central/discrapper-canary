@@ -383,7 +383,6 @@ class eo extends i.PureComponent {
             children: (t) =>
                 (0, r.jsxs)(x.xJW, {
                     title: o,
-                    tag: "label",
                     htmlFor: t,
                     titleClassName: et.sectionTitle,
                     className: et.name,

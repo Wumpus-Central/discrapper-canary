@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(210887),
     L = n(740492),
     j = n(695346),
-    k = n(329013),
-    M = n(333859),
+    M = n(329013),
+    k = n(333859),
     U = n(726985),
     G = n(981631),
     B = n(921944),
@@ -197,18 +197,17 @@ let q = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(k.g, {}),
+                (0, r.jsx)(M.g, {}),
             ],
         });
 class er extends i.Component {
     renderZoomSlider() {
         return D.isPlatformEmbedded
-            ? (0, r.jsxs)(f.xJW, {
+            ? (0, r.jsxs)("div", {
                   className: H.marginTop20,
                   children: [
                       (0, r.jsx)(f.vwX, {
                           id: Q,
-                          tag: f.RB0.H5,
                           className: o()(V.title, H.marginBottom8),
                           children: F.intl.string(F.t.i19n5O),
                       }),
@@ -236,12 +235,11 @@ class er extends i.Component {
             : null;
     }
     renderFontScaleSlider() {
-        return (0, r.jsxs)(f.xJW, {
+        return (0, r.jsxs)("div", {
             className: H.marginTop20,
             children: [
                 (0, r.jsx)(f.vwX, {
                     id: J,
-                    tag: f.RB0.H5,
                     className: o()(V.title, H.marginBottom8),
                     children: F.intl.string(F.t.qPOqoK),
                 }),
@@ -273,12 +271,11 @@ class er extends i.Component {
     }
     renderMessageGroupSpacingSlider() {
         let { messageDisplayCompact: e, messageGroupSpacing: t } = this.props;
-        return (0, r.jsxs)(f.xJW, {
+        return (0, r.jsxs)("div", {
             className: V.messageGroupingSpacing,
             children: [
                 (0, r.jsx)(f.vwX, {
                     id: $,
-                    tag: f.RB0.H5,
                     className: o()(V.title, H.marginBottom8),
                     children: F.intl.string(F.t.Q6lKkp),
                 }),
@@ -365,7 +362,7 @@ class er extends i.Component {
                       }),
                       (0, r.jsx)(f.xJW, {
                           title: (0, r.jsx)(en, {}),
-                          children: (0, r.jsx)(k.i, {}),
+                          children: (0, r.jsx)(M.i, {}),
                       }),
                   ],
               });
@@ -458,30 +455,24 @@ class er extends i.Component {
     }
     renderTimestampHourCycle() {
         let { timestampHourCycle: e } = this.props;
-        return (0, r.jsx)(f.xJW, {
-            title: (0, r.jsx)(f.Text, {
-                variant: "text-lg/medium",
-                className: o()(V.timeTitle, V.title),
-                children: F.intl.string(F.t.dyamEB),
-            }),
-            children: (0, r.jsx)(d.Gu, {
-                options: [
-                    {
-                        name: F.intl.string(F.t.FMWYvb),
-                        value: c.hg.AUTO,
-                    },
-                    {
-                        name: F.intl.string(F.t.p8NOws),
-                        value: c.hg.H12,
-                    },
-                    {
-                        name: F.intl.string(F.t["+o/sOj"]),
-                        value: c.hg.H23,
-                    },
-                ],
-                onChange: (e) => j.hg.updateSetting(e.value),
-                value: e,
-            }),
+        return (0, r.jsx)(f.FXm, {
+            label: F.intl.string(F.t.dyamEB),
+            options: [
+                {
+                    name: F.intl.string(F.t.FMWYvb),
+                    value: c.hg.AUTO,
+                },
+                {
+                    name: F.intl.string(F.t.p8NOws),
+                    value: c.hg.H12,
+                },
+                {
+                    name: F.intl.string(F.t["+o/sOj"]),
+                    value: c.hg.H23,
+                },
+            ],
+            onChange: (e) => j.hg.updateSetting(e.value),
+            value: e,
         });
     }
     render() {
@@ -572,7 +563,7 @@ class ei extends er {
             }),
             n = (0, r.jsx)(R.F, {
                 setting: U.s6.APPEARANCE_ICON,
-                children: (0, r.jsx)(M.c, {}),
+                children: (0, r.jsx)(k.c, {}),
             }),
             i = [
                 {

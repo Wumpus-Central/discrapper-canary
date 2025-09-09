@@ -101,6 +101,16 @@ let o = {
                     label: "With Transparent Background",
                     defaultValue: !1,
                 },
+                label: {
+                    type: "text",
+                    label: "Label",
+                    defaultValue: "Radio Group",
+                },
+                description: {
+                    type: "text",
+                    label: "Description",
+                    defaultValue: "This is a description for the radio group",
+                },
             },
         },
     ],

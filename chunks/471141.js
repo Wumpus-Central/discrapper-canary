@@ -1,91 +1,93 @@
-n.d(t, { j: () => _ });
+n.d(t, { j: () => p });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(84735),
-    l = n(437337),
+    l = n(497039),
     c = n(28664),
-    u = n(770102),
-    d = n(534542),
-    f = n(171931);
-function _(e) {
+    u = n(481060),
+    d = n(770102),
+    f = n(534542),
+    _ = n(171931);
+function p(e) {
     let {
             value: t,
             disabled: n = !1,
             hideBorder: a = !1,
-            tooltipNote: _,
-            onChange: p,
-            className: h,
-            style: m,
-            note: g,
-            children: E,
-            disabledText: b,
-            containerRef: y,
+            tooltipNote: p,
+            onChange: h,
+            className: m,
+            style: g,
+            note: E,
+            children: b,
+            disabledText: y,
+            containerRef: O,
         } = e,
-        O = i.useRef(null),
         v = i.useRef(null),
-        I = i.useId(),
-        T = (0, r.jsx)(l.r, {
-            id: I,
+        I = i.useRef(null),
+        T = i.useId(),
+        S = (0, r.jsx)(l.T, {
+            id: T,
             checked: t,
-            onChange: p,
+            onChange: h,
             disabled: n,
             focusProps: { enabled: !1 },
-            innerRef: O,
+            innerRef: v,
         });
     return (0, r.jsxs)("div", {
-        ref: y,
-        style: m,
-        className: o()(f.container, h, { [f.disabled]: n }),
+        ref: O,
+        style: g,
+        className: o()(_.container, m, { [_.disabled]: n }),
         children: [
             (0, r.jsx)(s.t, {
                 within: !0,
                 offset: -4,
-                focusTarget: O,
-                ringTarget: v,
+                focusTarget: v,
+                ringTarget: I,
                 children: (0, r.jsxs)("div", {
-                    className: f.labelRow,
-                    ref: v,
+                    className: _.labelRow,
+                    ref: I,
                     children: [
                         (0, r.jsx)("label", {
-                            htmlFor: I,
-                            className: f.title,
-                            children: E,
+                            htmlFor: T,
+                            className: _.title,
+                            children: b,
                         }),
                         (0, r.jsx)("div", {
-                            className: f.control,
+                            className: _.control,
                             children:
-                                null != _
+                                null != p
                                     ? (0, r.jsx)(c.u, {
                                           asContainer: !0,
-                                          text: _,
-                                          children: T,
+                                          text: p,
+                                          children: S,
                                       })
-                                    : T,
+                                    : S,
                         }),
                     ],
                 }),
             }),
-            null != g &&
+            null != E &&
                 (0, r.jsx)("div", {
-                    className: f.note,
-                    children: (0, r.jsx)(d.R, {
+                    className: _.note,
+                    children: (0, r.jsx)(f.R, {
                         disabled: n,
-                        type: d.g.DESCRIPTION,
-                        children: g,
+                        type: f.g.DESCRIPTION,
+                        children: E,
                     }),
                 }),
             n &&
-                null != b &&
+                null != y &&
                 (0, r.jsx)("div", {
-                    className: f.disabledText,
-                    children: (0, r.jsx)(d.R, {
-                        type: d.g.ERROR,
-                        children: b,
+                    className: _.disabledText,
+                    children: (0, r.jsx)(u.Text, {
+                        variant: "text-sm/normal",
+                        color: "text-feedback-critical",
+                        children: y,
                     }),
                 }),
-            !a && (0, r.jsx)(u.$, { className: f.dividerDefault }),
+            !a && (0, r.jsx)(d.$, { className: _.dividerDefault }),
         ],
     });
 }

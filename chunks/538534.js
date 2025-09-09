@@ -1,4 +1,8 @@
-function r(e, t, n) {
+n.d(t, { E: () => s });
+var r = n(951288);
+n(647438);
+var i = n(695046);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,4 +15,22 @@ function r(e, t, n) {
         e
     );
 }
-n(951288), n(647438), n(695046);
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                a(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function s(e) {
+    return (0, r.jsx)(i.Gu, o({}, e));
+}

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => E }), n(388685);
-var r = n(951288),
-    a = n(647438),
+var a = n(951288),
+    r = n(647438),
     l = n(120356),
     i = n.n(l),
     o = n(952265),
@@ -27,24 +27,24 @@ var r = n(951288),
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = a);
             });
     }
     return e;
@@ -57,8 +57,8 @@ function N(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -71,41 +71,41 @@ function E(e) {
     let { clip: t, channelId: l, clipName: E, onSetClipName: R, onClose: L } = e,
         {
             videoPlayerRef: T,
-            cropData: F,
-            voiceAudioEnabled: D,
-            setVoiceAudioEnabled: I,
-            applicationAudioEnabled: A,
+            cropData: D,
+            voiceAudioEnabled: F,
+            setVoiceAudioEnabled: A,
+            applicationAudioEnabled: I,
             setApplicationAudioEnabled: Z,
         } = (0, _.S)(),
-        [B, M] = a.useState(null),
+        [B, M] = r.useState(null),
         { onShareClick: z } = (0, b.Z)({
             channelId: l,
             setExporting: (e) => M(null != e ? "share" : null),
         });
     async function H() {
         var e;
-        let a = p.Z.getChannel(l);
+        let r = p.Z.getChannel(l);
         M("export"), null == (e = T.current) || e.pause();
         try {
             let e = await (0, x.rO)(
                 t,
-                N(S({}, F), {
-                    applicationAudio: A,
-                    voiceAudio: D,
+                N(S({}, D), {
+                    applicationAudio: I,
+                    voiceAudio: F,
                 }),
             );
             (0, u.ZDy)(async () => {
                 let { default: l } = await n.e("56035").then(n.bind(n, 758961)),
-                    i = (null == a ? void 0 : a.guild_id) != null ? f.Z.getGuild(a.guild_id) : null,
+                    i = (null == r ? void 0 : r.guild_id) != null ? f.Z.getGuild(r.guild_id) : null,
                     o = null != i && (0, m.Gw)(i, v.Z, h.default).canCreateExpressions,
                     s = null == E || "" === E ? (0, w.yl)(g.default.extractTimestamp(t.id)) : E,
                     u = s.slice(0, C.Ek);
                 return (t) =>
-                    (0, r.jsx)(
+                    (0, a.jsx)(
                         l,
                         N(S({}, t), {
                             showGuildPicker: !0,
-                            guildId: o ? (null == a ? void 0 : a.guild_id) : void 0,
+                            guildId: o ? (null == r ? void 0 : r.guild_id) : void 0,
                             sourceFile: {
                                 file: new File([e], "".concat(s, ".mp4"), { type: "video/mp4" }),
                                 name: u,
@@ -124,9 +124,9 @@ function E(e) {
         try {
             let e = await (0, x.rO)(
                     t,
-                    N(S({}, F), {
-                        applicationAudio: A,
-                        voiceAudio: D,
+                    N(S({}, D), {
+                        applicationAudio: I,
+                        voiceAudio: F,
                     }),
                 ),
                 n = await e.arrayBuffer();
@@ -142,7 +142,7 @@ function E(e) {
             (0, u.ZDy)(async () => {
                 let { default: e } = await n.e("15915").then(n.bind(n, 799677));
                 return (n) =>
-                    (0, r.jsx)(
+                    (0, a.jsx)(
                         e,
                         N(S({ clip: t }, n), {
                             onClose: async () => {
@@ -155,37 +155,34 @@ function E(e) {
                     );
             });
     }
-    return (0, r.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: O.clipForm,
         children: [
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: i()(O.clipFormSection, O.editSection),
                 children: [
-                    (0, r.jsx)(u.xJW, {
-                        className: O.clipFormItem,
-                        title: k.intl.string(k.t.SJKc5u),
-                        children: (0, r.jsx)(u.oil, {
-                            onChange: (e) => {
-                                "" === e ? R(void 0) : R(e);
-                            },
-                            value: E,
-                            minLength: w.XH,
-                            maxLength: w.MG,
-                            placeholder: k.intl.string(k.t.Cyxddn),
-                        }),
+                    (0, a.jsx)(u.oil, {
+                        label: k.intl.string(k.t.SJKc5u),
+                        onChange: (e) => {
+                            "" === e ? R(void 0) : R(e);
+                        },
+                        value: E,
+                        minLength: w.XH,
+                        maxLength: w.MG,
+                        placeholder: k.intl.string(k.t.Cyxddn),
                     }),
-                    (0, r.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: O.clipFormSwitches,
                         children: [
-                            (0, r.jsx)(u.j7V, {
+                            (0, a.jsx)(u.j7V, {
                                 onChange: Z,
-                                value: A,
+                                value: I,
                                 hideBorder: !0,
                                 children: k.intl.string(k.t.GnQui4),
                             }),
-                            (0, r.jsx)(u.j7V, {
-                                onChange: I,
-                                value: D,
+                            (0, a.jsx)(u.j7V, {
+                                onChange: A,
+                                value: F,
                                 hideBorder: !0,
                                 children: k.intl.string(k.t["5mVOCQ"]),
                             }),
@@ -193,20 +190,20 @@ function E(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: i()(O.clipFormSection, O.metadataSection),
                 children: [
-                    (0, r.jsx)(j.Z, { clip: t }),
-                    (0, r.jsx)(y.Z, {
+                    (0, a.jsx)(j.Z, { clip: t }),
+                    (0, a.jsx)(y.Z, {
                         className: O.userList,
                         clip: t,
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: O.clipFormFooter,
                 children: [
-                    (0, r.jsx)(s.zx, {
+                    (0, a.jsx)(s.zx, {
                         submitting: "share" === B,
                         disabled: null != B && "share" !== B,
                         color: s.zx.Colors.BRAND,
@@ -214,16 +211,16 @@ function E(e) {
                         onClick: () =>
                             z({
                                 clip: N(S({}, t), { name: E }),
-                                cropData: F,
-                                applicationAudioEnabled: A,
-                                voiceAudioEnabled: D,
+                                cropData: D,
+                                applicationAudioEnabled: I,
+                                voiceAudioEnabled: F,
                                 onShareComplete: () => {
                                     o.Mr(w.Ut), o.Mr(w.Qr);
                                 },
                             }),
                         children: k.intl.string(k.t.I8lglZ),
                     }),
-                    (0, r.jsx)(s.zx, {
+                    (0, a.jsx)(s.zx, {
                         size: s.zx.Sizes.ICON,
                         className: O.clipFormFooterButton,
                         disabled: null != B,
@@ -232,7 +229,7 @@ function E(e) {
                         onClick: L,
                         children: k.intl.string(k.t.K344S0),
                     }),
-                    (0, r.jsx)(s.zx, {
+                    (0, a.jsx)(s.zx, {
                         "aria-label": k.intl.string(k.t.PdRCRk),
                         size: s.zx.Sizes.ICON,
                         wrapperClassName: i()(O.clipFormFooterButton, { [O.submittingWrapperFix]: null != B }),
@@ -243,7 +240,7 @@ function E(e) {
                             (0, c.jW)(e, async () => {
                                 let { default: e } = await n.e("32157").then(n.bind(n, 151090));
                                 return (t) =>
-                                    (0, r.jsx)(
+                                    (0, a.jsx)(
                                         e,
                                         N(S({}, t), {
                                             onExportToSoundboard: H,
@@ -254,7 +251,7 @@ function E(e) {
                                     );
                             });
                         },
-                        children: (0, r.jsx)(u.xhG, {
+                        children: (0, a.jsx)(u.xhG, {
                             size: "md",
                             color: "currentColor",
                         }),

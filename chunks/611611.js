@@ -1,69 +1,57 @@
-n.d(t, { default: () => E }), n(388685);
+n.d(t, { default: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
-    a = n(120356),
-    i = n.n(a),
-    o = n(525769),
-    c = n(693789),
-    s = n(82659),
-    u = n(755721),
-    d = n(481060),
-    f = n(240872),
-    m = n(213609),
-    p = n(313201),
-    b = n(542383),
-    g = n(79390),
-    j = n(728076),
-    O = n(2466),
-    h = n(485168),
-    y = n(309081),
-    v = n(489887),
-    P = n(20281),
-    w = n(388032),
-    x = n(520317);
-let C = (0, p.hQ)();
-function k(e) {
+    a = n(525769),
+    i = n(693789),
+    o = n(19217),
+    c = n(82659),
+    s = n(755721),
+    u = n(481060),
+    d = n(240872),
+    f = n(213609),
+    m = n(542383),
+    p = n(79390),
+    b = n(728076),
+    g = n(2466),
+    j = n(485168),
+    O = n(309081),
+    y = n(489887),
+    h = n(20281),
+    v = n(388032),
+    P = n(520317);
+function w(e) {
     let { question: t, onChange: n, error: l, inputRef: a } = e;
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)(d.vwX, {
-                tag: d.RB0.LABEL,
-                htmlFor: C,
-                children: w.intl.string(w.t.WBiKnJ),
-            }),
-            (0, r.jsx)(d.Kx8, {
-                inputRef: a,
-                id: C,
-                placeholder: w.intl.string(w.t["/uQqJS"]),
-                value: t,
-                onChange: n,
-                maxLength: v.Az,
-                error: l,
-                rows: 1,
-                autosize: !0,
-                autoFocus: !0,
-                showCharacterCount: !0,
-            }),
-        ],
+    return (0, r.jsx)(u.Kx8, {
+        label: v.intl.string(v.t.WBiKnJ),
+        inputRef: a,
+        placeholder: v.intl.string(v.t["/uQqJS"]),
+        value: t,
+        onChange: n,
+        maxLength: y.Az,
+        error: l,
+        rows: 1,
+        autosize: !0,
+        autoFocus: !0,
+        showCharacterCount: !0,
     });
 }
-function R(e) {
+function x(e) {
     let { selectedDuration: t, onSelect: n } = e,
-        l = (0, O.Z)(),
+        l = (0, g.Z)(),
         a = l[t];
     return (0, r.jsxs)("div", {
-        className: x.duration,
+        className: P.duration,
         children: [
-            (0, r.jsx)(d.Text, {
+            (0, r.jsx)(u.Text, {
                 variant: "text-md/medium",
                 color: "header-secondary",
                 tag: "label",
                 "aria-hidden": !0,
-                children: w.intl.string(w.t.bGHzxc),
+                children: v.intl.string(v.t.bGHzxc),
             }),
-            (0, r.jsx)(d.PhF, {
-                "aria-label": w.intl.formatToPlainString(w.t.nXNHND, { duration: a }),
-                className: x.durationSelect,
+            (0, r.jsx)(u.PhF, {
+                "aria-label": v.intl.formatToPlainString(v.t.nXNHND, { duration: a }),
+                className: P.durationSelect,
                 options: Object.entries(l).map((e) => {
                     let [t, n] = e;
                     return {
@@ -75,7 +63,7 @@ function R(e) {
                 select: n,
                 serialize: (e) => "".concat(e),
                 renderOptionLabel: (e) =>
-                    (0, r.jsx)(d.Text, {
+                    (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         children: e.label,
                     }),
@@ -84,11 +72,11 @@ function R(e) {
         ],
     });
 }
-function E(e) {
-    let { channel: t, transitionState: n, onClose: a, initialQuestion: p, initialAnswers: O, initialDuration: C } = e;
-    (0, m.Z)({
-        type: P.n.MODAL,
-        name: o.z.POLL_EDITOR_VIEWED,
+function k(e) {
+    let { channel: t, transitionState: n, onClose: g, initialQuestion: C, initialAnswers: R, initialDuration: E } = e;
+    (0, f.Z)({
+        type: h.n.MODAL,
+        name: a.z.POLL_EDITOR_VIEWED,
     });
     let _ = l.useRef(null),
         S = l.useRef([]),
@@ -96,16 +84,16 @@ function E(e) {
         A = l.useCallback((e) => {
             var t, n;
             let { indexToRemove: r, numberOfAnswers: l } = e;
-            l === v.gY + 1
+            l === y.gY + 1
                 ? null == (t = D.current) || t.focus()
                 : null == (n = S.current[r === l - 1 ? r - 1 : r + 1]) || n.focusDeleteButton();
         }, []),
         {
             answers: I,
             question: N,
-            allowMultiSelect: L,
-            setAllowMultiSelect: T,
-            duration: U,
+            allowMultiSelect: T,
+            setAllowMultiSelect: U,
+            duration: L,
             setDuration: Z,
             handleQuestionChange: B,
             handleAnswerTextChange: Y,
@@ -114,32 +102,32 @@ function E(e) {
             handleRemoveAnswerImage: M,
             canRemoveMoreAnswers: H,
             handleAddAnswer: q,
-            handleRemoveAnswer: F,
-            createPollError: W,
+            handleRemoveAnswer: W,
+            createPollError: F,
             handleSubmitPoll: G,
-            fieldErrors: X,
-            submitting: V,
-            shouldFocusOnInvalidField: Q,
-            setShouldFocusOnInvalidField: J,
-        } = (0, j.Z)(t, a, A, {
-            initialQuestion: p,
-            initialAnswers: O,
-            initialDuration: C,
+            fieldErrors: V,
+            submitting: X,
+            shouldFocusOnInvalidField: J,
+            setShouldFocusOnInvalidField: Q,
+        } = (0, b.Z)(t, g, A, {
+            initialQuestion: C,
+            initialAnswers: R,
+            initialDuration: E,
         }),
-        { trackPollCreationCancelled: $ } = (0, h.l)(I, L),
+        { trackPollCreationCancelled: $ } = (0, j.l)(I, T),
         ee = l.useRef(I.length),
         et = l.useCallback(() => {
-            $(), a();
-        }, [a, $]),
+            $(), g();
+        }, [g, $]),
         en = l.useCallback(() => {
-            if (!(0, g.D$)(N, I))
-                return void f.Z.show({
-                    title: w.intl.string(w.t.HMrgcn),
-                    body: w.intl.string(w.t["Wxa/j4"]),
-                    confirmColor: c.Tt.RED,
-                    confirmText: w.intl.string(w.t.TzJA4u),
+            if (!(0, p.D$)(N, I))
+                return void d.Z.show({
+                    title: v.intl.string(v.t.HMrgcn),
+                    body: v.intl.string(v.t["Wxa/j4"]),
+                    confirmColor: i.Tt.RED,
+                    confirmText: v.intl.string(v.t.TzJA4u),
                     confirmVariant: "critical-primary",
-                    cancelText: w.intl.string(w.t["2BR5R0"]),
+                    cancelText: v.intl.string(v.t["2BR5R0"]),
                     onConfirm: () => {
                         et();
                     },
@@ -147,12 +135,12 @@ function E(e) {
             et();
         }, [et, I, N]);
     l.useEffect(() => {
-        (0, d.oav)(
-            v.$z,
+        (0, u.oav)(
+            y.$z,
             (e) => {
                 var n, l;
                 return (0, r.jsx)(
-                    E,
+                    k,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -205,21 +193,21 @@ function E(e) {
             ee.current = I.length;
         }, [I.length]),
         l.useEffect(() => {
-            if (Q) {
+            if (J) {
                 var e, t;
-                if ((null == X ? void 0 : X.question) != null) null == (e = _.current) || e.focus();
+                if ((null == V ? void 0 : V.question) != null) null == (e = _.current) || e.focus();
                 else {
-                    let e = I.findIndex((e) => X["answer-".concat(e.localCreationAnswerId)]);
+                    let e = I.findIndex((e) => V["answer-".concat(e.localCreationAnswerId)]);
                     -1 !== e && (null == (t = S.current[e]) || t.focusInput());
                 }
-                J(!1);
+                Q(!1);
             }
-        }, [X, I, Q, J, S]);
+        }, [V, I, J, Q, S]);
     let er = l.useCallback(() => {
-            n === d.Dvm.ENTERED && G();
+            n === u.Dvm.ENTERED && G();
         }, [G, n]),
-        el = (0, b.Z)({
-            disabled: V,
+        el = (0, m.Z)({
+            disabled: X,
             onSubmit: er,
         }),
         ea = l.useMemo(
@@ -227,54 +215,50 @@ function E(e) {
                 {
                     variant: "primary",
                     onClick: er,
-                    submitting: V,
-                    text: w.intl.string(w.t.JOj8Zm),
+                    submitting: X,
+                    text: v.intl.string(v.t.JOj8Zm),
                 },
             ],
-            [er, V],
+            [er, X],
         );
-    return (0, r.jsx)(s.Modal, {
+    return (0, r.jsx)(c.Modal, {
         transitionState: n,
-        onClose: a,
-        title: w.intl.string(w.t["GD/8X1"]),
+        onClose: g,
+        title: v.intl.string(v.t["GD/8X1"]),
         actions: ea,
-        actionBarInput: (0, r.jsx)(u.$q, {
-            className: x.checkbox,
+        actionBarInput: (0, r.jsx)(s.$q, {
+            className: P.checkbox,
             size: 24,
-            value: L,
-            onChange: (e, t) => T(t),
-            children: (0, r.jsx)(d.Text, {
+            value: T,
+            onChange: (e, t) => U(t),
+            children: (0, r.jsx)(u.Text, {
                 variant: "text-md/medium",
                 color: "interactive-active",
-                children: w.intl.string(w.t["Ux+iQU"]),
+                children: v.intl.string(v.t["Ux+iQU"]),
             }),
         }),
         children: (0, r.jsxs)("div", {
-            className: x.content,
+            className: P.content,
             onKeyDown: el,
             children: [
-                null != W &&
-                    (0, r.jsx)(d.kzN, {
-                        className: x.apiErrorBlock,
-                        children: W.getAnyErrorMessage(),
+                null != F &&
+                    (0, r.jsx)(u.kzN, {
+                        className: P.apiErrorBlock,
+                        children: F.getAnyErrorMessage(),
                     }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(w, {
                     question: N,
                     onChange: B,
-                    error: null == X ? void 0 : X.question,
+                    error: null == V ? void 0 : V.question,
                     inputRef: _,
                 }),
-                (0, r.jsx)(d.LZC, { size: 26 }),
-                (0, r.jsxs)("fieldset", {
-                    className: i()(x.answerInputsContainer, x.defaultContainer),
+                (0, r.jsx)(u.LZC, { size: 26 }),
+                (0, r.jsxs)(o.C, {
+                    label: v.intl.string(v.t.oMBfeX),
                     children: [
-                        (0, r.jsx)(d.vwX, {
-                            tag: d.RB0.LEGEND,
-                            children: w.intl.string(w.t.oMBfeX),
-                        }),
                         I.map((e, n) =>
                             (0, r.jsx)(
-                                y.Z,
+                                O.Z,
                                 {
                                     answer: e,
                                     channelId: t.id,
@@ -283,11 +267,11 @@ function E(e) {
                                     onEmojiSelect: K,
                                     onEmojiRemove: M,
                                     onAnswerTextChange: Y,
-                                    onRemoveAnswer: F,
+                                    onRemoveAnswer: W,
                                     addAnswer: q,
                                     submitPoll: er,
                                     answerRowRefs: S,
-                                    error: null == X ? void 0 : X["answer-".concat(e.localCreationAnswerId)],
+                                    error: null == V ? void 0 : V["answer-".concat(e.localCreationAnswerId)],
                                     canRemoveAnswer: H,
                                     ref: (e) => {
                                         S.current[n] = e;
@@ -298,21 +282,21 @@ function E(e) {
                         ),
                         z &&
                             (0, r.jsx)("div", {
-                                className: x.addAnswerButton,
-                                children: (0, r.jsx)(d.zxk, {
-                                    icon: d.qJs,
+                                className: P.addAnswerButton,
+                                children: (0, r.jsx)(u.zxk, {
+                                    icon: u.qJs,
                                     variant: "secondary",
                                     onClick: q,
-                                    "aria-label": w.intl.string(w.t.B2UvmZ),
+                                    "aria-label": v.intl.string(v.t.B2UvmZ),
                                     buttonRef: D,
-                                    text: w.intl.string(w.t.B2UvmZ),
+                                    text: v.intl.string(v.t.B2UvmZ),
                                 }),
                             }),
                     ],
                 }),
-                (0, r.jsx)(d.LZC, { size: 18 }),
-                (0, r.jsx)(R, {
-                    selectedDuration: U,
+                (0, r.jsx)(u.LZC, { size: 18 }),
+                (0, r.jsx)(x, {
+                    selectedDuration: L,
                     onSelect: Z,
                 }),
             ],

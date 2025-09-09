@@ -46,14 +46,16 @@ function j(e) {
                 text: t ? "Uploading\u2026" : s,
             }),
             null != r &&
-                (0, a.jsx)(l.R94, {
-                    type: l.geA.ERROR,
+                (0, a.jsx)(l.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-feedback-critical",
                     className: b.statusText,
                     children: r,
                 }),
             n &&
-                (0, a.jsx)(l.R94, {
-                    type: l.geA.SUCCESS,
+                (0, a.jsx)(l.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-feedback-positive",
                     className: b.statusText,
                     children: "Logs uploaded successfully",
                 }),
@@ -399,8 +401,9 @@ function E() {
                 ],
             }),
             null != o &&
-                (0, a.jsx)(l.R94, {
-                    type: l.geA.ERROR,
+                (0, a.jsx)(l.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-feedback-critical",
                     className: b.statusText,
                     children: o,
                 }),

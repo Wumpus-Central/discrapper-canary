@@ -38,14 +38,12 @@ function m(e) {
                 }),
             }),
             m
-                ? (0, l.jsx)(s.xJW, {
-                      title: d.intl.string(d.t["9rnmen"]),
-                      children: (0, l.jsx)(s.oil, {
-                          disabled: !m,
-                          value: null != i ? i : void 0,
-                          onChange: c.jS,
-                          placeholder: "https://localhost:3000",
-                      }),
+                ? (0, l.jsx)(s.oil, {
+                      label: d.intl.string(d.t["9rnmen"]),
+                      disabled: !m,
+                      value: null != i ? i : void 0,
+                      onChange: c.jS,
+                      placeholder: "https://localhost:3000",
                   })
                 : null,
             !0 === t

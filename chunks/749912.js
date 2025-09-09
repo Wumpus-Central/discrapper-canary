@@ -168,10 +168,7 @@ let h = function (e) {
         children: [
             (0, r.jsxs)(a.xJW, {
                 children: [
-                    (0, r.jsx)(a.vwX, {
-                        tag: a.RB0.H5,
-                        children: "Task Type(s)",
-                    }),
+                    (0, r.jsx)(a.vwX, { children: "Task Type(s)" }),
                     (0, r.jsx)(a.R94, {
                         children: (0, r.jsx)(a.PhF, {
                             className: s.taskPresetSelect,
@@ -190,10 +187,7 @@ let h = function (e) {
             }),
             (0, r.jsxs)(a.xJW, {
                 children: [
-                    (0, r.jsx)(a.vwX, {
-                        tag: a.RB0.H5,
-                        children: "Task Duration",
-                    }),
+                    (0, r.jsx)(a.vwX, { children: "Task Duration" }),
                     (0, r.jsx)(a.R94, {
                         children: (0, r.jsx)(a.oil, {
                             value: String(n / o.Z.Seconds.MINUTE),

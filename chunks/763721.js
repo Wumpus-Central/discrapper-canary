@@ -524,19 +524,16 @@ let h = [
                                                                     ],
                                                                 }),
                                                             }),
-                                                            (0, r.jsx)(o.xJW, {
-                                                                title: "Tags",
-                                                                children: (0, r.jsx)(
-                                                                    o.oil,
-                                                                    f(u({}, v), {
-                                                                        leading: {
-                                                                            type: "tags",
-                                                                            label: "Tags",
-                                                                            items: h.slice(0, 3),
-                                                                        },
-                                                                    }),
-                                                                ),
-                                                            }),
+                                                            (0, r.jsx)(
+                                                                o.oil,
+                                                                f(u({}, v), {
+                                                                    leading: {
+                                                                        type: "tags",
+                                                                        label: "Tags",
+                                                                        items: h.slice(0, 3),
+                                                                    },
+                                                                }),
+                                                            ),
                                                         ],
                                                     }),
                                             ],

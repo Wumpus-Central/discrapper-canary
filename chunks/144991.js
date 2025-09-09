@@ -151,7 +151,6 @@ class h extends r.PureComponent {
             className: t,
             children: (0, i.jsxs)(c.y5t, {
                 component: (0, i.jsx)(c.vwX, {
-                    tag: c.RB0.H5,
                     className: null != e.description ? f.marginBottom8 : f.marginBottom20,
                     children: e.title,
                 }),

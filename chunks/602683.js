@@ -14,10 +14,7 @@ let o = function (e) {
         }, [n]),
         (0, r.jsxs)(a.xJW, {
             children: [
-                (0, r.jsx)(a.vwX, {
-                    tag: a.RB0.H5,
-                    children: s,
-                }),
+                (0, r.jsx)(a.vwX, { children: s }),
                 (0, r.jsx)(a.R94, {
                     children: (0, r.jsx)(a.oil, {
                         value: l,

@@ -58,7 +58,6 @@ function A() {
                                 className: S.sessions,
                                 children: [
                                     (0, r.jsx)(d.hjN, {
-                                        tag: d.RB0.H5,
                                         title: T.intl.string(T.t.LLS19v),
                                         titleClassName: S.groupTitle,
                                         children:
@@ -72,7 +71,6 @@ function A() {
                                     !(n.length > 0) && (null == o ? void 0 : o.mfaEnabled)
                                         ? null
                                         : (0, r.jsxs)(d.hjN, {
-                                              tag: d.RB0.H5,
                                               title: T.intl.string(T.t.xx1MWV),
                                               titleClassName: S.groupTitle,
                                               className: S.otherSessions,
@@ -99,7 +97,6 @@ function A() {
                             }),
                             n.length > 0
                                 ? (0, r.jsxs)(d.hjN, {
-                                      tag: d.RB0.H5,
                                       title: y.size > 0 ? T.intl.string(T.t.mMEmRE) : T.intl.string(T.t.Vij32N),
                                       children: [
                                           (0, r.jsx)(d.R94, {

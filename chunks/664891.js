@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(981631),
     B = n(388032),
     Z = n(250445),
-    V = n(867983);
-function F(e, t, n) {
+    F = n(867983);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                F(e, t, n[t]);
+                V(e, t, n[t]);
             });
     }
     return e;
@@ -104,7 +104,7 @@ function K(e) {
             legalTermsNodeRef: k,
             hasLegalTermsFlash: U,
             onInvoiceError: Z,
-            planGroup: F,
+            planGroup: V,
             currencies: H,
             onCurrencyChange: Y,
             hasOpenInvoice: W,
@@ -168,12 +168,12 @@ function K(e) {
                     priceOptions: s,
                     preventFetch: e_,
                 })
-              : (0, R.R4)(n, P, F)
+              : (0, R.R4)(n, P, V)
                 ? (0, r.jsx)(q, {
                       premiumSubscription: n,
                       newPlan: ec,
                       onInvoiceError: Z,
-                      planGroup: F,
+                      planGroup: V,
                       priceOptions: s,
                       fractionalPremiumInfo: ed,
                       preventFetch: e_,
@@ -181,7 +181,7 @@ function K(e) {
                 : (0, r.jsx)(J, {
                       premiumSubscription: n,
                       newPlan: ec,
-                      planGroup: F,
+                      planGroup: V,
                       fractionalPremiumInfo: ed,
                       priceOptions: s,
                       preventFetch: e_,
@@ -189,7 +189,7 @@ function K(e) {
     let eE = null == n ? void 0 : n.eligiblePaymentGateways,
         eb = null != eE && eE.length > 0 && (es === C.c || null === el) && ei ? j.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)("div", {
-        className: V.stepBody,
+        className: F.stepBody,
         children: [
             (0, r.jsx)(j.Y, { paymentRestrictionBannerType: eb }),
             !eh &&
@@ -205,25 +205,19 @@ function K(e) {
                             planOptions: em,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: P,
-                            planGroup: F,
+                            planGroup: V,
                             showTotal: !1,
                             handleClose: $,
                         }),
                         (0, r.jsx)(D.UN, {}),
                     ],
                 }),
-            (0, r.jsx)(d.vwX, {
-                tag: d.RB0.H5,
-                children: t,
-            }),
+            (0, r.jsx)(d.vwX, { children: t }),
             eg,
             (0, r.jsxs)("div", {
-                className: V.paymentSourceWrapper,
+                className: F.paymentSourceWrapper,
                 children: [
-                    (0, r.jsx)(d.vwX, {
-                        tag: d.RB0.H5,
-                        children: B.intl.string(B.t.mmDvV1),
-                    }),
+                    (0, r.jsx)(d.vwX, { children: B.intl.string(B.t.mmDvV1) }),
                     (0, r.jsx)(p.ZP, {
                         paymentSources: Object.values(a),
                         selectedPaymentSourceId: es,
@@ -232,18 +226,15 @@ function K(e) {
                         hidePersonalInformation: eu,
                         disabled: e_,
                         paymentGatewayRestrictions: null == n ? void 0 : n.eligiblePaymentGateways,
-                        className: o()({ [V.premiumBrandRefreshInputBackground]: ea }),
+                        className: o()({ [F.premiumBrandRefreshInputBackground]: ea }),
                     }),
                 ],
             }),
             (0, r.jsxs)(f.b, {
                 currencies: H,
-                className: V.currencyWrapper,
+                className: F.currencyWrapper,
                 children: [
-                    (0, r.jsx)(d.vwX, {
-                        tag: d.RB0.H5,
-                        children: B.intl.string(B.t["/AAR09"]),
-                    }),
+                    (0, r.jsx)(d.vwX, { children: B.intl.string(B.t["/AAR09"]) }),
                     (0, r.jsx)(f.Z, {
                         selectedCurrency: s.currency,
                         currencies: H,
@@ -256,12 +247,12 @@ function K(e) {
                 isActive: U,
                 ref: k,
                 children:
-                    null != n && (0, R.R4)(n, P, F)
+                    null != n && (0, R.R4)(n, P, V)
                         ? (0, r.jsx)(X, {
                               premiumSubscription: n,
                               newPlan: ec,
                               onInvoiceError: Z,
-                              planGroup: F,
+                              planGroup: V,
                               priceOptions: s,
                               preventFetch: e_,
                               disabled: e_,
@@ -276,7 +267,7 @@ function K(e) {
                                   paymentSourceType: el,
                                   basePrice: (0, N.aS)(ec.id, !1, eo, s),
                                   currentSubscription: n,
-                                  planGroup: F,
+                                  planGroup: V,
                               }),
                               forceShow: !0,
                               showPricingLink: ec.currency !== G.pKx.USD,
@@ -284,7 +275,7 @@ function K(e) {
                               disabled: e_,
                               subscriptionPlan: ec,
                               currentSubscription: n,
-                              planGroup: F,
+                              planGroup: V,
                           }),
             }),
         ],
@@ -376,7 +367,7 @@ function q(e) {
         (null !== u && null !== T && (t = (0, N.N1)(T.subscriptionPeriodEnd, u.unactivatedUnits, u.endsAt)),
         null == T || null == A || w)
     )
-        return (0, r.jsx)(d.$jN, { className: V.__invalid_spinner });
+        return (0, r.jsx)(d.$jN, { className: F.__invalid_spinner });
     let x = (0, N.Ap)(c.paymentSourceId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -386,7 +377,7 @@ function q(e) {
                 overrideRenewalDate: t,
             }),
             (0, r.jsxs)(D.aO, {
-                className: o()(V.invoice, m),
+                className: o()(F.invoice, m),
                 children: [
                     (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Cg"]) }),
                     (0, r.jsx)(k.Lu, {
@@ -504,7 +495,7 @@ function Q(e) {
         null != E)
     )
         return (0, r.jsx)(d.kzN, { children: E.message });
-    if (null == f || null == p) return (0, r.jsx)(d.$jN, { className: V.__invalid_spinner });
+    if (null == f || null == p) return (0, r.jsx)(d.$jN, { className: F.__invalid_spinner });
     let b = (0, N.Ap)(n.paymentSourceId);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -513,7 +504,7 @@ function Q(e) {
                 children: B.intl.string(B.t.spIYoq),
             }),
             (0, r.jsxs)(D.aO, {
-                className: o()(V.invoice, c),
+                className: o()(F.invoice, c),
                 children: [
                     (0, r.jsx)(D.Z9, { children: B.intl.string(B.t["2eh+Cg"]) }),
                     (0, r.jsx)(k.By, {
@@ -568,14 +559,14 @@ function J(e) {
     return (
         l.fractionalState === U.a$.FP_SUB_PAUSED && (b = l.endsAt.toDate()),
         (0, r.jsxs)("div", {
-            className: V.bodyText,
+            className: F.bodyText,
             children: [
                 (0, r.jsx)("div", {
                     className: Z.renewalInvoiceDate,
                     children: B.intl.format(B.t["+y0Tj4"], { renewalDate: b }),
                 }),
                 (0, r.jsxs)(D.aO, {
-                    className: o()(V.invoice, _),
+                    className: o()(F.invoice, _),
                     children: [
                         (0, r.jsx)(D.Z9, { children: B.intl.string(B.t.iqhIp6) }),
                         (0, r.jsx)(D.B1, {

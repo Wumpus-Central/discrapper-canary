@@ -21,10 +21,7 @@ let o = function (e) {
     let { onChange: t, value: n } = e;
     return (0, r.jsxs)(i.xJW, {
         children: [
-            (0, r.jsx)(i.vwX, {
-                tag: i.RB0.H5,
-                children: "User State",
-            }),
+            (0, r.jsx)(i.vwX, { children: "User State" }),
             (0, r.jsx)(i.R94, {
                 children: (0, r.jsx)(i.PhF, {
                     "aria-label": "User State",

@@ -7,12 +7,12 @@ n.d(t, {
     II: () => P,
     MC: () => R,
     Vj: () => N,
-    ZP: () => M,
+    ZP: () => k,
     gO: () => w,
     i_: () => D,
     jQ: () => j,
     qE: () => C,
-    v6: () => k,
+    v6: () => M,
     zx: () => A,
 }),
     n(953529),
@@ -189,7 +189,6 @@ let P = (e) => {
             error: n,
             className: o,
             required: b,
-            tag: "label",
             htmlFor: v,
             children: [
                 (0, r.jsx)(s.oil, {
@@ -312,7 +311,7 @@ let P = (e) => {
                   ],
               });
     },
-    k = (e) => {
+    M = (e) => {
         let { className: t } = e;
         return (0, r.jsxs)(w, {
             className: t,
@@ -330,7 +329,7 @@ let P = (e) => {
             ],
         });
     },
-    M = (e) => {
+    k = (e) => {
         let {
             className: t,
             contentClassName: n,

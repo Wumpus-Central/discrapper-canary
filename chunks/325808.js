@@ -94,7 +94,6 @@ function R(e) {
                                 children: [
                                     (0, r.jsx)(c.vwX, {
                                         id: C,
-                                        tag: c.RB0.H5,
                                         className: I.marginBottom8,
                                         children: y.intl.string(y.t.y0ShVl),
                                     }),
@@ -111,7 +110,7 @@ function R(e) {
                     ],
                 }),
                 T &&
-                    (0, r.jsxs)(c.xJW, {
+                    (0, r.jsxs)("div", {
                         className: I.marginTop8,
                         children: [
                             (0, r.jsx)(p.FG, {

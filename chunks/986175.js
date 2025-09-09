@@ -145,11 +145,9 @@ let g = {
                                             children: (0, r.jsxs)(o.Kqy, {
                                                 gap: 16,
                                                 children: [
-                                                    (0, r.jsx)(o.xJW, {
-                                                        title: "Example Input",
-                                                        children: (0, r.jsx)(o.oil, {
-                                                            placeholder: "Enter some text...",
-                                                        }),
+                                                    (0, r.jsx)(o.oil, {
+                                                        label: "Example Input",
+                                                        placeholder: "Enter some text...",
                                                     }),
                                                     (0, r.jsx)(o.Text, {
                                                         variant: "text-md/normal",

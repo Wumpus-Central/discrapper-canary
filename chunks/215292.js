@@ -24,12 +24,12 @@ function g(t) {
         [y, D] = l.useState(!1),
         z = (0, m.Dt)(),
         U = (0, a.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        j = l.useRef(null);
+        N = l.useRef(null);
     l.useEffect(() => {
         var t;
-        T && (null == (t = j.current) || t.focus());
+        T && (null == (t = N.current) || t.focus());
     }, [T]);
-    let N = l.useCallback(
+    let j = l.useCallback(
             async (t) => {
                 if ((t.preventDefault(), null == U)) return;
                 D(!0), G(null);
@@ -49,7 +49,7 @@ function g(t) {
                 (0, i.jsx)(r.zxk, {
                     variant: "primary",
                     text: _.intl.string(_.t.i4jeWV),
-                    onClick: N,
+                    onClick: j,
                     disabled: 0 === E.length,
                     loading: y,
                 }),
@@ -99,20 +99,16 @@ function g(t) {
                     className: L.channelPrompt,
                     children: [
                         (0, i.jsx)("form", {
-                            onSubmit: N,
-                            children: (0, i.jsx)(r.xJW, {
-                                title: _.intl.string(_.t.bY20tb),
-                                tag: "label",
-                                htmlFor: z,
+                            onSubmit: j,
+                            children: (0, i.jsx)(r.oil, {
+                                label: _.intl.string(_.t.bY20tb),
                                 error: null == I ? void 0 : I.getFieldMessage("name"),
-                                children: (0, i.jsx)(r.oil, {
-                                    type: "text",
-                                    value: E,
-                                    id: z,
-                                    onChange: h,
-                                    placeholder: _.intl.string(_.t.xGOYAw),
-                                    inputRef: j,
-                                }),
+                                type: "text",
+                                value: E,
+                                id: z,
+                                onChange: h,
+                                placeholder: _.intl.string(_.t.xGOYAw),
+                                inputRef: N,
                             }),
                         }),
                         null != I &&

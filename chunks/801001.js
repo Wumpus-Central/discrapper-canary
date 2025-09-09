@@ -24,15 +24,15 @@ function I(e) {
     let { transitionState: t, onClose: n, onSave: r, onDelete: h, option: x, guild: I, prompt: P, index: S } = e,
         w = (0, v.Dt)(),
         E = (0, s.e7)([g.ZP], () => g.ZP.getDefaultChannel(I.id)),
-        [k, R] = i.useState(() => {
+        [k, Z] = i.useState(() => {
             var e;
             return null != (e = null == x ? void 0 : x.emoji) ? e : null;
         }),
-        [Z, _] = i.useState(() => {
+        [R, M] = i.useState(() => {
             var e;
             return null != (e = null == x ? void 0 : x.title) ? e : "";
         }),
-        [M, T] = i.useState(() => {
+        [T, _] = i.useState(() => {
             var e;
             return null != (e = null == x ? void 0 : x.description) ? e : "";
         }),
@@ -40,22 +40,22 @@ function I(e) {
             var e;
             return new Set(null != (e = null == x ? void 0 : x.channelIds) ? e : []);
         }),
-        [q, L] = i.useState(() => {
+        [q, z] = i.useState(() => {
             var e;
             return new Set(null != (e = null == x ? void 0 : x.roleIds) ? e : []);
         }),
-        [z, A] = i.useState({}),
-        F = i.useRef(null);
+        [A, F] = i.useState({}),
+        H = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
-        return null == (e = F.current) ? void 0 : e.focus();
+        return null == (e = H.current) ? void 0 : e.focus();
     }, []);
-    let H = i.useCallback(() => {
+    let J = i.useCallback(() => {
             var e;
             let t = {
                     id: null != (e = null == x ? void 0 : x.id) ? e : "".concat(Date.now()),
-                    title: Z,
-                    description: M,
+                    title: R,
+                    description: T,
                     channelIds: Array.from(B).sort(),
                     roleIds: Array.from(q).sort(),
                     emoji: null == k ? void 0 : k,
@@ -66,9 +66,9 @@ function I(e) {
                     let r = (0, p.en)(e, t, n, l);
                     return null != r && (i.roles = r), i;
                 })(I, f.Z.editedOnboardingPrompts, P, t);
-            A(l), o().isEmpty(l) && (r(t), n());
-        }, [B, M, k, I, n, r, null == x ? void 0 : x.id, P, q, Z]),
-        J = i.useMemo(
+            F(l), o().isEmpty(l) && (r(t), n());
+        }, [B, T, k, I, n, r, null == x ? void 0 : x.id, P, q, R]),
+        K = i.useMemo(
             () => [
                 {
                     text: O.intl.string(O.t["ETE/oK"]),
@@ -77,11 +77,11 @@ function I(e) {
                 },
                 {
                     text: O.intl.string(O.t.R3BPHx),
-                    onClick: H,
+                    onClick: J,
                     variant: "primary",
                 },
             ],
-            [H, n],
+            [J, n],
         );
     return (0, l.jsxs)(c.I, {
         transitionState: t,
@@ -111,18 +111,18 @@ function I(e) {
                             gap: 8,
                             children: [
                                 (0, l.jsx)(d.oil, {
-                                    inputRef: F,
+                                    inputRef: H,
                                     placeholder: O.intl.string(O.t.EHe6gY),
-                                    value: Z,
-                                    onChange: (e) => _(e),
+                                    value: R,
+                                    onChange: (e) => M(e),
                                     maxLength: y.NE,
                                     autoFocus: !0,
-                                    error: z.title,
+                                    error: A.title,
                                 }),
                                 (0, l.jsx)(d.oil, {
                                     placeholder: O.intl.string(O.t.mIjgJC),
-                                    value: M,
-                                    onChange: (e) => T(e),
+                                    value: T,
+                                    onChange: (e) => _(e),
                                     maxLength: y.NO,
                                 }),
                             ],
@@ -147,13 +147,13 @@ function I(e) {
                                         selectedRoleIds: q,
                                         disableEveryoneRole: !0,
                                         placeholder: O.intl.string(O.t.aFO1Iy),
-                                        onChange: L,
+                                        onChange: z,
                                         helperText: O.intl.string(O.t.Mbvpv7),
                                         selectableRoleFilter: (e) => !e.managed,
                                     }),
                                 ],
                             }),
-                            null == z.roles ? null : (0, l.jsx)(d.pdY, { error: z.roles }),
+                            null == A.roles ? null : (0, l.jsx)(d.pdY, { error: A.roles }),
                             (0, l.jsx)(N, {
                                 guild: I,
                                 roleIds: q,
@@ -168,14 +168,14 @@ function I(e) {
                                 children: [
                                     (0, l.jsx)(d.vwX, { children: O.intl.string(O.t["4ahTBg"]) }),
                                     (0, l.jsx)(d.R94, {
-                                        type: d.geA.LABEL_DESCRIPTOR,
+                                        type: d.geA.DESCRIPTION,
                                         children: O.intl.string(O.t.Iv9RGh),
                                     }),
                                 ],
                             }),
                             (0, l.jsx)(b.Z, {
                                 emoji: k,
-                                setEmoji: R,
+                                setEmoji: Z,
                                 channel: E,
                             }),
                         ],
@@ -183,7 +183,7 @@ function I(e) {
                 ],
             }),
             (0, l.jsx)(u.G, {
-                actions: J,
+                actions: K,
                 leading: (0, l.jsx)(d.Avr, {
                     text: O.intl.string(O.t.N86XcH),
                     onClick: () => {

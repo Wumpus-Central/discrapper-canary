@@ -204,7 +204,6 @@ function eK() {
                 location: { section: eR.jXE.NOISE_CANCELLATION_POPOUT },
             }),
             (0, r.jsx)(m.vwX, {
-                tag: m.RB0.H5,
                 className: a()(eB.marginBottom8, eB.marginTop20),
                 children: eU.intl.string(eU.t.k6h1Fx),
             }),

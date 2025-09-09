@@ -166,10 +166,7 @@ let C = (e) => {
         return (0, r.jsxs)("div", {
             className: y.paymentSourceWrapper,
             children: [
-                (0, r.jsx)(a.vwX, {
-                    tag: a.RB0.H5,
-                    children: b.intl.string(b.t.mmDvV1),
-                }),
+                (0, r.jsx)(a.vwX, { children: b.intl.string(b.t.mmDvV1) }),
                 (0, r.jsxs)("div", {
                     className: y.paymentSourceItem,
                     children: [
@@ -216,10 +213,7 @@ let C = (e) => {
         return (0, r.jsxs)("div", {
             className: y.stepBody,
             children: [
-                (0, r.jsx)(a.vwX, {
-                    tag: a.RB0.H5,
-                    children: b.intl.string(b.t.sail9P),
-                }),
+                (0, r.jsx)(a.vwX, { children: b.intl.string(b.t.sail9P) }),
                 (0, r.jsx)(R, {
                     skuId: t,
                     orbPriceAmount: n,

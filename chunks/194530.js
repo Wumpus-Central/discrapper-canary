@@ -79,18 +79,15 @@ function _(e) {
                         (0, r.jsxs)(o.hzk, {
                             className: f.content,
                             children: [
-                                (0, r.jsx)(o.xJW, {
-                                    title: d.intl.string(d.t.WBqMRU),
+                                (0, r.jsx)(o.oil, {
+                                    label: d.intl.string(d.t.WBqMRU),
                                     error: null == P || null == (t = P.password) ? void 0 : t[0],
+                                    type: "password",
+                                    value: y,
+                                    onChange: O,
+                                    inputRef: D,
+                                    autoComplete: "current-password",
                                     required: !0,
-                                    children: (0, r.jsx)(o.oil, {
-                                        type: "password",
-                                        value: y,
-                                        onChange: O,
-                                        inputRef: D,
-                                        autoComplete: "current-password",
-                                        required: !0,
-                                    }),
                                 }),
                                 (0, r.jsx)(o.xJW, {
                                     className: f.newPassword,

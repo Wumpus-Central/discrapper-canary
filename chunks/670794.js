@@ -11,7 +11,7 @@ function c(t) {
         [p, h] = l.useState(!1),
         [x, g] = l.useState(i),
         m = l.useRef(null),
-        f = async (t) => {
+        b = async (t) => {
             t.preventDefault(), h(!0);
             try {
                 await r.Z.updateRelationship(n.id, x), d();
@@ -20,11 +20,11 @@ function c(t) {
                 h(!1);
             }
         },
-        b = null == i ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t["8pOYUF"]);
+        f = null == i ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t["8pOYUF"]);
     return (0, e.jsx)("form", {
-        onSubmit: f,
+        onSubmit: b,
         children: (0, e.jsx)(a.Modal, {
-            title: b,
+            title: f,
             transitionState: c,
             subtitle: o.intl.string(o.t["NdQ+lJ"]),
             onClose: d,
@@ -36,7 +36,7 @@ function c(t) {
                 },
                 {
                     text: o.intl.string(o.t.R3BPHx),
-                    onSubmit: f,
+                    onSubmit: b,
                     variant: "primary",
                     disabled: p,
                     type: "submit",
@@ -45,16 +45,14 @@ function c(t) {
             children: (0, e.jsxs)(s.Kqy, {
                 gap: 8,
                 children: [
-                    (0, e.jsx)(s.xJW, {
-                        title: o.intl.string(o.t.pqG6GR),
-                        children: (0, e.jsx)(s.oil, {
-                            inputRef: m,
-                            value: null != x ? x : "",
-                            placeholder: u.ZP.getName(n),
-                            onChange: g,
-                            maxLength: 32,
-                            autoFocus: !0,
-                        }),
+                    (0, e.jsx)(s.oil, {
+                        label: o.intl.string(o.t.pqG6GR),
+                        inputRef: m,
+                        value: null != x ? x : "",
+                        placeholder: u.ZP.getName(n),
+                        onChange: g,
+                        maxLength: 32,
+                        autoFocus: !0,
                     }),
                     (0, e.jsx)(s.Avr, {
                         onClick: () => {

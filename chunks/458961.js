@@ -1,16 +1,16 @@
 t.d(e, { default: () => AA }), t(388685), t(953529);
 var n = t(951288),
     r = t(647438),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     i = t(512722),
     o = t.n(i),
     s = t(831209),
     d = t(399606),
     c = t(215569),
     u = t(159691),
-    g = t(755721),
-    f = t(481060),
+    f = t(755721),
+    g = t(481060),
     p = t(749210),
     m = t(852860),
     q = t(725803),
@@ -88,14 +88,14 @@ let Y = (0, h.hQ)(),
     D = (0, h.hQ)(),
     H = (0, h.hQ)();
 function M(A) {
-    let { text: e, onChange: t, value: r, disabled: l, warning: i } = A,
+    let { text: e, onChange: t, value: r, disabled: a, warning: i } = A,
         o = (0, h.Dt)(),
-        s = l ? "text-muted" : "text-default";
+        s = a ? "text-muted" : "text-default";
     return (0, n.jsxs)("label", {
-        className: a()(k.benefitToggleContainer, { [k.disabled]: l }),
+        className: l()(k.benefitToggleContainer, { [k.disabled]: a }),
         htmlFor: o,
         children: [
-            (0, n.jsx)(f.Text, {
+            (0, n.jsx)(g.Text, {
                 variant: "text-sm/medium",
                 color: s,
                 children: e,
@@ -103,21 +103,21 @@ function M(A) {
             null != i &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(f.LZC, {
+                        (0, n.jsx)(g.LZC, {
                             size: 4,
                             horizontal: !0,
                         }),
                         i,
                     ],
                 }),
-            (0, n.jsx)(f.LZC, {
+            (0, n.jsx)(g.LZC, {
                 size: 16,
                 horizontal: !0,
             }),
-            (0, n.jsx)(g.T2, {
+            (0, n.jsx)(f.T2, {
                 onChange: t,
                 checked: r,
-                disabled: l,
+                disabled: a,
                 id: o,
             }),
         ],
@@ -130,52 +130,52 @@ function J(A, e) {
     });
 }
 function _(A) {
-    let { guildId: e, selectedPriceTier: t, setPriceTier: l } = A,
-        { priceTiers: a } = (0, b.R)(e, w.RG5.GUILD_PRODUCTS),
+    let { guildId: e, selectedPriceTier: t, setPriceTier: a } = A,
+        { priceTiers: l } = (0, b.R)(e, w.RG5.GUILD_PRODUCTS),
         i = r.useMemo(
             () =>
-                (null != a ? a : null != t ? [t] : []).map((A) => ({
+                (null != l ? l : null != t ? [t] : []).map((A) => ({
                     value: A,
                     label: (0, V.T4)(A, w.pKx.USD),
                 })),
-            [a, t],
+            [l, t],
         );
-    return (0, n.jsx)(f.VcW, {
+    return (0, n.jsx)(g.VcW, {
         value: t,
         placeholder: L.intl.string(L.t.aI4J5O),
         maxVisibleItems: 5,
         options: i,
-        onChange: l,
+        onChange: a,
         filter: J,
         "aria-required": !0,
     });
 }
 function $(A) {
-    var e, l, a, i, g, h, b, U;
+    var e, a, l, i, f, h, b, U;
     let { guildId: J, productId: $, transitionState: Ae, onClose: At } = A,
         [An, Ar] = r.useState($),
-        Al = (0, d.e7)([I.Z], () => (null == An ? null : I.Z.getGuildProduct(An)), [An]),
-        Aa = (null == Al ? void 0 : Al.published) === !0,
+        Aa = (0, d.e7)([I.Z], () => (null == An ? null : I.Z.getGuildProduct(An)), [An]),
+        Al = (null == Aa ? void 0 : Aa.published) === !0,
         { application: Ai } = (0, q.Z)(J, B.wW.GUILD_ROLE_SUBSCRIPTIONS),
         Ao = y.M["0"],
         As = j.QK.useSetting(),
         Ad = (0, O.n)(),
         Ac = r.useCallback(() => {
             var A;
-            return (null == Al || null == (A = Al.image_asset) ? void 0 : A.application_id) == null
+            return (null == Aa || null == (A = Aa.image_asset) ? void 0 : A.application_id) == null
                 ? Ao.data
-                : (0, P._W)(Al.image_asset.application_id, Al.image_asset, 600, Ad && As ? void 0 : "webp");
-        }, [Ao, Al, Ad, As]),
+                : (0, P._W)(Aa.image_asset.application_id, Aa.image_asset, 600, Ad && As ? void 0 : "webp");
+        }, [Ao, Aa, Ad, As]),
         { shouldRestrictUpdatingCreatorMonetizationSettings: Au } = (0, v.gX)(J);
     r.useEffect(() => {
         Au && (At(), (0, Z.B)(L.intl.string(L.t.OLf3xs), L.t["90LBVl"]));
     }, [Au, At]);
-    let [Ag, Af] = r.useState(null != (a = null == Al ? void 0 : Al.name) ? a : ""),
-        [Ap, Am] = r.useState(null != (i = null == Al ? void 0 : Al.description) ? i : ""),
-        [Aq, Ah] = r.useState(null != (g = null == Al ? void 0 : Al.price_tier) ? g : void 0),
+    let [Af, Ag] = r.useState(null != (l = null == Aa ? void 0 : Aa.name) ? l : ""),
+        [Ap, Am] = r.useState(null != (i = null == Aa ? void 0 : Aa.description) ? i : ""),
+        [Aq, Ah] = r.useState(null != (f = null == Aa ? void 0 : Aa.price_tier) ? f : void 0),
         [Ab, AC] = r.useState(Ac),
         [Av, AU] = r.useState(
-            null != (h = null == Al || null == (e = Al.image_asset) ? void 0 : e.filename) ? h : Ao.name,
+            null != (h = null == Aa || null == (e = Aa.image_asset) ? void 0 : e.filename) ? h : Ao.name,
         ),
         [Aj, Ax] = r.useState(!1),
         [AV, AP] = r.useState(),
@@ -188,11 +188,11 @@ function $(A) {
             hasUnsavedAttachmentChanges: AT,
             cancelUnusedUploads: AX,
         } = (0, F.P)(),
-        AZ = (null == Al ? void 0 : Al.attachments) != null && (null == Al ? void 0 : Al.attachments.length) > 0,
+        AZ = (null == Aa ? void 0 : Aa.attachments) != null && (null == Aa ? void 0 : Aa.attachments.length) > 0,
         AW = null != Ay ? Ay : AV,
         AQ = null != AK && "published" in AK,
         Az = null != AK && !AQ,
-        AS = null != (b = null == Al ? void 0 : Al.role_id) ? b : null,
+        AS = null != (b = null == Aa ? void 0 : Aa.role_id) ? b : null,
         [AR, Aw] = r.useState(),
         AB = null != AR || null != AS,
         AL = (0, d.e7)([x.Z], () => (null != AS && null !== AR ? x.Z.getRole(J, AS) : null != AR ? AR : void 0), [
@@ -219,8 +219,8 @@ function $(A) {
         } = r.useMemo(
             () =>
                 (0, K.fG)({
-                    guildProductListing: Al,
-                    name: Ag,
+                    guildProductListing: Aa,
+                    name: Af,
                     priceTier: Aq,
                     description: Ap,
                     image: Ab,
@@ -230,24 +230,24 @@ function $(A) {
                     hasSavedAttachments: AZ,
                     hasUnsavedAttachmentChanges: AT,
                 }),
-            [Al, Ag, Aq, Ap, Ab, Av, Aj, AR, AZ, AT],
+            [Aa, Af, Aq, Ap, Ab, Av, Aj, AR, AZ, AT],
         ),
         A$ = r.useMemo(
             () =>
                 AH || null == AE || "publish" === AE || null != AW
                     ? null
-                    : (0, n.jsx)(f.oXn, {
+                    : (0, n.jsx)(g.oXn, {
                           className: k.successNotice,
                           children: (0, n.jsx)(m.Z, {
                               message: (0, n.jsxs)("div", {
                                   className: k.successNoticeMessage,
                                   children: [
-                                      (0, n.jsx)(f.owK, {
+                                      (0, n.jsx)(g.owK, {
                                           size: "md",
                                           color: s.Z.BUTTON_POSITIVE_BACKGROUND,
                                           secondaryColor: s.Z.WHITE,
                                       }),
-                                      (0, n.jsx)(f.Text, {
+                                      (0, n.jsx)(g.Text, {
                                           variant: "text-md/medium",
                                           children:
                                               "draft" === AE
@@ -278,7 +278,7 @@ function $(A) {
                 : At();
         }, [At, AH]);
     r.useEffect(() => {
-        (0, f.oav)(
+        (0, g.oav)(
             R.Yz,
             (A) =>
                 (0, n.jsx)(
@@ -299,7 +299,7 @@ function $(A) {
         if ((AP(e), null != e)) return;
         let t = await AN(A);
         if ((Ax(!1), null != t)) {
-            if ((null != A.name && Af(t.name), null != A.description && Am(t.description), null != AR)) {
+            if ((null != A.name && Ag(t.name), null != A.description && Am(t.description), null != AR)) {
                 let A = t.role_id;
                 o()(null != A, "Cannot update role without role ID"), await p.Z.updateRole(J, A, AR);
             }
@@ -316,15 +316,15 @@ function $(A) {
             AH && AY(void 0);
         }, [AH]);
     let A9 = r.useRef(null);
-    return (0, n.jsxs)(f.Y0X, {
+    return (0, n.jsxs)(g.Y0X, {
         transitionState: Ae,
-        size: f.CgR.DYNAMIC,
+        size: g.CgR.DYNAMIC,
         className: k.modalRoot,
         "aria-labelledby": Y,
         parentComponent: "GuildProductEditModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsxs)(f.xBx, {
+            (0, n.jsxs)(g.xBx, {
                 className: k.modalHeader,
                 separator: !1,
                 "data-migration-pending": !0,
@@ -332,53 +332,48 @@ function $(A) {
                     (0, n.jsxs)("div", {
                         className: k.headerText,
                         children: [
-                            (0, n.jsx)(f.X6q, {
+                            (0, n.jsx)(g.X6q, {
                                 id: Y,
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: L.intl.string(L.t.DnNl1d),
                             }),
-                            (0, n.jsx)(f.Text, {
+                            (0, n.jsx)(g.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: L.intl.string(L.t["Tu7f+f"]),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(f.olH, {
+                    (0, n.jsx)(g.olH, {
                         onClick: A0,
                         className: k.__invalid_modalCloseButton,
                         "data-migration-pending": !0,
                     }),
                 ],
             }),
-            (0, n.jsxs)(f.hzk, {
+            (0, n.jsxs)(g.hzk, {
                 className: k.modalContent,
                 scrollbarType: "none",
                 "data-migration-pending": !0,
                 children: [
-                    (0, n.jsx)(f.zJl, {
+                    (0, n.jsx)(g.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: k.productFieldsSection,
                             ref: A9,
                             children: [
-                                (0, n.jsx)(f.xJW, {
-                                    title: L.intl.string(L.t.Hsk7xc),
-                                    tag: "label",
-                                    htmlFor: D,
+                                (0, n.jsx)(g.oil, {
+                                    label: L.intl.string(L.t.Hsk7xc),
                                     error: null == AW ? void 0 : AW.getFirstFieldErrorMessage("name"),
-                                    children: (0, n.jsx)(f.oil, {
-                                        value: Ag,
-                                        onChange: Af,
-                                        id: D,
-                                        maxLength: 100,
-                                        placeholder: L.intl.string(L.t["/BiYSE"]),
-                                        required: !0,
-                                    }),
+                                    value: Af,
+                                    onChange: Ag,
+                                    id: D,
+                                    maxLength: 100,
+                                    placeholder: L.intl.string(L.t["/BiYSE"]),
+                                    required: !0,
                                 }),
-                                (0, n.jsx)(f.xJW, {
+                                (0, n.jsx)(g.xJW, {
                                     title: L.intl.string(L.t.QdKLyc),
-                                    tag: "label",
                                     error: null == AW ? void 0 : AW.getFirstFieldErrorMessage("description"),
                                     htmlFor: H,
                                     children: (0, n.jsx)(C.Z, {
@@ -393,9 +388,8 @@ function $(A) {
                                         required: !0,
                                     }),
                                 }),
-                                (0, n.jsx)(f.xJW, {
+                                (0, n.jsx)(g.xJW, {
                                     title: L.intl.string(L.t["CAY/vr"]),
-                                    tag: "label",
                                     error: null == AW ? void 0 : AW.getFirstFieldErrorMessage("price_tier"),
                                     children: (0, n.jsx)(_, {
                                         guildId: J,
@@ -403,25 +397,24 @@ function $(A) {
                                         setPriceTier: Ah,
                                     }),
                                 }),
-                                (0, n.jsxs)(f.xJW, {
+                                (0, n.jsxs)(g.xJW, {
                                     title: L.intl.string(L.t["sqXj6+"]),
-                                    tag: "label",
                                     error: null == AW ? void 0 : AW.getFirstFieldErrorMessage("image"),
                                     titleClassName: k.thumbnailLabel,
                                     children: [
-                                        (0, n.jsx)(f.Text, {
+                                        (0, n.jsx)(g.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
                                             children: L.intl.string(L.t.yOU4Vl),
                                         }),
-                                        (0, n.jsx)(f.LZC, { size: 10 }),
+                                        (0, n.jsx)(g.LZC, { size: 10 }),
                                         (0, n.jsx)(Q.Z, {
                                             presetImages: y.M,
                                             radioGroupAriaLabel: L.intl.string(L.t.fKzQj4),
                                             image: Ab,
                                             imageName: Av,
                                             savedImageName:
-                                                null == Al || null == (l = Al.image_asset) ? void 0 : l.filename,
+                                                null == Aa || null == (a = Aa.image_asset) ? void 0 : a.filename,
                                             onChange: (A, e) => {
                                                 if (null != A) {
                                                     var t;
@@ -430,7 +423,7 @@ function $(A) {
                                                         Ax(
                                                             A.startsWith("data:") ||
                                                                 e !==
-                                                                    (null == Al || null == (t = Al.image_asset)
+                                                                    (null == Aa || null == (t = Aa.image_asset)
                                                                         ? void 0
                                                                         : t.filename),
                                                         );
@@ -440,7 +433,7 @@ function $(A) {
                                     ],
                                 }),
                                 AF
-                                    ? (0, n.jsx)(f.xJW, {
+                                    ? (0, n.jsx)(g.xJW, {
                                           title: L.intl.string(L.t.zLrtkJ),
                                           error: null == AW ? void 0 : AW.getFirstFieldErrorMessage("attachments"),
                                           children: (0, n.jsx)(T.s, {
@@ -472,38 +465,38 @@ function $(A) {
                         }),
                     }),
                     (0, n.jsx)("div", { className: k.horizontalSeparator }),
-                    (0, n.jsx)(f.zJl, {
+                    (0, n.jsx)(g.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: k.productPreview,
                             children: [
                                 (0, n.jsx)(z.Z, {
                                     disabled: !A_,
-                                    disabledTooltip: Aa ? L.intl.string(L.t["0NQ00t"]) : L.intl.string(L.t["Ax89/f"]),
-                                    published: Aa,
+                                    disabledTooltip: Al ? L.intl.string(L.t["0NQ00t"]) : L.intl.string(L.t["Ax89/f"]),
+                                    published: Al,
                                     onClick: () => {
                                         o()(A_, "Attempting to publish/unpublish when not allowed"),
-                                            AY(Aa ? "unpublish" : "publish"),
-                                            A1(E(G({}, AD), { published: !Aa }));
+                                            AY(Al ? "unpublish" : "publish"),
+                                            A1(E(G({}, AD), { published: !Al }));
                                     },
                                     submitting: AQ,
                                 }),
                                 (0, n.jsx)("div", { className: k.verticalSeparator }),
-                                (0, n.jsx)(f.X6q, {
+                                (0, n.jsx)(g.X6q, {
                                     variant: "text-xs/bold",
                                     color: "header-secondary",
                                     className: k.previewHeading,
                                     children: L.intl.string(L.t["6I7nQU"]),
                                 }),
-                                (0, n.jsx)(f.LZC, { size: 4 }),
-                                (0, n.jsx)(f.Text, {
+                                (0, n.jsx)(g.LZC, { size: 4 }),
+                                (0, n.jsx)(g.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: L.intl.string(L.t.Oq4dfX),
                                 }),
-                                (0, n.jsx)(f.LZC, { size: 16 }),
+                                (0, n.jsx)(g.LZC, { size: 16 }),
                                 (0, n.jsx)(N.Z, {
                                     imageUrl: Ab,
-                                    name: "" === Ag ? L.intl.string(L.t.EmqIws) : Ag,
+                                    name: "" === Af ? L.intl.string(L.t.EmqIws) : Af,
                                     description: "" === Ap ? L.intl.string(L.t["11NA2N"]) : Ap,
                                     formattedPrice: AO,
                                     role: AL,
@@ -517,7 +510,7 @@ function $(A) {
                     }),
                 ],
             }),
-            (0, n.jsx)(f.mzw, {
+            (0, n.jsx)(g.mzw, {
                 "data-migration-pending": !0,
                 children: (0, n.jsxs)("div", {
                     className: k.footerActionButtons,
@@ -541,7 +534,7 @@ function $(A) {
                                         A
                                             ? AI(!0)
                                             : AT
-                                              ? (0, f.ZDy)(async () => {
+                                              ? (0, g.ZDy)(async () => {
                                                     let { ConfirmModal: A } = await Promise.resolve().then(
                                                         t.bind(t, 481060),
                                                     );
@@ -553,7 +546,7 @@ function $(A) {
                                                                 confirmText: L.intl.string(L.t.N86XcH),
                                                                 cancelText: L.intl.string(L.t["ETE/oK"]),
                                                                 onConfirm: AG,
-                                                                children: (0, n.jsx)(f.Text, {
+                                                                children: (0, n.jsx)(g.Text, {
                                                                     variant: "text-md/normal",
                                                                     children: L.intl.string(L.t.ixRBLi),
                                                                 }),
@@ -568,7 +561,7 @@ function $(A) {
                         }),
                         (0, n.jsx)("div", {
                             className: k.footerActionRightButtons,
-                            children: Aa
+                            children: Al
                                 ? (0, n.jsx)(u.zx, {
                                       variant: "secondary",
                                       text: L.intl.string(L.t.XYBEaW),

@@ -80,7 +80,7 @@ function j(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let t = () => {
         A.SE.updateSetting(e ? O.Z.getGuildIds() : []);
     };
@@ -108,16 +108,16 @@ function k(e) {
         ),
     );
 }
-function M() {
+function k() {
     let e = A.G6.useSetting(),
         t = A.no.useSetting(),
         n = (0, T.Yd)("activity privacy tab"),
         i = I.isPlatformEmbedded ? R.intl.string(R.t.MznbeH) : R.intl.string(R.t.oKqC4u),
         a = (e) => {
-            A.no.updateSetting(e ? u.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : u.GI.ACTIVITY_STATUS_OFF), k(e);
+            A.no.updateSetting(e ? u.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : u.GI.ACTIVITY_STATUS_OFF), M(e);
         },
         s = (e) => {
-            A.no.updateSetting(e), k(e !== u.GI.ACTIVITY_STATUS_OFF);
+            A.no.updateSetting(e), M(e !== u.GI.ACTIVITY_STATUS_OFF);
         },
         l = [
             {
@@ -138,7 +138,6 @@ function M() {
         children: (0, r.jsxs)(_.hjN, {
             children: [
                 (0, r.jsx)(_.vwX, {
-                    tag: _.RB0.H5,
                     className: w.marginBottom8,
                     children: R.intl.string(R.t["8ka8lp"]),
                 }),
@@ -194,7 +193,6 @@ function U() {
             className: w.marginBottom40,
             children: [
                 (0, r.jsx)(_.vwX, {
-                    tag: _.RB0.H5,
                     className: w.marginBottom8,
                     children: R.intl.string(R.t.VOszPD),
                 }),
@@ -303,7 +301,6 @@ function F() {
                       gap: 12,
                       children: [
                           (0, r.jsx)(_.vwX, {
-                              tag: _.RB0.H5,
                               className: w.marginBottom8,
                               children: R.intl.string(R.t["4F2KoK"]),
                           }),
@@ -328,6 +325,6 @@ function V(e) {
               className: t,
               tag: _.RB0.H1,
               title: n ? R.intl.string(R.t.Cq98yM) : null,
-              children: [(0, r.jsx)(M, {}), (0, r.jsx)(U, {}), (0, r.jsx)(G, {}), i && (0, r.jsx)(F, {})],
+              children: [(0, r.jsx)(k, {}), (0, r.jsx)(U, {}), (0, r.jsx)(G, {}), i && (0, r.jsx)(F, {})],
           });
 }

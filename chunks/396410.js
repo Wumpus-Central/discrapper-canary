@@ -2,8 +2,8 @@ n.d(e, { default: () => c }), n(413496), n(433524), n(35282), n(388685);
 var i = n(951288),
     s = n(647438),
     r = n(990547),
-    l = n(82659),
-    a = n(481060),
+    a = n(82659),
+    l = n(481060),
     o = n(479531),
     u = n(388032);
 let p = RegExp(
@@ -16,67 +16,65 @@ function c(t) {
             onFormSubmit: n,
             onSuccess: c,
             onClose: d,
-            headerText: h,
-            confirmButtonText: m,
+            headerText: m,
+            confirmButtonText: h,
             confirmButtonVariant: f = "primary",
         } = t,
-        [x, y] = s.useState(!1),
-        [A, g] = s.useState(""),
-        [v, E] = s.useState(null),
+        [y, A] = s.useState(!1),
+        [g, v] = s.useState(""),
+        [x, E] = s.useState(null),
         Z = s.useRef(null),
-        k = async (t) => {
-            if ((t.preventDefault(), E(null), y(!0), !1 === p.test(A))) {
-                E(u.intl.string(u.t.hML7Gx)), y(!1);
+        b = async (t) => {
+            if ((t.preventDefault(), E(null), A(!0), !1 === p.test(g))) {
+                E(u.intl.string(u.t.hML7Gx)), A(!1);
                 return;
             }
             try {
-                let t = null != n ? await n(A) : void 0;
+                let t = null != n ? await n(g) : void 0;
                 null != c &&
                     (null != t
                         ? c({
                               response: t,
-                              email: A,
+                              email: g,
                           })
-                        : c(A)),
+                        : c(g)),
                     d();
             } catch (t) {
                 E(new o.Z(t).getAnyErrorMessage());
             } finally {
-                y(!1);
+                A(!1);
             }
         };
     return (0, i.jsx)("form", {
-        onSubmit: k,
-        children: (0, i.jsx)(l.Modal, {
+        onSubmit: b,
+        children: (0, i.jsx)(a.Modal, {
             transitionState: e,
             trackingProps: {
                 impression: { impressionName: r.ImpressionNames.URF_ENTER_EMAIL },
                 impressionType: r.ImpressionTypes.MODAL,
             },
-            title: h,
+            title: m,
             actions: [
                 {
                     text: u.intl.string(u.t["ETE/oK"]),
                     onClick: d,
                     variant: "secondary",
-                    disabled: x,
+                    disabled: y,
                 },
                 {
-                    text: m,
+                    text: h,
                     variant: f,
-                    loading: x,
+                    loading: y,
                     type: "submit",
                 },
             ],
             onClose: d,
-            children: (0, i.jsx)(a.xJW, {
-                title: u.intl.string(u.t.hvOfmJ),
-                error: v,
-                children: (0, i.jsx)(a.oil, {
-                    value: A,
-                    onChange: g,
-                    inputRef: Z,
-                }),
+            children: (0, i.jsx)(l.oil, {
+                label: u.intl.string(u.t.hvOfmJ),
+                error: x,
+                value: g,
+                onChange: v,
+                inputRef: Z,
             }),
         }),
     });

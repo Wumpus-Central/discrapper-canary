@@ -16,15 +16,13 @@ function d(e) {
             },
             [d],
         );
-    return (0, r.jsx)(a.xJW, {
-        title: c.intl.string(c.t.X56QcH),
-        children: (0, r.jsx)(a.oil, {
-            type: "text",
-            disabled: !n,
-            value: t.name,
-            maxLength: 100,
-            onChange: m,
-            error: u,
-        }),
+    return (0, r.jsx)(a.oil, {
+        label: c.intl.string(c.t.X56QcH),
+        type: "text",
+        disabled: !n,
+        value: t.name,
+        maxLength: 100,
+        onChange: m,
+        error: u,
     });
 }

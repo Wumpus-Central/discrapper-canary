@@ -52,8 +52,8 @@ var i = n(951288),
     X = n(594174),
     Y = n(934415),
     q = n(70956),
-    J = n(630388),
-    $ = n(63063),
+    $ = n(630388),
+    J = n(63063),
     Q = n(129724),
     K = n(732335),
     ee = n(296146),
@@ -388,7 +388,7 @@ class eR extends l.PureComponent {
                           (0, i.jsxs)("div", {
                               className: eo.twoColumnSettings,
                               children: [
-                                  (0, i.jsxs)(m.xJW, {
+                                  (0, i.jsxs)("div", {
                                       className: s()(eo.settingsLeft, eo.settingsDefaultReaction),
                                       children: [
                                           (0, i.jsx)(m.vwX, {
@@ -452,7 +452,7 @@ class eR extends l.PureComponent {
                           (0, i.jsxs)("div", {
                               className: eo.twoColumnSettings,
                               children: [
-                                  (0, i.jsxs)(m.xJW, {
+                                  (0, i.jsxs)("div", {
                                       className: s()(eo.settingsLeft, eo.settingsDefaultView),
                                       children: [
                                           (0, i.jsx)(m.hjN, {
@@ -551,7 +551,7 @@ class eR extends l.PureComponent {
                   })
                 : null,
             q = R ? C : b,
-            J = V.X_.has(e.type)
+            $ = V.X_.has(e.type)
                 ? (0, i.jsxs)("div", {
                       children: [
                           (0, i.jsxs)(m.xJW, {
@@ -687,7 +687,7 @@ class eR extends l.PureComponent {
                                   children: [
                                       (0, i.jsx)("div", {
                                           children: ea.intl.format(ea.t.tI7KNT, {
-                                              documentationLink: $.Z.getArticleURL(en.BhN.ANNOUNCEMENT_CHANNELS),
+                                              documentationLink: J.Z.getArticleURL(en.BhN.ANNOUNCEMENT_CHANNELS),
                                           }),
                                       }),
                                       (0, i.jsx)("div", {
@@ -729,7 +729,7 @@ class eR extends l.PureComponent {
             ey = this.props.showChannelSummariesSettings
                 ? (0, i.jsx)(m.j7V, {
                       note: ea.intl.format(ea.t.feJW19, {
-                          helpdeskArticle: $.Z.getArticleURL(en.BhN.CONVERSATION_SUMMARIES),
+                          helpdeskArticle: J.Z.getArticleURL(en.BhN.CONVERSATION_SUMMARIES),
                       }),
                       onChange: this.handleChannelSummariesToggled,
                       value:
@@ -774,35 +774,33 @@ class eR extends l.PureComponent {
                     : ((j = ea.intl.string(ea.t.PVbHDg)), (f = "channel-name")),
             (0, i.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(m.xJW, {
-                        title: j,
-                        children: (0, i.jsx)(m.oil, {
-                            fullWidth: !0,
-                            inputRef: this.nameInputRef,
-                            value: t,
-                            onChange: this.handleChangeName,
-                            onBlur: this.handleBlurName,
-                            error: this.getError("name"),
-                            name: f,
-                            autoFocus: !0,
-                            disabled: T ? !v : !b,
-                            maxLength: en.HN8,
-                            trailing: {
-                                type: "emoji",
-                                button: (0, i.jsx)(eZ, {
-                                    onEmojiPicked: this.insertEmojiAtPosition,
-                                    channel: e,
-                                    guildId: null == e ? void 0 : e.guild_id,
-                                }),
-                            },
-                        }),
+                    (0, i.jsx)(m.oil, {
+                        label: j,
+                        fullWidth: !0,
+                        inputRef: this.nameInputRef,
+                        value: t,
+                        onChange: this.handleChangeName,
+                        onBlur: this.handleBlurName,
+                        error: this.getError("name"),
+                        name: f,
+                        autoFocus: !0,
+                        disabled: T ? !v : !b,
+                        maxLength: en.HN8,
+                        trailing: {
+                            type: "emoji",
+                            button: (0, i.jsx)(eZ, {
+                                onEmojiPicked: this.insertEmojiAtPosition,
+                                channel: e,
+                                guildId: null == e ? void 0 : e.guild_id,
+                            }),
+                        },
                     }),
                     (0, i.jsx)(m.$i$, { className: s()(ec.marginTop40, ec.marginBottom40) }),
                     B,
                     H,
                     G,
                     W,
-                    J,
+                    $,
                     Q,
                     F,
                     z,
@@ -895,17 +893,15 @@ class eR extends l.PureComponent {
             direction: E.Z.Direction.VERTICAL,
             className: ec.marginBottom40,
             children: [
-                (0, i.jsx)(m.xJW, {
-                    title: ea.intl.string(ea.t.jhJEJi),
-                    children: (0, i.jsx)(g.Gu, {
-                        onChange: (e) => {
-                            let { value: t } = e;
-                            return this.handleVideoQualityModeChange(t);
-                        },
-                        options: l,
-                        value: null != (t = e.videoQualityMode) ? t : en.Ucd.AUTO,
-                        disabled: !n,
-                    }),
+                (0, i.jsx)(m.FXm, {
+                    label: ea.intl.string(ea.t.jhJEJi),
+                    onChange: (e) => {
+                        let { value: t } = e;
+                        return this.handleVideoQualityModeChange(t);
+                    },
+                    options: l,
+                    value: null != (t = e.videoQualityMode) ? t : en.Ucd.AUTO,
+                    disabled: !n,
                 }),
                 (0, i.jsx)(m.R94, {
                     type: m.geA.DESCRIPTION,
@@ -1070,7 +1066,7 @@ class eR extends l.PureComponent {
             ed(this, "handleRequireTagChanged", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, J.mB)(t.flags, ei.zZ.REQUIRE_TAG, e);
+                let n = (0, $.mB)(t.flags, ei.zZ.REQUIRE_TAG, e);
                 (0, p.pW)({ flags: n });
             }),
             ed(this, "handleChangeName", (e) => {
@@ -1160,7 +1156,7 @@ class eR extends l.PureComponent {
             ed(this, "handleActiveChannelsRemovedChange", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, J.mB)(t.flags, ei.zZ.ACTIVE_CHANNELS_REMOVED, !e);
+                let n = (0, $.mB)(t.flags, ei.zZ.ACTIVE_CHANNELS_REMOVED, !e);
                 (0, p.pW)({ flags: n });
             }),
             ed(this, "handleNewsChange", (e) => {
@@ -1190,13 +1186,13 @@ class eR extends l.PureComponent {
             ed(this, "handleChannelSummariesToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, J.mB)(t.flags, ei.zZ.SUMMARIES_DISABLED, !e);
+                let n = (0, $.mB)(t.flags, ei.zZ.SUMMARIES_DISABLED, !e);
                 (0, p.pW)({ flags: n });
             }),
             ed(this, "handleShowMediaOptionsToggled", (e) => {
                 let { channel: t } = this.props;
                 if (null == t) return null;
-                let n = (0, J.mB)(t.flags, ei.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
+                let n = (0, $.mB)(t.flags, ei.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
                 (0, p.pW)({ flags: n });
             });
         let r = null != (n = null == (t = this.props.channel) ? void 0 : t.topic) ? n : "";

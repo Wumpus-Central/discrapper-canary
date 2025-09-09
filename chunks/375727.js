@@ -254,7 +254,6 @@ let D = (e) => {
                               (0, r.jsx)(c.xJW, {
                                   title: T.intl.string(T.t.m0YV7O),
                                   required: !0,
-                                  tag: "label",
                                   children: (0, r.jsx)(E.y, {
                                       name: K,
                                       onNameChange: X,
@@ -265,7 +264,6 @@ let D = (e) => {
                                   : (0, r.jsx)(c.xJW, {
                                         title: T.intl.string(T.t["9uKafX"]),
                                         required: !0,
-                                        tag: "label",
                                         titleId: "guild-selector-label",
                                         children: (0, r.jsxs)("div", {
                                             className: A.guildSelectorContainer,

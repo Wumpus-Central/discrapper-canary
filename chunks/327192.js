@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(706454),
     L = n(349728),
     j = n(494620),
-    k = n(205266),
-    M = n(216153),
+    M = n(205266),
+    k = n(216153),
     U = n(981631),
     G = n(856651),
     B = n(921944),
@@ -270,12 +270,12 @@ function q(e) {
             : e.type === U.ABu.XBOX
               ? (0, r.jsx)("div", {
                     className: F.upsellWrapper,
-                    children: (0, r.jsx)(M.Y, {}),
+                    children: (0, r.jsx)(k.Y, {}),
                 })
               : e.type === U.ABu.PLAYSTATION
                 ? (0, r.jsx)("div", {
                       className: F.upsellWrapper,
-                      children: (0, r.jsx)(k.t, {}),
+                      children: (0, r.jsx)(M.t, {}),
                   })
                 : null;
     }
@@ -443,7 +443,7 @@ function q(e) {
     }
     function et() {
         return n.revoked
-            ? (0, r.jsx)(f.xJW, {
+            ? (0, r.jsx)("div", {
                   className: F.integrationsWrapper,
                   children: (0, r.jsx)(f.R94, {
                       className: F.integrationRevoked,
@@ -451,11 +451,10 @@ function q(e) {
                   }),
               })
             : n.integrations.length > 0
-              ? (0, r.jsxs)(f.xJW, {
+              ? (0, r.jsxs)("div", {
                     className: F.integrationsWrapper,
                     children: [
                         (0, r.jsx)(f.vwX, {
-                            tag: f.RB0.H5,
                             children: (0, r.jsx)(f.Text, {
                                 variant: "text-xs/semibold",
                                 children: Z.intl.string(Z.t.fOe3fX),
@@ -676,7 +675,7 @@ function $(e) {
                             t,
                         ),
                     )),
-        (0, r.jsx)(f.xJW, {
+        (0, r.jsx)("div", {
             className: F.connectionList,
             children: t,
         })

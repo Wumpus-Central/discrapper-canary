@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(179360),
     g = n(129861),
     p = n(999382),
-    h = n(905128),
-    f = n(151494),
+    f = n(905128),
+    h = n(151494),
     b = n(733683),
     x = n(237583),
     j = n(899667),
@@ -116,10 +116,7 @@ class R extends i.Component {
             className: I.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
-                (0, r.jsx)(u.R94, {
-                    type: u.R94.Types.LABEL_BOLD,
-                    children: E.intl.string(E.t["76OoX1"]),
-                }),
+                (0, r.jsx)(u.vwX, { children: E.intl.string(E.t["76OoX1"]) }),
                 (0, r.jsx)(u.R94, {
                     type: u.R94.Types.DESCRIPTION,
                     className: I.tierDefaultUnlockedDescription,
@@ -286,11 +283,11 @@ class R extends i.Component {
             );
     }
 }
-let Z = c.ZP.connectStores([_.Z, h.Z, p.Z, j.Z, O.default, v.ZP], () => {
+let Z = c.ZP.connectStores([_.Z, f.Z, p.Z, j.Z, O.default, v.ZP], () => {
     var e, t;
     let n = p.Z.getGuildId(),
         r = null != (t = null == (e = _.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : N.Eu4.NONE,
-        i = (0, f.I)(n),
+        i = (0, h.I)(n),
         l = null != n ? j.Z.getAppliedGuildBoostsForGuild(n) : null,
         a = o()(null != l ? l : []).uniqBy((e) => e.userId),
         s = a

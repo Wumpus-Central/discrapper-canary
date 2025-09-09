@@ -38,8 +38,8 @@ var r = n(951288),
     G = n(981632),
     B = n(396955),
     Z = n(314404),
-    V = n(42818),
-    F = n(459965),
+    F = n(42818),
+    V = n(459965),
     H = n(251660),
     Y = n(474936),
     W = n(981631),
@@ -125,8 +125,8 @@ function Q(e) {
         ],
         eB = e_ === y.A.PURCHASING || e_ === y.A.COMPLETED,
         eZ = null != eO ? eO : "",
-        eV = (0, u.e7)([N.Z], () => N.Z.get(eZ), [eZ]),
-        eF = null == eV ? void 0 : eV.eligiblePaymentGateways,
+        eF = (0, u.e7)([N.Z], () => N.Z.get(eZ), [eZ]),
+        eV = null == eF ? void 0 : eF.eligiblePaymentGateways,
         [eH, eY] = (0, x.ED)({
             items: eG,
             renewal: !1,
@@ -177,10 +177,10 @@ function Q(e) {
     let e0 = (0, u.e7)([T.Z], () => T.Z.enabled),
         e1 = et.paymentSourceId,
         e2 = (0, I.$)(ee, e1),
-        { hasEntitlements: e3, entitlements: e4 } = (0, F.H)(eU.id, eD),
+        { hasEntitlements: e3, entitlements: e4 } = (0, V.H)(eU.id, eD),
         e8 = (0, P.Ap)(et.paymentSourceId),
-        e6 = (0, O.sE)(ec, e1, J),
-        e5 = (0, v.Kp)({
+        e5 = (0, O.sE)(ec, e1, J),
+        e6 = (0, v.Kp)({
             isTrial: em,
             isGift: eD,
             selectedSkuId: eO,
@@ -196,7 +196,7 @@ function Q(e) {
             excludeReverseTrial: !1,
             excludeReverseTrialFromCountdown: !0,
         }),
-        tt = !e5 && te.isFractionalPremiumActive && Y.dJ.has(J),
+        tt = !e6 && te.isFractionalPremiumActive && Y.dJ.has(J),
         tn = i.useMemo(
             () =>
                 (0, P.V7)({
@@ -208,7 +208,7 @@ function Q(e) {
                 }),
             [eO, ey, ev, eI],
         ),
-        tr = (0, v.$g)(e5, eH, eU),
+        tr = (0, v.$g)(e6, eH, eU),
         ti = i.useMemo(() => (em && null != eH ? eH : eC && null != eW ? eW : void 0), [eC, em, eH, eW]);
     if (
         (i.useEffect(() => {
@@ -217,7 +217,7 @@ function Q(e) {
         null != e$)
     );
     else if (eD && null != eX)
-        Q = (0, r.jsx)(V.e9, {
+        Q = (0, r.jsx)(F.e9, {
             plan: eU,
             className: o()(q.invoice, ew),
             isPrepaidPaymentSource: e8,
@@ -251,7 +251,7 @@ function Q(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: q.afterTrialPriceLine,
-                            children: (0, r.jsx)(V.yT, {
+                            children: (0, r.jsx)(F.yT, {
                                 invoice: ti,
                                 plan: eU,
                             }),
@@ -278,7 +278,7 @@ function Q(e) {
                         className: o()(q.invoice, ew),
                         children: [
                             (0, r.jsx)(M.Z9, { children: z.intl.string(z.t["2eh+Cg"]) }),
-                            (0, r.jsx)(V.Lu, {
+                            (0, r.jsx)(F.Lu, {
                                 invoice: eH,
                                 newPlan: eU,
                                 isPrepaidPaymentSource: e8,
@@ -286,7 +286,7 @@ function Q(e) {
                             }),
                             e8
                                 ? null
-                                : (0, r.jsx)(V.nd, {
+                                : (0, r.jsx)(F.nd, {
                                       renewalInvoice: eW,
                                       isTrial: em,
                                       priceOptions: et,
@@ -307,8 +307,8 @@ function Q(e) {
         : eD && eJ
           ? (tc = "")
           : (0, P.PV)(eU.id) && (tc = P.ZP.getBillingReviewSubheader(null, eU));
-    let tu = null != eF && eF.length > 0 && (e1 === C.c || null === e2) && eR ? B.w.SELECT_PAYMENT_METHOD : void 0;
-    return e6
+    let tu = null != eV && eV.length > 0 && (e1 === C.c || null === e2) && eR ? B.w.SELECT_PAYMENT_METHOD : void 0;
+    return e5
         ? null
         : (0, r.jsxs)("div", {
               className: q.stepBody,
@@ -331,7 +331,7 @@ function Q(e) {
                               }),
                           ],
                       }),
-                  e5 &&
+                  e6 &&
                       (0, r.jsxs)("div", {
                           children: [
                               (0, r.jsx)(M.UN, {
@@ -362,12 +362,7 @@ function Q(e) {
                               trialEnd: null == ey ? void 0 : ey.currentPeriodEnd,
                           }),
                       }),
-                  !em &&
-                      "" !== tc &&
-                      (0, r.jsx)(f.vwX, {
-                          tag: f.RB0.H5,
-                          children: tc,
-                      }),
+                  !em && "" !== tc && (0, r.jsx)(f.vwX, { children: tc }),
                   eJ &&
                       null != eL &&
                       (0, r.jsxs)(r.Fragment, {
@@ -387,14 +382,10 @@ function Q(e) {
                       children: [
                           em
                               ? (0, r.jsx)(f.vwX, {
-                                    tag: f.RB0.H5,
                                     className: q.formTitle,
                                     children: z.intl.string(z.t["YH7B+P"]),
                                 })
-                              : (0, r.jsx)(f.vwX, {
-                                    tag: f.RB0.H5,
-                                    children: z.intl.string(z.t.mmDvV1),
-                                }),
+                              : (0, r.jsx)(f.vwX, { children: z.intl.string(z.t.mmDvV1) }),
                           (0, r.jsx)(h.ZP, {
                               paymentSources: Object.values(ee),
                               selectedPaymentSourceId: e1,
@@ -409,7 +400,7 @@ function Q(e) {
                               onPaymentSourceAdd: ea,
                               hidePersonalInformation: e0,
                               isTrial: em,
-                              paymentGatewayRestrictions: eF,
+                              paymentGatewayRestrictions: eV,
                               className: o()({ [q.premiumBrandRefreshInputBackground]: eP }),
                           }),
                           e3 && null == e1
@@ -424,10 +415,7 @@ function Q(e) {
                                     currencies: en,
                                     className: q.currencyWrapper,
                                     children: [
-                                        (0, r.jsx)(f.vwX, {
-                                            tag: f.RB0.H5,
-                                            children: z.intl.string(z.t["/AAR09"]),
-                                        }),
+                                        (0, r.jsx)(f.vwX, { children: z.intl.string(z.t["/AAR09"]) }),
                                         (0, r.jsx)(_.Z, {
                                             selectedCurrency: et.currency,
                                             currencies: en,

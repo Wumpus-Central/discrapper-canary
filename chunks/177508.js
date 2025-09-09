@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ef }), n(704826), n(35282), n(388685), n(361932), n(187205);
+n.d(t, { Z: () => ef }), n(704826), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -570,69 +570,63 @@ function ep() {
             (0, r.jsxs)(em, {
                 title: "Button Options",
                 children: [
-                    (0, r.jsx)(N.xJW, {
-                        title: "Button size",
-                        children: (0, r.jsx)(C.Gu, {
-                            onChange: (e) => {
-                                let { value: n } = e;
-                                return t(n);
+                    (0, r.jsx)(C.Gu, {
+                        label: "Button size",
+                        onChange: (e) => {
+                            let { value: n } = e;
+                            return t(n);
+                        },
+                        options: [
+                            {
+                                value: "sm",
+                                name: "Small",
                             },
-                            options: [
-                                {
-                                    value: "sm",
-                                    name: "Small",
-                                },
-                                {
-                                    value: "md",
-                                    name: "Medium",
-                                },
-                            ],
-                            value: e,
-                        }),
+                            {
+                                value: "md",
+                                name: "Medium",
+                            },
+                        ],
+                        value: e,
                     }),
-                    (0, r.jsx)(N.xJW, {
-                        title: "Icon position",
-                        children: (0, r.jsx)(C.Gu, {
-                            onChange: (e) => {
-                                let { value: t } = e;
-                                return a(t);
+                    (0, r.jsx)(C.Gu, {
+                        label: "Icon position",
+                        onChange: (e) => {
+                            let { value: t } = e;
+                            return a(t);
+                        },
+                        options: [
+                            {
+                                value: "none",
+                                name: "None",
                             },
-                            options: [
-                                {
-                                    value: "none",
-                                    name: "None",
-                                },
-                                {
-                                    value: "start",
-                                    name: "Start",
-                                },
-                                {
-                                    value: "end",
-                                    name: "End",
-                                },
-                            ],
-                            value: n,
-                        }),
+                            {
+                                value: "start",
+                                name: "Start",
+                            },
+                            {
+                                value: "end",
+                                name: "End",
+                            },
+                        ],
+                        value: n,
                     }),
-                    (0, r.jsx)(N.xJW, {
-                        title: "Loading animation",
-                        children: (0, r.jsx)(C.Gu, {
-                            onChange: (e) => {
-                                let { value: t } = e;
-                                return l("on" === t);
+                    (0, r.jsx)(C.Gu, {
+                        label: "Loading animation",
+                        onChange: (e) => {
+                            let { value: t } = e;
+                            return l("on" === t);
+                        },
+                        options: [
+                            {
+                                value: "off",
+                                name: "Off",
                             },
-                            options: [
-                                {
-                                    value: "off",
-                                    name: "Off",
-                                },
-                                {
-                                    value: "on",
-                                    name: "On",
-                                },
-                            ],
-                            value: o ? "on" : "off",
-                        }),
+                            {
+                                value: "on",
+                                name: "On",
+                            },
+                        ],
+                        value: o ? "on" : "off",
                     }),
                 ],
             }),
@@ -2582,43 +2576,33 @@ function eI() {
                     disabled: !0,
                 }),
             }),
-            (0, r.jsx)(N.xJW, {
-                title: "Error",
-                children: (0, r.jsx)(N.oil, {
-                    required: !0,
-                    error: "This must have a value",
-                }),
+            (0, r.jsx)(N.oil, {
+                label: "Error",
+                required: !0,
+                error: "This must have a value",
             }),
-            (0, r.jsx)(N.xJW, {
-                title: "Error",
-                children: (0, r.jsx)(N.oil, {
-                    defaultValue: "Not a valid value",
-                    error: "This has an error.",
-                }),
+            (0, r.jsx)(N.oil, {
+                label: "Error",
+                defaultValue: "Not a valid value",
+                error: "This has an error.",
             }),
-            (0, r.jsx)(N.xJW, {
-                title: "minLength",
-                children: (0, r.jsx)(N.oil, {
-                    minLength: 6,
-                    value: e,
-                    onChange: t,
-                    placeholder: "Enter at least 6 characters",
-                }),
+            (0, r.jsx)(N.oil, {
+                label: "minLength",
+                minLength: 6,
+                value: e,
+                onChange: t,
+                placeholder: "Enter at least 6 characters",
             }),
-            (0, r.jsx)(N.xJW, {
-                title: "Read only",
-                children: (0, r.jsx)(N.oil, {
-                    value: "Read-only, not-editable field",
-                    editable: !1,
-                }),
+            (0, r.jsx)(N.oil, {
+                label: "Read only",
+                value: "Read-only, not-editable field",
+                editable: !1,
             }),
-            (0, r.jsx)(N.xJW, {
-                title: "Input with a label",
-                children: (0, r.jsx)(N.oil, {
-                    placeholder: "Real placeholder",
-                    value: e,
-                    onChange: t,
-                }),
+            (0, r.jsx)(N.oil, {
+                label: "Input with a label",
+                placeholder: "Real placeholder",
+                value: e,
+                onChange: t,
             }),
             l &&
                 (0, r.jsx)(N.xJW, {
@@ -2964,19 +2948,15 @@ function eC(e) {
                                 ],
                             }),
                         }),
-                        (0, r.jsx)(N.xJW, {
-                            title: "Header Title",
-                            children: (0, r.jsx)(N.oil, {
-                                onChange: l,
-                                defaultValue: s,
-                            }),
+                        (0, r.jsx)(N.oil, {
+                            label: "Header Title",
+                            onChange: l,
+                            defaultValue: s,
                         }),
-                        (0, r.jsx)(N.xJW, {
-                            title: "Header body",
-                            children: (0, r.jsx)(N.oil, {
-                                onChange: u,
-                                defaultValue: c,
-                            }),
+                        (0, r.jsx)(N.oil, {
+                            label: "Header body",
+                            onChange: u,
+                            defaultValue: c,
                         }),
                         (0, r.jsx)(N.xJW, {
                             title: "Optional Content",

@@ -132,7 +132,6 @@ function b(e, t, r, a, b) {
                                 basis: "100%",
                                 children: [
                                     (0, n.jsx)(l.vwX, {
-                                        tag: l.RB0.H5,
                                         className: y.marginBottom8,
                                         children: "Simulcast Override",
                                     }),
