@@ -74,7 +74,7 @@ function S() {
 }
 function A() {
     let e = S();
-    return e === I || ((I = e), (0, u.Z)(I), !0);
+    return e !== I && ((I = e), (0, u.Z)(I), !0);
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
@@ -94,7 +94,7 @@ class C extends (r = i.ZP.PersistedStore) {
         };
     }
     get theme() {
-        return S();
+        return I;
     }
     get systemTheme() {
         return v;
