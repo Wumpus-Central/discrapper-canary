@@ -60709,6 +60709,7 @@ h3.improved__1689b:after {
     background-image: linear-gradient(180deg, rgba(45, 199, 113, .05), rgba(45, 199, 113, .1));
     height: 100%;
     left: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     width: 100%
@@ -89070,7 +89071,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
