@@ -1,6 +1,6 @@
 n.d(t, {
-    cE: () => g,
-    vP: () => m,
+    cE: () => b,
+    vP: () => E,
 }),
     n(415506);
 var r = n(951288),
@@ -8,98 +8,102 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(873546),
-    l = n(481060),
-    c = n(597952),
-    u = n(377089),
-    d = n(877371),
-    f = n(580747),
-    _ = n(819439),
-    p = n(998502);
-let h = i.createContext({
+    l = n(442837),
+    c = n(481060),
+    u = n(607070),
+    d = n(597952),
+    f = n(377089),
+    _ = n(877371),
+    p = n(580747),
+    h = n(819439),
+    m = n(998502);
+let g = i.createContext({
     lang: "",
     style: "",
     className: "",
     focused: !1,
 });
-function m() {
-    let e = i.useContext(h);
+function E() {
+    let e = i.useContext(g);
     if (void 0 === e) throw Error("useRootElementContext must be used within a RootElementContextProvider");
     return e;
 }
-function g(e) {
+function b(e) {
     let {
             rootClassName: t,
             lang: n,
             theme: a,
-            density: m,
-            focused: g,
-            fontScale: E,
-            fontScaleClass: b,
-            mouseMode: y,
-            keyboardModeEnabled: O,
-            saturation: v,
-            desaturateUserColors: I,
-            useForcedColors: T,
-            systemForcedColors: S,
-            useReducedMotion: A,
-            alwaysShowLinkDecorations: C,
-            hardwareAccelerationEnabled: N,
-            highContrastMode: R,
-            isPopoutWindow: P,
-            children: w,
+            density: E,
+            focused: b,
+            fontScale: y,
+            fontScaleClass: O,
+            mouseMode: v,
+            keyboardModeEnabled: I,
+            saturation: T,
+            desaturateUserColors: S,
+            useForcedColors: A,
+            systemForcedColors: C,
+            useReducedMotion: N,
+            alwaysShowLinkDecorations: R,
+            hardwareAccelerationEnabled: P,
+            highContrastMode: w,
+            isPopoutWindow: D,
+            children: x,
         } = e,
-        D = window.CSS.supports("selector(::-webkit-scrollbar)"),
-        x = "font-size: ".concat(E, "%; --saturation-factor: ").concat(v, ";"),
-        L = (0, f.Z)("highlight_mana_buttons"),
-        j = (0, f.Z)("highlight_mana_components"),
-        M = (0, f.Z)("highlight_void_toggleables"),
-        k = (0, f.Z)("highlight_void_buttons"),
-        U = o()(
-            (0, c.Z)(),
-            (0, l.QeD)(a),
-            "density-".concat(m),
-            b,
+        L = window.CSS.supports("selector(::-webkit-scrollbar)"),
+        j = (0, l.e7)([u.Z], () => u.Z.zoom),
+        M = D ? "" : "--custom-zoom: ".concat(j, ";"),
+        k = "font-size: ".concat(y, "%; --saturation-factor: ").concat(T, "; ").concat(M),
+        U = (0, p.Z)("highlight_mana_buttons"),
+        G = (0, p.Z)("highlight_mana_components"),
+        B = (0, p.Z)("highlight_void_toggleables"),
+        Z = (0, p.Z)("highlight_void_buttons"),
+        F = o()(
+            (0, d.Z)(),
+            (0, c.QeD)(a),
+            "density-".concat(E),
+            O,
             {
-                "low-saturation": v <= l.AEw,
-                "keyboard-mode": O,
-                "decorate-links": C,
-                "no-webkit-scrollbar": !D,
-                "has-webkit-scrollbar": D,
-                "mouse-mode": y,
-                "reduce-motion": A,
-                "full-motion": !A,
+                "low-saturation": T <= c.AEw,
+                "keyboard-mode": I,
+                "decorate-links": R,
+                "no-webkit-scrollbar": !L,
+                "has-webkit-scrollbar": L,
+                "mouse-mode": v,
+                "reduce-motion": N,
+                "full-motion": !N,
                 "is-mobile": s.tq,
-                "app-focused": g,
-                "desaturate-user-colors": I,
-                "disable-forced-colors": !T && "active" === S,
-                "enable-forced-colors": T,
+                "app-focused": b,
+                "desaturate-user-colors": S,
+                "disable-forced-colors": !A && "active" === C,
+                "enable-forced-colors": A,
                 "visual-refresh": !0,
-                "hardware-acceleration-disabled": !N,
+                "hardware-acceleration-disabled": !P,
                 "visual-refresh-chat-input": !1,
-                "mana-toggle-inputs": (0, d.A)("RootElementContextProvider"),
-                "mana-text-inputs": (0, u.U)("RootElementContextProvider"),
-                "highlight-mana-buttons": L,
-                "highlight-mana-components": j,
-                "highlight-void-toggleables": M,
-                "highlight-void-buttons": k,
-                "high-contrast-mode": R,
+                "mana-toggle-inputs": (0, _.A)("RootElementContextProvider"),
+                "mana-text-inputs": (0, f.U)("RootElementContextProvider"),
+                "highlight-mana-buttons": U,
+                "highlight-mana-components": G,
+                "highlight-void-toggleables": B,
+                "highlight-void-buttons": Z,
+                "high-contrast-mode": w,
             },
             t,
         ),
-        G = i.useMemo(
+        V = i.useMemo(
             () => ({
                 lang: n,
-                style: x,
-                className: U,
-                focused: g,
+                style: k,
+                className: F,
+                focused: b,
             }),
-            [n, x, U, g],
+            [n, k, F, b],
         ),
-        B = (0, _.$)({ location: "RootElementContextProvider" });
+        H = (0, h.$)({ location: "RootElementContextProvider" });
     return (
         i.useLayoutEffect(() => {
-            if (P) return;
-            let e = B
+            if (D) return;
+            let e = H
                 ? {
                       x: 10,
                       y: 13,
@@ -108,11 +112,11 @@ function g(e) {
                       x: 9,
                       y: 9,
                   };
-            p.ZP.setTrafficLightPosition(e);
-        }, [P, B]),
-        (0, r.jsx)(h.Provider, {
-            value: G,
-            children: w,
+            m.ZP.setTrafficLightPosition(e);
+        }, [D, H]),
+        (0, r.jsx)(g.Provider, {
+            value: V,
+            children: x,
         })
     );
 }
