@@ -1,12 +1,11 @@
-n.d(t, { Z: () => g }), n(388685), n(49124), n(467055);
+n.d(t, { Z: () => h }), n(388685), n(49124), n(467055);
 var r = n(668757),
     i = n(902704),
     a = n(147913),
-    o = n(818083),
-    s = n(353926),
-    l = n(427164),
-    c = n(894276);
-function u(e, t, n) {
+    o = n(353926),
+    s = n(427164),
+    l = n(894276);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,31 +18,15 @@ function u(e, t, n) {
         e
     );
 }
-let d = null;
-function f() {
+let u = null;
+function d() {
     if (!(0, r.X6)()) return;
     let e = {};
-    for (let t of c.Re) e[t.id] = t.getCurrentConfig();
-    (null != d && (0, i.Z)(d, e)) || ((0, r.Md)().flushToCache(JSON.stringify(e)), (d = e));
+    for (let t of l.Re) e[t.id] = t.getCurrentConfig();
+    (null != u && (0, i.Z)(u, e)) || ((0, r.Md)().flushToCache(JSON.stringify(e)), (u = e));
 }
-function _(e) {
-    return (0, o.B)({
-        kind: "user",
-        id: e.id,
-        label: e.getLabel(),
-        defaultConfig: { treatmentId: -1 },
-        treatments: e.getTreatments().map((e) => {
-            let { treatmentId: t, label: n } = e;
-            return {
-                id: t,
-                label: n,
-                config: { treatmentId: t },
-            };
-        }),
-    });
-}
-function p(e) {
-    return (0, l.le)({
+function f(e) {
+    return (0, s.le)({
         kind: "user",
         name: e.id,
         defaultConfig: { treatmentId: -1 },
@@ -55,18 +38,18 @@ function p(e) {
         ),
     });
 }
-function h() {
-    c.Re.forEach((e) => {
-        e.setExperiment(e.legacyExperiment ? _(e) : p(e));
+function _() {
+    l.Re.forEach((e) => {
+        e.setExperiment(f(e));
     });
 }
-class m extends a.Z {
+class p extends a.Z {
     _initialize() {
-        h();
+        _();
     }
     _terminate() {}
     constructor(...e) {
-        super(...e), u(this, "actions", {}), u(this, "stores", new Map().set(s.Z, f));
+        super(...e), c(this, "actions", {}), c(this, "stores", new Map().set(o.Z, d));
     }
 }
-let g = new m();
+let h = new p();

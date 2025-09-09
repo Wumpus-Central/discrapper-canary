@@ -48,16 +48,13 @@ class u {
             : this.inner.getConfig({ location: "default" });
     }
     constructor(e, t) {
-        var n;
         s(this, "id", void 0),
             s(this, "inner", void 0),
             s(this, "cachedConfig", void 0),
-            s(this, "legacyExperiment", void 0),
             (this.id = e),
             (this.inner = null),
             (this.cachedConfig = c),
-            l.push(this),
-            (this.legacyExperiment = null != (n = null == t ? void 0 : t.legacyExperiment) && n);
+            l.push(this);
     }
 }
 class d extends u {
@@ -84,20 +81,7 @@ class d extends u {
         return "libdiscore '".concat(this.storeName, "' Migration");
     }
     getTreatments() {
-        return [
-            {
-                treatmentId: 0,
-                label: "Use typescript as the source of truth",
-            },
-            {
-                treatmentId: 1,
-                label: "Typescript <-> libdiscore Dual Read, Typescript is the source of truth",
-            },
-            {
-                treatmentId: 2,
-                label: "Use libdiscore as the source of truth",
-            },
-        ];
+        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
     }
     constructor(e, t, n, r) {
         super(e, r), s(this, "storeName", void 0), s(this, "type", void 0), (this.storeName = t), (this.type = n);
@@ -108,24 +92,7 @@ class f extends u {
         return "libdiscore Telemetry";
     }
     getTreatments() {
-        return [
-            {
-                treatmentId: 0,
-                label: "Disabled",
-            },
-            {
-                treatmentId: 1,
-                label: "Enabled (1% sample rate)",
-            },
-            {
-                treatmentId: 2,
-                label: "Enabled (5% sample rate)",
-            },
-            {
-                treatmentId: 3,
-                label: "Enabled (100% sample rate)",
-            },
-        ];
+        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
     }
     getMetricsSampleRate() {
         let e = this.getCachedConfig();
@@ -153,7 +120,7 @@ class f extends u {
         super(...e), s(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), s(this, "emissionsCount", 0);
     }
 }
-let _ = new d("2025-05_libdiscore_notestore_v2", "NoteStore", "Kv", { legacyExperiment: !0 }),
-    p = new d("2025-07_libdiscore_guildstore_v2", "GuildStore", "Kv", { legacyExperiment: !0 }),
+let _ = new d("2025-09-libdiscore-migrate-notestore", "NoteStore", "Kv"),
+    p = new d("2025-09-libdiscore-migrate-guildstore", "GuildStore", "Kv"),
     h = new d("2025-09-libdiscore-guildrolestore", "GuildRoleStore", "Kkv");
 new f("2025-09-libdiscore-telemetry");
