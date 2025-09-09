@@ -1,25 +1,21 @@
-n.d(t, {
-    IV: () => E,
-    ZP: () => S,
-    bt: () => b,
-    fd: () => v,
-}),
-    n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(951288),
     r = n(647438),
     o = n(120356),
     l = n.n(o),
-    a = n(202841),
+    a = n(261616),
     s = n(481060),
     c = n(110924),
     u = n(569545),
     d = n(237997),
     p = n(444295),
-    f = n(752802),
-    h = n(340101),
-    m = n(981631),
-    g = n(339882);
-function y(e) {
+    h = n(752802),
+    f = n(68286),
+    m = n(461393),
+    g = n(340101),
+    y = n(981631),
+    O = n(339882);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -44,7 +40,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,72 +58,68 @@ function O(e, t) {
         e
     );
 }
-let b = 256,
-    v = 144;
-function E(e, t, n) {
-    if (e === h.C5.VERTICAL) {
-        let e = Math.max(t, b),
-            n = Math.max((9 / 16) * e, v);
-        return {
-            tileWidth: e,
-            tileHeight: n,
-        };
-    }
-    let i = Math.max(n, v);
-    return {
-        tileWidth: Math.max((16 / 9) * i, b),
-        tileHeight: i,
-    };
-}
-let _ = {
+let E = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0,
     },
-    S = r.memo(function (e) {
+    _ = r.memo(function (e) {
         let {
                 widgetId: t,
                 tileWidth: n,
                 tileHeight: o,
-                layout: b,
-                locked: v,
-                activeStreams: E,
-                streamParticipants: S,
-                participantsVersion: x,
-                pinned: I,
-                padding: j,
-                sizeOffset: C,
+                layout: _,
+                locked: S,
+                activeStreams: x,
+                streamParticipants: I,
+                participantsVersion: j,
+                pinned: C,
+                padding: w,
             } = e,
-            N = S.map((e) => ({
+            N = I.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
                 height: o,
-                locked: v,
+                locked: S,
                 widgetId: t,
-                pinned: I,
+                pinned: C,
             })),
-            w = (0, c.Z)(n),
-            Z = (0, c.Z)(v),
-            P = b === h.C5.VERTICAL,
-            T = v || Z !== v || w !== n,
-            A = 0,
-            k = 0,
-            D = (0, s.Yzy)(
-                P
-                    ? N.map((e, t) =>
-                          O(y({}, e), {
-                              y: (A += e.height + (t > 0 ? j : 0)) - e.height,
+            Z = (0, c.Z)(n),
+            T = (0, c.Z)(S),
+            P = _ === g.C5.VERTICAL,
+            A = S || T !== S || Z !== n,
+            k = r.useMemo(() => {
+                let e = 0,
+                    t = 0;
+                return P
+                    ? N.map((t, n) =>
+                          b(v({}, t), {
+                              y: (e += t.height + (n > 0 ? w : 0)) - t.height,
                               x: 0,
                           }),
                       )
-                    : N.map((e, t) =>
-                          O(y({}, e), {
-                              x: (k += e.width + (t > 0 ? j : 0)) - e.width,
+                    : N.map((e, n) =>
+                          b(v({}, e), {
+                              x: (t += e.width + (n > 0 ? w : 0)) - e.width,
                               y: 0,
                           }),
-                      ),
+                      );
+            }, [N, w, P]),
+            D = r.useMemo(
+                () =>
+                    0 === k.length
+                        ? (0, m.MH)(f.bt)
+                        : k.reduce((e, t) => e + t.height, 0) + (P ? w * (k.length - 1) : 0),
+                [k, P, w],
+            ),
+            R = r.useMemo(
+                () => (0 === k.length ? f.bt : k.reduce((e, t) => e + t.width, 0) + (P ? 0 : w * (k.length - 1))),
+                [k, P, w],
+            ),
+            L = (0, s.Yzy)(
+                k,
                 {
                     key: (e) => e.key,
                     from: {
@@ -157,33 +149,33 @@ let _ = {
                             height: r,
                         };
                     },
-                    config: _,
-                    trail: 100 * !T,
+                    config: E,
+                    trail: 100 * !A,
                 },
-                T ? "animate-never" : "respect-motion-settings",
+                A ? "animate-never" : "respect-motion-settings",
             ),
-            R = (0, p.ee)(() => new Set(S.map((e) => e.user.id)), [S, x]),
-            L = (0, p.ee)(() => new Set(S.filter((e) => E.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [S, E, x]);
+            M = (0, p.ee)(() => new Set(I.map((e) => e.user.id)), [I, j]),
+            z = (0, p.ee)(() => new Set(I.filter((e) => x.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [I, x, j]);
         return (
             r.useEffect(() => {
-                0 !== R.size &&
-                    (0, p.zi)(m.Odu.GO_LIVE, {
+                0 !== M.size &&
+                    (0, p.zi)(y.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
-                        shownUserIds: Array.from(R),
-                        liveUserIds: Array.from(L),
+                        shownUserIds: Array.from(M),
+                        liveUserIds: Array.from(z),
                         contentInventoryIds: [],
                     });
-            }, [R, L]),
+            }, [M, z]),
             (0, i.jsx)("div", {
                 className: l()({
-                    [g.gridContainer]: !0,
-                    [g.vertical]: P,
-                    [g.horizontal]: !P,
+                    [O.gridContainer]: !0,
+                    [O.vertical]: P,
+                    [O.horizontal]: !P,
                 }),
-                style: P ? { height: A } : { width: k },
-                children: D((e, t, r, l) =>
+                style: P ? { height: D } : { width: R },
+                children: L((e, t, r, l) =>
                     (0, i.jsx)(a.animated.div, {
-                        className: g.gridItem,
+                        className: O.gridItem,
                         style: Object.assign({}, e, {
                             width: n,
                             height: o,
@@ -192,9 +184,9 @@ let _ = {
                         children: ((e) => {
                             let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e;
                             return (0, i.jsx)("div", {
-                                className: g.tileContainer,
+                                className: O.tileContainer,
                                 children: (0, i.jsx)(
-                                    f.Z,
+                                    h.Z,
                                     {
                                         participant: t,
                                         width: n,
