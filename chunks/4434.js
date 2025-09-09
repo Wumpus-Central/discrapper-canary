@@ -594,22 +594,23 @@ function e_(e) {
             paymentSourceType: u,
             didPurchaseOnFractionalPremium: d = !1,
             fallbackGuildName: f,
+            customCheckoutFlow: p,
         } = e,
-        { theme: p } = (0, _.TCT)(),
-        [h, m] = i.useState(P.fe.Scenes.ENTRY),
-        [g, E] = i.useState(!1),
-        b = null != (t = null == o ? void 0 : o.name) ? t : f;
+        { theme: h } = (0, _.TCT)(),
+        [m, g] = i.useState(P.fe.Scenes.ENTRY),
+        [E, b] = i.useState(!1),
+        y = null != (t = null == o ? void 0 : o.name) ? t : f;
     return (
         (n = l
-            ? null == b
+            ? null == y
                 ? $.intl.format($.t.P52e1t, {})
-                : $.intl.format($.t["4UnIk5"], { guildName: b })
+                : $.intl.format($.t["4UnIk5"], { guildName: y })
             : d
               ? $.intl.format($.t.gFaKd3, { helpCenterLink: Y.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
-              : null == b
+              : null == y
                 ? $.intl.format($.t.SZ5ohY, { guildSubscriptionQuantity: s })
                 : $.intl.format($.t.GxK3Mj, {
-                      guildName: b,
+                      guildName: y,
                       guildSubscriptionQuantity: s,
                   })),
         (0, r.jsxs)("div", {
@@ -618,16 +619,16 @@ function e_(e) {
                 c
                     ? (0, r.jsx)(P.fe, {
                           className: ee.confirmationAnimation,
-                          nextScene: h,
+                          nextScene: m,
                           onScenePlay: (e) => {
-                              if (!g)
+                              if (!E)
                                   switch (e) {
                                       case P.fe.Scenes.ENTRY:
-                                          return m(P.fe.Scenes.IDLE);
+                                          return g(P.fe.Scenes.IDLE);
                                       case P.fe.Scenes.IDLE:
-                                          return m(P.fe.Scenes.SUCCESS);
+                                          return g(P.fe.Scenes.SUCCESS);
                                       case P.fe.Scenes.SUCCESS:
-                                          return E(!0), m(P.fe.Scenes.IDLE);
+                                          return b(!0), g(P.fe.Scenes.IDLE);
                                   }
                           },
                           pauseWhileUnfocused: !1,
@@ -635,7 +636,7 @@ function e_(e) {
                     : null,
                 (0, r.jsx)(D.ZP, {
                     className: ee.confirmationUpgradedBanner,
-                    theme: p,
+                    theme: h,
                     premiumType: Q.p9.TIER_2,
                     type: J.X7.has(null != u ? u : J.He.UNKNOWN)
                         ? D.ZP.Types.PREMIUM_PAYMENT_STARTED
@@ -647,7 +648,7 @@ function e_(e) {
                 }),
                 (0, r.jsx)(_.zxk, {
                     variant: "primary",
-                    text: $.intl.string($.t["/iTxg4"]),
+                    text: "apple_payment_link" === p ? $.intl.string($.t.qXV2XV) : $.intl.string($.t["/iTxg4"]),
                     onClick: a,
                 }),
             ],

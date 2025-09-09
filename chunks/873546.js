@@ -1,6 +1,7 @@
 n.d(t, {
     Em: () => b,
-    eL: () => O,
+    bO: () => O,
+    eL: () => v,
     tq: () => y,
 }),
     n(388685);
@@ -24,6 +25,6 @@ let m = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]),
         void 0 !== (null == (o = window) || null == (a = o.navigator) ? void 0 : a.standalone) &&
         (null == (l = window) || null == (s = l.navigator) ? void 0 : s.maxTouchPoints) > 1,
     b = m.has(null != (f = h().product) ? f : "") || E,
-    y = !b && g.has(null != (_ = null === h() || void 0 === h() || null == (c = h().os) ? void 0 : c.family) ? _ : "");
-null === h() || void 0 === h() || null == (u = h().os) || u.family;
-let O = (null === h() || void 0 === h() || null == (d = h().os) ? void 0 : d.family) === "Android";
+    y = !b && g.has(null != (_ = null === h() || void 0 === h() || null == (c = h().os) ? void 0 : c.family) ? _ : ""),
+    O = (null === h() || void 0 === h() || null == (u = h().os) ? void 0 : u.family) === "iOS",
+    v = (null === h() || void 0 === h() || null == (d = h().os) ? void 0 : d.family) === "Android";
