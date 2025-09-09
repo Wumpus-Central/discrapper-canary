@@ -1,12 +1,13 @@
-n.d(t, { Ji: () => o });
-var r = n(818083);
+n.d(t, { Ji: () => s });
+var r = n(818083),
+    i = n(427164);
 n(638395), n(171393);
-var i = n(987338);
-let a = (0, r.B)({
+var a = n(987338);
+let o = (0, r.B)({
     kind: "user",
     id: "2024-07_icymi",
     label: "In-case-you-missed-it tab",
-    commonTriggerPoint: i.$P.CONNECTION_OPEN_MOBILE,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN_MOBILE,
     defaultConfig: { enabled: !1 },
     treatments: [
         {
@@ -42,9 +43,9 @@ let a = (0, r.B)({
         },
     ],
 });
-function o(e) {
+function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return a.getCurrentConfig(
+    return o.getCurrentConfig(
         { location: e },
         {
             disable: !0,
@@ -78,29 +79,45 @@ function o(e) {
             },
         ],
     }),
-    (0, r.B)({
+    (0, i.le)({
+        name: "2025-09-destination-icymi-ux-v2",
         kind: "user",
-        id: "2025-08_icymi_conversations",
-        label: "New conversations experience in ICYMI",
-        defaultConfig: { newConversationsEnabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "New conversations experience in ICYMI",
-                config: { newConversationsEnabled: !0 },
+        defaultConfig: {
+            isNewHeaderAndInteractions: !1,
+            shouldTruncateMessages: !1,
+            isNewCardDesign: !1,
+            isBottomSheetInteractions: !1,
+        },
+        variations: {
+            1: {
+                isNewHeaderAndInteractions: !0,
+                shouldTruncateMessages: !1,
+                isNewCardDesign: !1,
+                isBottomSheetInteractions: !1,
             },
-        ],
-    }),
-    (0, r.B)({
-        kind: "user",
-        id: "2025-08_icymi_ux_refresh",
-        label: "UX refresh in ICYMI",
-        defaultConfig: { newUXEnabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "UX refresh in ICYMI",
-                config: { newUXEnabled: !0 },
+            2: {
+                isNewHeaderAndInteractions: !0,
+                shouldTruncateMessages: !0,
+                isNewCardDesign: !1,
+                isBottomSheetInteractions: !1,
             },
-        ],
+            3: {
+                isNewHeaderAndInteractions: !0,
+                shouldTruncateMessages: !0,
+                isNewCardDesign: !0,
+                isBottomSheetInteractions: !1,
+            },
+            4: {
+                isNewHeaderAndInteractions: !0,
+                shouldTruncateMessages: !0,
+                isNewCardDesign: !1,
+                isBottomSheetInteractions: !0,
+            },
+            5: {
+                isNewHeaderAndInteractions: !0,
+                shouldTruncateMessages: !0,
+                isNewCardDesign: !0,
+                isBottomSheetInteractions: !0,
+            },
+        },
     });
