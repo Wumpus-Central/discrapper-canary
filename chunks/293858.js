@@ -1,122 +1,137 @@
-n.d(t, { b: () => b });
+n.d(t, { b: () => v });
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    s = n.n(l),
-    a = n(704215),
+    a = n.n(l),
+    s = n(704215),
     o = n(605236),
-    C = n(347896),
-    d = n(717401),
-    c = n(317269),
-    p = n(669079),
-    u = n(296848),
-    x = n(987209),
-    h = n(563132),
-    _ = n(107998),
-    f = n(27034),
-    j = n(400981),
-    m = n(435020),
-    L = n(698708),
-    g = n(921944);
-function b(e) {
+    C = n(538981),
+    d = n(347896),
+    c = n(717401),
+    u = n(317269),
+    p = n(585483),
+    x = n(669079),
+    _ = n(296848),
+    h = n(987209),
+    f = n(563132),
+    m = n(107998),
+    j = n(27034),
+    L = n(400981),
+    b = n(435020),
+    g = n(698708),
+    S = n(981631),
+    y = n(921944);
+function v(e) {
     let t,
         {
             handleClose: n,
             planGroup: l,
-            onSubscriptionConfirmation: b,
-            renderPurchaseConfirmation: y,
-            postSuccessGuild: S,
-            followupSKUInfo: E,
-            continueSessionToInitialStep: O,
+            onSubscriptionConfirmation: v,
+            renderPurchaseConfirmation: E,
+            postSuccessGuild: O,
+            followupSKUInfo: P,
+            continueSessionToInitialStep: M,
         } = e,
         {
-            activeSubscription: P,
-            paymentSources: v,
-            paymentSourceId: w,
-            selectedPlan: M,
-            selectedSkuId: I,
+            activeSubscription: w,
+            paymentSources: k,
+            paymentSourceId: I,
+            selectedPlan: A,
+            selectedSkuId: T,
             step: Z,
-            updatedSubscription: A,
-            startingPremiumSubscriptionPlanIdRef: k,
-            startingFractionalPremiumEndsAtRef: T,
-        } = (0, h.JL)(),
+            updatedSubscription: N,
+            startingPremiumSubscriptionPlanIdRef: B,
+            startingFractionalPremiumEndsAtRef: R,
+        } = (0, f.JL)(),
         {
-            isGift: B,
-            giftRecipient: U,
-            giftCode: R,
-            hasSentMessage: N,
-            isSendingMessage: H,
-            sendGiftMessage: F,
-            claimableRewards: G,
-            selectedGiftingPromotionReward: D,
-        } = (0, x.wD)(),
-        { confirmationFooter: W } = (0, _.zb)(),
-        z = null != W,
-        Y = (0, d.id)(M, B, G),
-        V = (0, C.Z)(),
-        K = (0, d.a5)(M),
-        q = (0, d.tK)(null == D ? void 0 : D.skuId),
-        J = (0, m.$)(v, w),
-        X = B && null != D && K;
-    s()(null != M, "Expected plan to selected"),
-        s()(null != I, "Expected selectedSkuId"),
-        s()(null != Z, "Step should be set");
-    let Q = i.useCallback(() => {
-        n(), null == b || b();
-    }, [n, b]);
+            isGift: U,
+            giftRecipient: H,
+            giftCode: F,
+            hasSentMessage: G,
+            isSendingMessage: D,
+            sendGiftMessage: K,
+            claimableRewards: z,
+            selectedGiftingPromotionReward: W,
+        } = (0, h.wD)(),
+        { confirmationFooter: Y } = (0, m.zb)(),
+        V = null != Y,
+        q = (0, c.id)(A, U, z),
+        J = (0, d.Z)(),
+        Q = (0, c.a5)(A),
+        X = (0, c.tK)(null == W ? void 0 : W.skuId),
+        $ = (0, C.r)(),
+        ee = (0, b.$)(k, I),
+        et = U && null != W && Q;
+    a()(null != A, "Expected plan to selected"),
+        a()(null != T, "Expected selectedSkuId"),
+        a()(null != Z, "Step should be set");
+    let en = i.useCallback(() => {
+        n(), null == v || v();
+    }, [n, v]);
     return (
         i.useEffect(() => {
-            !B || null == U || null == R || N || H || (0, p.pO)(U) || F({ onSubscriptionConfirmation: b });
-        }, [F, B, U, R, N, H, b]),
+            function e() {
+                null == $ || $();
+            }
+            return (
+                p.S.subscribe(S.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
+                () => {
+                    p.S.unsubscribe(S.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+                }
+            );
+        }, [$]),
         i.useEffect(() => {
-            null != V &&
-                null != V.reminderNotice &&
-                Y &&
-                (0, o.wH)(a.z.GIFTING_PROMOTION_REMINDER, V.dismissibleContentVersion, {
-                    dismissAction: g.L.INDIRECT_ACTION,
+            !U || null == H || null == F || G || D || (0, x.pO)(H) || K({ onSubscriptionConfirmation: v });
+        }, [K, U, H, F, G, D, v]),
+        i.useEffect(() => {
+            null != J &&
+                null != J.reminderNotice &&
+                q &&
+                (0, o.wH)(s.z.GIFTING_PROMOTION_REMINDER, J.dismissibleContentVersion, {
+                    dismissAction: y.L.INDIRECT_ACTION,
                 });
-        }, [V, Y]),
+        }, [J, q]),
         (t =
-            null != y
-                ? y(M, Q, A)
-                : null != O
-                  ? (0, r.jsx)(c.VY, {})
-                  : B
-                    ? (0, r.jsx)(c.TB, {
-                          planId: M.id,
-                          onClose: Q,
+            null != E
+                ? E(A, en, N)
+                : null != M
+                  ? (0, r.jsx)(u.VY, {})
+                  : U
+                    ? (0, r.jsx)(u.TB, {
+                          planId: A.id,
+                          onClose: en,
                       })
-                    : k.current === M.id
-                      ? (0, r.jsx)(c.ZP, {
-                            planId: M.id,
-                            postSuccessGuild: S,
-                            onClose: Q,
-                            paymentSourceType: J,
-                            hideClose: z,
-                            startingFractionalPremiumEndsAt: T.current,
+                    : B.current === A.id
+                      ? (0, r.jsx)(u.ZP, {
+                            planId: A.id,
+                            postSuccessGuild: O,
+                            onClose: en,
+                            paymentSourceType: ee,
+                            hideClose: V,
+                            startingFractionalPremiumEndsAt: R.current,
                         })
-                      : (0, r.jsx)(c.ZP, {
-                            followupSKUInfo: E,
-                            startingPremiumSubscriptionPlanId: k.current,
-                            planId: M.id,
-                            onClose: Q,
-                            isDowngrade: null != P && (0, u.GY)(P, M.id, l),
-                            paymentSourceType: J,
-                            hideClose: z,
-                            startingFractionalPremiumEndsAt: T.current,
+                      : (0, r.jsx)(u.ZP, {
+                            followupSKUInfo: P,
+                            startingPremiumSubscriptionPlanId: B.current,
+                            planId: A.id,
+                            onClose: en,
+                            isDowngrade: null != w && (0, _.GY)(w, A.id, l),
+                            paymentSourceType: ee,
+                            hideClose: V,
+                            startingFractionalPremiumEndsAt: R.current,
                         })),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsxs)(f.C3, {
-                    children: [(0, r.jsx)(L.Z, {}), t],
+                (0, r.jsxs)(j.C3, {
+                    children: [(0, r.jsx)(g.Z, {}), t],
                 }),
-                null != W && W,
-                X &&
-                    null != q &&
-                    (0, r.jsx)(j.Z, {
-                        onClose: Q,
-                        selectedPromotionalDecoPurchaseRecord: q,
-                        selectedGiftingPromotionReward: D,
+                null != Y && Y,
+                et &&
+                    null != X &&
+                    (0, r.jsx)(L.Z, {
+                        onClose: en,
+                        selectedPromotionalDecoPurchaseRecord: X,
+                        selectedGiftingPromotionReward: W,
                     }),
             ],
         })
