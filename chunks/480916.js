@@ -34,11 +34,17 @@ var r = n(626135),
             (e.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL = "dev_tools_age_verification_retry_modal"),
             (e.SAFETY_FLOWS = "safety_flows"),
             (e.AUTOMATED_UNDERAGE_APPEALS = "automated_underage_appeals"),
+            (e.EXPRESSIVE_GET_STARTED = "expressive_get_started"),
             e
         );
     })({}),
     o = (function (e) {
-        return (e[(e.PRIMARY = 1)] = "PRIMARY"), (e[(e.RETRY = 2)] = "RETRY"), e;
+        return (
+            (e[(e.PRIMARY = 1)] = "PRIMARY"),
+            (e[(e.RETRY = 2)] = "RETRY"),
+            (e[(e.EXPRESSIVE_PRIMARY = 3)] = "EXPRESSIVE_PRIMARY"),
+            e
+        );
     })({}),
     s = (function (e) {
         return (
@@ -46,6 +52,7 @@ var r = n(626135),
             (e.LEARN_MORE = "learn_more"),
             (e.GET_STARTED = "get_started"),
             (e.SYSTEM_DMS_LEARN_MORE = "system_dms_learn_more"),
+            (e.METHOD_SELECT = "method_select"),
             e
         );
     })({}),
@@ -78,11 +85,12 @@ function d(e, t, n) {
         entry_point: n,
     });
 }
-function f(e, t, n) {
+function f(e, t, n, a) {
     r.default.track(i.rMx.AGE_VERIFICATION_MODAL_CLICKED, {
         modal_session_id: e,
         modal_version: t,
         cta: n,
+        method: a,
     });
 }
 function _(e, t) {
