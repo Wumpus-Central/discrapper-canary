@@ -71243,8 +71243,11 @@ html .progress__61462 {
 .backNotice__84419 {
     background-color: var(--brand-600);
     border-radius: 0;
-    padding: 8px;
-    text-align: initial
+    padding: 8px
+}
+
+.closeButton__84419 {
+    height: 100%
 }
 
 .container__09ccc {
@@ -88840,7 +88843,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

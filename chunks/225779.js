@@ -146,10 +146,10 @@ function I(e) {
     );
 }
 function T(e) {
-    let { onClick: t, noticeType: n } = e;
+    let { onClick: t, noticeType: n, className: i } = e;
     return (0, r.jsx)(s.P3F, {
         focusProps: { offset: 6 },
-        className: d.closeButton,
+        className: a()(d.closeButton, i),
         onClick: () => {
             t(), O(n);
         },
