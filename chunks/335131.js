@@ -6,12 +6,12 @@ n.d(t, {
     R2: () => B,
     Sm: () => P,
     fK: () => U,
-    fi: () => V,
+    fi: () => F,
     jr: () => k,
     mK: () => R,
     oK: () => D,
     oc: () => L,
-    p8: () => F,
+    p8: () => V,
     qg: () => M,
 }),
     n(388685),
@@ -224,7 +224,9 @@ let R = (e) => {
             let n = {};
             (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode),
                 (null == t ? void 0 : t.paymentGateway) !== null &&
-                    (n.payment_gateway = null == t ? void 0 : t.paymentGateway);
+                    (n.payment_gateway = null == t ? void 0 : t.paymentGateway),
+                (null == t ? void 0 : t.includeBundles) !== null &&
+                    (n.include_bundles = null == t ? void 0 : t.includeBundles);
             let r = await o.tn.get({
                 url: T.ANM.COLLECTIBLES_PRODUCTS(e),
                 query: n,
@@ -355,13 +357,13 @@ let R = (e) => {
                 });
         }
     },
-    V = (e) => {
+    F = (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE",
             shopHomeConfigOverride: e,
         });
     },
-    F = (e) => {
+    V = (e) => {
         s.Z.dispatch({
             type: "COLLECTIBLES_SKIP_NUM_CATEGORIES",
             skipNumCategories: e,

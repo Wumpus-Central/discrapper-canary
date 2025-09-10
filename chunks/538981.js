@@ -44,7 +44,7 @@ function d() {
                 isMarketingCampaignApplicationModalViewed: l.Z.isMarketingCampaignApplicationModalViewed,
             }),
         ),
-        { product: c } = (0, s.T)(l.F);
+        { product: c } = (0, s.T)(l.F, { includeBundles: !0 });
     return (i) => {
         let s = (null == i ? void 0 : i.sku_id) === l.F;
         (e || s) &&
