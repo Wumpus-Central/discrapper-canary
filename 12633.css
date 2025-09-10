@@ -28709,9 +28709,10 @@ span.clanTag__5d473 {
 }
 
 .closeButton__52c9d {
+    cursor: pointer;
     position: absolute;
-    right: 16px;
-    top: 16px
+    right: 20px;
+    top: 20px
 }
 
 .closeButtonIcon__52c9d {
@@ -88851,7 +88852,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
