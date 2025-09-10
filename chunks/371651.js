@@ -608,7 +608,7 @@ function eT(e) {
         return (
             Q(e.pid, "state", e.overlayState),
             R.verbose("Updating overlay state for pid ".concat(e.pid, " to ").concat(e.overlayState)),
-            e.overlayState === g.mM.WAITING_FOR_OVERLAY_OPEN
+            e.overlayState === g.mM.WAITING_FOR_POPOUT_OPEN || e.overlayState === g.mM.WAITING_FOR_OVERLAY_OPEN
                 ? $(e.pid, g.zE.MODULE_TRACKING)
                 : e.overlayState === g.mM.OVERLAY_RENDERING && $(e.pid, g.zE.OVERLAY_RENDERING),
             !0

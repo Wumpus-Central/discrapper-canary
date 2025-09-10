@@ -284,7 +284,7 @@ function es(e, t) {
         if ((null != t && (K[e] = t), null == B || B.trackGame(e), er(e), M.has(e))) return;
         M.add(e),
             j(e, "game_tracked", { newOverlayMethod: null != t ? y.gl[t] : null }),
-            o.Z.updateOverlayState(e, y.mM.WAITING_FOR_OVERLAY_OPEN);
+            o.Z.updateOverlayState(e, y.mM.WAITING_FOR_POPOUT_OPEN);
     } catch (t) {
         L.error("Error tracking game:", t), ea(e, t);
     }
@@ -391,7 +391,8 @@ async function eh(e) {
                 ea(e, Error("Failed to get native handle for pid")),
                 ""
             );
-        L.info("Native Handle for pid ".concat(e, ":"), i), o.Z.updateOverlayState(e, y.mM.OVERLAY_RENDERING);
+        L.info("Native Handle for pid ".concat(e, ":"), i),
+            o.Z.updateOverlayState(e, y.mM.WAITING_FOR_REACT_INITIALIZATION);
         let a = { renderer_started_after: new Date().getTime() - t };
         return j(e, "renderer_started", a), en(e, a), eC(!1), v.Z.resetWindowState(), i;
     } catch (t) {

@@ -20,8 +20,8 @@ var r = n(951288),
     O = n(825209),
     v = n(593472),
     I = n(493773),
-    S = n(812206),
-    T = n(835473),
+    T = n(812206),
+    S = n(835473),
     A = n(243778),
     C = n(594190),
     N = n(137920),
@@ -141,8 +141,8 @@ function eO(e, t) {
 }
 let ev = eP(null),
     eI = 20,
-    eS = 16,
-    eT = 1,
+    eT = 16,
+    eS = 1,
     eA = "voice-widget-display-users",
     eC = 25,
     eN = [0, 5, 10, 15, 20, 25];
@@ -310,6 +310,9 @@ let eL = new Set([
         L.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION,
         L.mM.WAITING_FOR_MODULE_TRACKING,
         L.mM.WAITING_FOR_OVERLAY_OPEN,
+        L.mM.WAITING_FOR_POPOUT_OPEN,
+        L.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE,
+        L.mM.WAITING_FOR_REACT_INITIALIZATION,
     ]),
     ej = (e) => {
         e.preventDefault(), e.stopPropagation();
@@ -341,10 +344,10 @@ function eM(e) {
         }, [o, u]),
         p = (0, _.e7)([C.ZP, X.Z, J.Z], () => (null == o ? null : (0, C.FZ)(o, C.ZP, X.Z, J.Z)), [o], l()),
         [E, b] = i.useState(f),
-        [O, S] = i.useState(d),
-        [T, A] = i.useState(!1);
+        [O, T] = i.useState(d),
+        [S, A] = i.useState(!1);
     i.useEffect(() => {
-        b(f), S(d);
+        b(f), T(d);
     }, [f, d]);
     let N = !(0, es.supportsLegacy)(),
         R = !(0, es.supportsOutOfProcess)(),
@@ -356,7 +359,7 @@ function eM(e) {
                 l = !1;
             switch (t) {
                 case D.AE.LEGACY_GAME:
-                    S(e), g.Z.toggleOverlay(o, e, E), (s = !e && O);
+                    T(e), g.Z.toggleOverlay(o, e, E), (s = !e && O);
                     break;
                 case D.AE.OOP_GAME:
                     b(e), g.Z.toggleOverlay(o, O, e), (l = !e && E);
@@ -390,7 +393,7 @@ function eM(e) {
                 i = !1;
             switch (t) {
                 case "game":
-                    g.Z.toggleOverlay(o, e, e), S(e), b(e), (r = !e && O), (i = !e && E);
+                    g.Z.toggleOverlay(o, e, e), T(e), b(e), (r = !e && O), (i = !e && E);
                     break;
                 case "global":
                     y.Z.setEnabled(e, e), (r = !e && x), (i = !e && j);
@@ -398,7 +401,7 @@ function eM(e) {
                 case "both":
                     y.Z.setEnabled(e, e),
                         g.Z.toggleOverlay(o, e, e),
-                        S(e),
+                        T(e),
                         b(e),
                         (r = (!e && x) || (!e && O)),
                         (i = (!e && j) || (!e && E));
@@ -549,7 +552,7 @@ function eM(e) {
         ? null
         : (0, r.jsxs)(ex, {
               onExpand: A,
-              className: T ? e_.expandedContainer : void 0,
+              className: S ? e_.expandedContainer : void 0,
               title: (0, r.jsxs)(r.Fragment, {
                   children: [
                       null !=
@@ -570,7 +573,7 @@ function eM(e) {
                                         eb(
                                             eg(
                                                 {
-                                                    size: eS,
+                                                    size: eT,
                                                     color: m.TVs.colors.BG_BRAND.css,
                                                 },
                                                 e,
@@ -578,8 +581,8 @@ function eM(e) {
                                             {
                                                 children: (0, r.jsx)(m.kmB, {
                                                     size: "custom",
-                                                    width: eS,
-                                                    height: eS,
+                                                    width: eT,
+                                                    height: eT,
                                                     color: m.TVs.colors.WHITE.css,
                                                 }),
                                             },
@@ -669,7 +672,7 @@ function eM(e) {
 function ek(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
-        o = (0, _.e7)([S.Z], () => (null != n ? n : S.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
+        o = (0, _.e7)([T.Z], () => (null != n ? n : T.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
     return (0, r.jsx)(P.Z, {
         game: o,
         pid: a,
@@ -723,7 +726,7 @@ function eG() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         o = (0, _.Wu)([C.ZP], () => C.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
-        s = (0, T.Z)(o.map((e) => e.id)),
+        s = (0, S.Z)(o.map((e) => e.id)),
         l = !(0, es.supportsLegacy)(),
         c = (e, t) => {
             var r, i;
@@ -813,7 +816,7 @@ function eB() {
         { oopEnabled: n, legacyEnabled: a } = (0, _.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         o = !(0, es.supportsOutOfProcess)(),
         s = (0, _.Wu)([C.ZP], () => C.ZP.getGamesSeen(!0)).filter((e) => !(0, Y.le)(e)),
-        l = (0, T.Z)(s.map((e) => e.id)),
+        l = (0, S.Z)(s.map((e) => e.id)),
         c = (e, t) => {
             var r, i;
             ej(t);
@@ -1105,7 +1108,7 @@ function eK() {
         p = [new Map(f.map((e) => [e.user.id, e])), f.map((e) => e.user.id)];
     function h(e) {
         null != u &&
-            (e < eT
+            (e < eS
                 ? (0, b.zG)(u.id, { voiceStatesMaxShown: ed.Og })
                 : (0, b.zG)(u.id, { voiceStatesMaxShown: Math.floor(e) }));
     }
@@ -1223,15 +1226,15 @@ function eK() {
                     className: e_.sliderContainer,
                     children: (0, r.jsx)(m.iRW, {
                         initialValue: d,
-                        onValueRender: (e) => (e < eT ? ef.intl.string(ef.t.nrUzFB) : "".concat(Math.floor(e))),
-                        minValue: eT - 1,
+                        onValueRender: (e) => (e < eS ? ef.intl.string(ef.t.nrUzFB) : "".concat(Math.floor(e))),
+                        minValue: eS - 1,
                         maxValue: eC,
                         onValueChange: h,
                         markers: eN,
                         barStyles: { background: m.TVs.colors.BACKGROUND_MOD_STRONG.css },
                         fillStyles: { background: m.TVs.colors.BG_BRAND.css },
                         "aria-labelledby": eA,
-                        onMarkerRender: (e) => (e < eT ? ef.intl.string(ef.t.nrUzFB) : "".concat(Math.floor(e))),
+                        onMarkerRender: (e) => (e < eS ? ef.intl.string(ef.t.nrUzFB) : "".concat(Math.floor(e))),
                     }),
                 }),
             }),
