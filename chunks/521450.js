@@ -7,10 +7,10 @@ var r = n(951288),
     l = n(435935),
     c = n(442837),
     u = n(481060),
-    d = n(37234),
-    f = n(960412),
-    _ = n(151662),
-    p = n(695346),
+    d = n(960412),
+    f = n(151662),
+    _ = n(695346),
+    p = n(342386),
     h = n(981631),
     m = n(930441),
     g = n(345909),
@@ -18,14 +18,14 @@ var r = n(951288),
     b = n(286661),
     y = n(197571);
 let O = () => {
-    let e = p.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([_.Z], () => _.Z.getEmailSettings());
+    let e = _.Ex.useSetting(),
+        { categories: t, initialized: n } = (0, c.cj)([f.Z], () => f.Z.getEmailSettings());
     function a(e) {
-        (0, f.pR)(m.$Z.FAMILY_CENTER_DIGEST, e);
+        (0, d.pR)(m.$Z.FAMILY_CENTER_DIGEST, e);
     }
     return (
         i.useEffect(() => {
-            null == n && (0, f.Y7)();
+            null == n && (0, d.Y7)();
         }, [n]),
         (0, r.jsxs)("div", {
             className: b.container,
@@ -40,7 +40,7 @@ let O = () => {
                     value: e,
                     note: E.intl.string(g.default["5MdB3t"]),
                     hideBorder: !0,
-                    onChange: p.Ex.updateSetting,
+                    onChange: _.Ex.updateSetting,
                     children: E.intl.string(g.default.zkEceX),
                 }),
                 e
@@ -60,7 +60,7 @@ let O = () => {
                                   }),
                                   (0, r.jsx)(u.P3F, {
                                       children: (0, r.jsx)(s.rU, {
-                                          onClick: d.xf,
+                                          onClick: p.Z,
                                           to: {
                                               pathname: h.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 },

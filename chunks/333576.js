@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(693789),
     a = n(481060),
-    o = n(37234),
-    s = n(703656),
-    l = n(52647),
+    o = n(703656),
+    s = n(52647),
+    l = n(342386),
     c = n(450272),
     u = n(981631);
 let d = function () {
-    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, l.Z)();
+    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, s.Z)();
     return (0, r.jsxs)(c.$0, {
         children: [
             (0, r.jsx)(a.X6q, {
@@ -28,7 +28,7 @@ let d = function () {
                     }),
                     (0, r.jsx)(i.zx, {
                         onClick: () => {
-                            e(), t(), (0, o.xf)(), (0, s.uL)(u.Z5c.APP);
+                            e(), t(), (0, l.Z)(), (0, o.uL)(u.Z5c.APP);
                         },
                         children: "Reset Onboarding State",
                     }),

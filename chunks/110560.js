@@ -22,10 +22,10 @@ var i = n(772848),
     o = n(756647),
     s = n(481060),
     l = n(668781),
-    c = n(37234),
-    u = n(836768),
-    d = n(98278),
-    f = n(703656),
+    c = n(836768),
+    u = n(98278),
+    d = n(703656),
+    f = n(342386),
     _ = n(314897),
     p = n(626135),
     h = n(954824),
@@ -145,7 +145,7 @@ function F(e, t) {
                       }),
                   );
           })
-        : (0, d.$)();
+        : (0, u.$)();
 }
 function V(e, t, i) {
     (0, s.ZDy)(async () => {
@@ -250,9 +250,9 @@ function z() {
     let r = null != t ? "#".concat(t) : "",
         { enabled: i } = v.m8.getConfig({ location: w.dr.NAVIGATE_TO_QUEST_HOME_UTIL }),
         a = i && !n;
-    a || u.Z.setState({ selectedTab: x.GlobalDiscoveryTab.QUESTS }),
-        (0, c.xf)(),
-        (0, f.uL)((a ? D.Z5c.QUEST_HOME_V2 : D.Z5c.QUEST_HOME) + r);
+    a || c.Z.setState({ selectedTab: x.GlobalDiscoveryTab.QUESTS }),
+        (0, f.Z)(),
+        (0, d.uL)((a ? D.Z5c.QUEST_HOME_V2 : D.Z5c.QUEST_HOME) + r);
 }
 let q = 0.2;
 function X(e) {
@@ -363,7 +363,7 @@ function ee(e) {
         h.Z.launch(t, (t) => {
             if (!t) {
                 let { enabled: t } = v.m8.getConfig({ location: w.dr.QUEST_DEEP_LINK_UTIL });
-                (0, f.dL)({
+                (0, d.dL)({
                     pathname: t ? D.Z5c.QUEST_HOME_V2 : D.Z5c.QUEST_HOME,
                     hash: e,
                 });

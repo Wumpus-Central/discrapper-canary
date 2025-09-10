@@ -4,8 +4,8 @@ var r = n(951288),
     a = n(772848),
     o = n(780384),
     s = n(481060),
-    l = n(37234),
-    c = n(410030),
+    l = n(410030),
+    c = n(342386),
     u = n(626135),
     d = n(617136),
     f = n(497505),
@@ -47,10 +47,10 @@ function O(e) {
 }
 let v = "https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png";
 function I() {
-    let e = (0, o.wj)((0, c.ZP)()),
+    let e = (0, o.wj)((0, l.ZP)()),
         t = i.useMemo(() => ({ backgroundImage: "url(".concat(v, ")") }), []),
         n = i.useCallback(() => {
-            (0, l.xf)(),
+            (0, c.Z)(),
                 (0, p.navigateToQuestHome)({ fromContent: f.jn.QUEST_HOME_MOVE_CALLOUT }),
                 u.default.track(
                     m.rMx.QUEST_CONTENT_CLICKED,

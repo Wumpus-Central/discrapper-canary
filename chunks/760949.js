@@ -1,37 +1,37 @@
-e.d(n, { default: () => h }), e(388685);
+e.d(n, { default: () => p }), e(388685);
 var i = e(951288),
     a = e(647438),
     l = e(82659),
     r = e(481060),
-    c = e(37234),
-    s = e(479531),
-    o = e(703656),
-    u = e(695346),
+    c = e(479531),
+    s = e(703656),
+    o = e(695346),
+    u = e(342386),
     d = e(981631),
     x = e(345909),
-    f = e(388032);
-function h(t) {
+    h = e(388032);
+function p(t) {
     let { transitionState: n, onClose: e } = t,
-        [h, p] = a.useState(!1),
+        [p, f] = a.useState(!1),
         [S, g] = a.useState(null),
         k = async () => {
-            g(null), p(!0);
+            g(null), f(!0);
             try {
-                await u.Ex.updateSetting(!1), (0, o.uL)(d.Z5c.FRIENDS), (0, c.xf)(), e();
+                await o.Ex.updateSetting(!1), (0, s.uL)(d.Z5c.FRIENDS), (0, u.Z)(), e();
             } catch (t) {
-                g(new s.Z(t).getAnyErrorMessage());
+                g(new c.Z(t).getAnyErrorMessage());
             } finally {
-                p(!1);
+                f(!1);
             }
         },
         y = () => {
-            (0, o.uL)(d.Z5c.SETTINGS("family-center")), e();
+            (0, s.uL)(d.Z5c.SETTINGS("family-center")), e();
         };
     return (0, i.jsx)(l.Modal, {
         transitionState: n,
         onClose: e,
-        title: f.intl.string(x.default.VGB30N),
-        subtitle: f.intl.format(x.default["CrZZ+v"], {
+        title: h.intl.string(x.default.VGB30N),
+        subtitle: h.intl.format(x.default["CrZZ+v"], {
             openSettingsHook: (t, n) =>
                 (0, i.jsx)(
                     r.eee,
@@ -45,13 +45,13 @@ function h(t) {
         actions: [
             {
                 variant: "secondary",
-                text: f.intl.string(f.t["ETE/oK"]),
+                text: h.intl.string(h.t["ETE/oK"]),
                 onClick: e,
             },
             {
-                text: f.intl.string(x.default.cSb7U1),
+                text: h.intl.string(x.default.cSb7U1),
                 onClick: k,
-                loading: h,
+                loading: p,
                 variant: "critical-primary",
             },
         ],

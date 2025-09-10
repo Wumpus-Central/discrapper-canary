@@ -1,4 +1,4 @@
-n.d(t, { m: () => R });
+n.d(t, { m: () => N });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -9,19 +9,18 @@ var r = n(951288),
     u = n(780384),
     d = n(481060),
     f = n(493683),
-    _ = n(37234),
-    p = n(518950),
-    h = n(819640),
-    m = n(626135),
-    g = n(63063),
-    E = n(51144),
-    b = n(281494),
-    y = n(276444),
-    O = n(981631),
-    v = n(388032),
-    I = n(734501),
-    T = n(690813);
-function S(e, t, n) {
+    _ = n(518950),
+    p = n(342386),
+    h = n(626135),
+    m = n(63063),
+    g = n(51144),
+    E = n(281494),
+    b = n(276444),
+    y = n(981631),
+    O = n(388032),
+    v = n(734501),
+    I = n(690813);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,30 +44,30 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
 }
-let C = (e, t) => {
-        h.Z.hasLayers() && (0, _.xf)(), f.Z.openPrivateChannel({ recipientIds: e }), t();
+let A = (e, t) => {
+        (0, p.Z)(), f.Z.openPrivateChannel({ recipientIds: e }), t();
     },
-    N = (e) => {
+    C = (e) => {
         let { recipient: t, status: n, onClose: i } = e,
-            { avatarSrc: a, eventHandlers: s } = (0, p.Z)({
+            { avatarSrc: a, eventHandlers: s } = (0, _.Z)({
                 userId: null == t ? void 0 : t.id,
                 size: d.EFr.SIZE_56,
             }),
-            l = E.ZP.getName(t),
-            c = n === b.Fz.FAIL;
+            l = g.ZP.getName(t),
+            c = n === E.Fz.FAIL;
         return (0, r.jsxs)("div", {
-            className: I.trialRecipientRow,
+            className: v.trialRecipientRow,
             children: [
                 (0, r.jsx)(
                     d.qEK,
-                    A(
+                    S(
                         {
-                            imageClassName: o()({ [I.erroredAvatar]: c }),
+                            imageClassName: o()({ [v.erroredAvatar]: c }),
                             src: a,
                             "aria-label": l,
                             size: d.EFr.SIZE_32,
@@ -80,45 +79,45 @@ let C = (e, t) => {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(d.Text, {
-                                  className: I.errorDisplayName,
+                                  className: v.errorDisplayName,
                                   variant: "text-md/medium",
                                   color: "text-primary",
                                   children: l,
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-md/medium",
-                                  className: I.userName,
+                                  className: v.userName,
                                   color: "text-primary",
-                                  children: v.intl.format(v.t.RO3T4O, { userName: l }),
+                                  children: O.intl.format(O.t.RO3T4O, { userName: l }),
                               }),
                           ],
                       })
                     : (0, r.jsx)(d.Text, {
                           variant: "text-md/medium",
-                          className: I.trialRecipientRowDisplayName,
+                          className: v.trialRecipientRowDisplayName,
                           color: "text-primary",
                           children: l,
                       }),
                 (0, r.jsx)(d.zxk, {
                     variant: "secondary",
                     size: "sm",
-                    text: v.intl.string(v.t["E+yYpq"]),
+                    text: O.intl.string(O.t["g33r/P"]),
                     icon: d.kBi,
-                    onClick: () => C(t.id, i),
+                    onClick: () => A(t.id, i),
                 }),
             ],
         });
     },
-    R = (e) => {
+    N = (e) => {
         let { results: t, onClose: n, isReminderConfirmation: a } = e,
-            o = (0, s.e7)([y.Z], () => y.Z.getReferralsRemaining());
-        m.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+            o = (0, s.e7)([b.Z], () => b.Z.getReferralsRemaining());
+        h.default.track(y.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
         let { reducedMotion: f } = i.useContext(u.Sf);
         if (null === o) return (0, r.jsx)(d.$jN, {});
         let _ = () =>
                 f.enabled
                     ? {
-                          src: T.Z,
+                          src: I.Z,
                           type: "image",
                       }
                     : {
@@ -126,21 +125,21 @@ let C = (e, t) => {
                           type: "rive",
                       },
             p = () =>
-                0 === t.filter((e) => e.status === b.Fz.SUCCESS).length
-                    ? v.intl.string(v.t["7VBEub"])
+                0 === t.filter((e) => e.status === E.Fz.SUCCESS).length
+                    ? O.intl.string(O.t["7VBEub"])
                     : !0 === a
-                      ? v.intl.string(v.t.GP5lbm)
-                      : v.intl.string(v.t.tKCltb),
-            h = () =>
+                      ? O.intl.string(O.t.GP5lbm)
+                      : O.intl.string(O.t.tKCltb),
+            g = () =>
                 !0 === a
-                    ? v.intl.format(v.t["4gJJfH"], { helpdeskArticle: g.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM) })
-                    : v.intl.format(v.t.AwGSWl, { helpdeskArticle: g.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM) }),
-            E = () =>
+                    ? O.intl.format(O.t["4gJJfH"], { helpdeskArticle: m.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) })
+                    : O.intl.format(O.t.AwGSWl, { helpdeskArticle: m.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
+            T = () =>
                 (0, r.jsx)("div", {
-                    className: I.trialRecipientContainer,
+                    className: v.trialRecipientContainer,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            N,
+                            C,
                             {
                                 recipient: e.recipient,
                                 status: e.status,
@@ -154,9 +153,9 @@ let C = (e, t) => {
             graphic: _(),
             gradientColor: "nitro-pink",
             title: p(),
-            subtitle: h(),
+            subtitle: g(),
             onClose: n,
             transitionState: l.D.ENTERED,
-            children: E(),
+            children: T(),
         });
     };

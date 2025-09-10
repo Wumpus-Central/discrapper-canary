@@ -1,15 +1,15 @@
 n.d(i, { default: () => p });
 var r = n(951288),
     a = n(667202),
-    s = n(37234),
-    e = n(635552),
-    l = n(300284),
+    s = n(635552),
+    e = n(300284),
+    l = n(342386),
     o = n(388032),
     c = n(117771);
 let p = (t) => {
     let { transitionState: i, onClose: n, product: p } = t,
-        u = (0, l.Z)(),
-        { handleUseNow: d, isApplying: g } = (0, e.W)({
+        u = (0, e.Z)(),
+        { handleUseNow: d, isApplying: g } = (0, s.W)({
             product: p,
             onSuccess: n,
             onError: n,
@@ -23,7 +23,7 @@ let p = (t) => {
                 text: o.intl.string(o.t["2p2aY2"]),
                 variant: "secondary",
                 onClick: () => {
-                    n(), (0, s.xf)(), null == u || u();
+                    n(), (0, l.Z)(), null == u || u();
                 },
             },
             {

@@ -5,10 +5,10 @@ var r = n(951288),
     o = n(442837),
     s = n(692547),
     l = n(481060),
-    c = n(37234),
-    u = n(607070),
-    d = n(578361),
-    f = n(460181),
+    c = n(607070),
+    u = n(578361),
+    d = n(460181),
+    f = n(342386),
     _ = n(585483),
     p = n(57562),
     h = n(955204),
@@ -154,7 +154,7 @@ function k(e) {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i,
         } = e,
-        a = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         s = (e) => {
             e || (0, p.T)(h.hn.DISABLE_POGGERMODE),
                 e && (!n || a)
@@ -316,8 +316,8 @@ function B(e) {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: i, screenshakeEnabledLocations: a },
             updateSettings: s,
         } = e,
-        c = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        d = !t || !n || c,
+        u = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        d = !t || !n || u,
         f = (e, t) => {
             null != e.shakeIntensity && e.shakeIntensity > i && (0, p.T)(h.hn.MORE), s(e, t);
         };
@@ -326,9 +326,9 @@ function B(e) {
         title: v.intl.string(v.t.wVS5SU),
         children: [
             (0, r.jsx)(l.j7V, {
-                disabled: !t || c,
-                tooltipNote: c ? v.intl.string(v.t.GckHGx) : null,
-                value: n && !c,
+                disabled: !t || u,
+                tooltipNote: u ? v.intl.string(v.t.GckHGx) : null,
+                value: n && !u,
                 note: v.intl.string(v.t.Qq5W3t),
                 onChange: (e) => s({ screenshakeEnabled: e }, 1),
                 children: v.intl.string(v.t.N004zM),
@@ -369,12 +369,12 @@ function Z(e) {
                 enabled: !1,
                 settingsVisible: !1,
             }),
-                (0, c.xf)();
+                (0, f.Z)();
         };
     return (0, r.jsx)(l.hjN, {
         tag: l.RB0.H1,
         title: v.intl.string(v.t.EuXv2t),
-        children: (0, r.jsxs)(l.xJW, {
+        children: (0, r.jsxs)("div", {
             className: I.formItem,
             children: [
                 (0, r.jsx)(l.R94, {
@@ -395,7 +395,7 @@ function Z(e) {
         }),
     });
 }
-function V(e) {
+function F(e) {
     let { onChangePage: t } = e,
         n = () => t(1);
     return (0, r.jsxs)(l.hjN, {
@@ -438,7 +438,7 @@ function V(e) {
         ],
     });
 }
-let F = () =>
+let V = () =>
     n
         .e("68170")
         .then(n.t.bind(n, 205663, 19))
@@ -454,7 +454,7 @@ function H(e) {
             y: 0,
         }),
         u = (0, b.Z)();
-    function d(e, t, n, r) {
+    function f(e, t, n, r) {
         let i = null != r ? r : n;
         return (null != t ? t : e) && i;
     }
@@ -462,7 +462,7 @@ function H(e) {
             if (e.enabled && !1 === a.enabled) {
                 var t;
                 n(!0),
-                    (0, f.GN)("poggermode_enabled"),
+                    (0, d.GN)("poggermode_enabled"),
                     _.S.dispatch(O.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null != (t = e.shakeIntensity) ? t : a.shakeIntensity,
@@ -472,10 +472,10 @@ function H(e) {
         h = (e, t) => {
             if ((p(e), (0, m.AI)(e), null == t)) return;
             let n = 0 === t,
-                r = d(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
+                r = f(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
             n && r && u.fire(s.x, s.y, { settings: e });
             let i = 1 === t,
-                o = d(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
+                o = f(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
             if (i && o) {
                 var l;
                 _.S.dispatch(O.CkL.SHAKE_APP, {
@@ -506,7 +506,7 @@ function H(e) {
                     settings: a,
                     updateSettings: h,
                 }),
-                (0, r.jsx)(V, { onChangePage: t }),
+                (0, r.jsx)(F, { onChangePage: t }),
                 (0, r.jsx)(G, {
                     settings: a,
                     updateSettings: h,
@@ -541,12 +541,12 @@ let Y = (e, t, n) => {
         }
     },
     W = 500,
-    K = (e) => (0 === e ? d.n.LEFT : d.n.RIGHT);
+    K = (e) => (0 === e ? u.n.LEFT : u.n.RIGHT);
 function z() {
     let [e, t] = i.useState(0),
         [n, a] = i.useState(K(e)),
-        [s, c] = i.useState(!1),
-        f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        [s, d] = i.useState(!1),
+        f = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         _ = s && !f;
     return (
         i.useEffect(() => {
@@ -560,22 +560,22 @@ function z() {
         }, []),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(d.Z, {
+                (0, r.jsx)(u.Z, {
                     className: I.slideAnimator,
                     step: e,
                     direction: n,
-                    children: Y(e, t, c),
+                    children: Y(e, t, d),
                 }),
                 (0, r.jsx)("div", {
                     className: _ ? I.enableAnimationOverlayVisible : I.enableAnimationOverlayHidden,
                     children: (0, r.jsx)(l.Fmz, {
                         className: I.enableAnimation,
-                        importData: F,
+                        importData: V,
                         shouldAnimate: _,
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,
-                        onComplete: () => c(!1),
+                        onComplete: () => d(!1),
                     }),
                 }),
             ],
