@@ -179,36 +179,40 @@ function h(e) {
         description: c,
         descriptionVariant: u = "text-xs/medium",
         descriptionColor: d = "text-secondary",
-        iconClassName: p,
-        color: h,
-        buttonIcon: f,
-        onButtonPress: m,
-        listType: g = "icon",
-        index: b,
-        noInset: y = !1,
+        buttonDisabled: p,
+        iconClassName: h,
+        color: f,
+        buttonIcon: m,
+        onButtonPress: g,
+        listType: b = "icon",
+        index: y,
+        noInset: _ = !1,
     } = e;
     return (0, r.jsxs)(a.P3F, {
-        onClick: m,
-        className: l()(o.row, o.clickable, { [o.noInset]: y }),
+        onClick: g,
+        className: l()(o.row, o.clickable, {
+            [o.noInset]: _,
+            [o.disabled]: p,
+        }),
         children: [
             (0, r.jsxs)(a.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 align: "center",
                 children: [
-                    "numbered" === g && null != b
+                    "numbered" === b && null != y
                         ? (0, r.jsx)(a.X6q, {
                               variant: "heading-md/semibold",
                               color: "text-brand",
                               className: o.number,
-                              children: b + 1,
+                              children: y + 1,
                           })
                         : null != t &&
                           (0, r.jsx)("div", {
                               className: o.iconContainer,
                               children: (0, r.jsx)(t, {
-                                  color: null != h ? h : "currentColor",
-                                  className: l()(o.icon, p),
+                                  color: null != f ? f : "currentColor",
+                                  className: l()(o.icon, h),
                               }),
                           }),
                     (0, r.jsxs)("div", {
@@ -229,7 +233,7 @@ function h(e) {
                     }),
                 ],
             }),
-            null != f ? (0, r.jsx)(f, {}) : (0, r.jsx)(a.Fbu, {}),
+            null != m ? (0, r.jsx)(m, {}) : (0, r.jsx)(a.Fbu, {}),
         ],
     });
 }

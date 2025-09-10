@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    o = n(704454),
-    a = n(429142),
+    a = n(704454),
+    o = n(429142),
     s = n(81643),
     l = n(469775);
 function c(e, t, n) {
@@ -64,9 +64,9 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
@@ -84,24 +84,24 @@ function h(e) {
 }
 let m = {
     showAgeVerification: (e) => {
-        var { onClose: t, entryPoint: o } = e,
+        var { onClose: t, entryPoint: a } = e,
             s = _(e, ["onClose", "entryPoint"]);
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await n.e("12014").then(n.bind(n, 879367));
+                let { default: e } = await n.e("67749").then(n.bind(n, 91175));
                 return (t) => (0, r.jsx)(e, u({}, s, t));
             },
             {
                 modalKey: l.zJ,
                 onCloseCallback: t,
-                backdropStyle: h(o),
-                Layer: a.ZP,
+                backdropStyle: h(a),
+                Layer: o.ZP,
             },
         );
     },
     showAgeVerificationGetStartedModal: (e) => {
         let { onClose: t, entryPoint: c } = e;
-        if ((0, s.kJ)() && (0, o.G7)("age_verification_utils"))
+        if ((0, s.kJ)() && (0, a.G7)("age_verification_utils"))
             return void (0, i.ZDy)(
                 async () => {
                     let { default: e } = await n.e("22447").then(n.bind(n, 686768));
@@ -110,19 +110,19 @@ let m = {
                 {
                     modalKey: l.ux,
                     backdropStyle: h(c),
-                    Layer: a.ZP,
+                    Layer: o.ZP,
                     onCloseCallback: t,
                 },
             );
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await n.e("80144").then(n.bind(n, 634997));
+                let { default: e } = await n.e("50614").then(n.bind(n, 17597));
                 return (t) => (0, r.jsx)(e, f(u({}, t), { entryPoint: c }));
             },
             {
                 modalKey: l.ux,
                 backdropStyle: h(c),
-                Layer: a.ZP,
+                Layer: o.ZP,
                 onCloseCallback: t,
             },
         );

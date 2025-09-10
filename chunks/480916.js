@@ -53,6 +53,7 @@ var r = n(626135),
             (e.GET_STARTED = "get_started"),
             (e.SYSTEM_DMS_LEARN_MORE = "system_dms_learn_more"),
             (e.METHOD_SELECT = "method_select"),
+            (e.LOG_OUT = "log_out"),
             e
         );
     })({}),
