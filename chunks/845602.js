@@ -1,6 +1,6 @@
 n.d(t, {
-    E: () => C,
-    Z: () => k,
+    E: () => k,
+    Z: () => x,
 }),
     n(388685);
 var r = n(951288),
@@ -14,26 +14,26 @@ var r = n(951288),
     u = n(755641),
     p = n(742409),
     m = n(369509),
-    _ = n(101017),
-    b = n(606318),
-    g = n(141006),
+    g = n(101017),
+    _ = n(606318),
+    b = n(141006),
     f = n(981631),
-    x = n(131085),
+    C = n(131085),
     h = n(388032),
     j = n(583931),
     v = n(842926);
-function k() {
+function x() {
     var e;
     let [t, n] = o.useState(() => {
-            let e = Math.floor(Math.random() * g.tl.length);
+            let e = Math.floor(Math.random() * b.tl.length);
             return {
-                primary_color: g.tl[e].start,
-                secondary_color: g.tl[e].end,
+                primary_color: b.tl[e].start,
+                secondary_color: b.tl[e].end,
                 tertiary_color: null,
             };
         }),
         { gradientStyle: a, gradientClassname: c } = (0, l.Icv)({
-            colorStrings: (0, b.DX)(t),
+            colorStrings: (0, _.DX)(t, f.aIL),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,
@@ -53,7 +53,7 @@ function k() {
             }),
             (0, r.jsx)(d.default, {
                 defaultColor: f.p6O,
-                colors: g.tl,
+                colors: b.tl,
                 value: t.primary_color,
                 secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
@@ -111,10 +111,10 @@ function k() {
         ],
     });
 }
-function C(e) {
+function k(e) {
     let { guildId: t } = e,
-        [n, a] = o.useState(x.x_.HEART),
-        s = (0, _.Z)(),
+        [n, a] = o.useState(C.x_.HEART),
+        s = (0, g.Z)(),
         l = o.useMemo(
             () => ({
                 unlockedBadges: s.unlockedBadges.slice(0, 10),

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => ee }), n(388685);
+n.d(t, { ZP: () => et }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -42,12 +42,13 @@ var r = n(951288),
     H = n(21321),
     z = n(179517),
     V = n(79829);
-let W = (0, x.Un)({
+let W = M.aIL,
+    K = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
-    K = o().debounce((e, t) => (0, S.Uv)(e, t), 200);
-function Y(e) {
+    Y = o().debounce((e, t) => (0, S.Uv)(e, t), 200);
+function q(e) {
     let { role: t, disabled: n } = e,
         [l, a] = i.useState(t.name);
     return (
@@ -61,13 +62,13 @@ function Y(e) {
             value: l,
             maxLength: M.VKK,
             onChange: function (e) {
-                a(e), K(t.id, e);
+                a(e), Y(t.id, e);
             },
             disabled: n,
         })
     );
 }
-function q(e) {
+function X(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: s } = e,
         o = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         d = (0, f.ZP)(),
@@ -126,7 +127,7 @@ function q(e) {
                                                 guildId: n,
                                                 authorId: o.author.id,
                                                 colorRoleId: t.id,
-                                                colorStrings: (0, O.DX)(p),
+                                                colorStrings: (0, O.DX)(p, W),
                                                 colorString: (0, c.Rf)(p.primary_color),
                                             },
                                             message: o,
@@ -158,7 +159,7 @@ function q(e) {
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-sm/semibold",
                                     color: "button-outline-primary-text",
-                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(X, {}) }),
+                                    children: U.intl.format(B.default.VpEDJS, { magical: (0, r.jsx)(Q, {}) }),
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: "text-xs/medium",
@@ -180,10 +181,10 @@ function q(e) {
         ],
     });
 }
-function X() {
+function Q() {
     let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
-            colorStrings: (0, O.DX)(G.SK),
+            colorStrings: (0, O.DX)(G.SK, W),
             useReducedMotion: e,
             roleStyle: "username",
             includeConvenienceGlow: !0,
@@ -220,7 +221,7 @@ function X() {
         children: U.intl.string(B.default["+/IHLi"]),
     });
 }
-function Q(e) {
+function J(e) {
     var t, n;
     let { role: i, disabled: l, currentStyle: a, hasEnhancedRoleColors: s } = e;
     return (0, r.jsxs)(g.xJW, {
@@ -232,7 +233,7 @@ function Q(e) {
                 className: F.colorDescription,
                 children: U.intl.string(U.t["9UCxlZ"]),
             }),
-            (0, r.jsx)(W, {
+            (0, r.jsx)(K, {
                 defaultColor: M.p6O,
                 colors: a === T.g.GRADIENT && s ? G.tl : M.pmI,
                 value: i.color,
@@ -271,7 +272,7 @@ function Q(e) {
         ],
     });
 }
-function J(e) {
+function $(e) {
     let { role: t, guildId: n, selectedStyle: i, disableInteraction: l } = e,
         s = (0, P.F)(U.intl.string(U.t.Mi9KbW)),
         o = {
@@ -333,7 +334,7 @@ function J(e) {
         }),
     });
 }
-function $(e) {
+function ee(e) {
     let { role: t, disabled: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -356,7 +357,7 @@ function $(e) {
         ],
     });
 }
-function ee(e) {
+function et(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l } = e,
         s = (0, y.yH)(t.id, n),
         o = (0, d.e7)([T.Z], () => T.Z.getRoleStyleData(n.id)),
@@ -384,7 +385,7 @@ function ee(e) {
                         setSelectedSection: l,
                     }),
                 }),
-                (0, r.jsx)(Y, {
+                (0, r.jsx)(q, {
                     role: n,
                     disabled: p,
                 }),
@@ -395,7 +396,7 @@ function ee(e) {
                 (0, r.jsx)(g.$i$, { className: F.divider }),
                 (s || c) &&
                     null != u &&
-                    (0, r.jsx)(q, {
+                    (0, r.jsx)(X, {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,
@@ -404,7 +405,7 @@ function ee(e) {
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
-                    (0, r.jsx)(Q, {
+                    (0, r.jsx)(J, {
                         role: n,
                         disabled: p,
                         currentStyle: u,
@@ -423,14 +424,14 @@ function ee(e) {
                     disabled: p,
                     role: n,
                 }),
-                (0, r.jsx)(J, {
+                (0, r.jsx)($, {
                     role: n,
                     guildId: t.id,
                     selectedStyle: u,
                     disableInteraction: !s,
                 }),
                 (0, r.jsx)(g.$i$, { className: F.divider }),
-                (0, r.jsx)($, {
+                (0, r.jsx)(ee, {
                     role: n,
                     disabled: p,
                 }),
