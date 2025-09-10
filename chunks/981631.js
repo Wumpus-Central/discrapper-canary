@@ -4158,6 +4158,7 @@ var nb = (function (e) {
             (e.ORBS_ENTRYPOINT_CLICKED = "orbs_entrypoint_clicked"),
             (e.PAYMENT_SOURCE_CREATION_FAILED = "payment_source_creation_failed"),
             (e.PREMIUM_UPGRADE_STARTED = "premium_upgrade_started"),
+            (e.PREMIUM_RESUBSCRIBE_COMPLETED = "premium_resubscribe_completed"),
             (e.CHANNEL_MEMBER_KICKED = "channel_member_kicked"),
             (e.CHANNEL_OPENED = "channel_opened"),
             (e.CHANNEL_OPENED_CLICKSTREAM = "channel_opened_clickstream"),
