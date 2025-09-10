@@ -21,34 +21,36 @@ let f = function (e) {
             quest: b,
             useReducedMotion: y,
             collapsedHeight: O,
+            onGameSheetOpened: v,
+            onGameSheetClosed: I,
         } = e,
-        v = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
-        I = i.useRef(null),
-        T = i.useRef(null),
-        S = (null == (n = b.userStatus) ? void 0 : n.enrolledAt) != null,
-        A = (0, a.Rf)(b);
+        T = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
+        S = i.useRef(null),
+        A = i.useRef(null),
+        C = (null == (n = b.userStatus) ? void 0 : n.enrolledAt) != null,
+        N = (0, a.Rf)(b);
     return (0, r.jsxs)(s.p, {
         expandedContentRef: f,
-        collapsedContentRef: I,
+        collapsedContentRef: S,
         expansionSpring: _,
         children: [
             (0, r.jsx)(
                 l.Z,
                 {
-                    ref: I,
+                    ref: S,
                     className: d.content,
                     expansionSpring: _,
                     isExpanded: p,
                     isExpansionAnimationComplete: h,
                     quest: b,
                     useReducedMotion: y,
-                    taskDetails: A,
+                    taskDetails: N,
                     onCtxMenuOpen: m,
                     onCtxMenuClose: g,
                     onCtxMenuSelect: E,
-                    overlayRef: T,
+                    overlayRef: A,
                 },
-                v ? "collapsed-with-rewards" : "collapsed-without-rewards",
+                T ? "collapsed-with-rewards" : "collapsed-without-rewards",
             ),
             (0, r.jsx)(c.Z, {
                 expansionSpring: _,
@@ -57,20 +59,22 @@ let f = function (e) {
                 onCtxMenuOpen: m,
                 onCtxMenuClose: g,
                 onCtxMenuSelect: E,
-                overlayRef: T,
+                onGameSheetOpened: v,
+                onGameSheetClosed: I,
+                overlayRef: A,
                 isExpanded: p,
                 isExpansionAnimationComplete: h,
                 quest: b,
                 useReducedMotion: y,
                 ref: f,
-                taskDetails: A,
+                taskDetails: N,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(u.Z, {
                             expansionSpring: _,
                             isExpanded: p,
                         }),
-                        !S &&
+                        !C &&
                             (0, r.jsx)(o.Z, {
                                 quest: b,
                                 expansionSpring: _,
@@ -85,7 +89,7 @@ let f = function (e) {
                 }),
             }),
             (0, r.jsx)("div", {
-                ref: T,
+                ref: A,
                 className: d.overlay,
             }),
         ],

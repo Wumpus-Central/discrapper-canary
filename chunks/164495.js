@@ -14,10 +14,10 @@ var r = n(951288),
     f = n(509212),
     _ = n(113434),
     p = n(497505),
-    h = n(990175),
-    m = n(373370),
-    g = n(110560),
-    E = n(667105),
+    h = n(373370),
+    m = n(110560),
+    g = n(667105),
+    E = n(35215),
     b = n(46140),
     y = n(215023),
     O = n(388032),
@@ -100,7 +100,7 @@ function R(e) {
         o = () => {
             var e;
             let r = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? u.jZ.ACCEPT_QUEST : u.jZ.WATCH_VIDEO;
-            (0, g.openVideoQuestModal)({
+            (0, m.openVideoQuestModal)({
                 quest: t,
                 questContent: p.jn.QUEST_BAR_V2,
                 sourceQuestContent: n,
@@ -156,7 +156,7 @@ let P = (e) => {
         let { quest: t } = e,
             n = (0, f.Vl)(t),
             i = t.config.features.includes(b.S7.START_QUEST_CTA),
-            o = (0, m.CR)({ quest: t }),
+            o = (0, h.CR)({ quest: t }),
             { launchInGameActivity: s } = (0, _.zB)(t);
         return n && i
             ? (0, r.jsx)(a.z, {
@@ -169,16 +169,26 @@ let P = (e) => {
             : null;
     },
     x = (e) => {
-        let { taskDetails: t } = e,
-            { applications: n } = t,
-            o = i.useCallback(() => {
-                (0, h.v)(n);
-            }, [n]);
-        return (0, r.jsx)(a.z, {
-            fullWidth: !0,
-            size: "sm",
-            onClick: o,
-            text: O.intl.string(O.t["93PTEh"]),
+        let { taskDetails: t, popoutTargetElementRef: n, onGameSheetOpened: i, onGameSheetClosed: o } = e,
+            { applications: s } = t;
+        return (0, r.jsx)(E.Z, {
+            applications: null != s ? s : [],
+            targetElementRef: n,
+            onGameSheetOpened: i,
+            onGameSheetClosed: o,
+            children: (e) =>
+                (0, r.jsx)(
+                    a.z,
+                    T(
+                        {
+                            variant: "secondary",
+                            fullWidth: !0,
+                            size: "sm",
+                            text: O.intl.string(O.t["93PTEh"]),
+                        },
+                        e,
+                    ),
+                ),
         });
     },
     L = (e) => {
@@ -191,7 +201,7 @@ let P = (e) => {
                 className: _,
                 ctaLabel: h,
                 onClick: m,
-                questContent: g = p.jn.QUEST_BAR_V2,
+                questContent: E = p.jn.QUEST_BAR_V2,
                 sourceQuestContent: b,
             } = e,
             I = C(e, [
@@ -205,9 +215,9 @@ let P = (e) => {
                 "sourceQuestContent",
             ]);
         let S = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
-            N = (0, E.hf)({
+            N = (0, g.hf)({
                 quest: a,
-                questContent: g,
+                questContent: E,
                 sourceQuestContent: b,
             }),
             R = i.useCallback(
@@ -255,51 +265,61 @@ let P = (e) => {
                 isProgressing: c,
                 activeScreen: u,
                 taskDetails: d,
+                popoutTargetElementRef: _,
+                onGameSheetOpened: h,
+                onGameSheetClosed: m,
             } = e,
-            _ = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            h = (0, f.q8)(n),
-            m = (0, f.Vl)(n),
-            g = u !== p.LI.SELECT && !l && !c,
-            E = null;
+            g = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+            E = (0, f.q8)(n),
+            b = (0, f.Vl)(n),
+            y = u !== p.LI.SELECT && !l && !c,
+            O = null;
         return (
-            _
-                ? (E = (0, r.jsx)(L, {
+            g
+                ? (O = (0, r.jsx)(L, {
                       quest: n,
                       sourceQuestContent: i,
                       useReducedMotion: a,
                       isExpanded: o,
                   }))
-                : h
-                  ? (E = (0, r.jsx)(R, {
+                : E
+                  ? (O = (0, r.jsx)(R, {
                         quest: n,
                         sourceQuestContent: i,
                         taskDetails: d,
                     }))
-                  : m
-                    ? (E = (0, r.jsx)(D, { quest: n }))
+                  : b
+                    ? (O = (0, r.jsx)(D, { quest: n }))
                     : u === p.LI.CONSOLE && s
-                      ? (E = (0, r.jsx)(w, {
+                      ? (O = (0, r.jsx)(w, {
                             quest: n,
                             sourceQuestContent: i,
                         }))
-                      : g && (0, f.Pb)(n)
-                        ? (E = (0, r.jsx)(x, { taskDetails: d }))
-                        : g &&
-                          (E = (0, r.jsx)(P, {
+                      : y && (0, f.Pb)(n)
+                        ? (O = (0, r.jsx)(x, {
+                              taskDetails: d,
+                              popoutTargetElementRef: _,
+                              onGameSheetOpened: h,
+                              onGameSheetClosed: m,
+                          }))
+                        : y &&
+                          (O = (0, r.jsx)(P, {
                               quest: n,
                               sourceQuestContent: i,
                           })),
-            null == E
+            null == O
                 ? null
                 : (0, r.jsx)("div", {
                       className: v.cta,
-                      children: E,
+                      children: O,
                   })
         );
     };
 function M(e) {
+    let t = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: v.ctaButtons,
+        ref: t,
         children: [
             e.showBackButton &&
                 (0, r.jsx)(o.zx, {
@@ -312,7 +332,14 @@ function M(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(s.V7D, { className: v.backIcon }),
                 }),
-            (0, r.jsx)(j, T({}, e)),
+            (0, r.jsx)(
+                j,
+                A(T({}, e), {
+                    popoutTargetElementRef: t,
+                    onGameSheetOpened: e.onGameSheetOpened,
+                    onGameSheetClosed: e.onGameSheetClosed,
+                }),
+            ),
         ],
     });
 }

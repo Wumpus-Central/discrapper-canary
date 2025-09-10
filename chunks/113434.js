@@ -618,25 +618,26 @@ function eN(e) {
         completedRatioDisplay: o,
     };
 }
-function eR(e, t) {
-    var n, r;
-    let i = eh(e),
-        a = (0, S.b7)(e),
-        o = (0, w.DD)({
+function eR(e, t, n) {
+    var r, i;
+    let a = eh(e),
+        o = (0, S.b7)(e),
+        s = (0, w.DD)({
             quest: e,
-            taskDetails: i,
+            taskDetails: a,
             location: L.dr.QUEST_HOME_DESKTOP,
             questContent: N.jn.QUEST_HOME_DESKTOP,
             sourceQuestContent: t,
+            popoutTargetElementRef: n,
         }),
-        s = (null == (n = e.userStatus) ? void 0 : n.claimedAt) != null,
-        l = ec(null == (r = e.userStatus) ? void 0 : r.claimedAt);
-    return s
-        ? k.intl.formatToPlainString(k.t.lOVr0N, { claimDate: l })
-        : null != a
-          ? a.description
-          : null != o
-            ? o
+        l = (null == (r = e.userStatus) ? void 0 : r.claimedAt) != null,
+        c = ec(null == (i = e.userStatus) ? void 0 : i.claimedAt);
+    return l
+        ? k.intl.formatToPlainString(k.t.lOVr0N, { claimDate: c })
+        : null != o
+          ? o.description
+          : null != s
+            ? s
             : null;
 }
 function eP(e) {
@@ -791,33 +792,41 @@ function ej(e) {
           : k.intl.string(k.t["7e5k7O"]);
 }
 function eM(e) {
-    var t;
-    let { quest: n, isExpanded: i, sourceQuestContent: a, activeScreen: o } = e,
-        s = ec(r.useMemo(() => x.r.build(n.config).rewardsExpireAt, [n.config])),
-        l = eh(n),
-        c = em(n),
-        u = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-        d = e_(n),
-        f = (0, w.DD)({
-            quest: n,
+    var t, n;
+    let { quest: i, isExpanded: a, sourceQuestContent: o, activeScreen: s } = e,
+        l = ec(r.useMemo(() => x.r.build(i.config).rewardsExpireAt, [i.config])),
+        c = eh(i),
+        u = em(i),
+        d = (null == (t = i.userStatus) ? void 0 : t.completedAt) != null,
+        f = (null == (n = i.userStatus) ? void 0 : n.enrolledAt) != null,
+        _ = e_(i),
+        p = (0, w.DD)({
+            quest: i,
             location: L.dr.QUESTS_BAR,
             questContent: N.jn.QUEST_BAR_V2,
-            taskDetails: l,
-            sourceQuestContent: a,
+            taskDetails: c,
+            sourceQuestContent: o,
         }),
-        _ = null != c ? c.percentComplete : l.percentComplete;
-    if (u) return k.intl.formatToPlainString(k.t.APddvL, { expirationDate: s });
-    if (i)
-        if (o === N.LI.SELECT) return k.intl.string(k.t.sWUpNz);
-        else return f;
-    if ((0, S.q8)(n)) return k.intl.string(k.t["o+e9ys"]);
-    if (_ > 0)
-        if (!d) return k.intl.string(k.t.mOrpXF);
+        h = null != u ? u.percentComplete : c.percentComplete;
+    if (d) return k.intl.formatToPlainString(k.t.APddvL, { expirationDate: l });
+    if (a)
+        if (s === N.LI.SELECT) return k.intl.string(k.t.sWUpNz);
+        else {
+            if (!(0, S.Pb)(i) || !f) return p;
+            let e = x.r.build(i.config).defaultRewardNameWithArticle;
+            return k.intl.format(k.t["1votFx"], {
+                rewardNameWithArticle: e,
+                targetMinutes: c.targetMinutes,
+            });
+        }
+    if ((0, S.q8)(i)) return k.intl.string(k.t["o+e9ys"]);
+    if (h > 0)
+        if (!_) return k.intl.string(k.t.mOrpXF);
         else
             return (0, S.AV)({
-                quest: n,
-                taskDetails: l,
-                thirdPartyTaskDetails: null != c ? c : void 0,
+                quest: i,
+                taskDetails: c,
+                thirdPartyTaskDetails: null != u ? u : void 0,
             });
     return k.intl.string(k.t.S6UUc3);
 }
