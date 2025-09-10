@@ -7,14 +7,14 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(261616),
+    a = n(938288),
     s = n(873546),
     c = n(442837),
     u = n(481060),
     d = n(666188),
     p = n(340541),
-    h = n(159300),
-    f = n(553984),
+    f = n(159300),
+    h = n(553984),
     g = n(695346),
     m = n(496675),
     b = n(768581),
@@ -215,7 +215,7 @@ let T = [v._, _.STv];
 function A(e) {
     var t;
     let { bannerVisible: l, guild: o, onClick: a, onContextMenu: s, ariaControls: d, ariaExpanded: p, children: g } = e,
-        b = (0, c.e7)([m.Z], () => (0, h.b)(m.Z, o)),
+        b = (0, c.e7)([m.Z], () => (0, f.b)(m.Z, o)),
         O = i.useCallback(() => {
             b
                 ? (0, u.ZDy)(async () => {
@@ -225,7 +225,7 @@ function A(e) {
                               e,
                               E(C({}, t), {
                                   guild: o,
-                                  source: _.t4x.GUILD_HEADER,
+                                  source: _.t4x.GUILD_HEADER_INVITE_BUTTON,
                               }),
                           );
                   })
@@ -282,7 +282,7 @@ function A(e) {
                             }),
                         ),
                 }),
-            o.id === _.STv && (0, r.jsx)(f.p, {}),
+            o.id === _.STv && (0, r.jsx)(h.p, {}),
         ],
     });
 }
@@ -293,8 +293,8 @@ let R = i.memo(function (e) {
             controller: l,
             className: a,
             onClick: c,
-            onContextMenu: h,
-            onMouseDown: f,
+            onContextMenu: f,
+            onMouseDown: h,
             disableBannerAnimation: m,
             "aria-expanded": y,
             "aria-controls": v,
@@ -311,7 +311,7 @@ let R = i.memo(function (e) {
         U = !k && (0, O.Z)(j),
         G = !k && R,
         B = (0, b.xR)(I) && L && !m,
-        [F, V] = i.useState(!1),
+        [V, F] = i.useState(!1),
         H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
@@ -320,9 +320,9 @@ let R = i.memo(function (e) {
     i.useEffect(() => {
         if (B && n && !H.current && Y)
             return (
-                V(!0),
+                F(!0),
                 (K.current = setTimeout(() => {
-                    V(!1);
+                    F(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -341,7 +341,7 @@ let R = i.memo(function (e) {
             bannerVisible: n,
             guild: j,
             onClick: c,
-            onContextMenu: h,
+            onContextMenu: f,
             ariaControls: v,
             ariaExpanded: y,
             guildHeaderRef: W,
@@ -365,9 +365,9 @@ let R = i.memo(function (e) {
                             [x.communityInfoVisible]: G || (M && U),
                             [x.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
-                        onMouseDown: f,
+                        onMouseDown: h,
                         onClick: X.isGuildEntrypointEnabled ? void 0 : c,
-                        onContextMenu: h,
+                        onContextMenu: f,
                         children: [
                             (0, r.jsxs)("header", {
                                 className: o()(x.header, T, { [x.themedHeaderMobile]: s.tq }),
@@ -392,7 +392,7 @@ let R = i.memo(function (e) {
                                       guild: j,
                                       controller: l,
                                       guildBanner: I,
-                                      animate: F,
+                                      animate: V,
                                   })
                                 : null,
                             (0, r.jsx)(D, { controller: l }),
@@ -402,9 +402,9 @@ let R = i.memo(function (e) {
                         ? (0, r.jsx)("div", {
                               className: x.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  V(!0), clearTimeout(K.current);
+                                  F(!0), clearTimeout(K.current);
                               },
-                              onMouseLeave: () => V(!1),
+                              onMouseLeave: () => F(!1),
                               style: { height: N },
                           })
                         : null,
