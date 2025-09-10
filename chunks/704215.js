@@ -458,6 +458,7 @@ var r = (function (e) {
                 "SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_BADGE"),
             (e[(e.SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_COACHMARK = 596)] =
                 "SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_COACHMARK"),
+            (e[(e.DOUBLE_TAP_TO_REACT_REMINDER = 597)] = "DOUBLE_TAP_TO_REACT_REMINDER"),
             e
         );
     })({}),
