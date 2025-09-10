@@ -1,11 +1,11 @@
 n.d(t, {
-    FO: () => ec,
-    Sq: () => er,
-    ZP: () => es,
-    el: () => el,
+    FO: () => es,
+    Sq: () => et,
+    ZP: () => ea,
+    el: () => eo,
     oO: () => G,
-    wT: () => ea,
-    zO: () => eu,
+    wT: () => ei,
+    zO: () => el,
 }),
     n(413496),
     n(433524),
@@ -16,8 +16,8 @@ n.d(t, {
     n(539854);
 var r,
     i,
-    o,
     a,
+    o,
     s,
     l,
     c,
@@ -55,7 +55,7 @@ let A = 10,
     G = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = q(window.GLOBAL_ENV.INVITE_HOST),
     Z = q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    F = q(null != (a = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? a : "//canary.".concat(S.$R1)),
+    F = q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : "//canary.".concat(S.$R1)),
     V = q("//canary.".concat(S.$R1)),
     H = q("//ptb.".concat(S.$R1)),
     Y = q("discordapp.com"),
@@ -86,35 +86,30 @@ function q(e) {
         pathPrefix: null,
     };
 }
-let X = (e) => {
-        let t = e;
-        return (t = (t = t.replaceAll($, "")).replaceAll(ee, "")).replaceAll(J, " $2 ");
-    },
-    Q = null == (o = h().defaultRules.link) || null == (i = o.match) || null == (r = i.regex) ? void 0 : r.source;
+let X = (e) => e.replaceAll(J, " $2 "),
+    Q = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
 _()(Q, "SimpleMarkdown link regex is not set."), "^" === Q[0] && (Q = Q.substring(1));
-let J = RegExp(Q, "g"),
-    $ = RegExp("(?<!\\\\)((?:\\\\\\\\)*)```(([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```", "gs"),
-    ee = RegExp("(?<!\\\\)((?:\\\\\\\\)*)(`+)([\\s\\S]*?[^`])\\2(?!`)", "gi");
-function et(e, t) {
+let J = RegExp(Q, "g");
+function $(e, t) {
     var n;
     return (null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, "")) === e.host;
 }
-function en(e, t) {
+function ee(e, t) {
     var n, r;
-    if (!et(e, t)) return null;
+    if (!$(e, t)) return null;
     let i = null != (n = t.pathname) ? n : "",
-        o = null != (r = e.pathPrefix) ? r : "";
-    if (!i.startsWith(o)) return null;
-    let a = i.substring(o.length);
-    return "" === a ? null : a;
+        a = null != (r = e.pathPrefix) ? r : "";
+    if (!i.startsWith(a)) return null;
+    let o = i.substring(a.length);
+    return "" === o ? null : o;
 }
-function er(e) {
+function et(e) {
     var t, n, r, i;
-    return null != (i = null != (r = null != (n = null != (t = en(F, e)) ? t : en(V, e)) ? n : en(H, e)) ? r : en(Y, e))
+    return null != (i = null != (r = null != (n = null != (t = ee(F, e)) ? t : ee(V, e)) ? n : ee(H, e)) ? r : ee(Y, e))
         ? i
-        : en(W, e);
+        : ee(W, e);
 }
-function ei(e) {
+function en(e) {
     if (null == e) return null;
     let t = e.match(P);
     return null != t && t.length >= 4
@@ -125,43 +120,43 @@ function ei(e) {
           }
         : null;
 }
-function eo(e) {
+function er(e) {
     var t, n, r, i;
-    let o = ec(e);
-    if (null == o || null == o.pathname)
+    let a = es(e);
+    if (null == a || null == a.pathname)
         return {
             url: null,
             inviteHostRemainingPath: null,
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null,
         };
-    let a = en(B, o),
-        s = en(Z, o),
+    let o = ee(B, a),
+        s = ee(Z, a),
         l =
             null !=
-            (i = null != (r = null != (n = null != (t = en(F, o)) ? t : en(V, o)) ? n : en(H, o)) ? r : en(Y, o))
+            (i = null != (r = null != (n = null != (t = ee(F, a)) ? t : ee(V, a)) ? n : ee(H, a)) ? r : ee(Y, a))
                 ? i
-                : en(W, o);
+                : ee(W, a);
     return {
-        url: o,
-        inviteHostRemainingPath: a,
+        url: a,
+        inviteHostRemainingPath: o,
         templateHostRemainingPath: s,
         primaryHostRemainingPath: l,
     };
 }
-function ea(e) {
+function ei(e) {
     if (e.includes("\\")) {
-        let r = ec(e);
+        let r = es(e);
         if (null == r) return !1;
-        if (et(B, r)) return !0;
-        if ([F, V, H, Y, W].some((e) => et(e, r))) {
+        if ($(B, r)) return !0;
+        if ([F, V, H, Y, W].some((e) => $(e, r))) {
             var t, n;
             return null != (n = null == (t = r.pathname) ? void 0 : t.toUpperCase().includes(T.g.INVITE)) && n;
         }
     }
     return !1;
 }
-function es(e) {
+function ea(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
@@ -171,9 +166,9 @@ function es(e) {
         i = e.match(G);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
-        var o, a, s;
+        var a, o, s;
         if (n.length >= A) break;
-        let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = eo(e);
+        let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = er(e);
         if (null == r || null == r.pathname) continue;
         let u = (r, i) => {
             t.has(i) ||
@@ -200,7 +195,7 @@ function es(e) {
             } else u(t, d[2]);
         }
         (null == c ? void 0 : c.match(N)) != null && u(T.g.CHANNEL_LINK, c.replace("/channels/", ""));
-        let f = ei(r.pathname);
+        let f = en(r.pathname);
         if (
             (null != f &&
                 u(
@@ -214,7 +209,7 @@ function es(e) {
                 t = e.clientId;
             null == t ||
                 "" === t ||
-                (null == (o = e.scopes) ? void 0 : o.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) ||
+                (null == (a = e.scopes) ? void 0 : a.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) ||
                 u(T.g.APP_OAUTH2_LINK, t);
         }
         let _ = null == c ? void 0 : c.match(w);
@@ -240,27 +235,27 @@ function es(e) {
         null != m && u(T.g.GUILD_PRODUCT, "".concat(m[1], "-").concat(m[2]));
         let v = null == c ? void 0 : c.match(j);
         null != v && u(T.g.SERVER_SHOP, v[1]);
-        let I = el(e);
+        let I = eo(e);
         if ((null != I && u(T.g.QUESTS_EMBED, I), "/shop" === c)) {
-            let e = null == (a = r.hash) ? void 0 : a.match(U);
+            let e = null == (o = r.hash) ? void 0 : o.match(U);
             u(T.g.COLLECTIBLES_SHOP, null != (s = null == e ? void 0 : e[1]) ? s : "");
         }
     }
     return n;
 }
-function el(e) {
+function eo(e) {
     var t, n;
-    let r = eo(e),
+    let r = er(e),
         i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(M);
     return null != (n = null == i ? void 0 : i[1]) ? n : null;
 }
-function ec(e) {
+function es(e) {
     try {
         return (0, m.parse)(e);
     } catch (e) {
         return null;
     }
 }
-function eu(e) {
-    return es(e)[0];
+function el(e) {
+    return ea(e)[0];
 }
