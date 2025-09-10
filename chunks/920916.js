@@ -1,294 +1,219 @@
-n.d(t, {
-    default: () => X,
-    m: () => Q,
-}),
-    n(457542),
-    n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(238651),
-    l = n(979554),
-    c = n(442837),
-    u = n(481060),
-    d = n(809206),
-    f = n(230711),
-    _ = n(607070),
-    p = n(235400),
-    h = n(204418),
-    m = n(975298),
-    g = n(583434),
-    E = n(530618),
-    b = n(454585),
-    y = n(732389),
-    O = n(164946),
-    v = n(369111),
-    I = n(25990),
-    T = n(594174),
-    S = n(960048),
-    A = n(509212),
-    C = n(272008),
-    N = n(113434),
-    R = n(497505),
-    P = n(475595),
-    w = n(566078),
-    D = n(968435),
-    x = n(114732),
-    L = n(46140),
-    j = n(981631),
-    M = n(675654),
-    k = n(474936),
-    U = n(388032),
-    G = n(824210);
-function B(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+t.d(n, { default: () => W }), t(457542), t(388685);
+var a = t(951288),
+    o = t(647438),
+    r = t(120356),
+    i = t.n(r),
+    l = t(238651),
+    s = t(979554),
+    d = t(442837),
+    c = t(481060),
+    u = t(809206),
+    m = t(230711),
+    p = t(607070),
+    _ = t(235400),
+    x = t(204418),
+    f = t(975298),
+    g = t(583434),
+    h = t(530618),
+    C = t(454585),
+    v = t(732389),
+    j = t(164946),
+    w = t(369111),
+    b = t(25990),
+    N = t(594174),
+    I = t(960048),
+    R = t(509212),
+    T = t(272008),
+    P = t(113434),
+    S = t(497505),
+    y = t(475595),
+    A = t(566078),
+    B = t(968435),
+    E = t(114732),
+    k = t(46140),
+    L = t(981631),
+    M = t(675654),
+    O = t(474936),
+    Z = t(388032),
+    D = t(824210);
+function z() {
+    let e = b.Z.getAllPending(),
+        n = (0, j.ED)(e);
+    return (0, u.Mn)(n).finally(u.si);
 }
-function Z(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                B(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function V(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function F(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : V(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function H() {
-    let e = I.Z.getAllPending(),
-        t = (0, O.ED)(e);
-    return (0, d.Mn)(t).finally(d.si);
-}
-function Y() {
-    f.Z.open(j.oAB.PREMIUM, null, {});
-}
-function W(e) {
-    let { product: t, isFetching: n } = (0, g.T)(e),
-        {} = (0, v.Z)({}),
-        r = i.useMemo(() => {
-            if (null == t || n) return null;
-            let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
-            return null == e ? null : e;
-        }, [t, n]),
-        a = () =>
-            null == r
-                ? (S.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), Promise.reject())
-                : ((0, d.cV)(r), H());
-    return [r, a];
-}
-function K(e) {
-    var t;
+function F(e) {
+    var n;
     let {
-            transitionState: n,
-            onClose: a,
-            quest: l,
-            location: d,
-            reward: f,
-            decoration: p,
-            onUseNow: h,
-            preview: m,
+            transitionState: t,
+            onClose: r,
+            quest: s,
+            location: u,
+            reward: m,
+            decoration: _,
+            onUseNow: x,
+            preview: f,
         } = e,
-        g = i.useRef(null),
-        [b, y] = i.useState(null),
-        O = i.useRef(new s.qA()),
-        v = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-        I = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
-        S = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
-        [A, N] = i.useState(!0 === m || S ? "claimed" : "loading");
-    i.useEffect(() => {
-        S ||
-            !0 === m ||
-            (0, C.QB)(l.id, R.y$.CROSS_PLATFORM, d)
-                .then(() => N("claimed"))
-                .catch(() => N("error"));
-    }, [l, d, S, m]);
-    let P = () => {
-            N("applying"), h().finally(a);
-        },
-        w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== "",
-        D = null == p && !0 !== m,
-        L = null == I || D || w || "loading" === A,
-        j = !v && !S && "claimed" === A;
-    return (0, r.jsxs)(r.Fragment, {
+        g = o.useRef(null),
+        [C, v] = o.useState(null),
+        j = o.useRef(new l.qA()),
+        w = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
+        b = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
+        I = (null == (n = s.userStatus) ? void 0 : n.claimedAt) != null,
+        [R, P] = o.useState(!0 === f || I ? "claimed" : "loading");
+    o.useEffect(() => {
+        I ||
+            !0 === f ||
+            (0, T.QB)(s.id, S.y$.CROSS_PLATFORM, u)
+                .then(() => P("claimed"))
+                .catch(() => P("error"));
+    }, [s, u, I, f]);
+    let y = !0 === f && null === _ && (null == m ? void 0 : m.skuId) !== "",
+        A = null == b || (null == _ && !0 !== f) || y || "loading" === R;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)(s.O_, {
-                ref: y,
-                className: G.confettiCanvas,
-                environment: O.current,
+            (0, a.jsx)(l.O_, {
+                ref: v,
+                className: D.confettiCanvas,
+                environment: j.current,
             }),
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 ref: g,
-                children: (0, r.jsx)(u.Y0X, {
+                children: (0, a.jsx)(c.Y0X, {
                     "data-migration-pending": !0,
-                    transitionState: n,
-                    size: u.CgR.DYNAMIC,
-                    className: o()(G.rootContainer, { [G.rootContainerLoading]: L }),
+                    transitionState: t,
+                    size: c.CgR.DYNAMIC,
+                    className: i()(D.rootContainer, { [D.rootContainerLoading]: A }),
                     hideShadow: !0,
                     parentComponent: "QuestsRewardCollectibleModal",
                     children:
-                        "error" === A
-                            ? (0, r.jsx)(x.Z, { onClose: a })
-                            : L
-                              ? (0, r.jsx)("div", {
-                                    className: G.loadingIndicatorWrapper,
-                                    children: (0, r.jsx)(u.$jN, { type: u.$jN.Type.SPINNING_CIRCLE }),
+                        "error" === R
+                            ? (0, a.jsx)(E.Z, { onClose: r })
+                            : A
+                              ? (0, a.jsx)("div", {
+                                    className: D.loadingIndicatorWrapper,
+                                    children: (0, a.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE }),
                                 })
-                              : (0, r.jsx)(q, {
-                                    quest: l,
-                                    user: I,
-                                    decoration: p,
-                                    isSaving: "applying" === A,
-                                    onClose: a,
-                                    onConfirm: P,
+                              : (0, a.jsx)(q, {
+                                    quest: s,
+                                    user: b,
+                                    decoration: _,
+                                    isSaving: "applying" === R,
+                                    onClose: r,
+                                    onConfirm: () => {
+                                        P("applying"), x().finally(r);
+                                    },
                                 }),
                 }),
             }),
-            j &&
-                (0, r.jsx)(E.Z, {
+            !w &&
+                !I &&
+                "claimed" === R &&
+                (0, a.jsx)(h.Z, {
                     confettiTarget: g.current,
-                    confettiCanvas: b,
+                    confettiCanvas: C,
                     sprites: M.CA,
                     colors: M.Br,
                 }),
         ],
     });
 }
-function z(e) {
-    let { quest: t } = e,
-        n = i.useMemo(() => (0, P.fh)(t, P.eC.LOGO_TYPE, "dark"), [t]),
-        a = w.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM];
-    return (0, r.jsxs)("div", {
-        className: G.additionalRedemptionInstructions,
+function U(e) {
+    let { quest: n } = e,
+        t = o.useMemo(() => (0, y.fh)(n, y.eC.LOGO_TYPE, "dark"), [n]),
+        r = A.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[S.y$.CROSS_PLATFORM];
+    return (0, a.jsxs)("div", {
+        className: D.additionalRedemptionInstructions,
         children: [
-            (0, r.jsx)("img", {
-                src: n.url,
+            (0, a.jsx)("img", {
+                src: t.url,
                 alt: "",
-                className: G.sponsorLogo,
+                className: D.sponsorLogo,
             }),
-            (0, r.jsx)(u.Text, {
+            (0, a.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "always-white",
-                children: b.Z.parse(a, !1, { allowLinks: !0 }),
+                children: C.Z.parse(r, !1, { allowLinks: !0 }),
             }),
         ],
     });
 }
 function q(e) {
-    let { quest: t, user: n, decoration: i, isSaving: a, onClose: o, onConfirm: s } = e,
-        l = (0, P.fh)(t, P.eC.REWARD).url,
-        c = (0, A.f$)(t.config),
-        { fractionalState: d } = (0, m.Z)(),
-        f = d === k.a$.FP_ONLY,
-        _ = (0, N.Qy)(t.config),
-        p = c && !f;
-    return (0, r.jsxs)("div", {
-        className: G.claimedRootContainer,
+    let { quest: n, user: t, decoration: o, isSaving: r, onClose: i, onConfirm: l } = e,
+        s = (0, y.fh)(n, y.eC.REWARD).url,
+        d = (0, R.f$)(n.config),
+        { fractionalState: u } = (0, f.Z)(),
+        p = u === O.a$.FP_ONLY,
+        _ = (0, P.Qy)(n.config);
+    return (0, a.jsxs)("div", {
+        className: D.claimedRootContainer,
         children: [
-            (0, r.jsxs)("div", {
-                className: G.headerContainer,
+            (0, a.jsxs)("div", {
+                className: D.headerContainer,
                 children: [
-                    (0, r.jsx)(D.Z, {
-                        quest: t,
+                    (0, a.jsx)(B.Z, {
+                        quest: n,
                         dimensions: {
                             width: 528,
                             height: 148,
                         },
-                        className: G.headerBackground,
+                        className: D.headerBackground,
                     }),
-                    (0, r.jsx)("div", {
-                        className: G.headerForeground,
-                        children: (0, r.jsx)(u.olH, {
+                    (0, a.jsx)("div", {
+                        className: D.headerForeground,
+                        children: (0, a.jsx)(c.olH, {
                             "data-migration-pending": !0,
-                            className: G.close,
+                            className: D.close,
                             withCircleBackground: !0,
-                            onClick: o,
+                            onClick: i,
                         }),
                     }),
                 ],
             }),
-            (0, r.jsx)(u.mzw, {
+            (0, a.jsx)(c.mzw, {
                 "data-migration-pending": !0,
                 separator: !1,
-                children: (0, r.jsxs)("div", {
-                    className: G.footerBody,
+                children: (0, a.jsxs)("div", {
+                    className: D.footerBody,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: G.previewContainer,
-                            children: (0, r.jsx)(h.Z, {
-                                user: n,
+                        (0, a.jsx)("div", {
+                            className: D.previewContainer,
+                            children: (0, a.jsx)(x.Z, {
+                                user: t,
                                 guildId: null,
-                                avatarDecorationOverride: i,
-                                avatarSize: u.EFr.SIZE_152,
-                                questPreviewRewardAssetUrl: l,
+                                avatarDecorationOverride: o,
+                                avatarSize: c.EFr.SIZE_152,
+                                questPreviewRewardAssetUrl: s,
                             }),
                         }),
-                        (0, r.jsx)(u.X6q, {
+                        (0, a.jsx)(c.X6q, {
                             variant: "heading-lg/bold",
                             color: "header-primary",
-                            className: G.heading,
-                            children: U.intl.string(U.t["0/Yz+f"]),
+                            className: D.heading,
+                            children: Z.intl.string(Z.t["0/Yz+f"]),
                         }),
-                        (0, r.jsx)(u.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            className: G.text,
+                            className: D.text,
                             children: _,
                         }),
-                        (0, r.jsx)(u.zxk, {
+                        (0, a.jsx)(c.zxk, {
                             variant: "primary",
-                            text: U.intl.string(U.t.MAS7uL),
-                            loading: a,
-                            onClick: s,
+                            text: Z.intl.string(Z.t.MAS7uL),
+                            loading: r,
+                            onClick: l,
                         }),
-                        (0, A.zK)(t, L.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
-                        p &&
-                            (0, r.jsx)(y.p, {
-                                className: G.upsell,
-                                upsellText: U.intl.format(U.t.VHXn7O, {
+                        (0, R.zK)(n, k.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, a.jsx)(U, { quest: n }),
+                        d &&
+                            !p &&
+                            (0, a.jsx)(v.p, {
+                                className: D.upsell,
+                                upsellText: Z.intl.format(Z.t.VHXn7O, {
                                     onNitroClick: () => {
-                                        Y(), o();
+                                        m.Z.open(L.oAB.PREMIUM, null, {}), i();
                                     },
                                 }),
-                                buttonAnalyticsObject: { section: j.jXE.PERMADECOS_MARKETING_UPSELL },
+                                buttonAnalyticsObject: { section: L.jXE.PERMADECOS_MARKETING_UPSELL },
                             }),
                     ],
                 }),
@@ -296,43 +221,45 @@ function q(e) {
         ],
     });
 }
-function X(e) {
-    var t, n;
-    let { quest: a, location: o, onClose: s, transitionState: l, preview: c } = e,
-        u = i.useMemo(() => (0, A.xn)(a.config), [a]),
-        [d, f] = W(null != (n = null == u ? void 0 : u.skuId) ? n : null);
-    return null == u
+function W(e) {
+    var n, t;
+    let { quest: r, location: i, onClose: l, transitionState: d, preview: c } = e,
+        m = o.useMemo(() => (0, R.xn)(r.config), [r]),
+        [p, x] = (function (e) {
+            let { product: n, isFetching: t } = (0, g.T)(e),
+                {} = (0, w.Z)({}),
+                a = o.useMemo(() => {
+                    if (null == n || t) return null;
+                    let e = n.items.find((e) => e.type === s.Z.AVATAR_DECORATION);
+                    return null == e ? null : e;
+                }, [n, t]);
+            return [
+                a,
+                () =>
+                    null == a
+                        ? (I.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }),
+                          Promise.reject())
+                        : ((0, u.cV)(a), z()),
+            ];
+        })(null != (t = null == m ? void 0 : m.skuId) ? t : null);
+    return null == m
         ? null
-        : (null == (t = a.userStatus) ? void 0 : t.claimedAt) != null
-          ? (0, r.jsx)(p.default, {
-                transitionState: l,
-                onCloseModal: H,
-                onClose: s,
+        : (null == (n = r.userStatus) ? void 0 : n.claimedAt) != null
+          ? (0, a.jsx)(_.default, {
+                transitionState: d,
+                onCloseModal: z,
+                onClose: l,
                 analyticsLocations: [],
-                initialSelectedDecoration: d,
+                initialSelectedDecoration: p,
             })
-          : (0, r.jsx)(K, {
-                onClose: s,
-                transitionState: l,
-                quest: a,
-                location: o,
-                reward: u,
-                decoration: d,
-                onUseNow: f,
+          : (0, a.jsx)(F, {
+                onClose: l,
+                transitionState: d,
+                quest: r,
+                location: i,
+                reward: m,
+                decoration: p,
+                onUseNow: x,
                 preview: c,
             });
-}
-function Q(e, t, i) {
-    (0, u.ZDy)(async () => {
-        let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
-        return (n) =>
-            (0, r.jsx)(
-                a,
-                F(Z({}, n), {
-                    quest: e,
-                    location: t,
-                    preview: i,
-                }),
-            );
-    });
 }

@@ -1,230 +1,225 @@
-n.d(t, { default: () => N }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(481060),
-    s = n(100527),
-    l = n(906732),
-    c = n(335131),
-    u = n(884697),
-    d = n(449217),
-    f = n(223143),
-    _ = n(311395),
-    p = n(222062),
-    h = n(269982),
-    m = n(767714),
-    g = n(369111),
-    E = n(594174),
-    b = n(626135),
-    y = n(74538),
-    O = n(240781),
-    v = n(818611),
-    I = n(981631),
-    T = n(474936),
-    S = n(388032),
-    A = n(88785);
-function C(e) {
+r.d(t, { default: () => Z }), r(388685);
+var n = r(951288),
+    i = r(647438),
+    l = r(442837),
+    s = r(481060),
+    a = r(100527),
+    o = r(906732),
+    c = r(335131),
+    u = r(884697),
+    d = r(449217),
+    m = r(223143),
+    h = r(311395),
+    x = r(222062),
+    p = r(269982),
+    v = r(767714),
+    g = r(369111),
+    j = r(594174),
+    f = r(626135),
+    y = r(74538),
+    O = r(240781),
+    b = r(818611),
+    S = r(981631),
+    P = r(474936),
+    C = r(388032),
+    I = r(88785);
+function w(e) {
     let {
             user: t,
-            categories: n,
-            purchases: a,
-            analyticsLocations: l,
-            onClose: f,
-            initialSelectedDecoration: E,
-            initialSelectedDecorationId: b,
-            isTryItOutFlow: I,
-            guild: C,
+            categories: r,
+            purchases: l,
+            analyticsLocations: o,
+            onClose: m,
+            initialSelectedDecoration: j,
+            initialSelectedDecorationId: f,
+            isTryItOutFlow: S,
+            guild: w,
         } = e,
         {
-            pendingAvatarDecoration: N,
-            setPendingAvatarDecoration: R,
-            savedAvatarDecoration: P,
+            pendingAvatarDecoration: Z,
+            setPendingAvatarDecoration: E,
+            savedAvatarDecoration: N,
         } = (0, g.Z)({
-            analyticsLocations: l,
-            isTryItOut: I,
-            guildId: null == C ? void 0 : C.id,
+            analyticsLocations: o,
+            isTryItOut: S,
+            guildId: null == w ? void 0 : w.id,
         }),
-        [w, D] = i.useState(() => {
+        [T, A] = i.useState(() => {
             var e, t;
-            if (null != E) return E;
-            let r = (0, u.iC)(a, n);
-            return null != b
-                ? null != (e = r.find((e) => e.id === b))
+            if (null != j) return j;
+            let n = (0, u.iC)(l, r);
+            return null != f
+                ? null != (e = n.find((e) => e.id === f))
                     ? e
                     : null
-                : void 0 !== N
-                  ? N
-                  : null == P
+                : void 0 !== Z
+                  ? Z
+                  : null == N
                     ? null
                     : null !=
-                        (t = r.find((e) => {
+                        (t = n.find((e) => {
                             let { skuId: t } = e;
-                            return t === P.skuId;
+                            return t === N.skuId;
                         }))
                       ? t
                       : null;
         }),
-        { product: x, purchase: L } = (0, d.Z)(null == w ? void 0 : w.skuId),
-        j = y.ZP.canUseCollectibles(t),
-        k = i.useRef(null),
-        M = (0, _.Z)(l),
-        U =
-            void 0 === N
-                ? (null == w ? void 0 : w.skuId) === (null == P ? void 0 : P.skuId)
-                : (null == w ? void 0 : w.skuId) === (null == N ? void 0 : N.skuId),
-        G = (e) => {
-            D(e), null != e && M(e);
-        },
-        B = () => {
-            R(w), f();
-        },
-        Z = i.useCallback(
+        { product: k, purchase: D } = (0, d.Z)(null == T ? void 0 : T.skuId),
+        R = y.ZP.canUseCollectibles(t),
+        _ = i.useRef(null),
+        M = (0, h.Z)(o),
+        z =
+            void 0 === Z
+                ? (null == T ? void 0 : T.skuId) === (null == N ? void 0 : N.skuId)
+                : (null == T ? void 0 : T.skuId) === (null == Z ? void 0 : Z.skuId),
+        U = i.useCallback(
             (e) => {
-                f(),
+                m(),
                     (0, c.mK)({
-                        analyticsLocations: l,
-                        analyticsSource: s.Z.EDIT_AVATAR_DECORATION_MODAL,
+                        analyticsLocations: o,
+                        analyticsSource: a.Z.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [l, f],
+            [o, m],
         ),
-        F = (0, p.M)(),
-        V = F && (0, u.G1)(x),
-        H = () =>
-            (null != L && (!(0, u.qS)(L) || j)) || null === w
-                ? (0, r.jsx)(o.zxk, {
-                      variant: "primary",
-                      text: S.intl.string(S.t.Jh8fJy),
-                      onClick: B,
-                      disabled: U,
-                  })
-                : null == L && (j || !(0, u.G1)(x))
-                  ? (0, r.jsx)(o.zxk, {
-                        variant: "primary",
-                        onClick: () => Z(null == x ? void 0 : x.skuId),
-                        text: S.intl.string(S.t.fYfGgI),
-                    })
-                  : (0, r.jsx)(m.Z, {
-                        subscriptionTier: T.Si.TIER_2,
-                        showGradient: F,
-                        textOptions: {
-                            textOverride: y.ZP.isPremium(t)
-                                ? S.intl.string(S.t.KXLX7u)
-                                : F
-                                  ? S.intl.string(S.t.pj0XBA)
-                                  : S.intl.string(S.t.mr4K7O),
-                        },
-                    });
-    return (0, r.jsxs)(r.Fragment, {
+        G = (0, x.M)(),
+        F = G && (0, u.G1)(k);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsxs)(o.xBx, {
+            (0, n.jsxs)(s.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: A.modalHeader,
+                className: I.modalHeader,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, n.jsx)(s.X6q, {
                         variant: "heading-lg/semibold",
-                        children: S.intl.string(S.t.HykynZ),
+                        children: C.intl.string(C.t.HykynZ),
                     }),
-                    (0, r.jsx)(o.olH, {
+                    (0, n.jsx)(s.olH, {
                         "data-migration-pending": !0,
-                        className: A.modalCloseButton,
-                        onClick: f,
+                        className: I.modalCloseButton,
+                        onClick: m,
                     }),
                 ],
             }),
-            (0, r.jsxs)(o.hzk, {
+            (0, n.jsxs)(s.hzk, {
                 "data-migration-pending": !0,
-                className: A.modalContent,
+                className: I.modalContent,
                 scrollbarType: "none",
                 children: [
-                    (0, r.jsx)(v.Z, {
+                    (0, n.jsx)(b.Z, {
                         user: t,
-                        guild: C,
-                        pendingAvatarDecoration: w,
-                        selectedAvatarDecorationRef: k,
-                        onSelect: G,
-                        onOpenShop: Z,
+                        guild: w,
+                        pendingAvatarDecoration: T,
+                        selectedAvatarDecorationRef: _,
+                        onSelect: (e) => {
+                            A(e), null != e && M(e);
+                        },
+                        onOpenShop: U,
                     }),
-                    (0, r.jsx)(O.Z, {
-                        className: A.modalPreview,
+                    (0, n.jsx)(O.Z, {
+                        className: I.modalPreview,
                         user: t,
-                        guildId: null == C ? void 0 : C.id,
-                        avatarDecorationOverride: w,
+                        guildId: null == w ? void 0 : w.id,
+                        avatarDecorationOverride: T,
                     }),
                 ],
             }),
-            (0, r.jsxs)(o.mzw, {
+            (0, n.jsxs)(s.mzw, {
                 "data-migration-pending": !0,
-                className: A.modalFooter,
+                className: I.modalFooter,
                 children: [
-                    H(),
-                    V
-                        ? (0, r.jsx)(h.Z, {
-                              product: x,
-                              onSecondaryClick: f,
+                    (null != D && (!(0, u.qS)(D) || R)) || null === T
+                        ? (0, n.jsx)(s.zxk, {
+                              variant: "primary",
+                              text: C.intl.string(C.t.Jh8fJy),
+                              onClick: () => {
+                                  E(T), m();
+                              },
+                              disabled: z,
                           })
-                        : (0, r.jsx)(o.zxk, {
+                        : null == D && (R || !(0, u.G1)(k))
+                          ? (0, n.jsx)(s.zxk, {
+                                variant: "primary",
+                                onClick: () => U(null == k ? void 0 : k.skuId),
+                                text: C.intl.string(C.t.fYfGgI),
+                            })
+                          : (0, n.jsx)(v.Z, {
+                                subscriptionTier: P.Si.TIER_2,
+                                showGradient: G,
+                                textOptions: {
+                                    textOverride: y.ZP.isPremium(t)
+                                        ? C.intl.string(C.t.KXLX7u)
+                                        : G
+                                          ? C.intl.string(C.t.pj0XBA)
+                                          : C.intl.string(C.t.mr4K7O),
+                                },
+                            }),
+                    F
+                        ? (0, n.jsx)(p.Z, {
+                              product: k,
+                              onSecondaryClick: m,
+                          })
+                        : (0, n.jsx)(s.zxk, {
                               variant: "secondary",
-                              text: S.intl.string(S.t["ETE/oK"]),
-                              onClick: f,
+                              text: C.intl.string(C.t["ETE/oK"]),
+                              onClick: m,
                           }),
                 ],
             }),
         ],
     });
 }
-function N(e) {
+function Z(e) {
     let {
             transitionState: t,
-            analyticsLocations: n,
+            analyticsLocations: r,
             onClose: c,
             onCloseModal: u,
             initialSelectedDecoration: d,
-            initialSelectedDecorationId: _,
-            isTryItOutFlow: p,
-            guild: h,
+            initialSelectedDecorationId: h,
+            isTryItOutFlow: x,
+            guild: p,
         } = e,
-        m = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
-        { analyticsLocations: g } = (0, l.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: y, purchases: O, isFetchingCategories: v, isFetchingPurchases: T } = (0, f.ZP)(),
-        S = v || (T && 0 === O.size),
-        N = () => {
-            u(), null == c || c();
-        };
+        v = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
+        { analyticsLocations: g } = (0, o.ZP)(r, a.Z.EDIT_AVATAR_DECORATION_MODAL),
+        { categories: y, purchases: O, isFetchingCategories: b, isFetchingPurchases: P } = (0, m.ZP)(),
+        C = b || (P && 0 === O.size);
     return (
         i.useEffect(() => {
-            b.default.track(I.rMx.OPEN_MODAL, {
-                type: I.jXE.AVATAR_DECORATION_CUSTOMIZATION,
+            f.default.track(S.rMx.OPEN_MODAL, {
+                type: S.jXE.AVATAR_DECORATION_CUSTOMIZATION,
                 location_stack: g,
             });
         }, [g]),
-        null == m
+        null == v
             ? null
-            : (0, r.jsx)(l.Gt, {
+            : (0, n.jsx)(o.Gt, {
                   value: g,
-                  children: (0, r.jsx)(o.Y0X, {
+                  children: (0, n.jsx)(s.Y0X, {
                       transitionState: t,
-                      className: A.modal,
-                      size: S ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
+                      className: I.modal,
+                      size: C ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       "data-migration-pending": !0,
-                      children: S
-                          ? (0, r.jsx)(o.$jN, {
-                                className: A.spinner,
-                                type: o.$jN.Type.SPINNING_CIRCLE,
+                      children: C
+                          ? (0, n.jsx)(s.$jN, {
+                                className: I.spinner,
+                                type: s.$jN.Type.SPINNING_CIRCLE,
                             })
-                          : (0, r.jsx)(C, {
-                                user: m,
-                                guild: h,
+                          : (0, n.jsx)(w, {
+                                user: v,
+                                guild: p,
                                 categories: y,
                                 purchases: O,
                                 analyticsLocations: g,
                                 initialSelectedDecoration: d,
-                                initialSelectedDecorationId: _,
-                                onClose: N,
-                                isTryItOutFlow: p,
+                                initialSelectedDecorationId: h,
+                                onClose: () => {
+                                    u(), null == c || c();
+                                },
+                                isTryItOutFlow: x,
                             }),
                   }),
               })
