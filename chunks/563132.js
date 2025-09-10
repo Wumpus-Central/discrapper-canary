@@ -1,6 +1,6 @@
 n.d(t, {
-    JL: () => J,
-    PaymentContextProvider: () => ee,
+    JL: () => $,
+    PaymentContextProvider: () => et,
 }),
     n(388685),
     n(997841);
@@ -45,10 +45,11 @@ var r = n(951288),
     Z = n(585686),
     F = n(771206),
     V = n(362755),
-    H = n(981631),
-    Y = n(474936),
-    W = n(876414);
-function K(e, t, n) {
+    H = n(283307),
+    Y = n(981631),
+    W = n(474936),
+    K = n(876414);
+function z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,7 +62,7 @@ function K(e, t, n) {
         e
     );
 }
-function z(e) {
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -72,12 +73,12 @@ function z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                K(e, t, n[t]);
+                z(e, t, n[t]);
             });
     }
     return e;
 }
-function q(e, t) {
+function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -89,83 +90,83 @@ function q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : q(Object(t)).forEach(function (n) {
+            : X(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let [Q, J, $] = (0, A.Z)();
-function ee(e) {
+let [J, $, ee] = (0, A.Z)();
+function et(e) {
     var t, n, o;
     let {
             loadId: A,
-            activeSubscription: K,
-            stepConfigs: q,
-            breadcrumbs: J = [],
-            skuIDs: $,
-            isGift: ee = !1,
-            children: et,
-            defaultPlanId: en,
-            purchaseType: er = H.GZQ.SUBSCRIPTION,
-            applicationId: ei,
-            referralCode: ea,
-            excludeSubscriptionPlansBySKU: eo = !1,
-            excludeSKUPurchasePreviews: es = !1,
-            wasTier2PremiumBeforePurchase: el = !1,
+            activeSubscription: z,
+            stepConfigs: X,
+            breadcrumbs: $ = [],
+            skuIDs: ee,
+            isGift: et = !1,
+            children: en,
+            defaultPlanId: er,
+            purchaseType: ei = Y.GZQ.SUBSCRIPTION,
+            applicationId: ea,
+            referralCode: eo,
+            excludeSubscriptionPlansBySKU: es = !1,
+            excludeSKUPurchasePreviews: el = !1,
+            wasTier2PremiumBeforePurchase: ec = !1,
         } = e,
-        ec = (0, F.Z)(),
-        eu = (0, h.Q)(),
-        ed = (0, L.Z)(),
-        ef = $[0],
-        e_ = (0, c.e7)([T.Z], () => T.Z.get(ef), [ef]),
-        ep = null == e_ ? void 0 : e_.eligiblePaymentGateways,
+        eu = (0, F.Z)(),
+        ed = (0, h.Q)(),
+        ef = (0, L.Z)(),
+        e_ = ee[0],
+        ep = (0, c.e7)([T.Z], () => T.Z.get(e_), [e_]),
+        eh = null == ep ? void 0 : ep.eligiblePaymentGateways,
         {
-            paymentSources: eh,
-            hasPaymentSources: em,
-            paymentSourceId: eg,
-            setPaymentSourceId: eE,
-            hasFetchedPaymentSources: eb,
+            paymentSources: em,
+            hasPaymentSources: eg,
+            paymentSourceId: eE,
+            setPaymentSourceId: eb,
+            hasFetchedPaymentSources: ey,
         } = (0, j.Z)({
-            isGift: ee,
-            activeSubscription: K,
-            eligiblePaymentGateways: ep,
+            isGift: et,
+            activeSubscription: z,
+            eligiblePaymentGateways: eh,
         }),
-        ey = i.useRef(em),
+        eO = i.useRef(eg),
         {
-            hasFetchedSubscriptionPlans: eO,
-            priceOptions: ev,
-            setCurrency: eI,
-            currencyLoading: eT,
-            currencies: eS,
+            hasFetchedSubscriptionPlans: ev,
+            priceOptions: eI,
+            setCurrency: eT,
+            currencyLoading: eS,
+            currencies: eA,
         } = (0, x.Z)({
-            activeSubscription: K,
-            skuIDs: $,
-            paymentSourceId: eg,
-            isGift: ee,
-            excludeSubscriptionPlansBySKU: eo,
+            activeSubscription: z,
+            skuIDs: ee,
+            paymentSourceId: eE,
+            isGift: et,
+            excludeSubscriptionPlansBySKU: es,
         }),
-        eA = (0, G.Z)(),
-        [eC, eN] = i.useState(!1),
+        eC = (0, G.Z)(),
+        [eN, eR] = i.useState(!1),
         {
-            step: eR,
-            setStep: eP,
-            steps: ew,
-            breadcrumbsData: eD,
-            previousStepRef: ex,
+            step: eP,
+            setStep: ew,
+            steps: eD,
+            breadcrumbsData: ex,
+            previousStepRef: eL,
         } = (0, Z.Z)({
-            stepConfigs: q,
-            breadcrumbs: J,
+            stepConfigs: X,
+            breadcrumbs: $,
         }),
-        [eL, ej] = (0, U.Z)(eR),
-        { paymentError: eM, paymentAuthenticationState: ek } = (0, M.Z)(),
-        { purchaseError: eU, purchaseErrorBlockRef: eG, setPurchaseError: eB } = (0, k.Z)(),
-        eZ = (0, u.Z)(() => {
+        [ej, eM] = (0, U.Z)(eP),
+        { paymentError: ek, paymentAuthenticationState: eU } = (0, M.Z)(),
+        { purchaseError: eG, purchaseErrorBlockRef: eB, setPurchaseError: eZ } = (0, k.Z)(),
+        eF = (0, u.Z)(() => {
             let e = null != A ? A : (0, l.Z)();
             return (
                 R.Z.addBreadcrumb({ message: "Checkout session ID: ".concat(e) }),
@@ -176,190 +177,190 @@ function ee(e) {
             );
         }),
         {
-            selectedSkuId: eF,
-            selectedPlan: eV,
-            selectedPlanNotification: eH,
-            setSelectedSkuId: eY,
-            setSelectedPlanId: eW,
-            setSelectedPlanNotification: eK,
+            selectedSkuId: eV,
+            selectedPlan: eH,
+            selectedPlanNotification: eY,
+            setSelectedSkuId: eW,
+            setSelectedPlanId: eK,
+            setSelectedPlanNotification: ez,
         } = (0, P.Z)(),
-        [ez, eq] = (0, c.Wu)([v.Z], () => [v.Z.purchaseTokenAuthState, v.Z.purchaseTokenHash]),
-        [eX, eQ, eJ, e$] = (0, c.Wu)([V.Z], () => [V.Z.browserCheckoutState, V.Z.loadId, V.Z.skuId, V.Z.planId]),
-        [e0, e1] = i.useState(null),
-        [e2, e3] = i.useState(null),
-        [e4, e8] = i.useState(null),
-        [e6, e5] = i.useState(null),
-        [e7, e9] = i.useState(null),
-        [te, tt] = i.useState(void 0),
-        [tn, tr] = i.useState([]),
-        [ti, ta] = i.useState([]),
-        to = i.useMemo(() => null == eV || (0, N.PV)(eV.id), [eV]),
-        ts = i.useRef(null != K ? K.planId : null);
+        [eq, eX] = (0, c.Wu)([v.Z], () => [v.Z.purchaseTokenAuthState, v.Z.purchaseTokenHash]),
+        [eQ, eJ, e$, e0] = (0, c.Wu)([V.Z], () => [V.Z.browserCheckoutState, V.Z.loadId, V.Z.skuId, V.Z.planId]),
+        [e1, e2] = i.useState(null),
+        [e3, e4] = i.useState(null),
+        [e8, e5] = i.useState(null),
+        [e6, e7] = i.useState(null),
+        [e9, te] = i.useState(null),
+        [tt, tn] = i.useState(void 0),
+        [tr, ti] = i.useState([]),
+        [ta, to] = i.useState([]),
+        ts = i.useMemo(() => null == eH || (0, N.PV)(eH.id), [eH]),
+        tl = i.useRef(null != z ? z.planId : null);
     i.useEffect(() => {
-        null == ts.current && null != K && (ts.current = K.planId);
-    }, [K]);
-    let { endsAt: tl } = (0, m.Z)({
+        null == tl.current && null != z && (tl.current = z.planId);
+    }, [z]);
+    let { endsAt: tc } = (0, m.Z)({
             forceFetch: !1,
             excludeReverseTrial: !0,
         }),
-        tc = i.useRef(tl.isSame(s()(0)) ? null : tl);
+        tu = i.useRef(tc.isSame(s()(0)) ? null : tc);
     i.useEffect(() => {
-        null != tc.current || tl.isSame(s()(0)) || (tc.current = tl);
-    }, [tl]),
-        (0, D.m)(ef, eg);
+        null != tu.current || tc.isSame(s()(0)) || (tu.current = tc);
+    }, [tc]),
+        (0, D.m)(e_, eE);
     let {
-            skusById: tu,
-            hasFetchedSkus: td,
-            skuPricePreviewsById: tf,
-            previewErrorsById: t_,
+            skusById: td,
+            hasFetchedSkus: tf,
+            skuPricePreviewsById: t_,
+            previewErrorsById: tp,
         } = (0, B.Z)({
-            applicationId: null != ei ? ei : Y.CL,
-            skuIDs: $,
-            currentPaymentSourceId: eg,
-            isGift: ee,
-            excludeSKUPurchasePreviews: es,
+            applicationId: null != ea ? ea : W.CL,
+            skuIDs: ee,
+            currentPaymentSourceId: eE,
+            isGift: et,
+            excludeSKUPurchasePreviews: el,
         }),
-        tp = tu[null != eF ? eF : ""],
-        th = null != eF ? t_[eF] : null,
-        [tm, tg] = i.useState(th),
-        tE = i.useMemo(() => {
-            if (null == eF) return null;
-            let e = tf[eF];
-            return null == e ? null : e[null != eg ? eg : I.c];
-        }, [eF, tf, eg]),
-        { data: tb } = (0, p.IX)(ei),
-        ty = O.Sb.useSetting(),
-        tO = (0, c.e7)([d.Z], () => d.Z.getFetchState());
+        th = td[null != eV ? eV : ""],
+        tm = null != eV ? tp[eV] : null,
+        [tg, tE] = i.useState(tm),
+        tb = i.useMemo(() => {
+            if (null == eV) return null;
+            let e = t_[eV];
+            return null == e ? null : e[null != eE ? eE : I.c];
+        }, [eV, t_, eE]),
+        { data: ty } = (0, p.IX)(ea),
+        tO = O.Sb.useSetting(),
+        tv = (0, c.e7)([d.Z], () => d.Z.getFetchState());
     i.useEffect(() => {
-        null != tb && (0, C.yE)(tb.flags, H.udG.EMBEDDED) && ty && null == tO && (0, f.$h)();
-    }, [tb, ty, tO]);
-    let tv =
-            (0, C.yE)(null != (t = null == tb ? void 0 : tb.flags) ? t : 0, H.udG.EMBEDDED) &&
-            (0, C.yE)(null != (n = null == tb ? void 0 : tb.flags) ? n : 0, H.udG.EMBEDDED_IAP),
-        tI = (0, c.e7)([_.ZP], () =>
+        null != ty && (0, C.yE)(ty.flags, Y.udG.EMBEDDED) && tO && null == tv && (0, f.$h)();
+    }, [ty, tO, tv]);
+    let tI =
+            (0, C.yE)(null != (t = null == ty ? void 0 : ty.flags) ? t : 0, Y.udG.EMBEDDED) &&
+            (0, C.yE)(null != (n = null == ty ? void 0 : ty.flags) ? n : 0, Y.udG.EMBEDDED_IAP),
+        tT = (0, c.e7)([_.ZP], () =>
             Array.from(_.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
-                return t === ei;
+                return t === ea;
             }),
         ),
-        tT = null == tI ? void 0 : tI.compositeInstanceId,
-        tS = (0, c.e7)([S.Z], () => (null != eF ? S.Z.getForSKU(eF) : null), [eF]),
-        [tA, tC] = i.useState(null),
-        tN = null != (o = null == K ? void 0 : K.inReverseTrial) && o && !ee,
-        tR = (0, b.ZP)({ location: "PaymentModal" }) && to,
-        { isDisplayingWowMomentConfirmation: tP } = (0, c.cj)([E.Z], () => ({
+        tS = null == tT ? void 0 : tT.compositeInstanceId,
+        tA = (0, c.e7)([S.Z], () => (null != eV ? S.Z.getForSKU(eV) : null), [eV]),
+        [tC, tN] = i.useState(null),
+        tR = null != (o = null == z ? void 0 : z.inReverseTrial) && o && !et,
+        tP = (0, b.ZP)({ location: "PaymentModal" }) && ts,
+        { isDisplayingWowMomentConfirmation: tw } = (0, c.cj)([E.Z], () => ({
             isDisplayingWowMomentConfirmation: E.Z.isDisplayingWowMomentConfirmation,
         })),
-        tw = tR ? W.premiumBrandRefreshBackground : void 0,
-        { enabled: tD } = (0, g.l)({ location: "PaymentModal" }),
-        { isEligible: tx } = (0, y.Q1)(),
-        tL = tx && eF === Y.Si.TIER_2,
-        tj = (0, w.uH)({ location: "PaymentModal" }),
-        tM = i.useMemo(() => {
-            if (tj) return "apple_payment_link";
-        }, [tj]);
-    return (0, r.jsx)(Q.Provider, {
-        value: X(
-            z(
+        tD = tP ? K.premiumBrandRefreshBackground : void 0,
+        { enabled: tx } = (0, g.l)({ location: "PaymentModal" }),
+        { isEligible: tL } = (0, y.Q1)(),
+        tj = tL && eV === W.Si.TIER_2,
+        tM = (0, w.uH)({ location: "PaymentModal" }),
+        tk = i.useMemo(() => {
+            if (tM) return H.cL.APPLE_PAYMENT_LINK;
+        }, [tM]);
+    return (0, r.jsx)(J.Provider, {
+        value: Q(
+            q(
                 {
-                    stripe: ec,
-                    paymentElementsEnabled: tD,
-                    contextMetadata: eZ,
-                    blockedPayments: eu,
-                    activeSubscription: K,
-                    hasFetchedSubscriptions: ed,
-                    hasFetchedSubscriptionPlans: eO,
+                    stripe: eu,
+                    paymentElementsEnabled: tx,
+                    contextMetadata: eF,
+                    blockedPayments: ed,
+                    activeSubscription: z,
+                    hasFetchedSubscriptions: ef,
+                    hasFetchedSubscriptionPlans: ev,
                     updatedSubscription: e6,
-                    setUpdatedSubscription: e5,
-                    subscriptionMetadataRequest: e7,
-                    setSubscriptionMetadataRequest: e9,
-                    hasFetchedPaymentSources: eb,
-                    paymentSources: eh,
-                    hasPaymentSources: em,
-                    paymentSourceId: eg,
-                    setPaymentSourceId: eE,
-                    priceOptions: ev,
-                    setCurrency: eI,
-                    currencyLoading: eT,
-                    currencies: eS,
+                    setUpdatedSubscription: e7,
+                    subscriptionMetadataRequest: e9,
+                    setSubscriptionMetadataRequest: te,
+                    hasFetchedPaymentSources: ey,
+                    paymentSources: em,
+                    hasPaymentSources: eg,
+                    paymentSourceId: eE,
+                    setPaymentSourceId: eb,
+                    priceOptions: eI,
+                    setCurrency: eT,
+                    currencyLoading: eS,
+                    currencies: eA,
                 },
-                eA,
+                eC,
             ),
             {
-                hasAcceptedTerms: eC,
-                setHasAcceptedTerms: eN,
-                step: eR,
-                setStep: eP,
-                steps: ew,
-                stepConfigs: q,
-                breadcrumbs: eD,
-                previousStepRef: ex,
-                purchaseState: eL,
-                setPurchaseState: ej,
-                paymentAuthenticationState: ek,
-                paymentError: eM,
-                purchaseError: eU,
-                setPurchaseError: eB,
-                purchasePreviewError: tm,
-                setPurchasePreviewError: tg,
-                purchaseErrorBlockRef: eG,
-                purchaseTokenAuthState: ez,
-                purchaseTokenHash: eq,
-                browserCheckoutState: eX,
-                browserCheckoutStateLoadId: eQ,
-                browserCheckoutStateSkuId: eJ,
-                browserCheckoutStatePlanId: e$,
-                bodyNode: e0,
-                setBodyNode: e1,
-                footerNode: e2,
-                setFooterNode: e3,
-                modalOverlayNode: e4,
-                setModalOverlayNode: e8,
-                selectedSkuId: eF,
-                selectedSku: tp,
-                selectedStoreListing: tS,
-                selectedPlan: eV,
-                setSelectedSkuId: eY,
-                setSelectedPlanId: eW,
-                selectedPlanNotification: eH,
-                setSelectedPlanNotification: eK,
-                readySlideId: te,
-                setReadySlideId: tt,
-                defaultPlanId: en,
-                isPremium: to,
-                isGift: ee,
-                startingFractionalPremiumEndsAtRef: tc,
-                startedPaymentFlowWithPaymentSourcesRef: ey,
-                startingPremiumSubscriptionPlanIdRef: ts,
-                hasFetchedSkus: td,
-                skusById: tu,
-                skuPricePreviewsById: tf,
-                selectedSkuPricePreview: tE,
-                application: tb,
-                purchaseType: er,
-                isEmbeddedIAP: tv,
-                activitySessionId: tT,
-                devShelfFetchState: tO,
-                entitlementsGranted: tn,
-                setEntitlementsGranted: tr,
-                appliedUserDiscounts: ti,
-                setAppliedUserDiscounts: ta,
-                referralCode: ea,
-                invoicePreview: tA,
-                setInvoicePreview: tC,
-                inReverseTrial: tN,
-                enablePremiumBrandRefresh: tR,
-                isDisplayingWowMomentConfirmation: tP,
-                premiumBrandRefreshBackgroundClassName: tw,
-                wasTier2PremiumBeforePurchase: el,
-                customCheckoutFlow: tM,
-                shouldShowSeptemberMarketingMomentBanner: tL,
+                hasAcceptedTerms: eN,
+                setHasAcceptedTerms: eR,
+                step: eP,
+                setStep: ew,
+                steps: eD,
+                stepConfigs: X,
+                breadcrumbs: ex,
+                previousStepRef: eL,
+                purchaseState: ej,
+                setPurchaseState: eM,
+                paymentAuthenticationState: eU,
+                paymentError: ek,
+                purchaseError: eG,
+                setPurchaseError: eZ,
+                purchasePreviewError: tg,
+                setPurchasePreviewError: tE,
+                purchaseErrorBlockRef: eB,
+                purchaseTokenAuthState: eq,
+                purchaseTokenHash: eX,
+                browserCheckoutState: eQ,
+                browserCheckoutStateLoadId: eJ,
+                browserCheckoutStateSkuId: e$,
+                browserCheckoutStatePlanId: e0,
+                bodyNode: e1,
+                setBodyNode: e2,
+                footerNode: e3,
+                setFooterNode: e4,
+                modalOverlayNode: e8,
+                setModalOverlayNode: e5,
+                selectedSkuId: eV,
+                selectedSku: th,
+                selectedStoreListing: tA,
+                selectedPlan: eH,
+                setSelectedSkuId: eW,
+                setSelectedPlanId: eK,
+                selectedPlanNotification: eY,
+                setSelectedPlanNotification: ez,
+                readySlideId: tt,
+                setReadySlideId: tn,
+                defaultPlanId: er,
+                isPremium: ts,
+                isGift: et,
+                startingFractionalPremiumEndsAtRef: tu,
+                startedPaymentFlowWithPaymentSourcesRef: eO,
+                startingPremiumSubscriptionPlanIdRef: tl,
+                hasFetchedSkus: tf,
+                skusById: td,
+                skuPricePreviewsById: t_,
+                selectedSkuPricePreview: tb,
+                application: ty,
+                purchaseType: ei,
+                isEmbeddedIAP: tI,
+                activitySessionId: tS,
+                devShelfFetchState: tv,
+                entitlementsGranted: tr,
+                setEntitlementsGranted: ti,
+                appliedUserDiscounts: ta,
+                setAppliedUserDiscounts: to,
+                referralCode: eo,
+                invoicePreview: tC,
+                setInvoicePreview: tN,
+                inReverseTrial: tR,
+                enablePremiumBrandRefresh: tP,
+                isDisplayingWowMomentConfirmation: tw,
+                premiumBrandRefreshBackgroundClassName: tD,
+                wasTier2PremiumBeforePurchase: ec,
+                customCheckoutFlow: tk,
+                shouldShowSeptemberMarketingMomentBanner: tj,
             },
         ),
         children: (0, r.jsx)(a.Elements, {
-            options: H.OBo,
-            stripe: ec,
-            children: et,
+            options: Y.OBo,
+            stripe: eu,
+            children: en,
         }),
     });
 }

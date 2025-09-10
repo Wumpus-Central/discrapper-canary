@@ -2056,7 +2056,8 @@ let eE = "@me",
         VERIFY_HUB_EMAIL: "/verify-hub-email",
         OPEN_APP_FROM_EMAIL: "/open-app-from-email",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
-        BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e) => "/billing/premium/manage?deep_link_type=".concat(e),
+        BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
+            "/billing/premium/manage?deep_link_type=".concat(e).concat(null != t ? "&load_id=".concat(t) : ""),
         BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i) =>
             "/billing/premium/subscribe?plan_id="
                 .concat(e, "&gift=")
@@ -4632,6 +4633,7 @@ var nb = (function (e) {
             (e.SURVEY_SUBMITTED = "survey_submitted"),
             (e.CANCELLATION_FLOW_STARTED = "cancellation_flow_started"),
             (e.CANCELLATION_FLOW_STEP = "cancellation_flow_step"),
+            (e.CANCELLATION_FLOW_COMPLETED = "cancellation_flow_completed"),
             (e.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED = "cancellation_flow_discount_offer_prompt_viewed"),
             (e.ATTACHMENT_UPLOAD_STARTED = "attachment_upload_started"),
             (e.ATTACHMENT_UPLOAD_FINISHED = "attachment_upload_finished"),
@@ -4667,6 +4669,7 @@ var nb = (function (e) {
             (e.CLIPS_ENABLED_TOGGLED = "clips_enabled_toggled"),
             (e.CLIPS_SETTINGS_UPDATED = "clips_settings_updated"),
             (e.STANDALONE_BILLING_FLOW_STARTED = "standalone_billing_flow_started"),
+            (e.MOBILE_OPEN_STANDALONE_MANAGE_SUBSCRIPTION_PAGE = "mobile_open_standalone_manage_subscription_page"),
             (e.STANDALONE_MANAGE_SUBSCRIPTION_PAGE_VIEWED = "standalone_manage_subscription_page_viewed"),
             (e.INBOUND_PROMOTION_VIEWED = "inbound_promotion_viewed"),
             (e.INBOUND_PROMOTION_ELIGIBILITY_CHECKED = "inbound_promotion_eligibility_checked"),

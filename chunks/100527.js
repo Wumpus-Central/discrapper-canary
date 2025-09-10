@@ -441,6 +441,7 @@ var r = (function (e) {
         (e.CONNECTED_ACCOUNT_RELINK_BUTTON = "connected account relink button"),
         (e.APP_MESSAGE_EMBED = "app message embed"),
         (e.USER_SETTINGS_SESSIONS = "user settings sessions"),
+        (e.MOBILE_APP_MANAGE_PREMIUM_SUBSCRIPTION_CTA = "mobile app manage premium subscription cta"),
         (e.SHARING_CONTROLS_COACHMARK = "sharing controls coachmark"),
         (e.NOT_SHARING_LINK = "not sharing link"),
         (e.USER_PROFILE_POPOUT = "user profile popout"),
