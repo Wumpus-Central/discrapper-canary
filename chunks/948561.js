@@ -125,7 +125,7 @@ let B = (e, t) => {
 function Z(e) {
     return null == L[j(e)];
 }
-function V(e, t) {
+function F(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
         i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(Z) : e.filter(Z);
     i.forEach((e) => {
@@ -149,7 +149,7 @@ function V(e, t) {
           }, Math.random() * x)
         : B(i, a);
 }
-function F(e) {
+function V(e) {
     let t = {},
         n = {};
     return (
@@ -266,7 +266,7 @@ function H(e) {
     r.length > 0 && (n = [...n, ...r]);
     let i = o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
         a = i.filter((e) => (0, A.MD)(e)),
-        s = F(i);
+        s = V(i);
     return {
         messagesPendingScan: a,
         attributesByMessageId: s.messageLookup,
@@ -295,7 +295,7 @@ function Y(e) {
     r.length > 0 && (n = [...n, ...r]);
     let i = o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
         a = i.filter((e) => (0, A.MD)(e)),
-        s = F(i);
+        s = V(i);
     return {
         messagesPendingScan: a,
         attributesByChannelId: s.channelLookup,
@@ -329,7 +329,7 @@ function W(e, t) {
                     numOfExplicitEmbeds: n.numOfExplicitEmbeds,
                 });
             }),
-        n.length > 0 && (V(n, t), !0)
+        n.length > 0 && (F(n, t), !0)
     );
 }
 function K(e) {
@@ -359,7 +359,7 @@ function K(e) {
                     numOfExplicitEmbeds: n.numOfExplicitEmbeds,
                 });
             }),
-        t.length > 0 && (V(t), !0)
+        t.length > 0 && (F(t), !0)
     );
 }
 function z(e) {
@@ -369,8 +369,10 @@ function z(e) {
         null == s.channel_id ||
         null == s.id ||
         (null == (t = s.author) ? void 0 : t.id) === _.default.getId() ||
-        (null == s.embeds && null == s.attachments) ||
-        ((null == (n = s.embeds) ? void 0 : n.length) === 0 && (null == (r = s.attachments) ? void 0 : r.length) === 0)
+        (null == s.embeds && null == s.attachments && !(0, I.M0)(s)) ||
+        ((null == (n = s.embeds) ? void 0 : n.length) === 0 &&
+            (null == (r = s.attachments) ? void 0 : r.length) === 0 &&
+            !(0, I.M0)(s))
     )
         return !1;
     if (!(0, A.MD)(s)) {

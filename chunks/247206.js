@@ -5,6 +5,7 @@ n.d(t, {
     JO: () => P,
     Jl: () => w,
     Ks: () => N,
+    M0: () => D,
     OP: () => b,
     Pq: () => E,
     QN: () => v,
@@ -234,4 +235,16 @@ function P(e) {
 function w(e) {
     let { obscure: t } = e;
     (0, i.M$)() && l.default.track(_.rMx.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
+}
+function D(e) {
+    var t;
+    return null == (t = e.message_snapshots)
+        ? void 0
+        : t.some((e) => {
+              var t, n;
+              return (
+                  ((null == (t = e.message) ? void 0 : t.attachments) != null && e.message.attachments.length > 0) ||
+                  ((null == (n = e.message) ? void 0 : n.embeds) != null && e.message.embeds.length > 0)
+              );
+          });
 }
