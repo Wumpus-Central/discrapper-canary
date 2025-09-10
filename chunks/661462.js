@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => O,
-    Z: () => y,
+    F: () => _,
+    Z: () => E,
 }),
     n(388685);
 var r = n(951288),
@@ -8,14 +8,15 @@ var r = n(951288),
     l = n(120356),
     a = n.n(l),
     o = n(481060),
-    c = n(785717),
-    s = n(128156),
+    s = n(785717),
+    c = n(128156),
     u = n(311044),
     d = n(408986),
-    f = n(778414),
-    g = n(228168),
-    b = n(883101);
-function p(e) {
+    p = n(778414),
+    f = n(414655),
+    h = n(228168),
+    g = n(883101);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +41,7 @@ function p(e) {
     }
     return e;
 }
-function m(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +59,7 @@ function m(e, t) {
         e
     );
 }
-function O(e) {
+function _(e) {
     var { children: t, className: n, scrollerRef: i } = e,
         l = (function (e, t) {
             if (null == e) return {};
@@ -83,11 +84,11 @@ function O(e) {
         })(e, ["children", "className", "scrollerRef"]);
     return (0, r.jsx)(
         o.Ttm,
-        m(
-            p(
+        b(
+            m(
                 {
                     ref: i,
-                    className: a()(b.tabPanelScroller, n),
+                    className: a()(g.tabPanelScroller, n),
                     fade: !0,
                 },
                 l,
@@ -96,7 +97,7 @@ function O(e) {
         ),
     );
 }
-function j(e) {
+function O(e) {
     let {
         user: t,
         currentUser: n,
@@ -104,86 +105,88 @@ function j(e) {
         subsection: l,
         displayProfile: a,
         guildId: o,
-        channelId: c,
-        onClose: b,
+        channelId: s,
+        onClose: g,
     } = e;
-    return i === g.oh.ACTIVITY
-        ? (0, r.jsx)(s.Z, {
+    return i === h.oh.ACTIVITY
+        ? (0, r.jsx)(c.Z, {
               user: t,
               currentUser: n,
               displayProfile: a,
               guildId: o,
-              channelId: c,
+              channelId: s,
               subsection: l,
-              onClose: b,
+              onClose: g,
           })
-        : i === g.oh.MUTUAL_FRIENDS
+        : i === h.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(u.Z, {
                 user: t,
                 guildId: o,
-                channelId: c,
-                onClose: b,
+                channelId: s,
+                onClose: g,
             })
-          : i === g.oh.MUTUAL_GUILDS
+          : i === h.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(d.Z, {
                   user: t,
-                  onClose: b,
+                  onClose: g,
               })
-            : i === g.oh.WIDGETS
-              ? (0, r.jsx)(f.C, {
+            : i === h.oh.WIDGETS
+              ? (0, r.jsx)(p.C, {
                     user: t,
                     guildId: o,
-                    channelId: c,
+                    channelId: s,
                 })
-              : null;
+              : i === h.oh.WISHLIST
+                ? (0, r.jsx)(f.Z, {})
+                : null;
 }
-function y(e) {
+function E(e) {
     var t;
     let {
             user: n,
             currentUser: l,
             displayProfile: a,
-            guildId: s,
+            guildId: c,
             channelId: u,
             items: d,
-            initialSection: f,
-            initialSubsection: g,
-            onClose: O,
+            initialSection: p,
+            initialSubsection: f,
+            onClose: h,
         } = e,
-        { trackUserProfileAction: y } = (0, c.KZ)(),
-        [{ section: x, subsection: v, text: h }, _] = i.useState(
-            m(
-                p(
+        { trackUserProfileAction: _ } = (0, s.KZ)(),
+        [{ section: E, subsection: y, text: v }, I] = i.useState(
+            b(
+                m(
                     {},
                     null !=
                         (t = d.find((e) => {
                             let { section: t } = e;
-                            return t === f;
+                            return t === p;
                         }))
                         ? t
                         : d[0],
                 ),
-                { subsection: g },
+                { subsection: f },
             ),
         );
     return (0, r.jsxs)("div", {
-        className: b.container,
+        className: g.container,
         children: [
             (0, r.jsx)(o.Ttm, {
                 orientation: "horizontal",
-                className: b.tabListScroller,
+                className: g.tabListScroller,
                 fade: !0,
                 paddingFix: !1,
                 children: (0, r.jsx)(o.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: x,
+                    selectedItem: E,
                     onItemSelect: (e) => {
-                        y({
+                        _({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            _((t) => {
+                            I((t) => {
                                 var n;
                                 return null != (n = d.find((t) => t.section === e)) ? n : t;
                             });
@@ -192,7 +195,7 @@ function y(e) {
                         (0, r.jsx)(
                             o.njP.Item,
                             {
-                                className: b.tabBarItem,
+                                className: g.tabBarItem,
                                 id: e.section,
                                 "aria-label": e.text,
                                 children: e.text,
@@ -203,18 +206,18 @@ function y(e) {
                 }),
             }),
             (0, r.jsx)(o.njP.Panel, {
-                id: x,
-                "aria-label": h,
-                className: b.tabBarPanel,
-                children: (0, r.jsx)(j, {
+                id: E,
+                "aria-label": v,
+                className: g.tabBarPanel,
+                children: (0, r.jsx)(O, {
                     user: n,
                     currentUser: l,
                     displayProfile: a,
-                    guildId: s,
+                    guildId: c,
                     channelId: u,
-                    section: x,
-                    subsection: v,
-                    onClose: O,
+                    section: E,
+                    subsection: y,
+                    onClose: h,
                 }),
             }),
         ],

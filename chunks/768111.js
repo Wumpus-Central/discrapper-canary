@@ -1,48 +1,56 @@
-t.d(n, { Z: () => f }), t(539854);
-var r = t(447448),
-    l = t(461133),
-    o = t(585305),
-    i = t(806729),
-    c = t(517157),
+t.d(n, { Z: () => p }), t(539854);
+var o = t(447448),
+    r = t(461133),
+    l = t(46841),
+    i = t(585305),
+    c = t(806729),
+    a = t(517157),
     s = t(708108),
-    a = t(146078),
-    d = t(228168),
-    u = t(388032);
-function f(e) {
+    d = t(146078),
+    u = t(228168),
+    f = t(388032);
+function p(e) {
     let { user: n, currentUser: t } = e,
-        { mutualFriendsCount: f, mutualGuilds: m } = (0, i.Z)(n),
-        p = null == m ? void 0 : m.length,
-        h = (0, o.Z)(n),
-        x = (0, r.k)({ location: "useUserProfileModalV2TabBarItems" }),
-        b = (0, l.P)({ location: "useUserProfileModalV2TabBarItems" }),
-        j = (0, c.Z)(n.id),
-        g = [],
-        v = n.id === (null == t ? void 0 : t.id),
-        y = j.length > 0;
+        { mutualFriendsCount: p, mutualGuilds: m } = (0, c.Z)(n),
+        x = null == m ? void 0 : m.length,
+        b = (0, i.Z)(n),
+        h = (0, o.k)({ location: "useUserProfileModalV2TabBarItems" }),
+        g = (0, r.P)({ location: "useUserProfileModalV2TabBarItems" }),
+        j = (0, a.Z)(n.id),
+        v = (0, l.S)({ location: "useUserProfileModalV2TabBarItems" }),
+        y = [],
+        _ = n.id === (null == t ? void 0 : t.id),
+        I = j.length > 0;
     return (
-        ((v && x) || (y && b)) &&
-            g.push({
-                text: u.intl.string(u.t.laViw8),
-                section: d.oh.WIDGETS,
+        ((_ && h) || (I && g)) &&
+            y.push({
+                text: f.intl.string(f.t.laViw8),
+                section: u.oh.WIDGETS,
                 subsection: void 0,
             }),
-        g.push({
-            text: u.intl.string(u.t.chq59f),
-            section: d.oh.ACTIVITY,
+        y.push({
+            text: f.intl.string(f.t.chq59f),
+            section: u.oh.ACTIVITY,
             subsection: void 0,
         }),
-        n.id !== (null == t ? void 0 : t.id) &&
-            h &&
-            (g.push({
-                text: (0, s.Z)(f),
-                section: d.oh.MUTUAL_FRIENDS,
+        v &&
+            y.push({
+                text: f.intl.string(f.t["7lZ31N"]),
+                section: u.oh.WISHLIST,
                 subsection: void 0,
             }),
-            g.push({
-                text: (0, a.Z)(p),
-                section: d.oh.MUTUAL_GUILDS,
+        n.id !== (null == t ? void 0 : t.id) &&
+            b &&
+            (y.push({
+                text: (0, s.Z)(p),
+                section: u.oh.MUTUAL_FRIENDS,
+                subsection: void 0,
+            }),
+            y.push({
+                text: (0, d.Z)(x),
+                section: u.oh.MUTUAL_GUILDS,
                 subsection: void 0,
             })),
-        g
+        y
     );
 }

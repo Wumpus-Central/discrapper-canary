@@ -24,6 +24,7 @@ var o = (function (e) {
             (e.MUTUAL_FRIENDS = "MUTUAL_FRIENDS"),
             (e.BOT_DATA_ACCESS = "BOT_DATA_ACCESS"),
             (e.WIDGETS = "WIDGETS"),
+            (e.WISHLIST = "WISHLIST"),
             e
         );
     })({}),
