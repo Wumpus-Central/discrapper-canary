@@ -1,36 +1,37 @@
-n.d(t, { default: () => _ });
+n.d(t, { default: () => L });
 var r = n(951288);
 n(647438);
-var i = n(442837),
-    l = n(481060),
-    o = n(846027),
-    a = n(239091),
-    c = n(287734),
+var l = n(392711),
+    i = n(442837),
+    o = n(481060),
+    a = n(846027),
+    c = n(239091),
+    u = n(287734),
     s = n(872810),
-    u = n(410575),
-    d = n(906732),
+    d = n(410575),
+    b = n(906732),
     f = n(418469),
-    b = n(701098),
-    p = n(607783),
-    g = n(435064),
-    O = n(779618),
-    h = n(39604),
-    j = n(258609),
-    m = n(569545),
-    I = n(352978),
+    p = n(701098),
+    g = n(607783),
+    O = n(435064),
+    I = n(779618),
+    S = n(39604),
+    h = n(258609),
+    j = n(569545),
+    m = n(352978),
     y = n(441167),
-    S = n(700994),
+    E = n(700994),
     v = n(199902),
     w = n(314897),
     Z = n(592125),
-    E = n(131951),
-    x = n(594174),
-    C = n(444295),
+    x = n(131951),
+    C = n(594174),
+    k = n(444295),
     P = n(1226),
-    k = n(981631),
-    V = n(65154),
-    A = n(388032);
-function N(e) {
+    V = n(981631),
+    A = n(65154),
+    _ = n(388032);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +56,7 @@ function N(e) {
     }
     return e;
 }
-function D(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,118 +74,125 @@ function D(e, t) {
         e
     );
 }
-function L(e) {
+function T(e) {
     return (0, i.e7)([v.Z], () => {
         let t = v.Z.getActiveStreamForApplicationStream(e);
-        return null != t && (0, m.V9)(t) === (0, m.V9)(e);
+        return null != t && (0, j.V9)(t) === (0, j.V9)(e);
     });
 }
-function _(e) {
-    let { stream: t, analyticsContext: n, appContext: v, exitFullscreen: _, onSelect: M } = e,
-        T = (function (e) {
-            let t = L(e),
-                n = (0, O.Z)(E.Z),
-                o = g.Z.getSettings().clipsEnabled,
+function L(e) {
+    let { stream: t, analyticsContext: n, appContext: v, exitFullscreen: L, onSelect: G } = e,
+        M = (function (e) {
+            let t = T(e),
+                n = (0, I.Z)(x.Z),
+                l = O.Z.getSettings().clipsEnabled,
                 a = e.ownerId === w.default.getId(),
-                { enableViewerClipping: c, ignoreSenderPreference: s } = y.Z.useExperiment(
+                { enableViewerClipping: c, ignoreSenderPreference: u } = y.Z.useExperiment(
                     { location: "StreamContextMenu" },
                     { autoTrackExposure: !1 },
                 ),
-                u = (0, i.e7)([g.Z], () => g.Z.getIsAtMaxSaveClipOperations()),
-                d = (0, i.e7)([g.Z], () => g.Z.isViewerClippingAllowedForUser(e.ownerId)) || s;
+                s = (0, i.e7)([O.Z], () => O.Z.getIsAtMaxSaveClipOperations()),
+                d = (0, i.e7)([O.Z], () => O.Z.isViewerClippingAllowedForUser(e.ownerId)) || u;
             return n && c && t
-                ? (0, r.jsx)(l.sNh, {
+                ? (0, r.jsx)(o.sNh, {
                       id: "clip-stream",
-                      disabled: !o || !(a || d) || u,
-                      label: A.intl.string(A.t.U4URzM),
-                      action: () => (a ? (0, h.C1)() : (0, h.C1)((0, m.V9)(e))),
+                      disabled: !l || !(a || d) || s,
+                      label: _.intl.string(_.t.U4URzM),
+                      action: () => (a ? (0, S.C1)() : (0, S.C1)((0, j.V9)(e))),
                   })
                 : null;
         })(t),
-        B = L(t),
-        R = (function (e) {
-            let t = L(e),
-                n = (0, S.Z)(e.ownerId, V.Yn.STREAM);
-            return t ? n : null;
+        U = T(t),
+        J = (function (e) {
+            let t = T(e),
+                n = (0, l.debounce)((t) => {
+                    (0, k.Ws)(V.Odu.GO_LIVE, {
+                        type: k.Qu.AUDIO,
+                        value: k.bk.SETTING_ADJUSTED,
+                        userId: e.ownerId,
+                    });
+                }, 1000),
+                r = (0, E.Z)(e.ownerId, A.Yn.STREAM, n);
+            return t ? r : null;
         })(t),
-        U = (function (e) {
+        Q = (function (e) {
             let t,
-                n = (0, i.e7)([j.Z], () => null != j.Z.getRemoteSessionId()),
-                o = (0, i.e7)([Z.Z], () => Z.Z.getChannel(e.channelId), [e.channelId]),
-                a = L(e),
-                u = x.default.getCurrentUser(),
-                d = null != u && e.ownerId === u.id;
-            return ((t = d ? A.intl.string(A.t.S5anIS) : a ? A.intl.string(A.t.q3O3Jy) : A.intl.string(A.t["7Xq/nZ"])),
-            n || (!d && a && (null == o ? void 0 : o.isGuildStageVoice())))
+                n = (0, i.e7)([h.Z], () => null != h.Z.getRemoteSessionId()),
+                l = (0, i.e7)([Z.Z], () => Z.Z.getChannel(e.channelId), [e.channelId]),
+                a = T(e),
+                c = C.default.getCurrentUser(),
+                d = null != c && e.ownerId === c.id;
+            return ((t = d ? _.intl.string(_.t.S5anIS) : a ? _.intl.string(_.t.q3O3Jy) : _.intl.string(_.t["7Xq/nZ"])),
+            n || (!d && a && (null == l ? void 0 : l.isGuildStageVoice())))
                 ? null
-                : (0, r.jsx)(l.sNh, {
+                : (0, r.jsx)(o.sNh, {
                       id: "watch",
                       label: t,
                       action: a
                           ? function () {
-                                (0, s.g)((0, m.V9)(e)),
-                                    (0, C.Ws)(k.Odu.GO_LIVE, {
-                                        type: C.Qu.GO_LIVE,
-                                        value: C.bk.DISABLED,
+                                (0, s.g)((0, j.V9)(e)),
+                                    (0, k.Ws)(V.Odu.GO_LIVE, {
+                                        type: k.Qu.GO_LIVE,
+                                        value: k.bk.DISABLED,
                                         userId: e.ownerId,
                                     });
                             }
                           : function () {
-                                c.default.selectVoiceChannel(e.channelId),
+                                u.default.selectVoiceChannel(e.channelId),
                                     (0, s.rn)(e),
-                                    (0, C.Ws)(k.Odu.GO_LIVE, {
-                                        type: C.Qu.GO_LIVE,
-                                        value: C.bk.ENABLED,
+                                    (0, k.Ws)(V.Odu.GO_LIVE, {
+                                        type: k.Qu.GO_LIVE,
+                                        value: k.bk.ENABLED,
                                         userId: e.ownerId,
                                     });
                             },
                   });
         })(t),
-        G = (function (e) {
-            let t = L(e),
-                n = (0, i.e7)([E.Z], () => E.Z.isLocalMute(e.ownerId, V.Yn.STREAM)),
-                a = x.default.getCurrentUser(),
-                c = null != a && e.ownerId === a.id;
+        R = (function (e) {
+            let t = T(e),
+                n = (0, i.e7)([x.Z], () => x.Z.isLocalMute(e.ownerId, A.Yn.STREAM)),
+                l = C.default.getCurrentUser(),
+                c = null != l && e.ownerId === l.id;
             return !t || c
                 ? null
-                : (0, r.jsx)(l.S89, {
+                : (0, r.jsx)(o.S89, {
                       id: "mute",
-                      label: A.intl.string(A.t.sWmtIy),
+                      label: _.intl.string(_.t.sWmtIy),
                       action: function () {
-                          o.Z.toggleLocalMute(e.ownerId, V.Yn.STREAM);
+                          a.Z.toggleLocalMute(e.ownerId, A.Yn.STREAM);
                       },
                       checked: n,
                   });
         })(t),
-        J = (function (e) {
-            let t = L(e),
+        B = (function (e) {
+            let t = T(e),
                 n = e.ownerId === w.default.getId(),
-                a = E.Z.supports(V.AN.SIDECHAIN_COMPRESSION),
-                c = (0, i.e7)([E.Z], () => E.Z.getSidechainCompression()),
-                s = (0, i.e7)([E.Z], () => E.Z.getSidechainCompressionStrength()),
-                { analyticsLocations: u } = (0, d.ZP)();
-            return !n && t && a
-                ? (0, r.jsxs)(l.kSQ, {
+                l = x.Z.supports(A.AN.SIDECHAIN_COMPRESSION),
+                c = (0, i.e7)([x.Z], () => x.Z.getSidechainCompression()),
+                u = (0, i.e7)([x.Z], () => x.Z.getSidechainCompressionStrength()),
+                { analyticsLocations: s } = (0, b.ZP)();
+            return !n && t && l
+                ? (0, r.jsxs)(o.kSQ, {
                       children: [
-                          (0, r.jsx)(l.S89, {
+                          (0, r.jsx)(o.S89, {
                               id: "sidechain-compression",
-                              label: A.intl.string(A.t["/jwMtr"]),
-                              action: () => o.Z.setSidechainCompression(!c, { analyticsLocations: u }),
+                              label: _.intl.string(_.t["/jwMtr"]),
+                              action: () => a.Z.setSidechainCompression(!c, { analyticsLocations: s }),
                               checked: c,
                           }),
-                          (0, r.jsx)(l.II_, {
+                          (0, r.jsx)(o.II_, {
                               id: "sidechain-parameters",
-                              label: A.intl.string(A.t.fhEzfn),
+                              label: _.intl.string(_.t.fhEzfn),
                               control: (e, t) =>
                                   (0, r.jsx)(
-                                      l._wy,
-                                      D(N({}, e), {
+                                      o._wy,
+                                      N(D({}, e), {
                                           ref: t,
-                                          value: s,
+                                          value: u,
                                           maxValue: 100,
                                           onChange: (e) =>
-                                              o.Z.setSidechainCompressionStrength(e, { analyticsLocations: u }),
-                                          "aria-label": A.intl.string(A.t.fhEzfn),
+                                              a.Z.setSidechainCompressionStrength(e, { analyticsLocations: s }),
+                                          "aria-label": _.intl.string(_.t.fhEzfn),
                                       }),
                                   ),
                           }),
@@ -192,67 +200,79 @@ function _(e) {
                   })
                 : null;
         })(t),
-        Q = (0, f.Z)(t, v, _),
-        F = (0, b.G)({
+        W = (0, f.Z)(t, v, L),
+        F = (0, p.G)({
             stream: t,
             channelId: t.channelId,
         }),
-        Y = (0, p.B)({
+        Y = (0, g.B)({
             userId: t.ownerId,
             channelId: t.channelId,
             guildId: t.guildId,
         }),
         z = (function (e) {
-            let t = (t) => {
-                    (0, P.cq)(e, t);
+            let t = (0, l.debounce)(() => {
+                    (0, k.Ws)(V.Odu.GO_LIVE, {
+                        type: k.Qu.SCREEN_SHARE,
+                        value: k.bk.SETTING_ADJUSTED,
+                        userId: e.ownerId,
+                    });
+                }, 1000),
+                n = (n) => {
+                    (0, P.cq)(e, n), t();
                 },
-                n = (0, P.BO)(e);
-            return (0, r.jsx)(l.II_, {
+                i = (0, P.BO)(e);
+            return (0, r.jsx)(o.II_, {
                 id: "stream-zoom",
-                label: A.intl.string(A.t.B3kEDg),
-                control: (e, i) =>
+                label: _.intl.string(_.t.B3kEDg),
+                control: (e, t) =>
                     (0, r.jsx)(
-                        l._wy,
-                        D(N({}, e), {
-                            ref: i,
-                            value: n,
+                        o._wy,
+                        N(D({}, e), {
+                            ref: t,
+                            value: i,
                             maxValue: 300,
-                            onChange: t,
+                            onChange: n,
                             minValue: 100,
-                            "aria-label": A.intl.string(A.t.B3kEDg),
+                            "aria-label": _.intl.string(_.t.B3kEDg),
                         }),
                     ),
             });
         })(t),
         q = (function (e) {
             let t = (0, P.xN)(e);
-            return (0, r.jsx)(l.S89, {
+            return (0, r.jsx)(o.S89, {
                 id: "fit",
-                label: A.intl.string(A.t.mpnvra),
+                label: _.intl.string(_.t.mpnvra),
                 action: () => {
-                    (0, P.gI)(e, t === I.L.CONTAIN ? I.L.COVER : I.L.CONTAIN);
+                    (0, P.gI)(e, t === m.L.CONTAIN ? m.L.COVER : m.L.CONTAIN),
+                        (0, k.Ws)(V.Odu.GO_LIVE, {
+                            type: k.Qu.GO_LIVE,
+                            value: k.bk.SETTING_ADJUSTED,
+                            userId: e.ownerId,
+                        });
                 },
-                checked: t === I.L.COVER,
+                checked: t === m.L.COVER,
             });
         })(t);
-    return (0, r.jsx)(u.Z, {
+    return (0, r.jsx)(d.Z, {
         context: n,
-        object: k.qAy.CONTEXT_MENU,
-        children: (0, r.jsxs)(l.v2r, {
+        object: V.qAy.CONTEXT_MENU,
+        children: (0, r.jsxs)(o.v2r, {
             navId: "stream-context",
-            onClose: a.Zy,
-            "aria-label": A.intl.string(A.t.Gl3Q39),
-            onSelect: M,
+            onClose: c.Zy,
+            "aria-label": _.intl.string(_.t.Gl3Q39),
+            onSelect: G,
             children: [
-                (0, r.jsxs)(l.kSQ, {
-                    children: [U, T, G, F, Y],
+                (0, r.jsxs)(o.kSQ, {
+                    children: [Q, M, R, F, Y],
                 }),
-                (0, r.jsx)(l.kSQ, { children: R }),
-                (0, r.jsxs)(l.kSQ, {
+                (0, r.jsx)(o.kSQ, { children: J }),
+                (0, r.jsxs)(o.kSQ, {
                     children: [z, q],
                 }),
-                J,
-                (0, r.jsx)(l.kSQ, { children: B && Q }),
+                B,
+                (0, r.jsx)(o.kSQ, { children: U && W }),
             ],
         }),
     });

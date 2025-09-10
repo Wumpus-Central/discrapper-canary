@@ -40,6 +40,7 @@ class o extends r.Z {
             i(this, "size", void 0),
             i(this, "minSize", void 0),
             i(this, "pinned", void 0),
+            i(this, "showExtrasHintTimestamp", void 0),
             i(this, "zIndex", void 0),
             i(this, "opacity", void 0),
             i(this, "meta", void 0),
@@ -82,6 +83,7 @@ class o extends r.Z {
             (this.pinned = !!e.pinned),
             (this.zIndex = e.zIndex || 0),
             (this.opacity = null != (n = e.opacity) ? n : 1),
-            (this.meta = a({}, e.meta));
+            (this.meta = a({}, e.meta)),
+            null != e.showExtrasHintTimestamp && (this.showExtrasHintTimestamp = e.showExtrasHintTimestamp);
     }
 }

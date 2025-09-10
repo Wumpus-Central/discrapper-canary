@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685), n(642613), n(415506);
+n.d(t, { Z: () => en }), n(388685), n(415506), n(642613);
 var r = n(772848),
     i = n(379649),
     a = n(570140),
@@ -113,6 +113,13 @@ class j {
             [A.Vk.Other]: 0,
         };
     }
+    static makeCounters() {
+        let e = {},
+            t = Object.values(A.n0);
+        for (let n of t) e[n] = new L();
+        if (Object.keys(e).length !== t.length) throw Error("NotificationAnalytics: Failed to make counters");
+        return e;
+    }
     increment(e, t) {
         let n = this.groupCounters[t];
         if (null == n) return void x.error("NotificationCounter: Unknown notification action: ".concat(t));
@@ -160,24 +167,7 @@ class j {
                 [A.bv.Viewed]: j.makeEmptyGroupAnalytics(),
                 [A.bv.Clicked]: j.makeEmptyGroupAnalytics(),
             }),
-            C(this, "counters", {
-                [A.n0.NewsNudge]: new L(),
-                [A.n0.WelcomeNudge]: new L(),
-                [A.n0.OopWelcomeNudge]: new L(),
-                [A.n0.TextChat]: new L(),
-                [A.n0.ActivityUserJoin]: new L(),
-                [A.n0.ActivityInvite]: new L(),
-                [A.n0.IncomingCall]: new L(),
-                [A.n0.GoLiveNudge]: new L(),
-                [A.n0.GoLiveNonVoiceNudge]: new L(),
-                [A.n0.OverlayCrashed]: new L(),
-                [A.n0.ClipsReminderNotification]: new L(),
-                [A.n0.ClipsNotification]: new L(),
-                [A.n0.KeybindIndicatorsNotification]: new L(),
-                [A.n0.SendGameInvitesNotification]: new L(),
-                [A.n0.NowPlayingNotification]: new L(),
-                [A.n0.RequestToStream]: new L(),
-            });
+            C(this, "counters", j.makeCounters());
     }
 }
 class M {
@@ -601,14 +591,14 @@ function Z(e) {
         return void x.error("OVERLAY_SET_INPUT_LOCKED: Unable to find game", e, G.debug);
     t.setLocked(e.locked);
 }
-function V(e) {
+function F(e) {
     var t;
     if ((x.verbose("OVERLAY_NOTIFICATION_EVENT", e), null == e.gameName && null == e.gameId)) return;
     let n = G.getByName(null != (t = e.gameName) ? t : e.gameId);
     if (null == n) return void x.error("OVERLAY_NOTIFICATION_EVENT: Game not found.", e, G.debug);
     n.notificationAnalytics.increment(e.notificationType, e.action);
 }
-function F(e) {
+function V(e) {
     var t;
     if ((x.verbose("OVERLAY_WIDGET_CHANGED", e), null == e.gameName && null == e.gameId)) return;
     let n = G.getByName(null != (t = e.gameName) ? t : e.gameId);
@@ -741,9 +731,9 @@ class et extends s.Z {
                       }
                     : {
                           OVERLAY_FOCUSED: H,
-                          OVERLAY_NOTIFICATION_EVENT: V,
+                          OVERLAY_NOTIFICATION_EVENT: F,
                           OVERLAY_SET_INPUT_LOCKED: Z,
-                          OVERLAY_WIDGET_CHANGED: F,
+                          OVERLAY_WIDGET_CHANGED: V,
                           OVERLAY_MESSAGE_EVENT_ACTION: W,
                           RUNNING_GAMES_CHANGE: B,
                           SOUNDBOARD_SET_OVERLAY_ENABLED: Y,

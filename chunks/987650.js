@@ -73,6 +73,7 @@ var s = (function (e) {
             (e.SendGameInvitesNotification = "Send Game Invites Notification"),
             (e.NowPlayingNotification = "Now Playing Notification"),
             (e.RequestToStream = "Request To Stream"),
+            (e.StreamWatchNudge = "Stream Watch Nudge"),
             e
         );
     })({}),

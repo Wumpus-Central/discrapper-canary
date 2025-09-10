@@ -100,6 +100,7 @@ var h = (function (e) {
             (e.REDIRECT = "redirect"),
             (e.FRIEND_LIST = "friend list"),
             (e.FRIEND_REQUEST = "friend request"),
+            (e.KEYBIND_HINT = "keybind hint"),
             e
         );
     })({}),
@@ -109,6 +110,7 @@ var h = (function (e) {
             (e.DISABLED = "disabled"),
             (e.SETTINGS_OPENED = "settings opened"),
             (e.PANEL_OPENED = "panel opened"),
+            (e.OVERLAY_UNLOCKED = "overlay unlocked"),
             (e.STREAM_PREVIEWED = "stream previewed"),
             (e.INVITE_SENT = "invite sent"),
             (e.JOIN_REQUEST_SENT = "join request sent"),
@@ -120,6 +122,7 @@ var h = (function (e) {
             (e.CANCEL_REQUEST = "cancel request"),
             (e.SEND_REQUEST = "send request"),
             (e.SEARCH = "search"),
+            (e.SETTING_ADJUSTED = "setting adjusted"),
             e
         );
     })({});

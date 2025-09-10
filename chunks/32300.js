@@ -2,6 +2,7 @@ n.d(t, {
     J0: () => b,
     NW: () => c,
     OV: () => o,
+    RD: () => y,
     Rb: () => l,
     Se: () => p,
     XE: () => u,
@@ -9,10 +10,11 @@ n.d(t, {
     Yo: () => d,
     dj: () => f,
     hS: () => h,
+    lj: () => v,
     mB: () => m,
     o4: () => s,
     qA: () => E,
-    tU: () => O,
+    tU: () => T,
     td: () => _,
 });
 var r = n(818083),
@@ -197,7 +199,40 @@ function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return E.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let y = (0, i.le)({
+var y = (function (e) {
+    return (
+        (e[(e.GREEN_BUTTON_WITH_TEXT = 0)] = "GREEN_BUTTON_WITH_TEXT"),
+        (e[(e.GRAY_BUTTON_WITH_TEXT = 1)] = "GRAY_BUTTON_WITH_TEXT"),
+        (e[(e.SINGLE_ICON_BUTTON = 2)] = "SINGLE_ICON_BUTTON"),
+        e
+    );
+})({});
+let O = (0, i.le)({
+    name: "2025-08-overlay-stream-watch-nudge",
+    kind: "user",
+    defaultConfig: {
+        enabled: !1,
+        designVariant: null,
+    },
+    variations: {
+        1: {
+            enabled: !0,
+            designVariant: 0,
+        },
+        2: {
+            enabled: !0,
+            designVariant: 1,
+        },
+        3: {
+            enabled: !0,
+            designVariant: 2,
+        },
+    },
+});
+function v(e) {
+    return O.getConfig({ location: e });
+}
+let I = (0, i.le)({
     name: "2025-08-overlay-v3-one-click-go-live",
     kind: "user",
     defaultConfig: {
@@ -215,6 +250,6 @@ let y = (0, i.le)({
         },
     },
 });
-function O(e) {
-    return y.getConfig({ location: e });
+function T(e) {
+    return I.getConfig({ location: e });
 }

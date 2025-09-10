@@ -1,7 +1,7 @@
 n.d(t, {
-    Co: () => el,
+    Co: () => ec,
     QS: () => g,
-    ZP: () => es,
+    ZP: () => el,
 });
 var r = n(951288),
     i = n(647438),
@@ -230,6 +230,7 @@ var g = (function (e) {
         (e.CONTENT_IMAGE_60 = "svg-mask-content-image-60"),
         (e.CONTENT_IMAGE_72 = "svg-mask-content-image-72"),
         (e.CONTENT_IMAGE_100 = "svg-mask-content-image-100"),
+        (e.USER_AVATAR_WITH_GAME_ICON = "svg-mask-user-avatar-with-game-icon"),
         e
     );
 })({});
@@ -768,7 +769,7 @@ function Z(e) {
         ],
     });
 }
-function V(e) {
+function F(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -790,7 +791,7 @@ function V(e) {
         ],
     });
 }
-function F(e) {
+function V(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1082,6 +1083,20 @@ function er(e) {
     });
 }
 function ei(e) {
+    return (0, r.jsx)("mask", {
+        id: e,
+        maskContentUnits: "objectBoundingBox",
+        viewBox: "0 0 1 1",
+        children: (0, r.jsx)("rect", {
+            fill: "white",
+            rx: 0.3,
+            ry: 0.3,
+            width: 1,
+            height: 1,
+        }),
+    });
+}
+function ea(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1103,7 +1118,7 @@ function ei(e) {
         ],
     });
 }
-function ea(e) {
+function eo(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -1114,7 +1129,7 @@ function ea(e) {
         }),
     });
 }
-function eo(e) {
+function es(e) {
     var {
             mask: t,
             width: n = E,
@@ -1165,9 +1180,9 @@ function eo(e) {
         ),
     );
 }
-eo.Masks = g;
-let es = eo,
-    el = i.memo(
+es.Masks = g;
+let el = es,
+    ec = i.memo(
         function () {
             return (0, r.jsxs)("svg", {
                 viewBox: "0 0 1 1",
@@ -1290,8 +1305,8 @@ let es = eo,
                     w("svg-mask-diagonal-facepile-typing-120", c.EF.SIZE_120),
                     Z("svg-mask-status-online-mobile"),
                     L("svg-mask-status-online"),
-                    V("svg-mask-status-idle"),
-                    F("svg-mask-status-dnd"),
+                    F("svg-mask-status-idle"),
+                    V("svg-mask-status-dnd"),
                     H("svg-mask-status-offline"),
                     Y("svg-mask-status-streaming"),
                     W("svg-mask-status-typing"),
@@ -1308,11 +1323,12 @@ let es = eo,
                     ee("svg-mask-content-inventory-card-face-pile-avatar"),
                     en("svg-mask-guild-popout-activity-icon"),
                     er("svg-mask-clan-icon"),
-                    ei("svg-mask-badged-guild-icon"),
-                    ea("svg-mask-forward-attachment-pile-overflow"),
+                    ea("svg-mask-badged-guild-icon"),
+                    eo("svg-mask-forward-attachment-pile-overflow"),
                     et("svg-mask-content-image-60", 60, 24, 2),
                     et("svg-mask-content-image-72", 72, 32, 4),
                     et("svg-mask-content-image-100", 100, 32, 4),
+                    ei("svg-mask-user-avatar-with-game-icon"),
                 ],
             });
         },
