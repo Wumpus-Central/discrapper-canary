@@ -1,99 +1,123 @@
 t.d(n, {
-    VS: () => v,
-    oh: () => g,
-    ok: () => j,
+    VS: () => b,
+    oh: () => j,
+    ok: () => h,
 });
-var a = t(951288);
+var r = t(951288);
 t(647438);
 var i = t(120356),
-    r = t.n(i),
+    a = t.n(i),
     l = t(512722),
-    s = t.n(l),
-    o = t(603113),
+    o = t.n(l),
+    s = t(603113),
     c = t(481060),
     d = t(183369),
-    u = t(401561),
-    m = t(388032),
+    u = t(985862),
+    m = t(401561),
+    g = t(388032),
     p = t(946410);
-function x(e) {
+function f(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
-            a = Object.keys(t);
+            r = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (a = a.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            a.forEach(function (n) {
-                var a;
-                (a = t[n]),
+            r.forEach(function (n) {
+                var r;
+                (r = t[n]),
                     n in e
                         ? Object.defineProperty(e, n, {
-                              value: a,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = a);
+                        : (e[n] = r);
             });
     }
     return e;
 }
-function g(e) {
-    var n, t;
-    let i,
-        { onNext: r, stepAction: l, stepLoading: o } = (0, d.aj)(),
-        p = null == l || null == (n = l.onNext) ? void 0 : n.type;
-    switch (p) {
-        case "go-to-step":
-            i = m.intl.string(m.t["3PatS0"]);
-            break;
-        case "purchase":
-            i = m.intl.string(u.default.MPNPJS);
-            break;
-        case "save":
-            i = m.intl.string(m.t.R3BPHx);
-    }
-    return (
-        s()(null != i, "Invalid stepType ".concat(p)),
-        (0, a.jsx)(
-            c.zxk,
-            x(
-                {
-                    variant: "purchase" === p ? "expressive" : "primary",
-                    text: i,
-                    onClick: r,
-                    icon: (null == l || null == (t = l.onNext) ? void 0 : t.type) === "go-to-step" ? c.ZSh : void 0,
-                    iconPosition: "end",
-                    loading: o,
-                },
-                e,
-            ),
-        )
+function v(e) {
+    let { onNext: n } = (0, d.aj)();
+    return (0, r.jsx)(
+        c.zxk,
+        f(
+            {
+                variant: "primary",
+                text: g.intl.string(g.t["3PatS0"]),
+                onClick: n,
+                icon: c.ZSh,
+                iconPosition: "end",
+            },
+            e,
+        ),
     );
 }
-function v(e) {
+function x(e) {
+    let { onNext: n, stepLoading: t, portkeyInstance: i, availableBoostCount: a } = (0, d.aj)(),
+        l = (0, u.Z)(),
+        o = l > 0 && a < l,
+        s =
+            l > 0
+                ? null != i
+                    ? g.intl.string(m.default["1fogMj"])
+                    : o
+                      ? g.intl.string(m.default.MPNPJS)
+                      : g.intl.string(m.default.ShxV5e)
+                : g.intl.string(g.t.K344S0);
+    return (0, r.jsx)(
+        c.zxk,
+        f(
+            {
+                variant: o || l > 0 ? "expressive" : "primary",
+                text: s,
+                onClick: n,
+                icon: o || l > 0 ? c.$Eu : void 0,
+                iconPosition: "start",
+                loading: t,
+            },
+            e,
+        ),
+    );
+}
+function j(e) {
+    var n;
+    let { stepAction: t } = (0, d.aj)(),
+        i = null == t || null == (n = t.onNext) ? void 0 : n.type;
+    switch (i) {
+        case "go-to-step":
+            return (0, r.jsx)(v, f({}, e));
+        case "save":
+            return (0, r.jsx)(x, f({}, e));
+        default:
+            o()(null != i, "Invalid stepType ".concat(i));
+    }
+}
+function b(e) {
     var n, t, i;
-    let r,
-        { onBack: l, stepAction: o } = (0, d.aj)(),
-        u = null == o || null == (n = o.onBack) ? void 0 : n.type;
+    let a,
+        { onBack: l, stepAction: s } = (0, d.aj)(),
+        u = null == s || null == (n = s.onBack) ? void 0 : n.type;
     switch (u) {
         case "go-to-step":
-            r = m.intl.string(m.t["13/7kZ"]);
+            a = g.intl.string(g.t["13/7kZ"]);
             break;
         case "close":
-            r = m.intl.string(m.t.cpT0Cg);
+            a = g.intl.string(g.t.cpT0Cg);
     }
     return (
-        s()(null != r, "Invalid stepType ".concat(u)),
-        (0, a.jsx)(
+        o()(null != a, "Invalid stepType ".concat(u)),
+        (0, r.jsx)(
             c.zxk,
-            ((t = x({}, e)),
+            ((t = f({}, e)),
             (i = i =
                 {
                     variant: "secondary",
-                    text: r,
+                    text: a,
                     onClick: l,
                     icon: "go-to-step" === u ? c.whL : void 0,
                     iconPosition: "start",
@@ -103,8 +127,8 @@ function v(e) {
                 : (function (e, n) {
                       var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var a = Object.getOwnPropertySymbols(e);
-                          t.push.apply(t, a);
+                          var r = Object.getOwnPropertySymbols(e);
+                          t.push.apply(t, r);
                       }
                       return t;
                   })(Object(i)).forEach(function (e) {
@@ -114,14 +138,14 @@ function v(e) {
         )
     );
 }
-function j(e) {
+function h(e) {
     let { step: n, className: t, children: i } = e,
-        { footerNode: l, step: s } = (0, d.aj)();
-    return null == l || s !== n
+        { footerNode: l, step: o } = (0, d.aj)();
+    return null == l || o !== n
         ? null
-        : o.createPortal(
-              (0, a.jsx)("div", {
-                  className: r()(p.footer, t),
+        : s.createPortal(
+              (0, r.jsx)("div", {
+                  className: a()(p.footer, t),
                   children: i,
               }),
               l,
