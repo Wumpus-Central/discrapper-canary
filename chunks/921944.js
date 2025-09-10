@@ -34,6 +34,7 @@ var r = (function (e) {
             (e.APP_LAUNCHER_ONBOARDING = "APP_LAUNCHER_ONBOARDING"),
             (e.VIRTUAL_CURRENCY_ONBOARDING = "VIRTUAL_CURRENCY_ONBOARDING"),
             (e.ACCOUNT_NAME_ZONE = "ACCOUNT_NAME_ZONE"),
+            (e.VIRTUAL_CURRENCY_MOBILE_ONBOARDING = "VIRTUAL_CURRENCY_MOBILE_ONBOARDING"),
             e
         );
     })({});
