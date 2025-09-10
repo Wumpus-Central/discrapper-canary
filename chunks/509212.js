@@ -3,7 +3,7 @@ n.d(t, {
     $J: () => e7,
     $V: () => to,
     AV: () => ef,
-    B2: () => tT,
+    B2: () => tS,
     B3: () => th,
     BM: () => tt,
     Bg: () => eE,
@@ -17,7 +17,7 @@ n.d(t, {
     Fs: () => td,
     GN: () => e_,
     Gd: () => tg,
-    HJ: () => e5,
+    HJ: () => e6,
     Jg: () => eA,
     K: () => ev,
     KM: () => eL,
@@ -44,7 +44,7 @@ n.d(t, {
     _j: () => tl,
     _p: () => tp,
     b7: () => eX,
-    bA: () => tS,
+    bA: () => tT,
     f$: () => t_,
     f2: () => eU,
     fY: () => tr,
@@ -67,12 +67,12 @@ n.d(t, {
     uN: () => tN,
     vB: () => tx,
     vQ: () => eO,
-    vR: () => eS,
+    vR: () => eT,
     xN: () => eb,
     xn: () => eh,
     yH: () => tf,
     yI: () => ei,
-    ys: () => eT,
+    ys: () => eS,
     zE: () => ep,
     zK: () => ej,
     zi: () => z,
@@ -107,8 +107,8 @@ var p = n(231757),
     O = n(823379),
     v = n(960048),
     I = n(617136),
-    S = n(272008),
-    T = n(569984),
+    T = n(272008),
+    S = n(569984),
     A = n(497505),
     C = n(184299),
     N = n(937797),
@@ -468,10 +468,10 @@ function eI(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === c.w.VIRTUAL_CURRENCY);
     return null == t ? void 0 : t.orbQuantity;
 }
-function eS(e, t) {
+function eT(e, t) {
     return e.targetedContent.includes(t);
 }
-function eT(e, t) {
+function eS(e, t) {
     v.Z.captureException(e, U(M({}, t), { tags: U(M({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
 }
 function eA(e, t) {
@@ -554,7 +554,7 @@ function eG(e) {
     return (null == e ? void 0 : e.type) === o.X.PLAY_ON_DESKTOP;
 }
 let eB = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    eZ = (e) => te(e) || T.Z.isProgressingOnDesktop(e.id),
+    eZ = (e) => te(e) || S.Z.isProgressingOnDesktop(e.id),
     eF = (e, t) => {
         var n, r, a, o;
         let s =
@@ -582,7 +582,7 @@ let eB = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
                     ? o
                     : 0;
         if (e4(e)) {
-            let n = T.Z.getOptimisticProgress(e.id, t.type);
+            let n = S.Z.getOptimisticProgress(e.id, t.type);
             return null == n || n < l ? l : n;
         }
         return l + eF(e, t);
@@ -668,7 +668,7 @@ let eB = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
                 includeTaskTypes: null != t ? t : te(e) ? o.T.CONSOLE : o.T.ALL,
             });
         if (e4(e))
-            if (e6(e))
+            if (e5(e))
                 return eW({
                     quest: e,
                     taskType: o.X.WATCH_VIDEO_ON_MOBILE,
@@ -699,10 +699,7 @@ function eX(e) {
     if (null == a) return null;
     let o =
             null !=
-            (i =
-                null == (r = e.userStatus) || null == (n = r.progress) || null == (t = n[a.eventName])
-                    ? void 0
-                    : t.value)
+            (i = null == (r = e.userStatus) || null == (n = r.progress) || null == (t = n[a.type]) ? void 0 : t.value)
                 ? i
                 : 0,
         s = eB(a.target, o);
@@ -737,8 +734,8 @@ function e2(e, t) {
 let e3 = eQ([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
     e4 = eQ([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]),
     e8 = eQ([o.X.WATCH_VIDEO]),
-    e6 = eQ([o.X.WATCH_VIDEO_ON_MOBILE]),
-    e5 = (e) => e6(e) && !e8(e);
+    e5 = eQ([o.X.WATCH_VIDEO_ON_MOBILE]),
+    e6 = (e) => e5(e) && !e8(e);
 function e7(e) {
     return e3(e);
 }
@@ -893,7 +890,7 @@ function tE(e, t) {
     z(e) ||
         (null == (n = e.userStatus) ? void 0 : n.enrolledAt) == null ||
         (null == (r = e.userStatus) ? void 0 : r.completedAt) != null ||
-        (0, S.cT)(e.id, t);
+        (0, T.cT)(e.id, t);
 }
 function tb(e) {
     return {
@@ -915,10 +912,10 @@ let tI = (e) =>
     e.percentComplete > 0
         ? L.intl.formatToPlainString(L.t["c59/Tk"], { remainTime: e1(e) })
         : L.intl.formatToPlainString(L.t.GNsKiY, { remainTime: e1(e) });
-function tS(e, t) {
+function tT(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function tT(e) {
+function tS(e) {
     var t, n;
     let r = R.r.build(e).defaultWatchVideoTask;
     return null !=
@@ -933,17 +930,17 @@ function tT(e) {
 }
 function tA(e, t) {
     var n;
-    let { quest: r, adDecisionData: i } = null != (n = T.Z.questToDeliverForPlacement.get(tb(t))) ? n : {};
+    let { quest: r, adDecisionData: i } = null != (n = S.Z.questToDeliverForPlacement.get(tb(t))) ? n : {};
     return null != i && (null == r ? void 0 : r.id) === e ? i : w.Jp;
 }
 function tC(e) {
     var t;
-    let { metadataRaw: n } = null != (t = T.Z.questToDeliverForPlacement.get(tb(e))) ? t : {};
+    let { metadataRaw: n } = null != (t = S.Z.questToDeliverForPlacement.get(tb(e))) ? t : {};
     return n;
 }
 function tN(e) {
     var t;
-    let { adContext: n } = null != (t = T.Z.questToDeliverForPlacement.get(tb(e))) ? t : {};
+    let { adContext: n } = null != (t = S.Z.questToDeliverForPlacement.get(tb(e))) ? t : {};
     return n;
 }
 function tR(e) {
@@ -971,12 +968,12 @@ function tD(e) {
     let { questId: r, sourceQuestContent: i, videoSessionId: a } = e,
         o = C.ZP.getState().getVideoProgress(r);
     if (null == o) return;
-    let s = T.Z.getQuest(r);
+    let s = S.Z.getQuest(r);
     null != s &&
         (null == (t = s.userStatus) ? void 0 : t.enrolledAt) != null &&
         (null == (n = s.userStatus) ? void 0 : n.completedAt) == null &&
         tE(s, o.maxTimestampSec);
-    let l = tS(o.maxTimestampSec, o.duration);
+    let l = tT(o.maxTimestampSec, o.duration);
     (0, I.dA)({
         questId: r,
         event: D.rMx.QUEST_VIDEO_PROGRESSED,
