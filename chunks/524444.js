@@ -1,21 +1,21 @@
 n.d(t, {
-    A7: () => eo,
-    BO: () => eh,
-    DR: () => ec,
-    G5: () => ef,
-    LE: () => ed,
-    Rp: () => eu,
-    SE: () => eE,
-    W_: () => eg,
-    Y: () => em,
-    Yi: () => en,
+    A7: () => ea,
+    BO: () => ep,
+    DR: () => el,
+    G5: () => ed,
+    LE: () => eu,
+    Rp: () => ec,
+    SE: () => eg,
+    W_: () => em,
+    Y: () => eh,
+    Yi: () => et,
     b_: () => q,
-    hX: () => ee,
-    iT: () => er,
-    lV: () => $,
-    ur: () => ea,
-    wj: () => et,
-    xi: () => ei,
+    hX: () => $,
+    iT: () => en,
+    lV: () => J,
+    ur: () => ei,
+    wj: () => ee,
+    xi: () => er,
 }),
     n(388685);
 var r = n(951288),
@@ -146,17 +146,12 @@ function J(e) {
             onVolumeChange: t,
             onMute: n,
             volume: a,
-            autoMute: s,
-            alt: l,
-            renderAdjacentContent: c,
-            renderOverlayContent: u,
-            disableAltTextDisplay: f = !1,
-            hiddenSpoilers: _,
-            mosaicStyleAlt: p,
-            mediaLayoutType: h,
-            reducedSizeAltTextButton: m,
+            autoMute: o,
+            alt: s,
+            renderAdjacentContent: l,
+            renderOverlayContent: c,
         } = e,
-        g = K(e, [
+        u = K(e, [
             "onVolumeChange",
             "onMute",
             "volume",
@@ -164,103 +159,32 @@ function J(e) {
             "alt",
             "renderAdjacentContent",
             "renderOverlayContent",
-            "disableAltTextDisplay",
-            "hiddenSpoilers",
-            "mosaicStyleAlt",
-            "mediaLayoutType",
-            "reducedSizeAltTextButton",
         ]);
-    let E = X(t),
-        b = Q(n);
-    (a = null == a ? j.FC : a), (s = null == s ? j.rs : s);
-    let [y, O] = i.useState(!0),
-        [v, T] = i.useState(!1),
-        S = h === k.hV.MOSAIC || !0 === p,
-        A = (y || v) && !f && N.H1.getSetting() && null != l && "" !== l && !0 !== _,
-        C = (e) => {
-            let { altText: t } = e;
-            return (0, r.jsxs)(d.VqE, {
-                "aria-label": Z.intl.string(Z.t.fSiQ3N),
-                className: F.mediaMosaicAltTextPopout,
-                onKeyDown: (e) => {
-                    e.key === G.mR.Escape &&
-                        setTimeout(() => {
-                            var e;
-                            return null == (e = R.current) ? void 0 : e.focus();
-                        }, 0);
-                },
-                children: [
-                    (0, r.jsx)("span", {
-                        className: F.mediaMosaicAltTextPopoutTitle,
-                        children: Z.intl.string(Z.t.fSiQ3N),
+    let d = X(t),
+        f = Q(n);
+    return (
+        (a = null == a ? j.FC : a),
+        (o = null == o ? j.rs : o),
+        (0, r.jsxs)(i.Fragment, {
+            children: [
+                (0, r.jsx)(
+                    I.Z,
+                    W(H({}, u), {
+                        alt: s,
+                        volume: a,
+                        autoMute: o,
+                        onVolumeChange: d,
+                        onMute: f,
+                        renderLinkComponent: en,
+                        renderOverlayContent: c,
                     }),
-                    (0, r.jsx)("span", {
-                        className: F.mediaMosaicAltTextPopoutDescription,
-                        children: t,
-                    }),
-                ],
-            });
-        },
-        R = i.useRef(null);
-    return (0, r.jsxs)(i.Fragment, {
-        children: [
-            (0, r.jsx)(
-                I.Z,
-                W(H({}, g), {
-                    alt: l,
-                    volume: a,
-                    autoMute: s,
-                    onVolumeChange: E,
-                    onMute: b,
-                    renderLinkComponent: er,
-                    renderOverlayContent: u,
-                    onControlsShow: () => O(!0),
-                    onControlsHide: () => O(!1),
-                }),
-            ),
-            null != c && c(),
-            S &&
-                A &&
-                (0, r.jsx)("div", {
-                    className: F.mediaMosaicVideoAltTextContainer,
-                    children: (0, r.jsx)(d.yRy, {
-                        targetElementRef: R,
-                        animation: d.yRy.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(C, { altText: l }),
-                        children: (e) =>
-                            (0, r.jsx)(d.tEY, {
-                                offset: 4,
-                                children: (0, r.jsx)(
-                                    "button",
-                                    W(H({}, e), {
-                                        type: "button",
-                                        ref: R,
-                                        "aria-label": Z.intl.string(Z.t.fSiQ3N),
-                                        onMouseEnter: () => T(!0),
-                                        onMouseLeave: () => T(!1),
-                                        className: o()(F.mediaMosaicAltText, {
-                                            [F.mediaMosaicVideoAltText]: !0,
-                                            [F.reducedSize]: m,
-                                        }),
-                                        children: Z.intl.string(Z.t.jCV1T0),
-                                    }),
-                                ),
-                            }),
-                    }),
-                }),
-            !S &&
-                A &&
-                (0, r.jsx)("span", {
-                    className: F.altText,
-                    children: l,
-                }),
-        ],
-    });
+                ),
+                null != l && l(),
+            ],
+        })
+    );
 }
 function $(e) {
-    return (0, r.jsx)(J, H({}, e));
-}
-function ee(e) {
     var { onVolumeChange: t, volume: n, onMute: a, onVolumeShow: o, onVolumeHide: s, renderAdjacentContent: l } = e,
         c = K(e, ["onVolumeChange", "volume", "onMute", "onVolumeShow", "onVolumeHide", "renderAdjacentContent"]);
     let u = X(t),
@@ -278,14 +202,14 @@ function ee(e) {
                     onVolumeHide: s,
                     volume: n,
                     autoMute: f,
-                    renderLinkComponent: er,
+                    renderLinkComponent: en,
                 }),
             ),
             null != l && l(),
         ],
     });
 }
-function et(e) {
+function ee(e) {
     var { onVolumeChange: t, volume: n, onMute: i } = e,
         a = K(e, ["onVolumeChange", "volume", "onMute"]);
     let o = X(t),
@@ -302,7 +226,7 @@ function et(e) {
         )
     );
 }
-function en(e) {
+function et(e) {
     let {
             alt: t,
             hiddenSpoilers: n,
@@ -383,23 +307,23 @@ function en(e) {
         ],
     });
 }
-function er(e) {
+function en(e) {
     return (0, r.jsx)(h.Z, H({}, e));
 }
-function ei(e) {
+function er(e) {
     var { renderAdjacentContent: t } = e,
         n = K(e, ["renderAdjacentContent"]);
     return (0, r.jsxs)(i.Fragment, {
         children: [(0, r.jsx)(T.Z, H({}, n)), null != t && t()],
     });
 }
-function ea(e) {
+function ei(e) {
     return (0, r.jsx)(E.Z, H({}, e));
 }
-var eo = (function (e) {
+var ea = (function (e) {
     return (e[(e.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (e[(e.REPLY = 1)] = "REPLY"), e;
 })({});
-function es(e) {
+function eo(e) {
     switch (e) {
         case 0:
             return Z.intl.string(Z.t["4EvBb2"]);
@@ -409,7 +333,7 @@ function es(e) {
             return (0, L.vE)(e);
     }
 }
-function el(e) {
+function es(e) {
     switch (e) {
         case 0:
             return Z.intl.string(Z.t.gpoQsL);
@@ -419,7 +343,7 @@ function el(e) {
             return (0, L.vE)(e);
     }
 }
-let ec = (e) => {
+let el = (e) => {
         let { type: t = 0, onClick: n, className: i } = e;
         return (0, r.jsx)(b.G.Consumer, {
             children: (e) =>
@@ -431,7 +355,7 @@ let ec = (e) => {
                           children: [
                               (0, r.jsx)("div", {
                                   className: F.barButtonMain,
-                                  children: es(t),
+                                  children: eo(t),
                               }),
                               null != n
                                   ? (0, r.jsx)(d.tEY, {
@@ -439,7 +363,7 @@ let ec = (e) => {
                                         children: (0, r.jsx)(d.zxk, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: el(t),
+                                            text: es(t),
                                             onClick: n,
                                         }),
                                     })
@@ -452,7 +376,7 @@ let ec = (e) => {
                       }),
         });
     },
-    eu = (e) => {
+    ec = (e) => {
         let { onClick: t, loading: n, className: i } = e;
         return (0, r.jsx)(b.G.Consumer, {
             children: (e) =>
@@ -488,7 +412,7 @@ let ec = (e) => {
                       }),
         });
     };
-function ed(e) {
+function eu(e) {
     let { content: t, channelId: n } = e,
         [a] = i.useState(() => (0, y.hQ)("NewMessagesBarJumpToNewMessages_")),
         s = i.useCallback(() => {
@@ -554,7 +478,7 @@ function ed(e) {
               ],
           });
 }
-function ef(e) {
+function ed(e) {
     var t, n, a;
     let { channel: s, content: p, scrollManager: h } = e,
         { disableInteractions: E } = i.useContext(b.G),
@@ -603,7 +527,7 @@ function ef(e) {
                     : [];
             },
             [j],
-            ep,
+            e_,
         ),
         V = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
         H = null == j || null == (t = j[V]) ? void 0 : t.topic;
@@ -877,13 +801,13 @@ function ef(e) {
               })
     );
 }
-function e_(e, t) {
+function ef(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => t[n] !== e);
 }
-function ep(e, t) {
-    return null != t && e.length === t.length && !e.some((e, n) => !e_(e, t[n]));
+function e_(e, t) {
+    return null != t && e.length === t.length && !e.some((e, n) => !ef(e, t[n]));
 }
-function eh(e) {
+function ep(e) {
     var t, n, a;
     let { channel: s, scrollManager: _ } = e,
         { disableInteractions: p } = i.useContext(b.G),
@@ -932,7 +856,7 @@ function eh(e) {
                     : [];
             },
             [N],
-            ep,
+            e_,
         ),
         j = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
         M = null == N || null == (t = N[j]) ? void 0 : t.topic;
@@ -1203,7 +1127,7 @@ function eh(e) {
               })
     );
 }
-let em = function (e) {
+let eh = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return (0, r.jsxs)("div", {
             className: F.tooltip,
@@ -1225,16 +1149,16 @@ let em = function (e) {
             ],
         });
     },
-    eg = (e) => {
+    em = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
             className: o()(F.popoutContainer, n),
             children: t,
         });
     },
-    eE = (e) => {
+    eg = (e) => {
         let { className: t } = e;
-        return (0, r.jsx)(eg, {
+        return (0, r.jsx)(em, {
             className: t,
             children: (0, r.jsx)("div", {
                 className: F.popoutLoadingBackground,
