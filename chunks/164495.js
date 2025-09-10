@@ -183,16 +183,16 @@ let P = (e) => {
     },
     L = (e) => {
         var t,
+            n,
             {
-                quest: n,
-                useReducedMotion: a,
-                isExpanded: u,
-                className: d,
-                ctaLabel: _,
-                onClick: h,
-                questContent: m = p.jn.QUEST_BAR_V2,
-                sourceQuestContent: g,
-                shouldShowRewardsCTAWhenCollapsed: b = !1,
+                quest: a,
+                useReducedMotion: u,
+                isExpanded: d,
+                className: _,
+                ctaLabel: h,
+                onClick: m,
+                questContent: g = p.jn.QUEST_BAR_V2,
+                sourceQuestContent: b,
             } = e,
             I = C(e, [
                 "quest",
@@ -203,27 +203,27 @@ let P = (e) => {
                 "onClick",
                 "questContent",
                 "sourceQuestContent",
-                "shouldShowRewardsCTAWhenCollapsed",
             ]);
-        let S = (0, E.hf)({
-                quest: n,
-                questContent: m,
-                sourceQuestContent: g,
+        let S = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
+            N = (0, E.hf)({
+                quest: a,
+                questContent: g,
+                sourceQuestContent: b,
             }),
-            N = i.useCallback(
+            R = i.useCallback(
                 (e) => {
                     var t;
-                    null == h || h(e),
-                        (0, f.xN)(n.config) && (null == (t = n.userStatus) ? void 0 : t.claimedAt) != null
+                    null == m || m(e),
+                        (0, f.xN)(a.config) && (null == (t = a.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
                                   openInLayer: !1,
                                   tab: y.AW.ORBS,
                                   analyticsLocations: [],
                                   analyticsSource: l.Z.QUEST_HOME_PAGE,
                               })
-                            : S();
+                            : N();
                 },
-                [h, n.config, null == (t = n.userStatus) ? void 0 : t.claimedAt, S],
+                [m, a.config, null == (n = a.userStatus) ? void 0 : n.claimedAt, N],
             );
         return (0, r.jsx)(
             s.gtL,
@@ -232,14 +232,14 @@ let P = (e) => {
                     {
                         fullWidth: !0,
                         size: o.zx.Sizes.SMALL,
-                        onClick: N,
-                        pauseAnimation: a || (!u && !b),
-                        className: d,
+                        onClick: R,
+                        pauseAnimation: u || (!d && !S),
+                        className: _,
                         buttonShineClassName: v.shine,
                     },
                     I,
                 ),
-                { children: null != _ ? _ : O.intl.string(O.t.cfY4PD) },
+                { children: null != h ? h : O.intl.string(O.t.cfY4PD) },
             ),
         );
     },
@@ -255,47 +255,45 @@ let P = (e) => {
                 isProgressing: c,
                 activeScreen: u,
                 taskDetails: d,
-                shouldShowRewardsCTAWhenCollapsed: _,
             } = e,
-            h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            m = (0, f.q8)(n),
-            g = (0, f.Vl)(n),
-            E = u !== p.LI.SELECT && !l && !c,
-            b = null;
+            _ = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+            h = (0, f.q8)(n),
+            m = (0, f.Vl)(n),
+            g = u !== p.LI.SELECT && !l && !c,
+            E = null;
         return (
-            h
-                ? (b = (0, r.jsx)(L, {
+            _
+                ? (E = (0, r.jsx)(L, {
                       quest: n,
                       sourceQuestContent: i,
                       useReducedMotion: a,
                       isExpanded: o,
-                      shouldShowRewardsCTAWhenCollapsed: _,
                   }))
-                : m
-                  ? (b = (0, r.jsx)(R, {
+                : h
+                  ? (E = (0, r.jsx)(R, {
                         quest: n,
                         sourceQuestContent: i,
                         taskDetails: d,
                     }))
-                  : g
-                    ? (b = (0, r.jsx)(D, { quest: n }))
+                  : m
+                    ? (E = (0, r.jsx)(D, { quest: n }))
                     : u === p.LI.CONSOLE && s
-                      ? (b = (0, r.jsx)(w, {
+                      ? (E = (0, r.jsx)(w, {
                             quest: n,
                             sourceQuestContent: i,
                         }))
-                      : E && (0, f.Pb)(n)
-                        ? (b = (0, r.jsx)(x, { taskDetails: d }))
-                        : E &&
-                          (b = (0, r.jsx)(P, {
+                      : g && (0, f.Pb)(n)
+                        ? (E = (0, r.jsx)(x, { taskDetails: d }))
+                        : g &&
+                          (E = (0, r.jsx)(P, {
                               quest: n,
                               sourceQuestContent: i,
                           })),
-            null == b
+            null == E
                 ? null
                 : (0, r.jsx)("div", {
                       className: v.cta,
-                      children: b,
+                      children: E,
                   })
         );
     };

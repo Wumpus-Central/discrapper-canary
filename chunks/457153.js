@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(261616),
     l = n(113434),
     c = n(497505),
     u = n(164495),
@@ -13,82 +13,81 @@ var r = n(951288),
     p = n(743294),
     h = n(557579);
 let m = i.forwardRef(function (e, t) {
-    var n;
+    var n, a;
     let {
-            className: a,
-            expansionSpring: m,
-            isExpanded: g,
-            isExpansionAnimationComplete: E,
-            quest: b,
-            taskDetails: y,
-            useReducedMotion: O,
-            onCtxMenuOpen: v,
-            onCtxMenuClose: I,
-            onCtxMenuSelect: T,
-            overlayRef: S,
-            shouldShowRewardsCTAWhenCollapsed: A,
+            className: m,
+            expansionSpring: g,
+            isExpanded: E,
+            isExpansionAnimationComplete: b,
+            quest: y,
+            taskDetails: O,
+            useReducedMotion: v,
+            onCtxMenuOpen: I,
+            onCtxMenuClose: T,
+            onCtxMenuSelect: S,
+            overlayRef: A,
         } = e,
-        C = (0, l.Jf)(b),
-        N = i.useRef(null),
-        R = (null == (n = b.userStatus) ? void 0 : n.enrolledAt) != null,
-        P = null != C ? C.percentComplete : y.percentComplete,
-        [w, D] = i.useState(!1);
+        C = (null == (n = y.userStatus) ? void 0 : n.completedAt) != null,
+        N = (0, l.Jf)(y),
+        R = i.useRef(null),
+        P = (null == (a = y.userStatus) ? void 0 : a.enrolledAt) != null,
+        w = null != N ? N.percentComplete : O.percentComplete,
+        [D, x] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            A &&
+            C &&
                 (0, r.jsx)(d.Z, {
-                    expansionSpring: m,
-                    overlayRef: S,
-                    progressBarRef: N,
-                    quest: b,
-                    isExpanded: g,
-                    isHovered: w,
-                    shouldShowRewardsCTAWhenCollapsed: !0,
+                    expansionSpring: g,
+                    overlayRef: A,
+                    progressBarRef: R,
+                    quest: y,
+                    isExpanded: E,
+                    isHovered: D,
                 }),
             (0, r.jsx)(s.animated.div, {
                 ref: t,
-                "aria-hidden": g && E,
-                className: o()(a, h.contentCollapsed, {
-                    [h.contentCollapsedExpanded]: g,
-                    [h.contentCollapsedAccepted]: R,
+                "aria-hidden": E && b,
+                className: o()(m, h.contentCollapsed, {
+                    [h.contentCollapsedExpanded]: E,
+                    [h.contentCollapsedAccepted]: P,
                 }),
                 style: {
-                    opacity: m.to({
+                    opacity: g.to({
                         range: [0, 1],
                         output: [1, 0],
                     }),
-                    backgroundImage: A ? "linear-gradient(90deg, ".concat(p.aY, ", ").concat(p.v6, ")") : void 0,
+                    backgroundImage: C ? "linear-gradient(90deg, ".concat(p.aY, ", ").concat(p.v6, ")") : void 0,
                 },
-                onMouseEnter: () => D(!0),
-                onMouseLeave: () => D(!1),
+                onMouseEnter: () => x(!0),
+                onMouseLeave: () => x(!1),
                 children: (0, r.jsxs)("div", {
                     className: h.contentCollapsedWrapper,
                     children: [
-                        A &&
+                        C &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(_.Z, {
-                                        quest: b,
-                                        onCtxMenuOpen: v,
-                                        onCtxMenuClose: I,
-                                        onCtxMenuSelect: T,
+                                        quest: y,
+                                        onCtxMenuOpen: I,
+                                        onCtxMenuClose: T,
+                                        onCtxMenuSelect: S,
                                     }),
                                     (0, r.jsx)("div", { className: h.divider }),
                                 ],
                             }),
-                        R
+                        P
                             ? (0, r.jsx)(f.Z, {
                                   contentLocation: "collapsed",
-                                  quest: b,
-                                  progressBarRef: N,
+                                  quest: y,
+                                  progressBarRef: R,
                                   isExpanded: !1,
-                                  percentComplete: P,
+                                  percentComplete: w,
                               })
                             : null,
-                        A &&
+                        C &&
                             (0, r.jsx)(u.y, {
-                                quest: b,
-                                useReducedMotion: O,
+                                quest: y,
+                                useReducedMotion: v,
                                 isExpanded: !1,
                                 awaitingConsoleConnections: !1,
                                 hasMadeProgress: !0,
@@ -96,9 +95,8 @@ let m = i.forwardRef(function (e, t) {
                                 activeScreen: c.LI.DESKTOP,
                                 showBackButton: !1,
                                 onBack: () => {},
-                                taskDetails: y,
+                                taskDetails: O,
                                 sourceQuestContent: c.jn.QUEST_BAR_V2,
-                                shouldShowRewardsCTAWhenCollapsed: !0,
                             }),
                     ],
                 }),
