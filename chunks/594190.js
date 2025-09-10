@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     FZ: () => eL,
-    ZP: () => e7,
+    ZP: () => e9,
     b6: () => eR,
     ik: () => ew,
     ow: () => eO,
@@ -520,13 +520,27 @@ function eG(e) {
         }),
         eo.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         ex(),
-        R.Z.setRecentGames(eB().map((e) => eL(e, e5, T.Z, S.Z))));
+        R.Z.setRecentGames(eB().map((e) => eL(e, e7, T.Z, S.Z))));
 }
 function eB() {
     let e = o().values(eo.gameOverrides);
     return eo.gamesSeen.filter((e) => void 0 === eo.gameOverrides[eA(e)]).concat(e);
 }
-function eZ(e, t) {
+function eZ() {
+    if (__OVERLAY__ || (!(0, w.isDesktop)() && !U.iP)) return;
+    let e = j.g.getConfig({ location: "RunningGameStore.setGameDetectionErrorCallback" }).enabled;
+    D.ZP.setGameDetectionErrorCallback((t, n, r, i, a) => {
+        e &&
+            C.default.track(k.rMx.GAME_DETECTION_ERROR, {
+                error_code: t.toString(),
+                distributor: n,
+                commit_hash: r,
+                file_name: i,
+                line_number: a,
+            });
+    });
+}
+function eF(e, t) {
     if (void 0 === t) {
         let t = D.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
@@ -537,27 +551,27 @@ function eZ(e, t) {
     }
     return "0" === t ? null : t;
 }
-function eF(e) {
+function eV(e) {
     eG(et);
 }
-function eV(e) {
+function eH(e) {
     ee = e.games;
 }
-function eH() {
+function eY() {
     X = !1;
-}
-function eY(e) {
-    let { pid: t } = e;
-    (eu = t), (ed = null);
 }
 function eW(e) {
     let { pid: t } = e;
+    (eu = t), (ed = null);
+}
+function eK(e) {
+    let { pid: t } = e;
     (ed = t), (eu = null);
 }
-function eK() {
+function ez() {
     eu = null;
 }
-function ez(e) {
+function eq(e) {
     let t,
         n = e.pid,
         r = et.find((e) => e.pid === n);
@@ -573,16 +587,16 @@ function ez(e) {
         ex(),
         eS();
 }
-function eq() {
+function eX() {
     ek();
 }
-function eX(e) {
+function eQ(e) {
     (eh = e.level), (em = e.intervalSeconds);
 }
-function eQ() {
+function eJ() {
     (eh = null), (em = null), e_.clear();
 }
-function eJ(e) {
+function e$(e) {
     let t = e.processes
         .map((e) => {
             var t;
@@ -605,7 +619,7 @@ function eJ(e) {
             interval_seconds: em,
         });
 }
-function e$(e) {
+function e0(e) {
     let { game: t, newLegacyOverlayEnabledValue: n, newOverlayV3EnabledValue: r } = e,
         i = n !== eo.enableOverlay[eA(t)],
         a = r !== eo.enableOverlayV3[eA(t)];
@@ -620,12 +634,12 @@ function e$(e) {
             a && null != r && (0, E.ou)(r, E.AE.OOP_GAME, null != (s = t.id) ? s : null);
     }
 }
-function e0(e) {
+function e1(e) {
     let { game: t } = e,
         n = ew(t);
     (eo.enableDetection[eA(t)] = !n), ex(), C.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
 }
-function e1(e) {
+function e2(e) {
     let t = eA(e.game),
         n = eo.gameOverrides[t];
     null == n && ((n = ej(e.game)).add = !0), (n.name = e.newName);
@@ -646,7 +660,7 @@ function e1(e) {
         ex(),
         i && eS();
 }
-function e2(e) {
+function e3(e) {
     let t = eA(e.game);
     delete eo.gameOverrides[t],
         delete eo.enableOverlay[t],
@@ -661,7 +675,7 @@ function e2(e) {
         ek(),
         ex();
 }
-function e3(e) {
+function e4(e) {
     var t;
     if (__OVERLAY__ || !w.isPlatformEmbedded) return;
     let n = D.ZP.getDiscordUtils().notifyGameLaunched;
@@ -669,10 +683,10 @@ function e3(e) {
     let r = T.Z.getDetectableGame(e.applicationId);
     null != r && n(r.id, r.name, null != (t = e.pids) ? t : []);
 }
-function e4() {
+function e8() {
     m.Z.hasLoadedExperiments && K.length > 0 && (eG(K), (K = []));
 }
-function e8(e) {
+function e6(e) {
     let { initialized: t, modules: n } = e;
     if (!n.includes("input-service")) return !1;
     Q = t;
@@ -739,7 +753,7 @@ function e8(e) {
                 (e) => (
                     (e.isLauncher = e.isLauncher || t.has(e.exeName)),
                     e.isLauncher && null != e.id && (i[e.id] = e),
-                    (e.windowHandle = eZ(e.pid, e.windowHandle)),
+                    (e.windowHandle = eF(e.pid, e.windowHandle)),
                     null == eI(e) || (n.push(e), !1)
                 ),
             );
@@ -809,19 +823,8 @@ function e8(e) {
                         });
                     }
             });
-        let _ = j.g.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).enabled;
-        D.ZP.setGameDetectionErrorCallback((e, t, n, r, i) => {
-            _ &&
-                C.default.track(k.rMx.GAME_DETECTION_ERROR, {
-                    error_code: e.toString(),
-                    distributor: t,
-                    commit_hash: n,
-                    file_name: r,
-                    line_number: i,
-                });
-        });
     });
-class e6 extends (i = c.ZP.Store) {
+class e5 extends (i = c.ZP.Store) {
     initialize() {
         var e, t, n, r, i;
         let a =
@@ -853,9 +856,10 @@ class e6 extends (i = c.ZP.Store) {
                 "number" == typeof e.id && ((e.nativeProcessObserverId = e.id), delete e.id, (s = !0));
         this.waitFor(T.Z, m.Z),
             (K = a.gamesSeen.filter((e) => !(0, I.le)(e))),
-            this.syncWith([m.Z], e4),
+            this.syncWith([m.Z], e8),
             this.syncWith([S.Z, T.Z, A.Z], o().throttle(eM, 1000)),
-            s && ex();
+            s && ex(),
+            eZ();
     }
     getVisibleGame() {
         return null == en || eD(en) ? en : null;
@@ -959,25 +963,25 @@ class e6 extends (i = c.ZP.Store) {
         return Q;
     }
 }
-G(e6, "displayName", "RunningGameStore");
-let e5 = new e6(d.Z, {
-        RUNNING_GAMES_CHANGE: eF,
-        CANDIDATE_GAMES_CHANGE: eV,
-        PERMISSION_CLEAR_PTT_ADMIN_WARNING: eH,
-        PERMISSION_REQUEST_ELEVATED_PROCESS: eY,
-        PERMISSION_CLEAR_ELEVATED_PROCESS: eK,
-        PERMISSION_CONTINUE_NONELEVATED_PROCESS: eW,
-        RUNNING_GAME_ADD_OVERRIDE: ez,
-        RUNNING_GAME_TOGGLE_OVERLAY: e$,
-        RUNNING_GAME_TOGGLE_DETECTION: e0,
-        RUNNING_GAME_EDIT_NAME: e1,
-        RUNNING_GAME_DELETE_ENTRY: e2,
+G(e5, "displayName", "RunningGameStore");
+let e7 = new e5(d.Z, {
+        RUNNING_GAMES_CHANGE: eV,
+        CANDIDATE_GAMES_CHANGE: eH,
+        PERMISSION_CLEAR_PTT_ADMIN_WARNING: eY,
+        PERMISSION_REQUEST_ELEVATED_PROCESS: eW,
+        PERMISSION_CLEAR_ELEVATED_PROCESS: ez,
+        PERMISSION_CONTINUE_NONELEVATED_PROCESS: eK,
+        RUNNING_GAME_ADD_OVERRIDE: eq,
+        RUNNING_GAME_TOGGLE_OVERLAY: e0,
+        RUNNING_GAME_TOGGLE_DETECTION: e1,
+        RUNNING_GAME_EDIT_NAME: e2,
+        RUNNING_GAME_DELETE_ENTRY: e3,
         GAMES_DATABASE_UPDATE: es,
-        GAME_LAUNCH_SUCCESS: e3,
-        GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: eq,
-        GAME_DETECTION_DEBUGGING_START: eX,
-        GAME_DETECTION_DEBUGGING_STOP: eQ,
-        GAME_DETECTION_DEBUGGING_TICK: eJ,
-        SYSTEM_SERVICE_INITIALIZE: e8,
+        GAME_LAUNCH_SUCCESS: e4,
+        GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: eX,
+        GAME_DETECTION_DEBUGGING_START: eQ,
+        GAME_DETECTION_DEBUGGING_STOP: eJ,
+        GAME_DETECTION_DEBUGGING_TICK: e$,
+        SYSTEM_SERVICE_INITIALIZE: e6,
     }),
-    e7 = e5;
+    e9 = e7;
