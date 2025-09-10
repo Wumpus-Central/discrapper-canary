@@ -1,14 +1,15 @@
 n.d(t, {
-    M4: () => o,
-    Ne: () => c,
-    T9: () => a,
-    Vb: () => s,
+    IU: () => d,
+    M4: () => s,
+    Ne: () => o,
+    T9: () => l,
+    Vb: () => r,
     hK: () => i,
-    zI: () => l,
+    zI: () => c,
 });
-var r,
-    s = (((r = {}).SELECT_GAME = "select-game"), (r.SERVER_SETTINGS = "server-settings"), r);
-let a = {
+var a,
+    r = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
+let l = {
         steps: {
             "select-game": {
                 onBack: { type: "close" },
@@ -27,6 +28,7 @@ let a = {
         },
     },
     i = 24,
-    o = 680,
-    c = 632,
-    l = 10;
+    s = 680,
+    o = 12633 == n.j ? s - 2 * i : null,
+    c = 10,
+    d = "1415025086791942144";
