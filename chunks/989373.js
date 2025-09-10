@@ -59,9 +59,9 @@ let E = o.memo(function (e) {
                     let e = p.default.getFocusedPID();
                     return !m.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
-                [h, b] = o.useState(d),
-                [I, w] = o.useState(!1),
-                x = o.useCallback(() => {
+                [h, b] = o.useState(!1),
+                I = o.useRef(!1),
+                w = o.useCallback(() => {
                     let e = (0, v.getPID)(),
                         n = null != s.Z.getVoiceChannelId();
                     i.Z.track(S.rMx.OVERLAY_INITIALIZED, {
@@ -89,7 +89,7 @@ let E = o.memo(function (e) {
                     }
                 );
             });
-            let E = o.useCallback(
+            let x = o.useCallback(
                 (e, t) => {
                     null == a.current &&
                         ((_.current = () => {
@@ -104,23 +104,20 @@ let E = o.memo(function (e) {
                                 return;
                             }
                             l.current = e.setTimeout(() => {
-                                b(!0), w(!0), x(), (_.current = null);
+                                b(!0), w(), (_.current = null);
                             }, 100);
                         })));
                 },
-                [x],
+                [w],
             );
             return (
                 o.useEffect(() => {
-                    (!h || null == n) && d && d && null != n && E(n, e);
-                }, [E, h, d, e, n]),
-                (0, c.Ng)(() => {
-                    h && null != n && E(n, e);
-                }),
+                    d && null != n && (I.current || ((I.current = !0), x(n, e)));
+                }, [x, d, e, n]),
                 (0, c.zq)(() => {
                     null != _.current && _.current();
                 }),
-                I
+                h
             );
         })(n, w.$S),
         h = (0, v.getPID)(),

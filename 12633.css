@@ -45156,8 +45156,7 @@ html:not(.chat-input) .inputInner_b1f01d {
     align-items: center;
     display: flex;
     gap: 16px;
-    justify-content: space-between;
-    padding: 4px 0
+    justify-content: space-between
 }
 
 .cloudPlaySectionTextContainer__33ecd {
@@ -45167,6 +45166,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .cloudPlayDivider__33ecd {
+    margin: 4px 0;
     width: 100%
 }
 
