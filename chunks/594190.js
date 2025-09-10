@@ -745,7 +745,7 @@ function e6(e) {
                     });
             }),
             (e = e.filter((e) => null != e.executables && e.executables.length > 0));
-        let u = M.T.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).useDetectionV2;
+        let u = M.Tf.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).useDetectionV2;
         D.ZP.setObservedGamesCallback(e, u, (e) => {
             let n = [],
                 i = {};
