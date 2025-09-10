@@ -18,7 +18,7 @@ function u(e, t) {
         h = null != _ && null != p && Date.now() - p < c;
     return (
         (0, r.useEffect)(() => {
-            null == e || null != f || u || d || h || (0, o.jr)(e, t);
+            null == e || null != f || u || d || h || (0, o.jr)(e, { includeBundles: t });
         }, [e, f, u, d, h, t]),
         {
             product: f,
