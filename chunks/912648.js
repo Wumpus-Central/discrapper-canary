@@ -21,18 +21,18 @@ function E(e) {
         y = (0, l.ZP)(s.Z.EMOJI_PICKER),
         [O, v] = i.useState(!1),
         I = (0, a.e7)([h.Z], () => h.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        S = (0, c.qt)({
+        T = (0, c.qt)({
             autoTrackExposure: !1,
             location: s.Z.EMOJI_PICKER,
         }),
-        { availableEmojiSlots: T } = (0, d.t)({ guild: null != I ? I : null }),
+        { availableEmojiSlots: S } = (0, d.t)({ guild: null != I ? I : null }),
         { canCreateExpressions: A } = (0, p.XJ)(I),
-        C = 0 === T || !A,
-        N = !S.isSelectFileBeforeEmojiStudioExperimentEnabled && C,
+        C = 0 === S || !A,
+        N = !T.isSelectFileBeforeEmojiStudioExperimentEnabled && C,
         R = O || E || N,
         P = i.useCallback(async () => {
-            if (R || S.isSelectFileBeforeEmojiStudioExperimentEnabled) return;
-            if ((v(!0), S.enabled)) {
+            if (R || T.isSelectFileBeforeEmojiStudioExperimentEnabled) return;
+            if ((v(!0), T.enabled)) {
                 var e;
                 await (0, u.i)({
                     guildId: null != (e = null == t ? void 0 : t.guild_id) ? e : null,
@@ -45,14 +45,14 @@ function E(e) {
                 return;
             }
             if (null == t) return void v(!1);
-            let n = S.isEntrypointOnlyExperimentEnabled || S.isEmojiEditingExperimentEnabled;
+            let n = T.isEntrypointOnlyExperimentEnabled || T.isEmojiEditingExperimentEnabled;
             f.Ku({
                 guildId: t.guild_id,
                 autoOpenFileInput: n,
                 analyticsLocation: y,
             }),
                 v(!1);
-        }, [t, y, S, R]),
+        }, [t, y, T, R]),
         w = i.useCallback(
             async (e, n, r) => {
                 var i;
@@ -74,6 +74,7 @@ function E(e) {
             [t],
         );
     return (0, r.jsxs)(o.zx, {
+        "data-migration-pending": !0,
         tabIndex: -1,
         color: o.zx.Colors.PRIMARY,
         size: o.zx.Sizes.MEDIUM,
@@ -83,7 +84,7 @@ function E(e) {
         focusProps: { within: !0 },
         children: [
             g.intl.string(g.t.iMJO39),
-            S.isSelectFileBeforeEmojiStudioExperimentEnabled
+            T.isSelectFileBeforeEmojiStudioExperimentEnabled
                 ? (0, r.jsx)(_.ZP, {
                       ref: n,
                       tabIndex: 0,
