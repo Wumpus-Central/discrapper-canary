@@ -48450,7 +48450,7 @@ screen and (max-width:485px) {
 
 .section__00943 {
     background-color: var(--background-mod-faint);
-    border: 1px solid var(--border-faint);
+    border: 1px solid var(--border-subtle);
     padding: 12px;
     position: relative
 }
@@ -48486,7 +48486,7 @@ screen and (max-width:485px) {
 }
 
 .separator__00943 {
-    background-color: var(--border-faint);
+    background-color: var(--border-subtle);
     height: 1px
 }
 
