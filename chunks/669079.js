@@ -6,8 +6,8 @@ n.d(t, {
     JT: () => $,
     L2: () => z,
     MY: () => M,
-    Nz: () => F,
-    Q_: () => V,
+    Nz: () => V,
+    Q_: () => F,
     TO: () => W,
     Z0: () => G,
     bT: () => H,
@@ -126,7 +126,7 @@ let Z = (e) => {
             (null == e ? void 0 : e.embeds[0].type) === h.hBH.GIFT
         );
     },
-    V = (e) => {
+    F = (e) => {
         let t;
         if (null == e) return [];
         let n = new Set();
@@ -134,7 +134,7 @@ let Z = (e) => {
         for (; null != (t = S.exec(e)) && n.size < O; ) n.add(B(t[t.length - 1]));
         return Array.from(n);
     };
-function F() {
+function V() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
         n = window.GLOBAL_ENV.GIFT_CODE_HOST;
@@ -343,5 +343,5 @@ function et(e, t) {
 }
 function en(e) {
     let { productLine: t } = e;
-    return t === h.POd.APPLICATION;
+    return t === h.POd.APPLICATION || t === h.POd.SOCIAL_LAYER_GAME_ITEM;
 }
