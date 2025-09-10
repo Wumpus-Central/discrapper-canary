@@ -4,7 +4,6 @@ e.exports = {
     tierInfo: "tierInfo_a45ed3",
     tierImage: "tierImage_a45ed3",
     tierTitle: "tierTitle_a45ed3",
-    tierCardButtonCTA: "tierCardButtonCTA_a45ed3",
     giftCard: "giftCard_a45ed3",
     giftCardPromotion: "giftCardPromotion_a45ed3",
     giftImagePromotion: "giftImagePromotion_a45ed3",

@@ -24,8 +24,8 @@ var r = n(951288),
     O = n(410030),
     v = n(607070),
     I = n(100527),
-    S = n(906732),
-    T = n(211242),
+    T = n(906732),
+    S = n(211242),
     A = n(975298),
     C = n(15640),
     N = n(89057),
@@ -46,7 +46,7 @@ var r = n(951288),
     V = n(232076),
     H = n(736519),
     Y = n(117791),
-    W = n(767714),
+    W = n(740594),
     K = n(382791),
     z = n(823188),
     q = n(504865),
@@ -131,9 +131,9 @@ function ed() {
         l = null !== i && null !== i.planIdFromItems;
     if (!l && !a.isFractionalPremiumActive) return null;
     let u = a.isFractionalPremiumActive,
-        h = null !== i && i.hasActiveTrial,
-        m = e || h,
-        E = () =>
+        _ = null !== i && i.hasActiveTrial,
+        h = e || _,
+        m = () =>
             u && !s
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -178,20 +178,14 @@ function ed() {
                           ],
                       })
                     : null,
-        y = () =>
+        E = () =>
             u && !l
                 ? (0, r.jsxs)(d.hE, {
                       fullWidth: !0,
                       direction: "vertical",
                       children: [
                           (0, r.jsx)(W.Z, {
-                              textOptions: {
-                                  textOverride: s ? ee.intl.string(ee.t.YScQSE) : ee.intl.string(ee.t["0b3YRk"]),
-                                  textClassName: et.tierCardButtonCTA,
-                              },
-                              color: _.zx.Colors.WHITE,
-                              disableShine: !0,
-                              showIcon: !1,
+                              defaultTextOverride: s ? ee.intl.string(ee.t.YScQSE) : ee.intl.string(ee.t["0b3YRk"]),
                           }),
                           (0, r.jsx)(d.zx, {
                               onClick: () => {
@@ -243,15 +237,15 @@ function ed() {
                       ],
                   });
     return (0, r.jsxs)("div", {
-        className: o()(et.tierCard, { [et.withTier2Rim]: m }),
+        className: o()(et.tierCard, { [et.withTier2Rim]: h }),
         children: [
             (0, r.jsxs)("div", {
                 className: et.tierInfo,
                 children: [
                     (0, r.jsx)(x.Z, { className: et.tierTitle }),
-                    E(),
+                    m(),
                     (0, r.jsx)(z.nT, { featureSet: u ? z.uZ.FRACTIONAL_PREMIUM : z.uZ.DEFAULT }),
-                    y(),
+                    E(),
                 ],
             }),
             (0, r.jsx)("div", {
@@ -363,8 +357,8 @@ function e_() {
 }
 let ep = function () {
     var e;
-    let t = (0, T.Q)(),
-        { analyticsLocations: n } = (0, S.ZP)(I.Z.PREMIUM_SETTINGS),
+    let t = (0, S.Q)(),
+        { analyticsLocations: n } = (0, T.ZP)(I.Z.PREMIUM_SETTINGS),
         a = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
         o = (0, c.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
         s = (0, C.V)(J.nS),
@@ -392,7 +386,7 @@ let ep = function () {
         });
     if ((!x && !j) || l) return (0, r.jsx)(p.$jN, {});
     let M = !!(null == a ? void 0 : a.hasActiveTrial);
-    return (0, r.jsx)(S.Gt, {
+    return (0, r.jsx)(T.Gt, {
         value: n,
         children: (0, r.jsxs)(r.Fragment, {
             children: [
