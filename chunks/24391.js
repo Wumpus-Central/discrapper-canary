@@ -6,5 +6,4 @@ e.exports = {
     nameplateItem: "nameplateItem__6980e",
     nameplateItemOverlay: "nameplateItemOverlay__6980e",
     selected: "selected__6980e",
-    iconBadge: "iconBadge__6980e",
 };

@@ -1,165 +1,200 @@
-n.d(l, { default: () => y }), n(388685);
-var t = n(951288),
+n.d(t, { default: () => A }), n(388685);
+var l = n(951288),
     i = n(647438),
-    s = n(442837),
-    a = n(481060),
-    r = n(809206),
+    r = n(442837),
+    s = n(481060),
+    a = n(809206),
     o = n(100527),
-    d = n(906732),
-    c = n(335131),
+    c = n(906732),
+    d = n(335131),
     u = n(884697),
+    p = n(449217),
+    m = n(223143),
     x = n(18438),
-    p = n(150039),
-    m = n(271383),
-    v = n(594174),
-    h = n(626135),
-    j = n(653079),
-    g = n(576386),
-    _ = n(981631),
-    C = n(388032),
-    N = n(886020);
-function y(e) {
-    let { transitionState: l, analyticsLocations: n, onClose: r, guildId: c, initialSelectedNameplate: x } = e,
-        p = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        { analyticsLocations: m } = (0, d.ZP)(n, o.Z.EDIT_NAMEPLATE_MODAL),
-        { available: j, purchased: g, isFetchingCategories: C, isFetchingPurchases: y } = (0, u.yV)(),
-        I = C || (y && 0 === g.length);
-    return (
-        (0, i.useEffect)(() => {
-            h.default.track(_.rMx.OPEN_MODAL, {
-                type: _.jXE.NAMEPLATE_CUSTOMIZATION,
-                location_stack: m,
-            });
-        }, [m]),
-        null == p
-            ? null
-            : (0, t.jsx)(d.Gt, {
-                  value: m,
-                  children: (0, t.jsx)(a.Y0X, {
-                      transitionState: l,
-                      size: I ? a.CgR.DYNAMIC : a.CgR.MEDIUM,
-                      parentComponent: "NameplateModal",
-                      "data-migration-pending": !0,
-                      children: I
-                          ? (0, t.jsx)(a.$jN, {
-                                className: N.spinner,
-                                type: a.$jN.Type.SPINNING_CIRCLE,
-                            })
-                          : (0, t.jsx)(k, {
-                                user: p,
-                                onClose: r,
-                                available: j,
-                                purchased: g,
-                                analyticsLocations: m,
-                                guildId: c,
-                                initialSelectedNameplate: x,
-                            }),
-                  }),
-              })
-    );
-}
-function k(e) {
-    var l, n, d, u;
+    h = n(269982),
+    g = n(767714),
+    v = n(150039),
+    _ = n(271383),
+    C = n(594174),
+    j = n(626135),
+    y = n(74538),
+    P = n(653079),
+    E = n(576386),
+    f = n(981631),
+    N = n(474936),
+    Z = n(388032),
+    I = n(886020);
+function b(e) {
+    var t, n;
     let {
-            user: v,
-            available: h,
-            purchased: _,
-            analyticsLocations: y,
-            onClose: k,
-            guildId: I,
-            initialSelectedNameplate: f,
+            currentUser: c,
+            categories: m,
+            purchases: C,
+            analyticsLocations: j,
+            onClose: f,
+            guildId: b,
+            initialSelectedNameplate: A,
         } = e,
-        b = (0, s.e7)([m.ZP], () => (null != I && null != v ? m.ZP.getMember(I, v.id) : null)),
-        w = null == b || null == (n = b.collectibles) || null == (l = n.nameplate) ? void 0 : l.skuId,
-        B = null == v || null == (u = v.collectibles) || null == (d = u.nameplate) ? void 0 : d.skuId,
-        Z = null != I ? w : B,
-        E = _.find((e) => e.skuId === Z),
-        { pendingNameplate: M } = (0, p.Zx)(v, I),
-        [P, D] = (0, i.useState)(() => {
+        w = (0, r.e7)([_.ZP], () => (null != b && null != c ? _.ZP.getMember(b, c.id) : null)),
+        k =
+            null != w
+                ? null == w || null == (t = w.collectibles)
+                    ? void 0
+                    : t.nameplate
+                : null == c || null == (n = c.collectibles)
+                  ? void 0
+                  : n.nameplate,
+        { pendingNameplate: T } = (0, v.Zx)(c, b),
+        [O, U] = (0, i.useState)(() => {
             var e;
-            return void 0 !== M ? M : null != (e = null != f ? f : E) ? e : null;
+            return null != A
+                ? A
+                : void 0 !== T
+                  ? T
+                  : null == k
+                    ? null
+                    : null !=
+                        (e = (0, u.Y)(C, m).find((e) => {
+                            let { skuId: t } = e;
+                            return t === k.skuId;
+                        }))
+                      ? e
+                      : null;
         }),
-        T =
-            (null == P ? void 0 : P.skuId) ===
-            (void 0 === M ? (null == E ? void 0 : E.skuId) : null == M ? void 0 : M.skuId),
-        [A, O] = (0, i.useState)(() => null != P && _.some((e) => e.id === P.id)),
-        S = (0, i.useCallback)(
+        { product: S, purchase: L } = (0, p.Z)(null == O ? void 0 : O.skuId),
+        M = y.ZP.canUseCollectibles(c),
+        B =
+            void 0 === T
+                ? (null == O ? void 0 : O.skuId) === (null == k ? void 0 : k.skuId)
+                : (null == O ? void 0 : O.skuId) === (null == T ? void 0 : T.skuId),
+        R = (0, i.useCallback)(
             (e) => {
-                k(),
-                    (0, c.mK)({
-                        analyticsLocations: y,
+                f(),
+                    (0, d.mK)({
+                        analyticsLocations: j,
                         analyticsSource: o.Z.EDIT_NAMEPLATE_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [y, k],
+            [j, f],
         );
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, t.jsxs)(a.xBx, {
+            (0, l.jsxs)(s.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: N.header,
+                className: I.header,
                 children: [
-                    (0, t.jsx)(a.X6q, {
+                    (0, l.jsx)(s.X6q, {
                         variant: "heading-lg/semibold",
-                        children: C.intl.string(C.t.BwdeMz),
+                        children: Z.intl.string(Z.t.BwdeMz),
                     }),
-                    (0, t.jsx)(a.olH, {
+                    (0, l.jsx)(s.olH, {
                         "data-migration-pending": !0,
-                        className: N.closeButton,
-                        onClick: k,
+                        className: I.closeButton,
+                        onClick: f,
                     }),
                 ],
             }),
-            (0, t.jsxs)(a.hzk, {
+            (0, l.jsxs)(s.hzk, {
                 "data-migration-pending": !0,
-                className: N.content,
+                className: I.content,
                 scrollbarType: "none",
                 children: [
-                    (0, t.jsx)(g.Z, {
-                        selected: P,
-                        onSelect: (e, l) => {
-                            D(e), O(null != l && l);
-                        },
-                        onOpenShop: S,
-                        available: h,
-                        purchased: _,
-                        isPerGuild: null != I,
+                    (0, l.jsx)(E.Z, {
+                        currentUser: c,
+                        selectedNameplate: O,
+                        guildId: b,
+                        onSelect: U,
+                        onOpenShop: R,
                     }),
-                    (0, t.jsx)(j.Z, {
-                        user: v,
-                        guildId: I,
-                        selectedNameplate: P,
-                        purchased: A,
+                    (0, l.jsx)(P.Z, {
+                        user: c,
+                        guildId: b,
+                        selectedNameplate: O,
                     }),
                 ],
             }),
-            (0, t.jsxs)(a.mzw, {
+            (0, l.jsxs)(s.mzw, {
                 "data-migration-pending": !0,
-                className: N.modalFooter,
+                className: I.modalFooter,
                 children: [
-                    A || null == P
-                        ? (0, t.jsx)(a.zxk, {
+                    (null != L && (!(0, u.qS)(L) || M)) || null === O
+                        ? (0, l.jsx)(s.zxk, {
                               variant: "primary",
-                              text: C.intl.string(C.t.Jh8fJy),
-                              disabled: T,
+                              text: Z.intl.string(Z.t.Jh8fJy),
                               onClick: () => {
-                                  null != I ? (0, x.RH)(P) : (0, r.Rx)(P), k();
+                                  null != b ? (0, x.RH)(O) : (0, a.Rx)(O), f();
                               },
+                              disabled: B,
                           })
-                        : (0, t.jsx)(a.zxk, {
-                              variant: "primary",
-                              onClick: () => S(null == P ? void 0 : P.skuId),
-                              text: C.intl.string(C.t.fYfGgI),
+                        : null == L && (M || !(0, u.G1)(S))
+                          ? (0, l.jsx)(s.zxk, {
+                                variant: "primary",
+                                onClick: () => R(null == S ? void 0 : S.skuId),
+                                text: Z.intl.string(Z.t.fYfGgI),
+                            })
+                          : (0, l.jsx)(g.Z, {
+                                subscriptionTier: N.Si.TIER_2,
+                                showGradient: !M,
+                                textOptions: {
+                                    textOverride: y.ZP.isPremium(c)
+                                        ? Z.intl.string(Z.t.KXLX7u)
+                                        : M
+                                          ? Z.intl.string(Z.t.mr4K7O)
+                                          : Z.intl.string(Z.t.pj0XBA),
+                                },
+                            }),
+                    !M && (0, u.G1)(S)
+                        ? (0, l.jsx)(h.Z, {
+                              product: S,
+                              onClose: f,
+                          })
+                        : (0, l.jsx)(s.zxk, {
+                              variant: "secondary",
+                              text: Z.intl.string(Z.t["ETE/oK"]),
+                              onClick: f,
                           }),
-                    (0, t.jsx)(a.zxk, {
-                        variant: "secondary",
-                        text: C.intl.string(C.t.mDcKND),
-                        onClick: k,
-                    }),
                 ],
             }),
         ],
     });
+}
+function A(e) {
+    let { transitionState: t, analyticsLocations: n, onClose: a, guildId: d, initialSelectedNameplate: u } = e,
+        p = (0, r.e7)([C.default], () => C.default.getCurrentUser()),
+        { analyticsLocations: x } = (0, c.ZP)(n, o.Z.EDIT_NAMEPLATE_MODAL),
+        { categories: h, purchases: g, isFetchingCategories: v, isFetchingPurchases: _ } = (0, m.ZP)(),
+        y = v || (_ && 0 === g.size);
+    return ((0, i.useEffect)(() => {
+        j.default.track(f.rMx.OPEN_MODAL, {
+            type: f.jXE.NAMEPLATE_CUSTOMIZATION,
+            location_stack: x,
+        });
+    }, [x]),
+    null == p)
+        ? null
+        : (0, l.jsx)(c.Gt, {
+              value: x,
+              children: (0, l.jsx)(s.Y0X, {
+                  transitionState: t,
+                  size: y ? s.CgR.DYNAMIC : s.CgR.MEDIUM,
+                  parentComponent: "NameplateModal",
+                  "data-migration-pending": !0,
+                  children: y
+                      ? (0, l.jsx)(s.$jN, {
+                            className: I.spinner,
+                            type: s.$jN.Type.SPINNING_CIRCLE,
+                        })
+                      : (0, l.jsx)(b, {
+                            currentUser: p,
+                            categories: h,
+                            purchases: g,
+                            analyticsLocations: x,
+                            guildId: d,
+                            initialSelectedNameplate: u,
+                            onClose: a,
+                        }),
+              }),
+          });
 }

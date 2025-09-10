@@ -1,83 +1,134 @@
 n.d(t, { Z: () => f });
-var r = n(951288),
-    i = n(647438),
-    l = n(979554),
-    o = n(481060),
-    s = n(906732),
-    c = n(436774),
-    a = n(981631),
-    u = n(388032),
-    d = n(178368);
+var r = n(951288);
+n(647438);
+var i = n(979554),
+    l = n(481060),
+    o = n(906732),
+    s = n(436774),
+    c = n(474936),
+    a = n(388032),
+    u = n(178368);
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
 function f(e) {
-    let { product: t, onSecondaryClick: f } = e,
-        { newestAnalyticsLocation: p } = (0, s.ZP)(),
-        m = i.useCallback(() => {
-            null != t &&
-                (0, o.ZDy)(async () => {
-                    let { default: e } = await n.e("43360").then(n.bind(n, 73415));
-                    return (n) =>
-                        (0, r.jsx)(
-                            e,
-                            (function (e) {
-                                for (var t = 1; t < arguments.length; t++) {
-                                    var n = null != arguments[t] ? arguments[t] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (t) {
-                                            var r;
-                                            (r = n[t]),
-                                                t in e
-                                                    ? Object.defineProperty(e, t, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (e[t] = r);
+    let { product: t, onClose: f } = e,
+        { newestAnalyticsLocation: p } = (0, o.ZP)(),
+        m =
+            t.type === i.Z.AVATAR_DECORATION
+                ? c.cd.AVATAR_DECORATION_MODAL_UPSELL
+                : t.type === i.Z.PROFILE_EFFECT
+                  ? c.cd.PROFILE_EFFECT_MODAL_UPSELL
+                  : t.type === i.Z.NAMEPLATE
+                    ? c.cd.NAMEPLATE_MODAL_UPSELL
+                    : null;
+    return null == m
+        ? null
+        : (0, r.jsxs)("div", {
+              className: u.nitroUpsellContainer,
+              children: [
+                  (0, r.jsx)(l.SrA, {
+                      className: u.nitroWheel,
+                      size: "md",
+                      color: s.JX.PREMIUM_TIER_2,
+                  }),
+                  (0, r.jsx)(l.Text, {
+                      className: u.nitroText,
+                      variant: "text-md/medium",
+                      children:
+                          m === c.cd.AVATAR_DECORATION_MODAL_UPSELL
+                              ? a.intl.format(a.t["aFR/EB"], {
+                                    onClick: () => {
+                                        (0, l.ZDy)(async () => {
+                                            let { default: e } = await n.e("43360").then(n.bind(n, 73415));
+                                            return (t) =>
+                                                (0, r.jsx)(
+                                                    e,
+                                                    d(
+                                                        {
+                                                            premiumUpsellType: m,
+                                                            title: a.intl.string(a.t.JI7uhY),
+                                                            body: a.intl.string(a.t["5XvsdX"]),
+                                                            glowUp: a.intl.string(a.t["5XvsdX"]),
+                                                            analyticsSource: p,
+                                                            onSecondaryClick: f,
+                                                        },
+                                                        t,
+                                                    ),
+                                                );
                                         });
-                                }
-                                return e;
-                            })(
-                                {
-                                    collectableType: null == t ? void 0 : t.type,
-                                    analyticsSource: p,
-                                    analyticsLocation: {
-                                        section: a.jXE.USER_PROFILE,
-                                        object: a.qAy.BUTTON_CTA,
                                     },
-                                    onSecondaryClick: f,
-                                },
-                                n,
-                            ),
-                        );
-                });
-        }, [t, p, f]),
-        g = i.useMemo(() => {
-            switch (null == t ? void 0 : t.type) {
-                case l.Z.AVATAR_DECORATION:
-                    return u.intl.format(u.t["aFR/EB"], { onClick: m });
-                case l.Z.PROFILE_EFFECT:
-                    return u.intl.format(u.t.eWNOND, { onClick: m });
-            }
-        }, [null == t ? void 0 : t.type, m]);
-    return (0, r.jsxs)("div", {
-        className: d.nitroUpsellContainer,
-        children: [
-            (0, r.jsx)(o.SrA, {
-                className: d.nitroWheel,
-                size: "md",
-                color: c.JX.PREMIUM_TIER_2,
-            }),
-            (0, r.jsx)(o.Text, {
-                className: d.nitroText,
-                variant: "text-md/medium",
-                children: g,
-            }),
-        ],
-    });
+                                })
+                              : m === c.cd.PROFILE_EFFECT_MODAL_UPSELL
+                                ? a.intl.format(a.t.eWNOND, {
+                                      onClick: () => {
+                                          (0, l.ZDy)(async () => {
+                                              let { default: e } = await n.e("43360").then(n.bind(n, 73415));
+                                              return (t) =>
+                                                  (0, r.jsx)(
+                                                      e,
+                                                      d(
+                                                          {
+                                                              premiumUpsellType: m,
+                                                              title: a.intl.string(a.t.sYm15e),
+                                                              body: a.intl.string(a.t["Hza+Bg"]),
+                                                              glowUp: a.intl.string(a.t["Hza+Bg"]),
+                                                              analyticsSource: p,
+                                                              onSecondaryClick: f,
+                                                          },
+                                                          t,
+                                                      ),
+                                                  );
+                                          });
+                                      },
+                                  })
+                                : m === c.cd.NAMEPLATE_MODAL_UPSELL
+                                  ? a.intl.format(a.t.G6b8TE, {
+                                        onClick: () => {
+                                            (0, l.ZDy)(async () => {
+                                                let { default: e } = await n.e("43360").then(n.bind(n, 73415));
+                                                return (t) =>
+                                                    (0, r.jsx)(
+                                                        e,
+                                                        d(
+                                                            {
+                                                                premiumUpsellType: m,
+                                                                title: a.intl.string(a.t.k7UN4u),
+                                                                body: a.intl.string(a.t["0/QPxM"]),
+                                                                glowUp: a.intl.string(a.t["0/QPxM"]),
+                                                                analyticsSource: p,
+                                                                onSecondaryClick: f,
+                                                            },
+                                                            t,
+                                                        ),
+                                                    );
+                                            });
+                                        },
+                                    })
+                                  : void 0,
+                  }),
+              ],
+          });
 }

@@ -1,70 +1,83 @@
-n.d(l, { Z: () => m });
-var t = n(951288),
+n.d(t, { Z: () => v });
+var l = n(951288),
     i = n(120356),
-    s = n.n(i),
-    a = n(442837),
-    r = n(481060),
-    o = n(597688),
+    r = n.n(i),
+    s = n(442837),
+    a = n(481060),
+    o = n(884697),
+    c = n(449217),
     d = n(709999),
-    c = n(22267),
-    u = n(25990),
-    x = n(388032),
-    p = n(763740);
-let m = (e) => {
-    let { user: l, guildId: n, selectedNameplate: i, purchased: m } = e,
-        v = (0, a.e7)([o.Z], () => o.Z.getProduct(null == i ? void 0 : i.skuId)),
-        h = (0, a.e7)([u.Z], () => u.Z.getPendingGlobalName());
-    return (0, t.jsxs)("div", {
-        className: s()(p.previewBorder, { [p.upsell]: !m && null != i }),
+    u = n(22267),
+    p = n(29121),
+    m = n(25990),
+    x = n(74538),
+    h = n(388032),
+    g = n(763740);
+let v = (e) => {
+    let { user: t, guildId: n, selectedNameplate: i } = e,
+        v = (0, s.e7)([m.Z], () => m.Z.getPendingGlobalName()),
+        { product: _, purchase: C } = (0, c.Z)(null == i ? void 0 : i.skuId),
+        j = (0, p.kd)(_),
+        y = x.ZP.canUseCollectibles(t),
+        P = (0, o.qS)(C),
+        E = (0, o.G1)(_),
+        f = !y && P,
+        N = null == C || f;
+    return (0, l.jsxs)("div", {
+        className: r()(g.previewBorder, { [g.upsell]: null != i && N }),
         children: [
-            (0, t.jsx)("div", {
-                className: p.previewBox,
-                children: (0, t.jsxs)("div", {
-                    className: p.previewContents,
+            (0, l.jsx)("div", {
+                className: g.previewBox,
+                children: (0, l.jsxs)("div", {
+                    className: g.previewContents,
                     children: [
-                        (0, t.jsx)(d.d, {
+                        (0, l.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, t.jsx)(d.d, {
+                        (0, l.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, t.jsx)(c.Z, {
-                            user: l,
+                        (0, l.jsx)(u.Z, {
+                            user: t,
                             guildId: n,
                             nameplate: i,
-                            pendingGlobalName: h,
+                            pendingGlobalName: v,
                             isHighlighted: !0,
                         }),
-                        (0, t.jsx)(d.d, {
+                        (0, l.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, t.jsx)(d.d, {
+                        (0, l.jsx)(d.d, {
                             width: 124,
                             opacity: 0.9,
                         }),
                     ],
                 }),
             }),
-            null != i
-                ? (0, t.jsxs)("div", {
-                      className: p.previewDescription,
-                      children: [
-                          (0, t.jsx)(r.Text, {
-                              variant: "text-sm/semibold",
-                              children: null == v ? void 0 : v.name,
-                          }),
-                          m
-                              ? null
-                              : (0, t.jsx)(r.Text, {
-                                    variant: "text-sm/normal",
-                                    children: x.intl.string(x.t.fEGjVV),
-                                }),
-                      ],
-                  })
-                : null,
+            null != i &&
+                (0, l.jsxs)("div", {
+                    className: g.previewDescription,
+                    children: [
+                        (0, l.jsx)(a.Text, {
+                            variant: "text-sm/semibold",
+                            children: j,
+                        }),
+                        N &&
+                            (0, l.jsx)(a.Text, {
+                                variant: "text-sm/normal",
+                                children: f
+                                    ? h.intl.string(h.t.nD78oa)
+                                    : E && y
+                                      ? h.intl.string(h.t.hmyYKy)
+                                      : E
+                                        ? h.intl.string(h.t.JY1i0t)
+                                        : h.intl.string(h.t.fEGjVV),
+                            }),
+                    ],
+                }),
         ],
     });
 };

@@ -11,7 +11,7 @@ n.d(t, {
     C2: () => Q,
     CL: () => _,
     CR: () => ea,
-    Cj: () => eV,
+    Cj: () => eF,
     Cn: () => K,
     Cx: () => e5,
     EA: () => C,
@@ -38,7 +38,7 @@ n.d(t, {
     Se: () => e6,
     Si: () => p,
     T7: () => eY,
-    TD: () => eF,
+    TD: () => eV,
     TL: () => X,
     Tp: () => eW,
     UA: () => j,
@@ -90,9 +90,9 @@ n.d(t, {
     pj: () => R,
     rB: () => ef,
     rV: () => A,
-    rX: () => V,
+    rX: () => F,
     rt: () => e$,
-    tL: () => F,
+    tL: () => V,
     vK: () => e4,
     vL: () => eT,
     w1: () => ey,
@@ -382,8 +382,8 @@ let N = Object.freeze({
     G = 7,
     B = 30,
     Z = "775514091874680832",
-    V = "845031178288889946",
-    F = 432000000,
+    F = "845031178288889946",
+    V = 432000000,
     H = 345600000,
     Y = 14,
     W = "520373071933079552",
@@ -544,6 +544,7 @@ var ev = (function (e) {
             (e.ANIMATED_AVATAR_MODAL_UPSELL = "animated_avatar_modal_upsell"),
             (e.PROFILE_EFFECT_MODAL_UPSELL = "profile_effect_modal_upsell"),
             (e.AVATAR_DECORATION_MODAL_UPSELL = "avatar_decoration_modal_upsell"),
+            (e.NAMEPLATE_MODAL_UPSELL = "nameplate_modal_upsell"),
             (e.VOICE_FILTERS_UPSELL = "voice_filters_upsell"),
             (e.RECENT_AVATARS_ROADBLOCK_UPSELL = "recent_avatars_roadblock_upsell"),
             (e.EMOJI_EVERYWHERE_INLINE_UPSELL = "emoji_everywhere_inline_upsell"),
@@ -708,7 +709,7 @@ var eZ = (function (e) {
             (e[(e.UserSettings = 0)] = "UserSettings"), (e[(e.ApplicationStoreHome = 1)] = "ApplicationStoreHome"), e
         );
     })({}),
-    eV = (function (e) {
+    eF = (function (e) {
         return (
             (e[(e.SNOWGLOBE = 1)] = "SNOWGLOBE"),
             (e[(e.BOX = 2)] = "BOX"),
@@ -725,7 +726,7 @@ var eZ = (function (e) {
             e
         );
     })({});
-let eF = Object.freeze({
+let eV = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128,

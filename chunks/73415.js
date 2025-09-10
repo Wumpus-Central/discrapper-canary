@@ -1,89 +1,83 @@
-e.d(c, { default: () => b });
-var n = e(951288);
-e(647438);
-var a = e(979554),
-    d = e(98278),
-    s = e(792254),
-    o = e(790527),
-    f = e(474936),
-    r = e(388032);
-function b(t) {
-    var { collectableType: c, onClose: e, analyticsSource: b, analyticsLocation: i, onSecondaryClick: p } = t,
-        A = (function (t, c) {
-            if (null == t) return {};
-            var e,
+t.d(c, { default: () => r });
+var n = t(951288);
+t(647438);
+var a = t(98278),
+    d = t(792254),
+    o = t(790527),
+    s = t(981631),
+    f = t(388032);
+function r(e) {
+    var { premiumUpsellType: c, title: t, body: r, glowUp: b, analyticsSource: p, onClose: i, onSecondaryClick: u } = e,
+        l = (function (e, c) {
+            if (null == e) return {};
+            var t,
                 n,
-                a = (function (t, c) {
-                    if (null == t) return {};
-                    var e,
+                a = (function (e, c) {
+                    if (null == e) return {};
+                    var t,
                         n,
                         a = {},
-                        d = Object.keys(t);
-                    for (n = 0; n < d.length; n++) (e = d[n]), c.indexOf(e) >= 0 || (a[e] = t[e]);
+                        d = Object.keys(e);
+                    for (n = 0; n < d.length; n++) (t = d[n]), c.indexOf(t) >= 0 || (a[t] = e[t]);
                     return a;
-                })(t, c);
+                })(e, c);
             if (Object.getOwnPropertySymbols) {
-                var d = Object.getOwnPropertySymbols(t);
+                var d = Object.getOwnPropertySymbols(e);
                 for (n = 0; n < d.length; n++)
-                    (e = d[n]),
-                        !(c.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (a[e] = t[e]);
+                    (t = d[n]),
+                        !(c.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (a[t] = e[t]);
             }
             return a;
-        })(t, ["collectableType", "onClose", "analyticsSource", "analyticsLocation", "onSecondaryClick"]);
-    let l = c === a.Z.AVATAR_DECORATION || c === a.Z.PROFILE_EFFECT,
-        u = (0, s.Z)(
-            c === a.Z.AVATAR_DECORATION ? f.cd.AVATAR_DECORATION_MODAL_UPSELL : f.cd.PROFILE_EFFECT_MODAL_UPSELL,
-        );
-    return l
-        ? (0, n.jsx)(
-              o.Z,
-              (function (t) {
-                  for (var c = 1; c < arguments.length; c++) {
-                      var e = null != arguments[c] ? arguments[c] : {},
-                          n = Object.keys(e);
-                      "function" == typeof Object.getOwnPropertySymbols &&
-                          (n = n.concat(
-                              Object.getOwnPropertySymbols(e).filter(function (t) {
-                                  return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                              }),
-                          )),
-                          n.forEach(function (c) {
-                              var n;
-                              (n = e[c]),
-                                  c in t
-                                      ? Object.defineProperty(t, c, {
-                                            value: n,
-                                            enumerable: !0,
-                                            configurable: !0,
-                                            writable: !0,
-                                        })
-                                      : (t[c] = n);
-                          });
-                  }
-                  return t;
-              })(
-                  {
-                      artURL: u,
-                      type:
-                          c === a.Z.AVATAR_DECORATION
-                              ? f.cd.AVATAR_DECORATION_MODAL_UPSELL
-                              : f.cd.PROFILE_EFFECT_MODAL_UPSELL,
-                      title: c === a.Z.AVATAR_DECORATION ? r.intl.string(r.t.JI7uhY) : r.intl.string(r.t.sYm15e),
-                      body: c === a.Z.AVATAR_DECORATION ? r.intl.string(r.t["5XvsdX"]) : r.intl.string(r.t["Hza+Bg"]),
-                      glowUp: c === a.Z.AVATAR_DECORATION ? r.intl.string(r.t["5XvsdX"]) : r.intl.string(r.t["Hza+Bg"]),
-                      onSecondaryClick: () => {
-                          p(), (0, d.$)(e);
-                      },
-                      secondaryCTA: r.intl.string(r.t.PcTCBw),
-                      onClose: e,
-                      enableArtBoxShadow: !1,
-                      analyticsSource: b,
-                      analyticsLocation: i,
-                      hideBackButton: !0,
-                      showEnhancedUpsell: !0,
-                  },
-                  A,
-              ),
-          )
-        : null;
+        })(e, ["premiumUpsellType", "title", "body", "glowUp", "analyticsSource", "onClose", "onSecondaryClick"]);
+    let A = (0, d.Z)(c);
+    return (0, n.jsx)(
+        o.Z,
+        (function (e) {
+            for (var c = 1; c < arguments.length; c++) {
+                var t = null != arguments[c] ? arguments[c] : {},
+                    n = Object.keys(t);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (n = n.concat(
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        }),
+                    )),
+                    n.forEach(function (c) {
+                        var n;
+                        (n = t[c]),
+                            c in e
+                                ? Object.defineProperty(e, c, {
+                                      value: n,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[c] = n);
+                    });
+            }
+            return e;
+        })(
+            {
+                artURL: A,
+                type: c,
+                title: t,
+                body: r,
+                glowUp: b,
+                onSecondaryClick: () => {
+                    u(), (0, a.$)(i);
+                },
+                secondaryCTA: f.intl.string(f.t.PcTCBw),
+                onClose: i,
+                enableArtBoxShadow: !1,
+                analyticsSource: p,
+                analyticsLocation: {
+                    section: s.jXE.USER_PROFILE,
+                    object: s.qAy.BUTTON_CTA,
+                },
+                hideBackButton: !0,
+                showEnhancedUpsell: !0,
+            },
+            l,
+        ),
+    );
 }
