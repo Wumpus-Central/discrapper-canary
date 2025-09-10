@@ -1,12 +1,15 @@
-e.exports = {
-    container: "container__5808f",
-    header: "header__5808f",
-    headerLeft: "headerLeft__5808f",
-    headerText: "headerText__5808f",
-    countContainer: "countContainer__5808f",
-    countText: "countText__5808f",
-    tagContainer: "tagContainer__5808f",
-    tag: "tag__5808f",
-    row: "row__5808f",
-    separator: "separator__5808f",
+n.d(t, { Z: () => r });
+var r = {};
+r = {
+    deselectedItem: (e) => `Kohdetta ${e.item} ei valittu.`,
+    longPressToSelect: `Siirry valintatilaan painamalla pitk\xe4\xe4n.`,
+    select: "Valitse",
+    selectedAll: "Kaikki kohteet valittu.",
+    selectedCount: (e, t) =>
+        `${t.plural(e.count, {
+            "=0": `Ei yht\xe4\xe4n kohdetta valittu`,
+            one: () => `${t.number(e.count)} kohde valittu`,
+            other: () => `${t.number(e.count)} kohdetta valittu`,
+        })}.`,
+    selectedItem: (e) => `${e.item} valittu.`,
 };
