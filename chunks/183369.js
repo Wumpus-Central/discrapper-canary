@@ -3,8 +3,8 @@ t.d(n, {
     aj: () => j,
 }),
     t(388685);
-var r = t(951288),
-    i = t(647438),
+var i = t(951288),
+    r = t(647438),
     a = t(442837),
     l = t(906732),
     o = t(879892),
@@ -29,45 +29,46 @@ function b(e) {
         onClose: k,
         analyticsLocation: T,
     } = e;
-    i.useEffect(() => {
+    r.useEffect(() => {
         (0, m.po)(O), (0, m.EC)(O);
     }, [O]);
     let E = (0, a.e7)([g.Z], () => g.Z.getStateForGuild(O)),
         I = (0, a.e7)([c.Z], () => c.Z.getGuild(O)),
         { analyticsLocations: Z } = (0, l.ZP)(T),
-        [G, D] = i.useState(null != (d = P.initialStep) ? d : Object.keys(P.steps)[0]),
+        [G, D] = r.useState(null != (d = P.initialStep) ? d : Object.keys(P.steps)[0]),
         B = (0, u.Td)(O, void 0),
         M = P.steps[G],
-        [L, R] = i.useState(null != (j = null == S ? void 0 : S.id) ? j : null == N ? void 0 : N.gameId),
-        [V, z] = i.useState(N),
-        [A, F] = i.useState(
+        [L, R] = r.useState(null != (j = null == S ? void 0 : S.id) ? j : null == N ? void 0 : N.gameId),
+        [V, z] = r.useState(N),
+        [A, F] = r.useState(
             null != (b = null == S || null == (n = S.plans[0]) ? void 0 : n.id)
                 ? b
                 : null == N || null == (t = N.plan)
                   ? void 0
                   : t.id,
         ),
-        K = i.useCallback((e, n) => {
+        W = r.useCallback((e, n) => {
             var t;
             R(null == e ? void 0 : e.id), F(null != n ? n : null == e || null == (t = e.plans[0]) ? void 0 : t.id);
         }, []),
-        W = i.useCallback((e) => {
+        K = r.useCallback((e) => {
             z(e), R(e.gameId), F(e.plan.id), Q(e.name), $(e.location);
         }, []),
-        U = i.useMemo(() => {
+        U = r.useMemo(() => {
             var e;
             if (null != L)
                 return Object.values(null != (e = null == E ? void 0 : E.catalog) ? e : {}).find((e) => e.id === L);
         }, [null == E ? void 0 : E.catalog, L]),
-        [H, X] = i.useState(),
-        [q, Q] = i.useState(null != (h = null == N ? void 0 : N.name) ? h : ""),
-        [Y, $] = i.useState(null != (_ = null == N ? void 0 : N.location) ? _ : ""),
-        [J, ee] = i.useState(!1),
-        en = i.useCallback(() => {
+        [H, X] = r.useState(),
+        [q, Q] = r.useState(null != (h = null == N ? void 0 : N.name) ? h : ""),
+        [Y, $] = r.useState(null != (_ = null == N ? void 0 : N.location) ? _ : ""),
+        [J, ee] = r.useState(!1),
+        en = r.useCallback(() => {
             let e = (0, p.K)(A, V, U);
             0 !== e &&
                 null != I &&
                 null != U &&
+                null != A &&
                 (B < e
                     ? (0, o.u)({
                           analyticsLocation: T,
@@ -79,12 +80,16 @@ function b(e) {
                               ee(e);
                           },
                           onSubscribeComplete: () => {
-                              (0, f.Z)(I.id, U);
+                              (0, m.NE)(I.id, A, q, Y).then(() => {
+                                  k(), (0, f.Z)(I.id, U);
+                              });
                           },
                       })
-                    : (0, f.Z)(I.id, U));
-        }, [Z, I, B, A, T, U, V]),
-        et = i.useCallback(
+                    : (0, m.NE)(I.id, A, q, Y).then(() => {
+                          k(), (0, f.Z)(I.id, U);
+                      }));
+        }, [Z, I, B, A, T, U, V, q, Y, k]),
+        et = r.useCallback(
             (e) => {
                 switch (e.type) {
                     case "close":
@@ -99,26 +104,26 @@ function b(e) {
             },
             [k, en],
         ),
-        er = i.useCallback(() => {
+        ei = r.useCallback(() => {
             null != M && et(M.onBack);
         }, [M, et]),
-        ei = i.useCallback(() => {
+        er = r.useCallback(() => {
             null != M && et(M.onNext);
         }, [M, et]);
-    return (0, r.jsx)(x.Provider, {
+    return (0, i.jsx)(x.Provider, {
         value: {
             guildId: O,
             step: G,
             stepAction: M,
             stepLoading: J,
-            onBack: er,
-            onNext: ei,
+            onBack: ei,
+            onNext: er,
             portkeyGames: null != (C = null == E ? void 0 : E.catalog) ? C : {},
             instances: Object.values(null != (y = null == E ? void 0 : E.instances) ? y : {}),
             currentGame: U,
-            setCurrentGame: K,
+            setCurrentGame: W,
             portkeyInstance: V,
-            setPortkeyInstance: W,
+            setPortkeyInstance: K,
             name: q,
             setName: Q,
             location: Y,
