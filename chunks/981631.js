@@ -54,7 +54,7 @@ n.d(t, {
     GU0: () => eg,
     GZQ: () => E.GZ,
     H0J: () => E.H0,
-    HGf: () => n6,
+    HGf: () => n5,
     HN8: () => eH,
     HeQ: () => E.He,
     Hqc: () => nA,
@@ -137,7 +137,7 @@ n.d(t, {
     Rg9: () => nM,
     S7T: () => E.S7,
     S9g: () => nR,
-    SOq: () => n5,
+    SOq: () => n6,
     SRg: () => nS,
     STv: () => ey,
     SaU: () => tV,
@@ -177,7 +177,7 @@ n.d(t, {
     XAJ: () => eA,
     XKF: () => n4,
     XmY: () => e3,
-    Xyh: () => e5,
+    Xyh: () => e6,
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
@@ -228,7 +228,7 @@ n.d(t, {
     fMv: () => b.fM,
     fo$: () => tc,
     frH: () => E.fr,
-    fzT: () => t5,
+    fzT: () => t6,
     gLR: () => rQ,
     gg$: () => E.gg,
     gkr: () => rm,
@@ -274,7 +274,7 @@ n.d(t, {
     oNc: () => Z,
     o_z: () => eO,
     p3w: () => tE,
-    p6O: () => t6,
+    p6O: () => t5,
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
@@ -341,7 +341,7 @@ n.d(t, {
     yb: () => z,
     ylB: () => rF,
     yqN: () => nE,
-    ys_: () => e6,
+    ys_: () => e5,
     z7k: () => tS,
     zMe: () => E.zM,
     zUn: () => nj,
@@ -2176,8 +2176,8 @@ let ex = 100,
     e3 = (e) => "||".concat(e, "||"),
     e4 = /^\|\|([\s\S]+?)\|\|/,
     e8 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
-    e5 = /^\d{17,19}$/;
-var e6 = (function (e) {
+    e6 = /^\d{17,19}$/;
+var e5 = (function (e) {
         return (
             (e.MESSAGE = "MESSAGE"),
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
@@ -2499,8 +2499,6 @@ var tx = (function (e) {
                 "CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED"),
             (e[(e.HARMFUL_LINK_MESSAGE_BLOCKED = 240000)] = "HARMFUL_LINK_MESSAGE_BLOCKED"),
             (e[(e.USER_LIMITED_ACCESS_DEFAULT = 340000)] = "USER_LIMITED_ACCESS_DEFAULT"),
-            (e[(e.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED = 340019)] =
-                "USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED"),
             (e[(e.USER_FRIEND_REQUEST_LIMITED_ACCESS = 340007)] = "USER_FRIEND_REQUEST_LIMITED_ACCESS"),
             (e[(e.USER_LIMITED_ACCESS_MAX = 349999)] = "USER_LIMITED_ACCESS_MAX"),
             (e[(e.GUILD_LIMITED_ACCESS_DEFAULT = 400000)] = "GUILD_LIMITED_ACCESS_DEFAULT"),
@@ -2524,6 +2522,8 @@ var tx = (function (e) {
             (e[(e.ACCOUNT_REVERT_INVALID_TOKEN = 620000)] = "ACCOUNT_REVERT_INVALID_TOKEN"),
             (e[(e.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN = 620001)] = "ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN"),
             (e[(e.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND = 620002)] = "ACCOUNT_REVERT_ACCOUNT_NOT_FOUND"),
+            (e[(e.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED = 700000)] =
+                "USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED"),
             e
         );
     })({}),
@@ -3673,13 +3673,13 @@ Object.freeze({
 });
 let t4 = new Set(["facebook", "contacts"]),
     t8 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
-    t5 = Object.freeze({
+    t6 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    t6 = 10070709,
-    t7 = (0, d.Rf)(t6),
+    t5 = 10070709,
+    t7 = (0, d.Rf)(t5),
     t9 = [
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
@@ -5989,7 +5989,7 @@ let n2 = Object.freeze({
 var n8 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
-    n5 = (function (e) {
+    n6 = (function (e) {
         return (
             (e[(e.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
             (e[(e.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
@@ -5997,7 +5997,7 @@ var n8 = (function (e) {
             e
         );
     })({});
-let n6 = 14,
+let n5 = 14,
     n7 = 6,
     n9 = 30;
 var re = (function (e) {
