@@ -209,7 +209,7 @@ let eY = {
             noiseSuppression: !1,
             automaticGainControl: !0,
             noiseCancellation: !0,
-            bypassSystemInputProcessing: !1,
+            bypassSystemInputProcessing: !0,
         },
         [ev._.STUDIO]: {
             mode: eE.pM4.VOICE_ACTIVITY,
@@ -240,8 +240,8 @@ let eK = {},
     e3 = !1,
     e4 = !1,
     e8 = !1,
-    e6 = !1,
-    e5 = eI.Av,
+    e5 = !1,
+    e6 = eI.Av,
     e7 = !1,
     e9 = !1,
     te = !1,
@@ -329,7 +329,7 @@ function tj(e) {
 }
 function tM() {
     var e, t, n;
-    let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e6,
+    let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e5,
         o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
         s = a;
     if (
@@ -343,10 +343,10 @@ function tM() {
                 s.cameraSource.audioDeviceGuid !==
                     (null == o || null == (n = o.cameraSource) ? void 0 : n.audioDeviceGuid)) &&
             eW.setGoLiveSource(null, eQ),
-        e6 || i)
+        e5 || i)
     ) {
         let e = tw().videoDeviceId;
-        e6 && e === eI.w5 && e5 !== eI.Av && (e = e5), (e5 = (e6 = i) ? t3(e1, e) : eI.Av), eW.setVideoInputDevice(e5);
+        e5 && e === eI.w5 && e6 !== eI.Av && (e = e6), (e6 = (e5 = i) ? t3(e1, e) : eI.Av), eW.setVideoInputDevice(e6);
     }
     if (((a = o), null != o)) {
         let e = {
@@ -968,17 +968,17 @@ function t8(e) {
         eW.setAudioOutputDevice(t);
     }
 }
-function t6(e) {
+function t5(e) {
     tr = e.length > 0;
     let t = e1;
-    if (((e1 = t2(e, eT.intl.string(eT.t.WKWARU))), e6 && !p().isEqual(e1, t))) {
+    if (((e1 = t2(e, eT.intl.string(eT.t.WKWARU))), e5 && !p().isEqual(e1, t))) {
         var n;
-        let e = void 0 !== e1[e5],
-            r = e5 === eI.w5 && (null == (n = t[eI.w5]) ? void 0 : n.disabled);
+        let e = void 0 !== e1[e6],
+            r = e6 === eI.w5 && (null == (n = t[eI.w5]) ? void 0 : n.disabled);
         tM(e || r);
     }
 }
-function t5() {
+function t6() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         r =
@@ -1079,7 +1079,7 @@ function ne(e) {
               }),
               tQ({ mostRecentlyRequestedVoiceFilter: null }))
             : n(358820).r5()),
-        t5();
+        t6();
 }
 function nt(e) {
     let { mediaEngineState: t } = e;
@@ -1124,7 +1124,7 @@ function na(e) {
             (e2 = t.mute || t.suppress), (e8 = t.deaf), eW.eachConnection(tL);
             let e = null != t.guildId && null != t.channelId && null != tm && tm !== t.channelId,
                 n = !ts && null == t.channelId;
-            return tM(!e && !n && e6), (tm = t.channelId), !0;
+            return tM(!e && !n && e5), (tm = t.channelId), !0;
         }
         return __OVERLAY__ || t.userId !== eu.default.getId() || null != ep.Z.getChannelId() || tM(!1, null), e;
     }, !1);
@@ -1159,7 +1159,7 @@ function nc(e) {
         wasSaved: r,
     } = e;
     if (t !== eO.yP.PRELOADED_USER_SETTINGS || n || null != r) return !1;
-    t5(!0);
+    t6(!0);
 }
 function nu(e) {
     let { context: t } = e;
@@ -1302,8 +1302,9 @@ function nv(e) {
     tQ({ videoDeviceId: (t = t3(e1, t)) }), tM();
 }
 function nI(e) {
-    let { inputProfile: t } = e,
-        n = tQ({ activeInputProfile: t });
+    let { inputProfile: t } = e;
+    tQ({ activeInputProfile: t });
+    let n = tw();
     eW.eachConnection((e) => {
         tD(e),
             tG(e, n.automaticGainControl),
@@ -1321,7 +1322,7 @@ function nT(e) {
 }
 function nS(e) {
     let { inputDevices: t, outputDevices: n, videoDevices: r } = e;
-    t4(t), t8(n), t6(r);
+    t4(t), t8(n), t5(r);
 }
 function nA(e) {
     let { inputVolume: t, outputVolume: n } = e;
@@ -1481,7 +1482,7 @@ function n$(e) {
             (ty = !0), eW.eachConnection(tL);
             break;
         case ey.Eu.CAMERA:
-            !r && e6 && tM(!1);
+            !r && e5 && tM(!1);
             break;
         default:
             return !1;
@@ -1537,10 +1538,10 @@ function n8(e) {
     let { newVoiceFilterId: t } = e;
     tQ({ mostRecentlyRequestedVoiceFilter: t }), eW.eachConnection((e) => e.setVoiceFilterId(t));
 }
-function n6() {
+function n5() {
     tQ({ mostRecentlyRequestedVoiceFilter: null });
 }
-function n5(e) {
+function n6(e) {
     let { voiceFilterId: t } = e;
     (tp = tf), (th = t_), (tf = t), (t_ = null === t ? null : Date.now());
 }
@@ -1673,7 +1674,7 @@ function ru(e) {
             !0 === o &&
             (({ soundshareId: e, soundshareSession: r } = t7(c)), null != e && t9(e, r)),
             tj(s),
-            tM(s === eI.Yn.STREAM && e6, {
+            tM(s === eI.Yn.STREAM && e5, {
                 desktopSource: {
                     id: i,
                     sourcePid: c,
@@ -1688,7 +1689,7 @@ function ru(e) {
     } else if ((null == a ? void 0 : a.cameraSettings) != null) {
         let e = null != (r = a.context) ? r : eI.Yn.DEFAULT,
             { videoDeviceGuid: t, audioDeviceGuid: n } = a.cameraSettings,
-            o = e === eI.Yn.STREAM && e6,
+            o = e === eI.Yn.STREAM && e5,
             s =
                 null != (i = a.qualityOptions)
                     ? i
@@ -1706,7 +1707,7 @@ function ru(e) {
                 frameRate: s.frameRate,
             },
         });
-    } else tM(e6, null);
+    } else tM(e5, null);
 }
 function rd(e) {
     let { section: t } = e;
@@ -1732,7 +1733,7 @@ function rp(e) {
 function rh(e) {
     let { state: t } = e,
         n = D.Z.isEnabled();
-    if (t === eE.$7l.BACKGROUND && e6 && !n) (tn = !0), tM(!1);
+    if (t === eE.$7l.BACKGROUND && e5 && !n) (tn = !0), tM(!1);
     else {
         if (t !== eE.$7l.ACTIVE || !tn) return !1;
         (tn = !1), tM(!0);
@@ -1743,7 +1744,7 @@ function rm(e) {
     eW.eachConnection((t) => t.setBitRate(e.bitrate));
 }
 function rg() {
-    if ((!e6 && null == a) || null != ep.Z.getRTCConnectionId()) return !1;
+    if ((!e5 && null == a) || null != ep.Z.getRTCConnectionId()) return !1;
     tM(!1, null);
 }
 function rE() {
@@ -1887,7 +1888,7 @@ class rT extends (u = E.ZP.Store) {
         return !this.isSupported() || tw(e).deaf;
     }
     isVideoEnabled() {
-        return e6 && tr;
+        return e5 && tr;
     }
     isVideoAvailable() {
         return Object.values(e1).some((e) => {
@@ -2352,7 +2353,7 @@ let rA = (r = new rT(v.Z, {
     MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: rI,
     VOICE_FILTER_REQUEST_SWITCH: n8,
     VOICE_FILTER_LOOPBACK_TOGGLE: n4,
-    VOICE_FILTER_APPLIED: n5,
-    VOICE_FILTER_DOWNLOAD_FAILED: n6,
-    VOICE_FILTER_APPLY_FAILED: n6,
+    VOICE_FILTER_APPLIED: n6,
+    VOICE_FILTER_DOWNLOAD_FAILED: n5,
+    VOICE_FILTER_APPLY_FAILED: n5,
 }));
