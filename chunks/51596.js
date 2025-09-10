@@ -240,7 +240,7 @@ function Z(e) {
                 null != t &&
                     c.Z.open(t.section, t.subsection, {
                         openWithoutBackstack: !1,
-                        impressionSource: t.source,
+                        searchParams: t.params,
                     });
             } else (0, f.Z)(b.path, { navigationReplace: !0 });
     }

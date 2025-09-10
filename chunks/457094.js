@@ -193,7 +193,7 @@ let tr = (0, b.l)((e) => {
                 (0, J.h)(() =>
                     g.Z.open(n.section, n.subsection, {
                         openWithoutBackstack: !1,
-                        impressionSource: n.source,
+                        searchParams: n.params,
                     }),
                 ),
             (0, r.jsx)(m.Z, {
@@ -361,7 +361,7 @@ let tc = [
             return (
                 (0, J.h)(() => {
                     (0, s.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("15076"), n.e("54817")]).then(n.bind(n, 907941));
+                        let { default: e } = await Promise.all([n.e("15076"), n.e("79692")]).then(n.bind(n, 907941));
                         return (t) => {
                             var n, l;
                             return (0, r.jsx)(

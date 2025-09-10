@@ -82,7 +82,7 @@ function N(e) {
         (v = null != (r = e.onClose) ? r : null),
         (I = null != (i = e.analyticsLocation) ? i : null),
         (T = null != (a = e.analyticsLocations) ? a : []),
-        (A = null != (o = e.impressionSource) ? o : null);
+        (A = null != (o = e.searchParams) ? o : null);
 }
 function R() {
     (f = c.QZA.CLOSED),
@@ -190,7 +190,7 @@ class U extends (r = o.ZP.Store) {
             analyticsLocation: I,
             analyticsLocations: T,
             initialSection: S,
-            impressionSource: A,
+            searchParams: A,
         };
     }
     get onClose() {

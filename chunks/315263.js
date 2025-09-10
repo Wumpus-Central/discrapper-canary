@@ -42,8 +42,8 @@ var r = n(873546),
     L = n(782568),
     j = n(981631);
 n(215023);
-var k = n(46140);
-async function M(e, t) {
+var M = n(46140);
+async function k(e, t) {
     await a.Z.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: e,
@@ -60,10 +60,10 @@ async function U(e) {
     }
     if (null == n) return;
     if (n.state === j.r2o.EXPIRED || n.state === j.r2o.BANNED || n.state === j.r2o.ERROR)
-        return void (await M(n, e.code));
+        return void (await k(n, e.code));
     let r = w.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
-    null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await M(n, e.code);
+    null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await k(n, e.code);
 }
 let G = {
     skipExtensionCheck: void 0,
@@ -193,7 +193,7 @@ function B(e) {
                 !0
             );
         };
-    if (null != N && N.type === g.g.QUESTS_EMBED && (0, T.c)({ location: k.dr.EMBED_MOBILE }))
+    if (null != N && N.type === g.g.QUESTS_EMBED && (0, T.c)({ location: M.dr.EMBED_MOBILE }))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
@@ -207,12 +207,12 @@ function B(e) {
                 }),
             !0
         );
-    let { host: w, hostname: M, pathname: B, search: Z, hash: V } = null != (t = x.Z.toURLSafe(e)) ? t : {},
-        F =
-            x.Z.isDiscordHostname(null != M ? M : null) ||
-            x.Z.isDiscordLocalhost(null != w ? w : null, null != M ? M : null);
+    let { host: w, hostname: k, pathname: B, search: Z, hash: F } = null != (t = x.Z.toURLSafe(e)) ? t : {},
+        V =
+            x.Z.isDiscordHostname(null != k ? k : null) ||
+            x.Z.isDiscordLocalhost(null != w ? w : null, null != k ? k : null);
     if (
-        F &&
+        V &&
         ((null == B ? void 0 : B.startsWith("/application-directory")) ||
             (null == B ? void 0 : B.startsWith("/discovery/applications")))
     ) {
@@ -247,18 +247,18 @@ function B(e) {
             );
         };
     }
-    if (null != B && F && x.Z.isAppRoute(B)) {
+    if (null != B && V && x.Z.isAppRoute(B)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0,
         };
         return (
             null != Z && (e.search = Z),
-            null != V && (e.hash = V),
+            null != F && (e.hash = F),
             (t) => (null == t || t.preventDefault(), (0, I.Z)(B, e), !0)
         );
     }
-    if (null != B && F) {
+    if (null != B && V) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
         if (null != i)
@@ -272,7 +272,7 @@ function B(e) {
             );
     }
     let H = (0, v.Ao)(B);
-    if (null != B && F && null != H)
+    if (null != B && V && null != H)
         return (e) => {
             null == e || e.preventDefault();
             let t = P.Z.getGuildId();
@@ -280,7 +280,7 @@ function B(e) {
             let n = y.ZP.getGuildScheduledEvent(H.guildEventId);
             return null != n && (0, b.bO)({ eventId: n.id }), !0;
         };
-    if (F && (null == B ? void 0 : B.startsWith("/settings/"))) {
+    if (V && (null == B ? void 0 : B.startsWith("/settings/"))) {
         let { default: e } = n(722589),
             t = e(B);
         if (null != t)
@@ -288,15 +288,15 @@ function B(e) {
                 null == e || e.preventDefault(),
                 l.Z.open(t.section, t.subsection, {
                     openWithoutBackstack: !1,
-                    impressionSource: t.source,
+                    searchParams: t.params,
                     analyticsLocations: s,
                 }),
                 !0
             );
     }
-    return F && (null == B ? void 0 : B.startsWith("/discovery/quests"))
+    return V && (null == B ? void 0 : B.startsWith("/discovery/quests"))
         ? (e) => (null == e || e.preventDefault(), (0, S.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
-        : F && (null == B ? void 0 : B.startsWith("/discovery/servers"))
+        : V && (null == B ? void 0 : B.startsWith("/discovery/servers"))
           ? (e) => (
                 null == e || e.preventDefault(),
                 Promise.resolve()

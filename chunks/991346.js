@@ -224,7 +224,7 @@ function Y() {
     var e, t, n, o;
     let I = (0, g.YO)().length,
         P = (0, m.U)(),
-        j = (0, i.e7)([C.Z], () => C.Z.getProps().impressionSource),
+        j = (0, i.e7)([C.Z], () => C.Z.getProps().searchParams),
         M = (0, h.gU)(),
         U = (0, L.bC)(),
         G = (0, l.Go)(),
@@ -263,7 +263,7 @@ function Y() {
             (0, x.iE)({
                 unseenGiftCount: I,
                 showPrepaidPaymentPastDueWarning: P,
-                impressionSource: j,
+                searchParams: j,
                 numOfPendingFamilyRequests: M,
                 isOverlaySupported: U,
                 isClipsBetaTagShowing: B === a.z.CLIPS_SETTINGS_BETA_TAG,
