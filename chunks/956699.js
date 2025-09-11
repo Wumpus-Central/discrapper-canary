@@ -807,7 +807,7 @@ class eu extends i.Component {
                 try {
                     let t = JSON.parse(e);
                     for (let e in t) {
-                        if (null == e.match(/^[0-9]{4}\-[0-9]{2}_[a-z0-9_]+$/))
+                        if (null == e.match(/^[0-9]{4}\-[0-9]{2}(-|_)[a-z0-9_-]+$/))
                             return void this.setState({
                                 experimentsError: "".concat(e, " is an invalid experiment name"),
                             });
