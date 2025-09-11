@@ -9,22 +9,22 @@ n.d(t, {
 var r,
     i = n(647438),
     l = n(399606),
-    s = n(597688),
-    o = n(1870),
+    o = n(597688),
+    s = n(1870),
     c = n(884697),
     a = n(388032),
     u = (((r = {}).PURCHASE = "purchase"), (r.PREMIUM_PURCHASE = "premium_purchase"), (r.PREVIEW = "preview"), r);
 let d = { id: "None" },
     f = { id: "Shop" },
     p = () => {
-        let e = (0, l.e7)([o.Z], () => o.Z.purchases),
-            [t, n] = (0, l.Wu)([s.Z], () => [s.Z.categories, s.Z.products]);
+        let e = (0, l.e7)([s.Z], () => s.Z.purchases),
+            [t, n] = (0, l.Wu)([o.Z], () => [o.Z.categories, o.Z.products]);
         return (0, i.useMemo)(() => {
             let r = (0, c.yn)(e, t).reduce(
                 (t, r) => {
                     let i = e.get(r.skuId);
                     return (
-                        (0, c.G1)(n.get(r.skuId))
+                        (0, c.G1)(null != i ? i : n.get(r.skuId))
                             ? t.premium_purchase.push(r)
                             : null != i
                               ? t.purchase.push(r)

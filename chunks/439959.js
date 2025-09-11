@@ -1,7 +1,7 @@
 r.d(t, {
     $0: () => u,
     Tm: () => d,
-    ZP: () => h,
+    ZP: () => p,
     oT: () => m,
 }),
     r(388685),
@@ -16,7 +16,7 @@ var n,
     u = (((n = {}).PURCHASE = "purchase"), (n.PREMIUM_PURCHASE = "premium_purchase"), (n.PREVIEW = "preview"), n);
 let d = { id: "None" },
     m = { id: "Shop" },
-    h = () => {
+    p = () => {
         let e = (0, l.e7)([a.Z], () => a.Z.purchases),
             [t, r] = (0, l.Wu)([s.Z], () => [s.Z.categories, s.Z.products]);
         return (0, i.useMemo)(() => {
@@ -24,7 +24,7 @@ let d = { id: "None" },
                 (t, n) => {
                     let i = e.get(n.skuId);
                     return (
-                        (0, o.G1)(r.get(n.skuId))
+                        (0, o.G1)(null != i ? i : r.get(n.skuId))
                             ? t.premium_purchase.push(n)
                             : null != i
                               ? t.purchase.push(n)

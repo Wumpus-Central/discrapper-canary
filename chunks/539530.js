@@ -1,5 +1,5 @@
 n.d(t, {
-    $0: () => d,
+    $0: () => u,
     ZP: () => m,
 }),
     n(388685),
@@ -11,8 +11,8 @@ var l,
     a = n(1870),
     o = n(884697),
     c = n(388032),
-    d = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
-let u = { id: "None" },
+    u = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
+let d = { id: "None" },
     p = { id: "Shop" },
     m = () => {
         let e = (0, r.e7)([a.Z], () => a.Z.purchases),
@@ -21,7 +21,7 @@ let u = { id: "None" },
             let l = (0, o.Y)(e, t).reduce(
                 (t, l) => {
                     let i = e.get(l.skuId),
-                        r = (0, o.G1)(n.get(l.skuId));
+                        r = (0, o.G1)(null != i ? i : n.get(l.skuId));
                     return (
                         r && 1 ? t.premium_purchase.push(l) : null != i ? t.purchase.push(l) : r || t.preview.push(l), t
                     );
@@ -35,7 +35,7 @@ let u = { id: "None" },
             return [
                 {
                     section: "purchase",
-                    items: [u, p, ...l.purchase],
+                    items: [d, p, ...l.purchase],
                     height: 12,
                     header: c.intl.string(c.t["WfGV5+"]),
                 },
