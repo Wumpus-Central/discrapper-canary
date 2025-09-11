@@ -1,5 +1,5 @@
 n.d(t, {
-    Fm: () => p,
+    BN: () => p,
     H6: () => h,
     Qh: () => f,
     Sn: () => _,
@@ -90,15 +90,24 @@ function p(e) {
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then((t) => {
-        let n = t.body.reduce((e, t) => ((e[t.sku_id] = t), e), {});
-        return (
+        let n = {},
+            r = {};
+        t.body.forEach((e) => {
+            var t, i, a, o, s, l;
+            (null == (a = e.sku) || null == (i = a.tenant_metadata) || null == (t = i.guild_monetization)
+                ? void 0
+                : t.powerup) != null
+                ? (n[e.sku_id] = e)
+                : (null == (l = e.sku) || null == (s = l.tenant_metadata) || null == (o = s.guild_monetization)
+                      ? void 0
+                      : o.game_server) != null && (r[e.id] = e);
+        }),
             i.Z.dispatch({
-                type: "GUILD_UNLOCKED_POWERUPS_FETCH_SUCCESS",
+                type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS",
                 guildId: e,
                 unlockedPowerups: n,
-            }),
-            t.body
-        );
+                unlockedGameServers: r,
+            });
     });
 }
 function h(e, t) {

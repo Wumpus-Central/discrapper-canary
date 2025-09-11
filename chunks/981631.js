@@ -32,7 +32,7 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => ri,
-    DJj: () => eM,
+    DJj: () => ek,
     DZw: () => ex,
     E07: () => tC,
     EKQ: () => E.EK,
@@ -77,7 +77,7 @@ n.d(t, {
     JwP: () => ng,
     K3D: () => rU,
     KA4: () => tw,
-    KFR: () => nk,
+    KFR: () => nM,
     KJ3: () => rL,
     KsC: () => R,
     L4X: () => eY,
@@ -116,7 +116,7 @@ n.d(t, {
     PUi: () => nZ,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => k,
+    PrB: () => M,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -143,7 +143,7 @@ n.d(t, {
     STv: () => ey,
     SaU: () => tV,
     Sap: () => ns,
-    Sbl: () => tk,
+    Sbl: () => tM,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => r0,
@@ -176,13 +176,13 @@ n.d(t, {
     X6Q: () => E.X6,
     X7u: () => E.X7,
     XAJ: () => eA,
-    XKF: () => n5,
+    XKF: () => n6,
     XmY: () => e3,
-    Xyh: () => e5,
+    Xyh: () => e6,
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => ek,
+    Z8P: () => eM,
     Z9p: () => nb,
     ZUi: () => W,
     ZY5: () => tU,
@@ -229,7 +229,7 @@ n.d(t, {
     fMv: () => b.fM,
     fo$: () => tc,
     frH: () => E.fr,
-    fzT: () => t5,
+    fzT: () => t6,
     gLR: () => r$,
     gg$: () => E.gg,
     gkr: () => rE,
@@ -250,7 +250,7 @@ n.d(t, {
     j3N: () => eG,
     j8d: () => E.j8,
     jXE: () => tB,
-    jm8: () => rk,
+    jm8: () => rM,
     jsM: () => rb,
     jwA: () => nL,
     kEZ: () => B,
@@ -276,16 +276,16 @@ n.d(t, {
     oNc: () => Z,
     o_z: () => eO,
     p3w: () => tE,
-    p6O: () => t6,
+    p6O: () => t5,
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
-    pM4: () => M,
+    pM4: () => k,
     pNK: () => N,
     pTL: () => rQ,
-    pjP: () => n6,
+    pjP: () => n5,
     pmI: () => nt,
-    q5t: () => tM,
+    q5t: () => tk,
     q9n: () => nK,
     qAy: () => tZ,
     qWG: () => rW,
@@ -303,7 +303,7 @@ n.d(t, {
     sFg: () => eu,
     sHY: () => rc,
     scU: () => tT,
-    si2: () => rM,
+    si2: () => rk,
     t4x: () => tK,
     tG9: () => eV,
     tHP: () => eL,
@@ -343,10 +343,10 @@ n.d(t, {
     yb: () => z,
     ylB: () => rH,
     yqN: () => ny,
-    ys_: () => e6,
+    ys_: () => e5,
     z7k: () => tS,
     zMe: () => E.zM,
-    zUn: () => nM,
+    zUn: () => nk,
     zYc: () => rA,
     zo9: () => r2,
 }),
@@ -671,10 +671,10 @@ var v = (function (e) {
     j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -1489,6 +1489,7 @@ let eE = "@me",
         USER_GUILD_BOOST_SLOT_UNCANCEL: (e) => "/users/@me/guilds/premium/subscription-slots/".concat(e, "/uncancel"),
         GUILD_POWERUPS: (e) => "/guilds/".concat(e, "/powerups"),
         GUILD_POWERUP_TOGGLE: (e, t) => "/guilds/".concat(e, "/skus/").concat(t),
+        GAME_SERVERS: (e) => "/guilds/".concat(e, "/game-servers"),
         SEARCH_CHANNEL: (e) => "/channels/".concat(e, "/messages/search"),
         SEARCH_TABS_CHANNEL: (e) => "/channels/".concat(e, "/messages/search/tabs"),
         BILLING_STRIPE_SETUP_INTENT_SECRET: "/users/@me/billing/stripe/setup-intents",
@@ -2140,8 +2141,8 @@ var ew = (function (e) {
 let ex = 100,
     eL = 200,
     ej = 50,
-    ek = 50,
-    eM = 25,
+    eM = 50,
+    ek = 25,
     eU = 200,
     eG = 100,
     eB = 250,
@@ -2179,8 +2180,8 @@ let ex = 100,
     e3 = (e) => "||".concat(e, "||"),
     e4 = /^\|\|([\s\S]+?)\|\|/,
     e8 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
-    e5 = /^\d{17,19}$/;
-var e6 = (function (e) {
+    e6 = /^\d{17,19}$/;
+var e5 = (function (e) {
         return (
             (e.MESSAGE = "MESSAGE"),
             (e.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
@@ -2531,7 +2532,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2614,7 +2615,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -3678,15 +3679,15 @@ Object.freeze({
 });
 let t4 = new Set(["facebook", "contacts"]),
     t8 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
-    t5 = Object.freeze({
+    t6 = Object.freeze({
         DESKTOP: "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    t6 = 10070709,
-    t7 = (0, d.Rf)(t6),
+    t5 = 10070709,
+    t7 = (0, d.Rf)(t5),
     t9 = {
-        primary_color: t6,
+        primary_color: t5,
         secondary_color: null,
         tertiary_color: null,
     },
@@ -5476,7 +5477,7 @@ var nx = (function (e) {
     nj = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
-    nk = (function (e) {
+    nM = (function (e) {
         return (
             (e.ALL = "ALL"),
             (e.UNKNOWN = "UNKNOWN"),
@@ -5507,7 +5508,7 @@ var nx = (function (e) {
             e
         );
     })({}),
-    nM = (function (e) {
+    nk = (function (e) {
         return (
             (e.NAME = "name"),
             (e.DESCRIPTION = "description"),
@@ -6003,8 +6004,8 @@ let n4 = Object.freeze({
         roblox: "Roblox",
     }),
     n8 = 6016,
-    n5 = 3384;
-var n6 = (function (e) {
+    n6 = 3384;
+var n5 = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
     n7 = (function (e) {
@@ -6603,7 +6604,7 @@ var rL = (function (e) {
     rj = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6614,7 +6615,7 @@ var rL = (function (e) {
             e
         );
     })({}),
-    rM = (function (e) {
+    rk = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),

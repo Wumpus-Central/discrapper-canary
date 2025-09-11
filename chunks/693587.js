@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(442837),
+    i = n(570140);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,83 +26,92 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = 86400000,
-    d = 3600000,
-    f = {};
-function _() {
-    f = {};
+let c = {};
+function u(e) {
+    return (
+        null == c[e] &&
+            (c[e] = {
+                catalog: {},
+                instances: {},
+                entitlements: {},
+            }),
+        c[e]
+    );
 }
-function p(e) {
-    let { guildId: t, catalog: n } = e;
-    f[t] = c(s({}, f[t]), {
-        catalog: n,
-        hasFetchedCatalog: !0,
-    });
-}
-function h(e) {
-    let { guildId: t, instances: n } = e;
-    f[t] = c(s({}, f[t]), {
-        instances: n,
-        hasFetchedInstances: !0,
-    });
-}
-class m extends (r = i.ZP.Store) {
+class d extends (r = o.ZP.Store) {
     getState() {
-        return f;
+        return c;
     }
     getStateForGuild(e) {
-        return null != e ? f[e] : void 0;
+        return null != e ? c[e] : void 0;
     }
     shouldFetchCatalogForGuild(e) {
         var t;
-        let n = null == (t = f[e]) ? void 0 : t.catalogFetchCooldown;
-        return null == n || n + u < Date.now();
+        let n = null == (t = c[e]) ? void 0 : t.catalogFetchCooldown;
+        return null == n || n + 86400000 < Date.now();
     }
     shouldFetchInstancesForGuild(e) {
         var t;
-        let n = null == (t = f[e]) ? void 0 : t.instancesFetchCooldown;
-        return null == n || n + d < Date.now();
+        let n = null == (t = c[e]) ? void 0 : t.instancesFetchCooldown;
+        return null == n || n + 3600000 < Date.now();
     }
     hasFetchedCatalog(e) {
         var t;
-        return null != e && (null == (t = f[e]) ? void 0 : t.hasFetchedCatalog) === !0;
+        return null != e && (null == (t = c[e]) ? void 0 : t.hasFetchedCatalog) === !0;
     }
     hasFetchedInstances(e) {
         var t;
-        return null != e && (null == (t = f[e]) ? void 0 : t.hasFetchedInstances) === !0;
+        return null != e && (null == (t = c[e]) ? void 0 : t.hasFetchedInstances) === !0;
     }
 }
-o(m, "displayName", "PortkeyStore");
-let g = new m(a.Z, {
-    LOGOUT: _,
-    PORTKEY_FETCH_CATALOG_SUCCESS: p,
-    PORTKEY_FETCH_INSTANCES_SUCCESS: h,
+l(d, "displayName", "PortkeyStore");
+let p = new d(i.Z, {
+    LOGOUT: function () {
+        c = {};
+    },
+    PORTKEY_FETCH_CATALOG_SUCCESS: function (e) {
+        let { guildId: t, catalog: n } = e;
+        c = s(a({}, c), {
+            [t]: s(a({}, u(t)), {
+                catalog: n,
+                hasFetchedCatalog: !0,
+            }),
+        });
+    },
+    PORTKEY_FETCH_INSTANCES_SUCCESS: function (e) {
+        let { guildId: t, instances: n } = e;
+        c = s(a({}, c), {
+            [t]: s(a({}, u(t)), {
+                instances: n,
+                hasFetchedInstances: !0,
+            }),
+        });
+    },
+    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function (e) {
+        let { guildId: t, unlockedGameServers: n } = e;
+        c = s(a({}, c), { [t]: s(a({}, u(t)), { entitlements: n }) });
+    },
 });

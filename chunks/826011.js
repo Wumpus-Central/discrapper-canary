@@ -4,9 +4,9 @@ var r = t(951288),
     n = t(304789),
     i = t(481060),
     c = t(572004),
-    o = t(401561),
+    o = t(440589),
     l = t(388032),
-    d = t(927607);
+    d = t(999852);
 function m(e) {
     let { instance: s, onClose: t, transitionState: m } = e,
         p = a.useCallback(() => {
@@ -43,7 +43,7 @@ function m(e) {
                                 (0, r.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: s.plan.name,
+                                    children: s.planName,
                                 }),
                             ],
                         }),

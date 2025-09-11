@@ -1,15 +1,15 @@
 n.r(t), n.d(t, { default: () => v });
 var r = n(951288),
     i = n(647438),
-    s = n(657707),
-    a = n(442837),
-    o = n(481060),
+    a = n(657707),
+    o = n(442837),
+    s = n(481060),
     l = n(665149),
     c = n(639777),
     d = n(744993),
     u = n(693587),
-    m = n(462923),
-    p = n(331500),
+    p = n(462923),
+    m = n(331500),
     b = n(440589),
     g = n(388032),
     f = n(50803);
@@ -19,7 +19,7 @@ function v(e) {
         (0, d.EC)(t);
     }, [t]);
     let n = (0, c.Z)(t),
-        v = (0, a.e7)([u.Z], () => u.Z.getStateForGuild(t)),
+        v = (0, o.e7)([u.Z], () => u.Z.getStateForGuild(t)),
         y = i.useMemo(
             () => ((null == v ? void 0 : v.instances) == null ? [] : Object.values(v.instances)),
             [null == v ? void 0 : v.instances],
@@ -32,7 +32,7 @@ function v(e) {
                 toolbar: (0, r.jsx)("div", {}),
                 children: [
                     (0, r.jsx)(l.ZP.Icon, {
-                        icon: s.$Eu,
+                        icon: a.$Eu,
                         "aria-label": "",
                     }),
                     (0, r.jsx)(l.ZP.Title, { children: g.intl.string(b.default.lH9Dio) }),
@@ -44,22 +44,22 @@ function v(e) {
                     (null == v ? void 0 : v.instances) != null
                         ? (0, r.jsx)("div", {
                               className: f.gameContainer,
-                              children: y.map((e) =>
+                              children: y.map((e, n) =>
                                   (0, r.jsx)(
-                                      m.Z,
+                                      p.Z,
                                       {
                                           guildId: t,
                                           instance: e,
                                       },
-                                      e.gameId,
+                                      "".concat(e.gameId, "-").concat(n),
                                   ),
                               ),
                           })
                         : (0, r.jsx)("div", {
                               className: f.spinnerContainer,
-                              children: (0, r.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE }),
+                              children: (0, r.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
                           }),
-                    n && (0, r.jsx)(p.Z, { guildId: t }),
+                    n && (0, r.jsx)(m.Z, { guildId: t }),
                 ],
             }),
         ],

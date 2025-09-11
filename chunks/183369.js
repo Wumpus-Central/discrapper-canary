@@ -1,6 +1,6 @@
 t.d(n, {
     KO: () => b,
-    aj: () => j,
+    aj: () => x,
 }),
     t(388685);
 var i = t(951288),
@@ -14,126 +14,144 @@ var i = t(951288),
     u = t(279604),
     m = t(744993),
     g = t(693587),
-    p = t(985862),
-    f = t(741252),
-    v = t(473682);
-let [x, j] = (0, d.Z)();
+    p = t(741252),
+    f = t(473682);
+let [v, x] = (0, d.Z)();
 function b(e) {
-    var n, t, d, j, b, h, _, C, y;
+    var n, t, d, x, b, j, h, _;
     let {
-        guildId: O,
-        initialPortkeyInstance: N,
-        initialPortkeyGame: S,
-        stepConfig: P = v.T9,
-        children: w,
-        onClose: k,
-        analyticsLocation: T,
+        guildId: C,
+        initialPortkeyInstance: y,
+        initialPortkeyGame: O,
+        stepConfig: N = f.T9,
+        children: S,
+        onClose: P,
+        analyticsLocation: w,
     } = e;
     r.useEffect(() => {
-        (0, m.po)(O), (0, m.EC)(O);
-    }, [O]);
-    let E = (0, a.e7)([g.Z], () => g.Z.getStateForGuild(O)),
-        I = (0, a.e7)([c.Z], () => c.Z.getGuild(O)),
-        { analyticsLocations: Z } = (0, l.ZP)(T),
-        [G, D] = r.useState(null != (d = P.initialStep) ? d : Object.keys(P.steps)[0]),
-        B = (0, u.Td)(O, void 0),
-        M = P.steps[G],
-        [L, R] = r.useState(null != (j = null == S ? void 0 : S.id) ? j : null == N ? void 0 : N.gameId),
-        [V, z] = r.useState(N),
-        [A, F] = r.useState(
-            null != (b = null == S || null == (n = S.plans[0]) ? void 0 : n.id)
-                ? b
-                : null == N || null == (t = N.plan)
-                  ? void 0
-                  : t.id,
+        (0, m.po)(C), (0, m.EC)(C);
+    }, [C]);
+    let k = (0, a.e7)([g.Z], () => g.Z.getStateForGuild(C)),
+        T = (0, a.e7)([c.Z], () => c.Z.getGuild(C)),
+        { analyticsLocations: E } = (0, l.ZP)(w),
+        [I, Z] = r.useState(null != (t = N.initialStep) ? t : Object.keys(N.steps)[0]),
+        G = (0, u.Td)(C, void 0),
+        D = N.steps[I],
+        [B, L] = r.useState(null != (d = null == O ? void 0 : O.id) ? d : null == y ? void 0 : y.gameId),
+        M = r.useMemo(() => {
+            var e;
+            if (null != B)
+                return Object.values(null != (e = null == k ? void 0 : k.catalog) ? e : {}).find((e) => e.id === B);
+        }, [null == k ? void 0 : k.catalog, B]),
+        [z, R] = r.useState(y),
+        [V, A] = r.useState(
+            null != (x = null == O || null == (n = O.plans[0]) ? void 0 : n.id) ? x : null == y ? void 0 : y.planId,
         ),
+        F = (function (e, n, t, i) {
+            var r, l, o, s, c, d, u, m;
+            let p = (0, a.e7)([g.Z], () => {
+                    var n;
+                    return null == (n = g.Z.getStateForGuild(e)) ? void 0 : n.entitlements;
+                }),
+                f = null != (u = null == n || null == (r = n.plans.find((e) => e.id === t)) ? void 0 : r.cost) ? u : 0;
+            return null == i
+                ? f
+                : f -
+                      (null !=
+                      (m =
+                          null == p ||
+                          null == (d = p[i.entitlementId]) ||
+                          null == (c = d.sku) ||
+                          null == (s = c.tenant_metadata) ||
+                          null == (o = s.guild_monetization) ||
+                          null == (l = o.game_server)
+                              ? void 0
+                              : l.boost_price)
+                          ? m
+                          : 0);
+        })(C, M, V, z),
         W = r.useCallback((e, n) => {
             var t;
-            R(null == e ? void 0 : e.id), F(null != n ? n : null == e || null == (t = e.plans[0]) ? void 0 : t.id);
+            L(null == e ? void 0 : e.id), A(null != n ? n : null == e || null == (t = e.plans[0]) ? void 0 : t.id);
         }, []),
-        K = r.useCallback((e) => {
-            z(e), R(e.gameId), F(e.plan.id), Q(e.name), $(e.location);
+        U = r.useCallback((e) => {
+            R(e), L(e.gameId), A(e.planId), X(e.name), Y(e.location);
         }, []),
-        U = r.useMemo(() => {
-            var e;
-            if (null != L)
-                return Object.values(null != (e = null == E ? void 0 : E.catalog) ? e : {}).find((e) => e.id === L);
-        }, [null == E ? void 0 : E.catalog, L]),
-        [H, X] = r.useState(),
-        [q, Q] = r.useState(null != (h = null == N ? void 0 : N.name) ? h : ""),
-        [Y, $] = r.useState(null != (_ = null == N ? void 0 : N.location) ? _ : ""),
-        [J, ee] = r.useState(!1),
-        en = r.useCallback(() => {
-            let e = (0, p.K)(A, V, U);
-            0 !== e &&
-                null != I &&
-                null != U &&
-                null != A &&
-                (B < e
+        [q, H] = r.useState(),
+        [K, X] = r.useState(null != (b = null == y ? void 0 : y.name) ? b : ""),
+        [Q, Y] = r.useState(null != (j = null == y ? void 0 : y.location) ? j : ""),
+        [$, J] = r.useState(!1),
+        ee = r.useCallback(() => {
+            0 !== F &&
+                null != T &&
+                null != M &&
+                null != V &&
+                (G < F
                     ? (0, o.u)({
-                          analyticsLocation: T,
-                          numberOfBoostsToAdd: e - B,
-                          analyticsLocations: Z,
-                          guild: I,
+                          analyticsLocation: w,
+                          numberOfBoostsToAdd: F - G,
+                          analyticsLocations: E,
+                          guild: T,
                           intent: s.P.PERK,
                           onLoading: (e) => {
-                              ee(e);
+                              J(e);
                           },
                           onSubscribeComplete: () => {
-                              (0, m.NE)(I.id, A, q, Y).then(() => {
-                                  k(), (0, f.Z)(I.id, U);
+                              (0, m.NE)(T.id, V, K, Q).then(() => {
+                                  P(), (0, p.Z)(T.id, M);
                               });
                           },
                       })
-                    : (0, m.NE)(I.id, A, q, Y).then(() => {
-                          k(), (0, f.Z)(I.id, U);
+                    : (0, m.NE)(T.id, V, K, Q).then(() => {
+                          P(), (0, p.Z)(T.id, M);
                       }));
-        }, [Z, I, B, A, T, U, V, q, Y, k]),
-        et = r.useCallback(
+        }, [E, T, G, V, w, M, K, Q, P, F]),
+        en = r.useCallback(
             (e) => {
                 switch (e.type) {
                     case "close":
-                        k();
+                        P();
                         break;
                     case "go-to-step":
-                        D(e.step);
+                        Z(e.step);
                         break;
                     case "save":
-                        en();
+                        ee();
                 }
             },
-            [k, en],
+            [P, ee],
         ),
+        et = r.useCallback(() => {
+            null != D && en(D.onBack);
+        }, [D, en]),
         ei = r.useCallback(() => {
-            null != M && et(M.onBack);
-        }, [M, et]),
-        er = r.useCallback(() => {
-            null != M && et(M.onNext);
-        }, [M, et]);
-    return (0, i.jsx)(x.Provider, {
+            null != D && en(D.onNext);
+        }, [D, en]);
+    return (0, i.jsx)(v.Provider, {
         value: {
-            guildId: O,
-            step: G,
-            stepAction: M,
-            stepLoading: J,
-            onBack: ei,
-            onNext: er,
-            portkeyGames: null != (C = null == E ? void 0 : E.catalog) ? C : {},
-            instances: Object.values(null != (y = null == E ? void 0 : E.instances) ? y : {}),
-            currentGame: U,
+            guildId: C,
+            step: I,
+            stepAction: D,
+            stepLoading: $,
+            onBack: et,
+            onNext: ei,
+            portkeyGames: null != (h = null == k ? void 0 : k.catalog) ? h : {},
+            instances: Object.values(null != (_ = null == k ? void 0 : k.instances) ? _ : {}),
+            currentGame: M,
             setCurrentGame: W,
-            portkeyInstance: V,
-            setPortkeyInstance: K,
-            name: q,
-            setName: Q,
-            location: Y,
-            setLocation: $,
-            planId: A,
-            setPlanId: F,
-            footerNode: H,
-            setFooterNode: X,
-            availableBoostCount: B,
+            portkeyInstance: z,
+            setPortkeyInstance: U,
+            name: K,
+            setName: X,
+            location: Q,
+            setLocation: Y,
+            planCost: F,
+            planId: V,
+            setPlanId: A,
+            footerNode: q,
+            setFooterNode: H,
+            availableBoostCount: G,
         },
-        children: w,
+        children: S,
     });
 }
