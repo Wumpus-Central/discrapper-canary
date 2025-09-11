@@ -9,12 +9,12 @@ var r = n(951288),
     u = n(866442),
     d = n(19602),
     f = n(490236),
-    _ = n(861066),
+    _ = n(159691),
     p = n(481060),
     h = n(408886),
     m = n(233398),
     g = n(866419),
-    E = n(771934),
+    E = n(507962),
     b = n(119475),
     y = n(388032),
     O = n(531604);
@@ -161,14 +161,14 @@ function D(e) {
                 (t[v] = e.hex), s(t);
             }
         },
-        M = async () => {
+        k = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
                     (0, E.J4)(), x(e);
                 } catch (e) {}
         },
-        k = () => {
+        M = () => {
             if (o.length === N) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
             let e = o.length > 0 ? o[o.length - 1] : A,
@@ -204,7 +204,7 @@ function D(e) {
                             (0, r.jsx)(
                                 p.P3F,
                                 S(I({}, e), {
-                                    onClick: o.length === N ? void 0 : k,
+                                    onClick: o.length === N ? void 0 : M,
                                     className: l()(O.addColorButton, { [O.disabled]: o.length === N }),
                                     children: (0, r.jsx)(p.Text, {
                                         variant: "text-sm/medium",
@@ -247,7 +247,7 @@ function D(e) {
                                     tooltipClassName: O.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            _.h,
+                                            _.hU,
                                             S(
                                                 I(
                                                     {
@@ -257,7 +257,7 @@ function D(e) {
                                                     e,
                                                 ),
                                                 {
-                                                    onClick: M,
+                                                    onClick: k,
                                                     icon: d.i,
                                                     "aria-label": y.intl.string(b.default["8QXO8v"]),
                                                 },
@@ -269,7 +269,7 @@ function D(e) {
                                     text: y.intl.string(b.default["rTik5+"]),
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            _.h,
+                                            _.hU,
                                             S(I({}, e), {
                                                 variant: "icon-only",
                                                 size: "sm",

@@ -69,12 +69,12 @@ function I(e) {
     return (0, r.jsxs)("div", {
         className: y.headingContainer,
         children: [
-            (0, r.jsx)(s.X6, {
+            (0, r.jsx)(s.X6q, {
                 variant: "heading-lg/bold",
                 color: "header-primary",
                 children: l,
             }),
-            (0, r.jsx)(s.xv, {
+            (0, r.jsx)(s.xvT, {
                 variant: "text-xs/medium",
                 color: "text-secondary",
                 children: o,
@@ -91,7 +91,7 @@ function T(e) {
             (0, r.jsxs)("div", {
                 className: y.summaryContainer,
                 children: [
-                    (0, r.jsx)(s.xv, {
+                    (0, r.jsx)(s.xvT, {
                         variant: "text-sm/medium",
                         color: "text-primary",
                         lineClamp: 3,
@@ -100,7 +100,7 @@ function T(e) {
                     (0, r.jsx)(u.P3F, {
                         className: y.clickable,
                         onClick: i,
-                        children: (0, r.jsx)(s.xv, {
+                        children: (0, r.jsx)(s.xvT, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
                             children: b.intl.string(b.t.lBeKY2),

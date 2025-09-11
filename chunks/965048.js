@@ -14,8 +14,8 @@ var r = n(951288),
     l = n.n(s),
     c = n(866442),
     u = n(657707),
-    d = n(692547),
-    f = n(84735),
+    d = n(793030),
+    f = n(692547),
     _ = n(981631),
     p = n(728122);
 function h(e, t, n) {
@@ -71,7 +71,7 @@ let b = {
                 size: l = 24,
                 type: c = "default",
                 align: u = "center",
-                onChange: d = _.dG4,
+                onChange: f = _.dG4,
                 onClick: h,
                 className: m,
                 innerClassName: g,
@@ -82,9 +82,9 @@ let b = {
             } = e,
             S = i.useCallback(
                 (e) => {
-                    null == d || d(e, e.currentTarget.checked);
+                    null == f || f(e, e.currentTarget.checked);
                 },
-                [d],
+                [f],
             ),
             A =
                 null != E
@@ -109,7 +109,7 @@ let b = {
             children: [
                 O ? A : null,
                 !a &&
-                    (0, r.jsx)(f.t, {
+                    (0, r.jsx)(d.tEY, {
                         children: (0, r.jsx)("input", {
                             className: o()(g, N),
                             type: "checkbox",
@@ -160,8 +160,8 @@ function v(e) {
 }
 function I(e) {
     let { indicatorClassName: t, value: n, size: a, shape: s, checkboxColor: l, disabled: c } = e,
-        f = v(e),
-        _ = i.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
+        d = v(e),
+        _ = i.useMemo(() => (n ? f.Z.colors.WHITE.css : f.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
     return (0, r.jsx)("div", {
         className: o()(p.checkbox, s, t, {
             [p.checked]: n,
@@ -173,7 +173,7 @@ function I(e) {
                 height: a,
                 borderColor: l,
             },
-            f,
+            d,
         ),
         children: (0, r.jsx)(u.kSu, {
             size: "sm",

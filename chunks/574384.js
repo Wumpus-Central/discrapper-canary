@@ -43,7 +43,7 @@ function f(e) {
     return (0, r.jsxs)("div", {
         className: u.selectorGroup,
         children: [
-            (0, r.jsx)(a.X6, {
+            (0, r.jsx)(a.X6q, {
                 variant: "heading-deprecated-12/semibold",
                 className: u.sectionLabel,
                 children: c.intl.string(c.t["8qKd+P"]),

@@ -12,8 +12,8 @@ var i = n(907862),
     c = n(981631),
     u = n(388032),
     d = n(20456),
-    p = n(712793),
-    f = n(295234);
+    p = n(553668),
+    f = n(746838);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,10 +58,7 @@ let g = (e) => {
             align: "top",
             position: "right",
             gradientColor: "nitro-pink",
-            caretConfig: {
-                position: "left",
-                align: "start",
-            },
+            caretConfig: { align: "start" },
             actions: [
                 {
                     text: u.intl.string(u.t.t2N819),

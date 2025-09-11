@@ -32,8 +32,8 @@ var r,
     x = n(485386),
     L = n(430824),
     j = n(853872),
-    M = n(509545),
-    k = n(230307),
+    k = n(509545),
+    M = n(230307),
     U = n(259580),
     G = n(572004),
     B = n(55935),
@@ -245,7 +245,7 @@ function ep(e) {
                                     className: q.guildProductBenefitLabel,
                                     children: z.intl.string(z.t.hxawo6),
                                 }),
-                                (0, i.jsx)(_.zx, Q({}, u)),
+                                (0, i.jsx)(_.zxk, Q({}, u)),
                             ],
                         }),
                     h &&
@@ -827,10 +827,10 @@ function em(e) {
             applicationStatistics: p,
             gameApplication: h,
             paymentSources: g,
-        } = (0, f.cj)([j.Z, k.Z, m.Z], () => {
+        } = (0, f.cj)([j.Z, M.Z, m.Z], () => {
             var e, t;
             return {
-                applicationStatistics: null != u ? k.Z.getCurrentUserStatisticsForApplication(u) : null,
+                applicationStatistics: null != u ? M.Z.getCurrentUserStatisticsForApplication(u) : null,
                 gameApplication:
                     null != (t = m.Z.getApplication(null != u ? u : ""))
                         ? t
@@ -848,7 +848,7 @@ function em(e) {
     let y = (0, f.e7)([L.Z], () => L.Z.getGuild(null == h ? void 0 : h.guildId)),
         O = c ? h : void 0,
         v = r.subscription,
-        I = (0, f.e7)([M.Z], () => (null != v && v.type !== Y.NYc.PREMIUM ? M.Z.get(v.items[0].planId) : null));
+        I = (0, f.e7)([k.Z], () => (null != v && v.type !== Y.NYc.PREMIUM ? k.Z.get(v.items[0].planId) : null));
     return (0, i.jsx)(eh, {
         applicationStatistics: p,
         application: _ ? E : O,

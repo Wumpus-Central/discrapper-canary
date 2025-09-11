@@ -9,10 +9,10 @@ var r = n(951288),
     o = n.n(a),
     s = n(793030),
     l = n(446673),
-    c = n(146187),
-    u = n(304789),
-    d = n(751334),
-    f = n(587272),
+    c = n(304789),
+    u = n(751334),
+    d = n(587272),
+    f = n(159691),
     _ = n(667137),
     p = n(525751);
 function h(e, t, n) {
@@ -47,7 +47,7 @@ function m(e) {
 function g(e) {
     let { shouldColorMix: t = !1 } = e,
         { onClose: n } = (0, _.v)();
-    return (0, r.jsx)(c.P, {
+    return (0, r.jsx)(f.PZ7, {
         onClick: n,
         variant: t ? "color-mix" : void 0,
     });
@@ -151,14 +151,14 @@ function O(e) {
             badge: i,
             title: a,
             titleTextVariant: l,
-            subtitle: c,
+            subtitle: f,
             alignCenter: h = !1,
             leading: g,
             trailing: O,
         } = e,
         { headingId: I } = (0, _.v)(),
         T = null != t,
-        S = (0, f.MW)(n),
+        S = (0, d.MW)(n),
         A = h ? (S ? b : y) : E,
         C =
             null != n &&
@@ -166,26 +166,26 @@ function O(e) {
                 className: o()(p.headerGraphic, { [p.headerGraphicAnimated]: S }),
                 children: (0, r.jsx)("div", {
                     className: p.headerGraphicContainer,
-                    children: (0, r.jsx)(d.z, m({}, n)),
+                    children: (0, r.jsx)(u.z, m({}, n)),
                 }),
             }),
-        N = (0, r.jsx)(s.X6, {
+        N = (0, r.jsx)(s.X6q, {
             className: p.headerTitle,
             id: I,
             variant: null != l ? l : "heading-lg/semibold",
             color: "text-primary",
             children: a,
         }),
-        R = (0, r.jsx)(s.xv, {
+        R = (0, r.jsx)(s.xvT, {
             className: p.headerSubtitle,
             variant: "text-md/normal",
             color: "text-secondary",
-            children: c,
+            children: f,
         }),
         P = null != n ? C : N,
         w = (0, r.jsx)("header", {
             className: o()(p.section, p.header, { [p.headerCentered]: h }),
-            children: (0, r.jsxs)(s.Kq, {
+            children: (0, r.jsxs)(s.Kqy, {
                 gap: 8,
                 children: [
                     (0, r.jsx)("div", {
@@ -202,12 +202,12 @@ function O(e) {
                     }),
                     (0, r.jsx)(v, { badge: i }),
                     null != n && null != a && N,
-                    null != c && R,
+                    null != f && R,
                 ],
             }),
         });
     return T
-        ? (0, r.jsx)(u.$, {
+        ? (0, r.jsx)(c.$, {
               color: t,
               className: p.headerGradient,
               children: w,

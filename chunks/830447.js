@@ -14,9 +14,9 @@ var r = n(951288),
     s = n(348327),
     l = n.n(s),
     c = n(498405),
-    u = n(597442),
-    d = n(21340),
-    f = n(922770),
+    u = n(793030),
+    d = n(597442),
+    f = n(21340),
     _ = n(857595),
     p = n(607070),
     h = n(828214),
@@ -379,7 +379,7 @@ function C(e) {
             navId: n,
             variant: a = "flexible",
             hideScroller: s = !1,
-            className: f,
+            className: u,
             children: h,
             onClose: b,
             onSelect: O,
@@ -401,8 +401,8 @@ function C(e) {
         D.isUsingKeyboardNavigation ? p.Z.keyboardModeEnabled || (0, _.Qj)() : p.Z.keyboardModeEnabled && (0, _.rf)();
     }, [D.isUsingKeyboardNavigation]);
     let x = i.useRef(null);
-    (0, u.T)(x);
-    let L = s ? d.u2 : d.zJ,
+    (0, d.T)(x);
+    let L = s ? f.u2 : f.zJ,
         j = i.useMemo(
             () => ({
                 onSelect: O,
@@ -414,7 +414,7 @@ function C(e) {
         value: j,
         children: (0, r.jsx)(
             "div",
-            v(y({ className: o()(E.menu, E[a], f) }, D.getContainerProps()), {
+            v(y({ className: o()(E.menu, E[a], u) }, D.getContainerProps()), {
                 ref: x,
                 "aria-label": e["aria-label"],
                 children: (0, r.jsxs)(L, {
@@ -439,7 +439,7 @@ function C(e) {
 function N() {
     return (0, r.jsx)("div", {
         className: o()(E.menu, E.loader, E.flexible),
-        children: (0, r.jsx)(f.$, {}),
+        children: (0, r.jsx)(u.$jN, {}),
     });
 }
 function R() {

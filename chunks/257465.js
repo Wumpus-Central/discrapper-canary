@@ -1,21 +1,20 @@
 n.d(t, {
-    D: () => y,
-    I: () => O,
+    D: () => b,
+    I: () => y,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(938288),
     l = n(990547),
     c = n(793030),
     u = n(143450),
-    d = n(186325),
-    f = n(507274),
-    _ = n(667137),
-    p = n(985316),
-    h = n(525751);
-function m(e, t, n) {
+    d = n(507274),
+    f = n(667137),
+    _ = n(985316),
+    p = n(525751);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +27,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +38,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,18 +55,18 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var y = (function (e) {
+var b = (function (e) {
     return (
         (e[(e.ENTERING = 0)] = "ENTERING"),
         (e[(e.ENTERED = 1)] = "ENTERED"),
@@ -77,71 +76,71 @@ var y = (function (e) {
         e
     );
 })({});
-function O(e) {
+function y(e) {
     var t;
     let {
             transitionState: n,
             animationVariant: a = "default",
-            size: m = "md",
-            paddingSize: E = "sm",
-            fullScreenOnMobile: y = !0,
-            returnRef: O,
-            role: v = "dialog",
-            "aria-label": I,
-            onClose: T,
-            contentOutsideContainer: S,
-            trackingProps: A,
-            children: C,
+            size: h = "md",
+            paddingSize: g = "sm",
+            fullScreenOnMobile: b = !0,
+            returnRef: y,
+            role: O = "dialog",
+            "aria-label": v,
+            onClose: I,
+            contentOutsideContainer: T,
+            trackingProps: S,
+            children: A,
         } = e,
-        N = i.useId(),
-        R = i.useMemo(
+        C = i.useId(),
+        N = i.useMemo(
             () => ({
-                id: N,
-                headingId: "heading-".concat(N),
-                onClose: T,
+                id: C,
+                headingId: "heading-".concat(C),
+                onClose: I,
             }),
-            [N, T],
+            [C, I],
         ),
-        P = 0 === n || 1 === n,
-        { reducedMotion: w } = i.useContext(d.S),
-        D = P || w.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
-        x = (0, u.q)(
+        R = 0 === n || 1 === n,
+        { reducedMotion: P } = i.useContext(c.Sfi),
+        w = R || P.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
+        D = (0, u.q)(
             {
-                opacity: +!!P,
-                transform: D,
-                config: P ? p.jF : p.W$,
-                delay: 64 * !!P,
+                opacity: +!!R,
+                transform: w,
+                config: R ? _.jF : _.W$,
+                delay: 64 * !!R,
             },
             "animate-always",
         );
-    return (0, r.jsx)(_.t.Provider, {
-        value: R,
+    return (0, r.jsx)(f.t.Provider, {
+        value: N,
         children: (0, r.jsx)(
-            f.V,
-            b(
-                g(
+            d.V,
+            E(
+                m(
                     {
-                        id: N,
-                        role: v,
-                        "aria-label": I,
-                        "aria-labelledby": null != I ? void 0 : R.headingId,
-                        returnRef: O,
+                        id: C,
+                        role: O,
+                        "aria-label": v,
+                        "aria-labelledby": null != v ? void 0 : N.headingId,
+                        returnRef: y,
                     },
-                    A,
+                    S,
                 ),
                 {
-                    impressionType: null != (t = null == A ? void 0 : A.impressionType) ? t : l.ImpressionTypes.MODAL,
-                    children: (0, r.jsx)(c.y5, {
+                    impressionType: null != (t = null == S ? void 0 : S.impressionType) ? t : l.ImpressionTypes.MODAL,
+                    children: (0, r.jsx)(c.y5t, {
                         forceLevel: 1,
                         children: (0, r.jsxs)("div", {
-                            className: o()(h.outerContainer, { [h.fullScreenOnMobile]: y }),
+                            className: o()(p.outerContainer, { [p.fullScreenOnMobile]: b }),
                             children: [
-                                S,
+                                T,
                                 (0, r.jsx)(s.animated.div, {
                                     "data-mana-component": "modal",
-                                    className: o()(h.container, h["size-".concat(m)], h["padding-size-".concat(E)]),
-                                    style: x,
-                                    children: C,
+                                    className: o()(p.container, p["size-".concat(h)], p["padding-size-".concat(g)]),
+                                    style: D,
+                                    children: A,
                                 }),
                             ],
                         }),

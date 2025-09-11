@@ -31,7 +31,7 @@ function p(e) {
         ref: j,
         className: u.actions,
         children: [
-            (0, i.jsx)(a.X6, {
+            (0, i.jsx)(a.X6q, {
                 variant: "text-xs/bold",
                 color: "text-muted",
                 className: u.eyebrow,

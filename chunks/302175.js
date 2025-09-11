@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(938288),
     l = n(831209),
     c = n(494497),
     u = n(793030),
@@ -59,7 +59,7 @@ function j(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,7 +89,7 @@ function U(e) {
         y = n.skuId === c.A$,
         O = (0, A.ZP)(t, n).type !== N.A3.INACTIVE,
         S = (0, T.Z)(t),
-        [L, M] = i.useState(!1),
+        [L, k] = i.useState(!1),
         [U, G] = i.useState(!1),
         B = U,
         Z = i.useCallback(() => {
@@ -105,10 +105,10 @@ function U(e) {
                     guild: e,
                 });
         }, [t, u]),
-        V = i.useCallback(() => {
+        F = i.useCallback(() => {
             a(), (0, C.Z)(t, p.Z.GUILD_POWERUPS_MARKETING, n.skuId);
         }, [t, n.skuId, a]),
-        F = {
+        V = {
             tension: 400,
             friction: 30,
         },
@@ -118,19 +118,19 @@ function U(e) {
                 : "translateX(-50%) translateY(24px) scale(1.40)",
             borderRadius: "0px",
             transformOrigin: "center 0%",
-            config: F,
+            config: V,
         }),
         Y = (0, f.q_F)({
             y: B ? -25 : 0,
-            config: F,
+            config: V,
         }),
         W = (0, f.q_F)({
             opacity: +!!B,
             transform: B ? "translateY(0)" : "translateY(20px)",
-            config: F,
+            config: V,
         }),
         K = i.useCallback((e) => {
-            e && M(!0);
+            e && k(!0);
         }, []),
         z = (0, _.O)(K),
         q = (0, I.Z)(n, U);
@@ -153,7 +153,7 @@ function U(e) {
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: k(j({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: M(j({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: o()(x.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(g.xm, {
@@ -176,7 +176,7 @@ function U(e) {
                             S &&
                                 (0, r.jsx)(d.zx, {
                                     grow: !0,
-                                    onClick: V,
+                                    onClick: F,
                                     color: d.zx.Colors.PRIMARY,
                                     className: x.button,
                                     children: w.intl.string(w.t.GoCQxc),
@@ -216,11 +216,11 @@ let G = 3,
                   ref: t,
                   className: D.container,
                   children: [
-                      (0, r.jsx)(u.X6, {
+                      (0, r.jsx)(u.X6q, {
                           variant: "heading-xxl/extrabold",
                           children: w.intl.string(P.default.wjI18f),
                       }),
-                      (0, r.jsx)(u.xv, {
+                      (0, r.jsx)(u.xvT, {
                           variant: "text-lg/medium",
                           children: w.intl.format(P.default.S562fn, {
                               helpDeskArticle: b.Z.getArticleURL(R.BhN.GUILD_BOOSTING_FAQ),

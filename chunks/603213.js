@@ -10,7 +10,7 @@ var r = n(951288),
 function u(e) {
     let { powerup: t } = e;
     return t.skuId === o.A$
-        ? (0, r.jsx)(a.xv, {
+        ? (0, r.jsx)(a.xvT, {
               className: d.learnMore,
               variant: "text-sm/medium",
               children: c.intl.format(i.default.fXE30d, { helpDeskArticle: s.Z.getArticleURL(l.BhN.GUILD_VANITY_URL) }),

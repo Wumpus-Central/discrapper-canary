@@ -124,15 +124,15 @@ let C = (e) => {
         return null === n
             ? (0, r.jsx)(a.ua7, {
                   text: b.intl.string(b.t["c/rcUl"]),
-                  children: (e) => (0, r.jsx)(i.zx, T(v({}, e, c), { disabled: !0 })),
+                  children: (e) => (0, r.jsx)(i.zxk, T(v({}, e, c), { disabled: !0 })),
               })
             : null === t || n > t
               ? (0, r.jsx)(a.ua7, {
                     text: b.intl.string(b.t.keFvXF),
-                    children: (e) => (0, r.jsx)(i.zx, T(v({}, e, c), { disabled: !0 })),
+                    children: (e) => (0, r.jsx)(i.zxk, T(v({}, e, c), { disabled: !0 })),
                 })
               : (0, r.jsx)(
-                    i.zx,
+                    i.zxk,
                     T(v({}, c), {
                         loading: o,
                         onClick: s,

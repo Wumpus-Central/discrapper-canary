@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(846519),
-    l = n(186325),
+    s = n(793030),
+    l = n(846519),
     c = n(840954);
 let u = 200;
 var d = (function (e) {
@@ -25,10 +25,10 @@ let f = Object.freeze({
     });
 function p(e) {
     let { position: t, type: n, children: a } = e,
-        { reducedMotion: d } = i.useContext(l.S),
+        { reducedMotion: d } = i.useContext(s.Sfi),
         p = d.enabled ? 3 : n,
         [h, m] = i.useState(null != t),
-        [g] = i.useState(() => new s.V7()),
+        [g] = i.useState(() => new l.V7()),
         [E, b] = i.useState(!0),
         y = i.useRef(null);
     return (

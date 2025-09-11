@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(186325),
+    s = n(793030),
     l = n(226690),
     c = n(198168),
     u = n(587272),
@@ -69,7 +69,7 @@ function m(e) {
 }
 function g(e) {
     let { lottie: t, props: n } = e,
-        { reducedMotion: a } = i.useContext(s.S);
+        { reducedMotion: a } = i.useContext(s.Sfi);
     return (0, r.jsx)(
         l.F,
         _(
@@ -101,7 +101,7 @@ function E(e) {
 }
 function b(e) {
     let { ref: t, src: n, fallbackImageSrc: a, loop: o, loopAt: l = 0, playbackRate: c } = e,
-        { reducedMotion: u } = i.useContext(s.S),
+        { reducedMotion: u } = i.useContext(s.Sfi),
         f = i.useRef(null);
     return (i.useImperativeHandle(t, () => f.current),
     i.useEffect(() => {

@@ -1,4 +1,4 @@
-n.d(t, { m: () => f });
+n.d(t, { m: () => h });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,21 +52,21 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function h(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: f,
+            innerClassName: h,
             renderIcon: g,
             text: m,
             selected: b,
             trailing: O,
             background: y,
             showUnread: _ = !1,
-            ref: j,
+            ref: v,
         } = e,
-        v = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -99,13 +99,13 @@ function f(e) {
             "ref",
         ]);
     let x = (0, o.JA)(n),
-        C = null != (t = (0, a.qg)(m)) ? t : "";
+        C = null != (t = (0, a.q)(m)) ? t : "";
     return (0, r.jsx)("li", {
-        ref: j,
+        ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            h(p({}, v), {
-                buttonProps: h(p({}, x), {
+            f(p({}, j), {
+                buttonProps: f(p({}, x), {
                     id: n,
                     role: "button",
                 }),
@@ -119,8 +119,8 @@ function f(e) {
                     },
                 },
                 onContextMenu:
-                    null != v.onContextMenu
-                        ? v.onContextMenu
+                    null != j.onContextMenu
+                        ? j.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },
@@ -129,7 +129,7 @@ function f(e) {
                     y,
                     _ ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, f]),
+                        className: l()([d.link, d.basicChannelRowLink, h]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [

@@ -1,10 +1,10 @@
 n.d(t, {
     i: () => L,
-    y: () => M,
+    y: () => k,
 });
 var r = n(951288),
     i = n(647438),
-    a = n(680018),
+    a = n(159691),
     o = n(755721),
     s = n(481060),
     l = n(100527),
@@ -107,7 +107,7 @@ function R(e) {
                 sourceQuestContentCTA: r,
             });
         };
-    return (0, r.jsx)(a.z, {
+    return (0, r.jsx)(a.zxk, {
         variant: "primary",
         fullWidth: !0,
         onClick: o,
@@ -119,7 +119,7 @@ let P = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
             i = (0, d.aM)(),
             o = (0, f.pO)(t) ? O.intl.string(O.t.hvVgAQ) : O.intl.string(O.t.lwQdjI);
-        return (0, r.jsx)(a.z, {
+        return (0, r.jsx)(a.zxk, {
             size: "sm",
             fullWidth: !0,
             onClick: () =>
@@ -136,7 +136,7 @@ let P = (e) => {
         var t;
         let { quest: n, sourceQuestContent: i } = e,
             o = null == (t = (0, d.WD)()) ? void 0 : t.getId();
-        return (0, r.jsx)(a.z, {
+        return (0, r.jsx)(a.zxk, {
             fullWidth: !0,
             onClick: () =>
                 (0, f.gI)(
@@ -159,7 +159,7 @@ let P = (e) => {
             o = (0, h.CR)({ quest: t }),
             { launchInGameActivity: s } = (0, _.zB)(t);
         return n && i
-            ? (0, r.jsx)(a.z, {
+            ? (0, r.jsx)(a.zxk, {
                   fullWidth: !0,
                   variant: "primary",
                   onClick: s,
@@ -187,7 +187,7 @@ let P = (e) => {
             onGameSheetClosed: l,
             children: (e) =>
                 (0, r.jsx)(
-                    a.z,
+                    a.zxk,
                     T(
                         {
                             variant: "secondary",
@@ -326,7 +326,7 @@ let P = (e) => {
                   })
         );
     };
-function M(e) {
+function k(e) {
     let t = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: v.ctaButtons,

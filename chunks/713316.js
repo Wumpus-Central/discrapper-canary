@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(512722),
     a = n.n(i),
-    o = n(680018),
+    o = n(159691),
     s = n(481060),
     l = n(987209),
     c = n(563132),
@@ -46,7 +46,7 @@ function h(e) {
                         children: y,
                     }),
                     (0, r.jsx)("div", { className: p.divider }),
-                    (0, r.jsx)(o.z, {
+                    (0, r.jsx)(o.zxk, {
                         onClick: n,
                         text: _.intl.string(_.t.cpT0Cg),
                         fullWidth: !0,

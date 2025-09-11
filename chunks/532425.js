@@ -3,14 +3,14 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(1561),
-    s = n(922770),
+    o = n(793030),
+    s = n(1561),
     l = n(481060),
     c = n(388032),
     u = n(546237);
 let d = (e) => {
     let { hasContent: t, onClear: n, className: i, isLoading: d, size: f = "sm" } = e;
-    return (0, r.jsx)(o.P, {
+    return (0, r.jsx)(s.P, {
         className: a()(i, u.iconLayout, { [u.pointer]: t }),
         "data-size": f,
         onClick: (e) => {
@@ -24,8 +24,8 @@ let d = (e) => {
         children: (0, r.jsx)("div", {
             className: u.iconContainer,
             children: d
-                ? (0, r.jsx)(s.$, {
-                      type: s.$.Type.SPINNING_CIRCLE,
+                ? (0, r.jsx)(o.$jN, {
+                      type: o.$jN.Type.SPINNING_CIRCLE,
                       className: a()(u.icon, u.visible),
                   })
                 : (0, r.jsxs)(r.Fragment, {

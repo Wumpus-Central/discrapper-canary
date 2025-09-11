@@ -44,7 +44,7 @@ let a =
             g,
             y,
             p = void 0 !== (t = t || {}) ? t : {};
-        (p.ready = new Promise(function (t, n) {
+        (p.ready = new Promise((t, n) => {
             (a = t), (u = n);
         })),
             (p.locateFile = function () {
@@ -381,7 +381,7 @@ let a =
             s: function (t, n) {
                 var r = 0;
                 return (
-                    V().forEach(function (e, a) {
+                    V().forEach((e, a) => {
                         var u = n + r;
                         h[(t + 4 * a) >> 2] = u;
                         for (var i = u, o = 0; o < e.length; ++o) l[0 | i++] = e.charCodeAt(o);
@@ -395,7 +395,7 @@ let a =
                 h[t >> 2] = r.length;
                 var e = 0;
                 return (
-                    r.forEach(function (t) {
+                    r.forEach((t) => {
                         e += t.length + 1;
                     }),
                     (h[n >> 2] = e),
@@ -742,21 +742,15 @@ let a =
                 return (
                     !f && "function" == typeof fetch
                         ? fetch(B, { credentials: "same-origin" })
-                              .then(function (t) {
+                              .then((t) => {
                                   if (!t.ok) throw "failed to load wasm binary file at '" + B + "'";
                                   return t.arrayBuffer();
                               })
-                              .catch(function () {
-                                  return z(B);
-                              })
-                        : Promise.resolve().then(function () {
-                              return z(B);
-                          })
+                              .catch(() => z(B))
+                        : Promise.resolve().then(() => z(B))
                 )
-                    .then(function (n) {
-                        return WebAssembly.instantiate(n, t);
-                    })
-                    .then(n, function (t) {
+                    .then((n) => WebAssembly.instantiate(n, t))
+                    .then(n, (t) => {
                         A("failed to asynchronously prepare wasm: " + t), W(t);
                     });
             }
@@ -767,15 +761,16 @@ let a =
                     return A("Module.instantiateWasm callback failed with error: " + t), !1;
                 }
             (!f && "function" == typeof WebAssembly.instantiateStreaming && !j(B) && "function" == typeof fetch
-                ? fetch(B, { credentials: "same-origin" }).then(function (n) {
-                      return WebAssembly.instantiateStreaming(n, t).then(r, function (t) {
-                          return (
+                ? fetch(B, { credentials: "same-origin" }).then((n) =>
+                      WebAssembly.instantiateStreaming(n, t).then(
+                          r,
+                          (t) => (
                               A("wasm streaming compile failed: " + t),
                               A("falling back to ArrayBuffer instantiation"),
                               e(r)
-                          );
-                      });
-                  })
+                          ),
+                      ),
+                  )
                 : e(r)
             ).catch(u);
         })();
@@ -833,8 +828,8 @@ let a =
                     P > 0 ||
                         (p.setStatus
                             ? (p.setStatus("Running..."),
-                              setTimeout(function () {
-                                  setTimeout(function () {
+                              setTimeout(() => {
+                                  setTimeout(() => {
                                       p.setStatus("");
                                   }, 1),
                                       r();
@@ -854,9 +849,7 @@ let a =
         }
         if (
             ((p.cwrap = function (t, n, r, e) {
-                var a = (r = r || []).every(function (t) {
-                    return "number" === t;
-                });
+                var a = (r = r || []).every((t) => "number" === t);
                 return "string" !== n && a && !e
                     ? S(t)
                     : function () {

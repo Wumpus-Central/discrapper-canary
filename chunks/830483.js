@@ -25,7 +25,7 @@ function a() {
     }
     let i = {},
         a = [];
-    for (let e in t) n.hasOwnProperty(e) ? a.length && ((i[e] = a), (a = [])) : a.push(e);
+    for (let e in t) n.hasOwnProperty(e) ? a.length > 0 && ((i[e] = a), (a = [])) : a.push(e);
     let o = {};
     for (let t in n) {
         if (i.hasOwnProperty(t))

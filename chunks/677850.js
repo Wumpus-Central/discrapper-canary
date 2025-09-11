@@ -1,8 +1,7 @@
-n.d(t, { B: () => u });
+n.d(t, { B: () => c });
 var r = n(951288),
-    i = n(931989),
-    a = n(396704);
-function o(e, t, n) {
+    i = n(793030);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,16 +25,16 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function s(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = c(e, t);
+        i = l(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -43,7 +42,7 @@ function l(e, t) {
     }
     return i;
 }
-function c(e, t) {
+function l(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -52,21 +51,21 @@ function c(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
+function c(e) {
     var { src: t, dynamicDataBinding: n } = e,
-        o = l(e, ["src", "dynamicDataBinding"]);
-    let { status: c, buffer: u } = (0, a.VG)(t);
-    return c === a.Jt.Loading
+        a = s(e, ["src", "dynamicDataBinding"]);
+    let { status: l, buffer: c } = (0, i.VG8)(t);
+    return l === i.JtY.Loading
         ? null
         : (0, r.jsx)(
-              i.v,
-              s(
+              i.vS4,
+              o(
                   {
-                      buffer: u,
+                      buffer: c,
                       artboardProperties: {},
                       dynamicDataBinding: n,
                   },
-                  o,
+                  a,
               ),
               t,
           );

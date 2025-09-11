@@ -15,7 +15,7 @@ function d(e) {
         onClick: n,
         className: c.previewButton,
         children: [
-            (0, r.jsx)(l.xv, {
+            (0, r.jsx)(l.xvT, {
                 tag: "span",
                 variant: "text-sm/semibold",
                 color: "text-brand",

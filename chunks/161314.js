@@ -141,7 +141,7 @@ function N(e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: S.guildShopEmbedCta,
-                                children: (0, r.jsx)(u.zx, {
+                                children: (0, r.jsx)(u.zxk, {
                                     onClick: w,
                                     icon: v.P,
                                     text: T.intl.string(T.t.jXx1CA),

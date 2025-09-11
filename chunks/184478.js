@@ -1,77 +1,77 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
-var o = n(793030),
-    i = n(442837),
-    l = n(755721),
-    s = n(481060),
+var i = n(793030),
+    o = n(442837),
+    s = n(755721),
+    l = n(481060),
     a = n(678558),
     c = n(343649),
     u = n(430824),
     d = n(63063),
     p = n(317169),
     m = n(639660),
-    f = n(767218),
-    _ = n(981631),
-    x = n(989308),
-    g = n(388032),
-    v = n(741872);
-function b(e) {
+    g = n(767218),
+    f = n(981631),
+    v = n(989308),
+    _ = n(388032),
+    x = n(741872);
+function h(e) {
     let { guildId: t } = e,
-        n = (0, i.e7)([u.Z], () => u.Z.getGuild(t)),
-        { available: b, spent: h, total: j } = (0, p.Z)(t);
+        n = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
+        { available: h, spent: b, total: C } = (0, p.Z)(t);
     if (null != n)
         return (0, r.jsxs)("div", {
-            className: v.container,
+            className: x.container,
             children: [
                 (0, r.jsxs)("div", {
-                    className: v.headerContainer,
+                    className: x.headerContainer,
                     children: [
-                        (0, r.jsx)(o.xv, {
+                        (0, r.jsx)(i.xvT, {
                             variant: "eyebrow",
                             color: "text-secondary",
-                            children: g.intl.string(x.default.hjvcLC),
+                            children: _.intl.string(v.default.hjvcLC),
                         }),
-                        (0, r.jsx)(o.xv, {
-                            className: v.learnMore,
+                        (0, r.jsx)(i.xvT, {
+                            className: x.learnMore,
                             variant: "text-xs/semibold",
-                            children: g.intl.format(x.default.fXE30d, {
-                                helpDeskArticle: d.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ),
+                            children: _.intl.format(v.default.fXE30d, {
+                                helpDeskArticle: d.Z.getArticleURL(f.BhN.GUILD_BOOSTING_FAQ),
                             }),
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: v.contentContainer,
+                    className: x.contentContainer,
                     children: [
-                        (0, r.jsx)(f.Z, {
-                            count: b,
-                            type: f.b.AVAILABLE,
-                        }),
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(g.Z, {
                             count: h,
-                            type: f.b.SPENT,
+                            type: g.b.AVAILABLE,
                         }),
-                        (0, r.jsx)(f.Z, {
-                            count: j,
-                            type: f.b.TOTAL,
+                        (0, r.jsx)(g.Z, {
+                            count: b,
+                            type: g.b.SPENT,
+                        }),
+                        (0, r.jsx)(g.Z, {
+                            count: C,
+                            type: g.b.TOTAL,
                         }),
                     ],
                 }),
                 (0, r.jsx)(a.Z, {
-                    className: v.boostButton,
+                    className: x.boostButton,
                     guild: n,
                     analyticsLocation: {
-                        page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
-                        section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                        page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
+                        section: f.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: l.Tt.CUSTOM,
-                    size: l.Ph.LARGE,
+                    color: s.Tt.CUSTOM,
+                    size: s.Ph.LARGE,
                     intent: c.P.NONE,
-                    icon: (0, r.jsx)(s.$Eu, {
-                        className: v.boostButtonIcon,
+                    icon: (0, r.jsx)(l.$Eu, {
+                        className: x.boostButtonIcon,
                         size: "sm",
-                        color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                        color: l.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                 }),
                 (0, r.jsx)(m.Z, { guildId: t }),

@@ -30,10 +30,7 @@ let h = (e) => {
             position: "right",
             align: "top",
             size: "md",
-            caretConfig: {
-                position: "left",
-                align: "start",
-            },
+            caretConfig: { align: "start" },
             title: t.title(),
             body: t.body(),
             graphic: {

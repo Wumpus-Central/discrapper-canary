@@ -6,8 +6,8 @@ var r,
     s = n(120356),
     l = n.n(s),
     c = n(748780),
-    u = n(215569),
-    d = n(186325),
+    u = n(793030),
+    d = n(215569),
     f = n(466842);
 function _(e, t, n) {
     return (
@@ -225,7 +225,7 @@ class g extends (r = o.PureComponent) {
             _(this, "_measureRef", o.createRef());
     }
 }
-_(g, "contextType", d.S), _(g, "defaultProps", { duration: 300 });
+_(g, "contextType", u.Sfi), _(g, "defaultProps", { duration: 300 });
 class E extends (i = o.Component) {
     componentDidMount() {
         this.setPrevSteps();
@@ -247,11 +247,11 @@ class E extends (i = o.Component) {
             staticClassName: o,
             sideMargin: s,
             verticalMargin: c,
-            children: d,
+            children: u,
             fillParent: _,
             animationMotionType: p,
         } = this.props;
-        return (0, a.jsx)(u.W, {
+        return (0, a.jsx)(d.W, {
             component: "div",
             className: l()(f.transitionGroup, n),
             children: (0, a.jsx)(
@@ -267,7 +267,7 @@ class E extends (i = o.Component) {
                     animatedNodeClassName: i,
                     staticClassName: o,
                     setHeight: this.setHeight,
-                    children: d,
+                    children: u,
                 },
                 null != e ? e : "".concat(t),
             ),

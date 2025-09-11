@@ -1,82 +1,82 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => S });
 var r = n(951288),
-    o = n(120356),
-    i = n.n(o),
-    l = n(793030),
-    s = n(442837),
+    i = n(120356),
+    o = n.n(i),
+    s = n(793030),
+    l = n(442837),
     a = n(304789),
     c = n(755721),
     u = n(481060),
     d = n(99690),
     p = n(607070),
     m = n(623624),
-    f = n(678558),
-    _ = n(343649),
-    x = n(742409),
-    g = n(518950),
-    v = n(271383),
-    b = n(485386),
-    h = n(430824),
-    j = n(594174),
-    C = n(5192),
-    E = n(998502),
-    I = n(981631),
-    N = n(989308),
-    w = n(388032),
-    Z = n(127181),
-    P = n(350618);
-let S = E.ZP.getEnableHardwareAcceleration() ? u.Xo$ : d.Z;
-function y(e) {
+    g = n(678558),
+    f = n(343649),
+    v = n(742409),
+    _ = n(518950),
+    x = n(271383),
+    h = n(485386),
+    b = n(430824),
+    C = n(594174),
+    j = n(5192),
+    T = n(998502),
+    E = n(981631),
+    P = n(989308),
+    I = n(388032),
+    y = n(127181),
+    w = n(350618);
+let Z = T.ZP.getEnableHardwareAcceleration() ? u.Xo$ : d.Z;
+function S(e) {
     var t, n;
-    let { guildId: o } = e,
-        d = (0, s.e7)([h.Z], () => h.Z.getGuild(o)),
-        E = (0, s.e7)([b.Z], () =>
-            b.Z.getSortedRoles(o).find((e) => {
+    let { guildId: i } = e,
+        d = (0, l.e7)([b.Z], () => b.Z.getGuild(i)),
+        T = (0, l.e7)([h.Z], () =>
+            h.Z.getSortedRoles(i).find((e) => {
                 var t;
                 return (null == (t = e.tags) ? void 0 : t.premium_subscriber) === null;
             }),
         ),
-        y = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
-        T = null == y ? void 0 : y.id,
-        O = (0, s.e7)([v.ZP], () => (null != T ? v.ZP.getMember(o, T) : void 0), [T, o]),
-        A = (null == O ? void 0 : O.premiumSince) != null,
-        R = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
+        S = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
+        N = null == S ? void 0 : S.id,
+        k = (0, l.e7)([x.ZP], () => (null != N ? x.ZP.getMember(i, N) : void 0), [N, i]),
+        O = (null == k ? void 0 : k.premiumSince) != null,
+        A = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
         {
-            avatarDecorationSrc: L,
-            avatarSrc: k,
-            eventHandlers: U,
-        } = (0, g.Z)({
-            userId: null == y ? void 0 : y.id,
-            guildId: o,
+            avatarDecorationSrc: U,
+            avatarSrc: R,
+            eventHandlers: L,
+        } = (0, _.Z)({
+            userId: null == S ? void 0 : S.id,
+            guildId: i,
             size: u.EFr.SIZE_40,
-            animateOnHover: !R,
+            animateOnHover: !A,
         });
-    return null == d || null == O || null == y
+    return null == d || null == k || null == S
         ? null
         : (0, r.jsxs)(a.$, {
-              className: Z.container,
+              className: y.container,
               children: [
                   (0, r.jsx)("img", {
                       alt: "",
-                      className: Z.image,
-                      src: P,
+                      className: y.image,
+                      src: w,
                   }),
                   (0, r.jsxs)("div", {
-                      className: Z.textContainer,
+                      className: y.textContainer,
                       children: [
-                          (0, r.jsx)(l.xv, {
+                          (0, r.jsx)(s.xvT, {
                               variant: "text-md/semibold",
-                              children: w.intl.string(A ? N.default.KSWK1d : N.default.XXXX5u),
+                              children: I.intl.string(O ? P.default.KSWK1d : P.default.XXXX5u),
                           }),
-                          (0, r.jsx)(l.xv, {
+                          (0, r.jsx)(s.xvT, {
                               variant: "text-sm/medium",
-                              children: w.intl.format(A ? N.default["7fWTg4"] : N.default["7PXeeX"], {
+                              children: I.intl.format(O ? P.default["7fWTg4"] : P.default["7PXeeX"], {
                                   onClick: () => {
                                       (0, m.f)({
-                                          guildId: o,
+                                          guildId: i,
                                           location: {
-                                              section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                              object: I.qAy.LEARN_MORE,
+                                              section: E.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                              object: E.qAy.LEARN_MORE,
                                           },
                                       });
                                   },
@@ -84,11 +84,11 @@ function y(e) {
                           }),
                       ],
                   }),
-                  null != E &&
-                      !A &&
-                      (0, r.jsx)(x.l, {
+                  null != T &&
+                      !O &&
+                      (0, r.jsx)(v.l, {
                           avatar: (0, r.jsx)(
-                              S,
+                              Z,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -113,12 +113,12 @@ function y(e) {
                                           });
                                   }
                                   return e;
-                              })({}, U)),
+                              })({}, L)),
                               (n = n =
                                   {
-                                      user: y,
-                                      src: k,
-                                      avatarDecoration: L,
+                                      user: S,
+                                      src: R,
+                                      avatarDecoration: U,
                                       size: u.EFr.SIZE_40,
                                       "aria-hidden": !0,
                                       animate: !0,
@@ -139,27 +139,27 @@ function y(e) {
                           ),
                           username: (0, r.jsx)(u.PUh, {
                               variant: "text-md/semibold",
-                              name: C.ZP.getName(o, null, y),
-                              colorString: E.colorString,
-                              colorStrings: E.colorStrings,
+                              name: j.ZP.getName(i, null, S),
+                              colorString: T.colorString,
+                              colorStrings: T.colorStrings,
                           }),
-                          className: i()(Z.content, Z.exampleMessage),
-                          message: w.intl.string(w.t["6OSasb"]),
+                          className: o()(y.content, y.exampleMessage),
+                          message: I.intl.string(I.t["6OSasb"]),
                           decorations: (0, r.jsx)(u.$Eu, {
                               color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: Z.boostIcon,
+                              className: y.boostIcon,
                           }),
                       }),
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(g.Z, {
                       guild: d,
-                      className: Z.content,
+                      className: y.content,
                       analyticsLocation: {
-                          page: I.ZY5.GUILD_POWERUPS_OVERVIEW,
-                          section: I.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                          page: E.ZY5.GUILD_POWERUPS_OVERVIEW,
+                          section: E.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
                       color: c.Tt.BRAND,
                       size: c.Ph.MEDIUM,
-                      intent: _.P.NONE,
+                      intent: f.P.NONE,
                       fullWidth: !0,
                       icon: (0, r.jsx)(u.$Eu, {
                           color: "currentColor",

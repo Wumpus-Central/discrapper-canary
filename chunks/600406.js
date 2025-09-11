@@ -13,8 +13,8 @@ var r = n(951288),
     s = n(442837),
     l = n(756715),
     c = n(993365),
-    u = n(680018),
-    d = n(51251),
+    u = n(51251),
+    d = n(159691),
     f = n(37234),
     _ = n(594174),
     p = n(997612),
@@ -36,7 +36,7 @@ function y(e) {
         }),
         g = i.useMemo(() => {
             let t = b(e.url);
-            for (let e of d.g.collections) {
+            for (let e of u.g.collections) {
                 let n = e.groups.find((e) => e.stories.some((e) => e.id === t));
                 if (null != n) return n.stories.find((e) => e.id === t);
             }
@@ -51,7 +51,7 @@ function y(e) {
                 : "Explore the Mana Design System",
         O = i.useCallback(() => {
             if (null != g) {
-                for (let e of d.g.collections)
+                for (let e of u.g.collections)
                     if (e.groups.some((e) => e.stories.some((e) => e.id === g.id))) {
                         p.$.setState({
                             selectedCollection: e.id,
@@ -66,7 +66,7 @@ function y(e) {
         ? (0, r.jsx)("div", {
               className: m.root,
               "data-has-story": null != g,
-              children: (0, r.jsxs)(o.Kq, {
+              children: (0, r.jsxs)(o.Kqy, {
                   direction: null == g ? "vertical" : "horizontal",
                   align: null == g ? "start" : "center",
                   gap: 12,
@@ -74,13 +74,13 @@ function y(e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: m.header,
-                          children: (0, r.jsxs)(o.Kq, {
+                          children: (0, r.jsxs)(o.Kqy, {
                               direction: "horizontal",
                               align: "start",
                               gap: 8,
                               children: [
                                   (0, r.jsx)(a.hh5, { size: "lg" }),
-                                  (0, r.jsxs)(o.Kq, {
+                                  (0, r.jsxs)(o.Kqy, {
                                       direction: "vertical",
                                       gap: 0,
                                       children: [
@@ -97,7 +97,7 @@ function y(e) {
                               ],
                           }),
                       }),
-                      (0, r.jsx)(u.z, {
+                      (0, r.jsx)(d.zxk, {
                           size: "sm",
                           onClick: O,
                           text: "Open Playground",

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(597442),
-    o = n(84735),
+    a = n(793030),
+    o = n(597442),
     s = n(481060),
     l = n(793903);
 function c(e, t, n) {
@@ -90,7 +90,7 @@ let h = i.createContext({ inDialog: void 0 }),
             b = i.useRef(null),
             [y, O] = i.useState(!1),
             v = y ? b : E;
-        (0, a.T)(v, { returnRef: m }),
+        (0, o.T)(v, { returnRef: m }),
             i.useContext(l.Z)(
                 {
                     type: c,
@@ -120,7 +120,7 @@ let h = i.createContext({ inDialog: void 0 }),
                     "aria-modal": !0,
                     children: (0, r.jsx)(s.y5t, {
                         forceLevel: 1,
-                        children: (0, r.jsx)(o.J, {
+                        children: (0, r.jsx)(a.JcV, {
                             containerRef: E,
                             children: n,
                         }),

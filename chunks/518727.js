@@ -21,8 +21,8 @@ var r = n(951288),
     E = n(402426),
     b = n(981631),
     y = n(839249),
-    O = n(293914),
-    v = n(503019);
+    O = n(77517),
+    v = n(493969);
 let I = 1000,
     T = (e) => {
         let { children: t, isConfirmationStep: n } = e,
@@ -49,11 +49,11 @@ let I = 1000,
             D === g.A.PURCHASING && L(!0);
         }, [D]);
         let j = (0, f.P)(R, !!P, w),
-            { mediaUrls: M, isSuccess: k } = (0, E.Z)(!a && j && x),
+            { mediaUrls: k, isSuccess: M } = (0, E.Z)(!a && j && x),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
-            [Z, V] = (0, i.useState)(!1),
-            [F, H] = (0, i.useState)("none"),
+            [Z, F] = (0, i.useState)(!1),
+            [V, H] = (0, i.useState)("none"),
             [Y, W] = (0, i.useState)(!1);
         if (
             ((0, i.useEffect)(() => {
@@ -61,8 +61,8 @@ let I = 1000,
                 j &&
                     n &&
                     !Y &&
-                    "none" === F &&
-                    (a || !k
+                    "none" === V &&
+                    (a || !M
                         ? (H("static"),
                           a ||
                               (W(!0),
@@ -70,7 +70,7 @@ let I = 1000,
                                   b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION,
                               )),
                           (e = !1))
-                        : (H("animated"), V(!0), (e = !0)),
+                        : (H("animated"), F(!0), (e = !0)),
                     c.Z.dispatch({
                         type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                         value: !0,
@@ -79,7 +79,7 @@ let I = 1000,
                     _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                         wow_moment_type: e ? "animated" : "static",
                     }));
-            }, [a, j, n, k, Y, F]),
+            }, [a, j, n, M, Y, V]),
             (0, i.useEffect)(() => {
                 function e() {
                     B(!0), N();
@@ -101,7 +101,7 @@ let I = 1000,
                 },
                 [],
             ),
-            "animated" === F)
+            "animated" === V)
         )
             return (0, r.jsxs)("div", {
                 children: [
@@ -116,7 +116,7 @@ let I = 1000,
                                     autoPlay: !0,
                                     onEnded: C,
                                     className: o()(y.video, "entry" === I ? y.visible : y.hidden),
-                                    children: (0, r.jsx)("source", { src: M.modalGlowEntry }),
+                                    children: (0, r.jsx)("source", { src: k.modalGlowEntry }),
                                 }),
                             }),
                             (0, r.jsx)(d.Z, {
@@ -125,14 +125,14 @@ let I = 1000,
                                 muted: !0,
                                 loop: !0,
                                 className: o()(y.video, "idle" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: M.modalGlowIdle }),
+                                children: (0, r.jsx)("source", { src: k.modalGlowIdle }),
                             }),
                             (0, r.jsx)(d.Z, {
                                 ref: A,
                                 playsInline: !0,
                                 muted: !0,
                                 className: o()(y.video, "exit" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: M.modalGlowExit }),
+                                children: (0, r.jsx)("source", { src: k.modalGlowExit }),
                             }),
                         ],
                     }),
@@ -154,7 +154,7 @@ let I = 1000,
                 ],
             });
         let K = !G;
-        return "static" === F
+        return "static" === V
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       K &&

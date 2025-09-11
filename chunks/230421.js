@@ -36,10 +36,7 @@ function m(e) {
             title: h.intl.string(h.t["36wK8/"]),
             body: _,
             onRequestClose: () => m(d.L.DISMISS),
-            caretConfig: {
-                position: "top",
-                align: "center",
-            },
+            caretConfig: { align: "center" },
             actions: [
                 {
                     text: O,

@@ -1,7 +1,7 @@
 n.d(t, { q: () => c }), n(388685);
 var r = n(647438),
-    i = n(202841),
-    a = n(186325),
+    i = n(938288),
+    a = n(793030),
     o = n(717495);
 function s(e, t, n) {
     return (
@@ -35,7 +35,7 @@ function l(e) {
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "respect-motion-settings",
         n = arguments.length > 2 ? arguments[2] : void 0,
-        s = r.useContext(a.S).reducedMotion.enabled,
+        s = r.useContext(a.Sfi).reducedMotion.enabled,
         c = e;
     "animate-always" !== t &&
         ("respect-motion-settings" !== t || s) &&

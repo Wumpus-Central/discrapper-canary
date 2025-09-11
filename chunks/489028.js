@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(690221),
     g = n(30624),
     p = n(577275),
-    h = n(601964),
-    f = n(594174),
+    f = n(601964),
+    h = n(594174),
     b = n(451478),
     x = n(626135),
     j = n(584825),
@@ -30,7 +30,7 @@ function P(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
     return (0, r.jsx)("div", {
         className: T.selectTeamContainer,
-        children: (0, r.jsx)(a.zx, {
+        children: (0, r.jsx)(a.zxk, {
             text: S.intl.string(S.t["5k6FfX"]),
             disabled: !n,
             onClick: t,
@@ -43,8 +43,8 @@ function w(e) {
         [o, c] = i.useState(),
         { enableGuildMonetizationForTeam: u, submitting: m, error: g } = (0, d.Z)(),
         { fetchSubscriptionsSettings: p } = (0, j.JH)(),
-        h = (0, v.mY)(),
-        f = i.useMemo(
+        f = (0, v.mY)(),
+        h = i.useMemo(
             () =>
                 n.map((e) => ({
                     label: e.name,
@@ -68,18 +68,18 @@ function w(e) {
                 children: [
                     (0, r.jsx)(s.q4e, {
                         className: T.teamSelect,
-                        options: f,
+                        options: h,
                         placeholder: S.intl.string(S.t.QXf93N),
                         value: o,
-                        isDisabled: 0 === f.length || h || !l,
+                        isDisabled: 0 === h.length || f || !l,
                         onChange: (e) => c(e),
                         "aria-label": S.intl.string(S.t.QXf93N),
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.zxk, {
                         text: S.intl.string(S.t["9HU3ZW"]),
                         onClick: b,
                         loading: m,
-                        disabled: null == o || h || !l,
+                        disabled: null == o || f || !l,
                     }),
                 ],
             }),
@@ -94,8 +94,8 @@ function w(e) {
 }
 let R = (e) => {
     let { guild: t } = e,
-        n = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        a = (0, h.eM)(t, n),
+        n = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        a = (0, f.eM)(t, n),
         d = (0, c.Ob)(t),
         j = (0, l.e7)([b.Z], () => b.Z.isFocused()),
         { teams: v, loading: _ } = (0, p.Z)({ refreshOnDepChange: j }),

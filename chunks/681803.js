@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r = n(951288),
     i = n(647438),
-    a = n(287235),
-    o = n(597442),
-    s = n(84735),
+    a = n(793030),
+    o = n(287235),
+    s = n(597442),
     l = n(481060),
     c = n(793903);
 function u(e, t, n) {
@@ -97,7 +97,7 @@ function g(e) {
                 "aria-modal": !0,
                 children: (0, r.jsx)(l.y5t, {
                     forceLevel: 1,
-                    children: (0, r.jsx)(s.J, {
+                    children: (0, r.jsx)(a.JcV, {
                         containerRef: n,
                         children: t,
                     }),
@@ -109,7 +109,7 @@ function g(e) {
 function E(e) {
     var { children: t } = e,
         n = p(e, ["children"]);
-    return (0, r.jsx)(a.Wd, {
+    return (0, r.jsx)(o.Wd, {
         children: (e) =>
             (0, r.jsx)(m.Provider, {
                 value: { firstFocusableItemProps: e },
@@ -127,7 +127,7 @@ function E(e) {
 function b(e) {
     var t,
         n,
-        { ref: a, returnRef: s, modal: l = !0, setDialogRef: u, trackingProps: f } = e,
+        { ref: a, returnRef: o, modal: l = !0, setDialogRef: u, trackingProps: f } = e,
         h = p(e, ["ref", "returnRef", "modal", "setDialogRef", "trackingProps"]);
     let m = i.useRef(null);
     i.useImperativeHandle(a, () => m.current),
@@ -148,8 +148,8 @@ function b(e) {
             },
             { disableTrack: null == f ? void 0 : f.disableTrack },
         ),
-        (0, o.T)(m, {
-            returnRef: s,
+        (0, s.T)(m, {
+            returnRef: o,
             disable: !l,
         });
     let b = l ? g : E;

@@ -1,26 +1,26 @@
 n.d(t, { j: () => s });
 var r = n(951288),
     i = n(647438),
-    l = n(777207),
+    l = n(793030),
     o = n(895129);
 function s(e) {
     let {
             title: t,
             subtitle: n,
             iconSrc: s,
-            backgroundSrc: a,
-            animatedBackgroundSrc: u,
+            backgroundSrc: u,
+            animatedBackgroundSrc: a,
             prefersReducedMotion: c = !0,
         } = e,
         d = i.useMemo(() => {
-            let e = null != a ? a : s;
+            let e = null != u ? u : s;
             if (null != e) return { "--custom-background-url": "url(".concat(e.toString(), ")") };
-        }, [a, s]),
+        }, [u, s]),
         p = i.useMemo(() => {
-            if (null == a) return;
-            let e = { "--custom-background-static": "url(".concat(a.toString()) };
-            return c || null == u || (e["--custom-background-animated"] = "url(".concat(u.toString(), ")")), e;
-        }, [u, a, c]);
+            if (null == u) return;
+            let e = { "--custom-background-static": "url(".concat(u.toString()) };
+            return c || null == a || (e["--custom-background-animated"] = "url(".concat(a.toString(), ")")), e;
+        }, [a, u, c]);
     return (0, r.jsxs)("div", {
         className: o.wrapper,
         children: [
@@ -41,13 +41,13 @@ function s(e) {
                         }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(l.x, {
+                            (0, r.jsx)(l.xvT, {
                                 variant: "heading-xl/bold",
                                 tag: "div",
                                 children: t,
                             }),
                             null != n &&
-                                (0, r.jsxs)(l.x, {
+                                (0, r.jsxs)(l.xvT, {
                                     variant: "text-sm/normal",
                                     children: ["\u201C", n, "\u201D"],
                                 }),
@@ -55,7 +55,7 @@ function s(e) {
                     }),
                 ],
             }),
-            null != a
+            null != u
                 ? (0, r.jsx)("div", {
                       className: o.image,
                       style: p,

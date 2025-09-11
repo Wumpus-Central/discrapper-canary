@@ -1,18 +1,18 @@
-n.d(t, { Z: () => j });
-var l = n(951288),
+n.d(t, { Z: () => E });
+var r = n(951288),
     i = n(647438),
-    r = n(120356),
-    s = n.n(r),
-    u = n(873546),
-    o = n(861066),
-    a = n(481060),
+    l = n(120356),
+    o = n.n(l),
+    a = n(873546),
+    s = n(159691),
+    u = n(481060),
     c = n(59662),
     d = n(36361),
-    f = n(388032),
-    g = n(214779);
-function v(e) {
+    g = n(388032),
+    f = n(214779);
+function y(e) {
     let { icon: t, label: n, onClick: i } = e;
-    return (0, l.jsx)(o.h, {
+    return (0, r.jsx)(s.hU, {
         onClick: i,
         icon: t,
         size: "sm",
@@ -20,53 +20,53 @@ function v(e) {
         "aria-label": n,
     });
 }
-function m(e) {
+function O(e) {
     let { title: t, onClose: n } = e,
         { setShowNavigationMobile: i } = (0, c.t)();
-    return (0, l.jsxs)("div", {
-        className: g.contentHeader,
+    return (0, r.jsxs)("div", {
+        className: f.contentHeader,
         children: [
-            (0, l.jsxs)("div", {
-                className: g.contentHeaderLeft,
+            (0, r.jsxs)("div", {
+                className: f.contentHeaderLeft,
                 children: [
-                    u.tq &&
-                        (0, l.jsx)(v, {
-                            icon: a.yFM,
+                    a.tq &&
+                        (0, r.jsx)(y, {
+                            icon: u.yFM,
                             onClick: () => i(!0),
-                            label: f.intl.string(f.t["13/7kZ"]),
+                            label: g.intl.string(g.t["13/7kZ"]),
                         }),
-                    (0, l.jsx)(a.X6q, {
-                        variant: "heading-md/normal",
+                    (0, r.jsx)(u.X6q, {
+                        variant: "heading-md/medium",
                         color: "header-secondary",
                         children: t,
                     }),
                 ],
             }),
-            (0, l.jsx)(v, {
-                icon: a.Uz9,
+            (0, r.jsx)(y, {
+                icon: u.Uz9,
                 onClick: n,
-                label: f.intl.string(f.t.cpT0Cg),
+                label: g.intl.string(g.t.cpT0Cg),
             }),
         ],
     });
 }
-let j = i.memo(function (e) {
+let E = i.memo(function (e) {
     let { onClose: t, setting: n } = e,
         i = null == n ? void 0 : n.useTitle(),
-        { showNavigationMobile: r } = (0, c.t)();
-    return (0, l.jsxs)("div", {
-        className: s()(g.content, {
-            [g.mobile]: u.tq,
-            [g.mobileNavigationOpen]: r,
+        { showNavigationMobile: l } = (0, c.t)();
+    return (0, r.jsxs)("div", {
+        className: o()(f.content, {
+            [f.mobile]: a.tq,
+            [f.mobileNavigationOpen]: l,
         }),
         children: [
-            (0, l.jsx)(m, {
+            (0, r.jsx)(O, {
                 title: i,
                 onClose: t,
             }),
-            (0, l.jsx)("div", {
-                className: g.contentBody,
-                children: null != n && (0, l.jsx)(d.Z, { node: n }),
+            (0, r.jsx)("div", {
+                className: f.contentBody,
+                children: null != n && (0, r.jsx)(d.Z, { node: n }),
             }),
         ],
     });

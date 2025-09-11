@@ -30,7 +30,7 @@ function c(t) {
         })(t, ["guildId", "productId", "attachmentId"]);
     let { isLoading: u, downloadAttachment: f } = (0, a.Z)(c, i);
     return (0, r.jsx)(
-        o.zx,
+        o.zxk,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var n = null != arguments[e] ? arguments[e] : {},

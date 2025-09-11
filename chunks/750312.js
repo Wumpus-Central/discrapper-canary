@@ -8,8 +8,8 @@ var n = r(951288),
     s = r(481060),
     u = r(313201),
     d = r(314897),
-    g = r(785717),
-    f = r(403239),
+    f = r(785717),
+    g = r(403239),
     b = r(982072),
     p = r(781040),
     O = r(840367),
@@ -31,39 +31,39 @@ function m(e) {
         E = (0, u.Dt)(),
         S = (0, c.e7)([d.default], () => d.default.getId() === t),
         I = i.useRef(null),
-        T = i.useRef(null),
-        { trackUserProfileAction: D } = (0, g.KZ)(),
-        _ = (0, b.Z)({
+        D = i.useRef(null),
+        { trackUserProfileAction: T } = (0, f.KZ)(),
+        N = (0, b.Z)({
             widgetType: r.type,
-            onAction: D,
+            onAction: T,
         }),
-        N = S && null != m && !s,
-        { isDragging: k, dragSourcePosition: Z } = (0, f.q)({
+        k = S && null != m && !s,
+        { isDragging: _, dragSourcePosition: Z } = (0, g.q)({
             dropRef: I,
-            dragRef: T,
+            dragRef: D,
             userId: t,
             widget: r,
             index: m,
-            disableInteraction: !N,
+            disableInteraction: !k,
         }),
-        [A, R] = i.useState(!1);
+        [A, C] = i.useState(!1);
     return (0, n.jsx)(v, {
         ref: I,
-        disableInteraction: !N,
-        onMouseEnter: () => R(!0),
-        onMouseLeave: () => R(!1),
+        disableInteraction: !k,
+        onMouseEnter: () => C(!0),
+        onMouseLeave: () => C(!1),
         dragSourcePosition: Z,
         index: null != m ? m : 0,
         children: (0, n.jsxs)("section", {
-            ref: _,
-            className: o()(j.container, y, { [j.isDragging]: k }),
+            ref: N,
+            className: o()(j.container, y, { [j.isDragging]: _ }),
             "aria-labelledby": E,
             children: [
-                N &&
+                k &&
                     (0, n.jsx)(p.Z, {
-                        buttonRef: T,
+                        buttonRef: D,
                         widget: r,
-                        className: o()(j.dragHandleButton, { [j.opacity]: A || k }),
+                        className: o()(j.dragHandleButton, { [j.opacity]: A || _ }),
                     }),
                 (0, n.jsx)(O.Z, {
                     userId: t,
@@ -74,7 +74,7 @@ function m(e) {
                     widget: r,
                     disableInteraction: s,
                 }),
-                (0, n.jsxs)(a.y5, {
+                (0, n.jsxs)(a.y5t, {
                     children: [l, x],
                 }),
             ],
@@ -92,15 +92,15 @@ let v = (e) => {
             index: u,
         } = e,
         d = (0, s.zPA)() && null != c,
-        g = d && u < c,
-        f = d && u > c;
+        f = d && u < c,
+        g = d && u > c;
     return i
         ? r
         : (0, n.jsx)("div", {
               ref: t,
               className: o()(j.dragAndDropHitbox, {
-                  [j.dropIndicatorBefore]: g,
-                  [j.dropIndicatorAfter]: f,
+                  [j.dropIndicatorBefore]: f,
+                  [j.dropIndicatorAfter]: g,
               }),
               onMouseEnter: l,
               onMouseLeave: a,

@@ -98,7 +98,7 @@ let b = function (e) {
                                 className: g.emojiIconContainer,
                                 children: (0, r.jsx)(E, { emojiConfetti: null != n ? n : void 0 }),
                             }),
-                            (0, r.jsx)(a.xv, {
+                            (0, r.jsx)(a.xvT, {
                                 variant: "text-sm/medium",
                                 children:
                                     null == n ? m.intl.string(m.t.mzfiGR) : m.intl.format(m.t.Hcd9OT, { emojiName: I }),

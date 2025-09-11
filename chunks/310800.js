@@ -127,7 +127,7 @@ function j(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.zx, {
+            (0, r.jsx)(i.zxk, {
                 text: f.intl.string(f.t.riG6DQ),
                 icon: l.qJs,
                 onClick: () => a(null),

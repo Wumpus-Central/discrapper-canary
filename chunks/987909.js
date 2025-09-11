@@ -137,7 +137,7 @@ function C(e) {
                     eventProperties: f,
                 }));
         }, [n, a, _, d, f]);
-    return (0, r.jsx)(o.zx, {
+    return (0, r.jsx)(o.zxk, {
         icon: {
             type: "sticker",
             asset: _,

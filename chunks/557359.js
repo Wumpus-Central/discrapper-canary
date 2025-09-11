@@ -43,12 +43,12 @@ function b(e) {
                             (0, r.jsxs)("div", {
                                 className: h.headerText,
                                 children: [
-                                    (0, r.jsx)(s.X6, {
+                                    (0, r.jsx)(s.X6q, {
                                         variant: "heading-md/semibold",
                                         color: "header-primary",
                                         children: f.intl.string(f.t.d21uOj),
                                     }),
-                                    (0, r.jsx)(s.xv, {
+                                    (0, r.jsx)(s.xvT, {
                                         tag: "p",
                                         variant: "text-sm/medium",
                                         color: "text-secondary",
@@ -69,7 +69,7 @@ function b(e) {
                         children: (0, r.jsxs)("div", {
                             inert: t ? void 0 : "",
                             children: [
-                                (0, r.jsx)(s.X6, {
+                                (0, r.jsx)(s.X6q, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
                                     className: h.rulesHeader,

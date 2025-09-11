@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(951288),
     i = n(647438),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(446673),
     c = n(304789),
@@ -33,10 +33,10 @@ var r = n(951288),
     P = n(124527),
     w = n(591867),
     D = n(525751),
-    x = n(428946),
-    L = n(42948),
-    j = n(109194),
-    k = n(352812),
+    x = n(526438),
+    L = n(572637),
+    j = n(371587),
+    k = n(699653),
     M = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
@@ -49,7 +49,7 @@ function U(e) {
     let {
             containerContext: t,
             image: n,
-            title: o,
+            title: a,
             description: M,
             enableSocialProof: U,
             analyticsLocationSection: G,
@@ -125,10 +125,10 @@ function U(e) {
                                         }),
                                         null != et && (0, r.jsx)(l.C, { type: { text: et } }),
                                         (0, r.jsx)(d.X6q, {
-                                            className: a()(P.title, { [P.withBadge]: null != et }),
+                                            className: o()(P.title, { [P.withBadge]: null != et }),
                                             variant: "heading-xl/bold",
                                             color: "header-primary",
-                                            children: o,
+                                            children: a,
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             variant: "text-md/medium",
@@ -178,7 +178,7 @@ function U(e) {
                 isVisible: !0,
             }),
             (0, r.jsxs)("div", {
-                className: a()(w.container, z()),
+                className: o()(w.container, z()),
                 children: [
                     (0, r.jsx)(d.olH, {
                         "data-migration-pending": !0,
@@ -196,9 +196,9 @@ function U(e) {
                                 alt: "Nitro Perk",
                             }),
                             (0, r.jsx)(d.X6q, {
-                                className: a()(w.title, { [w.titleNoSocialProof]: !K }),
+                                className: o()(w.title, { [w.titleNoSocialProof]: !K }),
                                 variant: "heading-xl/bold",
-                                children: o,
+                                children: a,
                             }),
                             K && (0, r.jsx)(A.Z, { affinities: Y }),
                             (0, r.jsx)(d.Text, {

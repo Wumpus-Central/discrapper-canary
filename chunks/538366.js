@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
-    a = n(680018),
+    a = n(159691),
     l = n(481060),
     s = n(665906),
     o = n(585483),
@@ -92,7 +92,7 @@ function g(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.LZC, { size: 16 }),
-                        (0, r.jsx)(a.z, {
+                        (0, r.jsx)(a.zxk, {
                             text: y ? m.intl.string(m.t.DgatTU) : m.intl.string(m.t.wOKE8P),
                             variant: "secondary",
                             onClick: w,

@@ -61305,7 +61305,7 @@ h3.improved__1689b:after {
     padding-top: 10px
 }
 
-.errorBoundary__8d6f9 {
+.previewPage__8d6f9 {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -61313,25 +61313,40 @@ h3.improved__1689b:after {
     place-items: center
 }
 
-.errorBoundaryIcon__8d6f9,
+.errorIcon__8d6f9,
 .questsIcon__8d6f9 {
     color: var(--text-primary);
     height: 24px;
     width: 24px
 }
 
-.errorMessageWrapper__8d6f9 {
+.menu__8d6f9 {
+    -moz-column-gap: 12px;
+    column-gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr -webkit-max-content 1fr;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 1fr
+}
+
+.messageWrapper__8d6f9 {
     background-color: var(--background-base-lower) !important;
+    grid-column: 2/span 1;
     margin-bottom: 12px;
     padding: 12px
 }
 
-.errorMessage__8d6f9 {
+.message__8d6f9 {
     color: var(--text-default);
     text-align: left;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
+}
+
+.messageButton__8d6f9 {
+    grid-column: 3/span 1;
+    justify-self: start
 }
 
 .previewCard__8d6f9 {
@@ -88884,7 +88899,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

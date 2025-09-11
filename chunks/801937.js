@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(680018),
+    l = n(159691),
     c = n(481060),
     u = n(355467),
     d = n(269128),
@@ -134,7 +134,7 @@ class w extends i.PureComponent {
                     null == this.props.paymentSourceTypeRestrictions ||
                     (null == (t = this.props.paymentSourceTypeRestrictions) ? void 0 : t.includes(e));
             return (0, r.jsx)(
-                l.z,
+                l.zxk,
                 {
                     onClick: () => this.props.onChooseType(e),
                     disabled: !a,

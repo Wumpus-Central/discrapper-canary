@@ -39,7 +39,7 @@ function h(e) {
     return (0, r.jsxs)("div", {
         className: j,
         children: [
-            (0, r.jsxs)(a.X6, {
+            (0, r.jsxs)(a.X6q, {
                 variant: "heading-md/semibold",
                 className: g.selectorHeading,
                 children: [

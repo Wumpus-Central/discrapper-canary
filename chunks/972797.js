@@ -1,4 +1,4 @@
-t.d(A, { Z: () => u }), t(388685);
+t.d(e, { Z: () => u }), t(388685);
 var n = t(951288),
     r = t(647438),
     a = t(120356),
@@ -8,18 +8,18 @@ var n = t(951288),
     s = t(313201),
     d = t(388032),
     c = t(750404);
-function u(e) {
-    let { disabled: A = !1, disabledTooltip: t, published: a, submitting: u = !1, onClick: g } = e,
-        f = (0, s.Dt)(),
+function u(A) {
+    let { disabled: e = !1, disabledTooltip: t, published: a, submitting: u = !1, onClick: f } = A,
+        g = (0, s.Dt)(),
         [p, m] = r.useState(a);
     return (
         r.useEffect(() => {
-            m((e) => e || a);
+            m((A) => A || a);
         }, [a]),
         (0, n.jsxs)("div", {
             className: l()(
                 {
-                    [c.publishable]: !A && !a,
+                    [c.publishable]: !e && !a,
                     [c.wasEverPublished]: p,
                 },
                 c.outerContainer,
@@ -37,27 +37,27 @@ function u(e) {
                                     children: a ? d.intl.string(d.t.VaaagY) : d.intl.string(d.t.oI8aQU),
                                 }),
                                 (0, n.jsx)(o.Text, {
-                                    id: f,
+                                    id: g,
                                     variant: "text-sm/normal",
                                     color: "text-default",
                                     children: a ? d.intl.string(d.t["0r6pbG"]) : d.intl.string(d.t["8MMHYG"]),
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(i.zx, {
+                        (0, n.jsx)(i.zxk, {
                             text: a ? d.intl.string(d.t.DlJOvr) : d.intl.string(d.t.X7YGXF),
                             icon: a ? o.kZF : o.T$Z,
                             iconPosition: "end",
                             variant: a ? "critical-primary" : "expressive",
-                            "aria-describedby": f,
-                            "aria-disabled": A,
-                            disabled: A,
-                            onClick: A ? void 0 : g,
+                            "aria-describedby": g,
+                            "aria-disabled": e,
+                            disabled: e,
+                            onClick: e ? void 0 : f,
                             loading: u,
                         }),
                     ],
                 }),
-                A &&
+                e &&
                     (0, n.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",

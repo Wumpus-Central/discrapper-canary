@@ -4,7 +4,7 @@ n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(680018),
+    s = n(159691),
     l = n(607070),
     c = n(175418),
     u = n(164662),
@@ -22,7 +22,7 @@ let p = (e) => {
         children: [
             (0, r.jsx)("div", {
                 className: _.backButtonContainer,
-                children: (0, r.jsx)(s.z, {
+                children: (0, r.jsx)(s.zxk, {
                     onClick: n,
                     text: f.intl.string(f.t["13/7kZ"]),
                     variant: "overlay-secondary",

@@ -16,14 +16,14 @@ function p(e) {
         x = i.useMemo(() => t.slice(0, f && !g ? 6 : void 0), [t, f, g]);
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)(s.X6, {
+            (0, n.jsx)(s.X6q, {
                 className: d.sectionHeader,
                 variant: "text-md/semibold",
                 color: "header-primary",
                 children: u.intl.string(u.t.ak8OHh),
             }),
             0 === t.length
-                ? (0, n.jsx)(s.xv, {
+                ? (0, n.jsx)(s.xvT, {
                       variant: "text-xs/semibold",
                       color: "text-primary",
                       className: m.emptyState,
@@ -55,7 +55,7 @@ function p(e) {
                                   className: m.expandEntriesButton,
                                   onClick: () => j(!0),
                                   children: [
-                                      (0, n.jsx)(s.xv, {
+                                      (0, n.jsx)(s.xvT, {
                                           variant: "text-xs/semibold",
                                           color: "interactive-normal",
                                           children: u.intl.string(u.t.yohc6O),

@@ -112,7 +112,7 @@ class I extends (r = a.PureComponent) {
                               }),
                               n
                                   ? null
-                                  : (0, i.jsx)(l.zx, {
+                                  : (0, i.jsx)(l.zxk, {
                                         variant: "secondary",
                                         onClick: this.handleEditClick,
                                         size: "sm",
@@ -156,7 +156,7 @@ class T extends a.PureComponent {
                           ],
                       })
                     : null,
-                (0, i.jsx)(l.zx, {
+                (0, i.jsx)(l.zxk, {
                     onClick: this.handleAddPaymentMethod,
                     text: g.intl.string(g.t.CpOiEB),
                 }),

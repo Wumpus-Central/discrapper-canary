@@ -42,7 +42,7 @@ function f(e) {
                 className: g.informationContainer,
                 children: [
                     (0, r.jsx)("div", { className: g.divider }),
-                    (0, r.jsx)(i.X6, {
+                    (0, r.jsx)(i.X6q, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children: h.intl.string(h.t["mD+J/v"]),

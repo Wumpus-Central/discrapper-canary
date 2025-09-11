@@ -37,13 +37,13 @@ let f = (e) => {
             (0, r.jsxs)("div", {
                 className: d.actions,
                 children: [
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.zxk, {
                         variant: "primary",
                         text: u.intl.string(u.t.WWvswM),
                         fullWidth: !0,
                         onClick: () => (0, s.Z)("role_sub_mweb_success_modal"),
                     }),
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.zxk, {
                         variant: "secondary",
                         text: u.intl.string(u.t.y84Dho),
                         fullWidth: !0,

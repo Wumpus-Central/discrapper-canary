@@ -10,7 +10,7 @@ var i = n(120356),
 function u(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
         i = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
-    return (0, r.jsxs)(o.Kq, {
+    return (0, r.jsxs)(o.Kqy, {
         gap: 4,
         children: [
             t &&

@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(680018),
+    l = n(159691),
     c = n(755721),
     u = n(481060),
     d = n(230711),
@@ -87,7 +87,7 @@ let w = () => {
             className: P.editorFooter,
             children: [
                 i && (0, r.jsx)(w, {}),
-                (0, r.jsx)(l.z, {
+                (0, r.jsx)(l.zxk, {
                     onClick: a,
                     variant: "secondary",
                     fullWidth: !0,

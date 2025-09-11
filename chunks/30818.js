@@ -15,7 +15,7 @@ function c(e) {
                 className: o.halfWidth,
                 children: [
                     (0, r.jsx)(l.vwX, { children: s.intl.string(s.t["23TVho"]) }),
-                    (0, r.jsxs)(i.xv, {
+                    (0, r.jsxs)(i.xvT, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         children: [s.intl.string(s.t.U4LwWF), " ", s.intl.string(s.t.xdY0pK)],

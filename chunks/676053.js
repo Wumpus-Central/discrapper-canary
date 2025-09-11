@@ -1,9 +1,9 @@
 n.d(t, { M: () => T });
 var r = n(951288),
     i = n(647438),
-    a = n(780842),
-    o = n(751334),
-    s = n(587272),
+    a = n(751334),
+    o = n(587272),
+    s = n(159691),
     l = n(70097),
     c = n(312097),
     u = n(920155),
@@ -118,7 +118,7 @@ function T(e) {
             "popoverRef",
         ]);
     let w = i.useRef(null),
-        D = (0, s.j1)(y),
+        D = (0, o.j1)(y),
         x = i.useCallback(
             () => ({
                 type: "VIDEO",
@@ -150,7 +150,7 @@ function T(e) {
                 null == C || C();
         }, [x, C, N]),
         M = D
-            ? (0, r.jsx)(o.z, {
+            ? (0, r.jsx)(a.z, {
                   type: "image",
                   src: y,
               })
@@ -170,7 +170,7 @@ function T(e) {
                       }),
                       (0, r.jsx)("div", {
                           className: g.playButton,
-                          children: (0, r.jsx)(a.J, {
+                          children: (0, r.jsx)(s.JM1, {
                               playing: !1,
                               size: "sm",
                               "aria-label": m.intl.string(h.default.YpT3kp),

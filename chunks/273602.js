@@ -3,8 +3,8 @@ var a = n(951288),
     o = n(647438),
     i = n(442837),
     l = n(544891),
-    r = n(179538),
-    s = n(82659),
+    r = n(82659),
+    s = n(159691),
     c = n(904245),
     u = n(166459),
     d = n(680287),
@@ -105,12 +105,12 @@ function S(e) {
         }, [b, l, I, p, d]);
     return null == h
         ? null
-        : (0, a.jsx)(s.Modal, {
+        : (0, a.jsx)(r.Modal, {
               title: M.intl.string(M.t["+SZF6e"]),
               subtitle: M.intl.string(M.t["0Ycgw8"]),
               transitionState: u,
               onClose: d,
-              actionBarInput: (0, a.jsx)(r.A, {
+              actionBarInput: (0, a.jsx)(s.Avr, {
                   variant: "secondary",
                   disabled: w,
                   onClick: d,

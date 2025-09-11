@@ -70,7 +70,7 @@ function h(e) {
         ? null
         : (0, r.jsx)("div", {
               className: u.controlsSection,
-              children: (0, r.jsx)(i.Kq, {
+              children: (0, r.jsx)(i.Kqy, {
                   gap: 16,
                   children: h.map((e) => {
                       var t;

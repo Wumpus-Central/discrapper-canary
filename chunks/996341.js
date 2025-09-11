@@ -12,7 +12,7 @@ let s = {
             id: "help-message",
             component: function (e) {
                 let { text: t } = e;
-                return (0, r.jsx)(i.Kq, {
+                return (0, r.jsx)(i.Kqy, {
                     gap: 16,
                     children: Object.values(o.Q).map((e) =>
                         (0, r.jsx)(

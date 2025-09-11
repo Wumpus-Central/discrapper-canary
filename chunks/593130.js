@@ -116,7 +116,7 @@ function Z(e) {
                         y
                             ? (0, r.jsx)("div", {
                                   className: b.createButton,
-                                  children: (0, r.jsx)(i.zx, {
+                                  children: (0, r.jsx)(i.zxk, {
                                       size: "sm",
                                       onClick: () => {
                                           a(), (0, j.R6)(t, void 0, "Thread Browser Toolbar");

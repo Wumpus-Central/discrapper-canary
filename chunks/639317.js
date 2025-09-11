@@ -6,7 +6,7 @@ var i,
     s = n(120356),
     l = n.n(s),
     c = n(58654),
-    u = n(84735),
+    u = n(793030),
     d = n(154257);
 function f(e, t, n) {
     return (
@@ -176,7 +176,7 @@ class y extends (i = o.PureComponent) {
             i = m(e, ["style", "className", "onResize"]);
         delete i.fontWidthEstimate;
         let o = _({}, this.state, t);
-        return (0, a.jsx)(u.t, {
+        return (0, a.jsx)(u.tEY, {
             children: (0, a.jsx)(
                 "textarea",
                 h(_({}, i), {

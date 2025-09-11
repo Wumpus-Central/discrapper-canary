@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(663507),
-    l = n(84735),
+    l = n(793030),
     c = n(562701),
     u = n(121958);
 function d(e, t, n) {
@@ -111,8 +111,8 @@ function g(e, t, n) {
                 paddingVertical: x,
                 paddingHorizontal: L,
                 fade: j = !1,
-                className: M,
-                style: k,
+                className: k,
+                style: M,
                 maxContentWidth: U,
                 renderAccessory: G,
                 onItemVisibilityChange: B,
@@ -142,14 +142,14 @@ function g(e, t, n) {
                 "renderAccessory",
                 "onItemVisibilityChange",
             ]);
-        let V = i.useRef(null),
-            F = i.useRef(null),
+        let F = i.useRef(null),
+            V = i.useRef(null),
             H = i.useRef({}),
             [Y, W] = i.useState(!1),
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: K,
-            className: M,
+            className: k,
             specs: a,
             orientation: "vertical",
             dir: b,
@@ -217,9 +217,9 @@ function g(e, t, n) {
         let el = (0, i.useCallback)(
             (e) => {
                 er(1),
-                    null == V.current ? W(!0) : clearTimeout(V.current),
-                    (V.current = setTimeout(() => {
-                        (V.current = null), W(!1);
+                    null == F.current ? W(!0) : clearTimeout(F.current),
+                    (F.current = setTimeout(() => {
+                        (F.current = null), W(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -236,12 +236,12 @@ function g(e, t, n) {
                         {
                             ref: K,
                             onScroll: el,
-                            className: o()(M, {
+                            className: o()(k, {
                                 [e]: !0,
                                 [t]: j,
                                 [u.scrolling]: Y,
                             }),
-                            style: (0, c.uT)(k),
+                            style: (0, c.uT)(M),
                         },
                         Z,
                     ),
@@ -250,12 +250,12 @@ function g(e, t, n) {
                             null != (g = null == G ? void 0 : G(ee)) ? g : null,
                             (0, i.useMemo)(
                                 () =>
-                                    (0, r.jsx)(l.J, {
-                                        containerRef: F,
+                                    (0, r.jsx)(l.JcV, {
+                                        containerRef: V,
                                         children: (0, r.jsx)("div", {
                                             style: { height: ee },
                                             className: u.content,
-                                            ref: F,
+                                            ref: V,
                                             children: Object.keys($).map((e) => {
                                                 var t;
                                                 let n = (0, c.t$)(e),

@@ -1,13 +1,14 @@
 n.d(t, { Z: () => s });
-var r = n(374470);
+var r = n(513431);
 function i(e, t, n) {
     let i = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
         a = "horizontal" === t ? e.offsetLeft : e.offsetTop,
         o = e.offsetParent;
     for (; null != o && o !== n; )
-        (0, r.k)(o, HTMLElement)
-            ? ((a += "horizontal" === t ? o.offsetLeft : o.offsetTop), (o = o.offsetParent))
-            : (o = o.parentNode);
+        if ((0, r.k)(o, HTMLElement)) {
+            let e = o;
+            (a += "horizontal" === t ? e.offsetLeft : e.offsetTop), (o = e.offsetParent);
+        } else o = o.parentNode;
     return {
         offset: a,
         offsetSize: i,

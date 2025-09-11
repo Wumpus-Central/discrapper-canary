@@ -14,7 +14,7 @@ var r = n(951288),
     f = n(21340),
     _ = n(417153),
     p = n(981729),
-    h = n(861066),
+    h = n(159691),
     m = n(972959),
     g = n(665149),
     E = n(606669),
@@ -122,7 +122,7 @@ function L() {
         onRequestClose: () => {},
         children: (t) =>
             (0, r.jsx)(
-                h.h,
+                h.hU,
                 w(
                     R(
                         {
@@ -245,7 +245,7 @@ function j(e) {
                                   })
                                 : null,
                             null != E
-                                ? (0, r.jsx)(h.h, {
+                                ? (0, r.jsx)(h.hU, {
                                       size: "sm",
                                       "aria-label": "Copy Link",
                                       variant: "icon-only",

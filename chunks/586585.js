@@ -1,19 +1,18 @@
 n.d(t, {
-    Z: () => y,
-    g: () => g,
+    Z: () => b,
+    g: () => m,
 });
 var r = n(951288);
 n(647438);
 var i = n(793030),
-    a = n(179538),
-    o = n(159691),
-    s = n(481060),
-    l = n(600164),
-    c = n(563132),
-    u = n(612853),
-    d = n(388032),
-    f = n(42207);
-function _(e, t, n) {
+    a = n(159691),
+    o = n(481060),
+    s = n(600164),
+    l = n(563132),
+    c = n(612853),
+    u = n(388032),
+    d = n(42207);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,32 +53,32 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var g = (function (e) {
+var m = (function (e) {
     return (e[(e.CONTINUE = 0)] = "CONTINUE"), (e[(e.UPGRADE = 1)] = "UPGRADE"), (e[(e.PURCHASE = 2)] = "PURCHASE"), e;
 })({});
-let E = (e) => {
+let g = (e) => {
         let {
                 primaryIcon: t,
                 primaryCTA: n,
                 primaryType: i,
-                primaryText: a,
+                primaryText: o,
                 primaryDisabled: s,
                 primarySubmitting: l,
                 onPrimary: c,
                 tooltipProps: u,
             } = e,
-            d = {
+            f = {
                 type: i,
                 disabled: s,
                 onClick: c,
@@ -89,71 +88,71 @@ let E = (e) => {
                         : () =>
                               (0, r.jsx)(t, {
                                   color: "currentColor",
-                                  className: f.primaryIcon,
+                                  className: d.primaryIcon,
                               }),
                 loading: l,
-                text: a,
+                text: o,
             };
         return 2 === n
-            ? (0, r.jsx)(o.zx, p({ variant: "expressive" }, d, u))
-            : (0, r.jsx)(o.zx, p(m(p({}, d), { variant: 0 === n ? "primary" : "active" }), u));
+            ? (0, r.jsx)(a.zxk, _({ variant: "expressive" }, f, u))
+            : (0, r.jsx)(a.zxk, _(h(_({}, f), { variant: 0 === n ? "primary" : "active" }), u));
     },
-    b = (e) => {
+    E = (e) => {
         let {
                 onBack: t,
                 backText: n,
-                primaryIcon: o,
+                primaryIcon: d,
                 primaryCTA: f,
-                primaryType: _,
-                primaryText: h,
-                primaryTooltip: g,
+                primaryType: p,
+                primaryText: m,
+                primaryTooltip: E,
                 primaryDisabled: b,
                 primarySubmitting: y,
                 onPrimary: O,
             } = e,
-            { premiumBrandRefreshBackgroundClassName: v } = (0, c.JL)(),
+            { premiumBrandRefreshBackgroundClassName: v } = (0, l.JL)(),
             I = () => {
-                if (null == f || null == h) return null;
+                if (null == f || null == m) return null;
                 let e = {
-                    primaryIcon: o,
+                    primaryIcon: d,
                     primaryCTA: f,
-                    primaryType: _,
-                    primaryText: h,
+                    primaryType: p,
+                    primaryText: m,
                     primaryDisabled: b,
                     primarySubmitting: y,
                     onPrimary: O,
                 };
-                return null != g
-                    ? (0, r.jsx)(s.ua7, {
-                          text: g,
-                          children: (t) => (0, r.jsx)(E, m(p({}, e), { tooltipProps: t })),
+                return null != E
+                    ? (0, r.jsx)(o.ua7, {
+                          text: E,
+                          children: (t) => (0, r.jsx)(g, h(_({}, e), { tooltipProps: t })),
                       })
-                    : (0, r.jsx)(E, m(p({}, e), { onPrimary: O }));
+                    : (0, r.jsx)(g, h(_({}, e), { onPrimary: O }));
             },
             T = () =>
                 null == t
                     ? null
-                    : (0, r.jsx)(a.A, {
-                          text: null != n ? n : d.intl.string(d.t["13/7kZ"]),
+                    : (0, r.jsx)(a.Avr, {
+                          text: null != n ? n : u.intl.string(u.t["13/7kZ"]),
                           onClick: t,
                           variant: "secondary",
                       });
-        return (0, r.jsxs)(s.mzw, {
+        return (0, r.jsxs)(o.mzw, {
             "data-migration-pending": !0,
-            justify: l.Z.Justify.BETWEEN,
-            align: l.Z.Align.CENTER,
+            justify: s.Z.Justify.BETWEEN,
+            align: s.Z.Align.CENTER,
             className: v,
             children: [
-                (0, r.jsxs)(i.Kq, {
+                (0, r.jsxs)(i.Kqy, {
                     direction: "horizontal-reverse",
                     align: "center",
                     gap: 0,
                     padding: 0,
-                    children: [I(), (0, r.jsx)(u.Z, {})],
+                    children: [I(), (0, r.jsx)(c.Z, {})],
                 }),
                 T(),
             ],
         });
     };
-b.CTAType = g;
-let y = b;
+E.CTAType = m;
+let b = E;

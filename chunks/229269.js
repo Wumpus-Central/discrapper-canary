@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(289008),
     o = n(120356),
     s = n.n(o),
-    l = n(680018),
+    l = n(159691),
     c = n(481060),
     u = n(801937),
     d = n(502109),
@@ -116,7 +116,7 @@ function C() {
                         placeholder: "Enter DeepLink Url",
                         fullWidth: !0,
                     }),
-                    (0, r.jsx)(l.z, {
+                    (0, r.jsx)(l.zxk, {
                         variant: "primary",
                         size: "sm",
                         text: "Test Deeplink",
@@ -480,7 +480,7 @@ function B() {
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: y.applyChangesButton,
-                children: (0, r.jsx)(l.z, {
+                children: (0, r.jsx)(l.zxk, {
                     variant: "primary",
                     size: "sm",
                     text: "Apply Changes",

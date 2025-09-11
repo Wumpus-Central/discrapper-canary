@@ -47,7 +47,7 @@ function f(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(o.zx, {
+                    (0, r.jsx)(o.zxk, {
                         size: "sm",
                         variant: "overlay-primary",
                         text: l.intl.string(l.t["3a8Xxs"]),

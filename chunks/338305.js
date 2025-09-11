@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
 var r = n(951288);
 n(647438);
-var i = n(922770),
+var i = n(793030),
     a = n(466377),
     o = n(388032),
     s = n(818033);
@@ -66,7 +66,7 @@ function f(e) {
             parentComponent: "renderModalSpinner",
             children: (0, r.jsx)("div", {
                 className: s.spinnerContainer,
-                children: (0, r.jsx)(i.$, {}),
+                children: (0, r.jsx)(i.$jN, {}),
             }),
         }),
     );

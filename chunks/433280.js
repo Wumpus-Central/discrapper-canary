@@ -48,10 +48,7 @@ function m(e) {
             ],
             onRequestClose: () => n(f.L.USER_DISMISS),
             position: "bottom",
-            caretConfig: {
-                position: "top",
-                align: "center",
-            },
+            caretConfig: { align: "center" },
         })
     );
 }

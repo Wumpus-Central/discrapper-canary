@@ -21,7 +21,7 @@ function m() {
         n = null != t ? new Date(t) : null;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(l.X6, {
+            (0, a.jsx)(l.X6q, {
                 className: d.header,
                 variant: "heading-lg/semibold",
                 children: "Tenure Badges",

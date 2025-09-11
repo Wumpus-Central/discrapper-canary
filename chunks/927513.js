@@ -19,11 +19,11 @@ let u = (e) => {
             className: c.tooltipWordmark,
         }),
         children: [
-            (0, r.jsx)(i.X6, {
+            (0, r.jsx)(i.X6q, {
                 variant: "heading-xl/extrabold",
                 children: l.intl.string(n.nameUnformatted),
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(i.xvT, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 className: c.tooltipDescription,

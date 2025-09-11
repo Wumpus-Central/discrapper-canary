@@ -6,10 +6,10 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(938288),
     l = n(990547),
     c = n(873546),
-    u = n(186325),
+    u = n(793030),
     d = n(481060),
     f = n(393238),
     _ = n(699682),
@@ -136,7 +136,7 @@ function N(e) {
     let R = I.activeSlide,
         P = (0, _.Z)(I.activeSlide),
         w = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
-        { reducedMotion: D } = i.useContext(u.S),
+        { reducedMotion: D } = i.useContext(u.Sfi),
         x = i.useContext(p.Z),
         L = C[R].impressionName,
         j = O(b({}, C[R].impressionProperties), { location_stack: N });
@@ -146,11 +146,11 @@ function N(e) {
         properties: j,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: M, width: k = 0, height: U = 0 } = (0, f.ZP)(R),
+    let { ref: k, width: M = 0, height: U = 0 } = (0, f.ZP)(R),
         G = b({}, T, I.springConfig, D.enabled ? { clamp: !0 } : null),
         B = (0, d.q_F)(
             {
-                width: null != (n = I.width) ? n : k,
+                width: null != (n = I.width) ? n : M,
                 height: U,
                 config: G,
             },
@@ -200,7 +200,7 @@ function N(e) {
             return (0, r.jsx)(
                 s.animated.div,
                 {
-                    ref: t === R ? M : null,
+                    ref: t === R ? k : null,
                     style: b(
                         {
                             position: "absolute",

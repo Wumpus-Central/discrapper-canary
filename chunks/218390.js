@@ -36,8 +36,8 @@ var r = n(951288),
     x = n(483444),
     L = n(626135),
     j = n(63063),
-    M = n(74538),
-    k = n(140465),
+    k = n(74538),
+    M = n(140465),
     U = n(695349),
     G = n(46062),
     B = n(347896),
@@ -71,7 +71,7 @@ function eu(e) {
         c = n || o,
         u = null != t.trialEndsAt ? l()(t.trialEndsAt).diff(l()(), "d") : 0,
         d = J.GP[t.planIdFromItems],
-        _ = M.ZP.formatPriceString(M.ZP.getDefaultPrice(d.id), d.interval),
+        _ = k.ZP.formatPriceString(k.ZP.getDefaultPrice(d.id), d.interval),
         { enabled: h } = G.T.getCurrentConfig({ location: "SubscriptionUserHeroSubheader" }),
         m = () => {
             var e, t, n;
@@ -122,8 +122,8 @@ function eu(e) {
             });
 }
 function ed() {
-    let e = (0, k.t7)(),
-        t = (0, k.lr)(),
+    let e = (0, M.t7)(),
+        t = (0, M.lr)(),
         n = (0, y.ZP)(),
         i = (0, c.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
         a = (0, S.Z)(),
@@ -180,14 +180,14 @@ function ed() {
                     : null,
         g = () =>
             u && !l
-                ? (0, r.jsxs)(d.hE, {
+                ? (0, r.jsxs)(d.hE2, {
                       fullWidth: !0,
                       direction: "vertical",
                       children: [
                           (0, r.jsx)(W.Z, {
                               defaultTextOverride: s ? ee.intl.string(ee.t.YScQSE) : ee.intl.string(ee.t["0b3YRk"]),
                           }),
-                          (0, r.jsx)(d.zx, {
+                          (0, r.jsx)(d.zxk, {
                               onClick: () => {
                                   L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: eo,
@@ -203,11 +203,11 @@ function ed() {
                           }),
                       ],
                   })
-                : (0, r.jsxs)(d.hE, {
+                : (0, r.jsxs)(d.hE2, {
                       fullWidth: !0,
                       direction: "vertical",
                       children: [
-                          (0, r.jsx)(d.zx, {
+                          (0, r.jsx)(d.zxk, {
                               variant: "overlay-primary",
                               fullWidth: !0,
                               onClick: () => {
@@ -221,7 +221,7 @@ function ed() {
                               text: ee.intl.string(ee.t.VR2iVF),
                               size: "md",
                           }),
-                          (0, r.jsx)(d.zx, {
+                          (0, r.jsx)(d.zxk, {
                               variant: "overlay-secondary",
                               onClick: () => {
                                   L.default.track($.rMx.PREMIUM_SETTINGS_INTERACTED, {
@@ -385,7 +385,7 @@ let ep = function () {
             note: null,
         });
     if ((!x && !j) || l) return (0, r.jsx)(p.$jN, {});
-    let M = !!(null == a ? void 0 : a.hasActiveTrial);
+    let k = !!(null == a ? void 0 : a.hasActiveTrial);
     return (0, r.jsx)(I.Gt, {
         value: n,
         children: (0, r.jsxs)(r.Fragment, {
@@ -399,7 +399,7 @@ let ep = function () {
                         (0, r.jsx)(X.Z, {
                             hideCTAs: !0,
                             headingOverride: ee.intl.string(ee.t.dnVvQU),
-                            hidePill: !M,
+                            hidePill: !k,
                             selectedPlanColumnClassName: et.tier2PlanComparisonTableBackground,
                             selectedPlanTier: J.p9.TIER_2,
                         }),

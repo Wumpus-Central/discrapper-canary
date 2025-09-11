@@ -117,7 +117,7 @@ function v(e) {
         className: M,
         children: [
             k(),
-            (0, r.jsx)(s.xv, {
+            (0, r.jsx)(s.xvT, {
                 variant: "text-".concat(S, "/normal"),
                 className: o()(O.truncated, O.dot, I),
                 children: b.l,

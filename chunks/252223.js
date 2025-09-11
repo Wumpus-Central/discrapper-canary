@@ -111,7 +111,7 @@ function k(e) {
 function M(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         s = a - 1;
-    return (0, r.jsxs)(l.xv, {
+    return (0, r.jsxs)(l.xvT, {
         variant: t,
         className: o()(n, R.activityCounter),
         color: i ? "status-positive" : "none",
@@ -120,7 +120,7 @@ function M(e) {
 }
 function U(e) {
     let { textVariant: t, className: n } = e;
-    return (0, r.jsx)(l.xv, {
+    return (0, r.jsx)(l.xvT, {
         variant: t,
         className: o()(R.dot, n),
         children: A.l,

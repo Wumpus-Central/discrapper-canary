@@ -3,9 +3,9 @@ var r = n(951288),
     i = n(647438),
     a = n(481060),
     o = n(907862),
-    s = n(453707),
-    l = n(315416),
-    c = n(715720);
+    s = n(618583),
+    l = n(811616),
+    c = n(184214);
 function u(e, t, n) {
     return (
         t in e
@@ -87,34 +87,31 @@ let m = {
             id: "popover",
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
-                var { showAsset: t, showActions: n, showTextLink: c, caretPosition: u, caretAlign: f, size: h } = e,
-                    m = p(e, ["showAsset", "showActions", "showTextLink", "caretPosition", "caretAlign", "size"]);
-                let [g, E] = i.useState(!1),
-                    b = i.useRef(null);
+                var { showAsset: t, showActions: n, showTextLink: c, caretAlign: u, size: f } = e,
+                    h = p(e, ["showAsset", "showActions", "showTextLink", "caretAlign", "size"]);
+                let [m, g] = i.useState(!1),
+                    E = i.useRef(null);
                 return (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(
                             o.J2,
-                            _(d({}, m), {
-                                size: h,
-                                targetElementRef: b,
-                                shouldShow: g,
-                                onRequestClose: () => E(!1),
+                            _(d({}, h), {
+                                size: f,
+                                targetElementRef: E,
+                                shouldShow: m,
+                                onRequestClose: () => g(!1),
                                 graphic: t
                                     ? {
                                           type: "image",
-                                          src: "sm" === h ? l.Z : s.Z,
+                                          src: "sm" === f ? l.Z : s.Z,
                                       }
                                     : void 0,
-                                caretConfig: {
-                                    position: u,
-                                    align: f,
-                                },
+                                caretConfig: { align: u },
                                 actions: n
                                     ? [
                                           {
                                               text: "Close",
-                                              onClick: () => E(!1),
+                                              onClick: () => g(!1),
                                           },
                                       ]
                                     : void 0,
@@ -130,8 +127,8 @@ let m = {
                         (0, r.jsx)(a.zxk, {
                             variant: "primary",
                             text: "Toggle Popover",
-                            buttonRef: b,
-                            onClick: () => E(!g),
+                            buttonRef: E,
+                            onClick: () => g(!m),
                         }),
                     ],
                 });
@@ -205,29 +202,6 @@ let m = {
                         {
                             label: "Nitro Pink",
                             value: "nitro-pink",
-                        },
-                    ],
-                },
-                caretPosition: {
-                    label: "Caret Position",
-                    type: "select",
-                    defaultValue: "top",
-                    options: [
-                        {
-                            label: "Bottom",
-                            value: "bottom",
-                        },
-                        {
-                            label: "Top",
-                            value: "top",
-                        },
-                        {
-                            label: "Left",
-                            value: "left",
-                        },
-                        {
-                            label: "Right",
-                            value: "right",
                         },
                     ],
                 },

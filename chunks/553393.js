@@ -1,7 +1,7 @@
 n.d(t, { Z: () => V }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(261616),
+    a = n(938288),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -331,7 +331,7 @@ function F(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(l.zx, {
+                (0, r.jsx)(l.zxk, {
                     variant: "secondary",
                     text: em.ctaText,
                     onClick: () => {

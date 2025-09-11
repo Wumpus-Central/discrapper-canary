@@ -22,12 +22,12 @@ var i = n(951288),
     _ = n(360606),
     C = n(905753),
     N = n(399860),
-    Z = n(335049),
-    S = n(617012),
+    S = n(335049),
+    Z = n(617012),
     w = n(981631),
     I = n(388032),
-    T = n(547063);
-function P(e) {
+    P = n(547063);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -82,7 +82,7 @@ function k(e) {
         f = (0, o.e7)([x.Z], () => x.Z.getGuild(l));
     a()(null != f, "");
     let v = (0, o.e7)([h.Z], () => h.Z.getSortedRoles(l)),
-        [Z, S] = r.useState(new Set()),
+        [S, Z] = r.useState(new Set()),
         w = r.useMemo(() => {
             let e = (0, m.bD)(l),
                 t = v.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
@@ -123,7 +123,7 @@ function k(e) {
             },
             [n],
         ),
-        P = r.useCallback(
+        T = r.useCallback(
             (e, t, i) => {
                 let r = (0, N.rE)(e, t);
                 null != u[r] &&
@@ -142,10 +142,10 @@ function k(e) {
         );
     r.useEffect(() => {
         let e = Object.values(u)
-            .filter((e) => e.type === p.Kw.USER && !e.canRead && !Z.has(e.id))
+            .filter((e) => e.type === p.Kw.USER && !e.canRead && !S.has(e.id))
             .map((e) => e.id);
-        0 !== e.length && (d.Z.requestMembersById(l, e, !1), S((t) => new Set([...t, ...e])));
-    }, [l, u, Z, S]);
+        0 !== e.length && (d.Z.requestMembersById(l, e, !1), Z((t) => new Set([...t, ...e])));
+    }, [l, u, S, Z]);
     let E = (0, o.e7)([C.Z], () => C.Z.getApplicationId()),
         k = (0, o.e7)([_.default], () =>
             null == E
@@ -163,7 +163,7 @@ function k(e) {
                   {
                       guild: f,
                       commandId: t,
-                      onChange: (t) => P(e.id, e.type, t),
+                      onChange: (t) => T(e.id, e.type, t),
                       onRemove: () => I(e.id, e.type),
                       overwrite: e,
                       integration: k,
@@ -174,7 +174,7 @@ function k(e) {
               ),
           )
         : (0, i.jsx)("div", {
-              className: T.noItemsSelected,
+              className: P.noItemsSelected,
               children: (0, i.jsx)(c.Text, {
                   color: "text-muted",
                   variant: "text-sm/normal",
@@ -211,7 +211,7 @@ function A(e) {
             var e;
             v.default.track(
                 w.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
-                E(P({}, (0, u.hH)(o.id)), {
+                E(T({}, (0, u.hH)(o.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,
                     location: "toggle",
                 }),
@@ -220,7 +220,7 @@ function A(e) {
     }, [o.id, null == j || null == (l = j.application) ? void 0 : l.id, A]);
     let R = r.useRef(null),
         L = (0, i.jsx)(c.ua7, {
-            tooltipClassName: T.tooltip,
+            tooltipClassName: P.tooltip,
             text: a,
             shouldShow: N,
             position: "left",
@@ -228,9 +228,9 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     "div",
-                    E(P({}, e), {
+                    E(T({}, e), {
                         ref: R,
-                        children: (0, i.jsx)(S.Z, {
+                        children: (0, i.jsx)(Z.Z, {
                             isDisabled: N,
                             currentValue: x.permission,
                             onChange: A
@@ -250,10 +250,7 @@ function A(e) {
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
             position: "bottom",
-            caretConfig: {
-                position: "top",
-                align: "center",
-            },
+            caretConfig: { align: "center" },
             onRequestClose: () => {
                 b.Z.dismissToggleTooltip(o.id, j);
             },
@@ -261,11 +258,11 @@ function A(e) {
     return (0, i.jsxs)(
         "div",
         {
-            className: T.entryItem,
+            className: P.entryItem,
             children: [
                 (0, i.jsx)("div", {
-                    className: T.entryName,
-                    children: (0, i.jsx)(Z.Z, {
+                    className: P.entryName,
+                    children: (0, i.jsx)(S.Z, {
                         guild: o,
                         id: x.id,
                         type: x.type,
@@ -274,7 +271,7 @@ function A(e) {
                     }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: T.entryActions,
+                    className: P.entryActions,
                     children: [
                         (0, i.jsx)(D, {
                             commandId: d,
@@ -298,15 +295,15 @@ function D(e) {
         : null == t && n
           ? null
           : (0, i.jsx)("div", {
-                className: T.removeActions,
+                className: P.removeActions,
                 children: (0, i.jsx)(c.P3F, {
-                    className: T.removeContainer,
+                    className: P.removeContainer,
                     "aria-label": I.intl.string(I.t.mT0CQE),
                     onClick: l,
                     children: (0, i.jsx)(c.XHJ, {
                         size: "md",
                         color: "currentColor",
-                        className: T.removeIcon,
+                        className: P.removeIcon,
                     }),
                 }),
             });

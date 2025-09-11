@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -29,7 +29,7 @@ function j(e) {
             className: v.nativeSourceTypeButtonInner,
             children: [
                 (0, r.jsx)(i, { size: "lg" }),
-                (0, r.jsx)(a.xv, {
+                (0, r.jsx)(a.xvT, {
                     variant: "text-sm/medium",
                     color: "none",
                     children: n,
@@ -38,7 +38,7 @@ function j(e) {
         }),
     });
 }
-function S(e) {
+function b(e) {
     let { onSourceSelect: t } = e;
     (0, f.UB)(), (0, m.Z)(t, g.Vq);
     let [{ nativeSourceType: n }, i] = (0, p.E_)(),
@@ -46,7 +46,7 @@ function S(e) {
     return (0, r.jsxs)("div", {
         className: v.root,
         children: [
-            (0, r.jsx)(a.X6, {
+            (0, r.jsx)(a.X6q, {
                 className: v.header,
                 variant: "heading-lg/semibold",
                 color: "text-default",
@@ -55,7 +55,7 @@ function S(e) {
             l
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(a.xv, {
+                          (0, r.jsx)(a.xvT, {
                               className: v.body,
                               variant: "text-sm/medium",
                               color: "text-secondary",

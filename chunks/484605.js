@@ -11,7 +11,7 @@ var i = n(264418),
     d = n(474936),
     p = n(921944),
     f = n(388032),
-    h = n(288541);
+    h = n(746986);
 let g = (e) => {
     let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: b, children: _ } = e,
         { analyticsLocations: O } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
@@ -21,10 +21,7 @@ let g = (e) => {
             position: "right",
             align: "top",
             size: "md",
-            caretConfig: {
-                position: "left",
-                align: "start",
-            },
+            caretConfig: { align: "start" },
             title: f.intl.format(f.t["3yZP0N"], { percent: g.discount.amount }).toString(),
             body: f.intl.format(f.t["3Q4wCw"], {
                 discountedPrice: E,

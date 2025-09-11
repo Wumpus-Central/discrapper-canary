@@ -18,7 +18,7 @@ function h(e) {
     return (0, r.jsxs)("div", {
         className: o,
         children: [
-            (0, r.jsxs)(a.X6, {
+            (0, r.jsxs)(a.X6q, {
                 variant: "heading-md/semibold",
                 className: m.selectorHeading,
                 children: [
@@ -29,7 +29,7 @@ function h(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(a.Kq, {
+            (0, r.jsx)(a.Kqy, {
                 direction: "horizontal",
                 align: "center",
                 wrap: !0,

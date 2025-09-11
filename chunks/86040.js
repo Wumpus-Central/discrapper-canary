@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(951288);
 n(647438);
-var i = n(680018),
+var i = n(159691),
     a = n(481060),
     o = n(600164),
     s = n(388032),
@@ -57,7 +57,7 @@ let c = (e) => {
                 justify: o.Z.Justify.BETWEEN,
                 align: o.Z.Align.CENTER,
                 "data-migration-pending": !0,
-                children: (0, r.jsx)(i.z, {
+                children: (0, r.jsx)(i.zxk, {
                     "data-testid": "continue",
                     variant: "primary",
                     disabled: !0,

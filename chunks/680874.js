@@ -3,7 +3,7 @@ n.d(t, { l: () => E });
 var i = n(951288),
     a = n(647438),
     o = n(58654),
-    s = n(84735);
+    s = n(793030);
 function l(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ let p = 1,
                 (_.current = e), "function" == typeof t ? t(_.current) : null != t && (t.current = e);
             },
             h = a.useMemo(() => b(_.current, u.rows, u.value), [u.rows, u.value]);
-        return (0, i.jsx)(s.t, {
+        return (0, i.jsx)(s.tEY, {
             children: (0, i.jsx)(
                 "textarea",
                 d(c({}, u), {

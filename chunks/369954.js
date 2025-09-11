@@ -18,13 +18,13 @@ var r = n(951288),
     b = n(271650);
 let y = (e) => {
         let { title: t, buttonText: n, onButtonPress: i } = e;
-        return (0, r.jsxs)(a.Kq, {
+        return (0, r.jsxs)(a.Kqy, {
             justify: "space-between",
             direction: "horizontal",
             align: "center",
             gap: 32,
             children: [
-                (0, r.jsx)(a.xv, {
+                (0, r.jsx)(a.xvT, {
                     variant: "text-sm/semibold",
                     color: "interactive-active",
                     children: t,
@@ -71,17 +71,17 @@ let y = (e) => {
         let n = () => {
             (0, u.Z)(), s.Z.openPrivateChannel({ recipientIds: t.map((e) => e.id) });
         };
-        return (0, r.jsxs)(a.Kq, {
+        return (0, r.jsxs)(a.Kqy, {
             padding: { top: 24 },
             gap: 4,
             className: b.container,
             children: [
-                (0, r.jsx)(a.xv, {
+                (0, r.jsx)(a.xvT, {
                     variant: "eyebrow",
                     color: "text-secondary",
                     children: E.intl.string(g.default.ahKIJC),
                 }),
-                (0, r.jsx)(a.Kq, {
+                (0, r.jsx)(a.Kqy, {
                     gap: 8,
                     children: e
                         ? (0, r.jsx)(y, {

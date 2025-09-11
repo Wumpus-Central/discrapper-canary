@@ -63,7 +63,7 @@ function v() {
                           color: "text-default",
                           children: m.intl.string(m.t.erEf2t),
                       }),
-                      (0, r.jsx)(o.xv, {
+                      (0, r.jsx)(o.xvT, {
                           variant: "text-md/medium",
                           color: "text-muted",
                           children: m.intl.string(m.t.NaRCXV),
@@ -88,7 +88,7 @@ function v() {
                               color: "text-default",
                               children: m.intl.string(m.t.w4DRbW),
                           }),
-                          (0, r.jsx)(o.xv, {
+                          (0, r.jsx)(o.xvT, {
                               variant: "text-md/medium",
                               color: "text-muted",
                               children: m.intl.string(m.t.F6u3Ex),
@@ -120,7 +120,7 @@ function I() {
                 size: "md",
                 color: u.JX.PREMIUM_TIER_2,
             }),
-            (0, r.jsx)(o.xv, {
+            (0, r.jsx)(o.xvT, {
                 variant: "text-xs/medium",
                 color: "header-primary",
                 className: g.upsellText,

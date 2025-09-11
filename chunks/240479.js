@@ -73,12 +73,12 @@ function C(e) {
     }, [u, P, t.guildId, t.soundId]);
     let { buttonType: x, description: L } = (0, y.Z)(t, n, v, C),
         j = x === y.y.JOIN_GUILD,
-        M = !E && w,
-        k = i.useMemo(
+        k = !E && w,
+        M = i.useMemo(
             () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
             [O, v, C],
         );
-    return M
+    return k
         ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)("div", {
               className: S.infoContainer,
@@ -95,17 +95,17 @@ function C(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, r.jsx)(o.xv, {
+                                  (0, r.jsx)(o.xvT, {
                                       variant: "text-sm/normal",
                                       children: L,
                                   }),
                               ],
                           }),
-                          null != k &&
+                          null != M &&
                               (0, r.jsxs)("div", {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
-                                      (0, r.jsx)(o.xv, {
+                                      (0, r.jsx)(o.xvT, {
                                           variant: "eyebrow",
                                           color: "header-muted",
                                           className: S.infoExpandedGuildTitle,
@@ -114,7 +114,7 @@ function C(e) {
                                       (0, r.jsx)("div", {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(f.Oe, {
-                                              expressionSourceGuild: k,
+                                              expressionSourceGuild: M,
                                               hasJoinedExpressionSourceGuild: v,
                                               isDisplayingJoinGuildButtonInPopout: j,
                                           }),

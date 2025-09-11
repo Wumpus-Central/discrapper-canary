@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
-    a = n(179538),
+    a = n(159691),
     o = n(481060),
     s = n(906732),
     l = n(975298),
@@ -112,7 +112,7 @@ let b = function () {
                             s = (0, r.jsx)("div", {
                                 className: p.cta,
                                 children: (0, r.jsx)(
-                                    a.A,
+                                    a.Avr,
                                     {
                                         variant: "primary",
                                         onClick: n ? void 0 : b,

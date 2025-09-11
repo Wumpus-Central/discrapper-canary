@@ -1,11 +1,11 @@
 n.r(t),
     n.d(t, {
-        OAuth2AuthorizeModal: () => el,
-        OAuth2AuthorizePage: () => es,
-        getOAuth2AuthorizeProps: () => ep,
-        openOAuth2Modal: () => e_,
-        openOAuth2ModalWithCreateGuildModal: () => ef,
-        useOAuth2AuthorizeForm: () => eu,
+        OAuth2AuthorizeModal: () => es,
+        OAuth2AuthorizePage: () => eo,
+        getOAuth2AuthorizeProps: () => e_,
+        openOAuth2Modal: () => ef,
+        openOAuth2ModalWithCreateGuildModal: () => ed,
+        useOAuth2AuthorizeForm: () => ec,
     }),
     n(35282),
     n(388685),
@@ -30,50 +30,49 @@ var r = n(951288),
     d = n(149765),
     f = n(442837),
     _ = n(952265),
-    p = n(922770),
-    h = n(680018),
-    m = n(257465),
-    g = n(481060),
-    E = n(893776),
-    b = n(434650),
-    y = n(367907),
-    O = n(702493),
-    v = n(162685),
-    I = n(728345),
-    T = n(979200),
-    S = n(589414),
-    A = n(388905),
-    C = n(560067),
-    N = n(353926),
-    R = n(341298),
-    P = n(703656),
-    w = n(973616),
-    D = n(598077),
-    x = n(314897),
-    L = n(630388),
-    j = n(700785),
-    M = n(591759),
+    p = n(257465),
+    h = n(159691),
+    m = n(481060),
+    g = n(893776),
+    E = n(434650),
+    b = n(367907),
+    y = n(702493),
+    O = n(162685),
+    v = n(728345),
+    I = n(979200),
+    T = n(589414),
+    S = n(388905),
+    A = n(560067),
+    C = n(353926),
+    N = n(341298),
+    R = n(703656),
+    P = n(973616),
+    w = n(598077),
+    D = n(314897),
+    x = n(630388),
+    L = n(700785),
+    j = n(591759),
     k = n(807675),
-    U = n(489863),
-    G = n(228763),
-    B = n(422559),
-    Z = n(713938),
-    F = n(166148),
-    V = n(807989),
-    H = n(627799),
-    Y = n(260430),
-    W = n(668185),
-    K = n(407546),
-    z = n(41259),
-    q = n(28752),
-    X = n(787025),
-    Q = n(397394),
-    J = n(574384),
-    $ = n(981631),
-    ee = n(186901),
-    et = n(388032),
-    en = n(565870);
-function er(e, t, n) {
+    M = n(489863),
+    U = n(228763),
+    G = n(422559),
+    B = n(713938),
+    Z = n(166148),
+    F = n(807989),
+    V = n(627799),
+    H = n(260430),
+    Y = n(668185),
+    W = n(407546),
+    K = n(41259),
+    z = n(28752),
+    q = n(787025),
+    X = n(397394),
+    Q = n(574384),
+    J = n(981631),
+    $ = n(186901),
+    ee = n(388032),
+    et = n(565870);
+function en(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -86,7 +85,7 @@ function er(e, t, n) {
         e
     );
 }
-function ei(e) {
+function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -97,12 +96,12 @@ function ei(e) {
                 }),
             )),
             r.forEach(function (t) {
-                er(e, t, n[t]);
+                en(e, t, n[t]);
             });
     }
     return e;
 }
-function ea(e, t) {
+function ei(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -114,26 +113,26 @@ function ea(e, t) {
     }
     return n;
 }
-function eo(e, t) {
+function ea(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ea(Object(t)).forEach(function (n) {
+            : ei(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function es() {
+function eo() {
     let e = (0, s.TH)(),
         t = i.useMemo(() => (0, k.y)(e.search), [e.search]);
-    (0, O.Z)();
+    (0, y.Z)();
     let a = !e.search.includes("response_type"),
         [o, c] = i.useState(!1),
         u = i.useRef(!1),
         [d, f] = i.useState(null),
-        _ = !l.tq && !o && (a || !x.default.isAuthenticated());
+        _ = !l.tq && !o && (a || !D.default.isAuthenticated());
     if (
         (i.useEffect(() => {
             if (l.eL && a) {
@@ -141,7 +140,7 @@ function es() {
                 (t.search = e.search), window.open(t.toString(), "_self");
             } else
                 l.tq ||
-                    (!a && x.default.isAuthenticated()) ||
+                    (!a && D.default.isAuthenticated()) ||
                     u.current ||
                     ((u.current = !0),
                     Promise.resolve()
@@ -149,8 +148,8 @@ function es() {
                         .then((t) => {
                             let { default: n } = t;
                             if (a)
-                                n.request($.Etm.DEEP_LINK, {
-                                    type: ee.jE.OAUTH2,
+                                n.request(J.Etm.DEEP_LINK, {
+                                    type: $.jE.OAUTH2,
                                     params: { search: e.search },
                                 })
                                     .then((e) => {
@@ -161,7 +160,7 @@ function es() {
                             else {
                                 f(!0);
                                 let t = new URLSearchParams(e.search);
-                                n.request($.Etm.AUTHORIZE, {
+                                n.request(J.Etm.AUTHORIZE, {
                                     client_id: t.get("client_id"),
                                     scope: t.get("scope"),
                                     response_type: t.get("response_type"),
@@ -194,37 +193,37 @@ function es() {
                 !0 === d
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(A.Dx, { children: et.intl.string(et.t.csrAMD) }),
-                              (0, r.jsx)(A.DK, {
-                                  children: a ? et.intl.string(et.t["m1+IBg"]) : et.intl.string(et.t.kRzrSE),
+                              (0, r.jsx)(S.Dx, { children: ee.intl.string(ee.t.csrAMD) }),
+                              (0, r.jsx)(S.DK, {
+                                  children: a ? ee.intl.string(ee.t["m1+IBg"]) : ee.intl.string(ee.t.kRzrSE),
                               }),
-                              (0, r.jsx)(h.z, {
+                              (0, r.jsx)(h.zxk, {
                                   onClick: () => c(!0),
                                   variant: "primary",
-                                  text: et.intl.string(et.t.fIv16O),
+                                  text: ee.intl.string(ee.t.fIv16O),
                               }),
                           ],
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(A.Dx, { children: et.intl.string(et.t["Z+hCVV"]) }),
-                              (0, r.jsx)(p.$, {}),
+                              (0, r.jsx)(S.Dx, { children: ee.intl.string(ee.t["Z+hCVV"]) }),
+                              (0, r.jsx)(m.$jN, {}),
                           ],
                       })),
-            (0, r.jsx)(X.G, {
+            (0, r.jsx)(q.G, {
                 removeChildWrapper: !0,
                 children: (0, r.jsx)("div", {
-                    className: en.deepLinkContainer,
+                    className: et.deepLinkContainer,
                     children: e,
                 }),
             })
         );
     }
-    return (0, r.jsx)(X.G, {
+    return (0, r.jsx)(q.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(
-            el,
-            eo(ei({ transitionState: m.D.ENTERED }, t), {
+            es,
+            ea(er({ transitionState: p.D.ENTERED }, t), {
                 showLogout: !0,
                 isExternalStandaloneOAuthPage: !0,
                 hideHeader: !0,
@@ -232,7 +231,7 @@ function es() {
         ),
     });
 }
-function el(e) {
+function es(e) {
     let {
             label: t,
             title: n,
@@ -245,31 +244,31 @@ function el(e) {
             hasContentBackground: d,
             noPadding: f,
             modalSize: _,
-        } = eu(ei({}, e)),
-        p = v.w.useExperiment({ location: "oauth2_authorize" }),
+        } = ec(er({}, e)),
+        p = O.w.useExperiment({ location: "oauth2_authorize" }),
         h =
             null != a || null != s || null != u
                 ? (0, r.jsxs)("div", {
-                      className: en.authorize,
+                      className: et.authorize,
                       children: [
                           a,
                           (0, r.jsxs)("div", {
-                              className: en.contentWrapper,
+                              className: et.contentWrapper,
                               children: [
                                   (0, r.jsxs)("div", {
                                       className: o()(
-                                          en.content,
-                                          d ? en.contentBackground : null,
-                                          f ? en.noPadding : null,
+                                          et.content,
+                                          d ? et.contentBackground : null,
+                                          f ? et.noPadding : null,
                                       ),
                                       children: [s, null != c || p.enabled ? null : u],
                                   }),
                                   null == c && p.enabled
                                       ? (0, r.jsx)("div", {
                                             className: o()(
-                                                en.content,
-                                                d ? en.contentBackground : null,
-                                                f ? en.noPadding : null,
+                                                et.content,
+                                                d ? et.contentBackground : null,
+                                                f ? et.noPadding : null,
                                             ),
                                             children: u,
                                         })
@@ -280,8 +279,8 @@ function el(e) {
                   })
                 : null;
     return (0, r.jsx)(
-        X.j,
-        eo(ei({}, e), {
+        q.j,
+        ea(er({}, e), {
             onClose: () => {
                 var t;
                 return Promise.resolve(null == (t = e.onClose) ? void 0 : t.call(e));
@@ -295,29 +294,29 @@ function el(e) {
         }),
     );
 }
-function ec() {
+function el() {
     return (0, r.jsx)("div", {
-        className: en.loadingContainer,
-        children: (0, r.jsx)(p.$, { className: en.spinner }),
+        className: et.loadingContainer,
+        children: (0, r.jsx)(m.$jN, { className: et.spinner }),
     });
 }
-function eu(e) {
+function ec(e) {
     var t, n, a, o, l, _, p;
     let h,
-        m,
-        O,
+        y,
+        S,
         A,
-        C,
+        N,
         {
-            clientId: R,
-            responseType: X,
-            redirectUri: ee,
+            clientId: q,
+            responseType: $,
+            redirectUri: en,
             codeChallenge: er,
             codeChallengeMethod: ei,
             state: ea,
             nonce: eo,
             prompt: es,
-            authorizations: el,
+            authorizations: ec,
             scopes: eu,
             permissions: ed,
             guildId: ef,
@@ -335,39 +334,39 @@ function eu(e) {
             isExternalStandaloneOAuthPage: eT = !1,
             isTwoWayLinkDiscordConsent: eS = !1,
         } = e,
-        eA = null != ep ? (null == el ? void 0 : el.get(ep)) : void 0,
+        eA = null != ep ? (null == ec ? void 0 : ec.get(ep)) : void 0,
         eC = (0, s.TH)(),
-        eN = (0, f.e7)([N.Z], () => N.Z.hasLoadedExperiments);
+        eN = (0, f.e7)([C.Z], () => C.Z.hasLoadedExperiments);
     i.useEffect(() => {
-        x.default.isAuthenticated() && !eN && E.Z.getExperiments();
+        D.default.isAuthenticated() && !eN && g.Z.getExperiments();
     }, [eN]);
     let [eR, eP] = i.useState(null),
         [ew, eD] = i.useState(null),
         [ex, eL] = i.useState(null),
-        [ej, eM] = i.useState(!1),
-        [ek, eU] = i.useState(!1),
+        [ej, ek] = i.useState(!1),
+        [eM, eU] = i.useState(!1),
         eG = null == eR ? void 0 : eR.guilds,
         [eB, eZ] = i.useState(null != ef ? ef : null),
         [eF, eV] = i.useState(null != e_ ? e_ : null),
-        [eH, eY] = i.useState(j.Hn),
+        [eH, eY] = i.useState(L.Hn),
         [eW, eK] = i.useState(!1),
         ez = i.useMemo(
-            () => ((null == eR ? void 0 : eR.user) != null ? new D.Z(eR.user) : null),
+            () => ((null == eR ? void 0 : eR.user) != null ? new w.Z(eR.user) : null),
             [null == eR ? void 0 : eR.user],
         ),
-        eq = (0, S.Z)(null != (t = null == eR ? void 0 : eR.application) ? t : null),
+        eq = (0, T.Z)(null != (t = null == eR ? void 0 : eR.application) ? t : null),
         eX = i.useMemo(() => (null == eG ? void 0 : eG.find((e) => e.id === eB)), [eG, eB]),
         [eQ, eJ] = i.useState(null),
         e$ = i.useMemo(() => {
             var e;
             return (
-                null == eA && null == ep && (null != (e = null == eu ? void 0 : eu.length) ? e : 0) === 0 && null == ee
+                null == eA && null == ep && (null != (e = null == eu ? void 0 : eu.length) ? e : 0) === 0 && null == en
             );
-        }, [eA, null == eu ? void 0 : eu.length, ee, ep]),
+        }, [eA, null == eu ? void 0 : eu.length, en, ep]),
         [e0, e1] = i.useState(null);
     i.useEffect(() => {
-        e$ && I.ZP.fetchApplication(R).then((e) => e1(w.ZP.createFromServer(e)));
-    }, [R, e$]);
+        e$ && v.ZP.fetchApplication(q).then((e) => e1(P.ZP.createFromServer(e)));
+    }, [q, e$]);
     let e2 = i.useMemo(() => {
             var e, t;
             return null == eQ
@@ -376,52 +375,52 @@ function eu(e) {
                   ? void 0
                   : e.oauth2InstallParams;
         }, [null == e0 ? void 0 : e0.integrationTypesConfig, eQ]),
-        e3 = v.w.useExperiment({ location: "oauth2_authorize" }),
+        e3 = O.w.useExperiment({ location: "oauth2_authorize" }),
         { requestedScopes: e4, accountScopes: e8 } = i.useMemo(() => {
             let e = e$ ? (null == e2 ? void 0 : e2.scopes) : eu,
                 t = (0, k.K)(null != e ? e : []),
-                n = Z.Qe.filter((e) => t.includes(e));
+                n = B.Qe.filter((e) => t.includes(e));
             return {
                 requestedScopes: t,
                 accountScopes: n,
             };
         }, [null == e2 ? void 0 : e2.scopes, eu, e$]),
-        e6 = i.useMemo(() => {
+        e5 = i.useMemo(() => {
             var e;
             let t = e$ ? d.vB(null != (e = null == e2 ? void 0 : e2.permissions) ? e : 0) : ed;
-            return null != t ? t : j.Hn;
+            return null != t ? t : L.Hn;
         }, [null == e2 ? void 0 : e2.permissions, ed, e$]),
-        e5 = i.useRef(!1),
+        e6 = i.useRef(!1),
         [e7, e9] = i.useState(null != eI ? eI : []),
         [te, tt] = i.useState(null != eI && eI.length > 0);
     i.useEffect(() => {
-        if (e5.current) return;
+        if (e6.current) return;
         let e = async () => {
-            e5.current = !0;
+            e6.current = !0;
             try {
-                let { disclosures: e, allAcked: t } = await (0, T.de)(R);
+                let { disclosures: e, allAcked: t } = await (0, I.de)(q);
                 tt(!t), e9(e);
             } catch (n) {
                 let { status: e, body: t } = n;
-                if (401 === e) return void (0, U.c$)(eC, "oauth2_error_failed_disclosures");
+                if (401 === e) return void (0, M.c$)(eC, "oauth2_error_failed_disclosures");
                 eL(
                     Error(
                         null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0]),
                     ),
                 );
             } finally {
-                e5.current = !1;
+                e6.current = !1;
             }
         };
         if (null == eI) {
-            if (!x.default.isAuthenticated()) return void (0, U.c$)(eC, "oauth2_error_not_authenticated");
+            if (!D.default.isAuthenticated()) return void (0, M.c$)(eC, "oauth2_error_not_authenticated");
             e();
         }
-    }, [R, eC, eI, e9, eL, tt, eD]);
+    }, [q, eC, eI, e9, eL, tt, eD]);
     let tn = i.useCallback(
             async (e) => {
                 if (null != eO) {
-                    eM(!0), eO(e);
+                    ek(!0), eO(e);
                     return;
                 }
                 if (!e && !eg) {
@@ -435,24 +434,24 @@ function eu(e) {
                 }
                 if (null == eQ) return void eL(Error("No integration type was selected."));
                 try {
-                    eM(!0);
-                    let n = await (0, U.Iq)({
+                    ek(!0);
+                    let n = await (0, M.Iq)({
                         authorize: e,
-                        clientId: R,
+                        clientId: q,
                         scopes: e4,
-                        responseType: X,
-                        redirectUri: ee,
+                        responseType: $,
+                        redirectUri: en,
                         codeChallenge: er,
                         codeChallengeMethod: ei,
                         state: ea,
                         nonce: eo,
                         integrationType: eQ,
-                        permissions: d.Od(e6, eH),
+                        permissions: d.Od(e5, eH),
                         guildId: eQ === c.Y.GUILD_INSTALL && null != eB ? eB : void 0,
                         channelId: eQ === c.Y.GUILD_INSTALL && null != eF ? eF : void 0,
                         dmSettings: { allowMobilePush: eW },
                     });
-                    if ((e && (await (0, T.x9)(R, e7)), null != ey))
+                    if ((e && (await (0, I.x9)(q, e7)), null != ey))
                         ey({
                             application: null == eR ? void 0 : eR.application,
                             location: n.location,
@@ -461,21 +460,21 @@ function eu(e) {
                             null == ev || ev();
                     else if (null != n.location) {
                         var t;
-                        let e = null == (t = M.Z.toURLSafe(n.location)) ? void 0 : t.pathname;
-                        M.Z.isDiscordUrl(n.location) && e === $.Z5c.OAUTH2_AUTHORIZED
-                            ? (0, P.uL)($.Z5c.OAUTH2_AUTHORIZED, {
+                        let e = null == (t = j.Z.toURLSafe(n.location)) ? void 0 : t.pathname;
+                        j.Z.isDiscordUrl(n.location) && e === J.Z5c.OAUTH2_AUTHORIZED
+                            ? (0, R.uL)(J.Z5c.OAUTH2_AUTHORIZED, {
                                   state: {
                                       application: null == eR ? void 0 : eR.application,
                                       guild: eX,
                                   },
                               })
                             : (window.location = n.location);
-                    } else eM(!1);
+                    } else ek(!1);
                 } catch (t) {
                     let e = t.body;
                     (null == e ? void 0 : e.message) != null && "" !== e.message ? eL(Error(e.message)) : eL(e),
                         eD("AUTHORIZE_SCOPES"),
-                        eM(!1);
+                        ek(!1);
                 }
             },
             [
@@ -485,15 +484,15 @@ function eu(e) {
                 null == eR ? void 0 : eR.application,
                 eX,
                 ev,
-                R,
+                q,
                 e4,
-                X,
-                ee,
+                $,
+                en,
                 er,
                 ei,
                 ea,
                 eo,
-                e6,
+                e5,
                 eH,
                 eB,
                 eQ,
@@ -504,33 +503,33 @@ function eu(e) {
         ),
         tr = i.useRef(!1),
         ti = i.useCallback(async () => {
-            if (!x.default.isAuthenticated()) return void (0, U.c$)(eC, "oauth2_error_not_authenticated");
-            if (!e5.current && !tr.current) {
+            if (!D.default.isAuthenticated()) return void (0, M.c$)(eC, "oauth2_error_not_authenticated");
+            if (!e6.current && !tr.current) {
                 tr.current = !0;
                 try {
                     let e =
                         null != eA
                             ? eA
-                            : await (0, U.Ww)({
-                                  clientId: R,
+                            : await (0, M.Ww)({
+                                  clientId: q,
                                   scopes: e4,
-                                  responseType: X,
-                                  redirectUri: ee,
+                                  responseType: $,
+                                  redirectUri: en,
                                   codeChallenge: er,
                                   codeChallengeMethod: ei,
                                   state: ea,
                                   nonce: eo,
                                   integrationType: null != eQ ? eQ : void 0,
                               });
-                    eP((0, G.d)(e)),
-                        es === F.s.NONE && e.authorized && !te && tn(!0),
-                        (0, y.yw)($.rMx.OAUTH2_AUTHORIZE_VIEWED, {
+                    eP((0, U.d)(e)),
+                        es === Z.s.NONE && e.authorized && !te && tn(!0),
+                        (0, b.yw)(J.rMx.OAUTH2_AUTHORIZE_VIEWED, {
                             application_id: e.application.id,
                             mobile_push_notification_default_setting: !1,
                         });
                 } catch (n) {
                     let { status: e, body: t } = n;
-                    if (401 === e) return void (0, U.c$)(eC, "oauth2_error_unauthorized");
+                    if (401 === e) return void (0, M.c$)(eC, "oauth2_error_unauthorized");
                     eL(
                         Error(
                             null != t.message
@@ -542,7 +541,7 @@ function eu(e) {
                     tr.current = !1;
                 }
             }
-        }, [eC, eA, R, e4, X, ee, er, ei, ea, eo, eQ, es, tn, te]),
+        }, [eC, eA, q, e4, $, en, er, ei, ea, eo, eQ, es, tn, te]),
         ta = i.useMemo(() => {
             var e;
             return null != e0 && e$
@@ -561,15 +560,15 @@ function eu(e) {
     i.useEffect(() => {
         ew !== to.current &&
             ((to.current = ew),
-            (0, y.yw)($.rMx.OAUTH2_AUTHORIZE_STEP_VIEWED, {
+            (0, b.yw)(J.rMx.OAUTH2_AUTHORIZE_STEP_VIEWED, {
                 step: ew,
-                application_id: R,
+                application_id: q,
                 integration_type: eQ,
                 scopes: e4,
-                permissions: e6.toString(),
+                permissions: e5.toString(),
                 mobile_push_notification_default_setting: !1,
             }));
-    }, [R, eQ, e6, e4, ew]),
+    }, [q, eQ, e5, e4, ew]),
         i.useEffect(() => {
             if (null == ew && (!e$ || null != e0) && eN)
                 if (null != eA) {
@@ -584,31 +583,31 @@ function eu(e) {
         i.useEffect(() => {
             if (null == eQ || null != eR || null != ex) return;
             eQ === c.Y.USER_INSTALL && (eZ(null), eV(null));
-            let e = e4.filter((e) => !Z.ak.includes(e));
+            let e = e4.filter((e) => !B.ak.includes(e));
             0 === e4.length
                 ? eL(Error("No scopes were provided."))
                 : e.length > 0
                   ? eL(Error("Invalid scope: ".concat(e[0])))
-                  : (0, B._$)(e6)
+                  : (0, G._$)(e5)
                     ? eL(Error("Invalid permission(s) provided."))
                     : ti();
-        }, [te, ti, e4, e6, eQ, eR, ex]);
+        }, [te, ti, e4, e5, eQ, eR, ex]);
     let ts = i.useCallback((e) => {
             e && eU(!0);
         }, []),
-        tl = (0, b.O)(ts);
+        tl = (0, E.O)(ts);
     if (ex instanceof Error)
         return eT
-            ? { body: (0, r.jsx)(Q.Lk, { message: ex.message }) }
+            ? { body: (0, r.jsx)(X.Lk, { message: ex.message }) }
             : eS
               ? {
-                    label: et.intl.string(et.t.j2d6Ki),
-                    header: (0, r.jsx)(g.Text, {
+                    label: ee.intl.string(ee.t.j2d6Ki),
+                    header: (0, r.jsx)(m.Text, {
                         variant: "text-lg/bold",
                         color: "header-primary",
-                        children: et.intl.string(et.t.j2d6Ki),
+                        children: ee.intl.string(ee.t.j2d6Ki),
                     }),
-                    body: (0, r.jsx)(g.Text, {
+                    body: (0, r.jsx)(m.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: ex.message,
@@ -616,18 +615,18 @@ function eu(e) {
                     actions: [
                         {
                             onClick: ev,
-                            text: et.intl.string(et.t.cpT0Cg),
+                            text: ee.intl.string(ee.t.cpT0Cg),
                         },
                     ],
                     noPadding: !0,
                 }
               : {
-                    title: et.intl.string(et.t.j2d6Ki),
+                    title: ee.intl.string(ee.t.j2d6Ki),
                     subtitle: ex.message,
                     actions: [
                         {
                             onClick: ev,
-                            text: et.intl.string(et.t.cpT0Cg),
+                            text: ee.intl.string(ee.t.cpT0Cg),
                         },
                     ],
                 };
@@ -646,16 +645,16 @@ function eu(e) {
     switch (ew) {
         case null:
             return {
-                label: et.intl.string(et.t.ZTNur6),
-                body: (0, r.jsx)(ec, {}),
+                label: ee.intl.string(ee.t.ZTNur6),
+                body: (0, r.jsx)(el, {}),
             };
         case "SELECT_INSTALL_TYPE":
             if (null == e0)
                 return {
-                    label: et.intl.string(et.t.ZTNur6),
-                    body: (0, r.jsx)(ec, {}),
+                    label: ee.intl.string(ee.t.ZTNur6),
+                    body: (0, r.jsx)(el, {}),
                 };
-            (h = (0, r.jsx)(q.Z, {
+            (h = (0, r.jsx)(z.Z, {
                 application: e0,
                 onSelect: tc,
             })),
@@ -667,8 +666,8 @@ function eu(e) {
         case "AUTHORIZE_SCOPES":
             if (null == eR || null == ez || null == eQ)
                 return {
-                    label: et.intl.string(et.t.ZTNur6),
-                    body: (0, r.jsx)(ec, {}),
+                    label: ee.intl.string(ee.t.ZTNur6),
+                    body: (0, r.jsx)(el, {}),
                 };
             let tg = null == ex || ex instanceof Error ? {} : ex,
                 tE = null == eG ? void 0 : eG.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
@@ -677,16 +676,16 @@ function eu(e) {
                     tb ||
                     (eQ === c.Y.GUILD_INSTALL && (e4.includes(u.x.BOT) || e4.includes(u.x.APPLICATIONS_COMMANDS))),
                 tO =
-                    (0, L.yE)(null != (n = eR.application.flags) ? n : 0, $.udG.EMBEDDED) &&
+                    (0, x.yE)(null != (n = eR.application.flags) ? n : 0, J.udG.EMBEDDED) &&
                     eQ === c.Y.USER_INSTALL &&
                     e3.enabled;
             (h = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(H.Z, {
+                    (0, r.jsx)(V.Z, {
                         application: eR.application,
                         accountScopes: e8,
                     }),
-                    (0, r.jsx)(Y.Z, {
+                    (0, r.jsx)(H.Z, {
                         application: eR.application,
                         accountScopes: e8,
                         requestedScopes: e4,
@@ -696,24 +695,24 @@ function eu(e) {
                         noDivider: !tO && !ty && !tb && e3.enabled,
                     }),
                     tO
-                        ? (0, r.jsx)(g.j7V, {
+                        ? (0, r.jsx)(m.j7V, {
                               hideBorder: !0,
                               onChange: eK,
-                              className: en.mobilePushContainer,
-                              note: et.intl.string(et.t.hw1nKS),
+                              className: et.mobilePushContainer,
+                              note: ee.intl.string(ee.t.hw1nKS),
                               value: eW,
-                              children: (0, r.jsx)(g.Text, {
+                              children: (0, r.jsx)(m.Text, {
                                   variant: "text-sm/medium",
-                                  children: et.intl.string(et.t["Pkw//v"]),
+                                  children: ee.intl.string(ee.t["Pkw//v"]),
                               }),
                           })
                         : null,
                     (0, r.jsx)("div", {
-                        className: en.intObserver,
+                        className: et.intObserver,
                         ref: tl,
                     }),
                     ty
-                        ? (0, r.jsx)(K.Z, {
+                        ? (0, r.jsx)(W.Z, {
                               error: (null != (o = null != (a = tg[u.x.BOT]) ? a : tg[u.x.APPLICATIONS_COMMANDS])
                                   ? o
                                   : [])[0],
@@ -724,7 +723,7 @@ function eu(e) {
                           })
                         : null,
                     tb
-                        ? (0, r.jsx)(J.Z, {
+                        ? (0, r.jsx)(Q.Z, {
                               error: (null != (l = tg[u.x.WEBHOOK_INCOMING]) ? l : [])[0],
                               selectedChannelId: eF,
                               selectedGuildId: eB,
@@ -733,25 +732,25 @@ function eu(e) {
                         : null,
                 ],
             })),
-                e4.includes(u.x.BOT) && !d.fS(e6, j.Hn) && (O = "AUTHORIZE_BOT_PERMISSIONS"),
-                ta.length > 1 && (m = "SELECT_INSTALL_TYPE"),
+                e4.includes(u.x.BOT) && !d.fS(e5, L.Hn) && (S = "AUTHORIZE_BOT_PERMISSIONS"),
+                ta.length > 1 && (y = "SELECT_INSTALL_TYPE"),
                 (tf = (ty && null == eX) || (tb && null == eF)),
                 (td = !0);
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
             if (null == eR)
                 return {
-                    label: et.intl.string(et.t.ZTNur6),
-                    body: (0, r.jsx)(ec, {}),
+                    label: ee.intl.string(ee.t.ZTNur6),
+                    body: (0, r.jsx)(el, {}),
                 };
-            (h = (0, r.jsx)(W.Z, {
+            (h = (0, r.jsx)(Y.Z, {
                 application: eR.application,
-                permissions: e6,
+                permissions: e5,
                 deniedPermissions: eH,
                 onPermissionsChange: tu,
                 guild: eX,
             })),
-                (m = "AUTHORIZE_SCOPES"),
+                (y = "AUTHORIZE_SCOPES"),
                 (td = !0);
     }
     let tv = [];
@@ -759,7 +758,7 @@ function eu(e) {
         let e = null == (_ = eR.bot) ? void 0 : _.approximate_guild_count;
         A = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(V.Z, {
+                (0, r.jsx)(F.Z, {
                     application: eR.application,
                     scopes: e4,
                     disclosures: e7,
@@ -768,7 +767,7 @@ function eu(e) {
                     isEmbeddedFlow: eb,
                 }),
                 (0, r.jsx)("div", {
-                    className: en.intObserver,
+                    className: et.intObserver,
                     ref: tl,
                 }),
             ],
@@ -778,7 +777,7 @@ function eu(e) {
         tp &&
             null != eR &&
             null != ez &&
-            (C = (0, r.jsx)(z.Z, {
+            (N = (0, r.jsx)(K.Z, {
                 user: ez,
                 application: eR.application,
                 bot: eR.bot,
@@ -789,43 +788,43 @@ function eu(e) {
             })),
         th &&
             (tv.push(
-                null != m
+                null != y
                     ? {
                           variant: "secondary",
-                          onClick: () => eD(m),
-                          text: et.intl.string(et.t["13/7kZ"]),
+                          onClick: () => eD(y),
+                          text: ee.intl.string(ee.t["13/7kZ"]),
                       }
                     : {
                           variant: "secondary",
                           onClick: () => tn(!1),
-                          text: et.intl.string(et.t["ETE/oK"]),
+                          text: ee.intl.string(ee.t["ETE/oK"]),
                       },
             ),
             "SELECT_INSTALL_TYPE" !== ew &&
                 tv.push(
-                    ek
+                    eM
                         ? {
-                              onClick: null != O ? () => eD(O) : () => tn(!0),
+                              onClick: null != S ? () => eD(S) : () => tn(!0),
                               loading: ej,
                               disabled: null == A || tf,
                               text: tf
-                                  ? et.intl.string(et.t.BwwiSE)
-                                  : null != O
-                                    ? et.intl.string(et.t["3PatS0"])
-                                    : et.intl.string(et.t["y+/PEx"]),
+                                  ? ee.intl.string(ee.t.BwwiSE)
+                                  : null != S
+                                    ? ee.intl.string(ee.t["3PatS0"])
+                                    : ee.intl.string(ee.t["y+/PEx"]),
                           }
                         : {
                               disabled: !0,
                               loading: ej,
-                              text: et.intl.string(et.t.N22i9P),
-                              icon: g.cQm,
+                              text: ee.intl.string(ee.t.N22i9P),
+                              icon: m.cQm,
                           },
                 )),
         {
-            header: C,
+            header: N,
             body: h,
             actions: tv,
-            nextStep: O,
+            nextStep: S,
             appDetails: A,
             sendAuthorize: tn,
             hasContentBackground: td,
@@ -833,16 +832,16 @@ function eu(e) {
         }
     );
 }
-function ed(e, t) {
+function eu(e, t) {
     var n, i;
     if (null == t.location || (null != e.callback && e.callback(t))) return;
-    let { host: a, pathname: o, searchParams: s } = null != (n = M.Z.toURLSafe(t.location)) ? n : {},
-        l = M.Z.isDiscordHostname(null != a ? a : null) || window.location.host === a;
-    l && o === $.Z5c.OAUTH2_AUTHORIZED
+    let { host: a, pathname: o, searchParams: s } = null != (n = j.Z.toURLSafe(t.location)) ? n : {},
+        l = j.Z.isDiscordHostname(null != a ? a : null) || window.location.host === a;
+    l && o === J.Z5c.OAUTH2_AUTHORIZED
         ? (0, _.h7)((e) =>
               (0, r.jsx)(
-                  Q.jO,
-                  ei(
+                  X.jO,
+                  er(
                       {
                           guild: t.guild,
                           application: t.application,
@@ -851,7 +850,7 @@ function ed(e, t) {
                   ),
               ),
           )
-        : l && (null == o ? void 0 : o.startsWith($.Z5c.OAUTH2_ERROR))
+        : l && (null == o ? void 0 : o.startsWith(J.Z5c.OAUTH2_ERROR))
           ? (0, _.h7)((e) => {
                 var t, n;
                 let i =
@@ -863,13 +862,13 @@ function ed(e, t) {
                               ? void 0
                               : s.get("error"))
                         ? n
-                        : et.intl.string(et.t["mqn87+"]);
+                        : ee.intl.string(ee.t["mqn87+"]);
                 return (
                     Array.isArray(i) && (i = i[0]),
                     (0, r.jsx)(
-                        X.j,
-                        eo(ei({}, e), {
-                            children: (0, r.jsx)(Q.Lk, {
+                        q.j,
+                        ea(er({}, e), {
+                            children: (0, r.jsx)(X.Lk, {
                                 message: i,
                                 onClose: e.onClose,
                             }),
@@ -879,31 +878,31 @@ function ed(e, t) {
             })
           : null == (i = window.open(t.location, "_blank")) || i.focus();
 }
-function ef(e, t) {
-    if ((0, R.g)("create-guild-and-oauth2-modal"))
-        return void C.Z.openCreateGuildModal({ onSuccess: (n) => e_(eo(ei({}, e), { guildId: n }), t) });
-    e_(e, t);
+function ed(e, t) {
+    if ((0, N.g)("create-guild-and-oauth2-modal"))
+        return void A.Z.openCreateGuildModal({ onSuccess: (n) => ef(ea(er({}, e), { guildId: n }), t) });
+    ef(e, t);
 }
-function e_(e, t) {
+function ef(e, t) {
     (0, _.h7)(
         (t) =>
             (0, r.jsx)(
-                el,
-                eo(ei({}, t, e), {
+                es,
+                ea(er({}, t, e), {
                     cancelCompletesFlow: !1,
-                    callback: ed.bind(null, e),
+                    callback: eu.bind(null, e),
                 }),
             ),
         { onCloseCallback: t },
     );
 }
-function ep(e) {
+function e_(e) {
     var t;
-    let { hostname: n = "", host: r, pathname: i, search: a } = null != (t = M.Z.toURLSafe(e)) ? t : {};
+    let { hostname: n = "", host: r, pathname: i, search: a } = null != (t = j.Z.toURLSafe(e)) ? t : {};
     return null != i &&
         null != a &&
-        (M.Z.isDiscordHostname(n) || r === window.location.host) &&
-        (i.startsWith("/api".concat($.ANM.OAUTH2_AUTHORIZE)) || i.startsWith($.Z5c.OAUTH2_AUTHORIZE))
+        (j.Z.isDiscordHostname(n) || r === window.location.host) &&
+        (i.startsWith("/api".concat(J.ANM.OAUTH2_AUTHORIZE)) || i.startsWith(J.Z5c.OAUTH2_AUTHORIZE))
         ? (0, k.y)(a)
         : null;
 }

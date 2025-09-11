@@ -69,15 +69,15 @@ function T(e) {
         }),
         L = (0, o.U)(t, I),
         j = (0, m.C)(t),
-        M = (0, f.SO)(D),
-        { shouldHideGuildPurchaseEntryPoints: k } = (0, l.uP)(n),
+        k = (0, f.SO)(D),
+        { shouldHideGuildPurchaseEntryPoints: M } = (0, l.uP)(n),
         U = (0, m.k)(t),
         G = (0, E.Z)({
             guildId: n,
             guildProductListingId: t.id,
             sourceAnalyticsLocations: O,
         });
-    if (null == D || k) return null;
+    if (null == D || M) return null;
     let B = () =>
             (0, b.e)({
                 guildId: n,
@@ -96,13 +96,13 @@ function T(e) {
         H = (0, r.jsx)(g.m, {
             product: t,
             guildId: n,
-            showEditProduct: M,
+            showEditProduct: k,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: M ? Z : () => {},
+            onEditProduct: k ? Z : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: F,
@@ -117,7 +117,7 @@ function T(e) {
             description: t.description,
             formattedPrice: U,
             role: x,
-            ctaComponent: (0, r.jsx)(a.zx, v({}, G)),
+            ctaComponent: (0, r.jsx)(a.zxk, v({}, G)),
             productType: j,
             shouldShowFullDescriptionButton: T,
             onShowFullDescription: B,

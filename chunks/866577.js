@@ -1,6 +1,6 @@
 n.d(t, { i: () => h });
 var r = n(647438),
-    i = n(186325),
+    i = n(793030),
     a = n(481060),
     o = n(588927);
 function s(e, t, n) {
@@ -123,7 +123,7 @@ let _ = 10,
     };
 function h(e) {
     let { shouldShow: t, caretPosition: n, onExitComplete: s } = e,
-        { reducedMotion: c } = r.useContext(i.S),
+        { reducedMotion: c } = r.useContext(i.Sfi),
         f = p(n, c.enabled),
         { config: _ } = f,
         h = d(f, ["config"]);

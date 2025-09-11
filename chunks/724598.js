@@ -12,16 +12,16 @@ var i = n(120356),
     m = n(629481),
     g = n(981631),
     p = n(388032),
-    h = n(689409);
-function f(e) {
+    f = n(689409);
+function h(e) {
     let { pills: t } = e;
     return (0, r.jsx)("div", {
-        className: h.row,
+        className: f.row,
         children: t.map((e) =>
             (0, r.jsx)(
                 "div",
                 {
-                    className: h.pill,
+                    className: f.pill,
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         children: e,
@@ -41,19 +41,19 @@ function b(e) {
             [p.intl.string(p.t["0ItLmJ"]), p.intl.string(p.t.yQHqsL)],
         ];
     return (0, r.jsx)("div", {
-        className: l()({ [h.responsive]: i }),
+        className: l()({ [f.responsive]: i }),
         children: (0, r.jsxs)("div", {
-            className: h.container,
+            className: f.container,
             children: [
                 (0, r.jsxs)("div", {
-                    className: h.content,
+                    className: f.content,
                     children: [
                         (0, r.jsx)("div", {
-                            className: h.pillContainer,
-                            children: b.map((e, t) => (0, r.jsx)(f, { pills: e }, "pill-row-".concat(t))),
+                            className: f.pillContainer,
+                            children: b.map((e, t) => (0, r.jsx)(h, { pills: e }, "pill-row-".concat(t))),
                         }),
                         (0, r.jsxs)("div", {
-                            className: h.ctaContent,
+                            className: f.ctaContent,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-lg/medium",
@@ -61,7 +61,7 @@ function b(e) {
                                     children: p.intl.string(p.t["67arYG"]),
                                 }),
                                 n &&
-                                    (0, r.jsx)(a.zx, {
+                                    (0, r.jsx)(a.zxk, {
                                         text: p.intl.string(p.t.oyzLpK),
                                         icon: s.ZSh,
                                         iconPosition: "end",
@@ -123,17 +123,17 @@ function b(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: h.muralImageContainer,
+                    className: f.muralImageContainer,
                     children: [
                         (0, r.jsx)("img", {
                             src: (0, c.b)("server_products/storefront/preview-mural.png"),
                             alt: "",
-                            className: h.muralImage,
+                            className: f.muralImage,
                         }),
                         (0, r.jsx)("img", {
                             src: (0, c.b)("server_products/storefront/preview-mural-reduced.png"),
                             alt: "",
-                            className: h.muralImageReducedWidth,
+                            className: f.muralImageReducedWidth,
                         }),
                     ],
                 }),

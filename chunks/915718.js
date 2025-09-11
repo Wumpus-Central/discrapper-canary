@@ -136,10 +136,7 @@ class R extends i.PureComponent {
                                   body: A.intl.format(A.t.xAW71d, { helpdeskUrl: Z.sI }),
                                   position: "bottom",
                                   align: "center",
-                                  caretConfig: {
-                                      position: "top",
-                                      align: "center",
-                                  },
+                                  caretConfig: { align: "center" },
                                   onRequestClose: () => n(T.L.USER_DISMISS),
                               })
                             : null;

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(349361),
+    s = n(793030),
     l = n(891727);
 function c(e, t, n) {
     return (
@@ -90,7 +90,7 @@ function h(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(
-                s.h2,
+                s.h21,
                 f(u({ fade: !0 }, a), {
                     ref: (e) => {
                         null != e && ((c.current = e), h());

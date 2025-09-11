@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(944486),
     L = n(594174),
     j = n(626135),
-    M = n(22665),
-    k = n(981631),
+    k = n(22665),
+    M = n(981631),
     U = n(959517),
     G = n(953278);
 function B(e) {
@@ -63,7 +63,7 @@ function B(e) {
                     guildId: r.guild_id,
                 }),
                 (0, T.Kh)(a),
-                j.default.track(k.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
+                j.default.track(M.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: a,
                     destination_message_id: t.id,
@@ -82,7 +82,7 @@ function B(e) {
                             alt: "",
                         })
                       : null,
-                  (0, r.jsx)(a.xv, {
+                  (0, r.jsx)(a.xvT, {
                       className: G.footerText,
                       variant: "text-sm/medium",
                       color: "none",
@@ -115,7 +115,7 @@ function Z(e, t) {
         showAvatarPopout: o,
     };
 }
-function V(e) {
+function F(e) {
     let { mergedMessageRecord: t, content: n, channel: i, reportingUserId: a, reportedTimestamp: o } = e,
         s = (0, h.JZ)(t.author, i),
         {
@@ -126,7 +126,7 @@ function V(e) {
             showAvatarPopout: f,
         } = Z(t, i);
     return (0, r.jsx)(m.Z, {
-        childrenExecutedCommand: (0, r.jsx)(M.Z, {
+        childrenExecutedCommand: (0, r.jsx)(k.Z, {
             reportingUserId: a,
             guildId: i.guild_id,
             channel: i,
@@ -160,7 +160,7 @@ function V(e) {
         author: s,
     });
 }
-function F(e) {
+function V(e) {
     var t, n, a;
     let { message: s, snapshot: l, index: c } = e,
         [d, _] = i.useState(void 0);
@@ -205,7 +205,7 @@ function F(e) {
                   children: (0, r.jsxs)("div", {
                       className: G.content,
                       children: [
-                          (0, r.jsx)(V, {
+                          (0, r.jsx)(F, {
                               mergedMessageRecord: h,
                               content: O,
                               channel: S,
@@ -241,7 +241,7 @@ function H(e) {
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>
             (0, r.jsx)(
-                F,
+                V,
                 {
                     message: t,
                     snapshot: e,

@@ -2,8 +2,8 @@ n.d(t, { P: () => h }), n(388685);
 var r,
     i = n(951288),
     a = n(647438),
-    o = n(532712),
-    s = n(84735),
+    o = n(793030),
+    s = n(532712),
     l = n(981631);
 function c(e, t, n) {
     return (
@@ -118,7 +118,7 @@ class h extends (r = a.Component) {
     render() {
         return this.context
             ? this.renderNonInteractive()
-            : (0, i.jsx)(s.t, f(u({}, this.props.focusProps), { children: this.renderInner() }));
+            : (0, i.jsx)(o.tEY, f(u({}, this.props.focusProps), { children: this.renderInner() }));
     }
     constructor(...e) {
         super(...e),
@@ -140,7 +140,7 @@ class h extends (r = a.Component) {
             });
     }
 }
-c(h, "contextType", o.g),
+c(h, "contextType", s.g),
     c(h, "defaultProps", {
         tag: "div",
         role: "button",

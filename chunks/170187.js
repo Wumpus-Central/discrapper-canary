@@ -84,7 +84,7 @@ function m(e) {
     var { children: t, className: n, variant: i = "text-xs/medium", hideTooltip: u = !1, canTruncate: f = !0 } = e,
         h = p(e, ["children", "className", "variant", "hideTooltip", "canTruncate"]);
     return (0, r.jsx)(
-        o.xv,
+        o.xvT,
         _(
             d(
                 {

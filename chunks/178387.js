@@ -12,15 +12,15 @@ var i = n(793030),
     m = n(249363),
     g = n(464865),
     p = n(888125),
-    h = n(981631),
-    f = n(388032),
+    f = n(981631),
+    h = n(388032),
     b = n(884329);
 function x() {
     let { analyticsLocations: e } = (0, s.ZP)(a.Z.GUILD_SETTINGS_BOOST_PERKS_PAGE),
         t = (0, l.e7)([d.Z], () => d.Z.getProps().guild, []),
         { isGuildAdmin: n, canManageGuild: x } = (0, l.cj)([c.Z], () => ({
-            isGuildAdmin: null != t && c.Z.can(h.Plq.ADMINISTRATOR, t),
-            canManageGuild: null != t && c.Z.can(h.Plq.MANAGE_GUILD, t),
+            isGuildAdmin: null != t && c.Z.can(f.Plq.ADMINISTRATOR, t),
+            canManageGuild: null != t && c.Z.can(f.Plq.MANAGE_GUILD, t),
         })),
         j = (0, o.g1)(null == t ? void 0 : t.id, "GuildSettingsBoostPerks");
     return null == t
@@ -30,10 +30,10 @@ function x() {
               children: (0, r.jsxs)("main", {
                   className: b.container,
                   children: [
-                      (0, r.jsx)(i.X6, {
+                      (0, r.jsx)(i.X6q, {
                           variant: "heading-lg/semibold",
                           color: "header-primary",
-                          children: f.intl.string(f.t.UKgg5O),
+                          children: h.intl.string(h.t.UKgg5O),
                       }),
                       (0, r.jsx)(p.w, {
                           canManageGuild: x,

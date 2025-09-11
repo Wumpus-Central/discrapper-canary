@@ -39,8 +39,8 @@ function O(e) {
             trailing: L,
         } = e,
         [M, B] = r.useState(!1),
-        W = R && !D && !M && void 0 !== A && null != I,
-        U = r.useRef(null),
+        U = R && !D && !M && void 0 !== A && null != I,
+        W = r.useRef(null),
         H = r.useRef(null),
         G =
             null == P || null == k
@@ -69,14 +69,14 @@ function O(e) {
                     })
                   : (0, i.jsx)(u.zxk, {
                         size: "sm",
-                        buttonRef: U,
+                        buttonRef: W,
                         disabled: T,
                         onClick: k,
                         text: P,
                     });
     r.useEffect(() => {
         var e, t;
-        W &&
+        U &&
             f.default.track(
                 j.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((e = (function (e) {
@@ -123,11 +123,11 @@ function O(e) {
                       }),
                 e),
             );
-    }, [A, null == I ? void 0 : I.application.id, W]);
+    }, [A, null == I ? void 0 : I.application.id, U]);
     let z =
-            W && (null != H.current || null != U.current)
+            U && (null != H.current || null != W.current)
                 ? (0, i.jsx)(c.J2, {
-                      targetElementRef: E ? H : U,
+                      targetElementRef: E ? H : W,
                       title: v.intl.string(v.t.ufFDiI),
                       body: v.intl.string(v.t.TyMJwM),
                       onRequestClose: () => {
@@ -135,10 +135,7 @@ function O(e) {
                       },
                       position: "bottom",
                       align: "center",
-                      caretConfig: {
-                          position: "top",
-                          align: "center",
-                      },
+                      caretConfig: { align: "center" },
                   })
                 : null,
         F = (0, s.Wu)([b.Z], () => {

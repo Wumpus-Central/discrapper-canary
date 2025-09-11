@@ -4,8 +4,8 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(680018),
-    c = n(304789),
+    l = n(304789),
+    c = n(159691),
     u = n(780384),
     d = n(755721),
     f = n(481060),
@@ -105,15 +105,15 @@ function A(e) {
 let C = (e) => {
         let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: i, enablePremiumBrandRefreshDesign: a } = e,
             s = (0, _.ZP)(),
-            c = (0, u.wj)(s),
-            f = c ? d.Tt.WHITE : d.Tt.BRAND,
+            l = (0, u.wj)(s),
+            f = l ? d.Tt.WHITE : d.Tt.BRAND,
             p = () => {
                 i(), n();
             };
         return a
             ? (0, r.jsx)("div", {
                   className: O.bentoBoxButton,
-                  children: (0, r.jsx)(l.z, {
+                  children: (0, r.jsx)(c.zxk, {
                       variant: "secondary",
                       onClick: p,
                       text: t,
@@ -123,7 +123,7 @@ let C = (e) => {
                   "data-migration-pending": !0,
                   look: d.iL.OUTLINED,
                   color: f,
-                  className: o()(y.bentoBoxButton, c ? y.bentoBoxButtonWhite : y.bentoBoxButtonBrand),
+                  className: o()(y.bentoBoxButton, l ? y.bentoBoxButtonWhite : y.bentoBoxButtonBrand),
                   onClick: p,
                   children: t,
               });
@@ -133,7 +133,7 @@ let C = (e) => {
             {
                 name: n,
                 title: a,
-                description: l,
+                description: c,
                 descriptionCta: u,
                 previewImage: d,
                 videoUrl: _,
@@ -148,16 +148,16 @@ let C = (e) => {
             } = e,
             L = (0, m.rO)(),
             j = i.useRef(null),
-            M = i.useRef(0),
-            k = A(n),
+            k = i.useRef(0),
+            M = A(n),
             U = (0, s.debounce)(() => {
                 h.default.track(E.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, s.snakeCase)(n) });
             }, 800),
             G = () => {
-                null == j.current || R || ((j.current.currentTime = M.current), j.current.play());
+                null == j.current || R || ((j.current.currentTime = k.current), j.current.play());
             },
             B = () => {
-                null == j.current || R || ((M.current = j.current.currentTime), j.current.pause());
+                null == j.current || R || ((k.current = j.current.currentTime), j.current.pause());
             },
             Z = x ? O : y;
         t = x
@@ -167,7 +167,7 @@ let C = (e) => {
             : D === g.y$.SMALL
               ? "heading-xl/extrabold"
               : "heading-xxl/extrabold";
-        let V = () =>
+        let F = () =>
                 (0, r.jsxs)("div", {
                     className: o()(Z.textBox, Z["".concat(D)]),
                     children: [
@@ -194,7 +194,7 @@ let C = (e) => {
                             variant: "text-md/medium",
                             color: x ? "text-primary" : "text-muted",
                             className: Z.description,
-                            children: l,
+                            children: c,
                         }),
                         null != u &&
                             null != P &&
@@ -206,7 +206,7 @@ let C = (e) => {
                             }),
                     ],
                 }),
-            F = () =>
+            V = () =>
                 (0, r.jsx)("div", {
                     className: o()(Z.boxArtContainer, Z["".concat(D)]),
                     children: (0, r.jsx)(
@@ -231,13 +231,13 @@ let C = (e) => {
             Y = () =>
                 H
                     ? (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(V, {}), (0, r.jsx)(F, {})],
+                          children: [(0, r.jsx)(F, {}), (0, r.jsx)(V, {})],
                       })
                     : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(F, {}), (0, r.jsx)(V, {})],
+                          children: [(0, r.jsx)(V, {}), (0, r.jsx)(F, {})],
                       }),
             W = {
-                className: o()(x ? O.backgroundColor : k, Z.boxContainer, Z["".concat(D)], x && O.gradientBackground),
+                className: o()(x ? O.backgroundColor : M, Z.boxContainer, Z["".concat(D)], x && O.gradientBackground),
                 onMouseEnter: G,
                 onFocus: G,
                 onBlur: B,
@@ -245,7 +245,7 @@ let C = (e) => {
             };
         return x
             ? (0, r.jsx)(
-                  c.$,
+                  l.$,
                   S(I({}, W), {
                       color: "purple",
                       children: (0, r.jsx)(Y, {}),

@@ -46,17 +46,17 @@ let _ = (e, t) =>
                 (0, r.jsxs)("div", {
                     className: f.textColumn,
                     children: [
-                        (0, r.jsx)(o.xv, {
+                        (0, r.jsx)(o.xvT, {
                             variant: "text-lg/semibold",
                             className: f.badgeText,
                             children: E,
                         }),
-                        (0, r.jsx)(o.xv, {
+                        (0, r.jsx)(o.xvT, {
                             variant: "text-md/normal",
                             className: f.badgeText,
                             children: b,
                         }),
-                        (0, r.jsx)(o.xv, {
+                        (0, r.jsx)(o.xvT, {
                             variant: "text-xs/normal",
                             children: _(t, n),
                         }),

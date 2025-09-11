@@ -1,68 +1,67 @@
-n.d(t, { u: () => c }), n(953529);
+n.d(t, { u: () => l }), n(953529);
 var r = n(951288);
 n(647438);
-var i = n(409794),
-    o = n(777207),
+var i = n(793030),
     a = n(330711),
-    s = n(163315);
-let l = 96;
-function c(e) {
-    let { benefits: t, description: n, imgSrc: c, title: u, tag: d, FallbackIcon: f } = e,
-        _ = null != c ? { "--custom-background-url": "url(".concat(c.toString(), ")") } : void 0,
-        p = null != n && "" !== n;
+    o = n(163315);
+let s = 96;
+function l(e) {
+    let { benefits: t, description: n, imgSrc: l, title: c, tag: u, FallbackIcon: d } = e,
+        f = null != l ? { "--custom-background-url": "url(".concat(l.toString(), ")") } : void 0,
+        _ = null != n && "" !== n;
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: o.container,
         children: [
             (0, r.jsxs)("div", {
-                className: s.header,
+                className: o.header,
                 children: [
                     (0, r.jsx)("div", {
-                        className: s.headerBackground,
-                        style: _,
+                        className: o.headerBackground,
+                        style: f,
                     }),
                     (0, r.jsx)("div", {
-                        className: s.headerImage,
+                        className: o.headerImage,
                         children:
-                            null != c
+                            null != l
                                 ? (0, r.jsx)("img", {
-                                      src: c.toString(),
+                                      src: l.toString(),
                                       alt: "",
                                   })
-                                : (0, r.jsx)(f, {
+                                : (0, r.jsx)(d, {
                                       size: "custom",
                                       color: "var(--text-muted)",
-                                      height: l,
-                                      width: l,
+                                      height: s,
+                                      width: s,
                                   }),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: s.content,
+                className: o.content,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s.details,
+                        className: o.details,
                         children: [
-                            null != d && (0, r.jsx)("div", { children: d }),
-                            (0, r.jsx)(i.X, {
+                            null != u && (0, r.jsx)("div", { children: u }),
+                            (0, r.jsx)(i.X6q, {
                                 color: "header-primary",
                                 variant: "heading-xl/semibold",
-                                children: u,
+                                children: c,
                             }),
-                            p &&
-                                (0, r.jsx)(o.x, {
+                            _ &&
+                                (0, r.jsx)(i.xvT, {
                                     color: "text-default",
                                     variant: "text-md/normal",
-                                    className: s.description,
+                                    className: o.description,
                                     children: n,
                                 }),
                         ],
                     }),
                     null != t &&
                         (0, r.jsxs)("div", {
-                            className: s.benefits,
+                            className: o.benefits,
                             children: [
-                                (0, r.jsx)(o.x, {
+                                (0, r.jsx)(i.xvT, {
                                     color: "header-secondary",
                                     variant: "eyebrow",
                                     children: a.Z.Messages.STOREFRONT_BENEFITS_TITLE,

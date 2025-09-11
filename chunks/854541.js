@@ -12,9 +12,9 @@ var r = n(951288),
     s = n(91192),
     l = n(924826),
     c = n(866442),
-    u = n(1561),
-    d = n(507274),
-    f = n(84735),
+    u = n(793030),
+    d = n(1561),
+    f = n(507274),
     _ = n(481060),
     p = n(408886),
     h = n(44315),
@@ -107,8 +107,8 @@ function R(e) {
             isCustom: i = !1,
             isSelected: a = !1,
             disabled: l = !1,
-            style: u = {},
-            onClick: d,
+            style: d = {},
+            onClick: f,
             isGradient: p = !1,
             "aria-label": g,
             gradientStart: b,
@@ -121,7 +121,7 @@ function R(e) {
         let e = (0, c.Rf)(b),
             t = (0, c.Rf)(O);
         S = { background: "linear-gradient(".concat(I, "deg, ").concat(e, ", ").concat(t, ")") };
-    } else S = { backgroundColor: null != t ? (0, c.Rf)(t) : u.backgroundColor };
+    } else S = { backgroundColor: null != t ? (0, c.Rf)(t) : d.backgroundColor };
     let A = p ? b : t,
         C = !1;
     function N() {
@@ -137,7 +137,7 @@ function R(e) {
     }
     return (
         i && !a ? (C = !0) : (i || a) && (C = (0, c.Bd)(null != A ? A : m.p6O) > 0.2),
-        (0, r.jsx)(f.t, {
+        (0, r.jsx)(u.tEY, {
             offset: -2,
             children: (0, r.jsxs)(
                 "button",
@@ -154,9 +154,9 @@ function R(e) {
                             }),
                             disabled: l,
                             onClick: () =>
-                                null == d
+                                null == f
                                     ? void 0
-                                    : d(
+                                    : f(
                                           p
                                               ? {
                                                     start: b,
@@ -164,7 +164,7 @@ function R(e) {
                                                 }
                                               : t,
                                       ),
-                            style: y({}, u, S),
+                            style: y({}, d, S),
                             "aria-label": null != g ? g : p ? "Gradient ".concat(b, "-").concat(O) : S.backgroundColor,
                         },
                         T,
@@ -219,7 +219,7 @@ function D(e) {
             onChange: a,
             onClose: s,
             suggestedColors: l,
-            middle: f,
+            middle: u,
             footer: h,
             showEyeDropper: m,
             wrapperComponentType: b,
@@ -302,7 +302,7 @@ function D(e) {
                         color: w.pending.hsl,
                     }),
                 }),
-                f,
+                u,
                 (0, r.jsx)(_.oil, {
                     value: w.input.slice(1),
                     onChange: x,
@@ -323,7 +323,7 @@ function D(e) {
                         className: E.suggestedColors,
                         children: l.map((e, t) =>
                             (0, r.jsx)(
-                                u.P,
+                                d.P,
                                 {
                                     "aria-label": "",
                                     style: { backgroundColor: e },
@@ -337,7 +337,7 @@ function D(e) {
                 h,
             ],
         }),
-        U = null != b ? b : d.V;
+        U = null != b ? b : f.V;
     return (0, r.jsx)(U, {
         "aria-label": g.intl.string(g.t.WTqQ5e),
         className: o()(E.customColorPicker, O),

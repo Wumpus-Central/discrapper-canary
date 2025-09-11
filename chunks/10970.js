@@ -192,7 +192,7 @@ function y(e) {
         });
     return (0, r.jsx)(c.Z, {
         storeListing: t,
-        cta: (0, r.jsx)(a.zx, {
+        cta: (0, r.jsx)(a.zxk, {
             variant: "primary",
             size: "sm",
             text: g.intl.string(g.t["+KwmBg"]),

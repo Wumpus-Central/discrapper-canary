@@ -3,14 +3,14 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(202841),
+    a = n(938288),
     s = n(793030),
     c = n(442837),
     u = n(481060),
     d = n(239091),
     p = n(100527),
-    h = n(667815),
-    f = n(531572),
+    f = n(667815),
+    h = n(531572),
     g = n(259580),
     m = n(639777),
     b = n(495804),
@@ -25,17 +25,17 @@ function j(e) {
         C = i.useCallback(() => {
             (0, O.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        S = (0, c.e7)([f.Z], () => {
+        E = (0, c.e7)([h.Z], () => {
             var e;
-            return null != (e = f.Z.getCountForGuild(t.id)) ? e : 0;
+            return null != (e = h.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        S !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, S, t.premiumSubscriberCount]);
-    let E = Math.min((S / j) * 100, 100),
+        E !== t.premiumSubscriberCount && (0, f.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, E, t.premiumSubscriberCount]);
+    let S = Math.min((E / j) * 100, 100),
         [P, I] = (0, u.q_F)(
             () => ({
-                width: S === t.premiumSubscriberCount ? "calc(".concat(E, "% - 4px)") : "0%",
+                width: E === t.premiumSubscriberCount ? "calc(".concat(S, "% - 4px)") : "0%",
                 config: {
                     tension: 250,
                     damping: 5,
@@ -43,12 +43,12 @@ function j(e) {
                 },
             }),
             "respect-motion-settings",
-            [S, t.premiumSubscriberCount],
+            [E, t.premiumSubscriberCount],
         );
     i.useEffect(() => {
-        I({ width: "calc(".concat(E, "% - 4px)") });
-    }, [E, I]);
-    let N = S >= j;
+        I({ width: "calc(".concat(S, "% - 4px)") });
+    }, [S, I]);
+    let N = E >= j;
     return (0, r.jsx)(u.P3F, {
         "aria-label": void 0,
         role: "button",
@@ -118,7 +118,7 @@ function j(e) {
             children: [
                 (0, r.jsx)("div", { className: v.progressContainer }),
                 (0, r.jsx)(a.animated.div, {
-                    className: o()(v.progress, { [v.progressLow]: E <= 5 }),
+                    className: o()(v.progress, { [v.progressLow]: S <= 5 }),
                     style: P,
                 }),
                 (0, r.jsxs)("div", {
@@ -127,13 +127,13 @@ function j(e) {
                         (0, r.jsxs)("div", {
                             className: v.textContentContainer,
                             children: [
-                                (0, r.jsx)(s.xv, {
+                                (0, r.jsx)(s.xvT, {
                                     className: v.text,
                                     variant: "text-xs/semibold",
                                     children: _.intl.string(y.default.NI6IhY),
                                 }),
                                 t.premiumSubscriberCount >= j &&
-                                    (0, r.jsx)(s.xv, {
+                                    (0, r.jsx)(s.xvT, {
                                         className: v.text,
                                         variant: "text-xs/semibold",
                                         children: "\uD83C\uDF89",
@@ -143,13 +143,13 @@ function j(e) {
                         (0, r.jsxs)("div", {
                             className: v.textContentContainer,
                             children: [
-                                (0, r.jsx)(s.xv, {
+                                (0, r.jsx)(s.xvT, {
                                     className: o()(v.text, v.boostCountText),
                                     variant: "text-xs/semibold",
                                     children: N
-                                        ? _.intl.formatToPlainString(y.default["Ehpq+/"], { appliedBoostCount: S })
+                                        ? _.intl.formatToPlainString(y.default["Ehpq+/"], { appliedBoostCount: E })
                                         : _.intl.formatToPlainString(y.default["/rbPDg"], {
-                                              appliedBoostCount: S,
+                                              appliedBoostCount: E,
                                               maxBoostCount: j,
                                           }),
                                 }),

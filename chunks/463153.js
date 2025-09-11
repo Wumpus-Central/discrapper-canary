@@ -14,7 +14,7 @@ function l() {
                 src: s,
                 alt: "",
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(i.xvT, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 children: a.intl.string(a.t.H217fX),

@@ -62,7 +62,7 @@ let p = i.forwardRef(function (e, t) {
     let u = (0, l.x)(),
         _ = "h".concat(Math.min(u, 6));
     return (0, r.jsx)(
-        s.xv,
+        s.xvT,
         d(
             {
                 ref: t,

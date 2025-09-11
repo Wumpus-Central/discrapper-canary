@@ -8,7 +8,7 @@ n.d(t, {
 var r,
     i = n(951288),
     a = n(647438),
-    o = n(922770),
+    o = n(793030),
     s = n(493773),
     l = n(930295),
     c = n(126306),
@@ -229,7 +229,7 @@ function O(e) {
         return (0, i.jsx)("div", {
             className: u.loader,
             style: { width: l },
-            children: (0, i.jsx)(o.$, {}),
+            children: (0, i.jsx)(o.$jN, {}),
         });
     }
     let [E, b] = a.useState(() => d),

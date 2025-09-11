@@ -32,7 +32,7 @@ let A = (e) => e.map((e) => "#".concat(e)),
                   className: S.container,
                   children: [
                       (0, r.jsx)(R, { message: t }),
-                      (0, r.jsx)(u.zx, {
+                      (0, r.jsx)(u.zxk, {
                           text: T.intl.string(T.t.SKNnqq),
                           fullWidth: !0,
                           variant: "primary",

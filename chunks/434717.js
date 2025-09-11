@@ -5,7 +5,7 @@ var s = n(793030),
     o = n(985952);
 function l(e) {
     let { quest: a } = e;
-    return (0, t.jsx)(s.X6, {
+    return (0, t.jsx)(s.X6q, {
         variant: "heading-lg/bold",
         color: "header-primary",
         className: o.heading,

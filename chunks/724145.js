@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(314940);
+n.d(t, { Z: () => V }), n(388685), n(314940);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(278074),
     l = n(442837),
     c = n(524437),
-    u = n(680018),
+    u = n(159691),
     d = n(755721),
     f = n(481060),
     _ = n(153867),
@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(705262),
     L = n(981631),
     j = n(921944),
-    M = n(474936),
-    k = n(388032),
+    k = n(474936),
+    M = n(388032),
     U = n(204089);
 let G = () =>
         (0, r.jsx)("div", {
@@ -45,7 +45,7 @@ let G = () =>
                     (0, r.jsx)(f.X6q, {
                         variant: "heading-md/bold",
                         color: "always-white",
-                        children: k.intl.string(k.t.POSLGR),
+                        children: M.intl.string(M.t.POSLGR),
                     }),
                 ],
             }),
@@ -70,7 +70,7 @@ let G = () =>
                 }),
                 (0, r.jsx)(f.X6q, {
                     variant: "heading-lg/extrabold",
-                    children: k.intl.string(k.t["xSR+a2"]),
+                    children: M.intl.string(M.t["xSR+a2"]),
                 }),
             ],
         });
@@ -90,10 +90,10 @@ let G = () =>
                 intervalCount: null == p || null == (n = p.subscription_trial) ? void 0 : n.interval_count,
             }),
             b = f
-                ? k.intl.string(k.t.IJI7ys)
-                : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === M.Si.TIER_2
+                ? M.intl.string(M.t.IJI7ys)
+                : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === k.Si.TIER_2
                   ? m
-                  : k.intl.string(k.t.mr4K7O),
+                  : M.intl.string(M.t.mr4K7O),
             y = (e) => {
                 e &&
                     (null == a || a(),
@@ -111,7 +111,7 @@ let G = () =>
             };
         return h
             ? (0, r.jsx)(v.Z, {
-                  subscriptionTier: M.Si.TIER_2,
+                  subscriptionTier: k.Si.TIER_2,
                   defaultTextOverride: b,
                   premiumModalAnalyticsLocation: {
                       object: L.qAy.BUTTON_CTA,
@@ -123,11 +123,11 @@ let G = () =>
             : (0, r.jsx)(I.Z, {
                   size: d.zx.Sizes.MEDIUM,
                   textOptions: { textOverride: b },
-                  subscriptionTier: M.Si.TIER_2,
+                  subscriptionTier: k.Si.TIER_2,
                   onSubscribeModalClose: y,
               });
     },
-    V = (e) => {
+    F = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
             { isPreview: a } = (0, l.cj)([N.Z], () => ({ isPreview: N.Z.isPreview })),
             { v2EditorEnabled: o } = R.Mc.useExperiment({ location: "ClientThemesEditor" }),
@@ -138,21 +138,21 @@ let G = () =>
             },
             h = (0, y.B)(
                 {
-                    no: k.t["3D5yo6"],
-                    "sv-SE": k.t["3D5yo6"],
-                    uk: k.t["3D5yo6"],
-                    de: k.t["3D5yo6"],
+                    no: M.t["3D5yo6"],
+                    "sv-SE": M.t["3D5yo6"],
+                    uk: M.t["3D5yo6"],
+                    de: M.t["3D5yo6"],
                 },
-                k.t["dqH+qq"],
+                M.t["dqH+qq"],
             ),
             m = (0, s.EQ)({
                 isPreview: a,
                 isCoachmark: n,
                 forceShowCloseButton: c,
             })
-                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => k.intl.string(k.t.cpT0Cg))
+                .with({ isCoachmark: !0 }, { forceShowCloseButton: !0 }, () => M.intl.string(M.t.cpT0Cg))
                 .with({ isPreview: !0 }, () => h)
-                .otherwise(() => k.intl.string(k.t.Olc2Ky)),
+                .otherwise(() => M.intl.string(M.t.Olc2Ky)),
             g = o ? U.editorFooterV2 : U.editorFooter;
         return (0, r.jsxs)("div", {
             className: g,
@@ -164,7 +164,7 @@ let G = () =>
                         },
                         markAsDismissed: t,
                     }),
-                (0, r.jsx)(u.z, {
+                (0, r.jsx)(u.zxk, {
                     fullWidth: !0,
                     onClick: _,
                     variant: "secondary",
@@ -173,7 +173,7 @@ let G = () =>
             ],
         });
     };
-function F(e) {
+function V(e) {
     let { markAsDismissed: t, showClientThemesCoachmark: n } = e,
         { analyticsLocations: a } = (0, E.ZP)(g.Z.CLIENT_THEMES_EDITOR),
         { v2EditorEnabled: s } = R.Mc.useExperiment({ location: "ClientThemesEditor" }),
@@ -187,7 +187,7 @@ function F(e) {
         i.useEffect(() => {
             c &&
                 A.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: M.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    type: k.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: a,
                 });
         }, [c, a]);
@@ -220,7 +220,7 @@ function F(e) {
                                 ],
                             }),
                         }),
-                        (0, r.jsx)(V, {
+                        (0, r.jsx)(F, {
                             markAsDismissed: t,
                             isCoachmark: n,
                         }),

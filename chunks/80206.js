@@ -3,35 +3,35 @@ var r = n(951288);
 n(647438);
 var i = n(793030),
     l = n(159691),
-    o = n(481060),
-    s = n(388905),
-    a = n(294707);
+    s = n(481060),
+    a = n(388905),
+    o = n(294707);
 function c(e) {
     let { title: t, subtitle: n, buttonText: c, image: u, onButtonClick: d, loading: h } = e;
-    return (0, r.jsx)(s.ZP, {
-        className: a.container,
-        children: (0, r.jsxs)(i.Kq, {
+    return (0, r.jsx)(a.ZP, {
+        className: o.container,
+        children: (0, r.jsxs)(i.Kqy, {
             align: "center",
             justify: "center",
             gap: 24,
             children: [
-                (0, r.jsxs)(i.Kq, {
+                (0, r.jsxs)(i.Kqy, {
                     gap: 8,
                     align: "center",
                     children: [
-                        (0, r.jsxs)(i.Kq, {
+                        (0, r.jsxs)(i.Kqy, {
                             gap: 24,
                             align: "center",
                             children: [
                                 null != u &&
-                                    (0, r.jsx)(i.Kq, {
+                                    (0, r.jsx)(i.Kqy, {
                                         align: "center",
                                         justify: "center",
-                                        className: a.image,
+                                        className: o.image,
                                         children: u,
                                     }),
-                                h && (0, r.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE }),
-                                (0, r.jsx)(i.X6, {
+                                h && (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
+                                (0, r.jsx)(i.X6q, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
                                     children: t,
@@ -40,16 +40,16 @@ function c(e) {
                         }),
                         null != n &&
                             "" !== n &&
-                            (0, r.jsx)(i.xv, {
+                            (0, r.jsx)(i.xvT, {
                                 variant: "text-md/normal",
                                 color: "header-secondary",
-                                className: a.subtitle,
+                                className: o.subtitle,
                                 children: n,
                             }),
                     ],
                 }),
                 !h &&
-                    (0, r.jsx)(l.zx, {
+                    (0, r.jsx)(l.zxk, {
                         onClick: d,
                         text: c,
                         variant: "overlay-primary",

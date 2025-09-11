@@ -22,7 +22,7 @@ function g(e) {
                     "aria-hidden": !0,
                     alt: "",
                 }),
-                (0, r.jsx)(i.X6, {
+                (0, r.jsx)(i.X6q, {
                     variant: "heading-xl/semibold",
                     children: p.intl.string(p.t.UvDfMz),
                 }),

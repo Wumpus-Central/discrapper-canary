@@ -3,15 +3,15 @@ var r = n(951288),
     i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(638212),
-    l = n(951570),
+    s = n(266198),
+    l = n(638212),
     c = n(474936),
     u = n(388032),
-    d = n(781261),
-    f = n(598323);
+    d = n(756246),
+    f = n(62725);
 let _ = (e) => {
     let { className: t, cohort: n } = e,
-        i = n === l.TO.COHORT_1 ? u.intl.string(u.t.N4RqcX) : u.intl.string(u.t["1C7LQk"]);
+        i = n === s.TO.COHORT_1 ? u.intl.string(u.t.N4RqcX) : u.intl.string(u.t["1C7LQk"]);
     return (0, r.jsxs)("div", {
         className: a()(d.container, t),
         children: [
@@ -31,11 +31,11 @@ let _ = (e) => {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-secondary",
-                        children: u.intl.format(u.t.WNDJPD, { helpCenterLink: l.lB }),
+                        children: u.intl.format(u.t.WNDJPD, { helpCenterLink: s.lB }),
                     }),
                 ],
             }),
-            (0, r.jsx)(s.Z, { subscriptionTier: c.Si.TIER_2 }),
+            (0, r.jsx)(l.Z, { subscriptionTier: c.Si.TIER_2 }),
         ],
     });
 };

@@ -14,8 +14,8 @@ var r = n(951288),
     h = n(388032),
     m = n(97127),
     g = n(665923),
-    E = n(477154),
-    b = n(387888);
+    E = n(73909),
+    b = n(479656);
 let y = () => {
         let e = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
         return (0, r.jsx)("div", {
@@ -64,7 +64,7 @@ let y = () => {
             className: o()(m.container, g.baseCardOutline),
             children: [
                 (0, r.jsx)(y, {}),
-                (0, r.jsx)(l.zx, {
+                (0, r.jsx)(l.zxk, {
                     text: t,
                     variant: "primary",
                     size: "sm",

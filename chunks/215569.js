@@ -97,7 +97,7 @@ class _ extends (r = i.Component) {
             if (
                 (this.props.transitionEnter
                     ? this._enqueueTransitions(e, n, this._keysToEnter)
-                    : this._keysToEnter.length && (this._keysToEnter = []),
+                    : this._keysToEnter.length > 0 && (this._keysToEnter = []),
                 this.props.transitionLeave)
             )
                 this._enqueueTransitions(n, e, this._keysToLeave);
@@ -106,14 +106,15 @@ class _ extends (r = i.Component) {
                 this._enqueueTransitions(n, e, t);
                 let r = (0, a.B)(n, e);
                 for (let e = 0, n = t.length; e < n; e++) delete r[t[e]];
-                this._isMounted && this.setState({ children: r }), this._keysToLeave.length && (this._keysToLeave = []);
+                this._isMounted && this.setState({ children: r }),
+                    this._keysToLeave.length > 0 && (this._keysToLeave = []);
             }
         }
-        if (this._keysToEnter.length) {
+        if (this._keysToEnter.length > 0) {
             let e = this._keysToEnter;
             (this._keysToEnter = []), e.forEach(this.performEnter, this);
         }
-        if (this._keysToLeave.length) {
+        if (this._keysToLeave.length > 0) {
             let e = this._keysToLeave;
             (this._keysToLeave = []), e.forEach(this.performLeave, this);
         }

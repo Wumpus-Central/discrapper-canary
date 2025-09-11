@@ -30,7 +30,7 @@ let b = (e) => {
             }, [t, n, a]);
         return (0, r.jsx)("div", {
             className: E.welcomeCTA,
-            children: (0, r.jsx)(o.zx, {
+            children: (0, r.jsx)(o.zxk, {
                 icon: {
                     type: "sticker",
                     asset: a,

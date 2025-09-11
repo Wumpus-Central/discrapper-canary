@@ -33,7 +33,7 @@ function N() {
                 className: C.headerIcon,
                 color: l.Z.colors.TEXT_LOW_CONTRAST,
             }),
-            (0, r.jsx)(a.xv, {
+            (0, r.jsx)(a.xvT, {
                 className: C.headerText,
                 variant: "text-sm/semibold",
                 color: "text-low-contrast",
@@ -67,7 +67,7 @@ function R(e) {
                             alt: "",
                         })
                       : null,
-                  (0, r.jsx)(a.xv, {
+                  (0, r.jsx)(a.xvT, {
                       className: C.footerText,
                       variant: "text-sm/medium",
                       color: "none",

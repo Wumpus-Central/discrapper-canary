@@ -19,7 +19,7 @@ let _ = (e) => {
                     },
                     children: (0, r.jsx)("div", {
                         className: o()(f.banner, f.pfxBanner),
-                        children: (0, r.jsx)(s.xv, {
+                        children: (0, r.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Profile Effects",
@@ -32,7 +32,7 @@ let _ = (e) => {
                     },
                     children: (0, r.jsx)("div", {
                         className: o()(f.banner, f.nameplateBanner),
-                        children: (0, r.jsx)(s.xv, {
+                        children: (0, r.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Nameplates",
@@ -45,7 +45,7 @@ let _ = (e) => {
                     },
                     children: (0, r.jsx)("div", {
                         className: o()(f.banner, f.bundlesBanner),
-                        children: (0, r.jsx)(s.xv, {
+                        children: (0, r.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
                             children: "Product Preview Tool",
@@ -75,7 +75,7 @@ let _ = (e) => {
                 (0, r.jsxs)("div", {
                     className: f.nav,
                     children: [
-                        (0, r.jsx)(s.X6, {
+                        (0, r.jsx)(s.X6q, {
                             variant: "heading-xxl/medium",
                             children: "ShopKeeper",
                         }),

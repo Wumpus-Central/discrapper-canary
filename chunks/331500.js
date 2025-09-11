@@ -1,13 +1,13 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => P });
 var r,
-    a,
+    i,
     s = n(951288),
-    i = n(647438),
+    a = n(647438),
     o = n(793030),
     c = n(442837),
     l = n(481060),
-    u = n(100527),
-    d = n(744993),
+    d = n(100527),
+    u = n(744993),
     m = n(693587),
     p = n(567225),
     b = n(809741),
@@ -41,9 +41,9 @@ let j =
         }
         return e;
     })({}, g.T9)),
-    (a = a = { initialStep: g.Vb.SERVER_SETTINGS }),
+    (i = i = { initialStep: g.Vb.SERVER_SETTINGS }),
     Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
         : (function (e, t) {
               var n = Object.keys(e);
               if (Object.getOwnPropertySymbols) {
@@ -51,14 +51,14 @@ let j =
                   n.push.apply(n, r);
               }
               return n;
-          })(Object(a)).forEach(function (e) {
-              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+          })(Object(i)).forEach(function (e) {
+              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
           }),
     r);
-function x(e) {
+function P(e) {
     let { guildId: t } = e;
-    i.useEffect(() => {
-        (0, d.po)(t);
+    a.useEffect(() => {
+        (0, u.po)(t);
     }, [t]);
     let n = (0, c.Wu)([m.Z], () => {
         let e = m.Z.getStateForGuild(t);
@@ -75,7 +75,7 @@ function x(e) {
         : (0, s.jsxs)("div", {
               className: y.container,
               children: [
-                  (0, s.jsx)(o.X6, {
+                  (0, s.jsx)(o.X6q, {
                       variant: "heading-md/semibold",
                       children: v.intl.string(f.default.jeYp1t),
                   }),
@@ -92,7 +92,7 @@ function x(e) {
                                           guildId: t,
                                           stepConfig: j,
                                           initialPortkeyGame: e,
-                                          analyticsLocation: u.Z.PORTKEY_OVERVIEW,
+                                          analyticsLocation: d.Z.PORTKEY_OVERVIEW,
                                       }),
                                   imageClassName: y.image,
                               },

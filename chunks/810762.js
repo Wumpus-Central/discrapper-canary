@@ -20,7 +20,7 @@ let _ = (e) => {
           ? null
           : (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(a.zx, {
+                    (0, r.jsx)(a.zxk, {
                         text: d.intl.string(d.t.hqyhKS),
                         icon: o.wj7,
                         variant: "secondary",

@@ -178,7 +178,7 @@ function b(A) {
                               horizontal: !0,
                               size: 8,
                           }),
-                          (0, n.jsx)(o.zx, {
+                          (0, n.jsx)(o.zxk, {
                               text: f.intl.string(f.t.KkRpFh),
                               icon: s.UEU,
                               iconPosition: "end",

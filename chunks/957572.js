@@ -29,7 +29,7 @@ function d() {
                           }),
                       ],
                   }),
-                  (0, n.jsx)(i.zx, {
+                  (0, n.jsx)(i.zxk, {
                       text: e === s.y.GUILD_PRODUCTS_PREVIEW ? c.intl.string(c.t.YF35pa) : c.intl.string(c.t.r30bk5),
                       size: "sm",
                       variant: "secondary",

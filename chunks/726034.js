@@ -1,42 +1,39 @@
-n.d(t, { Z: () => et }), n(388685);
+n.d(t, { Z: () => J }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
     l = n(704215),
-    c = n(680018),
-    u = n(146187),
-    d = n(861066),
-    f = n(179538),
-    _ = n(755721),
-    p = n(481060),
-    h = n(153867),
-    m = n(230711),
-    g = n(493773),
-    E = n(100527),
-    b = n(906732),
-    y = n(550385),
-    O = n(266454),
-    v = n(784238),
-    I = n(767714),
-    S = n(612659),
-    T = n(781391),
-    A = n(210887),
-    C = n(233398),
-    N = n(263198),
-    R = n(866419),
-    P = n(803038),
-    w = n(507962),
-    D = n(877865),
-    x = n(536847),
-    L = n(981631),
-    j = n(921944),
-    M = n(474936),
-    k = n(119475),
-    U = n(388032),
-    G = n(461917);
-function B(e, t, n) {
+    c = n(159691),
+    u = n(755721),
+    d = n(481060),
+    f = n(153867),
+    _ = n(230711),
+    p = n(493773),
+    h = n(100527),
+    m = n(906732),
+    g = n(550385),
+    E = n(266454),
+    b = n(784238),
+    y = n(767714),
+    O = n(612659),
+    v = n(781391),
+    I = n(210887),
+    T = n(233398),
+    S = n(263198),
+    A = n(866419),
+    C = n(803038),
+    N = n(507962),
+    R = n(877865),
+    P = n(536847),
+    w = n(981631),
+    D = n(921944),
+    x = n(474936),
+    L = n(119475),
+    j = n(388032),
+    k = n(461917);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +46,7 @@ function B(e, t, n) {
         e
     );
 }
-function Z(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,12 +57,12 @@ function Z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                B(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
 }
-function F(e, t) {
+function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -77,18 +74,18 @@ function F(e, t) {
     }
     return n;
 }
-function V(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : G(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function H(e) {
+function Z(e) {
     let [t, n] = i.useState(0),
         [r, a] = i.useState(!1),
         o = i.useRef(e);
@@ -102,104 +99,104 @@ function H(e) {
         }
     );
 }
-function Y(e) {
+function F(e) {
     let { markAsDismissed: t } = e;
     return (0, r.jsx)("div", {
-        className: G.closeButton,
-        children: (0, r.jsx)(u.P, {
+        className: k.closeButton,
+        children: (0, r.jsx)(c.PZ7, {
             size: "sm",
             onClick: () => {
-                null == t || t(j.L.USER_DISMISS), (0, y.Ll)();
+                null == t || t(D.L.USER_DISMISS), (0, g.Ll)();
             },
         }),
     });
 }
-function W() {
+function V() {
     return (0, r.jsxs)("div", {
-        className: G.headerContainer,
+        className: k.headerContainer,
         children: [
-            (0, r.jsx)(p.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: "text-md/bold",
-                children: U.intl.string(k.default["AsmU8/"]),
+                children: j.intl.string(L.default["AsmU8/"]),
             }),
-            (0, r.jsx)(p.ua7, {
-                text: U.intl.string(U.t["5AFxuL"]),
+            (0, r.jsx)(d.ua7, {
+                text: j.intl.string(j.t["5AFxuL"]),
                 children: (e) =>
                     (0, r.jsx)(
-                        p.SrA,
-                        Z(
+                        d.SrA,
+                        U(
                             {
                                 size: "custom",
                                 height: 20,
                                 width: 20,
-                                colorClass: G.nitroIcon,
+                                colorClass: k.nitroIcon,
                             },
                             e,
                         ),
                     ),
             }),
-            (0, r.jsx)(Y, {}),
+            (0, r.jsx)(F, {}),
         ],
     });
 }
-function K(e) {
+function H(e) {
     let { markAsDismissed: t, isCoachmark: n } = e;
-    return (0, O.Nj)(l.z.CUSTOM_THEME_COACHMARK)
+    return (0, E.Nj)(l.z.CUSTOM_THEME_COACHMARK)
         ? n
-            ? (0, r.jsx)(z, { markAsDismissed: t })
-            : (0, r.jsx)(W, {})
-        : (0, r.jsx)(z, { markAsDismissed: () => (0, O.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
+            ? (0, r.jsx)(Y, { markAsDismissed: t })
+            : (0, r.jsx)(V, {})
+        : (0, r.jsx)(Y, { markAsDismissed: () => (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK) });
 }
-function z(e) {
+function Y(e) {
     let { markAsDismissed: t } = e,
-        n = (0, S.m)(M.p9.TIER_2);
+        n = (0, O.m)(x.p9.TIER_2);
     return (0, r.jsxs)("div", {
-        className: G.coachmarkHeaderContainer,
+        className: k.coachmarkHeaderContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: G.badgeAndCloseRow,
+                className: k.badgeAndCloseRow,
                 children: [
-                    (0, r.jsx)(p.lBU, { text: U.intl.string(U.t.oW0eUV) }),
-                    (0, r.jsx)(Y, { markAsDismissed: t }),
+                    (0, r.jsx)(d.lBU, { text: j.intl.string(j.t.oW0eUV) }),
+                    (0, r.jsx)(F, { markAsDismissed: t }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: G.coachmarkHeaderTextContainer,
+                className: k.coachmarkHeaderTextContainer,
                 children: [
-                    (0, r.jsx)(p.X6q, {
+                    (0, r.jsx)(d.X6q, {
                         variant: "heading-lg/extrabold",
-                        children: U.intl.string(k.default["23QUzs"]),
+                        children: j.intl.string(L.default["23QUzs"]),
                     }),
-                    (0, r.jsx)(p.Text, {
-                        className: G.subtitle,
+                    (0, r.jsx)(d.Text, {
+                        className: k.subtitle,
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        children: U.intl.string(n ? k.default.TRCE4u : k.default["UV/Vtr"]),
+                        children: j.intl.string(n ? L.default.TRCE4u : L.default["UV/Vtr"]),
                     }),
                 ],
             }),
         ],
     });
 }
-function q(e) {
+function W(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
-        { key: i, handleInternalChange: a } = H(t);
+        { key: i, handleInternalChange: a } = Z(t);
     return (0, r.jsxs)("div", {
-        className: o()(G.sliderContainer, G.gradientDirectionSliderContainer),
+        className: o()(k.sliderContainer, k.gradientDirectionSliderContainer),
         children: [
-            (0, r.jsx)(p.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: "text-sm/medium",
-                children: U.intl.string(k.default.dZkwg4),
+                children: j.intl.string(L.default.dZkwg4),
             }),
             (0, r.jsx)(
-                p.iRW,
+                d.iRW,
                 {
                     initialValue: t,
                     defaultValue: 0,
                     minValue: 0,
                     maxValue: 360,
                     onValueChange: (e) => {
-                        (0, w.fR)(), a(e), n(e);
+                        (0, N.fR)(), a(e), n(e);
                     },
                     onValueRender: (e) => "".concat(Math.round(e), "\xB0"),
                     keyboardStep: 1,
@@ -209,25 +206,25 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function K(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
-        { key: i, handleInternalChange: a } = H(t);
+        { key: i, handleInternalChange: a } = Z(t);
     return (0, r.jsxs)("div", {
-        className: G.sliderContainer,
+        className: k.sliderContainer,
         children: [
-            (0, r.jsx)(p.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: "text-sm/medium",
-                children: U.intl.string(k.default.xlXkaG),
+                children: j.intl.string(L.default.xlXkaG),
             }),
             (0, r.jsx)(
-                p.iRW,
+                d.iRW,
                 {
                     initialValue: t,
-                    defaultValue: C.BH,
+                    defaultValue: T.BH,
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, w.z3)(), a(e), n(e);
+                        (0, N.z3)(), a(e), n(e);
                     },
                     keyboardStep: 1,
                 },
@@ -236,236 +233,236 @@ function X(e) {
         ],
     });
 }
-function Q(e) {
+function z(e) {
     let { type: t } = e,
         n = i.useCallback(() => {
             var e;
-            (0, w.Om)();
-            let t = (0, N.C)();
-            C.Ig.getState().setAll({
+            (0, N.Om)();
+            let t = (0, S.C)();
+            T.Ig.getState().setAll({
                 colors: t.colors,
-                gradientAngle: null != (e = t.angle) ? e : C.Ig.getState().gradientAngle,
+                gradientAngle: null != (e = t.angle) ? e : T.Ig.getState().gradientAngle,
                 chassisMixAmount: t.intensity,
             });
         }, []);
-    return (0, r.jsx)(p.ua7, {
-        text: U.intl.string(k.default.c9MBEB),
+    return (0, r.jsx)(d.ua7, {
+        text: j.intl.string(L.default.c9MBEB),
         children: (e) =>
             "with-text" === t
                 ? (0, r.jsx)(
-                      c.z,
-                      V(Z({}, e), {
+                      c.zxk,
+                      B(U({}, e), {
                           variant: "secondary",
                           onClick: n,
-                          icon: p.T$Z,
-                          text: U.intl.string(k.default.c9MBEB),
+                          icon: d.T$Z,
+                          text: j.intl.string(L.default.c9MBEB),
                           fullWidth: !0,
                       }),
                   )
                 : (0, r.jsx)("div", {
-                      className: G.surpriseMeButton,
+                      className: k.surpriseMeButton,
                       children: (0, r.jsx)(
-                          d.h,
-                          V(Z({}, e), {
+                          c.hU,
+                          B(U({}, e), {
                               variant: "icon-only",
                               size: "md",
                               onClick: n,
-                              icon: p.T$Z,
-                              "aria-label": U.intl.string(k.default.c9MBEB),
+                              icon: d.T$Z,
+                              "aria-label": j.intl.string(L.default.c9MBEB),
                           }),
                       ),
                   }),
     });
 }
-function J(e) {
+function q(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
-    return (0, r.jsx)(p.ua7, {
-        text: U.intl.string(k.default.SFyHIC),
+    return (0, r.jsx)(d.ua7, {
+        text: j.intl.string(L.default.SFyHIC),
         shouldShow: n,
         children: (e) =>
             (0, r.jsx)(
-                c.z,
-                V(Z({}, e), {
+                c.zxk,
+                B(U({}, e), {
                     variant: "primary",
                     onClick: t,
                     disabled: n,
-                    text: U.intl.string(U.t["1Qm829"]),
+                    text: j.intl.string(j.t["1Qm829"]),
                     fullWidth: i,
                 }),
             ),
     });
 }
-function $(e) {
+function X(e) {
     let { onSaveTheme: t, canApply: n } = e,
-        i = (0, S.m)(M.p9.TIER_2);
+        i = (0, O.m)(x.p9.TIER_2);
     return (
-        (0, w.hf)(i, E.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
+        (0, N.hf)(i, h.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsxs)("div", {
-            className: G.coachmarkFooterContainer,
+            className: k.coachmarkFooterContainer,
             children: [
-                (0, r.jsx)(Q, { type: "with-text" }),
+                (0, r.jsx)(z, { type: "with-text" }),
                 i
-                    ? (0, r.jsx)(J, {
+                    ? (0, r.jsx)(q, {
                           disabled: !n,
                           onApply: t,
                           fullWidth: !0,
                       })
-                    : (0, r.jsx)(v.Z, {
+                    : (0, r.jsx)(b.Z, {
                           premiumModalAnalyticsLocation: {
-                              page: L.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
-                              section: L.jXE.CUSTOM_THEMES_COACHMARK_FOOTER,
+                              page: w.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
+                              section: w.jXE.CUSTOM_THEMES_COACHMARK_FOOTER,
                           },
-                          textOptions: { subscribeText: U.intl.string(U.t.JST6jo) },
-                          subscriptionTier: M.Si.TIER_2,
+                          textOptions: { subscribeText: j.intl.string(j.t.JST6jo) },
+                          subscriptionTier: x.Si.TIER_2,
                           showGradient: !0,
-                          color: _.Tt.BRAND,
+                          color: u.Tt.BRAND,
                       }),
             ],
         })
     );
 }
-function ee(e) {
+function Q(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        a = (0, S.m)(M.p9.TIER_2);
-    (0, w.hf)(a, E.Z.CUSTOM_THEMES_EDITOR);
+        a = (0, O.m)(x.p9.TIER_2);
+    (0, N.hf)(a, h.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
-        (0, w.Vb)(),
-            (0, O.Q3)(l.z.CUSTOM_THEME_COACHMARK),
-            (null == i ? void 0 : i.from) === y.tE.SETTING
-                ? (m.Z.open(), (0, y.Ll)())
-                : (null == i ? void 0 : i.from) === y.tE.CLIENT_THEMES_EDITOR
-                  ? (0, y.XO)(y.wh.CLIENT_THEMES)
-                  : (0, y.Ll)();
+        (0, N.Vb)(),
+            (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK),
+            (null == i ? void 0 : i.from) === g.tE.SETTING
+                ? (_.Z.open(), (0, g.Ll)())
+                : (null == i ? void 0 : i.from) === g.tE.CLIENT_THEMES_EDITOR
+                  ? (0, g.XO)(g.wh.CLIENT_THEMES)
+                  : (0, g.Ll)();
     };
     return (0, r.jsxs)("div", {
-        className: G.footerContainer,
+        className: k.footerContainer,
         children: [
-            (0, r.jsx)(Q, { type: "no-text" }),
-            (0, r.jsx)(f.A, {
+            (0, r.jsx)(z, { type: "no-text" }),
+            (0, r.jsx)(c.Avr, {
                 variant: "secondary",
                 onClick: o,
-                text: U.intl.string(U.t["13/7kZ"]),
+                text: j.intl.string(j.t["13/7kZ"]),
             }),
             a
-                ? (0, r.jsx)(J, {
+                ? (0, r.jsx)(q, {
                       disabled: !n,
                       onApply: t,
                   })
-                : (0, r.jsx)(I.Z, {
-                      className: G.subscribeButton,
-                      size: _.zx.Sizes.MEDIUM,
-                      subscriptionTier: M.Si.TIER_2,
+                : (0, r.jsx)(y.Z, {
+                      className: k.subscribeButton,
+                      size: u.zx.Sizes.MEDIUM,
+                      subscriptionTier: x.Si.TIER_2,
                       showGradient: !0,
                       premiumModalAnalyticsLocation: {
-                          page: L.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
-                          section: L.jXE.CUSTOM_THEMES_FOOTER,
+                          page: w.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
+                          section: w.jXE.CUSTOM_THEMES_FOOTER,
                       },
-                      textOptions: { textOverride: U.intl.string(U.t.pj0XBA) },
+                      textOptions: { textOverride: j.intl.string(j.t.pj0XBA) },
                   }),
         ],
     });
 }
-function et(e) {
+function J(e) {
     var t;
-    let { metadata: n, markAsDismissed: a, isCoachmark: u, isMobile: d } = e,
-        f = P.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
-        _ = (0, R.jJ)(),
-        m = i.useRef(!1),
+    let { metadata: n, markAsDismissed: a, isCoachmark: u, isMobile: _ } = e,
+        b = C.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
+        y = (0, A.jJ)(),
+        O = i.useRef(!1),
         {
-            colors: v,
-            chassisMixAmount: I,
-            gradientAngle: S,
-            setColors: N,
-            setChassisMixAmount: L,
-            setGradientAngle: M,
-        } = (0, C.Ig)(),
-        [k, B] = i.useState(null != (t = v[0]) ? t : C.Dp),
-        Z = (0, s.e7)([A.Z], () => A.Z.theme),
-        F = (0, O.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: V } = (0, b.ZP)(E.Z.CUSTOM_THEMES_EDITOR),
-        H = async () => {
-            (m.current = !0),
-                await (0, h.ZI)({
+            colors: S,
+            chassisMixAmount: w,
+            gradientAngle: x,
+            setColors: L,
+            setChassisMixAmount: M,
+            setGradientAngle: U,
+        } = (0, T.Ig)(),
+        [G, B] = i.useState(null != (t = S[0]) ? t : T.Dp),
+        Z = (0, s.e7)([I.Z], () => I.Z.theme),
+        F = (0, E.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: V } = (0, m.ZP)(h.Z.CUSTOM_THEMES_EDITOR),
+        Y = async () => {
+            (O.current = !0),
+                await (0, f.ZI)({
                     theme: Z,
                     customUserThemeSettings: {
-                        colors: v,
+                        colors: S,
                         gradientColorStops: [],
-                        gradientAngle: S,
-                        baseMix: I,
+                        gradientAngle: x,
+                        baseMix: w,
                     },
                 }),
-                (0, w.u7)(v, I, S, Z, V),
-                null == a || a(j.L.TAKE_ACTION),
-                F || (0, O.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-                (0, y.Ll)(),
-                (0, T.UD)();
+                (0, N.u7)(S, w, x, Z, V),
+                null == a || a(D.L.TAKE_ACTION),
+                F || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                (0, g.Ll)(),
+                (0, v.UD)();
         },
-        Y = () => {
-            _(R._m.RESET_BUTTON), (0, w.uf)();
+        z = () => {
+            y(A._m.RESET_BUTTON), (0, N.uf)();
         },
-        W = v.length > 0;
+        q = S.length > 0;
     return (i.useEffect(
         () => () => {
-            m.current || _(R._m.EDITOR_CLOSE);
+            O.current || y(A._m.EDITOR_CLOSE);
         },
-        [_],
+        [y],
     ),
-    (0, g.ZP)(() => {
-        u || (0, R.lT)(v, k, N);
+    (0, p.ZP)(() => {
+        u || (0, A.lT)(S, G, L);
     }),
-    f)
+    b)
         ? (0, r.jsx)("div", {
-              className: o()(G.container, { [G.mobileContainer]: d }),
-              "data-app-right-panel": !d,
+              className: o()(k.container, { [k.mobileContainer]: _ }),
+              "data-app-right-panel": !_,
               children: (0, r.jsxs)("div", {
-                  className: G.containerInner,
+                  className: k.containerInner,
                   children: [
-                      (0, r.jsx)(p.Ttm, {
+                      (0, r.jsx)(d.Ttm, {
                           children: (0, r.jsxs)("div", {
-                              className: o()(G.editorBody, { [G.mobileEditorBody]: d }),
+                              className: o()(k.editorBody, { [k.mobileEditorBody]: _ }),
                               children: [
-                                  (0, r.jsx)(K, {
+                                  (0, r.jsx)(H, {
                                       markAsDismissed: a,
                                       isCoachmark: u,
                                   }),
-                                  (0, r.jsx)(x.o, {}),
-                                  (0, r.jsx)(D.U, {
+                                  (0, r.jsx)(P.o, {}),
+                                  (0, r.jsx)(R.U, {
                                       onChange: (e) => {
-                                          B(e), 0 === v.length && (0, R.lT)(v, e, N);
+                                          B(e), 0 === S.length && (0, A.lT)(S, e, L);
                                       },
-                                      value: k,
-                                      colors: v,
-                                      setColors: N,
+                                      value: G,
+                                      colors: S,
+                                      setColors: L,
                                   }),
-                                  v.length > 1 &&
-                                      (0, r.jsx)(q, {
-                                          gradientAngle: S,
-                                          setGradientAngle: M,
+                                  S.length > 1 &&
+                                      (0, r.jsx)(W, {
+                                          gradientAngle: x,
+                                          setGradientAngle: U,
                                       }),
-                                  (0, r.jsx)(X, {
-                                      chassisMixAmount: I,
+                                  (0, r.jsx)(K, {
+                                      chassisMixAmount: w,
                                       setChassisMixAmount: (e) => {
-                                          L(e), 0 === v.length && (0, R.lT)(v, k, N);
+                                          M(e), 0 === S.length && (0, A.lT)(S, G, L);
                                       },
                                   }),
-                                  (0, r.jsx)(c.z, {
+                                  (0, r.jsx)(c.zxk, {
                                       variant: "secondary",
-                                      onClick: Y,
-                                      icon: p.Oe7,
-                                      text: U.intl.string(U.t.yBZMsb),
+                                      onClick: z,
+                                      icon: d.Oe7,
+                                      text: j.intl.string(j.t.yBZMsb),
                                       fullWidth: !0,
                                   }),
                               ],
                           }),
                       }),
                       u
-                          ? (0, r.jsx)($, {
-                                onSaveTheme: H,
-                                canApply: W,
+                          ? (0, r.jsx)(X, {
+                                onSaveTheme: Y,
+                                canApply: q,
                             })
-                          : (0, r.jsx)(ee, {
-                                onSaveTheme: H,
-                                canApply: W,
+                          : (0, r.jsx)(Q, {
+                                onSaveTheme: Y,
+                                canApply: q,
                                 metadata: n,
                             }),
                   ],

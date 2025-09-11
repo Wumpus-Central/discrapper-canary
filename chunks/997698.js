@@ -38,7 +38,7 @@ function d(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(i.xvT, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 children: o.intl.string(o.t.ffEOKC),

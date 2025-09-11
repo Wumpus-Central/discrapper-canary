@@ -1,10 +1,6 @@
-e.exports = {
-    container: "container__183e8",
-    banner: "banner__183e8",
-    text: "text__183e8",
-    clickable: "clickable__183e8",
-    channelIcon: "channelIcon__183e8",
-    iconCircle: "iconCircle__183e8",
-    nextIcon: "nextIcon__183e8",
-    completed: "completed__183e8",
-};
+(e.exports = function (e) {
+    if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return e;
+}),
+    (e.exports.__esModule = !0),
+    (e.exports.default = e.exports);

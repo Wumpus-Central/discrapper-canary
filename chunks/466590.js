@@ -4,8 +4,8 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(793030),
-    l = n(680018),
-    c = n(751334),
+    l = n(751334),
+    c = n(159691),
     u = n(920155),
     d = n(966902),
     f = n(237872),
@@ -124,7 +124,7 @@ function v(e) {
             null == S || S();
         }, [S]);
     if (!C || null == w) return null;
-    let M = g(
+    let k = g(
         {
             text:
                 null != (a = null == (t = w.action) ? void 0 : t.text)
@@ -154,7 +154,7 @@ function v(e) {
                         (0, r.jsx)("div", {
                             className: o()(h.graphic, { [h["graphic--".concat(I)]]: null != I }),
                             children: (0, r.jsx)(
-                                c.z,
+                                l.z,
                                 b(g({}, w.graphic), {
                                     aspectRatio: null != (E = w.graphic.aspectRatio) ? E : "sm" === I ? "2/1" : "16/9",
                                 }),
@@ -172,7 +172,7 @@ function v(e) {
                         children: (0, r.jsxs)("div", {
                             className: h.multistepActionLayout,
                             children: [
-                                (0, r.jsx)(s.xv, {
+                                (0, r.jsx)(s.xvT, {
                                     variant: "text-xs/normal",
                                     className: h.multistepIndicator,
                                     children: p.intl.formatToPlainString(p.t.rO31eX, {
@@ -180,7 +180,7 @@ function v(e) {
                                         totalSteps: O.length,
                                     }),
                                 }),
-                                (0, r.jsx)(l.z, g({ size: "sm" }, M)),
+                                (0, r.jsx)(c.zxk, g({ size: "sm" }, k)),
                             ],
                         }),
                     }),

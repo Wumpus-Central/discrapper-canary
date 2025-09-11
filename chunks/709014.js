@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(906280),
     l = n.n(s),
-    c = n(186325),
+    c = n(793030),
     u = n(390507),
     d = n(679400),
     f = n(493773),
@@ -66,7 +66,7 @@ function g(e, t) {
                   }
                 : (0, u.m)(g),
         w = !(0, _.Z)("lottie_hover_multiple_loop"),
-        D = i.useContext(c.S).reducedMotion.enabled,
+        D = i.useContext(c.Sfi).reducedMotion.enabled,
         { enabled: x } = d.Z.useExperiment({ location: "LottieIcon web entry point" }),
         L = D || !x,
         j = i.useRef(O);

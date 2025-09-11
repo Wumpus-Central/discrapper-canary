@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(798476),
     g = n(434404),
     p = n(999382),
-    h = n(548522),
-    f = n(651390),
+    f = n(548522),
+    h = n(651390),
     b = n(981631),
     x = n(388032),
     j = n(556955);
@@ -63,24 +63,24 @@ function _(e) {
     let P = null != t ? t : null == y ? void 0 : y.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.X6, {
+            (0, r.jsx)(a.X6q, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
                 children: x.intl.string(x.t.AHJddH),
             }),
-            (0, r.jsx)(a.xv, {
+            (0, r.jsx)(a.xvT, {
                 tag: "p",
                 variant: "text-sm/medium",
                 color: "text-secondary",
                 className: j.applicationBody,
                 children: x.intl.string(x.t.Z7TCtb),
             }),
-            (0, r.jsx)(f.c, { guildId: n.id }),
+            (0, r.jsx)(h.c, { guildId: n.id }),
             (0, r.jsx)("div", {
                 className: j.form,
                 children:
                     null != P
-                        ? (0, r.jsx)(h.y, {
+                        ? (0, r.jsx)(f.y, {
                               guild: n,
                               formFields: P,
                           })
@@ -100,13 +100,13 @@ function _(e) {
                                 disabled: N,
                                 children: x.intl.string(x.t["N/0239"]),
                             }),
-                            (0, r.jsx)(a.xv, {
+                            (0, r.jsx)(a.xvT, {
                                 variant: "text-sm/normal",
                                 color: "text-secondary",
                                 children: x.intl.string(x.t["3TSZYG"]),
                             }),
                             N &&
-                                (0, r.jsx)(a.xv, {
+                                (0, r.jsx)(a.xvT, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: x.intl.format(x.t.Bk0VOj, {

@@ -12,7 +12,7 @@ var r = n(951288),
 let _ =
         "https://cdn.discordapp.com/assets/content/1b55390a202dcca3843b6c9205af0379cfa072f34d8b9217bce04aba4d373e5b.png",
     p =
-        "https://cdn.discordapp.com/assets/content/278f65638ac10ff28bad5822eedb285bbedc5188653d38fcfd19e8469bf1e384.png";
+        "https://cdn.discordapp.com/assets/content/fdb6d4e8a2f01f917d2025a8ca58ebd55e4eada92df1d5386f73d91d6acad1f9.png";
 function h(e) {
     let { targetElementRef: t, markAsDismissed: n, children: h } = e,
         m = (0, i.e7)([l.default], () => l.default.getId()),
@@ -24,10 +24,7 @@ function h(e) {
                 targetElementRef: t,
                 title: f.intl.string(f.t.gxcsSk),
                 body: f.intl.string(f.t["8L7E5u"]),
-                caretConfig: {
-                    position: "bottom",
-                    align: "start",
-                },
+                caretConfig: { align: "start" },
                 graphic: {
                     type: "image",
                     src: g ? _ : p,

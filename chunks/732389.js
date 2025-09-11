@@ -1,54 +1,54 @@
-n.d(t, { p: () => g });
-var r = n(951288),
-    i = n(120356),
-    a = n.n(i),
-    o = n(657707),
-    s = n(793030),
-    l = n(755721),
-    c = n(436774),
-    u = n(594174),
-    d = n(111361),
-    f = n(773104),
-    _ = n(784238),
-    p = n(474936),
-    h = n(388032),
-    m = n(851499);
+t.d(n, { p: () => g });
+var a = t(951288),
+    o = t(120356),
+    r = t.n(o),
+    i = t(657707),
+    l = t(793030),
+    s = t(755721),
+    d = t(436774),
+    c = t(594174),
+    u = t(111361),
+    m = t(773104),
+    p = t(784238),
+    _ = t(474936),
+    x = t(388032),
+    f = t(851499);
 let g = (e) => {
-    let { buttonAnalyticsObject: t, className: n, upsellText: i } = e,
-        g = u.default.getCurrentUser(),
-        E = (0, d.yd)(null == g ? void 0 : g.premiumType, p.p9.TIER_2),
-        b = (0, f._)({
-            defaultResponse: h.intl.string(h.t["8x0jKS"]),
-            onNonTier2Subscriber: h.intl.string(h.t.IJI7ys),
+    let { buttonAnalyticsObject: n, className: t, upsellText: o } = e,
+        g = c.default.getCurrentUser(),
+        h = (0, u.yd)(null == g ? void 0 : g.premiumType, _.p9.TIER_2),
+        C = (0, m._)({
+            defaultResponse: x.intl.string(x.t["8x0jKS"]),
+            onNonTier2Subscriber: x.intl.string(x.t.IJI7ys),
         });
-    return E
+    return h
         ? null
-        : (0, r.jsxs)("div", {
-              className: a()(m.upsellContainer, n),
+        : (0, a.jsxs)("div", {
+              className: r()(f.upsellContainer, t),
               children: [
-                  (0, r.jsxs)("div", {
-                      className: m.row,
+                  (0, a.jsxs)("div", {
+                      className: f.row,
                       children: [
-                          (0, r.jsx)(o.SrA, {
+                          (0, a.jsx)(i.SrA, {
                               size: "md",
-                              color: c.JX.PREMIUM_TIER_2,
+                              color: d.JX.PREMIUM_TIER_2,
                           }),
-                          (0, r.jsx)(s.xv, {
+                          (0, a.jsx)(l.xvT, {
                               variant: "text-sm/medium",
                               color: "header-primary",
-                              className: m.upsellText,
-                              children: i,
+                              className: f.upsellText,
+                              children: o,
                           }),
                       ],
                   }),
-                  (0, r.jsx)(_.Z, {
-                      className: m.button,
-                      size: l.zx.Sizes.SMALL,
-                      look: l.zx.Looks.BLANK,
-                      color: l.zx.Colors.CUSTOM,
-                      subscriptionTier: p.Si.TIER_2,
-                      textOptions: { textOverride: b },
-                      premiumModalAnalyticsLocation: t,
+                  (0, a.jsx)(p.Z, {
+                      className: f.button,
+                      size: s.zx.Sizes.SMALL,
+                      look: s.zx.Looks.BLANK,
+                      color: s.zx.Colors.CUSTOM,
+                      subscriptionTier: _.Si.TIER_2,
+                      textOptions: { textOverride: C },
+                      premiumModalAnalyticsLocation: n,
                       showGradient: !0,
                   }),
               ],

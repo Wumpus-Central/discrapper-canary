@@ -12,8 +12,8 @@ var i = n(793030),
     m = n(723914),
     g = n(30818),
     p = n(997698),
-    h = n(354031),
-    f = n(335438),
+    f = n(354031),
+    h = n(335438),
     b = n(166805),
     x = n(981631),
     j = n(388032),
@@ -33,12 +33,12 @@ let _ = function () {
                   children: [
                       (0, r.jsxs)("div", {
                           children: [
-                              (0, r.jsx)(i.X6, {
+                              (0, r.jsx)(i.X6q, {
                                   variant: "heading-lg/semibold",
                                   color: "header-primary",
                                   children: j.intl.string(j.t["6TAHb2"]),
                               }),
-                              (0, r.jsx)(i.xv, {
+                              (0, r.jsx)(i.xvT, {
                                   variant: "text-sm/medium",
                                   color: "header-secondary",
                                   tag: "p",
@@ -50,14 +50,14 @@ let _ = function () {
                       !0 === O &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(h.P, {
+                                  (0, r.jsx)(f.P, {
                                       canManageGuild: n,
                                       features: t.features,
                                   }),
                                   (0, r.jsx)("div", { className: v.divider }),
                               ],
                           }),
-                      (0, r.jsx)(f.l, {
+                      (0, r.jsx)(h.l, {
                           canManageGuild: n,
                           guild: t,
                       }),

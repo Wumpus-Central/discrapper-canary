@@ -13,20 +13,20 @@ function m(e) {
     let { guildId: t, application: m } = e,
         g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        h = (0, d.mY)();
+        f = (0, d.mY)();
     if (null == g || !(0, s.eM)(g, p)) return null;
-    let f = m.team;
+    let h = m.team;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(a.R94, {
                 type: a.R94.Types.DESCRIPTION,
-                disabled: h,
-                children: null != f ? u.intl.format(u.t.erxwWF, { teamName: f.name }) : u.intl.string(u.t.FGzLkJ),
+                disabled: f,
+                children: null != h ? u.intl.format(u.t.erxwWF, { teamName: h.name }) : u.intl.string(u.t.FGzLkJ),
             }),
             (0, r.jsx)(a.LZC, { size: 16 }),
-            (0, r.jsx)(l.zx, {
-                text: null != f ? u.intl.string(u.t["/Fjq5O"]) : u.intl.string(u.t["6ih+b2"]),
-                variant: null != f ? "secondary" : "primary",
+            (0, r.jsx)(l.zxk, {
+                text: null != h ? u.intl.string(u.t["/Fjq5O"]) : u.intl.string(u.t["6ih+b2"]),
+                variant: null != h ? "secondary" : "primary",
                 onClick: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e("83942").then(n.bind(n, 743582));
@@ -77,7 +77,7 @@ function m(e) {
                         };
                     });
                 },
-                disabled: h,
+                disabled: f,
             }),
         ],
     });

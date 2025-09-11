@@ -30,14 +30,14 @@ function d(e) {
               className: o()(c.fallback, d),
               children: [
                   (0, r.jsx)("div", { className: c.spacer }),
-                  (0, r.jsx)(s.xv, {
+                  (0, r.jsx)(s.xvT, {
                       variant: 1 === u ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
                       lineClamp: 1 === u ? 4 : 3,
                       children: p,
                   }),
                   (0, r.jsx)("div", { className: c.spacer }),
-                  (0, r.jsx)(s.xv, {
+                  (0, r.jsx)(s.xvT, {
                       variant: 1 === u ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
                       children: null != h ? "(".concat(null == h ? void 0 : h.getFullYear(), ")") : null,

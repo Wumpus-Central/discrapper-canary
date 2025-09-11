@@ -1,11 +1,11 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => x });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
     a = n(990547),
     o = n(442837),
-    s = n(680018),
+    s = n(159691),
     c = n(481060),
     u = n(26151),
     d = n(213609),
@@ -15,13 +15,13 @@ var i = n(120356),
     m = n(359110),
     g = n(601964),
     b = n(430824),
-    _ = n(933557),
-    y = n(354459),
+    y = n(933557),
+    _ = n(354459),
     C = n(388032),
-    x = n(115858);
-function v(e) {
+    v = n(115858);
+function x(e) {
     let { recipientUser: t, voiceChannel: n } = e,
-        i = (0, _.ZP)(n),
+        i = (0, y.ZP)(n),
         s = (0, h.s)(t, "RingToVoiceBanner", n.id),
         { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
             let e = null;
@@ -29,12 +29,12 @@ function v(e) {
                 s && null != n.id && (e = p.Z.getParticipant(n.id, t.id)),
                 {
                     userIsInCall: null != e,
-                    isUserRinging: null != e && e.type === y.fO.USER && e.ringing,
+                    isUserRinging: null != e && e.type === _.fO.USER && e.ringing,
                 }
             );
         }),
-        v = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        j = null != v ? (0, g.EB)(v, 32, !0) : null,
+        x = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
+        j = null != x ? (0, g.EB)(x, 32, !0) : null,
         E = !s || (u && !m);
     return ((0, d.Z)(
         {
@@ -51,33 +51,33 @@ function v(e) {
     E)
         ? null
         : (0, r.jsxs)("div", {
-              className: l()(x.themed, x.chatHeaderBar),
+              className: l()(v.themed, v.chatHeaderBar),
               children: [
                   (0, r.jsxs)("div", {
-                      className: x.chatHeaderBarInfo,
+                      className: v.chatHeaderBarInfo,
                       children: [
                           (0, r.jsx)(f.ZP, {
-                              className: x.mask,
+                              className: v.mask,
                               mask: f.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
                                   null == j
                                       ? (0, r.jsx)("div", {
-                                            className: l()(x.guildIcon, x.guildIconWithoutImage),
+                                            className: l()(v.guildIcon, v.guildIconWithoutImage),
                                             children: (0, r.jsx)("div", {
-                                                className: x.guildAcronym,
-                                                children: null != v ? (0, g.gM)(v) : null,
+                                                className: v.guildAcronym,
+                                                children: null != x ? (0, g.gM)(x) : null,
                                             }),
                                         })
                                       : (0, r.jsx)("img", {
-                                            alt: null == v ? void 0 : v.name,
+                                            alt: null == x ? void 0 : x.name,
                                             src: j,
-                                            className: x.guildIcon,
+                                            className: v.guildIcon,
                                         }),
                           }),
                           (0, r.jsx)(c.Text, {
-                              className: x.chatHeaderBarText,
+                              className: v.chatHeaderBarText,
                               variant: "text-md/medium",
                               color: "header-secondary",
                               children: C.intl.format(C.t.f2tNxM, {
@@ -111,7 +111,7 @@ function O(e) {
             : () => {
                   u.Z.ring(t, [n], "dm_banner"), (0, m.Kh)(t);
               };
-    return (0, r.jsx)(s.z, {
+    return (0, r.jsx)(s.zxk, {
         variant: i ? "critical-secondary" : "secondary",
         size: "sm",
         text: l,

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(772848),
     a = n(873546),
-    o = n(680018),
+    o = n(159691),
     s = n(481060),
     c = n(626135),
     u = n(358085),
@@ -70,7 +70,7 @@ function m(e) {
                           variant: "text-xs/semibold",
                           children: h.intl.string(h.t["m1+IBg"]),
                       }),
-                      (0, r.jsx)(o.z, {
+                      (0, r.jsx)(o.zxk, {
                           variant: "primary",
                           text: h.intl.string(h.t.fIv16O),
                           onClick: () => b(!0),

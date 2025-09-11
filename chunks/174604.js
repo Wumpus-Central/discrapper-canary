@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(938288),
     l = n(793030),
     c = n(755721),
     u = n(481060),
@@ -65,7 +65,7 @@ function E(e, t) {
 }
 function b(e) {
     let { powerup: t } = e;
-    return (0, r.jsx)(l.xv, {
+    return (0, r.jsx)(l.xvT, {
         tag: "span",
         variant: "text-md/semibold",
         className: p.highlight,
@@ -113,7 +113,7 @@ function y(e) {
               className: o()(p.container, { [p.themeResponsiveContainer]: n }),
               style: E(m({}, O), { opacity: +!!g }),
               children: [
-                  (0, r.jsx)(l.xv, {
+                  (0, r.jsx)(l.xvT, {
                       tag: "span",
                       variant: "text-md/semibold",
                       className: o()(p.description, {

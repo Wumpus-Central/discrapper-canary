@@ -16,14 +16,14 @@ var n = r(951288),
 function x(e) {
     let { detectedGame: t, trackAction: r } = e,
         [l, x] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [v, h] = i.useState(!0),
-        [O, b] = i.useState(!1),
+        [O, h] = i.useState(!0),
+        [v, b] = i.useState(!1),
         y = i.useRef(null),
         { width: P, height: w } = (0, d.Z)();
     return (i.useEffect(() => {
         let e = y.current;
-        null != e && b(e.scrollHeight - e.clientHeight > 1 || !v);
-    }, [y, P, w, v]),
+        null != e && b(e.scrollHeight - e.clientHeight > 1 || !O);
+    }, [y, P, w, O]),
     null == t.summary)
         ? null
         : (0, n.jsxs)("div", {
@@ -37,7 +37,7 @@ function x(e) {
                                   color: c.Z.colors.HEADER_SECONDARY,
                                   size: "xs",
                               }),
-                              (0, n.jsx)(o.xv, {
+                              (0, n.jsx)(o.xvT, {
                                   variant: "text-xs/medium",
                                   color: "header-secondary",
                                   children: l
@@ -46,21 +46,21 @@ function x(e) {
                               }),
                           ],
                       }),
-                  (0, n.jsx)(o.xv, {
+                  (0, n.jsx)(o.xvT, {
                       ref: y,
-                      lineClamp: v ? 8 : void 0,
+                      lineClamp: O ? 8 : void 0,
                       variant: "text-sm/normal",
                       children: l ? t.summaryLocalized : t.summary,
                   }),
-                  O &&
+                  v &&
                       (0, n.jsx)(u.P3F, {
                           className: g.clickable,
                           onClick: () => {
-                              r(v ? m.as.ShowMore : m.as.ShowLess), h(!v);
+                              r(O ? m.as.ShowMore : m.as.ShowLess), h(!O);
                           },
-                          children: (0, n.jsx)(o.xv, {
+                          children: (0, n.jsx)(o.xvT, {
                               variant: "text-sm/semibold",
-                              children: v ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo6"]),
+                              children: O ? f.intl.string(f.t.lBeKY2) : f.intl.string(f.t["6MwJo6"]),
                           }),
                       }),
                   (0, n.jsx)(p.Z, {

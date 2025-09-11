@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(793030),
-    o = n(861066),
+    o = n(159691),
     s = n(481060),
     l = n(921944),
     a = n(989308),
@@ -18,19 +18,19 @@ function p(e) {
                 className: u.image,
                 src: d,
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(i.xvT, {
                 color: "always-white",
                 variant: "text-md/semibold",
                 children: c.intl.string(a.default.diMhWV),
             }),
-            (0, r.jsx)(i.xv, {
+            (0, r.jsx)(i.xvT, {
                 color: "always-white",
                 variant: "text-sm/medium",
                 children: c.intl.string(a.default.pycxTk),
             }),
             (0, r.jsx)("div", {
                 className: u.close,
-                children: (0, r.jsx)(o.h, {
+                children: (0, r.jsx)(o.hU, {
                     variant: "icon-only",
                     size: "md",
                     "aria-label": c.intl.string(c.t.cpT0Cg),

@@ -75,7 +75,7 @@ function x(e) {
                       size: "xs",
                       color: "currentColor",
                   }),
-                  (0, r.jsx)(d.xv, {
+                  (0, r.jsx)(d.xvT, {
                       variant: "text-sm/medium",
                       tag: "span",
                       children: n.text,

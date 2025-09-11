@@ -20,7 +20,7 @@ var r,
     b = n(933554),
     O = n(388032),
     y = n(87587),
-    _ = n(354810);
+    _ = n(273701);
 function v(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
@@ -104,7 +104,7 @@ function x(e) {
                                     src: _.Z,
                                     className: y.controllerImage,
                                 }),
-                                (0, i.jsx)(o.X6, {
+                                (0, i.jsx)(o.X6q, {
                                     variant: "heading-md/bold",
                                     color: "header-primary",
                                     className: y.nuxTitle,
@@ -222,7 +222,7 @@ function I(e) {
     let { closePopout: t } = e;
     return (0, i.jsxs)(x, {
         children: [
-            (0, i.jsx)(o.X6, {
+            (0, i.jsx)(o.X6q, {
                 variant: "heading-sm/semibold",
                 color: "header-primary",
                 className: y.controlTitle,

@@ -33,7 +33,7 @@ function b(e) {
                                   color: "header-secondary",
                                   children: g.intl.string(g.t.uT1CPT),
                               }),
-                              (0, r.jsx)(a.X6, {
+                              (0, r.jsx)(a.X6q, {
                                   variant: "heading-xxl/bold",
                                   color: "header-primary",
                                   children: n.name,

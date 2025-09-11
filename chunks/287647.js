@@ -12,7 +12,7 @@ var r = n(951288),
     _ = n(921944),
     p = n(693450),
     h = n(388032),
-    m = n(374104);
+    m = n(16596);
 let g = new c.Z("DisplayNameStylesCoachmark");
 function E(e) {
     let { markAsDismissed: t, targetElementRef: n, children: c } = e,
@@ -43,10 +43,7 @@ function E(e) {
                     onRequestClose: v,
                     align: "right",
                     position: "top",
-                    caretConfig: {
-                        position: "bottom",
-                        align: "center",
-                    },
+                    caretConfig: { align: "center" },
                     gradientColor: "nitro-pink",
                     graphic: {
                         type: "video",

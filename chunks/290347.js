@@ -4,8 +4,8 @@ var r = n(951288),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
-    s = n(146187),
-    c = n(304789),
+    s = n(304789),
+    c = n(159691),
     u = n(481060),
     d = n(607070),
     p = n(446411),
@@ -46,7 +46,7 @@ function S(e) {
     }
     return e;
 }
-function N(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,21 +64,21 @@ function N(e, t) {
         e
     );
 }
-let T = [],
-    P = (e) => {
+let N = [],
+    j = (e) => {
         let { tagText: t, className: n } = e;
         return (0, r.jsx)(u.IGR, {
             className: a()(C.tag, n),
             text: t,
         });
     },
-    j = (e) => {
+    P = (e) => {
         let { header: t, subHeader: n, imageSrc: i, tagText: l, wideStyle: o } = e;
         return (0, r.jsxs)("div", {
             className: a()(C.featureCard, { [C.wideStyle]: o }),
             children: [
                 null != l
-                    ? (0, r.jsx)(P, {
+                    ? (0, r.jsx)(j, {
                           tagText: l,
                           className: C.featureCardTag,
                       })
@@ -111,7 +111,7 @@ function x(e) {
             className: t,
             renderModalProps: n,
             heroArt: l,
-            heroArtClassName: P,
+            heroArtClassName: j,
             modalDismissibleContent: x,
             modalTopExtra: A,
             header: Z,
@@ -137,7 +137,7 @@ function x(e) {
         er = i.useRef(q),
         ei = i.useRef(X),
         el = i.useRef($),
-        [ea, eo] = i.useState(T),
+        [ea, eo] = i.useState(N),
         es = i.useRef(!1);
     function ec() {
         let e = Date.now(),
@@ -161,11 +161,11 @@ function x(e) {
                                   let n = await t.text(),
                                       r = new Blob([n], { type: "text/vtt" }),
                                       i = URL.createObjectURL(r);
-                                  return N(S({}, e), { src: i });
+                                  return T(S({}, e), { src: i });
                               });
                     eo(await Promise.all(t));
                 } catch (e) {
-                    E.Z.captureException(e), eo(T);
+                    E.Z.captureException(e), eo(N);
                 }
             };
             !0 !== es.current && e(), (es.current = !0);
@@ -218,12 +218,12 @@ function x(e) {
             transitionState: B,
             "aria-labelledby": V,
             parentComponent: "PremiumAnnouncementModalVariant1",
-            children: (0, r.jsxs)(c.$, {
+            children: (0, r.jsxs)(s.$, {
                 color: "nitro-pink",
                 children: [
                     (0, r.jsx)("div", {
                         className: C.closeButtonContainer,
-                        children: (0, r.jsx)(s.P, {
+                        children: (0, r.jsx)(c.PZ7, {
                             "data-migration-pending": !0,
                             onClick: async () => await G(),
                         }),
@@ -240,7 +240,7 @@ function x(e) {
                             }),
                             "video" === l.type
                                 ? (0, r.jsx)(g.Z, {
-                                      className: a()(C.video, P),
+                                      className: a()(C.video, j),
                                       autoPlay: !F,
                                       loop: !0,
                                       muted: !0,
@@ -286,7 +286,7 @@ function x(e) {
                                   })
                                 : "embed" === l.type
                                   ? (0, r.jsx)(p.BC, {
-                                        className: a()(C.video, P),
+                                        className: a()(C.video, j),
                                         allowFullScreen: !1,
                                         href: l.href,
                                         thumbnail: l.thumbnail,
@@ -304,7 +304,7 @@ function x(e) {
                                   : "image" === l.type
                                     ? (0, r.jsx)("img", {
                                           alt: "",
-                                          className: a()(C.video, P),
+                                          className: a()(C.video, j),
                                           src: l.src,
                                       })
                                     : null,
@@ -326,8 +326,8 @@ function x(e) {
                                     className: a()(C.featureCardGroup, { [C.wideStyle]: H }),
                                     children: D.map((e, t) =>
                                         (0, r.jsx)(
-                                            j,
-                                            N(S({}, e), { wideStyle: H }),
+                                            P,
+                                            T(S({}, e), { wideStyle: H }),
                                             "".concat(e.header, "_").concat(t),
                                         ),
                                     ),

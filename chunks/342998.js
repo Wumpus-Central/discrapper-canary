@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(243778),
     g = n(921944),
     E = n(388032),
-    b = n(427760);
+    b = n(409397);
 let y = (0, a.U)((e) => ({
         activeEntryId: null,
         setActiveEntryId: (t) => e({ activeEntryId: t }),
@@ -61,10 +61,7 @@ let y = (0, a.U)((e) => ({
             targetElementRef: a,
             shouldShow: D,
             position: "left",
-            caretConfig: {
-                position: "right",
-                align: "center",
-            },
+            caretConfig: { align: "center" },
             gradientColor: "pink",
             graphic: {
                 type: "image",

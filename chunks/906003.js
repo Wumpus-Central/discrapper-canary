@@ -1,0 +1,426 @@
+n.d(t, {
+    E: () => P,
+    Y: () => C,
+}),
+    n(388685);
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(924929),
+    l = n(677554),
+    c = n(213305),
+    u = n(986794),
+    d = n(155127),
+    f = n(267843),
+    _ = n(402453),
+    p = n(551488),
+    h = n(131573),
+    m = n(777207),
+    g = n(577650);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = I(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function I(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let T = {
+        xs: "text-xs/medium",
+        sm: "text-sm/medium",
+        md: "text-md/medium",
+    },
+    S = {
+        xs: "xxs",
+        sm: "xs",
+        md: "refresh_sm",
+    },
+    A = {
+        xs: "sm",
+        sm: "sm",
+        md: "md",
+    };
+function C(e) {
+    var t,
+        n,
+        {
+            role: a = "button",
+            variant: f = "primary",
+            size: p = "md",
+            text: h,
+            icon: E,
+            iconPosition: y = "start",
+            iconOpticalOffsetMargin: I = 0,
+            fullWidth: S = !1,
+            focusProps: A,
+            loading: C,
+            loadingStartedLabel: w,
+            loadingFinishedLabel: D,
+            rounded: x = !1,
+            type: L = "button",
+            rel: j,
+            onClick: k,
+            onDoubleClick: M,
+            onMouseEnter: U,
+            onMouseLeave: G,
+            onMouseUp: B,
+            onMouseDown: Z,
+            onKeyDown: F,
+            disabled: V,
+            className: H,
+            style: Y,
+            buttonRef: W,
+        } = e,
+        K = v(e, [
+            "role",
+            "variant",
+            "size",
+            "text",
+            "icon",
+            "iconPosition",
+            "iconOpticalOffsetMargin",
+            "fullWidth",
+            "focusProps",
+            "loading",
+            "loadingStartedLabel",
+            "loadingFinishedLabel",
+            "rounded",
+            "type",
+            "rel",
+            "onClick",
+            "onDoubleClick",
+            "onMouseEnter",
+            "onMouseLeave",
+            "onMouseUp",
+            "onMouseDown",
+            "onKeyDown",
+            "disabled",
+            "className",
+            "style",
+            "buttonRef",
+        ]);
+    let z = (0, u.M)(),
+        q = null != (t = null == z ? void 0 : z.size) ? t : p,
+        X = null != (n = null == z ? void 0 : z.fullWidth) ? n : S,
+        Q = null != h,
+        J = i.useRef(null),
+        $ = null != W ? W : J,
+        ee = (0, r.jsx)(P, {
+            icon: E,
+            iconOpticalOffsetMargin: I,
+            iconPosition: y,
+            size: q,
+            ref: $,
+            disabled: V,
+        }),
+        et = "expressive" === f,
+        en = i.useContext(c.S),
+        { theme: er, i18n: ei } = (0, _.ZF)(),
+        ea = (0, s.a)(er),
+        eo = i.useRef(!1);
+    i.useEffect(() => {
+        !0 === C && ((eo.current = !0), l.u.announce(null != w ? w : ei.BUTTON_LOADING_STARTED_LABEL)),
+            !1 === C &&
+                !0 === eo.current &&
+                (l.u.announce(null != D ? D : ei.BUTTON_LOADING_FINISHED_LABEL), (eo.current = !1));
+    }, [C, w, D, ei.BUTTON_LOADING_STARTED_LABEL, ei.BUTTON_LOADING_FINISHED_LABEL]);
+    let es = (0, r.jsxs)("div", {
+            className: o()(g.buttonChildren, { [g.loading]: C }),
+            children: [
+                null != ee && "start" === y && ee,
+                Q &&
+                    (0, r.jsx)(m.x, {
+                        tag: "span",
+                        variant: T[q],
+                        color: "none",
+                        lineClamp: 1,
+                        children: h,
+                    }),
+                null != ee && "end" === y && ee,
+            ],
+        }),
+        el = V || C,
+        ec = (0, r.jsx)(
+            d.t,
+            O(b({}, A), {
+                children: (0, r.jsxs)(
+                    "button",
+                    O(
+                        b(
+                            {
+                                "data-mana-component": "button",
+                                role: a,
+                                "aria-busy": C,
+                                className: o()(g.button, g[q], g[f], {
+                                    [g.hasText]: Q,
+                                    [g.fullWidth]: X,
+                                    [g.rounded]: x,
+                                }),
+                                ref: $,
+                                rel: j,
+                                type: L,
+                                onClick: el ? (e) => e.preventDefault() : k,
+                                onDoubleClick: el ? (e) => e.preventDefault() : M,
+                                onMouseUp: el ? void 0 : B,
+                                onMouseDown: el ? void 0 : Z,
+                                onKeyDown: el ? void 0 : F,
+                                onMouseEnter: el ? void 0 : U,
+                                onMouseLeave: el ? void 0 : G,
+                                disabled: V,
+                            },
+                            K,
+                        ),
+                        {
+                            children: [
+                                et &&
+                                    (0, r.jsx)(R, {
+                                        hasReducedMotion: en.reducedMotion.enabled,
+                                        buttonRef: $,
+                                        isLightMode: ea,
+                                        disabled: V,
+                                    }),
+                                null == C
+                                    ? (0, r.jsx)("div", {
+                                          className: g.buttonChildrenWrapper,
+                                          children: es,
+                                      })
+                                    : (0, r.jsx)(N, {
+                                          loading: C,
+                                          size: q,
+                                          children: es,
+                                      }),
+                            ],
+                        },
+                    ),
+                ),
+            }),
+        );
+    return et
+        ? (0, r.jsx)("div", {
+              className: o()(g.expressiveWrapper, {
+                  [g.fullWidth]: X,
+                  [g.hasText]: Q,
+              }),
+              children: ec,
+          })
+        : ec;
+}
+function N(e) {
+    let { children: t, loading: n, size: a } = e,
+        s = i.useRef(null),
+        [l, c] = i.useState(n);
+    return (
+        i.useEffect(
+            () => (
+                null != s.current && clearTimeout(s.current),
+                n
+                    ? c(!0)
+                    : (s.current = setTimeout(() => {
+                          c(!1);
+                      }, 500)),
+                () => {
+                    null != s.current && clearTimeout(s.current);
+                }
+            ),
+            [n],
+        ),
+        (0, r.jsxs)("div", {
+            className: g.buttonChildrenWrapper,
+            children: [
+                t,
+                l &&
+                    (0, r.jsx)("div", {
+                        className: o()(g.spinnerWrapper, {
+                            [g.fadeIn]: n,
+                            [g.fadeOut]: !n,
+                        }),
+                        children: (0, r.jsx)(h.$, {
+                            type: h.R.PULSING_ELLIPSIS,
+                            className: o()(g.spinner, g["spinner-".concat(a)]),
+                            itemClassName: g.spinnerItem,
+                        }),
+                    }),
+            ],
+        })
+    );
+}
+function R(e) {
+    let { hasReducedMotion: t, buttonRef: n, isLightMode: a, disabled: s } = e,
+        l = i.useRef(null);
+    return (
+        i.useEffect(() => {
+            if (!s && t) {
+                let e = n.current,
+                    t = () => {
+                        var e;
+                        null == (e = l.current) || e.play();
+                    },
+                    r = () => {
+                        var e;
+                        null == (e = l.current) || e.pause();
+                    };
+                return (
+                    null == e || e.addEventListener("mouseenter", t, !0),
+                    null == e || e.addEventListener("mouseleave", r, !0),
+                    () => {
+                        null == e || e.removeEventListener("mouseenter", t, !0),
+                            null == e || e.removeEventListener("mouseleave", r, !0);
+                    }
+                );
+            }
+        }, [t, n, s]),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                !s &&
+                    (0, r.jsx)(p.Q, {
+                        className: o()(g.expressiveRive, g.expressiveBackground),
+                        eventTargetRef: n,
+                        fit: "layout",
+                        artboard: "BaseGlowRemapped",
+                        ref: l,
+                        withReducedMotion: "short-loop",
+                    }),
+                !t &&
+                    !s &&
+                    (0, r.jsx)(p.Q, {
+                        className: o()(g.expressiveRive, g.expressiveHoverContainer),
+                        fit: "layout",
+                        artboard: a ? "HoverLightmode" : "HoverDarkmode",
+                    }),
+                (0, r.jsx)("div", { className: o()(g.expressiveRive, g.expressiveFill) }),
+            ],
+        })
+    );
+}
+function P(e) {
+    let { icon: t, iconOpticalOffsetMargin: n, iconPosition: a, size: o, ref: s, disabled: l } = e,
+        c = null;
+    function u() {
+        if (0 === n) return {};
+        switch (a) {
+            case "start":
+                return { marginLeft: n };
+            case "end":
+                return { marginRight: n };
+        }
+        return {};
+    }
+    let [d, _] = i.useState(!1);
+    if (
+        (i.useEffect(() => {
+            if ("object" == typeof t && "sticker" === t.type && null != s.current) {
+                let e = s.current,
+                    t = () => {
+                        l || _(!0);
+                    },
+                    n = () => {
+                        l || _(!1);
+                    };
+                return (
+                    e.addEventListener("mouseenter", t),
+                    e.addEventListener("mouseleave", n),
+                    () => {
+                        e.removeEventListener("mouseenter", t), e.removeEventListener("mouseleave", n);
+                    }
+                );
+            }
+        }, [t, s, l]),
+        "function" == typeof t || (null == t ? void 0 : t.type) === "icon")
+    ) {
+        let e = "function" == typeof t ? t : t.asset;
+        c = (0, r.jsx)(e, {
+            color: "currentColor",
+            style: u(),
+            size: S[o],
+            className: g.icon,
+        });
+    } else if (null != t) {
+        if ("rive" === t.type) {
+            let e = t.asset;
+            c = (0, r.jsx)(
+                e,
+                O(b({}, t.riveProps), {
+                    eventTargetRef: s,
+                    style: {
+                        width: f.Z[S[o]],
+                        height: f.Z[S[o]],
+                    },
+                }),
+            );
+        } else if ("sticker" === t.type) {
+            let e = t.component;
+            c = (0, r.jsx)(e, {
+                size: f.Z[A[o]],
+                sticker: t.asset,
+                isInteracting: d,
+            });
+        }
+    }
+    return c;
+}

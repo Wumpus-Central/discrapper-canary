@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(a),
     s = n(952639),
     l = n.n(s),
-    c = n(84735),
+    c = n(793030),
     u = n(562701),
     d = n(121958);
 function f(e, t, n) {
@@ -191,14 +191,14 @@ function v(e, t, n, a) {
                 renderRow: x,
                 renderFooter: L,
                 renderSidebar: j,
-                renderListHeader: M,
-                stickyListHeader: k,
+                renderListHeader: k,
+                stickyListHeader: M,
                 wrapSection: U,
                 getAnchorId: G,
                 paddingTop: B,
                 paddingBottom: Z,
-                fade: V = !1,
-                customTheme: F = !1,
+                fade: F = !1,
+                customTheme: V = !1,
                 chunkSize: H,
                 style: Y,
                 innerId: W,
@@ -358,8 +358,8 @@ function v(e, t, n, a) {
                             onScroll: eO,
                             className: o()(g, {
                                 [e]: !0,
-                                [t]: V,
-                                [n]: F,
+                                [t]: F,
+                                [n]: V,
                                 [d.scrolling]: en,
                             }),
                             style: (0, u.uT)(Y),
@@ -379,12 +379,12 @@ function v(e, t, n, a) {
                                         style: { height: el },
                                         className: o()(d.content, Q),
                                         ref: et,
-                                        children: (0, r.jsx)(c.J, {
+                                        children: (0, r.jsx)(c.JcV, {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: M,
-                                                stickyListHeader: k,
+                                                renderListHeader: k,
+                                                stickyListHeader: M,
                                                 renderSection: D,
                                                 renderRow: x,
                                                 renderFooter: L,
@@ -393,7 +393,7 @@ function v(e, t, n, a) {
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, M, k, D, x, L, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, k, M, D, x, L, U, es],
                             ),
                             i.useMemo(
                                 () =>

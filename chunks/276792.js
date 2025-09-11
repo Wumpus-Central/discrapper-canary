@@ -4,7 +4,7 @@ n(647438);
 var i = n(657707),
     l = n(704215),
     a = n(740111),
-    o = n(680018),
+    o = n(159691),
     s = n(481060),
     c = n(963249),
     u = n(703656),
@@ -61,9 +61,9 @@ function O(e, t) {
 function E(e) {
     var t, n, E, y;
     let v,
-        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: N, isLightTheme: T } = e,
-        P = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
-        { onClose: j } = C,
+        { content: I, renderModalProps: C, analyticsLocations: S, analyticsLocation: T, isLightTheme: N } = e,
+        j = "AnnouncementModalVariant1_".concat(l.z[Number(I.dismissKey)]),
+        { onClose: P } = C,
         x = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : m.intl.string(m.t.YScQSE),
         A =
             (null == (n = I.button) ? void 0 : n.buttonAction) === a.Wc.OPEN_MARKETING_PAGE
@@ -72,7 +72,7 @@ function E(e) {
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case a.Wc.OPEN_MARKETING_PAGE:
             v = () => {
-                (0, u.uL)(g.Z5c.APPLICATION_STORE), j();
+                (0, u.uL)(g.Z5c.APPLICATION_STORE), P();
             };
             break;
         case a.Wc.OPEN_TIER_1_PAYMENT_MODAL:
@@ -80,12 +80,12 @@ function E(e) {
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_1,
                     analyticsLocations: S,
-                    analyticsObject: O(_({}, N), {
+                    analyticsObject: O(_({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_1,
                     }),
                     onClose: (e) => {
-                        e && j();
+                        e && P();
                     },
                 });
             break;
@@ -96,12 +96,12 @@ function E(e) {
                 (0, c.Z)({
                     subscriptionTier: h.Si.TIER_2,
                     analyticsLocations: S,
-                    analyticsObject: O(_({}, N), {
+                    analyticsObject: O(_({}, T), {
                         object: g.qAy.BUTTON_CTA,
                         objectType: g.Qqv.TIER_2,
                     }),
                     onClose: (e) => {
-                        e && j();
+                        e && P();
                     },
                 });
     }
@@ -121,7 +121,7 @@ function E(e) {
                 : void 0,
         w = {
             type: "video",
-            src: T ? I.heroArtVideoLinkLightTheme : I.videoLink,
+            src: N ? I.heroArtVideoLinkLightTheme : I.videoLink,
         };
     null != I.heroArtVideoSubtitles &&
         (w.subtitles = I.heroArtVideoSubtitles.map((e) => ({
@@ -132,7 +132,7 @@ function E(e) {
         ("" !== I.heroArtImageLinkDarkTheme || "" !== I.heroArtImageLinkLightTheme) &&
             (w = {
                 type: "image",
-                src: T ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
+                src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme,
             });
     let L =
         "" !== I.modalTopPill
@@ -153,21 +153,21 @@ function E(e) {
         featureCards: I.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: T ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: N ? e.imageLinkLightTheme : e.imageLink,
             tagText: "" !== e.pill ? e.pill : void 0,
         })),
-        changeLogId: P,
+        changeLogId: j,
         button: () => {
             let e = Date.now();
-            return (0, r.jsx)(o.z, {
+            return (0, r.jsx)(o.zxk, {
                 variant: "expressive",
                 size: "md",
                 onClick: () => {
                     d.default.track(g.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: P,
+                        change_log_id: j,
                         cta_type: A,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: P,
+                        target: j,
                     }),
                         v();
                 },
