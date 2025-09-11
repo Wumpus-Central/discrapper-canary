@@ -26,7 +26,7 @@ var r = n(951288),
     _ = n(113434),
     T = n(569984),
     N = n(497505),
-    R = n(381176),
+    R = n(685138),
     I = n(804127),
     E = n(566078),
     D = n(602667),
@@ -41,10 +41,10 @@ function Q(e) {
     var t;
     let { quest: n, rewardCode: a, hasTieredRewardCodes: o, sourceQuestContent: s } = e,
         i = (0, d.wj)((0, h.ZP)()),
-        u = (0, R.h)({
+        u = (0, R.n)({
             location: L.dr.REWARD_CODE_MODAL,
             questConfig: n.config,
-        }),
+        }).enabled,
         m = (0, p.dQu)(c.Z.colors.INTERACTIVE_NORMAL).hex(),
         f = u ? m : n.config.colors.primary,
         b = {

@@ -28,4 +28,9 @@ e.exports = {
     previewPlayButton: "previewPlayButton__636a2",
     contentCollapsedBackgroundWrapper: "contentCollapsedBackgroundWrapper__636a2",
     contentCollapsedBackground: "contentCollapsedBackground__636a2",
+    blur100: "blur100__636a2",
+    blur60: "blur60__636a2",
+    blur30: "blur30__636a2",
+    shine: "shine__636a2",
+    Shine: "Shine__636a2",
 };

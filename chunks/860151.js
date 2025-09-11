@@ -4,7 +4,7 @@ n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(381176),
+    s = n(685138),
     l = n(373370),
     c = n(644646),
     u = n(73231);
@@ -25,10 +25,10 @@ let d = function (e) {
             questContent: d,
             sourceQuestContent: p,
         }),
-        m = (0, s.h)({
+        m = (0, s.n)({
             location: _,
             questConfig: i.config,
-        });
+        }).enabled;
     return (0, r.jsxs)("div", {
         className: a()(u.wrapper, t),
         style: m ? void 0 : { color: i.config.colors.primary },
