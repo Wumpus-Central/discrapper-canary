@@ -27,7 +27,7 @@ var r = n(951288),
     P = n(334405);
 function Z(e) {
     var t, n;
-    let { channel: l, onEditStatus: o, setPopoutRef: Z } = e,
+    let { channel: l, setIsHangStatusInputFocused: o, setPopoutRef: Z } = e,
         T = i.useRef(null),
         N = (0, u.e7)([b.Z], () => b.Z.getCustomHangStatus()),
         A = i.useRef(b.Z.getRecentCustomStatuses()),
@@ -63,9 +63,7 @@ function Z(e) {
     }, [k]),
         i.useEffect(() => {
             var e;
-            D === (null != (e = null == N ? void 0 : N.status) ? e : "") && s()(k, null == N ? void 0 : N.emoji)
-                ? o(!1)
-                : o(!0);
+            D !== (null != (e = null == N ? void 0 : N.status) ? e : "") && "" !== D.trim() ? o(!0) : o(!1);
         }, [D, null == N ? void 0 : N.status, k, null == N ? void 0 : N.emoji, o]),
         i.useEffect(() => {
             var e;
@@ -127,7 +125,14 @@ function Z(e) {
                     break;
             } while (null == e || (null == e ? void 0 : e.name) == null || s()(null == N ? void 0 : N.emoji, t));
             null != t && (null == e ? void 0 : e.name) != null && (U(t), L(e.name));
-        }, [V, null == N ? void 0 : N.emoji]);
+        }, [V, null == N ? void 0 : N.emoji]),
+        K = i.useCallback(() => {
+            o(!1);
+        }, [o]),
+        X = i.useCallback(() => {
+            var e;
+            D !== (null != (e = null == N ? void 0 : N.status) ? e : "") && "" !== D.trim() ? o(!0) : o(!1);
+        }, [o, D, null == N ? void 0 : N.status]);
     return (0, r.jsxs)("div", {
         ref: M,
         role: "menu",
@@ -146,6 +151,8 @@ function Z(e) {
                             (0, r.jsx)(d.oil, {
                                 inputRef: T,
                                 value: D,
+                                onBlur: K,
+                                onFocus: X,
                                 onChange: (e) => L(e.substring(0, j.s0)),
                                 placeholder: S.intl.string(S.t.KPop4u),
                                 leading: {
