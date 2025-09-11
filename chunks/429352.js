@@ -14,11 +14,11 @@ var t = r(951288),
     f = r(669764),
     b = r(810568),
     u = r(774073),
-    k = r(426482),
-    w = r(644941),
+    w = r(426482),
+    k = r(644941),
     I = r(388032),
-    v = r(574570);
-function y(e) {
+    h = r(574570);
+function v(e) {
     for (var a = 1; a < arguments.length; a++) {
         var r = null != arguments[a] ? arguments[a] : {},
             t = Object.keys(r);
@@ -43,7 +43,7 @@ function y(e) {
     }
     return e;
 }
-let h = (e) => {
+let y = (e) => {
     let { game: a } = e,
         r = (0, g.e7)([p.Z], () => p.Z.getApplication(a.applicationId));
     return (0, t.jsx)(_.ua7, {
@@ -52,19 +52,19 @@ let h = (e) => {
             var i, n;
             return (0, t.jsx)(
                 _.P3F,
-                ((i = y({}, e)),
+                ((i = v({}, e)),
                 (n = n =
                     {
-                        className: v.gameClickable,
+                        className: h.gameClickable,
                         onClick: () => {
                             (0, _.ZDy)(() =>
                                 Promise.resolve((e) =>
                                     (0, t.jsx)(
-                                        w.default,
-                                        y(
+                                        k.default,
+                                        v(
                                             {
                                                 applicationId: a.applicationId,
-                                                source: b.m1.QuestBar,
+                                                source: b.m1.GameSheet,
                                             },
                                             e,
                                         ),
@@ -72,11 +72,11 @@ let h = (e) => {
                                 ),
                             );
                         },
-                        children: (0, t.jsx)(k.C, {
+                        children: (0, t.jsx)(w.C, {
                             game: a,
                             application: r,
-                            className: v.coverArt,
-                            size: k.Z.SMALL,
+                            className: h.coverArt,
+                            size: w.Z.SMALL,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -114,12 +114,12 @@ function j(e) {
     return c && !_
         ? (0, t.jsxs)("div", {
               children: [
-                  (0, t.jsx)("div", { className: o()(v.loadingHeading, v.sectionHeader) }),
+                  (0, t.jsx)("div", { className: o()(h.loadingHeading, h.sectionHeader) }),
                   (0, t.jsx)("div", {
-                      className: o()(v.row, v.gapLg),
+                      className: o()(h.row, h.gapLg),
                       children: l()
                           .range(0, a.length)
-                          .map((e) => (0, t.jsx)("div", { className: v.loadingArtwork }, e)),
+                          .map((e) => (0, t.jsx)("div", { className: h.loadingArtwork }, e)),
                   }),
               ],
           })
@@ -131,8 +131,8 @@ function j(e) {
                 onClose: r,
                 actions: [],
                 children: (0, t.jsx)("div", {
-                    className: v.container,
-                    children: p.map((e) => (0, t.jsx)(h, { game: e }, e.applicationId)),
+                    className: h.container,
+                    children: p.map((e) => (0, t.jsx)(y, { game: e }, e.applicationId)),
                 }),
             });
 }

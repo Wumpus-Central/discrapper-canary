@@ -70,7 +70,7 @@ function I(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,11 +81,11 @@ function S(e, t) {
         e
     );
 }
-let T = Object.keys(m.jn),
+let S = Object.keys(m.jn),
     A = new Set([y.rMx.QUEST_CONTENT_VIEWED, y.rMx.QUEST_CONTENT_CLICKED]);
 function C(e) {
     var t;
-    return null != (t = T.find((t) => m.jn[t] === e)) ? t : "";
+    return null != (t = S.find((t) => m.jn[t] === e)) ? t : "";
 }
 function N(e) {
     var t, n, r;
@@ -189,6 +189,9 @@ var D = (function (e) {
         (e.QUEST_HOME_TILE_HEADER_WATCH_VIDEO = "QUEST_HOME_TILE_HEADER_WATCH_VIDEO"),
         (e.REDEEM_REWARD = "REDEEM_REWARD"),
         (e.VISIT_REDEMPTION_LINK = "VISIT_REDEMPTION_LINK"),
+        (e.SPONSORED_QUEST_SHEET = "SPONSORED_QUEST_SHEET"),
+        (e.GAME_PROFILE_OPEN = "GAME_PROFILE_OPEN"),
+        (e.GAME_STORE_OPEN_GAME_LINK = "GAME_STORE_OPEN_GAME_LINK"),
         e
     );
 })({});
@@ -208,7 +211,7 @@ async function x(e) {
     w({
         questId: t,
         event: y.rMx.QUEST_CONTENT_CLICKED,
-        properties: S(v({}, P(n, o, s), (0, l.Z)()), {
+        properties: T(v({}, P(n, o, s), (0, l.Z)()), {
             cta_name: r,
             quest_status: null != _ ? N(_) : null,
             impression_id: c,
@@ -240,7 +243,7 @@ function j() {
     let e = (0, _.WD)();
     return r.useCallback(
         (t) => {
-            w(S(v({}, t), { properties: S(v({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
+            w(T(v({}, t), { properties: T(v({}, t.properties), { impression_id: null == e ? void 0 : e.getId() }) }));
         },
         [e],
     );
@@ -263,7 +266,7 @@ function M() {
                 e({
                     questId: n,
                     event: y.rMx.QUEST_CONTENT_CLICKED,
-                    properties: S(v({}, P(r, s, c), (0, l.Z)()), {
+                    properties: T(v({}, P(r, s, c), (0, l.Z)()), {
                         cta_name: o,
                         quest_status: null != _ ? N(_) : null,
                         click_id: (0, i.Z)(),

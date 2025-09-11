@@ -169,13 +169,22 @@ let P = (e) => {
             : null;
     },
     x = (e) => {
-        let { taskDetails: t, popoutTargetElementRef: n, onGameSheetOpened: i, onGameSheetClosed: o } = e,
-            { applications: s } = t;
+        let {
+                quest: t,
+                sourceQuestContent: n,
+                taskDetails: i,
+                popoutTargetElementRef: o,
+                onGameSheetOpened: s,
+                onGameSheetClosed: l,
+            } = e,
+            { applications: c } = i;
         return (0, r.jsx)(E.Z, {
-            applications: null != s ? s : [],
-            targetElementRef: n,
-            onGameSheetOpened: i,
-            onGameSheetClosed: o,
+            quest: t,
+            sourceQuestContent: n,
+            applications: null != c ? c : [],
+            targetElementRef: o,
+            onGameSheetOpened: s,
+            onGameSheetClosed: l,
             children: (e) =>
                 (0, r.jsx)(
                     a.z,
@@ -297,6 +306,8 @@ let P = (e) => {
                         }))
                       : y && (0, f.Pb)(n)
                         ? (O = (0, r.jsx)(x, {
+                              quest: n,
+                              sourceQuestContent: i,
                               taskDetails: d,
                               popoutTargetElementRef: _,
                               onGameSheetOpened: h,

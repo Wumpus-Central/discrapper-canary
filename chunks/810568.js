@@ -46,7 +46,7 @@ var r = n(772848),
             (e.GuildProfile = "guild_profile"),
             (e.MiniGameProfile = "mini_game_profile"),
             (e.GameMention = "game_mention"),
-            (e.QuestBar = "quest_bar"),
+            (e.GameSheet = "game_sheet"),
             e
         );
     })({}),

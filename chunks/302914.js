@@ -56,13 +56,22 @@ function c(e, t) {
     );
 }
 function u(e) {
-    let { applications: t, popoutTargetElementRef: n, onGameSheetOpened: o, onGameSheetClosed: l } = e;
+    let {
+        quest: t,
+        sourceQuestContent: n,
+        applications: o,
+        popoutTargetElementRef: l,
+        onGameSheetOpened: u,
+        onGameSheetClosed: d,
+    } = e;
     return (e) =>
         (0, r.jsx)(a.Z, {
-            applications: null != t ? t : [],
-            targetElementRef: n,
-            onGameSheetOpened: o,
-            onGameSheetClosed: l,
+            quest: t,
+            sourceQuestContent: n,
+            applications: null != o ? o : [],
+            targetElementRef: l,
+            onGameSheetOpened: u,
+            onGameSheetClosed: d,
             children: (t, n) =>
                 (0, r.jsx)(
                     i.P3F,

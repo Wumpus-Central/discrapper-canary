@@ -39,6 +39,7 @@ var r = (function (e) {
         (e[(e.INVALID_QUEST_EMBED = 35)] = "INVALID_QUEST_EMBED"),
         (e[(e.NOT_SHAREABLE_QUEST_EMBED = 36)] = "NOT_SHAREABLE_QUEST_EMBED"),
         (e[(e.QUEST_HOME_MOVE_CALLOUT_DISCOVER = 37)] = "QUEST_HOME_MOVE_CALLOUT_DISCOVER"),
+        (e[(e.SPONSORED_QUEST_SHEET = 38)] = "SPONSORED_QUEST_SHEET"),
         e
     );
 })({});
