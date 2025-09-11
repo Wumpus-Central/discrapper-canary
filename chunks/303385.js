@@ -25,7 +25,8 @@ let p = 64,
             v = y ? 70 : 48,
             I = y ? 12 : 8,
             T = y ? -74 : -48,
-            S = y ? 2 : 6;
+            S = y ? 2 : 6,
+            A = 12;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.animated.div, {
@@ -51,6 +52,7 @@ let p = 64,
                     },
                     children: (0, r.jsx)(u.Z, {
                         learnMoreStyle: "text",
+                        learnMoreFontSize: i ? (v / p) * A : void 0,
                         quest: t,
                         questContent: l.jn.QUEST_BAR_V2,
                         location: d.dr.QUESTS_BAR,
