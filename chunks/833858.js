@@ -1,8 +1,8 @@
 n.d(t, {
-    Fe: () => g,
-    O8: () => T,
-    V: () => v,
-    tV: () => I,
+    Fe: () => E,
+    O8: () => S,
+    V: () => I,
+    tV: () => T,
 }),
     n(35282);
 var r = n(970683),
@@ -19,10 +19,11 @@ var r = n(970683),
     p = n(105196),
     h = n(346554),
     m = n(444305);
-function g(e) {
-    return null == e ? [null, null] : e.split(":");
+let g = [null, null];
+function E(e) {
+    return null == e ? g : e.split(":");
 }
-let E = () => ({
+let b = () => ({
         [a.tN.CHILLING]: {
             title: s.intl.string(s.t["vkpn7+"]),
             icon: f,
@@ -48,7 +49,7 @@ let E = () => ({
             icon: m,
         },
     }),
-    b = () => ({
+    y = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             icon: u,
@@ -70,7 +71,7 @@ let E = () => ({
             icon: r.FG,
         },
     }),
-    y = () => ({
+    O = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             icon: i.GsA,
@@ -92,7 +93,7 @@ let E = () => ({
             icon: i.Xbz,
         },
     }),
-    O = () => ({
+    v = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTE),
             emoji: {
@@ -129,38 +130,38 @@ let E = () => ({
             },
         },
     }),
-    v = (e) => {
+    I = (e) => {
         switch (e) {
             case "original":
             default:
-                return E();
-            case "illocons":
                 return b();
-            case "icons":
+            case "illocons":
                 return y();
-            case "twemoji":
+            case "icons":
                 return O();
+            case "twemoji":
+                return v();
         }
     },
-    I = function (e) {
+    T = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "original";
         if ((null == e ? void 0 : e.type) !== o.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
-        let n = g(e.state),
+        let n = E(e.state),
             r = n[0];
         if (r === a.tN.CUSTOM) return null;
-        let i = v(n.length > 1 ? n[1] : t);
+        let i = I(n.length > 1 ? n[1] : t);
         return r in i ? i[r] : null;
     },
-    T = function (e) {
+    S = function (e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "original";
         return (null == e ? void 0 : e.type) !== o.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null
             ? null
-            : g(e.state)[0] === a.tN.CUSTOM
+            : E(e.state)[0] === a.tN.CUSTOM
               ? null == e
                   ? void 0
                   : e.details
-              : null == (t = I(e, n))
+              : null == (t = T(e, n))
                 ? void 0
                 : t.title;
     };
