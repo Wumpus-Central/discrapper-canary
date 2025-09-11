@@ -12561,7 +12561,6 @@
   "ZQ37tL": "Members are automatically assigned to this role. It cannot be manually assigned to or removed from members.",
   "FuXsWl": "This role is managed by an integration: $[!!{name}!!]({{integrationNameHook}}). It cannot be manually assigned to members. You can remove the integration to remove this role.",
   "oF6FYW": "This role is automatically managed by Discord for Server Boosting. It cannot be manually assigned to members or deleted.",
-  "NqRten": "This role is automatically managed by Discord for Server Boosting. It cannot be manually assigned to members or deleted. Its role style is gradient by default, but can be edited.",
   "5S3sQE": "Manage App",
   "ALLIgY": "Manage Authorized App",
   "nAw15O": "Manage Channel",
