@@ -58905,7 +58905,8 @@ h3.improved__1689b:after {
 }
 
 .rewardTileContainer__8a22c {
-    position: absolute;
+    position: relative;
+    transform-origin: left top;
     will-change: transform
 }
 
@@ -58913,12 +58914,24 @@ h3.improved__1689b:after {
     width: 56px
 }
 
+.rewardTile__8a22c {
+    margin-right: 12px
+}
+
 .rewardHighlightLogoCTA__8a22c {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    will-change: transform;
     z-index: 2
+}
+
+.rewardHighlightLogoCTAHeightBoost__8a22c {
+    box-sizing: border-box;
+    flex: 1;
+    padding: 6px 0;
+    transform-origin: left
 }
 
 .partnerBranding__8a22c {
@@ -59072,8 +59085,18 @@ h3.improved__1689b:after {
     pointer-events: none
 }
 
+.rewardHighlightLogotypeHeightBoost_a86e4f {
+    height: 32px;
+    max-width: 130px
+}
+
 .rewardHighlightLogotype_a86e4f {
     height: 24px
+}
+
+.partnerBranding_a86e4f {
+    margin-bottom: 8px;
+    transform-origin: top left
 }
 
 .ctaButtons_a77fde {
@@ -60004,7 +60027,7 @@ h3.improved__1689b:after {
 
 .contentCollapsedBackgroundWrapper__636a2 {
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    height: 100%;
+    height: 50%;
     left: 0;
     overflow: hidden;
     pointer-events: none;
@@ -60031,12 +60054,66 @@ h3.improved__1689b:after {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: -50px;
-    filter: blur(30px) brightness(.6) saturate(110%);
-    left: -50px;
+    bottom: -20px;
+    filter: brightness(.6) saturate(110%);
+    left: -20px;
     position: absolute;
-    right: -50px;
-    top: -50px
+    right: -20px;
+    top: -20px
+}
+
+.blur100__636a2 {
+    filter: blur(30px) brightness(.6) saturate(110%);
+    -webkit-mask: linear-gradient(90deg, #000 10%, transparent 35%);
+    mask: linear-gradient(90deg, #000 10%, transparent 35%);
+    z-index: 4
+}
+
+.blur60__636a2 {
+    filter: blur(18px) brightness(.6) saturate(110%);
+    -webkit-mask: linear-gradient(90deg, #000 35%, transparent 60%);
+    mask: linear-gradient(90deg, #000 35%, transparent 60%)
+}
+
+.blur30__636a2 {
+    filter: blur(9px) brightness(.6) saturate(110%);
+    -webkit-mask: linear-gradient(90deg, #000 60%, transparent 85%);
+    mask: linear-gradient(90deg, #000 60%, transparent 85%)
+}
+
+.shine__636a2 {
+    border-radius: inherit;
+    color: var(--opacity-white-80);
+    filter: blur(30px);
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    z-index: 200
+}
+
+.reduce-motion .shine__636a2 {
+    opacity: 0
+}
+
+.full-motion .shine__636a2 {
+    animation-delay: .75s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: Shine__636a2;
+    animation-timing-function: ease-in-out
+}
+
+@keyframes Shine__636a2 {
+    0% {
+        transform: translate3d(-130%, 0, 0)
+    }
+
+    to {
+        transform: translate3d(300%, 0, 0)
+    }
 }
 
 .content__60686 {
