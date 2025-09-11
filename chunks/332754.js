@@ -88,8 +88,7 @@ let E = {
                         },
                     )
                   : t === m.c2C.REQUIRE_SAFETY_FLOWS
-                    ? (0, s.bu)({ location: "verification-safety-flows" }) &&
-                      (0, a.q4)(
+                    ? (0, a.q4)(
                           (e) => {
                               let { closeLayer: t } = e;
                               return (0, r.jsx)(c.Z, { onClose: t });
