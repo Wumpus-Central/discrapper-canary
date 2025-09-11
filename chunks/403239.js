@@ -8,7 +8,7 @@ var n = r(647438),
     s = r(592183),
     u = r(517157);
 function d(e) {
-    let { dropRef: t, dragRef: r, userId: d, widget: g, index: f, disableInteraction: b = !1 } = e,
+    let { dropRef: t, dragRef: r, userId: d, widget: f, index: g, disableInteraction: b = !1 } = e,
         p = (0, u.Z)(d),
         O = (0, c.zPA)(),
         { isDragging: y, currentItem: j } = (0, i.f)((e) => ({
@@ -26,10 +26,10 @@ function d(e) {
         [, v, x] = (0, l.c)({
             type: "WIDGET",
             item: {
-                widgetId: g.id,
-                index: f,
-                widget: g,
-                originalIndex: null != f ? f : 0,
+                widgetType: f.type,
+                index: g,
+                widget: f,
+                originalIndex: null != g ? g : 0,
             },
             canDrag: () => !b,
             collect: (e) => ({
@@ -47,7 +47,7 @@ function d(e) {
             let t = null,
                 r = e.getItem();
             return (
-                null != r && e.isOver() && e.canDrop() && r.widgetId !== g.id && (t = r.originalIndex),
+                null != r && e.isOver() && e.canDrop() && r.widgetType !== f.type && (t = r.originalIndex),
                 {
                     handlerId: e.getHandlerId(),
                     dragSourcePosition: t,
@@ -55,14 +55,14 @@ function d(e) {
             );
         },
         drop: (e) => {
-            let t = null != f ? f : 0;
+            let t = null != g ? g : 0;
             m(e.index, t), (e.index = t);
         },
         hover: (e, r) => {
             var n;
             if (b || O || null == t.current || !r.isOver({ shallow: !0 })) return;
             let i = e.index,
-                l = null != f ? f : 0;
+                l = null != g ? g : 0;
             if (i === l) return;
             let o = null == (n = t.current) ? void 0 : n.getBoundingClientRect(),
                 a = (o.bottom - o.top) / 2,
@@ -72,7 +72,7 @@ function d(e) {
             (!(i < l) || !(s < a)) && ((i > l && s > a) || (m(i, l), (e.index = l)));
         },
     });
-    return null == f || b
+    return null == g || b
         ? {
               isDragging: !1,
               dragSourcePosition: null,
@@ -80,7 +80,7 @@ function d(e) {
         : (v(r),
           w(t),
           {
-              isDragging: y && (null == j ? void 0 : j.widgetId) === g.id,
+              isDragging: y && (null == j ? void 0 : j.widgetType) === f.type,
               dragSourcePosition: h,
           });
 }
