@@ -118,19 +118,20 @@ function P(e) {
         ]);
     let { setDevice: P, Icon: w, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = R(t),
         { analyticsLocations: j } = (0, d.ZP)(),
-        M = (0, s.e7)([f.Z], () => f.Z.theme),
-        [k, U] = i.useState(u),
+        k = (0, s.e7)([f.Z], () => f.Z.theme),
+        [M, U] = i.useState(u),
         G = L(a),
         [B, Z] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
         V = null != _ ? _ : F,
         H = (0, s.e7)([h.Z], () => D(h.Z)),
-        Y = (0, r.jsx)(c.R94, {
+        { showDeviceSelectionImprovements: Y } = (0, g.V)({ location: "".concat(G, "/SingleSelectDevices") }),
+        W = (0, r.jsx)(c.R94, {
             type: c.R94.Types.DESCRIPTION,
             className: I.marginTop8,
             children: x(),
         }),
-        W = i.useCallback(
+        K = i.useCallback(
             (e) => {
                 if (e === N)
                     U(!0),
@@ -152,17 +153,20 @@ function P(e) {
             },
             [t, G, B.length, Z.length, j, y, P],
         );
-    function K(e) {
+    function z(e) {
         let t,
             i,
             { label: a, value: s } = e,
             u = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             d = a,
             f = (0, E.rX)(a);
-        null != f && ((0, g.M)({ location: "".concat(G, "/SingleSelectDevices") }), (d = f.prefix), (t = f.subName));
+        null != f &&
+            ((0, g.M)({ location: "".concat(G, "/SingleSelectDevices.defaultRenderOptionLabel") }),
+            (d = f.prefix),
+            (t = f.subName));
         let _ = p.Z.getCertifiedDeviceName(s, d);
         if (p.Z.isCertified(s)) {
-            let e = (0, l.ap)(M) ? n(561259) : n(887695);
+            let e = (0, l.ap)(k) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
                 alt: O.intl.string(O.t.smSKsr),
@@ -207,7 +211,7 @@ function P(e) {
             ],
         });
     }
-    function z() {
+    function q() {
         let e = (e) => {
                 let { id: t, name: n } = e;
                 return {
@@ -216,7 +220,7 @@ function P(e) {
                 };
             },
             t = B.map(e);
-        if (k || 0 === Z.length) {
+        if (M || 0 === Z.length) {
             let n = Z.map(e);
             return t.concat(n);
         }
@@ -236,21 +240,21 @@ function P(e) {
                 S(
                     {
                         value: V,
-                        onChange: W,
-                        options: z(),
+                        onChange: K,
+                        options: q(),
                         isDisabled: !H,
                         popoutPosition: "bottom",
-                        renderOptionLabel: (e) => K(e, !0),
+                        renderOptionLabel: (e) => z(e, Y),
                         renderOptionValue: (e) => {
                             let [t] = e;
-                            return K(t);
+                            return z(t);
                         },
                         optionClassName: v.singleSelectOption,
                     },
                     C,
                 ),
             ),
-            !H && Y,
+            !H && W,
         ],
     });
 }
