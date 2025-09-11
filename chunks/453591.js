@@ -57,8 +57,11 @@ function m() {
                 let i = await (0, u.Ul)({ subscriptionId: null != (r = null == t ? void 0 : t.id) ? r : "" });
                 (null == i ? void 0 : i.entitlement)
                     ? ((0, d.j)({ campaignID: f.C }), null == n || n(i.entitlement))
-                    : (e || h(),
-                      l.Z.captureException(Error("Failed to redeem September 2025 Marketing Moment reward")));
+                    : ((null == i ? void 0 : i.reason) === "reward_already_granted"
+                          ? ((0, d.j)({ campaignID: f.C }),
+                            l.Z.captureMessage("September 2025 Marketing Moment reward already granted"))
+                          : l.Z.captureException(Error("Failed to redeem September 2025 Marketing Moment reward")),
+                      e || h());
             } catch (e) {
                 l.Z.captureException(e);
             } finally {
