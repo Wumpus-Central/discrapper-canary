@@ -251,7 +251,9 @@ class e_ {
         null != e_._lastInstance && (e_._lastInstance.frequentlyUsed = null);
     }
     static resetFrequentlyUsedReactionEmojis() {
-        null != e_._lastInstance && (e_._lastInstance.frequentlyUsedReactionEmojis = null);
+        null != e_._lastInstance &&
+            ((e_._lastInstance.frequentlyUsedReactionEmojis = null),
+            (e_._lastInstance.frequentlyUsedReactionNamesAndIds = null));
     }
     static resetFavorites() {
         null != e_._lastInstance &&
@@ -313,12 +315,35 @@ class e_ {
             t = (0, k.Z)(e);
         return (this.frequentlyUsed = [...t.values()]), this.frequentlyUsed;
     }
-    getFrequentlyUsedReactionEmojisWithoutFetchingLatest() {
-        if ((this.ensureDisambiguated(), null != this.frequentlyUsedReactionEmojis))
-            return this.frequentlyUsedReactionEmojis;
+    rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest() {
+        if (
+            (this.ensureDisambiguated(),
+            null != this.frequentlyUsedReactionEmojis && null != this.frequentlyUsedReactionNamesAndIds)
+        )
+            return {
+                frequentlyUsedReactionEmojis: this.frequentlyUsedReactionEmojis,
+                frequentlyUsedReactionNamesAndIds: this.frequentlyUsedReactionNamesAndIds,
+            };
         let e = eh.frequently.map((e) => (null != e.id ? this.getById(e.id) : j.ZP.getByName(e.name))).filter(w.lm),
             t = (0, k.Z)(e);
-        return (this.frequentlyUsedReactionEmojis = [...t.values()]), this.frequentlyUsedReactionEmojis;
+        return (
+            (this.frequentlyUsedReactionEmojis = [...t.values()]),
+            (this.frequentlyUsedReactionNamesAndIds = new Set(t.keys())),
+            {
+                frequentlyUsedReactionEmojis: this.frequentlyUsedReactionEmojis,
+                frequentlyUsedReactionNamesAndIds: this.frequentlyUsedReactionNamesAndIds,
+            }
+        );
+    }
+    getFrequentlyUsedReactionEmojisWithoutFetchingLatest() {
+        return this.rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest().frequentlyUsedReactionEmojis;
+    }
+    isFrequentlyUsedReactionEmojiWithoutFetchingLatest(e) {
+        var t;
+        let { frequentlyUsedReactionNamesAndIds: n } = this.rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest();
+        if (null != e.id) return n.has(e.id);
+        let r = null != (t = j.ZP.convertSurrogateToBase(e.surrogates)) ? t : e;
+        return n.has(r.name);
     }
     rebuildFavoriteEmojisWithoutFetchingLatest() {
         var e, t;
@@ -397,6 +422,7 @@ class e_ {
         (this.emoticonRegex = null),
             (this.frequentlyUsed = null),
             (this.frequentlyUsedReactionEmojis = null),
+            (this.frequentlyUsedReactionNamesAndIds = null),
             (this.disambiguatedEmoji = []),
             (this.unicodeAliases = Object.create(null)),
             (this.customEmojis = Object.create(null)),
@@ -476,6 +502,7 @@ class e_ {
             F(this, "unicodeAliases", void 0),
             F(this, "newlyAddedEmoji", null),
             F(this, "frequentlyUsedReactionEmojis", null),
+            F(this, "frequentlyUsedReactionNamesAndIds", null),
             F(this, "isFavoriteEmojiWithoutFetchingLatest", (e) => {
                 var t;
                 if (null == e) return !1;
