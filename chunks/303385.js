@@ -21,12 +21,13 @@ let p = 64,
                 questConfig: t.config,
             }),
             y = null == b ? void 0 : b.progressBlur,
-            O = null == b ? void 0 : b.shineWipe,
-            v = y ? 70 : 48,
-            I = y ? 12 : 8,
-            T = y ? -74 : -48,
-            S = y ? 2 : 6,
-            A = 12;
+            O = (null == b ? void 0 : b.label1) || (null == b ? void 0 : b.label2),
+            v = null == b ? void 0 : b.shineWipe,
+            I = y ? 70 : 48,
+            T = y ? 12 : 8,
+            S = y ? -74 : -48,
+            A = y ? 2 : O ? -4 : 6,
+            C = 12;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.animated.div, {
@@ -44,7 +45,7 @@ let p = 64,
                                 }),
                                 n.to({
                                     range: [0, 1],
-                                    output: [1, p / v],
+                                    output: [1, p / I],
                                 }),
                             ],
                             (e, t, n) => "translate(".concat(e, "px, ").concat(t, "px) scale(").concat(n, ")"),
@@ -52,34 +53,37 @@ let p = 64,
                     },
                     children: (0, r.jsx)(u.Z, {
                         learnMoreStyle: "text",
-                        learnMoreFontSize: i ? (v / p) * A : void 0,
+                        learnMoreFontSize: i ? (I / p) * C : void 0,
                         quest: t,
                         questContent: l.jn.QUEST_BAR_V2,
                         location: d.dr.QUESTS_BAR,
                         autoplay: i && !E,
                         sourceQuestContent: l.jn.QUEST_BAR_V2,
-                        showShine: !O,
+                        showShine: !v,
                         style: {
-                            width: v,
-                            height: v,
-                            marginRight: I,
-                            borderRadius: (v / p) * h,
+                            width: I,
+                            height: I,
+                            marginRight: T,
+                            borderRadius: (I / p) * h,
                         },
                     }),
                 }),
                 (0, r.jsxs)(o.animated.div, {
-                    className: a()(_.rewardHighlightLogoCTA, { [_.rewardHighlightLogoCTAHeightBoost]: y }),
+                    className: a()(_.rewardHighlightLogoCTA, {
+                        [_.rewardHighlightLogoCTAHeightBoost]: y,
+                        [_.rewardHighlightLogoCTALabel]: O,
+                    }),
                     style: {
-                        height: y ? v : void 0,
+                        height: y ? I : void 0,
                         transform: (0, o.to)(
                             [
                                 n.to({
                                     range: [0, 1],
-                                    output: [0, T],
+                                    output: [0, S],
                                 }),
                                 n.to({
                                     range: [0, 1],
-                                    output: [0, S],
+                                    output: [0, A],
                                 }),
                             ],
                             (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
@@ -87,7 +91,7 @@ let p = 64,
                     },
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()({ [_.partnerBranding]: !y }),
+                            className: a()({ [_.partnerBranding]: !y && !O }),
                             children: g,
                         }),
                         y &&
@@ -100,17 +104,20 @@ let p = 64,
                                 },
                             }),
                         (0, r.jsx)(o.animated.div, {
-                            className: _.rewardHighlightCTA,
+                            className: a()(_.rewardHighlightCTA, { [_.rewardHighlightCTALabel]: O }),
                             style: {
                                 opacity: n.to({
                                     range: [0, 1],
-                                    output: [0.7, 0],
+                                    output: [O ? 1 : 0.7, 0],
                                 }),
                             },
                             children: (0, r.jsx)(s.Text, {
                                 color: "always-white",
-                                variant: "text-xs/medium",
-                                children: f.intl.string(f.t["1Wvve3"]),
+                                lineClamp: 1,
+                                variant: O ? "text-sm/medium" : "text-xs/medium",
+                                children: f.intl.string(
+                                    (null == b ? void 0 : b.label2) ? f.t["3mgEQU"] : f.t["1Wvve3"],
+                                ),
                             }),
                         }),
                     ],
