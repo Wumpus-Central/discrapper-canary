@@ -1,57 +1,57 @@
-r.d(t, { default: () => p }), r(388685);
-var n = r(951288),
-    i = r(647438),
-    l = r(82659),
-    c = r(755721),
-    s = r(481060),
-    a = r(63063),
-    o = r(981631),
-    u = r(388032);
-function d(e) {
+n.d(t, { default: () => p }), n(388685);
+var r = n(951288),
+    i = n(647438),
+    l = n(82659),
+    c = n(755721),
+    s = n(481060),
+    a = n(63063),
+    o = n(981631),
+    u = n(388032);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = r[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function b(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var r = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function p(e) {
-    let { modalProps: t, onConfirm: r } = e,
+    let { modalProps: t, onConfirm: n } = e,
         [p, g] = i.useState({
             Account: {
                 value: "Account",
@@ -78,11 +78,6 @@ function p(e) {
                 label: u.intl.string(u.t["0dO1t7"]),
                 checked: !1,
             },
-            Programs: {
-                value: "Programs",
-                label: u.intl.string(u.t.M4ddeX),
-                checked: !1,
-            },
             Servers: {
                 value: "Servers",
                 label: u.intl.string(u.t.JN9c39),
@@ -96,7 +91,7 @@ function p(e) {
         }),
         [v, y] = i.useState(!1),
         O = Object.values(p).some((e) => e.checked);
-    return (0, n.jsx)(l.Modal, {
+    return (0, r.jsx)(l.Modal, {
         title: u.intl.string(u.t.jxXMEx),
         subtitle: u.intl.format(u.t.fSv59f, { helpdeskArticle: a.Z.getArticleURL(o.BhN.GDPR_PACKAGE_CONTENTS) }),
         transitionState: t.transitionState,
@@ -116,26 +111,26 @@ function p(e) {
                     let e = Object.keys(p)
                         .filter((e) => p[e].checked)
                         .map((e) => p[e].value);
-                    null == r || r(e), t.onClose();
+                    null == n || n(e), t.onClose();
                 },
                 variant: "primary",
             },
         ],
-        children: (0, n.jsxs)(s.Kqy, {
+        children: (0, r.jsxs)(s.Kqy, {
             direction: "vertical",
             gap: 8,
             children: [
                 Object.keys(p).map((e) => {
-                    let { label: t, checked: r } = p[e];
-                    return (0, n.jsx)(
+                    let { label: t, checked: n } = p[e];
+                    return (0, r.jsx)(
                         c.$q,
                         {
                             type: c.M0.INVERTED,
-                            value: r,
-                            onChange: (t, r) => {
-                                g((t) => b(d({}, t), { [e]: b(d({}, t[e]), { checked: r }) })), r && v && y(!1);
+                            value: n,
+                            onChange: (t, n) => {
+                                g((t) => d(b({}, t), { [e]: d(b({}, t[e]), { checked: n }) })), n && v && y(!1);
                             },
-                            children: (0, n.jsx)(s.Text, {
+                            children: (0, r.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 children: t,
                             }),
@@ -144,7 +139,7 @@ function p(e) {
                     );
                 }),
                 v &&
-                    (0, n.jsx)(s.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "text-danger",
                         children: u.intl.string(u.t.W1Rw3N),
