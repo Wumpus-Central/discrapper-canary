@@ -32,7 +32,7 @@ n.d(t, {
     CoT: () => P,
     Cyb: () => E.Cy,
     DJE: () => ri,
-    DJj: () => ek,
+    DJj: () => eM,
     DZw: () => ex,
     E07: () => tC,
     EKQ: () => E.EK,
@@ -77,7 +77,7 @@ n.d(t, {
     JwP: () => ng,
     K3D: () => rU,
     KA4: () => tw,
-    KFR: () => nM,
+    KFR: () => nk,
     KJ3: () => rL,
     KsC: () => R,
     L4X: () => eY,
@@ -116,7 +116,7 @@ n.d(t, {
     PUi: () => nZ,
     Pbq: () => t7,
     Plq: () => E.Pl,
-    PrB: () => M,
+    PrB: () => k,
     PrS: () => ty,
     PsQ: () => tz,
     PyE: () => E.Py,
@@ -143,7 +143,7 @@ n.d(t, {
     STv: () => ey,
     SaU: () => tV,
     Sap: () => ns,
-    Sbl: () => tM,
+    Sbl: () => tk,
     Sc2: () => eS,
     Skl: () => E.Sk,
     T23: () => r0,
@@ -182,7 +182,7 @@ n.d(t, {
     YeM: () => ed,
     Ypu: () => es,
     Z5c: () => eP,
-    Z8P: () => eM,
+    Z8P: () => ek,
     Z9p: () => nb,
     ZUi: () => W,
     ZY5: () => tU,
@@ -250,7 +250,7 @@ n.d(t, {
     j3N: () => eG,
     j8d: () => E.j8,
     jXE: () => tB,
-    jm8: () => rM,
+    jm8: () => rk,
     jsM: () => rb,
     jwA: () => nL,
     kEZ: () => B,
@@ -280,12 +280,12 @@ n.d(t, {
     pAY: () => tg,
     pJs: () => x,
     pKx: () => E.pK,
-    pM4: () => k,
+    pM4: () => M,
     pNK: () => N,
     pTL: () => rQ,
     pjP: () => n6,
     pmI: () => nt,
-    q5t: () => tk,
+    q5t: () => tM,
     q9n: () => nK,
     qAy: () => tZ,
     qWG: () => rW,
@@ -303,7 +303,7 @@ n.d(t, {
     sFg: () => eu,
     sHY: () => rc,
     scU: () => tT,
-    si2: () => rk,
+    si2: () => rM,
     t4x: () => tK,
     tG9: () => eV,
     tHP: () => eL,
@@ -346,7 +346,7 @@ n.d(t, {
     ys_: () => e6,
     z7k: () => tS,
     zMe: () => E.zM,
-    zUn: () => nk,
+    zUn: () => nM,
     zYc: () => rA,
     zo9: () => r2,
 }),
@@ -671,10 +671,10 @@ var v = (function (e) {
     j = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     U = (function (e) {
@@ -2140,8 +2140,8 @@ var ew = (function (e) {
 let ex = 100,
     eL = 200,
     ej = 50,
-    eM = 50,
-    ek = 25,
+    ek = 50,
+    eM = 25,
     eU = 200,
     eG = 100,
     eB = 250,
@@ -2530,7 +2530,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2613,7 +2613,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return (e.JOIN = "join"), (e.ASK_TO_JOIN = "ask to join"), (e.LAUNCH = "launch"), (e.SPECTATE = "spectate"), e;
     })({}),
     tU = (function (e) {
@@ -4763,7 +4763,9 @@ var nO = (function (e) {
             (e.ICYMI_FEED_EMPTY_LOADING_SEEN = "feed_empty_loading_seen"),
             (e.ICYMI_FEED_EMPTY_LOADING_ABANDONED = "feed_empty_loading_abandoned"),
             (e.ICYMI_FEED_EMPTY_LOADING_COMPLETE = "feed_empty_loading_complete"),
+            (e.FEED_SESSION_STARTED = "feed_session_started"),
             (e.FEED_SESSION_COMPLETED = "feed_session_completed"),
+            (e.FEED_ITEM_1S_DWELLED = "feed_item_1s_dwelled"),
             (e.FEED_ITEM_DWELLED = "feed_item_dwelled"),
             (e.MOBILE_WEB_HANDOFF_FAILURE = "mobile_web_handoff_failure"),
             (e.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED = "premium_uncancel_winback_modal_viewed"),
@@ -5473,7 +5475,7 @@ var nx = (function (e) {
     nj = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
-    nM = (function (e) {
+    nk = (function (e) {
         return (
             (e.ALL = "ALL"),
             (e.UNKNOWN = "UNKNOWN"),
@@ -5504,7 +5506,7 @@ var nx = (function (e) {
             e
         );
     })({}),
-    nk = (function (e) {
+    nM = (function (e) {
         return (
             (e.NAME = "name"),
             (e.DESCRIPTION = "description"),
@@ -6600,7 +6602,7 @@ var rL = (function (e) {
     rj = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rM = (function (e) {
+    rk = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6611,7 +6613,7 @@ var rL = (function (e) {
             e
         );
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
