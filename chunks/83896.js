@@ -1,4 +1,4 @@
-n.d(t, { I: () => O });
+n.d(t, { I: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -47,17 +47,19 @@ function O(e) {
                 }));
         }, [j, E, n.guild_id, n.id]),
         Z = i.useCallback(() => {
-            if (!j || !S) return;
-            let e = t.state;
-            if (e === y.tN.CUSTOM) {
-                if (null == t.details || null == t.emoji) return;
-                (0, f._s)(t.details, t.emoji, !0);
-            } else (0, f.Zx)(e, !0);
-            h.default.track(_.rMx.SWIPE_HANG_STATUS, {
-                guild_id: n.guild_id,
-                channel_id: n.id,
-                media_session_id: I,
-            });
+            if (!j || !S || null == t.state) return;
+            let [e] = (0, m.Fe)(t.state);
+            if (null != e) {
+                if (e === y.tN.CUSTOM) {
+                    if (null == t.details || null == t.emoji) return;
+                    (0, f._s)(t.details, t.emoji, !0);
+                } else (0, f.Zx)(e, !0);
+                h.default.track(_.rMx.SWIPE_HANG_STATUS, {
+                    guild_id: n.guild_id,
+                    channel_id: n.id,
+                    media_session_id: I,
+                });
+            }
         }, [j, S, t, I, n.guild_id, n.id]);
     return (0, r.jsxs)("div", {
         ref: O,
