@@ -53393,6 +53393,11 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     padding: 12px 20px 23px
 }
 
+.badgeLeftAligned_c3d04b {
+    left: 16px;
+    right: auto
+}
+
 .container__85f5c {
     display: flex;
     gap: 32px;
@@ -88843,7 +88848,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
