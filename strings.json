@@ -8303,6 +8303,7 @@
   "doslJi": "You cannot boost while your subscription is paused. [Manage subscription](Manage subscription)",
   "CduWAg": "You cannot manage Server Boosts while your Nitro subscription is paused.",
   "k6haR0": "To manage your Server Boosts, please [open the Discord desktop app](open the Discord desktop app).",
+  "uxYBER": "To manage your Server Boosts, please [open the Discord mobile app](open the Discord mobile app) and head to Settings -> Server Boost.",
   "LiLRRU": "Transfer is unavailable while your Nitro Subscription is paused",
   "6Kwwur": "Unknown Server",
   "kqC5vr": "Don't see the server you're looking for? $[Boost any server here.]({{boostAnyGuildHook}})",
