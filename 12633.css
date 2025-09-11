@@ -60062,8 +60062,19 @@ h3.improved__1689b:after {
     top: -20px
 }
 
+.blur__636a2 {
+    bottom: -50px;
+    left: -50px;
+    right: -50px;
+    top: -50px
+}
+
+.blur__636a2,
 .blur100__636a2 {
-    filter: blur(30px) brightness(.6) saturate(110%);
+    filter: blur(30px) brightness(.6) saturate(110%)
+}
+
+.blur100__636a2 {
     -webkit-mask: linear-gradient(90deg, #000 10%, transparent 35%);
     mask: linear-gradient(90deg, #000 10%, transparent 35%);
     z-index: 4

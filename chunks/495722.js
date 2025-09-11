@@ -207,27 +207,31 @@ function z(e) {
                         opacity: a.to([0, 1], [1, 0]),
                     },
                     children: [
-                        (null == P ? void 0 : P.progressBlur) &&
-                            (0, r.jsxs)(r.Fragment, {
-                                children: [
-                                    (0, r.jsx)("div", {
-                                        className: H.contentCollapsedBackground,
-                                        style: x,
-                                    }),
-                                    (0, r.jsx)("div", {
-                                        className: o()(H.contentCollapsedBackground, H.blur30),
-                                        style: x,
-                                    }),
-                                    (0, r.jsx)("div", {
-                                        className: o()(H.contentCollapsedBackground, H.blur60),
-                                        style: x,
-                                    }),
-                                    (0, r.jsx)("div", {
-                                        className: o()(H.contentCollapsedBackground, H.blur100),
-                                        style: x,
-                                    }),
-                                ],
-                            }),
+                        (null == P ? void 0 : P.progressBlur)
+                            ? (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)("div", {
+                                          className: H.contentCollapsedBackground,
+                                          style: x,
+                                      }),
+                                      (0, r.jsx)("div", {
+                                          className: o()(H.contentCollapsedBackground, H.blur30),
+                                          style: x,
+                                      }),
+                                      (0, r.jsx)("div", {
+                                          className: o()(H.contentCollapsedBackground, H.blur60),
+                                          style: x,
+                                      }),
+                                      (0, r.jsx)("div", {
+                                          className: o()(H.contentCollapsedBackground, H.blur100),
+                                          style: x,
+                                      }),
+                                  ],
+                              })
+                            : (0, r.jsx)("div", {
+                                  className: o()(H.contentCollapsedBackground, H.blur),
+                                  style: x,
+                              }),
                         (null == P ? void 0 : P.shineWipe) &&
                             (0, r.jsx)(_.ZX5, {
                                 className: H.shine,
