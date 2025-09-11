@@ -1,14 +1,18 @@
-n.d(t, { r: () => f });
+n.d(t, {
+    f: () => m,
+    r: () => g,
+});
 var r = n(951288),
-    i = n(442837);
-n(544891);
-var a = n(481060),
-    o = n(570140),
-    s = n(583434);
-n(960048);
-var l = n(176757),
-    c = n(266198);
-function u(e, t, n) {
+    i = n(442837),
+    a = n(544891),
+    o = n(481060),
+    s = n(570140),
+    l = n(583434),
+    c = n(960048),
+    u = n(176757),
+    d = n(266198),
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,33 +36,52 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function f() {
+let h = 3,
+    m = async (e) => {
+        let { campaignId: t } = e;
+        try {
+            let e = await a.tn.get({
+                url: f.ANM.MARKETING_CAMPAIGN_ELIGIBILITY(t),
+                rejectWithError: !1,
+                retries: h,
+            });
+            return (
+                s.Z.dispatch({
+                    type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCHED",
+                    isEligible: e.body.eligibility,
+                }),
+                e.body.eligibility
+            );
+        } catch (e) {
+            s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED" }), c.Z.captureException(e);
+        }
+    };
+function g() {
     let { isSeptemberMarketingMomentEntitlementCreated: e, isMarketingCampaignApplicationModalViewed: t } = (0, i.cj)(
-            [l.Z],
+            [u.Z],
             () => ({
-                isSeptemberMarketingMomentEntitlementCreated: l.Z.isSeptemberMarketingMomentEntitlementCreated,
-                isMarketingCampaignApplicationModalViewed: l.Z.isMarketingCampaignApplicationModalViewed,
+                isSeptemberMarketingMomentEntitlementCreated: u.Z.isSeptemberMarketingMomentEntitlementCreated,
+                isMarketingCampaignApplicationModalViewed: u.Z.isMarketingCampaignApplicationModalViewed,
             }),
         ),
-        { product: u } = (0, s.T)(c.Fw, !0);
+        { product: a } = (0, l.T)(d.Fw, !0);
     return (i) => {
-        let s = (null == i ? void 0 : i.sku_id) === c.Fw;
-        (e || s) &&
+        let l = (null == i ? void 0 : i.sku_id) === d.Fw;
+        (e || l) &&
             !t &&
-            null != u &&
-            (o.Z.dispatch({
+            null != a &&
+            (s.Z.dispatch({
                 type: "MARKETING_CAMPAIGN_APPLICATION_MODAL_VIEWED",
-                marketingCampaignId: c.Fw,
+                marketingCampaignId: d.Fw,
             }),
-            (0, a.ZDy)(async () => {
+            (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("75157").then(n.bind(n, 710658));
-                return (t) => (0, r.jsx)(e, d({ product: u }, t));
+                return (t) => (0, r.jsx)(e, p({ product: a }, t));
             }));
     };
 }
-n(981631);
