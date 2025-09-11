@@ -1,40 +1,42 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
-    l = n(624138),
-    c = n(845077),
-    o = n(132392),
-    s = n(118589),
-    u = n(535188),
-    d = n(856597),
-    f = n(241945),
-    p = n(388032),
-    m = n(104940);
-let y = n(575703);
-function h(e) {
+    l = n(480916),
+    o = n(17597),
+    c = n(624138),
+    s = n(845077),
+    u = n(132392),
+    d = n(118589),
+    f = n(535188),
+    p = n(856597),
+    m = n(241945),
+    y = n(388032),
+    g = n(104940);
+let h = n(575703);
+function E(e) {
     let { task: t, handleSubmit: n, disabled: l } = e,
-        [c, s] = i.useState(t),
-        f = i.useMemo(
+        [o, c] = i.useState(t),
+        s = i.useMemo(
             () => ({
-                task: c,
-                setTask: s,
+                task: o,
+                setTask: c,
             }),
-            [c, s],
+            [o, c],
         );
     return (
         i.useEffect(() => {
-            s(t);
+            c(t);
         }, [t]),
-        (0, r.jsx)(o.y.Provider, {
-            value: f,
+        (0, r.jsx)(u.y.Provider, {
+            value: s,
             children: (0, r.jsxs)(a.Kqy, {
                 direction: "horizontal",
                 justify: "start",
-                className: m.body,
+                className: g.body,
                 children: [
-                    (0, r.jsx)(d.Z, {}),
-                    (0, r.jsx)(u.Z, {
+                    (0, r.jsx)(p.Z, {}),
+                    (0, r.jsx)(f.Z, {
                         onSubmit: n,
                         disabled: l,
                     }),
@@ -43,28 +45,28 @@ function h(e) {
         })
     );
 }
-let g = function (e) {
+let x = function (e) {
     let { onClose: t } = e,
-        [n, o] = i.useState(null),
-        [u, d] = i.useState(!0),
-        [g, b] = i.useState(null),
-        [v, j] = i.useState(!1),
-        x = i.useCallback(async () => {
-            d(!0), b(null);
+        [n, u] = i.useState(null),
+        [f, p] = i.useState(!0),
+        [x, v] = i.useState(null),
+        [b, j] = i.useState(!1),
+        _ = i.useCallback(async () => {
+            p(!0), v(null);
             try {
                 var e;
-                let n = await (0, c.PA)();
+                let n = await (0, s.PA)();
                 if (null == n) return void t();
-                !(0, l.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
-                s.VZ.has(n.ui_component.component.type)
-                    ? o(n)
-                    : o({
+                !(0, c.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
+                d.VZ.has(n.ui_component.component.type)
+                    ? u(n)
+                    : u({
                           task_id: n.task_id,
-                          task_type: s.UA.REFRESH_APP,
+                          task_type: d.UA.REFRESH_APP,
                           assignment_id: n.assignment_id,
                           ui_component: {
                               component: {
-                                  type: s.NS.REFRESH_APP,
+                                  type: d.NS.REFRESH_APP,
                                   data: {},
                               },
                           },
@@ -74,12 +76,12 @@ let g = function (e) {
                           },
                       });
             } catch (e) {
-                b(p.intl.string(f.default["/f++3t"]));
+                v(y.intl.string(m.default["/f++3t"]));
             } finally {
-                d(!1);
+                p(!1);
             }
         }, [t]),
-        E = i.useCallback(
+        O = i.useCallback(
             async (e) => {
                 if (null !== n) {
                     j(!0);
@@ -89,58 +91,66 @@ let g = function (e) {
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, c.Wl)(t), x();
+                        await (0, s.Wl)(t), _();
                     } catch (e) {
-                        b(p.intl.string(f.default["+QRSxc"]));
+                        v(y.intl.string(m.default["+QRSxc"]));
                     } finally {
                         j(!1);
                     }
                 }
             },
-            [n, x],
+            [n, _],
         );
-    return (
-        i.useEffect(() => {
-            x();
-        }, [x]),
-        (0, r.jsxs)("div", {
-            className: m.background,
-            children: [
-                (0, r.jsx)("img", {
-                    className: m.artwork,
-                    src: y,
-                    alt: "",
-                }),
-                (0, r.jsx)("div", {
-                    className: m.safetyFlow,
-                    children: (0, r.jsxs)("div", {
-                        className: m.container,
-                        children: [
-                            u &&
-                                (0, r.jsx)(a.Text, {
-                                    variant: "text-md/normal",
-                                    color: "text-muted",
-                                    children: p.intl.string(f.default.v0H5Tk),
-                                }),
-                            null !== g &&
-                                (0, r.jsx)(a.Text, {
-                                    variant: "text-md/normal",
-                                    color: "text-danger",
-                                    className: m.error,
-                                    children: g,
-                                }),
-                            !u &&
-                                null === g &&
-                                null != n &&
-                                (0, r.jsx)(h, {
-                                    task: n,
-                                    handleSubmit: E,
-                                    disabled: v,
-                                }),
-                        ],
-                    }),
-                }),
-            ],
-        })
-    );
+    i.useEffect(() => {
+        _();
+    }, [_]);
+    let A = i.useMemo(() => (null == n ? void 0 : n.task_type) === d.UA.AGE_VERIFICATION, [n]);
+    return (0, r.jsxs)("div", {
+        className: g.background,
+        children: [
+            (0, r.jsx)("img", {
+                className: g.artwork,
+                src: h,
+                alt: "",
+            }),
+            A
+                ? (0, r.jsx)(o.default, {
+                      transitionState: a.Dvm.ENTERED,
+                      entryPoint: l.cU.SAFETY_FLOWS,
+                      onClose: async () => {},
+                      onComplete: async () => {
+                          await O({ type: d.rY.Empty });
+                      },
+                  })
+                : (0, r.jsx)("div", {
+                      className: g.safetyFlow,
+                      children: (0, r.jsxs)("div", {
+                          className: g.container,
+                          children: [
+                              f &&
+                                  (0, r.jsx)(a.Text, {
+                                      variant: "text-md/normal",
+                                      color: "text-muted",
+                                      children: y.intl.string(m.default.v0H5Tk),
+                                  }),
+                              null !== x &&
+                                  (0, r.jsx)(a.Text, {
+                                      variant: "text-md/normal",
+                                      color: "text-danger",
+                                      className: g.error,
+                                      children: x,
+                                  }),
+                              !f &&
+                                  null === x &&
+                                  null != n &&
+                                  (0, r.jsx)(E, {
+                                      task: n,
+                                      handleSubmit: O,
+                                      disabled: b,
+                                  }),
+                          ],
+                      }),
+                  }),
+        ],
+    });
 };

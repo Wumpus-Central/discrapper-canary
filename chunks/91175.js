@@ -1,100 +1,90 @@
-n.d(t, { default: () => m }), n(388685);
-var a = n(951288),
-    i = n(647438),
-    s = n(435935),
-    o = n(481060),
-    r = n(788080),
-    l = n(81643),
-    c = n(469775),
-    d = n(398158),
-    u = n(388032),
-    f = n(179835),
-    x = n(248319);
-let m = function (e) {
-    let { onClose: t, onComplete: n, onCancel: m, transitionState: p, webviewUrl: h } = e,
-        g = (0, r.GE)(),
-        [k, v] = i.useState(0),
-        j = i.useCallback(() => {
-            n(), t();
-        }, [n, t]),
-        C = i.useCallback(() => {
-            (0, o.nfh)(c.zJ) && j();
-        }, [j]);
-    (0, l.F5)(C);
-    let _ = i.useCallback(
+t.d(n, { default: () => h }), t(388685);
+var a = t(951288),
+    l = t(647438),
+    i = t(120356),
+    s = t.n(i),
+    o = t(481060),
+    r = t(788080),
+    c = t(81643),
+    d = t(469775),
+    u = t(398158),
+    f = t(388032),
+    m = t(179835),
+    p = t(248319);
+let h = function (e) {
+    let { onClose: n, onComplete: t, transitionState: i, webviewUrl: h } = e,
+        b = (0, r.GE)(),
+        [x, C] = l.useState(0),
+        k = l.useCallback(() => {
+            t(), n();
+        }, [t, n]),
+        _ = l.useCallback(() => {
+            (0, o.nfh)(d.zJ) && k();
+        }, [k]);
+    (0, c.F5)(_);
+    let v = l.useCallback(
             (e) => {
-                if (g && "" !== h) {
-                    var t;
-                    (null == e || null == (t = e.data) ? void 0 : t.eventType) === "Verification.Result" && j();
+                if (b && "" !== h) {
+                    var n;
+                    (null == e || null == (n = e.data) ? void 0 : n.eventType) === "Verification.Result" && k();
                 }
             },
-            [h, j, g],
+            [h, k, b],
         ),
-        b = i.useCallback(() => {
-            v(k + 1);
-        }, [k]);
+        g = l.useCallback(() => {
+            C(x + 1);
+        }, [x]);
     return (
-        i.useEffect(
+        l.useEffect(
             () => (
-                window.addEventListener("message", _),
+                window.addEventListener("message", v),
                 () => {
-                    window.removeEventListener("message", _);
+                    window.removeEventListener("message", v);
                 }
             ),
-            [_],
+            [v],
         ),
         (0, a.jsxs)(o.Y0X, {
             "data-migration-pending": !0,
-            transitionState: p,
-            className: x.root,
+            transitionState: i,
+            className: s()(p.root, m.fullbleedContent),
             parentComponent: "AgeVerificationExpressiveModal",
             size: o.CgR.MEDIUM,
             children: [
-                (0, a.jsxs)(o.xBx, {
-                    justify: s.k.Justify.BETWEEN,
-                    children: [
-                        (0, a.jsx)(o.X6q, {
-                            variant: "heading-lg/semibold",
-                            children: u.intl.string(u.t.JHNunp),
-                        }),
-                        (0, a.jsx)(o.olH, { onClick: m }),
-                    ],
-                }),
                 (0, a.jsx)(o.hzk, {
                     "data-migration-pending": !0,
-                    className: x.content,
+                    className: s()(p.content, p.fullbleed),
                     scrollbarType: "none",
                     children: (0, a.jsx)(
                         "iframe",
                         {
                             id: "frame",
                             src: h,
-                            className: x.iframe,
+                            className: p.iframe,
                             allow: "camera; microphone",
                         },
-                        k,
+                        x,
                     ),
                 }),
-                (0, a.jsx)("div", {
-                    className: f.floatingFooter,
-                    children: (0, a.jsx)("div", {
-                        className: f.footerButtons,
-                        children: (0, a.jsxs)(o.hE2, {
-                            children: [
-                                (0, a.jsx)(o.zxk, {
-                                    variant: "secondary",
-                                    icon: o.j9r,
-                                    text: u.intl.string(d.default.b7Oqdn),
-                                    onClick: t,
-                                }),
-                                (0, a.jsx)(o.zxk, {
-                                    variant: "secondary",
-                                    icon: o.DuK,
-                                    text: u.intl.string(d.default["0vTx7u"]),
-                                    onClick: b,
-                                }),
-                            ],
-                        }),
+                (0, a.jsx)(o.mzw, {
+                    children: (0, a.jsxs)(o.hE2, {
+                        fullWidth: !0,
+                        children: [
+                            (0, a.jsx)(o.zxk, {
+                                fullWidth: !0,
+                                variant: "secondary",
+                                icon: o.j9r,
+                                text: f.intl.string(u.default.b7Oqdn),
+                                onClick: n,
+                            }),
+                            (0, a.jsx)(o.zxk, {
+                                fullWidth: !0,
+                                variant: "secondary",
+                                icon: o.DuK,
+                                text: f.intl.string(u.default["0vTx7u"]),
+                                onClick: g,
+                            }),
+                        ],
                     }),
                 }),
             ],

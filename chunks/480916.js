@@ -43,6 +43,7 @@ var r = n(626135),
             (e[(e.PRIMARY = 1)] = "PRIMARY"),
             (e[(e.RETRY = 2)] = "RETRY"),
             (e[(e.EXPRESSIVE_PRIMARY = 3)] = "EXPRESSIVE_PRIMARY"),
+            (e[(e.SAFETY_FLOWS = 4)] = "SAFETY_FLOWS"),
             e
         );
     })({}),
