@@ -84,40 +84,34 @@ function s(e) {
         kind: "user",
         defaultConfig: {
             isNewHeaderAndInteractions: !1,
-            shouldTruncateMessages: !1,
             isNewCardDesign: !1,
             isBottomSheetInteractions: !1,
+            uxVariation: "default",
         },
         variations: {
             1: {
                 isNewHeaderAndInteractions: !0,
-                shouldTruncateMessages: !1,
                 isNewCardDesign: !1,
                 isBottomSheetInteractions: !1,
+                uxVariation: "destination_icymi_ia",
             },
             2: {
                 isNewHeaderAndInteractions: !0,
-                shouldTruncateMessages: !0,
-                isNewCardDesign: !1,
+                isNewCardDesign: !0,
                 isBottomSheetInteractions: !1,
+                uxVariation: "destination_icymi_ia_card",
             },
             3: {
                 isNewHeaderAndInteractions: !0,
-                shouldTruncateMessages: !0,
-                isNewCardDesign: !0,
-                isBottomSheetInteractions: !1,
+                isNewCardDesign: !1,
+                isBottomSheetInteractions: !0,
+                uxVariation: "destination_icymi_ia_bottom_sheet",
             },
             4: {
                 isNewHeaderAndInteractions: !0,
-                shouldTruncateMessages: !0,
-                isNewCardDesign: !1,
-                isBottomSheetInteractions: !0,
-            },
-            5: {
-                isNewHeaderAndInteractions: !0,
-                shouldTruncateMessages: !0,
                 isNewCardDesign: !0,
                 isBottomSheetInteractions: !0,
+                uxVariation: "destination_icymi_ia_bottom_sheet_card",
             },
         },
     });
