@@ -1,22 +1,22 @@
 n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(831209),
-    a = n(442837),
+    l = n(442837),
     o = n(481060),
     s = n(597688),
-    l = n(884697),
-    c = n(388032),
-    u = n(71414);
+    c = n(884697),
+    a = n(388032),
+    u = n(237680);
 let d = (e) => {
     let { isPurchaseSection: t, isPremiumSection: n, canUsePremiumCollectibles: d, skuId: f } = e,
-        _ = (0, l.Yq)(f),
-        p = (0, a.e7)([s.Z], () => {
+        p = (0, c.Yq)(f),
+        m = (0, l.e7)([s.Z], () => {
             let e = s.Z.getProduct(f);
-            return (0, l.G1)(e);
+            return (0, c.G1)(e);
         });
     return t || (n && d)
         ? null
-        : _
+        : p
           ? (0, r.jsx)(o.lBU, {
                 className: u.newBadge,
                 text: (0, r.jsxs)("div", {
@@ -26,12 +26,12 @@ let d = (e) => {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        c.intl.string(c.t.y2b7CA),
+                        a.intl.string(a.t.y2b7CA),
                     ],
                 }),
             })
           : (0, r.jsx)(o.G2e, {
-                icon: p
+                icon: m
                     ? () =>
                           (0, r.jsx)(o.SrA, {
                               size: "custom",

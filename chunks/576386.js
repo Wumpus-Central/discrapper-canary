@@ -6,12 +6,12 @@ var l = n(951288),
     a = n(481060),
     o = n(727637),
     c = n(135483),
-    d = n(171019),
-    u = n(22267),
+    u = n(171019),
+    d = n(22267),
     p = n(74538),
     m = n(539530),
     x = n(388032),
-    h = n(24391);
+    h = n(801707);
 let g = (e) => {
         var t;
         let { currentUser: n, nameplate: r, section: c, canUsePremiumCollectibles: p, isSelected: g, onClick: v } = e,
@@ -23,14 +23,14 @@ let g = (e) => {
             className: h.nameplateItem,
             onClick: v,
             children: [
-                (0, l.jsx)(u.Z, {
+                (0, l.jsx)(d.Z, {
                     nameplate: r,
                     user: n,
                     showPlaceholderUser: !0,
                     isHighlighted: C,
                 }),
                 (0, l.jsx)("div", { className: s()(h.nameplateItemOverlay, { [h.selected]: g }) }),
-                (0, l.jsx)(d.Z, {
+                (0, l.jsx)(u.Z, {
                     isPurchaseSection: c === m.$0.PURCHASE,
                     isPremiumSection: c === m.$0.PREMIUM_PURCHASE,
                     canUsePremiumCollectibles: p,
@@ -41,11 +41,11 @@ let g = (e) => {
     },
     v = (e) => {
         let { currentUser: t, selectedNameplate: n, guildId: i, onSelect: r, onOpenShop: o } = e,
-            d = p.ZP.canUseCollectibles(t),
-            u = (0, m.ZP)();
+            u = p.ZP.canUseCollectibles(t),
+            d = (0, m.ZP)();
         return (0, l.jsx)(a.u2D, {
             className: h.inventory,
-            children: u.map((e) =>
+            children: d.map((e) =>
                 (0, l.jsxs)(
                     "div",
                     {
@@ -97,7 +97,7 @@ let g = (e) => {
                                             currentUser: t,
                                             nameplate: i,
                                             section: e.section,
-                                            canUsePremiumCollectibles: d,
+                                            canUsePremiumCollectibles: u,
                                             isSelected: (null == n ? void 0 : n.skuId) === i.skuId,
                                             onClick: () => r(i),
                                         },

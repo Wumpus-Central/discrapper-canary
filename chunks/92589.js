@@ -6,7 +6,7 @@ var l = n(481060),
     s = n(168020),
     i = n(859788),
     o = n(388032),
-    c = n(449177);
+    c = n(80931);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,8 +42,8 @@ let d = (e) => {
             null != n,
         ),
         g = null != t.textColor ? { color: t.textColor } : void 0,
-        p = null != t.body && "" !== t.body,
-        f = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        f = null != t.body && "" !== t.body,
+        p = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
         ref: d,
         className: c.immersiveBannerBlock,
@@ -73,14 +73,14 @@ let d = (e) => {
                             style: u({}, g),
                             children: t.title,
                         }),
-                        p || f
+                        f || p
                             ? (0, r.jsxs)(l.Text, {
                                   variant: "text-md/medium",
                                   style: u({}, g),
                                   children: [
-                                      p && t.body,
-                                      p && f && " ",
-                                      f &&
+                                      f && t.body,
+                                      f && p && " ",
+                                      p &&
                                           (0, r.jsx)(l.eee, {
                                               href: t.helpCenterUrl,
                                               className: c.learnMoreLink,

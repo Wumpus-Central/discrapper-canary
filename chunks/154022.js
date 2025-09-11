@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(441729),
     L = n(626135),
     j = n(63063),
-    M = n(695346),
-    k = n(313789),
+    k = n(695346),
+    M = n(313789),
     U = n(263937),
     G = n(996073),
     B = n(947889),
@@ -43,9 +43,9 @@ var r = n(951288),
     H = n(611480),
     Y = n(653477),
     W = n(388032),
-    K = n(693450),
-    z = n(953752),
-    q = n(197571),
+    K = n(62222),
+    z = n(133991),
+    q = n(10198),
     X = n(328756);
 function Q(e, t, n) {
     return (
@@ -182,7 +182,7 @@ function eo(e) {
                         variant: "text-md/normal",
                         children: W.intl.format(W.t.DHpTjY, {
                             onAppearanceClick() {
-                                a(k.n.APPEARANCE_PANEL, { section: V.oAB.APPEARANCE });
+                                a(M.n.APPEARANCE_PANEL, { section: V.oAB.APPEARANCE });
                             },
                         }),
                     }),
@@ -192,7 +192,7 @@ function eo(e) {
     });
 }
 function es() {
-    let e = M.jU.useSetting(),
+    let e = k.jU.useSetting(),
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, A.e5)(
@@ -340,7 +340,7 @@ function eu() {
     function t() {
         (0, h.gs)(!e);
     }
-    return (0, r.jsx)(f.xJW, {
+    return (0, r.jsx)("div", {
         className: q.marginTop20,
         children: (0, r.jsx)(f.j7V, {
             note: W.intl.string(W.t["72i5GB"]),
@@ -355,7 +355,7 @@ function ed() {
         var e;
         return null == (e = m.Z.enableCustomCursor) || e;
     });
-    return (0, r.jsx)(f.xJW, {
+    return (0, r.jsx)("div", {
         className: q.marginTop20,
         children: (0, r.jsx)(f.j7V, {
             note: W.intl.string(W.t.nNZ1T0),
@@ -411,7 +411,7 @@ function e_() {
     function n(e) {
         (0, h.X2)(e), L.default.track(V.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
     }
-    return (0, r.jsx)(f.xJW, {
+    return (0, r.jsx)("div", {
         className: q.marginTop20,
         children: (0, r.jsx)(f.j7V, {
             value: e,
@@ -478,8 +478,8 @@ function eh() {
     });
 }
 function em() {
-    let e = M.QK.useSetting(),
-        t = M.Yk.useSetting(),
+    let e = k.QK.useSetting(),
+        t = k.Yk.useSetting(),
         {
             useReducedMotion: n,
             rawPrefersReducedMotion: a,
@@ -540,7 +540,7 @@ function em() {
                     className: q.marginBottom20,
                     value: e,
                     note: null != l ? (0, P.Z)(l) : void 0,
-                    onChange: M.QK.updateSetting,
+                    onChange: k.QK.updateSetting,
                     children: W.intl.string(W.t.Iayoh4),
                 }),
             }),
@@ -550,7 +550,7 @@ function em() {
                     className: q.marginBottom20,
                     value: t,
                     note: null != u ? (0, P.Z)(u) : void 0,
-                    onChange: M.Yk.updateSetting,
+                    onChange: k.Yk.updateSetting,
                     children: W.intl.string(W.t.iIaOlZ),
                 }),
             }),
@@ -558,10 +558,10 @@ function em() {
     });
 }
 function eg() {
-    let e = M.Wp.useSetting(),
+    let e = k.Wp.useSetting(),
         t = (0, c.e7)([U.Z], () => U.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
-            M.Wp.updateSetting(e.value);
+            k.Wp.updateSetting(e.value);
         }, []);
     return (0, r.jsxs)(f.xJW, {
         className: q.marginTop20,
@@ -596,7 +596,7 @@ function eg() {
 }
 function eE() {
     let e = (0, c.e7)([m.Z], () => m.Z.isSubmitButtonEnabled),
-        t = M.dN.useSetting(),
+        t = k.dN.useSetting(),
         n = i.useRef(null);
     return (
         (0, G.Z)(n, Z.rP.LEGACY_CHAT_INPUT),
@@ -628,7 +628,7 @@ function eE() {
                                 enabled: e,
                                 location: { section: V.jXE.SETTINGS_ACCESSIBILITY },
                             }),
-                                M.dN.updateSetting(e);
+                                k.dN.updateSetting(e);
                         },
                         children: W.intl.string(W.t.TZ2hZG),
                     }),
@@ -638,7 +638,7 @@ function eE() {
     );
 }
 function eb() {
-    let e = M.OW.useSetting(),
+    let e = k.OW.useSetting(),
         t = (0, c.e7)([x.Z], () => x.Z.speechRate),
         [n, a] = i.useState(!1);
     if (!p.Zh) return null;
@@ -655,7 +655,7 @@ function eb() {
         children: [
             (0, r.jsx)(w.F, {
                 setting: F.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
-                children: (0, r.jsxs)(f.xJW, {
+                children: (0, r.jsxs)("div", {
                     className: q.marginTop20,
                     children: [
                         (0, r.jsx)(f.vwX, {
@@ -667,7 +667,7 @@ function eb() {
                             children: (0, r.jsx)(f.j7V, {
                                 className: q.marginTop20,
                                 value: e,
-                                onChange: M.OW.updateSetting,
+                                onChange: k.OW.updateSetting,
                                 children: W.intl.string(W.t.qvTIwc),
                             }),
                         }),
@@ -676,7 +676,7 @@ function eb() {
             }),
             (0, r.jsx)(w.F, {
                 setting: F.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
-                children: (0, r.jsxs)(f.xJW, {
+                children: (0, r.jsxs)("div", {
                     className: q.marginTop20,
                     children: [
                         (0, r.jsx)(f.vwX, {

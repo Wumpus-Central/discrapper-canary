@@ -5,7 +5,7 @@ var r = n(951288),
     s = n.n(l),
     o = n(512722),
     a = n.n(o),
-    c = n(261616),
+    c = n(938288),
     d = n(209739),
     u = n.n(d),
     f = n(442837),
@@ -41,7 +41,7 @@ var r = n(951288),
     W = n(299570),
     z = n(960861),
     F = n(989941),
-    H = n(399299),
+    H = n(504580),
     V = n(351152),
     Y = n(567126),
     J = n(143135),
@@ -52,7 +52,7 @@ var r = n(951288),
     $ = n(921944),
     ee = n(761274),
     et = n(388032),
-    en = n(542257),
+    en = n(79985),
     er = n(402163);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -252,7 +252,7 @@ function eo(e) {
             },
             [e$],
         );
-    function e4(e) {
+    function e8(e) {
         if ((e.preventDefault(), 1 === eP)) return e3();
         if (2 === eP) return eT(3);
         if (null != e$) return eT(1);
@@ -273,7 +273,7 @@ function eo(e) {
             });
         } else e2();
     }
-    let e8 = i.useCallback(
+    let e4 = i.useCallback(
             (e) => {
                 eD(e),
                     null != e &&
@@ -438,7 +438,7 @@ function eo(e) {
                     children: () => {
                         var e;
                         return (0, r.jsxs)("form", {
-                            onSubmit: e4,
+                            onSubmit: e8,
                             ref: eh,
                             children: [
                                 (0, r.jsxs)(h.MyZ, {
@@ -458,10 +458,10 @@ function eo(e) {
                                             children: (0, r.jsx)("div", {
                                                 className: en.modalSize,
                                                 children: eC
-                                                    ? (0, r.jsx)(Y.se, { onSourceSelect: e8 })
+                                                    ? (0, r.jsx)(Y.se, { onSourceSelect: e4 })
                                                     : (0, r.jsx)(Y.oA, {
                                                           selectedSource: eM,
-                                                          onChangeSelectedSource: e8,
+                                                          onChangeSelectedSource: e4,
                                                       }),
                                             }),
                                         }),
@@ -484,7 +484,7 @@ function eo(e) {
                                                     onChangeSelectedResolution: (e) => e5(eG, e, eF),
                                                     onChangeSelectedPreset: (e) => e5(e, eW, eF),
                                                     onChangeSelectedChannelId: ek,
-                                                    onChangeSelectedSource: e8,
+                                                    onChangeSelectedSource: e4,
                                                     onChangeSource: () => tt(),
                                                     onChangeAudioDevice: (e) => eB(e),
                                                     onChangeGuild: () => eT(0),

@@ -31,9 +31,9 @@ var r = n(951288),
     D = n(981631),
     x = n(420212),
     L = n(388032),
-    j = n(894462),
-    k = n(620842),
-    M = n(197571);
+    j = n(958047),
+    k = n(504401),
+    M = n(10198);
 function U(e, t, n) {
     return (
         t in e
@@ -162,7 +162,7 @@ class H extends i.PureComponent {
                         (0, r.jsx)(y.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, r.jsx)(f.xJW, {
+                            children: (0, r.jsx)("div", {
                                 className: j.switch,
                                 children: (0, r.jsx)(f.ua7, {
                                     text: L.intl.string(L.t.uCD7qK),

@@ -3,20 +3,20 @@ var r = n(951288),
     i = n(647438),
     l = n(990547),
     s = n(442837),
-    o = n(481060),
-    a = n(893776),
+    a = n(481060),
+    o = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
     h = n(82554),
-    f = n(726521),
-    p = n(185625),
-    g = n(314897),
-    m = n(63063),
+    p = n(726521),
+    g = n(185625),
+    m = n(314897),
+    f = n(63063),
     _ = n(981631),
     x = n(388032),
-    E = n(884110),
-    v = n(197571);
+    E = n(848496),
+    v = n(10198);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,19 +70,19 @@ let I = {
         let { title: t, menuType: i } = e,
             s = (e) => {
                 let t = async () => {
-                        await (0, p.yL)(i, e);
+                        await (0, g.yL)(i, e);
                     },
-                    s = async (t) => await (0, p.RV)(i, e, t),
-                    a = (e) => {
+                    s = async (t) => await (0, g.RV)(i, e, t),
+                    o = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
-                            ? (0, f.eE)(t)
+                            ? (0, p.eE)(t)
                             : i === h.BM.USER
-                              ? (0, f.JM)(t)
-                              : i === h.BM.GUILD && (0, f.FO)(t);
+                              ? (0, p.JM)(t)
+                              : i === h.BM.GUILD && (0, p.FO)(t);
                     };
                 t(),
-                    (0, o.ZDy)(async () => {
+                    (0, a.ZDy)(async () => {
                         let { default: e } = await n.e("94566").then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
@@ -90,7 +90,7 @@ let I = {
                                 b(j({}, n), {
                                     onFormSubmit: s,
                                     onResend: t,
-                                    onSuccess: a,
+                                    onSuccess: o,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t["13ofGh"]),
                                     impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
@@ -98,10 +98,10 @@ let I = {
                             );
                     });
             };
-        return (0, r.jsxs)(o.P3F, {
+        return (0, r.jsxs)(a.P3F, {
             className: E.reportButton,
             onClick: () =>
-                void (0, o.ZDy)(async () => {
+                void (0, a.ZDy)(async () => {
                     let { default: e } = await n.e("93288").then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
@@ -114,11 +114,11 @@ let I = {
                         );
                 }),
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(o.LJT, {
+                (0, r.jsx)(a.LJT, {
                     size: "sm",
                     color: "currentColor",
                 }),
@@ -128,10 +128,10 @@ let I = {
     O = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, s.e7)([g.default], () => g.default.isAuthenticated()),
-            f = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            h = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
+            p = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             j = () => {
-                (0, p.Jj)()
+                (0, g.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },
@@ -154,11 +154,11 @@ let I = {
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    f || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
+                    p || (await o.Z.getLocationMetadata(), o.Z.getExperiments());
                 })();
-            }, [f]),
-            e || !f
-                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
+            }, [p]),
+            e || !p
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(a.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
                   (0, r.jsxs)(u.ZP, {
@@ -170,7 +170,7 @@ let I = {
                           (0, r.jsx)(u.DK, {
                               className: v.marginBottom8,
                               children: x.intl.format(x.t["532l+v"], {
-                                  supportURL: m.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
+                                  supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY),
                               }),
                           }),
                           (0, r.jsx)("div", {

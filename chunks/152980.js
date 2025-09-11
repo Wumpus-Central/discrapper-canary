@@ -1,40 +1,40 @@
 t.d(e, { s: () => U }), t(388685);
 var n = t(951288),
     r = t(647438),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     i = t(28664),
     o = t(481060),
     s = t(205822),
     d = t(476326),
     c = t(377171),
     u = t(313201),
-    g = t(374794),
-    f = t(587123),
+    f = t(374794),
+    g = t(587123),
     p = t(863663),
     m = t(731994),
     q = t(629481),
     h = t(388032),
-    b = t(530521);
+    b = t(45856);
 let C = (0, u.hQ)();
 function v(A) {
     var e;
-    let { upload: t, progress: l = 0, onDeleteAttachment: s } = A,
+    let { upload: t, progress: a = 0, onDeleteAttachment: s } = A,
         d = r.useCallback(() => {
             null == s || s(t.id);
         }, [s, t.id]),
-        u = l >= 1,
-        g = l < 0,
-        f = u || g,
+        u = a >= 1,
+        f = a < 0,
+        g = u || f,
         m = null != (e = t.filename) ? e : t.id,
-        q = (0, p.kg)(l);
+        q = (0, p.kg)(a);
     return (0, n.jsx)(i.u, {
         asContainer: !0,
         text: q,
         children: (0, n.jsxs)("div", {
-            className: a()(b.attachedFileCard, {
-                [b.attachedFileCardError]: g,
-                [b.attachedFileCardUploading]: !f,
+            className: l()(b.attachedFileCard, {
+                [b.attachedFileCardError]: f,
+                [b.attachedFileCardUploading]: !g,
             }),
             children: [
                 (0, n.jsx)(o.ZKT, {
@@ -49,12 +49,12 @@ function v(A) {
                     variant: "text-sm/normal",
                     children: m,
                 }),
-                !f &&
+                !g &&
                     (0, n.jsx)(o.$jN, {
                         className: b.attachedFileCardSpinner,
                         type: o.$jN.Type.SPINNING_CIRCLE,
                     }),
-                f &&
+                g &&
                     null != s &&
                     (0, n.jsx)(o.P3F, {
                         onClick: d,
@@ -75,12 +75,12 @@ function U(A) {
     let { onFileAdded: e } = A,
         {
             uploads: t,
-            canAttachFiles: l,
-            canAttachArchives: a,
+            canAttachFiles: a,
+            canAttachArchives: l,
             addAttachment: i,
             deleteAttachment: c,
             fileUploadProgresses: u,
-        } = (0, f.P)(),
+        } = (0, g.P)(),
         p = r.useRef(!1);
     function U(A) {
         try {
@@ -107,10 +107,10 @@ function U(A) {
                     icons: m.J6,
                     onDrop: U,
                 }),
-                (0, n.jsxs)(g.Z, {
+                (0, n.jsxs)(f.Z, {
                     className: b.addFileButtonLook,
                     innerClassName: b.addFileButton,
-                    disabled: !l,
+                    disabled: !a,
                     "aria-label": h.intl.string(h.t["23LeCA"]),
                     "aria-describedby": C,
                     multiple: !0,
@@ -136,7 +136,7 @@ function U(A) {
                     id: C,
                     color: "text-muted",
                     variant: "text-xs/normal",
-                    children: a
+                    children: l
                         ? h.intl.formatToPlainString(h.t.lvU6sr, { fileUploadLimit: q.TR })
                         : h.intl.formatToPlainString(h.t.DOXzIS, { fileUploadLimit: q.TR }),
                 }),

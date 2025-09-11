@@ -15,7 +15,7 @@ var a = n(951288),
     h = n(981631),
     f = n(921944),
     j = n(388032),
-    v = n(87612);
+    v = n(734435);
 function b(t) {
     let { guildId: e, shouldUpsellCreation: b, transitionState: y, onClose: P } = t,
         N = (0, i.e7)([d.Z], () => d.Z.getGuild(e), [e]),
@@ -49,7 +49,7 @@ function b(t) {
                 text: j.intl.string(j.t["1X8SKy"]),
                 onClick: () => {
                     (0, g.ZDy)(async () => {
-                        let { default: t } = await Promise.all([n.e("45094"), n.e("67133")]).then(n.bind(n, 218613));
+                        let { default: t } = await Promise.all([n.e("45094"), n.e("87586")]).then(n.bind(n, 218613));
                         return (n) => {
                             var r, i;
                             return (0, a.jsx)(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => v });
 var a = n(951288);
 n(647438);
 var r = n(120356),
@@ -10,13 +10,13 @@ var r = n(120356),
     d = n(963886),
     u = n(110478),
     m = n(423932),
-    x = n(695346),
-    h = n(306052),
-    p = n(594174),
-    f = n(517269),
-    v = n(197571);
-let b = () => {
-    Promise.all([n.e("52030"), n.e("1286")])
+    h = n(695346),
+    p = n(306052),
+    x = n(594174),
+    b = n(103088),
+    f = n(10198);
+let g = () => {
+    Promise.all([n.e("52030"), n.e("91403")])
         .then(n.bind(n, 24031))
         .then((e) => {
             let { openMFAModal: t } = e;
@@ -41,26 +41,26 @@ let b = () => {
             );
         });
 };
-function g() {
-    let e = p.default.getCurrentUser(),
+function v() {
+    let e = x.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        n = x.Rt.useSetting();
+        n = h.Rt.useSetting();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
-                className: l()(f.buttonsContainer, v.marginBottom20),
-                children: (0, a.jsx)(h.g, { isDevTools: !0 }),
+                className: l()(b.buttonsContainer, f.marginBottom20),
+                children: (0, a.jsx)(p.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(f.buttonsContainer, v.marginBottom20),
+                className: l()(b.buttonsContainer, f.marginBottom20),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch MFA",
-                    onClick: b,
+                    onClick: g,
                 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(f.buttonsContainer, v.marginBottom20),
+                className: l()(b.buttonsContainer, f.marginBottom20),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch Vibing Wumpus",
@@ -71,7 +71,7 @@ function g() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: l()(f.buttonsContainer, v.marginBottom20),
+                            className: l()(b.buttonsContainer, f.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Captcha Test Tool",
@@ -79,7 +79,7 @@ function g() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(f.buttonsContainer, v.marginBottom20),
+                            className: l()(b.buttonsContainer, f.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Test Tool",
@@ -87,7 +87,7 @@ function g() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(f.buttonsContainer, v.marginBottom20),
+                            className: l()(b.buttonsContainer, f.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Modal",
@@ -98,7 +98,7 @@ function g() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(f.buttonsContainer, v.marginBottom20),
+                            className: l()(b.buttonsContainer, f.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Force libdiscore Crash",
@@ -106,10 +106,10 @@ function g() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(f.buttonsContainer, v.marginBottom20),
+                            className: l()(b.buttonsContainer, f.marginBottom20),
                             children: (0, a.jsx)(s.j7V, {
                                 value: n,
-                                onChange: (e) => x.Rt.updateSetting(e),
+                                onChange: (e) => h.Rt.updateSetting(e),
                                 hideBorder: !0,
                                 children: "Ignore profile speedbump disabled",
                             }),

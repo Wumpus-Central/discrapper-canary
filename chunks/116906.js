@@ -1,8 +1,8 @@
 t.d(n, { Z: () => O });
 var o = t(951288);
 t(647438);
-var l = t(442837),
-    r = t(481060),
+var r = t(442837),
+    l = t(481060),
     i = t(468363),
     c = t(353647),
     a = t(158776),
@@ -15,12 +15,12 @@ var l = t(442837),
     x = t(151545),
     b = t(527790),
     h = t(769140),
-    j = t(864141),
-    g = t(228168),
+    g = t(864141),
+    j = t(228168),
     v = t(981631),
     y = t(388032),
-    _ = t(7994),
-    I = t(878449);
+    _ = t(847540),
+    I = t(883172);
 function O(e) {
     let { user: n, currentUser: t, guildId: O, subsection: Z, onClose: P } = e,
         { voiceActivityStatusEnabled: T } = (0, i.U)({ location: "UserProfileModalActivity" }),
@@ -30,18 +30,18 @@ function O(e) {
             userId: n.id,
             guildId: O,
         }),
-        D = (0, l.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
-        B = n.id === t.id,
-        L = (0, l.e7)([s.Z, a.Z], () => {
-            let e = B ? s.Z.getStatus() : a.Z.getStatus(n.id);
-            return e === r.Skl.OFFLINE || e === r.Skl.INVISIBLE;
+        B = (0, r.e7)([c.Z], () => c.Z.isFetchingUserOutbox(n.id)),
+        D = n.id === t.id,
+        L = (0, r.e7)([s.Z, a.Z], () => {
+            let e = D ? s.Z.getStatus() : a.Z.getStatus(n.id);
+            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
         R = A.length > 0 || null != E,
         M = T && null == E && null == w && null != S,
         U = !L && (R || M),
         k = C.length > 0;
-    return U || k || !D
-        ? (0, o.jsxs)(r.zJl, {
+    return U || k || !B
+        ? (0, o.jsxs)(l.zJl, {
               className: _.scroller,
               fade: !0,
               children: [
@@ -54,7 +54,7 @@ function O(e) {
                                     !N &&
                                         M &&
                                         (0, o.jsx)("li", {
-                                            children: (0, o.jsx)(j.Z, {
+                                            children: (0, o.jsx)(g.Z, {
                                                 user: n,
                                                 currentUser: t,
                                                 voiceChannel: S,
@@ -70,7 +70,7 @@ function O(e) {
                                                 onClose: P,
                                             }),
                                         }),
-                                    A.map((e, l) =>
+                                    A.map((e, r) =>
                                         (0, o.jsx)(
                                             "li",
                                             {
@@ -81,7 +81,7 @@ function O(e) {
                                                     onClose: P,
                                                 }),
                                             },
-                                            "live-".concat(l),
+                                            "live-".concat(r),
                                         ),
                                     ),
                                 ],
@@ -91,11 +91,11 @@ function O(e) {
                   k
                       ? (0, o.jsx)(m.Z, {
                             heading: y.intl.string(y.t.M0zgnZ),
-                            introText: B
+                            introText: D
                                 ? y.intl.format(y.t["4bk9Ag"], {
                                       learnMoreHook: (e, n) =>
                                           (0, o.jsx)(
-                                              r.eee,
+                                              l.eee,
                                               {
                                                   href: d.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
@@ -104,7 +104,7 @@ function O(e) {
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: Z === g.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: Z === j.Tb.RECENT_ACTIVITY,
                             children: (0, o.jsx)("ul", {
                                 className: _.activityList,
                                 children: C.map((e) =>
@@ -127,6 +127,6 @@ function O(e) {
           })
         : (0, o.jsx)("div", {
               className: I.empty,
-              children: (0, o.jsx)(r.$jN, {}),
+              children: (0, o.jsx)(l.$jN, {}),
           });
 }

@@ -1,34 +1,34 @@
 n.d(t, { Z: () => y });
 var i = n(951288),
     r = n(481060),
-    o = n(700582),
-    l = n(812206),
+    l = n(700582),
+    o = n(812206),
     a = n(594190),
     s = n(925329),
     c = n(592125),
     u = n(944486),
     d = n(594174),
     p = n(5192),
-    f = n(620954),
-    h = n(987650),
+    h = n(620954),
+    f = n(987650),
     m = n(388032),
-    g = n(439419);
+    g = n(64102);
 function y(e, t, n) {
     var y;
     let O = d.default.getUser(e);
     if (null == O) return null;
     let v = u.Z.getCurrentlySelectedChannelId(),
         b = c.Z.getChannel(v),
-        E = l.Z.getApplication(t),
+        E = o.Z.getApplication(t),
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
-        I = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
+        x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
         S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
-        x = (0, i.jsxs)("div", {
+        I = (0, i.jsxs)("div", {
             className: g.nowPlayingNotification,
             children: [
                 (0, i.jsx)("div", {
                     className: g.nowPlayingNotificationIcon,
-                    children: (0, i.jsx)(o.Z, {
+                    children: (0, i.jsx)(l.Z, {
                         user: O,
                         "aria-hidden": !0,
                         size: r.EFr.SIZE_24,
@@ -42,7 +42,7 @@ function y(e, t, n) {
                         className: g.bodyText,
                         children: m.intl.format(m.t["q7/rgo"], {
                             username: null != S ? S : O.username,
-                            gameName: I,
+                            gameName: x,
                             gameIcon: () =>
                                 null != E || null != _
                                     ? (0, i.jsx)(s.Z, {
@@ -57,24 +57,24 @@ function y(e, t, n) {
                 }),
             ],
         }),
-        { trackView: j, trackClick: C } = (0, f.R)(h.n0.NowPlayingNotification, {
-            notif_type: h.n0.NowPlayingNotification,
+        { trackView: C, trackClick: j } = (0, h.R)(f.n0.NowPlayingNotification, {
+            notif_type: f.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
-            activity_name: null != I ? I : n.name,
+            activity_name: null != x ? x : n.name,
         });
     return {
-        body: x,
+        body: I,
         className: g.nowPlayingNotificationContainer,
         wrapperClassName: g.nowPlayingNotificationWrapper,
         animationWrapperClassName: g.nowPlayingNotificationAnimationWrapper,
         maxBodyLines: 1,
         disableClickableRegions: !0,
         onNotificationShow: () => {
-            j();
+            C();
         },
         onDismissClick: () => {
-            C("dismiss");
+            j("dismiss");
         },
     };
 }

@@ -1,17 +1,17 @@
-t.d(n, { Z: () => j }), t(388685);
+t.d(n, { Z: () => g }), t(388685);
 var o = t(951288),
-    l = t(647438),
-    r = t(120356),
-    i = t.n(r),
-    c = t(261616),
+    r = t(647438),
+    l = t(120356),
+    i = t.n(l),
+    c = t(938288),
     a = t(442837),
     s = t(481060),
     d = t(607070),
     u = t(872269),
     f = t(228168),
     p = t(388032),
-    m = t(361623),
-    x = t(583140);
+    m = t(214906),
+    x = t(74866);
 let b = {
         [f.qb.WIDGET_ADDED]: {
             message: p.intl.string(p.t.fFP1U1),
@@ -40,10 +40,10 @@ let b = {
         },
     },
     h = (e) => {
-        let { message: n, icon: t, type: l } = e;
+        let { message: n, icon: t, type: r } = e;
         return (0, o.jsxs)("div", {
             className: i()(x.toast, m.toast),
-            "data-type": l,
+            "data-type": r,
             children: [
                 (0, o.jsx)("div", {
                     className: m.toastIcon,
@@ -57,15 +57,15 @@ let b = {
             ],
         });
     },
-    j = (e) => {
+    g = (e) => {
         let { className: n, onAutoHide: t } = e,
-            r = (0, u.be)(),
+            l = (0, u.be)(),
             f = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, x] = l.useState(!1),
-            [j, g] = l.useState(null);
-        l.useEffect(() => {
-            null !== r ? (x(!0), g(b[r]), s.uvj.announce(b[r].message)) : x(!1);
-        }, [r]);
+            [p, x] = r.useState(!1),
+            [g, j] = r.useState(null);
+        r.useEffect(() => {
+            null !== l ? (x(!0), j(b[l]), s.uvj.announce(b[l].message)) : x(!1);
+        }, [l]);
         let v = (0, s.Yzy)(
             p,
             {
@@ -91,7 +91,7 @@ let b = {
             "animate-always",
         );
         return (
-            l.useEffect(() => {
+            r.useEffect(() => {
                 if (p) {
                     let e = setTimeout(() => {
                         null == t || t();
@@ -103,7 +103,7 @@ let b = {
                 children: v(
                     (e, t) =>
                         t &&
-                        null !== j &&
+                        null !== g &&
                         (0, o.jsx)(c.animated.div, {
                             className: i()(n, m.toastContainer),
                             style: e,
@@ -133,7 +133,7 @@ let b = {
                                             });
                                     }
                                     return e;
-                                })({}, j),
+                                })({}, g),
                             ),
                         }),
                 ),

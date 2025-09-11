@@ -1,44 +1,44 @@
-n.d(t, { Z: () => p });
-var r = n(951288);
-n(647438);
-var s = n(755721),
-    i = n(481060),
-    a = n(600164),
-    l = n(7557),
-    o = n(388905),
-    c = n(388032),
-    u = n(158017),
-    d = n(197571);
-function p(e) {
-    let { title: t, subtitle: n, error: p, onSubmit: h, onCancel: f } = e;
-    return (0, r.jsxs)(a.Z, {
-        direction: a.Z.Direction.VERTICAL,
+r.d(t, { Z: () => h });
+var n = r(951288);
+r(647438);
+var s = r(755721),
+    i = r(481060),
+    o = r(600164),
+    a = r(7557),
+    l = r(388905),
+    c = r(388032),
+    u = r(41636),
+    d = r(10198);
+function h(e) {
+    let { title: t, subtitle: r, error: h, onSubmit: p, onCancel: f } = e;
+    return (0, n.jsxs)(o.Z, {
+        direction: o.Z.Direction.VERTICAL,
         children: [
-            (0, r.jsx)(o.Dx, {
+            (0, n.jsx)(l.Dx, {
                 className: d.marginBottom8,
                 children: t,
             }),
-            (0, r.jsx)(o.DK, {
+            (0, n.jsx)(l.DK, {
                 className: u.subTitle,
-                children: n,
+                children: r,
             }),
-            (0, r.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(l.Z, {
+                    (0, n.jsx)(a.Z, {
                         inputClassName: u.codeInput,
-                        onSubmit: h,
+                        onSubmit: p,
                     }),
-                    null != p
-                        ? (0, r.jsx)(i.Text, {
+                    null != h
+                        ? (0, n.jsx)(i.Text, {
                               className: u.error,
                               variant: "text-sm/normal",
-                              children: p,
+                              children: h,
                           })
                         : null,
                 ],
             }),
             null != f &&
-                (0, r.jsx)(s.zx, {
+                (0, n.jsx)(s.zx, {
                     className: u.button,
                     onClick: f,
                     color: s.zx.Colors.PRIMARY,

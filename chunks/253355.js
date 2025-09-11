@@ -8,12 +8,12 @@ var l = n(399606),
     o = n(884697),
     c = n(813083),
     u = n(794324),
-    d = n(638758);
+    d = n(55783);
 function g(e) {
     let { category: t } = e,
         n = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
         o = (0, l.e7)([i.Z], () => i.Z.isFocused()),
-        { catalogBannerStatic: g, catalogBannerAnimated: p } = (0, u.Oi)(t);
+        { catalogBannerStatic: g, catalogBannerAnimated: f } = (0, u.Oi)(t);
     return (0, r.jsxs)("div", {
         className: d.catalogBanner,
         children: [
@@ -22,11 +22,11 @@ function g(e) {
                 src: g,
                 alt: t.name,
             }),
-            null != p &&
+            null != f &&
                 !n &&
                 o &&
                 (0, r.jsx)(s.Z, {
-                    src: p,
+                    src: f,
                     className: d.animationAsset,
                     autoPlay: !0,
                     loop: !0,

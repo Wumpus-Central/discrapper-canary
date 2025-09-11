@@ -1,8 +1,8 @@
-t.d(n, { Z: () => g });
+t.d(n, { Z: () => j });
 var o = t(951288);
 t(647438);
-var l = t(442837),
-    r = t(481060),
+var r = t(442837),
+    l = t(481060),
     i = t(666520),
     c = t(592125),
     a = t(944486),
@@ -15,23 +15,23 @@ var l = t(442837),
     x = t(179828),
     b = t(228168),
     h = t(388032),
-    j = t(54966);
-function g(e) {
-    let { user: n, currentUser: t, displayProfile: g, guildId: v, subsection: y, onClose: _ } = e,
+    g = t(438160);
+function j(e) {
+    let { user: n, currentUser: t, displayProfile: j, guildId: v, subsection: y, onClose: _ } = e,
         { trackUserProfileAction: I } = (0, s.KZ)(),
-        O = (0, l.e7)([d.Z], () => {
+        O = (0, r.e7)([d.Z], () => {
             var e;
             return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        Z = (0, l.e7)([c.Z, a.Z], () => c.Z.getChannel(a.Z.getChannelId()));
-    return (0, o.jsxs)(r.zJl, {
+        Z = (0, r.e7)([c.Z, a.Z], () => c.Z.getChannel(a.Z.getChannelId()));
+    return (0, o.jsxs)(l.zJl, {
         fade: !0,
-        className: j.scroller,
+        className: g.scroller,
         children: [
-            (null == g ? void 0 : g.bio) != null &&
-                (null == g ? void 0 : g.bio) !== "" &&
+            (null == j ? void 0 : j.bio) != null &&
+                (null == j ? void 0 : j.bio) !== "" &&
                 (0, o.jsx)(f.Z, {
-                    userBio: g.bio,
+                    userBio: j.bio,
                     setLineClamp: !1,
                 }),
             (null == O ? void 0 : O.popularApplicationCommandIds) != null &&
@@ -43,11 +43,11 @@ function g(e) {
                     guildId: v,
                     onClick: _,
                 }),
-            (null == g ? void 0 : g.guildId) != null &&
+            (null == j ? void 0 : j.guildId) != null &&
                 (0, o.jsx)(x.Z, {
                     user: n,
                     currentUser: t,
-                    guildId: g.guildId,
+                    guildId: j.guildId,
                     scrollIntoView: y === b.Tb.ROLES,
                 }),
             (0, o.jsx)(m.Z, {
@@ -63,7 +63,7 @@ function g(e) {
                 scrollIntoView: y === b.Tb.NOTE,
                 children: (0, o.jsx)(i.Z, {
                     userId: n.id,
-                    className: j.note,
+                    className: g.note,
                     autoFocus: y === b.Tb.NOTE,
                     onUpdate: () => I({ action: "SET_NOTE" }),
                 }),

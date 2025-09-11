@@ -2,10 +2,10 @@ r.d(t, { Z: () => c });
 var n = r(951288);
 r(647438);
 var i = r(481060),
-    a = r(230711),
-    o = r(981631),
+    o = r(230711),
+    a = r(981631),
     s = r(388032),
-    l = r(631936);
+    l = r(38579);
 function c(e) {
     let { onClose: t } = e;
     return (0, n.jsxs)("div", {
@@ -29,7 +29,7 @@ function c(e) {
                 variant: "text-md/medium",
                 children: s.intl.format(s.t.bWE0ZG, {
                     onClick: () => {
-                        t(), a.Z.open(o.oAB.ACCOUNT);
+                        t(), o.Z.open(a.oAB.ACCOUNT);
                     },
                 }),
             }),

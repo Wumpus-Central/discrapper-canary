@@ -25,7 +25,7 @@ var i = n(620662),
     S = n(994102),
     A = n(981631),
     C = n(671955),
-    N = n(723701);
+    N = n(87747);
 function R(e) {
     let { user: t, activity: n, onAction: R, onClose: P, application: w } = e,
         { themeType: D } = (0, m.z)(),

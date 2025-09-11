@@ -21,9 +21,9 @@ var r = n(951288),
     C = n(63063),
     O = n(981631),
     v = n(671955),
-    P = n(693450),
-    y = n(388032),
-    k = n(270816);
+    y = n(62222),
+    P = n(388032),
+    k = n(43659);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -157,7 +157,7 @@ function T(e) {
                                             {},
                                             (0, p.ZP)({
                                                 channelId: "1337",
-                                                content: y.intl.string(P.default.h5Cuen),
+                                                content: P.intl.string(y.default.h5Cuen),
                                             }),
                                         ),
                                         {
@@ -189,7 +189,7 @@ function T(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: y.intl.format(P.default.prQba2, {
+                        children: P.intl.format(y.default.prQba2, {
                             helpArticleLink: C.Z.getArticleURL(O.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),
@@ -211,14 +211,14 @@ function D(e) {
         options: [
             {
                 name: "",
-                tooltip: y.intl.string(y.t.b8Cei4),
+                tooltip: P.intl.string(P.t.b8Cei4),
                 value: O.BRd.DARK,
                 icon: s.Z6G,
                 className: o === O.BRd.DARK ? k.themeToggleOptionSelected : void 0,
             },
             {
                 name: "",
-                tooltip: y.intl.string(y.t.K2sFfn),
+                tooltip: P.intl.string(P.t.K2sFfn),
                 value: O.BRd.LIGHT,
                 icon: s.chG,
                 className: o === O.BRd.LIGHT ? k.themeToggleOptionSelected : void 0,

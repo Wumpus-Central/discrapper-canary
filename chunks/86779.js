@@ -3,46 +3,46 @@ var r = n(951288),
     i = n(647438),
     l = n(593473),
     s = n(756647),
-    o = n(442837),
-    a = n(544891),
+    a = n(442837),
+    o = n(544891),
     c = n(433517),
     u = n(755721),
     d = n(481060),
     h = n(570140),
-    f = n(893776),
-    p = n(314897),
-    g = n(626135),
-    m = n(70956),
+    p = n(893776),
+    g = n(314897),
+    m = n(626135),
+    f = n(70956),
     _ = n(970648),
     x = n(981631),
     E = n(388032),
-    v = n(78224);
+    v = n(976914);
 let j = "mweb_handoff_nonce",
     b = "mweb_handoff_nonce_expiration",
-    I = +m.Z.Millis.MINUTE,
+    I = +f.Z.Millis.MINUTE,
     N = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
     O = new Set(["deep_link_failed"]),
     S = () => {
         c.K.remove(j), c.K.remove(b);
     },
     y = () => {
-        let e = (0, o.e7)([p.default], () => p.default.getFingerprint()),
+        let e = (0, a.e7)([g.default], () => g.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
-            m = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            y = null != m ? m : null !== e ? e : void 0;
+            f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
+            y = null != f ? f : null !== e ? e : void 0;
         i.useEffect(() => {
-            null !== m &&
-                e !== m &&
+            null !== f &&
+                e !== f &&
                 h.Z.dispatch({
                     type: "FINGERPRINT",
-                    fingerprint: m,
+                    fingerprint: f,
                 });
-        }, [m, e]);
+        }, [f, e]);
         let [C, A] = i.useState(null),
             T = i.useCallback(
                 (e) => {
                     A(e),
-                        g.default.track(
+                        m.default.track(
                             x.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
@@ -68,7 +68,7 @@ let j = "mweb_handoff_nonce",
                     "null" !== n &&
                     null != Z &&
                     null == C &&
-                    a.tn
+                    o.tn
                         .post({
                             url: x.ANM.HANDOFF_EXCHANGE,
                             body: {
@@ -77,9 +77,9 @@ let j = "mweb_handoff_nonce",
                             },
                             rejectWithError: !0,
                         })
-                        .then((e) => f.Z.loginToken(e.body.token, !1))
+                        .then((e) => p.Z.loginToken(e.body.token, !1))
                         .then(() => {
-                            g.default.track(x.rMx.LOGIN_SUCCESSFUL, {
+                            m.default.track(x.rMx.LOGIN_SUCCESSFUL, {
                                 source: x.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
                                 fingerprint: (0, s.K)(y),
@@ -140,7 +140,7 @@ let j = "mweb_handoff_nonce",
                                   r.set("key", e),
                                   r.set("fingerprint", y),
                                   (t.search = r.toString()),
-                                  g.default.track(
+                                  m.default.track(
                                       x.rMx.DEEP_LINK_CLICKED,
                                       {
                                           fingerprint: (0, s.K)(y),

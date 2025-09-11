@@ -15,8 +15,8 @@ var i = n(951288),
     p = n(981631),
     j = n(65154),
     V = n(388032),
-    C = n(476265),
-    T = n(197571);
+    C = n(191809),
+    T = n(10198);
 function v(e, t, n) {
     return (
         t in e
@@ -132,7 +132,7 @@ function N(e) {
                                   onChange: (e) => o.Z.setMode(C, { shortcut: e }, n),
                               }),
                           }),
-                          (0, i.jsxs)(r.xJW, {
+                          (0, i.jsxs)("div", {
                               className: T.marginBottom8,
                               children: [
                                   (0, i.jsx)(r.vwX, {
@@ -178,7 +178,7 @@ function N(e) {
                         location: "VoiceSettingsModal",
                     }),
                 }),
-                (0, i.jsxs)(r.xJW, {
+                (0, i.jsxs)("div", {
                     className: T.marginBottom20,
                     children: [
                         (0, i.jsx)(r.vwX, {
@@ -200,7 +200,7 @@ function N(e) {
                         location: "VoiceSettingsModal",
                     }),
                 }),
-                (0, i.jsxs)(r.xJW, {
+                (0, i.jsxs)("div", {
                     className: T.marginBottom20,
                     children: [
                         (0, i.jsx)(r.vwX, {

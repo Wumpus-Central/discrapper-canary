@@ -52,7 +52,7 @@ var r = n(951288),
     q = n(524484),
     X = n(65154),
     Q = n(388032),
-    J = n(7504);
+    J = n(400872);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -311,8 +311,8 @@ let et = [Y.fO.ACTIVITY],
                     inOverlayPopout: ej,
                 });
         }
-        let e7 = i.useRef(null),
-            e5 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
+        let e5 = i.useRef(null),
+            e2 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(p.Z, {
             section: K.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
@@ -330,7 +330,7 @@ let et = [Y.fO.ACTIVITY],
                     className: J.tile,
                     children: [
                         (0, r.jsx)(V.Z, {
-                            ref: e7,
+                            ref: e5,
                             className: o()(J.tile, {
                                 [J.noBorder]: ef,
                                 [J.noInteraction]: null == k,
@@ -367,7 +367,7 @@ let et = [Y.fO.ACTIVITY],
                                                       width:
                                                           null !=
                                                           (s =
-                                                              null == e7 || null == (t = e7.current)
+                                                              null == e5 || null == (t = e5.current)
                                                                   ? void 0
                                                                   : t.clientWidth)
                                                               ? s
@@ -375,7 +375,7 @@ let et = [Y.fO.ACTIVITY],
                                                       height:
                                                           null !=
                                                           (c =
-                                                              null == e7 || null == (n = e7.current)
+                                                              null == e5 || null == (n = e5.current)
                                                                   ? void 0
                                                                   : n.clientHeight)
                                                               ? c
@@ -394,7 +394,7 @@ let et = [Y.fO.ACTIVITY],
                                     ep
                                         ? (0, r.jsx)("div", {
                                               className: J.selectedScreen,
-                                              children: (0, r.jsx)(e5, {
+                                              children: (0, r.jsx)(e2, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: J.selectedIcon,
@@ -462,7 +462,7 @@ let et = [Y.fO.ACTIVITY],
                             }),
                         (0, r.jsx)(j.Z, {
                             isFiring: eC,
-                            callTileRef: e7.current,
+                            callTileRef: e5.current,
                         }),
                     ],
                 }),

@@ -21,24 +21,24 @@ var r = n(951288),
     C = n(512070),
     O = n(299939),
     v = n(305813),
-    P = n(203872),
-    y = n(981631),
-    k = n(693450),
+    y = n(203872),
+    P = n(981631),
+    k = n(62222),
     N = n(388032),
-    E = n(300119);
+    E = n(845378);
 function T(e) {
     var t, n, T;
-    let { transitionState: D, analyticsLocations: R, guild: A, onClose: w } = e,
-        I = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+    let { transitionState: D, analyticsLocations: R, guild: A, onClose: I } = e,
+        w = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         L = (0, s.e7)([g.Z], () => g.Z.getAllPending().pendingDisplayNameStyles),
-        B = void 0 !== L ? L : null == I ? void 0 : I.displayNameStyles,
+        B = void 0 !== L ? L : null == w ? void 0 : w.displayNameStyles,
         [M, G] = o.useState(null != (t = null == B ? void 0 : B.fontId) ? t : i.C.DEFAULT),
         [Z, Y] = o.useState(null != (n = null == B ? void 0 : B.effectId) ? n : a.m.SOLID),
-        H = (0, P.R)(Z),
-        z = (0, P.R)(a.m.GRADIENT),
+        H = (0, y.R)(Z),
+        z = (0, y.R)(a.m.GRADIENT),
         F = null != (T = null == B ? void 0 : B.colors) ? T : [],
-        [U, K] = o.useState(F.length > 0 && Z !== a.m.GRADIENT ? F[0] : H.defaultColors[0]),
-        [V, X] = o.useState(F.length > 0 && Z === a.m.GRADIENT ? F : z.defaultColors);
+        [U, q] = o.useState(F.length > 0 && Z !== a.m.GRADIENT ? F[0] : H.defaultColors[0]),
+        [K, X] = o.useState(F.length > 0 && Z === a.m.GRADIENT ? F : z.defaultColors);
     (0, m.Z)(
         {
             type: l.ImpressionTypes.POPOUT,
@@ -46,8 +46,8 @@ function T(e) {
         },
         { trackOnInitialLoad: !0 },
     );
-    let { analyticsLocations: q } = (0, f.ZP)(R, p.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
-        W = o.useMemo(() => (Z === a.m.GRADIENT ? V : [U]), [Z, V, U]),
+    let { analyticsLocations: V } = (0, f.ZP)(R, p.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
+        W = o.useMemo(() => (Z === a.m.GRADIENT ? K : [U]), [Z, K, U]),
         $ = o.useMemo(() => {
             var e;
             return (
@@ -65,18 +65,18 @@ function T(e) {
                         effectId: Z,
                         colors: e,
                     }),
-                    b.default.track(y.rMx.DISPLAY_NAME_STYLES_APPLIED, {
+                    b.default.track(P.rMx.DISPLAY_NAME_STYLES_APPLIED, {
                         font_name: i.C[M],
                         effect_name: a.m[Z],
                         colors: W,
                     }),
-                    w();
+                    I();
             }
-        }, [$, M, Z, W, H, w]),
+        }, [$, M, Z, W, H, I]),
         Q = o.useCallback(() => {
             let { fontId: e, effectId: t, colors: n } = (0, j.aY)();
-            G(e), Y(t), t === a.m.GRADIENT ? X(n) : K(n[0]), b.default.track(y.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
-        }, [X, K]),
+            G(e), Y(t), t === a.m.GRADIENT ? X(n) : q(n[0]), b.default.track(P.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+        }, [X, q]),
         ee = o.useCallback(
             (e) => {
                 Y(e);
@@ -85,14 +85,14 @@ function T(e) {
         ),
         et = o.useCallback(
             (e) => {
-                Z === a.m.GRADIENT ? X(e) : K(e[0]);
+                Z === a.m.GRADIENT ? X(e) : q(e[0]);
             },
-            [Z, X, K],
+            [Z, X, q],
         );
-    return null == I
+    return null == w
         ? null
         : (0, r.jsx)(f.Gt, {
-              value: q,
+              value: V,
               children: (0, r.jsx)(x.k.Provider, {
                   value: { overrideSettings: !0 },
                   children: (0, r.jsxs)(d.Y0X, {
@@ -139,20 +139,20 @@ function T(e) {
                                       ],
                                   }),
                                   (0, r.jsx)(v.Z, {
-                                      user: I,
+                                      user: w,
                                       selectedFontId: M,
                                       selectedEffectId: Z,
                                       selectedColors: Z === a.m.SOLID && (0, c.E)(W, H.defaultColors) ? [] : W,
-                                      onClose: w,
+                                      onClose: I,
                                   }),
                               ],
                           }),
                           (0, r.jsx)(O.B, {
                               onApply: J,
                               onSurpriseMe: Q,
-                              onClose: w,
+                              onClose: I,
                               canApply: $,
-                              analyticsLocations: q,
+                              analyticsLocations: V,
                           }),
                       ],
                   }),

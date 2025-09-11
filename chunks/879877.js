@@ -12,7 +12,7 @@ var n = r(951288),
     g = r(978369),
     b = r(286957),
     p = r(388032),
-    O = r(44258);
+    O = r(200344);
 function y(e) {
     var t;
     let { tags: r, isCurrentUser: l, widgetType: c, applicationId: s, className: u, disableInteraction: y = !1 } = e,
@@ -41,7 +41,7 @@ function y(e) {
         !w && !E)
     )
         return null;
-    let R = _ ? h : h.slice(0, h.length - N);
+    let C = _ ? h : h.slice(0, h.length - N);
     return (0, n.jsxs)("div", {
         className: o()(O.tagListContainer, u),
         children: [
@@ -51,7 +51,7 @@ function y(e) {
                         (0, n.jsx)("ul", {
                             className: O.tagList,
                             "aria-label": p.intl.string(p.t.EfjTi4),
-                            children: R.map((e) =>
+                            children: C.map((e) =>
                                 (0, n.jsx)(
                                     j,
                                     {
