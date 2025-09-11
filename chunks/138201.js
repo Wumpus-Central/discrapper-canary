@@ -177,7 +177,7 @@ function h(e) {
         titleVariant: i = "text-md/semibold",
         titleColor: s = "header-primary",
         description: c,
-        descriptionVariant: u = "text-xs/medium",
+        descriptionVariant: u = "text-md/medium",
         descriptionColor: d = "text-secondary",
         buttonDisabled: p,
         iconClassName: h,
@@ -215,8 +215,9 @@ function h(e) {
                                   className: l()(o.icon, h),
                               }),
                           }),
-                    (0, r.jsxs)("div", {
-                        className: o.textContainer,
+                    (0, r.jsxs)(a.Kqy, {
+                        direction: "vertical",
+                        gap: 4,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: i,

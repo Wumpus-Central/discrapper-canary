@@ -25,11 +25,11 @@ let _ = function (e) {
         I = i.useRef(A),
         [R, w] = (0, u.US)([A], void 0, !0),
         P = i.useMemo(() => (0, l.Z)(), []),
-        N = i.useRef(!1);
+        C = i.useRef(!1);
     i.useEffect(() => {
         I.current = R;
     }, [R]);
-    let { loading: C, ageVerificationMethods: k } = (0, g.Z)(
+    let { loading: N, ageVerificationMethods: k } = (0, g.Z)(
         () => {
             null == O || O(), _();
         },
@@ -40,10 +40,10 @@ let _ = function (e) {
     return (
         i.useLayoutEffect(
             () => () => {
-                if (N.current) return;
+                if (C.current) return;
                 let e = I.current;
                 null != e &&
-                    ((N.current = !0),
+                    ((C.current = !0),
                     f.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -57,6 +57,7 @@ let _ = function (e) {
         (0, r.jsx)(o.I, {
             transitionState: t,
             onClose: _,
+            gradientColor: "blue",
             graphic: {
                 type: "image",
                 src: j.Z,
@@ -69,8 +70,8 @@ let _ = function (e) {
                 },
             }),
             actionBarInput: (0, r.jsx)(c.Avr, {
-                textVariant: "text-xs/medium",
-                color: "text-tertiary",
+                size: "sm",
+                textVariant: "text-sm/medium",
                 text: x.intl.string(x.t["2jxGen"]),
                 onClick: () => {
                     (0, m.x3)(P, m.d_.EXPRESSIVE_PRIMARY, m.sU.LOG_OUT),
@@ -86,20 +87,20 @@ let _ = function (e) {
                         direction: "horizontal",
                         gap: 8,
                         padding: {
-                            top: 12,
-                            bottom: 12,
-                            left: 8,
-                            right: 8,
+                            top: 8,
+                            bottom: 8,
+                            left: 12,
+                            right: 12,
                         },
                         align: "center",
                         className: v.dataAssurance,
                         children: [
                             (0, r.jsx)(c.d3s, {
-                                size: "md",
+                                size: "lg",
                                 color: "currentColor",
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: "text-xs/medium",
+                                variant: "text-sm/medium",
                                 color: "text-feedback-info",
                                 children: x.intl.string(E.default.ar3a3t),
                             }),
@@ -126,19 +127,23 @@ let _ = function (e) {
                                   }),
                               ],
                           })
-                        : k.map((e) => {
-                              let { title: t, description: n, onClick: i } = e;
-                              return (0, r.jsx)(
-                                  d.JZ,
-                                  {
-                                      variant: "clickable",
-                                      title: t,
-                                      description: n,
-                                      buttonDisabled: C,
-                                      onButtonPress: () => i(P),
-                                  },
-                                  t,
-                              );
+                        : (0, r.jsx)(c.Kqy, {
+                              direction: "vertical",
+                              gap: 8,
+                              children: k.map((e) => {
+                                  let { title: t, description: n, onClick: i } = e;
+                                  return (0, r.jsx)(
+                                      d.JZ,
+                                      {
+                                          variant: "clickable",
+                                          title: t,
+                                          description: n,
+                                          buttonDisabled: N,
+                                          onButtonPress: () => i(P),
+                                      },
+                                      t,
+                                  );
+                              }),
                           }),
                 ],
             }),
