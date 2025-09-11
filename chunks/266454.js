@@ -1,34 +1,48 @@
 n.d(t, {
-    Nj: () => d,
-    Ob: () => _,
-    Q3: () => f,
-    wE: () => p,
-    zu: () => u,
+    Nj: () => p,
+    Q3: () => h,
+    wE: () => g,
+    zu: () => _,
 });
 var r = n(442837),
     i = n(675478),
     a = n(581883),
-    o = n(709054),
-    s = n(915486),
-    l = n(605236),
-    c = n(57207);
-function u(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (!n && (0, c.Bh)(e)) return !0;
-    let r = null == (t = a.Z.settings.userContent) ? void 0 : t.dismissedContents;
-    return null != r && (0, s.jl)(r, e);
+    o = n(914010),
+    s = n(70956),
+    l = n(709054),
+    c = n(915486),
+    u = n(428967),
+    d = n(605236),
+    f = n(57207);
+function _(e) {
+    let {
+        bypassNewUserCheck: t = !1,
+        cooldownDurationMs: n = s.Z.Millis.WEEK,
+        guildId: r,
+    } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    if (!t && (0, f.Bh)(e)) return !0;
+    if ((0, u.lg)(e)) return (0, d.H4)(e).isDismissed;
+    {
+        var i;
+        if ((0, u.I0)(e)) return m(e, l.default.fromTimestamp(Date.now())).isDismissed;
+        if ((0, u.OQ)(e)) return (0, d.Fo)(e, { cooldownDurationMs: n }).isDismissed;
+        if ((0, u.Vc)(e)) return (0, d.XY)(e, r);
+        if ((0, u.ms)(e)) return (0, d.oK)(e, r);
+        let t = null == (i = a.Z.settings.userContent) ? void 0 : i.dismissedContents;
+        return null != t && (0, c.jl)(t, e);
+    }
 }
-function d(e) {
-    return (0, r.e7)([a.Z], () => u(e));
-}
-async function f(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    u(e, !0) || ((0, l.u9)(e, t), await (0, i.nm)(e), (0, l.ME)(e, t));
+    return (0, r.e7)([a.Z, o.Z], () => _(e, t));
 }
-function _(e, t) {
+async function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    _(e, { bypassNewUserCheck: !0 }) || ((0, d.u9)(e, t), await (0, i.nm)(e), (0, d.ME)(e, t));
+}
+function m(e, t) {
     var n, r;
-    if ((0, c.Bh)(e))
+    if ((0, f.Bh)(e))
         return {
             isDismissed: !0,
             lastDismissedSnowflakeId: null,
@@ -38,11 +52,11 @@ function _(e, t) {
             ? void 0
             : n.lastDismissedObjectId;
     return {
-        isDismissed: null != i && 1 !== o.default.compare(t, i),
+        isDismissed: null != i && 1 !== l.default.compare(t, i),
         lastDismissedSnowflakeId: i,
     };
 }
-async function p(e, t) {
+async function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    (0, l.u9)(e, n), await (0, l.XM)(e, t, 1), (0, l.ME)(e, n);
+    (0, d.u9)(e, n), await (0, d.XM)(e, t, 1), (0, d.ME)(e, n);
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+n.d(t, { Z: () => f }), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -12,13 +12,12 @@ let f = i.memo(function (e) {
     let { className: t, content: n, onChange: a } = e,
         l = o.z[n],
         { isDismissed: f, handleToggleDismissState: p } = (0, u.Z)(l),
-        [h, m] = i.useState(f),
-        g = i.useCallback(() => {
-            null == a || a(n), m(p());
+        h = i.useCallback(() => {
+            null == a || a(n), p();
         }, [a, p, n]);
     return (0, r.jsxs)(s.j7V, {
-        value: h,
-        onChange: g,
+        value: f,
+        onChange: h,
         className: t,
         children: [
             (0, r.jsx)(s.Text, {
