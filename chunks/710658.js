@@ -1,43 +1,46 @@
-n.d(i, { default: () => p });
-var r = n(951288),
-    a = n(667202),
-    s = n(635552),
-    e = n(300284),
-    l = n(342386),
-    o = n(388032),
-    c = n(117771);
-let p = (t) => {
-    let { transitionState: i, onClose: n, product: p } = t,
-        u = (0, e.Z)(),
-        { handleUseNow: d, isApplying: g } = (0, s.W)({
-            product: p,
-            onSuccess: n,
-            onError: n,
+a.d(n, { default: () => b });
+var i = a(951288),
+    e = a(667202),
+    c = a(635552),
+    s = a(300284),
+    o = a(342386),
+    r = a(526167),
+    d = a(388032),
+    l = a(461999),
+    p = a(793167);
+let b = (t) => {
+    let { transitionState: n, onClose: a, product: b } = t,
+        u = (0, s.Z)(),
+        { handleUseNow: f, isApplying: h } = (0, c.W)({
+            product: b,
+            onSuccess: a,
+            onError: a,
         });
-    return (0, r.jsx)(a.I, {
+    return (0, i.jsx)(e.I, {
         gradientColor: "nitro-pink",
-        title: o.intl.string(o.t.qYWlf3),
-        subtitle: o.intl.string(o.t.x01cl5),
+        title: d.intl.string(d.t.qYWlf3),
+        subtitle: d.intl.string(d.t.x01cl5),
         actions: [
             {
-                text: o.intl.string(o.t["2p2aY2"]),
+                text: d.intl.string(d.t["2p2aY2"]),
                 variant: "secondary",
                 onClick: () => {
-                    n(), (0, l.Z)(), null == u || u();
+                    a(), (0, o.Z)(), null == u || u();
                 },
             },
             {
-                text: o.intl.string(o.t.MAS7uL),
+                text: d.intl.string(d.t.MAS7uL),
                 variant: "primary",
-                onClick: d,
-                loading: g,
+                onClick: f,
+                loading: h,
             },
         ],
         graphic: {
-            type: "image",
-            src: c.Z,
+            type: "video",
+            src: (0, r.rO)() ? l.Z : p.Z,
+            loop: !0,
         },
-        transitionState: i,
-        onClose: n,
+        transitionState: n,
+        onClose: a,
     });
 };
