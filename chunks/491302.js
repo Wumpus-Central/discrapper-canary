@@ -131,6 +131,7 @@ function h(e) {
                                 (0, i.jsxs)(d.Z, {
                                     children: [
                                         (0, i.jsx)(d.Z.Child, {
+                                            wrap: !0,
                                             basis: "50%",
                                             children: (0, i.jsx)(a.oil, {
                                                 label: g.intl.string(g.t.I1o5gY),

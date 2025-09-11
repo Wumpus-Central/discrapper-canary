@@ -181,6 +181,7 @@ function w(e) {
                                     (0, i.jsxs)(m.Z, {
                                         children: [
                                             (0, i.jsx)(m.Z.Child, {
+                                                wrap: !0,
                                                 basis: "50%",
                                                 children: (0, i.jsx)(c.oil, {
                                                     label: _.intl.string(_.t.ukdxur),

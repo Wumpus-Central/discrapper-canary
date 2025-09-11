@@ -194,6 +194,7 @@ class el extends i.Component {
                             }),
                         }),
                         (0, r.jsx)(T.Z.Child, {
+                            wrap: !0,
                             basis: "50%",
                             children: (0, r.jsx)(_.oil, {
                                 label: s,
