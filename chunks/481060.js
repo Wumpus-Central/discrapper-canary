@@ -164,6 +164,7 @@ n.d(t, {
     PhF: () => eT.Ph,
     Prq: () => td.Prq,
     Pt5: () => td.Pt5,
+    Pzh: () => td.Pzh,
     QDj: () => td.QDj,
     QFD: () => ex.QF,
     QJP: () => td.QJP,

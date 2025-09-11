@@ -52954,6 +52954,28 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     transition-delay: .2s
 }
 
+.wishlistButton__979b1 {
+    align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, .52);
+    border: 1px solid var(--border-faint, hsla(240, 4%, 61%, .04));
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-shrink: 0;
+    gap: 4px;
+    justify-content: center;
+    padding: 10px
+}
+
+.normalIconColor__979b1 {
+    fill: var(--white-500)
+}
+
+.wishlistedOrHoveredIconColor__979b1 {
+    fill: #ec1060
+}
+
 .fadeInAvatarImg_d71c71 {
     animation: fadeIn_d71c71 1.5s
 }
@@ -53396,6 +53418,13 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .badgeLeftAligned_c3d04b {
     left: 16px;
     right: auto
+}
+
+.wishlistButton_c3d04b {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1
 }
 
 .container__85f5c {
