@@ -1,9 +1,9 @@
 n.d(t, {
-    L6: () => V,
-    Rc: () => Z,
+    L6: () => F,
+    Rc: () => B,
     WH: () => P,
     aP: () => k,
-    dV: () => F,
+    dV: () => Z,
     g: () => M,
     iV: () => j,
     n9: () => U,
@@ -11,7 +11,6 @@ n.d(t, {
     rn: () => x,
     tK: () => w,
     xc: () => G,
-    zf: () => B,
 });
 var r = n(512722),
     i = n.n(r),
@@ -191,24 +190,10 @@ async function G(e) {
         });
     } catch (e) {}
 }
-async function B(e, t, n) {
-    try {
-        await I.Z.post({
-            url: S.ANM.STREAM_NOTIFY_V2(e),
-            body: {
-                application_id: t,
-                game_title: n,
-            },
-            oldFormErrors: !0,
-            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
-            rejectWithError: !0,
-        });
-    } catch (e) {}
-}
-function Z(e) {
+function B(e) {
     (0, v.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: "STREAM_UPDATE_SETTINGS" }, e));
 }
-function F(e, t) {
+function Z(e, t) {
     o.tn.patch({
         url: S.ANM.STREAM(e),
         body: { region: t },
@@ -216,7 +201,7 @@ function F(e, t) {
         rejectWithError: !0,
     });
 }
-function V() {
+function F() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.Z.getCurrentUserActiveStream();
     null != t && M((0, u.V9)(t), e);
