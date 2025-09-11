@@ -73192,18 +73192,23 @@ html .progress__61462 {
     border-radius: var(--radius-sm);
     cursor: pointer;
     display: flex;
+    -webkit-mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
+    mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
+    overflow: hidden;
     padding: 4px 8px;
     transition: background-color .2s ease-in-out
 }
 
 .item__1bb32:active,
-.item__1bb32:hover {
+.item__1bb32:hover,
+.item__1bb32[aria-selected=true] {
     background-color: var(--background-mod-subtle);
     color: var(--text-primary)
 }
 
 .itemIcon__1bb32 {
     color: var(--text-muted);
+    flex-shrink: 0;
     height: 20px;
     margin-right: 8px;
     width: 20px
@@ -73227,6 +73232,58 @@ html .progress__61462 {
 }
 
 .channelNameIcon__1bb32 {
+    color: var(--text-default);
+    height: 14px;
+    width: 14px
+}
+
+.divider__1bb32 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 8px -8px
+}
+
+.autocompleteGroupHeader__1bb32 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 8px
+}
+
+.clearSearchHistory__1bb32:hover .clearSearchHistoryIcon__1bb32 {
+    color: var(--text-primary)
+}
+
+.clearSearchHistoryIcon__1bb32 {
+    color: var(--text-secondary);
+    cursor: pointer
+}
+
+.filterPill__1bb32 {
+    border-radius: var(--radius-xs) 0 0 var(--radius-xs);
+    padding: 3px 2px 3px 6px
+}
+
+.answerPill__1bb32,
+.filterPill__1bb32 {
+    background-color: var(--background-mod-strong)
+}
+
+.answerPill__1bb32 {
+    align-items: center;
+    border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+    display: flex;
+    gap: 4px;
+    margin-right: 8px;
+    padding: 3px 6px 3px 2px;
+    white-space: nowrap
+}
+
+.channelAnswerPill__1bb32 {
+    gap: 0
+}
+
+.channelPillIcon__1bb32 {
     color: var(--text-default);
     height: 14px;
     width: 14px

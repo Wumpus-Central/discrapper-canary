@@ -37,8 +37,8 @@ var r = n(951288),
     x = n(611004),
     L = n(778177),
     j = n(165017),
-    M = n(817190),
-    k = n(315322),
+    k = n(817190),
+    M = n(315322),
     U = n(723642),
     G = n(981631),
     B = n(388032),
@@ -258,7 +258,7 @@ class W extends i.PureComponent {
                 if ((e.preventDefault(), e.stopPropagation(), "" === O.Sq(t))) return void this.focusEditor();
                 (t = O.Hl(t, 0)),
                     this.setEditorState(t),
-                    (0, k.cy)({ searchContext: n }),
+                    (0, M.cy)({ searchContext: n }),
                     r || Promise.resolve().then(() => this.blurEditor());
             }),
             F(this, "handleFocusSearch", (e) => {
@@ -280,7 +280,7 @@ class W extends i.PureComponent {
                 if (r.isPrivate() && !s) return void this.focusEditor();
                 let l = (0, S.X3)(r);
                 if (null == l) return void this.focusEditor();
-                (0, k.PJ)({ searchContext: a }),
+                (0, M.PJ)({ searchContext: a }),
                     Promise.resolve().then(() => {
                         let { _editorRef: e } = this;
                         null == e || e.focus(),
@@ -303,32 +303,26 @@ class W extends i.PureComponent {
             }),
             F(this, "onFocus", () => {
                 let { searchContext: e, isSearchActive: t } = this.props;
-                this.setState({ focused: !0 }), t || (0, k.I1)({ searchContext: e });
+                this.setState({ focused: !0 }), t || (0, M.I1)({ searchContext: e });
             }),
             F(this, "handleBlur", (e) => {
                 let { searchContext: t, isSearchActive: n } = this.props;
                 this.setState({ focused: !1 }, () => {
-                    n || e || (0, k.IZ)({ searchContext: t }), O.xb(this.props.editorState) && this.clearSearch();
+                    n || e || (0, M.IZ)({ searchContext: t }), O.xb(this.props.editorState) && this.clearSearch();
                 });
             }),
             F(this, "onBlur", (e) => {
                 this.handleBlur();
             }),
-            F(
-                this,
-                "handleOption",
-                (e) =>
-                    null != e &&
-                    (-1 === e.state.selectedIndex && e.shouldShowSearchInSelectedChannel()
-                        ? e.handleSearchInChannel({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS })
-                        : e.selectOption({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS })),
-            ),
             F(this, "handleReturn", (e) => {
-                let { shiftKey: t } = e;
+                var t;
+                let { shiftKey: n } = e;
                 e.preventDefault();
-                let { current: n } = this._searchPopoutRef;
+                let r = this.getPopoutRef();
                 return (
-                    this.handleOption(n) || ((0, S.X$)() && t ? this.search({ searchEverywhere: !0 }) : this.search()),
+                    (null != (t = null != r && r.selectOption({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS })) &&
+                        t) ||
+                        ((0, S.X$)() && n ? this.search({ searchEverywhere: !0 }) : this.search()),
                     "handled"
                 );
             }),
@@ -390,6 +384,11 @@ class W extends i.PureComponent {
                 let { searchContext: t } = this.props;
                 I.Z.setSearchState(t, e);
             }),
+            F(this, "getPopoutRef", () => {
+                let { current: e } = this._searchFiltersRedesignPopoutRef,
+                    { current: t } = this._searchPopoutRef;
+                return this.props.isSearchFiltersRedesignEnabled ? e : t;
+            }),
             F(this, "handleKeyBind", (e) => {
                 let { key: t, metaKey: n, shiftKey: r } = e,
                     { editorState: i, searchContext: a, keyboardModeEnabled: o } = this.props;
@@ -403,12 +402,12 @@ class W extends i.PureComponent {
                 }
                 if ("ArrowUp" === t) {
                     e.preventDefault();
-                    let { current: t } = this._searchPopoutRef;
+                    let t = this.getPopoutRef();
                     return null != t && t.focusPreviousOption(), !0;
                 }
                 if ("ArrowDown" === t) {
                     e.preventDefault();
-                    let { current: t } = this._searchPopoutRef;
+                    let t = this.getPopoutRef();
                     return null != t && t.focusNextOption(), !0;
                 }
                 if ("Tab" === t) {
@@ -439,8 +438,8 @@ function K(e) {
         } = e,
         c = (0, S.Tm)(t),
         f = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        p = (0, u.e7)([M.Z], () => (null != c ? M.Z.getEditorState(c) : null)),
-        m = (0, u.e7)([M.Z], () => M.Z.getIsSearchTokensInitialized()),
+        p = (0, u.e7)([k.Z], () => (null != c ? k.Z.getEditorState(c) : null)),
+        m = (0, u.e7)([k.Z], () => k.Z.getIsSearchTokensInitialized()),
         b = i.useRef(m);
     i.useEffect(() => {
         m && b.current !== m && ((b.current = m), x.Z.ensureSearchInputDecorators(t));
@@ -460,13 +459,13 @@ function K(e) {
         }),
         D = i.useRef(A);
     i.useEffect(() => {
-        D.current && !A && ((D.current = !1), (0, k.IZ)({ searchContext: t })), !D.current && A && (D.current = !0);
+        D.current && !A && ((D.current = !1), (0, M.IZ)({ searchContext: t })), !D.current && A && (D.current = !0);
     }, [A, t]);
     let L = i.useCallback(
             (e) => {
                 let { queryString: n, query: r, searchEverywhere: i } = e;
                 P.ZP.refreshSearchQueryAnalyticsId(t),
-                    (0, k.tI)({
+                    (0, M.tI)({
                         searchContext: t,
                         query: r,
                         queryString: n,
@@ -540,7 +539,7 @@ function K(e) {
             q.current = z;
         }, [z]),
         i.useEffect(() => {
-            (0, k.O2)({
+            (0, M.O2)({
                 searchContext: t,
                 appContext: q.current,
             });

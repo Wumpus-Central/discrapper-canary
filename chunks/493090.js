@@ -5,4 +5,12 @@ e.exports = {
     channelNameContainer: "channelNameContainer__1bb32",
     channelName: "channelName__1bb32",
     channelNameIcon: "channelNameIcon__1bb32",
+    divider: "divider__1bb32",
+    autocompleteGroupHeader: "autocompleteGroupHeader__1bb32",
+    clearSearchHistory: "clearSearchHistory__1bb32",
+    clearSearchHistoryIcon: "clearSearchHistoryIcon__1bb32",
+    filterPill: "filterPill__1bb32",
+    answerPill: "answerPill__1bb32",
+    channelAnswerPill: "channelAnswerPill__1bb32",
+    channelPillIcon: "channelPillIcon__1bb32",
 };
