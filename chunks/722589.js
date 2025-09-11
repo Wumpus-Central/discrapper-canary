@@ -9,17 +9,17 @@ let a = "_",
 function u(e) {
     return null == e ? "" : e.toUpperCase().replace(o, a).replace(l, s);
 }
-function d(e) {
-    var t;
-    let [, , n, a] = e.split("/"),
-        o = u(n),
-        s = null != (t = c[o]) ? t : o,
-        l = u(a);
-    return i.oAB.hasOwnProperty(s) && (null == l || "" === l || i.oAB.hasOwnProperty(l))
+function d(e, t) {
+    var n;
+    let [, , a, o] = e.split("/"),
+        s = u(a),
+        l = null != (n = c[s]) ? n : s,
+        d = u(o);
+    return i.oAB.hasOwnProperty(l) && (null == d || "" === d || i.oAB.hasOwnProperty(d))
         ? {
-              params: (0, r.parse)(location.search),
-              section: i.oAB[s],
-              subsection: l,
+              params: (0, r.parse)(null != t ? t : location.search),
+              section: i.oAB[l],
+              subsection: d,
           }
         : null;
 }

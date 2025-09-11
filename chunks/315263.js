@@ -42,8 +42,8 @@ var r = n(873546),
     L = n(782568),
     j = n(981631);
 n(215023);
-var M = n(46140);
-async function k(e, t) {
+var k = n(46140);
+async function M(e, t) {
     await a.Z.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: e,
@@ -60,10 +60,10 @@ async function U(e) {
     }
     if (null == n) return;
     if (n.state === j.r2o.EXPIRED || n.state === j.r2o.BANNED || n.state === j.r2o.ERROR)
-        return void (await k(n, e.code));
+        return void (await M(n, e.code));
     let r = w.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
-    null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await k(n, e.code);
+    null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await M(n, e.code);
 }
 let G = {
     skipExtensionCheck: void 0,
@@ -193,7 +193,7 @@ function B(e) {
                 !0
             );
         };
-    if (null != N && N.type === g.g.QUESTS_EMBED && (0, T.c)({ location: M.dr.EMBED_MOBILE }))
+    if (null != N && N.type === g.g.QUESTS_EMBED && (0, T.c)({ location: k.dr.EMBED_MOBILE }))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
@@ -207,10 +207,10 @@ function B(e) {
                 }),
             !0
         );
-    let { host: w, hostname: k, pathname: B, search: Z, hash: F } = null != (t = x.Z.toURLSafe(e)) ? t : {},
+    let { host: w, hostname: M, pathname: B, search: Z, hash: F } = null != (t = x.Z.toURLSafe(e)) ? t : {},
         V =
-            x.Z.isDiscordHostname(null != k ? k : null) ||
-            x.Z.isDiscordLocalhost(null != w ? w : null, null != k ? k : null);
+            x.Z.isDiscordHostname(null != M ? M : null) ||
+            x.Z.isDiscordLocalhost(null != w ? w : null, null != M ? M : null);
     if (
         V &&
         ((null == B ? void 0 : B.startsWith("/application-directory")) ||
@@ -282,7 +282,7 @@ function B(e) {
         };
     if (V && (null == B ? void 0 : B.startsWith("/settings/"))) {
         let { default: e } = n(722589),
-            t = e(B);
+            t = e(B, Z);
         if (null != t)
             return (e) => (
                 null == e || e.preventDefault(),
