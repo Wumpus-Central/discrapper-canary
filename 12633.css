@@ -25558,15 +25558,22 @@ svg.radioIcon_c1e9c4 {
 }
 
 .coverArt_e0f8ae {
+    aspect-ratio: .75;
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
+    box-sizing: border-box;
     display: block;
+    object-fit: cover;
     width: 100%
 }
 
 .closeButton_e0f8ae {
     color: var(--interactive-normal);
     cursor: pointer
+}
+
+.loadingArtwork_e0f8ae {
+    background-color: var(--background-base-lower)
 }
 
 .hidden__7d7b6 {
