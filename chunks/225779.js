@@ -162,10 +162,11 @@ function T(e) {
     });
 }
 function S(e) {
-    let { color: t = E.DEFAULT, className: n, style: i, children: s } = e;
+    let { color: t = E.DEFAULT, className: n, style: i, ref: s, children: l } = e;
     return (0, r.jsx)("div", {
+        ref: s,
         className: a()(d.notice, { [d.isMobile]: o.tq }, n, t),
         style: null != i ? i : void 0,
-        children: s,
+        children: l,
     });
 }
