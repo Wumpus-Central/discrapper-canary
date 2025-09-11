@@ -25898,7 +25898,6 @@ div.modalHeader_c28af8 {
 }
 
 .full-motion .shine__28141 {
-    animation-delay: .75s;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: Shine__28141;
@@ -58926,6 +58925,15 @@ h3.improved__1689b:after {
     z-index: 2
 }
 
+.rewardHighlightLogoCTALabel__8a22c {
+    align-items: center;
+    flex: 1;
+    flex-direction: row;
+    gap: 8px;
+    min-width: 0;
+    width: 100%
+}
+
 .rewardHighlightLogoCTAHeightBoost__8a22c {
     box-sizing: border-box;
     flex: 1;
@@ -58939,6 +58947,16 @@ h3.improved__1689b:after {
 
 .rewardHighlightCTA__8a22c {
     pointer-events: none
+}
+
+.rewardHighlightCTALabel__8a22c {
+    background-color: rgba(0, 0, 0, .329);
+    border-radius: var(--radius-xl);
+    max-width: 100%;
+    min-width: 0;
+    padding: 9px 13px;
+    pointer-events: none;
+    text-transform: uppercase
 }
 
 .isExpanded__8a22c {
@@ -60109,7 +60127,6 @@ h3.improved__1689b:after {
 }
 
 .full-motion .shine__636a2 {
-    animation-delay: .75s;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-name: Shine__636a2;

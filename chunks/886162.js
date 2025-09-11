@@ -46,7 +46,8 @@ function g(e) {
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/normal",
-                            children: g === p.c2C.AGREEMENTS ? f.intl.format(f.t.zHolhY, {}) : null,
+                            children:
+                                g === p.c2C.AGREEMENTS ? f.intl.format(f.t.CN0Hvb, { url: p.EYA.TERMS_SUMMARY }) : null,
                         }),
                         (0, r.jsxs)("div", {
                             className: h.container,

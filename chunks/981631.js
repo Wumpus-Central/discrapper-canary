@@ -2273,6 +2273,7 @@ let tn = 128,
         COMPANY: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/company"),
         PARTNERS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/partners"),
         TERMS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms"),
+        TERMS_SUMMARY: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/safety/important-policy-updates"),
         PAID_TERMS: "".concat(window.GLOBAL_ENV.MARKETING_ENDPOINT, "/terms/paid-services-terms"),
         PAID_TERMS_VIRTUAL_GOODS: "".concat(
             window.GLOBAL_ENV.MARKETING_ENDPOINT,
