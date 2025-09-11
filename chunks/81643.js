@@ -85,44 +85,45 @@ function C() {
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    arguments.length > 3 && arguments[3];
-    let [o, s] = r.useState(!1),
-        u = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        { current: d } = r.useRef(null == u ? void 0 : u.ageVerificationStatus),
-        h = r.useCallback(() => {
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        [s, u] = r.useState(!1),
+        d = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        { current: h } = r.useRef(null == d ? void 0 : d.ageVerificationStatus),
+        m = r.useCallback(() => {
             a.Z.dispatch({
                 type: "CLOSE_AGE_VERIFICATION_MODAL",
-                status: d,
+                status: h,
             }),
                 t ||
                     c.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_intro_screen",
                         visibleContent: n,
                     });
-        }, [d, t, n]);
+        }, [h, t, n]);
     return {
-        loading: o,
+        loading: s,
         initiateAgeVerification: r.useCallback(
             async (t, n) => {
-                s(!0);
+                u(!0);
                 try {
                     a.Z.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await (0, p.K)(n);
                     _.Z.showAgeVerification({
                         webviewUrl: r.verification_webview_url,
                         onComplete: e,
-                        onClose: h,
-                        onCancel: h,
+                        onClose: m,
+                        onCancel: m,
                         entryPoint: t,
+                        shouldShowExpressiveModal: o,
                     });
                 } catch (e) {
-                    l.Z.showFailedToast(g.wQ.TIGGER_PAWTECT_ERROR), h();
+                    l.Z.showFailedToast(g.wQ.TIGGER_PAWTECT_ERROR), m();
                 } finally {
-                    s(!1);
+                    u(!1);
                 }
             },
-            [e, h],
+            [e, m, o],
         ),
     };
 }

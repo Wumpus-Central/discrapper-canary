@@ -3,4 +3,5 @@ e.exports = {
     content: "content__10a0c",
     fullbleed: "fullbleed__10a0c",
     iframe: "iframe__10a0c",
+    footer: "footer__10a0c",
 };

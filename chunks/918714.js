@@ -110,7 +110,7 @@ let x = function (e) {
                 alt: "",
             }),
             S
-                ? (0, r.jsx)(c.default, {
+                ? (0, r.jsx)(c.Z, {
                       transitionState: l.Dvm.ENTERED,
                       entryPoint: o.cU.SAFETY_FLOWS,
                       onClose: async () => {},

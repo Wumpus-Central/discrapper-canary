@@ -1,8 +1,8 @@
-n.d(t, { default: () => _ }), n(388685), n(953529);
+n.d(t, { Z: () => _ }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
-    a = n(772848),
-    l = n(704215),
+    l = n(772848),
+    a = n(704215),
     o = n(667202),
     c = n(481060),
     s = n(893776),
@@ -10,40 +10,40 @@ var r = n(951288),
     d = n(138201),
     f = n(420846),
     p = n(63063),
-    m = n(168107),
-    y = n(480916),
-    g = n(352138),
-    h = n(629235),
-    E = n(981631),
-    x = n(398158),
-    v = n(388032),
-    b = n(70402),
-    j = n(736056);
+    h = n(168107),
+    m = n(480916),
+    y = n(352138),
+    g = n(629235),
+    b = n(981631),
+    E = n(398158),
+    x = n(388032),
+    v = n(70402),
+    j = n(765896);
 let _ = function (e) {
     let { transitionState: t, entryPoint: n, onClose: _, onComplete: O } = e,
-        [A, S] = i.useState(l.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        [A, S] = i.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         I = i.useRef(A),
         [R, w] = (0, u.US)([A], void 0, !0),
-        P = i.useMemo(() => (0, a.Z)(), []),
-        C = i.useRef(!1);
+        P = i.useMemo(() => (0, l.Z)(), []),
+        N = i.useRef(!1);
     i.useEffect(() => {
         I.current = R;
     }, [R]);
-    let { loading: T, ageVerificationMethods: N } = (0, h.Z)(
+    let { loading: C, ageVerificationMethods: k } = (0, g.Z)(
         () => {
             null == O || O(), _();
         },
         () => {
-            S(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            S(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
     );
     return (
         i.useLayoutEffect(
             () => () => {
-                if (C.current) return;
+                if (N.current) return;
                 let e = I.current;
                 null != e &&
-                    ((C.current = !0),
+                    ((N.current = !0),
                     f.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -52,7 +52,7 @@ let _ = function (e) {
             [],
         ),
         i.useEffect(() => {
-            (0, y.lA)(P, y.d_.EXPRESSIVE_PRIMARY, n);
+            (0, m.lA)(P, m.d_.EXPRESSIVE_PRIMARY, n);
         }, [P, n]),
         (0, r.jsx)(o.I, {
             transitionState: t,
@@ -61,19 +61,19 @@ let _ = function (e) {
                 type: "image",
                 src: j.Z,
             },
-            title: v.intl.string(v.t.JHNunp),
-            subtitle: v.intl.format(x.default.RpMIT0, {
+            title: x.intl.string(x.t.JHNunp),
+            subtitle: x.intl.format(E.default.RpMIT0, {
                 handleOnHelpUrlHook: () => {
-                    m.Z.openUrl(p.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, y.x3)(P, y.d_.EXPRESSIVE_PRIMARY, y.sU.LEARN_MORE);
+                    h.Z.openUrl(p.Z.getArticleURL(b.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, m.x3)(P, m.d_.EXPRESSIVE_PRIMARY, m.sU.LEARN_MORE);
                 },
             }),
             actionBarInput: (0, r.jsx)(c.Avr, {
                 textVariant: "text-xs/medium",
                 color: "text-tertiary",
-                text: v.intl.string(v.t["2jxGen"]),
+                text: x.intl.string(x.t["2jxGen"]),
                 onClick: () => {
-                    (0, y.x3)(P, y.d_.EXPRESSIVE_PRIMARY, y.sU.LOG_OUT),
+                    (0, m.x3)(P, m.d_.EXPRESSIVE_PRIMARY, m.sU.LOG_OUT),
                         s.Z.logout("age_verification_get_started_modal");
                 },
             }),
@@ -92,7 +92,7 @@ let _ = function (e) {
                             right: 8,
                         },
                         align: "center",
-                        className: b.dataAssurance,
+                        className: v.dataAssurance,
                         children: [
                             (0, r.jsx)(c.d3s, {
                                 size: "md",
@@ -101,11 +101,11 @@ let _ = function (e) {
                             (0, r.jsx)(c.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-feedback-info",
-                                children: v.intl.string(x.default.ar3a3t),
+                                children: x.intl.string(E.default.ar3a3t),
                             }),
                         ],
                     }),
-                    null == N || 0 === N.length
+                    null == k || 0 === k.length
                         ? (0, r.jsxs)(c.Kqy, {
                               direction: "vertical",
                               align: "center",
@@ -114,19 +114,19 @@ let _ = function (e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-secondary",
-                                      children: v.intl.string(x.default.cR6339),
+                                      children: x.intl.string(E.default.cR6339),
                                   }),
                                   (0, r.jsx)(c.zxk, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: v.intl.string(x.default.hDvmYG),
+                                      text: x.intl.string(E.default.hDvmYG),
                                       onClick: () => {
-                                          (0, g.J)();
+                                          (0, y.J)();
                                       },
                                   }),
                               ],
                           })
-                        : N.map((e) => {
+                        : k.map((e) => {
                               let { title: t, description: n, onClick: i } = e;
                               return (0, r.jsx)(
                                   d.JZ,
@@ -134,7 +134,7 @@ let _ = function (e) {
                                       variant: "clickable",
                                       title: t,
                                       description: n,
-                                      buttonDisabled: T,
+                                      buttonDisabled: C,
                                       onButtonPress: () => i(P),
                                   },
                                   t,
