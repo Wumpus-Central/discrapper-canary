@@ -46,7 +46,7 @@ function E(e) {
                           onClick: l,
                           disabled: a,
                       })
-                    : d || !(0, u.G1)(n)
+                    : null == i && (d || !(0, u.G1)(n))
                       ? (0, r.jsx)(o.zxk, {
                             variant: "primary",
                             text: _.intl.string(_.t.fYfGgI),
