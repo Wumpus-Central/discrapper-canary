@@ -93,14 +93,14 @@ function p(e) {
         let n = {},
             r = {};
         t.body.forEach((e) => {
-            var t, i, a, o, s, l;
+            var t, i, a, o, s, l, c;
             (null == (a = e.sku) || null == (i = a.tenant_metadata) || null == (t = i.guild_monetization)
                 ? void 0
-                : t.powerup) != null
+                : t.powerup) != null || (null == e || null == (o = e.sku) ? void 0 : o.powerup_metadata) != null
                 ? (n[e.sku_id] = e)
-                : (null == (l = e.sku) || null == (s = l.tenant_metadata) || null == (o = s.guild_monetization)
+                : (null == (c = e.sku) || null == (l = c.tenant_metadata) || null == (s = l.guild_monetization)
                       ? void 0
-                      : o.game_server) != null && (r[e.id] = e);
+                      : s.game_server) != null && (r[e.id] = e);
         }),
             i.Z.dispatch({
                 type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS",
