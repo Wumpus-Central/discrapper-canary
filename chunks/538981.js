@@ -45,6 +45,7 @@ let h = 3,
     m = async (e) => {
         let { campaignId: t } = e;
         try {
+            s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_STARTED" });
             let e = await a.tn.get({
                 url: f.ANM.MARKETING_CAMPAIGN_ELIGIBILITY(t),
                 rejectWithError: !1,
@@ -52,7 +53,7 @@ let h = 3,
             });
             return (
                 s.Z.dispatch({
-                    type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCHED",
+                    type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_SUCCESS",
                     isEligible: e.body.eligibility,
                 }),
                 e.body.eligibility

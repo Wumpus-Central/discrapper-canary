@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r,
     i = n(442837),
     a = n(570140),
@@ -64,21 +64,27 @@ let _ = {
     prevSubscription: new f(),
     shouldRefetchCampaignEligibility: !0,
     isEligibleForCampaign: null,
+    isFetchingCampaignEligibility: !1,
 };
 function p(e) {
     let { isEligible: t } = e;
     _ = d(c({}, _), {
         shouldRefetchCampaignEligibility: !1,
         isEligibleForCampaign: t,
+        isFetchingCampaignEligibility: !1,
     });
 }
 function h() {
     _ = d(c({}, _), {
         shouldRefetchCampaignEligibility: !1,
         isEligibleForCampaign: null,
+        isFetchingCampaignEligibility: !1,
     });
 }
-class m extends (r = i.ZP.Store) {
+function m() {
+    _ = d(c({}, _), { isFetchingCampaignEligibility: !0 });
+}
+class g extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, o.Z),
             this.syncWith([s.Z], this.handleUserOfferUpdate),
@@ -105,8 +111,9 @@ class m extends (r = i.ZP.Store) {
             }));
     }
 }
-l(m, "displayName", "MarketingCampaignEligibilityStore");
-let g = new m(a.Z, {
-    MARKETING_CAMPAIGN_ELIGIBILITY_FETCHED: p,
+l(g, "displayName", "MarketingCampaignEligibilityStore");
+let E = new g(a.Z, {
+    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_SUCCESS: p,
     MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED: h,
+    MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_STARTED: m,
 });

@@ -1,4 +1,4 @@
-n.d(t, { d: () => l }), n(388685), n(457542);
+n.d(t, { d: () => l });
 var r = n(647438),
     i = n(442837),
     a = n(538981),
@@ -6,19 +6,14 @@ var r = n(647438),
     s = n(266198);
 let l = () => {
     var e;
-    let [t, n] = (0, r.useState)(!1),
-        l = (0, i.e7)([o.Z], () => o.Z.state);
+    let t = (0, i.e7)([o.Z], () => o.Z.state);
     return (
         (0, r.useEffect)(() => {
-            l.shouldRefetchCampaignEligibility &&
-                (n(!0),
-                (0, a.f)({ campaignId: s.w_ }).finally(() => {
-                    n(!1);
-                }));
-        }, [l.shouldRefetchCampaignEligibility]),
+            t.shouldRefetchCampaignEligibility && !t.isFetchingCampaignEligibility && (0, a.f)({ campaignId: s.w_ });
+        }, [t.shouldRefetchCampaignEligibility, t.isFetchingCampaignEligibility]),
         {
-            isEligible: null != (e = l.isEligibleForCampaign) && e,
-            isLoading: t,
+            isEligible: null != (e = t.isEligibleForCampaign) && e,
+            isLoading: t.isFetchingCampaignEligibility,
         }
     );
 };
