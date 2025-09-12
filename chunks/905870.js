@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(642613), n(388685), n(539854), n(361932), n(187205);
+n.d(t, { Z: () => b }), n(642613), n(388685), n(539854), n(361932), n(187205);
 var r = n(147913),
     i = n(579806),
     a = n(626135),
@@ -20,20 +20,22 @@ function u(e, t, n) {
     );
 }
 let d = 15 * o.Z.Millis.MINUTE,
-    f = 1835008,
-    _ = !0,
-    p = 12;
-function h() {
+    f = 1310720,
+    _ = 1835008,
+    p = 4096,
+    h = !0,
+    m = 12;
+function g() {
     return s.isPlatformEmbedded && (0, s.isWindows)();
 }
-class m extends r.Z {
+class E extends r.Z {
     _initialize() {}
     _terminate() {
-        h() && (clearInterval(this._checkInterval), (this._checkInterval = null), l.Z.disablePerfMemoryHooks());
+        g() && (clearInterval(this._checkInterval), (this._checkInterval = null), l.Z.disablePerfMemoryHooks());
     }
     handlePostConnectionOpen() {
         var e, t;
-        if (!h()) return;
+        if (!g()) return;
         let n = null == (e = (t = i.Z.remoteApp).getReleaseChannel) ? void 0 : e.call(t);
         ("development" === n || "canary" === n) &&
             (this._checkInterval = setInterval(() => {
@@ -42,25 +44,28 @@ class m extends r.Z {
     }
     trackPerformanceStats() {
         var e, t, n, r, i;
-        if (!this._heapHooksInstalled) {
-            let n = l.Z.getMemoryUsageElectronProcessTypeDetails();
-            if (null == n) return;
-            (null != (t = null == (e = n.renderer) ? void 0 : e.wss_priv_kb) ? t : 0) > f &&
+        let o = l.Z.getMemoryUsageElectronProcessTypeDetails();
+        if (null == o) return;
+        let s = null != (t = null == (e = o.renderer) ? void 0 : e.wss_priv_kb) ? t : 0;
+        if (
+            (!this._heapHooksInstalled &&
+                s > f &&
                 l.Z.enablePerfMemoryHooks({
-                    allocationThresholdKB: p,
-                    enableCallStackTracking: _,
+                    allocationThresholdKB: m,
+                    enableCallStackTracking: h,
                 }) &&
-                (this._heapHooksInstalled = !0);
-        }
-        if (this._heapHooksInstalled) {
+                (this._heapHooksInstalled = !0),
+            this._heapHooksInstalled)
+        ) {
+            if (s < _) return;
             let e = l.Z.getPerfAttributedMemory();
             if (null == e) return;
             let t = [],
                 o = [],
-                s = [],
                 u = [],
-                d = Object.entries(e);
-            for (let [e, a] of (d.sort((e, t) => {
+                d = [],
+                f = Object.entries(e);
+            for (let [e, a] of (f.sort((e, t) => {
                 var n, r;
                 let [, i] = e,
                     [, a] = t;
@@ -69,23 +74,23 @@ class m extends r.Z {
                     (null != (r = null == i ? void 0 : i.total_allocation_kb) ? r : 0)
                 );
             }),
-            d.slice(0, 10)))
+            f.slice(0, 10)))
                 null != a &&
                     (t.push(e),
                     o.push(null != (n = a.total_allocation_kb) ? n : 0),
-                    s.push(null != (r = a.allocation_count) ? r : 0),
-                    u.push(null != (i = a.module_version) ? i : ""));
-            let f = l.Z.getPerfAttributedMemoryStats(),
-                p = null == f ? void 0 : f.events_dropped,
-                h = {
+                    u.push(null != (r = a.allocation_count) ? r : 0),
+                    d.push(null != (i = a.module_version) ? i : ""));
+            let m = l.Z.getPerfAttributedMemoryStats(),
+                g = null == m ? void 0 : m.events_dropped,
+                E = {
                     module_name: t,
                     allocation_total_size_kb: o,
-                    allocation_count: s,
-                    module_version: u,
-                    events_dropped: p,
+                    allocation_count: u,
+                    module_version: d,
+                    events_dropped: g,
                 };
-            if ((a.default.track(c.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, h), _)) {
-                let e = d.slice(0, 3).map((e) => e[0]),
+            if ((a.default.track(c.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, E), h)) {
+                let e = f.slice(0, 3).map((e) => e[0]),
                     t = 3;
                 for (let n of e
                     .map((e) => l.Z.getPerfAttributedMemoryCallstacks(e))
@@ -95,14 +100,18 @@ class m extends r.Z {
                         var n, r;
                         return (null != (n = t.total_alloc_kb) ? n : 0) - (null != (r = e.total_alloc_kb) ? r : 0);
                     })
-                    .slice(0, t)) {
+                    .slice(0, t)
+                    .filter((e) => {
+                        var t;
+                        return (null != (t = e.total_alloc_kb) ? t : 0) > p;
+                    })) {
                     let e = {
                         module_name: n.module_name,
                         callstack_allocation_total_size_kb: n.total_alloc_kb,
                         callstack_frame_module_names: n.frame_module_names,
                         callstack_frame_module_codeids: n.frame_module_codeids,
                         callstack_frame_relative_offsets: n.frame_rel_offsets,
-                        events_dropped: p,
+                        events_dropped: g,
                     };
                     a.default.track(c.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, e);
                 }
@@ -116,4 +125,4 @@ class m extends r.Z {
             u(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let g = new m();
+let b = new E();
