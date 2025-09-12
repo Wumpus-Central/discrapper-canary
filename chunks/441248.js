@@ -38,8 +38,9 @@ function b(e) {
             onClickNotSharing: l,
             isForceShowSharingPopout: d,
             setIsForceShowSharingPopout: p,
+            ref: f,
         } = e,
-        f = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
+        b = null != n ? n.name : null != i ? i.name : h.intl.string(h.t["UQMV/P"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -52,6 +53,7 @@ function b(e) {
                             className: g.gameIcon,
                             game: n,
                             pid: null == i ? void 0 : i.pid,
+                            ref: f,
                         }),
                         t
                             ? (0, r.jsx)(o.Odl, {
@@ -68,9 +70,9 @@ function b(e) {
                     children: (0, r.jsxs)("div", {
                         className: g.info,
                         children: [
-                            null != f
+                            null != b
                                 ? (0, r.jsx)(m, {
-                                      name: f,
+                                      name: b,
                                       applicationId: null == n ? void 0 : n.id,
                                   })
                                 : null,
