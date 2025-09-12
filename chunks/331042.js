@@ -1,12 +1,12 @@
-n.d(e, { default: () => B }), n(388685);
+n.d(e, { default: () => Z }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(238651),
     a = n(979554),
     s = n(311570),
     u = n(399606),
-    d = n(667202),
-    o = n(481060),
+    o = n(667202),
+    d = n(481060),
     c = n(100527),
     p = n(906732),
     f = n(347896),
@@ -19,32 +19,33 @@ var i = n(951288),
     I = n(587792),
     T = n(635552),
     m = n(328456),
-    g = n(330349),
-    R = n(530618),
-    k = n(372654),
-    L = n(197831),
-    P = n(58201),
+    g = n(624377),
+    R = n(330349),
+    k = n(530618),
+    L = n(372654),
+    P = n(197831),
+    y = n(58201),
     b = n(29121),
-    y = n(391594),
-    S = n(302800),
-    v = n(215023),
-    N = n(222311);
-let B = (t) => {
+    S = n(391594),
+    v = n(302800),
+    N = n(215023),
+    B = n(222311);
+let Z = (t) => {
     let {
             transitionState: e,
             product: n,
-            onClose: B,
-            analyticsLocations: Z,
-            overrideTitle: x,
-            overrideDescription: M,
-            shouldShowPromotionalExperience: D,
-            purchaseType: U = v.o8.FIAT,
+            onClose: Z,
+            analyticsLocations: x,
+            overrideTitle: M,
+            overrideDescription: D,
+            shouldShowPromotionalExperience: U,
+            purchaseType: F = N.o8.FIAT,
         } = t,
-        F = (0, u.e7)([A.Z], () => A.Z.purchases),
-        w = (0, O.o)(n, F),
-        j = (0, P.W)(n, w),
-        { analyticsLocations: V } = (0, p.ZP)([...Z, c.Z.COLLECTIBLES_COLLECTED_MODAL]),
-        G = ((t) => {
+        w = (0, u.e7)([A.Z], () => A.Z.purchases),
+        j = (0, O.o)(n, w),
+        V = (0, y.W)(n, j),
+        { analyticsLocations: G } = (0, p.ZP)([...x, c.Z.COLLECTIBLES_COLLECTED_MODAL]),
+        H = ((t) => {
             let e = (0, I.o)("CollectiblesCollectedModal"),
                 n = (0, u.e7)([E.default], () => {
                     var t, e;
@@ -52,13 +53,13 @@ let B = (t) => {
                 });
             return r.useMemo(() => {
                 if (!e || t.type !== a.Z.AVATAR_DECORATION) return;
-                let i = (0, S.R9)(t.skuId, n);
+                let i = (0, v.R9)(t.skuId, n);
                 if (null == i) return;
                 let r = C.Z.getProduct(i);
                 return null != r ? r : void 0;
             }, [e, t.skuId, t.type, n]);
-        })(j),
-        { hasRequiredProductItems: H } = ((t) => {
+        })(V),
+        { hasRequiredProductItems: W } = ((t) => {
             let { firstProfileEffect: e, firstAvatarDecoration: n, firstNameplate: i } = (0, m.Rj)(t),
                 r = (0, _.x6)(t);
             return {
@@ -66,10 +67,10 @@ let B = (t) => {
                 firstProfileEffect: e,
                 firstNameplate: i,
                 isBundle: r,
-                hasRequiredProductItems: r ? (0, g.N)(t) : null != n || null != e || null != i,
+                hasRequiredProductItems: r ? (0, R.N)(t) : null != n || null != e || null != i,
             };
-        })(j),
-        { promotionalRewardCollectedText: W, openProfileSettings: X } = ((t) => {
+        })(V),
+        { promotionalRewardCollectedText: X, openProfileSettings: $ } = ((t) => {
             var e;
             let n = (0, f.Z)(),
                 i = (0, h.Z)({ analyticsLocations: t });
@@ -79,95 +80,97 @@ let B = (t) => {
                     null == n || null == (e = n.giftPurchaseConfirmation) ? void 0 : e.rewardCollectedText(),
                 openProfileSettings: i,
             };
-        })(V),
+        })(G),
         {
-            environment: $,
-            modalRef: Q,
-            confettiCanvas: Y,
-            setConfettiCanvas: q,
-            customConfettiDisplayOptions: z,
-        } = (0, y.$0)(j, U);
-    (0, y.f1)(j, V);
-    let K = (0, b.kd)(j),
-        J = (0, b.kd)(G),
-        { handleUseNow: tt, isApplying: te } = (0, T.W)({
-            product: j,
-            onSuccess: B,
-            onError: B,
+            environment: Q,
+            modalRef: Y,
+            confettiCanvas: q,
+            setConfettiCanvas: z,
+            customConfettiDisplayOptions: K,
+        } = (0, S.$0)(V, F);
+    (0, S.f1)(V, G);
+    let J = (0, b.kd)(V),
+        tt = (0, b.kd)(H),
+        { handleUseNow: te, isApplying: tn } = (0, T.W)({
+            product: V,
+            onSuccess: Z,
+            onError: Z,
         }),
-        tn = (0, y.Xw)({
-            product: j,
-            pairedProduct: G,
-            overrideTitle: x,
+        ti = (0, S.Xw)({
+            product: V,
+            pairedProduct: H,
+            overrideTitle: M,
             isVariantsGroupEnabled: !0,
-            shouldShowPromotionalExperience: D,
-            productName: K,
-            pairedProductName: J,
+            shouldShowPromotionalExperience: U,
+            productName: J,
+            pairedProductName: tt,
         }),
-        ti = (0, y.ys)({
-            product: j,
-            pairedProduct: G,
-            overrideDescription: M,
-            productName: K,
-            pairedProductName: J,
-            shouldShowPromotionalExperience: D,
-            promotionalRewardCollectedText: W,
+        tr = (0, S.ys)({
+            product: V,
+            pairedProduct: H,
+            overrideDescription: D,
+            productName: J,
+            pairedProductName: tt,
+            shouldShowPromotionalExperience: U,
+            promotionalRewardCollectedText: X,
         }),
-        tr = (0, y.cf)({
-            product: j,
-            pairedProduct: G,
-            onClose: B,
-            analyticsLocations: V,
-            hasRequiredProductItems: H,
-            handleUseNow: tt,
-            isApplying: te,
+        tl = (0, S.cf)({
+            product: V,
+            pairedProduct: H,
+            onClose: Z,
+            analyticsLocations: G,
+            hasRequiredProductItems: W,
+            handleUseNow: te,
+            isApplying: tn,
             variantsReturnStyle: s.v.VARIANTS_GROUP,
-            openProfileSettings: X,
+            openProfileSettings: $,
         }),
-        tl = "6/4";
-    switch (j.type) {
+        ta = "6/4";
+    switch (V.type) {
         case a.Z.NAMEPLATE:
         case a.Z.AVATAR_DECORATION:
-            tl = "16/9";
+            ta = "16/9";
             break;
         case a.Z.BUNDLE:
         case a.Z.PROFILE_EFFECT:
         default:
-            tl = "6/4";
+            ta = "6/4";
     }
+    let { confettiColors: ts } = (0, g.Z)(V.styles);
     return (0, i.jsx)(p.Gt, {
-        value: V,
+        value: G,
         children: (0, i.jsxs)("div", {
-            ref: Q,
+            ref: Y,
             children: [
                 (0, i.jsx)(l.O_, {
-                    ref: q,
-                    className: N.confettiCanvas,
-                    environment: $,
+                    ref: z,
+                    className: B.confettiCanvas,
+                    environment: Q,
                 }),
-                (0, i.jsx)(d.I, {
+                (0, i.jsx)(o.I, {
                     graphic: {
                         type: "dynamic",
-                        component: o.AX$.COLLECTIBLES_PREVIEW,
-                        aspectRatio: tl,
+                        component: d.AX$.COLLECTIBLES_PREVIEW,
+                        aspectRatio: ta,
                         props: {
-                            product: j,
-                            pairedProduct: G,
+                            product: V,
+                            pairedProduct: H,
                             forCollectedModal: !0,
                         },
                     },
-                    title: tn,
-                    subtitle: null != ti ? ti : void 0,
-                    onClose: B,
+                    title: ti,
+                    subtitle: null != tr ? tr : void 0,
+                    onClose: Z,
                     transitionState: e,
-                    actions: tr,
+                    actions: tl,
                 }),
-                null != z
-                    ? (0, i.jsx)(L.i, { options: z })
-                    : (0, i.jsx)(R.Z, {
-                          confettiTarget: Q.current,
-                          confettiCanvas: Y,
-                          sprites: (0, k.vK)(j.categorySkuId),
+                null != K
+                    ? (0, i.jsx)(P.i, { options: K })
+                    : (0, i.jsx)(k.Z, {
+                          confettiTarget: Y.current,
+                          confettiCanvas: q,
+                          sprites: (0, L.vK)(V.categorySkuId),
+                          colors: null == ts ? void 0 : ts.map((t) => t.toHexString()),
                       }),
             ],
         }),
