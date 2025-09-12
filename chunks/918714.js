@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
@@ -11,11 +11,12 @@ var r = n(951288),
     f = n(118589),
     p = n(535188),
     h = n(856597),
-    m = n(241945),
-    y = n(388032),
-    g = n(104940);
-let b = n(575703);
-function E(e) {
+    m = n(231338),
+    y = n(241945),
+    g = n(388032),
+    b = n(104940);
+let E = n(575703);
+function x(e) {
     let { task: t, handleSubmit: n, disabled: l } = e,
         [a, o] = i.useState(t),
         c = i.useMemo(
@@ -41,14 +42,14 @@ function E(e) {
         })
     );
 }
-let x = function (e) {
+let v = function (e) {
     let { onClose: t } = e,
         [n, d] = i.useState(null),
         [p, h] = i.useState(!0),
-        [x, v] = i.useState(null),
-        [j, _] = i.useState(!1),
-        O = i.useCallback(async () => {
-            h(!0), v(null);
+        [v, j] = i.useState(null),
+        [_, O] = i.useState(!1),
+        A = i.useCallback(async () => {
+            h(!0), j(null);
             try {
                 var e;
                 let n = await (0, u.PA)();
@@ -72,69 +73,70 @@ let x = function (e) {
                           },
                       });
             } catch (e) {
-                v(y.intl.string(m.default["/f++3t"]));
+                j(g.intl.string(y.default["/f++3t"]));
             } finally {
                 h(!1);
             }
         }, [t]),
-        A = i.useCallback(
+        S = i.useCallback(
             async (e) => {
                 if (null !== n) {
-                    _(!0);
+                    O(!0);
                     try {
                         let t = {
                             task_id: n.task_id,
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, u.Wl)(t), O();
+                        await (0, u.Wl)(t), A();
                     } catch (e) {
-                        v(y.intl.string(m.default["+QRSxc"]));
+                        j(g.intl.string(y.default["+QRSxc"]));
                     } finally {
-                        _(!1);
+                        O(!1);
                     }
                 }
             },
-            [n, O],
+            [n, A],
         );
     i.useEffect(() => {
-        O();
-    }, [O]);
-    let S = i.useMemo(() => (null == n ? void 0 : n.task_type) === f.UA.AGE_VERIFICATION, [n]);
+        A();
+    }, [A]);
+    let I = i.useMemo(() => (null == n ? void 0 : n.task_type) === f.UA.AGE_VERIFICATION, [n]);
     return (0, r.jsxs)("div", {
-        className: g.background,
+        className: b.background,
         children: [
             (0, r.jsx)("img", {
-                className: g.artwork,
-                src: b,
+                className: b.artwork,
+                src: E,
                 alt: "",
             }),
-            S
+            I
                 ? (0, r.jsx)(c.Z, {
                       transitionState: l.Dvm.ENTERED,
                       entryPoint: o.cU.SAFETY_FLOWS,
-                      onClose: async () => {},
+                      onClose: m.dG,
                       onComplete: async () => {
-                          await A({ type: f.rY.Empty });
+                          await S({ type: f.rY.Empty });
                       },
+                      dismissable: !1,
                   })
                 : (0, r.jsx)("div", {
-                      className: g.safetyFlow,
+                      className: b.safetyFlow,
                       children: p
                           ? (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
                           : (0, r.jsx)("div", {
-                                className: g.container,
+                                className: b.container,
                                 children: (0, r.jsxs)(l.Kqy, {
                                     direction: "horizontal",
                                     justify: "start",
-                                    className: g.body,
+                                    className: b.body,
                                     children: [
-                                        null !== x &&
+                                        null !== v &&
                                             (0, r.jsxs)(l.Kqy, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
-                                                className: g.interimBody,
+                                                className: b.interimBody,
                                                 padding: 16,
                                                 children: [
                                                     (0, r.jsxs)(l.Kqy, {
@@ -143,12 +145,12 @@ let x = function (e) {
                                                         children: [
                                                             (0, r.jsx)(l.X6q, {
                                                                 variant: "heading-xl/semibold",
-                                                                children: y.intl.string(y.t.c6kn6O),
+                                                                children: g.intl.string(g.t.c6kn6O),
                                                             }),
                                                             (0, r.jsx)(l.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
-                                                                children: y.intl.string(y.t.ZUEGFh),
+                                                                children: g.intl.string(g.t.ZUEGFh),
                                                             }),
                                                         ],
                                                     }),
@@ -160,28 +162,28 @@ let x = function (e) {
                                                             (0, r.jsx)(l.zxk, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
-                                                                text: y.intl.string(y.t["2jxGen"]),
+                                                                text: g.intl.string(g.t["2jxGen"]),
                                                                 onClick: () => {
                                                                     a.Z.logout("safety_flows_modal");
                                                                 },
                                                             }),
                                                             (0, r.jsx)(l.zxk, {
                                                                 fullWidth: !0,
-                                                                text: y.intl.string(y.t["7NqTJi"]),
+                                                                text: g.intl.string(g.t["7NqTJi"]),
                                                                 onClick: () => {
-                                                                    O();
+                                                                    A();
                                                                 },
                                                             }),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                        null === x &&
+                                        null === v &&
                                             null != n &&
-                                            (0, r.jsx)(E, {
+                                            (0, r.jsx)(x, {
                                                 task: n,
-                                                handleSubmit: A,
-                                                disabled: j,
+                                                handleSubmit: S,
+                                                disabled: _,
                                             }),
                                     ],
                                 }),

@@ -20,30 +20,30 @@ var r = n(951288),
     v = n(70402),
     j = n(765896);
 let _ = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: _, onComplete: O } = e,
-        [A, S] = i.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = i.useRef(A),
-        [R, w] = (0, u.US)([A], void 0, !0),
-        P = i.useMemo(() => (0, l.Z)(), []),
-        C = i.useRef(!1);
+    let { transitionState: t, entryPoint: n, onClose: _, onComplete: O, dismissable: A } = e,
+        [S, I] = i.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        R = i.useRef(S),
+        [w, P] = (0, u.US)([S], void 0, !0),
+        C = i.useMemo(() => (0, l.Z)(), []),
+        N = i.useRef(!1);
     i.useEffect(() => {
-        I.current = R;
-    }, [R]);
-    let { loading: N, ageVerificationMethods: k } = (0, g.Z)(
+        R.current = w;
+    }, [w]);
+    let { loading: k, ageVerificationMethods: T } = (0, g.Z)(
         () => {
             null == O || O(), _();
         },
         () => {
-            S(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            I(a.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
     );
     return (
         i.useLayoutEffect(
             () => () => {
-                if (C.current) return;
-                let e = I.current;
+                if (N.current) return;
+                let e = R.current;
                 null != e &&
-                    ((C.current = !0),
+                    ((N.current = !0),
                     f.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -52,12 +52,13 @@ let _ = function (e) {
             [],
         ),
         i.useEffect(() => {
-            (0, m.lA)(P, m.d_.EXPRESSIVE_PRIMARY, n);
-        }, [P, n]),
+            (0, m.lA)(C, m.d_.EXPRESSIVE_PRIMARY, n);
+        }, [C, n]),
         (0, r.jsx)(o.I, {
             transitionState: t,
             onClose: _,
             gradientColor: "blue",
+            dismissable: A,
             graphic: {
                 type: "image",
                 src: j.Z,
@@ -66,7 +67,7 @@ let _ = function (e) {
             subtitle: x.intl.format(E.default.RpMIT0, {
                 handleOnHelpUrlHook: () => {
                     h.Z.openUrl(p.Z.getArticleURL(b.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, m.x3)(P, m.d_.EXPRESSIVE_PRIMARY, m.sU.LEARN_MORE);
+                        (0, m.x3)(C, m.d_.EXPRESSIVE_PRIMARY, m.sU.LEARN_MORE);
                 },
             }),
             actionBarInput: (0, r.jsx)(c.Avr, {
@@ -74,7 +75,7 @@ let _ = function (e) {
                 textVariant: "text-sm/medium",
                 text: x.intl.string(x.t["2jxGen"]),
                 onClick: () => {
-                    (0, m.x3)(P, m.d_.EXPRESSIVE_PRIMARY, m.sU.LOG_OUT),
+                    (0, m.x3)(C, m.d_.EXPRESSIVE_PRIMARY, m.sU.LOG_OUT),
                         s.Z.logout("age_verification_get_started_modal");
                 },
             }),
@@ -106,7 +107,7 @@ let _ = function (e) {
                             }),
                         ],
                     }),
-                    null == k || 0 === k.length
+                    null == T || 0 === T.length
                         ? (0, r.jsxs)(c.Kqy, {
                               direction: "vertical",
                               align: "center",
@@ -130,7 +131,7 @@ let _ = function (e) {
                         : (0, r.jsx)(c.Kqy, {
                               direction: "vertical",
                               gap: 8,
-                              children: k.map((e) => {
+                              children: T.map((e) => {
                                   let { title: t, description: n, onClick: i } = e;
                                   return (0, r.jsx)(
                                       d.JZ,
@@ -138,8 +139,8 @@ let _ = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: N,
-                                          onButtonPress: () => i(P),
+                                          buttonDisabled: k,
+                                          onButtonPress: () => i(C),
                                       },
                                       t,
                                   );
