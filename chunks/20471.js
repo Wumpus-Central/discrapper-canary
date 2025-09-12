@@ -49,5 +49,6 @@ function f(e) {
         canStartAuthorization: n,
         hasAlreadyLinked: o && u === c.M.FETCHED,
         startAuthorization: d,
+        connectionApp: t,
     };
 }

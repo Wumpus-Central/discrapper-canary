@@ -5257,6 +5257,8 @@ var nO = (function (e) {
             (e.GUILD_CHANNEL_INTEGRITY_CHECK_FAILED = "guild_channel_integrity_check_failed"),
             (e.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED = "system_service_initialize_attempted"),
             (e.SYSTEM_SERVICE_INSTALL_ATTEMPTED = "system_service_install_attempted"),
+            (e.ACTIVITY_PANEL_BUTTON_CLICKED = "activity_panel_button_clicked"),
+            (e.ACTIVITY_PANEL_SDK_LINK_VIEWED = "activity_panel_sdk_link_viewed"),
             e
         );
     })({}),
