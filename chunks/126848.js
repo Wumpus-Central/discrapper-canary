@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => v,
-    x: () => O,
+    Z: () => I,
+    x: () => v,
 }),
     n(539854),
     n(388685);
@@ -14,63 +14,66 @@ var r = n(951288),
     u = n(436774),
     d = n(243778),
     f = n(367074),
-    _ = n(104494),
-    p = n(639119),
-    h = n(655525),
-    m = n(924540),
-    g = n(981631),
-    E = n(921944),
-    b = n(474936),
-    y = n(563042);
-function O() {
+    _ = n(347896),
+    p = n(104494),
+    h = n(639119),
+    m = n(655525),
+    g = n(924540),
+    E = n(981631),
+    b = n(921944),
+    y = n(474936),
+    O = n(494723);
+function v() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = (0, p.N)(),
-        a = (0, _.Ng)(),
+        n = (0, h.N)(),
+        a = (0, p.Ng)(),
         o = (0, f.Vi)(),
-        l = (null == n ? void 0 : n.trial_id) === b.a7,
-        c = [];
-    o && c.push(s.z.BOGO_2025_NITRO_TAB_BADGE);
-    let [u, g] = (0, d.US)(c, void 0, !0);
+        l = null != (0, _.Z)(),
+        c = o || l,
+        u = (null == n ? void 0 : n.trial_id) === y.a7,
+        E = [];
+    c && E.push(s.z.BOGO_2025_NITRO_TAB_BADGE);
+    let [O, v] = (0, d.US)(E, void 0, !0);
     return (
         i.useEffect(() => {
-            !0 === t && u === s.z.BOGO_2025_NITRO_TAB_BADGE && g(E.L.AUTO_DISMISS);
-        }, [g, t, u]),
-        o
-            ? (e = (0, r.jsx)(h.Z, {}))
+            !0 === t && O === s.z.BOGO_2025_NITRO_TAB_BADGE && v(b.L.AUTO_DISMISS);
+        }, [v, t, O]),
+        c
+            ? (e = (0, r.jsx)(m.Z, {}))
             : null != a
-              ? (e = (0, r.jsx)(m.GN, {
+              ? (e = (0, r.jsx)(g.GN, {
                     isTabSelected: t,
                     userDiscount: a,
                     includesAmountOff: !1,
                 }))
               : null == n ||
-                l ||
-                (e = (0, r.jsx)(m.$H, {
+                u ||
+                (e = (0, r.jsx)(g.$H, {
                     isTabSelected: t,
                     trialOffer: n,
                 })),
         e
     );
 }
-function v(e) {
+function I(e) {
     var t, n;
     let { decoration: i, label: a, isSelected: s } = e,
         d = (0, f.Vi)(),
         _ =
-            null != (n = null != (t = O(s)) ? t : i)
+            null != (n = null != (t = v(s)) ? t : i)
                 ? n
                 : (0, r.jsx)(l.SrA, {
                       size: "sm",
-                      color: s ? (0, c.Lq)(g.Ilk.WHITE_500) : u.JX.PREMIUM_TIER_2,
+                      color: s ? (0, c.Lq)(E.Ilk.WHITE_500) : u.JX.PREMIUM_TIER_2,
                   });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: o()(y.premiumLabel, { [y.selected]: s && !d }),
+                className: o()(O.premiumLabel, { [O.selected]: s && !d }),
                 children: [a, _],
             }),
-            (0, r.jsx)("div", { className: o()(y.background, { [y.selectedBackground]: !d && s }) }),
+            (0, r.jsx)("div", { className: o()(O.background, { [O.selectedBackground]: !d && s }) }),
         ],
     });
 }
