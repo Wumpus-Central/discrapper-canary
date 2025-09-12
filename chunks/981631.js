@@ -2067,10 +2067,11 @@ let eE = "@me",
                 .concat(n)
                 .concat(null != r ? "&payment_method_type=".concat(r) : "")
                 .concat(null != i ? "&deep_link_type=".concat(i) : ""),
-        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t) =>
+        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n) =>
             "/billing/guild-subscriptions/purchase?guild_id="
                 .concat(e)
-                .concat(null != t ? "&deep_link_type=".concat(t) : ""),
+                .concat(null != t ? "&deep_link_type=".concat(t) : "")
+                .concat(null != n ? "&load_id=".concat(n) : ""),
         GUILD_BOOSTING_MARKETING: (e) => "/guilds/".concat(e, "/premium-guild-subscriptions"),
         GUILD_SETTINGS: (e, t, n) => {
             let r = "/guilds/".concat(e, "/settings").concat(null != t ? "/".concat(t) : "");
@@ -4675,6 +4676,7 @@ var nb = (function (e) {
             (e.CLIPS_SETTINGS_UPDATED = "clips_settings_updated"),
             (e.STANDALONE_BILLING_FLOW_STARTED = "standalone_billing_flow_started"),
             (e.MOBILE_OPEN_STANDALONE_MANAGE_SUBSCRIPTION_PAGE = "mobile_open_standalone_manage_subscription_page"),
+            (e.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE = "mobile_open_standalone_guild_boost_checkout_page"),
             (e.STANDALONE_MANAGE_SUBSCRIPTION_PAGE_VIEWED = "standalone_manage_subscription_page_viewed"),
             (e.INBOUND_PROMOTION_VIEWED = "inbound_promotion_viewed"),
             (e.INBOUND_PROMOTION_ELIGIBILITY_CHECKED = "inbound_promotion_eligibility_checked"),
