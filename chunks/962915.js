@@ -64,6 +64,8 @@ let h = (e) => {
                                 e();
                             }, 1000);
                         }),
+                    pauseDuration: null,
+                    setPauseDuration: () => {},
                 },
                 children: O,
             })

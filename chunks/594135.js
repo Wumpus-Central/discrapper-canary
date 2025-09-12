@@ -21,5 +21,7 @@ let o = r.createContext({
         renewalInvoiceDetails: null,
         handleCancellation: async () => {},
         applyOffer: async () => {},
+        pauseDuration: null,
+        setPauseDuration: () => {},
     }),
     s = () => r.useContext(o);
