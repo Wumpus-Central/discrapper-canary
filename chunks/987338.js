@@ -56,6 +56,7 @@ var s = (function (e) {
         (e[(e.DM_GDM_LIST_RENDER = 7)] = "DM_GDM_LIST_RENDER"),
         (e[(e.CONNECTION_OPEN_MOBILE = 8)] = "CONNECTION_OPEN_MOBILE"),
         (e[(e.QUEST_HOME_OPEN = 9)] = "QUEST_HOME_OPEN"),
+        (e[(e.QUEST_BAR_RENDERED = 10)] = "QUEST_BAR_RENDERED"),
         e
     );
 })({});
