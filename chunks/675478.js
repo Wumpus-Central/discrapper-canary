@@ -1,19 +1,18 @@
 n.d(t, {
-    BU: () => M,
-    Cd: () => B,
-    DZ: () => x,
-    PS: () => j,
-    T6: () => P,
-    Z1: () => V,
-    aj: () => L,
-    bE: () => W,
+    BU: () => L,
+    Cd: () => U,
+    DZ: () => w,
+    PS: () => x,
+    T6: () => N,
+    Z1: () => Z,
+    aj: () => D,
+    bE: () => V,
     fy: () => O.fy,
-    hW: () => D,
-    m4: () => H,
-    m9: () => Z,
-    nm: () => k,
-    sr: () => Y,
-    w9: () => F,
+    hW: () => P,
+    m9: () => G,
+    nm: () => j,
+    sr: () => F,
+    w9: () => B,
 }),
     n(415506),
     n(388685),
@@ -78,47 +77,24 @@ function T(e) {
     }
     return e;
 }
-function S(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function A(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let C = 5000,
-    N = "UserSettingsProtoLastWriteTimes",
-    R = Date.now();
-function P() {}
+let S = 5000,
+    A = "UserSettingsProtoLastWriteTimes",
+    C = Date.now();
+function N() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
-    R = Date.now();
+    C = Date.now();
 }),
     u.Z.subscribe("CONNECTION_CLOSED", () => {
-        R = Date.now();
+        C = Date.now();
     }),
     "undefined" != typeof document &&
         (document.addEventListener("mousedown", () => {
-            R = 0;
+            C = 0;
         }),
         document.addEventListener("keydown", () => {
-            R = 0;
+            C = 0;
         }));
-class w {
+class R {
     getEditInfo() {
         return E.Z.getFullState()[this.type];
     }
@@ -200,8 +176,8 @@ class w {
     }
     saveLastSendTime() {
         var e;
-        let t = null != (e = c.K.get(N)) ? e : {};
-        (t[this.type] = Date.now()), c.K.set(N, t);
+        let t = null != (e = c.K.get(A)) ? e : {};
+        (t[this.type] = Date.now()), c.K.set(A, t);
     }
     loadIfUncached(e, t) {
         (E.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
@@ -279,7 +255,7 @@ class w {
         i()(null != e.protoToSave, "protoToSave cannot be null"),
             i()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
             i()(null == e.timeout, "timeout must not be set already");
-        let t = C + Math.floor(Math.random() * C),
+        let t = S + Math.floor(Math.random() * S),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({
             timeout: n,
@@ -358,22 +334,22 @@ class w {
             (this.logger = new d.Z(this.ProtoClass.typeName));
     }
 }
-let D = new w(l.o8, O.yP.PRELOADED_USER_SETTINGS),
-    x = new w(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    L = {
-        [O.yP.PRELOADED_USER_SETTINGS]: D,
-        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: x,
+let P = new R(l.o8, O.yP.PRELOADED_USER_SETTINGS),
+    w = new R(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    D = {
+        [O.yP.PRELOADED_USER_SETTINGS]: P,
+        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: w,
     };
-function j(e, t, n) {
-    return D.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
+function x(e, t, n) {
+    return P.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
 }
-function M(e, t, n, r) {
-    return j(e, (e) => (0, y.uL)(e, t, n), r);
+function L(e, t, n, r) {
+    return x(e, (e) => (0, y.uL)(e, t, n), r);
 }
-function k(e) {
+function j(e) {
     return (
-        U(e),
-        D.updateAsync(
+        M(e),
+        P.updateAsync(
             "userContent",
             (t) => {
                 if ((0, m.jl)(t.dismissedContents, e)) return !1;
@@ -383,17 +359,17 @@ function k(e) {
         )
     );
 }
-function U(e) {
+function M(e) {
     !E.Z.hasLoaded(O.yP.PRELOADED_USER_SETTINGS) &&
-        (G(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+        (k(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
 }
-function G(e) {
+function k(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
 }
-async function B(e, t) {
-    return await D.updateAsync(
+async function U(e, t) {
+    return await P.updateAsync(
         "userContent",
         (n) => {
             n.recurringDismissibleContentStates[e] = T({}, n.recurringDismissibleContentStates[e], t);
@@ -401,8 +377,8 @@ async function B(e, t) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function Z(e, t, n) {
-    return await j(
+async function G(e, t, n) {
+    return await x(
         t,
         (t) => {
             t.guildDismissibleContentStates[e] = T({}, t.guildDismissibleContentStates[e], n);
@@ -410,8 +386,8 @@ async function Z(e, t, n) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function F(e) {
-    return D.updateAsync(
+function B(e) {
+    return P.updateAsync(
         "userContent",
         (t) => {
             if (!(0, m.jl)(t.dismissedContents, e)) return !1;
@@ -420,21 +396,16 @@ function F(e) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function V(e) {
-    return B(e, {
+function Z(e) {
+    return U(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: "0",
         lastDismissedObjectId: "0",
         numTimesDismissed: 0,
     });
 }
-function H(e) {
-    var t;
-    let n = null == (t = E.Z.settings.userContent) ? void 0 : t.recurringDismissibleContentStates[e];
-    if (null != n) return B(e, A(T({}, n), { numTimesDismissed: 0 }));
-}
-function Y() {
-    return D.updateAsync(
+function F() {
+    return P.updateAsync(
         "userContent",
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
@@ -442,8 +413,8 @@ function Y() {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function W() {
-    return D.updateAsync(
+function V() {
+    return P.updateAsync(
         "userContent",
         (e) => {
             let t = new Uint8Array();
