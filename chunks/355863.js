@@ -423,8 +423,17 @@ function C(e, t) {
     return null != a && t(n, a);
 }
 function N(e) {
-    let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a } = e;
-    return C(t, (e, t) => L(e, n, r, i, a));
+    let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a, defaultSize: o } = e;
+    return C(t, (e, t) =>
+        L({
+            widget: e,
+            anchor: n,
+            size: r,
+            opacity: i,
+            minSize: a,
+            defaultSize: o,
+        }),
+    );
 }
 function R(e) {
     let { widgetId: t } = e;
@@ -450,20 +459,27 @@ function D(e, t) {
     i = y(E({}, i), { [e.id]: e.merge({ meta: E({}, null != (n = e.meta) ? n : {}, t) }) });
 }
 function x(e) {
-    let { widgetId: t } = e;
+    let { widgetId: t, pinned: n } = e;
     return C(t, (e, t) => {
-        Z(e);
+        Z(e, n);
     });
 }
-function L(e, t, n, r, a) {
-    i = y(E({}, i), {
-        [e.id]: e.merge({
-            anchor: null != t ? t : e.anchor,
-            size: null != n ? n : e.size,
-            opacity: null != r ? r : e.opacity,
-            minSize: null != a ? a : e.minSize,
-        }),
-    });
+function L(e) {
+    let { widget: t, anchor: n, size: r, opacity: a, minSize: o, defaultSize: s } = e;
+    if (
+        ((i = y(E({}, i), {
+            [t.id]: t.merge({
+                anchor: null != n ? n : t.anchor,
+                size: null != r ? r : t.size,
+                opacity: null != a ? a : t.opacity,
+                minSize: null != o ? o : t.minSize,
+            }),
+        })),
+        null != s)
+    ) {
+        let e = T[t.type];
+        null != e && (e.defaultSettings.size = E({ fixed: e.defaultSettings.size.fixed }, s));
+    }
 }
 function j(e) {
     i = y(E({}, i), { [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) });
@@ -510,8 +526,8 @@ function G(e) {
 function B(e, t) {
     i = y(E({}, i), { [e.id]: e.set("zIndex", t) });
 }
-function Z(e) {
-    i = y(E({}, i), { [e.id]: e.set("pinned", !e.pinned) });
+function Z(e, t) {
+    i = y(E({}, i), { [e.id]: e.set("pinned", null != t ? t : !e.pinned) });
 }
 function F(e) {
     let t = [];

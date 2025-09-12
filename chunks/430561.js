@@ -1,9 +1,10 @@
 n.d(t, {
-    GY: () => D,
+    GY: () => x,
     PI: () => S,
-    RT: () => x,
-    XM: () => P,
-    ls: () => w,
+    RT: () => L,
+    XM: () => w,
+    bc: () => C,
+    ls: () => D,
     xZ: () => N,
 }),
     n(388685);
@@ -98,39 +99,43 @@ function A() {
         t
     );
 }
-let C = 6000;
-function N(e) {
-    let t = (0, s.e7)([f.Z], () => f.Z.getWidget(e), [e]),
-        n = i.useRef(null == t ? void 0 : t.showExtrasHintTimestamp),
-        [r, a] = i.useState(!1),
-        o = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)())),
-        l = A();
-    return (
-        i.useEffect(() => {
-            let e = null == t ? void 0 : t.showExtrasHintTimestamp;
-            if (null != e && e !== n.current) {
-                (n.current = e), a(!0);
-                let t = setTimeout(() => {
-                    a(!1);
-                }, C);
-                return () => clearTimeout(t);
-            }
-            a(!1);
-        }, [null == t ? void 0 : t.showExtrasHintTimestamp]),
-        r && o && !l
+let C = 7000;
+function N(e, t) {
+    return R(
+        (0, s.e7)([f.Z], () => f.Z.getWidget(e), [e]),
+        t,
     );
 }
-function R(e) {
-    let t = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
-        n = (null == e ? void 0 : e.showExtrasHintTimestamp) !== t.current,
-        r = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)())),
-        a = A();
-    return n && r && !a;
+function R(e, t) {
+    let n = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
+        [r, a] = i.useState(!1),
+        o = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)())),
+        l = i.useRef(void 0),
+        c = A();
+    return (
+        i.useEffect(() => {
+            let r = null == e ? void 0 : e.showExtrasHintTimestamp;
+            r !== n.current &&
+                ((n.current = r),
+                a(!0),
+                (l.current = setTimeout(() => {
+                    a(!1);
+                }, t)));
+        }, [t, null == e ? void 0 : e.showExtrasHintTimestamp]),
+        i.useEffect(
+            () => () => {
+                null != l.current && clearTimeout(l.current);
+            },
+            [],
+        ),
+        r && o && !c
+    );
 }
-function P(e) {
+let P = 8000;
+function w(e) {
     let { children: t, widgetId: n } = e,
         i = (0, s.e7)([f.Z], () => f.Z.getWidget(n), [n]),
-        a = R(i),
+        a = R(i, P),
         o = () => (0, g.Q)((0, E.P)(), b.t["1XA04e"], b.intl.string(b.t.uZZGzc), !1);
     return a
         ? (0, r.jsxs)(r.Fragment, {
@@ -166,7 +171,7 @@ function P(e) {
               }),
           });
 }
-function w(e) {
+function D(e) {
     let { onClick: t } = e;
     if ((0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)()))) return null;
     let n = b.intl.string(b.t["3D5yo6"]);
@@ -187,7 +192,7 @@ function w(e) {
             ),
     });
 }
-function D(e) {
+function x(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? b.intl.string(b.t.q2B3rq) : b.intl.string(b.t.JKGi6u),
         a = () => {
@@ -212,7 +217,7 @@ function D(e) {
                   ),
           });
 }
-function x(e) {
+function L(e) {
     let { id: t, pinned: n } = e,
         i = n ? b.intl.string(b.t.cSu80t) : b.intl.string(b.t.cM8Vnp),
         a = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)()));

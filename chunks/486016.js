@@ -7,6 +7,7 @@ var r = (function (e) {
         (e.GO_LIVE_NUDGE = "GO_LIVE_NUDGE"),
         (e.GAME_ACTIVITY = "GAME_ACTIVITY"),
         (e.NOW_PLAYING = "NOW_PLAYING"),
+        (e.FRIEND_STREAM_WATCH_NUDGE = "FRIEND_STREAM_WATCH_NUDGE"),
         e
     );
 })({});

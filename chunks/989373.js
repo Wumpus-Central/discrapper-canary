@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => E }), n(415506), n(388685);
+n.r(t), n.d(t, { default: () => P }), n(415506), n(388685);
 var a = n(951288),
     o = n(647438),
     r = n(442837),
@@ -18,12 +18,13 @@ var h = n(998502),
 n(371467);
 var b = n(41534),
     g = n(837268),
-    I = n(554370),
-    C = n(371651),
-    y = n(610394),
-    w = n(757744),
-    S = n(981631);
-let x = new _.Z("AppOverlay");
+    I = n(32300),
+    C = n(554370),
+    y = n(371651),
+    w = n(610394),
+    S = n(757744),
+    x = n(981631);
+let E = new _.Z("AppOverlay");
 async function B(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
@@ -31,7 +32,7 @@ async function B(e, t) {
         try {
             await h.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            x.error("Window does not exist while trying to show inactive", e), (0, b.D1)(e, g.gl.OutOfProcess);
+            E.error("Window does not exist while trying to show inactive", e), (0, b.D1)(e, g.gl.OutOfProcess);
         }
         for (let r = 0; r < a; r++)
             try {
@@ -42,13 +43,13 @@ async function B(e, t) {
                 var o;
                 if ((null == (o = e.message) ? void 0 : o.includes("IPC")) && r < a - 1) {
                     let t = (n / 2) * Math.pow(2, r + 1);
-                    x.error("Failed to show inactive, retrying in ".concat(t, "ms"), e),
+                    E.error("Failed to show inactive, retrying in ".concat(t, "ms"), e),
                         await new Promise((e) => setTimeout(e, t));
                 } else throw ((0, b.D1)(e, g.gl.OutOfProcess), e);
             }
     }
 }
-let E = o.memo(function (e) {
+let P = o.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         _ = (function (e, t) {
             let n = (0, r.e7)([u.Z], () => u.Z.getWindow(e)),
@@ -60,25 +61,26 @@ let E = o.memo(function (e) {
                     return !m.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
                 [h, b] = o.useState(!1),
-                I = o.useRef(!1),
-                w = o.useCallback(() => {
+                C = o.useRef(!1),
+                S = o.useCallback(() => {
                     let e = (0, v.getPID)(),
                         n = null != s.Z.getVoiceChannelId();
-                    i.Z.track(S.rMx.OVERLAY_INITIALIZED, {
+                    i.Z.track(x.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: y.ZP.isPinned(S.Odu.TEXT),
-                        overlay_render_method: g.gl[C.default.getOverlayMethod(e)],
+                        text_widget_connected: w.ZP.isPinned(x.Odu.TEXT),
+                        overlay_render_method: g.gl[y.default.getOverlayMethod(e)],
                         unpinned_widget_types: f.Z.getAllUnpinnedPinnedWidgets(t),
                     }),
+                        (0, I.lj)("OVERLAY_INITIALIZED"),
                         i.Z.successfullyShown(e);
                 }, [t]);
             (0, c.Ng)(() => {
                 let e = (e) => {
                     let t = null != n ? n : window;
-                    e.data === y.Il &&
+                    e.data === w.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
-                                window.parent.postMessage(y.A8, "*");
+                                window.parent.postMessage(w.A8, "*");
                             });
                         });
                 };
@@ -89,7 +91,7 @@ let E = o.memo(function (e) {
                     }
                 );
             });
-            let x = o.useCallback(
+            let E = o.useCallback(
                 (e, t) => {
                     null == a.current &&
                         ((_.current = () => {
@@ -104,32 +106,32 @@ let E = o.memo(function (e) {
                                 return;
                             }
                             l.current = e.setTimeout(() => {
-                                b(!0), w(), (_.current = null);
+                                b(!0), S(), (_.current = null);
                             }, 100);
                         })));
                 },
-                [w],
+                [S],
             );
             return (
                 o.useEffect(() => {
-                    d && null != n && (I.current || ((I.current = !0), x(n, e)));
-                }, [x, d, e, n]),
+                    d && null != n && (C.current || ((C.current = !0), E(n, e)));
+                }, [E, d, e, n]),
                 (0, c.zq)(() => {
                     null != _.current && _.current();
                 }),
                 h
             );
-        })(n, w.$S),
+        })(n, S.$S),
         h = (0, v.getPID)(),
         b = (0, r.e7)([p.default], () => p.default.isInputLocked(h), [h]);
     return _
         ? (0, a.jsxs)(d.Z, {
-              themeOverride: S.BRd.MIDNIGHT,
+              themeOverride: x.BRd.MIDNIGHT,
               withTitleBar: t,
               windowKey: n,
               title: "Discord Overlay",
               hideModals: b,
-              children: [(0, a.jsx)(I.Z, {}), (0, a.jsx)(l.Co, {})],
+              children: [(0, a.jsx)(C.Z, {}), (0, a.jsx)(l.Co, {})],
           })
         : null;
 });

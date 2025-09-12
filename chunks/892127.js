@@ -73,7 +73,7 @@ let I = r.memo(function (e) {
             dragContainerClassName: w,
         } = e,
         N = (0, a.e7)([u.Z], () => u.Z.getWidgetConfig(t.type), [t.type]),
-        Z = (0, v.xZ)(t.id),
+        Z = (0, v.xZ)(t.id, v.bc),
         T = (0, a.e7)([d.default], () => d.default.isLocked((0, f.getPID)())),
         P = (0, b.Z)(),
         A = (0, a.e7)([p.Z], () => p.Z.windowSize((0, m.ZY)(P))),
@@ -104,9 +104,9 @@ let I = r.memo(function (e) {
         k = r.useCallback((e) => {
             (0, s.Os)(e);
         }, []),
-        { id: R, pinned: L, zIndex: M, size: V, anchor: z, minSize: U } = t,
-        W = r.useMemo(() => (0, h.w_)(V, A), [V, A]),
-        G = (0, h.KR)(z, A),
+        { id: R, pinned: L, zIndex: M, size: z, anchor: V, minSize: U } = t,
+        W = r.useMemo(() => (0, h.w_)(z, A), [z, A]),
+        G = (0, h.KR)(V, A),
         { resizeX: B, resizeY: H, dragAnywhere: F } = null != N ? N : {},
         Y = L || !T,
         Q = r.useMemo(

@@ -64,8 +64,8 @@ var r = n(951288),
     ed = n(501787),
     ef = n(388032),
     e_ = n(607547),
-    ep = n(131970),
-    eh = n(730462);
+    ep = n(704437),
+    eh = n(494139);
 function em(e, t, n) {
     return (
         t in e
@@ -952,7 +952,7 @@ function eZ() {
         }),
     });
 }
-let eF = (e, t) =>
+let eF = (e, t, n) =>
     [
         {
             title: ef.t.eVE4LS,
@@ -974,16 +974,22 @@ let eF = (e, t) =>
             description: ef.t.wQ4ilJ,
             disabledSetting: x.OverlayNotificationDisabledSetting.NOW_PLAYING,
         },
+        n && {
+            title: ef.t["5/21FR"],
+            description: ef.t.EIzwfH,
+            disabledSetting: x.OverlayNotificationDisabledSetting.FRIEND_STREAM_WATCH_NUDGE,
+        },
     ]
         .filter((e) => !1 !== e)
         .filter(Boolean);
 function eV() {
     let { allowActivityWidget: e, allowNowPlaying: t } = (0, j.o4)("user_settings"),
-        n = eF(e, t),
-        i = (e) => (t) => {
+        { enabled: n } = (0, j.aq)("OverlayV3StreamWatchNudge"),
+        i = eF(e, t, n),
+        a = (e) => (t) => {
             y.Z.setNotificationDisabledSetting(e, !t);
         },
-        a = (0, _.e7)([G.Z], () => G.Z.getDisabledNotifications());
+        o = (0, _.e7)([G.Z], () => G.Z.getDisabledNotifications());
     return (0, r.jsxs)("div", {
         className: e_.notificationSettingsContainer,
         children: [
@@ -992,7 +998,7 @@ function eV() {
                 color: "header-primary",
                 children: ef.intl.string(ef.t.xOE5bG),
             }),
-            n.map((e) =>
+            i.map((e) =>
                 (0, r.jsxs)(
                     ew,
                     {
@@ -1014,8 +1020,8 @@ function eV() {
                                 ],
                             }),
                             (0, r.jsx)(m.j7V, {
-                                value: !a.has(e.disabledSetting),
-                                onChange: i(e.disabledSetting),
+                                value: !o.has(e.disabledSetting),
+                                onChange: a(e.disabledSetting),
                                 hideBorder: !0,
                             }),
                         ],

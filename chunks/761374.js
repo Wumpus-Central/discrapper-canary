@@ -1,8 +1,8 @@
-n.d(t, { Z: () => j }), n(388685), n(642613);
+n.d(t, { Z: () => C }), n(388685), n(642613);
 var i = n(951288),
     r = n(647438),
-    o = n(442837),
-    l = n(481060),
+    l = n(442837),
+    o = n(481060),
     a = n(13245),
     s = n(493773),
     c = n(358221),
@@ -19,11 +19,11 @@ var i = n(951288),
     b = n(68286),
     E = n(340101),
     _ = n(501787),
-    S = n(388032),
-    x = n(965365);
+    x = n(388032),
+    S = n(965365);
 let I = [];
-function j(e) {
-    var t, n, j, C;
+function C(e) {
+    var t, n, C, j;
     let {
             id: w,
             widget: N,
@@ -31,30 +31,30 @@ function j(e) {
             locked: T,
             padding: P,
             borderWidth: A,
-            opacity: k,
-            horizontal: D,
+            opacity: D,
+            horizontal: k,
             pinned: R,
             anchorTop: L,
             anchorLeft: M,
             showEmpty: z = !0,
         } = e,
-        U = D ? E.C5.HORIZONTAL : E.C5.VERTICAL,
-        V = U === E.C5.VERTICAL,
-        W = (0, o.e7)([m.Z], () => {
+        V = k ? E.C5.HORIZONTAL : E.C5.VERTICAL,
+        U = V === E.C5.VERTICAL,
+        W = (0, l.e7)([m.Z], () => {
             var e;
             let t = m.Z.getWidget(w);
             return !!(0, E.ZL)(t) && !T && (null == (e = t.meta.showAllStreams) || e);
         }, [w, T]),
-        G = (0, o.e7)([g.Z], () => g.Z.getVoiceChannelId()),
-        F = (0, o.e7)([f.Z], () => f.Z.getChannel(G)),
-        B = (0, o.e7)([h.default], () => h.default.getId()),
+        G = (0, l.e7)([g.Z], () => g.Z.getVoiceChannelId()),
+        B = (0, l.e7)([f.Z], () => f.Z.getChannel(G)),
+        H = (0, l.e7)([h.default], () => h.default.getId()),
         {
-            streamParticipants: H,
+            streamParticipants: F,
             activeStreams: Y,
             participantsVersion: Q,
-        } = ((j = (L && V) || (M && D)),
-        (C = (!L && V) || (!M && D)),
-        (0, o.cj)([p.Z, c.Z], () => {
+        } = ((C = (L && U) || (M && k)),
+        (j = (!L && U) || (!M && k)),
+        (0, l.cj)([p.Z, c.Z], () => {
             if (null == G)
                 return {
                     streamParticipants: I,
@@ -63,13 +63,13 @@ function j(e) {
                 };
             let e = new Set(p.Z.getAllActiveStreamsForChannel(G).map((e) => (0, u.V9)(e))),
                 t = (t) => e.has((0, u.V9)(t.stream)),
-                n = c.Z.getStreamParticipants(G).filter((e) => e.user.id !== B && (!!W || t(e)));
+                n = c.Z.getStreamParticipants(G).filter((e) => e.user.id !== H && (!!W || t(e)));
             return (
                 n.sort((e, n) => {
-                    if (j) {
+                    if (C) {
                         if (t(e) && !t(n)) return -1;
                         if (!t(e) && t(n)) return 1;
-                    } else if (C) {
+                    } else if (j) {
                         if (t(e) && !t(n)) return 1;
                         if (!t(e) && t(n)) return -1;
                     }
@@ -81,9 +81,9 @@ function j(e) {
                     participantsVersion: c.Z.getParticipantsVersion(G),
                 }
             );
-        }, [G, B, W, j, C])),
-        K = H.length,
-        X = (0, o.e7)([d.Z], () => d.Z.getWindowState(_.$J)),
+        }, [G, H, W, C, j])),
+        K = F.length,
+        X = (0, l.e7)([d.Z], () => d.Z.getWindowState(_.$J), []),
         {
             tileWidth: q,
             tileHeight: J,
@@ -95,16 +95,14 @@ function j(e) {
             tileCount: K,
             padding: P,
             borderWidth: A,
-            windowWidth: null == X ? void 0 : X.width,
-            windowHeight: null == X ? void 0 : X.height,
-            isVertical: V,
+            isVertical: U,
             widgetSize: Z,
         }),
         ei = {
             id: w,
             widget: N,
-            layout: U,
-            participants: H.length,
+            layout: V,
+            participants: F.length,
             padding: P,
             borderWidth: A,
             widgetMinMaxSizes: en,
@@ -122,11 +120,11 @@ function j(e) {
         };
     (0, b.Dl)({
         id: w,
-        streamParticipants: H,
-        layout: U,
+        streamParticipants: F,
+        layout: V,
         widgetLayoutSpecs: ei,
     });
-    let er = null == F || (0 === Y.size && T) || (0 === K && !T);
+    let er = null == B || (0 === Y.size && T) || (0 === K && !T);
     return (r.useEffect(() => {
         a.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !er);
     }, [er]),
@@ -140,23 +138,23 @@ function j(e) {
               ? T
                   ? null
                   : (0, i.jsx)(O.E, {
-                        emptyText: S.intl.string(S.t["T6+rX1"]),
-                        icon: l.hGI,
+                        emptyText: x.intl.string(x.t["T6+rX1"]),
+                        icon: o.hGI,
                         absolute: !0,
                     })
               : null
           : (0, i.jsx)("div", {
-                className: x.goLiveGridContainer,
-                style: { opacity: k },
+                className: S.goLiveGridContainer,
+                style: { opacity: D },
                 ref: et,
                 children: (0, i.jsx)(v.Z, {
                     widgetId: w,
                     tileWidth: q,
                     tileHeight: J,
                     locked: T,
-                    layout: U,
+                    layout: V,
                     activeStreams: Y,
-                    streamParticipants: H,
+                    streamParticipants: F,
                     participantsVersion: Q,
                     pinned: R,
                     padding: P,

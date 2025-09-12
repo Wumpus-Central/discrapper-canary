@@ -8,13 +8,14 @@ n.d(t, {
     XE: () => u,
     YB: () => g,
     Yo: () => d,
+    aq: () => I,
     dj: () => f,
     hS: () => h,
     lj: () => v,
     mB: () => m,
     o4: () => s,
     qA: () => E,
-    tU: () => T,
+    tU: () => S,
     td: () => _,
 });
 var r = n(818083),
@@ -232,7 +233,10 @@ let O = (0, i.le)({
 function v(e) {
     return O.getConfig({ location: e });
 }
-let I = (0, i.le)({
+function I(e) {
+    return O.useConfig({ location: e });
+}
+let T = (0, i.le)({
     name: "2025-08-overlay-v3-one-click-go-live",
     kind: "user",
     defaultConfig: {
@@ -250,6 +254,6 @@ let I = (0, i.le)({
         },
     },
 });
-function T(e) {
-    return I.getConfig({ location: e });
+function S(e) {
+    return T.getConfig({ location: e });
 }

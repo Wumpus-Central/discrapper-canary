@@ -1,13 +1,13 @@
 n.d(t, {
     Y: () => C,
-    Z: () => P,
+    Z: () => D,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(938288),
     l = n(442837),
     c = n(755721),
     u = n(481060),
@@ -145,10 +145,10 @@ let C = i.memo(function (e) {
         Z = i.useCallback(() => {
             j(!0);
         }, []),
-        V = i.useCallback(() => {
+        F = i.useCallback(() => {
             j(!1);
         }, []);
-    function F() {
+    function V() {
         return (0, r.jsx)(_.Z, {
             className: b.dismissButton,
             onDismiss: U,
@@ -260,36 +260,37 @@ let C = i.memo(function (e) {
                     innerRef: w,
                     ignoreKeyPress: !0,
                     onMouseOver: Z,
-                    onMouseLeave: V,
+                    onMouseLeave: F,
                     onClick: y,
                     className: o()(b.container, { [b.clickable]: null != y }, D),
                     children: K(),
                 }),
             }),
-            F(),
+            V(),
         ],
     });
 });
 function N(e) {
     let {
         springs: { opacity: t, scale: n, transform: i, height: a },
-        index: l,
-        children: c,
-        locked: u,
-        animationWrapperClassName: d,
+        scaleOverride: l,
+        index: c,
+        children: u,
+        locked: d,
+        animationWrapperClassName: f,
     } = e;
     return (0, r.jsx)(s.animated.div, {
-        className: o()(b.animationWrapper, d),
+        className: o()(b.animationWrapper, f),
         style: {
-            pointerEvents: u && 0 !== l ? "none" : "auto",
-            zIndex: Math.max(5 - l, 0),
+            pointerEvents: d && 0 !== c ? "none" : "auto",
+            zIndex: Math.max(5 - c, 0),
             opacity: t,
             transform: i.to((e) => "translate3d(0, ".concat(e, "px, 0)")),
-            scale: n.to([0, 1], [0.7, 1]),
+            scale: null != l ? l : n.to([0, 1], [0.7, 1]),
             height: a,
-            maxWidth: 0 === l ? void 0 : "100%",
+            maxWidth: 0 === c ? void 0 : "100%",
         },
-        children: c,
+        children: u,
     });
 }
 function R(e) {
@@ -301,7 +302,32 @@ function R(e) {
           })
         : n;
 }
-function P(e) {
+let P = {
+    mass: 1,
+    friction: 8,
+    tension: 300,
+};
+function w() {
+    let [e, t] = i.useState(!1),
+        [n, r] = i.useState(!1),
+        a = (0, u.q_F)({
+            scale: e ? 0.975 : 1,
+            config: P,
+            onRest: () => {
+                t(!1),
+                    setTimeout(() => {
+                        r(!1);
+                    }, 300);
+            },
+        });
+    return {
+        clickSpring: n ? a : void 0,
+        handleMouseClick: i.useCallback(() => {
+            r(!0), t(!0);
+        }, []),
+    };
+}
+function D(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -324,38 +350,39 @@ function P(e) {
             },
             [c, f],
         ),
-        v = i.useCallback(
+        { clickSpring: v, handleMouseClick: S } = w(),
+        A = i.useCallback(
             (e) => {
-                null == _ || _(e, c);
+                null == _ || _(e, c), S();
             },
-            [_, c],
+            [_, c, S],
         ),
-        S = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 null == p || p(e, c);
             },
             [p, c],
         ),
-        A = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 null == h || h(e, c);
             },
             [h, c],
         ),
-        P = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
+        x = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
             props: {
-                onNotificationShow: w,
-                onDismissClick: D,
-                renderFooter: x,
-                onNotificationClick: L,
-                onConfirmClick: j,
-                onCancelClick: M,
-                disableClickableRegions: k = !1,
+                onNotificationShow: L,
+                onDismissClick: j,
+                renderFooter: M,
+                onNotificationClick: k,
+                onConfirmClick: U,
+                onCancelClick: G,
+                disableClickableRegions: B = !1,
             },
-            status: U,
+            status: Z,
         } = t,
-        G = T(t.props, [
+        F = T(t.props, [
             "onNotificationShow",
             "onDismissClick",
             "renderFooter",
@@ -364,34 +391,35 @@ function P(e) {
             "onCancelClick",
             "disableClickableRegions",
         ]),
-        B = !o && a,
-        Z = 0 === n && !k && !B,
-        { ref: V, springs: F } = (0, m.X4)(t.id, s, l);
+        V = !o && a,
+        H = 0 === n && !B && !V,
+        { ref: Y, springs: W } = (0, m.X4)(t.id, s, l);
     return (0, r.jsx)(N, {
         transitionState: s,
-        springs: F,
+        springs: W,
+        scaleOverride: null == v ? void 0 : v.scale,
         index: n,
         locked: a,
         animationWrapperClassName: E,
         children: (0, r.jsx)(R, {
-            observe: Z,
+            observe: H,
             children: (0, r.jsx)(
                 C,
-                I(O({}, G), {
-                    title: "function" == typeof G.title ? G.title(y) : G.title,
-                    containerRef: V,
+                I(O({}, F), {
+                    title: "function" == typeof F.title ? F.title(y) : F.title,
+                    containerRef: Y,
                     notificationId: t.id,
                     onNotificationShow: 0 === n ? b : void 0,
                     onDismissClick: y,
-                    onNotificationClick: null != _ ? v : void 0,
-                    onConfirmClick: null != p ? S : void 0,
-                    onCancelClick: null != h ? A : void 0,
-                    renderFooter: P,
+                    onNotificationClick: A,
+                    onConfirmClick: null != p ? P : void 0,
+                    onCancelClick: null != h ? D : void 0,
+                    renderFooter: x,
                     expand: !1,
                     index: n,
                     locked: a,
-                    status: U,
-                    contentOpacity: F.contentOpacity,
+                    status: Z,
+                    contentOpacity: W.contentOpacity,
                 }),
             ),
         }),
