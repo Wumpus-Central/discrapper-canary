@@ -22,49 +22,52 @@ var r = n(951288),
     I = n(981631),
     C = n(918559),
     S = n(388032),
-    N = n(909357);
-let T = {
-    [C.MI.NO_CHAT]: N.noChat,
-    [C.MI.RESIZABLE]: N.resizable,
+    T = n(909357);
+let N = {
+    [C.MI.NO_CHAT]: T.noChat,
+    [C.MI.RESIZABLE]: T.resizable,
 };
 function P(e) {
     let { frame: t } = e,
         n = (0, f.q)(t.applicationId),
         l = (0, d.Z)(),
-        P = (0, o.e7)([_.Z], () => _.Z.getVoiceChannelId()),
-        j = (0, o.e7)([h.Z], () => null != P && h.Z.getChatOpen(P), [P]),
-        x = (0, o.e7)([g.ZP], () => g.ZP.callChatSidebarWidth),
-        A = (0, u.dQu)(s.Z.modules.chat.RESIZE_HANDLE_WIDTH),
-        Z = i.useRef(null),
+        { selectedChannelId: P, selectedVoiceChannelId: j } = (0, o.cj)([_.Z], () => ({
+            selectedChannelId: _.Z.getChannelId(),
+            selectedVoiceChannelId: _.Z.getVoiceChannelId(),
+        })),
+        x = (0, o.e7)([h.Z], () => null != j && P === j && h.Z.getChatOpen(j), [P, j]),
+        A = (0, o.e7)([g.ZP], () => g.ZP.callChatSidebarWidth),
+        Z = (0, u.dQu)(s.Z.modules.chat.RESIZE_HANDLE_WIDTH),
         w = i.useRef(null),
-        [L, R] = i.useState({
+        L = i.useRef(null),
+        [R, D] = i.useState({
             width: 0,
             height: 0,
         }),
-        D = i.useCallback(() => {
+        k = i.useCallback(() => {
             (0, O.eU)({
                 applicationId: t.applicationId,
                 layoutMode: v.U.PIP,
             });
         }, [t.applicationId]),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (0, O.xT)({ applicationId: t.applicationId });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
-        if (null == w.current) return;
+        if (null == L.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            R({
-                width: null != (n = null == (e = w.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = w.current) ? void 0 : t.clientHeight) ? r : 0,
+            D({
+                width: null != (n = null == (e = L.current) ? void 0 : e.clientWidth) ? n : 0,
+                height: null != (r = null == (t = L.current) ? void 0 : t.clientHeight) ? r : 0,
             });
         });
-        return e.observe(w.current), () => e.disconnect();
+        return e.observe(L.current), () => e.disconnect();
     }, []),
         i.useEffect(() => {
             let e = (e) => {
-                null == Z.current ||
-                    Z.current.contains(e.target) ||
+                null == w.current ||
+                    w.current.contains(e.target) ||
                     l ||
                     (0, O.eU)({
                         applicationId: t.applicationId,
@@ -78,38 +81,38 @@ function P(e) {
                 }
             );
         }, [t.applicationId, l]);
-    let M = L.width / Math.max(L.height, 1) < C.I0,
-        U = 0,
+    let U = R.width / Math.max(R.height, 1) < C.I0,
         G = 0,
-        B = (0, p.Z)(null == n ? void 0 : n.id);
-    if (!B) {
-        let e = L.width,
-            t = L.height;
-        M
-            ? ((t = L.width / C.I0) > L.height && (e = (t = L.height) * C.I0), (G = (L.height - t) / 2))
-            : ((e = Math.min(L.height * C.I0)) > L.width && (t = (e = L.width) / C.I0), (U = (L.width - e) / 2));
+        B = 0,
+        V = (0, p.Z)(null == n ? void 0 : n.id);
+    if (!V) {
+        let e = R.width,
+            t = R.height;
+        U
+            ? ((t = R.width / C.I0) > R.height && (e = (t = R.height) * C.I0), (B = (R.height - t) / 2))
+            : ((e = Math.min(R.height * C.I0)) > R.width && (t = (e = R.width) / C.I0), (G = (R.width - e) / 2));
     }
-    let V = C.MI.NO_CHAT;
+    let H = C.MI.NO_CHAT;
     if (null == n) return null;
-    let H = (null != x ? x : I.$Y6) + A,
-        F = (0, y.ro)(t);
+    let F = (null != A ? A : I.$Y6) + Z,
+        z = (0, y.ro)(t);
     return (0, r.jsx)(u.f6W, {
         theme: I.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: a()(N.wrapper, T[V], e),
-                ref: Z,
-                style: { right: j && !Number.isNaN(H) ? H : 0 },
+                className: a()(T.wrapper, N[H], e),
+                ref: w,
+                style: { right: x && !Number.isNaN(F) ? F : 0 },
                 children: [
                     (0, r.jsx)("div", {
-                        className: N.contextlessHeader,
+                        className: T.contextlessHeader,
                         children: (0, r.jsxs)("div", {
-                            className: N.buttonSection,
+                            className: T.buttonSection,
                             children: [
                                 (0, r.jsx)(m.d, {
                                     isTrayButton: !0,
                                     label: S.intl.string(S.t.brPQ5e),
-                                    onClick: D,
+                                    onClick: k,
                                     iconComponent: u.dOc,
                                     themeable: !0,
                                 }),
@@ -117,7 +120,7 @@ function P(e) {
                                     appContext: I.IlC.APP,
                                     applicationId: n.id,
                                     shouldPrioritizeGroupPlusIcon: !0,
-                                    iconClassName: N.contextlessInviteButtonIcon,
+                                    iconClassName: T.contextlessInviteButtonIcon,
                                     isRichPresenceInvite: !0,
                                     size: c.zx.Sizes.SMALL,
                                     look: c.zx.Looks.FILLED,
@@ -127,7 +130,7 @@ function P(e) {
                                 (0, r.jsx)(m.d, {
                                     isTrayButton: !0,
                                     label: S.intl.string(S.t.cpT0Cg),
-                                    onClick: k,
+                                    onClick: M,
                                     iconComponent: u.Dio,
                                     themeable: !0,
                                 }),
@@ -135,19 +138,19 @@ function P(e) {
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: N.activityPanelContainer,
+                        className: T.activityPanelContainer,
                         children: (0, r.jsx)("div", {
-                            className: a()(N.activityContainer, { [N.activityContainerNoMargin]: B }),
+                            className: a()(T.activityContainer, { [T.activityContainerNoMargin]: V }),
                             style: {
-                                paddingLeft: U,
-                                paddingRight: U,
-                                paddingTop: G,
-                                paddingBottom: G,
+                                paddingLeft: G,
+                                paddingRight: G,
+                                paddingTop: B,
+                                paddingBottom: B,
                             },
-                            ref: w,
+                            ref: L,
                             children: (0, r.jsx)(E.Z, {
-                                className: N.iframe,
-                                embedId: F,
+                                className: T.iframe,
+                                embedId: z,
                             }),
                         }),
                     }),
