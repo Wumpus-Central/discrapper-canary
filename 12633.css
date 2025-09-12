@@ -53078,6 +53078,13 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     fill: #ec1060
 }
 
+.toastIcon__979b1 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 4px
+}
+
 .fadeInAvatarImg_d71c71 {
     animation: fadeIn_d71c71 1.5s
 }
@@ -89168,7 +89175,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
