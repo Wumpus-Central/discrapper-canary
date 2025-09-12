@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(415506);
+n.d(t, { Z: () => b }), n(388685), n(781311), n(415506);
 var r = n(392711),
     i = n.n(r),
     a = n(570140),
@@ -314,13 +314,14 @@ let b = {
             }),
         );
     },
-    updateAutocompleteQuery: function (e, t, n) {
-        (0, c.y)({ location: "updateAutocompleteQuery" }) && s.DZ.loadIfNecessary(),
+    updateAutocompleteQuery: function (e) {
+        let { searchContext: t, tokens: n, queryString: r, cursorScope: i } = e;
+        r.trim().length > 0 && (0, c.y)({ location: "updateAutocompleteQuery" }) && s.DZ.loadIfNecessary(),
             a.Z.dispatch({
                 type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
-                searchContext: e,
-                tokens: t,
-                cursorScope: n,
+                searchContext: t,
+                tokens: n,
+                cursorScope: i,
             });
     },
     markSearchTokensRefreshed: function () {

@@ -2,11 +2,11 @@ l.d(t, {
     Ek: () => M,
     HJ: () => _,
     LE: () => A,
-    Z2: () => y,
+    Z2: () => L,
     Zc: () => k,
     fI: () => m,
     p4: () => v,
-    ur: () => L,
+    ur: () => y,
 }),
     l(781311),
     l(388685),
@@ -18,8 +18,8 @@ var n = l(951288),
     u = l(392711),
     a = l(913527),
     s = l.n(a),
-    o = l(772848),
-    i = l(442837),
+    i = l(772848),
+    o = l(442837),
     c = l(481060),
     d = l(592125),
     f = l(594174),
@@ -76,7 +76,7 @@ function T(e, t) {
 }
 function x(e) {
     let { searchContext: t, filter: l, queryString: n } = e,
-        u = (0, i.e7)([p.Z], () => p.Z.getState(t)),
+        u = (0, o.e7)([p.Z], () => p.Z.getState(t)),
         a = r.useMemo(() => {
             let e = u.autocompletes[0];
             return null != e && e.group === l ? e.results : [];
@@ -85,18 +85,23 @@ function x(e) {
             let e = g.ZP[l].key;
             return "".concat(e, " ").concat(n);
         }, [l, n]),
-        o = r.useCallback(() => {
+        i = r.useCallback(() => {
             let e = (0, C.kG)(s),
                 l = (0, C.g9)(e, s.length - 1, s.length - 1);
-            h.Z.updateAutocompleteQuery(t, e, l);
+            h.Z.updateAutocompleteQuery({
+                searchContext: t,
+                tokens: e,
+                cursorScope: l,
+                queryString: s,
+            });
         }, [t, s]),
         c = r.useCallback(() => {
-            o();
-        }, [o]);
+            i();
+        }, [i]);
     return (
         r.useEffect(() => {
-            n.trim().length > 0 && o();
-        }, [s, t, o, n]),
+            n.trim().length > 0 && i();
+        }, [s, t, i, n]),
         {
             filterAutocompleteResults: a,
             handleFocusFilter: c,
@@ -117,11 +122,11 @@ function _(e, t) {
         n = r.useMemo(() => (0, C.s5)(e), [e]),
         u = r.useMemo(() => (0, C.AH)(e), [e]),
         [a, s] = r.useState(l),
-        [o, i] = r.useState(""),
+        [i, o] = r.useState(""),
         { filterAutocompleteResults: c, handleFocusFilter: d } = x({
             searchContext: e,
             filter: t,
-            queryString: o,
+            queryString: i,
         }),
         E = r.useMemo(() => {
             if (0 === c.length && 0 === a.length) return [];
@@ -154,7 +159,7 @@ function _(e, t) {
             );
         }, [c, a, n, u]),
         h = r.useCallback(() => {
-            s([]), i("");
+            s([]), o("");
         }, []),
         p = r.useCallback(
             (e) => {
@@ -173,7 +178,7 @@ function _(e, t) {
         options: E,
         query: a,
         setQuery: s,
-        setQueryString: i,
+        setQueryString: o,
         handleClearFilter: h,
         getApplyQueryString: p,
         handleFocusFilter: d,
@@ -218,16 +223,16 @@ function S(e) {
         key: t.id,
     };
 }
-function L(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [l, n] = r.useState(t),
         [u, a] = r.useState(""),
-        { filterAutocompleteResults: s, handleFocusFilter: o } = x({
+        { filterAutocompleteResults: s, handleFocusFilter: i } = x({
             searchContext: e,
             filter: I.dCx.FILTER_IN,
             queryString: u,
         }),
-        i = r.useMemo(() => {
+        o = r.useMemo(() => {
             if (0 === s.length && 0 === l.length) return [];
             let e = [],
                 t = new Set();
@@ -269,16 +274,16 @@ function L(e) {
             [l],
         );
     return {
-        options: i,
+        options: o,
         query: l,
         setQuery: n,
         setQueryString: a,
         handleClearFilter: c,
         getApplyQueryString: f,
-        handleFocusFilter: o,
+        handleFocusFilter: i,
     };
 }
-function y(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         [l, n] = r.useState(t),
         { filterAutocompleteResults: u, handleFocusFilter: a } = x({
@@ -314,10 +319,10 @@ function y(e) {
                 e
             );
         }, [u, l]),
-        o = r.useCallback(() => {
+        i = r.useCallback(() => {
             n([]);
         }, []),
-        i = r.useCallback(
+        o = r.useCallback(
             (e) => {
                 if (0 === l.length) return null;
                 let t = g.ZP[e];
@@ -329,8 +334,8 @@ function y(e) {
         options: s,
         query: l,
         setQuery: n,
-        handleClearFilter: o,
-        getApplyQueryString: i,
+        handleClearFilter: i,
+        getApplyQueryString: o,
         handleFocusFilter: a,
     };
 }
@@ -349,24 +354,24 @@ let N = () =>
 function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         [t, l] = r.useState(e),
-        n = r.useCallback(() => (0, o.Z)(), []),
+        n = r.useCallback(() => (0, i.Z)(), []),
         u = r.useCallback((e) => e.date.isValid(), []),
         a = r.useMemo(() => t.filter(u), [t, u]),
-        { beforeFilter: i, afterFilter: c, duringFilter: d } = N(),
+        { beforeFilter: o, afterFilter: c, duringFilter: d } = N(),
         f = r.useCallback(
             () => ({
-                query: i,
+                query: o,
                 date: s()(),
                 id: n(),
             }),
-            [i, n],
+            [o, n],
         ),
         E = r.useMemo(
             () => [
                 {
                     key: "Before",
                     label: F.intl.string(F.t["ptL/DA"]),
-                    value: i,
+                    value: o,
                 },
                 {
                     key: "After",
@@ -379,7 +384,7 @@ function m() {
                     value: d,
                 },
             ],
-            [i, c, d],
+            [o, c, d],
         ),
         h = r.useCallback((e) => {
             let { query: t, index: n } = e;
@@ -446,7 +451,7 @@ function v(e, t) {
                 [I.dCx.FILTER_AFTER]: [],
             },
             r = [],
-            i = 0;
+            o = 0;
         e.forEach((e) => {
             if (I.KA4.test(e.type))
                 switch (e.type) {
@@ -454,27 +459,27 @@ function v(e, t) {
                         if (a.has(I.dCx.FILTER_FROM)) {
                             let l = t[I.dCx.FILTER_FROM],
                                 n = e.getData("userId");
-                            l.push(n), (i += 1);
+                            l.push(n), (o += 1);
                         }
                         break;
                     case I.dCx.ANSWER_USERNAME_MENTIONS:
                         if (a.has(I.dCx.FILTER_MENTIONS)) {
                             let l = t[I.dCx.FILTER_MENTIONS],
                                 n = e.getData("userId");
-                            l.push(n), (i += 1);
+                            l.push(n), (o += 1);
                         }
                         break;
                     case I.dCx.ANSWER_HAS:
                         let c = t[I.dCx.FILTER_HAS],
                             d = e.getData("has");
-                        c.push(d), (i += 1);
+                        c.push(d), (o += 1);
                         break;
                     case I.dCx.ANSWER_IN:
                         if (a.has(I.dCx.FILTER_IN)) {
                             var f;
                             let l = t[I.dCx.FILTER_IN],
                                 n = null != (f = e.getData("channelIds")) ? f : [];
-                            l.push(...n), (i += 1);
+                            l.push(...n), (o += 1);
                         }
                         break;
                     case I.dCx.ANSWER_BEFORE:
@@ -483,9 +488,9 @@ function v(e, t) {
                             p = {
                                 query: l,
                                 date: s()(h),
-                                id: (0, o.Z)(),
+                                id: (0, i.Z)(),
                             };
-                        E.push(p), r.push(p), (i += 1);
+                        E.push(p), r.push(p), (o += 1);
                         break;
                     case I.dCx.ANSWER_ON:
                         let C = t[I.dCx.FILTER_ON],
@@ -493,9 +498,9 @@ function v(e, t) {
                             g = {
                                 query: u,
                                 date: s()(R),
-                                id: (0, o.Z)(),
+                                id: (0, i.Z)(),
                             };
-                        C.push(g), r.push(g), (i += 1);
+                        C.push(g), r.push(g), (o += 1);
                         break;
                     case I.dCx.ANSWER_AFTER:
                         let F = t[I.dCx.FILTER_AFTER],
@@ -503,9 +508,9 @@ function v(e, t) {
                             T = {
                                 query: n,
                                 date: s()(b),
-                                id: (0, o.Z)(),
+                                id: (0, i.Z)(),
                             };
-                        F.push(T), r.push(T), (i += 1);
+                        F.push(T), r.push(T), (o += 1);
                 }
         });
         let c = {
@@ -517,7 +522,7 @@ function v(e, t) {
         };
         return {
             allPrefilledSearchFilters: t,
-            totalFilters: i,
+            totalFilters: o,
             prefilledSearchFilters: c,
             eligibleFilterTokens: a,
         };
