@@ -1,7 +1,9 @@
 e.exports = {
     container: "container_cbd19d",
-    content: "content_cbd19d",
+    contentHorizontal: "contentHorizontal_cbd19d",
+    contentVertical: "contentVertical_cbd19d",
     description: "description_cbd19d",
-    buttons: "buttons_cbd19d",
-    button: "button_cbd19d",
+    buttonsHorizontal: "buttonsHorizontal_cbd19d",
+    buttonsVertical: "buttonsVertical_cbd19d",
+    buttonVertical: "buttonVertical_cbd19d",
 };

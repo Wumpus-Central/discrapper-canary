@@ -59,28 +59,30 @@ function _(e, t) {
     );
 }
 let p = !1;
-function h() {
-    let [e, t] = i.useState(!1),
-        u = i.useCallback(() => {
-            t(!0);
+function h(e) {
+    let { variant: t = "vertical" } = e,
+        [u, f] = i.useState(!1),
+        h = "vertical" === t,
+        m = i.useCallback(() => {
+            f(!0);
         }, []),
-        f = i.useCallback(() => {
+        g = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("82077").then(n.bind(n, 953848));
-                return (n) => (0, r.jsx)(e, _(d({}, n), { onSubmitted: () => t(!0) }));
+                return (t) => (0, r.jsx)(e, _(d({}, t), { onSubmitted: () => f(!0) }));
             });
         }, []);
     return (i.useEffect(
         () => () => {
-            e && (p = !0);
+            u && (p = !0);
         },
-        [e],
+        [u],
     ),
-    e)
+    u)
         ? (0, r.jsx)(s.Z.Overlay, {
               className: c.container,
               children: (0, r.jsx)("div", {
-                  className: c.content,
+                  className: h ? c.contentVertical : c.contentHorizontal,
                   children: (0, r.jsx)(o.Text, {
                       variant: "text-sm/normal",
                       color: "header-secondary",
@@ -92,7 +94,7 @@ function h() {
         : (0, r.jsx)(s.Z.Overlay, {
               className: c.container,
               children: (0, r.jsxs)("div", {
-                  className: c.content,
+                  className: h ? c.contentVertical : c.contentHorizontal,
                   children: [
                       (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
@@ -101,22 +103,22 @@ function h() {
                           children: l.intl.string(l.t.Qian09),
                       }),
                       (0, r.jsxs)("div", {
-                          className: c.buttons,
+                          className: h ? c.buttonsVertical : c.buttonsHorizontal,
                           children: [
                               (0, r.jsx)(a.zx, {
                                   size: a.zx.Sizes.SMALL,
                                   look: a.zx.Looks.FILLED,
                                   color: a.zx.Colors.PRIMARY,
-                                  onClick: u,
-                                  className: c.button,
+                                  onClick: m,
+                                  className: h ? c.buttonVertical : c.buttonHorizontal,
                                   children: l.intl.string(l.t.p89ACg),
                               }),
                               (0, r.jsx)(a.zx, {
                                   size: a.zx.Sizes.SMALL,
                                   look: a.zx.Looks.FILLED,
                                   color: a.zx.Colors.PRIMARY,
-                                  onClick: f,
-                                  className: c.button,
+                                  onClick: g,
+                                  className: h ? c.buttonVertical : c.buttonHorizontal,
                                   children: l.intl.string(l.t.gm1Ven),
                               }),
                           ],
@@ -125,6 +127,7 @@ function h() {
               }),
           });
 }
-function m() {
-    return p ? null : (0, r.jsx)(h, {});
+function m(e) {
+    let { variant: t } = e;
+    return p ? null : (0, r.jsx)(h, { variant: t });
 }

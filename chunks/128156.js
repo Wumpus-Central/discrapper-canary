@@ -1,61 +1,66 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(481060),
-    a = n(468363),
-    o = n(353647),
-    c = n(566898),
-    s = n(158776),
-    u = n(885110),
-    d = n(63063),
-    f = n(209698),
+    a = n(833664),
+    o = n(468363),
+    s = n(353647),
+    c = n(220410),
+    u = n(566898),
+    d = n(158776),
+    p = n(885110),
+    f = n(63063),
+    h = n(209698),
     g = n(369566),
-    b = n(29899),
-    p = n(151545),
-    m = n(527790),
-    O = n(769140),
-    j = n(864141),
-    y = n(264481),
-    x = n(693408),
-    v = n(661462),
-    h = n(228168),
-    _ = n(981631),
-    P = n(388032),
-    w = n(158069);
-function I(e) {
-    let { user: t, currentUser: n, displayProfile: I, guildId: S, channelId: E, subsection: T, onClose: N } = e,
-        { voiceActivityStatusEnabled: C } = (0, a.U)({ location: "UserProfileModalV2Activity" }),
-        A = (0, f.b)({ location: "UserProfileModalV2Activity" }),
-        { live: k, recent: Z, stream: D } = (0, g.Z)(t.id),
-        { voiceChannel: L, voiceActivity: R } = (0, b.Z)({
+    m = n(29899),
+    b = n(168463),
+    _ = n(151545),
+    O = n(527790),
+    E = n(769140),
+    y = n(864141),
+    v = n(264481),
+    I = n(693408),
+    C = n(661462),
+    S = n(228168),
+    T = n(981631),
+    N = n(388032),
+    j = n(158069);
+function P(e) {
+    let { user: t, currentUser: n, displayProfile: P, guildId: x, channelId: A, subsection: Z, onClose: w } = e,
+        { voiceActivityStatusEnabled: L } = (0, o.U)({ location: "UserProfileModalV2Activity" }),
+        R = (0, h.b)({ location: "UserProfileModalV2Activity" }),
+        D = (0, c.P6)("UserProfileModalV2Activity"),
+        { live: k, recent: M, stream: U } = (0, g.Z)(t.id),
+        { voiceChannel: G, voiceActivity: B } = (0, m.Z)({
             userId: t.id,
-            guildId: S,
+            guildId: x,
         }),
-        G = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
-        B = t.id === n.id,
-        F = (0, i.e7)([u.Z, s.Z], () => {
-            let e = B ? u.Z.getStatus() : s.Z.getStatus(t.id);
+        V = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(t.id)),
+        H = t.id === n.id,
+        F = (0, i.e7)([p.Z, d.Z], () => {
+            let e = H ? p.Z.getStatus() : d.Z.getStatus(t.id);
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
-        M = k.length > 0 || null != D,
-        U = C && null == D && null == R && null != L,
-        z = !F && (M || U),
-        K = Z.length > 0;
-    if (!z && !K && G)
+        z = k.length > 0 || null != U,
+        W = L && null == U && null == B && null != G,
+        Y = !F && (z || W),
+        K = M.length > 0,
+        q = k.some((e) => (0, a.Z)(e));
+    if (!Y && !K && V)
         return (0, r.jsx)("div", {
-            className: w.cards,
+            className: j.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: w.loadingItem,
+                        className: j.loadingItem,
                         children: [
-                            (0, r.jsx)(c.ZT, {
+                            (0, r.jsx)(u.ZT, {
                                 width: 60,
                                 opacity: 0.08,
                             }),
-                            (0, r.jsx)(c.ZT, {
+                            (0, r.jsx)(u.ZT, {
                                 width: 135,
                                 opacity: 0.08,
                             }),
@@ -65,101 +70,110 @@ function I(e) {
                 ),
             ),
         });
-    if (!z && !K && !G) {
-        var W;
-        return B
-            ? (0, r.jsx)(y.Uf, { onClose: N })
-            : (0, r.jsx)(y.P9, {
+    if (!Y && !K && !V) {
+        var Q;
+        return H
+            ? (0, r.jsx)(v.Uf, { onClose: w })
+            : (0, r.jsx)(v.P9, {
                   user: t,
-                  guildId: null != (W = null == I ? void 0 : I.guildId) ? W : S,
-                  channelId: E,
-                  onClose: N,
+                  guildId: null != (Q = null == P ? void 0 : P.guildId) ? Q : x,
+                  channelId: A,
+                  onClose: w,
               });
     }
-    return (0, r.jsxs)(v.F, {
-        className: w.scroller,
+    return (0, r.jsxs)(C.F, {
+        className: j.scroller,
         fade: !0,
         children: [
-            z
-                ? (0, r.jsx)(x.Z, {
-                      heading: P.intl.string(P.t.J6STd3),
-                      children: (0, r.jsxs)("ul", {
-                          className: w.cards,
-                          children: [
-                              !A &&
-                                  U &&
-                                  (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(j.Z, {
-                                          user: t,
-                                          currentUser: n,
-                                          voiceChannel: L,
-                                          onClose: N,
-                                      }),
-                                  }),
-                              null != D &&
-                                  (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(O.Z, {
-                                          user: t,
-                                          currentUser: n,
-                                          stream: D,
-                                          onClose: N,
-                                      }),
-                                  }),
-                              k.map((e, i) =>
-                                  (0, r.jsx)(
-                                      "li",
-                                      {
-                                          children: (0, r.jsx)(p.Z, {
+            (() => {
+                let e = H && D && !q;
+                return Y
+                    ? (0, r.jsx)(I.Z, {
+                          heading: N.intl.string(N.t.J6STd3),
+                          children: (0, r.jsxs)("ul", {
+                              className: j.cards,
+                              children: [
+                                  e && (0, r.jsx)("li", { children: (0, r.jsx)(b.Z, { variant: "horizontal" }) }),
+                                  !R &&
+                                      W &&
+                                      (0, r.jsx)("li", {
+                                          children: (0, r.jsx)(y.Z, {
                                               user: t,
                                               currentUser: n,
-                                              activity: e,
-                                              onClose: N,
+                                              voiceChannel: G,
+                                              onClose: w,
                                           }),
-                                      },
-                                      "live-".concat(i),
-                                  ),
-                              ),
-                              A &&
-                                  U &&
-                                  (0, r.jsx)("li", {
-                                      children: (0, r.jsx)(j.Z, {
-                                          user: t,
-                                          currentUser: n,
-                                          voiceChannel: L,
-                                          onClose: N,
                                       }),
-                                  }),
-                          ],
-                      }),
-                  })
-                : null,
+                                  null != U &&
+                                      (0, r.jsx)("li", {
+                                          children: (0, r.jsx)(E.Z, {
+                                              user: t,
+                                              currentUser: n,
+                                              stream: U,
+                                              onClose: w,
+                                          }),
+                                      }),
+                                  k.map((e, i) =>
+                                      (0, r.jsx)(
+                                          "li",
+                                          {
+                                              children: (0, r.jsx)(_.Z, {
+                                                  user: t,
+                                                  currentUser: n,
+                                                  activity: e,
+                                                  onClose: w,
+                                              }),
+                                          },
+                                          "live-".concat(i),
+                                      ),
+                                  ),
+                                  R &&
+                                      W &&
+                                      (0, r.jsx)("li", {
+                                          children: (0, r.jsx)(y.Z, {
+                                              user: t,
+                                              currentUser: n,
+                                              voiceChannel: G,
+                                              onClose: w,
+                                          }),
+                                      }),
+                              ],
+                          }),
+                      })
+                    : e
+                      ? (0, r.jsx)(I.Z, {
+                            heading: N.intl.string(N.t.J6STd3),
+                            children: (0, r.jsx)(b.Z, { variant: "horizontal" }),
+                        })
+                      : null;
+            })(),
             K
-                ? (0, r.jsx)(x.Z, {
-                      heading: P.intl.string(P.t.jzgEoK),
-                      introText: B
-                          ? P.intl.format(P.t["4bk9Ag"], {
+                ? (0, r.jsx)(I.Z, {
+                      heading: N.intl.string(N.t.jzgEoK),
+                      introText: H
+                          ? N.intl.format(N.t["4bk9Ag"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
                                         l.eee,
                                         {
-                                            href: d.Z.getArticleURL(_.BhN.ACTIVITY_STATUS_SETTINGS),
+                                            href: f.Z.getArticleURL(T.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,
                                         },
                                         t,
                                     ),
                             })
                           : void 0,
-                      scrollIntoView: T === h.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: Z === S.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)("ul", {
-                          className: w.cards,
-                          children: Z.map((e) =>
+                          className: j.cards,
+                          children: M.map((e) =>
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(m.Z, {
+                                      children: (0, r.jsx)(O.Z, {
                                           user: t,
                                           entry: e,
-                                          onClose: N,
+                                          onClose: w,
                                       }),
                                   },
                                   e.id,

@@ -47322,7 +47322,14 @@ img.thumbnail__0f2e8 {
     padding: 12px
 }
 
-.content_cbd19d {
+.contentHorizontal_cbd19d {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between
+}
+
+.contentVertical_cbd19d {
     display: flex;
     flex-direction: column;
     gap: 12px
@@ -47334,13 +47341,19 @@ img.thumbnail__0f2e8 {
     text-align: left
 }
 
-.buttons_cbd19d {
+.buttonsHorizontal_cbd19d {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px
+}
+
+.buttonsVertical_cbd19d {
     display: flex;
     gap: 8px;
     width: 100%
 }
 
-.button_cbd19d {
+.buttonVertical_cbd19d {
     flex: 1
 }
 
@@ -89175,7 +89188,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

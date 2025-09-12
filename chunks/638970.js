@@ -7,23 +7,23 @@ var r = n(951288),
     l = n(755721),
     c = n(481060),
     u = n(493773),
-    d = n(468363),
-    f = n(906732),
-    _ = n(313201),
-    p = n(220410),
-    h = n(158776),
-    m = n(885110),
-    g = n(823379),
-    E = n(785717),
-    b = n(369566),
-    y = n(29899),
-    O = n(510659),
-    v = n(168463),
-    I = n(151545),
-    T = n(769140),
-    S = n(864141),
-    A = n(228168),
-    C = n(981631),
+    d = n(833664),
+    f = n(468363),
+    _ = n(906732),
+    p = n(313201),
+    h = n(220410),
+    m = n(158776),
+    g = n(885110),
+    E = n(823379),
+    b = n(785717),
+    y = n(369566),
+    O = n(29899),
+    v = n(510659),
+    I = n(168463),
+    T = n(151545),
+    S = n(769140),
+    A = n(864141),
+    C = n(228168),
     N = n(231338),
     R = n(388032),
     P = n(31948);
@@ -99,7 +99,7 @@ function k(e, t) {
                 height: "auto",
             });
         default:
-            return (0, g.vE)(t);
+            return (0, E.vE)(t);
     }
 }
 let U = {
@@ -107,24 +107,24 @@ let U = {
     height: "auto",
 };
 function G(e) {
-    let { user: t, currentUser: n, guildId: a, onOpenUserProfileModal: g, onClose: w } = e,
-        x = (0, _.Dt)(),
-        { analyticsLocations: L } = (0, f.ZP)(),
-        { trackUserProfileAction: G } = (0, E.KZ)(),
-        { live: B, stream: Z } = (0, b.Z)(t.id),
-        { voiceChannel: F, voiceActivity: V } = (0, y.Z)({
+    let { user: t, currentUser: n, guildId: a, onOpenUserProfileModal: E, onClose: w } = e,
+        x = (0, p.Dt)(),
+        { analyticsLocations: L } = (0, _.ZP)(),
+        { trackUserProfileAction: G } = (0, b.KZ)(),
+        { live: B, stream: Z } = (0, y.Z)(t.id),
+        { voiceChannel: F, voiceActivity: V } = (0, O.Z)({
             userId: t.id,
             guildId: a,
         }),
         H = t.id === n.id,
-        Y = (0, s.e7)([m.Z, h.Z], () => {
-            let e = H ? m.Z.getStatus() : h.Z.getStatus(t.id, a);
+        Y = (0, s.e7)([g.Z, m.Z], () => {
+            let e = H ? g.Z.getStatus() : m.Z.getStatus(t.id, a);
             return e === N.Sk.OFFLINE || e === N.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: W } = (0, d.U)({ location: "UserProfileStackedActivity" }),
+        { voiceActivityStatusEnabled: W } = (0, f.U)({ location: "UserProfileStackedActivity" }),
         K = W && null == Z && null == V && null != F,
-        z = (0, O.yi)(),
-        q = (null == z ? void 0 : z.interactionSource) === A.n_.ACTIVITY,
+        z = (0, v.yi)(),
+        q = (null == z ? void 0 : z.interactionSource) === C.n_.ACTIVITY,
         X = i.useRef(null),
         Q = i.useRef(null),
         J = i.useRef(null),
@@ -133,7 +133,7 @@ function G(e) {
         { height: en, animationPhase: er } = ee,
         ei = "awaitingInput" !== er,
         ea = "animating" === er || "done" === er,
-        eo = (0, p.P6)("UserProfileStackedActivity"),
+        eo = (0, h.P6)("UserProfileStackedActivity"),
         es = [],
         el = {
             user: t,
@@ -141,15 +141,15 @@ function G(e) {
             className: P.card,
             onClose: w,
         };
-    null != Z && es.push((0, r.jsx)(T.Z, D({ stream: Z }, el), "stream")),
+    null != Z && es.push((0, r.jsx)(S.Z, D({ stream: Z }, el), "stream")),
         B.forEach((e, t) => {
-            es.push((0, r.jsx)(I.Z, D({ activity: e }, el), "live-".concat(t)));
+            es.push((0, r.jsx)(T.Z, D({ activity: e }, el), "live-".concat(t)));
         }),
-        K && es.push((0, r.jsx)(S.Z, D({ voiceChannel: F }, el), "voice"));
+        K && es.push((0, r.jsx)(A.Z, D({ voiceChannel: F }, el), "voice"));
     let [ec, ...eu] = es,
         ed = eu.length > 0,
         ef =
-            null != g && ed
+            null != E && ed
                 ? (0, r.jsx)(l.zx, {
                       look: l.zx.Looks.BLANK,
                       size: l.zx.Sizes.NONE,
@@ -160,7 +160,7 @@ function G(e) {
                               action: "PRESS_VIEW_PROFILE",
                               analyticsLocations: L,
                           }),
-                              g({ section: A.oh.ACTIVITY });
+                              E({ section: C.oh.ACTIVITY });
                       },
                       children: (0, r.jsx)(c.Text, {
                           variant: "text-xs/medium",
@@ -203,15 +203,15 @@ function G(e) {
         Y)
     )
         return null;
-    let ep = B.some((e) => e.type === C.IIU.PLAYING),
+    let ep = B.some((e) => (0, d.Z)(e)),
         eh = H && eo && !ep;
     return 0 === es.length
         ? eh
-            ? (0, r.jsx)(v.Z, {})
+            ? (0, r.jsx)(I.Z, {})
             : null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  eh && (0, r.jsx)(v.Z, {}),
+                  eh && (0, r.jsx)(I.Z, {}),
                   (0, r.jsxs)("section", {
                       "aria-labelledby": x,
                       children: [
