@@ -756,18 +756,18 @@ class v extends a.Z {
             E.setOnVoiceCallback(this.handleVoiceActivity),
             null == (t = E.setVideoInputInitializationCallback) || t.call(E, this.handleVideoInputInitialization),
             null == (n = E.setAudioInputInitializationCallback) || n.call(E, this.handleAudioInputInitialization),
+            null == (r = E.setAudioDeviceModuleErrorCallback) || r.call(E, this.handleAudioDeviceModuleErrorCallback),
             E.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1,
             }),
-            null == (r = E.setNativeScreenSharePickerCallbacks) ||
-                r.call(
+            null == (i = E.setNativeScreenSharePickerCallbacks) ||
+                i.call(
                     E,
                     this.handleNativeScreenSharePickerUpdate,
                     this.handleNativeScreenSharePickerCancel,
                     this.handleNativeScreenSharePickerError,
                 ),
-            null == (i = E.setAudioDeviceModuleErrorCallback) || i.call(E, this.handleAudioDeviceModuleErrorCallback),
             null == (a = E.setVideoCodecErrorCallback) || a.call(E, this.handleVideoCodecErrorCallback),
             null == (c = E.setSystemMicrophoneModeChangeCallback) ||
                 c.call(E, this.handleSystemMicrophoneModeChangeCallback),
