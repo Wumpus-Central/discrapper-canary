@@ -262,39 +262,40 @@ function ed() {
 function ef(e) {
     var t, n, i;
     let { className: a, config: s } = e,
-        l = (0, c.e7)([O.Z], () => O.Z.useReducedMotion) ? s.getStaticImageUrl() : s.getAnimatedImageUrl(),
-        u = (0, Z.Yr)(null == (t = s.getBackgroundImageUrl) ? void 0 : t.call(s)),
-        d = (0, Z.Tl)(null != (n = s.gradientConfig) ? n : void 0),
-        f = { color: null != (i = s.textColor) ? i : "var(--always-white)" };
+        l = (0, c.e7)([O.Z], () => O.Z.useReducedMotion),
+        u = s.getImageUrl(l),
+        d = (0, Z.Yr)(null == (t = s.getBackgroundImageUrl) ? void 0 : t.call(s)),
+        f = (0, Z.Tl)(null != (n = s.gradientConfig) ? n : void 0),
+        _ = { color: null != (i = s.textColor) ? i : "var(--always-white)" };
     return (0, r.jsxs)("div", {
         className: o()(et.giftCardPromotion, a),
-        style: null != u ? u : d,
+        style: null != d ? d : f,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
                 className: et.giftImagePromotion,
                 "aria-hidden": !0,
-                src: l,
+                src: u,
             }),
             (0, r.jsxs)("div", {
                 className: et.giftInfoPromotion,
                 children: [
                     (0, r.jsx)(p.X6q, {
                         className: et.giftInfoTitlePromotion,
-                        style: f,
+                        style: _,
                         variant: "text-lg/bold",
                         children: s.title(),
                     }),
                     (0, r.jsx)(p.Text, {
                         className: et.giftText,
-                        style: f,
+                        style: _,
                         variant: "text-sm/medium",
                         children: s.body(),
                     }),
                     null != s.additionalTerm &&
                         (0, r.jsx)(p.Text, {
                             className: et.giftAdditionalTerm,
-                            style: f,
+                            style: _,
                             variant: "text-xxs/normal",
                             children: s.additionalTerm(),
                         }),
