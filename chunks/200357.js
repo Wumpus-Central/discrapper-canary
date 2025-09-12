@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(361932), n(187205), n(35282);
+n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -6,44 +6,10 @@ var r = n(951288),
     s = n(217986),
     l = n(886025),
     c = n(481060),
-    u = n(133080),
+    u = n(277139),
     d = n(388032),
     f = n(984392);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-let p = new Map(
-        s.Z.flatMap((e) => {
-            let { alpha2: t, phoneCountryCodes: n } = e,
-                r = (0, u.q9)(t);
-            return n.map((e) => [
-                "".concat(t, "-").concat(e),
-                {
-                    code: e,
-                    alpha2: t,
-                    name: r,
-                },
-            ]);
-        }),
-    ),
-    h = Array.from(p.entries()).map((e) => {
-        let [t, { name: n }] = e;
-        return {
-            value: t,
-            label: n,
-        };
-    });
-function m(e) {
+function _(e) {
     return String.fromCodePoint(
         ...e
             .toUpperCase()
@@ -51,75 +17,74 @@ function m(e) {
             .map((e) => 127397 + e.charCodeAt(0)),
     );
 }
-class g extends i.PureComponent {
-    render() {
-        let { countryCodeId: e, phone: t } = this.state,
-            { className: n, submitting: i, errorMessage: a } = this.props,
-            s = p.get(e);
-        return (0, r.jsx)("fieldset", {
-            children: (0, r.jsxs)("div", {
-                className: o()(f.phoneField, n),
-                children: [
-                    (0, r.jsx)(l.N, {
-                        label: d.intl.string(d.t["k+bvrK"]),
-                        children: (0, r.jsx)(c.VcW, {
-                            value: e,
-                            onChange: this.handleCountryChange,
-                            renderOptionPrefix: this.renderOptionPrefix,
-                            options: h,
-                            popoutWidth: 280,
-                            isDisabled: i,
-                        }),
-                    }),
-                    (0, r.jsx)(c.oil, {
-                        label: d.intl.string(d.t["64bX0N"]),
-                        error: a,
-                        leading: null == s ? void 0 : s.code,
-                        type: "tel",
-                        onChange: this.handlePhoneChange,
-                        autoFocus: !0,
-                        inputRef: this.inputRef,
-                        disabled: i,
-                        value: t,
-                    }),
-                ],
-            }),
-        });
-    }
-    constructor(e) {
-        super(e),
-            _(this, "inputRef", i.createRef()),
-            _(this, "renderOptionLabel", (e) => {
-                let { name: t } = p.get(e.value);
-                return t;
-            }),
-            _(this, "renderOptionPrefix", (e) => {
+let p = function (e) {
+    let { className: t, submitting: n, errorMessage: a, onChange: p } = e,
+        h = i.useRef(null),
+        { countriesMap: m, countryCodeOptions: g } = (0, u.b)(),
+        [E, b] = i.useState(() => {
+            let e = s.Z.find((e) => "United States" === e.name);
+            return "".concat(e.alpha2, "-").concat(e.phoneCountryCode);
+        }),
+        [y, O] = i.useState(() => {
+            let [e, t] = s.Z.find((e) => "United States" === e.name).phoneCountryCode.split(" ");
+            return null != t ? t : "";
+        }),
+        v = i.useCallback(
+            (e) => {
                 var t, n;
-                if (null != e) return m(null != (n = null == (t = p.get(e.value)) ? void 0 : t.alpha2) ? n : "");
-            }),
-            _(this, "handleCountryChange", (e) => {
+                if (null != e) return _(null != (n = null == (t = m.get(e.value)) ? void 0 : t.alpha2) ? n : "");
+            },
+            [m],
+        ),
+        I = i.useCallback(
+            (e, t) => {
+                var n;
+                let r = null == (n = m.get(e)) ? void 0 : n.code;
+                null == p || p("".concat(r).concat(t));
+            },
+            [m, p],
+        ),
+        T = i.useCallback(
+            (e) => {
                 var t;
-                this.setState({ countryCodeId: e }),
-                    null == (t = this.inputRef.current) || t.focus(),
-                    this.handleChange(e, this.state.phone);
-            }),
-            _(this, "handlePhoneChange", (e) => {
-                this.setState({ phone: e });
-                let { countryCodeId: t } = this.state;
-                this.handleChange(t, e);
-            }),
-            _(this, "handleChange", (e, t) => {
-                var n, r, i;
-                let a = null == (n = p.get(e)) ? void 0 : n.code;
-                null == (r = (i = this.props).onChange) || r.call(i, "".concat(a).concat(t));
-            });
-        let t = s.Z.find((e) => "United States" === e.name),
-            [n, r] = t.phoneCountryCode.split(" "),
-            a = "".concat(t.alpha2, "-").concat(t.phoneCountryCode);
-        this.state = {
-            countryCodeId: a,
-            phone: null != r ? r : "",
-        };
-    }
-}
-let E = g;
+                b(e), null == (t = h.current) || t.focus(), I(e, y);
+            },
+            [y, I],
+        ),
+        S = i.useCallback(
+            (e) => {
+                O(e), I(E, e);
+            },
+            [E, I],
+        ),
+        A = m.get(E);
+    return (0, r.jsx)("fieldset", {
+        children: (0, r.jsxs)("div", {
+            className: o()(f.phoneField, t),
+            children: [
+                (0, r.jsx)(l.N, {
+                    label: d.intl.string(d.t["k+bvrK"]),
+                    children: (0, r.jsx)(c.VcW, {
+                        value: E,
+                        onChange: T,
+                        renderOptionPrefix: v,
+                        options: g,
+                        popoutWidth: 280,
+                        isDisabled: n,
+                    }),
+                }),
+                (0, r.jsx)(c.oil, {
+                    label: d.intl.string(d.t["64bX0N"]),
+                    error: a,
+                    leading: null == A ? void 0 : A.code,
+                    type: "tel",
+                    onChange: S,
+                    autoFocus: !0,
+                    inputRef: h,
+                    disabled: n,
+                    value: y,
+                }),
+            ],
+        }),
+    });
+};
