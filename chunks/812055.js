@@ -76,6 +76,7 @@ function T(e) {
                       title: g.intl.string(o),
                       body: g.intl.string(l),
                       caretConfig: { align: "start" },
+                      gradientColor: "purple",
                       actions: [
                           {
                               text: g.intl.string(g.t.fwPura),
