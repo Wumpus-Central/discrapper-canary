@@ -6,8 +6,8 @@ var r = n(951288),
     o = n(692547),
     s = n(481060),
     c = n(388032),
-    u = n(948790),
-    d = n(334405);
+    u = n(103198),
+    d = n(515527);
 function p(e) {
     let { label: t, icon: n, isSelected: l = !1, setStatus: p, clearStatus: h } = e,
         [f, m] = i.useState(!1),
@@ -28,8 +28,8 @@ function p(e) {
         children: [
             n,
             (0, r.jsx)(s.Text, {
-                color: g ? "text-danger" : "text-secondary",
-                variant: "text-md/medium",
+                color: g ? "text-danger" : f || l ? "text-primary" : "text-secondary",
+                variant: "text-sm/medium",
                 className: u.itemText,
                 children: b,
             }),
