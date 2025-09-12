@@ -87,60 +87,62 @@ function y(e) {
             returnRef: y,
             role: O = "dialog",
             "aria-label": v,
-            onClose: I,
-            contentOutsideContainer: T,
-            trackingProps: S,
-            children: A,
+            dismissable: I = !0,
+            onClose: T,
+            contentOutsideContainer: S,
+            trackingProps: A,
+            children: C,
         } = e,
-        C = i.useId(),
-        N = i.useMemo(
+        N = i.useId(),
+        R = i.useMemo(
             () => ({
-                id: C,
-                headingId: "heading-".concat(C),
-                onClose: I,
+                id: N,
+                headingId: "heading-".concat(N),
+                onClose: T,
+                dismissable: I,
             }),
-            [C, I],
+            [I, N, T],
         ),
-        R = 0 === n || 1 === n,
-        { reducedMotion: P } = i.useContext(c.Sfi),
-        w = R || P.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
-        D = (0, u.q)(
+        P = 0 === n || 1 === n,
+        { reducedMotion: w } = i.useContext(c.Sfi),
+        D = P || w.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
+        x = (0, u.q)(
             {
-                opacity: +!!R,
-                transform: w,
-                config: R ? _.jF : _.W$,
-                delay: 64 * !!R,
+                opacity: +!!P,
+                transform: D,
+                config: P ? _.jF : _.W$,
+                delay: 64 * !!P,
             },
             "animate-always",
         );
     return (0, r.jsx)(f.t.Provider, {
-        value: N,
+        value: R,
         children: (0, r.jsx)(
             d.V,
             E(
                 m(
                     {
-                        id: C,
+                        id: N,
                         role: O,
                         "aria-label": v,
-                        "aria-labelledby": null != v ? void 0 : N.headingId,
+                        "aria-labelledby": null != v ? void 0 : R.headingId,
                         returnRef: y,
                     },
-                    S,
+                    A,
                 ),
                 {
-                    impressionType: null != (t = null == S ? void 0 : S.impressionType) ? t : l.ImpressionTypes.MODAL,
+                    impressionType: null != (t = null == A ? void 0 : A.impressionType) ? t : l.ImpressionTypes.MODAL,
                     children: (0, r.jsx)(c.y5t, {
                         forceLevel: 1,
                         children: (0, r.jsxs)("div", {
                             className: o()(p.outerContainer, { [p.fullScreenOnMobile]: b }),
                             children: [
-                                T,
+                                S,
                                 (0, r.jsx)(s.animated.div, {
                                     "data-mana-component": "modal",
                                     className: o()(p.container, p["size-".concat(h)], p["padding-size-".concat(g)]),
-                                    style: D,
-                                    children: A,
+                                    style: x,
+                                    children: C,
                                 }),
                             ],
                         }),

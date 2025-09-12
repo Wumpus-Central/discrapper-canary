@@ -2,7 +2,7 @@ n.d(t, {
     $s: () => C,
     Ay: () => w,
     DE: () => D,
-    Fv: () => S,
+    Fv: () => T,
     Gw: () => E,
     JQ: () => A,
     Jw: () => R,
@@ -13,7 +13,7 @@ n.d(t, {
     f9: () => N,
     h7: () => v,
     nf: () => x,
-    o: () => T,
+    o: () => S,
     pT: () => P,
     s9: () => y,
 }),
@@ -134,7 +134,7 @@ async function O(e) {
         l = await e();
     return (
         clearTimeout(s),
-        o ? x(a, n) && T(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n),
+        o ? x(a, n) && S(a, l, r.onCloseRequest, r.onCloseCallback, n) : v(l, _(d({}, r), { modalKey: a }), n),
         a
     );
 }
@@ -143,15 +143,16 @@ function v(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E(),
         {
             modalKey: r,
-            instant: a,
-            Layer: s,
-            onCloseRequest: l,
-            onCloseCallback: c,
-            backdropStyle: u,
-            stackingBehavior: f,
-            stackNextByDefault: p,
+            dismissable: a,
+            instant: s,
+            Layer: l,
+            onCloseRequest: c,
+            onCloseCallback: u,
+            backdropStyle: f,
+            stackingBehavior: p,
+            stackNextByDefault: h,
         } = t,
-        h = null != r ? r : i()();
+        m = null != r ? r : i()();
     return (
         (0, o.j)(() => {
             y.setState((t) => {
@@ -160,11 +161,11 @@ function v(e) {
                     void 0 !== r &&
                     r.some((e) => {
                         let { key: t } = e;
-                        return t === h;
+                        return t === m;
                     })
                 )
                     return t;
-                let i = f;
+                let i = p;
                 if (null == i) {
                     var o;
                     i = (null == (o = r.at(-1)) ? void 0 : o.stackNextByDefault) === !0 ? "stack" : "replace";
@@ -173,21 +174,22 @@ function v(e) {
                     [n]: [
                         ...r,
                         {
-                            key: h,
-                            Layer: s,
+                            key: m,
+                            dismissable: a,
+                            Layer: l,
                             render: e,
-                            onCloseRequest: null != l ? l : () => I(h, n),
-                            onCloseCallback: c,
-                            instant: a,
-                            backdropStyle: u,
+                            onCloseRequest: null != c ? c : () => I(m, n),
+                            onCloseCallback: u,
+                            instant: s,
+                            backdropStyle: f,
                             stackingBehavior: i,
-                            stackNextByDefault: p,
+                            stackNextByDefault: h,
                         },
                     ],
                 });
             });
         }),
-        h
+        m
     );
 }
 function I(e) {
@@ -217,7 +219,7 @@ function I(e) {
         null != r
     );
 }
-function S(e) {
+function T(e) {
     let t = y.getState(),
         n = g
             .map((e) => {
@@ -258,7 +260,7 @@ function S(e) {
             null == e || null == (t = e.onCloseCallback) || t.call(e);
         }));
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : E();
     (0, o.j)(() => {
         y.setState((a) =>

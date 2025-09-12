@@ -46,11 +46,13 @@ function m(e) {
 }
 function g(e) {
     let { shouldColorMix: t = !1 } = e,
-        { onClose: n } = (0, _.v)();
-    return (0, r.jsx)(f.PZ7, {
-        onClick: n,
-        variant: t ? "color-mix" : void 0,
-    });
+        { dismissable: n, onClose: i } = (0, _.v)();
+    return !1 === n
+        ? null
+        : (0, r.jsx)(f.PZ7, {
+              onClick: i,
+              variant: t ? "color-mix" : void 0,
+          });
 }
 function E(e) {
     let { leading: t, trailing: n, hasGradient: i, children: a } = e;

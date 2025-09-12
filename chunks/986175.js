@@ -1,12 +1,12 @@
 n.d(t, { I: () => g });
 var r = n(951288),
     i = n(647438),
-    a = n(836459),
+    a = n(164617),
     o = n(481060),
     s = n(667202),
     l = n(82659),
     c = n(177475),
-    u = n(691739);
+    u = n(935692);
 function d(e, t, n) {
     return (
         t in e
@@ -102,62 +102,66 @@ let g = {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
-                                (0, o.h7j)((e) =>
-                                    (0, r.jsx)(
-                                        l.Modal,
-                                        p(f({}, i, e), {
-                                            input: n
-                                                ? (0, r.jsx)(o.E1j, {
-                                                      placeholder: "Search...",
-                                                      onChange: () => {},
-                                                      query: "",
-                                                  })
-                                                : void 0,
-                                            preview: t
-                                                ? (0, r.jsxs)(o.Kqy, {
-                                                      gap: 8,
-                                                      children: [
-                                                          (0, r.jsx)(o.Text, {
-                                                              variant: "text-lg/semibold",
-                                                              children: "Preview Content",
-                                                          }),
-                                                          (0, r.jsx)(o.Text, {
-                                                              variant: "text-md/normal",
-                                                              color: "text-secondary",
-                                                              children:
-                                                                  "This is preview content that appears in the modal footer.",
-                                                          }),
-                                                      ],
-                                                  })
-                                                : void 0,
-                                            actions: [
-                                                {
-                                                    variant: "secondary",
-                                                    text: "Cancel",
-                                                    onClick: e.onClose,
-                                                },
-                                                {
-                                                    variant: "primary",
-                                                    text: "Submit",
-                                                    onClick: e.onClose,
-                                                },
-                                            ],
-                                            children: (0, r.jsxs)(o.Kqy, {
-                                                gap: 16,
-                                                children: [
-                                                    (0, r.jsx)(o.oil, {
-                                                        label: "Example Input",
-                                                        placeholder: "Enter some text...",
-                                                    }),
-                                                    (0, r.jsx)(o.Text, {
-                                                        variant: "text-md/normal",
-                                                        children:
-                                                            "This is the main content area of the modal. You can place any content here.",
-                                                    }),
+                                (0, o.h7j)(
+                                    (e) =>
+                                        (0, r.jsx)(
+                                            l.Modal,
+                                            p(f({}, e, i), {
+                                                title: i.title,
+                                                subtitle: i.subtitle,
+                                                input: n
+                                                    ? (0, r.jsx)(o.E1j, {
+                                                          placeholder: "Search...",
+                                                          onChange: () => {},
+                                                          query: "",
+                                                      })
+                                                    : void 0,
+                                                preview: t
+                                                    ? (0, r.jsxs)(o.Kqy, {
+                                                          gap: 8,
+                                                          children: [
+                                                              (0, r.jsx)(o.Text, {
+                                                                  variant: "text-lg/semibold",
+                                                                  children: "Preview Content",
+                                                              }),
+                                                              (0, r.jsx)(o.Text, {
+                                                                  variant: "text-md/normal",
+                                                                  color: "text-secondary",
+                                                                  children:
+                                                                      "This is preview content that appears in the modal footer.",
+                                                              }),
+                                                          ],
+                                                      })
+                                                    : void 0,
+                                                actions: [
+                                                    {
+                                                        variant: "secondary",
+                                                        text: "Cancel",
+                                                        onClick: e.onClose,
+                                                    },
+                                                    {
+                                                        variant: "primary",
+                                                        text: "Submit",
+                                                        onClick: e.onClose,
+                                                    },
                                                 ],
+                                                children: (0, r.jsxs)(o.Kqy, {
+                                                    gap: 16,
+                                                    children: [
+                                                        (0, r.jsx)(o.oil, {
+                                                            label: "Example Input",
+                                                            placeholder: "Enter some text...",
+                                                        }),
+                                                        (0, r.jsx)(o.Text, {
+                                                            variant: "text-md/normal",
+                                                            children:
+                                                                "This is the main content area of the modal. You can place any content here.",
+                                                        }),
+                                                    ],
+                                                }),
                                             }),
-                                        }),
-                                    ),
+                                        ),
+                                    { dismissable: i.dismissable },
                                 ),
                         }),
                     ],
@@ -198,6 +202,11 @@ let g = {
                     label: "Show Preview",
                     type: "boolean",
                     defaultValue: !1,
+                },
+                dismissable: {
+                    label: "Dismissable",
+                    type: "boolean",
+                    defaultValue: !0,
                 },
             },
         },
@@ -255,33 +264,37 @@ let g = {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
-                                (0, o.h7j)((e) =>
-                                    (0, r.jsx)(
-                                        s.I,
-                                        p(f({}, l, e), {
-                                            graphic: d,
-                                            actions: [
-                                                {
-                                                    variant: "secondary",
-                                                    text: "Cancel",
-                                                    onClick: e.onClose,
-                                                },
-                                                {
-                                                    variant: "primary",
-                                                    text: "Submit",
-                                                    onClick: e.onClose,
-                                                },
-                                            ],
-                                            children: (0, r.jsx)(o.Kqy, {
-                                                gap: 16,
-                                                children: (0, r.jsx)(o.Text, {
-                                                    variant: "text-md/normal",
-                                                    children:
-                                                        "This is an expressive modal with a gradient background and optional badge.",
+                                (0, o.h7j)(
+                                    (e) =>
+                                        (0, r.jsx)(
+                                            s.I,
+                                            p(f({}, e, l), {
+                                                title: l.title,
+                                                subtitle: l.subtitle,
+                                                graphic: d,
+                                                actions: [
+                                                    {
+                                                        variant: "secondary",
+                                                        text: "Cancel",
+                                                        onClick: e.onClose,
+                                                    },
+                                                    {
+                                                        variant: "primary",
+                                                        text: "Submit",
+                                                        onClick: e.onClose,
+                                                    },
+                                                ],
+                                                children: (0, r.jsx)(o.Kqy, {
+                                                    gap: 16,
+                                                    children: (0, r.jsx)(o.Text, {
+                                                        variant: "text-md/normal",
+                                                        children:
+                                                            "This is an expressive modal with a gradient background and optional badge.",
+                                                    }),
                                                 }),
                                             }),
-                                        }),
-                                    ),
+                                        ),
+                                    { dismissable: l.dismissable },
                                 ),
                         }),
                     ],
@@ -366,6 +379,11 @@ let g = {
                             value: "early_access",
                         },
                     ],
+                },
+                dismissable: {
+                    label: "Dismissable",
+                    type: "boolean",
+                    defaultValue: !0,
                 },
             },
         },

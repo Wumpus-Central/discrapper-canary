@@ -11,6 +11,7 @@ function a() {
     return e;
 }
 let o = r.createContext({
+    dismissable: !0,
     onClose: i.dG4,
     id: "modal-id",
     headingId: "modal-heading-id",

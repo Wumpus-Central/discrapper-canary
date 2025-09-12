@@ -78,15 +78,16 @@ function I(e, t) {
 let T = [_.ZP, p.ZP];
 class S extends i.PureComponent {
     render() {
-        let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
-            a = i ? g.Dv.ENTERED : this.state.transitionState;
+        let { render: e, LayerComponent: t, isTopModal: n, instant: i, dismissable: a } = this.props,
+            s = e({
+                transitionState: i ? g.Dv.ENTERED : this.state.transitionState,
+                onClose: this.close,
+                dismissable: a,
+            });
         return (0, r.jsx)(t, {
             children: (0, r.jsx)("div", {
                 className: o()(b.layer, !n && b.inactive),
-                children: e({
-                    transitionState: a,
-                    onClose: this.close,
-                }),
+                children: s,
             }),
         });
     }
@@ -164,7 +165,7 @@ function R() {
         if (!o) return;
         let e = () => {
             let e = a.current;
-            null != e && null != e.onCloseRequest && e.onCloseRequest();
+            null != e && null != e.onCloseRequest && !1 !== e.dismissable && e.onCloseRequest();
         };
         return (
             h.S.subscribe(E.CkL.MODAL_CLOSE, e),
@@ -174,7 +175,8 @@ function R() {
         );
     }, [o]);
     let s = i.useCallback(() => {
-            h.S.dispatch(E.CkL.MODAL_CLOSE);
+            let e = a.current;
+            (null == e ? void 0 : e.dismissable) !== !1 && h.S.dispatch(E.CkL.MODAL_CLOSE);
         }, []),
         f = i.useCallback(
             (t) => {
@@ -216,7 +218,7 @@ function R() {
                       );
             }),
             n.map((e, t) => {
-                let { key: i, Layer: a, render: o, instant: s, isVisible: l } = e;
+                let { key: i, Layer: a, render: o, instant: s, isVisible: l, dismissable: c } = e;
                 return (0, r.jsx)(
                     S,
                     {
@@ -227,6 +229,7 @@ function R() {
                         render: o,
                         closeModal: f,
                         instant: s,
+                        dismissable: c,
                     },
                     i,
                 );
