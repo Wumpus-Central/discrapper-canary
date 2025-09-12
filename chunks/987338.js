@@ -55,6 +55,7 @@ var s = (function (e) {
         (e[(e.OPEN_NITRO = 6)] = "OPEN_NITRO"),
         (e[(e.DM_GDM_LIST_RENDER = 7)] = "DM_GDM_LIST_RENDER"),
         (e[(e.CONNECTION_OPEN_MOBILE = 8)] = "CONNECTION_OPEN_MOBILE"),
+        (e[(e.QUEST_HOME_OPEN = 9)] = "QUEST_HOME_OPEN"),
         e
     );
 })({});
