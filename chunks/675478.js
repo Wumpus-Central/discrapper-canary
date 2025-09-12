@@ -1,18 +1,19 @@
 n.d(t, {
-    BU: () => j,
-    Cd: () => G,
-    DZ: () => D,
-    PS: () => L,
-    T6: () => R,
-    Z1: () => F,
-    aj: () => x,
-    bE: () => H,
+    BU: () => M,
+    Cd: () => B,
+    DZ: () => x,
+    PS: () => j,
+    T6: () => P,
+    Z1: () => V,
+    aj: () => L,
+    bE: () => W,
     fy: () => O.fy,
-    hW: () => w,
-    m9: () => B,
-    nm: () => M,
-    sr: () => V,
-    w9: () => Z,
+    hW: () => D,
+    m4: () => H,
+    m9: () => Z,
+    nm: () => k,
+    sr: () => Y,
+    w9: () => F,
 }),
     n(415506),
     n(388685),
@@ -89,24 +90,35 @@ function S(e, t) {
     }
     return n;
 }
-let A = 5000,
-    C = "UserSettingsProtoLastWriteTimes",
-    N = Date.now();
-function R() {}
+function A(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : S(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let C = 5000,
+    N = "UserSettingsProtoLastWriteTimes",
+    R = Date.now();
+function P() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
-    N = Date.now();
+    R = Date.now();
 }),
     u.Z.subscribe("CONNECTION_CLOSED", () => {
-        N = Date.now();
+        R = Date.now();
     }),
     "undefined" != typeof document &&
         (document.addEventListener("mousedown", () => {
-            N = 0;
+            R = 0;
         }),
         document.addEventListener("keydown", () => {
-            N = 0;
+            R = 0;
         }));
-class P {
+class w {
     getEditInfo() {
         return E.Z.getFullState()[this.type];
     }
@@ -188,8 +200,8 @@ class P {
     }
     saveLastSendTime() {
         var e;
-        let t = null != (e = c.K.get(C)) ? e : {};
-        (t[this.type] = Date.now()), c.K.set(C, t);
+        let t = null != (e = c.K.get(N)) ? e : {};
+        (t[this.type] = Date.now()), c.K.set(N, t);
     }
     loadIfUncached(e, t) {
         (E.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
@@ -267,7 +279,7 @@ class P {
         i()(null != e.protoToSave, "protoToSave cannot be null"),
             i()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
             i()(null == e.timeout, "timeout must not be set already");
-        let t = A + Math.floor(Math.random() * A),
+        let t = C + Math.floor(Math.random() * C),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({
             timeout: n,
@@ -346,22 +358,22 @@ class P {
             (this.logger = new d.Z(this.ProtoClass.typeName));
     }
 }
-let w = new P(l.o8, O.yP.PRELOADED_USER_SETTINGS),
-    D = new P(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    x = {
-        [O.yP.PRELOADED_USER_SETTINGS]: w,
-        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: D,
+let D = new w(l.o8, O.yP.PRELOADED_USER_SETTINGS),
+    x = new w(s.ji, O.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    L = {
+        [O.yP.PRELOADED_USER_SETTINGS]: D,
+        [O.yP.FRECENCY_AND_FAVORITES_SETTINGS]: x,
     };
-function L(e, t, n) {
-    return w.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
+function j(e, t, n) {
+    return D.updateAsync("guilds", (n) => (0, y.u0)(n, e, t), n);
 }
-function j(e, t, n, r) {
-    return L(e, (e) => (0, y.uL)(e, t, n), r);
+function M(e, t, n, r) {
+    return j(e, (e) => (0, y.uL)(e, t, n), r);
 }
-function M(e) {
+function k(e) {
     return (
-        k(e),
-        w.updateAsync(
+        U(e),
+        D.updateAsync(
             "userContent",
             (t) => {
                 if ((0, m.jl)(t.dismissedContents, e)) return !1;
@@ -371,17 +383,17 @@ function M(e) {
         )
     );
 }
-function k(e) {
-    !E.Z.hasLoaded(O.yP.PRELOADED_USER_SETTINGS) &&
-        (U(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
-}
 function U(e) {
+    !E.Z.hasLoaded(O.yP.PRELOADED_USER_SETTINGS) &&
+        (G(e) || p.default.track(v.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+}
+function G(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
 }
-async function G(e, t) {
-    return await w.updateAsync(
+async function B(e, t) {
+    return await D.updateAsync(
         "userContent",
         (n) => {
             n.recurringDismissibleContentStates[e] = T({}, n.recurringDismissibleContentStates[e], t);
@@ -389,8 +401,8 @@ async function G(e, t) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function B(e, t, n) {
-    return await L(
+async function Z(e, t, n) {
+    return await j(
         t,
         (t) => {
             t.guildDismissibleContentStates[e] = T({}, t.guildDismissibleContentStates[e], n);
@@ -398,8 +410,8 @@ async function B(e, t, n) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function Z(e) {
-    return w.updateAsync(
+function F(e) {
+    return D.updateAsync(
         "userContent",
         (t) => {
             if (!(0, m.jl)(t.dismissedContents, e)) return !1;
@@ -408,16 +420,21 @@ function Z(e) {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function F(e) {
-    return G(e, {
+function V(e) {
+    return B(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: "0",
         lastDismissedObjectId: "0",
         numTimesDismissed: 0,
     });
 }
-function V() {
-    return w.updateAsync(
+function H(e) {
+    var t;
+    let n = null == (t = E.Z.settings.userContent) ? void 0 : t.recurringDismissibleContentStates[e];
+    if (null != n) return B(e, A(T({}, n), { numTimesDismissed: 0 }));
+}
+function Y() {
+    return D.updateAsync(
         "userContent",
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
@@ -425,8 +442,8 @@ function V() {
         O.fy.INFREQUENT_USER_ACTION,
     );
 }
-function H() {
-    return w.updateAsync(
+function W() {
+    return D.updateAsync(
         "userContent",
         (e) => {
             let t = new Uint8Array();

@@ -463,6 +463,7 @@ var r = (function (e) {
                 "VIRTUAL_CURRENCY_MOBILE_ONBOARDING_ANNOUNCEMENT_MODAL"),
             (e[(e.SEPTEMBER_MARKETING_MOMENT_ANNOUNCEMENT_MODAL = 599)] =
                 "SEPTEMBER_MARKETING_MOMENT_ANNOUNCEMENT_MODAL"),
+            (e[(e.DO_NOT_DISTURB_REMINDER_POPOVER = 600)] = "DO_NOT_DISTURB_REMINDER_POPOVER"),
             e
         );
     })({}),
