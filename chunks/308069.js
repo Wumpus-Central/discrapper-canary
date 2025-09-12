@@ -103,20 +103,24 @@ let S = (0, s.animated)(p.ZP),
                 });
             }, [N, t]),
             x = A && C,
-            L = P ? 1.4 : 1,
-            j = (0, r.jsx)(l.P3F, {
+            L = P ? 32 : 24,
+            j = P ? 130 : 92,
+            k = P ? 0.72 : 1,
+            M = (0, r.jsx)(l.P3F, {
                 onClick: D,
                 className: o()(y.clickable, { [y.logo]: x }),
                 children: (0, r.jsx)(S, {
                     quest: t,
                     withGameTile: !1,
-                    logotypeClassName: o()({ [y.partnerBranding]: P }),
+                    logotypeClassName: y.partnerBranding,
                     logotypeStyle: {
+                        height: L,
+                        maxWidth: j,
                         transform: (0, s.to)(
                             [
                                 n.to({
                                     range: [0, 1],
-                                    output: [L, 1],
+                                    output: [1, k],
                                 }),
                             ],
                             (e) => "scale(".concat(e, ")"),
@@ -151,7 +155,7 @@ let S = (0, s.animated)(p.ZP),
                     quest: t,
                     expansionSpring: n,
                     isFullyExpanded: x,
-                    partnerBranding: j,
+                    partnerBranding: M,
                     useReducedMotion: I,
                 }),
                 (0, r.jsxs)(s.animated.div, {
