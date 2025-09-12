@@ -564,6 +564,7 @@ let i = {
             "VOICE_STATE_UPDATES",
             "EMBEDDED_ACTIVITY_UPDATE_V2",
             "QUESTS_PREVIEW_UPDATE_SUCCESS",
+            "QUEST_APPLICATION_START_TIMER",
         ],
         inlineRequire: () => n(427081).Z,
         neverLoadBeforeConnectionOpen: !0,
