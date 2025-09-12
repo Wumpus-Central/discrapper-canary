@@ -23,9 +23,9 @@ var r = n(951288),
     T = n(37113),
     S = n(526761),
     A = n(388032),
-    C = n(298291),
-    N = n(622025),
-    R = n(10198);
+    C = n(556865),
+    N = n(749799),
+    R = n(197571);
 function P(e, t, n) {
     return (
         t in e
@@ -89,8 +89,8 @@ function L() {
         } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
         L = (0, s.e7)([g.Z], () => g.Z.getHardwareClassification()),
         j = (0, s.e7)([h.ZP], () => h.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        k = g.Z.isDecoupledGameClippingEnabled(),
-        M = (0, b.Z)(p.Z),
+        M = g.Z.isDecoupledGameClippingEnabled(),
+        k = (0, b.Z)(p.Z),
         { showClipsHeaderEntrypoint: U } = m.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
@@ -205,8 +205,8 @@ function L() {
                         }),
                 ],
             }),
-            k &&
-                M &&
+            M &&
+                k &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.$i$, {}),

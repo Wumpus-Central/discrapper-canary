@@ -32,16 +32,16 @@ var r = n(951288),
     x = n(375954),
     L = n(496675),
     j = n(699516),
-    k = n(594174),
-    M = n(768581),
+    M = n(594174),
+    k = n(768581),
     U = n(176354),
     G = n(5192),
     B = n(709054),
     Z = n(91047),
     F = n(981631),
     V = n(388032),
-    H = n(745581),
-    Y = n(10198);
+    H = n(575890),
+    Y = n(197571);
 function W(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ function et(e, t, n, i) {
     let a =
         null == e.id
             ? U.ZP.getURL(e.name)
-            : M.ZP.getEmojiURL({
+            : k.ZP.getEmojiURL({
                   id: e.id,
                   animated: e.animated,
                   size: t,
@@ -247,7 +247,7 @@ function ei(e) {
             disableManage: c = !1,
         } = e,
         d = (0, u.e7)([R.default], () => R.default.getId()),
-        _ = (0, u.e7)([k.default], () => k.default.getUser(n.id), [n]),
+        _ = (0, u.e7)([M.default], () => M.default.getUser(n.id), [n]),
         m = (0, C.$R)(a),
         E = (0, u.e7)([L.Z], () => L.Z.can(F.Plq.MANAGE_MESSAGES, a) && m) || d === n.id,
         b = (0, u.e7)([w.ZP, P.Z, j.Z], () => G.ZP.getName(o, a.id, n));

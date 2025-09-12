@@ -23,10 +23,10 @@ var r = n(951288),
     T = n(210887),
     S = n(981631),
     A = n(388032),
-    C = n(313911),
-    N = n(285236),
-    R = n(465106),
-    P = n(10198);
+    C = n(740508),
+    N = n(315091),
+    R = n(149715),
+    P = n(197571);
 function w(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ function L(e, t) {
     );
 }
 let j = s.ZP.connectStores([T.Z], () => ({ theme: T.Z.theme }))(u.ubH),
-    k = (0, I.isWindows)(),
-    M = 18,
+    M = (0, I.isWindows)(),
+    k = 18,
     U = "https://www.igdb.com/about";
 function G(e) {
     let { onClose: t } = e,
@@ -241,7 +241,7 @@ function B(e) {
                                       D(
                                           {
                                               className: C.gameVerifiedIcon,
-                                              size: M,
+                                              size: k,
                                               color: l.Z.unsafe_rawColors.BRAND_500.css,
                                           },
                                           e,
@@ -249,8 +249,8 @@ function B(e) {
                                       {
                                           children: (0, r.jsx)(u.kmB, {
                                               size: "custom",
-                                              width: M,
-                                              height: M,
+                                              width: k,
+                                              height: k,
                                               color: l.Z.unsafe_rawColors.WHITE_500.css,
                                           }),
                                       },
@@ -286,7 +286,7 @@ function B(e) {
         );
     }
     function X() {
-        if (!k || null != v) return null;
+        if (!M || null != v) return null;
         let { overlay: e, overlayWarn: t } = I,
             n = e
                 ? (0, r.jsx)(u.pzj, {

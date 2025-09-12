@@ -13,7 +13,7 @@ var r = n(951288),
     p = n(981631),
     h = n(217702),
     m = n(388032),
-    g = n(609966),
+    g = n(12464),
     E = n(167969),
     b = n(557256);
 function y(e, t, n) {
@@ -109,8 +109,8 @@ let A = i.forwardRef((e, t) => {
             limitResponsiveWidth: x = !0,
             accessory: L,
             zoomable: j = !0,
-            original: k,
-            children: M = (e) => {
+            original: M,
+            children: k = (e) => {
                 let { src: t, size: n, alt: i, className: a, mediaLayoutType: o } = e;
                 return (0, r.jsx)("img", {
                     className: null != a ? a : void 0,
@@ -166,7 +166,7 @@ let A = i.forwardRef((e, t) => {
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     "" !== f && c !== p.zo9.ERROR
-        ? (n = M({
+        ? (n = k({
               src: f,
               size: K,
               alt: b,
@@ -215,13 +215,13 @@ let A = i.forwardRef((e, t) => {
                     ),
                     {
                         children: [
-                            null != k &&
+                            null != M &&
                                 (0, r.jsx)("a", {
                                     tabIndex: -1,
                                     onClick: G,
                                     "aria-hidden": !0,
                                     className: g.originalLink,
-                                    href: k,
+                                    href: M,
                                     ref: Y,
                                     "data-role": "img",
                                     "data-safe-src": null != Z ? Z : f,

@@ -1,1 +1,17 @@
-e.exports = { canvas: "canvas__6c1c8" };
+t(864733)(r, "__esModule", { value: !0 }),
+    (r.default = void 0),
+    (r.default = {
+        abstract: !1,
+        accessibleNameRequired: !1,
+        baseConcepts: [],
+        childrenPresentational: !1,
+        nameFrom: ["prohibited"],
+        prohibitedProps: ["aria-label", "aria-labelledby"],
+        props: {},
+        relatedConcepts: [],
+        requireContextRole: [],
+        requiredContextRole: [],
+        requiredOwnedElements: [],
+        requiredProps: {},
+        superClass: [["roletype", "structure", "section"]],
+    });

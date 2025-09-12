@@ -1,6 +1,6 @@
 n.d(t, {
     Qt: () => x,
-    ZP: () => M,
+    ZP: () => k,
 }),
     n(953529);
 var r = n(951288),
@@ -30,7 +30,7 @@ var r = n(951288),
     C = n(139712),
     N = n(765305),
     R = n(388032),
-    P = n(98435);
+    P = n(182279);
 let w = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
@@ -132,7 +132,7 @@ let w = (e, t) => (n) => {
             ],
         });
     }),
-    k = i.memo(function (e) {
+    M = i.memo(function (e) {
         let {
                 guildId: t,
                 guildScheduledEventId: n,
@@ -188,7 +188,7 @@ let w = (e, t) => (n) => {
                   variant: "active",
               });
     }),
-    M = i.memo(function (e) {
+    k = i.memo(function (e) {
         var t;
         let {
                 guildScheduledEvent: n,
@@ -246,7 +246,7 @@ let w = (e, t) => (n) => {
                                 guildScheduledEvent: n,
                                 isMember: c,
                             }),
-                            (0, r.jsx)(k, {
+                            (0, r.jsx)(M, {
                                 isActive: A,
                                 isEnded: C,
                                 isMember: c,

@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(911560),
     L = n(488131),
     j = n(814820),
-    k = n(314897),
-    M = n(523746),
+    M = n(314897),
+    k = n(523746),
     U = n(592125),
     G = n(430824),
     B = n(496675),
@@ -138,9 +138,9 @@ function eL(e) {
 function ej(e) {
     let { message: t, compact: n, channel: o } = e,
         { id: s, author: l } = t,
-        u = k.default.getId(),
+        u = M.default.getId(),
         d = t.getChannelId(),
-        f = (0, a.e7)([M.Z], () => M.Z.isCallActive(d, s), [d, s]),
+        f = (0, a.e7)([k.Z], () => k.Z.isCallActive(d, s), [d, s]),
         _ = (0, a.e7)([H.Z], () => H.Z.getVoiceState(eC.ME, u)),
         p = !f && null != t.call && !t.call.participants.includes(u),
         h = f && (null == _ || _.channelId !== d),
@@ -161,7 +161,7 @@ function ej(e) {
         onClickJoinCall: m,
     });
 }
-function ek(e) {
+function eM(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -178,7 +178,7 @@ function ek(e) {
         isForumPost: i.isForumPost(),
     });
 }
-function eM(e) {
+function ek(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -275,7 +275,7 @@ function eB(e) {
         ),
         d = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("91315"), n.e("91792")]).then(n.bind(n, 223901));
+                let { default: e } = await Promise.all([n.e("91315"), n.e("219")]).then(n.bind(n, 223901));
                 return (t) => (0, r.jsx)(e, ew({ channel: a }, t));
             });
         }, [a]),
@@ -285,7 +285,7 @@ function eB(e) {
                 let a = U.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                 null != a &&
                     (0, s.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("90508"), n.e("99534"), n.e("15628")]).then(
+                        let { default: e } = await Promise.all([n.e("90508"), n.e("99534"), n.e("71350")]).then(
                             n.bind(n, 422200),
                         );
                         return (t) => (0, r.jsx)(e, ex(ew({}, t), { channel: a }));
@@ -725,8 +725,8 @@ let tn = Object.freeze({
     [eC.uaV.RECIPIENT_ADD]: eG,
     [eC.uaV.RECIPIENT_REMOVE]: eZ,
     [eC.uaV.CALL]: ej,
-    [eC.uaV.CHANNEL_NAME_CHANGE]: ek,
-    [eC.uaV.CHANNEL_ICON_CHANGE]: eM,
+    [eC.uaV.CHANNEL_NAME_CHANGE]: eM,
+    [eC.uaV.CHANNEL_ICON_CHANGE]: ek,
     [eC.uaV.CHANNEL_PINNED_MESSAGE]: eU,
     [eC.uaV.USER_JOIN]: eF,
     [eC.uaV.GUILD_BOOST]: eV,

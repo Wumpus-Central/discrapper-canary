@@ -29,10 +29,10 @@ var r = n(951288),
     A = n(895328),
     C = n(292352),
     N = n(981631),
-    R = n(412297),
+    R = n(345909),
     P = n(388032),
-    w = n(742164),
-    D = n(152269);
+    w = n(37742),
+    D = n(519279);
 function x(e, t, n) {
     return (
         t in e
@@ -63,7 +63,7 @@ function L(e) {
     return e;
 }
 let j = 65;
-function k() {
+function M() {
     let e = i.useCallback(() => {
         (0, l.ZDy)(async () => {
             let { default: e } = await n.e("66462").then(n.bind(n, 756226));
@@ -82,7 +82,7 @@ function k() {
         }),
     });
 }
-function M(e) {
+function k(e) {
     let { displayType: t } = e,
         n = (0, _.PO)("family_center_activity_card"),
         a = i.useCallback(() => {
@@ -293,7 +293,7 @@ let U = () => {
             children: [
                 (0, r.jsxs)("div", {
                     className: w.connectedCounter,
-                    children: [(0, r.jsx)(U, {}), (0, r.jsx)(k, {})],
+                    children: [(0, r.jsx)(U, {}), (0, r.jsx)(M, {})],
                 }),
                 (0, r.jsxs)("div", {
                     className: D.box,
@@ -324,7 +324,7 @@ let U = () => {
                                     children: a
                                         ? i.map((e) => {
                                               let [t] = e;
-                                              return (0, r.jsx)(M, { displayType: t }, "".concat(t, "-list"));
+                                              return (0, r.jsx)(k, { displayType: t }, "".concat(t, "-list"));
                                           })
                                         : (0, r.jsx)(A.Z, {
                                               className: w.emptyActivity,

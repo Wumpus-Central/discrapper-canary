@@ -7,10 +7,10 @@ var o = n(120356),
     i = n(481060),
     s = n(7284),
     c = n(660662),
-    d = n(62222),
+    d = n(693450),
     u = n(388032),
-    p = n(77426),
-    f = n(355654);
+    p = n(959389),
+    f = n(204469);
 function m(e) {
     let { selectedFontId: t, setSelectedFontId: n, className: o } = e;
     return (0, r.jsxs)("div", {

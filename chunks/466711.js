@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(981631),
     T = n(921944),
     S = n(388032),
-    A = n(276088),
-    C = n(744114);
+    A = n(30989),
+    C = n(564355);
 function N(e, t, n) {
     return (
         t in e
@@ -151,11 +151,11 @@ function j(e) {
         R = null != N ? b.default.age(N.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: w } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         j = null != n.firstTimeNotice && !s && C && R >= L,
-        [k, M] = (0, f.XR)(
+        [M, k] = (0, f.XR)(
             j ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
-        U = null != k,
+        U = null != M,
         G = v || U,
         B = (0, y.Ft)(l),
         Z = (0, p.IH)();
@@ -175,7 +175,7 @@ function j(e) {
             });
         },
         V = () => {
-            S(!1), M(T.L.TAKE_ACTION), F();
+            S(!1), k(T.L.TAKE_ACTION), F();
         },
         H =
             void 0 !== P
@@ -207,11 +207,11 @@ function j(e) {
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => S(!1),
                       onCheckItOutClick: F,
-                      markAsDismissed: M,
+                      markAsDismissed: k,
                       config: n.firstTimeNotice,
                       children: H,
                   })
                 : H,
     });
 }
-let k = i.memo(j);
+let M = i.memo(j);

@@ -22,7 +22,7 @@ var r = n(951288),
     I = n(46140),
     T = n(231338),
     S = n(388032),
-    A = n(74576);
+    A = n(310696);
 function C(e, t, n) {
     return (
         t in e
@@ -87,8 +87,8 @@ let w = (0, s.animated)(c.CJ0),
                 isAnimating: x,
                 isExpanded: L,
                 isInteracting: j,
-                contentPosition: k,
-                toggleExpanded: M,
+                contentPosition: M,
+                toggleExpanded: k,
                 sourceQuestContent: U,
             } = e,
             { ref: G, height: B } = (0, u.ZP)(),
@@ -110,12 +110,12 @@ let w = (0, s.animated)(c.CJ0),
             et = (e) => {
                 e.stopPropagation(),
                     e.currentTarget.blur(),
-                    M(),
+                    k(),
                     Q({
                         questId: a.id,
                         questContent: C,
                         questContentCTA: L ? _.jZ.COLLAPSE : _.jZ.EXPAND,
-                        questContentPosition: k,
+                        questContentPosition: M,
                         sourceQuestContent: U,
                     });
             },
@@ -296,7 +296,7 @@ let w = (0, s.animated)(c.CJ0),
                                 (0, r.jsx)(O.r, {
                                     questContent: C,
                                     quest: a,
-                                    questContentPosition: k,
+                                    questContentPosition: M,
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: K,
                                     showShareLink: !n && z,

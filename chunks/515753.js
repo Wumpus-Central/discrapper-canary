@@ -38,8 +38,8 @@ var r = n(951288),
     x = n(892567),
     L = n(853856),
     j = n(93687),
-    k = n(489618),
-    M = n(785232),
+    M = n(489618),
+    k = n(785232),
     U = n(172751),
     G = n(850020),
     B = n(379839),
@@ -58,7 +58,7 @@ var r = n(951288),
     $ = n(998502),
     ee = n(981631),
     et = n(388032),
-    en = n(551139);
+    en = n(800525);
 function er(e, t, n) {
     return (
         t in e
@@ -323,9 +323,9 @@ function eg(e) {
         ex = eC && ew,
         eL = (eR || eD || ex) && !(s || $),
         ej = (0, p.e7)([K.ZP], () => K.ZP.getMentionCount(t.id) > 0),
-        ek = (0, N.ZP)(t),
-        eM = (0, p.e7)([L.Z], () => L.Z.isFavorite(t.id)),
-        { dotsInsteadOfCloseButton: eU, rearrangeContextMenu: eG } = k.Z.useExperiment(
+        eM = (0, N.ZP)(t),
+        ek = (0, p.e7)([L.Z], () => L.Z.isFavorite(t.id)),
+        { dotsInsteadOfCloseButton: eU, rearrangeContextMenu: eG } = M.Z.useExperiment(
             { location: "private_channel" },
             { autoTrackExposure: !0 },
         ),
@@ -396,7 +396,7 @@ function eg(e) {
                                         n.e("90508"),
                                         n.e("98783"),
                                         n.e("56826"),
-                                        n.e("43812"),
+                                        n.e("8074"),
                                     ]).then(n.bind(n, 131404));
                               return (n) =>
                                   (0, r.jsx)(
@@ -416,11 +416,11 @@ function eg(e) {
         },
         eQ = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let i = et.intl.formatToPlainString(et.t.hJ5Ap6, { name: ek }),
-                a = et.intl.format(et.t.SSIVOj, { name: ek });
+            let i = et.intl.formatToPlainString(et.t.hJ5Ap6, { name: eM }),
+                a = et.intl.format(et.t.SSIVOj, { name: eM });
             t.isManaged() &&
-                ((i = et.intl.formatToPlainString(et.t.hVGjER, { name: ek })),
-                (a = et.intl.format(et.t.IK1Qvr, { name: ek }))),
+                ((i = et.intl.formatToPlainString(et.t.hVGjER, { name: eM })),
+                (a = et.intl.format(et.t.IK1Qvr, { name: eM }))),
                 (0, h.ZDy)(async () => {
                     let { default: e } = await n.e("14604").then(n.bind(n, 960670));
                     return (t) =>
@@ -469,7 +469,7 @@ function eg(e) {
             let e = h.EFr.SIZE_32;
             if (t.isMultiUserDM())
                 if (t.recipients.length >= 2 && a && null == t.icon)
-                    return (0, r.jsx)(M.Z, {
+                    return (0, r.jsx)(k.Z, {
                         "aria-hidden": !0,
                         recipients: t.recipients,
                         size: e,
@@ -507,7 +507,7 @@ function eg(e) {
             );
         },
         e0 = (0, r.jsx)(x.Z, {
-            userName: ek,
+            userName: eM,
             displayNameStyles: null == f ? void 0 : f.displayNameStyles,
             effectDisplayType: $ || s || em ? D.F.ANIMATED : D.F.PLAIN,
             loop: $,
@@ -611,7 +611,7 @@ function eg(e) {
                             (0, r.jsxs)("div", {
                                 className: o()(en.iconsContainer, { [en.nameplated]: eZ }),
                                 children: [
-                                    eM && !em ? (0, r.jsx)(e_, {}) : null,
+                                    ek && !em ? (0, r.jsx)(e_, {}) : null,
                                     eD ? (0, r.jsx)(ep, {}) : null,
                                     ex ? (0, r.jsx)(eh, {}) : null,
                                     eU && !e4

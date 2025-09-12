@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(981631),
     x = n(674563),
     L = n(388032),
-    j = n(78642);
-function k(e, t, n) {
+    j = n(682392);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function k(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -217,7 +217,7 @@ function H(e) {
                                         (0, r.jsxs)(
                                             p.P3F,
                                             G(
-                                                M(
+                                                k(
                                                     {
                                                         innerRef: h,
                                                         className: j.alertsEnabledSubHeaderAvatarUsername,
@@ -228,7 +228,7 @@ function H(e) {
                                                     children: [
                                                         (0, r.jsx)(
                                                             "div",
-                                                            G(M({}, f), {
+                                                            G(k({}, f), {
                                                                 children: (0, r.jsx)(p.qEK, {
                                                                     src: u,
                                                                     avatarDecoration: d,

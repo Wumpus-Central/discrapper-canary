@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(9156),
     L = n(912101),
     j = n(358085),
-    k = n(709054),
-    M = n(45640),
+    M = n(709054),
+    k = n(45640),
     U = n(695346),
     G = n(675478),
     B = n(33656),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(981631),
     V = n(468788),
     H = n(388032),
-    Y = n(285746),
-    W = n(10198);
+    Y = n(728495),
+    W = n(197571);
 function K(e, t, n) {
     return (
         t in e
@@ -302,7 +302,7 @@ function $(e) {
 function ee() {
     let e = (0, c.e7)([b.Z], () => b.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
-        a = k.default.keys(e).map((t) => {
+        a = M.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -413,7 +413,7 @@ class et extends i.PureComponent {
                 focusMode: u,
             } = this.props,
             d = j.isPlatformEmbedded && (0, j.isWindows)(),
-            _ = M.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
+            _ = k.Z.getCurrentConfig({ location: "Messages" }).enabled || 0 === t ? 0 : 1,
             p = l()
                 .range(_, 11)
                 .map((e) => ({

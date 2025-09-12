@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(358085),
     b = n(288406),
     y = n(388032),
-    O = n(39162);
+    O = n(999642);
 function v(e, t, n) {
     return (
         t in e
@@ -188,8 +188,8 @@ function P(e) {
             isLargeSize: x,
             pulseItemKey: L,
             allowAnimatedEmoji: j,
-            setPulseItemKey: k,
-            messageId: M,
+            setPulseItemKey: M,
+            messageId: k,
             isBurstReaction: U,
             rowPosition: G,
             inNitroLockedSection: B,
@@ -202,7 +202,7 @@ function P(e) {
         X = (e) => {
             if ((e.stopPropagation(), O.current || v.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && k(a),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && M(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 b(t, {
                     isFinalSelection: !e.shiftKey,
@@ -250,7 +250,7 @@ function P(e) {
                             if (
                                 null != Y.current &&
                                 null != G &&
-                                null != M &&
+                                null != k &&
                                 !e.shiftKey &&
                                 null != W.name &&
                                 U &&
@@ -259,7 +259,7 @@ function P(e) {
                             ) {
                                 let e = null == W.id ? _.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();
-                                (t.x = G.x + (q + 1) * K), F(N(q, f)), (0, m.U)(M, e, W.id, t);
+                                (t.x = G.x + (q + 1) * K), F(N(q, f)), (0, m.U)(k, e, W.id, t);
                             }
                             X(e);
                         },

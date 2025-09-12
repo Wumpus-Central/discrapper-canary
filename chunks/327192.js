@@ -32,14 +32,14 @@ var r = n(951288),
     x = n(706454),
     L = n(349728),
     j = n(494620),
-    k = n(205266),
-    M = n(216153),
+    M = n(205266),
+    k = n(216153),
     U = n(981631),
     G = n(856651),
     B = n(921944),
     Z = n(388032),
-    F = n(465631),
-    V = n(10198);
+    F = n(11049),
+    V = n(197571);
 function H(e, t, n) {
     return (
         t in e
@@ -270,12 +270,12 @@ function q(e) {
             : e.type === U.ABu.XBOX
               ? (0, r.jsx)("div", {
                     className: F.upsellWrapper,
-                    children: (0, r.jsx)(M.Y, {}),
+                    children: (0, r.jsx)(k.Y, {}),
                 })
               : e.type === U.ABu.PLAYSTATION
                 ? (0, r.jsx)("div", {
                       className: F.upsellWrapper,
-                      children: (0, r.jsx)(k.t, {}),
+                      children: (0, r.jsx)(M.t, {}),
                   })
                 : null;
     }

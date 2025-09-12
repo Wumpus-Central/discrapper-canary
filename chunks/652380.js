@@ -33,7 +33,7 @@ var r = n(951288),
     R = n(749912),
     P = n(815183),
     w = n(899457),
-    D = n(99542);
+    D = n(301188);
 function x(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -86,7 +86,7 @@ function k(e, t) {
         e
     );
 }
-let M = 10,
+let k = 10,
     U = ["png", "gif", "webp"],
     G = [...U, "jpg", "jpeg"],
     B = Array.from(new Set([...G, "gif", "mp4", "webm"]));
@@ -108,17 +108,17 @@ function F(e) {
 }
 function V(e, t) {
     return (0, s.EQ)(e)
-        .with({ configVersion: 2 }, (e) => k(L({}, e), { assets: L({}, e.assets, t) }))
+        .with({ configVersion: 2 }, (e) => M(L({}, e), { assets: L({}, e.assets, t) }))
         .exhaustive();
 }
 function H(e, t, n) {
     return (0, s.EQ)(e)
         .with({ configVersion: 2 }, (e) =>
-            k(L({}, e), {
-                rewardsConfig: k(L({}, e.rewardsConfig), {
+            M(L({}, e), {
+                rewardsConfig: M(L({}, e.rewardsConfig), {
                     rewards: e.rewardsConfig.rewards.map((e, r) =>
                         r === n
-                            ? k(L({}, e), {
+                            ? M(L({}, e), {
                                   asset: t,
                                   skuId: "",
                               })
@@ -131,16 +131,16 @@ function H(e, t, n) {
 }
 function Y(e, t) {
     return (0, s.EQ)(e)
-        .with({ configVersion: 2 }, (e) => k(L({}, e), { messages: L({}, e.messages, t) }))
+        .with({ configVersion: 2 }, (e) => M(L({}, e), { messages: L({}, e.messages, t) }))
         .exhaustive();
 }
 function W(e, t, n) {
     return (0, s.EQ)(e)
         .with({ configVersion: 2 }, (e) =>
-            k(L({}, e), {
-                rewardsConfig: k(L({}, e.rewardsConfig), {
+            M(L({}, e), {
+                rewardsConfig: M(L({}, e.rewardsConfig), {
                     rewards: e.rewardsConfig.rewards.map((e, r) =>
-                        r === n ? k(L({}, e), { messages: L({}, e.messages, t) }) : e,
+                        r === n ? M(L({}, e), { messages: L({}, e.messages, t) }) : e,
                     ),
                 }),
             }),
@@ -254,7 +254,7 @@ function Q() {
     var e, t, a, s, u, d, x;
     let [j, Z] = i.useState(X),
         q = i.useCallback((e) => {
-            Z(k(L({}, e), { preview: !0 }));
+            Z(M(L({}, e), { preview: !0 }));
         }, []),
         [Q, J] = i.useState(w.a.UNENROLLED),
         [$, ee] = i.useState(!1),
@@ -265,14 +265,14 @@ function Q() {
     function es(e) {
         switch ((J(e), e)) {
             case w.a.UNENROLLED:
-                q(k(L({}, j), { userStatus: null }));
+                q(M(L({}, j), { userStatus: null }));
                 break;
             case w.a.ENROLLED:
-                q(k(L({}, j), { userStatus: K({ enrolledAt: new Date().toISOString() }) }));
+                q(M(L({}, j), { userStatus: K({ enrolledAt: new Date().toISOString() }) }));
                 break;
             case w.a.COMPLETED_25:
                 q(
-                    k(L({}, j), {
+                    M(L({}, j), {
                         userStatus: K({
                             enrolledAt: new Date().toISOString(),
                             streamProgressSeconds: 0.25 * ey,
@@ -282,7 +282,7 @@ function Q() {
                 break;
             case w.a.COMPLETED_50:
                 q(
-                    k(L({}, j), {
+                    M(L({}, j), {
                         userStatus: K({
                             enrolledAt: new Date().toISOString(),
                             streamProgressSeconds: 0.5 * ey,
@@ -292,7 +292,7 @@ function Q() {
                 break;
             case w.a.COMPLETED_75:
                 q(
-                    k(L({}, j), {
+                    M(L({}, j), {
                         userStatus: K({
                             enrolledAt: new Date().toISOString(),
                             streamProgressSeconds: 0.75 * ey,
@@ -302,7 +302,7 @@ function Q() {
                 break;
             case w.a.COMPLETED_100:
                 q(
-                    k(L({}, j), {
+                    M(L({}, j), {
                         userStatus: K({
                             completedAt: new Date().toISOString(),
                             enrolledAt: new Date().toISOString(),
@@ -313,7 +313,7 @@ function Q() {
                 break;
             case w.a.CLAIMED:
                 q(
-                    k(L({}, j), {
+                    M(L({}, j), {
                         userStatus: K({
                             claimedAt: new Date().toISOString(),
                             completedAt: new Date().toISOString(),
@@ -331,7 +331,7 @@ function Q() {
             "logotype" === e ||
             "heroVideo" === e ||
             "questBarHeroVideo" === e) &&
-            q(k(L({}, j), { config: V(j.config, { [e]: t }) }));
+            q(M(L({}, j), { config: V(j.config, { [e]: t }) }));
     }
     function ec(e, t) {
         let n = j.config.taskConfigV2.tasks,
@@ -346,16 +346,16 @@ function Q() {
                 i.videoLowRes = { url: t };
                 break;
             case "videoPlayerThumbnail":
-                i.video = k(L({}, i.video), { thumbnail: t });
+                i.video = M(L({}, i.video), { thumbnail: t });
                 break;
             default:
                 return;
         }
         q(
-            k(L({}, j), {
-                config: k(L({}, j.config), {
-                    taskConfigV2: k(L({}, j.config.taskConfigV2), {
-                        tasks: k(L({}, n), { [l.X.WATCH_VIDEO]: k(L({}, r), { assets: i }) }),
+            M(L({}, j), {
+                config: M(L({}, j.config), {
+                    taskConfigV2: M(L({}, j.config.taskConfigV2), {
+                        tasks: M(L({}, n), { [l.X.WATCH_VIDEO]: M(L({}, r), { assets: i }) }),
                     }),
                 }),
             }),
@@ -364,43 +364,43 @@ function Q() {
     function eu(e, t) {
         var n, r, i;
         q(
-            k(L({}, j), {
-                config: k(L({}, j.config), {
-                    videoMetadata: k(L({}, j.config.videoMetadata), {
+            M(L({}, j), {
+                config: M(L({}, j.config), {
+                    videoMetadata: M(L({}, j.config.videoMetadata), {
                         messages: null != (i = null == (n = j.config.videoMetadata) ? void 0 : n.messages) ? i : {},
-                        assets: k(L({}, null == (r = j.config.videoMetadata) ? void 0 : r.assets), { [e]: t }),
+                        assets: M(L({}, null == (r = j.config.videoMetadata) ? void 0 : r.assets), { [e]: t }),
                     }),
                 }),
             }),
         );
     }
     function ed(e, t, n) {
-        "asset" === e && q(k(L({}, j), { config: H(j.config, t, n) }));
+        "asset" === e && q(M(L({}, j), { config: H(j.config, t, n) }));
     }
     function ef(e, t) {
         ("questName" === e || "gameTitle" === e || "gamePublisher" === e) &&
-            q(k(L({}, j), { config: Y(j.config, { [e]: t }) }));
+            q(M(L({}, j), { config: Y(j.config, { [e]: t }) }));
     }
     function e_(e, t) {
         let n = j.config.taskConfigV2.tasks,
             r = n[l.X.WATCH_VIDEO];
         if (null == r) return;
-        let i = k(L({}, r.messages), { [e]: t });
+        let i = M(L({}, r.messages), { [e]: t });
         q(
-            k(L({}, j), {
-                config: k(L({}, j.config), {
-                    taskConfigV2: k(L({}, j.config.taskConfigV2), {
-                        tasks: k(L({}, n), { [l.X.WATCH_VIDEO]: k(L({}, r), { messages: i }) }),
+            M(L({}, j), {
+                config: M(L({}, j.config), {
+                    taskConfigV2: M(L({}, j.config.taskConfigV2), {
+                        tasks: M(L({}, n), { [l.X.WATCH_VIDEO]: M(L({}, r), { messages: i }) }),
                     }),
                 }),
             }),
         );
     }
     function ep(e, t, n) {
-        ("name" === e || "nameWithArticle" === e) && q(k(L({}, j), { config: W(j.config, { [e]: t }, n) }));
+        ("name" === e || "nameWithArticle" === e) && q(M(L({}, j), { config: W(j.config, { [e]: t }, n) }));
     }
     function eh(e, t) {
-        q(k(L({}, j), { config: k(L({}, j.config), { colors: k(L({}, j.config.colors), { [e]: t }) }) }));
+        q(M(L({}, j), { config: M(L({}, j.config), { colors: M(L({}, j.config.colors), { [e]: t }) }) }));
     }
     function em(e) {
         ee(e);
@@ -420,11 +420,11 @@ function Q() {
               });
     }
     function eb(e) {
-        q(k(L({}, j), { config: k(L({}, j.config), { taskConfigV2: e }) }));
+        q(M(L({}, j), { config: M(L({}, j.config), { taskConfigV2: e }) }));
     }
     let ey = i.useMemo(() => {
             for (let [e, t] of Object.entries(j.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
-            return M * _.Z.Seconds.MINUTE;
+            return k * _.Z.Seconds.MINUTE;
         }, [j.config.taskConfigV2.tasks]),
         eO = i.useMemo(() => l.X.WATCH_VIDEO in j.config.taskConfigV2.tasks, [j.config.taskConfigV2.tasks]);
     o()(!1 !== j.preview && null != j.preview, "Preview config must have property preview: true");
@@ -826,7 +826,7 @@ function Q() {
                                                 var n;
                                                 return (0, r.jsx)(
                                                     e,
-                                                    k(L({}, t), {
+                                                    M(L({}, t), {
                                                         openStartClockTime: performance.now(),
                                                         videoSessionId: "fake-quest-session-id",
                                                         questId: null != (n = j.id) ? n : "fake-quest-id",

@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => M,
+    G: () => k,
     Z: () => U,
 }),
     n(388685),
@@ -32,7 +32,7 @@ var r = n(951288),
     N = n(547283),
     R = n(981631),
     P = n(388032),
-    w = n(96096);
+    w = n(608848);
 function D(e, t, n) {
     return (
         t in e
@@ -85,8 +85,8 @@ function j(e, t) {
         e
     );
 }
-let k = "https://support.discord.com/hc/en-us";
-var M = (function (e) {
+let M = "https://support.discord.com/hc/en-us";
+var k = (function (e) {
     return (e[(e.LOADING = 0)] = "LOADING"), (e[(e.DONE = 1)] = "DONE"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
 function U(e) {
@@ -98,8 +98,8 @@ function U(e) {
             appId: x,
             plan: L,
             storeListing: j,
-            price: k,
-            isGuildSubscription: M,
+            price: M,
+            isGuildSubscription: k,
             subscriptionForGuild: U,
             sku: Y,
             isCancelled: W,
@@ -226,7 +226,7 @@ function U(e) {
                 children: [
                     (0, r.jsx)(B, {
                         title: P.intl.string(P.t["5D/KEB"]),
-                        content: M
+                        content: k
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsxs)("span", {
@@ -255,10 +255,10 @@ function U(e) {
                                   children: [(0, r.jsx)(l.tBG, { size: "xs" }), P.intl.string(P.t["6anEVl"])],
                               }),
                     }),
-                    null != k &&
+                    null != M &&
                         (0, r.jsx)(B, {
                             title: P.intl.string(P.t.KI7ER0),
-                            content: k,
+                            content: M,
                         }),
                     (0, r.jsx)(B, {
                         title: P.intl.string(P.t.dnUzb2),
@@ -498,7 +498,7 @@ function H(e) {
                       children: [
                           P.intl.format(P.t.IIHUUF, { subscriptionId: t.id }),
                           (0, r.jsx)("br", {}),
-                          P.intl.format(P.t.fh65ER, { helpLink: k }),
+                          P.intl.format(P.t.fh65ER, { helpLink: M }),
                       ],
                   }),
               })

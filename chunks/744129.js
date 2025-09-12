@@ -34,11 +34,11 @@ var i = n(120356),
     P = n(476442),
     w = n(474936),
     D = n(388032),
-    x = n(518520),
+    x = n(1721),
     L = n(895601),
     j = n(381126),
-    k = n(234286);
-function M(e, t, n) {
+    M = n(234286);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -156,11 +156,11 @@ function F(e) {
             wumpusPosition: T = "inCard",
             isApplicationHome: S = !1,
         } = e,
-        M = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
+        k = (0, s.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         U = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         G = (0, I.N)(),
         B = null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id,
-        Z = (null == M ? void 0 : M.hasActiveTrial) ? (null == U ? void 0 : U.premiumType) : null,
+        Z = (null == k ? void 0 : k.hasActiveTrial) ? (null == U ? void 0 : U.premiumType) : null,
         F = (0, v.Ng)(),
         V = (0, y.t7)(),
         H = null != B || null != Z ? w.C.PREMIUM_TRIAL : null != F || V ? w.C.PREMIUM_DISCOUNT : null,
@@ -180,7 +180,7 @@ function F(e) {
                         className: a()(x.smallCloud, x[T]),
                     }),
                     (0, r.jsx)("img", {
-                        src: k,
+                        src: M,
                         alt: "",
                         className: a()(x.wumpus, x[T]),
                     }),

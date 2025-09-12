@@ -25,7 +25,7 @@ var r = n(951288),
     A = n(556638),
     C = n(981631),
     N = n(388032),
-    R = n(666998);
+    R = n(80568);
 function P(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ function j(e, t) {
               : N.intl.string(N.t.msxteH)) + (null != t ? " (".concat(t, ")") : "")
     );
 }
-function k(e) {
+function M(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
         { descriptiveTextEnabled: a } = (0, b.f)({ location: "StackedActivityStatus" }),
@@ -108,7 +108,7 @@ function k(e) {
         i.length > 0 ? i.join(", ") : ""
     );
 }
-function M(e) {
+function k(e) {
     let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
         s = a - 1;
     return (0, r.jsxs)(l.xvT, {
@@ -191,7 +191,7 @@ function G(e) {
         q = F.length + (K || z ? 1 : 0),
         X = q > 1,
         Q = (null == G ? void 0 : G.state) != null && "xs" === b,
-        J = k({
+        J = M({
             streamActivity: V,
             otherActivities: F,
             voiceActivityChannel: z ? l : null,
@@ -268,7 +268,7 @@ function G(e) {
             );
         },
         et = () =>
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 textVariant: "text-".concat(b, "/medium"),
                 className: _,
                 hasCustomStatusText: W,

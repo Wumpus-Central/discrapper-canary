@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(122943),
     b = n(556638),
     y = n(981631),
-    O = n(666998);
+    O = n(80568);
 function v(e) {
     let {
         user: t,
@@ -54,7 +54,7 @@ function v(e) {
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let L = (null == t ? void 0 : t.bot) === !0,
         j = (null == x ? void 0 : x.state) != null && "xs" === S,
-        k = () => {
+        M = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
                     stream: P,
@@ -94,7 +94,7 @@ function v(e) {
                     })
                   : null;
         },
-        M = o()(O.container, {
+        k = o()(O.container, {
             [O.textXs]: "xs" === S,
             [O.textSm]: "sm" === S,
         }),
@@ -109,14 +109,14 @@ function v(e) {
                       hideTooltip: R,
                       textClassName: I,
                       iconClassName: T,
-                      tooltipClassName: M,
+                      tooltipClassName: k,
                       voiceChannel: v,
                       hangStatus: D,
                   });
     return (0, r.jsxs)("div", {
-        className: M,
+        className: k,
         children: [
-            k(),
+            M(),
             (0, r.jsx)(s.xvT, {
                 variant: "text-".concat(S, "/normal"),
                 className: o()(O.truncated, O.dot, I),

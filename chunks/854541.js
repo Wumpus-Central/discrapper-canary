@@ -20,7 +20,7 @@ var r = n(951288),
     h = n(44315),
     m = n(981631),
     g = n(388032),
-    E = n(68701);
+    E = n(701224);
 function b(e, t, n) {
     return (
         t in e
@@ -286,10 +286,10 @@ function D(e) {
             },
             [n, a],
         ),
-        k = (e) => {
+        M = (e) => {
             a((0, c._i)(e));
         },
-        M = (0, r.jsxs)(r.Fragment, {
+        k = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
@@ -297,7 +297,7 @@ function D(e) {
                         onChange: j,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
-                            return k(t);
+                            return M(t);
                         },
                         color: w.pending.hsl,
                     }),
@@ -341,7 +341,7 @@ function D(e) {
     return (0, r.jsx)(U, {
         "aria-label": g.intl.string(g.t.WTqQ5e),
         className: o()(E.customColorPicker, O),
-        children: M,
+        children: k,
     });
 }
 let x = i.memo(D);

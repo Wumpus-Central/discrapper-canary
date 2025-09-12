@@ -37,8 +37,8 @@ var r = n(951288),
     x = n(865427),
     L = n(358221),
     j = n(571250),
-    k = n(628581),
-    M = n(659580),
+    M = n(628581),
+    k = n(659580),
     U = n(855844),
     G = n(55311),
     B = n(575175),
@@ -91,8 +91,8 @@ var r = n(951288),
     ex = n(199902),
     eL = n(314897),
     ej = n(592125),
-    ek = n(831506),
-    eM = n(819640),
+    eM = n(831506),
+    ek = n(819640),
     eU = n(131951),
     eG = n(19780),
     eB = n(914010),
@@ -122,7 +122,7 @@ var r = n(951288),
     te = n(46140),
     tt = n(65154),
     tn = n(388032),
-    tr = n(490579);
+    tr = n(25874);
 function ti(e, t, n) {
     return (
         t in e
@@ -908,20 +908,20 @@ function tC() {
         T = (0, u.e7)([eH.Z], () => eH.Z.getPremiumTypeSubscription()),
         S = (0, u.e7)([eU.Z], () => eU.Z.getSpeakingWhileMuted()),
         A = (0, u.e7)([L.Z], () => L.Z.isFullscreenInContext()),
-        C = (0, u.e7)([eM.Z], () => eM.Z.hasLayers()),
+        C = (0, u.e7)([ek.Z], () => ek.Z.hasLayers()),
         P = (0, m.s9z)(m.JQI) || C || e$.s.isDisallowPopupsSet() || A,
         w = (0, el.b)(),
         j = (0, u.e7)([J.Z], () => null != J.Z.getAwaitingRemoteSessionInfo()),
-        k = (0, u.e7)([eB.Z], () => eB.Z.getGuildId()),
-        M = eJ.ZP.canUsePremiumGuildMemberProfile(t),
+        M = (0, u.e7)([eB.Z], () => eB.Z.getGuildId()),
+        k = eJ.ZP.canUsePremiumGuildMemberProfile(t),
         U = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e7.rL,
         { voiceActivityStatusEnabled: G } = (0, I.U)({ location: "Account" }),
-        [B, Z] = (0, ee.G)(null != k ? k : null),
+        [B, Z] = (0, ee.G)(null != M ? M : null),
         F = K.J.useExperiment({ location: "Account" }).enabled,
         { analyticsLocations: V } = (0, R.ZP)(N.Z.ACCOUNT),
         H = (0, ei.K)({ user: t }),
         { isQuestBarEmpty: Y, hasLoadedQuestBar: W } = (0, ed.Ws)({ location: te.dr.CONFLICT_CHECKS }),
-        q = (0, u.e7)([ef.Z, eV.default, ek.Z], () => {
+        q = (0, u.e7)([ef.Z, eV.default, eM.Z], () => {
             let e,
                 t = ef.Z.getSyncingWith(),
                 n = ef.Z.getActivity(),
@@ -931,7 +931,7 @@ function tC() {
                 null != e)
             ) {
                 var i;
-                r = l()(Array.from(null != (i = ek.Z.getParty(e)) ? i : []))
+                r = l()(Array.from(null != (i = eM.Z.getParty(e)) ? i : []))
                     .map((e) => eV.default.getUser(e))
                     .filter(eQ.lm)
                     .value();
@@ -944,7 +944,7 @@ function tC() {
             settings: [],
         };
     !P &&
-        (M && Q.settings.push(d.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
+        (k && Q.settings.push(d.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
         U && Q.avatar.push(d.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP),
         F && Q.avatar.push(d.z.DISPLAY_NAME_STYLES_COACHMARK),
         X && Q.avatar.push(d.z.WIDGETS_RTC_UPSELL_COACHMARK));
@@ -979,7 +979,7 @@ function tC() {
             isEligibleForPomelo: w,
             voiceActivityStatusEnabled: G,
             nameplate: H,
-            selectedGuildId: k,
+            selectedGuildId: M,
             isQuestBarEmpty: Y,
             hasLoadedQuestBar: W,
             isListenAlongVisible: q,
@@ -1095,7 +1095,7 @@ function tR(e) {
         G = (0, u.e7)([eG.Z], () => eG.Z.isConnected()),
         { Component: B, events: Z, play: V } = C,
         H = a || s ? m.v0G : B,
-        Y = (0, k.Z)(n, a, s, l),
+        Y = (0, M.Z)(n, a, s, l),
         K = x ? tn.intl.string(tn.t.ARRV6u) : null;
     t = O
         ? tn.intl.string(tn.t["29gnR0"])
@@ -1193,7 +1193,7 @@ function tR(e) {
                                         renderInputVolume: !0,
                                         renderSettingsButton: !0,
                                     })
-                                  : (0, r.jsx)(M.default, {
+                                  : (0, r.jsx)(k.default, {
                                         onInteraction: (0, F.u)("AudioDeviceMenu", N.Z.ACCOUNT),
                                         onClose: t,
                                         renderInputDevices: !0,

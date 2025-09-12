@@ -107,8 +107,8 @@ function R(e) {
             analyticsSourceLocation: x,
             confirmationFooter: L,
             paymentModalBanner: j,
-            isGift: k = !1,
-            giftMessage: M,
+            isGift: M = !1,
+            giftMessage: k,
             giftStyle: U,
             giftingOrigin: G,
             subscriptionTier: B,
@@ -131,7 +131,7 @@ function R(e) {
         en = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("84992"), n.e("4125")]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e("84992"), n.e("54400")]).then(n.bind(n, 7305));
             return (t) => {
                 var { onClose: n } = t,
                     a = C(t, ["onClose"]);
@@ -141,8 +141,8 @@ function R(e) {
                         loadId: Q,
                         subscriptionTier: B,
                         skuId: et,
-                        isGift: k,
-                        giftMessage: M,
+                        isGift: M,
+                        giftMessage: k,
                         giftStyle: U,
                         giftingOrigin: G,
                         giftRecipient: W,
@@ -156,7 +156,7 @@ function R(e) {
                                     null == S || S(e),
                                     e &&
                                         (null == R || R(),
-                                        (0, p.M)(k, $, t) && g.S.dispatch(O.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                        (0, p.M)(M, $, t) && g.S.dispatch(O.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                     l.Z.dispatch({
                                         type: "PREMIUM_PAYMENT_MODAL_CLOSE",
                                         didSucceed: e,
@@ -171,7 +171,7 @@ function R(e) {
                         onComplete: (e) => {
                             (X = !0),
                                 null == N || N(),
-                                (0, p.M)(k, $, (0, E.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
+                                (0, p.M)(M, $, (0, E.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0);
                         },
                         onSubscriptionConfirmation: R,
                         analyticsLocations: P,
@@ -214,7 +214,7 @@ function R(e) {
                         location: null != D ? D : w,
                         source: x,
                         subscription_type: O.NYc.PREMIUM,
-                        is_gift: k,
+                        is_gift: M,
                         sku_id: et,
                         eligible_for_trial: null != Z,
                         application_id: H,

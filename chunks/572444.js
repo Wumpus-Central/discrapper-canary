@@ -33,8 +33,8 @@ var a = n(951288),
     p = n(131951),
     x = n(246992),
     b = n(65154),
-    f = n(25016),
-    g = n(866403);
+    f = n(653301),
+    g = n(451429);
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -118,8 +118,8 @@ function _() {
         N = r.useRef(null),
         [E, T] = r.useState(0.5),
         {
-            krispModels: O,
-            krispModelOverride: S,
+            krispModels: S,
+            krispModelOverride: O,
             inputMode: P,
             echoCancellation: k,
             autoThreshold: R,
@@ -235,8 +235,8 @@ function _() {
                                         clear: () => {
                                             d.Z.setKrispModelOverride("");
                                         },
-                                        isSelected: (e) => e === S,
-                                        options: O.map((e) => ({
+                                        isSelected: (e) => e === O,
+                                        options: S.map((e) => ({
                                             label: e,
                                             value: e,
                                         })),

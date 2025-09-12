@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(539854);
+n.d(t, { Z: () => M }), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -23,7 +23,7 @@ var r = n(951288),
     T = n(981631),
     S = n(474936),
     A = n(388032),
-    C = n(79665);
+    C = n(387473);
 function N(e, t, n) {
     return (
         t in e
@@ -187,7 +187,7 @@ function L(e) {
 function j(e) {
     (0, c.ZDy)(async () => (t) => (0, r.jsx)(h.default, w(R({}, t), { guildBoostSlotId: e.id })));
 }
-let k = function (e) {
+let M = function (e) {
     let t,
         n,
         a,
@@ -201,8 +201,8 @@ let k = function (e) {
         N = p && !T,
         {
             appliedGuildBoostSlots: P,
-            unappliedGuildBoostSlots: k,
-            numActiveGuildBoostSlots: M,
+            unappliedGuildBoostSlots: M,
+            numActiveGuildBoostSlots: k,
             hasCooldownBoosts: U,
             allGuildBoostsAreOnCooldown: G,
         } = i.useMemo(() => {
@@ -228,7 +228,7 @@ let k = function (e) {
         }, [l]),
         B = null != _ ? y.ZP.getNumIncludedPremiumGuildSubscriptionSlots(_.planId) : 0,
         Z = Math.max(0, B - P.length),
-        F = M > B,
+        F = k > B,
         V = B === l.length,
         H = V ? Z : 1,
         Y = i.useMemo(() => {
@@ -246,9 +246,9 @@ let k = function (e) {
                 );
             return e;
         }, [H, v]),
-        W = i.useMemo(() => k.find((e) => e.isAvailable()), [k]);
-    if (0 === k.length) return null;
-    let K = k.length;
+        W = i.useMemo(() => M.find((e) => e.isAvailable()), [M]);
+    if (0 === M.length) return null;
+    let K = M.length;
     if (
         ((t = V
             ? A.intl.formatToPlainString(G ? A.t["3DW6DQ"] : A.t["/u15QU"], { numUnappliedGuildBoostSlots: K })
@@ -343,7 +343,7 @@ let k = function (e) {
                     (!V || U) &&
                         (0, r.jsx)("ul", {
                             className: C.unappliedBoostSlots,
-                            children: k.map((e) =>
+                            children: M.map((e) =>
                                 (0, r.jsx)(
                                     D,
                                     {

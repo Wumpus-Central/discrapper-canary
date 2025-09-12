@@ -26,7 +26,7 @@ var r = n(951288),
     C = n(981631),
     N = n(231338),
     R = n(388032),
-    P = n(923805);
+    P = n(31948);
 function w(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ function L(e, t) {
     );
 }
 let j = 250,
-    k = 24;
-function M(e, t) {
+    M = 24;
+function k(e, t) {
     switch (t.type) {
         case "MEASUREMENT_COMPLETE":
             return L(D({}, e), {
@@ -129,7 +129,7 @@ function G(e) {
         Q = i.useRef(null),
         J = i.useRef(null),
         $ = i.useRef(null),
-        [ee, et] = i.useReducer(M, U),
+        [ee, et] = i.useReducer(k, U),
         { height: en, animationPhase: er } = ee,
         ei = "awaitingInput" !== er,
         ea = "animating" === er || "done" === er,
@@ -184,7 +184,7 @@ function G(e) {
                 requestAnimationFrame(() => {
                     et({
                         type: "START_EXPAND_ANIMATION",
-                        height: e + t - k,
+                        height: e + t - M,
                     }),
                         ($.current = setTimeout(() => {
                             var e;

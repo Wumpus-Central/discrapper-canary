@@ -35,8 +35,8 @@ var r = n(951288),
     x = n(132144),
     L = n(131130),
     j = n(458725),
-    k = n(492435),
-    M = n(353926),
+    M = n(492435),
+    k = n(353926),
     U = n(506357),
     G = n(36459),
     B = n(236069),
@@ -74,7 +74,7 @@ var r = n(951288),
     eE = n(610674),
     eb = n(65154),
     ey = n(388032),
-    eO = n(522488);
+    eO = n(50953);
 function ev(e, t, n) {
     return (
         t in e
@@ -229,8 +229,8 @@ let ex = i.memo(function () {
         i.useEffect(() => {
             if (null != S && S.type === em.kVF.SURVEY && null != S.metadata) {
                 let { metadata: e } = S,
-                    t = M.Z.getUserExperimentDescriptor(e.id);
-                null != t && (0, k.W9)(e.id, t),
+                    t = k.Z.getUserExperimentDescriptor(e.id);
+                null != t && (0, M.W9)(e.id, t),
                     (async () => {
                         var e, t;
                         (null == (e = S.metadata) ? void 0 : e.id) != null &&
@@ -271,24 +271,24 @@ let ex = i.memo(function () {
             let { dismissUntil: ej } = S.metadata;
             return (0, r.jsx)(U.Z, { onDismiss: () => ew(ej) });
         case em.kVF.WIN32_DEPRECATED_MESSAGE:
-            let { dismissUntil: ek } = S.metadata;
-            return (0, r.jsxs)(c.qXd, {
-                color: c.DM8.WARNING,
-                children: [
-                    (0, r.jsx)(c.RyX, {
-                        onClick: () => ew(ek),
-                        noticeType: em.kVF.WIN32_DEPRECATED_MESSAGE,
-                    }),
-                    ey.intl.format(ey.t["08KQ1N"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) }),
-                ],
-            });
-        case em.kVF.WIN7_8_DEPRECATED_MESSAGE:
             let { dismissUntil: eM } = S.metadata;
             return (0, r.jsxs)(c.qXd, {
                 color: c.DM8.WARNING,
                 children: [
                     (0, r.jsx)(c.RyX, {
                         onClick: () => ew(eM),
+                        noticeType: em.kVF.WIN32_DEPRECATED_MESSAGE,
+                    }),
+                    ey.intl.format(ey.t["08KQ1N"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) }),
+                ],
+            });
+        case em.kVF.WIN7_8_DEPRECATED_MESSAGE:
+            let { dismissUntil: ek } = S.metadata;
+            return (0, r.jsxs)(c.qXd, {
+                color: c.DM8.WARNING,
+                children: [
+                    (0, r.jsx)(c.RyX, {
+                        onClick: () => ew(ek),
                         noticeType: em.kVF.WIN7_8_DEPRECATED_MESSAGE,
                     }),
                     ey.intl.format(ey.t["8Je+dX"], { helpCenterLink: ef.Z.getArticleURL(em.BhN.WIN7_8_DEPRECATE) }),
@@ -810,7 +810,7 @@ let ex = i.memo(function () {
                                     : e.currentPeriodEnd,
                             ),
                                 (0, c.ZDy)(async () => {
-                                    let { default: e } = await Promise.all([n.e("84992"), n.e("67569")]).then(
+                                    let { default: e } = await Promise.all([n.e("84992"), n.e("56158")]).then(
                                         n.bind(n, 561623),
                                     );
                                     return (t) =>

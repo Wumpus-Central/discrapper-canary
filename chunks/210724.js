@@ -1,5 +1,5 @@
 n.d(t, {
-    P: () => M,
+    P: () => k,
     Z: () => U,
 }),
     n(388685);
@@ -34,9 +34,9 @@ var r = n(951288),
     w = n(46140),
     D = n(743294),
     x = n(981631),
-    L = n(747961);
+    L = n(89855);
 let j = 75;
-function k(e) {
+function M(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, E.qI)({
@@ -48,14 +48,14 @@ function k(e) {
         null
     );
 }
-function M(e) {
+function k(e) {
     var t, n;
     let { quest: a } = e,
         E = (0, I.T)({
             quest: a,
             location: w.dr.QUESTS_BAR,
         }),
-        M = (0, v.Z)({ location: w.dr.QUESTS_BAR }),
+        k = (0, v.Z)({ location: w.dr.QUESTS_BAR }),
         U = (0, c.e7)([b.Z], () => null != b.Z.questEnrollmentBlockedUntil),
         { isQuestBarVisible: G, reason: B } = (0, C.qN)({
             quest: a,
@@ -69,7 +69,7 @@ function M(e) {
         W = (0, d.Z)(Y),
         K = (null == (n = a.userStatus) ? void 0 : n.completedAt) != null,
         { hasError: z, isLoading: q } = (0, A.d7)(),
-        X = i.useContext(R.T) || (M && G && !q && !U),
+        X = i.useContext(R.T) || (k && G && !q && !U),
         Q = i.useRef(X),
         J = i.useRef(-1),
         $ = i.useRef(!1),
@@ -214,7 +214,7 @@ function M(e) {
             }
         }, [z, a.id]),
         i.useEffect(() => {
-            if (!M) {
+            if (!k) {
                 var e;
                 (0, h.dA)({
                     questId: a.id,
@@ -228,7 +228,7 @@ function M(e) {
                     sourceQuestContent: y.jn.QUEST_BAR_V2,
                 });
             }
-        }, [M, a.id]),
+        }, [k, a.id]),
         i.useEffect(() => {
             if (!X && el && !q) {
                 var e;
@@ -246,15 +246,15 @@ function M(e) {
             }
         }, [X, el, q, a.id, B]),
         i.useEffect(() => {
-            (!G || U) && m.Z.clearTracking(), X && el && !q && !z && M && m.Z.stopTracking(a.id);
-        }, [G, U, X, el, q, z, M, a.id]);
+            (!G || U) && m.Z.clearTracking(), X && el && !q && !z && k && m.Z.stopTracking(a.id);
+        }, [G, U, X, el, q, z, k, a.id]);
     let { enabled: eC, status: eN } = (0, O.n)({
             location: w.dr.QUESTS_BAR,
             questConfig: a.config,
         }),
         eR = (null == eN ? void 0 : eN.progressBlur) ? 88 : 70;
-    if (!M || (!X && el && !q) || z)
-        return z ? E.log("Not rendered due to asset error") : M || E.log("Not rendered due to ineligibility"), null;
+    if (!k || (!X && el && !q) || z)
+        return z ? E.log("Not rendered due to asset error") : k || E.log("Not rendered due to ineligibility"), null;
     let eP = eR + 78 * !!K;
     return (0, r.jsx)(T.A, {
         questOrQuests: a,
@@ -267,7 +267,7 @@ function M(e) {
                 className: L.mask,
                 children: [
                     X &&
-                        (0, r.jsx)(k, {
+                        (0, r.jsx)(M, {
                             questId: a.id,
                             isExpanded: ei,
                         }),
@@ -333,7 +333,7 @@ let U = function () {
               {
                   source: w.dr.QUESTS_BAR,
                   questId: e.id,
-                  children: (0, r.jsx)(M, { quest: e }),
+                  children: (0, r.jsx)(k, { quest: e }),
               },
               e.id,
           );

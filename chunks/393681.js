@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(210887),
     L = n(418632),
     j = n(10298),
-    k = n(526156),
-    M = n(730820),
+    M = n(526156),
+    k = n(730820),
     U = n(888256),
     G = n(2719),
     B = n(194530),
@@ -41,8 +41,8 @@ var r = n(951288),
     F = n(981631),
     V = n(801461),
     H = n(388032),
-    Y = n(719766),
-    W = n(10198);
+    Y = n(343396),
+    W = n(197571);
 function K(e, t, n) {
     return (
         t in e
@@ -237,7 +237,7 @@ class Q extends i.PureComponent {
                         children: [
                             (0, r.jsx)(E.Z.Child, {
                                 wrap: !0,
-                                children: (0, r.jsx)(M.Z, { backupCodes: e }),
+                                children: (0, r.jsx)(k.Z, { backupCodes: e }),
                             }),
                             t.mfaEnabled
                                 ? null
@@ -364,7 +364,7 @@ class Q extends i.PureComponent {
         let { subsection: e } = this.props;
         return (0, r.jsx)(j.N, {
             header: H.intl.string(H.t["JAIM/v"]),
-            children: (0, r.jsx)(k.Z, {
+            children: (0, r.jsx)(M.Z, {
                 parentSetting: Z.s6.ACCOUNT,
                 settingsSection: F.oAB.ACCOUNT,
                 panelClassName: Y.tabPanel,

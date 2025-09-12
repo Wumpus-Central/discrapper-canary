@@ -21,7 +21,7 @@ var r = n(951288),
     v = n(682947),
     I = n(981631),
     T = n(388032),
-    S = n(767991);
+    S = n(73704);
 function A(e, t, n) {
     return (
         t in e
@@ -246,9 +246,9 @@ function j(e) {
             return h.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
         j = (0, s.e7)([p.Z], () => p.Z.theme),
-        k = (0, O.XX)(o),
-        M = (0, y.i)(k),
-        U = i.useMemo(() => k.premium && x && !A, [A, k.premium, x]),
+        M = (0, O.XX)(o),
+        k = (0, y.i)(M),
+        U = i.useMemo(() => M.premium && x && !A, [A, M.premium, x]),
         G = i.useCallback(
             (e) => {
                 U &&
@@ -264,7 +264,7 @@ function j(e) {
             },
             [U, o.id],
         );
-    if (M === y.Q.NONE) return null;
+    if (k === y.Q.NONE) return null;
     let {
         IconComponent: B,
         backgroundDarkColor: Z,
@@ -274,9 +274,9 @@ function j(e) {
         premiumBackgroundColor: Y,
         premiumForegroundColor: W,
         sizeAdjustment: K,
-    } = D[M];
+    } = D[k];
     if (null == B) return null;
-    k.premium && ((t = W), (n = Y));
+    M.premium && ((t = W), (n = Y));
     let z = (0, c.wj)(j) ? V : H,
         q = (0, c.wj)(j) ? Z : F;
     (t = null != t ? t : z), (n = null != n ? n : q);
@@ -286,8 +286,8 @@ function j(e) {
         position: d,
         "aria-label": N,
         text: (0, r.jsx)(L, {
-            badgeType: M,
-            guildTraits: k,
+            badgeType: k,
+            guildTraits: M,
         }),
         tooltipContentClassName: S.tooltipRemovePadding,
         children: (e) =>

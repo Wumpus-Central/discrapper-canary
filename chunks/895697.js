@@ -24,8 +24,8 @@ var i = n(442837),
     T = n(915014),
     S = n(671955),
     A = n(388032),
-    C = n(759253),
-    N = n(593540);
+    C = n(57842),
+    N = n(116649);
 function R(e) {
     let {
             user: t,
@@ -38,11 +38,11 @@ function R(e) {
             onClose: L,
         } = e,
         j = c.ZP.getName(null == P ? void 0 : P.id, x, t),
-        k = (0, i.e7)([u.Z], () => {
+        M = (0, i.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        M = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
+        k = (0, i.e7)([o.Z, s.Z], () => o.Z.getChannel(s.Z.getChannelId())),
         U = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
         G = (0, d.b)({ location: "BotUserProfilePopoutBody" });
     return (0, r.jsxs)(a.Ttm, {
@@ -110,12 +110,12 @@ function R(e) {
                       guildId: null == P ? void 0 : P.id,
                       onClose: L,
                   }),
-            (null == k ? void 0 : k.popularApplicationCommandIds) != null &&
-                null != M &&
+            (null == M ? void 0 : M.popularApplicationCommandIds) != null &&
+                null != k &&
                 (0, r.jsx)(f.Z, {
-                    applicationId: k.id,
-                    commandIds: k.popularApplicationCommandIds,
-                    channel: M,
+                    applicationId: M.id,
+                    commandIds: M.popularApplicationCommandIds,
+                    channel: k,
                     guildId: null == P ? void 0 : P.id,
                     onClick: L,
                 }),

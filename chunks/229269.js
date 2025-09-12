@@ -16,8 +16,8 @@ var r = n(951288),
     g = n(450272),
     E = n(231338),
     b = n(388032),
-    y = n(53511),
-    O = n(822054);
+    y = n(403645),
+    O = n(818033);
 function v(e, t, n) {
     return (
         t in e
@@ -339,7 +339,7 @@ let L = {
             },
         },
     },
-    k = {
+    M = {
         appearance: {
             theme: "flat",
             variables: {
@@ -348,7 +348,7 @@ let L = {
             },
         },
     },
-    M = {
+    k = {
         buttonType: {
             googlePay: "pay",
             applePay: "book",
@@ -362,20 +362,20 @@ let L = {
     U = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined"),
     G = "``";
 function B() {
-    let [e, t] = i.useState(U(k)),
-        [n, o] = i.useState(k),
-        [s, u] = i.useState(U(M)),
-        [d, _] = i.useState(M),
+    let [e, t] = i.useState(U(M)),
+        [n, o] = i.useState(M),
+        [s, u] = i.useState(U(k)),
+        [d, _] = i.useState(k),
         [p, h] = i.useState(null),
         [m, E] = i.useState(
             (0, r.jsx)(g.DS, {
                 errorLabel: L.CONFIGURABLE,
-                elementOptions: k,
+                elementOptions: M,
                 children: (0, r.jsx)(a.ExpressCheckoutElement, {
                     onConfirm: (e) => {
                         console.log("ExpressCheckoutElement onConfirm event: ", e);
                     },
-                    options: M,
+                    options: k,
                 }),
             }),
         ),

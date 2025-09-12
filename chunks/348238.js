@@ -4,7 +4,7 @@ n.d(t, {
     JC: () => j,
     NU: () => G,
     Nk: () => L,
-    R9: () => M,
+    R9: () => k,
     RN: () => F,
     Wl: () => x,
     XO: () => D,
@@ -131,7 +131,7 @@ function j(e, t, n, r) {
     let i = P("referencedUsernameProfile", n, r);
     return w(e, t.id, i);
 }
-function k(e) {
+function M(e) {
     return i.useCallback(
         (t) => {
             t.preventDefault(), t.stopPropagation(), e();
@@ -139,14 +139,14 @@ function k(e) {
         [e],
     );
 }
-function M(e, t) {
-    return k(P("avatarProfile", e, t));
+function k(e, t) {
+    return M(P("avatarProfile", e, t));
 }
 function U(e, t) {
-    return k(P("referencedAvatarProfile", e, t));
+    return M(P("referencedAvatarProfile", e, t));
 }
 function G(e, t) {
-    return k(P("interactionAvatarProfile", e, t));
+    return M(P("interactionAvatarProfile", e, t));
 }
 function B(e, t, o, s) {
     let { id: c } = t,
@@ -177,7 +177,7 @@ function B(e, t, o, s) {
                             n.e("76676"),
                             n.e("37220"),
                             n.e("93077"),
-                            n.e("71533"),
+                            n.e("3719"),
                         ]).then(n.bind(n, 225138));
                         return (n) =>
                             (0, r.jsx)(

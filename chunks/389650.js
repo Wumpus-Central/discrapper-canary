@@ -31,9 +31,9 @@ var r = n(951288),
     D = n(981631),
     x = n(420212),
     L = n(388032),
-    j = n(958047),
-    k = n(504401),
-    M = n(10198);
+    j = n(894462),
+    M = n(620842),
+    k = n(197571);
 function U(e, t, n) {
     return (
         t in e
@@ -124,7 +124,7 @@ class H extends i.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)(y.Z, {
             direction: y.Z.Direction.VERTICAL,
-            className: o()(j.keybindGroup, k.card),
+            className: o()(j.keybindGroup, M.card),
             children: [
                 !e &&
                     (0, r.jsx)(p.Z, {
@@ -133,7 +133,7 @@ class H extends i.PureComponent {
                         onClick: this.handleDeleteKeybind,
                     }),
                 (0, r.jsxs)(y.Z, {
-                    className: M.marginBottom8,
+                    className: k.marginBottom8,
                     children: [
                         (0, r.jsx)(y.Z.Child, {
                             basis: "45%",
@@ -444,7 +444,7 @@ class Y extends i.PureComponent {
                 (0, r.jsxs)(f.hjN, {
                     tag: f.RB0.H1,
                     title: L.intl.string(L.t.Lz5KHB),
-                    className: M.marginTop60,
+                    className: k.marginTop60,
                     children: [
                         (0, r.jsxs)("div", {
                             className: j.defaultKeybind,
