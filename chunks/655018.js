@@ -45,7 +45,7 @@ function Z(e) {
     i.useEffect(() => {
         f.ZP.forEach((e) => H.current.push(e));
     }, []);
-    let F = null == D || null == k || "" === D.trim(),
+    let F = null == D || "" === D.trim(),
         V = i.useMemo(
             () => [
                 ...Object.values(G)
@@ -96,7 +96,14 @@ function Z(e) {
                     F ||
                         W({
                             status: D,
-                            emoji: k,
+                            emoji:
+                                null != k
+                                    ? k
+                                    : {
+                                          id: null,
+                                          name: "\uD83D\uDCAD",
+                                          animated: !1,
+                                      },
                         });
             },
             [D, k, W, F],
