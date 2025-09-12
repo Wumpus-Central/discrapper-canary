@@ -33,7 +33,7 @@ function x() {
             };
         }),
         { gradientStyle: a, gradientClassname: c } = (0, l.Icv)({
-            colorStrings: (0, _.DX)(t, f.aIL),
+            colorStrings: (0, _.DX)(t),
             roleStyle: "username",
             includeConvenienceGlow: !0,
             animateGradient: !0,

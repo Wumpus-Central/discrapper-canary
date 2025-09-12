@@ -71,7 +71,7 @@ function f(e, t) {
     return n;
 }
 function _(e, t) {
-    var n, a, s, l;
+    var n, a, s, l, c;
     return p({
         id: t.id,
         name: t.name,
@@ -81,15 +81,15 @@ function _(e, t) {
         position: t.position,
         color: t.color,
         colorString: 0 !== t.color ? (0, i.Rf)(t.color) : null,
-        colors: (0, o.uH)(t.colors, e),
-        colorStrings: (0, o.DX)(t.colors, e),
+        colors: null != (n = t.colors) ? n : null,
+        colorStrings: null != t.colors ? (0, o.DX)(t.colors) : null,
         hoist: t.hoist,
-        managed: null != (n = t.managed) && n,
-        tags: null != (a = t.tags) ? a : {},
+        managed: null != (a = t.managed) && a,
+        tags: null != (s = t.tags) ? s : {},
         icon: t.icon,
         unicodeEmoji: t.unicode_emoji,
-        flags: null != (s = t.flags) ? s : 0,
-        description: null != (l = t.description) ? l : null,
+        flags: null != (l = t.flags) ? l : 0,
+        description: null != (c = t.description) ? c : null,
         version: t.version,
     });
 }
@@ -97,7 +97,7 @@ function p(e) {
     return (0, a.bk)(s.X4, e);
 }
 function h(e, t) {
-    var n, a, s, l, c;
+    var n, a, s, l, c, u;
     return p({
         id: t.id,
         name: t.name,
@@ -107,15 +107,15 @@ function h(e, t) {
         position: null != (n = t.originalPosition) ? n : t.position,
         color: t.color,
         colorString: null != t.color && 0 !== t.color ? (0, i.Rf)(t.color) : null,
-        colors: (0, o.uH)(t.colors, e),
-        colorStrings: (0, o.DX)(t.colors, e),
+        colors: null != (a = t.colors) ? a : null,
+        colorStrings: null != t.colors ? (0, o.DX)(t.colors) : null,
         hoist: t.hoist,
-        managed: null != (a = t.managed) && a,
-        tags: null != (s = t.tags) ? s : {},
+        managed: null != (s = t.managed) && s,
+        tags: null != (l = t.tags) ? l : {},
         icon: t.icon,
         unicodeEmoji: t.unicodeEmoji,
-        flags: null != (l = t.flags) ? l : 0,
-        description: null != (c = t.description) ? c : null,
+        flags: null != (c = t.flags) ? c : 0,
+        description: null != (u = t.description) ? u : null,
         version: t.version,
     });
 }
