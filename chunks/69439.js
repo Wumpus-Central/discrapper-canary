@@ -253,6 +253,7 @@ function S(e) {
                                             return (0, u.vE)(e);
                                     }
                                 },
+                                size: "sm",
                             })
                           : (0, f.$J)(C) && !M && $ !== h.LI.DESKTOP
                             ? k
@@ -370,6 +371,7 @@ function S(e) {
                                           return y.intl.string(y.t["8lAfuL"]);
                                   }
                               },
+                              size: "sm",
                           }),
                       }),
               ],
