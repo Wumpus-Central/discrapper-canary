@@ -1,14 +1,13 @@
-n.d(t, { a: () => h }), n(388685);
+n.d(t, { a: () => p }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(793030),
     a = n(540863),
     o = n(619307),
-    s = n(993365),
-    l = n(463208),
-    c = n(481060),
-    u = n(624315);
-function d(e, t, n) {
+    s = n(463208),
+    l = n(481060),
+    c = n(624315);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,66 +48,62 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
-    let { controls: t, props: n, onPropsChange: d } = e,
-        _ = (e, t) => {
-            d(p(f({}, n), { [e]: t }));
+function p(e) {
+    let { controls: t, props: n, onPropsChange: u } = e,
+        f = (e, t) => {
+            u(_(d({}, n), { [e]: t }));
         },
-        h = Object.entries(t);
-    return 0 === h.length
+        p = Object.entries(t);
+    return 0 === p.length
         ? null
         : (0, r.jsx)("div", {
-              className: u.controlsSection,
+              className: c.controlsSection,
               children: (0, r.jsx)(i.Kqy, {
                   gap: 16,
-                  children: h.map((e) => {
+                  children: p.map((e) => {
                       var t;
-                      let [i, u] = e,
-                          d = null != (t = n[i]) ? t : u.defaultValue;
+                      let [i, c] = e,
+                          u = null != (t = n[i]) ? t : c.defaultValue;
                       return (0, r.jsxs)(
                           a.x,
                           {
-                              title: "boolean" === u.type ? void 0 : u.label,
+                              title: "boolean" === c.type ? void 0 : c.label,
                               children: [
-                                  "select" === u.type &&
-                                      null != u.options &&
+                                  "select" === c.type &&
+                                      null != c.options &&
                                       (0, r.jsx)(o.q4, {
-                                          value: d,
-                                          onChange: (e) => _(i, e),
-                                          options: u.options,
+                                          value: u,
+                                          onChange: (e) => f(i, e),
+                                          options: c.options,
                                       }),
-                                  "boolean" === u.type &&
-                                      (0, r.jsx)(c.XZJ, {
-                                          value: d,
-                                          onChange: (e, t) => _(i, t),
-                                          label: u.label,
-                                          children: (0, r.jsx)(s.x, {
-                                              variant: "text-md/medium",
-                                              children: u.label,
-                                          }),
+                                  "boolean" === c.type &&
+                                      (0, r.jsx)(l.XZJ, {
+                                          checked: u,
+                                          onChange: (e) => f(i, e),
+                                          label: c.label,
                                       }),
-                                  "text" === u.type &&
-                                      (0, r.jsx)(l.o, {
-                                          value: d,
-                                          onChange: (e) => _(i, e),
+                                  "text" === c.type &&
+                                      (0, r.jsx)(s.o, {
+                                          value: u,
+                                          onChange: (e) => f(i, e),
                                       }),
-                                  "number" === u.type &&
-                                      (0, r.jsx)(l.o, {
+                                  "number" === c.type &&
+                                      (0, r.jsx)(s.o, {
                                           type: "number",
-                                          value: String(d),
-                                          min: u.minValue,
-                                          onChange: (e) => _(i, Number(e)),
+                                          value: String(u),
+                                          min: c.minValue,
+                                          onChange: (e) => f(i, Number(e)),
                                       }),
                               ],
                           },

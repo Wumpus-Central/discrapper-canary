@@ -12,8 +12,8 @@ var r = n(951288),
     f = n(626135),
     p = n(381585),
     h = n(501431),
-    m = n(215023),
-    _ = n(981631),
+    _ = n(215023),
+    m = n(981631),
     C = n(231338),
     b = n(388032),
     E = n(587635);
@@ -24,7 +24,7 @@ function S() {
         c = (0, p.sp)(),
         d = l.useCallback(
             (e) => {
-                f.default.track(_.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                f.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == c ? void 0 : c.sessionId,
                     page_section: null == c ? void 0 : c.pageSection,
                     page_category: null == c ? void 0 : c.pageCategory,
@@ -47,7 +47,7 @@ function S() {
                         className: E.filterTitle,
                         children: b.intl.string(b.t.Qk6r1d),
                     }),
-                    m.xg.map((e) =>
+                    _.xg.map((e) =>
                         (0, r.jsx)(
                             v,
                             {
@@ -59,15 +59,11 @@ function S() {
                     ),
                     o &&
                         (0, r.jsx)(u.XZJ, {
-                            value: t,
+                            checked: t,
                             onChange: () => {
                                 d("filter orb eligible ".concat(!1 === t ? "on" : "off")), e();
                             },
                             label: b.intl.string(b.t.AHHHgI),
-                            children: (0, r.jsx)(u.Text, {
-                                variant: "text-md/normal",
-                                children: b.intl.string(b.t.AHHHgI),
-                            }),
                         }),
                 ],
             }),
@@ -86,27 +82,23 @@ function S() {
     });
 }
 let v = (e) => {
-        var t, n;
-        let { filter: l, trackFilterAction: a } = e,
-            s = {
+        var t;
+        let { filter: n, trackFilterAction: l } = e,
+            a = {
                 [o.G.AVATAR_DECORATION]: b.intl.string(b.t.dRZYND),
                 [o.G.PROFILE_EFFECT]: b.intl.string(b.t["1cNjt7"]),
                 [o.G.NAMEPLATE]: b.intl.string(b.t.V68Fq6),
                 [o.G.BUNDLE]: b.intl.string(b.t.FYFppq),
             },
-            { itemTypeFilters: i, onToggleItemType: c } = (0, h.S)();
+            { itemTypeFilters: s, onToggleItemType: i } = (0, h.S)();
         return (0, r.jsx)(u.XZJ, {
-            value: i.has(l),
+            checked: s.has(n),
             onChange: () => {
                 var e;
-                let t = (null == (e = s[l]) ? void 0 : e.toLowerCase()) != null ? s[l].toLowerCase() : l;
-                a("filter item type ".concat(t, " ").concat(!1 === i.has(l) ? "on" : "off")), c(l);
+                let t = (null == (e = a[n]) ? void 0 : e.toLowerCase()) != null ? a[n].toLowerCase() : n;
+                l("filter item type ".concat(t, " ").concat(!1 === s.has(n) ? "on" : "off")), i(n);
             },
-            label: null != (t = s[l]) ? t : "",
-            children: (0, r.jsx)(u.Text, {
-                variant: "text-md/normal",
-                children: null != (n = s[l]) ? n : "",
-            }),
+            label: null != (t = a[n]) ? t : "",
         });
     },
     O = (e) => {

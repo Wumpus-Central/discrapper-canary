@@ -1,18 +1,17 @@
-n.d(t, { k: () => y }), n(388685);
+n.d(t, { k: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(755721),
-    o = n(481060),
-    s = n(821849),
-    l = n(45474),
-    c = n(146528),
-    u = n(450272),
-    d = n(962915),
-    f = n(981631),
-    _ = n(362786),
-    p = n(474936),
-    h = n(231338);
-function m(e, t, n) {
+    a = n(481060),
+    o = n(821849),
+    s = n(45474),
+    l = n(146528),
+    c = n(450272),
+    u = n(962915),
+    d = n(981631),
+    f = n(362786),
+    _ = n(474936),
+    p = n(231338);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +24,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +35,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,102 +52,102 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = () => {
-        let [e, t] = i.useState(p.p9.TIER_0),
-            [n, m] = i.useState(l.R.WHAT_YOU_LOSE),
-            [E, y] = i.useState(null),
-            [v, I] = i.useState(p.Xh.PREMIUM_MONTH_TIER_0),
-            [T, S] = i.useState([]),
-            [A, C] = i.useState(() => {
+let b = () => {
+        let [e, t] = i.useState(_.p9.TIER_0),
+            [n, h] = i.useState(s.R.WHAT_YOU_LOSE),
+            [g, b] = i.useState(null),
+            [O, v] = i.useState(_.Xh.PREMIUM_MONTH_TIER_0),
+            [I, T] = i.useState([]),
+            [S, A] = i.useState(() => {
                 let e = new Date();
                 return e.setMonth(e.getMonth() + 1), e;
             }),
-            [N, R] = i.useState(null),
-            [P, w] = i.useState(!1),
-            [D, x] = i.useState(!1),
-            [L, j] = i.useState(!1);
+            [C, N] = i.useState(null),
+            [R, P] = i.useState(!1),
+            [w, D] = i.useState(!1),
+            [x, L] = i.useState(!1);
         (0, i.useEffect)(() => {
-            (0, s.Y2)();
+            (0, o.Y2)();
         }, []),
             (0, i.useEffect)(() => {
                 let e = new Date();
-                switch (v) {
-                    case p.Xh.PREMIUM_MONTH_TIER_0:
-                    case p.Xh.PREMIUM_MONTH_TIER_1:
-                    case p.Xh.PREMIUM_MONTH_TIER_2:
+                switch (O) {
+                    case _.Xh.PREMIUM_MONTH_TIER_0:
+                    case _.Xh.PREMIUM_MONTH_TIER_1:
+                    case _.Xh.PREMIUM_MONTH_TIER_2:
                         e.setMonth(e.getMonth() + 1);
                         break;
-                    case p.Xh.PREMIUM_YEAR_TIER_0:
-                    case p.Xh.PREMIUM_YEAR_TIER_1:
-                    case p.Xh.PREMIUM_YEAR_TIER_2:
+                    case _.Xh.PREMIUM_YEAR_TIER_0:
+                    case _.Xh.PREMIUM_YEAR_TIER_1:
+                    case _.Xh.PREMIUM_YEAR_TIER_2:
                         e.setFullYear(e.getFullYear() + 1);
                 }
-                C(e);
-            }, [v]),
+                A(e);
+            }, [O]),
             (0, i.useEffect)(() => {
                 switch (e) {
-                    case p.p9.TIER_0:
-                        S([
+                    case _.p9.TIER_0:
+                        T([
                             {
                                 label: "Nitro Basic Monthly",
-                                value: p.Xh.PREMIUM_MONTH_TIER_0,
+                                value: _.Xh.PREMIUM_MONTH_TIER_0,
                             },
                             {
                                 label: "Nitro Basic Yearly",
-                                value: p.Xh.PREMIUM_YEAR_TIER_0,
+                                value: _.Xh.PREMIUM_YEAR_TIER_0,
                             },
                         ]),
-                            I(p.Xh.PREMIUM_MONTH_TIER_0);
+                            v(_.Xh.PREMIUM_MONTH_TIER_0);
                         break;
-                    case p.p9.TIER_1:
-                        S([
+                    case _.p9.TIER_1:
+                        T([
                             {
                                 label: "Nitro Classic Monthly",
-                                value: p.Xh.PREMIUM_MONTH_TIER_1,
+                                value: _.Xh.PREMIUM_MONTH_TIER_1,
                             },
                             {
                                 label: "Nitro Classic Yearly",
-                                value: p.Xh.PREMIUM_YEAR_TIER_1,
+                                value: _.Xh.PREMIUM_YEAR_TIER_1,
                             },
                         ]),
-                            I(p.Xh.PREMIUM_MONTH_TIER_1);
+                            v(_.Xh.PREMIUM_MONTH_TIER_1);
                         break;
-                    case p.p9.TIER_2:
-                        S([
+                    case _.p9.TIER_2:
+                        T([
                             {
                                 label: "Nitro Monthly",
-                                value: p.Xh.PREMIUM_MONTH_TIER_2,
+                                value: _.Xh.PREMIUM_MONTH_TIER_2,
                             },
                             {
                                 label: "Nitro Yearly",
-                                value: p.Xh.PREMIUM_YEAR_TIER_2,
+                                value: _.Xh.PREMIUM_YEAR_TIER_2,
                             },
                         ]),
-                            I(p.Xh.PREMIUM_MONTH_TIER_2);
+                            v(_.Xh.PREMIUM_MONTH_TIER_2);
                 }
             }, [e]),
             (0, i.useEffect)(() => {
-                [l.R.CONFIRM_DISCOUNT, l.R.DISCOUNT_APPLIED].includes(n) && null === E && y(O()),
-                    n === l.R.PREVIEW &&
-                        null === N &&
-                        R(
-                            new c.Z({
+                [s.R.CONFIRM_DISCOUNT, s.R.DISCOUNT_APPLIED].includes(n) && null === g && b(y()),
+                    n === s.R.PREVIEW &&
+                        null === C &&
+                        N(
+                            new l.Z({
                                 id: "",
                                 invoiceItems: [
                                     {
                                         id: "",
-                                        subscriptionPlanId: v,
+                                        subscriptionPlanId: O,
                                         subscriptionPlanPrice: 200,
                                         amount: 400,
                                         quantity: 1,
@@ -156,7 +155,7 @@ let y = () => {
                                     },
                                     {
                                         id: "",
-                                        subscriptionPlanId: p.Xh.PREMIUM_MONTH_GUILD,
+                                        subscriptionPlanId: _.Xh.PREMIUM_MONTH_GUILD,
                                         subscriptionPlanPrice: 400,
                                         amount: 100,
                                         quantity: 1,
@@ -164,50 +163,50 @@ let y = () => {
                                     },
                                 ],
                                 total: 200,
-                                currency: h.pK.USD,
+                                currency: p.pK.USD,
                                 tax: 0,
                                 taxInclusive: !0,
                                 subscriptionPeriodStart: new Date(),
-                                subscriptionPeriodEnd: A,
-                                status: f.hUK.PAID,
+                                subscriptionPeriodEnd: S,
+                                status: d.hUK.PAID,
                             }),
                         ),
-                    n !== l.R.PREVIEW && null !== N && R(null);
-            }, [n, E, A, v, N]);
-        let M = i.useCallback(async () => {
-            j(!0),
-                await (0, o.ZDy)(
+                    n !== s.R.PREVIEW && null !== C && N(null);
+            }, [n, g, S, O, C]);
+        let j = i.useCallback(async () => {
+            L(!0),
+                await (0, a.ZDy)(
                     async () => (t) =>
                         (0, r.jsx)(
-                            d.x,
-                            b(g({}, t), {
+                            u.x,
+                            E(m({}, t), {
                                 onClose: () => {
-                                    t.onClose(), j(!1);
+                                    t.onClose(), L(!1);
                                 },
                                 premiumType: e,
-                                churnDiscount: E,
-                                planId: v,
-                                renewalInvoice: N,
+                                churnDiscount: g,
+                                planId: O,
+                                renewalInvoice: C,
                                 renewalInvoiceDetails: {
-                                    intervalType: p.rV.MONTH,
+                                    intervalType: _.rV.MONTH,
                                     intervalCount: 1,
                                 },
-                                errorOnCancel: P,
-                                errorOnRedeem: D,
+                                errorOnCancel: R,
+                                errorOnRedeem: w,
                                 setActiveStep: (e) => {
-                                    m(e), t.onClose();
+                                    h(e), t.onClose();
                                 },
                                 activeStep: n,
                                 premiumSubscription: {
                                     id: "",
-                                    planId: v,
-                                    type: h.NY.PREMIUM,
+                                    planId: O,
+                                    type: p.NY.PREMIUM,
                                     items: [],
                                     createdAt: new Date(),
                                     canceledAt: null,
                                     currentPeriodStart: new Date(),
-                                    currentPeriodEnd: A,
-                                    status: f.O0b.ACTIVE,
+                                    currentPeriodEnd: S,
+                                    status: d.O0b.ACTIVE,
                                     paymentSourceId: null,
                                     paymentGateway: null,
                                     paymentGatewayPlanId: null,
@@ -216,33 +215,33 @@ let y = () => {
                                     trialEndsAt: null,
                                     renewalMutations: null,
                                     streakStartedAt: null,
-                                    currency: h.pK.USD,
+                                    currency: p.pK.USD,
                                     pauseEndsAt: null,
-                                    pauseReason: _.Id.UNKNOWN,
+                                    pauseReason: f.Id.UNKNOWN,
                                 },
                             }),
                         ),
                 );
-        }, [e, E, v, N, P, D, n, A]);
+        }, [e, g, O, C, R, w, n, S]);
         return (
             (0, i.useEffect)(() => {
-                L && M();
-            }, [n, L, M]),
-            (0, r.jsxs)(u.$0, {
+                x && j();
+            }, [n, x, j]),
+            (0, r.jsxs)(c.$0, {
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: "heading-xl/semibold",
                         children: "Cancellation Flow",
                     }),
-                    (0, r.jsxs)(u.pg, {
+                    (0, r.jsxs)(c.pg, {
                         children: [
-                            (0, r.jsxs)(u.BZ, {
+                            (0, r.jsxs)(c.BZ, {
                                 children: [
-                                    (0, r.jsx)(o.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         variant: "text-md/semibold",
                                         children: "Premium Subscription",
                                     }),
-                                    (0, r.jsx)(o.PhF, {
+                                    (0, r.jsx)(a.PhF, {
                                         placeholder: "Premium Type",
                                         select: (e) => {
                                             t(e);
@@ -252,120 +251,111 @@ let y = () => {
                                         options: [
                                             {
                                                 label: "Nitro Basic",
-                                                value: p.p9.TIER_0,
+                                                value: _.p9.TIER_0,
                                             },
                                             {
                                                 label: "Nitro Classic",
-                                                value: p.p9.TIER_1,
+                                                value: _.p9.TIER_1,
                                             },
                                             {
                                                 label: "Nitro",
-                                                value: p.p9.TIER_2,
+                                                value: _.p9.TIER_2,
                                             },
                                         ],
                                     }),
                                 ],
                             }),
-                            T.length > 0 &&
-                                (0, r.jsxs)(u.BZ, {
+                            I.length > 0 &&
+                                (0, r.jsxs)(c.BZ, {
                                     children: [
-                                        (0, r.jsx)(o.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             variant: "text-md/semibold",
                                             children: "Subscription Interval",
                                         }),
-                                        (0, r.jsx)(o.PhF, {
+                                        (0, r.jsx)(a.PhF, {
                                             placeholder: "Premium Type",
                                             select: (e) => {
-                                                I(e);
+                                                v(e);
                                             },
-                                            isSelected: (e) => v === e,
+                                            isSelected: (e) => O === e,
                                             serialize: (e) => e,
-                                            options: T,
+                                            options: I,
                                         }),
                                     ],
                                 }),
-                            (0, r.jsxs)(u.BZ, {
+                            (0, r.jsxs)(c.BZ, {
                                 children: [
-                                    (0, r.jsx)(o.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         variant: "text-md/semibold",
                                         children: "Modal Step",
                                     }),
-                                    (0, r.jsx)(o.PhF, {
+                                    (0, r.jsx)(a.PhF, {
                                         placeholder: "Premium Type",
                                         select: (e) => {
-                                            m(e);
+                                            h(e);
                                         },
                                         isSelected: (e) => n === e,
                                         serialize: (e) => "".concat(e),
                                         options: [
                                             {
                                                 label: "What You Lose",
-                                                value: l.R.WHAT_YOU_LOSE,
+                                                value: s.R.WHAT_YOU_LOSE,
                                             },
                                             {
                                                 label: "Confirm Discount",
-                                                value: l.R.CONFIRM_DISCOUNT,
+                                                value: s.R.CONFIRM_DISCOUNT,
                                             },
                                             {
                                                 label: "Discount Applied",
-                                                value: l.R.DISCOUNT_APPLIED,
+                                                value: s.R.DISCOUNT_APPLIED,
                                             },
                                             {
                                                 label: "Confirm Cancel",
-                                                value: l.R.CONFIRM,
+                                                value: s.R.CONFIRM,
                                             },
                                             {
                                                 label: "Preview Invoice",
-                                                value: l.R.PREVIEW,
+                                                value: s.R.PREVIEW,
                                             },
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(u.BZ, {
-                                children: (0, r.jsx)(a.$q, {
-                                    value: null !== E,
+                            (0, r.jsx)(c.BZ, {
+                                children: (0, r.jsx)(a.XZJ, {
+                                    checked: null !== g,
                                     onChange: () => {
-                                        if (null === E) return void y(O());
-                                        y(null);
+                                        if (null === g) return void b(y());
+                                        b(null);
                                     },
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: "text-md/semibold",
-                                        children: "Churn Discount",
-                                    }),
+                                    label: "Churn Discount",
                                 }),
                             }),
-                            (0, r.jsx)(u.BZ, {
-                                children: (0, r.jsx)(a.$q, {
-                                    value: D,
+                            (0, r.jsx)(c.BZ, {
+                                children: (0, r.jsx)(a.XZJ, {
+                                    checked: w,
                                     onChange: () => {
-                                        x(!D);
+                                        D(!w);
                                     },
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: "text-md/semibold",
-                                        children: "Error on Redeem Offer",
-                                    }),
+                                    label: "Error on Redeem Offer",
                                 }),
                             }),
-                            (0, r.jsx)(u.BZ, {
-                                children: (0, r.jsx)(a.$q, {
-                                    value: P,
+                            (0, r.jsx)(c.BZ, {
+                                children: (0, r.jsx)(a.XZJ, {
+                                    checked: R,
                                     onChange: () => {
-                                        w(!P);
+                                        P(!R);
                                     },
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: "text-md/semibold",
-                                        children: "Error on Cancel",
-                                    }),
+                                    label: "Error on Cancel",
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(u.E_, {
+                    (0, r.jsx)(c.E_, {
                         label: "Cancellation Modal",
-                        children: (0, r.jsx)(o.zxk, {
+                        children: (0, r.jsx)(a.zxk, {
                             onClick: () => {
-                                j(!0);
+                                L(!0);
                             },
                             variant: "primary",
                             size: "sm",
@@ -376,11 +366,11 @@ let y = () => {
             })
         );
     },
-    O = function () {
+    y = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             { discount: t = {} } = e;
-        return b(
-            g(
+        return E(
+            m(
                 {
                     id: "",
                     discount_id: "",
@@ -389,12 +379,12 @@ let y = () => {
                 e,
             ),
             {
-                discount: g(
+                discount: m(
                     {
                         id: "",
                         plan_ids: [],
                         user_usage_limit: 3,
-                        user_usage_limit_interval: p.EA.MONTH,
+                        user_usage_limit_interval: _.EA.MONTH,
                         user_usage_limit_interval_count: 3,
                         amount: "40",
                     },

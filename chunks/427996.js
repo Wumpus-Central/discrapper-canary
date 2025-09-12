@@ -1,60 +1,55 @@
-n.d(t, { W: () => m });
+n.d(t, { W: () => p });
 var l = n(951288);
 n(647438);
 var i = n(120356),
     r = n.n(i),
     a = n(399606),
-    o = n(755721),
-    s = n(481060),
-    c = n(337682),
-    u = n(115130),
-    d = n(388032),
-    p = n(625234);
-function m(e) {
+    o = n(481060),
+    s = n(337682),
+    c = n(115130),
+    u = n(388032),
+    d = n(625234);
+function p(e) {
     let { hideSearch: t, className: n } = e,
         {
             activityUrlOverride: i,
-            useActivityUrlOverride: m,
-            filter: f,
+            useActivityUrlOverride: p,
+            filter: m,
         } = (0, a.cj)(
-            [u.Z],
+            [c.Z],
             () => ({
-                activityUrlOverride: u.Z.getActivityUrlOverride(),
-                useActivityUrlOverride: u.Z.getUseActivityUrlOverride(),
-                filter: u.Z.getFilter(),
+                activityUrlOverride: c.Z.getActivityUrlOverride(),
+                useActivityUrlOverride: c.Z.getUseActivityUrlOverride(),
+                filter: c.Z.getFilter(),
             }),
             [],
         );
     return (0, l.jsxs)("div", {
-        className: r()(p.container, n),
+        className: r()(d.container, n),
         children: [
-            (0, l.jsx)(o.$q, {
-                type: o.M0.INVERTED,
-                value: m,
-                onClick: c.Y$,
-                children: (0, l.jsx)(s.Text, {
-                    variant: "text-md/semibold",
-                    children: d.intl.string(d.t["3TSGuL"]),
-                }),
+            (0, l.jsx)(o.XZJ, {
+                checked: p,
+                onChange: s.Y$,
+                label: u.intl.string(u.t["3TSGuL"]),
             }),
-            m
-                ? (0, l.jsx)(s.oil, {
-                      label: d.intl.string(d.t["9rnmen"]),
-                      disabled: !m,
+            p
+                ? (0, l.jsx)(o.oil, {
+                      label: u.intl.string(u.t["9rnmen"]),
+                      disabled: !p,
                       value: null != i ? i : void 0,
-                      onChange: c.jS,
+                      onChange: s.jS,
                       placeholder: "https://localhost:3000",
                   })
                 : null,
             !0 === t
                 ? null
                 : (0, l.jsx)("div", {
-                      children: (0, l.jsx)(s.E1j, {
+                      children: (0, l.jsx)(o.E1j, {
                           size: "sm",
-                          query: f,
-                          onChange: c.a8,
+                          query: m,
+                          onChange: s.a8,
                           onClear: function () {
-                              c.a8("");
+                              s.a8("");
                           },
                       }),
                   }),

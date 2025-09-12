@@ -2225,23 +2225,15 @@ function em() {
                         children: "Checkboxes",
                     }),
                     (0, r.jsx)(I.XZJ, {
-                        value: e,
-                        onChange: (e, n) => t(n),
+                        checked: e,
+                        onChange: (e) => t(e),
                         label: "Checkbox input",
-                        children: (0, r.jsx)(I.Text, {
-                            variant: "text-md/medium",
-                            children: "Checkbox input",
-                        }),
                     }),
                     (0, r.jsx)(I.XZJ, {
-                        value: e,
-                        onChange: (e, n) => t(n),
+                        checked: e,
+                        onChange: (e) => t(e),
                         disabled: !0,
                         label: "Disabled checkbox",
-                        children: (0, r.jsx)(I.Text, {
-                            variant: "text-md/medium",
-                            children: "Disabled checkbox",
-                        }),
                     }),
                     (0, r.jsx)(v.$q, {
                         value: e,

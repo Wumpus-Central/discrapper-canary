@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => Z }), n(388685);
 var a = n(951288),
     r = n(647438),
     l = n(120356),
@@ -9,30 +9,29 @@ var a = n(951288),
     d = n(126313),
     u = n(442837),
     m = n(433517),
-    x = n(755721),
     h = n(481060),
     p = n(570140),
-    f = n(812206),
-    v = n(835473),
-    b = n(246992),
-    j = n(681619),
-    g = n(810568),
-    _ = n(168524),
-    y = n(77498),
-    C = n(823379),
-    N = n(550532),
-    E = n(71585),
-    O = n(146282),
+    x = n(812206),
+    b = n(835473),
+    f = n(246992),
+    g = n(681619),
+    v = n(810568),
+    j = n(168524),
+    _ = n(77498),
+    y = n(823379),
+    C = n(550532),
+    N = n(71585),
+    E = n(146282),
     T = n(780106),
     S = n(650613),
-    P = n(789086),
-    w = n(206583),
-    I = n(680027),
-    k = n(451429);
-let R = [
+    O = n(789086),
+    P = n(206583),
+    k = n(680027),
+    R = n(451429);
+let w = [
     {
         key: "type",
-        cellClassName: i()(I.cell, I.cellType),
+        cellClassName: i()(k.cell, k.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(h.Text, {
@@ -43,7 +42,7 @@ let R = [
     },
     {
         key: "count",
-        cellClassName: i()(I.cell, I.cellCount),
+        cellClassName: i()(k.cell, k.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -56,21 +55,21 @@ let R = [
     },
     {
         key: "only?",
-        cellClassName: I.cell,
+        cellClassName: k.cell,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(Z, { type: t });
+            return (0, a.jsx)(I, { type: t });
         },
     },
 ];
-function Z(e) {
+function I(e) {
     var t, n;
     let { type: r } = e,
-        l = (0, u.e7)([O.Z], () => O.Z.getFilters()),
+        l = (0, u.e7)([E.Z], () => E.Z.getFilters()),
         i = null != (n = null == l || null == (t = l.types) ? void 0 : t.has(r)) && n;
-    return (0, a.jsx)(x.$q, {
-        value: i,
-        onClick: function () {
+    return (0, a.jsx)(h.XZJ, {
+        checked: i,
+        onChange: function () {
             i
                 ? p.Z.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
@@ -83,11 +82,11 @@ function Z(e) {
         },
     });
 }
-function A() {
+function Z() {
     var e, t;
-    let n = (0, u.e7)([O.Z], () => O.Z.getFeed(w.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([E.Z], () => E.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,25 +98,25 @@ function A() {
                 };
             });
         })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([O.Z], () => {
+        c = (0, u.e7)([E.Z], () => {
             var e;
-            return (null == (e = O.Z.getFeedState(w.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = E.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [x, Z] = r.useState(""),
-        A = (0, u.e7)([y.Z, f.Z], () => {
+        [I, Z] = r.useState(""),
+        D = (0, u.e7)([_.Z, x.Z], () => {
             var e, t, n;
-            return parseInt(x) > 0
-                ? x
-                : null != (n = null == (e = y.Z.getGameByName(x)) ? void 0 : e.id)
+            return parseInt(I) > 0
+                ? I
+                : null != (n = null == (e = _.Z.getGameByName(I)) ? void 0 : e.id)
                   ? n
-                  : null == (t = f.Z.getApplicationByName(x))
+                  : null == (t = x.Z.getApplicationByName(I))
                     ? void 0
                     : t.id;
-        }, [x]),
-        L = (0, _.Z)({
-            applicationId: A,
+        }, [I]),
+        L = (0, j.Z)({
+            applicationId: D,
             location: "DevToolsContentInventory",
-            source: g.m1.DevTools,
+            source: v.m1.DevTools,
         }),
         M = Object.entries(null != (t = m.K.get("GameProfileModal")) ? t : {})
             .filter((e) => {
@@ -128,23 +127,23 @@ function A() {
                 let [t] = e;
                 return t;
             }),
-        F = (0, v.Z)(M).filter(C.lm),
-        U = (0, u.e7)([N.Z], () => N.Z.getFakeGameToShow());
+        U = (0, b.Z)(M).filter(y.lm),
+        F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
-        className: k.panel,
+        className: R.panel,
         children: (0, a.jsxs)(h.zJl, {
-            className: I.content,
+            className: k.content,
             children: [
                 (0, a.jsxs)(h.hjN, {
                     children: [
                         (0, a.jsx)(h.vwX, { children: "Inventory" }),
                         s.length > 0 &&
-                            (0, a.jsx)(j.Z, {
-                                columns: R,
+                            (0, a.jsx)(g.Z, {
+                                columns: w,
                                 data: s,
                             }),
                         (0, a.jsx)(h.LZC, { size: 8 }),
-                        (0, a.jsx)(P.Z, {}),
+                        (0, a.jsx)(O.Z, {}),
                         (0, a.jsx)(h.zxk, {
                             variant: "primary",
                             text: "Refresh Now",
@@ -152,7 +151,7 @@ function A() {
                             onClick: function () {
                                 p.Z.dispatch({
                                     type: "CONTENT_INVENTORY_MANUAL_REFRESH",
-                                    feedId: w.YN.GLOBAL_FEED,
+                                    feedId: P.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX,
                                 });
                             },
@@ -210,19 +209,19 @@ function A() {
                             onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (x === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
+                                    (I === e.currentTarget.value ? null == L || L(e) : Z(e.currentTarget.value));
                             },
                             error:
-                                x.length > 0 && null == L
-                                    ? "No game profile for ".concat(null != A ? A : x + " - try by id", ".")
+                                I.length > 0 && null == L
+                                    ? "No game profile for ".concat(null != D ? D : I + " - try by id", ".")
                                     : void 0,
                             successMessage: null != L ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
-                            children: F.map((e) =>
+                            children: U.map((e) =>
                                 (0, a.jsx)(
                                     "li",
-                                    { children: (0, a.jsx)(D, { application: e }) },
+                                    { children: (0, a.jsx)(A, { application: e }) },
                                     "follow-game-".concat(e.id),
                                 ),
                             ),
@@ -241,7 +240,7 @@ function A() {
                                 label: e,
                                 value: e,
                             })),
-                            isSelected: (e) => e === U,
+                            isSelected: (e) => e === F,
                             select: function (e) {
                                 p.Z.dispatch({
                                     type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING",
@@ -249,7 +248,7 @@ function A() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: b.O$,
+                            popoutLayerContext: f.O$,
                         }),
                     ],
                 }),
@@ -257,12 +256,12 @@ function A() {
         }),
     });
 }
-let D = (e) => {
+let A = (e) => {
     let { application: t } = e,
-        n = (0, _.Z)({
+        n = (0, j.Z)({
             applicationId: t.id,
             location: "DevToolsContentInventory",
-            source: g.m1.DevTools,
+            source: v.m1.DevTools,
         });
     return (0, a.jsx)(h.P3F, {
         onClick: n,

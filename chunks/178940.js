@@ -1,6 +1,7 @@
-n.d(t, { X: () => u });
-var r = n(951288),
-    i = n(647438),
+n.d(t, { X: () => f });
+var r = n(951288);
+n(647438);
+var i = n(481060),
     a = n(877371),
     o = n(330406),
     s = n(965048);
@@ -33,23 +34,54 @@ function c(e) {
     }
     return e;
 }
-function u(e) {
-    let { disabled: t, displayOnly: n, label: l, value: u, onChange: d } = e,
-        f = (0, a.A)("Checkbox"),
-        _ = i.useCallback(
-            (e) => {
-                let t = { currentTarget: { checked: e } };
-                null == d || d(t, e);
-            },
-            [d],
-        );
-    return f
-        ? (0, r.jsx)(o.C, {
-              disabled: t,
-              displayOnly: n,
-              checked: u,
-              onChange: _,
-              label: l,
-          })
-        : (0, r.jsx)(s.$q, c({}, e));
+function u(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function d(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : u(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function f(e) {
+    let { disabled: t, displayOnly: n, label: l, checked: u, onChange: f, labelSize: _ } = e;
+    if ((0, a.A)("Checkbox"))
+        return (0, r.jsx)(o.C, {
+            disabled: t,
+            displayOnly: n,
+            checked: u,
+            onChange: f,
+            label: l,
+            labelSize: _,
+        });
+    let p =
+        null != l && "" !== l
+            ? (0, r.jsx)(i.Text, {
+                  variant: "small" === _ ? "text-sm/normal" : "text-md/normal",
+                  color: "small" === _ ? "text-secondary" : "text-primary",
+                  children: l,
+              })
+            : null;
+    return (0, r.jsx)(
+        s.$q,
+        d(c({}, e), {
+            value: u,
+            onChange: (e, t) => (null == f ? void 0 : f(t)),
+            children: p,
+        }),
+    );
 }

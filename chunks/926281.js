@@ -1,13 +1,12 @@
-n.d(t, { default: () => p }), n(388685);
+n.d(t, { default: () => d }), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(82659),
-    c = n(755721),
-    s = n(481060),
-    a = n(63063),
-    o = n(981631),
-    u = n(388032);
-function b(e) {
+    c = n(82659),
+    l = n(481060),
+    s = n(63063),
+    a = n(981631),
+    o = n(388032);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +31,7 @@ function b(e) {
     }
     return e;
 }
-function d(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -50,99 +49,95 @@ function d(e, t) {
         e
     );
 }
-function p(e) {
+function d(e) {
     let { modalProps: t, onConfirm: n } = e,
-        [p, g] = i.useState({
+        [d, p] = i.useState({
             Account: {
                 value: "Account",
-                label: u.intl.string(u.t["rfe/x8"]),
+                label: o.intl.string(o.t["rfe/x8"]),
                 checked: !1,
             },
             Analytics: {
                 value: "Analytics",
-                label: u.intl.string(u.t["j+d6RE"]),
+                label: o.intl.string(o.t["j+d6RE"]),
                 checked: !1,
             },
             Activities: {
                 value: "Activities",
-                label: u.intl.string(u.t.KO88BQ),
+                label: o.intl.string(o.t.KO88BQ),
                 checked: !1,
             },
             Ads: {
                 value: "Ads",
-                label: u.intl.string(u.t.wb7QJy),
+                label: o.intl.string(o.t.wb7QJy),
                 checked: !1,
             },
             Messages: {
                 value: "Messages",
-                label: u.intl.string(u.t["0dO1t7"]),
+                label: o.intl.string(o.t["0dO1t7"]),
                 checked: !1,
             },
             Servers: {
                 value: "Servers",
-                label: u.intl.string(u.t.JN9c39),
+                label: o.intl.string(o.t.JN9c39),
                 checked: !1,
             },
             Zendesk: {
                 value: "Zendesk",
-                label: u.intl.string(u.t.yaLeEB),
+                label: o.intl.string(o.t.yaLeEB),
                 checked: !1,
             },
         }),
-        [v, y] = i.useState(!1),
-        O = Object.values(p).some((e) => e.checked);
-    return (0, r.jsx)(l.Modal, {
-        title: u.intl.string(u.t.jxXMEx),
-        subtitle: u.intl.format(u.t.fSv59f, { helpdeskArticle: a.Z.getArticleURL(o.BhN.GDPR_PACKAGE_CONTENTS) }),
+        [g, O] = i.useState(!1),
+        y = Object.values(d).some((e) => e.checked);
+    return (0, r.jsx)(c.Modal, {
+        title: o.intl.string(o.t.jxXMEx),
+        subtitle: o.intl.format(o.t.fSv59f, { helpdeskArticle: s.Z.getArticleURL(a.BhN.GDPR_PACKAGE_CONTENTS) }),
         transitionState: t.transitionState,
         onClose: t.onClose,
         actions: [
             {
-                text: u.intl.string(u.t.jpVjsr),
+                text: o.intl.string(o.t.jpVjsr),
                 onClick: () => {
                     t.onClose();
                 },
                 variant: "secondary",
             },
             {
-                text: u.intl.string(u.t.NYgNg4),
+                text: o.intl.string(o.t.NYgNg4),
                 onClick: () => {
-                    if (!O) return void y(!0);
-                    let e = Object.keys(p)
-                        .filter((e) => p[e].checked)
-                        .map((e) => p[e].value);
+                    if (!y) return void O(!0);
+                    let e = Object.keys(d)
+                        .filter((e) => d[e].checked)
+                        .map((e) => d[e].value);
                     null == n || n(e), t.onClose();
                 },
                 variant: "primary",
             },
         ],
-        children: (0, r.jsxs)(s.Kqy, {
+        children: (0, r.jsxs)(l.Kqy, {
             direction: "vertical",
             gap: 8,
             children: [
-                Object.keys(p).map((e) => {
-                    let { label: t, checked: n } = p[e];
+                Object.keys(d).map((e) => {
+                    let { label: t, checked: n } = d[e];
                     return (0, r.jsx)(
-                        c.$q,
+                        l.XZJ,
                         {
-                            type: c.M0.INVERTED,
-                            value: n,
-                            onChange: (t, n) => {
-                                g((t) => d(b({}, t), { [e]: d(b({}, t[e]), { checked: n }) })), n && v && y(!1);
+                            checked: n,
+                            onChange: (t) => {
+                                p((n) => b(u({}, n), { [e]: b(u({}, n[e]), { checked: t }) })), t && g && O(!1);
                             },
-                            children: (0, r.jsx)(s.Text, {
-                                variant: "text-md/normal",
-                                children: t,
-                            }),
+                            label: t,
                         },
                         e,
                     );
                 }),
-                v &&
-                    (0, r.jsx)(s.Text, {
+                g &&
+                    (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         color: "text-danger",
-                        children: u.intl.string(u.t.W1Rw3N),
+                        children: o.intl.string(o.t.W1Rw3N),
                     }),
             ],
         }),

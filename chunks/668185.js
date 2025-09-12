@@ -1,57 +1,52 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(647438),
     a = n(149765),
     o = n(993365),
-    s = n(755721),
-    l = n(481060),
-    c = n(422559),
-    u = n(388032),
-    d = n(979995);
-function f(e) {
-    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: p } = e,
-        h = i.useMemo(() => a.U_(p.permissions), [p.permissions]);
+    s = n(481060),
+    l = n(422559),
+    c = n(388032),
+    u = n(979995);
+function d(e) {
+    let { application: t, permissions: n, deniedPermissions: d, onPermissionsChange: f, guild: _ } = e,
+        p = i.useMemo(() => a.U_(_.permissions), [_.permissions]);
     i.useEffect(() => {
-        _(!1, a.hX(n, h));
-    }, [h, _, n]);
-    let m = c.VY.filter((e) => a.e$(n, e)),
-        g = m
-            .filter((e) => !a.e$(h, e))
+        f(!1, a.hX(n, p));
+    }, [p, f, n]);
+    let h = l.VY.filter((e) => a.e$(n, e)),
+        m = h
+            .filter((e) => !a.e$(p, e))
             .map((e) => {
-                let t = (0, c.wt)(e),
-                    n = !a.e$(f, e);
+                let t = (0, l.wt)(e),
+                    n = !a.e$(d, e);
                 return (0, r.jsx)(
                     "li",
                     {
-                        className: d.permission,
-                        children: (0, r.jsx)(s.$q, {
-                            value: n,
-                            onChange: (t, n) => _(n, e),
-                            type: s.M0.INVERTED,
-                            children: (0, r.jsx)(o.x, {
-                                variant: "text-md/normal",
-                                children: t,
-                            }),
+                        className: u.permission,
+                        children: (0, r.jsx)(s.XZJ, {
+                            checked: n,
+                            onChange: (t) => f(t, e),
+                            label: t,
                         }),
                     },
                     String(e),
                 );
             }),
-        E = m
-            .filter((e) => a.e$(h, e))
+        g = h
+            .filter((e) => a.e$(p, e))
             .map((e) => {
-                let t = (0, c.wt)(e);
+                let t = (0, l.wt)(e);
                 return (0, r.jsxs)(
                     "li",
                     {
-                        className: d.permission,
+                        className: u.permission,
                         children: [
                             (0, r.jsx)("div", {
-                                className: d.disabledPermissionIcon,
-                                children: (0, r.jsx)(l.Dio, {
+                                className: u.disabledPermissionIcon,
+                                children: (0, r.jsx)(s.Dio, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: d.icon,
+                                    className: u.icon,
                                 }),
                             }),
                             (0, r.jsx)(o.x, {
@@ -64,37 +59,37 @@ function f(e) {
                 );
             });
     return (0, r.jsxs)("div", {
-        className: d.botPermissions,
+        className: u.botPermissions,
         children: [
+            m.length > 0
+                ? (0, r.jsxs)("div", {
+                      children: [
+                          (0, r.jsx)(o.x, {
+                              variant: "text-sm/medium",
+                              color: "header-secondary",
+                              children: c.intl.format(c.t.sOaT2t, {
+                                  applicationName: t.name,
+                                  guildName: _.name,
+                              }),
+                          }),
+                          (0, r.jsx)("ul", {
+                              className: u.permissionsList,
+                              children: m,
+                          }),
+                      ],
+                  })
+                : null,
             g.length > 0
                 ? (0, r.jsxs)("div", {
                       children: [
                           (0, r.jsx)(o.x, {
                               variant: "text-sm/medium",
                               color: "header-secondary",
-                              children: u.intl.format(u.t.sOaT2t, {
-                                  applicationName: t.name,
-                                  guildName: p.name,
-                              }),
+                              children: c.intl.format(c.t.fsOkFx, { applicationName: t.name }),
                           }),
                           (0, r.jsx)("ul", {
-                              className: d.permissionsList,
+                              className: u.permissionsList,
                               children: g,
-                          }),
-                      ],
-                  })
-                : null,
-            E.length > 0
-                ? (0, r.jsxs)("div", {
-                      children: [
-                          (0, r.jsx)(o.x, {
-                              variant: "text-sm/medium",
-                              color: "header-secondary",
-                              children: u.intl.format(u.t.fsOkFx, { applicationName: t.name }),
-                          }),
-                          (0, r.jsx)("ul", {
-                              className: d.permissionsList,
-                              children: E,
                           }),
                       ],
                   })

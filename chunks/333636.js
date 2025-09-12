@@ -1,86 +1,82 @@
-a.d(t, { default: () => A }), a(388685);
+a.d(t, { default: () => c }), a(388685);
 var n = a(951288),
     s = a(647438),
-    l = a(755721),
-    r = a(481060),
-    i = a(238675),
-    o = a(37291),
-    c = a(75485);
-let A = function (e) {
+    l = a(481060),
+    r = a(238675),
+    i = a(37291),
+    o = a(75485);
+let c = function (e) {
     let { onClose: t, transitionState: a } = e,
-        [A, d] = s.useState(null),
-        [u, T] = s.useState(null),
-        [C, h] = s.useState(null),
-        [p, f] = s.useState(""),
-        R = async () => {
-            if (A) {
-                f("");
+        [c, A] = s.useState(null),
+        [u, d] = s.useState(null),
+        [C, T] = s.useState(null),
+        [h, p] = s.useState(""),
+        f = async () => {
+            if (c) {
+                p("");
                 try {
-                    await (0, i.qy)(A, {
+                    await (0, r.qy)(c, {
                         difficulty: null != u ? u : void 0,
                         should_serve_invisible: null != C ? C : void 0,
                     });
                 } catch (e) {
-                    f(e.message);
+                    p(e.message);
                 }
             }
         };
-    return (0, n.jsxs)(r.Y0X, {
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: a,
         parentComponent: "CaptchaTestModal",
         children: [
-            (0, n.jsxs)(r.xBx, {
-                className: c.header,
+            (0, n.jsxs)(l.xBx, {
+                className: o.header,
                 children: [
-                    (0, n.jsx)(r.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         variant: "heading-lg/semibold",
                         children: "Captcha Test Tool",
                     }),
-                    (0, n.jsx)(r.olH, { onClick: t }),
+                    (0, n.jsx)(l.olH, { onClick: t }),
                 ],
             }),
-            (0, n.jsxs)(r.hzk, {
-                className: c.content,
+            (0, n.jsxs)(l.hzk, {
+                className: o.content,
                 children: [
-                    (0, n.jsx)(r.q4e, {
-                        value: A,
-                        options: o.p,
+                    (0, n.jsx)(l.q4e, {
+                        value: c,
+                        options: i.p,
                         onChange: (e) => {
-                            e !== i.fw.HCAPTCHA_RQDATA && e !== i.fw.SMITE_RQDATA && h(null),
-                                e !== i.fw.HCAPTCHA_RQDATA && T(null),
-                                d(e),
-                                f("");
+                            e !== r.fw.HCAPTCHA_RQDATA && e !== r.fw.SMITE_RQDATA && T(null),
+                                e !== r.fw.HCAPTCHA_RQDATA && d(null),
+                                A(e),
+                                p("");
                         },
                     }),
-                    A === i.fw.HCAPTCHA_RQDATA &&
-                        (0, n.jsx)(r.q4e, {
+                    c === r.fw.HCAPTCHA_RQDATA &&
+                        (0, n.jsx)(l.q4e, {
                             value: u,
-                            options: o.Z,
+                            options: i.Z,
                             onChange: (e) => {
-                                A === i.fw.HCAPTCHA_RQDATA && T(e);
+                                c === r.fw.HCAPTCHA_RQDATA && d(e);
                             },
                         }),
-                    (A === i.fw.HCAPTCHA_RQDATA || A === i.fw.SMITE_RQDATA) &&
-                        (0, n.jsx)(l.$q, {
-                            value: null != C && C,
-                            onChange: (e, t) => h(t),
-                            children: (0, n.jsx)(r.Text, {
-                                variant: "text-md/normal",
-                                children: "Should serve invisible?",
-                            }),
+                    (c === r.fw.HCAPTCHA_RQDATA || c === r.fw.SMITE_RQDATA) &&
+                        (0, n.jsx)(l.XZJ, {
+                            checked: null != C && C,
+                            onChange: (e) => T(e),
+                            label: "Should serve invisible?",
                         }),
                 ],
             }),
-            (0, n.jsxs)(r.mzw, {
-                className: c.footer,
+            (0, n.jsxs)(l.mzw, {
+                className: o.footer,
                 children: [
-                    (0, n.jsx)(r.zxk, {
+                    (0, n.jsx)(l.zxk, {
                         variant: "primary",
                         text: "Trigger Captcha",
-                        onClick: R,
-                        disabled: !A,
+                        onClick: f,
+                        disabled: !c,
                     }),
-                    "" !== p && (0, n.jsx)(r.pdY, { error: p }),
+                    "" !== h && (0, n.jsx)(l.pdY, { error: h }),
                 ],
             }),
         ],

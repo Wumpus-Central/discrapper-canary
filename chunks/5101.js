@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     l = n(433517),
     a = n(82659),
-    o = n(755721),
+    o = n(481060),
     s = n(764295),
     c = n(388032);
 let u = "report_to_mod_dont_show_resolve_confirm";
@@ -27,10 +27,10 @@ function d(e) {
                 },
             },
         ],
-        actionBarInput: (0, r.jsx)(o.$q, {
-            value: p,
-            onChange: (e, t) => h(t),
-            children: c.intl.string(s.default["3puq5e"]),
+        actionBarInput: (0, r.jsx)(o.XZJ, {
+            checked: p,
+            onChange: (e) => h(e),
+            label: c.intl.string(s.default["3puq5e"]),
         }),
     });
 }
