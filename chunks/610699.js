@@ -31,8 +31,8 @@ var r = n(951288),
     D = n(967249),
     x = n(245335),
     L = n(388032),
-    j = n(552517);
-function k(e, t, n) {
+    j = n(969016);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function k(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function M(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -207,8 +207,8 @@ function F(e) {
             });
         }),
         j = I.Z.getChannel(null == (n = o.channel) ? void 0 : n.id),
-        k = (0, c.e7)([S.Z], () => null != j && S.Z.can(w.Plq.USE_EMBEDDED_ACTIVITIES, j), [j]),
-        { analyticsLocations: M } = (0, p.ZP)(_.Z.INVITE_EMBED),
+        M = (0, c.e7)([S.Z], () => null != j && S.Z.can(w.Plq.USE_EMBEDDED_ACTIVITIES, j), [j]),
+        { analyticsLocations: k } = (0, p.ZP)(_.Z.INVITE_EMBED),
         U = (0, c.Wu)(
             [f.ZP],
             () =>
@@ -228,27 +228,27 @@ function F(e) {
                     inviter_id: s.author.id,
                     invite_message_id: s.id,
                 },
-                M,
+                k,
             ),
                 d.ZP.acceptInviteAndTransitionToInviteChannel({
                     inviteKey: o.code,
                     context: u("Invite Button Embed"),
-                    analyticsLocations: M,
+                    analyticsLocations: k,
                 });
-        }, [o, s, M, u]),
+        }, [o, s, k, u]),
         Z = o.state === w.r2o.ACCEPTING,
         F = null != O;
     if (null == O) {
         if (null == o.guild) return (0, r.jsx)(P.Z, {});
         O = (0, R.Qs)(o.guild);
     }
-    let H = (F && !k) || (F && N);
+    let H = (F && !M) || (F && N);
     return (F && N && (a = L.intl.string(L.t.wJNK8P)),
-    k || (a = L.intl.string(L.t.hHGrW1)),
+    M || (a = L.intl.string(L.t.hHGrW1)),
     null == o.code || "" === o.code || null == v)
         ? null
         : (0, r.jsx)(p.Gt, {
-              value: M,
+              value: k,
               children: (0, r.jsx)(V, {
                   app: v,
                   activityUsers: G,
@@ -312,7 +312,7 @@ function V(e) {
     return (0, r.jsx)(
         h.W,
         G(
-            M(
+            k(
                 {
                     header: t.name,
                     title: L.intl.string(L.t["7vb6n5"]),
@@ -336,7 +336,7 @@ function V(e) {
                               (0, r.jsx)(m.K, {
                                   activityUsers: n,
                                   guildId: s.id,
-                                  activityText: L.intl.string(L.t.BMTj29),
+                                  activityText: L.intl.formatToPlainString(L.t.yJj039, { count: C }),
                               })
                             : (0, r.jsx)(B, {
                                   members: c,

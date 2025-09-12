@@ -20,29 +20,30 @@ function c(e) {
                 max: 6,
                 size: a.u8.SIZE_16,
             }),
-            (0, r.jsxs)(i.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: "text-xs/normal",
                 color: "none",
-                children: [t.length, " ", o],
+                children: o,
             }),
         ],
     });
 }
 function u(e) {
-    switch (null == e ? void 0 : e.type) {
+    let { activity: t, activityUsersCount: n } = e;
+    switch (null == t ? void 0 : t.type) {
         case o.IIU.STREAMING:
             return {
-                text: s.intl.string(s.t["Jpkr/v"]),
+                text: s.intl.formatToPlainString(s.t.tyCw2t, { count: n }),
                 Icon: i.m3e,
             };
         case o.IIU.LISTENING:
             return {
-                text: s.intl.string(s.t.kUEnxM),
+                text: s.intl.formatToPlainString(s.t["2l8ykZ"], { count: n }),
                 Icon: i.RZG,
             };
         default:
             return {
-                text: s.intl.string(s.t.BMTj29),
+                text: s.intl.formatToPlainString(s.t.yJj039, { count: n }),
                 Icon: i.iWm,
             };
     }
