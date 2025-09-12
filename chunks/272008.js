@@ -545,7 +545,10 @@ async function Q(e, t) {
                 adContext: y.ad_context,
                 placement: e,
             }),
-            m.Z.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !0 }),
+            m.Z.recordQuestRequestApiResponse("/quests/decision", {
+                wasSuccessful: !0,
+                adRequestId: String(y.request_id),
+            }),
             null == v)
         )
             return;
@@ -555,6 +558,7 @@ async function Q(e, t) {
                 R(C({}, (0, u.Z)()), {
                     quest_id: v.id,
                     caller_source: t,
+                    ad_request_id: String(y.request_id),
                 }),
             );
     } catch (n) {

@@ -73,7 +73,10 @@ function _(e) {
                 }),
                 null != n && { mobile_signal_strength_level: n },
             ),
-            { caller_source: e.callerSource },
+            {
+                caller_source: e.callerSource,
+                ad_request_id: e.adRequestId,
+            },
         ),
     );
 }
@@ -85,6 +88,7 @@ class p {
             apiResponseTimestamp: null,
             wasSuccessful: !1,
             callerSource: t,
+            adRequestId: null,
         };
         this.pendingRequests.set(e, n),
             setTimeout(() => {
@@ -93,13 +97,14 @@ class p {
             }, 30000);
     }
     recordQuestRequestApiResponse(e, t) {
-        let { wasSuccessful: n } = t,
-            r = this.pendingRequests.get(e);
-        null != r &&
+        let { wasSuccessful: n, adRequestId: r = null } = t,
+            i = this.pendingRequests.get(e);
+        null != i &&
             (_(
-                d(c({}, r), {
+                d(c({}, i), {
                     apiResponseTimestamp: Date.now(),
                     wasSuccessful: n,
+                    adRequestId: r,
                 }),
             ),
             this.pendingRequests.delete(e));
