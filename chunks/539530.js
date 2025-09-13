@@ -22,9 +22,7 @@ let d = { id: "None" },
                 (t, l) => {
                     let i = e.get(l.skuId),
                         r = (0, o.G1)(null != i ? i : n.get(l.skuId));
-                    return (
-                        r && 1 ? t.premium_purchase.push(l) : null != i ? t.purchase.push(l) : r || t.preview.push(l), t
-                    );
+                    return r ? t.premium_purchase.push(l) : null != i ? t.purchase.push(l) : r || t.preview.push(l), t;
                 },
                 {
                     purchase: [],
