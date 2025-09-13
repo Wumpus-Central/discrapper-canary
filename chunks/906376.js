@@ -8,7 +8,6 @@ e.exports = {
     bannerAspectRatioActivity: "bannerAspectRatioActivity__98ba8",
     header: "header__98ba8",
     contentContainer: "contentContainer__98ba8",
-    contentAndCopyButtonWrapper: "contentAndCopyButtonWrapper__98ba8",
     contentWrapper: "contentWrapper__98ba8",
     cursorPointer: "cursorPointer__98ba8",
     contentWrapperClickable: "contentWrapperClickable__98ba8",
@@ -16,8 +15,7 @@ e.exports = {
     img: "img__98ba8",
     content: "content__98ba8",
     contentInfoWrapper: "contentInfoWrapper__98ba8",
-    linkIcon: "linkIcon__98ba8",
     actionWrapper: "actionWrapper__98ba8",
-    alwaysWhiteText: "alwaysWhiteText__98ba8",
-    primaryButton: "primaryButton__98ba8",
+    buttonWithPossibleDisabledTextWrapper: "buttonWithPossibleDisabledTextWrapper__98ba8",
+    disabledReason: "disabledReason__98ba8",
 };

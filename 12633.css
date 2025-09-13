@@ -64312,27 +64312,21 @@ html .progress__61462 {
 }
 
 .header__98ba8 {
-    align-items: center;
-    color: var(--app-message-embed-secondary-text);
-    display: flex;
-    justify-content: space-between
+    color: var(--app-message-embed-secondary-text)
 }
 
 .contentContainer__98ba8 {
-    flex-direction: column;
-    padding: 12px
-}
-
-.contentAndCopyButtonWrapper__98ba8,
-.contentContainer__98ba8,
-.contentWrapper__98ba8 {
     display: flex;
-    gap: 12px
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px
 }
 
 .contentWrapper__98ba8 {
     --custom-content-size: 64px;
+    display: flex;
     flex: 1;
+    gap: 12px;
     min-width: 0
 }
 
@@ -64369,22 +64363,8 @@ html .progress__61462 {
     overflow: hidden
 }
 
-.contentInfoWrapper__98ba8,
-.linkIcon__98ba8 {
+.contentInfoWrapper__98ba8 {
     color: var(--app-message-embed-secondary-text)
-}
-
-.linkIcon__98ba8 {
-    align-items: flex-start;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-left: 4px;
-    padding: 0
-}
-
-.linkIcon__98ba8 :hover {
-    color: #fff
 }
 
 .actionWrapper__98ba8 {
@@ -64401,37 +64381,16 @@ html .progress__61462 {
     flex: 50%
 }
 
-.alwaysWhiteText__98ba8 {
-    color: inherit !important;
-    justify-content: center
-}
-
-.alwaysWhiteText__98ba8,
-.alwaysWhiteText__98ba8>:first-child {
+.buttonWithPossibleDisabledTextWrapper__98ba8 {
     align-items: center;
-    display: flex
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
 }
 
-.alwaysWhiteText__98ba8 span {
-    margin-left: 4px
-}
-
-.primaryButton__98ba8 {
-    justify-content: center
-}
-
-.primaryButton__98ba8,
-.primaryButton__98ba8>:first-child {
-    align-items: center;
-    display: flex
-}
-
-.primaryButton__98ba8 span {
-    margin-left: 4px
-}
-
-.primaryButton__98ba8:hover {
-    background-color: var(--primary-230)
+.disabledReason__98ba8 {
+    color: var(--app-message-embed-secondary-text);
+    text-align: center
 }
 
 .wrapper__748d7 {

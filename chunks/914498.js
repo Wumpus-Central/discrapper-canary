@@ -1,9 +1,8 @@
 n.d(t, {
     GF: () => s,
     KX: () => o,
-    Yu: () => l,
     j_: () => a,
-    z$: () => c,
+    z$: () => l,
 });
 var r = n(626135),
     i = n(981631),
@@ -44,13 +43,7 @@ function s(e) {
         message_id: c,
     });
 }
-function l(e, t) {
-    r.default.track(i.rMx.APP_EMBED_LINK_COPIED, {
-        application_id: e,
-        link_type: t,
-    });
-}
-function c(e, t, n, a) {
+function l(e, t, n, a) {
     r.default.track(i.rMx.APP_EMBED_LINK_SENT, {
         application_id: e,
         link_type: t,

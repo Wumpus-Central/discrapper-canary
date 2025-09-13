@@ -74,7 +74,7 @@ function f(e) {
         d = {
             disabled: !1,
             isJoinAction: !c,
-            text: c ? o.intl.string(o.t.I0v0Qk) : o.intl.string(o.t.sqe0ho),
+            text: c ? o.intl.string(o.t.RscU7O) : o.intl.string(o.t.sqe0ho),
             tooltip: void 0,
         },
         f = (0, i.WS)(s);
@@ -82,7 +82,7 @@ function f(e) {
         return u(l({}, d), {
             disabled: !0,
             text: o.intl.string(o.t.DPfdsr),
-            tooltip: o.intl.string(o.t.wJNK8P),
+            tooltip: void 0,
         });
     if (c)
         return u(l({}, d), {

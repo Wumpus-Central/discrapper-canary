@@ -1,5 +1,5 @@
 n.d(t, {
-    O: () => k,
+    O: () => M,
     U: () => x.U,
 }),
     n(539854),
@@ -39,97 +39,101 @@ var r = n(951288),
     D = n(515344),
     x = n(967249),
     L = n(388032),
-    j = n(299650);
-function k(e) {
+    j = n(217648);
+function M(e) {
     var t;
-    let { app: n, embedUrl: a, linkType: o, activityCustomId: l, activityReferrerId: m, message: g, onView: E } = e,
-        { name: O, bot: v } = (n = (0, P.O)(n)),
-        I = null == v ? void 0 : v.id,
-        S = (0, p.ye)(n),
-        N = T.ZP.getApplicationIconURL({
+    let { app: n, linkType: a, activityCustomId: o, activityReferrerId: l, message: m, onView: g } = e,
+        { name: E, bot: O } = (n = (0, P.O)(n)),
+        v = null == O ? void 0 : O.id,
+        I = (0, p.ye)(n),
+        S = T.ZP.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
-            bot: v,
+            bot: O,
         }),
-        { staticBannerSrc: x, videoBannerSrc: j, bannerAspectRatio: k } = (0, w.E)(n),
-        G = (0, s.e7)([b.default], () => (null != m ? m : b.default.getId()), [m]),
-        { analyticsLocations: B } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
-        { currentChannelId: Z, instanceId: F, isCurrentlyInInstance: V, canLaunchInChannel: H } = (0, A.c)(n.id),
-        Y = (0, u.Z)(),
-        W = (0, h.ms)({
+        { staticBannerSrc: N, videoBannerSrc: x, bannerAspectRatio: j } = (0, w.E)(n),
+        M = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
+        { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { currentChannelId: B, instanceId: Z, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, A.c)(n.id),
+        H = (0, u.Z)(),
+        Y = (0, h.ms)({
             context: { type: "contextless" },
             applicationId: n.id,
-            botUserId: null == v ? void 0 : v.id,
+            botUserId: null == O ? void 0 : O.id,
         }),
-        K = null != I && S && W,
-        z = H && S,
-        q = (0, D.G)(n),
-        X = (0, D.z)(n),
-        Q = i.useMemo(() => {
+        W = null != v && I && Y,
+        K = V && I,
+        z = (0, D.G)(n),
+        q = (0, D.z)(n),
+        X = i.useMemo(() => {
             let e = [];
             return (
-                S
-                    ? (z &&
+                I
+                    ? (K &&
                           e.push({
-                              label: null == F ? L.intl.string(L.t.RscU7O) : L.intl.string(L.t.VJlc0d),
+                              label:
+                                  null == Z
+                                      ? L.intl.string(L.t.RscU7O)
+                                      : F
+                                        ? L.intl.string(L.t.DPfdsr)
+                                        : L.intl.string(L.t.sqe0ho),
                               trackingArea: R.j_.PLAY,
                               onClick() {
                                   (0, c.G6)({
-                                      channelId: null != Z ? Z : void 0,
+                                      channelId: null != B ? B : void 0,
                                       applicationId: n.id,
-                                      isStart: null == F,
-                                      embeddedActivitiesManager: Y,
-                                      customId: l,
-                                      referrerId: G,
-                                      analyticsLocations: B,
+                                      isStart: null == Z,
+                                      embeddedActivitiesManager: H,
+                                      customId: o,
+                                      referrerId: M,
+                                      analyticsLocations: G,
                                   });
                               },
-                              disabledReason: V ? L.intl.string(L.t.wJNK8P) : void 0,
+                              disabled: F,
                           }),
-                      !z &&
-                          K &&
+                      !K &&
+                          W &&
                           e.push({
                               label: L.intl.string(L.t.JeK1Wl),
                               trackingArea: R.j_.PLAY,
                               onClick() {
                                   (0, _.W)({
                                       appId: n.id,
-                                      botId: I,
-                                      analyticsLocations: B,
-                                      customId: l,
-                                      referrerId: G,
+                                      botId: v,
+                                      analyticsLocations: G,
+                                      customId: o,
+                                      referrerId: M,
                                   });
                               },
                           }))
-                    : null != X && e.push(X),
+                    : null != q && e.push(q),
                 e
             );
-        }, [z, K, F, V, Z, n.id, Y, l, G, B, S, X, I]),
-        J = S ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(M, { app: n });
+        }, [K, W, Z, F, B, n.id, H, o, M, G, I, q, v]),
+        Q = I ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
     return (0, r.jsx)(C.W, {
-        title: O,
-        staticBannerSrc: x,
-        videoBannerSrc: j,
-        onClickBanner: q,
-        bannerAspectRatio: k,
-        iconSrc: N,
-        embedUrl: a,
-        info: J,
-        actions: Q,
-        onClickContent: q,
+        title: E,
+        staticBannerSrc: N,
+        videoBannerSrc: x,
+        onClickBanner: z,
+        bannerAspectRatio: j,
+        iconSrc: S,
+        info: Q,
+        actions: X,
+        onClickContent: z,
         trackingConfig: {
             id: n.id,
-            linkType: o,
-            referrerId: G,
-            activityCustomId: l,
-            onView: E,
-            guildId: null == (t = y.Z.getChannel(g.channel_id)) ? void 0 : t.guild_id,
-            channelId: g.channel_id,
-            messageId: g.id,
+            linkType: a,
+            referrerId: M,
+            activityCustomId: o,
+            onView: g,
+            guildId: null == (t = y.Z.getChannel(m.channel_id)) ? void 0 : t.guild_id,
+            channelId: m.channel_id,
+            messageId: m.id,
         },
     });
 }
-function M(e) {
+function k(e) {
     var t, n, o;
     let { app: c } = e,
         u =

@@ -20,58 +20,58 @@ var r = n(951288),
     O = n(388032);
 function v(e) {
     var t, n, v;
-    let { application: I, customId: T, customLink: S, embedUrl: A, referrerId: C, message: N } = e,
-        R = null == I || null == (t = I.bot) ? void 0 : t.id,
-        P = (0, c.ms)({
+    let { application: I, customId: T, customLink: S, referrerId: A, message: C } = e,
+        N = null == I || null == (t = I.bot) ? void 0 : t.id,
+        R = (0, c.ms)({
             context: { type: "contextless" },
             applicationId: I.id,
             botUserId: null == I || null == (n = I.bot) ? void 0 : n.id,
         }),
-        w = null != I && (0, l.ye)(I),
-        D = null != R && w && P,
-        { analyticsLocations: x } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
-        L = (0, i.e7)([h.Z], () => h.Z.getChannelId()),
-        j = (0, y.KF)(L),
-        k = (0, i.e7)([E.ZP], () => {
-            if (null == L) return;
-            let e = E.ZP.getEmbeddedActivitiesForChannel(L).filter((e) => e.applicationId === I.id);
+        P = null != I && (0, l.ye)(I),
+        w = null != N && P && R,
+        { analyticsLocations: D } = (0, o.ZP)(a.Z.ACTIVITY_CUSTOM_LINK),
+        x = (0, i.e7)([h.Z], () => h.Z.getChannelId()),
+        L = (0, y.KF)(x),
+        j = (0, i.e7)([E.ZP], () => {
+            if (null == x) return;
+            let e = E.ZP.getEmbeddedActivitiesForChannel(x).filter((e) => e.applicationId === I.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
         M = (0, i.e7)([E.ZP], () => E.ZP.getCurrentEmbeddedActivity()),
-        U = (0, b.Z)(),
-        G = j === y.jy.CAN_LAUNCH,
+        k = (0, b.Z)(),
+        U = L === y.jy.CAN_LAUNCH,
+        G = null != j && (null == M ? void 0 : M.compositeInstanceId) === j,
         B = null != T ? T : S.customId,
         Z = [];
-    G &&
+    U &&
         Z.push({
-            label: null == k ? O.intl.string(O.t.RscU7O) : O.intl.string(O.t.VJlc0d),
+            label: null == j ? O.intl.string(O.t.RscU7O) : G ? O.intl.string(O.t.DPfdsr) : O.intl.string(O.t.sqe0ho),
             trackingArea: f.j_.PLAY,
             onClick() {
                 (0, g.G6)({
-                    channelId: null != L ? L : void 0,
+                    channelId: null != x ? x : void 0,
                     applicationId: I.id,
-                    isStart: null == k,
-                    embeddedActivitiesManager: U,
+                    isStart: null == j,
+                    embeddedActivitiesManager: k,
                     customId: B,
-                    referrerId: C,
-                    analyticsLocations: x,
+                    referrerId: A,
+                    analyticsLocations: D,
                 });
             },
-            disabledReason:
-                null != k && (null == M ? void 0 : M.compositeInstanceId) === k ? O.intl.string(O.t.wJNK8P) : void 0,
+            disabled: G,
         }),
-        D &&
-            !G &&
+        w &&
+            !U &&
             Z.push({
                 label: O.intl.string(O.t.JeK1Wl),
                 trackingArea: f.j_.PLAY,
                 onClick() {
                     (0, s.W)({
                         appId: I.id,
-                        botId: R,
-                        analyticsLocations: x,
+                        botId: N,
+                        analyticsLocations: D,
                         customId: B,
-                        referrerId: C,
+                        referrerId: A,
                     });
                 },
             });
@@ -79,7 +79,6 @@ function v(e) {
     return (0, r.jsx)(d.W, {
         actions: Z,
         onClickContent: F,
-        embedUrl: A,
         header: I.name,
         iconSrc: m.ZP.getApplicationIconURL({
             id: I.id,
@@ -92,11 +91,11 @@ function v(e) {
         trackingConfig: {
             id: I.id,
             linkType: u.U.CUSTOM_ACTIVITY_LINK,
-            referrerId: C,
+            referrerId: A,
             activityCustomId: B,
-            guildId: null == (v = p.Z.getChannel(N.channel_id)) ? void 0 : v.guild_id,
-            channelId: N.channel_id,
-            messageId: N.id,
+            guildId: null == (v = p.Z.getChannel(C.channel_id)) ? void 0 : v.guild_id,
+            channelId: C.channel_id,
+            messageId: C.id,
         },
     });
 }

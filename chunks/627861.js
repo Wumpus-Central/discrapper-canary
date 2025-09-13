@@ -132,6 +132,7 @@ function em(e) {
                     onClick: () => {
                         O.onClick();
                     },
+                    disabled: O.disabled,
                     disabledReason: O.disabled ? O.tooltip : void 0,
                 });
             }
@@ -366,10 +367,7 @@ function eb(e) {
                     ? null
                     : {
                           label: eu.intl.string(eu.t["jaYS/v"]),
-                          icon: (0, r.jsx)(c.v3n, {
-                              size: "refresh_sm",
-                              color: "currentColor",
-                          }),
+                          icon: c.v3n,
                           trackingArea: m.j_.CLOUD_PLAY,
                           onClick: eo,
                       },
@@ -448,6 +446,7 @@ function eb(e) {
                                           location: es.Sbl.MESSAGE_EMBED,
                                       });
                               },
+                              disabled: P.author.id === C,
                               disabledReason: P.author.id === C ? eu.intl.string(eu.t.IBl8IC) : void 0,
                           }
                         : em
@@ -455,7 +454,7 @@ function eb(e) {
                                 label: eu.intl.string(eu.t.KC26NT),
                                 trackingArea: m.j_.PLAY,
                                 onClick: () => {},
-                                disabledReason: eu.intl.string(eu.t.KC26NT),
+                                disabled: !0,
                             }
                           : null != ec
                             ? ec
