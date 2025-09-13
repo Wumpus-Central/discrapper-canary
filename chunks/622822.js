@@ -5,6 +5,7 @@ n.d(t, {
     RW: () => H,
     Y3: () => q,
     Yt: () => R,
+    _I: () => x,
     _t: () => K,
     a1: () => G,
     bN: () => N,
@@ -247,15 +248,16 @@ let B = () => {
     H = (e) => !!V(e) && ((0, m.mN)(g.L0.NSFW_VOICE_CHANNEL), !0);
 function Y(e, t, n) {
     if (P(e)) return void (0, m.mN)(g.L0.ACCESS_LARGE_GUILD_UNDERAGE);
-    if (Q()) {
-        if (Z(e)) {
-            let e = null != n && C.includes(n) ? n : g.L0.NSFW_SERVER;
-            (0, m.mN)(e);
-            return;
-        }
-        if (x(e)) return void (0, m.mN)(g.L0.LARGE_GUILD);
-        if (F(t)) return void (0, m.mN)(null != n ? n : g.L0.NSFW_CHANNEL);
+    if (Z(e)) {
+        let e = null != n && C.includes(n) ? n : g.L0.NSFW_SERVER;
+        (0, m.mN)(e);
+        return;
     }
+    return x(e)
+        ? void (0, m.mN)(g.L0.LARGE_GUILD)
+        : Q() && F(t)
+          ? void (0, m.mN)(null != n ? n : g.L0.NSFW_CHANNEL)
+          : void 0;
 }
 let W = (e) => null != e && (e.isNSFW() || (0, c.Y2)(f.Z.getGuild(e.guild_id))),
     K = (e) => {

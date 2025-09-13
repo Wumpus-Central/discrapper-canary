@@ -1,20 +1,21 @@
 n.d(t, {
-    AY: () => P,
-    F5: () => R,
-    Jm: () => O,
-    L0: () => T,
-    L5: () => b,
-    M$: () => v,
-    WD: () => N,
-    g0: () => I,
-    kJ: () => A,
-    l6: () => C,
-    pY: () => S,
-    sf: () => E,
-    yo: () => y,
+    AY: () => x,
+    F5: () => D,
+    Jm: () => T,
+    L0: () => C,
+    L5: () => v,
+    M$: () => S,
+    WD: () => w,
+    bj: () => y,
+    g0: () => A,
+    kJ: () => R,
+    l6: () => P,
+    pY: () => N,
+    sf: () => O,
+    yo: () => I,
 }),
-    n(35282),
-    n(388685);
+    n(388685),
+    n(35282);
 var r = n(647438),
     i = n(442837),
     a = n(570140),
@@ -29,34 +30,44 @@ var r = n(647438),
     p = n(352138),
     h = n(469775),
     m = n(981631),
-    g = n(484710);
-function E() {
-    let e = f.default.getCurrentUser();
-    return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
-}
-function b() {
-    let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
-    return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
-}
-function y() {
-    let e = f.default.getCurrentUser();
-    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
-}
+    g = n(723359),
+    E = n(484710);
+let b = new Set([
+        g.L0.NSFW_SERVER,
+        g.L0.NSFW_SERVER_INVITE,
+        g.L0.NSFW_SERVER_INVITE_EMBED,
+        g.L0.LARGE_GUILD,
+        g.L0.JOIN_LARGE_GUILD_UNDERAGE,
+        g.L0.ACCESS_LARGE_GUILD_UNDERAGE,
+    ]),
+    y = (e) => b.has(e);
 function O() {
-    let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
-    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
+    let e = f.default.getCurrentUser();
+    return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
 }
 function v() {
+    let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
+    return (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.VERIFIED_ADULT;
+}
+function I() {
+    let e = f.default.getCurrentUser();
+    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
+}
+function T() {
+    let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
+    return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
+}
+function S() {
     let e = f.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }
-var I = (function (e) {
+var A = (function (e) {
         return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
     })({}),
-    T = (function (e) {
+    C = (function (e) {
         return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
-function S(e, t) {
+function N(e, t) {
     let n = d.Z.getMessage(e, t);
     if (
         null == n ||
@@ -69,21 +80,21 @@ function S(e, t) {
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return null == r ? void 0 : r.rawValue.split(",").includes("retry");
 }
-function A() {
+function R() {
     let e = f.default.getCurrentUser();
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function C() {
+function P() {
     let e = (0, i.e7)([f.default], () => f.default.getCurrentUser());
     return (
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.UNVERIFIED &&
         (null == e ? void 0 : e.ageVerificationStatus) !== o.F$.CLIENT_ONLY_PENDING
     );
 }
-function N(e) {
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -118,7 +129,7 @@ function N(e) {
                         shouldShowExpressiveModal: o,
                     });
                 } catch (e) {
-                    l.Z.showFailedToast(g.wQ.TIGGER_PAWTECT_ERROR), m();
+                    l.Z.showFailedToast(E.wQ.TIGGER_PAWTECT_ERROR), m();
                 } finally {
                     u(!1);
                 }
@@ -127,7 +138,7 @@ function N(e) {
         ),
     };
 }
-function R(e) {
+function D(e) {
     let t = (0, i.e7)([f.default], () => {
             var e;
             return null == (e = f.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus;
@@ -141,6 +152,6 @@ function R(e) {
         (l || c) && e();
     }, [e, l, c]);
 }
-function P(e) {
+function x(e) {
     return null != e && h.dx.has(e);
 }
