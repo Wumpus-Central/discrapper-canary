@@ -1,38 +1,41 @@
-n.d(t, { Q: () => u });
-var i = n(951288);
+n.d(t, { Q: () => d });
+var r = n(951288);
 n(647438);
-var r = n(442837),
-    o = n(481060),
-    l = n(594190),
-    a = n(809357),
-    s = n(44359),
-    c = n(388032);
-function u(e, t, n, r) {
-    return (0, i.jsx)(d, {
+var i = n(442837),
+    a = n(481060),
+    o = n(594190),
+    s = n(865066),
+    l = n(809357),
+    c = n(44359),
+    u = n(388032);
+function d(e, t, n, i) {
+    return (0, r.jsx)(f, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n,
-        highlightAdminWarningIfElevated: r,
+        highlightAdminWarningIfElevated: i,
     });
 }
-function d(e) {
-    let { keybind: t, message: n, messageWithoutKeybind: u, highlightAdminWarningIfElevated: d = !1 } = e,
-        p = (0, a.o)();
-    return (0, r.e7)([l.ZP], () => {
-        let e = l.ZP.getVisibleGame();
-        return null != e && e.elevated && l.ZP.canShowAdminWarning;
-    })
-        ? (0, i.jsx)(o.Text, {
+function f(e) {
+    let { keybind: t, message: n, messageWithoutKeybind: d, highlightAdminWarningIfElevated: f = !1 } = e,
+        _ = (0, l.o)(),
+        p = (0, i.e7)([o.ZP], () => {
+            let e = o.ZP.getVisibleGame();
+            return null != e && e.elevated && o.ZP.canShowAdminWarning;
+        }),
+        h = (0, s.hi)();
+    return p
+        ? (0, r.jsx)(a.Text, {
               variant: "text-xxs/semibold",
-              color: d ? "text-feedback-warning" : "text-muted",
-              children: c.intl.string(c.t.PIeSHB),
+              color: f ? "text-feedback-warning" : "text-muted",
+              children: h ? u.intl.string(u.t.rqNDQk) : u.intl.string(u.t.PIeSHB),
           })
-        : p
-          ? (0, i.jsx)(i.Fragment, {
-                children: c.intl.format(n, {
+        : _
+          ? (0, r.jsx)(r.Fragment, {
+                children: u.intl.format(n, {
                     keybind: t,
-                    keybindHook: (e) => (0, i.jsx)(s.Z, { keybind: t }, t.join("+")),
+                    keybindHook: (e) => (0, r.jsx)(c.Z, { keybind: t }, t.join("+")),
                 }),
             })
-          : u;
+          : d;
 }

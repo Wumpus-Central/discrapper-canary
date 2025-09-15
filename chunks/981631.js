@@ -5934,6 +5934,7 @@ var nK = (function (e) {
             (e.FLAG_TO_MOD = "360044103651"),
             (e.CUSTOM_THEMES = "207260127#h_01JWYFJDVN6E9G80JTN2N86876"),
             (e.DISPLAY_NAME_STYLES = "33833879643927"),
+            (e.SYSTEM_SERVICE = "34853435033367"),
             (e.IN_GAME_FEATURES = "27893392334359"),
             e
         );

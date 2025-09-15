@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -6,12 +6,13 @@ var r = n(951288),
     s = n(923928),
     l = n(468026),
     c = n(594190),
-    u = n(131951),
-    d = n(19780),
-    f = n(63063),
-    _ = n(981631),
-    p = n(388032);
-function h(e, t, n) {
+    u = n(865066),
+    d = n(131951),
+    f = n(19780),
+    _ = n(63063),
+    p = n(981631),
+    h = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,53 +36,53 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-let g = () => {
+function E() {
     let [e, t] = (0, a.Wu)([c.ZP], () => [c.ZP.canShowAdminWarning, c.ZP.getVisibleGame()], []),
-        n = (0, a.e7)([d.Z], () => d.Z.isConnected(), []),
-        h = (0, a.e7)([u.Z], () => u.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
-        g = null != t && t.elevated && n && h && e,
-        E = i.useRef(null);
-    function b() {
-        null !== E.current && ((0, o.Mr3)(E.current), (E.current = null));
-    }
+        n = (0, a.e7)([f.Z], () => f.Z.isConnected(), []),
+        m = (0, a.e7)([d.Z], () => d.Z.getMode() === p.pM4.PUSH_TO_TALK, []),
+        E = null != t && t.elevated && n && m && e,
+        b = i.useRef(null);
     return (
-        i.useEffect(
-            () => (
-                g
-                    ? (E.current = (0, o.h7j)((e) =>
-                          (0, r.jsx)(
-                              l.default,
-                              m(
-                                  {
-                                      title: p.intl.string(p.t.eotlXF),
-                                      body: p.intl.formatToPlainString(p.t.Lw6KXV, {
-                                          game: null == t ? void 0 : t.name,
-                                      }),
-                                      secondaryConfirmText: p.intl.string(p.t["5E9SBw"]),
-                                      onConfirmSecondary: () => s.Z.clearPTTAdminWarning(),
-                                      onConfirm: () =>
-                                          window.open(
-                                              f.Z.getArticleURL(_.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE),
-                                              "_blank",
-                                          ),
-                                      confirmText: p.intl.string(p.t.psXQHB),
-                                  },
-                                  e,
+        i.useEffect(() => {
+            if (!(0, u.s2)(c.ZP))
+                return (
+                    E
+                        ? (b.current = (0, o.h7j)((e) =>
+                              (0, r.jsx)(
+                                  l.default,
+                                  g(
+                                      {
+                                          title: h.intl.string(h.t.eotlXF),
+                                          body: h.intl.formatToPlainString(h.t.Lw6KXV, {
+                                              game: null == t ? void 0 : t.name,
+                                          }),
+                                          secondaryConfirmText: h.intl.string(h.t["5E9SBw"]),
+                                          onConfirmSecondary: () => s.Z.clearPTTAdminWarning(),
+                                          onConfirm: () =>
+                                              window.open(
+                                                  _.Z.getArticleURL(p.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE),
+                                                  "_blank",
+                                              ),
+                                          confirmText: h.intl.string(h.t.psXQHB),
+                                      },
+                                      e,
+                                  ),
                               ),
-                          ),
-                      ))
-                    : b(),
-                () => {
-                    b();
-                }
-            ),
-            [t, g],
-        ),
+                          ))
+                        : e(),
+                    () => {
+                        e();
+                    }
+                );
+            function e() {
+                null !== b.current && ((0, o.Mr3)(b.current), (b.current = null));
+            }
+        }, [t, E]),
         null
     );
-};
+}

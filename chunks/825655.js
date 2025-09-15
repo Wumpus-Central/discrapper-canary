@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(120356),
     a = n.n(i),
@@ -7,22 +7,23 @@ var r = n(951288),
     l = n(137920),
     c = n(925329),
     u = n(131951),
-    d = n(865066),
-    f = n(981631),
-    _ = n(388032),
-    p = n(685383);
-function h(e) {
+    d = n(63063),
+    f = n(865066),
+    _ = n(981631),
+    p = n(388032),
+    h = n(685383);
+function m(e) {
     let { game: t, application: n } = e;
     return null == t || null == n
         ? (0, r.jsx)("div", {
-              className: p.iconContainer,
+              className: h.iconContainer,
               children: (0, r.jsx)(s.Mgn, {
                   size: "sm",
                   color: s.TVs.colors.TEXT_FEEDBACK_WARNING,
               }),
           })
         : (0, r.jsxs)("div", {
-              className: p.gameIconContainer,
+              className: h.gameIconContainer,
               children: [
                   (0, r.jsx)(c.Z, {
                       game: n,
@@ -30,7 +31,7 @@ function h(e) {
                       size: c.A.MEDIUM,
                   }),
                   (0, r.jsx)("div", {
-                      className: p.warningCorner,
+                      className: h.warningCorner,
                       children: (0, r.jsx)(s.Mgn, {
                           size: "sm",
                           color: s.TVs.colors.TEXT_FEEDBACK_WARNING,
@@ -39,52 +40,54 @@ function h(e) {
               ],
           });
 }
-function m(e, t) {
+function g(e, t) {
     return "voice" === e
-        ? _.intl.string(_.t.vxfv7u)
+        ? p.intl.string(p.t.vxfv7u)
         : null != t
-          ? _.intl.string(_.t.fAYU2N)
-          : _.intl.string(_.t["9V4X/f"]);
+          ? p.intl.string(p.t.fAYU2N)
+          : p.intl.string(p.t["9V4X/f"]);
 }
-function g(e) {
+function E(e) {
     let { className: t, sourcePage: n } = e,
         i = (0, o.e7)([u.Z], () => u.Z.getMode()),
-        { runningGame: c, runningGameApplication: g } = (0, l.Z)();
+        { runningGame: c, runningGameApplication: E } = (0, l.Z)();
     if (
-        (null == c || c.elevated || ((c = void 0), (g = void 0)),
-        !(0, d.hi)() || ("voice" === n && (null == c || i !== f.pM4.PUSH_TO_TALK)))
+        (null == c || c.elevated || ((c = void 0), (E = void 0)),
+        !(0, f.hi)() || ("voice" === n && (null == c || i !== _.pM4.PUSH_TO_TALK)))
     )
         return null;
-    function E() {
-        (0, d.sU)(n + (null != c ? "-with-game" : "-no-game"));
+    function b() {
+        (0, f.sU)(n + (null != c ? "-with-game" : "-no-game"));
     }
     return (0, r.jsxs)("div", {
-        className: a()(p.container, t),
+        className: a()(h.container, t),
         children: [
-            (0, r.jsx)(h, {
+            (0, r.jsx)(m, {
                 game: c,
-                application: g,
+                application: E,
             }),
             (0, r.jsxs)("div", {
-                className: p.textContainer,
+                className: h.textContainer,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-primary",
-                        children: m(n, c),
+                        children: g(n, c),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: _.intl.string(_.t["5q00+P"]),
+                        children: p.intl.format(p.t["/y6htr"], {
+                            helpCenterLink: d.Z.getArticleURL(_.BhN.SYSTEM_SERVICE),
+                        }),
                     }),
                 ],
             }),
             (0, r.jsx)(s.zxk, {
                 variant: "secondary",
                 size: "sm",
-                text: _.intl.string(_.t["1iI46O"]),
-                onClick: E,
+                text: p.intl.string(p.t["1iI46O"]),
+                onClick: b,
             }),
         ],
     });

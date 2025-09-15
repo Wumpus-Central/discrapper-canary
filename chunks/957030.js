@@ -11,8 +11,7 @@ function d() {
     (0, l.sU)("nagbar");
 }
 function f() {
-    let e = (0, i.e7)([s.ZP], () => s.ZP.getVisibleGame());
-    return null == e
+    return null == (0, i.e7)([s.ZP], () => s.ZP.getVisibleGame())
         ? null
         : (0, r.jsxs)(a.qXd, {
               color: a.DM8.DANGER,
@@ -21,7 +20,7 @@ function f() {
                       noticeType: c.kVF.SYSTEM_SERVICE_WARNING,
                       onClick: () => (0, o.c)(),
                   }),
-                  u.intl.format(u.t.kxePRk, { gameName: e.name }),
+                  u.intl.string(u.t["5rPt+v"]),
                   (0, r.jsx)(a.NoS, {
                       onClick: d,
                       noticeType: c.kVF.SYSTEM_SERVICE_WARNING,

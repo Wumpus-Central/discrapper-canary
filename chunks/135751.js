@@ -19,18 +19,16 @@ function i(e, t, n) {
 let s = new o.Yd("SimpleMuxWrapper");
 class c {
     initialize() {
-        var e, t, n;
-        let o = null != (t = null == (e = window.GLOBAL_ENV) ? void 0 : e.MUX_ENV_KEY) ? t : null;
-        if (null == o || 0 === o.length) return;
-        let l = {
-            debug: null != (n = this.config.debug) && n,
+        var e;
+        let t = {
+            debug: null != (e = this.config.debug) && e,
             disableCookies: !0,
             respectDoNotTrack: !0,
             data: a.v.mapDiscordToMuxMetadata(this.config, this.sessionId),
         };
-        null != this.hlsInstance && ((l.hlsjs = this.hlsInstance), (l.Hls = this.hlsInstance.constructor));
+        null != this.hlsInstance && ((t.hlsjs = this.hlsInstance), (t.Hls = this.hlsInstance.constructor));
         try {
-            r.Z.monitor(this.videoElement, l), (this.isMonitoring = !0);
+            r.Z.monitor(this.videoElement, t), (this.isMonitoring = !0);
         } catch (e) {
             s.error("Error creating Mux monitor", e), (this.isMonitoring = !1);
         }
