@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(512722),
     i = n.n(r),
     a = n(911969),
@@ -31,8 +31,22 @@ let l = (e, t, n) => {
                     max: r,
                 })
               : null;
+    },
+    u = (e, t) => {
+        var n;
+        let { minValues: r, maxValues: i, required: a } = e,
+            s = null != (n = null == t ? void 0 : t.uploadIds.length) ? n : 0;
+        return 0 === s
+            ? a
+                ? o.intl.string(o.t["9ovjIC"])
+                : null
+            : s < r
+              ? o.intl.formatToPlainString(o.t["pmAt6+"], { minValues: r })
+              : s > i
+                ? o.intl.formatToPlainString(o.t.dy6viI, { maxValues: i })
+                : null;
     };
-function u(e, t, n) {
+function d(e, t, n) {
     switch ((null != t && i()(t.type === e.type, "component type matches state"), e.type)) {
         case a.re.BUTTON:
             return null;
@@ -44,6 +58,8 @@ function u(e, t, n) {
             return l(e, t, n);
         case a.re.TEXT_INPUT:
             return c(e, t);
+        case a.re.FILE_UPLOAD:
+            return u(e, t);
         default:
             i()(!1, "missing validator for this component");
     }

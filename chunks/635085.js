@@ -5,6 +5,8 @@ var r = {
     tags: "tags__41ea0",
     altTag: "altTag__41ea0",
     spoilerContainer: "spoilerContainer__41ea0",
+    sizeXSmall: "sizeXSmall__41ea0",
+    sizeXXSmall: "sizeXXSmall__41ea0",
     spoilerWrapper: "spoilerWrapper__41ea0",
     media: "media__41ea0",
     sizeClip: "sizeClip__41ea0",

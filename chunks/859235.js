@@ -89,7 +89,14 @@ function O(e, t) {
     return i;
 }
 var v = (function (e) {
-    return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.MEDIUM = 1)] = "MEDIUM"), (e[(e.CLIP = 2)] = "CLIP"), e;
+    return (
+        (e[(e.SMALL = 0)] = "SMALL"),
+        (e[(e.MEDIUM = 1)] = "MEDIUM"),
+        (e[(e.CLIP = 2)] = "CLIP"),
+        (e[(e.XXSMALL = 3)] = "XXSMALL"),
+        (e[(e.XSMALL = 4)] = "XSMALL"),
+        e
+    );
 })({});
 function I(e) {
     e.stopPropagation();

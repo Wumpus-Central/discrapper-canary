@@ -76,6 +76,7 @@ var E = (function (e) {
         (e[(e.Poll = 4)] = "Poll"),
         (e[(e.SlashCommand = 5)] = "SlashCommand"),
         (e[(e.ForwardContextMessage = 6)] = "ForwardContextMessage"),
+        (e[(e.InteractionModal = 7)] = "InteractionModal"),
         e
     );
 })({});

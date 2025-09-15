@@ -85,13 +85,13 @@ function C(e, t) {
 }
 let N = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function R(e) {
-    let { alt: t, spoiler: n, renderContent: a, size: o } = e,
-        [s, l] = i.useState(!1);
+    let { alt: t, spoiler: n, renderContent: a, size: s } = e,
+        [l, c] = i.useState(!1);
     return (0, r.jsx)(p.aQ.Provider, {
         value: !n,
         children: (0, r.jsx)(p.ZP, {
             containerStyles:
-                o === O.q.CLIP
+                s === O.q.CLIP
                     ? {
                           borderBottomLeftRadius: 0,
                           borderBottomRightRadius: 0,
@@ -99,8 +99,11 @@ function R(e) {
                       }
                     : void 0,
             type: p.ZP.Types.ATTACHMENT,
-            onReveal: () => l(!0),
-            className: I.spoilerContainer,
+            onReveal: () => c(!0),
+            className: o()(I.spoilerContainer, {
+                [I.sizeXSmall]: s === O.q.XSMALL,
+                [I.sizeXXSmall]: s === O.q.XXSMALL,
+            }),
             children: (e) =>
                 (0, r.jsxs)("div", {
                     className: I.spoilerWrapper,
@@ -115,7 +118,7 @@ function R(e) {
                                           children: v.intl.string(v.t.QEW819),
                                       })
                                     : null,
-                                s && n
+                                l && n
                                     ? (0, r.jsx)("span", {
                                           className: I.altTag,
                                           children: v.intl.string(v.t["F+x38P"]),
@@ -170,13 +173,15 @@ function P(e) {
                           className: o()(I.media, {
                               [I.spoiler]: e,
                               [I.imageSmall]: p,
+                              [I.sizeXSmall]: s === O.q.XSMALL,
+                              [I.sizeXXSmall]: s === O.q.XXSMALL,
                           }),
                           "aria-hidden": !0,
                           alt: null != n ? n : "",
                           style: t ? f : {},
                       });
             },
-            [u, p, n, f],
+            [u, p, s, n, f],
         ),
         g = i.useCallback(() => {
             null != u &&
@@ -235,6 +240,8 @@ function w(e) {
                         className: o()(I.media, {
                             [I.spoiler]: e,
                             [I.sizeClip]: s === O.q.CLIP,
+                            [I.sizeXSmall]: s === O.q.XSMALL,
+                            [I.sizeXXSmall]: s === O.q.XXSMALL,
                         }),
                         onError: c,
                         preload: "none",
@@ -247,8 +254,7 @@ function w(e) {
 function D(e) {
     var t;
     let { upload: n, size: a = O.q.MEDIUM, onMouseEnter: s } = e,
-        [l, c] = i.useState(!1),
-        u = a === O.q.SMALL;
+        [l, c] = i.useState(!1);
     return n.isImage && n.item.platform === d.ow.WEB
         ? (0, r.jsx)(P, {
               file: n.item.file,
@@ -268,9 +274,10 @@ function D(e) {
             })
           : (0, r.jsx)("div", {
                 onMouseEnter: s,
-                className: o()(I.icon, I.__invalid_imageContainer, {
-                    [I[null != (t = n.classification) ? t : ""]]: !0,
-                    [I.imageSmall]: u,
+                className: o()(I.icon, I[null != (t = n.classification) ? t : ""], {
+                    [I.imageSmall]: a === O.q.SMALL,
+                    [I.sizeXSmall]: a === O.q.XSMALL,
+                    [I.sizeXXSmall]: a === O.q.XXSMALL,
                 }),
                 children: (0, r.jsx)("div", {
                     className: I.tags,

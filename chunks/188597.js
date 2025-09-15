@@ -114,8 +114,8 @@ let v = async (e) => {
     );
 };
 function I(e) {
-    if (null == e) return null;
-    if (e.type === o.re.STRING_SELECT || e.type === o.re.TEXT_INPUT) return e;
+    if (null == e || e.type === o.re.TEXT_INPUT || e.type === o.re.FILE_UPLOAD) return null;
+    if (e.type === o.re.STRING_SELECT) return e;
     let t = e.selectedOptions.map((e) => e.value);
     return {
         type: e.type,

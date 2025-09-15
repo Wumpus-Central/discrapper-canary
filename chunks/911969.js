@@ -124,6 +124,7 @@ var r = (function (e) {
             (e[(e.CONTENT_INVENTORY_ENTRY = 16)] = "CONTENT_INVENTORY_ENTRY"),
             (e[(e.CONTAINER = 17)] = "CONTAINER"),
             (e[(e.LABEL = 18)] = "LABEL"),
+            (e[(e.FILE_UPLOAD = 19)] = "FILE_UPLOAD"),
             e
         );
     })({}),

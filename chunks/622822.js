@@ -134,13 +134,15 @@ function j(e) {
 }
 function M() {
     let e = (0, s.H1)({ location: "age-gate-utils" }),
-        t = (0, o.sf)();
-    return e && t;
+        t = (0, a.u)("age-gate-utils"),
+        n = (0, o.sf)();
+    return (e || t) && n;
 }
 function k() {
     let e = (0, s.s8)({ location: "age-gate-utils" }),
-        t = (0, o.L5)();
-    return e && t;
+        t = (0, o.L5)(),
+        n = (0, a.z)("age-gate-utils");
+    return (e || n) && t;
 }
 function U(e) {
     let t = (0, o.l6)(),
