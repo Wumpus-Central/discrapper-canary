@@ -60169,7 +60169,7 @@ h3.improved__1689b:after {
 }
 
 .full-motion .shine__636a2 {
-    animation-duration: 3s;
+    animation-duration: 7.5s;
     animation-iteration-count: infinite;
     animation-name: Shine__636a2;
     animation-timing-function: ease-in-out
@@ -60178,6 +60178,10 @@ h3.improved__1689b:after {
 @keyframes Shine__636a2 {
     0% {
         transform: translate3d(-130%, 0, 0)
+    }
+
+    66% {
+        transform: translate3d(300%, 0, 0)
     }
 
     to {
