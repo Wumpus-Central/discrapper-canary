@@ -2,13 +2,13 @@ n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(893776),
-    o = n(480916),
-    c = n(17597),
-    s = n(624138),
-    u = n(845077),
-    d = n(132392),
-    f = n(118589),
+    a = n(480916),
+    o = n(17597),
+    c = n(624138),
+    s = n(845077),
+    u = n(132392),
+    d = n(118589),
+    f = n(210825),
     p = n(535188),
     h = n(856597),
     m = n(231338),
@@ -30,7 +30,7 @@ function x(e) {
         i.useEffect(() => {
             o(t);
         }, [t]),
-        (0, r.jsxs)(d.y.Provider, {
+        (0, r.jsxs)(u.y.Provider, {
             value: c,
             children: [
                 (0, r.jsx)(h.Z, {}),
@@ -44,7 +44,7 @@ function x(e) {
 }
 let v = function (e) {
     let { onClose: t } = e,
-        [n, d] = i.useState(null),
+        [n, u] = i.useState(null),
         [p, h] = i.useState(!0),
         [v, j] = i.useState(null),
         [_, O] = i.useState(!1),
@@ -52,18 +52,18 @@ let v = function (e) {
             h(!0), j(null);
             try {
                 var e;
-                let n = await (0, u.PA)();
+                let n = await (0, s.PA)();
                 if (null == n) return void t();
-                !(0, s.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
-                f.VZ.has(n.ui_component.component.type)
-                    ? d(n)
-                    : d({
+                !(0, c.Ew)(null == (e = n.ui_component) ? void 0 : e.component.type) &&
+                d.VZ.has(n.ui_component.component.type)
+                    ? u(n)
+                    : u({
                           task_id: n.task_id,
-                          task_type: f.UA.REFRESH_APP,
+                          task_type: d.UA.REFRESH_APP,
                           assignment_id: n.assignment_id,
                           ui_component: {
                               component: {
-                                  type: f.NS.REFRESH_APP,
+                                  type: d.NS.REFRESH_APP,
                                   data: {},
                               },
                           },
@@ -88,7 +88,7 @@ let v = function (e) {
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, u.Wl)(t), A();
+                        await (0, s.Wl)(t), A();
                     } catch (e) {
                         j(g.intl.string(y.default["+QRSxc"]));
                     } finally {
@@ -101,7 +101,7 @@ let v = function (e) {
     i.useEffect(() => {
         A();
     }, [A]);
-    let I = i.useMemo(() => (null == n ? void 0 : n.task_type) === f.UA.AGE_VERIFICATION, [n]);
+    let I = i.useMemo(() => (null == n ? void 0 : n.task_type) === d.UA.AGE_VERIFICATION, [n]);
     return (0, r.jsxs)("div", {
         className: b.background,
         children: [
@@ -111,12 +111,12 @@ let v = function (e) {
                 alt: "",
             }),
             I
-                ? (0, r.jsx)(c.Z, {
+                ? (0, r.jsx)(o.Z, {
                       transitionState: l.Dvm.ENTERED,
-                      entryPoint: o.cU.SAFETY_FLOWS,
+                      entryPoint: a.cU.SAFETY_FLOWS,
                       onClose: m.dG,
                       onComplete: async () => {
-                          await S({ type: f.rY.Empty });
+                          await S({ type: d.rY.Empty });
                       },
                       dismissable: !1,
                   })
@@ -164,7 +164,7 @@ let v = function (e) {
                                                                 variant: "secondary",
                                                                 text: g.intl.string(g.t["2jxGen"]),
                                                                 onClick: () => {
-                                                                    a.Z.logout("safety_flows_modal");
+                                                                    (0, f.R)("safety_flows_modal");
                                                                 },
                                                             }),
                                                             (0, r.jsx)(l.zxk, {

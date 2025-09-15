@@ -5,9 +5,9 @@ var r = n(951288),
     a = n(704215),
     o = n(667202),
     c = n(481060),
-    s = n(893776),
-    u = n(243778),
-    d = n(138201),
+    s = n(243778),
+    u = n(138201),
+    d = n(210825),
     f = n(420846),
     p = n(63063),
     h = n(168107),
@@ -23,7 +23,7 @@ let _ = function (e) {
     let { transitionState: t, entryPoint: n, onClose: _, onComplete: O, dismissable: A } = e,
         [S, I] = i.useState(a.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         R = i.useRef(S),
-        [w, P] = (0, u.US)([S], void 0, !0),
+        [w, P] = (0, s.US)([S], void 0, !0),
         C = i.useMemo(() => (0, l.Z)(), []),
         N = i.useRef(!1);
     i.useEffect(() => {
@@ -75,8 +75,7 @@ let _ = function (e) {
                 textVariant: "text-sm/medium",
                 text: x.intl.string(x.t["2jxGen"]),
                 onClick: () => {
-                    (0, m.x3)(C, m.d_.EXPRESSIVE_PRIMARY, m.sU.LOG_OUT),
-                        s.Z.logout("age_verification_get_started_modal");
+                    (0, m.x3)(C, m.d_.EXPRESSIVE_PRIMARY, m.sU.LOG_OUT), (0, d.R)("age_verification_get_started_modal");
                 },
             }),
             children: (0, r.jsxs)(c.Kqy, {
@@ -134,7 +133,7 @@ let _ = function (e) {
                               children: T.map((e) => {
                                   let { title: t, description: n, onClick: i } = e;
                                   return (0, r.jsx)(
-                                      d.JZ,
+                                      u.JZ,
                                       {
                                           variant: "clickable",
                                           title: t,

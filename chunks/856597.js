@@ -1,11 +1,11 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(893776),
     l = n(819557),
-    c = n(132392),
+    a = n(132392),
     o = n(118589),
+    c = n(210825),
     s = n(345262),
     u = n(241945),
     d = n(388032),
@@ -15,8 +15,8 @@ let p = {
         [o.UA.REFRESH_APP]: d.intl.string(u.default.SzfxQ0),
         [o.UA.AGE_VERIFICATION]: d.intl.string(u.default["dSkE/P"]),
     },
-    m = function () {
-        let { task: e } = (0, c.T)(),
+    h = function () {
+        let { task: e } = (0, a.T)(),
             t = e.flow_context.tasks.findIndex((t) => t.task_type === e.task_type);
         return (0, r.jsxs)(i.Kqy, {
             direction: "vertical",
@@ -58,7 +58,7 @@ let p = {
                     variant: "text-md/normal",
                     color: "text-secondary",
                     children: d.intl.format(u.default["0DHxys"], {
-                        handleLogOut: () => a.Z.logout("safety_flows_sidebar"),
+                        handleLogOut: () => (0, c.R)("safety_flows_sidebar"),
                     }),
                 }),
             ],
