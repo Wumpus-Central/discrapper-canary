@@ -43,7 +43,13 @@ function v(e) {
     return t.map((e) => e.replace("mod", h));
 }
 function I(e, t) {
-    return (n, r) => (l.default.track(u.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), t(n, r));
+    return (n, r) => (
+        l.default.track(u.rMx.KEYBOARD_SHORTCUT_USED, {
+            shortcut_name: e,
+            shortcut_combo: r,
+        }),
+        t(n, r)
+    );
 }
 function T(e) {
     for (let [t, n] of Object.entries(e)) {
