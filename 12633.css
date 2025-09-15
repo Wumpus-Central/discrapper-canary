@@ -53062,11 +53062,25 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     background: rgba(0, 0, 0, .52);
     border: 1px solid var(--border-faint, hsla(240, 4%, 61%, .04));
     border-radius: var(--radius-sm);
+    cursor: pointer;
     display: flex;
     flex-shrink: 0;
     gap: 4px;
     justify-content: center;
-    padding: 10px
+    padding: 9px
+}
+
+.withHover__979b1 {
+    transition: background-color 50ms ease-in, color 50ms ease-in, border-color 50ms ease-in, opacity 50ms ease-in
+}
+
+.withHover__979b1:hover {
+    background: var(--control-background-overlay-secondary-hover);
+    transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, opacity .15s ease-out
+}
+
+.withHover__979b1:active {
+    background: var(--control-background-overlay-secondary-active)
 }
 
 .normalIconColor__979b1 {
@@ -89088,7 +89102,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

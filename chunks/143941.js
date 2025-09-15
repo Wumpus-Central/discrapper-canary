@@ -80,17 +80,17 @@ let g = (e) => {
         });
     },
     E = (e) => {
-        let { skuId: t, className: n } = e,
-            a = (0, c.ny)(t),
-            f = i.useRef(null),
-            _ = a ? u.intl.string(u.t.yr9TTU) : u.intl.string(u.t["8DkMER"]),
-            h = (0, l.Z)(f),
-            E = a ? s.h_8 : s.Pzh,
-            b = a || h ? d.wishlistedOrHoveredIconColor : d.normalIconColor,
-            y = i.useCallback(
+        let { skuId: t, iconSize: n = 20, className: a, enableHoverEffect: f = !1 } = e,
+            _ = (0, c.ny)(t),
+            h = i.useRef(null),
+            E = _ ? u.intl.string(u.t.yr9TTU) : u.intl.string(u.t["8DkMER"]),
+            b = (0, l.Z)(h),
+            y = _ ? s.h_8 : s.Pzh,
+            O = _ || b ? d.wishlistedOrHoveredIconColor : d.normalIconColor,
+            v = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        a
+                        _
                             ? ((0, c.yj)(t),
                               (0, s.showToast)(
                                   (0, s.createToast)("", s.ToastType.CUSTOM, {
@@ -104,23 +104,23 @@ let g = (e) => {
                                   }),
                               ));
                 },
-                [a, t],
+                [_, t],
             );
         return (0, r.jsx)(s.ua7, {
-            text: _,
+            text: E,
             children: (e) =>
                 (0, r.jsx)(
                     s.P3F,
                     m(p({}, e), {
-                        className: o()(n, d.wishlistButton),
-                        innerRef: f,
-                        onClick: y,
-                        "aria-label": _,
-                        children: (0, r.jsx)(E, {
-                            colorClass: b,
+                        className: o()(d.wishlistButton, f && d.withHover, a),
+                        innerRef: h,
+                        onClick: v,
+                        "aria-label": E,
+                        children: (0, r.jsx)(y, {
+                            colorClass: O,
                             size: "custom",
-                            height: 20,
-                            width: 20,
+                            height: n,
+                            width: n,
                         }),
                     }),
                 ),
