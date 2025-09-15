@@ -20,12 +20,12 @@ var i = n(287734),
 function E(e) {
     let { party: t, onChannelContextMenu: n, quest: E } = e,
         y = (0, b.L)(),
-        { voiceChannels: v, currentActivities: I, partiedMembers: C, applicationStreams: S, guildContext: N } = t,
-        T = [],
+        { voiceChannels: v, currentActivities: I, partiedMembers: C, applicationStreams: S, guildContext: T } = t,
+        N = [],
         P = (e) => {
-            let { length: t } = T;
-            if (0 === t) return void T.push(e);
-            T.push(e);
+            let { length: t } = N;
+            if (0 === t) return void N.push(e);
+            N.push(e);
         };
     for (let { activity: e } of (v.length > 0 &&
         v.forEach((e) => {
@@ -68,7 +68,7 @@ function E(e) {
                     (0, r.jsx)(
                         m.Z.ApplicationStreamingSection,
                         {
-                            guildId: null == N ? void 0 : N.id,
+                            guildId: null == T ? void 0 : T.id,
                             user: n,
                             activity: a,
                             applicationStream: t,
@@ -81,7 +81,7 @@ function E(e) {
                 );
             }),
         I.forEach((e, t) => {
-            var n, i, l, g, b, y, S, T, j;
+            var n, i, l, g, b, y, S, N, j;
             let { activity: x, game: A, playingMembers: Z, activityUser: w } = e;
             if (null == x || null == x.type) return null;
             if (I.length > 1 && x.type === O.IIU.PLAYING && !(0, a.Z)(x) && null != A)
@@ -97,6 +97,7 @@ function E(e) {
                                 totalSize: Z.length,
                             },
                             members: Z,
+                            activity: x,
                         },
                         "game-"
                             .concat(null != (n = x.session_id) ? n : t, "-")
@@ -138,7 +139,7 @@ function E(e) {
                     (0, r.jsx)(
                         m.Z.TwitchSection,
                         {
-                            guildId: null == N ? void 0 : N.id,
+                            guildId: null == T ? void 0 : T.id,
                             activity: x,
                             user: e || n ? w : null,
                             getAssetImage: h.xF,
@@ -182,7 +183,7 @@ function E(e) {
                             (0, r.jsx)(
                                 m.Z.XboxSection,
                                 { title: A.name },
-                                "xbox-".concat(null != (T = x.session_id) ? T : t),
+                                "xbox-".concat(null != (N = x.session_id) ? N : t),
                             ),
                         );
             null != E &&
@@ -191,6 +192,6 @@ function E(e) {
                 (null == E.userStatus || !(0, d.zE)(E.userStatus, p.jn.ACTIVITY_PANEL)) &&
                 P((0, r.jsx)(f.Z, { quest: E }, "quest-".concat(E.id, "-").concat(null != (j = x.session_id) ? j : t)));
         }),
-        T.length > 0 ? (0, r.jsx)(m.Z.Body, { children: T }) : null
+        N.length > 0 ? (0, r.jsx)(m.Z.Body, { children: N }) : null
     );
 }
