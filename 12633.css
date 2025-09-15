@@ -45181,23 +45181,6 @@ html:not(.chat-input) .inputInner_b1f01d {
     margin-right: 4px
 }
 
-.buttonContainer__5c6a8 {
-    display: flex;
-    flex-direction: row;
-    gap: 8px
-}
-
-.user-profile-popout .buttonContainer__5c6a8,
-.user-profile-sidebar .buttonContainer__5c6a8 {
-    flex-direction: column;
-    width: 100%
-}
-
-.user-profile-popout .buttonContainer__5c6a8>*,
-.user-profile-sidebar .buttonContainer__5c6a8>* {
-    width: 100%
-}
-
 .fontCode__230d2 {
     font-family: var(--font-code)
 }
@@ -89157,7 +89140,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

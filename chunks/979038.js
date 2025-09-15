@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => C });
 var r = n(951288);
 n(647438);
 var i = n(620662),
@@ -20,97 +20,72 @@ var i = n(620662),
     y = n(414402),
     O = n(934393),
     v = n(803663),
-    I = n(585253),
-    T = n(715547),
-    S = n(994102),
-    A = n(981631),
-    C = n(671955),
-    N = n(723701);
-function R(e) {
-    let { user: t, activity: n, onAction: R, onClose: P, application: w } = e,
-        { themeType: D } = (0, m.z)(),
-        x = (0, c.q)(w, "UserProfileActivityButtons"),
-        L = (0, f.L)(null != n ? n : void 0, void 0),
-        { analyticsLocations: j } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS);
+    I = n(715547),
+    T = n(994102),
+    S = n(981631),
+    A = n(671955);
+function C(e) {
+    let { user: t, activity: n, onAction: C, onClose: N, application: R } = e,
+        { themeType: P } = (0, m.z)(),
+        w = (0, c.q)(R, "UserProfileActivityButtons"),
+        D = (0, f.L)(null != n ? n : void 0, void 0),
+        { analyticsLocations: x } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS);
     if ((0, s.Z)(n))
         return (0, r.jsx)(O.Z, {
-            platformType: A.ABu.XBOX,
+            platformType: S.ABu.XBOX,
             icon: () => (0, r.jsx)(h.Z, {}),
-            onAction: R,
+            onAction: C,
         });
     if ((0, o.Z)(n))
         return (0, r.jsx)(O.Z, {
-            platformType: A.ABu.PLAYSTATION,
+            platformType: S.ABu.PLAYSTATION,
             icon: () => (0, r.jsx)(p.Z, {}),
-            onAction: R,
+            onAction: C,
         });
     if ((0, l.Z)(n))
-        return (0, r.jsx)(T.Z, {
+        return (0, r.jsx)(I.Z, {
             activity: n,
-            onAction: R,
+            onAction: C,
         });
-    let M = D === C.l.MODAL || D === C.l.MODAL_V2;
-    if (!L && x && null != w && !M)
-        return (0, r.jsx)(S.Z, {
-            application: w,
-            onAction: R,
-            onClose: P,
-            analyticsLocations: j,
-        });
-    let k = (0, i.Z)(n, A.xjy.JOIN) || (0, a.Z)(n),
-        U = (null == n ? void 0 : n.application_id) != null;
-    return k && U
-        ? (0, r.jsxs)("div", {
-              className: N.buttonContainer,
-              children: [
-                  (0, r.jsx)(b.Z, {
-                      user: t,
-                      activity: n,
-                      onAction: R,
-                      onClose: P,
-                  }),
-                  (0, r.jsx)(I.Z, {
-                      activity: n,
-                      onAction: R,
-                  }),
-              ],
-          })
-        : k
-          ? (0, r.jsx)(b.Z, {
-                user: t,
-                activity: n,
-                onAction: R,
-                onClose: P,
-            })
-          : (null == n ? void 0 : n.type) === A.IIU.HANG_STATUS
-            ? (0, r.jsx)(E.Z, {
+    let L = P === A.l.MODAL || P === A.l.MODAL_V2;
+    return D || !w || null == R || L
+        ? (0, i.Z)(n, S.xjy.JOIN) || (0, a.Z)(n)
+            ? (0, r.jsx)(b.Z, {
                   user: t,
                   activity: n,
-                  onAction: R,
-                  onClose: P,
+                  onAction: C,
+                  onClose: N,
               })
-            : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
-              ? (0, r.jsx)(g.Z, {
+            : (null == n ? void 0 : n.type) === S.IIU.HANG_STATUS
+              ? (0, r.jsx)(E.Z, {
                     user: t,
                     activity: n,
-                    onAction: R,
+                    onAction: C,
+                    onClose: N,
                 })
-              : U
-                ? (0, r.jsx)(I.Z, {
+              : (null == n ? void 0 : n.buttons) != null && (null == n ? void 0 : n.buttons.length) >= 1
+                ? (0, r.jsx)(g.Z, {
+                      user: t,
                       activity: n,
-                      onAction: R,
+                      onAction: C,
                   })
-                : (0, i.Z)(n, A.xjy.INSTANCE)
+                : (0, i.Z)(n, S.xjy.INSTANCE)
                   ? (0, r.jsx)(y.Z, {
                         user: t,
                         activity: n,
-                        onAction: R,
+                        onAction: C,
                     })
                   : (0, _.dS)(n)
                     ? (0, r.jsx)(v.Z, {
                           activity: n,
-                          onAction: R,
-                          onClose: P,
+                          onAction: C,
+                          onClose: N,
                       })
-                    : null;
+                    : null
+        : (0, r.jsx)(T.Z, {
+              application: R,
+              onAction: C,
+              onClose: N,
+              analyticsLocations: x,
+          });
 }
