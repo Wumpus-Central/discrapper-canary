@@ -1,13 +1,9 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(549631),
-    c = n(728756);
-function u(e, t, n) {
+var i = n(481060),
+    a = n(549631);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +16,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +27,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function l(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,52 +44,23 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = h(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function m(e) {
-    var { children: t, className: n, size: i = o.zx.Sizes.MEDIUM, onlyShineOnHover: u = !1 } = e,
-        f = p(e, ["children", "className", "size", "onlyShineOnHover"]);
+function u(e) {
     return (0, r.jsx)(
-        s.gtL,
-        _(d({}, f), {
-            color: o.zx.Colors.CUSTOM,
-            size: i,
-            className: a()(c.button, n),
-            onlyShineOnHover: u,
-            children: (0, r.jsxs)("div", {
-                className: c.buttonContents,
-                children: [(0, r.jsx)(l.Z, { className: c.icon }), t],
-            }),
+        i.zxk,
+        c(s({}, e), {
+            variant: "expressive",
+            icon: a.Z,
         }),
     );
 }

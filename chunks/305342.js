@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => F,
+    Z: () => V,
     c: () => Z,
 }),
     n(388685);
@@ -130,7 +130,7 @@ let k = 24,
                           ),
                       }),
                       u &&
-                          (0, r.jsx)(V, {
+                          (0, r.jsx)(F, {
                               isViewAll: o,
                               onToggle: p,
                               showMoreText: _,
@@ -237,7 +237,7 @@ let k = 24,
                   ],
               });
     },
-    V = (e) => {
+    F = (e) => {
         let t,
             { onToggle: n, isViewAll: i, showMoreText: a } = e;
         return (
@@ -272,7 +272,7 @@ let k = 24,
             })
         );
     },
-    F = (e) => {
+    V = (e) => {
         var t;
         let { listingId: n, guildId: a, groupListingId: d, analyticsLocation: p } = e,
             y = (0, m.jO)(n),
@@ -286,7 +286,7 @@ let k = 24,
             { activeSubscription: j, activeSubscriptionListing: k } = (0, E.Z)(d),
             U = (null == k ? void 0 : k.id) === n,
             G = (null == j ? void 0 : j.status) === P.O0b.CANCELED,
-            [B, F] = i.useState(!1),
+            [B, V] = i.useState(!1),
             [H, Y] = i.useState(!1),
             W = i.useCallback((e) => {
                 let t = !1;
@@ -298,7 +298,7 @@ let k = 24,
             [X] = g.F2(n),
             Q = (0, b.Z)(a, n),
             J = null != q && null == j && Q,
-            $ = () => F((e) => !e),
+            $ = () => V((e) => !e),
             ee = (0, u.Z)(R.iP),
             [et, en] = i.useState(!1),
             er = et || !ee,
@@ -382,10 +382,9 @@ let k = 24,
                                                                     M(L({}, e), {
                                                                         fullWidth: !0,
                                                                         disabled: !v || x,
-                                                                        submitting: S,
+                                                                        loading: S,
                                                                         onClick: O,
-                                                                        onlyShineOnHover: !0,
-                                                                        children: w.intl.string(w.t.fM5Zsb),
+                                                                        text: w.intl.string(w.t.fM5Zsb),
                                                                     }),
                                                                 ),
                                                         }),
@@ -400,7 +399,7 @@ let k = 24,
                                                       }),
                                                   }),
                                                   H &&
-                                                      (0, r.jsx)(V, {
+                                                      (0, r.jsx)(F, {
                                                           isViewAll: B,
                                                           onToggle: $,
                                                           showMoreText: el,

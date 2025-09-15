@@ -46,8 +46,8 @@ var r = n(951288),
     G = n(74538),
     B = n(886132),
     Z = n(524444),
-    V = n(981631),
-    F = n(176505),
+    F = n(981631),
+    V = n(176505),
     H = n(474936),
     Y = n(388032),
     W = n(975900);
@@ -106,8 +106,8 @@ function X(e, t) {
 let Q = 32,
     J = 12,
     $ = () => ({
-        page: null != (0, l.e7)([L.Z], () => L.Z.getGuildId()) ? V.ZY5.GUILD_CHANNEL : V.ZY5.DM_CHANNEL,
-        section: V.jXE.EMOJI_UPSELL_POPOUT,
+        page: null != (0, l.e7)([L.Z], () => L.Z.getGuildId()) ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
+        section: F.jXE.EMOJI_UPSELL_POPOUT,
     }),
     ee = (e) => {
         let { node: t } = e;
@@ -161,7 +161,7 @@ let Q = 32,
             }),
             f = (n = null == n || n) || t.isDiscoverable(),
             _ = () => {
-                t.isDiscoverable() ? (0, U.Ub)(a, {}) : n && (0, D.uL)(V.Z5c.CHANNEL(a, x.Z.getChannelId(a)));
+                t.isDiscoverable() ? (0, U.Ub)(a, {}) : n && (0, D.uL)(F.Z5c.CHANNEL(a, x.Z.getChannelId(a)));
             },
             p = () =>
                 null != u && f
@@ -367,7 +367,7 @@ let Q = 32,
                 shouldHideRoleSubscriptionCTA: eo,
                 onOpenPremiumSettings: () => {
                     R(),
-                        M.default.track(V.rMx.PREMIUM_PROMOTION_OPENED, {
+                        M.default.track(F.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: ee.page,
                             location_section: ee.section,
                         }),
@@ -401,7 +401,7 @@ let Q = 32,
                                 f.Z.transitionToGuildSync(
                                     S.id,
                                     { sourceLocationStack: [p.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] },
-                                    F.oC.ROLE_SUBSCRIPTIONS,
+                                    V.oC.ROLE_SUBSCRIPTIONS,
                                 );
                     },
                     n = !Q && J,
@@ -463,11 +463,10 @@ let Q = 32,
                         i(),
                         eu &&
                             (0, r.jsx)(N.Z, {
-                                className: W.ctaButton,
-                                size: u.zx.Sizes.SMALL,
+                                text: ea ? Y.intl.string(Y.t.yma8Vl) : Y.intl.string(Y.t.nN2DIi),
+                                size: "sm",
                                 fullWidth: !0,
                                 onClick: t,
-                                children: ea ? Y.intl.string(Y.t.yma8Vl) : Y.intl.string(Y.t.nN2DIi),
                             }),
                     ],
                 });
@@ -483,7 +482,7 @@ let Q = 32,
                     i = () => {
                         n &&
                             (null == D || D(),
-                            em || k || M.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
+                            em || k || M.default.track(F.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
                             eg(!em));
                     },
                     a = () => {

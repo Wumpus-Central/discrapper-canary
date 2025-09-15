@@ -44,7 +44,6 @@ function p(e) {
                         notice: n,
                         ctaLabel: i,
                         ctaDisabled: !a,
-                        ctaClassName: m.waitlistCtaButton,
                         onClick: s,
                     }),
                 ],
