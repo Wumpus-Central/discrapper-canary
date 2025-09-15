@@ -73415,23 +73415,26 @@ html .progress__61462 {
     outline: 2px solid Highlight
 }
 
-.item__1bb32 {
-    align-items: center;
+.itemContainer__1bb32 {
     border-radius: var(--radius-sm);
     cursor: pointer;
-    display: flex;
-    -webkit-mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
-    mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
     overflow: hidden;
-    padding: 4px 8px;
     transition: background-color .2s ease-in-out
 }
 
-.item__1bb32:active,
-.item__1bb32:hover,
-.item__1bb32[aria-selected=true] {
+.itemContainer__1bb32:active,
+.itemContainer__1bb32:hover,
+.itemContainer__1bb32[aria-selected=true] {
     background-color: var(--background-mod-subtle);
     color: var(--text-primary)
+}
+
+.item__1bb32 {
+    align-items: center;
+    display: flex;
+    -webkit-mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
+    mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
+    padding: 4px 8px
 }
 
 .itemIcon__1bb32 {
@@ -73442,13 +73445,15 @@ html .progress__61462 {
     width: 20px
 }
 
-.itemText__1bb32 {
+.filterSublabelTextContainer__1bb32,
+.inSelectedChannelLabel__1bb32 {
+    align-items: center;
+    display: flex;
     flex-shrink: 0;
     gap: 4px
 }
 
-.channelNameContainer__1bb32,
-.itemText__1bb32 {
+.channelNameContainer__1bb32 {
     align-items: center;
     display: flex
 }
@@ -73485,6 +73490,12 @@ html .progress__61462 {
 .clearSearchHistoryIcon__1bb32 {
     color: var(--text-secondary);
     cursor: pointer
+}
+
+.historyTextLabel__1bb32 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
 }
 
 .filterPill__1bb32 {
@@ -89289,7 +89300,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

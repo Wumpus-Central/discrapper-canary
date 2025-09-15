@@ -1,7 +1,9 @@
 e.exports = {
+    itemContainer: "itemContainer__1bb32",
     item: "item__1bb32",
     itemIcon: "itemIcon__1bb32",
-    itemText: "itemText__1bb32",
+    filterSublabelTextContainer: "filterSublabelTextContainer__1bb32",
+    inSelectedChannelLabel: "inSelectedChannelLabel__1bb32",
     channelNameContainer: "channelNameContainer__1bb32",
     channelName: "channelName__1bb32",
     channelNameIcon: "channelNameIcon__1bb32",
@@ -9,6 +11,7 @@ e.exports = {
     autocompleteGroupHeader: "autocompleteGroupHeader__1bb32",
     clearSearchHistory: "clearSearchHistory__1bb32",
     clearSearchHistoryIcon: "clearSearchHistoryIcon__1bb32",
+    historyTextLabel: "historyTextLabel__1bb32",
     filterPill: "filterPill__1bb32",
     answerPill: "answerPill__1bb32",
     channelAnswerPill: "channelAnswerPill__1bb32",
