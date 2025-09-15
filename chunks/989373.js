@@ -6,8 +6,8 @@ var a = n(951288),
     c = n(493773),
     l = n(686546),
     _ = n(710845),
-    u = n(522474),
-    d = n(238246),
+    d = n(522474),
+    u = n(238246),
     f = n(355863),
     s = n(944486),
     p = n(808506),
@@ -23,8 +23,8 @@ var b = n(41534),
     y = n(371651),
     w = n(610394),
     S = n(757744),
-    x = n(981631);
-let E = new _.Z("AppOverlay");
+    E = n(981631);
+let x = new _.Z("AppOverlay");
 async function B(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
@@ -32,7 +32,7 @@ async function B(e, t) {
         try {
             await h.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            E.error("Window does not exist while trying to show inactive", e), (0, b.D1)(e, g.gl.OutOfProcess);
+            x.error("Window does not exist while trying to show inactive", e), (0, b.D1)(e, g.gl.OutOfProcess);
         }
         for (let r = 0; r < a; r++)
             try {
@@ -43,7 +43,7 @@ async function B(e, t) {
                 var o;
                 if ((null == (o = e.message) ? void 0 : o.includes("IPC")) && r < a - 1) {
                     let t = (n / 2) * Math.pow(2, r + 1);
-                    E.error("Failed to show inactive, retrying in ".concat(t, "ms"), e),
+                    x.error("Failed to show inactive, retrying in ".concat(t, "ms"), e),
                         await new Promise((e) => setTimeout(e, t));
                 } else throw ((0, b.D1)(e, g.gl.OutOfProcess), e);
             }
@@ -52,31 +52,32 @@ async function B(e, t) {
 let P = o.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         _ = (function (e, t) {
-            let n = (0, r.e7)([u.Z], () => u.Z.getWindow(e)),
-                a = o.useRef(null),
+            let n = (0, r.e7)([w.ZP], () => !m.isPlatformEmbedded || w.ZP.isWindowHandleInitialized()),
+                a = (0, r.e7)([d.Z], () => d.Z.getWindow(e)),
                 l = o.useRef(null),
                 _ = o.useRef(null),
-                d = (0, r.e7)([p.default], () => {
+                u = o.useRef(null),
+                h = (0, r.e7)([p.default], () => {
                     let e = p.default.getFocusedPID();
                     return !m.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
-                [h, b] = o.useState(!1),
-                C = o.useRef(!1),
-                S = o.useCallback(() => {
+                [b, C] = o.useState(!1),
+                S = o.useRef(!1),
+                x = o.useCallback(() => {
                     let e = (0, v.getPID)(),
                         n = null != s.Z.getVoiceChannelId();
-                    i.Z.track(x.rMx.OVERLAY_INITIALIZED, {
+                    i.Z.track(E.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: w.ZP.isPinned(x.Odu.TEXT),
+                        text_widget_connected: w.ZP.isPinned(E.Odu.TEXT),
                         overlay_render_method: g.gl[y.default.getOverlayMethod(e)],
                         unpinned_widget_types: f.Z.getAllUnpinnedPinnedWidgets(t),
                     }),
                         (0, I.lj)("OVERLAY_INITIALIZED"),
-                        i.Z.successfullyShown(e);
+                        i.Z.oopUiInitialized();
                 }, [t]);
             (0, c.Ng)(() => {
                 let e = (e) => {
-                    let t = null != n ? n : window;
+                    let t = null != a ? a : window;
                     e.data === w.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
@@ -91,42 +92,42 @@ let P = o.memo(function (e) {
                     }
                 );
             });
-            let E = o.useCallback(
+            let P = o.useCallback(
                 (e, t) => {
-                    null == a.current &&
-                        ((_.current = () => {
-                            null != a.current && e.cancelAnimationFrame(a.current),
-                                null != l.current && e.clearTimeout(l.current);
+                    null == l.current &&
+                        ((u.current = () => {
+                            null != l.current && e.cancelAnimationFrame(l.current),
+                                null != _.current && e.clearTimeout(_.current);
                         }),
-                        (a.current = e.requestAnimationFrame(async () => {
+                        (l.current = e.requestAnimationFrame(async () => {
                             try {
                                 await B(e, t);
                             } catch (e) {
                                 i.Z.setOverlayCrashed((0, v.getPID)(), e);
                                 return;
                             }
-                            l.current = e.setTimeout(() => {
-                                b(!0), S(), (_.current = null);
+                            _.current = e.setTimeout(() => {
+                                C(!0), x(), (u.current = null);
                             }, 100);
                         })));
                 },
-                [S],
+                [x],
             );
             return (
                 o.useEffect(() => {
-                    d && null != n && (C.current || ((C.current = !0), E(n, e)));
-                }, [E, d, e, n]),
+                    h && null != a && n && (S.current || ((S.current = !0), P(a, e)));
+                }, [P, h, e, a, n]),
                 (0, c.zq)(() => {
-                    null != _.current && _.current();
+                    null != u.current && u.current();
                 }),
-                h
+                b
             );
         })(n, S.$S),
         h = (0, v.getPID)(),
         b = (0, r.e7)([p.default], () => p.default.isInputLocked(h), [h]);
     return _
-        ? (0, a.jsxs)(d.Z, {
-              themeOverride: x.BRd.MIDNIGHT,
+        ? (0, a.jsxs)(u.Z, {
+              themeOverride: E.BRd.MIDNIGHT,
               withTitleBar: t,
               windowKey: n,
               title: "Discord Overlay",
