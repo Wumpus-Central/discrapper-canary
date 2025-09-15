@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854);
+n.d(t, { Z: () => f }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -12,21 +12,47 @@ let f = i.memo(function (e) {
     let { className: t, content: n, onChange: a } = e,
         l = o.z[n],
         { isDismissed: f, handleToggleDismissState: p } = (0, u.Z)(l),
-        h = i.useCallback(() => {
+        [h, m] = i.useState(!1),
+        g = i.useCallback(() => {
+            if (h) return void m(!1);
             null == a || a(n), p();
-        }, [a, p, n]);
-    return (0, r.jsxs)(s.j7V, {
+        }, [a, p, n, h]);
+    return (0, r.jsx)(s.j7V, {
         value: f,
-        onChange: h,
+        onChange: g,
         className: t,
-        children: [
-            (0, r.jsx)(s.Text, {
-                variant: "text-md/normal",
-                className: d.marginTop4,
-                children: "".concat(n.toLowerCase(), " (").concat(o.z[n], ")"),
-            }),
-            (0, c.qh)(l) && (0, r.jsx)(_, { content: l }),
-        ],
+        children: (0, r.jsxs)("div", {
+            style: {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginRight: "8px",
+            },
+            children: [
+                (0, r.jsxs)("div", {
+                    style: {
+                        display: "flex",
+                        flexDirection: "column",
+                    },
+                    children: [
+                        (0, r.jsx)(s.Text, {
+                            variant: "text-md/normal",
+                            className: d.marginTop4,
+                            children: "".concat(n.toLowerCase(), " (").concat(o.z[n], ")"),
+                        }),
+                        (0, c.qh)(l) && (0, r.jsx)(_, { content: l }),
+                    ],
+                }),
+                (0, r.jsx)(s.hU, {
+                    size: "sm",
+                    icon: h ? s.C2q : s.zTD,
+                    onClick: (e) => {
+                        e.stopPropagation(), m(!0), navigator.clipboard.writeText(n.toLowerCase());
+                    },
+                    "aria-label": h ? "Copied" : "Copy",
+                }),
+            ],
+        }),
     });
 });
 function _(e) {

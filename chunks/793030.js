@@ -19,6 +19,7 @@ n.d(t, {
     BVY: () => S.BVY,
     B_b: () => S.B_b,
     BlJ: () => S.BlJ,
+    C2q: () => S.C2q,
     CEn: () => S.CEn,
     CJ0: () => S.CJ0,
     CTb: () => S.CTb,
@@ -362,6 +363,7 @@ n.d(t, {
     zGS: () => S.zGS,
     zLd: () => C.PulseGradientRive,
     zRq: () => S.zRq,
+    zTD: () => S.zTD,
     zec: () => C.JetpackWumpusWithTrinketsRive,
     zxk: () => g.z,
 });
