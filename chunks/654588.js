@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r,
     i = n(442837),
     a = n(570140),
@@ -84,7 +84,13 @@ function h() {
 function m() {
     _ = d(c({}, _), { isFetchingCampaignEligibility: !0 });
 }
-class g extends (r = i.ZP.Store) {
+function g(e, t) {
+    return (
+        !(e instanceof f) &&
+        ((null === e && null === t) || (null !== e && null !== t && e.id === t.id && e.status === t.status))
+    );
+}
+class E extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, o.Z),
             this.syncWith([s.Z], this.handleUserOfferUpdate),
@@ -95,15 +101,22 @@ class g extends (r = i.ZP.Store) {
     }
     handleSubscriptionUpdate() {
         let e = c({}, _);
-        !0 === o.Z.hasFetchedMostRecentPremiumTypeSubscription() &&
-            (e.mostRecentSubscription = o.Z.getMostRecentPremiumTypeSubscription()),
-            !0 === o.Z.hasFetchedPreviousPremiumTypeSubscription() &&
-                (e.prevSubscription = o.Z.getPreviousPremiumTypeSubscription()),
-            (e.shouldRefetchCampaignEligibility = !0),
-            (_ = e);
+        if (!0 === o.Z.hasFetchedMostRecentPremiumTypeSubscription()) {
+            let t = e.mostRecentSubscription,
+                n = o.Z.getMostRecentPremiumTypeSubscription();
+            g(t, n) || (e.shouldRefetchCampaignEligibility = !0), (e.mostRecentSubscription = n);
+        }
+        if (!0 === o.Z.hasFetchedPreviousPremiumTypeSubscription()) {
+            let t = e.prevSubscription,
+                n = o.Z.getPreviousPremiumTypeSubscription();
+            g(t, n) || (e.shouldRefetchCampaignEligibility = !0), (e.prevSubscription = n);
+        }
+        _ = e;
     }
     handleUserOfferUpdate() {
         !1 !== s.Z.lastFetchSuccessful() &&
+            (_.userHasUnexpiredDiscount !== s.Z.hasAnyUnexpiredDiscountOffer() ||
+                _.userHasUnexpiredOffers !== s.Z.hasAnyUnexpiredOffer()) &&
             (_ = d(c({}, _), {
                 userHasUnexpiredOffers: s.Z.hasAnyUnexpiredOffer(),
                 userHasUnexpiredDiscount: s.Z.hasAnyUnexpiredDiscountOffer(),
@@ -111,8 +124,8 @@ class g extends (r = i.ZP.Store) {
             }));
     }
 }
-l(g, "displayName", "MarketingCampaignEligibilityStore");
-let E = new g(a.Z, {
+l(E, "displayName", "MarketingCampaignEligibilityStore");
+let b = new E(a.Z, {
     MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_SUCCESS: p,
     MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED: h,
     MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_STARTED: m,
