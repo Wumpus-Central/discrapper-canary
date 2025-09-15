@@ -101,36 +101,37 @@ function A(e) {
             hasVideo: A = !1,
             gradientColor: C,
             onPositionChange: N,
+            scrollBehavior: R = "sticky",
         } = e,
-        [R, P] = i.useState(h),
-        [w, D] = i.useState(b),
-        x = i.useRef(b),
-        L = (0, l.e7)([f.Z], () => f.Z.getLayers()),
-        j = null != (t = L[L.length - 1]) ? t : "base",
+        [P, w] = i.useState(h),
+        [D, x] = i.useState(b),
+        L = i.useRef(b),
+        j = (0, l.e7)([f.Z], () => f.Z.getLayers()),
+        M = null != (t = j[j.length - 1]) ? t : "base",
         k = i.useMemo(() => {
             var e;
             return (
                 null == a.current ||
-                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === j
+                (null == (e = a.current.closest("[data-layer]")) ? void 0 : e.getAttribute("data-layer")) === M
             );
-        }, [a, j]);
+        }, [a, M]);
     i.useEffect(() => {
-        k && h ? P(!0) : k || P(!1);
+        k && h ? w(!0) : k || w(!1);
     }, [k, h]);
-    let M = () => {
-            P(!1);
+    let U = () => {
+            w(!1);
         },
-        U = (0, p.i)({
+        G = (0, p.i)({
             shouldShow: h,
-            caretPosition: (0, _.z)(w),
-            onExitComplete: M,
+            caretPosition: (0, _.z)(D),
+            onExitComplete: U,
         }),
-        G = (e) => {
+        B = (e) => {
             var { setPopoutRef: t, position: i } = e,
                 l = O(e, ["setPopoutRef", "position"]);
             return (
-                null != i && i !== x.current && ((x.current = i), D(i), null == N || N(i)),
-                U((e, i) => {
+                null != i && i !== L.current && ((L.current = i), x(i), null == N || N(i)),
+                G((e, i) => {
                     if (!i) return null;
                     let c = (0, r.jsx)(
                         u.V,
@@ -162,9 +163,9 @@ function A(e) {
         };
     return (0, r.jsx)(c.H, {
         targetElementRef: a,
-        shouldShow: R,
+        shouldShow: P,
         onRequestClose: g,
-        position: w,
+        position: D,
         align: v,
         spacing: I + T,
         layerContext: void 0,
@@ -172,10 +173,10 @@ function A(e) {
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === w || "bottom" === w,
+        nudgeAlignIntoViewport: "top" === D || "bottom" === D,
         closeOnClickOutside: !1,
-        scrollBehavior: "sticky",
-        renderPopout: G,
+        scrollBehavior: R,
+        renderPopout: B,
         children: S,
     });
 }

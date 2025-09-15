@@ -56609,21 +56609,6 @@ h3.improved__1689b:after {
     overflow: hidden
 }
 
-.toggleTruncationButton__3efc4 {
-    margin: 8px auto auto
-}
-
-.toggleTruncationButtonInner__3efc4 {
-    color: var(--text-muted);
-    display: flex;
-    justify-content: center
-}
-
-.toggleTruncationButtonIcon__3efc4 {
-    height: 18px;
-    width: 18px
-}
-
 .subscriptionPerks__3efc4 {
     background-color: var(--background-base-lower);
     padding: 16px
@@ -56691,6 +56676,10 @@ h3.improved__1689b:after {
     .subscriptionPerks__3efc4 {
         background-color: var(--background-secondary-alt)
     }
+}
+
+.helpMessage__3efc4 {
+    text-align: left
 }
 
 .benefits__25f6c {
@@ -89099,7 +89088,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

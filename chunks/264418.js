@@ -104,8 +104,9 @@ function O(e) {
             popoverRef: A,
             position: C,
             caretConfig: N,
+            scrollBehavior: R,
         } = e,
-        R = b(e, [
+        P = b(e, [
             "title",
             "body",
             "badge",
@@ -118,37 +119,39 @@ function O(e) {
             "popoverRef",
             "position",
             "caretConfig",
+            "scrollBehavior",
         ]);
-    let [P, w] = i.useState(null != C ? C : "top"),
-        [D, x] = i.useState({
-            position: (0, _.z)(P),
+    let [w, D] = i.useState(null != C ? C : "top"),
+        [x, L] = i.useState({
+            position: (0, _.z)(w),
             align: null != (t = null == N ? void 0 : N.align) ? t : "center",
             customOffset: null == N ? void 0 : N.customOffset,
         }),
-        L = i.useCallback(
+        j = i.useCallback(
             (e, t) => {
                 null == S || S(t);
             },
             [S],
         ),
-        j = i.useCallback(() => {
+        M = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
         k = i.useCallback((e) => {
-            w(e), x((t) => E(m({}, t), { position: (0, _.z)(e) }));
+            D(e), L((t) => E(m({}, t), { position: (0, _.z)(e) }));
         }, []);
     return (0, r.jsx)(
         l.m,
-        E(m({}, R), {
-            position: P,
-            onRequestClose: L,
+        E(m({}, P), {
+            position: w,
+            onRequestClose: j,
             gradientColor: T,
             onPositionChange: k,
+            scrollBehavior: R,
             children: (0, r.jsxs)("div", {
                 ref: A,
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: j,
+                        onClick: M,
                         variant: null != T ? "color-mix" : void 0,
                     }),
                     null != y &&
@@ -169,7 +172,7 @@ function O(e) {
                         hasBottomMargin: null != v,
                     }),
                     null != v && v.length > 0 ? (0, r.jsx)(c.k, { actions: v }) : null,
-                    (0, r.jsx)(u.$, { caretConfig: D }),
+                    (0, r.jsx)(u.$, { caretConfig: x }),
                 ],
             }),
         }),
