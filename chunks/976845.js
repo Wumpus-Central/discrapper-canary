@@ -1,8 +1,4 @@
-n.d(t, {
-    D2: () => g,
-    ZP: () => v,
-    eg: () => E,
-});
+n.d(t, { ZP: () => O });
 var r = n(951288),
     i = n(647438),
     a = n(60488),
@@ -88,11 +84,7 @@ let m = {
         height: 60,
     },
     g = 3000,
-    E = {
-        EARN: 0.25,
-        SPEND: 0.3,
-    },
-    b = (e) => {
+    E = (e) => {
         let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: a, getDuration: o } = e,
             s = o(),
             l = null != s ? 1000 * s : g;
@@ -103,13 +95,13 @@ let m = {
                 r(l);
             }, [r, l]);
     },
-    y = (e) => {
+    b = (e) => {
         var { currentAnimationType: t } = e,
             n = p(e, ["currentAnimationType"]);
         let i = (0, o.D)(null != t ? t : "earn"),
             { Component: a } = i;
         return (
-            b(d({ currentAnimationType: t }, n, p(i, ["Component"]))),
+            E(d({ currentAnimationType: t }, n, p(i, ["Component"]))),
             (0, r.jsx)(
                 a,
                 _(d({}, m), {
@@ -120,13 +112,13 @@ let m = {
             )
         );
     },
-    O = (e) => {
+    y = (e) => {
         var { currentAnimationType: t } = e,
             n = p(e, ["currentAnimationType"]);
         let i = (0, a.v)(null != t ? t : "earn"),
             { Component: o } = i;
         return (
-            b(d({ currentAnimationType: t }, n, p(i, ["Component"]))),
+            E(d({ currentAnimationType: t }, n, p(i, ["Component"]))),
             (0, r.jsx)(
                 o,
                 _(d({}, m), {
@@ -137,7 +129,7 @@ let m = {
             )
         );
     },
-    v = (e) => {
+    O = (e) => {
         let t = (0, l.ZP)();
-        return (0, s.ap)(t) ? (0, r.jsx)(O, d({}, e)) : (0, r.jsx)(y, d({}, e));
+        return (0, s.ap)(t) ? (0, r.jsx)(y, d({}, e)) : (0, r.jsx)(b, d({}, e));
     };

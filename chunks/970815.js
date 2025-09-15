@@ -1,6 +1,6 @@
 n.d(t, {
-    A4: () => g,
-    b6: () => l.b,
+    A4: () => E,
+    b6: () => c.b,
 }),
     n(388685);
 var r = n(951288),
@@ -8,11 +8,12 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(481060),
-    l = n(317257),
-    c = n(583478),
-    u = n(976845),
-    d = n(647917);
-function f(e, t, n) {
+    l = n(526767),
+    c = n(317257),
+    u = n(583478),
+    d = n(976845),
+    f = n(647917);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,94 +37,94 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let p = () =>
+let h = () =>
         (0, r.jsx)("img", {
-            className: d.notificationBadge,
+            className: f.notificationBadge,
             src: n(808824),
             alt: "",
         }),
-    h = "balance-widget-pill",
-    m = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
-    g = (0, i.forwardRef)(function (e, t) {
+    m = "balance-widget-pill",
+    g = (e, t) => (e === c.b.SELECTED ? f.selected : t ? f.highlighted : f.default),
+    E = (0, i.forwardRef)(function (e, t) {
         let {
                 id: n,
                 balance: a,
-                balanceWidgetMode: f = l.b.DEFAULT,
-                showNotificationBadge: g,
-                onClick: E,
-                onMouseDown: b,
-                disabled: y,
-                isInModalOverlay: O,
-                className: v,
+                balanceWidgetMode: _ = c.b.DEFAULT,
+                showNotificationBadge: E,
+                onClick: b,
+                onMouseDown: y,
+                disabled: O,
+                isInModalOverlay: v,
+                className: I,
             } = e,
-            [I, T] = (0, i.useState)(!1),
-            S = (0, i.useMemo)(() => m(f, I), [f, I]),
-            [A, C] = (0, i.useState)(!1),
-            [N, R] = (0, i.useState)(!1),
-            [P, w] = (0, i.useState)(0.9 * u.D2),
-            D = null === a;
+            [T, S] = (0, i.useState)(!1),
+            A = (0, i.useMemo)(() => g(_, T), [_, T]),
+            [C, N] = (0, i.useState)(!1),
+            [R, P] = (0, i.useState)(!1),
+            [w, D] = (0, i.useState)(0.9 * l.D2),
+            x = null === a;
         (0, i.useEffect)(() => {
-            D &&
-                !A &&
-                (C(!0),
+            x &&
+                !C &&
+                (N(!0),
                 setTimeout(() => {
-                    R(!0);
+                    P(!0);
                 }, 500));
-        }, [D, C, A]),
+        }, [x, N, C]),
             (0, i.useEffect)(() => {
-                N && !D && C(!1);
-            }, [D, N]);
-        let x = D || A,
-            L = A ? null : a,
-            [j, M] = (0, i.useState)(null),
-            k = (0, i.useRef)(null),
-            U = (0, i.useCallback)(() => {
-                (k.current = null), M(null);
+                R && !x && N(!1);
+            }, [x, R]);
+        let L = x || C,
+            j = C ? null : a,
+            [M, k] = (0, i.useState)(null),
+            U = (0, i.useRef)(null),
+            G = (0, i.useCallback)(() => {
+                (U.current = null), k(null);
             }, []),
-            G = (0, i.useCallback)(
+            B = (0, i.useCallback)(
                 (e) => {
-                    let t = j === k.current;
-                    e > 0 && ("earn" !== j || !t) && M("earn");
+                    let t = M === U.current;
+                    e > 0 && ("earn" !== M || !t) && k("earn");
                 },
-                [M, j],
+                [k, M],
             ),
-            B = {
-                currentAnimationType: j,
-                animationTypeRef: k,
-                onSetAnimationDurationMS: w,
+            Z = {
+                currentAnimationType: M,
+                animationTypeRef: U,
+                onSetAnimationDurationMS: D,
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: x ? void 0 : E,
-            className: o()(d.clickable, { [d.disabled]: y }),
-            id: null != n ? n : h,
+            onClick: L ? void 0 : b,
+            className: o()(f.clickable, { [f.disabled]: O }),
+            id: null != n ? n : m,
             children: (0, r.jsxs)("span", {
-                onMouseDown: b,
-                onMouseEnter: y ? void 0 : () => T(!0),
-                onMouseLeave: y ? void 0 : () => T(!1),
+                onMouseDown: y,
+                onMouseEnter: O ? void 0 : () => S(!0),
+                onMouseLeave: O ? void 0 : () => S(!1),
                 ref: t,
-                className: o()(d.container, S, v, {
-                    [d.containerLoading]: x,
-                    [d.inModalOverlay]: O,
-                    [d.disabled]: y,
+                className: o()(f.container, A, I, {
+                    [f.containerLoading]: L,
+                    [f.inModalOverlay]: v,
+                    [f.disabled]: O,
                 }),
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()(d.orbsLottieContainer, x ? d.orbIconloading : void 0),
-                        children: (0, r.jsx)(u.ZP, _({}, B)),
+                        className: o()(f.orbsLottieContainer, L ? f.orbIconloading : void 0),
+                        children: (0, r.jsx)(d.ZP, p({}, Z)),
                     }),
-                    (0, r.jsx)(c.Z, {
-                        value: L,
-                        onValueChange: G,
-                        onValueReached: U,
-                        targetTotalCounterTime: P,
-                        className: x ? d.counterLoading : void 0,
+                    (0, r.jsx)(u.Z, {
+                        value: j,
+                        onValueChange: B,
+                        onValueReached: G,
+                        targetTotalCounterTime: w,
+                        className: L ? f.counterLoading : void 0,
                     }),
-                    g && (0, r.jsx)(p, {}),
+                    E && (0, r.jsx)(h, {}),
                 ],
             }),
         });
