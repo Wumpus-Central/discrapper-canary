@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => V,
-    c: () => Z,
+    Z: () => G,
+    c: () => k,
 }),
     n(388685);
 var r = n(951288),
@@ -8,7 +8,7 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(755721),
+    l = n(681715),
     c = n(481060),
     u = n(131388),
     d = n(313201),
@@ -23,8 +23,8 @@ var r = n(951288),
     y = n(570533),
     O = n(971792),
     v = n(629262),
-    I = n(761966),
-    T = n(893729),
+    I = n(893729),
+    T = n(549631),
     S = n(845970),
     A = n(882101),
     C = n(11705),
@@ -33,66 +33,14 @@ var r = n(951288),
     P = n(981631),
     w = n(388032),
     D = n(126683);
-function x(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function L(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                x(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function j(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function M(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : j(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let k = 24,
-    U = 5,
-    G = (e) => {
+let x = 24,
+    L = 5,
+    j = (e) => {
         let { benefits: t, header: n, guildId: a } = e,
             [o, s] = i.useState(!1),
-            l = o ? t : t.slice(0, U),
-            u = t.length > U,
-            f = t.length - U,
+            l = o ? t : t.slice(0, L),
+            u = t.length > L,
+            f = t.length - L,
             _ = w.intl.formatToPlainString(w.t["XSdy7+"], { numTruncated: f }),
             p = () => s((e) => !e),
             m = (0, d.Dt)();
@@ -130,7 +78,7 @@ let k = 24,
                           ),
                       }),
                       u &&
-                          (0, r.jsx)(F, {
+                          (0, r.jsx)(U, {
                               isViewAll: o,
                               onToggle: p,
                               showMoreText: _,
@@ -138,7 +86,7 @@ let k = 24,
                   ],
               });
     },
-    B = (e) => {
+    M = (e) => {
         let { guildId: t, listingId: n } = e,
             i = (0, y.Z)(t),
             [a] = g.XZ(n, t),
@@ -147,7 +95,7 @@ let k = 24,
             return p.ZP.getEmojiURL({
                 id: e.id,
                 animated: e.animated,
-                size: k,
+                size: x,
             });
         }
         return 0 === o.length
@@ -167,21 +115,17 @@ let k = 24,
                           children: o.map((e, t) => {
                               var n;
                               return (0, r.jsx)(
-                                  c.ua7,
+                                  l.u,
                                   {
                                       text: e.name,
                                       "aria-label": !1,
-                                      children: (t) =>
-                                          (0, r.jsx)(
-                                              "img",
-                                              M(L({}, t), {
-                                                  className: D.emojiListEmoji,
-                                                  src: s(e),
-                                                  width: k,
-                                                  height: k,
-                                                  alt: e.name,
-                                              }),
-                                          ),
+                                      children: (0, r.jsx)("img", {
+                                          className: D.emojiListEmoji,
+                                          src: s(e),
+                                          width: x,
+                                          height: x,
+                                          alt: e.name,
+                                      }),
                                   },
                                   null != (n = e.id) ? n : t,
                               );
@@ -190,7 +134,7 @@ let k = 24,
                   ],
               });
     },
-    Z = (e) => {
+    k = (e) => {
         let { listingId: t, guildId: n, className: i } = e,
             a = (0, O.Z)(n, t),
             [s] = g.UE(t),
@@ -213,206 +157,182 @@ let k = 24,
                               }),
                               children: [
                                   (0, r.jsx)(c.LZC, { size: 8 }),
-                                  (0, r.jsx)(T.Z, {
+                                  (0, r.jsx)(I.Z, {
                                       role: d,
                                       guildId: n,
                                       className: D.roleMessagePreview,
                                   }),
                               ],
                           }),
-                      (0, r.jsx)(G, {
+                      (0, r.jsx)(j, {
                           header: w.intl.string(w.t.LtfhAg),
                           benefits: l,
                           guildId: n,
                       }),
-                      (0, r.jsx)(G, {
+                      (0, r.jsx)(j, {
                           header: w.intl.string(w.t["8oxWpK"]),
                           benefits: u,
                           guildId: n,
                       }),
-                      (0, r.jsx)(B, {
+                      (0, r.jsx)(M, {
                           guildId: n,
                           listingId: t,
                       }),
                   ],
               });
     },
-    F = (e) => {
-        let t,
-            { onToggle: n, isViewAll: i, showMoreText: a } = e;
-        return (
-            (t = i
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          w.intl.string(w.t["r/xxPT"]),
-                          (0, r.jsx)(c.u04, {
-                              size: "md",
-                              color: "currentColor",
-                              className: D.toggleTruncationButtonIcon,
-                          }),
-                      ],
-                  })
-                : (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          a,
-                          (0, r.jsx)(c.CJ0, {
-                              size: "md",
-                              color: "currentColor",
-                              className: D.toggleTruncationButtonIcon,
-                          }),
-                      ],
-                  })),
-            (0, r.jsx)(l.zx, {
-                look: l.zx.Looks.BLANK,
-                size: l.zx.Sizes.NONE,
-                className: D.toggleTruncationButton,
-                innerClassName: D.toggleTruncationButtonInner,
-                onClick: n,
-                children: t,
-            })
-        );
+    U = (e) => {
+        let { onToggle: t, isViewAll: n, showMoreText: i } = e,
+            a = n ? w.intl.string(w.t["r/xxPT"]) : i;
+        return (0, r.jsx)(c.Avr, {
+            text: a,
+            onClick: t,
+            textVariant: "text-xs/medium",
+            variant: "secondary",
+        });
     },
-    V = (e) => {
-        var t;
-        let { listingId: n, guildId: a, groupListingId: d, analyticsLocation: p } = e,
-            y = (0, m.jO)(n),
+    G = (e) => {
+        let { listingId: t, guildId: n, groupListingId: a, analyticsLocation: d } = e,
+            p = (0, m.jO)(t),
             {
-                openModal: O,
-                canOpenModal: v,
-                cannotOpenReason: T,
-                isCheckingTrialEligibility: S,
-            } = (0, N.Z)(y, a, d, p),
-            x = (0, s.e7)([_.Z], () => _.Z.isSyncing),
-            { activeSubscription: j, activeSubscriptionListing: k } = (0, E.Z)(d),
-            U = (null == k ? void 0 : k.id) === n,
-            G = (null == j ? void 0 : j.status) === P.O0b.CANCELED,
-            [B, V] = i.useState(!1),
-            [H, Y] = i.useState(!1),
-            W = i.useCallback((e) => {
+                openModal: y,
+                canOpenModal: O,
+                cannotOpenReason: v,
+                isCheckingTrialEligibility: I,
+            } = (0, N.Z)(p, n, a, d),
+            S = (0, s.e7)([_.Z], () => _.Z.isSyncing),
+            { activeSubscription: x, activeSubscriptionListing: L } = (0, E.Z)(a),
+            j = (null == L ? void 0 : L.id) === t,
+            M = (null == x ? void 0 : x.status) === P.O0b.CANCELED,
+            [G, B] = i.useState(!1),
+            [Z, F] = i.useState(!1),
+            V = i.useCallback((e) => {
                 let t = !1;
-                null != e && (t = e.scrollHeight - e.clientHeight > 1), Y(t);
+                null != e && (t = e.scrollHeight - e.clientHeight > 1), F(t);
             }, []),
-            [K] = g._T(n),
-            [z] = g.PK(n),
-            [q] = g.TT(n),
-            [X] = g.F2(n),
-            Q = (0, b.Z)(a, n),
-            J = null != q && null == j && Q,
-            $ = () => V((e) => !e),
-            ee = (0, u.Z)(R.iP),
-            [et, en] = i.useState(!1),
-            er = et || !ee,
-            ei = () => en((e) => !e),
-            ea = (0, s.e7)([f.Z], () => f.Z.isViewingServerShop(a)),
-            eo = (null == y ? void 0 : y.published) === !0,
-            es = (null == y ? void 0 : y.soft_deleted) === !0,
-            el = w.intl.string(w.t.KzmEAw);
-        return (eo || ea) && !es
+            [H] = g._T(t),
+            [Y] = g.PK(t),
+            [W] = g.TT(t),
+            [K] = g.F2(t),
+            z = (0, b.Z)(n, t),
+            q = null != W && null == x && z,
+            X = () => B((e) => !e),
+            Q = (0, u.Z)(R.iP),
+            [J, $] = i.useState(!1),
+            ee = J || !Q,
+            et = () => $((e) => !e),
+            en = (0, s.e7)([f.Z], () => f.Z.isViewingServerShop(n)),
+            er = (null == p ? void 0 : p.published) === !0,
+            ei = (null == p ? void 0 : p.soft_deleted) === !0,
+            ea = w.intl.string(w.t.KzmEAw);
+        return (er || en) && !ei
             ? (0, r.jsxs)("article", {
                   className: D.container,
-                  "aria-label": K,
+                  "aria-label": H,
                   children: [
-                      J &&
+                      q &&
                           (0, r.jsxs)("div", {
                               className: o()(D.tierTrialIndicator, D.tierTopIndicator),
                               children: [
                                   w.intl.format(w.t.L2ouio, {
                                       trialPeriodDuration: (0, h.iG)({
-                                          interval: q.interval,
-                                          interval_count: q.interval_count,
+                                          interval: W.interval,
+                                          interval_count: W.interval_count,
                                       }),
                                   }),
-                                  (0, r.jsx)(c.ua7, {
-                                      clickableOnMobile: !0,
+                                  (0, r.jsx)(l.u, {
                                       text: w.intl.formatToPlainString(w.t.FYyR4u, {
-                                          activeTrialUserLimit: null != X ? X : 0,
+                                          activeTrialUserLimit: null != K ? K : 0,
                                       }),
-                                      children: (e) =>
-                                          (0, r.jsx)(
-                                              c.d3s,
-                                              L(
-                                                  {
-                                                      size: "xs",
-                                                      color: "currentColor",
-                                                      className: D.tierTrialIndicatorIcon,
-                                                  },
-                                                  e,
-                                              ),
-                                          ),
+                                      children: (0, r.jsx)(c.d3s, {
+                                          size: "xs",
+                                          color: "currentColor",
+                                          className: D.tierTrialIndicatorIcon,
+                                      }),
                                   }),
                               ],
                           }),
                       (0, r.jsxs)("div", {
-                          className: J ? void 0 : D.cardContainerWithoutTopIndicator,
+                          className: q ? void 0 : D.cardContainerWithoutTopIndicator,
                           children: [
                               (0, r.jsxs)("div", {
                                   className: D.tierInfoContainer,
                                   children: [
-                                      ee
+                                      Q
                                           ? (0, r.jsx)(C.e, {
-                                                listingId: n,
-                                                isListingPublished: eo,
-                                                expanded: er,
-                                                onToggleExpanded: ei,
+                                                listingId: t,
+                                                isListingPublished: er,
+                                                expanded: ee,
+                                                onToggleExpanded: et,
                                             })
                                           : (0, r.jsx)(A.xv, {
-                                                listingId: n,
-                                                isListingPublished: eo,
+                                                listingId: t,
+                                                isListingPublished: er,
                                             }),
-                                      er &&
-                                          (0, r.jsxs)(r.Fragment, {
+                                      ee &&
+                                          (0, r.jsxs)(c.Kqy, {
+                                              gap: 16,
                                               children: [
-                                                  ee && (0, r.jsx)("div", { className: D.divider }),
-                                                  U
-                                                      ? (0, r.jsx)(l.zx, {
-                                                            fullWidth: !0,
-                                                            look: l.zx.Looks.OUTLINED,
-                                                            color: l.zx.Colors.PRIMARY,
+                                                  Q && (0, r.jsx)("div", { className: D.divider }),
+                                                  j
+                                                      ? (0, r.jsx)(c.zxk, {
                                                             disabled: !0,
-                                                            children: G
+                                                            fullWidth: !0,
+                                                            variant: M ? "secondary" : "primary",
+                                                            text: M
                                                                 ? w.intl.string(w.t.iKHmu7)
                                                                 : w.intl.string(w.t.XvAuMj),
                                                         })
-                                                      : (0, r.jsx)(c.ua7, {
-                                                            text: v ? null : T,
-                                                            "aria-label": null != (t = v && T) && t,
-                                                            children: (e) =>
-                                                                (0, r.jsx)(
-                                                                    I.Z,
-                                                                    M(L({}, e), {
-                                                                        fullWidth: !0,
-                                                                        disabled: !v || x,
-                                                                        loading: S,
-                                                                        onClick: O,
-                                                                        text: w.intl.string(w.t.fM5Zsb),
-                                                                    }),
-                                                                ),
+                                                      : (0, r.jsxs)(r.Fragment, {
+                                                            children: [
+                                                                O
+                                                                    ? null
+                                                                    : (0, r.jsx)(c.Wn, {
+                                                                          className: D.helpMessage,
+                                                                          messageType: c.QYI.INFO,
+                                                                          children: v,
+                                                                      }),
+                                                                (0, r.jsx)(c.zxk, {
+                                                                    fullWidth: !0,
+                                                                    text: w.intl.string(w.t.fM5Zsb),
+                                                                    disabled: !O || S,
+                                                                    loading: I,
+                                                                    onClick: y,
+                                                                    icon: T.Z,
+                                                                    variant: "primary",
+                                                                }),
+                                                            ],
                                                         }),
-                                                  (0, r.jsx)(c.LZC, { size: 16 }),
-                                                  (0, r.jsx)(c.Text, {
-                                                      variant: "text-sm/normal",
-                                                      color: "text-default",
-                                                      className: o()((!H || !B) && D.tierDescriptionTruncate),
-                                                      children: (0, r.jsx)("div", {
-                                                          ref: W,
-                                                          children: z,
-                                                      }),
+                                                  (0, r.jsxs)(c.Kqy, {
+                                                      gap: 8,
+                                                      align: "center",
+                                                      children: [
+                                                          (0, r.jsx)(c.Text, {
+                                                              variant: "text-sm/normal",
+                                                              color: "text-default",
+                                                              className: o()((!Z || !G) && D.tierDescriptionTruncate),
+                                                              children: (0, r.jsx)("div", {
+                                                                  ref: V,
+                                                                  children: Y,
+                                                              }),
+                                                          }),
+                                                          Z &&
+                                                              (0, r.jsx)(U, {
+                                                                  isViewAll: G,
+                                                                  onToggle: X,
+                                                                  showMoreText: ea,
+                                                              }),
+                                                      ],
                                                   }),
-                                                  H &&
-                                                      (0, r.jsx)(F, {
-                                                          isViewAll: B,
-                                                          onToggle: $,
-                                                          showMoreText: el,
-                                                      }),
                                               ],
                                           }),
                                   ],
                               }),
-                              er &&
+                              ee &&
                                   (0, r.jsx)(c.y5t, {
-                                      children: (0, r.jsx)(Z, {
-                                          listingId: n,
-                                          guildId: a,
+                                      children: (0, r.jsx)(k, {
+                                          listingId: t,
+                                          guildId: n,
                                       }),
                                   }),
                           ],
