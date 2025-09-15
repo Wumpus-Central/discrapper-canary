@@ -42,7 +42,7 @@ var r = (function (e) {
         return (e.VOICE_LAUNCHER = "voice_launcher"), (e.TEXT_LAUNCHER = "text_launcher"), e;
     })({}),
     l = (function (e) {
-        return (e[(e.LINKED = 1)] = "LINKED"), e;
+        return (e[(e.LINKED = 1)] = "LINKED"), (e[(e.OFFICIAL = 2)] = "OFFICIAL"), (e[(e.NVIDIA = 3)] = "NVIDIA"), e;
     })({}),
     c = (function (e) {
         return (e[(e.MEDIA_PROXY = 1)] = "MEDIA_PROXY"), (e[(e.YOUTUBE = 2)] = "YOUTUBE"), e;
