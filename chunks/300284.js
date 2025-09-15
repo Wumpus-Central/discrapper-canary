@@ -1,25 +1,27 @@
 n.d(t, { Z: () => l });
 var r = n(647438),
-    i = n(230711),
-    a = n(18438),
+    i = n(18438),
+    a = n(313789),
     o = n(981631),
     s = n(526761);
 function l() {
     let {
         guild: e,
         scrollPosition: t,
-        analyticsLocation: n,
-        analyticsLocations: l,
-        openWithoutBackstack: c,
+        analyticsLocation: l,
+        analyticsLocations: c,
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, r.useCallback)(() => {
-        null != e && (0, a.Fq)(e),
-            i.Z.open(o.oAB.PROFILE_CUSTOMIZATION, null != e ? s.NB.GUILD : s.NB.USER_PROFILE, {
-                analyticsLocation: n,
-                analyticsLocations: l,
-                openWithoutBackstack: c,
-                scrollPosition: t,
+        null != e && (0, i.Fq)(e);
+        {
+            let { openUserSettings: t } = n(518596);
+            t(a.n.PROFILE_PANEL, {
+                section: o.oAB.PROFILE_CUSTOMIZATION,
+                subsection: null != e ? s.NB.GUILD : s.NB.USER_PROFILE,
+                analyticsLocation: l,
+                analyticsLocations: c,
             });
-    }, [e, t, n, l, c]);
+        }
+    }, [e, t, l, c]);
 }
 n(778825), n(663389);

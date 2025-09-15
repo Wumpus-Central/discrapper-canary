@@ -1,30 +1,31 @@
 n.d(t, {
-    K: () => O,
-    y: () => b,
+    K: () => y,
+    y: () => O,
 });
 var r = n(951288),
     i = n(442837),
     l = n(481060),
-    o = n(230711),
-    a = n(695346),
-    s = n(771845),
-    c = n(88658),
-    u = n(782896),
-    d = n(981631),
-    p = n(933554),
-    f = n(388032),
-    h = n(95049);
-let g = () => {
-    o.Z.open(d.oAB.ACTIVITY_PRIVACY);
+    o = n(695346),
+    a = n(313789),
+    s = n(518596),
+    c = n(771845),
+    u = n(88658),
+    d = n(782896),
+    p = n(981631),
+    f = n(933554),
+    h = n(388032),
+    g = n(95049);
+let m = () => {
+    (0, s.openUserSettings)(a.n.ACTIVITY_PRIVACY_PANEL, { section: p.oAB.ACTIVITY_PRIVACY });
 };
-function m(e) {
+function b(e) {
     let { children: t, onClick: n } = e;
     return (0, r.jsxs)(l.P3F, {
-        className: h.chevronButton,
+        className: g.chevronButton,
         onClick: n,
         children: [
             (0, r.jsx)("div", {
-                className: h.chevronButtonContent,
+                className: g.chevronButtonContent,
                 children: t,
             }),
             (0, r.jsx)(l.Fbu, {
@@ -34,38 +35,38 @@ function m(e) {
         ],
     });
 }
-function b(e) {
+function O(e) {
     let { onClosePopout: t } = e,
-        n = a.G6.useSetting(),
-        o = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
-        d = (0, c._o)(),
-        h = o.filter((e) => !d.has(e));
-    return 0 === o.length
+        n = o.G6.useSetting(),
+        a = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
+        s = (0, u._o)(),
+        p = a.filter((e) => !s.has(e));
+    return 0 === a.length
         ? null
-        : (0, r.jsxs)(m, {
+        : (0, r.jsxs)(b, {
               onClick: () => {
-                  t(), g();
+                  t(), m();
               },
               children: [
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/semibold",
-                      children: f.intl.string(n ? p.default["3GrhnJ"] : p.default["54ycKC"]),
+                      children: h.intl.string(n ? f.default["3GrhnJ"] : f.default["54ycKC"]),
                   }),
-                  (0, r.jsx)(u.c, { guildIds: h }),
+                  (0, r.jsx)(d.c, { guildIds: p }),
               ],
           });
 }
-function O(e) {
+function y(e) {
     let { onClosePopout: t } = e;
     return (0, r.jsx)(l.P3F, {
-        className: h.customizeLink,
+        className: g.customizeLink,
         onClick: () => {
-            t(), g();
+            t(), m();
         },
         children: (0, r.jsx)(l.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: f.intl.string(f.t["ZrN+DQ"]),
+            children: h.intl.string(h.t["ZrN+DQ"]),
         }),
     });
 }

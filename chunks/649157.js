@@ -105,7 +105,9 @@ function y() {
             let { value: t } = e;
             m(t),
                 h.nextTick(() => {
-                    l.ZP.updateLocale(t), (0, s.Mr3)(d.I) && (0, d.Z)(u.n.LOCALE_PANEL, { section: f.oAB.LOCALE });
+                    l.ZP.updateLocale(t),
+                        (0, s.Mr3)(d.USER_SETTINGS_MODAL_KEY) &&
+                            (0, d.openUserSettings)(u.n.LOCALE_PANEL, { section: f.oAB.LOCALE });
                 });
         }, []);
     return (0, r.jsx)(s.hjN, {

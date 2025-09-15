@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(286359);
 function d() {
     let e = () => {
-        (0, a.uL)(s.Z5c.GUILD_DISCOVERY), (0, o.Z)();
+        (0, a.uL)(s.Z5c.GUILD_DISCOVERY), (0, o.default)();
     };
     return (0, r.jsxs)("div", {
         className: c.wrapper,

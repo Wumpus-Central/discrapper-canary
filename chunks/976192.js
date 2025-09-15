@@ -17,8 +17,8 @@ var l = t(951288),
     O = t(766509);
 function h(e) {
     let { guildId: n, userId: h, analyticsLocation: j, analyticsLocations: P, context: v, icon: x } = e,
-        y = Z.Z.getGuild(n),
-        _ = d.default.getId(),
+        _ = Z.Z.getGuild(n),
+        y = d.default.getId(),
         N = (0, r.e7)([f.default], () => f.default.getUser(h)),
         E = (0, r.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, h), [n, h]);
     (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
@@ -26,16 +26,16 @@ function h(e) {
     (0, o.$)(C, "useChangeIdentityItem");
     let I = v === p.IlC.POPOUT,
         S = (0, s.Z)({
-            guild: y,
-            analyticsLocation: j,
+            guild: _,
+            analyticsLocations: P,
         }),
         T = (0, u.Aq)();
-    if (null == y || I) return null;
-    let U = _ === h && (b.Z.can(p.Plq.CHANGE_NICKNAME, y) || b.Z.can(p.Plq.MANAGE_NICKNAMES, y)),
-        A = _ === h,
-        w = b.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, h, y);
+    if (null == _ || I) return null;
+    let U = y === h && (b.Z.can(p.Plq.CHANGE_NICKNAME, _) || b.Z.can(p.Plq.MANAGE_NICKNAMES, _)),
+        A = y === h,
+        w = b.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, h, _);
     if (!(U || w || A) || null == N || E) return null;
-    let k = y.features.has(p.oNc.HUB) ? m.intl.string(m.t["+MWrWl"]) : m.intl.string(m.t["PKQB/P"]),
+    let k = _.features.has(p.oNc.HUB) ? m.intl.string(m.t["+MWrWl"]) : m.intl.string(m.t["PKQB/P"]),
         M = A ? k : m.intl.string(m.t.dilOFx);
     return (0, l.jsx)(a.sNh, {
         id: "change-nickname",

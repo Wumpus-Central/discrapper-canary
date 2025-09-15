@@ -1,25 +1,29 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    l = n(230711),
-    a = n(931547),
-    o = n(981631),
-    s = n(526761),
-    c = n(388032);
-function u(e) {
+    l = n(313789),
+    a = n(518596),
+    o = n(931547),
+    s = n(981631),
+    c = n(526761),
+    u = n(388032);
+function d(e) {
     let { subscription: t } = e;
     return null == t
         ? null
-        : t.status === o.O0b.PAST_DUE
+        : t.status === s.O0b.PAST_DUE
           ? (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(i.LZC, { size: 16 }),
-                    (0, r.jsx)(a.Z, {
-                        message: c.intl.string(c.t.eSuJEx),
-                        ctaMessage: c.intl.string(c.t.RXsxqa),
+                    (0, r.jsx)(o.Z, {
+                        message: u.intl.string(u.t.eSuJEx),
+                        ctaMessage: u.intl.string(u.t.RXsxqa),
                         onClick: () => {
-                            l.Z.open(o.oAB.SUBSCRIPTIONS, s.cP);
+                            (0, a.openUserSettings)(l.n.SUBSCRIPTIONS_PANEL, {
+                                section: s.oAB.SUBSCRIPTIONS,
+                                subsection: c.cP,
+                            });
                         },
                     }),
                 ],

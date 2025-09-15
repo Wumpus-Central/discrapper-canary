@@ -6,8 +6,8 @@ n.d(t, {
     n(997841);
 var r = n(647438),
     i = n(399606),
-    a = n(230711),
-    o = n(18438),
+    a = n(18438),
+    o = n(313789),
     s = n(314897),
     l = n(271383),
     c = n(430824),
@@ -48,22 +48,25 @@ function E(e) {
     }, [e]);
 }
 function b(e) {
-    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: l, openWithoutBackstack: d } = e,
-        f = (0, i.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        p = (0, i.e7)([u.Z], () => null != f && u.Z.can(_.Plq.CHANGE_NICKNAME, f), [f]);
+    let { guildId: t, scrollPosition: s, analyticsLocations: l } = e,
+        d = (0, i.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        f = (0, i.e7)([u.Z], () => null != d && u.Z.can(_.Plq.CHANGE_NICKNAME, d), [d]);
     return [
         r.useCallback(() => {
-            if (null == f) return;
+            if (null == d) return;
             let e = _.oAB.PROFILE_CUSTOMIZATION,
                 t = h.NB.GUILD;
-            p ? (0, o.Fq)(f) : (t = h.NB.USER_PROFILE),
-                a.Z.open(e, t, {
-                    scrollPosition: n,
-                    analyticsLocation: s,
+            f ? (0, a.Fq)(d) : (t = h.NB.USER_PROFILE);
+            {
+                let { openUserSettings: r } = n(518596);
+                r(o.n.PROFILE_PANEL, {
+                    section: e,
+                    subsection: t,
+                    scrollPosition: s,
                     analyticsLocations: l,
-                    openWithoutBackstack: d,
                 });
-        }, [p, n, s, l, d, f]),
-        p,
+            }
+        }, [f, s, l, d]),
+        f,
     ];
 }

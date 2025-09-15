@@ -1,13 +1,13 @@
-n.d(t, { Z: () => T }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
+n.d(t, { Z: () => N }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(997841);
 var r = n(45792),
-    i = n(230711),
-    l = n(782568),
-    a = n(636449),
-    o = n(317381),
-    s = n(611577),
-    c = n(840074),
-    u = n(16609),
-    d = n(812206),
+    i = n(782568),
+    l = n(636449),
+    a = n(317381),
+    o = n(611577),
+    s = n(840074),
+    c = n(16609),
+    u = n(812206),
+    d = n(313789),
     p = n(626135),
     f = n(12647),
     h = n(630388),
@@ -22,7 +22,7 @@ var r = n(45792),
     I = n(674563);
 let C = new Set([v.Fu, v.JT]),
     S = new Set(["www.nytimes.com", "apps.apple.com", "play.google.com"]),
-    N = new Map([
+    T = new Map([
         [
             I.Vt,
             {
@@ -45,7 +45,7 @@ let C = new Set([v.Fu, v.JT]),
             },
         ],
     ]),
-    T = {
+    N = {
         [y.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
                 [E.Gp.ANY]: [E.wE, E.b_],
@@ -57,24 +57,24 @@ let C = new Set([v.Fu, v.JT]),
                     args: { url: n },
                 } = e;
                 (0, _.bu)(t.transport);
-                let r = o.ZP.getCurrentEmbeddedActivity();
+                let r = a.ZP.getCurrentEmbeddedActivity();
                 try {
-                    var i, c;
+                    var s, d;
                     let e = new URL(n),
-                        o = e.toString();
+                        a = e.toString();
                     if (m.isPlatformEmbedded) {
-                        let e = (0, a.R)() ? y.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, l.R)() ? y.KJ3.ACTIVITY_POPOUT : null;
                         f.Z.focus(e, !0);
                     }
-                    let h = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
-                        b = (0, u.p)(null == r ? void 0 : r.location),
-                        _ = (null == h ? void 0 : h.id) !== void 0 ? N.get(h.id) : void 0;
+                    let h = u.Z.getApplication(null == (s = t.application) ? void 0 : s.id),
+                        b = (0, c.p)(null == r ? void 0 : r.location),
+                        _ = (null == h ? void 0 : h.id) !== void 0 ? T.get(h.id) : void 0;
                     if (void 0 !== _ && _.trustedUntilEpochMs >= Date.now() && _.trustedHosts.has(e.host))
                         return (
-                            (0, l.Z)(o),
+                            (0, i.Z)(a),
                             p.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
-                                application_id: null == (c = t.application) ? void 0 : c.id,
-                                url: o,
+                                application_id: null == (d = t.application) ? void 0 : d.id,
+                                url: a,
                                 opened: !0,
                             }),
                             Promise.resolve({ opened: !0 })
@@ -82,14 +82,14 @@ let C = new Set([v.Fu, v.JT]),
                     return new Promise((e) =>
                         (0, g.q)(
                             {
-                                href: o,
+                                href: a,
                                 shouldConfirm: !0,
                                 onConfirm: () => {
                                     var n;
-                                    (0, l.Z)(o),
+                                    (0, i.Z)(a),
                                         p.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                             application_id: null == (n = t.application) ? void 0 : n.id,
-                                            url: o,
+                                            url: a,
                                             opened: !0,
                                         }),
                                         e({ opened: !0 });
@@ -98,7 +98,7 @@ let C = new Set([v.Fu, v.JT]),
                                     var n;
                                     p.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                         application_id: null == (n = t.application) ? void 0 : n.id,
-                                        url: o,
+                                        url: a,
                                         opened: !1,
                                     }),
                                         e({ opened: !1 });
@@ -106,7 +106,7 @@ let C = new Set([v.Fu, v.JT]),
                             },
                             void 0,
                             void 0,
-                            (0, s.z)({
+                            (0, o.z)({
                                 application: h,
                                 channelId: b,
                             }),
@@ -123,13 +123,16 @@ let C = new Set([v.Fu, v.JT]),
             handler(e) {
                 let { socket: t } = e;
                 (0, _.bu)(t.transport);
-                let n = (0, _._f)(t.application);
-                if (!C.has(n))
+                let r = (0, _._f)(t.application);
+                if (!C.has(r))
                     throw new b.Z(
                         { errorCode: y.lTL.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
-                i.Z.open(y.oAB.CONNECTIONS);
+                {
+                    let { openUserSettings: e } = n(518596);
+                    e(d.n.CONNECTIONS_PANEL, { section: y.oAB.CONNECTIONS });
+                }
             },
         },
         [y.Etm.SHARE_LINK]: (0, r.S)(y.Etm.SHARE_LINK, {
@@ -146,7 +149,7 @@ let C = new Set([v.Fu, v.JT]),
                 if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, y.udG.EMBEDDED))
                     throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
-                    (0, c._)({
+                    (0, s._)({
                         applicationId: a,
                         customId: r,
                         linkId: l,

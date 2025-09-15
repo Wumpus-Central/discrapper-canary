@@ -1,76 +1,77 @@
-n.d(t, { Z: () => _ }), n(953529), n(388685);
+n.d(t, { Z: () => h }), n(953529), n(388685);
 var r = n(951288),
     i = n(647438),
-    l = n(442837),
-    a = n(481060),
-    s = n(230711),
+    a = n(442837),
+    l = n(481060),
     o = n(493773),
-    c = n(367907),
-    d = n(138201),
-    u = n(592125),
+    s = n(367907),
+    c = n(138201),
+    d = n(313789),
+    u = n(518596),
+    _ = n(592125),
     m = n(155647),
     p = n(185625),
-    g = n(981631),
-    x = n(388032),
-    h = n(769450);
-function b(e) {
-    let { title: t, description: n, onButtonClick: l, trackSettingsUpsellsAction: a } = e,
-        [s, c] = i.useState(!1);
+    f = n(981631),
+    g = n(388032),
+    b = n(769450);
+function x(e) {
+    let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: l } = e,
+        [s, d] = i.useState(!1);
     return (
         (0, o.ZP)(() => {
-            a(p.M4.SETTINGS_UPSELLS_VIEWED);
+            l(p.M4.SETTINGS_UPSELLS_VIEWED);
         }),
-        (0, r.jsx)(d.JZ, {
+        (0, r.jsx)(c.JZ, {
             title: t,
             description: n,
-            buttonText: s ? x.intl.string(x.t["h+WsPT"]) : x.intl.string(x.t.A8t4NT),
+            buttonText: s ? g.intl.string(g.t["h+WsPT"]) : g.intl.string(g.t.A8t4NT),
             buttonDisabled: s,
             onButtonPress: () => {
-                l(), c(!0), a(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                a(), d(!0), l(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
             },
         })
     );
 }
-function _(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: o, reportType: d, reportSubType: _ } = e,
-        f = (0, l.e7)([u.Z], () => u.Z.getChannel(n)),
-        v = (0, m.jc)(t, null == f ? void 0 : f.type),
-        j = (0, p.i_)(d, _, o);
-    return 0 === v.length
+function h(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: o, reportType: c, reportSubType: h } = e,
+        v = (0, a.e7)([_.Z], () => _.Z.getChannel(n)),
+        j = (0, m.jc)(t, null == v ? void 0 : v.type),
+        y = (0, p.i_)(c, h, o);
+    return 0 === j.length
         ? null
         : (0, r.jsxs)("div", {
-              className: h.container,
+              className: b.container,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(l.X6q, {
                       variant: "text-sm/semibold",
-                      className: h.header,
-                      children: x.intl.string(x.t["1yxTIC"]),
+                      className: b.header,
+                      children: g.intl.string(g.t["1yxTIC"]),
                   }),
                   (0, r.jsx)("div", {
-                      className: h.upsellsContainer,
-                      children: v.map((e, n) => {
-                          let { getTitle: i, getDescription: l, onApply: a } = e;
+                      className: b.upsellsContainer,
+                      children: j.map((e, n) => {
+                          let { getTitle: i, getDescription: a, onApply: l } = e;
                           return (0, r.jsx)(
-                              b,
+                              x,
                               {
                                   title: i(),
-                                  description: l(),
-                                  onButtonClick: a,
-                                  trackSettingsUpsellsAction: j(t[n]),
+                                  description: a(),
+                                  onButtonClick: l,
+                                  trackSettingsUpsellsAction: y(t[n]),
                               },
                               n,
                           );
                       }),
                   }),
-                  (0, r.jsx)(a.Avr, {
-                      text: x.intl.string(x.t.olebGx),
+                  (0, r.jsx)(l.Avr, {
+                      text: g.intl.string(g.t.olebGx),
                       onClick: () => {
-                          s.Z.open(g.oAB.CONTENT_AND_SOCIAL),
+                          (0, u.openUserSettings)(d.n.CONTENT_AND_SOCIAL_PANEL, { section: f.oAB.CONTENT_AND_SOCIAL }),
                               i(),
-                              c.ZP.trackWithMetadata(g.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
+                              s.ZP.trackWithMetadata(f.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: o,
-                                  report_type: d.name,
-                                  report_subtype: _,
+                                  report_type: c.name,
+                                  report_subtype: h,
                                   action: p.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED,
                               });
                       },

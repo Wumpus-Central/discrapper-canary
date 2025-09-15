@@ -41,7 +41,7 @@ let M = () => {
             forceTrack: !0,
         }),
             (0, E.XO)(E.wh.CLIENT_THEMES),
-            (0, P.Z)();
+            (0, P.default)();
     },
     k = () => {
         var e, t;

@@ -1,4 +1,4 @@
-a.d(n, { default: () => b });
+a.d(n, { default: () => u });
 var i = a(951288),
     e = a(667202),
     c = a(635552),
@@ -8,11 +8,11 @@ var i = a(951288),
     d = a(388032),
     l = a(461999),
     p = a(793167);
-let b = (t) => {
-    let { transitionState: n, onClose: a, product: b } = t,
-        u = (0, s.Z)(),
+let u = (t) => {
+    let { transitionState: n, onClose: a, product: u } = t,
+        b = (0, s.Z)(),
         { handleUseNow: f, isApplying: h } = (0, c.W)({
-            product: b,
+            product: u,
             onSuccess: a,
             onError: a,
         });
@@ -25,7 +25,7 @@ let b = (t) => {
                 text: d.intl.string(d.t["2p2aY2"]),
                 variant: "secondary",
                 onClick: () => {
-                    a(), (0, o.Z)(), null == u || u();
+                    a(), (0, o.default)(), null == b || b();
                 },
             },
             {

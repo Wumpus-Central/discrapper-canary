@@ -1,23 +1,24 @@
-n.d(t, { Z: () => P }), n(642613), n(539854);
+n.d(t, { Z: () => w }), n(642613), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(524437),
     o = n(755721),
     s = n(481060),
-    l = n(230711),
-    c = n(768581),
-    u = n(63063),
-    d = n(709054),
-    f = n(695346),
+    l = n(768581),
+    c = n(63063),
+    u = n(709054),
+    d = n(695346),
+    f = n(313789),
     _ = n(749876),
-    p = n(546957),
-    h = n(838436),
-    m = n(51331),
-    g = n(726985),
-    E = n(981631),
-    b = n(388032),
-    y = n(42101);
-function O(e, t, n) {
+    p = n(947889),
+    h = n(546957),
+    m = n(838436),
+    g = n(51331),
+    E = n(726985),
+    b = n(981631),
+    y = n(388032),
+    O = n(42101);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +31,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +42,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,33 +59,33 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = 3,
-    A = 3;
-function C(e) {
+let A = 3,
+    C = 3;
+function N(e) {
     let { applications: t } = e,
-        n = i.useMemo(() => t.sort((e, t) => d.default.compare(t.id, e.id)), [t]),
+        n = i.useMemo(() => t.sort((e, t) => u.default.compare(t.id, e.id)), [t]),
         a = i.useMemo(() => {
             let e = [];
-            for (let t = 0; t < S; t++) {
+            for (let t = 0; t < A; t++) {
                 let r = n[t];
                 if (null == r) break;
                 e.push(r.name);
             }
             let t = e.join(", "),
-                i = n.length - S;
+                i = n.length - A;
             return i > 0
-                ? b.intl.format(b.t.sHFdTk, {
+                ? y.intl.format(y.t.sHFdTk, {
                       gameList: t,
                       plusMoreHook: (e, t) =>
                           (0, r.jsx)(
@@ -93,7 +94,7 @@ function C(e) {
                                   tag: "span",
                                   variant: "text-sm/medium",
                                   color: "text-muted",
-                                  children: b.intl.format(b.t["EADv+/"], { count: i }),
+                                  children: y.intl.format(y.t["EADv+/"], { count: i }),
                               },
                               t,
                           ),
@@ -102,12 +103,12 @@ function C(e) {
         }, [n]),
         o = i.useMemo(() => {
             let e = [];
-            for (let t = 0; t < A; t++) {
+            for (let t = 0; t < C; t++) {
                 let i = n[t];
                 if (null == i) break;
-                let { icon: a, name: o, id: l } = i,
-                    u = c.ZP.getApplicationIconURL({
-                        id: l,
+                let { icon: a, name: o, id: c } = i,
+                    u = l.ZP.getApplicationIconURL({
+                        id: c,
                         icon: a,
                     });
                 e.push(
@@ -118,25 +119,25 @@ function C(e) {
                             children: (e) =>
                                 (0, r.jsx)(
                                     "img",
-                                    T(v({}, e), {
+                                    S(I({}, e), {
                                         src: u,
                                         "aria-label": o,
-                                        className: y.icon,
+                                        className: O.icon,
                                     }),
                                 ),
                         },
-                        l,
+                        c,
                     ),
                 );
             }
-            let t = n.length - A;
+            let t = n.length - C;
             return (
                 t > 0 &&
                     e.push(
                         (0, r.jsx)(
                             "div",
                             {
-                                className: y.moreIcon,
+                                className: O.moreIcon,
                                 children: (0, r.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-default",
@@ -149,14 +150,15 @@ function C(e) {
                 e
             );
         }, [n]),
-        u = i.useCallback(() => {
-            l.Z.open(E.oAB.AUTHORIZED_APPS);
-        }, []);
+        c = (0, p.Z)(),
+        d = i.useCallback(() => {
+            c(f.n.AUTHORIZED_APPS_PANEL, { section: b.oAB.AUTHORIZED_APPS });
+        }, [c]);
     return (0, r.jsxs)("div", {
-        className: y.header,
+        className: O.header,
         children: [
             (0, r.jsxs)("div", {
-                className: y.gameNamesHeader,
+                className: O.gameNamesHeader,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
@@ -164,106 +166,106 @@ function C(e) {
                         children: a,
                     }),
                     (0, r.jsxs)(s.P3F, {
-                        onClick: u,
-                        className: y.manageGamesLink,
+                        onClick: d,
+                        className: O.manageGamesLink,
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "interactive-normal",
-                                children: b.intl.format(b.t.oYaYOT, {}),
+                                children: y.intl.format(y.t.oYaYOT, {}),
                             }),
                             (0, r.jsx)(s.Fbu, {
                                 size: "xxs",
                                 color: s.TVs.colors.INTERACTIVE_NORMAL,
-                                className: y.manageGamesChevron,
+                                className: O.manageGamesChevron,
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: y.divider }),
+            (0, r.jsx)("div", { className: O.divider }),
             (0, r.jsx)("div", {
-                className: y.gameIcons,
+                className: O.gameIcons,
                 children: o,
             }),
         ],
     });
 }
-function N() {
-    let e = f._j.useSetting();
-    return (0, r.jsx)(h.U, {
-        setting: g.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
-        children: (0, r.jsx)(m.Z, {
-            title: b.intl.string(b.t.XpBObG),
-            note: b.intl.format(b.t.oZsHTE, { helpdeskArticle: u.Z.getArticleURL(E.BhN.SLAYER_GAME_FRIENDS) }),
+function R() {
+    let e = d._j.useSetting();
+    return (0, r.jsx)(m.U, {
+        setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
+        children: (0, r.jsx)(g.Z, {
+            title: y.intl.string(y.t.XpBObG),
+            note: y.intl.format(y.t.oZsHTE, { helpdeskArticle: c.Z.getArticleURL(b.BhN.SLAYER_GAME_FRIENDS) }),
             value: e,
-            onChange: f._j.updateSetting,
+            onChange: d._j.updateSetting,
         }),
     });
 }
-function R() {
-    let e = f.JG.useSetting(),
+function P() {
+    let e = d.JG.useSetting(),
         t = e === a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
             {
-                name: b.intl.string(b.t.JIFnNz),
+                name: y.intl.string(y.t.JIFnNz),
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
             },
             {
-                name: b.intl.string(b.t.rRdsk5),
+                name: y.intl.string(y.t.rRdsk5),
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
             },
             {
-                name: b.intl.string(b.t.AolKwM),
+                name: y.intl.string(y.t.AolKwM),
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
             },
         ];
-    return (0, r.jsxs)(h.U, {
-        setting: g.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
+    return (0, r.jsxs)(m.U, {
+        setting: E.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
-            (0, r.jsx)(h.H, {
-                header: b.intl.string(b.t["ms+TmZ"]),
-                description: b.intl.string(b.t["4NN4+/"]),
+            (0, r.jsx)(m.H, {
+                header: y.intl.string(y.t["ms+TmZ"]),
+                description: y.intl.string(y.t["4NN4+/"]),
             }),
             (0, r.jsx)(o.Gu, {
                 value: t,
                 options: n,
                 onChange: (e) => {
                     let { value: t } = e;
-                    return f.JG.updateSetting(t);
+                    return d.JG.updateSetting(t);
                 },
             }),
         ],
     });
 }
-function P() {
+function w() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, _.Z)(!0);
-    return (0, r.jsx)(p.Z, {
+    return (0, r.jsx)(h.Z, {
         children: e
             ? (0, r.jsx)(s.$jN, {})
             : t.length > 0
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(C, { applications: t }),
-                        (0, r.jsx)(N, {}),
-                        (0, r.jsx)("div", { className: y.divider }),
+                        (0, r.jsx)(N, { applications: t }),
                         (0, r.jsx)(R, {}),
+                        (0, r.jsx)("div", { className: O.divider }),
+                        (0, r.jsx)(P, {}),
                     ],
                 })
               : (0, r.jsxs)("div", {
-                    className: y.emptyContainer,
+                    className: O.emptyContainer,
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/medium",
                             color: "header-primary",
-                            className: y.noGamesConnectedText,
-                            children: b.intl.string(b.t["+0U77e"]),
+                            className: O.noGamesConnectedText,
+                            children: y.intl.string(y.t["+0U77e"]),
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: b.intl.format(b.t.V8wClJ, {
-                                helpdeskArticle: u.Z.getArticleURL(E.BhN.SOCIAL_LAYER_CONNECTIONS),
+                            children: y.intl.format(y.t.V8wClJ, {
+                                helpdeskArticle: c.Z.getArticleURL(b.BhN.SOCIAL_LAYER_CONNECTIONS),
                             }),
                         }),
                     ],

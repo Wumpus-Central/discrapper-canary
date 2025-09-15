@@ -10,7 +10,7 @@ var o = n(703558),
     u = n(474936),
     f = n(981631),
     d = n(388032),
-    p = n(330226);
+    p = n(391853);
 function b(t) {
     var { channel: e, onClose: n, content: b } = t,
         y = (function (t, e) {
@@ -35,7 +35,7 @@ function b(t) {
             return o;
         })(t, ["channel", "onClose", "content"]);
     function g() {
-        n(), (0, l.z)(!0);
+        n(), (0, l.z)();
     }
     async function L() {
         n();

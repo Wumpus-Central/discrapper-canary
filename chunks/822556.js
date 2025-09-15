@@ -1,23 +1,25 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(230711),
-    o = n(549879),
-    s = n(906732),
-    l = n(981631),
-    c = n(388032);
-function u(e) {
-    let { analyticsLocations: t } = (0, s.ZP)();
+    a = n(549879),
+    o = n(906732),
+    s = n(313789),
+    l = n(518596),
+    c = n(981631),
+    u = n(388032);
+function d(e) {
+    let { analyticsLocations: t } = (0, o.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: "voice-settings",
-        label: c.intl.string(c.t.NiTd0d),
+        label: u.intl.string(u.t.NiTd0d),
         action: () => {
-            a.Z.open(l.oAB.VOICE, null, {
+            (0, l.openUserSettings)(s.n.VOICE_AND_VIDEO_PANEL, {
+                section: c.oAB.VOICE,
                 analyticsLocations: t,
                 appContext: e,
             }),
-                (0, o.i)(e);
+                (0, a.i)(e);
         },
         icon: i.ewm,
     });

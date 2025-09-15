@@ -1,28 +1,29 @@
 n.d(e, { default: () => f });
-var r = n(951288),
-    i = n(647438),
+var i = n(951288),
+    r = n(647438),
     l = n(82659),
     o = n(481060),
-    a = n(230711),
-    E = n(782568),
+    a = n(782568),
     s = n(168107),
-    I = n(480916),
+    E = n(480916),
     _ = n(81643),
-    u = n(880257),
-    c = n(63063),
-    d = n(247206),
-    C = n(981631),
-    A = n(526761),
-    R = n(388032);
+    I = n(880257),
+    c = n(313789),
+    u = n(518596),
+    C = n(63063),
+    A = n(247206),
+    d = n(981631),
+    R = n(526761),
+    L = n(388032);
 let f = (t) => {
-    let { channelId: e, messageId: f, transitionState: g, onClose: L } = t,
-        v = (0, u.Z)(),
-        P = (0, _.Jm)(),
-        O = (0, d.m8)(),
-        h = i.useMemo(() => P && O, [P, O]),
-        M = i.useCallback(
+    let { channelId: e, messageId: f, transitionState: g, onClose: O } = t,
+        P = (0, I.Z)(),
+        v = (0, _.Jm)(),
+        T = (0, A.m8)(),
+        h = r.useMemo(() => v && T, [v, T]),
+        M = r.useCallback(
             (t) => {
-                (0, d.aP)({
+                (0, A.aP)({
                     action: t,
                     channelId: e,
                     messageId: f,
@@ -30,35 +31,35 @@ let f = (t) => {
             },
             [e, f],
         ),
-        T = i.useCallback(() => {
-            L(),
-                M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+        p = r.useCallback(() => {
+            O(),
+                M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, o.ZDy)(async () => {
                     let { default: t } = await n(788679);
                     return (n) =>
-                        (0, r.jsx)(
+                        (0, i.jsx)(
                             t,
                             (function (t) {
                                 for (var e = 1; e < arguments.length; e++) {
                                     var n = null != arguments[e] ? arguments[e] : {},
-                                        r = Object.keys(n);
+                                        i = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
+                                        (i = i.concat(
                                             Object.getOwnPropertySymbols(n).filter(function (t) {
                                                 return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                             }),
                                         )),
-                                        r.forEach(function (e) {
-                                            var r;
-                                            (r = n[e]),
+                                        i.forEach(function (e) {
+                                            var i;
+                                            (i = n[e]),
                                                 e in t
                                                     ? Object.defineProperty(t, e, {
-                                                          value: r,
+                                                          value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (t[e] = r);
+                                                    : (t[e] = i);
                                         });
                                 }
                                 return t;
@@ -71,68 +72,69 @@ let f = (t) => {
                             ),
                         );
                 });
-        }, [e, f, L, M]);
+        }, [e, f, O, M]);
     return (
-        i.useEffect(() => {
-            (0, d.aP)({
-                action: d.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
+        r.useEffect(() => {
+            (0, A.aP)({
+                action: A.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
                 channelId: e,
                 messageId: f,
             });
         }, [e, f]),
-        (0, r.jsx)(l.Modal, {
-            title: R.intl.string(R.t.sGW77u),
+        (0, i.jsx)(l.Modal, {
+            title: L.intl.string(L.t.sGW77u),
             subtitle: (function () {
                 if (h)
-                    return R.intl.format(R.t["1L0hub"], {
+                    return L.intl.format(L.t["1L0hub"], {
                         handleOnHelpUrlHook: () => {
-                            s.Z.openUrl(c.Z.getArticleURL(C.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                                M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                            s.Z.openUrl(C.Z.getArticleURL(d.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                                M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
                         },
                     });
-                let t = R.intl.string(R.t.RUw0ZG),
-                    e = R.intl.string(R.t["E/oQYG"]);
-                return v ? t : e;
+                let t = L.intl.string(L.t.RUw0ZG),
+                    e = L.intl.string(L.t["E/oQYG"]);
+                return P ? t : e;
             })(),
             actions: [
                 (function () {
-                    if (!O && !h)
+                    if (!T && !h)
                         return {
-                            text: R.intl.string(R.t.ZH7P2t),
-                            onClick: T,
+                            text: L.intl.string(L.t.ZH7P2t),
+                            onClick: p,
                             variant: "secondary",
                         };
                 })(),
                 h
                     ? {
-                          text: R.intl.string(R.t.KPGVWl),
+                          text: L.intl.string(L.t.KPGVWl),
                           onClick: function () {
-                              L(),
-                                  M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
+                              O(),
+                                  M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
                                   s.Z.showAgeVerificationGetStartedModal({
-                                      entryPoint: I.cU.SENSITIVE_MEDIA_LEARN_MORE,
+                                      entryPoint: E.cU.SENSITIVE_MEDIA_LEARN_MORE,
                                   });
                           },
                       }
-                    : v
+                    : P
                       ? {
-                            text: R.intl.string(R.t["9D+zGR"]),
+                            text: L.intl.string(L.t["9D+zGR"]),
                             onClick: function () {
-                                M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
-                                    a.Z.open(C.oAB.CONTENT_AND_SOCIAL, null, {
-                                        scrollPosition: A.FY.EXPLICIT_MEDIA_REDACTION_V2,
+                                M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
+                                    (0, u.openUserSettings)(c.n.CONTENT_AND_SOCIAL_PANEL, {
+                                        section: d.oAB.CONTENT_AND_SOCIAL,
+                                        scrollPosition: R.FY.EXPLICIT_MEDIA_REDACTION_V2,
                                     }),
-                                    L();
+                                    O();
                             },
                         }
                       : {
-                            text: R.intl.string(R.t.hvVgAQ),
+                            text: L.intl.string(L.t.hvVgAQ),
                             onClick: () => {
-                                (0, E.Z)(c.Z.getArticleURL(C.BhN.EXPLICIT_MEDIA_REDACTION));
+                                (0, a.Z)(C.Z.getArticleURL(d.BhN.EXPLICIT_MEDIA_REDACTION));
                             },
                         },
             ].filter((t) => void 0 !== t),
-            onClose: () => (L(), M(d.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
+            onClose: () => (O(), M(A.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
             transitionState: g,
         })
     );

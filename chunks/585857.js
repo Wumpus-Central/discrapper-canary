@@ -1,14 +1,15 @@
-n.d(t, { Q: () => h });
+n.d(t, { Q: () => m });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(230711),
-    o = n(617136),
-    s = n(497505),
-    l = n(981631),
-    c = n(388032),
-    u = n(39625);
-function d(e, t, n) {
+    a = n(313789),
+    o = n(518596),
+    s = n(617136),
+    l = n(497505),
+    c = n(981631),
+    u = n(388032),
+    d = n(39625);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,24 +33,24 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e) {
-    let { text: t, quest: n, sourceQuestContent: c } = e,
-        d = (0, o.O5)();
+function p(e) {
+    let { text: t, quest: n, sourceQuestContent: u } = e,
+        f = (0, s.O5)();
     return (0, r.jsx)(i.P3F, {
-        className: u.showConnectionsButton,
+        className: d.showConnectionsButton,
         onClick: () => {
-            d({
+            f({
                 questId: n.id,
-                questContent: s.jn.QUEST_BAR_V2,
-                questContentCTA: o.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                sourceQuestContent: c,
+                questContent: l.jn.QUEST_BAR_V2,
+                questContentCTA: s.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                sourceQuestContent: u,
             }),
-                a.Z.open(l.oAB.CONNECTIONS);
+                (0, o.openUserSettings)(a.n.CONNECTIONS_PANEL, { section: c.oAB.CONNECTIONS });
         },
         children: (0, r.jsx)(i.Text, {
             "aria-label": t,
@@ -59,25 +60,25 @@ function _(e) {
         }),
     });
 }
-function p(e) {
+function h(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: i } = e;
     return t.length > 0
-        ? (0, r.jsx)(_, {
-              text: c.intl.string(c.t["qiS+xs"]),
+        ? (0, r.jsx)(p, {
+              text: u.intl.string(u.t["qiS+xs"]),
               quest: n,
               sourceQuestContent: i,
           })
         : null;
 }
-function h(e) {
+function m(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                children: c.intl.string(c.t.EJFSvL),
+                children: u.intl.string(u.t.EJFSvL),
             }),
-            (0, r.jsx)(p, f({}, e)),
+            (0, r.jsx)(h, _({}, e)),
         ],
     });
 }

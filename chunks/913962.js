@@ -1,53 +1,58 @@
-a.d(n, { default: () => C });
-var e = a(951288);
-a(647438);
-var i = a(481060),
-    r = a(230711),
-    s = a(600164),
-    o = a(313201),
-    l = a(695346),
-    c = a(626135),
-    d = a(981631),
-    x = a(526761),
-    p = a(388032),
-    u = a(836123),
-    h = a(38880);
-function C(t) {
-    let { onClose: n, transitionState: a } = t,
-        C = (0, o.Dt)();
-    function b() {
-        n(), r.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT });
+e.d(n, { default: () => b });
+var i = e(951288);
+e(647438);
+var a = e(481060),
+    s = e(600164),
+    r = e(313201),
+    o = e(695346),
+    l = e(313789),
+    c = e(518596),
+    d = e(626135),
+    x = e(981631),
+    p = e(526761),
+    u = e(388032),
+    h = e(836123),
+    C = e(38880);
+function b(t) {
+    let { onClose: n, transitionState: e } = t,
+        b = (0, r.Dt)();
+    function _() {
+        n(),
+            (0, c.openUserSettings)(l.n.ACCESSIBILITY_PANEL, {
+                section: x.oAB.ACCESSIBILITY,
+                scrollPosition: p.rP.LEGACY_CHAT_INPUT,
+            });
     }
-    return (0, e.jsxs)(i.Y0X, {
-        transitionState: a,
-        "aria-labelledby": C,
+    return (0, i.jsxs)(a.Y0X, {
+        transitionState: e,
+        "aria-labelledby": b,
         parentComponent: "LegacyChatInputExplanationModal",
         children: [
-            (0, e.jsx)("img", {
-                className: u.art,
-                src: h,
+            (0, i.jsx)("img", {
+                className: h.art,
+                src: C,
                 alt: "",
             }),
-            (0, e.jsx)(i.hzk, {
-                children: (0, e.jsxs)(s.Z, {
+            (0, i.jsx)(a.hzk, {
+                children: (0, i.jsxs)(s.Z, {
                     direction: s.Z.Direction.VERTICAL,
                     justify: s.Z.Justify.CENTER,
                     children: [
-                        (0, e.jsx)(i.X6q, {
-                            id: C,
+                        (0, i.jsx)(a.X6q, {
+                            id: b,
                             variant: "heading-lg/semibold",
-                            className: u.title,
-                            children: p.intl.string(p.t.G9HG5O),
+                            className: h.title,
+                            children: u.intl.string(u.t.G9HG5O),
                         }),
-                        (0, e.jsx)(i.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            className: u.body,
-                            children: p.intl.format(p.t.ZtUieH, {
+                            className: h.body,
+                            children: u.intl.format(u.t.ZtUieH, {
                                 openSettingsHook: (t, n) =>
-                                    (0, e.jsx)(
-                                        i.eee,
+                                    (0, i.jsx)(
+                                        a.eee,
                                         {
-                                            onClick: b,
+                                            onClick: _,
                                             children: t,
                                         },
                                         n,
@@ -57,26 +62,26 @@ function C(t) {
                     ],
                 }),
             }),
-            (0, e.jsx)(i.mzw, {
-                children: (0, e.jsxs)(i.hE2, {
+            (0, i.jsx)(a.mzw, {
+                children: (0, i.jsxs)(a.hE2, {
                     direction: "horizontal-reverse",
                     children: [
-                        (0, e.jsx)(i.zxk, {
+                        (0, i.jsx)(a.zxk, {
                             variant: "primary",
-                            text: p.intl.string(p.t.VdzwlJ),
+                            text: u.intl.string(u.t.VdzwlJ),
                             type: "button",
                             onClick: function () {
-                                c.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                                d.default.track(x.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                     enabled: !1,
                                     location: "LegacyChatInputExplanationModal",
                                 }),
-                                    l.dN.updateSetting(!1),
+                                    o.dN.updateSetting(!1),
                                     n();
                             },
                         }),
-                        (0, e.jsx)(i.zxk, {
+                        (0, i.jsx)(a.zxk, {
                             variant: "secondary",
-                            text: p.intl.string(p.t.f3Pet7),
+                            text: u.intl.string(u.t.f3Pet7),
                             type: "button",
                             onClick: n,
                         }),

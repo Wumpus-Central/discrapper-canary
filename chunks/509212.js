@@ -94,11 +94,11 @@ var r = n(991998),
     c = n(887003),
     u = n(820827),
     d = n(570140),
-    f = n(230711),
-    _ = n(782568);
+    f = n(782568);
 n(597688);
-var p = n(231757),
-    h = n(706454),
+var _ = n(231757),
+    p = n(706454),
+    h = n(313789),
     m = n(866960),
     g = n(572004),
     E = n(585483),
@@ -537,7 +537,7 @@ function ek(e, t) {
         sourceQuestContent: t.sourceQuestContent,
     }),
         E.S.dispatch(D.CkL.QUEST_GAME_LINK_OPENED),
-        (0, _.Z)(n);
+        (0, f.Z)(n);
 }
 let eU = (e, t) => {
     (0, I._3)({
@@ -753,7 +753,10 @@ function tt(e) {
     return !!e4(e) && (0, n(952265).nf)(tm(e.id));
 }
 function tn() {
-    f.Z.open(D.oAB.CONNECTIONS);
+    {
+        let { openUserSettings: e } = n(518596);
+        e(h.n.CONNECTIONS_PANEL, { section: D.oAB.CONNECTIONS });
+    }
 }
 function tr(e, t) {
     let { platformType: n, quest: r } = e;
@@ -764,7 +767,7 @@ function tr(e, t) {
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId,
     }),
-        (0, p.Z)({
+        (0, _.Z)({
             platformType: n,
             location: t.ctaContent,
         });
@@ -781,10 +784,10 @@ function ti(e, t) {
         sourceQuestContent: t.sourceQuestContent,
     });
     let r = th(n);
-    if (1 === r.length) return (0, p.Z)({ platformType: r.at(0) });
+    if (1 === r.length) return (0, _.Z)({ platformType: r.at(0) });
     d.Z.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
-        onComplete: (e) => (0, p.Z)({ platformType: e }),
+        onComplete: (e) => (0, _.Z)({ platformType: e }),
         includedPlatformTypes: new Set(r),
     });
 }
@@ -805,7 +808,7 @@ function to() {
 }
 function ts(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
-    return null == e ? "" : new Date(e).toLocaleDateString(h.default.locale, t);
+    return null == e ? "" : new Date(e).toLocaleDateString(p.default.locale, t);
 }
 function tl(e) {
     return "xbox" === e.connected_account_type ? D.ABu.XBOX : D.ABu.PLAYSTATION;

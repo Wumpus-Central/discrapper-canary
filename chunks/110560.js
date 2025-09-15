@@ -251,7 +251,7 @@ function z() {
         { enabled: i } = v.m8.getConfig({ location: w.dr.NAVIGATE_TO_QUEST_HOME_UTIL }),
         a = i && !n;
     a || c.Z.setState({ selectedTab: x.GlobalDiscoveryTab.QUESTS }),
-        (0, f.Z)(),
+        (0, f.default)(),
         (0, d.uL)((a ? D.Z5c.QUEST_HOME_V2 : D.Z5c.QUEST_HOME) + r);
 }
 let q = 0.2;
@@ -267,7 +267,7 @@ function X(e) {
         });
 }
 function Q() {
-    return Promise.all([n.e("66816"), n.e("32249")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("90648"), n.e("32249")]).then(n.bind(n, 536687));
 }
 function J(e) {
     var t;
@@ -372,7 +372,7 @@ function ee(e) {
 }
 function et(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("25520"), n.e("33628")]).then(n.bind(n, 570387));
+        let { default: t } = await Promise.all([n.e("59757"), n.e("33628")]).then(n.bind(n, 570387));
         return (n) =>
             (0, r.jsx)(
                 t,

@@ -1,19 +1,20 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(481060),
-    o = n(230711),
-    s = n(906732),
-    l = n(543241),
-    c = n(963249),
-    u = n(703656),
-    d = n(594174),
-    f = n(78839),
-    _ = n(639119),
-    p = n(474936),
-    h = n(981631);
-function m(e, t, n) {
+    o = n(906732),
+    s = n(543241),
+    l = n(963249),
+    c = n(703656),
+    u = n(313789),
+    d = n(518596),
+    f = n(594174),
+    _ = n(78839),
+    p = n(639119),
+    h = n(474936),
+    m = n(981631);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +55,22 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +78,7 @@ function y(e, t) {
     }
     return i;
 }
-function O(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,76 +87,76 @@ function O(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function v(e) {
+function I(e) {
     let {
             onClick: t,
-            subscriptionTier: m,
-            postSuccessGuild: E,
-            onSubscribeModalClose: O,
-            premiumModalAnalyticsLocation: v,
-            applicationId: I,
-            giftMessage: T,
-            confirmationFooter: S,
-            paymentModalBanner: A,
-            isGift: C,
-            children: N,
+            subscriptionTier: g,
+            postSuccessGuild: b,
+            onSubscribeModalClose: v,
+            premiumModalAnalyticsLocation: I,
+            applicationId: T,
+            giftMessage: S,
+            confirmationFooter: A,
+            paymentModalBanner: C,
+            isGift: N,
+            children: R,
         } = e,
-        R = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        P = (0, i.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
-        { analyticsLocations: w } = (0, s.ZP)(),
-        D = (0, _.N)(),
-        x = !C && null != D && null != m && p.nG[D.trial_id].skus.includes(m);
-    return N({
+        P = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        w = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
+        { analyticsLocations: D } = (0, o.ZP)(),
+        x = (0, p.N)(),
+        L = !N && null != x && null != g && h.nG[x.trial_id].skus.includes(g);
+    return R({
         onClick: (e) => {
             var i;
-            if ((e.preventDefault(), null == R))
-                return void (0, u.uL)(h.Z5c.LOGIN, { source: "premium_subscribe_button" });
-            if ((null == t || t(e), (null == P ? void 0 : P.status) === h.O0b.ACCOUNT_HOLD)) {
-                (0, l.A3)(), o.Z.open(h.oAB.PREMIUM), null == O || O(!1);
+            if ((e.preventDefault(), null == P))
+                return void (0, c.uL)(m.Z5c.LOGIN, { source: "premium_subscribe_button" });
+            if ((null == t || t(e), (null == w ? void 0 : w.status) === m.O0b.ACCOUNT_HOLD)) {
+                (0, s.A3)(), (0, d.openUserSettings)(u.n.NITRO_PANEL, { section: m.oAB.PREMIUM }), null == v || v(!1);
                 return;
             }
-            if (!R.isClaimed())
+            if (!P.isClaimed())
                 return void (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("88470"), n.e("77927"), n.e("69417")]).then(
                         n.bind(n, 918995),
                     );
                     return (t) => {
                         var { onClose: n } = t,
-                            i = y(t, ["onClose"]);
-                        return (0, r.jsx)(e, b(g({}, i), { onClose: n }));
+                            i = O(t, ["onClose"]);
+                        return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            if (!R.verified)
+            if (!P.verified)
                 return void (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
                     return (t) => {
                         var { onClose: n } = t,
-                            i = y(t, ["onClose"]);
-                        return (0, r.jsx)(e, b(g({}, i), { onClose: n }));
+                            i = O(t, ["onClose"]);
+                        return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            let s = x ? (null == (i = D.subscription_trial) ? void 0 : i.id) : null,
-                d = h.Qqv.BUY;
-            null != s ? (d = h.Qqv.TRIAL) : C && (d = h.Qqv.GIFT),
-                (0, c.Z)({
-                    isGift: C,
+            let o = L ? (null == (i = x.subscription_trial) ? void 0 : i.id) : null,
+                f = m.Qqv.BUY;
+            null != o ? (f = m.Qqv.TRIAL) : N && (f = m.Qqv.GIFT),
+                (0, l.Z)({
+                    isGift: N,
                     initialPlanId: null,
-                    subscriptionTier: m,
-                    analyticsLocations: w,
-                    analyticsObject: g(
+                    subscriptionTier: g,
+                    analyticsLocations: D,
+                    analyticsObject: E(
                         {
-                            object: h.qAy.BUTTON_CTA,
-                            objectType: d,
+                            object: m.qAy.BUTTON_CTA,
+                            objectType: f,
                         },
-                        v,
+                        I,
                     ),
-                    trialId: s,
-                    postSuccessGuild: E,
-                    onClose: O,
-                    applicationId: I,
-                    giftMessage: T,
-                    confirmationFooter: S,
-                    paymentModalBanner: A,
+                    trialId: o,
+                    postSuccessGuild: b,
+                    onClose: v,
+                    applicationId: T,
+                    giftMessage: S,
+                    confirmationFooter: A,
+                    paymentModalBanner: C,
                 });
         },
     });

@@ -29,7 +29,7 @@ function g() {
             _.default.CARxAA,
         ),
         n = () => {
-            (0, f.DI)(f.Ln.APPEARANCE_SETTINGS), (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.SETTING }), (0, d.Z)();
+            (0, f.DI)(f.Ln.APPEARANCE_SETTINGS), (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.SETTING }), (0, d.default)();
         };
     return (0, r.jsxs)("div", {
         className: h.container,

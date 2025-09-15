@@ -10,11 +10,11 @@ n.d(t, {
 var r = n(995638),
     i = n(843611),
     a = n(442837),
-    o = n(230711),
-    s = n(455199),
-    l = n(2818),
-    c = n(768943),
-    u = n(175006),
+    o = n(455199),
+    s = n(2818),
+    l = n(768943),
+    c = n(175006),
+    u = n(313789),
     d = n(592125),
     f = n(430824);
 n(375954);
@@ -46,7 +46,13 @@ function y() {
     return e.startsWith(g.Z5c.CHANNEL(g.STv));
 }
 function O(e) {
-    o.Z.open(g.oAB.NOTIFICATIONS, void 0, { analyticsLocations: e });
+    {
+        let { openUserSettings: t } = n(518596);
+        t(u.n.NOTIFICATIONS_PANEL, {
+            section: g.oAB.NOTIFICATIONS,
+            analyticsLocations: e,
+        });
+    }
 }
 function v() {
     let e = (0, a.Wu)([h.Z], () => {
@@ -54,9 +60,9 @@ function v() {
             return null != (e = h.Z.getNotifyingChannelIds()) ? e : [];
         }),
         t = (0, a.Wu)([_.ZP], () => e.filter((e) => _.ZP.hasUnread(e)), [e]),
-        n = (0, a.Wu)([s.ZP], () => {
+        n = (0, a.Wu)([o.ZP], () => {
             var e;
-            return null != (e = s.ZP.getSettingsFilteredMentions()) ? e : [];
+            return null != (e = o.ZP.getSettingsFilteredMentions()) ? e : [];
         });
     return {
         unreadRecentMentionsCount: (0, a.e7)([_.ZP, d.Z, f.Z], () => {
@@ -87,9 +93,9 @@ function v() {
     };
 }
 function I() {
-    let { enabled: e, inInbox: t } = l.Z.useExperiment({ location: "NotificationsInboxUtils" }),
-        n = (0, a.e7)([c.Z], () => c.Z.getSavedMessageCount());
-    return e && t && (n > 0 || (0, u.Z)());
+    let { enabled: e, inInbox: t } = s.Z.useExperiment({ location: "NotificationsInboxUtils" }),
+        n = (0, a.e7)([l.Z], () => l.Z.getSavedMessageCount());
+    return e && t && (n > 0 || (0, c.Z)());
 }
 function T(e, t) {
     return null != t && e.channelId === t.channelId && p.default.compare(e.id, t.messageId) >= 0;

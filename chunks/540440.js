@@ -49,11 +49,11 @@ function f(e) {
             : c.intl.string(c.t.bK9GT0);
 }
 function _(e) {
-    let { user: t, entry: c, display: u, onAction: _, onClose: p } = e,
-        h = (0, l.Z)({ onClose: p }),
-        m = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    if (t.id !== (null == m ? void 0 : m.id) || "recent" !== u || !(0, o.Rh)(c)) return null;
-    let g = () => {
+    let { user: t, entry: c, display: u, onAction: _ } = e,
+        p = (0, l.Z)(),
+        h = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    if (t.id !== (null == h ? void 0 : h.id) || "recent" !== u || !(0, o.Rh)(c)) return null;
+    let m = () => {
         (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("62880"), n.e("26545")]).then(n.bind(n, 81596));
             return (n) =>
@@ -64,7 +64,7 @@ function _(e) {
                             entry: c,
                             user: t,
                             onAction: _,
-                            onOpenGameSettings: h,
+                            onOpenGameSettings: p,
                         },
                         n,
                     ),
@@ -75,7 +75,7 @@ function _(e) {
         id: "delete-entry-history",
         label: f(c),
         action: () => {
-            null == _ || _({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }), g();
+            null == _ || _({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }), m();
         },
         color: "danger",
     });

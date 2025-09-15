@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,20 +7,21 @@ var r = n(951288),
     l = n(755721),
     c = n(481060),
     u = n(846027),
-    d = n(230711),
-    f = n(825209),
-    _ = n(906732),
-    p = n(313201),
-    h = n(131951),
-    m = n(358085),
-    g = n(383451),
-    E = n(962100),
-    b = n(981631),
-    y = n(388032),
-    O = n(184767),
-    v = n(149715),
-    I = n(197571);
-function T(e, t, n) {
+    d = n(825209),
+    f = n(906732),
+    _ = n(313201),
+    p = n(131951),
+    h = n(358085),
+    m = n(383451),
+    g = n(313789),
+    E = n(947889),
+    b = n(962100),
+    y = n(981631),
+    O = n(388032),
+    v = n(184767),
+    I = n(149715),
+    T = n(197571);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,91 +45,94 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-let A = !m.isPlatformEmbedded,
-    C = (0, p.hQ)();
-function N(e) {
+let C = !h.isPlatformEmbedded,
+    N = (0, _.hQ)();
+function R(e) {
     return e >= 1000 ? ((e /= 1000), "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), "\xA0ms");
 }
-function R(e) {
+function P(e) {
     let t,
         { inputMode: n } = e,
-        { shortcut: i, delay: a, pttLatchingEnabled: _ } = (0, s.cj)([h.Z], () => h.Z.getModeOptions()),
-        { enableLatching: T } = (0, g.H)({ location: "PTTTools" });
+        { shortcut: i, delay: a, pttLatchingEnabled: f } = (0, s.cj)([p.Z], () => p.Z.getModeOptions()),
+        { enableLatching: S } = (0, m.H)({ location: "PTTTools" }),
+        A = (0, E.Z)();
     return (
         (t =
-            m.isPlatformEmbedded || n !== b.pM4.PUSH_TO_TALK
+            h.isPlatformEmbedded || n !== y.pM4.PUSH_TO_TALK
                 ? (0, r.jsx)(c.R94, {
                       type: c.R94.Types.DESCRIPTION,
-                      className: o()(O.pttToolsMessage, I.marginBottom8),
-                      children: y.intl.format(y.t.HVvn5e, { onClick: () => d.Z.setSection(b.oAB.KEYBINDS) }),
+                      className: o()(v.pttToolsMessage, T.marginBottom8),
+                      children: O.intl.format(O.t.HVvn5e, {
+                          onClick: () => A(g.n.KEYBINDS_PANEL, { section: y.oAB.KEYBINDS }),
+                      }),
                   })
                 : (0, r.jsx)(c.R94, {
                       type: c.R94.Types.DESCRIPTION,
-                      className: o()(O.pttToolsMessage, O.pttToolsWarning, I.marginBottom8),
-                      children: y.intl.format(y.t.zvMPOT, { onDownloadClick: () => (0, E.y)("Help Text PTT") }),
+                      className: o()(v.pttToolsMessage, v.pttToolsWarning, T.marginBottom8),
+                      children: O.intl.format(O.t.zvMPOT, { onDownloadClick: () => (0, b.y)("Help Text PTT") }),
                   })),
         (0, r.jsxs)("div", {
-            className: O.pttTools,
+            className: v.pttTools,
             children: [
                 (0, r.jsxs)("div", {
-                    className: O.pttToolsFlex,
+                    className: v.pttToolsFlex,
                     children: [
                         (0, r.jsx)("div", {
-                            className: O.column,
+                            className: v.column,
                             children: (0, r.jsx)(c.xJW, {
-                                title: y.intl.string(y.t.YkDjVF),
-                                children: (0, r.jsx)(f.Z, {
+                                title: O.intl.string(O.t.YkDjVF),
+                                children: (0, r.jsx)(d.Z, {
                                     defaultValue: i,
                                     onChange: (e) => u.Z.setMode(n, { shortcut: e }),
                                 }),
                             }),
                         }),
                         (0, r.jsx)("div", {
-                            className: O.column,
+                            className: v.column,
                             children: (0, r.jsxs)(c.xJW, {
                                 children: [
                                     (0, r.jsx)(c.vwX, {
-                                        id: C,
-                                        className: I.marginBottom8,
-                                        children: y.intl.string(y.t.y0ShVl),
+                                        id: N,
+                                        className: T.marginBottom8,
+                                        children: O.intl.string(O.t.y0ShVl),
                                     }),
                                     (0, r.jsx)(c.iRW, {
                                         initialValue: a,
                                         onValueChange: (e) => u.Z.setMode(n, { delay: e }),
-                                        onValueRender: N,
-                                        maxValue: b.qhL,
-                                        "aria-labelledby": C,
+                                        onValueRender: R,
+                                        maxValue: y.qhL,
+                                        "aria-labelledby": N,
                                     }),
                                 ],
                             }),
                         }),
                     ],
                 }),
-                T &&
+                S &&
                     (0, r.jsxs)("div", {
-                        className: I.marginTop8,
+                        className: T.marginTop8,
                         children: [
-                            (0, r.jsx)(p.FG, {
+                            (0, r.jsx)(_.FG, {
                                 children: (e) =>
                                     (0, r.jsxs)("div", {
-                                        className: o()(v.horizontal, I.marginBottom4),
+                                        className: o()(I.horizontal, T.marginBottom4),
                                         children: [
                                             (0, r.jsx)(c.vwX, {
                                                 tag: c.RB0.H3,
-                                                className: I.marginReset,
+                                                className: T.marginReset,
                                                 children: (0, r.jsx)("label", {
                                                     htmlFor: e,
-                                                    children: y.intl.string(y.t.EGn1eH),
+                                                    children: O.intl.string(O.t.EGn1eH),
                                                 }),
                                             }),
                                             (0, r.jsx)(l.T2, {
                                                 id: e,
-                                                checked: null != _ && _,
+                                                checked: null != f && f,
                                                 onChange: (e) => u.Z.setMode(n, { pttLatchingEnabled: e }),
                                             }),
                                         ],
@@ -136,8 +140,8 @@ function R(e) {
                             }),
                             (0, r.jsx)(c.R94, {
                                 type: c.R94.Types.DESCRIPTION,
-                                className: I.marginBottom8,
-                                children: y.intl.string(y.t.iT257u),
+                                className: T.marginBottom8,
+                                children: O.intl.string(O.t.iT257u),
                             }),
                         ],
                     }),
@@ -146,36 +150,36 @@ function R(e) {
         })
     );
 }
-function P() {
-    let { analyticsLocations: e } = (0, _.ZP)(),
-        t = (0, s.e7)([h.Z], () => h.Z.getMode()),
+function w() {
+    let { analyticsLocations: e } = (0, f.ZP)(),
+        t = (0, s.e7)([p.Z], () => p.Z.getMode()),
         a = [
             {
-                value: b.pM4.VOICE_ACTIVITY,
-                name: y.intl.string(y.t.cHCEOD),
+                value: y.pM4.VOICE_ACTIVITY,
+                name: O.intl.string(O.t.cHCEOD),
             },
             {
-                value: b.pM4.PUSH_TO_TALK,
-                name: A ? y.intl.string(y.t["1AINrK"]) : y.intl.string(y.t.Q8gkVF),
+                value: y.pM4.PUSH_TO_TALK,
+                name: C ? O.intl.string(O.t["1AINrK"]) : O.intl.string(O.t.Q8gkVF),
             },
         ],
         o = i.useCallback(
             (t) => {
                 let { value: i } = t;
-                i === b.pM4.PUSH_TO_TALK &&
-                    A &&
+                i === y.pM4.PUSH_TO_TALK &&
+                    C &&
                     (0, c.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                S(
+                                A(
                                     {
-                                        title: y.intl.string(y.t.Kdt0GR),
-                                        confirmText: y.intl.string(y.t["1WjMbG"]),
-                                        cancelText: y.intl.string(y.t.BddRzc),
-                                        onConfirm: () => (0, E.y)("PTT Limited Modal"),
-                                        body: y.intl.string(y.t.NIozvr),
+                                        title: O.intl.string(O.t.Kdt0GR),
+                                        confirmText: O.intl.string(O.t["1WjMbG"]),
+                                        cancelText: O.intl.string(O.t.BddRzc),
+                                        onConfirm: () => (0, b.y)("PTT Limited Modal"),
+                                        body: O.intl.string(O.t.NIozvr),
                                     },
                                     t,
                                 ),
@@ -188,15 +192,15 @@ function P() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.xJW, {
-                title: y.intl.string(y.t["pS+K2N"]),
-                className: I.marginBottom20,
+                title: O.intl.string(O.t["pS+K2N"]),
+                className: T.marginBottom20,
                 children: (0, r.jsx)(l.Gu, {
                     onChange: o,
                     options: a,
                     value: t,
                 }),
             }),
-            t === b.pM4.PUSH_TO_TALK && (0, r.jsx)(R, { inputMode: t }),
+            t === y.pM4.PUSH_TO_TALK && (0, r.jsx)(P, { inputMode: t }),
         ],
     });
 }

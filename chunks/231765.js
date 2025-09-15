@@ -369,7 +369,7 @@ function Z(e) {
                 enabled: !1,
                 settingsVisible: !1,
             }),
-                (0, f.Z)();
+                (0, f.default)();
         };
     return (0, r.jsx)(l.hjN, {
         tag: l.RB0.H1,

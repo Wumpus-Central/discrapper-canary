@@ -291,7 +291,7 @@ let K = Object.freeze({
                     M.fy.SLOW_USER_ACTION,
                 ),
                     (0, m.XO)(m.wh.CLIENT_THEMES),
-                    (0, S.Z)();
+                    (0, S.default)();
             },
             L = () => {
                 if (!b) return null;
@@ -326,7 +326,7 @@ let K = Object.freeze({
                             (0, m.XO)(m.wh.CUSTOM_THEME, {
                                 from: "SETTINGS" === o ? m.tE.SETTING : m.tE.CLIENT_THEMES_EDITOR,
                             }),
-                                "SETTINGS" === o && (0, S.Z)();
+                                "SETTINGS" === o && (0, S.default)();
                         },
                     }),
                 D.XV.filter((e) => {

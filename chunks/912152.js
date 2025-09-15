@@ -1,56 +1,63 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(230711),
-    o = n(63063),
-    s = n(74538),
-    l = n(937615),
-    c = n(981631),
-    u = n(474936),
-    d = n(388032),
-    f = n(137435);
-function _(e) {
+    a = n(63063),
+    o = n(74538),
+    s = n(937615),
+    l = n(313789),
+    c = n(947889),
+    u = n(981631),
+    d = n(474936),
+    f = n(388032),
+    _ = n(137435);
+function p(e) {
     let {
-        hasAppliedGuildBoosts: t,
-        hasBoostPerk: n,
-        hasGuildAffinitiesOrInGuild: r,
-        subscriptionIsPausedOrPausePending: i,
-    } = e;
-    if (i) return { flavor: d.intl.format(d.t.doslJi, { onClick: () => a.Z.open(c.oAB.SUBSCRIPTIONS) }) };
-    if (!r) return { subtitle: d.intl.string(d.t.oiWYAQ) };
+            hasAppliedGuildBoosts: t,
+            hasBoostPerk: n,
+            hasGuildAffinitiesOrInGuild: r,
+            subscriptionIsPausedOrPausePending: i,
+        } = e,
+        _ = (0, c.Z)();
+    if (i)
+        return {
+            flavor: f.intl.format(f.t.doslJi, {
+                onClick: () => _(l.n.SUBSCRIPTIONS_PANEL, { section: u.oAB.SUBSCRIPTIONS }),
+            }),
+        };
+    if (!r) return { subtitle: f.intl.string(f.t.oiWYAQ) };
     if (t)
         return {
-            subtitle: d.intl.string(d.t.W5rDjY),
-            flavor: d.intl.format(d.t.cUHcaW, { helpdeskArticle: o.Z.getArticleURL(c.BhN.GUILD_SUBSCRIPTIONS) }),
+            subtitle: f.intl.string(f.t.W5rDjY),
+            flavor: f.intl.format(f.t.cUHcaW, { helpdeskArticle: a.Z.getArticleURL(u.BhN.GUILD_SUBSCRIPTIONS) }),
         };
-    let f = u.GP[u.Xh.PREMIUM_MONTH_GUILD],
-        _ = s.ZP.getDefaultPrice(f.id, n),
-        p = (0, l.og)((0, l.T4)(_.amount, _.currency), f.interval, f.intervalCount);
+    let p = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
+        h = o.ZP.getDefaultPrice(p.id, n),
+        m = (0, s.og)((0, s.T4)(h.amount, h.currency), p.interval, p.intervalCount);
     return {
-        subtitle: n ? d.intl.string(d.t.bhPzXV) : d.intl.string(d.t.Zs9h9f),
-        flavor: d.intl.formatToPlainString(d.t.PGgTdH, { monthlyGuildBoostPrice: p }),
+        subtitle: n ? f.intl.string(f.t.bhPzXV) : f.intl.string(f.t.Zs9h9f),
+        flavor: f.intl.formatToPlainString(f.t.PGgTdH, { monthlyGuildBoostPrice: m }),
     };
 }
-let p = function (e) {
+let h = function (e) {
     let {
             hasAppliedGuildBoosts: t,
             hasBoostPerk: n,
             hasGuildAffinitiesOrInGuild: a,
             subscriptionIsPausedOrPausePending: o,
         } = e,
-        { subtitle: s, flavor: l } = _({
+        { subtitle: s, flavor: l } = p({
             hasAppliedGuildBoosts: t,
             hasBoostPerk: n,
             hasGuildAffinitiesOrInGuild: a,
             subscriptionIsPausedOrPausePending: o,
         });
     return (0, r.jsxs)("div", {
-        className: f.wrapper,
+        className: _.wrapper,
         children: [
             (0, r.jsx)(i.X6q, {
                 variant: "heading-lg/bold",
-                className: f.subtitle,
+                className: _.subtitle,
                 children: s,
             }),
             null != l &&

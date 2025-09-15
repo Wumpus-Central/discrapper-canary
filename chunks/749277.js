@@ -1,31 +1,32 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => w });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(704215),
     o = n(481060),
     s = n(232567),
-    l = n(230711),
-    c = n(726542),
-    u = n(100527),
-    d = n(231757),
-    f = n(674525),
-    _ = n(963249),
-    p = n(303172),
-    h = n(246965),
-    m = n(703656),
-    g = n(914010),
-    E = n(594174),
-    b = n(395361),
-    y = n(626135),
-    O = n(243778),
-    v = n(921944),
-    I = n(981631),
-    T = n(801461),
-    S = n(474936),
-    A = n(388032),
-    C = n(50953);
-function N(e, t, n) {
+    l = n(726542),
+    c = n(100527),
+    u = n(231757),
+    d = n(674525),
+    f = n(963249),
+    _ = n(303172),
+    p = n(246965),
+    h = n(703656),
+    m = n(313789),
+    g = n(518596),
+    E = n(914010),
+    b = n(594174),
+    y = n(395361),
+    O = n(626135),
+    v = n(243778),
+    I = n(921944),
+    T = n(981631),
+    S = n(801461),
+    A = n(474936),
+    C = n(388032),
+    N = n(50953);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +39,7 @@ function N(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,18 +50,18 @@ function R(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                R(e, t, n[t]);
             });
     }
     return e;
 }
-let P = (e) => {
-    let { dismissibleContent: t, noticeType: N } = e,
-        P = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
-        w = (0, i.e7)([g.Z], () => g.Z.getGuildId());
-    return (0, r.jsx)(O.ZP, {
+let w = (e) => {
+    let { dismissibleContent: t, noticeType: R } = e,
+        w = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
+        D = (0, i.e7)([E.Z], () => E.Z.getGuildId());
+    return (0, r.jsx)(v.ZP, {
         contentTypes: [t],
-        groupName: v.R.NOTICE_BAR,
+        groupName: I.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e;
@@ -70,24 +71,24 @@ let P = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            A.intl.string(A.t["+xn1o6"]),
-                            (0, r.jsx)("i", { className: C.iconApple }),
-                            (0, r.jsx)("i", { className: C.iconAndroid }),
-                            (0, r.jsx)("i", { className: C.iconWindows }),
+                            C.intl.string(C.t["+xn1o6"]),
+                            (0, r.jsx)("i", { className: N.iconApple }),
+                            (0, r.jsx)("i", { className: N.iconAndroid }),
+                            (0, r.jsx)("i", { className: N.iconWindows }),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: N,
+                                noticeType: R,
                                 onClick: () => {
                                     (0, o.ZDy)(async () => {
                                         let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(
                                             n.bind(n, 431583),
                                         );
-                                        return (t) => (0, r.jsx)(e, R({ source: "Top Bar Nag" }, t));
+                                        return (t) => (0, r.jsx)(e, P({ source: "Top Bar Nag" }, t));
                                     });
                                 },
-                                children: A.intl.string(A.t["1WjMbG"]),
+                                children: C.intl.string(C.t["1WjMbG"]),
                             }),
                         ],
                     });
@@ -96,19 +97,19 @@ let P = (e) => {
                         color: o.DM8.SPOTIFY,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            (0, r.jsx)(b.Z, { className: C.platformIcon }),
-                            A.intl.string(A.t["5NUVHB"]),
+                            (0, r.jsx)(y.Z, { className: N.platformIcon }),
+                            C.intl.string(C.t["5NUVHB"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
-                                    (0, d.Z)({
-                                        platformType: I.ABu.SPOTIFY,
+                                    (0, u.Z)({
+                                        platformType: T.ABu.SPOTIFY,
                                         location: "Notice Bar",
                                     }),
-                                noticeType: N,
-                                children: A.intl.string(A.t.S0W8Z2),
+                                noticeType: R,
+                                children: C.intl.string(C.t.S0W8Z2),
                             }),
                         ],
                     });
@@ -116,20 +117,20 @@ let P = (e) => {
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PLAYSTATION,
                         children: [
-                            (0, r.jsx)(o.RyX, { onClick: () => i(v.L.UNKNOWN) }),
+                            (0, r.jsx)(o.RyX, { onClick: () => i(I.L.UNKNOWN) }),
                             (0, r.jsx)("img", {
                                 alt: "",
-                                className: C.platformIcon,
-                                src: c.Z.get(I.ABu.PLAYSTATION).icon.whiteSVG,
+                                className: N.platformIcon,
+                                src: l.Z.get(T.ABu.PLAYSTATION).icon.whiteSVG,
                             }),
-                            A.intl.string(A.t.WHWgoa),
+                            C.intl.string(C.t.WHWgoa),
                             (0, r.jsx)(o.EyT, {
                                 onClick: () =>
-                                    (0, d.Z)({
-                                        platformType: I.ABu.PLAYSTATION,
+                                    (0, u.Z)({
+                                        platformType: T.ABu.PLAYSTATION,
                                         location: "Notice Bar",
                                     }),
-                                children: A.intl.string(A.t.S0W8Z2),
+                                children: C.intl.string(C.t.S0W8Z2),
                             }),
                         ],
                     });
@@ -138,14 +139,14 @@ let P = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            A.intl.string(A.t.B2hnhY),
+                            C.intl.string(C.t.B2hnhY),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => l.Z.open(I.oAB.ACCOUNT),
-                                noticeType: N,
-                                children: A.intl.string(A.t["50KYxs"]),
+                                onClick: () => (0, g.openUserSettings)(m.n.ACCOUNT_PANEL, { section: T.oAB.ACCOUNT }),
+                                noticeType: R,
+                                children: C.intl.string(C.t["50KYxs"]),
                             }),
                         ],
                     });
@@ -153,56 +154,57 @@ let P = (e) => {
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
-                            (0, r.jsx)("span", { className: C.premiumLogo }),
+                            (0, r.jsx)("span", { className: N.premiumLogo }),
                             (0, r.jsx)("span", {
-                                className: C.premiumText,
-                                children: A.intl.string(A.t["+urf7+"]),
+                                className: N.premiumText,
+                                children: C.intl.string(C.t["+urf7+"]),
                             }),
                             (0, r.jsx)(o.NoS, {
-                                className: C.premiumAction,
-                                noticeType: N,
+                                className: N.premiumAction,
+                                noticeType: R,
                                 onClick: () => {
-                                    y.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
-                                        location_section: I.jXE.NOTIFICATION_BAR,
-                                        location_object: I.qAy.BUTTON_CTA,
+                                    O.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
+                                        location_section: T.jXE.NOTIFICATION_BAR,
+                                        location_object: T.qAy.BUTTON_CTA,
                                     }),
-                                        l.Z.open(I.oAB.PREMIUM);
+                                        (0, g.openUserSettings)(m.n.NITRO_PANEL, { section: T.oAB.PREMIUM });
                                 },
-                                children: A.intl.string(A.t["8JC5e3"]),
+                                children: C.intl.string(C.t["8JC5e3"]),
                             }),
                             (0, r.jsx)(o.RyX, {
                                 onClick: () => {
-                                    i(v.L.UNKNOWN), (0, s.mB)(I.xW$.PREMIUM_PROMO_DISMISSED, !0);
+                                    i(I.L.UNKNOWN), (0, s.mB)(T.xW$.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: N,
+                                noticeType: R,
                             }),
                         ],
                     });
                 case a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                    return (0, r.jsx)(h.Z, {
-                        dismissCurrentNotice: () => i(v.L.UNKNOWN),
-                        subscriptionTier: S.Si.TIER_2,
+                    return (0, r.jsx)(p.Z, {
+                        dismissCurrentNotice: () => i(I.L.UNKNOWN),
+                        subscriptionTier: A.Si.TIER_2,
                     });
                 case a.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                    return (0, r.jsx)(h.Z, {
-                        dismissCurrentNotice: () => i(v.L.UNKNOWN),
-                        subscriptionTier: S.Si.TIER_0,
+                    return (0, r.jsx)(p.Z, {
+                        dismissCurrentNotice: () => i(I.L.UNKNOWN),
+                        subscriptionTier: A.Si.TIER_0,
                     });
                 case a.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                noticeType: N,
-                                onClick: () => i(v.L.UNKNOWN),
+                                noticeType: R,
+                                onClick: () => i(I.L.UNKNOWN),
                             }),
-                            A.intl.string(A.t["0KFB2N"]),
+                            C.intl.string(C.t["0KFB2N"]),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: N,
+                                noticeType: R,
                                 onClick: () => {
-                                    i(v.L.UNKNOWN), l.Z.open(I.oAB.PREMIUM);
+                                    i(I.L.UNKNOWN),
+                                        (0, g.openUserSettings)(m.n.NITRO_PANEL, { section: T.oAB.PREMIUM });
                                 },
-                                children: A.intl.string(A.t.pyYSiI),
+                                children: C.intl.string(C.t.pyYSiI),
                             }),
                         ],
                     });
@@ -211,44 +213,44 @@ let P = (e) => {
                         color: o.DM8.DANGER,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            A.intl.string(A.t["7490vb"]),
+                            C.intl.string(C.t["7490vb"]),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: N,
+                                noticeType: R,
                                 onClick: () => {
-                                    (0, m.uL)(I.Z5c.SETTINGS("account"));
+                                    (0, h.uL)(T.Z5c.SETTINGS("account"));
                                 },
-                                children: A.intl.string(A.t.Vm8akJ),
+                                children: C.intl.string(C.t.Vm8akJ),
                             }),
                         ],
                     });
                 case a.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
-                    let g = f.Z.getEligibleGuildsForNagActivate();
+                    let E = d.Z.getEligibleGuildsForNagActivate();
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            A.intl.string(A.t.pJ4hJC),
+                            C.intl.string(C.t.pJ4hJC),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: N,
+                                noticeType: R,
                                 onClick: () => {
-                                    i(v.L.PRIMARY),
-                                        (0, m.uL)(
-                                            1 === g.length
-                                                ? I.Z5c.GUILD_SETTINGS(g[0], "role-subscriptions")
-                                                : I.Z5c.PICK_GUILD_SETTINGS(
+                                    i(I.L.PRIMARY),
+                                        (0, h.uL)(
+                                            1 === E.length
+                                                ? T.Z5c.GUILD_SETTINGS(E[0], "role-subscriptions")
+                                                : T.Z5c.PICK_GUILD_SETTINGS(
                                                       "role-subscriptions",
                                                       void 0,
                                                       "server-subscriptions-finish-setting-up",
                                                   ),
                                         );
                                 },
-                                children: A.intl.string(A.t["74s74O"]),
+                                children: C.intl.string(C.t["74s74O"]),
                             }),
                         ],
                     });
@@ -257,14 +259,14 @@ let P = (e) => {
                         color: o.DM8.WARNING,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            A.intl.format(A.t.pdYZys, {}),
+                            C.intl.format(C.t.pdYZys, {}),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, p.Z)(T.Kq.NOTICE),
-                                noticeType: N,
-                                children: A.intl.string(A.t.LhlgY2),
+                                onClick: () => (0, _.Z)(S.Kq.NOTICE),
+                                noticeType: R,
+                                children: C.intl.string(C.t.LhlgY2),
                             }),
                         ],
                     });
@@ -273,21 +275,21 @@ let P = (e) => {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.UNKNOWN),
-                                noticeType: N,
+                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: R,
                             }),
-                            A.intl.string(A.t["O9GI+v"]),
+                            C.intl.string(C.t["O9GI+v"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
-                                    (0, _.Z)({
-                                        subscriptionTier: S.Si.TIER_2,
-                                        analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
-                                        analyticsLocation: I.Sbl.CHECKOUT_RECOVERY_NAGBAR,
-                                        onClose: () => i(v.L.UNKNOWN),
+                                    (0, f.Z)({
+                                        subscriptionTier: A.Si.TIER_2,
+                                        analyticsLocations: [c.Z.CHECKOUT_RECOVERY_NAGBAR],
+                                        analyticsLocation: T.Sbl.CHECKOUT_RECOVERY_NAGBAR,
+                                        onClose: () => i(I.L.UNKNOWN),
                                     });
                                 },
-                                noticeType: N,
-                                children: A.intl.string(A.t.Zi69Dw),
+                                noticeType: R,
+                                children: C.intl.string(C.t.Zi69Dw),
                             }),
                         ],
                     });
@@ -296,22 +298,22 @@ let P = (e) => {
                         color: o.DM8.BRAND,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(v.L.USER_DISMISS),
-                                noticeType: I.kVF.REPORT_TO_MOD_SURVEY,
+                                onClick: () => i(I.L.USER_DISMISS),
+                                noticeType: T.kVF.REPORT_TO_MOD_SURVEY,
                             }),
-                            A.intl.string(A.t["Aa+l7e"]),
+                            C.intl.string(C.t["Aa+l7e"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     window.open(
                                         "https://discord.sjc1.qualtrics.com/jfe/form/SV_5uP0NWTpoXsYSUu?user_id="
-                                            .concat(null == P ? void 0 : P.id, "&guild_id=")
-                                            .concat(w),
+                                            .concat(null == w ? void 0 : w.id, "&guild_id=")
+                                            .concat(D),
                                         "_blank",
                                     ),
-                                        i(v.L.TAKE_ACTION);
+                                        i(I.L.TAKE_ACTION);
                                 },
-                                noticeType: I.kVF.REPORT_TO_MOD_SURVEY,
-                                children: A.intl.string(A.t["iT+wQ0"]),
+                                noticeType: T.kVF.REPORT_TO_MOD_SURVEY,
+                                children: C.intl.string(C.t["iT+wQ0"]),
                             }),
                         ],
                     });

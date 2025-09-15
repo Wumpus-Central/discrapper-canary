@@ -28,7 +28,7 @@ let f = function () {
                     }),
                     (0, r.jsx)(i.zxk, {
                         onClick: () => {
-                            (0, s.it)(), (0, o.Z)(), (0, a.uL)(e ? u.Z5c.QUEST_HOME_V2 : u.Z5c.QUEST_HOME);
+                            (0, s.it)(), (0, o.default)(), (0, a.uL)(e ? u.Z5c.QUEST_HOME_V2 : u.Z5c.QUEST_HOME);
                         },
                         text: "Clear History",
                     }),

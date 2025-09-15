@@ -6,7 +6,7 @@ var o = n(98278),
     l = n(474936),
     i = n(981631),
     a = n(388032),
-    u = n(330226);
+    u = n(391853);
 function f(e) {
     var { channel: t, onClose: n } = e,
         f = (function (e, t) {
@@ -32,7 +32,7 @@ function f(e) {
         })(e, ["channel", "onClose"]);
     let s = a.intl.format(a.t.AVVUsb, {
         onLearnMore: function () {
-            n(), (0, o.z)(!0);
+            n(), (0, o.z)();
         },
     });
     return (0, r.jsx)(

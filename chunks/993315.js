@@ -1,19 +1,21 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(951288);
 n(647438);
-var i = n(230711),
-    a = n(838436),
-    o = n(726985),
-    s = n(981631),
-    l = n(388032);
-function c() {
-    return (0, r.jsx)(a.U, {
-        setting: o.s6.PRIVACY_DATA_BASIC_SERVICE_V2,
-        children: (0, r.jsx)(a.H, {
-            header: l.intl.string(l.t.D60Gfn),
-            description: l.intl.format(l.t.R5N31N, {
+var i = n(313789),
+    a = n(947889),
+    o = n(838436),
+    s = n(726985),
+    l = n(981631),
+    c = n(388032);
+function u() {
+    let e = (0, a.Z)();
+    return (0, r.jsx)(o.U, {
+        setting: s.s6.PRIVACY_DATA_BASIC_SERVICE_V2,
+        children: (0, r.jsx)(o.H, {
+            header: c.intl.string(c.t.D60Gfn),
+            description: c.intl.format(c.t.R5N31N, {
                 onClick: () => {
-                    i.Z.setSection(s.oAB.ACCOUNT);
+                    e(i.n.ACCOUNT_PANEL, { section: l.oAB.ACCOUNT });
                 },
             }),
         }),

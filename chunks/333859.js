@@ -20,7 +20,7 @@ var i = n(442837),
     y = n(388032),
     O = n(980676);
 let v = () => {
-        (0, _.XO)(_.wh.APP_ICON), (0, g.Z)();
+        (0, _.XO)(_.wh.APP_ICON), (0, g.default)();
     },
     I = () => {
         let { analyticsLocations: e } = (0, c.ZP)(l.Z.USER_SETTINGS),

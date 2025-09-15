@@ -60,7 +60,7 @@ let O = () => {
                                   }),
                                   (0, r.jsx)(u.P3F, {
                                       children: (0, r.jsx)(s.rU, {
-                                          onClick: p.Z,
+                                          onClick: p.default,
                                           to: {
                                               pathname: h.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 },

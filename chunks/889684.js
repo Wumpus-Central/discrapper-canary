@@ -1,59 +1,60 @@
-a.d(t, { default: () => h });
-var n = a(951288),
-    i = a(647438),
-    s = a(481060),
-    o = a(230711),
-    l = a(767714),
-    r = a(626135),
-    c = a(981631),
-    d = a(474936),
-    p = a(388032),
-    m = a(91717);
+n.d(t, { default: () => h });
+var a = n(951288),
+    i = n(647438),
+    s = n(481060),
+    o = n(767714),
+    l = n(313789),
+    r = n(518596),
+    c = n(626135),
+    d = n(981631),
+    p = n(474936),
+    m = n(388032),
+    E = n(91717);
 let h = (e) => {
-    let { transitionState: t, onClose: a } = e;
+    let { transitionState: t, onClose: n } = e;
     return (
         i.useEffect(() => {
-            r.default.track(c.rMx.PREMIUM_UPSELL_VIEWED, { type: d.cd.EMOJI_AUTOCOMPLETE_MODAL });
+            c.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, { type: p.cd.EMOJI_AUTOCOMPLETE_MODAL });
         }, []),
-        (0, n.jsxs)(s.Y0X, {
+        (0, a.jsxs)(s.Y0X, {
             transitionState: t,
             size: s.CgR.SMALL,
             "aria-label": "",
             parentComponent: "ChannelAutocompleteEmojiUpsellModal",
             children: [
-                (0, n.jsxs)(s.hzk, {
-                    className: m.content,
+                (0, a.jsxs)(s.hzk, {
+                    className: E.content,
                     children: [
-                        (0, n.jsx)("div", {
+                        (0, a.jsx)("div", {
                             role: "image",
-                            className: m.image,
+                            className: E.image,
                         }),
-                        (0, n.jsx)(s.X6q, {
+                        (0, a.jsx)(s.X6q, {
                             variant: "heading-xl/semibold",
-                            className: m.header,
-                            children: p.intl.string(p.t.Uq1zJS),
+                            className: E.header,
+                            children: m.intl.string(m.t.Uq1zJS),
                         }),
-                        (0, n.jsx)(s.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            children: p.intl.format(p.t.xPaO3t, {
+                            children: m.intl.format(m.t.xPaO3t, {
                                 onLearnMore: () => {
-                                    a(), o.Z.open(c.oAB.PREMIUM);
+                                    n(), (0, r.openUserSettings)(l.n.NITRO_PANEL, { section: d.oAB.PREMIUM });
                                 },
                             }),
                         }),
                     ],
                 }),
-                (0, n.jsx)(s.mzw, {
-                    children: (0, n.jsx)(l.Z, {
-                        onClick: a,
-                        textOptions: { textOverride: p.intl.string(p.t.pj0XBA) },
-                        subscriptionTier: d.Si.TIER_2,
-                        premiumModalAnalyticsLocation: { page: c.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL },
+                (0, a.jsx)(s.mzw, {
+                    children: (0, a.jsx)(o.Z, {
+                        onClick: n,
+                        textOptions: { textOverride: m.intl.string(m.t.pj0XBA) },
+                        subscriptionTier: p.Si.TIER_2,
+                        premiumModalAnalyticsLocation: { page: d.ZY5.CHANNEL_AUTOCOMPLETE_EMOJI_UPSELL_MODAL },
                     }),
                 }),
-                (0, n.jsx)(s.olH, {
-                    className: m.closeButton,
-                    onClick: a,
+                (0, a.jsx)(s.olH, {
+                    className: E.closeButton,
+                    onClick: n,
                 }),
             ],
         })

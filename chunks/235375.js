@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        baseRules: () => A,
-        customRules: () => C,
+        baseRules: () => C,
+        customRules: () => N,
     }),
     n(35282),
     n(388685);
@@ -13,13 +13,14 @@ var r = n(951288),
     l = n.n(s),
     c = n(481060),
     u = n(37234),
-    d = n(230711),
-    f = n(454585),
-    _ = n(703656),
-    p = n(626135),
-    h = n(981631),
-    m = n(596401);
-function g(e, t, n) {
+    d = n(454585),
+    f = n(703656),
+    _ = n(313789),
+    p = n(518596),
+    h = n(626135),
+    m = n(981631),
+    g = n(596401);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +44,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,78 +61,74 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = l().defaultRules.link,
-    v = { section: h.jXE.SETTINGS_CHANGELOG };
-function I() {
-    p.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: v });
+let v = l().defaultRules.link,
+    I = { section: m.jXE.SETTINGS_CHANGELOG };
+function T() {
+    h.default.track(m.rMx.PREMIUM_PROMOTION_OPENED, { location: I });
 }
-function T(e, t) {
+function S(e, t) {
     return null == t ? [] : t.split(" ").map((t) => e[t]);
 }
-let S = (e) => {
+let A = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: a = {} } = e,
             s = (0, c.xSt)(),
             l = parseInt(t, 10),
             u = s + (isNaN(l) ? 1 : l) - 1;
-        return i.createElement("h".concat(u), { className: o()(...T(a, r)) }, n);
+        return i.createElement("h".concat(u), { className: o()(...S(a, r)) }, n);
     },
-    A = null != f.Z ? f.Z.defaultRules : null,
-    C = {
+    C = null != d.Z ? d.Z.defaultRules : null,
+    N = {
         link: {
             parse(e, t, n) {
                 let r,
                     i = e[2],
                     a = i.startsWith("https://discordapp.com/nitro") || i.startsWith("https://discord.com/nitro"),
-                    o =
-                        i.startsWith("https://discordapp.com/hypesquad") ||
-                        i.startsWith("https://discord.com/hypesquad"),
-                    s = i.startsWith("/shop/fullscreen?source=1") || i.startsWith("/activities");
+                    o = i.startsWith("/shop/fullscreen?source=1") || i.startsWith("/activities");
                 return (
-                    (r =
-                        a || o
-                            ? (e) => {
-                                  I(),
-                                      a ? d.Z.open(h.oAB.PREMIUM) : o && d.Z.open(h.oAB.HYPESQUAD_ONLINE),
-                                      n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
-                                      (0, c.Mr3)(m.Xd),
-                                      e.preventDefault();
-                              }
-                            : s
-                              ? (e) => {
-                                    (0, _.uL)(i),
-                                        n.changeLog.track(
-                                            h.rMx.CHANGE_LOG_CTA_CLICKED,
-                                            E({}, p.default.getCampaignParams(i)),
+                    (r = a
+                        ? (e) => {
+                              T(),
+                                  (0, p.openUserSettings)(_.n.NITRO_PANEL, { section: m.oAB.PREMIUM }),
+                                  n.changeLog.track(m.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
+                                  (0, c.Mr3)(g.Xd),
+                                  e.preventDefault();
+                          }
+                        : o
+                          ? (e) => {
+                                (0, f.uL)(i),
+                                    n.changeLog.track(
+                                        m.rMx.CHANGE_LOG_CTA_CLICKED,
+                                        b({}, h.default.getCampaignParams(i)),
+                                    ),
+                                    (0, u.Ou)(),
+                                    (0, c.Mr3)(g.Xd),
+                                    e.preventDefault();
+                            }
+                          : () => {
+                                n && "function" == typeof n.onLinkClick && n.onLinkClick(i),
+                                    n.changeLog.track(
+                                        m.rMx.CHANGE_LOG_CTA_CLICKED,
+                                        b(
+                                            {
+                                                target: i,
+                                                cta_type: "inline_link",
+                                            },
+                                            h.default.getCampaignParams(i),
                                         ),
-                                        (0, u.Ou)(),
-                                        (0, c.Mr3)(m.Xd),
-                                        e.preventDefault();
-                                }
-                              : () => {
-                                    n && "function" == typeof n.onLinkClick && n.onLinkClick(i),
-                                        n.changeLog.track(
-                                            h.rMx.CHANGE_LOG_CTA_CLICKED,
-                                            E(
-                                                {
-                                                    target: i,
-                                                    cta_type: "inline_link",
-                                                },
-                                                p.default.getCampaignParams(i),
-                                            ),
-                                        );
-                                }),
-                    y(E({}, O.parse(e, t, n)), { callToAction: r })
+                                    );
+                            }),
+                    O(b({}, v.parse(e, t, n)), { callToAction: r })
                 );
             },
             react: (e, t, n) =>
@@ -151,7 +148,7 @@ let S = (e) => {
         lheading: (e) => ({
             react: (t, n, i) =>
                 (0, r.jsx)(
-                    S,
+                    A,
                     {
                         level: t.level,
                         className: t.className,
@@ -164,7 +161,7 @@ let S = (e) => {
         heading: {
             react: (e, t, n) =>
                 (0, r.jsx)(
-                    S,
+                    A,
                     {
                         level: e.level,
                         children: t(e.content, n),
@@ -185,6 +182,6 @@ let S = (e) => {
                 );
             },
         },
-        blockQuote: { react: null == A ? void 0 : A.blockQuote.react },
+        blockQuote: { react: null == C ? void 0 : C.blockQuote.react },
         paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
     };

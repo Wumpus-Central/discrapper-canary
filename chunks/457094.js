@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => tf }), n(35282), n(388685);
+n.r(t), n.d(t, { default: () => th }), n(35282), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(593473),
@@ -24,8 +24,8 @@ var r = n(951288),
     S = n(64514),
     T = n(912471),
     N = n(100527),
-    j = n(77987),
-    P = n(679891),
+    P = n(77987),
+    j = n(679891),
     x = n(491575),
     A = n(954709),
     Z = n(644679),
@@ -78,8 +78,8 @@ var r = n(951288),
     eS = n(298969),
     eT = n(719256),
     eN = n(6025),
-    ej = n(897473),
-    eP = n(377368),
+    eP = n(897473),
+    ej = n(377368),
     ex = n(262702),
     eA = n(639033),
     eZ = n(479313),
@@ -88,33 +88,34 @@ var r = n(951288),
     eR = n(892001),
     eD = n(497805),
     ek = n(332754),
-    eM = n(507468),
-    eU = n(722589),
-    eG = n(518596),
-    eB = n(282506),
-    eV = n(444961),
-    eH = n(314897),
-    eF = n(433355),
-    ez = n(592125),
-    eW = n(896797),
-    eY = n(430824),
-    eK = n(819640),
-    eq = n(283595),
-    eQ = n(944486),
-    eX = n(914010),
-    eJ = n(695103),
-    e$ = n(241890),
-    e0 = n(974042),
-    e1 = n(417363),
-    e8 = n(900974),
-    e4 = n(358085),
-    e3 = n(998502),
-    e5 = n(346329),
-    e2 = n(981631),
-    e6 = n(176505),
-    e7 = n(701476),
-    e9 = n(186901);
-function te(e, t, n) {
+    eM = n(313789),
+    eU = n(507468),
+    eG = n(722589),
+    eB = n(518596),
+    eV = n(282506),
+    eH = n(444961),
+    eF = n(314897),
+    ez = n(433355),
+    eW = n(592125),
+    eY = n(896797),
+    eK = n(430824),
+    eq = n(819640),
+    eQ = n(283595),
+    eX = n(944486),
+    eJ = n(914010),
+    e$ = n(695103),
+    e0 = n(241890),
+    e1 = n(974042),
+    e8 = n(417363),
+    e4 = n(900974),
+    e3 = n(358085),
+    e5 = n(998502),
+    e2 = n(346329),
+    e6 = n(981631),
+    e7 = n(176505),
+    e9 = n(701476),
+    te = n(186901);
+function tt(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -127,7 +128,7 @@ function te(e, t, n) {
         e
     );
 }
-function tt(e) {
+function tn(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -138,7 +139,7 @@ function tt(e) {
                 }),
             )),
             r.forEach(function (t) {
-                te(e, t, n[t]);
+                tt(e, t, n[t]);
             });
     }
     return e;
@@ -165,29 +166,28 @@ n(117240),
     n(141233),
     n(471073),
     n(606206);
-let tn = !1;
+let tr = !1;
 (0, T.DL)(),
     o.ZP.initialize(),
     eS.Z.loadServer(),
-    e4.isPlatformEmbedded &&
-        (e3.ZP.on("USER_SETTINGS_OPEN", (e, t) => {
-            eK.Z.getLayers().includes(e2.S9g.USER_SETTINGS) ||
-                (0, eG.Z)(void 0, { section: null != t ? t : e2.oAB.ACCOUNT });
+    e3.isPlatformEmbedded &&
+        (e5.ZP.on("USER_SETTINGS_OPEN", (e, t) => {
+            eq.Z.getLayers().includes(e6.S9g.USER_SETTINGS) || (0, eB.openUserSettings)();
         }),
-        e3.ZP.on("LAUNCH_APPLICATION", (e, t) => {
-            let n = eq.Z.getActiveLibraryApplication(t);
-            e5.playApplication(t, n, {
+        e5.ZP.on("LAUNCH_APPLICATION", (e, t) => {
+            let n = eQ.Z.getActiveLibraryApplication(t);
+            e2.playApplication(t, n, {
                 analyticsParams: {
                     location: {
-                        page: e2.ZY5.DIRECT,
-                        object: e2.qAy.WEB_URL,
+                        page: e6.ZY5.DIRECT,
+                        object: e6.qAy.WEB_URL,
                     },
                 },
             });
         }));
-let tr = (0, b.l)((e) => {
+let ti = (0, b.l)((e) => {
         let { location: t } = e,
-            n = (0, eU.default)(t.pathname);
+            n = (0, eG.default)(t.pathname);
         return (
             null != n &&
                 (0, J.h)(() =>
@@ -197,7 +197,7 @@ let tr = (0, b.l)((e) => {
                     }),
                 ),
             (0, r.jsx)(m.Z, {
-                deepLinkType: e9.jE.USER_SETTINGS,
+                deepLinkType: te.jE.USER_SETTINGS,
                 path: t.pathname,
                 search: t.search,
                 paramsBuilder: function (e, t, n) {
@@ -210,15 +210,15 @@ let tr = (0, b.l)((e) => {
                         search: n,
                     };
                 },
-                children: (0, r.jsx)(a.l_, { to: eW.Z.defaultRoute }),
+                children: (0, r.jsx)(a.l_, { to: eY.Z.defaultRoute }),
             })
         );
     }),
-    ti = o.ZP.connectStores([X.Z, eW.Z, eH.default], () => ({
+    tl = o.ZP.connectStores([X.Z, eY.Z, eF.default], () => ({
         isConnected: X.Z.isConnected(),
-        defaultRoute: eW.Z.defaultRoute,
-        defaultRouteFallback: eW.Z.fallbackRoute,
-        token: eH.default.getToken(),
+        defaultRoute: eY.Z.defaultRoute,
+        defaultRouteFallback: eY.Z.fallbackRoute,
+        token: eF.default.getToken(),
     }))(
         class extends i.Component {
             componentDidMount() {
@@ -227,12 +227,12 @@ let tr = (0, b.l)((e) => {
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: i } = this.props;
-                if (null == n) return (0, r.jsx)(a.l_, { to: e2.Z5c.DEFAULT_LOGGED_OUT });
+                if (null == n) return (0, r.jsx)(a.l_, { to: e6.Z5c.DEFAULT_LOGGED_OUT });
                 if (e) {
-                    let e = tu(t);
+                    let e = td(t);
                     return null == e ||
-                        ((e.params.guildId === e2.ME || null != eY.Z.getGuild(e.params.guildId)) &&
-                            null != ez.Z.getChannel(e.params.channelId))
+                        ((e.params.guildId === e6.ME || null != eK.Z.getGuild(e.params.guildId)) &&
+                            null != eW.Z.getChannel(e.params.channelId))
                         ? (0, r.jsx)(a.l_, { to: t })
                         : (0, r.jsx)(a.l_, { to: i });
                 }
@@ -240,37 +240,37 @@ let tr = (0, b.l)((e) => {
             }
         },
     ),
-    tl = (0, b.l)((0, j.e)(x.Z, null, { passProps: !1 })),
-    ta = (0, j.e)($.default, null, { passProps: !1 }),
-    to = [
-        e2.Z5c.GUILD_BOOSTING_MARKETING(eI.Hw.guildId()),
-        ...Array.from(e6.Vg).map((e) => e2.Z5c.CHANNEL(eI.Hw.guildId(), e)),
+    ta = (0, b.l)((0, P.e)(x.Z, null, { passProps: !1 })),
+    to = (0, P.e)($.default, null, { passProps: !1 }),
+    ts = [
+        e6.Z5c.GUILD_BOOSTING_MARKETING(eI.Hw.guildId()),
+        ...Array.from(e7.Vg).map((e) => e6.Z5c.CHANNEL(eI.Hw.guildId(), e)),
     ];
-function ts(e) {
+function tc(e) {
     let { guildId: t, channelId: n = null, messageId: r = null, threadId: i = null } = e.params;
     return {
-        guildId: null != t ? t : e2.ME,
+        guildId: null != t ? t : e6.ME,
         channelId: n,
         messageId: r,
         threadId: i,
     };
 }
-let tc = [
+let tu = [
     {
-        path: [e2.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
+        path: [e6.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
         render(e) {
             let { match: t } = e;
-            return (0, r.jsx)(ti, { match: t });
+            return (0, r.jsx)(tl, { match: t });
         },
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.APP],
-        render: () => (0, r.jsx)(ti, {}),
+        path: [e6.Z5c.APP],
+        render: () => (0, r.jsx)(tl, {}),
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.USERS(":id")],
+        path: [e6.Z5c.USERS(":id")],
         render: function (e) {
             let { match: t } = e,
                 { id: n } = t.params;
@@ -281,58 +281,58 @@ let tc = [
                         sourceAnalyticsLocations: [N.Z.URI_SCHEME],
                     }),
                 ),
-                (0, r.jsx)(a.l_, { to: eW.Z.defaultRoute })
+                (0, r.jsx)(a.l_, { to: eY.Z.defaultRoute })
             );
         },
     },
     {
-        path: [e2.Z5c.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
+        path: [e6.Z5c.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
         render: function (e) {
             let { match: t } = e,
                 { gameId: n, action: i } = t.params;
             return (
-                e1.Z.whenInitialized(() => {
-                    eq.Z.whenInitialized(() => {
+                e8.Z.whenInitialized(() => {
+                    eQ.Z.whenInitialized(() => {
                         switch (i) {
                             case "launch": {
-                                let e = eq.Z.getActiveLibraryApplication(n);
+                                let e = eQ.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
-                                e5.playApplication(e.id, e, {
+                                e2.playApplication(e.id, e, {
                                     analyticsParams: {
                                         location: {
-                                            page: e2.ZY5.DIRECT,
-                                            object: e2.qAy.WEB_URL,
+                                            page: e6.ZY5.DIRECT,
+                                            object: e6.qAy.WEB_URL,
                                         },
                                     },
                                 });
                                 break;
                             }
                             case "test-mode":
-                                eJ.Z.whenInitialized(() => h.Wt(n));
+                                e$.Z.whenInitialized(() => h.Wt(n));
                                 break;
                             case "uninstall": {
-                                let e = eq.Z.getActiveLibraryApplication(n);
+                                let e = eQ.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
-                                (0, u.W)(e.id, e.branchId, e2.Sbl.URI_SCHEME);
+                                (0, u.W)(e.id, e.branchId, e6.Sbl.URI_SCHEME);
                             }
                         }
                     });
                 }),
-                (0, r.jsx)(a.l_, { to: e2.Z5c.APPLICATION_LIBRARY })
+                (0, r.jsx)(a.l_, { to: e6.Z5c.APPLICATION_LIBRARY })
             );
         },
     },
     {
-        path: [e2.Z5c.GUILD_CREATE],
+        path: [e6.Z5c.GUILD_CREATE],
         render: function () {
             return (
                 (0, J.h)(() => k.Z.openCreateGuildModal({ location: "External link" })),
-                (0, r.jsx)(a.l_, { to: eW.Z.defaultRoute })
+                (0, r.jsx)(a.l_, { to: eY.Z.defaultRoute })
             );
         },
     },
     {
-        path: [e2.Z5c.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
+        path: [e6.Z5c.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
         render: function (e) {
             let { match: t } = e,
                 { section: n, subsection: i } = t.params,
@@ -340,23 +340,23 @@ let tc = [
             return (
                 (0, J.h)(() =>
                     ei.v({
-                        section: (0, er.Z)(e2.pNK, n),
-                        subsection: (0, er.Z)(e2.KsC, i),
+                        section: (0, er.Z)(e6.pNK, n),
+                        subsection: (0, er.Z)(e6.KsC, i),
                         feature: o,
                     }),
                 ),
-                (0, r.jsx)(a.l_, { to: eW.Z.defaultRoute })
+                (0, r.jsx)(a.l_, { to: eY.Z.defaultRoute })
             );
         },
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.SETTINGS(":section", ":subsection?")],
-        render: tr,
+        path: [e6.Z5c.SETTINGS(":section", ":subsection?")],
+        render: ti,
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(eI.Hw.guildId())],
+        path: [e6.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(eI.Hw.guildId())],
         render: function (e) {
             let { match: t } = e,
                 { guildId: i } = t.params;
@@ -368,7 +368,7 @@ let tc = [
                             var n, l;
                             return (0, r.jsx)(
                                 e,
-                                ((n = tt({}, t)),
+                                ((n = tn({}, t)),
                                 (l = l = { guildId: i }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -387,31 +387,34 @@ let tc = [
                         };
                     });
                 }),
-                (0, r.jsx)(a.l_, { to: e2.Z5c.CHANNEL(i) })
+                (0, r.jsx)(a.l_, { to: e6.Z5c.CHANNEL(i) })
             );
         },
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.APPLICATION_LIBRARY_INVENTORY],
+        path: [e6.Z5c.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
-            return (0, J.h)(() => g.Z.open(e2.oAB.INVENTORY)), (0, r.jsx)(a.l_, { to: eW.Z.defaultRoute });
+            return (
+                (0, J.h)(() => (0, eB.openUserSettings)(eM.n.GIFT_PANEL, { section: e6.oAB.INVENTORY })),
+                (0, r.jsx)(a.l_, { to: eY.Z.defaultRoute })
+            );
         },
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.WELCOME(eI.Hw.guildId({ optional: !0 }), eI.Hw.channelId({ optional: !0 }))],
+        path: [e6.Z5c.WELCOME(eI.Hw.guildId({ optional: !0 }), eI.Hw.channelId({ optional: !0 }))],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, channelId: i } = t.params;
-            (0, ed.c)(e7.M5.MARKETING_UNCLAIMED);
-            let l = e2.Z5c.CHANNEL(n, i);
+            (0, ed.c)(e9.M5.MARKETING_UNCLAIMED);
+            let l = e6.Z5c.CHANNEL(n, i);
             return (0, r.jsx)(a.l_, { to: l });
         },
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.GUILD_EVENT_DETAILS(eI.Hw.guildId({ optional: !0 }), ":guildEventId")],
+        path: [e6.Z5c.GUILD_EVENT_DETAILS(eI.Hw.guildId({ optional: !0 }), ":guildEventId")],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, guildEventId: i } = t.params;
@@ -419,21 +422,21 @@ let tc = [
                 (0, J.h)(() => {
                     (0, et.bO)({ eventId: i });
                 }),
-                (0, r.jsx)(a.l_, { to: e2.Z5c.CHANNEL(n) })
+                (0, r.jsx)(a.l_, { to: e6.Z5c.CHANNEL(n) })
             );
         },
         isSessionRequired: !0,
     },
     {
-        path: [e2.Z5c.GUILD_SETTINGS(eI.Hw.guildId(), ":section?", ":subsection?")],
+        path: [e6.Z5c.GUILD_SETTINGS(eI.Hw.guildId(), ":section?", ":subsection?")],
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, section: i, subsection: l } = t.params;
             return (
                 (0, J.h)(() => {
-                    en.Z.open(n, (0, er.Z)(e2.pNK, i), void 0, (0, er.Z)(e2.KsC, l));
+                    en.Z.open(n, (0, er.Z)(e6.pNK, i), void 0, (0, er.Z)(e6.KsC, l));
                 }),
-                (0, r.jsx)(a.l_, { to: e2.Z5c.CHANNEL(n) })
+                (0, r.jsx)(a.l_, { to: e6.Z5c.CHANNEL(n) })
             );
         },
         isSessionRequired: !0,
@@ -441,61 +444,61 @@ let tc = [
     },
     {
         path: [
-            e2.Z5c.CHANNEL_THREAD_VIEW(eI.Hw.guildId(), eI.Hw.channelId(), ":threadId", ":messageId?"),
-            e2.Z5c.CHANNEL(eI.Hw.guildId(), eI.Hw.channelId({ optional: !0 }), ":messageId?"),
-            e2.Z5c.ACTIVITY,
-            e2.Z5c.ACTIVITIES,
-            e2.Z5c.ACTIVITIES_HAPPENING_NOW,
-            e2.Z5c.ACTIVITY_DETAILS(":applicationId"),
-            e2.Z5c.APPLICATION_LIBRARY,
-            e2.Z5c.APPLICATION_STORE,
-            e2.Z5c.MESSAGE_REQUESTS,
-            e2.Z5c.COLLECTIBLES_SHOP,
-            e2.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-            e2.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-            e2.Z5c.GUILD_DISCOVERY,
-            e2.Z5c.QUEST_HOME,
-            e2.Z5c.QUEST_HOME_V2,
-            e2.Z5c.GLOBAL_DISCOVERY,
-            e2.Z5c.GUILD_MEMBER_VERIFICATION(eI.Hw.guildId()),
-            e2.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(eI.Hw.guildId(), ":inviteCode?"),
-            e2.Z5c.GUILD_BOOSTING_MARKETING(eI.Hw.guildId()),
-            e2.Z5c.GUILD_FEATURE(":feature", eI.Hw.guildId()),
-            e2.Z5c.FEATURE(":feature"),
-            e2.Z5c.FAMILY_CENTER,
+            e6.Z5c.CHANNEL_THREAD_VIEW(eI.Hw.guildId(), eI.Hw.channelId(), ":threadId", ":messageId?"),
+            e6.Z5c.CHANNEL(eI.Hw.guildId(), eI.Hw.channelId({ optional: !0 }), ":messageId?"),
+            e6.Z5c.ACTIVITY,
+            e6.Z5c.ACTIVITIES,
+            e6.Z5c.ACTIVITIES_HAPPENING_NOW,
+            e6.Z5c.ACTIVITY_DETAILS(":applicationId"),
+            e6.Z5c.APPLICATION_LIBRARY,
+            e6.Z5c.APPLICATION_STORE,
+            e6.Z5c.MESSAGE_REQUESTS,
+            e6.Z5c.COLLECTIBLES_SHOP,
+            e6.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
+            e6.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
+            e6.Z5c.GUILD_DISCOVERY,
+            e6.Z5c.QUEST_HOME,
+            e6.Z5c.QUEST_HOME_V2,
+            e6.Z5c.GLOBAL_DISCOVERY,
+            e6.Z5c.GUILD_MEMBER_VERIFICATION(eI.Hw.guildId()),
+            e6.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(eI.Hw.guildId(), ":inviteCode?"),
+            e6.Z5c.GUILD_BOOSTING_MARKETING(eI.Hw.guildId()),
+            e6.Z5c.GUILD_FEATURE(":feature", eI.Hw.guildId()),
+            e6.Z5c.FEATURE(":feature"),
+            e6.Z5c.FAMILY_CENTER,
         ],
-        render: tl,
+        render: ta,
         isSessionRequired: !0,
         isChatRoute: !0,
     },
     {
-        path: [e2.Z5c.APPLICATION_DIRECTORY],
-        render: ta,
+        path: [e6.Z5c.APPLICATION_DIRECTORY],
+        render: to,
         isSessionRequired: !0,
     },
 ];
-function tu(e) {
-    for (let { path: t, isChatRoute: n } of tc) {
+function td(e) {
+    for (let { path: t, isChatRoute: n } of tu) {
         if (!n) continue;
         let r = (0, a.LX)(e, { path: t });
         if (null != r) return r;
     }
     return null;
 }
-function td(e) {
+function tp(e) {
     let { channelId: t, guildId: n, pathname: r } = e;
     if (!X.Z.isConnected()) return;
     let { location: i } = (0, eC.s1)();
-    i.pathname === r && (null == ez.Z.getChannel(t) ? (0, eC.dL)(e2.Z5c.CHANNEL(n)) : (0, eC.dL)(r));
+    i.pathname === r && (null == eW.Z.getChannel(t) ? (0, eC.dL)(e6.Z5c.CHANNEL(n)) : (0, eC.dL)(r));
 }
-class tp extends i.PureComponent {
+class tf extends i.PureComponent {
     componentDidMount() {
-        e3.ZP.setZoomFactor(_.Z.zoom),
+        e5.ZP.setZoomFactor(_.Z.zoom),
             eS.Z.init(),
-            P.Z.initialize(),
+            j.Z.initialize(),
             eb.Z.initialize(),
             Y.Z.initialize(),
-            eV.Z.initialize(),
+            eH.Z.initialize(),
             K.Z.initialize(),
             eO.Z.initialize(),
             U.Z.initialize(),
@@ -509,24 +512,24 @@ class tp extends i.PureComponent {
             eE.Z.initialize(),
             I.ZP.initialize(),
             F.ZP.initialize(),
-            eB.Z.initialize(),
+            eV.Z.initialize(),
             em.Z.initialize(),
             v.Z.initialize(),
             el.Z.init(),
             w.Z.init(),
-            e8.Z.init(),
+            e4.Z.init(),
             y.Z.initialize(),
             eL.Z.init(),
-            e$.Z.init(),
+            e0.Z.init(),
             ek.Z.init(),
             ex.Z.initialize(),
             eA.Z.initialize(),
             eD.Z.initialize(),
-            eM.Z.init(),
+            eU.Z.init(),
             V.Z.initialize(),
             E.Z.initialize(),
             eT.Z.initialize(),
-            eP.Z.initialize(),
+            ej.Z.initialize(),
             eh.Z.initialize(),
             ef.Z.initialize(),
             eg.Z.initialize(),
@@ -538,7 +541,7 @@ class tp extends i.PureComponent {
                 openModal: () =>
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, r.jsx)(e, tt({}, t));
+                        return (t) => (0, r.jsx)(e, tn({}, t));
                     }),
             }),
             G.Z.init(),
@@ -554,13 +557,13 @@ class tp extends i.PureComponent {
     }
     componentWillUnmount() {
         eS.Z.terminate(),
-            eV.Z.terminate(),
+            eH.Z.terminate(),
             eO.Z.terminate(),
             eb.Z.terminate(),
-            P.Z.terminate(),
+            j.Z.terminate(),
             I.ZP.terminate(),
             F.ZP.terminate(),
-            eB.Z.terminate(),
+            eV.Z.terminate(),
             v.Z.terminate(),
             eE.Z.terminate(),
             em.Z.terminate(),
@@ -571,7 +574,7 @@ class tp extends i.PureComponent {
             E.Z.terminate(),
             ey.Z.terminate(),
             eT.Z.terminate(),
-            eP.Z.terminate(),
+            ej.Z.terminate(),
             eh.Z.terminate(),
             ef.Z.terminate(),
             eg.Z.terminate(),
@@ -592,11 +595,11 @@ class tp extends i.PureComponent {
             o = "REPLACE" === t;
         !(function (e) {
             if (X.Z.isConnected() || X.Z.isTryingToConnect()) return;
-            let t = eH.default.getToken();
+            let t = eF.default.getToken();
             null != t &&
                 null !=
                     (function (e) {
-                        for (let { path: t, isSessionRequired: n } of tc) {
+                        for (let { path: t, isSessionRequired: n } of tu) {
                             if (!n) continue;
                             let r = (0, a.LX)(e, { path: t });
                             if (null != r) return r;
@@ -606,19 +609,19 @@ class tp extends i.PureComponent {
                 c.Z.startSession(t);
         })(n),
             (function (e, t) {
-                let n = tu(e);
+                let n = td(e);
                 if (null == n) return;
-                let { guildId: r, channelId: i, messageId: o, threadId: s } = ts(n),
+                let { guildId: r, channelId: i, messageId: o, threadId: s } = tc(n),
                     c = (0, eI.Ss)(r),
                     u = (0, eI.cq)(i),
                     d = (0, eI.cq)(s),
-                    h = eX.Z.getGuildId(),
+                    h = eJ.Z.getGuildId(),
                     g = h !== r;
                 if ((c && g && p.Z.selectGuild(r), c && u)) {
-                    let n = eQ.Z.getChannelId(h),
+                    let n = eX.Z.getChannelId(h),
                         a = n !== i;
-                    if (!tn || g || a || null != o) {
-                        (tn = !0),
+                    if (!tr || g || a || null != o) {
+                        (tr = !0),
                             f.default.selectChannel({
                                 guildId: r,
                                 channelId: i,
@@ -628,12 +631,12 @@ class tp extends i.PureComponent {
                         null != e && eZ.ZP.setSelectedSummary(i, e);
                     }
                     if (null != s && d) {
-                        let e = eF.ZP.getCurrentSidebarChannelId(n) !== s,
-                            t = null != eF.ZP.getGuildSidebarState(r);
+                        let e = ez.ZP.getCurrentSidebarChannelId(n) !== s,
+                            t = null != ez.ZP.getGuildSidebarState(r);
                         if (null != i && null != s && e)
-                            if (t) (0, eC.dL)(e2.Z5c.CHANNEL(r, s, o));
+                            if (t) (0, eC.dL)(e6.Z5c.CHANNEL(r, s, o));
                             else {
-                                let e = { type: ej.Ff.THREAD };
+                                let e = { type: eP.Ff.THREAD };
                                 null != o && (e.initialMessageId = o),
                                     eN.Z.openThreadAsSidebar({
                                         guildId: r,
@@ -644,49 +647,49 @@ class tp extends i.PureComponent {
                             }
                     } else null == i || a || eN.Z.closeChannelSidebar(i);
                     let c = eu.Z.getIsOpen();
-                    if (i === e6.oC.ROLE_SUBSCRIPTIONS) ec.Z.closeSidebar();
+                    if (i === e7.oC.ROLE_SUBSCRIPTIONS) ec.Z.closeSidebar();
                     else if (g && c) {
-                        let t = null == h && r === e2.ME,
-                            n = e === e2.Z5c.GUILD_DISCOVERY;
+                        let t = null == h && r === e6.ME,
+                            n = e === e6.Z5c.GUILD_DISCOVERY;
                         t || n ? ec.Z.closeSidebar() : ec.Z.openSidebar();
                     } else ((a && c) || (!g && !a)) && ec.Z.closeSidebar();
                 } else
-                    to.some((t) => {
+                    ts.some((t) => {
                         var n;
                         return (null == (n = (0, a.LX)(e, t)) ? void 0 : n.isExact) === !0;
-                    }) || (0, eC.dL)(eW.Z.fallbackRoute);
+                    }) || (0, eC.dL)(eY.Z.fallbackRoute);
             })(n, r),
             (0, B.pN)(n, i, o),
-            n !== e2.Z5c.ME || o || e0.ZP.getState().section !== e2.pJs.YOU || d.Z.setSection(e2.pJs.ONLINE);
+            n !== e6.Z5c.ME || o || e1.ZP.getState().section !== e6.pJs.YOU || d.Z.setSection(e6.pJs.ONLINE);
     }
     ensureChannelMatchesGuild(e) {
         if (!X.Z.isConnected()) return null;
         let { pathname: t } = e,
-            n = tu(t);
+            n = td(t);
         if (null == n) return null;
-        let { guildId: r, channelId: i, threadId: l } = ts(n),
-            a = (0, eI.Ss)(r) && r !== e2.ME && r !== e2.I_8;
-        if (null != i && (0, eI.cq)(i) && !(0, e6.AB)(i) && a) {
-            let n = ez.Z.getChannel(i);
+        let { guildId: r, channelId: i, threadId: l } = tc(n),
+            a = (0, eI.Ss)(r) && r !== e6.ME && r !== e6.I_8;
+        if (null != i && (0, eI.cq)(i) && !(0, e7.AB)(i) && a) {
+            let n = eW.Z.getChannel(i);
             if (null == n)
                 ew.Z.loadThread(i).then(() =>
-                    td({
+                    tp({
                         channelId: i,
                         guildId: r,
                         pathname: t,
                     }),
                 );
-            else if (n.guild_id !== r && r !== e2.STv)
+            else if (n.guild_id !== r && r !== e6.STv)
                 return {
-                    path: e2.Z5c.CHANNEL(r),
+                    path: e6.Z5c.CHANNEL(r),
                     state: e.state,
                 };
             if (null != l) {
-                if (!((0, eI.cq)(l) && !(0, e6.AB)(i))) return null;
-                let n = ez.Z.getChannel(l);
+                if (!((0, eI.cq)(l) && !(0, e7.AB)(i))) return null;
+                let n = eW.Z.getChannel(l);
                 if (null == n)
                     ew.Z.loadThread(l).then(() =>
-                        td({
+                        tp({
                             channelId: l,
                             guildId: r,
                             pathname: t,
@@ -696,7 +699,7 @@ class tp extends i.PureComponent {
                     return (
                         eN.Z.closeChannelSidebar(i),
                         {
-                            path: e2.Z5c.CHANNEL(r, i),
+                            path: e6.Z5c.CHANNEL(r, i),
                             state: e.state,
                         }
                     );
@@ -714,7 +717,7 @@ class tp extends i.PureComponent {
                             from: "/channels",
                             to: "/",
                         }),
-                        tc.map((e) => {
+                        tu.map((e) => {
                             let { path: t, render: n } = e;
                             return (0, r.jsx)(
                                 a.AW,
@@ -733,7 +736,7 @@ class tp extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), te(this, "historyUnlisten", () => {}), te(this, "rewriterUnlisten", () => {});
+        super(...e), tt(this, "historyUnlisten", () => {}), tt(this, "rewriterUnlisten", () => {});
     }
 }
-let tf = tp;
+let th = tf;

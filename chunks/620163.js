@@ -3,7 +3,7 @@ n.d(t, {
     OF: () => e4,
     W8: () => e8,
     c$: () => e3,
-    iE: () => e5,
+    iE: () => e6,
 }),
     n(539854),
     n(388685);
@@ -196,8 +196,8 @@ let e2 = () => {
             ? (0, r.jsx)(s.IGR, { text: ez.intl.string(ez.t.y2b7CA) })
             : null;
     },
-    e6 = eD.Z,
-    e5 = (e) => {
+    e5 = eD.Z,
+    e6 = (e) => {
         let {
             unseenGiftCount: t,
             showPrepaidPaymentPastDueWarning: E,
@@ -206,7 +206,7 @@ let e2 = () => {
             isOverlaySupported: B,
             isClipsBetaTagShowing: eJ = !1,
             shouldMergeGameSettings: e0,
-            isKeywordFilteringEnabled: e5,
+            isKeywordFilteringEnabled: e6,
             isStaff: e7,
             isInappropriateConversationWarningEnabled: e9,
             isInapproprateConversationsDefaultOn: te,
@@ -621,7 +621,7 @@ let e2 = () => {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ez.intl.string(ez.t["1UaUy8"]), ez.intl.string(ez.t["xIk/iI"])],
                 parent: eV.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e5,
+                predicate: () => e6,
             },
             [eV.s6.PRIVACY_SAFETY_ALERTS_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -1581,7 +1581,7 @@ let e2 = () => {
                 section: eY.oAB.LINUX,
                 searchableTitles: [ez.intl.string(ez.t["7pPjTU"])],
                 label: ez.intl.string(ez.t["7pPjTU"]),
-                element: e6,
+                element: e5,
                 predicate: () => q.isPlatformEmbedded && (0, q.isLinux)(),
             },
             [eV.s6.STREAMER_MODE]: {
@@ -1762,7 +1762,7 @@ let e2 = () => {
                 label: ez.intl.string(ez.t.dnZNER),
                 predicate: () => tc,
                 onClick: () => {
-                    (0, p.Z)("https://discord.gg/discord-townhall"), (0, ex.Z)();
+                    (0, p.Z)("https://discord.gg/discord-townhall"), (0, ex.default)();
                 },
             },
             [eV.s6.EXPERIMENTS]: {

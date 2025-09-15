@@ -2,11 +2,11 @@ n.d(t, { n: () => r });
 var r = (function (e) {
     return (
         (e.PROFILE_SECTION = "profile_section"),
+        (e.PROFILE_PANEL = "profile_panel"),
+        (e.PROFILE_PANE = "profile_pane"),
         (e.USER_SECTION = "user_section"),
         (e.ACCOUNT_PANEL = "account_panel"),
         (e.ACCOUNT_PANE = "account_pane"),
-        (e.PROFILE_PANEL = "profile_panel"),
-        (e.PROFILE_PANE = "profile_pane"),
         (e.CONTENT_AND_SOCIAL_PANEL = "content_and_social_panel"),
         (e.CONTENT_AND_SOCIAL_PANE = "content_and_social_pane"),
         (e.DATA_AND_PRIVACY_PANEL = "data_and_privacy_panel"),

@@ -19,7 +19,7 @@ var r = n(951288),
     y = n(981631),
     O = n(388032),
     v = n(734501),
-    I = n(690813);
+    I = n(726667);
 function T(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function S(e) {
     return e;
 }
 let A = (e, t) => {
-        (0, p.Z)(), f.Z.openPrivateChannel({ recipientIds: e }), t();
+        (0, p.default)(), f.Z.openPrivateChannel({ recipientIds: e }), t();
     },
     C = (e) => {
         let { recipient: t, status: n, onClose: i } = e,

@@ -1,27 +1,28 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => L });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(481060),
     s = n(570140),
     l = n(355467),
-    c = n(230711),
-    u = n(497321),
-    d = n(231428),
-    f = n(390954),
-    _ = n(89057),
-    p = n(921801),
-    h = n(246946),
-    m = n(594174),
-    g = n(351402),
-    E = n(853872),
-    b = n(78839),
-    y = n(706454),
-    O = n(726985),
-    v = n(981631),
-    I = n(388032),
-    T = n(61365);
-function S(e, t, n) {
+    c = n(497321),
+    u = n(231428),
+    d = n(390954),
+    f = n(89057),
+    _ = n(921801),
+    p = n(246946),
+    h = n(594174),
+    m = n(351402),
+    g = n(853872),
+    E = n(78839),
+    b = n(706454),
+    y = n(313789),
+    O = n(947889),
+    v = n(726985),
+    I = n(981631),
+    T = n(388032),
+    S = n(61365);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +35,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,16 +46,39 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function R(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : N(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -62,7 +86,7 @@ function C(e, t) {
     }
     return i;
 }
-function N(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -71,19 +95,19 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let R = () =>
+let D = () =>
     (0, r.jsx)("div", {
-        className: T.syncing,
+        className: S.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class P extends i.PureComponent {
+class x extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
         });
     }
     handleRedemptionRedirect() {
-        c.Z.setSection(v.oAB.INVENTORY);
+        this.props.navigateTo(y.n.GIFT_PANEL, { section: I.oAB.INVENTORY });
     }
     render() {
         let {
@@ -94,70 +118,71 @@ class P extends i.PureComponent {
             locale: a,
             premiumSubscription: s,
             isRemovingPaymentSource: l,
-            isUpdatingPaymentSource: c,
+            isUpdatingPaymentSource: p,
         } = this.props;
         return t
-            ? (0, r.jsx)(u.Z, {})
+            ? (0, r.jsx)(c.Z, {})
             : (0, r.jsxs)("div", {
                   children: [
                       e && 0 === Object.keys(n).length
-                          ? (0, r.jsx)(R, {})
-                          : (0, r.jsx)(p.F, {
-                                setting: O.s6.BILLING_PAYMENT_METHODS,
-                                children: (0, r.jsx)(f.Z, {
+                          ? (0, r.jsx)(D, {})
+                          : (0, r.jsx)(_.F, {
+                                setting: v.s6.BILLING_PAYMENT_METHODS,
+                                children: (0, r.jsx)(d.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: i,
                                     premiumSubscriptionPaymentSourceId:
-                                        null != s && s.status !== v.O0b.CANCELED ? s.paymentSourceId : null,
+                                        null != s && s.status !== I.O0b.CANCELED ? s.paymentSourceId : null,
                                     locale: a,
                                     removing: l,
-                                    submitting: c,
+                                    submitting: p,
                                 }),
                             }),
-                      (0, r.jsx)(p.F, {
-                          setting: O.s6.BILLING_TRANSACTION_HISTORY,
+                      (0, r.jsx)(_.F, {
+                          setting: v.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, r.jsx)("div", {
-                              className: T.paymentHistory,
+                              className: S.paymentHistory,
                               children: (0, r.jsxs)(o.y5t, {
                                   component: (0, r.jsx)(o.vwX, {
                                       tag: "h1",
-                                      children: I.intl.string(I.t.obLrcH),
+                                      children: T.intl.string(T.t.obLrcH),
                                   }),
-                                  children: [(0, r.jsx)(_.oQ, {}), (0, r.jsx)(d.Z, { locale: a })],
+                                  children: [(0, r.jsx)(f.oQ, {}), (0, r.jsx)(u.Z, { locale: a })],
                               }),
                           }),
                       }),
                       (0, r.jsx)(o.Wn, {
                           messageType: o.QYI.INFO,
-                          className: T.codeRedemptionRedirect,
-                          children: I.intl.format(I.t["8b+FXF"], { onClick: this.handleRedemptionRedirect }),
+                          className: S.codeRedemptionRedirect,
+                          children: T.intl.format(T.t["8b+FXF"], { onClick: () => this.handleRedemptionRedirect() }),
                       }),
                   ],
               });
     }
 }
-function w() {
-    let e = (0, a.cj)([y.default, g.Z, E.Z, m.default, h.Z, b.Z], () => {
-        let e = b.Z.getPremiumTypeSubscription(),
-            t = m.default.getCurrentUser();
-        return null == t
-            ? { shouldRenderBillingSettings: !1 }
-            : {
-                  shouldRenderBillingSettings: !0,
-                  locale: y.default.locale,
-                  hide: h.Z.enabled,
-                  isClaimed: t.isClaimed(),
-                  isVerified: t.verified,
-                  premiumSubscription: e,
-                  defaultPaymentSourceId: E.Z.defaultPaymentSourceId,
-                  paymentSources: E.Z.paymentSources,
-                  syncing: g.Z.isSyncing,
-                  isRemovingPaymentSource: g.Z.isRemovingPaymentSource,
-                  isUpdatingPaymentSource: g.Z.isUpdatingPaymentSource,
-              };
-    });
-    if (!e.shouldRenderBillingSettings) return (0, r.jsx)(R, {});
-    let { shouldRenderBillingSettings: t } = e,
-        n = C(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(P, A({}, n));
+function L() {
+    let e = (0, a.cj)([b.default, m.Z, g.Z, h.default, p.Z, E.Z], () => {
+            let e = E.Z.getPremiumTypeSubscription(),
+                t = h.default.getCurrentUser();
+            return null == t
+                ? { shouldRenderBillingSettings: !1 }
+                : {
+                      shouldRenderBillingSettings: !0,
+                      locale: b.default.locale,
+                      hide: p.Z.enabled,
+                      isClaimed: t.isClaimed(),
+                      isVerified: t.verified,
+                      premiumSubscription: e,
+                      defaultPaymentSourceId: g.Z.defaultPaymentSourceId,
+                      paymentSources: g.Z.paymentSources,
+                      syncing: m.Z.isSyncing,
+                      isRemovingPaymentSource: m.Z.isRemovingPaymentSource,
+                      isUpdatingPaymentSource: m.Z.isUpdatingPaymentSource,
+                  };
+        }),
+        t = (0, O.Z)();
+    if (!e.shouldRenderBillingSettings) return (0, r.jsx)(D, {});
+    let { shouldRenderBillingSettings: n } = e,
+        i = P(e, ["shouldRenderBillingSettings"]);
+    return (0, r.jsx)(x, R(C({}, i), { navigateTo: t }));
 }

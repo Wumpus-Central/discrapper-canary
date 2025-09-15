@@ -6,7 +6,7 @@ var o = n(98278),
     a = n(474936),
     i = n(981631),
     l = n(388032),
-    f = n(102525);
+    f = n(769615);
 function u(e) {
     var { onClose: t, source: n } = e,
         u = (function (e, t) {
@@ -32,7 +32,7 @@ function u(e) {
         })(e, ["onClose", "source"]);
     let b = l.intl.format(l.t.WMO9pq, {
         onAndMore: function () {
-            t(), (0, o.z)(!0);
+            t(), (0, o.z)();
         },
     });
     return (0, r.jsx)(

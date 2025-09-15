@@ -1,38 +1,44 @@
-i.d(n, { default: () => C }), i(388685);
+i.d(n, { default: () => h }), i(388685);
 var e = i(951288),
     r = i(647438),
     s = i(442837),
     l = i(82659),
     a = i(481060),
-    d = i(230711),
-    c = i(485267),
-    o = i(564990),
-    E = i(353647),
-    u = i(527790),
-    _ = i(540440),
-    T = i(365583),
-    h = i(388032),
-    p = i(569162);
-function C(t) {
-    let { user: n, entry: i, transitionState: C, onAction: N, onClose: R, onOpenGameSettings: f } = t,
-        [x, O] = (0, s.Wu)([E.Z], () => [E.Z.isDeletingEntryHistory, E.Z.deleteOutboxEntryError]);
+    d = i(485267),
+    c = i(564990),
+    o = i(353647),
+    E = i(313789),
+    u = i(518596),
+    _ = i(527790),
+    T = i(540440),
+    N = i(365583),
+    R = i(981631),
+    C = i(388032),
+    O = i(569162);
+function h(t) {
+    let { user: n, entry: i, transitionState: h, onAction: p, onClose: I, onOpenGameSettings: S } = t,
+        [f, x] = (0, s.Wu)([o.Z], () => [o.Z.isDeletingEntryHistory, o.Z.deleteOutboxEntryError]);
     return (
-        r.useEffect(() => c.Bt, []),
+        r.useEffect(() => d.Bt, []),
         (0, e.jsxs)(l.Modal, {
-            title: (0, _.y)(i),
-            subtitle: h.intl.format(h.t.KV72oa, {
+            title: (0, T.y)(i),
+            subtitle: C.intl.format(C.t.KV72oa, {
                 settingsHook: (t, n) => {
-                    let r = (0, T.C)({
+                    let r = (0, N.C)({
                         entry: i,
-                        onOpenGameSettings: f,
+                        onOpenGameSettings: S,
                     });
                     return (0, e.jsx)(
                         a.eee,
                         {
                             onClick: () => {
-                                null == N || N({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
-                                    null != r ? r() : d.Z.open(),
-                                    R();
+                                null == p || p({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                    null != r
+                                        ? r()
+                                        : (0, u.openUserSettings)(E.n.PROFILE_PANEL, {
+                                              section: R.oAB.PROFILE_CUSTOMIZATION,
+                                          }),
+                                    I();
                             },
                             children: t,
                         },
@@ -43,40 +49,40 @@ function C(t) {
             size: "sm",
             actions: [
                 {
-                    text: h.intl.string(h.t["ETE/oK"]),
-                    onClick: R,
+                    text: C.intl.string(C.t["ETE/oK"]),
+                    onClick: I,
                     variant: "secondary",
                     size: "sm",
                 },
                 {
-                    text: null != O ? h.intl.string(h.t["5911LS"]) : h.intl.string(h.t.VkKicX),
+                    text: null != x ? C.intl.string(C.t["5911LS"]) : C.intl.string(C.t.VkKicX),
                     onClick: () => {
-                        null == N || N({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, o.CV)(i, n.id, R);
+                        null == p || p({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, c.CV)(i, n.id, I);
                     },
-                    disabled: x,
+                    disabled: f,
                     variant: "critical-primary",
                     size: "sm",
                 },
             ],
-            onClose: R,
-            transitionState: C,
+            onClose: I,
+            transitionState: h,
             children: [
-                null != O
+                null != x
                     ? (0, e.jsxs)("div", {
-                          className: p.error,
+                          className: O.error,
                           children: [
                               (0, e.jsx)(a.k$p, { color: a.TVs.colors.STATUS_DANGER }),
                               (0, e.jsx)(a.Text, {
                                   variant: "text-sm/medium",
-                                  children: h.intl.string(h.t.FMbL3t),
+                                  children: C.intl.string(C.t.FMbL3t),
                               }),
                           ],
                       })
                     : null,
-                (0, e.jsx)(u.Z, {
+                (0, e.jsx)(_.Z, {
                     user: n,
                     entry: i,
-                    className: p.card,
+                    className: O.card,
                     hideContextMenu: !0,
                 }),
             ],

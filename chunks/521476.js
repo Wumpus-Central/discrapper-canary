@@ -1,4 +1,4 @@
-n.d(t, { h: () => x }), n(388685);
+n.d(t, { h: () => v }), n(388685);
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -15,8 +15,8 @@ var i = n(442837),
     m = n(372897),
     g = n(526761),
     b = n(388032),
-    _ = n(216390);
-function y(e) {
+    y = n(216390);
+function _(e) {
     var t;
     let { guild: n } = e,
         i = (0, c.Z)({ scrollPosition: g.Y_.GUILD_TAG });
@@ -25,12 +25,12 @@ function y(e) {
             bannerIcon: (0, r.jsx)(l.ics, {
                 size: "lg",
                 color: "currentColor",
-                className: _.bannerIcon,
+                className: y.bannerIcon,
             }),
             bannerHeader: b.intl.format(b.t.GgMwjo, { guildName: null != (t = null == n ? void 0 : n.name) ? t : "" }),
             bannerSubtext: b.intl.string(b.t.ONjwDw),
-            textStyles: _.bannerContainer,
-            headerStyles: _.bannerHeader,
+            textStyles: y.bannerContainer,
+            headerStyles: y.bannerHeader,
             children: (0, r.jsx)(l.zxk, {
                 variant: "primary",
                 size: "sm",
@@ -47,7 +47,6 @@ function C(e) {
         [u, d] = (0, h.ww)({
             guildId: null != (t = null == i ? void 0 : i.id) ? t : f.lds,
             analyticsLocations: c,
-            openWithoutBackstack: !0,
         }),
         p = d ? b.intl.string(b.t["9ph2v7"]) : b.intl.string(b.t.ldh9Cg),
         m = d ? b.intl.string(b.t["/PGQf3"]) : b.intl.string(b.t.WikgZ2);
@@ -56,12 +55,12 @@ function C(e) {
             bannerIcon: (0, r.jsx)(l.ics, {
                 size: "lg",
                 color: "currentColor",
-                className: _.bannerIcon,
+                className: y.bannerIcon,
             }),
             bannerHeader: b.intl.format(b.t.kcYdTk, { guildName: null != (n = null == i ? void 0 : i.name) ? n : "" }),
             bannerSubtext: p,
-            textStyles: _.bannerContainer,
-            headerStyles: _.bannerHeader,
+            textStyles: y.bannerContainer,
+            headerStyles: y.bannerHeader,
             children: (0, r.jsx)(l.zxk, {
                 variant: "primary",
                 size: "sm",
@@ -73,7 +72,7 @@ function C(e) {
         }),
     });
 }
-function x(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, i.e7)([u.default, d.ZP], () => {
             if (null == t) return new Set();
@@ -83,6 +82,6 @@ function x(e) {
     return n.has(m.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(m.q.AUTOMOD_QUARANTINED_BIO)
         ? (0, r.jsx)(C, { guild: t })
         : n.has(m.q.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, r.jsx)(y, { guild: t })
+          ? (0, r.jsx)(_, { guild: t })
           : (0, r.jsx)(C, { guild: t });
 }

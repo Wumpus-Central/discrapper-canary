@@ -1,24 +1,25 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
-    l = n(230711),
-    a = n(82950),
-    o = n(981631),
-    s = n(388032),
-    c = n(510342);
-class u extends i.PureComponent {
+    l = n(313789),
+    a = n(518596),
+    o = n(82950),
+    s = n(981631),
+    c = n(388032),
+    u = n(510342);
+class d extends i.PureComponent {
     render() {
-        return (0, r.jsx)(a.Z, {
+        return (0, r.jsx)(o.Z, {
             guild: this.props.guild,
-            onClick: () => l.Z.open(o.oAB.ACCOUNT),
-            message: s.intl.format(s.t["oCd+am"], {}),
-            cta: s.intl.string(s.t["8dCrV1"]),
-            trackingSource: o.PsQ.GUILD_MFA_WARNING,
-            type: o.vID.MFA_WARNING,
-            image: c,
+            onClick: () => (0, a.openUserSettings)(l.n.ACCOUNT_PANEL, { section: s.oAB.ACCOUNT }),
+            message: c.intl.format(c.t["oCd+am"], {}),
+            cta: c.intl.string(c.t["8dCrV1"]),
+            trackingSource: s.PsQ.GUILD_MFA_WARNING,
+            type: s.vID.MFA_WARNING,
+            image: u,
             imageMarginX: 54,
             undismissable: !0,
         });
     }
 }
-let d = u;
+let p = d;

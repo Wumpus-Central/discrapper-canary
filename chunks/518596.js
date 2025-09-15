@@ -1,7 +1,8 @@
-n.d(t, {
-    I: () => p,
-    Z: () => h,
-});
+n.r(t),
+    n.d(t, {
+        USER_SETTINGS_MODAL_KEY: () => m,
+        openUserSettings: () => g,
+    });
 var r = n(951288),
     i = n(481060),
     a = n(570140),
@@ -61,28 +62,53 @@ function _(e, t) {
         e
     );
 }
-let p = "USER_SETTINGS_MODAL_MODAL_KEY";
-function h() {
-    var e;
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.n.ACCOUNT_PANEL,
-        u = arguments.length > 1 ? arguments[1] : void 0;
-    a.Z.dispatch({
-        type: "USER_SETTINGS_MODAL_OPEN",
-        section: null != (e = null == u ? void 0 : u.section) ? e : null,
-        subsection: null == u ? void 0 : u.subsection,
-        openWithoutBackstack: !1,
-    }),
-        (0, l.yP)("openUserSettings")
-            ? (0, i.ZDy)(
-                  async () => {
-                      let { default: e } = await n.e("47129").then(n.bind(n, 245286));
-                      return (n) => (0, r.jsx)(e, _(d({}, n), { target: t }));
-                  },
-                  {
-                      modalKey: p,
-                      stackingBehavior: "replaceAll",
-                      stackNextByDefault: !0,
-                  },
-              )
-            : (0, o.jN)(c.S9g.USER_SETTINGS);
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
 }
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let m = "USER_SETTINGS_MODAL_MODAL_KEY",
+    g = function () {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.n.ACCOUNT_PANEL,
+            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: c.oAB.ACCOUNT };
+        var { subsection: u } = t,
+            f = p(t, ["subsection"]);
+        a.Z.dispatch(
+            d(
+                {
+                    type: "USER_SETTINGS_MODAL_OPEN",
+                    subsection: null != u ? u : null,
+                },
+                f,
+            ),
+        ),
+            (0, l.yP)("openUserSettings")
+                ? (0, i.ZDy)(
+                      async () => {
+                          let { default: t } = await n.e("47129").then(n.bind(n, 245286));
+                          return (n) => (0, r.jsx)(t, _(d({}, n), { target: e }));
+                      },
+                      {
+                          modalKey: m,
+                          stackingBehavior: "replaceAll",
+                          stackNextByDefault: !0,
+                      },
+                  )
+                : (0, o.jN)(c.S9g.USER_SETTINGS);
+    };

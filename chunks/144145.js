@@ -1,27 +1,28 @@
-n.d(t, { Z: () => P }), n(539854), n(388685);
+n.d(t, { Z: () => j }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
     o = n(278323),
     s = n(287734),
-    c = n(230711),
-    u = n(726542),
-    d = n(620662),
-    p = n(841784),
-    f = n(802856),
-    h = n(594190),
-    g = n(592745),
-    m = n(553795),
-    b = n(757266),
-    _ = n(283595),
-    O = n(417363),
-    E = n(626135),
-    y = n(804739),
-    v = n(346329),
-    I = n(981631),
-    C = n(388032);
-function S(e) {
+    c = n(726542),
+    u = n(620662),
+    d = n(841784),
+    p = n(802856),
+    f = n(594190),
+    h = n(592745),
+    g = n(313789),
+    m = n(518596),
+    b = n(553795),
+    _ = n(757266),
+    O = n(283595),
+    E = n(417363),
+    y = n(626135),
+    v = n(804739),
+    I = n(346329),
+    C = n(981631),
+    S = n(388032);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,79 +65,79 @@ function N(e, t) {
         e
     );
 }
-let T = u.Z.get(I.ABu.XBOX).name;
-function P(e) {
+let P = c.Z.get(C.ABu.XBOX).name;
+function j(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        P = (function (e) {
+        j = (function (e) {
             let { currentActivities: t } = e,
-                n = (0, l.e7)([m.Z], () => m.Z.getAccounts().some((e) => e.type === u.Z.get(I.ABu.XBOX).type)),
+                n = (0, l.e7)([b.Z], () => b.Z.getAccounts().some((e) => e.type === c.Z.get(C.ABu.XBOX).type)),
                 i = t.some((e) => {
                     let { activity: t } = e;
-                    return (0, f.Z)(t);
+                    return (0, p.Z)(t);
                 });
             return n || !i
                 ? null
                 : (0, r.jsx)(a.sNh, {
                       id: "xbox-connect",
-                      action: () => c.Z.open(I.oAB.CONNECTIONS),
-                      label: C.intl.formatToPlainString(C.t.XWSHTU, { platform: T }),
+                      action: () => (0, m.openUserSettings)(g.n.CONNECTIONS_PANEL, { section: C.oAB.CONNECTIONS }),
+                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: P }),
                   });
         })(e),
-        j = (function (e) {
+        x = (function (e) {
             let { currentActivities: t } = e,
-                n = i.useContext(E.AnalyticsContext);
+                n = i.useContext(y.AnalyticsContext);
             return (0, l.Wu)(
-                [h.ZP, _.Z, g.Z, O.Z, b.Z],
+                [f.ZP, O.Z, h.Z, E.Z, _.Z],
                 () =>
                     t
-                        .filter((e) => !(0, p.Z)(e.activity))
+                        .filter((e) => !(0, d.Z)(e.activity))
                         .map((e) => {
                             let { activity: t, game: r } = e,
-                                i = _.Z.getActiveLibraryApplication(r.id);
-                            return N(S({}, e), {
+                                i = O.Z.getActiveLibraryApplication(r.id);
+                            return N(T({}, e), {
                                 libraryApplication: i,
-                                canJoin: null != t && (0, d.Z)(t, I.xjy.JOIN) && t.type === I.IIU.PLAYING,
-                                canPlay: (0, y.t)({
-                                    LibraryApplicationStore: _.Z,
-                                    LaunchableGameStore: g.Z,
-                                    DispatchApplicationStore: O.Z,
-                                    ConnectedAppsStore: b.Z,
+                                canJoin: null != t && (0, u.Z)(t, C.xjy.JOIN) && t.type === C.IIU.PLAYING,
+                                canPlay: (0, v.t)({
+                                    LibraryApplicationStore: O.Z,
+                                    LaunchableGameStore: h.Z,
+                                    DispatchApplicationStore: E.Z,
+                                    ConnectedAppsStore: _.Z,
                                     applicationId: r.id,
                                     branchId: null != i ? i.branchId : null,
                                 }),
-                                isLaunching: g.Z.launchingGames.has(r.id),
-                                isRunning: h.ZP.getRunningVerifiedApplicationIds().includes(r.id),
+                                isLaunching: h.Z.launchingGames.has(r.id),
+                                isRunning: f.ZP.getRunningVerifiedApplicationIds().includes(r.id),
                                 location: n.location,
                             });
                         }),
                 [n.location, t],
             );
         })(e),
-        x = [];
-    for (let e of j) {
+        A = [];
+    for (let e of x) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
-            x.push(
+            A.push(
                 (function (e, t) {
                     let { canJoin: n, activity: i, activityUser: l } = e;
                     if (!n || null == i) return null;
                     async function c() {
                         if (null == i) return;
                         let e = await o.Z.sendActivityInviteUser({
-                            type: I.mFx.JOIN_REQUEST,
+                            type: C.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: i,
-                            location: I.Sbl.USER_ACTIVITY_ACTIONS,
+                            location: C.Sbl.USER_ACTIVITY_ACTIONS,
                         });
                         null != e && s.default.selectPrivateChannel(e.id);
                     }
                     return (0, r.jsx)(a.sNh, {
                         id: "join-".concat(i.session_id),
                         label: t
-                            ? C.intl.formatToPlainString(C.t.wFAvxM, { name: l.toString() })
-                            : C.intl.string(C.t.OKsSCQ),
+                            ? S.intl.formatToPlainString(S.t.wFAvxM, { name: l.toString() })
+                            : S.intl.string(S.t.OKsSCQ),
                         action: c,
                     });
                 })(e, n),
@@ -152,22 +153,22 @@ function P(e) {
                     } = e;
                     if (!s || null == n) return null;
                     let d = c
-                        ? C.intl.formatToPlainString(C.t["gBme//"], { name: i.name })
+                        ? S.intl.formatToPlainString(S.t["gBme//"], { name: i.name })
                         : u
-                          ? C.intl.formatToPlainString(C.t.WtSQwM, { name: i.name })
+                          ? S.intl.formatToPlainString(S.t.WtSQwM, { name: i.name })
                           : void 0;
                     return (0, r.jsx)(a.sNh, {
                         id: "play-".concat(n.session_id),
                         action: function () {
-                            (0, v.playApplication)(i.id, l, {
-                                analyticsParams: { location: N(S({}, o), { object: I.qAy.LIST_ITEM }) },
+                            (0, I.playApplication)(i.id, l, {
+                                analyticsParams: { location: N(T({}, o), { object: C.qAy.LIST_ITEM }) },
                             });
                         },
-                        label: t ? C.intl.formatToPlainString(C.t.ZDZEJC, { name: i.name }) : C.intl.string(C.t.XKUw8v),
+                        label: t ? S.intl.formatToPlainString(S.t.ZDZEJC, { name: i.name }) : S.intl.string(S.t.XKUw8v),
                         subtext: d,
                     });
                 })(e, n),
             );
     }
-    return [P, ...x];
+    return [j, ...A];
 }

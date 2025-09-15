@@ -3,12 +3,12 @@ var r = n(951288),
     i = n(603113),
     l = n(657707),
     o = n(481060),
-    s = n(893776),
-    a = n(509613),
-    u = n(518596),
-    c = n(869235),
+    a = n(893776),
+    s = n(509613),
+    u = n(313789),
+    c = n(518596),
     d = n(388032);
-let g = (0, a.m7)(c.t.LOGOUT_SIDEBAR_ITEM, {
+let g = (0, s.m7)(u.n.LOGOUT_SIDEBAR_ITEM, {
     useTitle: () => d.intl.string(d.t["2jxGen"]),
     icon: l.PBZ,
     onClick: () => {
@@ -48,9 +48,9 @@ let g = (0, a.m7)(c.t.LOGOUT_SIDEBAR_ITEM, {
                         onCancel: e.onClose,
                         onConfirm: () => {
                             i.flushSync(() => {
-                                (0, o.Mr3)(u.I);
+                                (0, o.Mr3)(c.USER_SETTINGS_MODAL_KEY);
                             }),
-                                s.Z.logout("settings");
+                                a.Z.logout("settings");
                         },
                     },
                     e,

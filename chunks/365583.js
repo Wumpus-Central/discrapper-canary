@@ -1,68 +1,69 @@
 n.d(t, {
-    C: () => y,
-    Z: () => v,
+    C: () => O,
+    Z: () => I,
 });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(481060),
-    o = n(230711),
-    s = n(549879),
-    l = n(394821),
-    c = n(841784),
-    u = n(833664),
-    d = n(503438),
-    f = n(579630),
-    _ = n(26033),
-    p = n(594174),
-    h = n(324745),
-    m = n(981631),
-    g = n(388032);
-let E = () => o.Z.open(m.oAB.CONNECTIONS, null);
-function b(e) {
-    let { activity: t, onOpenGameSettings: n } = e;
-    return (0, f.Z)(t) || (0, d.Z)(t) || (0, l.Z)(t) ? E : (0, u.Z)(t) && !(0, c.Z)(t) ? n : null;
-}
+    o = n(549879),
+    s = n(394821),
+    l = n(841784),
+    c = n(833664),
+    u = n(503438),
+    d = n(579630),
+    f = n(26033),
+    _ = n(313789),
+    p = n(518596),
+    h = n(594174),
+    m = n(324745),
+    g = n(981631),
+    E = n(388032);
+let b = () => (0, p.openUserSettings)(_.n.CONNECTIONS_PANEL, { section: g.oAB.CONNECTIONS });
 function y(e) {
-    let { entry: t, onOpenGameSettings: n } = e;
-    return (0, _.aA)(t) || (0, _.y0)(t) || (0, _.dU)(t) ? E : (0, _.dX)(t) ? n : null;
+    let { activity: t, onOpenGameSettings: n } = e;
+    return (0, d.Z)(t) || (0, u.Z)(t) || (0, s.Z)(t) ? b : (0, c.Z)(t) && !(0, l.Z)(t) ? n : null;
 }
 function O(e) {
+    let { entry: t, onOpenGameSettings: n } = e;
+    return (0, f.aA)(t) || (0, f.y0)(t) || (0, f.dU)(t) ? b : (0, f.dX)(t) ? n : null;
+}
+function v(e) {
     let { activity: t, entry: n, onOpenGameSettings: r } = e;
     return null != n
-        ? y({
+        ? O({
               entry: n,
               onOpenGameSettings: r,
           })
         : null != t
-          ? b({
+          ? y({
                 activity: t,
                 onOpenGameSettings: r,
             })
           : null;
 }
-function v(e) {
-    let { user: t, activity: n, entry: o, onAction: l, onClose: c, appContext: u } = e,
-        d = (0, h.Z)({ onClose: c });
+function I(e) {
+    let { user: t, activity: n, entry: s, onAction: l, onClose: c, appContext: u } = e,
+        d = (0, m.Z)();
     if (
-        !(0, i.e7)([p.default], () => {
+        !(0, i.e7)([h.default], () => {
             var e;
-            return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === t.id;
+            return (null == (e = h.default.getCurrentUser()) ? void 0 : e.id) === t.id;
         })
     )
         return null;
-    let f = O({
+    let f = v({
         activity: n,
-        entry: o,
+        entry: s,
         onOpenGameSettings: d,
     });
     return null == f
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "manage-privacy",
-              label: g.intl.string(g.t.anfNPT),
+              label: E.intl.string(E.t.anfNPT),
               action: () => {
-                  null == l || l({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), f(), (0, s.i)(u), null == c || c();
+                  null == l || l({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), f(), (0, o.i)(u), null == c || c();
               },
           });
 }

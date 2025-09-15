@@ -1,14 +1,15 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
     a = n(481060),
-    o = n(230711),
-    s = n(267642),
-    l = n(981631),
-    c = n(474936),
-    u = n(388032),
-    d = n(573567);
-function f(e, t, n) {
+    o = n(313789),
+    s = n(518596),
+    l = n(267642),
+    c = n(981631),
+    u = n(474936),
+    d = n(388032),
+    f = n(573567);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +33,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,125 +50,125 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function g(e) {
     let {
         guildBoostSlot: t,
-        onClose: f,
-        hasCancelableGuildBoostSlot: p,
-        premiumSubscription: m,
-        onSelect: g,
-        fractionalState: E,
+        onClose: _,
+        hasCancelableGuildBoostSlot: h,
+        premiumSubscription: g,
+        onSelect: E,
+        fractionalState: b,
     } = e;
-    function b() {
+    function y() {
         (0, a.ZDy)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    h(_({}, n), {
+                    m(p({}, n), {
                         guildBoostSlots: [t],
-                        locationSection: l.jXE.SETTINGS_PREMIUM,
+                        locationSection: c.jXE.SETTINGS_PREMIUM,
                     }),
                 );
         });
     }
-    function y() {
-        (0, a.ZDy)(async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
-            return (n) => (0, r.jsx)(e, h(_({}, n), { guildBoostSlot: t }));
-        });
-    }
     function O() {
         (0, a.ZDy)(async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
-            return (n) => (0, r.jsx)(e, h(_({}, n), { guildBoostSlotId: t.id }));
+            let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
+            return (n) => (0, r.jsx)(e, m(p({}, n), { guildBoostSlot: t }));
         });
     }
-    let v = {
+    function v() {
+        (0, a.ZDy)(async () => {
+            let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
+            return (n) => (0, r.jsx)(e, m(p({}, n), { guildBoostSlotId: t.id }));
+        });
+    }
+    let I = {
         transfer: {
-            label: null != t.premiumGuildSubscription ? u.intl.string(u.t["PR0n//"]) : u.intl.string(u.t["+fmEYG"]),
-            subtext: t.isOnCooldown() ? u.intl.string(u.t.XnB8Mz) : null,
+            label: null != t.premiumGuildSubscription ? d.intl.string(d.t["PR0n//"]) : d.intl.string(d.t["+fmEYG"]),
+            subtext: t.isOnCooldown() ? d.intl.string(d.t.XnB8Mz) : null,
             disabled: t.isOnCooldown(),
         },
         cancel: {
-            label: u.intl.string(u.t.twFU3d),
-            subtext: p ? null : u.intl.string(u.t.oQ9lOj),
-            disabled: !p,
+            label: d.intl.string(d.t.twFU3d),
+            subtext: h ? null : d.intl.string(d.t.oQ9lOj),
+            disabled: !h,
         },
         uncancel: {
-            label: u.intl.string(u.t["2glQNj"]),
+            label: d.intl.string(d.t["2glQNj"]),
             subtext: null,
             disabled: !1,
         },
     };
-    switch (m.status) {
-        case l.O0b.PAST_DUE:
-            (v.cancel.disabled = !0), (v.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (v.uncancel.disabled = !0);
+    switch (g.status) {
+        case c.O0b.PAST_DUE:
+            (I.cancel.disabled = !0), (I.cancel.subtext = d.intl.string(d.t.WnL6DQ)), (I.uncancel.disabled = !0);
             break;
-        case l.O0b.PAUSE_PENDING:
-        case l.O0b.PAUSED:
-            E === c.a$.NONE &&
-                ((v.transfer.disabled = !0),
-                (v.transfer.subtext = u.intl.string(u.t.LiLRRU)),
-                (v.cancel.subtext = u.intl.string(u.t["1ywaWF"])),
-                (v.cancel.disabled = !0),
-                (v.uncancel.disabled = !0));
+        case c.O0b.PAUSE_PENDING:
+        case c.O0b.PAUSED:
+            b === u.a$.NONE &&
+                ((I.transfer.disabled = !0),
+                (I.transfer.subtext = d.intl.string(d.t.LiLRRU)),
+                (I.cancel.subtext = d.intl.string(d.t["1ywaWF"])),
+                (I.cancel.disabled = !0),
+                (I.uncancel.disabled = !0));
     }
-    let I = i.useMemo(
+    let T = i.useMemo(
         () =>
-            m.isPausedOrPausePending && E === c.a$.NONE
+            g.isPausedOrPausePending && b === u.a$.NONE
                 ? (0, r.jsx)(a.sNh, {
                       id: "manage-subscription",
-                      label: u.intl.string(u.t.obRG6e),
-                      action: () => o.Z.open(l.oAB.SUBSCRIPTIONS),
+                      label: d.intl.string(d.t.obRG6e),
+                      action: () => (0, s.openUserSettings)(o.n.SUBSCRIPTIONS_PANEL, { section: c.oAB.SUBSCRIPTIONS }),
                       iconLeft: a.WGR,
-                      className: d.manageSubscription,
+                      className: f.manageSubscription,
                   })
                 : null,
-        [E, m],
+        [b, g],
     );
     return (0, r.jsxs)(a.v2r, {
-        onSelect: g,
+        onSelect: E,
         navId: "subscription-context",
         variant: "fixed",
-        "aria-label": u.intl.string(u.t.ogxXGh),
-        onClose: f,
+        "aria-label": d.intl.string(d.t.ogxXGh),
+        onClose: _,
         children: [
             (0, r.jsx)(a.sNh, {
                 id: "apply",
-                label: v.transfer.label,
-                subtext: v.transfer.subtext,
-                action: b,
-                disabled: v.transfer.disabled,
+                label: I.transfer.label,
+                subtext: I.transfer.subtext,
+                action: y,
+                disabled: I.transfer.disabled,
             }),
-            (0, s.tl)(t)
+            (0, l.tl)(t)
                 ? (0, r.jsx)(a.sNh, {
                       id: "uncancel",
-                      label: v.uncancel.label,
-                      subtext: v.uncancel.subtext,
-                      action: O,
-                      disabled: v.uncancel.disabled,
+                      label: I.uncancel.label,
+                      subtext: I.uncancel.subtext,
+                      action: v,
+                      disabled: I.uncancel.disabled,
                   })
                 : (0, r.jsx)(a.sNh, {
                       id: "cancel",
-                      label: v.cancel.label,
-                      subtext: v.cancel.subtext,
-                      action: y,
-                      disabled: v.cancel.disabled,
+                      label: I.cancel.label,
+                      subtext: I.cancel.subtext,
+                      action: O,
+                      disabled: I.cancel.disabled,
                       color: "danger",
                   }),
-            I,
+            T,
         ],
     });
 }

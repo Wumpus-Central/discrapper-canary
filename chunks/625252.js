@@ -50,7 +50,7 @@ function I() {
     let e = (0, o.wj)((0, l.ZP)()),
         t = i.useMemo(() => ({ backgroundImage: "url(".concat(v, ")") }), []),
         n = i.useCallback(() => {
-            (0, c.Z)(),
+            (0, c.default)(),
                 (0, p.navigateToQuestHome)({ fromContent: f.jn.QUEST_HOME_MOVE_CALLOUT }),
                 u.default.track(
                     m.rMx.QUEST_CONTENT_CLICKED,

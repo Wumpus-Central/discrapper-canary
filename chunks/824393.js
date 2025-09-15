@@ -1,4 +1,4 @@
-r.d(t, { default: () => Z }), r(388685);
+r.d(t, { default: () => E }), r(388685);
 var n = r(951288),
     a = r(647438),
     i = r(120356),
@@ -6,135 +6,136 @@ var n = r(951288),
     s = r(238651),
     l = r(442837),
     c = r(481060),
-    d = r(230711),
-    m = r(211266),
-    u = r(410030),
-    C = r(607070),
-    x = r(975298),
-    h = r(530618),
+    d = r(211266),
+    m = r(410030),
+    u = r(607070),
+    C = r(975298),
+    x = r(530618),
     _ = r(688465),
-    g = r(98278),
-    p = r(741245),
+    h = r(98278),
+    g = r(741245),
+    p = r(313789),
+    N = r(518596),
     j = r(931331),
-    N = r(55935),
-    f = r(63063),
-    v = r(272008),
-    k = r(497505),
-    R = r(502288),
-    H = r(981631),
-    T = r(675654),
-    A = r(474936),
-    I = r(388032),
-    S = r(192975),
-    M = r(851750),
-    B = r(946790),
-    L = r(593639);
+    f = r(55935),
+    v = r(63063),
+    k = r(272008),
+    R = r(497505),
+    H = r(502288),
+    T = r(981631),
+    A = r(675654),
+    I = r(474936),
+    S = r(388032),
+    B = r(192975),
+    L = r(851750),
+    M = r(946790),
+    P = r(593639);
 function b(e) {
     var t, r, i, d, m;
-    let { transitionState: u, onClose: x, quest: _, location: g } = e,
+    let { transitionState: C, onClose: _, quest: h, location: g } = e,
         p = a.useRef(null),
-        [j, N] = a.useState(null),
+        [N, j] = a.useState(null),
         f = a.useRef(new s.qA()),
-        H = (0, l.e7)([C.Z], () => C.Z.useReducedMotion),
-        A = (null == (t = _.userStatus) ? void 0 : t.claimedAt) != null,
-        [I, M] = a.useState({ state: "loading" });
+        v = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        T = (null == (t = h.userStatus) ? void 0 : t.claimedAt) != null,
+        [I, S] = a.useState({ state: "loading" });
     a.useEffect(() => {
-        A ||
-            (0, v.QB)(_.id, k.y$.CROSS_PLATFORM, g)
+        T ||
+            (0, k.QB)(h.id, R.y$.CROSS_PLATFORM, g)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null)
-                        return void M({
+                        return void S({
                             state: "claimed",
                             entitlements: e,
                         });
-                    M({
+                    S({
                         state: "error",
                         errorReason: 0,
                     });
                 })
                 .catch(() => {
-                    M({
+                    S({
                         state: "error",
                         errorReason: 0,
                     });
                 });
-    }, [_, g, A]);
-    let B = "loading" === I.state,
-        L = !H && !A && "claimed" === I.state,
-        b = "claimed" === I.state && null != I.entitlements && I.entitlements.items.some((e) => e.consumed);
+    }, [h, g, T]);
+    let L = "loading" === I.state,
+        M = !v && !T && "claimed" === I.state,
+        P = "claimed" === I.state && null != I.entitlements && I.entitlements.items.some((e) => e.consumed);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(s.O_, {
-                ref: N,
-                className: S.confettiCanvas,
+                ref: j,
+                className: B.confettiCanvas,
                 environment: f.current,
             }),
             (0, n.jsx)("div", {
                 ref: p,
                 children: (0, n.jsx)(c.Y0X, {
                     "data-migration-pending": !0,
-                    transitionState: u,
+                    transitionState: C,
                     size: c.CgR.DYNAMIC,
-                    className: o()(S.rootContainer, { [S.rootContainerLoading]: B }),
+                    className: o()(B.rootContainer, { [B.rootContainerLoading]: L }),
                     hideShadow: !0,
                     parentComponent: "QuestsNitroRewardModal",
-                    children: B
+                    children: L
                         ? (0, n.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
                         : "error" === I.state
                           ? (0, n.jsx)(w, {
                                 errorReason: I.errorReason,
-                                onClose: x,
+                                onClose: _,
                             })
-                          : b
+                          : P
                             ? (0, n.jsx)(F, {
-                                  duration: (0, R.kb)(
+                                  duration: (0, H.kb)(
                                       null != (d = null == (r = I.entitlements) ? void 0 : r.items) ? d : [],
                                   ),
-                                  onClose: x,
+                                  onClose: _,
                               })
-                            : (0, n.jsx)(P, {
-                                  duration: (0, R.kb)(
+                            : (0, n.jsx)(y, {
+                                  duration: (0, H.kb)(
                                       null != (m = null == (i = I.entitlements) ? void 0 : i.items) ? m : [],
                                   ),
-                                  onClose: x,
+                                  onClose: _,
                               }),
                 }),
             }),
-            L &&
-                (0, n.jsx)(h.Z, {
+            M &&
+                (0, n.jsx)(x.Z, {
                     confettiTarget: p.current,
-                    confettiCanvas: j,
-                    sprites: T.CA,
-                    colors: T.Br,
+                    confettiCanvas: N,
+                    sprites: A.CA,
+                    colors: A.Br,
                 }),
         ],
     });
 }
 function w(e) {
     let { onClose: t } = e,
-        r = I.intl.string(I.t.PbaUtr);
+        r = S.intl.string(S.t.PbaUtr);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(c.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: S.errorHeader,
+                className: B.errorHeader,
                 children: [
                     (0, n.jsx)(c.X6q, {
-                        className: S.errorTitle,
+                        className: B.errorTitle,
                         variant: "heading-xl/medium",
-                        children: I.intl.string(I.t["UleS9/"]),
+                        children: S.intl.string(S.t["UleS9/"]),
                     }),
                     (0, n.jsx)(c.olH, {
                         "data-migration-pending": !0,
                         onClick: t,
-                        className: S.errorModalCloseButton,
+                        className: B.errorModalCloseButton,
                     }),
                 ],
             }),
             (0, n.jsx)(c.hzk, {
                 "data-migration-pending": !0,
-                className: S.errorContent,
+                className: B.errorContent,
                 children: (0, n.jsx)(c.Text, {
                     variant: "text-md/normal",
                     children: r,
@@ -142,10 +143,10 @@ function w(e) {
             }),
             (0, n.jsx)(c.mzw, {
                 "data-migration-pending": !0,
-                className: S.errorModalFooter,
+                className: B.errorModalFooter,
                 children: (0, n.jsx)(c.zxk, {
                     variant: "primary",
-                    text: I.intl.string(I.t.cpT0Cg),
+                    text: S.intl.string(S.t.cpT0Cg),
                     onClick: t,
                 }),
             }),
@@ -155,64 +156,64 @@ function w(e) {
 function F(e) {
     let { duration: t, onClose: r } = e,
         { theme: i } = (0, c.TCT)(),
-        o = (0, x.Z)({ forceFetch: !0 }),
-        s = (0, N.vc)(o.endsAt, "L"),
+        o = (0, C.Z)({ forceFetch: !0 }),
+        s = (0, f.vc)(o.endsAt, "L"),
         l = a.useCallback(() => {
-            (0, g.$)(r);
+            (0, h.$)(r);
         }, [r]);
-    return o.fractionalState === A.a$.NONE
+    return o.fractionalState === I.a$.NONE
         ? (0, n.jsx)("div", {
-              className: S.spinnerContainer,
+              className: B.spinnerContainer,
               children: (0, n.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE }),
           })
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)("div", {
-                      className: S.nitroHeaderContainer,
+                      className: B.nitroHeaderContainer,
                       children: [
-                          (0, n.jsx)("div", { className: S.nitroHeaderClouds }),
-                          (0, n.jsx)(j.Z, { className: S.nitroHeaderWordmark }),
+                          (0, n.jsx)("div", { className: B.nitroHeaderClouds }),
+                          (0, n.jsx)(j.Z, { className: B.nitroHeaderWordmark }),
                           (0, n.jsx)(c.Eep, {
-                              src: B,
+                              src: M,
                               width: 110,
                               height: 82,
                               zoomable: !1,
-                              className: S.nitroHeaderWumpus,
+                              className: B.nitroHeaderWumpus,
                           }),
                           (0, n.jsx)(c.olH, {
                               "data-migration-pending": !0,
-                              className: S.nitroHeaderClose,
+                              className: B.nitroHeaderClose,
                               onClick: r,
                           }),
                       ],
                   }),
                   (0, n.jsxs)(c.mzw, {
                       "data-migration-pending": !0,
-                      className: S.footerContainer,
+                      className: B.footerContainer,
                       separator: !1,
                       children: [
-                          (0, n.jsx)(_.Z, { className: S.beta }),
-                          (0, n.jsx)(p.ZP, {
-                              className: S.nitroHeading,
-                              premiumType: A.p9.TIER_2,
-                              type: p.ZP.Types.PREMIUM_ACTIVATED,
+                          (0, n.jsx)(_.Z, { className: B.beta }),
+                          (0, n.jsx)(g.ZP, {
+                              className: B.nitroHeading,
+                              premiumType: I.p9.TIER_2,
+                              type: g.ZP.Types.PREMIUM_ACTIVATED,
                               theme: i,
                           }),
                           (0, n.jsx)(c.Text, {
                               variant: "text-md/normal",
-                              className: S.text,
-                              children: I.intl.format(I.t.tgc1oq, {
-                                  helpCenterLink: f.Z.getArticleURL(H.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                              className: B.text,
+                              children: S.intl.format(S.t.tgc1oq, {
+                                  helpCenterLink: v.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
                                   duration: t,
                                   expirationDate: s,
                               }),
                           }),
                           (0, n.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: S.cta,
+                              className: B.cta,
                               children: (0, n.jsx)(c.zxk, {
                                   variant: "primary",
-                                  text: I.intl.string(I.t["eQX+go"]),
+                                  text: S.intl.string(S.t["eQX+go"]),
                                   onClick: l,
                               }),
                           }),
@@ -221,53 +222,53 @@ function F(e) {
               ],
           });
 }
-function P(e) {
+function y(e) {
     let { duration: t, onClose: r } = e,
-        i = (0, x.Z)({ forceFetch: !0 }),
-        s = (0, u.ZP)(),
+        i = (0, C.Z)({ forceFetch: !0 }),
+        s = (0, m.ZP)(),
         l = a.useCallback(() => {
-            d.Z.open(H.oAB.SUBSCRIPTIONS, null, {}), r();
+            (0, N.openUserSettings)(p.n.SUBSCRIPTIONS_PANEL, { section: T.oAB.SUBSCRIPTIONS }), r();
         }, [r]);
     if (!i.fetched)
         return (0, n.jsx)("div", {
-            className: S.spinnerContainer,
+            className: B.spinnerContainer,
             children: (0, n.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE }),
         });
-    let m = i.isFractionalPremiumActive
-        ? I.intl.string(I.t["1ku8i4"])
-        : I.intl.format(I.t.fI1nLy, {
-              helpCenterLink: f.Z.getArticleURL(H.BhN.FRACTIONAL_PREMIUM_ABOUT),
+    let d = i.isFractionalPremiumActive
+        ? S.intl.string(S.t["1ku8i4"])
+        : S.intl.format(S.t.fI1nLy, {
+              helpCenterLink: v.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
               duration: t,
           });
     return (0, n.jsx)(c.f6W, {
         theme: s,
         children: (e) =>
             (0, n.jsxs)("div", {
-                className: o()(S.claimedRootContainer, e),
+                className: o()(B.claimedRootContainer, e),
                 children: [
                     (0, n.jsxs)("div", {
-                        className: S.headerContainer,
+                        className: B.headerContainer,
                         children: [
                             (0, n.jsx)("img", {
-                                className: S.headerBackground,
-                                src: M,
-                                alt: I.intl.string(I.t["8SsCa2"]),
+                                className: B.headerBackground,
+                                src: L,
+                                alt: S.intl.string(S.t["8SsCa2"]),
                             }),
-                            (0, n.jsx)(_.Z, { className: S.beta }),
+                            (0, n.jsx)(_.Z, { className: B.beta }),
                             (0, n.jsxs)("div", {
-                                className: S.headerForeground,
+                                className: B.headerForeground,
                                 children: [
                                     (0, n.jsx)("div", {
-                                        className: S.rewardAssetContainer,
+                                        className: B.rewardAssetContainer,
                                         children: (0, n.jsx)("img", {
-                                            src: L,
-                                            alt: I.intl.string(I.t.OhPMam),
+                                            src: P,
+                                            alt: S.intl.string(S.t.OhPMam),
                                             height: 120,
                                         }),
                                     }),
                                     (0, n.jsx)(c.olH, {
                                         "data-migration-pending": !0,
-                                        className: S.close,
+                                        className: B.close,
                                         withCircleBackground: !0,
                                         onClick: r,
                                     }),
@@ -277,25 +278,25 @@ function P(e) {
                     }),
                     (0, n.jsxs)(c.mzw, {
                         "data-migration-pending": !0,
-                        className: S.footerContainer,
+                        className: B.footerContainer,
                         separator: !1,
                         children: [
                             (0, n.jsx)(c.X6q, {
                                 variant: "heading-lg/bold",
-                                className: S.heading,
-                                children: I.intl.string(I.t["+PHEo6"]),
+                                className: B.heading,
+                                children: S.intl.string(S.t["+PHEo6"]),
                             }),
                             (0, n.jsx)(c.Text, {
                                 variant: "text-sm/normal",
-                                className: S.text,
-                                children: m,
+                                className: B.text,
+                                children: d,
                             }),
                             (0, n.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
-                                className: S.cta2,
+                                className: B.cta2,
                                 children: (0, n.jsx)(c.zxk, {
                                     variant: "primary",
-                                    text: I.intl.string(I.t.LnsQGR),
+                                    text: S.intl.string(S.t.LnsQGR),
                                     onClick: l,
                                 }),
                             }),
@@ -305,9 +306,9 @@ function P(e) {
             }),
     });
 }
-function Z(e) {
+function E(e) {
     let { quest: t, location: r, onClose: i, transitionState: o } = e,
-        s = (0, m.Z)(() => {
+        s = (0, d.Z)(() => {
             var e;
             return (null == (e = t.userStatus) ? void 0 : e.claimedAt) != null;
         });

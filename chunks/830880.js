@@ -1,30 +1,33 @@
-n.d(t, { R: () => m }), n(388685);
+n.d(t, { R: () => b }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(704215),
-    a = n(230711),
-    o = n(243778),
-    s = n(907995),
-    c = n(981631),
-    u = n(921944),
-    d = n(484710),
-    p = n(526761),
-    f = n(726985),
-    h = n(388032),
-    g = n(252319);
-function m() {
-    let [e, t] = (0, o.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
+    a = n(243778),
+    o = n(907995),
+    s = n(313789),
+    c = n(518596),
+    u = n(981631),
+    d = n(921944),
+    p = n(484710),
+    f = n(526761),
+    h = n(726985),
+    g = n(388032),
+    m = n(252319);
+function b() {
+    let [e, t] = (0, a.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
     return i.useMemo(() => e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])
-        ? (0, r.jsx)(s.f, {
-              label: h.t.zqv4nZ,
+        ? (0, r.jsx)(o.f, {
+              label: g.t.zqv4nZ,
               labelHook: () => {
-                  a.Z.open(c.oAB.CONTENT_AND_SOCIAL, f.s6.RESTRICTED_USERS, {
-                      scrollPosition: p.FY.RESTRICTED_ACCOUNTS,
+                  (0, c.openUserSettings)(s.n.CONTENT_AND_SOCIAL_PANEL, {
+                      section: u.oAB.CONTENT_AND_SOCIAL,
+                      subsection: h.s6.RESTRICTED_USERS,
+                      scrollPosition: f.FY.RESTRICTED_ACCOUNTS,
                   });
               },
-              dismissNotice: () => t(u.L.USER_DISMISS),
-              className: g.blockedIgnoredSettingsNotice,
-              noticeType: d.nq.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
+              dismissNotice: () => t(d.L.USER_DISMISS),
+              className: m.blockedIgnoredSettingsNotice,
+              noticeType: p.nq.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
           })
         : null;
 }
