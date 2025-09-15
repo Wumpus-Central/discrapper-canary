@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { ItemDetailsModal: () => g }), n(953529), n(781311);
 var r = n(951288);
 n(647438);
-var i = n(752843),
-    a = n(442837),
+var i = n(442837),
+    a = n(25817),
     o = n(481060),
     s = n(55563),
     l = n(551428),
@@ -17,8 +17,8 @@ var i = n(752843),
 function g(e) {
     var t, n, g, E;
     let { onClose: b, transitionState: y, skuId: O, appId: v, onHeaderTitleClick: I } = e,
-        T = (0, a.e7)([l.Z], () => l.Z.getForSKU(O), [O]),
-        S = (0, a.e7)([s.Z], () => s.Z.get(O), [O]),
+        T = (0, i.e7)([l.Z], () => l.Z.getForSKU(O), [O]),
+        S = (0, i.e7)([s.Z], () => s.Z.get(O), [O]),
         A = (0, d.M)(O);
     if (null == S) return null;
     let C = null != (n = S.name) ? n : "",
@@ -49,7 +49,7 @@ function g(e) {
                   title: C,
                   description: N,
                   imgSrc: R,
-                  tag: null != w ? (0, r.jsx)(i.V, { text: w }) : void 0,
+                  tag: null != w ? (0, r.jsx)(a.V, { text: w }) : void 0,
                   FallbackIcon: o.Prq,
               }),
           });

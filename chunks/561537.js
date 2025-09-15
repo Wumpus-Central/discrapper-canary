@@ -1,32 +1,29 @@
-n.d(t, { l: () => l });
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(539510);
-function l(e) {
-    let { className: t, header: n, headerClassName: a, children: l } = e,
-        c = i.useMemo(() => {
-            let e = !1;
-            return (
-                i.Children.forEach(l, (t) => {
-                    null != t && (e = !0);
-                }),
-                e
-            );
-        }, [l]);
-    return (0, r.jsxs)("div", {
-        className: o()(s.wrapper, t),
-        children: [
-            (0, r.jsx)("div", {
-                className: o()(s.header, a),
-                children: n,
-            }),
-            c &&
-                (0, r.jsx)("div", {
-                    className: s.content,
-                    children: l,
-                }),
-        ],
-    });
-}
+e.exports = {
+    listingWrapper: "listingWrapper__0f50c",
+    noHeaderSpacer: "noHeaderSpacer__0f50c",
+    headerAssets: "headerAssets__0f50c",
+    headerBackground: "headerBackground__0f50c",
+    headerLogo: "headerLogo__0f50c",
+    link: "link__0f50c",
+    linkIcon: "linkIcon__0f50c",
+    spinner: "spinner__0f50c",
+    listing: "listing__0f50c",
+    gatedListing: "gatedListing__0f50c",
+    contentRating: "contentRating__0f50c",
+    description: "description__0f50c",
+    guildInvite: "guildInvite__0f50c",
+    legalInfo: "legalInfo__0f50c",
+    whyYouMightLikeIt: "whyYouMightLikeIt__0f50c",
+    systemRequirements: "systemRequirements__0f50c",
+    headerBarListing: "headerBarListing__0f50c",
+    headerPurchase: "headerPurchase__0f50c",
+    headerSection: "headerSection__0f50c",
+    active: "active__0f50c",
+    testModeSelectButton: "testModeSelectButton__0f50c",
+    listingLarge: "listingLarge__0f50c",
+    body: "body__0f50c",
+    leftColumn: "leftColumn__0f50c",
+    rightColumn: "rightColumn__0f50c",
+    listingSmall: "listingSmall__0f50c",
+    purchaseError: "purchaseError__0f50c",
+};
