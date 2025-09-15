@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => L });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -67,9 +67,13 @@ function v(e, t) {
         e
     );
 }
-let I = 8,
+let I = 10,
     T = 20,
-    S = (e) => {
+    S = 4,
+    A = 5,
+    C = 8,
+    N = 10,
+    R = (e) => {
         let { gameCount: t, onClose: n } = e;
         return (0, r.jsxs)("div", {
             className: E.headerContainer,
@@ -101,7 +105,7 @@ let I = 8,
             ],
         });
     },
-    A = (e) => {
+    P = (e) => {
         let { quest: t, game: i, sourceQuestContent: s } = e,
             c = (0, p.O5)(),
             u = (0, a.e7)([l.Z], () => l.Z.getApplication(i.applicationId)),
@@ -153,8 +157,40 @@ let I = 8,
                     }),
                 ),
         });
-    };
-function C(e) {
+    },
+    w = () =>
+        (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            width: "75",
+            height: "96",
+            viewBox: "0 0 75 96",
+            fill: "none",
+            children: [
+                (0, r.jsx)("rect", {
+                    x: "1",
+                    y: "1",
+                    width: "73",
+                    height: "94",
+                    rx: "8",
+                    fill: "var(--background-surface-high)",
+                }),
+                (0, r.jsx)("rect", {
+                    x: "0.5",
+                    y: "0.5",
+                    width: "74",
+                    height: "95",
+                    rx: "8.5",
+                    stroke: "var(--border-normal)",
+                    strokeOpacity: "0.2",
+                }),
+                (0, r.jsx)("path", {
+                    d: "M2.53418 3L73.0342 93.5",
+                    stroke: "var(--border-normal)",
+                    strokeOpacity: "0.2",
+                }),
+            ],
+        });
+function D(e) {
     let { quest: t, applications: n, onClose: o, sourceQuestContent: l, impressionRef: d } = e;
     (0, c.Z)(n),
         i.useEffect(() => {
@@ -168,19 +204,23 @@ function C(e) {
                 .filter((e) => null != e)
                 .filter((e) => (0, f.z6)(e.applicationId))
                 .slice(0, I),
-        );
+        ),
+        m = i.useMemo(() => {
+            let e = h.length;
+            return e <= S ? S - e : e === A ? 0 : e <= C ? C - e : N - e;
+        }, [h.length]);
     if (_ && !p) {
         let e = Math.min(n.length, I);
         return (0, r.jsxs)("div", {
             className: E.container,
             children: [
-                (0, r.jsx)(S, {
+                (0, r.jsx)(R, {
                     gameCount: e,
                     onClose: o,
                 }),
                 (0, r.jsx)("div", {
                     className: E.gameGrid,
-                    children: n.slice(0, e).map((e) => (0, r.jsx)("div", { className: E.loadingArtwork }, e)),
+                    children: n.slice(0, e).map((e) => (0, r.jsx)("div", { className: E.placeholderArt }, e)),
                 }),
             ],
         });
@@ -193,28 +233,31 @@ function C(e) {
               },
               className: E.container,
               children: [
-                  (0, r.jsx)(S, {
+                  (0, r.jsx)(R, {
                       gameCount: h.length,
                       onClose: o,
                   }),
-                  (0, r.jsx)("div", {
+                  (0, r.jsxs)("div", {
                       className: E.gameGrid,
-                      children: h.map((e) =>
-                          (0, r.jsx)(
-                              A,
-                              {
-                                  quest: t,
-                                  game: e,
-                                  sourceQuestContent: l,
-                              },
-                              e.applicationId,
+                      children: [
+                          h.map((e) =>
+                              (0, r.jsx)(
+                                  P,
+                                  {
+                                      quest: t,
+                                      game: e,
+                                      sourceQuestContent: l,
+                                  },
+                                  e.applicationId,
+                              ),
                           ),
-                      ),
+                          Array.from({ length: m }, (e, t) => (0, r.jsx)(w, {}, "placeholder-".concat(t))),
+                      ],
                   }),
               ],
           });
 }
-function N(e) {
+function x(e) {
     let {
             targetElementRef: t,
             applications: n,
@@ -234,7 +277,7 @@ function N(e) {
         targetElementRef: p,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(D, {
                 quest: c,
                 applications: n,
                 onClose: t,
@@ -250,13 +293,13 @@ function N(e) {
         children: (e) => a(e, f),
     });
 }
-let R = function (e) {
+let L = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
         : (0, r.jsx)(m.A, {
               questOrQuests: e.quest,
               questContent: h.jn.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(N, v(y({}, e), { impressionRef: t })),
+              children: (t) => (0, r.jsx)(x, v(y({}, e), { impressionRef: t })),
           });
 };
