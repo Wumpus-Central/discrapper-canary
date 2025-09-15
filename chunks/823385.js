@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => eo }), n(539854), n(388685), n(583741), n(290780), n(35282), n(781311);
+n.d(t, { Z: () => eo }), n(539854), n(388685), n(583741), n(290780), n(781311), n(35282);
 var i,
     a = n(392711),
     o = n.n(a),
@@ -205,22 +205,23 @@ function q(e, t) {
 function X(e) {
     var t;
     let { query: n, queryMode: i } = e,
-        a = null != (t = T.Z.getGuildId()) ? t : void 0,
-        o = new Set(["user:".concat(h.default.getId())]);
-    null != a && o.add("guild:".concat(a)),
+        a = n.trim(),
+        o = null != (t = T.Z.getGuildId()) ? t : void 0,
+        s = new Set(["user:".concat(h.default.getId())]);
+    null != o && s.add("guild:".concat(o)),
         (H = Date.now()),
         (r =
             null != r
                 ? r
                 : new u.ZP($, L, null != i ? x : D, {
                       frecencyBoosters: !0,
-                      blacklist: o,
+                      blacklist: s,
                       allowSnowflake: !0,
                   })),
         (B = null),
-        (Z = n.length),
+        (Z = a.length),
         (U = i),
-        r.search(n);
+        r.search(a);
 }
 function Q(e) {
     let { channelId: t } = e;
@@ -244,7 +245,8 @@ function ee() {
 }
 function et(e) {
     var t, n;
-    let { query: i, queryMode: a } = e;
+    let { query: i, queryMode: a } = e,
+        o = i.trim();
     if (null == r) return !1;
     if (U !== a) {
         r.setResultTypes(null != a ? [a] : L), r.setLimit(null != a ? x : D);
@@ -271,8 +273,8 @@ function et(e) {
     }
     if ((U = a) === u.h8.USER) {
         let e = null != (n = T.Z.getGuildId()) ? n : null;
-        r.search(i, e);
-    } else r.search(i, void 0);
+        r.search(o, e);
+    } else r.search(o, void 0);
 }
 function en(e) {
     j = e.selectedIndex;
