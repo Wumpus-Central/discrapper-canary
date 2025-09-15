@@ -19,6 +19,7 @@ function c(e, t, n) {
     );
 }
 let u = Object.freeze({
+        XSMALL: 0.8,
         SMALL: 1,
         MEDIUM: 2,
         LARGE: 4,
@@ -26,16 +27,16 @@ let u = Object.freeze({
     d = 20;
 class f extends (r = a.Component) {
     renderCircle() {
-        let { strokeSize: e, percent: t, colorOverride: n, background: r } = this.props,
-            a = Math.min(Math.max(t, 0), 100),
-            o = (d - e) / 2,
-            c = o * Math.PI * 2;
+        let { strokeSize: e, percent: t, colorOverride: n, background: r, ringColorOverrideClassName: a } = this.props,
+            o = Math.min(Math.max(t, 0), 100),
+            c = (d - e) / 2,
+            u = c * Math.PI * 2;
         return (0, i.jsxs)("svg", {
             viewBox: "0 0 ".concat(d, " ").concat(d),
             className: l.circle,
             children: [
                 (0, i.jsx)("circle", {
-                    className: l.circleBackgroundAlt,
+                    className: void 0 !== a ? a : l.circleBackgroundAlt,
                     cx: d / 2,
                     cy: d / 2,
                     r: d / 2,
@@ -50,14 +51,14 @@ class f extends (r = a.Component) {
                     className: l.circleProgress,
                     cx: d / 2,
                     cy: d / 2,
-                    r: o,
+                    r: c,
                     strokeWidth: "".concat(e, "px"),
                     strokeLinecap: "round",
                     transform: "rotate(-90 ".concat(d / 2, " ").concat(d / 2, ")"),
                     stroke: null != n ? n : "currentColor",
                     style: {
-                        strokeDasharray: c,
-                        strokeDashoffset: (1 - a / 100) * c,
+                        strokeDasharray: u,
+                        strokeDashoffset: (1 - o / 100) * u,
                     },
                 }),
             ],
@@ -71,7 +72,7 @@ class f extends (r = a.Component) {
                 this.renderCircle(),
                 null != t
                     ? (0, i.jsx)("div", {
-                          className: l.circleOverlay,
+                          className: s()(l.circleOverlay, this.props.overlayClassName),
                           children: t,
                       })
                     : null,
