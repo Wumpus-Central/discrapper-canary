@@ -75,7 +75,6 @@ function f(e) {
                             align: c.Z.Align.CENTER,
                             children: null == a ? void 0 : a(),
                         }),
-                        " ",
                         (0, i.jsx)(c.Z, {
                             grow: 1,
                             justify: c.Z.Justify.END,

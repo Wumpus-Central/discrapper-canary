@@ -16,8 +16,8 @@ var i = n(100527),
 function g(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
         { analyticsLocations: b } = (0, l.ZP)(i.Z.VOICE_CONTROL_TRAY),
-        _ = (0, o.Z)(),
-        { isSharedCanvasEnabled: y } = c.Z.useExperiment({
+        y = (0, o.Z)(),
+        { isSharedCanvasEnabled: _ } = c.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: "b7309a_1",
         }),
@@ -25,23 +25,25 @@ function g(e) {
             { location: "VoiceEffectsActionBar" },
             { autoTrackExposure: !1 },
         ),
-        x = (0, a.Z)(u.Z);
-    if (null == t || null != _) return null;
-    let v = C && x,
-        O = y && n;
-    return (0, r.jsxs)(l.Gt, {
-        value: b,
-        children: [
-            (0, r.jsxs)("div", {
-                className: m.voiceEffectsActionBar,
-                children: [
-                    v && (0, r.jsx)(d.Z, { channel: t }),
-                    O && (0, r.jsx)(p.Z, {}),
-                    O && (0, r.jsx)(h.Z, { channel: t }),
-                    O && (0, r.jsx)(f.Z, {}),
-                ],
-            }),
-            g && (v || O) && (0, r.jsx)("div", { className: m.divider }),
-        ],
-    });
+        v = (0, a.Z)(u.Z);
+    if (null == t || null != y) return null;
+    let x = C && v,
+        O = _ && n;
+    return x || O
+        ? (0, r.jsxs)(l.Gt, {
+              value: b,
+              children: [
+                  (0, r.jsxs)("div", {
+                      className: m.voiceEffectsActionBar,
+                      children: [
+                          x && (0, r.jsx)(d.Z, { channel: t }),
+                          O && (0, r.jsx)(p.Z, {}),
+                          O && (0, r.jsx)(h.Z, { channel: t }),
+                          O && (0, r.jsx)(f.Z, {}),
+                      ],
+                  }),
+                  g && (0, r.jsx)("div", { className: m.divider }),
+              ],
+          })
+        : null;
 }
