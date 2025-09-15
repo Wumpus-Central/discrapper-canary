@@ -63,7 +63,13 @@ function W(e) {
             let { channelId: r } = n;
             if (e(r)) return;
             let i = K(r);
-            null != i && t.push(i);
+            if (null != i) {
+                let e = {
+                    record: i,
+                    channelId: r,
+                };
+                t.push(e);
+            }
         }),
         t
     );
@@ -127,7 +133,8 @@ function z() {
     }
     o.length > 0 && i.push((0, u.o6)(R.intl.string(R.t["80lOZ2"])), ...o);
     let s = W((e) => e === r || V.includes(e) || a.has(e));
-    if (s.length > 0) for (let e of (i.push((0, u.o6)(R.intl.string(R.t["4B63jY"]))), s)) a.add(e.record.id), i.push(e);
+    if (s.length > 0)
+        for (let e of (i.push((0, u.o6)(R.intl.string(R.t["4B63jY"]))), s)) a.add(e.channelId), i.push(e.record);
     let l = v.ZP.getMentionChannelIds()
         .filter((e) => e !== r && !V.includes(e) && !a.has(e))
         .map((e) => K(e))
