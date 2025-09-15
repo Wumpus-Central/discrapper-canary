@@ -68,7 +68,7 @@ let v = 7,
     T = S();
 function S() {
     return {
-        recentCustomStatuses: [],
+        recentStatuses: m.ux,
         currentDefaultStatus: null,
     };
 }
@@ -77,17 +77,18 @@ function A() {
 }
 function C(e) {
     let { status: t, guildId: n, saveAsDefault: s } = e;
-    c()(t !== m.tN.CUSTOM, "Hang Status cannot be custom"),
-        (r = t),
-        (i = null),
-        (o = null),
-        s &&
-            (T.currentDefaultStatus = {
-                status: t,
-                customHangStatus: i,
-                gameActivityHangStatus: o,
-                expiresAt: Date.now() + I,
-            });
+    if ((c()(t !== m.tN.CUSTOM, "Hang Status cannot be custom"), (r = t), (i = null), (o = null), null != t)) {
+        let e = [...T.recentStatuses],
+            n = e.findIndex((e) => "string" == typeof e && e === t);
+        n >= 0 ? e.splice(n, 1) : e.length === v && e.splice(v - 1, 1), (T.recentStatuses = [t, ...e]);
+    }
+    s &&
+        (T.currentDefaultStatus = {
+            status: t,
+            customHangStatus: i,
+            gameActivityHangStatus: o,
+            expiresAt: Date.now() + I,
+        });
     let { defaultStatusVariant: l } = h.n.getCurrentConfig({
         guildId: n,
         location: "UpdateHangStatus",
@@ -106,10 +107,10 @@ function N(e) {
             status: t,
             emoji: n,
         });
-    let l = [...T.recentCustomStatuses],
-        c = l.findIndex((e) => e.status === t && d().isEqual(e.emoji, n));
-    -1 !== c ? l.splice(c, 1) : l.length === v && l.splice(v - 1, 1),
-        (T.recentCustomStatuses = [i, ...l]),
+    let l = [...T.recentStatuses],
+        c = l.findIndex((e) => "string" != typeof e && e.status === t && d().isEqual(e.emoji, n));
+    c >= 0 ? l.splice(c, 1) : l.length === v && l.splice(v - 1, 1),
+        (T.recentStatuses = [i, ...l]),
         s &&
             (T.currentDefaultStatus = {
                 status: r,
@@ -168,16 +169,16 @@ function w() {
 }
 function D(e) {
     let { statuses: t } = e,
-        n = [...T.recentCustomStatuses];
+        n = [...T.recentStatuses];
     t.forEach((e) => {
         let { status: t, emoji: s } = e,
-            l = n.findIndex((e) => e.status === t && d().isEqual(e.emoji, s));
-        -1 !== l && n.splice(l, 1),
+            l = n.findIndex((e) => "string" != typeof e && e.status === t && d().isEqual(e.emoji, s));
+        l >= 0 && n.splice(l, 1),
             t === (null == i ? void 0 : i.status) &&
                 d().isEqual(s, null == i ? void 0 : i.emoji) &&
                 ((r = null), (i = null), (o = null), (T.currentDefaultStatus = null), (a = null));
     }),
-        (T.recentCustomStatuses = n);
+        (T.recentStatuses = n);
 }
 class x extends (s = f.ZP.PersistedStore) {
     initialize(e) {
@@ -195,8 +196,8 @@ class x extends (s = f.ZP.PersistedStore) {
     getGameActivityHangStatus() {
         return o;
     }
-    getRecentCustomStatuses() {
-        return T.recentCustomStatuses;
+    getRecentStatuses() {
+        return T.recentStatuses;
     }
     getCurrentDefaultStatus() {
         return T.currentDefaultStatus;
@@ -215,6 +216,7 @@ E(x, "displayName", "HangStatusStore"),
             }
             return e;
         },
+        (e) => ("recentCustomStatuses" in e && delete e.recentCustomStatuses, e),
     ]);
 let L = new x(_.Z, {
     LOGOUT: A,

@@ -1,6 +1,7 @@
 n.d(t, {
     s0: () => r,
     tN: () => i,
+    ux: () => a,
 });
 let r = 60;
 var i = (function (e) {
@@ -9,9 +10,9 @@ var i = (function (e) {
         (e.GAMING = "gaming"),
         (e.FOCUSING = "focusing"),
         (e.BRB = "brb"),
-        (e.EATING = "eating"),
         (e.WATCHING = "watching"),
         (e.CUSTOM = "custom"),
         e
     );
 })({});
+let a = ["chilling", "gaming", "focusing", "brb", "watching"];

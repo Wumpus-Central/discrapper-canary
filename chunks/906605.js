@@ -75,10 +75,11 @@ function p(e) {
         });
 }
 function h() {
-    let e = [c.Z.getCustomHangStatus(), ...c.Z.getRecentCustomStatuses()].filter((e) => {
+    let e = [c.Z.getCustomHangStatus(), ...c.Z.getRecentStatuses()].filter((e) => {
         var t;
         return (
             null != e &&
+            "string" != typeof e &&
             null != e.emoji &&
             (null == (t = e.emoji) ? void 0 : t.id) != null &&
             null == i.ZP.getCustomEmojiById(e.emoji.id)
