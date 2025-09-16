@@ -161,6 +161,10 @@ class v extends a.Z {
                 return (0, d.eJ)(h.eR.MLS_PAIRWISE_FINGERPRINTS);
             case h.AN.OFFLOAD_ADM_CONTROLS:
                 return (0, d.eJ)(h.eR.OFFLOAD_ADM_CONTROLS);
+            case h.AN.VAAPI:
+                return (0, d.eJ)(h.eR.VAAPI);
+            case h.AN.GAMESCOPE_CAPTURE:
+                return (0, d.eJ)(h.eR.GAMESCOPE_CAPTURE);
             case h.AN.DIAGNOSTICS:
             case h.AN.NATIVE_PING:
             case h.AN.AUTOMATIC_VAD:

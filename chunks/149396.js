@@ -76,6 +76,8 @@ var o = (function (e) {
             (e.OFFLOAD_ADM_CONTROLS = "offload_adm_controls"),
             (e.AUDIO_CODEC_RED = "audio_codec_red"),
             (e.SIDECHAIN_COMPRESSION = "sidechain_compression"),
+            (e.VAAPI = "vaapi"),
+            (e.GAMESCOPE_CAPTURE = "gamescope_capture"),
             e
         );
     })({}),

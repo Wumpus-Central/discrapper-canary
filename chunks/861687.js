@@ -838,6 +838,7 @@ class eC extends d.Z {
                 g.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
         let y = ["unk"];
         this.context === el.Yn.STREAM && (y.push("nvRelaxRc=250"), y.push("nvNewPresets")),
+            j.Z.getUseVaapiEncoder() && y.push("vaapi"),
             g.setVideoEncoderExperiments(y.join(",")),
             g.on(f.Sh.Speaking, (e, t, n) => {
                 this.userId === e && this.sendSpeaking(t, n), this.emit(q.z.Speaking, ev(e), t);

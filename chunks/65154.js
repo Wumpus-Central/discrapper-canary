@@ -34,11 +34,11 @@ n.d(t, {
     ef: () => L,
     fC: () => c,
     fU: () => m,
-    fm: () => F,
+    fm: () => V,
     h7: () => a,
     iA: () => z,
     jg: () => E,
-    kS: () => V,
+    kS: () => F,
     mC: () => A,
     mN: () => S,
     n4: () => Y,
@@ -137,7 +137,7 @@ let d = 100,
         "encodingVideoBitRate",
         "streamParameters",
     ],
-    V = {
+    F = {
         videoBudget: {
             width: 1280,
             height: 720,
@@ -159,7 +159,7 @@ let d = 100,
         },
         videoBitrateFloor: 150000,
     },
-    F = 0.02,
+    V = 0.02,
     H = 60000,
     Y = ">=22.0.0";
 var W = (function (e) {
@@ -222,6 +222,8 @@ var W = (function (e) {
             (e.MLS_PAIRWISE_FINGERPRINTS = "MLS_PAIRWISE_FINGERPRINTS"),
             (e.OFFLOAD_ADM_CONTROLS = "OFFLOAD_ADM_CONTROLS"),
             (e.SIDECHAIN_COMPRESSION = "SIDECHAIN_COMPRESSION"),
+            (e.VAAPI = "VAAPI"),
+            (e.GAMESCOPE_CAPTURE = "GAMESCOPE_CAPTURE"),
             e
         );
     })({}),
