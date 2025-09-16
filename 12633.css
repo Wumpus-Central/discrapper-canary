@@ -59052,6 +59052,12 @@ h3.improved__1689b:after {
     height: 24px
 }
 
+.rewardHighlightLogoCTADivider__8a22c {
+    border-top: thin solid #fff;
+    -webkit-mask: linear-gradient(90deg, #000, transparent 65%);
+    mask: linear-gradient(90deg, #000, transparent 65%)
+}
+
 .wrapper_a86e4f {
     align-items: center;
     border-radius: inherit;
@@ -89557,7 +89563,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
