@@ -113,14 +113,15 @@ function y(e) {
     let K = (e) => {
             O(H.find((t) => t.skuId === e)), N(e), B(!0);
         },
-        z = H.map((e) =>
-            (0, r.jsx)(
+        z = H.map((e) => {
+            var t, n;
+            return (0, r.jsx)(
                 C.c,
                 {
                     skuId: e.skuId,
                     assetId: e.assetId,
-                    productName: e.name,
-                    a11yLabel: e.a11yLabel,
+                    productName: null == (t = e.name) ? void 0 : t.call(e),
+                    a11yLabel: null == (n = e.a11yLabel) ? void 0 : n.call(e),
                     claimed: null != k && k.every((t) => t.skuId !== e.skuId),
                     user: M,
                     onSelect: K,
@@ -128,8 +129,8 @@ function y(e) {
                     category: T,
                 },
                 e.skuId,
-            ),
-        ),
+            );
+        }),
         W = (0, r.jsx)(j.O3, {
             children: (0, r.jsx)(o.mzw, {
                 className: L.modalFooter,
