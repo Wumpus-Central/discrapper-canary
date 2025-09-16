@@ -392,6 +392,10 @@ let i = {
         inlineRequire: () => n(402804).Z,
         hasStoreChangeListeners: !0,
     },
+    StaffMemberPreloaderManager: {
+        actions: ["POST_CONNECTION_OPEN"],
+        inlineRequire: () => n(239088).Z,
+    },
     SubscriptionManager: {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(892264).Z,
