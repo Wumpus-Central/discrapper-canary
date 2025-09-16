@@ -185,8 +185,16 @@ function H(e, t) {
 function Y(e, t, i) {
     (0, s.ZDy)(async () => {
         if ((0, C.i)("openQuestCollectibleRewardModal")) {
-            let { default: t } = await n.e("41023").then(n.bind(n, 305815));
-            return (n) => (0, r.jsx)(t, U(M({}, n), { quest: e }));
+            let { default: a } = await n.e("41023").then(n.bind(n, 305815));
+            return (n) =>
+                (0, r.jsx)(
+                    a,
+                    U(M({}, n), {
+                        quest: e,
+                        location: t,
+                        preview: i,
+                    }),
+                );
         }
         let { default: a } = await Promise.all([n.e("79589"), n.e("83175")]).then(n.bind(n, 920916));
         return (n) =>
