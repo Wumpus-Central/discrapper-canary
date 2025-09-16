@@ -1,10 +1,10 @@
 n.d(t, {
-    GY: () => x,
-    PI: () => S,
-    RT: () => L,
-    XM: () => w,
+    GY: () => L,
+    PI: () => A,
+    RT: () => j,
+    XM: () => D,
     bc: () => C,
-    ls: () => D,
+    ls: () => x,
     xZ: () => N,
 }),
     n(388685);
@@ -17,16 +17,17 @@ var r = n(951288),
     c = n(481060),
     u = n(765250),
     d = n(13245),
-    f = n(355863),
-    _ = n(237997),
-    p = n(145597),
-    h = n(444295),
-    m = n(333031),
-    g = n(618373),
-    E = n(620954),
-    b = n(388032),
-    y = n(962967);
-function O(e, t, n) {
+    f = n(493773),
+    _ = n(355863),
+    p = n(237997),
+    h = n(145597),
+    m = n(444295),
+    g = n(333031),
+    E = n(618373),
+    b = n(620954),
+    y = n(388032),
+    O = n(962967);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +40,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +51,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,21 +68,21 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
+function A(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
-        className: y.titleWrapper,
+        className: O.titleWrapper,
         children: (0, r.jsx)(c.Text, {
             variant: "text-xs/semibold",
             color: "header-primary",
@@ -89,29 +90,19 @@ function S(e) {
         }),
     });
 }
-function A() {
-    let e = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)())),
-        [t, n] = i.useState(!1 === e);
-    return (
-        i.useEffect(() => {
-            !1 === e && n(!0);
-        }, [e]),
-        t
-    );
-}
 let C = 7000;
 function N(e, t) {
-    return R(
-        (0, s.e7)([f.Z], () => f.Z.getWidget(e), [e]),
+    return P(
+        (0, s.e7)([_.Z], () => _.Z.getWidget(e), [e]),
         t,
     );
 }
-function R(e, t) {
+let R = (e, t) => Date.now() - e < t;
+function P(e, t) {
     let n = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
         [r, a] = i.useState(!1),
-        o = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)())),
-        l = i.useRef(void 0),
-        c = A();
+        o = (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)())),
+        l = i.useRef(void 0);
     return (
         i.useEffect(() => {
             let r = null == e ? void 0 : e.showExtrasHintTimestamp;
@@ -122,34 +113,42 @@ function R(e, t) {
                     a(!1);
                 }, t)));
         }, [t, null == e ? void 0 : e.showExtrasHintTimestamp]),
-        i.useEffect(
-            () => () => {
-                null != l.current && clearTimeout(l.current);
-            },
-            [],
-        ),
-        r && o && !c
+        (0, f.ZP)(() => {
+            let n = null == e ? void 0 : e.showExtrasHintTimestamp;
+            return (
+                null != n &&
+                    R(n, t) &&
+                    (a(!0),
+                    (l.current = setTimeout(() => {
+                        a(!1);
+                    }, t))),
+                () => {
+                    null != l.current && clearTimeout(l.current);
+                }
+            );
+        }),
+        r && o
     );
 }
-let P = 8000;
-function w(e) {
+let w = 8000;
+function D(e) {
     let { children: t, widgetId: n } = e,
-        i = (0, s.e7)([f.Z], () => f.Z.getWidget(n), [n]),
-        a = R(i, P),
-        o = () => (0, g.Q)((0, E.P)(), b.t["1XA04e"], b.intl.string(b.t.uZZGzc), !1);
+        i = (0, s.e7)([_.Z], () => _.Z.getWidget(n), [n]),
+        a = P(i, w),
+        o = () => (0, E.Q)((0, b.P)(), y.t["1XA04e"], y.intl.string(y.t.uZZGzc), !1);
     return a
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(m.Z, {
-                      className: y.titleWrapper,
+                  (0, r.jsx)(g.Z, {
+                      className: O.titleWrapper,
                       children: (0, r.jsx)(c.P3F, {
-                          className: y.titleWrapperClickable,
+                          className: O.titleWrapperClickable,
                           onClick: () => {
                               null != i &&
-                                  (d.Z.setInputLocked(!1, (0, p.getPID)()),
-                                  (0, h.Ws)(i.type, {
-                                      type: h.Qu.KEYBIND_HINT,
-                                      value: h.bk.OVERLAY_UNLOCKED,
+                                  (d.Z.setInputLocked(!1, (0, h.getPID)()),
+                                  (0, m.Ws)(i.type, {
+                                      type: m.Qu.KEYBIND_HINT,
+                                      value: m.bk.OVERLAY_UNLOCKED,
                                   }));
                           },
                           children: (0, r.jsx)(c.Text, {
@@ -159,11 +158,11 @@ function w(e) {
                           }),
                       }),
                   }),
-                  (0, r.jsx)("div", { className: y.extrasEmptySpace }),
+                  (0, r.jsx)("div", { className: O.extrasEmptySpace }),
               ],
           })
         : (0, r.jsx)("div", {
-              className: y.titleWrapper,
+              className: O.titleWrapper,
               children: (0, r.jsx)(c.Text, {
                   variant: "text-xs/semibold",
                   color: "header-primary",
@@ -171,18 +170,18 @@ function w(e) {
               }),
           });
 }
-function D(e) {
+function x(e) {
     let { onClick: t } = e;
-    if ((0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)()))) return null;
-    let n = b.intl.string(b.t["3D5yo6"]);
+    if ((0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()))) return null;
+    let n = y.intl.string(y.t["3D5yo6"]);
     return (0, r.jsx)(c.ua7, {
         text: n,
         "aria-label": n,
         children: (e) =>
             (0, r.jsx)(
                 c.P3F,
-                T(v({}, e), {
-                    className: y.button,
+                S(I({}, e), {
+                    className: O.button,
                     onClick: t,
                     children: (0, r.jsx)(c.ewm, {
                         size: "xxs",
@@ -192,13 +191,13 @@ function D(e) {
             ),
     });
 }
-function x(e) {
+function L(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        i = n ? b.intl.string(b.t.q2B3rq) : b.intl.string(b.t.JKGi6u),
+        i = n ? y.intl.string(y.t.q2B3rq) : y.intl.string(y.t.JKGi6u),
         a = () => {
             (0, u.zG)(t, { showAllStreams: !n });
         };
-    return (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)()))
+    return (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()))
         ? null
         : (0, r.jsx)(c.ua7, {
               text: i,
@@ -206,8 +205,8 @@ function x(e) {
               children: (e) =>
                   (0, r.jsx)(
                       c.P3F,
-                      T(v({}, e), {
-                          className: o()(y.button, n && y.active),
+                      S(I({}, e), {
+                          className: o()(O.button, n && O.active),
                           onClick: a,
                           children: (0, r.jsx)(c.pzj, {
                               size: "xxs",
@@ -217,18 +216,18 @@ function x(e) {
                   ),
           });
 }
-function L(e) {
+function j(e) {
     let { id: t, pinned: n } = e,
-        i = n ? b.intl.string(b.t.cSu80t) : b.intl.string(b.t.cM8Vnp),
-        a = (0, s.e7)([_.default], () => _.default.isLocked((0, p.getPID)()));
+        i = n ? y.intl.string(y.t.cSu80t) : y.intl.string(y.t.cM8Vnp),
+        a = (0, s.e7)([p.default], () => p.default.isLocked((0, h.getPID)()));
     return (0, r.jsx)(c.ua7, {
         text: i,
         "aria-label": i,
         children: (e) =>
             (0, r.jsx)(
                 c.P3F,
-                T(v({}, e), {
-                    className: o()(y.button, n && y.active),
+                S(I({}, e), {
+                    className: o()(O.button, n && O.active),
                     onClick: () => {
                         a || (0, u.xh)(t);
                     },
