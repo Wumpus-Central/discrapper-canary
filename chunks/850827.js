@@ -50,10 +50,10 @@ let D = (0, u.Z)((e) => {
         G = M === b.Y.STREAM_PREVIEW || null != o,
         B = (0, g.Z)(t),
         Z = B || G ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL,
-        V = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
-        F = (0, l.e7)([m.Z, p.Z], () => {
+        F = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
+        V = (0, l.e7)([m.Z, p.Z], () => {
             var e;
-            return V ? p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
+            return F ? p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
         }),
         H = () => {
             if ((0, E.Z)(t))
@@ -108,10 +108,11 @@ let D = (0, u.Z)((e) => {
                       applicationStream: o,
                       onAction: k,
                   })
-                : V && null != F
+                : F && null != V
                   ? (0, r.jsx)(I.Z, {
+                        userId: i.id,
                         variant: j,
-                        hangStatusChannel: F,
+                        hangStatusChannel: V,
                         onAction: k,
                     })
                   : (0, r.jsxs)(r.Fragment, {

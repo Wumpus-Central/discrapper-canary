@@ -1,14 +1,16 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(481060),
     o = n(287734),
-    s = n(19780),
-    l = n(626135),
-    c = n(981631),
-    u = n(388032);
-function d(e, t, n) {
+    s = n(359110),
+    l = n(19780),
+    c = n(938475),
+    u = n(626135),
+    d = n(981631),
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,16 +34,16 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -49,7 +51,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,31 +60,35 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
-    var { variant: t = "active", size: n = "sm", hangStatusChannel: d, onAction: p } = e,
-        h = _(e, ["variant", "size", "hangStatusChannel", "onAction"]);
-    let m = (0, i.e7)([s.Z], () => s.Z.getChannelId() === d.id),
-        g = () => {
-            null == p || p(),
-                o.default.selectVoiceChannel(d.id),
-                l.default.track(c.rMx.HANG_STATUS_CTA_CLICKED, {
+function g(e) {
+    var { variant: t = "active", size: n = "sm", hangStatusChannel: _, onAction: m, userId: g } = e,
+        E = h(e, ["variant", "size", "hangStatusChannel", "onAction", "userId"]);
+    let b = (0, i.e7)([l.Z], () => l.Z.getChannelId() === _.id),
+        y = () => {
+            null == m || m(),
+                o.default.selectVoiceChannel(_.id),
+                (0, s.Kh)(_.id),
+                u.default.track(d.rMx.HANG_STATUS_CTA_CLICKED, {
                     source: "UserProfilePopout",
-                    guild_id: d.guild_id,
-                    channel_id: d.id,
+                    guild_id: _.guild_id,
+                    channel_id: _.id,
+                    media_session_id: l.Z.getMediaSessionId(),
+                    call_num_participants: c.ZP.countVoiceStatesForChannel(_.id),
+                    other_user_id: g,
+                    cta_type: b ? "open" : "join",
                 });
         };
     return (0, r.jsx)(
         a.zxk,
-        f(
+        p(
             {
-                disabled: m,
-                text: u.intl.string(u.t["9C444u"]),
-                onClick: g,
+                text: b ? f.intl.string(f.t.BXxdl5) : f.intl.string(f.t["9C444u"]),
+                onClick: y,
                 variant: t,
                 size: n,
                 fullWidth: !0,
             },
-            h,
+            E,
         ),
     );
 }

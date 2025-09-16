@@ -1,40 +1,46 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(287734),
     o = n(906732),
-    s = n(592125),
-    l = n(19780),
-    c = n(979651),
-    u = n(626135),
-    d = n(475413),
-    f = n(981631),
-    _ = n(388032);
-function p(e) {
-    let { user: t, activity: n, onAction: p, onClose: h } = e,
-        { newestAnalyticsLocation: m } = (0, o.ZP)(),
-        g = (0, i.e7)([c.Z, s.Z], () => {
+    s = n(359110),
+    l = n(592125),
+    c = n(19780),
+    u = n(979651),
+    d = n(938475),
+    f = n(626135),
+    _ = n(475413),
+    p = n(981631),
+    h = n(388032);
+function m(e) {
+    let { user: t, activity: n, onAction: m, onClose: g } = e,
+        { newestAnalyticsLocation: E } = (0, o.ZP)(),
+        b = (0, i.e7)([u.Z, l.Z], () => {
             var e;
-            return s.Z.getChannel(null == (e = c.Z.getVoiceStateForUser(t.id)) ? void 0 : e.channelId);
+            return l.Z.getChannel(null == (e = u.Z.getVoiceStateForUser(t.id)) ? void 0 : e.channelId);
         }),
-        E = (0, i.e7)([l.Z], () => l.Z.getChannelId() === (null == g ? void 0 : g.id));
-    return (null == n ? void 0 : n.type) !== f.IIU.HANG_STATUS || null == g
+        y = (0, i.e7)([c.Z], () => c.Z.getChannelId() === (null == b ? void 0 : b.id));
+    return (null == n ? void 0 : n.type) !== p.IIU.HANG_STATUS || null == b
         ? null
-        : (0, r.jsx)(d.tG, {
-              text: _.intl.string(_.t["9C444u"]),
-              disabled: E,
+        : (0, r.jsx)(_.tG, {
+              text: y ? h.intl.string(h.t.BXxdl5) : h.intl.string(h.t["9C444u"]),
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation(),
-                      null == p || p({ action: "PRESS_HANG_STATUS_BUTTON" }),
-                      a.default.selectVoiceChannel(g.id),
-                      u.default.track(f.rMx.HANG_STATUS_CTA_CLICKED, {
-                          channel_id: g.id,
-                          guild_id: g.guild_id,
-                          source: m,
+                      null == m || m({ action: "PRESS_HANG_STATUS_BUTTON" }),
+                      a.default.selectVoiceChannel(b.id),
+                      (0, s.Kh)(b.id),
+                      f.default.track(p.rMx.HANG_STATUS_CTA_CLICKED, {
+                          channel_id: b.id,
+                          guild_id: b.guild_id,
+                          source: E,
+                          media_session_id: c.Z.getMediaSessionId(),
+                          call_num_participants: d.ZP.countVoiceStatesForChannel(b.id),
+                          other_user_id: t.id,
+                          cta_type: y ? "open" : "join",
                       }),
-                      null == h || h();
+                      null == g || g();
               },
           });
 }

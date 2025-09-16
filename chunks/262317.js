@@ -222,6 +222,7 @@ let B = (0, p.$)(function (e) {
                         L(D({}, e), {
                             hangStatusActivity: ef,
                             channel: k,
+                            userId: p.id,
                         }),
                     )
                   : null,
