@@ -268,13 +268,23 @@ function x(e) {
             sourceQuestContent: u,
             impressionRef: d,
         } = e,
-        f = i.useRef(null),
-        _ = (null == t ? void 0 : t.current) != null,
-        p = _ ? t : f,
-        h = _ ? "right" : "top",
-        m = _ ? "bottom" : void 0;
+        f = (0, p.O5)(),
+        _ = i.useRef(null),
+        m = (null == t ? void 0 : t.current) != null,
+        g = m ? t : _,
+        E = m ? "right" : "top",
+        b = m ? "bottom" : void 0,
+        y = () => {
+            null == s || s(),
+                f({
+                    questId: c.id,
+                    questContent: h.jn.SPONSORED_QUEST_SHEET,
+                    questContentCTA: p.jZ.SPONSORED_QUEST_SHEET,
+                    sourceQuestContent: u,
+                });
+        };
     return (0, r.jsx)(o.yRy, {
-        targetElementRef: p,
+        targetElementRef: g,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(D, {
@@ -285,12 +295,12 @@ function x(e) {
                 impressionRef: d,
             });
         },
-        onRequestOpen: s,
+        onRequestOpen: y,
         onRequestClose: l,
-        position: h,
-        align: m,
+        position: E,
+        align: b,
         spacing: T,
-        children: (e) => a(e, f),
+        children: (e) => a(e, _),
     });
 }
 let L = function (e) {

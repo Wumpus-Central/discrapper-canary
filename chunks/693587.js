@@ -1,8 +1,8 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var r,
-    o = n(442837),
-    i = n(570140);
-function l(e, t, n) {
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function l(e, t, n) {
         e
     );
 }
-function a(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,92 +26,112 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = {};
-function u(e) {
+let u = {};
+function d() {
+    u = {};
+}
+function f(e) {
     return (
-        null == c[e] &&
-            (c[e] = {
+        null == u[e] &&
+            (u[e] = {
                 catalog: {},
                 instances: {},
                 entitlements: {},
             }),
-        c[e]
+        u[e]
     );
 }
-class d extends (r = o.ZP.Store) {
+function _(e) {
+    let { guildId: t, catalog: n } = e;
+    u = c(s({}, u), {
+        [t]: c(s({}, f(t)), {
+            catalog: n,
+            hasFetchedCatalog: !0,
+        }),
+    });
+}
+function p(e) {
+    let { guildId: t, instances: n } = e;
+    u = c(s({}, u), {
+        [t]: c(s({}, f(t)), {
+            instances: n,
+            hasFetchedInstances: !0,
+        }),
+    });
+}
+function h(e) {
+    let { guildId: t, unlockedGameServers: n } = e,
+        r = Object.values(n).reduce((e, t) => {
+            var n, r, i, a, o;
+            return (
+                e +
+                (null !=
+                (o =
+                    null == (a = t.sku) ||
+                    null == (i = a.tenant_metadata) ||
+                    null == (r = i.guild_monetization) ||
+                    null == (n = r.game_server)
+                        ? void 0
+                        : n.boost_price)
+                    ? o
+                    : 0)
+            );
+        }, 0);
+    u = c(s({}, u), {
+        [t]: c(s({}, f(t)), {
+            entitlements: n,
+            appliedBoosts: r,
+        }),
+    });
+}
+class m extends (r = i.ZP.Store) {
     getState() {
-        return c;
+        return u;
     }
     getStateForGuild(e) {
-        return null != e ? c[e] : void 0;
-    }
-    shouldFetchCatalogForGuild(e) {
-        var t;
-        let n = null == (t = c[e]) ? void 0 : t.catalogFetchCooldown;
-        return null == n || n + 86400000 < Date.now();
-    }
-    shouldFetchInstancesForGuild(e) {
-        var t;
-        let n = null == (t = c[e]) ? void 0 : t.instancesFetchCooldown;
-        return null == n || n + 3600000 < Date.now();
+        return null != e ? u[e] : void 0;
     }
     hasFetchedCatalog(e) {
         var t;
-        return null != e && (null == (t = c[e]) ? void 0 : t.hasFetchedCatalog) === !0;
+        return null != e && (null == (t = u[e]) ? void 0 : t.hasFetchedCatalog) === !0;
     }
     hasFetchedInstances(e) {
         var t;
-        return null != e && (null == (t = c[e]) ? void 0 : t.hasFetchedInstances) === !0;
+        return null != e && (null == (t = u[e]) ? void 0 : t.hasFetchedInstances) === !0;
     }
 }
-l(d, "displayName", "PortkeyStore");
-let p = new d(i.Z, {
-    LOGOUT: function () {
-        c = {};
-    },
-    PORTKEY_FETCH_CATALOG_SUCCESS: function (e) {
-        let { guildId: t, catalog: n } = e;
-        c = s(a({}, c), {
-            [t]: s(a({}, u(t)), {
-                catalog: n,
-                hasFetchedCatalog: !0,
-            }),
-        });
-    },
-    PORTKEY_FETCH_INSTANCES_SUCCESS: function (e) {
-        let { guildId: t, instances: n } = e;
-        c = s(a({}, c), {
-            [t]: s(a({}, u(t)), {
-                instances: n,
-                hasFetchedInstances: !0,
-            }),
-        });
-    },
-    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function (e) {
-        let { guildId: t, unlockedGameServers: n } = e;
-        c = s(a({}, c), { [t]: s(a({}, u(t)), { entitlements: n }) });
-    },
+o(m, "displayName", "PortkeyStore");
+let g = new m(a.Z, {
+    LOGOUT: d,
+    PORTKEY_FETCH_CATALOG_SUCCESS: _,
+    PORTKEY_FETCH_INSTANCES_SUCCESS: p,
+    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: h,
 });
