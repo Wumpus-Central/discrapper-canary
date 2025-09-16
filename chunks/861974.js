@@ -63,11 +63,12 @@ function f(e) {
             (0, r.jsx)("div", {
                 className: l.iconDiv,
                 children:
-                    _ &&
-                    (0, r.jsx)(_, {
-                        className: l.icon,
-                        color: "currentColor",
-                    }),
+                    null != _
+                        ? (0, r.jsx)(_, {
+                              className: l.icon,
+                              color: "currentColor",
+                          })
+                        : null,
             }),
             (0, r.jsx)(s.x, {
                 className: l.text,

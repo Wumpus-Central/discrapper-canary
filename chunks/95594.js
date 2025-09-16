@@ -121,7 +121,7 @@ function f(e) {
                       }),
                       S.computeVisibleSections(Math.max(0, P * _), w * _),
                       S.getState()),
-            [R, S, t, n, s, c, f, P, w, _, m, g, E, b, y, O, C, v],
+            [R, S, t, n, s, c, f, P, w, _, m, g, E, b, y, O, C, N, v],
         )),
         u(l({}, T.current), {
             masonryComputer: S,
