@@ -813,6 +813,26 @@
     margin-top: auto
 }
 
+.badge_c2b88c {
+    align-self: center;
+    border-radius: var(--radius-round);
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 var(--space-8);
+    text-align: center;
+    text-transform: uppercase
+}
+
+.default_c2b88c {
+    background-color: var(--badge-background-default);
+    color: var(--badge-text-default)
+}
+
+.expressive_c2b88c {
+    background-color: var(--badge-background-expressive);
+    color: var(--badge-text-expressive)
+}
+
 .stack_dbd263 {
     display: flex
 }
@@ -14403,26 +14423,6 @@ svg.radioIcon_c1e9c4 {
 
 .errorMessage__5a092 {
     margin-top: 1px
-}
-
-.badge_dca3ba {
-    align-self: center;
-    border-radius: var(--radius-round);
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 0 var(--space-8);
-    text-align: center;
-    text-transform: uppercase
-}
-
-.default_dca3ba {
-    background-color: var(--badge-background-default);
-    color: var(--badge-text-default)
-}
-
-.expressive_dca3ba {
-    background-color: var(--badge-background-expressive);
-    color: var(--badge-text-expressive)
 }
 
 :where(.container__73454) {
@@ -89557,7 +89557,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
