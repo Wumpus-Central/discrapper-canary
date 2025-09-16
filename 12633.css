@@ -57866,6 +57866,12 @@ h3.improved__1689b:after {
     white-space: nowrap
 }
 
+@media (max-width:485px) {
+    .cancelLink_dbec16 {
+        margin-left: 6px
+    }
+}
+
 .modalBody_dbec16 {
     color: var(--interactive-normal);
     font-size: 16px;
@@ -89542,7 +89548,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
