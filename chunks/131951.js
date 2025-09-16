@@ -2188,9 +2188,7 @@ class rR extends (u = E.ZP.Store) {
     getUseSystemScreensharePicker() {
         let e = this.supportsSystemScreensharePicker(),
             t = tj().useSystemScreensharePicker,
-            n =
-                (0, eo.isLinux)() ||
-                ((0, eo.isMac)() && m().satisfies(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release, ey.jR));
+            n = (0, eo.isLinux)();
         return e && (null != t ? t : n);
     }
     supportsSystemScreensharePicker() {
