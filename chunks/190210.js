@@ -16,7 +16,7 @@ var r = n(951288),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(202841),
+    c = n(938288),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -48,9 +48,9 @@ var r = n(951288),
     k = n(127654),
     U = n(746877),
     B = n(541716),
-    F = n(667829),
+    G = n(667829),
     H = n(258696),
-    G = n(893718),
+    F = n(893718),
     V = n(273031),
     z = n(303628),
     W = n(981631),
@@ -165,7 +165,7 @@ let er = i.memo(
             eZ = null == (u = null == eE ? void 0 : eE.createThread) || u;
         s()(null != k, "chat input type must be set");
         let { analyticsLocations: eT } = (0, C.ZP)(_.Z.CHANNEL_TEXT_AREA),
-            eN = (0, G.qz)(t),
+            eN = (0, F.qz)(t),
             eA = i.useRef(null),
             ew = i.useRef(null),
             eR = i.useRef(null),
@@ -185,10 +185,10 @@ let er = i.memo(
                 isPendingMember: ek,
                 disabled: eU,
                 canAttachFiles: eB,
-                canEveryoneSendMessages: eF,
-            } = (0, G.TE)(D, k, eD, P),
+                canEveryoneSendMessages: eG,
+            } = (0, F.TE)(D, k, eD, P),
             eH = !A.dN.useSetting() && !(0, L.isAndroidWeb)() && null != window.ResizeObserver,
-            eG = !eH || !(null == (n = k.commands) ? void 0 : n.enabled) || !V || p !== q.GI,
+            eF = !eH || !(null == (n = k.commands) ? void 0 : n.enabled) || !V || p !== q.GI,
             eV = (0, T.Z)(),
             { fontSize: ez } = (0, d.cj)([y.Z], () => ({
                 fontSize: y.Z.fontSize,
@@ -196,8 +196,8 @@ let er = i.memo(
             })),
             eW = (0, d.e7)([R.Z], () => R.Z.isEnabled()),
             eq = (0, N.NE)(D);
-        (0, G.hJ)(k, eU);
-        let { eventEmitter: eY, handleEditorSelectionChanged: eK } = (0, G.x2)(ew, p, h),
+        (0, F.hJ)(k, eU);
+        let { eventEmitter: eY, handleEditorSelectionChanged: eK } = (0, F.x2)(ew, p, h),
             eX = i.useCallback(
                 (e) => {
                     let t = (e) => {
@@ -273,13 +273,13 @@ let er = i.memo(
                 },
                 [ed, eS, eI, D.id, eZ, eP, eq],
             ),
-            { submit: eQ, handleSubmit: eJ } = (0, G.bL)(eX, k, ew, eM, D.id),
-            { autocompleteRef: e$, handleMaybeShowAutocomplete: e0, handleHideAutocomplete: e1 } = (0, G.jx)(),
+            { submit: eQ, handleSubmit: eJ } = (0, F.bL)(eX, k, ew, eM, D.id),
+            { autocompleteRef: e$, handleMaybeShowAutocomplete: e0, handleHideAutocomplete: e1 } = (0, F.jx)(),
             e2 = i.useCallback(() => {
                 var e;
                 return null == eM || null == (e = eM.current) ? void 0 : e.hide();
             }, []),
-            { editorHeight: e8, handleResize: e3 } = (0, G.oR)(er),
+            { editorHeight: e8, handleResize: e3 } = (0, F.oR)(er),
             {
                 handleTab: e4,
                 handleEnter: e7,
@@ -315,16 +315,16 @@ let er = i.memo(
                         [n],
                     ),
                 };
-            })(e$, eA, eG),
+            })(e$, eA, eF),
             {
                 expressionPickerView: e5,
                 shouldHideExpressionPicker: e9,
                 handleAutocompleteVisibilityChange: te,
                 handleOuterClick: tt,
-            } = (0, G.iV)(k, eY, ew),
-            tn = (0, G.ae)(ew),
-            tr = (0, G.Sg)(eQ, k, ew),
-            ti = (0, G.O1)({
+            } = (0, F.iV)(k, eY, ew),
+            tn = (0, F.ae)(ew),
+            tr = (0, F.Sg)(eQ, k, ew),
+            ti = (0, F.O1)({
                 editorRef: ew,
                 disabled: eU,
                 textValue: p,
@@ -427,7 +427,7 @@ let er = i.memo(
                                                     children: (0, r.jsx)(f.tEY, {
                                                         ringTarget: eN,
                                                         ringClassName: J.focusRing,
-                                                        children: (0, r.jsx)(F.Z, {
+                                                        children: (0, r.jsx)(G.Z, {
                                                             ref: ew,
                                                             id: E,
                                                             focused: V,
@@ -438,7 +438,7 @@ let er = i.memo(
                                                             placeholder: eg,
                                                             required: I,
                                                             accessibilityLabel: Z,
-                                                            isPreviewing: (eL || ek) && eF,
+                                                            isPreviewing: (eL || ek) && eG,
                                                             channel: D,
                                                             type: B.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eB,
@@ -740,29 +740,32 @@ function eo(e) {
         g = i.useCallback(() => {
             c(!1);
         }, []);
-    return (0, r.jsx)(h.u, {
-        asContainer: !0,
-        text: X.intl.string(X.t["/IBYAg"]),
-        position: "top",
-        children: (0, r.jsxs)(f.P3F, {
-            className: Q.heroImageButton,
-            onMouseOver: d,
-            onMouseOut: g,
-            onFocus: l,
-            children: [
-                (0, r.jsx)(Z.ZP, {
-                    ref: a,
-                    onChange: o,
-                    "aria-hidden": !0,
-                    tabIndex: -1,
-                    maxFileSizeBytes: K.B,
-                    onFileSizeError: () => (0, P.Z)(K.B),
-                }),
-                (0, r.jsx)(f.FmF, {
-                    size: "md",
-                    color: s ? p.Z.colors.INTERACTIVE_ACTIVE : p.Z.colors.INTERACTIVE_NORMAL,
-                }),
-            ],
+    return (0, r.jsx)("div", {
+        className: Q.heroImageButton,
+        children: (0, r.jsx)(h.u, {
+            asContainer: !0,
+            text: X.intl.string(X.t["/IBYAg"]),
+            position: "top",
+            children: (0, r.jsxs)(f.P3F, {
+                className: Q.heroImageButton,
+                onMouseOver: d,
+                onMouseOut: g,
+                onFocus: l,
+                children: [
+                    (0, r.jsx)(Z.ZP, {
+                        ref: a,
+                        onChange: o,
+                        "aria-hidden": !0,
+                        tabIndex: -1,
+                        maxFileSizeBytes: K.B,
+                        onFileSizeError: () => (0, P.Z)(K.B),
+                    }),
+                    (0, r.jsx)(f.FmF, {
+                        size: "md",
+                        color: s ? p.Z.colors.INTERACTIVE_ACTIVE : p.Z.colors.INTERACTIVE_NORMAL,
+                    }),
+                ],
+            }),
         }),
     });
 }
