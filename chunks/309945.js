@@ -7,16 +7,13 @@ var r = n(951288),
     s = n(442837),
     c = n(692547),
     u = n(899667),
-    d = n(905128),
+    d = n(317169),
     p = n(989308),
     m = n(388032),
     g = n(874622);
 function f(e) {
     let { guildId: t, powerups: n } = e,
-        f = (0, s.e7)([d.Z], () => {
-            var e, n;
-            return null != (n = null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.appliedBoosts) ? n : 0;
-        }),
+        { spent: f } = (0, d.Z)(t),
         v = (0, s.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
         _ =
             f -

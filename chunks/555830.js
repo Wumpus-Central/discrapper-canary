@@ -1,12 +1,14 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(755721),
     o = n(481060),
-    s = n(483517),
-    l = n(388032),
-    c = n(571818);
-function u(e, t, n) {
+    s = n(626135),
+    l = n(483517),
+    c = n(981631),
+    u = n(388032),
+    d = n(571818);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +21,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +32,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,97 +49,115 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = new Set();
-function h(e) {
-    let { activity: t, variant: u = "vertical" } = e,
-        [f, h] = i.useState(!1),
-        m = "".concat(t.name, "-").concat(t.application_id),
-        g = "vertical" === u,
-        E = i.useCallback(
+let m = new Set();
+function g(e) {
+    var t;
+    let { activity: f, variant: p = "vertical" } = e,
+        [g, E] = i.useState(!1),
+        b = "vertical" === p,
+        y = i.useCallback(
             (e) => {
-                e.stopPropagation(), p.add(m), h(!0);
-            },
-            [m],
-        ),
-        b = i.useCallback(
-            (e) => {
+                var t, n;
                 e.stopPropagation(),
+                    s.default.track(c.rMx.USER_PROFILE_REPORT_GAME_DETECTION, {
+                        game_detected: !0,
+                        game_detection_correct: !0,
+                        application_id: null != (t = f.application_id) ? t : null,
+                    }),
+                    (null != f.application_id || "" !== f.name) && m.add(null != (n = f.application_id) ? n : f.name),
+                    E(!0);
+            },
+            [f.application_id, f.name],
+        ),
+        O = i.useCallback(
+            (e) => {
+                var t;
+                e.stopPropagation(),
+                    s.default.track(c.rMx.USER_PROFILE_REPORT_GAME_DETECTION, {
+                        game_detected: !0,
+                        game_detection_correct: !1,
+                        application_id: null != (t = f.application_id) ? t : null,
+                    }),
                     (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("82077").then(n.bind(n, 953848));
-                        return (n) =>
+                        return (t) =>
                             (0, r.jsx)(
                                 e,
-                                _(d({}, n), {
-                                    detectedActivity: t,
+                                h(_({}, t), {
+                                    detectedActivity: f,
                                     onSubmitted: () => {
-                                        p.add(m), h(!0);
+                                        if (null != f.application_id || "" !== f.name) {
+                                            var e;
+                                            m.add(null != (e = f.application_id) ? e : f.name);
+                                        }
+                                        E(!0);
                                     },
                                 }),
                             );
                     });
             },
-            [t, m],
+            [f],
         );
-    return f
+    return g
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.Z, {}),
+                  (0, r.jsx)(l.Z, {}),
                   (0, r.jsx)("div", {
-                      className: c.container,
+                      className: d.container,
                       children: (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
                           color: "header-secondary",
-                          className: c.thankYouText,
-                          children: l.intl.string(l.t.X0TrNT),
+                          className: d.thankYouText,
+                          children: u.intl.string(u.t.X0TrNT),
                       }),
                   }),
               ],
           })
-        : p.has(m)
+        : m.has(null != (t = f.application_id) ? t : f.name)
           ? null
           : (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(s.Z, {}),
+                    (0, r.jsx)(l.Z, {}),
                     (0, r.jsx)("div", {
-                        className: c.container,
+                        className: d.container,
                         children: (0, r.jsxs)("div", {
-                            className: g ? c.contentVertical : c.contentHorizontal,
+                            className: b ? d.contentVertical : d.contentHorizontal,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
-                                    className: c.prompt,
-                                    children: l.intl.string(l.t["9g7v6e"]),
+                                    className: d.prompt,
+                                    children: u.intl.string(u.t["9g7v6e"]),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: g ? c.buttonsVertical : c.buttonsHorizontal,
+                                    className: b ? d.buttonsVertical : d.buttonsHorizontal,
                                     children: [
                                         (0, r.jsx)(a.zx, {
                                             size: a.zx.Sizes.SMALL,
                                             look: a.zx.Looks.FILLED,
                                             color: a.zx.Colors.PRIMARY,
-                                            onClick: E,
-                                            className: g ? c.buttonVertical : c.buttonHorizontal,
-                                            children: l.intl.string(l.t.p89ACg),
+                                            onClick: y,
+                                            className: b ? d.buttonVertical : d.buttonHorizontal,
+                                            children: u.intl.string(u.t.p89ACg),
                                         }),
                                         (0, r.jsx)(a.zx, {
                                             size: a.zx.Sizes.SMALL,
                                             look: a.zx.Looks.FILLED,
                                             color: a.zx.Colors.PRIMARY,
-                                            onClick: b,
-                                            className: g ? c.buttonVertical : c.buttonHorizontal,
-                                            children: l.intl.string(l.t.gm1Ven),
+                                            onClick: O,
+                                            className: b ? d.buttonVertical : d.buttonHorizontal,
+                                            children: u.intl.string(u.t.gm1Ven),
                                         }),
                                     ],
                                 }),

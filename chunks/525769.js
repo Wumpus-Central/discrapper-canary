@@ -81,6 +81,7 @@ var r = (function (e) {
             (e.FRIEND_REQUESTS_SPAM_INBOX = "impression_friend_requests_spam_inbox"),
             (e.FRIENDS = "impression_friends"),
             (e.GAME_CONSOLE_DEVICE_LIST = "impression_game_console_device_list"),
+            (e.GAME_DETECTION_REPORT_MODAL = "impression_game_detection_report_modal"),
             (e.GDM_SETTINGS_INVITES = "impression_gdm_settings_invites"),
             (e.GIFT_INTENT_ACTION_BUTTON = "impression_gift_intent_action_button"),
             (e.GIFT_INTENT_BADGE = "impression_gift_intent_badge"),
