@@ -3,13 +3,12 @@ n.d(t, {
     U1: () => _,
     XW: () => d,
     _J: () => m,
-    aP: () => f,
+    aP: () => h,
     e7: () => g,
     h6: () => O,
-    oE: () => h,
+    oE: () => f,
     pB: () => p,
     y: () => y,
-    yS: () => j,
     yr: () => v,
 }),
     n(781311);
@@ -63,7 +62,6 @@ function s(e, t) {
 let c = {
     nickname: void 0,
     dmsAllowed: !l.iG.getSetting(),
-    mutedServer: !1,
 };
 function u(e) {
     let t = l.no.getSetting();
@@ -73,7 +71,6 @@ let d = (0, r.U)((e) => ({
         nickname: c.nickname,
         dmsAllowed: c.dmsAllowed,
         showActivity: !0,
-        mutedServer: c.mutedServer,
         inviteCode: void 0,
         guildId: void 0,
         touched: !1,
@@ -95,13 +92,6 @@ let d = (0, r.U)((e) => ({
             e((e) =>
                 s(a({}, e), {
                     showActivity: t,
-                    touched: !0,
-                }),
-            ),
-        setMutedServer: (t) =>
-            e((e) =>
-                s(a({}, e), {
-                    mutedServer: t,
                     touched: !0,
                 }),
             ),
@@ -135,7 +125,6 @@ let d = (0, r.U)((e) => ({
                 nickname: c.nickname,
                 dmsAllowed: c.dmsAllowed,
                 showActivity: u(e.guildSize),
-                mutedServer: c.mutedServer,
                 inviteCode: void 0,
                 guildId: void 0,
                 guildSize: e.guildSize,
@@ -145,17 +134,12 @@ let d = (0, r.U)((e) => ({
     p = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
-    h = () => {
+    f = () => {
         d.getState().reset();
     },
-    f = () => {
+    h = () => {
         let e = d.getState();
-        return (
-            e.nickname !== c.nickname ||
-            e.dmsAllowed !== c.dmsAllowed ||
-            e.showActivity !== u(e.guildSize) ||
-            e.mutedServer !== c.mutedServer
-        );
+        return e.nickname !== c.nickname || e.dmsAllowed !== c.dmsAllowed || e.showActivity !== u(e.guildSize);
     },
     g = () => d.getState().inviteCode,
     m = () => d.getState().guildId,
@@ -163,7 +147,6 @@ let d = (0, r.U)((e) => ({
     O = () => d.getState().dmsAllowed,
     y = () => d.getState().nickname,
     _ = () => d.getState().showActivity,
-    j = () => d.getState().mutedServer,
     v = () => {
         var e, t;
         let { nickname: n } = d();

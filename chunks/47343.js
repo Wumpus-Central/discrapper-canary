@@ -1,64 +1,60 @@
-n.d(t, { R: () => x }), n(388685);
+n.d(t, { R: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    o = n.n(l),
-    s = n(481060),
-    a = n(590965),
+    s = n.n(l),
+    a = n(481060),
+    o = n(590965),
     c = n(695346),
     u = n(51331),
     d = n(259580),
     h = n(626135),
-    f = n(44609),
     p = n(731971),
     g = n(981631),
     m = n(388032),
-    _ = n(152143);
-let x = () => {
+    f = n(152143);
+let _ = () => {
     var e;
     let [t, n] = i.useState(!1),
         l = c.G6.useSetting(),
         {
-            nickname: x,
-            dmsAllowed: v,
+            nickname: _,
+            dmsAllowed: x,
             showActivity: E,
-            mutedServer: b,
-            setNickname: j,
-            setDmsAllowed: I,
-            setShowActivity: N,
-            setMutedServer: y,
-            guildId: O,
-            inviteCode: S,
+            setNickname: v,
+            setDmsAllowed: j,
+            setShowActivity: b,
+            guildId: I,
+            inviteCode: N,
         } = (0, p.XW)(),
-        C = null == (e = a.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        Z = (0, f.m4)({ location: "InviteSettingsControls" });
+        O = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable;
     return (0, r.jsxs)("div", {
-        className: o()(_.editProfileContainer, { [_.opened]: t }),
+        className: s()(f.editProfileContainer, { [f.opened]: t }),
         children: [
-            (0, r.jsxs)(s.P3F, {
-                className: _.header,
+            (0, r.jsxs)(a.P3F, {
+                className: f.header,
                 onClick: () => {
                     t ||
                         h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: O,
-                            invite_code: S,
+                            guild_id: I,
+                            invite_code: N,
                         }),
                         n(!t);
                 },
                 children: [
                     (0, r.jsx)("div", {
-                        className: _.headerIconWrapper,
-                        children: (0, r.jsx)(s.ewm, { size: "md" }),
+                        className: f.headerIconWrapper,
+                        children: (0, r.jsx)(a.ewm, { size: "md" }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: _.title,
+                        className: f.title,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "eyebrow",
                                 color: "header-secondary",
                                 children: m.intl.string(m.t.A5wHQ0),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
                                 children: m.intl.string(m.t.UKCSER),
@@ -66,7 +62,7 @@ let x = () => {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: o()(_.caret, { [_.opened]: t }),
+                        className: s()(f.caret, { [f.opened]: t }),
                         children: (0, r.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -76,41 +72,35 @@ let x = () => {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: o()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
+                className: s()(f.customizationSection, { [f.opened]: t }, O ? null : f.condensed),
                 children: [
-                    C &&
+                    O &&
                         (0, r.jsxs)("div", {
-                            className: _.serverNickname,
+                            className: f.serverNickname,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "eyebrow",
                                     color: "header-secondary",
                                     children: m.intl.string(m.t.me1lRk),
                                 }),
-                                (0, r.jsx)(s.oil, {
+                                (0, r.jsx)(a.oil, {
                                     placeholder: m.intl.string(m.t["09Q8ys"]),
                                     maxLength: g.l$U,
-                                    value: x,
-                                    onChange: j,
+                                    value: _,
+                                    onChange: v,
                                 }),
                             ],
                         }),
                     (0, r.jsx)(u.Z, {
                         title: m.intl.string(m.t["/2ed39"]),
-                        value: v,
-                        onChange: I,
+                        value: x,
+                        onChange: j,
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
                             title: m.intl.string(m.t.bN4m1N),
                             value: E,
-                            onChange: N,
-                        }),
-                    Z &&
-                        (0, r.jsx)(u.Z, {
-                            title: m.intl.string(m.t["0nZCqK"]),
-                            value: b,
-                            onChange: y,
+                            onChange: b,
                         }),
                 ],
             }),
