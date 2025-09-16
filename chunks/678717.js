@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => ex }), n(539854), n(388685);
+n.r(t), n.d(t, { default: () => eb }), n(539854), n(388685);
 var a = n(951288),
     r = n(647438),
     l = n(120356),
@@ -22,7 +22,7 @@ n(381996);
 var y = n(392750),
     C = n(926976),
     N = n(789654),
-    E = n(719672),
+    E = n(866730),
     T = n(691867),
     S = n(916790),
     O = n(645973),
@@ -48,21 +48,22 @@ var y = n(392750),
     q = n(315384),
     Y = n(107606),
     X = n(514866),
-    J = n(763577),
-    $ = n(384207),
-    Q = n(264603),
-    ee = n(678639),
-    et = n(596768),
-    en = n(56706),
-    ea = n(820400),
-    er = n(260950),
-    el = n(569157),
-    ei = n(621060),
-    es = n(981631),
-    eo = n(388032),
-    ec = n(552883),
-    ed = n(451429);
-function eu(e) {
+    J = n(149323),
+    $ = n(763577),
+    Q = n(384207),
+    ee = n(264603),
+    et = n(678639),
+    en = n(596768),
+    ea = n(56706),
+    er = n(820400),
+    el = n(260950),
+    ei = n(569157),
+    es = n(621060),
+    eo = n(981631),
+    ec = n(388032),
+    ed = n(552883),
+    eu = n(451429);
+function em(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
             minDimension: j.h,
@@ -73,10 +74,10 @@ function eu(e) {
         });
     return (0, a.jsx)("div", {
         onMouseDown: l,
-        className: ec.resizeHandle,
+        className: ed.resizeHandle,
     });
 }
-function em(e) {
+function eh(e) {
     var t;
     let { isPopout: n = !1 } = e,
         l = r.useMemo(() => {
@@ -84,25 +85,25 @@ function em(e) {
                 {
                     id: "analytics",
                     name: "Analytics",
-                    group: ei.v0.EXPERIMENTS,
+                    group: es.v0.EXPERIMENTS,
                     render: () => (0, a.jsx)(C.Z, {}),
                 },
                 {
                     id: "triggers",
                     name: "Triggers",
-                    group: ei.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(et.Z, {}),
+                    group: es.v0.EXPERIMENTS,
+                    render: () => (0, a.jsx)(en.Z, {}),
                 },
                 {
                     id: "stores",
                     name: "Stores",
-                    group: ei.v0.EVENTS,
-                    render: () => (0, a.jsx)(ee.Z, {}),
+                    group: es.v0.EVENTS,
+                    render: () => (0, a.jsx)(et.Z, {}),
                 },
                 {
                     id: "dispatcher",
                     name: "Dispatcher",
-                    group: ei.v0.EVENTS,
+                    group: es.v0.EVENTS,
                     render: () => (0, a.jsx)(S.Z, {}),
                 },
             ];
@@ -111,219 +112,225 @@ function em(e) {
                     (e.push({
                         id: "shop",
                         name: "Shop",
-                        group: ei.v0.BILLING,
-                        render: () => (0, a.jsx)($.C, {}),
+                        group: es.v0.BILLING,
+                        render: () => (0, a.jsx)(Q.C, {}),
                     }),
                     e.push({
                         id: "quick_actions",
                         name: "Quick Actions",
-                        group: ei.v0.DEVELOPMENT,
+                        group: es.v0.DEVELOPMENT,
                         render: () => (0, a.jsx)(X.Z, {}),
                     }),
                     e.push({
                         id: "end_to_end_encryption",
                         name: "E2EE",
-                        group: ei.v0.DEVELOPMENT,
+                        group: es.v0.DEVELOPMENT,
                         render: () => (0, a.jsx)(O.Z, {}),
                     }),
                     e.push({
                         id: "performance",
                         name: "Performance",
-                        group: ei.v0.DEVELOPMENT,
+                        group: es.v0.DEVELOPMENT,
                         render: () => (0, a.jsx)(H.ZP, {}),
                     }),
                     e.push({
                         id: "feedback",
                         name: "Feedback",
-                        group: ei.v0.USERS,
+                        group: es.v0.USERS,
                         render: () => (0, a.jsx)(P.Z, {}),
                     }),
                     e.push({
                         id: "overlay",
                         name: "Overlay v3",
-                        group: ei.v0.GAMES,
+                        group: es.v0.GAMES,
                         render: () => (0, a.jsx)(B.Z, {}),
                     }),
                     e.push({
                         id: "slayer_sdk",
                         name: "Slayer SDK",
-                        group: ei.v0.GAMES,
-                        render: () => (0, a.jsx)(Q.Z, {}),
+                        group: es.v0.GAMES,
+                        render: () => (0, a.jsx)(ee.Z, {}),
                     }),
                     e.push({
                         id: "quick_switcher",
                         name: "Quick Switcher",
-                        group: ei.v0.USERS,
-                        render: () => (0, a.jsx)(el.Z, {}),
+                        group: es.v0.USERS,
+                        render: () => (0, a.jsx)(ei.Z, {}),
                     })),
                 e.push({
                     id: "rive",
                     name: "Rive",
-                    group: ei.v0.UI,
-                    render: () => (0, a.jsx)(J.Z, {}),
+                    group: es.v0.UI,
+                    render: () => (0, a.jsx)($.Z, {}),
                 }),
                 e.push({
                     id: "lottie",
                     name: "Lottie",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(U.Z, {}),
                 }),
                 e.push({
                     id: "intl",
                     name: "Intl",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(Z.Z, {}),
                 }),
                 e.push({
                     id: "colors",
                     name: "Colors",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(N.Z, {}),
                 }),
                 e.push({
                     id: "design_toggles",
                     name: "Design Toggles",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(T.Z, {}),
                 }),
                 e.push({
                     id: "appearance_randomizer",
                     name: "Appearance Randomizer",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(Y.Z, {}),
                 }),
                 e.push({
                     id: "overlays",
                     name: "Dev Overlays",
-                    group: ei.v0.DEVELOPMENT,
+                    group: es.v0.DEVELOPMENT,
                     render: () => (0, a.jsx)(R.Z, { devSettingsCategory: _.zU.OVERLAYS }),
                 }),
                 e.push({
                     id: "messaging",
                     name: "Messaging",
-                    group: ei.v0.USERS,
+                    group: es.v0.USERS,
                     render: () => (0, a.jsx)(F.Z, {}),
                 }),
                 e.push({
                     id: "reporting",
                     name: "Reporting",
-                    group: ei.v0.EXPERIMENTS,
+                    group: es.v0.EXPERIMENTS,
                     render: () => (0, a.jsx)(R.Z, { devSettingsCategory: _.zU.REPORTING }),
                 }),
                 e.push({
                     id: "permissions",
                     name: "Permissions",
-                    group: ei.v0.USERS,
+                    group: es.v0.USERS,
                     render: () => (0, a.jsx)(K.Z, {}),
                 }),
                 e.push({
                     id: "modals",
                     name: "Modals",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(G.Z, {}),
                 }),
                 e.push({
                     id: "layers",
                     name: "Layers",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(M.Z, {}),
                 }),
                 e.push({
                     id: "affinity",
                     name: "Affinity",
-                    group: ei.v0.USERS,
+                    group: es.v0.USERS,
                     render: () => (0, a.jsx)(y.Z, {}),
                 }),
                 e.push({
                     id: "widgets",
                     name: "Widgets",
-                    group: ei.v0.USERS,
-                    render: () => (0, a.jsx)(ea.Z, {}),
+                    group: es.v0.USERS,
+                    render: () => (0, a.jsx)(er.Z, {}),
                 }),
                 f.Z.isDeveloper &&
                     (e.push({
                         id: "content_inventory",
                         name: "Content Inventory",
-                        group: ei.v0.USERS,
+                        group: es.v0.USERS,
                         render: () => (0, a.jsx)(m.Z, {}),
                     }),
                     e.push({
                         id: "notifications_inbox",
                         name: "Notifications Inbox",
-                        group: ei.v0.USERS,
+                        group: es.v0.USERS,
                         render: () => (0, a.jsx)(p.Z, {}),
                     })),
                 e.push({
+                    id: "dismissible_content",
+                    name: "Recent DCs",
+                    group: es.v0.DISMISSIBLE_CONTENT,
+                    render: () => (0, a.jsx)(J.Z, {}),
+                }),
+                e.push({
                     id: "dcf",
-                    name: "DCF",
-                    group: ei.v0.EXPERIMENTS,
+                    name: "DCF Events",
+                    group: es.v0.DISMISSIBLE_CONTENT,
                     render: () => (0, a.jsx)(E.Z, {}),
                 }),
                 e.push({
                     id: "perks",
                     name: "Perks",
-                    group: ei.v0.PREMIUM,
+                    group: es.v0.PREMIUM,
                     render: () => (0, a.jsx)(W.Z, {}),
                 }),
                 e.push({
                     id: "potions",
                     name: "Potions",
-                    group: ei.v0.PREMIUM,
+                    group: es.v0.PREMIUM,
                     render: () => (0, a.jsx)(q.Z, {}),
                 }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") &&
                     (e.push({
                         id: "offers",
                         name: "Offers",
-                        group: ei.v0.PREMIUM,
+                        group: es.v0.PREMIUM,
                         render: () => (0, a.jsx)(z.Z, {}),
                     }),
                     e.push({
                         id: "payments",
                         name: "Payments",
-                        group: ei.v0.BILLING,
+                        group: es.v0.BILLING,
                         render: () => (0, a.jsx)(V.Z, {}),
                     }),
                     e.push({
                         id: "subscriptions",
                         name: "Subscriptions",
-                        group: ei.v0.PREMIUM,
-                        render: () => (0, a.jsx)(er.Z, {}),
+                        group: es.v0.PREMIUM,
+                        render: () => (0, a.jsx)(el.Z, {}),
                     }),
                     e.push({
                         id: "fractional_nitro",
                         name: "Fractional Nitro",
-                        group: ei.v0.PREMIUM,
+                        group: es.v0.PREMIUM,
                         render: () => (0, a.jsx)(k.Z, {}),
                     })),
                 e.push({
                     id: "gifting_intent",
                     name: "Gifting Intent",
-                    group: ei.v0.PREMIUM,
+                    group: es.v0.PREMIUM,
                     render: () => (0, a.jsx)(w.Z, {}),
                 }),
                 e.push({
                     id: "voice_filters",
                     name: "Voice Filters",
-                    group: ei.v0.AUDIO_VIDEO,
-                    render: () => (0, a.jsx)(en.Z, {}),
+                    group: es.v0.AUDIO_VIDEO,
+                    render: () => (0, a.jsx)(ea.Z, {}),
                 }),
                 e.push({
                     id: "krisp_tester",
                     name: "Krisp Tester",
-                    group: ei.v0.AUDIO_VIDEO,
+                    group: es.v0.AUDIO_VIDEO,
                     render: () => (0, a.jsx)(A.Z, {}),
                 }),
                 e.push({
                     id: "skill_trees",
                     name: "Skill Trees",
-                    group: ei.v0.GUILDS,
+                    group: es.v0.GUILDS,
                     render: () => (0, a.jsx)(I.Z, {}),
                 }),
                 e.push({
                     id: "language",
                     name: "Language",
-                    group: ei.v0.UI,
+                    group: es.v0.UI,
                     render: () => (0, a.jsx)(D.Z, {}),
                 }),
                 e
@@ -333,7 +340,7 @@ function em(e) {
             TabBar: i,
             renderSelectedTab: o,
             selectedTabId: d,
-        } = (0, ei.ZP)(
+        } = (0, es.ZP)(
             {
                 tabs: l,
                 initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
@@ -352,7 +359,7 @@ function em(e) {
         (0, a.jsxs)(L.Gk, {
             children: [
                 (0, a.jsxs)(h.ZP, {
-                    className: ed.headerBar,
+                    className: eu.headerBar,
                     toolbar: n
                         ? null
                         : (0, a.jsxs)(a.Fragment, {
@@ -362,13 +369,13 @@ function em(e) {
                                       tooltip: "Pop Out",
                                       onClick: () => {
                                           (0, b.bA)(
-                                              es.KJ3.DEVTOOLS_POPOUT,
+                                              eo.KJ3.DEVTOOLS_POPOUT,
                                               () =>
                                                   (0, a.jsx)(x.Z, {
-                                                      windowKey: es.KJ3.DEVTOOLS_POPOUT,
+                                                      windowKey: eo.KJ3.DEVTOOLS_POPOUT,
                                                       title: "DevTools",
                                                       withTitleBar: !0,
-                                                      children: (0, a.jsx)(ex, {
+                                                      children: (0, a.jsx)(eb, {
                                                           mobile: !1,
                                                           isPopout: !0,
                                                       }),
@@ -382,7 +389,7 @@ function em(e) {
                                   }),
                                   (0, a.jsx)(h.ZP.Icon, {
                                       icon: c.Dio,
-                                      tooltip: eo.intl.string(eo.t.cpT0Cg),
+                                      tooltip: ec.intl.string(ec.t.cpT0Cg),
                                       onClick: v.SO,
                                   }),
                               ],
@@ -397,12 +404,12 @@ function em(e) {
                 }),
                 (0, a.jsx)(i, {}),
                 o(),
-                (0, a.jsx)(L.Br, { className: ec.layerContainer }),
+                (0, a.jsx)(L.Br, { className: ed.layerContainer }),
             ],
         })
     );
 }
-function eh() {
+function ep() {
     let e = r.useRef(null),
         t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
         [n, l] = r.useState(null),
@@ -414,40 +421,40 @@ function eh() {
         ? null
         : (0, a.jsxs)("div", {
               ref: e,
-              className: ec.container,
+              className: ed.container,
               style: {
                   minWidth: j.h,
                   width: n,
               },
               "data-app-right-panel": !0,
               children: [
-                  (0, a.jsx)(eu, {
+                  (0, a.jsx)(em, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: i,
                   }),
                   (0, a.jsx)("div", {
-                      className: ec.sidebarContent,
-                      children: (0, a.jsx)(em, {}),
+                      className: ed.sidebarContent,
+                      children: (0, a.jsx)(eh, {}),
                   }),
               ],
           });
 }
-function ep() {
+function ex() {
     return (0, o.e7)([j.Z], () => j.Z.displayTools)
         ? (0, a.jsx)("div", {
-              className: i()(ec.container, ec.mobileContainerExpanded),
+              className: i()(ed.container, ed.mobileContainerExpanded),
               children: (0, a.jsx)("div", {
-                  className: ec.sidebarContent,
-                  children: (0, a.jsx)(em, {}),
+                  className: ed.sidebarContent,
+                  children: (0, a.jsx)(eh, {}),
               }),
           })
         : (0, a.jsx)("div", {
-              className: ec.container,
+              className: ed.container,
               children: (0, a.jsx)(c.P3F, {
                   onClick: v.SO,
                   children: (0, a.jsxs)(h.ZP, {
-                      className: i()(ed.headerBar, ec.mobileHeaderCollapsed),
+                      className: i()(eu.headerBar, ed.mobileHeaderCollapsed),
                       toolbar: (0, a.jsx)(g.Z, { direction: g.Z.Directions.UP }),
                       children: [
                           (0, a.jsx)(h.ZP.Icon, {
@@ -460,14 +467,14 @@ function ep() {
               }),
           });
 }
-function ex(e) {
+function eb(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
-        ? (0, a.jsx)(ep, {})
+        ? (0, a.jsx)(ex, {})
         : n
           ? (0, a.jsx)("div", {
-                className: ec.popoutContainer,
-                children: (0, a.jsx)(em, { isPopout: !0 }),
+                className: ed.popoutContainer,
+                children: (0, a.jsx)(eh, { isPopout: !0 }),
             })
-          : (0, a.jsx)(eh, {});
+          : (0, a.jsx)(ep, {});
 }

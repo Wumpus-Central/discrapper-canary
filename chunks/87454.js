@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -7,55 +7,52 @@ var r = n(951288),
     l = n(581883),
     c = n(428967),
     u = n(972118),
-    d = n(197571);
-let f = i.memo(function (e) {
+    d = n(764668),
+    f = n(197571);
+let _ = i.memo(function (e) {
     let { className: t, content: n, onChange: a } = e,
         l = o.z[n],
-        { isDismissed: f, handleToggleDismissState: p } = (0, u.Z)(l),
+        { isDismissed: f, handleToggleDismissState: _ } = (0, u.Z)(l),
         [h, m] = i.useState(!1),
         g = i.useCallback(() => {
-            if (h) return void m(!1);
-            null == a || a(n), p();
-        }, [a, p, n, h]);
+            null == a || a(n), _();
+        }, [a, _, n]),
+        E = i.useCallback(
+            (e) => {
+                e.preventDefault(), m(!0), navigator.clipboard.writeText(n.toLowerCase());
+            },
+            [n],
+        );
     return (0, r.jsx)(s.j7V, {
         value: f,
         onChange: g,
         className: t,
         children: (0, r.jsxs)("div", {
-            style: {
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginRight: "8px",
-            },
+            className: d.container,
             children: [
                 (0, r.jsxs)("div", {
-                    style: {
-                        display: "flex",
-                        flexDirection: "column",
-                    },
+                    className: d.textContainer,
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: d.marginTop4,
+                            className: d.text,
                             children: "".concat(n.toLowerCase(), " (").concat(o.z[n], ")"),
                         }),
-                        (0, c.qh)(l) && (0, r.jsx)(_, { content: l }),
+                        (0, c.qh)(l) && (0, r.jsx)(p, { content: l }),
                     ],
                 }),
                 (0, r.jsx)(s.hU, {
                     size: "sm",
+                    variant: "icon-only",
                     icon: h ? s.C2q : s.zTD,
-                    onClick: (e) => {
-                        e.stopPropagation(), m(!0), navigator.clipboard.writeText(n.toLowerCase());
-                    },
+                    onClick: E,
                     "aria-label": h ? "Copied" : "Copy",
                 }),
             ],
         }),
     });
 });
-function _(e) {
+function p(e) {
     let { content: t } = e,
         n = (0, a.e7)([l.Z], () => {
             var e, n;
@@ -75,7 +72,7 @@ function _(e) {
         ? null
         : (0, r.jsx)(s.Text, {
               variant: "text-xs/normal",
-              className: d.marginTop4,
+              className: f.marginTop4,
               children: i.join(", "),
           });
 }

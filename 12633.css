@@ -53735,6 +53735,23 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     background-image: url(https://cdn.discordapp.com/assets/content/dec663d6f1a34d2c384a7c02d97a2ad2526a0cca19cb894ff9681ecf82b9c7b5.png)
 }
 
+.container__540a3 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8px
+}
+
+.textContainer__540a3 {
+    display: flex;
+    flex-direction: column
+}
+
+.text__540a3 {
+    overflow-wrap: break-word;
+    word-break: break-word
+}
+
 .animator_d17ea2 {
     display: block;
     position: relative
@@ -89521,7 +89538,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

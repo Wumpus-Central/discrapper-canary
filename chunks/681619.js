@@ -7,7 +7,7 @@ var a = n(951288),
     o = n(451429);
 function c(e) {
     let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
-        x = r.useMemo(
+        h = r.useMemo(
             () =>
                 t.map((e) =>
                     (function (e) {
@@ -47,13 +47,13 @@ function c(e) {
                 ),
             [t],
         ),
-        h = [n.length];
+        p = 0 === n.length ? [1] : [n.length];
     return (0, a.jsx)("div", {
         className: o.tableContainer,
         children: (0, a.jsx)(s.Tvr, {
             className: l,
             innerClassName: o.table,
-            sections: h,
+            sections: p,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
@@ -62,7 +62,7 @@ function c(e) {
                     "div",
                     {
                         className: r,
-                        children: x.map((e) => {
+                        children: h.map((e) => {
                             var r, l;
                             let i = e.cellClassName,
                                 s = {
@@ -87,18 +87,19 @@ function c(e) {
             rowHeight: m,
             renderRow: (e) => {
                 let { rowIndex: t } = e,
-                    r = n[t],
-                    l = r.key,
-                    h = i()(o.tableRow, {
+                    r = n[t];
+                if (null == r) return null;
+                let l = r.key,
+                    p = i()(o.tableRow, {
                         [o.selectedTableRow]: l === u,
                         rowClassName: c,
                     });
                 return (0, a.jsx)(
                     s.P3F,
                     {
-                        className: h,
+                        className: p,
                         onClick: () => (null == d ? void 0 : d(r)),
-                        children: x.map((e) => {
+                        children: h.map((e) => {
                             var n, l;
                             let i = e.cellClassName,
                                 s = {
