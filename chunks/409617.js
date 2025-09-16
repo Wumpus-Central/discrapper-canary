@@ -11,9 +11,9 @@ var i = t(951288),
     m = t(236289),
     p = t(788080),
     u = t(613734),
-    _ = t(800530),
-    h = t(388032),
-    g = t(707489),
+    g = t(800530),
+    _ = t(388032),
+    h = t(707489),
     C = t(186425);
 function N(e) {
     let { className: n, isDsaEligible: t = !1, onClose: s, onNext: N, onBack: j } = e,
@@ -22,9 +22,9 @@ function N(e) {
         [T, v] = a.useState(""),
         [f, k] = a.useState(!1);
     a.useEffect(() => {
-        v(null != E ? E : ""), k(I === _.bK.SOMETHING_ELSE);
+        v(null != E ? E : ""), k(I === g.bK.SOMETHING_ELSE);
     }, [E, I, t]);
-    let S = _.RY.map((e) => ({
+    let S = g.RY.map((e) => ({
         value: e,
         name: (0, p.ox)(e),
     }));
@@ -39,16 +39,17 @@ function N(e) {
                     (0, i.jsx)(c.X6q, {
                         className: C.title,
                         variant: "heading-xl/semibold",
-                        children: h.intl.string(h.t["C5q+pa"]),
+                        children: _.intl.string(_.t["C5q+pa"]),
                     }),
                     (0, i.jsx)(c.Text, {
                         className: C.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: h.intl.string(h.t.VEcRh4),
+                        children: _.intl.string(_.t.VEcRh4),
                     }),
                     null != s &&
                         (0, i.jsx)(c.olH, {
+                            "data-migration-pending": !0,
                             className: C.closeButton,
                             onClick: s,
                         }),
@@ -56,7 +57,7 @@ function N(e) {
             }),
             (0, i.jsxs)(c.hzk, {
                 "data-migration-pending": !0,
-                className: l()(g.modalContent, n),
+                className: l()(h.modalContent, n),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(o.Gu, {
@@ -67,8 +68,8 @@ function N(e) {
                         options: S,
                         onChange: (e) => {
                             let { value: n } = e;
-                            k(n === _.bK.SOMETHING_ELSE),
-                                n !== _.bK.SOMETHING_ELSE &&
+                            k(n === g.bK.SOMETHING_ELSE),
+                                n !== g.bK.SOMETHING_ELSE &&
                                     (v(""),
                                     d.Z.dispatch({
                                         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
@@ -87,7 +88,7 @@ function N(e) {
                                 (0, i.jsx)(c.Kx8, {
                                     rows: 4,
                                     maxLength: 1024,
-                                    placeholder: h.intl.string(h.t.bQrZIC),
+                                    placeholder: _.intl.string(_.t.bQrZIC),
                                     value: T,
                                     onChange: v,
                                     autoFocus: !0,
@@ -95,14 +96,14 @@ function N(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-muted",
-                                    children: h.intl.string(h.t.xfNY3N),
+                                    children: _.intl.string(_.t.xfNY3N),
                                 }),
                             ],
                         }),
                     (0, i.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        className: g.disclaimer,
-                        children: h.intl.format(h.t["8k9GCQ"], {}),
+                        className: h.disclaimer,
+                        children: _.intl.format(_.t["8k9GCQ"], {}),
                     }),
                 ],
             }),
@@ -113,7 +114,7 @@ function N(e) {
                     children: [
                         (0, i.jsx)(c.zxk, {
                             variant: "primary",
-                            text: h.intl.string(h.t.PDTjLC),
+                            text: _.intl.string(_.t.PDTjLC),
                             onClick: () => {
                                 d.Z.dispatch({
                                     type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
@@ -124,7 +125,7 @@ function N(e) {
                         }),
                         (0, i.jsx)(c.zxk, {
                             variant: "secondary",
-                            text: h.intl.string(h.t["13/7kZ"]),
+                            text: _.intl.string(_.t["13/7kZ"]),
                             onClick: () => {
                                 d.Z.dispatch({
                                     type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",

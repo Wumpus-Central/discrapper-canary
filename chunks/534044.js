@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => g });
 var i = t(951288);
 t(647438);
 var a = t(120356),
@@ -12,9 +12,9 @@ var a = t(120356),
     m = t(691196),
     p = t(186425),
     u = t(160557);
-function _(e) {
+function g(e) {
     let { className: n, onNext: t, onClose: a } = e,
-        _ = (0, o.n)();
+        g = (0, o.n)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(l.xBx, {
@@ -44,6 +44,7 @@ function _(e) {
                     }),
                     null != a &&
                         (0, i.jsx)(l.olH, {
+                            "data-migration-pending": !0,
                             className: p.closeButton,
                             onClick: a,
                         }),
@@ -63,12 +64,12 @@ function _(e) {
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => _(d.n0.ClickCommunityGuidelinesLink),
+                        onClick: () => g(d.n0.ClickCommunityGuidelinesLink),
                     }),
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => _(d.n0.ClickWarningSystemHelpcenterLink),
+                        onClick: () => g(d.n0.ClickWarningSystemHelpcenterLink),
                     }),
                 ],
             }),

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => g }), t(953529), t(388685);
+t.d(n, { Z: () => h }), t(953529), t(388685);
 var i = t(951288),
     a = t(647438),
     s = t(442837),
@@ -11,17 +11,17 @@ var i = t(951288),
     m = t(613734),
     p = t(981631),
     u = t(388032),
-    _ = t(545833),
-    h = t(186425);
-function g(e) {
-    let { className: n, isDsaEligible: t, onClose: g, onNext: C, onBack: N } = e,
+    g = t(545833),
+    _ = t(186425);
+function h(e) {
+    let { className: n, isDsaEligible: t, onClose: h, onNext: C, onBack: N } = e,
         j = (0, s.e7)([d.Z], () => d.Z.getAppealClassificationId()),
         { classification: I } = (0, m.YG)(null != j ? j : p.lds),
         E = (0, x.c7)(null == I ? void 0 : I.description),
         T = (0, s.e7)([d.Z], () => d.Z.getIsSubmitting()),
         v = (0, s.e7)([d.Z], () => d.Z.getAppealSignal()),
         f = (0, s.e7)([d.Z], () => d.Z.getFreeTextAppealReason()),
-        [S, k] = a.useState(!1),
+        [k, S] = a.useState(!1),
         [A, Z] = a.useState(""),
         L = a.useCallback((e) => {
             r.Z.dispatch({
@@ -43,24 +43,25 @@ function g(e) {
             (0, i.jsxs)(l.xBx, {
                 "data-migration-pending": !0,
                 direction: o.Z.Direction.VERTICAL,
-                className: h.header,
+                className: _.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(l.X6q, {
-                        className: h.title,
+                        className: _.title,
                         variant: "heading-xl/semibold",
                         children: u.intl.string(u.t["C5q+pa"]),
                     }),
                     (0, i.jsx)(l.Text, {
-                        className: h.subtitle,
+                        className: _.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
                         children: u.intl.string(u.t["G2g/g4"]),
                     }),
-                    null != g &&
+                    null != h &&
                         (0, i.jsx)(l.olH, {
-                            className: h.closeButton,
-                            onClick: g,
+                            "data-migration-pending": !0,
+                            className: _.closeButton,
+                            onClick: h,
                         }),
                 ],
             }),
@@ -70,14 +71,14 @@ function g(e) {
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)("ul", {
-                        className: _.listContainer,
+                        className: g.listContainer,
                         children: [(0, x.ox)(v), f]
                             .filter((e) => e.length > 0)
                             .map((e, n) =>
                                 (0, i.jsx)(
                                     "li",
                                     {
-                                        className: _.listItem,
+                                        className: g.listItem,
                                         children: (0, i.jsx)(l.Text, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -90,9 +91,9 @@ function g(e) {
                     }),
                     t &&
                         (0, i.jsx)("div", {
-                            className: _.anchorContainer,
+                            className: g.anchorContainer,
                             children: (0, i.jsx)(l.eee, {
-                                onClick: () => k((e) => !e),
+                                onClick: () => S((e) => !e),
                                 children: (0, i.jsx)(l.X6q, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
@@ -100,17 +101,17 @@ function g(e) {
                                 }),
                             }),
                         }),
-                    S &&
+                    k &&
                         t &&
                         (0, i.jsx)("div", {
-                            className: _.inputContainer,
+                            className: g.inputContainer,
                             children: (0, i.jsx)(l.Kx8, {
                                 value: f,
                                 onChange: L,
                             }),
                         }),
                     (0, i.jsx)("div", {
-                        className: h.policyContainer,
+                        className: _.policyContainer,
                         children: (0, i.jsx)(l.Text, {
                             variant: "text-md/semibold",
                             children: E,
@@ -119,7 +120,7 @@ function g(e) {
                     (0, i.jsx)(l.Text, {
                         variant: "text-xs/medium",
                         color: "header-secondary",
-                        className: _.footerText,
+                        className: g.footerText,
                         children: u.intl.string(u.t.d6qgY2),
                     }),
                 ],
@@ -130,13 +131,13 @@ function g(e) {
                 children: [
                     "" !== A &&
                         (0, i.jsx)(l.Text, {
-                            className: _.errorText,
+                            className: g.errorText,
                             variant: "text-lg/normal",
                             color: "text-danger",
                             children: A,
                         }),
                     (0, i.jsx)("div", {
-                        className: _.buttonContainer,
+                        className: g.buttonContainer,
                         children: (0, i.jsxs)(l.hE2, {
                             direction: "horizontal-reverse",
                             children: [
