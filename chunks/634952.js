@@ -1,12 +1,9 @@
 n.d(t, {
-    A0: () => l,
-    Lz: () => o,
-    ZO: () => s,
+    A0: () => a,
+    Lz: () => r,
+    ZO: () => i,
 });
-var r = n(442837),
-    i = n(818083),
-    a = n(594174);
-let o = (0, i.B)({
+let r = (0, n(818083).B)({
     kind: "guild",
     id: "2025-08_portkey_enabled",
     label: "Portkey Enabled",
@@ -19,31 +16,21 @@ let o = (0, i.B)({
         },
     ],
 });
-function s(e, t) {
-    var n, r;
-    let i = null != (r = null == (n = a.default.getCurrentUser()) ? void 0 : n.isStaff()) && r;
-    return (
-        o.getCurrentConfig(
-            {
-                guildId: e,
-                location: t,
-            },
-            { autoTrackExposure: !1 },
-        ).enabled && i
-    );
+function i(e, t) {
+    return r.getCurrentConfig(
+        {
+            guildId: e,
+            location: t,
+        },
+        { autoTrackExposure: !1 },
+    ).enabled;
 }
-function l(e, t) {
-    let n = (0, r.e7)([a.default], () => {
-        var e, t;
-        return null != (t = null == (e = a.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
-    });
-    return (
-        o.useExperiment(
-            {
-                guildId: e,
-                location: t,
-            },
-            { autoTrackExposure: !1 },
-        ).enabled && n
-    );
+function a(e, t) {
+    return r.useExperiment(
+        {
+            guildId: e,
+            location: t,
+        },
+        { autoTrackExposure: !1 },
+    ).enabled;
 }

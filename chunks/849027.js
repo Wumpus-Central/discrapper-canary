@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(430198),
     i = n(897345),
     a = n(697379),
@@ -13,54 +13,52 @@ var r = n(430198),
     p = n(592125),
     h = n(485386),
     m = n(430824),
-    g = n(594174),
-    E = n(823379),
-    b = n(754688),
-    y = n(981631),
-    O = n(176505);
-async function v(e) {
+    g = n(823379),
+    E = n(754688),
+    b = n(981631),
+    y = n(176505);
+async function O(e) {
     let { guildId: t, channelId: n } = e,
-        v = m.Z.getGuild(t),
-        I = h.Z.getUnsafeMutableRoles(t);
-    if (null == v && t !== y.ME) return !1;
+        O = m.Z.getGuild(t),
+        v = h.Z.getUnsafeMutableRoles(t);
+    if (null == O && t !== b.ME) return !1;
     if (null == n) return !0;
-    if ((0, O.AB)(n))
+    if ((0, y.AB)(n))
         switch (n) {
-            case O.oC.ROLE_SUBSCRIPTIONS:
-                return (0, c.on)(t, I);
-            case O.oC.SERVER_MONETIZATION_ONBOARDING:
-                return null != v && (0, u.U)(v);
-            case O.oC.GUILD_SHOP:
-                return (0, i.r)(v, I);
-            case O.oC.MEMBER_APPLICATIONS:
+            case y.oC.ROLE_SUBSCRIPTIONS:
+                return (0, c.on)(t, v);
+            case y.oC.SERVER_MONETIZATION_ONBOARDING:
+                return null != O && (0, u.U)(O);
+            case y.oC.GUILD_SHOP:
+                return (0, i.r)(O, v);
+            case y.oC.MEMBER_APPLICATIONS:
                 return (0, a.v)(t);
-            case O.oC.GUILD_HOME:
+            case y.oC.GUILD_HOME:
                 return (0, l.s)(t);
-            case O.oC.CHANNEL_BROWSER:
-                return null != v && v.features.has(y.oNc.COMMUNITY);
-            case O.oC.GUILD_ONBOARDING:
+            case y.oC.CHANNEL_BROWSER:
+                return null != O && O.features.has(b.oNc.COMMUNITY);
+            case y.oC.GUILD_ONBOARDING:
                 return s.ZP.shouldShowOnboarding(t);
-            case O.oC.CUSTOMIZE_COMMUNITY:
-                return null != v && v.features.has(y.oNc.COMMUNITY);
-            case O.oC.MEMBER_SAFETY:
+            case y.oC.CUSTOMIZE_COMMUNITY:
+                return null != O && O.features.has(b.oNc.COMMUNITY);
+            case y.oC.MEMBER_SAFETY:
                 return (0, o.lv)(t);
-            case O.oC.GUILD_BOOSTS:
+            case y.oC.GUILD_BOOSTS:
                 return !0;
-            case O.oC.REPORT_TO_MOD:
-                return null != v && (0, f.Z)(v);
-            case O.oC.PORTKEY:
-                var T, S;
+            case y.oC.REPORT_TO_MOD:
+                return null != O && (0, f.Z)(O);
+            case y.oC.PORTKEY:
                 return (
                     (0, d.ZO)(t, "isAccessibleChannelOrThreadPath") &&
-                    ((null != v && v.features.has(y.oNc.GAME_SERVER_HOSTING)) ||
-                        (null != (S = null == (T = g.default.getCurrentUser()) ? void 0 : T.isStaff()) && S))
+                    null != O &&
+                    O.features.has(b.oNc.GAME_SERVER_HOSTING)
                 );
             default:
-                (0, E.vE)(n);
+                (0, g.vE)(n);
         }
-    let A = p.Z.getChannel(n);
+    let I = p.Z.getChannel(n);
     return (
-        (null != A || (await _.Z.loadThread(n), null != (A = p.Z.getChannel(n)))) &&
-        ((0, b.YO)(A) || r.Z.isChannelGatedAndVisible(t, n))
+        (null != I || (await _.Z.loadThread(n), null != (I = p.Z.getChannel(n)))) &&
+        ((0, E.YO)(I) || r.Z.isChannelGatedAndVisible(t, n))
     );
 }
