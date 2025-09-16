@@ -4,7 +4,7 @@ async function r() {
         Promise.resolve().then(n.bind(n, 490340)),
         n.e("81172").then(n.bind(n, 456003)),
         n.e("95339").then(n.bind(n, 637824)),
-        n.e("34988").then(n.bind(n, 899926)),
+        Promise.resolve().then(n.bind(n, 899926)),
         Promise.resolve().then(n.bind(n, 345909)),
         Promise.resolve().then(n.bind(n, 989308)),
         n.e("22556").then(n.bind(n, 349637)),

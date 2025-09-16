@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => y,
-    eI: () => E,
-    m0: () => b,
+    ZP: () => O,
+    eI: () => b,
+    m0: () => y,
 });
 var r = n(951288),
     i = n(647438),
@@ -15,8 +15,9 @@ var r = n(951288),
     f = n(731722),
     _ = n(131085),
     p = n(388032),
-    h = n(655262);
-function m(e, t, n) {
+    h = n(899926),
+    m = n(655262);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +30,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,24 +41,24 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-let E = i.memo(function (e) {
-        let { src: t, tag: n, className: i, size: a = _.Gg.SIZE_16 } = e;
+let b = i.memo(function (e) {
+        let { src: t, className: n, size: i = _.Gg.SIZE_16 } = e;
         return null == t
             ? null
             : (0, r.jsx)("img", {
                   src: t,
-                  alt: p.intl.formatToPlainString(p.t.uPLDZG, { tag: n }),
-                  className: o()(h.badge, i),
-                  width: a,
-                  height: a,
+                  alt: "",
+                  className: o()(m.badge, n),
+                  width: i,
+                  height: i,
               });
     }),
-    b = i.memo(function (e) {
+    y = i.memo(function (e) {
         let {
             guildId: t,
             guildTag: n,
@@ -67,50 +68,50 @@ let E = i.memo(function (e) {
             badgeClassName: c,
             onClick: u,
             onMouseEnter: d,
-            textVariant: p = "text-xs/semibold",
-            textColor: m = "text-default",
-            badgeSize: g = _.Gg.SIZE_14,
-            inline: b = !0,
+            textVariant: g = "text-xs/semibold",
+            textColor: E = "text-default",
+            badgeSize: y = _.Gg.SIZE_14,
+            inline: O = !0,
         } = e;
         return (0, r.jsx)(l.P3F, {
+            "aria-label": p.intl.formatToPlainString(h.default["fw2p//"], { tag: n }),
             tag: "span",
             tabIndex: null == u ? -1 : void 0,
             onClick: u,
             onMouseEnter: d,
-            className: o()(h.chipletContainerInner, b && h.chipletContainerInline, null != u && h.clickable, a),
+            className: o()(m.chipletContainerInner, O && m.chipletContainerInline, null != u && m.clickable, a),
             children: (0, r.jsxs)(l.Text, {
-                variant: p,
+                variant: g,
                 lineClamp: 1,
-                color: m,
+                color: E,
                 tag: "span",
-                className: o()(h.text, s),
+                className: o()(m.text, s),
                 children: [
                     null != i && "string" == typeof i
-                        ? (0, r.jsx)(E, {
-                              src: (0, f.Ic)(t, i, g),
-                              tag: null == n ? void 0 : n.toString(),
-                              size: g,
+                        ? (0, r.jsx)(b, {
+                              src: (0, f.Ic)(t, i, y),
+                              size: y,
                               className: c,
                           })
                         : i,
                     (0, r.jsx)("span", {
-                        className: h.tagText,
+                        className: m.tagText,
                         children: n,
                     }),
                 ],
             }),
         });
     }),
-    y = i.memo(function (e) {
+    O = i.memo(function (e) {
         var t;
         let {
                 primaryGuild: n,
                 userId: a,
                 contextGuildId: _,
                 className: p,
-                containerClassName: m,
-                textVariant: E,
-                textColor: y,
+                containerClassName: h,
+                textVariant: g,
+                textColor: b,
                 badgeSize: O,
                 disableGuildProfile: v = !1,
                 inline: I = !0,
@@ -124,13 +125,13 @@ let E = i.memo(function (e) {
             { tag: P, badge: w, guildId: D } = (0, f.Pb)(R);
         return (0, f.yF)(a, _) && null != D
             ? v
-                ? (0, r.jsx)(b, {
+                ? (0, r.jsx)(y, {
                       guildId: D,
                       guildTag: P,
                       guildBadge: w,
-                      className: o()(h.noTooltip, p),
-                      textVariant: E,
-                      textColor: y,
+                      className: o()(m.noTooltip, p),
+                      textVariant: g,
+                      textColor: b,
                       badgeSize: O,
                       inline: I,
                   })
@@ -143,18 +144,18 @@ let E = i.memo(function (e) {
                           targetElementRef: A,
                           children: (e) =>
                               (0, r.jsx)("span", {
-                                  className: m,
+                                  className: h,
                                   ref: A,
                                   children: (0, r.jsx)(
-                                      b,
-                                      g(
+                                      y,
+                                      E(
                                           {
                                               guildId: D,
                                               guildTag: P,
                                               guildBadge: w,
                                               className: p,
-                                              textVariant: E,
-                                              textColor: y,
+                                              textVariant: g,
+                                              textColor: b,
                                               badgeSize: O,
                                               inline: I,
                                           },

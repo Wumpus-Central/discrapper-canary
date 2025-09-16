@@ -16,7 +16,6 @@ let b = n.memo(function (a) {
                 null != t.badge &&
                     (0, s.jsx)(c.eI, {
                         src: (0, i.Ic)(e, t.badge, g.Gg.SIZE_32),
-                        tag: t.tag,
                         size: g.Gg.SIZE_32,
                         className: r.badge,
                     }),
