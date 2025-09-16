@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(481060),
     o = n(871499),
-    s = n(510839),
+    s = n(48131),
     l = n(388032);
 function c(e, t, n) {
     return (
@@ -82,7 +82,7 @@ function h(e) {
     var { applicationId: t, centerButton: n = !1 } = e,
         c = _(e, ["applicationId", "centerButton"]);
     let d = i.useCallback(() => {
-            (0, s.xT)({ applicationId: t });
+            s.Z.stopFrame({ applicationId: t });
         }, [t]),
         p = n ? o.d : o.Z;
     return (0, r.jsx)(

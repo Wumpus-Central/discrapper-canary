@@ -40,7 +40,7 @@ var r = n(990547),
     v = n(605236),
     I = n(233764),
     T = n(375824),
-    S = n(510839),
+    S = n(48131),
     A = n(591472),
     C = n(957730),
     N = n(48854),
@@ -137,7 +137,7 @@ async function es(e) {
     try {
         let e = A.Z.getConnectedFrame();
         if (
-            (null != e && (0, S.xT)({ applicationId: e.applicationId }),
+            (null != e && S.Z.stopFrame({ applicationId: e.applicationId }),
             s.Z.dispatch({
                 type: "EMBEDDED_ACTIVITY_LAUNCH_START",
                 nonce: C,

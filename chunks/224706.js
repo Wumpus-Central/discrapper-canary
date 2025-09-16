@@ -9,7 +9,7 @@ var r = n(664751),
     u = n(812206),
     d = n(439849),
     f = n(710845),
-    _ = n(510839),
+    _ = n(48131),
     p = n(813370),
     h = n(669764),
     m = n(75487),
@@ -129,7 +129,7 @@ async function B(e) {
     if (i) {
         let e = u.Z.getApplication(t);
         return null != e && (0, p.g)(e)
-            ? ((0, _.s2)({ applicationId: t }), 0)
+            ? (_.Z.launchFrame({ applicationId: t }), 0)
             : (await (0, c.Z)({
                     applicationId: t,
                     activityChannelId: null != r ? r : void 0,

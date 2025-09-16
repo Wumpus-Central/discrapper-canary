@@ -2,7 +2,7 @@ n.d(t, { Z: () => G }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(519938),
+    o = n(523238),
     s = n(317381),
     l = n(988980),
     c = n(16609),
@@ -156,9 +156,9 @@ let G = a.ZP.connectStores([b.Z, s.ZP, C.Z, O.Z, T.Z, A.Z, S.Z, f.Z, v.ZP, p.Z],
             return e;
         };
     h =
-        (null != L && x) || (V && M)
+        (null != L && x) || (V && M) || (V && null != Z)
             ? null
-            : V || !I || M
+            : V || !I || M || null != Z
               ? null != L && G
                   ? null != (n = S.Z.pipActivityWindow)
                       ? n

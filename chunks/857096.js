@@ -13,7 +13,7 @@ var i = n(120356),
     _ = n(607187),
     p = n(937995),
     h = n(366050),
-    m = n(510839),
+    m = n(48131),
     g = n(591472),
     E = n(754376),
     b = n(408491),
@@ -51,7 +51,7 @@ function T(e) {
                           onMouseDown: t,
                           onMouseLeave: i,
                           onFocus: () => {
-                              (0, m.eU)({
+                              m.Z.updateFrameLayoutMode({
                                   applicationId: n.applicationId,
                                   layoutMode: b.U.FOCUSED,
                               });

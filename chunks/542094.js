@@ -12,7 +12,7 @@ var r = n(493683),
     i = n(911969),
     a = n(906732),
     o = n(835473),
-    s = n(510839),
+    s = n(48131),
     l = n(813370),
     c = n(630388),
     u = n(358085),
@@ -146,7 +146,7 @@ function N(e) {
             return async () => {
                 if (R) {
                     try {
-                        await (0, s.s2)({ applicationId: T }), null == p || p({ applicationId: T });
+                        await s.Z.launchFrame({ applicationId: T }), null == p || p({ applicationId: T });
                     } catch (e) {}
                     return;
                 }

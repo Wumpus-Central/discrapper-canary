@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(871499),
     b = n(786915),
     _ = n(944486),
-    O = n(510839),
+    O = n(48131),
     E = n(214143),
     y = n(610278),
     v = n(408491),
@@ -45,13 +45,13 @@ function P(e) {
             height: 0,
         }),
         k = i.useCallback(() => {
-            (0, O.eU)({
+            O.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
                 layoutMode: v.U.PIP,
             });
         }, [t.applicationId]),
         M = i.useCallback(() => {
-            (0, O.xT)({ applicationId: t.applicationId });
+            O.Z.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
         if (null == L.current) return;
@@ -69,7 +69,7 @@ function P(e) {
                 null == w.current ||
                     w.current.contains(e.target) ||
                     l ||
-                    (0, O.eU)({
+                    O.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
                         layoutMode: v.U.PIP,
                     });
