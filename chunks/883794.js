@@ -1,16 +1,21 @@
 n.d(t, { U: () => o });
-var r = n(818083),
+var r = n(427164),
     i = n(751823);
-let a = (0, r.B)({
+let a = (0, r.le)({
     kind: "user",
-    id: "2025-07_agc2",
-    label: "WebRTC AGC2",
-    defaultConfig: { useAGC2: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "WebRTC defaults",
-            config: {
+    name: "2025-09-agc2-v2",
+    defaultConfig: {
+        noiseCancellationDuringProcessing: !1,
+        noiseCancellationConfig: { useAGC2: !1 },
+    },
+    variations: {
+        1: {
+            noiseCancellationDuringProcessing: !0,
+            noiseCancellationConfig: { useAGC2: !1 },
+        },
+        2: {
+            noiseCancellationDuringProcessing: !0,
+            noiseCancellationConfig: {
                 useAGC2: !0,
                 enableAnalog: !1,
                 enableDigital: !0,
@@ -22,22 +27,16 @@ let a = (0, r.B)({
                 fixed_gain_db: 0,
             },
         },
-    ],
+    },
 });
 function o(e) {
-    let { location: t, autoTrackExposure: n = !0, disable: r = !1 } = e,
-        { isInHoldout: o } = i.L.getCurrentConfig(
+    let { location: t, disable: n = !1 } = e,
+        { isInHoldout: r } = i.L.getCurrentConfig(
             { location: t },
             {
-                disable: r,
-                autoTrackExposure: n,
+                disable: n,
+                autoTrackExposure: !0,
             },
         );
-    return a.getCurrentConfig(
-        { location: t },
-        {
-            disable: r || o,
-            autoTrackExposure: n,
-        },
-    );
+    return r || n ? a.definition.defaultConfig : a.getConfig({ location: t });
 }
