@@ -4,6 +4,7 @@ n.d(t, {
     NE: () => b,
     g$: () => p,
     po: () => m,
+    s9: () => f,
 });
 var a = n(544891),
     r = n(570140),
@@ -93,6 +94,14 @@ function b(e, t, n, r) {
             game_server_name: n,
             game_server_region: r,
         },
+        rejectWithError: !0,
+        oldFormErrors: !0,
+    });
+}
+function f(e, t, n) {
+    return a.tn.del({
+        url: u.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        query: { entitlement_id: n },
         rejectWithError: !0,
         oldFormErrors: !0,
     });

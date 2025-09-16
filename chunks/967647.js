@@ -1,12 +1,12 @@
 t.d(n, { Q: () => a });
 var i = t(951288),
     r = t(481060);
-function a(e) {
+function a(e, n) {
     (0, r.ZDy)(async () => {
-        let { default: n } = await t.e("88856").then(t.bind(t, 862065));
+        let { default: r } = await t.e("88856").then(t.bind(t, 862065));
         return (t) =>
             (0, i.jsx)(
-                n,
+                r,
                 (function (e) {
                     for (var n = 1; n < arguments.length; n++) {
                         var t = null != arguments[n] ? arguments[n] : {},
@@ -31,7 +31,13 @@ function a(e) {
                             });
                     }
                     return e;
-                })({ gameInstance: e }, t),
+                })(
+                    {
+                        guildId: e,
+                        gameInstance: n,
+                    },
+                    t,
+                ),
             );
     });
 }

@@ -1,12 +1,13 @@
-n.d(t, { default: () => s });
+n.d(t, { default: () => l });
 var r = n(951288),
     o = n(625651),
-    a = n(401561),
-    i = n(388032),
-    c = n(775488);
-function s(e) {
-    var { gameInstance: t } = e,
-        n = (function (e, t) {
+    a = n(744993),
+    i = n(401561),
+    c = n(388032),
+    s = n(775488);
+function l(e) {
+    var { guildId: t, gameInstance: n } = e,
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,7 +27,7 @@ function s(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
-        })(e, ["gameInstance"]);
+        })(e, ["guildId", "gameInstance"]);
     return (0, r.jsx)(
         o.f,
         (function (e) {
@@ -56,20 +57,24 @@ function s(e) {
         })(
             {
                 size: "sm",
-                title: t.name,
+                title: n.name,
                 body: (0, r.jsx)("div", {
-                    className: c.imageContainer,
+                    className: s.imageContainer,
                     children: (0, r.jsx)("img", {
                         alt: "",
                         src: "",
-                        className: c.image,
+                        className: s.image,
                     }),
                 }),
-                warningText: i.intl.string(a.default.oHNuWl),
+                warningText: c.intl.string(i.default.oHNuWl),
                 isLoading: !1,
-                onDeactivate: () => {},
+                onDeactivate: () => {
+                    (0, a.s9)(t, n.planId, n.entitlementId).then(() => {
+                        l.onClose();
+                    });
+                },
             },
-            n,
+            l,
         ),
     );
 }
