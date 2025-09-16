@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
-    o = n(28546),
-    a = n(98528),
+    a = n(28546),
+    o = n(98528),
     s = n(429155),
     l = n(810462),
     c = n(681561);
@@ -95,9 +95,9 @@ function p(e) {
         Z = i.useRef(null),
         F = i.useRef(null),
         V = 0 === t.length,
-        H = (0, o.Iu)((e) => e.searchQuery),
+        H = (0, a.Iu)((e) => e.searchQuery),
         Y = f.useStore((e) => e.inspectedExpressionPosition),
-        W = (0, a.ep)({
+        W = (0, o.ep)({
             gridWrapperRef: B,
             containerWidth: u,
             showingEmptyState: V,
@@ -108,7 +108,7 @@ function p(e) {
             rowCountBySection: q,
             columnCounts: X,
             gutterWidth: Q,
-        } = (0, a.yi)({
+        } = (0, o.yi)({
             categories: t,
             collapsedCategories: n,
             gridWidth: W,
@@ -122,7 +122,7 @@ function p(e) {
             gridContainerProps: ee,
             handleGridContainerKeyDown: et,
             isUsingKeyboardNavigation: en,
-        } = (0, a.t$)({
+        } = (0, o.t$)({
             columnCounts: X,
             expressionsListRef: Z,
             expressionsGrid: K,
@@ -147,10 +147,9 @@ function p(e) {
                 ),
             [K, J, $, Q, en, O, f, z],
         ),
-        ei = i.useCallback((e) => (null == v ? void 0 : v(t[e])), [t, v]),
-        eo = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
+        ei = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
         ea = i.useCallback((e) => (null == T ? void 0 : T(t[e], e)), [t, T]),
-        es = i.useCallback(() => {
+        eo = i.useCallback(() => {
             var e;
             return null == S ? void 0 : S(null == K || null == (e = K[Y.rowIndex]) ? void 0 : e[Y.columnIndex]);
         }, [K, Y.columnIndex, Y.rowIndex, S]);
@@ -168,7 +167,7 @@ function p(e) {
             var e;
             null == (e = F.current) || e.focus();
         }, []);
-    let el = (0, r.jsxs)(r.Fragment, {
+    let es = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Z, {
                 ref: F,
@@ -186,10 +185,10 @@ function p(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != U
-                ? U(el)
+                ? U(es)
                 : (0, r.jsxs)("div", {
                       className: c.header,
-                      children: [" ", el, " "],
+                      children: [" ", es, " "],
                   }),
             V && null != y
                 ? y(c.emptyState)
@@ -222,10 +221,10 @@ function p(e) {
                                                     hasSearchResults: g,
                                                     listPadding: j,
                                                     renderRow: er,
-                                                    renderSection: null != v ? ei : void 0,
-                                                    renderSectionHeader: null != I ? eo : void 0,
+                                                    renderSection: v,
+                                                    renderSectionHeader: null != I ? ei : void 0,
                                                     renderSectionFooter: null != T ? ea : void 0,
-                                                    renderInspector: null != S ? es : void 0,
+                                                    renderInspector: null != S ? eo : void 0,
                                                     renderEmptySearchState: A,
                                                     rowCount: z,
                                                     rowCountBySection: q,
