@@ -24,8 +24,6 @@ e.exports = {
     iconServer: "iconServer__07f91",
     strikethrough: "strikethrough__07f91",
     selected: "selected__07f91",
-    optionsButton: "optionsButton__07f91",
-    optionsActive: "optionsActive__07f91",
     clanTag: "clanTag__07f91",
     isOverlay: "isOverlay__07f91",
     usernameSpeaking: "usernameSpeaking__07f91",
