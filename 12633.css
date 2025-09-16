@@ -58997,9 +58997,8 @@ h3.improved__1689b:after {
     border-radius: var(--radius-xl);
     max-width: 100%;
     min-width: 0;
-    padding: 9px 13px;
-    pointer-events: none;
-    text-transform: uppercase
+    padding: 7px 12px;
+    pointer-events: none
 }
 
 .isExpanded__8a22c {

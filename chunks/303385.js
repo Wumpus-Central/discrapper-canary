@@ -26,7 +26,7 @@ let p = 64,
             I = y ? 70 : 48,
             T = y ? 12 : 8,
             S = y ? -74 : -48,
-            A = y ? 2 : O ? -4 : 6,
+            A = y ? 0 : O ? -4 : 6,
             C = 12;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -114,7 +114,7 @@ let p = 64,
                             children: (0, r.jsx)(s.Text, {
                                 color: "always-white",
                                 lineClamp: 1,
-                                variant: O ? "text-sm/medium" : "text-xs/medium",
+                                variant: "text-xs/medium",
                                 children: f.intl.string(
                                     (null == b ? void 0 : b.label2) ? f.t["3mgEQU"] : f.t["1Wvve3"],
                                 ),
