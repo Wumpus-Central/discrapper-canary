@@ -30,6 +30,14 @@ let a = (0, r.B)({
                     includeNonProfile: !1,
                 },
             },
+            {
+                id: 3,
+                label: "Same as T1, but these users will not have the setter XP enabled.",
+                config: {
+                    enabled: !0,
+                    includeNonProfile: !0,
+                },
+            },
         ],
     }),
     o = (0, r.B)({
