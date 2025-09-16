@@ -1,47 +1,37 @@
-r.d(t, { Z: () => f }), r(415506);
-var n = r(951288),
-    a = r(647438),
-    i = r(442837),
-    l = r(481060),
-    o = r(271383),
-    s = r(19780),
-    c = r(226961),
-    d = r(594174),
-    u = r(51144),
-    m = r(481250),
-    p = r(388032);
-class h extends a.PureComponent {
-    render() {
-        let { streams: e, context: t, userId: r, mediaEngineConnectionId: a, videoStreams: i } = this.props;
-        if (null == r || null == e || 0 === e.length) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
-        let c = s.Z.getGuildId(),
-            h = d.default.getUser(r),
-            f = o.ZP.getNick(c, r),
-            y =
-                null == h
-                    ? p.intl.string(p.t.SJmZam)
-                    : "".concat(p.intl.string(p.t.SJmZam), " \u2014 ").concat(null != f ? f : u.ZP.getName(h));
-        return (0, n.jsx)(l.hjN, {
-            tag: l.RB0.H2,
-            title: y,
-            children: (0, m.V)(e, t, a, r, i),
-        });
-    }
-}
-let f = i.ZP.connectStores([c.ZP], (e) => {
-    let { context: t, index: r, videoStreams: n } = e,
-        a = c.ZP.getAllStats(t)[r],
-        { section: i } = (0, c.fZ)(c.ZP.getSection());
-    if (null == i) throw Error("Unrecognized section format");
-    let l = null;
+n.d(t, { Z: () => s }), n(415506);
+var r = n(951288);
+n(647438);
+var a = n(442837),
+    i = n(226961),
+    l = n(481250),
+    o = n(388032);
+let s = a.ZP.connectStores([i.ZP], (e) => {
+    let { context: t, index: n, videoStreams: r } = e,
+        a = i.ZP.getAllStats(t)[n],
+        { section: l } = (0, i.fZ)(i.ZP.getSection());
+    if (null == l) throw Error("Unrecognized section format");
+    let o = null;
     if (null != a && null != a.rtp.inbound) {
-        var o;
-        l = null != (o = a.rtp.inbound[i]) ? o : [];
+        var s;
+        o = null != (s = a.rtp.inbound[l]) ? s : [];
     }
     return {
         mediaEngineConnectionId: null == a ? void 0 : a.mediaEngineConnectionId,
-        userId: i,
-        streams: l,
-        videoStreams: n,
+        userId: l,
+        streams: o,
+        videoStreams: r,
     };
-})(h);
+})(function (e) {
+    let { streams: t, context: n, index: a, userId: i, mediaEngineConnectionId: s, videoStreams: c } = e;
+    return (0, r.jsx)(l.lV, {
+        streams: t,
+        context: n,
+        index: a,
+        mediaEngineConnectionId: s,
+        userId: i,
+        videoStreams: c,
+        title: o.intl.string(o.t.SJmZam),
+        showUserInfo: !0,
+        showSimulcastOverride: !0,
+    });
+});

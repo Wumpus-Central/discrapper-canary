@@ -1,14 +1,14 @@
-r.d(t, { Z: () => p }), r(642613), r(539854), r(388685);
-var n = r(951288);
-r(647438);
-var a = r(392711),
-    i = r.n(a),
-    l = r(481060),
-    o = r(481250),
-    s = r(513547),
-    c = r(388032),
-    d = r(966117),
-    u = r(197571);
+n.d(t, { Z: () => p }), n(642613), n(539854), n(388685);
+var r = n(951288);
+n(647438);
+var a = n(392711),
+    i = n.n(a),
+    l = n(481060),
+    o = n(481250),
+    s = n(513547),
+    c = n(388032),
+    d = n(966117),
+    u = n(197571);
 let m = {
     userId: 1,
     dataType: 2,
@@ -23,10 +23,10 @@ let m = {
 };
 function p(e) {
     let { clips: t } = e;
-    if (null == t) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
-    let r = i().map(t, (e, t) => {
+    if (null == t) return (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
+    let n = i().map(t, (e, t) => {
         if (void 0 !== e && "buffers" !== t)
-            return (0, n.jsx)(
+            return (0, r.jsx)(
                 s.ck,
                 {
                     label: t,
@@ -36,8 +36,8 @@ function p(e) {
             );
     });
     return (
-        r.push(
-            (0, n.jsx)(
+        n.push(
+            (0, r.jsx)(
                 s.ck,
                 {
                     label: "Frames Per Second",
@@ -46,41 +46,41 @@ function p(e) {
                 "framerate",
             ),
         ),
-        (0, n.jsxs)(l.hjN, {
+        (0, r.jsxs)(l.hjN, {
             tag: l.RB0.H2,
             title: c.intl.string(c.t.MKrFKC),
             children: [
-                (0, o.a)(r),
+                (0, o.VE)(n),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
                             let t = [];
-                            for (let r of Object.keys(e).sort((e, t) => {
-                                let r = m[e],
-                                    n = m[t];
-                                return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : e > t ? 1 : -1;
+                            for (let n of Object.keys(e).sort((e, t) => {
+                                let n = m[e],
+                                    r = m[t];
+                                return n !== r ? (void 0 === n ? 1 : void 0 === r ? -1 : n - r) : e > t ? 1 : -1;
                             })) {
-                                let a = e[r];
+                                let a = e[n];
                                 null !== a &&
-                                    "key" !== r &&
+                                    "key" !== n &&
                                     t.push(
-                                        (0, n.jsx)(
+                                        (0, r.jsx)(
                                             s.ck,
                                             {
-                                                label: r,
+                                                label: n,
                                                 value: a,
                                             },
-                                            r,
+                                            n,
                                         ),
                                     );
                             }
-                            return (0, n.jsx)(
+                            return (0, r.jsx)(
                                 l.hjN,
                                 {
                                     className: u.marginBottom40,
                                     title: "Buffer: ".concat(e.key),
                                     titleClassName: d.title,
-                                    children: (0, o.a)(t),
+                                    children: (0, o.VE)(t),
                                 },
                                 "Buffer: ".concat(e.key),
                             );

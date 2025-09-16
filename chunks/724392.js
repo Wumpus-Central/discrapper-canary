@@ -1,25 +1,22 @@
-r.d(t, { Z: () => u });
-var n = r(951288),
-    a = r(647438),
-    i = r(442837),
-    l = r(481060),
-    o = r(226961),
-    s = r(481250),
-    c = r(388032);
-class d extends a.PureComponent {
-    render() {
-        let { outbound: e, context: t } = this.props;
-        return null == e
-            ? (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
-            : (0, n.jsx)(l.hjN, {
-                  tag: l.RB0.H2,
-                  title: c.intl.string(c.t["3u0gIC"]),
-                  children: (0, s.V)(e, t),
-              });
-    }
-}
-let u = i.ZP.connectStores([o.ZP], (e) => {
-    let { context: t, index: r } = e,
-        n = o.ZP.getAllStats(t)[r];
-    return { outbound: null != n ? n.rtp.outbound : null };
-})(d);
+n.d(t, { Z: () => s });
+var r = n(951288);
+n(647438);
+var a = n(442837),
+    i = n(226961),
+    l = n(481250),
+    o = n(388032);
+let s = a.ZP.connectStores([i.ZP], (e) => {
+    let { context: t, index: n } = e,
+        r = i.ZP.getAllStats(t)[n];
+    return { outbound: null != r ? r.rtp.outbound : null };
+})(function (e) {
+    let { outbound: t, context: n, index: a } = e;
+    return (0, r.jsx)(l.lV, {
+        streams: t,
+        context: n,
+        index: a,
+        title: o.intl.string(o.t["3u0gIC"]),
+        showUserInfo: !1,
+        showSimulcastOverride: !1,
+    });
+});

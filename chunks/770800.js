@@ -1,74 +1,74 @@
-r.d(t, { Z: () => Z }), r(784620), r(973216);
-var n = r(951288),
-    a = r(647438),
-    i = r(392711),
-    l = r.n(i),
-    o = r(442837),
-    s = r(481060),
-    c = r(600164),
-    d = r(19780),
-    u = r(226961),
-    m = r(914010),
-    p = r(959457),
-    h = r(246946),
-    f = r(594174),
-    y = r(5192),
-    g = r(476221),
-    v = r(481250),
-    D = r(206314),
-    b = r(513547),
-    C = r(65154),
-    E = r(388032),
-    P = r(966117),
-    j = r(197571);
-class R extends a.PureComponent {
+n.d(t, { Z: () => R }), n(784620), n(973216);
+var r = n(951288),
+    a = n(647438),
+    i = n(392711),
+    l = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    c = n(600164),
+    d = n(19780),
+    u = n(226961),
+    m = n(914010),
+    p = n(959457),
+    h = n(246946),
+    f = n(594174),
+    y = n(5192),
+    g = n(476221),
+    v = n(481250),
+    E = n(206314),
+    b = n(513547),
+    D = n(65154),
+    P = n(388032),
+    j = n(966117),
+    C = n(197571);
+class x extends a.PureComponent {
     render() {
         var e, t;
-        let { transport: r, mediaSessionId: a, hidePersonalInformation: i, hostname: o } = this.props;
-        if (null == r) return (0, n.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
+        let { transport: n, mediaSessionId: a, hidePersonalInformation: i, hostname: o } = this.props;
+        if (null == n) return (0, r.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE });
         let d =
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
-                })({}, r)),
+                })({}, n)),
                 (t = t = { hostname: o }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return r;
-                      })(Object(t)).forEach(function (r) {
-                          Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+                          return n;
+                      })(Object(t)).forEach(function (n) {
+                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                       }),
                 e),
             u = l().map(d, (e, t) => {
                 if ("receiverReports" !== t && (!i || "localAddress" !== t))
-                    return (0, n.jsx)(
+                    return (0, r.jsx)(
                         b.ck,
                         {
                             label: t,
@@ -78,12 +78,12 @@ class R extends a.PureComponent {
                     );
             }),
             p = l().map(d.receiverReports, (e) => {
-                let t = Array.isArray(e.bitrate) ? (null == (n = e.bitrate.at(-1)) ? void 0 : n.value) : e.bitrate,
-                    r = f.default.getUser(e.id);
-                var n,
-                    a = y.ZP.getNickname(m.Z.getGuildId(), void 0, r);
+                let t = Array.isArray(e.bitrate) ? (null == (r = e.bitrate.at(-1)) ? void 0 : r.value) : e.bitrate,
+                    n = f.default.getUser(e.id);
+                var r,
+                    a = y.ZP.getNickname(m.Z.getGuildId(), void 0, n);
                 return (
-                    null == a && (a = null != r ? r.username : e.id),
+                    null == a && (a = null != n ? n.username : e.id),
                     {
                         displayName: a,
                         bitrate: t / 1000,
@@ -93,29 +93,29 @@ class R extends a.PureComponent {
             }),
             h = l().sortBy(p, (e) => e.displayName),
             g = l().map(h, (e) =>
-                (function (e, t, r) {
-                    let a = (0, n.jsxs)(c.Z, {
+                (function (e, t, n) {
+                    let a = (0, r.jsxs)(c.Z, {
                             id: "bitrate-".concat(e),
                             justify: c.Z.Justify.BETWEEN,
                             children: [
-                                (0, n.jsx)("span", { children: "Bitrate:" }),
-                                (0, n.jsxs)("span", {
+                                (0, r.jsx)("span", { children: "Bitrate:" }),
+                                (0, r.jsxs)("span", {
                                     children: [t.toFixed(2), " Kbps"],
                                 }),
                             ],
                         }),
-                        i = (0, n.jsxs)(c.Z, {
+                        i = (0, r.jsxs)(c.Z, {
                             id: "lost-".concat(e),
                             justify: c.Z.Justify.BETWEEN,
                             children: [
-                                (0, n.jsx)("span", { children: "Packet Loss:" }),
-                                (0, n.jsxs)("span", {
-                                    children: [r.toFixed(0), "%"],
+                                (0, r.jsx)("span", { children: "Packet Loss:" }),
+                                (0, r.jsxs)("span", {
+                                    children: [n.toFixed(0), "%"],
                                 }),
                             ],
                         });
-                    return (0, n.jsx)(
-                        D.Z,
+                    return (0, r.jsx)(
+                        E.Z,
                         {
                             label: e,
                             valueRendered: [a, i],
@@ -125,24 +125,24 @@ class R extends a.PureComponent {
                     );
                 })(e.displayName, e.bitrate, e.lost),
             );
-        return (0, n.jsxs)(s.hjN, {
+        return (0, r.jsxs)(s.hjN, {
             tag: s.RB0.H2,
-            title: E.intl.string(E.t.wU9INz) + (null != a ? " - " + a : ""),
-            className: P.allowSelection,
+            title: P.intl.string(P.t.wU9INz) + (null != a ? " - " + a : ""),
+            className: j.allowSelection,
             children: [
-                (0, v.a)(u),
-                0 === g.length ? null : (0, n.jsx)(s.$i$, { className: j.marginBottom20 }),
-                (0, v.a)(g),
+                (0, v.VE)(u),
+                0 === g.length ? null : (0, r.jsx)(s.$i$, { className: C.marginBottom20 }),
+                (0, v.VE)(g),
             ],
         });
     }
 }
-let Z = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
+let R = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
     var t;
-    let { context: r, index: n } = e,
-        a = u.ZP.getAllStats(r)[n],
+    let { context: n, index: r } = e,
+        a = u.ZP.getAllStats(n)[r],
         i =
-            r === C.Yn.STREAM
+            n === D.Yn.STREAM
                 ? Object.values(p.Z.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === a.mediaEngineConnectionId,
                   )
@@ -154,4 +154,4 @@ let Z = o.ZP.connectStores([u.ZP, d.Z, h.Z, p.Z], (e) => {
         mediaSessionId: d.Z.getMediaSessionId(),
         hostname: g.Z.getShortHostname(l),
     };
-})(R);
+})(x);

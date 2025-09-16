@@ -1,19 +1,19 @@
-r.d(t, { Z: () => m });
-var n = r(951288),
-    a = r(647438),
-    i = r(392711),
-    l = r.n(i),
-    o = r(481060),
-    s = r(481250),
-    c = r(513547),
-    d = r(388032);
+n.d(t, { Z: () => m });
+var r = n(951288),
+    a = n(647438),
+    i = n(392711),
+    l = n.n(i),
+    o = n(481060),
+    s = n(481250),
+    c = n(513547),
+    d = n(388032);
 class u extends a.PureComponent {
     render() {
         let { screenshare: e } = this.props;
-        if (null == e) return (0, n.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE });
+        if (null == e) return (0, r.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE });
         let t = l().map(e, (e, t) => {
             if (!(c.al[t] || void 0 === e))
-                return (0, n.jsx)(
+                return (0, r.jsx)(
                     c.ck,
                     {
                         label: t,
@@ -22,10 +22,10 @@ class u extends a.PureComponent {
                     t,
                 );
         });
-        return (0, n.jsx)(o.hjN, {
+        return (0, r.jsx)(o.hjN, {
             tag: o.RB0.H2,
             title: d.intl.string(d.t["gWbr/f"]),
-            children: (0, s.a)(t),
+            children: (0, s.VE)(t),
         });
     }
 }

@@ -9,7 +9,7 @@ e.exports = {
     divider: "divider__7c7a6",
     graph: "graph__7c7a6",
     videoWrapper: "videoWrapper__7c7a6",
-    sectionHeader: "sectionHeader__7c7a6",
     allowSelection: "allowSelection__7c7a6",
     avatar: "avatar__7c7a6",
+    tabBar: "tabBar__7c7a6",
 };
