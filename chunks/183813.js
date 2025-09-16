@@ -1,4 +1,4 @@
-n.d(t, { S: () => S }), n(388685), n(361932), n(187205);
+n.d(t, { S: () => y }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
@@ -11,40 +11,37 @@ var r = n(951288),
     u = n(831895),
     p = n(314404),
     x = n(594174),
-    _ = n(626135),
-    h = n(987209),
-    f = n(563132),
+    h = n(626135),
+    f = n(987209),
+    _ = n(563132),
     m = n(409813),
     j = n(27034),
-    L = n(981631),
+    g = n(981631),
     b = n(388032),
-    g = n(950174);
-function S(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: l, selectedSkuId: S, step: y } = (0, f.JL)(),
+    L = n(950174);
+function y(e) {
+    var t, n;
+    let { handleStepChange: l, handleClose: y } = e,
+        { selectedPlan: S, selectedSkuId: v, step: E } = (0, _.JL)(),
         {
-            setSelectedGiftingPromotionReward: v,
-            selectedGiftingPromotionReward: E,
-            claimableRewards: O,
-            claimableVariants: P,
-        } = (0, h.wD)(),
+            setSelectedGiftingPromotionReward: O,
+            selectedGiftingPromotionReward: P,
+            claimableRewards: k,
+            claimableVariants: w,
+        } = (0, f.wD)(),
         M = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
-        [w, k] = i.useState(null),
-        A = Math.floor(Math.random() * c.mo),
-        [T, I] = i.useState(A);
-    i.useEffect(() => {
-        null != O && O.length > 0 && null == E && v(O[0]);
-    }, [O, E, v]),
-        a()(null != l, "Expected plan to selected"),
-        a()(null != S, "Expected selectedSkuId"),
-        a()(null != y, "Step should be set");
-    let Z = i.useMemo(
+        I = (0, c.ZP)(k, w, P),
+        [T, A] = i.useState(null != (n = null == I ? void 0 : I.defaultCategory) ? n : c.KN.Trick),
+        [Z, N] = i.useState(null == I || null == (t = I.defaultHighlightedReward) ? void 0 : t.skuId),
+        [R, B] = i.useState(!1),
+        U = i.useRef(T),
+        H = i.useMemo(
             () =>
-                null == P
-                    ? null != O
-                        ? O
+                null == w
+                    ? null != k
+                        ? k
                         : []
-                    : P.flatMap((e) => {
+                    : w.flatMap((e) => {
                           var t, n;
                           return e.variants.length < c.mo
                               ? []
@@ -88,12 +85,35 @@ function S(e) {
                                       }),
                                 t);
                       }),
-            [P, O, T],
-        ),
-        N = (e) => {
-            v(Z.find((t) => t.skuId === e)), k(e);
+            [w, k, T],
+        );
+    i.useEffect(() => {
+        let e = null == I ? void 0 : I.defaultHighlightedReward;
+        !R && null == P && null != e && null != e && H.some((t) => t.skuId === e.skuId) && (O(e), N(e.skuId));
+    }, [I, R, P, H, O]),
+        i.useEffect(() => {
+            (null == I ? void 0 : I.defaultCategory) == null || R || A(I.defaultCategory);
+        }, [null == I ? void 0 : I.defaultCategory, R]),
+        a()(null != S, "Expected plan to selected"),
+        a()(null != v, "Expected selectedSkuId"),
+        a()(null != E, "Step should be set");
+    let F = i.useMemo(() => null != Z && (null != k ? k : []).some((e) => e.skuId === Z), [Z, k]),
+        G = i.useMemo(() => null != P && H.some((e) => e.skuId === P.skuId), [H, P]),
+        D = i.useMemo(() => 0 === H.length || null == Z || !G || !F, [H, Z, F, G]);
+    i.useEffect(() => {
+        if (0 === H.length) {
+            N(void 0), O(void 0);
+            return;
+        }
+        (F && H.some((e) => e.skuId === Z)) || null == Z || (N(void 0), O(void 0));
+    }, [H, F, Z, O]),
+        i.useEffect(() => {
+            U.current === T || G || (O(void 0), N(void 0)), (U.current = T);
+        }, [T, G, O]);
+    let K = (e) => {
+            O(H.find((t) => t.skuId === e)), N(e), B(!0);
         },
-        B = Z.map((e) =>
+        z = H.map((e) =>
             (0, r.jsx)(
                 C.c,
                 {
@@ -101,40 +121,41 @@ function S(e) {
                     assetId: e.assetId,
                     productName: e.name,
                     a11yLabel: e.a11yLabel,
-                    claimed: null != O && O.every((t) => t.skuId !== e.skuId),
+                    claimed: null != k && k.every((t) => t.skuId !== e.skuId),
                     user: M,
-                    onSelect: N,
-                    selectedSkuId: null != w ? w : void 0,
+                    onSelect: K,
+                    selectedSkuId: Z,
                     category: T,
                 },
                 e.skuId,
             ),
         ),
-        R = (0, r.jsx)(j.O3, {
+        W = (0, r.jsx)(j.O3, {
             children: (0, r.jsx)(o.mzw, {
-                className: g.modalFooter,
+                className: L.modalFooter,
                 children: (0, r.jsx)(p.y, {
                     onStepChange: (e) => {
                         null != M &&
-                            null != E &&
-                            _.default.track(L.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            null != P &&
+                            h.default.track(g.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: M.id,
-                                reward_sku_id: E.skuId,
+                                reward_sku_id: P.skuId,
                             }),
-                            t(e);
+                            l(e);
                     },
-                    onBackClick: () => t(m.h8.PLAN_SELECT),
+                    onBackClick: () => l(m.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
-                    planOptions: [l.id],
-                    selectedPlanId: l.id,
+                    planOptions: [S.id],
+                    selectedPlanId: S.id,
+                    isNextDisabled: D,
                 }),
             }),
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(o.xBx, {
-                className: g.modalHeader,
+                className: L.modalHeader,
                 direction: d.Z.Direction.VERTICAL,
                 align: d.Z.Align.START,
                 separator: !1,
@@ -147,12 +168,12 @@ function S(e) {
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
-                        className: g.headerSubtitle,
+                        className: L.headerSubtitle,
                         children: b.intl.string(b.t.MhwtRU),
                     }),
                     (0, r.jsx)(o.olH, {
-                        className: g.closeButton,
-                        onClick: n,
+                        className: L.closeButton,
+                        onClick: y,
                     }),
                 ],
             }),
@@ -162,20 +183,20 @@ function S(e) {
                     justify: "center",
                     align: "center",
                     children: [
-                        null != P &&
-                            P.length > 1 &&
+                        null != w &&
+                            w.length > 1 &&
                             (0, r.jsx)(u.Z, {
                                 defaultCategory: T,
-                                onCategoryChange: I,
+                                onCategoryChange: A,
                             }),
                         (0, r.jsx)("div", {
-                            className: g.giftRewardShopCardsGrid,
-                            children: B,
+                            className: L.giftRewardShopCardsGrid,
+                            children: z,
                         }),
                     ],
                 }),
             }),
-            R,
+            W,
         ],
     });
 }

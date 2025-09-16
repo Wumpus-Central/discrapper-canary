@@ -24,8 +24,8 @@ var r = n(951288),
     O = n(669079),
     v = n(63063),
     I = n(74538),
-    S = n(937615),
-    T = n(296848),
+    T = n(937615),
+    S = n(296848),
     A = n(711459),
     C = n(367074),
     N = n(717401),
@@ -39,7 +39,7 @@ var r = n(951288),
     M = n(987716),
     k = n(311821),
     U = n(459965),
-    G = n(811616),
+    G = n(971616),
     B = n(251660),
     Z = n(474936),
     F = n(981631),
@@ -207,9 +207,9 @@ function $(e) {
     let [ey, eO] = (0, c.Wu)([b.Z], () => [null != E ? b.Z.get(E.planId) : null, null != k ? b.Z.get(k) : null]),
         ev = (0, w.N)(ee),
         eI = null == ev ? void 0 : ev.subscription_trial,
-        eS = (0, P.Ng)(),
-        eT = (0, C.Vi)(),
-        eA = null == eS || null == (t = eS.discount) ? void 0 : t.plan_ids,
+        eT = (0, P.Ng)(),
+        eS = (0, C.Vi)(),
+        eA = null == eT || null == (t = eT.discount) ? void 0 : t.plan_ids,
         eC = null != eO ? eO : ec,
         eN = i.useCallback(
             (e) => {
@@ -225,7 +225,7 @@ function $(e) {
             excludeReverseTrialFromCountdown: !0,
         }),
         ew = null != ev && Z.nG[ev.trial_id].skus.includes(y),
-        eD = null != eS && Q.some((e) => (null == eA ? void 0 : eA.includes(e))) && null != eS.discount,
+        eD = null != eT && Q.some((e) => (null == eA ? void 0 : eA.includes(e))) && null != eT.discount,
         ex = (0, I.aS)(Z.Xh.PREMIUM_MONTH_TIER_2, !1, ef, eR);
     i.useEffect(() => {
         $ && A.ZP.trackExposure({ location: "5f89bb_1" });
@@ -298,9 +298,9 @@ function $(e) {
                             variant: "text-sm/normal",
                             className: Y.trialPlanSelectHeader,
                             children: H.intl.format(H.t["nG7g/P"], {
-                                numMonths: null == eS ? void 0 : eS.discount.user_usage_limit,
-                                discountedPrice: (0, S.T4)(ex.amount - eH, ex.currency),
-                                regularPrice: (0, S.T4)(ex.amount, ex.currency),
+                                numMonths: null == eT ? void 0 : eT.discount.user_usage_limit,
+                                discountedPrice: (0, T.T4)(ex.amount - eH, ex.currency),
+                                regularPrice: (0, T.T4)(ex.amount, ex.currency),
                             }),
                         }),
                         (0, r.jsx)("hr", { className: Y.planSelectSeparator }),
@@ -351,11 +351,11 @@ function $(e) {
             eB
                 ? (0, r.jsx)(f.Z, {
                       message: H.intl.formatToPlainString(H.t["9hnZoK"], {
-                          kunaPriceWithCurrency: (0, S.T4)(7.5345 * eU.amount, V.pK.HRK),
+                          kunaPriceWithCurrency: (0, T.T4)(7.5345 * eU.amount, V.pK.HRK),
                       }),
                   })
                 : null,
-        eq = null != E && null != k && (0, T.R4)(E, k, W),
+        eq = null != E && null != k && (0, S.R4)(E, k, W),
         eX = eP.isFractionalPremiumActive && (null == E || eq) && !ef && null != k && Z.dJ.has(k);
     if (ef) {
         let e = () => {
@@ -425,7 +425,7 @@ function $(e) {
                 }),
             null != ey &&
                 !eX &&
-                !eT &&
+                !eS &&
                 (0, r.jsx)("div", {
                     className: Y.bodyText,
                     children: J(ey, y),
@@ -454,13 +454,14 @@ function ee(e) {
             planOptions: s,
             shouldRenderUpdatedPaymentModal: l = !1,
             isTrial: c,
+            isNextDisabled: u = !1,
         } = e,
-        { paymentSources: u, selectedPlan: f } = (0, g.JL)(),
-        { isGift: _, giftRecipient: p, claimableRewards: h } = (0, m.wD)(),
-        E = (0, O.pO)(p);
+        { paymentSources: f, selectedPlan: _ } = (0, g.JL)(),
+        { isGift: p, giftRecipient: h, claimableRewards: E } = (0, m.wD)(),
+        b = (0, O.pO)(h);
     return (
-        (i = null != i ? i : u),
-        (n = null != n ? n : null == f ? void 0 : f.id),
+        (i = null != i ? i : f),
+        (n = null != n ? n : null == _ ? void 0 : _.id),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != n && s.includes(n)
@@ -468,10 +469,11 @@ function ee(e) {
                           paymentSources: i,
                           onStepChange: t,
                           selectedPlanId: n,
-                          isGift: _,
-                          claimableRewards: h,
+                          isGift: p,
+                          claimableRewards: E,
                           shouldRenderUpdatedPaymentModal: l,
                           isTrial: c,
+                          isNextDisabled: u,
                       })
                     : (0, r.jsx)(d.zxk, {
                           variant: "primary",
@@ -480,7 +482,7 @@ function ee(e) {
                       }),
                 o
                     ? (0, r.jsx)(k.Z, {
-                          className: _ && E ? Y.equalDistantBackButton : void 0,
+                          className: p && b ? Y.equalDistantBackButton : void 0,
                           onClick: a,
                       })
                     : null,
@@ -497,20 +499,22 @@ function et(e) {
             paymentSources: o,
             shouldRenderUpdatedPaymentModal: s,
             isTrial: l,
+            isNextDisabled: u = !1,
         } = e,
-        u = (0, c.e7)([y.Z], () => y.Z.getPremiumTypeSubscription()),
-        { step: f, selectedPlan: _ } = (0, g.JL)(),
-        { hasEntitlements: p } = (0, U.H)(n, i),
-        h = (null != u && null != u.paymentSourceId) || Object.keys(o).length > 0 || (p && !l);
-    var m = s ? H.intl.string(H.t.PDTjLC) : H.intl.string(H.t.XqMe3N),
-        b = E.h8.ADD_PAYMENT_STEPS;
+        f = (0, c.e7)([y.Z], () => y.Z.getPremiumTypeSubscription()),
+        { step: _, selectedPlan: p } = (0, g.JL)(),
+        { hasEntitlements: h } = (0, U.H)(n, i),
+        m = (null != f && null != f.paymentSourceId) || Object.keys(o).length > 0 || (h && !l);
+    var b = s ? H.intl.string(H.t.PDTjLC) : H.intl.string(H.t.XqMe3N),
+        O = E.h8.ADD_PAYMENT_STEPS;
     return (
-        h && (b = E.h8.REVIEW),
-        (0, N.id)(_, i, a) && f !== E.h8.SELECT_FREE_SKU && (b = E.h8.SELECT_FREE_SKU),
+        m && (O = E.h8.REVIEW),
+        (0, N.id)(p, i, a) && _ !== E.h8.SELECT_FREE_SKU && (O = E.h8.SELECT_FREE_SKU),
         (0, r.jsx)(d.zxk, {
             variant: "primary",
-            text: m,
-            onClick: () => t(b),
+            text: b,
+            onClick: () => t(O),
+            disabled: u,
         })
     );
 }
