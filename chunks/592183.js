@@ -1,32 +1,34 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(544891),
-    i = n(570140),
-    a = n(594174),
-    o = n(585483),
-    s = n(960048),
-    l = n(981631);
-let c = {
+    i = n(780384),
+    a = n(570140),
+    o = n(594174),
+    s = n(585483),
+    l = n(960048),
+    c = n(981631),
+    u = n(388032);
+let d = {
     setPendingWidgets(e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: "WIDGET_PENDING_SET",
             widgets: e,
         });
     },
     async savePendingWidgets(e) {
         var t;
-        let n = null == (t = a.default.getCurrentUser()) ? void 0 : t.id;
+        let n = null == (t = o.default.getCurrentUser()) ? void 0 : t.id;
         if (null == n) return;
-        i.Z.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
-        let o = e.map((e) => e.toSubmission());
+        a.Z.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
+        let i = e.map((e) => e.toSubmission());
         try {
             let e = await r.tn.put({
-                url: l.ANM.USER_PROFILE_WIDGETS,
-                body: { widgets: o },
+                url: c.ANM.USER_PROFILE_WIDGETS,
+                body: { widgets: i },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
             return (
-                i.Z.dispatch({
+                a.Z.dispatch({
                     type: "WIDGET_PENDING_SAVE_SUCCESS",
                     userId: n,
                     widgets: e.body.widgets,
@@ -34,40 +36,42 @@ let c = {
                 e.body
             );
         } catch (e) {
-            throw (i.Z.dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" }), e);
+            throw (a.Z.dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" }), e);
         }
     },
     clearPendingWidgets() {
-        i.Z.dispatch({ type: "WIDGET_PENDING_CLEAR" });
+        a.Z.dispatch({ type: "WIDGET_PENDING_CLEAR" });
     },
     async fetchSuggestedGames() {
-        i.Z.dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
+        a.Z.dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
         try {
-            var e, t, n, a, o, c;
+            var e, t, n, i, o, s;
             let u = await r.tn.get({
-                url: l.ANM.USER_PROFILE_SUGGESTED_GAMES,
+                url: c.ANM.USER_PROFILE_SUGGESTED_GAMES,
                 rejectWithError: !0,
             });
             ((null == (e = u.body) ? void 0 : e.suggested_games) == null ||
                 (null == (t = u.body) ? void 0 : t.suggested_wishlist_games) == null) &&
-                s.Z.captureMessage("Suggested games or wishlist games not found"),
-                i.Z.dispatch({
+                l.Z.captureMessage("Suggested games or wishlist games not found"),
+                a.Z.dispatch({
                     type: "WIDGET_SUGGESTED_FETCH_SUCCESS",
                     suggestedGamesIds: null != (o = null == (n = u.body) ? void 0 : n.suggested_games) ? o : [],
                     suggestedWishlistGamesIds:
-                        null != (c = null == (a = u.body) ? void 0 : a.suggested_wishlist_games) ? c : [],
+                        null != (s = null == (i = u.body) ? void 0 : i.suggested_wishlist_games) ? s : [],
                 });
         } catch (e) {
-            throw (i.Z.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" }), s.Z.captureException(e), e);
+            throw (a.Z.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" }), l.Z.captureException(e), e);
         }
     },
     removeGameFromSuggestedGames(e) {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: "WIDGET_SUGGESTED_REMOVE_GAME",
             applicationId: e,
         });
     },
     notifyPendingWidgets() {
-        o.S.dispatch(l.CkL.SHAKE_PROFILE_MODAL), o.S.dispatch(l.CkL.EMPHASIZE_NOTICE);
+        s.S.dispatch(c.CkL.SHAKE_PROFILE_MODAL),
+            s.S.dispatch(c.CkL.EMPHASIZE_NOTICE),
+            i.uv.announce("".concat(u.intl.string(u.t.GP7JLC), " ").concat(u.intl.string(u.t.gKoO1N)));
     },
 };
