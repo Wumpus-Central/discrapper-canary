@@ -3,7 +3,8 @@ n.d(t, {
     ZP: () => E,
     sE: () => m,
 }),
-    n(997841);
+    n(997841),
+    n(388685);
 var r = n(647438),
     i = n(533800),
     a = n(442837),
@@ -25,60 +26,73 @@ var r = n(647438),
             (e[(e.APPLY_TO_JOIN = 3)] = "APPLY_TO_JOIN"),
             (e[(e.LURK_DISCOVERABLE = 4)] = "LURK_DISCOVERABLE"),
             (e[(e.JOIN_VIA_INVITE = 5)] = "JOIN_VIA_INVITE"),
+            (e[(e.ACCEPT_ROLES = 6)] = "ACCEPT_ROLES"),
             e
         );
     })({}),
     g = (function (e) {
         return (e.INVITE = "INVITE"), e;
     })({});
-function E(e, t) {
-    let { id: n, features: m } = e,
-        g = (0, a.e7)([l.default], () => l.default.getId()),
-        E = (0, a.e7)([u.Z], () => u.Z.getGuild(n)),
-        b = (0, a.e7)([f.default], () => f.default.getUser(g), [g]),
-        y = (0, a.e7)([c.ZP], () => {
+function E(e, t, n) {
+    let { id: m, features: g } = e,
+        E = (0, a.e7)([l.default], () => l.default.getId()),
+        b = (0, a.e7)([u.Z], () => u.Z.getGuild(m)),
+        y = (0, a.e7)([f.default], () => f.default.getUser(E), [E]),
+        O = (0, a.e7)([c.ZP], () => {
             var e;
-            return (null == (e = null != n ? c.ZP.getMember(n, g) : null) ? void 0 : e.joinedAt) != null;
-        }, [n, g]),
-        { validInviteKey: O, isBypassInvite: v } = (0, a.cj)([d.Z], () => {
+            return (null == (e = null != m ? c.ZP.getMember(m, E) : null) ? void 0 : e.joinedAt) != null;
+        }, [m, E]),
+        {
+            validInviteKey: v,
+            isBypassInvite: I,
+            inviteRoles: T,
+        } = (0, a.cj)([d.Z], () => {
             var e;
-            let t = d.Z.getInviteKeyForGuildId(n),
+            let t = null != n ? n : d.Z.getInviteKeyForGuildId(m),
                 r = null != t ? d.Z.getInvite(t) : null;
             return null == r || r.state === h.r2o.BANNED || r.state === h.r2o.EXPIRED
                 ? {
                       validInviteKey: null,
                       isBypassInvite: !1,
+                      inviteRoles: null,
                   }
                 : {
                       validInviteKey: t,
                       isBypassInvite: (0, _.yE)(null != (e = r.flags) ? e : 0, i.$.IS_APPLICATION_BYPASS),
+                      inviteRoles: r.roles,
                   };
-        }),
-        I = (0, s.Z)(),
-        T = r.useMemo(() => {
-            if (y) {
-                let r = null == b ? void 0 : b.primaryGuild,
+        }, [m, n]),
+        S = (0, s.Z)(),
+        A = r.useMemo(() => {
+            if (O) {
+                if ("INVITE" === t && null != T && T.length > 0 && null != y) {
+                    var n;
+                    let e = c.ZP.getMember(m, y.id),
+                        t = new Set(null != (n = null == e ? void 0 : e.roles) ? n : []);
+                    if (T.some((e) => !t.has(e.id))) return 6;
+                }
+                let r = null == y ? void 0 : y.primaryGuild,
                     i =
-                        (null == r ? void 0 : r.identityGuildId) === n &&
+                        (null == r ? void 0 : r.identityGuildId) === m &&
                         (null == r ? void 0 : r.identityEnabled) === !0;
-                return "INVITE" !== t && null != e.tag && !i && null != E && (0, o.up)(E) ? 1 : 0;
+                return "INVITE" !== t && null != e.tag && !i && null != b && (0, o.up)(b) ? 1 : 0;
             }
-            return I.includes(n)
+            return S.includes(m)
                 ? 2
-                : (null == m ? void 0 : m.includes(h.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
-                    (null == m ? void 0 : m.includes(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) &&
-                    (null != O || e.visibility === p.k.PUBLIC_WITH_RECRUITMENT) &&
-                    !v
+                : (null == g ? void 0 : g.includes(h.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
+                    (null == g ? void 0 : g.includes(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) &&
+                    (null != v || e.visibility === p.k.PUBLIC_WITH_RECRUITMENT) &&
+                    !I
                   ? 3
-                  : null != O
+                  : null != v
                     ? 5
-                    : (null == m ? void 0 : m.includes(h.oNc.DISCOVERABLE))
+                    : (null == g ? void 0 : g.includes(h.oNc.DISCOVERABLE))
                       ? 4
                       : null;
-        }, [y, I, n, m, O, e.visibility, e.tag, v, null == b ? void 0 : b.primaryGuild, t, E]);
+        }, [O, S, m, g, v, e.visibility, e.tag, I, t, b, T, y]);
     return {
-        guildId: n,
-        ctaType: T,
-        validInviteKey: O,
+        guildId: m,
+        ctaType: A,
+        validInviteKey: v,
     };
 }

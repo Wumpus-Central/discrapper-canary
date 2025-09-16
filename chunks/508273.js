@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -15,89 +15,91 @@ var r = n(951288),
     m = n(708321),
     g = n(174161),
     E = n(798476),
-    b = n(358595),
-    y = n(981631),
-    O = n(388032),
-    v = n(492681);
-let I = 292,
-    T = 36,
-    S = 48;
-function A(e) {
+    b = n(254887),
+    y = n(358595),
+    O = n(981631),
+    v = n(388032),
+    I = n(492681);
+let T = 292,
+    S = 36,
+    A = 48;
+function C(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         f = i.useRef(null),
         [p, m] = i.useState(!0),
-        [A, N] = i.useState(!1),
-        R = t.state === y.r2o.ACCEPTING,
-        P = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
+        [C, R] = i.useState(!1),
+        P = t.state === O.r2o.ACCEPTING,
+        w = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
         var e, t;
-        N((null != (t = null == (e = f.current) ? void 0 : e.clientHeight) ? t : 0) > I);
-    }, [N]);
-    let w = (0, _.PC)(t),
-        D = i.useCallback(() => {
-            A && p && m(!1);
-        }, [p, A]),
+        R((null != (t = null == (e = f.current) ? void 0 : e.clientHeight) ? t : 0) > T);
+    }, [R]);
+    let D = (0, _.PC)(t),
         x = i.useCallback(() => {
-            A && (p || m(!0));
-        }, [p, A]),
-        L = i.useMemo(() => {
+            C && p && m(!1);
+        }, [p, C]),
+        L = i.useCallback(() => {
+            C && (p || m(!0));
+        }, [p, C]),
+        j = i.useMemo(() => {
             var e;
-            return A && (null == (e = f.current) ? void 0 : e.clientHeight) != null
+            return C && (null == (e = f.current) ? void 0 : e.clientHeight) != null
                 ? {
-                      height: p ? I : f.current.clientHeight + T + S,
-                      transition: P ? void 0 : "height 0.2s ease",
+                      height: p ? T : f.current.clientHeight + S + A,
+                      transition: w ? void 0 : "height 0.2s ease",
                   }
                 : {};
-        }, [p, A, P]);
-    return null == w
-        ? (0, r.jsx)(b.Z, {})
+        }, [p, C, w]);
+    return null == D
+        ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(l.P3F, {
-              className: o()(v.guildInviteContainer, { [v.clickable]: A && p }),
-              onClick: D,
-              style: L,
+              className: o()(I.guildInviteContainer, { [I.clickable]: C && p }),
+              onClick: x,
+              style: j,
               children: [
                   (0, r.jsxs)("div", {
-                      className: v.cardHeightMeasure,
+                      className: I.cardHeightMeasure,
                       ref: f,
                       children: [
                           (0, r.jsx)(E.Z7, {
-                              profile: w,
-                              className: v.banner,
+                              profile: D,
+                              className: I.banner,
                           }),
-                          (0, r.jsx)(E.N3, { profile: w }),
-                          (0, r.jsx)(g.Z, { profile: w }),
+                          (0, r.jsx)(E.N3, { profile: D }),
+                          (0, r.jsx)(g.Z, { profile: D }),
                           (0, r.jsx)(h.E, {
-                              profile: w,
-                              className: v.mainContent,
+                              profile: D,
+                              className: I.mainContent,
                           }),
+                          (0, r.jsx)(b.Z, { invite: t }),
                       ],
                   }),
-                  A && !p
+                  C && !p
                       ? (0, r.jsx)("div", {
-                            className: v.hideDetailsButtonContainer,
+                            className: I.hideDetailsButtonContainer,
                             children: (0, r.jsx)(l.Avr, {
                                 textVariant: "text-xs/medium",
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: x,
-                                text: O.intl.string(O.t.xdCLeH),
+                                onClick: L,
+                                text: v.intl.string(v.t.xdCLeH),
                             }),
                         })
                       : null,
                   (0, r.jsxs)("div", {
-                      className: o()(v.footer, { [v.floatingFooter]: A }),
+                      className: o()(I.footer, { [I.floatingFooter]: C }),
                       children: [
-                          A && p ? (0, r.jsx)("div", { className: v.gradient }) : null,
+                          C && p ? (0, r.jsx)("div", { className: I.gradient }) : null,
                           (0, r.jsx)("div", {
-                              className: o()(v.footerContent, { [v.collapsedFooterContent]: A && p }),
+                              className: o()(I.footerContent, { [I.collapsedFooterContent]: C && p }),
                               children: (0, r.jsx)("div", {
-                                  className: v.buttonContainer,
-                                  children: (0, r.jsx)(C, {
+                                  className: I.buttonContainer,
+                                  children: (0, r.jsx)(N, {
                                       invite: t,
-                                      profile: w,
+                                      profile: D,
                                       isMemberOfGuild: n,
                                       message: a,
-                                      submitting: R,
+                                      submitting: P,
                                       onTransitionToInviteChannel: c,
                                       onAcceptInstantInvite: d,
                                   }),
@@ -108,7 +110,7 @@ function A(e) {
               ],
           });
 }
-function C(e) {
+function N(e) {
     let {
             invite: t,
             profile: n,
@@ -118,7 +120,7 @@ function C(e) {
             onTransitionToInviteChannel: l,
             onAcceptInstantInvite: u,
         } = e,
-        { guildId: _, ctaType: h } = (0, p.ZP)(n, p.F3.INVITE),
+        { guildId: _, ctaType: h } = (0, p.ZP)(n, p.F3.INVITE, t.code),
         { analyticsLocations: g } = (0, f.ZP)(d.Z.INVITE_EMBED),
         E = i.useCallback(() => {
             let e = a ? "transition" : "accept";

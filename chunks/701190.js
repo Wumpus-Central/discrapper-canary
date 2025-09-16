@@ -102,7 +102,8 @@ function g(e) {
             (t.type = e.invite.type),
             (t.flags = e.invite.flags),
             (t.is_nickname_changeable = e.invite.is_nickname_changeable),
-            (t.profile = e.invite.profile);
+            (t.profile = e.invite.profile),
+            (t.roles = e.invite.roles);
     });
 }
 function E(e) {
@@ -120,7 +121,8 @@ function E(e) {
             (t.guild_scheduled_event = e.invite.guild_scheduled_event),
             (t.type = e.invite.type),
             (t.is_nickname_changeable = e.invite.is_nickname_changeable),
-            (t.profile = e.invite.profile);
+            (t.profile = e.invite.profile),
+            (t.roles = e.invite.roles);
     });
 }
 function b(e) {
