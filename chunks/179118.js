@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(642613);
+n.d(t, { Z: () => M }), n(388685), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -32,7 +32,7 @@ var r = n(951288),
     x = n(388032),
     L = n(769212);
 let j = 1500;
-function k(e) {
+function M(e) {
     let {
             giftCode: t,
             application: n,
@@ -47,7 +47,7 @@ function k(e) {
         } = e,
         [O, I] = i.useState(f.kO8.Modes.DEFAULT),
         S = (0, c.e7)([T.Z], () => T.Z.enabled),
-        k = _ || (null != l && null != p),
+        M = _ || (null != l && null != p),
         U = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
         G = (0, E.Z)(),
         { selectedGiftingPromotionReward: B } = (0, P.wD)(),
@@ -63,12 +63,12 @@ function k(e) {
                   ? null
                   : ((e =
                         s.interval === D.rV.MONTH
-                            ? k
+                            ? M
                                 ? V
                                     ? Z.monthGiftText
                                     : x.t["4ZJ+7e"]
                                 : x.t["P+z55e"]
-                            : k
+                            : M
                               ? V
                                   ? Z.yearGiftText
                                   : x.t.p0pZXF
@@ -146,7 +146,7 @@ function k(e) {
                         children: Y(),
                     }),
                     null == g &&
-                        (0, r.jsx)(M, {
+                        (0, r.jsx)(k, {
                             giftCode: t,
                             onClose: u,
                         }),
@@ -157,19 +157,27 @@ function k(e) {
         X = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(h.Z, {
-                        user: p,
-                        className: L.giftRecipient,
-                        size: f.EFr.SIZE_80,
-                    }),
-                    (0, r.jsx)(f.X6q, {
-                        className: L.giftRecipientName,
-                        variant: "heading-md/semibold",
-                        children: R.ZP.getName(p),
-                    }),
                     (0, r.jsxs)("div", {
-                        className: L.giftRecipientTag,
-                        children: [" ", R.ZP.getUserTag(p)],
+                        className: L.giftRecipientContainer,
+                        children: [
+                            (0, r.jsx)(h.Z, {
+                                user: p,
+                                size: f.EFr.SIZE_40,
+                            }),
+                            (0, r.jsxs)("div", {
+                                className: L.giftRecipientTextContainer,
+                                children: [
+                                    (0, r.jsx)(f.X6q, {
+                                        variant: "heading-md/semibold",
+                                        children: R.ZP.getName(p),
+                                    }),
+                                    (0, r.jsxs)("div", {
+                                        className: L.giftRecipientTag,
+                                        children: [" ", R.ZP.getUserTag(p)],
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                     (0, r.jsx)("div", {
                         className: L.giftSentMessage,
@@ -211,11 +219,11 @@ function k(e) {
                       }),
                       children: W(),
                   }),
-                  (_ && null != p && null == g) || k ? X() : q(),
+                  (_ && null != p && null == g) || M ? X() : q(),
               ],
           });
 }
-let M = (e) => {
+let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
         p.Z.fetchRelationships(), (0, y._)();

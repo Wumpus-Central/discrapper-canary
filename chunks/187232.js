@@ -175,4 +175,10 @@ let b = {
             body: () => l.intl.string(l.t["9rInzc"]),
             getBackgroundImageUrl: () => g.Z,
         },
+        giftPurchaseConfirmation: {
+            yearGiftText: l.t["rSS+oq"],
+            monthGiftText: l.t.gI6Yvr,
+            collectRewardButtonText: () => l.intl.string(l.t.kMYVws),
+            rewardCollectedText: () => l.intl.string(l.t.eZrmtr),
+        },
     };
