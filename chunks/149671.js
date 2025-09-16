@@ -1,5 +1,5 @@
 e.exports = {
-    title: "title__8303d",
+    container: "container__8303d",
     contentContainer: "contentContainer__8303d",
     settingsContainer: "settingsContainer__8303d",
     sectionContainer: "sectionContainer__8303d",
