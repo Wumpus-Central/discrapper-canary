@@ -84316,7 +84316,8 @@ div.nagbar_d74ef8 {
 .textContainer__7700a {
     display: flex;
     flex-direction: column;
-    flex-grow: 1
+    flex-grow: 1;
+    gap: 2px
 }
 
 .iconContainer__7700a {
@@ -89303,7 +89304,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
