@@ -1,17 +1,17 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T;
-n.d(t, { Z: () => eB }), n(388685);
-var S,
-    A = n(392711),
-    C = n(754700),
-    N = n(887003),
-    R = n(442837),
-    P = n(570140),
-    w = n(509212),
-    D = n(497505),
-    x = n(184299),
-    L = n(5881),
-    j = n(46140);
-function M(e, t, n) {
+let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
+n.d(t, { Z: () => eZ }), n(388685);
+var A,
+    C = n(392711),
+    N = n(754700),
+    R = n(887003),
+    P = n(442837),
+    w = n(570140),
+    D = n(509212),
+    x = n(497505),
+    L = n(184299),
+    j = n(5881),
+    M = n(46140);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +35,12 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
 }
-function U(e, t) {
+function G(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,21 +52,21 @@ function U(e, t) {
     }
     return n;
 }
-function G(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : U(Object(t)).forEach(function (n) {
+            : G(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let B = new Map(),
-    Z = null,
-    F = 1000;
-function V() {
+let Z = new Map(),
+    F = null,
+    V = 1000;
+function H() {
     (r = !1),
         (i = !1),
         (a = !1),
@@ -80,7 +80,7 @@ function V() {
         (_ = new Set()),
         (p = new Set()),
         (h = new Set()),
-        (B = new Map()),
+        (Z = new Map()),
         (g = new Map()),
         (E = new Map()),
         (b = new Map()),
@@ -89,115 +89,120 @@ function V() {
         (m = new Set()),
         (v = new Map()),
         (I = new Map()),
-        eM(),
-        (T = null);
+        ek(),
+        (T = null),
+        (S = new Map());
 }
-function H(e, t) {
+function Y(e, t) {
     var n, r, i, a;
     if (null != t.userStatus)
         for (let o of Object.values(null != (r = null == (n = t.userStatus) ? void 0 : n.progress) ? r : {}))
-            !(0, A.isNil)(o) &&
-                C.T.DESKTOP.has(o.eventName) &&
+            !(0, C.isNil)(o) &&
+                N.T.DESKTOP.has(o.eventName) &&
                 ((null == (i = o.heartbeat) ? void 0 : i.lastBeatAt) != null
                     ? m.add(e)
                     : (null == (a = o.heartbeat) ? void 0 : a.lastBeatAt) == null && m.delete(e));
 }
-function Y(e, t) {
+function W(e, t) {
     let n = (o = new Map(o)).get(e);
     if (null != n) {
-        let r = k({}, n, t);
-        H(e, t), o.set(e, r);
+        let r = U({}, n, t);
+        if ((Y(e, t), o.set(e, r), S.has(e))) {
+            let n = S.get(e);
+            null != n && (S = new Map(S)).set(e, U({}, n, t));
+        }
     }
 }
-function W(e, t) {
+function K(e, t) {
     let n = new Map(g);
     n.set(e, t), (g = n);
 }
-function K(e, t) {
-    W(e, t);
+function z(e, t) {
+    K(e, t);
     let n = o.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && Y(e, { userStatus: G(k({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && W(e, { userStatus: B(U({}, r), { claimedAt: t.claimedAt }) });
 }
-function z(e) {
+function q(e) {
     var t;
     let { entitlements: n } = e,
         r = null == (t = n.items[0].tenantMetadata) ? void 0 : t.questRewards.reward;
-    return (null == r ? void 0 : r.tag) !== N.w.REWARD_CODE ? null : r.rewardCode;
+    return (null == r ? void 0 : r.tag) !== R.w.REWARD_CODE ? null : r.rewardCode;
 }
-function q(e, t) {
+function X(e, t) {
     let n = new Map(E);
     n.set(e, t.items), (E = n);
     let r = o.get(e),
         i = null == r ? void 0 : r.userStatus;
     if (null != i && null == i.claimedAt) {
         var a;
-        let n = z({ entitlements: t });
-        null != n && W(e, n),
-            Y(e, {
-                userStatus: G(k({}, i), {
+        let n = q({ entitlements: t });
+        null != n && K(e, n),
+            W(e, {
+                userStatus: B(U({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null,
                 }),
             });
     }
 }
-function X(e) {
+function Q(e) {
     null != b.get(e) && (b = new Map(b)).delete(e);
 }
-function Q() {
-    eM(), V();
-}
 function J() {
+    ek(), H();
+}
+function $() {
     r = !0;
 }
-function $(e) {
+function ee(e) {
     let { quests: t, excludedQuests: n, questEnrollmentBlockedUntil: i } = e;
     (c = Date.now()), (r = !1), (o = new Map());
     let a = new Map();
     for (let e of t)
         o.set(e.id, e),
-            a.set(e.id, (0, w.zi)(e)),
-            e.targetedContent.includes(D.jn.QUEST_BAR) &&
-                (0, L.T)({ location: j.dr.QUESTS_STORE }).log(
+            a.set(e.id, (0, D.zi)(e)),
+            e.targetedContent.includes(x.jn.QUEST_BAR) &&
+                (0, j.T)({ location: M.dr.QUESTS_STORE }).log(
                     "Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"),
                 );
-    for (let e of ((I = a), (s = new Map()), n)) s.set(e.id, e);
-    ej(), (T = null != i ? new Date(i) : null);
-}
-function ee() {
-    (c = 0), (r = !1);
+    for (let e of ((s = new Map()), n)) s.set(e.id, e);
+    for (let e of null == S ? void 0 : S.values()) o.has(e.id) || (o.set(e.id, e), a.set(e.id, (0, D.zi)(e)));
+    (I = a), eM(), (T = null != i ? new Date(i) : null);
 }
 function et() {
+    (c = 0), (r = !1);
+}
+function en() {
     i = !0;
 }
-function en(e) {
+function er(e) {
     let { questId: t } = e;
     (h = new Set(h)).add(t);
 }
-function er(e) {
-    let { questId: t, quest: n } = e;
-    (h = new Set(h)).delete(t), (o = new Map(o)).set(t, n);
-}
 function ei(e) {
+    let { questId: t, quest: n } = e;
+    (h = new Set(h)).delete(t), (S = new Map(S)).set(t, n), (o = new Map(o)).set(t, n);
+}
+function ea(e) {
     let { questId: t } = e;
     (h = new Set(h)).delete(t);
 }
-function ea() {
+function eo() {
     a = !0;
 }
-function eo(e) {
+function es(e) {
     let { quests: t } = e;
     for (let e of ((a = !1), (l = new Map()), t)) l.set(e.id, e);
 }
-function es() {
+function el() {
     a = !1;
 }
-function el(e) {
-    let { questId: t, streamKey: n, userStatus: r } = e;
-    m.add(t), Y(t, { userStatus: r }), null != n && X(n);
-}
 function ec(e) {
+    let { questId: t, streamKey: n, userStatus: r } = e;
+    m.add(t), W(t, { userStatus: r }), null != n && Q(n);
+}
+function eu(e) {
     let { questId: t, streamKey: n } = e;
     null != n &&
         null == b.get(n) &&
@@ -207,123 +212,123 @@ function ec(e) {
             firstFailedAt: Date.now(),
         });
 }
-function eu(e) {
-    let { streamKey: t } = e;
-    X(t);
-}
 function ed(e) {
+    let { streamKey: t } = e;
+    Q(t);
+}
+function ef(e) {
     let t = new Set(d);
     t.delete(e), (d = t);
 }
-function ef(e) {
+function e_(e) {
     let { questId: t } = e,
         n = new Set(d);
     n.add(t), (d = n);
 }
-function e_(e) {
-    let { enrolledQuestUserStatus: t } = e;
-    Y(t.questId, { userStatus: t }), ed(t.questId);
-}
 function ep(e) {
-    let { questId: t } = e;
-    ed(t);
+    let { enrolledQuestUserStatus: t } = e;
+    W(t.questId, { userStatus: t }), ef(t.questId);
 }
 function eh(e) {
+    let { questId: t } = e;
+    ef(t);
+}
+function em(e) {
     let { questId: t } = e,
         n = new Set(_);
     n.add(t), (_ = n);
 }
-function em(e) {
+function eg(e) {
     let { questId: t, rewardCode: n } = e,
         r = new Set(_);
-    r.delete(t), (_ = r), K(t, n);
+    r.delete(t), (_ = r), z(t, n);
 }
-function eg(e) {
+function eE(e) {
     let { questId: t } = e,
         n = new Set(_);
     n.delete(t), (_ = n);
 }
-function eE(e) {
+function eb(e) {
     let { questId: t } = e,
         n = new Set(f);
     n.add(t), (f = n);
 }
-function eb(e) {
+function ey(e) {
     let { questId: t, entitlements: n } = e,
         r = new Set(f);
-    r.delete(t), (f = r), q(t, n);
+    r.delete(t), (f = r), X(t, n);
 }
-function ey(e) {
+function eO(e) {
     let { questId: t } = e,
         n = new Set(f);
     n.delete(t), (f = n);
 }
-function eO(e) {
+function ev(e) {
     let t = new Set(p);
     t.delete(e), (p = t);
 }
-function ev(e) {
+function eI(e) {
     let { questId: t } = e,
         n = new Set(p);
     n.add(t), (p = n);
 }
-function eI(e) {
-    let { dismissedQuestUserStatus: t } = e;
-    Y(t.questId, { userStatus: t }), eO(t.questId);
-}
 function eT(e) {
-    let { questId: t } = e;
-    eO(t);
+    let { dismissedQuestUserStatus: t } = e;
+    W(t.questId, { userStatus: t }), ev(t.questId);
 }
 function eS(e) {
-    let { streamKey: t } = e;
-    X(t);
+    let { questId: t } = e;
+    ev(t);
 }
 function eA(e) {
+    let { streamKey: t } = e;
+    Q(t);
+}
+function eC(e) {
     let { user_status: t } = e,
-        n = (0, L.T)({ location: j.dr.QUESTS_STORE });
+        n = (0, j.T)({ location: M.dr.QUESTS_STORE });
     n.log("Received user status update for ".concat(t.quest_id), t);
-    let r = (0, w.U3)(t);
-    Y(t.quest_id, { userStatus: r });
+    let r = (0, D.U3)(t);
+    W(t.quest_id, { userStatus: r });
     let i = o.get(t.quest_id);
     if (null != i) {
-        let e = (0, w.zi)(i);
+        let e = (0, D.zi)(i);
         I.get(t.quest_id) !== e && (I = new Map(I).set(t.quest_id, e));
     }
     0 === Object.keys(r.progress).length &&
-        B.has(r.questId) &&
-        (n.log("Removing optimistic progress for ".concat(r.questId)), B.delete(r.questId));
+        Z.has(r.questId) &&
+        (n.log("Removing optimistic progress for ".concat(r.questId)), Z.delete(r.questId));
 }
-function eC(e) {
+function eN(e) {
     let { previewQuestUserStatus: t } = e;
-    Y(t.questId, { userStatus: t }),
+    W(t.questId, { userStatus: t }),
         null == t.claimedAt && (g = new Map(g)).delete(t.questId),
-        null == t.enrolledAt && ((O = new Map(O)).delete(t.questId), x.ZP.getState().resetQuest(t.questId));
+        null == t.enrolledAt && ((O = new Map(O)).delete(t.questId), L.ZP.getState().resetQuest(t.questId));
     let n = o.get(t.questId);
     if (null != n) {
-        let e = (0, w.zi)(n);
+        let e = (0, D.zi)(n);
         I.get(t.questId) !== e && (I = new Map(I).set(t.questId, e));
     }
 }
-function eN(e) {
+function eR(e) {
     let { questId: t } = e;
     y = y === t ? null : t;
 }
-function eR(e) {
+function eP(e) {
     let { questId: t, platform: n } = e;
     (O = new Map(O)), null == n ? O.delete(t) : O.set(t, n);
 }
-function eP(e) {
+function ew(e) {
     var t;
     let { questId: n, taskEventName: r, progress: i } = e,
-        a = null != (t = B.get(n)) ? t : new Map();
-    a.set(r, i), B.set(n, a);
-}
-function ew(e) {
-    let { questId: t } = e;
-    B.has(t) && B.delete(t), x.ZP.getState().resetQuest(t);
+        a = null != (t = Z.get(n)) ? t : new Map();
+    a.set(r, i), Z.set(n, a);
 }
 function eD(e) {
+    let { questId: t } = e;
+    Z.has(t) && Z.delete(t), L.ZP.getState().resetQuest(t);
+}
+function ex(e) {
     let { quest: t, placement: n, adDecisionData: r, adContext: a, metadataRaw: o } = e;
     (u = Date.now()),
         (i = !1),
@@ -336,34 +341,34 @@ function eD(e) {
                   metadataRaw: o,
               });
 }
-function ex(e) {
+function eL(e) {
     let { placement: t } = e;
     v.delete(t), (u = Date.now()), (i = !1);
 }
-function eL() {
+function ej() {
     let e = !1,
         t = new Map(I);
     o.forEach((n, r) => {
-        !0 !== t.get(r) && ((0, w.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
+        !0 !== t.get(r) && ((0, D.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
-        e && ((I = t), eG.emitChange());
-}
-function ej() {
-    null === Z &&
-        (eL(),
-        (Z = setInterval(() => {
-            eL();
-        }, F)));
+        e && ((I = t), eB.emitChange());
 }
 function eM() {
-    null !== Z && (clearInterval(Z), (Z = null));
+    null === F &&
+        (ej(),
+        (F = setInterval(() => {
+            ej();
+        }, V)));
 }
-function ek(e) {
+function ek() {
+    null !== F && (clearInterval(F), (F = null));
+}
+function eU(e) {
     let { quest_enrollment_blocked_until: t } = e;
     T = null != t ? new Date(t) : null;
 }
-V();
-class eU extends (S = R.ZP.Store) {
+H();
+class eG extends (A = P.ZP.Store) {
     get quests() {
         return o;
     }
@@ -433,7 +438,7 @@ class eU extends (S = R.ZP.Store) {
     }
     getOptimisticProgress(e, t) {
         var n;
-        return null == (n = B.get(e)) ? void 0 : n.get(t);
+        return null == (n = Z.get(e)) ? void 0 : n.get(t);
     }
     getExpiredQuestsMap() {
         return I;
@@ -443,43 +448,43 @@ class eU extends (S = R.ZP.Store) {
         return null != (t = I.get(e)) && t;
     }
 }
-M(eU, "displayName", "QuestsStore");
-let eG = new eU(P.Z, {
-        LOGOUT: Q,
-        QUESTS_FETCH_CURRENT_QUESTS_BEGIN: J,
-        QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: $,
-        QUESTS_FETCH_CURRENT_QUESTS_FAILURE: ee,
-        QUESTS_FETCH_CLAIMED_QUESTS_BEGIN: ea,
-        QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS: eo,
-        QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: es,
-        QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: et,
-        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eD,
-        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: ex,
-        QUESTS_FETCH_PREVIEW_BEGIN: en,
-        QUESTS_FETCH_PREVIEW_SUCCESS: er,
-        QUESTS_FETCH_PREVIEW_FAILURE: ei,
-        QUESTS_SEND_HEARTBEAT_SUCCESS: el,
-        QUESTS_SEND_HEARTBEAT_FAILURE: ec,
-        QUESTS_ENROLL_BEGIN: ef,
-        QUESTS_ENROLL_SUCCESS: e_,
-        QUESTS_ENROLL_FAILURE: ep,
-        QUESTS_FETCH_REWARD_CODE_BEGIN: eh,
-        QUESTS_FETCH_REWARD_CODE_SUCCESS: em,
-        QUESTS_FETCH_REWARD_CODE_FAILURE: eg,
-        QUESTS_CLAIM_REWARD_BEGIN: eE,
-        QUESTS_CLAIM_REWARD_SUCCESS: eb,
-        QUESTS_CLAIM_REWARD_FAILURE: ey,
-        QUESTS_DISMISS_CONTENT_BEGIN: ev,
-        QUESTS_DISMISS_CONTENT_SUCCESS: eI,
-        QUESTS_DISMISS_CONTENT_FAILURE: eT,
-        QUESTS_USER_STATUS_UPDATE: eA,
-        STREAM_CLOSE: eu,
-        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: eS,
-        QUESTS_PREVIEW_UPDATE_SUCCESS: eC,
-        QUESTS_DELIVERY_OVERRIDE: eN,
-        QUESTS_SELECT_TASK_PLATFORM: eR,
-        QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eP,
-        QUESTS_RESET_OPTIMISTIC_PROGRESS: ew,
-        QUESTS_USER_COMPLETION_UPDATE: ek,
+k(eG, "displayName", "QuestsStore");
+let eB = new eG(w.Z, {
+        LOGOUT: J,
+        QUESTS_FETCH_CURRENT_QUESTS_BEGIN: $,
+        QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: ee,
+        QUESTS_FETCH_CURRENT_QUESTS_FAILURE: et,
+        QUESTS_FETCH_CLAIMED_QUESTS_BEGIN: eo,
+        QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS: es,
+        QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: el,
+        QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: en,
+        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: ex,
+        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: eL,
+        QUESTS_FETCH_PREVIEW_BEGIN: er,
+        QUESTS_FETCH_PREVIEW_SUCCESS: ei,
+        QUESTS_FETCH_PREVIEW_FAILURE: ea,
+        QUESTS_SEND_HEARTBEAT_SUCCESS: ec,
+        QUESTS_SEND_HEARTBEAT_FAILURE: eu,
+        QUESTS_ENROLL_BEGIN: e_,
+        QUESTS_ENROLL_SUCCESS: ep,
+        QUESTS_ENROLL_FAILURE: eh,
+        QUESTS_FETCH_REWARD_CODE_BEGIN: em,
+        QUESTS_FETCH_REWARD_CODE_SUCCESS: eg,
+        QUESTS_FETCH_REWARD_CODE_FAILURE: eE,
+        QUESTS_CLAIM_REWARD_BEGIN: eb,
+        QUESTS_CLAIM_REWARD_SUCCESS: ey,
+        QUESTS_CLAIM_REWARD_FAILURE: eO,
+        QUESTS_DISMISS_CONTENT_BEGIN: eI,
+        QUESTS_DISMISS_CONTENT_SUCCESS: eT,
+        QUESTS_DISMISS_CONTENT_FAILURE: eS,
+        QUESTS_USER_STATUS_UPDATE: eC,
+        STREAM_CLOSE: ed,
+        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: eA,
+        QUESTS_PREVIEW_UPDATE_SUCCESS: eN,
+        QUESTS_DELIVERY_OVERRIDE: eR,
+        QUESTS_SELECT_TASK_PLATFORM: eP,
+        QUESTS_UPDATE_OPTIMISTIC_PROGRESS: ew,
+        QUESTS_RESET_OPTIMISTIC_PROGRESS: eD,
+        QUESTS_USER_COMPLETION_UPDATE: eU,
     }),
-    eB = eG;
+    eZ = eB;
