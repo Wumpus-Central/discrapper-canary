@@ -21,7 +21,7 @@ n.d(t, {
     pf: () => B,
     qm: () => q,
     w: () => Q,
-    wF: () => M,
+    wF: () => k,
     xw: () => L,
 }),
     n(415506);
@@ -195,22 +195,23 @@ async function L() {
     }
 }
 async function j(e) {
-    let { questId: t, streamKey: n, terminal: i = !1 } = e;
+    let { questId: t, streamKey: n, applicationId: i, terminal: s = !1 } = e;
     try {
-        var s;
+        var l;
         let e = await _.Z.post({
             url: T.ANM.QUESTS_HEARTBEAT(t),
             body: {
                 stream_key: n,
-                terminal: i,
+                application_id: i,
+                terminal: s,
             },
             trackedActionData: {
                 event: r.NetworkActionNames.QUEST_HEARTBEAT,
                 properties: {
                     quest_id: t,
-                    terminal: i,
+                    terminal: s,
                     is_overlay: __OVERLAY__,
-                    stack_trace: null != (s = Error().stack) ? s : "",
+                    stack_trace: null != (l = Error().stack) ? l : "",
                     is_playtime_eligible: !0,
                 },
             },
@@ -231,7 +232,7 @@ async function j(e) {
         });
     }
 }
-function k(e) {
+function M(e) {
     var t, n;
     return (
         e instanceof c.CaptchaCancelError ||
@@ -243,7 +244,7 @@ function k(e) {
                 !1))
     );
 }
-var M = (function (e) {
+var k = (function (e) {
     return (
         (e.SUCCESS = "success"),
         (e.CAPTCHA_FAILED = "captcha_failed"),
@@ -290,7 +291,7 @@ async function U(e, t) {
                 type: "QUESTS_ENROLL_FAILURE",
                 questId: e,
             }),
-            k(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
+            M(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
         );
     }
 }
