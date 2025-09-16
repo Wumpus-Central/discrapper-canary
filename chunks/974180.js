@@ -19,10 +19,10 @@ var l,
     p = n(933557),
     E = n(456269),
     N = n(15274),
-    y = n(336197),
-    O = n(355298),
-    _ = n(786761),
-    C = n(601992),
+    O = n(336197),
+    y = n(355298),
+    C = n(786761),
+    _ = n(601992),
     T = n(864060),
     m = n(687272),
     I = n(106371),
@@ -31,8 +31,8 @@ var l,
     v = n(922482),
     x = n(427679),
     P = n(488131),
-    A = n(695346),
-    Z = n(601964),
+    Z = n(695346),
+    A = n(601964),
     j = n(592125),
     R = n(430824),
     D = n(375954),
@@ -122,14 +122,14 @@ let ee = "message1",
         }
     })();
 function eu() {
-    return !!(w.Z.getDesktopType() === z.qrD.NEVER || G.Z.getStatus() === z.Skl.DND || A.QZ.getSetting());
+    return !!(w.Z.getDesktopType() === z.qrD.NEVER || G.Z.getStatus() === z.Skl.DND || Z.QZ.getSetting());
 }
 function ec(e) {
     return null != B.Z.getVoiceStateForChannel(e);
 }
 class ed extends (l = r.ZP.Store) {
     initialize() {
-        this.waitFor(F.default, j.Z, w.Z, R.Z, x.Z, M.Z, k.Z, B.Z, O.Z);
+        this.waitFor(F.default, j.Z, w.Z, R.Z, x.Z, M.Z, k.Z, B.Z, y.Z);
     }
 }
 J(ed, "displayName", "NotificationStore"),
@@ -188,12 +188,12 @@ J(ed, "displayName", "NotificationStore"),
                           return !1;
                       let N = !w.Z.isSoundDisabled(ee);
                       if ((E && (N && Y.Z.playNotificationSound("message3", 0.4), !ei)) || !p) return !1;
-                      let y = n(808506).default,
-                          O = n(624864).Z,
+                      let O = n(808506).default,
+                          y = n(624864).Z,
                           { OverlayNotificationDisabledSetting: I } = n(486016);
                       if (
-                          null != y.getFocusedPID() &&
-                          !O.isNotificationDisabled(I.TEXT_CHAT) &&
+                          null != O.getFocusedPID() &&
+                          !y.isNotificationDisabled(I.TEXT_CHAT) &&
                           !V.Z.disableNotifications
                       )
                           return !1;
@@ -208,11 +208,11 @@ J(ed, "displayName", "NotificationStore"),
                               title: v,
                               body: x,
                           }),
-                          (0, C.R)(a, c.guild_id),
+                          (0, _.R)(a, c.guild_id),
                           w.Z.getDesktopType() === z.qrD.NEVER)
                       )
                           return N && Y.Z.playNotificationSound(ee, et), !1;
-                      let A = null != (i = D.Z.getMessage(r, a.id)) ? i : (0, _.e5)(a);
+                      let Z = null != (i = D.Z.getMessage(r, a.id)) ? i : (0, C.e5)(a);
                       Y.Z.showNotification(
                           S,
                           v,
@@ -225,7 +225,7 @@ J(ed, "displayName", "NotificationStore"),
                               channel_id: c.id,
                               channel_type: c.type,
                               guild_id: c.guild_id,
-                              badge: (0, U.Ex)(A, g),
+                              badge: (0, U.Ex)(Z, g),
                           },
                           {
                               omitViewTracking: P,
@@ -239,7 +239,7 @@ J(ed, "displayName", "NotificationStore"),
                                       d.default.clickedNotification();
                               },
                               isUserAvatar: !0,
-                              messageRecord: A,
+                              messageRecord: Z,
                               fallbackDeepLink: (0, Y.W)(z.Z5c.CHANNEL(c.guild_id, c.id, a.id)),
                           },
                       ).then((e) => {
@@ -309,7 +309,7 @@ J(ed, "displayName", "NotificationStore"),
                           null != u &&
                           null != c &&
                           Y.Z.showNotification(
-                              (0, Z.EB)(s, 128),
+                              (0, A.EB)(s, 128),
                               u.name,
                               q.intl.formatToPlainString(q.t.sqnsSE, {
                                   channelName: (0, p.F6)(u, F.default, M.Z),
@@ -338,7 +338,7 @@ J(ed, "displayName", "NotificationStore"),
                           return !1;
                       ea.add(t.id),
                           Y.Z.showNotification(
-                              (0, Z.EB)(l, 128),
+                              (0, A.EB)(l, 128),
                               q.intl.formatToPlainString(q.t.bZ4OkZ, { guildName: l.name }),
                               q.intl.formatToPlainString(q.t.qTelnJ, {
                                   username: H.ZP.getName(l.id, r.id, a),
@@ -382,7 +382,7 @@ J(ed, "displayName", "NotificationStore"),
                                         k.Z.can(i.$e(z.Plq.CONNECT, z.Plq.VIEW_CHANNEL), r)
                                     )
                                         Y.Z.showNotification(
-                                            (0, Z.EB)(l, 128),
+                                            (0, A.EB)(l, 128),
                                             q.intl.formatToPlainString(q.t.bOu6Wl, { guildName: l.name }),
                                             q.intl.formatToPlainString(q.t.GV9L8v, {
                                                 topic: e.name,
@@ -410,7 +410,7 @@ J(ed, "displayName", "NotificationStore"),
                                         n = R.Z.getGuild(e.guild_id);
                                     if (null != t && null != n)
                                         Y.Z.showNotification(
-                                            (0, Z.EB)(n, 128),
+                                            (0, A.EB)(n, 128),
                                             q.intl.formatToPlainString(q.t.bOu6Wl, { guildName: n.name }),
                                             q.intl.formatToPlainString(q.t.mYyaRE, { topic: e.name }),
                                             {
@@ -465,7 +465,14 @@ J(ed, "displayName", "NotificationStore"),
                   GENERIC_PUSH_NOTIFICATION_SENT: function (e) {
                       let t,
                           { icon: n, title: l, body: i, route: r, trackingType: a, tag: o } = e;
-                      if (eu() || null == l || null == i || null == a || "reactions_push_notification" === a) return !1;
+                      if (
+                          eu() ||
+                          null == l ||
+                          null == i ||
+                          null == a ||
+                          "reactions_push_notification" === a.toLowerCase()
+                      )
+                          return !1;
                       Y.Z.showNotification(
                           n,
                           l,
@@ -473,7 +480,7 @@ J(ed, "displayName", "NotificationStore"),
                           { notif_type: a },
                           {
                               onClick() {
-                                  null != r && ((0, y.Z)(r), d.default.clickedNotification());
+                                  null != r && ((0, O.Z)(r), d.default.clickedNotification());
                               },
                               tag: o,
                               isUserAvatar: !1,
@@ -499,7 +506,7 @@ J(ed, "displayName", "NotificationStore"),
                           { notif_type: r },
                           {
                               onClick() {
-                                  null != i && ((0, y.Z)(i), d.default.clickedNotification());
+                                  null != i && ((0, O.Z)(i), d.default.clickedNotification());
                               },
                               isUserAvatar: !0,
                           },
@@ -556,7 +563,7 @@ J(ed, "displayName", "NotificationStore"),
                           { notif_type: "MESSAGE_REMINDER_DUE" },
                           {
                               onClick() {
-                                  (0, y.Z)(z.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), l.id, n.id));
+                                  (0, O.Z)(z.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), l.id, n.id));
                               },
                               isUserAvatar: !0,
                           },
