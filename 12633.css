@@ -47380,8 +47380,16 @@ img.thumbnail__0f2e8 {
 }
 
 .container_cbd19d {
-    border-radius: 8px;
-    margin: 4px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: visible;
+    padding: 8px;
+    position: relative
+}
+
+.user-profile-modal-v2 .container_cbd19d {
+    border-radius: var(--radius-md);
     padding: 12px
 }
 
