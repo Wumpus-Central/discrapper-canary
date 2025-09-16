@@ -435,5 +435,13 @@ let O = new o.Z("OverlayActionCreators"),
                 pid: e,
                 trackedGame: t,
             }),
+        trackOverlayStateChanged(e, t, n) {
+            i.Z.dispatch({
+                type: "OVERLAY_TRACK_STATE_CHANGED",
+                pid: e,
+                oldState: t,
+                newState: n,
+            });
+        },
     },
     I = v;

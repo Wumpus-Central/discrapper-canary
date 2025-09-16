@@ -287,6 +287,10 @@ let i = {
         actions: ["OVERLAY_SET_INPUT_LOCKED"],
         inlineRequire: () => n(967031).Z,
     },
+    OverlayStateTrackingManager: {
+        actions: ["OVERLAY_TRACK_STATE_CHANGED", "RUNNING_GAMES_CHANGE"],
+        inlineRequire: () => n(700775).Z,
+    },
     OverlayUsageStatsManager: {
         actions: __OVERLAY__
             ? ["MESSAGE_ACKED", "MESSAGE_CREATE"]

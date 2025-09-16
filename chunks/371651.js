@@ -126,7 +126,9 @@ function K() {
     return Object.keys(j).map(Number);
 }
 function z(e, t) {
-    j = A(T({}, j), { [e]: T({}, t) });
+    var n;
+    let r = null == (n = j[e]) ? void 0 : n.state;
+    (j = A(T({}, j), { [e]: T({}, t) })), r !== t.state && s.Z.trackOverlayStateChanged(e, r, t.state);
 }
 function q(e) {
     delete j[e];
