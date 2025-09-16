@@ -18,8 +18,8 @@ var r = n(951288),
     m = n(451478),
     g = n(21825),
     b = n(232495),
-    _ = n(10401),
-    y = n(131257);
+    y = n(10401),
+    _ = n(131257);
 function C(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ function C(e, t, n) {
         e
     );
 }
-function x(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function x(e) {
     }
     return e;
 }
-function v(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -93,7 +93,7 @@ class O extends i.PureComponent {
     updateCache() {
         var e, t;
         let n = this.contentRef.current;
-        if (null == n || !(0, c.k)(n, HTMLElement)) return;
+        if (null == n || !(0, c.kK)(n, HTMLElement)) return;
         let { offsetWidth: r, offsetHeight: i } = n,
             l = {
                 offsetX: (this.props.targetWidth - r) / 2,
@@ -136,24 +136,24 @@ class O extends i.PureComponent {
                 arrowAlignment: f = h.cy.TOP,
                 popoutPosition: m,
             } = l,
-            { offsetX: b, offsetY: _ } = this.state,
+            { offsetX: b, offsetY: y } = this.state,
             C = {
                 left: null != b ? i.x + b : void 0,
-                top: null != _ ? i.y + _ : void 0,
+                top: null != y ? i.y + y : void 0,
             },
             O = (e) => {
                 let t = n && !e;
                 return {
-                    [y.animating]: t,
-                    [y.notAnimating]: !t,
-                    [y.highPriority]: u,
+                    [_.animating]: t,
+                    [_.notAnimating]: !t,
+                    [_.highPriority]: u,
                 };
             },
             j = this.getTutorialPopoutText();
         return (0, r.jsx)(
             h.ZP,
-            v(
-                x(
+            x(
+                v(
                     {
                         innerRef: this.contentRef,
                         position: m,
@@ -174,12 +174,12 @@ class O extends i.PureComponent {
                         let { isShown: i } = t;
                         return (0, r.jsx)(
                             d.P3F,
-                            v(x({}, e), {
-                                className: y.indicator,
+                            x(v({}, e), {
+                                className: _.indicator,
                                 style: C,
                                 innerRef: this.contentRef,
                                 children: (0, r.jsxs)("div", {
-                                    className: a()(y.animationContainer, O(i)),
+                                    className: a()(_.animationContainer, O(i)),
                                     children: [
                                         ((e) => {
                                             let t = n && !e;
@@ -188,22 +188,22 @@ class O extends i.PureComponent {
                                                 : (0, r.jsxs)("div", {
                                                       children: [
                                                           (0, r.jsx)("div", {
-                                                              className: a()(y.top, {
-                                                                  [y.animating]: t,
-                                                                  [y.notAnimating]: !t,
+                                                              className: a()(_.top, {
+                                                                  [_.animating]: t,
+                                                                  [_.notAnimating]: !t,
                                                               }),
                                                           }),
                                                           (0, r.jsx)("div", {
-                                                              className: a()(y.bottom, {
-                                                                  [y.animating]: t,
-                                                                  [y.notAnimating]: !t,
+                                                              className: a()(_.bottom, {
+                                                                  [_.animating]: t,
+                                                                  [_.notAnimating]: !t,
                                                               }),
                                                           }),
                                                       ],
                                                   });
                                         })(i),
-                                        (0, r.jsx)("div", { className: a()(y.innerCircle, O(i)) }),
-                                        (0, r.jsx)("div", { className: a()(y.outerCircle, O(i)) }),
+                                        (0, r.jsx)("div", { className: a()(_.innerCircle, O(i)) }),
+                                        (0, r.jsx)("div", { className: a()(_.outerCircle, O(i)) }),
                                     ],
                                 }),
                             }),
@@ -233,10 +233,10 @@ let j =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: i,
-              } = (0, u.cj)([_.Z, m.Z, f.Z], () => ({
-                  indicators: _.Z.getIndicators(),
-                  tutorialData: _.Z.getData(),
-                  shouldShowAny: _.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
+              } = (0, u.cj)([y.Z, m.Z, f.Z], () => ({
+                  indicators: y.Z.getIndicators(),
+                  tutorialData: y.Z.getData(),
+                  shouldShowAny: y.Z.shouldShowAnyIndicators() && !f.Z.hasLayers(),
                   windowFocused: m.Z.isFocused(),
               }));
               return i
@@ -248,7 +248,7 @@ let j =
                                 s()(null != a, "Missing tutorial definition for ".concat(i)),
                                 (0, r.jsx)(
                                     O,
-                                    x(
+                                    v(
                                         {
                                             tutorialId: i,
                                             tutorialDefinition: a,

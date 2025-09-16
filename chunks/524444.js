@@ -696,7 +696,7 @@ function ef(e) {
     let $ = i.useCallback(
         (e) => {
             var t;
-            ((0, c.k)(e.target) && (null == (t = I.current) ? void 0 : t.contains(e.target))) ||
+            ((0, c.kK)(e.target) && (null == (t = I.current) ? void 0 : t.contains(e.target))) ||
                 (z &&
                     x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
@@ -1033,7 +1033,7 @@ function eh(e) {
     let $ = i.useCallback(
         (e) => {
             var t;
-            ((0, c.k)(e.target) && (null == (t = y.current) ? void 0 : t.contains(e.target))) ||
+            ((0, c.kK)(e.target) && (null == (t = y.current) ? void 0 : t.contains(e.target))) ||
                 (W &&
                     x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,

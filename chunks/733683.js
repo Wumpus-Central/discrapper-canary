@@ -15,8 +15,8 @@ var r,
     m = n(481060),
     g = n(624138),
     p = n(981631),
-    f = n(989308),
-    h = n(388032),
+    h = n(989308),
+    f = n(388032),
     b = n(31441);
 function x(e, t, n) {
     return (
@@ -88,11 +88,11 @@ class C extends (r = l.Component) {
                 color: m.ua7.Colors.PRIMARY,
                 tooltipClassName: b.foregroundTooltip,
                 children: [
-                    (0, i.jsx)("div", { children: h.intl.format(h.t.gDsyBw, { numSubscriptions: e }) }),
+                    (0, i.jsx)("div", { children: f.intl.format(f.t.gDsyBw, { numSubscriptions: e }) }),
                     null != s && s > 0 && null != l
                         ? (0, i.jsx)("div", {
                               className: b.tooltipMuted,
-                              children: h.intl.format(h.t["2U9MDg"], {
+                              children: f.intl.format(f.t["2U9MDg"], {
                                   number: s,
                                   tier: l.name,
                               }),
@@ -109,12 +109,12 @@ class C extends (r = l.Component) {
         let n = Math.min(t, e.numRequired);
         return (0, i.jsx)("div", {
             children: this.getTierDisabled(e)
-                ? (0, i.jsx)("div", { children: h.intl.formatToPlainString(f.default["9CtPjo"], { perk: e.name }) })
+                ? (0, i.jsx)("div", { children: f.intl.formatToPlainString(h.default["9CtPjo"], { perk: e.name }) })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", { children: e.name }),
                           (0, i.jsx)("div", {
-                              children: h.intl.format(h.t.AkLa6u, {
+                              children: f.intl.format(f.t.AkLa6u, {
                                   subscribers: n,
                                   numRequired: e.numRequired,
                               }),
@@ -133,9 +133,9 @@ class C extends (r = l.Component) {
             g = e.key === s[0].key,
             p = this.getTierDisabled(e);
         l = g ? b.tierFirst : p ? b.tierInProgress : u ? b.tierCurrent : d ? b.tierAccomplished : b.tierInProgress;
-        let f = e.y - (g ? 0 : _ / 2),
-            h = this.state.tierMarkerActive >= t,
-            j = !g && u && h;
+        let h = e.y - (g ? 0 : _ / 2),
+            f = this.state.tierMarkerActive >= t,
+            j = !g && u && f;
         return (0, i.jsx)(
             m.ua7,
             {
@@ -171,7 +171,7 @@ class C extends (r = l.Component) {
                                     {
                                         className: l,
                                         style: {
-                                            top: f,
+                                            top: h,
                                             transform: t.scale.interpolate((e) => "scale(".concat(e, ")")),
                                         },
                                         children:
@@ -298,7 +298,7 @@ class C extends (r = l.Component) {
                 this.setState({ showForegroundTooltip: !0 }), this.handleForegroundMouseMove(e);
             }),
             x(this, "handleForegroundMouseMove", (e) => {
-                if (!(0, d.k)(e.target)) return;
+                if (!(0, d.kK)(e.target)) return;
                 let t = e.target.getBoundingClientRect(),
                     n = e.clientY - t.top;
                 n !== this.state.foregroundTooltipY && this.setState({ foregroundTooltipY: n });

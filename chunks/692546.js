@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var i,
     r = n(647438),
-    o = n(392711),
-    l = n.n(o),
+    l = n(392711),
+    o = n.n(l),
     s = n(374470),
     a = n(902704),
     c = n(846519),
@@ -98,11 +98,11 @@ class E extends (i = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, "zone", l().uniqueId("ClickArea")),
+            g(this, "zone", o().uniqueId("ClickArea")),
             g(this, "interval", new c.Xp()),
             g(this, "updateZone", () => {
                 let e = this.props.contentDomRef.current;
-                if ((0, s.k)(e)) {
+                if ((0, s.kK)(e)) {
                     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
                     _(this.zone, {
                         instance: this,

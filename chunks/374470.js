@@ -12,6 +12,46 @@ function i(e) {
     return isNaN(t) ? 0 : t;
 }
 n.d(t, {
-    M: () => i,
-    k: () => r,
-});
+    Mg: () => i,
+    VG: () => l,
+    kK: () => r,
+    uB: () => c,
+}),
+    n(388685),
+    n(35282);
+let a = /input/i,
+    o = /textarea/i,
+    s = new Set([
+        "text",
+        "password",
+        "number",
+        "date",
+        "datetime-local",
+        "time",
+        "week",
+        "month",
+        "email",
+        "search",
+        "tel",
+        "url",
+    ]);
+function l(e) {
+    if (null == e) return !1;
+    if ("true" === e.getAttribute("contenteditable") || o.test(e.tagName)) return !0;
+    if (a.test(e.tagName)) {
+        var t;
+        let n = null != (t = e.getAttribute("type")) ? t : "text";
+        if (s.has(n)) return !0;
+    }
+    return !1;
+}
+function c(e) {
+    let { target: t } = e;
+    return null == t
+        ? null
+        : "ownerDocument" in t
+          ? t.ownerDocument
+          : "document" in t
+            ? t.document
+            : (console.warn("Unable to get owner document from event", e.type), null);
+}

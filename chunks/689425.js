@@ -79,7 +79,7 @@ class p extends (r = a.PureComponent) {
     }
     grabDimensions() {
         let e = this._ref.current.refs.node;
-        (0, l.k)(e) && ((this._height = e.clientHeight), (this._width = e.clientWidth));
+        (0, l.kK)(e) && ((this._height = e.clientHeight), (this._width = e.clientWidth));
     }
     translate(e, t) {
         let { maxX: n, maxY: r } = this.props;

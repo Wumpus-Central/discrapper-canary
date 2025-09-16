@@ -5,7 +5,7 @@ function i(e, t) {
         i = e.offsetParent;
     for (; null != i; ) {
         var l;
-        if (i === t || !(0, r.k)(i, HTMLElement)) break;
+        if (i === t || !(0, r.kK)(i, HTMLElement)) break;
         (n += null != (l = i.offsetTop) ? l : 0), (i = i.offsetParent);
     }
     return n;

@@ -70,7 +70,7 @@ class f extends (r = l.Component) {
         } = this.props;
         if (e && null == c) {
             let e = null == t ? void 0 : t.current;
-            if (!(0, a.k)(e)) return;
+            if (!(0, a.kK)(e)) return;
             let { top: o, left: c, right: d, bottom: p } = e.getBoundingClientRect();
             s.Z.show(n, {
                 position: r,

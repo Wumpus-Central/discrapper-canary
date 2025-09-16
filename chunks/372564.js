@@ -41,10 +41,10 @@ function b(e) {
     }
     return e;
 }
-function _(e) {
+function y(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class y extends i.Component {
+class _ extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -81,10 +81,10 @@ class y extends i.Component {
             g(this, "_mouseUp", !1),
             g(this, "handleOpenTopic", (e) => {
                 let t = e.target;
-                if ((0, o.k)(t)) {
-                    if (_(t)) return;
+                if ((0, o.kK)(t)) {
+                    if (y(t)) return;
                     let e = t.parentNode;
-                    if ((0, o.k)(e) && _(e)) return;
+                    if ((0, o.kK)(e) && y(e)) return;
                 }
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("65631").then(n.bind(n, 10722));
@@ -143,4 +143,4 @@ class y extends i.Component {
             });
     }
 }
-let C = y;
+let C = _;

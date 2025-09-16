@@ -27,7 +27,7 @@ class o {
         if (null == n) return;
         this.unobserve(e);
         let i = t.current;
-        (0, r.k)(i, HTMLElement) && (this._nodes.set(i, e), this._components.set(e, i), n.observe(i));
+        (0, r.kK)(i, HTMLElement) && (this._nodes.set(i, e), this._components.set(e, i), n.observe(i));
     }
     unobserve(e) {
         let t = this._observer;

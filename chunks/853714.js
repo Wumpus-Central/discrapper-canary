@@ -278,11 +278,11 @@ class U extends i.PureComponent {
         };
         if (null != this._lastExpandedRef) {
             let t = this._lastExpandedRef;
-            (0, o.k)(t) && (e.lastExpanded = t.getBoundingClientRect());
+            (0, o.kK)(t) && (e.lastExpanded = t.getBoundingClientRect());
         }
         if (null != this._expandedRef) {
             let t = this._expandedRef;
-            (0, o.k)(t) && (e.expanded = t.getBoundingClientRect());
+            (0, o.kK)(t) && (e.expanded = t.getBoundingClientRect());
         }
         return e;
     }

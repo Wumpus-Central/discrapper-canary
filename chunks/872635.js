@@ -8,10 +8,10 @@ var r = n(951288),
     a = n(120356),
     o = n.n(a),
     s = n(755712),
-    l = n(481060),
-    c = n(40851),
-    u = n(314910),
-    d = n(5967),
+    l = n(374470),
+    c = n(481060),
+    u = n(40851),
+    d = n(314910),
     f = n(53529),
     _ = n(50659),
     p = n(436660),
@@ -21,34 +21,34 @@ var r = n(951288),
 function E(e) {
     var t;
     let { editorRef: n, options: i, iconClassName: a, dividerClassName: s } = e,
-        c = null == (t = n.current) ? void 0 : t.getSlateEditor();
-    return null == c
+        l = null == (t = n.current) ? void 0 : t.getSlateEditor();
+    return null == l
         ? null
         : (0, r.jsxs)("div", {
               className: g.buttons,
               children: [
                   (0, r.jsx)(y, {
-                      slateEditor: c,
+                      slateEditor: l,
                       markdownSyntax: "bold",
-                      children: (0, r.jsx)(l.mY4, {
+                      children: (0, r.jsx)(c.mY4, {
                           size: "md",
                           color: "currentColor",
                           className: o()(g.icon, a),
                       }),
                   }),
                   (0, r.jsx)(y, {
-                      slateEditor: c,
+                      slateEditor: l,
                       markdownSyntax: "italics",
-                      children: (0, r.jsx)(l.h32, {
+                      children: (0, r.jsx)(c.h32, {
                           size: "md",
                           color: "currentColor",
                           className: o()(g.icon, a),
                       }),
                   }),
                   (0, r.jsx)(y, {
-                      slateEditor: c,
+                      slateEditor: l,
                       markdownSyntax: "strikethrough",
-                      children: (0, r.jsx)(l.dwl, {
+                      children: (0, r.jsx)(c.dwl, {
                           size: "md",
                           color: "currentColor",
                           className: o()(g.icon, a),
@@ -57,9 +57,9 @@ function E(e) {
                   (0, r.jsx)("div", { className: o()(g.divider, s) }),
                   !(null == i ? void 0 : i.disableBlockQuotes) &&
                       (0, r.jsx)(O, {
-                          slateEditor: c,
+                          slateEditor: l,
                           blockType: "blockQuote",
-                          children: (0, r.jsx)(l.PEf, {
+                          children: (0, r.jsx)(c.PEf, {
                               size: "md",
                               color: "currentColor",
                               className: o()(g.icon, a),
@@ -67,9 +67,9 @@ function E(e) {
                       }),
                   !(null == i ? void 0 : i.disableInlineCode) &&
                       (0, r.jsx)(y, {
-                          slateEditor: c,
+                          slateEditor: l,
                           markdownSyntax: "inlineCode",
-                          children: (0, r.jsx)(l.nF$, {
+                          children: (0, r.jsx)(c.nF$, {
                               size: "custom",
                               width: 20,
                               height: 20,
@@ -78,9 +78,9 @@ function E(e) {
                           }),
                       }),
                   (0, r.jsx)(y, {
-                      slateEditor: c,
+                      slateEditor: l,
                       markdownSyntax: "spoiler",
-                      children: (0, r.jsx)(l.tEF, {
+                      children: (0, r.jsx)(c.tEF, {
                           size: "md",
                           color: "currentColor",
                           className: o()(g.icon, a),
@@ -91,11 +91,11 @@ function E(e) {
 }
 let b = i.forwardRef(function (e, t) {
     var n;
-    let { editorRef: a, containerRef: o, options: l } = e,
+    let { editorRef: a, containerRef: o, options: c } = e,
         f = i.useRef(null),
         [_, p] = i.useState(!1),
         m = i.useRef(null),
-        b = i.useContext(c.ZP),
+        b = i.useContext(u.ZP),
         y = i.useCallback(() => {
             p(!1), clearTimeout(m.current);
         }, []),
@@ -118,7 +118,7 @@ let b = i.forwardRef(function (e, t) {
                         clearTimeout(m.current),
                             (m.current = setTimeout(() => {
                                 var t;
-                                let n = null == (t = (0, d.uB)(e)) ? void 0 : t.activeElement,
+                                let n = null == (t = (0, l.uB)(e)) ? void 0 : t.activeElement,
                                     i = o.current;
                                 p(r || (null != n && null != i && i.contains(n)));
                             }, 100));
@@ -196,7 +196,7 @@ let b = i.forwardRef(function (e, t) {
     let P = null == (n = a.current) ? void 0 : n.getSlateEditor();
     return null == P
         ? null
-        : (0, r.jsx)(u.ZP, {
+        : (0, r.jsx)(d.ZP, {
               children: (0, r.jsxs)("div", {
                   id: "slate-toolbar",
                   ref: f,
@@ -215,7 +215,7 @@ let b = i.forwardRef(function (e, t) {
                       (0, r.jsx)(v, { slateEditor: P }),
                       (0, r.jsx)(E, {
                           editorRef: a,
-                          options: l,
+                          options: c,
                       }),
                   ],
               }),

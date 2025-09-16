@@ -2,20 +2,20 @@ n.d(t, { Z: () => i });
 var r = n(647438),
     o = n(374470);
 function i(e) {
-    let { targetRef: t, onShouldClose: n, topThreshold: i = 40, bottomThreshold: l = 60, enabled: s = !0 } = e;
+    let { targetRef: t, onShouldClose: n, topThreshold: i = 40, bottomThreshold: l = 60, enabled: a = !0 } = e;
     r.useEffect(() => {
-        if (!s || (null == t ? void 0 : t.current) == null) return;
+        if (!a || (null == t ? void 0 : t.current) == null) return;
         let e = null,
             r = (r) => {
-                if ((null == t ? void 0 : t.current) == null || !(0, o.k)(r.target, HTMLElement)) return;
-                let s = r.target;
-                if (!s.contains(t.current)) return;
-                let a = s.scrollTop;
+                if ((null == t ? void 0 : t.current) == null || !(0, o.kK)(r.target, HTMLElement)) return;
+                let a = r.target;
+                if (!a.contains(t.current)) return;
+                let s = a.scrollTop;
                 if (null === e) {
-                    e = a;
+                    e = s;
                     return;
                 }
-                let c = a - e,
+                let c = s - e,
                     u = Math.abs(c);
                 ((c < 0 && u > i) || (c > 0 && u > l)) && n();
             };
@@ -28,5 +28,5 @@ function i(e) {
                 document.removeEventListener("scroll", r, { capture: !0 });
             }
         );
-    }, [s, t, n, i, l]);
+    }, [a, t, n, i, l]);
 }

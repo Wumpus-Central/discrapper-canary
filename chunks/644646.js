@@ -40,7 +40,7 @@ let I = function (e) {
         j = i.useCallback(
             (t) => {
                 var n;
-                (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
                     P({
                         questId: a.id,
                         questContent: e.questContent,
@@ -56,20 +56,20 @@ let I = function (e) {
             },
             [P, a.id, e, A],
         ),
-        k = i.useRef(null),
-        M = i.useRef(I),
+        M = i.useRef(null),
+        k = i.useRef(I),
         U = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
-            if (null != k.current) {
+            if (null != M.current) {
                 if (!x.isAnimated || D) {
-                    (k.current.currentTime = 0), k.current.pause();
+                    (M.current.currentTime = 0), M.current.pause();
                     return;
                 }
-                I && !M.current
-                    ? k.current.play()
-                    : !I && M.current && ((k.current.currentTime = 0), k.current.pause()),
-                    (M.current = I);
+                I && !k.current
+                    ? M.current.play()
+                    : !I && k.current && ((M.current.currentTime = 0), M.current.pause()),
+                    (k.current = I);
             }
         }, [I, x, D]),
         (t = U
@@ -107,7 +107,7 @@ let I = function (e) {
                           var n;
                           return (0, r.jsx)(d.Z, {
                               ref: (e) => {
-                                  (t.current = e), (k.current = e);
+                                  (t.current = e), (M.current = e);
                               },
                               autoPlay: !D && I,
                               loop: !0,

@@ -937,7 +937,7 @@ class et extends (i = o.PureComponent) {
     }
     checkVideoDecodability() {
         let { current: e } = this.mediaRef;
-        if (null == e || !(0, f.k)(e, HTMLVideoElement)) return;
+        if (null == e || !(0, f.kK)(e, HTMLVideoElement)) return;
         if (this.props.type !== Y.VIDEO) {
             this._analytics.metadata.hasValidFrame = !0;
             return;

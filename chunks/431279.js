@@ -146,7 +146,7 @@ class b extends (r = a.PureComponent) {
                         sourceMetadata: h,
                         original: null != s ? s : a,
                     };
-                (0, o.k)(e.currentTarget) && e.currentTarget.blur(),
+                (0, o.kK)(e.currentTarget) && e.currentTarget.blur(),
                     (0, d.K)({
                         onClose: this.onCloseImage,
                         items: [b],

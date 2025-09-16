@@ -1,11 +1,11 @@
 n.d(t, { U: () => g }), n(388685), n(35282);
 var r = n(34415),
-    i = n(607070),
-    a = n(819640),
-    o = n(131951),
-    s = n(19780),
-    l = n(585483),
-    c = n(5967),
+    i = n(374470),
+    a = n(607070),
+    o = n(819640),
+    s = n(131951),
+    l = n(19780),
+    c = n(585483),
     u = n(13140),
     d = n(981631);
 let f = "BODY",
@@ -89,24 +89,24 @@ let f = "BODY",
         binds: ["any-character"],
         keydown(e, t) {
             var n;
-            let g = null == (n = (0, c.uB)(e)) ? void 0 : n.activeElement;
-            if ((0, c.VG)(g) || r.fC.isActive() || p.has(t) || h.has(t) || m.has(t)) return !1;
+            let g = null == (n = (0, i.uB)(e)) ? void 0 : n.activeElement;
+            if ((0, i.VG)(g) || r.fC.isActive() || p.has(t) || h.has(t) || m.has(t)) return !1;
             let E = null != g && g.tagName === f;
             return (
                 !(
-                    (i.Z.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
-                    l.S.hasSubscribers(d.CkL.MODAL_CLOSE) ||
-                    a.Z.hasLayers()
+                    (a.Z.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
+                    c.S.hasSubscribers(d.CkL.MODAL_CLOSE) ||
+                    o.Z.hasLayers()
                 ) &&
                 ("Tab" === t &&
-                l.S.hasSubscribers(d.CkL.TEXTAREA_FOCUS) &&
+                c.S.hasSubscribers(d.CkL.TEXTAREA_FOCUS) &&
                 null != document.querySelector('[data-can-focus="true"]')
-                    ? (e.preventDefault(), l.S.dispatch(d.CkL.TEXTAREA_FOCUS), !1)
+                    ? (e.preventDefault(), c.S.dispatch(d.CkL.TEXTAREA_FOCUS), !1)
                     : !(
-                          s.Z.isConnected() &&
-                          o.Z.getMode() === d.pM4.PUSH_TO_TALK &&
-                          !o.Z.isSelfMute() &&
-                          Object.values(o.Z.getShortcuts())
+                          l.Z.isConnected() &&
+                          s.Z.getMode() === d.pM4.PUSH_TO_TALK &&
+                          !s.Z.isSelfMute() &&
+                          Object.values(s.Z.getShortcuts())
                               .map(u.d2)
                               .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))
                       ) &&
@@ -114,7 +114,7 @@ let f = "BODY",
                           !e.metaKey &&
                           !e.ctrlKey &&
                           !_.has(t) &&
-                          l.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS)
+                          c.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS)
                       ))
             );
         },

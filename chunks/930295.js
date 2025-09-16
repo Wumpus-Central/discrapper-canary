@@ -110,7 +110,7 @@ class R extends (r = a.Component) {
     getDomElement() {
         var e;
         let t = null == (e = this.props.targetElementRef) ? void 0 : e.current;
-        if (!(0, d.k)(t)) {
+        if (!(0, d.kK)(t)) {
             let e = Error("Popout cannot find DOM node");
             return console.error(e), y.Z.captureException(e), null;
         }

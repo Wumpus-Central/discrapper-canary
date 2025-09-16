@@ -162,8 +162,8 @@ class T extends (r = a.PureComponent) {
                 barClassName: x,
                 grabberClassName: L,
                 grabberStyles: j = {},
-                markerPosition: k = 0,
-                "aria-hidden": M,
+                markerPosition: M = 0,
+                "aria-hidden": k,
                 "aria-label": U,
                 "aria-labelledby": G,
                 "aria-describedby": B,
@@ -182,8 +182,8 @@ class T extends (r = a.PureComponent) {
                               {
                                   className: s()(m.mark, {
                                       [m.defaultValue]: r,
-                                      [m.markAbove]: 0 === k,
-                                      [m.markBelow]: 1 === k,
+                                      [m.markAbove]: 0 === M,
+                                      [m.markBelow]: 1 === M,
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
@@ -227,7 +227,7 @@ class T extends (r = a.PureComponent) {
                         "aria-valuenow": t,
                         "aria-disabled": g,
                         "aria-orientation": R,
-                        "aria-hidden": M,
+                        "aria-hidden": k,
                         "aria-label": U,
                         "aria-labelledby": G,
                         "aria-describedby": B,
@@ -351,7 +351,7 @@ class T extends (r = a.PureComponent) {
                     { sortedMarkers: l, markerPositions: c } = this.state;
                 if (n) return;
                 let { clientX: u, currentTarget: f } = e;
-                if (!(0, d.k)(f)) return;
+                if (!(0, d.kK)(f)) return;
                 let { left: _, width: p } = f.getBoundingClientRect(),
                     h = (u - _) / p;
                 if (s) {
@@ -413,7 +413,7 @@ class T extends (r = a.PureComponent) {
                         null == (t = r.ownerDocument) ||
                         t.addEventListener("mousemove", this.handleMouseMove, !0),
                     null == r || null == (n = r.ownerDocument) || n.addEventListener("mouseup", this.handleMouseUp, !0),
-                    !(0, d.k)(r))
+                    !(0, d.kK)(r))
                 )
                     throw Error("[UIKit]Slider.handleMouseDown(): assert failed: domNode nodeType !== Element");
                 this.setState({

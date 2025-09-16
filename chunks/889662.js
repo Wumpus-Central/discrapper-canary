@@ -11,14 +11,14 @@ var r = n(951288),
 function b(t) {
     let { text: e, target: n, onHeightUpdate: b, onSelect: d } = t,
         f = l.useCallback(() => {
-            (0, s.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
+            (0, s.Zy)(), (0, c.kK)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
         }, [n]),
         [h, y] = (0, o.Z)({
             text: e,
             target: n,
             onHeightUpdate: b,
         });
-    if (!a.isPlatformEmbedded || !((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement))) return null;
+    if (!a.isPlatformEmbedded || !((0, c.kK)(n, HTMLInputElement) || (0, c.kK)(n, HTMLTextAreaElement))) return null;
     let O =
         "" !== e
             ? [

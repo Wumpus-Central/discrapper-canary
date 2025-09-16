@@ -1,7 +1,7 @@
 n.d(t, {
     De: () => o,
     Fv: () => f,
-    Mg: () => r.M,
+    Mg: () => r.Mg,
     TZ: () => d,
     Zg: () => l,
     _I: () => c,
@@ -10,7 +10,7 @@ n.d(t, {
     n(35282),
     n(388685),
     n(704826);
-var r = n(513431);
+var r = n(374470);
 let i = /[\u0300-\u036f]/g,
     a = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
 function o(e) {

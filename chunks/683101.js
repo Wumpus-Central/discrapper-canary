@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(374470),
@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(294218),
     u = n(592125),
     c = n(388032),
-    d = n(374815);
-function E(e, t, n) {
+    E = n(374815);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
@@ -55,36 +55,36 @@ function A(e, t) {
         e
     );
 }
-class m extends l.PureComponent {
+class T extends l.PureComponent {
     render() {
         let { message: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
             s = u.Z.getChannel(e.channel_id);
         if (null == s) return null;
-        let E = "search-result-".concat(e.id);
+        let d = "search-result-".concat(e.id);
         return (0, r.jsx)(a.tEY, {
             ringTarget: this.hitRef,
-            ringClassName: d.__invalid_searchResultFocusRing,
+            ringClassName: E.__invalid_searchResultFocusRing,
             offset: 4,
             children: (0, r.jsxs)(
                 "li",
-                A(_({ className: d.container }, t), {
+                A(_({ className: E.container }, t), {
                     "aria-posinset": 1 + n + l,
                     "aria-setsize": i,
-                    "aria-labelledby": E,
+                    "aria-labelledby": d,
                     children: [
                         (0, r.jsx)(a.P3F, {
                             tabIndex: -1,
                             onClick: this.handleMessageClick,
                             innerRef: this.containerRef,
-                            className: d.searchResult,
+                            className: E.searchResult,
                             focusProps: { enabled: !1 },
                             children: (0, r.jsx)(
                                 "div",
                                 {
                                     ref: this.hitRef,
-                                    className: d.message,
+                                    className: E.message,
                                     children: (0, r.jsx)(o.Z, {
-                                        id: E,
+                                        id: d,
                                         message: e,
                                         channel: s,
                                         onContextMenu: (t) => this.handleContextMenu(t, e),
@@ -98,10 +98,10 @@ class m extends l.PureComponent {
                             ),
                         }),
                         (0, r.jsx)("div", {
-                            className: d.buttonsContainer,
+                            className: E.buttonsContainer,
                             "aria-hidden": !0,
                             children: (0, r.jsx)(a.P3F, {
-                                className: d.button,
+                                className: E.button,
                                 onClick: this.jumpTo,
                                 children: c.intl.string(c.t.k5WiPT),
                             }),
@@ -113,9 +113,9 @@ class m extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, "containerRef", l.createRef()),
-            E(this, "hitRef", l.createRef()),
-            E(this, "handleContextMenu", (e, t) => {
+            d(this, "containerRef", l.createRef()),
+            d(this, "hitRef", l.createRef()),
+            d(this, "handleContextMenu", (e, t) => {
                 let l = u.Z.getChannel(t.channel_id);
                 null != l &&
                     (e.stopPropagation(),
@@ -133,19 +133,19 @@ class m extends l.PureComponent {
                             );
                     }));
             }),
-            E(this, "jumpTo", (e) => {
+            d(this, "jumpTo", (e) => {
                 null != e && (e.preventDefault(), e.stopPropagation());
                 let { onJump: t, message: n, index: r } = this.props;
                 null != n && t(n, r);
             }),
-            E(this, "handleMessageClick", (e) => {
+            d(this, "handleMessageClick", (e) => {
                 if (
                     (function (e, t) {
                         var n;
                         let r = null == (n = window) ? void 0 : n.getSelection();
                         if (null != r && !r.isCollapsed) return !0;
                         if (null == e || null == t) return !1;
-                        for (; (0, i.k)(e) && e !== t; ) {
+                        for (; (0, i.kK)(e) && e !== t; ) {
                             let { tagName: t } = e;
                             if ("A" === t || "IMG" === t || "BUTTON" === t) return !0;
                             e = e.parentNode;

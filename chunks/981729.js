@@ -2,7 +2,7 @@ n.d(t, {
     Cy: () => D,
     DY: () => U,
     FG: () => S,
-    u: () => M,
+    u: () => k,
 }),
     n(415506),
     n(388685);
@@ -191,7 +191,7 @@ let D = (e) => {
         scale: 1,
         opacity: 1,
     },
-    k = (e) => {
+    M = (e) => {
         var { isVisible: t, onAnimationRest: n, targetElementRef: r } = e,
             o = I(e, ["isVisible", "onAnimationRest", "targetElementRef"]);
         let { reducedMotion: s } = a.useContext(f.Sfi);
@@ -221,7 +221,7 @@ let D = (e) => {
                 : null,
         );
     };
-class M extends (r = a.Component) {
+class k extends (r = a.Component) {
     static getDerivedStateFromProps(e, t) {
         return t.shouldShowTooltip && null == e.text ? { shouldShowTooltip: !1 } : null;
     }
@@ -239,7 +239,7 @@ class M extends (r = a.Component) {
                 if (null == (e = this.props.targetElementRef.current)) return;
             } else {
                 var t;
-                if (((e = null == (t = this.siblingDomRef.current) ? void 0 : t.previousElementSibling), !(0, d.k)(e)))
+                if (((e = null == (t = this.siblingDomRef.current) ? void 0 : t.previousElementSibling), !(0, d.kK)(e)))
                     throw Error("Tooltip cannot find DOM node");
             }
             (this.domElementRef.current = e), (this.hasDomElement = !0), this.forceUpdate();
@@ -303,7 +303,7 @@ class M extends (r = a.Component) {
             b = null;
         return (
             (b = e instanceof Function ? (E ? e() : null) : e),
-            (0, i.jsx)(k, {
+            (0, i.jsx)(M, {
                 disableTooltipPointerEvents: g,
                 targetElementRef: this.domElementRef,
                 tooltipStyle: s,
@@ -327,7 +327,7 @@ class M extends (r = a.Component) {
         let { delay: e, overflowOnly: t } = this.props;
         if (t) {
             let e = this.domElementRef.current;
-            if (null == e || ((0, d.k)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth)) return;
+            if (null == e || ((0, d.kK)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth)) return;
         }
         null != e ? this.showTimeout.start(e, () => this.toggleShow(!0), !1) : this.toggleShow(!0);
     }
@@ -375,8 +375,8 @@ class M extends (r = a.Component) {
             });
     }
 }
-b(M, "Colors", S),
-    b(M, "defaultProps", {
+b(k, "Colors", S),
+    b(k, "defaultProps", {
         hideOnClick: !0,
         position: "top",
         color: "primary",
@@ -390,7 +390,7 @@ let U = (e) => {
     var { children: t, className: n, element: r = "div" } = e,
         o = I(e, ["children", "className", "element"]);
     return (0, i.jsx)(
-        M,
+        k,
         v(y({}, o), { children: (e) => a.createElement(r, null != n ? v(y({}, e), { className: n }) : e, t) }),
     );
 };

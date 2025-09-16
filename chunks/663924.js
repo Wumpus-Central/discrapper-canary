@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     l = n(374470),
@@ -9,75 +9,74 @@ var r = n(951288),
     u = n(314910),
     d = n(574254),
     p = n(585483),
-    h = n(5967),
-    f = n(499254),
-    m = n(827498),
-    g = n(421591),
-    b = n(496977),
-    _ = n(314734),
+    h = n(499254),
+    f = n(827498),
+    m = n(421591),
+    g = n(496977),
+    b = n(314734),
     y = n(981631),
-    C = n(149203),
-    x = n(388032),
+    _ = n(149203),
+    C = n(388032),
     v = n(681524);
-let O = { height: _.lv };
-function j() {
-    f.yT(m.ti.DISMISSED);
+let x = { height: b.lv };
+function O() {
+    h.yT(f.ti.DISMISSED);
 }
-function E(e) {
+function j(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
-        f = i.useRef(null),
-        { renderWindow: x, windowDispatch: v } = i.useContext(s.ZP),
-        O = null != u,
-        E = (0, a.Jw)(null != u ? u : ""),
-        S = i.useCallback(
+        h = i.useRef(null),
+        { renderWindow: C, windowDispatch: v } = i.useContext(s.ZP),
+        x = null != u,
+        j = (0, a.Jw)(null != u ? u : ""),
+        E = i.useCallback(
             (e) => {
                 var t;
-                if ((!O && (0, a.$s)()) || (O && !(E && n)) || d.Z.isOpen() || e.defaultPrevented) return;
+                if ((!x && (0, a.$s)()) || (x && !(j && n)) || d.Z.isOpen() || e.defaultPrevented) return;
                 let { target: r } = e;
-                if ((0, l.k)(r) && null != r.closest("." + _.Jh)) return;
-                for (; (0, l.k)(r); ) {
-                    if (r === f.current) return;
-                    if (r.classList.contains(_.t4) || r.classList.contains(_.Id)) return void e.preventDefault();
-                    if (r.classList.contains(_.NN)) return;
-                    let t = [C.cZ, c.N];
-                    if (r.classList.contains(_.I4) || t.includes(r.id)) return;
+                if ((0, l.kK)(r) && null != r.closest("." + b.Jh)) return;
+                for (; (0, l.kK)(r); ) {
+                    if (r === h.current) return;
+                    if (r.classList.contains(b.t4) || r.classList.contains(b.Id)) return void e.preventDefault();
+                    if (r.classList.contains(b.NN)) return;
+                    let t = [_.cZ, c.N];
+                    if (r.classList.contains(b.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
-                j();
-                let i = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
+                O();
+                let i = null == (t = (0, l.uB)(e)) ? void 0 : t.activeElement;
                 (null == i || "BODY" === i.tagName) && p.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS);
             },
-            [n, E, O],
+            [n, j, x],
         );
     i.useLayoutEffect(
         () => (
-            x.addEventListener("mousedown", S),
-            x.addEventListener("contextmenu", S),
-            v.subscribe(y.CkL.POPOUT_CLOSE, j),
+            C.addEventListener("mousedown", E),
+            C.addEventListener("contextmenu", E),
+            v.subscribe(y.CkL.POPOUT_CLOSE, O),
             () => {
-                x.removeEventListener("mousedown", S),
-                    x.removeEventListener("contextmenu", S),
-                    v.unsubscribe(y.CkL.POPOUT_CLOSE, j);
+                C.removeEventListener("mousedown", E),
+                    C.removeEventListener("contextmenu", E),
+                    v.unsubscribe(y.CkL.POPOUT_CLOSE, O);
             }
         ),
-        [S, x, v],
+        [E, C, v],
     ),
-        (0, o.Tbt)(f),
+        (0, o.Tbt)(h),
         i.useEffect(() => {
-            ((!O && (0, a.$s)()) || (O && !E)) && j();
-        }, [E, O]);
-    let I = (0, b.Z)();
-    return (0, r.jsx)(g.Z, {
-        ref: f,
+            ((!x && (0, a.$s)()) || (x && !j)) && O();
+        }, [j, x]);
+    let S = (0, g.Z)();
+    return (0, r.jsx)(m.Z, {
+        ref: h,
         context: {
             channel: t,
             type: "channel",
         },
-        entrypoint: m._b.TEXT,
-        initHistory: I,
+        entrypoint: f._b.TEXT,
+        initHistory: S,
     });
 }
-let S = i.memo(function (e) {
+let E = i.memo(function (e) {
     var { positionTargetRef: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -101,7 +100,7 @@ let S = i.memo(function (e) {
             return i;
         })(e, ["positionTargetRef"]);
     return (0, r.jsx)("span", {
-        style: _.u$,
+        style: b.u$,
         children: (0, r.jsx)(u.W5, {
             className: v.positionLayer,
             targetRef: t,
@@ -115,12 +114,12 @@ let S = i.memo(function (e) {
                 return (0, r.jsx)("section", {
                     className: v.positionContainer,
                     role: "dialog",
-                    style: O,
-                    "aria-label": x.intl.string(x.t["3CNGLC"]),
+                    style: x,
+                    "aria-label": C.intl.string(C.t["3CNGLC"]),
                     children:
                         t &&
                         (0, r.jsx)(
-                            E,
+                            j,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
