@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => L,
-    y: () => k,
+    y: () => M,
 });
 var r = n(951288),
     i = n(647438),
@@ -326,22 +326,19 @@ let P = (e) => {
                   })
         );
     };
-function k(e) {
+function M(e) {
     let t = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: v.ctaButtons,
         ref: t,
         children: [
             e.showBackButton &&
-                (0, r.jsx)(o.zx, {
-                    className: v.backButton,
-                    innerClassName: v.backButtonInner,
-                    look: "blank",
-                    grow: !1,
-                    fullWidth: !1,
-                    size: "none",
+                (0, r.jsx)(a.hU, {
+                    size: "sm",
+                    "aria-label": O.intl.string(O.t["13/7kZ"]),
                     onClick: e.onBack,
-                    children: (0, r.jsx)(s.V7D, { className: v.backIcon }),
+                    icon: s.V7D,
+                    variant: "secondary",
                 }),
             (0, r.jsx)(
                 j,
