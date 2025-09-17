@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685), n(953529);
+n.d(t, { Z: () => B }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,30 +7,29 @@ var r = n(951288),
     l = n(831209),
     c = n(494497),
     u = n(793030),
-    d = n(755721),
-    f = n(481060),
-    _ = n(434650),
-    p = n(100527),
-    h = n(906732),
-    m = n(879892),
-    g = n(245004),
-    E = n(430824),
-    b = n(63063),
-    y = n(713081),
-    O = n(905128),
-    v = n(158638),
-    I = n(156732),
-    T = n(639777),
-    S = n(70300),
-    A = n(973772),
-    C = n(441536),
-    N = n(535396),
-    R = n(981631),
-    P = n(989308),
-    w = n(388032),
-    D = n(765179),
-    x = n(630564);
-function L(e, t, n) {
+    d = n(481060),
+    f = n(434650),
+    _ = n(100527),
+    p = n(906732),
+    h = n(879892),
+    m = n(245004),
+    g = n(430824),
+    E = n(63063),
+    b = n(713081),
+    y = n(905128),
+    O = n(158638),
+    v = n(156732),
+    I = n(639777),
+    T = n(70300),
+    S = n(973772),
+    A = n(441536),
+    C = n(535396),
+    N = n(981631),
+    R = n(258640),
+    P = n(388032),
+    w = n(722177),
+    D = n(546241);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +42,7 @@ function L(e, t, n) {
         e
     );
 }
-function j(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +53,12 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,161 +75,165 @@ function M(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function U(e) {
+function k(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
-        { analyticsLocations: u } = (0, h.ZP)(),
-        b = (0, v.g1)(t, "GuildPowerupMarketingPowerupCard"),
-        y = n.skuId === c.A$,
-        O = (0, A.ZP)(t, n).type !== N.A3.INACTIVE,
-        S = (0, T.Z)(t),
-        [L, k] = i.useState(!1),
-        [U, G] = i.useState(!1),
-        B = U,
-        Z = i.useCallback(() => {
-            let e = E.Z.getGuild(t);
+        { analyticsLocations: u } = (0, p.ZP)(),
+        E = (0, O.g1)(t, "GuildPowerupMarketingPowerupCard"),
+        b = n.skuId === c.A$,
+        y = (0, S.ZP)(t, n).type !== C.A3.INACTIVE,
+        T = (0, I.Z)(t),
+        [x, j] = i.useState(!1),
+        [k, U] = i.useState(!1),
+        G = k,
+        B = i.useCallback(() => {
+            let e = g.Z.getGuild(t);
             null != e &&
-                (0, m.u)({
+                (0, h.u)({
                     analyticsLocation: {
-                        page: R.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: R.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
+                        page: N.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: N.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: u,
                     guild: e,
                 });
         }, [t, u]),
-        F = i.useCallback(() => {
-            a(), (0, C.Z)(t, p.Z.GUILD_POWERUPS_MARKETING, n.skuId);
+        Z = i.useCallback(() => {
+            a(), (0, A.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId);
         }, [t, n.skuId, a]),
-        V = {
+        F = {
             tension: 400,
             friction: 30,
         },
-        H = (0, f.q_F)({
-            transform: B
+        V = (0, d.q_F)({
+            transform: G
                 ? "translateX(-50%) translateY(16px) scale(1)"
                 : "translateX(-50%) translateY(24px) scale(1.40)",
             borderRadius: "0px",
             transformOrigin: "center 0%",
-            config: V,
+            config: F,
         }),
-        Y = (0, f.q_F)({
-            y: B ? -25 : 0,
-            config: V,
+        H = (0, d.q_F)({
+            y: G ? -25 : 0,
+            config: F,
         }),
-        W = (0, f.q_F)({
-            opacity: +!!B,
-            transform: B ? "translateY(0)" : "translateY(20px)",
-            config: V,
+        Y = (0, d.q_F)({
+            opacity: +!!G,
+            transform: G ? "translateY(0)" : "translateY(20px)",
+            config: F,
         }),
-        K = i.useCallback((e) => {
-            e && k(!0);
+        W = i.useCallback((e) => {
+            e && j(!0);
         }, []),
-        z = (0, _.O)(K),
-        q = (0, I.Z)(n, U);
+        K = (0, f.O)(W),
+        z = (0, v.Z)(n, k);
     return (0, r.jsxs)("div", {
-        className: o()(x.topPerksCard, x.animatedTopPerksCard, D.powerupCard, { [x.animate]: L }),
-        onMouseEnter: () => G(!0),
-        onMouseLeave: () => G(!1),
+        className: o()(D.topPerksCard, D.animatedTopPerksCard, w.powerupCard, { [D.animate]: x }),
+        onMouseEnter: () => U(!0),
+        onMouseLeave: () => U(!1),
         children: [
             (0, r.jsx)("div", {
-                className: x.intObserver,
-                ref: z,
+                className: D.intObserver,
+                ref: K,
             }),
             (0, r.jsx)("div", {
-                className: x.topPerksCardImageWrapper,
+                className: D.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
-                    className: o()(x.topPerksCardImage, D.image),
-                    src: q,
+                    className: o()(D.topPerksCardImage, w.image),
+                    src: z,
                     alt: "",
-                    style: H,
+                    style: V,
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: M(j({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
-                className: o()(x.contentContainer, D.contentContainer),
+                style: M(L({}, H), { transform: H.y.to((e) => "translateY(".concat(e, "px)")) }),
+                className: o()(D.contentContainer, w.contentContainer),
                 children: [
-                    (0, r.jsx)(g.xm, {
+                    (0, r.jsx)(m.xm, {
                         heading: n.title,
                         description: n.description,
-                        label: w.intl.formatToPlainString(P.default.QOacIS, { quantity: n.cost }),
-                        isEnabled: O,
+                        label: P.intl.formatToPlainString(R.default.QOacIS, { quantity: n.cost }),
+                        isEnabled: y,
                     }),
                     (0, r.jsxs)(s.animated.div, {
-                        style: W,
-                        className: x.buttonsContainer,
+                        style: Y,
+                        className: D.buttonsContainer,
                         children: [
-                            (0, r.jsx)(d.zx, {
-                                grow: !0,
-                                onClick: Z,
-                                color: d.zx.Colors.BRAND,
-                                className: x.button,
-                                children: w.intl.string(w.t["oPAx7+"]),
+                            (0, r.jsx)("div", {
+                                className: D.button,
+                                children: (0, r.jsx)(d.zxk, {
+                                    variant: "primary",
+                                    text: P.intl.string(P.t["oPAx7+"]),
+                                    onClick: B,
+                                    fullWidth: !0,
+                                }),
                             }),
-                            S &&
-                                (0, r.jsx)(d.zx, {
-                                    grow: !0,
-                                    onClick: F,
-                                    color: d.zx.Colors.PRIMARY,
-                                    className: x.button,
-                                    children: w.intl.string(w.t.GoCQxc),
+                            T &&
+                                (0, r.jsx)("div", {
+                                    className: D.button,
+                                    children: (0, r.jsx)(d.zxk, {
+                                        variant: "secondary",
+                                        text: P.intl.string(P.t.GoCQxc),
+                                        onClick: Z,
+                                        fullWidth: !0,
+                                    }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            !b &&
-                !y &&
-                (0, r.jsx)(f.IGR, {
-                    className: x.topPerksCardNew,
-                    text: w.intl.string(w.t.y2b7CA),
+            !E &&
+                !b &&
+                (0, r.jsx)(d.IGR, {
+                    className: D.topPerksCardNew,
+                    text: P.intl.string(P.t.y2b7CA),
                 }),
-            y &&
-                (0, r.jsx)(f.IGR, {
-                    className: x.topPerksCardNew,
-                    text: w.intl.string(w.t.oW0eUV),
+            b &&
+                (0, r.jsx)(d.IGR, {
+                    className: D.topPerksCardNew,
+                    text: P.intl.string(P.t.oW0eUV),
                     color: l.Z.BG_BRAND,
                 }),
-            L && (0, r.jsx)("div", { className: x.shineLine }),
+            x && (0, r.jsx)("div", { className: D.shineLine }),
         ],
     });
 }
-let G = 3,
-    B = i.forwardRef((e, t) => {
+let U = 3,
+    G = i.forwardRef((e, t) => {
         let { guild: n, onClose: a } = e;
         i.useEffect(() => {
-            O.Z.shouldFetchCatalogForGuild(n.id) && (0, y.Sn)(n.id),
-                O.Z.shouldFetchPowerupsForGuild(n.id) && (0, y.Fm)(n.id);
+            y.Z.shouldFetchCatalogForGuild(n.id) && (0, b.Sn)(n.id),
+                y.Z.shouldFetchPowerupsForGuild(n.id) && (0, b.BN)(n.id);
         }, [n.id]);
-        let o = (0, S.Z)(n.id),
-            s = (null != o ? o : []).slice(0, G);
+        let o = (0, T.Z)(n.id),
+            s = (null != o ? o : []).slice(0, U);
         return 0 === s.length
             ? null
             : (0, r.jsxs)("div", {
                   ref: t,
-                  className: D.container,
+                  className: w.container,
                   children: [
                       (0, r.jsx)(u.X6q, {
                           variant: "heading-xxl/extrabold",
-                          children: w.intl.string(P.default.wjI18f),
+                          children: P.intl.string(R.default.wjI18f),
                       }),
                       (0, r.jsx)(u.xvT, {
                           variant: "text-lg/medium",
-                          children: w.intl.format(P.default.S562fn, {
-                              helpDeskArticle: b.Z.getArticleURL(R.BhN.GUILD_BOOSTING_FAQ),
+                          children: P.intl.format(R.default.S562fn, {
+                              helpDeskArticle: E.Z.getArticleURL(N.BhN.GUILD_BOOSTING_FAQ),
                           }),
                       }),
                       (0, r.jsx)("div", {
-                          className: D.powerupsContainer,
+                          className: w.powerupsContainer,
                           children: s.map((e) =>
                               (0, r.jsx)(
-                                  U,
+                                  k,
                                   {
                                       guildId: n.id,
                                       powerup: e,
@@ -243,5 +246,5 @@ let G = 3,
                   ],
               });
     });
-B.displayName = "GuildPowerupsMarketingPowerupCards";
-let Z = B;
+G.displayName = "GuildPowerupsMarketingPowerupCards";
+let B = G;
