@@ -10,13 +10,11 @@ let l = {
         [i.T.ORB]: {
             responsive: !0,
             backgroundStyle: "linear-gradient(180deg, rgba(39, 30, 173, 0.3), transparent)",
-            hideSideShadow: !0,
         },
     },
     a = {
         responsive: void 0,
         backgroundStyle: void 0,
-        hideSideShadow: !1,
     },
     o = (e) =>
         (0, r.useMemo)(() => {
