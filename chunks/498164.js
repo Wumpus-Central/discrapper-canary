@@ -23,10 +23,10 @@ var i = n(772848),
     I = n(594174),
     C = n(626135),
     S = n(585483),
-    N = n(591759),
-    T = n(998502),
-    j = n(996106),
-    P = n(109815),
+    T = n(591759),
+    N = n(998502),
+    P = n(996106),
+    j = n(109815),
     x = n(186901),
     A = n(981631),
     Z = n(46140);
@@ -72,7 +72,7 @@ let R = {
             let {
                 args: { code: t },
             } = e;
-            return await (0, P.T)(t, "Desktop Modal");
+            return await (0, j.T)(t, "Desktop Modal");
         },
     },
     [A.Etm.GUILD_TEMPLATE_BROWSER]: {
@@ -84,9 +84,9 @@ let R = {
             if (null == I.default.getCurrentUser()) return;
             let { guildTemplate: i } = await _.Z.resolveGuildTemplate(t);
             if (null == i)
-                throw new j.Z({ errorCode: A.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
+                throw new P.Z({ errorCode: A.lTL.INVALID_GUILD_TEMPLATE }, "Invalid guild template id: ".concat(t));
             return (
-                T.ZP.focus(),
+                N.ZP.focus(),
                 (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
                     return (t) => {
@@ -129,7 +129,7 @@ let R = {
                     p.Z.resolveGiftCode(t, !0, !0)
                         .then((i) => {
                             let { giftCode: l } = i;
-                            T.ZP.focus(),
+                            N.ZP.focus(),
                                 C.default.track(A.rMx.OPEN_MODAL, {
                                     type: "gift_accept",
                                     location: A.SaU,
@@ -141,7 +141,7 @@ let R = {
                                 e({ giftCode: l });
                         })
                         .catch(() =>
-                            i(new j.Z({ errorCode: A.lTL.INVALID_GIFT_CODE }, "Invalid gift code: ".concat(t))),
+                            i(new P.Z({ errorCode: A.lTL.INVALID_GIFT_CODE }, "Invalid gift code: ".concat(t))),
                         );
                 });
             });
@@ -155,13 +155,18 @@ let R = {
             let {
                 args: { type: t, params: n },
             } = e;
-            switch ((T.ZP.focus(), t)) {
+            switch ((N.ZP.focus(), t)) {
                 case x.jE.USER_SETTINGS:
-                    null != n && ((0, y.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), L(n.fingerprint, (0, x.O)(t)));
+                    null != n &&
+                        ((0, y.dL)({
+                            pathname: A.Z5c.SETTINGS(n.section, n.subsection),
+                            search: n.search,
+                        }),
+                        L(n.fingerprint, (0, x.O)(t)));
                     break;
                 case x.jE.CHANGELOG:
                     null != n &&
-                        ((0, y.dL)(N.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)),
+                        ((0, y.dL)(T.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)),
                         L(n.fingerprint, (0, x.O)(t)));
                     break;
                 case x.jE.LIBRARY:
@@ -297,7 +302,7 @@ let R = {
             let {
                 args: { handoffToken: t, fingerprint: n },
             } = e;
-            T.ZP.focus(null, !0), (0, c.lx)(t, n);
+            N.ZP.focus(null, !0), (0, c.lx)(t, n);
         },
     },
     [A.Etm.CONNECTIONS_CALLBACK]: {
@@ -307,7 +312,7 @@ let R = {
                 args: { providerType: t, code: n, openid_params: r, iss: i, state: l },
             } = e;
             if (!v.Z.hasPendingAuthorizedState(l))
-                throw new j.Z(
+                throw new P.Z(
                     { errorCode: A.lTL.INVALID_CONNECTION_CALLBACK_STATE },
                     "Provider authorization did not originate from this discord client",
                 );
@@ -323,7 +328,7 @@ let R = {
                 );
             } catch (e) {
                 if ((null == e ? void 0 : e.status) === 400)
-                    throw new j.Z({ errorCode: A.lTL.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
+                    throw new P.Z({ errorCode: A.lTL.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
                 throw (S.S.dispatch(A.CkL.CONNECTIONS_CALLBACK_ERROR), e);
             }
         },
