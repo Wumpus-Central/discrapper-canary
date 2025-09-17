@@ -1,7 +1,7 @@
 n.d(t, {
-    M9: () => N,
-    aW: () => D,
-    wu: () => w,
+    M9: () => P,
+    aW: () => L,
+    wu: () => x,
 }),
     n(388685);
 var r = n(997945),
@@ -28,9 +28,11 @@ var r = n(997945),
     T = n(405571),
     S = n(730886),
     A = n(473974),
-    C = n(563856);
-let N = 60;
-function R() {
+    C = n(936684),
+    N = n(487483),
+    R = n(563856);
+let P = 60;
+function w() {
     return {
         id: r.aH.DEFAULT,
         iconSource: o,
@@ -38,7 +40,24 @@ function R() {
         isPremium: !1,
     };
 }
-function P() {
+function D() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = e
+            ? [
+                  {
+                      id: r.Ru.TRICK,
+                      iconSource: N,
+                      isPremium: !0,
+                      name: i.intl.string(i.t["6Zuiv7"]),
+                  },
+                  {
+                      id: r.Ru.TREAT,
+                      iconSource: C,
+                      isPremium: !0,
+                      name: i.intl.string(i.t["2UeOlZ"]),
+                  },
+              ]
+            : [];
     return [
         {
             id: r.Ru.BRAND_DARK,
@@ -96,7 +115,7 @@ function P() {
         },
         {
             id: r.Ru.Y2K,
-            iconSource: C,
+            iconSource: R,
             isPremium: !0,
             name: i.intl.string(i.t["s+KoXF"]),
         },
@@ -172,11 +191,14 @@ function P() {
             isPremium: !0,
             name: i.intl.string(i.t.MWRYqq),
         },
+        ...t,
     ];
 }
-function w() {
-    return [R(), ...P()];
+function x() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    return [w(), ...D(e)];
 }
-function D(e) {
-    return w().find((t) => t.id === e);
+function L(e) {
+    let t = x(!0).find((t) => t.id === e);
+    return null != t ? t : w();
 }
