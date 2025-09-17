@@ -1,66 +1,74 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(111028),
-    l = n(223135),
-    c = n(741570),
-    u = n(584973),
-    d = n(556638),
-    f = n(666998);
-let _ = 14;
-function p(e) {
+    l = n(574176),
+    c = n(833858),
+    u = n(223135),
+    d = n(741570),
+    f = n(584973),
+    _ = n(556638),
+    p = n(666998);
+let h = 14;
+function m(e) {
     let {
             customStatusActivity: t,
             textClassName: n,
             iconClassName: i,
-            tooltipClassName: p,
-            voiceChannel: h,
-            hangStatus: m,
-            textSize: g = "xs",
-            animateEmoji: E = !0,
-            hideEmoji: b = !1,
-            hideTooltip: y = !1,
+            tooltipClassName: m,
+            voiceChannel: g,
+            hangStatus: E,
+            textSize: b = "xs",
+            animateEmoji: y = !0,
+            hideEmoji: O = !1,
+            hideTooltip: v = !1,
         } = e,
-        O = (0, c.E)("ActivityStatus", h);
-    if (null == t && null == m) return null;
-    let v = null == t ? void 0 : t.emoji,
-        I = null == t ? void 0 : t.state,
-        T = null != I && "" !== I,
-        S = null;
-    null != m && O
-        ? (S = (0, r.jsx)(l.Z, {
-              size: _,
-              className: a()(i, f.hangStatusIcon),
-              hangStatusActivity: m,
+        I = (0, d.E)("ActivityStatus", g),
+        { defaultStatusVariant: T } = l.n.useExperiment({
+            guildId: null == g ? void 0 : g.guild_id,
+            location: "CustomStatusActivityStatus",
+        });
+    if (null == t && null == E) return null;
+    let S = null != E && I,
+        A = S ? (0, c.O8)(E, T) : null,
+        C = null == t ? void 0 : t.emoji,
+        N = null != A ? A : null == t ? void 0 : t.state,
+        R = null != N && "" !== N,
+        P = null;
+    S
+        ? (P = (0, r.jsx)(u.Z, {
+              size: h,
+              className: a()(i, p.hangStatusIcon),
+              hangStatusActivity: E,
           }))
-        : null == v ||
-          b ||
-          (S = (0, r.jsx)(u.Z, {
-              emoji: v,
-              animate: E,
+        : null == C ||
+          O ||
+          (P = (0, r.jsx)(f.Z, {
+              emoji: C,
+              animate: y,
               className: i,
-              hideTooltip: y || T,
+              hideTooltip: v || R,
           }));
-    let A = T && (null != S ? " ".concat(I) : I),
-        C = () => {
-            let e = null != v && !b && !T;
-            return y || e
+    let w = R && (null != P ? " ".concat(N) : N),
+        D = () => {
+            let e = null != C && !O && !R;
+            return v || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [S, A],
+                      children: [P, w],
                   })
                 : (0, r.jsxs)(s.Z, {
-                      delay: d.X,
-                      tooltipClassName: p,
-                      children: [S, A],
+                      delay: _.X,
+                      tooltipClassName: m,
+                      children: [P, w],
                   });
         };
     return (0, r.jsx)(o.Text, {
-        variant: "text-".concat(g, "/medium"),
+        variant: "text-".concat(b, "/medium"),
         color: "none",
-        className: a()(f.truncated, n),
-        children: C(),
+        className: a()(p.truncated, n),
+        children: D(),
     });
 }

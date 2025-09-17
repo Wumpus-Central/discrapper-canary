@@ -152,7 +152,7 @@ function C(e) {
         (null == t ? void 0 : t.type) === E.IIU.HANG_STATUS &&
             C &&
             m.default.track(E.rMx.VIEW_HANG_STATUS, {
-                source: "UserProfilePopout",
+                source: "UserActivity",
                 guild_id: null == R ? void 0 : R.guild_id,
                 channel_id: null == R ? void 0 : R.id,
             });

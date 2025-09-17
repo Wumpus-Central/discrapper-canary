@@ -190,7 +190,7 @@ function G(e) {
         z = !K && null != l,
         q = F.length + (K || z ? 1 : 0),
         X = q > 1,
-        Q = (null == G ? void 0 : G.state) != null && "xs" === b,
+        Q = ((null == G ? void 0 : G.state) != null || null != Z) && "xs" === b,
         J = M({
             streamActivity: V,
             otherActivities: F,
@@ -320,7 +320,7 @@ function G(e) {
         className: er,
         children: [
             en(),
-            null != G &&
+            (null != G || null != Z) &&
                 q > 0 &&
                 (0, r.jsx)(U, {
                     textVariant: "text-".concat(b, "/normal"),

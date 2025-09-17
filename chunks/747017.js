@@ -53,7 +53,7 @@ function v(e) {
         }, [n]);
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let L = (null == t ? void 0 : t.bot) === !0,
-        j = (null == x ? void 0 : x.state) != null && "xs" === S,
+        j = ((null == x ? void 0 : x.state) != null || null != D) && "xs" === S,
         M = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
@@ -99,7 +99,7 @@ function v(e) {
             [O.textSm]: "sm" === S,
         }),
         U = () =>
-            null == x
+            null == x && null == D
                 ? null
                 : (0, r.jsx)(m.Z, {
                       customStatusActivity: x,
