@@ -809,7 +809,7 @@ let { Themes: r } = n(15202).V,
             BADGE_BACKGROUND_EXPRESSIVE: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
@@ -817,11 +817,11 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
             },
@@ -866,19 +866,19 @@ let { Themes: r } = n(15202).V,
             BADGE_TEXT_DEFAULT: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
             },
@@ -889,7 +889,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "WHITE",
+                    raw: "NEUTRAL_1",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
