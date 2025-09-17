@@ -28,7 +28,7 @@ var r = n(951288),
     N = n(11825),
     Z = n(981631),
     w = n(388032),
-    T = n(17250),
+    T = n(231796),
     A = n(756688),
     R = n(886765);
 function D(e) {
@@ -57,7 +57,7 @@ function D(e) {
         ],
     });
 }
-function M(e) {
+function L(e) {
     let {
         item: { callout: t },
     } = e;
@@ -72,7 +72,7 @@ function M(e) {
         }),
     });
 }
-function L(e) {
+function M(e) {
     let { item: t } = e,
         n = R,
         i = w.intl.string(w.t.SJTHJS);
@@ -202,7 +202,7 @@ let U = i.memo(function (e) {
                         (0, r.jsxs)("div", {
                             className: T.body,
                             children: [
-                                "lifecycle_item" === l.type && null != l.item_enum && (0, r.jsx)(L, { item: l }),
+                                "lifecycle_item" === l.type && null != l.item_enum && (0, r.jsx)(M, { item: l }),
                                 (0, r.jsxs)(o.Text, {
                                     variant: "text-md/normal",
                                     color: f ? "text-muted" : "text-default",
@@ -211,7 +211,7 @@ let U = i.memo(function (e) {
                                 (null == (t = l.message) ? void 0 : t.content) != null
                                     ? (0, r.jsx)(D, { item: l })
                                     : null,
-                                null != l.callout ? (0, r.jsx)(M, { item: l }) : null,
+                                null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: f ? "text-muted" : "header-secondary",

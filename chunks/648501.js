@@ -25,7 +25,7 @@ var i = n(442837),
     E = n(981631),
     S = n(490897),
     P = n(388032),
-    I = n(88448);
+    I = n(885525);
 function N(e) {
     var t;
     let {
@@ -37,8 +37,8 @@ function N(e) {
             enableActivities: A,
             isSubscriptionGated: R,
             needSubscriptionToAccess: D,
-            isNewChannel: M,
-            muted: L,
+            isNewChannel: L,
+            muted: M,
             resolvedUnreadSetting: k,
         } = e,
         U = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
@@ -66,19 +66,19 @@ function N(e) {
             isMentionLowImportance: G,
         });
     if ((0, d.O)(R)) return (0, r.jsx)(d.Z, { locked: D });
-    if (M)
+    if (L)
         return (0, r.jsx)(o.IGR, {
             text: P.intl.string(P.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
             className: I.newChannel,
         });
-    if (!L && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
+    if (!M && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
             children: P.intl.format(P.t.GkAbqa, { count: (0, o.NGo)(K) }),
         });
-    if (!L && n.isForumLikeChannel() && null != Y && Y > 0)
+    if (!M && n.isForumLikeChannel() && null != Y && Y > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
@@ -104,7 +104,7 @@ function N(e) {
             : null != A && A && (0, y.u)(B)
               ? (0, r.jsx)(v.Z, {
                     embeddedApps: B,
-                    muted: L,
+                    muted: M,
                 })
               : null;
 }

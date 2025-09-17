@@ -38,8 +38,8 @@ var r,
     A = n(984933),
     R = n(914010),
     D = n(540126),
-    M = n(734307),
-    L = n(854444),
+    L = n(734307),
+    M = n(854444),
     k = n(113544),
     U = n(761091),
     G = n(301342),
@@ -54,7 +54,7 @@ var r,
     q = n(53425),
     X = n(424785),
     Q = n(770202),
-    J = n(79556),
+    J = n(437621),
     $ = n(428127),
     ee = n(950969),
     et = n(233657),
@@ -64,7 +64,7 @@ var r,
     el = n(981631),
     eo = n(176505),
     ea = n(388032),
-    es = n(344110);
+    es = n(776677);
 function ec(e, t, n) {
     return (
         t in e
@@ -963,7 +963,7 @@ let eh = (e) => {
     });
 };
 function eg(e) {
-    let t = (0, L.o)(),
+    let t = (0, M.o)(),
         { isFavoritesPerk: n } = (0, y.z)("favorites-channel-list"),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(
@@ -978,7 +978,7 @@ function eg(e) {
 }
 function em(e) {
     let t = (0, U.Z)(e.guild),
-        n = (0, u.cj)([M.Z], () => M.Z.getGuild(e.guildId, { guildActionRows: t })),
+        n = (0, u.cj)([L.Z], () => L.Z.getGuild(e.guildId, { guildActionRows: t })),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(eh, ed(eu({}, e, n), { density: r }));
 }

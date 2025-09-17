@@ -10,7 +10,7 @@ var r = n(951288),
     d = n(549635),
     f = n(217702),
     _ = n(388032),
-    p = n(439096);
+    p = n(27505);
 let h = 40;
 function m(e) {
     return "media-view-scroll-thumbnail-".concat(e);

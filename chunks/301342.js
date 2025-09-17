@@ -27,7 +27,7 @@ var r = n(951288),
     v = n(438144),
     x = n(981631),
     C = n(388032),
-    E = n(973780);
+    E = n(84688);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,7 +93,7 @@ let N = i.memo(function (e) {
         let D = i.useCallback(() => {
                 A ? (0, p.mJ)(l.id) : (0, p.c4)(l.id);
             }, [l.id, A]),
-            M = i.useCallback(
+            L = i.useCallback(
                 (e) => {
                     if ("null" !== l.id) {
                         let t = O.Z.getGuild(l.getGuildId());
@@ -115,12 +115,12 @@ let N = i.memo(function (e) {
                 },
                 [l],
             ),
-            L = i.useCallback(() => {
+            M = i.useCallback(() => {
                 let e = l.type === x.d4z.GUILD_CATEGORY ? null : l.type,
                     t = l.getGuildId();
                 null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("45094"), n.e("87586")]).then(n.bind(n, 218613));
+                        let { default: i } = await Promise.all([n.e("45094"), n.e("67133")]).then(n.bind(n, 218613));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
@@ -175,7 +175,7 @@ let N = i.memo(function (e) {
                                 [E.muted]: T,
                                 [E.clickable]: !0,
                             }),
-                            onContextMenu: M,
+                            onContextMenu: L,
                             children: [
                                 (0, r.jsxs)(
                                     d.P3F,
@@ -225,7 +225,7 @@ let N = i.memo(function (e) {
                                                           look: u.zx.Looks.BLANK,
                                                           size: u.zx.Sizes.NONE,
                                                           className: o()(E.addButton, E.forceVisible),
-                                                          onClick: L,
+                                                          onClick: M,
                                                           onMouseEnter: t,
                                                           onMouseLeave: n,
                                                           tabIndex: G,

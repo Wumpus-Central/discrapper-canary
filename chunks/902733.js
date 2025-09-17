@@ -6,7 +6,7 @@ var r = n(951288),
     o = n(315322),
     s = n(531578),
     c = n(388032),
-    u = n(985464);
+    u = n(62511);
 function d(e) {
     let { rating: t, onClick: n } = e,
         o = t === s.aZ.BAD ? l.kZ9 : l.lbB,

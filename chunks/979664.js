@@ -7,8 +7,8 @@ var r = n(951288),
     o = n(999382),
     c = n(486324),
     d = n(388032),
-    u = n(655544),
-    m = n(998918);
+    u = n(713611),
+    m = n(270856);
 function g(e) {
     let { profile: t, handleIconChange: l, canManageGuild: o } = e,
         m = i.useCallback(() => {
@@ -17,7 +17,7 @@ function g(e) {
         g = i.useCallback(
             (e, t) => {
                 (0, a.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
+                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>

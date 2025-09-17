@@ -23,8 +23,8 @@ var r = n(951288),
     N = n(981631),
     O = n(231338),
     y = n(388032),
-    S = n(967557),
-    C = n(10198);
+    S = n(819286),
+    C = n(197571);
 let A = n(515695),
     T = new _.Z("LoginQRSocket");
 function Z(e) {

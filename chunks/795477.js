@@ -1,14 +1,14 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => s });
 var r = n(951288),
     l = n(481060),
     a = n(388032),
-    s = n(89050);
-let i = () =>
+    o = n(831901);
+let s = () =>
     (0, r.jsxs)("div", {
-        className: s.error,
+        className: o.error,
         children: [
             (0, r.jsx)("img", {
-                className: s.errorImage,
+                className: o.errorImage,
                 src: "https://cdn.discordapp.com/assets/content/ca0857da281051f734229e1994112aaa95b21d6f7fce7a1e509357d94c58a949.png",
                 alt: a.intl.string(a.t["p8+qtb"]),
             }),

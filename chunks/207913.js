@@ -32,11 +32,11 @@ var r = n(951288),
     A = n(804932),
     R = n(993609),
     D = n(987889),
-    M = n(586694),
-    L = n(981631),
-    k = n(997998),
+    L = n(586694),
+    M = n(981631),
+    k = n(677642),
     U = n(388032),
-    G = n(66449);
+    G = n(361584);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,7 +82,7 @@ function V(e, t) {
 }
 function F(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
-        p = n.type === L.d4z.UNKNOWN ? u.VL1 : (0, h.KS)(n, null),
+        p = n.type === M.d4z.UNKNOWN ? u.VL1 : (0, h.KS)(n, null),
         m = (0, f.ZP)(n, !1),
         b = (0, c.e7)([Z.Z], () => Z.Z.getGuild(n.getGuildId())),
         { nick: y, colorString: _ } = (0, O.ZP)(t),
@@ -92,7 +92,7 @@ function F(e) {
             guildId: null == b ? void 0 : b.id,
             animateOnHover: !0,
         }),
-        S = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == b,
+        S = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == b,
         I = (0, j.x)({
             channel: n,
             message: t,
@@ -131,7 +131,7 @@ function F(e) {
                                 marginTop: "4px",
                             },
                             children: S
-                                ? (0, r.jsx)(M.q, {
+                                ? (0, r.jsx)(L.q, {
                                       "aria-label": "User Avatar",
                                       src: x,
                                       size: u.EFr.SIZE_32,
@@ -139,7 +139,7 @@ function F(e) {
                                       cornerIconOffsetX: 4,
                                       cornerIconOffsetY: 3,
                                   })
-                                : (0, r.jsx)(M.E, {
+                                : (0, r.jsx)(L.E, {
                                       "aria-label": "Guild Icon",
                                       src: (0, P.EB)(b, 32),
                                       size: u.EFr.SIZE_32,
@@ -302,17 +302,17 @@ function W(e) {
                 });
             return (0, i.useMemo)(() => {
                 let e = "" === t.content,
-                    i = t.embeds.some((e) => e.type === L.hBH.GIFV),
+                    i = t.embeds.some((e) => e.type === M.hBH.GIFV),
                     s = (function (e) {
-                        let t = e.embeds.some((e) => e.type === L.hBH.GIFV);
+                        let t = e.embeds.some((e) => e.type === M.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
                     c = (0, m.Z)(t),
                     d = t.stickerItems.length > 0,
                     p = t.isPoll(),
-                    f = t.type === L.uaV.POLL_RESULT,
-                    h = t.hasFlag(L.iLy.IS_VOICE_MESSAGE),
-                    g = t.type === L.uaV.USER_JOIN,
+                    f = t.type === M.uaV.POLL_RESULT,
+                    h = t.hasFlag(M.iLy.IS_VOICE_MESSAGE),
+                    g = t.type === M.uaV.USER_JOIN,
                     O = null;
                 1 === s
                     ? (O = u.XBm)
@@ -416,7 +416,7 @@ let K = (0, i.memo)(
                     : new S.nl({
                           id: l.channelId,
                           guild_id: l.guildId,
-                          type: L.d4z.UNKNOWN,
+                          type: M.d4z.UNKNOWN,
                           name: U.intl.string(U.t.J90oLS),
                       });
             }),

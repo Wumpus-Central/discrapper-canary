@@ -36,8 +36,8 @@ var r = n(951288),
     A = n(131951),
     R = n(158776),
     D = n(979651),
-    M = n(574254),
-    L = n(374129),
+    L = n(574254),
+    M = n(374129),
     k = n(639351),
     U = n(584729),
     G = n(334374),
@@ -52,7 +52,7 @@ var r = n(951288),
     q = n(524484),
     X = n(65154),
     Q = n(388032),
-    J = n(400872);
+    J = n(7504);
 function $(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -101,8 +101,8 @@ let et = [Y.fO.ACTIVITY],
         var t, n, l, s, c;
         let {
                 participant: b,
-                onDoubleClick: M,
-                onContextMenu: L,
+                onDoubleClick: L,
+                onContextMenu: M,
                 onClick: k,
                 onMouseDown: z,
                 onKeyDown: en,
@@ -137,11 +137,11 @@ let et = [Y.fO.ACTIVITY],
             [eA] = (0, h.Z)(b.type === Y.fO.ACTIVITY ? [b.applicationId] : []),
             eR = (0, a.e7)([y.Z], () => y.Z.getEnabled()),
             eD = (0, a.e7)([A.Z], () => null != eT && A.Z.isLocalVideoDisabled(eT, (0, g.Z)(b.type)), [eT, b.type]),
-            eM = (0, a.e7)([A.Z], () => (null != eT ? A.Z.getVideoToggleState(eT, (0, g.Z)(b.type)) : K.ZUi.NONE), [
+            eL = (0, a.e7)([A.Z], () => (null != eT ? A.Z.getVideoToggleState(eT, (0, g.Z)(b.type)) : K.ZUi.NONE), [
                 eT,
                 b.type,
             ]),
-            eL = eM === K.ZUi.AUTO_PROBING,
+            eM = eL === K.ZUi.AUTO_PROBING,
             { speaking: ek, ringing: eU, hasVideo: eG } = (0, W.Z)(b, eZ),
             eB = (0, a.e7)([E.Z], () => null !== eT && E.Z.isUserPlayingSounds(eT), [eT]),
             eV = (function (e, t, n) {
@@ -230,15 +230,15 @@ let et = [Y.fO.ACTIVITY],
             ),
             e1 = i.useCallback(
                 (e) => {
-                    null == M || M(b, e);
+                    null == L || L(b, e);
                 },
-                [M, b],
+                [L, b],
             ),
             e8 = i.useCallback(
                 (e, t, n) => {
-                    null == L || L(b, e, t, n);
+                    null == M || M(b, e, t, n);
                 },
-                [L, b],
+                [M, b],
             ),
             e4 = null,
             e6 = null,
@@ -278,7 +278,7 @@ let et = [Y.fO.ACTIVITY],
                     width: es,
                     blocked: em,
                     ignored: eb,
-                    noVideoRender: eh || eL,
+                    noVideoRender: eh || eM,
                     pulseSpeakingIndicator: e_,
                     inOverlayPopout: ev,
                 })),
@@ -312,7 +312,7 @@ let et = [Y.fO.ACTIVITY],
                 });
         }
         let e5 = i.useRef(null),
-            e2 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
+            e7 = b.type === Y.fO.STREAM ? u.pzj : u.Odl;
         return (0, r.jsx)(p.Z, {
             section: K.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
@@ -394,7 +394,7 @@ let et = [Y.fO.ACTIVITY],
                                     ep
                                         ? (0, r.jsx)("div", {
                                               className: J.selectedScreen,
-                                              children: (0, r.jsx)(e2, {
+                                              children: (0, r.jsx)(e7, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: J.selectedIcon,
@@ -423,7 +423,7 @@ let et = [Y.fO.ACTIVITY],
                                                       blocked: em,
                                                       ignored: eb,
                                                       localVideoDisabled: eD,
-                                                      videoToggleState: eM,
+                                                      videoToggleState: eL,
                                                       hideAudioIcon: eF,
                                                       onContextMenu: e8,
                                                       onToggleMute: e$,
@@ -489,7 +489,7 @@ function er(e) {
         case Y.wR.XBOX:
             return (0, r.jsx)(k.Z, { className: i });
         case Y.wR.PLAYSTATION:
-            return (0, r.jsx)(L.Z, { className: i });
+            return (0, r.jsx)(M.Z, { className: i });
         default:
             return null;
     }
@@ -575,13 +575,13 @@ let el = i.memo((e) => {
         w = (0, b.j)({ displayNameStyles: O }),
         T = (0, z.N)(l),
         R = (0, z.K)(l),
-        [D, L] = i.useState(!1);
+        [D, M] = i.useState(!1);
     i.useEffect(() => {
         let e = !1,
             t = () => {
-                e !== M.Z.isOpen() && ((e = M.Z.isOpen()) || L(!1));
+                e !== L.Z.isOpen() && ((e = L.Z.isOpen()) || M(!1));
             };
-        return M.Z.addChangeListener(t), () => M.Z.removeChangeListener(t);
+        return L.Z.addChangeListener(t), () => L.Z.removeChangeListener(t);
     }, []);
     let k = !I && h === Y.fO.STREAM && P && (!R || C),
         U = (function (e) {
@@ -698,7 +698,7 @@ let el = i.memo((e) => {
                                 children: [
                                     (0, r.jsx)(ei, {
                                         onClick: (e) => {
-                                            e.stopPropagation(), L(!0), j(e, !0, Y.A5.THREE_DOT);
+                                            e.stopPropagation(), M(!0), j(e, !0, Y.A5.THREE_DOT);
                                         },
                                         tooltipText: Q.intl.string(Q.t["+1H47u"]),
                                         icon: u.xhG,

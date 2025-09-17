@@ -29,7 +29,7 @@ var r = n(951288),
     Z = n(674552),
     w = n(981631),
     T = n(388032),
-    A = n(857668);
+    A = n(534175);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,14 +73,14 @@ function D(e, t) {
         e
     );
 }
-let M = {
+let L = {
     analyticsSource: {
         page: w.ZY5.GUILD_CHANNEL,
         section: w.jXE.CHANNEL_LIST,
         object: w.qAy.CHANNEL,
     },
 };
-function L(e, t) {
+function M(e, t) {
     (0, h.jW)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("1806"),
@@ -93,16 +93,16 @@ function L(e, t) {
             n.e("51453"),
             n.e("7654"),
             n.e("845"),
-            n.e("8360"),
+            n.e("47463"),
             n.e("6850"),
             n.e("58227"),
             n.e("54408"),
             n.e("90746"),
-            n.e("70830"),
+            n.e("8106"),
             n.e("56534"),
             n.e("87154"),
             n.e("33213"),
-            n.e("26819"),
+            n.e("63933"),
         ]).then(n.bind(n, 545135));
         return (n) => (0, r.jsx)(e, D(R({}, n), { guild: t }));
     });
@@ -123,7 +123,7 @@ let k = i.memo(function (e) {
             unavailable: q = !1,
             badge: X = 0,
             isMentionLowImportance: Q,
-            contextMenu: J = L,
+            contextMenu: J = M,
             draggable: $ = !1,
             sorting: ee = !1,
             preloadOnClick: et = !0,
@@ -163,8 +163,8 @@ let k = i.memo(function (e) {
         [ej] = i.useState(() => new d.sW(70, () => e_(!0)));
     i.useEffect(() => () => ej.cancel(), [ej]);
     let ev = i.useCallback(() => {
-            if (null != F) return void (0, O.uL)(F, { state: M });
-            (0, y.X)(eo, { state: M });
+            if (null != F) return void (0, O.uL)(F, { state: L });
+            (0, y.X)(eo, { state: L });
         }, [eo, F]),
         ex = i.useCallback(() => {
             if (null != F || null == H || q || !et) return;

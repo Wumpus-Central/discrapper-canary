@@ -26,13 +26,13 @@ var r = n(951288),
     v = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(77902);
+    E = n(915087);
 function S(e) {
     var t, n, l, a, y, S, I;
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, v.ZP)(A),
-        { loadState: M, channels: L } = R,
+        { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
         U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
     (t = A),
@@ -102,7 +102,7 @@ function S(e) {
             ),
         );
     let G = (0, g.Z)("unreads", A);
-    if (0 === L.length) {
+    if (0 === M.length) {
         return (0, r.jsx)(_.Z, {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+P"]),
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: M === v.jd.Done ? void 0 : k,
+                            onScroll: L === v.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
                                 Z ? (0, r.jsx)(P, { setSeenTutorial: w }) : null,
-                                (0, j.Z)(L, D, N),
-                                M === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                (0, j.Z)(M, D, N),
+                                L === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors

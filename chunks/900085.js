@@ -32,9 +32,9 @@ var r,
     A = n(415795),
     R = n(670512),
     D = n(558631),
-    M = n(981631),
-    L = n(388032),
-    k = n(227129);
+    L = n(981631),
+    M = n(388032),
+    k = n(712198);
 function U(e, t, n) {
     return (
         t in e
@@ -88,13 +88,13 @@ let V = () =>
         children: [
             (0, i.jsx)("div", {
                 className: k.emptyStateNote,
-                children: L.intl.string(L.t.bpbATE),
+                children: M.intl.string(M.t.bpbATE),
             }),
             (0, i.jsx)("div", {
                 className: k.emptyStateCTA,
                 children: (0, i.jsx)(u.eee, {
-                    href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
-                    children: L.intl.string(L.t["4iPfEB"]),
+                    href: Z.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
+                    children: M.intl.string(M.t["4iPfEB"]),
                 }),
             }),
         ],
@@ -139,7 +139,7 @@ let H = s.ZP.connectStores([C.ZP, _.Z], (e) => {
             r = null,
             i = x.Z.getState().statuses;
         return (
-            (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === M.Skl.ONLINE)) && (r = M.Skl.ONLINE),
+            (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === L.Skl.ONLINE)) && (r = L.Skl.ONLINE),
             {
                 mentions: C.ZP.getMentionCount(n.id),
                 status: r,
@@ -207,13 +207,13 @@ class X extends l.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(I.d9, {
-                    event: M.CkL.GLOBAL_CLIPBOARD_PASTE,
+                    event: L.CkL.GLOBAL_CLIPBOARD_PASTE,
                     handler: this.handleGlobalPaste,
                 }),
                 (0, i.jsx)(u.tEY, {
                     children: (0, i.jsx)("input", {
                         className: k.input,
-                        "aria-label": L.intl.string(L.t.ZvKwYW),
+                        "aria-label": M.intl.string(M.t.ZvKwYW),
                         ref: this.inputRef,
                         type: "text",
                         role: "combobox",
@@ -221,7 +221,7 @@ class X extends l.PureComponent {
                         "aria-expanded": r,
                         "aria-activedescendant": r ? this.getRowId(e) : void 0,
                         "aria-autocomplete": "list",
-                        placeholder: L.intl.string(L.t.Vtvewc),
+                        placeholder: M.intl.string(M.t.Vtvewc),
                         onChange: this.handleInputChange,
                         onKeyDown: this.handleKeyDown,
                         value: this.state.query,
@@ -246,7 +246,7 @@ class X extends l.PureComponent {
                   : (0, i.jsx)(u._2F, {
                         innerId: this._listId,
                         innerRole: "listbox",
-                        "aria-label": L.intl.string(L.t.Wef5Dg),
+                        "aria-label": M.intl.string(M.t.Wef5Dg),
                         ref: this.scrollerRef,
                         sectionHeight: 0,
                         rowHeight: 34,
@@ -263,7 +263,7 @@ class X extends l.PureComponent {
         });
     }
     focusNode(e) {
-        N.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        N.S.dispatch(L.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
@@ -272,12 +272,12 @@ class X extends l.PureComponent {
         return (0, i.jsx)(b.Z, {
             className: a()(k.protip, { [k.hasContent]: this.state.query.length > 0 }),
             type: b.Z.Types.INLINE,
-            children: L.intl.format(L.t.wukqXV, {
-                userSymbolHook: (e, t) => q(t, h.xQ.USER, L.intl.string(L.t.GQRCGh)),
-                textChannelSymbolHook: (e, t) => q(t, h.xQ.TEXT_CHANNEL, L.intl.string(L.t.wrwhub)),
-                voiceChannelSymbolHook: (e, t) => q(t, h.xQ.VOICE_CHANNEL, L.intl.string(L.t["jz+hJi"])),
-                guildSymbolHook: (e, t) => q(t, h.xQ.GUILD, L.intl.string(L.t.WuwCWl)),
-                helpdeskArticle: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+            children: M.intl.format(M.t.wukqXV, {
+                userSymbolHook: (e, t) => q(t, h.xQ.USER, M.intl.string(M.t.GQRCGh)),
+                textChannelSymbolHook: (e, t) => q(t, h.xQ.TEXT_CHANNEL, M.intl.string(M.t.wrwhub)),
+                voiceChannelSymbolHook: (e, t) => q(t, h.xQ.VOICE_CHANNEL, M.intl.string(M.t["jz+hJi"])),
+                guildSymbolHook: (e, t) => q(t, h.xQ.GUILD, M.intl.string(M.t.WuwCWl)),
+                helpdeskArticle: Z.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -288,7 +288,7 @@ class X extends l.PureComponent {
     }
     render() {
         return (0, i.jsx)(c.I, {
-            "aria-label": L.intl.string(L.t.ZvKwYW),
+            "aria-label": M.intl.string(M.t.ZvKwYW),
             size: "lg",
             transitionState: this.props.transitionState,
             onClose: this.props.onClose,
@@ -338,16 +338,16 @@ class X extends l.PureComponent {
                                 n.e("51453"),
                                 n.e("7654"),
                                 n.e("845"),
-                                n.e("8360"),
+                                n.e("47463"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("54408"),
                                 n.e("90746"),
-                                n.e("70830"),
+                                n.e("8106"),
                                 n.e("56534"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("26819"),
+                                n.e("63933"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
@@ -365,10 +365,10 @@ class X extends l.PureComponent {
                             l = v.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
-                            case M.d4z.GUILD_TEXT:
-                            case M.d4z.GUILD_ANNOUNCEMENT:
-                            case M.d4z.GUILD_FORUM:
-                            case M.d4z.GUILD_MEDIA:
+                            case L.d4z.GUILD_TEXT:
+                            case L.d4z.GUILD_ANNOUNCEMENT:
+                            case L.d4z.GUILD_FORUM:
+                            case L.d4z.GUILD_MEDIA:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("79695"),
@@ -385,8 +385,8 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.GUILD_VOICE:
-                            case M.d4z.GUILD_STAGE_VOICE:
+                            case L.d4z.GUILD_VOICE:
+                            case L.d4z.GUILD_STAGE_VOICE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("79695"),
@@ -404,9 +404,9 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.ANNOUNCEMENT_THREAD:
-                            case M.d4z.PUBLIC_THREAD:
-                            case M.d4z.PRIVATE_THREAD:
+                            case L.d4z.ANNOUNCEMENT_THREAD:
+                            case L.d4z.PUBLIC_THREAD:
+                            case L.d4z.PRIVATE_THREAD:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                                     return (t) =>
@@ -418,7 +418,7 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.GUILD_STORE:
+                            case L.d4z.GUILD_STORE:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e("99905").then(n.bind(n, 649400));
                                     return (t) =>
@@ -431,7 +431,7 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.GUILD_DIRECTORY:
+                            case L.d4z.GUILD_DIRECTORY:
                                 return (0, d.jW)(e, async () => {
                                     let { default: e } = await n.e("70623").then(n.bind(n, 99334));
                                     return (t) => (0, i.jsx)(e, B(G({}, t), { channel: r }));
@@ -651,7 +651,7 @@ class X extends l.PureComponent {
                                     n.record.type === g.Ky.SETTINGS &&
                                     (0, i.jsx)("div", {
                                         className: k.miscContainer,
-                                        children: L.intl.string(L.t["3D5yo6"]),
+                                        children: M.intl.string(M.t["3D5yo6"]),
                                     }),
                             },
                             "".concat(n.type, "-").concat(n.record.id),
@@ -689,9 +689,9 @@ function Q(e) {
                 })
                 .filter((e) => "" !== e.title && null != e.path);
             e.unshift({
-                title: L.intl.string(L.t["3D5yo6"]),
-                searchableTitles: [L.intl.string(L.t["3D5yo6"])],
-                path: M.Z5c.SETTINGS("account"),
+                title: M.intl.string(M.t["3D5yo6"]),
+                searchableTitles: [M.intl.string(M.t["3D5yo6"])],
+                path: L.Z5c.SETTINGS("account"),
             }),
                 (0, P.gF)(e);
         }, [o, r]),
