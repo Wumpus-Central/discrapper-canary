@@ -70,6 +70,7 @@ var r = (function (e) {
         (e.SECRET_GARDEN = "1402783991349772371"),
         (e.LUNAR_ECLIPSE = "1409898408076116140"),
         (e.BOX = "1409898408392748561"),
+        (e.NAMEPLATE_BONANZA = "1416443525192614001"),
         e
     );
 })({});
