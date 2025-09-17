@@ -242,10 +242,6 @@ let q = {
         setFocused(e) {
             this.getDiscordUtils().inputSetFocused(e);
         },
-        updateDetectableGames(e) {
-            var t, n;
-            null == (t = (n = this.getDiscordUtils()).updateDetectableGames) || t.call(n, e);
-        },
         setObservedGamesCallback(e, t, n) {
             try {
                 w = {};
