@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => _ });
 var i = n(951288),
     r = n(647438),
-    o = n(442837),
-    l = n(481060),
+    l = n(442837),
+    o = n(481060),
     s = n(490173),
     a = n(735246),
     c = n(40851),
@@ -16,7 +16,7 @@ var i = n(951288),
     y = n(649561),
     O = n(631553),
     v = n(981631);
-n(635324), n(167666), n(308765), n(913487), n(606206), o.ZP.initialize();
+n(635324), n(308765), n(913487), n(606206), l.ZP.initialize();
 let _ = function () {
     return (
         r.useEffect(
@@ -44,7 +44,7 @@ let _ = function () {
                                 children: (0, i.jsxs)(f.yP, {
                                     children: [
                                         (0, i.jsx)(O.Z, {}),
-                                        (0, i.jsx)(l.nKe, {}),
+                                        (0, i.jsx)(o.nKe, {}),
                                         (0, i.jsx)(s.Z, {}),
                                         (0, i.jsx)(f.Un, {}),
                                     ],

@@ -44,15 +44,14 @@ var r = n(951288),
     Y = n(686546),
     W = n(950796),
     K = n(981631),
-    z = n(302821);
-n(167666),
-    Promise.resolve()
-        .then(n.bind(n, 62883))
-        .then((e) => {
-            G.isPlatformEmbedded
-                ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
-                : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
-        }),
+    z = n(654924);
+Promise.resolve()
+    .then(n.bind(n, 62883))
+    .then((e) => {
+        G.isPlatformEmbedded
+            ? window.addEventListener("contextmenu", e.contextMenuCallbackNative, !1)
+            : window.addEventListener("contextmenu", e.contextMenuCallbackWeb, !1);
+    }),
     (0, u.E)({ getDefaultLinkInterceptor: m.default }),
     (0, B.Un)({
         createPromise: () =>
