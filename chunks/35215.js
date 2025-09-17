@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => M });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -14,8 +14,9 @@ var r = n(951288),
     h = n(497505),
     m = n(602667),
     g = n(388032),
-    E = n(879048);
-function b(e, t, n) {
+    E = n(879048),
+    b = n(557256);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +40,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,24 +57,24 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = 10,
-    T = 20,
-    S = 4,
-    A = 5,
-    C = 8,
-    N = 10,
-    R = (e) => {
+let T = 10,
+    S = 20,
+    A = 4,
+    C = 5,
+    N = 8,
+    R = 10,
+    P = (e) => {
         let { gameCount: t, onClose: n } = e;
         return (0, r.jsxs)("div", {
             className: E.headerContainer,
@@ -105,7 +106,7 @@ let I = 10,
             ],
         });
     },
-    P = (e) => {
+    w = (e) => {
         let { quest: t, game: i, sourceQuestContent: s } = e,
             c = (0, p.O5)(),
             u = (0, a.e7)([l.Z], () => l.Z.getApplication(i.applicationId)),
@@ -129,7 +130,7 @@ let I = 10,
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                y(
+                                O(
                                     {
                                         applicationId: i.applicationId,
                                         source: d.m1.GameSheet,
@@ -145,7 +146,7 @@ let I = 10,
             children: (e) =>
                 (0, r.jsx)(
                     o.P3F,
-                    v(y({}, e), {
+                    I(O({}, e), {
                         className: E.gameClickable,
                         onClick: m,
                         children: (0, r.jsx)(_.C, {
@@ -158,7 +159,7 @@ let I = 10,
                 ),
         });
     },
-    w = () =>
+    D = () =>
         (0, r.jsxs)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "75",
@@ -189,8 +190,43 @@ let I = 10,
                     strokeOpacity: "0.2",
                 }),
             ],
+        }),
+    x = (e) => {
+        let { onClose: t } = e;
+        return (0, r.jsxs)("div", {
+            className: E.container,
+            children: [
+                (0, r.jsx)("div", {
+                    className: E.closeButtonContainer,
+                    children: (0, r.jsx)(o.P3F, {
+                        className: E.closeButton,
+                        "aria-label": g.intl.string(g.t.cpT0Cg),
+                        onClick: t,
+                        children: (0, r.jsx)(o.Dio, {
+                            size: "md",
+                            color: "currentColor",
+                        }),
+                    }),
+                }),
+                (0, r.jsxs)("div", {
+                    className: E.errorContainer,
+                    children: [
+                        (0, r.jsx)("img", {
+                            alt: "",
+                            src: b,
+                            className: E.errorImage,
+                        }),
+                        (0, r.jsx)(o.Text, {
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: g.intl.string(g.t.F8FvU1),
+                        }),
+                    ],
+                }),
+            ],
         });
-function D(e) {
+    };
+function L(e) {
     let { quest: t, applications: n, onClose: o, sourceQuestContent: l, impressionRef: d } = e;
     (0, c.Z)(n),
         i.useEffect(() => {
@@ -203,18 +239,18 @@ function D(e) {
                 .map((e) => u.Z.getGame(e))
                 .filter((e) => null != e)
                 .filter((e) => (0, f.z6)(e.applicationId))
-                .slice(0, I),
+                .slice(0, T),
         ),
         m = i.useMemo(() => {
             let e = h.length;
-            return e <= S ? S - e : e === A ? 0 : e <= C ? C - e : N - e;
+            return e <= A ? A - e : e === C ? 0 : e <= N ? N - e : R - e;
         }, [h.length]);
     if (_ && !p) {
-        let e = Math.min(n.length, I);
+        let e = Math.min(n.length, T);
         return (0, r.jsxs)("div", {
             className: E.container,
             children: [
-                (0, r.jsx)(R, {
+                (0, r.jsx)(P, {
                     gameCount: e,
                     onClose: o,
                 }),
@@ -226,14 +262,14 @@ function D(e) {
         });
     }
     return (!_ && 0 === h.length) || p
-        ? null
+        ? (0, r.jsx)(x, { onClose: o })
         : (0, r.jsxs)("div", {
               ref: (e) => {
                   d.current = e;
               },
               className: E.container,
               children: [
-                  (0, r.jsx)(R, {
+                  (0, r.jsx)(P, {
                       gameCount: h.length,
                       onClose: o,
                   }),
@@ -242,7 +278,7 @@ function D(e) {
                       children: [
                           h.map((e) =>
                               (0, r.jsx)(
-                                  P,
+                                  w,
                                   {
                                       quest: t,
                                       game: e,
@@ -251,13 +287,13 @@ function D(e) {
                                   e.applicationId,
                               ),
                           ),
-                          Array.from({ length: m }, (e, t) => (0, r.jsx)(w, {}, "placeholder-".concat(t))),
+                          Array.from({ length: m }, (e, t) => (0, r.jsx)(D, {}, "placeholder-".concat(t))),
                       ],
                   }),
               ],
           });
 }
-function x(e) {
+function j(e) {
     let {
             targetElementRef: t,
             applications: n,
@@ -287,7 +323,7 @@ function x(e) {
         targetElementRef: g,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(D, {
+            return (0, r.jsx)(L, {
                 quest: c,
                 applications: n,
                 onClose: t,
@@ -299,17 +335,17 @@ function x(e) {
         onRequestClose: l,
         position: E,
         align: b,
-        spacing: T,
+        spacing: S,
         children: (e) => a(e, _),
     });
 }
-let L = function (e) {
+let M = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
         : (0, r.jsx)(m.A, {
               questOrQuests: e.quest,
               questContent: h.jn.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(x, v(y({}, e), { impressionRef: t })),
+              children: (t) => (0, r.jsx)(j, I(O({}, e), { impressionRef: t })),
           });
 };
