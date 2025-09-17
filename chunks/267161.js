@@ -28,8 +28,8 @@ var r = n(951288),
     S = n(296241),
     T = n(165017),
     N = n(984802),
-    j = n(592125),
-    P = n(944486),
+    P = n(592125),
+    j = n(944486),
     x = n(914010),
     A = n(451478),
     Z = n(998502),
@@ -38,13 +38,13 @@ var r = n(951288),
     R = n(950796),
     D = n(176505),
     k = n(741764),
-    M = n(82504);
+    M = n(851352);
 let U = (0, o.U)(() => ({ isOpen: !0 }));
 function G(e) {
     let { selectedChannelId: t, withFastTravel: n, focusSectionProps: i } = e,
-        l = (0, s.e7)([x.Z, j.Z], () => {
+        l = (0, s.e7)([x.Z, P.Z], () => {
             let e = x.Z.getGuildId(),
-                n = j.Z.getChannel(t);
+                n = P.Z.getChannel(t);
             return null != e ? e : null == n ? void 0 : n.guild_id;
         }),
         a = (0, T.H)({
@@ -64,10 +64,10 @@ function G(e) {
 }
 function B(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e,
-        l = (0, s.e7)([P.Z], () => P.Z.getChannelId()),
+        l = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
         a = (0, C.$)({ location: "TitleText" }),
-        o = (0, s.e7)([j.Z], () => {
-            let e = j.Z.getChannel(l);
+        o = (0, s.e7)([P.Z], () => {
+            let e = P.Z.getChannel(l);
             return null != e && !e.isDirectory() && !e.isGuildVocal();
         });
     return a && null != l && !(0, D.AB)(l) && o
@@ -97,8 +97,8 @@ let V = i.memo(function () {
     i.useLayoutEffect(() => {
         Z.ZP.setMinimumSize(k.J, k.N);
     }, []);
-    let j = (0, N.Ll)(),
-        P = (0, s.e7)([A.Z, v.Z], () => (0, w.rB)()),
+    let P = (0, N.Ll)(),
+        j = (0, s.e7)([A.Z, v.Z], () => (0, w.rB)()),
         x = (function (e) {
             let {
                 showBackForwardButtons: t,
@@ -125,12 +125,12 @@ let V = i.memo(function () {
             titlebarFastTravel: n,
             showRecentsButton: T,
         });
-    if (P) return null;
+    if (j) return null;
     let L = a()(M.button, { [M.smallButton]: "sm" === g });
     return (0, r.jsx)(c.Wdt, {
         children: (e) =>
             (0, r.jsx)(c.f6W, {
-                theme: j,
+                theme: P,
                 children: (t) => {
                     var i, a;
                     return (0, r.jsx)(R.TF, {

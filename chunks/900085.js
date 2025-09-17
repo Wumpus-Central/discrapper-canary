@@ -17,8 +17,8 @@ var r,
     O = n(313201),
     y = n(991346),
     _ = n(592125),
-    v = n(888369),
-    j = n(430824),
+    j = n(888369),
+    v = n(430824),
     x = n(158776),
     C = n(306680),
     E = n(944486),
@@ -34,7 +34,7 @@ var r,
     D = n(558631),
     M = n(981631),
     L = n(388032),
-    k = n(712198);
+    k = n(227129);
 function U(e, t, n) {
     return (
         t in e
@@ -101,7 +101,7 @@ let V = () =>
     });
 class F extends (r = l.Component) {
     render() {
-        let e = j.Z.getGuild(this.props.channel.guild_id);
+        let e = v.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             A.$W,
             B(G({}, this.props), {
@@ -129,9 +129,9 @@ let H = s.ZP.connectStores([C.ZP, _.Z], (e) => {
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(F),
-    W = s.ZP.connectStores([v.default], (e) => {
+    W = s.ZP.connectStores([j.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: j.default.hasUnread(t.id) };
     })(A.ic),
     K = s.ZP.connectStores([C.ZP, x.Z], (e) => {
         var t;
@@ -338,16 +338,16 @@ class X extends l.PureComponent {
                                 n.e("51453"),
                                 n.e("7654"),
                                 n.e("845"),
-                                n.e("47463"),
+                                n.e("8360"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("54408"),
                                 n.e("90746"),
-                                n.e("8106"),
+                                n.e("70830"),
                                 n.e("56534"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("63933"),
+                                n.e("26819"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
@@ -362,7 +362,7 @@ class X extends l.PureComponent {
                     case h.h8.TEXT_CHANNEL:
                     case h.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = j.Z.getGuild(r.getGuildId());
+                            l = v.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case M.d4z.GUILD_TEXT:

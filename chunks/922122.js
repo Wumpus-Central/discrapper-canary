@@ -8,7 +8,7 @@ var r = n(951288),
     c = n(393903),
     d = n(79707),
     u = n(388032),
-    p = n(16617);
+    p = n(892665);
 function m(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = a.useMemo(
@@ -35,8 +35,8 @@ function m(e) {
             selected: s,
             isHovered: c,
         }),
-        f = a.useCallback(() => m(!0), []),
-        _ = a.useCallback(() => m(!1), []),
+        _ = a.useCallback(() => m(!0), []),
+        f = a.useCallback(() => m(!1), []),
         b = a.useRef(null);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: b,
@@ -93,8 +93,8 @@ function m(e) {
                         "aria-label": u.intl.string(u.t.UKOtz8),
                         children: (0, r.jsxs)("div", {
                             className: p.more,
-                            onMouseEnter: f,
-                            onMouseLeave: _,
+                            onMouseEnter: _,
+                            onMouseLeave: f,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
@@ -133,9 +133,9 @@ function m(e) {
 function h(e) {
     let { className: t, selectedTab: n, tabs: i, onTabSelect: d, onAvailableWidthChange: u } = e,
         [h, g] = a.useState(0),
-        f = a.useRef(h),
+        _ = a.useRef(h),
         {
-            lastVisibleIndex: _,
+            lastVisibleIndex: f,
             onItemLayout: b,
             overflowItemsRef: x,
             itemWidthsRef: v,
@@ -145,14 +145,14 @@ function h(e) {
             maxLines: 1,
             containerWidth: h,
         }),
-        C = a.useMemo(() => i.slice(0, _ + 1), [_, i]),
-        j = a.useMemo(() => i.slice(_ + 1), [_, i]),
+        C = a.useMemo(() => i.slice(0, f + 1), [f, i]),
+        j = a.useMemo(() => i.slice(f + 1), [f, i]),
         y = a.useRef(null),
         I = a.useCallback(
             (e) => {
                 let t = e.contentRect.width;
-                if (null == t || f.current === t) return;
-                g(t), (f.current = t);
+                if (null == t || _.current === t) return;
+                g(t), (_.current = t);
                 let n = v.current.reduce((e, t, n) => e + t + 20 * (0 !== n));
                 null == u || u(t - n);
             },

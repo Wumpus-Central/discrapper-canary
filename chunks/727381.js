@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => N });
 var r = n(951288);
 n(647438);
 var l = n(120356),
@@ -8,15 +8,15 @@ var l = n(120356),
     o = n(271383),
     u = n(594174),
     c = n(777288),
-    d = n(753042),
-    E = n(787469),
+    E = n(753042),
+    d = n(787469),
     _ = n(477718),
     A = n(791176),
-    m = n(908474),
-    T = n(467014),
+    T = n(908474),
+    m = n(467014),
     I = n(388032),
-    g = n(87819);
-function f() {
+    g = n(152540);
+function h() {
     return (0, r.jsxs)("div", {
         className: g.header,
         children: [
@@ -43,31 +43,31 @@ function f() {
         ],
     });
 }
-function h(e) {
+function N(e) {
     let { userId: t, guildId: n, location: l, className: c, onNavigate: I } = e,
-        h = (0, a.e7)([u.default], () => u.default.getUser(t), [t]),
-        N = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == h || null == N
+        N = (0, a.e7)([u.default], () => u.default.getUser(t), [t]),
+        O = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+    return null == N || null == O
         ? null
         : (0, r.jsxs)("div", {
               className: i()(g.container, c),
               children: [
-                  (0, r.jsx)(f, {}),
+                  (0, r.jsx)(h, {}),
                   (0, r.jsxs)(s.Ttm, {
                       className: g.innerContainer,
                       children: [
-                          (0, r.jsx)(m.Z, { member: N }),
-                          (0, r.jsx)(T.Z, {
+                          (0, r.jsx)(T.Z, { member: O }),
+                          (0, r.jsx)(m.Z, {
                               userId: t,
                               guildId: n,
                           }),
                           (0, r.jsx)(A.Z, {
-                              member: N,
+                              member: O,
                               onNavigate: I,
                           }),
-                          (0, r.jsx)(E.Z, { member: N }),
-                          (0, r.jsx)(d.Z, { member: N }),
-                          (0, r.jsx)(_.Z, { member: N }),
+                          (0, r.jsx)(d.Z, { member: O }),
+                          (0, r.jsx)(E.Z, { member: O }),
+                          (0, r.jsx)(_.Z, { member: O }),
                       ],
                   }),
               ],

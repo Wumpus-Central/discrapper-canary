@@ -8,15 +8,15 @@ var r = n(951288),
     c = n(626135),
     d = n(660662),
     u = n(981631),
-    p = n(693450),
+    p = n(62222),
     f = n(388032),
-    m = n(745993),
-    g = n(959389);
+    m = n(621515),
+    g = n(77426);
 function h(e) {
     var t;
     let { selectedColors: n, setSelectedColors: h, defaultColor: b, selectedEffectId: x, className: j } = e,
-        _ = x === l.m.GRADIENT,
-        S = (0, o.useCallback)(
+        S = x === l.m.GRADIENT,
+        _ = (0, o.useCallback)(
             (e) => {
                 h([e]),
                     c.default.track(u.rMx.DISPLAY_NAME_STYLES_COLOR_SELECTED, {
@@ -54,12 +54,12 @@ function h(e) {
                 className: m.colorPicker,
                 colorContainerClassName: m.colorPickerContainer,
                 defaultColor: b,
-                colors: _ ? d.vK : d.gD,
+                colors: S ? d.vK : d.gD,
                 value: n[0],
                 secondaryValue: null != (t = n[1]) ? t : void 0,
-                onChange: S,
+                onChange: _,
                 onChangeGradientColors: C,
-                isGradient: _,
+                isGradient: S,
                 gradientButtonClassName: m.gradientPicker,
                 gradientDegrees: 90,
                 allowBlackCustomColor: !0,

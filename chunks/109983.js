@@ -2,7 +2,7 @@ n.d(t, { Z: () => a });
 var i = n(951288);
 n(647438);
 var s = n(481060),
-    l = n(531803),
+    l = n(73610),
     r = n(216019);
 function a(e) {
     let { icon: t, message: n, onClick: a, autoFocus: o } = e;

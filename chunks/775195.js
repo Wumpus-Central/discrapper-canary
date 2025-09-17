@@ -4,7 +4,7 @@ var r = n(951288),
     a = n(481060),
     o = n(211644),
     s = n(699867),
-    l = n(197571);
+    l = n(10198);
 function c(e) {
     let { searchQuery: t = "" } = e,
         n = (0, o.ZP)((e) => e.recentlyShown)

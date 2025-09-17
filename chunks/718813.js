@@ -17,7 +17,7 @@ var r,
     _ = n(819640),
     O = n(585483),
     E = n(981631),
-    y = n(256076);
+    y = n(590939);
 function v(e, t, n) {
     return (
         t in e
@@ -76,16 +76,16 @@ let S = (0, g.Un)({
     }),
     N = (0, g.Un)({
         createPromise: () =>
-            Promise.all([n.e("36599"), n.e("58175"), n.e("7654"), n.e("47463"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("36599"), n.e("58175"), n.e("7654"), n.e("8360"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    j = (0, g.Un)({
+    P = (0, g.Un)({
         createPromise: () => n.e("45620").then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
     }),
-    P = (0, g.Un)({
+    j = (0, g.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("1806"),
@@ -98,12 +98,12 @@ let S = (0, g.Un)({
                 n.e("51453"),
                 n.e("7654"),
                 n.e("845"),
-                n.e("47463"),
+                n.e("8360"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("54408"),
                 n.e("90746"),
-                n.e("8106"),
+                n.e("70830"),
                 n.e("95140"),
             ]).then(n.bind(n, 994763)),
         webpackId: 994763,
@@ -112,8 +112,8 @@ let S = (0, g.Un)({
     x = {
         [E.S9g.USER_SETTINGS]: () => (0, i.jsx)(S, {}),
         [E.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(N, {}),
-        [E.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(P, {}),
-        [E.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(j, {}),
+        [E.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(j, {}),
+        [E.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(P, {}),
         [E.S9g.MANA_PLAYGROUND]: () => (0, i.jsx)(T, {}),
     },
     A = "SHOWN",

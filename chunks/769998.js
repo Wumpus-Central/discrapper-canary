@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -11,15 +11,15 @@ var i = n(442837),
     u = n(981631),
     m = n(590433),
     g = n(388032),
-    p = n(464992);
-function f(e) {
+    p = n(75765);
+function h(e) {
     var t;
-    let { action: n, triggerType: f, guildId: h, toggled: b, onToggleAction: x } = e,
+    let { action: n, triggerType: h, guildId: f, toggled: b, onToggleAction: x } = e,
         j = (e) => () => x(e),
-        v = (0, c.c)(n.type, n, f),
+        v = (0, c.c)(n.type, n, h),
         _ = null == (t = n.metadata) ? void 0 : t.durationSeconds,
         O = null != _ ? (0, m.L9)(_) : null,
-        y = (0, i.e7)([o.Z, s.Z], () => o.Z.can(u.Plq.MODERATE_MEMBERS, s.Z.getGuild(h)), [h]);
+        y = (0, i.e7)([o.Z, s.Z], () => o.Z.can(u.Plq.MODERATE_MEMBERS, s.Z.getGuild(f)), [f]);
     if (null == v) return null;
     let { headerText: C, descriptionText: N, icon: E } = v;
     return (0, r.jsxs)("div", {
@@ -52,7 +52,7 @@ function f(e) {
                             children: [
                                 null === O
                                     ? null
-                                    : f === d.fX.MENTION_SPAM
+                                    : h === d.fX.MENTION_SPAM
                                       ? g.intl.format(g.t.i3lsKC, { friendlyDurationString: O })
                                       : g.intl.format(g.t.mvHxzc, { friendlyDurationString: O }),
                                 y &&

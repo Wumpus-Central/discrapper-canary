@@ -16,8 +16,8 @@ var r,
     m = n(768581),
     h = n(624138),
     g = n(388032),
-    f = n(53062);
-function _(e) {
+    _ = n(390354);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,12 +65,12 @@ var x =
     (r[(r.LARGE = (0, h.Mg)(c.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
     r);
 let v = {
-        [x.SMALL]: f.moreGuildsSmall,
-        [x.LARGE]: f.moreGuildsLarge,
+        [x.SMALL]: _.moreGuildsSmall,
+        [x.LARGE]: _.moreGuildsLarge,
     },
     C = {
-        [x.SMALL]: f.iconSmall,
-        [x.LARGE]: f.iconLarge,
+        [x.SMALL]: _.iconSmall,
+        [x.LARGE]: _.iconLarge,
     };
 function j(e) {
     var t, n, r;
@@ -126,10 +126,10 @@ function j(e) {
               children: [
                   P,
                   (0, a.jsxs)("div", {
-                      className: s()(j, f.wrapper),
+                      className: s()(j, _.wrapper),
                       children: [
                           (0, a.jsx)("div", {
-                              className: s()(f.icons, S),
+                              className: s()(_.icons, S),
                               children:
                                   R.length > 0
                                       ? (0, a.jsxs)(a.Fragment, {
@@ -148,8 +148,8 @@ function j(e) {
                                                             children: (e) =>
                                                                 (0, a.jsx)(
                                                                     "img",
-                                                                    b(_({}, e), {
-                                                                        className: s()(f.icon, C[O]),
+                                                                    b(f({}, e), {
+                                                                        className: s()(_.icon, C[O]),
                                                                         src: r,
                                                                         alt: "",
                                                                     }),
@@ -160,7 +160,7 @@ function j(e) {
                                                         : (0, a.jsx)(
                                                               u.ZP,
                                                               {
-                                                                  className: f.iconMask,
+                                                                  className: _.iconMask,
                                                                   height: O,
                                                                   width: O,
                                                                   mask: u.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -178,8 +178,8 @@ function j(e) {
                                                           children: (e) =>
                                                               (0, a.jsxs)(
                                                                   "div",
-                                                                  b(_({}, e), {
-                                                                      className: s()(f.moreGuilds, v[O]),
+                                                                  b(f({}, e), {
+                                                                      className: s()(_.moreGuilds, v[O]),
                                                                       children: ["+", w],
                                                                   }),
                                                               ),
@@ -192,7 +192,7 @@ function j(e) {
                                             color: "currentColor",
                                             width: O,
                                             height: O,
-                                            className: f.defaultIcon,
+                                            className: _.defaultIcon,
                                         }),
                           }),
                           null != D

@@ -23,11 +23,11 @@ var i = n(951288),
     O = n(956664),
     P = n(709054),
     A = n(236289),
-    w = n(788080),
-    C = n(800530),
+    C = n(788080),
+    w = n(800530),
     T = n(981631),
     S = n(217702),
-    N = n(20316);
+    N = n(934064);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -104,17 +104,17 @@ let I = (e) => {
                     onRemoveItem: l.noop,
                     renderVideoComponent: (t) =>
                         ((e, t, n) => {
-                            let a = C.Sv,
-                                o = C.EY;
+                            let a = w.Sv,
+                                o = w.EY;
                             if (null != t.width && null != t.height) {
                                 let e = (0, O.Dc)({
                                     width: t.width,
                                     height: t.height,
-                                    maxWidth: C.Sv,
-                                    maxHeight: C.EY,
+                                    maxWidth: w.Sv,
+                                    maxHeight: w.EY,
                                 });
-                                (a = (0, l.clamp)(Math.round(t.width * e), 0, C.Sv)),
-                                    (o = (0, l.clamp)(Math.round(t.height * e), 0, C.EY));
+                                (a = (0, l.clamp)(Math.round(t.width * e), 0, w.Sv)),
+                                    (o = (0, l.clamp)(Math.round(t.height * e), 0, w.EY));
                             }
                             return (0, i.jsx)("div", {
                                 style: {
@@ -178,14 +178,14 @@ function U(e) {
             let a = e.attachments.map((e) => {
                 var n, i, a, l;
                 let o = k(L({}, e), {
-                    filename: (0, w.eS)(e),
+                    filename: (0, C.eS)(e),
                     size: 0,
                     proxy_url: e.url,
                 });
                 return (0, c.CO)(e.filename) || (0, c.NU)(e.filename)
                     ? k(L({}, o), {
-                          width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : C.Sv,
-                          height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : C.EY,
+                          width: null != (a = null == (n = t[e.id]) ? void 0 : n.width) ? a : w.Sv,
+                          height: null != (l = null == (i = t[e.id]) ? void 0 : i.height) ? l : w.EY,
                       })
                     : o;
             });

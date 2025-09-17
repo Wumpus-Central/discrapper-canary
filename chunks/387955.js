@@ -1,4 +1,4 @@
-r.d(t, { Z: () => g });
+r.d(t, { Z: () => f });
 var n = r(951288);
 r(647438);
 var i = r(120356),
@@ -9,9 +9,9 @@ var i = r(120356),
     c = r(572264),
     u = r(981631),
     d = r(388032),
-    m = r(631936),
-    f = r(849399);
-function g(e) {
+    m = r(38579),
+    g = r(849399);
+function f(e) {
     let { user: t } = e;
     return (0, n.jsxs)("div", {
         className: m.infoContainer,
@@ -19,7 +19,7 @@ function g(e) {
             (0, n.jsx)("img", {
                 className: m.infoPicture,
                 alt: "",
-                src: f,
+                src: g,
             }),
             (0, n.jsx)(a.X6q, {
                 className: m.title,

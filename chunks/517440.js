@@ -12,7 +12,7 @@ var l = n(951288),
     f = n(887490),
     p = n(981631),
     g = n(388032),
-    h = n(35777);
+    h = n(980095);
 function y(t) {
     let e = c.C.useExperiment({ location: "ChannelTextAreaContextMenu" }),
         { selection: y } = t,

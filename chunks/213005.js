@@ -3,7 +3,7 @@ var r = n(836560),
     i = n(358085),
     a = n(998502),
     o = n(13140),
-    s = n(981631);
+    s = n(295907);
 function l(e, t, n) {
     return (
         t in e
@@ -20,7 +20,7 @@ function l(e, t, n) {
 let c = [],
     u = (e, t, n) => {
         let r = +!(0, i.isWindows)();
-        (e !== s.MoX.MOUSE_BUTTON || n !== r) && c.forEach((r) => r._handleEvent(e, t, n));
+        (e !== s.Mo.MOUSE_BUTTON || n !== r) && c.forEach((r) => r._handleEvent(e, t, n));
     };
 class d extends r.EventEmitter {
     destroy() {

@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(306680),
     y = n(594174),
     _ = n(979651),
-    v = n(938475),
-    j = n(990734),
+    j = n(938475),
+    v = n(990734),
     x = n(714794),
     C = n(876548),
     E = n(25601),
@@ -26,9 +26,9 @@ var r = n(951288),
     P = n(981631),
     I = n(124368),
     N = n(388032),
-    Z = n(55940),
-    w = n(509612),
-    T = n(113914);
+    Z = n(33082),
+    w = n(516966),
+    T = n(95701);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -172,7 +172,7 @@ function M(e) {
 }
 let L = i.memo(function (e) {
     let { thread: t, isSelectedChannel: l, isSelectedVoice: f, isLast: T, withGuildIcon: L } = e,
-        k = (0, s.e7)([v.ZP], () => v.ZP.getVoiceStatesForChannel(t), [t]),
+        k = (0, s.e7)([j.ZP], () => j.ZP.getVoiceStatesForChannel(t), [t]),
         U = (0, s.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         {
             unread: G,
@@ -184,7 +184,7 @@ let L = i.memo(function (e) {
             isMentionLowImportance: O.ZP.getIsMentionLowImportance(t.id),
         })),
         F = (0, s.e7)([g.Z], () => g.Z.isMuted(t.id)),
-        H = (0, j.p)({ location: "GuildSidebarThreadListEntry" }),
+        H = (0, v.p)({ location: "GuildSidebarThreadListEntry" }),
         z = (0, s.e7)([y.default], () => y.default.getUser(t.ownerId)),
         W = i.useCallback(
             (e) => {

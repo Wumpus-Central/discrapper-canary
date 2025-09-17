@@ -9,12 +9,12 @@ var r = n(951288),
     d = n(451478),
     u = n(981631),
     p = n(388032),
-    m = n(489060),
+    m = n(70823),
     h = n(516450);
 function g(e) {
     let { application: t, carouselItems: n } = e,
         g = (0, l.e7)([d.Z], () => d.Z.isFocused()),
-        f = (0, r.jsxs)(r.Fragment, {
+        _ = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("img", {
                     className: m.errorImage,
@@ -35,7 +35,7 @@ function g(e) {
             name: t.name,
         });
     });
-    let _ = a.useCallback(
+    let f = a.useCallback(
         (e, t) => {
             if (e.type === u.s9s.IMG) {
                 let t = n.filter((e) => e.type === u.s9s.IMG),
@@ -67,7 +67,7 @@ function g(e) {
               autoplayInterval: 8000,
               paused: !g,
               videoAutoPlay: !0,
-              onCurrentItemClick: _,
-              errorComponent: f,
+              onCurrentItemClick: f,
+              errorComponent: _,
           });
 }

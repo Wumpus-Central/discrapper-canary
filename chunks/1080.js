@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(110924),
     g = n(410030),
     p = n(367907),
-    f = n(906732),
-    h = n(218867),
+    h = n(906732),
+    f = n(218867),
     b = n(733026),
     x = n(246946),
     j = n(594174),
@@ -25,7 +25,7 @@ var r = n(951288),
     E = n(740903),
     I = n(981631),
     S = n(388032),
-    T = n(26682);
+    T = n(954532);
 function P(e, t, n) {
     return (
         t in e
@@ -76,13 +76,13 @@ function R(e, t) {
 function Z(e) {
     var t;
     let { transitionState: n, guild: l, user: a, ban: s, hideDiscriminator: c, onClose: m } = e,
-        [g, h] = i.useState(!1),
+        [g, f] = i.useState(!1),
         [b, x] = i.useState(null),
-        { analyticsLocations: j } = (0, f.ZP)(),
+        { analyticsLocations: j } = (0, h.ZP)(),
         _ = null != (t = null == j ? void 0 : j[0]) ? t : null;
     async function y() {
         if (null != l) {
-            x(null), h(!0);
+            x(null), f(!0);
             try {
                 await d.Z.unbanUser(l.id, a.id),
                     m(),
@@ -95,7 +95,7 @@ function Z(e) {
                         }),
                     );
             } catch (e) {
-                x(new u.Z(e)), h(!1);
+                x(new u.Z(e)), f(!1);
             }
         }
     }
@@ -267,7 +267,7 @@ let A = i.forwardRef(function (e, t) {
             },
             [a, n, l, c],
         );
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(f.Z, {
         role: "listbox",
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
@@ -304,7 +304,7 @@ function L(e) {
                     c(!1);
                 }
         }, [t, s, l]),
-        f = i.useCallback(
+        h = i.useCallback(
             (e) => {
                 "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), p());
             },
@@ -332,7 +332,7 @@ function L(e) {
                             placeholder: S.intl.string(S.t.MiqUmZ),
                             "aria-label": S.intl.string(S.t.MiqUmZ),
                             onChange: m,
-                            onKeyDown: f,
+                            onKeyDown: h,
                             onClear: g,
                         }),
                         (0, r.jsx)("div", {
@@ -357,8 +357,8 @@ function k() {
     var e, t;
     let { guild: c, searchQuery: u } = (0, s.e7)([C.Z], () => C.Z.getProps(), [], l.isEqual),
         p = null != u && u.trim().length > 0,
-        f = (0, m.Z)(p),
-        h = p !== f,
+        h = (0, m.Z)(p),
+        f = p !== h,
         [x] = (0, s.e7)([C.Z], () => C.Z.getBans(), [], _.Q),
         v = null != (e = null == x ? void 0 : x.size) ? e : 0,
         O = (0, g.ZP)(),
@@ -403,8 +403,8 @@ function k() {
             pageSize: 100,
         });
     i.useEffect(() => {
-        h && 1 !== G.currentPage && U((e) => R(w({}, e), { currentPage: 1 }));
-    }, [h, G.currentPage]);
+        f && 1 !== G.currentPage && U((e) => R(w({}, e), { currentPage: 1 }));
+    }, [f, G.currentPage]);
     let B = i.useCallback(
             (e) => {
                 d.Z.fetchGuildBansBatch(y, 1000, e);

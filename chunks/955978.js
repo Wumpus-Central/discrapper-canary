@@ -12,7 +12,7 @@ var i = n(951288),
     h = n(620954),
     f = n(987650),
     m = n(388032),
-    g = n(439419);
+    g = n(64102);
 function y(e, t, n) {
     var y;
     let O = d.default.getUser(e);
@@ -21,8 +21,8 @@ function y(e, t, n) {
         b = c.Z.getChannel(v),
         E = o.Z.getApplication(t),
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
-        x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
-        S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+        S = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
+        x = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
         I = (0, i.jsxs)("div", {
             className: g.nowPlayingNotification,
             children: [
@@ -41,8 +41,8 @@ function y(e, t, n) {
                         color: "interactive-normal",
                         className: g.bodyText,
                         children: m.intl.format(m.t["q7/rgo"], {
-                            username: null != S ? S : O.username,
-                            gameName: x,
+                            username: null != x ? x : O.username,
+                            gameName: S,
                             gameIcon: () =>
                                 null != E || null != _
                                     ? (0, i.jsx)(s.Z, {
@@ -61,7 +61,7 @@ function y(e, t, n) {
             notif_type: f.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
-            activity_name: null != x ? x : n.name,
+            activity_name: null != S ? S : n.name,
         });
     return {
         body: I,

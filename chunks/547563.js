@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(35282);
+n.d(t, { Z: () => f }), n(35282);
 var r,
     a,
     i = n(951288);
@@ -7,7 +7,7 @@ var l = n(159635),
     s = n.n(l),
     o = n(481060),
     c = n(447543),
-    d = n(15470),
+    d = n(978436),
     u = n(960904),
     p = n(830121),
     m = n(746878),
@@ -37,8 +37,8 @@ function g(e) {
     }
     return e;
 }
-let f = /^discord.gg\/[a-zA-Z0-9-]+/,
-    _ =
+let _ = /^discord.gg\/[a-zA-Z0-9-]+/,
+    f =
         ((r = g({}, h.Z.rules)),
         (a = a =
             {
@@ -46,7 +46,7 @@ let f = /^discord.gg\/[a-zA-Z0-9-]+/,
                 image: g({}, s().defaultRules.image),
                 inviteLink: {
                     order: h.Z.rules.link.order + 1,
-                    match: (e, t) => (t.inline ? f.exec(e) : null),
+                    match: (e, t) => (t.inline ? _.exec(e) : null),
                     parse: (e, t, n) => {
                         let r = (0, p.zO)(e[0]);
                         return null == r || r.type !== u.g.INVITE

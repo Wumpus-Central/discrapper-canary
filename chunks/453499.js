@@ -12,11 +12,11 @@ var r,
     m = n(570140),
     h = n(578361),
     g = n(768762),
-    f = n(259580),
-    _ = n(585483),
+    _ = n(259580),
+    f = n(585483),
     b = n(981631),
     x = n(388032),
-    v = n(633448);
+    v = n(72291);
 function C(e, t, n) {
     return (
         t in e
@@ -32,11 +32,11 @@ function C(e, t, n) {
 }
 class j extends (r = l.PureComponent) {
     componentDidMount() {
-        _.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
+        f.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), f.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
     }
     componentWillUnmount() {
-        _.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious),
-            _.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
+        f.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious),
+            f.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
     }
     render() {
         let {
@@ -59,9 +59,9 @@ class j extends (r = l.PureComponent) {
                     "aria-label": x.intl.string(x.t.vgfxaG),
                     children:
                         "caret" === s
-                            ? (0, i.jsx)(f.Z, {
+                            ? (0, i.jsx)(_.Z, {
                                   className: v.arrow,
-                                  direction: f.Z.Directions.LEFT,
+                                  direction: _.Z.Directions.LEFT,
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: v.arrow,
@@ -91,9 +91,9 @@ class j extends (r = l.PureComponent) {
                     "aria-label": x.intl.string(x.t.XiOHRU),
                     children:
                         "caret" === s
-                            ? (0, i.jsx)(f.Z, {
+                            ? (0, i.jsx)(_.Z, {
                                   className: v.arrow,
-                                  direction: f.Z.Directions.RIGHT,
+                                  direction: _.Z.Directions.RIGHT,
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: v.arrow,
@@ -174,8 +174,8 @@ class y extends (a = l.PureComponent) {
                 paginationDotSelectedClassName: p,
                 themedPagination: m,
                 includeHitboxPadding: g,
-                style: f,
-                aspectRatio: _,
+                style: _,
+                aspectRatio: f,
                 children: b,
             } = this.props,
             { visibleIndex: x } = this.state;
@@ -184,12 +184,12 @@ class y extends (a = l.PureComponent) {
             children: [
                 (0, i.jsxs)("div", {
                     className: o()(v.carouselContainer, n),
-                    style: f,
+                    style: _,
                     onMouseEnter: this.handleMouseEnter,
                     onMouseLeave: this.handleMouseLeave,
                     children: [
                         (0, i.jsx)("div", {
-                            style: { aspectRatio: _ },
+                            style: { aspectRatio: f },
                             children: (0, i.jsx)(h.Z, {
                                 className: o()(v.carousel, r),
                                 step: x,

@@ -10,11 +10,11 @@ var i = n(442837),
     d = n(594174),
     u = n(556012),
     m = n(388032),
-    g = n(464992);
+    g = n(75765);
 function p(e) {
     var t;
-    let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
-        b = (e) => () => h(e),
+    let { action: n, triggerType: p, toggled: h, onToggleAction: f } = e,
+        b = (e) => () => f(e),
         x = (0, u.c)(n.type, n, p),
         j = null == (t = n.metadata) ? void 0 : t.channelId,
         v = (0, i.e7)([d.default, c.Z, o.Z], () => {
@@ -46,7 +46,7 @@ function p(e) {
                         variant: "text-xs/medium",
                         children: O,
                     }),
-                    f &&
+                    h &&
                         (0, r.jsxs)(a.Text, {
                             color: "text-muted",
                             variant: "text-xs/medium",
@@ -66,7 +66,7 @@ function p(e) {
             (0, r.jsx)("div", {
                 children: (0, r.jsx)(l.$q, {
                     type: l.M0.INVERTED,
-                    value: f,
+                    value: h,
                     onChange: b(!1),
                     className: g.__invalid_actionCheckbox,
                 }),

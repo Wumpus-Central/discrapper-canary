@@ -11,7 +11,7 @@ var r = n(951288),
     o = n(587431),
     c = n(756066),
     d = n(388032),
-    u = n(52726),
+    u = n(370191),
     m = n(270395);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -39,7 +39,7 @@ function g(e) {
     return e;
 }
 let p = "role_subscriptions_eligibility_modal";
-function f(e) {
+function h(e) {
     let { guild: t, eligibility: i, eligibilityLoading: l, eligibilityError: s, refreshEligibility: o } = e;
     return (0, r.jsx)(a.zxk, {
         variant: "expressive",
@@ -84,15 +84,15 @@ function f(e) {
         icon: a.Mgn,
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, checkboxText: n } = e,
         { canSubmitAcceptance: c, error: u, loading: m, submitAcceptTermsRequest: g } = (0, s.Z)(t.id),
-        [p, f] = i.useState(!1);
+        [p, h] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.$q, {
                 onChange: function () {
-                    f((e) => !e);
+                    h((e) => !e);
                 },
                 size: 20,
                 type: l.M0.INVERTED,
@@ -132,11 +132,11 @@ function b(e) {
     return o
         ? u
             ? (0, r.jsx)(c.Z, g({}, n))
-            : (0, r.jsx)(h, {
+            : (0, r.jsx)(f, {
                   guild: t,
                   checkboxText: d,
               })
-        : (0, r.jsx)(f, {
+        : (0, r.jsx)(h, {
               guild: t,
               eligibility: s,
               eligibilityLoading: i,

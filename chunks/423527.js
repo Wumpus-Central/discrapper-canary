@@ -22,8 +22,8 @@ var r,
     I = n(388905),
     N = n(853268),
     O = n(639946),
-    S = n(616952),
-    y = n(792766),
+    y = n(616952),
+    S = n(792766),
     C = n(692483),
     A = n(100159),
     T = n(473855),
@@ -53,8 +53,8 @@ var r,
     ee = n(701476),
     et = n(801461),
     en = n(388032),
-    er = n(33724),
-    ei = n(197571);
+    er = n(67894),
+    ei = n(10198);
 function el(e, t, n) {
     return (
         t in e
@@ -456,7 +456,7 @@ class eu extends (r = l.PureComponent) {
                 null != e && d
                     ? (0, i.jsx)(I.ZP, {
                           className: ei.marginTop20,
-                          children: (0, i.jsx)(y.y, {
+                          children: (0, i.jsx)(S.y, {
                               guild: e.guild,
                               onlineCount: e.approximate_presence_count,
                           }),
@@ -492,7 +492,7 @@ class eu extends (r = l.PureComponent) {
                 registering: _,
                 apiErrors: { email: E, username: v, global_name: j, password: b, date_of_birth: N } = {},
             } = this.state,
-            { consentRequired: O, authBoxClassName: y, hasLoggedInAccounts: C } = this.props,
+            { consentRequired: O, authBoxClassName: S, hasLoggedInAccounts: C } = this.props,
             A = this.renderErrorMessage(),
             T = (0, i.jsx)(p.ua7, {
                 text: !c && O ? en.intl.string(en.t.AY4IVF) : null,
@@ -632,7 +632,7 @@ class eu extends (r = l.PureComponent) {
                         onFocus: this.trackInputFocus,
                         onBlur: this.trackInputBlur,
                     }),
-                    (0, i.jsx)(S.Z, {}),
+                    (0, i.jsx)(y.Z, {}),
                     this.renderConsentComponent(),
                     T,
                     A,
@@ -651,7 +651,7 @@ class eu extends (r = l.PureComponent) {
             ? (0, i.jsx)(J.Z, {
                   onSubmit: this.handleSubmit,
                   tag: "form",
-                  className: a()(y, er.horizontalAuthBox),
+                  className: a()(S, er.horizontalAuthBox),
                   children: () => [
                       R,
                       (0, i.jsxs)(
@@ -673,7 +673,7 @@ class eu extends (r = l.PureComponent) {
             : (0, i.jsxs)(I.ZP, {
                   onSubmit: this.handleSubmit,
                   tag: "form",
-                  className: y,
+                  className: S,
                   children: [
                       C
                           ? (0, i.jsx)(I.zx, {

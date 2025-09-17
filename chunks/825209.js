@@ -7,7 +7,7 @@ var r = n(951288),
     l = n(455279),
     c = n(358085),
     u = n(998502),
-    d = n(981631);
+    d = n(295907);
 function f(e, t, n) {
     return (
         t in e
@@ -77,13 +77,13 @@ class p extends i.PureComponent {
             }),
             f(this, "handleComboKeys", (e, t, n) => {
                 if ((n.preventDefault(), "keydown" === n.type)) {
-                    let e = t.map((e) => [d.MoX.KEYBOARD_KEY, o()(e), d.CgE.BROWSER]),
+                    let e = t.map((e) => [d.Mo.KEYBOARD_KEY, o()(e), d.Cg.BROWSER]),
                         { keyCode: r } = n;
                     null ==
                         e.find((e) => {
                             let [, t] = e;
                             return r === t;
-                        }) && e.push([d.MoX.KEYBOARD_KEY, r, d.CgE.BROWSER]),
+                        }) && e.push([d.Mo.KEYBOARD_KEY, r, d.Cg.BROWSER]),
                         this.handleComboChange(e);
                 }
             }),

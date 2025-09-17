@@ -9,9 +9,9 @@ var r = n(951288),
     d = n(434404),
     u = n(185923),
     m = n(388032),
-    g = n(83552),
-    p = n(270856);
-function f(e) {
+    g = n(988167),
+    p = n(998918);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-let h = { label: "" };
+let f = { label: "" };
 function b(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: d } = e,
         m = i.useRef(null),
@@ -77,7 +77,7 @@ function b(e) {
                   let { isShown: l } = t;
                   return (0, r.jsx)(
                       s.Z,
-                      ((n = f({}, e)),
+                      ((n = h({}, e)),
                       (i = i =
                           {
                               ref: m,
@@ -152,7 +152,7 @@ function v(e) {
         s = i.useCallback(
             (e, t, n) => {
                 let r = [...a];
-                (r[t] = f({}, a[t], n)), d.Z.updateGuildProfile(e, { traits: r });
+                (r[t] = h({}, a[t], n)), d.Z.updateGuildProfile(e, { traits: r });
             },
             [a],
         );
@@ -177,7 +177,7 @@ function v(e) {
                         x,
                         {
                             guildId: t.id,
-                            trait: null != (i = a[e]) ? i : h,
+                            trait: null != (i = a[e]) ? i : f,
                             index: e,
                             onTraitUpdate: s,
                             disabled: !n,

@@ -62,14 +62,14 @@ function h(e, n, h) {
     let P = (0, r.e7)([g.Z], () => g.Z.getChannel(h)),
         v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         x = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        y = (0, u.Z)(P, "Context Menu"),
-        _ = (0, d.yw)(null == P ? void 0 : P.id);
+        _ = (0, u.Z)(P, "Context Menu"),
+        y = (0, d.yw)(null == P ? void 0 : P.id);
     return (null == x ? void 0 : x.id) === e.id
-        ? [y]
+        ? [_]
         : null == v || null == P || null == x
           ? []
           : [
-                _
+                y
                     ? (0, l.jsx)(a.sNh, {
                           id: "remove",
                           label: P.isForumPost()
@@ -82,7 +82,7 @@ function h(e, n, h) {
                 (0, s.BK)(e, v)
                     ? (0, l.jsx)(a.sNh, {
                           id: "kick",
-                          label: _
+                          label: y
                               ? p.intl.formatToPlainString(p.t["1Ie87u"], { user: e.username })
                               : p.intl.formatToPlainString(p.t["9l/iTU"], { user: e.username }),
                           color: "danger",
@@ -103,13 +103,13 @@ function h(e, n, h) {
                 (0, s.mm)(e, v)
                     ? (0, l.jsx)(a.sNh, {
                           id: "ban",
-                          label: _
+                          label: y
                               ? p.intl.formatToPlainString(p.t.i62APT, { user: e.username })
                               : p.intl.formatToPlainString(p.t.WnpUBg, { user: e.username }),
                           color: "danger",
                           action: () =>
                               (0, a.ZDy)(async () => {
-                                  let { default: n } = await t.e("4114").then(t.bind(t, 98746));
+                                  let { default: n } = await t.e("43350").then(t.bind(t, 98746));
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,

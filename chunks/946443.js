@@ -22,16 +22,16 @@ var r = n(951288),
     O = n(358085),
     y = n(143316),
     _ = n(240126),
-    v = n(147522),
-    j = n(809780),
+    j = n(147522),
+    v = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(915087);
+    E = n(77902);
 function S(e) {
     var t, n, l, a, y, S, I;
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
-        [R, D] = (0, j.ZP)(A),
+        [R, D] = (0, v.ZP)(A),
         { loadState: M, channels: L } = R,
         { maybeLoadMore: k } = D,
         U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: M === j.jd.Done ? void 0 : k,
+                            onScroll: M === v.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
                                 Z ? (0, r.jsx)(P, { setSeenTutorial: w }) : null,
-                                (0, v.Z)(L, D, N),
-                                M === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                (0, j.Z)(L, D, N),
+                                M === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors

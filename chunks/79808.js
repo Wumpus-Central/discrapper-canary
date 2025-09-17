@@ -5,7 +5,7 @@ var r = n(951288),
     o = n(404975),
     a = n(924052),
     s = n(59662),
-    u = n(990757);
+    u = n(4640);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,19 +52,19 @@ function d(e, t) {
 function g(e) {
     var t, n;
     let { root: g, directory: f, target: y, onClose: O, sidebarHeader: E, sidebarFooter: v } = e,
-        [b, T] = i.useState(!0),
+        [T, b] = i.useState(!0),
         [N, p] = i.useState(null == (t = f.entry(y)) ? void 0 : t.parentPanel),
         [I, C] = i.useState({
             target: y,
             targetAccordion: null == (n = f.entry(y)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
-            complete: j,
+            complete: m,
         });
-    function j() {
+    function m() {
         C(void 0);
     }
-    let { navigateWithValidation: m } = (0, a.Cu)(),
-        _ = {
+    let { navigateWithValidation: j } = (0, a.Cu)(),
+        S = {
             currentPanel: f.typedGet(N),
             navigateTo: (e) => {
                 let t = f.entry(e);
@@ -72,21 +72,21 @@ function g(e) {
                 let n = {
                     target: e,
                     targetAccordion: t.parentAccordion,
-                    complete: j,
+                    complete: m,
                 };
                 if (t.parentPanel.key !== (null == N ? void 0 : N.key)) {
                     let e = t.parentPanel;
-                    m(() => {
+                    j(() => {
                         C(d(c({}, n), { animateScroll: !1 })), p(e);
                     });
                 } else C(d(c({}, n), { animateScroll: !0 }));
             },
             navTransition: I,
-            showNavigationMobile: b,
-            setShowNavigationMobile: T,
+            showNavigationMobile: T,
+            setShowNavigationMobile: b,
         };
     return (0, r.jsx)(s.j.Provider, {
-        value: _,
+        value: S,
         children: (0, r.jsxs)("div", {
             className: u.container,
             children: [
@@ -96,8 +96,8 @@ function g(e) {
                     footer: v,
                 }),
                 (0, r.jsx)(l.Z, {
-                    onClose: () => m(O),
-                    setting: _.currentPanel,
+                    onClose: () => j(O),
+                    setting: S.currentPanel,
                 }),
             ],
         }),

@@ -12,15 +12,15 @@ var i = n(780384),
     p = n(228168),
     f = n(981631),
     h = n(671955),
-    g = n(323759);
+    g = n(163514);
 let m = (0, l.pxk)(l.EFr.SIZE_16);
 function b(e) {
     let { user: t, guild: b, nick: O, onSelect: y } = e,
-        { theme: _, themeType: v } = (0, d.z)(),
-        j = t.hasAvatarForGuild(b.id);
+        { theme: _, themeType: j } = (0, d.z)(),
+        v = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(l.P3F, {
         focusProps:
-            v === h.l.MODAL_V2
+            j === h.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -46,21 +46,21 @@ function b(e) {
                     n.e("7654"),
                     n.e("845"),
                     n.e("49049"),
-                    n.e("47463"),
+                    n.e("8360"),
                     n.e("6850"),
                     n.e("58227"),
                     n.e("54408"),
-                    n.e("90746"),
                     n.e("38697"),
-                    n.e("8106"),
+                    n.e("90746"),
+                    n.e("70830"),
                     n.e("79381"),
                     n.e("64679"),
                     n.e("39206"),
-                    n.e("10576"),
+                    n.e("20303"),
                     n.e("56534"),
                     n.e("87154"),
                     n.e("33213"),
-                    n.e("78728"),
+                    n.e("13056"),
                 ]).then(n.bind(n, 545135));
                 return (t) => {
                     var n, i;
@@ -128,7 +128,7 @@ function b(e) {
                         className: g.name,
                         children: b.name,
                     }),
-                    j &&
+                    v &&
                         (0, r.jsxs)("div", {
                             className: g.nick,
                             children: [
@@ -147,7 +147,7 @@ function b(e) {
                                 }),
                             ],
                         }),
-                    !j &&
+                    !v &&
                         null != O &&
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/medium",

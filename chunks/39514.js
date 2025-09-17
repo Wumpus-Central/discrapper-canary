@@ -22,10 +22,10 @@ var r = n(951288),
     I = n(51144),
     N = n(481153),
     O = n(781428),
-    S = n(423527),
-    y = n(981631),
+    y = n(423527),
+    S = n(981631),
     C = n(388032),
-    A = n(197571);
+    A = n(10198);
 function T(e, t, n) {
     return (
         t in e
@@ -74,15 +74,15 @@ class Z extends i.PureComponent {
         let { libraryApplication: t, sku: n } = this.props,
             { error: r } = this.state,
             i = null != r ? r.code : null;
-        return i === y.evJ.INVALID_GIFT_SELF_REDEMPTION
+        return i === S.evJ.INVALID_GIFT_SELF_REDEMPTION
             ? C.intl.string(C.t.wa9h7O)
-            : i === y.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === y.POd.COLLECTIBLES
+            : i === S.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === S.POd.COLLECTIBLES
               ? C.intl.string(C.t.mdLtb2)
-              : null != t || i === y.evJ.INVALID_GIFT_REDEMPTION_OWNED
-                ? C.intl.format(C.t.PIdmg4, { libraryLink: y.Z5c.APPLICATION_LIBRARY })
-                : e.isClaimed || i === y.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
+              : null != t || i === S.evJ.INVALID_GIFT_REDEMPTION_OWNED
+                ? C.intl.format(C.t.PIdmg4, { libraryLink: S.Z5c.APPLICATION_LIBRARY })
+                : e.isClaimed || i === S.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
                   ? C.intl.string(C.t.ilcBeX)
-                  : i === y.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
+                  : i === S.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
                     ? C.intl.string(C.t.ypuSd3)
                     : void 0;
     }
@@ -110,7 +110,7 @@ class Z extends i.PureComponent {
                     children: C.intl.string(C.t.fIv16O),
                 }),
                 (0, r.jsx)(p.zx, {
-                    onClick: () => window.open(b.Z.getArticleURL(y.BhN.GIFTING), "_blank"),
+                    onClick: () => window.open(b.Z.getArticleURL(S.BhN.GIFTING), "_blank"),
                     look: p.zx.Looks.LINK,
                     color: p.zx.Colors.LINK,
                     children: C.intl.string(C.t["/CjuXF"]),
@@ -201,8 +201,8 @@ class Z extends i.PureComponent {
                 location: o,
             } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
-        if (e === y.kEZ.OPEN && !u) return this.renderAppOpened();
-        if (e === y.kEZ.OPENING) return this.renderSpinner(C.intl.string(C.t["Z+hCVV"]));
+        if (e === S.kEZ.OPEN && !u) return this.renderAppOpened();
+        if (e === S.kEZ.OPENING) return this.renderSpinner(C.intl.string(C.t["Z+hCVV"]));
         if (s) return this.renderSpinner(C.intl.string(C.t.bhJseH));
         if (null == i) return l ? this.renderExpiredInvite() : this.renderSpinner(C.intl.string(C.t.b3lf1d));
         if (l) {
@@ -221,7 +221,7 @@ class Z extends i.PureComponent {
                       transitionTo: a,
                       location: o,
                   })
-                : (0, r.jsx)(S.Z, {
+                : (0, r.jsx)(y.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: a,
@@ -253,7 +253,7 @@ class Z extends i.PureComponent {
             }),
             T(this, "handleLogout", () => {
                 let e = this.props.match.params.giftCode;
-                c.Z.logout("gift_code", y.Z5c.GIFT_CODE_LOGIN(e));
+                c.Z.logout("gift_code", S.Z5c.GIFT_CODE_LOGIN(e));
             }),
             T(this, "handleResendVerification", () => {
                 c.Z.verifyResend(), this.setState({ sentVerification: !0 });
@@ -263,7 +263,7 @@ class Z extends i.PureComponent {
                 if (null == t) throw Error("Trying to accept gift before resolve");
                 let n = this.getCode();
                 try {
-                    this.setState({ error: null }), await u.Z.redeemGiftCode({ code: n }), e(y.Z5c.APP);
+                    this.setState({ error: null }), await u.Z.redeemGiftCode({ code: n }), e(S.Z5c.APP);
                 } catch (e) {
                     this.setState({ error: e });
                 }
@@ -272,7 +272,7 @@ class Z extends i.PureComponent {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
                 u.Z.resolveGiftCode(t, !0, !0).then((n) => {
-                    null != n && null != n.giftCode.promotion && e(y.Z5c.BILLING_PROMOTION_REDEMPTION(t));
+                    null != n && null != n.giftCode.promotion && e(S.Z5c.BILLING_PROMOTION_REDEMPTION(t));
                 });
             });
     }

@@ -16,14 +16,14 @@ var r = n(951288),
     b = n(687158),
     x = n(28660),
     j = n(502762),
-    _ = n(25990),
-    S = n(626135),
+    S = n(25990),
+    _ = n(626135),
     C = n(63063),
     O = n(981631),
     v = n(671955),
-    y = n(693450),
+    y = n(62222),
     P = n(388032),
-    k = n(270816);
+    k = n(43659);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,26 +70,26 @@ function E(e, t) {
 function T(e) {
     let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: T, onClose: R } = e,
         A = (0, c.ZP)(),
-        I = (0, s.wjy)(A),
-        [w, L] = (0, o.useState)(I),
+        w = (0, s.wjy)(A),
+        [I, L] = (0, o.useState)(w),
         B = (0, b.ZP)(t.id, null),
         { bannerSrc: M } = (0, x.Z)({
             displayProfile: B,
             size: 413,
             canAnimate: !1,
         }),
-        G = (0, i.cj)([_.Z], () => _.Z.getAllPending()),
+        G = (0, i.cj)([S.Z], () => S.Z.getAllPending()),
         Z = (0, h.SD)({
             userId: t.id,
             image: G.pendingAvatar,
         }),
-        Y = w ? O.BRd.DARK : O.BRd.LIGHT;
-    ((I && w) || (!I && !w)) && (Y = A);
+        Y = I ? O.BRd.DARK : O.BRd.LIGHT;
+    ((w && I) || (!w && !I)) && (Y = A);
     let H = (0, o.useCallback)(() => {
-            S.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), R();
+            _.default.track(O.rMx.DISPLAY_NAME_STYLES_CLOSED), R();
         }, [R]),
         z = (0, o.useCallback)((e) => {
-            L(e === O.BRd.DARK), S.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
+            L(e === O.BRd.DARK), _.default.track(O.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === O.BRd.DARK });
         }, []),
         F = (0, o.useMemo)(() => {
             var e;
@@ -194,7 +194,7 @@ function T(e) {
                         }),
                     }),
                     (0, r.jsx)(D, {
-                        darkPreview: w,
+                        darkPreview: I,
                         onToggleTheme: z,
                     }),
                 ],

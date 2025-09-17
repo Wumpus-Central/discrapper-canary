@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => M,
-    Z: () => V,
+    Z: () => z,
 }),
     n(388685);
 var i = n(951288),
@@ -23,8 +23,8 @@ var i = n(951288),
     b = n(237997),
     E = n(136015),
     _ = n(444295),
-    x = n(906037),
-    S = n(353038),
+    S = n(906037),
+    x = n(353038),
     I = n(804570),
     C = n(461393),
     j = n(340101),
@@ -32,7 +32,7 @@ var i = n(951288),
     N = n(981631),
     Z = n(65154),
     T = n(388032),
-    P = n(59122);
+    P = n(928578);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -195,7 +195,7 @@ let k = r.memo(function (e) {
             m = "boolean" != typeof c.meta.horizontal || c.meta.horizontal,
             g = n.length > 0 && null != t && null != u && (!a || c.pinned);
         r.useEffect(() => {
-            (0, x.m3)(
+            (0, S.m3)(
                 {
                     locked: a,
                     pinned: c.pinned,
@@ -264,7 +264,7 @@ let k = r.memo(function (e) {
             };
         return (0, C.hJ)(s, c);
     };
-function V(e) {
+function z(e) {
     var t, n, l, o;
     let s = (0, a.e7)([v.Z, y.Z], () => y.Z.getChannel(v.Z.getVoiceChannelId())),
         c = 2 * e.padding + 2 * e.borderWidth,
@@ -276,8 +276,8 @@ function V(e) {
             E.Q,
         ),
         b = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: _ = e.width - c, height: x = e.height - c, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
-        { participantTileWidth: C, visibleParticipants: j } = (0, g.ZB)(b ? _ : x, m, {
+        { width: _ = e.width - c, height: S = e.height - c, ref: I } = (0, d.ZP)(e.locked, e.widget.pinned),
+        { participantTileWidth: C, visibleParticipants: j } = (0, g.ZB)(b ? _ : S, m, {
             tileWidth: w.vZ,
             tileMinWidth: w.mo,
             tileMargin: w.F$,
@@ -289,7 +289,7 @@ function V(e) {
         Z = {
             id: e.widget.id,
             containerSize: {
-                containerHeight: x,
+                containerHeight: S,
                 containerWidth: _,
             },
             sizeOffset: c,
@@ -335,7 +335,7 @@ function V(e) {
                     let { width: s, height: c } = M(
                         D(A({}, a), {
                             widget: l,
-                            operation: S.B.RESIZE_NORTH,
+                            operation: x.B.RESIZE_NORTH,
                             computedSize: {
                                 width: r,
                                 height: i,
@@ -367,7 +367,7 @@ function V(e) {
                 participants: j,
                 participantsVersion: O,
                 width: b ? C : null != _ ? _ : e.width,
-                height: b ? (null != x ? x : e.height) : C,
+                height: b ? (null != S ? S : e.height) : C,
                 containerRef: I,
             }),
         )

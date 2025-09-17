@@ -12,14 +12,14 @@ var r = n(951288),
     p = n(720196),
     g = n(981631),
     m = n(388032),
-    f = n(710509),
-    _ = n(197571);
+    f = n(926609),
+    _ = n(10198);
 function x(e) {
     let { setOriginalEmail: t, setSlide: l, ready: x, token: E } = e,
         [v, j] = i.useState(!1),
         [b, I] = i.useState(null),
         [N, O] = i.useState(null),
-        [S, y] = i.useState(""),
+        [y, S] = i.useState(""),
         C = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -51,8 +51,8 @@ function x(e) {
                             label: m.intl.string(m.t["8dM4FB"]),
                             setRef: C,
                             className: _.marginBottom20,
-                            value: S,
-                            onChange: y,
+                            value: y,
+                            onChange: S,
                             error: b,
                             autoComplete: "new-password",
                             maxLength: 72,
@@ -62,7 +62,7 @@ function x(e) {
                             className: _.marginTop8,
                             onClick: () => {
                                 if (!v) {
-                                    if (0 === S.length) {
+                                    if (0 === y.length) {
                                         I(m.intl.string(m.t.R98xDw)), d.S.dispatch(g.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
@@ -75,7 +75,7 @@ function x(e) {
                                             url: g.ANM.ACCOUNT_REVERT,
                                             body: {
                                                 token: E,
-                                                password: S,
+                                                password: y,
                                             },
                                             trackedActionData: { event: a.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1,
@@ -84,7 +84,7 @@ function x(e) {
                                                 let {
                                                     body: { email: n },
                                                 } = e;
-                                                y(""), t(n), l(p.n.SUCCESS);
+                                                S(""), t(n), l(p.n.SUCCESS);
                                             })
                                             .catch((e) => {
                                                 if (e instanceof Error)
@@ -133,7 +133,7 @@ function x(e) {
                     children: (0, r.jsx)(u.zx, {
                         color: u.zx.Colors.PRIMARY,
                         onClick: () => {
-                            y(""), l(p.n.START);
+                            S(""), l(p.n.START);
                         },
                         children: m.intl.string(m.t.rzxnQ0),
                     }),

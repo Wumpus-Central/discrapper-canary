@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(999382),
     g = n(217472),
     p = n(651390),
-    f = n(388032),
-    h = n(229271);
+    h = n(388032),
+    f = n(58801);
 function b(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([m.Z], () => m.Z.getProps().guild),
@@ -38,22 +38,22 @@ function b(e) {
           : (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: h.headerContainer,
+                        className: f.headerContainer,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: h.headerText,
+                                className: f.headerText,
                                 children: [
                                     (0, r.jsx)(s.X6q, {
                                         variant: "heading-md/semibold",
                                         color: "header-primary",
-                                        children: f.intl.string(f.t.d21uOj),
+                                        children: h.intl.string(h.t.d21uOj),
                                     }),
                                     (0, r.jsx)(s.xvT, {
                                         tag: "p",
                                         variant: "text-sm/medium",
                                         color: "text-secondary",
-                                        className: h.bodyText,
-                                        children: f.intl.string(f.t.SzpUBA),
+                                        className: f.bodyText,
+                                        children: h.intl.string(h.t.SzpUBA),
                                     }),
                                 ],
                             }),
@@ -65,15 +65,15 @@ function b(e) {
                     }),
                     t && (0, r.jsx)(p.c, { guildId: l.id }),
                     (0, r.jsx)("div", {
-                        className: a()(h.rules, { [h.disabled]: !t }),
+                        className: a()(f.rules, { [f.disabled]: !t }),
                         children: (0, r.jsxs)("div", {
                             inert: t ? void 0 : "",
                             children: [
                                 (0, r.jsx)(s.X6q, {
                                     variant: "text-xs/bold",
                                     color: "text-muted",
-                                    className: h.rulesHeader,
-                                    children: f.intl.string(f.t.XcAzbm),
+                                    className: f.rulesHeader,
+                                    children: h.intl.string(h.t.XcAzbm),
                                 }),
                                 (0, r.jsx)(u.k, {
                                     guild: l,

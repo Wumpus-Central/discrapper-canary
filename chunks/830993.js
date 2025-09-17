@@ -17,17 +17,17 @@ var r = n(951288),
     O = n(823379),
     y = n(355363),
     _ = n(449932),
-    v = n(561788),
-    j = n(876548),
+    j = n(561788),
+    v = n(876548),
     x = n(543432),
     C = n(981631),
     E = n(388032),
-    S = n(413409),
-    P = n(21265);
+    S = n(333972),
+    P = n(934882);
 function I(e) {
     var t, l;
     let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
-        v = i.useMemo(() => {
+        j = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
                 ? {}
@@ -42,9 +42,9 @@ function I(e) {
                               : [],
                   };
         }, [o, g]);
-    (0, c.$)(v, "VoiceChannelActivities");
-    let j = (0, u.ZP)(o),
-        x = Array.from((0, u.uF)(j).values()),
+    (0, c.$)(j, "VoiceChannelActivities");
+    let v = (0, u.ZP)(o),
+        x = Array.from((0, u.uF)(v).values()),
         P = null != (t = null == g ? void 0 : g.filter(O.lm)) ? t : [],
         I = (0, a.e7)(
             [m.Z],
@@ -214,9 +214,9 @@ function N(e) {
         : (0, r.jsxs)("div", {
               className: o()(S.popoutHeaderContainer, P.popoutHeaderContainer),
               children: [
-                  (0, r.jsx)(v.Z, { channel: t }),
+                  (0, r.jsx)(j.Z, { channel: t }),
                   c
-                      ? (0, r.jsx)(j.Z, {
+                      ? (0, r.jsx)(v.Z, {
                             userCount: i,
                             video: s,
                             channel: t,

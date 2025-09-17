@@ -12,21 +12,21 @@ var r = n(951288),
     f = n(888302),
     p = n(193227),
     h = n(426171),
-    m = n(845796),
-    _ = n(841875),
+    _ = n(845796),
+    m = n(841875),
     C = n(312030),
     b = n(795343),
     E = n(763891),
     S = n(215023),
     v = n(981631),
     O = n(388032),
-    x = n(452785);
+    x = n(25616);
 function y(e) {
     let { isFullScreen: t, tab: n, sortedCategories: a, initialCategoryId: c, onUnmount: u } = e;
     (0, g.A)();
     let f = (0, d.FF)("CollectiblesBrowse"),
         p = l.useRef(null),
-        { handleScroll: m } = (0, o.z)(p, n),
+        { handleScroll: _ } = (0, o.z)(p, n),
         { setCategoryRef: C, handleScrollToCategory: b } = (0, h.xV)(p.current),
         [E, S] = l.useState(f),
         [v, O] = l.useState(!1);
@@ -57,7 +57,7 @@ function y(e) {
                     (0, r.jsx)(i.yWw, {
                         className: x.shopScroll,
                         ref: p,
-                        onScroll: m,
+                        onScroll: _,
                         children: (0, r.jsx)(T, {
                             isFullScreen: t,
                             isSmallScreen: v,
@@ -74,7 +74,7 @@ function y(e) {
                         !v &&
                         (0, r.jsx)(i.Ttm, {
                             className: x.filterBar,
-                            children: (0, r.jsx)(_.Z, {}),
+                            children: (0, r.jsx)(m.Z, {}),
                         }),
                 ],
             }),
@@ -164,7 +164,7 @@ let T = (e) => {
                                                     variant: "text-md/semibold",
                                                     children: O.intl.string(O.t.uaX709),
                                                 }),
-                                                (0, r.jsx)(m.Z, {}),
+                                                (0, r.jsx)(_.Z, {}),
                                             ],
                                         }),
                                         (0, r.jsx)("div", {
@@ -198,7 +198,7 @@ let T = (e) => {
                                         ref: k,
                                         children: (0, r.jsx)(i.Den, {
                                             className: x.filterOverlayContent,
-                                            children: (0, r.jsx)(_.Z, {}),
+                                            children: (0, r.jsx)(m.Z, {}),
                                         }),
                                     }),
                             ],

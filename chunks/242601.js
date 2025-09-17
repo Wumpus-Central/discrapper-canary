@@ -24,8 +24,8 @@ var r = n(951288),
     S = n(492162),
     T = n(43740),
     N = n(596557),
-    j = n(817520),
-    P = n(999309),
+    P = n(817520),
+    j = n(999309),
     x = n(408987),
     A = n(130734),
     Z = n(499137),
@@ -60,7 +60,7 @@ var r = n(951288),
     eo = n(921944),
     es = n(647086),
     ec = n(388032),
-    eu = n(971606);
+    eu = n(500553);
 function ed(e, t, n) {
     return (
         t in e
@@ -406,15 +406,15 @@ class eb extends i.PureComponent {
                             n.e("51453"),
                             n.e("7654"),
                             n.e("845"),
-                            n.e("47463"),
+                            n.e("8360"),
                             n.e("6850"),
                             n.e("58227"),
                             n.e("54408"),
                             n.e("90746"),
-                            n.e("8106"),
+                            n.e("70830"),
                             n.e("87154"),
                             n.e("33213"),
-                            n.e("1289"),
+                            n.e("8417"),
                         ]).then(n.bind(n, 545135));
                         return (n) => (0, r.jsx)(e, ef(ep({}, n), { guild: t }));
                     });
@@ -439,7 +439,7 @@ class eb extends i.PureComponent {
                 null != e && t && x.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             ed(this, "renderMenuPopout", async () => {
-                let { default: e } = await Promise.all([n.e("87154"), n.e("45141")]).then(n.bind(n, 859432));
+                let { default: e } = await Promise.all([n.e("87154"), n.e("41794")]).then(n.bind(n, 859432));
                 return (t) => {
                     let { closePopout: n } = t,
                         { guild: i } = this.props;
@@ -563,7 +563,7 @@ function e_(e) {
             g &&
             (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 &&
             !J.s.isDisallowPopupsSet(),
-        eu = (0, P.Z)(n),
+        eu = (0, j.Z)(n),
         ed = (null == o ? void 0 : o.features.has(el.oNc.HUB)) === !0,
         ep = g && (null == o ? void 0 : o.features.has(el.oNc.DISCOVERABLE)) === !0,
         ef = (0, y.Q)(),
@@ -580,10 +580,10 @@ function e_(e) {
     (0, N.Z)(o);
     let eI = (0, C.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eC = (0, R.Z)(n),
-        eS = (0, j.Z)(n),
+        eS = (0, P.Z)(n),
         eT = (0, c.e7)([q.Z], () => q.Z.getChannelId()),
         eN = (0, c.e7)([K.Z], () => K.Z.desyncedVoiceStatesCount),
-        ej = (0, k.Z)(n);
+        eP = (0, k.Z)(n);
     return (0, r.jsx)(eb, {
         guildId: n,
         hideSelectedChannel: l,
@@ -616,6 +616,6 @@ function e_(e) {
         headerAnalyticsLocations: $,
         isTutorialHighlightDismissed: eI,
         shouldRenderBurstCoachmark: ev,
-        shouldRenderGuildPowerupPerkCoachmark: !1 === ej,
+        shouldRenderGuildPowerupPerkCoachmark: !1 === eP,
     });
 }

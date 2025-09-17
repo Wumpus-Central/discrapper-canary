@@ -24,8 +24,8 @@ var r = n(951288),
     S = n(596040),
     T = n(314490),
     N = n(374065),
-    j = n(451576),
-    P = n(119315),
+    P = n(451576),
+    j = n(119315),
     x = n(100527),
     A = n(906732),
     Z = n(397698),
@@ -78,8 +78,8 @@ var r = n(951288),
     eS = n(594174),
     eT = n(979651),
     eN = n(938475),
-    ej = n(626135),
-    eP = n(63063),
+    eP = n(626135),
+    ej = n(63063),
     ex = n(51144),
     eA = n(870569),
     eZ = n(345243),
@@ -90,8 +90,8 @@ var r = n(951288),
     ek = n(921944),
     eM = n(190378),
     eU = n(388032),
-    eG = n(890332),
-    eB = n(197571);
+    eG = n(239545),
+    eB = n(10198);
 function eV(e, t, n) {
     return (
         t in e
@@ -169,7 +169,7 @@ let eW = {
 };
 function eY(e) {
     let t = e.currentTarget;
-    ej.default.track(eR.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+    eP.default.track(eR.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
         href: t.href,
         location: { section: eR.jXE.NOISE_CANCELLATION_POPOUT },
@@ -179,7 +179,7 @@ function eK() {
     let e = i.useRef(null);
     (0, m.Tbt)(e),
         i.useEffect(() => {
-            ej.default.track(eR.rMx.OPEN_POPOUT, { type: eR.jXE.NOISE_CANCELLATION_POPOUT });
+            eP.default.track(eR.rMx.OPEN_POPOUT, { type: eR.jXE.NOISE_CANCELLATION_POPOUT });
         }, []);
     let t = (0, u.e7)([ey.Z], () => ey.Z.getNoiseCancellation());
     return (0, r.jsxs)("div", {
@@ -217,7 +217,7 @@ function eK() {
                         children: (0, r.jsx)("div", { className: eG.krispLogo }),
                     }),
                     (0, r.jsx)(m.eee, {
-                        href: eP.Z.getArticleURL(eR.BhN.NOISE_SUPPRESSION),
+                        href: ej.Z.getArticleURL(eR.BhN.NOISE_SUPPRESSION),
                         className: eG.krispLink,
                         onClick: (e) => eY(e),
                         children: eU.intl.string(eU.t.hvVgAQ),
@@ -269,7 +269,7 @@ function eQ(e) {
             [t, y, s],
         ),
         S = p || n || h,
-        { Component: T, play: N, events: j } = (0, f.o)(c.enabled ? "disable" : "enable");
+        { Component: T, play: N, events: P } = (0, f.o)(c.enabled ? "disable" : "enable");
     return (
         i.useEffect(() => () => N(), [c.enabled, N]),
         (0, r.jsx)(
@@ -336,11 +336,11 @@ function eQ(e) {
                                                         var t, n;
                                                         null == (t = e.onMouseEnter) || t.call(e),
                                                             null == (n = c.onMouseEnter) || n.call(c),
-                                                            j.onMouseEnter();
+                                                            P.onMouseEnter();
                                                     },
                                                     onMouseLeave: () => {
                                                         var t;
-                                                        null == (t = e.onMouseLeave) || t.call(e), j.onMouseLeave();
+                                                        null == (t = e.onMouseLeave) || t.call(e), P.onMouseLeave();
                                                     },
                                                     onContextMenu: (t) => {
                                                         var n;
@@ -446,7 +446,7 @@ function eX(e) {
                                       focusProps: eW,
                                       children: [
                                           i === d.z.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
-                                              (0, r.jsx)(P.r, {
+                                              (0, r.jsx)(j.r, {
                                                   top: -1,
                                                   right: -1,
                                               }),
@@ -483,14 +483,14 @@ function eJ(e) {
     t = null == I ? (l ? v : ep.Z) : () => (0, z.Z)(I);
     let T = null != I || S.length > 0,
         N = _ ? eU.intl.string(eU.t.fjBNo6) : eU.intl.string(eU.t.uQn9Bw),
-        j = E || o || y,
-        P = null != I,
-        { Component: x, events: Z, play: w } = (0, p.P)(P ? "disable" : "enable");
-    i.useEffect(() => () => w(), [w, P]);
+        P = E || o || y,
+        j = null != I,
+        { Component: x, events: Z, play: w } = (0, p.P)(j ? "disable" : "enable");
+    i.useEffect(() => () => w(), [w, j]);
     let L = (0, r.jsx)(x, {
         size: "md",
         color: "currentColor",
-        className: a()(eG.buttonIcon, { [eG.withText]: !j }),
+        className: a()(eG.buttonIcon, { [eG.withText]: !P }),
     });
     return (0, r.jsx)(m.yRy, {
         targetElementRef: c,
@@ -547,7 +547,7 @@ function eJ(e) {
                                 innerClassName: eG.buttonContents,
                                 wrapperClassName: eG.button,
                                 focusProps: eW,
-                                children: j
+                                children: P
                                     ? L
                                     : (0, r.jsxs)(U.Z, {
                                           align: U.Z.Align.CENTER,
@@ -914,14 +914,14 @@ let e1 = (0, y.Z)(function (e) {
                 ? t
                 : [];
         }, [I, C, T]),
-        [P, Z] = i.useState(!1),
+        [j, Z] = i.useState(!1),
         w = (0, M.Z)("RTCConnection");
     i.useEffect(() => {
         (E || y) && Z(!1);
     }, [E, y, Z]);
     let { analyticsLocations: L } = (0, A.ZP)(x.Z.RTC_PANEL),
         R = (0, S.Z)(null != d ? d : eR.lds, null == c ? void 0 : c.id),
-        D = (0, j.Z)(null == c ? void 0 : c.id);
+        D = (0, P.Z)(null == c ? void 0 : c.id);
     return (0, r.jsx)(A.Gt, {
         value: L,
         children: (0, r.jsxs)("div", {
@@ -951,7 +951,7 @@ let e1 = (0, y.Z)(function (e) {
                         matchAccountText: w,
                     }),
                 ),
-                !P && E && null != d
+                !j && E && null != d
                     ? (0, r.jsxs)("div", {
                           className: eG.viewAsRolesWarning,
                           children: [

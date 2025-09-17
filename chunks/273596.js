@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(415506);
+n.d(t, { Z: () => j }), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -20,7 +20,7 @@ var r = n(951288),
     y = n(188493),
     v = n(294330),
     I = n(981631),
-    C = n(857847);
+    C = n(17923);
 let S = Object.freeze({
         top: 0,
         bottom: 0,
@@ -38,13 +38,13 @@ let S = Object.freeze({
         object: I.qAy.CARD,
         section: I.jXE.DISCOVER_SEARCH,
     },
-    j = s().throttle(f.c6, 1000, {
+    P = s().throttle(f.c6, 1000, {
         leading: !1,
         trailing: !0,
     });
-function P(e) {
+function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: P, searchCategoryId: x } = (0, b.f)({ loadId: t }),
+        { guildIds: s, loading: f, searchResultsQuery: I, loadMore: j, searchCategoryId: x } = (0, b.f)({ loadId: t }),
         A = 0 === s.length && !f,
         Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
@@ -55,9 +55,9 @@ function P(e) {
         B = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && P();
+                if (null != e && !A && !f) 336 * (s.length / M) <= e.height && j();
             },
-            [A, f, s.length, M, P],
+            [A, f, s.length, M, j],
         ),
         H = i.useCallback(
             (e) => {
@@ -76,7 +76,7 @@ function P(e) {
         L((0, m.PM)());
     }, [I]),
         i.useEffect(() => {
-            j({
+            P({
                 loadId: t,
                 searchId: w,
                 query: I,
@@ -214,12 +214,12 @@ function P(e) {
                         let t = null == (e = B.current) ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
-                        t.scrollHeight - n < 240 && P();
+                        t.scrollHeight - n < 240 && j();
                     },
                     100,
                     { leading: !0 },
                 ),
-            [P],
+            [j],
         ),
         ee = R ? S : T;
     return (0, r.jsx)("div", {

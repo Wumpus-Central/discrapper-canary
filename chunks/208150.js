@@ -12,14 +12,14 @@ var i = n(442837),
     m = n(317169),
     g = n(926491),
     p = n(145499),
-    f = n(424218),
-    h = n(267642),
+    h = n(424218),
+    f = n(267642),
     b = n(63063),
     x = n(999382),
     j = n(981631),
     v = n(611480),
     _ = n(388032),
-    O = n(86318);
+    O = n(570735);
 let y = {
         page: j.ZY5.GUILD_SETTINGS,
         section: j.jXE.GUILD_SETTINGS_STICKERS,
@@ -80,7 +80,7 @@ let y = {
             children: [
                 (0, r.jsx)(a.R94, {
                     type: a.geA.DESCRIPTION,
-                    children: _.intl.format(_.t.hxLvi4, { fileSize: (0, f.IC)(v.Ht, { useKibibytes: !0 }) }),
+                    children: _.intl.format(_.t.hxLvi4, { fileSize: (0, h.IC)(v.Ht, { useKibibytes: !0 }) }),
                 }),
                 (0, r.jsx)(a.R94, {
                     type: a.geA.DESCRIPTION,
@@ -94,9 +94,9 @@ let y = {
             i,
             { guild: l, guildStickers: a } = e,
             s = l.premiumTier,
-            o = (0, h.Qi)(a, s),
-            c = (0, h.FZ)(s),
-            u = (0, h.A3)(s),
+            o = (0, f.Qi)(a, s),
+            c = (0, f.FZ)(s),
+            u = (0, f.A3)(s),
             m = a.length;
         return null == c || s === j.Eu4.TIER_3 || o > 0
             ? null
@@ -107,7 +107,7 @@ let y = {
                   : ((t = _.intl.string(_.t.zT9Sxc)),
                     (n = _.intl.formatToPlainString(_.t.YaW9wM, {
                         level: c,
-                        numAdditional: (0, h.ig)(c),
+                        numAdditional: (0, f.ig)(c),
                     })),
                     (i = j.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(d.Z, {
@@ -118,7 +118,7 @@ let y = {
                       page: j.ZY5.GUILD_SETTINGS,
                       section: j.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
-                      objectType: (0, h.ge)(c),
+                      objectType: (0, f.ge)(c),
                   },
               }));
     },

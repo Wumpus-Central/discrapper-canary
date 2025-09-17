@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(715796),
     g = n(411667),
     p = n(434404),
-    f = n(962086),
-    h = n(225675),
+    h = n(962086),
+    f = n(225675),
     b = n(703656),
     x = n(601964),
     j = n(485386),
@@ -26,7 +26,7 @@ var r = n(951288),
     I = n(981631),
     S = n(176505),
     T = n(388032),
-    P = n(68920);
+    P = n(514709);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: w } = (0, y.eD)(t),
@@ -41,8 +41,8 @@ function w(e) {
         let e = j.Z.getEveryoneRole(R);
         p.Z.close();
         let t = { [e.id]: e };
-        (0, f.iD)(R.id, {
-            type: h.z.SERVER_SHOP,
+        (0, h.iD)(R.id, {
+            type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: "guild_products",
             returnToSection: I.pNK.GUILD_PRODUCTS,

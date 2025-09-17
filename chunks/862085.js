@@ -5,19 +5,19 @@ var i = n(755721),
     l = n(481060),
     a = n(556012),
     s = n(388032),
-    o = n(464992);
+    o = n(75765);
 function c(e) {
     let { action: t, triggerType: n, toggled: c, onToggleAction: d } = e,
         u = (e) => () => d(e),
         m = (0, a.c)(t.type, t, n);
     if (null == m) return null;
-    let { headerText: g, descriptionText: p, icon: f } = m;
+    let { headerText: g, descriptionText: p, icon: h } = m;
     return (0, r.jsxs)("div", {
         className: o.actionContainer,
         children: [
             (0, r.jsx)("div", {
                 className: o.actionIconContainer,
-                children: (0, r.jsx)(f, {
+                children: (0, r.jsx)(h, {
                     size: "custom",
                     color: "currentColor",
                     className: o.actionIcon,

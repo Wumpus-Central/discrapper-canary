@@ -19,7 +19,7 @@ var r = n(921738),
     o = n(710845),
     s = n(857192),
     l = n(358085),
-    c = n(981631);
+    c = n(295907);
 function u(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function d(e) {
     return e;
 }
 let f = new o.Z("KeyboardLayoutMapUtils"),
-    _ = (0, l.isLinux)() ? c.HsE : (0, l.isMac)() ? c.REU : (0, l.isWindows)() || __OVERLAY__ ? c.iC$ : i().codes,
+    _ = (0, l.isLinux)() ? c.Hs : (0, l.isMac)() ? c.RE : (0, l.isWindows)() || __OVERLAY__ ? c.iC : i().codes,
     p = new Set([192, 220, 222, 223, 229]),
     h = Object.freeze({
         KeyA: "a",

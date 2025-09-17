@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(186078),
     l = n(137158),
-    a = n(31829);
+    a = n(866234);
 let s = function (e) {
     let {
             formField: t,
@@ -17,7 +17,7 @@ let s = function (e) {
             actionsLocation: g,
             fieldStyle: p,
         } = e,
-        { label: f } = t;
+        { label: h } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
@@ -26,7 +26,7 @@ let s = function (e) {
         onDrop: c,
         onEdit: d,
         onRemove: u,
-        title: f,
+        title: h,
         canRemove: m,
         actionsLocation: g,
         fieldStyle: p,

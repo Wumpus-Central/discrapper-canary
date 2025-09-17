@@ -18,8 +18,8 @@ var r = n(951288),
     m = n(969632),
     g = n(974513),
     p = n(290511),
-    f = n(388032),
-    h = n(54028);
+    h = n(388032),
+    f = n(376933);
 function b(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: a, status: o, onEdit: c, extra: d } = e;
@@ -30,13 +30,13 @@ function b(e) {
                     (0, r.jsx)(s.dz2, {
                         size: "xs",
                         color: "currentColor",
-                        className: h.checkmark,
+                        className: f.checkmark,
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/semibold",
                         color: "status-positive",
-                        className: h.statusText,
-                        children: f.intl.string(f.t.rPnzRU),
+                        className: f.statusText,
+                        children: h.intl.string(h.t.rPnzRU),
                     }),
                 ],
             });
@@ -47,13 +47,13 @@ function b(e) {
                     (0, r.jsx)(s.Mgn, {
                         size: "xs",
                         color: "currentColor",
-                        className: h.warning,
+                        className: f.warning,
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/semibold",
                         color: "status-warning",
-                        className: h.statusText,
-                        children: f.intl.string(f.t["yTa+dn"]),
+                        className: f.statusText,
+                        children: h.intl.string(h.t["yTa+dn"]),
                     }),
                 ],
             });
@@ -64,29 +64,29 @@ function b(e) {
                     (0, r.jsx)(s.Mgn, {
                         size: "xs",
                         color: "currentColor",
-                        className: h.danger,
+                        className: f.danger,
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/semibold",
                         color: "status-danger",
-                        className: h.statusText,
-                        children: f.intl.string(f.t.EkokLy),
+                        className: f.statusText,
+                        children: h.intl.string(h.t.EkokLy),
                     }),
                 ],
             });
     }
     return (0, r.jsxs)("div", {
-        className: h.onboardingStepContainer,
+        className: f.onboardingStepContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: h.leftContainer,
+                className: f.leftContainer,
                 children: [
                     (0, r.jsx)("div", {
-                        className: h.iconContainer,
+                        className: f.iconContainer,
                         children: l,
                     }),
                     (0, r.jsxs)("div", {
-                        className: h.onboardingStepText,
+                        className: f.onboardingStepText,
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 variant: "heading-md/semibold",
@@ -102,18 +102,18 @@ function b(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: h.rightContainer,
+                className: f.rightContainer,
                 children: [
                     t,
                     d,
                     (0, r.jsx)("div", {
-                        className: h.cta,
+                        className: f.cta,
                         children: a
                             ? (0, r.jsx)(s.zxk, {
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: c,
-                                  text: f.intl.string(f.t.bt75u7),
+                                  text: h.intl.string(h.t.bt75u7),
                               })
                             : (0, r.jsx)(s.zxk, {
                                   icon: s.ZSh,
@@ -121,7 +121,7 @@ function b(e) {
                                   size: "sm",
                                   variant: "secondary",
                                   onClick: c,
-                                  text: f.intl.string(f.t["0GWElZ"]),
+                                  text: h.intl.string(h.t["0GWElZ"]),
                               }),
                     }),
                 ],
@@ -151,23 +151,23 @@ function v(e) {
         O = (0, g.O4)(t),
         y = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         C = y
-            ? f.intl.formatToPlainString(f.t.nHwnLC, {
+            ? h.intl.formatToPlainString(h.t.nHwnLC, {
                   numDefaultChannels: v,
                   numFromQuestions: u - v,
               })
             : _
-              ? f.intl.formatToPlainString(f.t.HxEwSk, { numDefaultChannels: v })
-              : f.intl.formatToPlainString(f.t.ey3uVV, {
+              ? h.intl.formatToPlainString(h.t.HxEwSk, { numDefaultChannels: v })
+              : h.intl.formatToPlainString(h.t.ey3uVV, {
                     numDefaultChannels: p.md,
                     numChattableChannels: p.X,
                 });
     return (0, r.jsx)(b, {
-        title: y ? f.intl.string(f.t.YZookZ) : f.intl.string(f.t["4GSygo"]),
+        title: y ? h.intl.string(h.t.YZookZ) : h.intl.string(h.t["4GSygo"]),
         description: C,
         icon: (0, r.jsx)(s.VL1, {
             size: "md",
             color: "currentColor",
-            className: h.channelIcon,
+            className: f.channelIcon,
         }),
         hasStarted: v > 0 || y,
         status: _ || O ? (a ? "none" : "good") : "required",
@@ -189,8 +189,8 @@ function _(e) {
     return (
         _ && (j >= 85 && !i ? (O = "good") : j < 85 && (O = "warning")),
         (0, r.jsx)(b, {
-            title: v ? f.intl.string(f.t.AGjtFh) : f.intl.string(f.t.dqCzoa),
-            description: f.intl.format(f.t.iuNisr, {
+            title: v ? h.intl.string(h.t.AGjtFh) : h.intl.string(h.t.dqCzoa),
+            description: h.intl.format(h.t.iuNisr, {
                 numChannels: p,
                 numTotalChannels: x,
                 channelsHook: (e, t) =>
@@ -206,7 +206,7 @@ function _(e) {
             icon: (0, r.jsx)(s.iFz, {
                 size: "md",
                 color: "currentColor",
-                className: h.channelIcon,
+                className: f.channelIcon,
             }),
             hasStarted: _,
             status: O,
@@ -226,14 +226,14 @@ function O(e) {
         _ = !(0, d.av)(g),
         O = "none";
     _ && (x && !c ? (O = "good") : x || (O = "required"));
-    let y = f.intl.string(f.t.GMOwOD);
-    x ? _ || (y = f.intl.string(f.t.wHOoyM)) : (y = f.intl.string(f.t.wXFbgY));
+    let y = h.intl.string(h.t.GMOwOD);
+    x ? _ || (y = h.intl.string(h.t.wHOoyM)) : (y = h.intl.string(h.t.wXFbgY));
     let C = null;
     return (
         _ &&
             p &&
             (C = (0, r.jsx)("div", {
-                className: h.inlineSwitch,
+                className: f.inlineSwitch,
                 children: (0, r.jsx)(a.T2, {
                     checked: j,
                     onChange: v,
@@ -241,12 +241,12 @@ function O(e) {
                 }),
             })),
         (0, r.jsx)(b, {
-            title: f.intl.string(f.t.mRHqsr),
+            title: h.intl.string(h.t.mRHqsr),
             description: y,
             icon: (0, r.jsx)(s.Vy8, {
                 size: "md",
                 color: "currentColor",
-                className: h.channelIcon,
+                className: f.channelIcon,
             }),
             hasStarted: _,
             status: O,

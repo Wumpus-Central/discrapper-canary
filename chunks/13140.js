@@ -21,7 +21,7 @@ var r = n(921738),
     l = n(823379),
     c = n(358085),
     u = n(378799),
-    d = n(981631);
+    d = n(295907);
 function f(e, t, n) {
     return (
         t in e
@@ -74,11 +74,11 @@ function h(e, t) {
         e
     );
 }
-let m = __OVERLAY__ ? d.iC$ : (0, c.isLinux)() ? d.HsE : (0, c.isMac)() ? d.REU : (0, c.isWindows)() ? d.iC$ : {},
-    g = o().invert(d.HsE);
+let m = __OVERLAY__ ? d.iC : (0, c.isLinux)() ? d.Hs : (0, c.isMac)() ? d.RE : (0, c.isWindows)() ? d.iC : {},
+    g = o().invert(d.Hs);
 (g["223"] = "`"), Object.freeze(g);
-let E = Object.freeze(o().invert(d.REU)),
-    b = o().invert(d.iC$);
+let E = Object.freeze(o().invert(d.RE)),
+    b = o().invert(d.iC);
 (b["223"] = "`"), Object.freeze(b);
 let y = o().invert(null != m ? m : {});
 function O(e) {
@@ -86,10 +86,10 @@ function O(e) {
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T();
-    return t === d.CgE.BROWSER ? i()(e) : m[e];
+    return t === d.Cg.BROWSER ? i()(e) : m[e];
 }
 function I(e, t, n) {
-    if ((null != n && n !== d.CgE.WINDOWS) || !u.Dz.has(e)) return t;
+    if ((null != n && n !== d.Cg.WINDOWS) || !u.Dz.has(e)) return t;
     let r = (0, u.pz)().get("Backquote");
     if (t === r) return O(t);
     let i = {
@@ -102,29 +102,29 @@ function I(e, t, n) {
 }
 function T() {
     return (0, c.isLinux)()
-        ? d.CgE.LINUX
+        ? d.Cg.LINUX
         : (0, c.isMac)()
-          ? d.CgE.MACOS
+          ? d.Cg.MACOS
           : (0, c.isWindows)()
-            ? d.CgE.WINDOWS
+            ? d.Cg.WINDOWS
             : __OVERLAY__
-              ? d.CgE.WINDOWS
-              : d.CgE.BROWSER;
+              ? d.Cg.WINDOWS
+              : d.Cg.BROWSER;
 }
 function S(e) {
     let t,
         [, n, r] = e;
     switch (r) {
-        case d.CgE.LINUX:
+        case d.Cg.LINUX:
             t = g["" + n];
             break;
-        case d.CgE.MACOS:
+        case d.Cg.MACOS:
             t = E["" + n];
             break;
-        case d.CgE.WINDOWS:
+        case d.Cg.WINDOWS:
             t = b["" + n];
             break;
-        case d.CgE.BROWSER: {
+        case d.Cg.BROWSER: {
             let e = i()(n);
             if (null == e) return null;
             t = N(e);
@@ -144,7 +144,7 @@ function A(e) {
 }
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Mo.KEYBOARD_KEY,
         r = R(e, t, n);
     if (null != r) return r;
     let i = (0, u.T_)(e);
@@ -157,29 +157,29 @@ function N(e) {
 function R(e) {
     let t,
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
+        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Mo.KEYBOARD_KEY;
     if (null == e) return null;
-    let a = r === d.MoX.KEYBOARD_KEY || r === d.MoX.KEYBOARD_MODIFIER_KEY;
+    let a = r === d.Mo.KEYBOARD_KEY || r === d.Mo.KEYBOARD_MODIFIER_KEY;
     switch (!0) {
-        case a && n === d.CgE.LINUX:
-            t = d.HsE[e];
+        case a && n === d.Cg.LINUX:
+            t = d.Hs[e];
             break;
-        case a && n === d.CgE.MACOS:
-            t = d.REU[e];
+        case a && n === d.Cg.MACOS:
+            t = d.RE[e];
             break;
-        case a && n === d.CgE.WINDOWS:
-            t = "+" === e ? d.iC$.plus : d.iC$[e];
+        case a && n === d.Cg.WINDOWS:
+            t = "+" === e ? d.iC.plus : d.iC[e];
             break;
-        case a && n === d.CgE.BROWSER:
+        case a && n === d.Cg.BROWSER:
             t = i()(N(e));
             break;
         case a:
             t = m[e];
             break;
-        case r === d.MoX.MOUSE_BUTTON:
+        case r === d.Mo.MOUSE_BUTTON:
             t = parseInt(e.replace("MOUSE", ""), 10);
             break;
-        case r === d.MoX.GAMEPAD_BUTTON:
+        case r === d.Mo.GAMEPAD_BUTTON:
             t = parseInt(e.replace("GAMEPAD", ""), 10);
             break;
         default:
@@ -245,14 +245,14 @@ function M(e) {
               if (null == r) return e.push(h(_({}, i), { combo: n })), e;
               if (x.test(r) && L(r)) return (t[j(r)] = !0), e.map((e) => ((e[j(r)] = !0), e));
               {
-                  let t = C(r, d.CgE.BROWSER);
+                  let t = C(r, d.Cg.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
 }
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T(),
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.MoX.KEYBOARD_KEY;
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Mo.KEYBOARD_KEY;
     return e
         .replace(/numpad plus/i, "")
         .replace(/NUMPAD \+/i, "numpad plus")
@@ -270,13 +270,13 @@ function U(e) {
             .map((e) => {
                 let [t, n, r] = e,
                     i = "number" == typeof r ? r : T();
-                if (t === d.MoX.KEYBOARD_KEY || t === d.MoX.KEYBOARD_MODIFIER_KEY) {
+                if (t === d.Mo.KEYBOARD_KEY || t === d.Mo.KEYBOARD_MODIFIER_KEY) {
                     var a;
                     return null != (a = A(null != i ? [t, n, i] : [t, n])) ? a : "UNK".concat(n);
                 }
-                return t === d.MoX.MOUSE_BUTTON
+                return t === d.Mo.MOUSE_BUTTON
                     ? "mouse".concat(n)
-                    : t === d.MoX.GAMEPAD_BUTTON
+                    : t === d.Mo.GAMEPAD_BUTTON
                       ? "gamepad".concat(n)
                       : "dev".concat(t, ",").concat(n);
             })

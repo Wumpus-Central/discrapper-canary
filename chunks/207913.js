@@ -17,8 +17,8 @@ var r = n(951288),
     O = n(739566),
     y = n(930282),
     _ = n(318713),
-    v = n(47930),
-    j = n(123145),
+    j = n(47930),
+    v = n(123145),
     x = n(25015),
     C = n(178480),
     E = n(518950),
@@ -34,9 +34,9 @@ var r = n(951288),
     D = n(987889),
     M = n(586694),
     L = n(981631),
-    k = n(677642),
+    k = n(997998),
     U = n(388032),
-    G = n(361584);
+    G = n(66449);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -93,7 +93,7 @@ function F(e) {
             animateOnHover: !0,
         }),
         S = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == b,
-        I = (0, v.x)({
+        I = (0, j.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -103,7 +103,7 @@ function F(e) {
         w = (0, r.jsx)("div", {
             className: G.usernameTagContainer,
             inert: !0,
-            children: (0, r.jsx)(j.Z, {
+            children: (0, r.jsx)(v.Z, {
                 channel: n,
                 message: t,
                 hideGuildTag: !0,
@@ -326,14 +326,14 @@ function W(e) {
                             ? (O = u.SlE)
                             : h && (O = u.gj8);
                 let _ = !0,
-                    v = null;
+                    j = null;
                 if (e)
-                    if (c) v = U.intl.string(U.t["9ddYKi"]);
+                    if (c) j = U.intl.string(U.t["9ddYKi"]);
                     else if (p) {
-                        var j;
-                        (_ = !1), (v = null == (j = t.poll) ? void 0 : j.question.text);
+                        var v;
+                        (_ = !1), (j = null == (v = t.poll) ? void 0 : v.question.text);
                     } else
-                        v = f
+                        j = f
                             ? U.intl.string(U.t.sad2PD)
                             : i
                               ? U.intl.string(U.t.p0oZm5)
@@ -350,7 +350,7 @@ function W(e) {
                                         : U.intl.string(U.t.sDqZHB);
                 else
                     (_ = !1),
-                        (v = (0, r.jsx)(y.ZP, {
+                        (j = (0, r.jsx)(y.ZP, {
                             content: a,
                             message: t,
                             compact: !1,
@@ -361,16 +361,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (v = (0, r.jsx)("div", {
+                        (j = (0, r.jsx)("div", {
                             className: o()(G.message, {
                                 [G.unread]: n,
                                 [G.selected]: l,
                                 [G.descriptionMessage]: _,
                             }),
-                            children: v,
+                            children: j,
                         })),
                     {
-                        previewContent: v,
+                        previewContent: j,
                         Icon: O,
                     }
                 );

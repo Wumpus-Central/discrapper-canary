@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(108427),
     N = n(314897),
     O = n(896797),
-    S = n(701190),
-    y = n(626135),
+    y = n(701190),
+    S = n(626135),
     C = n(630388),
     A = n(63063),
     T = n(782605),
@@ -36,7 +36,7 @@ var r = n(951288),
     k = n(701476),
     M = n(436620),
     B = n(388032),
-    G = n(197571);
+    G = n(10198);
 function F(e, t, n) {
     return (
         t in e
@@ -61,7 +61,7 @@ async function K(e) {
 class H extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((y.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)("invite"), !M.KO)) {
+        if ((S.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)("invite"), !M.KO)) {
             let e = this.getInviteKey();
             Z.Z.launch("discord://" + L.Z5c.INVITE(e), () => void 0);
         }
@@ -133,7 +133,7 @@ class H extends i.PureComponent {
                       invite_code: l,
                   }
                 : { invite_code: l };
-        y.default.track(
+        S.default.track(
             e,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -364,11 +364,11 @@ class H extends i.PureComponent {
             });
     }
 }
-let W = c.ZP.connectStores([S.Z, O.Z, N.default, x.Z, p.Z], (e) => {
+let W = c.ZP.connectStores([y.Z, O.Z, N.default, x.Z, p.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = S.Z.getInvite(n)) ? t : {},
+        invite: null != (t = y.Z.getInvite(n)) ? t : {},
         nativeAppState: x.Z.getState(n),
         authenticated: N.default.isAuthenticated(),
         defaultRoute: O.Z.defaultRoute,

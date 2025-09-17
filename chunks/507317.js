@@ -11,10 +11,10 @@ var r = n(951288),
     m = n(434404),
     g = n(981631),
     p = n(30513),
-    f = n(486324),
-    h = n(200299),
+    h = n(486324),
+    f = n(200299),
     b = n(388032),
-    x = n(197530);
+    x = n(359449);
 let j = function (e) {
     let { guild: t } = e,
         j = t.features.has(g.oNc.BANNER),
@@ -22,7 +22,7 @@ let j = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void m.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -60,7 +60,7 @@ let j = function (e) {
                                         let { imageUri: n } = e;
                                         return m.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: f.pC.HOME_HEADER,
+                                    uploadType: h.pC.HOME_HEADER,
                                 },
                                 n,
                             ),
@@ -107,7 +107,7 @@ let j = function (e) {
             onChange: v,
             hint: b.intl.string(b.t.NyXznp),
             enabled: j,
-            maxFileSizeBytes: h.B,
+            maxFileSizeBytes: f.B,
         });
     return j
         ? (0, r.jsxs)(r.Fragment, {
@@ -143,7 +143,7 @@ let j = function (e) {
                                       className: x.uploadButton,
                                       children: (0, r.jsx)(d.Z, {
                                           onChange: v,
-                                          maxFileSizeBytes: h.B,
+                                          maxFileSizeBytes: f.B,
                                           text: b.intl.string(b.t.yG2pUl),
                                           size: "md",
                                           variant: "primary",

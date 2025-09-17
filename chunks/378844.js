@@ -17,7 +17,7 @@ var l = n(442837),
     h = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(36973);
+    b = n(434652);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,8 +48,8 @@ let _ = (e) => {
     let { type: t, guildId: r, closePopout: y } = e,
         _ = (0, u.Dt)(),
         {
-            notClaimed: v,
-            notEmailVerified: j,
+            notClaimed: j,
+            notEmailVerified: v,
             notPhoneVerified: x,
             newAccount: C,
             newMember: E,
@@ -58,11 +58,11 @@ let _ = (e) => {
         P = null,
         I = null;
     return (0 === t &&
-        (v
+        (j
             ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
             : x
               ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
-              : j
+              : v
                 ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
                 : E
                   ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
@@ -105,7 +105,7 @@ let _ = (e) => {
                                                 variant: "primary",
                                                 text: I,
                                                 onClick: () => {
-                                                    v
+                                                    j
                                                         ? c.j()
                                                         : x
                                                           ? (0, a.ZDy)(
@@ -121,7 +121,7 @@ let _ = (e) => {
                                                                 },
                                                                 { modalKey: g.M },
                                                             )
-                                                          : j &&
+                                                          : v &&
                                                             (s.Z.verifyResend(),
                                                             (0, a.h7j)((e) => {
                                                                 var t, n, r;
@@ -176,7 +176,7 @@ let _ = (e) => {
                                             }),
                                         })
                                       : null,
-                                  v || x || j
+                                  j || x || v
                                       ? (0, i.jsx)(o.zx, {
                                             onClick: y,
                                             look: o.zx.Looks.BLANK,

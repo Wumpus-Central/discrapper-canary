@@ -17,9 +17,9 @@ var r = n(951288),
     O = n(55935),
     y = n(655354),
     _ = n(809780),
-    v = n(981631),
-    j = n(388032),
-    x = n(557047);
+    j = n(981631),
+    v = n(388032),
+    x = n(39620);
 let C = {
     left: 4,
     right: -12,
@@ -117,7 +117,7 @@ function S(e) {
         C = (0, p.P1)(l),
         S = !1,
         P = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
-        I = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
+        I = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(j.xW$.SPAMMER)) && n,
         N = [];
     if (!i.collapsed) {
         let e = null,
@@ -164,7 +164,7 @@ function S(e) {
                             color: s.zx.Colors.LINK,
                             look: s.zx.Looks.LINK,
                             onClick: (e) => a(e, n[n.length - 1].id),
-                            children: [j.intl.string(j.t["9OB9ho"]), " \u203A"],
+                            children: [v.intl.string(v.t["9OB9ho"]), " \u203A"],
                         },
                         "view-all",
                     ),

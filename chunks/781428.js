@@ -26,8 +26,8 @@ var r,
     I = n(86779),
     N = n(726745),
     O = n(913583),
-    S = n(144114),
-    y = n(541692),
+    y = n(144114),
+    S = n(541692),
     C = n(952802),
     A = n(703656),
     T = n(648358),
@@ -46,8 +46,8 @@ var r,
     z = n(981631),
     V = n(260539),
     K = n(388032),
-    H = n(132825),
-    W = n(197571);
+    H = n(977150),
+    W = n(10198);
 function q(e, t, n) {
     return (
         t in e
@@ -673,7 +673,7 @@ class Q extends (r = l.PureComponent) {
                 let t = this.getFullLogin();
                 this.setState({ errors: {} });
                 try {
-                    let { token: n } = await S.Z.verifyPhone(t, e, !1);
+                    let { token: n } = await y.Z.verifyPhone(t, e, !1);
                     await p.Z.authorizeIPAddress(n), this.handleLogin();
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
@@ -683,7 +683,7 @@ class Q extends (r = l.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await S.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await y.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(z.Z5c.RESET, {
                         search: (0, o.stringify)({
                             token: n,
@@ -741,7 +741,7 @@ class Q extends (r = l.PureComponent) {
                 }
             }),
             q(this, "handleResendCode", () => {
-                S.Z.resendCode(this.getFullLogin());
+                y.Z.resendCode(this.getFullLogin());
             }),
             q(this, "handleReset", (e) => {
                 null != e && e.preventDefault(),
@@ -807,7 +807,7 @@ class Q extends (r = l.PureComponent) {
 q(Q, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
 let $ = function (e) {
     (0, T.M)();
-    let t = (0, u.cj)([w.Z, L.Z, R.default, N.Z, y.Z], () => ({
+    let t = (0, u.cj)([w.Z, L.Z, R.default, N.Z, S.Z], () => ({
         authenticated: R.default.isAuthenticated(),
         handoffAvailable: w.Z.isHandoffAvailable(),
         user: w.Z.user,
@@ -815,7 +815,7 @@ let $ = function (e) {
         mfaTicket: R.default.getMFATicket(),
         mfaMethods: R.default.getMFAMethods(),
         defaultRoute: L.Z.defaultRoute,
-        country: y.Z.getCountryCode(),
+        country: S.Z.getCountryCode(),
         hasLoggedInAccounts: N.Z.getHasLoggedInAccounts(),
     }));
     return (0, i.jsx)(Q, Y({}, e, t));

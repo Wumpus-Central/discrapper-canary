@@ -8,11 +8,11 @@ var r = n(951288),
     c = n(639777),
     d = n(744993),
     u = n(693587),
-    p = n(462923),
-    m = n(331500),
-    b = n(401561),
-    g = n(388032),
-    f = n(828843);
+    m = n(462923),
+    p = n(331500),
+    g = n(440589),
+    b = n(388032),
+    f = n(50803);
 function v(e) {
     let { guildId: t } = e;
     i.useEffect(() => {
@@ -35,7 +35,7 @@ function v(e) {
                         icon: a.$Eu,
                         "aria-label": "",
                     }),
-                    (0, r.jsx)(l.ZP.Title, { children: g.intl.string(b.default.lH9Dio) }),
+                    (0, r.jsx)(l.ZP.Title, { children: b.intl.string(g.default.lH9Dio) }),
                 ],
             }),
             (0, r.jsxs)("div", {
@@ -46,7 +46,7 @@ function v(e) {
                               className: f.gameContainer,
                               children: y.map((e, n) =>
                                   (0, r.jsx)(
-                                      p.Z,
+                                      m.Z,
                                       {
                                           guildId: t,
                                           instance: e,
@@ -59,7 +59,7 @@ function v(e) {
                               className: f.spinnerContainer,
                               children: (0, r.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
                           }),
-                    n && (0, r.jsx)(m.Z, { guildId: t }),
+                    n && (0, r.jsx)(p.Z, { guildId: t }),
                 ],
             }),
         ],

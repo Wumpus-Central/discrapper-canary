@@ -9,15 +9,15 @@ var n = r(951288),
     u = r(607070),
     d = r(745510),
     m = r(899007),
-    f = r(867176),
-    g = r(51144),
+    g = r(867176),
+    f = r(51144),
     E = r(346585),
     p = r(81259),
-    O = r(119848),
-    y = r(801461),
+    y = r(119848),
+    O = r(801461),
     h = r(671955),
     b = r(388032),
-    S = r(631936),
+    S = r(38579),
     _ = r(733469);
 let v = i.forwardRef(function (e, t) {
     let {
@@ -71,8 +71,8 @@ let v = i.forwardRef(function (e, t) {
     return (
         i.useEffect(() => {
             !U &&
-                I === y.Wq.PREVIEW &&
-                r.username.includes(y.nA) &&
+                I === O.Wq.PREVIEW &&
+                r.username.includes(O.nA) &&
                 (G(
                     window.innerWidth / 2 + 150,
                     0,
@@ -111,12 +111,12 @@ let v = i.forwardRef(function (e, t) {
                 ));
         }, [G, I, r, U]),
         (0, n.jsxs)("div", {
-            className: a()(S.userCardContainer, { [S.shinyCard]: I === y.Wq.PREVIEW }),
+            className: a()(S.userCardContainer, { [S.shinyCard]: I === O.Wq.PREVIEW }),
             children: [
                 (0, n.jsxs)("div", {
                     className: S.profileCard,
                     children: [
-                        (0, n.jsx)(f.Z, {
+                        (0, n.jsx)(g.Z, {
                             user: k,
                             displayProfile: j,
                             themeType: h.l.SIDEBAR,
@@ -127,7 +127,7 @@ let v = i.forwardRef(function (e, t) {
                             themeType: h.l.SIDEBAR,
                             className: S.avatar,
                         }),
-                        I === y.Wq.PREVIEW &&
+                        I === O.Wq.PREVIEW &&
                             null != W &&
                             (0, n.jsx)("div", {
                                 className: S.legacyUsernameBadgeContainer,
@@ -196,7 +196,7 @@ let v = i.forwardRef(function (e, t) {
                             }),
                     ],
                 }),
-                I !== y.Wq.PREVIEW &&
+                I !== O.Wq.PREVIEW &&
                     (0, n.jsxs)(s.animated.div, {
                         style: {
                             opacity: D.opacity,
@@ -207,23 +207,23 @@ let v = i.forwardRef(function (e, t) {
                             (0, n.jsxs)(c.Kqy, {
                                 gap: 16,
                                 children: [
-                                    I === y.Wq.EDIT_DISPLAY_NAME &&
+                                    I === O.Wq.EDIT_DISPLAY_NAME &&
                                         (0, n.jsx)(c.oil, {
                                             label: b.intl.string(b.t["9AjdkJ"]),
                                             value: null != w ? w : "",
-                                            placeholder: g.ZP.getName(r),
-                                            maxLength: y.hy,
+                                            placeholder: f.ZP.getName(r),
+                                            maxLength: O.hy,
                                             onChange: (e) => N({ globalName: e }),
                                             onFocus: x,
                                             inputRef: L,
                                         }),
-                                    (I === y.Wq.EDIT_USERNAME || I === y.Wq.SUGGESTION) &&
+                                    (I === O.Wq.EDIT_USERNAME || I === O.Wq.SUGGESTION) &&
                                         (0, n.jsx)(c.oil, {
                                             label: b.intl.string(b.t.IEpCBQ),
                                             leading: "@",
                                             value: null != R ? R : "",
                                             placeholder: r.username,
-                                            maxLength: y.hy,
+                                            maxLength: O.hy,
                                             onChange: (e) => N({ username: e.replace("@", "") }),
                                             onFocus: T,
                                             inputRef: M,
@@ -239,7 +239,7 @@ let v = i.forwardRef(function (e, t) {
                                             children: o,
                                         });
                                     if (null != P) {
-                                        if (I !== y.Wq.SUGGESTION)
+                                        if (I !== O.Wq.SUGGESTION)
                                             return (0, n.jsx)(c.Text, {
                                                 variant: "text-sm/normal",
                                                 children: P,
@@ -250,8 +250,8 @@ let v = i.forwardRef(function (e, t) {
                                                 children: P,
                                             });
                                     }
-                                    return null == P && null == o && (I === y.Wq.EDIT_USERNAME || I === y.Wq.SUGGESTION)
-                                        ? (0, n.jsx)(O.Z, {
+                                    return null == P && null == o && (I === O.Wq.EDIT_USERNAME || I === O.Wq.SUGGESTION)
+                                        ? (0, n.jsx)(y.Z, {
                                               username: R,
                                               oneClickFlow: A,
                                           })
@@ -260,14 +260,14 @@ let v = i.forwardRef(function (e, t) {
                             }),
                         ],
                     }),
-                I === y.Wq.PREVIEW &&
+                I === O.Wq.PREVIEW &&
                     (0, n.jsxs)("div", {
                         className: S.userCard,
                         children: [
                             (0, n.jsx)(c.X6q, {
                                 color: "header-primary",
                                 variant: "heading-xl/bold",
-                                children: g.ZP.getName(r),
+                                children: f.ZP.getName(r),
                             }),
                             (0, n.jsx)(c.X6q, {
                                 color: "text-default",

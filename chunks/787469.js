@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -7,33 +7,33 @@ var r = n(951288),
     o = n(481060),
     u = n(893966),
     c = n(472596),
-    d = n(285173),
-    E = n(485386),
+    E = n(285173),
+    d = n(485386),
     _ = n(430824),
     A = n(496675),
-    m = n(776767),
-    T = n(981631),
+    T = n(776767),
+    m = n(981631),
     I = n(388032),
-    g = n(87819);
-function f(e) {
+    g = n(152540);
+function h(e) {
     let { member: t } = e,
         n = (0, s.e7)([_.Z], () => _.Z.getGuild(t.guildId)),
-        i = (0, s.e7)([E.Z], () => E.Z.getSortedRoles(t.guildId)),
-        f = l.useMemo(
+        i = (0, s.e7)([d.Z], () => d.Z.getSortedRoles(t.guildId)),
+        h = l.useMemo(
             () => i.filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id)),
             [t.roles, t.highestRoleId, i],
         ),
-        h = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        N = (0, c.zq)(h),
-        O = (0, c.vN)(t),
-        p = (0, s.e7)([A.Z], () => A.Z.can(T.Plq.MANAGE_ROLES, n), [n]);
+        N = (0, s.e7)([u.Z], () => u.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        O = (0, c.zq)(N),
+        f = (0, c.vN)(t),
+        p = (0, s.e7)([A.Z], () => A.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, r.jsx)(o.xJW, {
               title: I.intl.string(I.t.LPJmLy),
               titleClassName: g.infoTitle,
-              children: (0, r.jsx)(m.WM, {
-                  children: (0, r.jsx)(m._2, {
+              children: (0, r.jsx)(T.WM, {
+                  children: (0, r.jsx)(T._2, {
                       description:
                           t.roles.length > 0 || p
                               ? (0, r.jsxs)("div", {
@@ -48,17 +48,17 @@ function f(e) {
                                                 return (0, r.jsx)(o.P3F, {
                                                     onMouseEnter: n,
                                                     onMouseLeave: l,
-                                                    children: (0, r.jsx)(d.Z, {
+                                                    children: (0, r.jsx)(E.Z, {
                                                         className: a()(g.roleTooltipItem, g.highestRole),
-                                                        role: N,
+                                                        role: O,
                                                         guildId: t.guildId,
                                                     }),
                                                 });
                                             },
                                         }),
-                                        f.map((e) =>
+                                        h.map((e) =>
                                             (0, r.jsx)(
-                                                d.Z,
+                                                E.Z,
                                                 {
                                                     className: g.roleTooltipItem,
                                                     role: e,
@@ -76,7 +76,7 @@ function f(e) {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, r.jsx)(o.P3F, {
                                                         className: g.addRoleContainer,
-                                                        onClick: O,
+                                                        onClick: f,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         children: (0, r.jsx)(o.oFk, {

@@ -1,36 +1,36 @@
 t.d(n, { Z: () => d }), t(953529);
-var i = t(951288),
-    r = t(647438),
+var r = t(951288),
+    i = t(647438),
     a = t(793030),
     l = t(183369),
-    o = t(401561),
+    o = t(440589),
     s = t(388032),
-    c = t(20426);
+    c = t(233019);
 function d() {
     let { currentGame: e, planId: n } = (0, l.aj)();
     if (null == e) return null;
     let t = null == e ? void 0 : e.plans.find((e) => e.id === n);
-    return (0, i.jsx)("div", {
+    return (0, r.jsx)("div", {
         className: c.container,
-        children: (0, i.jsxs)("div", {
+        children: (0, r.jsxs)("div", {
             className: c.content,
             children: [
-                (0, i.jsxs)("div", {
+                (0, r.jsxs)("div", {
                     className: c.headerContainer,
                     children: [
-                        (0, i.jsx)("img", {
+                        (0, r.jsx)("img", {
                             className: c.image,
                             alt: e.name,
                         }),
-                        (0, i.jsxs)("div", {
+                        (0, r.jsxs)("div", {
                             className: c.header,
                             children: [
-                                (0, i.jsx)(a.X6q, {
+                                (0, r.jsx)(a.X6q, {
                                     variant: "heading-lg/semibold",
                                     color: "text-primary",
                                     children: e.name,
                                 }),
-                                (0, i.jsx)(a.xvT, {
+                                (0, r.jsx)(a.xvT, {
                                     variant: "text-md/medium",
                                     color: "text-secondary",
                                     children: null == t ? void 0 : t.name,
@@ -40,23 +40,23 @@ function d() {
                     ],
                 }),
                 null != t &&
-                    (0, i.jsx)("div", {
+                    (0, r.jsx)("div", {
                         className: c.statsGrid,
                         children: t.specifications.map((e, n) => {
                             var l;
-                            return (0, i.jsxs)(
-                                r.Fragment,
+                            return (0, r.jsxs)(
+                                i.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)("div", {
+                                        (0, r.jsxs)("div", {
                                             className: c.statItem,
                                             children: [
-                                                (0, i.jsx)(a.X6q, {
+                                                (0, r.jsx)(a.X6q, {
                                                     variant: "heading-sm/semibold",
                                                     color: "text-primary",
                                                     children: e.title,
                                                 }),
-                                                (0, i.jsx)(a.xvT, {
+                                                (0, r.jsx)(a.xvT, {
                                                     variant: "text-sm/medium",
                                                     color: "text-tertiary",
                                                     children: e.description,
@@ -65,16 +65,16 @@ function d() {
                                         }),
                                         n !==
                                             (null != (l = null == t ? void 0 : t.specifications.length) ? l : 0) - 1 &&
-                                            (0, i.jsx)("div", { className: c.divider }),
+                                            (0, r.jsx)("div", { className: c.divider }),
                                     ],
                                 },
                                 n,
                             );
                         }),
                     }),
-                (0, i.jsx)("div", {
+                (0, r.jsx)("div", {
                     className: c.poweredBy,
-                    children: (0, i.jsx)(a.xvT, {
+                    children: (0, r.jsx)(a.xvT, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         children: s.intl.format(o.default.JWpue3, { developer: e.developer }),

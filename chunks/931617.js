@@ -15,7 +15,7 @@ var i = t(442837),
     f = t(823379),
     p = t(981631),
     m = t(388032),
-    O = t(96541);
+    O = t(390099);
 function h(e, n, t) {
     var i, a;
     return (0, l.jsxs)("div", {
@@ -45,12 +45,12 @@ function j(e, n) {
         P = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n)),
         v = (0, i.e7)([g.Z], () => g.Z.getSortedRoles(n)),
         x = (0, i.e7)([a.Z], () => a.Z.roleStyle),
-        y = (0, o.sE)(n, {
+        _ = (0, o.sE)(n, {
             location: O,
             targetUserId: e,
         }),
         {
-            userRoles: _,
+            userRoles: y,
             isGuildMember: N,
             canManageRoles: E,
         } = (0, i.cj)([d.ZP, b.Z], () => {
@@ -62,14 +62,14 @@ function j(e, n) {
             };
         }, [e, n, P]),
         C = (0, s.ZP)(n, e);
-    if (__OVERLAY__ || null == _ || null == P || !N) return null;
+    if (__OVERLAY__ || null == y || null == P || !N) return null;
     let I = b.Z.getHighestRole(P),
         S =
             E && !j
                 ? v.map((t) => {
                       if ((0, c.fI)(t)) return null;
                       let i = t.managed || !b.Z.isRoleHigher(P, I, t),
-                          a = _.includes(t.id);
+                          a = y.includes(t.id);
                       return i && !a
                           ? null
                           : (0, l.jsx)(
@@ -79,17 +79,17 @@ function j(e, n) {
                                     label: () => h(t, x, C),
                                     disabled: i,
                                     action: () => {
-                                        _.includes(t.id)
+                                        y.includes(t.id)
                                             ? (u.Z.updateMemberRoles(
                                                   n,
                                                   e,
-                                                  _.filter((e) => e !== t.id),
+                                                  y.filter((e) => e !== t.id),
                                                   [],
                                                   [t.id],
                                               ),
-                                              y(o.jQ.REMOVE_ROLE))
-                                            : (u.Z.updateMemberRoles(n, e, _.concat([t.id]), [t.id], []),
-                                              y(o.jQ.ADD_ROLE));
+                                              _(o.jQ.REMOVE_ROLE))
+                                            : (u.Z.updateMemberRoles(n, e, y.concat([t.id]), [t.id], []),
+                                              _(o.jQ.ADD_ROLE));
                                     },
                                     checked: a,
                                 },
@@ -97,7 +97,7 @@ function j(e, n) {
                             );
                   })
                 : v.map((e) =>
-                      (0, c.fI)(e) || !_.includes(e.id)
+                      (0, c.fI)(e) || !y.includes(e.id)
                           ? null
                           : (0, l.jsx)(
                                 r.sNh,

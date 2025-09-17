@@ -22,14 +22,14 @@ var r = n(951288),
     I = n(781428),
     N = n(163671),
     O = n(423527),
-    S = n(981631),
-    y = n(260539),
+    y = n(981631),
+    S = n(260539),
     C = n(701476),
     A = n(630724),
     T = n(436620),
     Z = n(388032),
-    P = n(160033),
-    R = n(197571);
+    P = n(858518),
+    R = n(10198);
 function w(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ c.ZP.initialize();
 class L extends i.PureComponent {
     componentDidMount() {
         (0, x.e)("guildTemplate"),
-            T.KO || b.Z.launch("discord://" + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+            T.KO || b.Z.launch("discord://" + y.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && g.Z.resolveGuildTemplate(this.props.code);
@@ -96,7 +96,7 @@ class L extends i.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (o()(null != e, "guild template must not be null"), e.state === y.Rj.RESOLVING)
+        return (o()(null != e, "guild template must not be null"), e.state === S.Rj.RESOLVING)
             ? (0, r.jsx)(u.ZP, {
                   className: P.authBox,
                   children: (0, r.jsx)(f.Z, { guildTemplate: e }),
@@ -114,12 +114,12 @@ class L extends i.PureComponent {
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: l } = this.props;
         if (null == e) return this.renderSpinner(Z.intl.string(Z.t.ZTNur6));
-        if (t === S.kEZ.OPEN) return this.renderAppOpened();
-        if (t === S.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
+        if (t === y.kEZ.OPEN) return this.renderAppOpened();
+        if (t === y.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
         switch (e.state) {
-            case y.Rj.RESOLVING:
+            case S.Rj.RESOLVING:
                 return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
-            case y.Rj.RESOLVED:
+            case S.Rj.RESOLVED:
                 if (n || !T.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, r.jsx)(I.Z, {
@@ -136,7 +136,7 @@ class L extends i.PureComponent {
                             E.Z.flowStart(A.MK.ORGANIC_GUILD_TEMPLATES, A.EW.NUF_STARTED);
                     },
                 });
-            case y.Rj.EXPIRED:
+            case S.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;

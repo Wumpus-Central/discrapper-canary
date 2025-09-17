@@ -18,14 +18,14 @@ var r = n(951288),
     v = n(944486),
     j = n(594174),
     b = n(74538),
-    y = n(451467),
-    S = n(122186),
+    S = n(451467),
+    y = n(122186),
     C = n(37113),
     O = n(981631),
     w = n(388032),
-    Z = n(542257),
-    I = n(381994),
-    N = n(197571);
+    Z = n(79985),
+    I = n(763021),
+    N = n(10198);
 function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -180,7 +180,7 @@ function k(e) {
                 A({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, y.Z)(n, e.value, s, D, k, L),
+                    needsPremium: !(0, S.Z)(n, e.value, s, D, k, L),
                     needsDemo: W && e.value !== C.LY.RESOLUTION_720,
                     analyticsLocation: Y,
                     onClick: () => o(e.value),
@@ -194,7 +194,7 @@ function k(e) {
                 A({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, y.Z)(n, l, e.value, D, k, L),
+                    needsPremium: !(0, S.Z)(n, l, e.value, D, k, L),
                     needsDemo: W && e.value === C.ws.FPS_60,
                     analyticsLocation: Y,
                     onClick: () => x(e.value),
@@ -237,13 +237,13 @@ function k(e) {
                               }),
                           }),
                           z
-                              ? (0, r.jsx)(S.Z, {
+                              ? (0, r.jsx)(y.Z, {
                                     message: w.intl.string(w.t.deDogI),
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                 })
                               : null,
-                          W && (0, r.jsx)(S.c, {}),
+                          W && (0, r.jsx)(y.c, {}),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
@@ -265,13 +265,13 @@ function k(e) {
                               ],
                           }),
                           z
-                              ? (0, r.jsx)(S.Z, {
+                              ? (0, r.jsx)(y.Z, {
                                     onClose: t,
                                     openStreamUpsellModal: E,
                                     glow: F,
                                 })
                               : null,
-                          W && (0, r.jsx)(S.c, {}),
+                          W && (0, r.jsx)(y.c, {}),
                       ],
                   });
     return (0, r.jsx)(

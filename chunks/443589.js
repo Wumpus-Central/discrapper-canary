@@ -21,12 +21,12 @@ var r = n(951288),
     v = n(474936),
     I = n(981631),
     C = n(388032),
-    S = n(427954),
-    T = n(286389);
+    S = n(3254),
+    T = n(952602);
 function N(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: N } = e,
-        { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: P, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
+        { analyticsLocations: P } = (0, d.ZP)(),
+        { isHovered: j, setIsHovered: x, onMouseEnter: A, onMouseLeave: Z } = (0, h.Z)(200, 300),
         { enableEmojiCTA: w } = _.w.useExperiment({ location: "GiftIntentActionButton" }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -57,7 +57,7 @@ function N(e) {
                     initialPlanId: null,
                     giftRecipient: t,
                     analyticsLocation: (0, E.F)(n).actionButton,
-                    analyticsLocations: j,
+                    analyticsLocations: P,
                     analyticsObject: {
                         page: l,
                         section: I.jXE.FRIENDS_LIST_FRIEND_ROW,
@@ -78,7 +78,7 @@ function N(e) {
         animation: u.yRy.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         scrollBehavior: "close",
-        shouldShow: P,
+        shouldShow: j,
         position: "right",
         align: "top",
         spacing: 9,

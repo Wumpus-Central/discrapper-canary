@@ -11,15 +11,15 @@ var r = n(951288),
     m = n(481060),
     g = n(541716),
     p = n(752305),
-    f = n(893718),
-    h = n(592125),
+    h = n(893718),
+    f = n(592125),
     b = n(984933),
     x = n(540457),
     j = n(681460),
     v = n(592286),
     _ = n(981631),
     O = n(388032),
-    y = n(94228);
+    y = n(761560);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,7 +72,7 @@ function I(e) {
             onChange: s,
             onKeyDown: o,
             onClear: u,
-            onRuleReorder: h,
+            onRuleReorder: f,
             isDropHovered: b,
             focused: x,
             onFocus: j,
@@ -90,7 +90,7 @@ function I(e) {
                 index: l,
             },
             end: (e, t) => {
-                null == e || t.didDrop() || h(e.rule, null, !0);
+                null == e || t.didDrop() || f(e.rule, null, !0);
             },
         }),
         [, D] = (0, d.L)({
@@ -103,10 +103,10 @@ function I(e) {
                 if (null == i || null == a) return;
                 let s = (i.bottom - i.top) / 2,
                     o = a.y - i.top;
-                (r < l && o < s) || (r > l && o > s) || h(e.rule, l, !1);
+                (r < l && o < s) || (r > l && o > s) || f(e.rule, l, !1);
             },
             drop: (e) => {
-                h(e.rule, l, !0);
+                f(e.rule, l, !0);
             },
         });
     if (
@@ -136,7 +136,7 @@ function I(e) {
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(l),
-                    children: (0, r.jsx)(f.ZP, {
+                    children: (0, r.jsx)(h.ZP, {
                         innerClassName: y.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: T,
@@ -195,9 +195,9 @@ function S(e) {
     let { rules: t, setRules: n, guild: l, disabled: a } = e,
         s = l.rulesChannelId,
         c = l.features.has(_.oNc.PREVIEW_ENABLED),
-        d = (0, u.e7)([h.Z], () => (null != s ? h.Z.getChannel(s) : null)),
+        d = (0, u.e7)([f.Z], () => (null != s ? f.Z.getChannel(s) : null)),
         g = (0, u.e7)([b.ZP], () => b.ZP.getDefaultChannel(l.id)),
-        [p, f] = i.useState(null),
+        [p, h] = i.useState(null),
         [E, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
@@ -236,7 +236,7 @@ function S(e) {
                     let i = [...t];
                     i.splice(l, 1), i.splice(r, 0, e), n(i);
                 }
-                i ? null !== p && f(null) : r !== p && f(r);
+                i ? null !== p && h(null) : r !== p && h(r);
             },
             [a, p, t, n],
         ),

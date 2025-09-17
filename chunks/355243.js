@@ -7,8 +7,8 @@ var r = n(951288),
     s = n(393903),
     c = n(448986),
     u = n(604162),
-    d = n(420212),
-    f = n(412331);
+    d = n(295907),
+    f = n(16954);
 function p(e, t, n) {
     return n * (Math.max(e - t.left, 0) / t.width);
 }
@@ -21,37 +21,37 @@ function v(e) {
             animate: n,
             interactionEnabled: a,
             backgroundColor: v,
-            preloadedBuffers: C,
-            duration: E,
-            maxSeekableTime: _,
-            onClick: g,
+            preloadedBuffers: g,
+            duration: _,
+            maxSeekableTime: C,
+            onClick: E,
             onScrubBack: S,
-            onScrubForward: O,
+            onScrubForward: b,
         } = e,
-        [b, h] = o.useState(null),
+        [O, h] = o.useState(null),
         [y, j] = o.useState(null),
-        [T, x] = o.useState(null),
-        [P, D] = o.useState(!1),
-        R = o.useRef(null),
-        I = (e) => {
-            (R.current = e), h(e);
+        [x, T] = o.useState(null),
+        [D, P] = o.useState(!1),
+        I = o.useRef(null),
+        R = (e) => {
+            (I.current = e), h(e);
         };
     o.useEffect(() => {
-        null != b && (null == _ ? x(null) : x(m(_, E, b)));
-    }, [b, _, E]);
-    let N = (0, c.Z)((e) => {
-            I(e.contentRect);
+        null != O && (null == C ? T(null) : T(m(C, _, O)));
+    }, [O, C, _]);
+    let k = (0, c.Z)((e) => {
+            R(e.contentRect);
         }),
-        k = (0, s.y)(N);
+        N = (0, s.y)(k);
     o.useLayoutEffect(() => {
-        null != k.current && I(k.current.getBoundingClientRect());
-    }, [k]),
+        null != N.current && R(N.current.getBoundingClientRect());
+    }, [N]),
         o.useEffect(() => {
             let e = () => {
-                null != k.current && I(k.current.getBoundingClientRect());
+                null != N.current && R(N.current.getBoundingClientRect());
             };
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-        }, [k]);
+        }, [N]);
     let A = (e) => {
             j(e.clientX);
         },
@@ -60,33 +60,33 @@ function v(e) {
                 let { key: t } = e;
                 t === d.mR.ArrowLeft && null != S
                     ? (e.preventDefault(), e.stopPropagation(), S())
-                    : t === d.mR.ArrowRight && null != O && (e.preventDefault(), e.stopPropagation(), O());
+                    : t === d.mR.ArrowRight && null != b && (e.preventDefault(), e.stopPropagation(), b());
             },
-            [S, O],
+            [S, b],
         ),
-        L = null != y && null != b ? p(y, b, E) : 0,
+        L = null != y && null != O ? p(y, O, _) : 0,
         M = (0, u.yv)(L),
-        B = null != b ? b.right - m((t / 100) * E, E, b) : null,
-        V = null != y && null != b ? b.right - y : null,
-        F = null != T && null != b ? b.right - T : null;
+        B = null != O ? O.right - m((t / 100) * _, _, O) : null,
+        V = null != y && null != O ? O.right - y : null,
+        F = null != x && null != O ? O.right - x : null;
     return (0, r.jsxs)("div", {
         className: f.cont,
-        ref: k,
+        ref: N,
         children: [
             (0, r.jsxs)(i.P3F, {
                 className: l()(f.hitboxArea, { [f.interactionEnabled]: a }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    a && null != g && g(p(e.clientX, e.currentTarget.getBoundingClientRect(), E));
+                    a && null != E && E(p(e.clientX, e.currentTarget.getBoundingClientRect(), _));
                 },
                 onMouseEnter: (e) => {
-                    a && (null != k.current && I(k.current.getBoundingClientRect()), D(!0), A(e));
+                    a && (null != N.current && R(N.current.getBoundingClientRect()), P(!0), A(e));
                 },
                 onMouseLeave: (e) => {
-                    a && (D(!1), j(null));
+                    a && (P(!1), j(null));
                 },
                 onMouseMove: (e) => {
-                    a && P && A(e);
+                    a && D && A(e);
                 },
                 onKeyDown: w,
                 tabIndex: a ? void 0 : -1,
@@ -97,13 +97,13 @@ function v(e) {
                     },
                 },
                 children: [
-                    null == C
+                    null == g
                         ? void 0
-                        : C.map((e) =>
+                        : g.map((e) =>
                               (0, r.jsx)(
                                   "div",
                                   {
-                                      className: l()(f.buffer, { [f.bufferHovered]: P }),
+                                      className: l()(f.buffer, { [f.bufferHovered]: D }),
                                       style: {
                                           width: "".concat(100 * e.size, "%"),
                                           left: "".concat(100 * e.start, "%"),
@@ -127,10 +127,10 @@ function v(e) {
                         percent: t,
                         foregroundColor: "#FFFFFF",
                         backgroundColor: null != v ? v : void 0,
-                        size: P ? i.Exd.Sizes.XSMALL : i.Exd.Sizes.XXSMALL,
+                        size: D ? i.Exd.Sizes.XSMALL : i.Exd.Sizes.XXSMALL,
                         animate: n,
                     }),
-                    P &&
+                    D &&
                         null != M &&
                         (0, r.jsx)(i.Text, {
                             className: f.timeDisplay,
@@ -141,7 +141,7 @@ function v(e) {
                             },
                             children: M,
                         }),
-                    P &&
+                    D &&
                         a &&
                         null != B &&
                         (0, r.jsx)("div", {

@@ -11,11 +11,11 @@ var a = n(120356),
     u = n(691703),
     p = n(953989),
     m = n(388032),
-    h = n(28552);
+    h = n(128027);
 function g(e) {
     let { className: t, view: n, application: a } = e,
         g = "embedded" === n,
-        f = (0, o.Z)({ application: a });
+        _ = (0, o.Z)({ application: a });
     return (0, r.jsxs)("div", {
         className: i()(t, {
             [h.sideContainer]: !g,
@@ -29,7 +29,7 @@ function g(e) {
                         className: h.infoSection,
                         children: (0, r.jsx)(s.Z, {
                             application: a,
-                            mutualGuilds: f,
+                            mutualGuilds: _,
                             mutualGuildShownMax: 3,
                             className: h.guildCountContainer,
                             guildIconSize: s.x.SMALL,

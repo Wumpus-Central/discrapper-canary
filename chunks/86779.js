@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(457542);
+n.d(t, { Z: () => S }), n(388685), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(457542);
 var r = n(951288),
     i = n(647438),
     l = n(593473),
@@ -16,20 +16,20 @@ var r = n(951288),
     _ = n(970648),
     x = n(981631),
     E = n(388032),
-    v = n(78224);
+    v = n(976914);
 let j = "mweb_handoff_nonce",
     b = "mweb_handoff_nonce_expiration",
     I = +f.Z.Millis.MINUTE,
     N = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
     O = new Set(["deep_link_failed"]),
-    S = () => {
+    y = () => {
         c.K.remove(j), c.K.remove(b);
     },
-    y = () => {
+    S = () => {
         let e = (0, a.e7)([g.default], () => g.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
             f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            y = null != f ? f : null !== e ? e : void 0;
+            S = null != f ? f : null !== e ? e : void 0;
         i.useEffect(() => {
             null !== f &&
                 e !== f &&
@@ -46,12 +46,12 @@ let j = "mweb_handoff_nonce",
                             x.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
-                                fingerprint: (0, s.K)(y),
+                                fingerprint: (0, s.K)(S),
                             },
-                            { fingerprint: y },
+                            { fingerprint: S },
                         );
                 },
-                [A, y],
+                [A, S],
             ),
             Z = c.K.get(j);
         if (
@@ -60,7 +60,7 @@ let j = "mweb_handoff_nonce",
             i.useEffect(() => {
                 if (null != Z) {
                     let e = c.K.get(b);
-                    (null == e || Date.now() >= e) && (T("nonce_expired"), S());
+                    (null == e || Date.now() >= e) && (T("nonce_expired"), y());
                 }
             }, [Z, T]),
             i.useEffect(() => {
@@ -82,7 +82,7 @@ let j = "mweb_handoff_nonce",
                             m.default.track(x.rMx.LOGIN_SUCCESSFUL, {
                                 source: x.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
-                                fingerprint: (0, s.K)(y),
+                                fingerprint: (0, s.K)(S),
                             });
                             let e = new URL(window.location.href),
                                 t = new URLSearchParams(e.search);
@@ -95,10 +95,10 @@ let j = "mweb_handoff_nonce",
                             T("handoff_exchange");
                         })
                         .finally(() => {
-                            S();
+                            y();
                         });
-            }, [n, Z, C, y, T]),
-            null == y)
+            }, [n, Z, C, S, T]),
+            null == S)
         )
             return null;
         let P =
@@ -138,17 +138,17 @@ let j = "mweb_handoff_nonce",
                               let r = new URLSearchParams();
                               r.set("redirect", encodeURIComponent(window.location.pathname + n.toString())),
                                   r.set("key", e),
-                                  r.set("fingerprint", y),
+                                  r.set("fingerprint", S),
                                   (t.search = r.toString()),
                                   m.default.track(
                                       x.rMx.DEEP_LINK_CLICKED,
                                       {
-                                          fingerprint: (0, s.K)(y),
+                                          fingerprint: (0, s.K)(S),
                                           source: "mobile_web_handoff",
                                           destination: x.x0X,
                                       },
                                       {
-                                          fingerprint: y,
+                                          fingerprint: S,
                                           flush: !0,
                                       },
                                   ),

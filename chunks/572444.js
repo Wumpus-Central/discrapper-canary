@@ -33,8 +33,8 @@ var a = n(951288),
     p = n(131951),
     x = n(246992),
     b = n(65154),
-    f = n(653301),
-    g = n(451429);
+    f = n(25016),
+    g = n(866403);
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -150,11 +150,11 @@ function _() {
             var e;
             null == (e = C.current) || e.stop(), (C.current = null), y(null);
         }, []);
-    function z() {
+    function B() {
         p.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function B(e) {
-        if ((t && z(), G(), null == F)) return;
+    function z(e) {
+        if ((t && B(), G(), null == F)) return;
         let n = F.createBufferSource();
         (n.buffer = e.audioBuffer),
             (N.current = F.createGain()),
@@ -318,7 +318,7 @@ function _() {
                         children: (0, a.jsx)(o.zx, {
                             color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                             onClick: t
-                                ? z
+                                ? B
                                 : function () {
                                       G(),
                                           n(!0),
@@ -372,7 +372,7 @@ function _() {
                                 {
                                     recording: e,
                                     playing: e === _,
-                                    onPlay: B,
+                                    onPlay: z,
                                     onStop: G,
                                 },
                                 t,

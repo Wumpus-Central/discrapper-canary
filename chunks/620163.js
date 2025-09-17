@@ -3,7 +3,7 @@ n.d(t, {
     OF: () => e4,
     W8: () => e8,
     c$: () => e3,
-    iE: () => e6,
+    iE: () => e5,
 }),
     n(539854),
     n(388685);
@@ -108,9 +108,9 @@ var i = n(990547),
     eW = n(46140),
     eK = n(65154),
     ez = n(388032),
-    eq = n(693450),
-    eX = n(345909),
-    eQ = n(202323);
+    eq = n(62222),
+    eX = n(412297),
+    eQ = n(756464);
 function eJ(e, t, n) {
     return (
         t in e
@@ -196,8 +196,8 @@ let e2 = () => {
             ? (0, r.jsx)(s.IGR, { text: ez.intl.string(ez.t.y2b7CA) })
             : null;
     },
-    e5 = eD.Z,
-    e6 = (e) => {
+    e6 = eD.Z,
+    e5 = (e) => {
         let {
             unseenGiftCount: t,
             showPrepaidPaymentPastDueWarning: E,
@@ -206,7 +206,7 @@ let e2 = () => {
             isOverlaySupported: B,
             isClipsBetaTagShowing: eJ = !1,
             shouldMergeGameSettings: e0,
-            isKeywordFilteringEnabled: e6,
+            isKeywordFilteringEnabled: e5,
             isStaff: e7,
             isInappropriateConversationWarningEnabled: e9,
             isInapproprateConversationsDefaultOn: te,
@@ -621,7 +621,7 @@ let e2 = () => {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [ez.intl.string(ez.t["1UaUy8"]), ez.intl.string(ez.t["xIk/iI"])],
                 parent: eV.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e6,
+                predicate: () => e5,
             },
             [eV.s6.PRIVACY_SAFETY_ALERTS_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -1581,7 +1581,7 @@ let e2 = () => {
                 section: eY.oAB.LINUX,
                 searchableTitles: [ez.intl.string(ez.t["7pPjTU"])],
                 label: ez.intl.string(ez.t["7pPjTU"]),
-                element: e5,
+                element: e6,
                 predicate: () => q.isPlatformEmbedded && (0, q.isLinux)(),
             },
             [eV.s6.STREAMER_MODE]: {

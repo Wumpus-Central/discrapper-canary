@@ -17,11 +17,11 @@ var r,
     h = n(316496),
     g = n(223730),
     m = n(981631),
-    b = n(933554),
+    b = n(893867),
     O = n(388032),
-    y = n(87587),
+    y = n(515438),
     _ = n(273701);
-function v(e) {
+function j(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
@@ -37,7 +37,7 @@ function v(e) {
         }),
     });
 }
-function j(e) {
+function v(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1, shouldShowCustomizeLink: r = !1, closePopout: l } = e,
         o = (0, a.e7)([p.Z], () => p.Z.getStatus()),
         { showLinkToSettings: f } = (0, h.D)("popout");
@@ -145,7 +145,7 @@ function C(e) {
             }),
             (0, i.jsx)("div", {
                 className: y.toggleContainerWrapper,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(v, {
                     showCurrentGame: n,
                     shouldShowCustomizeLink: !0,
                     closePopout: t,
@@ -167,7 +167,7 @@ function E(e) {
                     learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(v, { closePopout: t }),
+            (0, i.jsx)(j, { closePopout: t }),
         ],
     });
 }
@@ -187,7 +187,7 @@ function S(e) {
             }),
             (0, i.jsx)("div", {
                 className: y.toggleContainerWrapper,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(v, {
                     showCurrentGame: n,
                     shouldShowStatus: !0,
                     closePopout: t,
@@ -202,7 +202,7 @@ function P(e) {
         { showLinkToSettings: r } = (0, h.D)("popout");
     return (0, i.jsxs)(x, {
         children: [
-            (0, i.jsx)(j, {
+            (0, i.jsx)(v, {
                 showCurrentGame: n,
                 closePopout: t,
             }),
@@ -235,7 +235,7 @@ function I(e) {
                     learnMoreLink: f.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS),
                 }),
             }),
-            (0, i.jsx)(v, { closePopout: t }),
+            (0, i.jsx)(j, { closePopout: t }),
         ],
     });
 }
@@ -245,7 +245,7 @@ function N(e) {
         { showLinkToSettings: r } = (0, h.D)("popout");
     return (0, i.jsxs)(x, {
         children: [
-            (0, i.jsx)(j, {
+            (0, i.jsx)(v, {
                 showCurrentGame: n,
                 shouldShowStatus: !0,
                 closePopout: t,

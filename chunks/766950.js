@@ -16,22 +16,22 @@ var r = n(951288),
     b = n(626135),
     x = n(364747),
     j = n(131016),
-    _ = n(579346),
-    S = n(438759),
+    S = n(579346),
+    _ = n(438759),
     C = n(512070),
     O = n(299939),
     v = n(305813),
     y = n(203872),
     P = n(981631),
-    k = n(693450),
+    k = n(62222),
     N = n(388032),
-    E = n(300119);
+    E = n(845378);
 function T(e) {
     var t, n, T;
-    let { transitionState: D, analyticsLocations: R, guild: A, onClose: I } = e,
-        w = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+    let { transitionState: D, analyticsLocations: R, guild: A, onClose: w } = e,
+        I = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         L = (0, s.e7)([g.Z], () => g.Z.getAllPending().pendingDisplayNameStyles),
-        B = void 0 !== L ? L : null == w ? void 0 : w.displayNameStyles,
+        B = void 0 !== L ? L : null == I ? void 0 : I.displayNameStyles,
         [M, G] = o.useState(null != (t = null == B ? void 0 : B.fontId) ? t : i.C.DEFAULT),
         [Z, Y] = o.useState(null != (n = null == B ? void 0 : B.effectId) ? n : a.m.SOLID),
         H = (0, y.R)(Z),
@@ -70,9 +70,9 @@ function T(e) {
                         effect_name: a.m[Z],
                         colors: W,
                     }),
-                    I();
+                    w();
             }
-        }, [$, M, Z, W, H, I]),
+        }, [$, M, Z, W, H, w]),
         Q = o.useCallback(() => {
             let { fontId: e, effectId: t, colors: n } = (0, j.aY)();
             G(e), Y(t), t === a.m.GRADIENT ? X(n) : q(n[0]), b.default.track(P.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
@@ -89,7 +89,7 @@ function T(e) {
             },
             [Z, X, q],
         );
-    return null == w
+    return null == I
         ? null
         : (0, r.jsx)(f.Gt, {
               value: V,
@@ -124,12 +124,12 @@ function T(e) {
                                               setSelectedFontId: G,
                                               className: E.selectionSubSection,
                                           }),
-                                          (0, r.jsx)(S.Z, {
+                                          (0, r.jsx)(_.Z, {
                                               selectedEffectId: Z,
                                               setSelectedEffectId: ee,
                                               className: E.selectionSubSection,
                                           }),
-                                          (0, r.jsx)(_.Z, {
+                                          (0, r.jsx)(S.Z, {
                                               selectedColors: W,
                                               setSelectedColors: et,
                                               selectedEffectId: Z,
@@ -139,18 +139,18 @@ function T(e) {
                                       ],
                                   }),
                                   (0, r.jsx)(v.Z, {
-                                      user: w,
+                                      user: I,
                                       selectedFontId: M,
                                       selectedEffectId: Z,
                                       selectedColors: Z === a.m.SOLID && (0, c.E)(W, H.defaultColors) ? [] : W,
-                                      onClose: I,
+                                      onClose: w,
                                   }),
                               ],
                           }),
                           (0, r.jsx)(O.B, {
                               onApply: J,
                               onSurpriseMe: Q,
-                              onClose: I,
+                              onClose: w,
                               canApply: $,
                               analyticsLocations: V,
                           }),

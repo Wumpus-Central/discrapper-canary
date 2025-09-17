@@ -17,9 +17,9 @@ var r = n(951288),
     O = n(434479),
     y = n(981631),
     _ = n(176505),
-    v = n(490897),
-    j = n(388032),
-    x = n(885525);
+    j = n(490897),
+    v = n(388032),
+    x = n(88448);
 function C(e) {
     let { guild: t, selected: C } = e,
         E = (0, p.Z)(t),
@@ -27,11 +27,11 @@ function C(e) {
         P = (0, l.Wu)([f.Z], () =>
             Array.from(f.Z.getNewChannelIds(t.id)).filter((e) => f.Z.shouldIndicateNewChannel(t.id, e)),
         ),
-        I = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
+        I = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, j.W.GUILD_ONBOARDING_QUESTION)),
         N = P.length > b.Cb,
         Z = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = g.ZP.lastMessageId(t.id, v.W.GUILD_ONBOARDING_QUESTION);
+                n = g.ZP.lastMessageId(t.id, j.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
@@ -99,7 +99,7 @@ function C(e) {
             Z ||
             (A = (0, r.jsx)(s.IGR, {
                 color: a.Z.colors.BADGE_BRAND_BG.css,
-                text: j.intl.string(j.t.y2b7CA),
+                text: v.intl.string(v.t.y2b7CA),
                 className: x.newChannel,
             })),
         (0, r.jsx)(O.m, {
@@ -110,7 +110,7 @@ function C(e) {
                     color: "currentColor",
                     className: e,
                 }),
-            text: E ? j.intl.string(j.t.h9mGOD) : j.intl.string(j.t.et6wam),
+            text: E ? v.intl.string(v.t.h9mGOD) : v.intl.string(v.t.et6wam),
             selected: C,
             onClick: w,
             onContextMenu: T,

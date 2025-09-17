@@ -15,9 +15,9 @@ var r = n(951288),
     m = n(528027),
     g = n(686807),
     p = n(157018),
-    f = n(828656),
-    h = n(388032),
-    b = n(172931);
+    h = n(828656),
+    f = n(388032),
+    b = n(28742);
 function x(e) {
     let {
             guildId: t,
@@ -34,7 +34,7 @@ function x(e) {
         } = e,
         v = i.useRef(null),
         _ = i.useRef(null),
-        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, f.Z)(v, d, u, x);
+        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, h.Z)(v, d, u, x);
     return (
         O(_),
         y(C(v)),
@@ -89,7 +89,7 @@ function x(e) {
                         (0, r.jsx)(o.P3F, {
                             className: b.cardActionButton,
                             onClick: j ? void 0 : p,
-                            "aria-label": h.intl.string(h.t.Eoo8h4),
+                            "aria-label": f.intl.string(f.t.Eoo8h4),
                             "aria-disabled": j,
                             children: (0, r.jsx)(o.vdY, {
                                 size: "xs",
@@ -105,12 +105,12 @@ function x(e) {
 function j(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
         m = (0, c.Dt)(),
-        { isDragging: f } = (0, s.f)((e) => ({ isDragging: e.getItemType() === m })),
-        h = (0, u.mY)();
+        { isDragging: h } = (0, s.f)((e) => ({ isDragging: e.getItemType() === m })),
+        f = (0, u.mY)();
     return 0 === t.length
         ? null
         : (0, r.jsx)("div", {
-              className: a()(b.container, { [b.isDragging]: f }),
+              className: a()(b.container, { [b.isDragging]: h }),
               children: t.map((e, t) =>
                   (0, r.jsxs)(
                       i.Fragment,
@@ -128,7 +128,7 @@ function j(e) {
                                   dndName: (0, p.Z)(e),
                                   onEdit: () => n(t),
                                   onMove: l,
-                                  disabled: h,
+                                  disabled: f,
                               }),
                           ],
                       },

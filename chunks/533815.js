@@ -7,7 +7,7 @@ var i = r(120356),
     a = r(785717),
     c = r(86419),
     s = r(388032),
-    u = r(51708);
+    u = r(145624);
 function d(e) {
     let { game: t, widgetType: r, iconSize: i = "refresh_sm", className: d } = e,
         { trackUserProfileEditAction: f } = (0, a.KZ)(),
