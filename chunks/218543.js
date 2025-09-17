@@ -146,10 +146,16 @@ class _ {
     }
     record() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now();
-        0 === this.time_
-            ? ((this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name))
-            : this.onlyOnce || r.Z.mark(this.emoji, this.name),
-            c();
+        if (0 === this.time_)
+            (this.time_ = e), (this.numImports = i.dp()), (this.importTime = u()), r.Z.mark(this.emoji, this.name);
+        else if (!this.onlyOnce) {
+            if (this.alwaysRecord) {
+                (this.time_ = 0), this.record(e);
+                return;
+            }
+            r.Z.mark(this.emoji, this.name);
+        }
+        c();
     }
     hasData() {
         return this.time_ > 0;
@@ -157,16 +163,18 @@ class _ {
     serialize(e) {
         return d(e, this.time_);
     }
-    constructor(e, t, n = !1) {
+    constructor(e, t, n = !1, r = !1) {
         a(this, "emoji", void 0),
             a(this, "name", void 0),
             a(this, "onlyOnce", void 0),
+            a(this, "alwaysRecord", void 0),
             a(this, "time_", void 0),
             a(this, "numImports", void 0),
             a(this, "importTime", void 0),
             (this.emoji = e),
             (this.name = t),
             (this.onlyOnce = n),
+            (this.alwaysRecord = r),
             (this.time_ = 0),
             (this.numImports = null),
             (this.importTime = 0);
@@ -198,10 +206,11 @@ class h {
             a(this, "loadCachedMessages", new f("\uD83D\uDCBE", "Load Cached Messages")),
             a(this, "renderApp", new _("\uD83C\uDFA8", "First React Render")),
             a(this, "renderAppEffect", new _("\uD83C\uDFA8", "First React Render useEffect")),
+            a(this, "firstContentfulPaint", new _("\uD83C\uDFA8", "First Contentful Paint", !1, !0)),
             a(this, "renderMessages", new _("\uD83C\uDFA8", "React Render Messages", !0)),
             a(this, "renderMessagesWithCache", new _("\uD83C\uDFA8", "React Render Cached Messages", !0)),
             a(this, "firstRowGenerator", new f("\uD83C\uDFA8", "RowGenerator.generate()")),
-            a(this, "displayMessagesWithCache", new _("\uD83D\uDDA5️", "Display Cached Messages")),
+            a(this, "displayMessagesWithCache", new _("\uD83D\uDDA5️", "Display Cached Messages", !1, !0)),
             a(this, "renderLatestMessages", new _("\uD83C\uDFA8", "React Render Latest Messages")),
             a(this, "displayLatestMessages", new _("\uD83D\uDDA5️", "Display Latest Messages")),
             a(this, "initialGuild", new f("\uD83C\uDF10", "Initial Guild")),
@@ -356,6 +365,9 @@ class m extends h {
                 case "CacheStorage Init End":
                     this.extraProperties.time_init_native_storage_end = d(n, t.timestamp);
                     break;
+                case "RUN_JS_BUNDLE_START":
+                    this.extraProperties.time_before_js_bundle_start = d(n, t.timestamp);
+                    break;
                 case "ChatModule.updateRows() Start":
                     if (null != this.extraProperties.time_first_native_message_render_start) continue;
                     this.extraProperties.time_first_native_message_render_start = d(n, t.timestamp);
@@ -396,6 +408,7 @@ class m extends h {
             time_load_cached_messages_end: this.loadCachedMessages.serializeEnd(d),
             time_render_app_start: this.renderApp.serialize(d),
             time_render_app_effect_start: this.renderAppEffect.serialize(d),
+            time_first_contentful_paint: this.firstContentfulPaint.serialize(d),
             time_render_messages_end: this.renderMessages.serialize(d),
             time_render_messages_with_cache_end: this.renderMessagesWithCache.serialize(d),
             time_render_latest_messages_end: this.renderLatestMessages.serialize(d),
