@@ -92844,6 +92844,74 @@ html.disable-forced-colors * {
     position: relative
 }
 
+.modal_ab9bdf {
+    border-radius: 5px;
+    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    position: relative
+}
+
+.theme-dark .modal_ab9bdf {
+    background-color: var(--primary-600)
+}
+
+.theme-light .modal_ab9bdf {
+    background: var(--white-500)
+}
+
+.sizeSmall_ab9bdf {
+    max-height: 660px;
+    min-height: 200px;
+    width: 440px
+}
+
+.sizeMedium_ab9bdf {
+    max-height: 800px;
+    min-height: 400px;
+    width: 600px
+}
+
+.sizeLarge_ab9bdf {
+    max-width: 960px;
+    min-height: 400px;
+    min-width: 800px
+}
+
+@media (max-width:485px) {
+
+    .sizeLarge_ab9bdf,
+    .sizeMedium_ab9bdf,
+    .sizeSmall_ab9bdf {
+        align-self: center;
+        max-height: 100vh;
+        min-width: auto;
+        width: 96%
+    }
+
+    .fullscreenOnMobile_ab9bdf {
+        border-radius: 0;
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%
+    }
+
+    .fullscreenOnMobile_ab9bdf .footer_ab9bdf,
+    .fullscreenOnMobile_ab9bdf .header_ab9bdf {
+        border-radius: 0
+    }
+
+    .hideOnFullscreen_ab9bdf {
+        display: none
+    }
+}
+
 :root {
     --application-subscription-end: hsl(var(--application-subscription-end-hsl)/1);
     --application-subscription-end-hsl: 196.564 calc(var(--saturation-factor, 1)*98.788%) 32.353%;
