@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
+    s = n(938288),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -118,13 +118,12 @@ let j = i.forwardRef(function (e, t) {
                 l({ action: "PRESS_ADD_CUSTOM_STATUS" }),
                     null == i || i(),
                     (0, u.ZDy)(async () => {
-                        let { default: e } = await n.e("31649").then(n.bind(n, 475613));
+                        let { default: e } = await n.e("76215").then(n.bind(n, 66630));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
                                 w(R({}, t), {
                                     sourceAnalyticsLocations: s,
-                                    location: "UserProfileCustomStatusBubble",
                                     prompt: a,
                                 }),
                             );

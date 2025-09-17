@@ -68,15 +68,8 @@ function y(e, t) {
 let O = 300,
     v = (e) =>
         (0, c.ZDy)(async () => {
-            let { default: t } = await n.e("31649").then(n.bind(n, 475613));
-            return (n) =>
-                (0, r.jsx)(
-                    t,
-                    y(E({}, n), {
-                        sourceAnalyticsLocations: e,
-                        location: "UserProfileCustomStatusBubbleEditBar",
-                    }),
-                );
+            let { default: t } = await n.e("76215").then(n.bind(n, 66630));
+            return (n) => (0, r.jsx)(t, y(E({}, n), { sourceAnalyticsLocations: e }));
         });
 function I(e) {
     let { isVisible: t, isExpandable: n, onCloseProfile: a } = e,

@@ -23,6 +23,7 @@ var r = (function (e) {
         (e[(e.EXTERNAL_DIALOG = 22)] = "EXTERNAL_DIALOG"),
         (e[(e.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE = 23)] = "MOBILE_ONLY_QUEST_PUSH_TO_MOBILE"),
         (e[(e.MANUAL_HEARTBEAT_INITIALIZATION = 24)] = "MANUAL_HEARTBEAT_INITIALIZATION"),
+        (e[(e.CLOUD_GAMING_ACTIVITY = 25)] = "CLOUD_GAMING_ACTIVITY"),
         e
     );
 })({});
