@@ -32,8 +32,8 @@ var r = n(951288),
     x = n(693900),
     L = n(164495),
     j = n(759853),
-    k = n(205511),
-    M = n(694802),
+    M = n(205511),
+    k = n(694802),
     U = n(95985),
     G = n(688927),
     B = n(50476),
@@ -156,8 +156,8 @@ function z(e) {
         x = i.useMemo(() => (null == w ? {} : { backgroundImage: "url(".concat(w.url, ")") }), [w]),
         L = (0, p.ZP)(),
         j = (0, f.wj)(L),
-        k = (0, u.e7)([g.Z], () => g.Z.isFocused()),
-        M = (0, u.e7)([h.Z], () => h.Z.useReducedMotion);
+        M = (0, u.e7)([g.Z], () => g.Z.isFocused()),
+        k = (0, u.e7)([h.Z], () => h.Z.useReducedMotion);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -236,7 +236,7 @@ function z(e) {
                             (0, r.jsx)(_.ZX5, {
                                 className: H.shine,
                                 shineSize: _.rHe.DEFAULT,
-                                shinePaused: !k || M,
+                                shinePaused: !M || k,
                             }),
                     ],
                 }),
@@ -341,10 +341,11 @@ function X(e) {
         S = (0, O.z)(n),
         [A, C, N] = (0, O.me)(n, a),
         R = i.useRef(null),
-        P = (0, O._s)({ quest: n }),
-        D = (0, b.q8)(n),
-        V = (0, O.Jf)(n),
-        W = i.useCallback(() => {
+        P = i.useRef(null),
+        D = (0, O._s)({ quest: n }),
+        V = (0, b.q8)(n),
+        W = (0, O.Jf)(n),
+        K = i.useCallback(() => {
             (0, w.openVideoQuestModal)({
                 quest: n,
                 questContent: I.jn.QUEST_BAR_V2,
@@ -352,7 +353,7 @@ function X(e) {
                 sourceQuestContentCTA: E.jZ.QUEST_BAR_VIDEO_QUEST_PREVIEW,
             });
         }, [n]),
-        K = null != V ? V.percentComplete : a.percentComplete;
+        z = null != W ? W.percentComplete : a.percentComplete;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.animated.div, {
@@ -367,7 +368,9 @@ function X(e) {
             }),
             (0, r.jsxs)("div", {
                 className: H.questAcceptedContent,
-                ref: _,
+                ref: (e) => {
+                    "function" == typeof _ ? _(e) : null != _ && (_.current = e), null != e && (P.current = e);
+                },
                 children: [
                     (0, r.jsx)(G.Z, {
                         quest: n,
@@ -389,8 +392,11 @@ function X(e) {
                         quest: n,
                         progressBarRef: R,
                         isExpanded: !0,
-                        percentComplete: K,
+                        percentComplete: z,
                         activeScreen: A,
+                        popoutTargetElementRef: P,
+                        onGameSheetOpened: g,
+                        onGameSheetClosed: y,
                     }),
                     (0, r.jsx)(x.n, {
                         children:
@@ -403,9 +409,9 @@ function X(e) {
                                         onDesktop: () => N(Z.cd.DESKTOP),
                                     }),
                                 )
-                                .with(I.LI.DESKTOP, () => (0, r.jsx)(M.Z, { quest: n }))
+                                .with(I.LI.DESKTOP, () => (0, r.jsx)(k.Z, { quest: n }))
                                 .with(I.LI.CONSOLE, () =>
-                                    (0, r.jsx)(k.Z, {
+                                    (0, r.jsx)(M.Z, {
                                         quest: n,
                                         taskDetails: a,
                                     }),
@@ -414,18 +420,18 @@ function X(e) {
                     }),
                     (0, r.jsxs)(x.n, {
                         children: [
-                            D &&
+                            V &&
                                 (0, r.jsx)(Y, {
                                     isExpanded: d,
                                     quest: n,
-                                    onClick: W,
+                                    onClick: K,
                                     reducedMotion: f,
                                 }),
                             (0, r.jsx)(L.y, {
                                 quest: n,
                                 useReducedMotion: f,
                                 isExpanded: d,
-                                awaitingConsoleConnections: P,
+                                awaitingConsoleConnections: D,
                                 hasMadeProgress: T,
                                 isProgressing: S,
                                 activeScreen: A,

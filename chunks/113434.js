@@ -818,40 +818,52 @@ function ek(e) {
 }
 function eU(e) {
     var t, n;
-    let { quest: i, isExpanded: a, sourceQuestContent: o, activeScreen: s } = e,
-        l = ed(r.useMemo(() => L.r.build(i.config).rewardsExpireAt, [i.config])),
-        c = eg(i),
-        u = eE(i),
-        d = (null == (t = i.userStatus) ? void 0 : t.completedAt) != null,
-        f = (null == (n = i.userStatus) ? void 0 : n.enrolledAt) != null,
-        _ = eh(i),
-        p = (0, D.DD)({
+    let {
+            quest: i,
+            isExpanded: a,
+            sourceQuestContent: o,
+            activeScreen: s,
+            popoutTargetElementRef: l,
+            onGameSheetOpened: c,
+            onGameSheetClosed: u,
+        } = e,
+        d = ed(r.useMemo(() => L.r.build(i.config).rewardsExpireAt, [i.config])),
+        f = eg(i),
+        _ = eE(i),
+        p = (null == (t = i.userStatus) ? void 0 : t.completedAt) != null,
+        h = (null == (n = i.userStatus) ? void 0 : n.enrolledAt) != null,
+        m = f.percentComplete > 0,
+        g = eh(i),
+        E = (0, D.DD)({
             quest: i,
             location: j.dr.QUESTS_BAR,
             questContent: R.jn.QUEST_BAR_V2,
-            taskDetails: c,
+            taskDetails: f,
             sourceQuestContent: o,
+            popoutTargetElementRef: l,
+            onGameSheetOpened: c,
+            onGameSheetClosed: u,
         }),
-        h = null != u ? u.percentComplete : c.percentComplete;
-    if (d) return U.intl.formatToPlainString(U.t.APddvL, { expirationDate: l });
+        b = null != _ ? _.percentComplete : f.percentComplete;
+    if (p) return U.intl.formatToPlainString(U.t.APddvL, { expirationDate: d });
     if (a)
         if (s === R.LI.SELECT) return U.intl.string(U.t.sWUpNz);
         else {
-            if (!(0, A.Pb)(i) || !f) return p;
+            if (!(0, A.Pb)(i) || !h || m) return E;
             let e = L.r.build(i.config).defaultRewardNameWithArticle;
             return U.intl.format(U.t["1votFx"], {
                 rewardNameWithArticle: e,
-                targetMinutes: c.targetMinutes,
+                targetMinutes: f.targetMinutes,
             });
         }
     if ((0, A.q8)(i)) return U.intl.string(U.t["o+e9ys"]);
-    if (h > 0)
-        if (!_) return U.intl.string(U.t.mOrpXF);
+    if (b > 0)
+        if (!g) return U.intl.string(U.t.mOrpXF);
         else
             return (0, A.AV)({
                 quest: i,
-                taskDetails: c,
-                thirdPartyTaskDetails: null != u ? u : void 0,
+                taskDetails: f,
+                thirdPartyTaskDetails: null != _ ? _ : void 0,
             });
     return U.intl.string(U.t.S6UUc3);
 }
