@@ -65,20 +65,28 @@ let a = [
     ],
     r = [
         {
-            region: "Test #1",
-            pingUrl: "wss://bhs1.shockbyte.host/ping",
+            id: "1",
+            name: "Test #1",
+            countryCode: "US",
+            pingUrl: "bhs1.shockbyte.host/ping",
         },
         {
-            region: "Test #2",
-            pingUrl: "wss://bhs1.shockbyte.host/ping",
+            id: "2",
+            name: "Test #2",
+            countryCode: "US",
+            pingUrl: "bhs1.shockbyte.host/ping",
         },
         {
-            region: "Test #3",
-            pingUrl: "wss://bhs1.shockbyte.host/ping",
+            id: "3",
+            name: "Test #3",
+            countryCode: "US",
+            pingUrl: "bhs1.shockbyte.host/ping",
         },
         {
-            region: "Test #4",
-            pingUrl: "wss://bhs1.shockbyte.host/ping",
+            id: "4",
+            name: "Test #4",
+            countryCode: "US",
+            pingUrl: "bhs1.shockbyte.host/ping",
         },
     ];
 function l(e, t) {
@@ -145,7 +153,7 @@ let i = [
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
-            entitlementId: "1",
+            entitlementId: "2",
         },
         {
             id: "3",
@@ -162,7 +170,7 @@ let i = [
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
-            entitlementId: "1",
+            entitlementId: "3",
         },
         {
             id: "4",
@@ -179,7 +187,7 @@ let i = [
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
-            entitlementId: "1",
+            entitlementId: "4",
         },
         {
             id: "5",
@@ -196,7 +204,7 @@ let i = [
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
-            entitlementId: "1",
+            entitlementId: "5",
         },
         {
             id: "6",
@@ -213,6 +221,6 @@ let i = [
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
-            entitlementId: "1",
+            entitlementId: "6",
         },
     ];

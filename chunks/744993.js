@@ -1,10 +1,12 @@
 n.d(t, {
-    EC: () => h,
-    LG: () => x,
-    NE: () => b,
-    g$: () => p,
-    po: () => m,
-    s9: () => f,
+    EC: () => p,
+    F4: () => b,
+    LG: () => f,
+    NE: () => g,
+    _k: () => j,
+    g$: () => x,
+    po: () => h,
+    s9: () => v,
 });
 var a = n(544891),
     r = n(570140),
@@ -13,9 +15,10 @@ var a = n(544891),
     s = n(962774),
     o = n(101805),
     c = n(675984),
-    d = n(473682),
-    u = n(981631);
-function m(e) {
+    d = n(113130),
+    u = n(473682),
+    m = n(981631);
+function h(e) {
     var t, n;
     let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (a)
@@ -28,7 +31,7 @@ function m(e) {
         }, 5000);
     let o = null != (n = null == (t = l.default.getCurrentUser()) ? void 0 : t.isStaff()) && n;
     return (0, i.Kb)({
-        url: u.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(d.IU),
+        url: m.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(u.IU),
         query: {
             guild_id: e,
             include_unpublished_products: o,
@@ -48,7 +51,7 @@ function m(e) {
         });
     });
 }
-function h(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t
         ? void setTimeout(() => {
@@ -60,7 +63,7 @@ function h(e) {
           }, 5000)
         : a.tn
               .get({
-                  url: u.ANM.GAME_SERVERS(e),
+                  url: m.ANM.GAME_SERVERS(e),
                   rejectWithError: !0,
               })
               .then((t) => {
@@ -74,22 +77,25 @@ function h(e) {
                   }
               });
 }
-function p(e) {
+function x(e) {
     r.Z.dispatch({
         type: "PORTKEY_ACCEPT_TOS",
         acceptedToS: e,
     });
 }
-function x(e, t) {
+function b() {
+    r.Z.dispatch({ type: "PORTKEY_LOCATION_PING_STATE_RESET" });
+}
+function f(e, t) {
     r.Z.dispatch({
         type: "PORTKEY_LOCATION_PING_STATE_UPDATE",
         pingUrl: e,
         state: t,
     });
 }
-function b(e, t, n, r) {
+function g(e, t, n, r) {
     return a.tn.post({
-        url: u.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        url: m.ANM.GUILD_POWERUP_TOGGLE(e, t),
         body: {
             game_server_name: n,
             game_server_region: r,
@@ -98,11 +104,25 @@ function b(e, t, n, r) {
         oldFormErrors: !0,
     });
 }
-function f(e, t, n) {
+function v(e, t, n) {
     return a.tn.del({
-        url: u.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        url: m.ANM.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
+}
+function j(e) {
+    return a.tn
+        .get({
+            url: m.ANM.GAME_SERVER_REGIONS(e),
+            rejectWithError: !0,
+            oldFormErrors: !0,
+        })
+        .then((e) => {
+            r.Z.dispatch({
+                type: "PORTKEY_FETCH_REGIONS_SUCCESS",
+                regions: e.body.map(d.Z),
+            });
+        });
 }

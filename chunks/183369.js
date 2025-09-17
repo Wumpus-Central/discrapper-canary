@@ -1,6 +1,6 @@
 t.d(n, {
     KO: () => b,
-    aj: () => x,
+    aj: () => v,
 }),
     t(388685);
 var i = t(951288),
@@ -14,16 +14,16 @@ var i = t(951288),
     u = t(279604),
     m = t(744993),
     g = t(693587),
-    p = t(741252),
-    f = t(473682);
-let [v, x] = (0, d.Z)();
+    f = t(741252),
+    p = t(473682);
+let [x, v] = (0, d.Z)();
 function b(e) {
-    var n, t, d, x, b, j, h, _;
+    var n, t, d, v, b, j, h, _;
     let {
         guildId: C,
-        initialPortkeyInstance: y,
-        initialPortkeyGame: O,
-        stepConfig: N = f.T9,
+        initialPortkeyInstance: O,
+        initialPortkeyGame: y,
+        stepConfig: N = p.T9,
         children: S,
         onClose: P,
         analyticsLocation: w,
@@ -37,30 +37,30 @@ function b(e) {
         [I, Z] = r.useState(null != (t = N.initialStep) ? t : Object.keys(N.steps)[0]),
         G = (0, u.Td)(C, void 0),
         D = N.steps[I],
-        [B, L] = r.useState(null != (d = null == O ? void 0 : O.id) ? d : null == y ? void 0 : y.gameId),
-        M = r.useMemo(() => {
+        [R, B] = r.useState(null != (d = null == y ? void 0 : y.id) ? d : null == O ? void 0 : O.gameId),
+        L = r.useMemo(() => {
             var e;
-            if (null != B)
-                return Object.values(null != (e = null == k ? void 0 : k.catalog) ? e : {}).find((e) => e.id === B);
-        }, [null == k ? void 0 : k.catalog, B]),
-        [z, R] = r.useState(y),
-        [V, A] = r.useState(
-            null != (x = null == O || null == (n = O.plans[0]) ? void 0 : n.id) ? x : null == y ? void 0 : y.planId,
+            if (null != R)
+                return Object.values(null != (e = null == k ? void 0 : k.catalog) ? e : {}).find((e) => e.id === R);
+        }, [null == k ? void 0 : k.catalog, R]),
+        [M, z] = r.useState(O),
+        [F, A] = r.useState(
+            null != (v = null == y || null == (n = y.plans[0]) ? void 0 : n.id) ? v : null == O ? void 0 : O.planId,
         ),
-        F = (function (e, n, t, i) {
+        V = (function (e, n, t, i) {
             var r, l, o, s, c, d, u, m;
-            let p = (0, a.e7)([g.Z], () => {
+            let f = (0, a.e7)([g.Z], () => {
                     var n;
                     return null == (n = g.Z.getStateForGuild(e)) ? void 0 : n.entitlements;
                 }),
-                f = null != (u = null == n || null == (r = n.plans.find((e) => e.id === t)) ? void 0 : r.cost) ? u : 0;
+                p = null != (u = null == n || null == (r = n.plans.find((e) => e.id === t)) ? void 0 : r.cost) ? u : 0;
             return null == i
-                ? f
-                : f -
+                ? p
+                : p -
                       (null !=
                       (m =
-                          null == p ||
-                          null == (d = p[i.entitlementId]) ||
+                          null == f ||
+                          null == (d = f[i.entitlementId]) ||
                           null == (c = d.sku) ||
                           null == (s = c.tenant_metadata) ||
                           null == (o = s.guild_monetization) ||
@@ -69,27 +69,27 @@ function b(e) {
                               : l.boost_price)
                           ? m
                           : 0);
-        })(C, M, V, z),
-        W = r.useCallback((e, n) => {
+        })(C, L, F, M),
+        U = r.useCallback((e, n) => {
             var t;
-            L(null == e ? void 0 : e.id), A(null != n ? n : null == e || null == (t = e.plans[0]) ? void 0 : t.id);
+            B(null == e ? void 0 : e.id), A(null != n ? n : null == e || null == (t = e.plans[0]) ? void 0 : t.id);
         }, []),
-        U = r.useCallback((e) => {
-            R(e), L(e.gameId), A(e.planId), X(e.name), Y(e.location);
+        K = r.useCallback((e) => {
+            z(e), B(e.gameId), A(e.planId), X(e.name), Q(e.location);
         }, []),
-        [q, H] = r.useState(),
-        [K, X] = r.useState(null != (b = null == y ? void 0 : y.name) ? b : ""),
-        [Q, Y] = r.useState(null != (j = null == y ? void 0 : y.location) ? j : ""),
+        [W, H] = r.useState(),
+        [q, X] = r.useState(null != (b = null == O ? void 0 : O.name) ? b : ""),
+        [Y, Q] = r.useState(null != (j = null == O ? void 0 : O.location) ? j : ""),
         [$, J] = r.useState(!1),
         ee = r.useCallback(() => {
-            0 !== F &&
+            0 !== V &&
                 null != T &&
-                null != M &&
-                null != V &&
-                (G < F
+                null != L &&
+                null != F &&
+                (G < V
                     ? (0, o.u)({
                           analyticsLocation: w,
-                          numberOfBoostsToAdd: F - G,
+                          numberOfBoostsToAdd: V - G,
                           analyticsLocations: E,
                           guild: T,
                           intent: s.P.PERK,
@@ -97,15 +97,15 @@ function b(e) {
                               J(e);
                           },
                           onSubscribeComplete: () => {
-                              (0, m.NE)(T.id, V, K, Q).then(() => {
-                                  P(), (0, p.Z)(T.id, M);
+                              (0, m.NE)(T.id, F, q, Y).then(() => {
+                                  P(), (0, f.Z)(T.id, L);
                               });
                           },
                       })
-                    : (0, m.NE)(T.id, V, K, Q).then(() => {
-                          P(), (0, p.Z)(T.id, M);
+                    : (0, m.NE)(T.id, F, q, Y).then(() => {
+                          P(), (0, f.Z)(T.id, L);
                       }));
-        }, [E, T, G, V, w, M, K, Q, P, F]),
+        }, [E, T, G, F, w, L, q, Y, P, V]),
         en = r.useCallback(
             (e) => {
                 switch (e.type) {
@@ -127,7 +127,7 @@ function b(e) {
         ei = r.useCallback(() => {
             null != D && en(D.onNext);
         }, [D, en]);
-    return (0, i.jsx)(v.Provider, {
+    return (0, i.jsx)(x.Provider, {
         value: {
             guildId: C,
             step: I,
@@ -137,18 +137,18 @@ function b(e) {
             onNext: ei,
             portkeyGames: null != (h = null == k ? void 0 : k.catalog) ? h : {},
             instances: Object.values(null != (_ = null == k ? void 0 : k.instances) ? _ : {}),
-            currentGame: M,
-            setCurrentGame: W,
-            portkeyInstance: z,
-            setPortkeyInstance: U,
-            name: K,
+            currentGame: L,
+            setCurrentGame: U,
+            portkeyInstance: M,
+            setPortkeyInstance: K,
+            name: q,
             setName: X,
-            location: Q,
-            setLocation: Y,
-            planCost: F,
-            planId: V,
+            locationId: Y,
+            setLocationId: Q,
+            planCost: V,
+            planId: F,
             setPlanId: A,
-            footerNode: q,
+            footerNode: W,
             setFooterNode: H,
             availableBoostCount: G,
         },
