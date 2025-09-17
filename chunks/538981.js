@@ -1,6 +1,6 @@
 n.d(t, {
-    f: () => m,
-    r: () => g,
+    f: () => y,
+    r: () => O,
 });
 var r = n(951288),
     i = n(442837),
@@ -8,11 +8,15 @@ var r = n(951288),
     o = n(481060),
     s = n(570140),
     l = n(583434),
-    c = n(960048),
-    u = n(176757),
-    d = n(266198),
-    f = n(981631);
-function _(e, t, n) {
+    c = n(626135),
+    u = n(74538),
+    d = n(960048),
+    f = n(176757),
+    _ = n(266198),
+    p = n(219333),
+    h = n(304426),
+    m = n(981631);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +29,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,20 +40,20 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-let h = 3,
-    m = async (e) => {
+let b = 3,
+    y = async (e) => {
         let { campaignId: t } = e;
         try {
             s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_STARTED" });
             let e = await a.tn.get({
-                url: f.ANM.MARKETING_CAMPAIGN_ELIGIBILITY(t),
+                url: m.ANM.MARKETING_CAMPAIGN_ELIGIBILITY(t),
                 rejectWithError: !1,
-                retries: h,
+                retries: b,
             });
             return (
                 s.Z.dispatch({
@@ -59,30 +63,38 @@ let h = 3,
                 e.body.eligibility
             );
         } catch (e) {
-            s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED" }), c.Z.captureException(e);
+            s.Z.dispatch({ type: "MARKETING_CAMPAIGN_ELIGIBILITY_FETCH_FAILED" }), d.Z.captureException(e);
         }
     };
-function g() {
+function O() {
     let { isSeptemberMarketingMomentEntitlementCreated: e, isMarketingCampaignApplicationModalViewed: t } = (0, i.cj)(
-            [u.Z],
+            [f.Z],
             () => ({
-                isSeptemberMarketingMomentEntitlementCreated: u.Z.isSeptemberMarketingMomentEntitlementCreated,
-                isMarketingCampaignApplicationModalViewed: u.Z.isMarketingCampaignApplicationModalViewed,
+                isSeptemberMarketingMomentEntitlementCreated: f.Z.isSeptemberMarketingMomentEntitlementCreated,
+                isMarketingCampaignApplicationModalViewed: f.Z.isMarketingCampaignApplicationModalViewed,
             }),
         ),
-        { product: a } = (0, l.T)(d.Fw, !0);
+        { product: a } = (0, l.T)(_.Fw, !0),
+        d = (0, u.EK)();
     return (i) => {
-        let l = (null == i ? void 0 : i.sku_id) === d.Fw;
-        (e || l) &&
-            !t &&
-            null != a &&
-            (s.Z.dispatch({
-                type: "MARKETING_CAMPAIGN_APPLICATION_MODAL_VIEWED",
-                marketingCampaignId: d.Fw,
+        let l = (0, p.W)({ campaignID: h.m.NITRO_DROP }),
+            u = (null == i ? void 0 : i.sku_id) === _.Fw || e;
+        d &&
+            c.default.track(m.rMx.PREMIUM_MARKETING_CAMPAIGN_CLAIM_MODAL_OPEN_ATTEMPTED, {
+                has_entitlement: u,
+                is_dc_dismissed: l,
+                product_loaded_successfully: null != a,
             }),
-            (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("75157").then(n.bind(n, 710658));
-                return (t) => (0, r.jsx)(e, p({ product: a }, t));
-            }));
+            u &&
+                !t &&
+                null != a &&
+                (s.Z.dispatch({
+                    type: "MARKETING_CAMPAIGN_APPLICATION_MODAL_VIEWED",
+                    marketingCampaignId: _.Fw,
+                }),
+                (0, o.ZDy)(async () => {
+                    let { default: e } = await n.e("75157").then(n.bind(n, 710658));
+                    return (t) => (0, r.jsx)(e, E({ product: a }, t));
+                }));
     };
 }

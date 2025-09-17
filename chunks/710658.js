@@ -1,46 +1,52 @@
-a.d(n, { default: () => u });
-var i = a(951288),
-    e = a(667202),
-    c = a(635552),
-    s = a(300284),
-    o = a(342386),
-    r = a(526167),
-    d = a(388032),
-    l = a(461999),
-    p = a(793167);
-let u = (t) => {
-    let { transitionState: n, onClose: a, product: u } = t,
-        b = (0, s.Z)(),
-        { handleUseNow: f, isApplying: h } = (0, c.W)({
-            product: u,
+a.d(e, { default: () => k });
+var n = a(951288),
+    i = a(647438),
+    c = a(667202),
+    o = a(635552),
+    r = a(300284),
+    s = a(342386),
+    d = a(626135),
+    l = a(526167),
+    p = a(981631),
+    u = a(388032),
+    b = a(461999),
+    f = a(793167);
+let k = (t) => {
+    let { transitionState: e, onClose: a, product: k } = t;
+    i.useEffect(() => {
+        d.default.track(p.rMx.OPEN_MODAL, { type: "September Marketing Moment 2025 Claim Modal" });
+    }, []);
+    let g = (0, r.Z)(),
+        { handleUseNow: h, isApplying: m } = (0, o.W)({
+            product: k,
             onSuccess: a,
             onError: a,
         });
-    return (0, i.jsx)(e.I, {
+    return (0, n.jsx)(c.I, {
         gradientColor: "nitro-pink",
-        title: d.intl.string(d.t.qYWlf3),
-        subtitle: d.intl.string(d.t.x01cl5),
+        title: u.intl.string(u.t.qYWlf3),
+        subtitle: u.intl.string(u.t.x01cl5),
         actions: [
             {
-                text: d.intl.string(d.t["2p2aY2"]),
+                text: u.intl.string(u.t["2p2aY2"]),
                 variant: "secondary",
                 onClick: () => {
-                    a(), (0, o.default)(), null == b || b();
+                    a(), (0, s.default)(), null == g || g();
                 },
             },
             {
-                text: d.intl.string(d.t.MAS7uL),
+                text: u.intl.string(u.t.MAS7uL),
                 variant: "primary",
-                onClick: f,
-                loading: h,
+                onClick: h,
+                loading: m,
             },
         ],
         graphic: {
             type: "video",
-            src: (0, r.rO)() ? l.Z : p.Z,
+            src: (0, l.rO)() ? b.Z : f.Z,
             loop: !0,
         },
-        transitionState: n,
+        transitionState: e,
         onClose: a,
     });
 };
