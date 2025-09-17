@@ -86464,6 +86464,7 @@ span.clanTag__07f91.isOverlay__07f91 {
     cursor: pointer;
     display: flex;
     flex-shrink: 1;
+    gap: 8px;
     height: 24px;
     justify-content: center;
     margin-left: var(--space-4);
@@ -89868,7 +89869,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
