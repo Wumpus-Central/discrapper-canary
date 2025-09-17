@@ -1,16 +1,19 @@
 n.d(t, {
-    SQ: () => u,
-    nW: () => c,
+    Kd: () => _,
+    SQ: () => f,
+    nW: () => d,
 });
 var r = n(311570);
 n(46973);
 var i = n(357352),
-    a = n(768581),
-    o = n(922347),
-    s = n(135483),
-    l = n(212161);
+    a = n(975298),
+    o = n(768581),
+    s = n(55935),
+    l = n(922347),
+    c = n(135483),
+    u = n(212161);
 n(37113);
-let c = (e, t) => {
+let d = (e, t) => {
         let n = {};
         return (
             null != t && (n.tab = t),
@@ -29,22 +32,31 @@ let c = (e, t) => {
             n
         );
     },
-    u = (e) => {
+    f = (e) => {
         var t;
         let n = null == (t = e.items) ? void 0 : t[0];
         if (null == n) return "";
-        if ((0, o.M)(n)) {
-            let e = (0, a.NZ)({
+        if ((0, l.M)(n)) {
+            let e = (0, o.NZ)({
                 avatarDecoration: n,
                 size: 40,
                 canAnimate: !1,
             });
             return null != e ? e : "";
         }
-        if ((0, l.H)(n)) {
+        if ((0, u.H)(n)) {
             let e = n.staticFrameSrc,
                 t = n.thumbnailPreviewSrc;
             return null != e && "" !== e ? e : null != t && "" !== t ? t : "";
         }
-        return (0, s.k)(n) ? (0, i.b)("collectibles/".concat(n.asset, "static.png")) : "";
+        return (0, c.k)(n) ? (0, i.b)("collectibles/".concat(n.asset, "static.png")) : "";
+    },
+    _ = () => {
+        let e = (0, a.Z)({ forceFetch: !0 }),
+            t = (0, s.vc)(e.endsAt, "L");
+        return {
+            isLoading: !e.fetched,
+            isFractionalPremiumActive: e.isFractionalPremiumActive,
+            expiresAt: t,
+        };
     };
