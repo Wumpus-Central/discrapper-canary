@@ -19,6 +19,7 @@ e.exports = {
     tier2: "tier2__84995",
     toolsButtons: "toolsButtons__84995",
     toolsButton: "toolsButton__84995",
+    secondaryBannerTextButtonContainerWithPause: "secondaryBannerTextButtonContainerWithPause__84995",
     secondaryBannerTextButtonContainer: "secondaryBannerTextButtonContainer__84995",
     detailsContainer: "detailsContainer__84995",
     discountPill: "discountPill__84995",

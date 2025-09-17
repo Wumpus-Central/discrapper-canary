@@ -64,7 +64,7 @@ function j(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function k(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -224,7 +224,7 @@ let Y = function (e) {
     var t;
     let { subscription: i, renewalInvoicePreview: a, paymentSource: o, busy: _, analyticsLocation: C } = e,
         L = "subscription_header",
-        { analyticsLocations: k } = (0, d.ZP)(u.Z.SUBSCRIPTION_HEADER),
+        { analyticsLocations: M } = (0, d.ZP)(u.Z.SUBSCRIPTION_HEADER),
         { fractionalState: H } = (0, f.Z)({ forceFetch: !1 }),
         Y = H === P.a$.FP_SUB_PAUSED,
         { enabled: W } = (0, S.ZP)({ location: L });
@@ -250,10 +250,10 @@ let Y = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        M(j({}, n), {
+                        k(j({}, n), {
                             premiumSubscription: i,
                             analyticsLocation: C,
-                            analyticsLocations: k,
+                            analyticsLocations: M,
                             initialStep: e,
                         }),
                     );
@@ -271,10 +271,10 @@ let Y = function (e) {
                     (0, O.tD)(e.id, n, null == o ? void 0 : o.id) &&
                     (r = !0),
                     r
-                        ? c.O5(i, k)
+                        ? c.O5(i, M)
                         : (0, p.Z)({
                               initialPlanId: i.premiumPlanIdFromItems,
-                              analyticsLocations: k,
+                              analyticsLocations: M,
                               analyticsLocation: C,
                               analyticsObject: G,
                               subscription: i,
@@ -293,13 +293,13 @@ let Y = function (e) {
             i.status === w.O0b.PAUSED
                 ? (0, p.Z)({
                       initialPlanId: i.premiumPlanIdFromItems,
-                      analyticsLocations: k,
+                      analyticsLocations: M,
                       analyticsLocation: C,
                       analyticsObject: G,
                       subscription: i,
                       skipConfirm: !0,
                   })
-                : c.v4(i, k);
+                : c.v4(i, M);
         },
         ei = () => {
             i.status === w.O0b.PAUSED && et(R.R.PAUSE_SELECT);
@@ -344,35 +344,38 @@ let Y = function (e) {
                 return (0, r.jsxs)("div", {
                     className: x.toolsButtons,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: x.secondaryBannerTextButtonContainer,
-                            children: W
-                                ? (0, r.jsx)(l.Avr, {
+                        W
+                            ? (0, r.jsx)("div", {
+                                  className: x.secondaryBannerTextButtonContainerWithPause,
+                                  children: (0, r.jsx)(l.Avr, {
                                       variant: "always-white",
                                       disabled: _,
                                       onClick: J,
                                       size: "sm",
                                       text: D.intl.string(D.t.eFlYVF),
-                                  })
-                                : (0, r.jsx)(l.Avr, {
+                                  }),
+                              })
+                            : (0, r.jsx)("div", {
+                                  className: x.secondaryBannerTextButtonContainer,
+                                  children: (0, r.jsx)(l.Avr, {
                                       variant: "always-white",
                                       onClick: $,
                                       disabled: _,
                                       size: "sm",
                                       text: D.intl.string(D.t["ETE/oK"]),
                                   }),
-                        }),
+                              }),
                         (0, r.jsx)(l.ua7, {
                             text: t,
                             children: (t) =>
                                 (0, r.jsx)(
                                     N.Z,
-                                    M(j({}, t), {
+                                    k(j({}, t), {
                                         disabled: e,
                                         className: x.toolsButton,
                                         onClick: () => {
                                             (0, p.Z)({
-                                                analyticsLocations: k,
+                                                analyticsLocations: M,
                                                 analyticsLocation: C,
                                                 analyticsObject: G,
                                                 subscription: i,
