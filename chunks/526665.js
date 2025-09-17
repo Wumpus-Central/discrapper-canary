@@ -1,4 +1,5 @@
 n.d(t, {
+    KV: () => s,
     gj: () => o,
     wy: () => a,
     yP: () => i,
@@ -32,4 +33,5 @@ let r = (0, n(818083).B)({
     }),
     i = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
     a = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
-    o = () => r.useExperiment({ location: "user_settings" }, { autoTrackExposure: !1 }).showRedesignedNotifications;
+    o = () => r.useExperiment({ location: "user_settings" }, { autoTrackExposure: !1 }).showRedesignedNotifications,
+    s = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).showRedesignedNotifications;
