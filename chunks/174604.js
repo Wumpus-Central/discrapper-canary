@@ -1,17 +1,16 @@
-n.d(t, { Z: () => y }), n(388685), n(583741), n(953529);
+n.d(t, { Z: () => b }), n(388685), n(583741), n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(938288),
     l = n(793030),
-    c = n(755721),
-    u = n(481060),
-    d = n(70300),
-    f = n(989308),
-    _ = n(388032),
-    p = n(240656);
-function h(e, t, n) {
+    c = n(481060),
+    u = n(70300),
+    d = n(258640),
+    f = n(388032),
+    _ = n(837059);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,31 +51,31 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e) {
+function E(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(l.xvT, {
         tag: "span",
         variant: "text-md/semibold",
-        className: p.highlight,
+        className: _.highlight,
         children: t.title,
     });
 }
-function y(e) {
+function b(e) {
     let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
-        h = (0, d.Z)(t.id),
-        [g, y] = i.useState(!1),
-        [O, v] = (0, u.q_F)(() => ({
+        p = (0, u.Z)(t.id),
+        [m, b] = i.useState(!1),
+        [y, O] = (0, c.q_F)(() => ({
             scale: 0.8,
             config: {
                 tension: 500,
@@ -85,47 +84,47 @@ function y(e) {
         }));
     i.useEffect(() => {
         let e = setTimeout(() => {
-            v({ scale: 1 }), y(!0);
+            O({ scale: 1 }), b(!0);
         }, 300);
         return () => clearTimeout(e);
-    }, [v]);
-    let I = i.useMemo(() => {
+    }, [O]);
+    let v = i.useMemo(() => {
         let e;
-        if (null == h || 0 === h.length) return "";
-        if (1 === h.length) e = (0, r.jsx)(b, { powerup: h[0] });
-        else if (2 === h.length)
-            e = _.intl.format(f.default.MNO3sL, {
-                perk1: (0, r.jsx)(b, { powerup: h[0] }),
-                perk2: (0, r.jsx)(b, { powerup: h[1] }),
+        if (null == p || 0 === p.length) return "";
+        if (1 === p.length) e = (0, r.jsx)(E, { powerup: p[0] });
+        else if (2 === p.length)
+            e = f.intl.format(d.default.MNO3sL, {
+                perk1: (0, r.jsx)(E, { powerup: p[0] }),
+                perk2: (0, r.jsx)(E, { powerup: p[1] }),
             });
         else {
-            let t = Array.from(h).reverse();
-            e = _.intl.format(f.default.GmN3VV, {
-                perk1: (0, r.jsx)(b, { powerup: t[0] }),
-                perk2: (0, r.jsx)(b, { powerup: t[1] }),
+            let t = Array.from(p).reverse();
+            e = f.intl.format(d.default.GmN3VV, {
+                perk1: (0, r.jsx)(E, { powerup: t[0] }),
+                perk2: (0, r.jsx)(E, { powerup: t[1] }),
             });
         }
-        return _.intl.format(f.default["/6GgQk"], { perks: e });
-    }, [h]);
-    return null == h || 0 === h.length
+        return f.intl.format(d.default["/6GgQk"], { perks: e });
+    }, [p]);
+    return null == p || 0 === p.length
         ? null
         : (0, r.jsxs)(s.animated.div, {
-              className: o()(p.container, { [p.themeResponsiveContainer]: n }),
-              style: E(m({}, O), { opacity: +!!g }),
+              className: o()(_.container, { [_.themeResponsiveContainer]: n }),
+              style: g(h({}, y), { opacity: +!!m }),
               children: [
                   (0, r.jsx)(l.xvT, {
                       tag: "span",
                       variant: "text-md/semibold",
-                      className: o()(p.description, {
-                          [p.text]: !n,
-                          [p.responsiveText]: n,
+                      className: o()(_.description, {
+                          [_.text]: !n,
+                          [_.responsiveText]: n,
                       }),
-                      children: I,
+                      children: v,
                   }),
-                  (0, r.jsx)(c.zx, {
-                      className: p.button,
+                  (0, r.jsx)(l.zxk, {
+                      variant: "primary",
+                      text: f.intl.string(d.default.E5V5KC),
                       onClick: a,
-                      children: _.intl.string(f.default.E5V5KC),
                   }),
               ],
           });
