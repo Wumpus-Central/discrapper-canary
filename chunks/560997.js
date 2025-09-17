@@ -1,8 +1,8 @@
 n.d(t, {
-    KM: () => f,
-    R2: () => _,
-    TG: () => p,
-    Zc: () => d,
+    KM: () => u,
+    R2: () => d,
+    TG: () => f,
+    Zc: () => c,
 });
 var r = n(442837),
     i = n(570140),
@@ -10,41 +10,17 @@ var r = n(442837),
     o = n(675478),
     s = n(581883),
     l = n(526761);
-function c(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function d(e, t, n, i) {
-    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.fy.INFREQUENT_USER_ACTION,
-        c = () => {
+function c(e, t, n, i) {
+    let { delay: a = l.fy.INFREQUENT_USER_ACTION, comparator: c = (e, t) => e === t } =
+            arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        u = () => {
             var r;
             return n(null == (r = s.Z.settings[e]) ? void 0 : r[t]);
         },
-        u = () => (0, r.e7)([s.Z], c);
+        d = () => (0, r.e7)([s.Z], u, void 0, c);
     return {
-        getSetting: c,
-        updateSetting: h(c, (n) =>
+        getSetting: u,
+        updateSetting: _(u, (n) =>
             o.hW.updateAsync(
                 e,
                 (e) => {
@@ -53,10 +29,10 @@ function d(e, t, n, i) {
                 a,
             ),
         ),
-        useSetting: u,
+        useSetting: d,
     };
 }
-function f(e, t, n) {
+function u(e, t, n) {
     let o = () => {
         var r;
         let i = a.Z.getState()[t];
@@ -72,7 +48,7 @@ function f(e, t, n) {
                 });
             return null != o ? o : i;
         },
-        updateSetting: h(o, (r) =>
+        updateSetting: _(o, (r) =>
             a.Z.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.Z.dispatch({
@@ -83,7 +59,7 @@ function f(e, t, n) {
         ),
     };
 }
-function _(e, t, n, r) {
+function d(e, t, n, r) {
     let a = () => {
         var t;
         return null != (t = n()) ? t : e.getSetting();
@@ -95,7 +71,7 @@ function _(e, t, n, r) {
                 n = r();
             return null != n ? n : t;
         },
-        updateSetting: h(
+        updateSetting: _(
             a,
             (n) => (
                 i.Z.dispatch({
@@ -107,7 +83,7 @@ function _(e, t, n, r) {
         ),
     };
 }
-function p(e) {
+function f(e) {
     let {
         baseSetting: t,
         isEligible: n,
@@ -129,7 +105,7 @@ function p(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
-function h(e, t) {
+function _(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);
     };
