@@ -6523,6 +6523,7 @@
   "SAr319": "Upload {minValues} files under !!{maxSize}!!.",
   "ZG+3Cg": "Upload {minValues}–{maxValues} files under !!{maxSize}!!.",
   "y68I8P": "Drop {maxValues, plural, one {file} other {files} } here or [browse](browse)",
+  "/2JwTk": "Upload {maxValues, plural, one {File} other {Files} }",
   "ZMirp6": "Unknown file",
   "M6qV8v": "50MB",
   "yMOW8P": "100MB",
