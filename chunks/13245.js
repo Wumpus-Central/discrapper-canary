@@ -413,6 +413,9 @@ let O = new o.Z("OverlayActionCreators"),
                 enabled: t,
             });
         },
+        oopUiShowInactiveSuccess() {
+            i.Z.dispatch({ type: "OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS" });
+        },
         oopUiInitialized() {
             i.Z.dispatch({ type: "OVERLAY_OOP_UI_INITIALIZED" });
         },

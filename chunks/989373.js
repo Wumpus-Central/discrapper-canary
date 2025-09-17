@@ -20,8 +20,8 @@ var b = n(41534),
     I = n(837268),
     g = n(554370),
     C = n(371651),
-    y = n(610394),
-    w = n(757744),
+    w = n(610394),
+    y = n(757744),
     S = n(981631);
 let x = new _.Z("AppOverlay");
 async function E(e, t) {
@@ -51,7 +51,7 @@ async function E(e, t) {
 let B = o.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         _ = (function (e, t) {
-            let n = (0, r.e7)([y.ZP], () => !h.isPlatformEmbedded || y.ZP.isWindowHandleInitialized()),
+            let n = (0, r.e7)([w.ZP], () => !h.isPlatformEmbedded || w.ZP.isWindowHandleInitialized()),
                 a = (0, r.e7)([d.Z], () => d.Z.getWindow(e)),
                 l = o.useRef(null),
                 _ = o.useRef(null),
@@ -61,25 +61,25 @@ let B = o.memo(function (e) {
                     return !h.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
                 [b, g] = o.useState(!1),
-                w = o.useRef(!1),
+                y = o.useRef(!1),
                 x = o.useCallback(() => {
                     let e = (0, v.getPID)(),
                         n = null != s.Z.getVoiceChannelId();
                     i.Z.track(S.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: y.ZP.isPinned(S.Odu.TEXT),
+                        text_widget_connected: w.ZP.isPinned(S.Odu.TEXT),
                         overlay_render_method: I.gl[C.default.getOverlayMethod(e)],
                         unpinned_widget_types: f.Z.getAllUnpinnedPinnedWidgets(t),
                     }),
                         i.Z.oopUiInitialized();
                 }, [t]);
-            (0, c.Ng)(() => {
+            (0, c.ZP)(() => {
                 let e = (e) => {
                     let t = null != a ? a : window;
-                    e.data === y.Il &&
+                    e.data === w.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
-                                window.parent.postMessage(y.A8, "*");
+                                window.parent.postMessage(w.A8, "*");
                             });
                         });
                 };
@@ -99,7 +99,7 @@ let B = o.memo(function (e) {
                         }),
                         (l.current = e.requestAnimationFrame(async () => {
                             try {
-                                await E(e, t);
+                                await E(e, t), i.Z.oopUiShowInactiveSuccess();
                             } catch (e) {
                                 i.Z.setOverlayCrashed((0, v.getPID)(), e);
                                 return;
@@ -113,14 +113,15 @@ let B = o.memo(function (e) {
             );
             return (
                 o.useEffect(() => {
-                    m && null != a && n && (w.current || ((w.current = !0), B(a, e)));
+                    m && null != a && n && (y.current || ((y.current = !0), B(a, e)));
                 }, [B, m, e, a, n]),
                 (0, c.zq)(() => {
-                    null != u.current && u.current();
+                    var e;
+                    null == (e = u.current) || e.call(u);
                 }),
                 b
             );
-        })(n, w.$S),
+        })(n, y.$S),
         m = (0, v.getPID)(),
         b = (0, r.e7)([p.default], () => p.default.isInputLocked(m), [m]);
     return _
