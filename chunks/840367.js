@@ -1,41 +1,43 @@
-r.d(t, { Z: () => a });
-var n = r(951288);
-r(647438);
-var i = r(481060),
-    l = r(825354),
-    o = r(635318);
-function a(e) {
+n.d(t, { Z: () => s });
+var r = n(951288);
+n(647438);
+var i = n(442837),
+    o = n(481060),
+    a = n(314897),
+    l = n(825354),
+    c = n(635318);
+function s(e) {
     let {
         userId: t,
-        headingId: r,
-        widget: l,
+        headingId: n,
+        widget: i,
         disableInteraction: a = !1,
-        title: s,
-        subtitle: u,
+        title: l,
+        subtitle: s,
         actionButtons: d = [],
     } = e;
-    return (0, n.jsxs)("div", {
-        className: o.headerRow,
+    return (0, r.jsxs)("div", {
+        className: c.headerRow,
         children: [
-            (0, n.jsxs)("div", {
-                className: o.title,
+            (0, r.jsxs)("div", {
+                className: c.title,
                 children: [
-                    (0, n.jsx)(i.X6q, {
+                    (0, r.jsx)(o.X6q, {
                         variant: "heading-sm/medium",
                         color: "text-default",
-                        id: r,
-                        children: s,
+                        id: n,
+                        children: l,
                     }),
-                    null != u &&
-                        (0, n.jsx)(i.Text, {
+                    null != s &&
+                        (0, r.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "text-secondary",
-                            children: u,
+                            children: s,
                         }),
                 ],
             }),
-            (0, n.jsx)(c, {
-                widget: l,
+            (0, r.jsx)(u, {
+                widget: i,
                 actionButtons: d,
                 disabledInteraction: a,
                 userId: t,
@@ -43,21 +45,24 @@ function a(e) {
         ],
     });
 }
-function c(e) {
-    let { widget: t, actionButtons: r, disabledInteraction: i, userId: a } = e;
-    return i
+function u(e) {
+    let { widget: t, actionButtons: n, disabledInteraction: o, userId: s } = e,
+        u = (0, i.e7)([a.default], () => a.default.getId());
+    return o
         ? null
-        : null != r && r.length > 0
-          ? (0, n.jsx)("div", {
-                className: o.actions,
-                children: r,
+        : null != n && n.length > 0
+          ? (0, r.jsx)("div", {
+                className: c.actions,
+                children: n,
             })
-          : (0, n.jsx)("div", {
-                className: o.actions,
-                children: (0, n.jsx)(l.Z, {
-                    widget: t,
-                    userId: a,
-                    className: o.menuButton,
-                }),
-            });
+          : u !== s
+            ? (0, r.jsx)("div", {
+                  className: c.actions,
+                  children: (0, r.jsx)(l.Z, {
+                      widget: t,
+                      userId: s,
+                      className: c.menuButton,
+                  }),
+              })
+            : null;
 }

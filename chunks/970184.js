@@ -1,34 +1,33 @@
 n.d(t, {
-    CJ: () => U,
-    Ee: () => M,
+    CJ: () => G,
+    Ee: () => U,
     Il: () => k,
-    h4: () => G,
+    h4: () => B,
 }),
     n(388685),
-    n(997841);
+    n(997841),
+    n(415506);
 var r = n(951288),
     i = n(647438),
-    a = n(512722),
-    o = n.n(a),
-    s = n(442837),
-    l = n(570140),
-    c = n(911969),
-    u = n(493773),
-    d = n(71619),
-    f = n(282397),
-    _ = n(622449),
-    p = n(188597),
-    h = n(41776),
-    m = n(665906),
-    g = n(592125),
-    E = n(271383),
-    b = n(607744),
-    y = n(594174),
-    O = n(280501),
-    v = n(292419),
-    I = n(892902),
-    T = n(359232);
-function S(e, t, n) {
+    a = n(442837),
+    o = n(570140),
+    s = n(911969),
+    l = n(493773),
+    c = n(71619),
+    u = n(282397),
+    d = n(622449),
+    f = n(188597),
+    _ = n(41776),
+    p = n(665906),
+    h = n(592125),
+    m = n(271383),
+    g = n(607744),
+    E = n(594174),
+    b = n(280501),
+    y = n(292419),
+    O = n(892902),
+    v = n(359232);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +40,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +51,12 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,85 +68,86 @@ function C(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let R = (e) => {
+let C = (e) => {
         switch (e.type) {
-            case c.re.BUTTON:
-                return e.style !== c.ZJ.LINK;
-            case c.re.STRING_SELECT:
-            case c.re.USER_SELECT:
-            case c.re.ROLE_SELECT:
-            case c.re.MENTIONABLE_SELECT:
-            case c.re.CHANNEL_SELECT:
+            case s.re.BUTTON:
+                return e.style !== s.ZJ.LINK;
+            case s.re.STRING_SELECT:
+            case s.re.USER_SELECT:
+            case s.re.ROLE_SELECT:
+            case s.re.MENTIONABLE_SELECT:
+            case s.re.CHANNEL_SELECT:
                 return !0;
-            case c.re.ACTION_ROW:
-            case c.re.TEXT_INPUT:
+            case s.re.ACTION_ROW:
+            case s.re.TEXT_INPUT:
             default:
                 return !1;
         }
     },
-    P = function (e, t) {
+    N = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = O.gH.NORMAL;
+            r = b.gH.NORMAL;
         return (
             null != e &&
-                e.state !== _.F.FAILED &&
-                (e.data.interactionType === c.B8.MESSAGE_COMPONENT && e.data.componentId === t.id
-                    ? (r = O.gH.LOADING)
-                    : R(t) && (r = O.gH.DISABLED)),
-            n && R(t) && (r = O.gH.DISABLED),
+                e.state !== d.F.FAILED &&
+                (e.data.interactionType === s.B8.MESSAGE_COMPONENT && e.data.componentId === t.id
+                    ? (r = b.gH.LOADING)
+                    : C(t) && (r = b.gH.DISABLED)),
+            n && C(t) && (r = b.gH.DISABLED),
             r
         );
-    },
-    w = (e) => {
-        let t = g.Z.getChannel(e),
-            n = (0, s.e7)([b.Z], () => (null == t ? void 0 : t.guild_id) == null || b.Z.canChatInGuild(t.guild_id), [
-                t,
-            ]),
-            r = (0, s.e7)([h.Z], () => (null == t ? void 0 : t.guild_id) != null && h.Z.isLurking(t.guild_id), [t]),
-            i = (0, s.e7)([E.ZP, y.default], () => {
-                var e, n;
-                let r = y.default.getCurrentUser();
-                return (
-                    null !=
-                        (n =
-                            (null == t ? void 0 : t.guild_id) != null && null != r
-                                ? null == (e = E.ZP.getMember(null == t ? void 0 : t.guild_id, r.id))
-                                    ? void 0
-                                    : e.isPending
-                                : null) && n
-                );
-            }),
-            [, a] = (0, d.AB)(null == t ? void 0 : t.guild_id),
-            o = (0, m.tc)(t);
-        return (
-            !!(
-                !n ||
-                r ||
-                i ||
-                (null == t ? void 0 : t.isLockedThread()) ||
-                ((null == t ? void 0 : t.isArchivedThread()) && !o)
-            ) || !!a
-        );
     };
-function D(e, t) {
+function R(e) {
+    return "app-widget-".concat(e.applicationId);
+}
+let P = (e) => {
+    let t = h.Z.getChannel(e),
+        n = (0, a.e7)([g.Z], () => (null == t ? void 0 : t.guild_id) == null || g.Z.canChatInGuild(t.guild_id), [t]),
+        r = (0, a.e7)([_.Z], () => (null == t ? void 0 : t.guild_id) != null && _.Z.isLurking(t.guild_id), [t]),
+        i = (0, a.e7)([m.ZP, E.default], () => {
+            var e, n;
+            let r = E.default.getCurrentUser();
+            return (
+                null !=
+                    (n =
+                        (null == t ? void 0 : t.guild_id) != null && null != r
+                            ? null == (e = m.ZP.getMember(null == t ? void 0 : t.guild_id, r.id))
+                                ? void 0
+                                : e.isPending
+                            : null) && n
+            );
+        }),
+        [, o] = (0, c.AB)(null == t ? void 0 : t.guild_id),
+        s = (0, p.tc)(t);
+    return (
+        !!(
+            !n ||
+            r ||
+            i ||
+            (null == t ? void 0 : t.isLockedThread()) ||
+            ((null == t ? void 0 : t.isArchivedThread()) && !s)
+        ) || !!o
+    );
+};
+function w(e, t) {
     var n, r;
-    let a = i.useContext(j),
+    let a = i.useContext(M),
         o = i.useCallback(
             (t) => {
                 var n;
-                let r = (0, T.Z)(e, t, null != a.modal ? "modal" : "message");
-                return null == (n = a.setValidationErrors) || n.call(a, (t) => N(A({}, t), { [e.id]: r })), null == r;
+                let r = (0, v.Z)(e, t, null != a.modal ? "modal" : "message");
+                return null == (n = a.setValidationErrors) || n.call(a, (t) => A(T({}, t), { [e.id]: r })), null == r;
             },
             [e, a],
         );
@@ -169,29 +169,29 @@ function D(e, t) {
         }
     );
 }
-function x(e, t, n, r) {
-    var a;
-    let o = (0, s.e7)([I.Z], () => I.Z.getInteractionComponentState(e.id, n.id)),
-        l = (0, s.e7)([f.ZP], () => f.ZP.getInteraction(e), [e]),
-        c = w(e.channel_id) || t,
-        { error: u, validate: d } = D(n, o),
-        _ = null != (a = e.applicationId) ? a : e.author.id;
+function D(e, t, n, r) {
+    var o;
+    let s = (0, a.e7)([O.Z], () => O.Z.getInteractionComponentState(e.id, n.id)),
+        l = (0, a.e7)([u.ZP], () => u.ZP.getInteraction(e), [e]),
+        c = P(e.channel_id) || t,
+        { error: d, validate: _ } = w(n, s),
+        p = null != (o = e.applicationId) ? o : e.author.id;
     return {
-        state: o,
+        state: s,
         executeStateUpdate: i.useCallback(
             (t) => {
-                if (!d(t)) return !1;
-                let r = g.Z.getChannel(e.channel_id);
+                if (!_(t)) return !1;
+                let r = h.Z.getChannel(e.channel_id);
                 return (
                     null != r &&
                         null != n.customId &&
-                        (0, p.tM)({
+                        (0, f.tM)({
                             componentType: n.type,
                             messageId: e.id,
                             messageFlags: e.flags,
                             customId: n.customId,
                             componentId: n.id,
-                            applicationId: _,
+                            applicationId: p,
                             channelId: r.id,
                             guildId: r.guild_id,
                             localState: t,
@@ -199,88 +199,108 @@ function x(e, t, n, r) {
                     !0
                 );
             },
-            [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, _, d],
+            [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, p, _],
         ),
-        isDisabled: c && R(n),
-        visualState: P(l, n, c),
-        error: u,
+        isDisabled: c && C(n),
+        visualState: N(l, n, c),
+        error: d,
     };
 }
-function L(e, t, n) {
-    let r = (0, s.e7)([I.Z], () => I.Z.getInteractionComponentState(e.customId, t.id)),
-        { error: a, validate: o } = D(t, r),
-        c = i.useCallback(
+function x(e, t, n) {
+    let r = (0, a.e7)([O.Z], () => O.Z.getInteractionComponentState(e.customId, t.id)),
+        { error: s, validate: c } = w(t, r),
+        u = i.useCallback(
             (n) =>
                 null == n ||
-                (l.Z.dispatch({
+                (o.Z.dispatch({
                     type: "SET_INTERACTION_COMPONENT_STATE",
                     rootContainerId: e.customId,
                     componentId: t.id,
                     state: n,
                 }),
-                !!o(n)),
-            [e.customId, t.id, o],
+                !!c(n)),
+            [e.customId, t.id, c],
         );
     return (
-        (0, u.ZP)(() => {
-            c(n);
+        (0, l.ZP)(() => {
+            u(n);
         }),
         {
             state: r,
-            executeStateUpdate: c,
+            executeStateUpdate: u,
             isDisabled: !1,
-            visualState: O.gH.NORMAL,
-            error: a,
+            visualState: b.gH.NORMAL,
+            error: s,
         }
     );
 }
-let j = i.createContext(null);
+function L(e) {
+    return () => {
+        throw Error("".concat(e, " does not support state"));
+    };
+}
+function j(e) {
+    return () => {
+        throw Error("".concat(e, " does not support parents"));
+    };
+}
+let M = i.createContext(null);
 function k(e) {
     let {
             children: t,
             message: n,
             modal: a,
+            applicationWidget: o,
             validators: s,
             validationErrors: l,
             setValidationErrors: c,
             shouldDisableInteractiveComponents: u = !1,
         } = e,
-        d = i.useMemo(
-            () =>
-                null != n
-                    ? {
-                          useComponentState: x.bind(null, n, u),
-                          channelId: n.channel_id,
-                          containerId: n.id,
-                          message: n,
-                          validators: s,
-                          getParents: (e) => (0, v.cd)(n.components, e),
-                      }
-                    : (o()(null != a, "modal is present if message is not"),
-                      {
-                          useComponentState: L.bind(null, a),
-                          channelId: a.channelId,
-                          containerId: a.customId,
-                          modal: a,
-                          validators: s,
-                          validationErrors: l,
-                          setValidationErrors: c,
-                          getParents: (e) => (0, v.cd)(a.components, e),
-                      }),
-            [n, a, s, l, c, u],
-        );
-    return (0, r.jsx)(j.Provider, {
+        d = i.useMemo(() => {
+            if (null != n)
+                return {
+                    useComponentState: D.bind(null, n, u),
+                    channelId: n.channel_id,
+                    containerId: n.id,
+                    message: n,
+                    validators: s,
+                    getParents: (e) => (0, y.cd)(n.components, e),
+                };
+            if (null != a)
+                return {
+                    useComponentState: x.bind(null, a),
+                    channelId: a.channelId,
+                    containerId: a.customId,
+                    modal: a,
+                    validators: s,
+                    validationErrors: l,
+                    setValidationErrors: c,
+                    getParents: (e) => (0, y.cd)(a.components, e),
+                };
+            if (null != o)
+                return {
+                    useComponentState: L("ApplicationWidget"),
+                    containerId: R(o),
+                    applicationWidget: o,
+                    validators: s,
+                    validationErrors: l,
+                    setValidationErrors: c,
+                    getParents: j("ApplicationWidget"),
+                };
+            throw Error("ComponentStateContextProvider requires at least one of message, modal, or applicationWidget");
+        }, [n, a, o, u, s, l, c]);
+    return (0, r.jsx)(M.Provider, {
         value: d,
         children: t,
     });
 }
-function M(e, t) {
-    return i.useContext(j).useComponentState(e, t);
+function U(e, t) {
+    return i.useContext(M).useComponentState(e, t);
 }
-function U() {
-    return i.useContext(j);
+function G() {
+    return i.useContext(M);
 }
-function G(e) {
+function B(e) {
     var t, n;
-    return null != (n = null == (t = i.useContext(j).validationErrors) ? void 0 : t[e.id]) ? n : null;
+    return null != (n = null == (t = i.useContext(M).validationErrors) ? void 0 : t[e.id]) ? n : null;
 }

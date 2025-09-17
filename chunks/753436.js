@@ -1,55 +1,51 @@
-r.d(t, { S: () => p });
-var n = r(951288);
-r(647438);
-var i = r(120356),
-    l = r.n(i),
-    a = r(594174),
-    o = r(747101),
-    c = r(971082),
-    s = r(817053),
-    u = r(533815),
-    d = r(853072),
-    f = r(388032),
-    g = r(932366),
-    b = r(133458);
+n.d(t, { S: () => p });
+var r = n(951288);
+n(647438);
+var i = n(120356),
+    o = n.n(i),
+    a = n(594174),
+    l = n(747101),
+    c = n(817053),
+    s = n(533815),
+    u = n(919498),
+    d = n(853072),
+    f = n(932366),
+    g = n(133458);
 function p(e) {
-    let { game: t, userId: r, widgetType: i, guildId: p, channelId: m, disableInteraction: O = !1 } = e,
-        y = (0, d.Z)(t.applicationId),
-        j = y.length > 0,
-        v = a.default.getCurrentUser(),
-        x = (null == v ? void 0 : v.id) === r;
-    return (0, o.kO)(t.applicationId)
-        ? (0, n.jsx)("div", { className: g.loadingCover })
-        : (0, n.jsxs)("div", {
-              className: b.container,
+    let { game: t, userId: n, widgetType: i, guildId: p, channelId: b, disableInteraction: m = !1 } = e,
+        O = (0, d.Z)(t.applicationId).length > 0,
+        y = a.default.getCurrentUser(),
+        j = (null == y ? void 0 : y.id) === n;
+    return (0, l.kO)(t.applicationId)
+        ? (0, r.jsx)("div", { className: f.loadingCover })
+        : (0, r.jsxs)("div", {
+              className: g.container,
               children: [
-                  (0, n.jsx)(s.Z, {
+                  (0, r.jsx)(c.Z, {
                       imageSrc: t.imageSrc,
                       gameName: t.gameName,
                       applicationId: t.applicationId,
-                      userId: r,
-                      disableInteraction: O,
-                      className: l()(
-                          j ? b.socialProofBackdrop : void 0,
-                          (null == t ? void 0 : t.imageSrc) == null || O ? void 0 : g.hoverActiveEffect,
+                      userId: n,
+                      disableInteraction: m,
+                      className: o()(
+                          O ? g.socialProofBackdrop : void 0,
+                          (null == t ? void 0 : t.imageSrc) == null || m ? void 0 : f.hoverActiveEffect,
                       ),
                   }),
-                  !O &&
-                      x &&
-                      (0, n.jsx)(u.Z, {
+                  !m &&
+                      j &&
+                      (0, r.jsx)(s.Z, {
                           game: t,
                           widgetType: i,
-                          className: b.removeGameButton,
+                          className: g.removeGameButton,
                           iconSize: "xs",
                       }),
-                  !O &&
-                      j &&
-                      (0, n.jsx)(c.Z, {
-                          label: f.intl.formatToPlainString(f.t.ujhJdH, { numFriends: y.length }),
-                          className: b.socialProof,
-                          users: y,
+                  !m &&
+                      (0, r.jsx)(u.Z, {
+                          className: g.socialProof,
+                          applicationId: t.applicationId,
                           guildId: p,
-                          channelId: m,
+                          channelId: b,
                           visuallyHideLabel: !0,
                       }),
               ],

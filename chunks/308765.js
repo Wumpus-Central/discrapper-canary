@@ -787,5 +787,9 @@ let i = {
         inlineRequire: () => n(192229).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
+    UserApplicationIdentityManager: {
+        actions: ["USER_APPLICATION_IDENTITY_UPDATE", "USER_APPLICATION_IDENTITY_REMOVE"],
+        inlineRequire: () => n(473288).Z,
+    },
 };
 (0, r.j)(i);

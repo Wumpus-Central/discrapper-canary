@@ -1,30 +1,34 @@
 n.d(t, {
-    CM: () => I,
-    Cf: () => O,
-    ID: () => v,
-    Ls: () => g,
-    Xz: () => A,
-    Z: () => m,
-    c_: () => S,
-    f4: () => C,
-    g_: () => y,
-    ho: () => b,
-    pG: () => E,
-    rf: () => N,
-    x3: () => R,
-    z5: () => T,
+    CM: () => A,
+    Cf: () => T,
+    ID: () => S,
+    Ls: () => y,
+    Xz: () => R,
+    Z: () => b,
+    c_: () => N,
+    f4: () => P,
+    g_: () => I,
+    ho: () => v,
+    oz: () => L,
+    pG: () => O,
+    rf: () => w,
+    x3: () => D,
+    z5: () => C,
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(881052),
-    o = n(957730),
-    s = n(695346),
-    l = n(594174),
-    c = n(626135),
-    u = n(956664),
-    d = n(981631),
-    f = n(474936);
-function _(e, t, n) {
+var r = n(442837),
+    i = n(544891),
+    a = n(570140),
+    o = n(881052),
+    s = n(957730),
+    l = n(695346),
+    c = n(594174),
+    u = n(626135),
+    d = n(956664),
+    f = n(960048),
+    _ = n(621853),
+    p = n(981631),
+    h = n(474936);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +41,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,41 +52,41 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
-    c.default.track(d.rMx.PREMIUM_FEATURE_TRY_OUT, {
+function E(e) {
+    u.default.track(p.rMx.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
-        feature_tier: f.h1.PREMIUM_STANDARD,
+        feature_tier: h.h1.PREMIUM_STANDARD,
     });
 }
-async function m(e, t) {
-    var n, c, u;
-    let f = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
-    if (null == f) return;
-    let _ = s.dN.getSetting();
-    null != e.bio && _ && (e.bio = o.ZP.parse(void 0, e.bio).content);
+async function b(e, t) {
+    var n, r, u;
+    let d = null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
+    if (null == d) return;
+    let f = l.dN.getSetting();
+    null != e.bio && f && (e.bio = s.ZP.parse(void 0, e.bio).content);
     try {
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: "USER_PROFILE_UPDATE_START",
-            userId: f,
+            userId: d,
         });
-        let n = await r.tn.patch({
-            url: null != t ? d.ANM.USER_GUILD_PROFILE(t, d.ME) : d.ANM.USER_PROFILE(d.ME),
+        let n = await i.tn.patch({
+            url: null != t ? p.ANM.USER_GUILD_PROFILE(t, p.ME) : p.ANM.USER_PROFILE(p.ME),
             body: e,
             rejectWithError: !1,
         });
         if (n.ok) {
-            let e = null == (c = n.body.profile_effect) ? void 0 : c.id,
+            let e = null == (r = n.body.profile_effect) ? void 0 : r.id,
                 t = null == (u = n.body.profile_effect) ? void 0 : u.expires_at;
-            i.Z.dispatch(
-                p(
+            a.Z.dispatch(
+                g(
                     {
                         type: "USER_PROFILE_UPDATE_SUCCESS",
-                        userId: f,
+                        userId: d,
                         profileEffectId: e,
                         profileEffectExpiresAt: t,
                     },
@@ -90,8 +94,8 @@ async function m(e, t) {
                 ),
             );
         } else {
-            let e = new a.Hx(n);
-            i.Z.dispatch({
+            let e = new o.Hx(n);
+            a.Z.dispatch({
                 type: "USER_PROFILE_UPDATE_FAILURE",
                 errors: n.body,
                 apiError: e,
@@ -99,9 +103,9 @@ async function m(e, t) {
         }
         return n;
     } catch (t) {
-        let e = new a.Hx(t);
+        let e = new o.Hx(t);
         return (
-            i.Z.dispatch({
+            a.Z.dispatch({
                 type: "USER_PROFILE_UPDATE_FAILURE",
                 errors: {},
                 apiError: e,
@@ -110,86 +114,113 @@ async function m(e, t) {
         );
     }
 }
-function g(e, t) {
+function y(e, t) {
     var n;
-    let r = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
+    let r = null == (n = c.default.getCurrentUser()) ? void 0 : n.id;
     null != r &&
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: "USER_PROFILE_PIN_BADGES_ON_CLIENT",
             badges: e,
             ttlInSeconds: t,
             userId: r,
         });
 }
-function E() {
-    i.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+function O() {
+    a.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
-function b(e) {
+function v(e) {
     (null == e ? void 0 : e.startsWith("https:")) === !0
         ? fetch(e)
               .then((e) => e.blob())
-              .then((e) => (0, u.fD)(e))
-              .then((e) => y(e))
-        : null != e && y(e);
+              .then((e) => (0, d.fD)(e))
+              .then((e) => I(e))
+        : null != e && I(e);
 }
-function y(e) {
-    i.Z.dispatch({
+function I(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
         banner: e,
     });
 }
-function O(e) {
-    i.Z.dispatch({
+function T(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
         bio: e,
     });
 }
-function v(e) {
-    i.Z.dispatch({
+function S(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
         pronouns: e,
     });
 }
-function I(e) {
-    i.Z.dispatch({
+function A(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
         color: e,
     });
 }
-function T(e) {
-    i.Z.dispatch({
+function C(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
         themeColors: e,
     });
 }
-function S(e) {
-    i.Z.dispatch({
+function N(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
         avatar: e,
     }),
-        h(f.QP.ANIMATED_AVATAR);
+        E(h.QP.ANIMATED_AVATAR);
 }
-function A(e) {
-    i.Z.dispatch({
+function R(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
         avatarDecoration: e,
     }),
-        h(f.QP.AVATAR_DECORATION);
+        E(h.QP.AVATAR_DECORATION);
 }
-function C(e) {
-    i.Z.dispatch({
+function P(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
         banner: e,
     }),
-        h(f.QP.PROFILE_BANNER);
+        E(h.QP.PROFILE_BANNER);
 }
-function N(e) {
-    i.Z.dispatch({
+function w(e) {
+    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
         themeColors: e,
     }),
-        h(f.QP.PROFILE_THEME_COLOR);
+        E(h.QP.PROFILE_THEME_COLOR);
 }
-function R(e) {
-    i.Z.dispatch(p({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), h(f.QP.PRESET);
+function D(e) {
+    a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(h.QP.PRESET);
 }
+async function x() {
+    if (null == _.Z.applicationWidgetIds || !(_.Z.applicationWidgetIds.length > 0)) {
+        a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_IDS_FETCH_START" });
+        try {
+            let e = await i.tn.get({
+                url: p.ANM.USER_PROFILE_APPLICATION_WIDGET_IDS,
+                rejectWithError: !0,
+            });
+            a.Z.dispatch({
+                type: "USER_PROFILE_APPLICATION_WIDGET_IDS_FETCH_SUCCESS",
+                applicationIds: e.body,
+            });
+        } catch (e) {
+            throw (
+                (a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_IDS_FETCH_FAILURE" }),
+                f.Z.captureException(e),
+                e)
+            );
+        }
+    }
+}
+let L = (0, r.Kb)(_.Z, {
+    queryId: () => p.McO.APPLICATION_WIDGET_IDS,
+    get: () => _.Z.applicationWidgetIds,
+    load: () => x(),
+    useStateHook: r.e7,
+});

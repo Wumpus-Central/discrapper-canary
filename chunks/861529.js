@@ -6,7 +6,7 @@ var r = n(951288),
     s = n(454585),
     l = n(937889),
     c = n(970184),
-    u = n(985184),
+    u = n(979372),
     d = n(870456),
     f = n(709136),
     _ = n(430864);
@@ -29,9 +29,9 @@ function p(e) {
 function h(e) {
     let { content: t, className: n } = e,
         i = p(t),
-        a = (0, u.Gt)();
+        a = (0, u._)();
     return (0, r.jsx)("div", {
-        className: o()(n, _.markup, f.markdownContainer, { [f.containerSizedText]: a }),
+        className: o()(n, _.markup, f.markdownContainer, a.className),
         children: i,
     });
 }

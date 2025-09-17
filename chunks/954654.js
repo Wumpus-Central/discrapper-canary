@@ -119,7 +119,7 @@ function x(e, t) {
         case s.re.CONTENT_INVENTORY_ENTRY:
             return (0, r.jsx)(v.Z, R({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(T.ZP, w(R({}, e), { renderComponents: D }), t);
+            return (0, r.jsx)(T.Z, w(R({}, e), { renderComponents: D }), t);
         case s.re.LABEL:
             return (0, r.jsx)(S.Z, w(R({}, e), { renderComponent: x }), t);
         case s.re.FILE_UPLOAD:

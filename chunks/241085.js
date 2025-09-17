@@ -159,8 +159,9 @@ function x(e) {
         [m, g] = i.useState(!1),
         E = (0, A.CJ)();
     l()(null != E, "FileUploadActionComponent must be used within a ComponentStateContextProvider");
-    let v = E.channelId,
-        I = null == (t = E.modal) ? void 0 : t.customId;
+    let v = E.channelId;
+    l()(null != v, "FileUploadActionComponent must be used inside a channel");
+    let I = null == (t = E.modal) ? void 0 : t.customId;
     l()(null != I, "FileUploadActionComponent requires modalCustomId from context");
     let { state: x, executeStateUpdate: L, error: j } = E.useComponentState(e, void 0),
         M = i.useMemo(() => ((null == x ? void 0 : x.type) === n ? x.uploadIds : []), [x, n]),

@@ -169,7 +169,7 @@ let U = new d.Z("ConnectionStore"),
         ),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    V = new P.Z(
+    F = new P.Z(
         w.Wb,
         (e, t) => (
             (e =
@@ -183,23 +183,23 @@ let U = new d.Z("ConnectionStore"),
         ),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    F = {};
+    V = {};
 function H(e, t) {
     for (let n of e)
-        F[n] = {
+        V[n] = {
             preload: () => null,
             dispatch: t,
         };
 }
 function Y(e, t, n) {
     for (let r of e)
-        F[r] = {
+        V[r] = {
             preload: t,
             dispatch: n,
         };
 }
 function W(e) {
-    return F[e];
+    return V[e];
 }
 function K(e) {
     let t = [];
@@ -316,7 +316,7 @@ function J(e) {
         clientStatus: o,
         processedAtTimestamp: s,
     } = e;
-    V.add({
+    F.add({
         guildId: t,
         user: n,
         status: r,
@@ -2032,5 +2032,22 @@ Y(
         z({
             type: t,
             guildId: e.guild_id,
+        });
+    }),
+    H(["USER_APPLICATION_IDENTITY_UPDATE"], (e, t) => {
+        z({
+            type: t,
+            user_id: e.user_id,
+            application_id: e.application_id,
+            username: e.username,
+            avatar_hash: e.avatar_hash,
+            metadata: e.metadata,
+        });
+    }),
+    H(["USER_APPLICATION_IDENTITY_REMOVE"], (e, t) => {
+        z({
+            type: t,
+            user_id: e.user_id,
+            application_id: e.application_id,
         });
     });
