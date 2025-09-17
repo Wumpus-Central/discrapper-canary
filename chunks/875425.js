@@ -1,9 +1,10 @@
 n.d(t, {
+    Df: () => l,
     FO: () => s,
-    HO: () => c,
-    pS: () => u,
+    HO: () => u,
+    pS: () => d,
     s0: () => o,
-    wS: () => l,
+    wS: () => c,
 });
 var r = n(51144),
     i = n(231338),
@@ -15,10 +16,27 @@ let o = 128,
         HOURS_4: 14400000,
         TODAY: "TODAY",
         DONT_CLEAR: "DONT_CLEAR",
-    });
-i.Sk.ONLINE, i.Sk.IDLE, i.Sk.DND, i.Sk.INVISIBLE, () => (0, r.u5)(i.Sk.INVISIBLE);
-let l = [s.TODAY, s.HOURS_4, s.HOURS_1, s.MINUTES_30, s.DONT_CLEAR];
-var c = (function (e) {
+    }),
+    l = [
+        {
+            value: i.Sk.ONLINE,
+            label: () => (0, r.u5)(i.Sk.ONLINE),
+        },
+        {
+            value: i.Sk.IDLE,
+            label: () => (0, r.u5)(i.Sk.IDLE),
+        },
+        {
+            value: i.Sk.DND,
+            label: () => (0, r.u5)(i.Sk.DND),
+        },
+        {
+            value: i.Sk.INVISIBLE,
+            label: () => (0, r.u5)(i.Sk.INVISIBLE),
+        },
+    ],
+    c = [s.TODAY, s.HOURS_4, s.HOURS_1, s.MINUTES_30, s.DONT_CLEAR];
+var u = (function (e) {
     return (
         (e.PLAYING = "PLAYING"),
         (e.LISTENING_TO = "LISTENING_TO"),
@@ -56,7 +74,7 @@ var c = (function (e) {
         e
     );
 })({});
-let u = [
+let d = [
     {
         value: "PLAYING",
         label: () => a.intl.string(a.t.r5TNm5),
