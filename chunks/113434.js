@@ -449,7 +449,13 @@ function eE(e, t, n, r) {
         return null == n ? k.intl.string(k.t["o+e9ys"]) : k.intl.formatToPlainString(k.t["9m9MnZ"], { videoTitle: n });
     }
     if (null != a) return a.title;
-    if ((0, S.pO)(e) && (0, S.KM)(e)) return k.intl.format(k.t["1NaRSk"], { minutes: i });
+    if ((0, S.pO)(e))
+        if ((0, S.KM)(e)) return k.intl.format(k.t["1NaRSk"], { minutes: i });
+        else
+            return k.intl.format(k.t.xHXCyc, {
+                minutes: i,
+                activityName: e.config.application.name,
+            });
     let l = k.t["6zWtV1"];
     return (
         (0, S.Nj)({ quest: e }) && (l = k.t["wmOh/v"]),

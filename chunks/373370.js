@@ -173,14 +173,24 @@ function T(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         i = n.targetMinutes,
         a = u.r.build(t.config).defaultRewardNameWithArticle;
-    return E(
-        _.t.VYwSSk,
-        {
-            streamingDurationRequirement: i,
-            questReward: a,
-        },
-        r,
-    );
+    return (0, s.KM)(t)
+        ? E(
+              _.t.VYwSSk,
+              {
+                  streamingDurationRequirement: i,
+                  questReward: a,
+              },
+              r,
+          )
+        : E(
+              _.t.UuzHh4,
+              {
+                  activityName: t.config.application.name,
+                  streamingDurationRequirement: i,
+                  questReward: a,
+              },
+              r,
+          );
 }
 function S(e) {
     let t,
