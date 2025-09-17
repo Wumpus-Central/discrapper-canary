@@ -21,8 +21,8 @@ var r = n(951288),
     O = n(513202),
     y = n(906732),
     _ = n(20471),
-    j = n(522651),
-    v = n(311352),
+    v = n(522651),
+    j = n(311352),
     x = n(243778),
     C = n(220410),
     E = n(668519),
@@ -36,8 +36,8 @@ var r = n(951288),
     A = n(981631),
     R = n(921944),
     D = n(46140),
-    M = n(388032),
-    L = n(258628);
+    L = n(388032),
+    M = n(258628);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -128,7 +128,7 @@ let B = i.memo(function (e) {
                         game_id: null != (e = null == Y ? void 0 : Y.id) ? e : null,
                         application_id: X.application_id,
                     }),
-                    (0, j.v)(ee, j.d.INVITE),
+                    (0, v.v)(ee, v.d.INVITE),
                     Z.default.track(A.rMx.OPEN_MODAL, {
                         type: "Send Join Invite",
                         application_id: X.application_id,
@@ -138,7 +138,7 @@ let B = i.memo(function (e) {
             }, [X, J, ee, Y]),
             ei = i.useCallback(
                 (e, t) => () => {
-                    (0, j.v)(ee, j.d.LEAVE_ACTIVITY),
+                    (0, v.v)(ee, v.d.LEAVE_ACTIVITY),
                         O.Z.leaveActivity({
                             location: t,
                             applicationId: e,
@@ -202,31 +202,31 @@ let B = i.memo(function (e) {
                     ? (z
                           ? ((t = !1),
                             (l = () => {
-                                el(), (0, j.v)(ee, j.d.STREAM, !1);
+                                el(), (0, v.v)(ee, v.d.STREAM, !1);
                             }),
                             (a = d.g5r),
-                            (m = M.intl.string(M.t.S5anIS)))
+                            (m = L.intl.string(L.t.S5anIS)))
                           : K
                             ? ((t = !1),
                               (l = () => {
-                                  eo(), (0, j.v)(ee, j.d.STREAM, !0);
+                                  eo(), (0, v.v)(ee, v.d.STREAM, !0);
                               }),
                               (a = d.hGI),
                               (m =
                                   null != Y
-                                      ? M.intl.formatToPlainString(M.t.AB5gT0, { game: Y.name })
-                                      : M.intl.string(M.t.FeUKeH)))
+                                      ? L.intl.formatToPlainString(L.t.AB5gT0, { game: Y.name })
+                                      : L.intl.string(L.t.FeUKeH)))
                             : ((t = !0),
                               (l = null),
                               (a = d.hGI),
                               (m =
                                   null != W && (0, I.vd)(W.type)
-                                      ? M.intl.string(M.t.uQn9Bw)
+                                      ? L.intl.string(L.t.uQn9Bw)
                                       : null != H
-                                        ? M.intl.string(M.t.fBXEoK)
-                                        : M.intl.string(M.t.n3feND))),
+                                        ? L.intl.string(L.t.fBXEoK)
+                                        : L.intl.string(L.t.n3feND))),
                       (0, r.jsx)("div", {
-                          className: L.panelButtonContainer,
+                          className: M.panelButtonContainer,
                           children: (0, r.jsx)(T.Z, {
                               tooltipText: m,
                               disabled: t,
@@ -239,7 +239,7 @@ let B = i.memo(function (e) {
                 en && null == q
                     ? (0, r.jsx)(T.Z, {
                           ref: es,
-                          tooltipText: M.intl.string(M.t["hC/Ze3"]),
+                          tooltipText: L.intl.string(L.t["hC/Ze3"]),
                           onClick: er,
                           icon: d.ejJ,
                       })
@@ -248,11 +248,11 @@ let B = i.memo(function (e) {
                 null == q
                     ? null
                     : (0, r.jsx)(T.Z, {
-                          tooltipText: M.intl.string(M.t["R/FK4O"]),
+                          tooltipText: L.intl.string(L.t["R/FK4O"]),
                           onClick: ei(q.applicationId, q.location),
                           icon: d.PBZ,
                       }),
-            eO = null == B ? null : (0, r.jsx)(v.Z, {}),
+            eO = null == B ? null : (0, r.jsx)(j.Z, {}),
             ey =
                 ef && ec && !ed
                     ? (0, r.jsx)(V, {
@@ -270,22 +270,23 @@ let B = i.memo(function (e) {
                           icon: d.xhG,
                       })
                     : null,
-            { isQuestBarEmpty: ej, hasLoadedQuestBar: ev } = (0, P.Ws)({ location: D.dr.CONFLICT_CHECKS }),
+            { isQuestBarEmpty: ev, hasLoadedQuestBar: ej } = (0, P.Ws)({ location: D.dr.CONFLICT_CHECKS }),
             ex = (() => {
                 let e = [],
-                    t = !ev || !ej;
+                    t = !ej || !ev;
                 return (
                     en && ed && ef && !t && e.push(s.z.ACCOUNT_LINK_INVITE_FRIENDS),
                     ef && ec && !ed && !t && null != Q && e.push(s.z.ACCOUNT_LINK_PROMPT),
                     (0, r.jsx)(x.ZP, {
+                        bypassAutoDismiss: !0,
                         contentTypes: e,
                         groupName: R.R.ACCOUNT_NAME_ZONE,
                         children: (e) => {
                             let { visibleContent: t, markAsDismissed: n } = e;
                             return t === s.z.ACCOUNT_LINK_INVITE_FRIENDS
                                 ? (0, r.jsx)(u.J2, {
-                                      title: M.intl.string(M.t["0l2pEh"]),
-                                      body: M.intl.string(M.t.DSZUKy),
+                                      title: L.intl.string(L.t["0l2pEh"]),
+                                      body: L.intl.string(L.t.DSZUKy),
                                       targetElementRef: es,
                                       align: "right",
                                       shouldShow: !0,
@@ -293,7 +294,7 @@ let B = i.memo(function (e) {
                                       caretConfig: { align: "end" },
                                       actions: [
                                           {
-                                              text: M.intl.string(M.t.YdkBCA),
+                                              text: L.intl.string(L.t.YdkBCA),
                                               onClick: () => {
                                                   n(R.L.TAKE_ACTION), er();
                                               },
@@ -307,8 +308,8 @@ let B = i.memo(function (e) {
                                             component: c.P3.ACCOUNT_LINK_DISPLAY,
                                             props: { application: Q },
                                         },
-                                        title: M.intl.formatToPlainString(M.t["lo6H6+"], { gameName: Q.name }),
-                                        body: M.intl.string(M.t.qYAzOj),
+                                        title: L.intl.formatToPlainString(L.t["lo6H6+"], { gameName: Q.name }),
+                                        body: L.intl.string(L.t.qYAzOj),
                                         targetElementRef: eh,
                                         align: "right",
                                         shouldShow: !0,
@@ -317,7 +318,7 @@ let B = i.memo(function (e) {
                                         caretConfig: { align: "end" },
                                         actions: [
                                             {
-                                                text: M.intl.string(M.t.lw71NT),
+                                                text: L.intl.string(L.t.lw71NT),
                                                 onClick: () => {
                                                     n(R.L.TAKE_ACTION), eu();
                                                 },
@@ -332,7 +333,7 @@ let B = i.memo(function (e) {
         return null == eg && null == em && null == eb && null == ey && null == e_
             ? null
             : (0, r.jsxs)("div", {
-                  className: L.actions,
+                  className: M.actions,
                   children: [null != ey ? ey : em, eg, null != eb ? eb : eO, ex, e_],
               });
     }),
@@ -350,6 +351,6 @@ let B = i.memo(function (e) {
                     i();
             },
             icon: a.u,
-            tooltipText: M.intl.string(M.t.sbdnp6),
+            tooltipText: L.intl.string(L.t.sbdnp6),
         });
     });

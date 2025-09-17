@@ -1,56 +1,59 @@
+let r;
 n.d(t, {
-    EM: () => I,
-    Tt: () => T,
-    cv: () => y,
-    sx: () => S,
-    zH: () => A,
+    EM: () => T,
+    Tt: () => S,
+    cv: () => O,
+    sx: () => A,
+    zH: () => C,
 });
-var r = n(647438),
-    i = n(442837),
-    a = n(704215),
-    o = n(128363),
-    s = n(581883),
-    l = n(914010),
-    c = n(626135);
+var i = n(647438),
+    a = n(442837),
+    o = n(704215),
+    s = n(128363),
+    l = n(581883),
+    c = n(914010),
+    u = n(626135);
 n(709054);
-var u = n(915486),
-    d = n(68985),
-    f = n(211644),
-    _ = n(266454),
-    p = n(605236),
-    h = n(57207),
-    m = n(981631),
-    g = n(526761);
-function E(e, t, n, r) {
-    c.default.track(m.rMx.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
-        content_type: a.z[e],
+var d = n(915486),
+    f = n(68985),
+    _ = n(211644),
+    p = n(266454),
+    h = n(605236),
+    m = n(57207),
+    g = n(981631),
+    E = n(526761);
+function b(e, t, n, r) {
+    u.default.track(g.rMx.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
+        content_type: o.z[e],
         group_name: null != n ? n : null,
         latest_version: null != r ? r : null,
         guild_id: null != t ? t : null,
     });
 }
-function b(e, t, n, a) {
-    let l = (0, f.ZP)((t) => null != e && t.currentlyShown.has(e)),
-        c = (0, o.xG)(),
-        u = (0, i.e7)([d.Z], () => null != e && d.Z.hasUserHitDCCap(e, t));
+function y(e, t, n, o) {
+    let c = (0, _.ZP)((t) => null != e && t.currentlyShown.has(e)),
+        u = (0, s.xG)(),
+        d = (0, a.e7)(null != r ? [r] : [], () => (null == r ? void 0 : r.getFocusedPID())),
+        p = (0, a.e7)([f.Z], () => null != e && f.Z.hasUserHitDCCap(e, t));
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             if (null != e)
                 return (
-                    s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) || E(e, t, n, a),
-                    (0, p.kk)(
+                    l.Z.hasLoaded(E.yP.PRELOADED_USER_SETTINGS) || b(e, t, n, o),
+                    (0, h.kk)(
                         e,
                         {
                             groupName: n,
                             guildId: t,
-                            version: a,
+                            version: o,
                         },
-                        c,
+                        u,
+                        d,
                     ),
                     () => {
                         if (null == e) return;
-                        let t = !d.Z.hasUserHitDCCap();
-                        (0, f.gE)(
+                        let t = !f.Z.hasUserHitDCCap();
+                        (0, _.gE)(
                             {
                                 content: e,
                                 groupName: n,
@@ -59,68 +62,69 @@ function b(e, t, n, a) {
                         );
                     }
                 );
-        }, [e, n, t, u, c, a]),
-        l && null != e ? e : null
+        }, [e, n, t, p, u, o, d]),
+        c && null != e ? e : null
     );
 }
-function y(e, t) {
-    let n = (0, i.e7)([s.Z], () => {
+function O(e, t) {
+    let n = (0, a.e7)([l.Z], () => {
             var e;
-            return null == (e = s.Z.settings.userContent) ? void 0 : e.dismissedContents;
+            return null == (e = l.Z.settings.userContent) ? void 0 : e.dismissedContents;
         }),
-        a = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
-        o = (0, h.ig)(e),
-        c = null;
+        r = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
+        o = (0, m.ig)(e),
+        s = null;
     return (
-        s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS)
-            ? (c = o.find((e) => null == n || !(0, u.jl)(n, e)))
-            : null != n && (c = o.find((e) => !(0, u.jl)(n, e))),
+        l.Z.hasLoaded(E.yP.PRELOADED_USER_SETTINGS)
+            ? (s = o.find((e) => null == n || !(0, d.jl)(n, e)))
+            : null != n && (s = o.find((e) => !(0, d.jl)(n, e))),
         [
-            b(c, a, t),
-            r.useCallback(
+            y(s, r, t),
+            i.useCallback(
                 (e, n) => {
-                    null != c &&
-                        (0, _.Q3)(c, {
+                    null != s &&
+                        (0, p.Q3)(s, {
                             dismissAction: e,
                             groupName: t,
-                            guildId: a,
+                            guildId: r,
                             forceTrack: n,
                         });
                 },
-                [c, t, a],
+                [s, t, r],
             ),
         ]
     );
 }
-let O = {};
-function v(e) {
-    return (0, i.e7)([s.Z], () => {
+r = n(808506).default;
+let v = {};
+function I(e) {
+    return (0, a.e7)([l.Z], () => {
         var t, n;
         let r =
             null !== e
-                ? null == (n = s.Z.settings.userContent) || null == (t = n.recurringDismissibleContentStates)
+                ? null == (n = l.Z.settings.userContent) || null == (t = n.recurringDismissibleContentStates)
                     ? void 0
                     : t[e]
                 : null;
-        return null != r ? r : O;
+        return null != r ? r : v;
     });
 }
-function I(e, t, n) {
-    let { lastDismissedVersion: a } = v(e),
-        o = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
-        c = null;
+function T(e, t, n) {
+    let { lastDismissedVersion: r } = I(e),
+        o = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
+        s = null;
     if (null != e) {
-        let n = !(0, h.Bh)(e);
-        s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS)
-            ? (c = n && (null == a || a < t) ? e : null)
-            : null != a && (c = n && a < t ? e : null);
+        let n = !(0, m.Bh)(e);
+        l.Z.hasLoaded(E.yP.PRELOADED_USER_SETTINGS)
+            ? (s = n && (null == r || r < t) ? e : null)
+            : null != r && (s = n && r < t ? e : null);
     }
     return [
-        b(c, o, n, t),
-        r.useCallback(
+        y(s, o, n, t),
+        i.useCallback(
             (e, r) => {
-                null != c &&
-                    (0, p.wH)(c, t, {
+                null != s &&
+                    (0, h.wH)(s, t, {
                         dismissAction: e,
                         groupName: n,
                         guildId: o,
@@ -128,86 +132,86 @@ function I(e, t, n) {
                         version: t,
                     });
             },
-            [c, n, o, t],
+            [s, n, o, t],
         ),
     ];
 }
-function T(e, t, n) {
-    let { lastDismissedAtMs: a, numTimesDismissed: o } = v(e),
-        s = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
-        c = null;
+function S(e, t, n) {
+    let { lastDismissedAtMs: r, numTimesDismissed: o } = I(e),
+        s = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
+        l = null;
     return (
-        null != e && (c = C(!(0, h.Bh)(e), a, o, t) ? e : null),
+        null != e && (l = N(!(0, m.Bh)(e), r, o, t) ? e : null),
         [
-            b(c, s, n),
-            r.useCallback(
+            y(l, s, n),
+            i.useCallback(
                 (e, t) => {
-                    null != c &&
-                        (0, p.Ow)(c, {
+                    null != l &&
+                        (0, h.Ow)(l, {
                             dismissAction: e,
                             groupName: n,
                             guildId: s,
                             forceTrack: t,
                         });
                 },
-                [c, n, s],
+                [l, n, s],
             ),
         ]
     );
 }
-function S(e, t, n, a) {
-    let o = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
+function A(e, t, n, r) {
+    let o = (0, a.e7)([c.Z], () => c.Z.getGuildId()),
         s = null;
     return (
-        null == e || (0, p.UJ)(e, n, t) || (s = e),
+        null == e || (0, h.UJ)(e, n, t) || (s = e),
         [
-            b(s, o, a),
-            r.useCallback(
+            y(s, o, r),
+            i.useCallback(
                 (e, t) => {
                     null != s &&
-                        (0, p.JO)(s, n, {
+                        (0, h.JO)(s, n, {
                             dismissAction: e,
-                            groupName: a,
+                            groupName: r,
                             guildId: o,
                             forceTrack: t,
                         });
                 },
-                [s, a, o, n],
+                [s, r, o, n],
             ),
         ]
     );
 }
-function A(e, t, n) {
-    let a = (0, i.e7)([s.Z], () => s.Z.getGuildDismissedContentState(t)),
-        o = (0, h.ig)(e),
-        l = null;
+function C(e, t, n) {
+    let r = (0, a.e7)([l.Z], () => l.Z.getGuildDismissedContentState(t)),
+        o = (0, m.ig)(e),
+        s = null;
     return (
-        s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS)
-            ? (l = o.find((e) => null == a || null == a[e] || !1 === a[e].dismissed))
-            : null != a && (l = o.find((e) => null == a[e] || !1 === a[e].dismissed)),
+        l.Z.hasLoaded(E.yP.PRELOADED_USER_SETTINGS)
+            ? (s = o.find((e) => null == r || null == r[e] || !1 === r[e].dismissed))
+            : null != r && (s = o.find((e) => null == r[e] || !1 === r[e].dismissed)),
         [
-            b(l, t, n),
-            r.useCallback(
+            y(s, t, n),
+            i.useCallback(
                 (e, r) => {
-                    null != l &&
-                        (0, _.wE)(l, t, {
+                    null != s &&
+                        (0, p.wE)(s, t, {
                             dismissAction: e,
                             groupName: n,
                             guildId: t,
                             forceTrack: r,
                         });
                 },
-                [l, n, t],
+                [s, n, t],
             ),
         ]
     );
 }
-function C(e, t, n, r) {
+function N(e, t, n, r) {
     let i = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
         a = void 0 === i ? 0 : i + r.cooldownDurationMs,
         o = Date.now(),
-        l = null == r.showAfterTimestamp || (o >= r.showAfterTimestamp && (null != i ? i : 0) <= r.showAfterTimestamp),
+        s = null == r.showAfterTimestamp || (o >= r.showAfterTimestamp && (null != i ? i : 0) <= r.showAfterTimestamp),
         c = null == i || o >= a,
         u = null == r.numTimesToRecur || 0 === r.numTimesToRecur || null == n || n < r.numTimesToRecur;
-    return (s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) || (null != i && null != n)) && e && l && c && u;
+    return (l.Z.hasLoaded(E.yP.PRELOADED_USER_SETTINGS) || (null != i && null != n)) && e && s && c && u;
 }
