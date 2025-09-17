@@ -59,7 +59,7 @@ async function y(e, t) {
         .sort((e, t) => -_.default.compare(e.id, t.id));
     if (S.length > E) {
         let n = S[Math.floor(Math.pow(Math.random(), 2) * S.length)];
-        r.Z.sendMessage(t.id, a.ZP.parse(t, n.allNamesString), !1, {
+        r.Z.sendMessage(t.id, a.ZP.parse(t, (0, f.nY)(n)), !1, {
             location: m.dy.CHANNEL_PROMPT,
             messageReference: {
                 guild_id: null != (p = t.getGuildId()) ? p : void 0,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -9,27 +9,28 @@ var r = n(951288),
     u = n(633302),
     d = n(334920),
     f = n(768581),
-    _ = n(185923),
-    p = n(74066);
-let h = l().memoize((e) =>
+    _ = n(176354),
+    p = n(185923),
+    h = n(74066);
+let m = l().memoize((e) =>
         ""
-            .concat(e * _.DC.NonDiversityPerRow, "px ")
-            .concat(e * Math.ceil(u.ZP.numNonDiversitySprites / _.DC.NonDiversityPerRow), "px"),
+            .concat(e * p.DC.NonDiversityPerRow, "px ")
+            .concat(e * Math.ceil(u.ZP.numNonDiversitySprites / p.DC.NonDiversityPerRow), "px"),
     ),
-    m = l().memoize((e) =>
+    g = l().memoize((e) =>
         ""
-            .concat(e * _.DC.DiversityPerRow, "px ")
-            .concat(e * Math.ceil(u.ZP.numDiversitySprites / _.DC.DiversityPerRow), "px"),
+            .concat(e * p.DC.DiversityPerRow, "px ")
+            .concat(e * Math.ceil(u.ZP.numDiversitySprites / p.DC.DiversityPerRow), "px"),
     ),
-    g = (e, t, r) => {
+    E = (e, t, r) => {
         let i, a, o;
         if (!e.useSpriteSheet) return;
         let s = null != e.index ? e.index : 0;
         e.hasDiversity
             ? ((i = n(735800)("./spritesheet-".concat(t, "-").concat(r, ".png"))),
-              (a = m(r)),
-              (o = _.DC.DiversityPerRow))
-            : ((i = n(604901)("./spritesheet-emoji-".concat(r, ".png"))), (a = h(r)), (o = _.DC.NonDiversityPerRow));
+              (a = g(r)),
+              (o = p.DC.DiversityPerRow))
+            : ((i = n(604901)("./spritesheet-emoji-".concat(r, ".png"))), (a = m(r)), (o = p.DC.NonDiversityPerRow));
         let l = (-s % o) * r,
             c = -Math.floor(s / o) * r;
         return {
@@ -40,9 +41,9 @@ let h = l().memoize((e) =>
             width: r,
         };
     },
-    E = i.memo(function (e) {
+    b = i.memo(function (e) {
         let { emoji: t, size: n, surrogateCodePoint: a, allowAnimatedEmoji: s, "aria-label": l, isLocked: u } = e,
-            h = (() => {
+            m = (() => {
                 if (!t.useSpriteSheet) {
                     var e;
                     let i =
@@ -51,34 +52,34 @@ let h = l().memoize((e) =>
                             : f.ZP.getEmojiURL({
                                   id: t.id,
                                   animated: s && t.animated,
-                                  size: _.$U,
+                                  size: p.$U,
                               });
                     return null != i
                         ? (0, r.jsx)(d.Z, {
-                              className: p.lockedEmoji,
+                              className: h.lockedEmoji,
                               "aria-label": l,
                               src: i,
                               size: n,
-                              alt: null != (e = t.allNamesString) ? e : "",
+                              alt: null != (e = (0, _.nY)(t)) ? e : "",
                           })
                         : null;
                 }
                 return (0, r.jsx)("div", {
-                    className: o()(p.emojiSpriteImage, { [p.lockedEmoji]: u }),
-                    style: g(t, a, n),
+                    className: o()(h.emojiSpriteImage, { [h.lockedEmoji]: u }),
+                    style: E(t, a, n),
                     children: (0, r.jsx)(c.nn4, { children: l }),
                 });
             })();
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                h,
+                m,
                 u
                     ? (0, r.jsx)("div", {
-                          className: p.emojiLockIconContainer,
+                          className: h.emojiLockIconContainer,
                           children: (0, r.jsx)(c.mBM, {
                               size: "xs",
                               color: "currentColor",
-                              className: p.emojiLockIcon,
+                              className: h.emojiLockIcon,
                           }),
                       })
                     : null,

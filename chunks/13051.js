@@ -181,8 +181,8 @@ function P(e) {
                 t = Y.filter((e) => null != e.tags && e.tags.integration_id === l.id).map((e) => e.id);
             return l.enable_emoticons
                 ? e
-                      .sort((e, t) => e.name.localeCompare(t.name))
                       .filter((e) => null != l.role_id && (null == e ? void 0 : e.roles.some((e) => t.includes(e))))
+                      .sort((e, t) => e.name.localeCompare(t.name))
                 : [];
         }, [n.id, Y, l.enable_emoticons, l.id, l.role_id]);
     if (

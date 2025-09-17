@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -14,11 +14,12 @@ var r = n(951288),
     h = n(536442),
     m = n(912893),
     g = n(430824),
-    E = n(358085),
-    b = n(288406),
-    y = n(388032),
-    O = n(999642);
-function v(e, t, n) {
+    E = n(176354),
+    b = n(358085),
+    y = n(288406),
+    O = n(388032),
+    v = n(999642);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +43,12 @@ function I(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function T(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,22 +60,22 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = N(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -82,7 +83,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -91,8 +92,8 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let N = (e, t) => "".concat(e, ":").concat(t),
-    R = i.forwardRef(function (e, t) {
+let R = (e, t) => "".concat(e, ":").concat(t),
+    P = i.forwardRef(function (e, t) {
         var {
                 emoji: n,
                 isFavorite: i,
@@ -103,13 +104,13 @@ let N = (e, t) => "".concat(e, ":").concat(t),
                 showPulse: _,
                 columnIndex: h,
                 rowIndex: m,
-                size: E,
-                surrogateCodePoint: v,
-                allowAnimatedEmoji: T,
-                selectedItemClassName: C,
-                inNitroLockedSection: N,
+                size: b,
+                surrogateCodePoint: I,
+                allowAnimatedEmoji: S,
+                selectedItemClassName: N,
+                inNitroLockedSection: R,
             } = e,
-            R = A(e, [
+            P = C(e, [
                 "emoji",
                 "isFavorite",
                 "isLargeSize",
@@ -125,29 +126,29 @@ let N = (e, t) => "".concat(e, ":").concat(t),
                 "selectedItemClassName",
                 "inNitroLockedSection",
             ]);
-        let P = (0, s.e7)([g.Z], () => (n.type === f.B.GUILD ? g.Z.getGuild(n.guildId) : void 0), [n]),
-            w = () => {
-                let e = n.allNamesString;
-                return ((null == P ? void 0 : P.name) != null &&
-                    (e = y.intl.formatToPlainString(y.t["nXv4/P"], {
+        let w = (0, s.e7)([g.Z], () => (n.type === f.B.GUILD ? g.Z.getGuild(n.guildId) : void 0), [n]),
+            D = () => {
+                let e = (0, E.nY)(n);
+                return ((null == w ? void 0 : w.name) != null &&
+                    (e = O.intl.formatToPlainString(O.t["nXv4/P"], {
                         names: e,
-                        guildName: P.name,
+                        guildName: w.name,
                     })),
                 i)
-                    ? y.intl.formatToPlainString(y.t["9FI9Z2"], { names: e })
+                    ? O.intl.formatToPlainString(O.t["9FI9Z2"], { names: e })
                     : e;
             },
-            D = d && !N;
+            x = d && !R;
         return (0, r.jsx)(l.tEY, {
             children: (0, r.jsx)(
                 "button",
-                S(I({}, R), {
-                    className: o()(O.emojiItem, {
-                        [O.emojiItemLarge]: a,
-                        [O.emojiItemMedium]: c,
-                        [O.emojiItemSelected]: u,
-                        [null != C ? C : ""]: u,
-                        [O.showPulse]: _,
+                A(T({}, P), {
+                    className: o()(v.emojiItem, {
+                        [v.emojiItemLarge]: a,
+                        [v.emojiItemMedium]: c,
+                        [v.emojiItemSelected]: u,
+                        [null != N ? N : ""]: u,
+                        [v.showPulse]: _,
                     }),
                     "data-type": p.S.EMOJI,
                     "data-id": n.id,
@@ -155,21 +156,21 @@ let N = (e, t) => "".concat(e, ":").concat(t),
                     "data-surrogates": "surrogates" in n ? n.surrogates : null,
                     "data-animated": n.animated ? "true" : null,
                     ref: t,
-                    children: (0, r.jsx)(b.Z, {
-                        "aria-label": w(),
+                    children: (0, r.jsx)(y.Z, {
+                        "aria-label": D(),
                         columnIndex: h,
                         rowIndex: m,
                         emoji: n,
-                        size: E,
-                        surrogateCodePoint: v,
-                        allowAnimatedEmoji: T,
-                        isLocked: D,
+                        size: b,
+                        surrogateCodePoint: I,
+                        allowAnimatedEmoji: S,
+                        isLocked: x,
                     }),
                 }),
             ),
         });
     });
-function P(e) {
+function w(e) {
     let {
             descriptor: t,
             emojiItemKey: a,
@@ -177,12 +178,12 @@ function P(e) {
             rowIndex: f,
             channelGuildId: p,
             onInspect: g,
-            onSelect: b,
-            isScrolling: O,
+            onSelect: E,
+            isScrolling: y,
             isUsingKeyboardNavigation: v,
-            showEmojiFavoriteTooltip: T,
-            surrogateCodePoint: C,
-            selectedItemClassName: P,
+            showEmojiFavoriteTooltip: I,
+            surrogateCodePoint: S,
+            selectedItemClassName: N,
             getEmojiItemProps: w,
             isMediumSize: D,
             isLargeSize: x,
@@ -200,22 +201,22 @@ function P(e) {
         Y = i.useRef(null),
         { emoji: W, size: K, isDisabled: z, columnIndex: q } = t,
         X = (e) => {
-            if ((e.stopPropagation(), O.current || v.current)) return;
+            if ((e.stopPropagation(), y.current || v.current)) return;
             let n = e.altKey;
             n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && M(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
-                b(t, {
+                E(t, {
                     isFinalSelection: !e.shiftKey,
                     toggleFavorite: n,
                 });
         },
         Q = () => {
-            O.current || v.current || g(t);
+            y.current || v.current || g(t);
         },
         J = (e) => {
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e("39010").then(n.bind(n, 269254));
-                return (t) => (0, r.jsx)(e, I({}, t));
+                return (t) => (0, r.jsx)(e, T({}, t));
             });
         },
         $ = function () {
@@ -224,15 +225,15 @@ function P(e) {
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                 s = null != (e = w(q, f)) ? e : {},
                 { ref: l, tabIndex: c, onFocus: u } = s,
-                d = A(s, ["ref", "tabIndex", "onFocus"]);
+                d = C(s, ["ref", "tabIndex", "onFocus"]);
             return (0, i.createElement)(
                 "li",
-                S(I({}, d), {
+                A(T({}, d), {
                     key: a,
                     ref: Y,
                 }),
-                Z !== N(q, f) &&
-                    (0, r.jsx)(R, {
+                Z !== R(q, f) &&
+                    (0, r.jsx)(P, {
                         ref: l,
                         emoji: W,
                         isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(W),
@@ -259,7 +260,7 @@ function P(e) {
                             ) {
                                 let e = null == W.id ? _.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();
-                                (t.x = G.x + (q + 1) * K), F(N(q, f)), (0, m.U)(k, e, W.id, t);
+                                (t.x = G.x + (q + 1) * K), F(R(q, f)), (0, m.U)(k, e, W.id, t);
                             }
                             X(e);
                         },
@@ -268,17 +269,17 @@ function P(e) {
                         columnIndex: q,
                         rowIndex: f,
                         size: K,
-                        surrogateCodePoint: C,
-                        selectedItemClassName: P,
+                        surrogateCodePoint: S,
+                        selectedItemClassName: N,
                         inNitroLockedSection: B,
                     }),
             );
         };
-    return T
+    return I
         ? (0, r.jsx)(
               l.ua7,
               {
-                  text: y.intl.formatToPlainString(y.t.glqNsb, { key: (0, E.isMac)() ? "Opt" : "Alt" }),
+                  text: O.intl.formatToPlainString(O.t.glqNsb, { key: (0, b.isMac)() ? "Opt" : "Alt" }),
                   position: "top",
                   delay: 200,
                   children: (e) => $(e),

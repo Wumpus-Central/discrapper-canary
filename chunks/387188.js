@@ -175,70 +175,70 @@ function C(e) {
           });
 }
 function N(e) {
-    var t;
-    let { message: n, compact: a, usernameHook: o } = e,
-        c = n.content,
-        [_, y] = i.useState(!1),
-        O = (0, u.ZP)(n),
-        v = o(O),
-        I = (0, m.xE)(c),
-        T = i.useCallback(() => {
-            null != I &&
+    let { message: t, compact: n, usernameHook: a } = e,
+        o = t.content,
+        [c, _] = i.useState(!1),
+        y = (0, u.ZP)(t),
+        O = a(y),
+        v = (0, m.xE)(o),
+        I = i.useCallback(() => {
+            null != v &&
                 h.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
-                    plainText: ":".concat(I.name, ":"),
-                    rawText: c,
+                    plainText: ":".concat(v.name, ":"),
+                    rawText: o,
                     addSpace: !0,
                 });
-        }, [I, c]),
-        S = i.useMemo(() => {
-            var e;
-            return null == I
-                ? null
-                : {
-                      src: p.ZP.getEmojiURL({
-                          id: I.id,
-                          animated: I.animated,
-                          size: 48,
-                      }),
-                      emojiId: I.id,
-                      name: ":".concat(null != (e = I.originalName) ? e : I.name, ":"),
-                      animated: I.animated,
-                  };
-        }, [I]);
+        }, [v, o]),
+        T = i.useMemo(
+            () =>
+                null == v
+                    ? null
+                    : {
+                          src: p.ZP.getEmojiURL({
+                              id: v.id,
+                              animated: v.animated,
+                              size: 48,
+                          }),
+                          emojiId: v.id,
+                          name: ":".concat(v.name, ":"),
+                          animated: v.animated,
+                      },
+            [v],
+        );
     return (0, r.jsx)(f.Z, {
         iconNode: (0, r.jsx)(s.EO4, {
             size: "refresh_sm",
             color: "currentColor",
         }),
         iconContainerClassName: b.iconContainer,
-        timestamp: n.timestamp,
-        compact: a,
+        timestamp: t.timestamp,
+        compact: n,
         contentClassName: b.content,
         children: (0, r.jsx)("span", {
             children:
-                null == I || null == S
+                null == v || null == T
                     ? E.intl.format(E.t.k6Jc9f, {
-                          username: O.nick,
-                          usernameHook: v,
+                          username: y.nick,
+                          usernameHook: O,
                       })
                     : E.intl.format(E.t.IihHBw, {
-                          username: O.nick,
-                          usernameHook: v,
+                          username: y.nick,
+                          usernameHook: O,
                           emojiPreview: (0, r.jsx)(d.Y, {
-                              node: S,
-                              isInteracting: _,
+                              node: T,
+                              isInteracting: c,
                           }),
                           emojiName: (0, r.jsx)(l.P3F, {
                               className: b.clickableEmoji,
                               tag: "span",
-                              onClick: T,
-                              onMouseEnter: () => y(!0),
-                              onMouseLeave: () => y(!1),
+                              onClick: I,
+                              onMouseEnter: () => _(!0),
+                              onMouseLeave: () => _(!1),
                               children: (0, r.jsx)(l.Text, {
                                   tag: "span",
                                   variant: "text-md/medium",
                                   color: "text-primary",
-                                  children: ":".concat(null != (t = I.originalName) ? t : I.name, ":"),
+                                  children: ":".concat(v.name, ":"),
                               }),
                           }),
                       }),

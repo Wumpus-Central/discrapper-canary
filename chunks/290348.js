@@ -3,7 +3,7 @@ n.d(t, {
     Ek: () => Z,
     F2: () => Q,
     GM: () => en,
-    GP: () => V,
+    GP: () => F,
     H9: () => ee,
     Lo: () => $,
     PK: () => k,
@@ -193,7 +193,7 @@ function Z(e, t) {
         }, [n]),
     );
 }
-function V(e, t) {
+function F(e, t) {
     let n = (0, v.Z)(t, e);
     return x(
         e,
@@ -209,9 +209,9 @@ function V(e, t) {
         ),
     );
 }
-let F = [];
+let V = [];
 function H(e) {
-    let t = L(e, (e) => (null == e ? F : e.role_benefits.benefits.filter(m.rC)));
+    let t = L(e, (e) => (null == e ? V : e.role_benefits.benefits.filter(m.rC)));
     return x(e, "channelBenefits", t);
 }
 let Y = [];
@@ -322,29 +322,27 @@ async function ei(e) {
         let e = z(p.ZP.getGuildEmoji(t), i),
             n = (0, o.difference)([...m], [...e]),
             r = (0, o.difference)([...e], [...m]),
-            a = n
-                .map((e) => p.ZP.getCustomEmojiById(e))
-                .map((e) => {
-                    if (null != e)
-                        return (0, d.dv)({
-                            guildId: t,
-                            emojiId: e.id,
-                            roles: [...e.roles, i],
-                        });
-                }),
-            s = r
-                .map((e) => p.ZP.getCustomEmojiById(e))
-                .map((e) => {
-                    if (null == e) return;
-                    let n = e.roles.filter((e) => e !== i);
-                    return n.length > 0
-                        ? (0, d.dv)({
-                              guildId: t,
-                              emojiId: e.id,
-                              roles: n,
-                          })
-                        : (0, d.RE)(t, e.id);
-                });
+            a = n.map((e) => {
+                let n = p.ZP.getCustomEmojiById(e);
+                if (null != n)
+                    return (0, d.dv)({
+                        guildId: t,
+                        emojiId: n.id,
+                        roles: [...n.roles, i],
+                    });
+            }),
+            s = r.map((e) => {
+                let n = p.ZP.getCustomEmojiById(e);
+                if (null == n) return;
+                let r = n.roles.filter((e) => e !== i);
+                return r.length > 0
+                    ? (0, d.dv)({
+                          guildId: t,
+                          emojiId: n.id,
+                          roles: r,
+                      })
+                    : (0, d.RE)(t, n.id);
+            });
         await Promise.all([...a, ...s]);
     }
 }

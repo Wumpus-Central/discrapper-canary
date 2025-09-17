@@ -14,8 +14,8 @@ var i = n(120356),
     b = n(768581),
     p = n(176354),
     O = n(981631),
-    y = n(185923),
-    m = n(388032),
+    m = n(185923),
+    y = n(388032),
     h = n(561782);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -60,68 +60,61 @@ function j(e, t) {
         e
     );
 }
-let S = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
-function E(e) {
-    var t;
-    let { emoji: n, isFocused: i } = e,
-        { animated: a, src: s, surrogates: c } = n;
+let E = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+function S(e) {
+    let { emoji: t, isFocused: n } = e,
+        { animated: i, src: a, surrogates: s } = t;
     return (
-        null == s && null != n.id
-            ? (s = b.ZP.getEmojiURL({
-                  id: n.id,
-                  animated: !!a,
+        null == a && null != t.id
+            ? (a = b.ZP.getEmojiURL({
+                  id: t.id,
+                  animated: !!i,
                   size: 20,
               }))
-            : null == s && (s = p.ZP.getURL(c)),
-        (0, r.jsx)(
-            o.ua7,
-            {
-                text: n.allNamesString,
-                hideOnClick: !0,
-                spacing: 16,
-                forceOpen: i,
-                children: (e) =>
-                    (0, r.jsx)(
-                        "div",
-                        j(
-                            v(
-                                {
-                                    "aria-label": m.intl.formatToPlainString(m.t["/iYSo6"], { emojiName: n.name }),
-                                    className: l()(h.button, { [h.focused]: i }),
-                                },
-                                e,
-                            ),
+            : null == a && (a = p.ZP.getURL(s)),
+        (0, r.jsx)(o.ua7, {
+            text: (0, p.nY)(t),
+            hideOnClick: !0,
+            spacing: 16,
+            forceOpen: n,
+            children: (e) =>
+                (0, r.jsx)(
+                    "div",
+                    j(
+                        v(
                             {
-                                children:
-                                    null == s || "" === s.trim()
-                                        ? (0, r.jsx)(
-                                              "span",
-                                              j(v({ className: l()("emoji", "emoji-text", h.icon) }, e), {
-                                                  children: c,
-                                              }),
-                                          )
-                                        : (0, r.jsx)("img", {
-                                              className: h.icon,
-                                              src: s,
-                                              alt: "",
-                                          }),
+                                "aria-label": y.intl.formatToPlainString(y.t["/iYSo6"], { emojiName: t.name }),
+                                className: l()(h.button, { [h.focused]: n }),
                             },
+                            e,
                         ),
+                        {
+                            children:
+                                null == a || "" === a.trim()
+                                    ? (0, r.jsx)(
+                                          "span",
+                                          j(v({ className: l()("emoji", "emoji-text", h.icon) }, e), { children: s }),
+                                      )
+                                    : (0, r.jsx)("img", {
+                                          className: h.icon,
+                                          src: a,
+                                          alt: "",
+                                      }),
+                        },
                     ),
-            },
-            null != (t = n.id) ? t : n.name,
-        )
+                ),
+        })
     );
 }
 function P(e, t) {
     let n = (0, s.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
-            !(e.useSpriteSheet && S.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
+            !(e.useSpriteSheet && E.indexOf(null != (n = e.uniqueName) ? n : "") >= 0) &&
             !p.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: y.Hz.REACTION,
+                intention: m.Hz.REACTION,
             })
         );
     });
@@ -140,7 +133,7 @@ function P(e, t) {
                           id: "quickreact-".concat(null != (l = n.id) ? l : i),
                           render: (e) => {
                               let { isFocused: t } = e;
-                              return (0, r.jsx)(E, {
+                              return (0, r.jsx)(S, {
                                   emoji: n,
                                   isFocused: t,
                               });
