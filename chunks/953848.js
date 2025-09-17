@@ -138,20 +138,19 @@ function b(e) {
                                     (0, l.jsx)("div", {
                                         className: x.radioGroup,
                                         children: (0, l.jsx)(c.FXm, {
-                                            value: y,
+                                            value: null != y ? y : void 0,
                                             onChange: (e) => {
                                                 var t;
-                                                let { value: n } = e;
-                                                P(n),
+                                                P(e),
                                                     m.default.track(h.rMx.GAME_DETECTION_FEEDBACK_MODAL, {
-                                                        selected_option: n,
+                                                        selected_option: e,
                                                         application_id:
                                                             null != (t = null == j ? void 0 : j.application_id)
                                                                 ? t
                                                                 : null,
                                                     }),
                                                     setTimeout(() => {
-                                                        "game_not_detected" === n || "wrong_game_shown" === n
+                                                        "game_not_detected" === e || "wrong_game_shown" === e
                                                             ? w("game_search")
                                                             : w("other_feedback");
                                                     }, 100);

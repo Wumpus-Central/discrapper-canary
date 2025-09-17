@@ -895,10 +895,7 @@ class eR extends l.PureComponent {
             children: [
                 (0, i.jsx)(m.FXm, {
                     label: ea.intl.string(ea.t.jhJEJi),
-                    onChange: (e) => {
-                        let { value: t } = e;
-                        return this.handleVideoQualityModeChange(t);
-                    },
+                    onChange: (e) => this.handleVideoQualityModeChange(e),
                     options: l,
                     value: null != (t = e.videoQualityMode) ? t : en.Ucd.AUTO,
                     disabled: !n,

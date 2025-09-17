@@ -474,7 +474,7 @@ class ea extends i.Component {
                     value: c.hg.H23,
                 },
             ],
-            onChange: (e) => L.hg.updateSetting(e.value),
+            onChange: (e) => L.hg.updateSetting(e),
             value: e,
         });
     }
