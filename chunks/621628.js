@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685), n(642613);
+n.d(t, { Z: () => E }), n(388685), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -9,49 +9,32 @@ var r = n(951288),
     u = n(68985),
     d = n(211644),
     f = n(98460),
-    _ = n(699867),
-    p = n(227157),
-    h = n(775195),
-    m = n(197571);
-function g() {
+    _ = n(686534),
+    p = n(699867),
+    h = n(227157),
+    m = n(775195),
+    g = n(197571);
+function E() {
     let e = (0, d.ZP)((e) => e.recentlyShown),
-        {
-            dailyCapReached: t,
-            dailyCapOverridden: n,
-            newUserMinAgeRequiredOverridden: g,
-        } = (0, a.cj)([u.Z], () => ({
-            dailyCapReached: u.Z.hasUserHitDCCap(),
-            dailyCapOverridden: u.Z.dailyCapOverridden,
-            newUserMinAgeRequiredOverridden: u.Z.newUserMinAgeRequiredOverridden,
-        })),
-        [E, b] = i.useState(""),
-        [y, O] = (0, f.Z)(),
-        v = e.map((e) => o.z[e]),
-        I = Object.keys(o.z)
-            .filter((e) => !v.includes(e))
-            .filter((e) => !y.includes(e))
-            .filter((e) => e.toLowerCase().includes(E.toLowerCase()))
+        t = (0, a.e7)([u.Z], () => u.Z.newUserMinAgeRequiredOverridden),
+        [n, E] = i.useState(""),
+        [b, y] = (0, f.Z)(),
+        O = e.map((e) => o.z[e]),
+        v = Object.keys(o.z)
+            .filter((e) => !O.includes(e))
+            .filter((e) => !b.includes(e))
+            .filter((e) => e.toLowerCase().includes(n.toLowerCase()))
             .sort((e, t) => e.localeCompare(t));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(s.hjN, {
                 title: "Dismissible Content Fatigue",
                 tag: s.RB0.H1,
-                className: m.marginBottom60,
+                className: g.marginBottom60,
                 children: [
-                    (0, r.jsx)(s.xJW, {
-                        children: (0, r.jsxs)(s.R94, {
-                            className: m.marginBottom4,
-                            children: ["Daily Cap Reached: ", t ? "Yes" : "No"],
-                        }),
-                    }),
+                    (0, r.jsx)(_.Z, {}),
                     (0, r.jsx)(s.j7V, {
-                        value: n,
-                        onChange: c.Nj,
-                        children: "Override Dismissible Content Daily Cap",
-                    }),
-                    (0, r.jsx)(s.j7V, {
-                        value: g,
+                        value: t,
                         onChange: c.KC,
                         children: "Override Minimum User Account Age Requirement",
                     }),
@@ -63,7 +46,7 @@ function g() {
                                 onClick: () => (0, c.EG)(),
                             }),
                             (0, r.jsx)(s.R94, {
-                                className: m.marginTop4,
+                                className: g.marginTop4,
                                 children: "This will reset the daily cap and content seen during session",
                             }),
                         ],
@@ -77,9 +60,9 @@ function g() {
                     gap: 16,
                     children: [
                         (0, r.jsx)(s.E1j, {
-                            query: E,
-                            onChange: b,
-                            onClear: () => b(""),
+                            query: n,
+                            onChange: E,
+                            onClear: () => E(""),
                         }),
                         (0, r.jsxs)(s.hE2, {
                             children: [
@@ -95,15 +78,15 @@ function g() {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(h.Z, { searchQuery: E }),
-                        (0, r.jsx)(p.Z, { searchQuery: E }),
+                        (0, r.jsx)(m.Z, { searchQuery: n }),
+                        (0, r.jsx)(h.Z, { searchQuery: n }),
                         (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(s.vwX, {
                                     tag: s.RB0.H2,
                                     children: "Available Dismissible Contents",
                                 }),
-                                (0, r.jsx)(_.Z, { items: I }),
+                                (0, r.jsx)(p.Z, { items: v }),
                             ],
                         }),
                     ],
