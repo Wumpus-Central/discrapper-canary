@@ -5,4 +5,5 @@ e.exports = {
     contentContainer: "contentContainer_b30d08",
     boostImage: "boostImage_b30d08",
     footer: "footer_b30d08",
+    disabled: "disabled_b30d08",
 };

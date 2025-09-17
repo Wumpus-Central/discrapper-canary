@@ -1,128 +1,152 @@
-n.d(t, { default: () => d }), n(388685);
-var r = n(951288),
-    o = n(647438),
-    i = n(481060),
-    a = n(870246),
-    s = n(604857),
-    c = n(17622),
-    l = n(237963),
-    u = n(942570);
-function d(e) {
+o.d(t, { default: () => _ }), o(388685);
+var n = o(951288),
+    r = o(647438),
+    a = o(120356),
+    c = o.n(a),
+    s = o(481060),
+    i = o(870246),
+    l = o(639777),
+    d = o(973772),
+    u = o(17622),
+    p = o(880419),
+    b = o(535396),
+    m = o(388032),
+    f = o(237963),
+    I = o(942570);
+function _(e) {
     var t,
-        n,
-        { guildId: d, powerup: p, onClose: f } = e,
-        b = (function (e, t) {
+        o,
+        { guildId: a, powerup: _, onClose: O } = e,
+        k = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
-                o = (function (e, t) {
+            var o,
+                n,
+                r = (function (e, t) {
                     if (null == e) return {};
-                    var n,
-                        r,
-                        o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                    var o,
+                        n,
+                        r = {},
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) (o = a[n]), t.indexOf(o) >= 0 || (r[o] = e[o]);
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++)
+                    (o = a[n]),
+                        !(t.indexOf(o) >= 0) && Object.prototype.propertyIsEnumerable.call(e, o) && (r[o] = e[o]);
             }
-            return o;
+            return r;
         })(e, ["guildId", "powerup", "onClose"]);
-    let [m, O] = o.useState(void 0);
+    let [j, g] = r.useState(void 0),
+        v = (0, d.ZP)(a, _),
+        x = v.type === b.A3.TIER_OVERRIDE_ACTIVATED,
+        y = (0, l.Z)(a),
+        C = null == v.sourceEntitlement || !y;
     return (
-        (0, a.$)(d, p, a.w.DETAIL),
-        (0, r.jsxs)(
-            i.Y0X,
+        (0, i.$)(a, _, i.w.DETAIL),
+        (0, n.jsxs)(
+            s.Y0X,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                    var o = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(o);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(o).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(o, e).enumerable;
                             }),
                         )),
-                        r.forEach(function (t) {
-                            var r;
-                            (r = n[t]),
+                        n.forEach(function (t) {
+                            var n;
+                            (n = o[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: r,
+                                          value: n,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = r);
+                                    : (e[t] = n);
                         });
                 }
                 return e;
             })(
                 {
-                    className: l.modal,
-                    size: i.CgR.DYNAMIC,
+                    "data-migration-pending": !0,
+                    className: f.modal,
+                    size: s.CgR.DYNAMIC,
                 },
-                b,
+                k,
             )),
-            (n = n =
+            (o = o =
                 {
                     parentComponent: "GuildPowerupLevelModal",
                     children: [
-                        (0, r.jsxs)(i.hzk, {
-                            className: l.modalContentContainer,
+                        (0, n.jsxs)(s.hzk, {
+                            "data-migration-pending": !0,
+                            className: f.modalContentContainer,
                             scrollbarType: "none",
                             children: [
-                                (0, r.jsx)("img", {
+                                (0, n.jsx)("img", {
                                     alt: "",
-                                    src: u,
-                                    className: l.boostImage,
+                                    src: I,
+                                    className: f.boostImage,
                                 }),
-                                (0, r.jsxs)("div", {
-                                    className: l.contentContainer,
+                                (0, n.jsxs)("div", {
+                                    className: f.contentContainer,
                                     children: [
-                                        (0, r.jsx)(i.X6q, {
+                                        (0, n.jsx)(s.X6q, {
                                             variant: "heading-xl/extrabold",
-                                            children: p.title,
+                                            children: _.title,
                                         }),
-                                        (0, r.jsx)(c.Z, { powerup: p }),
-                                        null != m &&
-                                            (0, r.jsx)(i.Text, {
+                                        (0, n.jsx)(u.Z, { powerup: _ }),
+                                        null != j &&
+                                            (0, n.jsx)(s.Text, {
                                                 color: "status-danger",
                                                 variant: "text-sm/semibold",
-                                                children: m,
+                                                children: j,
                                             }),
-                                        (0, r.jsx)(s.Z, {
-                                            className: l.footer,
-                                            guildId: d,
-                                            powerup: p,
-                                            onError: O,
-                                            onClose: f,
+                                        (0, n.jsxs)("div", {
+                                            className: c()(f.footer, { [f.disabled]: C }),
+                                            children: [
+                                                !x &&
+                                                    y &&
+                                                    (0, n.jsx)(p.ZP, {
+                                                        guildId: a,
+                                                        powerup: _,
+                                                        onError: g,
+                                                        grow: !1,
+                                                        compact: !C,
+                                                    }),
+                                                (0, n.jsx)(s.zxk, {
+                                                    variant: C ? "secondary" : "primary",
+                                                    onClick: O,
+                                                    text: m.intl.string(m.t.cpT0Cg),
+                                                }),
+                                            ],
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(i.olH, {
-                            className: l.close,
-                            onClick: f,
+                        (0, n.jsx)(s.olH, {
+                            className: f.close,
+                            onClick: O,
                         }),
                     ],
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
                 : (function (e, t) {
-                      var n = Object.keys(e);
+                      var o = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var n = Object.getOwnPropertySymbols(e);
+                          o.push.apply(o, n);
                       }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      return o;
+                  })(Object(o)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
                   }),
             t),
         )
