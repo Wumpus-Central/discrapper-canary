@@ -142,6 +142,26 @@ let { Themes: r } = n(15202).V,
                     },
                 },
             },
+            INPUT_BORDER_DEFAULT: {
+                "mana-text-inputs": {
+                    [r.DARK]: {
+                        raw: "OPACITY_WHITE_20",
+                        opacity: 0.2,
+                    },
+                    [r.LIGHT]: {
+                        raw: "OPACITY_BLACK_16",
+                        opacity: 0.1607843137254902,
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: "OPACITY_WHITE_28",
+                        opacity: 0.2784313725490196,
+                    },
+                    [r.DARKER]: {
+                        raw: "OPACITY_WHITE_20",
+                        opacity: 0.2,
+                    },
+                },
+            },
             INPUT_BORDER_DEFAULT_HOVER: {
                 "mana-text-inputs": {
                     [r.DARK]: {
