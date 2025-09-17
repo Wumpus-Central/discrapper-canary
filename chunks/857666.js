@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => x,
-    f: () => h,
+    Z: () => C,
+    f: () => x,
 }),
     n(388685);
 var r = n(951288),
@@ -16,16 +16,16 @@ var r = n(951288),
     m = n(981631),
     g = n(989308),
     f = n(388032),
-    v = n(592281),
-    _ = n(337003);
-function h(e, t) {
-    var h;
-    let x = null != (h = (0, u.Z)(t)) && h,
-        b = (0, l.e7)([c.Z], () => {
+    _ = n(592281),
+    v = n(337003);
+function x(e, t) {
+    var x;
+    let C = null != (x = (0, u.Z)(t)) && x,
+        h = (0, l.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
         }),
-        C = (0, l.e7)([c.Z], () => {
+        b = (0, l.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
         });
@@ -35,25 +35,25 @@ function h(e, t) {
                     ? (function (e) {
                           let { guildId: t, canUseBoosts: o, allPowerups: l, unlockedPowerups: c, skuIds: u } = e,
                               d = f.intl.string(g.default.KC9HRU),
-                              h = f.intl.string(g.default.GJiSmJ),
-                              x = null == l ? void 0 : l[i.IN],
-                              b = (null == c ? void 0 : c[i.IN]) != null,
-                              C = f.intl.string(g.default["/egwJC"]),
-                              j = b ? void 0 : f.intl.string(g.default.W6Vwn5),
-                              E = b ? void 0 : f.intl.string(g.default.lvk1GR),
-                              T = b ? f.intl.string(g.default["9CfkLC"]) : f.intl.string(f.t["+7XY39"]),
-                              P = b ? "secondary" : "expressive",
-                              I = o
+                              x = f.intl.string(g.default.GJiSmJ),
+                              C = null == l ? void 0 : l[i.IN],
+                              h = (null == c ? void 0 : c[i.IN]) != null,
+                              b = f.intl.string(g.default["/egwJC"]),
+                              E = h ? void 0 : f.intl.string(g.default.W6Vwn5),
+                              T = h ? void 0 : f.intl.string(g.default.lvk1GR),
+                              I = h ? f.intl.string(g.default["9CfkLC"]) : f.intl.string(f.t["+7XY39"]),
+                              j = h ? "secondary" : "expressive",
+                              P = o
                                   ? () => {
-                                        b
+                                        h
                                             ? s.Z.open(t, m.pNK.TAG, m.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != x && (0, p.KE)(t, x),
+                                            : null != C && (0, p.KE)(t, C),
                                             (0, a.pTH)();
                                     }
                                   : void 0;
                           return {
                               title: d,
-                              description: h,
+                              description: x,
                               openModal: function (e) {
                                   let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                   (0, a.ZDy)(
@@ -93,14 +93,14 @@ function h(e, t) {
                                                           title: d,
                                                           description: f.intl.string(g.default.BBRFRU),
                                                           powerups: e,
-                                                          footerInfoText: E,
+                                                          footerInfoText: T,
                                                           footerAction:
-                                                              o && null != I && null != T
+                                                              o && null != P && null != I
                                                                   ? {
-                                                                        variant: P,
-                                                                        text: T,
-                                                                        icon: "expressive" === P ? a.$Eu : void 0,
-                                                                        onClick: I,
+                                                                        variant: j,
+                                                                        text: I,
+                                                                        icon: "expressive" === j ? a.$Eu : void 0,
+                                                                        onClick: P,
                                                                     }
                                                                   : void 0,
                                                       },
@@ -111,19 +111,20 @@ function h(e, t) {
                                       { onCloseCallback: null == i ? void 0 : i.onModalClose },
                                   );
                               },
-                              viewCta: C,
-                              viewCtaTooltip: j,
+                              viewCta: b,
+                              viewCtaTooltip: E,
+                              badge: "new",
                               image: {
-                                  staticUrl: _.Z,
-                                  animatedUrl: v.Z,
+                                  staticUrl: v.Z,
+                                  animatedUrl: _.Z,
                               },
                               skuIds: u,
                           };
                       })({
                           guildId: t,
-                          canUseBoosts: x,
-                          allPowerups: b,
-                          unlockedPowerups: C,
+                          canUseBoosts: C,
+                          allPowerups: h,
+                          unlockedPowerups: b,
                           skuIds: d.z[e],
                       })
                     : void 0,
@@ -133,8 +134,8 @@ function h(e, t) {
             null != e && (l[t] = e);
         }
         return l;
-    }, [e, t, x, b, C]);
+    }, [e, t, C, h, b]);
 }
-function x(e, t) {
-    return h([e], t)[e];
+function C(e, t) {
+    return x([e], t)[e];
 }
