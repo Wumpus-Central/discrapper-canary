@@ -30,15 +30,20 @@ class g extends o.Z {
         super(...e),
             _(this, "previousStatus", null),
             _(this, "actions", {
-                POST_CONNECTION_OPEN: () => this.handleUpdate(),
-                USER_SETTINGS_PROTO_UPDATE: () => this.handleUpdate(),
+                POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+                USER_SETTINGS_PROTO_UPDATE: () => this.handleUserSettingsProtoUpdate(),
             }),
-            _(this, "handleUpdate", () => {
+            _(this, "handlePostConnectionOpen", () => {
+                (this.previousStatus = d.Z.getStatus()), this.handleCommonUpdates();
+            }),
+            _(this, "handleUserSettingsProtoUpdate", () => {
+                this.handleCommonUpdates(), this.manageDoNotDisturbReminderPopover();
+            }),
+            _(this, "handleCommonUpdates", () => {
                 this.manageExpiringCustomStatus(),
                     this.manageExpiringStatus(),
                     this.lazilyMigrateStatusCreatedAt(),
-                    this.manageExpiringFocusMode(),
-                    this.manageDoNotDisturbReminderPopover();
+                    this.manageExpiringFocusMode();
             }),
             _(this, "manageExpiringCustomStatus", () => {
                 let e = c.Ok.getSetting();
@@ -110,7 +115,7 @@ class g extends o.Z {
                     return;
                 }
                 let e = d.Z.getStatus();
-                this.previousStatus !== f.Skl.DND && e === f.Skl.DND && (0, u.m4)(r.z.DO_NOT_DISTURB_REMINDER_POPOVER),
+                this.previousStatus !== f.Skl.DND && e === f.Skl.DND && (0, u.Z1)(r.z.DO_NOT_DISTURB_REMINDER_POPOVER),
                     (this.previousStatus = e);
             });
     }
