@@ -1,24 +1,31 @@
-n.d(t, { uH: () => u }), n(35282);
+n.d(t, { uH: () => _ }), n(35282);
 var r = n(593473),
     i = n(843611),
     a = n(873546),
     o = n(833549),
     s = n(981631);
-let l = (e) => {
-        let { location: t } = e,
-            n = c({ location: t });
-        return a.tq && a.bO && n;
-    },
+n(474936);
+let l = () => a.tq && a.bO,
     c = (e) => {
         let { location: t } = e,
-            { enabled: n } = o.E.useConfig({ location: t });
+            { enabled: n } = MobileApplePaymentLinkExperiment.getConfig({ location: t });
         return n;
     },
     u = (e) => {
         let { location: t } = e,
+            n = d({ location: t });
+        return l() && n;
+    },
+    d = (e) => {
+        let { location: t } = e,
+            { enabled: n } = o.E.useConfig({ location: t });
+        return n;
+    },
+    f = (e, t, n) => !t.startsWith(s.Z5c.BILLING_MANAGE_SUBSCRIPTION) && n === s.MUe.APPLE_PAYMENT_LINK && e,
+    _ = (e) => {
+        let { location: t } = e,
             { search: n, pathname: a } = (0, i.TH)(),
-            o = l({ location: t });
-        if (a.startsWith(s.Z5c.BILLING_MANAGE_SUBSCRIPTION)) return !1;
-        let { deep_link_type: c } = (0, r.parse)(n);
-        return c === s.MUe.APPLE_PAYMENT_LINK && o;
+            o = u({ location: t }),
+            { deep_link_type: s } = (0, r.parse)(n);
+        return f(o, a, s);
     };
