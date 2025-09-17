@@ -5221,6 +5221,7 @@ var ng = (function (e) {
             (e.ACTIVITY_PANEL_BUTTON_CLICKED = "activity_panel_button_clicked"),
             (e.ACTIVITY_PANEL_SDK_LINK_VIEWED = "activity_panel_sdk_link_viewed"),
             (e.PROMOTION_REWARD_REDEMPTION_ATTEMPTED = "promotion_reward_redemption_attempted"),
+            (e.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED = "game_server_hosting_third_party_consent_accepted"),
             e
         );
     })({}),

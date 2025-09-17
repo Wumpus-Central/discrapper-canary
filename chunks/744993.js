@@ -1,24 +1,25 @@
 n.d(t, {
-    EC: () => p,
-    F4: () => b,
-    LG: () => f,
-    NE: () => g,
-    _k: () => j,
-    g$: () => x,
-    po: () => h,
-    s9: () => v,
+    EC: () => x,
+    F4: () => f,
+    LG: () => g,
+    NE: () => v,
+    _k: () => _,
+    g$: () => b,
+    po: () => p,
+    s9: () => j,
 });
 var a = n(544891),
     r = n(570140),
     l = n(594174),
-    i = n(73346),
-    s = n(962774),
-    o = n(101805),
-    c = n(675984),
-    d = n(113130),
-    u = n(473682),
-    m = n(981631);
-function h(e) {
+    i = n(626135),
+    s = n(73346),
+    o = n(962774),
+    c = n(101805),
+    d = n(675984),
+    u = n(113130),
+    m = n(473682),
+    h = n(981631);
+function p(e) {
     var t, n;
     let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (a)
@@ -26,22 +27,22 @@ function h(e) {
             r.Z.dispatch({
                 type: "PORTKEY_FETCH_CATALOG_SUCCESS",
                 guildId: e,
-                catalog: s.kd.reduce((e, t) => ((e[t.id] = t), e), {}),
+                catalog: o.kd.reduce((e, t) => ((e[t.id] = t), e), {}),
             });
         }, 5000);
-    let o = null != (n = null == (t = l.default.getCurrentUser()) ? void 0 : t.isStaff()) && n;
-    return (0, i.Kb)({
-        url: m.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(u.IU),
+    let i = null != (n = null == (t = l.default.getCurrentUser()) ? void 0 : t.isStaff()) && n;
+    return (0, s.Kb)({
+        url: h.ANM.COLLECTION_PUBLISHED_LISTINGS_SKU(m.IU),
         query: {
             guild_id: e,
-            include_unpublished_products: o,
-            include_unpublished_collection: o,
+            include_unpublished_products: i,
+            include_unpublished_collection: i,
         },
         oldFormErrors: !0,
         rejectWithError: !1,
     }).then((t) => {
         let n = t.body.products.reduce((e, t) => {
-            let n = (0, c.m)(t);
+            let n = (0, d.m)(t);
             return (e[n.id] = n), e;
         }, {});
         r.Z.dispatch({
@@ -51,24 +52,24 @@ function h(e) {
         });
     });
 }
-function p(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t
         ? void setTimeout(() => {
               r.Z.dispatch({
                   type: "PORTKEY_FETCH_INSTANCES_SUCCESS",
                   guildId: e,
-                  instances: s.qE.reduce((e, t) => ((e[t.gameId] = t), e), {}),
+                  instances: o.qE.reduce((e, t) => ((e[t.gameId] = t), e), {}),
               });
           }, 5000)
         : a.tn
               .get({
-                  url: m.ANM.GAME_SERVERS(e),
+                  url: h.ANM.GAME_SERVERS(e),
                   rejectWithError: !0,
               })
               .then((t) => {
                   if (null != t.body) {
-                      let n = t.body.reduce((e, t) => ((e[t.gameId] = (0, o.Z)(t)), e), {});
+                      let n = t.body.reduce((e, t) => ((e[t.gameId] = (0, c.Z)(t)), e), {});
                       r.Z.dispatch({
                           type: "PORTKEY_FETCH_INSTANCES_SUCCESS",
                           guildId: e,
@@ -77,25 +78,32 @@ function p(e) {
                   }
               });
 }
-function x(e) {
+function b(e, t) {
+    if (e) {
+        var n;
+        i.default.track(h.rMx.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
+            user_id: null == (n = l.default.getCurrentUser()) ? void 0 : n.id,
+            provider: t,
+        });
+    }
     r.Z.dispatch({
         type: "PORTKEY_ACCEPT_TOS",
         acceptedToS: e,
     });
 }
-function b() {
+function f() {
     r.Z.dispatch({ type: "PORTKEY_LOCATION_PING_STATE_RESET" });
 }
-function f(e, t) {
+function g(e, t) {
     r.Z.dispatch({
         type: "PORTKEY_LOCATION_PING_STATE_UPDATE",
         pingUrl: e,
         state: t,
     });
 }
-function g(e, t, n, r) {
+function v(e, t, n, r) {
     return a.tn.post({
-        url: m.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        url: h.ANM.GUILD_POWERUP_TOGGLE(e, t),
         body: {
             game_server_name: n,
             game_server_region: r,
@@ -104,25 +112,25 @@ function g(e, t, n, r) {
         oldFormErrors: !0,
     });
 }
-function v(e, t, n) {
+function j(e, t, n) {
     return a.tn.del({
-        url: m.ANM.GUILD_POWERUP_TOGGLE(e, t),
+        url: h.ANM.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
         rejectWithError: !0,
         oldFormErrors: !0,
     });
 }
-function j(e) {
+function _(e) {
     return a.tn
         .get({
-            url: m.ANM.GAME_SERVER_REGIONS(e),
+            url: h.ANM.GAME_SERVER_REGIONS(e),
             rejectWithError: !0,
             oldFormErrors: !0,
         })
         .then((e) => {
             r.Z.dispatch({
                 type: "PORTKEY_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(d.Z),
+                regions: e.body.map(u.Z),
             });
         });
 }

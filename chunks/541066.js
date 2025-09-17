@@ -94,7 +94,7 @@ function a(e) {
                                 text: i.intl.string(c.default.IfMFoK),
                                 variant: "primary",
                                 onClick: () => {
-                                    (0, l.g$)(!0), null == a || a(), u.onClose();
+                                    (0, l.g$)(!0, "Portkey"), null == a || a(), u.onClose();
                                 },
                             }),
                         ],
