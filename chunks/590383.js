@@ -1,6 +1,6 @@
 t.d(n, { Z: () => u });
-var i,
-    r = t(442837),
+var r,
+    i = t(442837),
     a = t(570140);
 function l(e, n, t) {
     return (
@@ -20,44 +20,44 @@ let o = {},
 function c() {
     o = {};
 }
-class d extends (i = r.ZP.Store) {
-    getLocationStateForPingUrl(e) {
+class d extends (r = i.ZP.Store) {
+    getRegionStateForPingUrl(e) {
         if (null != e) return o[e];
     }
     getRegions() {
         return s;
     }
 }
-l(d, "displayName", "PortkeyLocationStore");
+l(d, "displayName", "PortkeyRegionStore");
 let u = new d(a.Z, {
     LOGOUT: c,
-    PORTKEY_LOCATION_PING_STATE_UPDATE: function (e) {
+    PORTKEY_REGION_PING_STATE_UPDATE: function (e) {
         var n, t;
-        let { pingUrl: i, state: r } = e;
+        let { pingUrl: r, state: i } = e;
         (n = (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
-                    i = Object.keys(t);
+                    r = Object.keys(t);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
+                    (r = r.concat(
                         Object.getOwnPropertySymbols(t).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         }),
                     )),
-                    i.forEach(function (n) {
+                    r.forEach(function (n) {
                         l(e, n, t[n]);
                     });
             }
             return e;
         })({}, o)),
-            (t = t = { [i]: r }),
+            (t = t = { [r]: i }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
                 : (function (e, n) {
                       var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var i = Object.getOwnPropertySymbols(e);
-                          t.push.apply(t, i);
+                          var r = Object.getOwnPropertySymbols(e);
+                          t.push.apply(t, r);
                       }
                       return t;
                   })(Object(t)).forEach(function (e) {
@@ -65,7 +65,7 @@ let u = new d(a.Z, {
                   }),
             (o = n);
     },
-    PORTKEY_LOCATION_PING_STATE_RESET: c,
+    PORTKEY_REGION_PING_STATE_RESET: c,
     PORTKEY_FETCH_REGIONS_SUCCESS: function (e) {
         let { regions: n } = e;
         s = n;

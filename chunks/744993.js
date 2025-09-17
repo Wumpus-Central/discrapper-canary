@@ -1,12 +1,12 @@
 n.d(t, {
     EC: () => x,
-    F4: () => f,
-    LG: () => g,
     NE: () => v,
+    TN: () => f,
     _k: () => _,
     g$: () => b,
     po: () => p,
     s9: () => j,
+    yP: () => g,
 });
 var a = n(544891),
     r = n(570140),
@@ -92,11 +92,11 @@ function b(e, t) {
     });
 }
 function f() {
-    r.Z.dispatch({ type: "PORTKEY_LOCATION_PING_STATE_RESET" });
+    r.Z.dispatch({ type: "PORTKEY_REGION_PING_STATE_RESET" });
 }
 function g(e, t) {
     r.Z.dispatch({
-        type: "PORTKEY_LOCATION_PING_STATE_UPDATE",
+        type: "PORTKEY_REGION_PING_STATE_UPDATE",
         pingUrl: e,
         state: t,
     });
