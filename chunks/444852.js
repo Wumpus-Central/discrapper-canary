@@ -433,18 +433,41 @@ class F extends c.Z {
                                 time_remote_user_to_video_stream_created:
                                     void 0 !== e.remoteVideoStreamCreatedTimestamp &&
                                     void 0 !== e.remoteUserCreatedTimestamp
-                                        ? e.remoteVideoStreamCreatedTimestamp - e.remoteUserCreatedTimestamp
-                                        : -1,
+                                        ? Number(e.remoteVideoStreamCreatedTimestamp - e.remoteUserCreatedTimestamp)
+                                        : null,
                                 time_video_stream_created_to_video_data_received:
                                     void 0 !== e.videoDataReceivedTimestamp &&
                                     void 0 !== e.remoteVideoStreamCreatedTimestamp
-                                        ? e.videoDataReceivedTimestamp - e.remoteVideoStreamCreatedTimestamp
-                                        : -1,
+                                        ? Number(e.videoDataReceivedTimestamp - e.remoteVideoStreamCreatedTimestamp)
+                                        : null,
                                 time_video_data_received_to_video_source_delivered_frame:
                                     void 0 !== e.videoSourceDeliveredFrameTimestamp &&
                                     void 0 !== e.videoDataReceivedTimestamp
-                                        ? e.videoSourceDeliveredFrameTimestamp - e.videoDataReceivedTimestamp
-                                        : -1,
+                                        ? Number(e.videoSourceDeliveredFrameTimestamp - e.videoDataReceivedTimestamp)
+                                        : null,
+                                time_remote_user_to_mls_external_sender_updated:
+                                    void 0 !== e.updateMLSExternalSenderTimestamp &&
+                                    void 0 !== e.remoteUserCreatedTimestamp
+                                        ? Number(e.updateMLSExternalSenderTimestamp - e.remoteUserCreatedTimestamp)
+                                        : null,
+                                time_remote_user_to_secure_frame_remote_key_ratchet_set:
+                                    void 0 !== e.setRemoteSecureFrameKeyRatchetTimestamp &&
+                                    void 0 !== e.remoteUserCreatedTimestamp
+                                        ? Number(
+                                              e.setRemoteSecureFrameKeyRatchetTimestamp - e.remoteUserCreatedTimestamp,
+                                          )
+                                        : null,
+                                time_remote_user_to_secure_frame_local_key_ratchet_set:
+                                    void 0 !== e.setLocalSecureFrameKeyRatchetTimestamp &&
+                                    void 0 !== e.remoteUserCreatedTimestamp
+                                        ? Number(
+                                              e.setLocalSecureFrameKeyRatchetTimestamp - e.remoteUserCreatedTimestamp,
+                                          )
+                                        : null,
+                                time_remote_user_to_first_frame_decrypted:
+                                    void 0 !== e.firstFrameDecryptedTimestamp && void 0 !== e.remoteUserCreatedTimestamp
+                                        ? Number(e.firstFrameDecryptedTimestamp - e.remoteUserCreatedTimestamp)
+                                        : null,
                             });
                         }),
                     null == (f = this._connection) ||
