@@ -33,7 +33,7 @@ function y(e) {
         Z = e.features.has(O.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         w = (0, g.Z)(e.id),
         T = (0, h.A0)(e.id, "useGuildActionRows"),
-        A = e.features.has(O.oNc.GAME_SERVER_HOSTING);
+        A = e.features.has(O.oNc.GAME_SERVERS);
     return (
         P && S.push(b.z.GUILD_HUB_HEADER_OPTIONS),
         !C && j && x && null != v && v.length > 0

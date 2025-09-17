@@ -49,9 +49,7 @@ async function O(e) {
                 return null != O && (0, f.Z)(O);
             case y.oC.PORTKEY:
                 return (
-                    (0, d.ZO)(t, "isAccessibleChannelOrThreadPath") &&
-                    null != O &&
-                    O.features.has(b.oNc.GAME_SERVER_HOSTING)
+                    (0, d.ZO)(t, "isAccessibleChannelOrThreadPath") && null != O && O.features.has(b.oNc.GAME_SERVERS)
                 );
             default:
                 (0, g.vE)(n);
