@@ -22,6 +22,46 @@ let { Themes: r } = n(15202).V,
                     },
                 },
             },
+            CHECKBOX_BACKGROUND_DEFAULT: {
+                "mana-toggle-inputs": {
+                    [r.DARK]: {
+                        raw: "OPACITY_BLACK_8",
+                        opacity: 0.0784313725490196,
+                    },
+                    [r.LIGHT]: {
+                        raw: "OPACITY_BLACK_4",
+                        opacity: 0.0392156862745098,
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: "OPACITY_BLACK_8",
+                        opacity: 0.0784313725490196,
+                    },
+                    [r.DARKER]: {
+                        raw: "OPACITY_BLACK_8",
+                        opacity: 0.0784313725490196,
+                    },
+                },
+            },
+            CHECKBOX_BORDER_DEFAULT: {
+                "mana-toggle-inputs": {
+                    [r.DARK]: {
+                        raw: "OPACITY_64",
+                        opacity: 0.6392156862745098,
+                    },
+                    [r.LIGHT]: {
+                        raw: "NEUTRAL_34",
+                        opacity: 1,
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: "OPACITY_64",
+                        opacity: 0.6392156862745098,
+                    },
+                    [r.DARKER]: {
+                        raw: "OPACITY_64",
+                        opacity: 0.6392156862745098,
+                    },
+                },
+            },
             INPUT_BACKGROUND_CRITICAL: {
                 "mana-text-inputs": {
                     [r.DARK]: {
