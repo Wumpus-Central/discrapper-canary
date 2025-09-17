@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -8,61 +8,62 @@ var r = n(951288),
     c = n(497505),
     u = n(415104),
     d = n(134483),
-    f = n(216074),
-    _ = n(388032),
-    p = n(818923);
-let h = function (e) {
+    f = n(993369),
+    _ = n(881199),
+    p = n(388032),
+    h = n(818923);
+let m = function (e) {
     let { questId: t } = e,
         n = (0, a.e7)([l.Z], () => null != t && l.Z.isFetchingQuestPreview(t), [t]),
-        h = (0, a.e7)([l.Z], () => (null != t ? l.Z.getQuest(t) : void 0), [t]),
-        m = i.useRef(!1);
+        m = (0, a.e7)([l.Z], () => (null != t ? l.Z.getQuest(t) : void 0), [t]),
+        g = i.useRef(!1);
     i.useEffect(() => {
-        null == t || m.current || ((m.current = !0), (0, s.MG)(t));
+        null == t || g.current || ((g.current = !0), (0, s.MG)(t));
     }, [t]);
-    let g = () => {
+    let E = () => {
         null != t && (0, s.MG)(t);
     };
-    return null == h
+    return null == m
         ? (0, r.jsxs)("div", {
-              className: p.previewPage,
+              className: h.previewPage,
               children: [
-                  (0, r.jsx)(o.Mgn, { className: p.errorIcon }),
+                  (0, r.jsx)(o.Mgn, { className: h.errorIcon }),
                   (0, r.jsx)(o.X6q, {
                       variant: "heading-lg/semibold",
                       children: "Welcome to the Ad preview Tool",
                   }),
                   (0, r.jsx)(o.Zbd, {
-                      className: p.messageWrapper,
+                      className: h.messageWrapper,
                       children: (0, r.jsx)("code", {
-                          className: p.message,
+                          className: h.message,
                           children: "Unable to load Quest",
                       }),
                   }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: p.previewPage,
+              className: h.previewPage,
               children: [
-                  (0, r.jsx)(o.qDn, { className: p.questsIcon }),
+                  (0, r.jsx)(o.qDn, { className: h.questsIcon }),
                   (0, r.jsx)(o.X6q, {
                       variant: "heading-lg/semibold",
                       children: "Welcome to the Ad preview Tool",
                   }),
                   (0, r.jsxs)("div", {
-                      className: p.menu,
+                      className: h.menu,
                       children: [
                           (0, r.jsx)(o.Zbd, {
-                              className: p.messageWrapper,
+                              className: h.messageWrapper,
                               children: (0, r.jsx)("code", {
-                                  className: p.message,
-                                  children: h.config.messages.questName,
+                                  className: h.message,
+                                  children: m.config.messages.questName,
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: p.messageButton,
+                              className: h.messageButton,
                               children: (0, r.jsx)(o.hU, {
-                                  onClick: g,
-                                  "aria-label": _.intl.string(_.t.wzzjk5),
+                                  onClick: E,
+                                  "aria-label": p.intl.string(p.t.wzzjk5),
                                   icon: o.DuK,
                                   loading: n,
                               }),
@@ -70,16 +71,16 @@ let h = function (e) {
                       ],
                   }),
                   (0, r.jsxs)(o.Zbd, {
-                      className: p.previewCard,
+                      className: h.previewCard,
                       children: [
                           (0, r.jsx)(o.X6q, {
-                              className: p.heading,
+                              className: h.heading,
                               variant: "heading-lg/semibold",
                               children: "Discovery Card",
                           }),
                           (0, r.jsx)(u.Z, {
-                              className: p.questTile,
-                              quest: h,
+                              className: h.questTile,
+                              quest: m,
                               questContent: c.jn.QUEST_HOME_DESKTOP,
                               contentPosition: 0,
                               rowIndex: 0,
@@ -88,24 +89,25 @@ let h = function (e) {
                       ],
                   }),
                   (0, r.jsxs)(o.Zbd, {
-                      className: p.previewCard,
+                      className: h.previewCard,
                       children: [
                           (0, r.jsx)(o.X6q, {
-                              className: p.heading,
+                              className: h.heading,
                               variant: "heading-lg/semibold",
                               children: "Channel Call Header",
                           }),
                           (0, r.jsx)("div", {
-                              className: p.questChannelCallHeaderWrapper,
+                              className: h.questChannelCallHeaderWrapper,
                               children: (0, r.jsx)(d.Z, {
                                   channelId: "preview-channel-id",
-                                  previewQuest: h,
+                                  previewQuest: m,
                                   isParticipatingOverride: !1,
                               }),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(f.Z, { questId: h.id }),
+                  (0, r.jsx)(_.Z, { questId: m.id }),
+                  (0, r.jsx)(f.Z, { quest: m }),
               ],
           });
 };

@@ -1,0 +1,16 @@
+e.exports = {
+    embedCard: "embedCard__027d4",
+    embedHeading: "embedHeading__027d4",
+    embedHelper: "embedHelper__027d4",
+    helperText: "helperText__027d4",
+    embedWrapper: "embedWrapper__027d4",
+    embedSection: "embedSection__027d4",
+    sectionHeading: "sectionHeading__027d4",
+    fixedEmbed: "fixedEmbed__027d4",
+    fixedEmbedWrapper: "fixedEmbedWrapper__027d4",
+    desktopEmbed: "desktopEmbed__027d4",
+    tabletEmbed: "tabletEmbed__027d4",
+    mobileEmbed: "mobileEmbed__027d4",
+    sizeLabel: "sizeLabel__027d4",
+    questsEmbed: "questsEmbed__027d4",
+};
