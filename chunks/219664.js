@@ -20,12 +20,12 @@ var r = n(951288),
     _ = n(695346),
     C = n(433355),
     y = n(592125),
-    w = n(496675),
-    T = n(699516),
+    T = n(496675),
+    w = n(699516),
     O = n(456269),
-    S = n(109590),
-    P = n(368844),
-    N = n(73315),
+    N = n(109590),
+    S = n(368844),
+    P = n(73315),
     I = n(404616),
     E = n(510060),
     R = n(983200),
@@ -122,12 +122,12 @@ function V(e) {
         p = n.id,
         b = i.useRef(null),
         j = (0, o.e7)([C.ZP], () => C.ZP.getCurrentSidebarChannelId(n.parent_id) === n.id),
-        { firstMessage: v, loaded: _ } = (0, S.cl)(n),
+        { firstMessage: v, loaded: _ } = (0, N.cl)(n),
         { messageCountText: y } = (0, O.nP)(n),
-        { isNew: w, hasUnreads: T } = (0, O.J$)(n),
-        P = i.useRef(null),
-        { handleLeftClick: N, handleRightClick: R } = (0, A.Z)({
-            facepileRef: P,
+        { isNew: T, hasUnreads: w } = (0, O.J$)(n),
+        S = i.useRef(null),
+        { handleLeftClick: P, handleRightClick: R } = (0, A.Z)({
+            facepileRef: S,
             goToThread: a,
             channel: n,
         });
@@ -167,7 +167,7 @@ function V(e) {
         })(B, ["onFocus"]);
     return (0, r.jsxs)("li", {
         ref: b,
-        onClick: N,
+        onClick: P,
         onFocus: U,
         onContextMenu: R,
         className: l()(z.container, m, { [z.isOpen]: j }),
@@ -177,7 +177,7 @@ function V(e) {
                 d.P3F,
                 H(
                     {
-                        onClick: N,
+                        onClick: P,
                         focusProps: { ringTarget: b },
                         onContextMenu: R,
                         "aria-label": D.intl.formatToPlainString(D.t.pgYN6e, {
@@ -210,7 +210,7 @@ function V(e) {
                                     }),
                                 ],
                             }),
-                            w
+                            T
                                 ? (0, r.jsx)(d.IGR, {
                                       className: z.newBadge,
                                       color: c.Z.unsafe_rawColors.BRAND_260.css,
@@ -223,7 +223,7 @@ function V(e) {
                         children: (0, r.jsx)(d.X6q, {
                             variant: "heading-md/extrabold",
                             className: z.title,
-                            color: T ? "header-primary" : "text-muted",
+                            color: w ? "header-primary" : "text-muted",
                             style: { width: "".concat(h.width - 2 * E.I8, "px") },
                             children: F,
                         }),
@@ -248,7 +248,7 @@ function V(e) {
                     children: (0, r.jsx)(W, {
                         channel: n,
                         firstMessage: v,
-                        facepileRef: P,
+                        facepileRef: S,
                     }),
                 }),
             }),
@@ -257,9 +257,9 @@ function V(e) {
 }
 function G(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: i, overrideMedia: a, coords: l } = e,
-        { isBlocked: s, isIgnored: c } = (0, o.cj)([T.Z], () => ({
-            isBlocked: null != n && T.Z.isBlockedForMessage(n),
-            isIgnored: null != n && T.Z.isIgnoredForMessage(n),
+        { isBlocked: s, isIgnored: c } = (0, o.cj)([w.Z], () => ({
+            isBlocked: null != n && w.Z.isBlockedForMessage(n),
+            isIgnored: null != n && w.Z.isIgnoredForMessage(n),
         }));
     return s
         ? (0, r.jsx)($, {
@@ -290,15 +290,14 @@ function q(e) {
             noStyleAndInteraction: !1,
         }),
         { hasUnreads: d } = (0, O.J$)(t),
-        u = (0, o.e7)([w.Z], () => w.Z.can(F.Plq.MANAGE_MESSAGES, t)),
+        u = (0, o.e7)([T.Z], () => T.Z.can(F.Plq.MANAGE_MESSAGES, t)),
         m = _.QK.useSetting(),
         h = _.cC.useSetting(),
         g = (0, b.Z)(h, u),
-        f = (0, P.aU)(n, s, !1),
-        [x, p] = (0, E.rI)(l.width - 2 * E.LT),
-        j = (null == n ? void 0 : n.blocked) || null == (null != a ? a : c),
-        v = t.isMediaPost();
-    return j
+        f = (0, S.aU)(n, s, !1),
+        x = t.isMediaPost(),
+        [p, j] = (0, E.rI)(l.width - 2 * E.LT, x ? E.Lv.SIXTEEN_BY_NINE : E.Lv.THREE_BY_TWO);
+    return (null == n ? void 0 : n.blocked) || null == (null != a ? a : c)
         ? (0, r.jsx)(Q, {
               channel: t,
               firstMessage: n,
@@ -308,13 +307,13 @@ function q(e) {
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(J, {
+                  (0, r.jsx)(Y, {
                       mediaAttachments: f,
                       globalSpoilerRenderSetting: g,
-                      containerWidth: x,
-                      containerHeight: v ? (9 / 16) * x : p,
+                      containerWidth: p,
+                      containerHeight: j,
                       canAutoPlay: m,
-                      shouldMaintainAspectRatio: v,
+                      shouldMaintainAspectRatio: x,
                   }),
                   (0, r.jsx)("div", {
                       className: z.tagsRow,
@@ -404,7 +403,7 @@ let X = (e) => e.preventDefault(),
             children: (0, v.Yi)(B(H({}, e), { analyticsSource: "ForumPostMediaPreviewImage" })),
         });
     }),
-    J = i.memo(function (e) {
+    Y = i.memo(function (e) {
         let {
                 mediaAttachments: t,
                 globalSpoilerRenderSetting: n,
@@ -413,7 +412,7 @@ let X = (e) => e.preventDefault(),
                 canAutoPlay: o,
                 shouldMaintainAspectRatio: c = !1,
             } = e,
-            { containsVideo: u, containsGif: m } = i.useMemo(() => (0, P.cp)(t), [t]),
+            { containsVideo: u, containsGif: m } = i.useMemo(() => (0, S.cp)(t), [t]),
             b = i.useMemo(() => t.slice(R.$x, R.GV), [t]),
             j = (0, R.tu)({
                 numAttachments: b.length,
@@ -480,7 +479,7 @@ let X = (e) => e.preventDefault(),
                                     a &&
                                         (0, r.jsx)("div", {
                                             className: z.obscuredTagContainer,
-                                            children: (0, r.jsx)(N.Z, {
+                                            children: (0, r.jsx)(P.Z, {
                                                 obscureReason: s,
                                                 iconClassname: z.obscuredTag,
                                             }),
@@ -523,7 +522,7 @@ let X = (e) => e.preventDefault(),
                         ],
                     }),
                 t.length > R.Vn &&
-                    (0, r.jsx)(Y, {
+                    (0, r.jsx)(J, {
                         text: (t.length - R.Vn).toString(),
                         icon: d.XBm,
                         pillClassName: z.moreImagesPill,
@@ -533,7 +532,7 @@ let X = (e) => e.preventDefault(),
             ],
         });
     });
-function Y(e) {
+function J(e) {
     let { text: t, icon: n, pillClassName: i, iconClassName: a, textClassName: l } = e;
     return (0, r.jsxs)("div", {
         className: i,
