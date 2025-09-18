@@ -869,18 +869,12 @@ function eU(e) {
 }
 function eG(e, t) {
     let n = (0, c.e7)([N.Z], () => N.Z.getQuest(e), [e]),
-        i = (0, u.ZP)(),
-        a = r.useMemo(() => (null == n ? void 0 : n.config.features.includes(j.S7.QUESTS_CDN)) === !0, [n]);
-    return r.useMemo(
-        () =>
-            (null == n ? void 0 : n.config.cosponsorMetadata) == null
-                ? null
-                : (0, x.Rt)(e, n.config.cosponsorMetadata.logotype, {
-                      theme: null != t ? t : (0, l.wj)(i) ? M.BRd.DARK : M.BRd.LIGHT,
-                      newCdn: a,
-                  }),
-        [i, t, e, null == n ? void 0 : n.config.cosponsorMetadata, a],
-    );
+        i = (0, u.ZP)();
+    return r.useMemo(() => {
+        if (null == n) return null;
+        let e = null != t ? t : (0, l.wj)(i) ? M.BRd.DARK : M.BRd.LIGHT;
+        return (0, x.fh)(n, x.eC.COSPONSOR_LOGO_TYPE, e);
+    }, [i, t, n]);
 }
 function eB(e) {
     let t = L.r.build(e).defaultRewardName,

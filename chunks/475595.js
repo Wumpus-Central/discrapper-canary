@@ -2,7 +2,6 @@ n.d(t, {
     Dm: () => y,
     N0: () => _,
     Q2: () => b,
-    Rt: () => h,
     eC: () => p,
     f0: () => T,
     fh: () => g,
@@ -25,8 +24,8 @@ var r = n(887003),
     o = n(509212),
     s = n(46140),
     l = n(981631),
-    c = n(380299),
-    u = n(772400);
+    c = n(255649),
+    u = n(636573);
 let d = 3,
     f = /\.([a-zA-Z0-9]+)$/,
     _ = ["video/mp4", "video/webm"];
@@ -41,6 +40,7 @@ var p = (function (e) {
         (e.REWARD_IMAGE = "reward_image"),
         (e.GAME_TILE = "game_tile"),
         (e.LOGO_TYPE = "logo_type"),
+        (e.COSPONSOR_LOGO_TYPE = "cosponsor_logo_type"),
         e
     );
 })({});
@@ -59,7 +59,8 @@ function m(e, t) {
 }
 function g(e, t, n, i) {
     var a, l;
-    let d;
+    let d,
+        f = !1;
     switch (t) {
         case "hero":
             d = m(e.config.assets.heroVideo, e.config.assets.hero);
@@ -120,15 +121,31 @@ function g(e, t, n, i) {
             break;
         }
         case "game_tile":
-            d = e.config.assets.gameTile;
+            "dark" === n && null != e.config.assets.gameTileDark
+                ? (d = e.config.assets.gameTileDark)
+                : "light" === n && null != e.config.assets.gameTileLight
+                  ? (d = e.config.assets.gameTileLight)
+                  : ((d = e.config.assets.gameTile), (f = !0));
             break;
         case "logo_type":
-            d = e.config.assets.logotype;
+            "dark" === n && null != e.config.assets.logotypeDark
+                ? (d = e.config.assets.logotypeDark)
+                : "light" === n && null != e.config.assets.logotypeLight
+                  ? (d = e.config.assets.logotypeLight)
+                  : ((d = e.config.assets.logotype), (f = !0));
+            break;
+        case "cosponsor_logo_type":
+            if (null == e.config.cosponsorMetadata) return null;
+            "dark" === n && null != e.config.cosponsorMetadata.logotypeDark
+                ? (d = e.config.cosponsorMetadata.logotypeDark)
+                : "light" === n && null != e.config.cosponsorMetadata.logotypeLight
+                  ? (d = e.config.cosponsorMetadata.logotypeLight)
+                  : ((d = e.config.cosponsorMetadata.logotype), (f = !0));
     }
-    let f = e.config.features.includes(s.S7.QUESTS_CDN);
+    let _ = e.config.features.includes(s.S7.QUESTS_CDN);
     return h(e.id, d, {
-        theme: n,
-        newCdn: f,
+        theme: f ? n : void 0,
+        newCdn: _,
     });
 }
 function E(e) {

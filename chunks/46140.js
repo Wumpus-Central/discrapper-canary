@@ -1,35 +1,36 @@
 n.d(t, {
-    Dp: () => E,
-    Jp: () => T,
-    Lv: () => I,
-    NH: () => m,
-    Ot: () => u,
-    R4: () => f,
-    S7: () => l.S,
-    Ts: () => g,
-    Uo: () => h,
-    V6: () => y,
-    V_: () => b,
-    XJ: () => C,
-    XZ: () => d,
-    a_: () => s.a,
-    cd: () => _,
-    dr: () => c,
-    l$: () => v,
-    tD: () => p,
-    tt: () => S,
-    v6: () => O,
-    vy: () => N,
-    yq: () => A,
+    Dp: () => y,
+    Jp: () => C,
+    Lv: () => S,
+    NH: () => E,
+    Ot: () => d,
+    R4: () => _,
+    S7: () => c.S,
+    Ts: () => b,
+    Uo: () => g,
+    V6: () => v,
+    V_: () => O,
+    XJ: () => R,
+    XZ: () => f,
+    a_: () => l.a,
+    cd: () => p,
+    dr: () => u,
+    l$: () => T,
+    tD: () => m,
+    tt: () => A,
+    v6: () => I,
+    vy: () => P,
+    yq: () => N,
 }),
     n(388685);
 var r = n(754700),
     i = n(758846),
-    a = n(70956),
-    o = n(497505),
-    s = n(438954),
-    l = n(670081),
-    c = (function (e) {
+    a = n(544891),
+    o = n(70956),
+    s = n(497505),
+    l = n(438954),
+    c = n(670081),
+    u = (function (e) {
         return (
             (e.ACTIVITY_PANEL = "quests_bar_activity_panel"),
             (e.QUESTS_MANAGER = "quests_manager"),
@@ -76,23 +77,27 @@ var r = n(754700),
             e
         );
     })({});
-let u = a.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
-    d = {
+let d = o.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
+    f = {
         tension: 900,
         friction: 45,
         clamp: !0,
     },
-    f = {
+    _ = {
         tension: 360,
         friction: 30,
         clamp: !0,
     };
-var _ = (function (e) {
+var p = (function (e) {
     return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
 })({});
-let p = "https://cdn.discordapp.com/quests/",
-    h = "https://cdn.discordapp.com/assets/quests/";
-var m = (function (e) {
+let h = (0, a.K0)(),
+    m =
+        -1 !== h.indexOf("localhost") || -1 !== h.indexOf("127.0.0.1")
+            ? "".concat(h, "/_cdn_storage/quests/")
+            : "https://cdn.discordapp.com/quests/",
+    g = "https://cdn.discordapp.com/assets/quests/";
+var E = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -102,9 +107,9 @@ var m = (function (e) {
         e
     );
 })({});
-let g = "545364944258990091",
-    E = "{reward_code}";
-var b = (function (e) {
+let b = "545364944258990091",
+    y = "{reward_code}";
+var O = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
         (e.UNKNOWN_QUEST = "unknown_quest"),
@@ -112,16 +117,9 @@ var b = (function (e) {
         e
     );
 })({});
-let y = "1333839522189938740",
-    O = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),
-    v = new Set([
-        r.X.STREAM_ON_DESKTOP,
-        r.X.PLAY_ON_DESKTOP,
-        r.X.PLAY_ON_XBOX,
-        r.X.PLAY_ON_PLAYSTATION,
-        r.X.PLAY_ON_DESKTOP_V2,
-    ]),
-    I = new Set([
+let v = "1333839522189938740",
+    I = new Set([s.Ok.DESKTOP_ACCOUNT_PANEL_AREA, s.Ok.MOBILE_HOME_DOCK_AREA]),
+    T = new Set([
         r.X.STREAM_ON_DESKTOP,
         r.X.PLAY_ON_DESKTOP,
         r.X.PLAY_ON_XBOX,
@@ -135,8 +133,15 @@ let y = "1333839522189938740",
         r.X.PLAY_ON_PLAYSTATION,
         r.X.PLAY_ON_DESKTOP_V2,
     ]),
-    T = { is_targeted: !1 };
-var A = (function (e) {
+    A = new Set([
+        r.X.STREAM_ON_DESKTOP,
+        r.X.PLAY_ON_DESKTOP,
+        r.X.PLAY_ON_XBOX,
+        r.X.PLAY_ON_PLAYSTATION,
+        r.X.PLAY_ON_DESKTOP_V2,
+    ]),
+    C = { is_targeted: !1 };
+var N = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
@@ -145,7 +150,7 @@ var A = (function (e) {
             e
         );
     })({}),
-    C = (function (e) {
+    R = (function (e) {
         return (
             (e.REWARD_VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.REWARD_COLLECTIBLE = "reward_collectible"),
@@ -155,7 +160,7 @@ var A = (function (e) {
             e
         );
     })({});
-let N = [
+let P = [
     {
         group: "task",
         filter: "task_play",
