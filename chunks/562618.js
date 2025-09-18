@@ -2,8 +2,8 @@ n.d(t, { Y: () => f });
 var r = n(951288),
     i = n(120356),
     a = n.n(i),
-    o = n(756715),
-    s = n(446673),
+    o = n(313666),
+    s = n(756715),
     l = n(481060),
     c = n(254477);
 function u(e, t, n) {
@@ -37,14 +37,14 @@ function d(e) {
 }
 function f(e) {
     var t;
-    let { title: n, body: i, badge: s, className: u, textLink: d, hasBottomMargin: f = !1 } = e,
+    let { title: n, body: i, badge: o, className: u, textLink: d, hasBottomMargin: f = !1 } = e,
         h = null == (t = null == d ? void 0 : d.external) || t;
     return (0, r.jsxs)("div", {
         className: a()(c.header, u, { [c.hasActions]: f }),
         children: [
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(_, { badge: s }),
+                    (0, r.jsx)(_, { badge: o }),
                     (0, r.jsx)(l.X6q, {
                         variant: "heading-md/semibold",
                         className: c.title,
@@ -54,10 +54,11 @@ function f(e) {
             }),
             (0, r.jsx)(p, { body: i }),
             null != d &&
-                (0, r.jsx)(o.Anchor, {
+                (0, r.jsx)(s.Anchor, {
+                    onClick: d.onClick,
                     href: d.link,
-                    target: h ? "_blank" : void 0,
-                    rel: h ? "noopener noreferrer" : void 0,
+                    target: h && null != d.link ? "_blank" : void 0,
+                    rel: h && null != d.link ? "noopener noreferrer" : void 0,
                     children: (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
                         className: c.footerLink,
@@ -70,10 +71,10 @@ function f(e) {
 function _(e) {
     let { badge: t } = e;
     if (null == t) return null;
-    let n = (0, s.R)(t);
+    let n = (0, o.R)(t);
     return (0, r.jsx)("div", {
         className: c.badgeContainer,
-        children: (0, r.jsx)(s.C, d({}, n)),
+        children: (0, r.jsx)(o.C, d({}, n)),
     });
 }
 function p(e) {
