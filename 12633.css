@@ -78640,7 +78640,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .progressCircleRing_ce5f0d {
-    fill: #3b3b41
+    fill: var(--background-mod-strong)
 }
 
 .glow_ce5f0d {
@@ -78983,7 +78983,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .referralBanner__3ce43 {
-    margin: 40px auto 0
+    margin: 64px auto auto
 }
 
 .churnEntrypointButtons__3ce43 {
@@ -79011,7 +79011,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 80px 0 var(--space-128);
+    padding: 80px 0 var(--space-64);
     width: 100%
 }
 
@@ -79027,6 +79027,10 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     flex-direction: column;
     gap: var(--space-32);
     text-align: center
+}
+
+.content__555fb>:last-child {
+    margin-top: var(--space-32)
 }
 
 .headerContainer__555fb {
@@ -89964,7 +89968,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

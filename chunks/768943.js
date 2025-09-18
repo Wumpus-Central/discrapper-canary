@@ -45,7 +45,7 @@ function _(e) {
     }
 }
 function p(e) {
-    return _(e.dueAt) - _(e.savedAt);
+    return null != e.dueAt ? _(e.dueAt) : f - _(e.savedAt);
 }
 let h = new a.h(
         (e) => {
