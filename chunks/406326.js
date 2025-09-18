@@ -5,10 +5,10 @@ var r = n(951288),
     a = n.n(l),
     o = n(481060),
     s = n(63063),
-    c = n(833103),
-    u = n(607802),
-    d = n(945577),
-    p = n(28964),
+    c = n(607802),
+    u = n(945577),
+    d = n(28964),
+    p = n(465524),
     h = n(770092),
     f = n(981631),
     m = n(388032),
@@ -66,21 +66,21 @@ function _(e) {
             isSearching: x,
             documentsIndexed: O,
         } = e,
-        j = (0, d.UX)({ location: "SearchHeader" }),
-        E = (0, p.nP)({
+        j = (0, u.UX)({ location: "SearchHeader" }),
+        E = (0, d.nP)({
             isXDMSearch: t.type === f.aib.DMS,
             location: "SearchHeader",
         }),
-        S = (0, p.KS)({
+        S = (0, d.KS)({
             isXDMSearch: t.type === f.aib.DMS,
             location: "SearchHeader",
         }),
         I = (0, h.I)(t),
-        { totalFilters: P } = (0, c.p4)(I, t),
+        { totalFilters: P } = (0, p.p4)(I, t),
         Z = i.useMemo(() => {
             if (t.type === f.aib.DMS && j) {
                 var e, n;
-                let t = null != (n = null == (e = (0, u.$G)(I).channel_id) ? void 0 : e.length) ? n : 0;
+                let t = null != (n = null == (e = (0, c.$G)(I).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? m.intl.format(m.t.A2dqWF, { filterCount: t }) : m.intl.string(m.t.tc619f);
             }
             return null;
@@ -104,7 +104,7 @@ function _(e) {
         ),
         N = i.useCallback(() => {
             (0, o.ZDy)(async () => {
-                let { default: e } = await n.e("37979").then(n.bind(n, 238088));
+                let { default: e } = await n.e("16757").then(n.bind(n, 238088));
                 return (n) => (0, r.jsx)(e, y(b({}, n), { searchContext: t }));
             });
         }, [t]),
