@@ -299,14 +299,7 @@ let Q = (e, t, i) => {
         });
     },
     ee = () => {
-        let { headingText: e, headingTop: t } = er(),
-            n = () =>
-                (0, r.jsx)(N.Z, {
-                    look: s.iL.FILLED,
-                    color: s.Tt.BRAND,
-                    textOptions: { textOverride: F.intl.string(F.t["3KomGR"]) },
-                    className: V.button,
-                });
+        let { headingText: e, headingTop: t } = er();
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("img", {
@@ -329,7 +322,12 @@ let Q = (e, t, i) => {
                             }),
                             (0, r.jsx)("div", {
                                 className: V.premiumSubscribeButton,
-                                children: n(),
+                                children: (0, r.jsx)(N.Z, {
+                                    look: s.iL.FILLED,
+                                    color: s.Tt.BRAND,
+                                    textOptions: { textOverride: F.intl.string(F.t["3KomGR"]) },
+                                    className: V.button,
+                                }),
                             }),
                             (0, r.jsx)(C._, { className: V.referralBanner }),
                         ],
