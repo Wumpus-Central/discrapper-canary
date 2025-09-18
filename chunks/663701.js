@@ -22,10 +22,10 @@ var r = n(951288),
     I = n(243778),
     C = n(882579),
     S = n(518311),
-    N = n(488634),
-    T = n(899740),
-    j = n(28476),
-    P = n(880257),
+    T = n(488634),
+    N = n(899740),
+    P = n(28476),
+    j = n(880257),
     x = n(631885),
     A = n(849862),
     Z = n(522558),
@@ -241,14 +241,14 @@ let ef = (e) => {
             }),
         }),
     em = () => {
-        let e = (0, T.q)();
+        let e = (0, N.q)();
         return e > 0 ? (0, r.jsx)(g.mAB, { count: e }) : null;
     },
     eb = (e) => {
         let { selected: t } = e,
             n = (0, c.JA)("messageRequests"),
-            { channelId: i } = (0, N._)();
-        if (!(0, j.a)()) return null;
+            { channelId: i } = (0, T._)();
+        if (!(0, P.a)()) return null;
         let l = null == i ? void 0 : () => m.Z.preload(er.ME, i);
         return (0, r.jsx)(
             ee.Qj,
@@ -483,7 +483,18 @@ let ev = i.memo(function (e) {
                                   "family-center",
                               )
                             : null,
-                        f ? (0, r.jsx)(B.Z, {}) : null,
+                        f
+                            ? (0, r.jsx)(
+                                  B.Z,
+                                  {
+                                      selected:
+                                          null == b
+                                              ? null != l && l.startsWith(er.Z5c.QUEST_HOME_V2)
+                                              : b === er.Z5c.QUEST_HOME_V2,
+                                  },
+                                  "quests",
+                              )
+                            : null,
                         (0, r.jsx)(eI, {}, "section-divider-top"),
                         "full-width" === g && (0, r.jsx)(eg, {}, "create-dm"),
                     ],
@@ -516,10 +527,10 @@ function eC() {
         }, o.X),
         u = (0, M.i)({ selected: null == c ? t : c.startsWith(er.Z5c.APPLICATION_STORE) }),
         p = (0, D.eW)(),
-        f = (0, j.a)(),
+        f = (0, P.a)(),
         h = (function () {
             let e = W.Ex.useSetting(),
-                t = (0, P.Z)();
+                t = (0, j.Z)();
             return !0 === e && !0 === t;
         })(),
         g = (0, C.U)("PrivateChannels", { autoTrackExposure: !0 }),
