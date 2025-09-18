@@ -59,7 +59,7 @@ function u(e, t, n) {
                             (function (e, t, n, r) {
                                 var l, s;
                                 if (null != e.legacySearchKey) return t.length < 2 || r.has(e.legacySearchKey);
-                                if (e.type === o.J.SECTION && e.hoisted) return !0;
+                                if (e.type === o.Jq.SECTION && e.hoisted) return !0;
                                 let a = "useTitle" in e ? (null == (l = e.useTitle) ? void 0 : l.call(e, !1)) : void 0,
                                     u =
                                         "useSearchTerms" in e
@@ -74,7 +74,7 @@ function u(e, t, n) {
                                 return "string" == typeof a && i()(c, a.toLowerCase());
                             })(e, t, c, n) || u,
                         g = !1;
-                    if ((0, o.L)(e)) for (let t of e.layout) g = l(t, c, d) || g;
+                    if ((0, o.Lk)(e)) for (let t of e.layout) g = l(t, c, d) || g;
                     return !c && (d || g) && r.add(e.key), d || g;
                 };
             return l(e), r;
@@ -86,11 +86,11 @@ function u(e, t, n) {
             (r = (function e(t, n, r) {
                 let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                 if (!n.has(t.key)) return null;
-                if (!(0, o.L)(t)) return r.register(t, i.panel, i.category, i.accordion), t;
+                if (!(0, o.Lk)(t)) return r.register(t, i.panel, i.category, i.accordion), t;
                 let l = i;
-                t.type === o.J.PANEL && (l = a(s({}, i), { panel: t })),
-                    t.type === o.J.CATEGORY && (l = a(s({}, i), { category: t })),
-                    t.type === o.J.ACCORDION && (l = a(s({}, i), { accordion: t }));
+                t.type === o.Jq.PANEL && (l = a(s({}, i), { panel: t })),
+                    t.type === o.Jq.CATEGORY && (l = a(s({}, i), { category: t })),
+                    t.type === o.Jq.ACCORDION && (l = a(s({}, i), { accordion: t }));
                 let u = t.layout.map((t) => e(t, n, r, l)).filter((e) => null != e);
                 return 0 !== u.length || "render" in t
                     ? (r.register(t, l.panel, l.category, l.accordion), a(s({}, t), { layout: u }))

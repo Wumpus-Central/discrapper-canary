@@ -1,9 +1,9 @@
 n.d(t, {
     $l: () => y,
     CB: () => f,
-    Em: () => b,
-    J9: () => T,
-    ON: () => N,
+    Em: () => v,
+    J9: () => p,
+    ON: () => T,
     Ql: () =>
         function e(t, n) {
             if ("function" == typeof (null == t ? void 0 : t.getLayout)) {
@@ -45,9 +45,9 @@ n.d(t, {
     ax: () => E,
     k4: () => g,
     m7: () => u,
-    qs: () => v,
-    so: () => a,
-    vB: () => s,
+    qs: () => b,
+    so: () => s,
+    vB: () => a,
     wf: () => c,
     x1: () => d,
 }),
@@ -103,32 +103,32 @@ function o(e, t, n) {
         type: t,
     });
 }
-function a(e) {
-    return o("$Root", r.J.ROOT, e);
+function s(e) {
+    return o("$Root", r.Jq.ROOT, e);
 }
-function s(e, t) {
-    return o(e, r.J.SECTION, t);
+function a(e, t) {
+    return o(e, r.Jq.SECTION, t);
 }
 function u(e, t) {
     return l(i({}, t), {
         key: e,
-        type: r.J.SIDEBAR_ITEM,
+        type: r.Jq.SIDEBAR_ITEM,
     });
 }
 function c(e, t) {
-    return o(e, r.J.PANEL, t);
+    return o(e, r.Jq.PANEL, t);
 }
 function d(e, t) {
-    return o(e, r.J.PANE, t);
+    return o(e, r.Jq.PANE, t);
 }
 function g(e, t) {
-    return o(e, r.J.CATEGORY, t);
+    return o(e, r.Jq.CATEGORY, t);
 }
 function f(e, t) {
-    return o(e, r.J.ACCORDION, t);
+    return o(e, r.Jq.ACCORDION, t);
 }
 function y(e, t) {
-    return o(e, r.J.LIST, t);
+    return o(e, r.Jq.LIST, t);
 }
 function O(e, t, n) {
     return l(i({}, n), {
@@ -137,17 +137,17 @@ function O(e, t, n) {
     });
 }
 function E(e, t) {
-    return O(e, r.J.BUTTON, t);
-}
-function v(e, t) {
-    return O(e, r.J.TOGGLE, t);
+    return O(e, r.Jq.BUTTON, t);
 }
 function b(e, t) {
-    return O(e, r.J.SELECT, t);
+    return O(e, r.Jq.TOGGLE, t);
+}
+function v(e, t) {
+    return O(e, r.Jq.SELECT, t);
+}
+function p(e, t) {
+    return O(e, r.Jq.RADIO, t);
 }
 function T(e, t) {
-    return O(e, r.J.RADIO, t);
-}
-function N(e, t) {
-    return O(e, r.J.CUSTOM, t);
+    return O(e, r.Jq.CUSTOM, t);
 }
