@@ -1,20 +1,22 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
-    l = n(91192),
-    a = n(481060),
-    o = n(515753),
-    s = n(150560),
-    c = n(981631),
-    u = n(388032);
-let d = function (e) {
-    let { selected: t } = e,
-        n = (0, l.JA)("quests"),
-        d = i.useCallback(() => {
-            s.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
+    l = n(843611),
+    a = n(91192),
+    o = n(481060),
+    s = n(515753),
+    c = n(150560),
+    u = n(981631),
+    d = n(388032);
+let p = function () {
+    var e;
+    let t = (0, a.JA)("quests"),
+        n = (0, l.TH)(),
+        p = i.useCallback(() => {
+            c.Z.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" });
         }, []);
     return (0, r.jsx)(
-        o.Qj,
+        s.Qj,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -41,13 +43,13 @@ let d = function (e) {
             return e;
         })(
             {
-                onClick: d,
-                route: c.Z5c.QUEST_HOME_V2,
-                selected: t,
-                icon: a.qDn,
-                text: u.intl.string(u.t.JALI2N),
+                onClick: p,
+                route: u.Z5c.QUEST_HOME_V2,
+                selected: (null == (e = (0, l.LX)(n.pathname, u.Z5c.QUEST_HOME_V2)) ? void 0 : e.isExact) === !0,
+                icon: o.qDn,
+                text: d.intl.string(d.t.JALI2N),
             },
-            n,
+            t,
         ),
     );
 };
