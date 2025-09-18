@@ -4126,6 +4126,7 @@ var ng = (function (e) {
             (e.PAYMENT_SOURCE_CREATION_FAILED = "payment_source_creation_failed"),
             (e.PREMIUM_UPGRADE_STARTED = "premium_upgrade_started"),
             (e.PREMIUM_RESUBSCRIBE_COMPLETED = "premium_resubscribe_completed"),
+            (e.APPLE_PAYMENT_LINK_DISCOUNT_OFFER_PROMPT_VIEWED = "apple_payment_link_discount_offer_prompt_viewed"),
             (e.CHANNEL_MEMBER_KICKED = "channel_member_kicked"),
             (e.CHANNEL_OPENED = "channel_opened"),
             (e.CHANNEL_OPENED_CLICKSTREAM = "channel_opened_clickstream"),
