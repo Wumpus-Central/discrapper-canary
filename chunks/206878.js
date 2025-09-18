@@ -1,4 +1,4 @@
-n.d(t, { g: () => j }), n(388685), n(35282);
+n.d(t, { g: () => v }), n(388685), n(35282);
 var a = n(647438),
     r = n(281598);
 function l(e) {
@@ -45,7 +45,6 @@ function i(e, t) {
     );
 }
 let s = new Set([
-        r.jE.SHOP_ALL_BANNER_STATIC,
         r.jE.HERO_BANNER_STATIC,
         r.jE.HERO_LOGO,
         r.jE.PDP_BACKGROUND,
@@ -70,15 +69,14 @@ let s = new Set([
         max: 1000000,
         warn: 500000,
     },
-    x = {
+    h = {
         max: 250000,
         warn: 50000,
     },
-    h = {
+    p = {
         [r.aB.PROFILE_EFFECT]: c,
         [r.aB.AVATAR_DECORATION]: d,
         [r.jE.HERO_BANNER_ANIMATED]: c,
-        [r.jE.SHOP_ALL_BANNER_ANIMATED]: c,
         [r.jE.SHOP_BUTTON_BG_HOVER]: d,
         [r.jE.SHOP_BUTTON_BG_HOVER_DARK]: d,
         [r.jE.SHOP_BUTTON_BG_HOVER_LIGHT]: d,
@@ -86,29 +84,28 @@ let s = new Set([
         [r.jE.SHOP_BUTTON_BG_RESTING_DARK]: d,
         [r.jE.SHOP_BUTTON_BG_RESTING_LIGHT]: d,
         [r.jE.HERO_BANNER_STATIC]: u,
-        [r.jE.SHOP_ALL_BANNER_STATIC]: u,
         [r.jE.UPSELL_BANNER]: m,
-        [r.jE.UPSELL_BANNER_POPOUT]: x,
+        [r.jE.UPSELL_BANNER_POPOUT]: h,
         [r.jE.MOBILE_BANNER]: m,
-        [r.jE.MOBILE_BACKGROUND]: x,
-        [r.jE.PDP_BACKGROUND]: x,
-        [r.jE.LOGO]: x,
-        [r.jE.COACHTIP_AVATAR]: x,
+        [r.jE.MOBILE_BACKGROUND]: h,
+        [r.jE.PDP_BACKGROUND]: h,
+        [r.jE.LOGO]: h,
+        [r.jE.COACHTIP_AVATAR]: h,
     },
-    p = async (e) => {
+    x = async (e) => {
         let t = Object.values(r.CM),
             n = new Set(),
             a = e.createReader();
         for (let e of await new Promise((e) => a.readEntries(e))) e.isDirectory && t.includes(e.name) && n.add(e.name);
         return t.filter((e) => !n.has(e));
     },
-    f = (e) => {
+    b = (e) => {
         let { names: t, addError: n } = e,
             a = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
             r = t.filter((e) => !a.test(e));
         r.length > 0 && n("File names must be in lowercase snake case", r);
     },
-    v = (e, t, n, a) => {
+    f = (e, t, n, a) => {
         let r = t.size,
             l = r > 1000000 ? "".concat((r / 1000000).toFixed(2), "MB") : "".concat((r / 1000).toFixed(2), "KB"),
             i = "".concat(t.name, " - ").concat(l);
@@ -122,11 +119,11 @@ let s = new Set([
             ]);
         } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", ["".concat(i)]);
     },
-    b = (e, t, n, a) => {
-        let r = h[e];
-        if (null != r) for (let e of t) e.name.endsWith(".txt") || v(r, e, n, a);
+    g = (e, t, n, a) => {
+        let r = p[e];
+        if (null != r) for (let e of t) e.name.endsWith(".txt") || f(r, e, n, a);
     },
-    j = () => {
+    v = () => {
         let [e, t] = a.useState(!1),
             [n, c] = a.useState({}),
             [d, u] = a.useState({}),
@@ -140,7 +137,7 @@ let s = new Set([
                     });
                 });
             }, []),
-            x = a.useCallback(function (e) {
+            h = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 c((n) => {
                     var a;
@@ -150,7 +147,7 @@ let s = new Set([
                     });
                 });
             }, []),
-            j = a.useCallback(() => {
+            v = a.useCallback(() => {
                 t(!1), u({}), c({});
             }, []);
         return {
@@ -165,17 +162,17 @@ let s = new Set([
                         if (e.length > 1) return void m("Uploaded multiple files. Expected 1 directory.");
                         let t = e[0];
                         if (!t.isDirectory) return void m("Uploaded a file. Expected a directory.");
-                        let a = await p(t);
+                        let a = await x(t);
                         if (a.length > 0) return void m("Missing required directories", a);
                         (n = await (0, r.LY)([t])),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
                                 for (let e of t.collectionFiles) {
                                     let t = (0, r.BU)(e),
-                                        l = null != t ? h[t] : null;
-                                    null != l && v(l, e, n, a);
+                                        l = null != t ? p[t] : null;
+                                    null != l && f(l, e, n, a);
                                 }
-                                f({
+                                b({
                                     names: t.collectionFiles.map((e) => e.name),
                                     addError: n,
                                 });
@@ -189,25 +186,25 @@ let s = new Set([
                             })({
                                 files: n,
                                 addError: m,
-                                addWarning: x,
+                                addWarning: h,
                             }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                f({
+                                b({
                                     names: Object.keys(t.profileEffectFilesMap),
                                     addError: n,
                                 }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
                                         let [t, l] = e,
                                             i = l.map((e) => e.name);
-                                        f({
+                                        b({
                                             names: i.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
                                             }),
                                             addError: n,
                                         }),
-                                            b(r.aB.PROFILE_EFFECT, l, n, a);
+                                            g(r.aB.PROFILE_EFFECT, l, n, a);
                                         let s = o
                                             .filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => "".concat(t, "/").concat(e));
@@ -225,19 +222,19 @@ let s = new Set([
                             })({
                                 files: n,
                                 addError: m,
-                                addWarning: x,
+                                addWarning: h,
                             }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                f({
+                                b({
                                     names: t.avatarDecorationFiles.map((e) => e.name),
                                     addError: n,
                                 }),
-                                    b(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+                                    g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({
                                 files: n,
                                 addError: m,
-                                addWarning: x,
+                                addWarning: h,
                             }),
                             ((e) => {
                                 let { files: t, addWarning: n } = e;
@@ -245,14 +242,14 @@ let s = new Set([
                             })({
                                 files: n,
                                 addError: m,
-                                addWarning: x,
+                                addWarning: h,
                             });
                     } finally {
                         t(!0);
                     }
                 },
-                [m, x],
+                [m, h],
             ),
-            reset: j,
+            reset: v,
         };
     };

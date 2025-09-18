@@ -75,8 +75,6 @@ var d = (function (e) {
         return (
             (e.CATALOG_BANNER_STATIC = "catalog_banner.jpg"),
             (e.CATALOG_BANNER_ANIMATED = "catalog_banner_animated.webm"),
-            (e.SHOP_ALL_BANNER_STATIC = "shop_all_banner.jpg"),
-            (e.SHOP_ALL_BANNER_ANIMATED = "shop_all_banner_animated.webm"),
             (e.HERO_BANNER_STATIC = "hero_banner.jpg"),
             (e.HERO_BANNER_ANIMATED = "hero_banner_animated.webm"),
             (e.HERO_LOGO = "hero_logo.png"),
@@ -103,8 +101,6 @@ var d = (function (e) {
 let _ = {
         "catalog_banner.jpg": "catalog_banner.jpg",
         "catalog_banner_animated.webm": "catalog_banner_animated.webm",
-        "shop_all_banner.jpg": "shop_all_banner.jpg",
-        "shop_all_banner_animated.webm": "shop_all_banner_animated.webm",
         "hero_banner.jpg": "hero_banner.jpg",
         "hero_banner_animated.webm": "hero_banner_animated.webm",
         "hero_logo.png": "hero_logo.png",

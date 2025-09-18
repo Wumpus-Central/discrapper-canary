@@ -6,8 +6,8 @@ var r = n(951288);
 n(647438);
 var l = n(120356),
     a = n.n(l),
-    s = n(887353),
-    i = n(923732),
+    s = n(638758),
+    i = n(887353),
     o = n(198501),
     c = n(300179);
 let u = () => 4 * Math.random() + 8,
@@ -27,15 +27,15 @@ let u = () => 4 * Math.random() + 8,
         }),
     p = () =>
         (0, r.jsx)("div", {
-            className: s.skeletons,
+            className: o.skeletonsContainer,
             children: d.map((e) =>
                 (0, r.jsxs)(
                     "div",
                     {
-                        className: s.cardsContainer,
+                        className: i.cardsContainer,
                         children: [
                             (0, r.jsx)("div", {
-                                className: a()(o.skeleton, i.shopBanner),
+                                className: a()(o.skeleton, o.bannerSkeleton, s.catalogBanner),
                                 children: (0, r.jsx)("div", { className: o.bannerBody }),
                             }),
                             Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(g, {}, e)),

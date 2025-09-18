@@ -8,7 +8,7 @@ e.exports = {
     combinedPreviewContent: "combinedPreviewContent_c50f62",
     profileEffectPreviewsContainerInner: "profileEffectPreviewsContainerInner_c50f62 previewsContainerInner_c50f62",
     nameplatePreviewContainerInner: "nameplatePreviewContainerInner_c50f62 previewsContainerInner_c50f62",
-    categoryBanner: "categoryBanner_c50f62",
+    previewContainer: "previewContainer_c50f62",
     collectiblePreviewsContainerNoChat: "collectiblePreviewsContainerNoChat_c50f62 collectiblePreviewsContainer_c50f62",
     collectiblePreviewsContainerWithChat:
         "collectiblePreviewsContainerWithChat_c50f62 collectiblePreviewsContainer_c50f62",

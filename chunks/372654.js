@@ -1,21 +1,8 @@
-n.d(t, {
-    ML: () => s,
-    nH: () => l,
-    vK: () => d,
-    yV: () => a,
-});
-var r = n(180650),
-    i = n(921948);
-let a = 1060,
-    o = 180,
-    s = (e) => e * (0, i.Z)(),
-    l = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o,
-            { primary: n, secondary: r } = e;
-        return "linear-gradient(".concat(t, "deg, ").concat(n.toHslString(), ", ").concat(r.toHslString(), ")");
-    },
-    c = [n(241371), n(448509)],
-    u = {
+n.d(t, { vK: () => o });
+var r = n(180650);
+n(921948);
+let i = [n(241371), n(448509)],
+    a = {
         ["".concat(r.T.FANTASY)]: [n(709393), n(646584)],
         ["".concat(r.T.ANIME)]: [n(647387), n(448509)],
         ["".concat(r.T.BREAKFAST)]: [n(289901), n(402344)],
@@ -23,7 +10,7 @@ let a = 1060,
         ["".concat(r.T.WINTER)]: [n(304088), n(774694)],
         ["".concat(r.T.MONSTERS)]: [n(857578), n(441506)],
     },
-    d = (e) => {
+    o = (e) => {
         var t;
-        return null == e ? c : null != (t = u[e]) ? t : c;
+        return null == e ? i : null != (t = a[e]) ? t : i;
     };

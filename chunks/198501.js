@@ -1,6 +1,8 @@
 e.exports = {
     placeholderPulse: "placeholderPulse__72fa0",
+    skeletonsContainer: "skeletonsContainer__72fa0",
     skeleton: "skeleton__72fa0",
+    bannerSkeleton: "bannerSkeleton__72fa0",
     bannerBody: "bannerBody__72fa0",
     cardBody: "cardBody__72fa0",
     cardAvatar: "cardAvatar__72fa0",
