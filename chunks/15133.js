@@ -1,65 +1,68 @@
 n.r(t), n.d(t, { default: () => v });
 var r = n(951288),
-    i = n(647438),
-    a = n(657707),
-    o = n(442837),
-    s = n(481060),
-    l = n(665149),
-    c = n(639777),
+    a = n(647438),
+    i = n(657707),
+    s = n(442837),
+    c = n(481060),
+    o = n(665149),
+    l = n(639777),
     d = n(744993),
     u = n(693587),
-    m = n(462923),
-    p = n(331500),
-    g = n(401561),
-    b = n(388032),
-    f = n(828843);
+    b = n(462923),
+    m = n(331500),
+    p = n(401561),
+    f = n(388032),
+    j = n(828843);
 function v(e) {
     let { guildId: t } = e;
-    i.useEffect(() => {
+    a.useEffect(() => {
         (0, d.EC)(t);
     }, [t]);
-    let n = (0, c.Z)(t),
-        v = (0, o.e7)([u.Z], () => u.Z.getStateForGuild(t)),
-        y = i.useMemo(
+    let n = (0, l.Z)(t),
+        v = (0, s.e7)([u.Z], () => u.Z.getStateForGuild(t)),
+        g = a.useMemo(
             () => ((null == v ? void 0 : v.instances) == null ? [] : Object.values(v.instances)),
             [null == v ? void 0 : v.instances],
         );
     return (0, r.jsxs)("div", {
-        className: f.container,
+        className: j.container,
         children: [
-            (0, r.jsxs)(l.ZP, {
-                className: f.toolbar,
+            (0, r.jsxs)(o.ZP, {
+                className: j.toolbar,
                 toolbar: (0, r.jsx)("div", {}),
                 children: [
-                    (0, r.jsx)(l.ZP.Icon, {
-                        icon: a.$Eu,
+                    (0, r.jsx)(o.ZP.Icon, {
+                        icon: i.$Eu,
                         "aria-label": "",
                     }),
-                    (0, r.jsx)(l.ZP.Title, { children: b.intl.string(g.default.lH9Dio) }),
+                    (0, r.jsx)(o.ZP.Title, { children: f.intl.string(p.default.lH9Dio) }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: f.contentContainer,
+                className: j.contentContainer,
                 children: [
                     (null == v ? void 0 : v.instances) != null
                         ? (0, r.jsx)("div", {
-                              className: f.gameContainer,
-                              children: y.map((e, n) =>
-                                  (0, r.jsx)(
-                                      m.Z,
-                                      {
-                                          guildId: t,
-                                          instance: e,
-                                      },
-                                      "".concat(e.gameId, "-").concat(n),
+                              className: j.gameContainerWrapper,
+                              children: (0, r.jsx)("div", {
+                                  className: j.gameContainer,
+                                  children: g.map((e, n) =>
+                                      (0, r.jsx)(
+                                          b.Z,
+                                          {
+                                              guildId: t,
+                                              instance: e,
+                                          },
+                                          "".concat(e.gameId, "-").concat(n),
+                                      ),
                                   ),
-                              ),
+                              }),
                           })
                         : (0, r.jsx)("div", {
-                              className: f.spinnerContainer,
-                              children: (0, r.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),
+                              className: j.spinnerContainer,
+                              children: (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }),
                           }),
-                    n && (0, r.jsx)(p.Z, { guildId: t }),
+                    n && (0, r.jsx)(m.Z, { guildId: t }),
                 ],
             }),
         ],
