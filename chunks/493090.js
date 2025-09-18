@@ -3,7 +3,7 @@ e.exports = {
     item: "item__1bb32",
     itemIcon: "itemIcon__1bb32",
     filterSublabelTextContainer: "filterSublabelTextContainer__1bb32",
-    inSelectedChannelLabel: "inSelectedChannelLabel__1bb32",
+    labelWithElements: "labelWithElements__1bb32",
     channelNameContainer: "channelNameContainer__1bb32",
     channelName: "channelName__1bb32",
     channelNameIcon: "channelNameIcon__1bb32",
