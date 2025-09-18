@@ -164,17 +164,16 @@ function V(e) {
                     ? [
                           M.s6.EXPERIMENTS,
                           M.s6.DEVELOPER_OPTIONS,
-                          M.s6.HOTSPOT_OPTIONS,
                           M.s6.PAYMENT_FLOW_MODALS,
                           M.s6.REVENUE_STORYBOOK,
                           M.s6.VIRTUAL_CURRENCY_CONFIGURATION,
-                          M.s6.DESIGN_SYSTEMS,
                           M.s6.INTL_TESTING,
                           M.s6.SHOP_KEEPER,
                           M.s6.WEB_SETTING_TREE_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL_2,
                           M.s6.QUEST_MINOR_REWARD_CAPPING_CONFIG,
+                          M.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM,
                       ]
                     : [],
             },

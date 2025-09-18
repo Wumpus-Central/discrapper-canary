@@ -1,7 +1,8 @@
 n.d(t, {
     Qh: () => a,
     SO: () => o,
-    Zw: () => s,
+    Zw: () => l,
+    d8: () => s,
 });
 var r = n(570140),
     i = n(19759);
@@ -15,5 +16,8 @@ function o() {
     a({ displayTools: !i.Z.displayTools });
 }
 function s() {
+    a({ displayTools: !0 });
+}
+function l() {
     r.Z.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
 }

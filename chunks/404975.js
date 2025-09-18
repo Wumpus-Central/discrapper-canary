@@ -86,7 +86,7 @@ function p(e) {
                             (0, r.jsx)("div", {
                                 children: y.map((e) =>
                                     (0, r.jsx)(
-                                        m,
+                                        N,
                                         {
                                             section: e,
                                             visibleContent: t,
@@ -107,7 +107,7 @@ function p(e) {
                                 className: b.nav,
                                 children: O.map((e) =>
                                     (0, r.jsx)(
-                                        m,
+                                        N,
                                         {
                                             section: e,
                                             visibleContent: t,
@@ -156,7 +156,7 @@ function T(e) {
         ),
     );
 }
-function N(e) {
+function m(e) {
     let { trailing: t, sectionRef: n, visibleContent: i, markAsDismissed: l } = e;
     if (t.type === f.PU.POPOVER) {
         var o, s;
@@ -185,7 +185,7 @@ function N(e) {
         );
     }
 }
-function m(e) {
+function N(e) {
     var t;
     let { section: n, visibleContent: l, markAsDismissed: o } = e,
         s = i.useRef(null),
@@ -206,7 +206,7 @@ function m(e) {
                             children: a,
                         }),
                         null != c &&
-                            (0, r.jsx)(N, {
+                            (0, r.jsx)(m, {
                                 trailing: c,
                                 sectionRef: s,
                                 visibleContent: l,
@@ -215,20 +215,24 @@ function m(e) {
                     ],
                 }),
             n.layout.map((e) =>
-                (0, r.jsx)(
+                (0, r.jsxs)(
                     "li",
                     {
-                        children:
-                            e.type === f.Jq.PANEL
-                                ? (0, r.jsx)(y.Z, {
-                                      node: e,
-                                      visibleContent: l,
-                                  })
-                                : (0, r.jsx)(O.Z, {
-                                      icon: e.icon,
-                                      title: e.useTitle(),
-                                      onClick: e.onClick,
-                                  }),
+                        children: [
+                            e.type === f.Jq.PANEL &&
+                                (0, r.jsx)(y.Z, {
+                                    node: e,
+                                    visibleContent: l,
+                                }),
+                            e.type === f.Jq.SIDEBAR_ITEM &&
+                                ("render" in e
+                                    ? (0, r.jsx)(O.Z, { render: e.render })
+                                    : (0, r.jsx)(O.Z, {
+                                          icon: e.icon,
+                                          title: e.useTitle(),
+                                          onClick: e.onClick,
+                                      })),
+                        ],
                     },
                     e.key,
                 ),

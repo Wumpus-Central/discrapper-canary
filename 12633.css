@@ -62658,40 +62658,6 @@ h3.improved__1689b:after {
     margin: 0 var(--space-4)
 }
 
-.iconContainer__7ee90 {
-    margin: 0 16px 8px 4px
-}
-
-.statusIcon__7ee90 {
-    height: 16px;
-    width: 16px
-}
-
-.checkmark__7ee90 {
-    color: var(--status-positive)
-}
-
-.checkmark__7ee90,
-.xmark__7ee90 {}
-
-.xmark__7ee90 {
-    color: var(--status-danger)
-}
-
-.helpText__7ee90 {
-    margin-bottom: 32px
-}
-
-.hotspotSwitch__7ee90 {
-    align-items: center;
-    display: flex;
-    margin: 8px 0
-}
-
-.overrideSelect__7ee90 {
-    flex: 0 0 30%
-}
-
 .giftButton__82222 {
     --button-outline-brand-text: var(--brand-500)
 }
@@ -88844,6 +88810,19 @@ html .invoiceCancelRow__968a4 {
 
 .sectionLabel__8ab7e:only-child {
     display: none
+}
+
+.container__138d8 {
+    align-content: center
+}
+
+.container__138d8.legacy__138d8 {
+    color: var(--text-muted);
+    padding: var(--space-6) var(--space-10)
+}
+
+.container__138d8.legacy__138d8:hover {
+    color: var(--text-primary)
 }
 
 .group_bc4a3e {

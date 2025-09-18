@@ -94,6 +94,7 @@ var r = (function (e) {
         (e.DEVELOPER_OPTIONS_PANEL = "developer_options_panel"),
         (e.DEVELOPER_OPTIONS_PANE = "developer_options_pane"),
         (e.LEGACY_SETTINGS_SIDEBAR_ITEM = "legacy_settings_sidebar_item"),
+        (e.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM = "temp_developer_education_sidebar_item"),
         (e.LOGOUT_SECTION = "logout_section"),
         (e.LOGOUT_SIDEBAR_ITEM = "logout_sidebar_item"),
         e

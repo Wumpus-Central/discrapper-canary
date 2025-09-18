@@ -1,0 +1,33 @@
+n.d(t, { $: () => d });
+var r = n(951288),
+    i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(31336),
+    l = n(358085),
+    c = n(388032),
+    u = n(745770);
+function d(e) {
+    let { legacy: t = !0 } = e,
+        n = (0, l.isMac)() ? "CMD + OPT + O" : "CTRL + ALT + O";
+    return (0, r.jsx)(o.P3F, {
+        className: a()(u.container, { [u.legacy]: t }),
+        onClick: () => (0, s.d8)(),
+        "aria-label": "Open DevTools",
+        children: (0, r.jsx)(o.Text, {
+            tag: "span",
+            variant: "text-xxs/normal",
+            color: "currentColor",
+            children: c.intl.format(c.t["3EjT8/"], {
+                keybind: n,
+                bugIcon: () =>
+                    (0, r.jsx)(o.nnZ, {
+                        size: "custom",
+                        color: "currentColor",
+                        width: 10,
+                        height: 10,
+                    }),
+            }),
+        }),
+    });
+}

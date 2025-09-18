@@ -4,8 +4,8 @@ var a = n(951288),
     r = n(481060),
     i = n(239091),
     o = n(230711),
-    c = n(493544),
-    s = n(108843),
+    s = n(493544),
+    c = n(108843),
     u = n(100527),
     d = n(906732),
     g = n(386506),
@@ -14,40 +14,40 @@ var a = n(951288),
     y = n(606669),
     O = n(53432),
     f = n(226884),
-    E = n(74869),
-    v = n(45570),
+    v = n(74869),
+    E = n(45570),
     S = n(308512),
     h = n(594791),
     j = n(393431),
     P = n(69021),
     w = n(981631),
     A = n(388032);
-let x = (0, s.Z)(
+let x = (0, c.Z)(
     function (e) {
-        let { webBuildOverride: t, onSelect: n, onInteraction: s } = e,
+        let { webBuildOverride: t, onSelect: n, onInteraction: c } = e,
             [u, x] = l.useState(!1),
-            D = (0, v.Z)(),
+            D = (0, E.Z)(),
             I = (0, S.Z)(),
             _ = (0, O.Z)(),
             N = (0, y.Z)(),
-            T = (0, j.Z)(),
-            Z = (0, h.Z)(),
-            m = (0, E.Z)(),
+            Z = (0, j.Z)(),
+            T = (0, h.Z)(),
+            m = (0, v.Z)(),
             k = (0, P.Z)(),
             C = (0, f.Z)(),
             { analyticsLocations: R } = (0, d.ZP)(),
             L = l.useMemo(() => (0, b.j)(), []);
-        async function B() {
+        async function V() {
             try {
                 x(!0), await (0, g.bF)(), window.location.reload(!0);
             } catch (e) {
                 x(!1);
             }
         }
-        let V = (0, p.VO)()
+        let B = (0, p.VO)()
             .filter((e) => {
                 let { section: t } = e;
-                return t !== c.ID.HEADER && t !== c.ID.CUSTOM && t !== c.ID.DIVIDER && "logout" !== t;
+                return t !== s.ID.HEADER && t !== s.ID.CUSTOM && t !== s.ID.DIVIDER && "logout" !== t;
             })
             .filter((e) => null == e.predicate || e.predicate());
         return (0, a.jsx)(d.Gt, {
@@ -57,12 +57,12 @@ let x = (0, s.Z)(
                 onClose: i.Zy,
                 "aria-label": A.intl.string(A.t.opYYHh),
                 onSelect: n,
-                onInteraction: s,
+                onInteraction: c,
                 children: [
-                    V.map((e) => {
+                    B.map((e) => {
                         var t, n;
-                        let { section: l, label: i, onClick: c } = e,
-                            s = l.replace(/\W/gi, "_");
+                        let { section: l, label: i, onClick: s } = e,
+                            c = l.replace(/\W/gi, "_");
                         return (0, a.jsx)(
                             r.sNh,
                             ((t = (function (e) {
@@ -90,12 +90,12 @@ let x = (0, s.Z)(
                                 }
                                 return e;
                             })(
-                                { id: s },
+                                { id: c },
                                 {
                                     label: i,
                                     action: () =>
-                                        null != c
-                                            ? c()
+                                        null != s
+                                            ? s()
                                             : (function (e, t) {
                                                   let n = Object.values(w.oAB).filter((t) => t === e)[0];
                                                   null != n && o.Z.open(n, void 0, { analyticsLocations: t });
@@ -115,15 +115,13 @@ let x = (0, s.Z)(
                                             case w.oAB.ACCESSIBILITY:
                                                 return N;
                                             case w.oAB.VOICE:
-                                                return T;
-                                            case w.oAB.TEXT:
                                                 return Z;
+                                            case w.oAB.TEXT:
+                                                return T;
                                             case w.oAB.EXPERIMENTS:
                                                 return m;
                                             case w.oAB.DEVELOPER_OPTIONS:
                                                 return k;
-                                            case w.oAB.DESIGN_SYSTEMS:
-                                                return C;
                                             default:
                                                 return null;
                                         }
@@ -142,9 +140,19 @@ let x = (0, s.Z)(
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
                             t),
-                            s,
+                            c,
                         );
                     }),
+                    e.user.isStaff() &&
+                        (0, a.jsx)(
+                            r.sNh,
+                            {
+                                id: "playgrounds",
+                                label: "Playgrounds",
+                                children: C,
+                            },
+                            "playgrounds",
+                        ),
                     e.user.isStaff() && L.length > 0
                         ? (0, a.jsx)(r.sNh, {
                               label: "Build Overrides",
@@ -176,7 +184,7 @@ let x = (0, s.Z)(
                                   id: "clear-build-override",
                                   disabled: u,
                                   label: A.intl.string(A.t["/Nz9ra"]),
-                                  action: B,
+                                  action: V,
                                   color: "danger",
                               }),
                           })
