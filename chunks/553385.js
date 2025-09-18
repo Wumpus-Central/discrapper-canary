@@ -1,8 +1,7 @@
 n.d(t, {
-    N7: () => f,
-    XP: () => p,
-    j8: () => _,
-    z$: () => h,
+    XP: () => _,
+    j8: () => f,
+    z$: () => p,
 });
 var r = n(544891),
     i = n(430742),
@@ -14,13 +13,6 @@ var r = n(544891),
     u = n(585483),
     d = n(981631);
 function f(e) {
-    r.tn.post({
-        url: d.ANM.INITIATE_CHANNEL_PROMPTS,
-        body: { guild_ids: e },
-        rejectWithError: !0,
-    });
-}
-function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
     r.tn.post({
         url: d.ANM.FORCE_SEND_PROMPT(e),
@@ -28,7 +20,7 @@ function _(e) {
         rejectWithError: !0,
     });
 }
-async function p(e, t, n) {
+async function _(e, t, n) {
     await r.tn.post({
         url: d.ANM.SEND_GAMING_STATS(t),
         body: {
@@ -40,9 +32,9 @@ async function p(e, t, n) {
         },
         rejectWithError: !1,
     }),
-        m(t);
+        h(t);
 }
-async function h(e) {
+async function p(e) {
     let t = await r.tn.patch({
         url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
         rejectWithError: !1,
@@ -56,10 +48,10 @@ async function h(e) {
                 shouldMention: !1,
                 showMentionToggle: !1,
             }),
-            m(n.id)),
+            h(n.id)),
             i.Z.saveDraft(e.channel_id, t.text, l.d.ChannelMessage);
     }
 }
-function m(e) {
+function h(e) {
     c.Z.getMessages(e).hasMoreAfter ? a.Z.jumpToPresent(e, d.AQB) : u.S.dispatch(d.CkL.SCROLLTO_PRESENT);
 }
