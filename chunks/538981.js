@@ -76,17 +76,17 @@ function O() {
         ),
         { product: a } = (0, l.T)(_.Fw, !0),
         d = (0, u.EK)();
-    return (i) => {
-        let l = (0, p.W)({ campaignID: h.m.NITRO_DROP }),
-            u = (null == i ? void 0 : i.sku_id) === _.Fw || e;
+    return function (i) {
+        let { forceOpen: l } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            u = (0, p.W)({ campaignID: h.m.NITRO_DROP }),
+            f = (null == i ? void 0 : i.sku_id) === _.Fw || e;
         d &&
             c.default.track(m.rMx.PREMIUM_MARKETING_CAMPAIGN_CLAIM_MODAL_OPEN_ATTEMPTED, {
-                has_entitlement: u,
-                is_dc_dismissed: l,
+                has_entitlement: f,
+                is_dc_dismissed: u,
                 product_loaded_successfully: null != a,
             }),
-            u &&
-                !t &&
+            ((f && !t) || l) &&
                 null != a &&
                 (s.Z.dispatch({
                     type: "MARKETING_CAMPAIGN_APPLICATION_MODAL_VIEWED",

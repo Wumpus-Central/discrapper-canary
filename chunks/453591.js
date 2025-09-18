@@ -63,11 +63,12 @@ function E() {
                 }),
                     (null == i ? void 0 : i.entitlement)
                         ? ((0, f.j)({ campaignID: _.C }), null == n || n(i.entitlement))
-                        : ((null == i ? void 0 : i.reason) === "reward_already_granted"
-                              ? ((0, f.j)({ campaignID: _.C }),
-                                c.Z.captureMessage("September 2025 Marketing Moment reward already granted"))
-                              : c.Z.captureException(Error("Failed to redeem September 2025 Marketing Moment reward")),
-                          e || g());
+                        : (null == i ? void 0 : i.reason) === "reward_already_granted"
+                          ? ((0, f.j)({ campaignID: _.C }),
+                            null == n || n(null, { forceOpen: !0 }),
+                            c.Z.captureMessage("September 2025 Marketing Moment reward already granted"))
+                          : (c.Z.captureException(Error("Failed to redeem September 2025 Marketing Moment reward")),
+                            e || g());
             } catch (e) {
                 c.Z.captureException(e);
             } finally {
