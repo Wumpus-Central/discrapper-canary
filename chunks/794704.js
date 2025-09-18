@@ -313,6 +313,7 @@ let eL = new Set([
         L.mM.WAITING_FOR_POPOUT_OPEN,
         L.mM.WAITING_FOR_MODULE_POPOUT_CAPTURE,
         L.mM.WAITING_FOR_REACT_INITIALIZATION,
+        L.mM.WAITING_FOR_PID_FOCUS,
     ]),
     ej = (e) => {
         e.preventDefault(), e.stopPropagation();
