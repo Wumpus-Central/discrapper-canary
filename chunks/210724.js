@@ -261,7 +261,7 @@ function G(e) {
             location: D.dr.QUESTS_BAR,
             questConfig: a.config,
         }),
-        eP = (null == eR ? void 0 : eR.progressBlur) ? 88 : 70;
+        eP = (null == eR ? void 0 : eR.progressBlur) && !W ? 88 : 70;
     if (!b || (!Q && ec && !X) || q)
         return q ? _.log("Not rendered due to asset error") : b || _.log("Not rendered due to ineligibility"), null;
     let ew = eP + 78 * !!z;
