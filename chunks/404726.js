@@ -1,7 +1,7 @@
 n.d(t, { v: () => u }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(252762),
+    a = n(943239),
     o = n(995803),
     s = n(213305),
     l = n(402453),
@@ -22,16 +22,18 @@ function u(e) {
             dataBinding: b,
             touchScrollEnabled: y = !0,
             dynamicDataBinding: O,
+            listenOnDocumentBody: v,
+            eventCapture: I,
         } = e,
-        v = i.useContext(s.S),
-        I = d(),
-        [T, S] = i.useState(void 0),
-        A = i.useRef(null),
-        { rive: C, RiveComponent: N } = (0, o.useRive)({
+        T = i.useContext(s.S),
+        S = d(),
+        [A, C] = i.useState(void 0),
+        N = i.useRef(null),
+        { rive: R, RiveComponent: P } = (0, o.useRive)({
             eventTarget: null == p ? void 0 : p.current,
             buffer: t,
             autoplay: n,
-            stateMachines: T,
+            stateMachines: A,
             artboard: h,
             useOffscreenRenderer: !0,
             layout: new o.Layout({
@@ -39,97 +41,99 @@ function u(e) {
                 alignment: null != u ? c.Y[u] : o.Alignment.Center,
             }),
             isTouchScrollEnabled: y,
+            listenOnDocumentBody: v,
+            eventCapture: I,
         });
     i.useImperativeHandle(
         g,
         () => ({
-            play: () => (null == C ? void 0 : C.play()),
-            pause: () => (null == C ? void 0 : C.pause()),
-            stop: () => (null == C ? void 0 : C.stop()),
+            play: () => (null == R ? void 0 : R.play()),
+            pause: () => (null == R ? void 0 : R.pause()),
+            stop: () => (null == R ? void 0 : R.stop()),
         }),
-        [C],
+        [R],
     ),
         f({
-            rive: C,
+            rive: R,
             artboard: h,
             artboardProperties: E,
             dataBinding: b,
             dynamicDataBinding: O,
         }),
         i.useEffect(() => {
-            if (null != C && "short-loop" === m && v.reducedMotion.enabled) {
+            if (null != R && "short-loop" === m && T.reducedMotion.enabled) {
                 let e = () => {
-                        C.isPlaying &&
-                            (A.current = setTimeout(() => {
-                                C.pause();
+                        R.isPlaying &&
+                            (N.current = setTimeout(() => {
+                                R.pause();
                             }, 5000));
                     },
                     t = () => {
-                        clearTimeout(A.current);
+                        clearTimeout(N.current);
                     };
                 return (
-                    C.on(o.EventType.Play, e),
-                    C.on(o.EventType.Pause, t),
-                    C.on(o.EventType.Stop, t),
+                    R.on(o.EventType.Play, e),
+                    R.on(o.EventType.Pause, t),
+                    R.on(o.EventType.Stop, t),
                     () => {
-                        C.off(o.EventType.Play, e), C.off(o.EventType.Pause, t), C.off(o.EventType.Stop, t);
+                        R.off(o.EventType.Play, e), R.off(o.EventType.Pause, t), R.off(o.EventType.Stop, t);
                     }
                 );
             }
-        }, [C, m, v.reducedMotion.enabled]),
+        }, [R, m, T.reducedMotion.enabled]),
         i.useLayoutEffect(() => {
-            null != C &&
+            null != R &&
                 "layout" === l &&
-                (C.resizeDrawingSurfaceToCanvas(),
+                (R.resizeDrawingSurfaceToCanvas(),
                 setTimeout(() => {
-                    C.resizeDrawingSurfaceToCanvas();
+                    R.resizeDrawingSurfaceToCanvas();
                 }, 100));
-        }, [C, l]),
+        }, [R, l]),
         i.useEffect(() => {
-            null != C &&
-                null == T &&
-                (S(C.stateMachineNames),
-                C.reset({
-                    stateMachines: C.stateMachineNames,
+            null != R &&
+                null == A &&
+                (C(R.stateMachineNames),
+                R.reset({
+                    stateMachines: R.stateMachineNames,
                     autoplay: n,
                     artboard: h,
                     autoBind: !0,
                 }),
-                C.setupRiveListeners());
-        }, [C, n, T, h]);
-    let R = i.useRef(0);
+                R.setupRiveListeners());
+        }, [R, n, A, h]);
+    let w = i.useRef(0);
     i.useEffect(() => {
-        if (null == C) return;
-        C.play();
+        if (null == R) return;
+        R.play();
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
-                ((R.current = t.data),
+                ((w.current = t.data),
                 t.data > 0 &&
-                    ("halt" === m && v.reducedMotion.enabled && C.isPlaying && C.pause(),
-                    C.off(o.EventType.Advance, e)));
+                    ("halt" === m && T.reducedMotion.enabled && R.isPlaying && R.pause(),
+                    R.off(o.EventType.Advance, e)));
         };
         return (
-            C.on(o.EventType.Advance, e),
+            R.on(o.EventType.Advance, e),
             () => {
-                C.off(o.EventType.Advance, e);
+                R.off(o.EventType.Advance, e);
             }
         );
-    }, [C, v.reducedMotion.enabled, m]);
-    let P = i.useRef(!1);
+    }, [R, T.reducedMotion.enabled, m]);
+    let D = i.useRef(!1);
     return (
         i.useEffect(() => {
-            if (null != C)
+            if (null != R)
                 return (
-                    !I && P.current && C.isPlaying && R.current > 0
-                        ? C.pause()
-                        : I && !C.isPlaying && P.current && C.play(),
+                    !S && D.current && R.isPlaying && w.current > 0
+                        ? R.pause()
+                        : S && !R.isPlaying && D.current && R.play(),
                     () => {
-                        null != C && I && (P.current = null != C.frameRequestId);
+                        null != R && S && (D.current = null != R.frameRequestId);
                     }
                 );
-        }, [C, I]),
-        (0, r.jsx)(N, {
+        }, [R, S]),
+        (0, r.jsx)(P, {
             className: a,
             style: _,
         })

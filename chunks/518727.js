@@ -49,7 +49,7 @@ let I = 1000,
             D === g.A.PURCHASING && L(!0);
         }, [D]);
         let j = (0, f.P)(R, !!P, w),
-            { mediaUrls: k, isSuccess: M } = (0, E.Z)(!a && j && x),
+            { mediaUrls: M, isSuccess: k } = (0, E.Z)(!a && j && x),
             U = (0, i.useRef)(null),
             [G, B] = (0, i.useState)(!1),
             [Z, F] = (0, i.useState)(!1),
@@ -62,7 +62,7 @@ let I = 1000,
                     n &&
                     !Y &&
                     "none" === V &&
-                    (a || !M
+                    (a || !k
                         ? (H("static"),
                           a ||
                               (W(!0),
@@ -79,7 +79,7 @@ let I = 1000,
                     _.default.track(b.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                         wow_moment_type: e ? "animated" : "static",
                     }));
-            }, [a, j, n, M, Y, V]),
+            }, [a, j, n, k, Y, V]),
             (0, i.useEffect)(() => {
                 function e() {
                     B(!0), N();
@@ -116,7 +116,7 @@ let I = 1000,
                                     autoPlay: !0,
                                     onEnded: C,
                                     className: o()(y.video, "entry" === I ? y.visible : y.hidden),
-                                    children: (0, r.jsx)("source", { src: k.modalGlowEntry }),
+                                    children: (0, r.jsx)("source", { src: M.modalGlowEntry }),
                                 }),
                             }),
                             (0, r.jsx)(d.Z, {
@@ -125,14 +125,14 @@ let I = 1000,
                                 muted: !0,
                                 loop: !0,
                                 className: o()(y.video, "idle" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: k.modalGlowIdle }),
+                                children: (0, r.jsx)("source", { src: M.modalGlowIdle }),
                             }),
                             (0, r.jsx)(d.Z, {
                                 ref: A,
                                 playsInline: !0,
                                 muted: !0,
                                 className: o()(y.video, "exit" === I ? y.visible : y.hidden),
-                                children: (0, r.jsx)("source", { src: k.modalGlowExit }),
+                                children: (0, r.jsx)("source", { src: M.modalGlowExit }),
                             }),
                         ],
                     }),
@@ -145,6 +145,7 @@ let I = 1000,
                                 ExitTrigger: G,
                                 EntryTrigger: Z,
                             },
+                            listenOnDocumentBody: !0,
                         }),
                     }),
                     (0, r.jsx)("div", {

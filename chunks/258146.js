@@ -440,10 +440,10 @@
                                     );
                                 }
                                 function n() {
-                                    for (let e of (0 < S.length &&
-                                        (u.Qb(I.drawWidth(), I.drawHeight(), S, T, A),
-                                        (S = []),
-                                        (A = T = 0),
+                                    for (let e of (0 < T.length &&
+                                        (u.Qb(I.drawWidth(), I.drawHeight(), T, S, A),
+                                        (T = []),
+                                        (A = S = 0),
                                         I.reset(512, 512)),
                                     v)) {
                                         for (let t of e.H) t();
@@ -632,8 +632,8 @@
                                     });
                                 let v = new Set(),
                                     I = null,
-                                    S = [],
-                                    T = 0,
+                                    T = [],
+                                    S = 0,
                                     A = 0;
                                 var C = (a.CanvasRenderer = l.extend("Renderer", {
                                     __construct: function (e) {
@@ -716,7 +716,7 @@
                                                     (n(), v.add(this), console.assert(0 <= (h = I.addRect(y, O))));
                                             var C = 65535 & h,
                                                 N = h >> 16;
-                                            S.push({
+                                            T.push({
                                                 ha: this.S.slice(this.S.length - 6),
                                                 image: t,
                                                 Ya: C,
@@ -733,7 +733,7 @@
                                                 mc: f,
                                                 wb: (t.Ka << 1) | !!f,
                                             }),
-                                                (T += o.length),
+                                                (S += o.length),
                                                 (A += l.length);
                                             var R = this.C,
                                                 P = e(r);
@@ -903,8 +903,8 @@
                             var O,
                                 v,
                                 I,
-                                S,
                                 T,
+                                S,
                                 A,
                                 C,
                                 N,
@@ -914,10 +914,10 @@
                                 D = !1;
                             function x() {
                                 var e = v.buffer;
-                                (a.HEAP8 = S = new Int8Array(e)),
+                                (a.HEAP8 = T = new Int8Array(e)),
                                     (a.HEAP16 = A = new Int16Array(e)),
                                     (a.HEAP32 = N = new Int32Array(e)),
-                                    (a.HEAPU8 = T = new Uint8Array(e)),
+                                    (a.HEAPU8 = S = new Uint8Array(e)),
                                     (a.HEAPU16 = C = new Uint16Array(e)),
                                     (a.HEAPU32 = R = new Uint32Array(e)),
                                     (a.HEAPF32 = P = new Float32Array(e)),
@@ -1568,7 +1568,7 @@
                                         return e;
                                     },
                                     write(e, t, n, r, i, a) {
-                                        if ((t.buffer === S.buffer && (a = !1), !r)) return 0;
+                                        if ((t.buffer === T.buffer && (a = !1), !r)) return 0;
                                         if (
                                             (((e = e.node).timestamp = Date.now()),
                                             t.subarray && (!e.j || e.j.subarray))
@@ -1597,7 +1597,7 @@
                                     },
                                     lb(e, t, n, r, i) {
                                         if (32768 != (61440 & e.node.mode)) throw new ew(43);
-                                        if (((e = e.node.j), 2 & i || e.buffer !== S.buffer))
+                                        if (((e = e.node.j), 2 & i || e.buffer !== T.buffer))
                                             throw (
                                                 ((0 < n || n + t < e.length) &&
                                                     (e = e.subarray
@@ -1627,8 +1627,8 @@
                             var eO,
                                 ev,
                                 eI,
-                                eS,
-                                eT = null,
+                                eT,
+                                eS = null,
                                 eA = {},
                                 eC = [],
                                 eN = 1,
@@ -1654,7 +1654,7 @@
                                     )
                                         throw new ew(32);
                                     e = e.split("/").filter((e) => !!e);
-                                    for (var n = eT, r = "/", i = 0; i < e.length; i++) {
+                                    for (var n = eS, r = "/", i = 0; i < e.length; i++) {
                                         var a = i === e.length - 1;
                                         if (a && t.parent) break;
                                         if (
@@ -1778,7 +1778,7 @@
                                 eW = (e, t) => {
                                     var n = "/" === t,
                                         r = !t;
-                                    if (n && eT) throw new ew(10);
+                                    if (n && eS) throw new ew(10);
                                     if (!n && !r) {
                                         var i = ex(t, { gb: !1 });
                                         if (((t = i.path), (i = i.node).wa)) throw new ew(10);
@@ -1792,7 +1792,7 @@
                                     }),
                                         ((e = e.U(t)).U = t),
                                         (t.root = e),
-                                        n ? (eT = e) : i && ((i.wa = t), i.U && i.U.kc.push(t));
+                                        n ? (eS = e) : i && ((i.wa = t), i.U && i.U.kc.push(t));
                                 },
                                 eK = (e, t, n) => {
                                     var r = ex(e, { parent: !0 }).node;
@@ -1888,7 +1888,7 @@
                                             zc: [],
                                             error: !1,
                                         })).m.open && i.m.open(i),
-                                        !a.logReadFiles || 1 & t || (eS || (eS = {}), e in eS || (eS[e] = 1)),
+                                        !a.logReadFiles || 1 & t || (eT || (eT = {}), e in eT || (eT[e] = 1)),
                                         i
                                     );
                                 },
@@ -1968,15 +1968,15 @@
                                     },
                                 }[e];
                             }
-                            function e6() {
+                            function e5() {
                                 (this.M = [void 0]), (this.hb = []);
                             }
-                            var e5 = new e6(),
+                            var e6 = new e5(),
                                 e7 = void 0;
                             function e9(e) {
                                 throw new e7(e);
                             }
-                            var te = (e) => (e || e9("Cannot use deleted val. handle = " + e), e5.get(e).value),
+                            var te = (e) => (e || e9("Cannot use deleted val. handle = " + e), e6.get(e).value),
                                 tt = (e) => {
                                     switch (e) {
                                         case void 0:
@@ -1988,7 +1988,7 @@
                                         case !1:
                                             return 4;
                                         default:
-                                            return e5.pa({
+                                            return e6.pa({
                                                 tb: 1,
                                                 value: e,
                                             });
@@ -2015,7 +2015,7 @@
                             var tr = void 0,
                                 ti = void 0;
                             function ta(e) {
-                                for (var t = ""; T[e]; ) t += ti[T[e++]];
+                                for (var t = ""; S[e]; ) t += ti[S[e++]];
                                 return t;
                             }
                             var to = [];
@@ -2033,7 +2033,7 @@
                             }
                             var td = {};
                             function tf(e) {
-                                var t = ta((e = nT(e)));
+                                var t = ta((e = nS(e)));
                                 return nb(e), t;
                             }
                             function t_(e, t) {
@@ -2079,8 +2079,8 @@
                                       }),
                                       tI(e));
                             }
-                            var tS = {};
-                            function tT(e) {
+                            var tT = {};
+                            function tS(e) {
                                 for (; e.length; ) {
                                     var t = e.pop();
                                     e.pop()(t);
@@ -2344,7 +2344,7 @@
                                     }
                                     for (var a = 0; a < c; ++a)
                                         (u[a] = t[a + 2].toWireType(f, arguments[a])), d.push(u[a]);
-                                    if (((a = r.apply(null, d)), s)) tT(f);
+                                    if (((a = r.apply(null, d)), s)) tS(f);
                                     else
                                         for (var _ = o ? 1 : 2; _ < t.length; _++) {
                                             var p = 1 === _ ? n : u[_ - 2];
@@ -2367,13 +2367,13 @@
                                 );
                             }
                             function t$(e) {
-                                e >= e5.h && 0 == --e5.get(e).tb && e5.Zb(e);
+                                e >= e6.h && 0 == --e6.get(e).tb && e6.Zb(e);
                             }
                             function t0(e, t, n) {
                                 switch (t) {
                                     case 0:
                                         return function (e) {
-                                            return this.fromWireType((n ? S : T)[e]);
+                                            return this.fromWireType((n ? T : S)[e]);
                                         };
                                     case 1:
                                         return function (e) {
@@ -2411,10 +2411,10 @@
                                     case 0:
                                         return n
                                             ? function (e) {
-                                                  return S[e];
+                                                  return T[e];
                                               }
                                             : function (e) {
-                                                  return T[e];
+                                                  return S[e];
                                               };
                                     case 1:
                                         return n
@@ -2439,7 +2439,7 @@
                             var t4 = "undefined" != typeof TextDecoder ? new TextDecoder("utf-16le") : void 0,
                                 t8 = (e, t) => {
                                     for (var n = e >> 1, r = n + t / 2; !(n >= r) && C[n]; ) ++n;
-                                    if (32 < (n <<= 1) - e && t4) return t4.decode(T.subarray(e, n));
+                                    if (32 < (n <<= 1) - e && t4) return t4.decode(S.subarray(e, n));
                                     for (r = 0, n = ""; !(r >= t / 2); ++r) {
                                         var i = A[(e + 2 * r) >> 1];
                                         if (0 == i) break;
@@ -2447,7 +2447,7 @@
                                     }
                                     return n;
                                 },
-                                t6 = (e, t, n) => {
+                                t5 = (e, t, n) => {
                                     if ((void 0 === n && (n = 2147483647), 2 > n)) return 0;
                                     n -= 2;
                                     var r = t;
@@ -2455,7 +2455,7 @@
                                     for (var i = 0; i < n; ++i) (A[t >> 1] = e.charCodeAt(i)), (t += 2);
                                     return (A[t >> 1] = 0), t - r;
                                 },
-                                t5 = (e) => 2 * e.length,
+                                t6 = (e) => 2 * e.length,
                                 t7 = (e, t) => {
                                     for (var n = 0, r = ""; !(n >= t / 4); ) {
                                         var i = N[(e + 4 * n) >> 2];
@@ -2617,9 +2617,9 @@
                                         ca: N[(r + 28) >> 2],
                                         Rc: N[(r + 32) >> 2],
                                         uc: N[(r + 36) >> 2],
-                                        xc: c && c ? el(T, c) : "",
+                                        xc: c && c ? el(S, c) : "",
                                     }),
-                                    (n = n ? el(T, n) : ""),
+                                    (n = n ? el(S, n) : ""),
                                     (c = {
                                         "%c": "%a %b %d %H:%M:%S %Y",
                                         "%D": "%m/%d/%y",
@@ -2719,7 +2719,7 @@
                                         n.includes(u) && (n = n.replace(RegExp(u, "g"), c[u](r)));
                                     return (u = ef((n = n.replace(/\0\0/g, "%")), !1)).length > t
                                         ? 0
-                                        : (S.set(u, e), u.length - 1);
+                                        : (T.set(u, e), u.length - 1);
                                 };
                             function nh(e, t, n, r) {
                                 e || (e = this),
@@ -2802,7 +2802,7 @@
                                             "/proc/self/fd",
                                         );
                                 })(),
-                                Object.assign(e6.prototype, {
+                                Object.assign(e5.prototype, {
                                     get(e) {
                                         return this.M[e];
                                     },
@@ -2823,10 +2823,10 @@
                                             super(e), (this.name = "BindingError");
                                         }
                                     }),
-                                e5.M.push({ value: void 0 }, { value: null }, { value: !0 }, { value: !1 }),
-                                (e5.h = e5.M.length),
+                                e6.M.push({ value: void 0 }, { value: null }, { value: !0 }, { value: !1 }),
+                                (e6.h = e6.M.length),
                                 (a.count_emval_handles = function () {
-                                    for (var e = 0, t = e5.h; t < e5.M.length; ++t) void 0 !== e5.M[t] && ++e;
+                                    for (var e = 0, t = e6.h; t < e6.M.length; ++t) void 0 !== e6.M[t] && ++e;
                                     return e;
                                 }),
                                 (tr = a.PureVirtualError = tn("PureVirtualError"));
@@ -2983,7 +2983,7 @@
                                             default:
                                                 return -28;
                                             case 9:
-                                                return (N[nS() >> 2] = 28), -1;
+                                                return (N[nT() >> 2] = 28), -1;
                                         }
                                     } catch (e) {
                                         if (void 0 === e1 || "ErrnoError" !== e.name) throw e;
@@ -3014,7 +3014,7 @@
                                                         (N[(i + 4) >> 2] = 5),
                                                         (N[(i + 8) >> 2] = 191),
                                                         (N[(i + 12) >> 2] = 35387);
-                                                    for (var a = 0; 32 > a; a++) S[(i + a + 17) | 0] = t[a] || 0;
+                                                    for (var a = 0; 32 > a; a++) T[(i + a + 17) | 0] = t[a] || 0;
                                                 }
                                                 return 0;
                                             case 21506:
@@ -3023,7 +3023,7 @@
                                                 if (!r.s) return -59;
                                                 if (r.s.V.cc)
                                                     for (i = e3(), t = [], a = 0; 32 > a; a++)
-                                                        t.push(S[(i + a + 17) | 0]);
+                                                        t.push(T[(i + a + 17) | 0]);
                                                 return 0;
                                             case 21519:
                                                 if (!r.s) return -59;
@@ -3053,7 +3053,7 @@
                                 __syscall_openat: function (e, t, n, r) {
                                     e2 = r;
                                     try {
-                                        var i = (t = t ? el(T, t) : "");
+                                        var i = (t = t ? el(S, t) : "");
                                         if ("/" === i.charAt(0)) t = i;
                                         else {
                                             var a = -100 === e ? "/" : eF(e).path;
@@ -3114,8 +3114,8 @@
                                     return tt(e);
                                 },
                                 _embind_finalize_value_object: function (e) {
-                                    var t = tS[e];
-                                    delete tS[e];
+                                    var t = tT[e];
+                                    delete tT[e];
                                     var n = t.Pa,
                                         r = t.W,
                                         i = t.eb;
@@ -3133,7 +3133,7 @@
                                                     read: (e) => r.fromWireType(o(s, e)),
                                                     write: (e, t) => {
                                                         var n = [];
-                                                        c(u, e, l.toWireType(n, t)), tT(n);
+                                                        c(u, e, l.toWireType(n, t)), tS(n);
                                                     },
                                                 };
                                             }),
@@ -3174,7 +3174,7 @@
                                         },
                                         argPackAdvance: 8,
                                         readValueFromPointer: function (e) {
-                                            if (1 === n) var r = S;
+                                            if (1 === n) var r = T;
                                             else if (2 === n) r = A;
                                             else if (4 === n) r = N;
                                             else throw TypeError("Unknown boolean type size: " + t);
@@ -3295,7 +3295,7 @@
                                                             ((s = tK(o, s)),
                                                             (i.set = (e) => {
                                                                 var t = [];
-                                                                s(r, n.toWireType(t, e)), tT(t);
+                                                                s(r, n.toWireType(t, e)), tS(t);
                                                             })),
                                                         Object.defineProperty(e.i.constructor, t, i),
                                                         []
@@ -3396,7 +3396,7 @@
                                                         u.set = function (t) {
                                                             var n = tJ(this, e, r + " setter"),
                                                                 i = [];
-                                                            l(c, n, d.toWireType(i, t)), tT(i);
+                                                            l(c, n, d.toWireType(i, t)), tS(i);
                                                         };
                                                     }
                                                     return Object.defineProperty(e.i.N, t, u), [];
@@ -3543,15 +3543,15 @@
                                             if (n)
                                                 for (var i = r, a = 0; a <= t; ++a) {
                                                     var o = r + a;
-                                                    if (a == t || 0 == T[o]) {
-                                                        if (((i = i ? el(T, i, o - i) : ""), void 0 === s)) var s = i;
+                                                    if (a == t || 0 == S[o]) {
+                                                        if (((i = i ? el(S, i, o - i) : ""), void 0 === s)) var s = i;
                                                         else (s += "\0"), (s += i);
                                                         i = o + 1;
                                                     }
                                                 }
                                             else {
                                                 for (a = 0, s = Array(t); a < t; ++a)
-                                                    s[a] = String.fromCharCode(T[r + a]);
+                                                    s[a] = String.fromCharCode(S[r + a]);
                                                 s = s.join("");
                                             }
                                             return nb(e), s;
@@ -3567,16 +3567,16 @@
                                             var i = n && r ? eu(t) : t.length,
                                                 a = ny(4 + i + 1),
                                                 o = a + 4;
-                                            if (((R[a >> 2] = i), n && r)) ed(t, T, o, i + 1);
+                                            if (((R[a >> 2] = i), n && r)) ed(t, S, o, i + 1);
                                             else if (r)
                                                 for (r = 0; r < i; ++r) {
                                                     var s = t.charCodeAt(r);
                                                     255 < s &&
                                                         (nb(o),
                                                         e9("String has UTF-16 code units that do not fit in 8 bits")),
-                                                        (T[o + r] = s);
+                                                        (S[o + r] = s);
                                                 }
-                                            else for (r = 0; r < i; ++r) T[o + r] = t[r];
+                                            else for (r = 0; r < i; ++r) S[o + r] = t[r];
                                             return null !== e && e.push(nb, a), a;
                                         },
                                         argPackAdvance: 8,
@@ -3589,8 +3589,8 @@
                                 _embind_register_std_wstring: function (e, t, n) {
                                     if (((n = ta(n)), 2 === t))
                                         var r = t8,
-                                            i = t6,
-                                            a = t5,
+                                            i = t5,
+                                            a = t6,
                                             o = () => C,
                                             s = 1;
                                     else 4 === t && ((r = t7), (i = t9), (a = ne), (o = () => R), (s = 2));
@@ -3623,7 +3623,7 @@
                                     });
                                 },
                                 _embind_register_value_object: function (e, t, n, r, i, a) {
-                                    tS[e] = {
+                                    tT[e] = {
                                         name: ta(t),
                                         Pa: tK(n, r),
                                         W: tK(i, a),
@@ -3631,7 +3631,7 @@
                                     };
                                 },
                                 _embind_register_value_object_field: function (e, t, n, r, i, a, o, s, l, c) {
-                                    tS[e].eb.push({
+                                    tT[e].eb.push({
                                         Sb: ta(t),
                                         Yb: n,
                                         Wb: tK(r, i),
@@ -3703,7 +3703,7 @@
                                     return tt((e = te(e))[(t = te(t))]);
                                 },
                                 _emval_incref: function (e) {
-                                    4 < e && (e5.get(e).tb += 1);
+                                    4 < e && (e6.get(e).tb += 1);
                                 },
                                 _emval_new_array: function () {
                                     return tt([]);
@@ -3715,7 +3715,7 @@
                                     return tt({});
                                 },
                                 _emval_run_destructors: function (e) {
-                                    tT(te(e)), t$(e);
+                                    tS(te(e)), t$(e);
                                 },
                                 _emval_set_property: function (e, t, n) {
                                     (e = te(e)), (t = te(t)), (n = te(n)), (e[t] = n);
@@ -3728,7 +3728,7 @@
                                 },
                                 emscripten_asm_const_int: (e, t, n) => {
                                     var r;
-                                    for (nl.length = 0, n >>= 2; (r = T[t++]); )
+                                    for (nl.length = 0, n >>= 2; (r = S[t++]); )
                                         (n += (105 != r) & n), nl.push(105 == r ? N[n] : w[n++ >> 1]), ++n;
                                     return J[e].apply(null, nl);
                                 },
@@ -3736,9 +3736,9 @@
                                     return Date.now();
                                 },
                                 emscripten_get_now: () => performance.now(),
-                                emscripten_memcpy_big: (e, t, n) => T.copyWithin(e, t, t + n),
+                                emscripten_memcpy_big: (e, t, n) => S.copyWithin(e, t, t + n),
                                 emscripten_resize_heap: (e) => {
-                                    var t = T.length;
+                                    var t = S.length;
                                     if (2147483648 < (e >>>= 0)) return !1;
                                     for (var n = 1; 4 >= n; n *= 2) {
                                         var r = t * (1 + 0.2 / n);
@@ -3768,8 +3768,8 @@
                                         nu().forEach(function (r, i) {
                                             var a = t + n;
                                             for (i = R[(e + 4 * i) >> 2] = a, a = 0; a < r.length; ++a)
-                                                S[0 | i++] = r.charCodeAt(a);
-                                            (S[0 | i] = 0), (n += r.length + 1);
+                                                T[0 | i++] = r.charCodeAt(a);
+                                            (T[0 | i] = 0), (n += r.length + 1);
                                         }),
                                         0
                                     );
@@ -3817,7 +3817,7 @@
                                                     u = s,
                                                     d = l,
                                                     f = a,
-                                                    _ = S;
+                                                    _ = T;
                                                 if (0 > d || 0 > f) throw new ew(28);
                                                 if (null === c.X || 1 == (2097155 & c.flags)) throw new ew(8);
                                                 if (16384 == (61440 & c.node.mode)) throw new ew(31);
@@ -3883,7 +3883,7 @@
                                                     u = s,
                                                     d = l,
                                                     f = a,
-                                                    _ = S;
+                                                    _ = T;
                                                 if (0 > d || 0 > f) throw new ew(28);
                                                 if (null === c.X || 0 == (2097155 & c.flags)) throw new ew(8);
                                                 if (16384 == (61440 & c.node.mode)) throw new ew(31);
@@ -3957,8 +3957,8 @@
                                 nI = (a._ma_device_process_pcm_frames_playback__webaudio = (e, t, n) =>
                                     (nI = a._ma_device_process_pcm_frames_playback__webaudio =
                                         I.ma_device_process_pcm_frames_playback__webaudio)(e, t, n)),
-                                nS = () => (nS = I.__errno_location)(),
-                                nT = (e) => (nT = I.__getTypeName)(e);
+                                nT = () => (nT = I.__errno_location)(),
+                                nS = (e) => (nS = I.__getTypeName)(e);
                             function nA() {
                                 function e() {
                                     if (!n && ((n = !0), (a.calledRun = !0), !D)) {
@@ -4158,28 +4158,30 @@
                                 d = e.isTouchScrollEnabled,
                                 f = void 0 !== d && d,
                                 _ = e.layoutScaleFactor,
-                                p = void 0 === _ ? 1 : _;
+                                p = void 0 === _ ? 1 : _,
+                                h = e.listenOnDocumentBody,
+                                m = e.eventCapture;
                             if (!t || !o.length || !s || !l || !n || "undefined" == typeof window) return null;
-                            var h = null,
-                                m = !1,
-                                g = function (e) {
-                                    if (m && e instanceof MouseEvent) {
-                                        "mouseup" == e.type && (m = !1);
+                            var g = null,
+                                E = !1,
+                                b = function (e) {
+                                    if (E && e instanceof MouseEvent) {
+                                        "mouseup" == e.type && (E = !1);
                                         return;
                                     }
-                                    (m = f && "touchend" === e.type && "touchstart" === h), (h = e.type);
+                                    (E = f && "touchend" === e.type && "touchstart" === g), (g = e.type);
                                     var r = t.getBoundingClientRect(),
                                         a = i(e, f),
                                         s = a.clientX,
                                         d = a.clientY;
                                     if (s || d) {
                                         var _ = s - r.left,
-                                            g = d - r.top;
+                                            h = d - r.top;
                                         if (
-                                            (_ >= 0 && _ <= r.width && g >= 0 && g <= r.height) ||
+                                            (_ >= 0 && _ <= r.width && h >= 0 && h <= r.height) ||
                                             ["mouseleave", "mouseout"].includes(e.type)
                                         ) {
-                                            var E = l.computeAlignment(
+                                            var m = l.computeAlignment(
                                                     c,
                                                     u,
                                                     {
@@ -4192,16 +4194,16 @@
                                                     p,
                                                 ),
                                                 b = new l.Mat2D();
-                                            E.invert(b);
-                                            var y = new l.Vec2D(_, g),
+                                            m.invert(b);
+                                            var y = new l.Vec2D(_, h),
                                                 O = l.mapXY(b, y),
                                                 v = O.x(),
                                                 I = O.y();
-                                            switch ((O.delete(), b.delete(), y.delete(), E.delete(), e.type)) {
+                                            switch ((O.delete(), b.delete(), y.delete(), m.delete(), e.type)) {
                                                 case "mouseleave":
                                                 case "mouseout":
-                                                    for (var S = 0, T = o; S < T.length; S++) {
-                                                        var A = T[S];
+                                                    for (var T = 0, S = o; T < S.length; T++) {
+                                                        var A = S[T];
                                                         A.pointerMove(
                                                             v < 0 ? v - 10000 : v + 10000,
                                                             I < 0 ? I - 10000 : I + 10000,
@@ -4233,29 +4235,30 @@
                                             }
                                         }
                                     }
-                                }.bind(r);
+                                }.bind(r),
+                                y = h ? t.ownerDocument.body : t;
                             return (
-                                t.ownerDocument.body.addEventListener("mouseover", g, !0),
-                                t.ownerDocument.body.addEventListener("mouseenter", g, !0),
-                                t.ownerDocument.body.addEventListener("mouseout", g, !0),
-                                t.ownerDocument.body.addEventListener("mouseleave", g, !0),
-                                t.ownerDocument.body.addEventListener("mousemove", g, !0),
-                                t.ownerDocument.body.addEventListener("mousedown", g, !0),
-                                t.ownerDocument.body.addEventListener("mouseup", g, !0),
-                                t.addEventListener("touchmove", g, { passive: f }),
-                                t.addEventListener("touchstart", g, { passive: f }),
-                                t.addEventListener("touchend", g),
+                                y.addEventListener("mouseover", b, m),
+                                y.addEventListener("mouseenter", b, m),
+                                y.addEventListener("mouseout", b, m),
+                                y.addEventListener("mouseleave", b, m),
+                                y.addEventListener("mousemove", b, m),
+                                y.addEventListener("mousedown", b, m),
+                                y.addEventListener("mouseup", b, m),
+                                t.addEventListener("touchmove", b, { passive: f }),
+                                t.addEventListener("touchstart", b, { passive: f }),
+                                t.addEventListener("touchend", b),
                                 function () {
-                                    t.ownerDocument.body.removeEventListener("mouseover", g, !0),
-                                        t.ownerDocument.body.removeEventListener("mouseenter", g, !0),
-                                        t.ownerDocument.body.removeEventListener("mouseout", g, !0),
-                                        t.ownerDocument.body.removeEventListener("mouseleave", g, !0),
-                                        t.ownerDocument.body.removeEventListener("mousemove", g, !0),
-                                        t.ownerDocument.body.removeEventListener("mousedown", g, !0),
-                                        t.ownerDocument.body.removeEventListener("mouseup", g, !0),
-                                        t.removeEventListener("touchmove", g),
-                                        t.removeEventListener("touchstart", g),
-                                        t.removeEventListener("touchend", g);
+                                    y.removeEventListener("mouseover", b, m),
+                                        y.removeEventListener("mouseenter", b, m),
+                                        y.removeEventListener("mouseout", b, m),
+                                        y.removeEventListener("mouseleave", b, m),
+                                        y.removeEventListener("mousemove", b, m),
+                                        y.removeEventListener("mousedown", b, m),
+                                        y.removeEventListener("mouseup", b, m),
+                                        t.removeEventListener("touchmove", b),
+                                        t.removeEventListener("touchstart", b),
+                                        t.removeEventListener("touchend", b);
                                 }
                             );
                         };
@@ -4776,7 +4779,7 @@
                 !(function (e) {
                     (e[(e.General = 128)] = "General"), (e[(e.OpenUrl = 131)] = "OpenUrl");
                 })(a || (a = {}));
-                var S = (function () {
+                var T = (function () {
                         function e(e, t, n, r) {
                             (this.stateMachine = e),
                                 (this.playing = n),
@@ -4842,7 +4845,7 @@
                             e
                         );
                     })(),
-                    T = (function () {
+                    S = (function () {
                         function e(e, t, n, r, i) {
                             void 0 === r && (r = []),
                                 void 0 === i && (i = []),
@@ -4887,7 +4890,7 @@
                                             } else {
                                                 var d = this.artboard.stateMachineByName(e[a]);
                                                 if (d) {
-                                                    var _ = new S(d, this.runtime, t, this.artboard);
+                                                    var _ = new T(d, this.runtime, t, this.artboard);
                                                     this.stateMachines.push(_);
                                                 }
                                             }
@@ -4941,7 +4944,7 @@
                                     else {
                                         var a = this.artboard.stateMachineByName(e[r]);
                                         if (a) {
-                                            var o = new S(a, this.runtime, t, this.artboard);
+                                            var o = new T(a, this.runtime, t, this.artboard);
                                             this.stateMachines.push(o), t || o.advanceAndApply(0);
                                         } else
                                             console.warn("State Machine with name ".concat(e[r], " not found.")),
@@ -5553,6 +5556,9 @@
                                 (this._audioEventListener = null),
                                 (this._boundDraw = null),
                                 (this.eventTarget = e.eventTarget),
+                                (this.eventCapture = null == e.eventCapture || e.eventCapture),
+                                (this.listenOnDocumentBody = null != e.listenOnDocumentBody && e.listenOnDocumentBody),
+                                null != e.eventTarget && (this.listenOnDocumentBody = !1),
                                 (this._viewModelInstance = null),
                                 (this._dataEnums = null),
                                 (this.durations = []),
@@ -5693,6 +5699,8 @@
                                     null != this.eventTarget && (i = this.eventTarget),
                                         (this.eventCleanup = (0, _.registerTouchInteractions)({
                                             canvas: i,
+                                            listenOnDocumentBody: this.listenOnDocumentBody,
+                                            eventCapture: this.eventCapture,
                                             artboard: this.artboard,
                                             stateMachines: n,
                                             renderer: this.renderer,
@@ -5807,7 +5815,7 @@
                                         );
                                     }
                                     if (
-                                        ((this.animator = new T(this.runtime, this.artboard, this.eventManager)),
+                                        ((this.animator = new S(this.runtime, this.artboard, this.eventManager)),
                                         t.length > 0 || n.length > 0
                                             ? ((a = t.concat(n)),
                                               this.animator.initLinearAnimations(t, r),
@@ -5908,21 +5916,21 @@
                                     h.advanceAndApply(i);
                                 }
                                 0 == this.animator.stateMachines.length && this.artboard.advance(i);
-                                var S = this.renderer;
-                                S.clear(),
-                                    S.save(),
+                                var T = this.renderer;
+                                T.clear(),
+                                    T.save(),
                                     this.alignRenderer(),
-                                    this._hasZeroSize || this.artboard.draw(S),
-                                    S.restore(),
-                                    S.flush(),
+                                    this._hasZeroSize || this.artboard.draw(T),
+                                    T.restore(),
+                                    T.flush(),
                                     this.animator.handleLooping(),
                                     this.animator.handleStateChanges(),
                                     this.animator.handleAdvancing(i),
                                     this.frameCount++;
-                                var T = performance.now();
+                                var S = performance.now();
                                 for (
-                                    this.frameTimes.push(T), this.durations.push(T - r);
-                                    this.frameTimes[0] <= T - 1000;
+                                    this.frameTimes.push(S), this.durations.push(S - r);
+                                    this.frameTimes[0] <= S - 1000;
                                 )
                                     this.frameTimes.shift(), this.durations.shift();
                                 null == (n = this._viewModelInstance) || n.handleCallbacks(),
