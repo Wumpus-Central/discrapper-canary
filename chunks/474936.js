@@ -1,67 +1,67 @@
 n.d(t, {
     $7: () => M,
-    $8: () => ex,
-    $X: () => eE,
+    $8: () => eD,
+    $X: () => eg,
     $e: () => f,
-    $n: () => eX,
+    $n: () => eq,
     A5: () => G,
     AU: () => q,
-    Bo: () => e2,
+    Bo: () => e1,
     C: () => s,
     C2: () => Q,
     CL: () => _,
     CR: () => ea,
-    Cj: () => eV,
+    Cj: () => eF,
     Cn: () => K,
-    Cx: () => e7,
+    Cx: () => e6,
     EA: () => C,
     ET: () => $,
-    EZ: () => eF,
+    EZ: () => eZ,
     F$: () => I,
     F_: () => c,
     GP: () => N,
-    HO: () => ej,
+    HO: () => eL,
     IW: () => T,
-    Lw: () => eA,
-    M_: () => e1,
+    Lw: () => eS,
+    M_: () => e0,
     NV: () => H,
     Nl: () => ep,
     OT: () => es,
-    QF: () => ew,
-    QI: () => eq,
-    QP: () => ek,
-    Qh: () => e4,
+    QF: () => eP,
+    QI: () => ez,
+    QP: () => eM,
+    Qh: () => e3,
     RU: () => ec,
     Rg: () => Y,
     Rr: () => x,
     Rt: () => en,
-    Se: () => e6,
+    Se: () => e5,
     Si: () => p,
-    T7: () => eW,
-    TD: () => eH,
+    T7: () => eY,
+    TD: () => eV,
     TL: () => X,
-    Tp: () => eK,
+    Tp: () => eW,
     UA: () => j,
     UD: () => y,
     Ue: () => k,
-    Uq: () => eN,
-    VU: () => e3,
-    Wt: () => e$,
-    X2: () => eJ,
-    XB: () => ey,
+    Uq: () => eC,
+    VU: () => e2,
+    Wt: () => eJ,
+    X2: () => eQ,
+    XB: () => eb,
     Xh: () => E,
-    Y1: () => eM,
+    Y1: () => ej,
     YQ: () => m,
     Z1: () => O,
     Zh: () => u,
-    _k: () => eL,
-    a$: () => e5,
-    a1: () => eY,
+    _k: () => ex,
+    a$: () => e8,
+    a1: () => eH,
     a7: () => J,
     b6: () => d,
-    bg: () => eZ,
+    bg: () => eB,
     cb: () => L,
-    cd: () => eI,
+    cd: () => ev,
     dB: () => ed,
     dJ: () => b,
     dO: () => ee,
@@ -69,38 +69,37 @@ n.d(t, {
     ee: () => em,
     gW: () => eh,
     gh: () => B,
-    h1: () => eU,
+    h1: () => ek,
     h8: () => eo,
-    hX: () => eQ,
+    hX: () => eX,
     hs: () => el,
     i_: () => W,
     ih: () => e_,
-    in: () => eT,
-    jy: () => ez,
+    in: () => eI,
+    jy: () => eK,
     jz: () => ei,
     m8: () => Z,
     mn: () => S,
-    nC: () => eb,
-    nG: () => ev,
-    nH: () => eG,
+    nC: () => eE,
+    nG: () => eO,
+    nH: () => eU,
     nS: () => h,
     o4: () => v,
     p9: () => l,
-    pH: () => eD,
+    pH: () => ew,
     pj: () => R,
     rB: () => ef,
     rV: () => A,
     rX: () => F,
-    rt: () => e0,
+    rt: () => e$,
     tL: () => V,
-    u6: () => eg,
-    vK: () => e8,
-    vL: () => eS,
-    w1: () => eO,
+    vK: () => e4,
+    vL: () => eT,
+    w1: () => ey,
     wh: () => z,
     xT: () => et,
     y7: () => g,
-    ys: () => eB,
+    ys: () => eG,
     zp: () => U,
 }),
     n(388685);
@@ -412,12 +411,11 @@ let N = Object.freeze({
     ep = "1223319122125783040",
     eh = "1223380890109870080",
     em = [ep, eh],
-    eg = "1414731366406422628",
-    eE = "1397626558063050855",
-    eb = "1397609029626232955",
-    ey = 8,
-    eO = 96,
-    ev = Object.freeze({
+    eg = "1397626558063050855",
+    eE = "1397609029626232955",
+    eb = 8,
+    ey = 96,
+    eO = Object.freeze({
         [W]: {
             id: W,
             skus: ["521847234246082599"],
@@ -459,7 +457,7 @@ let N = Object.freeze({
             skus: ["521847234246082599"],
         },
     });
-var eI = (function (e) {
+var ev = (function (e) {
         return (
             (e.ANIMATED_GUILD_BANNER_TOOLTIP = "animated_guild_banner_tooltip"),
             (e.EMOJI_PICKER_SEARCH = "emoji_picker_search"),
@@ -562,7 +560,7 @@ var eI = (function (e) {
             e
         );
     })({}),
-    eT = (function (e) {
+    eI = (function (e) {
         return (
             (e[(e.PREMIUM_TIER_1 = 1)] = "PREMIUM_TIER_1"),
             (e[(e.PREMIUM_TIER_2 = 2)] = "PREMIUM_TIER_2"),
@@ -572,37 +570,37 @@ var eI = (function (e) {
             e
         );
     })({});
-let eS = Object.freeze({
+let eT = Object.freeze({
         "978380684370378762": 8,
         "521846918637420545": 1,
         "521847234246082599": 2,
         "590663762298667008": 4,
     }),
+    eS = 52428800,
     eA = 52428800,
-    eC = 52428800,
-    eN = 524288000,
-    eR = 52428800,
-    eP = 104857600,
-    ew = 5,
-    eD = {
-        [i.Eu4.NONE]: ew,
+    eC = 524288000,
+    eN = 52428800,
+    eR = 104857600,
+    eP = 5,
+    ew = {
+        [i.Eu4.NONE]: eP,
         [i.Eu4.TIER_1]: 10,
         [i.Eu4.TIER_2]: 15,
         [i.Eu4.TIER_3]: 30,
     },
-    ex = {
-        [i.Eu4.NONE]: eD[i.Eu4.NONE],
-        [i.Eu4.TIER_1]: eD[i.Eu4.NONE] + eD[i.Eu4.TIER_1],
-        [i.Eu4.TIER_2]: eD[i.Eu4.NONE] + eD[i.Eu4.TIER_1] + eD[i.Eu4.TIER_2],
-        [i.Eu4.TIER_3]: eD[i.Eu4.NONE] + eD[i.Eu4.TIER_1] + eD[i.Eu4.TIER_2] + eD[i.Eu4.TIER_3],
+    eD = {
+        [i.Eu4.NONE]: ew[i.Eu4.NONE],
+        [i.Eu4.TIER_1]: ew[i.Eu4.NONE] + ew[i.Eu4.TIER_1],
+        [i.Eu4.TIER_2]: ew[i.Eu4.NONE] + ew[i.Eu4.TIER_1] + ew[i.Eu4.TIER_2],
+        [i.Eu4.TIER_3]: ew[i.Eu4.NONE] + ew[i.Eu4.TIER_1] + ew[i.Eu4.TIER_2] + ew[i.Eu4.TIER_3],
     },
-    eL = {
-        [i.Eu4.NONE]: ey,
+    ex = {
+        [i.Eu4.NONE]: eb,
         [i.Eu4.TIER_1]: 24,
         [i.Eu4.TIER_2]: 36,
         [i.Eu4.TIER_3]: 48,
     },
-    ej = Object.freeze({
+    eL = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
@@ -611,8 +609,8 @@ let eS = Object.freeze({
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: "720p",
-                soundboardSounds: eL[i.Eu4.NONE],
-                stickers: ex[i.Eu4.NONE],
+                soundboardSounds: ex[i.Eu4.NONE],
+                stickers: eD[i.Eu4.NONE],
                 stageVideoUsers: i.B9o,
             },
         },
@@ -624,8 +622,8 @@ let eS = Object.freeze({
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "720p",
-                soundboardSounds: eL[i.Eu4.TIER_1],
-                stickers: ex[i.Eu4.TIER_1],
+                soundboardSounds: ex[i.Eu4.TIER_1],
+                stickers: eD[i.Eu4.TIER_1],
                 stageVideoUsers: i.B9o,
             },
         },
@@ -634,11 +632,11 @@ let eS = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eR,
+                fileSize: eN,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
-                soundboardSounds: eL[i.Eu4.TIER_2],
-                stickers: ex[i.Eu4.TIER_2],
+                soundboardSounds: ex[i.Eu4.TIER_2],
+                stickers: eD[i.Eu4.TIER_2],
                 stageVideoUsers: i.eez,
             },
         },
@@ -654,16 +652,16 @@ let eS = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: eP,
+                fileSize: eR,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
-                soundboardSounds: eL[i.Eu4.TIER_3],
-                stickers: ex[i.Eu4.TIER_3],
+                soundboardSounds: ex[i.Eu4.TIER_3],
+                stickers: eD[i.Eu4.TIER_3],
                 stageVideoUsers: i.RcX,
             },
         },
     }),
-    eM = [
+    ej = [
         "978380692553465866",
         "1024422698568122368",
         "511651871736201216",
@@ -673,7 +671,7 @@ let eS = Object.freeze({
         "944037208325619722",
         "511651885459963904",
     ];
-var ek = (function (e) {
+var eM = (function (e) {
         return (
             (e.SOUNDBOARD_PLAY = "soundboard play"),
             (e.PROFILE_THEME_COLOR = "profile_theme_color"),
@@ -687,31 +685,31 @@ var ek = (function (e) {
             e
         );
     })({}),
-    eU = (function (e) {
+    ek = (function (e) {
         return (e.FREE = "free"), (e.PREMIUM_STANDARD = "premium-standard"), e;
     })({});
-let eG = {
+let eU = {
     "1024422698568122368": P,
     "511651876987469824": P,
     "511651885459963904": P,
     "944037208325619722": w,
     "642251038925127690": D,
 };
-var eB = (function (e) {
+var eG = (function (e) {
     return (
         (e.HIGH_STREAMING_QUALITY = "high_streaming_quality"), (e.MID_STREAMING_QUALITY = "mid_streaming_quality"), e
     );
 })({});
-let eZ = Object.freeze({
+let eB = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1,
 });
-var eF = (function (e) {
+var eZ = (function (e) {
         return (
             (e[(e.UserSettings = 0)] = "UserSettings"), (e[(e.ApplicationStoreHome = 1)] = "ApplicationStoreHome"), e
         );
     })({}),
-    eV = (function (e) {
+    eF = (function (e) {
         return (
             (e[(e.SNOWGLOBE = 1)] = "SNOWGLOBE"),
             (e[(e.BOX = 2)] = "BOX"),
@@ -728,37 +726,37 @@ var eF = (function (e) {
             e
         );
     })({});
-let eH = Object.freeze({
+let eV = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128,
     }),
-    eY = Object.freeze({
-        3: { fileSize: eA },
-        1: { fileSize: eC },
-        2: { fileSize: eN },
+    eH = Object.freeze({
+        3: { fileSize: eS },
+        1: { fileSize: eA },
+        2: { fileSize: eC },
     });
-var eW = (function (e) {
+var eY = (function (e) {
     return (e.BOOST = "boost"), (e.DISMISS = "dismiss"), e;
 })({});
-let eK = new Set(["PL", "TR"]),
-    ez = [1, 2, 3],
-    eq = [4, 5, 7, 6];
-[8, 9, 11, 10].concat(ez);
-let eX = 190;
-var eQ = (function (e) {
+let eW = new Set(["PL", "TR"]),
+    eK = [1, 2, 3],
+    ez = [4, 5, 7, 6];
+[8, 9, 11, 10].concat(eK);
+let eq = 190;
+var eX = (function (e) {
         return (e[(e.FRIEND_ANNIVERSARY = 0)] = "FRIEND_ANNIVERSARY"), e;
     })({}),
-    eJ = (function (e) {
+    eQ = (function (e) {
         return (e.VIEW_ALL = "view_all"), (e.SEND_MESSAGE = "send_message"), e;
     })({}),
-    e$ = (function (e) {
+    eJ = (function (e) {
         return (e[(e.DM_CHANNEL = 0)] = "DM_CHANNEL"), (e[(e.SHOP_PAGE = 1)] = "SHOP_PAGE"), e;
     })({});
-let e0 = 3,
-    e1 = 30,
-    e2 = 20;
-var e3 = (function (e) {
+let e$ = 3,
+    e0 = 30,
+    e1 = 20;
+var e2 = (function (e) {
     return (
         (e.PREMIUM_TENURE_1_MONTH = "premium_tenure_1_month_v2"),
         (e.PREMIUM_TENURE_3_MONTH = "premium_tenure_3_month_v2"),
@@ -771,7 +769,7 @@ var e3 = (function (e) {
         e
     );
 })({});
-let e4 = [
+let e3 = [
         "premium_tenure_1_month_v2",
         "premium_tenure_3_month_v2",
         "premium_tenure_6_month_v2",
@@ -781,7 +779,7 @@ let e4 = [
         "premium_tenure_60_month_v2",
         "premium_tenure_72_month_v2",
     ],
-    e8 = {
+    e4 = {
         premium_tenure_1_month_v2: {
             id: "premium_tenure_1_month_v2",
             nameUnformatted: o.t.LR1C0d,
@@ -839,7 +837,7 @@ let e4 = [
             glowColor: "#078292",
         },
     };
-var e5 = (function (e) {
+var e8 = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.FP_ONLY = 1)] = "FP_ONLY"),
@@ -847,10 +845,10 @@ var e5 = (function (e) {
             e
         );
     })({}),
-    e6 = (function (e) {
+    e5 = (function (e) {
         return (e[(e.HOUR = 1)] = "HOUR"), (e[(e.DAY = 2)] = "DAY"), e;
     })({});
-let e7 = {
+let e6 = {
     [r.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],
     [r.a.PREMIUM_TIER_2_1_DAY]: [2, 1],
     [r.a.PREMIUM_TIER_2_3_DAY]: [2, 3],

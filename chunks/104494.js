@@ -41,12 +41,11 @@ function f(e, t) {
     );
 }
 function _() {
-    var e, t, n;
-    let r = s.Z.canFractionalPremiumUserUseOffer(),
-        i = f(c.hs, r),
-        a = f(c.RU, r),
-        o = f(c.rB, r),
-        l = f(c.ih, r),
-        u = f(c.u6, r);
-    return null != (n = null != (t = null != (e = null != u ? u : i) ? e : a) ? t : o) ? n : l;
+    var e, t;
+    let n = s.Z.canFractionalPremiumUserUseOffer(),
+        r = f(c.hs, n),
+        i = f(c.RU, n),
+        a = f(c.rB, n),
+        o = f(c.ih, n);
+    return null != (t = null != (e = null != r ? r : i) ? e : a) ? t : o;
 }
