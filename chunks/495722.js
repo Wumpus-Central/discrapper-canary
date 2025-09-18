@@ -494,12 +494,11 @@ let J = i.forwardRef(function (e, t) {
             useReducedMotion: T,
             taskDetails: S,
         } = e,
-        A = (0, b.Vl)(v),
-        { launchInGameActivity: C } = (0, O.zB)(v),
+        { launchInGameActivity: A } = (0, O.zB)(v),
+        C = (0, b.Rt)(v),
         N = i.useCallback(async () => {
-            let e = v.config.features.includes(Z.S7.START_QUEST_CTA),
-                t = e ? E.jZ.START_QUEST : E.jZ.ACCEPT_QUEST;
-            await Q(v, I.jn.QUEST_BAR_V2, t, I.jn.QUEST_BAR_V2), A && e && C();
+            let e = C ? E.jZ.START_QUEST : E.jZ.ACCEPT_QUEST;
+            await Q(v, I.jn.QUEST_BAR_V2, e, I.jn.QUEST_BAR_V2), C && A();
         }, [v, A, C]),
         R = (null == (n = v.userStatus) ? void 0 : n.enrolledAt) != null,
         P = u && d;
