@@ -9,7 +9,6 @@ e.exports = {
     marginTop40: "marginTop40_fd297e",
     marginBottom40: "marginBottom40_fd297e",
     marginTop60: "marginTop60_fd297e",
-    marginBottom60: "marginBottom60_fd297e",
     marginCenterHorz: "marginCenterHorz_fd297e",
     marginLeft8: "marginLeft8_fd297e",
 };

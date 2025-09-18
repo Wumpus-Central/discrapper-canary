@@ -1,26 +1,20 @@
-n.d(t, { Z: () => u }), n(388685);
-var r = n(951288),
-    i = n(704215),
-    a = n(512983),
-    o = n(211644),
+n.d(t, { Z: () => c }), n(388685);
+var a = n(951288),
+    r = n(704215),
+    l = n(481060),
+    i = n(211644),
     s = n(98460),
-    l = n(699867),
-    c = n(197571);
-function u(e) {
+    o = n(699867);
+function c(e) {
     let { searchQuery: t = "" } = e,
-        n = (0, o.ZP)((e) => e.recentlyShown),
-        [u, d] = (0, s.Z)(),
-        f = u.filter((e) => e.toLowerCase().includes(t.toLowerCase())).filter((e) => !n.includes(i.z[e]));
-    return 0 === f.length
+        n = (0, i.ZP)((e) => e.recentlyShown),
+        [c, d] = (0, s.Z)(),
+        u = c.filter((e) => e.toLowerCase().includes(t.toLowerCase())).filter((e) => !n.includes(r.z[e]));
+    return 0 === u.length
         ? null
-        : (0, r.jsxs)("div", {
-              className: c.marginBottom8,
-              children: [
-                  (0, r.jsx)(a.v, {
-                      tag: a.R.H2,
-                      children: "Recent Overrides",
-                  }),
-                  (0, r.jsx)(l.Z, { items: f }),
-              ],
+        : (0, a.jsx)(l.hjN, {
+              title: "Recent Overrides",
+              tag: "h1",
+              children: (0, a.jsx)(o.Z, { items: u }),
           });
 }

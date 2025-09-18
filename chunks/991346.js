@@ -165,7 +165,6 @@ function V(e) {
                           M.s6.EXPERIMENTS,
                           M.s6.DEVELOPER_OPTIONS,
                           M.s6.HOTSPOT_OPTIONS,
-                          M.s6.DISMISSIBLE_CONTENT_OPTIONS,
                           M.s6.PAYMENT_FLOW_MODALS,
                           M.s6.REVENUE_STORYBOOK,
                           M.s6.VIRTUAL_CURRENCY_CONFIGURATION,
