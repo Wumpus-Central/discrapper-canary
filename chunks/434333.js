@@ -1,48 +1,47 @@
 n.d(t, {
-    k: () => d,
-    m: () => u,
+    k: () => u,
+    m: () => c,
 });
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(1561),
-    l = n(481060),
-    c = n(198551);
-let u = {
-        RED: c.backgroundRed,
-        BACKGROUND_TERTIARY: c.backgroundTertiary,
-        BACKGROUND_ACCENT: c.backgroundAccent,
+    s = n(481060),
+    l = n(198551);
+let c = {
+        RED: l.backgroundRed,
+        BACKGROUND_TERTIARY: l.backgroundTertiary,
+        BACKGROUND_ACCENT: l.backgroundAccent,
     },
-    d = i.forwardRef(function (e, t) {
+    u = i.forwardRef(function (e, t) {
         let {
             children: n,
             className: i,
             onDismiss: a,
-            backgroundColor: d = u.RED,
-            icon: f = l.Mgn,
-            iconClassName: _,
+            backgroundColor: u = c.RED,
+            icon: d = s.Mgn,
+            iconClassName: f,
         } = e;
         return (0, r.jsxs)("div", {
-            className: o()(c.error, i, d),
+            className: o()(l.error, i, u),
             ref: t,
             children: [
-                (0, r.jsx)(f, {
-                    className: o()(c.icon, _),
+                (0, r.jsx)(d, {
+                    className: o()(l.icon, f),
                     color: "currentColor",
                 }),
                 (0, r.jsx)("div", {
-                    className: c.text,
+                    className: l.text,
                     children: n,
                 }),
                 null != a
-                    ? (0, r.jsx)(s.P, {
+                    ? (0, r.jsx)(s.P3F, {
                           onClick: a,
-                          className: c.errorClose,
-                          children: (0, r.jsx)(l.Dio, {
+                          className: l.errorClose,
+                          children: (0, r.jsx)(s.Dio, {
                               size: "md",
                               color: "currentColor",
-                              className: c.errorCloseIcon,
+                              className: l.errorCloseIcon,
                           }),
                       })
                     : null,

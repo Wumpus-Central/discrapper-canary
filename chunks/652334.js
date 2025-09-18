@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(1561),
+    o = n(793030),
     s = n(222557);
 function l(e, t, n) {
     return (
@@ -81,7 +81,7 @@ function _(e, t) {
 function p(e) {
     var { as: t, muted: n = !1, selected: i = !1, className: l } = e,
         u = f(e, ["as", "muted", "selected", "className"]);
-    let _ = null != t ? t : o.P;
+    let _ = null != t ? t : o.P3F;
     return (0, r.jsx)(
         _,
         d(c({}, u), {

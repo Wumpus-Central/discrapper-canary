@@ -1,63 +1,62 @@
-n.d(t, { D: () => p }), n(388685);
+n.d(t, { D: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(693789),
-    l = n(1561),
-    c = n(481060),
-    u = n(889963),
-    d = n(388032),
-    f = n(18039);
-function _(e) {
+    l = n(481060),
+    c = n(889963),
+    u = n(388032),
+    d = n(18039);
+function f(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: s } = e,
-        [u, d] = i.useState(!1),
-        [_, p] = i.useState(null),
-        h = null != _ && _ >= 1 && _ <= n,
-        m = (e) => {
+        [c, u] = i.useState(!1),
+        [f, _] = i.useState(null),
+        p = null != f && f >= 1 && f <= n,
+        h = (e) => {
             let t = parseInt(e);
-            if ("" === e || isNaN(t)) return void p(null);
-            p(t);
+            if ("" === e || isNaN(t)) return void _(null);
+            _(t);
         },
-        g = (e) => {
-            "Enter" === e.key && null != _ && h && (s(_), d(!1), p(null));
+        m = (e) => {
+            "Enter" === e.key && null != f && p && (s(f), u(!1), _(null));
         };
     return a
         ? (0, r.jsx)(
-              c.X6q,
+              l.X6q,
               {
-                  className: f.gap,
+                  className: d.gap,
                   "aria-hidden": !0,
                   variant: "heading-sm/semibold",
                   children: "\u2026",
               },
               t.key,
           )
-        : u
+        : c
           ? (0, r.jsx)("div", {
-                className: f.jumpToPageInlineInput,
+                className: d.jumpToPageInlineInput,
                 children: (0, r.jsx)(
-                    c.oil,
+                    l.oil,
                     {
                         type: "number",
                         autoFocus: !0,
-                        value: null == _ ? "" : "".concat(_),
-                        onChange: m,
+                        value: null == f ? "" : "".concat(f),
+                        onChange: h,
                         onBlur: () => {
-                            d(!1), p(null);
+                            u(!1), _(null);
                         },
-                        onKeyUp: g,
+                        onKeyUp: m,
                         disabled: a,
                     },
                     t.key,
                 ),
             })
           : (0, r.jsx)(
-                l.P,
+                l.P3F,
                 {
-                    onClick: () => d(!0),
-                    children: (0, r.jsx)(c.X6q, {
-                        className: o()(f.roundButton, f.gap),
+                    onClick: () => u(!0),
+                    children: (0, r.jsx)(l.X6q, {
+                        className: o()(d.roundButton, d.gap),
                         "aria-hidden": !0,
                         variant: "heading-sm/semibold",
                         children: "\u2026",
@@ -66,65 +65,65 @@ function _(e) {
                 t.key,
             );
 }
-function p(e) {
+function _(e) {
     let {
             currentPage: t,
             totalCount: n,
             pageSize: i,
             maxVisiblePages: a,
-            disablePaginationGap: p,
-            onPageChange: h,
-            hideMaxPage: m = !1,
-            className: g,
-            renderPageWrapper: E,
+            disablePaginationGap: _,
+            onPageChange: p,
+            hideMaxPage: h = !1,
+            className: m,
+            renderPageWrapper: g,
         } = e,
-        b = Math.ceil(n / i);
-    function y(e) {
-        null != h && h(e);
+        E = Math.ceil(n / i);
+    function b(e) {
+        null != p && p(e);
     }
-    function O(e) {
+    function y(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             s.zx,
             {
-                className: f.endButton,
-                innerClassName: f.endButtonInner,
+                className: d.endButton,
+                innerClassName: d.endButtonInner,
                 look: s.zx.Looks.BLANK,
                 color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
                 rel: "prev",
                 children: [
-                    (0, r.jsx)(c.V7D, {
+                    (0, r.jsx)(l.V7D, {
                         size: "md",
                         color: "currentColor",
-                        className: f.iconCaret,
+                        className: d.iconCaret,
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)("span", { children: d.intl.string(d.t["13/7kZ"]) }),
+                    (0, r.jsx)("span", { children: u.intl.string(u.t["13/7kZ"]) }),
                 ],
             },
             t,
         );
     }
-    function v(e) {
+    function O(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             s.zx,
             {
-                className: f.endButton,
-                innerClassName: f.endButtonInner,
+                className: d.endButton,
+                innerClassName: d.endButtonInner,
                 look: s.zx.Looks.BLANK,
                 color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
                 rel: "next",
                 children: [
-                    (0, r.jsx)("span", { children: d.intl.string(d.t.PDTjLC) }),
-                    (0, r.jsx)(c.Fbu, {
+                    (0, r.jsx)("span", { children: u.intl.string(u.t.PDTjLC) }),
+                    (0, r.jsx)(l.Fbu, {
                         size: "md",
                         color: "currentColor",
-                        className: f.iconCaret,
+                        className: d.iconCaret,
                         "aria-hidden": !0,
                     }),
                 ],
@@ -132,52 +131,52 @@ function p(e) {
             t,
         );
     }
-    function I(e) {
+    function v(e) {
         return (0, r.jsx)(
-            l.P,
+            l.P3F,
             {
-                className: o()(f.roundButton, { [f.activeButton]: e.selected }),
+                className: o()(d.roundButton, { [d.activeButton]: e.selected }),
                 onClick: e.selected ? void 0 : e.navigateToPage,
-                "aria-label": d.intl.formatToPlainString(d.t.IGMs8f, { pageNumber: e.targetPage }),
+                "aria-label": u.intl.formatToPlainString(u.t.IGMs8f, { pageNumber: e.targetPage }),
                 "aria-current": e.selected ? "page" : void 0,
                 children: (0, r.jsx)("span", { children: e.targetPage }),
             },
             e.key,
         );
     }
-    function T(e) {
-        let t = I(e);
-        return null != E ? E(e, t) : t;
+    function I(e) {
+        let t = v(e);
+        return null != g ? g(e, t) : t;
     }
-    function S(e) {
+    function T(e) {
         return (0, r.jsx)(
-            _,
+            f,
             {
                 page: e,
-                totalPageCount: b,
-                disabled: !!p,
-                onPageChange: h,
+                totalPageCount: E,
+                disabled: !!_,
+                onPageChange: p,
             },
             e.key,
         );
     }
-    function A(e) {
+    function S(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)("div", {
-                  className: o()(f.pageControlContainer, g),
+                  className: o()(d.pageControlContainer, m),
                   children: (0, r.jsx)("nav", {
-                      className: f.pageControl,
+                      className: d.pageControl,
                       children: t.map((e) => {
                           switch (e.type) {
-                              case u.s.BACK:
-                                  return O(e);
-                              case u.s.PAGE:
+                              case c.s.BACK:
+                                  return y(e);
+                              case c.s.PAGE:
+                                  return I(e);
+                              case c.s.GAP:
                                   return T(e);
-                              case u.s.GAP:
-                                  return S(e);
-                              case u.s.NEXT:
-                                  return v(e);
+                              case c.s.NEXT:
+                                  return O(e);
                               default:
                                   return null;
                           }
@@ -186,12 +185,12 @@ function p(e) {
               })
             : null;
     }
-    return (0, r.jsx)(u.W, {
-        totalPageCount: b,
+    return (0, r.jsx)(c.W, {
+        totalPageCount: E,
         selectedPage: t,
         maxVisiblePages: a,
-        hideMaxPage: m,
-        onPageChange: y,
-        children: A,
+        hideMaxPage: h,
+        onPageChange: b,
+        children: S,
     });
 }

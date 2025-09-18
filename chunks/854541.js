@@ -1,8 +1,8 @@
 n.d(t, {
-    AG: () => P,
-    Z$: () => x,
-    jH: () => w,
-    zH: () => L,
+    AG: () => R,
+    Z$: () => D,
+    jH: () => P,
+    zH: () => x,
 }),
     n(388685);
 var r = n(951288),
@@ -13,15 +13,14 @@ var r = n(951288),
     l = n(924826),
     c = n(866442),
     u = n(793030),
-    d = n(1561),
-    f = n(507274),
-    _ = n(481060),
-    p = n(408886),
-    h = n(44315),
-    m = n(981631),
-    g = n(388032),
-    E = n(701224);
-function b(e, t, n) {
+    d = n(507274),
+    f = n(481060),
+    _ = n(408886),
+    p = n(44315),
+    h = n(981631),
+    m = n(388032),
+    g = n(701224);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +33,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,12 +44,12 @@ function y(e) {
                 }),
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,22 +61,22 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function I(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -85,7 +84,7 @@ function I(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,13 +93,13 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let S = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
-    A = 7,
-    C = () => Promise.resolve();
-function N(e) {
+let T = i.lazy(() => Promise.all([n.e("3115"), n.e("28102")]).then(n.bind(n, 534828))),
+    S = 7,
+    A = () => Promise.resolve();
+function C(e) {
     return null == e ? null : "string" == typeof e ? ((0, c.FX)(e) ? (0, c._i)(e) : null) : e;
 }
-function R(e) {
+function N(e) {
     let {
             color: t,
             isDefault: n = !1,
@@ -108,76 +107,76 @@ function R(e) {
             isSelected: a = !1,
             disabled: l = !1,
             style: d = {},
-            onClick: f,
-            isGradient: p = !1,
-            "aria-label": g,
-            gradientStart: b,
-            gradientEnd: O,
+            onClick: _,
+            isGradient: m = !1,
+            "aria-label": E,
+            gradientStart: y,
+            gradientEnd: v,
             gradientDegrees: I = 180,
         } = e,
         T = (0, s.JA)("color-".concat(t)),
         S = {};
-    if (p && null != b && null != O) {
-        let e = (0, c.Rf)(b),
-            t = (0, c.Rf)(O);
+    if (m && null != y && null != v) {
+        let e = (0, c.Rf)(y),
+            t = (0, c.Rf)(v);
         S = { background: "linear-gradient(".concat(I, "deg, ").concat(e, ", ").concat(t, ")") };
     } else S = { backgroundColor: null != t ? (0, c.Rf)(t) : d.backgroundColor };
-    let A = p ? b : t,
+    let A = m ? y : t,
         C = !1;
     function N() {
         let e = 16,
             t = 16;
         if (((i || n) && ((e = "38%"), (t = "auto")), a))
-            return (0, r.jsx)(_.dz2, {
+            return (0, r.jsx)(f.dz2, {
                 size: "custom",
                 width: e,
                 height: t,
-                color: (0, h.Lq)(C ? m.Ilk.WHITE_500 : m.Ilk.BLACK_500),
+                color: (0, p.Lq)(C ? h.Ilk.WHITE_500 : h.Ilk.BLACK_500),
             });
     }
     return (
-        i && !a ? (C = !0) : (i || a) && (C = (0, c.Bd)(null != A ? A : m.p6O) > 0.2),
+        i && !a ? (C = !0) : (i || a) && (C = (0, c.Bd)(null != A ? A : h.p6O) > 0.2),
         (0, r.jsx)(u.tEY, {
             offset: -2,
             children: (0, r.jsxs)(
                 "button",
-                v(
-                    y(
+                O(
+                    b(
                         {
                             type: "button",
-                            className: o()(E.colorPickerSwatch, {
-                                [E.disabled]: l,
-                                [E.default]: n,
-                                [E.custom]: i,
-                                [E.noColor]: null == t && !p,
-                                [E.gradientPreset]: p,
+                            className: o()(g.colorPickerSwatch, {
+                                [g.disabled]: l,
+                                [g.default]: n,
+                                [g.custom]: i,
+                                [g.noColor]: null == t && !m,
+                                [g.gradientPreset]: m,
                             }),
                             disabled: l,
                             onClick: () =>
-                                null == f
+                                null == _
                                     ? void 0
-                                    : f(
-                                          p
+                                    : _(
+                                          m
                                               ? {
-                                                    start: b,
-                                                    end: O,
+                                                    start: y,
+                                                    end: v,
                                                 }
                                               : t,
                                       ),
-                            style: y({}, d, S),
-                            "aria-label": null != g ? g : p ? "Gradient ".concat(b, "-").concat(O) : S.backgroundColor,
+                            style: b({}, d, S),
+                            "aria-label": null != E ? E : m ? "Gradient ".concat(y, "-").concat(v) : S.backgroundColor,
                         },
                         T,
                     ),
                     {
                         children: [
                             i
-                                ? (0, r.jsx)(_.vdY, {
+                                ? (0, r.jsx)(f.vdY, {
                                       size: "custom",
-                                      className: E.colorPickerDropper,
+                                      className: g.colorPickerDropper,
                                       width: 14,
                                       height: 14,
-                                      color: (0, h.Lq)(C ? m.Ilk.WHITE_500 : m.Ilk.BLACK_500),
+                                      color: (0, p.Lq)(C ? h.Ilk.WHITE_500 : h.Ilk.BLACK_500),
                                   })
                                 : null,
                             N(),
@@ -188,10 +187,10 @@ function R(e) {
         })
     );
 }
-class P extends i.PureComponent {
+class R extends i.PureComponent {
     render() {
         let { color: e, onChange: t, value: n, disabled: i, allowBlackCustomColor: a } = this.props;
-        return (0, r.jsx)(R, {
+        return (0, r.jsx)(N, {
             isDefault: !0,
             color: e,
             isSelected: e === n || (0 === n && !a),
@@ -200,10 +199,10 @@ class P extends i.PureComponent {
         });
     }
 }
-class w extends i.PureComponent {
+class P extends i.PureComponent {
     render() {
         let { customColor: e, value: t, disabled: n, "aria-label": i, presets: a } = this.props;
-        return (0, r.jsx)(R, {
+        return (0, r.jsx)(N, {
             isCustom: !0,
             color: e,
             isSelected: t === e && !a.includes(e),
@@ -212,26 +211,26 @@ class w extends i.PureComponent {
         });
     }
 }
-function D(e) {
+function w(e) {
     let {
             value: t,
             eagerUpdate: n = !1,
             onChange: a,
             onClose: s,
             suggestedColors: l,
-            middle: u,
+            middle: p,
             footer: h,
-            showEyeDropper: m,
-            wrapperComponentType: b,
-            className: O,
+            showEyeDropper: E,
+            wrapperComponentType: y,
+            className: v,
         } = e,
-        I = (0, p.Z)(),
-        T = N(t),
-        C = null != T ? T : 0,
-        R = (0, c.Rf)(C),
-        P = (0, c.O)(C),
+        I = (0, _.Z)(),
+        A = C(t),
+        N = null != A ? A : 0,
+        R = (0, c.Rf)(N),
+        P = (0, c.O)(N),
         [w, D] = i.useState({
-            current: C,
+            current: N,
             pending: {
                 hex: R,
                 hsl: P,
@@ -239,22 +238,22 @@ function D(e) {
             input: R,
         });
     i.useEffect(() => {
-        if (null == T || T === w.current) return;
-        let e = (0, c.Rf)(T),
-            t = (0, c.O)(T);
+        if (null == A || A === w.current) return;
+        let e = (0, c.Rf)(A),
+            t = (0, c.O)(A);
         D({
-            current: T,
+            current: A,
             pending: {
                 hex: e,
                 hsl: t,
             },
             input: e,
         });
-    }, [T, w]),
+    }, [A, w]),
         i.useEffect(() => s, [s]);
     let x = (e) => {
             let t = "#" === e[0] ? e : "#".concat(e);
-            if (!(0, c.FX)(t)) return void D((e) => v(y({}, e), { input: t }));
+            if (!(0, c.FX)(t)) return void D((e) => O(b({}, e), { input: t }));
             let n = (0, c._i)(t),
                 r = (0, c.O)(n);
             D({
@@ -277,7 +276,7 @@ function D(e) {
         j = i.useCallback(
             (e) => {
                 D((t) =>
-                    v(y({}, t), {
+                    O(b({}, t), {
                         pending: e,
                         input: e.hex,
                     }),
@@ -293,7 +292,7 @@ function D(e) {
             children: [
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
-                    children: (0, r.jsx)(S, {
+                    children: (0, r.jsx)(T, {
                         onChange: j,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
@@ -302,32 +301,32 @@ function D(e) {
                         color: w.pending.hsl,
                     }),
                 }),
-                u,
-                (0, r.jsx)(_.oil, {
+                p,
+                (0, r.jsx)(f.oil, {
                     value: w.input.slice(1),
                     onChange: x,
-                    maxLength: A - 1,
+                    maxLength: S - 1,
                     leading: "#",
                     trailing:
-                        m && null != I
+                        E && null != I
                             ? {
-                                  icon: _.ilE,
+                                  icon: f.ilE,
                                   onClick: L,
-                                  "aria-label": g.intl.string(g.t["0dU9Nz"]),
+                                  "aria-label": m.intl.string(m.t["0dU9Nz"]),
                               }
                             : void 0,
                 }),
                 null != l &&
                     l.length > 0 &&
                     (0, r.jsx)("div", {
-                        className: E.suggestedColors,
+                        className: g.suggestedColors,
                         children: l.map((e, t) =>
                             (0, r.jsx)(
-                                d.P,
+                                u.P3F,
                                 {
                                     "aria-label": "",
                                     style: { backgroundColor: e },
-                                    className: E.suggestedColor,
+                                    className: g.suggestedColor,
                                     onClick: () => x(e),
                                 },
                                 "".concat(e, "-").concat(t),
@@ -337,15 +336,15 @@ function D(e) {
                 h,
             ],
         }),
-        U = null != b ? b : f.V;
+        U = null != y ? y : d.V;
     return (0, r.jsx)(U, {
-        "aria-label": g.intl.string(g.t.WTqQ5e),
-        className: o()(E.customColorPicker, O),
+        "aria-label": m.intl.string(m.t.WTqQ5e),
+        className: o()(g.customColorPicker, v),
         children: k,
     });
 }
-let x = i.memo(D);
-function L(e) {
+let D = i.memo(w);
+function x(e) {
     let {
             className: t,
             defaultColor: n,
@@ -359,17 +358,17 @@ function L(e) {
             renderCustomButton: p,
             colorContainerClassName: h,
             isGradient: m,
-            renderGradientCustomButton: g,
-            gradientDegrees: b,
-            allowBlackCustomColor: O,
+            renderGradientCustomButton: E,
+            gradientDegrees: y,
+            allowBlackCustomColor: I,
         } = e,
         T = (e) =>
             (0, r.jsx)("div", {
-                className: E.colorPickerRow,
+                className: g.colorPickerRow,
                 children: m
                     ? e.map((e) =>
                           (0, r.jsx)(
-                              R,
+                              N,
                               {
                                   gradientStart: e.start,
                                   gradientEnd: e.end,
@@ -379,14 +378,14 @@ function L(e) {
                                   disabled: d,
                                   isGradient: !0,
                                   "aria-label": e.name,
-                                  gradientDegrees: b,
+                                  gradientDegrees: y,
                               },
                               "".concat(e.start, "-").concat(e.end),
                           ),
                       )
                     : e.map((e) =>
                           (0, r.jsx)(
-                              R,
+                              N,
                               {
                                   color: e,
                                   isSelected: e === c,
@@ -399,25 +398,25 @@ function L(e) {
                       ),
             }),
         S = a.slice(0, a.length / 2),
-        A = a.slice(a.length / 2, a.length),
-        N = (0, l.ZP)({
+        C = a.slice(a.length / 2, a.length),
+        R = (0, l.ZP)({
             id: "color-picker",
             isEnabled: !0,
-            scrollToStart: C,
-            scrollToEnd: C,
+            scrollToStart: A,
+            scrollToEnd: A,
         });
     return (0, r.jsx)(s.bG, {
-        navigator: N,
+        navigator: R,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: s } = e,
-                    l = I(e, ["ref"]);
+                    l = v(e, ["ref"]);
                 return (0, r.jsxs)(
                     "div",
-                    v(
-                        y(
+                    O(
+                        b(
                             {
-                                className: o()(E.container, t, { [E.gradient]: m }),
+                                className: o()(g.container, t, { [g.gradient]: m }),
                                 ref: s,
                             },
                             l,
@@ -428,17 +427,17 @@ function L(e) {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)("div", {
-                                                className: o()(E.defaultContainer, h),
+                                                className: o()(g.defaultContainer, h),
                                                 children: _({
                                                     value: c,
                                                     color: n,
                                                     onChange: f,
                                                     disabled: d,
-                                                    allowBlackCustomColor: O,
+                                                    allowBlackCustomColor: I,
                                                 }),
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: o()(E.customContainer, h),
+                                                className: o()(g.customContainer, h),
                                                 children: p({
                                                     value: c,
                                                     customColor: i,
@@ -449,9 +448,9 @@ function L(e) {
                                         ],
                                     }),
                                 m &&
-                                    null != g &&
+                                    null != E &&
                                     (0, r.jsx)("div", {
-                                        children: g({
+                                        children: E({
                                             value: c,
                                             startColor: n,
                                             endColor: n,
@@ -459,7 +458,7 @@ function L(e) {
                                         }),
                                     }),
                                 (0, r.jsxs)("div", {
-                                    children: [T(S), T(A)],
+                                    children: [T(S), T(C)],
                                 }),
                             ],
                         },

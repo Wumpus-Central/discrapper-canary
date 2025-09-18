@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(1561),
+    s = n(793030),
     l = n(981729),
     c = n(94321);
 function u(e, t, n) {
@@ -112,7 +112,7 @@ let m = {
                 var { onClick: l } = e,
                     g = p(e, ["onClick"]);
                 return (0, r.jsx)(
-                    s.P,
+                    s.P3F,
                     _(d({}, g), {
                         innerRef: t,
                         "aria-label": i,

@@ -3,13 +3,13 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    s = n(1561),
+    s = n(793030),
     o = n(993365),
     C = n(530989);
 function d(e) {
     let { option: t, selected: n, onClick: l, disabled: d = !1 } = e,
         c = i.useCallback((e) => l(t), [l, t]);
-    return (0, r.jsx)(s.P, {
+    return (0, r.jsx)(s.P3F, {
         className: a()(C.item, {
             [C.itemSelected]: n,
             [C.disabled]: d,

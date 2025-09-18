@@ -1,37 +1,36 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(647438),
     a = n(793030),
     o = n(974674),
-    s = n(1561),
-    l = n(993365),
-    c = n(385499),
-    u = n(768581),
-    d = n(630388),
-    f = n(489863),
-    _ = n(713938),
-    p = n(314583),
-    h = n(981631),
-    m = n(268685),
-    g = n(388032),
-    E = n(604483);
-function b(e) {
-    let { user: t, application: n, bot: b, accountScopes: y, showLogout: O, location: v, scopes: I } = e,
-        T = (0, p.X)(),
-        S = u.ZP.getApplicationIconURL({
+    s = n(993365),
+    l = n(385499),
+    c = n(768581),
+    u = n(630388),
+    d = n(489863),
+    f = n(713938),
+    _ = n(314583),
+    p = n(981631),
+    h = n(268685),
+    m = n(388032),
+    g = n(604483);
+function E(e) {
+    let { user: t, application: n, bot: E, accountScopes: b, showLogout: y, location: O, scopes: v } = e,
+        I = (0, _.X)(),
+        T = c.ZP.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
         }),
-        A = u.ZP.getUserAvatarURL(t),
-        C = i.useMemo(
+        S = c.ZP.getUserAvatarURL(t),
+        A = i.useMemo(
             () =>
-                I.some((e) => (0, _.sg)(e))
+                v.some((e) => (0, f.sg)(e))
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(l.x, {
+                              (0, r.jsx)(s.x, {
                                   variant: "text-lg/normal",
                                   color: "header-secondary",
-                                  children: g.intl.string(g.t.uT1CPT),
+                                  children: m.intl.string(m.t.uT1CPT),
                               }),
                               (0, r.jsx)(a.X6q, {
                                   variant: "heading-xxl/bold",
@@ -42,85 +41,85 @@ function b(e) {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsxs)(l.x, {
+                              (0, r.jsxs)(s.x, {
                                   variant: "text-lg/bold",
                                   color: "header-primary",
                                   children: [
                                       n.name,
-                                      null != b
-                                          ? (0, r.jsx)(c.Z, {
-                                                className: E.botTag,
+                                      null != E
+                                          ? (0, r.jsx)(l.Z, {
+                                                className: g.botTag,
                                                 verified:
-                                                    null != b.public_flags &&
-                                                    (0, d.yE)(b.public_flags, h.xW$.VERIFIED_BOT),
+                                                    null != E.public_flags &&
+                                                    (0, u.yE)(E.public_flags, p.xW$.VERIFIED_BOT),
                                             })
                                           : null,
                                   ],
                               }),
-                              y.length > 0
-                                  ? (0, r.jsx)(l.x, {
+                              b.length > 0
+                                  ? (0, r.jsx)(s.x, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: g.intl.string(g.t.jFbDnJ),
+                                        children: m.intl.string(m.t.jFbDnJ),
                                     })
-                                  : (0, r.jsx)(l.x, {
+                                  : (0, r.jsx)(s.x, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: g.intl.string(g.t["X+Fdpq"]),
+                                        children: m.intl.string(m.t["X+Fdpq"]),
                                     }),
                           ],
                       }),
-            [y.length, n, b, I],
+            [b.length, n, E, v],
         );
     return (0, r.jsxs)("header", {
-        id: T,
-        className: E.header,
+        id: I,
+        className: g.header,
         children: [
             (0, r.jsxs)("div", {
-                className: E.headerIcons,
+                className: g.headerIcons,
                 children: [
                     (0, r.jsx)(o.qE, {
-                        className: E.avatar,
-                        src: S,
-                        size: m.EF.SIZE_80,
+                        className: g.avatar,
+                        src: T,
+                        size: h.EF.SIZE_80,
                         "aria-label": n.name,
                     }),
                     (0, r.jsxs)("div", {
-                        className: E.ellipseGroup,
+                        className: g.ellipseGroup,
                         children: [
-                            (0, r.jsx)("div", { className: E.ellipse }),
-                            (0, r.jsx)("div", { className: E.ellipse }),
-                            (0, r.jsx)("div", { className: E.ellipse }),
+                            (0, r.jsx)("div", { className: g.ellipse }),
+                            (0, r.jsx)("div", { className: g.ellipse }),
+                            (0, r.jsx)("div", { className: g.ellipse }),
                         ],
                     }),
                     (0, r.jsx)(o.qE, {
-                        className: E.avatar,
-                        src: A,
-                        size: m.EF.SIZE_80,
+                        className: g.avatar,
+                        src: S,
+                        size: h.EF.SIZE_80,
                         "aria-label": t.username,
                     }),
                 ],
             }),
-            C,
-            O
+            A,
+            y
                 ? (0, r.jsx)("div", {
-                      className: E.currentUser,
-                      children: (0, r.jsxs)(l.x, {
+                      className: g.currentUser,
+                      children: (0, r.jsxs)(s.x, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: [
-                              g.intl.format(g.t.qRvpYW, {
+                              m.intl.format(m.t.qRvpYW, {
                                   userHook: () =>
                                       (0, r.jsxs)(
-                                          l.x,
+                                          s.x,
                                           {
-                                              className: E.currentUserTag,
+                                              className: g.currentUserTag,
                                               variant: "text-sm/normal",
                                               children: [
                                                   t.username,
                                                   !t.hasUniqueUsername() &&
-                                                      (0, r.jsx)(l.x, {
-                                                          className: E.currentUserDiscriminator,
+                                                      (0, r.jsx)(s.x, {
+                                                          className: g.currentUserDiscriminator,
                                                           variant: "text-sm/normal",
                                                           children: "#".concat(t.discriminator),
                                                       }),
@@ -129,11 +128,11 @@ function b(e) {
                                           t.id,
                                       ),
                               }),
-                              (0, r.jsx)(s.P, {
+                              (0, r.jsx)(a.P3F, {
                                   tag: "a",
-                                  className: E.logoutLink,
-                                  onClick: () => (0, f.c$)(v, "oauth2_logout"),
-                                  children: g.intl.string(g.t["yV/hjI"]),
+                                  className: g.logoutLink,
+                                  onClick: () => (0, d.c$)(O, "oauth2_logout"),
+                                  children: m.intl.string(m.t["yV/hjI"]),
                               }),
                           ],
                       }),

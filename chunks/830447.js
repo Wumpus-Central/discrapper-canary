@@ -390,7 +390,7 @@ function C(e) {
         P = i.useRef([]);
     l()(P.current, N) || (P.current = N);
     let w = null == (t = C.find((e) => null != e.key)) ? void 0 : t.key,
-        D = (0, c.ZP)({
+        D = (0, c.Z)({
             navId: n,
             items: P.current,
             initialFocusPath: p.Z.keyboardModeEnabled && null != w ? [w] : [],

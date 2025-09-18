@@ -2005,6 +2005,12 @@
     pointer-events: none
 }
 
+.focusTarget__54e4b {
+    height: 0;
+    pointer-events: none;
+    width: 0
+}
+
 .anchor_edefb8 {
     color: var(--text-link);
     -webkit-text-decoration: var(--link-decoration);
@@ -4145,12 +4151,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .showOverflow__217b7 {
     overflow: visible
-}
-
-.focusTarget__89030 {
-    height: 0;
-    pointer-events: none;
-    width: 0
 }
 
 .scrollerBase__99f8c {
@@ -90268,7 +90268,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
