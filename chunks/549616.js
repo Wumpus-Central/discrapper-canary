@@ -139,8 +139,6 @@ class h extends a.Z {
             l(this, "pdpBg", void 0),
             l(this, "mobileBg", void 0),
             l(this, "mobileBanner", void 0),
-            l(this, "banner", void 0),
-            l(this, "bannerAsset", void 0),
             l(this, "catalogBannerAsset", void 0),
             l(this, "heroBanner", void 0),
             l(this, "heroBannerAsset", void 0),
