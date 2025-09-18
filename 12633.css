@@ -78394,15 +78394,15 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     border: 1px solid var(--border-faint, hsla(240, 4%, 61%, .04));
     border-radius: 20px;
     flex-direction: row;
-    gap: 40px
+    gap: 40px;
+    padding: 32px 24px
 }
 
 .bannerContainer_ce5f0d,
 .container_ce5f0d {
     align-items: center;
     display: flex;
-    max-width: 800px;
-    padding: 24px
+    max-width: 800px
 }
 
 .bannerContainer_ce5f0d {
@@ -78411,7 +78411,8 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .bannerContent_ce5f0d {
     flex: 1 0 0;
-    flex-direction: column
+    flex-direction: column;
+    max-width: 476px
 }
 
 .bannerContent_ce5f0d,
@@ -78462,10 +78463,10 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    height: 144px;
+    height: 160px;
     justify-content: center;
     padding: 8px;
-    width: 144px
+    width: 160px
 }
 
 .progressCircleImage_ce5f0d {
@@ -89965,7 +89966,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
