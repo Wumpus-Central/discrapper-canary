@@ -1,4 +1,7 @@
-n.d(t, { $: () => d });
+n.d(t, {
+    $: () => f,
+    Y: () => d,
+});
 var r = n(951288),
     i = n(120356),
     a = n.n(i),
@@ -7,7 +10,8 @@ var r = n(951288),
     l = n(358085),
     c = n(388032),
     u = n(745770);
-function d(e) {
+let d = ["Hotspot Options", "Dismissible Contents", "Design Systems", "Intl Testing", "i18n"];
+function f(e) {
     let { legacy: t = !0 } = e,
         n = (0, l.isMac)() ? "CMD + OPT + O" : "CTRL + ALT + O";
     return (0, r.jsx)(o.P3F, {
