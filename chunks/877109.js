@@ -1,70 +1,72 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
     o = n(481060),
-    s = n(272008),
-    l = n(569984),
-    c = n(497505),
-    u = n(415104),
-    d = n(134483),
-    f = n(993369),
-    _ = n(881199),
-    p = n(688695),
-    h = n(388032),
-    m = n(818923);
-let g = function (e) {
+    s = n(705262),
+    l = n(272008),
+    c = n(569984),
+    u = n(497505),
+    d = n(415104),
+    f = n(134483),
+    _ = n(993369),
+    p = n(881199),
+    h = n(688695),
+    m = n(388032),
+    g = n(818923),
+    E = n(726927);
+let b = function (e) {
     let { questId: t } = e,
-        n = (0, a.e7)([l.Z], () => null != t && l.Z.isFetchingQuestPreview(t), [t]),
-        g = (0, a.e7)([l.Z], () => (null != t ? l.Z.getQuest(t) : void 0), [t]),
-        E = i.useRef(!1);
+        n = (0, a.e7)([c.Z], () => null != t && c.Z.isFetchingQuestPreview(t), [t]),
+        b = (0, a.e7)([c.Z], () => (null != t ? c.Z.getQuest(t) : void 0), [t]),
+        y = i.useRef(!1);
     i.useEffect(() => {
-        null == t || E.current || ((E.current = !0), (0, s.MG)(t));
+        null == t || y.current || ((y.current = !0), (0, l.MG)(t));
     }, [t]);
-    let b = () => {
-        null != t && (0, s.MG)(t);
+    let O = () => {
+        null != t && (0, l.MG)(t);
     };
-    return null == g
+    return null == b
         ? (0, r.jsxs)("div", {
-              className: m.previewPage,
+              className: g.previewPage,
               children: [
-                  (0, r.jsx)(o.Mgn, { className: m.errorIcon }),
+                  (0, r.jsx)(o.Mgn, { className: g.errorIcon }),
                   (0, r.jsx)(o.X6q, {
                       variant: "heading-lg/semibold",
                       children: "Welcome to the Ad preview Tool",
                   }),
                   (0, r.jsx)(o.Zbd, {
-                      className: m.messageWrapper,
+                      className: g.messageWrapper,
                       children: (0, r.jsx)("code", {
-                          className: m.message,
+                          className: g.message,
                           children: "Unable to load Quest",
                       }),
                   }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: m.previewPage,
+              className: g.previewPage,
               children: [
-                  (0, r.jsx)(o.qDn, { className: m.questsIcon }),
+                  (0, r.jsx)(o.qDn, { className: g.questsIcon }),
                   (0, r.jsx)(o.X6q, {
                       variant: "heading-lg/semibold",
                       children: "Welcome to the Ad preview Tool",
                   }),
                   (0, r.jsxs)("div", {
-                      className: m.menu,
+                      className: g.menu,
                       children: [
                           (0, r.jsx)(o.Zbd, {
-                              className: m.messageWrapper,
+                              className: g.messageWrapper,
                               children: (0, r.jsx)("code", {
-                                  className: m.message,
-                                  children: g.config.messages.questName,
+                                  className: g.message,
+                                  children: b.config.messages.questName,
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: m.messageButton,
+                              className: g.messageButton,
                               children: (0, r.jsx)(o.hU, {
-                                  onClick: b,
-                                  "aria-label": h.intl.string(h.t.wzzjk5),
+                                  onClick: O,
+                                  "aria-label": m.intl.string(m.t.wzzjk5),
                                   icon: o.DuK,
                                   loading: n,
                               }),
@@ -72,44 +74,51 @@ let g = function (e) {
                       ],
                   }),
                   (0, r.jsxs)(o.Zbd, {
-                      className: m.previewCard,
+                      className: g.previewCard,
                       children: [
                           (0, r.jsx)(o.X6q, {
-                              className: m.heading,
+                              className: g.heading,
                               variant: "heading-lg/semibold",
                               children: "Discovery Card",
                           }),
-                          (0, r.jsx)(u.Z, {
-                              className: m.questTile,
-                              quest: g,
-                              questContent: c.jn.QUEST_HOME_DESKTOP,
+                          (0, r.jsx)(d.Z, {
+                              className: g.questTile,
+                              quest: b,
+                              questContent: u.jn.QUEST_HOME_DESKTOP,
                               contentPosition: 0,
                               rowIndex: 0,
-                              sourceQuestContent: c.jn.INTERNAL_PREVIEW_TOOL,
+                              sourceQuestContent: u.jn.INTERNAL_PREVIEW_TOOL,
                           }),
                       ],
                   }),
                   (0, r.jsxs)(o.Zbd, {
-                      className: m.previewCard,
+                      className: g.previewCard,
                       children: [
                           (0, r.jsx)(o.X6q, {
-                              className: m.heading,
+                              className: g.heading,
                               variant: "heading-lg/semibold",
                               children: "Channel Call Header",
                           }),
                           (0, r.jsx)("div", {
-                              className: m.questChannelCallHeaderWrapper,
-                              children: (0, r.jsx)(d.Z, {
+                              className: g.questChannelCallHeaderWrapper,
+                              children: (0, r.jsx)(f.Z, {
                                   channelId: "preview-channel-id",
-                                  previewQuest: g,
+                                  previewQuest: b,
                                   isParticipatingOverride: !1,
                               }),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(_.Z, { questId: g.id }),
-                  (0, r.jsx)(f.Z, { quest: g }),
-                  (0, r.jsx)(p.Z, { quest: g }),
+                  (0, r.jsx)(p.Z, { questId: b.id }),
+                  (0, r.jsx)(_.Z, { quest: b }),
+                  (0, r.jsx)(h.Z, { quest: b }),
+                  (0, r.jsx)("div", {
+                      className: E.themes,
+                      children: (0, r.jsx)(s.ZP, {
+                          type: s.yH.SETTINGS,
+                          children: (0, r.jsx)(s.ZP.Basic, { className: E.themeSelectionGroup }),
+                      }),
+                  }),
               ],
           });
 };
