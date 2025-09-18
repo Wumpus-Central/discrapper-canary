@@ -1,8 +1,8 @@
 n.d(t, { default: () => b }), n(388685), n(781311);
 var l = n(951288),
     i = n(647438),
-    r = n(990547),
-    a = n(442837),
+    a = n(990547),
+    r = n(442837),
     o = n(82659),
     c = n(481060),
     s = n(812206),
@@ -23,9 +23,9 @@ function b(e) {
         [G, N] = i.useState(null),
         [T, D] = i.useState(""),
         S = i.useMemo(() => (0, d.fP)(), []),
-        C = (0, a.e7)([u.Z], () => u.Z.games),
+        C = (0, r.e7)([u.Z], () => u.Z.games),
         E = null != j,
-        A = (0, a.e7)([s.Z], () =>
+        A = (0, r.e7)([s.Z], () =>
             (null == j ? void 0 : j.application_id) != null ? s.Z.getApplication(j.application_id) : null,
         ),
         Z = i.useMemo(
@@ -123,7 +123,7 @@ function b(e) {
             {
                 transitionState: _,
                 onClose: b,
-                trackingProps: { impression: { impressionName: r.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
+                trackingProps: { impression: { impressionName: a.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
                 children: (() => {
                     switch (O) {
                         case "issue_selection":
@@ -208,7 +208,13 @@ function b(e) {
                                                             return null != i
                                                                 ? (0, l.jsx)("img", {
                                                                       src: i,
-                                                                      alt: null != (n = j.name) ? n : "",
+                                                                      alt:
+                                                                          null != j.name && "" !== j.name
+                                                                              ? j.name
+                                                                              : null !=
+                                                                                  (n = null == A ? void 0 : A.name)
+                                                                                ? n
+                                                                                : "",
                                                                       className: x.detectedGameIcon,
                                                                   })
                                                                 : (0, l.jsx)("div", {
@@ -229,7 +235,12 @@ function b(e) {
                                                         (0, l.jsx)(c.Text, {
                                                             variant: "text-md/semibold",
                                                             color: "header-primary",
-                                                            children: j.name,
+                                                            children:
+                                                                null != j.name && "" !== j.name
+                                                                    ? j.name
+                                                                    : null == A
+                                                                      ? void 0
+                                                                      : A.name,
                                                         }),
                                                     ],
                                                 }),
