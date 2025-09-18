@@ -39,6 +39,7 @@ let p = (e) => (e === d.Si.TIER_0 ? f.intl.string(f.t.rk4Uu7) : f.intl.string(f.
                 var c;
                 let { onClick: u } = e;
                 return (0, r.jsxs)(s.zx, {
+                    "data-migration-pending": !0,
                     innerClassName: _.innerGiftButton,
                     color: null != i ? i : (0, o.wj)(b) ? s.Tt.WHITE : s.Tt.BRAND,
                     look: null != d ? d : s.iL.OUTLINED,

@@ -50,7 +50,7 @@ function L(e) {
         } = e,
         B = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
         { analyticsLocations: Z } = (0, h.ZP)(),
-        V = (0, l.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(a.id));
+        F = (0, l.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(a.id));
     i.useEffect(() => {
         (0, m.h)({
             name: s.ImpressionNames.GIFT_INTENT_CARD,
@@ -62,12 +62,12 @@ function L(e) {
             },
         });
     }, [t, n]);
-    let F = () =>
+    let V = () =>
             t === C.hX.FRIEND_ANNIVERSARY
                 ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: v.ZP.getName(a) })
                 : (0, I.Ou)(t),
         H = () =>
-            t === C.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: V }) : (0, I.Ou)(t),
+            t === C.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: F }) : (0, I.Ou)(t),
         Y = () => {
             switch (G) {
                 case C.X2.VIEW_ALL:
@@ -80,7 +80,7 @@ function L(e) {
         },
         W = () =>
             t === C.hX.FRIEND_ANNIVERSARY
-                ? w.intl.formatToPlainString(w.t["L2s/Nz"], { numberOfYears: V })
+                ? w.intl.formatToPlainString(w.t["L2s/Nz"], { numberOfYears: F })
                 : (0, I.Ou)(t),
         K = (e) => {
             e.stopPropagation();
@@ -168,7 +168,7 @@ function L(e) {
                                     variant: "text-md/medium",
                                     color: $,
                                     lineClamp: 3,
-                                    children: F(),
+                                    children: V(),
                                 }),
                                 (0, r.jsx)(d.Text, {
                                     className: ee,
@@ -184,6 +184,7 @@ function L(e) {
                     children: [
                         null != G &&
                             (0, r.jsx)(u.zx, {
+                                "data-migration-pending": !0,
                                 className: o()(D.button, ei),
                                 onClick: z,
                                 size: u.zx.Sizes.MEDIUM,
@@ -199,6 +200,7 @@ function L(e) {
                                 }),
                             }),
                         (0, r.jsx)(u.zx, {
+                            "data-migration-pending": !0,
                             className: D.button,
                             onClick: K,
                             size: u.zx.Sizes.MEDIUM,

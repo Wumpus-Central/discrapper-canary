@@ -135,6 +135,7 @@ let T = function (e) {
                     }),
                     E.ZP.hasFreeBoosts(S, N) || E.ZP.isPremium(S, O.p9.TIER_2)
                         ? (0, r.jsxs)(c.zx, {
+                              "data-migration-pending": !0,
                               className: o()(I.guildBoostCta, I.guildBoostCtaSecondary),
                               innerClassName: o()(I.__invalid_guildBoostCtaContent, I.guildBoostCtaGiftContent),
                               look: c.zx.Looks.OUTLINED,
@@ -151,6 +152,7 @@ let T = function (e) {
                               ],
                           })
                         : (0, r.jsx)(c.zx, {
+                              "data-migration-pending": !0,
                               className: o()(I.guildBoostCta, I.guildBoostCtaSecondary),
                               innerClassName: o()(
                                   I.__invalid_guildBoostCtaContent,

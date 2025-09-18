@@ -113,6 +113,7 @@ function N(e) {
                       }),
                   })
                 : (0, r.jsx)(c.zx, {
+                      "data-migration-pending": !0,
                       buttonRef: M,
                       onClick: R,
                       onMouseEnter: L,

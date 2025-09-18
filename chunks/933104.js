@@ -184,6 +184,7 @@ function w(e) {
             return e;
         })(
             {
+                "data-migration-pending": !0,
                 asset: (0, r.jsxs)("div", {
                     className: x.imageContainer,
                     children: [

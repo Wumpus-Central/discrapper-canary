@@ -1,10 +1,10 @@
 t.d(n, { Z: () => L });
-var l = t(951288),
-    i = t(647438),
+var i = t(951288),
+    l = t(647438),
     r = t(120356),
     s = t.n(r),
-    o = t(442837),
-    a = t(780384),
+    a = t(442837),
+    o = t(780384),
     c = t(755721),
     u = t(481060),
     d = t(100527),
@@ -15,8 +15,8 @@ var l = t(951288),
     _ = t(165583),
     h = t(263954),
     S = t(706454),
-    y = t(626135),
-    g = t(930153),
+    g = t(626135),
+    y = t(930153),
     f = t(74538),
     I = t(937615),
     N = t(981631),
@@ -25,35 +25,35 @@ var l = t(951288),
     x = t(22706);
 function M(e) {
     let { shouldUpsellFromNoneTier: n } = e,
-        t = (0, o.e7)([S.default], () => S.default.locale);
-    return (0, l.jsxs)("div", {
+        t = (0, a.e7)([S.default], () => S.default.locale);
+    return (0, i.jsxs)("div", {
         className: x.perksList,
         children: [
-            (0, l.jsx)(h.Z, {
+            (0, i.jsx)(h.Z, {
                 icon: u.$Eu,
                 iconClassName: x.perkIconGuild,
                 description: b.intl.formatToPlainString(b.t.sQBgs7, { numFreeGuildSubscriptions: O.cb }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
-            (0, l.jsx)(h.Z, {
+            (0, i.jsx)(h.Z, {
                 icon: u.$Eu,
                 iconClassName: x.perkIconGuild,
-                description: b.intl.formatToPlainString(b.t["1A6vXl"], { percent: (0, g.T3)(t, O.Rr / 100) }),
+                description: b.intl.formatToPlainString(b.t["1A6vXl"], { percent: (0, y.T3)(t, O.Rr / 100) }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             n
-                ? (0, l.jsx)(h.Z, {
+                ? (0, i.jsx)(h.Z, {
                       icon: u.EO4,
                       iconClassName: x.perkIconChatPerks,
                       description: b.intl.string(b.t.Z9b2x8),
                   })
                 : null,
-            (0, l.jsx)(h.Z, {
+            (0, i.jsx)(h.Z, {
                 icon: u.hGI,
                 iconClassName: x.perkIconStream,
                 description: b.intl.string(b.t["8dqG5O"]),
             }),
-            (0, l.jsx)(h.Z, {
+            (0, i.jsx)(h.Z, {
                 icon: u.rG2,
                 iconClassName: x.perkIconUpload,
                 description: b.intl.string(b.t.cBorIy),
@@ -66,16 +66,16 @@ function L(e) {
     let {
             premiumSubscriptionPlan: t,
             onClose: r,
-            onBack: o,
+            onBack: a,
             onSkip: h,
             onSubscriptionConfirmation: S,
-            analyticsLocation: g,
+            analyticsLocation: y,
             analyticsSourceLocation: L,
             priceOptions: T,
         } = e,
         { analyticsLocations: j, sourceAnalyticsLocations: C } = (0, p.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: A } = (0, u.TCT)(),
-        k = (0, a.ap)(A) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
+        k = (0, o.ap)(A) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         R = null == t || null == t.premiumSubscriptionType,
         v = f.ZP.getPrice(O.Xh.PREMIUM_MONTH_TIER_2, !1, !1, T),
         D = (0, I.T4)(v.amount, v.currency),
@@ -83,47 +83,51 @@ function L(e) {
         w = null == Z ? void 0 : Z.trial_id,
         U = (null == Z || null == (n = Z.subscription_trial) ? void 0 : n.sku_id) === O.Si.TIER_2;
     return (
-        i.useEffect(() => {
-            y.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+        l.useEffect(() => {
+            g.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: O.cd.GUILD_PREMIUM_UPSELL_MODAL,
                 location_stack: C,
             });
         }, [C]),
-        (0, l.jsxs)(l.Fragment, {
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, l.jsxs)(u.hzk, {
+                (0, i.jsxs)(u.hzk, {
+                    "data-migration-pending": !0,
                     className: x.content,
                     children: [
-                        (0, l.jsx)(u.olH, {
+                        (0, i.jsx)(u.olH, {
+                            "data-migration-pending": !0,
                             onClick: r,
                             className: x.closeButton,
                         }),
-                        U && (0, l.jsx)(_.dz, { className: x.premiumTrialBadge }),
-                        (0, l.jsx)("div", { className: s()(x.upsellImage, { [x.upsellImageWithTrialOffer]: U }) }),
-                        (0, l.jsx)("div", {
+                        U && (0, i.jsx)(_.dz, { className: x.premiumTrialBadge }),
+                        (0, i.jsx)("div", { className: s()(x.upsellImage, { [x.upsellImageWithTrialOffer]: U }) }),
+                        (0, i.jsx)("div", {
                             className: x.bodyText,
                             children:
                                 null != w
                                     ? b.intl.string(b.t.AoSzEh)
                                     : b.intl.format(b.t["7vePZW"], { monthlyPrice: D }),
                         }),
-                        (0, l.jsx)(M, { shouldUpsellFromNoneTier: R }),
+                        (0, i.jsx)(M, { shouldUpsellFromNoneTier: R }),
                     ],
                 }),
-                (0, l.jsxs)(u.mzw, {
+                (0, i.jsxs)(u.mzw, {
+                    "data-migration-pending": !0,
                     align: m.Z.Align.CENTER,
                     justify: m.Z.Justify.END,
                     children: [
-                        (0, l.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             className: x.footerRight,
                             children: [
-                                (0, l.jsx)(c.zx, {
+                                (0, i.jsx)(c.zx, {
+                                    "data-migration-pending": !0,
                                     look: c.zx.Looks.LINK,
                                     color: k,
                                     onClick: h,
                                     children: b.intl.string(b.t["SI/adn"]),
                                 }),
-                                (0, l.jsx)(u.zxk, {
+                                (0, i.jsx)(u.zxk, {
                                     variant: "active",
                                     text: null != w ? b.intl.string(b.t["Gd/XHB"]) : b.intl.string(b.t.p2moio),
                                     type: "submit",
@@ -138,9 +142,9 @@ function L(e) {
                                                     ((e = (function (e) {
                                                         for (var n = 1; n < arguments.length; n++) {
                                                             var t = null != arguments[n] ? arguments[n] : {},
-                                                                l = Object.keys(t);
+                                                                i = Object.keys(t);
                                                             "function" == typeof Object.getOwnPropertySymbols &&
-                                                                (l = l.concat(
+                                                                (i = i.concat(
                                                                     Object.getOwnPropertySymbols(t).filter(
                                                                         function (e) {
                                                                             return Object.getOwnPropertyDescriptor(t, e)
@@ -148,21 +152,21 @@ function L(e) {
                                                                         },
                                                                     ),
                                                                 )),
-                                                                l.forEach(function (n) {
-                                                                    var l;
-                                                                    (l = t[n]),
+                                                                i.forEach(function (n) {
+                                                                    var i;
+                                                                    (i = t[n]),
                                                                         n in e
                                                                             ? Object.defineProperty(e, n, {
-                                                                                  value: l,
+                                                                                  value: i,
                                                                                   enumerable: !0,
                                                                                   configurable: !0,
                                                                                   writable: !0,
                                                                               })
-                                                                            : (e[n] = l);
+                                                                            : (e[n] = i);
                                                                 });
                                                         }
                                                         return e;
-                                                    })({}, g)),
+                                                    })({}, y)),
                                                     (n = n = { section: N.jXE.PREMIUM_GUILD_PURCHASE_MODAL }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(
@@ -172,8 +176,8 @@ function L(e) {
                                                         : (function (e, n) {
                                                               var t = Object.keys(e);
                                                               if (Object.getOwnPropertySymbols) {
-                                                                  var l = Object.getOwnPropertySymbols(e);
-                                                                  t.push.apply(t, l);
+                                                                  var i = Object.getOwnPropertySymbols(e);
+                                                                  t.push.apply(t, i);
                                                               }
                                                               return t;
                                                           })(Object(n)).forEach(function (t) {
@@ -192,13 +196,14 @@ function L(e) {
                                 }),
                             ],
                         }),
-                        (0, l.jsx)("div", {
+                        (0, i.jsx)("div", {
                             className: x.backStep,
-                            children: (0, l.jsx)(c.zx, {
+                            children: (0, i.jsx)(c.zx, {
+                                "data-migration-pending": !0,
                                 color: k,
                                 look: c.zx.Looks.LINK,
                                 size: c.zx.Sizes.NONE,
-                                onClick: () => o(),
+                                onClick: () => a(),
                                 children: b.intl.string(b.t["13/7kZ"]),
                             }),
                         }),
