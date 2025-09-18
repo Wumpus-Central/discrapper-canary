@@ -1,31 +1,32 @@
-n.d(t, { default: () => v }), n(388685), n(953529);
-var a = n(951288),
-    r = n(647438),
-    i = n(442837),
-    s = n(379649),
-    o = n(755721),
-    l = n(481060),
-    d = n(493773),
-    c = n(594190),
-    u = n(77498),
-    m = n(626135),
-    _ = n(837268),
-    x = n(371651),
-    h = n(981631),
-    p = n(388032),
-    g = n(361902);
-function v(e) {
-    let { onClose: t, transitionState: n, clientSettingType: v, gameId: j } = e,
-        [C, y] = r.useState("unreported"),
-        [k, b] = r.useState(""),
-        [f, N] = r.useState(!1),
-        [S, R] = r.useState(!1),
-        [w, z] = r.useState(!1),
+a.d(t, { default: () => C }), a(388685), a(953529);
+var n = a(951288),
+    r = a(647438),
+    i = a(442837),
+    o = a(379649),
+    s = a(755721),
+    l = a(481060),
+    d = a(493773),
+    c = a(579806),
+    u = a(594190),
+    m = a(77498),
+    _ = a(626135),
+    h = a(837268),
+    x = a(371651),
+    p = a(981631),
+    g = a(388032),
+    v = a(361902);
+function C(e) {
+    let { onClose: t, transitionState: a, clientSettingType: C, gameId: j } = e,
+        [y, k] = r.useState("unreported"),
+        [b, f] = r.useState(""),
+        [N, S] = r.useState(!1),
+        [w, R] = r.useState(!1),
+        [z, Z] = r.useState(!1),
         [I, P] = r.useState(!1),
-        A = (0, i.e7)([u.Z, c.ZP], () => {
+        A = (0, i.e7)([m.Z, u.ZP], () => {
             var e;
-            let t = null != j ? j : null == (e = c.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
-            return null == t ? null : u.Z.getDetectableGame(t);
+            let t = null != j ? j : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
+            return null == t ? null : m.Z.getDetectableGame(t);
         }),
         B = (0, i.e7)([x.default], () => {
             var e;
@@ -34,166 +35,177 @@ function v(e) {
                 (e = null === x.default || void 0 === x.default ? void 0 : x.default.getMostRecentOverlayRenderMethod())
                     ? e
                     : void 0;
-            return null != t ? _.gl[t] : void 0;
+            return null != t ? h.gl[t] : void 0;
         }),
         H = r.useMemo(() => {
             let e = {
-                not_working: p.t.CHXHFR,
-                not_useful: p.t.a95skZ,
-                game_crashes_occurred: p.t.IFZ0SU,
-                poor_performance: p.t.exRczs,
-                too_many_notifications: p.t.XuBFBA,
-                multiple_monitors: p.t.p8Eky8,
-                in_the_way_of_game: p.t.YP7Pio,
-                other: p.t["YP/Ttr"],
+                not_working: g.t.CHXHFR,
+                not_useful: g.t.a95skZ,
+                game_crashes_occurred: g.t.IFZ0SU,
+                poor_performance: g.t.exRczs,
+                too_many_notifications: g.t.XuBFBA,
+                multiple_monitors: g.t.p8Eky8,
+                in_the_way_of_game: g.t.YP7Pio,
+                other: g.t["YP/Ttr"],
             };
             return Object.keys(e).map((t) => ({
-                name: p.intl.string(e[t]),
+                name: g.intl.string(e[t]),
                 value: t,
             }));
         }, []),
         M = async () => {
-            if ("unreported" === C && 0 === k.length) {
-                z(!0), await (0, s._v)(100), z(!1), P(!0);
+            var e, a, n;
+            if ("unreported" === y && 0 === b.length) {
+                Z(!0), await (0, o._v)(100), Z(!1), P(!0);
                 return;
             }
-            N(!0),
-                await m.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
-                    reason: C,
-                    comment: k,
-                    client_setting_type: v,
+            S(!0),
+                await _.default.track(p.rMx.OVERLAY_DISABLED_SURVEY, {
+                    reason: y,
+                    comment: b,
+                    client_setting_type: C,
                     application_id: null == A ? void 0 : A.id,
                     application_name: null == A ? void 0 : A.name,
                     most_recent_overlay_render_method: B,
+                    hardware_display_count:
+                        null !=
+                        (n = await (null === c.Z ||
+                        void 0 === c.Z ||
+                        null == (a = c.Z.hardware) ||
+                        null == (e = a.getDisplayCount)
+                            ? void 0
+                            : e.call(a)))
+                            ? n
+                            : null,
                 }),
-                await (0, s._v)(1000),
-                N(!1),
+                await (0, o._v)(1000),
+                S(!1),
                 R(!0),
-                await (0, s._v)(1500),
+                await (0, o._v)(1500),
                 t();
         };
     return (
         (0, d.ZP)(() => {
-            m.default.track(h.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+            _.default.track(p.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
         }),
-        (0, a.jsxs)(l.Y0X, {
-            transitionState: n,
-            "aria-label": p.intl.string(p.t.bomhnZ),
+        (0, n.jsxs)(l.Y0X, {
+            transitionState: a,
+            "aria-label": g.intl.string(g.t.bomhnZ),
             size: l.CgR.DYNAMIC,
-            className: g.root,
+            className: v.root,
             parentComponent: "OverlayDisabledSurveyModal",
             children: [
-                (0, a.jsxs)(l.xBx, {
+                (0, n.jsxs)(l.xBx, {
                     children: [
-                        (0, a.jsxs)("div", {
-                            className: g.header,
+                        (0, n.jsxs)("div", {
+                            className: v.header,
                             children: [
-                                (0, a.jsx)(l.X6q, {
+                                (0, n.jsx)(l.X6q, {
                                     variant: "heading-lg/semibold",
                                     color: "header-primary",
-                                    children: p.intl.string(p.t["9JKzxc"]),
+                                    children: g.intl.string(g.t["9JKzxc"]),
                                 }),
-                                (0, a.jsx)(l.Text, {
+                                (0, n.jsx)(l.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    className: g.description,
-                                    children: p.intl.string(p.t["2yjnmZ"]),
+                                    className: v.description,
+                                    children: g.intl.string(g.t["2yjnmZ"]),
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(l.olH, {
+                        (0, n.jsx)(l.olH, {
                             onClick: t,
-                            className: g.closeButton,
+                            className: v.closeButton,
                         }),
                     ],
                 }),
-                (0, a.jsx)(l.hzk, {
-                    className: g.reasonContainer,
-                    children: (0, a.jsxs)(l.Ttm, {
+                (0, n.jsx)(l.hzk, {
+                    className: v.reasonContainer,
+                    children: (0, n.jsxs)(l.Ttm, {
                         children: [
-                            (0, a.jsxs)("div", {
+                            (0, n.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(l.UkV, {
-                                        isShaking: w,
+                                    (0, n.jsx)(l.UkV, {
+                                        isShaking: z,
                                         intensity: 1,
-                                        className: g.radioHeader,
-                                        children: (0, a.jsx)(l.Text, {
+                                        className: v.radioHeader,
+                                        children: (0, n.jsx)(l.Text, {
                                             variant: "text-sm/semibold",
                                             color: I ? "text-danger" : "text-muted",
-                                            children: p.intl.string(p.t.yhUvdX),
+                                            children: g.intl.string(g.t.yhUvdX),
                                         }),
                                     }),
-                                    (0, a.jsx)(o.Gu, {
-                                        value: C,
-                                        radioItemClassName: g.radioItem,
-                                        className: g.radioGroup,
+                                    (0, n.jsx)(s.Gu, {
+                                        value: y,
+                                        radioItemClassName: v.radioItem,
+                                        className: v.radioGroup,
                                         radioPosition: "right",
                                         options: H,
                                         onChange: (e) => {
                                             let { value: t } = e;
-                                            y(t), P(!1), z(!1);
+                                            k(t), P(!1), Z(!1);
                                         },
                                     }),
                                 ],
                             }),
-                            (0, a.jsxs)("div", {
-                                className: g.commentContainer,
+                            (0, n.jsxs)("div", {
+                                className: v.commentContainer,
                                 children: [
-                                    (0, a.jsx)(l.Text, {
+                                    (0, n.jsx)(l.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-muted",
-                                        className: g.commentHeader,
-                                        children: p.intl.string(p.t.LYnrhY),
+                                        className: v.commentHeader,
+                                        children: g.intl.string(g.t.LYnrhY),
                                     }),
-                                    (0, a.jsx)(l.Kx8, {
+                                    (0, n.jsx)(l.Kx8, {
                                         autosize: !0,
-                                        value: k,
+                                        value: b,
                                         maxLength: 1000,
                                         showRemainingCharacterCount: !1,
-                                        placeholder: p.intl.string(p.t["gU+bVF"]),
-                                        onChange: b,
+                                        placeholder: g.intl.string(g.t["gU+bVF"]),
+                                        onChange: f,
                                     }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                (0, a.jsxs)(l.mzw, {
-                    className: g.buttons,
+                (0, n.jsxs)(l.mzw, {
+                    className: v.buttons,
                     children: [
-                        (0, a.jsx)(l.zxk, {
+                        (0, n.jsx)(l.zxk, {
                             variant: "secondary",
-                            text: p.intl.string(p.t["5WxrcX"]),
-                            disabled: f,
+                            text: g.intl.string(g.t["5WxrcX"]),
+                            disabled: N,
                             onClick: () => {
                                 t();
                             },
                         }),
-                        (0, a.jsx)(l.UkV, {
-                            isShaking: w,
+                        (0, n.jsx)(l.UkV, {
+                            isShaking: z,
                             intensity: 1,
-                            children: (0, a.jsx)(o.zx, {
-                                disabled: f,
-                                submitting: f,
+                            children: (0, n.jsx)(s.zx, {
+                                disabled: N,
+                                submitting: N,
                                 onClick: M,
                                 color: (() => {
                                     switch (!0) {
-                                        case S:
-                                            return o.zx.Colors.GREEN;
                                         case w:
-                                            return o.zx.Colors.PRIMARY;
+                                            return s.zx.Colors.GREEN;
+                                        case z:
+                                            return s.zx.Colors.PRIMARY;
                                         default:
-                                            return o.zx.Colors.BRAND;
+                                            return s.zx.Colors.BRAND;
                                     }
                                 })(),
                                 children: (() => {
                                     switch (!0) {
-                                        case S:
-                                            return (0, a.jsx)(l.kmB, {});
-                                        case f:
-                                            return (0, a.jsx)(l.$jN, { type: l.RAz.PULSING_ELLIPSIS });
+                                        case w:
+                                            return (0, n.jsx)(l.kmB, {});
+                                        case N:
+                                            return (0, n.jsx)(l.$jN, { type: l.RAz.PULSING_ELLIPSIS });
                                         default:
-                                            return p.intl.string(p.t.geKm7u);
+                                            return g.intl.string(g.t.geKm7u);
                                     }
                                 })(),
                             }),

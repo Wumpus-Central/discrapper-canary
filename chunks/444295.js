@@ -1,24 +1,25 @@
 n.d(t, {
-    AE: () => c,
-    JS: () => p,
-    Qu: () => h,
-    Ws: () => g,
-    bk: () => m,
-    ee: () => f,
-    ou: () => d,
-    zi: () => _,
+    AE: () => u,
+    JS: () => h,
+    Qu: () => m,
+    Ws: () => E,
+    bk: () => g,
+    ee: () => _,
+    ou: () => f,
+    zi: () => p,
 }),
     n(388685);
 var r = n(647438),
-    i = n(77498),
-    a = n(19780),
-    o = n(626135),
-    s = n(837268),
-    l = n(981631),
-    c = (function (e) {
+    i = n(579806),
+    a = n(77498),
+    o = n(19780),
+    s = n(626135),
+    l = n(837268),
+    c = n(981631),
+    u = (function (e) {
         return (e.OOP = "oop"), (e.OOP_GAME = "oop game"), (e.LEGACY = "legacy"), (e.LEGACY_GAME = "legacy game"), e;
     })({});
-function u(e) {
+function d(e) {
     switch (e) {
         case "oop":
         case "oop game":
@@ -29,22 +30,29 @@ function u(e) {
             return "overlay toggled - game";
     }
 }
-function d(e, t, r) {
-    var a, c, d;
-    let f = null != r ? i.Z.getDetectableGame(r) : null,
-        { default: _ } = n(371651),
-        p = null != (a = null == _ ? void 0 : _.getMostRecentOverlayRenderMethod()) ? a : void 0,
-        h = null != p ? s.gl[p] : void 0;
-    o.default.track(l.rMx.OVERLAY_TOGGLED, {
+async function f(e, t, r) {
+    var o, u, f, _, p, h;
+    let m = null != r ? a.Z.getDetectableGame(r) : null,
+        { default: g } = n(371651),
+        E = null != (f = null == g ? void 0 : g.getMostRecentOverlayRenderMethod()) ? f : void 0,
+        b = null != E ? l.gl[E] : void 0;
+    s.default.track(c.rMx.OVERLAY_TOGGLED, {
         enabled: e,
-        setting_type: u(t),
+        setting_type: d(t),
         client_setting_type: t,
-        application_id: null != (c = null == f ? void 0 : f.id) ? c : void 0,
-        application_name: null != (d = null == f ? void 0 : f.name) ? d : void 0,
-        most_recent_overlay_render_method: h,
+        application_id: null != (_ = null == m ? void 0 : m.id) ? _ : void 0,
+        application_name: null != (p = null == m ? void 0 : m.name) ? p : void 0,
+        most_recent_overlay_render_method: b,
+        hardware_display_count:
+            null !=
+            (h = await (null === i.Z || void 0 === i.Z || null == (u = i.Z.hardware) || null == (o = u.getDisplayCount)
+                ? void 0
+                : o.call(u)))
+                ? h
+                : null,
     });
 }
-function f(e, t) {
+function _(e, t) {
     let [n, i] = r.useState(e()),
         a = r.useRef(e);
     return (
@@ -63,30 +71,30 @@ function f(e, t) {
         n
     );
 }
-function _(e, t) {
+function p(e, t) {
     var n, r, i;
-    let { locked: s, shownUserIds: c, liveUserIds: u, contentInventoryIds: d } = t;
-    ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 ||
+    let { locked: a, shownUserIds: l, liveUserIds: u, contentInventoryIds: d } = t;
+    ((null != (n = null == l ? void 0 : l.length) ? n : 0) !== 0 ||
         (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 ||
         (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&
-        o.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
-            overlay_locked: s,
+        s.default.track(c.rMx.WIDGET_CONTENT_SHOWN, {
+            overlay_locked: a,
             widget_type: e,
-            shown_user_ids: c,
+            shown_user_ids: l,
             live_user_ids: u,
             content_inventory_ids: d,
-            media_session_id: a.Z.getMediaSessionId(),
+            media_session_id: o.Z.getMediaSessionId(),
         });
 }
-function p(e, t) {
+function h(e, t) {
     let { pinned: n, opacity: r } = t;
-    o.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
+    s.default.track(c.rMx.WIDGET_SETTING_UPDATED, {
         widget_type: e,
         pinned: n,
         opacity: r,
     });
 }
-var h = (function (e) {
+var m = (function (e) {
         return (
             (e.SCREEN_SHARE = "screen share"),
             (e.CAMERA = "camera"),
@@ -104,7 +112,7 @@ var h = (function (e) {
             e
         );
     })({}),
-    m = (function (e) {
+    g = (function (e) {
         return (
             (e.ENABLED = "enabled"),
             (e.DISABLED = "disabled"),
@@ -126,13 +134,13 @@ var h = (function (e) {
             e
         );
     })({});
-function g(e, t) {
+function E(e, t) {
     let { type: n, value: r, userId: i } = t;
-    o.default.track(l.rMx.WIDGET_INTERACTED, {
+    s.default.track(c.rMx.WIDGET_INTERACTED, {
         widget_type: e,
         interaction_type: n,
         interaction_value: r,
         target_user_id: i,
-        media_session_id: a.Z.getMediaSessionId(),
+        media_session_id: o.Z.getMediaSessionId(),
     });
 }

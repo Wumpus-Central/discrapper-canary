@@ -1,18 +1,19 @@
 n.d(t, {
-    Q: () => m,
-    t: () => h,
+    Q: () => g,
+    t: () => m,
 });
-var r = n(594190),
-    i = n(837268),
-    a = n(371651),
-    o = n(388627),
-    s = n(131951),
-    l = n(19780),
-    c = n(449224),
-    u = n(626135),
-    d = n(367907),
-    f = n(981631);
-function _(e, t, n) {
+var r = n(579806),
+    i = n(594190),
+    a = n(837268),
+    o = n(371651),
+    s = n(388627),
+    l = n(131951),
+    c = n(19780),
+    u = n(449224),
+    d = n(626135),
+    f = n(367907),
+    _ = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,70 +37,80 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h() {
+function m() {
     let e,
         t,
         n,
-        i,
+        r,
         a,
-        o = s.Z.getGoLiveSource();
+        o = l.Z.getGoLiveSource();
     if (null != o && ((e = o.quality.resolution), (t = o.quality.frameRate), null != o.desktopSource)) {
-        var l, c;
+        var s, c;
         n = o.desktopSource.soundshareSession;
-        let e = null != o.desktopSource.sourcePid ? r.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
-        (i = null != (l = null == e ? void 0 : e.name) ? l : null),
+        let e = null != o.desktopSource.sourcePid ? i.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
+        (r = null != (s = null == e ? void 0 : e.name) ? s : null),
             (a = null != (c = null == e ? void 0 : e.id) ? c : null);
     }
     return {
         video_input_resolution: e,
         video_input_frame_rate: t,
         soundshare_session: n,
-        share_game_name: i,
+        share_game_name: r,
         share_game_id: a,
     };
 }
-function m(e, t) {
-    var n, s, _;
-    let h = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        m = __OVERLAY__ ? c.Z.getGame() : (0, o.pL)(),
-        g = r.ZP.getRunningGames().find((e) => e.name === (null == m ? void 0 : m.name)),
-        E = (null == g ? void 0 : g.pid) != null ? a.default.getTrackedGameByPid(null == g ? void 0 : g.pid) : null,
-        b = null != (n = null == E ? void 0 : E.source) ? n : null,
-        y =
+async function g(e, t) {
+    var n, l, p, m, g, E;
+    let b = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        y = __OVERLAY__ ? u.Z.getGame() : (0, s.pL)(),
+        O = i.ZP.getRunningGames().find((e) => e.name === (null == y ? void 0 : y.name)),
+        v = (null == O ? void 0 : O.pid) != null ? o.default.getTrackedGameByPid(null == O ? void 0 : O.pid) : null,
+        I = null != (p = null == v ? void 0 : v.source) ? p : null,
+        T =
             null !=
-            (_ =
-                null != (s = null == E ? void 0 : E.overlayMethod)
-                    ? s
-                    : a.default.getRenderMethod(null == g ? void 0 : g.pid))
-                ? _
+            (g =
+                null != (m = null == v ? void 0 : v.overlayMethod)
+                    ? m
+                    : o.default.getRenderMethod(null == O ? void 0 : O.pid))
+                ? g
                 : null;
     switch (
-        ((t = p(
+        ((t = h(
             {},
             {
-                overlay_game_source: b,
-                overlay_game_name: null != m ? m.name : "Unknown Game",
-                overlay_app_id: null != m ? m.id : null,
-                overlay_render_method: null != y ? i.gl[y] : null,
-                media_session_id: l.Z.getMediaSessionId(),
-                overlay_game_elevated: null == g ? void 0 : g.elevated,
-                input_service_initialized: r.ZP.isInputServiceInitialized(),
+                overlay_game_source: I,
+                overlay_game_name: null != y ? y.name : "Unknown Game",
+                overlay_app_id: null != y ? y.id : null,
+                overlay_render_method: null != T ? a.gl[T] : null,
+                media_session_id: c.Z.getMediaSessionId(),
+                overlay_game_elevated: null == O ? void 0 : O.elevated,
+                input_service_initialized: i.ZP.isInputServiceInitialized(),
+                hardware_display_count:
+                    null !=
+                    (E = await (null === r.Z ||
+                    void 0 === r.Z ||
+                    null == (l = r.Z.hardware) ||
+                    null == (n = l.getDisplayCount)
+                        ? void 0
+                        : n.call(l)))
+                        ? E
+                        : null,
             },
             t,
         )),
         e)
     ) {
-        case f.rMx.VOICE_CHANNEL_SELECTED:
-        case f.rMx.SETTINGS_PANE_VIEWED:
-        case f.rMx.GUILD_VIEWED:
-        case f.rMx.CHANNEL_OPENED:
-            return (0, d.yw)(e, t, h);
+        case _.rMx.VOICE_CHANNEL_SELECTED:
+        case _.rMx.SETTINGS_PANE_VIEWED:
+        case _.rMx.GUILD_VIEWED:
+        case _.rMx.CHANNEL_OPENED:
+            return (0, f.yw)(e, t, b);
         default:
-            return u.default.track(e, t, { flush: h });
+            return d.default.track(e, t, { flush: b });
     }
 }
