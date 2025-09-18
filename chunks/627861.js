@@ -452,13 +452,16 @@ function ep(e) {
                           label: ea.intl.string(ea.t.RscU7O),
                           trackingArea: m.j_.PLAY,
                           onClick: () => {
-                              d.Z.launch({ applicationId: et });
+                              d.Z.launch({
+                                  applicationId: et,
+                                  embedded: j,
+                              });
                           },
                       }
                     : null != el
                       ? el
                       : void 0,
-            [ei, et, el],
+            [j, ei, et, el],
         ),
         ey = (0, b.G)(S),
         eO = i.useMemo(() => (null != ee ? ee : null != ey && j ? ey : void 0), [j, ee, ey]),
