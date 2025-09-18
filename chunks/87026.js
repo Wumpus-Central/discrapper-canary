@@ -10,23 +10,23 @@ var s = i(951288),
     u = i(755721),
     m = i(481060),
     x = i(785697),
-    f = i(933557),
-    p = i(313201),
-    h = i(434404),
-    b = i(764260),
-    v = i(999382),
-    g = i(416162),
-    N = i(422559),
-    j = i(210887),
-    C = i(984933),
-    S = i(485386),
-    _ = i(430824),
-    I = i(699516),
-    E = i(594174),
-    O = i(626135),
-    w = i(63063),
-    T = i(700785),
-    M = i(245315),
+    p = i(933557),
+    h = i(313201),
+    f = i(434404),
+    v = i(764260),
+    b = i(999382),
+    g = i(422559),
+    N = i(210887),
+    j = i(984933),
+    _ = i(485386),
+    C = i(430824),
+    S = i(699516),
+    I = i(594174),
+    E = i(626135),
+    O = i(63063),
+    w = i(700785),
+    T = i(245315),
+    M = i(513796),
     y = i(135899),
     L = i(981631),
     R = i(388032),
@@ -91,10 +91,10 @@ let W = (e) => {
                 headerId: r,
                 theme: c,
             } = e,
-            x = (0, o.e7)([_.Z], () => _.Z.getGuild(t.id), [t.id]),
-            f = null != x && x.verificationLevel > L.sFg.NONE,
-            p = (null == x ? void 0 : x.explicitContentFilter) === L.lxg.ALL_MEMBERS,
-            h = (0, d.wj)(c) ? Z : q;
+            x = (0, o.e7)([C.Z], () => C.Z.getGuild(t.id), [t.id]),
+            p = null != x && x.verificationLevel > L.sFg.NONE,
+            h = (null == x ? void 0 : x.explicitContentFilter) === L.lxg.ALL_MEMBERS,
+            f = (0, d.wj)(c) ? Z : q;
         return (0, s.jsxs)("div", {
             className: P.container,
             children: [
@@ -103,7 +103,7 @@ let W = (e) => {
                     children: [
                         (0, s.jsx)("img", {
                             alt: "",
-                            src: h,
+                            src: f,
                             width: 80,
                         }),
                         (0, s.jsx)(m.X6q, {
@@ -127,7 +127,7 @@ let W = (e) => {
                         (0, s.jsx)(m.R94, {
                             type: m.geA.DESCRIPTION,
                             className: P.description,
-                            children: f ? R.intl.string(R.t.k5crqq) : R.intl.string(R.t.fHiGAw),
+                            children: p ? R.intl.string(R.t.k5crqq) : R.intl.string(R.t.fHiGAw),
                         }),
                         (0, s.jsx)(u.$q, {
                             type: u.M0.ROW,
@@ -148,7 +148,7 @@ let W = (e) => {
                         (0, s.jsx)(m.R94, {
                             type: m.geA.DESCRIPTION,
                             className: P.description,
-                            children: p ? R.intl.string(R.t.qgQLpq) : R.intl.string(R.t.b0MaDQ),
+                            children: h ? R.intl.string(R.t.qgQLpq) : R.intl.string(R.t.b0MaDQ),
                         }),
                         (0, s.jsx)(u.$q, {
                             type: u.M0.ROW,
@@ -177,7 +177,7 @@ let W = (e) => {
             guildId: u,
         } = e;
         n.useEffect(() => {
-            (0, M.BF)({
+            (0, T.BF)({
                 fromStep: y.IO.SAFETY_CHECK,
                 toStep: y.IO.BASICS,
                 guildId: u,
@@ -256,14 +256,14 @@ let W = (e) => {
                 onAcceptDefaultNotifications: o,
                 onAcceptEveryoneRolePermissions: c,
                 disableDefaultNotifications: x,
-                disableEveryoneRolePermissions: f,
-                headerId: p,
-                theme: h,
+                disableEveryoneRolePermissions: p,
+                headerId: h,
+                theme: f,
             } = e,
-            b = (0, d.wj)(h) ? k : G;
+            v = (0, d.wj)(f) ? k : G;
         return (
             n.useEffect(() => {
-                (0, M.BF)({
+                (0, T.BF)({
                     fromStep: y.IO.BASICS,
                     toStep: y.IO.FINISH,
                     guildId: t.id,
@@ -277,13 +277,13 @@ let W = (e) => {
                         children: [
                             (0, s.jsx)("img", {
                                 alt: "",
-                                src: b,
+                                src: v,
                                 width: 80,
                             }),
                             (0, s.jsx)(m.X6q, {
                                 variant: "heading-xl/semibold",
                                 className: P.header,
-                                id: p,
+                                id: h,
                                 children: R.intl.string(R.t["Pj/s/f"]),
                             }),
                             (0, s.jsx)(m.Text, {
@@ -337,8 +337,8 @@ let W = (e) => {
                         }),
                     }),
                     (0, s.jsx)(m.ua7, {
-                        text: f ? R.intl.string(R.t.PHjrpq) : null,
-                        "aria-label": !!f && R.intl.string(R.t.PHjrpq),
+                        text: p ? R.intl.string(R.t.PHjrpq) : null,
+                        "aria-label": !!p && R.intl.string(R.t.PHjrpq),
                         children: (e) =>
                             (0, s.jsx)(
                                 "div",
@@ -346,10 +346,10 @@ let W = (e) => {
                                     className: P.checkboxOption,
                                     children: (0, s.jsx)(u.$q, {
                                         type: u.M0.ROW,
-                                        disabled: f,
+                                        disabled: p,
                                         value: l,
                                         onChange: c,
-                                        className: a()({ [P.disabled]: f }),
+                                        className: a()({ [P.disabled]: p }),
                                         children: (0, s.jsx)(m.Text, {
                                             variant: "text-sm/normal",
                                             children: R.intl.format(R.t.v8qCoK, {
@@ -384,8 +384,8 @@ let W = (e) => {
                                 type: m.geA.DESCRIPTION,
                                 className: P.description,
                                 children: R.intl.format(R.t["BwbW/f"], {
-                                    communityGuidelines: w.Z.getArticleURL(L.BhN.PUBLIC_GUILD_GUILDLINES),
-                                    typesOfGuilds: w.Z.getArticleURL(L.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+                                    communityGuidelines: O.Z.getArticleURL(L.BhN.PUBLIC_GUILD_GUILDLINES),
+                                    typesOfGuilds: O.Z.getArticleURL(L.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                                 }),
                             }),
                             (0, s.jsx)(u.$q, {
@@ -405,7 +405,7 @@ let W = (e) => {
     };
 function H(e) {
     let { guild: t } = e,
-        { name: i, color: n } = (0, o.e7)([S.Z], () => S.Z.getEveryoneRole(t));
+        { name: i, color: n } = (0, o.e7)([_.Z], () => _.Z.getEveryoneRole(t));
     return (0, s.jsx)("div", {
         className: P.__invalid_role,
         children: (0, s.jsxs)("span", {
@@ -510,7 +510,7 @@ function $(e) {
                 case L.Plq.MANAGE_GUILD_EXPRESSIONS.toString():
                     return R.intl.string(R.t.cmp2W1);
                 default:
-                    return (0, N.wt)(e);
+                    return (0, g.wt)(e);
             }
         },
         { enabledPermissions: n, disabledPermissions: l } = t;
@@ -534,7 +534,7 @@ let K = (e) => {
         let { guild: t, policyAccepted: i, onAcceptPolicy: l, headerId: a, theme: r } = e,
             o = (0, d.wj)(r) ? k : G;
         n.useEffect(() => {
-            (0, M.BF)({
+            (0, T.BF)({
                 fromStep: y.IO.BASICS,
                 toStep: y.IO.FINISH,
                 guildId: t.id,
@@ -545,7 +545,7 @@ let K = (e) => {
                 i = [];
             return (
                 y.$X.map((s) => {
-                    T.oz(s, t) ? e.push(s) : i.push(s);
+                    w.oz(s, t) ? e.push(s) : i.push(s);
                 }),
                 {
                     enabledPermissions: e,
@@ -643,8 +643,8 @@ let K = (e) => {
                             color: "text-muted",
                             className: P.description,
                             children: R.intl.format(R.t["BwbW/f"], {
-                                communityGuidelines: w.Z.getArticleURL(L.BhN.PUBLIC_GUILD_GUILDLINES),
-                                typesOfGuilds: w.Z.getArticleURL(L.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+                                communityGuidelines: O.Z.getArticleURL(L.BhN.PUBLIC_GUILD_GUILDLINES),
+                                typesOfGuilds: O.Z.getArticleURL(L.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                             }),
                         }),
                         (0, s.jsx)(u.$q, {
@@ -667,21 +667,21 @@ let K = (e) => {
         var t;
         let { transitionState: i, onClose: l } = e;
         n.useEffect(() => {
-            O.default.track(L.rMx.OPEN_MODAL, { type: y.tA });
+            E.default.track(L.rMx.OPEN_MODAL, { type: y.tA });
         }, []);
-        let { guild: a } = (0, o.cj)([v.Z], () => v.Z.getProps()),
-            c = (0, o.e7)([j.Z], () => j.Z.theme),
+        let { guild: a } = (0, o.cj)([b.Z], () => b.Z.getProps()),
+            c = (0, o.e7)([N.Z], () => N.Z.theme),
             [d, u] = n.useState(!1),
-            [m, N] = n.useState(!y.$X.some((e) => T.oz(e, a))),
-            [_, w] = n.useState(y.b4),
-            [M, A] = n.useState(y.b4),
+            [m, g] = n.useState(!y.$X.some((e) => w.oz(e, a))),
+            [C, O] = n.useState(y.b4),
+            [T, A] = n.useState(y.b4),
             [D] = n.useState(null == a ? void 0 : a.defaultMessageNotifications),
             [k] = n.useState(null == a ? void 0 : a.verificationLevel),
             [G] = n.useState(null == a ? void 0 : a.explicitContentFilter),
             [Z] = n.useState(m),
-            q = (0, o.e7)([S.Z], () => (null != a ? S.Z.getEveryoneRole(a) : void 0)),
-            H = (0, o.e7)([C.ZP], () => (null != a ? C.ZP.getChannels(a.id) : null)),
-            z = (0, p.Dt)(),
+            q = (0, o.e7)([_.Z], () => (null != a ? _.Z.getEveryoneRole(a) : void 0)),
+            H = (0, o.e7)([j.ZP], () => (null != a ? j.ZP.getChannels(a.id) : null)),
+            z = (0, h.Dt)(),
             { enabled: V } = (0, x.D2)(null != (t = null == a ? void 0 : a.id) ? t : L.lds);
         if (null == a) return null;
         let $ = [
@@ -690,12 +690,12 @@ let K = (e) => {
                 label: R.intl.string(R.t.Cla0ra),
             },
         ];
-        H[C.sH].forEach((e) => {
+        H[j.sH].forEach((e) => {
             let { channel: t } = e;
             t.type === L.d4z.GUILD_TEXT &&
                 $.push({
                     value: t.id,
-                    label: (0, f.F6)(t, E.default, I.Z, !0),
+                    label: (0, p.F6)(t, I.default, S.Z, !0),
                 });
         });
         let Q = k !== L.sFg.NONE,
@@ -707,18 +707,18 @@ let K = (e) => {
                 e.add(L.oNc.COMMUNITY);
                 let t = m ? r.Od(q.permissions, y.mu) : q.permissions,
                     i = U(B({}, q), { permissions: t });
-                t !== q.permissions && (await (0, b.Gf)(a.id, [i])),
-                    h.Z.updateGuild({
+                t !== q.permissions && (await (0, v.Gf)(a.id, [i])),
+                    f.Z.updateGuild({
                         features: e,
-                        rulesChannelId: _,
-                        publicUpdatesChannelId: M,
+                        rulesChannelId: C,
+                        publicUpdatesChannelId: T,
                     }),
-                    await h.Z.saveGuild(a.id, {
+                    await f.Z.saveGuild(a.id, {
                         features: e,
-                        rulesChannelId: _,
+                        rulesChannelId: C,
                         verificationLevel: a.verificationLevel,
                         explicitContentFilter: a.explicitContentFilter,
-                        publicUpdatesChannelId: M,
+                        publicUpdatesChannelId: T,
                         defaultMessageNotifications: a.defaultMessageNotifications,
                     }),
                     setTimeout(() => {
@@ -730,12 +730,12 @@ let K = (e) => {
                 disableVerificationLevel: Q,
                 disableContentFilter: J,
                 onAcceptVerificationLevel: (e, t) => {
-                    if (!t) return void h.Z.updateGuild({ verificationLevel: k });
-                    t && h.Z.updateGuild({ verificationLevel: L.sFg.LOW });
+                    if (!t) return void f.Z.updateGuild({ verificationLevel: k });
+                    t && f.Z.updateGuild({ verificationLevel: L.sFg.LOW });
                 },
                 onAcceptContentFilter: (e, t) => {
-                    if (!t) return void h.Z.updateGuild({ explicitContentFilter: G });
-                    h.Z.updateGuild({ explicitContentFilter: L.lxg.ALL_MEMBERS });
+                    if (!t) return void f.Z.updateGuild({ explicitContentFilter: G });
+                    f.Z.updateGuild({ explicitContentFilter: L.lxg.ALL_MEMBERS });
                 },
                 headerId: z,
                 theme: c,
@@ -743,13 +743,13 @@ let K = (e) => {
             es = (0, s.jsx)(X, {
                 selectableChannels: $,
                 onRuleChannelChange: (e) => {
-                    w(e);
+                    O(e);
                 },
                 onPublicUpdatesChannelChange: (e) => {
                     A(e);
                 },
-                ruleChannel: _,
-                publicUpdatesChannel: M,
+                ruleChannel: C,
+                publicUpdatesChannel: T,
                 headerId: z,
                 theme: c,
                 guildId: a.id,
@@ -761,11 +761,11 @@ let K = (e) => {
                       onAcceptPolicy: (e, t) => {
                           if (t) {
                               u(!0),
-                                  ee || h.Z.updateGuild({ defaultMessageNotifications: L.bL.ONLY_MENTIONS }),
-                                  m || null == q || N(!0);
+                                  ee || f.Z.updateGuild({ defaultMessageNotifications: L.bL.ONLY_MENTIONS }),
+                                  m || null == q || g(!0);
                               return;
                           }
-                          u(!1), ee && h.Z.updateGuild({ defaultMessageNotifications: D }), m && null != q && N(!1);
+                          u(!1), ee && f.Z.updateGuild({ defaultMessageNotifications: D }), m && null != q && g(!1);
                       },
                       headerId: z,
                       theme: c,
@@ -781,11 +781,11 @@ let K = (e) => {
                           u(!1);
                       },
                       onAcceptDefaultNotifications: (e, t) => {
-                          if (!t) return void h.Z.updateGuild({ defaultMessageNotifications: D });
-                          h.Z.updateGuild({ defaultMessageNotifications: L.bL.ONLY_MENTIONS });
+                          if (!t) return void f.Z.updateGuild({ defaultMessageNotifications: D });
+                          f.Z.updateGuild({ defaultMessageNotifications: L.bL.ONLY_MENTIONS });
                       },
                       onAcceptEveryoneRolePermissions: (e, t) => {
-                          null != q && (t ? N(!0) : N(!1));
+                          null != q && (t ? g(!0) : g(!1));
                       },
                       headerId: z,
                       theme: c,
@@ -805,7 +805,7 @@ let K = (e) => {
                 },
                 {
                     modalContent: es,
-                    disableNextStep: null == _ || null == M,
+                    disableNextStep: null == C || null == T,
                     overviewTitle: R.intl.string(R.t["7MEtIS"]),
                 },
                 {
@@ -814,12 +814,12 @@ let K = (e) => {
                     overviewTitle: R.intl.string(R.t.Pj9P8P),
                 },
             ];
-        return (0, s.jsx)(g.Z, {
+        return (0, s.jsx)(M.Z, {
             stepData: ea,
             title: R.intl.string(R.t["6U5XTk"]),
             transitionState: i,
             onClose: () => {
-                l(), O.default.track(L.rMx.MODAL_DISMISSED, { type: y.tA });
+                l(), E.default.track(L.rMx.MODAL_DISMISSED, { type: y.tA });
             },
             completeButtonText: R.intl.string(R.t.XGl4bW),
             onComplete: et,
