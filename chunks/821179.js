@@ -16,11 +16,11 @@ var i = n(780384),
 let m = (0, l.pxk)(l.EFr.SIZE_16);
 function b(e) {
     let { user: t, guild: b, nick: O, onSelect: y } = e,
-        { theme: _, themeType: j } = (0, d.z)(),
-        v = t.hasAvatarForGuild(b.id);
+        { theme: _, themeType: v } = (0, d.z)(),
+        j = t.hasAvatarForGuild(b.id);
     return (0, r.jsxs)(l.P3F, {
         focusProps:
-            j === h.l.MODAL_V2
+            v === h.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -35,7 +35,6 @@ function b(e) {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("57804"),
-                    n.e("1806"),
                     n.e("36599"),
                     n.e("60962"),
                     n.e("58175"),
@@ -60,7 +59,7 @@ function b(e) {
                     n.e("56534"),
                     n.e("87154"),
                     n.e("33213"),
-                    n.e("78728"),
+                    n.e("75449"),
                 ]).then(n.bind(n, 545135));
                 return (t) => {
                     var n, i;
@@ -128,7 +127,7 @@ function b(e) {
                         className: g.name,
                         children: b.name,
                     }),
-                    v &&
+                    j &&
                         (0, r.jsxs)("div", {
                             className: g.nick,
                             children: [
@@ -147,7 +146,7 @@ function b(e) {
                                 }),
                             ],
                         }),
-                    !v &&
+                    !j &&
                         null != O &&
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/medium",

@@ -88,7 +88,6 @@ let S = (0, g.Un)({
     j = (0, g.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("1806"),
                 n.e("36599"),
                 n.e("60962"),
                 n.e("58175"),

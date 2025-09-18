@@ -17,8 +17,8 @@ var r,
     O = n(313201),
     y = n(991346),
     _ = n(592125),
-    j = n(888369),
-    v = n(430824),
+    v = n(888369),
+    j = n(430824),
     x = n(158776),
     C = n(306680),
     E = n(944486),
@@ -82,7 +82,7 @@ function B(e, t) {
         e
     );
 }
-let V = () =>
+let F = () =>
     (0, i.jsxs)("div", {
         className: k.emptyState,
         children: [
@@ -99,9 +99,9 @@ let V = () =>
             }),
         ],
     });
-class F extends (r = l.Component) {
+class V extends (r = l.Component) {
     render() {
-        let e = v.Z.getGuild(this.props.channel.guild_id);
+        let e = j.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             A.$W,
             B(G({}, this.props), {
@@ -113,7 +113,7 @@ class F extends (r = l.Component) {
         );
     }
 }
-U(F, "defaultProps", { unread: !1 });
+U(V, "defaultProps", { unread: !1 });
 let H = s.ZP.connectStores([C.ZP, _.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -122,16 +122,16 @@ let H = s.ZP.connectStores([C.ZP, _.Z], (e) => {
             isMentionLowImportance: C.ZP.getIsMentionLowImportance(t.id),
             category: _.Z.getChannel(t.parent_id),
         };
-    })(F),
+    })(V),
     z = s.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
-    })(F),
-    W = s.ZP.connectStores([j.default], (e) => {
+    })(V),
+    W = s.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
-        return { unread: j.default.hasUnread(t.id) };
+        return { unread: v.default.hasUnread(t.id) };
     })(A.ic),
     K = s.ZP.connectStores([C.ZP, x.Z], (e) => {
         var t;
@@ -240,7 +240,7 @@ class X extends l.PureComponent {
             let { query: e } = this.state,
                 { results: t } = this.props;
             return 0 === t.length && e.length > 0
-                ? (0, i.jsx)(V, {})
+                ? (0, i.jsx)(F, {})
                 : 0 === t.length
                   ? null
                   : (0, i.jsx)(u._2F, {
@@ -328,7 +328,6 @@ class X extends l.PureComponent {
                     case h.h8.GUILD:
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("1806"),
                                 n.e("36599"),
                                 n.e("60962"),
                                 n.e("58175"),
@@ -347,7 +346,7 @@ class X extends l.PureComponent {
                                 n.e("56534"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("63933"),
+                                n.e("73709"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
@@ -362,7 +361,7 @@ class X extends l.PureComponent {
                     case h.h8.TEXT_CHANNEL:
                     case h.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = v.Z.getGuild(r.getGuildId());
+                            l = j.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case L.d4z.GUILD_TEXT:

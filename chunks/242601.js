@@ -396,7 +396,6 @@ class eb extends i.PureComponent {
                 null != t &&
                     (0, g.jW)(e, async () => {
                         let { default: e } = await Promise.all([
-                            n.e("1806"),
                             n.e("36599"),
                             n.e("60962"),
                             n.e("58175"),

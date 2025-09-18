@@ -15,8 +15,11 @@ function a(e) {
 function o() {
     a({ displayTools: !i.Z.displayTools });
 }
-function s() {
-    a({ displayTools: !0 });
+function s(e) {
+    a({
+        displayTools: !0,
+        lastOpenTabId: e,
+    });
 }
 function l() {
     r.Z.dispatch({ type: "ANALYTICS_LOG_CLEAR" });

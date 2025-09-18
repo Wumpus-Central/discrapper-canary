@@ -78,7 +78,6 @@ function d(e) {
             handleGuildContextMenu(e, t) {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("1806"),
                         n.e("36599"),
                         n.e("60962"),
                         n.e("58175"),
