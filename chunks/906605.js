@@ -1,9 +1,10 @@
 n.d(t, {
-    Sc: () => E,
-    UP: () => b,
-    XE: () => g,
-    Zx: () => h,
-    _s: () => m,
+    Sc: () => b,
+    UP: () => y,
+    XE: () => E,
+    Zx: () => m,
+    _s: () => g,
+    tg: () => O,
 }),
     n(388685);
 var r = n(570140),
@@ -14,8 +15,9 @@ var r = n(570140),
     l = n(938475),
     c = n(626135),
     u = n(106301),
-    d = n(981631);
-function f(e, t, n) {
+    d = n(54332),
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +30,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +41,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p() {
+function h() {
     var e;
     let t = s.Z.getVoiceChannelId(),
         n = o.Z.getMediaSessionId();
@@ -62,50 +64,49 @@ function p() {
               call_num_participants: l.ZP.countVoiceStatesForChannel(t),
           };
 }
-function h(e, t) {
+function m(e, t) {
     var n;
     let i = null == (n = a.Z.getChannel(s.Z.getVoiceChannelId())) ? void 0 : n.guild_id;
-    if (null == e || null == i) return void E(t);
+    if (null == e || null == i) return void b(t);
     r.Z.dispatch({
         type: "UPDATE_HANG_STATUS",
         status: e,
         guildId: i,
         saveAsDefault: t,
     }),
-        c.default.track(d.rMx.SET_HANG_STATUS, _({ status_type: e }, p()));
+        c.default.track(f.rMx.SET_HANG_STATUS, p({ status_type: e }, h()));
 }
-function m(e, t, n) {
-    if ("" === e || null == t) return void E(n);
+function g(e, t, n) {
+    if ("" === e || null == t) return void b(n);
     r.Z.dispatch({
         type: "UPDATE_HANG_STATUS_CUSTOM",
         emoji: t,
         status: e,
         saveAsDefault: n,
     }),
-        c.default.track(d.rMx.SET_HANG_STATUS, _({ status_type: e }, p()));
+        c.default.track(f.rMx.SET_HANG_STATUS, p({ status_type: e }, h()));
 }
-function g(e, t) {
-    if (null == e) return void E(t);
+function E(e, t) {
+    if (null == e) return void b(t);
     r.Z.dispatch({
         type: "UPDATE_HANG_STATUS_GAME_ACTIVITY",
         applicationId: e,
         saveAsDefault: t,
     }),
-        c.default.track(d.rMx.SET_HANG_STATUS, _({ status_type: "game_activity" }, p()));
+        c.default.track(f.rMx.SET_HANG_STATUS, p({ status_type: "game_activity" }, h()));
 }
-function E(e) {
+function b(e) {
     r.Z.dispatch({
         type: "CLEAR_HANG_STATUS",
         saveAsDefault: e,
     }),
-        c.default.track(d.rMx.CLEAR_HANG_STATUS, _({}, p()));
+        c.default.track(f.rMx.CLEAR_HANG_STATUS, p({}, h()));
 }
-function b() {
-    let e = [u.Z.getCustomHangStatus(), ...u.Z.getRecentStatuses()].filter((e) => {
+function y() {
+    let e = [u.Z.getCustomHangStatus(), ...u.Z.getRecentStatuses(), ...u.Z.getFavoritedStatuses()].filter((e) => {
         var t;
         return (
-            null != e &&
-            "string" != typeof e &&
+            !(null == e || (0, d.Z)(e)) &&
             null != e.emoji &&
             (null == (t = e.emoji) ? void 0 : t.id) != null &&
             null == i.ZP.getCustomEmojiById(e.emoji.id)
@@ -116,4 +117,11 @@ function b() {
             type: "DELETE_INVALID_HANG_STATUSES",
             statuses: e,
         });
+}
+function O(e, t) {
+    r.Z.dispatch({
+        type: "UPDATE_FAVORITE_HANG_STATUS",
+        status: e,
+        emoji: t,
+    });
 }
