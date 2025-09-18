@@ -53005,15 +53005,13 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 
 .minimalState__6f029 .colorVariant__6f029 {
     height: 11px;
+    margin-left: -2px;
+    padding-right: 0;
     width: 11px
 }
 
 .full-motion .minimalState__6f029 .colorVariant__6f029 {
     transition: width .2s ease-in-out, height .2s ease-in-out
-}
-
-.minimalState__6f029 .colorVariant__6f029+.colorVariant__6f029 {
-    margin-left: -2px
 }
 
 .minimalState__6f029 .colorSwatch__6f029 {
