@@ -250,53 +250,33 @@ class eh {
             ((eh._lastInstance.frequentlyUsedReactionEmojis = null),
             (eh._lastInstance.frequentlyUsedReactionNamesAndIds = null));
     }
-    static resetFavorites() {
-        null != eh._lastInstance &&
-            ((eh._lastInstance.favorites = null), (eh._lastInstance.favoriteNamesAndIds = null));
-    }
     static clear(e) {
         null != eh._lastInstance && eh._lastInstance.guildId === e && (eh._lastInstance = null);
     }
-    ensureDisambiguated() {
-        null == this.disambiguatedEmoji && this._buildDisambiguatedCustomEmoji();
-    }
     getDisambiguatedEmoji() {
-        return null == this.disambiguatedEmoji && this._buildDisambiguatedCustomEmoji(), this.disambiguatedEmoji;
+        return this.disambiguatedEmoji;
     }
     getCustomEmoji() {
-        return null == this.customEmojis && this._buildDisambiguatedCustomEmoji(), this.customEmojis;
+        return this.customEmojis;
     }
     getGroupedCustomEmoji() {
-        return null == this.groupedCustomEmojis && this._buildDisambiguatedCustomEmoji(), this.groupedCustomEmojis;
+        return this.groupedCustomEmojis;
     }
     getByName(e) {
-        if (
-            ((null == this.emojisByName || null == this.unicodeAliases) && this._buildDisambiguatedCustomEmoji(),
-            Object.prototype.hasOwnProperty.call(this.emojisByName, e))
-        )
-            return this.emojisByName[e];
+        if (Object.prototype.hasOwnProperty.call(this.emojisByName, e)) return this.emojisByName[e];
         if (Object.prototype.hasOwnProperty.call(this.unicodeAliases, e)) {
             let t = this.unicodeAliases[e];
             if (Object.prototype.hasOwnProperty.call(this.emojisByName, t)) return this.emojisByName[t];
         }
     }
     getEmoticonByName(e) {
-        if (
-            (null == this.emoticonsByName && this._buildDisambiguatedCustomEmoji(),
-            Object.prototype.hasOwnProperty.call(this.emoticonsByName, e))
-        )
-            return this.emoticonsByName[e];
+        if (Object.prototype.hasOwnProperty.call(this.emoticonsByName, e)) return this.emoticonsByName[e];
     }
     getById(e) {
-        if (
-            (null == this.emojisById && this._buildDisambiguatedCustomEmoji(),
-            Object.prototype.hasOwnProperty.call(this.emojisById, e))
-        )
-            return this.emojisById[e];
+        if (Object.prototype.hasOwnProperty.call(this.emojisById, e)) return this.emojisById[e];
     }
     getCustomEmoticonRegex() {
         return (
-            null == this.escapedEmoticonNames && this._buildDisambiguatedCustomEmoji(),
             null == this.emoticonRegex &&
                 null != this.escapedEmoticonNames &&
                 "" !== this.escapedEmoticonNames &&
@@ -305,16 +285,13 @@ class eh {
         );
     }
     getFrequentlyUsedEmojisWithoutFetchingLatest() {
-        if ((this.ensureDisambiguated(), null != this.frequentlyUsed)) return this.frequentlyUsed;
+        if (null != this.frequentlyUsed) return this.frequentlyUsed;
         let e = em.frequently.map((e) => (null != e.id ? this.getById(e.id) : U.ZP.getByName(e.name))).filter(x.lm),
             t = (0, B.Z)(e);
         return (this.frequentlyUsed = [...t.values()]), this.frequentlyUsed;
     }
     rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest() {
-        if (
-            (this.ensureDisambiguated(),
-            null != this.frequentlyUsedReactionEmojis && null != this.frequentlyUsedReactionNamesAndIds)
-        )
+        if (null != this.frequentlyUsedReactionEmojis && null != this.frequentlyUsedReactionNamesAndIds)
             return {
                 frequentlyUsedReactionEmojis: this.frequentlyUsedReactionEmojis,
                 frequentlyUsedReactionNamesAndIds: this.frequentlyUsedReactionNamesAndIds,
@@ -342,7 +319,7 @@ class eh {
     }
     rebuildFavoriteEmojisWithoutFetchingLatest() {
         var e, t;
-        if ((this.ensureDisambiguated(), null != this.favorites && null != this.favoriteNamesAndIds))
+        if (null != this.favorites && null != this.favoriteNamesAndIds)
             return {
                 favorites: this.favorites,
                 favoriteNamesAndIds: this.favoriteNamesAndIds,
@@ -376,7 +353,7 @@ class eh {
         return this.favoriteEmojisWithoutFetchingLatest.concat(e).filter((e) => !t.has(e) && (t.add(e), !0));
     }
     getTopEmojiWithoutFetchingLatest(e) {
-        if ((this.ensureDisambiguated(), null == this.topEmojis)) {
+        if (null == this.topEmojis) {
             var t;
             let n = eo.get(e),
                 r = G.Z.getTopEmojiIdsByGuildId(e);
@@ -395,12 +372,12 @@ class eh {
         return this.topEmojis;
     }
     getNewlyAddedEmojiForGuild(e) {
-        if ((this.ensureDisambiguated(), null == this.newlyAddedEmoji)) return ee;
+        if (null == this.newlyAddedEmoji) return ee;
         let t = this.newlyAddedEmoji[e];
         return null == t ? ee : t;
     }
     getEscapedCustomEmoticonNames() {
-        return null == this.escapedEmoticonNames && this._buildDisambiguatedCustomEmoji(), this.escapedEmoticonNames;
+        return this.escapedEmoticonNames;
     }
     nameMatchesChain(e) {
         return s()(this.getDisambiguatedEmoji()).filter((t) => {
@@ -411,56 +388,70 @@ class eh {
             return i || a || o;
         });
     }
-    _buildDisambiguatedCustomEmoji() {
-        let e = {},
-            t = [];
-        (this.emoticonRegex = null),
-            (this.frequentlyUsed = null),
-            (this.frequentlyUsedReactionEmojis = null),
-            (this.frequentlyUsedReactionNamesAndIds = null),
-            (this.unicodeAliases = {}),
-            (this.customEmojis = {}),
-            (this.groupedCustomEmojis = {}),
-            (this.emoticonsByName = {}),
-            (this.emojisByName = {}),
-            (this.emojisById = {}),
-            (this.newlyAddedEmoji = {});
-        let n = (this.disambiguatedEmoji = []),
-            r = (t) => {
-                var r;
-                t.names.slice(1).forEach((e) => (this.unicodeAliases[e] = t.name));
-                let i = null != (r = e[t.name]) ? r : 0;
-                a()(0 === i, "Expected existing count to be 0"),
-                    (e[t.name] = i + 1),
-                    (this.emojisByName[t.name] = t),
-                    n.push(t);
+    constructor(e) {
+        Y(this, "favorites", null),
+            Y(this, "favoriteNamesAndIds", null),
+            Y(this, "topEmojis", null),
+            Y(this, "guildId", void 0),
+            Y(this, "escapedEmoticonNames", void 0),
+            Y(this, "disambiguatedEmoji", []),
+            Y(this, "emoticonRegex", null),
+            Y(this, "frequentlyUsed", null),
+            Y(this, "frequentlyUsedReactionEmojis", null),
+            Y(this, "frequentlyUsedReactionNamesAndIds", null),
+            Y(this, "unicodeAliases", {}),
+            Y(this, "customEmojis", {}),
+            Y(this, "groupedCustomEmojis", {}),
+            Y(this, "emoticonsByName", {}),
+            Y(this, "emojisByName", {}),
+            Y(this, "emojisById", {}),
+            Y(this, "newlyAddedEmoji", {}),
+            Y(this, "isFavoriteEmojiWithoutFetchingLatest", (e) => {
+                var t;
+                if (null == e) return !1;
+                let { favoriteNamesAndIds: n } = this.rebuildFavoriteEmojisWithoutFetchingLatest();
+                if (null != e.id) return n.has(e.id);
+                let r = null != (t = U.ZP.convertSurrogateToBase(e.surrogates)) ? t : e;
+                return n.has(r.name);
+            }),
+            (this.guildId = e);
+        let t = {},
+            n = [],
+            r = (e) => {
+                var n;
+                e.names.slice(1).forEach((t) => (this.unicodeAliases[t] = e.name));
+                let r = null != (n = t[e.name]) ? n : 0;
+                a()(0 === r, "Expected existing count to be 0"),
+                    (t[e.name] = r + 1),
+                    (this.emojisByName[e.name] = e),
+                    this.disambiguatedEmoji.push(e);
             },
-            i = (t) => {
-                var r;
-                let i,
-                    a = t.name,
-                    o = null != (r = e[a]) ? r : 0;
-                if (((e[a] = o + 1), o > 0)) {
-                    let e = "".concat(a, "~").concat(o);
-                    i = z(W({}, t), {
-                        name: e,
-                        originalName: a,
+            i = (e) => {
+                var n;
+                let r,
+                    i = e.name,
+                    a = null != (n = t[i]) ? n : 0;
+                if (((t[i] = a + 1), a > 0)) {
+                    let t = "".concat(i, "~").concat(a);
+                    r = z(W({}, e), {
+                        name: t,
+                        originalName: i,
                     });
-                } else i = t;
-                (this.emojisByName[i.name] = i), (this.emojisById[i.id] = i), (this.customEmojis[i.name] = i);
-                let { guildId: s } = t;
-                null != this.groupedCustomEmojis[s]
-                    ? this.groupedCustomEmojis[s].push(i)
-                    : (this.groupedCustomEmojis[s] = [i]),
-                    j.default.compare(t.id, $) >= 0 &&
-                        (null != this.newlyAddedEmoji[s]
-                            ? this.newlyAddedEmoji[s].push(i)
-                            : (this.newlyAddedEmoji[s] = [i])),
-                    n.push(i);
+                } else r = e;
+                (this.emojisByName[r.name] = r), (this.emojisById[r.id] = r), (this.customEmojis[r.name] = r);
+                let { guildId: o } = e;
+                null != this.groupedCustomEmojis[o]
+                    ? this.groupedCustomEmojis[o].push(r)
+                    : (this.groupedCustomEmojis[o] = [r]),
+                    j.default.compare(e.id, $) >= 0 &&
+                        (null != this.newlyAddedEmoji[o]
+                            ? this.newlyAddedEmoji[o].push(r)
+                            : (this.newlyAddedEmoji[o] = [r])),
+                    this.disambiguatedEmoji.push(r);
             },
             o = (e) => {
                 Object.prototype.hasOwnProperty.call(this.emoticonsByName, e.name) ||
-                    (t.push(L.Z.escape(e.name)), (this.emoticonsByName[e.name] = e));
+                    (n.push(L.Z.escape(e.name)), (this.emoticonsByName[e.name] = e));
             };
         U.ZP.forEach(r);
         let l = (e) => {
@@ -476,35 +467,7 @@ class eh {
         R.ZP.getFlattenedGuildIds().forEach((e) => {
             e !== this.guildId && l(e);
         }),
-            (this.escapedEmoticonNames = t.join("|"));
-    }
-    constructor(e) {
-        Y(this, "guildId", void 0),
-            Y(this, "emoticonRegex", null),
-            Y(this, "frequentlyUsed", null),
-            Y(this, "favorites", null),
-            Y(this, "favoriteNamesAndIds", null),
-            Y(this, "topEmojis", null),
-            Y(this, "escapedEmoticonNames", null),
-            Y(this, "disambiguatedEmoji", null),
-            Y(this, "customEmojis", {}),
-            Y(this, "groupedCustomEmojis", {}),
-            Y(this, "emoticonsByName", {}),
-            Y(this, "emojisByName", {}),
-            Y(this, "emojisById", {}),
-            Y(this, "unicodeAliases", {}),
-            Y(this, "newlyAddedEmoji", {}),
-            Y(this, "frequentlyUsedReactionEmojis", null),
-            Y(this, "frequentlyUsedReactionNamesAndIds", null),
-            Y(this, "isFavoriteEmojiWithoutFetchingLatest", (e) => {
-                var t;
-                if (null == e) return !1;
-                let { favoriteNamesAndIds: n } = this.rebuildFavoriteEmojisWithoutFetchingLatest();
-                if (null != e.id) return n.has(e.id);
-                let r = null != (t = U.ZP.convertSurrogateToBase(e.surrogates)) ? t : e;
-                return n.has(r.name);
-            }),
-            (this.guildId = e);
+            (this.escapedEmoticonNames = n.join("|"));
     }
 }
 Y(eh, "_lastInstance", null);
