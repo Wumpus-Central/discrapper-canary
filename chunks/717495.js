@@ -1,2 +1,1 @@
-n.d(t, { F: () => r });
-let r = { immediate: !0 };
+e.exports = "/assets/0ae59b674dfd5be6.svg";

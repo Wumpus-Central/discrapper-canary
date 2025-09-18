@@ -1,6 +1,6 @@
 n.d(t, {
     Vq: () => D,
-    Xo: () => F,
+    Xo: () => V,
     qE: () => U,
     qe: () => k,
 }),
@@ -10,8 +10,8 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(202841),
-    l = n(143450),
+    s = n(938288),
+    l = n(793030),
     c = n(1561),
     u = n(438784),
     d = n(696826),
@@ -588,8 +588,8 @@ function Z(e) {
             imageClassName: U,
             pulseStatusIcon: Z,
         } = e,
-        V = (0, d.vj)(v, S),
-        F = i.useId(),
+        F = (0, d.vj)(v, S),
+        V = i.useId(),
         H = i.useId(),
         [Y] = i.useState(() =>
             O(
@@ -605,7 +605,7 @@ function Z(e) {
         W = i.useMemo(
             () =>
                 O(
-                    { fill: V },
+                    { fill: F },
                     j({
                         size: E,
                         status: v,
@@ -613,9 +613,9 @@ function Z(e) {
                         isTyping: _,
                     }),
                 ),
-            [V, E, v, c, _],
+            [F, E, v, c, _],
         ),
-        K = (0, l.q)(
+        K = (0, l.q_F)(
             {
                 config: A,
                 from: Y,
@@ -645,7 +645,7 @@ function Z(e) {
         ei = en.status * g.EW,
         ea = null != v ? (en.status * g.D6 - en.status) / 2 : 0,
         eo = en.size + Math.ceil(ea),
-        [es, el, ec] = (0, l.q)(
+        [es, el, ec] = (0, l.q_F)(
             {
                 config: {
                     tension: 450,
@@ -673,7 +673,7 @@ function Z(e) {
                 "aria-hidden": !0,
                 children: [
                     (0, r.jsxs)("mask", {
-                        id: F,
+                        id: V,
                         width: et,
                         height: et,
                         children: [
@@ -700,7 +700,7 @@ function Z(e) {
                         y: 0,
                         width: et,
                         height: et,
-                        mask: "url(#".concat(F, ")"),
+                        mask: "url(#".concat(V, ")"),
                         children: (0, r.jsx)(k, {
                             src: y,
                             isSpeaking: m,
@@ -760,11 +760,11 @@ function Z(e) {
         }),
     );
 }
-function V(e, t, n, r, i) {
+function F(e, t, n, r, i) {
     return null != n && null != t && (!!e || t !== n || (t === h.Skl.ONLINE && r !== i));
 }
 k.displayName = "AvatarImg";
-let F = i.memo(function (e) {
+let V = i.memo(function (e) {
     var { statusColor: t, status: n } = e,
         a = T(e, ["statusColor", "status"]);
     let { isMobile: o = !1, isTyping: s = !1 } = a,
@@ -773,7 +773,7 @@ let F = i.memo(function (e) {
         u = (0, d.vj)(n, t),
         f = i.useRef(u),
         _ = i.useRef(!1),
-        p = _.current || V(s, n, l.current, o, c.current);
+        p = _.current || F(s, n, l.current, o, c.current);
     return (
         i.useLayoutEffect(() => {
             (_.current = p), (l.current = n), (c.current = o), (f.current = u);
