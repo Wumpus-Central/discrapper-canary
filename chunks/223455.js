@@ -1,62 +1,61 @@
-r.r(t), r.d(t, { default: () => Z });
-var n = r(951288),
-    a = r(120356),
-    i = r.n(a),
-    l = r(512722),
-    o = r.n(l),
-    s = r(399606),
-    c = r(721037),
-    d = r(561472),
-    u = r(679080),
-    m = r(777019),
-    p = r(400332),
-    h = r(721383),
-    f = r(566620),
-    y = r(317381),
-    g = r(729200),
-    v = r(617552),
-    D = r(372900),
-    b = r(238246),
-    C = r(592125),
-    E = r(703558),
-    P = r(677601),
-    j = r(702511);
-let R = [u.S, m.O, p.U, h._];
-function Z(e) {
-    let { windowKey: t, channelId: r } = e,
-        a = (0, s.e7)([C.Z], () => C.Z.getChannel(r));
+n.r(t), n.d(t, { default: () => x });
+var r = n(951288),
+    a = n(120356),
+    i = n.n(a),
+    l = n(512722),
+    o = n.n(l),
+    s = n(399606),
+    c = n(721037),
+    d = n(561472),
+    u = n(679080),
+    m = n(777019),
+    p = n(400332),
+    h = n(721383),
+    f = n(566620),
+    y = n(317381),
+    g = n(617552),
+    v = n(372900),
+    E = n(238246),
+    b = n(592125),
+    D = n(703558),
+    P = n(677601),
+    j = n(702511);
+let C = [u.S, m.O, p.U, h._];
+function x(e) {
+    let { windowKey: t, channelId: n } = e,
+        a = (0, s.e7)([b.Z], () => b.Z.getChannel(n));
     o()(null != a, "channel cannot be null for popout");
     let l = (0, s.e7)([y.ZP], () => y.ZP.getSelfEmbeddedActivityForChannel(a.id), [a]);
-    return (0, n.jsx)(b.Z, {
+    return (0, r.jsx)(E.Z, {
         withTitleBar: !0,
-        keybinds: R,
+        keybinds: C,
         windowKey: t,
         title: a.name,
         channelId: a.id,
         onBeforeUnload: (e) => {
-            let { e: t, unmountWindow: r } = e;
+            let { e: t, unmountWindow: n } = e;
             if (null != l) {
-                let e = (0, g.g)() ? (0, f.nJ)(l.applicationId, a.id) : Promise.resolve(!0);
+                let e = (0, f.nJ)(l.applicationId, a.id);
                 t.preventDefault(),
-                    (0, v.Z)({
+                    (0, g.Z)({
                         onConfirm: async () => {
-                            await e, r();
+                            await e, n();
                         },
                         usesPopoutContext: !0,
                     });
-            } else r();
+            } else n();
         },
-        children: (0, n.jsx)("div", {
+        children: (0, r.jsx)("div", {
             className: i()("root", j.rootPopout),
-            children: (0, n.jsxs)(D.Z.Provider, {
+            children: (0, r.jsxs)(v.Z.Provider, {
                 value: a.guild_id,
                 children: [
-                    (0, n.jsx)(d.Z, {
+                    (0, r.jsx)(d.Z, {
                         channel: a,
-                        draftType: E.d.ChannelMessage,
+                        draftType: D.d.ChannelMessage,
                     }),
-                    (0, n.jsx)(P.Z, { channel: a }),
-                    (0, n.jsx)(c.Z, {
+                    (0, r.jsx)(P.Z, { channel: a }),
+                    (0, r.jsx)(c.Z, {
                         popoutWindowKey: t,
                         popoutWindowHasTitleBar: !0,
                     }),
