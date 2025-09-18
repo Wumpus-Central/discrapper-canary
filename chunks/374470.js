@@ -15,6 +15,7 @@ n.d(t, {
     Mg: () => i,
     VG: () => l,
     kK: () => r,
+    sK: () => u,
     uB: () => c,
 }),
     n(388685),
@@ -54,4 +55,12 @@ function c(e) {
           : "document" in t
             ? t.document
             : (console.warn("Unable to get owner document from event", e.type), null);
+}
+function u(e, t) {
+    let n = e.parentElement;
+    for (; null != n; ) {
+        if (n.classList.contains(t)) return n;
+        n = n.parentElement;
+    }
+    return null;
 }

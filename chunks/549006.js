@@ -3,7 +3,7 @@ n.d(t, {
     kw: () => o,
     sW: () => s,
 });
-let { Layer: r, LayerContainer: i, LayerProvider: a } = (0, n(302901).Xv)("Chat"),
+let { Layer: r, LayerContainer: i, LayerProvider: a } = (0, n(481060).Xvx)("Chat"),
     o = i,
     s = a,
     l = r;

@@ -1,7 +1,7 @@
 n.d(t, { u: () => O }), n(415506);
 var r = n(951288),
     i = n(647438),
-    a = n(314910),
+    a = n(793030),
     o = n(747127),
     s = n(550656),
     l = n(464281),
@@ -201,26 +201,28 @@ function v() {
     let t = i.useContext(E);
     if (null == t) throw Error("TooltipContent must be used within TooltipRoot");
     let {
-        isVisible: n,
-        isRendered: o,
-        handleExitComplete: c,
-        onAnimationRest: d,
-        tooltipId: f,
-        targetElementRef: _,
-        text: p,
-        position: h,
-        align: m,
-        spacing: g,
-        caretConfig: b,
-        layerContext: y,
-        positionKey: O,
-    } = t;
-    return (0, u.Q)({
-        shouldShow: n,
-        caretPosition: null != (e = null == b ? void 0 : b.position) ? e : (0, l.Av)(h),
-        onExitComplete: c,
-        onAnimationRest: d,
-    })((e, i) =>
+            isVisible: n,
+            isRendered: o,
+            handleExitComplete: c,
+            onAnimationRest: d,
+            tooltipId: f,
+            targetElementRef: _,
+            text: p,
+            position: h,
+            align: m,
+            spacing: g,
+            caretConfig: b,
+            layerContext: y,
+            positionKey: O,
+        } = t,
+        v = (0, u.Q)({
+            shouldShow: n,
+            caretPosition: null != (e = null == b ? void 0 : b.position) ? e : (0, l.Av)(h),
+            onExitComplete: c,
+            onAnimationRest: d,
+        }),
+        { defaultLayerContext: I } = (0, a.ZFG)();
+    return v((e, i) =>
         i
             ? (0, r.jsx)(s.N, {
                   isVisible: n,
@@ -232,7 +234,7 @@ function v() {
                   align: m,
                   spacing: g,
                   caretConfig: b,
-                  layerContext: null != y ? y : a.nz,
+                  layerContext: null != y ? y : I,
                   animationStyle: e,
                   positionKey: O,
                   "data-mana-component": "tooltip",
