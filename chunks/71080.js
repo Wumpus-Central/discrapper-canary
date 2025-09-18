@@ -206,6 +206,11 @@ function _(e, t, c) {
             description: u === s.d4z.GUILD_CATEGORY ? l.t["gmbD8/"] : l.t["0l2EjI"],
             flag: s.Plq.PIN_MESSAGES,
         },
+        [s.Plq.BYPASS_SLOWMODE.toString()]: {
+            title: l.intl.string(l.t.kqcjeX),
+            description: u === s.d4z.GUILD_CATEGORY ? l.t.C4t1Xl : l.t.Ha1xb2,
+            flag: s.Plq.BYPASS_SLOWMODE,
+        },
         [s.Plq.READ_MESSAGE_HISTORY.toString()]: {
             title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.intl.string(l.t["0RQwtr"]) : l.intl.string(l.t.l9ufaW),
             description: (() => {

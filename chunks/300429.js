@@ -1,16 +1,16 @@
 n.d(t, {
     S: () => _,
-    Z: () => A,
+    Z: () => S,
 }),
     n(388685);
 var r,
     i = n(442837),
     a = n(846519),
     o = n(570140),
-    s = n(70956),
-    l = n(592125),
-    c = n(496675),
-    u = n(981631);
+    s = n(923664),
+    l = n(70956),
+    c = n(592125),
+    u = n(496675);
 function d(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ let p = {
     1: {},
 };
 function h(e, t, n) {
-    if ((m(e, t), E(e, t) || n <= 0)) return;
+    if ((m(e, t), (0, s.t)(e, t) || n <= 0)) return;
     let r = n + Date.now();
     (p[t][e.id] = {
         rateLimitPerUser: e.rateLimitPerUser,
@@ -58,35 +58,30 @@ function m(e, t) {
     null != p[t][e.id] && (p[t][e.id].timer.stop(), delete p[t][e.id]);
 }
 function g(e, t) {
-    let n = l.Z.getChannel(e);
+    let n = c.Z.getChannel(e);
     if (null == n) return !1;
-    h(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * s.Z.Millis.SECOND + f);
+    h(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.Z.Millis.SECOND + f);
 }
-function E(e, t) {
-    return 0 === t
-        ? c.Z.can(u.Plq.MANAGE_CHANNELS, e) || c.Z.can(u.Plq.MANAGE_MESSAGES, e)
-        : c.Z.can(u.Plq.MANAGE_THREADS, e);
-}
-function b(e) {
+function E(e) {
     let { channelId: t } = e;
     return g(t, 0);
 }
-function y(e) {
+function b(e) {
     let { channelId: t } = e,
-        n = l.Z.getChannel(t);
+        n = c.Z.getChannel(t);
     return null != n && h(n, 0, 0);
 }
-function O(e) {
+function y(e) {
     let { channelId: t, slowmodeType: n } = e;
     return g(t, n);
 }
-function v(e) {
+function O(e) {
     let { channelId: t, slowmodeType: n, cooldownMs: r } = e,
-        i = l.Z.getChannel(t);
+        i = c.Z.getChannel(t);
     if (null == i) return !1;
     h(i, n, 0 === r ? 0 : r + f);
 }
-function I(e) {
+function v(e) {
     let { channels: t } = e;
     [0, 1].forEach((e) => {
         for (let r of t) {
@@ -95,18 +90,18 @@ function I(e) {
                 i = r.rateLimitPerUser;
             null != t &&
                 t.rateLimitPerUser !== i &&
-                h(r, e, Math.min(null != (n = null == t ? void 0 : t.cooldownMs) ? n : 0, i * s.Z.Millis.SECOND));
+                h(r, e, Math.min(null != (n = null == t ? void 0 : t.cooldownMs) ? n : 0, i * l.Z.Millis.SECOND));
         }
     });
 }
-function T() {
+function I() {
     [0, 1].forEach((e) => {
         Object.keys(p[e]).forEach((t) => p[e][t].timer.stop()), (p[e] = {});
     });
 }
-class S extends (r = i.ZP.Store) {
+class T extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z);
+        this.waitFor(c.Z, u.Z);
     }
     getSlowmodeCooldownGuess(e, t) {
         let n = p[null != t ? t : 0][e];
@@ -116,13 +111,13 @@ class S extends (r = i.ZP.Store) {
         return this.getSlowmodeCooldownGuess(e.id, t) > 0 && e.rateLimitPerUser > 0;
     }
 }
-d(S, "displayName", "SlowmodeStore");
-let A = new S(o.Z, {
-    SLOWMODE_RESET_COOLDOWN: O,
-    SLOWMODE_SET_COOLDOWN: v,
-    UPLOAD_START: b,
-    UPLOAD_FAIL: y,
-    UPLOAD_CANCEL_REQUEST: y,
-    CHANNEL_UPDATES: I,
-    LOGOUT: T,
+d(T, "displayName", "SlowmodeStore");
+let S = new T(o.Z, {
+    SLOWMODE_RESET_COOLDOWN: y,
+    SLOWMODE_SET_COOLDOWN: O,
+    UPLOAD_START: E,
+    UPLOAD_FAIL: b,
+    UPLOAD_CANCEL_REQUEST: b,
+    CHANNEL_UPDATES: v,
+    LOGOUT: I,
 });

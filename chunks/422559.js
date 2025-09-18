@@ -46,6 +46,7 @@ let o = [
     i.Plq.SEND_VOICE_MESSAGES,
     i.Plq.SEND_POLLS,
     i.Plq.PIN_MESSAGES,
+    i.Plq.BYPASS_SLOWMODE,
     i.Plq.CONNECT,
     i.Plq.SPEAK,
     i.Plq.MUTE_MEMBERS,
@@ -115,6 +116,7 @@ let l = {
     [i.Plq.SEND_POLLS.toString()]: () => a.intl.string(a.t.UMQ7W1),
     [i.Plq.USE_EXTERNAL_APPS.toString()]: () => a.intl.string(a.t.TtA5rK),
     [i.Plq.PIN_MESSAGES.toString()]: () => a.intl.string(a.t.Y5BI39),
+    [i.Plq.BYPASS_SLOWMODE.toString()]: () => a.intl.string(a.t.kqcjeX),
 };
 function c(e) {
     let t = l[e.toString()];
