@@ -1,20 +1,22 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(755721),
-    u = n(481060),
-    d = n(583901),
-    f = n(997945),
-    _ = n(630117),
-    p = n(441319),
-    h = n(981631),
-    m = n(388032),
-    g = n(63224);
-function E(e, t, n) {
+    c = n(704215),
+    u = n(755721),
+    d = n(481060),
+    f = n(583901),
+    _ = n(243778),
+    p = n(997945),
+    h = n(630117),
+    m = n(441319),
+    g = n(921944),
+    E = n(388032),
+    b = n(63224);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +29,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +40,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,58 +57,72 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let v = () => [
-        m.intl.string(m.t.EgWTY2),
-        m.intl.string(m.t.umBn5e),
-        m.intl.string(m.t.dG1wDw),
-        m.intl.string(m.t.SesI4e),
-        m.intl.string(m.t.RnMLvr),
+let T = () => [
+        E.intl.string(E.t.EgWTY2),
+        E.intl.string(E.t.umBn5e),
+        E.intl.string(E.t.dG1wDw),
+        E.intl.string(E.t.SesI4e),
+        E.intl.string(E.t.RnMLvr),
     ],
-    I = () => {
+    S = () => {
         var e;
-        return null != (e = l().sample(v())) ? e : m.intl.string(m.t.EgWTY2);
+        return null != (e = l().sample(T())) ? e : E.intl.string(E.t.EgWTY2);
+    },
+    A = (e, t) => {
+        let [n, r] = (0, _.US)([c.z.HALLOWEEN_APP_ICONS_TRICK_ICON_WEB_BADGE]),
+            [i, a] = (0, _.US)([c.z.HALLOWEEN_APP_ICONS_TREAT_ICON_WEB_BADGE]);
+        return e === p.Ru.TRICK
+            ? [!t && n === c.z.HALLOWEEN_APP_ICONS_TRICK_ICON_WEB_BADGE, () => r(g.L.TAKE_ACTION)]
+            : e === p.Ru.TREAT
+              ? [!t && i === c.z.HALLOWEEN_APP_ICONS_TREAT_ICON_WEB_BADGE, () => a(g.L.TAKE_ACTION)]
+              : [!1, () => {}];
     };
-function T(e) {
-    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: _, locked: m = !1 } = e,
-        [E, y] = i.useState((0, p.aW)(t).name),
-        v = t === f.Ru.PIRATE,
-        T = (0, c.jm)({
-            label: E,
+function C(e) {
+    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: c, locked: _ = !1 } = e,
+        [h, g] = i.useState((0, m.aW)(t).name),
+        E = t === p.Ru.PIRATE,
+        [y, v] = A(t, s),
+        T = i.useCallback(() => {
+            s || (y && v(), null == a || a(t));
+        }, [s, y, v, a, t]),
+        C = (0, u.jm)({
+            label: h,
             isSelected: s,
         });
-    return (0, r.jsx)(u.ua7, {
-        text: E,
-        onTooltipShow: () => v && y(I()),
+    return (0, r.jsx)(d.ua7, {
+        text: h,
+        onTooltipShow: () => E && g(S()),
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: g.appIconSelectionContainer,
+                className: b.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(
-                        u.P3F,
-                        O(b({}, e, T), {
-                            tabIndex: null != l ? l : T.tabIndex,
-                            className: o()(g.appIconSelection, { [g.selected]: s }, n),
-                            onClick: s ? h.dG4 : () => (null == a ? void 0 : a(t)),
-                            children: _,
+                        d.P3F,
+                        I(O({}, e, C), {
+                            tabIndex: null != l ? l : C.tabIndex,
+                            className: o()(b.appIconSelection, { [b.selected]: s }, n),
+                            onClick: T,
+                            children: c,
                         }),
                     ),
-                    s && (0, r.jsx)(d.oK, {}),
-                    m &&
+                    s && (0, r.jsx)(f.oK, {}),
+                    y && (0, r.jsx)("div", { className: b.redCircle }),
+                    _ &&
                         (0, r.jsx)("div", {
-                            className: g.lockedBadgeContainer,
-                            children: (0, r.jsx)(u.mBM, {
-                                className: g.lockedBadge,
+                            className: b.lockedBadgeContainer,
+                            children: (0, r.jsx)(d.mBM, {
+                                className: b.lockedBadge,
                                 color: "currentColor",
                             }),
                         }),
@@ -114,18 +130,18 @@ function T(e) {
             }),
     });
 }
-function S(e) {
+function N(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: o, locked: s } = e;
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(C, {
         onSelect: i ? void 0 : o,
         isSelected: n,
         id: t.id,
-        className: i ? g.disabled : void 0,
+        className: i ? b.disabled : void 0,
         tabIndex: a,
         locked: s,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(h.Z, {
             id: t.id,
-            width: p.M9,
+            width: m.M9,
         }),
     });
 }

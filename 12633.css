@@ -80981,6 +80981,21 @@ div.nagbar_d74ef8 {
     width: 10px
 }
 
+.redCircle__8a3d7 {
+    background-clip: content-box;
+    background-color: var(--red-430);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px var(--background-base-low);
+    cursor: pointer;
+    height: 18px;
+    padding: 1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    z-index: 2
+}
+
 .presets_a00e6e {
     display: flex;
     flex-wrap: wrap;
@@ -89966,7 +89981,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
