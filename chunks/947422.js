@@ -5,7 +5,7 @@ var o = r(667202),
     i = r(481060),
     c = r(388032),
     l = r(76349),
-    s = r(298860);
+    s = r(787068);
 let a = (t) => {
     let { text: e, icon: r, foreground: o } = t;
     return (0, n.jsxs)("div", {
@@ -86,7 +86,7 @@ function u(t) {
             {
                 graphic: {
                     type: "image",
-                    src: s,
+                    src: s.Z,
                 },
                 title: c.intl.string(c.t.UVuXCg),
                 onClose: u,
