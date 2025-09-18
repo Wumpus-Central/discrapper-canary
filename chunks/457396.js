@@ -125,7 +125,7 @@ let K = (e) => {
             eP && ej.push(o.z.CUSTOM_THEMES_PREMIUM_TAB_BADGE));
         let [eA, eZ] = (0, g.US)(ej, void 0, !0);
         eE && ex.push(o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
-            ef && ex.push(o.z.SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_COACHMARK);
+            ef && (0, I.G2)() && ex.push(o.z.SEPTEMBER_2025_MARKETING_MOMENT_NITRO_TAB_COACHMARK);
         let [ew, eL] = (0, g.US)(ex, void 0, !0);
         if (
             (i.useEffect(() => {
