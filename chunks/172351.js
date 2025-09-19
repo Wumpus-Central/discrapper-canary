@@ -1,16 +1,17 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288),
     i = n(647438),
-    a = n(367907),
-    o = n(10718),
-    s = n(69626),
-    l = n(626135),
-    c = n(785717),
-    u = n(678738),
-    d = n(981631),
-    f = n(388032),
-    _ = n(555013);
-function p(e, t, n) {
+    a = n(911969),
+    o = n(367907),
+    s = n(10718),
+    l = n(69626),
+    c = n(626135),
+    u = n(785717),
+    d = n(678738),
+    f = n(981631),
+    _ = n(388032),
+    p = n(555013);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,63 +35,71 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e) {
-    let { applicationId: t, commandIds: n, guildId: p, channel: m, onClick: g } = e,
-        { trackUserProfileAction: E } = (0, c.KZ)(),
-        b = i.useMemo(
+function g(e) {
+    let { applicationId: t, commandIds: n, guildId: h, channel: g, onClick: E } = e,
+        { trackUserProfileAction: b } = (0, u.KZ)(),
+        y = i.useMemo(
             () => ({
-                channel: m,
+                channel: g,
                 type: "channel",
             }),
-            [m],
+            [g],
         ),
-        { commands: y } = o.Qm(b, t, n),
-        O = i.useMemo(
+        { commands: O } = s.Qm(y, t, n),
+        v = i.useMemo(
             () =>
-                null == y
+                null == O
                     ? void 0
-                    : y.filter((e) => {
-                          let { nsfw: t } = e;
-                          return !0 !== t;
+                    : O.filter((e) => {
+                          let { nsfw: t, options: n } = e;
+                          return (
+                              !0 !== t &&
+                              (null == n
+                                  ? void 0
+                                  : n.find((e) => {
+                                        let { type: t } = e;
+                                        return t === a.jw.SUB_COMMAND || t === a.jw.SUB_COMMAND_GROUP;
+                                    })) == null
+                          );
                       }),
-            [y],
+            [O],
         );
-    if (null == O || 0 === O.length) return null;
-    let v = (e) => {
-        null == g || g(),
-            E({ action: "PRESS_APP_COMMAND" }),
-            l.default.track(
-                d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED,
-                h(
+    if (null == v || 0 === v.length) return null;
+    let I = (e) => {
+        null == E || E(),
+            b({ action: "PRESS_APP_COMMAND" }),
+            c.default.track(
+                f.rMx.POPULAR_APPLICATION_COMMAND_CLICKED,
+                m(
                     {
                         application_id: t,
                         command_id: e,
-                        guild_id: p,
+                        guild_id: h,
                     },
-                    (0, a.JS)(m.id),
+                    (0, o.JS)(g.id),
                 ),
             );
     };
-    return (0, r.jsx)(u.Z, {
-        heading: f.intl.string(f.t["0hKkS0"]),
+    return (0, r.jsx)(d.Z, {
+        heading: _.intl.string(_.t["0hKkS0"]),
         children: (0, r.jsx)("ul", {
-            className: _.list,
-            children: O.map((e) =>
+            className: p.list,
+            children: v.map((e) =>
                 (0, r.jsx)(
                     "li",
                     {
-                        children: (0, r.jsx)(s.wz, {
+                        children: (0, r.jsx)(l.wz, {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: v,
-                            guildId: p,
-                            channelId: m.id,
+                            onClick: I,
+                            guildId: h,
+                            channelId: g.id,
                             applicationId: e.applicationId,
                         }),
                     },
