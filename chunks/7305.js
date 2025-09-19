@@ -99,7 +99,7 @@ function U(e) {
         { isGift: F, giftMessage: G, giftRecipient: D } = (0, f.wD)(),
         K = F && (0, h.pO)(D) && H === m.h8.PLAN_SELECT;
     return (0, r.jsx)(v.Z, {
-        isConfirmationStep: H === m.h8.CONFIRM,
+        isConfirmationStep: H === m.h8.CONFIRM && null == B && null == E,
         children: (0, r.jsx)(g.PaymentModal, {
             analyticsLocations: U,
             analyticsLocation: t,
