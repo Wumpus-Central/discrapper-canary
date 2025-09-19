@@ -4025,6 +4025,7 @@ var ng = (function (e) {
             (e.APP_LAUNCHER_PEP_BUTTON_NOT_RENDERED = "app_launcher_pep_button_not_rendered"),
             (e.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED = "embedded_application_invite_embed_viewed"),
             (e.NITRO_TAB_VISITED = "nitro_tab_visited"),
+            (e.NITRO_TAB_BADGE_SHOWN = "nitro_tab_badge_shown"),
             (e.BROWSER_HANDOFF_SUCCEEDED = "browser_handoff_succeeded"),
             (e.SHOW_TUTORIAL = "show_tutorial"),
             (e.CLOSE_TUTORIAL = "close_tutorial"),
@@ -4244,6 +4245,10 @@ var ng = (function (e) {
             (e.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED = "premium_marketing_perks_see_all_clicked"),
             (e.PREMIUM_MARKETING_CAMPAIGN_CLAIM_MODAL_OPEN_ATTEMPTED =
                 "premium_marketing_campaign_claim_modal_open_attempted"),
+            (e.PREMIUM_MARKETING_CAMPAIGN_ENTITLEMENT_CREATED_INGESTED =
+                "premium_marketing_campaign_entitlement_created_ingested"),
+            (e.PREMIUM_MARKETING_CAMPAIGN_REDEMPTION_CARD_CLICKED =
+                "premium_marketing_campaign_redemption_card_clicked"),
             (e.STORE_DIRECTORY_VIEWED = "store_directory_viewed"),
             (e.STORE_DIRECTORY_BROWSE_VIEWED = "store_directory_browse_viewed"),
             (e.STORE_DIRECTORY_FILTER_UPDATED = "store_directory_filter_updated"),

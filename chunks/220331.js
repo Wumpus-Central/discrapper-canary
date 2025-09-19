@@ -1,15 +1,17 @@
-n.d(t, { R: () => s });
+n.d(t, { R: () => c });
 var r = n(951288),
     i = n(159691),
-    a = n(453591),
-    o = n(388032);
-let s = () => {
-    let { redeemReward: e, isLoading: t } = (0, a.h)(),
+    a = n(626135),
+    o = n(453591),
+    s = n(981631),
+    l = n(388032);
+let c = () => {
+    let { redeemReward: e, isLoading: t } = (0, o.h)(),
         n = async () => {
-            await e();
+            a.default.track(s.rMx.PREMIUM_MARKETING_CAMPAIGN_REDEMPTION_CARD_CLICKED, {}), await e();
         };
     return (0, r.jsx)(i.zxk, {
-        text: o.intl.string(o.t["8g3ANT"]),
+        text: l.intl.string(l.t["8g3ANT"]),
         onClick: n,
         fullWidth: !0,
         loading: t,
