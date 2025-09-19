@@ -1,46 +1,97 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => y });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(287734),
     o = n(906732),
-    s = n(359110),
-    l = n(592125),
-    c = n(19780),
-    u = n(979651),
-    d = n(938475),
+    s = n(699263),
+    l = n(359110),
+    c = n(592125),
+    u = n(19780),
+    d = n(979651),
     f = n(626135),
     _ = n(475413),
     p = n(981631),
     h = n(388032);
-function m(e) {
-    let { user: t, activity: n, onAction: m, onClose: g } = e,
-        { newestAnalyticsLocation: E } = (0, o.ZP)(),
-        b = (0, i.e7)([u.Z, l.Z], () => {
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e) {
+    let { user: t, activity: n, onAction: m, onClose: E } = e,
+        { newestAnalyticsLocation: y } = (0, o.ZP)(),
+        O = (0, i.e7)([d.Z, c.Z], () => {
             var e;
-            return l.Z.getChannel(null == (e = u.Z.getVoiceStateForUser(t.id)) ? void 0 : e.channelId);
+            return c.Z.getChannel(null == (e = d.Z.getVoiceStateForUser(t.id)) ? void 0 : e.channelId);
         }),
-        y = (0, i.e7)([c.Z], () => c.Z.getChannelId() === (null == b ? void 0 : b.id));
-    return (null == n ? void 0 : n.type) !== p.IIU.HANG_STATUS || null == b
+        v = (0, i.e7)([u.Z], () => u.Z.getChannelId() === (null == O ? void 0 : O.id));
+    return (null == n ? void 0 : n.type) !== p.IIU.HANG_STATUS || null == O
         ? null
         : (0, r.jsx)(_.tG, {
-              text: y ? h.intl.string(h.t.BXxdl5) : h.intl.string(h.t["9C444u"]),
+              text: v ? h.intl.string(h.t.BXxdl5) : h.intl.string(h.t["9C444u"]),
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation(),
                       null == m || m({ action: "PRESS_HANG_STATUS_BUTTON" }),
-                      a.default.selectVoiceChannel(b.id),
-                      (0, s.Kh)(b.id),
-                      f.default.track(p.rMx.HANG_STATUS_CTA_CLICKED, {
-                          channel_id: b.id,
-                          guild_id: b.guild_id,
-                          source: E,
-                          media_session_id: c.Z.getMediaSessionId(),
-                          call_num_participants: d.ZP.countVoiceStatesForChannel(b.id),
-                          other_user_id: t.id,
-                          cta_type: y ? "open" : "join",
-                      }),
-                      null == g || g();
+                      a.default.selectVoiceChannel(O.id),
+                      (0, l.Kh)(O.id),
+                      f.default.track(
+                          p.rMx.HANG_STATUS_CTA_CLICKED,
+                          b(g({}, (0, s.Z)(O.id)), {
+                              source: y,
+                              other_user_id: t.id,
+                              cta_type: v ? "open" : "join",
+                          }),
+                      ),
+                      null == E || E();
               },
           });
 }

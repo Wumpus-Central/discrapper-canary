@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -6,70 +6,105 @@ var r = n(951288),
     s = n(503438),
     l = n(812206),
     c = n(835473),
-    u = n(741570),
-    d = n(592125),
-    f = n(430824),
-    _ = n(979651),
-    p = n(626135),
-    h = n(409057),
-    m = n(128277),
-    g = n(981631);
-function E(e) {
-    let { user: t, currentUser: n, activity: E, className: b, onClose: y } = e,
-        { voiceGuild: O, voiceChannel: v } = (0, a.cj)([f.Z, _.Z, d.Z], () => {
+    u = n(699263),
+    d = n(741570),
+    f = n(592125),
+    _ = n(430824),
+    p = n(979651),
+    h = n(626135),
+    m = n(409057),
+    g = n(128277),
+    E = n(981631);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                b(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function O(e) {
+    let { user: t, currentUser: n, activity: b, className: O, onClose: v } = e,
+        { voiceGuild: I, voiceChannel: T } = (0, a.cj)([_.Z, p.Z, f.Z], () => {
             var e, n;
-            let r = (0, o.Z)(E);
-            if (!r && (null == E ? void 0 : E.type) !== g.IIU.HANG_STATUS) return {};
+            let r = (0, o.Z)(b);
+            if (!r && (null == b ? void 0 : b.type) !== E.IIU.HANG_STATUS) return {};
             let i = r
-                    ? null == (e = _.Z.getVoiceStateForSession(t.id, null == E ? void 0 : E.session_id))
+                    ? null == (e = p.Z.getVoiceStateForSession(t.id, null == b ? void 0 : b.session_id))
                         ? void 0
                         : e.channelId
-                    : null == (n = _.Z.getVoiceStateForUser(t.id))
+                    : null == (n = p.Z.getVoiceStateForUser(t.id))
                       ? void 0
                       : n.channelId,
-                a = d.Z.getChannel(i);
+                a = f.Z.getChannel(i);
             return {
-                voiceGuild: f.Z.getGuild(null == a ? void 0 : a.getGuildId()),
+                voiceGuild: _.Z.getGuild(null == a ? void 0 : a.getGuildId()),
                 voiceChannel: a,
             };
         }),
-        I = (0, u.E)("UserProfileActivityCardWrapper", v),
-        T = (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS && I ? v : null;
-    (0, c.q)(null == E ? void 0 : E.application_id);
-    let S = (0, a.e7)([l.Z], () =>
-        (null == E ? void 0 : E.application_id) != null
-            ? l.Z.getApplication(E.application_id)
-            : (null == E ? void 0 : E.name) != null
-              ? l.Z.getApplicationByName(E.name)
+        S = (0, d.E)("UserProfileActivityCardWrapper", T),
+        A = (null == b ? void 0 : b.type) === E.IIU.HANG_STATUS && S ? T : null;
+    (0, c.q)(null == b ? void 0 : b.application_id);
+    let C = (0, a.e7)([l.Z], () =>
+        (null == b ? void 0 : b.application_id) != null
+            ? l.Z.getApplication(b.application_id)
+            : (null == b ? void 0 : b.name) != null
+              ? l.Z.getApplicationByName(b.name)
               : null,
     );
     return (i.useEffect(() => {
-        (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS &&
-            I &&
-            p.default.track(g.rMx.VIEW_HANG_STATUS, {
-                source: "UserProfilePopout",
-                guild_id: null == T ? void 0 : T.guild_id,
-                channel_id: null == T ? void 0 : T.id,
-            });
-    }, [null == E ? void 0 : E.type, I, null == T ? void 0 : T.id, null == T ? void 0 : T.guild_id]),
-    (null == E ? void 0 : E.type) !== g.IIU.CUSTOM_STATUS && ((null == E ? void 0 : E.type) !== g.IIU.HANG_STATUS || I))
-        ? (0, s.Z)(E)
-            ? (0, r.jsx)(m.Z, {
+        (null == b ? void 0 : b.type) === E.IIU.HANG_STATUS &&
+            S &&
+            h.default.track(
+                E.rMx.VIEW_HANG_STATUS,
+                y(
+                    {
+                        source: "UserProfilePopout",
+                        other_user_id: t.id,
+                    },
+                    (0, u.Z)(null == A ? void 0 : A.id),
+                ),
+            );
+    }, [null == b ? void 0 : b.type, S, null == A ? void 0 : A.id, t.id]),
+    (null == b ? void 0 : b.type) !== E.IIU.CUSTOM_STATUS && ((null == b ? void 0 : b.type) !== E.IIU.HANG_STATUS || S))
+        ? (0, s.Z)(b)
+            ? (0, r.jsx)(g.Z, {
                   user: t,
                   currentUser: n,
-                  activity: E,
-                  className: b,
-                  onClose: y,
+                  activity: b,
+                  className: O,
+                  onClose: v,
               })
-            : (0, r.jsx)(h.Z, {
+            : (0, r.jsx)(m.Z, {
                   user: t,
                   currentUser: n,
-                  activity: E,
-                  application: S,
-                  voiceGuild: O,
-                  voiceChannel: v,
-                  className: b,
-                  onClose: y,
+                  activity: b,
+                  application: C,
+                  voiceGuild: I,
+                  voiceChannel: T,
+                  className: O,
+                  onClose: v,
               })
         : null;
 }

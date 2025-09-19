@@ -1,4 +1,4 @@
-n.d(t, { I: () => j }), n(388685);
+n.d(t, { I: () => E }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -7,96 +7,138 @@ var r = n(951288),
     s = n(481060),
     c = n(287734),
     u = n(496675),
-    d = n(19780),
-    p = n(944486),
-    h = n(938475),
-    f = n(626135),
-    m = n(906605),
-    g = n(833858),
-    b = n(866071),
-    y = n(223135),
-    _ = n(505905),
-    C = n(981631),
-    v = n(388032),
-    x = n(10359),
-    O = n(254477);
-function j(e) {
-    let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: j } = e,
-        E = i.useRef(null),
-        S = (0, o.e7)([p.Z], () => p.Z.getVoiceChannelId() === n.id),
-        I = (0, o.e7)([u.Z], () => u.Z.can(C.Plq.CONNECT, n)),
-        P = (null == t ? void 0 : t.emoji) == null || (0, b.K)(t.emoji, n),
-        Z = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId());
-    i.useEffect(() => {
-        null == j || j(null == E ? void 0 : E.current);
-    }, [E, j]),
-        i.useEffect(() => {
-            f.default.track(C.rMx.VIEW_HANG_STATUS, {
-                source: "HangStatusPopout",
-                guild_id: n.guild_id,
-                channel_id: n.id,
+    d = n(944486),
+    p = n(626135),
+    h = n(906605),
+    f = n(833858),
+    m = n(866071),
+    g = n(699263),
+    b = n(223135),
+    y = n(505905),
+    _ = n(981631),
+    C = n(388032),
+    v = n(10359),
+    x = n(254477);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
-        }, [n.guild_id, n.id]);
+    }
+    return e;
+}
+function j(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function E(e) {
+    let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: E } = e,
+        S = i.useRef(null),
+        I = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId() === n.id),
+        P = (0, o.e7)([u.Z], () => u.Z.can(_.Plq.CONNECT, n)),
+        Z = (null == t ? void 0 : t.emoji) == null || (0, m.K)(t.emoji, n);
+    i.useEffect(() => {
+        null == E || E(null == S ? void 0 : S.current);
+    }, [S, E]),
+        i.useEffect(() => {
+            p.default.track(
+                _.rMx.VIEW_HANG_STATUS,
+                O(
+                    {
+                        source: "HangStatusPopout",
+                        other_user_id: l,
+                    },
+                    (0, g.Z)(n.id),
+                ),
+            );
+        }, [n.guild_id, n.id, l]);
     let T = i.useCallback(() => {
-            !S &&
-                I &&
+            !I &&
+                P &&
                 (c.default.selectVoiceChannel(n.id),
-                f.default.track(C.rMx.HANG_STATUS_CTA_CLICKED, {
-                    source: "HangStatusPopout",
-                    guild_id: n.guild_id,
-                    channel_id: n.id,
-                    media_session_id: Z,
-                    call_num_participants: h.ZP.countVoiceStatesForChannel(n.id),
-                    other_user_id: l,
-                    cta_type: "join",
-                }));
-        }, [S, I, n.guild_id, n.id, l, Z]),
+                p.default.track(
+                    _.rMx.HANG_STATUS_CTA_CLICKED,
+                    j(O({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                        other_user_id: l,
+                        cta_type: "join",
+                    }),
+                ));
+        }, [I, P, n.id, l]),
         N = i.useCallback(() => {
-            if (!S || !P || null == t.state) return;
-            let [e] = (0, g.Fe)(t.state);
+            if (!I || !Z || null == t.state) return;
+            let [e] = (0, f.Fe)(t.state);
             if (null != e) {
-                if (e === _.tN.CUSTOM) {
+                if (e === y.tN.CUSTOM) {
                     if (null == t.details || null == t.emoji) return;
-                    (0, m._s)(t.details, t.emoji, !0);
-                } else (0, m.Zx)(e, !0);
-                f.default.track(C.rMx.HANG_STATUS_CTA_CLICKED, {
-                    source: "HangStatusPopout",
-                    guild_id: n.guild_id,
-                    channel_id: n.id,
-                    media_session_id: Z,
-                    call_num_participants: h.ZP.countVoiceStatesForChannel(n.id),
-                    other_user_id: l,
-                    cta_type: "swipe",
-                });
+                    (0, h._s)(t.details, t.emoji, !0);
+                } else (0, h.Zx)(e, !0);
+                p.default.track(
+                    _.rMx.HANG_STATUS_CTA_CLICKED,
+                    j(O({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                        other_user_id: l,
+                        cta_type: "swipe",
+                    }),
+                );
             }
-        }, [S, P, t, Z, n.guild_id, n.id, l]);
+        }, [I, Z, t, n.id, l]);
     return (0, r.jsxs)("div", {
-        ref: E,
-        className: a()(O.popover, x.container),
+        ref: S,
+        className: a()(x.popover, v.container),
         children: [
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(b.Z, {
                 size: 32,
-                className: x.icon,
+                className: v.icon,
                 hangStatusActivity: t,
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
-                className: x.statusText,
-                children: (0, g.O8)(t),
+                className: v.statusText,
+                children: (0, f.O8)(t),
             }),
-            S
-                ? P &&
+            I
+                ? Z &&
                   (0, r.jsx)(s.zxk, {
                       size: "sm",
                       variant: "secondary",
-                      text: v.intl.string(v.t["0eHzpq"]),
+                      text: C.intl.string(C.t["0eHzpq"]),
                       onClick: N,
                   })
-                : I &&
+                : P &&
                   (0, r.jsx)(s.zxk, {
                       size: "sm",
                       variant: "secondary",
-                      text: v.intl.string(v.t["B/dHXF"]),
+                      text: C.intl.string(C.t["B/dHXF"]),
                       onClick: T,
                   }),
         ],

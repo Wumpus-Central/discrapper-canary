@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => N,
-    Z: () => R,
+    P: () => R,
+    Z: () => P,
 });
 var r = n(951288),
     i = n(647438),
@@ -9,17 +9,18 @@ var r = n(951288),
     s = n(387903),
     l = n(850827),
     c = n(812206),
-    u = n(741570),
-    d = n(952164),
-    f = n(199902),
-    _ = n(592125),
-    p = n(430824),
-    h = n(979651),
-    m = n(626135),
-    g = n(153066),
-    E = n(981631),
-    b = n(855364);
-function y(e, t, n) {
+    u = n(699263),
+    d = n(741570),
+    f = n(952164),
+    _ = n(199902),
+    p = n(592125),
+    h = n(430824),
+    m = n(979651),
+    g = n(626135),
+    E = n(153066),
+    b = n(981631),
+    y = n(855364);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +44,12 @@ function O(e) {
                 }),
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,22 +61,22 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +84,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,10 +93,10 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function A(e) {
+function C(e) {
     let { type: t, source: n, activity: i, applicationStream: a, user: o, guildId: s, channelId: c, onAction: u } = e;
     return (0, r.jsx)(l.Z, {
-        className: (0, g.l)(b, "actions", t),
+        className: (0, E.l)(y, "actions", t),
         type: t,
         source: n,
         activity: i,
@@ -107,84 +108,89 @@ function A(e) {
         onAction: u,
     });
 }
-function C(e) {
+function N(e) {
     var {
             activity: t,
             user: n,
             useStoreStream: l = !0,
-            showActions: g = !0,
-            hideHeader: b = !1,
-            showChannelDetails: y = !1,
+            showActions: E = !0,
+            hideHeader: y = !1,
+            showChannelDetails: O = !1,
         } = e,
-        v = T(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
-    let S = (0, a.e7)([h.Z, _.Z], () => {
+        I = S(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
+    let A = (0, a.e7)([m.Z, p.Z], () => {
             var e;
-            return _.Z.getChannel(null == (e = h.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
+            return p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
         }),
-        C = (0, u.E)("UserActivityContainer", S),
-        N = (0, a.e7)([f.Z], () => (l ? f.Z.getAnyStreamForUser(n.id) : null)),
-        R = (null == t ? void 0 : t.type) === E.IIU.HANG_STATUS && C ? S : null,
-        P = (0, a.e7)([p.Z, h.Z, _.Z], () => {
+        N = (0, d.E)("UserActivityContainer", A),
+        R = (0, a.e7)([_.Z], () => (l ? _.Z.getAnyStreamForUser(n.id) : null)),
+        P = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? A : null,
+        w = (0, a.e7)([h.Z, m.Z, p.Z], () => {
             var e, r;
-            return (0, o.Z)(t, E.xjy.EMBEDDED)
-                ? p.Z.getGuild(
+            return (0, o.Z)(t, b.xjy.EMBEDDED)
+                ? h.Z.getGuild(
                       null ==
-                          (e = _.Z.getChannel(
-                              null == (r = h.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id))
+                          (e = p.Z.getChannel(
+                              null == (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id))
                                   ? void 0
                                   : r.channelId,
                           ))
                           ? void 0
                           : e.getGuildId(),
                   )
-                : null != R
-                  ? p.Z.getGuild(R.getGuildId())
+                : null != P
+                  ? h.Z.getGuild(P.getGuildId())
                   : null;
         }),
-        w = (0, a.e7)([p.Z], () => (null != N ? p.Z.getGuild(N.guildId) : null)),
-        D = (0, a.e7)([c.Z], () => {
+        D = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
+        x = (0, a.e7)([c.Z], () => {
             if (null != t)
                 if (null != t.application_id) return c.Z.getApplication(t.application_id);
                 else return c.Z.getApplicationByName(t.name);
             return null;
         });
     return (i.useEffect(() => {
-        (null == t ? void 0 : t.type) === E.IIU.HANG_STATUS &&
-            C &&
-            m.default.track(E.rMx.VIEW_HANG_STATUS, {
-                source: "UserActivity",
-                guild_id: null == R ? void 0 : R.guild_id,
-                channel_id: null == R ? void 0 : R.id,
-            });
-    }, [null == t ? void 0 : t.type, C, R]),
-    (null == t ? void 0 : t.type) !== E.IIU.HANG_STATUS || C)
+        (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS &&
+            N &&
+            g.default.track(
+                b.rMx.VIEW_HANG_STATUS,
+                v(
+                    {
+                        source: "UserActivity",
+                        other_user_id: n.id,
+                    },
+                    (0, u.Z)(null == P ? void 0 : P.id),
+                ),
+            );
+    }, [null == t ? void 0 : t.type, N, P, n.id]),
+    (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || N)
         ? (0, r.jsx)(
               s.Z,
-              I(O({}, v), {
+              T(v({}, I), {
                   activity: t,
                   user: n,
-                  application: D,
-                  hideHeader: b,
-                  activityGuild: null != P ? P : w,
-                  showChannelDetails: y,
-                  channel: y ? S : void 0,
-                  renderActions: g
+                  application: x,
+                  hideHeader: y,
+                  activityGuild: null != w ? w : D,
+                  showChannelDetails: O,
+                  channel: O ? A : void 0,
+                  renderActions: E
                       ? () =>
                             (0, r.jsx)(
-                                A,
-                                I(O({}, v), {
-                                    applicationStream: N,
+                                C,
+                                T(v({}, I), {
+                                    applicationStream: R,
                                     activity: t,
                                     user: n,
                                 }),
                             )
                       : null,
-                  onOpenSpotifyTrack: d.aG,
-                  onOpenSpotifyArtist: d.d$,
-                  onOpenSpotifyAlbum: d.Z5,
+                  onOpenSpotifyTrack: f.aG,
+                  onOpenSpotifyArtist: f.d$,
+                  onOpenSpotifyAlbum: f.Z5,
               }),
           )
         : null;
 }
-let N = s.Z.Types,
-    R = C;
+let R = s.Z.Types,
+    P = N;
