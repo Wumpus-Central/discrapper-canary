@@ -27,6 +27,7 @@ function p(e, t, n) {
         t.hasFlag(c.iLy.EPHEMERAL) !== n.hasFlag(c.iLy.EPHEMERAL) ||
         (null != n.webhookId && t.author.username !== n.author.username) ||
         ((null == e ? void 0 : e.isForumPost()) && t.id === a.default.castChannelIdAsMessageId(e.id)) ||
+        !(0, i.KC)(t.timestamp, n.timestamp) ||
         !(0, i._w)(t.timestamp, n.timestamp, u) ||
         (n.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) && !t.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS)) ||
         (t.hasFlag(c.iLy.SUPPRESS_NOTIFICATIONS) &&
