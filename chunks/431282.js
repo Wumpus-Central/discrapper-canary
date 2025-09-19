@@ -1,20 +1,17 @@
 n.d(t, {
-    V4: () => b,
-    XE: () => y,
-    gp: () => O,
+    V4: () => h,
+    XE: () => m,
+    gp: () => p,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(25441),
-    o = n(91192),
-    s = n(657707),
-    l = n(755721),
-    c = n(481060),
-    u = n(209613),
-    d = n(475413),
-    f = n(54482);
-function _(e, t, n) {
+    a = n(657707),
+    o = n(481060),
+    s = n(732380),
+    l = n(388032),
+    c = n(54482);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +35,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,133 +52,23 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = E(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function E(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function b(e) {
-    var { id: t, label: n, sublabel: u, icon: _, hint: h, renderSubmenu: E } = e,
-        b = g(e, ["id", "label", "sublabel", "icon", "hint", "renderSubmenu"]);
-    let y = (0, o.JA)(t),
-        { onFocus: O } = y,
-        v = g(y, ["onFocus"]),
-        { id: I } = (0, o.f$)(),
-        T = i.useRef(null),
-        [S, A] = i.useState(!1),
-        C = null != E;
-    i.useLayoutEffect(() => {
-        if (C)
-            return (0, a.N)(I, (e) => {
-                A(e === t);
-            });
-    }, [t, I, C]);
-    let N = (e) =>
-        (0, r.jsxs)(
-            d.kF,
-            m(p({}, e, v, b), {
-                ref: T,
-                role: "button",
-                look: l.zx.Looks.BLANK,
-                size: l.zx.Sizes.NONE,
-                innerClassName: f.menuItemInner,
-                color: f.menuItemColor,
-                themeColor: "none",
-                fullWidth: !0,
-                onMouseEnter: () => {
-                    var t;
-                    null == e || null == (t = e.onMouseEnter) || t.call(e), O();
-                },
-                children: [
-                    (0, r.jsx)("div", {
-                        className: f.menuItemIcon,
-                        children: (0, r.jsx)(_, {
-                            size: "xs",
-                            color: "currentColor",
-                        }),
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: f.menuItemLabel,
-                        children: [
-                            (0, r.jsxs)("div", {
-                                children: [n, u],
-                            }),
-                            h,
-                        ],
-                    }),
-                    C &&
-                        (0, r.jsx)(s.Fbu, {
-                            size: "xs",
-                            color: "currentColor",
-                        }),
-                ],
-            }),
-        );
-    return C
-        ? (0, r.jsx)(c.yRy, {
-              targetElementRef: T,
-              spacing: 0,
-              renderPopout: E,
-              shouldShow: S,
-              onRequestClose: () => A(!0),
-              children: N,
-          })
-        : N();
-}
-function y(e) {
-    let { id: t, children: n } = e,
-        i = (0, u.Z)(t);
-    return (0, r.jsx)(o.bG, {
-        navigator: i,
-        children: (0, r.jsx)(o.SJ, {
-            children: (e) => {
-                var { ref: t } = e,
-                    a = g(e, ["ref"]);
-                return (0, r.jsx)(
-                    "div",
-                    m(p({}, a), {
-                        ref: t,
-                        onMouseLeave: () => i.setFocus(null),
-                        children: n,
-                    }),
-                );
-            },
-        }),
-    });
-}
-function O(e) {
+function p(e) {
     return (0, r.jsx)("div", {
-        className: f.submenuPaddingContainer,
+        className: c.submenuPaddingContainer,
         children: (0, r.jsx)(
-            c.v2r,
-            p(
+            o.v2r,
+            d(
                 {
                     variant: "fixed",
                     hideScroller: !0,
@@ -190,5 +77,154 @@ function O(e) {
                 e,
             ),
         ),
+    });
+}
+function h(e) {
+    let { action: t, onClick: n, icon: u, label: f, sublabel: p, trailing: h, renderSubmenu: m } = e,
+        g = null != n,
+        E = (0, s.Q1)({
+            action: t,
+            onClick: n,
+        }),
+        [b, y] = i.useState(!1),
+        O = i.useRef(null),
+        v = null != m,
+        I = v && g,
+        T = {
+            offset: {
+                top: -8,
+                left: -8,
+                right: -8,
+                bottom: -8,
+            },
+        },
+        S = i.useCallback(() => {
+            y(!0);
+        }, []),
+        A = i.useCallback(() => {
+            y(!1);
+        }, []),
+        C = () =>
+            (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)("div", {
+                        className: c.menuItemIcon,
+                        children: (0, r.jsx)(u, {
+                            size: "xs",
+                            color: "currentColor",
+                        }),
+                    }),
+                    (0, r.jsxs)("div", {
+                        className: c.menuItemLabel,
+                        children: [
+                            (0, r.jsxs)("div", {
+                                children: [
+                                    (0, r.jsx)(o.Text, {
+                                        color: "currentColor",
+                                        variant: "text-sm/medium",
+                                        className: c.menuItemLabelText,
+                                        children: f,
+                                    }),
+                                    (0, r.jsx)(o.Text, {
+                                        color: "currentColor",
+                                        variant: "text-xs/medium",
+                                        children: p,
+                                    }),
+                                ],
+                            }),
+                            h,
+                        ],
+                    }),
+                ],
+            }),
+        N = (e) => {
+            let t;
+            return (
+                (t = I
+                    ? (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)(o.P3F, {
+                                  className: c.menuItemContent,
+                                  onClick: E,
+                                  focusProps: { offset: _(d({}, T.offset), { right: 0 }) },
+                                  children: C(),
+                              }),
+                              (0, r.jsx)(
+                                  o.P3F,
+                                  _(
+                                      d(
+                                          {
+                                              className: c.submenuIconWrapper,
+                                              "aria-label": l.intl.string(l.t.PdRCRk),
+                                          },
+                                          e,
+                                      ),
+                                      {
+                                          onClick: S,
+                                          focusProps: T,
+                                          children: (0, r.jsx)(a.Fbu, {
+                                              size: "xs",
+                                              color: "currentColor",
+                                          }),
+                                      },
+                                  ),
+                              ),
+                          ],
+                      })
+                    : v
+                      ? (0, r.jsxs)(
+                            o.P3F,
+                            _(d({ className: c.menuItemContent }, e), {
+                                onClick: S,
+                                focusProps: T,
+                                children: [
+                                    C(),
+                                    (0, r.jsx)("div", {
+                                        className: c.submenuIconWrapper,
+                                        children: (0, r.jsx)(a.Fbu, {
+                                            size: "xs",
+                                            color: "currentColor",
+                                        }),
+                                    }),
+                                ],
+                            }),
+                        )
+                      : (0, r.jsx)(o.P3F, {
+                            className: c.menuItemContent,
+                            onClick: E,
+                            focusProps: T,
+                            children: C(),
+                        })),
+                (0, r.jsx)("div", {
+                    ref: O,
+                    className: c.menuItemInner,
+                    children: t,
+                })
+            );
+        };
+    return v
+        ? (0, r.jsx)("li", {
+              className: c.menuItem,
+              onMouseEnter: S,
+              onMouseLeave: A,
+              children: (0, r.jsx)(o.yRy, {
+                  targetElementRef: O,
+                  spacing: 0,
+                  renderPopout: m,
+                  shouldShow: b,
+                  onRequestClose: A,
+                  children: N,
+              }),
+          })
+        : (0, r.jsx)("li", {
+              className: c.menuItem,
+              children: N(),
+          });
+}
+function m(e) {
+    let { children: t, "aria-label": n } = e;
+    return (0, r.jsx)("ul", {
+        "aria-label": n,
+        children: t,
     });
 }
