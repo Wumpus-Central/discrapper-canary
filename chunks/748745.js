@@ -1,137 +1,130 @@
 t.d(n, { Z: () => b });
-var r = t(951288);
-t(647438);
-var i = t(120356),
-    a = t.n(i),
-    l = t(442837),
-    o = t(755721),
-    s = t(481060),
-    c = t(838968),
-    d = t(880419),
-    u = t(693587),
-    m = t(967647),
-    g = t(989308),
-    f = t(388032),
-    p = t(362320),
-    v = t(961820);
-function x(e) {
-    var n, t, i, c, x, b;
-    let { guildId: j, gameInstance: h } = e,
-        _ = (0, l.e7)([u.Z], () => {
-            var e;
-            return null == (e = u.Z.getStateForGuild(j)) ? void 0 : e.entitlements;
-        }),
-        C =
-            null !=
-            (b =
-                null == _ ||
-                null == (x = _[h.entitlementId]) ||
-                null == (c = x.sku) ||
-                null == (i = c.tenant_metadata) ||
-                null == (t = i.guild_monetization) ||
-                null == (n = t.game_server)
-                    ? void 0
-                    : n.boost_price)
-                ? b
-                : 0;
-    return 0 === C
-        ? null
-        : (0, r.jsx)(s.ua7, {
-              "aria-label": f.intl.string(g.default.TZsu1d),
-              text: (0, r.jsx)(d.Po, { cost: C }),
-              children: (e) => {
-                  var n, t;
-                  return (0, r.jsx)(
-                      o.zx,
-                      ((n = (function (e) {
-                          for (var n = 1; n < arguments.length; n++) {
-                              var t = null != arguments[n] ? arguments[n] : {},
-                                  r = Object.keys(t);
-                              "function" == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
-                                      Object.getOwnPropertySymbols(t).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                                      }),
-                                  )),
-                                  r.forEach(function (n) {
-                                      var r;
-                                      (r = t[n]),
-                                          n in e
-                                              ? Object.defineProperty(e, n, {
-                                                    value: r,
-                                                    enumerable: !0,
-                                                    configurable: !0,
-                                                    writable: !0,
-                                                })
-                                              : (e[n] = r);
-                                  });
+var i = t(951288),
+    r = t(647438),
+    l = t(120356),
+    a = t.n(l),
+    o = t(442837),
+    s = t(755721),
+    c = t(481060),
+    d = t(838968),
+    u = t(880419),
+    m = t(693587),
+    g = t(967647),
+    f = t(989308),
+    p = t(388032),
+    v = t(362320),
+    x = t(961820);
+function j(e) {
+    let { guildId: n, gameInstance: t, cost: r } = e;
+    return (0, i.jsx)(c.ua7, {
+        "aria-label": p.intl.string(f.default.TZsu1d),
+        text: (0, i.jsx)(u.Po, { cost: r }),
+        children: (e) => {
+            var l, o;
+            return (0, i.jsx)(
+                s.zx,
+                ((l = (function (e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = null != arguments[n] ? arguments[n] : {},
+                            i = Object.keys(t);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (i = i.concat(
+                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                                }),
+                            )),
+                            i.forEach(function (n) {
+                                var i;
+                                (i = t[n]),
+                                    n in e
+                                        ? Object.defineProperty(e, n, {
+                                              value: i,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[n] = i);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (o = o =
+                    {
+                        className: a()(v.secondaryButton, x.disableButton),
+                        innerClassName: v.buttonInner,
+                        wrapperClassName: v.secondaryButton,
+                        color: s.Tt.PRIMARY,
+                        "aria-label": p.intl.string(f.default.TZsu1d),
+                        onClick: (e) => {
+                            e.stopPropagation(), (0, g.Q)(n, t);
+                        },
+                        children: (0, i.jsx)(u.RD, {
+                            cost: r,
+                            isActive: !0,
+                            compact: !0,
+                        }),
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                    : (function (e, n) {
+                          var t = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var i = Object.getOwnPropertySymbols(e);
+                              t.push.apply(t, i);
                           }
-                          return e;
-                      })({}, e)),
-                      (t = t =
-                          {
-                              className: a()(p.secondaryButton, v.disableButton),
-                              innerClassName: p.buttonInner,
-                              wrapperClassName: p.secondaryButton,
-                              color: o.Tt.PRIMARY,
-                              "aria-label": f.intl.string(g.default.TZsu1d),
-                              onClick: (e) => {
-                                  e.stopPropagation(), (0, m.Q)(j, h);
-                              },
-                              children: (0, r.jsx)(d.RD, {
-                                  cost: C,
-                                  isActive: !0,
-                                  compact: !0,
-                              }),
-                          }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
-                          : (function (e, n) {
-                                var t = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    t.push.apply(t, r);
-                                }
-                                return t;
-                            })(Object(t)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
-                            }),
-                      n),
-                  );
-              },
-          });
+                          return t;
+                      })(Object(o)).forEach(function (e) {
+                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                      }),
+                l),
+            );
+        },
+    });
 }
 function b(e) {
-    let { guildId: n, gameInstance: t, onClick: i } = e,
-        a = (0, l.e7)([u.Z], () => {
+    var n, t, l, a;
+    let { guildId: s, gameInstance: u, onClick: g } = e,
+        v = (0, o.e7)([m.Z], () => m.Z.getStateForGuild(s)),
+        b = r.useMemo(() => {
             var e;
-            return null == (e = u.Z.getStateForGuild(n)) ? void 0 : e.entitlements[t.entitlementId];
-        }),
-        o = (null == a ? void 0 : a.ends_at) != null;
-    return (0, r.jsxs)(s.P3F, {
-        className: v.game,
-        onClick: () => i(t),
-        children: [
-            (0, r.jsx)("img", {
-                className: v.image,
-                alt: "",
-            }),
-            (0, r.jsxs)("div", {
-                className: v.textContainer,
-                children: [
-                    (0, r.jsx)(s.X6q, {
-                        variant: "heading-sm/semibold",
-                        children: t.name,
-                    }),
-                    o
-                        ? (0, r.jsx)(c.rL, { dateString: a.ends_at })
-                        : (0, r.jsx)(c.P2, { text: f.intl.string(g.default.FFLkm5) }),
-                ],
-            }),
-            (0, r.jsx)(x, {
-                guildId: n,
-                gameInstance: t,
-            }),
-        ],
-    });
+            return null == v || null == (e = v.entitlements) ? void 0 : e[u.entitlementId];
+        }, [null == v ? void 0 : v.entitlements, u.entitlementId]),
+        h = (null == b ? void 0 : b.ends_at) != null,
+        _ =
+            null == b ||
+            null == (a = b.sku) ||
+            null == (l = a.tenant_metadata) ||
+            null == (t = l.guild_monetization) ||
+            null == (n = t.game_server)
+                ? void 0
+                : n.boost_price;
+    return null == _
+        ? null
+        : (0, i.jsxs)(c.P3F, {
+              className: x.game,
+              onClick: () => g(u),
+              children: [
+                  (0, i.jsx)("img", {
+                      className: x.image,
+                      alt: "",
+                  }),
+                  (0, i.jsxs)("div", {
+                      className: x.textContainer,
+                      children: [
+                          (0, i.jsx)(c.X6q, {
+                              variant: "heading-sm/semibold",
+                              children: u.name,
+                          }),
+                          h
+                              ? (0, i.jsx)(d.rL, { dateString: b.ends_at })
+                              : (0, i.jsx)(d.P2, { text: p.intl.string(f.default.FFLkm5) }),
+                      ],
+                  }),
+                  (0, i.jsx)(j, {
+                      guildId: s,
+                      gameInstance: u,
+                      cost: _,
+                  }),
+              ],
+          });
 }

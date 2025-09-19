@@ -1,5 +1,6 @@
 e.exports = {
     container: "container__8303d",
+    spinnerContainer: "spinnerContainer__8303d",
     contentContainer: "contentContainer__8303d",
     settingsContainer: "settingsContainer__8303d",
     sectionContainer: "sectionContainer__8303d",
