@@ -10,6 +10,7 @@ n.d(t, {
     Yo: () => d,
     aq: () => I,
     dj: () => f,
+    eV: () => C,
     hS: () => h,
     lj: () => v,
     mB: () => m,
@@ -256,4 +257,13 @@ let T = (0, i.le)({
 });
 function S(e) {
     return T.getConfig({ location: e });
+}
+let A = (0, i.le)({
+    name: "2025-09-overlay-default-keybind",
+    kind: "user",
+    defaultConfig: { keybindOverride: void 0 },
+    variations: { 1: { keybindOverride: "alt+a" } },
+});
+function C(e) {
+    return A.getConfig({ location: e });
 }

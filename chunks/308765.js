@@ -318,6 +318,11 @@ let i = {
         inlineRequire: () => n(556809).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
+    OverlayKeybindExperimentManager: {
+        actions: ["OVERLAY_READY", "KEYBINDS_SET_KEYBIND"],
+        inlineRequire: () => n(991186).Z,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     ParticipantFocusManager: {
         inlineRequire: () => n(14516).Z,
         hasStoreChangeListeners: !0,
@@ -414,7 +419,7 @@ let i = {
     },
     UrgentSystemDMManagerBase: {
         actions: ["POST_CONNECTION_OPEN", "MESSAGE_CREATE", "CHANNEL_SELECT"],
-        inlineRequire: () => n(559523).Z,
+        inlineRequire: () => n(808325).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
     UserGuildSettingsManager: {
