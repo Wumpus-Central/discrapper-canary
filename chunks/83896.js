@@ -127,12 +127,21 @@ function E(e) {
                 children: (0, f.O8)(t),
             }),
             I
-                ? Z &&
-                  (0, r.jsx)(s.zxk, {
-                      size: "sm",
-                      variant: "secondary",
-                      text: C.intl.string(C.t["0eHzpq"]),
-                      onClick: N,
+                ? (0, r.jsx)(s.ua7, {
+                      text: Z ? void 0 : C.intl.string(C.t["0LMpW1"]),
+                      children: (e) =>
+                          (0, r.jsx)(
+                              "div",
+                              j(O({}, e), {
+                                  children: (0, r.jsx)(s.zxk, {
+                                      size: "sm",
+                                      variant: "secondary",
+                                      text: C.intl.string(C.t["0eHzpq"]),
+                                      onClick: N,
+                                      disabled: !Z,
+                                  }),
+                              }),
+                          ),
                   })
                 : P &&
                   (0, r.jsx)(s.zxk, {
