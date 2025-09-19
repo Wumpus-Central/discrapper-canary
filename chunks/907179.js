@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(951288),
-    i = n(755721),
-    a = n(475413),
-    o = n(388032);
-function s(e) {
-    let { isBlocked: t, onClick: n, size: s = i.Ph.SMALL } = e;
-    return (0, r.jsx)(a.tG, {
-        size: s,
+    i = n(732380),
+    a = n(388032);
+function o(e) {
+    let { isBlocked: t, onClick: n, size: o = "sm" } = e;
+    return (0, r.jsx)(i.O1, {
+        size: o,
         action: t ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        text: o.intl.string(o.t["UJKH/v"]),
+        text: a.intl.string(a.t["UJKH/v"]),
+        variant: "primary",
         autoFocus: !0,
         fullWidth: !1,
         onClick: n,
