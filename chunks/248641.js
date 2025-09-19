@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(953529);
+n.d(t, { Z: () => E }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     o = n(120356),
@@ -7,79 +7,89 @@ var r = n(951288),
     s = n(442837),
     c = n(481060),
     u = n(100527),
-    d = n(838968),
-    p = n(279475),
-    f = n(693587),
-    m = n(809741),
-    g = n(989308),
-    v = n(401561),
-    x = n(388032),
-    _ = n(237522),
-    b = n(922434),
-    h = n(530045),
-    j = n(517862);
-function C(e) {
+    d = n(19394),
+    p = n(838968),
+    f = n(279475),
+    m = n(693587),
+    g = n(809741),
+    v = n(989308),
+    x = n(401561),
+    _ = n(388032),
+    b = n(237522),
+    h = n(922434),
+    j = n(530045),
+    C = n(517862);
+function E(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([f.Z], () => f.Z.getStateForGuild(t)),
+        n = (0, s.e7)([m.Z], () => m.Z.getStateForGuild(t)),
         o = i.useMemo(() => {
-            if ((null == n ? void 0 : n.instances) != null && 0 !== Object.keys(n.instances).length)
-                return {
-                    type: "active",
-                    statusText: x.intl.string(g.default.FFLkm5),
-                };
-        }, [null == n ? void 0 : n.instances]),
-        C = (0, p.d)((null == o ? void 0 : o.type) === "active"),
-        E = i.useMemo(() => {
+            var e;
+            let t = Object.values(null != (e = null == n ? void 0 : n.entitlements) ? e : {});
+            if (0 === t.length) return;
+            let r = (0, d.h)(t);
+            return r.length > 0
+                ? {
+                      type: "expiring",
+                      expiringAt: r[0].ends_at,
+                  }
+                : {
+                      type: "active",
+                      statusText: _.intl.string(v.default.FFLkm5),
+                  };
+        }, [null == n ? void 0 : n.entitlements]),
+        E = (0, f.d)((null == o ? void 0 : o.type) === "active"),
+        I = i.useMemo(() => {
             if ((null == n ? void 0 : n.catalog) == null) return 0;
             let e = Object.values(n.catalog);
             return 0 === e.length ? 0 : Math.min(...e.map((e) => e.baseCost));
         }, [null == n ? void 0 : n.catalog]);
     return null == n
         ? null
-        : (0, r.jsxs)(d.aB, {
-              label: x.intl.string(v.default["fjt/vr"]),
+        : (0, r.jsxs)(p.aB, {
+              label: _.intl.string(x.default["fjt/vr"]),
               badge: "beta",
               isActive: (null == o ? void 0 : o.type) === "active",
+              isWarning: (null == o ? void 0 : o.type) === "expiring",
               onClick: () =>
-                  (0, m.Z)({
+                  (0, g.Z)({
                       guildId: t,
                       analyticsLocation: u.Z.GUILD_POWERUPS_OVERVIEW,
                   }),
               children: [
                   (0, r.jsxs)("div", {
-                      className: h.imageContainer,
+                      className: j.imageContainer,
                       children: [
                           (0, r.jsx)("img", {
-                              className: l()(b.background, _.image, h.image),
-                              src: j.Z,
+                              className: l()(h.background, b.image, j.image),
+                              src: C.Z,
                               alt: "",
                           }),
-                          (0, r.jsx)("div", { className: l()(_.image, h.gradient) }),
+                          (0, r.jsx)("div", { className: l()(b.image, j.gradient) }),
                       ],
                   }),
-                  (0, r.jsx)(d.Q9, {
-                      title: x.intl.string(v.default["fjt/vr"]),
-                      textColor: C,
-                      footer: (0, r.jsx)(d.uf, {
-                          cost: E,
+                  (0, r.jsx)(p.Q9, {
+                      title: _.intl.string(x.default["fjt/vr"]),
+                      textColor: E,
+                      footer: (0, r.jsx)(p.uf, {
+                          cost: I,
                           costDecorator: "+",
                           status: o,
                       }),
                       children: (0, r.jsx)(a.xvT, {
-                          className: _.description,
-                          color: C,
+                          className: b.description,
+                          color: E,
                           variant: "text-sm/medium",
-                          children: x.intl.string(v.default.P7VSCg),
+                          children: _.intl.string(x.default.P7VSCg),
                       }),
                   }),
-                  (0, r.jsx)(d.N4, {
+                  (0, r.jsx)(p.N4, {
                       children: (0, r.jsx)(c.zxk, {
                           variant: "primary",
                           fullWidth: !0,
-                          text: x.intl.string(v.default.MbdLuL),
+                          text: _.intl.string(x.default.MbdLuL),
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  (0, m.Z)({
+                                  (0, g.Z)({
                                       guildId: t,
                                       analyticsLocation: u.Z.GUILD_POWERUPS_OVERVIEW,
                                   });

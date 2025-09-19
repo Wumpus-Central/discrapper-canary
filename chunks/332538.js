@@ -1,5 +1,5 @@
 n.d(t, {
-    Wj: () => w,
+    Wj: () => Z,
     ZP: () => N,
 }),
     n(388685),
@@ -15,16 +15,16 @@ var r = n(951288),
     u = n(605236),
     d = n(243778),
     p = n(645041),
-    h = n(430824),
-    f = n(823379),
+    f = n(430824),
+    h = n(823379),
     g = n(267642),
     m = n(713081),
     b = n(608949),
     O = n(905128),
     y = n(326660),
     _ = n(901005),
-    j = n(158638),
-    v = n(10765),
+    v = n(158638),
+    j = n(10765),
     x = n(317169),
     C = n(19394),
     E = n(385902),
@@ -47,11 +47,11 @@ function N(e) {
                         showUnread: !1,
                     };
                 let { unlockedPowerups: a } = t,
-                    u = (0, C.h)(a),
+                    u = (0, C.h)(Object.values(a)),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
-                    h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
-                    f = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
-                return (u.length > 0 && d < h) || p
+                    f = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
+                    h = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
+                return (u.length > 0 && d < f) || p
                     ? {
                           trailing: (0, r.jsx)(s.Mgn, {
                               color: s.TVs.colors.STATUS_WARNING,
@@ -59,10 +59,10 @@ function N(e) {
                           }),
                           showUnread: !0,
                       }
-                    : l !== f && l - f > 0
+                    : l !== h && l - h > 0
                       ? {
                             trailing: (0, r.jsx)(s.mAB, {
-                                count: l - f,
+                                count: l - h,
                                 color: c.Z.BACKGROUND_ACCENT,
                             }),
                             showUnread: !0,
@@ -78,7 +78,7 @@ function N(e) {
                 o = n === a.z.GUILD_POWERUP_PERKS_COACHMARK,
                 { available: s } = (0, x.Z)(e),
                 c = (function (e, t) {
-                    let n = (0, j.qI)(e, "GuildPowerupsChannelRow"),
+                    let n = (0, v.qI)(e, "GuildPowerupsChannelRow"),
                         r = (0, _.i)(e, "GuildPowerupsChannelRow");
                     return i.useMemo(() => {
                         if (
@@ -128,7 +128,7 @@ function N(e) {
                     if (null != n) return n;
                     let r = (function (e, t, n) {
                         var r, i;
-                        let l = null != (i = null == (r = h.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE,
+                        let l = null != (i = null == (r = f.Z.getGuild(e)) ? void 0 : r.premiumTier) ? i : P.Eu4.NONE,
                             o = Array.from(S.Tg.values())
                                 .flatMap((r) =>
                                     r.length <= 0 ||
@@ -142,12 +142,12 @@ function N(e) {
                                               let i = t.allPowerups[r];
                                               return null == i ||
                                                   n < i.cost ||
-                                                  (0, v.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
+                                                  (0, j.e)(e, i, "maybeGetPerkPurchaseablePopoutDCF")
                                                   ? null
                                                   : i;
                                           }),
                                 )
-                                .filter(f.lm);
+                                .filter(h.lm);
                         if (0 !== o.length) {
                             if (1 === o.length && !(0, p.OY)(a.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {
@@ -246,7 +246,7 @@ function N(e) {
             popout: N,
         };
 }
-function w(e) {
+function Z(e) {
     let t = (0, o.e7)([O.Z], () => O.Z.getStateForGuild(e)),
         n = N(e);
     i.useEffect(() => {
