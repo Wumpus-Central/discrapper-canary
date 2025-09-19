@@ -1,6 +1,4 @@
 t.exports = {
-    modalHeader: "modalHeader__57752",
-    modalCloseButton: "modalCloseButton__57752",
     modalContent: "modalContent__57752",
     editingContainer: "editingContainer__57752",
     errorContainer: "errorContainer__57752",
@@ -17,8 +15,6 @@ t.exports = {
     zoomIcon: "zoomIcon__57752",
     slider: "slider__57752",
     rotateButton: "rotateButton__57752",
+    disabled: "disabled__57752",
     premiumUpsell: "premiumUpsell__57752",
-    modalFooter: "modalFooter__57752",
-    linkButton: "linkButton__57752",
-    resetButton: "resetButton__57752 linkButton__57752",
 };
