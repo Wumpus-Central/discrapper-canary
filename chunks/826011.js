@@ -1,96 +1,97 @@
-t.d(s, { default: () => m });
-var r = t(951288),
-    a = t(647438),
-    n = t(304789),
-    i = t(481060),
-    c = t(572004),
-    o = t(440589),
-    l = t(388032),
-    d = t(999852);
-function m(e) {
-    let { instance: s, onClose: t, transitionState: m } = e,
-        p = a.useCallback(() => {
-            (0, c.JG)(s.serverIP),
-                (0, i.showToast)((0, i.createToast)(l.intl.string(l.t["+5kSoa"]), i.ToastType.SUCCESS));
-        }, [s.serverIP]);
-    return (0, r.jsxs)(i.Y0X, {
-        className: d.modal,
+s.d(t, { default: () => p });
+var a = s(951288),
+    r = s(647438),
+    n = s(304789),
+    i = s(481060),
+    c = s(572004),
+    o = s(998964),
+    l = s(401561),
+    d = s(388032),
+    m = s(927607);
+function p(e) {
+    let { instance: t, onClose: s, transitionState: p } = e,
+        x = (0, o.Z)(t),
+        h = r.useCallback(() => {
+            (0, c.JG)(x), (0, i.showToast)((0, i.createToast)(d.intl.string(d.t["+5kSoa"]), i.ToastType.SUCCESS));
+        }, [x]);
+    return (0, a.jsxs)(i.Y0X, {
+        className: m.modal,
         size: i.CgR.MEDIUM,
-        transitionState: m,
+        transitionState: p,
         parentComponent: "PortkeyInstructionsModal",
         children: [
-            (0, r.jsx)(i.olH, {
-                onClick: t,
-                className: d.closeButton,
+            (0, a.jsx)(i.olH, {
+                onClick: s,
+                className: m.closeButton,
             }),
-            (0, r.jsx)(n.$, {
-                children: (0, r.jsxs)(i.hzk, {
-                    className: d.content,
+            (0, a.jsx)(n.$, {
+                children: (0, a.jsxs)(i.hzk, {
+                    className: m.content,
                     children: [
-                        (0, r.jsx)("img", {
+                        (0, a.jsx)("img", {
                             src: "",
                             alt: "",
-                            className: d.gameImage,
+                            className: m.gameImage,
                         }),
-                        (0, r.jsxs)("div", {
-                            className: d.header,
+                        (0, a.jsxs)("div", {
+                            className: m.header,
                             children: [
-                                (0, r.jsx)(i.X6q, {
+                                (0, a.jsx)(i.X6q, {
                                     variant: "heading-xl/semibold",
                                     color: "header-primary",
-                                    children: s.name,
+                                    children: t.name,
                                 }),
-                                (0, r.jsx)(i.Text, {
+                                (0, a.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: s.planName,
+                                    children: t.planName,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)("div", {
-                            className: d.stepsContainer,
-                            children: s.instructions.map((e, s) =>
-                                (0, r.jsxs)(
+                        (0, a.jsx)("div", {
+                            className: m.stepsContainer,
+                            children: t.instructions.map((e, t) =>
+                                (0, a.jsxs)(
                                     "div",
                                     {
-                                        className: d.step,
+                                        className: m.step,
                                         children: [
-                                            (0, r.jsx)("div", {
-                                                className: d.stepNumber,
-                                                children: (0, r.jsx)(i.Text, {
+                                            (0, a.jsx)("div", {
+                                                className: m.stepNumber,
+                                                children: (0, a.jsx)(i.Text, {
                                                     variant: "text-sm/semibold",
                                                     color: "text-secondary",
-                                                    children: l.intl.formatToPlainString(o.default.e0RxEB, {
-                                                        step: s + 1,
+                                                    children: d.intl.formatToPlainString(l.default.e0RxEB, {
+                                                        step: t + 1,
                                                     }),
                                                 }),
                                             }),
-                                            (0, r.jsx)(i.Text, {
+                                            (0, a.jsx)(i.Text, {
                                                 variant: "text-md/normal",
                                                 color: "header-primary",
                                                 children: e,
                                             }),
                                         ],
                                     },
-                                    s,
+                                    t,
                                 ),
                             ),
                         }),
-                        (0, r.jsxs)("div", {
-                            className: d.serverIpContainer,
+                        (0, a.jsxs)("div", {
+                            className: m.serverIpContainer,
                             children: [
-                                (0, r.jsx)("div", {
-                                    className: d.serverIpInput,
-                                    children: (0, r.jsx)(i.Text, {
+                                (0, a.jsx)("div", {
+                                    className: m.serverIpInput,
+                                    children: (0, a.jsx)(i.Text, {
                                         variant: "text-md/medium",
                                         color: "header-primary",
-                                        children: s.serverIP,
+                                        children: x,
                                     }),
                                 }),
-                                (0, r.jsx)(i.zxk, {
+                                (0, a.jsx)(i.zxk, {
                                     variant: "primary",
-                                    text: l.intl.string(l.t.OpuAlJ),
-                                    onClick: p,
+                                    text: d.intl.string(d.t.OpuAlJ),
+                                    onClick: h,
                                     icon: i.TIy,
                                 }),
                             ],
