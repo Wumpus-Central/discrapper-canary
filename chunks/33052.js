@@ -30,7 +30,6 @@ function f() {
                         children: _.heading(),
                     }),
                     null != _.subheading &&
-                        n.length > 1 &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",

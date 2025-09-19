@@ -48,7 +48,7 @@ function c(e) {
 }
 function u(e, t, n) {
     let r = f(e),
-        i = null != n && n.length > 1;
+        i = null != n && n.length >= 1;
     return t && r && i;
 }
 function d(e, t, n) {
