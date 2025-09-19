@@ -29,17 +29,28 @@ function b() {
         ),
         y = i.useCallback(() => {
             _(m);
-        }, []);
+        }, []),
+        v = i.useRef(null),
+        I = i.useRef(null);
     return (
         i.useEffect(() => {
-            e && a.default.track(f.rMx.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t });
+            e &&
+                (a.default.track(f.rMx.QUEST_HOME_SORT_METHOD_CHANGED, {
+                    sort_method: t,
+                    previous_sort_method: v.current,
+                }),
+                (v.current = t));
         }, [t, e]),
         i.useEffect(() => {
-            e &&
-                a.default.track(f.rMx.QUEST_HOME_FILTERS_CHANGED, {
-                    filters: b.map((e) => e.filter),
-                    num_quests_visible: O.length,
-                });
+            var t;
+            if (!e) return;
+            let n = b.map((e) => e.filter);
+            a.default.track(f.rMx.QUEST_HOME_FILTERS_CHANGED, {
+                filters: n,
+                previous_filters: null != (t = I.current) ? t : [],
+                num_quests_visible: O.length,
+            }),
+                (I.current = n);
         }, [b, e, O.length]),
         (0, r.jsxs)(r.Fragment, {
             children: [
