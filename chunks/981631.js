@@ -3363,7 +3363,6 @@ let tZ = {
         QUEST_MINOR_REWARD_CAPPING_CONFIG: "Quest Minor Reward Capping Config",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
-        WEB_SETTING_TREE_TOOL: "Web Setting Tree Tool",
     });
 var tV = (function (e) {
         return (

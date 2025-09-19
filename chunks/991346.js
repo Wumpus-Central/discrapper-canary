@@ -168,7 +168,6 @@ function V(e) {
                           M.s6.REVENUE_STORYBOOK,
                           M.s6.VIRTUAL_CURRENCY_CONFIGURATION,
                           M.s6.SHOP_KEEPER,
-                          M.s6.WEB_SETTING_TREE_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL_2,
                           M.s6.QUEST_MINOR_REWARD_CAPPING_CONFIG,
