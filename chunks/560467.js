@@ -19,16 +19,15 @@ var r = t(951288),
     h = t(388032),
     _ = t(149671);
 function C(e) {
-    let { currentGame: n, planId: t, selected: a, className: o } = e,
-        s = i.useMemo(() => (null == n ? void 0 : n.plans.find((e) => e.id === t)), [null == n ? void 0 : n.plans, t]);
-    return null == s
+    let { plan: n, selected: t, className: i } = e;
+    return null == n
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: l()(_.optionContainer, o),
+                      className: l()(_.optionContainer, i),
                       children: [
-                          (0, r.jsx)("span", { children: s.name }),
+                          (0, r.jsx)("span", { children: n.name }),
                           (0, r.jsxs)("div", {
                               className: _.labelContainer,
                               children: [
@@ -38,13 +37,13 @@ function C(e) {
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
-                                      children: h.intl.format(j.default.FrRqub, { boostCount: s.cost }),
+                                      children: h.intl.format(j.default.FrRqub, { boostCount: n.cost }),
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  !a && (0, r.jsx)("div", { className: _.optionSpacer }),
+                  !t && (0, r.jsx)("div", { className: _.optionSpacer }),
               ],
           });
 }
@@ -89,8 +88,8 @@ function O() {
         name: v,
         setName: O,
         planId: N,
-        setPlanId: P,
-        planCost: S,
+        setPlanId: S,
+        planCost: P,
     } = (0, f.aj)();
     i.useEffect(() => {
         (0, u._k)(e);
@@ -113,7 +112,7 @@ function O() {
                     null == n
                         ? void 0
                         : n.plans.map((e) => ({
-                              value: e.id,
+                              value: e,
                               label: e.name,
                           })))
                 ? e
@@ -235,26 +234,27 @@ function O() {
                                               }),
                                           }),
                                           (0, r.jsx)(c.PhF, {
-                                              serialize: (e) => e.toString(),
-                                              isSelected: (e) => e === N,
+                                              serialize: (e) => e.id,
+                                              isSelected: (e) => e.id === N,
                                               options: T,
                                               optionClassName: _.option,
-                                              select: (e) => P(e),
+                                              select: (e) => S(e.id),
                                               placeholder: h.intl.string(j.default["4QOSPj"]),
                                               renderOptionValue: (e) => {
-                                                  var t, i;
+                                                  var n, t, i;
                                                   return (0, r.jsx)(C, {
-                                                      currentGame: n,
-                                                      planId: null == (t = e[0]) ? void 0 : t.value,
-                                                      selected: (null == (i = e[0]) ? void 0 : i.value) === N,
+                                                      plan: null == (n = e[0]) ? void 0 : n.value,
+                                                      selected:
+                                                          (null == (i = e[0]) || null == (t = i.value)
+                                                              ? void 0
+                                                              : t.id) === N,
                                                       className: _.value,
                                                   });
                                               },
                                               renderOptionLabel: (e) =>
                                                   (0, r.jsx)(C, {
-                                                      currentGame: n,
-                                                      planId: null == e ? void 0 : e.value,
-                                                      selected: (null == e ? void 0 : e.value) === N,
+                                                      plan: e.value,
+                                                      selected: e.value.id === N,
                                                   }),
                                           }),
                                       ],
@@ -268,15 +268,15 @@ function O() {
                       ],
                   }),
                   null != a &&
-                      0 !== S &&
+                      0 !== P &&
                       (0, r.jsx)(d.Z, {
                           className: _.infoBox,
                           children: (0, r.jsx)(c.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  S < 0
-                                      ? h.intl.format(j.default.H8rHQU, { boostCount: Math.abs(S) })
-                                      : h.intl.format(j.default.h4ZvmJ, { boostCount: S }),
+                                  P < 0
+                                      ? h.intl.format(j.default.H8rHQU, { boostCount: Math.abs(P) })
+                                      : h.intl.format(j.default.h4ZvmJ, { boostCount: P }),
                           }),
                       }),
                   (0, r.jsx)(c.Text, {
