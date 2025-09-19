@@ -1,21 +1,21 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => y });
 var r,
-    i,
-    s = n(951288),
-    a = n(647438),
-    o = n(793030),
-    c = n(442837),
+    a,
+    i = n(951288),
+    s = n(647438),
+    c = n(793030),
+    o = n(442837),
     l = n(481060),
     d = n(100527),
     u = n(744993),
-    m = n(693587),
-    p = n(567225),
-    b = n(809741),
-    g = n(473682),
-    f = n(401561),
-    v = n(388032),
-    y = n(134977);
-let j =
+    b = n(693587),
+    m = n(567225),
+    p = n(809741),
+    f = n(473682),
+    j = n(401561),
+    g = n(388032),
+    v = n(134977);
+let x =
     ((r = (function (e) {
         for (var t = 1; t < arguments.length; t++) {
             var n = null != arguments[t] ? arguments[t] : {},
@@ -40,10 +40,10 @@ let j =
                 });
         }
         return e;
-    })({}, g.T9)),
-    (i = i = { initialStep: g.Vb.SERVER_SETTINGS }),
+    })({}, f.T9)),
+    (a = a = { initialStep: f.Vb.SERVER_SETTINGS }),
     Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
         : (function (e, t) {
               var n = Object.keys(e);
               if (Object.getOwnPropertySymbols) {
@@ -51,54 +51,58 @@ let j =
                   n.push.apply(n, r);
               }
               return n;
-          })(Object(i)).forEach(function (e) {
-              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+          })(Object(a)).forEach(function (e) {
+              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
           }),
     r);
-function P(e) {
+function y(e) {
     let { guildId: t } = e;
-    a.useEffect(() => {
+    s.useEffect(() => {
         (0, u.po)(t);
     }, [t]);
-    let n = (0, c.Wu)([m.Z], () => {
-        let e = m.Z.getStateForGuild(t);
+    let n = (0, o.Wu)([b.Z], () => {
+        let e = b.Z.getStateForGuild(t);
         return (null == e ? void 0 : e.catalog) != null ? Object.values(e.catalog) : [];
     });
     return 0 === n.length
-        ? (0, s.jsx)("div", {
-              className: y.container,
-              children: (0, s.jsx)(l.$jN, {
+        ? (0, i.jsx)("div", {
+              className: v.container,
+              children: (0, i.jsx)(l.$jN, {
                   type: l.RAz.SPINNING_CIRCLE,
-                  className: y.spinner,
+                  className: v.spinner,
               }),
           })
-        : (0, s.jsxs)("div", {
-              className: y.container,
+        : (0, i.jsxs)("div", {
+              className: v.container,
               children: [
-                  (0, s.jsx)(o.X6q, {
+                  (0, i.jsx)(c.X6q, {
+                      className: v.heading,
                       variant: "heading-md/semibold",
-                      children: v.intl.string(f.default.jeYp1t),
+                      children: g.intl.string(j.default.jeYp1t),
                   }),
-                  (0, s.jsx)("div", {
-                      className: y.gameContainer,
-                      children: n.map((e, n) =>
-                          (0, s.jsx)(
-                              p.Z,
-                              {
-                                  className: y.game,
-                                  game: e,
-                                  onClick: () =>
-                                      (0, b.Z)({
-                                          guildId: t,
-                                          stepConfig: j,
-                                          initialPortkeyGame: e,
-                                          analyticsLocation: d.Z.PORTKEY_OVERVIEW,
-                                      }),
-                                  imageClassName: y.image,
-                              },
-                              "sidebar-game-".concat(n, "-").concat(e.id),
+                  (0, i.jsx)(c.zJl, {
+                      className: v.gameContainerWrapper,
+                      children: (0, i.jsx)("div", {
+                          className: v.gameContainer,
+                          children: n.map((e, n) =>
+                              (0, i.jsx)(
+                                  m.Z,
+                                  {
+                                      className: v.game,
+                                      game: e,
+                                      onClick: () =>
+                                          (0, p.Z)({
+                                              guildId: t,
+                                              stepConfig: x,
+                                              initialPortkeyGame: e,
+                                              analyticsLocation: d.Z.PORTKEY_OVERVIEW,
+                                          }),
+                                      imageClassName: v.image,
+                                  },
+                                  "sidebar-game-".concat(n, "-").concat(e.id),
+                              ),
                           ),
-                      ),
+                      }),
                   }),
               ],
           });
