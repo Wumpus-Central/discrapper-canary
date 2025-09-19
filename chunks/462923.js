@@ -1,49 +1,48 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => g });
 var r = n(951288),
     a = n(647438),
     i = n(442837),
     s = n(481060),
     c = n(690221),
     o = n(572004),
-    l = n(55935),
-    d = n(639777),
-    u = n(29168),
-    m = n(444083),
-    b = n(340887),
-    p = n(408629),
-    f = n(401561),
-    j = n(388032),
-    g = n(842788);
-function v(e) {
+    l = n(639777),
+    d = n(29168),
+    u = n(444083),
+    m = n(340887),
+    b = n(408629),
+    p = n(401561),
+    f = n(388032),
+    j = n(842788);
+function g(e) {
     let { guildId: t, instance: n } = e,
-        v = (0, i.e7)([u.Z], () => u.Z.getState()),
-        x = a.useCallback(() => {
-            v
-                ? (0, b.Z)(n)
-                : (0, p.Z)({
+        g = (0, i.e7)([d.Z], () => d.Z.getState()),
+        v = a.useCallback(() => {
+            g
+                ? (0, m.Z)(n)
+                : (0, b.Z)({
                       onAccept: () => {
-                          (0, b.Z)(n);
+                          (0, m.Z)(n);
                       },
                   });
-        }, [n, v]),
-        y = a.useCallback(() => {
+        }, [n, g]),
+        x = a.useCallback(() => {
             (0, o.JG)(n.serverIP),
-                (0, s.showToast)((0, s.createToast)(j.intl.string(j.t["+5kSoa"]), s.ToastType.SUCCESS));
+                (0, s.showToast)((0, s.createToast)(f.intl.string(f.t["+5kSoa"]), s.ToastType.SUCCESS));
         }, [n.serverIP]),
-        O = (0, d.Z)(t);
+        y = (0, l.Z)(t);
     return (0, r.jsxs)("div", {
-        className: g.card,
+        className: j.card,
         children: [
             (0, r.jsxs)("div", {
-                className: g.serverHeader,
+                className: j.serverHeader,
                 children: [
                     (0, r.jsx)("img", {
                         src: "https://via.placeholder.com/80x80/4CAF50/FFFFFF?text=MC",
                         alt: "",
-                        className: g.gameImage,
+                        className: j.gameImage,
                     }),
                     (0, r.jsxs)("div", {
-                        className: g.serverInfo,
+                        className: j.serverInfo,
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 variant: "heading-sm/medium",
@@ -59,16 +58,16 @@ function v(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: g.serverDetails,
+                className: j.serverDetails,
                 children: (0, r.jsxs)("div", {
-                    className: g.detailsGrid,
+                    className: j.detailsGrid,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: g.detailItem,
+                            className: j.detailItem,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: j.intl.string(f.default.X0IaiI),
+                                    children: f.intl.string(p.default.X0IaiI),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
@@ -77,15 +76,15 @@ function v(e) {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: g.detailItem,
+                            className: j.detailItem,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: j.intl.string(f.default["9pw/yM"]),
+                                    children: f.intl.string(p.default["9pw/yM"]),
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: g.serverIpContainer,
-                                    children: v
+                                    className: j.serverIpContainer,
+                                    children: g
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)(s.Text, {
@@ -93,33 +92,33 @@ function v(e) {
                                                       children: n.serverIP,
                                                   }),
                                                   (0, r.jsx)(s.P3F, {
-                                                      className: g.copyButton,
-                                                      "aria-label": j.intl.string(j.t.OpuAlJ),
-                                                      onClick: y,
+                                                      className: j.copyButton,
+                                                      "aria-label": f.intl.string(f.t.OpuAlJ),
+                                                      onClick: x,
                                                       children: (0, r.jsx)(s.TIy, { size: "sm" }),
                                                   }),
                                               ],
                                           })
                                         : (0, r.jsx)(c.Z, {
                                               onClick: () => {
-                                                  (0, p.Z)({});
+                                                  (0, b.Z)({});
                                               },
-                                              children: j.intl.string(f.default.UwXK29),
+                                              children: f.intl.string(p.default.UwXK29),
                                           }),
                                 }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: g.detailItem,
+                            className: j.detailItem,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: j.intl.string(f.default.MQQIu7),
+                                    children: f.intl.string(p.default.MQQIu7),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: g.statusContainer,
+                                    className: j.statusContainer,
                                     children: [
-                                        (0, r.jsx)("span", { className: g.statusIndicator }),
+                                        (0, r.jsx)("span", { className: j.statusIndicator }),
                                         (0, r.jsx)(s.Text, {
                                             variant: "text-sm/medium",
                                             children: n.status,
@@ -129,15 +128,15 @@ function v(e) {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: g.detailItem,
+                            className: j.detailItem,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: j.intl.string(f.default.v8iSgI),
+                                    children: f.intl.string(p.default.fqrxlJ),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
-                                    children: (0, l.Y4)(new Date(n.lastUpdated)),
+                                    children: n.regionName,
                                 }),
                             ],
                         }),
@@ -145,19 +144,19 @@ function v(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: g.serverActions,
+                className: j.serverActions,
                 children: [
                     (0, r.jsx)(s.zxk, {
                         fullWidth: !0,
-                        text: j.intl.string(f.default["0TMXHh"]),
-                        onClick: x,
+                        text: f.intl.string(p.default["0TMXHh"]),
+                        onClick: v,
                         variant: "primary",
                     }),
-                    O &&
+                    y &&
                         null != n.gameServerPanelUrl &&
                         (0, r.jsx)(s.zxk, {
                             fullWidth: !0,
-                            text: j.intl.string(f.default["jO3u+/"]),
+                            text: f.intl.string(p.default["jO3u+/"]),
                             onClick: () => {
                                 window.open(n.gameServerPanelUrl, "_blank");
                             },
@@ -166,8 +165,8 @@ function v(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: g.overflowMenu,
-                children: (0, r.jsx)(m.Z, {
+                className: j.overflowMenu,
+                children: (0, r.jsx)(u.Z, {
                     guildId: t,
                     instance: n,
                 }),

@@ -15,7 +15,6 @@ function r(e) {
         gameId: "1",
         onlineConnectionsCount: 0,
         status: "online",
-        lastUpdated: new Date().toISOString(),
         instructions: [],
     };
 }

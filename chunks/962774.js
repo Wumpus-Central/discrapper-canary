@@ -1,6 +1,6 @@
 n.d(t, {
     Y9: () => r,
-    kd: () => i,
+    kd: () => l,
     qE: () => o,
 }),
     n(388685);
@@ -89,7 +89,7 @@ let a = [
             pingUrl: "bhs1.shockbyte.host/ping",
         },
     ];
-function l(e, t) {
+function i(e, t) {
     return {
         id: e,
         name: t,
@@ -100,19 +100,19 @@ function l(e, t) {
         baseCost: Math.min(...a.map((e) => e.cost)),
     };
 }
-let i = [
-        l("1", "Portkey Test #1"),
-        l("2", "Portkey Test #2"),
-        l("3", "Portkey Test #3"),
-        l("4", "Portkey Test #4"),
-        l("5", "Portkey Test #5"),
-        l("6", "Portkey Test #6"),
-        l("7", "Portkey Test #7"),
-        l("8", "Portkey Test #8"),
-        l("9", "Portkey Test #9"),
-        l("10", "Portkey Test #10"),
-        l("11", "Portkey Test #11"),
-        l("12", "Portkey Test #12"),
+let l = [
+        i("1", "Portkey Test #1"),
+        i("2", "Portkey Test #2"),
+        i("3", "Portkey Test #3"),
+        i("4", "Portkey Test #4"),
+        i("5", "Portkey Test #5"),
+        i("6", "Portkey Test #6"),
+        i("7", "Portkey Test #7"),
+        i("8", "Portkey Test #8"),
+        i("9", "Portkey Test #9"),
+        i("10", "Portkey Test #10"),
+        i("11", "Portkey Test #11"),
+        i("12", "Portkey Test #12"),
     ],
     s = [
         "Launch Minecraft.",
@@ -133,7 +133,6 @@ let i = [
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: "online",
-            lastUpdated: "2021-01-01T00:00:00.000Z",
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
@@ -151,7 +150,6 @@ let i = [
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: "online",
-            lastUpdated: "2021-01-01T00:00:00.000Z",
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
@@ -169,7 +167,6 @@ let i = [
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: "online",
-            lastUpdated: "2021-01-01T00:00:00.000Z",
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
@@ -187,7 +184,6 @@ let i = [
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: "online",
-            lastUpdated: "2021-01-01T00:00:00.000Z",
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
@@ -205,7 +201,6 @@ let i = [
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: "online",
-            lastUpdated: "2021-01-01T00:00:00.000Z",
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
@@ -223,7 +218,6 @@ let i = [
             onlineConnectionsCount: 0,
             maxConnectionsCount: 10,
             status: "online",
-            lastUpdated: "2021-01-01T00:00:00.000Z",
             serverIP: "127.0.0.1",
             instructions: s,
             gameServerPanelUrl: "https://google.com",
