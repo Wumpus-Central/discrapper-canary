@@ -322,7 +322,8 @@ class eL extends l.PureComponent {
                               title: P ? eu.intl.string(eu.t.yR6Hwc) : eu.intl.string(eu.t.X8jMDg),
                               className: eg.marginTop20,
                               children: (0, i.jsx)(w.ZP, {
-                                  innerClassName: eh.topic,
+                                  className: eh.topicContainer,
+                                  innerClassName: s()(eh.topic, { [eh.disabled]: !v }),
                                   characterCountClassName: eh.topicCharacterCount,
                                   maxCharacterCount: P ? ea.Z7 : ea.$x,
                                   onChange: this.handleChangeRichTopic,
@@ -342,6 +343,7 @@ class eL extends l.PureComponent {
                                   disableThemedBackground: !0,
                                   error: this.getError("topic"),
                                   disabled: !v,
+                                  showValueWhenDisabled: !0,
                               }),
                           }),
                           (0, i.jsx)(f.$i$, { className: s()(eg.marginTop40, eg.marginBottom40) }),
@@ -792,56 +794,57 @@ class eL extends l.PureComponent {
                       ],
                   })
                 : null;
-        return (
-            e.type === es.d4z.GUILD_CATEGORY
-                ? ((j = eu.intl.string(eu.t.OCAkGB)), (x = "category-name"))
-                : e.isForumPost()
-                  ? ((j = eu.intl.string(eu.t.uyVrTE)), (x = "post-title"))
-                  : _
-                    ? ((j = eu.intl.string(eu.t.j3XWjI)), (x = "thread-name"))
-                    : ((j = eu.intl.string(eu.t.PVbHDg)), (x = "channel-name")),
-            (0, i.jsxs)("div", {
-                children: [
-                    (0, i.jsx)(f.oil, {
-                        label: j,
-                        fullWidth: !0,
-                        inputRef: this.nameInputRef,
-                        value: t,
-                        onChange: this.handleChangeName,
-                        onBlur: this.handleBlurName,
-                        error: this.getError("name"),
-                        name: x,
-                        autoFocus: !0,
-                        disabled: R ? !y : !v,
-                        maxLength: es.HN8,
-                        trailing: {
-                            type: "emoji",
-                            button: (0, i.jsx)(eA, {
-                                onEmojiPicked: this.insertEmojiAtPosition,
-                                channel: e,
-                                guildId: null == e ? void 0 : e.guild_id,
-                            }),
-                        },
-                    }),
-                    (0, i.jsx)(f.$i$, { className: s()(eg.marginTop40, eg.marginBottom40) }),
-                    V,
-                    H,
-                    F,
-                    z,
-                    K,
-                    ee,
-                    X,
-                    q,
-                    Y,
-                    en,
-                    em,
-                    eC,
-                    eS,
-                    eN,
-                    eO,
-                ],
-            })
-        );
+        e.type === es.d4z.GUILD_CATEGORY
+            ? ((j = eu.intl.string(eu.t.OCAkGB)), (x = "category-name"))
+            : e.isForumPost()
+              ? ((j = eu.intl.string(eu.t.uyVrTE)), (x = "post-title"))
+              : _
+                ? ((j = eu.intl.string(eu.t.j3XWjI)), (x = "thread-name"))
+                : ((j = eu.intl.string(eu.t.PVbHDg)), (x = "channel-name"));
+        let eE = R ? y : v;
+        return (0, i.jsxs)("div", {
+            children: [
+                (0, i.jsx)(f.oil, {
+                    label: j,
+                    fullWidth: !0,
+                    inputRef: this.nameInputRef,
+                    value: t,
+                    onChange: this.handleChangeName,
+                    onBlur: this.handleBlurName,
+                    error: this.getError("name"),
+                    name: x,
+                    autoFocus: !0,
+                    disabled: !eE,
+                    maxLength: es.HN8,
+                    trailing: eE
+                        ? {
+                              type: "emoji",
+                              button: (0, i.jsx)(eA, {
+                                  onEmojiPicked: this.insertEmojiAtPosition,
+                                  channel: e,
+                                  guildId: null == e ? void 0 : e.guild_id,
+                              }),
+                          }
+                        : void 0,
+                }),
+                (0, i.jsx)(f.$i$, { className: s()(eg.marginTop40, eg.marginBottom40) }),
+                V,
+                H,
+                F,
+                z,
+                K,
+                ee,
+                X,
+                q,
+                Y,
+                en,
+                em,
+                eC,
+                eS,
+                eN,
+                eO,
+            ],
+        });
     }
     renderBitrate(e) {
         return "".concat(Math.round(e / 1000), "kbps");

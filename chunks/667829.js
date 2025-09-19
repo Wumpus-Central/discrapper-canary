@@ -28,7 +28,7 @@ var r = n(951288),
     R = n(925994),
     P = n(981631),
     w = n(388032),
-    D = n(744114);
+    D = n(564355);
 function x(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function j(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function k(e, t) {
     );
 }
 new b.Z("ChannelEditor.tsx");
-let M = function () {
+let k = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
     U = 1000;
@@ -227,8 +227,8 @@ class G extends i.Component {
         null == (n = this.ref.current) || n.insertText(e, t, r);
     }
     getPlaceholder() {
-        let { disabled: e, placeholder: t, isPreviewing: n } = this.props;
-        return e && !n ? w.intl.string(w.t.IYKTTU) : t;
+        let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: r } = this.props;
+        return e && !n ? (r ? "" : w.intl.string(w.t.IYKTTU)) : t;
     }
     render() {
         var e, t, n, i, a, s;
@@ -252,22 +252,23 @@ class G extends i.Component {
                 maxCharacterCount: w,
                 allowNewLines: x,
                 "aria-describedby": j,
-                "aria-labelledby": M,
+                "aria-labelledby": k,
                 accessibilityLabel: U,
+                showValueWhenDisabled: G,
             } = this.props,
-            { submitting: G, popup: B } = this.state,
-            Z = {
+            { submitting: B, popup: Z } = this.state,
+            F = {
                 channel: m,
                 className: o()(S, D.textArea, {
                     [D.textAreaSlate]: E,
-                    [D.textAreaDisabled]: u || G,
+                    [D.textAreaDisabled]: u || B,
                 }),
                 id: A,
                 placeholder: this.getPlaceholder(),
                 required: R,
                 accessibilityLabel: U,
                 disabled: u || !1,
-                submitting: G,
+                submitting: B,
                 isEdit: g === I.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -292,26 +293,26 @@ class G extends i.Component {
                 useNewSlashCommands: y,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                "aria-controls": null != (a = B.id) ? a : void 0,
+                "aria-controls": null != (a = Z.id) ? a : void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== B.id || void 0,
-                "aria-activedescendant": null != (s = B.activeDescendant) ? s : void 0,
+                "aria-expanded": null !== Z.id || void 0,
+                "aria-activedescendant": null != (s = Z.activeDescendant) ? s : void 0,
                 "aria-invalid": l.length > w,
                 "aria-describedby": j,
-                "aria-labelledby": M,
+                "aria-labelledby": k,
                 "aria-autocomplete": "list",
             },
-            F = E
+            V = E
                 ? (0, r.jsx)(
                       N.Z,
-                      k(L({ ref: this.ref }, Z), {
+                      M(L({ ref: this.ref }, F), {
                           type: g,
-                          value: u ? (0, T.JM)("") : c,
+                          value: u && !G ? (0, T.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: v,
                       }),
                   )
-                : (0, r.jsx)(C.Z, k(L({ ref: this.ref }, Z), { value: u ? "" : l }));
+                : (0, r.jsx)(C.Z, M(L({ ref: this.ref }, F), { value: u && !G ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(O.d9, {
@@ -322,7 +323,7 @@ class G extends i.Component {
                     event: P.CkL.CLEAR_TEXT,
                     handler: this.handleClearText,
                 }),
-                F,
+                V,
             ],
         });
     }
@@ -452,7 +453,7 @@ class G extends i.Component {
                     },
                     v = null != s ? s : c,
                     { files: I, errors: T } = B(e.clipboardData, u.uploadLongMessages ? v : null);
-                return (M(
+                return (k(
                     "onPaste",
                     [...e.clipboardData.items].map((e) => {
                         if ("file" !== e.kind)
