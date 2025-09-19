@@ -129,7 +129,9 @@ let N = function (e, t) {
                                 emojisDisabled: e,
                             });
                         } else if (r === v.UX.RECENT) {
-                            let { emojisDisabled: n, emojisUnfiltered: i } = h(e === T.Hz.REACTION ? c : s);
+                            let { emojisDisabled: n, emojisUnfiltered: i } = h(
+                                [T.Hz.REACTION, T.Hz.DEFAULT_REACT_EMOJI].includes(e) ? c : s,
+                            );
                             if (null == i || 0 === i.length) return t;
                             t.push({
                                 type: v.En.RECENT,
