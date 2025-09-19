@@ -415,14 +415,10 @@ async function el(e) {
     let r = await (0, y.hj)(e, 0);
     if (null == r) return R.error("Failed to get revised fullscreen type for pid ".concat(e)), !1;
     n.fullscreenType !== r &&
-        (R.verbose("Fullscreen type different in swap for pid ".concat(e), {
+        R.verbose("Fullscreen type different in swap for pid ".concat(e), {
             oldFullscreenType: n.fullscreenType,
             newFullscreenType: r,
-        }),
-        Q(e, "previousFullscreenType", n.fullscreenType),
-        Q(e, "fullscreenType", r),
-        eL.emitChange(),
-        (t = !0));
+        });
     let i = et(n, r);
     if (
         (n.overlayMethod === i.overlayMethod &&
@@ -436,30 +432,38 @@ async function el(e) {
         o = P === g.R5.IN_PROCESS_V2,
         s = (0, y.PD)(n, r, H()),
         l = (0, y.DH)(n, r, H());
-    switch (
-        (R.verbose("Overlay method different for pid ".concat(e), {
-            oldOverlayMethod: n.overlayMethod,
-            revisedFullscreenType: r,
-            previousFullscreenType: n.previousFullscreenType,
-            newOverlayGameStatus: i,
-            shouldSwitchToHook: l,
-            shouldSwitchToOutOfProcess: s,
-            isForcedInProcess: o,
-            isForcedOutOfProcess: a,
-            legacyEnabled: V(),
-            overlayEnabled: H(),
+    R.verbose("Overlay method different for pid ".concat(e), {
+        oldOverlayMethod: n.overlayMethod,
+        revisedFullscreenType: r,
+        previousFullscreenType: n.previousFullscreenType,
+        newOverlayGameStatus: i,
+        shouldSwitchToHook: l,
+        shouldSwitchToOutOfProcess: s,
+        isForcedInProcess: o,
+        isForcedOutOfProcess: a,
+        legacyEnabled: V(),
+        overlayEnabled: H(),
+    });
+    let c = () => {
+        R.verbose("Updating fullscreen type for pid ".concat(e), {
+            oldFullscreenType: n.fullscreenType,
+            newFullscreenType: r,
         }),
-        i.overlayMethod)
-    ) {
+            Q(e, "previousFullscreenType", n.fullscreenType),
+            Q(e, "fullscreenType", r),
+            eL.emitChange(),
+            (t = !0);
+    };
+    switch (i.overlayMethod) {
         case g.gl.OutOfProcess:
         case g.gl.OutOfProcessLimitedInteraction:
-            ((s && !o) || a) && (await eu(e, i));
+            ((s && !o) || a) && (c(), await eu(e, i));
             break;
         case g.gl.Hook:
-            ((l && !a) || o || V()) && (await ec(e, i));
+            ((l && !a) || o || V()) && (c(), await ec(e, i));
             break;
         case g.gl.Disabled:
-            await er(e);
+            c(), await er(e);
     }
     return t;
 }
