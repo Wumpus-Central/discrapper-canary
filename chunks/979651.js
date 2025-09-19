@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var a,
     o = n(392711),
     s = n.n(o),
@@ -39,12 +39,10 @@ function T(e, t) {
 }
 function S(e) {
     var t;
-    let n = null != (t = m[d.ME]) ? t : {},
-        r = {};
+    let n = null != (t = m[d.ME]) ? t : {};
     s().each(n, (t, n) => {
-        t.channelId !== e && (r[n] = t);
-    }),
-        (m[d.ME] = r);
+        t.channelId === e && R(d.ME, n, () => null);
+    });
 }
 function A(e) {
     var t;
@@ -227,7 +225,7 @@ class Z extends (a = l.ZP.Store) {
     }
 }
 _(Z, "displayName", "VoiceStateStore");
-let V = new Z(c.Z, {
+let F = new Z(c.Z, {
     CONNECTION_OPEN: j,
     CONNECTION_OPEN_SUPPLEMENTAL: M,
     OVERLAY_INITIALIZE: k,
