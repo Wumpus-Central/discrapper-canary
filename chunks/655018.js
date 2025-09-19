@@ -172,7 +172,7 @@ function P(e) {
                         setStatus: () => {
                             l ? Y(e) : K(e);
                         },
-                        clearStatus: () => (0, h.Sc)(!1),
+                        clearStatus: () => (0, h.Sc)(!0),
                         isFavorited: o,
                         onFavoriteClick: () => (0, h.tg)(l ? e : e.status, l ? null : e.emoji),
                     },
@@ -188,49 +188,55 @@ function P(e) {
         tabIndex: -1,
         className: a()(I.menu, S.container),
         children: [
-            (0, r.jsxs)("div", {
+            (0, r.jsx)("div", {
                 role: "group",
                 className: a()(I.groupLabel, S.group),
-                children: [
-                    (0, r.jsxs)("form", {
-                        onSubmit: X,
-                        className: a()(I.item, S.input),
-                        children: [
-                            (0, r.jsx)(d.oil, {
-                                inputRef: T,
-                                value: k,
-                                onBlur: J,
-                                onFocus: $,
-                                onChange: (e) => L(e.substring(0, O.s0)),
-                                placeholder: E.intl.string(E.t.KPop4u),
-                                leading: {
-                                    type: "emoji",
-                                    button: (0, r.jsx)(_.A, {
-                                        customStatusEmoji: U,
-                                        setCustomStatusEmoji: B,
-                                    }),
-                                },
-                                trailing: {
-                                    icon: d.$2U,
-                                    onClick: Q,
-                                    "aria-label": E.intl.string(E.t["5UAi5+"]),
-                                },
+                children: (0, r.jsxs)("form", {
+                    onSubmit: X,
+                    className: a()(I.item, S.input),
+                    children: [
+                        (0, r.jsx)(d.oil, {
+                            inputRef: T,
+                            value: k,
+                            onBlur: J,
+                            onFocus: $,
+                            onChange: (e) => L(e.substring(0, O.s0)),
+                            placeholder: E.intl.string(E.t.KPop4u),
+                            leading: {
+                                type: "emoji",
+                                button: (0, r.jsx)(_.A, {
+                                    customStatusEmoji: U,
+                                    setCustomStatusEmoji: B,
+                                }),
+                            },
+                            trailing: {
+                                icon: d.$2U,
+                                onClick: Q,
+                                "aria-label": E.intl.string(E.t["5UAi5+"]),
+                            },
+                        }),
+                        W &&
+                            (0, r.jsx)(d.Text, {
+                                variant: "text-xs/normal",
+                                className: S.inputHint,
+                                color: "text-danger",
+                                children: E.intl.string(E.t["s/oq0d"]),
                             }),
-                            W &&
-                                (0, r.jsx)(d.Text, {
-                                    variant: "text-xs/normal",
-                                    className: S.inputHint,
-                                    color: "text-danger",
-                                    children: E.intl.string(E.t["s/oq0d"]),
-                                }),
-                            z &&
-                                (0, r.jsx)(d.Text, {
-                                    variant: "text-xs/normal",
-                                    className: S.inputHint,
-                                    children: E.intl.format(E.t["VjkH/v"], { onSave: () => X() }),
-                                }),
-                        ],
-                    }),
+                        z &&
+                            (0, r.jsx)(d.Text, {
+                                variant: "text-xs/normal",
+                                className: S.inputHint,
+                                children: E.intl.format(E.t["VjkH/v"], { onSave: () => X() }),
+                            }),
+                    ],
+                }),
+            }),
+            (0, r.jsxs)(d.Ttm, {
+                fade: !0,
+                role: "group",
+                className: a()(I.groupLabel, S.group, S.scroller),
+                children: [
+                    (0, r.jsx)(v.d, { guildId: o.guild_id }),
                     H &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
@@ -272,7 +278,6 @@ function P(e) {
                     A.map((e, t) => ee(e, t, "recent")),
                 ],
             }),
-            (0, r.jsx)(v.d, { guildId: o.guild_id }),
         ],
     });
 }

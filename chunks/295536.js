@@ -16,15 +16,20 @@ function p(e) {
         f = null != (t = (0, l.IX)(null == h ? void 0 : h.application_id).data) ? t : void 0;
     return null == f
         ? null
-        : (0, r.jsx)("div", {
-              className: d.container,
-              children: (0, r.jsx)(u.L, {
-                  label: f.name,
-                  icon: (0, r.jsx)(a.Z, {
-                      game: f,
-                      className: d.icon,
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(u.L, {
+                      label: f.name,
+                      icon: (0, r.jsx)(a.Z, {
+                          game: f,
+                          className: d.icon,
+                      }),
+                      setStatus: () => (0, c.XE)(f.id, !0),
                   }),
-                  setStatus: () => (0, c.XE)(f.id, !0),
-              }),
+                  (0, r.jsx)("div", {
+                      role: "separator",
+                      className: d.separator,
+                  }),
+              ],
           });
 }
