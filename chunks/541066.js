@@ -5,8 +5,8 @@ var r = n(951288),
     l = n(401561),
     a = n(388032);
 function s(t) {
-    var { onAccept: e } = t,
-        n = (function (t, e) {
+    var { provider: e, onAccept: n } = t,
+        s = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -26,29 +26,29 @@ function s(t) {
                         !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
             return o;
-        })(t, ["onAccept"]);
+        })(t, ["provider", "onAccept"]);
     return (0, r.jsx)(o.Modal, {
         title: a.intl.string(l.default.bnsSPj),
         subtitle: a.intl.format(l.default.MaWfLi, {
-            provider: "Portkey",
+            provider: e,
             providerUrl: "https://google.com/terms-of-service",
         }),
         size: "md",
         actions: [
             {
                 text: a.intl.string(a.t["/g10LC"]),
-                onClick: n.onClose,
+                onClick: s.onClose,
                 variant: "secondary",
             },
             {
                 text: a.intl.string(l.default.IfMFoK),
                 onClick: () => {
-                    (0, i.g$)(!0, "Portkey"), null == e || e(), n.onClose();
+                    (0, i.g$)(!0, e), null == n || n(), s.onClose();
                 },
                 variant: "primary",
             },
         ],
-        transitionState: n.transitionState,
-        onClose: n.onClose,
+        transitionState: s.transitionState,
+        onClose: s.onClose,
     });
 }
