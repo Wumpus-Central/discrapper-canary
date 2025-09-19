@@ -24,8 +24,8 @@ var i = n(512722),
     T = n(643879),
     S = n(350327),
     A = n(621853),
-    C = n(447448),
-    N = n(687158),
+    C = n(687158),
+    N = n(477448),
     R = n(25990),
     P = n(594174),
     w = n(74538),
@@ -91,8 +91,8 @@ function U() {
         }),
         Z = (0, o.e7)([A.Z], () => A.Z.getUserProfile(B.id)),
         {
-            pendingAvatar: V,
-            pendingGlobalName: F,
+            pendingAvatar: F,
+            pendingGlobalName: V,
             pendingBanner: H,
             pendingBio: Y,
             pendingPronouns: W,
@@ -108,13 +108,13 @@ function U() {
         }),
         J = (0, T.SD)({
             userId: B.id,
-            image: V,
+            image: F,
         }),
         $ = (0, l.gS)(),
         ee = w.ZP.canUsePremiumProfileCustomization(B),
-        et = (0, d.gd)(V, B.avatar),
+        et = (0, d.gd)(F, B.avatar),
         en = (0, d.f$)(H, null == Z ? void 0 : Z.banner),
-        er = (0, N.ZP)(B.id),
+        er = (0, C.ZP)(B.id),
         ei = null == er ? void 0 : er.getLegacyUsername(),
         ea =
             (null != (n = null == (e = Q.global_name) ? void 0 : e.length) ? n : 0) > 0
@@ -129,7 +129,7 @@ function U() {
                   ? M
                   : [],
         es = (0, u.w)(),
-        el = (0, C.k)({ location: "DefaultCustomizationSections" }),
+        el = (0, N.Z)({ location: "DefaultCustomizationSections" }),
         ec = () =>
             ee
                 ? (0, r.jsxs)(r.Fragment, {
@@ -170,7 +170,7 @@ function U() {
                 placeholder: B.username,
                 errors: ea,
                 currentGlobalName: B.globalName,
-                pendingGlobalName: F,
+                pendingGlobalName: V,
                 onGlobalNameChange: s.W0,
                 user: B,
             }),
@@ -185,6 +185,7 @@ function U() {
                 },
                 "pronouns",
             ),
+            el && (0, r.jsx)(v.Z, {}),
             (0, r.jsx)(
                 p.Z,
                 {
@@ -214,7 +215,6 @@ function U() {
                 "effect",
             ),
             ec(),
-            el && (0, r.jsx)(v.Z, {}),
             (0, r.jsx)(
                 f.Z,
                 {
