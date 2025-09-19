@@ -16,7 +16,7 @@ var r = n(951288),
     d = n(313789),
     p = n(518596),
     f = n(5192),
-    h = n(475413),
+    h = n(732380),
     g = n(981631),
     m = n(388032),
     b = n(839468);
@@ -129,11 +129,10 @@ function S(e) {
         bodyText: p,
         children: (0, r.jsx)("div", {
             className: b.buttonRow,
-            children: (0, r.jsx)(h.tG, {
+            children: (0, r.jsx)(h.O1, {
                 icon: a.kBi,
                 text: m.intl.string(m.t["g33r/P"]),
                 onClick: g,
-                themeColor: "secondary",
             }),
         }),
     });
@@ -213,15 +212,13 @@ function N(e) {
             (0, r.jsxs)("div", {
                 className: b.buttonRow,
                 children: [
-                    (0, r.jsx)(h.tG, {
+                    (0, r.jsx)(h.O1, {
                         text: m.intl.string(m.t["/Hl24e"]),
                         onClick: o,
-                        themeColor: "secondary",
                     }),
-                    (0, r.jsx)(h.tG, {
+                    (0, r.jsx)(h.O1, {
                         text: m.intl.string(m.t.GTCx0t),
                         onClick: s,
-                        themeColor: "secondary",
                     }),
                 ],
             }),
