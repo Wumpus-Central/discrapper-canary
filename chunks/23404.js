@@ -22,8 +22,8 @@ var r = n(951288),
     I = n(667105),
     C = n(860151),
     S = n(46140),
-    N = n(981631),
-    T = n(388032),
+    T = n(981631),
+    N = n(388032),
     P = n(408228);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -56,7 +56,7 @@ function x(e) {
         i = (0, f.B6)(n.config.expiresAt),
         l = (0, f.B6)(_.r.build(n.config).rewardsExpireAt),
         a = (0, o.e7)([c.Z], () => c.Z.getState().theme),
-        u = (0, s.wjy)(a) ? N.BRd.DARK : N.BRd.LIGHT,
+        u = (0, s.wjy)(a) ? T.BRd.DARK : T.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
     return (0, r.jsxs)("div", {
         className: P.heading,
@@ -73,15 +73,15 @@ function x(e) {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         children: d
-                            ? T.intl.string(T.t.XBboAA)
-                            : T.intl.formatToPlainString(T.t.EQa7oq, { questName: n.config.messages.questName }),
+                            ? N.intl.string(N.t.XBboAA)
+                            : N.intl.formatToPlainString(N.t.EQa7oq, { questName: n.config.messages.questName }),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
                         children: d
-                            ? T.intl.formatToPlainString(T.t.APddvL, { expirationDate: l })
-                            : T.intl.formatToPlainString(T.t["pX+fmp"], { expirationDate: i }),
+                            ? N.intl.formatToPlainString(N.t.APddvL, { expirationDate: l })
+                            : N.intl.formatToPlainString(N.t["pX+fmp"], { expirationDate: i }),
                     }),
                 ],
             }),
@@ -92,7 +92,7 @@ function A(e) {
     var t, n, l, c;
     let { nodeRef: b, quest: _ } = e,
         O = (0, u.O5)(),
-        N = (0, o.e7)([h.Z], () => h.Z.isEnrolling(_.id), [_]),
+        T = (0, o.e7)([h.Z], () => h.Z.isEnrolling(_.id), [_]),
         A = (0, o.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
         [Z, w] = i.useState(!1),
         L = i.useCallback(() => w(!0), []),
@@ -149,7 +149,10 @@ function A(e) {
             location: S.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL,
             sourceQuestContent: g.jn.ACTIVITY_PANEL,
-        });
+        }),
+        K = (0, d.Rt)(_),
+        q = (0, m.CR)({ quest: _ }),
+        Q = K ? q : N.intl.string(N.t.l7E81t);
     return z || B || F || A
         ? null
         : (0, r.jsxs)("div", {
@@ -181,7 +184,7 @@ function A(e) {
                                       ((t = j({}, e)),
                                       (n = n =
                                           {
-                                              "aria-label": T.intl.string(T.t.DEoVWV),
+                                              "aria-label": N.intl.string(N.t.DEoVWV),
                                               children: (0, r.jsx)(s.xhG, {
                                                   size: "md",
                                                   color: "currentColor",
@@ -237,18 +240,19 @@ function A(e) {
                           !V &&
                               (0, r.jsxs)(s.hE2, {
                                   size: "sm",
+                                  direction: K ? "vertical" : "horizontal",
                                   fullWidth: !0,
                                   children: [
                                       (0, r.jsx)(s.zxk, {
                                           variant: "secondary",
-                                          text: T.intl.string(T.t.LLLLPD),
+                                          text: N.intl.string(N.t.LLLLPD),
                                           onClick: U,
                                       }),
                                       (0, r.jsx)(s.zxk, {
                                           variant: "primary",
-                                          text: T.intl.string(T.t.l7E81t),
+                                          text: Q,
                                           onClick: k,
-                                          loading: N,
+                                          loading: T,
                                       }),
                                   ],
                               }),
@@ -258,7 +262,7 @@ function A(e) {
                                   variant: "primary",
                                   size: "sm",
                                   fullWidth: !0,
-                                  text: T.intl.string(T.t.VN1Ajo),
+                                  text: N.intl.string(N.t.VN1Ajo),
                                   onClick: M,
                               }),
                           H &&
@@ -266,7 +270,7 @@ function A(e) {
                                   variant: "primary",
                                   size: "sm",
                                   fullWidth: !0,
-                                  text: T.intl.string(T.t.cfY4PD),
+                                  text: N.intl.string(N.t.cfY4PD),
                                   onClick: G,
                               }),
                       ],
