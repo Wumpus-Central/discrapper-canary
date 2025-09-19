@@ -323,6 +323,11 @@ let i = {
         inlineRequire: () => n(991186).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
+    OverlayNegativeWidgetExperimentManager: {
+        actions: ["OVERLAY_READY", "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING", "LAYOUT_SET_PINNED"],
+        inlineRequire: () => n(266173).Z,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     ParticipantFocusManager: {
         inlineRequire: () => n(14516).Z,
         hasStoreChangeListeners: !0,

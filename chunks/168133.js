@@ -30,7 +30,7 @@ function f(t) {
             onSelect: i,
             children: (0, n.jsx)(l.S89, {
                 label: u.intl.string(u.t.Fy5kPj),
-                checked: f,
+                checked: !f,
                 id: "overlay-text-chat-notifications",
                 action: () => s.Z.setNotificationDisabledSetting(r.OverlayNotificationDisabledSetting.TEXT_CHAT, !f),
             }),

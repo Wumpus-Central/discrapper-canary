@@ -179,13 +179,15 @@ let O = new o.Z("OverlayActionCreators"),
             });
         },
         setNotificationDisabledSetting(e, t) {
-            e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY &&
-                this.track(m.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
+            return (
+                e === l.OverlayNotificationDisabledSetting.GAME_ACTIVITY &&
+                    this.track(m.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
                 i.Z.dispatch({
                     type: "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
                     setting: e,
                     disabled: t,
-                });
+                })
+            );
         },
         setInviteMessage(e) {
             i.Z.dispatch({
