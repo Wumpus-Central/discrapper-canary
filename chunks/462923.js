@@ -1,55 +1,55 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(481060),
-    s = n(690221),
-    l = n(572004),
-    c = n(55935),
+    a = n(647438),
+    i = n(442837),
+    s = n(481060),
+    c = n(690221),
+    o = n(572004),
+    l = n(55935),
     d = n(639777),
     u = n(29168),
-    p = n(444083),
-    m = n(340887),
-    b = n(408629),
-    g = n(440589),
-    f = n(388032),
-    v = n(799427);
-function y(e) {
+    m = n(444083),
+    b = n(340887),
+    p = n(408629),
+    f = n(401561),
+    j = n(388032),
+    g = n(842788);
+function v(e) {
     let { guildId: t, instance: n } = e,
-        y = (0, a.e7)([u.Z], () => u.Z.getState()),
-        h = i.useCallback(() => {
-            y
-                ? (0, m.Z)(n)
-                : (0, b.Z)({
+        v = (0, i.e7)([u.Z], () => u.Z.getState()),
+        x = a.useCallback(() => {
+            v
+                ? (0, b.Z)(n)
+                : (0, p.Z)({
                       onAccept: () => {
-                          (0, m.Z)(n);
+                          (0, b.Z)(n);
                       },
                   });
-        }, [n, y]),
-        j = i.useCallback(() => {
-            (0, l.JG)(n.serverIP),
-                (0, o.showToast)((0, o.createToast)(f.intl.string(f.t["+5kSoa"]), o.ToastType.SUCCESS));
+        }, [n, v]),
+        y = a.useCallback(() => {
+            (0, o.JG)(n.serverIP),
+                (0, s.showToast)((0, s.createToast)(j.intl.string(j.t["+5kSoa"]), s.ToastType.SUCCESS));
         }, [n.serverIP]),
         O = (0, d.Z)(t);
     return (0, r.jsxs)("div", {
-        className: v.card,
+        className: g.card,
         children: [
             (0, r.jsxs)("div", {
-                className: v.serverHeader,
+                className: g.serverHeader,
                 children: [
                     (0, r.jsx)("img", {
                         src: "https://via.placeholder.com/80x80/4CAF50/FFFFFF?text=MC",
                         alt: "",
-                        className: v.gameImage,
+                        className: g.gameImage,
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.serverInfo,
+                        className: g.serverInfo,
                         children: [
-                            (0, r.jsx)(o.X6q, {
+                            (0, r.jsx)(s.X6q, {
                                 variant: "heading-sm/medium",
                                 children: n.name,
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-tertiary",
                                 children: n.planName,
@@ -59,68 +59,68 @@ function y(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: v.serverDetails,
+                className: g.serverDetails,
                 children: (0, r.jsxs)("div", {
-                    className: v.detailsGrid,
+                    className: g.detailsGrid,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: v.detailItem,
+                            className: g.detailItem,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: f.intl.string(g.default.X0IaiI),
+                                    children: j.intl.string(f.default.X0IaiI),
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     children: "".concat(n.onlineConnectionsCount, " / ").concat(n.maxConnectionsCount),
                                 }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: v.detailItem,
+                            className: g.detailItem,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: f.intl.string(g.default["9pw/yM"]),
+                                    children: j.intl.string(f.default["9pw/yM"]),
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: v.serverIpContainer,
-                                    children: y
+                                    className: g.serverIpContainer,
+                                    children: v
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  (0, r.jsx)(o.Text, {
+                                                  (0, r.jsx)(s.Text, {
                                                       variant: "text-sm/medium",
                                                       children: n.serverIP,
                                                   }),
-                                                  (0, r.jsx)(o.P3F, {
-                                                      className: v.copyButton,
-                                                      "aria-label": f.intl.string(f.t.OpuAlJ),
-                                                      onClick: j,
-                                                      children: (0, r.jsx)(o.TIy, { size: "sm" }),
+                                                  (0, r.jsx)(s.P3F, {
+                                                      className: g.copyButton,
+                                                      "aria-label": j.intl.string(j.t.OpuAlJ),
+                                                      onClick: y,
+                                                      children: (0, r.jsx)(s.TIy, { size: "sm" }),
                                                   }),
                                               ],
                                           })
-                                        : (0, r.jsx)(s.Z, {
+                                        : (0, r.jsx)(c.Z, {
                                               onClick: () => {
-                                                  (0, b.Z)({});
+                                                  (0, p.Z)({});
                                               },
-                                              children: f.intl.string(g.default.UwXK29),
+                                              children: j.intl.string(f.default.UwXK29),
                                           }),
                                 }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: v.detailItem,
+                            className: g.detailItem,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: f.intl.string(g.default.MQQIu7),
+                                    children: j.intl.string(f.default.MQQIu7),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: v.statusContainer,
+                                    className: g.statusContainer,
                                     children: [
-                                        (0, r.jsx)("span", { className: v.statusIndicator }),
-                                        (0, r.jsx)(o.Text, {
+                                        (0, r.jsx)("span", { className: g.statusIndicator }),
+                                        (0, r.jsx)(s.Text, {
                                             variant: "text-sm/medium",
                                             children: n.status,
                                         }),
@@ -129,15 +129,15 @@ function y(e) {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: v.detailItem,
+                            className: g.detailItem,
                             children: [
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/semibold",
-                                    children: f.intl.string(g.default.v8iSgI),
+                                    children: j.intl.string(f.default.v8iSgI),
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
-                                    children: (0, c.Y4)(new Date(n.lastUpdated)),
+                                    children: (0, l.Y4)(new Date(n.lastUpdated)),
                                 }),
                             ],
                         }),
@@ -145,18 +145,19 @@ function y(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: v.serverActions,
+                className: g.serverActions,
                 children: [
-                    (0, r.jsx)(o.zxk, {
+                    (0, r.jsx)(s.zxk, {
                         fullWidth: !0,
-                        text: f.intl.string(g.default["0TMXHh"]),
-                        onClick: h,
+                        text: j.intl.string(f.default["0TMXHh"]),
+                        onClick: x,
                         variant: "primary",
                     }),
                     O &&
-                        (0, r.jsx)(o.zxk, {
+                        null != n.gameServerPanelUrl &&
+                        (0, r.jsx)(s.zxk, {
                             fullWidth: !0,
-                            text: f.intl.string(g.default["jO3u+/"]),
+                            text: j.intl.string(f.default["jO3u+/"]),
                             onClick: () => {
                                 window.open(n.gameServerPanelUrl, "_blank");
                             },
@@ -165,8 +166,8 @@ function y(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: v.overflowMenu,
-                children: (0, r.jsx)(p.Z, {
+                className: g.overflowMenu,
+                children: (0, r.jsx)(m.Z, {
                     guildId: t,
                     instance: n,
                 }),
