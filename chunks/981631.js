@@ -3360,7 +3360,6 @@ let tZ = {
         QUESTS: "Quests",
         QUEST_PREVIEW_TOOL: "Quest Preview Tool",
         QUEST_PREVIEW_TOOL_2: "Quest Preview Tool 2",
-        QUEST_MINOR_REWARD_CAPPING_CONFIG: "Quest Minor Reward Capping Config",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
     });

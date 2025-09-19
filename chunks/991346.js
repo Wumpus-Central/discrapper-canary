@@ -170,7 +170,6 @@ function V(e) {
                           M.s6.SHOP_KEEPER,
                           M.s6.QUEST_PREVIEW_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL_2,
-                          M.s6.QUEST_MINOR_REWARD_CAPPING_CONFIG,
                           M.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM,
                       ]
                     : [],
@@ -402,7 +401,11 @@ function J(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [t, n] = e;
-            return n.section !== o.ID.CUSTOM && null != n.searchableTitles && (null == n.predicate || n.predicate());
+            return (
+                (n.section !== o.ID.CUSTOM || t === M.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM) &&
+                null != n.searchableTitles &&
+                (null == n.predicate || n.predicate())
+            );
         }),
     );
 }

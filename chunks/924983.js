@@ -10,7 +10,15 @@ var r = n(951288),
     l = n(358085),
     c = n(388032),
     u = n(745770);
-let d = ["Hotspot Options", "Dismissible Contents", "Design Systems", "Intl Testing", "i18n", "Web Setting Tree Tool"];
+let d = [
+    "Hotspot Options",
+    "Dismissible Contents",
+    "Design Systems",
+    "Intl Testing",
+    "i18n",
+    "Web Setting Tree Tool",
+    "Minor Reward Capping Config",
+];
 function f(e) {
     let { legacy: t = !0 } = e,
         n = (0, l.isMac)() ? "CMD + OPT + O" : "CTRL + ALT + O";

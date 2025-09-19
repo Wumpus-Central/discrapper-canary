@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => j,
-    Zj: () => f,
-    v0: () => b,
+    Zj: () => b,
+    v0: () => f,
 }),
     n(388685);
 var a,
@@ -17,12 +17,13 @@ var a,
     h = n(246992),
     p = n(252899),
     x = n(451429),
-    b =
+    f =
         (((a = {}).NONE = ""),
         (a.DISMISSIBLE_CONTENT = "Dismissible Content"),
         (a.EXPERIMENTS = "Experiments"),
         (a.EVENTS = "Events"),
         (a.PREMIUM = "Premium"),
+        (a.QUESTS = "Quests"),
         (a.BILLING = "Billing"),
         (a.USERS = "Users"),
         (a.GUILDS = "Guilds"),
@@ -31,11 +32,12 @@ var a,
         (a.AUDIO_VIDEO = "Audio / Video"),
         (a.DEVELOPMENT = "Development"),
         a);
-let f = [
+let b = [
         "Experiments",
         "Dismissible Content",
         "Events",
         "Premium",
+        "Quests",
         "Billing",
         "Users",
         "Guilds",
@@ -57,8 +59,8 @@ let f = [
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         l = i.useRef(new Map()),
-        [s, b] = i.useState(() => new Set()),
-        { ref: f, width: v } = (0, d.ZP)(),
+        [s, f] = i.useState(() => new Set()),
+        { ref: b, width: v } = (0, d.ZP)(),
         j = i.useRef(null),
         _ = (0, p.F)(t, a);
     i.useEffect(() => {
@@ -75,8 +77,8 @@ function v(e) {
                         ? i
                         : 0) < 0 &&
                 s.add(c.id);
-        b(s);
-    }, [t, v, f, n]);
+        f(s);
+    }, [t, v, b, n]);
     let y = i.useCallback(
         (e) => {
             let { closePopout: t } = e;
@@ -96,7 +98,7 @@ function v(e) {
         children: [
             (0, r.jsxs)("div", {
                 className: x.tabBar,
-                ref: f,
+                ref: b,
                 children: [
                     t
                         .map((e) => {
