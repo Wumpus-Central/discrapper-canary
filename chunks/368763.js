@@ -1,4 +1,7 @@
-n.d(t, { T: () => i });
+n.d(t, {
+    T: () => i,
+    n: () => r,
+});
 let r = (0, n(427164).le)({
     name: "2025-09-halloween-app-icons",
     kind: "user",
