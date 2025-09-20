@@ -25,7 +25,6 @@ var r = (function (e) {
         (e.VideoCodecError = "video-codec-error"),
         (e.VoiceQueueMetrics = "voice-queue-metrics"),
         (e.SystemMicrophoneModeChange = "system-microphone-mode-change"),
-        (e.SelectedDeviceChange = "selected-device-change"),
         e
     );
 })({});

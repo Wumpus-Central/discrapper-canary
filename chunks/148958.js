@@ -82,7 +82,7 @@ function p(e, t) {
             null == f ||
                 f.forEach((e) => {
                     let t = s.default.extractTimestamp(e.id);
-                    null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
+                    null == n.getEntry(e.application.id) && n.track(e.application.id, t);
                 }),
                 n.compute();
             let t = null != (e = null == f ? void 0 : f.map((e) => (0, a.X0)(e.application, !0))) ? e : [],

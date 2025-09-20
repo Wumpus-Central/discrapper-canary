@@ -243,31 +243,25 @@ class v extends a.Z {
         null == (t = (n = (0, d.zS)()).setNoiseCancellationEnableStats) || t.call(n, e);
     }
     setAudioInputDevice(e) {
-        let t = this.audioInputDeviceId;
-        (this.audioInputDeviceId = e),
-            (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
-                ? (0, d.zS)().setInputDevice(e)
-                : (0, u.Hg)().then((t) => {
-                      var n;
-                      let r = null != (n = t.find((t) => t.id === e)) ? n : t[0];
-                      null != r && (0, d.zS)().setInputDevice(r.index);
-                  }),
-            this.emit(s.aB.SelectedDeviceChange, h.h7.AUDIO_INPUT, t, e);
+        (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
+            ? (0, d.zS)().setInputDevice(e)
+            : (0, u.Hg)().then((t) => {
+                  var n;
+                  let r = null != (n = t.find((t) => t.id === e)) ? n : t[0];
+                  null != r && (0, d.zS)().setInputDevice(r.index);
+              });
     }
     getAudioOutputDevices() {
         return (0, u.HS)();
     }
     setAudioOutputDevice(e) {
-        let t = this.audioOutputDeviceId;
-        (this.audioOutputDeviceId = e),
-            (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
-                ? (0, d.zS)().setOutputDevice(e)
-                : (0, u.HS)().then((t) => {
-                      var n;
-                      let r = null != (n = t.find((t) => t.id === e)) ? n : t[0];
-                      null != r && (0, d.zS)().setOutputDevice(r.index);
-                  }),
-            this.emit(s.aB.SelectedDeviceChange, h.h7.AUDIO_OUTPUT, t, e);
+        (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
+            ? (0, d.zS)().setOutputDevice(e)
+            : (0, u.HS)().then((t) => {
+                  var n;
+                  let r = null != (n = t.find((t) => t.id === e)) ? n : t[0];
+                  null != r && (0, d.zS)().setOutputDevice(r.index);
+              });
     }
     getVideoInputDevices() {
         return (0, u.l0)();
@@ -676,8 +670,6 @@ class v extends a.Z {
             (e = this),
             m(this, "Video", _.Z),
             m(this, "Camera", f.Z),
-            m(this, "audioInputDeviceId", h.Av),
-            m(this, "audioOutputDeviceId", h.Av),
             m(this, "videoInputDeviceId", h.Av),
             m(this, "connections", new Set()),
             m(this, "lastVoiceActivity", -1),

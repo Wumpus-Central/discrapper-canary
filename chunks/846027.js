@@ -288,52 +288,46 @@ let S = {
         setInputDevice(e) {
             let { location: t, analyticsLocations: n } =
                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (C()) return;
-            let i = d.Z.getInputDeviceId();
-            (null != t || null != n) &&
-                T(d.Z.getInputDevices(), i, e, "Audio Input", {
-                    location: t,
-                    analyticsLocations: n,
-                }),
+            C() ||
+                ((null != t || null != n) &&
+                    T(d.Z.getInputDevices(), d.Z.getInputDeviceId(), e, "Audio Input", {
+                        location: t,
+                        analyticsLocations: n,
+                    }),
                 r.Z.dispatch({
                     type: "AUDIO_SET_INPUT_DEVICE",
                     id: e,
-                    oldId: i,
                 }),
-                v();
+                v());
         },
         setOutputDevice(e) {
             let { location: t, analyticsLocations: n } =
                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (C()) return;
-            let i = d.Z.getOutputDeviceId();
-            (null != t || null != n) &&
-                T(d.Z.getOutputDevices(), i, e, "Audio Output", {
-                    location: t,
-                    analyticsLocations: n,
-                }),
+            C() ||
+                ((null != t || null != n) &&
+                    T(d.Z.getOutputDevices(), d.Z.getOutputDeviceId(), e, "Audio Output", {
+                        location: t,
+                        analyticsLocations: n,
+                    }),
                 r.Z.dispatch({
                     type: "AUDIO_SET_OUTPUT_DEVICE",
                     id: e,
-                    oldId: i,
                 }),
-                v();
+                v());
         },
         setVideoDevice(e) {
             let { location: t, analyticsLocations: n } =
                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            if (C()) return;
-            let i = d.Z.getVideoDeviceId();
-            (null != t || null != n) &&
-                T(d.Z.getVideoDevices(), i, e, "Video", {
-                    location: t,
-                    analyticsLocations: n,
-                }),
+            C() ||
+                ((null != t || null != n) &&
+                    T(d.Z.getVideoDevices(), d.Z.getVideoDeviceId(), e, "Video", {
+                        location: t,
+                        analyticsLocations: n,
+                    }),
                 r.Z.dispatch({
                     type: "MEDIA_ENGINE_SET_VIDEO_DEVICE",
                     id: e,
-                    oldId: i,
-                });
+                }));
         },
         setActiveInputProfile(e) {
             var t;

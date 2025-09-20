@@ -180,23 +180,19 @@ class N extends s.Z {
     }
     setAudioInputDevice(e) {
         var t, n;
-        let r = this.sourceId;
         (this.sourceId = e),
             this.eachConnection((t) => t.setAudioSource(e), T.Yn.DEFAULT),
             null == (t = this.voiceActivityInput) || t.setSource(e),
-            null == (n = this.loopback) || n.setAudioSource(e),
-            this.emit(f.aB.SelectedDeviceChange, T.h7.AUDIO_INPUT, r, e);
+            null == (n = this.loopback) || n.setAudioSource(e);
     }
     getAudioOutputDevices() {
         return (0, E.HS)();
     }
     setAudioOutputDevice(e) {
         var t;
-        let n = this.sinkId;
         (this.sinkId = e),
             this.connections.forEach((t) => t.setSinkId(e)),
-            null == (t = this.loopback) || t.setAudioSink(e),
-            this.emit(f.aB.SelectedDeviceChange, T.h7.AUDIO_OUTPUT, n, e);
+            null == (t = this.loopback) || t.setAudioSink(e);
     }
     getVideoInputDevices() {
         return (0, E.l0)();
