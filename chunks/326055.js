@@ -10,18 +10,18 @@ var r = n(951288),
     u = n(639777),
     p = n(262212),
     m = n(795338),
-    _ = n(845602),
-    b = n(603213),
-    g = n(606876),
+    g = n(845602),
+    _ = n(603213),
+    b = n(606876),
     f = n(535396),
-    x = n(989308),
+    C = n(989308),
     h = n(388032),
     j = n(802795);
 function v(e) {
     var t,
         n,
-        { guildId: v, powerup: k } = e,
-        C = (function (e, t) {
+        { guildId: v, powerup: x } = e,
+        k = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -44,23 +44,23 @@ function v(e) {
         })(e, ["guildId", "powerup"]);
     let [y, O] = o.useState(void 0),
         w = o.useMemo(() => {
-            switch (k.skuId) {
+            switch (x.skuId) {
                 case a.IN:
-                    return (0, r.jsx)(_.E, { guildId: v });
+                    return (0, r.jsx)(g.E, { guildId: v });
                 case a.If:
-                    return (0, r.jsx)(_.Z, {});
-                case a.A$:
                     return (0, r.jsx)(g.Z, {});
+                case a.A$:
+                    return (0, r.jsx)(b.Z, {});
                 default:
                     return;
             }
-        }, [k, v]);
-    (0, d.$)(v, k, d.w.DETAIL);
+        }, [x, v]);
+    (0, d.$)(v, x, d.w.DETAIL);
     let S = (0, u.Z)(v),
-        P = f.Rx[k.skuId],
-        I = null != P ? f.Cp[P] : null,
-        E = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(v)),
-        N = null != I ? (null == E ? void 0 : E.allPowerups[I]) : null;
+        P = f.Rx[x.skuId],
+        E = null != P ? f.Cp[P] : null,
+        N = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(v)),
+        I = null != E ? (null == N ? void 0 : N.allPowerups[E]) : null;
     return (0, r.jsxs)(
         i.Y0X,
         ((t = (function (e) {
@@ -89,16 +89,18 @@ function v(e) {
             return e;
         })(
             {
+                "data-migration-pending": !0,
                 className: j.modal,
                 size: i.CgR.DYNAMIC,
             },
-            C,
+            k,
         )),
         (n = n =
             {
                 parentComponent: "GuildPowerupPerkModal",
                 children: [
                     (0, r.jsxs)(i.hzk, {
+                        "data-migration-pending": !0,
                         className: j.modalContentContainer,
                         scrollbarType: "none",
                         children: [
@@ -107,29 +109,29 @@ function v(e) {
                                 children: [
                                     (0, r.jsx)(l.$, {
                                         className: j.powerupImage,
-                                        children: (0, r.jsx)(m.m, { powerup: k }),
+                                        children: (0, r.jsx)(m.m, { powerup: x }),
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: j.contentContainer,
                                         children: [
                                             (0, r.jsx)(i.X6q, {
                                                 variant: "heading-xl/extrabold",
-                                                children: k.title,
+                                                children: x.title,
                                             }),
                                             (0, r.jsx)(i.Text, {
                                                 className: j.description,
                                                 variant: "text-sm/normal",
-                                                children: k.description,
+                                                children: x.description,
                                             }),
-                                            null != N &&
+                                            null != I &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.description,
                                                     variant: "text-sm/normal",
-                                                    children: h.intl.formatToPlainString(x.default.NAFGkJ, {
-                                                        level: N.title,
+                                                    children: h.intl.formatToPlainString(C.default.NAFGkJ, {
+                                                        level: I.title,
                                                     }),
                                                 }),
-                                            (0, r.jsx)(b.q, { powerup: k }),
+                                            (0, r.jsx)(_.q, { powerup: x }),
                                             null != y &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.error,
@@ -141,7 +143,7 @@ function v(e) {
                                                 (0, r.jsx)(p.ZP, {
                                                     className: j.footer,
                                                     guildId: v,
-                                                    powerup: k,
+                                                    powerup: x,
                                                     onError: O,
                                                 }),
                                         ],
@@ -156,8 +158,9 @@ function v(e) {
                         ],
                     }),
                     (0, r.jsx)(i.olH, {
+                        "data-migration-pending": !0,
                         className: j.close,
-                        onClick: C.onClose,
+                        onClick: k.onClose,
                     }),
                 ],
             }),

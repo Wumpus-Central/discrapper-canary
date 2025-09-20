@@ -1,136 +1,139 @@
-r.d(t, { default: () => f }), r(953529), r(388685);
-var n = r(951288),
-    o = r(647438),
-    c = r(238651),
-    s = r(442837),
-    a = r(481060),
-    i = r(607070),
-    l = r(530618),
-    u = r(372654),
-    p = r(477487);
-function f(e) {
+n.d(t, { default: () => d }), n(953529), n(388685);
+var r = n(951288),
+    o = n(647438),
+    a = n(238651),
+    i = n(442837),
+    c = n(481060),
+    s = n(607070),
+    l = n(530618),
+    u = n(372654),
+    p = n(477487);
+function d(e) {
     var t,
-        r,
-        { title: f, description: b, image: O, button: d } = e,
+        n,
+        { title: d, description: f, image: b, button: O } = e,
         j = (function (e, t) {
             if (null == e) return {};
-            var r,
-                n,
+            var n,
+                r,
                 o = (function (e, t) {
                     if (null == e) return {};
-                    var r,
-                        n,
+                    var n,
+                        r,
                         o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
             return o;
         })(e, ["title", "description", "image", "button"]);
-    let y = (0, s.e7)([i.Z], () => i.Z.useReducedMotion),
-        m = o.useRef(null),
-        g = o.useRef(new c.qA()),
+    let m = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        g = o.useRef(null),
+        y = o.useRef(new a.qA()),
         [h, v] = o.useState(null);
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(c.O_, {
+            (0, r.jsx)(a.O_, {
                 ref: v,
                 className: p.confettiCanvas,
-                environment: g.current,
+                environment: y.current,
             }),
-            (0, n.jsxs)(
-                a.Y0X,
+            (0, r.jsxs)(
+                c.Y0X,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })(
                     {
+                        "data-migration-pending": !0,
                         className: p.modal,
-                        size: a.CgR.DYNAMIC,
+                        size: c.CgR.DYNAMIC,
                     },
                     j,
                 )),
-                (r = r =
+                (n = n =
                     {
                         parentComponent: "GuildPowerupActivateModal",
                         children: [
-                            (0, n.jsx)(a.hzk, {
+                            (0, r.jsx)(c.hzk, {
+                                "data-migration-pending": !0,
                                 className: p.modalContentContainer,
                                 scrollbarType: "none",
-                                children: (0, n.jsxs)("div", {
+                                children: (0, r.jsxs)("div", {
                                     className: p.container,
-                                    ref: m,
+                                    ref: g,
                                     children: [
-                                        O,
-                                        (0, n.jsxs)("div", {
+                                        b,
+                                        (0, r.jsxs)("div", {
                                             className: p.contentContainer,
                                             children: [
-                                                (0, n.jsx)(a.X6q, {
+                                                (0, r.jsx)(c.X6q, {
                                                     variant: "heading-xl/extrabold",
-                                                    children: f,
+                                                    children: d,
                                                 }),
-                                                (0, n.jsx)(a.Text, {
+                                                (0, r.jsx)(c.Text, {
                                                     tag: "span",
                                                     className: p.description,
                                                     variant: "text-sm/normal",
-                                                    children: b,
+                                                    children: f,
                                                 }),
-                                                d,
+                                                O,
                                             ],
                                         }),
                                     ],
                                 }),
                             }),
-                            (0, n.jsx)(a.olH, {
+                            (0, r.jsx)(c.olH, {
+                                "data-migration-pending": !0,
                                 className: p.close,
                                 onClick: j.onClose,
                             }),
-                            !y &&
-                                (0, n.jsx)(l.Z, {
-                                    confettiTarget: m.current,
+                            !m &&
+                                (0, r.jsx)(l.Z, {
+                                    confettiTarget: g.current,
                                     confettiCanvas: h,
                                     sprites: (0, u.vK)(),
                                 }),
                         ],
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 t),
             ),

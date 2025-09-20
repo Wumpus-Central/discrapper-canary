@@ -131,6 +131,7 @@ function _(e) {
                             ],
                         }),
                         (0, n.jsx)(s.olH, {
+                            "data-migration-pending": !0,
                             className: f.close,
                             onClick: O,
                         }),

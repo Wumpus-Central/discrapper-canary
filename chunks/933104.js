@@ -190,6 +190,7 @@ function w(e) {
                     children: [
                         t,
                         (0, r.jsx)(c.olH, {
+                            "data-migration-pending": !0,
                             className: x.close,
                             onClick: () => (null == s ? void 0 : s(_.L.USER_DISMISS)),
                         }),
