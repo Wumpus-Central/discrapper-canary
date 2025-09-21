@@ -45285,12 +45285,14 @@ html:not(.chat-input) .inputInner_b1f01d {
     flex: 1
 }
 
-.actions__39ec2:has(>.customButton__39ec2) {
-    align-content: center;
-    flex-wrap: wrap
+.actions__39ec2 .customButtons__39ec2 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
 }
 
-.actions__39ec2:has(>.customButton__39ec2) .customButton__39ec2 {
+.actions__39ec2 .customButtons__39ec2>button {
     flex: 1 1 auto;
     min-width: calc(50% - 8px)
 }

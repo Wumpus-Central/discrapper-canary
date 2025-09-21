@@ -1,85 +1,81 @@
 n.d(t, {
-    Z: () => h,
-    s: () => p,
+    Z: () => p,
+    s: () => _,
 });
 var r = n(951288);
 n(647438);
-var i = n(755721),
-    a = n(763472),
-    o = n(394821),
-    s = n(49012),
-    l = n(591759),
-    c = n(652853),
-    u = n(475413),
-    d = n(671955),
-    f = n(388032),
-    _ = n(704543);
-async function p(e) {
+var i = n(763472),
+    a = n(394821),
+    o = n(49012),
+    s = n(591759),
+    l = n(652853),
+    c = n(732380),
+    u = n(671955),
+    d = n(388032),
+    f = n(704543);
+async function _(e) {
     let { activity: t, user: n, index: r } = e;
     try {
-        let e = await (0, a.sd)(t, n.id);
+        let e = await (0, i.sd)(t, n.id);
         if (e.button_urls.length <= r) return;
-        let i = e.button_urls[r];
-        if ("string" != typeof i) return;
-        let o = l.Z.safeParseWithQuery(i);
-        if ((null == o ? void 0 : o.protocol) == null || (null == o ? void 0 : o.hostname) == null) return;
-        (0, s.q)({
-            href: l.Z.format(o),
+        let a = e.button_urls[r];
+        if ("string" != typeof a) return;
+        let l = s.Z.safeParseWithQuery(a);
+        if ((null == l ? void 0 : l.protocol) == null || (null == l ? void 0 : l.hostname) == null) return;
+        (0, o.q)({
+            href: s.Z.format(l),
             trusted: !1,
         });
     } catch (e) {}
 }
-function h(e) {
-    let { user: t, activity: n, onAction: a } = e,
-        { themeType: s } = (0, c.z)();
+function p(e) {
+    let { user: t, activity: n, onAction: i } = e,
+        { themeType: o } = (0, l.z)();
     if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1) return null;
-    let l = (0, o.Z)(n);
-    return s === d.l.MODAL_V2
-        ? (0, r.jsx)(r.Fragment, {
-              children: n.buttons.map((e, o) =>
+    let s = (0, a.Z)(n);
+    return o === u.l.MODAL_V2
+        ? (0, r.jsx)("div", {
+              className: f.customButtons,
+              children: n.buttons.map((e, a) =>
                   (0, r.jsx)(
-                      u.tG,
+                      c.O1,
                       {
-                          text: l ? f.intl.string(f.t["I6JG4+"]) : e,
-                          size: i.Ph.TINY,
-                          themeColor: "secondary",
+                          text: s ? d.intl.string(d.t["I6JG4+"]) : e,
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  null == a ||
-                                      a({ action: l ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  p({
+                                  null == i ||
+                                      i({ action: s ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
+                                  _({
                                       user: t,
                                       activity: n,
-                                      index: o,
+                                      index: a,
                                   });
                           },
                       },
-                      o,
+                      a,
                   ),
               ),
           })
-        : (0, r.jsx)(r.Fragment, {
-              children: n.buttons.map((e, o) =>
+        : (0, r.jsx)("div", {
+              className: f.customButtons,
+              children: n.buttons.map((e, a) =>
                   (0, r.jsx)(
-                      u.tG,
+                      c.O1,
                       {
-                          text: l ? f.intl.string(f.t["I6JG4+"]) : e,
-                          size: i.Ph.SMALL,
-                          className: _.customButton,
-                          themeColor: "secondary",
+                          text: s ? d.intl.string(d.t["I6JG4+"]) : e,
                           fullWidth: !0,
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  null == a ||
-                                      a({ action: l ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  p({
+                                  null == i ||
+                                      i({ action: s ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
+                                  _({
                                       user: t,
                                       activity: n,
-                                      index: o,
+                                      index: a,
                                   });
                           },
                       },
-                      o,
+                      a,
                   ),
               ),
           });

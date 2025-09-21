@@ -10,7 +10,7 @@ e.exports = {
     platformIcon: "platformIcon__39ec2",
     actions: "actions__39ec2",
     primaryButton: "primaryButton__39ec2",
-    customButton: "customButton__39ec2",
+    customButtons: "customButtons__39ec2",
     badges: "badges__39ec2",
     clickableContainer: "clickableContainer__39ec2",
     image: "image__39ec2",

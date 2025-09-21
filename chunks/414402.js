@@ -1,35 +1,26 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
-var i = n(755721),
-    a = n(620662),
-    o = n(710845),
-    s = n(652853),
-    l = n(475413),
-    c = n(981631),
-    u = n(671955),
-    d = n(388032);
-function f(e) {
-    let { user: t, activity: n, onAction: f } = e,
-        { themeType: _ } = (0, s.z)();
-    if (!(0, a.Z)(n, c.xjy.INSTANCE)) return null;
+var i = n(620662),
+    a = n(710845),
+    o = n(652853),
+    s = n(732380),
+    l = n(981631),
+    c = n(671955),
+    u = n(388032);
+function d(e) {
+    let { user: t, activity: n, onAction: d } = e,
+        { themeType: f } = (0, o.z)(),
+        _ = f === c.l.MODAL_V2;
+    if (!(0, i.Z)(n, l.xjy.INSTANCE)) return null;
     let p = (e) => {
         e.stopPropagation(),
-            null == f || f({ action: "PRESS_NOTIFY_BUTTON" }),
-            new o.Z("UserActivityActions").log("notify", t.id, n);
+            null == d || d({ action: "PRESS_NOTIFY_BUTTON" }),
+            new a.Z("UserActivityActions").log("notify", t.id, n);
     };
-    return _ === u.l.MODAL_V2
-        ? (0, r.jsx)(l.tG, {
-              text: d.intl.string(d.t.vwl1PD),
-              size: i.Ph.TINY,
-              themeColor: "secondary",
-              onClick: p,
-          })
-        : (0, r.jsx)(l.tG, {
-              text: d.intl.string(d.t.vwl1PD),
-              size: i.Ph.SMALL,
-              themeColor: "secondary",
-              fullWidth: !0,
-              onClick: p,
-          });
+    return (0, r.jsx)(s.O1, {
+        text: u.intl.string(u.t.vwl1PD),
+        fullWidth: !_,
+        onClick: p,
+    });
 }

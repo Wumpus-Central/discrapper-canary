@@ -1,12 +1,14 @@
 n.d(t, {
-    O1: () => d,
-    Q1: () => u,
+    O1: () => f,
+    Q1: () => d,
+    pt: () => _,
 });
 var r = n(951288);
 n(647438);
-var i = n(481060),
-    a = n(785717);
-function o(e, t, n) {
+var i = n(28664),
+    a = n(481060),
+    o = n(785717);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +21,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,16 +32,16 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = c(e, t);
+        i = u(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -47,7 +49,7 @@ function l(e, t) {
     }
     return i;
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -56,29 +58,52 @@ function c(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
+function d(e) {
     let { action: t, onClick: n } = e,
-        { trackUserProfileAction: r } = (0, a.KZ)();
+        { trackUserProfileAction: r } = (0, o.KZ)();
     return (e) => {
         null != t && r({ action: t }), null == n || n(e);
     };
 }
-function d(e) {
-    var { action: t, onClick: n, variant: a = "secondary", size: o = "sm" } = e,
-        c = l(e, ["action", "onClick", "variant", "size"]);
-    let d = u({
+function f(e) {
+    var { action: t, onClick: n, variant: i = "secondary", size: o = "sm" } = e,
+        s = c(e, ["action", "onClick", "variant", "size"]);
+    let u = d({
         action: t,
         onClick: n,
     });
     return (0, r.jsx)(
-        i.zxk,
-        s(
+        a.zxk,
+        l(
             {
-                onClick: d,
-                variant: a,
+                onClick: u,
+                variant: i,
                 size: o,
             },
-            c,
+            s,
         ),
     );
+}
+function _(e) {
+    var { action: t, onClick: n, variant: o = "secondary", size: s = "sm", tooltipText: u, "aria-label": f } = e,
+        _ = c(e, ["action", "onClick", "variant", "size", "tooltipText", "aria-label"]);
+    let p = d({
+        action: t,
+        onClick: n,
+    });
+    return (0, r.jsx)(i.u, {
+        text: u,
+        children: (0, r.jsx)(
+            a.hU,
+            l(
+                {
+                    onClick: p,
+                    variant: o,
+                    size: s,
+                    "aria-label": null != f ? f : u,
+                },
+                _,
+            ),
+        ),
+    });
 }

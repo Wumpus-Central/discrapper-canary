@@ -1,64 +1,55 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(755721),
-    o = n(287734),
-    s = n(622822),
-    l = n(359110),
-    c = n(922482),
-    u = n(496675),
-    d = n(979651),
-    f = n(652853),
-    _ = n(475413),
-    p = n(981631),
-    h = n(671955),
-    m = n(388032);
-function g(e) {
-    let { channel: t, onAction: n, onClose: g } = e,
-        { themeType: E } = (0, f.z)(),
-        b = (0, i.e7)([d.Z], () => d.Z.isInChannel(t.id));
+    a = n(287734),
+    o = n(622822),
+    s = n(359110),
+    l = n(922482),
+    c = n(496675),
+    u = n(979651),
+    d = n(652853),
+    f = n(732380),
+    _ = n(981631),
+    p = n(671955),
+    h = n(388032);
+function m(e) {
+    let { channel: t, onAction: n, onClose: m } = e,
+        { themeType: g } = (0, d.z)(),
+        E = g === p.l.MODAL_V2,
+        b = (0, i.e7)([u.Z], () => u.Z.isInChannel(t.id));
     if (
-        !(0, i.e7)([u.Z], () => {
-            let e = (0, s.dl)() && (0, s.zd)(t.id);
-            return (t.isPrivate() || u.Z.can(p.Plq.CONNECT, t)) && !e;
+        !(0, i.e7)([c.Z], () => {
+            let e = (0, o.dl)() && (0, o.zd)(t.id);
+            return (t.isPrivate() || c.Z.can(_.Plq.CONNECT, t)) && !e;
         })
     )
         return null;
     let y = () =>
-            E === h.l.MODAL || E === h.l.MODAL_V2
-                ? m.intl.string(m.t["3xjX0d"])
+            g === p.l.MODAL || g === p.l.MODAL_V2
+                ? h.intl.string(h.t["3xjX0d"])
                 : t.isDM() || t.isGroupDM()
-                  ? m.intl.string(m.t["7hwn2N"])
+                  ? h.intl.string(h.t["7hwn2N"])
                   : t.isGuildStageVoice()
-                    ? m.intl.string(m.t.Acqcoq)
-                    : m.intl.string(m.t.BXxdl5),
+                    ? h.intl.string(h.t.Acqcoq)
+                    : h.intl.string(h.t.BXxdl5),
         O = () =>
-            E === h.l.MODAL || E === h.l.MODAL_V2
-                ? m.intl.string(m.t.VJlc0d)
+            g === p.l.MODAL || g === p.l.MODAL_V2
+                ? h.intl.string(h.t.VJlc0d)
                 : t.isDM() || t.isGroupDM()
-                  ? m.intl.string(m.t.ozoE2N)
+                  ? h.intl.string(h.t.ozoE2N)
                   : t.isGuildStageVoice()
-                    ? m.intl.string(m.t["7vb2cX"])
-                    : m.intl.string(m.t["96ANUF"]),
+                    ? h.intl.string(h.t["7vb2cX"])
+                    : h.intl.string(h.t["96ANUF"]),
         v = (e) => {
             e.stopPropagation(),
                 null == n || n({ action: "PRESS_JOIN_CALL_BUTTON" }),
-                t.isGuildStageVoice() ? (0, c.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)),
-                null == g || g();
+                t.isGuildStageVoice() ? (0, l.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)),
+                null == m || m();
         };
-    return E === h.l.MODAL_V2
-        ? (0, r.jsx)(_.tG, {
-              text: b ? y() : O(),
-              size: a.Ph.TINY,
-              themeColor: "secondary",
-              onClick: v,
-          })
-        : (0, r.jsx)(_.tG, {
-              text: b ? y() : O(),
-              size: a.Ph.SMALL,
-              themeColor: "secondary",
-              fullWidth: !0,
-              onClick: v,
-          });
+    return (0, r.jsx)(f.O1, {
+        text: b ? y() : O(),
+        fullWidth: !E,
+        onClick: v,
+    });
 }
