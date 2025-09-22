@@ -4207,6 +4207,7 @@ var ng = (function (e) {
             (e.QUEST_BAR_RENDER_DELAY = "quest_bar_render_delay"),
             (e.QUEST_HOME_SORT_METHOD_CHANGED = "quest_home_sort_method_changed"),
             (e.QUEST_HOME_FILTERS_CHANGED = "quest_home_filters_changed"),
+            (e.QUEST_GAME_SHEET_ERROR = "quest_game_sheet_error"),
             (e.QUEST_VIDEO_APP_FOCUSED = "quest_video_app_focused"),
             (e.QUEST_VIDEO_APP_UNFOCUSED = "quest_video_app_unfocused"),
             (e.QUEST_VIDEO_BUFFERING_ENDED = "quest_video_buffering_ended"),
