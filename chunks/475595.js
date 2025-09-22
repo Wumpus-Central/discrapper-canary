@@ -24,8 +24,8 @@ var r = n(887003),
     o = n(509212),
     s = n(46140),
     l = n(981631),
-    c = n(255649),
-    u = n(636573);
+    c = n(380299),
+    u = n(772400);
 let d = 3,
     f = /\.([a-zA-Z0-9]+)$/,
     _ = ["video/mp4", "video/webm"];
@@ -58,15 +58,15 @@ function m(e, t) {
     return null != e ? e : t;
 }
 function g(e, t, n, i) {
-    var a, l;
-    let d,
-        f = !1;
+    var a, s;
+    let l,
+        d = !1;
     switch (t) {
         case "hero":
-            d = m(e.config.assets.heroVideo, e.config.assets.hero);
+            l = m(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case "hero_image":
-            d = e.config.assets.hero;
+            l = e.config.assets.hero;
             break;
         case "hero_video": {
             let t = e.config.assets.heroVideo,
@@ -78,23 +78,23 @@ function g(e, t, n, i) {
                         : null,
                 r = null != t ? t : n;
             if (null == r) return null;
-            d = r;
+            l = r;
             break;
         }
         case "quest_bar_hero":
-            d = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            l = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case "quest_bar_hero_video": {
             let t = e.config.assets.questBarHeroVideo,
                 n =
                     "videoMetadata" in e.config
-                        ? null == (l = e.config.videoMetadata)
+                        ? null == (s = e.config.videoMetadata)
                             ? void 0
-                            : l.assets.questBarPreviewVideo
+                            : s.assets.questBarPreviewVideo
                         : null,
                 r = null != t ? t : n;
             if (null == r) return null;
-            d = r;
+            l = r;
             break;
         }
         case "reward": {
@@ -111,42 +111,38 @@ function g(e, t, n, i) {
                           mimetype: "video/webm",
                           isAnimated: !0,
                       };
-            d = m(t.assetVideo, t.asset);
+            l = m(t.assetVideo, t.asset);
             break;
         }
         case "reward_image": {
             let t = (0, o.hF)(e);
             if (t.type === r.w.VIRTUAL_CURRENCY) return null;
-            d = t.asset;
+            l = t.asset;
             break;
         }
         case "game_tile":
             "dark" === n && null != e.config.assets.gameTileDark
-                ? (d = e.config.assets.gameTileDark)
+                ? (l = e.config.assets.gameTileDark)
                 : "light" === n && null != e.config.assets.gameTileLight
-                  ? (d = e.config.assets.gameTileLight)
-                  : ((d = e.config.assets.gameTile), (f = !0));
+                  ? (l = e.config.assets.gameTileLight)
+                  : ((l = e.config.assets.gameTile), (d = !0));
             break;
         case "logo_type":
             "dark" === n && null != e.config.assets.logotypeDark
-                ? (d = e.config.assets.logotypeDark)
+                ? (l = e.config.assets.logotypeDark)
                 : "light" === n && null != e.config.assets.logotypeLight
-                  ? (d = e.config.assets.logotypeLight)
-                  : ((d = e.config.assets.logotype), (f = !0));
+                  ? (l = e.config.assets.logotypeLight)
+                  : ((l = e.config.assets.logotype), (d = !0));
             break;
         case "cosponsor_logo_type":
             if (null == e.config.cosponsorMetadata) return null;
             "dark" === n && null != e.config.cosponsorMetadata.logotypeDark
-                ? (d = e.config.cosponsorMetadata.logotypeDark)
+                ? (l = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === n && null != e.config.cosponsorMetadata.logotypeLight
-                  ? (d = e.config.cosponsorMetadata.logotypeLight)
-                  : ((d = e.config.cosponsorMetadata.logotype), (f = !0));
+                  ? (l = e.config.cosponsorMetadata.logotypeLight)
+                  : ((l = e.config.cosponsorMetadata.logotype), (d = !0));
     }
-    let _ = e.config.features.includes(s.S7.QUESTS_CDN);
-    return h(e.id, d, {
-        theme: f ? n : void 0,
-        newCdn: _,
-    });
+    return h(e.id, l, { theme: d ? n : void 0 });
 }
 function E(e) {
     var t;
@@ -154,7 +150,7 @@ function E(e) {
 }
 function b(e, t, n) {
     if (t.startsWith("blob:")) return E(t);
-    let r = (null == n ? void 0 : n.newCdn) ? s.tD : s.Uo;
+    let r = s.tD;
     return ""
         .concat(r)
         .concat(e)
