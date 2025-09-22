@@ -88,6 +88,11 @@ async function p(e, t, n) {
             c.push({
                 name: "build_override",
                 value: e.buildOverride,
+            }),
+        null != e.experimentOverrides &&
+            c.push({
+                name: "experiment_overrides",
+                value: e.experimentOverrides.map((e) => "".concat(e.experimentId, ":").concat(e.variantId)).join(","),
             });
     let d = null == (i = e.feature) ? void 0 : i.asana_inbox_id;
     null != d &&
