@@ -43,7 +43,9 @@ function P(e) {
         H = w.length > 0,
         F = null == k || "" === k.trim(),
         V = (0, y.Z)(o),
-        z = k.trim().length > 0 && k.trim() !== (null == N || null == (t = N.status) ? void 0 : t.trim()),
+        z =
+            (k.trim().length > 0 && k.trim() !== (null == N || null == (t = N.status) ? void 0 : t.trim())) ||
+            (null != U && !s()(U, null == N ? void 0 : N.emoji)),
         [W, q] = i.useState(!1);
     i.useEffect(() => {
         k.trim().length > 0 && W && q(!1), null == U && W && q(!1);
@@ -64,21 +66,18 @@ function P(e) {
         }, [G]),
         i.useEffect(() => {
             null == Z || Z(null == D ? void 0 : D.current);
-        }, [D, Z]),
-        i.useEffect(() => {
-            (null == N ? void 0 : N.emoji) != null && null != N.status ? (L(N.status), B(N.emoji)) : (L(""), B(null));
-        }, [N]);
+        }, [D, Z]);
     let Y = i.useCallback(
             (e) => {
-                e !== G && (0, h.Zx)(e, !0);
+                e !== G && ((0, h.Zx)(e, !0), null != U && B(null), "" !== k.trim() && L(""));
             },
-            [G],
+            [G, U, k],
         ),
         K = i.useCallback(
-            (e) => {
-                let { emoji: t, status: n } = e;
-                (s()(t, null == N ? void 0 : N.emoji) && n === (null == N ? void 0 : N.status)) ||
-                    (0, h._s)(e.status, e.emoji, !0);
+            (e, t) => {
+                let { emoji: n, status: r } = e;
+                (s()(n, null == N ? void 0 : N.emoji) && r === (null == N ? void 0 : N.status)) ||
+                    ((0, h._s)(e.status, e.emoji, !0), B(t ? null : e.emoji), L(t ? "" : e.status));
             },
             [null == N ? void 0 : N.emoji, null == N ? void 0 : N.status],
         ),
@@ -88,17 +87,20 @@ function P(e) {
                 null == e || null == (t = e.preventDefault) || t.call(e),
                     null != U && 0 === k.trim().length && q(!0),
                     F ||
-                        K({
-                            status: k,
-                            emoji:
-                                null != U
-                                    ? U
-                                    : {
-                                          id: null,
-                                          name: "\uD83D\uDCAD",
-                                          animated: !1,
-                                      },
-                        });
+                        K(
+                            {
+                                status: k,
+                                emoji:
+                                    null != U
+                                        ? U
+                                        : {
+                                              id: null,
+                                              name: "\uD83D\uDCAD",
+                                              animated: !1,
+                                          },
+                            },
+                            !0,
+                        );
             },
             [k, U, K, F],
         ),
