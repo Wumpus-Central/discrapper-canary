@@ -42395,17 +42395,6 @@ body .headerAnimation_b54a5b {
     margin-top: 24px
 }
 
-.header__693f1 {
-    background-color: var(--background-base-low);
-    display: flex;
-    justify-content: flex-end;
-    padding: 0
-}
-
-.closeButton__693f1 {
-    padding: 16px
-}
-
 .headerContainerGift__57a87 {
     align-items: center;
     background-image: linear-gradient(var(--modal-background), var(--modal-background));
