@@ -1,13 +1,13 @@
 r.d(e, { default: () => g }), r(388685);
 var n = r(951288),
     a = r(647438),
-    i = r(755721),
+    i = r(538534),
     o = r(481060),
     c = r(881052),
     l = r(434404),
     s = r(78451),
-    u = r(915509),
-    d = r(981631),
+    d = r(915509),
+    u = r(981631),
     p = r(388032),
     b = r(197571);
 function g(t) {
@@ -15,8 +15,8 @@ function g(t) {
     let { guild: g, onClose: y, hideColors: f } = t,
         [_, m] = a.useState(g.verificationLevel),
         [O, j] = a.useState(null),
-        v = g.features.has(d.oNc.COMMUNITY),
-        h = (0, s.IF)(v, f).filter((t) => !t.disabled),
+        h = g.features.has(u.oNc.COMMUNITY),
+        v = (0, s.IF)(h, f).filter((t) => !t.disabled),
         x = a.useCallback(async () => {
             null != O && j(null);
             try {
@@ -26,7 +26,7 @@ function g(t) {
             }
         }, [O, g.id, _, y]);
     return (0, n.jsx)(
-        u.Z,
+        d.Z,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -65,10 +65,10 @@ function g(t) {
                             className: b.marginBottom20,
                             children: p.intl.format(p.t.iuRk2t, {}),
                         }),
-                        (0, n.jsx)(i.Gu, {
+                        (0, n.jsx)(i.E, {
                             value: _,
-                            options: h,
-                            onChange: (t) => m(t.value),
+                            options: v,
+                            onChange: (t) => m(t),
                         }),
                     ],
                 }),

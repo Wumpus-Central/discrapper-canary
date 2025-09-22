@@ -7,8 +7,8 @@ var i = n(951288),
     o = n.n(a),
     d = n(442837),
     c = n(692547),
-    u = n(82659),
-    h = n(755721),
+    u = n(538534),
+    h = n(82659),
     g = n(481060),
     m = n(87051),
     x = n(798140),
@@ -90,7 +90,7 @@ function V(e) {
         a = null != (t = null == n ? void 0 : n.selected_time_window) ? t : G.Oe.ALWAYS;
     return null == l
         ? null
-        : (0, i.jsxs)(g.xJW, {
+        : (0, i.jsxs)("div", {
               className: I.largeSpacing,
               children: [
                   (0, i.jsx)(g.j7V, {
@@ -151,10 +151,10 @@ function W(e) {
             (0, i.jsx)(g.xJW, {
                 title: D.intl.string(D.t.lprV7e),
                 className: I.largeSpacing,
-                children: (0, i.jsx)(h.Gu, {
+                children: (0, i.jsx)(u.E, {
                     disabled: t,
                     value: n,
-                    onChange: (e) => l("message_notifications", e, w.UE.notifications(e.value)),
+                    onChange: (e) => l("message_notifications", e, w.UE.notifications(e)),
                     options: [
                         {
                             name: D.intl.string(D.t["n/bTaW"]),
@@ -187,7 +187,7 @@ function Y(e) {
         muted: o,
         guildId: d,
     } = e;
-    return (0, i.jsxs)(g.xJW, {
+    return (0, i.jsxs)("div", {
         className: I.largeSpacing,
         children: [
             (0, i.jsx)(g.j7V, {
@@ -405,7 +405,7 @@ function q(e) {
         o = (0, d.e7)([O.Z], () => O.Z.getMemberCount(t)),
         {
             suppressEveryone: c,
-            suppressRoles: h,
+            suppressRoles: u,
             muteEvents: g,
             mobilePush: x,
             muted: v,
@@ -439,7 +439,7 @@ function q(e) {
         M = (e, n, i) => {
             m.Z.updateGuildNotificationSettings(t, { [e]: n }, i);
         };
-    return (0, i.jsxs)(u.Modal, {
+    return (0, i.jsxs)(h.Modal, {
         title: D.intl.string(D.t.h850Sk),
         actions: [
             {
@@ -461,12 +461,12 @@ function q(e) {
                 messageNotifications: f,
                 memberCount: o,
                 handleRadioChange: (e, n, i) => {
-                    m.Z.updateGuildNotificationSettings(t, { [e]: n.value }, i);
+                    m.Z.updateGuildNotificationSettings(t, { [e]: n }, i);
                 },
             }),
             (0, i.jsx)(Y, {
                 suppressEveryone: c,
-                suppressRoles: h,
+                suppressRoles: u,
                 handleCheckboxChange: M,
                 notifyHighlights: C,
                 muteEvents: g,

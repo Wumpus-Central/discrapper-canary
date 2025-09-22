@@ -5,7 +5,7 @@ var r = n(951288),
     o = n.n(i),
     a = n(423650),
     l = n.n(a),
-    u = n(755721),
+    u = n(538534),
     p = n(481060),
     c = n(388032),
     d = n(947719);
@@ -38,7 +38,7 @@ class g extends s.Component {
                     variant: "text-xs/normal",
                     children: c.intl.string(c.t.YeiLeH),
                 }),
-                (0, r.jsx)(u.Gu, {
+                (0, r.jsx)(u.E, {
                     options: this.getQuestionOptions(),
                     onChange: this.handleOptionChange,
                     value: e,
@@ -48,7 +48,7 @@ class g extends s.Component {
     }
     constructor(...e) {
         super(...e),
-            h(this, "state", { selectedValue: null }),
+            h(this, "state", { selectedValue: void 0 }),
             h(
                 this,
                 "getQuestionOptions",
@@ -63,7 +63,7 @@ class g extends s.Component {
             ),
             h(this, "handleOptionChange", (e) => {
                 let { onSelect: t } = this.props;
-                this.setState({ selectedValue: e.value }), t(e.value);
+                this.setState({ selectedValue: e }), t(e);
             });
     }
 }

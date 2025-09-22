@@ -7,7 +7,7 @@ var r = n(951288),
     l = n.n(s),
     c = n(442837),
     u = n(524437),
-    d = n(755721),
+    d = n(538534),
     f = n(481060),
     _ = n(668781),
     p = n(292556),
@@ -398,7 +398,7 @@ class et extends i.PureComponent {
         t !== F.qrD.NEVER ? Q("UserSettingsModal") : p.default.setDesktopType(t);
     }
     handleTTSChange(e) {
-        let t = e.value;
+        let t = e;
         p.default.setTTSType(t);
     }
     render() {
@@ -528,9 +528,9 @@ class et extends i.PureComponent {
                                     className: W.marginBottom8,
                                     children: H.intl.string(H.t["+4dnAw"]),
                                 }),
-                                (0, r.jsx)(d.Gu, {
+                                (0, r.jsx)(d.E, {
                                     options: e,
-                                    onChange: this.handleTTSChange,
+                                    onChange: (e) => this.handleTTSChange(e),
                                     value: this.props.ttsType,
                                 }),
                             ],
@@ -718,9 +718,9 @@ function el() {
                               className: W.marginBottom8,
                               children: H.intl.string(H.t.oWF6eX),
                           }),
-                          (0, r.jsx)(d.Gu, {
+                          (0, r.jsx)(d.E, {
                               options: t,
-                              onChange: n,
+                              onChange: (e) => n({ value: e }),
                               value: e,
                           }),
                       ],

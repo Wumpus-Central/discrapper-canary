@@ -1,4 +1,4 @@
-n.d(t, { E: () => d });
+n.d(t, { E: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(877371),
@@ -56,8 +56,45 @@ function u(e, t) {
         e
     );
 }
-function d(e) {
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function _(e) {
     if ((0, i.A)("RadioGroup")) return (0, r.jsx)(a.C, l({}, e));
-    let t = u(l({}, e), { onChange: null != e.onChange ? (t) => e.onChange(t.value) : void 0 });
-    return (0, r.jsx)(o.Gu, l({}, t));
+    let { size: t } = e,
+        n = d(e, ["size"]),
+        s = e.options.map((e) => {
+            var t, n;
+            return u(l({}, e), {
+                desc:
+                    "string" == typeof e.desc
+                        ? e.desc
+                        : null != (n = null == (t = e.desc) ? void 0 : t.toString())
+                          ? n
+                          : null,
+            });
+        }),
+        c = u(l({}, n), {
+            options: s,
+            onChange: null != e.onChange ? (t) => e.onChange(t.value) : void 0,
+        });
+    return (0, r.jsx)(o.Gu, l({}, c));
 }

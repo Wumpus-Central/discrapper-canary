@@ -2,7 +2,7 @@ n.d(t, { Z: () => h });
 var r = n(951288),
     i = n(647438),
     a = n(442837),
-    o = n(755721),
+    o = n(538534),
     s = n(481060),
     l = n(846027),
     c = n(906732),
@@ -48,8 +48,8 @@ function h() {
     return (0, r.jsx)(s.xJW, {
         title: _.intl.string(_.t.LM3U3t),
         className: p.marginBottom20,
-        children: (0, r.jsx)(o.Gu, {
-            onChange: h,
+        children: (0, r.jsx)(o.E, {
+            onChange: (e) => h({ value: e }),
             options: m,
             value: null != t ? t : f._.CUSTOM,
         }),

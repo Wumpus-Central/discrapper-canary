@@ -1,225 +1,226 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(951288);
 n(647438);
 var i = n(524437),
-    a = n(755721),
-    o = n(481060),
-    s = n(921801),
-    l = n(695346),
-    c = n(358085),
-    u = n(940276),
-    d = n(981631),
-    f = n(726985),
-    _ = n(933554),
-    p = n(388032),
-    h = n(764055);
-function m(e) {
-    let { label: t, sublabel: n, id: i, checked: s, onChange: l } = e;
+    a = n(538534),
+    o = n(755721),
+    s = n(481060),
+    l = n(921801),
+    c = n(695346),
+    u = n(358085),
+    d = n(940276),
+    f = n(981631),
+    _ = n(726985),
+    p = n(933554),
+    h = n(388032),
+    m = n(764055);
+function g(e) {
+    let { label: t, sublabel: n, id: i, checked: a, onChange: l } = e;
     return (0, r.jsxs)("div", {
-        className: h.settingSwitch,
+        className: m.settingSwitch,
         children: [
             (0, r.jsxs)("label", {
-                className: h.settingSwitchLabel,
+                className: m.settingSwitchLabel,
                 htmlFor: i,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-md/semibold",
                         children: t,
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: n,
                     }),
                 ],
             }),
-            (0, r.jsx)(a.T2, {
+            (0, r.jsx)(o.T2, {
                 id: i,
-                checked: s,
+                checked: a,
                 onChange: l,
             }),
         ],
     });
 }
-function g() {
-    let e = l.G6.useSetting(),
-        t = l.no.useSetting(),
+function E() {
+    let e = c.G6.useSetting(),
+        t = c.no.useSetting(),
         n = (e) => {
-            l.no.updateSetting(e);
+            c.no.updateSetting(e);
         },
-        s = [
+        o = [
             {
                 value: i.GI.ACTIVITY_STATUS_ON,
-                name: p.intl.string(p.t.UzGMHx),
+                name: h.intl.string(h.t.UzGMHx),
             },
             {
                 value: i.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                name: p.intl.string(_.default["/sAeRU"]),
+                name: h.intl.string(p.default["/sAeRU"]),
             },
             {
                 value: i.GI.ACTIVITY_STATUS_OFF,
-                name: p.intl.string(_.default.m3oL7e),
+                name: h.intl.string(p.default.m3oL7e),
             },
         ];
-    return (0, r.jsx)(o.hjN, {
-        className: h.formSection,
-        children: (0, r.jsxs)(o.y5t, {
+    return (0, r.jsx)(s.hjN, {
+        className: m.formSection,
+        children: (0, r.jsxs)(s.y5t, {
             component: (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(o.X6q, {
-                        className: h.formTitle,
+                    (0, r.jsx)(s.X6q, {
+                        className: m.formTitle,
                         variant: "heading-lg/semibold",
                         color: "header-primary",
-                        children: p.intl.string(_.default.TG0Qsb),
+                        children: h.intl.string(p.default.TG0Qsb),
                     }),
-                    (0, r.jsx)(o.R94, {
-                        className: h.formDescription,
-                        type: o.R94.Types.DESCRIPTION,
-                        children: p.intl.string(_.default.OO17Li),
+                    (0, r.jsx)(s.R94, {
+                        className: m.formDescription,
+                        type: s.R94.Types.DESCRIPTION,
+                        children: h.intl.string(p.default.OO17Li),
                     }),
                 ],
             }),
             children: [
                 (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(o.X6q, {
-                            className: h.defaultSetting,
+                        (0, r.jsx)(s.X6q, {
+                            className: m.defaultSetting,
                             variant: "heading-md/medium",
                             color: "header-primary",
-                            children: p.intl.string(_.default["/LHVbm"]),
+                            children: h.intl.string(p.default["/LHVbm"]),
                         }),
-                        (0, r.jsx)(a.Gu, {
-                            options: s,
+                        (0, r.jsx)(a.E, {
+                            options: o,
                             value: t,
-                            onChange: (e) => n(e.value),
+                            onChange: (e) => n(e),
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: h.myServersContainer,
+                    className: m.myServersContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: h.myServersHeaderContainer,
+                            className: m.myServersHeaderContainer,
                             children: [
-                                (0, r.jsx)(o.X6q, {
-                                    className: h.myServersTitle,
+                                (0, r.jsx)(s.X6q, {
+                                    className: m.myServersTitle,
                                     variant: "heading-md/medium",
                                     color: "header-primary",
-                                    children: p.intl.string(p.t.TqdOvL),
+                                    children: h.intl.string(h.t.TqdOvL),
                                 }),
                                 !e &&
-                                    (0, r.jsx)(o.Wn, {
-                                        className: h.myServersIgnoredWarning,
-                                        messageType: o.QYI.WARNING,
+                                    (0, r.jsx)(s.Wn, {
+                                        className: m.myServersIgnoredWarning,
+                                        messageType: s.QYI.WARNING,
                                         textColor: "text-feedback-warning",
-                                        children: p.intl.string(_.default["xxI0/f"]),
+                                        children: h.intl.string(p.default["xxI0/f"]),
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(u.Z, {}),
+                        (0, r.jsx)(d.Z, {}),
                     ],
-                }),
-            ],
-        }),
-    });
-}
-function E() {
-    let e = l.cP.useSetting(),
-        t = l.Ou.useSetting();
-    return (0, r.jsx)(s.F, {
-        setting: f.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, r.jsxs)(o.hjN, {
-            className: h.formSection,
-            children: [
-                (0, r.jsx)("div", {
-                    children: (0, r.jsx)(o.X6q, {
-                        className: h.formTitle,
-                        variant: "heading-lg/semibold",
-                        color: "header-primary",
-                        children: p.intl.string(_.default["5rYBAQ"]),
-                    }),
-                }),
-                (0, r.jsx)(m, {
-                    label: p.intl.string(_.default.khuuzs),
-                    sublabel: p.intl.string(_.default["8EWsJy"]),
-                    id: "allow-friends-to-join-my-game",
-                    checked: e,
-                    onChange: (e) => l.cP.updateSetting(e),
-                }),
-                (0, r.jsx)(m, {
-                    label: p.intl.string(_.default.Uz5Ipq),
-                    sublabel: p.intl.string(_.default.CZI2GR),
-                    id: "allow-vc-join-without-request",
-                    checked: t,
-                    onChange: (e) => l.Ou.updateSetting(e),
                 }),
             ],
         }),
     });
 }
 function b() {
-    let e = l.G6.useSetting(),
-        t = c.isPlatformEmbedded ? p.intl.string(_.default.UQ9RHB) : p.intl.string(p.t.oKqC4u);
-    return (0, r.jsx)(s.F, {
-        setting: f.s6.ACTIVITY_PRIVACY_STATUS,
-        children: (0, r.jsxs)(o.hjN, {
-            className: h.formSection,
+    let e = c.cP.useSetting(),
+        t = c.Ou.useSetting();
+    return (0, r.jsx)(l.F, {
+        setting: _.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        children: (0, r.jsxs)(s.hjN, {
+            className: m.formSection,
             children: [
                 (0, r.jsx)("div", {
-                    children: (0, r.jsx)(o.R94, {
-                        className: h.formDescription,
-                        type: o.R94.Types.DESCRIPTION,
-                        children: p.intl.string(_.default.t2Ysra),
+                    children: (0, r.jsx)(s.X6q, {
+                        className: m.formTitle,
+                        variant: "heading-lg/semibold",
+                        color: "header-primary",
+                        children: h.intl.string(p.default["5rYBAQ"]),
                     }),
                 }),
-                (0, r.jsx)("div", {
-                    className: h.switchContainer,
-                    children: (0, r.jsx)(m, {
-                        label: p.intl.string(_.default.WhdCGB),
-                        sublabel: t,
-                        id: "share-my-activity",
-                        checked: e,
-                        onChange: l.G6.updateSetting,
-                    }),
+                (0, r.jsx)(g, {
+                    label: h.intl.string(p.default.khuuzs),
+                    sublabel: h.intl.string(p.default["8EWsJy"]),
+                    id: "allow-friends-to-join-my-game",
+                    checked: e,
+                    onChange: (e) => c.cP.updateSetting(e),
+                }),
+                (0, r.jsx)(g, {
+                    label: h.intl.string(p.default.Uz5Ipq),
+                    sublabel: h.intl.string(p.default.CZI2GR),
+                    id: "allow-vc-join-without-request",
+                    checked: t,
+                    onChange: (e) => c.Ou.updateSetting(e),
                 }),
             ],
         }),
     });
 }
 function y() {
-    return (0, r.jsx)(s.F, {
-        setting: f.s6.ACTIVITY_PRIVACY_TOS,
-        children: (0, r.jsx)(o.hjN, {
-            children: (0, r.jsx)(o.ToO, {
-                type: o.ToO.Types.PRIMARY,
-                body: p.intl.format(p.t.xvCsx8, {
-                    termsLink: d.EYA.TERMS,
-                    privacyLink: d.EYA.PRIVACY,
+    let e = c.G6.useSetting(),
+        t = u.isPlatformEmbedded ? h.intl.string(p.default.UQ9RHB) : h.intl.string(h.t.oKqC4u);
+    return (0, r.jsx)(l.F, {
+        setting: _.s6.ACTIVITY_PRIVACY_STATUS,
+        children: (0, r.jsxs)(s.hjN, {
+            className: m.formSection,
+            children: [
+                (0, r.jsx)("div", {
+                    children: (0, r.jsx)(s.R94, {
+                        className: m.formDescription,
+                        type: s.R94.Types.DESCRIPTION,
+                        children: h.intl.string(p.default.t2Ysra),
+                    }),
+                }),
+                (0, r.jsx)("div", {
+                    className: m.switchContainer,
+                    children: (0, r.jsx)(g, {
+                        label: h.intl.string(p.default.WhdCGB),
+                        sublabel: t,
+                        id: "share-my-activity",
+                        checked: e,
+                        onChange: c.G6.updateSetting,
+                    }),
+                }),
+            ],
+        }),
+    });
+}
+function O() {
+    return (0, r.jsx)(l.F, {
+        setting: _.s6.ACTIVITY_PRIVACY_TOS,
+        children: (0, r.jsx)(s.hjN, {
+            children: (0, r.jsx)(s.ToO, {
+                type: s.ToO.Types.PRIMARY,
+                body: h.intl.format(h.t.xvCsx8, {
+                    termsLink: f.EYA.TERMS,
+                    privacyLink: f.EYA.PRIVACY,
                 }),
             }),
         }),
     });
 }
-let O = function (e) {
+let v = function (e) {
     let { className: t } = e;
-    return (0, r.jsx)(o.hjN, {
+    return (0, r.jsx)(s.hjN, {
         className: t,
-        children: (0, r.jsxs)(o.y5t, {
+        children: (0, r.jsxs)(s.y5t, {
             forceLevel: 1,
-            component: (0, r.jsx)(o.X6q, {
-                className: h.formTitle,
+            component: (0, r.jsx)(s.X6q, {
+                className: m.formTitle,
                 variant: "heading-xl/semibold",
                 color: "header-primary",
-                children: p.intl.string(p.t.Cq98yM),
+                children: h.intl.string(h.t.Cq98yM),
             }),
             children: [
-                (0, r.jsx)(b, {}),
-                (0, r.jsx)(o.$i$, { className: h.divider }),
-                (0, r.jsx)(g, {}),
-                (0, r.jsx)(o.$i$, { className: h.divider }),
-                (0, r.jsx)(E, {}),
-                (0, r.jsx)(o.$i$, { className: h.divider }),
                 (0, r.jsx)(y, {}),
+                (0, r.jsx)(s.$i$, { className: m.divider }),
+                (0, r.jsx)(E, {}),
+                (0, r.jsx)(s.$i$, { className: m.divider }),
+                (0, r.jsx)(b, {}),
+                (0, r.jsx)(s.$i$, { className: m.divider }),
+                (0, r.jsx)(O, {}),
             ],
         }),
     });

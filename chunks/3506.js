@@ -6,7 +6,7 @@ var i = n(512722),
     o = n(392711),
     s = n.n(o),
     l = n(442837),
-    c = n(755721),
+    c = n(538534),
     u = n(481060),
     d = n(660216),
     f = n(13245),
@@ -21,8 +21,8 @@ var i = n(512722),
     O = n(624864),
     v = n(957148),
     I = n(556296),
-    S = n(808506),
-    T = n(237997),
+    T = n(808506),
+    S = n(237997),
     A = n(626135);
 n(63063);
 var C = n(13140),
@@ -88,12 +88,12 @@ function M() {
 }
 function k(e) {
     var t;
-    let n = T.default.getNotificationPositionMode(),
+    let n = S.default.getNotificationPositionMode(),
         r = n !== N._vf.DISABLED,
         i = I.ZP.getOverlayKeybind(),
         a = I.ZP.getOverlayChatKeybind();
     return {
-        enabled: S.default.enabled,
+        enabled: T.default.enabled,
         notifications_enabled: r,
         notifications_position: r ? n : null,
         text_notifications_mode: O.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT)
@@ -101,8 +101,8 @@ function k(e) {
             : "ENABLED",
         hotkey: null != i ? (0, C.BB)(i.shortcut) : null,
         text_activation_hotkey: null != a ? (0, C.BB)(a.shortcut) : null,
-        text_opacity_slider: T.default.getTextWidgetOpacity(),
-        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : S.default.enabled,
+        text_opacity_slider: S.default.getTextWidgetOpacity(),
+        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : T.default.enabled,
     };
 }
 function U(e) {
@@ -118,17 +118,17 @@ function G(e) {
         { oopEnabled: i, legacyEnabled: o } = (0, l.cj)([y.default], () => y.default.getGlobalEnabledStatus()),
         {
             avatarSizeMode: s,
-            displayNameMode: S,
+            displayNameMode: T,
             displayUserMode: A,
             textChatDisabled: C,
             notificationPositionMode: w,
             shouldShowKeybindIndicators: x,
-        } = (0, l.cj)([T.default, O.Z], () => ({
-            avatarSizeMode: T.default.getAvatarSizeMode(),
-            displayNameMode: T.default.getDisplayNameMode(),
-            displayUserMode: T.default.getDisplayUserMode(),
-            notificationPositionMode: T.default.getNotificationPositionMode(),
-            shouldShowKeybindIndicators: T.default.showKeybindIndicators,
+        } = (0, l.cj)([S.default, O.Z], () => ({
+            avatarSizeMode: S.default.getAvatarSizeMode(),
+            displayNameMode: S.default.getDisplayNameMode(),
+            displayUserMode: S.default.getDisplayUserMode(),
+            notificationPositionMode: S.default.getNotificationPositionMode(),
+            shouldShowKeybindIndicators: S.default.showKeybindIndicators,
             textChatDisabled: O.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT),
         })),
         j = (0, l.e7)([I.ZP], () => I.ZP.getOverlayKeybind()),
@@ -186,7 +186,7 @@ function G(e) {
                         }),
                         (0, r.jsx)(U, {
                             title: R.intl.string(R.t.dnvZSk),
-                            children: (0, r.jsx)(c.Gu, {
+                            children: (0, r.jsx)(c.E, {
                                 options: [
                                     {
                                         name: R.intl.string(R.t.YcOxtr),
@@ -197,16 +197,13 @@ function G(e) {
                                         value: N.ipw.SMALL,
                                     },
                                 ],
-                                onChange: (e) => {
-                                    let { value: t } = e;
-                                    return f.Z.setAvatarSizeMode(t);
-                                },
+                                onChange: (e) => f.Z.setAvatarSizeMode(e),
                                 value: s,
                             }),
                         }),
                         (0, r.jsx)(U, {
                             title: R.intl.string(R.t.J0dpcH),
-                            children: (0, r.jsx)(c.Gu, {
+                            children: (0, r.jsx)(c.E, {
                                 options: [
                                     {
                                         name: R.intl.string(R.t.nBmDra),
@@ -221,16 +218,13 @@ function G(e) {
                                         value: N.wC$.NEVER,
                                     },
                                 ],
-                                onChange: (e) => {
-                                    let { value: t } = e;
-                                    return f.Z.setDisplayNameMode(t);
-                                },
-                                value: S,
+                                onChange: (e) => f.Z.setDisplayNameMode(e),
+                                value: T,
                             }),
                         }),
                         (0, r.jsx)(U, {
                             title: R.intl.string(R.t.swsWWF),
-                            children: (0, r.jsx)(c.Gu, {
+                            children: (0, r.jsx)(c.E, {
                                 options: [
                                     {
                                         name: R.intl.string(R.t.nBmDra),
@@ -241,10 +235,7 @@ function G(e) {
                                         value: N.OYC.ONLY_WHILE_SPEAKING,
                                     },
                                 ],
-                                onChange: (e) => {
-                                    let { value: t } = e;
-                                    return f.Z.setDisplayUserMode(t);
-                                },
+                                onChange: (e) => f.Z.setDisplayUserMode(e),
                                 value: A,
                             }),
                         }),

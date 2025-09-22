@@ -2,14 +2,14 @@ n.d(t, { z: () => u });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(755721),
-    s = n(650774),
+    s = n(538534),
+    a = n(650774),
     o = n(434404),
     c = n(981631),
     d = n(388032);
 function u(e) {
     let { guildId: t, defaultSettings: n, canManageGuild: u } = e,
-        m = (0, l.e7)([s.Z], () => s.Z.getMemberCount(t)),
+        m = (0, l.e7)([a.Z], () => a.Z.getMemberCount(t)),
         g = i.useMemo(
             () => [
                 {
@@ -25,10 +25,9 @@ function u(e) {
             [m],
         ),
         p = i.useCallback((e) => {
-            let { value: t } = e;
-            o.Z.updateGuild({ defaultMessageNotifications: t });
+            o.Z.updateGuild({ defaultMessageNotifications: e });
         }, []);
-    return (0, r.jsx)(a.Gu, {
+    return (0, r.jsx)(s.E, {
         options: g,
         value: n,
         disabled: !u,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(539854);
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(780384),
-    o = n(755721),
+    a = n(538534),
+    o = n(780384),
     s = n(481060),
     l = n(846027),
     c = n(600164),
@@ -85,10 +85,10 @@ function C() {
                 (0, r.jsxs)(s.Kqy, {
                     gap: 8,
                     children: [
-                        (0, r.jsx)(o.Gu, {
+                        (0, r.jsx)(a.E, {
                             options: g,
                             onChange: (e) => {
-                                l.Z.setNoiseCancellation(2 === e.value, S), l.Z.setNoiseSuppression(1 === e.value, S);
+                                l.Z.setNoiseCancellation(2 === e, S), l.Z.setNoiseSuppression(1 === e, S);
                             },
                             value: p,
                         }),
@@ -96,7 +96,7 @@ function C() {
                             (0, r.jsx)(s.ToO, {
                                 type: s.Dd5.PRIMARY,
                                 imageData: {
-                                    src: (0, a.ap)(e) ? v : I,
+                                    src: (0, o.ap)(e) ? v : I,
                                     width: 70,
                                     height: 40,
                                 },

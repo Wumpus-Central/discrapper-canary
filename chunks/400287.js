@@ -3,7 +3,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     a = n.n(i),
-    o = n(755721),
+    o = n(538534),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -39,7 +39,7 @@ function b() {
                         className: E.marginBottom8,
                         children: g.intl.string(g.t.TYnRkZ),
                     }),
-                    (0, r.jsx)(o.Gu, {
+                    (0, r.jsx)(o.E, {
                         options: [
                             {
                                 name: g.intl.string(g.t["KFH/mZ"]),
@@ -54,7 +54,7 @@ function b() {
                                 value: m.A2N.ALWAYS,
                             },
                         ],
-                        onChange: (e) => p.cC.updateSetting(e.value),
+                        onChange: (e) => p.cC.updateSetting(e),
                         value: b,
                     }),
                 ],

@@ -9099,21 +9099,19 @@ svg.radioIcon_c1e9c4 {
 }
 
 .group__5a85a {
-    flex-direction: column;
-    gap: var(--space-24);
-    padding: var(--space-40)
+    flex-direction: column
 }
 
 .group__5a85a,
 .item__5a85a {
     box-sizing: border-box;
-    display: flex
+    display: flex;
+    gap: var(--space-12)
 }
 
 .item__5a85a {
     align-items: center;
     border-radius: var(--radius-sm);
-    gap: var(--space-12);
     padding: var(--space-8)
 }
 
@@ -9125,16 +9123,16 @@ svg.radioIcon_c1e9c4 {
 }
 
 .outerRadioFill__5a85a {
-    fill: var(--checkbox-background-default)
+    fill: var(--radio-background-default)
 }
 
 .outerRadioBorderStroke__5a85a {
-    stroke: var(--checkbox-border-default);
+    stroke: var(--radio-border-default);
     opacity: 1
 }
 
 .innerDotRadio__5a85a {
-    fill: var(--white);
+    fill: var(--radio-thumb-background-active);
     opacity: 0
 }
 
@@ -9143,11 +9141,11 @@ svg.radioIcon_c1e9c4 {
 }
 
 .item__5a85a[data-selected] .outerRadioFill__5a85a {
-    fill: var(--checkbox-background-checked)
+    fill: var(--radio-background-default-selected)
 }
 
 .item__5a85a[data-selected] .outerRadioBorderStroke__5a85a {
-    stroke: var(--checkbox-border-default);
+    stroke: var(--radio-border-default-selected);
     opacity: .2
 }
 
@@ -9155,38 +9153,30 @@ svg.radioIcon_c1e9c4 {
     opacity: 1
 }
 
+.item__5a85a[data-disabled][data-selected] .innerDotRadio__5a85a,
 .item__5a85a[data-disabled][data-selected] .outerRadioBorderStroke__5a85a,
 .item__5a85a[data-disabled][data-selected] .outerRadioFill__5a85a {
     opacity: .3
 }
 
-.item__5a85a[data-disabled][data-selected] .innerDotRadio__5a85a {
-    fill: var(--white);
-    opacity: .3
-}
-
 .item__5a85a:hover {
-    background-color: var(--background-mod-subtle)
+    background-color: var(--radio-background-hover)
 }
 
 .item__5a85a:hover .outerRadioFill__5a85a {
-    fill: var(--checkbox-background-default)
+    fill: var(--radio-background-hover)
 }
 
 .item__5a85a:hover .outerRadioBorderStroke__5a85a {
-    stroke: var(--checkbox-border-default)
+    stroke: var(--radio-border-hover)
 }
 
 .item__5a85a[data-selected]:hover .outerRadioFill__5a85a {
-    fill: var(--control-background-primary-hover)
+    fill: var(--radio-background-hover-selected)
 }
 
 .item__5a85a[data-selected]:hover .outerRadioBorderStroke__5a85a {
-    stroke: var(--border-subtle)
-}
-
-.item__5a85a[data-selected]:hover .innerDotRadio__5a85a {
-    fill: var(--white)
+    stroke: var(--radio-border-hover-selected)
 }
 
 .high-contrast-mode .container__5a85a {
@@ -90263,7 +90253,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

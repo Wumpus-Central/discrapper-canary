@@ -2,22 +2,22 @@ n.d(t, { Z: () => R }), n(388685), n(539854), n(472816), n(794429);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
-    d = n(755721),
+    d = n(538534),
     u = n(481060),
     m = n(570140),
     g = n(275759),
     p = n(313201),
     f = n(63063),
     h = n(243730),
-    b = n(764260),
-    x = n(946724),
+    x = n(764260),
+    b = n(946724),
     j = n(95242),
-    _ = n(530198),
-    v = n(420966),
+    v = n(530198),
+    _ = n(420966),
     O = n(203377),
     y = n(981631),
     C = n(856651),
@@ -86,16 +86,16 @@ function w(e) {
     });
 }
 function R(e) {
-    let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
+    let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
         { headerHeight: p, headerRef: R } = (0, j.Z)(0),
-        { scrolledToTop: Z, handleScroll: D } = (0, v.V)(),
+        { scrolledToTop: Z, handleScroll: D } = (0, _.V)(),
         A = (0, c.e7)([h.Z], () => {
             var e;
             return null == (e = h.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
         }, [n.id, t.id]),
-        L = (0, c.Wu)([x.Z], () => {
+        L = (0, c.Wu)([b.Z], () => {
             var e;
-            return null != (e = x.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
+            return null != (e = b.Z.getEditedRoleConnectionConfigurationsMap().get(n.id)) ? e : [];
         }),
         k = L.length > 1 ? g.O1.OR : g.O1.AND,
         M = i.useMemo(() => (k === g.O1.OR ? L.flat() : null != L && L.length > 0 ? L[0] : []), [k, L]),
@@ -110,7 +110,7 @@ function R(e) {
             operator: void 0,
             value: void 0,
         }),
-            (0, b.d_)(n.id, P(r, k));
+            (0, x.d_)(n.id, P(r, k));
     }
     function B() {
         m.Z.dispatch({
@@ -141,7 +141,7 @@ function R(e) {
             })),
             (F = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((H = () => (0, b.d_)(n.id, [])),
+                    ((H = () => (0, x.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)("div", {
@@ -172,11 +172,11 @@ function R(e) {
                         ],
                     })),
                     (function (e, t, n, i, l) {
-                        let a = P(i, g.O1.OR);
+                        let s = P(i, g.O1.OR);
                         return (0, r.jsx)(u.xJW, {
                             className: E.operatorContainer,
                             title: N.intl.string(N.t.Xs7PHR),
-                            children: (0, r.jsx)(d.Gu, {
+                            children: (0, r.jsx)(d.E, {
                                 options: [
                                     {
                                         name: N.intl.string(N.t["W3iY5+"]),
@@ -187,15 +187,15 @@ function R(e) {
                                         value: g.O1.AND,
                                     },
                                 ],
-                                onChange: (e) => l(i, e.value),
+                                onChange: (e) => l(i, e),
                                 value: n,
-                                disabled: e || a.length < 2,
+                                disabled: e || s.length < 2,
                                 "aria-labelledby": T,
                             }),
                         });
-                    })(l, n.id, k, M, (e, t) => (0, b.d_)(n.id, P(e, t))),
+                    })(l, n.id, k, M, (e, t) => (0, x.d_)(n.id, P(e, t))),
                     (function (e, t, n, i, l) {
-                        function a(n, r) {
+                        function s(n, r) {
                             let i = [];
                             for (let t of e) i.push(S({}, t));
                             if (null == n) {
@@ -211,25 +211,25 @@ function R(e) {
                             } else -1 === r ? i.push(n) : r >= 0 && (i[r] = n);
                             t(i);
                         }
-                        let s = new Map();
+                        let a = new Map();
                         for (let t of (e.forEach((e, t) => {
                             let n = "".concat(e.connectionType, ":").concat(e.applicationId);
-                            if (s.has(n)) {
-                                let r = s.get(n);
+                            if (a.has(n)) {
+                                let r = a.get(n);
                                 null == r ||
                                     r.push({
                                         index: t,
                                         configuration: e,
                                     });
                             } else
-                                s.set(n, [
+                                a.set(n, [
                                     {
                                         index: t,
                                         configuration: e,
                                     },
                                 ]);
                         }),
-                        s.values())) {
+                        a.values())) {
                             if (
                                 t.some((e) => {
                                     let { configuration: t } = e;
@@ -267,12 +267,12 @@ function R(e) {
                         }
                         return (0, r.jsx)("div", {
                             className: E.configurationsContainer,
-                            children: Array.from(s.values()).map((e) =>
+                            children: Array.from(a.values()).map((e) =>
                                 (0, r.jsx)(
-                                    _.Z,
+                                    v.Z,
                                     {
                                         configurationItems: e,
-                                        onConfigurationChange: a,
+                                        onConfigurationChange: s,
                                         locked: n,
                                         integrations: l,
                                     },
@@ -280,7 +280,7 @@ function R(e) {
                                 ),
                             ),
                         });
-                    })(M, (e) => (0, b.d_)(n.id, P(e, k)), l, n.id, o),
+                    })(M, (e) => (0, x.d_)(n.id, P(e, k)), l, n.id, o),
                     e,
                 ],
             }));
@@ -293,13 +293,13 @@ function R(e) {
             className: I.contentWidth,
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !Z }),
+                    className: s()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !Z }),
                     ref: R,
-                    children: (0, r.jsx)(v.Z, {
+                    children: (0, r.jsx)(_.Z, {
                         guild: t,
                         role: n,
                         selectedSection: O.ZI.VERIFICATIONS,
-                        setSelectedSection: s,
+                        setSelectedSection: a,
                     }),
                 }),
                 (null != A ? A : 0) > 0

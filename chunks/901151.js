@@ -2,7 +2,7 @@ n.d(t, { Z: () => w }), n(642613), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(524437),
-    o = n(755721),
+    o = n(538534),
     s = n(481060),
     l = n(768581),
     c = n(63063),
@@ -227,13 +227,10 @@ function P() {
                 header: y.intl.string(y.t["ms+TmZ"]),
                 description: y.intl.string(y.t["4NN4+/"]),
             }),
-            (0, r.jsx)(o.Gu, {
+            (0, r.jsx)(o.E, {
                 value: t,
                 options: n,
-                onChange: (e) => {
-                    let { value: t } = e;
-                    return d.JG.updateSetting(t);
-                },
+                onChange: (e) => d.JG.updateSetting(e),
             }),
         ],
     });
