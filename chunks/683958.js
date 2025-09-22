@@ -11,8 +11,8 @@ var l = n(951288),
     f = n(430824),
     p = n(823379),
     b = n(213459),
-    h = n(667204),
-    m = n(739980),
+    m = n(667204),
+    h = n(739980),
     g = n(617266),
     y = n(333861),
     v = n(388032),
@@ -30,8 +30,8 @@ function O(e) {
             command: y,
             onClose: O,
             requireLaunchChannel: _,
-            onShareResult: E,
-            previewMessage: P,
+            onShareResult: P,
+            previewMessage: E,
         } = e,
         w = (function (e, t) {
             if (null == e) return {};
@@ -87,31 +87,31 @@ function O(e) {
         D = r.useRef(0),
         [A, k] = r.useState(_ && null != Z ? [Z] : []),
         I = A.length,
-        R = I >= 5,
-        [F, q] = r.useState(""),
-        { results: U, updateSearchText: H } = (0, c.s)({
+        F = I >= 5,
+        [R, U] = r.useState(""),
+        { results: q, updateSearchText: H } = (0, c.s)({
             selectedDestinations: A,
             originDestination: null != Z ? Z : void 0,
             includeMissingDMs: !0,
         }),
         z = r.useCallback(
             (e) => {
-                q(e), H(e);
+                U(e), H(e);
             },
             [H],
         ),
-        G = r.useCallback(() => (E(!1), O()), [E, O]),
+        G = r.useCallback(() => (P(!1), O()), [P, O]),
         [W] = (0, o.Z)([n]),
         V = r.useCallback(() => {
-            q("");
-        }, [q]),
+            U("");
+        }, [U]),
         X = r.useRef(null);
     r.useEffect(() => {
-        if ("" === F) {
+        if ("" === R) {
             var e;
             null == (e = X.current) || e.focus();
         }
-    }, [F]);
+    }, [R]);
     let J = r.useCallback(
             (e) => {
                 k((t) => {
@@ -119,25 +119,25 @@ function O(e) {
                         let { type: n, id: l } = t;
                         return n === e.type && l === e.id;
                     });
-                    if (-1 === n) return R ? t : (q(""), H(""), (D.current += 1), [e, ...t]);
+                    if (-1 === n) return F ? t : (U(""), H(""), (D.current += 1), [e, ...t]);
                     let l = [...t];
                     return l.splice(n, 1), (D.current += 1), l;
                 });
             },
-            [R, H],
+            [F, H],
         ),
-        [Y, B] = r.useMemo(() => {
+        [Q, Y] = r.useMemo(() => {
             if (T) return [null, !1];
             let e = M.find((e) => e.untranslatedName === y.name);
             return void 0 !== e ? [e, !1] : [null, !0];
         }, [y, M, T]),
-        Q = r.useCallback(
+        B = r.useCallback(
             async function (e) {
                 let { closeAfterSend: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                if (null === Y) return;
+                if (null === Q) return;
                 N(!0);
                 let n = (await Promise.all(e.map(u.qx))).filter(p.lm);
-                t && (E(!0), C()),
+                t && (P(!0), C()),
                     n.forEach(async (e) => {
                         var t, n;
                         let l = d.Z.getChannel(e);
@@ -163,8 +163,8 @@ function O(e) {
                                     : {},
                             i = f.Z.getGuild(null == l ? void 0 : l.guild_id);
                         null !=
-                            (await (0, h.Z)({
-                                command: Y,
+                            (await (0, m.Z)({
+                                command: Q,
                                 optionValues: r,
                                 context: {
                                     channel: l,
@@ -173,14 +173,14 @@ function O(e) {
                             })) &&
                             (0, a.showToast)((0, a.createToast)(v.intl.string(v.t["5WjJcn"]), a.ToastType.MESSAGE));
                     }),
-                    E(!0),
+                    P(!0),
                     C();
             },
-            [E, Y, y.options],
+            [P, Q, y.options],
         ),
         K = r.useCallback(() => {
-            Q(A, { closeAfterSend: !0 });
-        }, [Q, A]);
+            B(A, { closeAfterSend: !0 });
+        }, [B, A]);
     if (T)
         return (0, l.jsx)(i.Modal, {
             title: v.intl.string(v.t.fuFvw8),
@@ -190,7 +190,7 @@ function O(e) {
             actions: [],
             children: (0, l.jsx)(a.$jN, { className: x.spinnerContainer }),
         });
-    if (B)
+    if (Y)
         return (0, l.jsx)(i.Modal, {
             title: v.intl.string(v.t.fuFvw8),
             "aria-label": v.intl.string(v.t.fuFvw8),
@@ -206,14 +206,12 @@ function O(e) {
             children: v.intl.string(v.t.yAk8ZW),
         });
     let $ =
-            U.length > 0
+            q.length > 0
                 ? (0, l.jsx)(g.F, {
-                      paddingBottom: 16,
-                      paddingTop: 16,
-                      rowData: U,
+                      rowData: q,
                       handleToggleDestination: J,
                       selectedDestinations: A,
-                      disableSelection: R,
+                      disableSelection: F,
                       originDestination: Z,
                   })
                 : (0, l.jsxs)(l.Fragment, {
@@ -234,7 +232,7 @@ function O(e) {
     null == W && (ee = v.intl.string(v.t.fuFvw8));
     let et = v.intl.format(v.t["DF+q2t"], { appName: null == W ? void 0 : W.name });
     return (
-        R && (et = v.intl.format(v.t["/KhyPT"], { count: 5 })),
+        F && (et = v.intl.format(v.t["/KhyPT"], { count: 5 })),
         (0, l.jsx)(i.Modal, {
             title: ee.toString(),
             subtitle: et,
@@ -255,10 +253,10 @@ function O(e) {
                     variant: "primary",
                 },
             ],
-            preview: void 0 !== P ? (0, l.jsx)(m.z, { previewMessage: P }) : null,
+            preview: void 0 !== E ? (0, l.jsx)(h.z, { previewMessage: E }) : null,
             input: (0, l.jsx)(a.E1j, {
                 ref: X,
-                query: F,
+                query: R,
                 onChange: z,
                 onClear: V,
                 placeholder: v.intl.string(v.t["5h0QOD"]),
