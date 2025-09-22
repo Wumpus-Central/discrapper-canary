@@ -1,20 +1,29 @@
-i.d(n, { default: () => s });
-var e = i(951288);
+i.d(n, { default: () => l });
+var a = i(951288);
 i(647438);
 var r = i(442837),
-    o = i(468026),
-    a = i(979651),
-    l = i(388032);
-function s(t) {
-    let { username: n, onConfirm: i, onClose: s, transitionState: c } = t,
-        d = (0, r.e7)([a.Z], () => a.Z.isCurrentClientInVoiceChannel());
-    return (0, e.jsx)(o.default, {
-        confirmText: l.intl.string(l.t["7Xq/nZ"]),
-        title: l.intl.formatToPlainString(l.t.RNAFd3, { username: n }),
-        cancelText: l.intl.string(l.t["ETE/oK"]),
-        onConfirm: i,
-        onClose: s,
-        body: l.intl.format(l.t["0P8VTE"], { username: n }) + (d ? " " + l.intl.string(l.t.dFPOQ0) : ""),
+    e = i(82659),
+    o = i(979651),
+    s = i(388032);
+function l(t) {
+    let { username: n, onConfirm: i, onClose: l, transitionState: c } = t,
+        d = (0, r.e7)([o.Z], () => o.Z.isCurrentClientInVoiceChannel());
+    return (0, a.jsx)(e.Modal, {
+        title: s.intl.formatToPlainString(s.t.RNAFd3, { username: n }),
+        onClose: l,
+        actions: [
+            {
+                text: s.intl.string(s.t["ETE/oK"]),
+                onClick: l,
+                variant: "secondary",
+            },
+            {
+                text: s.intl.string(s.t["7Xq/nZ"]),
+                onClick: i,
+                variant: "primary",
+            },
+        ],
+        subtitle: s.intl.format(s.t["0P8VTE"], { username: n }) + (d ? " " + s.intl.string(s.t.dFPOQ0) : ""),
         transitionState: c,
     });
 }
