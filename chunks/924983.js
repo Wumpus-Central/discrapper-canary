@@ -18,6 +18,7 @@ let d = [
     "i18n",
     "Web Setting Tree Tool",
     "Minor Reward Capping Config",
+    "Payment Flow Modals",
 ];
 function f(e) {
     let { legacy: t = !0 } = e,

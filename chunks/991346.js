@@ -164,7 +164,6 @@ function V(e) {
                     ? [
                           M.s6.EXPERIMENTS,
                           M.s6.DEVELOPER_OPTIONS,
-                          M.s6.PAYMENT_FLOW_MODALS,
                           M.s6.REVENUE_STORYBOOK,
                           M.s6.VIRTUAL_CURRENCY_CONFIGURATION,
                           M.s6.SHOP_KEEPER,
@@ -288,7 +287,7 @@ function Y() {
     );
 }
 function W(e) {
-    let { searchResults: t } = (0, j.E)(),
+    let t = j.R.useField("searchResults"),
         n = Y(),
         r = n[e],
         i = Object.fromEntries(
