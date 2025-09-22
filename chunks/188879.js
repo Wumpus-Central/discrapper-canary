@@ -16,14 +16,14 @@ var i = n(951288),
     y = n(788080),
     b = n(451284),
     v = n(613734),
-    x = n(31992),
+    x = n(846488),
     _ = n(384725),
     j = n(97568),
     E = n(800530),
     O = n(981631),
     P = n(388032),
     A = n(586449);
-function w(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -48,7 +48,7 @@ function w(e) {
     }
     return e;
 }
-function C(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,8 +76,8 @@ let T = (e) => {
                 return null == n
                     ? P.intl.format(P.t.HpvELi, e)
                     : (null == n ? void 0 : n.member_type) === h.wO.OWNER
-                      ? P.intl.format(P.t.X1ngSU, C(w({}, e), { guildName: null == n ? void 0 : n.name }))
-                      : P.intl.format(P.t.rmpEPD, C(w({}, e), { guildName: null == n ? void 0 : n.name }));
+                      ? P.intl.format(P.t.X1ngSU, w(C({}, e), { guildName: null == n ? void 0 : n.name }))
+                      : P.intl.format(P.t.rmpEPD, w(C({}, e), { guildName: null == n ? void 0 : n.name }));
             }, [t, n]);
         return (0, i.jsx)(c.X6q, {
             variant: "heading-xl/normal",
@@ -244,8 +244,8 @@ let T = (e) => {
             {
                 classification: m,
                 classificationRequestState: P,
-                isAppealEligible: w,
-                isDsaEligible: C,
+                isAppealEligible: C,
+                isDsaEligible: w,
                 violationType: N,
             } = (0, v.YG)(n),
             L = (0, d.e7)([g.Z], () => g.Z.getAppealEligibility()),
@@ -257,7 +257,7 @@ let T = (e) => {
                 accountStanding: k,
                 classificationId: n,
                 hasFlaggedContent: I,
-                isDsaEligible: C,
+                isDsaEligible: w,
                 source: l,
                 violationType: N,
             },
@@ -321,15 +321,15 @@ let T = (e) => {
                                                 classification_ids: [Number(n)],
                                                 source: l,
                                                 is_violative_content_shown: I,
-                                                is_dsa_eligible: C,
+                                                is_dsa_eligible: w,
                                                 violation_type: N,
                                             }),
                                                 M
                                                     ? f.Z.open(n, c)
-                                                    : w &&
+                                                    : C &&
                                                       (u.Z.increment({ name: r.V.APPEAL_INGESTION_VIEW }), _.Z.open(n));
                                         },
-                                        isAppealEligible: w || M,
+                                        isAppealEligible: C || M,
                                     }),
                                 }),
                             ],

@@ -1,3 +1,6 @@
-n.d(t, { Z: () => r });
-let r =
-    "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm";
+n.d(t, { e: () => a });
+var r = n(442837),
+    i = n(236289);
+function a() {
+    return (0, r.e7)([i.Z], () => i.Z.isInitialized());
+}

@@ -23,9 +23,9 @@ var r = n(951288),
     T = n(869783),
     S = n(388032),
     A = n(876544),
-    C = n(678393),
-    N = n(77874),
-    R = n(36426);
+    C = n(181960),
+    N = n(313199),
+    R = n(821969);
 let P = (e, t) => {
         let {
                 className: n,
@@ -38,11 +38,11 @@ let P = (e, t) => {
             { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
             L = (0, g._O)(),
             j = (0, m.Nx)(),
-            k = (0, s.e7)([h.Z], () => h.Z.affinities),
-            M = (0, E.Z)(),
-            U = null != M,
+            M = (0, s.e7)([h.Z], () => h.Z.affinities),
+            k = (0, E.Z)(),
+            U = null != k,
             G = P ? l.Tt.WHITE : l.Tt.BRAND,
-            B = k.length > 0,
+            B = M.length > 0,
             Z = S.intl.string(S.t.YCZldH),
             F = (0, p.rO)(),
             V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
@@ -66,7 +66,7 @@ let P = (e, t) => {
                                     children: Z,
                                 }),
                                 U
-                                    ? (0, r.jsx)(O.Z, { referrer: M })
+                                    ? (0, r.jsx)(O.Z, { referrer: k })
                                     : B &&
                                       (0, r.jsx)("div", {
                                           className: A.affinityDescriptionContainer,

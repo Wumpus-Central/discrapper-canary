@@ -53357,6 +53357,10 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     width: 100%
 }
 
+.previewThumbnailVariant_c3d04b .avatarContainer_c3d04b {
+    height: 220px
+}
+
 @keyframes fadeIn_c3d04b {
     0% {
         opacity: 0
@@ -90259,7 +90263,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

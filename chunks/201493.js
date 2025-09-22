@@ -15,9 +15,9 @@ var r = n(951288),
     g = n(65839),
     b = n(453879),
     y = n(408310),
-    _ = n(486527),
+    _ = n(75666),
     C = n(981631),
-    v = n(420212),
+    v = n(295907),
     x = n(806328);
 let O = (e) => {
     let { channel: t, guild: O } = e,
@@ -74,12 +74,12 @@ let O = (e) => {
         [w, R] = i.useState(T),
         M = "" !== T,
         D = { mostRecentQuery: T },
-        L = i.useRef(D);
+        k = i.useRef(D);
     i.useEffect(() => {
-        L.current = D;
+        k.current = D;
     }),
         i.useEffect(() => {
-            let { mostRecentQuery: e } = L.current;
+            let { mostRecentQuery: e } = k.current;
             d.c$(t.id), d.YZ(t.id), R(e);
         }, [t.id]),
         i.useEffect(() => {
@@ -89,7 +89,7 @@ let O = (e) => {
                 primary_category_id: j,
             });
         }, [t.id, O.id, j]);
-    let k = (0, f.G)(t)
+    let L = (0, f.G)(t)
             ? () => {
                   (0, a.ZDy)(async () => {
                       let { default: e } = await n.e("79764").then(n.bind(n, 533202));
@@ -166,7 +166,7 @@ let O = (e) => {
               mostRecentQuery: T,
               handleSearchKeyPress: U,
               handleClearSearch: B,
-              handleCreateOrAddGuild: k,
+              handleCreateOrAddGuild: L,
               searchResults: A,
               searchFetching: N,
           })
@@ -180,7 +180,7 @@ let O = (e) => {
                   className: x.pageContainer,
                   children: (0, r.jsx)(m.Z, {
                       guild: O,
-                      onAddGuild: k,
+                      onAddGuild: L,
                   }),
               })
             : (0, r.jsx)(g.Z, {
@@ -189,7 +189,7 @@ let O = (e) => {
                   setSearchQuery: R,
                   handleSearchKeyPress: U,
                   handleClearSearch: B,
-                  handleCreateOrAddGuild: k,
+                  handleCreateOrAddGuild: L,
                   currentCategoryId: j,
                   handleSelectCategory: (e) => {
                       d.Su(t.id, e);

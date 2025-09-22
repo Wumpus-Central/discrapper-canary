@@ -5,19 +5,19 @@ var r = n(242433),
     o = n(474936),
     s = n(981631),
     l = n(388032),
-    c = n(796909),
-    u = n(893410),
-    d = n(878339),
-    f = n(330529),
-    _ = n(552365),
-    p = n(492336),
-    h = n(457686),
-    m = n(516773),
-    g = n(198026),
-    E = n(543980);
+    c = n(154658),
+    u = n(362290),
+    d = n(873048),
+    f = n(572472),
+    _ = n(235583),
+    p = n(306225),
+    h = n(28986),
+    m = n(194950),
+    g = n(103865),
+    E = n(29653);
 let b = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_PUMPKIN_TRICK_SKU_ID,
-        assetId: "a_fe4a5080455bc20030589d3b930ebe7b",
+        assetId: "a_dec0db5e1395a9d7df152d6981443cd8",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["6Zuiv7"]),
@@ -26,7 +26,7 @@ let b = {
     },
     y = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_PUMPKIN_TREAT_SKU_ID,
-        assetId: "a_ade36581b93e50a565541e1964d7eb6a",
+        assetId: "a_8636994a8d0b1c5c8353ebce125c2cef",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["2UeOlZ"]),
@@ -35,7 +35,7 @@ let b = {
     },
     O = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_GHOST_TRICK_SKU_ID,
-        assetId: "a_9fb28bf1ed0bed681898f57df3acec5b",
+        assetId: "a_843b6925894c8fa530432ad197eb8dcd",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["6Zuiv7"]),
@@ -44,7 +44,7 @@ let b = {
     },
     v = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_GHOST_TREAT_SKU_ID,
-        assetId: "a_f43fa3efdeda7f7d50fed5f3e5c5cef5",
+        assetId: "a_3835acaf56f5b8cdfb7be072580e618d",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["2UeOlZ"]),
@@ -53,7 +53,7 @@ let b = {
     },
     I = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SKULL_TRICK_SKU_ID,
-        assetId: "a_0103146312bbffdb9a58ce4da3d901d1",
+        assetId: "a_6f0c33fb534c1a0a21c606b50683e9a9",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["6Zuiv7"]),
@@ -62,7 +62,7 @@ let b = {
     },
     T = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SKULL_TREAT_SKU_ID,
-        assetId: "a_652117a3882f5ae4cc30e56d7ac013a7",
+        assetId: "a_46d01a1f046e4f58894f5b5361ab2e61",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["2UeOlZ"]),
@@ -71,7 +71,7 @@ let b = {
     },
     S = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SPIDER_TRICK_SKU_ID,
-        assetId: "a_8655de5a2c086276231144432fefb8f0",
+        assetId: "a_f6fbc6e9dedd53a1b70e5573499ddd11",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["6Zuiv7"]),
@@ -80,7 +80,7 @@ let b = {
     },
     A = {
         skuId: r.d.HALLOWEEN_GIFTING_2025_SPIDER_TREAT_SKU_ID,
-        assetId: "a_91bdfba540bf5f305f906e6588704ac6",
+        assetId: "a_f8fdf29cd07f09487165818605cab1dd",
         a11yLabel: () =>
             l.intl.formatToPlainString(l.t.pDrI0t, {
                 category: l.intl.string(l.t["2UeOlZ"]),
@@ -114,16 +114,16 @@ let b = {
             trinketsAnimation: {
                 getAnimationData: () =>
                     n
-                        .e("19511")
-                        .then(n.bind(n, 322980))
+                        .e("21723")
+                        .then(n.bind(n, 421344))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());
                         }),
                 getGlowAnimationData: () =>
                     n
-                        .e("37079")
-                        .then(n.bind(n, 474))
+                        .e("51924")
+                        .then(n.bind(n, 90801))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());
@@ -134,8 +134,8 @@ let b = {
             trick: {
                 getAnimationData: () =>
                     n
-                        .e("87983")
-                        .then(n.bind(n, 913493))
+                        .e("44538")
+                        .then(n.bind(n, 285517))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());
@@ -144,8 +144,8 @@ let b = {
             treat: {
                 getAnimationData: () =>
                     n
-                        .e("33472")
-                        .then(n.bind(n, 795420))
+                        .e("35244")
+                        .then(n.bind(n, 220628))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());

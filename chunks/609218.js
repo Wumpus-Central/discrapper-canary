@@ -1,14 +1,14 @@
 n.d(t, {
     Z: () => U,
-    p: () => M,
+    p: () => k,
 }),
     n(953529);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(446673),
+    s = n(313666),
+    l = n(442837),
     c = n(304789),
     u = n(755721),
     d = n(481060),
@@ -33,11 +33,11 @@ var r = n(951288),
     P = n(124527),
     w = n(591867),
     D = n(525751),
-    x = n(526438),
-    L = n(572637),
-    j = n(371587),
-    k = n(699653),
-    M = (function (e) {
+    x = n(428946),
+    L = n(42948),
+    j = n(109194),
+    M = n(352812),
+    k = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.PARENT_CONTAINER = 1)] = "PARENT_CONTAINER"),
@@ -50,7 +50,7 @@ function U(e) {
             containerContext: t,
             image: n,
             title: a,
-            description: M,
+            description: k,
             enableSocialProof: U,
             analyticsLocationSection: G,
             upsellViewedTrackingData: B,
@@ -59,8 +59,8 @@ function U(e) {
             onLearnMore: V,
             isEmojiPickerOverlay: H = !1,
         } = e,
-        Y = (0, s.e7)([b.Z], () => b.Z.affinities),
-        W = (0, s.e7)([b.Z], () => b.Z.hasFetched);
+        Y = (0, l.e7)([b.Z], () => b.Z.affinities),
+        W = (0, l.e7)([b.Z], () => b.Z.hasFetched);
     i.useEffect(() => {
         !W && U && f.MH();
     }, [W, U]),
@@ -91,7 +91,7 @@ function U(e) {
         et = (0, S.Z)(C.Si.TIER_2);
     if (ee) {
         let e;
-        e = H ? ((0, g.rO)() ? x.Z : L.Z) : (0, g.rO)() ? j.Z : k.Z;
+        e = H ? ((0, g.rO)() ? x.Z : L.Z) : (0, g.rO)() ? j.Z : M.Z;
         let t = H ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -123,7 +123,7 @@ function U(e) {
                                                 loopAt: 5,
                                             }),
                                         }),
-                                        null != et && (0, r.jsx)(l.C, { type: { text: et } }),
+                                        null != et && (0, r.jsx)(s.C, { type: { text: et } }),
                                         (0, r.jsx)(d.X6q, {
                                             className: o()(P.title, { [P.withBadge]: null != et }),
                                             variant: "heading-xl/bold",
@@ -134,7 +134,7 @@ function U(e) {
                                             variant: "text-md/medium",
                                             color: "text-secondary",
                                             className: P.body,
-                                            children: M,
+                                            children: k,
                                         }),
                                     ],
                                 }),
@@ -204,7 +204,7 @@ function U(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 className: w.body,
-                                children: M,
+                                children: k,
                             }),
                         ],
                     }),
