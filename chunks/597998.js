@@ -161,7 +161,7 @@ function M(e) {
         { enabled: Y } = u.c.getCurrentConfig({ location: "VoiceUserIcons" }, { autoTrackExposure: !0 });
     if (h || O) return null;
     let W = [],
-        K = (0, r.jsx)(B, {
+        K = B({
             iconClassName: N,
             mute: n,
             localMute: i,
@@ -252,7 +252,7 @@ function M(e) {
         g && W.push((0, r.jsx)(_.ZP, { size: _.ZP.Sizes.SMALL }, "stream"));
     let q = null != D && !(0, y.yE)(D.flags, v.udG.EMBEDDED),
         X = null == U && q;
-    return 0 !== W.length || null != K || Z || X
+    return 0 !== W.length || 0 !== K.length || Z || X
         ? (0, r.jsxs)("div", {
               className: o()(A.icons, t),
               children: [
@@ -493,5 +493,5 @@ function B(e) {
             ),
         );
     }
-    return 0 === d.length ? null : d;
+    return d;
 }

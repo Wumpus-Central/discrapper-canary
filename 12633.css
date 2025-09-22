@@ -86562,6 +86562,10 @@ div.clanTagBadgeContainer__07f91 {
     margin: 0
 }
 
+.iconGroup__07f91:empty {
+    display: none
+}
+
 .flipped__07f91 .icons__07f91 {
     margin-left: 8px;
     margin-right: 0
