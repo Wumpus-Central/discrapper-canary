@@ -21,6 +21,7 @@ let d = [
     "Payment Flow Modals",
     "Virtual Currency Configuration",
     "Orbs",
+    "Quest Preview Tool",
 ];
 function f(e) {
     let { legacy: t = !0 } = e,

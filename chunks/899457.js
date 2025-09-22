@@ -1,29 +1,27 @@
-n.d(t, {
-    Z: () => o,
-    a: () => a,
+s.d(t, {
+    Z: () => l,
+    a: () => i,
 });
-var r = n(951288);
-n(647438);
-var i = n(481060),
-    a = (function (e) {
-        return (
-            (e[(e.UNENROLLED = 0)] = "UNENROLLED"),
-            (e[(e.ENROLLED = 1)] = "ENROLLED"),
-            (e[(e.COMPLETED_25 = 2)] = "COMPLETED_25"),
-            (e[(e.COMPLETED_50 = 3)] = "COMPLETED_50"),
-            (e[(e.COMPLETED_75 = 4)] = "COMPLETED_75"),
-            (e[(e.COMPLETED_100 = 5)] = "COMPLETED_100"),
-            (e[(e.CLAIMED = 6)] = "CLAIMED"),
-            e
-        );
-    })({});
-let o = function (e) {
-    let { onChange: t, value: n } = e;
-    return (0, r.jsxs)(i.xJW, {
+var n,
+    r = s(951288);
+s(647438);
+var a = s(481060),
+    i =
+        (((n = {})[(n.UNENROLLED = 0)] = "UNENROLLED"),
+        (n[(n.ENROLLED = 1)] = "ENROLLED"),
+        (n[(n.COMPLETED_25 = 2)] = "COMPLETED_25"),
+        (n[(n.COMPLETED_50 = 3)] = "COMPLETED_50"),
+        (n[(n.COMPLETED_75 = 4)] = "COMPLETED_75"),
+        (n[(n.COMPLETED_100 = 5)] = "COMPLETED_100"),
+        (n[(n.CLAIMED = 6)] = "CLAIMED"),
+        n);
+let l = function (e) {
+    let { onChange: t, value: s } = e;
+    return (0, r.jsxs)(a.xJW, {
         children: [
-            (0, r.jsx)(i.vwX, { children: "User State" }),
-            (0, r.jsx)(i.R94, {
-                children: (0, r.jsx)(i.PhF, {
+            (0, r.jsx)(a.vwX, { children: "User State" }),
+            (0, r.jsx)(a.R94, {
+                children: (0, r.jsx)(a.PhF, {
                     "aria-label": "User State",
                     options: [
                         {
@@ -55,7 +53,7 @@ let o = function (e) {
                             value: 6,
                         },
                     ],
-                    isSelected: (e) => e === n,
+                    isSelected: (e) => e === s,
                     select: t,
                     serialize: String,
                 }),

@@ -1,201 +1,196 @@
-n.d(t, { Z: () => h }), n(467055), n(388685);
-var r = n(951288);
-n(647438);
-var i = n(754700),
-    a = n(481060),
-    o = n(70956),
-    s = n(196817);
-function l(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function c(e) {
+s.d(t, { Z: () => d }), s(467055), s(388685);
+var n = s(951288);
+s(647438);
+var r = s(754700),
+    a = s(481060),
+    i = s(70956),
+    l = s(196817);
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var s = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(s);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(s).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(s, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
+            n.forEach(function (t) {
+                var n;
+                (n = s[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function u(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function d(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+            : (function (e, t) {
+                  var s = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      s.push.apply(s, n);
+                  }
+                  return s;
+              })(Object(t)).forEach(function (s) {
+                  Object.defineProperty(e, s, Object.getOwnPropertyDescriptor(t, s));
               }),
         e
     );
 }
-let f = [
-    {
-        value: 1,
-        label: "Stream Desktop",
-    },
-    {
-        value: 0,
-        label: "Play Desktop",
-    },
-    {
-        value: 3,
-        label: "Play Console",
-    },
-    {
-        value: 4,
-        label: "Play Desktop & Console",
-    },
-    {
-        value: 2,
-        label: "Watch Video",
-    },
-    {
-        value: 5,
-        label: "Play Activity",
-    },
-];
-function _(e) {
-    let t = i.X.PLAY_ON_PLAYSTATION in e || i.X.PLAY_ON_XBOX in e,
-        n = i.X.PLAY_ON_DESKTOP in e || i.X.PLAY_ON_DESKTOP_V2 in e,
-        r = i.X.STREAM_ON_DESKTOP in e,
-        a = i.X.WATCH_VIDEO in e,
-        o = i.X.PLAY_ACTIVITY in e;
-    return t && n ? 4 : t ? 3 : n ? 0 : r ? 1 : a ? 2 : o ? 5 : void 0;
-}
-function p(e, t) {
-    let n = {};
-    switch (e) {
-        case 1:
-            n[i.X.STREAM_ON_DESKTOP] = {
-                type: i.X.STREAM_ON_DESKTOP,
-                target: t,
-            };
-            break;
-        case 0:
-            n[i.X.PLAY_ON_DESKTOP] = {
-                type: i.X.PLAY_ON_DESKTOP,
-                target: t,
-            };
-            break;
-        case 3:
-            (n[i.X.PLAY_ON_PLAYSTATION] = {
-                type: i.X.PLAY_ON_PLAYSTATION,
-                target: t,
-                externalIds: [],
-            }),
-                (n[i.X.PLAY_ON_XBOX] = {
-                    type: i.X.PLAY_ON_XBOX,
-                    target: t,
-                    externalIds: [],
-                });
-            break;
-        case 4:
-            (n[i.X.PLAY_ON_DESKTOP] = {
-                type: i.X.PLAY_ON_DESKTOP,
-                target: t,
-            }),
-                (n[i.X.PLAY_ON_PLAYSTATION] = {
-                    type: i.X.PLAY_ON_PLAYSTATION,
-                    target: t,
-                    externalIds: [],
+let u = [
+        {
+            value: 1,
+            label: "Stream Desktop",
+        },
+        {
+            value: 0,
+            label: "Play Desktop",
+        },
+        {
+            value: 3,
+            label: "Play Console",
+        },
+        {
+            value: 4,
+            label: "Play Desktop & Console",
+        },
+        {
+            value: 2,
+            label: "Watch Video",
+        },
+        {
+            value: 5,
+            label: "Play Activity",
+        },
+    ],
+    d = function (e) {
+        let { onSelect: t, taskDuration: s = 10, taskConfigV2: d } = e;
+        return (0, n.jsxs)(n.Fragment, {
+            children: [
+                (0, n.jsxs)(a.xJW, {
+                    children: [
+                        (0, n.jsx)(a.vwX, { children: "Task Type(s)" }),
+                        (0, n.jsx)(a.R94, {
+                            children: (0, n.jsx)(a.PhF, {
+                                className: l.taskPresetSelect,
+                                placeholder: "Select Task Preset",
+                                options: u,
+                                renderOptionValue: (e) =>
+                                    e.map((e) => (0, n.jsx)("div", { children: e.label }, e.value)),
+                                renderOptionLabel: (e) => (0, n.jsx)("div", { children: e.label }),
+                                isSelected: (e) =>
+                                    e ===
+                                    (function (e) {
+                                        let t = r.X.PLAY_ON_PLAYSTATION in e || r.X.PLAY_ON_XBOX in e,
+                                            s = r.X.PLAY_ON_DESKTOP in e || r.X.PLAY_ON_DESKTOP_V2 in e,
+                                            n = r.X.STREAM_ON_DESKTOP in e,
+                                            a = r.X.WATCH_VIDEO in e,
+                                            i = r.X.PLAY_ACTIVITY in e;
+                                        return t && s ? 4 : t ? 3 : s ? 0 : n ? 1 : a ? 2 : i ? 5 : void 0;
+                                    })(d.tasks),
+                                select: (e) => {
+                                    t(
+                                        c(o({}, d), {
+                                            tasks: (function (e, t) {
+                                                let s = {};
+                                                switch (e) {
+                                                    case 1:
+                                                        s[r.X.STREAM_ON_DESKTOP] = {
+                                                            type: r.X.STREAM_ON_DESKTOP,
+                                                            target: t,
+                                                        };
+                                                        break;
+                                                    case 0:
+                                                        s[r.X.PLAY_ON_DESKTOP] = {
+                                                            type: r.X.PLAY_ON_DESKTOP,
+                                                            target: t,
+                                                        };
+                                                        break;
+                                                    case 3:
+                                                        (s[r.X.PLAY_ON_PLAYSTATION] = {
+                                                            type: r.X.PLAY_ON_PLAYSTATION,
+                                                            target: t,
+                                                            externalIds: [],
+                                                        }),
+                                                            (s[r.X.PLAY_ON_XBOX] = {
+                                                                type: r.X.PLAY_ON_XBOX,
+                                                                target: t,
+                                                                externalIds: [],
+                                                            });
+                                                        break;
+                                                    case 4:
+                                                        (s[r.X.PLAY_ON_DESKTOP] = {
+                                                            type: r.X.PLAY_ON_DESKTOP,
+                                                            target: t,
+                                                        }),
+                                                            (s[r.X.PLAY_ON_PLAYSTATION] = {
+                                                                type: r.X.PLAY_ON_PLAYSTATION,
+                                                                target: t,
+                                                                externalIds: [],
+                                                            }),
+                                                            (s[r.X.PLAY_ON_XBOX] = {
+                                                                type: r.X.PLAY_ON_XBOX,
+                                                                target: t,
+                                                                externalIds: [],
+                                                            });
+                                                        break;
+                                                    case 2:
+                                                        s[r.X.WATCH_VIDEO] = {
+                                                            type: r.X.WATCH_VIDEO,
+                                                            target: t,
+                                                            assets: { video: { url: "" } },
+                                                            messages: { videoTitle: "" },
+                                                        };
+                                                        break;
+                                                    case 5:
+                                                        s[r.X.PLAY_ACTIVITY] = {
+                                                            type: r.X.PLAY_ACTIVITY,
+                                                            target: t,
+                                                        };
+                                                }
+                                                return s;
+                                            })(e, s),
+                                        }),
+                                    );
+                                },
+                                serialize: String,
+                            }),
+                        }),
+                    ],
                 }),
-                (n[i.X.PLAY_ON_XBOX] = {
-                    type: i.X.PLAY_ON_XBOX,
-                    target: t,
-                    externalIds: [],
-                });
-            break;
-        case 2:
-            n[i.X.WATCH_VIDEO] = {
-                type: i.X.WATCH_VIDEO,
-                target: t,
-                assets: { video: { url: "" } },
-                messages: { videoTitle: "" },
-            };
-            break;
-        case 5:
-            n[i.X.PLAY_ACTIVITY] = {
-                type: i.X.PLAY_ACTIVITY,
-                target: t,
-            };
-    }
-    return n;
-}
-let h = function (e) {
-    let { onSelect: t, taskDuration: n = 10, taskConfigV2: i } = e;
-    function l(e) {
-        let n = Number(e);
-        if (isNaN(n)) return;
-        n *= o.Z.Seconds.MINUTE;
-        let r = Object.fromEntries(
-            Object.entries(i.tasks).map((e) => {
-                let [t, r] = e;
-                return [t, d(c({}, r), { target: n })];
-            }),
-        );
-        t(d(c({}, i), { tasks: r }));
-    }
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsxs)(a.xJW, {
-                children: [
-                    (0, r.jsx)(a.vwX, { children: "Task Type(s)" }),
-                    (0, r.jsx)(a.R94, {
-                        children: (0, r.jsx)(a.PhF, {
-                            className: s.taskPresetSelect,
-                            placeholder: "Select Task Preset",
-                            options: f,
-                            renderOptionValue: (e) => e.map((e) => (0, r.jsx)("div", { children: e.label }, e.value)),
-                            renderOptionLabel: (e) => (0, r.jsx)("div", { children: e.label }),
-                            isSelected: (e) => e === _(i.tasks),
-                            select: (e) => {
-                                t(d(c({}, i), { tasks: p(e, n) }));
-                            },
-                            serialize: String,
+                (0, n.jsxs)(a.xJW, {
+                    children: [
+                        (0, n.jsx)(a.vwX, { children: "Task Duration" }),
+                        (0, n.jsx)(a.R94, {
+                            children: (0, n.jsx)(a.oil, {
+                                value: String(s / i.Z.Seconds.MINUTE),
+                                onChange: function (e) {
+                                    let s = Number(e);
+                                    if (isNaN(s)) return;
+                                    s *= i.Z.Seconds.MINUTE;
+                                    let n = Object.fromEntries(
+                                        Object.entries(d.tasks).map((e) => {
+                                            let [t, n] = e;
+                                            return [t, c(o({}, n), { target: s })];
+                                        }),
+                                    );
+                                    t(c(o({}, d), { tasks: n }));
+                                },
+                            }),
                         }),
-                    }),
-                ],
-            }),
-            (0, r.jsxs)(a.xJW, {
-                children: [
-                    (0, r.jsx)(a.vwX, { children: "Task Duration" }),
-                    (0, r.jsx)(a.R94, {
-                        children: (0, r.jsx)(a.oil, {
-                            value: String(n / o.Z.Seconds.MINUTE),
-                            onChange: l,
-                        }),
-                    }),
-                ],
-            }),
-        ],
-    });
-};
+                    ],
+                }),
+            ],
+        });
+    };

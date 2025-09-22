@@ -166,7 +166,6 @@ function V(e) {
                           M.s6.DEVELOPER_OPTIONS,
                           M.s6.REVENUE_STORYBOOK,
                           M.s6.SHOP_KEEPER,
-                          M.s6.QUEST_PREVIEW_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL_2,
                           M.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM,
                       ]

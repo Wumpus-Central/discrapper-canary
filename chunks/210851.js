@@ -1,82 +1,82 @@
-n.d(t, { Z: () => u }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
-var r = n(951288),
-    i = n(647438),
-    a = n(481060),
-    o = n(763610),
-    s = n(301188);
-function l(e, t, n) {
+s.d(t, { Z: () => o }), s(388685), s(190126), s(368063), s(65234), s(111804), s(490233), s(97749);
+var n = s(951288),
+    r = s(647438),
+    a = s(481060),
+    i = s(763610),
+    l = s(188764);
+let o = function (e) {
+    var t, s;
+    let { assetKey: o, filters: c, initialValue: u, onFileChange: d, title: g } = e,
+        [f, h] = r.useState(null),
+        m = r.useRef(null);
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                l(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let u = function (e) {
-    var t, n;
-    let { assetKey: l, filters: u, initialValue: d, onFileChange: f, title: _ } = e,
-        [p, h] = i.useState(null),
-        m = i.useRef(null);
-    function g(e) {
-        if ((h(null != e ? e : null), null == e)) return;
-        let t = URL.createObjectURL(e);
-        m.current = t;
-        let n = new URL(t);
-        n.searchParams.append("mimetype", e.type), n.searchParams.append("name", e.name), f(l, n.toString());
-    }
-    return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 null != m.current && URL.revokeObjectURL(m.current);
             },
             [],
         ),
-        (0, r.jsxs)(a.xJW, {
+        (0, n.jsxs)(a.xJW, {
             children: [
-                (0, r.jsx)(a.vwX, {
-                    children: (0, r.jsxs)("div", {
-                        className: s.headingWithTooltip,
+                (0, n.jsx)(a.vwX, {
+                    children: (0, n.jsxs)("div", {
+                        className: l.headingWithTooltip,
                         children: [
-                            _,
-                            (0, r.jsx)(a.ua7, {
-                                text: "Supported asset formats: ".concat(u.join(", ")),
-                                children: (e) => (0, r.jsx)(a.d3s, c({ size: "xs" }, e)),
+                            g,
+                            (0, n.jsx)(a.ua7, {
+                                text: "Supported asset formats: ".concat(c.join(", ")),
+                                children: (e) =>
+                                    (0, n.jsx)(
+                                        a.d3s,
+                                        (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var s = null != arguments[t] ? arguments[t] : {},
+                                                    n = Object.keys(s);
+                                                "function" == typeof Object.getOwnPropertySymbols &&
+                                                    (n = n.concat(
+                                                        Object.getOwnPropertySymbols(s).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(s, e).enumerable;
+                                                        }),
+                                                    )),
+                                                    n.forEach(function (t) {
+                                                        var n;
+                                                        (n = s[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: n,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0,
+                                                                  })
+                                                                : (e[t] = n);
+                                                    });
+                                            }
+                                            return e;
+                                        })({ size: "xs" }, e),
+                                    ),
                             }),
                         ],
                     }),
                 }),
-                (0, r.jsx)(o.Z, {
-                    filename: null != (n = null != (t = null == p ? void 0 : p.name) ? t : d) ? n : "",
+                (0, n.jsx)(i.Z, {
+                    filename: null != (s = null != (t = null == f ? void 0 : f.name) ? t : u) ? s : "",
                     filters: [
                         {
-                            name: _,
-                            extensions: u,
+                            name: g,
+                            extensions: c,
                         },
                     ],
                     buttonText: "Browse",
                     placeholder: "Select an asset",
-                    onFileSelect: g,
+                    onFileSelect: function (e) {
+                        if ((h(null != e ? e : null), null == e)) return;
+                        let t = URL.createObjectURL(e);
+                        m.current = t;
+                        let s = new URL(t);
+                        s.searchParams.append("mimetype", e.type),
+                            s.searchParams.append("name", e.name),
+                            d(o, s.toString());
+                    },
                 }),
             ],
         })

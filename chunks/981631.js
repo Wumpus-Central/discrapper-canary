@@ -3353,7 +3353,6 @@ let tZ = {
         COMMUNITY_ALERTS: "Community Alerts Settings",
         HIGHLIGHT_NOTIFICATIONS: "Highlight notification settings",
         QUESTS: "Quests",
-        QUEST_PREVIEW_TOOL: "Quest Preview Tool",
         QUEST_PREVIEW_TOOL_2: "Quest Preview Tool 2",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",

@@ -116,7 +116,7 @@ function F(e) {
         let e = (0, C.i)("openQuestsRewardCodeModal"),
             s = R.r.build(t.config).rewardPlatforms.length > 1;
         if (e && !s) {
-            let { default: e } = await n.e("96861").then(n.bind(n, 188209));
+            let { default: e } = await Promise.all([n.e("10150"), n.e("23119")]).then(n.bind(n, 188209));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -127,7 +127,7 @@ function F(e) {
                     }),
                 );
         }
-        let { default: u } = await n.e("61624").then(n.bind(n, 985866));
+        let { default: u } = await Promise.all([n.e("10150"), n.e("92912")]).then(n.bind(n, 985866));
         return (e) =>
             (0, r.jsx)(
                 u,
@@ -391,7 +391,7 @@ function et(e) {
 }
 function en(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("59757"), n.e("33628")]).then(n.bind(n, 570387));
+        let { default: t } = await Promise.all([n.e("17758"), n.e("33628")]).then(n.bind(n, 570387));
         return (n) =>
             (0, r.jsx)(
                 t,

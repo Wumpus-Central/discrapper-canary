@@ -313,7 +313,6 @@ var r = (function (e) {
         (e.DESIGN_SYSTEMS_COLORS = "DESIGN_SYSTEMS_COLORS"),
         (e.TEXT_COMPONENTS = "TEXT_COMPONENTS"),
         (e.SHOP_KEEPER = "SHOP_KEEPER"),
-        (e.QUEST_PREVIEW_TOOL = "QUEST_PREVIEW_TOOL"),
         (e.QUEST_PREVIEW_TOOL_2 = "QUEST_PREVIEW_TOOL_2"),
         (e.LOGOUT = "LOGOUT"),
         (e.SOCIAL_LINKS = "SOCIAL_LINKS"),

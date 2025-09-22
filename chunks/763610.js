@@ -1,47 +1,45 @@
-n.d(t, { Z: () => d });
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(74655),
-    l = n(481060),
-    c = n(53281),
-    u = n(557441);
+t.d(n, { Z: () => d });
+var a = t(951288),
+    l = t(647438),
+    i = t(120356),
+    r = t.n(i),
+    o = t(74655),
+    s = t(481060),
+    u = t(53281),
+    c = t(557441);
 function d(e) {
-    let { filename: t, className: n, filters: a, buttonText: d, placeholder: f, onFileSelect: _ } = e,
-        p = i.useRef(null),
-        h = i.useRef(null),
-        m = (e) => {
-            var t;
-            _(null == (t = e.currentTarget.files) ? void 0 : t[0]);
-        },
-        g = "" !== t ? "text-default" : "text-muted";
-    return (0, r.jsx)(l.tEY, {
-        ringTarget: p,
+    let { filename: n, className: t, filters: i, buttonText: d, placeholder: f, onFileSelect: m } = e,
+        g = l.useRef(null),
+        h = l.useRef(null);
+    return (0, a.jsx)(s.tEY, {
+        ringTarget: g,
         within: !0,
-        children: (0, r.jsxs)(s.U, {
-            ref: p,
-            className: o()(n, u.fileUpload),
+        children: (0, a.jsxs)(o.U, {
+            ref: g,
+            className: r()(t, c.fileUpload),
             children: [
-                (0, r.jsx)(l.rG2, { size: "sm" }),
-                (0, r.jsx)(l.Text, {
+                (0, a.jsx)(s.rG2, { size: "sm" }),
+                (0, a.jsx)(s.Text, {
                     variant: "text-md/normal",
-                    color: g,
+                    color: "" !== n ? "text-default" : "text-muted",
                     lineClamp: 1,
-                    children: "" !== t ? t : f,
+                    children: "" !== n ? n : f,
                 }),
-                (0, r.jsx)(l.zxk, {
+                (0, a.jsx)(s.zxk, {
                     "aria-hidden": !0,
                     variant: "secondary",
                     size: "sm",
                     text: d,
                     tabIndex: -1,
                 }),
-                (0, r.jsx)(c.Z, {
+                (0, a.jsx)(u.Z, {
                     ref: h,
-                    onChange: m,
+                    onChange: (e) => {
+                        var n;
+                        m(null == (n = e.currentTarget.files) ? void 0 : n[0]);
+                    },
                     multiple: !1,
-                    filters: a,
+                    filters: i,
                 }),
             ],
         }),
