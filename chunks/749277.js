@@ -134,22 +134,6 @@ let w = (e) => {
                             }),
                         ],
                     });
-                case a.z.NAGBAR_NOTICE_MFA_SMS_BACKUP:
-                    return (0, r.jsxs)(o.qXd, {
-                        color: o.DM8.DEFAULT,
-                        children: [
-                            (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
-                            }),
-                            C.intl.string(C.t.B2hnhY),
-                            (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, g.openUserSettings)(m.n.ACCOUNT_PANEL, { section: T.oAB.ACCOUNT }),
-                                noticeType: R,
-                                children: C.intl.string(C.t["50KYxs"]),
-                            }),
-                        ],
-                    });
                 case a.z.NAGBAR_NOTICE_PREMIUM_PROMO:
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PREMIUM_TIER_2,

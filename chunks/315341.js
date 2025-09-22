@@ -221,15 +221,11 @@ let b = [
                 o.K.get("hideNag") && g(e, i.z.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
                 o.K.get("hideConnectSpotify") && g(e, i.z.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
                 o.K.get("hideConnectPlayStation") && g(e, i.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0),
-                o.K.get("hideMFASMSNotice") && g(e, i.z.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0),
                 t
             );
         },
         cleanup() {
-            o.K.remove("hideNag"),
-                o.K.remove("hideConnectSpotify"),
-                o.K.remove("hideConnectPlayStation"),
-                o.K.remove("hideMFASMSNotice");
+            o.K.remove("hideNag"), o.K.remove("hideConnectSpotify"), o.K.remove("hideConnectPlayStation");
         },
     },
     {

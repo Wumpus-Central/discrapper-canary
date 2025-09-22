@@ -144,7 +144,6 @@ let eL = {
         [eT.kVF.DOWNLOAD_NAG]: l.z.NAGBAR_NOTICE_DOWNLOAD,
         [eT.kVF.CONNECT_SPOTIFY]: l.z.NAGBAR_NOTICE_CONNECT_SPOTIFY,
         [eT.kVF.CONNECT_PLAYSTATION]: l.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
-        [eT.kVF.MFA_SMS_BACKUP]: l.z.NAGBAR_NOTICE_MFA_SMS_BACKUP,
         [eT.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
         [eT.kVF.PREMIUM_REACTIVATE]: l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE,
         [eT.kVF.BOUNCED_EMAIL_DETECTED]: l.z.NAGBAR_BOUNCED_EMAIL_NOTICE,
@@ -277,7 +276,6 @@ let eX = [
         eT.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
         eT.kVF.PREMIUM_REACTIVATE,
         eT.kVF.ACTIVATE_SERVER_SUBSCRIPTION,
-        eT.kVF.MFA_SMS_BACKUP,
         eT.kVF.APPLICATION_TEST_MODE,
         eT.kVF.DOWNLOAD_NAG,
         eT.kVF.CONNECT_SPOTIFY,
@@ -642,19 +640,6 @@ let eX = [
                 return { premiumSubscription: t };
             },
         },
-        [eT.kVF.MFA_SMS_BACKUP]: {
-            predicate: (e) => {
-                let { currentUser: t } = e;
-                return (
-                    null != t &&
-                    t.mfaEnabled &&
-                    !t.hasFlag(eT.xW$.MFA_SMS) &&
-                    !t.hasFlag(eT.xW$.STAFF) &&
-                    !t.hasFlag(eT.xW$.PARTNER) &&
-                    !eq(eT.kVF.MFA_SMS_BACKUP)
-                );
-            },
-        },
         [eT.kVF.APPLICATION_TEST_MODE]: {
             predicate: () => null != eE.Z.testModeApplicationId,
             metadata: () => {
@@ -856,10 +841,10 @@ function e4() {
 function e8() {
     return delete eB[eT.kVF.DISPATCH_ERROR], e$();
 }
-function e6() {
+function e5() {
     return delete eB[eT.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS], e$();
 }
-function e5() {
+function e6() {
     return e$();
 }
 function e7() {
@@ -963,8 +948,8 @@ let tn = new tt(u.Z, {
     STREAMER_MODE_UPDATE: e4,
     RUNNING_STREAMER_TOOLS_CHANGE: e4,
     DISPATCH_APPLICATION_ERROR: e8,
-    DISPATCH_APPLICATION_LAUNCH_SETUP_START: e6,
-    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: e5,
+    DISPATCH_APPLICATION_LAUNCH_SETUP_START: e5,
+    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: e6,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: e7,
     NOTICE_SHOW: e1,
     NOTICE_DISMISS: e2,
