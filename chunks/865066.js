@@ -1,9 +1,9 @@
 n.d(t, {
-    Yz: () => I,
-    hi: () => y,
-    s2: () => O,
-    sU: () => C,
-    wt: () => T,
+    Yz: () => T,
+    hi: () => O,
+    s2: () => v,
+    sU: () => N,
+    wt: () => S,
 }),
     n(415506);
 var r = n(442837),
@@ -16,64 +16,68 @@ var r = n(442837),
     u = n(960048),
     d = n(998502),
     f = n(765504),
-    _ = n(981631),
-    p = n(388032);
-let h = new o.Z("SystemServiceNativeUtils"),
-    m = -2147023673;
-function g() {
+    _ = n(517110),
+    p = n(981631),
+    h = n(388032);
+let m = new o.Z("SystemServiceNativeUtils"),
+    g = -2147023673;
+function E() {
     var e;
     return !!c.isPlatformEmbedded && null != (e = d.ZP.IsSystemServiceInstalled()) && e;
 }
-function E() {
+function b() {
     var e;
     if (!c.isPlatformEmbedded) return !1;
     let { enabled: t } = f.Z.getConfig({ location: "can-install" });
     return !!t && null != (e = d.ZP.CanSystemServiceBeInstalled()) && e;
 }
-function b() {
+function y() {
     var e;
     let { enabled: t } = f.Z.getConfig({ location: "can-install-hook" });
     return !!c.isPlatformEmbedded && !!t && null != (e = d.ZP.CanSystemServiceBeInstalled()) && e;
 }
-function y() {
+function O() {
     let e = (0, r.e7)([s.ZP], () => s.ZP.canShowAdminWarning),
-        t = b();
-    return !!c.isPlatformEmbedded && e && !g() && t;
-}
-function O(e) {
-    return !!c.isPlatformEmbedded && e.canShowAdminWarning && !g() && E();
+        t = y();
+    return !!c.isPlatformEmbedded && e && !E() && t;
 }
 function v(e) {
-    c.isPlatformEmbedded &&
-        (d.ZP.InputEventServiceSetStatusCallback((e) => {
-            h.info("Keybinds helper status changed", e);
-        }),
-        d.ZP.InputEventServiceSetAllowed(!0),
-        a.Z.dispatch({
-            type: "SYSTEM_SERVICE_INITIALIZE",
-            initialized: !0,
-            modules: ["input-service"],
-        }),
-        h.info("System service initialized."),
-        l.default.track(_.rMx.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED, {
-            success: !0,
-            source: e,
-            modules: ["input-service"],
-        }));
+    return !!c.isPlatformEmbedded && e.canShowAdminWarning && !E() && b();
 }
-async function I(e) {
-    if (c.isPlatformEmbedded && g())
+function I(e) {
+    c.isPlatformEmbedded &&
+        (d.ZP.InputEventServiceSetStatusCallback((t) => {
+            "running" === t.state ? (0, _.y)(!0) : (0, _.y)(!1),
+                "running" === t.state
+                    ? (m.info("System service initialized."),
+                      l.default.track(p.rMx.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED, {
+                          success: !0,
+                          source: e,
+                          modules: ["input-service"],
+                      }))
+                    : "failure" === t.state &&
+                      (m.info("System service failed to initialize."),
+                      l.default.track(p.rMx.SYSTEM_SERVICE_INITIALIZE_ATTEMPTED, {
+                          success: !1,
+                          source: e,
+                          modules: ["input-service"],
+                      }));
+        }),
+        d.ZP.InputEventServiceSetAllowed(!0));
+}
+async function T(e) {
+    if (c.isPlatformEmbedded && E())
         try {
-            (await d.ZP.DoesSystemServiceHaveUpdate()) && (await d.ZP.UpdateSystemService()), v(e);
+            (await d.ZP.DoesSystemServiceHaveUpdate()) && (await d.ZP.UpdateSystemService()), I(e);
         } catch (e) {
             throw (
                 (u.Z.captureMessage("Error during system service initialization", { extra: { error: e } }),
-                h.error("System service initialization failed", e),
+                m.error("System service initialization failed", e),
                 e)
             );
         }
 }
-function T() {
+function S() {
     c.isPlatformEmbedded &&
         (d.ZP.InputEventServiceSetAllowed(!1),
         a.Z.dispatch({
@@ -81,9 +85,9 @@ function T() {
             initialized: !1,
             modules: ["input-service"],
         }),
-        h.info("System service terminated."));
+        m.info("System service terminated."));
 }
-function S(e) {
+function A(e) {
     if (e instanceof Error)
         try {
             let t = JSON.parse(e.message);
@@ -93,34 +97,34 @@ function S(e) {
             return;
         }
 }
-function A(e, t) {
+function C(e, t) {
     t && (0, i.showToast)(e);
 }
-async function C(e) {
+async function N(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (c.isPlatformEmbedded && d.ZP.CanSystemServiceBeInstalled())
         try {
             await d.ZP.InstallSystemService(),
-                h.info("System service installed."),
-                l.default.track(_.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
+                m.info("System service installed."),
+                l.default.track(p.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
                     success: !0,
                     source: e,
                 }),
-                A((0, i.createToast)(p.intl.string(p.t.kQnWb2), i.ToastType.SUCCESS), t),
-                v("after-install");
+                C((0, i.createToast)(h.intl.string(h.t.kQnWb2), i.ToastType.SUCCESS), t),
+                I("after-install");
         } catch (r) {
-            let n = S(r);
+            let n = A(r);
             if (null == n && r instanceof Error) {
-                A(
+                C(
                     (0, i.createToast)(
-                        p.intl.formatToPlainString(p.t.sdKYCA, { error: r.message }),
+                        h.intl.formatToPlainString(h.t.sdKYCA, { error: r.message }),
                         i.ToastType.FAILURE,
                     ),
                     t,
                 ),
                     u.Z.captureMessage("Unknown error during system service installation", { extra: { error: r } }),
-                    h.error("System service install failed.", r),
-                    l.default.track(_.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
+                    m.error("System service install failed.", r),
+                    l.default.track(p.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
                         success: !1,
                         source: e,
                         error_message: r.message,
@@ -128,12 +132,12 @@ async function C(e) {
                 return;
             }
             if (null == n) {
-                A((0, i.createToast)(p.intl.formatToPlainString(p.t.sdKYCA, { error: r }), i.ToastType.FAILURE), t),
+                C((0, i.createToast)(h.intl.formatToPlainString(h.t.sdKYCA, { error: r }), i.ToastType.FAILURE), t),
                     u.Z.captureMessage("Really unknown error during system service installation", {
                         extra: { error: r },
                     }),
-                    h.error("System service install failed.", r),
-                    l.default.track(_.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
+                    m.error("System service install failed.", r),
+                    l.default.track(p.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
                         success: !1,
                         source: e,
                         error_message: null == r ? void 0 : r.toString(),
@@ -141,26 +145,26 @@ async function C(e) {
                 return;
             }
             if (
-                (l.default.track(_.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
+                (l.default.track(p.rMx.SYSTEM_SERVICE_INSTALL_ATTEMPTED, {
                     success: !1,
                     source: e,
                     error_code: n.error_code,
                     error_message: n.error_message,
                 }),
-                n.error_code === m)
+                n.error_code === g)
             ) {
-                A((0, i.createToast)(p.intl.string(p.t.xu9k8P), i.ToastType.FAILURE), t),
-                    h.error("User cancelled system service install.");
+                C((0, i.createToast)(h.intl.string(h.t.xu9k8P), i.ToastType.FAILURE), t),
+                    m.error("User cancelled system service install.");
                 return;
             }
-            A(
+            C(
                 (0, i.createToast)(
-                    p.intl.formatToPlainString(p.t.sdKYCA, { error: n.error_message }),
+                    h.intl.formatToPlainString(h.t.sdKYCA, { error: n.error_message }),
                     i.ToastType.FAILURE,
                 ),
                 t,
             ),
                 u.Z.captureMessage("Error during system service installation", { extra: { error: n } }),
-                h.error("System service install failed.", n);
+                m.error("System service install failed.", n);
         }
 }
