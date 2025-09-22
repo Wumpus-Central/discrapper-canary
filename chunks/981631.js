@@ -1216,7 +1216,6 @@ let em = "@me",
         MY_ARCHIVED_THREADS: (e) => "/channels/".concat(e, "/users/@me/threads/archived/private"),
         THREAD_SEARCH: (e) => "/channels/".concat(e, "/threads/search"),
         FORUM_POSTS: (e) => "/channels/".concat(e, "/post-data"),
-        VOICE_CHANNEL_NOTIFICATIONS: (e) => "/channels/".concat(e, "/voice-push"),
         PARTNER_REQUIREMENTS: (e) => "/partners/".concat(e, "/requirements"),
         AVATAR: function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";

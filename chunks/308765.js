@@ -478,10 +478,6 @@ let i = {
         actions: ["CHANNEL_UPDATES", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(583523).Z,
     },
-    VoiceChannelNotificationsManager: {
-        actions: ["VOICE_CHANNEL_SELECT"],
-        inlineRequire: () => n(298579).Z,
-    },
     VoiceFilterLoopbackManager: {
         actions: [
             "RTC_CONNECTION_STATE",
