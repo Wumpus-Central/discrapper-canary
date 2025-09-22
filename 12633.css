@@ -60157,14 +60157,9 @@ h3.improved__1689b:after {
     text-shadow: none
 }
 
-.description__636a2 a {
-    color: inherit;
-    text-decoration: underline;
-    transition: opacity .1s
-}
-
 .description__636a2 a:hover {
-    opacity: .8
+    opacity: .8;
+    text-decoration: none
 }
 
 .promotedBadgeWrapper__636a2 {
@@ -89974,7 +89969,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
