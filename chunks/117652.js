@@ -99,9 +99,9 @@ function j(e) {
             setSelectedSkuId: G,
             selectedSkuPricePreview: B,
             paymentSourceId: Z,
-            skuPricePreviewsById: V,
+            skuPricePreviewsById: F,
         } = (0, I.JL)(),
-        F = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
+        V = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment(
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
             { autoTrackExposure: !1 },
@@ -120,7 +120,7 @@ function j(e) {
             y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e);
         },
         X = (e) => {
-            let t = V[e],
+            let t = F[e],
                 n = null;
             if (null != t) {
                 var i;
@@ -214,12 +214,13 @@ function j(e) {
             }),
             (0, r.jsx)(S.O3, {
                 children: (0, r.jsx)(a.mzw, {
+                    "data-migration-pending": !0,
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
                     children: (0, r.jsx)(L, {
                         onStepChange: t,
                         onBackClick: n,
-                        disabled: null != m || null == D || D.id === (null == F ? void 0 : F.id) || s.length > C.$n,
+                        disabled: null != m || null == D || D.id === (null == V ? void 0 : V.id) || s.length > C.$n,
                         loading: w,
                     }),
                 }),

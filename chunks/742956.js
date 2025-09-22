@@ -26,6 +26,7 @@ function d(e) {
     return null == _
         ? null
         : (0, r.jsxs)(a.xBx, {
+              "data-migration-pending": !0,
               className: u.headerContainerGift,
               separator: t !== s.h8.CONFIRM,
               children: [
@@ -34,6 +35,7 @@ function d(e) {
                       children: _,
                   }),
                   (0, r.jsx)(a.olH, {
+                      "data-migration-pending": !0,
                       onClick: n,
                       className: u.closeButtonGift,
                   }),

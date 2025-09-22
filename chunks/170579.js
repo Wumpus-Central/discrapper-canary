@@ -96,6 +96,7 @@ let y = (e) => {
                         }),
                         !i &&
                             (0, r.jsx)(o.olH, {
+                                "data-migration-pending": !0,
                                 hideOnFullscreen: f,
                                 onClick: O,
                                 className: E.closeButton,
