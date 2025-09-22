@@ -1,3 +1,3 @@
-i.exports = JSON.parse(
-    '{"ar3a3t":"Le informazioni che fornisci vengono usate solo per confermare il tuo gruppo d\'età; dopodiché, vengono eliminate","0vTx7u":"Ricarica","hDvmYG":"Ricarica"}',
+e.exports = JSON.parse(
+    '{"b7Oqdn":"Scegli un altro metodo","ar3a3t":"Le informazioni che fornisci vengono usate solo per confermare il tuo gruppo d\'età; dopodiché, vengono eliminate.","0vTx7u":"Ricarica","XYYm+/":"Scegli un altro metodo per verificare la tua età","rVLCwM":"Scegli un altro metodo","RpMIT0":["Usiamo i gruppi di età per determinare l\'accesso a certe esperienze. ",[8,"$link",["Scopri di più"],[[1,"handleOnHelpUrlHook"]]]],"eJmat7":"Di solito è il più veloce e totalmente automatico. Ti serve solo una webcam.","2yLvkZ":"Fai un selfie video","ZdmRwc":"Ti servirà una patente, un passaporto o un altro documento d\'identità. Poi fai un selfie fotografico per confermare che sei tu.","dwkwo6":"Scansiona il tuo documento","cR6339":"Nessun metodo di verifica dell\'età disponibile. Potrebbe essere un errore.","hDvmYG":"Ricarica"}',
 );

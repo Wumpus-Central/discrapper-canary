@@ -1,12 +1,3 @@
-e.exports = {
-    container: "container__0d0f9",
-    progressContainer: "progressContainer__0d0f9",
-    progress: "progress__0d0f9",
-    boostCountText: "boostCountText__0d0f9",
-    containerWithMargin: "containerWithMargin__0d0f9",
-    contentContainer: "contentContainer__0d0f9",
-    textContainer: "textContainer__0d0f9",
-    textContentContainer: "textContentContainer__0d0f9",
-    text: "text__0d0f9",
-    progressLow: "progressLow__0d0f9",
-};
+t.exports = JSON.parse(
+    '{"zyFyf3":"Du är i Stör ej. Gå online för att vara med i samtalet.","7cuAe3":"Stör ej har varit på ett tag. Låt vänner veta att du är tillgänglig.","3nnb4u":"Vänner kanske tror att du är upptagen. Gå online för att vara med i samtalet.","3t3FR0":"Tala om för andra att du är tillgänglig","Onha6O":"Är du fortfarande upptagen?","NtY0dX":"Du har varit Stör ej i mer än en dag"}',
+);
