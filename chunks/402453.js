@@ -1,6 +1,7 @@
 n.d(t, {
+    A: () => l,
     ZF: () => s,
-    kb: () => l,
+    kb: () => c,
 });
 var r = n(951288),
     i = n(647438);
@@ -27,6 +28,10 @@ function s() {
     return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
 function l(e) {
+    var t, n, r;
+    return null != (r = null == (n = s().experiments) || null == (t = n.manaDesktopToggleInputs) ? void 0 : t[e]) && r;
+}
+function c(e) {
     let { children: t, value: n } = e;
     return (0, r.jsx)(o.Provider, {
         value: n,
