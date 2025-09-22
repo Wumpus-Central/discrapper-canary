@@ -1,92 +1,94 @@
-n.d(t, { Z: () => h }), n(35282), n(539854);
+n.d(t, { Z: () => f }), n(35282), n(539854);
 var i = n(951288),
     r = n(647438),
-    l = n(755721),
+    l = n(793030),
     a = n(481060),
     o = n(668781),
     s = n(139387),
     c = n(308063),
-    d = n(600164),
-    u = n(259580),
-    p = n(768581),
-    m = n(486199),
-    b = n(981631),
-    g = n(388032),
-    f = n(941678);
-function h(e) {
-    let { webhook: t, editedWebhook: n, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
+    d = n(259580),
+    u = n(768581),
+    p = n(486199),
+    m = n(981631),
+    b = n(388032),
+    g = n(941678);
+function f(e) {
+    let { webhook: t, editedWebhook: f, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
         y = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
-                : (0, p.ov)({
+                : (0, u.ov)({
                       id: t.id,
                       avatar: e,
-                      discriminator: b.fo$,
+                      discriminator: m.fo$,
                   });
         }, [t]),
         O = r.useCallback(() => {
-            (0, a.h7j)((e) => {
-                var n, r;
-                return (0, i.jsx)(
-                    a.ConfirmModal,
-                    ((n = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
-                            "function" == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    }),
-                                )),
-                                i.forEach(function (t) {
-                                    var i;
-                                    (i = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: i,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0,
-                                              })
-                                            : (e[t] = i);
-                                });
-                        }
-                        return e;
-                    })({}, e)),
-                    (r = r =
-                        {
-                            header: g.intl.formatToPlainString(g.t.gBKqZ2, { name: t.name }),
-                            confirmText: g.intl.string(g.t.CMy0Cg),
-                            cancelText: g.intl.string(g.t["ETE/oK"]),
-                            onConfirm: () => {
-                                c.Z.delete(t.guild_id, t.id).catch(() => {
-                                    o.Z.show({
-                                        title: g.intl.string(g.t.LpbaFR),
-                                        body: g.intl.string(g.t["/4TwKS"]),
+            (0, a.ZDy)(async () => {
+                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
+                return (n) => {
+                    var r, l;
+                    return (0, i.jsx)(
+                        e,
+                        ((r = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    i = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (i = i.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    i.forEach(function (t) {
+                                        var i;
+                                        (i = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: i,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = i);
                                     });
-                                });
-                            },
-                            children: (0, i.jsx)(a.Text, {
-                                variant: "text-md/normal",
-                                children: g.intl.string(g.t.zO9jrK),
+                            }
+                            return e;
+                        })({}, n)),
+                        (l = l =
+                            {
+                                header: b.intl.formatToPlainString(b.t.gBKqZ2, { name: t.name }),
+                                confirmText: b.intl.string(b.t.CMy0Cg),
+                                cancelText: b.intl.string(b.t["ETE/oK"]),
+                                onConfirm: () => {
+                                    c.Z.delete(t.guild_id, t.id).catch(() => {
+                                        o.Z.show({
+                                            title: b.intl.string(b.t.LpbaFR),
+                                            body: b.intl.string(b.t["/4TwKS"]),
+                                        });
+                                    });
+                                },
+                                children: (0, i.jsx)(a.Text, {
+                                    variant: "text-md/normal",
+                                    children: b.intl.string(b.t.zO9jrK),
+                                }),
                             }),
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var i = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, i);
-                              }
-                              return n;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                          }),
-                    n),
-                );
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var i = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, i);
+                                  }
+                                  return n;
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                              }),
+                        r),
+                    );
+                };
             });
         }, [t.guild_id, t.id, t.name]),
         _ = [];
@@ -100,13 +102,13 @@ function h(e) {
             text: (0, i.jsx)(
                 "span",
                 {
-                    className: f.guildSource,
-                    children: g.intl.format(g.t["H/jJ6e"], {
+                    className: g.guildSource,
+                    children: b.intl.format(b.t["H/jJ6e"], {
                         guildHook: () =>
                             (0, i.jsx)(
                                 "span",
                                 {
-                                    className: f.sourceName,
+                                    className: g.sourceName,
                                     children: t.source_guild.name,
                                 },
                                 t.id,
@@ -119,82 +121,75 @@ function h(e) {
     let C = null;
     return (
         x &&
-            null != n &&
+            null != f &&
             (C = (0, i.jsxs)("div", {
-                className: f.body,
+                className: g.body,
                 children: [
-                    (0, i.jsx)(a.$i$, { className: f.topDivider }),
-                    (0, i.jsx)(d.Z, {
-                        children: (0, i.jsxs)(d.Z, {
-                            direction: d.Z.Direction.VERTICAL,
-                            children: [
-                                (0, i.jsxs)(d.Z, {
-                                    children: [
-                                        (0, i.jsx)(d.Z.Child, {
-                                            wrap: !0,
-                                            basis: "50%",
-                                            children: (0, i.jsx)(a.oil, {
-                                                label: g.intl.string(g.t.I1o5gY),
-                                                value: n.name,
-                                                onChange: (e) => {
-                                                    s.Z.updateWebhook({ name: e });
-                                                },
-                                                maxLength: 80,
-                                                error: j.name,
-                                            }),
+                    (0, i.jsx)(a.$i$, { className: g.topDivider }),
+                    (0, i.jsxs)(a.Kqy, {
+                        gap: 24,
+                        children: [
+                            (0, i.jsxs)(a.Kqy, {
+                                direction: "horizontal",
+                                gap: 16,
+                                children: [
+                                    (0, i.jsx)(a.xJW, {
+                                        title: b.intl.string(b.t.I1o5gY),
+                                        className: g.formField,
+                                        children: (0, i.jsx)(a.oil, {
+                                            value: f.name,
+                                            onChange: (e) => {
+                                                s.Z.updateWebhook({ name: e });
+                                            },
+                                            maxLength: 80,
+                                            error: j.name,
                                         }),
-                                        (0, i.jsx)(d.Z.Child, {
-                                            basis: "50%",
-                                            children: (0, i.jsx)("div", {
-                                                children: (0, i.jsx)(a.q4e, {
-                                                    label: g.intl.string(g.t["4TuWfX"]),
-                                                    value: n.channel_id,
-                                                    options: h,
-                                                    onChange: (e) => {
-                                                        s.Z.updateWebhook({ channelId: e });
-                                                    },
-                                                }),
-                                            }),
-                                        }),
-                                    ],
-                                }),
-                                (0, i.jsx)(a.$i$, { className: f.bottomDivider }),
-                                (0, i.jsx)(d.Z, {
-                                    children: (0, i.jsx)(l.zx, {
-                                        onClick: O,
-                                        size: l.zx.Sizes.SMALL,
-                                        color: l.zx.Colors.RED,
-                                        look: l.zx.Looks.LINK,
-                                        className: f.removeButton,
-                                        children: g.intl.string(g.t.CMy0Cg),
                                     }),
-                                }),
-                            ],
-                        }),
+                                    (0, i.jsx)(a.xJW, {
+                                        title: b.intl.string(b.t["4TuWfX"]),
+                                        className: g.formField,
+                                        children: (0, i.jsx)(a.q4e, {
+                                            value: f.channel_id,
+                                            options: h,
+                                            onChange: (e) => {
+                                                s.Z.updateWebhook({ channelId: e });
+                                            },
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            (0, i.jsx)(a.$i$, { className: g.bottomDivider }),
+                            (0, i.jsx)(l.Avr, {
+                                onClick: O,
+                                size: "sm",
+                                variant: "critical",
+                                text: b.intl.string(b.t.CMy0Cg),
+                            }),
+                        ],
                     }),
                 ],
             })),
         (0, i.jsx)(a.Zbd, {
             editable: !0,
-            className: f.card,
-            children: (0, i.jsxs)(d.Z, {
-                direction: d.Z.Direction.VERTICAL,
+            className: g.card,
+            children: (0, i.jsxs)(a.Kqy, {
                 children: [
                     (0, i.jsx)(a.P3F, {
-                        className: f.header,
+                        className: g.header,
                         "aria-expanded": x,
                         onClick: v,
-                        children: (0, i.jsxs)(d.Z, {
-                            align: d.Z.Align.CENTER,
+                        children: (0, i.jsxs)(a.Kqy, {
+                            direction: "horizontal",
+                            justify: "space-between",
+                            align: "center",
                             children: [
-                                (0, i.jsx)(m.Z, {
+                                (0, i.jsx)(p.Z, {
                                     name: t.name,
                                     imageSrc: y,
-                                    detailsClassName: f.__invalid_description,
                                     details: _,
                                 }),
-                                (0, i.jsx)(u.Z, {
-                                    className: f.expandIcon,
+                                (0, i.jsx)(d.Z, {
+                                    className: g.expandIcon,
                                     expanded: x,
                                     "aria-hidden": !0,
                                 }),

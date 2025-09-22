@@ -190,7 +190,9 @@ function R(e) {
 (0, c.isMac)() || (y["223"] = "`"), Object.freeze(y);
 let P = [
         ["META", "\u2318"],
+        ["CMD", "\u2318"],
         ["RIGHT META", "RIGHT \u2318"],
+        ["RIGHT CMD", "RIGHT \u2318"],
         ["SHIFT", "\u21E7"],
         ["RIGHT SHIFT", "RIGHT \u21E7"],
         ["ALT", "\u2325"],
