@@ -261,15 +261,11 @@ function ep(e) {
                           }),
                       ],
                   })),
-        (0, r.jsx)(
-            ef,
-            {
-                description: l ? V.intl.format(V.t.xCaYwM, {}) : V.intl.format(V.t["gpqr+v"], {}),
-                onLearnMore: c,
-                renderVisual: () => t,
-            },
-            "profile-item",
-        )
+        (0, r.jsx)(ef, {
+            description: l ? V.intl.format(V.t.xCaYwM, {}) : V.intl.format(V.t["gpqr+v"], {}),
+            onLearnMore: c,
+            renderVisual: () => t,
+        })
     );
 }
 function eh(e) {
@@ -286,59 +282,59 @@ function eh(e) {
             window.open(k.Z.getArticleURL(F.BhN.PREMIUM_DETAILS)),
                 j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
         };
-    return (0, r.jsx)(
-        ef,
-        {
-            description: l ? V.intl.format(V.t.couiKC, {}) : V.intl.format(V.t["0hUHi4"], {}),
-            onLearnMore: c,
-            renderVisual: () =>
-                (null != a && a.length > 0) || (!l && null != o && o.length > 0)
-                    ? (0, r.jsxs)("div", {
-                          className: H.emojiStickersPersonalizedContainer,
-                          children: [
-                              a
-                                  .map((e) =>
-                                      null == e.id
-                                          ? e.url
-                                          : M.ZP.getEmojiURL({
-                                                id: e.id,
-                                                animated: !i && e.animated,
-                                                size: 58,
-                                            }),
-                                  )
-                                  .map((e) =>
-                                      null != e
-                                          ? (0, r.jsx)("img", {
+    return (0, r.jsx)(ef, {
+        description: l ? V.intl.format(V.t.couiKC, {}) : V.intl.format(V.t["0hUHi4"], {}),
+        onLearnMore: c,
+        renderVisual: () =>
+            (null != a && a.length > 0) || (!l && null != o && o.length > 0)
+                ? (0, r.jsxs)("div", {
+                      className: H.emojiStickersPersonalizedContainer,
+                      children: [
+                          a
+                              .map((e) =>
+                                  null == e.id
+                                      ? e.url
+                                      : M.ZP.getEmojiURL({
+                                            id: e.id,
+                                            animated: !i && e.animated,
+                                            size: 58,
+                                        }),
+                              )
+                              .map((e, t) =>
+                                  null != e
+                                      ? (0, r.jsx)(
+                                            "img",
+                                            {
                                                 className: H.personalizedEmoji,
                                                 alt: "",
                                                 src: e,
-                                            })
-                                          : null,
-                                  ),
-                              l
-                                  ? null
-                                  : o.map((e) =>
-                                        (0, r.jsx)(
-                                            I.Z,
-                                            {
-                                                disableAnimation: i,
-                                                sticker: e,
-                                                size: 58,
-                                                withLoadingIndicator: !1,
                                             },
-                                            e.id,
-                                        ),
+                                            "emoji-".concat(t),
+                                        )
+                                      : null,
+                              ),
+                          l
+                              ? null
+                              : o.map((e) =>
+                                    (0, r.jsx)(
+                                        I.Z,
+                                        {
+                                            disableAnimation: i,
+                                            sticker: e,
+                                            size: 58,
+                                            withLoadingIndicator: !1,
+                                        },
+                                        e.id,
                                     ),
-                          ],
-                      })
-                    : (0, r.jsx)("img", {
-                          className: H.nonPersonalizedGraphic,
-                          alt: "",
-                          src: s,
-                      }),
-        },
-        "emoji-stickers-item",
-    );
+                                ),
+                      ],
+                  })
+                : (0, r.jsx)("img", {
+                      className: H.nonPersonalizedGraphic,
+                      alt: "",
+                      src: s,
+                  }),
+    });
 }
 function em(e) {
     let { premiumType: t, onClose: n } = e;
@@ -371,58 +367,54 @@ function em(e) {
                 (0, w.openUserSettings)(P.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: F.oAB.GUILD_BOOSTING }),
                 j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
         };
-    return (0, r.jsx)(
-        ef,
-        {
-            description: t === Z.p9.TIER_1 ? V.intl.format(V.t["K4Hv6+"], {}) : V.intl.format(V.t.wRxEDQ, {}),
-            onLearnMore: _,
-            renderVisual: () =>
-                c
-                    ? (0, r.jsx)("div", {
-                          className: H.boostCardContainer,
-                          children: (0, r.jsxs)("div", {
-                              className: H.boostCard,
-                              children: [
-                                  (0, r.jsx)(O.Z, {
-                                      guild: s,
-                                      size: O.Z.Sizes.MEDIUM,
-                                      animate: !a,
-                                      className: H.boostCardIcon,
-                                  }),
-                                  (0, r.jsxs)("div", {
-                                      className: H.boostCardInfo,
-                                      children: [
-                                          (0, r.jsx)(p.Text, {
-                                              variant: "text-md/normal",
-                                              className: o()(H.textSingleLineEllipsis, H.boostCardTitle),
-                                              children: s.name,
-                                          }),
-                                          (0, r.jsxs)("div", {
-                                              className: H.boostCardSubtitle,
-                                              children: [
-                                                  (0, r.jsx)(p.$Eu, {
-                                                      color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                                      className: H.boostCardGem,
-                                                  }),
-                                                  (0, r.jsx)(p.Text, {
-                                                      variant: "text-xs/normal",
-                                                      className: o()(H.textSingleLineEllipsis, H.boostCardCount),
-                                                      children: V.intl.format(V.t["Ou/g/P"], { boostCount: l }),
-                                                  }),
-                                              ],
-                                          }),
-                                      ],
-                                  }),
-                              ],
-                          }),
-                      })
-                    : (0, r.jsx)("img", {
-                          alt: "",
-                          src: f,
+    return (0, r.jsx)(ef, {
+        description: t === Z.p9.TIER_1 ? V.intl.format(V.t["K4Hv6+"], {}) : V.intl.format(V.t.wRxEDQ, {}),
+        onLearnMore: _,
+        renderVisual: () =>
+            c
+                ? (0, r.jsx)("div", {
+                      className: H.boostCardContainer,
+                      children: (0, r.jsxs)("div", {
+                          className: H.boostCard,
+                          children: [
+                              (0, r.jsx)(O.Z, {
+                                  guild: s,
+                                  size: O.Z.Sizes.MEDIUM,
+                                  animate: !a,
+                                  className: H.boostCardIcon,
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: H.boostCardInfo,
+                                  children: [
+                                      (0, r.jsx)(p.Text, {
+                                          variant: "text-md/normal",
+                                          className: o()(H.textSingleLineEllipsis, H.boostCardTitle),
+                                          children: s.name,
+                                      }),
+                                      (0, r.jsxs)("div", {
+                                          className: H.boostCardSubtitle,
+                                          children: [
+                                              (0, r.jsx)(p.$Eu, {
+                                                  color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                  className: H.boostCardGem,
+                                              }),
+                                              (0, r.jsx)(p.Text, {
+                                                  variant: "text-xs/normal",
+                                                  className: o()(H.textSingleLineEllipsis, H.boostCardCount),
+                                                  children: V.intl.format(V.t["Ou/g/P"], { boostCount: l }),
+                                              }),
+                                          ],
+                                      }),
+                                  ],
+                              }),
+                          ],
                       }),
-        },
-        "boost-item",
-    );
+                  })
+                : (0, r.jsx)("img", {
+                      alt: "",
+                      src: f,
+                  }),
+    });
 }
 let eg = () => {
     let e = ed().screenShareItemVisual,
@@ -430,19 +422,15 @@ let eg = () => {
             window.open(k.Z.getArticleURL(F.BhN.STREAM_QUALITY_SETTINGS)),
                 j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
         };
-    return (0, r.jsx)(
-        ef,
-        {
-            description: V.intl.format(V.t.wK04T0, {}),
-            onLearnMore: t,
-            renderVisual: () =>
-                (0, r.jsx)("img", {
-                    alt: "",
-                    src: e,
-                }),
-        },
-        "screen-share-item",
-    );
+    return (0, r.jsx)(ef, {
+        description: V.intl.format(V.t.wK04T0, {}),
+        onLearnMore: t,
+        renderVisual: () =>
+            (0, r.jsx)("img", {
+                alt: "",
+                src: e,
+            }),
+    });
 };
 function eE(e) {
     let { premiumType: t } = e,
@@ -451,19 +439,15 @@ function eE(e) {
             window.open(k.Z.getArticleURL(F.BhN.PREMIUM_DETAILS)),
                 j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
         };
-    return (0, r.jsx)(
-        ef,
-        {
-            description: t === Z.p9.TIER_2 ? V.intl.format(V.t.GsOFRE, {}) : V.intl.format(V.t.wFWO6O, {}),
-            onLearnMore: i,
-            renderVisual: () =>
-                (0, r.jsx)("img", {
-                    alt: "",
-                    src: n,
-                }),
-        },
-        "uploads-item",
-    );
+    return (0, r.jsx)(ef, {
+        description: t === Z.p9.TIER_2 ? V.intl.format(V.t.GsOFRE, {}) : V.intl.format(V.t.wFWO6O, {}),
+        onLearnMore: i,
+        renderVisual: () =>
+            (0, r.jsx)("img", {
+                alt: "",
+                src: n,
+            }),
+    });
 }
 let eb = i.createContext({ isPremiumRebrand: !1 }),
     ey = () => i.useContext(eb).isPremiumRebrand;
@@ -478,59 +462,91 @@ function eO(e) {
                 case Z.p9.TIER_1:
                     s
                         ? e.push(
-                              (0, r.jsx)(ep, {
-                                  currentUser: t,
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
-                              (0, r.jsx)(eg, {}),
-                              (0, r.jsx)(em, {
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
+                              (0, r.jsx)(
+                                  ep,
+                                  {
+                                      currentUser: t,
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "profile-item",
+                              ),
+                              (0, r.jsx)(eg, {}, "screen-share-item"),
+                              (0, r.jsx)(
+                                  em,
+                                  {
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "boost-item",
+                              ),
                           )
                         : e.push(
-                              (0, r.jsx)(ep, {
-                                  currentUser: t,
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
-                              (0, r.jsx)(eh, { premiumType: n }),
-                              (0, r.jsx)(eg, {}),
-                              (0, r.jsx)(eE, { premiumType: n }),
-                              (0, r.jsx)(em, {
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
+                              (0, r.jsx)(
+                                  ep,
+                                  {
+                                      currentUser: t,
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "profile-item",
+                              ),
+                              (0, r.jsx)(eh, { premiumType: n }, "emoji-stickers-item"),
+                              (0, r.jsx)(eg, {}, "screen-share-item"),
+                              (0, r.jsx)(eE, { premiumType: n }, "uploads-item"),
+                              (0, r.jsx)(
+                                  em,
+                                  {
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "boost-item",
+                              ),
                           );
                     break;
                 case Z.p9.TIER_2:
                     s
                         ? e.push(
-                              (0, r.jsx)(ep, {
-                                  currentUser: t,
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
-                              (0, r.jsx)(em, {
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
-                              (0, r.jsx)(eg, {}),
+                              (0, r.jsx)(
+                                  ep,
+                                  {
+                                      currentUser: t,
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "profile-item",
+                              ),
+                              (0, r.jsx)(
+                                  em,
+                                  {
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "boost-item",
+                              ),
+                              (0, r.jsx)(eg, {}, "screen-share-item"),
                           )
                         : e.push(
-                              (0, r.jsx)(ep, {
-                                  currentUser: t,
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
-                              (0, r.jsx)(eh, { premiumType: n }),
-                              (0, r.jsx)(em, {
-                                  premiumType: n,
-                                  onClose: a,
-                              }),
-                              (0, r.jsx)(eg, {}),
-                              (0, r.jsx)(eE, { premiumType: n }),
+                              (0, r.jsx)(
+                                  ep,
+                                  {
+                                      currentUser: t,
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "profile-item",
+                              ),
+                              (0, r.jsx)(eh, { premiumType: n }, "emoji-stickers-item"),
+                              (0, r.jsx)(
+                                  em,
+                                  {
+                                      premiumType: n,
+                                      onClose: a,
+                                  },
+                                  "boost-item",
+                              ),
+                              (0, r.jsx)(eg, {}, "screen-share-item"),
+                              (0, r.jsx)(eE, { premiumType: n }, "uploads-item"),
                           );
             }
             return e;
