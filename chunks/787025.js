@@ -15,7 +15,7 @@ var i = n(120356),
     f = n(252618),
     _ = n(981631),
     p = n(388032),
-    h = n(687383);
+    h = n(697257);
 function m(e, t, n) {
     return (
         t in e
@@ -115,7 +115,7 @@ function I(e) {
         { hideHeader: i } = e,
         a = y(e, ["hideHeader"]);
     return (0, r.jsxs)(
-        o.I,
+        o.IX,
         b(g({}, a), {
             onClose: () => {
                 var e;

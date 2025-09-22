@@ -31,8 +31,8 @@ function f(e, n, l, a) {
 function _(e) {
     var n, l;
     let { transitionState: i, onClose: _, resourceChannel: N, guildId: Z, onSave: y, onDelete: G, onIconUpload: S } = e,
-        [P, U] = r.useState(null != (n = null == N ? void 0 : N.title) ? n : ""),
-        [X, B] = r.useState(null != (l = null == N ? void 0 : N.description) ? l : ""),
+        [X, P] = r.useState(null != (n = null == N ? void 0 : N.title) ? n : ""),
+        [U, B] = r.useState(null != (l = null == N ? void 0 : N.description) ? l : ""),
         [R, W] = r.useState(
             (function (e) {
                 if (null == e) return null;
@@ -55,10 +55,10 @@ function _(e) {
                 (e) => e.channelId,
             );
         }),
-        K = P.length < h.n || null == R,
+        K = X.length < h.n || null == R,
         L = r.useCallback(() => {
-            null == R || P.length <= 0 || (y(f(R, P, X, q)), _());
-        }, [y, _, P, R, q, X]),
+            null == R || X.length <= 0 || (y(f(R, X, U, q)), _());
+        }, [y, _, X, R, q, U]),
         O = r.useCallback(() => {
             null == G || G(), _();
         }, [G, _]),
@@ -99,9 +99,9 @@ function _(e) {
         ),
         w = r.useCallback(
             (e) => {
-                null != S && null != R && S(f(R, P, X), e);
+                null != S && null != R && S(f(R, X, U), e);
             },
-            [R, P, S, X],
+            [R, X, S, U],
         ),
         z = r.useCallback(
             () =>
@@ -129,7 +129,7 @@ function _(e) {
             ],
             [L, K, _],
         );
-    return (0, a.jsxs)(o.I, {
+    return (0, a.jsxs)(o.IX, {
         transitionState: i,
         onClose: _,
         children: [
@@ -182,8 +182,8 @@ function _(e) {
                                 children: [I.intl.string(I.t["lFy+aW"]), (0, a.jsx)(k.Z, {})],
                             }),
                             (0, a.jsx)(u.oil, {
-                                value: P,
-                                onChange: U,
+                                value: X,
+                                onChange: P,
                                 placeholder: I.intl.string(I.t.XKUimJ),
                                 maxLength: h.am,
                             }),
@@ -199,7 +199,7 @@ function _(e) {
                                 children: I.intl.string(I.t.CnkilJ),
                             }),
                             (0, a.jsx)(u.Kx8, {
-                                value: X,
+                                value: U,
                                 onChange: B,
                                 placeholder: I.intl.string(I.t.na0V4O),
                                 maxLength: h.Vu,

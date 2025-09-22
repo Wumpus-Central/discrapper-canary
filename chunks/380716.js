@@ -133,9 +133,9 @@ function D(e) {
                       };
             })(R),
         ),
-        [W, V] = i.useState(F),
-        X = (0, o.e7)([f.Z], () => f.Z.getChannel(null == W ? void 0 : W.value)),
-        Y = (null == X ? void 0 : X.isMediaChannel()) === !0,
+        [W, X] = i.useState(F),
+        V = (0, o.e7)([f.Z], () => f.Z.getChannel(null == W ? void 0 : W.value)),
+        Y = (null == V ? void 0 : V.isMediaChannel()) === !0,
         B = i.useMemo(
             () => [
                 {
@@ -145,14 +145,14 @@ function D(e) {
                 {
                     value: j.oi.CHAT,
                     name:
-                        (null == X ? void 0 : X.type) === T.d4z.GUILD_FORUM
+                        (null == V ? void 0 : V.type) === T.d4z.GUILD_FORUM
                             ? Y
                                 ? k.intl.string(k.t["1EgDpK"])
                                 : k.intl.string(k.t.x5Di7O)
                             : k.intl.string(k.t["R+dC4O"]),
                 },
             ],
-            [null == X ? void 0 : X.type, Y],
+            [null == V ? void 0 : V.type, Y],
         ),
         [K, Q] = i.useState(G()),
         [J, $] = i.useState(null != (n = null == R ? void 0 : R.title) ? n : ""),
@@ -213,7 +213,7 @@ function D(e) {
         ),
         ev = i.useCallback(
             (e) => {
-                V(e),
+                X(e),
                     Q(
                         M({
                             channelId: null == e ? void 0 : e.value,
@@ -224,7 +224,7 @@ function D(e) {
                         }),
                     );
             },
-            [V, Q, J, en, et],
+            [X, Q, J, en, et],
         ),
         eg = i.useCallback(
             (e) => {
@@ -340,7 +340,7 @@ function D(e) {
         ],
         [em, ed, ec, U],
     );
-    return (0, t.jsxs)(s.I, {
+    return (0, t.jsxs)(s.IX, {
         transitionState: D,
         onClose: U,
         children: [
@@ -474,7 +474,7 @@ function D(e) {
                                                                         a && l();
                                                             }),
                                                         pickerIntention: _.Hz.COMMUNITY_CONTENT,
-                                                        channel: X,
+                                                        channel: V,
                                                     });
                                                 },
                                                 children: (e) =>
@@ -547,7 +547,7 @@ function D(e) {
                                 size: d.l7.NONE,
                                 value: null == en ? void 0 : en.value,
                                 onChange: eg,
-                                options: null == X ? B : B.map((e) => Z(P({}, e), { disabled: !w(e.value, X) })),
+                                options: null == V ? B : B.map((e) => Z(P({}, e), { disabled: !w(e.value, V) })),
                             }),
                             null != en && K.actionType.length > 0
                                 ? K.actionType.map((e) =>

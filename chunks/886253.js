@@ -1,9 +1,9 @@
 n.d(t, { A: () => v });
 var r = n(951288);
 n(647438);
-var i = n(541822),
-    o = n(442837),
-    a = n(257465),
+var i = n(442837),
+    a = n(312568),
+    o = n(257465),
     s = n(82659),
     l = n(213734),
     c = n(37148),
@@ -21,7 +21,7 @@ var i = n(541822),
     O = n(525751);
 function v(e) {
     let { appId: t, skuId: n, transitionState: v, onClose: I, children: T, footer: S } = e,
-        A = (0, o.e7)([d.Z, f.Z], () => {
+        A = (0, i.e7)([d.Z, f.Z], () => {
             var e;
             return null != (e = d.Z.getApplication(t)) ? e : f.Z.getApplicationRecord(t);
         }, [t]),
@@ -57,7 +57,7 @@ function v(e) {
                   className: y.appIcon,
               })
             : void 0;
-    return (0, r.jsxs)(a.I, {
+    return (0, r.jsxs)(o.IX, {
         onClose: I,
         size: "lg",
         transitionState: v,
@@ -66,7 +66,7 @@ function v(e) {
                 leading: w,
                 title: A.name,
             }),
-            (0, r.jsx)(i.Z, {
+            (0, r.jsx)(a.Z, {
                 children: (0, r.jsx)("main", {
                     className: O.bodyInner,
                     children: T,

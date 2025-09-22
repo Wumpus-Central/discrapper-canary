@@ -123,7 +123,7 @@ function f(e) {
             guildPlans: O,
             maybeChangeToAfterTabRef: M,
         });
-    return (0, i.jsxs)(r.I, {
+    return (0, i.jsxs)(r.IX, {
         transitionState: n,
         onClose: t,
         size: "xl",

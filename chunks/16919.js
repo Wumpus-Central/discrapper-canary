@@ -12,7 +12,7 @@ var a = r(257465),
 function h(t) {
     let { transitionState: i, onClose: r } = t,
         { redeemReward: h } = (0, d.h)(!0);
-    return (0, n.jsxs)(a.I, {
+    return (0, n.jsxs)(a.IX, {
         transitionState: i,
         onClose: r,
         size: "sm",

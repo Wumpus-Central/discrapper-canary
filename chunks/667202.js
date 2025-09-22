@@ -102,7 +102,7 @@ function p(e) {
             "children",
         ]);
     return (0, r.jsxs)(
-        i.I,
+        i.IX,
         d(c({}, E), {
             size: t,
             paddingSize: "lg",

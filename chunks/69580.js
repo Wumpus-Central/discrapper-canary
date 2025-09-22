@@ -223,7 +223,7 @@ function eo() {
         removeChildWrapper: !0,
         children: (0, r.jsx)(
             es,
-            ea(er({ transitionState: p.D.ENTERED }, t), {
+            ea(er({ transitionState: p.Dv.ENTERED }, t), {
                 showLogout: !0,
                 isExternalStandaloneOAuthPage: !0,
                 hideHeader: !0,

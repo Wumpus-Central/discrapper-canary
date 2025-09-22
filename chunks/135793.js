@@ -117,7 +117,7 @@ function B(e) {
     let { transitionState: t, channel: n, message: o, onRedeem: s, onUnmount: u, buttonUseState: d, source: f } = e;
     (0, i.useEffect)(() => u, [u]);
     let _ = (0, i.useCallback)(() => ((0, c.Mr3)(U), Promise.resolve()), []);
-    return (0, r.jsx)(l.I, {
+    return (0, r.jsx)(l.IX, {
         transitionState: t,
         onClose: _,
         trackingProps: {
@@ -174,7 +174,7 @@ function Z(e) {
             return 0;
         }, [E, R, s]),
         j = (0, i.useMemo)(() => (0 === L ? 1 : u ? 2 : 3 * (null == _)), [u, _, L]);
-    return (0, r.jsx)(V, {
+    return (0, r.jsx)(F, {
         channel: t,
         buttonPurchaseState: L,
         buttonDisabledState: j,
@@ -185,7 +185,7 @@ function Z(e) {
         isReaction: l,
     });
 }
-let V = (e) => {
+let F = (e) => {
         let {
                 channel: t,
                 buttonPurchaseState: n,
@@ -225,7 +225,7 @@ let V = (e) => {
                         (0, r.jsx)("div", {
                             className: P.modal,
                             ref: d,
-                            children: (0, r.jsx)(F, {
+                            children: (0, r.jsx)(V, {
                                 channel: t,
                                 selectedEmoji: c,
                                 isReaction: u,
@@ -240,7 +240,7 @@ let V = (e) => {
                     ],
                 });
     },
-    F = (e) => {
+    V = (e) => {
         let { channel: t, selectedEmoji: n, isReaction: i } = e;
         return (0, r.jsxs)("div", {
             className: P.body,

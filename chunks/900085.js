@@ -287,7 +287,7 @@ class X extends l.PureComponent {
         return t ? null : (0, i.jsx)(R.Z, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, i.jsx)(c.I, {
+        return (0, i.jsx)(c.IX, {
             "aria-label": M.intl.string(M.t.ZvKwYW),
             size: "lg",
             transitionState: this.props.transitionState,

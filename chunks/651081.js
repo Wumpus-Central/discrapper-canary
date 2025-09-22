@@ -298,7 +298,7 @@ function O(e) {
         });
     if (null == m) throw Error("PollVotesModal.render: Message does not have a channelId");
     if (null == n.poll) throw Error("PollVotesModal.render: Message does not have a poll");
-    return (0, l.jsxs)(o.I, {
+    return (0, l.jsxs)(o.IX, {
         transitionState: u,
         onClose: r,
         size: "lg",

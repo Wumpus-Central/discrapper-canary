@@ -104,7 +104,7 @@ function b(t) {
                         P(f.L.PRIMARY);
                 },
             }),
-        (0, a.jsxs)(s.I, {
+        (0, a.jsxs)(s.IX, {
             transitionState: y,
             size: "xl",
             onClose: async () => await P(),

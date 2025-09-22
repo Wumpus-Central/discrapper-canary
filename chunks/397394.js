@@ -3,9 +3,9 @@ n.d(t, {
     Lk: () => Z,
     Xg: () => F,
     ZP: () => j,
-    c7: () => k,
+    c7: () => M,
     j3: () => V,
-    jO: () => M,
+    jO: () => k,
     ks: () => B,
 }),
     n(358797),
@@ -137,10 +137,10 @@ function j(e) {
         })
     );
 }
-function k(e) {
+function M(e) {
     return (0, r.jsx)(j, D(P({}, e), { headerClassName: N.headerSuccess }));
 }
-function M(e) {
+function k(e) {
     var { guild: t, application: n } = e,
         a = x(e, ["guild", "application"]);
     let { onClose: o } = a,
@@ -241,7 +241,7 @@ function U(e) {
             children: s,
         });
     return (0, r.jsx)(
-        k,
+        M,
         P(
             {
                 message: o,
@@ -329,7 +329,7 @@ function F() {
     return (0, r.jsx)(S.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(S.j, {
-            transitionState: d.D.ENTERED,
+            transitionState: d.Dv.ENTERED,
             hideHeader: !0,
             children: (0, r.jsx)(U, {
                 guild: null == (e = n.state) ? void 0 : e.guild,
@@ -353,7 +353,7 @@ function V(e) {
     return (0, r.jsx)(S.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(S.j, {
-            transitionState: d.D.ENTERED,
+            transitionState: d.Dv.ENTERED,
             hideHeader: !0,
             title: C.intl.string(C.t.j2d6Ki),
             subtitle: l,

@@ -1,4 +1,4 @@
-e.d(i, { default: () => p }), e(388685);
+e.d(i, { default: () => h }), e(388685);
 var n = e(951288),
     s = e(647438),
     a = e(257465),
@@ -18,8 +18,8 @@ var n = e(951288),
     A = e(981631),
     O = e(388032),
     T = e(304495);
-function p(t) {
-    let { transitionState: i, application: e, storeListing: p, subscription: h, guild: m, onClose: P } = t,
+function h(t) {
+    let { transitionState: i, application: e, storeListing: h, subscription: p, guild: m, onClose: P } = t,
         g = (0, u.Dt)(),
         { analyticsLocations: j } = (0, _.ZP)(C.Z.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
         {
@@ -45,13 +45,13 @@ function p(t) {
         })(j),
         [R, U] = s.useState(0),
         b = async () => {
-            (await L(h.id)) && (N.ZP.disableApplicationSubscriptionCancellationSurvey ? P() : U(1));
+            (await L(p.id)) && (N.ZP.disableApplicationSubscriptionCancellationSurvey ? P() : U(1));
         };
     s.useEffect(() => {
         I.default.track(A.rMx.CANCELLATION_FLOW_STARTED, { location_stack: j });
     }, [j]);
-    let k = (0, S.KW)(p.skuFlags);
-    return (0, n.jsx)(a.I, {
+    let k = (0, S.KW)(h.skuFlags);
+    return (0, n.jsx)(a.IX, {
         onClose: P,
         transitionState: i,
         "aria-labelledby": g,
@@ -73,23 +73,23 @@ function p(t) {
                                             (0, n.jsx)(E.CW, { application: e }),
                                             (0, n.jsx)(E.r0, {
                                                 id: g,
-                                                children: O.intl.format(O.t.irka9v, { tier: p.summary }),
+                                                children: O.intl.format(O.t.irka9v, { tier: h.summary }),
                                             }),
                                             (0, n.jsx)(E.s$, {}),
                                             (0, n.jsx)(E.K9, {
                                                 title: O.intl.string(O.t.LZunzc),
                                                 description: k
                                                     ? O.intl.formatToPlainString(O.t["+HdfBw"], {
-                                                          timestamp: h.currentPeriodEnd.getTime(),
+                                                          timestamp: p.currentPeriodEnd.getTime(),
                                                       })
                                                     : O.intl.formatToPlainString(O.t.qxiBnZ, {
-                                                          timestamp: h.currentPeriodEnd.getTime(),
+                                                          timestamp: p.currentPeriodEnd.getTime(),
                                                           guildName: null == m ? void 0 : m.name,
                                                       }),
                                             }),
                                             (0, n.jsx)(E.G9, {
-                                                applicationId: p.applicationId,
-                                                storeListingBenefits: p.benefits,
+                                                applicationId: h.applicationId,
+                                                storeListingBenefits: h.benefits,
                                             }),
                                         ],
                                     }),
@@ -122,7 +122,7 @@ function p(t) {
                         className: T.slideContainer,
                         children: (0, n.jsx)(x.Z, {
                             application: e,
-                            subscriptionId: h.id,
+                            subscriptionId: p.id,
                             onClose: P,
                         }),
                     }),

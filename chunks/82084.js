@@ -1,7 +1,6 @@
 n.d(t, { Z: () => o });
-var r = n(951288);
-n(647438);
-var i = n(257465),
+var r = n(951288),
+    i = n(352065),
     l = n(79808);
 function o(e) {
     var t,
@@ -29,7 +28,7 @@ function o(e) {
             return i;
         })(e, ["root", "directory", "target", "sidebarHeader", "sidebarFooter"]);
     return (0, r.jsx)(
-        i.I,
+        i.A,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -54,13 +53,7 @@ function o(e) {
                     });
             }
             return e;
-        })(
-            {
-                size: "xl",
-                fullScreenOnMobile: !0,
-            },
-            d,
-        )),
+        })({}, d)),
         (n = n =
             {
                 children: (0, r.jsx)(l.Z, {

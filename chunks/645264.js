@@ -41,7 +41,7 @@ let b = () =>
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsxs)(s.I, {
+                      (0, r.jsxs)(s.IX, {
                           transitionState: t,
                           "aria-labelledby": I,
                           size: "xl",

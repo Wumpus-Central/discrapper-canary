@@ -84,7 +84,7 @@ function b(e) {
     function O(e) {
         e.preventDefault();
     }
-    return (0, r.jsx)(l.I, {
+    return (0, r.jsx)(l.IX, {
         transitionState: t,
         onClose: i,
         size: "sm",

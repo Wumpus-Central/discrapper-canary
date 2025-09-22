@@ -2778,7 +2778,7 @@ function ev(e) {
             children: t,
         });
     }
-    return (0, r.jsxs)(f.I, {
+    return (0, r.jsxs)(f.IX, {
         transitionState: t,
         onClose: n,
         children: [
@@ -2835,7 +2835,7 @@ function eI(e) {
         [y, O] = i.useState(!1),
         [v, S] = i.useState(!1),
         [A, C] = i.useState(!1);
-    return (0, r.jsxs)(f.I, {
+    return (0, r.jsxs)(f.IX, {
         transitionState: t,
         onClose: n,
         size: a,

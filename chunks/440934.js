@@ -33,7 +33,7 @@ function f(n) {
         onSubmit: (n) => {
             n.preventDefault(), N();
         },
-        children: (0, i.jsxs)(a.I, {
+        children: (0, i.jsxs)(a.IX, {
             transitionState: f,
             onClose: t,
             children: [

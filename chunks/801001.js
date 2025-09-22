@@ -83,7 +83,7 @@ function I(e) {
             ],
             [J, n],
         );
-    return (0, l.jsxs)(a.I, {
+    return (0, l.jsxs)(a.IX, {
         transitionState: t,
         onClose: n,
         children: [

@@ -104,7 +104,7 @@ function h(e) {
         ]);
     let y = null != t ? t : null != d || null != E || null != g ? "md" : "sm";
     return (0, r.jsxs)(
-        i.I,
+        i.IX,
         f(u({}, b), {
             size: y,
             children: [

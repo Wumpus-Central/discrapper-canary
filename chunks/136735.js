@@ -1,8 +1,8 @@
 l.d(t, { default: () => L }), l(388685), l(953529), l(35282);
 var n = l(951288),
     i = l(647438),
-    s = l(120356),
-    r = l.n(s),
+    r = l(120356),
+    s = l.n(r),
     a = l(772848),
     o = l(36793),
     u = l(442837),
@@ -14,20 +14,20 @@ var n = l(951288),
     p = l(339085),
     j = l(349709),
     v = l(763610),
-    b = l(430824),
-    x = l(594174),
+    x = l(430824),
+    b = l(594174),
     h = l(626135),
     y = l(424218),
     E = l(63063),
-    I = l(956664),
-    w = l(268350),
-    N = l(373228),
+    w = l(956664),
+    I = l(268350),
+    S = l(373228),
     O = l(378233),
-    S = l(419922),
-    C = l(611480),
-    P = l(981631),
-    D = l(388032),
-    k = l(491202),
+    N = l(419922),
+    P = l(611480),
+    C = l(981631),
+    k = l(388032),
+    D = l(491202),
     Z = l(434227),
     R = l(600126);
 let _ = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
@@ -38,7 +38,7 @@ let _ = new Set(["application/json", "image/png", "image/apng", "image/gif", "im
         },
     ];
 function A(e, t) {
-    h.default.track(P.rMx.STICKER_UPLOAD_COMPLETED, {
+    h.default.track(C.rMx.STICKER_UPLOAD_COMPLETED, {
         successful: e,
         error: null != t ? t : "",
     });
@@ -46,68 +46,68 @@ function A(e, t) {
 let z = (e) => {
     let { stickerPreview: t } = e;
     return (0, n.jsxs)("div", {
-        className: k.preview,
+        className: D.preview,
         children: [
             (0, n.jsx)("div", {
-                className: k.previewDark,
+                className: D.previewDark,
                 children:
                     null != t
                         ? t
                         : (0, n.jsx)("img", {
                               src: Z,
-                              alt: D.intl.string(D.t.qOsjZm),
+                              alt: k.intl.string(k.t.qOsjZm),
                           }),
             }),
             (0, n.jsx)("div", {
-                className: k.previewLight,
+                className: D.previewLight,
                 children:
                     null != t
                         ? t
                         : (0, n.jsx)("img", {
                               src: R,
-                              alt: D.intl.string(D.t.YC5NAA),
+                              alt: k.intl.string(k.t.YC5NAA),
                           }),
             }),
         ],
     });
 };
 async function B(e) {
-    let t = await (0, I.fD)(e),
+    let t = await (0, w.fD)(e),
         l = new Image();
     (l.src = t), await l.decode();
     let n = (0, o.Ae)(l, 320, 320);
-    return (0, I.Bo)(n, e.name, "image/png");
+    return (0, w.Bo)(n, e.name, "image/png");
 }
 function L(e) {
-    var t, l, s, o, Z, R, L, U;
-    let { transitionState: K, onClose: M, guildId: F, sticker: W } = e,
-        Y = (0, u.e7)([p.ZP], () => ((null == W ? void 0 : W.tags) != null ? p.ZP.getCustomEmojiById(W.tags) : null)),
-        q = null != (l = null == (t = x.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? C.OC : C.Ht,
-        [G, J] = i.useState(null),
-        [V, X] = i.useState(null != (s = null == W ? void 0 : W.name) ? s : ""),
+    var t, l, r, o, Z, R, L, U;
+    let { transitionState: K, onClose: M, guildId: F, sticker: Y } = e,
+        q = (0, u.e7)([p.ZP], () => ((null == Y ? void 0 : Y.tags) != null ? p.ZP.getCustomEmojiById(Y.tags) : null)),
+        G = null != (l = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? P.OC : P.Ht,
+        [V, W] = i.useState(null),
+        [X, J] = i.useState(null != (r = null == Y ? void 0 : Y.name) ? r : ""),
         [H, Q] = i.useState({
             file: null,
-            filename: null != (o = (0, O._V)(W)) ? o : "",
+            filename: null != (o = (0, O._V)(Y)) ? o : "",
         }),
-        [$, ee] = i.useState(null == Y ? void 0 : Y.id),
-        [et, el] = i.useState(null != (Z = null == Y ? void 0 : Y.name) ? Z : null == W ? void 0 : W.tags),
-        [en, ei] = i.useState(null != (R = null == W ? void 0 : W.description) ? R : ""),
-        [es, er] = i.useState(!1),
+        [$, ee] = i.useState(null == q ? void 0 : q.id),
+        [et, el] = i.useState(null != (Z = null == q ? void 0 : q.name) ? Z : null == Y ? void 0 : Y.tags),
+        [en, ei] = i.useState(null != (R = null == Y ? void 0 : Y.description) ? R : ""),
+        [er, es] = i.useState(!1),
         [ea, eo] = i.useState(null),
-        eu = (0, u.e7)([b.Z], () => b.Z.getGuild(F)),
+        eu = (0, u.e7)([x.Z], () => x.Z.getGuild(F)),
         ec =
-            (null == eu ? void 0 : eu.features.has(P.oNc.PARTNERED)) ||
-            (null == eu ? void 0 : eu.features.has(P.oNc.VERIFIED)),
-        ed = null != W,
+            (null == eu ? void 0 : eu.features.has(C.oNc.PARTNERED)) ||
+            (null == eu ? void 0 : eu.features.has(C.oNc.VERIFIED)),
+        ed = null != Y,
         em = ed || (null == H ? void 0 : H.file) != null,
         ef = 0 === en.length || (en.length >= 2 && en.length <= 100),
         eg =
-            !es &&
+            !er &&
             (null == ea ? void 0 : ea.isBlocking) !== !0 &&
-            V.length >= 2 &&
+            X.length >= 2 &&
             (null != $ ||
                 null != et ||
-                ((null == W ? void 0 : W.tags) != null && (null == W ? void 0 : W.tags) !== "")) &&
+                ((null == Y ? void 0 : Y.tags) != null && (null == Y ? void 0 : Y.tags) !== "")) &&
             em &&
             ef,
         ep = async (e) => {
@@ -116,40 +116,40 @@ function L(e) {
             let l = null == (t = e.type) ? void 0 : t.split(";")[0];
             if (!_.has(l))
                 return void eo({
-                    message: D.intl.string(D.t.B2hGAA),
+                    message: k.intl.string(k.t.B2hGAA),
                     isBlocking: !0,
                 });
             let n = e;
             if ("image/jpeg" === l || "image/jpg" === l) n = await B(e);
-            else if ("image/png" === l && e.size > q && !(await (0, I.c0)(e))) {
-                let t = (n = await B(e)).size > q;
-                h.default.track(P.rMx.STICKER_FILE_RESIZED, {
+            else if ("image/png" === l && e.size > G && !(await (0, w.c0)(e))) {
+                let t = (n = await B(e)).size > G;
+                h.default.track(C.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
                     resized_file_size_bytes: n.size,
                     resized_file_too_big: t,
                 });
             }
-            if (n.size > q) {
+            if (n.size > G) {
                 eo({
-                    message: D.intl.formatToPlainString(D.t["3eK7Rk"], { maxSize: (0, y.IC)(q, { useKibibytes: !0 }) }),
+                    message: k.intl.formatToPlainString(k.t["3eK7Rk"], { maxSize: (0, y.IC)(G, { useKibibytes: !0 }) }),
                     isBlocking: null == H.file,
                 }),
-                    h.default.track(P.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+                    h.default.track(C.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                         size: n.size,
                         filetype: n.type,
                     });
                 return;
             }
             let i = (0, O.Zv)(n.type);
-            if (i === N.u3.LOTTIE) {
+            if (i === S.u3.LOTTIE) {
                 if (!ec)
                     return void eo({
-                        message: D.intl.format(D.t.RNNjy8, { articleURL: E.Z.getArticleURL(P.BhN.STICKERS_UPLOAD) }),
+                        message: k.intl.format(k.t.RNNjy8, { articleURL: E.Z.getArticleURL(C.BhN.STICKERS_UPLOAD) }),
                         isBlocking: !0,
                     });
                 let e = new FileReader();
                 e.addEventListener("load", () => {
-                    J({
+                    W({
                         id: (0, a.Z)(),
                         formatType: i,
                         content: e.result,
@@ -158,8 +158,8 @@ function L(e) {
                 }),
                     e.readAsText(n);
             } else {
-                let e = await (0, I.fD)(n);
-                J({
+                let e = await (0, w.fD)(n);
+                W({
                     id: (0, a.Z)(),
                     formatType: i,
                     content: e,
@@ -172,31 +172,31 @@ function L(e) {
             });
         },
         ej = async (e) => {
-            var t, l, n, i, s, r;
+            var t, l, n, i, r, s;
             e.preventDefault();
-            let a = null != (l = null != (t = null != $ ? $ : et) ? t : null == W ? void 0 : W.tags) ? l : "";
+            let a = null != (l = null != (t = null != $ ? $ : et) ? t : null == Y ? void 0 : Y.tags) ? l : "";
             try {
-                if ((er(!0), ed))
-                    await (0, w.Jf)(F, null != (n = null == W ? void 0 : W.id) ? n : "", {
-                        name: V,
+                if ((es(!0), ed))
+                    await (0, I.Jf)(F, null != (n = null == Y ? void 0 : Y.id) ? n : "", {
+                        name: X,
                         tags: a,
                         description: en,
                     });
                 else {
                     let e = new FormData();
-                    e.append("name", V),
+                    e.append("name", X),
                         e.append("tags", a),
                         e.append("description", en),
                         (null == H ? void 0 : H.file) != null && e.append("file", H.file),
-                        (r = null != (s = null == (i = H.file) ? void 0 : i.type) ? s : ""),
-                        h.default.track(P.rMx.STICKER_UPLOAD_STARTED, { filetype: r }),
-                        await (0, w.lY)({
+                        (s = null != (r = null == (i = H.file) ? void 0 : i.type) ? r : ""),
+                        h.default.track(C.rMx.STICKER_UPLOAD_STARTED, { filetype: s }),
+                        await (0, I.lY)({
                             guildId: F,
                             body: e,
                             platform: "web",
                         }),
                         A(!0),
-                        (0, g.showToast)((0, g.createToast)(D.intl.string(D.t.QR85gY), g.ToastType.SUCCESS));
+                        (0, g.showToast)((0, g.createToast)(k.intl.string(k.t.QR85gY), g.ToastType.SUCCESS));
                 }
                 M();
             } catch (e) {
@@ -206,87 +206,87 @@ function L(e) {
                 }),
                     A(!1, e.body.message);
             } finally {
-                er(!1);
+                es(!1);
             }
         },
         ev = ((e) => {
             let { sticker: t, previewData: l, onStickerError: i } = e;
             if (null != t)
-                return (0, n.jsx)(S.Z, {
+                return (0, n.jsx)(N.Z, {
                     size: 160,
                     sticker: t,
                 });
             if (null == l) return null;
-            let { id: s, formatType: r, content: a } = l;
+            let { id: r, formatType: s, content: a } = l;
             return (0, n.jsx)(
-                S.Z,
+                N.Z,
                 {
                     assetData: a,
                     fileUri: a,
                     size: 160,
                     sticker: {
-                        name: s,
+                        name: r,
                         description: "",
-                        id: s,
+                        id: r,
                         pack_id: "",
-                        format_type: r,
+                        format_type: s,
                     },
                     onError: i,
                 },
-                s,
+                r,
             );
         })({
-            sticker: W,
-            previewData: G,
+            sticker: Y,
+            previewData: V,
             onStickerError: i.useCallback(() => {
                 eo({
-                    message: D.intl.string(D.t["/WIYNT"]),
+                    message: k.intl.string(k.t["/WIYNT"]),
                     isBlocking: !0,
                 });
             }, []),
         }),
-        eb = ec ? D.t.alYXBA : D.t.kpcMfn;
+        ex = ec ? k.t.alYXBA : k.t.kpcMfn;
     return (0, n.jsx)("form", {
         onSubmit: ej,
-        className: k.form,
-        children: (0, n.jsxs)(c.I, {
+        className: D.form,
+        children: (0, n.jsxs)(c.IX, {
             transitionState: K,
             onClose: M,
             size: "lg",
             children: [
                 (0, n.jsx)(f.x, {
-                    title: D.intl.string(D.t.yxVsBA),
-                    subtitle: D.intl.format(eb, { fileSize: (0, y.IC)(C.Ht, { useKibibytes: !0 }) }),
+                    title: k.intl.string(k.t.yxVsBA),
+                    subtitle: k.intl.format(ex, { fileSize: (0, y.IC)(P.Ht, { useKibibytes: !0 }) }),
                 }),
                 (0, n.jsxs)(m.f, {
                     children: [
                         (0, n.jsx)(g.hjN, {
-                            title: D.intl.string(D.t.gjdiKC),
-                            className: k.formItem,
+                            title: k.intl.string(k.t.gjdiKC),
+                            className: D.formItem,
                             children: (0, n.jsx)(z, { stickerPreview: ev }),
                         }),
                         (0, n.jsxs)(g.hjN, {
-                            className: r()(k.formItem, k.formItemRow),
+                            className: s()(D.formItem, D.formItemRow),
                             children: [
                                 (0, n.jsx)(g.xJW, {
-                                    title: ed ? D.intl.string(D.t.wp36s7) : D.intl.string(D.t.AM3mzc),
+                                    title: ed ? k.intl.string(k.t.wp36s7) : k.intl.string(k.t.AM3mzc),
                                     required: !0,
-                                    className: k.formItemRowChild,
+                                    className: D.formItemRowChild,
                                     children: ed
                                         ? (0, n.jsx)(g.oil, {
                                               disabled: !0,
                                               value: null != (L = null == H ? void 0 : H.filename) ? L : "",
                                           })
                                         : (0, n.jsx)(v.Z, {
-                                              buttonText: D.intl.string(D.t.xEnDUV),
+                                              buttonText: k.intl.string(k.t.xEnDUV),
                                               filters: T,
                                               filename: null != (U = null == H ? void 0 : H.filename) ? U : "",
-                                              placeholder: D.intl.string(D.t.rUYLJy),
+                                              placeholder: k.intl.string(k.t.rUYLJy),
                                               onFileSelect: ep,
                                           }),
                                 }),
                                 (0, n.jsx)(j.Z, {
-                                    className: k.formItemRowChild,
+                                    className: D.formItemRowChild,
                                     guildId: F,
                                     emojiId: $,
                                     emojiName: et,
@@ -297,24 +297,24 @@ function L(e) {
                             ],
                         }),
                         (0, n.jsx)(g.xJW, {
-                            title: D.intl.string(D.t["0VRh6u"]),
+                            title: k.intl.string(k.t["0VRh6u"]),
                             required: !0,
-                            className: k.formItem,
+                            className: D.formItem,
                             children: (0, n.jsx)(g.oil, {
-                                value: V,
-                                onChange: X,
-                                placeholder: D.intl.string(D.t["3fGttb"]),
+                                value: X,
+                                onChange: J,
+                                placeholder: k.intl.string(k.t["3fGttb"]),
                                 maxLength: 30,
                             }),
                         }),
                         (0, n.jsxs)("div", {
-                            className: k.formItem,
+                            className: D.formItem,
                             children: [
                                 (0, n.jsxs)(g.vwX, {
                                     children: [
-                                        D.intl.string(D.t.uGccen),
+                                        k.intl.string(k.t.uGccen),
                                         (0, n.jsx)(g.ua7, {
-                                            text: D.intl.string(D.t.S6jlDg),
+                                            text: k.intl.string(k.t.S6jlDg),
                                             children: (e) =>
                                                 (0, n.jsx)(
                                                     g.d3s,
@@ -349,7 +349,7 @@ function L(e) {
                                                         {
                                                             size: "xs",
                                                             color: "currentColor",
-                                                            className: k.infoIcon,
+                                                            className: D.infoIcon,
                                                         },
                                                         e,
                                                     ),
@@ -360,14 +360,14 @@ function L(e) {
                                 (0, n.jsx)(g.Kx8, {
                                     value: en,
                                     onChange: ei,
-                                    placeholder: D.intl.string(D.t.zwR0fX),
+                                    placeholder: k.intl.string(k.t.zwR0fX),
                                     maxLength: 100,
                                 }),
                             ],
                         }),
                         null != ea &&
                             (0, n.jsx)(g.Text, {
-                                className: k.formItem,
+                                className: D.formItem,
                                 variant: "text-sm/normal",
                                 color: "text-danger",
                                 children: ea.message,
@@ -378,12 +378,12 @@ function L(e) {
                     actions: [
                         {
                             variant: "secondary",
-                            text: D.intl.string(D.t.oEAioK),
+                            text: k.intl.string(k.t.oEAioK),
                             onClick: M,
                         },
                         {
                             variant: "primary",
-                            text: ed ? D.intl.string(D.t.Arwnen) : D.intl.string(D.t["3UB9aW"]),
+                            text: ed ? k.intl.string(k.t.Arwnen) : k.intl.string(k.t["3UB9aW"]),
                             onSubmit: ej,
                             disabled: !eg,
                             type: "submit",

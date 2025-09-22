@@ -1,6 +1,6 @@
 n.d(t, {
-    D: () => E,
-    I: () => b,
+    Dv: () => _.D,
+    IX: () => b,
 });
 var r = n(951288),
     i = n(647438),
@@ -12,8 +12,9 @@ var r = n(951288),
     u = n(507274),
     d = n(667137),
     f = n(985316),
-    _ = n(525751);
-function p(e, t, n) {
+    _ = n(663893),
+    p = n(525751);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,35 +55,25 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var E = (function (e) {
-    return (
-        (e[(e.ENTERING = 0)] = "ENTERING"),
-        (e[(e.ENTERED = 1)] = "ENTERED"),
-        (e[(e.EXITING = 2)] = "EXITING"),
-        (e[(e.EXITED = 3)] = "EXITED"),
-        (e[(e.HIDDEN = 4)] = "HIDDEN"),
-        e
-    );
-})({});
 function b(e) {
     var t;
     let {
             transitionState: n,
             animationVariant: a = "default",
-            size: p = "md",
-            paddingSize: m = "sm",
-            fullScreenOnMobile: E = !0,
+            size: _ = "md",
+            paddingSize: h = "sm",
+            fullScreenOnMobile: g = !0,
             returnRef: b,
             role: y = "dialog",
             "aria-label": O,
@@ -102,24 +93,13 @@ function b(e) {
             }),
             [v, C, I],
         ),
-        R = 0 === n || 1 === n,
-        { reducedMotion: P } = i.useContext(c.Sfi),
-        w = R || P.enabled || "subtle" === a ? "scale(1)" : "scale(0.9)",
-        D = (0, c.q_F)(
-            {
-                opacity: +!!R,
-                transform: w,
-                config: R ? f.jF : f.W$,
-                delay: 64 * !!R,
-            },
-            "animate-always",
-        );
+        R = (0, f.hv)(n, a);
     return (0, r.jsx)(d.t.Provider, {
         value: N,
         children: (0, r.jsx)(
             u.V,
-            g(
-                h(
+            E(
+                m(
                     {
                         id: C,
                         role: y,
@@ -134,13 +114,13 @@ function b(e) {
                     children: (0, r.jsx)(c.y5t, {
                         forceLevel: 1,
                         children: (0, r.jsxs)("div", {
-                            className: o()(_.outerContainer, { [_.fullScreenOnMobile]: E }),
+                            className: o()(p.outerContainer, { [p.fullScreenOnMobile]: g }),
                             children: [
                                 T,
                                 (0, r.jsx)(s.animated.div, {
                                     "data-mana-component": "modal",
-                                    className: o()(_.container, _["size-".concat(p)], _["padding-size-".concat(m)]),
-                                    style: D,
+                                    className: o()(p.container, p["size-".concat(_)], p["padding-size-".concat(h)]),
+                                    style: R,
                                     children: A,
                                 }),
                             ],
