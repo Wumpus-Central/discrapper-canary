@@ -93,8 +93,8 @@ function j(e) {
             pendingBanner: G,
             pendingBio: B,
             pendingPronouns: Z,
-            pendingThemeColors: V,
-            errors: F,
+            pendingThemeColors: F,
+            errors: V,
             guild: H,
         } = (0, o.cj)([S.Z], () => {
             let {
@@ -128,7 +128,7 @@ function j(e) {
         X = v.ZP.canUsePremiumProfileCustomization(M),
         Q = (0, c.gd)(k, null == z ? void 0 : z.avatar),
         J = (0, c.f$)(G, null == q ? void 0 : q.banner),
-        $ = (0, A.p)(V, null == q ? void 0 : q.themeColors),
+        $ = (0, A.p)(F, null == q ? void 0 : q.themeColors),
         ee = null != (t = null == q ? void 0 : q.bio) ? t : "",
         et = null != (n = null == q ? void 0 : q.pronouns) ? n : "",
         en = (e, t, n) => {
@@ -143,10 +143,11 @@ function j(e) {
             (0, r.jsx)(
                 C.Z,
                 {
-                    errors: null != (i = null == F ? void 0 : F.nick) ? i : null == K ? void 0 : K.nick,
+                    errors: null != (i = null == V ? void 0 : V.nick) ? i : null == K ? void 0 : K.nick,
                     username: I.ZP.getName(M),
                     pendingNick: U,
                     currentNick: null == z ? void 0 : z.nick,
+                    user: M,
                     guild: W,
                 },
                 "nick",
@@ -155,7 +156,7 @@ function j(e) {
                 g.Z,
                 {
                     sectionTitle: R.intl.string(R.t["+T3RIy"]),
-                    errors: null == F ? void 0 : F.pronouns,
+                    errors: null == V ? void 0 : V.pronouns,
                     onPronounsChange: (e) => {
                         (0, A.xs)(e, et);
                     },
@@ -195,7 +196,7 @@ function j(e) {
                             }),
                             showRemoveAvatarButton: Q,
                             onAvatarChange: ei,
-                            errors: null == F ? void 0 : F.avatar,
+                            errors: null == V ? void 0 : V.avatar,
                             guildId: W.id,
                             disabled: !X,
                         },
@@ -291,7 +292,7 @@ function j(e) {
                         p.Z,
                         {
                             showRemoveBannerButton: J,
-                            errors: null == F ? void 0 : F.banner,
+                            errors: null == V ? void 0 : V.banner,
                             onBannerChange: er,
                             guildId: null == W ? void 0 : W.id,
                             disabled: !X,
@@ -301,7 +302,7 @@ function j(e) {
                     (0, r.jsx)(m.Z, {
                         user: M,
                         pendingAvatarSrc: Y,
-                        pendingColors: V,
+                        pendingColors: F,
                         onThemeColorsChange: (e) => {
                             (0, A.ce)(e, null == q ? void 0 : q.themeColors);
                         },
@@ -335,7 +336,7 @@ function j(e) {
                                 ],
                             }),
                             onBioChange: (e) => (0, A.qN)(e, ee),
-                            errors: null != (w = null == F ? void 0 : F.bio) ? w : null == K ? void 0 : K.bio,
+                            errors: null != (w = null == V ? void 0 : V.bio) ? w : null == K ? void 0 : K.bio,
                             pendingBio: B,
                             currentBio: ee,
                             disabled: !X,

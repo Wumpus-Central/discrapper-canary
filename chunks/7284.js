@@ -52,7 +52,7 @@ function _(e) {
 function p(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
-        { includeNonProfile: a } = s.f.useExperiment({ location: "useDisplayNameStylesFont" });
+        { includeNonProfile: a } = s.fN.useExperiment({ location: "useDisplayNameStylesFont" });
     if (!(0, l.Y)({ location: "useDisplayNameStylesFont" }) || (!r && !a) || null == n) return "";
     let c = null != (t = f[n.fontId]) ? t : d;
     return "" === c.className ? "" : i()(u.dnsFont, c.className, { [u.safari]: (0, o.G6)() });

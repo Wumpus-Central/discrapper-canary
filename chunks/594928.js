@@ -1,10 +1,12 @@
 n.d(t, {
-    J: () => o,
-    f: () => a,
+    JH: () => s,
+    fN: () => o,
+    s9: () => l,
 });
 var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+    i = n(427164),
+    a = n(987338);
+let o = (0, r.B)({
         id: "2025-07_display_name_styles_viewer",
         kind: "user",
         label: "Display Name Styles Viewer",
@@ -12,7 +14,7 @@ let a = (0, r.B)({
             enabled: !1,
             includeNonProfile: !1,
         },
-        commonTriggerPoint: i.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -40,12 +42,12 @@ let a = (0, r.B)({
             },
         ],
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         id: "2025-07_display_name_styles_setter",
         kind: "user",
         label: "Display Name Styles Setter",
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: i.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -53,4 +55,10 @@ let a = (0, r.B)({
                 config: { enabled: !0 },
             },
         ],
+    }),
+    l = (0, i.le)({
+        name: "2025-09-display-name-styles-per-server",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
     });

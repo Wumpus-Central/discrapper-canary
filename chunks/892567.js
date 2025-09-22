@@ -41,7 +41,7 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 useReducedMotion: p.Z.useReducedMotion,
                 saturation: p.Z.desaturateUserColors ? p.Z.saturation : 1,
             })),
-            { includeNonProfile: L } = m.f.useExperiment({ location: "useDisplayNameStylesFont" }),
+            { includeNonProfile: L } = m.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
             j = (0, g.Y)({ location: "UserNameWithEffects" }),
             M = (0, _.dQu)(_.TVs.colors.BACKGROUND_BASE_LOW).hex(),
             k = null != (t = null == a ? void 0 : a.effectId) ? t : c.m.SOLID,
@@ -63,11 +63,11 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 [a, j, k, U.minContrastRatio, x, M],
             );
         if (!j || (!T && !L) || null == a) return n;
-        let V = (0, b.K)(k, Z, {
+        let F = (0, b.K)(k, Z, {
                 shouldWrap: N,
                 fontOpacity: I.includes(a.fontId) ? R : 1,
             }),
-            F = S(k);
+            V = S(k);
         return (0, r.jsxs)("div", {
             className: l()(v.container, w, A, {
                 [v.showEffect]: s !== E.F.PLAIN,
@@ -75,19 +75,19 @@ let I = [u.C.CHERRY_BOMB, u.C.CHICLE],
                 [v.loop]: C,
                 [v.inProfile]: T,
             }),
-            style: V,
+            style: F,
             children: [
                 (0, r.jsx)("span", {
                     "data-username-with-effects": G,
-                    className: l()(v.innerContainer, null == F ? void 0 : F.effectClassName, {
+                    className: l()(v.innerContainer, null == V ? void 0 : V.effectClassName, {
                         [v.underlineOnHover]: P,
                         [v.chicle]: a.fontId === u.C.CHICLE,
                     }),
                     children: B,
                 }),
-                (null == F ? void 0 : F.glowClassName) != null &&
+                (null == V ? void 0 : V.glowClassName) != null &&
                     (0, r.jsx)("span", {
-                        className: l()(v.glowContainer, v.innerContainer, F.glowClassName, {
+                        className: l()(v.glowContainer, v.innerContainer, V.glowClassName, {
                             [v.chicle]: a.fontId === u.C.CHICLE,
                         }),
                         "aria-hidden": !0,

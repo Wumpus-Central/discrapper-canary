@@ -68,7 +68,7 @@ var r = n(951288),
     eu = n(562705),
     ed = n(667105),
     ef = n(768419),
-    e_ = n(447448),
+    e_ = n(172416),
     ep = n(184301),
     eh = n(670188),
     em = n(620799),
@@ -921,7 +921,7 @@ function tA() {
         { voiceActivityStatusEnabled: U } = (0, v.U)({ location: "Account" }),
         [G, B] = (0, ee.G)(null != M ? M : null),
         [Z, F] = (0, Y.b)(),
-        V = K.J.useExperiment({ location: "Account" }).enabled,
+        V = K.JH.useExperiment({ location: "Account" }).enabled,
         { analyticsLocations: H } = (0, N.ZP)(C.Z.ACCOUNT),
         W = (0, ei.K)({ user: t }),
         { isQuestBarEmpty: q, hasLoadedQuestBar: X } = (0, ed.Ws)({ location: te.dr.CONFLICT_CHECKS }),
@@ -942,7 +942,7 @@ function tA() {
             }
             return r.length > 1;
         }),
-        $ = (0, e_.k)({ location: "AccountConnected" }),
+        $ = (0, e_.U)({ location: "AccountConnected" }),
         et = {
             avatar: [],
             settings: [],

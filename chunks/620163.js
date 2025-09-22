@@ -182,7 +182,7 @@ let eQ = () => {
         let e = [];
         return (
             (0, U.h)("SettingsRendererConfig") && e.push(a.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
-            A.J.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
+            A.JH.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
                 e.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE),
             e
         );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => v }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(704215),
@@ -8,59 +8,66 @@ var r = n(951288),
     c = n(243778),
     u = n(594928),
     d = n(829716),
-    f = n(626135),
-    _ = n(74538),
-    p = n(993413),
-    h = n(981631),
-    m = n(921944),
-    g = n(388032),
-    E = n(693450),
-    b = n(147164);
-function y(e) {
-    let { user: t, className: n } = e,
-        y = u.J.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
-        O = _.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: v } = (0, l.ZP)(),
-        I = null != t.displayNameStyles,
-        T = [];
-    y && T.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
-    let [S, A] = (0, c.US)(T),
-        C = S === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
-        N = (0, i.useCallback)(() => {
-            A(m.L.TAKE_ACTION),
-                f.default.track(h.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
-                (0, d.I)({ analyticsLocations: v });
-        }, [v, A]),
-        R = (0, i.useCallback)(() => {
-            (0, s.NI)(null), f.default.track(h.rMx.DISPLAY_NAME_STYLES_REMOVED);
-        }, []);
-    return y || I
-        ? (0, r.jsx)(p.Z, {
-              title: g.intl.string(E.default["86GtGB"]),
-              titleIcon: C
+    f = n(18438),
+    _ = n(626135),
+    p = n(74538),
+    h = n(150039),
+    m = n(993413),
+    g = n(981631),
+    E = n(921944),
+    b = n(388032),
+    y = n(693450),
+    O = n(147164);
+function v(e) {
+    let { user: t, guildId: n, className: v } = e,
+        I = u.JH.useExperiment({ location: "DisplayNameStylesSection" }).enabled,
+        T = p.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: S } = (0, l.ZP)(),
+        { currentDisplayNameStyles: A, pendingDisplayNameStyles: C, pendingErrors: N } = (0, h.mD)(t, n),
+        R = null != A || null != C,
+        P = [];
+    I && P.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
+    let [w, D] = (0, c.US)(P),
+        x = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+        L = (0, i.useCallback)(() => {
+            D(E.L.TAKE_ACTION),
+                _.default.track(g.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
+                (0, d.I)({
+                    analyticsLocations: S,
+                    guildId: n,
+                });
+        }, [S, D, n]),
+        j = (0, i.useCallback)(() => {
+            null != n ? (0, f.N_)(null) : (0, s.NI)(null), _.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
+        }, [n]);
+    return I || R
+        ? (0, r.jsx)(m.Z, {
+              title: b.intl.string(y.default["86GtGB"]),
+              titleIcon: x
                   ? (0, r.jsx)(o.IGR, {
-                        text: g.intl.string(g.t.y2b7CA),
-                        className: b.newBadge,
+                        text: b.intl.string(b.t.y2b7CA),
+                        className: O.newBadge,
                     })
                   : void 0,
-              className: n,
-              showPremiumIcon: O,
+              className: v,
+              showPremiumIcon: T,
+              errors: N,
               children: (0, r.jsxs)("div", {
-                  className: b.buttonsContainer,
+                  className: O.buttonsContainer,
                   children: [
-                      y &&
+                      I &&
                           (0, r.jsx)(o.zxk, {
                               variant: "primary",
                               size: "sm",
-                              text: g.intl.string(E.default.vJqrIi),
-                              onClick: N,
+                              text: b.intl.string(y.default.vJqrIi),
+                              onClick: L,
                           }),
-                      I &&
+                      R &&
                           (0, r.jsx)(o.zxk, {
                               variant: "secondary",
                               size: "sm",
-                              text: g.intl.string(E.default.ymq8WV),
-                              onClick: R,
+                              text: b.intl.string(y.default.ymq8WV),
+                              onClick: j,
                           }),
                   ],
               }),

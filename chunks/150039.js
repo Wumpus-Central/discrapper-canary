@@ -1,32 +1,34 @@
 n.d(t, {
-    $U: () => p,
-    Jw: () => b,
-    Kg: () => m,
-    PO: () => O,
-    Wx: () => I,
-    ZT: () => T,
-    Zx: () => h,
-    bd: () => g,
-    f$: () => A,
-    gc: () => _,
-    gd: () => S,
-    s6: () => v,
-    xQ: () => E,
+    $U: () => h,
+    Jw: () => O,
+    Kg: () => E,
+    PO: () => I,
+    Wx: () => S,
+    ZT: () => A,
+    Zx: () => m,
+    bd: () => b,
+    f$: () => N,
+    gc: () => p,
+    gd: () => C,
+    mD: () => g,
+    s6: () => T,
+    xQ: () => y,
 }),
     n(539854);
 var r = n(647438),
     i = n(442837),
     a = n(809206),
     o = n(676742),
-    s = n(18438),
-    l = n(778825),
-    c = n(350327),
-    u = n(621853),
-    d = n(271383),
-    f = n(25990);
-function _(e) {
+    s = n(594928),
+    l = n(18438),
+    c = n(778825),
+    u = n(350327),
+    d = n(621853),
+    f = n(271383),
+    _ = n(25990);
+function p(e) {
     return r.useMemo(() => {
-        let t = d.ZP.getMutableAllGuildsAndMembers(),
+        let t = f.ZP.getMutableAllGuildsAndMembers(),
             n = {};
         for (let i in t) {
             var r;
@@ -36,88 +38,113 @@ function _(e) {
         return null != n ? Object.entries(n).map((e) => e[1][0]) : [];
     }, [e]);
 }
-function p(e, t) {
-    let n = (0, i.e7)([d.ZP], () => (void 0 === t ? null : d.ZP.getMember(t.id, e.id))),
+function h(e, t) {
+    let n = (0, i.e7)([f.ZP], () => (void 0 === t ? null : f.ZP.getMember(t.id, e.id))),
         r = (0, o.Z)(e.avatarDecoration),
-        { pendingUserAvatarDecoration: a, userErrors: s } = (0, i.cj)([f.Z], () => ({
-            pendingUserAvatarDecoration: f.Z.getPendingAvatarDecoration(),
-            userErrors: f.Z.getErrors().avatarDecoration,
+        { pendingUserAvatarDecoration: a, userErrors: s } = (0, i.cj)([_.Z], () => ({
+            pendingUserAvatarDecoration: _.Z.getPendingAvatarDecoration(),
+            userErrors: _.Z.getErrors().avatarDecoration,
         })),
-        { pendingGuildAvatarDecoration: c, guildErrors: u } = (0, i.cj)([l.Z], () => ({
-            pendingGuildAvatarDecoration: l.Z.getPendingAvatarDecoration(),
-            guildErrors: l.Z.getErrors().avatarDecoration,
+        { pendingGuildAvatarDecoration: l, guildErrors: u } = (0, i.cj)([c.Z], () => ({
+            pendingGuildAvatarDecoration: c.Z.getPendingAvatarDecoration(),
+            guildErrors: c.Z.getErrors().avatarDecoration,
         }));
     return {
         userAvatarDecoration: r,
         guildAvatarDecoration: null == n ? void 0 : n.avatarDecoration,
-        pendingAvatarDecoration: null != t ? c : a,
-        pendingErrors: null != t ? u : s,
-    };
-}
-function h(e, t) {
-    var n;
-    let r = (0, i.e7)([d.ZP], () => (void 0 === t ? null : d.ZP.getMember(t, e.id))),
-        a = e.nameplate,
-        { pendingUserNameplate: o, userErrors: s } = (0, i.cj)([f.Z], () => ({
-            pendingUserNameplate: f.Z.getPendingNameplate(),
-            userErrors: f.Z.getErrors().nameplate,
-        })),
-        { pendingGuildNameplate: c, guildErrors: u } = (0, i.cj)([l.Z], () => ({
-            pendingGuildNameplate: l.Z.getPendingNameplate(),
-            guildErrors: l.Z.getErrors().nameplate,
-        }));
-    return {
-        userNameplate: a,
-        guildNameplate: null == r || null == (n = r.collectibles) ? void 0 : n.nameplate,
-        pendingNameplate: null != t ? c : o,
+        pendingAvatarDecoration: null != t ? l : a,
         pendingErrors: null != t ? u : s,
     };
 }
 function m(e, t) {
-    return (0, i.e7)([u.Z], () => {
+    var n;
+    let r = (0, i.e7)([f.ZP], () => (void 0 === t ? null : f.ZP.getMember(t, e.id))),
+        a = e.nameplate,
+        { pendingUserNameplate: o, userErrors: s } = (0, i.cj)([_.Z], () => ({
+            pendingUserNameplate: _.Z.getPendingNameplate(),
+            userErrors: _.Z.getErrors().nameplate,
+        })),
+        { pendingGuildNameplate: l, guildErrors: u } = (0, i.cj)([c.Z], () => ({
+            pendingGuildNameplate: c.Z.getPendingNameplate(),
+            guildErrors: c.Z.getErrors().nameplate,
+        }));
+    return {
+        userNameplate: a,
+        guildNameplate: null == r || null == (n = r.collectibles) ? void 0 : n.nameplate,
+        pendingNameplate: null != t ? l : o,
+        pendingErrors: null != t ? u : s,
+    };
+}
+function g(e, t) {
+    let { enabled: n } = s.s9.useConfig({ location: "useGuildMemberOrUserPendingDisplayNameStyles" }),
+        r = (0, i.e7)([f.ZP], () => (void 0 === t || null == e ? null : f.ZP.getMember(t, e.id))),
+        { pendingUserDisplayNameStyles: a, userErrors: o } = (0, i.cj)([_.Z], () => ({
+            pendingUserDisplayNameStyles: _.Z.getPendingDisplayNameStyles(),
+            userErrors: _.Z.getErrors().displayNameStyles,
+        })),
+        { pendingGuildDisplayNameStyles: l, guildErrors: u } = (0, i.cj)([c.Z], () => ({
+            pendingGuildDisplayNameStyles: c.Z.getPendingDisplayNameStyles(),
+            guildErrors: c.Z.getErrors().displayNameStyles,
+        })),
+        d = null == e ? void 0 : e.displayNameStyles,
+        p = null == r ? void 0 : r.displayNameStyles;
+    return null != t && n && (null != p || null != l)
+        ? {
+              currentDisplayNameStyles: p,
+              pendingDisplayNameStyles: l,
+              pendingErrors: u,
+          }
+        : {
+              currentDisplayNameStyles: d,
+              pendingDisplayNameStyles: a,
+              pendingErrors: o,
+          };
+}
+function E(e, t) {
+    return (0, i.e7)([d.Z], () => {
         var n, r, i, a;
         return null == t
-            ? null == (r = u.Z.getUserProfile(e.id)) || null == (n = r.profileEffect)
+            ? null == (r = d.Z.getUserProfile(e.id)) || null == (n = r.profileEffect)
                 ? void 0
                 : n.id
-            : null == (a = u.Z.getGuildMemberProfile(e.id, t.id)) || null == (i = a.profileEffect)
+            : null == (a = d.Z.getGuildMemberProfile(e.id, t.id)) || null == (i = a.profileEffect)
               ? void 0
               : i.id;
     }, [e, t]);
 }
-function g(e) {
+function b(e) {
     return (0, i.cj)(
-        [f.Z, l.Z],
+        [_.Z, c.Z],
         () =>
             null == e
                 ? {
-                      pendingProfileEffectId: f.Z.getPendingProfileEffectId(),
-                      errors: f.Z.getErrors().profileEffect,
+                      pendingProfileEffectId: _.Z.getPendingProfileEffectId(),
+                      errors: _.Z.getErrors().profileEffect,
                   }
                 : {
-                      pendingProfileEffectId: l.Z.getPendingProfileEffectId(),
-                      errors: l.Z.getErrors().profileEffect,
+                      pendingProfileEffectId: c.Z.getPendingProfileEffectId(),
+                      errors: c.Z.getErrors().profileEffect,
                   },
         [e],
     );
 }
-function E(e, t) {
-    (0, c.Cf)(e === t ? void 0 : e);
-}
-function b(e, t) {
-    (0, a.I5)((null == e ? void 0 : e.imageUri) === t ? void 0 : e);
-}
-function y(e) {
-    return e ? s.cV : a.cV;
+function y(e, t) {
+    (0, u.Cf)(e === t ? void 0 : e);
 }
 function O(e, t) {
-    y(null != e)(t);
+    (0, a.I5)((null == e ? void 0 : e.imageUri) === t ? void 0 : e);
 }
-function v(e, t, n) {
-    if (e === t) return void (null == n ? (0, a.xn)(void 0) : (0, s.xn)(void 0));
-    null == n ? (0, a.xn)(e) : (0, s.xn)(e);
+function v(e) {
+    return e ? l.cV : a.cV;
 }
-function I(e, t, n) {
+function I(e, t) {
+    v(null != e)(t);
+}
+function T(e, t, n) {
+    if (e === t) return void (null == n ? (0, a.xn)(void 0) : (0, l.xn)(void 0));
+    null == n ? (0, a.xn)(e) : (0, l.xn)(e);
+}
+function S(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return null != e
         ? "string" == typeof e && "" === e
@@ -139,7 +166,7 @@ function I(e, t, n) {
                 isUsingGuildValue: !1,
             };
 }
-function T(e) {
+function A(e) {
     var t, n, r, i, a;
     let { pendingProfileEffectId: o, displayProfile: s } = e,
         l = null == s || null == (n = s._userProfile) || null == (t = n.profileEffect) ? void 0 : t.id,
@@ -147,9 +174,9 @@ function T(e) {
         u = null === o;
     return u && null != c ? l : u ? null : null != o ? o : null == s || null == (a = s.profileEffect) ? void 0 : a.id;
 }
-function S(e, t) {
+function C(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function A(e, t) {
+function N(e, t) {
     return void 0 === e ? null != t : null != e;
 }

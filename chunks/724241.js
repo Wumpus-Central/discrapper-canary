@@ -12,38 +12,39 @@ var i = n(442837),
     f = n(671955),
     _ = n(116649);
 function p(e) {
-    var t;
+    var t, n;
     let {
-            user: n,
-            displayProfile: p,
-            guild: h,
-            pendingAvatar: m,
-            pendingNickname: g,
-            pendingGlobalName: E,
-            pendingBio: b,
-            pendingPronouns: y,
-            pendingLegacyUsernameDisabled: O,
-            pendingBadges: v,
-            pendingDisplayNameStyles: I,
-            isTryItOutFlow: T,
-            hideBioSection: S,
-            shouldOpenBadgeTooltip: A,
+            user: p,
+            displayProfile: h,
+            guild: m,
+            pendingAvatar: g,
+            pendingNickname: E,
+            pendingGlobalName: b,
+            pendingBio: y,
+            pendingPronouns: O,
+            pendingLegacyUsernameDisabled: v,
+            pendingBadges: I,
+            pendingDisplayNameStyles: T,
+            isTryItOutFlow: S,
+            hideBioSection: A,
+            shouldOpenBadgeTooltip: C,
         } = e,
-        C = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
-        N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        R = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
-        P = null != y ? y : null == p ? void 0 : p.pronouns,
-        w = (0, d.Ly)({
-            pendingNickname: g,
-            pendingGlobalName: E,
-            user: n,
-            guildMember: C,
+        N = (0, i.e7)([c.ZP], () => (null == m ? null : c.ZP.getMember(m.id, p.id))),
+        R = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        P = null == h || null == (t = h.getPreviewBio(y)) ? void 0 : t.value,
+        w = null != O ? O : null == h ? void 0 : h.pronouns,
+        D = (0, d.Ly)({
+            pendingNickname: E,
+            pendingGlobalName: b,
+            user: p,
+            guildMember: N,
         }),
-        D = () => {
-            if (null != C && null !== m && (null != C.avatar || null != m))
+        x = void 0 !== T ? T : null != (n = null == N ? void 0 : N.displayNameStyles) ? n : p.displayNameStyles,
+        L = () => {
+            if (null != N && null !== g && (null != N.avatar || null != g))
                 return (0, r.jsx)(l.Z, {
-                    user: n,
-                    nickname: w,
+                    user: p,
+                    nickname: D,
                 });
         };
     return (0, r.jsxs)("div", {
@@ -51,27 +52,27 @@ function p(e) {
         inert: !0,
         children: [
             (0, r.jsx)(o.Z, {
-                user: n,
-                usernameIcon: D(),
-                nickname: w,
-                displayNameStyles: void 0 !== I ? I : n.displayNameStyles,
-                pronouns: P,
-                isTryItOut: T,
+                user: p,
+                usernameIcon: L(),
+                nickname: D,
+                displayNameStyles: x,
+                pronouns: w,
+                isTryItOut: S,
                 tags: (0, r.jsx)(a.Z, {
-                    displayProfile: p,
+                    displayProfile: h,
                     themeType: f.l.POPOUT,
-                    pendingLegacyUsernameDisabled: O,
-                    pendingBadges: v,
-                    shouldOpenBadgeTooltip: A,
+                    pendingLegacyUsernameDisabled: v,
+                    pendingBadges: I,
+                    shouldOpenBadgeTooltip: C,
                 }),
             }),
-            !S &&
-                null != R &&
-                "" !== R &&
+            !A &&
+                null != P &&
+                "" !== P &&
                 (0, r.jsx)(s.Z, {
-                    user: n,
-                    bio: R,
-                    hidePersonalInformation: N,
+                    user: p,
+                    bio: P,
+                    hidePersonalInformation: R,
                     viewFullBioDisabled: !0,
                 }),
         ],

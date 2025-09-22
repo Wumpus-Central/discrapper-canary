@@ -72,11 +72,11 @@ function Z(e) {
     let { banner: t } = e;
     l = t;
 }
-function V(e) {
+function F(e) {
     let { bio: t } = e;
     c = t;
 }
-function F(e) {
+function V(e) {
     let { pronouns: t } = e;
     u = t;
 }
@@ -207,6 +207,9 @@ class eu extends (O = I.ZP.Store) {
     getPendingProfileEffectId() {
         return o;
     }
+    getPendingDisplayNameStyles() {
+        return h;
+    }
     getAllPending() {
         return {
             pendingAvatar: r,
@@ -267,8 +270,8 @@ let ed = new eu(T.Z, {
     USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: B,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: Z,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: V,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: F,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: F,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: V,
     USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: H,
     USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: Y,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: q,

@@ -1,37 +1,46 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(951288);
 n(647438);
 var i = n(442837),
     a = n(481060),
-    o = n(993413),
-    s = n(496675),
-    l = n(52597),
-    c = n(981631),
-    u = n(388032),
-    d = n(473385);
-function f(e) {
-    let { errors: t, pendingNick: n, currentNick: f, username: _, guild: p } = e,
-        h = null != n ? n : f,
-        m = (0, i.e7)([s.Z], () => s.Z.can(c.Plq.CHANGE_NICKNAME, p) || s.Z.can(c.Plq.MANAGE_NICKNAMES, p));
-    function g(e) {
-        (0, l.wi)(e, f);
+    o = n(594928),
+    s = n(993413),
+    l = n(235433),
+    c = n(496675),
+    u = n(52597),
+    d = n(981631),
+    f = n(388032),
+    _ = n(473385);
+function p(e) {
+    let { errors: t, pendingNick: n, currentNick: p, username: h, user: m, guild: g } = e,
+        E = null != n ? n : p,
+        b = (0, i.e7)([c.Z], () => c.Z.can(d.Plq.CHANGE_NICKNAME, g) || c.Z.can(d.Plq.MANAGE_NICKNAMES, g)),
+        { enabled: y } = o.s9.useConfig({ location: "NicknameSection" });
+    function O(e) {
+        (0, u.wi)(e, p);
     }
-    return (0, r.jsxs)(o.Z, {
-        title: u.intl.string(u.t.me1lRk),
+    return (0, r.jsxs)(s.Z, {
+        title: f.intl.string(f.t.me1lRk),
         errors: t,
         children: [
             (0, r.jsx)(a.oil, {
-                value: null != h ? h : "",
-                placeholder: _,
-                maxLength: c.l$U,
-                onChange: g,
-                disabled: !m,
+                value: null != E ? E : "",
+                placeholder: h,
+                maxLength: d.l$U,
+                onChange: O,
+                disabled: !b,
             }),
-            !m &&
+            !b &&
                 (0, r.jsx)(a.R94, {
-                    className: d.nicknameDisabled,
+                    className: _.nicknameDisabled,
                     type: a.R94.Types.DESCRIPTION,
-                    children: u.intl.string(u.t.gzjxQk),
+                    children: f.intl.string(f.t.gzjxQk),
+                }),
+            y &&
+                (0, r.jsx)(l.Z, {
+                    user: m,
+                    guildId: g.id,
+                    className: _.displayNameStylesSection,
                 }),
         ],
     });

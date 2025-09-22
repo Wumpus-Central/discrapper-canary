@@ -111,7 +111,7 @@ let et = (0, v.hQ)(),
 function eo(e) {
     let t = g.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled,
         n = y.Z.useConfig({ location: "UserSettingsAccessibility" }).enableShopTakeOver,
-        i = T.f.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
+        i = T.fN.useExperiment({ location: "UserSettingsAccessibility" }).enabled,
         a = (0, B.Z)();
     return (0, r.jsxs)(_.hjN, {
         tag: _.RB0.H1,

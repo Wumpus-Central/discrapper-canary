@@ -58,7 +58,7 @@ function u(e, t) {
 }
 let d = "display-name-styles-modal",
     f = (e) => {
-        let { analyticsLocations: t, guild: s } = e;
+        let { analyticsLocations: t, guildId: s } = e;
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("47495").then(n.bind(n, 766950));
@@ -66,7 +66,7 @@ let d = "display-name-styles-modal",
                     (0, r.jsx)(
                         e,
                         u(l({}, n), {
-                            guild: s,
+                            guildId: s,
                             analyticsLocations: t,
                         }),
                     );

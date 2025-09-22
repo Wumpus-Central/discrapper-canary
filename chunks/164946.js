@@ -56,6 +56,7 @@ function o(e) {
     return (
         void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration),
         void 0 !== e.pendingNameplate && (t.nameplate = e.pendingNameplate),
+        void 0 !== e.pendingDisplayNameStyles && (t.displayNameStyles = e.pendingDisplayNameStyles),
         t
     );
 }
