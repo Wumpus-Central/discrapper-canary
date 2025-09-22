@@ -175,7 +175,7 @@ function m(e, t) {
                         I,
                     ),
                     {
-                        children: (0, r.jsx)(s.J, {
+                        children: (0, r.jsx)(s.Jc, {
                             containerRef: S,
                             children: (0, r.jsxs)("div", {
                                 ref: S,

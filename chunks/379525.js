@@ -122,7 +122,7 @@ function g(e) {
             disabled: O,
         });
     return (0, r.jsx)(
-        s.t,
+        s.tE,
         p(f({}, g), {
             children: (0, r.jsx)(
                 "button",

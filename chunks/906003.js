@@ -125,8 +125,8 @@ function C(e) {
             rounded: x = !1,
             type: L = "button",
             rel: j,
-            onClick: k,
-            onDoubleClick: M,
+            onClick: M,
+            onDoubleClick: k,
             onMouseEnter: U,
             onMouseLeave: G,
             onMouseUp: B,
@@ -207,7 +207,7 @@ function C(e) {
         }),
         el = V || C,
         ec = (0, r.jsx)(
-            d.t,
+            d.tE,
             O(b({}, A), {
                 children: (0, r.jsxs)(
                     "button",
@@ -225,8 +225,8 @@ function C(e) {
                                 ref: $,
                                 rel: j,
                                 type: L,
-                                onClick: el ? (e) => e.preventDefault() : k,
-                                onDoubleClick: el ? (e) => e.preventDefault() : M,
+                                onClick: el ? (e) => e.preventDefault() : M,
+                                onDoubleClick: el ? (e) => e.preventDefault() : k,
                                 onMouseUp: el ? void 0 : B,
                                 onMouseDown: el ? void 0 : Z,
                                 onKeyDown: el ? void 0 : F,

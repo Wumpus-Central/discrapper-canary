@@ -93,7 +93,7 @@ function h(e) {
         } = e,
         E = _(e, ["focusProps", "lineClamp", "role", "text", "textVariant", "type", "variant", "className", "style"]);
     return (0, r.jsx)(
-        o.t,
+        o.tE,
         f(u({}, t), {
             children: (0, r.jsx)(
                 "button",

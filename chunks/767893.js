@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(951288),
     i = n(120356),
     a = n.n(i),
-    o = n(67136),
-    s = n(657707),
+    o = n(657707),
+    s = n(793030),
     l = n(442837),
     c = n(481060),
     u = n(933557),
@@ -21,14 +21,14 @@ let g = {
 };
 function E(e) {
     let { channel: t, children: n } = e;
-    return (0, r.jsx)(o.tE, {
+    return (0, r.jsx)(s.tEY, {
         offset: g,
         children: (0, r.jsxs)("div", {
             className: m.channelHeader,
             "data-recents-channel": t.id,
             children: [
                 (0, r.jsx)(b, { channel: t }),
-                t.isPrivate() ? null : (0, r.jsx)(s.Fbu, { size: "xxs" }),
+                t.isPrivate() ? null : (0, r.jsx)(o.Fbu, { size: "xxs" }),
                 (0, r.jsx)(y, { channel: t }),
                 n,
             ],
@@ -53,7 +53,7 @@ function b(e) {
             })
           : (0, r.jsx)("div", {
                 className: a()(m.icon, m.dmIcon),
-                children: (0, r.jsx)(s.kBi, { size: "xxs" }),
+                children: (0, r.jsx)(o.kBi, { size: "xxs" }),
             });
 }
 function y(e) {

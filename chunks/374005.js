@@ -1,7 +1,7 @@
 n.d(t, { b: () => y });
 var r = n(951288),
     i = n(647438),
-    l = n(67136),
+    l = n(793030),
     a = n(393238),
     o = n(100527),
     s = n(906732),
@@ -84,7 +84,7 @@ let y = i.memo(function () {
             ref: e,
             className: O.panels,
             "aria-label": _.intl.string(_.t.StREWF),
-            children: (0, r.jsxs)(l.Jc, {
+            children: (0, r.jsxs)(l.JcV, {
                 containerRef: e,
                 children: [
                     (0, r.jsx)(g.Z, {}),

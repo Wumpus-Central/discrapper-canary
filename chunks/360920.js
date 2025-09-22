@@ -118,7 +118,7 @@ class h extends (r = a.Component) {
     render() {
         return this.context
             ? this.renderNonInteractive()
-            : (0, i.jsx)(s.t, f(u({}, this.props.focusProps), { children: this.renderInner() }));
+            : (0, i.jsx)(s.tE, f(u({}, this.props.focusProps), { children: this.renderInner() }));
     }
     constructor(...e) {
         super(...e),
