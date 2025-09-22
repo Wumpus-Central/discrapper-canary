@@ -1,28 +1,21 @@
-r.d(t, { Z: () => o });
-var n = r(951288),
-    l = r(647438),
-    s = r(481060),
-    i = r(954313),
-    c = r(388032),
-    a = r(667180);
+n.d(t, { Z: () => o });
+var r = n(951288),
+    l = n(647438),
+    i = n(481060),
+    a = n(954313),
+    s = n(388032);
 function o(e) {
-    let { startDate: t, recurrenceRule: r, onRecurrenceChange: o } = e,
-        d = l.useMemo(() => (0, i.zi)(t, r), [r, t]),
-        u = (0, i.P8)(t),
-        x = (e) => e.toString(),
-        j = (0, n.jsx)("div", {
-            className: a.title,
-            children: c.intl.string(c.t["59TVxM"]),
-        });
-    return (0, n.jsx)(s.xJW, {
-        title: j,
+    let { startDate: t, recurrenceRule: n, onRecurrenceChange: o } = e,
+        c = l.useMemo(() => (0, a.zi)(t, n), [n, t]),
+        u = (0, a.P8)(t),
+        d = (e) => e.toString();
+    return (0, r.jsx)(i.PhF, {
+        label: s.intl.string(s.t["59TVxM"]),
         required: !0,
-        children: (0, n.jsx)(s.PhF, {
-            placeholder: "gaming",
-            options: u,
-            select: o,
-            serialize: x,
-            isSelected: (e) => null != d && x(e) === x(d),
-        }),
+        placeholder: "gaming",
+        options: u,
+        select: o,
+        serialize: d,
+        isSelected: (e) => null != c && d(e) === d(c),
     });
 }

@@ -1,118 +1,134 @@
-t.d(e, { Z: () => v }), t(388685);
+t.d(A, { Z: () => U }), t(388685);
 var n = t(951288),
     r = t(647438),
-    a = t(120356),
-    l = t.n(a),
+    l = t(120356),
+    a = t.n(l),
     i = t(772848),
-    o = t(481060),
-    s = t(752305),
-    d = t(893718),
+    o = t(886025),
+    s = t(481060),
+    d = t(752305),
+    u = t(893718),
     c = t(131704),
-    u = t(703558),
+    g = t(703558),
     f = t(981631),
-    g = t(388032),
-    p = t(231319),
-    m = t(8542);
-let q = (0, i.Z)(),
-    h = (0, c.kt)({
+    p = t(388032),
+    m = t(231319),
+    q = t(8542);
+let h = (0, i.Z)(),
+    v = (0, c.kt)({
         id: "1",
         type: f.d4z.DM,
     });
 function b() {
-    return new Promise((A) => {
-        A({
+    return new Promise((e) => {
+        e({
             shouldClear: !1,
             shouldRefocus: !0,
         });
     });
 }
-function C(A) {
-    var e;
-    let { hasError: t, maxLength: r, text: a } = A;
+function C(e) {
+    var A;
+    let { hasError: t, maxLength: r, text: l } = e;
     return (0, n.jsxs)("div", {
-        className: l()(m.maxLength, { [m.errorOverflow]: t }),
+        className: a()(q.maxLength, { [q.errorOverflow]: t }),
         "aria-hidden": "true",
-        children: [null != (e = null == a ? void 0 : a.length) ? e : 0, " ", null != r && "/ ".concat(r)],
+        children: [null != (A = null == l ? void 0 : l.length) ? A : 0, " ", null != r && "/ ".concat(r)],
     });
 }
-function v(A) {
-    var e;
+function U(e) {
+    var A;
     let {
             "aria-labelledby": t,
-            className: a,
+            className: l,
             id: i,
             autoFocus: c,
             maxLength: f,
-            onChange: m,
-            onSubmit: v,
-            showCharacterCount: U = !1,
-            placeholder: j,
+            onChange: q,
+            onSubmit: U,
+            showCharacterCount: j = !1,
+            placeholder: V,
             required: x,
-            value: V,
-            enableThemedBackground: P = !1,
-            parentModalKey: O,
-        } = A,
-        F = (0, o.Gc0)(),
-        [I, K] = r.useState(() => (0, s.JM)(V)),
-        y = r.useRef(!0 === c),
-        N = null != t ? t : null == F ? void 0 : F.titleId,
-        T = null != (e = null == F ? void 0 : F.errorId) ? e : q,
-        X = r.useMemo(
-            () => ({
-                analyticsName: "simple",
-                autocomplete: {
-                    alwaysUseLayer: !0,
-                    small: !0,
-                },
-                disableAutoFocus: !0 !== c,
-                drafts: { type: u.d.ChannelMessage },
-                emojis: { button: !0 },
-                permissions: { requireSendMessages: !1 },
-                submit: {
-                    useDisabledStylesOnSubmit: !0,
-                    disableEnterToSubmit: !0,
-                },
-            }),
-            [c],
-        );
-    return (0, n.jsxs)(d.ZP, {
-        "aria-describedby": T,
-        "aria-labelledby": N,
-        innerClassName: l()(a, p.textArea),
+            value: P,
+            enableThemedBackground: O = !1,
+            parentModalKey: F,
+            label: I,
+            errorMessage: K,
+        } = e,
+        y = (0, s.Gc0)(),
+        [N, T] = r.useState(() => (0, d.JM)(P)),
+        X = r.useRef(!0 === c),
+        Z = null != t ? t : null == y ? void 0 : y.titleId,
+        W = null != (A = null == y ? void 0 : y.errorId) ? A : h;
+    function Q(e, A, t) {
+        q(A), T(t);
+    }
+    let z = r.useMemo(
+        () => ({
+            analyticsName: "simple",
+            autocomplete: {
+                alwaysUseLayer: !0,
+                small: !0,
+            },
+            disableAutoFocus: !0 !== c,
+            drafts: { type: g.d.ChannelMessage },
+            emojis: { button: !0 },
+            permissions: { requireSendMessages: !1 },
+            submit: {
+                useDisabledStylesOnSubmit: !0,
+                disableEnterToSubmit: !0,
+            },
+        }),
+        [c],
+    );
+    return (0, n.jsx)(o.N, {
+        label: I,
+        errorMessage: K,
         id: i,
-        maxCharacterCount: f,
-        onChange: function (A, e, t) {
-            m(e), K(t);
-        },
-        placeholder: j,
         required: x,
-        channel: h,
-        textValue: V,
-        richValue: I,
-        type: X,
-        onBlur: () => {
-            y.current = !1;
+        children: (e) => {
+            var A, t;
+            return (0, n.jsxs)(u.ZP, {
+                id: null != (A = null == e ? void 0 : e.controlId) ? A : i,
+                "aria-describedby": null != (t = null == e ? void 0 : e.describedById) ? t : W,
+                "aria-labelledby": Z,
+                "aria-errormessage": null == e ? void 0 : e.errorMessageId,
+                "aria-invalid": (null == e ? void 0 : e.errorMessageId) != null,
+                className: m.textArea,
+                innerClassName: a()(l, m.textAreaInner),
+                maxCharacterCount: f,
+                onChange: Q,
+                placeholder: V,
+                required: x,
+                channel: v,
+                textValue: P,
+                richValue: N,
+                type: z,
+                onBlur: () => {
+                    X.current = !1;
+                },
+                onFocus: () => {
+                    X.current = !0;
+                },
+                focused: X.current,
+                onSubmit: null != U ? U : b,
+                disableThemedBackground: !O,
+                parentModalKey: F,
+                emojiPickerCloseOnModalOuterClick: !0,
+                children: [
+                    !0 === j &&
+                        (0, n.jsx)(C, {
+                            hasError: null != y.error || (null != f && P.length > f),
+                            text: P,
+                            maxLength: f,
+                        }),
+                    null != f &&
+                        (0, n.jsx)(s.nn4, {
+                            id: h,
+                            children: p.intl.format(p.t["+DFxLS"], { maxLength: f }),
+                        }),
+                ],
+            });
         },
-        onFocus: () => {
-            y.current = !0;
-        },
-        focused: y.current,
-        onSubmit: null != v ? v : b,
-        disableThemedBackground: !P,
-        parentModalKey: O,
-        emojiPickerCloseOnModalOuterClick: !0,
-        children: [
-            !0 === U &&
-                (0, n.jsx)(C, {
-                    hasError: null != F.error || (null != f && V.length > f),
-                    text: V,
-                    maxLength: f,
-                }),
-            null != f &&
-                (0, n.jsx)(o.nn4, {
-                    id: q,
-                    children: g.intl.format(g.t["+DFxLS"], { maxLength: f }),
-                }),
-        ],
     });
 }

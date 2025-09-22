@@ -1,11 +1,10 @@
-A.exports = {
+e.exports = {
     modalRoot: "modalRoot__7fffd",
     modalHeader: "modalHeader__7fffd",
     headerText: "headerText__7fffd",
     modalContent: "modalContent__7fffd",
     productFieldsSection: "productFieldsSection__7fffd",
     descriptionArea: "descriptionArea__7fffd",
-    thumbnailLabel: "thumbnailLabel__7fffd",
     productPreview: "productPreview__7fffd",
     previewHeading: "previewHeading__7fffd",
     footerActionButtons: "footerActionButtons__7fffd",

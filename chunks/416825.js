@@ -20,8 +20,6 @@ e.exports = {
     clickabeIcon: "clickabeIcon__0b90c",
     removeOverride: "removeOverride__0b90c",
     divider: "divider__0b90c",
-    formItem: "formItem__0b90c",
-    paletteSettings: "paletteSettings__0b90c",
     section: "section__0b90c",
     paletteOverrides: "paletteOverrides__0b90c",
     palettePreview: "palettePreview__0b90c",

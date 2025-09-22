@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685), n(583741);
 var a = n(951288),
     r = n(647438),
-    l = n(442837),
-    i = n(704215),
+    i = n(442837),
+    l = n(704215),
     s = n(481060),
     o = n(883904),
     c = n(68985),
@@ -15,13 +15,13 @@ function p() {
             dailyCapReached: e,
             dailyCapOverridden: t,
             newUserMinAgeRequiredOverridden: n,
-        } = (0, l.cj)([c.Z], () => ({
+        } = (0, i.cj)([c.Z], () => ({
             dailyCapReached: c.Z.hasUserHitDCCap(),
             dailyCapOverridden: c.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: c.Z.newUserMinAgeRequiredOverridden,
         })),
         [p, x] = r.useState(""),
-        b = Object.keys(i.z)
+        f = Object.keys(l.z)
             .filter((e) => e.toLowerCase().includes(p.toLowerCase()))
             .reverse();
     return (0, a.jsx)(s.zJl, {
@@ -32,13 +32,20 @@ function p() {
                     title: "Dismissible Content Overrides",
                     tag: "h1",
                     children: [
-                        (0, a.jsx)(s.xJW, {
-                            title: "Daily Cap Reached: ".concat(e ? "Yes" : "No"),
-                            children: (0, a.jsx)(s.zxk, {
-                                variant: "primary",
-                                text: "Reset Daily Cap",
-                                onClick: () => (0, o.EG)(),
-                            }),
+                        (0, a.jsxs)(s.Kqy, {
+                            gap: 4,
+                            children: [
+                                (0, a.jsx)(s.zxk, {
+                                    variant: "primary",
+                                    text: "Reset Daily Cap",
+                                    onClick: () => (0, o.EG)(),
+                                }),
+                                (0, a.jsx)(s.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-secondary",
+                                    children: "Daily Cap Reached: ".concat(e ? "Yes" : "No"),
+                                }),
+                            ],
                         }),
                         (0, a.jsx)(s.$i$, { className: h.divider }),
                         (0, a.jsx)(s.j7V, {
@@ -67,7 +74,7 @@ function p() {
                                 onClear: () => x(""),
                             }),
                         }),
-                        (0, a.jsx)(d.Z, { items: b }),
+                        (0, a.jsx)(d.Z, { items: f }),
                     ],
                 }),
             ],

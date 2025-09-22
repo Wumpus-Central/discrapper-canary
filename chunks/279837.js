@@ -50,12 +50,12 @@ class u extends (r = a.PureComponent) {
                     (0, i.jsxs)(o.hzk, {
                         children: [
                             f,
-                            (0, i.jsxs)(o.xJW, {
-                                title: s.intl.string(s.t["CIGa+/"]),
+                            (0, i.jsxs)("div", {
                                 className: l.spacing,
                                 children: [
                                     (0, i.jsx)(o.oil, {
                                         type: "password",
+                                        label: s.intl.string(s.t["CIGa+/"]),
                                         autoComplete: "current-password",
                                         autoFocus: !0,
                                         value: d,

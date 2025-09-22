@@ -1,21 +1,17 @@
-n.d(t, { Z: () => u });
-var r = n(951288);
-n(647438);
-var i = n(442837),
-    a = n(481060),
-    o = n(670863),
-    s = n(131951),
-    l = n(65154),
-    c = n(388032);
-function u() {
-    let e = (0, i.e7)([s.Z], () => s.Z.isVideoAvailable());
-    return (0, r.jsx)(a.xJW, {
-        title: c.intl.string(c.t.FsQ3OT),
-        children: (0, r.jsx)(o.j, {
-            deviceType: l.h7.VIDEO_INPUT,
-            location: "UserSettingsCameraSelect",
-            isDisabled: !e,
-            showAllDevices: !0,
-        }),
+n.d(t, { Z: () => c });
+var r = n(951288),
+    i = n(442837),
+    a = n(670863),
+    o = n(131951),
+    s = n(65154),
+    l = n(388032);
+function c() {
+    let e = (0, i.e7)([o.Z], () => o.Z.isVideoAvailable());
+    return (0, r.jsx)(a.j, {
+        label: l.intl.string(l.t.FsQ3OT),
+        deviceType: s.h7.VIDEO_INPUT,
+        location: "UserSettingsCameraSelect",
+        isDisabled: !e,
+        showAllDevices: !0,
     });
 }

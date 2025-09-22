@@ -1,7 +1,6 @@
 n.d(t, { Z: () => b });
-var r = n(951288);
-n(647438);
-var i = n(120356),
+var r = n(951288),
+    i = n(120356),
     a = n.n(i),
     o = n(538534),
     s = n(481060),
@@ -31,33 +30,25 @@ function b() {
         A = p.nc.useSetting(),
         { analyticsLocations: C } = (0, c.ZP)(l.Z.TEXT_AND_IMAGES),
         N = () =>
-            (0, r.jsxs)(s.xJW, {
-                title: g.intl.string(g.t.QgwmV1),
-                children: [
-                    (0, r.jsx)(s.R94, {
-                        type: s.R94.Types.DESCRIPTION,
-                        className: E.marginBottom8,
-                        children: g.intl.string(g.t.TYnRkZ),
-                    }),
-                    (0, r.jsx)(o.E, {
-                        options: [
-                            {
-                                name: g.intl.string(g.t["KFH/mZ"]),
-                                value: m.A2N.ON_CLICK,
-                            },
-                            {
-                                name: g.intl.string(g.t.K5VTBA),
-                                value: m.A2N.IF_MODERATOR,
-                            },
-                            {
-                                name: g.intl.string(g.t.Pe1RbG),
-                                value: m.A2N.ALWAYS,
-                            },
-                        ],
-                        onChange: (e) => p.cC.updateSetting(e),
-                        value: b,
-                    }),
+            (0, r.jsx)(o.E, {
+                label: g.intl.string(g.t.QgwmV1),
+                description: g.intl.string(g.t.TYnRkZ),
+                options: [
+                    {
+                        name: g.intl.string(g.t["KFH/mZ"]),
+                        value: m.A2N.ON_CLICK,
+                    },
+                    {
+                        name: g.intl.string(g.t.K5VTBA),
+                        value: m.A2N.IF_MODERATOR,
+                    },
+                    {
+                        name: g.intl.string(g.t.Pe1RbG),
+                        value: m.A2N.ALWAYS,
+                    },
                 ],
+                onChange: (e) => p.cC.updateSetting(e),
+                value: b,
             });
     return (0, r.jsxs)(s.hjN, {
         tag: s.RB0.H1,

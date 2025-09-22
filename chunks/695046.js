@@ -422,11 +422,12 @@ function R(e) {
     );
 }
 function P(e) {
-    var { label: t, description: n } = e,
-        i = O(e, ["label", "description"]);
+    var { label: t, description: n, required: i } = e,
+        a = O(e, ["label", "description", "required"]);
     return (0, r.jsx)(_.N, {
         label: t,
         description: n,
-        children: (0, r.jsx)(R, E({}, i)),
+        required: i,
+        children: (0, r.jsx)(R, E({}, a)),
     });
 }

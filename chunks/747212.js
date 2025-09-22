@@ -6,14 +6,15 @@ var l = n(481060),
     s = n(388032),
     a = n(294861);
 let o = (e) => {
-    let { autoArchiveDuration: t, onChange: n, isDisabled: o } = e,
-        c = (0, r.nt)();
-    return (0, i.jsx)(l.hjN, {
-        title: s.intl.string(s.t.FGjMZW),
+    let { autoArchiveDuration: t, onChange: n, isDisabled: o, helperText: c } = e,
+        d = (0, r.nt)();
+    return (0, i.jsx)("div", {
         className: a.formSection,
         children: (0, i.jsx)(l.VcW, {
+            label: s.intl.string(s.t.FGjMZW),
+            helperText: c,
             isDisabled: o,
-            options: c,
+            options: d,
             value: t,
             onChange: n,
             optionClassName: a.dropdownOption,

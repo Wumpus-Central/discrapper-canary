@@ -50,7 +50,7 @@ function I(e) {
         var e;
         return null == (e = H.current) ? void 0 : e.focus();
     }, []);
-    let J = i.useCallback(() => {
+    let K = i.useCallback(() => {
             var e;
             let t = {
                     id: null != (e = null == x ? void 0 : x.id) ? e : "".concat(Date.now()),
@@ -68,7 +68,7 @@ function I(e) {
                 })(I, f.Z.editedOnboardingPrompts, P, t);
             F(l), o().isEmpty(l) && (r(t), n());
         }, [B, T, Z, I, n, r, null == x ? void 0 : x.id, P, q, R]),
-        K = i.useMemo(
+        L = i.useMemo(
             () => [
                 {
                     text: O.intl.string(O.t["ETE/oK"]),
@@ -77,11 +77,11 @@ function I(e) {
                 },
                 {
                     text: O.intl.string(O.t.R3BPHx),
-                    onClick: J,
+                    onClick: K,
                     variant: "primary",
                 },
             ],
-            [J, n],
+            [K, n],
         );
     return (0, l.jsxs)(a.IX, {
         transitionState: t,
@@ -105,28 +105,27 @@ function I(e) {
                         variant: "heading-lg/semibold",
                         children: null != P.title && P.title.length > 0 ? P.title : O.intl.string(O.t.vY91Cw),
                     }),
-                    (0, l.jsx)(d.xJW, {
-                        title: O.intl.string(O.t.VWdcBg),
-                        children: (0, l.jsxs)(d.Kqy, {
-                            gap: 8,
-                            children: [
-                                (0, l.jsx)(d.oil, {
-                                    inputRef: H,
-                                    placeholder: O.intl.string(O.t.EHe6gY),
-                                    value: R,
-                                    onChange: (e) => M(e),
-                                    maxLength: y.NE,
-                                    autoFocus: !0,
-                                    error: A.title,
-                                }),
-                                (0, l.jsx)(d.oil, {
-                                    placeholder: O.intl.string(O.t.mIjgJC),
-                                    value: T,
-                                    onChange: (e) => _(e),
-                                    maxLength: y.NO,
-                                }),
-                            ],
-                        }),
+                    (0, l.jsxs)(d.Kqy, {
+                        gap: 8,
+                        children: [
+                            (0, l.jsx)(d.oil, {
+                                label: O.intl.string(O.t.VWdcBg),
+                                required: !0,
+                                inputRef: H,
+                                placeholder: O.intl.string(O.t.EHe6gY),
+                                value: R,
+                                onChange: (e) => M(e),
+                                maxLength: y.NE,
+                                autoFocus: !0,
+                                error: A.title,
+                            }),
+                            (0, l.jsx)(d.oil, {
+                                placeholder: O.intl.string(O.t.mIjgJC),
+                                value: T,
+                                onChange: (e) => _(e),
+                                maxLength: y.NO,
+                            }),
+                        ],
                     }),
                     (0, l.jsx)(d.$i$, {}),
                     (0, l.jsxs)(d.xJW, {
@@ -183,7 +182,7 @@ function I(e) {
                 ],
             }),
             (0, l.jsx)(c.G, {
-                actions: K,
+                actions: L,
                 leading: (0, l.jsx)(d.Avr, {
                     text: O.intl.string(O.t.N86XcH),
                     onClick: () => {

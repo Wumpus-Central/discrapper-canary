@@ -29,7 +29,7 @@ let m = (e) => {
                                 children: c.intl.format(c.t["Ks2/3d"], {
                                     selectFileHook: (e, n) =>
                                         (0, r.jsx)(
-                                            f,
+                                            h,
                                             {
                                                 translatedContent: e,
                                                 setUserImage: t,
@@ -46,7 +46,7 @@ let m = (e) => {
                         ],
                     }),
                     null !== n &&
-                        (0, r.jsx)(u.H, {
+                        (0, r.jsx)(u.H4, {
                             error: s.ze.IMAGE_LOAD,
                             variant: "text-sm/normal",
                             color: "text-danger",
@@ -59,7 +59,7 @@ let m = (e) => {
             }),
         });
     },
-    f = (e) => {
+    h = (e) => {
         let { setUserImage: t, translatedContent: n } = e;
         return (0, r.jsx)(i.P3F, {
             focusProps: { within: !0 },

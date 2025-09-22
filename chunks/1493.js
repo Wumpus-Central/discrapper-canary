@@ -18,9 +18,9 @@ function o(e) {
             transitionState: m,
             children: j,
         } = e,
-        [f, b] = a.useState(""),
-        [C, g] = a.useState(null),
-        v =
+        [b, f] = a.useState(""),
+        [v, C] = a.useState(null),
+        g =
             a.Children.count(j) > 0
                 ? (0, n.jsx)(i.Zbd, {
                       type: i.Zbd.Types.WARNING,
@@ -38,7 +38,7 @@ function o(e) {
         parentComponent: "TextEntryConfirm",
         children: (0, n.jsxs)("form", {
             onSubmit: function (e) {
-                if ((e.preventDefault(), f.toLowerCase() !== o.toLowerCase())) return void g(c);
+                if ((e.preventDefault(), b.toLowerCase() !== o.toLowerCase())) return void C(c);
                 null == t || t(), r();
             },
             children: [
@@ -51,25 +51,25 @@ function o(e) {
                 }),
                 (0, n.jsxs)(i.hzk, {
                     children: [
-                        v,
-                        (0, n.jsxs)(i.xJW, {
-                            title: p,
+                        g,
+                        (0, n.jsxs)("div", {
                             className: l.spacing,
                             children: [
                                 (0, n.jsx)(i.oil, {
                                     id: "text-entry-confirm",
                                     type: "text",
-                                    value: f,
+                                    label: p,
+                                    value: b,
                                     autoComplete: "off",
-                                    onChange: b,
+                                    onChange: f,
                                     autoFocus: !0,
                                 }),
-                                null != C && "" !== C
+                                null != v && "" !== v
                                     ? (0, n.jsx)(i.Text, {
                                           color: "text-danger",
                                           variant: "text-xs/normal",
                                           className: l.error,
-                                          children: C,
+                                          children: v,
                                       })
                                     : null,
                             ],

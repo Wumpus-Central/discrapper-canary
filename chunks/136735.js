@@ -14,8 +14,8 @@ var n = l(951288),
     p = l(339085),
     j = l(349709),
     v = l(763610),
-    x = l(430824),
-    b = l(594174),
+    b = l(430824),
+    x = l(594174),
     h = l(626135),
     y = l(424218),
     E = l(63063),
@@ -82,10 +82,10 @@ function L(e) {
     var t, l, r, o, Z, R, L, U;
     let { transitionState: K, onClose: M, guildId: F, sticker: Y } = e,
         q = (0, u.e7)([p.ZP], () => ((null == Y ? void 0 : Y.tags) != null ? p.ZP.getCustomEmojiById(Y.tags) : null)),
-        G = null != (l = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? P.OC : P.Ht,
-        [V, W] = i.useState(null),
-        [X, J] = i.useState(null != (r = null == Y ? void 0 : Y.name) ? r : ""),
-        [H, Q] = i.useState({
+        G = null != (l = null == (t = x.default.getCurrentUser()) ? void 0 : t.isStaff()) && l ? P.OC : P.Ht,
+        [V, X] = i.useState(null),
+        [W, H] = i.useState(null != (r = null == Y ? void 0 : Y.name) ? r : ""),
+        [J, Q] = i.useState({
             file: null,
             filename: null != (o = (0, O._V)(Y)) ? o : "",
         }),
@@ -94,17 +94,17 @@ function L(e) {
         [en, ei] = i.useState(null != (R = null == Y ? void 0 : Y.description) ? R : ""),
         [er, es] = i.useState(!1),
         [ea, eo] = i.useState(null),
-        eu = (0, u.e7)([x.Z], () => x.Z.getGuild(F)),
+        eu = (0, u.e7)([b.Z], () => b.Z.getGuild(F)),
         ec =
             (null == eu ? void 0 : eu.features.has(C.oNc.PARTNERED)) ||
             (null == eu ? void 0 : eu.features.has(C.oNc.VERIFIED)),
         ed = null != Y,
-        em = ed || (null == H ? void 0 : H.file) != null,
+        em = ed || (null == J ? void 0 : J.file) != null,
         ef = 0 === en.length || (en.length >= 2 && en.length <= 100),
         eg =
             !er &&
             (null == ea ? void 0 : ea.isBlocking) !== !0 &&
-            X.length >= 2 &&
+            W.length >= 2 &&
             (null != $ ||
                 null != et ||
                 ((null == Y ? void 0 : Y.tags) != null && (null == Y ? void 0 : Y.tags) !== "")) &&
@@ -132,7 +132,7 @@ function L(e) {
             if (n.size > G) {
                 eo({
                     message: k.intl.formatToPlainString(k.t["3eK7Rk"], { maxSize: (0, y.IC)(G, { useKibibytes: !0 }) }),
-                    isBlocking: null == H.file,
+                    isBlocking: null == J.file,
                 }),
                     h.default.track(C.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                         size: n.size,
@@ -149,7 +149,7 @@ function L(e) {
                     });
                 let e = new FileReader();
                 e.addEventListener("load", () => {
-                    W({
+                    X({
                         id: (0, a.Z)(),
                         formatType: i,
                         content: e.result,
@@ -159,7 +159,7 @@ function L(e) {
                     e.readAsText(n);
             } else {
                 let e = await (0, w.fD)(n);
-                W({
+                X({
                     id: (0, a.Z)(),
                     formatType: i,
                     content: e,
@@ -178,17 +178,17 @@ function L(e) {
             try {
                 if ((es(!0), ed))
                     await (0, I.Jf)(F, null != (n = null == Y ? void 0 : Y.id) ? n : "", {
-                        name: X,
+                        name: W,
                         tags: a,
                         description: en,
                     });
                 else {
                     let e = new FormData();
-                    e.append("name", X),
+                    e.append("name", W),
                         e.append("tags", a),
                         e.append("description", en),
-                        (null == H ? void 0 : H.file) != null && e.append("file", H.file),
-                        (s = null != (r = null == (i = H.file) ? void 0 : i.type) ? r : ""),
+                        (null == J ? void 0 : J.file) != null && e.append("file", J.file),
+                        (s = null != (r = null == (i = J.file) ? void 0 : i.type) ? r : ""),
                         h.default.track(C.rMx.STICKER_UPLOAD_STARTED, { filetype: s }),
                         await (0, I.lY)({
                             guildId: F,
@@ -245,7 +245,7 @@ function L(e) {
                 });
             }, []),
         }),
-        ex = ec ? k.t.alYXBA : k.t.kpcMfn;
+        eb = ec ? k.t.alYXBA : k.t.kpcMfn;
     return (0, n.jsx)("form", {
         onSubmit: ej,
         className: D.form,
@@ -256,7 +256,7 @@ function L(e) {
             children: [
                 (0, n.jsx)(f.x, {
                     title: k.intl.string(k.t.yxVsBA),
-                    subtitle: k.intl.format(ex, { fileSize: (0, y.IC)(P.Ht, { useKibibytes: !0 }) }),
+                    subtitle: k.intl.format(eb, { fileSize: (0, y.IC)(P.Ht, { useKibibytes: !0 }) }),
                 }),
                 (0, n.jsxs)(m.f, {
                     children: [
@@ -275,12 +275,12 @@ function L(e) {
                                     children: ed
                                         ? (0, n.jsx)(g.oil, {
                                               disabled: !0,
-                                              value: null != (L = null == H ? void 0 : H.filename) ? L : "",
+                                              value: null != (L = null == J ? void 0 : J.filename) ? L : "",
                                           })
                                         : (0, n.jsx)(v.Z, {
                                               buttonText: k.intl.string(k.t.xEnDUV),
                                               filters: T,
-                                              filename: null != (U = null == H ? void 0 : H.filename) ? U : "",
+                                              filename: null != (U = null == J ? void 0 : J.filename) ? U : "",
                                               placeholder: k.intl.string(k.t.rUYLJy),
                                               onFileSelect: ep,
                                           }),
@@ -296,13 +296,13 @@ function L(e) {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(g.xJW, {
-                            title: k.intl.string(k.t["0VRh6u"]),
-                            required: !0,
+                        (0, n.jsx)("div", {
                             className: D.formItem,
                             children: (0, n.jsx)(g.oil, {
-                                value: X,
-                                onChange: J,
+                                label: k.intl.string(k.t["0VRh6u"]),
+                                required: !0,
+                                value: W,
+                                onChange: H,
                                 placeholder: k.intl.string(k.t["3fGttb"]),
                                 maxLength: 30,
                             }),

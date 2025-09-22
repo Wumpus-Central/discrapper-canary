@@ -1,14 +1,10 @@
-c.exports = {
+e.exports = {
     modal: "modal_ac72c6 " + a(154257).scrollbarGhostHairline,
     modalContent: "modalContent_ac72c6",
     modalFooter: "modalFooter_ac72c6",
-    name: "name_ac72c6",
-    type: "type_ac72c6",
     description: "description_ac72c6",
     emojiButton: "emojiButton_ac72c6",
-    channelNameNote: "channelNameNote_ac72c6",
     icon: "icon_ac72c6",
-    error: "error_ac72c6",
     searchHelpText: "searchHelpText_ac72c6",
     membersList: "membersList_ac72c6",
     header: "header_ac72c6",
@@ -16,7 +12,6 @@ c.exports = {
     subtitle: "subtitle_ac72c6",
     subtitleIcon: "subtitleIcon_ac72c6",
     closeButton: "closeButton_ac72c6",
-    sectionTitle: "sectionTitle_ac72c6",
     foreground: "foreground_ac72c6",
     switchIcon: "switchIcon_ac72c6",
     channelTypeDescription: "channelTypeDescription_ac72c6",

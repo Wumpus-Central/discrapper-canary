@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(951288),
     r = n(647438),
     l = n(442837),
@@ -49,7 +49,7 @@ function x() {
         text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
     });
 }
-class j extends r.PureComponent {
+class Z extends r.PureComponent {
     componentDidMount() {
         a.Z.track(v.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
@@ -192,77 +192,69 @@ class j extends r.PureComponent {
     }
     renderVoiceSettings() {
         let { avatarSizeMode: e, displayNameMode: t, displayUserMode: n } = this.props;
-        return (0, i.jsxs)(r.Fragment, {
+        return (0, i.jsxs)(s.Kqy, {
+            gap: 20,
             children: [
-                (0, i.jsx)(s.xJW, {
-                    title: _.intl.string(_.t.dnvZSk),
-                    className: E.marginBottom20,
-                    children: (0, i.jsx)(o.Gu, {
-                        onChange: this.handleChangeAvatarSizeMode,
-                        options: [
-                            {
-                                value: v.ipw.LARGE,
-                                name: _.intl.string(_.t.YcOxtr),
-                            },
-                            {
-                                value: v.ipw.SMALL,
-                                name: _.intl.string(_.t.BKIKq6),
-                            },
-                        ],
-                        value: e,
-                        size: o.l7.SMALL,
-                    }),
+                (0, i.jsx)(o.Gu, {
+                    label: _.intl.string(_.t.dnvZSk),
+                    onChange: this.handleChangeAvatarSizeMode,
+                    options: [
+                        {
+                            value: v.ipw.LARGE,
+                            name: _.intl.string(_.t.YcOxtr),
+                        },
+                        {
+                            value: v.ipw.SMALL,
+                            name: _.intl.string(_.t.BKIKq6),
+                        },
+                    ],
+                    value: e,
+                    size: o.l7.SMALL,
                 }),
-                (0, i.jsx)(s.xJW, {
-                    title: _.intl.string(_.t.J0dpcH),
-                    className: E.marginBottom20,
-                    children: (0, i.jsx)(o.Gu, {
-                        onChange: this.handleChangeDisplayNameMode,
-                        options: [
-                            {
-                                value: v.wC$.ALWAYS,
-                                name: _.intl.string(_.t.nBmDra),
-                            },
-                            {
-                                value: v.wC$.ONLY_WHILE_SPEAKING,
-                                name: _.intl.string(_.t["2OvIZW"]),
-                            },
-                            {
-                                value: v.wC$.NEVER,
-                                name: _.intl.string(_.t.ekjlPD),
-                            },
-                        ],
-                        value: t,
-                        size: o.l7.SMALL,
-                    }),
+                (0, i.jsx)(o.Gu, {
+                    label: _.intl.string(_.t.J0dpcH),
+                    onChange: this.handleChangeDisplayNameMode,
+                    options: [
+                        {
+                            value: v.wC$.ALWAYS,
+                            name: _.intl.string(_.t.nBmDra),
+                        },
+                        {
+                            value: v.wC$.ONLY_WHILE_SPEAKING,
+                            name: _.intl.string(_.t["2OvIZW"]),
+                        },
+                        {
+                            value: v.wC$.NEVER,
+                            name: _.intl.string(_.t.ekjlPD),
+                        },
+                    ],
+                    value: t,
+                    size: o.l7.SMALL,
                 }),
-                (0, i.jsx)(s.xJW, {
-                    title: _.intl.string(_.t.swsWWF),
-                    className: E.marginBottom20,
-                    children: (0, i.jsx)(o.Gu, {
-                        onChange: this.handleChangeDisplayUserMode,
-                        options: [
-                            {
-                                value: v.OYC.ALWAYS,
-                                name: _.intl.string(_.t.nBmDra),
-                            },
-                            {
-                                value: v.OYC.ONLY_WHILE_SPEAKING,
-                                name: _.intl.string(_.t["2OvIZW"]),
-                            },
-                        ],
-                        value: n,
-                        size: o.l7.SMALL,
-                    }),
+                (0, i.jsx)(o.Gu, {
+                    label: _.intl.string(_.t.swsWWF),
+                    onChange: this.handleChangeDisplayUserMode,
+                    options: [
+                        {
+                            value: v.OYC.ALWAYS,
+                            name: _.intl.string(_.t.nBmDra),
+                        },
+                        {
+                            value: v.OYC.ONLY_WHILE_SPEAKING,
+                            name: _.intl.string(_.t["2OvIZW"]),
+                        },
+                    ],
+                    value: n,
+                    size: o.l7.SMALL,
                 }),
             ],
         });
     }
     renderDeveloperSettings() {
-        return (0, i.jsx)(s.xJW, {
-            title: "Crashes",
+        return (0, i.jsx)("div", {
             className: E.marginBottom20,
             children: (0, i.jsx)(s.q4e, {
+                label: "Crashes",
                 value: void 0,
                 options: [
                     {
@@ -321,7 +313,7 @@ class j extends r.PureComponent {
             });
     }
 }
-function Z(e) {
+function j(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -343,7 +335,7 @@ function Z(e) {
             ),
         })),
         u = (0, y.Z)({ location: "Overlay Settings" });
-    return (0, i.jsx)(j, {
+    return (0, i.jsx)(Z, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: r,

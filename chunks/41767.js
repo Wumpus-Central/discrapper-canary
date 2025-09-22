@@ -11,17 +11,15 @@ let j = (t) => {
     let { duration: e, onSelectDuration: r } = t,
         i = (0, s.tr)(),
         a = i.find((t) => t.value === e);
-    return (0, l.jsx)(u.xJW, {
+    return (0, l.jsx)(u.VcW, {
         required: !0,
-        children: (0, l.jsx)(u.VcW, {
-            value: null != (n = null == a ? void 0 : a.value) ? n : s.UK.DURATION_60_SEC,
-            options: i,
-            onChange: (t) => {
-                let n = i.find((n) => n.value === t);
-                null != n && r(n.value);
-            },
-            placeholder: c.intl.string(c.t.k7yo6u),
-        }),
+        value: null != (n = null == a ? void 0 : a.value) ? n : s.UK.DURATION_60_SEC,
+        options: i,
+        onChange: (t) => {
+            let n = i.find((n) => n.value === t);
+            null != n && r(n.value);
+        },
+        placeholder: c.intl.string(c.t.k7yo6u),
     });
 };
 function A(t) {

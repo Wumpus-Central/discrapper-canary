@@ -8,46 +8,49 @@ var i = n(951288),
     c = n(388032),
     d = n(197571);
 function u(e) {
-    let { channel: t, onChange: n } = e,
-        [u, h] = l.useState(null),
-        g = t.rateLimitPerUser,
-        m = l.useMemo(() => {
-            let e = [...(null != u ? u : o.BiE)];
+    let { label: t, helperText: n, hideLabel: u, channel: h, onChange: g } = e,
+        [m, p] = l.useState(null),
+        f = h.rateLimitPerUser,
+        x = l.useMemo(() => {
+            let e = [...(null != m ? m : o.BiE)];
             return (
-                e.includes(g) || e.unshift(g),
+                e.includes(f) || e.unshift(f),
                 e.map((e) => ({
                     label: (0, a.A)(e, !1),
                     value: e,
                 }))
             );
-        }, [u, g]),
-        p = l.useCallback(
+        }, [m, f]),
+        b = l.useCallback(
             (e) => {
-                n(e), h(null);
+                g(e), p(null);
             },
-            [n],
+            [g],
         ),
-        f = l.useCallback((e) => {
-            if ("" === e) return void h(null);
+        j = l.useCallback((e) => {
+            if ("" === e) return void p(null);
             let t = [],
                 n = parseInt(e, 10);
-            if (Number.isNaN(n)) return void h(null);
+            if (Number.isNaN(n)) return void p(null);
             n <= o.GI0 && t.push(n);
             let i = n * s.Z.Seconds.MINUTE;
             i <= o.GI0 && t.push(i);
             let l = n * s.Z.Seconds.HOUR;
-            l <= o.GI0 && t.push(l), h(t);
+            l <= o.GI0 && t.push(l), p(t);
         }, []),
-        x = l.useCallback(() => {
-            h(null);
+        v = l.useCallback(() => {
+            p(null);
         }, []);
     return (0, i.jsx)(r.VcW, {
+        label: t,
+        hideLabel: u,
+        helperText: n,
         className: d.marginBottom8,
-        value: g,
-        onChange: p,
-        onSearchChange: f,
-        options: m,
-        onBlur: x,
+        value: f,
+        onChange: b,
+        onSearchChange: j,
+        options: x,
+        onBlur: v,
         placeholder: c.intl.string(c.t.dBqQu7),
     });
 }

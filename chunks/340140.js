@@ -57,19 +57,17 @@ class p extends r.PureComponent {
                             variant: "text-sm/normal",
                             children: d.intl.string(d.t["7vw0h4"]),
                         }),
-                        (0, l.jsx)(a.xJW, {
-                            title: d.intl.string(d.t["6Y1t5O"]),
-                            children: (0, l.jsx)(a.q4e, {
-                                placeholder: d.intl.string(d.t.U0kGk5),
-                                options: (0, o.Z)({
-                                    isStreamer: t,
-                                    isEndStream: !1,
-                                    showVibesHoneypot: !1,
-                                }),
-                                onChange: this.handleChanged,
-                                value: r,
-                                maxVisibleItems: 4,
+                        (0, l.jsx)(a.q4e, {
+                            label: d.intl.string(d.t["6Y1t5O"]),
+                            placeholder: d.intl.string(d.t.U0kGk5),
+                            options: (0, o.Z)({
+                                isStreamer: t,
+                                isEndStream: !1,
+                                showVibesHoneypot: !1,
                             }),
+                            onChange: this.handleChanged,
+                            value: r,
+                            maxVisibleItems: 4,
                         }),
                         (0, l.jsx)("div", { className: b.art }),
                     ],

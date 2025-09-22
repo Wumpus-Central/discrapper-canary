@@ -25,13 +25,11 @@ function f() {
                 hideBorder: !0,
                 children: d.intl.string(d.t["/jwMtr"]),
             }),
-            (0, r.jsx)(a.xJW, {
-                title: d.intl.string(d.t.fhEzfn),
-                children: (0, r.jsx)(a.iRW, {
-                    initialValue: t,
-                    minValue: 1,
-                    onValueChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: n }),
-                }),
+            (0, r.jsx)(a.iRW, {
+                label: d.intl.string(d.t.fhEzfn),
+                initialValue: t,
+                minValue: 1,
+                onValueChange: (e) => o.Z.setSidechainCompressionStrength(e, { analyticsLocations: n }),
             }),
         ],
     });

@@ -54,8 +54,8 @@ function O() {
         })),
         [O, v] = i.useState("upright"),
         I = ["normal", "medium", "semibold", "bold", "extrabold"],
-        S = [10, 12, 14, 15, 16, 18, 20, 24],
-        T = new Map([
+        T = [10, 12, 14, 15, 16, 18, 20, 24],
+        S = new Map([
             ["normal", 400],
             ["medium", 500],
             ["semibold", 600],
@@ -122,22 +122,18 @@ function O() {
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(c.xJW, {
-                            children: (0, r.jsx)(c.q4e, {
-                                className: b.select,
-                                options: y,
-                                onChange: (e) => D(e),
-                                value: P,
-                            }),
+                        (0, r.jsx)(c.q4e, {
+                            className: b.select,
+                            options: y,
+                            onChange: (e) => D(e),
+                            value: P,
                         }),
-                        (0, r.jsx)(c.xJW, {
-                            children: (0, r.jsx)("div", {
-                                className: b.input,
-                                children: (0, r.jsx)(c.oil, {
-                                    placeholder: "Enter custom input...",
-                                    value: null != N ? N : "",
-                                    onChange: D,
-                                }),
+                        (0, r.jsx)("div", {
+                            className: b.input,
+                            children: (0, r.jsx)(c.oil, {
+                                placeholder: "Enter custom input...",
+                                value: null != N ? N : "",
+                                onChange: D,
                             }),
                         }),
                     ],
@@ -145,51 +141,47 @@ function O() {
                 (0, r.jsxs)("div", {
                     className: b.toolbar,
                     children: [
-                        (0, r.jsx)(c.xJW, {
-                            children: (0, r.jsx)(l.Gu, {
-                                withTransparentBackground: !0,
-                                className: b.theme,
-                                orientation: "horizontal",
-                                options: [
-                                    {
-                                        name: E.intl.string(E.t.b8Cei4),
-                                        value: g.BRd.DARK,
-                                    },
-                                    {
-                                        name: E.intl.string(E.t.K2sFfn),
-                                        value: g.BRd.LIGHT,
-                                    },
-                                ],
-                                onChange: (e) => {
-                                    (0, u.ZI)({ theme: e.value });
+                        (0, r.jsx)(l.Gu, {
+                            withTransparentBackground: !0,
+                            className: b.theme,
+                            orientation: "horizontal",
+                            options: [
+                                {
+                                    name: E.intl.string(E.t.b8Cei4),
+                                    value: g.BRd.DARK,
                                 },
-                                value: a,
-                            }),
+                                {
+                                    name: E.intl.string(E.t.K2sFfn),
+                                    value: g.BRd.LIGHT,
+                                },
+                            ],
+                            onChange: (e) => {
+                                (0, u.ZI)({ theme: e.value });
+                            },
+                            value: a,
                         }),
-                        (0, r.jsx)(c.xJW, {
-                            children: (0, r.jsx)(l.Gu, {
-                                withTransparentBackground: !0,
-                                className: b.theme,
-                                orientation: "horizontal",
-                                options: [
-                                    {
-                                        name: "Upright",
-                                        value: "upright",
-                                    },
-                                    {
-                                        name: "Italic",
-                                        value: "italic",
-                                    },
-                                    {
-                                        name: "Mono",
-                                        value: "mono",
-                                    },
-                                ],
-                                onChange: (e) => {
-                                    v(e.value);
+                        (0, r.jsx)(l.Gu, {
+                            withTransparentBackground: !0,
+                            className: b.theme,
+                            orientation: "horizontal",
+                            options: [
+                                {
+                                    name: "Upright",
+                                    value: "upright",
                                 },
-                                value: O,
-                            }),
+                                {
+                                    name: "Italic",
+                                    value: "italic",
+                                },
+                                {
+                                    name: "Mono",
+                                    value: "mono",
+                                },
+                            ],
+                            onChange: (e) => {
+                                v(e.value);
+                            },
+                            value: O,
                         }),
                     ],
                 }),
@@ -210,7 +202,7 @@ function O() {
                                 e,
                             ),
                         ),
-                        S.map((e) =>
+                        T.map((e) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
@@ -247,7 +239,7 @@ function O() {
                                                         className: o()(b.text, { [b.breakAnywhere]: !i.includes(" ") }),
                                                         style: {
                                                             fontSize: e,
-                                                            fontWeight: T.get(t),
+                                                            fontWeight: S.get(t),
                                                         },
                                                         children: [
                                                             (0, r.jsx)("p", { children: i }),

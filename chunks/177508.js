@@ -1013,13 +1013,11 @@ function eh() {
                 variant: "heading-lg/semibold",
                 children: "Legacy Tooltips",
             }),
-            (0, r.jsx)(T.xJW, {
-                title: "Color",
-                children: (0, r.jsx)(T.q4e, {
-                    value: e,
-                    onChange: t,
-                    options: n,
-                }),
+            (0, r.jsx)(T.q4e, {
+                label: "Color",
+                value: e,
+                onChange: t,
+                options: n,
             }),
             (0, r.jsxs)("div", {
                 style: {
@@ -2501,13 +2499,10 @@ function eb() {
                     ],
                 }),
             }),
-            (0, r.jsx)(T.xJW, {
-                title: "Disabled",
+            (0, r.jsx)(T.oil, {
+                label: "Disabled",
+                placeholder: "Disabled",
                 disabled: !0,
-                children: (0, r.jsx)(T.oil, {
-                    placeholder: "Disabled",
-                    disabled: !0,
-                }),
             }),
             (0, r.jsx)(T.oil, {
                 label: "Error",
@@ -2566,14 +2561,12 @@ function eb() {
                         ],
                     }),
                 }),
-            (0, r.jsx)(T.xJW, {
-                title: "Text area",
-                children: (0, r.jsx)(T.Kx8, {
-                    placeholder: "Text area placeholder",
-                    showCharacterCount: !0,
-                    value: n,
-                    onChange: a,
-                }),
+            (0, r.jsx)(T.Kx8, {
+                label: "Text area",
+                placeholder: "Text area placeholder",
+                showCharacterCount: !0,
+                value: n,
+                onChange: a,
             }),
         ],
     });
@@ -2601,18 +2594,16 @@ function ey(e) {
                 children: (0, r.jsxs)(T.Kqy, {
                     gap: 16,
                     children: [
-                        (0, r.jsx)(T.xJW, {
-                            title: "Modal Size",
-                            children: (0, r.jsx)(T.q4e, {
-                                value: o,
-                                onChange: s,
-                                options: Object.entries(T.CgR).map((e) => {
-                                    let [t, n] = e;
-                                    return {
-                                        label: t,
-                                        value: n,
-                                    };
-                                }),
+                        (0, r.jsx)(T.q4e, {
+                            label: "Modal Size",
+                            value: o,
+                            onChange: s,
+                            options: Object.entries(T.CgR).map((e) => {
+                                let [t, n] = e;
+                                return {
+                                    label: t,
+                                    value: n,
+                                };
                             }),
                         }),
                         (0, r.jsx)(T.hjN, {
@@ -2692,26 +2683,24 @@ function eO(e) {
                             children: ["This is modal level ", a, "."],
                         }),
                         c &&
-                            (0, r.jsx)(T.xJW, {
-                                title: "Stacking Behavior",
-                                children: (0, r.jsx)(T.q4e, {
-                                    value: o,
-                                    onChange: s,
-                                    options: [
-                                        {
-                                            label: "Replace (default)",
-                                            value: "replace",
-                                        },
-                                        {
-                                            label: "Stack",
-                                            value: "stack",
-                                        },
-                                        {
-                                            label: "Replace All",
-                                            value: "replaceAll",
-                                        },
-                                    ],
-                                }),
+                            (0, r.jsx)(T.q4e, {
+                                label: "Stacking Behavior",
+                                value: o,
+                                onChange: s,
+                                options: [
+                                    {
+                                        label: "Replace (default)",
+                                        value: "replace",
+                                    },
+                                    {
+                                        label: "Stack",
+                                        value: "stack",
+                                    },
+                                    {
+                                        label: "Replace All",
+                                        value: "replaceAll",
+                                    },
+                                ],
                             }),
                         (0, r.jsxs)(T.Kqy, {
                             gap: 8,
@@ -2856,30 +2845,28 @@ function eI(e) {
                 children: (0, r.jsxs)(T.Kqy, {
                     gap: 16,
                     children: [
-                        (0, r.jsx)(T.xJW, {
-                            title: "Modal Size",
-                            children: (0, r.jsx)(T.q4e, {
-                                value: a,
-                                onChange: o,
-                                options: [
-                                    {
-                                        label: "Small",
-                                        value: "sm",
-                                    },
-                                    {
-                                        label: "Medium",
-                                        value: "md",
-                                    },
-                                    {
-                                        label: "Large",
-                                        value: "lg",
-                                    },
-                                    {
-                                        label: "XLarge",
-                                        value: "xl",
-                                    },
-                                ],
-                            }),
+                        (0, r.jsx)(T.q4e, {
+                            label: "Modal Size",
+                            value: a,
+                            onChange: o,
+                            options: [
+                                {
+                                    label: "Small",
+                                    value: "sm",
+                                },
+                                {
+                                    label: "Medium",
+                                    value: "md",
+                                },
+                                {
+                                    label: "Large",
+                                    value: "lg",
+                                },
+                                {
+                                    label: "XLarge",
+                                    value: "xl",
+                                },
+                            ],
                         }),
                         (0, r.jsx)(T.oil, {
                             label: "Header Title",
@@ -3158,13 +3145,11 @@ function eA(e) {
             },
         ],
         children: [
-            (0, r.jsx)(T.xJW, {
-                title: "Graphic Type",
-                children: (0, r.jsx)(T.q4e, {
-                    value: o,
-                    onChange: s,
-                    options: d,
-                }),
+            (0, r.jsx)(T.q4e, {
+                label: "Graphic Type",
+                value: o,
+                onChange: s,
+                options: d,
             }),
             (0, r.jsx)(T.xJW, {
                 style: { paddingTop: "16px" },
@@ -3214,26 +3199,24 @@ function eC(e) {
             gap: 16,
             children: [
                 c &&
-                    (0, r.jsx)(T.xJW, {
-                        title: "Stacking Behavior",
-                        children: (0, r.jsx)(T.q4e, {
-                            value: o,
-                            onChange: s,
-                            options: [
-                                {
-                                    label: "Replace (default)",
-                                    value: "replace",
-                                },
-                                {
-                                    label: "Stack",
-                                    value: "stack",
-                                },
-                                {
-                                    label: "Replace All",
-                                    value: "replaceAll",
-                                },
-                            ],
-                        }),
+                    (0, r.jsx)(T.q4e, {
+                        label: "Stacking Behavior",
+                        value: o,
+                        onChange: s,
+                        options: [
+                            {
+                                label: "Replace (default)",
+                                value: "replace",
+                            },
+                            {
+                                label: "Stack",
+                                value: "stack",
+                            },
+                            {
+                                label: "Replace All",
+                                value: "replaceAll",
+                            },
+                        ],
                     }),
                 (0, r.jsxs)(T.Kqy, {
                     gap: 8,

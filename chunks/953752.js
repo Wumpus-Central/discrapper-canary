@@ -5,6 +5,5 @@ e.exports = {
     previewAvatars: "previewAvatars__5d148",
     ttsPreviewWrapper: "ttsPreviewWrapper__5d148",
     ttsSliderMarker: "ttsSliderMarker__5d148",
-    syncProfileThemeWithUserTheme: "syncProfileThemeWithUserTheme__5d148",
     reducedMotion: "reducedMotion__5d148",
 };

@@ -19,16 +19,16 @@ function m(e) {
             onClose: p,
             onBack: f,
         } = e,
-        [g, j] = s.useState(!1),
-        [_, b] = s.useState(null),
+        [g, _] = s.useState(!1),
+        [j, b] = s.useState(null),
         L = async () => {
-            j(!0);
+            _(!0);
             try {
                 await h();
             } catch (e) {
                 b(new a.Z(e));
             }
-            j(!1);
+            _(!1);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -59,27 +59,22 @@ function m(e) {
                 className: u.createGuild,
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(r.xJW, {
-                        title: d.intl.string(d.t.FFFAGh),
-                        children: (0, i.jsx)(r.Kx8, {
-                            value: n,
-                            maxLength: 200,
-                            placeholder: d.intl.string(d.t.VzuITE),
-                            onChange: m,
-                            error: null == _ ? void 0 : _.getAnyErrorMessage(),
-                        }),
+                    (0, i.jsx)(r.Kx8, {
+                        label: d.intl.string(d.t.FFFAGh),
+                        value: n,
+                        maxLength: 200,
+                        placeholder: d.intl.string(d.t.VzuITE),
+                        onChange: m,
+                        error: null == j ? void 0 : j.getAnyErrorMessage(),
                     }),
-                    (0, i.jsx)(r.xJW, {
-                        className: u.formItemSpaced,
-                        title: d.intl.string(d.t.Olo8FB),
-                        children: (0, i.jsx)(r.q4e, {
-                            placeholder: d.intl.string(d.t.XqMe3N),
-                            options: (0, c.b7)(t),
-                            clearable: !1,
-                            value: x,
-                            onChange: C,
-                            maxVisibleItems: 4,
-                        }),
+                    (0, i.jsx)(r.q4e, {
+                        label: d.intl.string(d.t.Olo8FB),
+                        placeholder: d.intl.string(d.t.XqMe3N),
+                        options: (0, c.b7)(t),
+                        clearable: !1,
+                        value: x,
+                        onChange: C,
+                        maxVisibleItems: 4,
                     }),
                 ],
             }),

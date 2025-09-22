@@ -1,14 +1,15 @@
-r.d(t, { default: () => b }), r(388685);
+r.d(t, { default: () => g }), r(388685);
 var n = r(951288),
     s = r(647438),
-    i = r(481060),
-    o = r(153867),
-    l = r(663993),
-    a = r(771845),
-    c = r(981631),
-    h = r(388032),
-    p = r(713970);
-function u(e, t, r) {
+    i = r(886025),
+    o = r(481060),
+    l = r(153867),
+    a = r(663993),
+    c = r(771845),
+    h = r(981631),
+    p = r(388032),
+    u = r(713970);
+function d(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,52 +22,51 @@ function u(e, t, r) {
         e
     );
 }
-let d = (0, l.Un)({
+let b = (0, a.Un)({
     createPromise: () => r.e("4848").then(r.bind(r, 797967)),
     webpackId: 797967,
 });
-class m extends s.PureComponent {
+class f extends s.PureComponent {
     render() {
         let { transitionState: e } = this.props,
             { name: t, color: r } = this.state;
-        return (0, n.jsxs)(i.Y0X, {
+        return (0, n.jsxs)(o.Y0X, {
             transitionState: e,
-            "aria-label": h.intl.string(h.t.Dx7im5),
-            size: i.CgR.DYNAMIC,
+            "aria-label": p.intl.string(p.t.Dx7im5),
+            size: o.CgR.DYNAMIC,
             parentComponent: "GuildFolderSettings",
             children: [
-                (0, n.jsxs)(i.xBx, {
-                    className: p.header,
+                (0, n.jsxs)(o.xBx, {
+                    className: u.header,
                     separator: !1,
                     children: [
-                        (0, n.jsx)(i.X6q, {
+                        (0, n.jsx)(o.X6q, {
                             variant: "heading-lg/semibold",
-                            children: h.intl.string(h.t.Dx7im5),
+                            children: p.intl.string(p.t.Dx7im5),
                         }),
-                        (0, n.jsx)(i.olH, { onClick: this.close }),
+                        (0, n.jsx)(o.olH, { onClick: this.close }),
                     ],
                 }),
-                (0, n.jsx)(i.hzk, {
+                (0, n.jsx)(o.hzk, {
                     children: (0, n.jsx)("form", {
                         onSubmit: this.handleSubmit,
-                        children: (0, n.jsxs)(i.Kqy, {
+                        children: (0, n.jsxs)(o.Kqy, {
                             gap: 16,
                             children: [
-                                (0, n.jsx)(i.oil, {
-                                    label: h.intl.string(h.t.tGRbjI),
-                                    maxLength: c.dYL,
+                                (0, n.jsx)(o.oil, {
+                                    label: p.intl.string(p.t.tGRbjI),
+                                    maxLength: h.dYL,
                                     value: t,
                                     onChange: this.handleNameChange,
-                                    placeholder: h.intl.string(h.t.xV9hVl),
+                                    placeholder: p.intl.string(p.t.xV9hVl),
                                     autoFocus: !0,
                                 }),
-                                (0, n.jsx)(i.xJW, {
-                                    title: h.intl.string(h.t.xpurRE),
-                                    className: p.formItem,
-                                    children: (0, n.jsx)(d, {
-                                        defaultColor: c.Wyy,
-                                        colors: c.pmI,
-                                        value: null != r ? r : c.Wyy,
+                                (0, n.jsx)(i.N, {
+                                    label: p.intl.string(p.t.xpurRE),
+                                    children: (0, n.jsx)(b, {
+                                        defaultColor: h.Wyy,
+                                        colors: h.pmI,
+                                        value: null != r ? r : h.Wyy,
                                         onChange: this.handleColorChange,
                                     }),
                                 }),
@@ -74,10 +74,10 @@ class m extends s.PureComponent {
                         }),
                     }),
                 }),
-                (0, n.jsx)(i.mzw, {
-                    children: (0, n.jsx)(i.zxk, {
+                (0, n.jsx)(o.mzw, {
+                    children: (0, n.jsx)(o.zxk, {
                         variant: "primary",
-                        text: h.intl.string(h.t.i4jeWV),
+                        text: p.intl.string(p.t.i4jeWV),
                         type: "submit",
                         onClick: this.handleSubmit,
                     }),
@@ -88,24 +88,24 @@ class m extends s.PureComponent {
     constructor(...e) {
         var t;
         super(...e),
-            u(this, "state", {
+            d(this, "state", {
                 name: null != (t = this.props.folderName) ? t : "",
                 color: this.props.folderColor,
             }),
-            u(this, "close", () => {
+            d(this, "close", () => {
                 this.props.onClose();
             }),
-            u(this, "handleNameChange", (e) => {
+            d(this, "handleNameChange", (e) => {
                 this.setState({ name: e });
             }),
-            u(this, "handleColorChange", (e) => {
+            d(this, "handleColorChange", (e) => {
                 this.setState({ color: e });
             }),
-            u(this, "handleSubmit", (e) => {
+            d(this, "handleSubmit", (e) => {
                 e.preventDefault();
                 let { folderId: t } = this.props,
                     { name: r, color: n } = this.state,
-                    s = a.ZP.getGuildFolders().map((e) =>
+                    s = c.ZP.getGuildFolders().map((e) =>
                         e.folderId === t
                             ? (function (e, t) {
                                   return (
@@ -136,7 +136,7 @@ class m extends s.PureComponent {
                                                   }),
                                               )),
                                               n.forEach(function (t) {
-                                                  u(e, t, r[t]);
+                                                  d(e, t, r[t]);
                                               });
                                       }
                                       return e;
@@ -148,8 +148,8 @@ class m extends s.PureComponent {
                               )
                             : e,
                     );
-                (0, o.V1)(s), this.close();
+                (0, l.V1)(s), this.close();
             });
     }
 }
-let b = m;
+let g = f;

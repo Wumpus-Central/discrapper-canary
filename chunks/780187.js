@@ -10,5 +10,4 @@ e.exports = {
     modalFooter: "modalFooter_ad198f",
     content: "content_ad198f",
     help: "help_ad198f",
-    password: "password_ad198f",
 };

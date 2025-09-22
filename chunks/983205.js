@@ -5,40 +5,41 @@ var r = n(951288),
     a = n(176354),
     o = n(388032);
 let s = (e) => {
-    let { name: t, onNameChange: n } = e,
-        s = l.useRef(null),
+    let { name: t, onNameChange: n, label: s } = e,
         u = l.useRef(null),
-        [c, d] = l.useState(!1),
-        m = l.useCallback(
+        c = l.useRef(null),
+        [d, m] = l.useState(!1),
+        h = l.useCallback(
             (e) => {
                 var t;
-                (u.current = null == (t = s.current) ? void 0 : t.selectionStart),
+                (c.current = null == (t = u.current) ? void 0 : t.selectionStart),
                     n((e = (e = e.replace(/\s/g, "_")).length < 2 ? e : a.ZP.sanitizeEmojiName(e)));
             },
             [n],
         );
     l.useEffect(() => {
-        if (null != u.current) {
+        if (null != c.current) {
             var e;
-            null == (e = s.current) || e.setSelectionRange(u.current, u.current), (u.current = null);
+            null == (e = u.current) || e.setSelectionRange(c.current, c.current), (c.current = null);
         }
     });
-    let f = l.useCallback(() => {
-            d(!1);
+    let g = l.useCallback(() => {
+            m(!1);
         }, []),
-        g = l.useCallback(() => {
-            d(!0);
+        f = l.useCallback(() => {
+            m(!0);
         }, []);
     return (0, r.jsx)(i.oil, {
-        inputRef: s,
-        error: c ? "" : void 0,
+        inputRef: u,
+        error: d ? "" : void 0,
         minLength: 2,
         value: t,
-        onChange: m,
+        onChange: h,
         placeholder: o.intl.string(o.t.U2JFHR),
         name: "emoji_name",
-        onBlur: f,
-        onFocus: g,
+        onBlur: g,
+        onFocus: f,
+        label: s,
         required: !0,
     });
 };

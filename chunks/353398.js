@@ -9,8 +9,8 @@ n.d(t, {
 var r,
     i = n(951288),
     l = n(647438),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(512722),
     c = n.n(o),
     d = n(442837),
@@ -18,8 +18,8 @@ var r,
     m = n(755721),
     g = n(481060),
     p = n(570140),
-    h = n(484614),
-    f = n(852860),
+    f = n(484614),
+    h = n(852860),
     b = n(881052),
     x = n(751189),
     j = n(409059),
@@ -96,7 +96,7 @@ function T() {
         n = async () => {
             t(!0), await S.save(), t(!1);
         };
-    return (0, i.jsx)(f.Z, {
+    return (0, i.jsx)(h.Z, {
         submitting: e,
         onReset: S.reset,
         onSave: n,
@@ -132,7 +132,7 @@ function R() {
     c()(null != e, "guild cannot be null");
     let t = (0, d.e7)([S], () => S.error),
         [n, r] = l.useState(!0),
-        { loading: a, guildTemplate: s } = (function (e) {
+        { loading: s, guildTemplate: a } = (function (e) {
             let [t, n] = l.useState(!0);
             return (
                 l.useEffect(() => {
@@ -153,14 +153,14 @@ function R() {
         })(e.id);
     if (
         (l.useEffect(() => {
-            if (n && !a) {
-                if (null != s) {
+            if (n && !s) {
+                if (null != a) {
                     var e, t;
-                    S.setName(null != (e = s.name) ? e : ""), S.setDescription(null != (t = s.description) ? t : "");
+                    S.setName(null != (e = a.name) ? e : ""), S.setDescription(null != (t = a.description) ? t : "");
                 }
                 r(!1);
             }
-        }, [n, s, a]),
+        }, [n, a, s]),
         l.useEffect(
             () => () => {
                 S.reset(), S.setError(null);
@@ -178,12 +178,13 @@ function R() {
             : (0, i.jsx)(g.$jN, { className: N.marginTop40 });
     let o =
         null != t && null == t.getFirstFieldErrorMessage("name") && null == t.getFirstFieldErrorMessage("description");
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, i.jsxs)(g.Kqy, {
+        gap: 20,
         children: [
             (0, i.jsx)(A, {}),
             (0, i.jsx)(L, {
                 guild: e,
-                guildTemplate: s,
+                guildTemplate: a,
             }),
             o
                 ? (0, i.jsx)(g.Text, {
@@ -313,44 +314,37 @@ function A() {
     let e = (0, d.e7)([S], () => S.name),
         t = (0, d.e7)([S], () => S.description),
         n = (0, d.e7)([S], () => S.error),
-        [r, a] = l.useState(!1),
-        s = l.useCallback(() => {
-            a(!1);
+        [r, s] = l.useState(!1),
+        a = l.useCallback(() => {
+            s(!1);
         }, []),
         o = l.useCallback(() => {
-            a(!0);
+            s(!0);
         }, []),
         c = l.useMemo(() => {
             if (!(r || e.length < 1 || P(e))) return y.intl.string(y.t.IHAlh4);
         }, [e, r]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.xJW, {
-                className: N.marginBottom20,
-                title: y.intl.string(y.t.z1a9R0),
+            (0, i.jsx)(g.oil, {
+                label: y.intl.string(y.t.z1a9R0),
                 required: !0,
-                error: null == n ? void 0 : n.getFirstFieldErrorMessage("name"),
-                children: (0, i.jsx)(g.oil, {
-                    value: e,
-                    onChange: (e) => S.setName(e),
-                    placeholder: y.intl.string(y.t.bMlpvr),
-                    maxLength: 100,
-                    onBlur: s,
-                    onFocus: o,
-                    autoFocus: !0,
-                    error: c,
-                }),
+                error: null != c ? c : null == n ? void 0 : n.getFirstFieldErrorMessage("name"),
+                value: e,
+                onChange: (e) => S.setName(e),
+                placeholder: y.intl.string(y.t.bMlpvr),
+                maxLength: 100,
+                onBlur: a,
+                onFocus: o,
+                autoFocus: !0,
             }),
-            (0, i.jsx)(g.xJW, {
-                className: N.marginBottom20,
-                title: y.intl.string(y.t.GxirWV),
+            (0, i.jsx)(g.Kx8, {
+                label: y.intl.string(y.t.GxirWV),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage("description"),
-                children: (0, i.jsx)(g.Kx8, {
-                    value: t,
-                    onChange: (e) => S.setDescription(e),
-                    placeholder: y.intl.string(y.t.n1FBXl),
-                    maxLength: 120,
-                }),
+                value: t,
+                onChange: (e) => S.setDescription(e),
+                placeholder: y.intl.string(y.t.n1FBXl),
+                maxLength: 120,
             }),
         ],
     });
@@ -363,7 +357,7 @@ function L(e) {
               children: [
                   (0, i.jsx)(g.xJW, {
                       title: y.intl.string(y.t.zGGcLy),
-                      children: (0, i.jsx)(h.Z, {
+                      children: (0, i.jsx)(f.Z, {
                           buttonLook: m.zx.Looks.FILLED,
                           buttonColor: m.zx.Colors.BRAND,
                           value: (0, v.Z)(n.code),
@@ -377,7 +371,7 @@ function L(e) {
                           children: y.intl.string(y.t.aWsjtL),
                       }),
                   (0, i.jsxs)("div", {
-                      className: s()(N.marginTop20, C.buttonContainer),
+                      className: a()(N.marginTop20, C.buttonContainer),
                       children: [
                           n.isDirty &&
                               (0, i.jsx)(M, {
@@ -407,35 +401,35 @@ function L(e) {
 function k(e) {
     let { guild: t } = e,
         n = (0, d.e7)([S], () => S.name),
-        [r, a] = l.useState(!1),
-        s = async () => {
-            S.setError(null), a(!0);
+        [r, s] = l.useState(!1),
+        a = async () => {
+            S.setError(null), s(!0);
             try {
                 await x.Z.createGuildTemplate(t.id, S.name, S.description);
             } catch (e) {
                 S.setError(new b.Hx(e));
             }
-            a(!1);
+            s(!1);
         };
     return (0, i.jsx)(g.zxk, {
         variant: "primary",
         text: y.intl.string(y.t.Wxdi8P),
         loading: r,
         disabled: !P(n),
-        onClick: s,
+        onClick: a,
     });
 }
 function M(e) {
     let { guild: t, guildTemplate: n } = e,
-        [r, a] = l.useState(!1),
-        s = async () => {
-            S.setError(null), a(!0);
+        [r, s] = l.useState(!1),
+        a = async () => {
+            S.setError(null), s(!0);
             try {
                 await x.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
                 S.setError(new b.Hx(e));
             }
-            a(!1);
+            s(!1);
         };
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
@@ -444,21 +438,21 @@ function M(e) {
             variant: "primary",
             text: y.intl.string(y.t["Nw+0Y2"]),
             loading: r,
-            onClick: s,
+            onClick: a,
         }),
     });
 }
 function G(e) {
     let { guild: t, guildTemplate: n } = e,
-        [r, a] = l.useState(!1),
-        s = async () => {
+        [r, s] = l.useState(!1),
+        a = async () => {
             S.setError(null);
             try {
                 await x.Z.deleteGuildTemplate(t.id, n.code), S.setName(""), S.setDescription("");
             } catch (e) {
                 S.setError(new b.Hx(e));
             }
-            a(!1);
+            s(!1);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -468,13 +462,13 @@ function G(e) {
                 children: (0, i.jsx)(g.zxk, {
                     variant: "critical-secondary",
                     text: y.intl.string(y.t["cN/RFB"]),
-                    onClick: () => a(!0),
+                    onClick: () => s(!0),
                 }),
             }),
             r
                 ? (0, i.jsx)(D, {
-                      confirm: s,
-                      cancel: () => a(!1),
+                      confirm: a,
+                      cancel: () => s(!1),
                   })
                 : null,
         ],

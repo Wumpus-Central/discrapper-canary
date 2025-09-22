@@ -23,15 +23,15 @@ function f(e) {
             guildTemplate: n,
             onClose: f,
             onBack: g,
-            onHubGuildInfoSet: j,
-            onGuildCreated: _,
+            onHubGuildInfoSet: _,
+            onGuildCreated: j,
             isSlideReady: b,
             hasFooter: L = !0,
             isCommunity: N = !1,
         } = e,
         [I, y] = s.useState(m.Z.getGuildNameSuggestion()),
         [v, Z] = s.useState(null),
-        [S, E] = s.useState(!1),
+        [E, S] = s.useState(!1),
         [T, O] = s.useState(null),
         B = !!(null == (t = u.default.getCurrentUser()) ? void 0 : t.isStaff()),
         [M, k] = s.useState(B),
@@ -44,29 +44,29 @@ function f(e) {
     let G = s.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != n)) {
-                    E(!0), O(null);
+                    S(!0), O(null);
                     try {
-                        if (null != j) j(I, v);
+                        if (null != _) _(I, v);
                         else {
                             let e = await x.Z.createGuildFromTemplate(I, v, n, N, M);
-                            a.Z.transitionToGuildSync(e.id), null == _ || _(e.id);
+                            a.Z.transitionToGuildSync(e.id), null == j || j(e.id);
                         }
                     } catch (e) {
                         O(e);
                     }
-                    E(!1);
+                    S(!1);
                 }
             },
-            [n, j, I, v, N, M, _],
+            [n, _, I, v, N, M, j],
         ),
         w = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.zxk, {
                     variant: "primary",
-                    text: null != j ? h.intl.string(h.t.PDTjLC) : h.intl.string(h.t.CumH4u),
+                    text: null != _ ? h.intl.string(h.t.PDTjLC) : h.intl.string(h.t.CumH4u),
                     onClick: G,
                     disabled: 0 === I.length,
-                    loading: S,
+                    loading: E,
                 }),
                 (0, i.jsx)(l.zx, {
                     className: p.backButton,
@@ -116,23 +116,15 @@ function f(e) {
                         (0, i.jsxs)("form", {
                             onSubmit: G,
                             children: [
-                                (0, i.jsxs)(r.xJW, {
-                                    className: p.nameInput,
+                                (0, i.jsx)(r.oil, {
+                                    label: h.intl.string(h.t.dBih7e),
+                                    required: !0,
                                     error: null == T ? void 0 : T.getFirstFieldErrorMessage("name"),
-                                    children: [
-                                        (0, i.jsx)(r.vwX, {
-                                            htmlFor: H,
-                                            children: h.intl.string(h.t.dBih7e),
-                                        }),
-                                        (0, i.jsx)(r.oil, {
-                                            type: "text",
-                                            value: I,
-                                            maxLength: 100,
-                                            onChange: y,
-                                            inputRef: D,
-                                            id: H,
-                                        }),
-                                    ],
+                                    value: I,
+                                    maxLength: 100,
+                                    onChange: y,
+                                    inputRef: D,
+                                    id: H,
                                 }),
                                 B &&
                                     (0, i.jsx)(r.j7V, {

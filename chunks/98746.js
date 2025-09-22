@@ -1,4 +1,4 @@
-n.d(e, { default: () => S }), n(388685), n(781311), n(539854);
+n.d(t, { default: () => C }), n(388685), n(781311), n(539854);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
@@ -9,15 +9,15 @@ var r = n(951288),
     c = n(481060),
     d = n(749210),
     p = n(910693),
-    g = n(501517),
-    b = n(592125),
+    b = n(501517),
+    g = n(592125),
     v = n(70956),
     h = n(5192),
-    m = n(981631),
+    O = n(981631),
     j = n(388032),
-    O = n(764295),
-    f = n(768716);
-function x() {
+    f = n(764295),
+    m = n(768716);
+function y() {
     return [
         {
             value: 0,
@@ -49,65 +49,65 @@ function x() {
         },
     ];
 }
-let y = x()[1].value,
-    C = x()[0].value;
-function S(t) {
+let S = y()[1].value,
+    x = y()[0].value;
+function C(e) {
     let {
-            guildId: e,
+            guildId: t,
             user: n,
             location: i,
             userIds: v,
-            onBanMultiple: S,
-            transitionState: _,
-            onClose: P,
-            canBulkBan: k = !1,
-            modReportId: R,
-        } = t,
-        [E, T] = l.useState(null != R ? C : y),
-        [Z, M] = l.useState(""),
-        [w, N] = l.useState(null),
-        { isModReportClosed: D, isModReport: I } = (0, o.cj)([b.Z], () => {
-            let t = b.Z.getChannel(R);
+            onBanMultiple: C,
+            transitionState: P,
+            onClose: k,
+            canBulkBan: R = !1,
+            modReportId: _,
+        } = e,
+        [E, Z] = l.useState(null != _ ? x : S),
+        [M, w] = l.useState(""),
+        [T, D] = l.useState(null),
+        { isModReportClosed: N, isModReport: I } = (0, o.cj)([g.Z], () => {
+            let e = g.Z.getChannel(_);
             return {
-                isModReportClosed: null == t ? void 0 : t.isArchivedThread(),
-                isModReport: null == t ? void 0 : t.isModeratorReportChannel(),
+                isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
+                isModReport: null == e ? void 0 : e.isModeratorReportChannel(),
             };
         }),
         [A, K] = l.useState(!1),
         [U, Y] = l.useState(!1),
-        F = (0, p.sE)(e, {
+        F = (0, p.sE)(t, {
             location: i,
             targetUserId: null == n ? void 0 : n.id,
             targets: v,
         }),
-        J = l.useCallback(() => {
-            let t = null != w ? w : Z;
-            if (null != S) {
-                if (!(null != v && (null == v ? void 0 : v.size) > 0 && k) || A) return;
-                if ("" === Z.trim() && !A) return void K(!0);
-                S(e, [...v], E, t);
+        B = l.useCallback(() => {
+            let e = null != T ? T : M;
+            if (null != C) {
+                if (!(null != v && (null == v ? void 0 : v.size) > 0 && R) || A) return;
+                if ("" === M.trim() && !A) return void K(!0);
+                C(t, [...v], E, e);
             } else {
                 if (null == n) return;
-                d.Z.banUser(e, null == n ? void 0 : n.id, E, t, R).then(() => {
-                    U && null != R && g.Z.resolveFlag(R);
+                d.Z.banUser(t, null == n ? void 0 : n.id, E, e, _).then(() => {
+                    U && null != _ && b.Z.resolveFlag(_);
                 });
             }
-            F(p.jQ.BAN), P();
-        }, [w, Z, S, F, P, v, k, A, e, E, n, R, U]),
-        W = l.useCallback((t) => {
-            T(t);
+            F(p.jQ.BAN), k();
+        }, [T, M, C, F, k, v, R, A, t, E, n, _, U]),
+        X = l.useCallback((e) => {
+            Z(e);
         }, []),
-        B = l.useCallback((t) => {
-            let { value: e } = t;
-            M(e), K(!1), N(null);
+        q = l.useCallback((e) => {
+            let { value: t } = e;
+            w(t), K(!1), D(null);
         }, []),
-        X = l.useCallback(
-            (t) => {
-                N(t), A && K(!1);
+        G = l.useCallback(
+            (e) => {
+                D(e), A && K(!1);
             },
             [A],
         ),
-        G = I && !D && null != R,
+        J = I && !N && null != _,
         L = [
             {
                 name: j.intl.string(j.t.tamLhY),
@@ -126,41 +126,41 @@ function S(t) {
                 value: "other",
             },
         ],
-        q = (() => {
-            if (null != S && null != v)
+        W = (() => {
+            if (null != C && null != v)
                 return j.intl.formatToPlainString(j.t.HVJexc, { count: null == v ? void 0 : v.size });
             if (null == n) return "";
-            let t = h.ZP.getName(e, null, n);
-            return j.intl.formatToPlainString(null != R ? j.t.WDR8XV : j.t.jeKpoq, { username: "@".concat(t) });
+            let e = h.ZP.getName(t, null, n);
+            return j.intl.formatToPlainString(null != _ ? j.t.WDR8XV : j.t.jeKpoq, { username: "@".concat(e) });
         })(),
-        H = null == R ? null : j.intl.string(j.t.pQjhIC);
+        H = null == _ ? null : j.intl.string(j.t.pQjhIC);
     return (0, r.jsx)(s.Modal, {
-        onClose: P,
-        transitionState: _,
-        title: q,
+        onClose: k,
+        transitionState: P,
+        title: W,
         subtitle: null != H ? H : void 0,
         actions: (() => {
-            let t = [];
+            let e = [];
             return (
                 I ||
-                    t.push({
+                    e.push({
                         variant: "secondary",
                         text: j.intl.string(j.t["ETE/oK"]),
-                        onClick: P,
+                        onClick: k,
                     }),
-                t.push({
+                e.push({
                     variant: "critical-primary",
                     text: j.intl.string(j.t["5MBJ5O"]),
-                    onClick: J,
+                    onClick: B,
                 }),
-                t
+                e
             );
         })(),
-        actionBarInput: G
+        actionBarInput: J
             ? (0, r.jsx)(c.XZJ, {
                   checked: U,
-                  onChange: (t) => Y(t),
-                  label: j.intl.string(O.default["8yIKen"]),
+                  onChange: (e) => Y(e),
+                  label: j.intl.string(f.default["8yIKen"]),
               })
             : void 0,
         children: (0, r.jsxs)(c.Kqy, {
@@ -171,99 +171,80 @@ function S(t) {
                     direction: "vertical",
                     gap: 8,
                     children: [
-                        (0, r.jsxs)(c.xJW, {
-                            titleClassName: f.title,
-                            title: (0, r.jsx)(c.Text, {
-                                variant: "text-md/medium",
-                                color: "text-primary",
-                                children: j.intl.string(null != R ? j.t["+KCLVl"] : j.t.w4Ivys),
+                        A &&
+                            (0, r.jsx)(c.kzN, {
+                                className: m.error,
+                                children: j.intl.string(j.t.IrYX19),
                             }),
-                            children: [
-                                A &&
-                                    (0, r.jsx)(c.kzN, {
-                                        className: f.error,
-                                        children: j.intl.string(j.t.IrYX19),
-                                    }),
-                                (0, r.jsx)(u.Gu, {
-                                    className: f.radioGroup,
-                                    value: Z,
-                                    options: L.map((t) => {
-                                        var e, n;
-                                        return (
-                                            (e = (function (t) {
-                                                for (var e = 1; e < arguments.length; e++) {
-                                                    var n = null != arguments[e] ? arguments[e] : {},
-                                                        r = Object.keys(n);
-                                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                                        (r = r.concat(
-                                                            Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                                            }),
-                                                        )),
-                                                        r.forEach(function (e) {
-                                                            var r;
-                                                            (r = n[e]),
-                                                                e in t
-                                                                    ? Object.defineProperty(t, e, {
-                                                                          value: r,
-                                                                          enumerable: !0,
-                                                                          configurable: !0,
-                                                                          writable: !0,
-                                                                      })
-                                                                    : (t[e] = r);
-                                                        });
-                                                }
-                                                return t;
-                                            })({}, t)),
-                                            (n = n = { radioBarClassName: f.radioItem }),
-                                            Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                                                : (function (t, e) {
-                                                      var n = Object.keys(t);
-                                                      if (Object.getOwnPropertySymbols) {
-                                                          var r = Object.getOwnPropertySymbols(t);
-                                                          n.push.apply(n, r);
-                                                      }
-                                                      return n;
-                                                  })(Object(n)).forEach(function (t) {
-                                                      Object.defineProperty(
-                                                          e,
-                                                          t,
-                                                          Object.getOwnPropertyDescriptor(n, t),
-                                                      );
-                                                  }),
-                                            e
-                                        );
-                                    }),
-                                    onChange: B,
-                                    withTransparentBackground: !0,
-                                }),
-                            ],
+                        (0, r.jsx)(u.Gu, {
+                            required: !0,
+                            label: j.intl.string(null != _ ? j.t["+KCLVl"] : j.t.w4Ivys),
+                            className: m.radioGroup,
+                            value: M,
+                            options: L.map((e) => {
+                                var t, n;
+                                return (
+                                    (t = (function (e) {
+                                        for (var t = 1; t < arguments.length; t++) {
+                                            var n = null != arguments[t] ? arguments[t] : {},
+                                                r = Object.keys(n);
+                                            "function" == typeof Object.getOwnPropertySymbols &&
+                                                (r = r.concat(
+                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    }),
+                                                )),
+                                                r.forEach(function (t) {
+                                                    var r;
+                                                    (r = n[t]),
+                                                        t in e
+                                                            ? Object.defineProperty(e, t, {
+                                                                  value: r,
+                                                                  enumerable: !0,
+                                                                  configurable: !0,
+                                                                  writable: !0,
+                                                              })
+                                                            : (e[t] = r);
+                                                });
+                                        }
+                                        return e;
+                                    })({}, e)),
+                                    (n = n = { radioBarClassName: m.radioItem }),
+                                    Object.getOwnPropertyDescriptors
+                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                        : (function (e, t) {
+                                              var n = Object.keys(e);
+                                              if (Object.getOwnPropertySymbols) {
+                                                  var r = Object.getOwnPropertySymbols(e);
+                                                  n.push.apply(n, r);
+                                              }
+                                              return n;
+                                          })(Object(n)).forEach(function (e) {
+                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                                          }),
+                                    t
+                                );
+                            }),
+                            onChange: q,
+                            withTransparentBackground: !0,
                         }),
                         (0, r.jsx)("div", {
-                            className: a()(f.reasonFreeText, { [f.hidden]: "other" !== Z }),
+                            className: a()(m.reasonFreeText, { [m.hidden]: "other" !== M }),
                             children: (0, r.jsx)(c.Kx8, {
-                                maxLength: m.GNZ,
-                                onChange: X,
-                                value: null != w ? w : "",
+                                maxLength: O.GNZ,
+                                onChange: G,
+                                value: null != T ? T : "",
                                 rows: 5,
                                 autoFocus: !0,
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(c.xJW, {
-                    titleClassName: f.title,
-                    title: (0, r.jsx)(c.Text, {
-                        variant: "text-md/medium",
-                        color: "text-primary",
-                        children: j.intl.string(null != R ? j.t.ERSM8P : j.t["8l3W09"]),
-                    }),
-                    children: (0, r.jsx)(c.q4e, {
-                        options: x(),
-                        value: E,
-                        onChange: W,
-                    }),
+                (0, r.jsx)(c.q4e, {
+                    label: j.intl.string(null != _ ? j.t.ERSM8P : j.t["8l3W09"]),
+                    options: y(),
+                    value: E,
+                    onChange: X,
                 }),
             ],
         }),

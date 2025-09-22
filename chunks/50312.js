@@ -1,7 +1,6 @@
 e.exports = {
     modalRoot: "modalRoot__0c027",
     headerContainer: "headerContainer__0c027",
-    helpdeskLink: "helpdeskLink__0c027",
     ratingBody: "ratingBody__0c027",
     footer: "footer__0c027",
     noTitleCase: "noTitleCase__0c027",

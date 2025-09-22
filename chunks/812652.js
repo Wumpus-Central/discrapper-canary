@@ -19,7 +19,7 @@ var i = n(268146),
     v = n(637824),
     j = n(388032),
     b = n(355669);
-let S = [
+let y = [
         {
             value: g.tI.PRESET_VIDEO,
             canUse: (e) => !0,
@@ -33,7 +33,7 @@ let S = [
             canUse: (e) => !0,
         },
     ],
-    y = [
+    S = [
         {
             value: g.LY.RESOLUTION_720,
             canUse: (e) => !0,
@@ -116,45 +116,47 @@ function w(e) {
         children: [
             (0, r.jsx)(l.kSQ, {
                 label: j.intl.string(v.default.P2pjm5),
-                children: S.filter((e) => {
-                    let { canUse: t } = e;
-                    return t(A);
-                }).map((e) => {
-                    let { value: t } = e;
-                    return (0, r.jsx)(
-                        l.k5B,
-                        {
-                            group: "preset",
-                            id: "stream-preset-".concat(t),
-                            checked: T === t,
-                            label: (0, u.L)(t),
-                            subtext: (function (e) {
-                                switch (e) {
-                                    case g.tI.PRESET_VIDEO:
-                                        return j.intl.format(v.default.G5O1Mz, {
-                                            resolution: (0, f.M)(B),
-                                            frameRate: G,
-                                        });
-                                    case g.tI.PRESET_DOCUMENTS:
-                                        return j.intl.format(v.default["8tcFLy"], {
-                                            resolution: (0, f.M)(U),
-                                            frameRate: W,
-                                        });
-                                    case g.tI.PRESET_CUSTOM:
-                                        return;
-                                    default:
-                                        throw Error("No case implemented for ".concat(e));
-                                }
-                            })(t),
-                            action: () =>
-                                M({
-                                    type: "set_preset",
-                                    preset: t,
-                                }),
-                        },
-                        t,
-                    );
-                }),
+                children: y
+                    .filter((e) => {
+                        let { canUse: t } = e;
+                        return t(A);
+                    })
+                    .map((e) => {
+                        let { value: t } = e;
+                        return (0, r.jsx)(
+                            l.k5B,
+                            {
+                                group: "preset",
+                                id: "stream-preset-".concat(t),
+                                checked: T === t,
+                                label: (0, u.L)(t),
+                                subtext: (function (e) {
+                                    switch (e) {
+                                        case g.tI.PRESET_VIDEO:
+                                            return j.intl.format(v.default.G5O1Mz, {
+                                                resolution: (0, f.M)(B),
+                                                frameRate: G,
+                                            });
+                                        case g.tI.PRESET_DOCUMENTS:
+                                            return j.intl.format(v.default["8tcFLy"], {
+                                                resolution: (0, f.M)(U),
+                                                frameRate: W,
+                                            });
+                                        case g.tI.PRESET_CUSTOM:
+                                            return;
+                                        default:
+                                            throw Error("No case implemented for ".concat(e));
+                                    }
+                                })(t),
+                                action: () =>
+                                    M({
+                                        type: "set_preset",
+                                        preset: t,
+                                    }),
+                            },
+                            t,
+                        );
+                    }),
             }),
             T === g.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
@@ -163,41 +165,39 @@ function w(e) {
                         (0, r.jsx)(l.sNh, {
                             id: "resolution",
                             label: j.intl.string(v.default.IG5n0d),
-                            children: y
-                                .filter((e) => {
-                                    let { canUse: t } = e;
-                                    return t(A);
-                                })
-                                .map((e) => {
-                                    let { value: t } = e;
-                                    return (0, r.jsx)(
-                                        l.k5B,
-                                        {
-                                            group: "resolution",
-                                            id: "stream-option-resolution-".concat(t),
-                                            checked: E === t,
-                                            label:
-                                                t !== g.LY.RESOLUTION_720
-                                                    ? (0, r.jsx)(O, { label: (0, f.M)(t) })
-                                                    : (0, f.M)(t),
-                                            action: () =>
-                                                (function (e) {
-                                                    if (!(0, d.Z)(T, e, R, a.default.getCurrentUser(), L))
-                                                        return (
-                                                            b(),
-                                                            (0, p.E)({
-                                                                analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
-                                                            })
-                                                        );
-                                                    M({
-                                                        type: "set_resolution",
-                                                        resolution: e,
-                                                    });
-                                                })(t),
-                                        },
-                                        t,
-                                    );
-                                }),
+                            children: S.filter((e) => {
+                                let { canUse: t } = e;
+                                return t(A);
+                            }).map((e) => {
+                                let { value: t } = e;
+                                return (0, r.jsx)(
+                                    l.k5B,
+                                    {
+                                        group: "resolution",
+                                        id: "stream-option-resolution-".concat(t),
+                                        checked: E === t,
+                                        label:
+                                            t !== g.LY.RESOLUTION_720
+                                                ? (0, r.jsx)(O, { label: (0, f.M)(t) })
+                                                : (0, f.M)(t),
+                                        action: () =>
+                                            (function (e) {
+                                                if (!(0, d.Z)(T, e, R, a.default.getCurrentUser(), L))
+                                                    return (
+                                                        b(),
+                                                        (0, p.E)({
+                                                            analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION,
+                                                        })
+                                                    );
+                                                M({
+                                                    type: "set_resolution",
+                                                    resolution: e,
+                                                });
+                                            })(t),
+                                    },
+                                    t,
+                                );
+                            }),
                         }),
                         (0, r.jsx)(l.sNh, {
                             id: "frame-rate",

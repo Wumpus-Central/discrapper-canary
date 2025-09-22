@@ -372,34 +372,25 @@ function ef() {
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(_.xJW, {
-                title: W.intl.string(W.t.uSOPWl),
-                className: q.marginTop20,
-                children: [
-                    (0, r.jsx)(_.R94, {
-                        type: _.R94.Types.DESCRIPTION,
-                        className: q.marginBottom8,
-                        children: W.intl.string(W.t["86hjzc"]),
-                    }),
-                    (0, r.jsx)(d.E, {
-                        options: [
-                            {
-                                name: W.intl.string(W.t.YEOEi4),
-                                value: "username",
-                            },
-                            {
-                                name: W.intl.string(W.t.mQaro6),
-                                value: "dot",
-                            },
-                            {
-                                name: W.intl.string(W.t.Ji2EVF),
-                                value: "hidden",
-                            },
-                        ],
-                        onChange: (e) => t(e),
-                        value: e,
-                    }),
+            (0, r.jsx)(d.E, {
+                label: W.intl.string(W.t.uSOPWl),
+                description: W.intl.string(W.t["86hjzc"]),
+                options: [
+                    {
+                        name: W.intl.string(W.t.YEOEi4),
+                        value: "username",
+                    },
+                    {
+                        name: W.intl.string(W.t.mQaro6),
+                        value: "dot",
+                    },
+                    {
+                        name: W.intl.string(W.t.Ji2EVF),
+                        value: "hidden",
+                    },
                 ],
+                onChange: t,
+                value: e,
             }),
             (0, r.jsx)(_.$i$, { className: q.marginTop20 }),
         ],
@@ -430,10 +421,9 @@ function ep() {
         t = i.useRef(null);
     (0, G.Z)(t, Z.rP.SYNC_PROFILE_THEME_WITH_USER_THEME);
     let n = (0, B.Z)();
-    return (0, r.jsx)(_.xJW, {
+    return (0, r.jsx)(_.hjN, {
         ref: t,
         title: W.intl.string(W.t.BT8Bmp),
-        className: o()(q.marginTop20, z.syncProfileThemeWithUserTheme),
         children: (0, r.jsx)(w.F, {
             setting: F.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
             children: (0, r.jsx)(_.j7V, {
@@ -442,7 +432,7 @@ function ep() {
                         n(k.n.APPEARANCE_PANEL, { section: V.oAB.APPEARANCE });
                     },
                 }),
-                className: q.marginTop20,
+                className: q.marginTop8,
                 value: e,
                 onChange: h.Uv,
                 children: W.intl.string(W.t["sSY+mJ"]),
@@ -462,7 +452,7 @@ function eh() {
             t !== e && (a.current = setTimeout(() => (0, h.qz)(t), 150));
     }, [t, e]);
     let o = W.intl.format(W.t.GwEVEx, { learnMoreLink: j.Z.getArticleURL(V.BhN.FORCED_COLORS) });
-    return (0, r.jsx)(_.xJW, {
+    return (0, r.jsx)(_.hjN, {
         title: W.intl.string(W.t.TYyfOz),
         className: q.marginTop20,
         children: (0, r.jsx)(w.F, {
@@ -504,7 +494,7 @@ function em() {
         E = i.useCallback((e) => {
             (0, h.Zt)(e ? "reduce" : "no-preference");
         }, []);
-    return (0, r.jsxs)(_.xJW, {
+    return (0, r.jsxs)(_.hjN, {
         ref: p,
         title: W.intl.string(W.t.e3TR1d),
         className: o()(q.marginTop20, z.reducedMotion),
@@ -515,7 +505,7 @@ function em() {
                 children: W.intl.format(W.t["2l9U2t"], { helpdeskArticle: j.Z.getArticleURL(V.BhN.REDUCED_MOTION) }),
             }),
             (0, r.jsx)(f.$q, {
-                className: o()(q.marginTop20, q.marginBottom20),
+                className: o()(q.marginTop8, q.marginBottom20),
                 value: d,
                 shape: f.zV.BOX,
                 type: f.M0.INVERTED,
@@ -562,35 +552,26 @@ function eg() {
         n = i.useCallback((e) => {
             M.Wp.updateSetting(e);
         }, []);
-    return (0, r.jsxs)(_.xJW, {
-        className: q.marginTop20,
-        title: W.intl.string(W.t["6NtAuL"]),
-        children: [
-            (0, r.jsx)(_.R94, {
-                type: _.R94.Types.DESCRIPTION,
-                className: q.marginBottom8,
-                children: null != t ? (0, P.Z)(t) : W.intl.string(W.t.GRa6U1),
-            }),
-            (0, r.jsx)(d.E, {
-                options: [
-                    {
-                        name: W.intl.string(W.t["Xp+X2d"]),
-                        value: H.yr.ALWAYS_ANIMATE,
-                    },
-                    {
-                        name: W.intl.string(W.t.IlLT7e),
-                        desc: W.intl.string(W.t.bIW9Tk),
-                        value: H.yr.ANIMATE_ON_INTERACTION,
-                    },
-                    {
-                        name: W.intl.string(W.t.IGu8x8),
-                        value: H.yr.NEVER_ANIMATE,
-                    },
-                ],
-                onChange: (e) => n(e),
-                value: e,
-            }),
+    return (0, r.jsx)(d.E, {
+        label: W.intl.string(W.t["6NtAuL"]),
+        description: null != t ? (0, P.Z)(t) : W.intl.string(W.t.GRa6U1),
+        options: [
+            {
+                name: W.intl.string(W.t["Xp+X2d"]),
+                value: H.yr.ALWAYS_ANIMATE,
+            },
+            {
+                name: W.intl.string(W.t.IlLT7e),
+                desc: W.intl.string(W.t.bIW9Tk),
+                value: H.yr.ANIMATE_ON_INTERACTION,
+            },
+            {
+                name: W.intl.string(W.t.IGu8x8),
+                value: H.yr.NEVER_ANIMATE,
+            },
         ],
+        onChange: (e) => n(e),
+        value: e,
     });
 }
 function eE() {
@@ -599,18 +580,15 @@ function eE() {
         n = i.useRef(null);
     return (
         (0, G.Z)(n, Z.rP.LEGACY_CHAT_INPUT),
-        (0, r.jsxs)(_.xJW, {
+        (0, r.jsxs)(_.hjN, {
             ref: n,
             className: q.marginTop20,
+            title: W.intl.string(W.t.onqU6u),
             children: [
-                (0, r.jsx)(_.vwX, {
-                    className: q.marginBottom8,
-                    children: W.intl.string(W.t.onqU6u),
-                }),
                 (0, r.jsx)(w.F, {
                     setting: F.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                     children: (0, r.jsx)(_.j7V, {
-                        className: q.marginTop20,
+                        className: q.marginTop8,
                         value: e,
                         onChange: h.eN,
                         children: W.intl.string(W.t["3Fztn5"]),

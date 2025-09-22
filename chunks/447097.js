@@ -8,22 +8,22 @@ var l = n(951288),
 function d(e) {
     let { mfaChallenge: t, finish: n, setSlide: d, onClose: c, isSlideReady: u, headerAlignStart: h } = e,
         [f, g] = r.useState(!1),
-        [m, x] = r.useState(null),
-        [p, S] = r.useState(""),
-        j = r.useRef(null),
-        b = o.intl.string(o.t["C/ZAw8"]),
+        [m, p] = r.useState(null),
+        [x, S] = r.useState(""),
+        b = r.useRef(null),
+        j = o.intl.string(o.t["C/ZAw8"]),
         y = o.intl.string(o.t.fZSi1N),
         v = r.useCallback(
             (e) => {
-                S(e), x(null);
+                S(e), p(null);
             },
-            [S, x],
+            [S, p],
         );
     return (
         r.useEffect(() => {
             if (u) {
                 var e;
-                null == (e = j.current) || e.focus();
+                null == (e = b.current) || e.focus();
             }
         }, [u]),
         (0, l.jsxs)("form", {
@@ -32,11 +32,11 @@ function d(e) {
                     g(!0),
                     n({
                         mfaType: "backup",
-                        data: p.replace(/-/g, ""),
+                        data: x.replace(/-/g, ""),
                     })
                         .catch((e) => {
                             var t, n;
-                            x(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                            p(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
                             g(!1);
@@ -47,29 +47,27 @@ function d(e) {
                     onClose: c,
                     headerAlignStart: h,
                 }),
-                (0, l.jsx)(a.Z.SlideContent, {
-                    children: (0, l.jsxs)(s.xJW, {
-                        title: b,
-                        children: [
-                            (0, l.jsx)(s.oil, {
-                                inputRef: j,
-                                onChange: v,
-                                placeholder: y,
-                                maxLength: i.tL,
-                                minLength: i.th,
-                                value: p,
-                                spellCheck: "false",
-                                disabled: f,
-                            }),
-                            (0, l.jsx)(a.Z.SlideError, { error: m }),
-                        ],
-                    }),
+                (0, l.jsxs)(a.Z.SlideContent, {
+                    children: [
+                        (0, l.jsx)(s.oil, {
+                            label: j,
+                            inputRef: b,
+                            onChange: v,
+                            placeholder: y,
+                            maxLength: i.tL,
+                            minLength: i.th,
+                            value: x,
+                            spellCheck: "false",
+                            disabled: f,
+                        }),
+                        (0, l.jsx)(a.Z.SlideError, { error: m }),
+                    ],
                 }),
                 (0, l.jsx)(a.Z.SlideFooter, {
                     mfaChallenge: t,
                     setSlide: d,
                     showConfirm: !0,
-                    disabled: p.length < 8,
+                    disabled: x.length < 8,
                     submitting: f,
                 }),
             ],

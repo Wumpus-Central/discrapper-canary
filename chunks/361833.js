@@ -62,28 +62,28 @@ function x(e) {
                         }),
                     ],
                 }),
-                (0, a.jsxs)(i.hzk, {
+                (0, a.jsx)(i.hzk, {
                     className: m.content,
-                    children: [
-                        (0, a.jsx)(i.oil, {
-                            label: d.intl.string(d.t["w/qqKC"]),
-                            error: null == g || null == (t = g.email) ? void 0 : t[0],
-                            type: "email",
-                            value: p,
-                            onChange: h,
-                            inputRef: S,
-                        }),
-                        (0, a.jsx)(i.xJW, {
-                            className: m.password,
-                            title: d.intl.string(d.t.TmdnJy),
-                            error: null == g || null == (n = g.password) ? void 0 : n[0],
-                            children: (0, a.jsx)(i.oil, {
+                    children: (0, a.jsxs)(i.Kqy, {
+                        gap: 20,
+                        children: [
+                            (0, a.jsx)(i.oil, {
+                                label: d.intl.string(d.t["w/qqKC"]),
+                                error: null == g || null == (t = g.email) ? void 0 : t[0],
+                                type: "email",
+                                value: p,
+                                onChange: h,
+                                inputRef: S,
+                            }),
+                            (0, a.jsx)(i.oil, {
+                                label: d.intl.string(d.t.TmdnJy),
+                                error: null == g || null == (n = g.password) ? void 0 : n[0],
                                 type: "password",
                                 value: A,
                                 onChange: C,
                             }),
-                        }),
-                    ],
+                        ],
+                    }),
                 }),
                 (0, a.jsxs)(i.mzw, {
                     children: [

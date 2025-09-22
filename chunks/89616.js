@@ -1,8 +1,8 @@
 n.d(t, { default: () => o }), n(388685);
 var a = n(951288),
     s = n(647438),
-    i = n(481060),
-    l = n(365007),
+    l = n(481060),
+    i = n(365007),
     r = n(388032),
     c = n(463373);
 function o(e) {
@@ -11,10 +11,10 @@ function o(e) {
         [h, x] = s.useState(""),
         [m, p] = s.useState(void 0),
         g = s.useRef(null);
-    async function j(e) {
+    async function f(e) {
         e.preventDefault(), u(!0);
         try {
-            await (0, l.WQ)(o.id, h), n();
+            await (0, i.WQ)(o.id, h), n();
         } catch (e) {
             p(e.message);
         } finally {
@@ -23,58 +23,53 @@ function o(e) {
     }
     return (
         s.useEffect(() => {
-            if (t === i.Dvm.ENTERED) {
+            if (t === l.Dvm.ENTERED) {
                 var e;
                 null == (e = g.current) || e.focus();
             }
         }, [t]),
-        (0, a.jsxs)(i.Y0X, {
+        (0, a.jsxs)(l.Y0X, {
             transitionState: t,
             parentComponent: "EditCredentialModal",
             children: [
-                (0, a.jsxs)(i.xBx, {
+                (0, a.jsxs)(l.xBx, {
                     separator: !1,
                     className: c.header,
                     children: [
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(l.Text, {
                             color: "header-secondary",
                             variant: "text-lg/bold",
                             className: c.subtitle,
                             children: r.intl.string(r.t.YjuMsb),
                         }),
-                        (0, a.jsx)(i.olH, {
+                        (0, a.jsx)(l.olH, {
                             onClick: n,
                             className: c.modalCloseButton,
                         }),
                     ],
                 }),
                 (0, a.jsxs)("form", {
-                    onSubmit: j,
+                    onSubmit: f,
                     children: [
-                        (0, a.jsx)(i.hzk, {
+                        (0, a.jsx)(l.hzk, {
                             className: c.content,
-                            children: (0, a.jsx)(i.xJW, {
-                                title: r.intl.string(r.t["7yEgJS"]),
-                                error: m,
+                            children: (0, a.jsx)(l.oil, {
+                                label: r.intl.string(r.t["7yEgJS"]),
+                                inputRef: g,
+                                "aria-label": r.intl.string(r.t["7yEgJS"]),
+                                placeholder: o.name,
+                                value: h,
+                                minLength: 1,
+                                maxLength: 32,
+                                onChange: x,
+                                autoFocus: !0,
                                 required: !0,
-                                children: (0, a.jsx)("div", {
-                                    children: (0, a.jsx)(i.oil, {
-                                        inputRef: g,
-                                        "aria-label": r.intl.string(r.t["7yEgJS"]),
-                                        placeholder: o.name,
-                                        value: h,
-                                        minLength: 1,
-                                        maxLength: 32,
-                                        onChange: x,
-                                        autoFocus: !0,
-                                        required: !0,
-                                    }),
-                                }),
+                                error: m,
                             }),
                         }),
-                        (0, a.jsxs)(i.mzw, {
+                        (0, a.jsxs)(l.mzw, {
                             children: [
-                                (0, a.jsx)(i.zxk, {
+                                (0, a.jsx)(l.zxk, {
                                     variant: "primary",
                                     text: r.intl.string(r.t.i4jeWV),
                                     type: "submit",
@@ -84,7 +79,7 @@ function o(e) {
                                 (0, a.jsx)("div", {
                                     "data-button-hoisted-classname-wrapper": !0,
                                     className: c.cancel,
-                                    children: (0, a.jsx)(i.zxk, {
+                                    children: (0, a.jsx)(l.zxk, {
                                         variant: "secondary",
                                         text: r.intl.string(r.t["ETE/oK"]),
                                         onClick: n,

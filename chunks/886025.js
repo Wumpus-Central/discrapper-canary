@@ -67,7 +67,7 @@ function c(e) {
                         className: s.description,
                         children: c,
                     }),
-                f,
+                "function" == typeof f ? f(m) : f,
                 (0, r.jsx)(u, {
                     successMessage: p,
                     errorMessage: _,

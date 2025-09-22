@@ -145,9 +145,9 @@ function h(e) {
                                         }),
                                         (0, i.jsx)(d.Z.Child, {
                                             basis: "50%",
-                                            children: (0, i.jsx)(a.xJW, {
-                                                title: g.intl.string(g.t["4TuWfX"]),
+                                            children: (0, i.jsx)("div", {
                                                 children: (0, i.jsx)(a.q4e, {
+                                                    label: g.intl.string(g.t["4TuWfX"]),
                                                     value: n.channel_id,
                                                     options: h,
                                                     onChange: (e) => {

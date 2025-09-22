@@ -1,7 +1,6 @@
 n.d(t, { Z: () => h }), n(539854);
-var r = n(951288);
-n(647438);
-var i = n(442837),
+var r = n(951288),
+    i = n(442837),
     a = n(481060),
     o = n(846027),
     s = n(921801),
@@ -51,17 +50,15 @@ function h() {
     }));
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
-        children: (0, r.jsx)(a.xJW, {
-            title: f.intl.string(f.t.wVBHr6),
-            children: (0, r.jsx)(a.q4e, {
-                className: _.marginBottom20,
-                value: e,
-                options: p(t, n, h),
-                onChange: (e) => {
-                    let t = () => o.Z.setAudioSubsystem(e);
-                    (0, c.Z)(f.intl.string(f.t.uY7AcX), f.intl.string(f.t.gBqik5), t);
-                },
-            }),
+        children: (0, r.jsx)(a.q4e, {
+            label: f.intl.string(f.t.wVBHr6),
+            className: _.marginBottom20,
+            value: e,
+            options: p(t, n, h),
+            onChange: (e) => {
+                let t = () => o.Z.setAudioSubsystem(e);
+                (0, c.Z)(f.intl.string(f.t.uY7AcX), f.intl.string(f.t.gBqik5), t);
+            },
         }),
     });
 }

@@ -22,13 +22,9 @@ function c(e) {
         description: s.intl.string(s.t["EYn7//"]),
         onClick: function () {
             (0, l.ZDy)(async () => {
-                let { default: e } = await Promise.all([
-                    n.e("36599"),
-                    n.e("60962"),
-                    n.e("82758"),
-                    n.e("61"),
-                    n.e("69467"),
-                ]).then(n.bind(n, 779250));
+                let { default: e } = await Promise.all([n.e("36599"), n.e("60962"), n.e("61"), n.e("21630")]).then(
+                    n.bind(n, 779250),
+                );
                 return (t) => {
                     var n, i;
                     return (0, r.jsx)(

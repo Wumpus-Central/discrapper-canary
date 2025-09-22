@@ -1,7 +1,6 @@
 n.d(t, { Z: () => _ });
-var a = n(951288);
-n(647438);
-var s = n(755721),
+var a = n(951288),
+    s = n(755721),
     r = n(481060),
     i = n(488889),
     l = n(226186),
@@ -12,8 +11,8 @@ var s = n(755721),
     x = n(583073),
     u = n(780187);
 function _(e) {
-    let { onNext: t, onClose: n, reason: _, onReasonChange: E, freeTextResponse: N, setFreeTextResponse: h } = e,
-        p = d.zf.map((e) => ({
+    let { onNext: t, onClose: n, reason: _, onReasonChange: E, freeTextResponse: N, setFreeTextResponse: p } = e,
+        h = d.zf.map((e) => ({
             value: e,
             name: (0, i.S)(e),
         })),
@@ -43,27 +42,25 @@ function _(e) {
                         radioItemClassName: x.radioItem,
                         size: s.l7.NOT_SET,
                         value: _,
-                        options: p,
+                        options: h,
                         onChange: (e) => {
                             let { value: t } = e;
                             o.default.track(c.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, {
                                 change_email_reason_enum: t,
                             }),
                                 E(t),
-                                h(""),
+                                p(""),
                                 t === d.pw.SOMETHING_ELSE &&
                                     l.Z.trackExposure({ location: "change_email_collect_reasons_slide" });
                         },
                     }),
                     A &&
                         _ === d.pw.SOMETHING_ELSE &&
-                        (0, a.jsx)(r.xJW, {
-                            children: (0, a.jsx)(r.Kx8, {
-                                value: N,
-                                maxLength: d.mF,
-                                onChange: h,
-                                placeholder: m.intl.string(m.t.Q8Rk7O),
-                            }),
+                        (0, a.jsx)(r.Kx8, {
+                            value: N,
+                            maxLength: d.mF,
+                            onChange: p,
+                            placeholder: m.intl.string(m.t.Q8Rk7O),
                         }),
                 ],
             }),

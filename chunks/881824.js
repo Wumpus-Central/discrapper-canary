@@ -73,7 +73,7 @@ function h(e, t) {
 function m(e, t) {
     (0, i.ZD)(
         async () => {
-            let { default: t } = await Promise.all([n.e("82758"), n.e("73736")]).then(n.bind(n, 581355));
+            let { default: t } = await n.e("24753").then(n.bind(n, 581355));
             return (n) => (0, r.jsx)(t, h(_({}, n), { channel: e }));
         },
         { contextKey: t === u.IlC.POPOUT ? d.u1 : d.z1 },

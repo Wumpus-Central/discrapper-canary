@@ -190,16 +190,14 @@ function D() {
             },
             [e],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, r.jsxs)(u.Kqy, {
+        gap: 20,
         children: [
-            (0, r.jsx)(u.xJW, {
-                title: v.intl.string(v.t["pS+K2N"]),
-                className: S.marginBottom20,
-                children: (0, r.jsx)(l.E, {
-                    onChange: (e) => o({ value: e }),
-                    options: a,
-                    value: t,
-                }),
+            (0, r.jsx)(l.E, {
+                label: v.intl.string(v.t["pS+K2N"]),
+                onChange: (e) => o({ value: e }),
+                options: a,
+                value: t,
             }),
             t === O.pM4.PUSH_TO_TALK && (0, r.jsx)(w, { inputMode: t }),
         ],

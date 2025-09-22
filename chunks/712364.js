@@ -97,12 +97,12 @@ class f extends (r = a.PureComponent) {
                                 : null,
                             y,
                             v,
-                            (0, i.jsxs)(l.xJW, {
-                                title: this.getLabelText(),
+                            (0, i.jsxs)("div", {
                                 className: u.spacing,
                                 children: [
                                     (0, i.jsx)(l.oil, {
                                         inputRef: this.setRef,
+                                        label: this.getLabelText(),
                                         onChange: this.handleCodeChange,
                                         placeholder: null != (e = this.getPlaceholder()) ? e : void 0,
                                         maxLength: null != f ? f : 10,

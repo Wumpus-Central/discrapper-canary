@@ -324,71 +324,67 @@ function ee() {
                       className: W.marginBottom20,
                       children: H.intl.string(H.t["0PhAOD"]),
                   }),
-                  (0, r.jsxs)(f.xJW, {
-                      title: H.intl.string(H.t.Q0PsXV),
-                      children: [
-                          (0, r.jsx)(f.q4e, {
-                              className: null != t ? W.marginBottom20 : W.marginBottom40,
-                              value: t,
-                              onChange: (e) => {
-                                  n(e);
-                              },
-                              options: a,
-                          }),
-                          null != t
-                              ? (0, r.jsxs)("div", {
-                                    className: W.marginTop20,
-                                    children: [
-                                        (0, r.jsxs)(R.F, {
-                                            setting: Z.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
-                                            children: [
-                                                (0, r.jsx)(f.j7V, {
-                                                    className: W.marginBottom20,
-                                                    note: H.intl.string(H.t["z8Td4+"]),
-                                                    value: !e[t].disableRaidAlertNag,
-                                                    onChange: () => {
-                                                        (0, G.PS)(
-                                                            t,
-                                                            (e) => {
-                                                                e.disableRaidAlertNag = !e.disableRaidAlertNag;
-                                                            },
-                                                            G.fy.INFREQUENT_USER_ACTION,
-                                                        );
-                                                    },
-                                                    hideBorder: !0,
-                                                    children: H.intl.string(H.t.u6dc5O),
-                                                }),
-                                                (0, r.jsx)(f.$i$, { className: o()(W.marginTop20, W.marginBottom40) }),
-                                            ],
-                                        }),
-                                        (0, r.jsxs)(R.F, {
-                                            setting: Z.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
-                                            children: [
-                                                (0, r.jsx)(f.j7V, {
-                                                    className: W.marginBottom20,
-                                                    note: H.intl.string(H.t.PyxXs7),
-                                                    value: !e[t].disableRaidAlertPush,
-                                                    onChange: () => {
-                                                        (0, G.PS)(
-                                                            t,
-                                                            (e) => {
-                                                                e.disableRaidAlertPush = !e.disableRaidAlertPush;
-                                                            },
-                                                            G.fy.INFREQUENT_USER_ACTION,
-                                                        );
-                                                    },
-                                                    hideBorder: !0,
-                                                    children: H.intl.string(H.t.P8MG6u),
-                                                }),
-                                                (0, r.jsx)(f.$i$, { className: o()(W.marginTop20, W.marginBottom40) }),
-                                            ],
-                                        }),
-                                    ],
-                                })
-                              : null,
-                          null != t ? null : (0, r.jsx)(f.$i$, { className: o()(W.marginTop20, W.marginBottom40) }),
-                      ],
+                  (0, r.jsx)(f.q4e, {
+                      label: H.intl.string(H.t.Q0PsXV),
+                      className: null != t ? W.marginBottom20 : W.marginBottom40,
+                      value: t,
+                      onChange: (e) => {
+                          n(e);
+                      },
+                      options: a,
                   }),
+                  null != t
+                      ? (0, r.jsxs)("div", {
+                            className: W.marginTop20,
+                            children: [
+                                (0, r.jsxs)(R.F, {
+                                    setting: Z.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
+                                    children: [
+                                        (0, r.jsx)(f.j7V, {
+                                            className: W.marginBottom20,
+                                            note: H.intl.string(H.t["z8Td4+"]),
+                                            value: !e[t].disableRaidAlertNag,
+                                            onChange: () => {
+                                                (0, G.PS)(
+                                                    t,
+                                                    (e) => {
+                                                        e.disableRaidAlertNag = !e.disableRaidAlertNag;
+                                                    },
+                                                    G.fy.INFREQUENT_USER_ACTION,
+                                                );
+                                            },
+                                            hideBorder: !0,
+                                            children: H.intl.string(H.t.u6dc5O),
+                                        }),
+                                        (0, r.jsx)(f.$i$, { className: o()(W.marginTop20, W.marginBottom40) }),
+                                    ],
+                                }),
+                                (0, r.jsxs)(R.F, {
+                                    setting: Z.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
+                                    children: [
+                                        (0, r.jsx)(f.j7V, {
+                                            className: W.marginBottom20,
+                                            note: H.intl.string(H.t.PyxXs7),
+                                            value: !e[t].disableRaidAlertPush,
+                                            onChange: () => {
+                                                (0, G.PS)(
+                                                    t,
+                                                    (e) => {
+                                                        e.disableRaidAlertPush = !e.disableRaidAlertPush;
+                                                    },
+                                                    G.fy.INFREQUENT_USER_ACTION,
+                                                );
+                                            },
+                                            hideBorder: !0,
+                                            children: H.intl.string(H.t.P8MG6u),
+                                        }),
+                                        (0, r.jsx)(f.$i$, { className: o()(W.marginTop20, W.marginBottom40) }),
+                                    ],
+                                }),
+                            ],
+                        })
+                      : null,
+                  null != t ? null : (0, r.jsx)(f.$i$, { className: o()(W.marginTop20, W.marginBottom40) }),
               ],
           });
 }
@@ -461,33 +457,25 @@ class et extends i.PureComponent {
                 (0, r.jsx)(ei, {}),
                 (0, r.jsx)(ec, {}),
                 (0, r.jsx)(el, {}),
-                (0, r.jsx)(R.F, {
+                (0, r.jsxs)(R.F, {
                     setting: Z.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
-                    children: (0, r.jsxs)(f.xJW, {
-                        title: H.intl.string(H.t.TTvjd3),
-                        children: [
-                            (0, r.jsx)(f.q4e, {
-                                value: t,
-                                onChange: U.CM.updateSetting,
-                                options: p,
-                            }),
-                            (0, r.jsx)(f.R94, {
-                                type: f.geA.DESCRIPTION,
-                                className: W.marginTop8,
-                                children: H.intl.string(H.t.Xytv9P),
-                            }),
-                            (0, r.jsx)(f.$i$, { className: o()(W.marginTop40, W.marginBottom40) }),
-                        ],
-                    }),
+                    children: [
+                        (0, r.jsx)(f.q4e, {
+                            label: H.intl.string(H.t.TTvjd3),
+                            description: H.intl.string(H.t.Xytv9P),
+                            value: t,
+                            onChange: U.CM.updateSetting,
+                            options: p,
+                        }),
+                        (0, r.jsx)(f.$i$, { className: o()(W.marginTop40, W.marginBottom40) }),
+                    ],
                 }),
                 this.renderTTS(),
                 (0, r.jsx)(ee, {}),
-                (0, r.jsx)(f.xJW, {
-                    children: (0, r.jsx)($, {
-                        disabledSounds: a,
-                        disableAllSounds: s,
-                        notifyMessagesInSelectedChannel: c,
-                    }),
+                (0, r.jsx)($, {
+                    disabledSounds: a,
+                    disableAllSounds: s,
+                    notifyMessagesInSelectedChannel: c,
                 }),
                 (0, r.jsx)(B.Z, {}),
             ],
@@ -520,20 +508,12 @@ class et extends i.PureComponent {
                 return (0, r.jsxs)(R.F, {
                     setting: Z.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
-                        (0, r.jsxs)(f.xJW, {
-                            title: H.intl.string(H.t.VIm5MD),
-                            children: [
-                                (0, r.jsx)(f.R94, {
-                                    type: f.geA.DESCRIPTION,
-                                    className: W.marginBottom8,
-                                    children: H.intl.string(H.t["+4dnAw"]),
-                                }),
-                                (0, r.jsx)(d.E, {
-                                    options: e,
-                                    onChange: (e) => this.handleTTSChange(e),
-                                    value: this.props.ttsType,
-                                }),
-                            ],
+                        (0, r.jsx)(d.E, {
+                            label: H.intl.string(H.t.VIm5MD),
+                            description: H.intl.string(H.t["+4dnAw"]),
+                            options: e,
+                            onChange: this.handleTTSChange,
+                            value: this.props.ttsType,
                         }),
                         (0, r.jsx)(f.$i$, { className: o()(W.marginTop40, W.marginBottom40) }),
                     ],
@@ -610,7 +590,7 @@ function ei() {
                   (0, r.jsxs)(R.F, {
                       setting: Z.s6.NOTIFICATIONS_NEW_SETTINGS,
                       children: [
-                          (0, r.jsx)(f.xJW, {
+                          (0, r.jsx)(f.hjN, {
                               title: "New Notification Settings (Advanced, Staff Only)",
                               children: (0, r.jsxs)("div", {
                                   style: {
@@ -710,20 +690,12 @@ function el() {
         ? (0, r.jsxs)(R.F, {
               setting: Z.s6.NOTIFICATIONS_REACTIONS,
               children: [
-                  (0, r.jsxs)(f.xJW, {
-                      title: H.intl.string(H.t.Rq0NFh),
-                      children: [
-                          (0, r.jsx)(f.R94, {
-                              type: f.geA.DESCRIPTION,
-                              className: W.marginBottom8,
-                              children: H.intl.string(H.t.oWF6eX),
-                          }),
-                          (0, r.jsx)(d.E, {
-                              options: t,
-                              onChange: (e) => n({ value: e }),
-                              value: e,
-                          }),
-                      ],
+                  (0, r.jsx)(d.E, {
+                      label: H.intl.string(H.t.Rq0NFh),
+                      description: H.intl.string(H.t.oWF6eX),
+                      options: t,
+                      onChange: (e) => n({ value: e }),
+                      value: e,
                   }),
                   (0, r.jsx)(f.$i$, { className: o()(W.marginTop40, W.marginBottom40) }),
               ],
