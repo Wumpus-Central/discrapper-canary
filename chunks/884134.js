@@ -1,4 +1,4 @@
-n.d(t, { Z: () => en }), n(388685), n(704826), n(35282), n(781311);
+n.d(t, { Z: () => er }), n(388685), n(704826), n(35282), n(781311);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -183,6 +183,11 @@ function q(e) {
     });
 }
 function X(e) {
+    let t = 10;
+    for (let n of [90, 180, 270]) if (Math.abs(e - n) <= t) return n;
+    return e;
+}
+function Q(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
         { key: a, handleInternalChange: s } = Y(t),
         [l, c] = i.useState("".concat(Math.round(t), "\xB0"));
@@ -237,7 +242,9 @@ function X(e) {
                             minValue: 0,
                             maxValue: 360,
                             onValueChange: (e) => {
-                                (0, R.fR)(), s(e), n(e);
+                                (0, R.fR)();
+                                let t = X(e);
+                                t !== e || s(e), n(t);
                             },
                             onValueRender: () => null,
                             keyboardStep: 1,
@@ -249,7 +256,7 @@ function X(e) {
         ],
     });
 }
-function Q(e) {
+function J(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
         { key: a, handleInternalChange: o } = Y(t),
         [s, l] = i.useState("".concat(Math.round(t), "%"));
@@ -301,7 +308,7 @@ function Q(e) {
         ],
     });
 }
-function J(e) {
+function $(e) {
     let { isCoachmark: t, isMobile: n } = e,
         [a, o] = i.useState(!1),
         s = i.useRef(!1),
@@ -374,7 +381,7 @@ function J(e) {
               children: b(),
           });
 }
-function $(e) {
+function ee(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
     return (0, r.jsx)(d.ua7, {
         text: k.intl.string(M.default.SFyHIC),
@@ -392,7 +399,7 @@ function $(e) {
             ),
     });
 }
-function ee(e) {
+function et(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, b.m)(j.p9.TIER_2);
     return (
@@ -400,7 +407,7 @@ function ee(e) {
         (0, r.jsx)("div", {
             className: U.coachmarkFooterContainer,
             children: i
-                ? (0, r.jsx)($, {
+                ? (0, r.jsx)(ee, {
                       disabled: !n,
                       onApply: t,
                       fullWidth: !0,
@@ -417,7 +424,7 @@ function ee(e) {
         })
     );
 }
-function et(e) {
+function en(e) {
     var t;
     let { onSaveTheme: n, canApply: i, metadata: a } = e,
         s = (0, b.m)(j.p9.TIER_2),
@@ -444,7 +451,7 @@ function et(e) {
                           onClick: d,
                           text: k.intl.string(k.t["13/7kZ"]),
                       }),
-                      (0, r.jsx)($, {
+                      (0, r.jsx)(ee, {
                           disabled: !i,
                           onApply: () => {
                               c && T.default.track(x.rMx.CUSTOM_THEME_SHARE_APPLIED, {}), n();
@@ -473,7 +480,7 @@ function et(e) {
               }),
     });
 }
-function en(e) {
+function er(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: o, isMobile: c } = e,
         E = N.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
@@ -573,11 +580,11 @@ function en(e) {
                                           children: k.intl.string(M.default.F1t0c3),
                                       }),
                                       T.length > 1 &&
-                                          (0, r.jsx)(X, {
+                                          (0, r.jsx)(Q, {
                                               gradientAngle: w,
                                               setGradientAngle: G,
                                           }),
-                                      (0, r.jsx)(Q, {
+                                      (0, r.jsx)(J, {
                                           chassisMixAmount: A,
                                           setChassisMixAmount: (e) => {
                                               j(e), 0 === T.length && (0, C.lT)(T, B, x);
@@ -588,7 +595,7 @@ function en(e) {
                               (0, r.jsxs)("div", {
                                   className: U.resetButton,
                                   children: [
-                                      (0, r.jsx)(J, {
+                                      (0, r.jsx)($, {
                                           isCoachmark: o,
                                           isMobile: c,
                                       }),
@@ -605,11 +612,11 @@ function en(e) {
                       }),
                   }),
                   o
-                      ? (0, r.jsx)(ee, {
+                      ? (0, r.jsx)(et, {
                             onSaveTheme: Y,
                             canApply: K,
                         })
-                      : (0, r.jsx)(et, {
+                      : (0, r.jsx)(en, {
                             onSaveTheme: Y,
                             canApply: K,
                             metadata: n,
