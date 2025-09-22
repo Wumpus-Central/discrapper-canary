@@ -15,6 +15,10 @@ let r = (0, n(427164).le)({
             enabled: !0,
             variant: "icon-in-bubble",
         },
+        3: {
+            enabled: !0,
+            variant: "small-text-only",
+        },
     },
 });
 function i(e) {
