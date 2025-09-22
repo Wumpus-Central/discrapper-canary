@@ -1,11 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(865275),
     i = n(237992),
-    a = n(959517),
-    o = n(388032);
-class s extends r.Z {
+    a = n(959517);
+class o extends r.Z {
     async uploadFiles(e) {
-        super.upload(o.intl.string(o.t.jfKTen), e);
+        super.upload(e);
         let t = new Promise((e, t) => {
                 this.once("error", (e, n, r, i) => {
                     t({

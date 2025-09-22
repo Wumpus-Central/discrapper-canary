@@ -1,123 +1,125 @@
 n.d(t, {
-    Z: () => p,
-    p: () => _,
+    Z: () => m,
+    p: () => h,
 });
-var r = n(951288);
-n(647438);
-var i = n(120356),
-    a = n.n(i),
-    o = n(112456),
-    s = n.n(o),
-    l = n(481060),
-    c = n(403182),
-    u = n(388032),
-    d = n(449582);
-let f = (e) => {
-        let { filename: t } = e,
-            i = (0, c.uV)(t),
-            a = n(148660)("./icon-file-".concat(i, ".svg"));
-        return (0, r.jsx)("img", {
-            className: d.icon,
-            src: a,
-            alt: u.intl.formatToPlainString(u.t.g6KdFh, { fileType: i }),
-            title: i,
-        });
-    },
-    _ = (e) => {
-        let { filename: t, size: n, progress: i, onCancelUpload: a, onClick: o, onContextMenu: c } = e,
-            _ = 100 === i,
-            p = !_ && n > 0;
-        return (0, r.jsx)("div", {
-            className: d.fileWrapper,
-            children: (0, r.jsxs)("div", {
-                className: d.file,
-                children: [
-                    (0, r.jsx)(f, { filename: t }),
-                    (0, r.jsxs)("div", {
-                        className: d.fileInner,
-                        children: [
-                            (0, r.jsxs)("div", {
-                                className: d.filenameWrapper,
-                                children: [
-                                    (0, r.jsx)(l.P3F, {
-                                        className: d.filename,
-                                        onClick: o,
-                                        onContextMenu: c,
-                                        children: t,
-                                    }),
-                                    p
-                                        ? (0, r.jsx)("div", {
-                                              className: d.size,
-                                              children: "\u2014 ".concat(s().filesize(n)),
-                                          })
-                                        : null,
-                                ],
-                            }),
-                            (0, r.jsx)("div", {
-                                className: d.progressContainer,
-                                children: _
-                                    ? u.intl.string(u.t.jfKTen)
-                                    : (0, r.jsx)(l.Exd, {
-                                          className: d.progress,
-                                          percent: i,
-                                      }),
-                            }),
-                        ],
-                    }),
-                    _
-                        ? null
-                        : (0, r.jsx)(l.P3F, {
-                              onClick: a,
-                              children: (0, r.jsx)(l.Dio, {
-                                  size: "md",
-                                  color: "currentColor",
-                                  className: d.cancelButton,
-                              }),
-                          }),
-                ],
-            }),
-        });
-    },
-    p = (e) => {
-        let {
-            className: t,
-            url: n,
-            fileName: i,
-            fileSize: o,
-            onClick: c,
-            onContextMenu: u,
-            renderAdjacentContent: _,
-        } = e;
-        return (0, r.jsxs)("div", {
-            className: a()(d.fileWrapper, t),
+var r = n(951288),
+    i = n(647438),
+    a = n(120356),
+    o = n.n(a),
+    s = n(112456),
+    l = n.n(s),
+    c = n(481060),
+    u = n(966390),
+    d = n(403182),
+    f = n(388032),
+    _ = n(449582);
+let p = (e) => {
+    let { filename: t } = e,
+        i = (0, d.uV)(t),
+        a = n(148660)("./icon-file-".concat(i, ".svg"));
+    return (0, r.jsx)("img", {
+        className: _.icon,
+        src: a,
+        alt: f.intl.formatToPlainString(f.t.g6KdFh, { fileType: i }),
+        title: i,
+    });
+};
+function h(e) {
+    let { channelId: t, file: n } = e,
+        a = i.useMemo(() => {
+            let e = n.items;
+            return null == e
+                ? f.intl.string(f.t.jfKTen)
+                : 1 === e.length && null != e[0].filename
+                  ? e[0].filename
+                  : f.intl.formatToPlainString(f.t.D0noUl, { count: e.length });
+        }, [n.items]),
+        o = i.useCallback(() => {
+            u.Z.cancel(t, n);
+        }, [t, n]),
+        s = 100 === n.progress,
+        d = !s && n.currentSize > 0;
+    return (0, r.jsx)("div", {
+        className: _.fileWrapper,
+        children: (0, r.jsxs)("div", {
+            className: _.file,
             children: [
+                (0, r.jsx)(p, { filename: a }),
                 (0, r.jsxs)("div", {
-                    className: d.file,
+                    className: _.fileInner,
                     children: [
-                        (0, r.jsx)(f, { filename: i }),
                         (0, r.jsxs)("div", {
-                            className: d.fileInner,
+                            className: _.filenameWrapper,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: d.filenameLinkWrapper,
-                                    children: (0, r.jsx)(l.eee, {
-                                        className: d.fileNameLink,
-                                        href: n,
-                                        onClick: c,
-                                        onContextMenu: u,
-                                        children: i,
-                                    }),
+                                    className: _.filename,
+                                    children: a,
                                 }),
-                                (0, r.jsx)(l.Text, {
-                                    variant: "text-xs/normal",
-                                    color: "text-muted",
-                                    children: s().filesize(o),
-                                }),
+                                d
+                                    ? (0, r.jsx)("div", {
+                                          className: _.size,
+                                          children: "\u2014 ".concat(l().filesize(n.currentSize)),
+                                      })
+                                    : null,
                             ],
+                        }),
+                        (0, r.jsx)("div", {
+                            className: _.progressContainer,
+                            children: s
+                                ? f.intl.string(f.t.jfKTen)
+                                : (0, r.jsx)(c.Exd, {
+                                      className: _.progress,
+                                      percent: n.progress,
+                                  }),
                         }),
                     ],
                 }),
-                null != _ && _(),
+                s
+                    ? null
+                    : (0, r.jsx)(c.P3F, {
+                          onClick: o,
+                          children: (0, r.jsx)(c.Dio, {
+                              size: "md",
+                              color: "currentColor",
+                              className: _.cancelButton,
+                          }),
+                      }),
             ],
-        });
-    };
+        }),
+    });
+}
+let m = (e) => {
+    let { className: t, url: n, fileName: i, fileSize: a, onClick: s, onContextMenu: u, renderAdjacentContent: d } = e;
+    return (0, r.jsxs)("div", {
+        className: o()(_.fileWrapper, t),
+        children: [
+            (0, r.jsxs)("div", {
+                className: _.file,
+                children: [
+                    (0, r.jsx)(p, { filename: i }),
+                    (0, r.jsxs)("div", {
+                        className: _.fileInner,
+                        children: [
+                            (0, r.jsx)("div", {
+                                className: _.filenameLinkWrapper,
+                                children: (0, r.jsx)(c.eee, {
+                                    className: _.fileNameLink,
+                                    href: n,
+                                    onClick: s,
+                                    onContextMenu: u,
+                                    children: i,
+                                }),
+                            }),
+                            (0, r.jsx)(c.Text, {
+                                variant: "text-xs/normal",
+                                color: "text-muted",
+                                children: l().filesize(a),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            null != d && d(),
+        ],
+    });
+};

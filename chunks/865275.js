@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(415506), n(49124);
+n.d(t, { Z: () => g }), n(388685), n(415506), n(49124);
 var r = n(836560),
     i = n(392711),
     a = n.n(i),
@@ -7,9 +7,8 @@ var r = n(836560),
     l = n(983544),
     c = n(596956),
     u = n(981631),
-    d = n(959517),
-    f = n(388032);
-function _(e, t, n) {
+    d = n(959517);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +32,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,19 +49,19 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = new o.Z("UploaderBase.tsx");
-class E extends r.EventEmitter {
+let m = new o.Z("UploaderBase.tsx");
+class g extends r.EventEmitter {
     _fileSize() {
         return this.files.reduce((e, t) => {
             var n;
@@ -73,7 +72,7 @@ class E extends r.EventEmitter {
         var e, t;
         let n = (0, l.F)(null == (t = this.files[0]) || null == (e = t.item) ? void 0 : e.target);
         return this.files.length > n.getMaxAttachmentsCount()
-            ? (g.log("Too many attachments for ".concat(this.id)),
+            ? (m.log("Too many attachments for ".concat(this.id)),
               this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }),
               !1)
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
@@ -84,25 +83,20 @@ class E extends r.EventEmitter {
                   !1);
     }
     setUploadingTextForUI() {
-        let e =
-                1 === this.files.length && null != this.files[0].filename
-                    ? this.files[0].filename
-                    : f.intl.formatToPlainString(f.t.D0noUl, { count: this.files.length }),
-            t = this.files.some((e) => e.isImage),
-            n = this.files.some((e) => e.isVideo),
-            r = this._fileSize();
-        g.log(
+        let e = this.files.some((e) => e.isImage),
+            t = this.files.some((e) => e.isVideo),
+            n = this._fileSize();
+        m.log(
             "setUploadingTextForUI - total content: "
-                .concat(r, " bytes and ")
+                .concat(n, " bytes and ")
                 .concat(this.files.length, " attachments for ")
                 .concat(this.id),
         ),
-            (this._file = m(p({}, this._file), {
-                totalPostCompressionSize: r,
-                currentSize: r,
-                name: e,
-                hasVideo: n,
-                hasImage: t,
+            (this._file = h(_({}, this._file), {
+                totalPostCompressionSize: n,
+                currentSize: n,
+                hasVideo: t,
+                hasImage: e,
                 attachmentsCount: this.files.length,
                 items: this.files,
             }));
@@ -132,7 +126,7 @@ class E extends r.EventEmitter {
         );
     }
     _addAttachmentsToPayload(e, t, n) {
-        let r = p({}, e),
+        let r = _({}, e),
             i = [...a().get(r, t, []), ...n];
         return a().set(r, t, i);
     }
@@ -142,7 +136,7 @@ class E extends r.EventEmitter {
     }
     cancel() {
         var e, t;
-        g.log("cancel() for ".concat(this.id)),
+        m.log("cancel() for ".concat(this.id)),
             this._aborted ||
                 ((this._aborted = !0),
                 null == (e = (t = this)._cancel) || e.call(t),
@@ -150,24 +144,23 @@ class E extends r.EventEmitter {
                 this._handleComplete());
     }
     async cancelItem(e) {
-        g.log("Cancel called for ".concat(this.id, " for item ").concat(e));
+        m.log("Cancel called for ".concat(this.id, " for item ").concat(e));
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
-            (this._file = m(p({}, this._file), { items: this.files })),
+            (this._file = h(_({}, this._file), { items: this.files })),
             await (0, s.V_)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
             0 === this.files.length && this.cancel();
     }
-    upload(e, t) {
+    upload(e) {
         if (null != this._cancel) throw Error("Uploader.upload(...): An upload is already in progress.");
         (this._lastUpdate = Date.now()),
             (this._loaded = 0),
             (this._file = {
                 id: this.id,
-                name: e,
                 currentSize: 0,
                 totalPreCompressionSize: 0,
                 compressionProgress: 0,
@@ -176,25 +169,25 @@ class E extends r.EventEmitter {
                 hasImage: !1,
                 hasVideo: !1,
                 attachmentsCount: 0,
-                items: t,
+                items: e,
             });
     }
     constructor() {
         super(),
-            _(this, "id", void 0),
-            _(this, "_file", void 0),
-            _(this, "_aborted", !1),
-            _(this, "_errored", !1),
-            _(this, "processingMessageChangeInterval", void 0),
-            _(this, "files", []),
-            _(this, "_lastUpdate", 0),
-            _(this, "_loaded", 0),
-            _(this, "alreadyStarted", !1),
-            _(this, "_cancel", void 0),
-            _(this, "_handleStart", (e) => {
+            f(this, "id", void 0),
+            f(this, "_file", void 0),
+            f(this, "_aborted", !1),
+            f(this, "_errored", !1),
+            f(this, "processingMessageChangeInterval", void 0),
+            f(this, "files", []),
+            f(this, "_lastUpdate", 0),
+            f(this, "_loaded", 0),
+            f(this, "alreadyStarted", !1),
+            f(this, "_cancel", void 0),
+            f(this, "_handleStart", (e) => {
                 (this._cancel = e), this.alreadyStarted || this.emit("start", this._file), (this.alreadyStarted = !0);
             }),
-            _(this, "_handleProgress", (e, t, n) => {
+            f(this, "_handleProgress", (e, t, n) => {
                 let r = Date.now(),
                     i = (0, c.SB)(e, t),
                     a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1000));
@@ -207,14 +200,14 @@ class E extends r.EventEmitter {
                 }
                 (this._lastUpdate = r),
                     (this._loaded = e),
-                    (this._file = m(p({}, this._file), {
+                    (this._file = h(_({}, this._file), {
                         currentSize: t,
                         progress: i,
                         rate: a,
                     })),
                     this.emit("progress", this._file);
             }),
-            _(this, "_handleException", (e) => {
+            f(this, "_handleException", (e) => {
                 this._handleError({
                     reason: {
                         type: d.xi.ERROR_SOURCE_UNKNOWN,
@@ -222,28 +215,27 @@ class E extends r.EventEmitter {
                     },
                 });
             }),
-            _(this, "_handleAborted", () => {
+            f(this, "_handleAborted", () => {
                 this.clearProcessingMessageInterval();
             }),
-            _(this, "_handleError", (e) => {
+            f(this, "_handleError", (e) => {
                 let { code: t, reason: n, body: r } = e;
                 this.clearProcessingMessageInterval(),
                     this._aborted ||
                         ((this._errored = !0),
-                        g.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)),
+                        m.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)),
                         this.emit("error", this._file, t, r, n),
                         this.removeAllListeners());
             }),
-            _(this, "_handleComplete", (e) => {
+            f(this, "_handleComplete", (e) => {
                 this.clearProcessingMessageInterval(),
-                    g.log("_handleComplete for ".concat(this.id)),
+                    m.log("_handleComplete for ".concat(this.id)),
                     this.emit("complete", this._file, e),
                     this.removeAllListeners();
             }),
             (this.id = a().uniqueId("Uploader")),
             (this._file = {
                 id: this.id,
-                name: "",
                 currentSize: 0,
                 totalPreCompressionSize: 0,
                 compressionProgress: 0,
