@@ -1,4 +1,7 @@
-n.d(t, { E: () => a });
+n.d(t, {
+    E: () => o,
+    W: () => s,
+});
 let r = [
         "input:not([disabled]):not([type=hidden])",
         "select:not([disabled])",
@@ -15,7 +18,11 @@ let r = [
         '[contenteditable]:not([contenteditable^="false"])',
     ],
     i = r.join(":not([hidden]),") + ",[tabindex]:not([disabled]):not([hidden])";
-function a(e) {
+r.push('[tabindex]:not([tabindex="-1"]):not([disabled])');
+let a = r.join(':not([hidden]):not([tabindex="-1"]),');
+function o(e) {
     return e.matches(i);
 }
-r.push('[tabindex]:not([tabindex="-1"]):not([disabled])'), r.join(':not([hidden]):not([tabindex="-1"]),');
+function s(e) {
+    return e.matches(a);
+}

@@ -1,10 +1,10 @@
 n.d(t, { E: () => c }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(442837),
-    o = n(481060),
-    s = n(594174),
-    l = n(753450);
+    a = n(793030),
+    o = n(442837),
+    s = n(481060),
+    l = n(594174);
 let c = {
     title: "TagGroup",
     stories: [
@@ -13,13 +13,14 @@ let c = {
             id: "tag-group",
             component: function (e) {
                 let { selectionMode: t, removeable: n, layout: c } = e,
-                    u = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
-                    d = i.useMemo(
-                        () => [
+                    u = (0, o.e7)([l.default], () => l.default.getCurrentUser()),
+                    d = i.useMemo(() => {
+                        var e;
+                        return [
                             {
                                 id: "strength",
                                 label: "Strength",
-                                icon: o.z0B,
+                                icon: s.z0B,
                             },
                             {
                                 id: "dexterity",
@@ -34,16 +35,15 @@ let c = {
                                 label: "Wisdom",
                                 icon: {
                                     type: "avatar",
-                                    src: null == u ? void 0 : u.getAvatarURL(void 0, 16),
+                                    src: null != (e = null == u ? void 0 : u.getAvatarURL(void 0, 16)) ? e : "",
                                 },
                             },
                             {
                                 id: "charisma",
                                 label: "Charisma",
                             },
-                        ],
-                        [u],
-                    ),
+                        ];
+                    }, [u]),
                     [f, _] = i.useState(d),
                     p = i.useCallback(
                         (e) => {
@@ -54,7 +54,7 @@ let c = {
                     h = i.useCallback(() => {
                         _(d);
                     }, [d]),
-                    m = (0, r.jsx)(l.Q, {
+                    m = (0, r.jsx)(a.QSK, {
                         label: "Categories",
                         selectionMode: t,
                         layout: c,
@@ -63,13 +63,13 @@ let c = {
                     }),
                     g =
                         n &&
-                        (0, r.jsx)(o.zxk, {
+                        (0, r.jsx)(s.zxk, {
                             disabled: f.length === d.length,
                             text: "Reset",
                             onClick: h,
                         });
                 return "inline" === c
-                    ? (0, r.jsxs)(o.Kqy, {
+                    ? (0, r.jsxs)(s.Kqy, {
                           gap: 24,
                           children: [
                               (0, r.jsx)("div", {
@@ -82,7 +82,7 @@ let c = {
                               g,
                           ],
                       })
-                    : (0, r.jsxs)(o.Kqy, {
+                    : (0, r.jsxs)(s.Kqy, {
                           gap: 24,
                           children: [m, g],
                       });

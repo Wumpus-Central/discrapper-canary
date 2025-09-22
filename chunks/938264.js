@@ -1,29 +1,27 @@
 n.d(t, {
-    E: () => S,
-    Jz: () => A,
-    Kf: () => N,
-    _w: () => C,
-    mG: () => w,
+    E: () => T,
+    Jz: () => S,
+    _w: () => A,
+    mG: () => R,
 });
 var r = n(500260),
     i = n(88058),
     a = n(418523),
     o = n(278769),
-    s = n(647438),
-    l = n(179506);
-let c = null,
-    u = new Set(),
-    d = new Map(),
+    s = n(647438);
+let l = null,
+    c = new Set(),
+    u = new Map(),
+    d = !1,
     f = !1,
-    _ = !1,
-    p = {
+    _ = {
         Tab: !0,
         Escape: !0,
     };
-function h(e, t) {
-    for (let n of u) n(e, t);
+function p(e, t) {
+    for (let n of c) n(e, t);
 }
-function m(e) {
+function h(e) {
     return !(
         e.metaKey ||
         (!(0, i.V5)() && e.altKey) ||
@@ -33,111 +31,93 @@ function m(e) {
         "Meta" === e.key
     );
 }
+function m(e) {
+    (d = !0), h(e) && ((l = "keyboard"), p("keyboard", e));
+}
 function g(e) {
-    (f = !0), m(e) && ((c = "keyboard"), h("keyboard", e));
+    (l = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((d = !0), p("pointer", e));
 }
 function E(e) {
-    (c = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((f = !0), h("pointer", e));
+    (0, a.Z)(e) && ((d = !0), (l = "virtual"));
 }
 function b(e) {
-    (0, a.Z)(e) && ((f = !0), (c = "virtual"));
-}
-function y(e) {
     e.target !== window &&
         e.target !== document &&
         !r.uR &&
         e.isTrusted &&
-        (f || _ || ((c = "virtual"), h("virtual", e)), (f = !1), (_ = !1));
+        (d || f || ((l = "virtual"), p("virtual", e)), (d = !1), (f = !1));
 }
-function O() {
-    r.uR || ((f = !1), (_ = !0));
+function y() {
+    r.uR || ((d = !1), (f = !0));
 }
-function v(e) {
-    if ("undefined" == typeof window || "undefined" == typeof document || d.get((0, o.kR)(e))) return;
+function O(e) {
+    if ("undefined" == typeof window || "undefined" == typeof document || u.get((0, o.kR)(e))) return;
     let t = (0, o.kR)(e),
         n = (0, o.r3)(e),
         r = t.HTMLElement.prototype.focus;
     (t.HTMLElement.prototype.focus = function () {
-        (f = !0), r.apply(this, arguments);
+        (d = !0), r.apply(this, arguments);
     }),
-        n.addEventListener("keydown", g, !0),
-        n.addEventListener("keyup", g, !0),
-        n.addEventListener("click", b, !0),
-        t.addEventListener("focus", y, !0),
-        t.addEventListener("blur", O, !1),
+        n.addEventListener("keydown", m, !0),
+        n.addEventListener("keyup", m, !0),
+        n.addEventListener("click", E, !0),
+        t.addEventListener("focus", b, !0),
+        t.addEventListener("blur", y, !1),
         "undefined" != typeof PointerEvent &&
-            (n.addEventListener("pointerdown", E, !0),
-            n.addEventListener("pointermove", E, !0),
-            n.addEventListener("pointerup", E, !0)),
+            (n.addEventListener("pointerdown", g, !0),
+            n.addEventListener("pointermove", g, !0),
+            n.addEventListener("pointerup", g, !0)),
         t.addEventListener(
             "beforeunload",
             () => {
-                I(e);
+                v(e);
             },
             { once: !0 },
         ),
-        d.set(t, { focus: r });
+        u.set(t, { focus: r });
 }
-let I = (e, t) => {
+let v = (e, t) => {
     let n = (0, o.kR)(e),
         r = (0, o.r3)(e);
     t && r.removeEventListener("DOMContentLoaded", t),
-        d.has(n) &&
-            ((n.HTMLElement.prototype.focus = d.get(n).focus),
-            r.removeEventListener("keydown", g, !0),
-            r.removeEventListener("keyup", g, !0),
-            r.removeEventListener("click", b, !0),
-            n.removeEventListener("focus", y, !0),
-            n.removeEventListener("blur", O, !1),
+        u.has(n) &&
+            ((n.HTMLElement.prototype.focus = u.get(n).focus),
+            r.removeEventListener("keydown", m, !0),
+            r.removeEventListener("keyup", m, !0),
+            r.removeEventListener("click", E, !0),
+            n.removeEventListener("focus", b, !0),
+            n.removeEventListener("blur", y, !1),
             "undefined" != typeof PointerEvent &&
-                (r.removeEventListener("pointerdown", E, !0),
-                r.removeEventListener("pointermove", E, !0),
-                r.removeEventListener("pointerup", E, !0)),
-            d.delete(n));
+                (r.removeEventListener("pointerdown", g, !0),
+                r.removeEventListener("pointermove", g, !0),
+                r.removeEventListener("pointerup", g, !0)),
+            u.delete(n));
 };
-function T(e) {
+function I(e) {
     let t,
         n = (0, o.r3)(e);
     return (
         "loading" !== n.readyState
-            ? v(e)
+            ? O(e)
             : ((t = () => {
-                  v(e);
+                  O(e);
               }),
               n.addEventListener("DOMContentLoaded", t)),
-        () => I(e, t)
+        () => v(e, t)
     );
+}
+function T() {
+    return "pointer" !== l;
 }
 function S() {
-    return "pointer" !== c;
+    return l;
 }
-function A() {
-    return c;
+function A(e) {
+    (l = e), p(e, null);
 }
-function C(e) {
-    (c = e), h(e, null);
-}
-function N() {
-    v();
-    let [e, t] = (0, s.useState)(c);
-    return (
-        (0, s.useEffect)(() => {
-            let e = () => {
-                t(c);
-            };
-            return (
-                u.add(e),
-                () => {
-                    u.delete(e);
-                }
-            );
-        }, []),
-        (0, l.Av)() ? null : e
-    );
-}
-"undefined" != typeof document && T();
-let R = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
-function P(e, t, n) {
+"undefined" != typeof document && I();
+let C = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
+function N(e, t, n) {
     let r = (0, o.r3)(null == n ? void 0 : n.target),
         i = "undefined" != typeof window ? (0, o.kR)(null == n ? void 0 : n.target).HTMLInputElement : HTMLInputElement,
         a =
@@ -149,24 +129,24 @@ function P(e, t, n) {
     return !(
         (e =
             e ||
-            (r.activeElement instanceof i && !R.has(r.activeElement.type)) ||
+            (r.activeElement instanceof i && !C.has(r.activeElement.type)) ||
             r.activeElement instanceof a ||
             (r.activeElement instanceof s && r.activeElement.isContentEditable)) &&
         "keyboard" === t &&
         n instanceof l &&
-        !p[n.key]
+        !_[n.key]
     );
 }
-function w(e, t, n) {
-    v(),
+function R(e, t, n) {
+    O(),
         (0, s.useEffect)(() => {
             let t = (t, r) => {
-                P(!!(null == n ? void 0 : n.isTextInput), t, r) && e(S());
+                N(!!(null == n ? void 0 : n.isTextInput), t, r) && e(T());
             };
             return (
-                u.add(t),
+                c.add(t),
                 () => {
-                    u.delete(t);
+                    c.delete(t);
                 }
             );
         }, t);

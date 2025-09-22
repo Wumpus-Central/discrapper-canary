@@ -1,26 +1,33 @@
 n.d(t, {
-    aX: () => l,
-    jn: () => c,
-    pE: () => u,
-    vl: () => d,
+    aX: () => u,
+    jn: () => d,
+    pE: () => f,
+    vl: () => p,
+    xc: () => _,
+    zt: () => c,
 });
 var r = n(422305),
     i = n(554997),
     a = n(506364),
-    o = n(647438);
-let s = Symbol("default");
-function l(e) {
+    o = n(436283),
+    s = n(647438);
+let l = Symbol("default");
+function c({ values: e, children: t }) {
+    for (let [n, r] of e) t = s.createElement(n.Provider, { value: r }, t);
+    return t;
+}
+function u(e) {
     let {
         className: t,
         style: n,
         children: r,
         defaultClassName: i,
         defaultChildren: a,
-        defaultStyle: s,
+        defaultStyle: o,
         values: l,
     } = e;
-    return (0, o.useMemo)(() => {
-        let e, o, c;
+    return (0, s.useMemo)(() => {
+        let e, s, c;
         return (
             (e =
                 "function" == typeof t
@@ -29,11 +36,11 @@ function l(e) {
                           defaultClassName: i,
                       })
                     : t),
-            (o =
+            (s =
                 "function" == typeof n
                     ? n({
                           ...l,
-                          defaultStyle: s || {},
+                          defaultStyle: o || {},
                       })
                     : n),
             (c =
@@ -48,23 +55,23 @@ function l(e) {
             {
                 className: null != e ? e : i,
                 style:
-                    o || s
+                    s || o
                         ? {
-                              ...s,
                               ...o,
+                              ...s,
                           }
                         : void 0,
                 children: null != c ? c : a,
                 "data-rac": "",
             }
         );
-    }, [t, n, r, i, a, s, l]);
+    }, [t, n, r, i, a, o, l]);
 }
-function c(e, t) {
-    let n = (0, o.useContext)(e);
+function d(e, t) {
+    let n = (0, s.useContext)(e);
     if (null === t) return null;
     if (n && "object" == typeof n && "slots" in n && n.slots) {
-        let e = t || s;
+        let e = t || l;
         if (!n.slots[e]) {
             let e = new Intl.ListFormat().format(Object.keys(n.slots).map((e) => `"${e}"`)),
                 r = t ? `Invalid slot "${t}".` : "A slot prop is required.";
@@ -74,17 +81,17 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t, n) {
-    let { ref: s, ...l } = c(n, e.slot) || {},
-        u = (0, r.B)((0, o.useMemo)(() => (0, i.l)(t, s), [t, s])),
-        d = (0, a.d)(l, e);
+function f(e, t, n) {
+    let { ref: o, ...l } = d(n, e.slot) || {},
+        c = (0, r.B)((0, s.useMemo)(() => (0, i.l)(t, o), [t, o])),
+        u = (0, a.d)(l, e);
     return (
         "style" in l &&
             l.style &&
             "style" in e &&
             e.style &&
             ("function" == typeof l.style || "function" == typeof e.style
-                ? (d.style = (t) => {
+                ? (u.style = (t) => {
                       let n = "function" == typeof l.style ? l.style(t) : l.style,
                           r = {
                               ...t.defaultStyle,
@@ -102,14 +109,27 @@ function u(e, t, n) {
                           ...i,
                       };
                   })
-                : (d.style = {
+                : (u.style = {
                       ...l.style,
                       ...e.style,
                   })),
-        [d, u]
+        [u, c]
     );
 }
-function d(e) {
+function _(e = !0) {
+    let [t, n] = (0, s.useState)(e),
+        r = (0, s.useRef)(!1),
+        i = (0, s.useCallback)((e) => {
+            (r.current = !0), n(!!e);
+        }, []);
+    return (
+        (0, o.b)(() => {
+            r.current || n(!1);
+        }, []),
+        [i, t]
+    );
+}
+function p(e) {
     let t = /^(data-.*)$/,
         n = {};
     for (let r in e) t.test(r) || (n[r] = e[r]);

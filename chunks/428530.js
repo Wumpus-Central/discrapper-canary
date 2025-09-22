@@ -1,39 +1,47 @@
-n.d(t, { i: () => a });
-var r = n(647438);
-let i = 1000;
-function a(e) {
-    let { keyboardDelegate: t, selectionManager: n, onTypeSelect: a } = e,
-        s = (0, r.useRef)({
-            search: "",
-            timeout: void 0,
-        }).current,
-        l = (e) => {
-            let r = o(e.key);
-            if (
-                r &&
-                !e.ctrlKey &&
-                !e.metaKey &&
-                e.currentTarget.contains(e.target) &&
-                (0 !== s.search.length || " " !== r)
-            ) {
-                if (
-                    (" " === r &&
-                        s.search.trim().length > 0 &&
-                        (e.preventDefault(), "continuePropagation" in e || e.stopPropagation()),
-                    (s.search += r),
-                    null != t.getKeyForSearch)
-                ) {
-                    let e = t.getKeyForSearch(s.search, n.focusedKey);
-                    null == e && (e = t.getKeyForSearch(s.search)), null != e && (n.setFocusedKey(e), a && a(e));
-                }
-                clearTimeout(s.timeout),
-                    (s.timeout = setTimeout(() => {
-                        s.search = "";
-                    }, i));
-            }
-        };
-    return { typeSelectProps: { onKeyDownCapture: t.getKeyForSearch ? l : void 0 } };
+n.d(t, { Z: () => x }), n(388685), n(35282);
+var a = n(951288);
+n(647438);
+var r = n(805203),
+    i = n(692547),
+    l = n(410030),
+    s = n(95398),
+    o = n(981631),
+    c = n(451429);
+let d = {
+    base00: i.Z.colors.BACKGROUND_BASE_LOWER.css,
+    base03: i.Z.colors.TEXT_FEEDBACK_WARNING.css,
+    base07: i.Z.colors.TEXT_DEFAULT.css,
+    base08: i.Z.colors.TEXT_MUTED.css,
+    base09: i.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
+    base0B: i.Z.colors.TEXT_FEEDBACK_WARNING.css,
+    base0D: i.Z.colors.TEXT_BRAND.css,
+};
+function u(e) {
+    let t = {};
+    for (let [n, a] of Object.entries(e)) t[n] = a;
+    return t;
 }
-function o(e) {
-    return 1 !== e.length && /^[A-Z]/i.test(e) ? "" : e;
+let m = u(d),
+    h = u(d);
+function p(e) {
+    return o.Jn9.test(e)
+        ? (0, a.jsx)(s.ZP, {
+              type: s.ZP.Types.TEXT,
+              children: () => e,
+          })
+        : e;
+}
+function x(e) {
+    let { data: t } = e,
+        n = (0, l.ZP)();
+    return (0, a.jsx)("div", {
+        className: c.inspectorWrapper,
+        children: (0, a.jsx)(r.L, {
+            data: t,
+            theme: "light" === n ? h : m,
+            invertTheme: !1,
+            valueRenderer: p,
+            shouldExpandNode: () => !0,
+        }),
+    });
 }

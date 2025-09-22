@@ -17,12 +17,11 @@ function a(e) {
     return () => (null == t && (t = e()), t);
 }
 n.d(t, {
-    Dt: () => _,
-    Pf: () => d,
+    Dt: () => f,
+    Pf: () => u,
     V5: () => o,
-    ad: () => u,
     gn: () => c,
-    vU: () => p,
+    vU: () => _,
     zc: () => l,
 });
 let o = a(function () {
@@ -36,19 +35,19 @@ let o = a(function () {
     }),
     c = a(function () {
         return s() || l();
-    }),
-    u = a(function () {
-        return o() || c();
+    });
+a(function () {
+    return o() || c();
+});
+let u = a(function () {
+        return r(/AppleWebKit/i) && !d();
     }),
     d = a(function () {
-        return r(/AppleWebKit/i) && !f();
-    }),
-    f = a(function () {
         return r(/Chrome/i);
     }),
-    _ = a(function () {
+    f = a(function () {
         return r(/Android/i);
     }),
-    p = a(function () {
+    _ = a(function () {
         return r(/Firefox/i);
     });

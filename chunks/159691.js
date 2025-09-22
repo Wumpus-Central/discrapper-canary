@@ -100,6 +100,7 @@ n.d(t, {
     Pzh: () => r.Pzh,
     QDj: () => r.QDj,
     QJP: () => r.QJP,
+    QSK: () => r.QSK,
     QTo: () => r.QTo,
     QVc: () => r.QVc,
     Qdh: () => r.Qdh,
