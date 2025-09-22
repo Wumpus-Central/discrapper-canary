@@ -1,6 +1,6 @@
 n.d(t, { r: () => a });
 var r = n(647438),
-    i = n(323946),
+    i = n(79116),
     l = n(481060);
 function a(e) {
     let { container: t, edgeDistance: n = 130, maxSpeed: a = 1700, power: o = 2.2 } = e,
