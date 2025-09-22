@@ -1033,7 +1033,7 @@ function K(e) {
                 z,
                 R(
                     {
-                        style: { minWidth: "".concat(E, "ch") },
+                        style: { width: "".concat(E, "ch") },
                         className: o()(C.multi, h),
                         query: t,
                         placeholder: n,
