@@ -18,46 +18,46 @@ function _(e) {
     );
 }
 let p = function (e) {
-    let { className: t, submitting: n, errorMessage: a, onChange: p } = e,
-        h = i.useRef(null),
-        { countriesMap: m, countryCodeOptions: g } = (0, u.b)(),
-        [E, b] = i.useState(() => {
+    let { className: t, submitting: n, errorMessage: a, onChange: p, layerContext: h } = e,
+        m = i.useRef(null),
+        { countriesMap: g, countryCodeOptions: E } = (0, u.b)(),
+        [b, y] = i.useState(() => {
             let e = s.Z.find((e) => "United States" === e.name);
             return "".concat(e.alpha2, "-").concat(e.phoneCountryCode);
         }),
-        [y, O] = i.useState(() => {
+        [O, v] = i.useState(() => {
             let [e, t] = s.Z.find((e) => "United States" === e.name).phoneCountryCode.split(" ");
             return null != t ? t : "";
         }),
-        v = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 var t, n;
-                if (null != e) return _(null != (n = null == (t = m.get(e.value)) ? void 0 : t.alpha2) ? n : "");
+                if (null != e) return _(null != (n = null == (t = g.get(e.value)) ? void 0 : t.alpha2) ? n : "");
             },
-            [m],
-        ),
-        I = i.useCallback(
-            (e, t) => {
-                var n;
-                let r = null == (n = m.get(e)) ? void 0 : n.code;
-                null == p || p("".concat(r).concat(t));
-            },
-            [m, p],
+            [g],
         ),
         T = i.useCallback(
-            (e) => {
-                var t;
-                b(e), null == (t = h.current) || t.focus(), I(e, y);
+            (e, t) => {
+                var n;
+                let r = null == (n = g.get(e)) ? void 0 : n.code;
+                null == p || p("".concat(r).concat(t));
             },
-            [y, I],
+            [g, p],
         ),
         S = i.useCallback(
             (e) => {
-                O(e), I(E, e);
+                var t;
+                y(e), null == (t = m.current) || t.focus(), T(e, O);
             },
-            [E, I],
+            [O, T],
         ),
-        A = m.get(E);
+        A = i.useCallback(
+            (e) => {
+                v(e), T(b, e);
+            },
+            [b, T],
+        ),
+        C = g.get(b);
     return (0, r.jsx)("fieldset", {
         children: (0, r.jsxs)("div", {
             className: o()(f.phoneField, t),
@@ -65,24 +65,25 @@ let p = function (e) {
                 (0, r.jsx)(l.N, {
                     label: d.intl.string(d.t["k+bvrK"]),
                     children: (0, r.jsx)(c.VcW, {
-                        value: E,
-                        onChange: T,
-                        renderOptionPrefix: v,
-                        options: g,
+                        value: b,
+                        onChange: S,
+                        renderOptionPrefix: I,
+                        options: E,
                         popoutWidth: 280,
                         isDisabled: n,
+                        popoutLayerContext: h,
                     }),
                 }),
                 (0, r.jsx)(c.oil, {
                     label: d.intl.string(d.t["64bX0N"]),
                     error: a,
-                    leading: null == A ? void 0 : A.code,
+                    leading: null == C ? void 0 : C.code,
                     type: "tel",
-                    onChange: S,
+                    onChange: A,
                     autoFocus: !0,
-                    inputRef: h,
+                    inputRef: m,
                     disabled: n,
-                    value: y,
+                    value: O,
                 }),
             ],
         }),

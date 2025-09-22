@@ -1,52 +1,52 @@
-n.d(t, { Z: () => P }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(990547),
+n.d(t, { Z: () => O }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    i = n(990547),
     l = n(442837),
-    c = n(544891),
+    s = n(544891),
     o = n(481060),
-    s = n(893776),
-    u = n(37234),
-    d = n(809206),
-    f = n(110924),
-    p = n(714338),
-    y = n(213609),
-    m = n(429142),
-    h = n(144114),
-    g = n(210887),
-    b = n(23434),
-    j = n(1964),
-    v = n(762756),
-    x = n(308569),
-    O = n(981631),
-    E = n(815660),
-    w = n(388032);
-function _(e) {
+    c = n(893776),
+    d = n(37234),
+    u = n(809206),
+    m = n(110924),
+    h = n(714338),
+    p = n(213609),
+    x = n(429142),
+    f = n(144114),
+    b = n(210887),
+    g = n(23434),
+    v = n(1964),
+    j = n(762756),
+    _ = n(308569),
+    y = n(981631),
+    C = n(815660),
+    N = n(388032);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: a,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = a);
             });
     }
     return e;
 }
-function A(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,8 +54,8 @@ function A(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -64,99 +64,109 @@ function A(e, t) {
         e
     );
 }
-function P() {
-    let { action: e, theme: t } = (0, l.cj)([b.Z, g.Z], () => ({
-            action: b.Z.getAction(),
-            theme: g.Z.theme,
+function O() {
+    let { action: e, theme: t } = (0, l.cj)([g.Z, b.Z], () => ({
+            action: g.Z.getAction(),
+            theme: b.Z.theme,
         })),
-        P = j.Z.getVerificationTypes(e),
-        [k, S] = i.useState(0),
-        N = (0, f.Z)(P);
-    (0, y.Z)(
+        O = v.Z.getVerificationTypes(e),
+        [T, k] = r.useState(0),
+        P = (0, m.Z)(O);
+    (0, p.Z)(
         {
-            type: a.ImpressionTypes.MODAL,
-            name: a.ImpressionNames.USER_ACTION_REQUIRED,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: P[0],
-                verification_types: P,
+                verification_type: O[0],
+                verification_types: O,
             },
         },
         {},
-        [P.toString()],
+        [O.toString()],
     );
     let R = () => {
-        (0, d.FD)(),
+        (0, u.FD)(),
             (0, o.ZDy)(
                 async () => {
                     let { default: e } = await n.e("35401").then(n.bind(n, 284549));
-                    return (t) => (0, r.jsx)(e, _({}, t));
+                    return (t) => (0, a.jsx)(e, E({}, t));
                 },
                 {
-                    modalKey: x.F0,
-                    Layer: m.ZP,
+                    modalKey: _.F0,
+                    Layer: x.ZP,
                 },
             );
     };
     return (
-        i.useEffect(
+        r.useEffect(
             () => (
-                p.Z.disable(),
+                h.Z.disable(),
                 () => {
-                    p.Z.enable();
+                    h.Z.enable();
                 }
             ),
             [],
         ),
-        i.useEffect(() => {
-            (null == N ? void 0 : N[0]) === O.PUi.PHONE &&
-                (null == P ? void 0 : P[0]) === O.PUi.EMAIL &&
+        r.useEffect(() => {
+            (null == P ? void 0 : P[0]) === y.PUi.PHONE &&
+                (null == O ? void 0 : O[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
-                            (0, r.jsx)(
+                            (0, a.jsx)(
                                 e,
-                                A(_({}, t), {
-                                    title: w.intl.string(w.t.KLnLIC),
-                                    body: w.intl.string(w.t.XGbCq6),
-                                    confirmText: w.intl.string(w.t["3oK4q6"]),
+                                S(E({}, t), {
+                                    title: N.intl.string(N.t.KLnLIC),
+                                    body: N.intl.string(N.t.XGbCq6),
+                                    confirmText: N.intl.string(N.t["3oK4q6"]),
                                 }),
                             );
                     },
                     {
-                        modalKey: x.HR,
-                        Layer: m.ZP,
+                        modalKey: _.HR,
+                        Layer: x.ZP,
                         onCloseCallback: R,
                     },
                 );
-        }, [P, N]),
-        (0, r.jsx)(v.Z, {
-            types: P,
-            captchaKey: k,
+        }, [O, P]),
+        (0, a.jsx)(j.Z, {
+            types: O,
+            captchaKey: T,
             onCaptchaVerify: (e) => {
-                c.tn
+                s.tn
                     .post({
-                        url: O.ANM.CAPTCHA,
+                        url: y.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
-                    .then(u.xf, () => {
-                        S((e) => e + 1);
+                    .then(d.xf, () => {
+                        k((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
-                e === O.PUi.EMAIL_OR_PHONE || e === O.PUi.EMAIL || e === O.PUi.REVERIFY_EMAIL
+                e === y.PUi.EMAIL_OR_PHONE || e === y.PUi.EMAIL || e === y.PUi.REVERIFY_EMAIL
                     ? R()
                     : (0, o.ZDy)(
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                              return (t) => (0, r.jsx)(e, _({ reason: h.L.USER_ACTION_REQUIRED }, t));
+                              return (t) =>
+                                  (0, a.jsx)(
+                                      e,
+                                      E(
+                                          {
+                                              layerContext: x.mK,
+                                              reason: f.L.USER_ACTION_REQUIRED,
+                                          },
+                                          t,
+                                      ),
+                                  );
                           },
                           {
-                              modalKey: E.M,
-                              Layer: m.ZP,
+                              modalKey: C.M,
+                              Layer: x.ZP,
                           },
                       );
             },
@@ -165,28 +175,28 @@ function P() {
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
-                            (0, r.jsx)(
+                            (0, a.jsx)(
                                 e,
-                                A(
-                                    _(
+                                S(
+                                    E(
                                         {
-                                            header: w.intl.string(w.t["2jxGen"]),
-                                            confirmText: w.intl.string(w.t["2jxGen"]),
-                                            cancelText: w.intl.string(w.t["ETE/oK"]),
-                                            onConfirm: () => s.Z.logout("verification"),
+                                            header: N.intl.string(N.t["2jxGen"]),
+                                            confirmText: N.intl.string(N.t["2jxGen"]),
+                                            cancelText: N.intl.string(N.t["ETE/oK"]),
+                                            onConfirm: () => c.Z.logout("verification"),
                                         },
                                         n,
                                     ),
                                     {
-                                        children: (0, r.jsx)(t, {
+                                        children: (0, a.jsx)(t, {
                                             variant: "text-md/normal",
-                                            children: w.intl.string(w.t.SUnWBA),
+                                            children: N.intl.string(N.t.SUnWBA),
                                         }),
                                     },
                                 ),
                             );
                     },
-                    { Layer: m.ZP },
+                    { Layer: x.ZP },
                 );
             },
         })

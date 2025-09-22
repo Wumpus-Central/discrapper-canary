@@ -28,9 +28,9 @@ class p extends i.PureComponent {
             t,
             n,
             i,
-            { error: _, working: p, transitionState: h, validPhone: m } = this.props,
-            { phone: g } = this.state,
-            E = [];
+            { error: _, working: p, transitionState: h, validPhone: m, layerContext: g } = this.props,
+            { phone: E } = this.state,
+            b = [];
         return (
             m
                 ? (e = d.intl.string(d.t["4qMI6O"]))
@@ -46,7 +46,7 @@ class p extends i.PureComponent {
                       errorMessage: null != _ ? _ : void 0,
                       children: (0, r.jsx)(c.Z, { onSubmit: this.handleVerifyPhone }),
                   })),
-                  (E = [
+                  (b = [
                       {
                           variant: "secondary",
                           text: d.intl.string(d.t["5b60go"]),
@@ -60,11 +60,12 @@ class p extends i.PureComponent {
                       className: f.field,
                       onChange: this.handlePhoneChange,
                       submitting: p,
+                      layerContext: g,
                   })),
-                  (E = [
+                  (b = [
                       {
                           text: d.intl.string(d.t.TXNS7e),
-                          disabled: "" === g,
+                          disabled: "" === E,
                           loading: p,
                           onClick: this.handleAddPhone,
                       },
@@ -74,7 +75,7 @@ class p extends i.PureComponent {
                 size: m ? "sm" : "md",
                 title: i,
                 subtitle: e,
-                actions: E,
+                actions: b,
                 onClose: this.props.onClose,
                 trackingProps: { impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE } },
                 transitionState: h,

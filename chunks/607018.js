@@ -11,67 +11,68 @@ var r = n(951288),
     f = n(1964),
     _ = n(388032);
 let p = i.forwardRef(function (e, t) {
-    let { onAddedPhone: n, onClose: p, transitionState: h, reason: m } = e,
-        g = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        E = (0, a.e7)([u.Z], () => u.Z.getAction()),
-        [b, y] = i.useState(null),
-        [O, v] = i.useState(null),
-        [I, T] = i.useState(null),
-        [S, A] = i.useState(!1),
-        C = i.useCallback(
-            async (e) => {
-                A(!0);
-                try {
-                    f.Z.isPhoneReverification(g, E)
-                        ? await l.Z.beginReverifyPhone(e, m)
-                        : await l.Z.beginAddPhone(e, m),
-                        T(null),
-                        y(e);
-                } catch (e) {
-                    T(new s.Z(e));
-                }
-                A(!1);
-            },
-            [g, m, E],
-        ),
+    let { onAddedPhone: n, onClose: p, transitionState: h, reason: m, layerContext: g } = e,
+        E = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        b = (0, a.e7)([u.Z], () => u.Z.getAction()),
+        [y, O] = i.useState(null),
+        [v, I] = i.useState(null),
+        [T, S] = i.useState(null),
+        [A, C] = i.useState(!1),
         N = i.useCallback(
             async (e) => {
-                if (null != b && null != g) {
-                    A(!0);
-                    try {
-                        let { token: t } = await l.Z.verifyPhone(b, e);
-                        T(null), v(t);
-                    } catch (e) {
-                        T(new s.Z(e));
-                    }
-                    A(!1);
+                C(!0);
+                try {
+                    f.Z.isPhoneReverification(E, b)
+                        ? await l.Z.beginReverifyPhone(e, m)
+                        : await l.Z.beginAddPhone(e, m),
+                        S(null),
+                        O(e);
+                } catch (e) {
+                    S(new s.Z(e));
                 }
+                C(!1);
             },
-            [g, b],
+            [E, m, b],
         ),
         R = i.useCallback(
             async (e) => {
-                null != O &&
-                    (f.Z.isPhoneReverification(g, E) ? await l.Z.reverifyPhone(O, e, m) : await l.Z.addPhone(O, e, m),
+                if (null != y && null != E) {
+                    C(!0);
+                    try {
+                        let { token: t } = await l.Z.verifyPhone(y, e);
+                        S(null), I(t);
+                    } catch (e) {
+                        S(new s.Z(e));
+                    }
+                    C(!1);
+                }
+            },
+            [E, y],
+        ),
+        P = i.useCallback(
+            async (e) => {
+                null != v &&
+                    (f.Z.isPhoneReverification(E, b) ? await l.Z.reverifyPhone(v, e, m) : await l.Z.addPhone(v, e, m),
                     null == n || n(),
                     p());
             },
-            [n, p, O, m, g, E],
+            [n, p, v, m, E, b],
         );
-    return null != O
+    return null != v
         ? (0, r.jsx)(o.Z, {
               onClose: p,
               transitionState: h,
               title: _.intl.string(_.t.ZtCDc3),
-              handleSubmit: R,
+              handleSubmit: P,
           })
         : (0, r.jsx)(c.default, {
               onClose: p,
               transitionState: h,
-              error: null == I ? void 0 : I.getAnyErrorMessage(),
-              working: S,
-              validPhone: null != b,
-              onAddPhone: C,
-              onVerifyPhone: N,
+              error: null == T ? void 0 : T.getAnyErrorMessage(),
+              working: A,
+              validPhone: null != y,
+              onAddPhone: N,
+              onVerifyPhone: R,
+              layerContext: g,
           });
 });
