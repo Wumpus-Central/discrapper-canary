@@ -165,7 +165,6 @@ function V(e) {
                           M.s6.EXPERIMENTS,
                           M.s6.DEVELOPER_OPTIONS,
                           M.s6.REVENUE_STORYBOOK,
-                          M.s6.VIRTUAL_CURRENCY_CONFIGURATION,
                           M.s6.SHOP_KEEPER,
                           M.s6.QUEST_PREVIEW_TOOL,
                           M.s6.QUEST_PREVIEW_TOOL_2,

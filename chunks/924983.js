@@ -19,6 +19,8 @@ let d = [
     "Web Setting Tree Tool",
     "Minor Reward Capping Config",
     "Payment Flow Modals",
+    "Virtual Currency Configuration",
+    "Orbs",
 ];
 function f(e) {
     let { legacy: t = !0 } = e,
