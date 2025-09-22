@@ -10,7 +10,7 @@ n.d(t, {
     n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(938288),
+    a = n(401393),
     o = n(442837),
     s = n(481060),
     l = n(100527),
@@ -183,12 +183,17 @@ let M = (e) => {
 function U(e) {
     return e.config.features.includes(C.S7.START_QUEST_CTA)
         ? (0, m.pO)(e)
-            ? {
-                  text: P.intl.string(P.t["Ie9++v"]),
-                  questContentCTA: p.jZ.START_QUEST,
-              }
+            ? e.config.features.includes(C.S7.CLOUD_GAMING_ACTIVITY)
+                ? {
+                      text: P.intl.string(P.t["+qoymJ"]),
+                      questContentCTA: p.jZ.START_QUEST,
+                  }
+                : {
+                      text: P.intl.string(P.t["Ie9++v"]),
+                      questContentCTA: p.jZ.START_QUEST,
+                  }
             : {
-                  text: P.intl.string(P.t.ToGcxM),
+                  text: P.intl.string(P.t.hRIVy8),
                   questContentCTA: p.jZ.START_QUEST,
               }
         : {
