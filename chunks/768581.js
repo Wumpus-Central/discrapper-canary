@@ -234,7 +234,7 @@ function j(e) {
     let u = new URL(null != a ? "https://".concat(a).concat(c) : "".concat(location.protocol).concat(o).concat(c));
     return (
         u.searchParams.set("size", "".concat((0, l.oO)(n * (0, l.x_)()))),
-        u.searchParams.set("passthrough", "".concat(r && (0, s.ae)(i))),
+        u.searchParams.set("passthrough", "".concat(r)),
         u.toString()
     );
 }
@@ -309,10 +309,10 @@ function Z(e) {
         "?size=".concat(i)
     );
 }
-function V(e) {
+function F(e) {
     return ee(Z(e));
 }
-function F(e) {
+function V(e) {
     let { id: t, icon: n, size: r, canAnimate: i = !1, lossless: a = !1 } = e;
     return A({
         endpoint: f.ANM.GUILD_ICON,
@@ -447,11 +447,11 @@ let et = {
     },
     isAnimatedIconHash: X,
     getUserAvatarSource: (e, t, n) => ee(P(e, t, n)),
-    getGuildIconURL: F,
+    getGuildIconURL: V,
     getGuildSplashURL: k,
     getGuildSplashSource: U,
     getGuildDiscoverySplashURL: Z,
-    getGuildDiscoverySplashSource: V,
+    getGuildDiscoverySplashSource: F,
     getGuildBannerURL: G,
     getGuildHomeHeaderURL: B,
     getResourceChannelIconURL: function e(e) {
@@ -489,7 +489,7 @@ let et = {
     getGameAssetURL: W,
     getVideoFilterAssetURL: K,
     getGameAssetSource: (e) => ee(W(e)),
-    getGuildIconSource: (e) => ee(F(e)),
+    getGuildIconSource: (e) => ee(V(e)),
     getGuildTemplateIconSource: (e) => ee(H(e)),
     getGuildBannerSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
