@@ -8,7 +8,7 @@ n.d(t, {
     n(781311);
 var r = n(951288);
 n(647438);
-var i = n(693789),
+var i = n(793030),
     a = n(952265),
     o = n(911969),
     s = n(555573),
@@ -169,16 +169,13 @@ let P = {
             },
             key: "commands",
             headerClassName: d ? T.legacyInputCommandHeader : null,
-            headerTrailingContent: d
-                ? (0, r.jsx)(i.zx, {
-                      type: "button",
-                      look: i.zx.Looks.LINK,
-                      color: i.zx.Colors.BRAND,
-                      size: i.zx.Sizes.MIN,
-                      onClick: N,
-                      children: I.intl.string(I.t["8a0P09"]),
-                  })
-                : null,
+            headerTrailingContent:
+                d &&
+                (0, r.jsx)(i.Avr, {
+                    size: "xs",
+                    onClick: N,
+                    text: I.intl.string(I.t["8a0P09"]),
+                }),
         });
     },
     onSelect(e) {
