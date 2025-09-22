@@ -815,7 +815,7 @@ let eC = i.memo(function (e) {
                               className: ex,
                           }),
                     (0, r.jsx)("div", {
-                        className: o()(ef.preview, { [ef.previewThumbnailVariant]: U === el.Ch.THUMBNAIL }),
+                        className: ef.preview,
                         children: (0, s.EQ)(t.type)
                             .with(u.Z.PROFILE_EFFECT, u.Z.AVATAR_DECORATION, u.Z.NAMEPLATE, () => eT(y, ev, eu))
                             .with(u.Z.BUNDLE, () =>

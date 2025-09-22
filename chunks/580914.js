@@ -11,8 +11,8 @@ var r = n(951288),
     g = n(434650),
     p = n(110560),
     f = n(507808),
-    h = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    h = n(626135),
     C = n(381585),
     m = n(597688),
     b = n(884697),
@@ -46,7 +46,7 @@ let R = (0, b.IC)(90),
     },
     w = (e) => {
         var t;
-        let { isLoading: n, handleTransition: a, category: w, heroBlock: M, tab: F, onVisibilityChange: H } = e,
+        let { isLoading: n, handleTransition: a, category: w, heroBlock: F, tab: M, onVisibilityChange: H } = e,
             D = (0, g.O)(
                 (e) => {
                     null == H || H(e);
@@ -54,16 +54,16 @@ let R = (0, b.IC)(90),
                 0.1,
                 null != H,
             ),
-            W = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
+            W = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
             U = (0, j.Z)(),
             V = (0, C.sp)(),
-            z = S.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && F !== B.AW.ORBS,
+            z = S.Z.useConfig({ location: "HeroBlock" }).showButtonLeftAligned && M !== B.AW.ORBS,
             G = (0, O.MG)("HeroBlock"),
             q = (0, O.xh)("HeroBlock"),
             K = l.useMemo(() => {
                 var e, t;
-                return null != M
-                    ? M
+                return null != F
+                    ? F
                     : null == w
                       ? Z
                       : {
@@ -83,7 +83,7 @@ let R = (0, b.IC)(90),
                             bannerConfig: w.heroBannerConfig,
                             logoConfig: w.heroLogoDisplayConfig,
                         };
-            }, [M, w]),
+            }, [F, w]),
             {
                 bannerStyleOverrides: Y,
                 logoStyleOverrides: X,
@@ -94,45 +94,33 @@ let R = (0, b.IC)(90),
             ee = null != (t = null == Y ? void 0 : Y.responsive) && t,
             et = null == Y ? void 0 : Y.backgroundStyle,
             en = null == $ ? void 0 : $.endsWith(".riv"),
-            er = (0, u.e7)([m.Z], () => m.Z.products),
-            el = l.useMemo(() => (n ? [] : er.size > 0 ? U(K.rankedSkuIds) : []), [n, U, K.rankedSkuIds, er]),
-            ea = l.useMemo(
-                () =>
-                    !n &&
-                    0 !== K.rankedSkuIds.length &&
-                    !(el.length > 0) &&
-                    K.rankedSkuIds.every((e) => {
-                        var t;
-                        return (null == (t = m.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
-                    }),
-                [n, K.rankedSkuIds, el.length],
-            ),
-            es = (0, v.a)()(el),
-            ei = (0, x.l)(es).slice(0, 4),
-            eo = (0, k.St)(ei),
-            ec =
-                F === B.AW.ORBS
+            er = l.useMemo(() => U(K.rankedSkuIds), [n, U, K.rankedSkuIds]),
+            el = (0, v.a)()(er),
+            ea = (0, x.l)(el).slice(0, 4),
+            es = (0, k.St)(ea),
+            ei =
+                M === B.AW.ORBS
                     ? A.intl.string(A.t["1CdL8f"])
                     : G
                       ? q
                           ? A.intl.string(A.t["/QvRam"])
                           : A.intl.string(A.t.xYKa1d)
                       : A.intl.formatToPlainString(A.t.wvKYCg, { category_name: K.name }),
-            eu = (0, E.FF)("CollectiblesContent"),
-            ed = K.categorySkuId === i.T.ORB,
-            eg = () => {
-                F === B.AW.ORBS
+            eo = (0, E.FF)("CollectiblesContent"),
+            ec = K.categorySkuId === i.T.ORB,
+            eu = () => {
+                M === B.AW.ORBS
                     ? ((0, f.Y)({
                           pageType: N.ZY5.SHOP_ORBS_TAB,
                           sectionType: N.jXE.ORBS_SHOP_HERO_BLOCK,
                           ctaObject: N.qAy.CTA_TO_QUEST_HOME,
                       }),
                       (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
-                    : (a("shop latest category hero", !eu || ed ? K.categorySkuId : void 0),
-                      _.default.track(N.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    : (a("shop latest category hero", !eo || ec ? K.categorySkuId : void 0),
+                      h.default.track(N.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                           collectibles_shop_session_id: null == V ? void 0 : V.sessionId,
                           sku_id: K.categorySkuId,
-                          page_type: F,
+                          page_type: M,
                           page_section: null == V ? void 0 : V.pageSection,
                           page_category: null == V ? void 0 : V.pageCategory,
                           cta_name: "shop latest category hero button",
@@ -162,8 +150,8 @@ let R = (0, b.IC)(90),
                                             !n &&
                                             (0, r.jsx)(d.zxk, {
                                                 variant: "overlay-primary",
-                                                onClick: eg,
-                                                text: ec,
+                                                onClick: eu,
+                                                text: ei,
                                             }),
                                     })
                                   : (0, r.jsxs)("div", {
@@ -206,10 +194,10 @@ let R = (0, b.IC)(90),
                                                                       }),
                                                                   "" !== K.summary &&
                                                                       (0, r.jsx)(d.Text, {
-                                                                          variant: ed
+                                                                          variant: ec
                                                                               ? "text-lg/medium"
                                                                               : "text-md/normal",
-                                                                          className: ed
+                                                                          className: ec
                                                                               ? P.orbsSubHeaderText
                                                                               : P.subHeaderText,
                                                                           style:
@@ -229,50 +217,49 @@ let R = (0, b.IC)(90),
                                                         : P.heroHeaderButtonContainer,
                                                     children: (0, r.jsx)(d.zxk, {
                                                         variant: "overlay-primary",
-                                                        onClick: eg,
-                                                        text: ec,
+                                                        onClick: eu,
+                                                        text: ei,
                                                     }),
                                                 }),
                                         ],
                                     }),
                               (0, r.jsx)("div", {
-                                  className: s()(P.row, P.feed, { [P.feedSingleRow]: F !== B.AW.ORBS }),
-                                  children:
-                                      n || ea
-                                          ? (0, r.jsx)(r.Fragment, {
-                                                children: [void 0, void 0, void 0, void 0].map((e, t) =>
-                                                    (0, r.jsx)(T.K, {}, t),
-                                                ),
-                                            })
-                                          : (0, r.jsx)(r.Fragment, {
-                                                children: eo.map((e, t) => {
-                                                    let n = m.Z.getCategoryForProduct(e.skuId);
-                                                    return null == e || null == n
-                                                        ? null
-                                                        : (0, r.jsx)(
-                                                              C.k0,
-                                                              {
-                                                                  newValue: {
-                                                                      tilePosition: t,
-                                                                      pageSection: "top 4",
-                                                                      categoryPosition: 0,
-                                                                  },
-                                                                  children: (0, r.jsx)(
-                                                                      y.Z,
-                                                                      {
-                                                                          product: e,
-                                                                          category: n,
-                                                                          user: W,
-                                                                          tab: F,
-                                                                          shopBlockType: c.z.HERO,
-                                                                      },
-                                                                      e.skuId,
-                                                                  ),
+                                  className: s()(P.row, P.feed, { [P.feedSingleRow]: M !== B.AW.ORBS }),
+                                  children: n
+                                      ? (0, r.jsx)(r.Fragment, {
+                                            children: [void 0, void 0, void 0, void 0].map((e, t) =>
+                                                (0, r.jsx)(T.K, {}, t),
+                                            ),
+                                        })
+                                      : (0, r.jsx)(r.Fragment, {
+                                            children: es.map((e, t) => {
+                                                let n = m.Z.getCategoryForProduct(e.skuId);
+                                                return null == e || null == n
+                                                    ? null
+                                                    : (0, r.jsx)(
+                                                          C.k0,
+                                                          {
+                                                              newValue: {
+                                                                  tilePosition: t,
+                                                                  pageSection: "top 4",
+                                                                  categoryPosition: 0,
                                                               },
-                                                              null == e ? void 0 : e.skuId,
-                                                          );
-                                                }),
+                                                              children: (0, r.jsx)(
+                                                                  y.Z,
+                                                                  {
+                                                                      product: e,
+                                                                      category: n,
+                                                                      user: W,
+                                                                      tab: M,
+                                                                      shopBlockType: c.z.HERO,
+                                                                  },
+                                                                  e.skuId,
+                                                              ),
+                                                          },
+                                                          null == e ? void 0 : e.skuId,
+                                                      );
                                             }),
+                                        }),
                               }),
                           ],
                       }),
