@@ -31,7 +31,8 @@ function C() {
         a = null != e ? e : t,
         C = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
         { subsection: N, setSubsection: R } = (0, O.Z)(),
-        { hasSearchResults: P, searchResults: w } = (0, m.E)();
+        P = m.R.useField("hasSearchResults"),
+        w = m.R.useField("searchResults");
     function D(t) {
         if (N !== t) {
             if (n) {

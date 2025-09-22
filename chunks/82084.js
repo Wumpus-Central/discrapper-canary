@@ -1,7 +1,8 @@
 n.d(t, { Z: () => o });
-var r = n(951288),
-    l = n(257465),
-    i = n(79808);
+var r = n(951288);
+n(647438);
+var i = n(257465),
+    l = n(79808);
 function o(e) {
     var t,
         n,
@@ -10,25 +11,25 @@ function o(e) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return l;
+            return i;
         })(e, ["root", "directory", "target", "sidebarHeader", "sidebarFooter"]);
     return (0, r.jsx)(
-        l.I,
+        i.I,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +63,7 @@ function o(e) {
         )),
         (n = n =
             {
-                children: (0, r.jsx)(i.Z, {
+                children: (0, r.jsx)(l.Z, {
                     onClose: d.onClose,
                     root: o,
                     directory: s,

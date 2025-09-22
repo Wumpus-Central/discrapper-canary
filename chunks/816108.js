@@ -9,7 +9,8 @@ let a = [
     ],
     o = [i.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2, i.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2],
     s = () => {
-        let { hasSearchResults: e, searchResults: t } = (0, r.E)();
+        let e = r.R.useField("hasSearchResults"),
+            t = r.R.useField("searchResults");
         return e
             ? {
                   hideGuildOptions: ![...t].some((e) => a.includes(e)),

@@ -1,14 +1,17 @@
-n.d(t, { default: () => d });
+n.d(t, { default: () => O });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(82084),
     o = n(131051),
-    a = n(996733),
-    s = n(313789),
+    s = n(996733),
+    a = n(313789),
     u = n(914578),
-    c = n(920952);
-function d(e) {
+    c = n(920952),
+    d = n(839469),
+    f = n(388032),
+    g = n(942408);
+function O(e) {
     var t,
         { target: n } = e,
         i = (function (e, t) {
@@ -32,9 +35,9 @@ function d(e) {
             }
             return i;
         })(e, ["target"]);
-    let d = (0, a.Z7)(),
-        { node: f, directory: y } = (0, o.Z)(c.Z, d),
-        O = ((t = s.n.ACCOUNT_PANEL), null == y.entry(n) ? t : n);
+    let d = (0, s.Z7)(),
+        { node: f, directory: g } = (0, o.Z)(c.Z, d),
+        O = ((t = a.n.ACCOUNT_PANEL), null == g.entry(n) ? t : n);
     return (0, r.jsx)(
         l.Z,
         (function (e) {
@@ -64,8 +67,8 @@ function d(e) {
         })(
             {
                 root: f,
-                directory: y,
-                sidebarHeader: g,
+                directory: g,
+                sidebarHeader: y,
                 sidebarFooter: u.Z,
                 target: O,
             },
@@ -73,14 +76,35 @@ function d(e) {
         ),
     );
 }
-function g() {
-    let e = (0, a.Z7)();
-    return (0, r.jsx)("div", {
-        children: (0, r.jsx)(i.E1j, {
-            size: "md",
-            query: e,
-            onChange: a.yN,
-            onClear: () => (0, a.yN)(""),
-        }),
+function y() {
+    let e = (0, s.Z7)(),
+        t = d.R.useField("hasSearchResults"),
+        n = d.R.useField("searchResults");
+    return (0, r.jsxs)("div", {
+        children: [
+            (0, r.jsx)(i.E1j, {
+                size: "md",
+                query: e,
+                onChange: s.yN,
+                onClear: () => (0, s.yN)(""),
+            }),
+            t &&
+                0 === n.length &&
+                (0, r.jsxs)("div", {
+                    className: g.emptySearchResultsContainer,
+                    children: [
+                        (0, r.jsx)(i.Text, {
+                            variant: "text-sm/semibold",
+                            color: "text-primary",
+                            children: f.intl.string(f.t.zihbmp),
+                        }),
+                        (0, r.jsx)(i.Text, {
+                            variant: "text-sm/normal",
+                            color: "text-secondary",
+                            children: f.intl.string(f.t.XclvsL),
+                        }),
+                    ],
+                }),
+        ],
     });
 }

@@ -1,5 +1,18 @@
-n.d(t, { Z: () => r }), n(388685);
-class r {
+function r(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+n.d(t, { Z: () => i }), n(388685);
+class i {
     register(e, t, n, r) {
         this.map.set(e.key, {
             node: e,
@@ -22,16 +35,13 @@ class r {
         var t;
         return null == (t = this.typedEntry(e)) ? void 0 : t.node;
     }
+    setDefaultPanel(e) {
+        this.defaultPanel = e;
+    }
+    getDefaultPanel() {
+        return this.defaultPanel;
+    }
     constructor() {
-        !(function (e, t, n) {
-            "map" in e
-                ? Object.defineProperty(e, "map", {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0,
-                  })
-                : (e[t] = n);
-        })(this, "map", new Map());
+        r(this, "map", new Map()), r(this, "defaultPanel", void 0);
     }
 }
