@@ -1,8 +1,7 @@
 n.d(t, { Z: () => y }), n(539854);
 var r = n(399606),
-    i = n(897345);
-n(265153);
-var l = n(697379),
+    i = n(897345),
+    l = n(697379),
     o = n(241559),
     a = n(563534),
     s = n(655359),
@@ -21,8 +20,8 @@ function y(e) {
         n = (0, l.W)(e.id),
         y = (0, d.j0)(e.id),
         _ = (0, i.u)(e),
-        j = (0, c.g)(e.id),
-        v = (0, r.e7)([a.Z], () => a.Z.getNewMemberActions(e.id), [e.id]),
+        v = (0, c.g)(e.id),
+        j = (0, r.e7)([a.Z], () => a.Z.getNewMemberActions(e.id), [e.id]),
         x = (0, u.Z)(e.id),
         C = (0, s.PE)(e.id),
         E = (0, o.n2)(e.id),
@@ -36,10 +35,10 @@ function y(e) {
         A = e.features.has(O.oNc.GAME_SERVERS);
     return (
         P && S.push(b.z.GUILD_HUB_HEADER_OPTIONS),
-        !C && j && x && null != v && v.length > 0
+        !C && v && x && null != j && j.length > 0
             ? S.push(b.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR)
             : e.premiumProgressBarEnabled && S.push(b.z.GUILD_PREMIUM_PROGRESS_BAR),
-        !P && j && S.push(b.z.GUILD_HOME),
+        !P && v && S.push(b.z.GUILD_HOME),
         t && S.push(b.z.GUILD_SCHEDULED_EVENTS),
         !P && I && N && S.push(b.z.CHANNELS_AND_ROLES),
         y && S.push(b.z.GUILD_ROLE_SUBSCRIPTIONS),
