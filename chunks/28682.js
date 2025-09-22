@@ -26,7 +26,12 @@ var r,
         (r[(r.NAVIGATOR = 16)] = "NAVIGATOR"),
         (r[(r.CUSTOM = 17)] = "CUSTOM"),
         r),
-    o = (((i = {})[(i.POPOVER = 0)] = "POPOVER"), i);
+    o =
+        (((i = {})[(i.POPOVER = 0)] = "POPOVER"),
+        (i[(i.BADGE_NEW = 1)] = "BADGE_NEW"),
+        (i[(i.BADGE_COUNT = 2)] = "BADGE_COUNT"),
+        (i[(i.STRONGLY_DISCOURAGED_CUSTOM = 3)] = "STRONGLY_DISCOURAGED_CUSTOM"),
+        i);
 function s(e) {
     return "layout" in e;
 }

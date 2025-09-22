@@ -1,4 +1,4 @@
-n.d(t, { P: () => p }), n(539854), n(388685);
+n.d(t, { P: () => T }), n(539854), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -8,13 +8,13 @@ var r = n(951288),
     u = n(481060),
     c = n(493773),
     d = n(243778),
-    g = n(59662),
-    f = n(28682),
-    y = n(829210),
-    O = n(854014),
+    f = n(59662),
+    g = n(28682),
+    O = n(829210),
+    y = n(854014),
     E = n(921944),
     b = n(845435);
-function v(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,28 +39,32 @@ function v(e) {
     }
     return e;
 }
-function p(e) {
+function T(e) {
     let { root: t, header: n, footer: l } = e,
-        { showNavigationMobile: a } = (0, g.t)(),
+        { showNavigationMobile: a } = (0, f.t)(),
         c = i.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
                     let { trailing: n, layout: r } = t;
-                    null != n && n.type === f.PU.POPOVER && e.push(n.dismissibleContentType),
+                    null != n && n.type === g.PU.POPOVER && e.push(n.dismissibleContentType),
                         r.forEach((t) => {
-                            var n;
-                            t.type === f.Jq.PANEL &&
-                                (null == (n = t.trailing) ? void 0 : n.newIndicatorDismissibleContentTypes) != null &&
-                                t.trailing.newIndicatorDismissibleContentTypes.forEach((t) => {
-                                    e.push(t);
-                                });
+                            if (t.type === g.Jq.PANEL && null != t.trailing)
+                                switch (t.trailing.type) {
+                                    case g.PU.BADGE_NEW:
+                                    case g.PU.STRONGLY_DISCOURAGED_CUSTOM:
+                                        var n;
+                                        null == (n = t.trailing.dismissibleContentTypes) ||
+                                            n.forEach((t) => {
+                                                e.push(t);
+                                            });
+                                }
                         });
                 }),
                 e
             );
         }, [t.layout]),
-        [y, O] = i.useMemo(() => {
+        [O, y] = i.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -84,9 +88,9 @@ function p(e) {
                         className: b.fixedContent,
                         children: [
                             (0, r.jsx)("div", {
-                                children: y.map((e) =>
+                                children: O.map((e) =>
                                     (0, r.jsx)(
-                                        N,
+                                        S,
                                         {
                                             section: e,
                                             visibleContent: t,
@@ -105,9 +109,9 @@ function p(e) {
                         children: [
                             (0, r.jsx)("nav", {
                                 className: b.nav,
-                                children: O.map((e) =>
+                                children: y.map((e) =>
                                     (0, r.jsx)(
-                                        N,
+                                        S,
                                         {
                                             section: e,
                                             visibleContent: t,
@@ -125,19 +129,19 @@ function p(e) {
         },
     });
 }
-function T(e) {
+function v(e) {
     let { dismissibleContentType: t, targetElementRef: n, visibleContent: l, markAsDismissed: o, props: s } = e,
         [u, d] = i.useState(!1),
-        g = i.useRef(null);
+        f = i.useRef(null);
     (0, c.ZP)(
         () => (
-            (g.current = setTimeout(() => d(!0), 250)),
+            (f.current = setTimeout(() => d(!0), 250)),
             () => {
-                clearTimeout(g.current), o(E.L.AUTO_DISMISS);
+                clearTimeout(f.current), o(E.L.AUTO_DISMISS);
             }
         ),
     );
-    let f = i.useCallback(
+    let g = i.useCallback(
         (e) => {
             o("user:explicit" === e ? E.L.USER_DISMISS : E.L.AUTO_DISMISS);
         },
@@ -145,24 +149,24 @@ function T(e) {
     );
     return (0, r.jsx)(
         a.Z,
-        v(
+        p(
             {
                 targetElementRef: n,
                 shouldShow: u && l === t,
                 scrollBehavior: "close",
-                onRequestClose: f,
+                onRequestClose: g,
             },
             s,
         ),
     );
 }
-function m(e) {
+function N(e) {
     let { trailing: t, sectionRef: n, visibleContent: i, markAsDismissed: l } = e;
-    if (t.type === f.PU.POPOVER) {
+    if (t.type === g.PU.POPOVER) {
         var o, s;
         return (0, r.jsx)(
-            T,
-            ((o = v({}, t)),
+            v,
+            ((o = p({}, t)),
             (s = s =
                 {
                     targetElementRef: n,
@@ -185,7 +189,7 @@ function m(e) {
         );
     }
 }
-function N(e) {
+function S(e) {
     var t;
     let { section: n, visibleContent: l, markAsDismissed: o } = e,
         s = i.useRef(null),
@@ -206,7 +210,7 @@ function N(e) {
                             children: a,
                         }),
                         null != c &&
-                            (0, r.jsx)(m, {
+                            (0, r.jsx)(N, {
                                 trailing: c,
                                 sectionRef: s,
                                 visibleContent: l,
@@ -219,15 +223,15 @@ function N(e) {
                     "li",
                     {
                         children: [
-                            e.type === f.Jq.PANEL &&
-                                (0, r.jsx)(y.Z, {
+                            e.type === g.Jq.PANEL &&
+                                (0, r.jsx)(O.Z, {
                                     node: e,
                                     visibleContent: l,
                                 }),
-                            e.type === f.Jq.SIDEBAR_ITEM &&
+                            e.type === g.Jq.SIDEBAR_ITEM &&
                                 ("render" in e
-                                    ? (0, r.jsx)(O.Z, { render: e.render })
-                                    : (0, r.jsx)(O.Z, {
+                                    ? (0, r.jsx)(y.Z, { render: e.render })
+                                    : (0, r.jsx)(y.Z, {
                                           icon: e.icon,
                                           title: e.useTitle(),
                                           onClick: e.onClick,

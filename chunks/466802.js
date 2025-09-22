@@ -1,19 +1,23 @@
-n.d(t, { Z: () => d });
-var i = n(657707),
-    r = n(509613),
-    l = n(748717),
-    o = n(126848),
-    a = n(869235),
-    s = n(726985),
-    u = n(388032);
-let c = (0, r.x1)(a.t.NITRO_PANE, {
+n.d(t, { Z: () => f });
+var r = n(657707),
+    i = n(509613),
+    l = n(28682),
+    o = n(313789),
+    s = n(748717),
+    a = n(126848),
+    u = n(726985),
+    c = n(388032);
+let d = (0, i.x1)(o.n.NITRO_PANE, {
         getLayout: () => [],
-        render: l.Z,
+        render: s.Z,
     }),
-    d = (0, r.wf)(a.t.NITRO_PANEL, {
-        icon: i.SrA,
-        useTitle: () => u.intl.string(u.t.Ipxkoq),
-        getLayout: () => [c],
-        trailing: { useDecoration: o.x },
-        legacySearchKey: s.s6.PREMIUM,
+    f = (0, i.wf)(o.n.NITRO_PANEL, {
+        icon: r.SrA,
+        useTitle: () => c.intl.string(c.t.Ipxkoq),
+        getLayout: () => [d],
+        trailing: {
+            type: l.PU.STRONGLY_DISCOURAGED_CUSTOM,
+            useDecoration: () => (0, a.x)(),
+        },
+        legacySearchKey: u.s6.PREMIUM,
     });
