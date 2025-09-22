@@ -354,7 +354,11 @@ function ec(e, t, n) {
 function eu(e) {
     return r.useMemo(
         () =>
-            (0, A.q8)(e) || (0, A.Pb)(e) || (0, A.pO)(e) || (0, A.Vl)(e)
+            (0, A.q8)(e) ||
+            (0, A.Pb)(e) ||
+            (0, A.pO)(e) ||
+            (0, A.Vl)(e) ||
+            e.config.features.includes(j.S7.NON_GAMING_PLAY_QUEST)
                 ? U.intl.string(U.t.hvVgAQ)
                 : U.intl.string(U.t.lwQdjI),
         [e],
@@ -478,7 +482,8 @@ function ey(e, t, n, r) {
             });
     let l = U.t["6zWtV1"];
     return (
-        (0, A.Nj)({ quest: e }) && (l = U.t["wmOh/v"]),
+        (0, A.Nj)({ quest: e }) &&
+            (l = e.config.features.includes(j.S7.NON_GAMING_PLAY_QUEST) ? U.t.fe7XeX : U.t["wmOh/v"]),
         U.intl.format(l, {
             minutes: i,
             gameTitle: e.config.messages.gameTitle,
