@@ -1,88 +1,95 @@
 n.d(t, {
-    E2: () => O,
-    LI: () => h,
-    Qr: () => p,
-    _p: () => y,
-    f0: () => E,
-    iB: () => g,
-    jV: () => b,
-    lx: () => m,
-    t3: () => _,
-    yH: () => v,
+    E2: () => I,
+    LI: () => g,
+    Qr: () => m,
+    _p: () => v,
+    f0: () => y,
+    iB: () => b,
+    jV: () => O,
+    k0: () => S,
+    lx: () => E,
+    t3: () => h,
+    yH: () => T,
 }),
     n(388685),
     n(642613);
 var r = n(913527),
     i = n.n(r),
-    a = n(292352),
-    o = n(345909),
-    s = n(388032);
-let l = 60,
-    c = 3600,
-    u = 86400,
-    d = 172800,
-    f = 604800,
-    _ = () => ({
-        today: s.intl.string(o.default.VjIAQU),
-        yesterday: s.intl.string(o.default["2a8xHR"]),
-        days: o.default.Xt6oND,
+    a = n(260722),
+    o = n(914788),
+    s = n(292352),
+    l = n(345909),
+    c = n(388032);
+let u = 60,
+    d = 3600,
+    f = 86400,
+    _ = 172800,
+    p = 604800,
+    h = () => ({
+        today: c.intl.string(l.default.VjIAQU),
+        yesterday: c.intl.string(l.default["2a8xHR"]),
+        days: l.default.Xt6oND,
     }),
-    p = (e) =>
+    m = (e) =>
         e
             ? {
-                  today: s.intl.string(o.default["2AtcIi"]),
-                  yesterday: s.intl.string(o.default.stOECg),
-                  days: o.default.n8n5BQ,
+                  today: c.intl.string(l.default["2AtcIi"]),
+                  yesterday: c.intl.string(l.default.stOECg),
+                  days: l.default.n8n5BQ,
               }
             : {
-                  today: s.intl.string(o.default.g1ZX6u),
-                  yesterday: s.intl.string(o.default.s3qSVl),
-                  days: o.default.f1UJiI,
+                  today: c.intl.string(l.default.g1ZX6u),
+                  yesterday: c.intl.string(l.default.s3qSVl),
+                  days: l.default.f1UJiI,
               },
-    h = (e, t, n) => {
+    g = (e, t, n) => {
         let r = i()().diff(i()(e), "s"),
             a = t(),
             o = i()(e).format("LL");
-        return r < u
+        return r < f
             ? a.today
-            : r < d
+            : r < _
               ? a.yesterday
-              : s.intl.formatToPlainString(a.days, { days: Math.min(Math.floor(r / u), null != n ? n : 999) });
+              : c.intl.formatToPlainString(a.days, { days: Math.min(Math.floor(r / f), null != n ? n : 999) });
     },
-    m = (e, t) => {
+    E = (e, t) => {
         let n = i()().diff(i()(e), "s"),
             r = t(),
             a = i()(e).format("LL");
-        return n < l
+        return n < u
             ? r.seconds
-            : n < c
-              ? s.intl.formatToPlainString(r.minutes, { count: Math.floor(n / l) })
-              : n < u
-                ? s.intl.formatToPlainString(r.hours, { count: Math.floor(n / c) })
-                : n < d
+            : n < d
+              ? c.intl.formatToPlainString(r.minutes, { count: Math.floor(n / u) })
+              : n < f
+                ? c.intl.formatToPlainString(r.hours, { count: Math.floor(n / d) })
+                : n < _
                   ? r.yesterday
-                  : n < f
-                    ? s.intl.formatToPlainString(r.days, { count: Math.floor(n / u) })
-                    : s.intl.formatToPlainString(r.date, { date: a });
+                  : n < p
+                    ? c.intl.formatToPlainString(r.days, { count: Math.floor(n / f) })
+                    : c.intl.formatToPlainString(r.date, { date: a });
     },
-    g = (e) =>
-        e.display_type === a.MY.USER_ADD ||
-        e.display_type === a.MY.USER_INTERACTION ||
-        e.display_type === a.MY.USER_CALLED,
-    E = (e) => e.display_type === a.MY.GUILD_ADD || e.display_type === a.MY.GUILD_INTERACTION,
-    b = (e) => {
-        for (let t of Object.values(a.MY)) if (t.toString() === e) return t;
-    },
-    y = (e) => {
-        let t = O(e);
-        return 0 === t.size ? [] : Array.from(t.entries()).sort((e, t) => e[1].priority - t[1].priority);
-    },
+    b = (e) =>
+        e.display_type === s.MY.USER_ADD ||
+        e.display_type === s.MY.USER_INTERACTION ||
+        e.display_type === s.MY.USER_CALLED,
+    y = (e) => e.display_type === s.MY.GUILD_ADD || e.display_type === s.MY.GUILD_INTERACTION,
     O = (e) => {
-        let t = new Map(a.tx);
-        return e && (t = new Map([...t, ...a.U])), t;
+        for (let t of Object.values(s.MY)) if (t.toString() === e) return t;
     },
     v = (e) => {
+        let t = I(e);
+        return 0 === t.size ? [] : Array.from(t.entries()).sort((e, t) => e[1].priority - t[1].priority);
+    },
+    I = (e) => {
+        let t = new Map(s.tx);
+        return e && (t = new Map([...t, ...s.U])), t;
+    },
+    T = (e) => {
         let t = Math.floor(e / 60),
             n = e % 60;
         return t > 0 ? "".concat(t, "h ").concat(n, "m") : "".concat(n, "m");
+    },
+    S = () => {
+        if (o.Z.getAreLinkedUsersProcessed()) return o.Z.getLinkedUsers();
+        a.ZP.fetchLinkedUsers();
     };

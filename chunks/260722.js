@@ -1,8 +1,9 @@
 n.d(t, {
     Yw: () => p,
-    ZP: () => g,
+    ZP: () => E,
     fc: () => h,
     qd: () => m,
+    ty: () => g,
 });
 var r = n(544891),
     i = n(524437),
@@ -100,7 +101,13 @@ async function m() {
             );
         });
 }
-let g = {
+async function g() {
+    await r.tn.post({
+        url: d.ANM.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS,
+        rejectWithError: !0,
+    });
+}
+let E = {
     async initialPageLoad() {
         var e, t, n, i;
         a.Z.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
