@@ -197,7 +197,7 @@ function q(e, t) {
         case j.XJ.REWARD_COLLECTIBLE:
             return (0, A.Xv)(e.config);
         case j.XJ.REWARD_IN_GAME:
-            return (0, A.vQ)(e.config);
+            return (0, A.vQ)(e.config) || (0, A.wj)(e.config);
         default:
             return !1;
     }
