@@ -309,30 +309,31 @@ function eA(e) {
             null != D.Z.isClaiming && D.Z.isClaiming !== t.skuId,
         ]),
         M = (0, L.XM)(i, d, !1),
-        k = (0, L.ne)({
+        k = (0, L.Vw)(i, d, !1),
+        U = (0, L.ne)({
             product: i,
             isPartiallyOwnedBundle: g,
             isPurchased: m,
         }),
-        { enabled: U } = (0, S.WX)({ location: "collectibles_shop_tall_card" }),
-        { handleUseNow: B, isApplying: V } = (0, j.W)({ product: i }),
-        H = c(E.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-        W = (0, ee.Iw)(t),
-        K = null != W,
+        { enabled: B } = (0, S.WX)({ location: "collectibles_shop_tall_card" }),
+        { handleUseNow: V, isApplying: H } = (0, j.W)({ product: i }),
+        W = c(E.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+        K = (0, ee.Iw)(t),
+        z = null != K,
         {
-            displayPrices: z,
-            checkoutEligiblePrices: q,
-            isOrbExclusive: X,
-            shouldCheckoutWithOrbs: Q,
-            hasSufficientOrbs: $,
+            displayPrices: q,
+            checkoutEligiblePrices: X,
+            isOrbExclusive: Q,
+            shouldCheckoutWithOrbs: $,
+            hasSufficientOrbs: et,
         } = (0, ea.Ip)({
             product: t,
             isPremiumUser: d,
             tab: n,
-            hasDiscountOffer: K,
+            hasDiscountOffer: z,
         });
-    if (0 === z.length) return null;
-    let et = () =>
+    if (0 === q.length) return null;
+    let en = () =>
             (0, r.jsx)("div", {
                 className: ef.hoverUpsellContainer,
                 children: (0, r.jsx)(O.Z, {
@@ -344,7 +345,7 @@ function eA(e) {
                     subscriptionTier: eu.Si.TIER_2,
                 }),
             }),
-        en = () =>
+        er = () =>
             b
                 ? (0, r.jsx)(h.Text, {
                       tag: "div",
@@ -364,13 +365,13 @@ function eA(e) {
                           className: ef.priceTag,
                           children: ed.intl.string(ed.t.rt69oq),
                       })
-                    : U
+                    : B
                       ? (0, r.jsx)(Y.e, {
-                            displayPrices: z,
+                            displayPrices: q,
                             isPremiumUser: d,
                             discount: v,
-                            hasSufficientOrbs: $,
-                            discountOfferAmount: W,
+                            hasSufficientOrbs: et,
+                            discountOfferAmount: K,
                         })
                       : (0, r.jsx)(F.Z, {
                             product: i,
@@ -380,10 +381,10 @@ function eA(e) {
                             hideStrikethroughPrice: !0,
                             nitroIconType: "default",
                             nitroIconSize: "md",
-                            discountOfferAmount: W,
+                            discountOfferAmount: K,
                         }),
-        er = () =>
-            p || l.tq || X || !k || n === el.AW.ORBS
+        ei = () =>
+            p || l.tq || Q || !U || n === el.AW.ORBS || (0, L.iP)(null == k ? void 0 : k.currency)
                 ? null
                 : T
                   ? (0, r.jsx)(h.hU, {
@@ -391,7 +392,7 @@ function eA(e) {
                         "aria-label": ed.intl.string(ed.t.SKNnqq),
                         icon: h.tEF,
                         onClick: (e) => {
-                            e.stopPropagation(), H(e);
+                            e.stopPropagation(), W(e);
                         },
                     })
                   : (0, r.jsx)(w.k0, {
@@ -404,16 +405,16 @@ function eA(e) {
                             tooltipDelay: eb,
                         }),
                     }),
-        ei = () =>
+        es = () =>
             (0, r.jsx)(h.zxk, {
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), H(e);
+                    e.stopPropagation(), W(e);
                 },
                 text: ed.intl.string(ed.t.FdGl5O),
                 fullWidth: !0,
             }),
-        es = () => {
+        e_ = () => {
             let e = () => {
                     N.default.track(ec.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -437,8 +438,8 @@ function eA(e) {
                             variantsReturnStyle: f.v.VARIANTS_GROUP,
                         });
                 },
-                i = K
-                    ? ed.intl.formatToPlainString(ed.t["5U5RBw"], { discountOfferAmount: W })
+                i = z
+                    ? ed.intl.formatToPlainString(ed.t["5U5RBw"], { discountOfferAmount: K })
                     : ed.intl.formatToPlainString(ed.t["cNSL/v"], { price: M });
             return (0, r.jsx)(h.zxk, {
                 variant: "primary",
@@ -449,7 +450,7 @@ function eA(e) {
                 fullWidth: !0,
             });
         },
-        e_ = () => {
+        ep = () => {
             let e = () => {
                 N.default.track(ec.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -485,17 +486,17 @@ function eA(e) {
             return (0, r.jsx)(h.zxk, {
                 variant: "primary",
                 text: ed.intl.format(ed.t.kAgx5O, {
-                    orbPrice: q[0].amount,
+                    orbPrice: X[0].amount,
                     orbIconHook: () => (0, r.jsx)(A.Z, { className: ef.orbIconAligned }),
                 }),
                 onClick: (t) => {
                     t.stopPropagation(), e();
                 },
-                "aria-label": ed.intl.formatToPlainString(ed.t["fNG/09"], { orbPrice: q[0].amount }),
+                "aria-label": ed.intl.formatToPlainString(ed.t["fNG/09"], { orbPrice: X[0].amount }),
                 fullWidth: !0,
             });
         },
-        ep = () => {
+        eh = () => {
             let e = async () => {
                 N.default.track(ec.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == I ? void 0 : I.sessionId,
@@ -529,48 +530,48 @@ function eA(e) {
                 fullWidth: !0,
             });
         },
-        eh = () =>
-            (0, r.jsx)(h.zxk, {
-                variant: "primary",
-                onClick: (e) => {
-                    e.stopPropagation(), B();
-                },
-                loading: V,
-                text: ed.intl.string(ed.t.MAS7uL),
-                fullWidth: !0,
-            }),
         em = () =>
             (0, r.jsx)(h.zxk, {
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), H(e);
+                    e.stopPropagation(), V();
+                },
+                loading: H,
+                text: ed.intl.string(ed.t.MAS7uL),
+                fullWidth: !0,
+            }),
+        eg = () =>
+            (0, r.jsx)(h.zxk, {
+                variant: "primary",
+                onClick: (e) => {
+                    e.stopPropagation(), W(e);
                 },
                 text: ed.intl.string(ed.t.GpnHfH),
                 fullWidth: !0,
             }),
-        eg = () => {
-            if (p && !d && !T) return et();
-            if (!k || b) return ei();
-            if (m) return eh();
-            if (p) return ep();
-            if (Q)
-                if ($) return e_();
-                else return ei();
-            return n === el.AW.ORBS ? em() : es();
+        eE = () => {
+            if (p && !d && !T) return en();
+            if (!U || b) return es();
+            if (m) return em();
+            if (p) return eh();
+            if ($)
+                if (et) return ep();
+                else return es();
+            return n === el.AW.ORBS ? eg() : e_();
         };
     return (0, r.jsxs)("div", {
         className: ef.detailsWrapper,
         children: [
             (0, r.jsx)("div", {
                 className: ef.innerBlur,
-                children: en(),
+                children: er(),
             }),
             (0, r.jsx)("div", {
                 className: ef.innerHover,
                 children: (0, r.jsxs)(h.hE2, {
                     wrap: !1,
                     fullWidth: !0,
-                    children: [eg(), er()],
+                    children: [eE(), ei()],
                 }),
             }),
         ],
