@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         PlatformTypes: () => r,
-        getNativePlatform: () => b,
-        getOS: () => y,
-        getPlatform: () => g,
-        getPlatformName: () => E,
+        getNativePlatform: () => v,
+        getOS: () => I,
+        getPlatform: () => y,
+        getPlatformName: () => O,
         isAndroid: () => h,
         isAndroidChrome: () => f,
         isAndroidWeb: () => _,
@@ -13,9 +13,12 @@ n.r(t),
         isLinux: () => c,
         isMac: () => l,
         isMacWeb: () => p,
+        isOculusWeb: () => g,
         isPlatformEmbedded: () => a,
         isWeb: () => d,
         isWindows: () => s,
+        platformPrefersDeepLink: () => E,
+        platformSupportsActivityJoin: () => b,
     }),
     n(35282);
 var r = (function (e) {
@@ -37,7 +40,7 @@ function u() {
     return s() || l() || c();
 }
 function d() {
-    return "WEB" === g();
+    return "WEB" === y();
 }
 function f() {
     return (
@@ -60,12 +63,22 @@ function m() {
     return "ios" === o;
 }
 function g() {
-    return s() ? "WINDOWS" : l() ? "OSX" : c() ? "LINUX" : "WEB";
+    var e;
+    return (null == (e = navigator.userAgent) ? void 0 : e.match(/OculusBrowser/i)) != null;
 }
 function E() {
-    return o;
+    return g();
 }
 function b() {
+    return u() || g() || a;
+}
+function y() {
+    return s() ? "WINDOWS" : l() ? "OSX" : c() ? "LINUX" : "WEB";
+}
+function O() {
+    return o;
+}
+function v() {
     switch (o) {
         case "ios":
         case "android":
@@ -74,7 +87,7 @@ function b() {
             return "web";
     }
 }
-function y() {
+function I() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "ios";

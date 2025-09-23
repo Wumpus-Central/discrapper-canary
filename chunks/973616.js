@@ -215,6 +215,7 @@ class m extends h {
                                   application: null != e.application ? m.createFromServer(e.application) : void 0,
                               }),
                           ),
+                deepLinkUri: e.deeplink_uri,
             }),
         );
     }
@@ -240,8 +241,8 @@ class m extends h {
             O,
             v,
             I,
-            S,
             T,
+            S,
             A,
             C,
             N,
@@ -261,7 +262,8 @@ class m extends h {
             F,
             V,
             H,
-            Y;
+            Y,
+            W;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
@@ -284,8 +286,8 @@ class m extends h {
             hashes: null != (O = e.hashes) ? O : this.hashes,
             description: null != (v = e.description) ? v : this.description,
             eulaId: null != (I = e.eulaId) ? I : this.eulaId,
-            slug: null != (S = e.slug) ? S : this.slug,
-            coverImage: null != (T = e.coverImage) ? T : this.coverImage,
+            slug: null != (T = e.slug) ? T : this.slug,
+            coverImage: null != (S = e.coverImage) ? S : this.coverImage,
             bot: null != (A = e.bot) ? A : this.bot,
             flags: null != (C = e.flags) ? C : this.flags,
             maxParticipants: null != (N = e.maxParticipants) ? N : this.maxParticipants,
@@ -312,6 +314,7 @@ class m extends h {
             directoryEntry: null != (V = e.directoryEntry) ? V : this.directoryEntry,
             categories: null != (H = e.categories) ? H : this.categories,
             linkedGames: null != (Y = e.linkedGames) ? Y : this.linkedGames,
+            deepLinkUri: null != (W = e.deepLinkUri) ? W : this.deepLinkUri,
         });
     }
     getMaxParticipants() {
@@ -334,7 +337,7 @@ class m extends h {
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, a, o, s, l, d, _, h, g, E, b, y, O, v, I, S, T;
+        var t, n, i, a, o, s, l, d, _, h, g, E, b, y, O, v, I, T, S, A;
         super(e),
             c(this, "overlay", void 0),
             c(this, "overlayWarn", void 0),
@@ -366,6 +369,7 @@ class m extends h {
             c(this, "directoryEntry", void 0),
             c(this, "categories", void 0),
             c(this, "linkedGames", void 0),
+            c(this, "deepLinkUri", void 0),
             (this.overlay = null != (n = e.overlay) && n),
             (this.overlayWarn = null != (i = e.overlayWarn) && i),
             (this.overlayCompatibilityHook = null != (a = e.overlayCompatibilityHook) && a),
@@ -393,11 +397,11 @@ class m extends h {
             (this.isDiscoverable = null != (O = e.is_discoverable) ? O : e.isDiscoverable),
             (this.customInstallUrl = null != (v = e.custom_install_url) ? v : e.customInstallUrl),
             (this.installParams = null != (I = e.install_params) ? I : e.installParams),
-            (this.directoryEntry = null != (S = e.directory_entry) ? S : e.directoryEntry),
+            (this.directoryEntry = null != (T = e.directory_entry) ? T : e.directoryEntry),
             (this.categories = e.categories),
             (this.linkedGames =
                 null !=
-                (T =
+                (S =
                     null == (t = e.linked_games)
                         ? void 0
                         : t.map((e) =>
@@ -405,7 +409,8 @@ class m extends h {
                                   application: null != e.application ? m.createFromServer(e.application) : void 0,
                               }),
                           ))
-                    ? T
-                    : e.linkedGames);
+                    ? S
+                    : e.linkedGames),
+            (this.deepLinkUri = null != (A = e.deepLinkUri) ? A : e.deeplink_uri);
     }
 }

@@ -45,7 +45,7 @@ function f(e) {
                 remoteJoinPlatform: e,
             };
     }
-    return r.isPlatformEmbedded && E
+    return (0, r.platformSupportsActivityJoin)() && E
         ? {
               canJoin: !0,
               remoteJoinPlatform: null,

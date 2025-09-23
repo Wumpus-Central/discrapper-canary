@@ -37,7 +37,8 @@ function l(e) {
                 GuildStore: _,
             }) === a.Fw.CAN_JOIN
         );
-    if ((d && null == c && !(0, o.Z)(n, s.xjy.CONTEXTLESS)) || (!(0, r.isDesktop)() && !d)) return !1;
+    if ((d && null == c && !(0, o.Z)(n, s.xjy.CONTEXTLESS)) || (!(0, r.platformSupportsActivityJoin)() && !d))
+        return !1;
     if ((0, o.Z)(n, s.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id)) return !0;
     if ((0, o.Z)(n, s.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
         let e = f.getChannel(m.getVoiceChannelId());
