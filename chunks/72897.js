@@ -76,21 +76,21 @@ function b(e) {
     return {
         [_.h7.AUDIO_INPUT]: {
             getRawDevices: (e) => e.getInputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getInputDeviceIdsSortedByFrecency(),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.h7.AUDIO_INPUT),
             getCurrentDeviceId: (e) => e.getInputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().inputDeviceId,
             getNoDevicesMessage: () => p.intl.string(p.t["/QIjDA"]),
         },
         [_.h7.AUDIO_OUTPUT]: {
             getRawDevices: (e) => e.getOutputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getOutputDeviceIdsSortedByFrecency(),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.h7.AUDIO_OUTPUT),
             getCurrentDeviceId: (e) => e.getOutputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().outputDeviceId,
             getNoDevicesMessage: () => p.intl.string(p.t.xlUg0t),
         },
         [_.h7.VIDEO_INPUT]: {
             getRawDevices: (e) => e.getVideoDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getVideoDeviceIdsSortedByFrecency(),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.h7.VIDEO_INPUT),
             getCurrentDeviceId: (e) => e.getVideoDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().videoDeviceId,
             getNoDevicesMessage: () => p.intl.string(p.t.WKWARU),
