@@ -1,31 +1,29 @@
 n.d(t, { Y: () => l }), n(388685);
-var r = n(647438),
-    i = n(442837),
-    a = n(709706);
-let o = 3000,
-    s = 4000;
+var a = n(647438),
+    r = n(442837),
+    i = n(709706);
 function l() {
-    let e = (0, i.e7)([a.Z], () => a.Z.getLastReportedLagTimestamp()),
-        [t, n] = r.useState(!1),
-        [l, c] = r.useState(!1),
-        u = r.useRef(null);
+    let e = (0, r.e7)([i.Z], () => i.Z.getLastReportedLagTimestamp()),
+        [t, n] = a.useState(!1),
+        [l, s] = a.useState(!1),
+        o = a.useRef(null);
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             let t = null != e;
             n(t);
-            let r = t ? setTimeout(() => n(!1), o) : null;
+            let a = t ? setTimeout(() => n(!1), 3000) : null;
             return () => {
-                clearTimeout(r), n(!1);
+                clearTimeout(a), n(!1);
             };
         }, [e]),
-        r.useEffect(() => {
-            let t = null != e && null == u.current;
-            c(t);
+        a.useEffect(() => {
+            let t = null != e && null == o.current;
+            s(t);
             let n = null;
             return (
-                t && ((u.current = Date.now()), (n = setTimeout(() => c(!1), s))),
+                t && ((o.current = Date.now()), (n = setTimeout(() => s(!1), 4000))),
                 () => {
-                    clearTimeout(n), c(!1);
+                    clearTimeout(n), s(!1);
                 }
             );
         }, [e]),

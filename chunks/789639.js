@@ -1,103 +1,89 @@
-n.d(t, { i: () => d });
-var r = n(951288),
-    i = n(647438),
-    a = n(709014);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                o(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function l(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function c(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let u = {
+n.d(t, { i: () => s });
+var a = n(951288),
+    r = n(647438),
+    i = n(709014);
+let l = {
         all: {
             name: "all",
             start: 0,
             duration: 66,
         },
     },
-    d = () => {
-        let e = i.useRef(null),
-            t = i.useCallback(() => {
+    s = () => {
+        let e = r.useRef(null),
+            t = r.useCallback(() => {
                 null != e.current && e.current.play("all");
             }, []),
-            o = i.useCallback(() => {
+            s = r.useCallback(() => {
                 null != e.current && e.current.play("all");
             }, []),
-            l = i.useCallback(() => {
+            o = r.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying("all");
             }, []),
-            d = i.useCallback(
-                (t) =>
-                    (0, r.jsx)(
-                        a.L,
-                        c(s({}, t), {
+            c = r.useCallback((t) => {
+                var r, s;
+                return (0, a.jsx)(
+                    i.L,
+                    ((r = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                a = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (a = a.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                a.forEach(function (t) {
+                                    var a;
+                                    (a = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: a,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = a);
+                                });
+                        }
+                        return e;
+                    })({}, t)),
+                    (s = s =
+                        {
                             src: () => n.e("2199").then(n.t.bind(n, 71307, 19)),
                             ref: e,
-                            markers: u,
+                            markers: l,
                         }),
-                    ),
-                [],
-            );
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var a = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, a);
+                              }
+                              return n;
+                          })(Object(s)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                          }),
+                    r),
+                );
+            }, []);
         return {
             events: {
-                onMouseEnter: o,
-                onMouseLeave: l,
+                onMouseEnter: s,
+                onMouseLeave: o,
             },
             play: t,
-            getDuration: i.useCallback(() => {
+            getDuration: r.useCallback(() => {
                 var t;
                 return null == (t = e.current) ? void 0 : t.getDuration();
             }, []),
-            getCurrentFrame: i.useCallback(() => {
+            getCurrentFrame: r.useCallback(() => {
                 var t, n;
                 return null != (n = null == (t = e.current) ? void 0 : t.getCurrentFrame()) ? n : null;
             }, []),
-            Component: d,
+            Component: c,
         };
     };

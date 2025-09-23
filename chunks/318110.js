@@ -57,7 +57,7 @@ function l(e, t) {
 let c = (e) => {
     let { analyticsLocations: t, guildId: a, initialSelectedNameplate: s } = e;
     (0, i.ZDy)(async () => {
-        let { default: e } = await n.e("8895").then(n.bind(n, 612293));
+        let { default: e } = await Promise.all([n.e("8850"), n.e("8473")]).then(n.bind(n, 612293));
         return (n) =>
             (0, r.jsx)(
                 e,

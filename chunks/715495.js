@@ -1,303 +1,301 @@
-n.d(t, { Z: () => I }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => _ }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+var a = n(951288),
+    r = n(647438),
+    i = n(442837),
+    l = n(481060),
     s = n(276264),
-    l = n(205822),
+    o = n(205822),
     c = n(329013),
-    u = n(594174),
-    d = n(396821),
-    f = n(780771),
-    _ = n(4242),
-    p = n(996746),
-    h = n(711325),
-    m = n(852630),
-    g = n(731994),
-    E = n(761804);
-function b(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function y(e) {
+    d = n(594174),
+    u = n(396821),
+    m = n(780771),
+    p = n(4242),
+    h = n(996746),
+    x = n(711325),
+    f = n(852630),
+    b = n(731994),
+    g = n(761804);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                b(e, t, n[t]);
+            a.forEach(function (t) {
+                var a;
+                (a = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: a,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = a);
             });
     }
     return e;
 }
-function O(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function v(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function I() {
-    var e;
-    let [t, n] = (0, i.useState)(!1),
-        [a, s] = (0, i.useState)(!1),
-        [u, p] = (0, i.useState)(null),
-        [m, b] = (0, i.useState)(320),
-        O = (0, i.useRef)(null),
-        I = (0, i.useRef)(null),
-        P = (0, i.useRef)(null),
-        w = (0, d.ZP)((e) => e.toolsCache),
-        { setToolsCache: D, removeToolsCache: x } = (0, d.L3)(),
-        { setImgCache: L } = (0, d.W_)(),
-        j = (0, i.useCallback)(
+function _() {
+    var e, t;
+    let [n, i] = (0, r.useState)(!1),
+        [s, d] = (0, r.useState)(!1),
+        [h, f] = (0, r.useState)(null),
+        _ = (0, u.ZP)((e) => e.toolsCache),
+        { setToolsCache: T, removeToolsCache: S } = (0, u.L3)(),
+        { setImgCache: O } = (0, u.W_)(),
+        P = (0, r.useCallback)(
             (e) => {
-                let t = w[e];
+                let t = _[e];
                 null != t &&
-                    p({
+                    f({
                         src: t.url,
                         palette: t.palette,
                         preview: !0,
                     }),
-                    p((t) =>
+                    f((t) =>
                         null == t
                             ? {
                                   src: e,
-                                  palette: f.jD,
+                                  palette: m.jD,
                                   preview: !0,
                               }
-                            : v(y({}, t), {
+                            : j(v({}, t), {
                                   src: e,
                                   preview: !0,
                               }),
                     );
             },
-            [w],
+            [_],
         ),
-        M = (0, i.useCallback)((e) => {
-            p((t) =>
+        I = (0, r.useCallback)((e) => {
+            f((t) =>
                 null == t
                     ? null
-                    : v(y({}, t), {
+                    : j(v({}, t), {
                           palette: e,
                           preview: !0,
                       }),
             );
         }, []),
-        k = (0, i.useCallback)(
+        k = (0, r.useCallback)(
             (e) => {
-                x(e);
+                S(e);
             },
-            [x],
-        ),
-        U = (0, i.useCallback)((e) => {
-            if (null != O.current) {
-                let t = O.current.getBoundingClientRect();
-                b(Math.max(264, Math.min(432, e.clientX - t.left)));
+            [S],
+        );
+    return (0, a.jsxs)(a.Fragment, {
+        children: [
+            (0, a.jsxs)("div", {
+                className: g.controls,
+                children: [
+                    (0, a.jsxs)("div", {
+                        className: g.toggles,
+                        children: [
+                            (0, a.jsx)(l.zxk, {
+                                size: "sm",
+                                onClick: () => {
+                                    d(!1), i((e) => !e);
+                                },
+                                variant: "secondary",
+                                text: "Toggle Themes",
+                            }),
+                            (0, a.jsx)(l.zxk, {
+                                size: "sm",
+                                onClick: () => {
+                                    i(!1), d((e) => !e);
+                                },
+                                variant: "secondary",
+                                text: "Toggle Gradients",
+                            }),
+                        ],
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: g.themePicker,
+                        children: [
+                            n && (0, a.jsx)(c.i, {}),
+                            s &&
+                                (0, a.jsx)(x.Z, {
+                                    selected: null == h || null == (e = h.palette) ? void 0 : e.name,
+                                    onSelect: (e) => {
+                                        (null == h ? void 0 : h.src) != null && T(h.src, h.src, e), I(e);
+                                    },
+                                }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, a.jsxs)("div", {
+                className: g.main,
+                children: [
+                    (0, a.jsx)(y, { nameplate: h }, null == h || null == (t = h.palette) ? void 0 : t.name),
+                    (0, a.jsxs)("div", {
+                        className: g.buttons,
+                        children: [
+                            (0, a.jsx)(l.Text, {
+                                variant: "text-sm/semibold",
+                                children: "Drag background image to screen",
+                            }),
+                            (0, a.jsx)(o.Z, {
+                                title: "upload image",
+                                description: "upload the background",
+                                icons: b.pA,
+                                onDrop: async (e) => {
+                                    let t = URL.createObjectURL(e[0]),
+                                        n = e[0],
+                                        a = await n.arrayBuffer();
+                                    O(t, t, (0, p.xh)(a)), T(t, t, m.jD);
+                                },
+                            }),
+                            (0, a.jsx)("div", {
+                                className: g.uploadedArea,
+                                children: Object.values(_).map((e) => {
+                                    let { url: t } = e;
+                                    return (0, a.jsx)(
+                                        C,
+                                        {
+                                            src: t,
+                                            onSetStatic: P,
+                                            removeAsset: k,
+                                        },
+                                        t,
+                                    );
+                                }),
+                            }),
+                            (0, a.jsx)(N, {
+                                label: "gradient override",
+                                onChange: (e) =>
+                                    I({
+                                        name: m._j,
+                                        darkBackground: e,
+                                        lightBackground: e,
+                                    }),
+                            }),
+                            (0, a.jsx)(E, {
+                                label: "set",
+                                onClick: () => {},
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function y(e) {
+    let { nameplate: t } = e,
+        [n, i] = (0, r.useState)(320),
+        s = (0, r.useRef)(null),
+        o = (0, r.useRef)(null),
+        c = (0, r.useRef)(null),
+        d = (0, r.useRef)(document),
+        u = (0, r.useCallback)((e) => {
+            if (null != s.current) {
+                let t = s.current.getBoundingClientRect();
+                i(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
-        G = (0, i.useCallback)(
+        m = (0, r.useCallback)(
             (e) => {
                 e.preventDefault(), e.stopPropagation();
-                let t = (e) => {
-                        e.preventDefault(), U(e);
+                let t = e.currentTarget.ownerDocument;
+                d.current = t;
+                let n = (e) => {
+                        e.preventDefault(), u(e);
                     },
-                    n = () => {
-                        null != I.current && (document.removeEventListener("mousemove", I.current), (I.current = null)),
-                            null != P.current &&
-                                (document.removeEventListener("mouseup", P.current), (P.current = null));
+                    a = () => {
+                        null != o.current && (t.removeEventListener("mousemove", o.current), (o.current = null)),
+                            null != c.current && (t.removeEventListener("mouseup", c.current), (c.current = null));
                     };
-                (I.current = t),
-                    (P.current = n),
-                    document.addEventListener("mousemove", t),
-                    document.addEventListener("mouseup", n);
+                (o.current = n), (c.current = a), t.addEventListener("mousemove", n), t.addEventListener("mouseup", a);
             },
-            [U],
+            [u],
         );
     return (
-        (0, i.useEffect)(
+        (0, r.useEffect)(
             () => () => {
-                null != I.current && (document.removeEventListener("mousemove", I.current), (I.current = null)),
-                    null != P.current && (document.removeEventListener("mouseup", P.current), (P.current = null));
+                null != o.current && (d.current.removeEventListener("mousemove", o.current), (o.current = null)),
+                    null != c.current && (d.current.removeEventListener("mouseup", c.current), (c.current = null));
             },
             [],
         ),
-        (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsxs)("div", {
-                    className: E.controls,
-                    children: [
-                        (0, r.jsxs)("div", {
-                            className: E.toggles,
-                            children: [
-                                (0, r.jsx)(o.zxk, {
-                                    size: "sm",
-                                    onClick: () => {
-                                        s(!1), n((e) => !e);
-                                    },
-                                    variant: "secondary",
-                                    text: "Toggle Themes",
-                                }),
-                                (0, r.jsx)(o.zxk, {
-                                    size: "sm",
-                                    onClick: () => {
-                                        n(!1), s((e) => !e);
-                                    },
-                                    variant: "secondary",
-                                    text: "Toggle Gradients",
-                                }),
-                            ],
-                        }),
-                        (0, r.jsxs)("div", {
-                            className: E.themePicker,
-                            children: [
-                                t && (0, r.jsx)(c.i, {}),
-                                a &&
-                                    (0, r.jsx)(h.Z, {
-                                        selected: null == u || null == (e = u.palette) ? void 0 : e.name,
-                                        onSelect: (e) => {
-                                            (null == u ? void 0 : u.src) != null && D(u.src, u.src, e), M(e);
-                                        },
-                                    }),
-                            ],
-                        }),
-                    ],
-                }),
-                (0, r.jsxs)("div", {
-                    className: E.main,
-                    children: [
-                        (0, r.jsxs)("div", {
-                            ref: O,
-                            className: E.previews,
-                            style: { width: "".concat(m, "px") },
-                            children: [
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-sm/semibold",
-                                    children: "Memberlist",
-                                }),
-                                (0, r.jsx)(C, { nameplate: u }),
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-sm/semibold",
-                                    children: "DMs",
-                                }),
-                                (0, r.jsx)(N, { nameplate: u }),
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-sm/semibold",
-                                    children: "RTC",
-                                }),
-                                (0, r.jsx)(R, { nameplate: u }),
-                                (0, r.jsx)("div", {
-                                    className: E.resizeHandle,
-                                    onMouseDown: G,
-                                }),
-                            ],
-                        }),
-                        (0, r.jsxs)("div", {
-                            className: E.buttons,
-                            children: [
-                                (0, r.jsx)(o.Text, {
-                                    variant: "text-sm/semibold",
-                                    children: "Drag background image to screen",
-                                }),
-                                (0, r.jsx)(l.Z, {
-                                    title: "upload image",
-                                    description: "upload the background",
-                                    icons: g.pA,
-                                    onDrop: async (e) => {
-                                        let t = URL.createObjectURL(e[0]),
-                                            n = e[0],
-                                            r = await n.arrayBuffer();
-                                        L(t, t, (0, _.xh)(r)), D(t, t, f.jD);
-                                    },
-                                }),
-                                (0, r.jsx)("div", {
-                                    className: E.uploadedArea,
-                                    children: Object.values(w).map((e) => {
-                                        let { url: t } = e;
-                                        return (0, r.jsx)(
-                                            T,
-                                            {
-                                                src: t,
-                                                onSetStatic: j,
-                                                removeAsset: k,
-                                            },
-                                            t,
-                                        );
-                                    }),
-                                }),
-                                (0, r.jsx)(A, {
-                                    label: "gradient override",
-                                    onChange: (e) =>
-                                        M({
-                                            name: f._j,
-                                            darkBackground: e,
-                                            lightBackground: e,
-                                        }),
-                                }),
-                                (0, r.jsx)(S, {
-                                    label: "set",
-                                    onClick: () => {},
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-            ],
+        (0, a.jsx)(l.zJl, {
+            className: g.previewsContainer,
+            orientation: "horizontal",
+            children: (0, a.jsxs)("div", {
+                ref: s,
+                className: g.previews,
+                style: { width: "".concat(n, "px") },
+                children: [
+                    (0, a.jsx)(l.Text, {
+                        variant: "text-sm/semibold",
+                        children: "Memberlist",
+                    }),
+                    (0, a.jsx)(T, { nameplate: t }),
+                    (0, a.jsx)(l.Text, {
+                        variant: "text-sm/semibold",
+                        children: "DMs",
+                    }),
+                    (0, a.jsx)(S, { nameplate: t }),
+                    (0, a.jsx)(l.Text, {
+                        variant: "text-sm/semibold",
+                        children: "RTC",
+                    }),
+                    (0, a.jsx)(O, { nameplate: t }),
+                    (0, a.jsx)("div", {
+                        className: g.resizeHandle,
+                        onMouseDown: m,
+                    }),
+                ],
+            }),
         })
     );
 }
-function T(e) {
-    let { src: t, onSetStatic: n, removeAsset: i } = e;
-    return (0, r.jsxs)("div", {
-        className: E.uploaded,
+function C(e) {
+    let { src: t, onSetStatic: n, removeAsset: r } = e;
+    return (0, a.jsxs)("div", {
+        className: g.uploaded,
         children: [
-            (0, r.jsx)(o.P3F, {
-                onClick: () => i(t),
-                className: E.xicon,
-                children: (0, r.jsx)(o.Dio, {
+            (0, a.jsx)(l.P3F, {
+                onClick: () => r(t),
+                className: g.xicon,
+                children: (0, a.jsx)(l.Dio, {
                     size: "custom",
                     width: 16,
                     height: 16,
                     name: "x",
                 }),
             }),
-            (0, r.jsx)("img", {
-                className: E.uploadedImg,
+            (0, a.jsx)("img", {
+                className: g.uploadedImg,
                 src: t,
                 alt: "",
             }),
-            (0, r.jsx)("div", {
-                className: E.uploadedControls,
-                children: (0, r.jsx)(o.zxk, {
+            (0, a.jsx)("div", {
+                className: g.uploadedControls,
+                children: (0, a.jsx)(l.zxk, {
                     onClick: () => n(t),
                     size: "sm",
                     variant: "secondary",
@@ -307,16 +305,16 @@ function T(e) {
         ],
     });
 }
-function S(e) {
+function E(e) {
     let { label: t, onClick: n } = e;
-    return (0, r.jsxs)("div", {
-        className: E.flex,
+    return (0, a.jsxs)("div", {
+        className: g.flex,
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, a.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 children: "coming soon",
             }),
-            (0, r.jsx)(o.zxk, {
+            (0, a.jsx)(l.zxk, {
                 variant: "secondary",
                 size: "sm",
                 text: t,
@@ -326,57 +324,57 @@ function S(e) {
         ],
     });
 }
-function A(e) {
+function N(e) {
     let { label: t, onChange: n } = e;
-    return (0, r.jsxs)("div", {
-        className: E.hexInput,
+    return (0, a.jsxs)("div", {
+        className: g.hexInput,
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, a.jsx)(l.Text, {
                 variant: "text-sm/normal",
                 children: t,
             }),
-            (0, r.jsx)("input", {
+            (0, a.jsx)("input", {
                 onChange: (e) => {
                     n(e.target.value);
                 },
-                className: E.inputs,
+                className: g.inputs,
                 placeholder: "#000000",
             }),
         ],
     });
 }
-function C(e) {
+function T(e) {
     let { nameplate: t } = e,
-        n = (0, a.e7)([u.default], () => u.default.getCurrentUser());
-    return (0, r.jsx)("div", {
-        className: E.preview,
-        children: (0, r.jsxs)("div", {
-            className: E.simArea,
+        n = (0, i.e7)([d.default], () => d.default.getCurrentUser());
+    return (0, a.jsx)("div", {
+        className: g.preview,
+        children: (0, a.jsxs)("div", {
+            className: g.simArea,
             children: [
-                (0, r.jsx)(o.Text, {
-                    className: E.label,
+                (0, a.jsx)(l.Text, {
+                    className: g.label,
                     variant: "text-sm/semibold",
                     children: "DEFAULT",
                 }),
-                (0, r.jsx)(s.Z, {
+                (0, a.jsx)(s.Z, {
                     nameplate: t,
                     user: n,
                     currentUser: n,
                 }),
-                (0, r.jsx)(o.Text, {
-                    className: E.label,
+                (0, a.jsx)(l.Text, {
+                    className: g.label,
                     variant: "text-sm/semibold",
                     children: "FOCUSED",
                 }),
-                (0, r.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(s.Z, {
+                        (0, a.jsx)(s.Z, {
                             nameplate: t,
                             selected: !0,
                             user: n,
                             currentUser: n,
                         }),
-                        (0, r.jsx)(s.Z, {
+                        (0, a.jsx)(s.Z, {
                             selected: !0,
                             user: n,
                             currentUser: n,
@@ -387,44 +385,44 @@ function C(e) {
         }),
     });
 }
-function N(e) {
+function S(e) {
     let { nameplate: t } = e;
-    return (0, r.jsx)("div", {
-        className: E.preview,
-        children: (0, r.jsxs)("div", {
-            className: E.simArea,
+    return (0, a.jsx)("div", {
+        className: g.preview,
+        children: (0, a.jsxs)("div", {
+            className: g.simArea,
             children: [
-                (0, r.jsx)(o.Text, {
-                    className: E.label,
+                (0, a.jsx)(l.Text, {
+                    className: g.label,
                     variant: "text-sm/semibold",
                     children: "DEFAULT",
                 }),
-                (0, r.jsx)(m.Z, { nameplate: t }),
-                (0, r.jsx)(o.Text, {
-                    className: E.label,
+                (0, a.jsx)(f.Z, { nameplate: t }),
+                (0, a.jsx)(l.Text, {
+                    className: g.label,
                     variant: "text-sm/semibold",
                     children: "FOCUSED",
                 }),
-                (0, r.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(m.Z, {
+                        (0, a.jsx)(f.Z, {
                             selected: !0,
                             nameplate: t,
                         }),
-                        (0, r.jsx)(m.Z, { selected: !0 }),
+                        (0, a.jsx)(f.Z, { selected: !0 }),
                     ],
                 }),
             ],
         }),
     });
 }
-function R(e) {
+function O(e) {
     let { nameplate: t } = e;
-    return (0, r.jsx)("div", {
-        className: E.preview,
-        children: (0, r.jsx)("div", {
-            className: E.rtcSim,
-            children: (0, r.jsx)(p.Z, { nameplate: t }),
+    return (0, a.jsx)("div", {
+        className: g.preview,
+        children: (0, a.jsx)("div", {
+            className: g.rtcSim,
+            children: (0, a.jsx)(h.Z, { nameplate: t }),
         }),
     });
 }

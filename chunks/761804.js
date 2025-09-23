@@ -1,6 +1,7 @@
 e.exports = {
     inputs: "inputs_c202a4",
     hexInput: "hexInput_c202a4",
+    previewsContainer: "previewsContainer_c202a4",
     preview: "preview_c202a4",
     simArea: "simArea_c202a4",
     themePicker: "themePicker_c202a4",

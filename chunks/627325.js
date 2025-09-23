@@ -1,42 +1,41 @@
-n.d(t, { w: () => I });
+n.d(t, { w: () => x });
 var r = n(951288),
     i = n(647438),
-    a = n(658722),
-    o = n.n(a),
-    s = n(468194),
-    l = n(442837),
+    o = n(658722),
+    l = n.n(o),
+    a = n(468194),
+    s = n(442837),
     c = n(692547),
     u = n(481060),
     d = n(218867),
-    f = n(594174),
-    _ = n(111361),
-    p = n(778033),
-    h = n(709706),
-    m = n(358820),
+    p = n(594174),
+    m = n(111361),
+    f = n(778033),
+    b = n(709706),
+    y = n(358820),
     g = n(990525),
-    E = n(388032),
-    b = n(335189);
-let y = 130,
-    O = [51],
-    v = [E.t.OpqAoq];
-function I(e) {
-    let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: a = !1, query: o } = e,
-        s = S(),
-        I = (0, l.e7)([f.default], () => (0, _.I5)(f.default.getCurrentUser())),
-        A = C(o, I),
-        N = Math.ceil(A.length / t),
+    v = n(388032),
+    O = n(734327);
+let j = [51],
+    h = [v.t.OpqAoq];
+function x(e) {
+    let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: o = !1, query: l } = e,
+        a = _(),
+        x = (0, s.e7)([p.default], () => (0, m.I5)(p.default.getCurrentUser())),
+        C = w(l, x),
+        E = Math.ceil(C.length / t),
         {
-            isNativeModuleLoaded: R,
-            isNativeModuleLoading: P,
-            catalogLastFetchTime: w,
-        } = (0, l.cj)([h.Z], () => ({
-            isNativeModuleLoaded: h.Z.isNativeModuleLoaded(),
-            isNativeModuleLoading: h.Z.isNativeModuleLoading(),
-            catalogLastFetchTime: h.Z.getCatalogLastFetchTime(),
+            isNativeModuleLoaded: I,
+            isNativeModuleLoading: S,
+            catalogLastFetchTime: T,
+        } = (0, s.cj)([b.Z], () => ({
+            isNativeModuleLoaded: b.Z.isNativeModuleLoaded(),
+            isNativeModuleLoading: b.Z.isNativeModuleLoading(),
+            catalogLastFetchTime: b.Z.getCatalogLastFetchTime(),
         }));
-    return o && 0 === A.length
+    return l && 0 === C.length
         ? (0, r.jsxs)("div", {
-              className: b.iconMessage,
+              className: O.iconMessage,
               children: [
                   (0, r.jsx)(u._Ve, {
                       width: 40,
@@ -47,13 +46,13 @@ function I(e) {
                   (0, r.jsx)(u.X6q, {
                       variant: "heading-sm/medium",
                       color: "header-muted",
-                      children: E.intl.string(E.t.ZzukHh),
+                      children: v.intl.string(v.t.ZzukHh),
                   }),
               ],
           })
-        : s
+        : a
           ? (0, r.jsxs)("div", {
-                className: b.iconMessage,
+                className: O.iconMessage,
                 children: [
                     (0, r.jsx)(u.aNP, {
                         width: 40,
@@ -64,18 +63,18 @@ function I(e) {
                     (0, r.jsx)(u.X6q, {
                         variant: "heading-md/normal",
                         color: "header-muted",
-                        children: E.intl.string(E.t.DpZNJy),
+                        children: v.intl.string(v.t.DpZNJy),
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         color: "header-muted",
-                        children: E.intl.format(E.t["5afO9f"], { onClick: R ? m.wV : m.r5 }),
+                        children: v.intl.format(v.t["5afO9f"], { onClick: I ? y.wV : y.r5 }),
                     }),
                 ],
             })
-          : P || null == w
+          : S || null == T
             ? (0, r.jsx)("div", {
-                  className: b.loading,
+                  className: O.loading,
                   children: (0, r.jsx)(u.$jN, {
                       type: u.$jN.Type.CHASING_DOTS,
                       animated: !0,
@@ -83,22 +82,22 @@ function I(e) {
               })
             : (0, r.jsx)(d.Z, {
                   fade: !0,
-                  className: b.container,
+                  className: O.container,
                   renderRow: (e) => {
                       let n = e * t,
-                          i = A.slice(n, n + t);
+                          i = C.slice(n, n + t);
                       return (0, r.jsx)(
-                          T,
+                          P,
                           {
                               children: i.map((n, i) =>
                                   (0, r.jsx)(
                                       g.J,
                                       {
                                           voiceFilter: n,
-                                          hasNitro: I,
+                                          hasNitro: x,
                                           analyticsContext: {
-                                              reason: p.W.USER_SELECTION,
-                                              gridRows: N,
+                                              reason: f.W.USER_SELECTION,
+                                              gridRows: E,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: i,
@@ -112,56 +111,54 @@ function I(e) {
                       );
                   },
                   renderSectionHeader:
-                      !1 === a
+                      !1 === o
                           ? void 0
                           : (e) =>
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "header-muted",
-                                    className: b.header,
-                                    children: E.intl.string(v[e]),
+                                    className: O.header,
+                                    children: v.intl.string(h[e]),
                                 }),
-                  sectionHeaderHeight: !1 === a ? void 0 : (e) => O[e],
-                  rowCount: N,
-                  rowHeight: y,
+                  sectionHeaderHeight: !1 === o ? void 0 : (e) => j[e],
+                  rowCount: E,
+                  rowHeight: 130,
                   onScroll: n,
                   ref: i,
-                  sectionFooterHeight: 40 * !I,
+                  sectionFooterHeight: 40 * !x,
               });
 }
-function T(e) {
+function P(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)("div", {
         ref: n,
-        className: b.row,
+        className: O.row,
         children: (0, r.jsx)(u.JcV, {
             containerRef: n,
             children: t,
         }),
     });
 }
-let S = () =>
-        (0, l.e7)([h.Z], () => {
+let _ = () =>
+        (0, s.e7)([b.Z], () => {
             var e;
             return (
-                !Object.keys(null != (e = h.Z.getVoiceFilterModels()) ? e : {}).length &&
-                (h.Z.getCatalogFetchFailed() || h.Z.hasNativeModuleFailed())
+                !Object.keys(null != (e = b.Z.getVoiceFilterModels()) ? e : {}).length &&
+                (b.Z.getCatalogFetchFailed() || b.Z.hasNativeModuleFailed())
             );
         }),
-    A = (e, t) => {
-        let n = (0, s._I)(t.toLowerCase());
-        return "" === n
-            ? e
-            : e.filter((e) => {
-                  let { name: t } = e,
-                      r = (0, s._I)(E.intl.string(t)).toLowerCase();
-                  return o()(n, r);
-              });
-    },
-    C = (e, t) =>
-        (0, l.Wu)([h.Z], () => {
-            let n = h.Z.getVoiceFilters(),
-                r = h.Z.getSortedVoiceFilters();
-            return A(t ? Object.values(n) : r, e);
+    w = (e, t) =>
+        (0, s.Wu)([b.Z], () => {
+            let n = b.Z.getVoiceFilters(),
+                r = b.Z.getSortedVoiceFilters();
+            var i = t ? Object.values(n) : r;
+            let o = (0, a._I)(e.toLowerCase());
+            return "" === o
+                ? i
+                : i.filter((e) => {
+                      let { name: t } = e,
+                          n = (0, a._I)(v.intl.string(t)).toLowerCase();
+                      return l()(o, n);
+                  });
         }, [e, t]);

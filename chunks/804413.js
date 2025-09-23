@@ -1,18 +1,17 @@
-n.d(t, { Z: () => s });
-var r = n(74538),
-    i = n(848572),
-    o = n(474936);
-let a = 604800000;
-function s() {
-    let e = (0, i.GG)(),
-        t = (0, r.EK)();
+n.d(t, { Z: () => l });
+var a = n(74538),
+    r = n(848572),
+    i = n(474936);
+function l() {
+    let e = (0, r.GG)(),
+        t = (0, a.EK)();
     if (null == e || !t) return null;
     let n = new Date().getTime();
-    for (let t = o.Qh.length - 1; t >= 0; t--) {
-        let r = o.vK[o.Qh[t]],
-            i = new Date(e);
-        if ((i.setMonth(e.getMonth() + r.tenureReqNumMonths), i.setHours(i.getHours() + 30), n > i.getTime()))
-            if (n - i.getTime() < a) return r.id;
+    for (let t = i.Qh.length - 1; t >= 0; t--) {
+        let a = i.vK[i.Qh[t]],
+            r = new Date(e);
+        if ((r.setMonth(e.getMonth() + a.tenureReqNumMonths), r.setHours(r.getHours() + 30), n > r.getTime()))
+            if (n - r.getTime() < 604800000) return a.id;
             else break;
     }
     return null;

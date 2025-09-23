@@ -1,58 +1,56 @@
-n.d(t, { Z: () => g }), n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+n.d(t, { Z: () => x }), n(388685);
+var a = n(951288),
+    r = n(647438),
+    i = n(120356),
+    l = n.n(i),
     s = n(392711),
-    l = n.n(s),
-    c = n(202841),
-    u = n(442837),
-    d = n(481060),
-    f = n(607070),
-    _ = n(901976);
-let p = 90,
-    h = 20,
-    m = {
-        mass: 10,
-        tension: 550,
-        friction: 140,
-    };
-function g(e) {
+    o = n.n(s),
+    c = n(401393),
+    d = n(442837),
+    u = n(481060),
+    m = n(607070),
+    p = n(339419);
+let h = {
+    mass: 10,
+    tension: 550,
+    friction: 140,
+};
+function x(e) {
     let { className: t, pageMultiplier: n } = e,
-        a = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        [s, g] = i.useState({
+        i = (0, d.e7)([m.Z], () => m.Z.useReducedMotion),
+        [s, x] = r.useState({
             x: 0,
             y: 0,
         }),
-        E = i.useMemo(
+        f = r.useMemo(
             () =>
-                l().throttle((e) => {
-                    if (!a)
-                        g({
-                            x: (window.innerWidth - e.pageX * n) / p,
-                            y: (window.innerHeight - e.pageY * n) / p,
+                o().throttle((e) => {
+                    if (!i)
+                        x({
+                            x: (window.innerWidth - e.pageX * n) / 90,
+                            y: (window.innerHeight - e.pageY * n) / 90,
                         });
-                }, h),
-            [n, a],
+                }, 20),
+            [n, i],
         );
-    i.useEffect(() => (window.addEventListener("mousemove", E), () => window.removeEventListener("mousemove", E)), [E]);
-    let [b, y] = (0, d.q_F)(() => ({
+    r.useEffect(() => (window.addEventListener("mousemove", f), () => window.removeEventListener("mousemove", f)), [f]);
+    let [b, g] = (0, u.q_F)(() => ({
         x: 0,
         y: 0,
-        config: m,
+        config: h,
     }));
     return (
-        i.useEffect(() => {
-            y({
+        r.useEffect(() => {
+            g({
                 x: s.x,
                 y: s.y,
             });
-        }, [s.x, s.y, y]),
-        (0, r.jsx)(c.animated.div, {
+        }, [s.x, s.y, g]),
+        (0, a.jsx)(c.animated.div, {
             style: {
                 transform: (0, c.to)([b.x, b.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)")),
             },
-            className: o()(_.background, t),
+            className: l()(p.background, t),
         })
     );
 }

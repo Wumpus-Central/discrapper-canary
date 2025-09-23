@@ -1,76 +1,74 @@
-n.d(t, { Z: () => O });
-var r = n(951288);
+n.d(t, { Z: () => j });
+var a = n(951288);
 n(647438);
-var i = n(704215),
-    a = n(481060),
-    o = n(100527),
+var r = n(704215),
+    i = n(481060),
+    l = n(100527),
     s = n(906732),
-    l = n(266454),
+    o = n(266454),
     c = n(314910),
-    u = n(313789),
-    d = n(518596),
-    f = n(378364),
-    _ = n(197344),
-    p = n(226625),
-    h = n(981631),
-    m = n(921944),
-    g = n(388032),
-    E = n(972663);
-let b = 5;
-function y(e) {
+    d = n(313789),
+    u = n(518596),
+    m = n(378364),
+    p = n(197344),
+    h = n(226625),
+    x = n(981631),
+    f = n(921944),
+    b = n(388032),
+    g = n(120289);
+function v(e) {
     let { dismissibleContent: t } = e,
-        n = _.Z.useIsEligible(),
-        f = (0, l.Nj)(t),
-        y = n && !f,
-        { analyticsLocations: O } = (0, s.ZP)(o.Z.HOLIDAY_COACHMARK),
-        v = (e) => {
-            (0, l.Q3)(i.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
+        n = p.Z.useIsEligible(),
+        m = (0, o.Nj)(t),
+        { analyticsLocations: v } = (0, s.ZP)(l.Z.HOLIDAY_COACHMARK),
+        j = (e) => {
+            (0, o.Q3)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
-        I = () => {
-            (0, d.openUserSettings)(u.n.NOTIFICATIONS_PANEL, {
-                section: h.oAB.NOTIFICATIONS,
-                analyticsLocations: O,
+        _ = () => {
+            (0, u.openUserSettings)(d.n.NOTIFICATIONS_PANEL, {
+                section: x.oAB.NOTIFICATIONS,
+                analyticsLocations: v,
             }),
-                v(m.L.SECONDARY);
+                j(f.L.SECONDARY);
         };
-    return y
-        ? (0, r.jsx)(c.ZP, {
-              children: (0, r.jsxs)("div", {
-                  className: E.wrapper,
+    return n && !m
+        ? (0, a.jsx)(c.ZP, {
+              children: (0, a.jsxs)("div", {
+                  className: g.wrapper,
                   children: [
-                      (0, r.jsxs)("div", {
-                          className: E.backgroundWrapper,
+                      (0, a.jsxs)("div", {
+                          className: g.backgroundWrapper,
                           children: [
-                              (0, r.jsx)(p.Z, {
-                                  className: E.backgroundImage,
-                                  pageMultiplier: b,
+                              (0, a.jsx)(h.Z, {
+                                  className: g.backgroundImage,
+                                  pageMultiplier: 5,
                               }),
-                              (0, r.jsx)("div", { className: E.backgroundOverlay }),
+                              (0, a.jsx)("div", { className: g.backgroundOverlay }),
                           ],
                       }),
-                      (0, r.jsx)("div", { className: E.heroImage }),
-                      (0, r.jsxs)("div", {
-                          className: E.content,
+                      (0, a.jsx)("div", { className: g.heroImage }),
+                      (0, a.jsxs)("div", {
+                          className: g.content,
                           children: [
-                              (0, r.jsxs)("div", {
+                              (0, a.jsxs)("div", {
                                   children: [
-                                      (0, r.jsx)(a.X6q, {
+                                      (0, a.jsx)(i.X6q, {
                                           variant: "heading-md/bold",
                                           color: void 0,
-                                          className: E.specialText,
-                                          children: g.intl.string(g.t.zUhr3N),
+                                          className: g.specialText,
+                                          children: b.intl.string(b.t.zUhr3N),
                                       }),
-                                      (0, r.jsx)(a.Text, {
+                                      (0, a.jsx)(i.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: g.intl.format(g.t.Xw2XUV, {
+                                          children: b.intl.format(b.t.Xw2XUV, {
                                               settingsHook: (e, t) =>
-                                                  (0, r.jsx)(
-                                                      a.P3F,
+                                                  (0, a.jsx)(
+                                                      i.P3F,
                                                       {
                                                           tag: "span",
-                                                          className: E.specialTextLink,
-                                                          onClick: I,
+                                                          className: g.specialTextLink,
+                                                          onClick: _,
                                                           children: e,
                                                       },
                                                       t,
@@ -79,10 +77,10 @@ function y(e) {
                                       }),
                                   ],
                               }),
-                              (0, r.jsx)(a.P3F, {
-                                  className: E.closeClickable,
-                                  onClick: () => v(m.L.USER_DISMISS),
-                                  children: (0, r.jsx)(a.Dio, {
+                              (0, a.jsx)(i.P3F, {
+                                  className: g.closeClickable,
+                                  onClick: () => j(f.L.USER_DISMISS),
+                                  children: (0, a.jsx)(i.Dio, {
                                       color: "currentColor",
                                       size: "xs",
                                   }),
@@ -94,8 +92,8 @@ function y(e) {
           })
         : null;
 }
-function O() {
-    return null == f.Z.coachmarkDismissibleContent
+function j() {
+    return null == m.Z.coachmarkDismissibleContent
         ? null
-        : (0, r.jsx)(y, { dismissibleContent: f.Z.coachmarkDismissibleContent });
+        : (0, a.jsx)(v, { dismissibleContent: m.Z.coachmarkDismissibleContent });
 }

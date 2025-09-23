@@ -2,6 +2,7 @@ e.exports = {
     row: "row_a35735",
     col: "col_a35735",
     grid: "grid_a35735",
+    customEffectsGrid: "customEffectsGrid_a35735",
     end: "end_a35735",
     section: "section_a35735",
     root: "root_a35735",

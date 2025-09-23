@@ -1,74 +1,22 @@
 n.d(t, { J: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(164369),
-    l = n(401393),
+    o = n(120356),
+    l = n.n(o),
+    a = n(164369),
+    s = n(401393),
     c = n(481060),
     u = n(70956),
     d = n(388032),
-    f = n(20887);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function g(e) {
+    p = n(20887);
+function m(e) {
     if (null != e) {
         let t = new Date(),
             {
                 hours: n,
                 minutes: r,
                 seconds: i,
-            } = (0, s.Z)({
+            } = (0, a.Z)({
                 start: t,
                 end: e,
             });
@@ -86,7 +34,7 @@ function g(e) {
         countdownString: "",
     };
 }
-let E = (e) => {
+let f = (e) => {
         let { digit: t } = e,
             n = (0, c.Yzy)(t, {
                 from: {
@@ -108,37 +56,77 @@ let E = (e) => {
                 },
             });
         return (0, r.jsx)("div", {
-            className: f.animatedDigit,
-            children: n((e, t) =>
-                (0, r.jsx)(l.animated.div, {
-                    style: m(p({}, e), {
-                        position: "absolute",
-                        width: "100%",
-                        textAlign: "center",
-                    }),
+            className: p.animatedDigit,
+            children: n((e, t) => {
+                var n, i;
+                return (0, r.jsx)(s.animated.div, {
+                    style:
+                        ((n = (function (e) {
+                            for (var t = 1; t < arguments.length; t++) {
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    r = Object.keys(n);
+                                "function" == typeof Object.getOwnPropertySymbols &&
+                                    (r = r.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                        }),
+                                    )),
+                                    r.forEach(function (t) {
+                                        var r;
+                                        (r = n[t]),
+                                            t in e
+                                                ? Object.defineProperty(e, t, {
+                                                      value: r,
+                                                      enumerable: !0,
+                                                      configurable: !0,
+                                                      writable: !0,
+                                                  })
+                                                : (e[t] = r);
+                                    });
+                            }
+                            return e;
+                        })({}, e)),
+                        (i = i =
+                            {
+                                position: "absolute",
+                                width: "100%",
+                                textAlign: "center",
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                            : (function (e, t) {
+                                  var n = Object.keys(e);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var r = Object.getOwnPropertySymbols(e);
+                                      n.push.apply(n, r);
+                                  }
+                                  return n;
+                              })(Object(i)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                              }),
+                        n),
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-sm/bold",
                         children: t,
                     }),
-                }),
-            ),
+                });
+            }),
         });
     },
     b = () => {
         let [e, t] = i.useState(!1);
         i.useEffect(() => {
             let e;
-            function n() {
-                let r = Date.now();
-                e = setTimeout(
-                    () => {
-                        t((e) => !e), n();
-                    },
-                    Math.max(100, (Math.floor(r / u.Z.Millis.HALF_SECOND) + 1) * u.Z.Millis.HALF_SECOND - r),
-                );
-            }
             return (
-                n(),
+                !(function n() {
+                    let r = Date.now();
+                    e = setTimeout(
+                        () => {
+                            t((e) => !e), n();
+                        },
+                        Math.max(100, (Math.floor(r / u.Z.Millis.HALF_SECOND) + 1) * u.Z.Millis.HALF_SECOND - r),
+                    );
+                })(),
                 () => {
                     clearTimeout(e);
                 }
@@ -148,10 +136,10 @@ let E = (e) => {
             opacity: e ? 0.5 : 1,
             config: { duration: 100 },
         });
-        return (0, r.jsxs)(l.animated.div, {
+        return (0, r.jsxs)(s.animated.div, {
             style: n,
-            className: f.colonContainer,
-            children: [(0, r.jsx)("div", { className: f.tinyDot }), (0, r.jsx)("div", { className: f.tinyDot })],
+            className: p.colonContainer,
+            children: [(0, r.jsx)("div", { className: p.tinyDot }), (0, r.jsx)("div", { className: p.tinyDot })],
         });
     },
     y = (e) => {
@@ -159,20 +147,20 @@ let E = (e) => {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: f.digitContainer,
-                    children: (0, r.jsx)(E, { digit: t[0] }),
+                    className: p.digitContainer,
+                    children: (0, r.jsx)(f, { digit: t[0] }),
                 }),
                 (0, r.jsx)("div", {
-                    className: f.digitContainer,
-                    children: (0, r.jsx)(E, { digit: t[1] }),
+                    className: p.digitContainer,
+                    children: (0, r.jsx)(f, { digit: t[1] }),
                 }),
             ],
         });
     },
-    O = (e) => {
+    g = (e) => {
         let { countdown: t } = e;
         return (0, r.jsxs)("div", {
-            className: f.digitsContainer,
+            className: p.digitsContainer,
             children: [
                 (0, r.jsx)(y, { digits: t.hours }),
                 (0, r.jsx)(b, {}),
@@ -183,30 +171,30 @@ let E = (e) => {
         });
     };
 function v(e) {
-    let { textVariant: t, className: n, catalogUpdateTime: a, isScrolled: s } = e,
-        [l, u] = i.useState(() => g(a));
+    let { textVariant: t, className: n, catalogUpdateTime: o, isScrolled: a } = e,
+        [s, u] = i.useState(() => m(o));
     return (
         i.useEffect(() => {
             let e = setInterval(() => {
-                u(() => g(a));
+                u(() => m(o));
             }, 1000);
             return () => clearInterval(e);
-        }, [a]),
+        }, [o]),
         (0, r.jsxs)("div", {
-            className: o()(n, f.countdownContainer, { [f.isScrolled]: s }),
-            "aria-label": l.countdownString,
+            className: l()(n, p.countdownContainer, { [p.isScrolled]: a }),
+            "aria-label": s.countdownString,
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.iconContainer,
+                    className: p.iconContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: f.clockIconWrapper,
+                            className: p.clockIconWrapper,
                             children: (0, r.jsx)(c.T39, {
                                 size: "custom",
                                 height: 16,
                                 width: 16,
                                 color: "currentColor",
-                                colorClass: f.clockIcon,
+                                colorClass: p.clockIcon,
                             }),
                         }),
                         (0, r.jsx)(c.Text, {
@@ -217,8 +205,8 @@ function v(e) {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: f.digitsContainer,
-                    children: (0, r.jsx)(O, { countdown: l }),
+                    className: p.digitsContainer,
+                    children: (0, r.jsx)(g, { countdown: s }),
                 }),
             ],
         })

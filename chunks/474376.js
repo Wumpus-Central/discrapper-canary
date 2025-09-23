@@ -1,115 +1,118 @@
-n.d(t, { g: () => O }), n(539854);
-var r = n(951288);
+n.d(t, { g: () => _ }), n(539854);
+var a = n(951288);
 n(647438);
-var i = n(442837),
-    a = n(780384),
-    o = n(481060),
+var r = n(442837),
+    i = n(780384),
+    l = n(481060),
     s = n(44315),
-    l = n(210887),
+    o = n(210887),
     c = n(598077),
-    u = n(246946),
-    d = n(594174),
-    f = n(626135),
-    _ = n(51144),
-    p = n(480387),
-    h = n(726745),
-    m = n(251423),
-    g = n(383832),
-    E = n(981631),
-    b = n(388032),
-    y = n(681285);
-function O(e) {
-    let t = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        n = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        O = (0, i.e7)([l.Z], () => (0, a.wj)(l.Z.theme)),
-        { multiAccountUsers: v } = (0, m.L)(),
-        I = (e) => {
-            e !== (null == t ? void 0 : t.id) &&
-                (f.default.track(E.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: E.jXE.USER_PROFILE } }),
-                p.yD(e));
-        },
-        T = v.map((i) => {
-            let a = new c.Z(i),
-                l = a.id === (null == t ? void 0 : t.id),
-                u = i.tokenStatus === h.q.INVALID,
-                d = n ? null : "#".concat(a.discriminator);
-            return (0, r.jsx)(
-                o.sNh,
+    d = n(246946),
+    u = n(594174),
+    m = n(626135),
+    p = n(51144),
+    h = n(480387),
+    x = n(726745),
+    f = n(251423),
+    b = n(383832),
+    g = n(981631),
+    v = n(388032),
+    j = n(125086);
+function _(e) {
+    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        _ = (0, r.e7)([o.Z], () => (0, i.wj)(o.Z.theme)),
+        { multiAccountUsers: y } = (0, f.L)(),
+        C = y.map((r) => {
+            let i = new c.Z(r),
+                o = i.id === (null == t ? void 0 : t.id),
+                d = r.tokenStatus === x.q.INVALID,
+                u = n ? null : "#".concat(i.discriminator);
+            return (0, a.jsx)(
+                l.sNh,
                 {
-                    id: a.id,
-                    focusedClassName: y.focused,
+                    id: i.id,
+                    focusedClassName: j.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
-                        return (0, r.jsxs)("div", {
-                            className: y.userMenuItem,
+                        return (0, a.jsxs)("div", {
+                            className: j.userMenuItem,
                             children: [
-                                (0, r.jsx)(o.qEK, {
-                                    src: a.getAvatarURL(void 0, 40),
-                                    size: o.EFr.SIZE_24,
-                                    "aria-label": i.username,
+                                (0, a.jsx)(l.qEK, {
+                                    src: i.getAvatarURL(void 0, 40),
+                                    size: l.EFr.SIZE_24,
+                                    "aria-label": r.username,
                                 }),
-                                (0, r.jsxs)("div", {
-                                    className: y.userMenuUsername,
+                                (0, a.jsxs)("div", {
+                                    className: j.userMenuUsername,
                                     children: [
-                                        (0, r.jsx)(o.Text, {
-                                            className: y.userMenuText,
+                                        (0, a.jsx)(l.Text, {
+                                            className: j.userMenuText,
                                             variant: "text-sm/normal",
-                                            children: _.ZP.getUserTag(a, {
+                                            children: p.ZP.getUserTag(i, {
                                                 mode: "username",
                                                 identifiable: n ? "never" : "always",
                                             }),
                                         }),
-                                        !a.hasUniqueUsername() &&
-                                            (0, r.jsx)(o.Text, {
-                                                className: y.userMenuDiscriminator,
+                                        !i.hasUniqueUsername() &&
+                                            (0, a.jsx)(l.Text, {
+                                                className: j.userMenuDiscriminator,
                                                 variant: "text-sm/normal",
-                                                children: d,
+                                                children: u,
                                             }),
                                     ],
                                 }),
-                                l &&
-                                    (0, r.jsx)(o.owK, {
+                                o &&
+                                    (0, a.jsx)(l.owK, {
                                         size: "sm",
-                                        color: (0, s.Lq)(t ? E.Ilk.WHITE_500 : E.Ilk.BRAND_500),
+                                        color: (0, s.Lq)(t ? g.Ilk.WHITE_500 : g.Ilk.BRAND_500),
                                         secondaryColor: (0, s.Lq)(
-                                            (t && O) || (t && !O) ? E.Ilk.BRAND_500 : E.Ilk.WHITE_500,
+                                            (t && _) || (t && !_) ? g.Ilk.BRAND_500 : g.Ilk.WHITE_500,
                                         ),
-                                        className: y.activeIcon,
+                                        className: j.activeIcon,
                                     }),
-                                u &&
-                                    (0, r.jsx)(o.Mgn, {
-                                        color: (0, s.Lq)(E.Ilk.RED_400),
+                                d &&
+                                    (0, a.jsx)(l.Mgn, {
+                                        color: (0, s.Lq)(g.Ilk.RED_400),
                                         secondaryColor: (0, s.Lq)(
-                                            (t && O) || (t && !O) ? E.Ilk.BRAND_500 : E.Ilk.WHITE_500,
+                                            (t && _) || (t && !_) ? g.Ilk.BRAND_500 : g.Ilk.WHITE_500,
                                         ),
                                         size: "xs",
-                                        className: y.activeIcon,
+                                        className: j.activeIcon,
                                     }),
                             ],
                         });
                     },
                     action: () => {
-                        null == e || e(), u ? (0, g.Z)() : I(a.id);
+                        if ((null == e || e(), d)) (0, b.Z)();
+                        else {
+                            var n;
+                            (n = i.id) !== (null == t ? void 0 : t.id) &&
+                                (m.default.track(g.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    location: { section: g.jXE.USER_PROFILE },
+                                }),
+                                h.yD(n));
+                        }
                     },
                 },
-                a.id,
+                i.id,
             );
         });
     return (
-        T.push(
-            (0, r.jsxs)(r.Fragment, {
+        C.push(
+            (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, r.jsx)(o.Clw, {}),
-                    (0, r.jsx)(o.sNh, {
+                    (0, a.jsx)(l.Clw, {}),
+                    (0, a.jsx)(l.sNh, {
                         id: "manage-accounts",
-                        label: b.intl.string(b.t.WbFpq6),
+                        label: v.intl.string(v.t.WbFpq6),
                         action: () => {
-                            null == e || e(), (0, g.Z)();
+                            null == e || e(), (0, b.Z)();
                         },
                     }),
                 ],
             }),
         ),
-        T
+        C
     );
 }

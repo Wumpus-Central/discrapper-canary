@@ -1,18 +1,18 @@
-n.d(t, { G: () => f });
+n.d(t, { G: () => d });
 var r = n(442837),
     i = n(704215),
-    a = n(243778),
-    o = n(999382),
-    s = n(667105),
-    l = n(819640),
+    l = n(243778),
+    a = n(999382),
+    o = n(667105),
+    s = n(819640),
     c = n(562511),
     u = n(46140);
-let d = 180000;
-function f(e) {
+function d(e) {
     let t = (0, c.A2)(e),
-        n = (0, r.e7)([o.Z], () => o.Z.isOpen()),
-        f = (0, r.e7)([l.Z], () => l.Z.hasLayers()),
-        { isQuestBarEmpty: _, hasLoadedQuestBar: p } = (0, s.Ws)({ location: u.dr.QUESTS_BAR }),
-        h = t && !n && !f && _ && p;
-    return (0, a.bf)(h ? i.z.GUILD_TAG_AVAILABLE_COACHMARK : null, { cooldownDurationMs: d });
+        n = (0, r.e7)([a.Z], () => a.Z.isOpen()),
+        d = (0, r.e7)([s.Z], () => s.Z.hasLayers()),
+        { isQuestBarEmpty: p, hasLoadedQuestBar: f } = (0, o.Ws)({ location: u.dr.QUESTS_BAR });
+    return (0, l.bf)(t && !n && !d && p && f ? i.z.GUILD_TAG_AVAILABLE_COACHMARK : null, {
+        cooldownDurationMs: 180000,
+    });
 }

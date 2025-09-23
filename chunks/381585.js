@@ -1,48 +1,47 @@
-n.d(t, {
-    k0: () => c,
-    sp: () => l,
+r.d(t, {
+    k0: () => o,
+    sp: () => a,
 });
-var r = n(951288),
-    i = n(647438);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
+var n = r(951288),
+    l = r(647438);
+let i = l.createContext(null);
+function a() {
+    return l.useContext(i);
 }
 function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                a(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let s = i.createContext(null);
-function l() {
-    return i.useContext(s);
-}
-function c(e) {
-    let { newValue: t, children: n } = e,
-        a = l(),
-        c = i.useMemo(() => o({}, a, t), [a, t]);
-    return (0, r.jsx)(s.Provider, {
-        value: c,
-        children: n,
+    let { newValue: t, children: r } = e,
+        o = a(),
+        s = l.useMemo(
+            () =>
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
+                        "function" == typeof Object.getOwnPropertySymbols &&
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                }),
+                            )),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: n,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0,
+                                          })
+                                        : (e[t] = n);
+                            });
+                    }
+                    return e;
+                })({}, o, t),
+            [o, t],
+        );
+    return (0, n.jsx)(i.Provider, {
+        value: s,
+        children: r,
     });
 }

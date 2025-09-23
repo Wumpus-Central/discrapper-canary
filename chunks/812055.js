@@ -1,97 +1,94 @@
 n.d(t, {
-    Z: () => T,
-    b: () => I,
+    Z: () => C,
+    b: () => y,
 }),
     n(388685);
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(704215),
+var a = n(951288),
+    r = n(647438),
+    i = n(442837),
+    l = n(704215),
     s = n(907862),
-    l = n(243778),
+    o = n(243778),
     c = n(246133),
-    u = n(695346),
-    d = n(819640),
-    f = n(885110),
-    _ = n(70956),
-    p = n(809930),
-    h = n(921944),
-    m = n(231338),
-    g = n(388032),
-    E = n(668073);
-let b = _.Z.Millis.HOUR,
-    y = _.Z.Millis.DAY,
-    O = 4 * _.Z.Millis.DAY,
-    v = 2;
-function I() {
-    let [e, t] = i.useState(Date.now()),
-        n = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
-        r = (0, a.e7)([f.Z], () => f.Z.getStatus()),
-        s = u.P4.useSetting(),
+    d = n(695346),
+    u = n(819640),
+    m = n(885110),
+    p = n(70956),
+    h = n(809930),
+    x = n(921944),
+    f = n(231338),
+    b = n(388032),
+    g = n(668073);
+let v = p.Z.Millis.HOUR,
+    j = p.Z.Millis.DAY,
+    _ = 4 * p.Z.Millis.DAY;
+function y() {
+    let [e, t] = r.useState(Date.now()),
+        n = (0, i.e7)([u.Z], () => u.Z.hasLayers()),
+        a = (0, i.e7)([m.Z], () => m.Z.getStatus()),
+        s = d.P4.useSetting(),
         c = (null == s ? void 0 : s.value) != null ? Number(s.value) : null,
-        _ = u.Cr.useSetting(),
-        g = null != c && e - c > y,
-        E = r === m.Sk.DND && g && "0" === _,
-        { enabled: I } = (0, p.a)({
+        p = d.Cr.useSetting(),
+        b = a === f.Sk.DND && null != c && e - c > j && "0" === p,
+        { enabled: g } = (0, h.a)({
             location: "useDoNotDisturbReminderPopoverDismissibleContent",
-            autoTrackExposure: E,
-            disable: !E,
-        }),
-        T = I && !n;
+            autoTrackExposure: b,
+            disable: !b,
+        });
     return (
-        i.useEffect(() => {
-            if (r === m.Sk.DND) {
+        r.useEffect(() => {
+            if (a === f.Sk.DND) {
                 t(Date.now());
-                let e = setInterval(() => t(Date.now()), b);
+                let e = setInterval(() => t(Date.now()), v);
                 return () => clearInterval(e);
             }
-        }, [r]),
-        (0, l.bf)(
-            T ? o.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
+        }, [a]),
+        (0, o.bf)(
+            g && !n ? l.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
             {
-                cooldownDurationMs: O,
-                numTimesToRecur: v,
+                cooldownDurationMs: _,
+                numTimesToRecur: 2,
             },
-            h.R.ACCOUNT_NAME_ZONE,
+            x.R.ACCOUNT_NAME_ZONE,
             !0,
         )
     );
 }
-function T(e) {
-    let { targetElementRef: t, onDismiss: n, children: i } = e,
+function C(e) {
+    let { targetElementRef: t, onDismiss: n, children: r } = e,
         {
-            enabled: a,
-            titleText: o,
-            bodyText: l,
-        } = (0, p.a)({
+            enabled: i,
+            titleText: l,
+            bodyText: o,
+        } = (0, h.a)({
             location: "popover",
             autoTrackExposure: !1,
         });
-    return null != t.current && a
-        ? (0, r.jsxs)(r.Fragment, {
+    return null != t.current && i
+        ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  i,
-                  (0, r.jsx)(s.J2, {
+                  r,
+                  (0, a.jsx)(s.J2, {
                       targetElementRef: t,
-                      title: g.intl.string(o),
-                      body: g.intl.string(l),
+                      title: b.intl.string(l),
+                      body: b.intl.string(o),
                       caretConfig: { align: "start" },
                       gradientColor: "purple",
                       actions: [
                           {
-                              text: g.intl.string(g.t.fwPura),
+                              text: b.intl.string(b.t.fwPura),
                               onClick: () => {
-                                  (0, c.Z)({ nextStatus: m.Sk.ONLINE }), null == n || n(h.L.PRIMARY);
+                                  (0, c.Z)({ nextStatus: f.Sk.ONLINE }), null == n || n(x.L.PRIMARY);
                               },
                           },
                       ],
                       graphic: {
                           type: "image",
-                          src: E,
+                          src: g,
                       },
-                      onRequestClose: () => (null == n ? void 0 : n(h.L.DISMISS)),
+                      onRequestClose: () => (null == n ? void 0 : n(x.L.DISMISS)),
                   }),
               ],
           })
-        : i;
+        : r;
 }

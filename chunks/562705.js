@@ -1,86 +1,84 @@
-n.d(t, { Z: () => O });
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(704215),
+n.d(t, { Z: () => j });
+var a = n(951288),
+    r = n(647438),
+    i = n(442837),
+    l = n(704215),
     s = n(264418),
-    l = n(607070),
+    o = n(607070),
     c = n(243778),
-    u = n(7093),
-    d = n(819640),
-    f = n(585483),
-    _ = n(553896),
-    p = n(804413),
-    h = n(787528),
-    m = n(474936),
-    g = n(981631),
-    E = n(921944),
-    b = n(388032);
-let y = 1209600000;
-function O(e) {
+    d = n(7093),
+    u = n(819640),
+    m = n(585483),
+    p = n(553896),
+    h = n(804413),
+    x = n(787528),
+    f = n(474936),
+    b = n(981631),
+    g = n(921944),
+    v = n(388032);
+function j(e) {
     let { groupName: t, targetElementRef: n } = e,
-        i = (0, p.Z)(),
-        s = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        f = (0, u.Z)((e) => e.isOpen),
-        _ = (0, a.e7)([d.Z], () => d.Z.getLayers().includes(g.S9g.USER_SETTINGS));
-    return s || null == i || f || _
+        r = (0, h.Z)(),
+        s = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        m = (0, d.Z)((e) => e.isOpen),
+        p = (0, i.e7)([u.Z], () => u.Z.getLayers().includes(b.S9g.USER_SETTINGS));
+    return s || null == r || m || p
         ? null
-        : (0, r.jsx)(c.Nq, {
-              contentType: o.z.NITRO_TENURE_BADGE_LEVEL_UP,
-              timeRecurringConfig: { cooldownDurationMs: y },
+        : (0, a.jsx)(c.Nq, {
+              contentType: l.z.NITRO_TENURE_BADGE_LEVEL_UP,
+              timeRecurringConfig: { cooldownDurationMs: 1209600000 },
               groupName: t,
               children: (e) => {
-                  let { visibleContent: t, markAsDismissed: a } = e;
-                  return (0, r.jsx)(v, {
-                      recentlyLeveledTenureBadge: i,
-                      markAsDismissed: a,
+                  let { visibleContent: t, markAsDismissed: i } = e;
+                  return (0, a.jsx)(_, {
+                      recentlyLeveledTenureBadge: r,
+                      markAsDismissed: i,
                       targetElementRef: n,
-                      shouldShow: t === o.z.NITRO_TENURE_BADGE_LEVEL_UP,
+                      shouldShow: t === l.z.NITRO_TENURE_BADGE_LEVEL_UP,
                   });
               },
           });
 }
-function v(e) {
+function _(e) {
     var t;
-    let { recentlyLeveledTenureBadge: n, markAsDismissed: a, targetElementRef: o, shouldShow: l } = e,
-        c = m.Qh.indexOf(n),
-        d = c > 0 ? c - 1 : c,
-        p = (0, h.J)(m.Qh[d], { ambient: !0 }),
-        y = (0, i.useCallback)(() => {
-            a(E.L.TAKE_ACTION),
-                u.Z.setState({ shouldRenderTenureLevelUp: !0 }),
-                f.S.dispatch(g.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
-        }, [a]),
-        O = (0, i.useCallback)(() => {
-            a(E.L.USER_DISMISS);
-        }, [a]),
-        v = m.vK[n],
-        I = b.intl.formatToPlainString(b.t.ewkaVV, {
-            timeMilestone: null == (t = (0, _.q)(v.id, v.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
+    let { recentlyLeveledTenureBadge: n, markAsDismissed: i, targetElementRef: l, shouldShow: o } = e,
+        c = f.Qh.indexOf(n),
+        u = (0, x.J)(f.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
+        h = (0, r.useCallback)(() => {
+            i(g.L.TAKE_ACTION),
+                d.Z.setState({ shouldRenderTenureLevelUp: !0 }),
+                m.S.dispatch(b.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+        }, [i]),
+        j = (0, r.useCallback)(() => {
+            i(g.L.USER_DISMISS);
+        }, [i]),
+        _ = f.vK[n],
+        y = v.intl.formatToPlainString(v.t.ewkaVV, {
+            timeMilestone: null == (t = (0, p.q)(_.id, _.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
         }),
-        T = [
+        C = [
             {
-                text: b.intl.string(b.t.RzWDqa),
+                text: v.intl.string(v.t.RzWDqa),
                 variant: "primary",
-                onClick: y,
+                onClick: h,
             },
         ];
-    return (0, r.jsx)(s.J, {
-        targetElementRef: o,
-        onRequestClose: O,
-        shouldShow: l,
+    return (0, a.jsx)(s.J, {
+        targetElementRef: l,
+        onRequestClose: j,
+        shouldShow: o,
         caretConfig: { align: "center" },
         graphic:
-            null != p
+            null != u
                 ? {
                       type: "image",
-                      src: p,
+                      src: u,
                       aspectRatio: "6/4",
                   }
                 : void 0,
         size: "lg",
-        title: b.intl.string(b.t.VoDxsb),
-        body: I,
-        actions: T,
+        title: v.intl.string(v.t.VoDxsb),
+        body: y,
+        actions: C,
     });
 }

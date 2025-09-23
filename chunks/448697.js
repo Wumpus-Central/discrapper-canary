@@ -1,46 +1,43 @@
-n.d(t, { R: () => h });
+n.d(t, { R: () => f });
 var r = n(951288),
     i = n(647438),
-    a = n(392711),
-    o = n(401393),
-    s = n(442837),
-    l = n(481060),
+    o = n(392711),
+    l = n(401393),
+    a = n(442837),
+    s = n(481060),
     c = n(709706),
     u = n(378441),
     d = n(358820),
-    f = n(388032),
-    _ = n(551766);
-function p() {
-    let e = (0, s.cj)([c.Z], () => c.Z.getOngoingDownloads()),
-        t = i.useRef({});
-    i.useEffect(() => {
-        0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e);
-    }, [e]);
-    let n = Object.values(t.current),
-        r = n.some((e) => {
-            let { downloadedBytes: t } = e;
-            return (null != t ? t : 0) > 0;
-        }),
-        o = (0, a.sumBy)(n, (e) => {
-            var t;
-            return null != (t = null == e ? void 0 : e.downloadedBytes) ? t : 0;
-        }),
-        l = (0, a.sumBy)(n, (e) => {
-            var t;
-            return null != (t = null == e ? void 0 : e.totalBytes) ? t : 0;
-        });
-    return {
-        hasActiveDownloads: r,
-        progress: 0 === l ? 0 : Math.floor((o / l) * 100),
-    };
-}
-function h() {
-    let { hasActiveDownloads: e, progress: t } = p(),
-        { activeVoice: n } = (0, u.o)(),
-        i = null != n,
-        a = e ? (i ? "voice-on" : "voice-off") : null;
-    return (0, l.Yzy)(
-        a,
+    p = n(388032),
+    m = n(551766);
+function f() {
+    let { hasActiveDownloads: e, progress: t } = (function () {
+            let e = (0, a.cj)([c.Z], () => c.Z.getOngoingDownloads()),
+                t = i.useRef({});
+            i.useEffect(() => {
+                0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e);
+            }, [e]);
+            let n = Object.values(t.current),
+                r = n.some((e) => {
+                    let { downloadedBytes: t } = e;
+                    return (null != t ? t : 0) > 0;
+                }),
+                l = (0, o.sumBy)(n, (e) => {
+                    var t;
+                    return null != (t = null == e ? void 0 : e.downloadedBytes) ? t : 0;
+                }),
+                s = (0, o.sumBy)(n, (e) => {
+                    var t;
+                    return null != (t = null == e ? void 0 : e.totalBytes) ? t : 0;
+                });
+            return {
+                hasActiveDownloads: r,
+                progress: 0 === s ? 0 : Math.floor((l / s) * 100),
+            };
+        })(),
+        { activeVoice: n } = (0, u.o)();
+    return (0, s.Yzy)(
+        e ? (null != n ? "voice-on" : "voice-off") : null,
         {
             from: {
                 opacity: 0,
@@ -58,31 +55,31 @@ function h() {
         "respect-motion-settings",
     )((e, n) =>
         null != n
-            ? (0, r.jsx)(o.animated.div, {
+            ? (0, r.jsx)(l.animated.div, {
                   style: e,
-                  className: _.floaterWrapper,
+                  className: m.floaterWrapper,
                   children: (0, r.jsxs)("div", {
-                      className: _.visibleFloater,
+                      className: m.visibleFloater,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: _.progressText,
+                              className: m.progressText,
                               children: [
-                                  (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: "text-sm/semibold",
                                       color: "text-primary",
-                                      children: f.intl.format(f.t["r+uZYW"], { progress: t }),
+                                      children: p.intl.format(p.t["r+uZYW"], { progress: t }),
                                   }),
-                                  (0, r.jsx)(l.Avr, {
-                                      text: f.intl.string(f.t["ETE/oK"]),
+                                  (0, r.jsx)(s.Avr, {
+                                      text: p.intl.string(p.t["ETE/oK"]),
                                       onClick: d.ge,
                                       variant: "always-white",
                                       textVariant: "text-sm/normal",
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(l.Exd, {
+                          (0, r.jsx)(s.Exd, {
                               percent: t,
-                              size: l.Exd.Sizes.XSMALL,
+                              size: s.Exd.Sizes.XSMALL,
                           }),
                       ],
                   }),

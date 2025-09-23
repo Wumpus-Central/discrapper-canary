@@ -1,9 +1,7 @@
 e.exports = {
     container: "container__85f5c",
-    leftPanel: "leftPanel__85f5c",
-    rightPanel: "rightPanel__85f5c",
-    inputSection: "inputSection__85f5c",
     section: "section__85f5c",
+    inputSection: "inputSection__85f5c",
     inputLabel: "inputLabel__85f5c",
     previewContainer: "previewContainer__85f5c",
     placeholder: "placeholder__85f5c",
