@@ -2,6 +2,7 @@ n.d(t, {
     $5: () => X,
     I8: () => Y,
     Kt: () => k,
+    Lj: () => C,
     RW: () => H,
     Y3: () => q,
     Yt: () => R,
@@ -16,6 +17,7 @@ n.d(t, {
     qF: () => W,
     zd: () => F,
 }),
+    n(388685),
     n(953529);
 var r = n(442837),
     i = n(480916),
@@ -94,7 +96,7 @@ function T(e) {
 }
 let S = new Date("06/16/2020"),
     A = [E.V_K.AGE_RESTRICTED, E.V_K.EXPLICIT],
-    C = [g.L0.NSFW_SERVER, g.L0.NSFW_SERVER_INVITE, g.L0.NSFW_SERVER_INVITE_EMBED];
+    C = new Set([g.L0.NSFW_SERVER, g.L0.NSFW_SERVER_INVITE, g.L0.NSFW_SERVER_INVITE_EMBED]);
 function N() {
     let e = _.default.getCurrentUser();
     return null != e && h.default.extractTimestamp(e.id) > S.getTime() && null == e.nsfwAllowed;
@@ -251,7 +253,7 @@ let B = () => {
 function Y(e, t, n) {
     if (P(e)) return void (0, m.mN)(g.L0.ACCESS_LARGE_GUILD_UNDERAGE);
     if (Z(e)) {
-        let e = null != n && C.includes(n) ? n : g.L0.NSFW_SERVER;
+        let e = null != n && C.has(n) ? n : g.L0.NSFW_SERVER;
         (0, m.mN)(e);
         return;
     }
@@ -291,7 +293,7 @@ function q(e) {
             location: "age-gate-utils",
         }) &&
             (0, c.Y2)(h) &&
-            a) ||
+            u) ||
             (L(h) && a))
     );
 }
@@ -311,7 +313,7 @@ function X(e) {
         h = (0, r.e7)([f.Z], () => f.Z.getGuild(null == e ? void 0 : e.guild_id)),
         m = u && t,
         g = !(n && !i) || m;
-    return null != e && ((!!e.isNSFW() && !!g) || (null != h && ((!!(p && (0, c.Y2)(h)) && !!t) || (!!a && !!t))));
+    return null != e && ((!!e.isNSFW() && !!g) || (null != h && ((!!(p && (0, c.Y2)(h)) && !!g) || (!!a && !!t))));
 }
 function Q() {
     let e = _.default.getCurrentUser();

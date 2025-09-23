@@ -70,7 +70,7 @@ class b extends a.Z {
         let { source: t } = e;
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("1716"), n.e("83737")]).then(n.bind(n, 746882));
+                let { default: e } = await Promise.all([n.e("1716"), n.e("70699")]).then(n.bind(n, 746882));
                 return (n) => (0, r.jsx)(e, m({ source: t }, n));
             },
             {
@@ -93,7 +93,8 @@ class b extends a.Z {
     handleGuildUpdate(e) {
         let { guild: t } = e,
             n = u.Z.getGuildId();
-        if (null != n && t.id === n && t.nsfw_level === h.V_K.AGE_RESTRICTED) return void (0, d.I8)(t.id, null);
+        if (null != n && t.id === n && t.owner_configured_content_level === h.V_K.AGE_RESTRICTED)
+            return void (0, d.I8)(t.id, null);
     }
 }
 let _ = new b();
