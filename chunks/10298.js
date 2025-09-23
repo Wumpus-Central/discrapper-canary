@@ -1,11 +1,11 @@
 n.d(t, { N: () => s });
 var r = n(951288),
     i = n(481060),
-    a = n(526665),
-    o = n(812278);
+    a = n(438976),
+    o = n(306900);
 let s = (e) => {
     let { children: t, header: n, notice: s } = e,
-        l = (0, a.wy)("LegacySettingsPage");
+        l = (0, a.Z)();
     return (0, r.jsxs)("div", {
         className: o.settingsPage,
         children: [

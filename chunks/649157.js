@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(442837),
@@ -7,12 +7,13 @@ var r = n(951288),
     l = n(153867),
     c = n(706454),
     u = n(313789),
-    d = n(518596),
-    f = n(981631),
-    _ = n(388032),
-    p = n(558731),
-    h = n(444675);
-function m(e, t, n) {
+    d = n(273313),
+    f = n(518596),
+    _ = n(981631),
+    p = n(388032),
+    h = n(896643),
+    m = n(444675);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,47 +54,47 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y() {
+function O() {
     let e = (0, a.e7)([c.default], () => c.default.locale),
-        [t, m] = i.useState(e),
-        [E] = i.useState(() =>
-            (0, _.getAvailableLocales)().map((e) => {
+        [t, g] = i.useState(e),
+        [b] = i.useState(() =>
+            (0, p.getAvailableLocales)().map((e) => {
                 let t;
                 try {
                     t = n(621287)("./".concat(e.value, ".png"));
                 } catch (e) {
                     t = n(1474);
                 }
-                return b(g({}, e), {
+                return y(E({}, e), {
                     name: (0, r.jsxs)("div", {
-                        className: p.option,
+                        className: h.option,
                         children: [
                             (0, r.jsx)("span", {
-                                className: p.localeName,
+                                className: h.localeName,
                                 children: e.name,
                             }),
                             (0, r.jsx)("span", {
-                                className: p.localizedName,
-                                children: _.intl.string(e.localizedName),
+                                className: h.localizedName,
+                                children: p.intl.string(e.localizedName),
                             }),
                             (0, r.jsx)("div", {
-                                className: p.flag,
+                                className: h.flag,
                                 "aria-hidden": !0,
                                 children: (0, r.jsx)("img", {
                                     alt: "",
                                     src: t,
-                                    className: p.flagImage,
+                                    className: h.flagImage,
                                 }),
                             }),
                         ],
@@ -101,23 +102,22 @@ function y() {
                 });
             }),
         ),
-        y = i.useCallback((e) => {
+        O = i.useCallback((e) => {
             let { value: t } = e;
-            m(t),
-                h.nextTick(() => {
+            g(t),
+                m.nextTick(() => {
                     l.ZP.updateLocale(t),
-                        (0, s.Mr3)(d.USER_SETTINGS_MODAL_KEY) &&
-                            (0, d.openUserSettings)(u.n.LOCALE_PANEL, { section: f.oAB.LOCALE });
+                        (0, s.Mr3)(f.USER_SETTINGS_MODAL_KEY) &&
+                            (0, f.openUserSettings)(u.n.LOCALE_PANEL, { section: _.oAB.LOCALE });
                 });
         }, []);
-    return (0, r.jsx)(s.hjN, {
-        tag: s.RB0.H1,
-        title: _.intl.string(_.t.IHMsPj),
+    return (0, r.jsx)(d.Z, {
+        title: p.intl.string(p.t.IHMsPj),
         children: (0, r.jsx)(s.hjN, {
             children: (0, r.jsx)(o.Gu, {
-                label: _.intl.string(_.t["mx+sp6"]),
-                onChange: y,
-                options: E,
+                label: p.intl.string(p.t["mx+sp6"]),
+                onChange: O,
+                options: b,
                 value: t,
             }),
         }),

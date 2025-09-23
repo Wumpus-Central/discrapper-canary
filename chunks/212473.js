@@ -1,18 +1,19 @@
-n.d(t, { Z: () => c });
-var i = n(657707),
-    r = n(574755),
-    l = n(509613),
-    o = n(869235),
+n.d(t, { Z: () => d });
+var r = n(951288),
+    i = n(657707),
+    l = n(574755),
+    o = n(509613),
+    s = n(313789),
     a = n(726985),
-    s = n(388032);
-let u = (0, l.x1)(o.t.CLIPS_PANE, {
-        useTitle: () => s.intl.string(s.t.z2jK6e),
+    u = n(388032);
+let c = (0, o.x1)(s.n.CLIPS_PANE, {
+        useTitle: () => u.intl.string(u.t.z2jK6e),
         getLayout: () => [],
-        render: r.Z,
+        render: () => (0, r.jsx)(l.Z, { showHeader: !1 }),
     }),
-    c = (0, l.wf)(o.t.CLIPS_PANEL, {
-        useTitle: () => s.intl.string(s.t.z2jK6e),
+    d = (0, o.wf)(s.n.CLIPS_PANEL, {
+        useTitle: () => u.intl.string(u.t.z2jK6e),
         icon: i.AlX,
-        getLayout: () => [u],
+        getLayout: () => [c],
         legacySearchKey: a.s6.CLIPS,
     });

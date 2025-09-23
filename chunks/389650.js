@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(953529), n(388685), n(539854);
+n.d(t, { Z: () => K }), n(953529), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -28,13 +28,14 @@ var r = n(951288),
     R = n(358085),
     P = n(13140),
     w = n(659947),
-    D = n(981631),
-    x = n(295907),
-    L = n(388032),
-    j = n(958047),
-    M = n(504401),
-    k = n(10198);
-function U(e, t, n) {
+    D = n(273313),
+    x = n(981631),
+    L = n(295907),
+    j = n(388032),
+    M = n(958047),
+    k = n(504401),
+    U = n(10198);
+function G(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +48,7 @@ function U(e, t, n) {
         e
     );
 }
-function G(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,12 +59,12 @@ function G(e) {
                 }),
             )),
             r.forEach(function (t) {
-                U(e, t, n[t]);
+                G(e, t, n[t]);
             });
     }
     return e;
 }
-function B(e, t) {
+function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,47 +76,47 @@ function B(e, t) {
     }
     return n;
 }
-function Z(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : Z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function F(e) {
+function V(e) {
     let { children: t } = e;
     return t([g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.DND, g.Q2.CHAT, g.Q2.VOICE_AND_VIDEO, g.Q2.MISCELLANEOUS]);
 }
-let V = l()((0, g.Rv)())
-    .filter((e) => e.description !== L.intl.string(L.t.HnNtEB))
+let H = l()((0, g.Rv)())
+    .filter((e) => e.description !== j.intl.string(j.t.HnNtEB))
     .groupBy((e) => e.group)
     .value();
-class H extends i.PureComponent {
+class Y extends i.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
             t = P.BB(e.shortcut);
         return E.Z.hasBind(t)
             ? (0, r.jsx)(f.R94, {
-                  className: j.keybindMessage,
+                  className: M.keybindMessage,
                   type: f.geA.DESCRIPTION,
                   style: { color: u.Z.unsafe_rawColors.RED_400.css },
-                  children: L.intl.string(L.t["7lQlw8"]),
+                  children: j.intl.string(j.t["7lQlw8"]),
               })
-            : x.Sp.has(t)
+            : L.Sp.has(t)
               ? (0, r.jsx)(f.R94, {
-                    className: j.keybindMessage,
+                    className: M.keybindMessage,
                     type: f.geA.DESCRIPTION,
                     style: { color: u.Z.unsafe_rawColors.RED_400.css },
-                    children: L.intl.format(L.t.MOIaNT, {
-                        keyboardNavArticle: N.Z.getArticleURL(D.BhN.KEYBOARD_NAVIGATION),
+                    children: j.intl.format(j.t.MOIaNT, {
+                        keyboardNavArticle: N.Z.getArticleURL(x.BhN.KEYBOARD_NAVIGATION),
                     }),
                 })
               : (0, r.jsx)(f.R94, {
-                    className: j.keybindMessage,
+                    className: M.keybindMessage,
                     type: f.geA.DESCRIPTION,
                     children: this.props.keybindDescriptions[e.action],
                 });
@@ -124,22 +125,22 @@ class H extends i.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, r.jsxs)(y.Z, {
             direction: y.Z.Direction.VERTICAL,
-            className: o()(j.keybindGroup, M.card),
+            className: o()(M.keybindGroup, k.card),
             children: [
                 !e &&
                     (0, r.jsx)(p.Z, {
-                        "aria-label": L.intl.string(L.t.qEHmmJ),
-                        className: j.removeKeybind,
+                        "aria-label": j.intl.string(j.t.qEHmmJ),
+                        className: M.removeKeybind,
                         onClick: this.handleDeleteKeybind,
                     }),
                 (0, r.jsxs)(y.Z, {
-                    className: k.marginBottom8,
+                    className: U.marginBottom8,
                     children: [
                         (0, r.jsx)(y.Z.Child, {
                             basis: "45%",
                             children: (0, r.jsx)(f.xJW, {
-                                title: L.intl.string(L.t.UUpADw),
-                                className: j.item,
+                                title: j.intl.string(j.t.UUpADw),
+                                className: M.item,
                                 children: (0, r.jsx)(f.q4e, {
                                     value: this.props.keybind.action,
                                     options: this.props.keybindActionTypes,
@@ -151,8 +152,8 @@ class H extends i.PureComponent {
                         (0, r.jsx)(y.Z.Child, {
                             basis: "45%",
                             children: (0, r.jsx)(f.xJW, {
-                                title: L.intl.string(L.t["1La4tL"]),
-                                className: j.item,
+                                title: j.intl.string(j.t["1La4tL"]),
+                                className: M.item,
                                 children: (0, r.jsx)(h.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange,
@@ -163,13 +164,13 @@ class H extends i.PureComponent {
                             grow: 0,
                             shrink: 0,
                             children: (0, r.jsx)("div", {
-                                className: j.switch,
+                                className: M.switch,
                                 children: (0, r.jsx)(f.ua7, {
-                                    text: L.intl.string(L.t.uCD7qK),
+                                    text: j.intl.string(j.t.uCD7qK),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             "div",
-                                            Z(G({}, e), {
+                                            F(B({}, e), {
                                                 children: (0, r.jsx)(d.T2, {
                                                     checked: t,
                                                     onChange: this.handleEnableDisable,
@@ -188,26 +189,26 @@ class H extends i.PureComponent {
     }
     renderExtraSettings() {
         let { action: e } = this.props.keybind;
-        return e === D.kg4.SWITCH_TO_VOICE_CHANNEL ? (0, r.jsx)(w.Z, { keybind: this.props.keybind }) : void 0;
+        return e === x.kg4.SWITCH_TO_VOICE_CHANNEL ? (0, r.jsx)(w.Z, { keybind: this.props.keybind }) : void 0;
     }
     constructor(...e) {
         super(...e),
-            U(this, "handleActionChanged", (e) => {
-                _.Z.setKeybind(Z(G({}, this.props.keybind), { action: e }));
+            G(this, "handleActionChanged", (e) => {
+                _.Z.setKeybind(F(B({}, this.props.keybind), { action: e }));
             }),
-            U(this, "handleShortcutChange", (e) => {
-                _.Z.setKeybind(Z(G({}, this.props.keybind), { shortcut: e }));
+            G(this, "handleShortcutChange", (e) => {
+                _.Z.setKeybind(F(B({}, this.props.keybind), { shortcut: e }));
             }),
-            U(this, "handleDeleteKeybind", () => {
+            G(this, "handleDeleteKeybind", () => {
                 _.Z.deleteKeybind(this.props.keybind.id);
             }),
-            U(this, "handleEnableDisable", () => {
+            G(this, "handleEnableDisable", () => {
                 let { keybind: e } = this.props;
-                _.Z.setKeybind(Z(G({}, this.props.keybind), { enabled: !e.enabled }));
+                _.Z.setKeybind(F(B({}, this.props.keybind), { enabled: !e.enabled }));
             });
     }
 }
-class Y extends i.PureComponent {
+class W extends i.PureComponent {
     componentDidMount() {
         _.Z.enableAll(!1);
     }
@@ -219,101 +220,101 @@ class Y extends i.PureComponent {
             i = v.Z.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind
                 ? [
                       {
-                          value: D.kg4.VAD_PRIORITY,
-                          label: L.intl.string(L.t["49d6NT"]),
+                          value: x.kg4.VAD_PRIORITY,
+                          label: j.intl.string(j.t["49d6NT"]),
                       },
                   ]
                 : [],
             a = [
                 {
-                    value: D.kg4.UNASSIGNED,
-                    label: L.intl.string(L.t["0Uh57+"]),
+                    value: x.kg4.UNASSIGNED,
+                    label: j.intl.string(j.t["0Uh57+"]),
                 },
                 {
-                    value: D.kg4.PUSH_TO_TALK,
-                    label: L.intl.string(L.t.Y5lgTE),
+                    value: x.kg4.PUSH_TO_TALK,
+                    label: j.intl.string(j.t.Y5lgTE),
                 },
                 {
-                    value: D.kg4.PUSH_TO_TALK_PRIORITY,
-                    label: L.intl.string(L.t.DkSwJy),
+                    value: x.kg4.PUSH_TO_TALK_PRIORITY,
+                    label: j.intl.string(j.t.DkSwJy),
                 },
                 {
-                    value: D.kg4.PUSH_TO_MUTE,
-                    label: L.intl.string(L.t.hSCRqa),
+                    value: x.kg4.PUSH_TO_MUTE,
+                    label: j.intl.string(j.t.hSCRqa),
                 },
                 ...i,
                 {
-                    value: D.kg4.TOGGLE_MUTE,
-                    label: L.intl.string(L.t.PlkYKC),
+                    value: x.kg4.TOGGLE_MUTE,
+                    label: j.intl.string(j.t.PlkYKC),
                 },
                 {
-                    value: D.kg4.TOGGLE_DEAFEN,
-                    label: L.intl.string(L.t.NvGq1N),
+                    value: x.kg4.TOGGLE_DEAFEN,
+                    label: j.intl.string(j.t.NvGq1N),
                 },
                 {
-                    value: D.kg4.TOGGLE_VOICE_MODE,
-                    label: L.intl.string(L.t.Wa5H9f),
+                    value: x.kg4.TOGGLE_VOICE_MODE,
+                    label: j.intl.string(j.t.Wa5H9f),
                 },
                 {
-                    value: D.kg4.TOGGLE_STREAMER_MODE,
-                    label: L.intl.string(L.t.BK0NcX),
+                    value: x.kg4.TOGGLE_STREAMER_MODE,
+                    label: j.intl.string(j.t.BK0NcX),
                 },
             ];
         return (
             (0, I.l)() &&
                 a.push({
-                    value: D.kg4.TOGGLE_CAMERA,
-                    label: L.intl.string(L.t.hf8JVV),
+                    value: x.kg4.TOGGLE_CAMERA,
+                    label: j.intl.string(j.t.hf8JVV),
                 }),
             e &&
                 (a.push({
-                    value: D.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
-                    label: L.intl.string(L.t.VsAZcH),
+                    value: x.kg4.TOGGLE_OVERLAY_INPUT_LOCK,
+                    label: j.intl.string(j.t.VsAZcH),
                 }),
                 a.push({
-                    value: D.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
-                    label: L.intl.string(L.t.hurHWl),
+                    value: x.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET,
+                    label: j.intl.string(j.t.hurHWl),
                 })),
             t &&
                 ((0, R.isWindows)() || A.Z.getUseSystemScreensharePicker()) &&
                 a.push({
-                    value: D.kg4.TOGGLE_GO_LIVE_STREAMING,
-                    label: L.intl.string(L.t.ybdjJC),
+                    value: x.kg4.TOGGLE_GO_LIVE_STREAMING,
+                    label: j.intl.string(j.t.ybdjJC),
                 }),
             (0, R.isDesktop)() &&
                 (a.push(
                     {
-                        value: D.kg4.NAVIGATE_BACK,
-                        label: L.intl.string(L.t.gRSaOT),
+                        value: x.kg4.NAVIGATE_BACK,
+                        label: j.intl.string(j.t.gRSaOT),
                     },
                     {
-                        value: D.kg4.NAVIGATE_FORWARD,
-                        label: L.intl.string(L.t.zOXpjY),
+                        value: x.kg4.NAVIGATE_FORWARD,
+                        label: j.intl.string(j.t.zOXpjY),
                     },
                     {
-                        value: D.kg4.SWITCH_TO_VOICE_CHANNEL,
-                        label: L.intl.string(L.t.ty7Lx8),
+                        value: x.kg4.SWITCH_TO_VOICE_CHANNEL,
+                        label: j.intl.string(j.t.ty7Lx8),
                     },
                     {
-                        value: D.kg4.DISCONNECT_FROM_VOICE_CHANNEL,
-                        label: L.intl.string(L.t.CV7mT0),
+                        value: x.kg4.DISCONNECT_FROM_VOICE_CHANNEL,
+                        label: j.intl.string(j.t.CV7mT0),
                     },
                 ),
                 n &&
                     a.push(
                         {
-                            value: D.kg4.SOUNDBOARD,
-                            label: L.intl.string(L.t.yPH4xs),
+                            value: x.kg4.SOUNDBOARD,
+                            label: j.intl.string(j.t.yPH4xs),
                         },
                         {
-                            value: D.kg4.SOUNDBOARD_HOLD,
-                            label: L.intl.string(L.t["1xFbPz"]),
+                            value: x.kg4.SOUNDBOARD_HOLD,
+                            label: j.intl.string(j.t["1xFbPz"]),
                         },
                     ),
                 r &&
                     a.push({
-                        value: D.kg4.SAVE_CLIP,
-                        label: L.intl.string(L.t.U4URzM),
+                        value: x.kg4.SAVE_CLIP,
+                        label: j.intl.string(j.t.U4URzM),
                     })),
             a
         );
@@ -321,27 +322,27 @@ class Y extends i.PureComponent {
     get keybindDescriptions() {
         let { overlaySupported: e, canGoLive: t, enableClips: n } = this.props,
             r = {
-                [D.kg4.UNASSIGNED]: L.intl.string(L.t.rvlNLi),
-                [D.kg4.PUSH_TO_MUTE]: L.intl.string(L.t.xtESio),
-                [D.kg4.PUSH_TO_TALK]: L.intl.string(L.t.wTcBS0),
-                [D.kg4.PUSH_TO_TALK_PRIORITY]: L.intl.string(L.t.FhHvWF),
-                [D.kg4.TOGGLE_MUTE]: L.intl.string(L.t.X2fbUl),
-                [D.kg4.TOGGLE_DEAFEN]: L.intl.string(L.t.MjREZW),
-                [D.kg4.TOGGLE_VOICE_MODE]: L.intl.string(L.t.snm5YW),
-                [D.kg4.TOGGLE_STREAMER_MODE]: L.intl.string(L.t.YszLLy),
+                [x.kg4.UNASSIGNED]: j.intl.string(j.t.rvlNLi),
+                [x.kg4.PUSH_TO_MUTE]: j.intl.string(j.t.xtESio),
+                [x.kg4.PUSH_TO_TALK]: j.intl.string(j.t.wTcBS0),
+                [x.kg4.PUSH_TO_TALK_PRIORITY]: j.intl.string(j.t.FhHvWF),
+                [x.kg4.TOGGLE_MUTE]: j.intl.string(j.t.X2fbUl),
+                [x.kg4.TOGGLE_DEAFEN]: j.intl.string(j.t.MjREZW),
+                [x.kg4.TOGGLE_VOICE_MODE]: j.intl.string(j.t.snm5YW),
+                [x.kg4.TOGGLE_STREAMER_MODE]: j.intl.string(j.t.YszLLy),
             };
         return (
             v.Z.getCurrentConfig({ location: "UserSettingsKeybinds" }, { autoTrackExposure: !1 }).separateKeybind &&
-                (r[D.kg4.VAD_PRIORITY] = L.intl.string(L.t.rSe8IS)),
-            (0, I.l)() && (r[D.kg4.TOGGLE_CAMERA] = L.intl.string(L.t.v1JBtL)),
-            e && (r[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = L.intl.string(L.t.IoP5vb)),
-            t && (0, R.isWindows)() && (r[D.kg4.TOGGLE_GO_LIVE_STREAMING] = L.intl.string(L.t.s4C239)),
+                (r[x.kg4.VAD_PRIORITY] = j.intl.string(j.t.rSe8IS)),
+            (0, I.l)() && (r[x.kg4.TOGGLE_CAMERA] = j.intl.string(j.t.v1JBtL)),
+            e && (r[x.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = j.intl.string(j.t.IoP5vb)),
+            t && (0, R.isWindows)() && (r[x.kg4.TOGGLE_GO_LIVE_STREAMING] = j.intl.string(j.t.s4C239)),
             (0, R.isDesktop)() &&
-                ((r[D.kg4.NAVIGATE_BACK] = L.intl.string(L.t.nKDlEh)),
-                (r[D.kg4.NAVIGATE_FORWARD] = L.intl.string(L.t.DK0FFh)),
-                (r[D.kg4.SOUNDBOARD] = (0, R.isWindows)() ? L.intl.string(L.t["5wJefH"]) : L.intl.string(L.t.gzjsSE)),
-                (r[D.kg4.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? L.intl.string(L.t.RRkZc3) : L.intl.string(L.t.laNlTk)),
-                n && (r[D.kg4.SAVE_CLIP] = L.intl.string(L.t.z3Wbam))),
+                ((r[x.kg4.NAVIGATE_BACK] = j.intl.string(j.t.nKDlEh)),
+                (r[x.kg4.NAVIGATE_FORWARD] = j.intl.string(j.t.DK0FFh)),
+                (r[x.kg4.SOUNDBOARD] = (0, R.isWindows)() ? j.intl.string(j.t["5wJefH"]) : j.intl.string(j.t.gzjsSE)),
+                (r[x.kg4.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? j.intl.string(j.t.RRkZc3) : j.intl.string(j.t.laNlTk)),
+                n && (r[x.kg4.SAVE_CLIP] = j.intl.string(j.t.z3Wbam))),
             r
         );
     }
@@ -352,7 +353,7 @@ class Y extends i.PureComponent {
                 {
                     children: [
                         (0, r.jsx)(
-                            H,
+                            Y,
                             {
                                 keybind: t,
                                 keybindDescriptions: this.keybindDescriptions,
@@ -372,7 +373,7 @@ class Y extends i.PureComponent {
     }
     renderKeybindWarning() {
         return (0, r.jsxs)("div", {
-            className: j.warning,
+            className: M.warning,
             children: [
                 (0, r.jsx)(f.d3s, {
                     size: "xs",
@@ -381,7 +382,7 @@ class Y extends i.PureComponent {
                 (0, r.jsx)(f.Text, {
                     variant: "text-sm/medium",
                     color: "text-secondary",
-                    children: L.intl.string(L.t.NoKjWF),
+                    children: j.intl.string(j.t.NoKjWF),
                 }),
             ],
         });
@@ -391,42 +392,41 @@ class Y extends i.PureComponent {
             t = l()(this.props.keybinds)
                 .reject(
                     (e) =>
-                        e.managed && ![D.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, D.kg4.SAVE_CLIP].includes(e.action),
+                        e.managed && ![x.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, x.kg4.SAVE_CLIP].includes(e.action),
                 )
-                .reject((t) => !e && t.action === D.kg4.SAVE_CLIP)
+                .reject((t) => !e && t.action === x.kg4.SAVE_CLIP)
                 .reject(
                     (e) =>
                         !this.props.allowSoundboard &&
-                        (e.action === D.kg4.SOUNDBOARD || e.action === D.kg4.SOUNDBOARD_HOLD),
+                        (e.action === x.kg4.SOUNDBOARD || e.action === x.kg4.SOUNDBOARD_HOLD),
                 )
                 .sortBy((e) => e.id)
                 .sortBy((e) => (!0 === e.managed ? -1 : 0))
                 .value();
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(f.hjN, {
-                    tag: f.RB0.H1,
-                    title: L.intl.string(L.t.T9DA2N),
+                (0, r.jsx)(D.Z, {
+                    title: j.intl.string(j.t.T9DA2N),
                     children: R.isPlatformEmbedded
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: j.ctaContainer,
+                                      className: M.ctaContainer,
                                       children: [
                                           this.renderKeybindWarning(),
                                           (0, r.jsx)("div", {
-                                              className: j.addButton,
+                                              className: M.addButton,
                                               children: (0, r.jsx)(f.zxk, {
                                                   size: "md",
                                                   onClick: this.handleAddKeybind,
-                                                  text: L.intl.string(L.t.zk6Xbm),
+                                                  text: j.intl.string(j.t.zk6Xbm),
                                                   variant: "primary",
                                               }),
                                           }),
                                       ],
                                   }),
                                   (0, r.jsx)(S.Z, {
-                                      className: j.systemServiceUpsell,
+                                      className: M.systemServiceUpsell,
                                       sourcePage: "keybinds",
                                   }),
                                   (0, r.jsx)(f.$i$, {}),
@@ -436,53 +436,53 @@ class Y extends i.PureComponent {
                           })
                         : (0, r.jsx)(f.Wn, {
                               messageType: f.QYI.INFO,
-                              className: j.browserNotice,
-                              children: L.intl.format(L.t.mPi3Fx, { downloadLink: D.EYA.DOWNLOAD }),
+                              className: M.browserNotice,
+                              children: j.intl.format(j.t.mPi3Fx, { downloadLink: x.EYA.DOWNLOAD }),
                           }),
                 }),
                 (0, r.jsx)(f.$i$, {}),
                 (0, r.jsxs)(f.hjN, {
                     tag: f.RB0.H1,
-                    title: L.intl.string(L.t.Lz5KHB),
-                    className: k.marginTop60,
+                    title: j.intl.string(j.t.Lz5KHB),
+                    className: U.marginTop60,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: j.defaultKeybind,
+                            className: M.defaultKeybind,
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     variant: "text-md/normal",
-                                    children: L.intl.string(L.t.sMWLBg),
+                                    children: j.intl.string(j.t.sMWLBg),
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: j.defaultKeybindShortcutGroup,
+                                    className: M.defaultKeybindShortcutGroup,
                                     children: (0, r.jsx)(f.M2$, { shortcut: m._.binds["0"] }),
                                 }),
                             ],
                         }),
                         (0, r.jsx)(f.$i$, {}),
-                        (0, r.jsx)(F, {
+                        (0, r.jsx)(V, {
                             children: (e) =>
                                 (0, r.jsx)(r.Fragment, {
                                     children: e.map((e, t) => {
                                         let n = (0, g.UD)(e),
                                             a = (0, g.U6)(e),
-                                            s = V[e];
+                                            s = H[e];
                                         return (0, r.jsxs)(
                                             "div",
                                             {
-                                                className: j.defaultKeybindGroup,
+                                                className: M.defaultKeybindGroup,
                                                 children: [
                                                     (0, r.jsx)(f.X6q, {
                                                         variant: "heading-deprecated-12/semibold",
-                                                        className: o()(j.defaultKeybindGroupHeader, {
-                                                            [j.defaultKeybindGroupWithDescription]: null != a,
+                                                        className: o()(M.defaultKeybindGroupHeader, {
+                                                            [M.defaultKeybindGroupWithDescription]: null != a,
                                                         }),
                                                         children: n,
                                                     }),
                                                     null != a &&
                                                         (0, r.jsx)(f.Text, {
                                                             color: "header-secondary",
-                                                            className: j.defaultKeybindGroupDescription,
+                                                            className: M.defaultKeybindGroupDescription,
                                                             variant: "text-sm/normal",
                                                             children: a,
                                                         }),
@@ -493,7 +493,7 @@ class Y extends i.PureComponent {
                                                             {
                                                                 children: [
                                                                     (0, r.jsxs)("div", {
-                                                                        className: j.defaultKeybind,
+                                                                        className: M.defaultKeybind,
                                                                         children: [
                                                                             (0, r.jsx)(f.Text, {
                                                                                 variant: "text-md/normal",
@@ -501,7 +501,7 @@ class Y extends i.PureComponent {
                                                                             }),
                                                                             (0, r.jsx)("div", {
                                                                                 className:
-                                                                                    j.defaultKeybindShortcutGroup,
+                                                                                    M.defaultKeybindShortcutGroup,
                                                                                 children: e.binds.map((e) =>
                                                                                     (0, r.jsx)(
                                                                                         f.M2$,
@@ -532,17 +532,17 @@ class Y extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            U(this, "handleAddKeybind", () => {
+            G(this, "handleAddKeybind", () => {
                 _.Z.addKeybind();
             });
     }
 }
-function W() {
+function K() {
     let e = (0, c.e7)([C.ZP], () => C.ZP.getState()),
         t = (0, c.e7)([A.Z], () => (0, O.Z)(A.Z)),
         n = (0, c.e7)([T.ZP], () => T.ZP.isSupported()),
         i = (0, b.Go)();
-    return (0, r.jsx)(Y, {
+    return (0, r.jsx)(W, {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,

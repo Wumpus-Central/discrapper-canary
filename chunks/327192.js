@@ -1,4 +1,4 @@
-n.d(t, { Z: () => $ }), n(388685), n(539854), n(457542);
+n.d(t, { Z: () => ee }), n(388685), n(539854), n(457542);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -31,15 +31,16 @@ var r = n(951288),
     D = n(706454),
     x = n(349728),
     L = n(494620),
-    j = n(205266),
-    M = n(216153),
-    k = n(981631),
-    U = n(856651),
-    G = n(921944),
-    B = n(388032),
-    Z = n(465631),
-    F = n(10198);
-function V(e, t, n) {
+    j = n(273313),
+    M = n(205266),
+    k = n(216153),
+    U = n(981631),
+    G = n(856651),
+    B = n(921944),
+    Z = n(388032),
+    F = n(465631),
+    V = n(10198);
+function H(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +53,7 @@ function V(e, t, n) {
         e
     );
 }
-function H(e) {
+function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,12 +64,12 @@ function H(e) {
                 }),
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                H(e, t, n[t]);
             });
     }
     return e;
 }
-function Y(e, t) {
+function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,18 +81,18 @@ function Y(e, t) {
     }
     return n;
 }
-function W(e, t) {
+function K(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : W(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let K = (e) => {
+let z = (e) => {
     var t, n;
     let i,
         { integration: a } = e,
@@ -104,7 +105,7 @@ let K = (e) => {
             () => ({
                 isJoining: A.Z.isJoining(a.id),
                 joinErrorMessage:
-                    "" === A.Z.joinErrorMessage(a.id) ? B.intl.string(B.t.j2d6Ki) : A.Z.joinErrorMessage(a.id),
+                    "" === A.Z.joinErrorMessage(a.id) ? Z.intl.string(Z.t.j2d6Ki) : A.Z.joinErrorMessage(a.id),
                 showJoinErrorMessage: void 0 !== A.Z.joinErrorMessage(a.id),
             }),
             [a.id],
@@ -119,21 +120,21 @@ let K = (e) => {
                 onClick: u,
                 disabled: o,
                 variant: "primary",
-                text: o ? B.intl.string(B.t.RXvQQk) : B.intl.string(B.t.XpeFYm),
+                text: o ? Z.intl.string(Z.t.RXvQQk) : Z.intl.string(Z.t.XpeFYm),
             })),
         (0, r.jsxs)("div", {
-            className: Z.integrationWrapper,
+            className: F.integrationWrapper,
             children: [
                 (0, r.jsxs)("div", {
-                    className: Z.integration,
+                    className: F.integration,
                     children: [
                         (0, r.jsx)(T.Z, {
                             size: T.Z.Sizes.SMALL,
                             guild: a.guild,
-                            className: Z.guildIcon,
+                            className: F.guildIcon,
                         }),
                         (0, r.jsxs)("div", {
-                            className: Z.integrationInner,
+                            className: F.integrationInner,
                             children: [
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-md/semibold",
@@ -160,14 +161,14 @@ let K = (e) => {
                     (0, r.jsx)(d.Text, {
                         variant: "text-xs/normal",
                         color: "text-danger",
-                        className: Z.integrationError,
+                        className: F.integrationError,
                         children: l,
                     }),
             ],
         })
     );
 };
-function z(e) {
+function q(e) {
     let { onDisconnect: t, account: n, theme: a, locale: o } = e,
         [s, l] = i.useState(n.friendSync),
         [f, p] = i.useState(n.visibility),
@@ -176,32 +177,32 @@ function z(e) {
         [A, C] = i.useState(null),
         [N, R] = i.useState(null),
         [P, D] = i.useState(!1),
-        [G, F] = i.useState([]),
+        [j, B] = i.useState([]),
         V = (0, b.rR)(n.type),
-        Y = E.Z.get(V);
+        H = E.Z.get(V);
     i.useEffect(() => {
         l(n.friendSync), p(n.visibility), g(n.metadataVisibility), T(n.showActivity);
     }, [n]);
-    let z = {
+    let W = {
             inProgressVisibility: A,
             inProgressMetadataVisibility: N,
         },
-        q = i.useRef(z);
+        q = i.useRef(W);
     function X(e) {
         var t;
         let n = E.Z.get(e.type),
             i = E.Z.get(V),
-            o = "1" === (null != (t = e.metadata) ? t : {})[U.PC.TWITTER_VERIFIED],
+            o = "1" === (null != (t = e.metadata) ? t : {})[G.PC.TWITTER_VERIFIED],
             s = null;
         return (
-            n.type === k.ABu.TWITTER &&
+            n.type === U.ABu.TWITTER &&
                 o &&
                 (s = (0, r.jsx)(d.ua7, {
-                    text: B.intl.string(B.t.Jebrw8),
+                    text: Z.intl.string(Z.t.Jebrw8),
                     children: (e) =>
                         (0, r.jsx)(
                             S.Z,
-                            W(H({}, e), {
+                            K(Y({}, e), {
                                 color: c.Z.unsafe_rawColors.TWITTER.css,
                                 children: (0, r.jsx)(d.kmB, {
                                     size: "xs",
@@ -211,27 +212,27 @@ function z(e) {
                         ),
                 })),
             (0, r.jsxs)("div", {
-                className: Z.connectionHeader,
+                className: F.connectionHeader,
                 children: [
                     (0, r.jsx)("img", {
                         alt: i.name,
-                        className: Z.connectionIcon,
+                        className: F.connectionIcon,
                         src: (0, u.wj)(a) ? i.icon.darkSVG : i.icon.lightSVG,
                     }),
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsxs)("div", {
-                                className: Z.connectionAccountLabelContainer,
+                                className: F.connectionAccountLabelContainer,
                                 children: [
                                     (0, r.jsx)(d.Text, {
                                         color: "header-primary",
                                         variant: "text-md/semibold",
-                                        className: Z.connectionAccountValue,
+                                        className: F.connectionAccountValue,
                                         children: e.name,
                                     }),
                                     null != s &&
                                         (0, r.jsx)("div", {
-                                            className: Z.connectionAccountLabelVerified,
+                                            className: F.connectionAccountLabelVerified,
                                             children: s,
                                         }),
                                 ],
@@ -239,15 +240,15 @@ function z(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 color: "header-secondary",
-                                className: Z.connectionAccountLabel,
+                                className: F.connectionAccountLabel,
                                 children: i.name,
                             }),
                         ],
                     }),
                     (0, r.jsx)(d.P3F, {
-                        className: Z.connectionDelete,
+                        className: F.connectionDelete,
                         onClick: er,
-                        "aria-label": B.intl.string(B.t.ppppRE),
+                        "aria-label": Z.intl.string(Z.t.ppppRE),
                         focusProps: {
                             offset: {
                                 top: -4,
@@ -267,15 +268,15 @@ function z(e) {
     function Q(e) {
         return e.twoWayLink
             ? null
-            : e.type === k.ABu.XBOX
+            : e.type === U.ABu.XBOX
               ? (0, r.jsx)("div", {
-                    className: Z.upsellWrapper,
-                    children: (0, r.jsx)(M.Y, {}),
+                    className: F.upsellWrapper,
+                    children: (0, r.jsx)(k.Y, {}),
                 })
-              : e.type === k.ABu.PLAYSTATION
+              : e.type === U.ABu.PLAYSTATION
                 ? (0, r.jsx)("div", {
-                      className: Z.upsellWrapper,
-                      children: (0, r.jsx)(j.t, {}),
+                      className: F.upsellWrapper,
+                      children: (0, r.jsx)(M.t, {}),
                   })
                 : null;
     }
@@ -283,27 +284,27 @@ function z(e) {
         var t;
         let n = null != (t = e.metadata) ? t : {},
             i = null,
-            a = (0, y.FI)(n[U.PC.CREATED_AT], o);
+            a = (0, y.FI)(n[G.PC.CREATED_AT], o);
         switch (e.type) {
-            case k.ABu.REDDIT:
-                i = (0, v.oP)(n, Z.metadataItem);
+            case U.ABu.REDDIT:
+                i = (0, v.oP)(n, F.metadataItem);
                 break;
-            case k.ABu.STEAM:
-                i = (0, v.Dq)(n, Z.metadataItem);
+            case U.ABu.STEAM:
+                i = (0, v.Dq)(n, F.metadataItem);
                 break;
-            case k.ABu.BLUESKY:
-            case k.ABu.TWITTER:
-            case k.ABu.MASTODON:
-                i = (0, v.rJ)(n, Z.metadataItem);
+            case U.ABu.BLUESKY:
+            case U.ABu.TWITTER:
+            case U.ABu.MASTODON:
+                i = (0, v.rJ)(n, F.metadataItem);
                 break;
-            case k.ABu.EBAY:
-                i = (0, v.ul)(n, Z.metadataItem);
+            case U.ABu.EBAY:
+                i = (0, v.ul)(n, F.metadataItem);
                 break;
-            case k.ABu.PAYPAL:
-                i = (0, v.li)(n, Z.metadataItem);
+            case U.ABu.PAYPAL:
+                i = (0, v.li)(n, F.metadataItem);
                 break;
-            case k.ABu.TIKTOK:
-                i = (0, v.hf)(n, Z.metadataItem);
+            case U.ABu.TIKTOK:
+                i = (0, v.hf)(n, F.metadataItem);
         }
         null !== a &&
             (null == i && (i = []),
@@ -314,14 +315,14 @@ function z(e) {
                         {
                             variant: "text-xs/normal",
                             color: "interactive-active",
-                            className: Z.connectedAccountVanityMetadataCreatedAt,
-                            children: B.intl.format(B.t["9rfonp"], { date: a }),
+                            className: F.connectedAccountVanityMetadataCreatedAt,
+                            children: Z.intl.format(Z.t["9rfonp"], { date: a }),
                         },
                         "member-since",
                     ),
                 ));
-        let s = G.includes(e.id),
-            l = B.intl.string(B.t.wzzjk5);
+        let s = j.includes(e.id),
+            l = Z.intl.string(Z.t.wzzjk5);
         if (null == i || 0 === i.length)
             if (!0 !== E.Z.get(e.type).hasMetadata) return null;
             else
@@ -329,8 +330,8 @@ function z(e) {
                     (0, r.jsx)(
                         d.IGR,
                         {
-                            className: Z.connectionMetadataUpsellTag,
-                            text: B.intl.string(B.t.y2b7CA),
+                            className: F.connectionMetadataUpsellTag,
+                            text: Z.intl.string(Z.t.y2b7CA),
                         },
                         "badge",
                     ),
@@ -338,36 +339,36 @@ function z(e) {
                         d.Text,
                         {
                             variant: "text-xs/normal",
-                            className: Z.connectionMetadataUpsellDescription,
-                            children: B.intl.format(B.t.Up2ni4, {
-                                helpdeskUrl: w.Z.getArticleURL(k.BhN.CONNECTION_DETAILS),
+                            className: F.connectionMetadataUpsellDescription,
+                            children: Z.intl.format(Z.t.Up2ni4, {
+                                helpdeskUrl: w.Z.getArticleURL(U.BhN.CONNECTION_DETAILS),
                             }),
                         },
                         "label",
                     ),
                 ]),
-                    (l = B.intl.string(B.t["LVh3//"]));
+                    (l = Z.intl.string(Z.t["LVh3//"]));
         return (
-            s && (l = B.intl.string(B.t.i4jeWV)),
+            s && (l = Z.intl.string(Z.t.i4jeWV)),
             i.push(
                 (0, r.jsx)(
                     "div",
                     {
-                        className: Z.metadataRefreshButton,
+                        className: F.metadataRefreshButton,
                         children: (0, r.jsx)(d.zxk, {
                             text: l,
                             variant: "primary",
                             size: "sm",
                             loading: P,
                             disabled: s,
-                            "aria-label": B.intl.string(B.t.sCkLYG),
+                            "aria-label": Z.intl.string(Z.t.sCkLYG),
                             onClick: s
                                 ? void 0
                                 : () => {
                                       D(!0),
                                           _.Z.refresh(e.type, e.id).finally(() => {
                                               setTimeout(() => {
-                                                  G.push(e.id), F(G), D(!1);
+                                                  j.push(e.id), B(j), D(!1);
                                               }, 2000);
                                           });
                                   },
@@ -377,7 +378,7 @@ function z(e) {
                 ),
             ),
             (0, r.jsx)("div", {
-                className: Z.metadataContainer,
+                className: F.metadataContainer,
                 children: i,
             })
         );
@@ -386,53 +387,53 @@ function z(e) {
         var t;
         let i, a, o;
         return (
-            k.BFP.has(n.type) &&
+            U.BFP.has(n.type) &&
                 (i = (0, r.jsx)(d.j7V, {
-                    className: Z.connectionOptionSwitch,
+                    className: F.connectionOptionSwitch,
                     hideBorder: !0,
                     value: s,
                     onChange: eo,
                     children: (0, r.jsx)(d.Text, {
                         variant: "text-sm/semibold",
-                        children: B.intl.string(B.t["+KCMSk"]),
+                        children: Z.intl.string(Z.t["+KCMSk"]),
                     }),
                 })),
-            k.vbS.has(n.type) &&
+            U.vbS.has(n.type) &&
                 (a = (0, r.jsx)(d.j7V, {
-                    className: Z.connectionOptionSwitch,
+                    className: F.connectionOptionSwitch,
                     hideBorder: !0,
                     value: I,
                     onChange: es,
                     children: (0, r.jsx)(d.Text, {
                         variant: "text-sm/semibold",
-                        children: B.intl.format(B.t["6u6J0t"], { platform: e.name }),
+                        children: Z.intl.format(Z.t["6u6J0t"], { platform: e.name }),
                     }),
                 })),
             (null == (t = E.Z.get(n.type)) ? void 0 : t.hasMetadata) === !0 &&
                 (o = (0, r.jsx)(d.j7V, {
-                    className: Z.connectionOptionSwitch,
+                    className: F.connectionOptionSwitch,
                     hideBorder: !0,
                     value: 1 === h,
                     onChange: ea,
                     disabled: 1 !== f || null == n.metadata,
                     children: (0, r.jsx)(d.Text, {
                         variant: "text-sm/semibold",
-                        children: B.intl.string(B.t.FYKGsL),
+                        children: Z.intl.string(Z.t.FYKGsL),
                     }),
                 })),
             (0, r.jsx)("div", {
-                className: Z.connectionOptionsWrapper,
+                className: F.connectionOptionsWrapper,
                 children: (0, r.jsxs)("div", {
-                    className: Z.connectionOptions,
+                    className: F.connectionOptions,
                     children: [
                         (0, r.jsx)(d.j7V, {
-                            className: Z.connectionOptionSwitch,
+                            className: F.connectionOptionSwitch,
                             hideBorder: !0,
                             value: 1 === f,
                             onChange: ei,
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
-                                children: B.intl.string(B.t.f7yOAQ),
+                                children: Z.intl.string(Z.t.f7yOAQ),
                             }),
                         }),
                         o,
@@ -446,24 +447,24 @@ function z(e) {
     function ee() {
         return n.revoked
             ? (0, r.jsx)("div", {
-                  className: Z.integrationsWrapper,
+                  className: F.integrationsWrapper,
                   children: (0, r.jsx)(d.R94, {
-                      className: Z.integrationRevoked,
-                      children: B.intl.format(B.t["6C4lgI"], { onReconnect: en }),
+                      className: F.integrationRevoked,
+                      children: Z.intl.format(Z.t["6C4lgI"], { onReconnect: en }),
                   }),
               })
             : n.integrations.length > 0
               ? (0, r.jsxs)("div", {
-                    className: Z.integrationsWrapper,
+                    className: F.integrationsWrapper,
                     children: [
                         (0, r.jsx)(d.vwX, {
                             children: (0, r.jsx)(d.Text, {
                                 variant: "text-xs/semibold",
-                                children: B.intl.string(B.t.fOe3fX),
+                                children: Z.intl.string(Z.t.fOe3fX),
                             }),
                         }),
                         (0, r.jsx)("div", {
-                            children: n.integrations.map((e) => (0, r.jsx)(K, { integration: e }, e.id)),
+                            children: n.integrations.map((e) => (0, r.jsx)(z, { integration: e }, e.id)),
                         }),
                     ],
                 })
@@ -471,7 +472,7 @@ function z(e) {
     }
     function et() {
         if (n.revoked || n.integrations.length > 0)
-            return (0, r.jsx)(d.$i$, { className: Z.connectedAccountSeparator });
+            return (0, r.jsx)(d.$i$, { className: F.connectedAccountSeparator });
     }
     function en() {
         (0, O.Z)({
@@ -481,26 +482,26 @@ function z(e) {
     }
     function er() {
         let e = E.Z.get(n.type),
-            i = B.intl.format(B.t.VgqIPj, { provider: e.name });
+            i = Z.intl.format(Z.t.VgqIPj, { provider: e.name });
         (0, x.Z)(n) &&
             (i = (0, r.jsxs)(r.Fragment, {
                 children: [
                     i,
                     (0, r.jsx)(L.Z, {
-                        className: Z.infoBox,
-                        children: B.intl.format(B.t.COW3Xl, { platformName: e.name }),
+                        className: F.infoBox,
+                        children: Z.intl.format(Z.t.COW3Xl, { platformName: e.name }),
                     }),
                 ],
             })),
             (0, d.h7j)((n) =>
                 (0, r.jsx)(
                     m.default,
-                    H(
+                    Y(
                         {
-                            title: B.intl.formatToPlainString(B.t.U5x12d, { name: e.name }),
+                            title: Z.intl.formatToPlainString(Z.t.U5x12d, { name: e.name }),
                             body: i,
-                            confirmText: B.intl.string(B.t.bsbMV1),
-                            cancelText: B.intl.string(B.t["ETE/oK"]),
+                            confirmText: Z.intl.string(Z.t.bsbMV1),
+                            cancelText: Z.intl.string(Z.t["ETE/oK"]),
                             onConfirm: t,
                         },
                         n,
@@ -542,7 +543,7 @@ function z(e) {
     }
     return (
         i.useEffect(() => {
-            q.current = z;
+            q.current = W;
         }),
         i.useEffect(() => {
             if (!1 === n.verified) return;
@@ -551,87 +552,87 @@ function z(e) {
                 null != t && (g(t), _.Z.setMetadataVisibility(n.type, n.id, t), R(null));
         }, [n]),
         (0, r.jsxs)("div", {
-            className: Z.connection,
-            children: [X(n), Q(n), J(n), $(Y), et(), ee()],
+            className: F.connection,
+            children: [X(n), Q(n), J(n), $(H), et(), ee()],
         })
     );
 }
-function q() {
+function X() {
     return (
         i.useEffect(
             () => () => {
-                (0, I.Q3)(l.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: G.L.AUTO });
+                (0, I.Q3)(l.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: B.L.AUTO });
             },
             [],
         ),
         (0, r.jsxs)("div", {
-            className: Z.connectContainer,
+            className: F.connectContainer,
             children: [
                 (0, r.jsx)(d.X6q, {
                     variant: "heading-md/bold",
                     color: "interactive-active",
-                    className: Z.connectHeader,
-                    children: B.intl.string(B.t.ZeDrUV),
+                    className: F.connectHeader,
+                    children: Z.intl.string(Z.t.ZeDrUV),
                 }),
                 (0, r.jsx)(d.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: B.intl.format(B.t["oYc+Gx"], { privacyPolicyUrl: k.EYA.PRIVACY }),
+                    children: Z.intl.format(Z.t["oYc+Gx"], { privacyPolicyUrl: U.EYA.PRIVACY }),
                 }),
-                (0, r.jsx)(Q, {}),
+                (0, r.jsx)(J, {}),
             ],
         })
     );
 }
-function X(e) {
+function Q(e) {
     let t = E.Z.get(e);
     (0, O.Z)({ platformType: t.type }),
-        P.default.track(k.rMx.ACCOUNT_LINK_STEP, {
+        P.default.track(U.rMx.ACCOUNT_LINK_STEP, {
             previous_step: "desktop connections",
             current_step: "desktop oauth",
             platform_type: t.type,
         });
 }
-function Q() {
+function J() {
     function e() {
         f.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
-            onComplete: X,
+            onComplete: Q,
         });
     }
     let t = (0, b.fq)();
     return (0, r.jsxs)("div", {
-        className: Z.connectionsContainer,
+        className: F.connectionsContainer,
         children: [
             t.slice(0, 10).map((e) =>
                 (0, r.jsx)(
                     h.Z,
                     {
                         type: e.type,
-                        className: Z.__invalid_accountButton,
-                        innerClassName: Z.accountButtonInner,
+                        className: F.__invalid_accountButton,
+                        innerClassName: F.accountButtonInner,
                     },
                     e.type,
                 ),
             ),
             (0, r.jsx)(d.ua7, {
-                text: B.intl.string(B.t.QqTz8f),
+                text: Z.intl.string(Z.t.QqTz8f),
                 children: (t) => {
                     let { onMouseEnter: n, onMouseLeave: i } = t;
                     return (0, r.jsx)("div", {
-                        className: o()(Z.accountAddWrapper, Z.__invalid_accountButton),
+                        className: o()(F.accountAddWrapper, F.__invalid_accountButton),
                         children: (0, r.jsx)(d.tEY, {
                             children: (0, r.jsx)("button", {
                                 onMouseEnter: n,
                                 onMouseLeave: i,
-                                className: o()(Z.accountAddInner, Z.accountButtonInner),
+                                className: o()(F.accountAddInner, F.accountButtonInner),
                                 type: "button",
                                 onClick: e,
-                                "aria-label": B.intl.string(B.t.Zhcj9f),
+                                "aria-label": Z.intl.string(Z.t.Zhcj9f),
                                 children: (0, r.jsx)(d.Fbu, {
                                     color: "currentColor",
                                     size: "md",
-                                    "aria-label": B.intl.string(B.t.QqTz8f),
+                                    "aria-label": Z.intl.string(Z.t.QqTz8f),
                                 }),
                             }),
                         }),
@@ -641,7 +642,7 @@ function Q() {
         ],
     });
 }
-function J(e) {
+function $(e) {
     let t,
         { fetching: n, accounts: i, theme: a, locale: o } = e;
     function s(e) {
@@ -651,23 +652,23 @@ function J(e) {
     return (
         (t = n
             ? (0, r.jsx)(d.$jN, {
-                  className: F.marginTop20,
+                  className: V.marginTop20,
                   type: d.$jN.Type.SPINNING_CIRCLE,
               })
             : 0 === i.length
               ? (0, r.jsx)(d.ubH, {
-                    className: F.marginTop40,
+                    className: V.marginTop40,
                     theme: a,
                     children: (0, r.jsx)(d.OZU, {
-                        note: B.intl.string(B.t.WenGZ2),
-                        children: B.intl.string(B.t["aoLS8/"]),
+                        note: Z.intl.string(Z.t.WenGZ2),
+                        children: Z.intl.string(Z.t["aoLS8/"]),
                     }),
                 })
               : i
                     .filter((e) => E.Z.isSupported(e.type))
                     .map((e, t) =>
                         (0, r.jsx)(
-                            z,
+                            q,
                             {
                                 theme: a,
                                 account: e,
@@ -678,12 +679,12 @@ function J(e) {
                         ),
                     )),
         (0, r.jsx)("div", {
-            className: Z.connectionList,
+            className: F.connectionList,
             children: t,
         })
     );
 }
-let $ = () => {
+let ee = () => {
     let e = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
         t = (0, s.e7)([A.Z], () => A.Z.isFetching()),
         n = (0, s.e7)([A.Z], () => A.Z.getAccounts()),
@@ -695,13 +696,11 @@ let $ = () => {
     }, []),
     e)
         ? (0, r.jsx)(p.Z, {})
-        : (0, r.jsxs)(d.hjN, {
-              className: Z.__invalid_connections,
-              tag: d.RB0.H1,
-              title: B.intl.string(B.t["3fe7U1"]),
+        : (0, r.jsxs)(j.Z, {
+              title: Z.intl.string(Z.t["3fe7U1"]),
               children: [
-                  (0, r.jsx)(q, {}),
-                  (0, r.jsx)(J, {
+                  (0, r.jsx)(X, {}),
+                  (0, r.jsx)($, {
                       fetching: t,
                       accounts: n,
                       theme: a,
