@@ -83,7 +83,7 @@ let c = (e, t) => ({
                           .concat(e.duration, ",\n                  loop_delay=")
                           .concat(
                               e.loopDelay,
-                              ",\n                  position=Point(x=0, y=0),\n                  z_index=",
+                              ",\n                  position=ProfileEffectPoint(x=0, y=0),\n                  z_index=",
                           )
                           .concat(e.zIndex, ",\n              ),\n          ");
                   })
