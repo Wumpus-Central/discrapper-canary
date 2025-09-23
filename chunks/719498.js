@@ -1,19 +1,20 @@
-r.d(t, { default: () => p });
+r.d(t, { default: () => u });
 var n = r(951288),
     a = r(647438),
-    i = r(481060),
-    c = r(933557),
+    i = r(82659),
+    c = r(481060),
+    o = r(933557),
     s = r(925329),
-    o = r(296023),
-    l = r(388032),
-    d = r(463488);
-let p = (e) => {
-    let { channel: t, application: p, onClose: m, transitionState: u } = e,
-        x = (0, o.w)(t),
-        b = a.useCallback(
+    l = r(296023),
+    d = r(388032),
+    p = r(865706);
+let u = (e) => {
+    let { channel: t, application: u, onClose: m, transitionState: b } = e,
+        j = (0, l.w)(t),
+        x = a.useCallback(
             () => (
                 m(),
-                (0, i.ZDy)(async () => {
+                (0, c.ZDy)(async () => {
                     let { default: e } = await r.e("31907").then(r.bind(r, 366854));
                     return (r) => {
                         var a, i;
@@ -47,7 +48,7 @@ let p = (e) => {
                             (i = i =
                                 {
                                     channelId: t.id,
-                                    application: p,
+                                    application: u,
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
@@ -66,79 +67,65 @@ let p = (e) => {
                     };
                 })
             ),
-            [p, t.id, m],
+            [u, t.id, m],
         ),
-        j = (0, c.ZP)(t, !0);
-    return (0, n.jsxs)(i.Y0X, {
-        transitionState: u,
-        "aria-label": l.intl.string(l.t.OJknho),
-        parentComponent: "IntegrationsEditLinkedLobbyModal",
-        children: [
-            (0, n.jsx)(i.xBx, {
-                separator: !1,
-                children: (0, n.jsx)(i.X6q, {
-                    variant: "heading-lg/semibold",
-                    children: l.intl.string(l.t.OJknho),
+        O = (0, o.ZP)(t, !0);
+    return (0, n.jsx)(i.Modal, {
+        transitionState: b,
+        "aria-label": d.intl.string(d.t.OJknho),
+        onClose: m,
+        title: d.intl.string(d.t.OJknho),
+        actions: [
+            {
+                text: d.intl.string(d.t["ETE/oK"]),
+                onClick: m,
+                variant: "secondary",
+            },
+            {
+                text: d.intl.string(d.t.LLWaxc),
+                onClick: x,
+                variant: "critical-primary",
+            },
+        ],
+        children: (0, n.jsxs)("div", {
+            className: p.content,
+            children: [
+                (0, n.jsx)(s.Z, {
+                    game: u,
+                    size: s.A.XLARGE,
                 }),
-            }),
-            (0, n.jsxs)(i.hzk, {
-                className: d.content,
-                children: [
-                    (0, n.jsx)(s.Z, {
-                        game: p,
-                        size: s.A.XLARGE,
-                    }),
-                    (0, n.jsxs)("div", {
-                        className: d.metadata,
-                        children: [
-                            (0, n.jsxs)("div", {
-                                className: d.metadataHeader,
+                (0, n.jsxs)("div", {
+                    className: p.metadata,
+                    children: [
+                        (0, n.jsxs)("div", {
+                            className: p.metadataHeader,
+                            children: [
+                                (0, n.jsx)(c.Text, {
+                                    variant: "text-md/semibold",
+                                    color: "header-primary",
+                                    children: u.name,
+                                }),
+                                (0, n.jsx)(c.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    children: d.intl.format(d.t["0NJZAQ"], { channelName: O }),
+                                }),
+                            ],
+                        }),
+                        null != j &&
+                            (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, n.jsx)(i.Text, {
-                                        variant: "text-md/semibold",
-                                        color: "header-primary",
-                                        children: p.name,
-                                    }),
-                                    (0, n.jsx)(i.Text, {
-                                        variant: "text-sm/normal",
+                                    (0, n.jsx)("div", { className: p.divider }),
+                                    (0, n.jsx)(c.Text, {
+                                        variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: l.intl.format(l.t["0NJZAQ"], { channelName: j }),
+                                        children: j,
                                     }),
                                 ],
                             }),
-                            null != x &&
-                                (0, n.jsxs)(n.Fragment, {
-                                    children: [
-                                        (0, n.jsx)("div", { className: d.divider }),
-                                        (0, n.jsx)(i.Text, {
-                                            variant: "text-xs/normal",
-                                            color: "text-muted",
-                                            children: x,
-                                        }),
-                                    ],
-                                }),
-                        ],
-                    }),
-                ],
-            }),
-            (0, n.jsxs)(i.mzw, {
-                children: [
-                    (0, n.jsx)(i.zxk, {
-                        variant: "critical-primary",
-                        text: l.intl.string(l.t.LLWaxc),
-                        onClick: b,
-                    }),
-                    (0, n.jsx)("div", {
-                        "data-button-hoisted-classname-wrapper": !0,
-                        className: d.cancelButton,
-                        children: (0, n.jsx)(i.zxk, {
-                            variant: "secondary",
-                            text: l.intl.string(l.t["ETE/oK"]),
-                            onClick: m,
-                        }),
-                    }),
-                ],
-            }),
-        ],
+                    ],
+                }),
+            ],
+        }),
     });
 };
