@@ -3831,6 +3831,7 @@ var ng = (function (e) {
             (e.LIBDISCORE_LOADED = "libdiscore_loaded"),
             (e.LIBDISCORE_KV_DUAL_READ_ERROR = "libdiscore_kv_dual_read_error"),
             (e.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY = "libdiscore_dispatch_bridge_telemetry"),
+            (e.LIBDISCORE_SLOW_TIMERS = "libdiscore_slow_timers"),
             (e.REGISTER_INPUT_FOCUS = "register_input_focus"),
             (e.REGISTER_INPUT_BLUR = "register_input_blur"),
             (e.SESSION_START = "session_start"),

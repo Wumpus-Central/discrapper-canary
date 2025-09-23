@@ -375,6 +375,10 @@ let Z = {
         throttlePeriod: j,
         throttleKeys: (e) => [e.application_id],
     },
+    [m.rMx.LIBDISCORE_SLOW_TIMERS]: {
+        throttlePeriod: L,
+        throttleKeys: () => [],
+    },
 };
 function F(e) {
     return "string" == typeof e
