@@ -39,7 +39,7 @@ var r = n(951288),
     B = n(701488),
     Z = n(671955),
     F = n(388032),
-    V = n(704543);
+    V = n(663907);
 function H(e, t, n) {
     return (
         t in e
@@ -426,6 +426,7 @@ function z(e) {
                     applicationId: null == H ? void 0 : H.id,
                     onAction: er,
                     onClose: X,
+                    activity: i,
                 }),
                 el &&
                     (0, r.jsx)(N.Z, {

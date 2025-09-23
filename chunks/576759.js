@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(704215),
     a = n(755721),
@@ -9,49 +9,51 @@ var r = n(951288),
     u = n(728345),
     d = n(377171),
     f = n(243778),
-    _ = n(483517),
-    p = n(652853),
-    h = n(994102),
-    m = n(671955),
-    g = n(388032),
-    E = n(114004);
-function b(e) {
-    let { applicationId: t, onAction: n, onClose: b } = e,
-        { analyticsLocations: y } = (0, c.ZP)(l.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { data: O } = (0, u.IX)(t),
-        v = (0, s.q)(O, l.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { themeType: I } = (0, p.z)(),
-        T = I === m.l.MODAL || I === m.l.MODAL_V2,
-        S = v && T && null != O,
-        A = S ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
-        [C] = (0, f.US)(A);
-    return S
+    _ = n(584057),
+    p = n(483517),
+    h = n(652853),
+    m = n(994102),
+    g = n(671955),
+    E = n(388032),
+    b = n(230759);
+function y(e) {
+    let { applicationId: t, onAction: n, onClose: y, activity: O } = e,
+        { analyticsLocations: v } = (0, c.ZP)(l.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { data: I } = (0, u.IX)(t),
+        T = (0, s.q)(I, l.Z.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { themeType: S } = (0, h.z)(),
+        A = S === g.l.MODAL || S === g.l.MODAL_V2,
+        C = (0, _.L)(O),
+        N = T && A && null != I && !C,
+        R = N ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
+        [P] = (0, f.US)(R);
+    return N
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(_.Z, { className: E.cloudPlayDivider }),
+                  (0, r.jsx)(p.Z, { className: b.cloudPlayDivider }),
                   (0, r.jsxs)("div", {
-                      className: E.cloudPlaySection,
+                      className: b.cloudPlaySection,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: E.cloudPlaySectionTextContainer,
+                              className: b.cloudPlaySectionTextContainer,
                               children: [
-                                  C === i.z.CLOUD_PLAY_NEW_BADGE &&
+                                  P === i.z.CLOUD_PLAY_NEW_BADGE &&
                                       (0, r.jsx)(o.IGR, {
-                                          text: g.intl.string(g.t.y2b7CA),
+                                          text: E.intl.string(E.t.y2b7CA),
                                           color: d.Z.BG_BRAND,
                                       }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xs/medium",
-                                      children: g.intl.string(g.t.IQjdmZ),
+                                      children: E.intl.string(E.t.IQjdmZ),
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(h.Z, {
-                              application: O,
+                          (0, r.jsx)(m.Z, {
+                              application: I,
                               onAction: n,
-                              onClose: b,
+                              onClose: y,
                               size: a.Ph.SMALL,
-                              analyticsLocations: y,
+                              analyticsLocations: v,
                           }),
                       ],
                   }),
