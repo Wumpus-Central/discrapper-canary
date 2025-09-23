@@ -41,8 +41,9 @@ function w() {
     };
 }
 function D() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = e
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    return [
+        ...(e
             ? [
                   {
                       id: r.Ru.TRICK,
@@ -57,8 +58,7 @@ function D() {
                       name: i.intl.string(i.t["2UeOlZ"]),
                   },
               ]
-            : [];
-    return [
+            : []),
         {
             id: r.Ru.BRAND_DARK,
             iconSource: u,
@@ -191,7 +191,6 @@ function D() {
             isPremium: !0,
             name: i.intl.string(i.t.MWRYqq),
         },
-        ...t,
     ];
 }
 function x() {
