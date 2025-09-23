@@ -20,14 +20,14 @@ var r = n(951288),
     O = n(699516),
     v = n(944486),
     I = n(246946),
-    S = n(594174),
-    T = n(585483),
+    T = n(594174),
+    S = n(585483),
     A = n(63063),
     C = n(51144),
-    N = n(748610),
-    R = n(738018),
-    P = n(607802),
-    w = n(532428),
+    N = n(738018),
+    R = n(607802),
+    P = n(532428),
+    w = n(991896),
     D = n(611004),
     x = n(579612),
     L = n(817190),
@@ -35,7 +35,7 @@ var r = n(951288),
     M = n(723642),
     k = n(981631),
     U = n(388032),
-    G = n(495824);
+    G = n(486321);
 function B(e, t, n) {
     return (
         t in e
@@ -118,7 +118,7 @@ function z(e) {
     let t = !0,
         n = e.trim();
     return (
-        l()(w.ZP).forOwn((e) => {
+        l()(P.ZP).forOwn((e) => {
             "" !== e.key && null != e.key && n === e.key && (t = !1);
         }),
         t
@@ -128,9 +128,9 @@ let q = (e, t, n) => {
         var i, a, o;
         let { user: s, text: l } = n;
         if (null == s) return (0, r.jsx)("strong", { children: l });
-        let c = S.default.getUser(s.id),
-            u = (0, P.AH)(e),
-            d = (0, P.s5)(e),
+        let c = T.default.getUser(s.id),
+            u = (0, R.AH)(e),
+            d = (0, R.s5)(e),
             f = b.Z.getChannel(u),
             _ = (null == f ? void 0 : f.isPrivate()) ? O.Z.getNickname(s.id) : null,
             p = null != (a = null != (i = y.ZP.getNick(d, s.id)) ? i : _) ? a : C.ZP.getName(s),
@@ -205,7 +205,7 @@ let q = (e, t, n) => {
             var E, b;
             t = (0, r.jsx)("span", {
                 className: G.filter,
-                children: null != (b = null == (E = w.ZP[l]) ? void 0 : E.key) ? b : "addme:",
+                children: null != (b = null == (E = P.ZP[l]) ? void 0 : E.key) ? b : "addme:",
             });
         }
         return (
@@ -243,7 +243,7 @@ let q = (e, t, n) => {
         ),
     $ = (e) => (0, r.jsx)(Q, V(Z({}, e), { renderResult: X }));
 function ee(e) {
-    return (0, P.kG)(e).map((e, t, n) => ((0, P.Fr)(e, n[t + 1]) ? e : new m.WU(e.getFullMatch(), m.Xe)));
+    return (0, R.kG)(e).map((e, t, n) => ((0, R.Fr)(e, n[t + 1]) ? e : new m.WU(e.getFullMatch(), m.Xe)));
 }
 function et(e) {
     var { onSelect: t, onFocus: n, result: a, showFilter: s, searchContext: l, renderResult: c, group: u } = e,
@@ -324,7 +324,7 @@ let en = {
                 children: (e) => {
                     let { onMouseEnter: n, onMouseLeave: i } = e;
                     return (0, r.jsx)(p.P3F, {
-                        onClick: () => N.Z.clearWebSearchHistory(t),
+                        onClick: () => w.Z.clearSearchHistory(t),
                         onMouseEnter: n,
                         onMouseLeave: i,
                         className: G.searchClearHistory,
@@ -369,7 +369,7 @@ let en = {
                 [d, f] = (0, E.US)(u),
                 h = d === _.z.SEARCH_AUTHOR_TYPE_FILTER_NEW_BADGE,
                 m = (0, g.Sl)(k.Ilk.BRAND_500).hex,
-                b = (0, P.Ko)(null != (t = n.token) ? t : "");
+                b = (0, R.Ko)(null != (t = n.token) ? t : "");
             return (0, r.jsxs)(
                 p.P3F,
                 V(
@@ -440,12 +440,12 @@ class er extends i.PureComponent {
             onSelectQuery: this.performSearch,
             onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
             renderNoResults: () => null,
-            searchFavorites: o.type === k.aib.FAVORITES && (0, P.X$)(),
+            searchFavorites: o.type === k.aib.FAVORITES && (0, R.X$)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
             channel: s,
             onSelectSearchInSelectedChannel: () =>
                 this.handleSearchInChannel({ searchAutocompleteSelectAction: M.ZW.CLICK }),
-            showDMQueryText: o.type === k.aib.DMS && (0, P.R6)(o),
+            showDMQueryText: o.type === k.aib.DMS && (0, R.R6)(o),
         });
     }
     constructor(...e) {
@@ -453,12 +453,12 @@ class er extends i.PureComponent {
         super(...e),
             (t = this),
             B(this, "state", {
-                dateHint: (0, w.Pr)(),
+                dateHint: (0, P.Pr)(),
                 selectedIndex: -1,
             }),
             B(this, "scrollSelectedIndexIntoView", () => {
                 let { navId: e, resultsState: t } = this.props;
-                if ((0, P.Fz)(t.mode.filter)) return;
+                if ((0, R.Fz)(t.mode.filter)) return;
                 let { selectedIndex: n } = this.state;
                 if (null == n) return;
                 let r = document.getElementById("".concat(e, "-").concat(n));
@@ -469,7 +469,7 @@ class er extends i.PureComponent {
                     });
             }),
             B(this, "handleDateChange", (e) => {
-                let t = (0, P.Tm)(this.props.searchContext);
+                let t = (0, R.Tm)(this.props.searchContext);
                 (0, j.bh)({
                     searchContext: this.props.searchContext,
                     searchQuery: L.Z.getSearchResultsQuery(t),
@@ -491,8 +491,8 @@ class er extends i.PureComponent {
                     { resultsState: s } = e;
                 if (a.type !== s.mode.type) this.setSelectedIndex(-1);
                 else if (t.selectedIndex >= 0 && (t.selectedIndex === n || s.autocompletes.length !== o.length)) {
-                    let e = (0, P.i3)(s.autocompletes, s.mode)[t.selectedIndex],
-                        n = (0, P.i3)(o, a).findIndex((t) => {
+                    let e = (0, R.i3)(s.autocompletes, s.mode)[t.selectedIndex],
+                        n = (0, R.i3)(o, a).findIndex((t) => {
                             let { resultText: n } = t;
                             return n === (null == e ? void 0 : e.resultText);
                         });
@@ -508,7 +508,7 @@ class er extends i.PureComponent {
             B(this, "focusOtherOption", (e) => {
                 let { selectedIndex: t } = this.state,
                     { resultsState: n } = this.props;
-                (0, P.Fz)(n.mode.filter) || this.focusOption(t + e);
+                (0, R.Fz)(n.mode.filter) || this.focusOption(t + e);
             }),
             B(this, "focusOption", (e) => {
                 let t = e,
@@ -516,10 +516,10 @@ class er extends i.PureComponent {
                     r = this.shouldShowSearchQuery(),
                     i = this.shouldShowSearchInSelectedChannel();
                 t < -1 || (!r && !i && t < 0)
-                    ? (t = (0, P.BU)(n) - 1)
-                    : (r || i) && t >= (0, P.BU)(n)
+                    ? (t = (0, R.BU)(n) - 1)
+                    : (r || i) && t >= (0, R.BU)(n)
                       ? (t = -1)
-                      : !r && t >= (0, P.BU)(n) && (t = 0),
+                      : !r && t >= (0, R.BU)(n) && (t = 0),
                     this.setSelectedIndex(t);
             }),
             B(this, "selectOption", (e) => {
@@ -527,8 +527,8 @@ class er extends i.PureComponent {
                     r = t;
                 if ((null == r && (r = this.state.selectedIndex), r < 0)) return !1;
                 let { autocompletes: i, mode: a } = this.props.resultsState;
-                if ((0, P.Fz)(a.filter)) return;
-                let o = (0, P.i3)(i, a);
+                if ((0, R.Fz)(a.filter)) return;
+                let o = (0, R.i3)(i, a);
                 if (r >= o.length) return !1;
                 let s = o[r],
                     l = o.length;
@@ -547,11 +547,11 @@ class er extends i.PureComponent {
                     let e = this.props.resultsState.mode.type,
                         t = this.props.resultsState.mode.filter,
                         { token: i, group: a } = s.result,
-                        o = (0, w._m)(s.group) ? s.group : null != a && (0, w._m)(a) ? a : null,
+                        o = (0, P._m)(s.group) ? s.group : null != a && (0, P._m)(a) ? a : null,
                         d = null != (c = null != i ? i : t) ? c : o,
                         f = s.result.channel,
                         _ = d === k.dCx.FILTER_IN && null != f && f.id === v.Z.getChannelId(),
-                        p = (0, P.Tm)(this.props.searchContext);
+                        p = (0, R.Tm)(this.props.searchContext);
                     (0, j.bh)({
                         searchContext: this.props.searchContext,
                         searchQuery: L.Z.getSearchResultsQuery(p),
@@ -579,7 +579,7 @@ class er extends i.PureComponent {
                     ? (a = r.token.start)
                     : (null == i ? void 0 : i.currentToken) != null && (a = i.currentToken.end);
                 let o = null != r.token ? r.token.end : a;
-                T.S.dispatch(k.CkL.SET_SEARCH_QUERY, {
+                S.S.dispatch(k.CkL.SET_SEARCH_QUERY, {
                     query: e,
                     anchor: a,
                     focus: o,
@@ -590,14 +590,14 @@ class er extends i.PureComponent {
             }),
             B(this, "shouldShowSearchQuery", () => {
                 let { mode: e } = this.props.resultsState;
-                return e.type !== k.Sap.FILTER && e.type !== k.Sap.EMPTY && !(0, P.Fz)(e.filter);
+                return e.type !== k.Sap.FILTER && e.type !== k.Sap.EMPTY && !(0, R.Fz)(e.filter);
             }),
             B(this, "shouldShowSearchInSelectedChannel", () => {
                 let {
                     searchContext: e,
                     resultsState: { mode: t },
                 } = this.props;
-                return e.type === k.aib.DMS && (0, P.R6)(e) && t.type === k.Sap.EMPTY && !(0, P.Fz)(t.filter);
+                return e.type === k.aib.DMS && (0, R.R6)(e) && t.type === k.Sap.EMPTY && !(0, R.Fz)(t.filter);
             }),
             B(this, "handleSearchInChannel", (e) => {
                 var t;
@@ -609,8 +609,8 @@ class er extends i.PureComponent {
                     searchAutocompleteSelectAction: n,
                 });
                 let a = k.dCx.FILTER_IN,
-                    o = w.ZP[a],
-                    s = (0, P.X3)(r),
+                    o = P.ZP[a],
+                    s = (0, R.X3)(r),
                     l = "".concat(null != (t = null == o ? void 0 : o.key) ? t : a.toString(), " ").concat(s);
                 return this.setSearchQuery(l, !0), !0;
             }),
@@ -645,13 +645,13 @@ class er extends i.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             B(this, "performSearch", (e) => {
-                T.S.dispatch(k.CkL.PERFORM_SEARCH, null != e ? e : {});
+                S.S.dispatch(k.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
             B(this, "renderAutocompletes", () => {
                 let { selectedIndex: e } = this.state,
                     { navId: t, searchContext: n } = this.props,
                     { autocompletes: i, mode: a } = this.props.resultsState;
-                if ((0, P.Fz)(a.filter)) return this.renderDatePicker();
+                if ((0, R.Fz)(a.filter)) return this.renderDatePicker();
                 let o = -1;
                 return i.map((i) => {
                     var s, l, c;
@@ -718,9 +718,9 @@ let ei = i.forwardRef((e, t) => {
             let e = v.Z.getChannelId();
             return b.Z.getChannel(e);
         }),
-        [l, c] = (0, f.Wu)([R.Z], () => {
-            let e = R.Z.getState(i),
-                t = (0, P.BU)(e.autocompletes);
+        [l, c] = (0, f.Wu)([N.Z], () => {
+            let e = N.Z.getState(i),
+                t = (0, R.BU)(e.autocompletes);
             return [e, t];
         });
     return (0, r.jsx)(er, {
