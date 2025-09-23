@@ -88,10 +88,22 @@ function h(e) {
             textVariant: d = "text-md/medium",
             type: p = "button",
             variant: h = "primary",
-            className: m,
-            style: g,
+            buttonRef: m,
+            className: g,
+            style: E,
         } = e,
-        E = _(e, ["focusProps", "lineClamp", "role", "text", "textVariant", "type", "variant", "className", "style"]);
+        b = _(e, [
+            "focusProps",
+            "lineClamp",
+            "role",
+            "text",
+            "textVariant",
+            "type",
+            "variant",
+            "buttonRef",
+            "className",
+            "style",
+        ]);
     return (0, r.jsx)(
         o.tE,
         f(u({}, t), {
@@ -104,8 +116,9 @@ function h(e) {
                             "data-mana-component": "text-button",
                             role: i,
                             type: p,
+                            ref: m,
                         },
-                        E,
+                        b,
                     ),
                     {
                         children: (0, r.jsx)(s.x, {
