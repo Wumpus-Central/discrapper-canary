@@ -1,4 +1,4 @@
-n.d(e, { default: () => g }), n(388685);
+n.d(e, { default: () => p }), n(388685);
 var l = n(951288),
     r = n(647438),
     i = n(755721),
@@ -23,7 +23,7 @@ function f(t, e, n) {
         t
     );
 }
-class p extends r.PureComponent {
+class g extends r.PureComponent {
     render() {
         let { isStreamer: t, transitionState: e, onClose: n } = this.props,
             { problem: r } = this.state;
@@ -63,7 +63,6 @@ class p extends r.PureComponent {
                             options: (0, o.Z)({
                                 isStreamer: t,
                                 isEndStream: !1,
-                                showVibesHoneypot: !1,
                             }),
                             onChange: this.handleChanged,
                             value: r,
@@ -139,4 +138,4 @@ class p extends r.PureComponent {
             });
     }
 }
-let g = p;
+let p = g;
