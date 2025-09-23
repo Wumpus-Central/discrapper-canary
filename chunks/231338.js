@@ -586,7 +586,7 @@ let $ = 250,
         MESSAGE: (e, t, n) => "/channels/".concat(e, "/").concat(t, "/").concat(n),
         CHANNEL: (e, t) => "/channels/".concat(e, "/").concat(t),
         REPORT: "".concat(l, "/report"),
-        QUEST_PREVIEW: (e) => "".concat(l, "/settings/quest-preview-tool-2?quest_id=").concat(e),
+        SETTINGS_QUEST_PREVIEW_TOOL_2: (e) => "".concat(l, "/settings/quest-preview-tool-2?quest_id=").concat(e),
     });
 var es = (function (e) {
     return (

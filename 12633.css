@@ -58999,39 +58999,21 @@ h3.improved__1689b:after {
     gap: 8px
 }
 
-.divider__3b806 {
-    background: var(--background-modifier-selected);
-    height: 1px;
-    margin: var(--space-sm) 0 var(--space-sm) 0;
-    width: 100%
-}
-
 .controlBar__04a02 {
-    padding: var(--space-sm);
+    flex-direction: column;
     width: 100%
 }
 
 .controlBar__04a02,
-.topSection__04a02 {
+.questInput__04a02 {
     display: flex;
-    flex-direction: column;
     gap: var(--space-sm)
 }
 
-.topSection__04a02 {
-    align-items: center;
-    justify-content: space-between
-}
-
-.inputGroup__04a02 {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: var(--space-xs)
-}
-
 .questInput__04a02 {
-    flex: 1
+    flex: 1;
+    flex-direction: row;
+    min-width: 450px
 }
 
 .currentQuestInfo__04a02 {
@@ -59077,10 +59059,8 @@ h3.improved__1689b:after {
 }
 
 .controlsSection__04a02 {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
     width: 100%
 }
 
@@ -59097,12 +59077,31 @@ h3.improved__1689b:after {
 }
 
 .questSelectorContainer__04a02 {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex: 1;
     flex-direction: column;
     gap: var(--space-sm);
     justify-content: flex-end
+}
+
+.copyInput__04a02 {
+    width: 100%
+}
+
+.sharePopover__04a02 {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    padding: var(--space-sm);
+    width: 400px
+}
+
+.divider__3b806 {
+    background: var(--background-modifier-selected);
+    height: 1px;
+    margin: var(--space-sm) 0 var(--space-sm) 0;
+    width: 100%
 }
 
 .partnerBranding__83420 {
@@ -61503,12 +61502,6 @@ h3.improved__1689b:after {
     border-color: var(--border-subtle)
 }
 
-.sectionHeading_b5ecb2 {
-    color: var(--text-primary);
-    margin-bottom: 8px;
-    padding-bottom: 8px
-}
-
 .fixedEmbed_b5ecb2 {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
@@ -62475,13 +62468,14 @@ h3.improved__1689b:after {
 .container_ba8a2f {
     display: flex;
     flex-direction: column;
+    gap: var(--space-lg);
     height: 100%;
     width: 790px
 }
 
 .controlsBarContainer_ba8a2f {
-    padding: 16px;
-    width: 100%
+    margin-bottom: var(--space-sm);
+    width: 90%
 }
 
 .progressBar_ba8a2f {
@@ -62501,16 +62495,12 @@ h3.improved__1689b:after {
     width: 100%
 }
 
-.tabBar_ba8a2f {
-    padding: 16px 20px 0
-}
-
 .contentArea_ba8a2f {
     border-radius: 8px;
     flex: 1;
-    margin: 20px;
+    margin: 4px 24px;
     overflow: auto;
-    padding: 24px
+    padding: 0 24px
 }
 
 .content_ba8a2f {

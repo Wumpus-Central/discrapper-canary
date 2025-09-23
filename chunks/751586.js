@@ -51,13 +51,13 @@ let h = [
                     (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)(d.w, { quest: h }), (0, r.jsx)(s.i, {})],
                     }),
-                m("share_embed") &&
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(u.Z, { questId: h.id }), (0, r.jsx)(s.i, {})],
-                    }),
                 m("quest_bar") &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)(l.Z, { quest: h }), (0, r.jsx)(s.i, {})],
+                    }),
+                m("share_embed") &&
+                    (0, r.jsxs)(r.Fragment, {
+                        children: [(0, r.jsx)(u.Z, { questId: h.id }), (0, r.jsx)(s.i, {})],
                     }),
                 m("channel_call_header") &&
                     (0, r.jsxs)(r.Fragment, {
