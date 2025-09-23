@@ -12,8 +12,8 @@ var i = t(951288),
     g = t(642633),
     f = t(183369),
     p = t(422663),
-    v = t(210682),
-    x = t(39793),
+    x = t(210682),
+    v = t(39793),
     j = t(473682),
     b = t(401561),
     h = t(388032),
@@ -49,7 +49,7 @@ function C(e) {
 }
 function y(e) {
     let { region: n, selected: t, disabled: r, className: l } = e,
-        { pingText: o, pingCircleStyle: s } = (0, x.t)(n.pingUrl);
+        { pingText: o, pingCircleStyle: s } = (0, v.t)(n.pingUrl);
     return null == n
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -85,7 +85,7 @@ function O() {
         regionId: t,
         portkeyInstance: l,
         setRegionId: a,
-        name: x,
+        name: v,
         setName: O,
         planId: N,
         setPlanId: P,
@@ -118,7 +118,7 @@ function O() {
                 ? e
                 : [];
         }, [n]),
-        I = (0, v.Z)();
+        I = (0, x.Z)();
     return null == n
         ? (0, i.jsx)("div", {
               className: _.spinnerContainer,
@@ -158,9 +158,11 @@ function O() {
                                               ],
                                           }),
                                           (0, i.jsx)(c.oil, {
-                                              value: x,
+                                              value: v,
                                               onChange: O,
                                               placeholder: h.intl.string(b.default.Kg0Zio),
+                                              showCharacterCount: !0,
+                                              maxLength: j.gM,
                                           }),
                                       ],
                                   }),
