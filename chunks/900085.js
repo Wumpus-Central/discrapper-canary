@@ -23,11 +23,11 @@ var r,
     C = n(306680),
     E = n(944486),
     S = n(938475),
-    P = n(483360),
-    I = n(459273),
+    I = n(483360),
+    P = n(459273),
     N = n(585483),
-    Z = n(63063),
-    w = n(51596),
+    w = n(63063),
+    Z = n(51596),
     T = n(823385),
     A = n(415795),
     R = n(670512),
@@ -93,7 +93,7 @@ let F = () =>
             (0, i.jsx)("div", {
                 className: k.emptyStateCTA,
                 children: (0, i.jsx)(u.eee, {
-                    href: Z.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
+                    href: w.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: M.intl.string(M.t["4iPfEB"]),
                 }),
             }),
@@ -195,10 +195,10 @@ class X extends l.PureComponent {
                   }));
     }
     close() {
-        (0, w.Cp)();
+        (0, Z.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, w.yC)(e);
+        this.setState({ query: e }), (0, Z.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -206,7 +206,7 @@ class X extends l.PureComponent {
             r = t.length > 0 && "" !== n;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(I.d9, {
+                (0, i.jsx)(P.d9, {
                     event: L.CkL.GLOBAL_CLIPBOARD_PASTE,
                     handler: this.handleGlobalPaste,
                 }),
@@ -277,7 +277,7 @@ class X extends l.PureComponent {
                 textChannelSymbolHook: (e, t) => q(t, h.xQ.TEXT_CHANNEL, M.intl.string(M.t.wrwhub)),
                 voiceChannelSymbolHook: (e, t) => q(t, h.xQ.VOICE_CHANNEL, M.intl.string(M.t["jz+hJi"])),
                 guildSymbolHook: (e, t) => q(t, h.xQ.GUILD, M.intl.string(M.t.WuwCWl)),
-                helpdeskArticle: Z.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
+                helpdeskArticle: w.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -317,10 +317,10 @@ class X extends l.PureComponent {
                 !1 !== e && this.setState({ mouseFocusDisabled: !1 });
             }),
             U(this, "focusResult", (e) => {
-                this.state.mouseFocusDisabled || (0, w.tF)(this.props.results.indexOf(e));
+                this.state.mouseFocusDisabled || (0, Z.tF)(this.props.results.indexOf(e));
             }),
             U(this, "selectResult", (e) => {
-                (0, w.Se)(e, this.props.queryMode === h.h8.TEXT_CHANNEL);
+                (0, Z.Se)(e, this.props.queryMode === h.h8.TEXT_CHANNEL);
             }),
             U(this, "handleContextMenu", (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -329,20 +329,19 @@ class X extends l.PureComponent {
                         return (0, d.jW)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("36599"),
-                                n.e("60962"),
+                                n.e("7654"),
                                 n.e("58175"),
                                 n.e("55616"),
                                 n.e("8271"),
                                 n.e("15851"),
                                 n.e("51453"),
-                                n.e("7654"),
                                 n.e("845"),
-                                n.e("47463"),
+                                n.e("58511"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("54408"),
                                 n.e("90746"),
-                                n.e("8106"),
+                                n.e("21376"),
                                 n.e("56534"),
                                 n.e("87154"),
                                 n.e("33213"),
@@ -353,7 +352,7 @@ class X extends l.PureComponent {
                                     e,
                                     B(G({}, n), {
                                         guild: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: Z.Cp,
                                         hideSettings: !0,
                                     }),
                                 );
@@ -380,7 +379,7 @@ class X extends l.PureComponent {
                                             B(G({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -399,7 +398,7 @@ class X extends l.PureComponent {
                                             B(G({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -413,7 +412,7 @@ class X extends l.PureComponent {
                                             e,
                                             B(G({}, t), {
                                                 channel: r,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -426,7 +425,7 @@ class X extends l.PureComponent {
                                             B(G({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp,
+                                                onSelect: Z.Cp,
                                             }),
                                         );
                                 });
@@ -439,16 +438,14 @@ class X extends l.PureComponent {
                         break;
                     case h.h8.GROUP_DM:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("22981")]).then(
-                                n.bind(n, 354741),
-                            );
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("2950")]).then(n.bind(n, 354741));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
                                     B(G({}, n), {
                                         channel: t.record,
                                         selected: E.Z.getChannelId() === t.record.id,
-                                        onSelect: w.Cp,
+                                        onSelect: Z.Cp,
                                     }),
                                 );
                         });
@@ -462,7 +459,7 @@ class X extends l.PureComponent {
                                     e,
                                     B(G({}, n), {
                                         user: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: Z.Cp,
                                     }),
                                 );
                         });
@@ -476,11 +473,11 @@ class X extends l.PureComponent {
                     { selectedIndex: l } = this.props;
                 switch (i) {
                     case "escape":
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, w.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, Z.Cp)();
                         return;
                     case "k":
                         (!0 === e.ctrlKey || !0 === e.metaKey) &&
-                            (e.preventDefault(), e.stopPropagation(), (0, w.Cp)());
+                            (e.preventDefault(), e.stopPropagation(), (0, Z.Cp)());
                         return;
                     case "enter": {
                         if (-1 === l) return;
@@ -506,7 +503,7 @@ class X extends l.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, w.tF)(l);
+                e.preventDefault(), (0, Z.tF)(l);
             }),
             U(this, "handleGlobalPaste", (e) => {
                 var t, n;
@@ -692,7 +689,7 @@ function Q(e) {
                 searchableTitles: [M.intl.string(M.t["3D5yo6"])],
                 path: L.Z5c.SETTINGS("account"),
             }),
-                (0, P.gF)(e);
+                (0, I.gF)(e);
         }, [o, r]),
         (0, i.jsx)(X, G({}, t, e))
     );

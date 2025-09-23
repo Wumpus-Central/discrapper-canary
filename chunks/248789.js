@@ -1,4 +1,4 @@
-n.d(t, { Y: () => _ }), n(388685);
+n.d(t, { Y: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(286379),
@@ -55,41 +55,43 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let { channelId: t, warningId: _, senderId: y } = e,
-        C = i.useCallback(() => {
-            (0, u.T)(t, [_]);
-        }, [t, _]),
-        x = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
-        v = i.useMemo(
+function y(e) {
+    let { channelId: t, warningId: y, senderId: C } = e,
+        _ = i.useCallback(() => {
+            (0, u.T)(t, [y]);
+        }, [t, y]),
+        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
+        x = i.useMemo(
             () => ({
                 channelId: t,
-                warningId: _,
-                senderId: y,
+                warningId: y,
+                senderId: C,
                 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
             }),
-            [t, _, y],
+            [t, y, C],
         );
     i.useEffect(() => {
-        (0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })),
+        (0, p.KQ)(b(g({}, x), { viewName: p.pb.SAFETY_WARNING_BANNER })),
             s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [v]);
+    }, [x]);
     let O = i.useCallback(
             (e) => {
-                (0, p.qc)(b(g({}, v), { cta: e }));
+                (0, p.qc)(b(g({}, x), { cta: e }));
             },
-            [v],
+            [x],
         ),
         j = i.useCallback(() => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650")]).then(n.bind(n, 611446));
+                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("899")]).then(
+                        n.bind(n, 611446),
+                    );
                     return (n) => {
                         let { transitionState: i, onClose: l } = n;
                         return (0, r.jsx)(e, {
-                            otherUserId: y,
+                            otherUserId: C,
                             channelId: t,
-                            warningId: _,
+                            warningId: y,
                             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                             transitionState: i,
                             onClose: l,
@@ -99,14 +101,14 @@ function _(e) {
                 { modalKey: f.X_ },
             ),
                 O(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, y, _, O]),
+        }, [t, C, y, O]),
         E = i.useCallback(() => {
-            C(), O(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [C, O]),
+            _(), O(p.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [_, O]),
         S = i.useCallback(() => {
-            C(), O(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [C, O]),
-        I = i.useCallback(() => {
+            _(), O(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [_, O]),
+        P = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("19538").then(n.bind(n, 699783));
                 return (n) => {
@@ -119,33 +121,33 @@ function _(e) {
                             null == l || l(), O(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
                         onClose: l,
-                        userId: y,
+                        userId: C,
                         channelId: t,
                     });
                 };
             });
-        }, [E, S, y, t, O]);
+        }, [E, S, C, t, O]);
     return (0, r.jsx)(h.Q, {
         channelId: t,
-        warningId: _,
-        senderId: y,
+        warningId: y,
+        senderId: C,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: m.intl.string(m.t.ZzlB5u),
         description: m.intl.string(m.t["D1aU+v"]),
-        onDismiss: C,
+        onDismiss: _,
         buttons: [
             {
                 text: m.intl.string(m.t.Qyu4UF),
                 variant: "primary",
                 onClick: j,
             },
-            ...(x
+            ...(v
                 ? []
                 : [
                       {
                           text: m.intl.string(m.t["7q0bNT"]),
                           variant: "secondary",
-                          onClick: I,
+                          onClick: P,
                       },
                   ]),
         ],

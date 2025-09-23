@@ -15,15 +15,15 @@ var r = n(951288),
     g = n(397698),
     b = n(895924),
     y = n(266454),
-    _ = n(340541),
-    C = n(416345),
+    C = n(340541),
+    _ = n(416345),
     v = n(626135),
     x = n(607187),
     O = n(981631),
     j = n(388032),
     E = n(348130),
     S = n(359165);
-function I(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -132,7 +132,7 @@ function T(e) {
                             })(e, ["onClick"]);
                         return (0, r.jsx)(
                             c.P3F,
-                            P(I({}, l), {
+                            I(P({}, l), {
                                 className: E.clickableTile,
                                 onClick: () => {
                                     null == i || i(),
@@ -188,16 +188,18 @@ function N(e) {
         });
     }, []);
     let { analyticsLocations: s, newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_INVITE),
-        p = (0, _._k)({ location: "single_user_tile" }),
+        p = (0, C._k)({ location: "single_user_tile" }),
         { enabled: h } = d.c.useExperiment({ location: "SingleUserTile" }, { autoTrackExposure: !0 });
     function b() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("98953")]).then(
+                    n.bind(n, 560114),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        P(I({}, n), {
+                        I(P({}, n), {
                             guild: l,
                             channel: t,
                             source: O.t4x.ACTIVITY_ENTRY_POINT_TILE,
@@ -220,7 +222,7 @@ function N(e) {
             analyticsLocation: u,
         });
     }
-    let C = h ? c.iWm : c.nG3,
+    let _ = h ? c.iWm : c.nG3,
         Z = p.isInCallEntrypointEnabled ? c.oLu : c.iFz;
     return (0, r.jsx)(m.Gt, {
         value: s,
@@ -250,7 +252,7 @@ function N(e) {
                                 }),
                                 (0, r.jsx)(c.zxk, {
                                     variant: "secondary",
-                                    icon: C,
+                                    icon: _,
                                     text: j.intl.string(j.t.qnFavb),
                                     onClick: y,
                                 }),
@@ -270,7 +272,7 @@ function A(e) {
         });
     });
     let g = (0, p.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: _ } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: C } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION),
         S = i.useMemo(
             () => ({
                 channel: t,
@@ -279,7 +281,7 @@ function A(e) {
             [t],
         );
     return (0, r.jsx)(m.Gt, {
-        value: _,
+        value: C,
         children: (0, r.jsxs)(x.Z, {
             className: E.root,
             children: [
@@ -317,7 +319,7 @@ function A(e) {
                             (0, y.Q3)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, r.jsx)(C.Z, {}),
+                        (0, r.jsx)(_.Z, {}),
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
                             children: j.intl.string(j.t["5E9SBw"]),

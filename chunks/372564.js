@@ -1,18 +1,18 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    o = n(374470),
+    o = n.n(l),
+    a = n(374470),
     s = n(481060),
     c = n(239091),
     u = n(454585),
     d = n(984370),
     p = n(981631),
-    h = n(388032),
-    f = n(413140),
-    m = n(430864);
-function g(e, t, n) {
+    f = n(388032),
+    h = n(413140),
+    g = n(430864);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,15 +36,15 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e) {
+function O(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class _ extends i.Component {
+class y extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -54,7 +54,7 @@ class _ extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)("div", {
-                          className: a()(f.topic, f.expandable, m.markup),
+                          className: o()(h.topic, h.expandable, g.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -63,12 +63,12 @@ class _ extends i.Component {
                           children: [
                               (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
-                                  "aria-label": h.intl.string(h.t.mKwsSk),
-                                  className: f.topicClickTarget,
+                                  "aria-label": f.intl.string(f.t.mKwsSk),
+                                  className: h.topicClickTarget,
                               }),
                               null == e.linkedLobby || t
                                   ? u.Z.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : h.intl.string(h.t.XJVlf3),
+                                  : f.intl.string(f.t.XJVlf3),
                           ],
                       }),
                   ],
@@ -77,35 +77,46 @@ class _ extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            g(this, "_mouseDown", !1),
-            g(this, "_mouseUp", !1),
-            g(this, "handleOpenTopic", (e) => {
+            m(this, "_mouseDown", !1),
+            m(this, "_mouseUp", !1),
+            m(this, "handleOpenTopic", (e) => {
                 let t = e.target;
-                if ((0, o.kK)(t)) {
-                    if (y(t)) return;
+                if ((0, a.kK)(t)) {
+                    if (O(t)) return;
                     let e = t.parentNode;
-                    if ((0, o.kK)(e) && y(e)) return;
+                    if ((0, a.kK)(e) && O(e)) return;
                 }
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("65631").then(n.bind(n, 10722));
                     return (t) => (0, r.jsx)(e, b({}, t, this.props));
                 });
             }),
-            g(this, "onMouseDown", () => {
+            m(this, "onMouseDown", () => {
                 this._mouseDown = !0;
             }),
-            g(this, "onMouseMove", () => {
+            m(this, "onMouseMove", () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            g(this, "onMouseUp", (e) => {
+            m(this, "onMouseUp", (e) => {
                 this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e),
                     (this._mouseUp = !0),
                     (this._mouseDown = !1);
             }),
-            g(this, "handleContextMenu", (e) => {
+            m(this, "handleContextMenu", (e) => {
                 let { channel: t, guild: i } = this.props;
                 (0, c.jW)(e, async () => {
-                    let { default: e } = await n.e("24783").then(n.bind(n, 439635));
+                    let { default: e } = await Promise.all([
+                        n.e("57804"),
+                        n.e("49049"),
+                        n.e("46154"),
+                        n.e("62856"),
+                        n.e("66201"),
+                        n.e("91315"),
+                        n.e("30474"),
+                        n.e("91053"),
+                        n.e("24783"),
+                        n.e("2498"),
+                    ]).then(n.bind(n, 439635));
                     return (n) =>
                         (0, r.jsx)(
                             e,
@@ -134,7 +145,7 @@ class _ extends i.Component {
                         );
                 });
             }),
-            g(this, "handleClick", (e) => {
+            m(this, "handleClick", (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -143,4 +154,4 @@ class _ extends i.Component {
             });
     }
 }
-let C = _;
+let _ = y;

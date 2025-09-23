@@ -14,11 +14,11 @@ var r = n(951288),
     m = n(271383),
     g = n(594174),
     b = n(51144),
-    _ = n(967128),
-    y = n(981631),
-    C = n(388032),
-    x = n(149623);
-function v(e) {
+    y = n(967128),
+    C = n(981631),
+    _ = n(388032),
+    v = n(149623);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,23 +63,23 @@ function O(e, t) {
 }
 function j(e) {
     var t, l, p;
-    let { userId: _, channel: y } = e,
-        C = i.useRef(null),
+    let { userId: y, channel: C } = e,
+        _ = i.useRef(null),
         { analyticsLocations: j } = (0, d.ZP)(u.Z.USERNAME),
-        E = (0, o.e7)([g.default], () => g.default.getUser(_)),
-        S = (0, o.e7)([m.ZP], () => (null != _ ? m.ZP.getMember(y.guild_id, _) : null)),
-        I = (0, h.X7)(y.guild_id, null != _ ? _ : void 0, null != (t = null == S ? void 0 : S.colorStrings) ? t : null);
-    function P(e) {
+        E = (0, o.e7)([g.default], () => g.default.getUser(y)),
+        S = (0, o.e7)([m.ZP], () => (null != y ? m.ZP.getMember(C.guild_id, y) : null)),
+        P = (0, h.X7)(C.guild_id, null != y ? y : void 0, null != (t = null == S ? void 0 : S.colorStrings) ? t : null);
+    function I(e) {
         if (null == E) return null;
         (0, c.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e("79695"), n.e("70675")]).then(n.bind(n, 654663));
+            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("85994")]).then(n.bind(n, 654663));
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    O(v({}, t), {
+                    O(x({}, t), {
                         user: E,
-                        guildId: y.guild_id,
-                        channel: y,
+                        guildId: C.guild_id,
+                        channel: C,
                     }),
                 );
         });
@@ -88,30 +88,30 @@ function j(e) {
         T = null == S ? void 0 : S.colorString;
     return null == E
         ? (0, r.jsx)("span", {
-              className: a()(x.threadCreatorName, x.unknownCreatorName),
+              className: a()(v.threadCreatorName, v.unknownCreatorName),
               children: Z,
           })
         : (0, r.jsx)(d.Gt, {
               value: j,
               children: (0, r.jsx)(f.Z, {
-                  targetElementRef: C,
+                  targetElementRef: _,
                   user: E,
-                  guildId: y.guild_id,
-                  channelId: y.id,
+                  guildId: C.guild_id,
+                  channelId: C.id,
                   roleId: null == S ? void 0 : S.colorRoleId,
                   clickTrap: !0,
                   children: (e) =>
                       (0, r.jsx)(
                           s.P3F,
-                          O(v({}, e), {
-                              innerRef: C,
+                          O(x({}, e), {
+                              innerRef: _,
                               tag: "span",
-                              className: x.threadCreatorName,
-                              onContextMenu: P,
+                              className: v.threadCreatorName,
+                              onContextMenu: I,
                               children: (0, r.jsx)(s.PUh, {
                                   name: Z,
                                   colorString: null != T ? T : null,
-                                  colorStrings: I,
+                                  colorStrings: P,
                               }),
                           }),
                       ),
@@ -129,8 +129,8 @@ function E(e) {
                       variant: "text-md/normal",
                       color: "header-secondary",
                       children: (0, r.jsx)("div", {
-                          className: x.subtitle,
-                          children: C.intl.format(C.t.imPXd3, {
+                          className: v.subtitle,
+                          children: _.intl.format(_.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
                                       j,
@@ -143,11 +143,11 @@ function E(e) {
                           }),
                       }),
                   }),
-                  t.type === y.d4z.PRIVATE_THREAD
+                  t.type === C.d4z.PRIVATE_THREAD
                       ? (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: C.intl.string(C.t["1awbZG"]),
+                            children: _.intl.string(_.t["1awbZG"]),
                         })
                       : null,
               ],
@@ -157,14 +157,14 @@ function S(e) {
     var t;
     let { channel: n } = e,
         i = null != (t = (0, p.KS)(n)) ? t : s.or_;
-    return (0, r.jsxs)(_.ZP, {
+    return (0, r.jsxs)(y.ZP, {
         channelId: n.id,
         children: [
             (0, r.jsx)("div", {
-                className: x.iconWrapper,
-                children: (0, r.jsx)(i, { className: x.icon }),
+                className: v.iconWrapper,
+                children: (0, r.jsx)(i, { className: v.icon }),
             }),
-            (0, r.jsx)(_.Ot, { children: n.name }),
+            (0, r.jsx)(y.Ot, { children: n.name }),
             (0, r.jsx)(E, { channel: n }),
         ],
     });

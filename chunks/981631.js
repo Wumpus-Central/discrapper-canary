@@ -2080,6 +2080,7 @@ let em = "@me",
         ACCOUNT_REVERT: (e) => "/wasntme/".concat(e),
         POWERUP_STORE: (e) => "/channels/".concat(e, "/boosts"),
         CONFERENCE_MODE: "/conference-mode",
+        CONFERENCE_MODE_VOICE: (e, t) => "/conference-mode/voice/".concat(e, "/").concat(t),
     }),
     eC = (0, f.Ft)(eS),
     eN = (0, f.Ft)(eA, [":", "?", "@"]);

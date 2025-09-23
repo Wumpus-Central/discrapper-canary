@@ -3,8 +3,8 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     o = n.n(l),
-    a = n(574981),
-    s = n(938288),
+    a = n(100568),
+    s = n(401393),
     c = n(91192),
     u = n(399606),
     d = n(846519),
@@ -23,11 +23,11 @@ var r = n(951288),
     C = n(276952),
     E = n(249792),
     S = n(40153),
-    P = n(593618),
-    I = n(252686),
+    I = n(593618),
+    P = n(252686),
     N = n(682662),
-    Z = n(674552),
-    w = n(981631),
+    w = n(674552),
+    Z = n(981631),
     T = n(388032),
     A = n(534175);
 function R(e) {
@@ -75,29 +75,28 @@ function D(e, t) {
 }
 let L = {
     analyticsSource: {
-        page: w.ZY5.GUILD_CHANNEL,
-        section: w.jXE.CHANNEL_LIST,
-        object: w.qAy.CHANNEL,
+        page: Z.ZY5.GUILD_CHANNEL,
+        section: Z.jXE.CHANNEL_LIST,
+        object: Z.qAy.CHANNEL,
     },
 };
 function M(e, t) {
     (0, h.jW)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("36599"),
-            n.e("60962"),
+            n.e("7654"),
             n.e("58175"),
             n.e("55616"),
             n.e("8271"),
             n.e("15851"),
             n.e("51453"),
-            n.e("7654"),
             n.e("845"),
-            n.e("47463"),
+            n.e("58511"),
             n.e("6850"),
             n.e("58227"),
             n.e("54408"),
             n.e("90746"),
-            n.e("8106"),
+            n.e("21376"),
             n.e("56534"),
             n.e("87154"),
             n.e("33213"),
@@ -132,11 +131,11 @@ let k = i.memo(function (e) {
             "aria-posinset": el,
         } = e,
         { id: eo, parentId: ea } = U,
-        es = null != (t = e.upperBadge) ? t : q ? (0, Z.Ny)() : null != Y ? (0, Z.Or)(Y) : void 0,
+        es = null != (t = e.upperBadge) ? t : q ? (0, w.Ny)() : null != Y ? (0, w.Or)(Y) : void 0,
         ec = null != (n = e.lowerBadge) ? n : void 0;
     null == ec && X > 0
-        ? (ec = null != (l = (0, Z.Ne)(X, Q ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0)
-        : null == ec && null != en && (ec = null != (h = (0, Z.jt)({ guildJoinRequestStatus: en })) ? h : void 0);
+        ? (ec = null != (l = (0, w.Ne)(X, Q ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0)
+        : null == ec && null != en && (ec = null != (h = (0, w.jt)({ guildJoinRequestStatus: en })) ? h : void 0);
     let eu = null != (k = e.lowerBadgeSize) ? k : { width: (0, p.OVM)(X) },
         [{ dragging: ed }, ep] = (0, a.c)({
             type: x.eD.GUILD,
@@ -154,7 +153,7 @@ let k = i.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
-        ef = (0, c.Ie)(null != eo ? eo : w.lds, null != ea ? 2 : 1),
+        ef = (0, c.Ie)(null != eo ? eo : Z.lds, null != ea ? 2 : 1),
         [eh, eg] = i.useState(!1),
         em = !ee && eh,
         [eb, eO] = i.useState(!1),
@@ -186,14 +185,14 @@ let k = i.memo(function (e) {
             },
             [ea],
         ),
-        eP = i.useCallback(
+        eI = i.useCallback(
             (e) => {
                 if (e) return void ev.delay();
                 ev.cancel(), e_(!1);
             },
             [ev],
         ),
-        eI = i.useCallback(
+        eP = i.useCallback(
             (e) => {
                 null == G || G(eo, e);
             },
@@ -201,7 +200,7 @@ let k = i.memo(function (e) {
         ),
         eN = (0, p.dQu)(p.TVs.modules.guildbar.AVATAR_SIZE);
     if (null == H) return null;
-    let eZ =
+    let ew =
             ey || eb
                 ? (0, r.jsx)(E.Z, {
                       guild: H,
@@ -246,8 +245,8 @@ let k = i.memo(function (e) {
                           },
                       ),
                   ),
-        ew = ed
-            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(I.Z, {}) })
+        eZ = ed
+            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(P.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
                       ? (e) => {
@@ -267,11 +266,11 @@ let k = i.memo(function (e) {
                       upperBadge: es,
                       lowerBadge: ec,
                       lowerBadgeSize: eu,
-                      children: eZ,
+                      children: ew,
                   }),
               });
     return (0, r.jsxs)(N.H, {
-        ref: eI,
+        ref: eP,
         children: [
             (0, r.jsx)(C.Z, {
                 hovered: !ed && em,
@@ -279,17 +278,17 @@ let k = i.memo(function (e) {
                 unread: !ed && K,
                 className: A.pill,
             }),
-            (0, r.jsx)(P.Z, {
+            (0, r.jsx)(I.Z, {
                 guild: H,
                 disabled: ee,
                 isDragging: ed,
-                children: ew,
+                children: eZ,
             }),
             $
                 ? (0, r.jsx)(S.ZP, {
                       name: H.name,
                       targetNode: U,
-                      onDragOverChanged: eP,
+                      onDragOverChanged: eI,
                   })
                 : null,
         ],

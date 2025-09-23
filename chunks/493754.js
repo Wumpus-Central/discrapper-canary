@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => C,
-    Z: () => x,
+    W: () => _,
+    Z: () => v,
 });
 var r = n(951288);
 n(647438);
@@ -18,7 +18,7 @@ var i = n(120356),
     m = n(981631),
     g = n(388032),
     b = n(811130);
-function _(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function y(e, t) {
         e
     );
 }
-function C(e) {
+function _(e) {
     let {
         guild: t,
         channel: i,
@@ -75,11 +75,13 @@ function C(e) {
     null == s || s(),
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("7654"), n.e("62292")]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e("7654"), n.e("49049"), n.e("98953")]).then(
+                    n.bind(n, 560114),
+                );
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        y(_({}, n), {
+                        C(y({}, n), {
                             guild: t,
                             channel: i,
                             streamUserId: l,
@@ -96,15 +98,15 @@ function C(e) {
             },
         );
 }
-function x(e) {
+function v(e) {
     var t,
         {
             stream: n,
             applicationId: i,
             channel: a,
             exitFullScreen: u,
-            appContext: x,
-            analyticsLocation: v,
+            appContext: v,
+            analyticsLocation: x,
             className: O,
         } = e,
         j = (function (e, t) {
@@ -130,9 +132,9 @@ function x(e) {
         })(e, ["stream", "applicationId", "channel", "exitFullScreen", "appContext", "analyticsLocation", "className"]);
     let E = null == a ? void 0 : a.getGuildId(),
         S = null == a ? void 0 : a.id,
-        I = (0, s.e7)([h.Z], () => (null != E ? h.Z.getGuild(E) : null), [E]),
-        P = (0, s.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
-    if (!(null != I && null != a && f.Z.can(m.Plq.CREATE_INSTANT_INVITE, a))) return null;
+        P = (0, s.e7)([h.Z], () => (null != E ? h.Z.getGuild(E) : null), [E]),
+        I = (0, s.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
+    if (!(null != P && null != a && f.Z.can(m.Plq.CREATE_INSTANT_INVITE, a))) return null;
     let Z = g.intl.string(g.t.VINpSE);
     return (
         null != n ? (Z = g.intl.string(g.t["6VQaqa"])) : null != i && (Z = g.intl.string(g.t["OzOM/v"])),
@@ -140,23 +142,23 @@ function x(e) {
             children: [
                 (0, r.jsx)(
                     c.zx,
-                    y(
-                        _(
+                    C(
+                        y(
                             {
                                 size: null != (t = j.size) ? t : c.zx.Sizes.SMALL,
                                 color: b.buttonColor,
                                 onClick: () => {
-                                    o()(null != I, "guild cannot be null"),
+                                    o()(null != P, "guild cannot be null"),
                                         o()(null != a, "channel cannot be null"),
-                                        C({
-                                            guild: I,
+                                        _({
+                                            guild: P,
                                             channel: a,
                                             streamUserId: null == n ? void 0 : n.ownerId,
                                             applicationId: i,
-                                            appContext: x,
+                                            appContext: v,
                                             exitFullScreen: u,
-                                            analyticsLocation: v,
-                                            guildScheduledEvent: P,
+                                            analyticsLocation: x,
+                                            guildScheduledEvent: I,
                                         });
                                 },
                                 className: l()(O, b.textButton),
@@ -169,11 +171,11 @@ function x(e) {
                 (0, r.jsx)(p.Z, {
                     channel: a,
                     stream: n,
-                    appContext: x,
+                    appContext: v,
                     className: l()(O, b.iconButton),
                     exitFullScreen: u,
-                    analyticsLocation: v,
-                    guildScheduledEvent: P,
+                    analyticsLocation: x,
+                    guildScheduledEvent: I,
                 }),
             ],
         })

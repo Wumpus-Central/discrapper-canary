@@ -2,8 +2,8 @@ n.d(t, { Z: () => S }), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
-    a = n.n(l),
-    s = n(692547),
+    s = n.n(l),
+    a = n(692547),
     o = n(755721),
     c = n(481060),
     d = n(239091),
@@ -16,8 +16,8 @@ var r = n(951288),
     b = n(827907),
     x = n(868814),
     j = n(981631),
-    _ = n(388032),
-    v = n(813878);
+    v = n(388032),
+    _ = n(813878);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -66,9 +66,9 @@ function C(e) {
         l = (0, b.Mf)(i.id);
     return "null" === i.id
         ? (0, r.jsx)("div", {
-              className: a()(v.categoryRow, v.uncategorized),
+              className: s()(_.categoryRow, _.uncategorized),
               children: (0, r.jsx)(c.Text, {
-                  className: v.categoryText,
+                  className: _.categoryText,
                   color: "text-muted",
                   variant: "text-xs/semibold",
                   lineClamp: 1,
@@ -76,12 +76,15 @@ function C(e) {
               }),
           })
         : (0, r.jsxs)(c.P3F, {
-              className: a()(v.categoryRow, { [v.uncategorized]: "null" === i.id }),
+              className: s()(_.categoryRow, { [_.uncategorized]: "null" === i.id }),
               onContextMenu: (e) => {
                   (0, d.jW)(e, async () => {
-                      let { default: e } = await Promise.all([n.e("90508"), n.e("68294"), n.e("8965")]).then(
-                          n.bind(n, 139035),
-                      );
+                      let { default: e } = await Promise.all([
+                          n.e("90508"),
+                          n.e("24358"),
+                          n.e("8965"),
+                          n.e("98350"),
+                      ]).then(n.bind(n, 139035));
                       return (n) =>
                           (0, r.jsx)(
                               e,
@@ -111,7 +114,7 @@ function C(e) {
               ),
               children: [
                   (0, r.jsx)(c.Text, {
-                      className: v.categoryText,
+                      className: _.categoryText,
                       color: "text-muted",
                       variant: "text-xs/semibold",
                       lineClamp: 1,
@@ -121,14 +124,14 @@ function C(e) {
                       "aria-checked": l,
                       value: l,
                       type: o.M0.INVERTED,
-                      className: v.checkbox,
+                      className: _.checkbox,
                       displayOnly: !0,
                   }),
               ],
           });
 }
 let N = i.memo(function () {
-        return (0, r.jsx)("div", { className: v.separator });
+        return (0, r.jsx)("div", { className: _.separator });
     }),
     E = i.memo(function (e) {
         let { index: t } = e;
@@ -136,7 +139,7 @@ let N = i.memo(function () {
             c.Text,
             {
                 variant: "text-xs/normal",
-                className: v.subtitleSeparator,
+                className: _.subtitleSeparator,
                 children: "\xB7",
             },
             "separator-".concat(t),
@@ -183,11 +186,10 @@ let N = i.memo(function () {
                           let { default: e } = await Promise.all([
                               n.e("79695"),
                               n.e("90508"),
-                              n.e("68294"),
+                              n.e("24358"),
                               n.e("18320"),
-                              n.e("97755"),
                               n.e("83331"),
-                              n.e("76168"),
+                              n.e("19899"),
                           ]).then(n.bind(n, 213202));
                           return (n) =>
                               (0, r.jsx)(
@@ -200,25 +202,25 @@ let N = i.memo(function () {
                       })
                     : (0, d.jW)(e, async () => {
                           let { default: e } = await Promise.all([
-                              n.e("79255"),
+                              n.e("75387"),
                               n.e("79695"),
                               n.e("90508"),
                               n.e("33285"),
-                              n.e("68294"),
-                              n.e("99534"),
-                              n.e("76676"),
-                              n.e("35755"),
-                              n.e("69634"),
-                              n.e("37220"),
-                              n.e("46653"),
+                              n.e("46154"),
                               n.e("91315"),
+                              n.e("24358"),
+                              n.e("30474"),
+                              n.e("38342"),
+                              n.e("91053"),
+                              n.e("35755"),
+                              n.e("47387"),
+                              n.e("37220"),
                               n.e("18320"),
-                              n.e("97755"),
-                              n.e("36745"),
-                              n.e("62987"),
+                              n.e("95546"),
+                              n.e("21616"),
                               n.e("93077"),
-                              n.e("55196"),
-                              n.e("46763"),
+                              n.e("63373"),
+                              n.e("39682"),
                           ]).then(n.bind(n, 373651));
                           return (n) =>
                               (0, r.jsx)(
@@ -242,10 +244,10 @@ let N = i.memo(function () {
                             y(
                                 O(
                                     {
-                                        className: a()(v.channelRow, {
-                                            [v.firstChannel]: f,
-                                            [v.lastChannel]: C,
-                                            [v.disabled]: T,
+                                        className: s()(_.channelRow, {
+                                            [_.firstChannel]: f,
+                                            [_.lastChannel]: C,
+                                            [_.disabled]: T,
                                         }),
                                     },
                                     e,
@@ -255,18 +257,18 @@ let N = i.memo(function () {
                                     onContextMenu: A,
                                     children: [
                                         (0, r.jsx)("div", {
-                                            className: v.channelInfo,
+                                            className: _.channelInfo,
                                             children: (0, r.jsxs)("div", {
-                                                className: v.channelName,
+                                                className: _.channelName,
                                                 children: [
                                                     (0, r.jsx)(p._W, {
                                                         channel: t,
                                                         guild: l,
                                                     }),
                                                     (0, r.jsx)(u.Z, {
-                                                        className: v.__invalid_name,
+                                                        className: _.__invalid_name,
                                                         children: (0, r.jsx)(c.Text, {
-                                                            className: v.channelText,
+                                                            className: _.channelText,
                                                             variant: "text-md/medium",
                                                             lineClamp: 1,
                                                             color: T ? "text-muted" : "text-default",
@@ -279,9 +281,9 @@ let N = i.memo(function () {
                                                                   (0, r.jsx)(E, { index: 0 }),
                                                                   (0, r.jsx)(c.Text, {
                                                                       variant: "text-xs/medium",
-                                                                      className: v.channelSubtitle,
+                                                                      className: _.channelSubtitle,
                                                                       color: "text-brand",
-                                                                      children: _.intl.string(_.t.mPxmeH),
+                                                                      children: v.intl.string(v.t.mPxmeH),
                                                                   }),
                                                               ],
                                                           })
@@ -290,7 +292,7 @@ let N = i.memo(function () {
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: v.channelActions,
+                                            className: _.channelActions,
                                             children: (0, m.s)(t.guild_id, t.id)
                                                 ? (0, r.jsx)(o.$q, {
                                                       "aria-checked": S,
@@ -298,15 +300,15 @@ let N = i.memo(function () {
                                                       type: o.M0.INVERTED,
                                                       disabled: T,
                                                       color: Z
-                                                          ? s.Z.colors.BG_BRAND.css
-                                                          : s.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
-                                                      innerClassName: v.checkboxInner,
+                                                          ? a.Z.colors.BG_BRAND.css
+                                                          : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
+                                                      innerClassName: _.checkboxInner,
                                                       displayOnly: !0,
                                                   })
                                                 : (0, r.jsx)(c.zxk, {
                                                       size: "sm",
                                                       variant: "secondary",
-                                                      text: _.intl.string(_.t.zA9d1N),
+                                                      text: v.intl.string(v.t.zA9d1N),
                                                       icon: c.mBM,
                                                       onClick: j.dG4,
                                                   }),
@@ -321,8 +323,8 @@ let N = i.memo(function () {
         });
     });
 function S(e) {
-    let { categories: t, guild: n, className: l, hasSidebar: a } = e,
-        s = i.useCallback(
+    let { categories: t, guild: n, className: l, hasSidebar: s } = e,
+        a = i.useCallback(
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
@@ -339,29 +341,29 @@ function S(e) {
         o = i.useCallback(
             (e, i) => {
                 let l = t._categories[e],
-                    s = t[l.channel.id][i];
-                return null == s
+                    a = t[l.channel.id][i];
+                return null == a
                     ? null
                     : (0, r.jsx)(
                           I,
                           {
                               category: l.channel,
-                              channel: s.channel,
+                              channel: a.channel,
                               guild: n,
                               isFirstChannel: 0 === i,
                               isLastChannel: t[l.channel.id].length - 1 === i,
-                              tooltipDirection: a ? "right" : "top",
+                              tooltipDirection: s ? "right" : "top",
                           },
-                          s.channel.id,
+                          a.channel.id,
                       );
             },
-            [t, n, a],
+            [t, n, s],
         ),
         c = (0, f.tn)(n.id, t, 64);
     return (0, r.jsx)("div", {
         className: l,
         children: c.map((e, t) => {
-            let n = s(t),
+            let n = a(t),
                 i = [],
                 l = e.rowCount;
             if (0 === l) return null;
