@@ -42,7 +42,7 @@ var r = n(951288),
     U = n(723642),
     G = n(981631),
     B = n(388032),
-    Z = n(557818);
+    Z = n(339450);
 function F(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function F(e, t, n) {
         e
     );
 }
-n(571654);
+n(614346);
 let V = 512,
     H = (0, m.hQ)(),
     Y = c()(x.Z.fetchMessages, 500);
@@ -320,15 +320,25 @@ class W extends i.PureComponent {
             F(this, "onBlur", (e) => {
                 this.handleBlur();
             }),
-            F(this, "handleReturn", (e) => {
-                var t;
-                let { shiftKey: n } = e;
-                e.preventDefault();
-                let r = this.getPopoutRef();
+            F(this, "handleOption", () => {
+                let { current: e } = this._searchPopoutRef;
                 return (
-                    (null != (t = null != r && r.selectOption({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS })) &&
-                        t) ||
-                        ((0, S.X$)() && n ? this.search({ searchEverywhere: !0 }) : this.search()),
+                    null != e &&
+                    (-1 === e.state.selectedIndex && e.shouldShowSearchInSelectedChannel()
+                        ? e.handleSearchInChannel({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS })
+                        : e.selectOption({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS }))
+                );
+            }),
+            F(this, "handleRedesignOption", () => {
+                let { current: e } = this._searchFiltersRedesignPopoutRef;
+                return null != e && e.selectOption({ searchAutocompleteSelectAction: U.ZW.KEY_PRESS });
+            }),
+            F(this, "handleReturn", (e) => {
+                let { shiftKey: t } = e;
+                return (
+                    e.preventDefault(),
+                    (this.props.isSearchFiltersRedesignEnabled ? this.handleRedesignOption() : this.handleOption()) ||
+                        ((0, S.X$)() && t ? this.search({ searchEverywhere: !0 }) : this.search()),
                     "handled"
                 );
             }),
