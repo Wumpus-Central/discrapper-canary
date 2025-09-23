@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(349504),
     y = n(981631),
     O = n(388032),
-    v = n(493090);
+    v = n(465262);
 function I(e, t, n) {
     return (
         t in e
@@ -303,7 +303,7 @@ function C(e) {
                                 result: i,
                                 group: o,
                             }),
-                            { label: c, ariaLabel: u } = (0, d.V4)(i),
+                            { label: c, ariaLabel: u } = (0, d.Nk)(i),
                             p =
                                 o === y.dCx.FILTER_FROM || o === y.dCx.FILTER_MENTIONS
                                     ? (0, r.jsx)(d.mW, {
@@ -356,10 +356,7 @@ function C(e) {
                                 result: n,
                                 group: i,
                             }),
-                            o = (0, d.GM)({
-                                result: n,
-                                group: i,
-                            }),
+                            o = (0, d.uB)(n),
                             { label: s, ariaLabel: l } = (0, d.V4)(n),
                             c = (t) => {
                                 let { selectedIndex: r, searchAutocompleteSelectAction: o } = t;
