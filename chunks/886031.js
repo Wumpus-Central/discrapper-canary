@@ -135,6 +135,11 @@ let u = {
                 type: "boolean",
                 defaultValue: !1,
             },
+            minWidth: {
+                label: "Min width",
+                type: "text",
+                defaultValue: "",
+            },
         },
     },
     d = {

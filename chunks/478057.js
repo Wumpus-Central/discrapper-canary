@@ -7,8 +7,11 @@ var r = n(951288),
     s = n(981631);
 function c() {
     return (0, i.e7)([o.default], () => {
-        var e;
-        return (null == (e = o.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0;
+        var e, t;
+        return (
+            (null == (e = o.default.getCurrentUser()) ? void 0 : e.isStaff()) === !0 ||
+            (null == (t = o.default.getCurrentUser()) ? void 0 : t.isStaffPersonal()) === !0
+        );
     })
         ? (0, r.jsx)(
               l.sNh,
