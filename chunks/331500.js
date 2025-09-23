@@ -1,105 +1,119 @@
-n.d(t, { Z: () => y });
-var r,
-    a,
-    i = n(951288),
-    s = n(647438),
-    c = n(793030),
-    o = n(442837),
-    l = n(481060),
-    d = n(100527),
-    u = n(744993),
-    b = n(693587),
-    m = n(567225),
-    p = n(809741),
-    f = n(473682),
-    j = n(401561),
-    g = n(388032),
-    v = n(134977);
-let x =
-    ((r = (function (e) {
-        for (var t = 1; t < arguments.length; t++) {
-            var n = null != arguments[t] ? arguments[t] : {},
-                r = Object.keys(n);
+t.d(n, { Z: () => O });
+var a,
+    r,
+    i = t(951288),
+    o = t(647438),
+    s = t(120356),
+    c = t.n(s),
+    l = t(793030),
+    d = t(442837),
+    u = t(481060),
+    b = t(100527),
+    m = t(744993),
+    g = t(693587),
+    f = t(567225),
+    x = t(678328),
+    p = t(809741),
+    j = t(473682),
+    v = t(440589),
+    _ = t(388032),
+    h = t(197530);
+let y =
+    ((a = (function (e) {
+        for (var n = 1; n < arguments.length; n++) {
+            var t = null != arguments[n] ? arguments[n] : {},
+                a = Object.keys(t);
             "function" == typeof Object.getOwnPropertySymbols &&
-                (r = r.concat(
-                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                (a = a.concat(
+                    Object.getOwnPropertySymbols(t).filter(function (e) {
+                        return Object.getOwnPropertyDescriptor(t, e).enumerable;
                     }),
                 )),
-                r.forEach(function (t) {
-                    var r;
-                    (r = n[t]),
-                        t in e
-                            ? Object.defineProperty(e, t, {
-                                  value: r,
+                a.forEach(function (n) {
+                    var a;
+                    (a = t[n]),
+                        n in e
+                            ? Object.defineProperty(e, n, {
+                                  value: a,
                                   enumerable: !0,
                                   configurable: !0,
                                   writable: !0,
                               })
-                            : (e[t] = r);
+                            : (e[n] = a);
                 });
         }
         return e;
-    })({}, f.T9)),
-    (a = a = { initialStep: f.Vb.SERVER_SETTINGS }),
+    })({}, j.T9)),
+    (r = r = { initialStep: j.Vb.SERVER_SETTINGS }),
     Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
-        : (function (e, t) {
-              var n = Object.keys(e);
+        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
+        : (function (e, n) {
+              var t = Object.keys(e);
               if (Object.getOwnPropertySymbols) {
-                  var r = Object.getOwnPropertySymbols(e);
-                  n.push.apply(n, r);
+                  var a = Object.getOwnPropertySymbols(e);
+                  t.push.apply(t, a);
               }
-              return n;
-          })(Object(a)).forEach(function (e) {
-              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+              return t;
+          })(Object(r)).forEach(function (e) {
+              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(r, e));
           }),
-    r);
-function y(e) {
-    let { guildId: t } = e;
-    s.useEffect(() => {
-        (0, u.po)(t);
-    }, [t]);
-    let n = (0, o.Wu)([b.Z], () => {
-        let e = b.Z.getStateForGuild(t);
-        return (null == e ? void 0 : e.catalog) != null ? Object.values(e.catalog) : [];
-    });
-    return 0 === n.length
+    a);
+function O(e) {
+    let { guildId: n } = e;
+    o.useEffect(() => {
+        (0, m.po)(n);
+    }, [n]);
+    let t = (0, d.e7)([g.Z], () => g.Z.getStateForGuild(n)),
+        { catalog: a, instances: r } = o.useMemo(() => {
+            var e, n;
+            return {
+                catalog: Object.values(null != (e = null == t ? void 0 : t.catalog) ? e : {}),
+                instances: Object.values(null != (n = null == t ? void 0 : t.instances) ? n : {}),
+            };
+        }, [null == t ? void 0 : t.catalog, null == t ? void 0 : t.instances]),
+        s = r.length >= j.zI;
+    return 0 === a.length
         ? (0, i.jsx)("div", {
-              className: v.container,
-              children: (0, i.jsx)(l.$jN, {
-                  type: l.RAz.SPINNING_CIRCLE,
-                  className: v.spinner,
+              className: h.container,
+              children: (0, i.jsx)(u.$jN, {
+                  type: u.RAz.SPINNING_CIRCLE,
+                  className: h.spinner,
               }),
           })
         : (0, i.jsxs)("div", {
-              className: v.container,
+              className: h.container,
               children: [
-                  (0, i.jsx)(c.X6q, {
-                      className: v.heading,
+                  (0, i.jsx)(l.X6q, {
+                      className: h.heading,
                       variant: "heading-md/semibold",
-                      children: g.intl.string(j.default.jeYp1t),
+                      children: _.intl.string(v.default.jeYp1t),
                   }),
-                  (0, i.jsx)(c.zJl, {
-                      className: v.gameContainerWrapper,
+                  s &&
+                      (0, i.jsx)("div", {
+                          className: h.maxInstancesWarning,
+                          children: (0, i.jsx)(x.Y, {}),
+                      }),
+                  (0, i.jsx)(l.zJl, {
+                      className: c()(h.gameContainerWrapper, { [h.disabled]: s }),
                       children: (0, i.jsx)("div", {
-                          className: v.gameContainer,
-                          children: n.map((e, n) =>
+                          className: h.gameContainer,
+                          children: a.map((e, t) =>
                               (0, i.jsx)(
-                                  m.Z,
+                                  f.Z,
                                   {
-                                      className: v.game,
+                                      className: h.game,
                                       game: e,
                                       onClick: () =>
                                           (0, p.Z)({
-                                              guildId: t,
-                                              stepConfig: x,
+                                              guildId: n,
+                                              stepConfig: y,
                                               initialPortkeyGame: e,
-                                              analyticsLocation: d.Z.PORTKEY_OVERVIEW,
+                                              analyticsLocation: b.Z.PORTKEY_OVERVIEW,
                                           }),
-                                      imageClassName: v.image,
+                                      imageClassName: h.image,
+                                      disabled: s,
                                   },
-                                  "sidebar-game-".concat(n, "-").concat(e.id),
+                                  "sidebar-game-".concat(t, "-").concat(e.id),
                               ),
                           ),
                       }),

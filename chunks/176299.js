@@ -24,8 +24,8 @@ var r = n(951288),
     S = n(823748),
     T = n(626421),
     N = n(118379),
-    j = n(267161),
-    P = n(652515),
+    P = n(267161),
+    j = n(652515),
     x = n(544978),
     A = n(540059),
     Z = n(591472),
@@ -78,8 +78,8 @@ var r = n(951288),
     eS = n(715702),
     eT = n(981631),
     eN = n(176505),
-    ej = n(215023),
-    eP = n(290511),
+    eP = n(215023),
+    ej = n(290511),
     ex = n(186901),
     eA = n(861218);
 function eZ(e) {
@@ -163,7 +163,7 @@ let ew = (0, u.Un)({
         renderLoader: eL,
     }),
     eV = (0, u.Un)({
-        createPromise: () => n.e("85683").then(n.bind(n, 15133)),
+        createPromise: () => Promise.all([n.e("60728"), n.e("85683")]).then(n.bind(n, 15133)),
         webpackId: 15133,
         name: "PortkeyPage",
         renderLoader: eL,
@@ -192,7 +192,7 @@ let ew = (0, u.Un)({
                     }
             });
         ((0, er.WF)(a) && (0, er.WF)(c)) || (null != u && (0, es.uL)(eT.Z5c.CHANNEL(u.id, (0, ei.Z)(u))), (0, W.V)());
-        let h = (0, P.C4)(l, "channel_renderer");
+        let h = (0, j.C4)(l, "channel_renderer");
         if (null != l && null != a && (0, eN.AB)(a))
             switch (a) {
                 case eN.oC.ROLE_SUBSCRIPTIONS:
@@ -217,14 +217,14 @@ let ew = (0, u.Un)({
                 case eN.oC.CHANNEL_BROWSER:
                     return (0, r.jsx)(eU, {
                         guildId: l,
-                        selectedSection: eP.l7.BROWSE,
+                        selectedSection: ej.l7.BROWSE,
                     });
                 case eN.oC.GUILD_ONBOARDING:
                     return (0, r.jsx)(eG, { guildId: l });
                 case eN.oC.CUSTOMIZE_COMMUNITY:
                     return (0, r.jsx)(eU, {
                         guildId: l,
-                        selectedSection: eP.l7.CUSTOMIZE,
+                        selectedSection: ej.l7.CUSTOMIZE,
                     });
                 case eN.oC.MEMBER_SAFETY:
                     return (0, r.jsx)(eM, { guildId: l });
@@ -318,7 +318,7 @@ let ew = (0, u.Un)({
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             let { tab: n } = (0, o.parse)(t.location.search);
-            return Object.values(ej.AW).includes(n)
+            return Object.values(eP.AW).includes(n)
                 ? (0, r.jsx)(
                       N.Z,
                       eZ(
@@ -405,7 +405,7 @@ function e6(e) {
     b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u });
     let g = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         m = (0, A.T)("ChannelSidebar"),
-        E = (0, j.useAppSidebarState)((e) => !e.isOpen) && m;
+        E = (0, P.useAppSidebarState)((e) => !e.isOpen) && m;
     i.useLayoutEffect(() => {
         if (m) {
             var e;
@@ -415,7 +415,7 @@ function e6(e) {
                 !m && t <= eI.p8 && (t = eI.qO),
                 e2(t);
             let n = (e) => {
-                e.metaKey && "b" === e.key && j.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
+                e.metaKey && "b" === e.key && P.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
             return (
                 document.addEventListener("keydown", n),
@@ -448,7 +448,7 @@ function e6(e) {
                 let i = t - e;
                 null == (n = y.current) ||
                     n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / eI.p8), 0.25))),
-                    m && (j.useAppSidebarState.setState({ isOpen: !r }), r && e2(eI.p8));
+                    m && (P.useAppSidebarState.setState({ isOpen: !r }), r && e2(eI.p8));
             },
             [m],
         ),
@@ -476,7 +476,7 @@ function e6(e) {
             throttleDuration: 0,
         }),
         N = i.useCallback(() => {
-            j.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
+            P.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
         }, []);
     if (
         (i.useLayoutEffect(() => {
@@ -485,7 +485,7 @@ function e6(e) {
         l)
     )
         return null;
-    let P = { className: a()(eA.sidebarList, { [eA.sidebarListRounded]: !t }) };
+    let j = { className: a()(eA.sidebarList, { [eA.sidebarListRounded]: !t }) };
     return (0, r.jsx)(h.f6W, {
         theme: n,
         children: (e) => {
@@ -510,7 +510,7 @@ function e6(e) {
                             children: [
                                 (0, r.jsx)(
                                     "div",
-                                    ((t = eZ({}, P)),
+                                    ((t = eZ({}, j)),
                                     (i = i = { children: (0, r.jsx)(eF, {}) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -598,7 +598,7 @@ function e7() {
         b = l || a || o || u || m,
         _ = i.useCallback(() => K.Z.openSidebar(), []),
         O = (0, A.T)("AppView"),
-        E = (0, j.useAppSidebarState)((e) => !e.isOpen),
+        E = (0, P.useAppSidebarState)((e) => !e.isOpen),
         v = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         S = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
     return (0, r.jsx)("div", {
