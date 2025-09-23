@@ -5055,6 +5055,7 @@
   "w8e4qK": "You have {numOfErrors, plural, one { error} other { errors} }",
   "hvrPgI": "Poll will be live for 24 hours",
   "GD/8X1": "Create a Poll",
+  "jnq5Hh": "Error, !!{errorMessage}!!",
   "e9hWx8": "Poll answer style",
   "GhK6X1": "Text answers with optional media",
   "an4GKS": "Media only answers",
