@@ -29,7 +29,7 @@ var r = n(951288),
     I = n(354459),
     T = n(927923),
     S = n(388032),
-    A = n(368736);
+    A = n(867721);
 function C(e, t, n) {
     return (
         t in e
@@ -105,20 +105,24 @@ function D(e, t) {
 }
 let x = 16,
     L = (e) => {
-        let { hangStatusActivity: t, iconClassName: n, isSelf: i } = e;
+        let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: a } = e,
+            s = (e) => {
+                e.stopPropagation(), null == a || a();
+            };
         return i && null == t
-            ? (0, r.jsx)(
-                  s.u,
-                  {
-                      text: S.intl.string(S.t.qstQub),
-                      children: (0, r.jsx)(l.svS, { className: o()(A.icon, n) }),
-                  },
-                  "add-status",
-              )
-            : (0, r.jsx)(g.Z, {
-                  size: x,
-                  hangStatusActivity: t,
-                  className: o()(A.icon, n),
+            ? (0, r.jsx)(l.P3F, {
+                  onClick: s,
+                  className: A.icons,
+                  children: (0, r.jsx)(l.svS, { className: o()(A.icon, n) }),
+              })
+            : (0, r.jsx)(l.P3F, {
+                  onClick: s,
+                  className: A.icons,
+                  children: (0, r.jsx)(g.Z, {
+                      size: x,
+                      hangStatusActivity: t,
+                      className: o()(A.icon, n),
+                  }),
               });
     },
     j = (e) => {
@@ -157,11 +161,12 @@ function M(e) {
             isSelf: F,
             handleHoverHangStatus: V,
             handleHoverIcons: H,
+            onAddHangStatusClicked: Y,
         } = e,
-        { enabled: Y } = u.c.getCurrentConfig({ location: "VoiceUserIcons" }, { autoTrackExposure: !0 });
+        { enabled: W } = u.c.getCurrentConfig({ location: "VoiceUserIcons" }, { autoTrackExposure: !0 });
     if (h || O) return null;
-    let W = [],
-        K = B({
+    let K = [],
+        z = B({
             iconClassName: N,
             mute: n,
             localMute: i,
@@ -171,7 +176,7 @@ function M(e) {
         });
     m &&
         (a
-            ? W.push(
+            ? K.push(
                   (0, r.jsx)(
                       s.u,
                       {
@@ -186,7 +191,7 @@ function M(e) {
                       "video",
                   ),
               )
-            : W.push(
+            : K.push(
                   (0, r.jsx)(
                       s.u,
                       {
@@ -201,7 +206,7 @@ function M(e) {
                   ),
               )),
         k &&
-            W.push(
+            K.push(
                 (0, r.jsx)(
                     s.u,
                     {
@@ -214,14 +219,14 @@ function M(e) {
                     "disconnected",
                 ),
             );
-    let z = Y ? l.iWm : l.nG3;
+    let q = W ? l.iWm : l.nG3;
     null != R &&
-        W.push(
+        K.push(
             (0, r.jsx)(
                 s.u,
                 {
                     text: (0, d.Z)(R.name),
-                    children: (0, r.jsx)(z, {
+                    children: (0, r.jsx)(q, {
                         size: "md",
                         color: "currentColor",
                         className: o()(A.icon, N),
@@ -231,11 +236,11 @@ function M(e) {
             ),
         ),
         P === T.YE.XBOX || w === I.wR.XBOX
-            ? W.push((0, r.jsx)(b.Z, { className: o()(A.icon, N) }, "xbox"))
+            ? K.push((0, r.jsx)(b.Z, { className: o()(A.icon, N) }, "xbox"))
             : (P === T.YE.PLAYSTATION || w === I.wR.PLAYSTATION) &&
-              W.push((0, r.jsx)(E.Z, { className: o()(A.icon, N) }, "playstation")),
+              K.push((0, r.jsx)(E.Z, { className: o()(A.icon, N) }, "playstation")),
         C &&
-            W.push(
+            K.push(
                 (0, r.jsx)(
                     s.u,
                     {
@@ -249,10 +254,10 @@ function M(e) {
                     "watch",
                 ),
             ),
-        g && W.push((0, r.jsx)(_.ZP, { size: _.ZP.Sizes.SMALL }, "stream"));
-    let q = null != D && !(0, y.yE)(D.flags, v.udG.EMBEDDED),
-        X = null == U && q;
-    return 0 !== W.length || 0 !== K.length || Z || X
+        g && K.push((0, r.jsx)(_.ZP, { size: _.ZP.Sizes.SMALL }, "stream"));
+    let X = null != D && !(0, y.yE)(D.flags, v.udG.EMBEDDED),
+        Q = null == U && X;
+    return 0 !== K.length || 0 !== z.length || Z || Q
         ? (0, r.jsxs)("div", {
               className: o()(A.icons, t),
               children: [
@@ -260,14 +265,14 @@ function M(e) {
                       className: A.iconGroup,
                       onMouseEnter: () => (null == H ? void 0 : H(!0)),
                       onMouseLeave: () => (null == H ? void 0 : H(!1)),
-                      children: [K, W],
+                      children: [z, K],
                   }),
-                  Z || X
+                  Z || Q
                       ? (0, r.jsx)("div", {
                             className: A.iconGroup,
                             onMouseEnter: () => (null == V ? void 0 : V(!0)),
                             onMouseLeave: () => (null == V ? void 0 : V(!1)),
-                            children: X
+                            children: Q
                                 ? (0, r.jsx)(
                                       G,
                                       {
@@ -283,6 +288,7 @@ function M(e) {
                                       hangStatusActivity: U,
                                       iconClassName: N,
                                       isSelf: F,
+                                      onAddHangStatusClicked: Y,
                                   }),
                         })
                       : null,
