@@ -33,8 +33,8 @@ var n = s(951288),
     N = s(134483),
     _ = s(683650),
     V = s(70956),
-    A = s(188764);
-function D(e, t, s) {
+    A = s(745776);
+function L(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function D(e, t, s) {
         e
     );
 }
-function L(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(s);
@@ -58,7 +58,7 @@ function L(e) {
                 }),
             )),
             n.forEach(function (t) {
-                D(e, t, s[t]);
+                L(e, t, s[t]);
             });
     }
     return e;
@@ -181,18 +181,18 @@ let q = "1193992107035983872",
         userStatus: null,
         targetedContent: [],
     };
-function K() {
-    var e, t, a, u, d, D, M, q;
-    let [K, W] = r.useState(B),
+function W() {
+    var e, t, a, u, d, L, M, q;
+    let [W, K] = r.useState(B),
         Y = r.useCallback((e) => {
-            W(k(L({}, e), { preview: !0 }));
+            K(k(D({}, e), { preview: !0 }));
         }, []),
         [H, Q] = r.useState(E.a.UNENROLLED),
         [F, U] = r.useState(!1),
         [J, z] = r.useState(!1),
         [G, $] = r.useState(null),
         ee =
-            ((q = K.config),
+            ((q = W.config),
             (0, l.EQ)(q)
                 .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
                 .exhaustive());
@@ -207,22 +207,22 @@ function K() {
         ) {
             var s, n;
             Y(
-                k(L({}, K), {
+                k(D({}, W), {
                     config:
-                        ((s = K.config),
+                        ((s = W.config),
                         (n = { [e]: t }),
                         (0, l.EQ)(s)
-                            .with({ configVersion: 2 }, (e) => k(L({}, e), { assets: L({}, e.assets, n) }))
+                            .with({ configVersion: 2 }, (e) => k(D({}, e), { assets: D({}, e.assets, n) }))
                             .exhaustive()),
                 }),
             );
         }
     }
     function es(e, t) {
-        let s = K.config.taskConfigV2.tasks,
+        let s = W.config.taskConfigV2.tasks,
             n = s[o.X.WATCH_VIDEO];
         if (null == n) return;
-        let r = L({}, n.assets);
+        let r = D({}, n.assets);
         switch (e) {
             case "videoPlayerVideo":
                 r.video = { url: t };
@@ -231,16 +231,16 @@ function K() {
                 r.videoLowRes = { url: t };
                 break;
             case "videoPlayerThumbnail":
-                r.video = k(L({}, r.video), { thumbnail: t });
+                r.video = k(D({}, r.video), { thumbnail: t });
                 break;
             default:
                 return;
         }
         Y(
-            k(L({}, K), {
-                config: k(L({}, K.config), {
-                    taskConfigV2: k(L({}, K.config.taskConfigV2), {
-                        tasks: k(L({}, s), { [o.X.WATCH_VIDEO]: k(L({}, n), { assets: r }) }),
+            k(D({}, W), {
+                config: k(D({}, W.config), {
+                    taskConfigV2: k(D({}, W.config.taskConfigV2), {
+                        tasks: k(D({}, s), { [o.X.WATCH_VIDEO]: k(D({}, n), { assets: r }) }),
                     }),
                 }),
             }),
@@ -249,11 +249,11 @@ function K() {
     function en(e, t) {
         var s, n, r;
         Y(
-            k(L({}, K), {
-                config: k(L({}, K.config), {
-                    videoMetadata: k(L({}, K.config.videoMetadata), {
-                        messages: null != (r = null == (s = K.config.videoMetadata) ? void 0 : s.messages) ? r : {},
-                        assets: k(L({}, null == (n = K.config.videoMetadata) ? void 0 : n.assets), { [e]: t }),
+            k(D({}, W), {
+                config: k(D({}, W.config), {
+                    videoMetadata: k(D({}, W.config.videoMetadata), {
+                        messages: null != (r = null == (s = W.config.videoMetadata) ? void 0 : s.messages) ? r : {},
+                        assets: k(D({}, null == (n = W.config.videoMetadata) ? void 0 : n.assets), { [e]: t }),
                     }),
                 }),
             }),
@@ -263,27 +263,27 @@ function K() {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var s, n;
             Y(
-                k(L({}, K), {
+                k(D({}, W), {
                     config:
-                        ((s = K.config),
+                        ((s = W.config),
                         (n = { [e]: t }),
                         (0, l.EQ)(s)
-                            .with({ configVersion: 2 }, (e) => k(L({}, e), { messages: L({}, e.messages, n) }))
+                            .with({ configVersion: 2 }, (e) => k(D({}, e), { messages: D({}, e.messages, n) }))
                             .exhaustive()),
                 }),
             );
         }
     }
     function ea(e, t) {
-        let s = K.config.taskConfigV2.tasks,
+        let s = W.config.taskConfigV2.tasks,
             n = s[o.X.WATCH_VIDEO];
         if (null == n) return;
-        let r = k(L({}, n.messages), { [e]: t });
+        let r = k(D({}, n.messages), { [e]: t });
         Y(
-            k(L({}, K), {
-                config: k(L({}, K.config), {
-                    taskConfigV2: k(L({}, K.config.taskConfigV2), {
-                        tasks: k(L({}, s), { [o.X.WATCH_VIDEO]: k(L({}, n), { messages: r }) }),
+            k(D({}, W), {
+                config: k(D({}, W.config), {
+                    taskConfigV2: k(D({}, W.config.taskConfigV2), {
+                        tasks: k(D({}, s), { [o.X.WATCH_VIDEO]: k(D({}, n), { messages: r }) }),
                     }),
                 }),
             }),
@@ -293,16 +293,16 @@ function K() {
         if ("name" === e || "nameWithArticle" === e) {
             var n, r;
             Y(
-                k(L({}, K), {
+                k(D({}, W), {
                     config:
-                        ((n = K.config),
+                        ((n = W.config),
                         (r = { [e]: t }),
                         (0, l.EQ)(n)
                             .with({ configVersion: 2 }, (e) =>
-                                k(L({}, e), {
-                                    rewardsConfig: k(L({}, e.rewardsConfig), {
+                                k(D({}, e), {
+                                    rewardsConfig: k(D({}, e.rewardsConfig), {
                                         rewards: e.rewardsConfig.rewards.map((e, t) =>
-                                            t === s ? k(L({}, e), { messages: L({}, e.messages, r) }) : e,
+                                            t === s ? k(D({}, e), { messages: D({}, e.messages, r) }) : e,
                                         ),
                                     }),
                                 }),
@@ -313,26 +313,26 @@ function K() {
         }
     }
     function el(e, t) {
-        Y(k(L({}, K), { config: k(L({}, K.config), { colors: k(L({}, K.config.colors), { [e]: t }) }) }));
+        Y(k(D({}, W), { config: k(D({}, W.config), { colors: k(D({}, W.config.colors), { [e]: t }) }) }));
     }
     function eo() {
-        (0, f.Xv)(K.config)
-            ? (0, C.openQuestCollectibleRewardModal)(K, h.jn.GIFT_INVENTORY_FOR_YOU, !0)
+        (0, f.Xv)(W.config)
+            ? (0, C.openQuestCollectibleRewardModal)(W, h.jn.GIFT_INVENTORY_FOR_YOU, h.jn.INTERNAL_PREVIEW_TOOL, !0)
             : (0, C.openQuestsRewardCodeModal)({
-                  quest: K,
+                  quest: W,
                   questContent: h.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
-                  previewQuest: K,
+                  previewQuest: W,
                   sourceQuestContent: h.jn.INTERNAL_PREVIEW_TOOL,
               });
     }
     let ec = r.useMemo(() => {
-            for (let [e, t] of Object.entries(K.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
+            for (let [e, t] of Object.entries(W.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * V.Z.Seconds.MINUTE;
-        }, [K.config.taskConfigV2.tasks]),
-        eu = r.useMemo(() => o.X.WATCH_VIDEO in K.config.taskConfigV2.tasks, [K.config.taskConfigV2.tasks]);
-    i()(!1 !== K.preview && null != K.preview, "Preview config must have property preview: true");
-    let ed = K.config.taskConfigV2.tasks[o.X.WATCH_VIDEO];
+        }, [W.config.taskConfigV2.tasks]),
+        eu = r.useMemo(() => o.X.WATCH_VIDEO in W.config.taskConfigV2.tasks, [W.config.taskConfigV2.tasks]);
+    i()(!1 !== W.preview && null != W.preview, "Preview config must have property preview: true");
+    let ed = W.config.taskConfigV2.tasks[o.X.WATCH_VIDEO];
     return (0, n.jsxs)(g.zJl, {
         className: A.container,
         children: [
@@ -380,9 +380,9 @@ function K() {
                 className: A.fields,
                 children: (0, n.jsx)(P.Z, {
                     taskDuration: ec,
-                    taskConfigV2: K.config.taskConfigV2,
+                    taskConfigV2: W.config.taskConfigV2,
                     onSelect: function (e) {
-                        Y(k(L({}, K), { config: k(L({}, K.config), { taskConfigV2: e }) }));
+                        Y(k(D({}, W), { config: k(D({}, W.config), { taskConfigV2: e }) }));
                     },
                 }),
             }),
@@ -398,19 +398,19 @@ function K() {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: er,
-                        initialValue: K.config.messages.questName,
+                        initialValue: W.config.messages.questName,
                     }),
                     (0, n.jsx)(y.Z, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: er,
-                        initialValue: K.config.messages.gameTitle,
+                        initialValue: W.config.messages.gameTitle,
                     }),
                     (0, n.jsx)(y.Z, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: er,
-                        initialValue: K.config.messages.gamePublisher,
+                        initialValue: W.config.messages.gamePublisher,
                     }),
                     eu &&
                         (0, n.jsxs)(n.Fragment, {
@@ -450,42 +450,42 @@ function K() {
                         assetKey: "hero",
                         onFileChange: et,
                         filters: X,
-                        initialValue: K.config.assets.hero,
+                        initialValue: W.config.assets.hero,
                     }),
                     (0, n.jsx)(x.Z, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: et,
                         filters: X,
-                        initialValue: null != (D = K.config.assets.heroVideo) ? D : void 0,
+                        initialValue: null != (L = W.config.assets.heroVideo) ? L : void 0,
                     }),
                     (0, n.jsx)(x.Z, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: et,
                         filters: X,
-                        initialValue: K.config.assets.questBarHero,
+                        initialValue: W.config.assets.questBarHero,
                     }),
                     (0, n.jsx)(x.Z, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: et,
                         filters: X,
-                        initialValue: null != (M = K.config.assets.questBarHeroVideo) ? M : void 0,
+                        initialValue: null != (M = W.config.assets.questBarHeroVideo) ? M : void 0,
                     }),
                     (0, n.jsx)(x.Z, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: et,
                         filters: [...I, "svg"],
-                        initialValue: K.config.assets.gameTile,
+                        initialValue: W.config.assets.gameTile,
                     }),
                     (0, n.jsx)(x.Z, {
                         title: "Logotype",
                         assetKey: "logotype",
                         onFileChange: et,
                         filters: [...R, "svg"],
-                        initialValue: K.config.assets.logotype,
+                        initialValue: W.config.assets.logotype,
                     }),
                     eu &&
                         (0, n.jsxs)(n.Fragment, {
@@ -517,7 +517,7 @@ function K() {
                                     onFileChange: en,
                                     filters: X,
                                     initialValue:
-                                        null == (t = K.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo,
+                                        null == (t = W.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo,
                                 }),
                                 (0, n.jsx)(x.Z, {
                                     title: "Quest Home Video (optional)",
@@ -525,7 +525,7 @@ function K() {
                                     onFileChange: en,
                                     filters: X,
                                     initialValue:
-                                        null == (a = K.config.videoMetadata) ? void 0 : a.assets.questHomeVideo,
+                                        null == (a = W.config.videoMetadata) ? void 0 : a.assets.questHomeVideo,
                                 }),
                             ],
                         }),
@@ -565,20 +565,20 @@ function K() {
                                                     if ("asset" === e) {
                                                         var n;
                                                         Y(
-                                                            k(L({}, K), {
+                                                            k(D({}, W), {
                                                                 config:
-                                                                    ((n = K.config),
+                                                                    ((n = W.config),
                                                                     (0, l.EQ)(n)
                                                                         .with({ configVersion: 2 }, (e) =>
-                                                                            k(L({}, e), {
+                                                                            k(D({}, e), {
                                                                                 rewardsConfig: k(
-                                                                                    L({}, e.rewardsConfig),
+                                                                                    D({}, e.rewardsConfig),
                                                                                     {
                                                                                         rewards:
                                                                                             e.rewardsConfig.rewards.map(
                                                                                                 (e, n) =>
                                                                                                     n === s
-                                                                                                        ? k(L({}, e), {
+                                                                                                        ? k(D({}, e), {
                                                                                                               asset: t,
                                                                                                               skuId: "",
                                                                                                           })
@@ -629,13 +629,13 @@ function K() {
                                 title: "Primary",
                                 colorKey: "primary",
                                 onChange: el,
-                                value: K.config.colors.primary,
+                                value: W.config.colors.primary,
                             }),
                             (0, n.jsx)(j.Z, {
                                 title: "Secondary",
                                 colorKey: "secondary",
                                 onChange: el,
-                                value: K.config.colors.secondary,
+                                value: W.config.colors.secondary,
                             }),
                         ],
                     }),
@@ -647,14 +647,14 @@ function K() {
                         onChange: function (e) {
                             switch ((Q(e), e)) {
                                 case E.a.UNENROLLED:
-                                    Y(k(L({}, K), { userStatus: null }));
+                                    Y(k(D({}, W), { userStatus: null }));
                                     break;
                                 case E.a.ENROLLED:
-                                    Y(k(L({}, K), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
+                                    Y(k(D({}, W), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
                                     break;
                                 case E.a.COMPLETED_25:
                                     Y(
-                                        k(L({}, K), {
+                                        k(D({}, W), {
                                             userStatus: Z({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.25 * ec,
@@ -664,7 +664,7 @@ function K() {
                                     break;
                                 case E.a.COMPLETED_50:
                                     Y(
-                                        k(L({}, K), {
+                                        k(D({}, W), {
                                             userStatus: Z({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.5 * ec,
@@ -674,7 +674,7 @@ function K() {
                                     break;
                                 case E.a.COMPLETED_75:
                                     Y(
-                                        k(L({}, K), {
+                                        k(D({}, W), {
                                             userStatus: Z({
                                                 enrolledAt: new Date().toISOString(),
                                                 streamProgressSeconds: 0.75 * ec,
@@ -684,7 +684,7 @@ function K() {
                                     break;
                                 case E.a.COMPLETED_100:
                                     Y(
-                                        k(L({}, K), {
+                                        k(D({}, W), {
                                             userStatus: Z({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
@@ -695,7 +695,7 @@ function K() {
                                     break;
                                 case E.a.CLAIMED:
                                     Y(
-                                        k(L({}, K), {
+                                        k(D({}, W), {
                                             userStatus: Z({
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
@@ -725,7 +725,7 @@ function K() {
                             (0, n.jsxs)("div", {
                                 className: A.questBarPreviewWrapper,
                                 children: [
-                                    (null == (u = K.userStatus) ? void 0 : u.claimedAt) != null &&
+                                    (null == (u = W.userStatus) ? void 0 : u.claimedAt) != null &&
                                         (0, n.jsx)(g.Text, {
                                             color: "text-secondary",
                                             variant: "text-sm/normal",
@@ -737,7 +737,7 @@ function K() {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, n.jsx)(v.Z, { children: (0, n.jsx)(m.P, { quest: K }) }),
+                                            children: (0, n.jsx)(v.Z, { children: (0, n.jsx)(m.P, { quest: W }) }),
                                         }),
                                     }),
                                 ],
@@ -753,7 +753,7 @@ function K() {
                                 source: "preview",
                                 questId: "0",
                                 children: (0, n.jsx)(p.Z, {
-                                    quest: K,
+                                    quest: W,
                                     className: A.questTile,
                                     questContent: h.jn.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
@@ -767,7 +767,7 @@ function K() {
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(g.vwX, { children: "Channel Call Header" }),
-                            (null == (d = K.userStatus) ? void 0 : d.claimedAt) != null &&
+                            (null == (d = W.userStatus) ? void 0 : d.claimedAt) != null &&
                                 (0, n.jsx)(g.Text, {
                                     color: "text-secondary",
                                     variant: "text-sm/normal",
@@ -784,7 +784,7 @@ function K() {
                                         className: A.questChannelCallHeaderPreview,
                                         children: (0, n.jsx)(N.Z, {
                                             channelId: "123",
-                                            previewQuest: K,
+                                            previewQuest: W,
                                             isParticipatingOverride: F,
                                         }),
                                     }),
@@ -810,15 +810,15 @@ function K() {
                         children: [
                             (0, n.jsx)(g.vwX, { children: "Quest Card Embed" }),
                             J
-                                ? (0, n.jsx)(_.o, { questId: K.id })
+                                ? (0, n.jsx)(_.o, { questId: W.id })
                                 : (0, n.jsx)(
                                       T.Z,
                                       {
-                                          quest: K,
+                                          quest: W,
                                           location: h.jn.QUESTS_EMBED,
                                           sourceQuestContent: h.jn.INTERNAL_PREVIEW_TOOL,
                                       },
-                                      K.id,
+                                      W.id,
                                   ),
                         ],
                     }),
@@ -844,18 +844,18 @@ function K() {
                                     text: "Open Video Player Modal",
                                     onClick: () => {
                                         (0, g.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([s.e("90648"), s.e("32249")]).then(
+                                            let { default: e } = await Promise.all([s.e("11416"), s.e("32249")]).then(
                                                 s.bind(s, 536687),
                                             );
                                             return (t) => {
                                                 var s;
                                                 return (0, n.jsx)(
                                                     e,
-                                                    k(L({}, t), {
+                                                    k(D({}, t), {
                                                         openStartClockTime: performance.now(),
                                                         videoSessionId: "fake-quest-session-id",
-                                                        questId: null != (s = K.id) ? s : "fake-quest-id",
-                                                        overrideQuest: K,
+                                                        questId: null != (s = W.id) ? s : "fake-quest-id",
+                                                        overrideQuest: W,
                                                         autoplay: !0,
                                                         sourceQuestContent: h.jn.INTERNAL_PREVIEW_TOOL,
                                                     }),
@@ -871,7 +871,7 @@ function K() {
         ],
     });
 }
-class W extends r.Component {
+class K extends r.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -901,15 +901,15 @@ class W extends r.Component {
                           }),
                   ],
               })
-            : (0, n.jsx)(K, {}, t);
+            : (0, n.jsx)(W, {}, t);
     }
     constructor(...e) {
         super(...e),
-            D(this, "state", {
+            L(this, "state", {
                 error: null,
                 renderKey: 0,
             }),
-            D(this, "handleResetState", () => {
+            L(this, "handleResetState", () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1,
@@ -917,4 +917,4 @@ class W extends r.Component {
             });
     }
 }
-let Y = W;
+let Y = K;

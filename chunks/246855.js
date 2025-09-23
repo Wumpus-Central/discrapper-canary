@@ -1,13 +1,14 @@
-n.d(a, { default: () => o });
-var t = n(951288);
+n.d(t, { default: () => i });
+var a = n(951288);
 n(647438);
-var s = n(515108);
-function o(e) {
-    let { quest: a, onClose: n, transitionState: o } = e;
-    return (0, t.jsx)(s.Z, {
+var r = n(515108);
+function i(e) {
+    let { quest: t, onClose: n, transitionState: i, sourceQuestContent: s } = e;
+    return (0, a.jsx)(r.Z, {
         onClose: n,
-        transitionState: o,
-        quest: a,
-        rewardContent: (0, t.jsx)("div", {}),
+        transitionState: i,
+        quest: t,
+        sourceQuestContent: s,
+        rewardContent: (0, a.jsx)("div", {}),
     });
 }

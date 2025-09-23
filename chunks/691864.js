@@ -3,5 +3,4 @@ e.exports = {
     previewContainer: "previewContainer_ca4984",
     copyContainer: "copyContainer_ca4984",
     heading: "heading_ca4984",
-    text: "text_ca4984",
 };

@@ -111,11 +111,11 @@ function j(e) {
                   ? (0, m.Bg)(t.config)
                       ? (0, S.openQuestsNitroRewardModal)(t, n)
                       : (0, m.Xv)(t.config)
-                        ? (0, S.openQuestCollectibleRewardModal)(t, n)
+                        ? (0, S.openQuestCollectibleRewardModal)(t, n, s)
                         : (0, m.vQ)(t.config)
                           ? (0, S.openQuestInGameRewardModal)(t, n, s)
                           : (0, m.xN)(t.config)
-                            ? (0, S.openQuestOrbsRewardModal)(t, n)
+                            ? (0, S.openQuestOrbsRewardModal)(t, n, s)
                             : (0, S.openQuestsRewardCodeModal)({
                                   quest: t,
                                   questContent: n,

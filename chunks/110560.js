@@ -162,7 +162,14 @@ function H(e, t, i) {
     (0, s.ZDy)(async () => {
         if ((0, C.i)("openQuestInGameRewardModal")) {
             let { default: t } = await n.e("76418").then(n.bind(n, 34251));
-            return (n) => (0, r.jsx)(t, G(k({}, n), { quest: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    G(k({}, n), {
+                        quest: e,
+                        sourceQuestContent: i,
+                    }),
+                );
         }
         let { default: a } = await n.e("88938").then(n.bind(n, 390238));
         return (n) =>
@@ -176,16 +183,23 @@ function H(e, t, i) {
             );
     });
 }
-function Y(e, t) {
+function Y(e, t, i) {
     (0, s.ZDy)(async () => {
         if ((0, C.i)("openQuestOrbsRewardModal")) {
             let { default: t } = await n.e("74560").then(n.bind(n, 246855));
-            return (n) => (0, r.jsx)(t, G(k({}, n), { quest: e }));
+            return (n) =>
+                (0, r.jsx)(
+                    t,
+                    G(k({}, n), {
+                        quest: e,
+                        sourceQuestContent: i,
+                    }),
+                );
         }
-        let { default: i } = await Promise.all([n.e("93964"), n.e("81501")]).then(n.bind(n, 383294));
+        let { default: a } = await Promise.all([n.e("93964"), n.e("81501")]).then(n.bind(n, 383294));
         return (n) =>
             (0, r.jsx)(
-                i,
+                a,
                 G(k({}, n), {
                     quest: e,
                     location: t,
@@ -193,28 +207,29 @@ function Y(e, t) {
             );
     });
 }
-function W(e, t, i) {
+function W(e, t, i, a) {
     (0, s.ZDy)(async () => {
         if ((0, C.i)("openQuestCollectibleRewardModal")) {
-            let { default: a } = await n.e("41023").then(n.bind(n, 305815));
+            let { default: o } = await n.e("41023").then(n.bind(n, 305815));
             return (n) =>
                 (0, r.jsx)(
-                    a,
+                    o,
                     G(k({}, n), {
                         quest: e,
+                        sourceQuestContent: i,
                         location: t,
-                        preview: i,
+                        preview: a,
                     }),
                 );
         }
-        let { default: a } = await Promise.all([n.e("79589"), n.e("70154")]).then(n.bind(n, 920916));
+        let { default: o } = await Promise.all([n.e("79589"), n.e("70154")]).then(n.bind(n, 920916));
         return (n) =>
             (0, r.jsx)(
-                a,
+                o,
                 G(k({}, n), {
                     quest: e,
                     location: t,
-                    preview: i,
+                    preview: a,
                 }),
             );
     });
@@ -286,7 +301,7 @@ function Q(e) {
         });
 }
 function J() {
-    return Promise.all([n.e("90648"), n.e("32249")]).then(n.bind(n, 536687));
+    return Promise.all([n.e("11416"), n.e("32249")]).then(n.bind(n, 536687));
 }
 function $(e) {
     var t;
