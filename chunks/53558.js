@@ -1,15 +1,14 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(755721),
-    o = n(481060),
-    s = n(970321),
-    l = n(283836),
-    c = n(621853),
-    u = n(475413),
-    d = n(388032);
-function f(e, t, n) {
+    a = n(481060),
+    o = n(970321),
+    s = n(283836),
+    l = n(621853),
+    c = n(732380),
+    u = n(388032);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,16 +32,16 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -50,7 +49,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,47 +58,46 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var { user: t, onClick: n } = e,
-        i = p(e, ["user", "onClick"]);
+        i = _(e, ["user", "onClick"]);
     return (
-        (0, l.q)(t.id),
+        (0, s.q)(t.id),
         (0, r.jsx)(
-            u.tG,
-            _(
+            c.O1,
+            f(
                 {
                     action: "PRESS_APP_STOREFRONT",
-                    icon: o.EOn,
-                    text: d.intl.string(d.t.V7j5aW),
-                    color: a.Tt.BRAND,
-                    themeColor: "none",
+                    icon: a.EOn,
+                    text: u.intl.string(u.t.V7j5aW),
                     onClick: n,
+                    variant: "primary",
                 },
                 i,
             ),
         )
     );
 }
-function g(e) {
+function m(e) {
     var t,
-        { user: a, guildId: l } = e,
-        u = p(e, ["user", "guildId"]);
-    let d = (0, i.e7)([c.Z], () => {
+        { user: s, guildId: c } = e,
+        u = _(e, ["user", "guildId"]);
+    let d = (0, i.e7)([l.Z], () => {
             var e;
-            return null == (e = c.Z.getUserProfile(a.id)) ? void 0 : e.application;
+            return null == (e = l.Z.getUserProfile(s.id)) ? void 0 : e.application;
         }),
-        f = (0, s.R)(null != (t = null == d ? void 0 : d.id) ? t : "");
-    if (null == d || !f) return null;
-    let h = () => {
-        (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("77803"), n.e("62199")]).then(n.bind(n, 7225));
+        p = (0, o.R)(null != (t = null == d ? void 0 : d.id) ? t : "");
+    if (null == d || !p) return null;
+    let m = () => {
+        (0, a.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e("77803"), n.e("43525")]).then(n.bind(n, 7225));
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    _(
+                    f(
                         {
                             appId: d.id,
-                            guildId: l,
+                            guildId: c,
                         },
                         t,
                     ),
@@ -107,12 +105,12 @@ function g(e) {
         });
     };
     return (0, r.jsx)(
-        m,
-        _(
+        h,
+        f(
             {
-                user: a,
-                guildId: l,
-                onClick: h,
+                user: s,
+                guildId: c,
+                onClick: m,
             },
             u,
         ),

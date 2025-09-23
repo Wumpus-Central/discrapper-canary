@@ -80,13 +80,13 @@ function R(e) {
                 children: [
                     (0, r.jsx)(b.Z, {
                         user: t,
-                        className: C.button,
                         closePopout: L,
+                        fullWidth: !0,
                     }),
                     (0, r.jsx)(y.Z, {
                         user: t,
                         guildId: null == P ? void 0 : P.id,
-                        className: C.button,
+                        fullWidth: !0,
                     }),
                 ],
             }),

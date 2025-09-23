@@ -18,7 +18,7 @@ var r = n(951288),
     b = n(135431),
     y = n(621853),
     O = n(497805),
-    v = n(475413),
+    v = n(732380),
     I = n(981631),
     T = n(388032);
 function S(e, t, n) {
@@ -125,10 +125,10 @@ function R(e) {
                   var { onClick: t } = e,
                       n = C(e, ["onClick"]);
                   return (0, r.jsx)(
-                      v.tG,
+                      v.O1,
                       A(
                           {
-                              ref: N,
+                              buttonRef: N,
                               action: "PRESS_ADD_APP",
                               text: L,
                               icon: k,
@@ -142,13 +142,14 @@ function R(e) {
               },
           })
         : (0, r.jsx)(
-              v.tG,
+              v.O1,
               A(
                   {
                       action: "PRESS_ADD_APP",
                       text: L,
                       icon: k,
                       onClick: x,
+                      variant: "primary",
                   },
                   S,
               ),
