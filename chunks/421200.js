@@ -11,5 +11,6 @@ e.exports = {
     discordLogo: "discordLogo__80679",
     shopHomeLink: "shopHomeLink__80679",
     alignedRightContent: "alignedRightContent__80679",
+    wishlistButton: "wishlistButton__80679",
     balanceWidgetMenu: "balanceWidgetMenu__80679",
 };
