@@ -1,17 +1,20 @@
 n.d(t, {
     Nk: () => u,
-    cm: () => l,
+    ew: () => l,
     fC: () => c,
     lR: () => f,
     lw: () => d,
-});
+}),
+    n(35282);
 var r = n(349033),
     i = n(607802),
     a = n(532428),
     o = n(981631),
     s = n(388032);
 function l(e) {
-    return (0, i.kG)(e).map((e, t, n) => ((0, i.Fr)(e, n[t + 1]) ? e : new r.WU(e.getFullMatch(), r.Xe)));
+    return (0, i.kG)(e).map((e, t, n) =>
+        o.TNx.test(e.type) || (0, i.Fr)(e, n[t + 1]) ? e : new r.WU(e.getFullMatch(), r.Xe),
+    );
 }
 function c(e, t) {
     return {

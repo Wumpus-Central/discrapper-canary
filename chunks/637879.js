@@ -1,14 +1,15 @@
 n.d(t, {
     GM: () => G,
+    HU: () => j,
     Q0: () => N,
     V4: () => B,
     _B: () => C,
     dI: () => L,
     do: () => w,
-    dx: () => j,
     f: () => P,
     mW: () => R,
 }),
+    n(781311),
     n(35282);
 var r = n(951288),
     i = n(647438),
@@ -109,9 +110,11 @@ function C(e) {
                     className: v.item,
                     children: [
                         t,
-                        (0, r.jsxs)("div", {
-                            children: [n, i],
-                        }),
+                        null == i
+                            ? n
+                            : (0, r.jsxs)("div", {
+                                  children: [n, i],
+                              }),
                     ],
                 }),
             },
@@ -193,7 +196,7 @@ function D(e) {
     let { title: t, showDivider: n, children: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            n && (0, r.jsx)("div", { className: v.divider }),
+            "top" === n && (0, r.jsx)("div", { className: v.divider }),
             (0, r.jsx)(
                 "ul",
                 {
@@ -203,6 +206,7 @@ function D(e) {
                 },
                 t,
             ),
+            "bottom" === n && (0, r.jsx)("div", { className: v.divider }),
         ],
     });
 }
@@ -224,10 +228,13 @@ function x(e) {
 function L(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         o = i,
-        { rows: s, title: l, trailingIcon: c } = n.data;
+        { rows: s, title: l, trailingIcon: c } = n.data,
+        u = i > 0,
+        d = 0 === i,
+        f = u ? "top" : d ? "bottom" : null;
     return (0, r.jsxs)(D, {
         title: l,
-        showDivider: i > 0,
+        showDivider: f,
         children: [
             (0, r.jsx)(x, {
                 headerId: l,
@@ -259,13 +266,15 @@ function L(e) {
     });
 }
 function j(e) {
-    let t = "",
-        n = (0, g.cm)(e.text).map((e, n) => {
+    let { value: t } = e,
+        n = "",
+        i = (0, g.ew)(t).map((e, t) => {
             let i = e.getFullMatch();
-            t += i;
+            if (0 === i.trim().length) return null;
+            n += i;
             let a = y.TNx.test(e.type),
                 o = y.KA4.test(e.type),
-                s = "".concat(e.type, "-").concat(i, "-").concat(n);
+                s = "".concat(e.type, "-").concat(i, "-").concat(t);
             if (o)
                 switch (e.type) {
                     case y.dCx.ANSWER_USERNAME_FROM:
@@ -287,17 +296,17 @@ function j(e) {
                 M,
                 {
                     text: i,
-                    className: a ? v.filterPill : void 0,
+                    className: a ? v.filterPill : v.nonText,
                 },
                 s,
             );
         });
     return {
         label: (0, r.jsx)("div", {
-            className: v.historyTextLabel,
-            children: n,
+            className: v.autocompletePillContainer,
+            children: i,
         }),
-        ariaLabel: O.intl.formatToPlainString(O.t.WoiGra, { suggestion: t }),
+        ariaLabel: n,
     };
 }
 function M(e) {
