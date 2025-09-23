@@ -93,8 +93,7 @@ class b extends a.Z {
     handleGuildUpdate(e) {
         let { guild: t } = e,
             n = u.Z.getGuildId();
-        if (null != n && t.id === n && t.owner_configured_content_level === h.V_K.AGE_RESTRICTED)
-            return void (0, d.I8)(t.id, null);
+        if (null != n && t.id === n && t.nsfw_level === h.V_K.AGE_RESTRICTED) return void (0, d.I8)(t.id, null);
     }
 }
 let _ = new b();

@@ -2,29 +2,29 @@ n.d(e, { default: () => S }), n(388685);
 var l = n(951288),
     r = n(647438),
     a = n(512722),
-    i = n.n(a),
-    o = n(913527),
-    s = n.n(o),
-    c = n(990547),
-    u = n(442837),
+    o = n.n(a),
+    i = n(913527),
+    s = n.n(i),
+    u = n(990547),
+    c = n(442837),
     f = n(667202),
     d = n(82659),
     E = n(749210),
     p = n(168107),
     A = n(480916),
-    _ = n(592125),
-    y = n(944486),
+    y = n(592125),
+    _ = n(944486),
     h = n(594174),
-    m = n(626135),
-    b = n(63063),
+    b = n(626135),
+    m = n(63063),
     g = n(771308),
     T = n(758119),
     v = n(622822),
     G = n(13430),
     O = n(723359),
-    R = n(981631),
-    N = n(388032),
-    C = n(736056);
+    C = n(981631),
+    R = n(388032),
+    N = n(736056);
 function x(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -52,224 +52,197 @@ function x(t) {
 }
 function S(t) {
     let { transitionState: e, source: n } = t,
-        a = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        o = (0, u.e7)([y.Z, _.Z], () => _.Z.getChannel(y.Z.getChannelId())),
+        a = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
+        i = (0, c.e7)([_.Z, y.Z], () => y.Z.getChannel(_.Z.getChannelId())),
         [S, k] = r.useState(null),
-        [j, I] = r.useState(null),
-        [w, P] = r.useState(!1),
-        [D, L] = r.useState(0),
+        [j, w] = r.useState(null),
+        [I, D] = r.useState(!1),
+        [P, M] = r.useState(0),
         U = r.useRef(null),
-        M = r.useRef(null),
-        F = n === O.L0.FAMILY_CENTER,
-        Z = (0, v.Kt)() && !F,
-        { verifyAgreementButtonText: V, verifyGateDescription: Y, verifyTitle: W } = (0, v.a1)(n),
-        q = (0, v.$5)(o),
-        B = v.Lj.has(n),
-        K = null != S ? s()().diff(S, "years") : null;
-    function Q() {
+        L = r.useRef(null),
+        F = (0, v.Kt)() && n !== O.L0.FAMILY_CENTER,
+        { verifyAgreementButtonText: V, verifyGateDescription: Z, verifyTitle: Y } = (0, v.a1)(n),
+        W = null != S ? s()().diff(S, "years") : null;
+    function q() {
         if (n === O.L0.NSFW_SERVER_INVITE_EMBED) return (0, T.qV)(n), Promise.resolve();
-        let t = null == o ? void 0 : o.getGuildId();
+        let t = null == i ? void 0 : i.getGuildId();
         return E.Z.nsfwReturnToSafety(t), (0, T.qV)(n), Promise.resolve();
     }
-    async function H() {
-        i()(null != S, "Cannot submit null birthday.");
+    async function B() {
+        o()(null != S, "Cannot submit null birthday.");
         try {
-            return I(null), P(!0), await (0, g.Av)(S, n);
+            return w(null), D(!0), await (0, g.Av)(S, n);
         } catch (e) {
             if (null != e.body && null != e.body.date_of_birth) (0, T.C8)(n, e.body.date_of_birth);
             else {
                 var t;
                 (null == e || null == (t = e.body) ? void 0 : t.username) != null
-                    ? I(N.intl.string(N.t["TGg/2t"]))
-                    : I(null == e ? void 0 : e.body.message),
-                    P(!1);
+                    ? w(R.intl.string(R.t["TGg/2t"]))
+                    : w(null == e ? void 0 : e.body.message),
+                    D(!1);
             }
         }
     }
-    async function J() {
-        if ((i()(null != K, "Cannot submit if we haven't been able to calculate age."), K < 18)) return void L(1);
-        await H();
+    async function K() {
+        if ((o()(null != W, "Cannot submit if we haven't been able to calculate age."), W < 18)) return void M(1);
+        await B();
     }
-    async function X(t) {
-        t.preventDefault(), w || null == S || (await J());
+    async function J(t) {
+        t.preventDefault(), I || null == S || (await K());
     }
-    async function z() {
-        null == (await H()) && L(0);
+    async function Q() {
+        null == (await B()) && M(0);
     }
     r.useEffect(() => {
-        (null == a ? void 0 : a.nsfwAllowed) !== !0 || Z || (0, T.qq)(n);
+        null == a || null == a.nsfwAllowed || F || (0, T.qq)(n);
     }),
         r.useEffect(() => {
-            m.default.track(R.rMx.AGE_GATE_ACTION, {
+            b.default.track(C.rMx.AGE_GATE_ACTION, {
                 source: n,
                 action: O.Al.AGE_GATE_OPEN,
             });
         }, [n]);
-    let $ = r.useCallback(
+    let z = r.useCallback(
             (t) => {
                 k(t);
             },
             [k],
         ),
-        tt = r.useCallback(() => {
+        X = r.useCallback(() => {
             var t;
-            null == (t = M.current) || t.focus();
-        }, [M]),
-        te = r.useCallback(() => {
+            null == (t = L.current) || t.focus();
+        }, [L]),
+        H = r.useCallback(() => {
             p.Z.showAgeVerificationGetStartedModal({ entryPoint: A.cU.NSFW_AGE_GATE });
         }, []),
-        tn = {
+        $ = {
             transitionState: e,
-            onClose: Q,
+            onClose: q,
             graphic: {
                 type: "image",
-                src: C.Z,
+                src: N.Z,
             },
             gradientColor: "blue",
         };
-    return Z
+    return F
         ? (0, l.jsx)(
               f.I,
               x(
                   {
-                      title: W,
-                      subtitle: Y,
+                      title: Y,
+                      subtitle: Z,
                       actions: [
                           {
-                              text: N.intl.string(N.t.f3Pet7),
-                              onClick: Q,
+                              text: R.intl.string(R.t.f3Pet7),
+                              onClick: q,
                               variant: "secondary",
                           },
                           {
                               text: V,
-                              onClick: te,
+                              onClick: H,
                           },
                       ],
                       trackingProps: {
-                          impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
-                          impressionType: c.ImpressionTypes.MODAL,
+                          impression: { impressionName: u.ImpressionNames.USER_AGE_GATE_VERIFY },
+                          impressionType: u.ImpressionTypes.MODAL,
                       },
                   },
-                  tn,
+                  $,
               ),
           )
-        : (null == a ? void 0 : a.nsfwAllowed) === !1 && q && !F
-          ? (0, l.jsx)(
-                f.I,
-                x(
-                    {
-                        title: N.intl.string(B ? N.t["H0SG/v"] : N.t.NEabBQ),
-                        subtitle: N.intl.format(B ? N.t["6++3cX"] : N.t["2kHZen"], {
-                            helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE),
-                        }),
-                        actions: [
+        : 0 === P
+          ? (function () {
+                var t, e;
+                let r = (() => {
+                        switch (n) {
+                            case O.L0.NSFW_SERVER:
+                            case O.L0.NSFW_SERVER_INVITE:
+                            case O.L0.NSFW_SERVER_INVITE_EMBED:
+                                return R.intl.string(R.t.vAymlJ);
+                            case O.L0.FAMILY_CENTER:
+                                return R.intl.string(R.t.M7mt7u);
+                            default:
+                                return R.intl.string(R.t.F8otRk);
+                        }
+                    })(),
+                    a = (() => {
+                        switch (n) {
+                            case O.L0.FAMILY_CENTER:
+                                return R.intl.string(R.t.mhUrKS);
+                            case O.L0.DEEP_LINK_PROMPT:
+                                return R.intl.format(R.t.iyhg2t, { helpURL: m.Z.getArticleURL(C.BhN.AGE_GATE) });
+                            default:
+                                return R.intl.format(R.t.n3QjDA, { helpURL: m.Z.getArticleURL(C.BhN.AGE_GATE) });
+                        }
+                    })();
+                return (0, l.jsx)("form", {
+                    onSubmit: J,
+                    children: (0, l.jsx)(
+                        f.I,
+                        ((t = x(
                             {
-                                text: N.intl.string(N.t.f3Pet7),
-                                onClick: Q,
-                                variant: "secondary",
+                                title: r,
+                                subtitle: a,
+                                actions: [
+                                    {
+                                        text: R.intl.string(R.t["1MrpWF"]),
+                                        onClick: q,
+                                        variant: "secondary",
+                                    },
+                                    {
+                                        text: R.intl.string(R.t.uBFuoq),
+                                        onClick: K,
+                                        loading: I,
+                                        disabled: null == S,
+                                    },
+                                ],
                             },
-                        ],
-                        trackingProps: {
-                            impression: { impressionName: c.ImpressionNames.USER_AGE_GATE_VERIFY },
-                            impressionType: c.ImpressionTypes.MODAL,
-                        },
-                    },
-                    tn,
-                ),
-            )
-          : 0 === D
-            ? (function () {
-                  var t, e;
-                  let r = (() => {
-                          switch (n) {
-                              case O.L0.NSFW_SERVER:
-                              case O.L0.NSFW_SERVER_INVITE:
-                              case O.L0.NSFW_SERVER_INVITE_EMBED:
-                                  return N.intl.string(N.t.vAymlJ);
-                              case O.L0.FAMILY_CENTER:
-                                  return N.intl.string(N.t.M7mt7u);
-                              default:
-                                  return N.intl.string(N.t.F8otRk);
-                          }
-                      })(),
-                      a = (() => {
-                          switch (n) {
-                              case O.L0.FAMILY_CENTER:
-                                  return N.intl.string(N.t.mhUrKS);
-                              case O.L0.DEEP_LINK_PROMPT:
-                                  return N.intl.format(N.t.iyhg2t, { helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE) });
-                              default:
-                                  return N.intl.format(N.t.n3QjDA, { helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE) });
-                          }
-                      })();
-                  return (0, l.jsx)("form", {
-                      onSubmit: X,
-                      children: (0, l.jsx)(
-                          f.I,
-                          ((t = x(
-                              {
-                                  title: r,
-                                  subtitle: a,
-                                  actions: [
-                                      {
-                                          text: N.intl.string(N.t["1MrpWF"]),
-                                          onClick: Q,
-                                          variant: "secondary",
-                                      },
-                                      {
-                                          text: N.intl.string(N.t.uBFuoq),
-                                          onClick: J,
-                                          loading: w,
-                                          disabled: null == S,
-                                      },
-                                  ],
-                              },
-                              tn,
-                          )),
-                          (e = e =
-                              {
-                                  children: (0, l.jsx)(G.Z, {
-                                      label: N.intl.string(N.t.rhBeKS),
-                                      name: "date_of_birth",
-                                      onChange: $,
-                                      onPopulated: tt,
-                                      error: j,
-                                      value: S,
-                                      ref: U,
-                                      autoFocus: !0,
-                                  }),
-                              }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-                              : (function (t, e) {
-                                    var n = Object.keys(t);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var l = Object.getOwnPropertySymbols(t);
-                                        n.push.apply(n, l);
-                                    }
-                                    return n;
-                                })(Object(e)).forEach(function (n) {
-                                    Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+                            $,
+                        )),
+                        (e = e =
+                            {
+                                children: (0, l.jsx)(G.Z, {
+                                    label: R.intl.string(R.t.rhBeKS),
+                                    name: "date_of_birth",
+                                    onChange: z,
+                                    onPopulated: X,
+                                    error: j,
+                                    value: S,
+                                    ref: U,
+                                    autoFocus: !0,
                                 }),
-                          t),
-                      ),
-                  });
-              })()
-            : (0, l.jsx)(d.Modal, {
-                  transitionState: e,
-                  onClose: Q,
-                  title: N.intl.formatToPlainString(N.t.wumolZ, { age: K }),
-                  subtitle: N.intl.formatToPlainString(N.t.n3QjDA, { helpURL: b.Z.getArticleURL(R.BhN.AGE_GATE) }),
-                  actions: [
-                      {
-                          text: N.intl.string(N.t.cfYCra),
-                          onClick: () => L(0),
-                          variant: "secondary",
-                      },
-                      {
-                          text: N.intl.string(N.t["6tahio"]),
-                          onClick: z,
-                      },
-                  ],
-              });
+                            }),
+                        Object.getOwnPropertyDescriptors
+                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+                            : (function (t, e) {
+                                  var n = Object.keys(t);
+                                  if (Object.getOwnPropertySymbols) {
+                                      var l = Object.getOwnPropertySymbols(t);
+                                      n.push.apply(n, l);
+                                  }
+                                  return n;
+                              })(Object(e)).forEach(function (n) {
+                                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+                              }),
+                        t),
+                    ),
+                });
+            })()
+          : (0, l.jsx)(d.Modal, {
+                transitionState: e,
+                onClose: q,
+                title: R.intl.formatToPlainString(R.t.wumolZ, { age: W }),
+                subtitle: R.intl.formatToPlainString(R.t.n3QjDA, { helpURL: m.Z.getArticleURL(C.BhN.AGE_GATE) }),
+                actions: [
+                    {
+                        text: R.intl.string(R.t.cfYCra),
+                        onClick: () => M(0),
+                        variant: "secondary",
+                    },
+                    {
+                        text: R.intl.string(R.t["6tahio"]),
+                        onClick: Q,
+                    },
+                ],
+            });
 }
