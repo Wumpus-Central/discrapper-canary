@@ -4,9 +4,9 @@ var n = r(951288),
     i = r(82659),
     o = r(481060),
     c = r(388032),
-    l = r(1904);
+    l = r(567147);
 function s(t) {
-    let { errorText: e, title: r, description: s, transitionState: u, onCancel: d, onConfirm: p, children: b } = t,
+    let { errorText: e, title: r, description: s, transitionState: d, onCancel: u, onConfirm: p, children: b } = t,
         [g, y] = a.useState(!1),
         f = a.useCallback(async () => {
             y(!0);
@@ -19,15 +19,15 @@ function s(t) {
             }
         }, [p]);
     return (0, n.jsxs)(i.Modal, {
-        transitionState: u,
-        onClose: d,
+        transitionState: d,
+        onClose: u,
         title: r,
         subtitle: s,
         actions: [
             {
                 text: c.intl.string(c.t["ETE/oK"]),
                 variant: "secondary",
-                onClick: d,
+                onClick: u,
             },
             {
                 text: c.intl.string(c.t.R3BPHx),

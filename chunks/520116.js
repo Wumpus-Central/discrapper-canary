@@ -17,9 +17,9 @@ var r = n(951288),
     O = n(55935),
     y = n(655354),
     _ = n(809780),
-    j = n(981631),
-    v = n(388032),
-    x = n(557047);
+    v = n(981631),
+    j = n(388032),
+    x = n(39620);
 let C = {
     left: 4,
     right: -12,
@@ -116,15 +116,15 @@ function S(e) {
         y = g.jU.useSetting(),
         C = (0, p.P1)(l),
         S = !1,
-        P = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
-        I = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(j.xW$.SPAMMER)) && n,
+        I = 0 === i.messages.length || o()(i.messages[0].timestamp).isSame(o()(), "day"),
+        P = null != (n = null == (t = b.default.getUser(m.default.getId())) ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && n,
         N = [];
     if (!i.collapsed) {
         let e = null,
             t = null,
             n = i.messages.slice(0, _.hC);
         n.forEach((n) => {
-            if (!P && (null == e || !e.isSame(n.timestamp, "day"))) {
+            if (!I && (null == e || !e.isSame(n.timestamp, "day"))) {
                 let t = (0, O.vc)(n.timestamp, "LL");
                 N.push(
                     (0, r.jsx)(
@@ -149,7 +149,7 @@ function S(e) {
                             message: n,
                             compact: y,
                             isGroupStart: i,
-                            treatSpam: !I && h && (0, p.DQ)(n) && C,
+                            treatSpam: !P && h && (0, p.DQ)(n) && C,
                             gotoChannel: a,
                         },
                         n.id,
@@ -164,7 +164,7 @@ function S(e) {
                             color: s.zx.Colors.LINK,
                             look: s.zx.Looks.LINK,
                             onClick: (e) => a(e, n[n.length - 1].id),
-                            children: [v.intl.string(v.t["9OB9ho"]), " \u203A"],
+                            children: [j.intl.string(j.t["9OB9ho"]), " \u203A"],
                         },
                         "view-all",
                     ),

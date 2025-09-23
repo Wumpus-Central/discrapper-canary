@@ -2,16 +2,16 @@ n.d(t, { Z: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(596454),
-    s = n(318766),
+    s = n(596454),
+    a = n(318766),
     o = n(907040),
     c = n(176354),
     d = n(434404),
     u = n(185923),
     m = n(388032),
-    g = n(83552),
-    p = n(270856);
-function h(e) {
+    g = n(988167),
+    p = n(998918);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-let f = { label: "" };
+let h = { label: "" };
 function b(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: d } = e,
         m = i.useRef(null),
@@ -47,7 +47,7 @@ function b(e) {
                     : function () {
                           var e;
                           let n = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
-                          return (0, r.jsx)(a.Z, {
+                          return (0, r.jsx)(s.Z, {
                               animated: null != (e = t.animated) && e,
                               emojiId: t.id,
                               emojiName: n,
@@ -56,7 +56,7 @@ function b(e) {
             [t],
         );
     return n
-        ? (0, r.jsx)(s.Z, {
+        ? (0, r.jsx)(a.Z, {
               tabIndex: -1,
               active: !1,
               renderButtonContents: g,
@@ -76,8 +76,8 @@ function b(e) {
                   var n, i;
                   let { isShown: l } = t;
                   return (0, r.jsx)(
-                      s.Z,
-                      ((n = h({}, e)),
+                      a.Z,
+                      ((n = f({}, e)),
                       (i = i =
                           {
                               ref: m,
@@ -103,25 +103,25 @@ function b(e) {
           });
 }
 function x(e) {
-    let { guildId: t, trait: n, index: a, onTraitUpdate: s, disabled: o } = e,
+    let { guildId: t, trait: n, index: s, onTraitUpdate: a, disabled: o } = e,
         c = i.useCallback(() => {
-            s(t, a, {
+            a(t, s, {
                 emoji: void 0,
                 label: "",
             });
-        }, [t, a, s]),
+        }, [t, s, a]),
         d = i.useCallback(
             (e) => (n) => {
                 let { emoji: r, willClose: i } = n;
-                s(t, a, { emoji: null != r ? r : void 0 }), i && e();
+                a(t, s, { emoji: null != r ? r : void 0 }), i && e();
             },
-            [t, a, s],
+            [t, s, a],
         ),
         u = i.useCallback(
             (e) => {
-                s(t, a, { label: e });
+                a(t, s, { label: e });
             },
-            [t, a, s],
+            [t, s, a],
         ),
         m = i.useMemo(() => n.emoji, [n.emoji]),
         p = (null != n.label && n.label.length > 0) || null != n.emoji;
@@ -148,13 +148,13 @@ function x(e) {
 let j = [0, 1, 2, 3, 4];
 function v(e) {
     let { profile: t, canManageGuild: n } = e,
-        a = i.useMemo(() => t.traits, [t]),
-        s = i.useCallback(
+        s = i.useMemo(() => t.traits, [t]),
+        a = i.useCallback(
             (e, t, n) => {
-                let r = [...a];
-                (r[t] = h({}, a[t], n)), d.Z.updateGuildProfile(e, { traits: r });
+                let r = [...s];
+                (r[t] = f({}, s[t], n)), d.Z.updateGuildProfile(e, { traits: r });
             },
-            [a],
+            [s],
         );
     return (0, r.jsxs)(l.hjN, {
         className: p.section,
@@ -177,9 +177,9 @@ function v(e) {
                         x,
                         {
                             guildId: t.id,
-                            trait: null != (i = a[e]) ? i : f,
+                            trait: null != (i = s[e]) ? i : h,
                             index: e,
-                            onTraitUpdate: s,
+                            onTraitUpdate: a,
                             disabled: !n,
                         },
                         "trait-".concat(e),

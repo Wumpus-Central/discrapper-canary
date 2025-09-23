@@ -10,14 +10,14 @@ var l = n(442837),
     u = n(594174),
     d = n(55563),
     f = n(551428),
-    h = n(73346),
-    g = n(987209),
+    g = n(73346),
+    h = n(987209),
     p = n(563132),
     m = n(409813),
-    b = n(27034),
+    b = n(614277),
     j = n(474936),
     x = n(388032),
-    y = n(323261);
+    y = n(957618);
 let v = {
     key: m.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
@@ -73,14 +73,14 @@ function C(e) {
 function O(e) {
     var t;
     let { handleStepChange: n, handleClose: c } = e,
-        { customGiftMessage: m = "", setCustomGiftMessage: v, giftRecipient: O } = (0, g.wD)(),
+        { customGiftMessage: m = "", setCustomGiftMessage: v, giftRecipient: O } = (0, h.wD)(),
         { selectedSkuId: I } = (0, p.JL)(),
         T = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         _ = (0, l.e7)([d.Z], () => (null != I ? d.Z.get(I) : null), [I]),
         E = (0, l.e7)([f.Z], () => (null != I ? f.Z.getForSKU(I) : null), [I]),
         P =
             (null == E ? void 0 : E.headerBackground) != null && (null == _ ? void 0 : _.applicationId) != null
-                ? (0, h._W)(_.applicationId, E.headerBackground, 256)
+                ? (0, g._W)(_.applicationId, E.headerBackground, 256)
                 : void 0,
         k = async (e, t) => {};
     return (0, i.jsxs)(i.Fragment, {

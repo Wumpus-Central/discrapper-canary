@@ -3,21 +3,21 @@ var r = n(951288);
 n(647438);
 var i = n(755721),
     l = n(481060),
-    a = n(556012),
-    s = n(388032),
-    o = n(464992);
+    s = n(556012),
+    a = n(388032),
+    o = n(75765);
 function c(e) {
     let { action: t, triggerType: n, toggled: c, onToggleAction: d } = e,
         u = (e) => () => d(e),
-        m = (0, a.c)(t.type, t, n);
+        m = (0, s.c)(t.type, t, n);
     if (null == m) return null;
-    let { headerText: g, descriptionText: p, icon: h } = m;
+    let { headerText: g, descriptionText: p, icon: f } = m;
     return (0, r.jsxs)("div", {
         className: o.actionContainer,
         children: [
             (0, r.jsx)("div", {
                 className: o.actionIconContainer,
-                children: (0, r.jsx)(h, {
+                children: (0, r.jsx)(f, {
                     size: "custom",
                     color: "currentColor",
                     className: o.actionIcon,
@@ -40,13 +40,13 @@ function c(e) {
                               color: "text-muted",
                               variant: "text-xs/medium",
                               children: [
-                                  s.intl.string(s.t.Oa9oWF),
+                                  a.intl.string(a.t.Oa9oWF),
                                   (0, r.jsx)(l.P3F, {
                                       onClick: u(!0),
                                       className: o.editChannel,
                                       tag: "span",
                                       role: "link",
-                                      children: s.intl.string(s.t.QupmYW),
+                                      children: a.intl.string(a.t.QupmYW),
                                   }),
                               ],
                           })

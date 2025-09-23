@@ -1,9 +1,9 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(951288),
     l = n(647438),
     i = n(120356),
-    a = n.n(i),
-    s = n(392711),
+    s = n.n(i),
+    a = n(392711),
     o = n(399606),
     u = n(481060),
     c = n(493773),
@@ -12,32 +12,32 @@ var r = n(951288),
     _ = n(786761),
     A = n(937889),
     T = n(619753),
-    m = n(23750),
-    I = n(433355),
+    I = n(23750),
+    m = n(433355),
     g = n(271383),
-    h = n(594174),
-    N = n(189432),
-    O = n(356778),
+    N = n(594174),
+    O = n(189432),
+    h = n(356778),
     f = n(370595),
-    p = n(50493),
-    R = n(981631),
-    S = n(87819),
-    C = n(125134);
-function L(e) {
+    R = n(50493),
+    S = n(981631),
+    p = n(152540),
+    C = n(447334);
+function D(e) {
     var t, n;
-    let { userId: i, guildId: L, location: D, className: U, onNavigate: M } = e,
+    let { userId: i, guildId: D, location: L, className: U, onNavigate: M } = e,
         b = l.useRef(null),
-        x = (0, o.e7)([I.ZP], () => I.ZP.getGuildSidebarState(L), [L]),
-        v = l.useRef(0),
-        [P, j] = l.useState(null != (t = null == x ? void 0 : x.details.additionalSearchQuery) ? t : {}),
-        y = (0, O.z0)(i, L, {
+        v = (0, o.e7)([m.ZP], () => m.ZP.getGuildSidebarState(D), [D]),
+        x = l.useRef(0),
+        [P, j] = l.useState(null != (t = null == v ? void 0 : v.details.additionalSearchQuery) ? t : {}),
+        y = (0, h.z0)(i, D, {
             addtionalQuery: P,
             shouldDispatch: !0,
         }),
-        G = (0, o.e7)([h.default], () => h.default.getUser(i), [i]),
-        w = (0, o.e7)([g.ZP], () => g.ZP.getMember(L, i), [L, i]);
+        G = (0, o.e7)([N.default], () => N.default.getUser(i), [i]),
+        k = (0, o.e7)([g.ZP], () => g.ZP.getMember(D, i), [D, i]);
     (0, c.Ng)(() => {
-        let e = null == x ? void 0 : x.details.scrollOffset;
+        let e = null == v ? void 0 : v.details.scrollOffset;
         if (null != e) {
             var t;
             null == (t = b.current) ||
@@ -47,23 +47,23 @@ function L(e) {
                 });
         }
     });
-    let k = l.useCallback(
+    let F = l.useCallback(
             (e) => {
-                null != x &&
-                    ((v.current = e.target.scrollTop),
-                    (0, N.r)(L, i, x.baseChannelId, {
-                        modViewPanel: p.k.MESSAGE_HISTORY,
+                null != v &&
+                    ((x.current = e.target.scrollTop),
+                    (0, O.r)(D, i, v.baseChannelId, {
+                        modViewPanel: R.k.MESSAGE_HISTORY,
                         additionalSearchQuery: P,
-                        scrollOffset: v.current,
+                        scrollOffset: x.current,
                     }));
             },
-            [L, i, x, P],
+            [D, i, v, P],
         ),
-        F = (0, s.throttle)(k, 300),
+        w = (0, a.throttle)(F, 300),
         z = l.useCallback(
             (e) => {
                 var t, n;
-                if (null == x) return;
+                if (null == v) return;
                 let r =
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -105,16 +105,16 @@ function L(e) {
                           }),
                     t);
                 j(r),
-                    (0, N.r)(L, i, x.baseChannelId, {
-                        modViewPanel: p.k.MESSAGE_HISTORY,
+                    (0, O.r)(D, i, v.baseChannelId, {
+                        modViewPanel: R.k.MESSAGE_HISTORY,
                         additionalSearchQuery: r,
-                        scrollOffset: v.current,
+                        scrollOffset: x.current,
                     });
             },
-            [L, i, x, P],
+            [D, i, v, P],
         ),
-        Z = null != (n = null == P ? void 0 : P.offset) ? n : 0,
-        V = (0, o.e7)([d.Z], () => {
+        V = null != (n = null == P ? void 0 : P.offset) ? n : 0,
+        Z = (0, o.e7)([d.Z], () => {
             if (null == y.result) return [];
             let e = (0, E.nC)("");
             return y.result.messages
@@ -124,7 +124,7 @@ function L(e) {
                 })
                 .map((t) => {
                     let n = d.Z.getMessage(t.id, t.channel_id),
-                        r = new m.ZP(t);
+                        r = new I.ZP(t);
                     return (
                         null != n &&
                             (r = r.merge({
@@ -150,7 +150,7 @@ function L(e) {
                       isSearching: !0,
                       isIndexing: !1,
                       isHistoricalIndexing: !1,
-                      offset: Z,
+                      offset: V,
                       totalResults: 0,
                       hasError: !1,
                       showBlockedResults: !1,
@@ -161,36 +161,36 @@ function L(e) {
                       isSearching: !1,
                       isIndexing: null != (t = y.result.doing_deep_historical_index) && t,
                       isHistoricalIndexing: null != (n = y.result.doing_deep_historical_index) && n,
-                      offset: Z,
+                      offset: V,
                       totalResults: null != (r = y.result.total_results) ? r : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1,
                   };
-        }, [y.result, Z]);
-    return null == G || null == w || null == B
+        }, [y.result, V]);
+    return null == G || null == k || null == B
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(S.container, U),
+              className: s()(p.container, U),
               children: [
                   (0, r.jsx)(f.Z, {
-                      guildId: L,
+                      guildId: D,
                       userId: i,
                       onNavigate: M,
                   }),
                   (0, r.jsx)(u.Den, {
                       className: C.innerContainer,
                       ref: b,
-                      onScroll: F,
+                      onScroll: w,
                       children: (0, r.jsx)(T.Z, {
-                          messages: V,
+                          messages: Z,
                           search: B,
                           renderEmbeds: !0,
                           blockCount: 0,
                           ignoreCount: 0,
-                          scrollTo: R.dG4,
+                          scrollTo: S.dG4,
                           onPageChange: z,
-                          onBlockedResultsClick: R.dG4,
+                          onBlockedResultsClick: S.dG4,
                       }),
                   }),
               ],

@@ -3,9 +3,9 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(388032),
-    o = n(289086);
+    s = n(481060),
+    a = n(388032),
+    o = n(24491);
 function c(e) {
     let {
         className: t,
@@ -22,14 +22,14 @@ function c(e) {
         className: l()(t, o.enableContainer),
         children: [
             n
-                ? (0, r.jsx)(a.dz2, {
+                ? (0, r.jsx)(s.dz2, {
                       size: "custom",
                       color: "currentColor",
                       width: 24,
                       height: 24,
                       className: l()(o.activeCircle, { [o.animate]: u }),
                   })
-                : (0, r.jsx)(a.vdY, {
+                : (0, r.jsx)(s.vdY, {
                       size: "custom",
                       color: "currentColor",
                       width: 24,
@@ -39,11 +39,11 @@ function c(e) {
             (0, r.jsxs)("div", {
                 className: o.enableDescription,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         children: m,
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         children: g,
                     }),
@@ -57,19 +57,19 @@ function c(e) {
                         : (0, r.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
                               className: o.previewButton,
-                              children: (0, r.jsx)(a.zxk, {
+                              children: (0, r.jsx)(s.zxk, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: null != i ? i : s.intl.string(s.t["5U0kLy"]),
+                                  text: null != i ? i : a.intl.string(a.t["5U0kLy"]),
                                   onClick: c,
                                   disabled: p,
                               }),
                           }),
-                    (0, r.jsx)(a.zxk, {
+                    (0, r.jsx)(s.zxk, {
                         variant: n ? "critical-primary" : "primary",
                         size: "sm",
                         disabled: null == d || !n || p,
-                        text: n ? s.intl.string(s.t.R9GHyc) : s.intl.string(s.t.JFfinp),
+                        text: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp),
                         onClick: d,
                     }),
                 ],

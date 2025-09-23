@@ -2,19 +2,19 @@ n.d(t, { q: () => d }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(434404),
-    s = n(981631),
+    s = n(434404),
+    a = n(981631),
     o = n(388032),
-    c = n(479347);
+    c = n(39935);
 function d(e) {
     let { isInventoryFeedEnabled: t, canManageGuild: n, features: d } = e,
         u = i.useCallback(
             (e) => {
                 let t = new Set(d);
                 e
-                    ? (t.add(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER))
-                    : (t.add(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER)),
-                    a.Z.updateGuild({ features: t });
+                    ? (t.add(a.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(a.oNc.ACTIVITY_FEED_DISABLED_BY_USER))
+                    : (t.add(a.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(a.oNc.ACTIVITY_FEED_ENABLED_BY_USER)),
+                    s.Z.updateGuild({ features: t });
             },
             [d],
         );

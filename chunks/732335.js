@@ -6,12 +6,12 @@ var i = n(951288),
     a = n(129724),
     o = n(981631),
     c = n(388032),
-    d = n(197571);
+    d = n(10198);
 function u(e) {
     let { label: t, helperText: n, hideLabel: u, channel: h, onChange: g } = e,
         [m, p] = l.useState(null),
         f = h.rateLimitPerUser,
-        x = l.useMemo(() => {
+        b = l.useMemo(() => {
             let e = [...(null != m ? m : o.BiE)];
             return (
                 e.includes(f) || e.unshift(f),
@@ -21,7 +21,7 @@ function u(e) {
                 }))
             );
         }, [m, f]),
-        b = l.useCallback(
+        x = l.useCallback(
             (e) => {
                 g(e), p(null);
             },
@@ -47,9 +47,9 @@ function u(e) {
         helperText: n,
         className: d.marginBottom8,
         value: f,
-        onChange: b,
+        onChange: x,
         onSearchChange: j,
-        options: x,
+        options: b,
         onBlur: v,
         placeholder: c.intl.string(c.t.dBqQu7),
     });

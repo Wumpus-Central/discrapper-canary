@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(755721),
-    a = n(481060),
-    s = n(100527),
+    s = n(481060),
+    a = n(100527),
     o = n(906732),
     c = n(623624),
     d = n(372444),
@@ -12,14 +12,14 @@ var i = n(442837),
     m = n(317169),
     g = n(926491),
     p = n(145499),
-    h = n(424218),
-    f = n(267642),
+    f = n(424218),
+    h = n(267642),
     b = n(63063),
     x = n(999382),
     j = n(981631),
     v = n(611480),
     _ = n(388032),
-    O = n(86318);
+    O = n(570735);
 let y = {
         page: j.ZY5.GUILD_SETTINGS,
         section: j.jXE.GUILD_SETTINGS_STICKERS,
@@ -29,16 +29,16 @@ let y = {
         let { guild: t } = e,
             { analyticsLocations: n } = (0, o.ZP)(),
             i = (0, m.Z)(t.id).available,
-            s = j.oCV[j.Eu4.TIER_1] - i;
+            a = j.oCV[j.Eu4.TIER_1] - i;
         return (0, r.jsxs)("div", {
             className: O.upsellContainer,
             children: [
-                (0, r.jsx)(a.X6q, {
+                (0, r.jsx)(s.X6q, {
                     className: O.upsellHeader,
                     variant: "heading-xl/semibold",
                     children: _.intl.string(_.t.hzCkys),
                 }),
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(s.Text, {
                     className: O.upsellDescription,
                     variant: "text-md/normal",
                     children: _.intl.string(_.t.jcesAA),
@@ -55,7 +55,7 @@ let y = {
                                     analyticsLocations: n,
                                     analyticsLocation: y,
                                     guildId: t.id,
-                                    totalNumberOfSlotsToAssign: s,
+                                    totalNumberOfSlotsToAssign: a,
                                 }),
                             children: _.intl.string(_.t.Q5dbTk),
                         }),
@@ -75,15 +75,15 @@ let y = {
         });
     },
     N = () =>
-        (0, r.jsxs)(a.hjN, {
+        (0, r.jsxs)(s.hjN, {
             title: _.intl.string(_.t["9N2OWF"]),
             children: [
-                (0, r.jsx)(a.R94, {
-                    type: a.geA.DESCRIPTION,
-                    children: _.intl.format(_.t.hxLvi4, { fileSize: (0, h.IC)(v.Ht, { useKibibytes: !0 }) }),
+                (0, r.jsx)(s.R94, {
+                    type: s.geA.DESCRIPTION,
+                    children: _.intl.format(_.t.hxLvi4, { fileSize: (0, f.IC)(v.Ht, { useKibibytes: !0 }) }),
                 }),
-                (0, r.jsx)(a.R94, {
-                    type: a.geA.DESCRIPTION,
+                (0, r.jsx)(s.R94, {
+                    type: s.geA.DESCRIPTION,
                     children: _.intl.format(_.t.UBj0aW, { articleUrl: b.Z.getArticleURL(j.BhN.STICKERS_UPLOAD) }),
                 }),
             ],
@@ -92,13 +92,13 @@ let y = {
         let t,
             n,
             i,
-            { guild: l, guildStickers: a } = e,
-            s = l.premiumTier,
-            o = (0, f.Qi)(a, s),
-            c = (0, f.FZ)(s),
-            u = (0, f.A3)(s),
-            m = a.length;
-        return null == c || s === j.Eu4.TIER_3 || o > 0
+            { guild: l, guildStickers: s } = e,
+            a = l.premiumTier,
+            o = (0, h.Qi)(s, a),
+            c = (0, h.FZ)(a),
+            u = (0, h.A3)(a),
+            m = s.length;
+        return null == c || a === j.Eu4.TIER_3 || o > 0
             ? null
             : (m > u
                   ? ((t = _.intl.formatToPlainString(_.t.ZtAY1d, { level: c })),
@@ -107,7 +107,7 @@ let y = {
                   : ((t = _.intl.string(_.t.zT9Sxc)),
                     (n = _.intl.formatToPlainString(_.t.YaW9wM, {
                         level: c,
-                        numAdditional: (0, f.ig)(c),
+                        numAdditional: (0, h.ig)(c),
                     })),
                     (i = j.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(d.Z, {
@@ -118,7 +118,7 @@ let y = {
                       page: j.ZY5.GUILD_SETTINGS,
                       section: j.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
-                      objectType: (0, f.ge)(c),
+                      objectType: (0, h.ge)(c),
                   },
               }));
     },
@@ -128,14 +128,14 @@ let y = {
                 var t;
                 return null != e && null != (t = g.Z.getStickersByGuildId(e.id)) ? t : [];
             }, [e]),
-            { analyticsLocations: n } = (0, o.ZP)(s.Z.STICKERS);
+            { analyticsLocations: n } = (0, o.ZP)(a.Z.STICKERS);
         if (null == e) return null;
         let l = e.premiumTier !== j.Eu4.NONE || t.length > 0;
         return (0, r.jsx)(o.Gt, {
             value: n,
-            children: (0, r.jsxs)(a.hjN, {
+            children: (0, r.jsxs)(s.hjN, {
                 title: _.intl.string(_.t.R5nQkZ),
-                tag: a.RB0.H1,
+                tag: s.RB0.H1,
                 children: [
                     l
                         ? (0, r.jsxs)("div", {
@@ -148,7 +148,7 @@ let y = {
                               ],
                           })
                         : (0, r.jsx)(C, { guild: e }),
-                    (0, r.jsx)(a.$i$, { className: O.divider }),
+                    (0, r.jsx)(s.$i$, { className: O.divider }),
                     (0, r.jsx)(p.Z, { guild: e }),
                 ],
             }),

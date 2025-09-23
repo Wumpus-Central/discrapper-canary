@@ -5,7 +5,7 @@ var i = n(630388),
     l = n(901461),
     a = n(773176),
     o = n(981631),
-    s = n(360514);
+    s = n(5898);
 function c(e) {
     let {
             setPopout: t,
@@ -16,9 +16,9 @@ function c(e) {
         } = e,
         b = p.state === o.yb.SENDING,
         y = p.id === f,
-        _ = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
-        C = p.state === o.yb.SEND_FAILED;
-    return b || (_ && !C)
+        C = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        _ = p.state === o.yb.SEND_FAILED;
+    return b || (C && !_)
         ? null
         : (0, r.jsx)(a.Z, {
               className: s.buttons,

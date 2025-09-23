@@ -1,4 +1,153 @@
-e.r(a), e.d(a, { default: () => o });
-let o = JSON.parse(
-    '{"xi8rEx":"\xBFTe gustaría configurar Discord en Español?","09QGGB":"\xBFCambiar idioma?","ofazSU":"Entendido","yQfLwM":"Discord está configurado en Español. Puedes elegir otro idioma en \\"Ajustes de aplicación\\" > \\"Idioma\\".","KUFsLi":"\xA1El cambio fue hecho!","jM7sUl":"No","QkGMPz":"Sí"}',
-);
+n.d(t, { Z: () => f }), n(388685);
+var r = n(951288);
+n(647438);
+var i = n(481060),
+    l = n(723047),
+    s = n(727843),
+    a = n(290348),
+    o = n(783454),
+    c = n(893729),
+    d = n(619326),
+    u = n(553204),
+    m = n(388032),
+    g = n(851016),
+    p = n(510569);
+function f() {
+    let { editStateId: e, guildId: t } = (0, s.N)(),
+        [, f] = a.p9(e, t),
+        [h, b] = a.Ek(e, t),
+        x = a.qs(e, t);
+    function j() {
+        (0, i.ZDy)(async () => {
+            let { default: e } = await n.e("22942").then(n.bind(n, 660727));
+            return (n) => {
+                var i, l;
+                return (0, r.jsx)(
+                    e,
+                    ((i = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, n)),
+                    (l = l =
+                        {
+                            guildId: t,
+                            onUploadIcon: (e) =>
+                                f({
+                                    icon: e,
+                                    unicodeEmoji: null,
+                                }),
+                            onSelectUnicodeEmoji: (e) =>
+                                f({
+                                    icon: null,
+                                    unicodeEmoji: e,
+                                }),
+                        }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                          }),
+                    i),
+                );
+            };
+        });
+    }
+    let v = (0, l.mY)();
+    return (0, r.jsx)(o.Z, {
+        title: m.intl.string(m.t["Ah+sQ0"]),
+        description: m.intl.string(m.t.ixbWiI),
+        children: (0, r.jsxs)(i.Kqy, {
+            direction: "vertical",
+            gap: 24,
+            children: [
+                (0, r.jsx)(i.hjN, {
+                    title: m.intl.string(m.t["6OUqDQ"]),
+                    disabled: v,
+                    children: (0, r.jsx)(d.Z, {
+                        value: h,
+                        onChange: b,
+                        disabled: v,
+                    }),
+                }),
+                (0, r.jsxs)(i.hjN, {
+                    title: m.intl.string(m.t["zn8/AQ"]),
+                    disabled: v,
+                    children: [
+                        (0, r.jsx)(i.R94, {
+                            type: i.R94.Types.DESCRIPTION,
+                            className: g.formDescription,
+                            disabled: v,
+                            children: m.intl.string(m.t.AqHUra),
+                        }),
+                        (0, r.jsxs)(i.Kqy, {
+                            direction: "horizontal",
+                            gap: 16,
+                            children: [
+                                (0, r.jsx)(u.Z, {
+                                    role: x,
+                                    "aria-label": m.intl.string(m.t.mD1oGB),
+                                    onClick: j,
+                                    disabled: v,
+                                }),
+                                (0, r.jsx)(i.zxk, {
+                                    variant: "secondary",
+                                    onClick: j,
+                                    disabled: v,
+                                    text: m.intl.string(m.t.mD1oGB),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, r.jsx)(i.Rny, {
+                    children: (0, r.jsxs)("div", {
+                        className: p.previewContainer,
+                        "aria-hidden": !0,
+                        children: [
+                            (0, r.jsx)(c.Z, {
+                                guildId: t,
+                                role: x,
+                                className: p.messageContainer,
+                                theme: "light",
+                            }),
+                            (0, r.jsx)(c.Z, {
+                                guildId: t,
+                                role: x,
+                                className: p.messageContainer,
+                                theme: "dark",
+                            }),
+                        ],
+                    }),
+                }),
+            ],
+        }),
+    });
+}

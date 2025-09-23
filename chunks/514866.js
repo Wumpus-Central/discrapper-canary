@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => j });
 var a = n(951288);
 n(647438);
 var r = n(120356),
-    l = n.n(r),
-    i = n(668757),
+    i = n.n(r),
+    l = n(668757),
     s = n(481060),
     o = n(168107),
     c = n(480916),
@@ -13,10 +13,10 @@ var r = n(120356),
     h = n(695346),
     p = n(306052),
     x = n(594174),
-    b = n(517269),
-    f = n(197571);
+    f = n(103088),
+    b = n(10198);
 let g = () => {
-    Promise.all([n.e("52030"), n.e("1286")])
+    Promise.all([n.e("52030"), n.e("91403")])
         .then(n.bind(n, 24031))
         .then((e) => {
             let { openMFAModal: t } = e;
@@ -41,18 +41,18 @@ let g = () => {
             );
         });
 };
-function v() {
+function j() {
     let e = x.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         n = h.Rt.useSetting();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
-                className: l()(b.buttonsContainer, f.marginBottom20),
+                className: i()(f.buttonsContainer, b.marginBottom20),
                 children: (0, a.jsx)(p.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(b.buttonsContainer, f.marginBottom20),
+                className: i()(f.buttonsContainer, b.marginBottom20),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch MFA",
@@ -60,7 +60,7 @@ function v() {
                 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(b.buttonsContainer, f.marginBottom20),
+                className: i()(f.buttonsContainer, b.marginBottom20),
                 children: (0, a.jsx)(s.zxk, {
                     variant: "primary",
                     text: "Launch Vibing Wumpus",
@@ -71,7 +71,7 @@ function v() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, f.marginBottom20),
+                            className: i()(f.buttonsContainer, b.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Captcha Test Tool",
@@ -79,7 +79,7 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, f.marginBottom20),
+                            className: i()(f.buttonsContainer, b.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Test Tool",
@@ -87,7 +87,7 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, f.marginBottom20),
+                            className: i()(f.buttonsContainer, b.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Launch Age Verification Modal",
@@ -98,15 +98,15 @@ function v() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, f.marginBottom20),
+                            className: i()(f.buttonsContainer, b.marginBottom20),
                             children: (0, a.jsx)(s.zxk, {
                                 variant: "primary",
                                 text: "Force libdiscore Crash",
-                                onClick: i.$R,
+                                onClick: l.$R,
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: l()(b.buttonsContainer, f.marginBottom20),
+                            className: i()(f.buttonsContainer, b.marginBottom20),
                             children: (0, a.jsx)(s.j7V, {
                                 value: n,
                                 onChange: (e) => h.Rt.updateSetting(e),

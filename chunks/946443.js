@@ -1,7 +1,7 @@
 n.d(t, {
     QP: () => N,
     ZP: () => S,
-    h6: () => I,
+    h6: () => P,
 }),
     n(388685);
 var r = n(951288),
@@ -22,16 +22,16 @@ var r = n(951288),
     O = n(358085),
     y = n(143316),
     _ = n(240126),
-    j = n(147522),
-    v = n(809780),
+    v = n(147522),
+    j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(915087);
+    E = n(77902);
 function S(e) {
-    var t, n, l, a, y, S, I;
-    let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
+    var t, n, l, a, y, S, P;
+    let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
         A = i.useRef(null),
-        [R, D] = (0, v.ZP)(A),
+        [R, D] = (0, j.ZP)(A),
         { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
         U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
@@ -107,7 +107,7 @@ function S(e) {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+P"]),
             tip:
-                (null == (I = s().os) ? void 0 : I.family) === "OS X"
+                (null == (P = s().os) ? void 0 : P.family) === "OS X"
                     ? C.intl.string(C.t.w9uDOT)
                     : C.intl.string(C.t.BiUJCw),
         });
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: L === v.jd.Done ? void 0 : k,
+                            onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
-                                Z ? (0, r.jsx)(P, { setSeenTutorial: w }) : null,
-                                (0, j.Z)(M, D, N),
-                                L === v.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                w ? (0, r.jsx)(I, { setSeenTutorial: Z }) : null,
+                                (0, v.Z)(M, D, N),
+                                L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -206,7 +206,7 @@ function S(e) {
         }),
     });
 }
-function P(e) {
+function I(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
         className: E.tutorial,
@@ -245,7 +245,7 @@ function P(e) {
         ],
     });
 }
-function I() {
+function P() {
     return (0, r.jsx)(_.Z, {
         Icon: d.xx7,
         disableStars: !0,

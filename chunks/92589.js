@@ -3,10 +3,10 @@ var r = n(951288);
 n(647438);
 var l = n(481060),
     a = n(434650),
-    o = n(168020),
-    s = n(859788),
-    i = n(388032),
-    c = n(449177);
+    s = n(168020),
+    i = n(859788),
+    o = n(388032),
+    c = n(80931);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,15 +42,15 @@ let d = (e) => {
             null != n,
         ),
         g = null != t.textColor ? { color: t.textColor } : void 0,
-        f = null != t.body && "" !== t.body,
-        p = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        p = null != t.body && "" !== t.body,
+        f = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
         ref: d,
         className: c.immersiveBannerBlock,
         children: [
             (0, r.jsx)("div", {
                 className: c.banner,
-                children: (0, r.jsx)(s.Z, {
+                children: (0, r.jsx)(i.Z, {
                     bannerStatic: t.bannerAsset.static,
                     bannerAnimated: t.bannerAsset.animated,
                 }),
@@ -61,7 +61,7 @@ let d = (e) => {
                     className: c.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(o.R, {
+                            ? (0, r.jsx)(s.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })
@@ -73,19 +73,19 @@ let d = (e) => {
                             style: u({}, g),
                             children: t.title,
                         }),
-                        f || p
+                        p || f
                             ? (0, r.jsxs)(l.Text, {
                                   variant: "text-md/medium",
                                   style: u({}, g),
                                   children: [
-                                      f && t.body,
-                                      f && p && " ",
-                                      p &&
+                                      p && t.body,
+                                      p && f && " ",
+                                      f &&
                                           (0, r.jsx)(l.eee, {
                                               href: t.helpCenterUrl,
                                               className: c.learnMoreLink,
                                               style: u({}, g),
-                                              children: i.intl.string(i.t.O7ADgo),
+                                              children: o.intl.string(o.t.O7ADgo),
                                           }),
                                   ],
                               })

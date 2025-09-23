@@ -1,52 +1,52 @@
-n.d(t, { Z: () => _ }), n(388685), n(539854);
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(704215),
+n.d(t, { Z: () => h }), n(388685), n(539854);
+var a = n(951288),
+    r = n(647438),
+    i = n(442837),
+    l = n(704215),
     s = n(481060),
-    l = n(581883),
+    o = n(581883),
     c = n(428967),
-    u = n(972118),
-    d = n(764668),
-    f = n(197571);
-let _ = i.memo(function (e) {
-    let { className: t, content: n, onChange: a } = e,
-        l = o.z[n],
-        { isDismissed: f, handleToggleDismissState: _ } = (0, u.Z)(l),
-        [h, m] = i.useState(!1),
-        g = i.useCallback(() => {
-            null == a || a(n), _();
-        }, [a, _, n]),
-        E = i.useCallback(
+    d = n(972118),
+    u = n(561735),
+    m = n(10198);
+let h = r.memo(function (e) {
+    let { className: t, content: n, onChange: i } = e,
+        o = l.z[n],
+        { isDismissed: m, handleToggleDismissState: h } = (0, d.Z)(o),
+        [x, f] = r.useState(!1),
+        b = r.useCallback(() => {
+            null == i || i(n), h();
+        }, [i, h, n]),
+        g = r.useCallback(
             (e) => {
-                e.preventDefault(), m(!0), navigator.clipboard.writeText(n.toLowerCase());
+                e.preventDefault(), f(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
             [n],
         );
-    return (0, r.jsx)(s.j7V, {
-        value: f,
-        onChange: g,
+    return (0, a.jsx)(s.j7V, {
+        value: m,
+        onChange: b,
         className: t,
-        children: (0, r.jsxs)("div", {
-            className: d.container,
+        children: (0, a.jsxs)("div", {
+            className: u.container,
             children: [
-                (0, r.jsxs)("div", {
-                    className: d.textContainer,
+                (0, a.jsxs)("div", {
+                    className: u.textContainer,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, a.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: d.text,
-                            children: "".concat(n.toLowerCase(), " (").concat(o.z[n], ")"),
+                            className: u.text,
+                            children: "".concat(n.toLowerCase(), " (").concat(l.z[n], ")"),
                         }),
-                        (0, c.qh)(l) && (0, r.jsx)(p, { content: l }),
+                        (0, c.qh)(o) && (0, a.jsx)(p, { content: o }),
                     ],
                 }),
-                (0, r.jsx)(s.hU, {
+                (0, a.jsx)(s.hU, {
                     size: "sm",
                     variant: "icon-only",
-                    icon: h ? s.C2q : s.zTD,
-                    onClick: E,
-                    "aria-label": h ? "Copied" : "Copy",
+                    icon: x ? s.C2q : s.zTD,
+                    onClick: g,
+                    "aria-label": x ? "Copied" : "Copy",
                 }),
             ],
         }),
@@ -54,25 +54,25 @@ let _ = i.memo(function (e) {
 });
 function p(e) {
     let { content: t } = e,
-        n = (0, a.e7)([l.Z], () => {
+        n = (0, i.e7)([o.Z], () => {
             var e, n;
-            return null == (n = l.Z.settings.userContent) || null == (e = n.recurringDismissibleContentStates)
+            return null == (n = o.Z.settings.userContent) || null == (e = n.recurringDismissibleContentStates)
                 ? void 0
                 : e[t];
         });
     if (null == n) return null;
-    let i = [],
-        { lastDismissedVersion: o, lastDismissedAtMs: c, lastDismissedObjectId: u } = n;
-    if ((void 0 !== o && 0 !== o && i.push("last_dismissed_version: ".concat(o)), void 0 !== c)) {
+    let r = [],
+        { lastDismissedVersion: l, lastDismissedAtMs: c, lastDismissedObjectId: d } = n;
+    if ((void 0 !== l && 0 !== l && r.push("last_dismissed_version: ".concat(l)), void 0 !== c)) {
         let e = Number(c),
             t = Number.isNaN(e) ? "n/a" : new Date(e).toLocaleString();
-        i.push("last_dismissed_at: ".concat(t));
+        r.push("last_dismissed_at: ".concat(t));
     }
-    return (void 0 !== u && "0" !== u && i.push("last_dismissed_object_id: ".concat(u)), 0 === i.length)
+    return (void 0 !== d && "0" !== d && r.push("last_dismissed_object_id: ".concat(d)), 0 === r.length)
         ? null
-        : (0, r.jsx)(s.Text, {
+        : (0, a.jsx)(s.Text, {
               variant: "text-xs/normal",
-              className: f.marginTop4,
-              children: i.join(", "),
+              className: m.marginTop4,
+              children: r.join(", "),
           });
 }

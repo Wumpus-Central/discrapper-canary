@@ -2,44 +2,44 @@ n.d(t, { S: () => y }), n(388685), n(361932), n(187205);
 var r = n(951288),
     i = n(647438),
     l = n(512722),
-    a = n.n(l),
-    s = n(442837),
-    o = n(481060),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     C = n(14476),
     d = n(600164),
     c = n(699758),
     u = n(831895),
     p = n(314404),
-    x = n(594174),
+    _ = n(594174),
     h = n(626135),
     f = n(987209),
-    _ = n(563132),
+    x = n(563132),
     m = n(409813),
-    j = n(27034),
-    g = n(981631),
-    b = n(388032),
-    L = n(950174);
+    j = n(614277),
+    b = n(981631),
+    g = n(388032),
+    L = n(739621);
 function y(e) {
     var t, n;
     let { handleStepChange: l, handleClose: y } = e,
-        { selectedPlan: S, selectedSkuId: v, step: E } = (0, _.JL)(),
+        { selectedPlan: S, selectedSkuId: v, step: E } = (0, x.JL)(),
         {
             setSelectedGiftingPromotionReward: O,
-            selectedGiftingPromotionReward: P,
-            claimableRewards: k,
+            selectedGiftingPromotionReward: I,
+            claimableRewards: P,
             claimableVariants: w,
         } = (0, f.wD)(),
-        M = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
-        I = (0, c.ZP)(k, w, P),
-        [T, A] = i.useState(null != (n = null == I ? void 0 : I.defaultCategory) ? n : c.KN.Trick),
-        [Z, N] = i.useState(null == I || null == (t = I.defaultHighlightedReward) ? void 0 : t.skuId),
-        [R, B] = i.useState(!1),
-        U = i.useRef(T),
-        H = i.useMemo(
+        k = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        M = (0, c.ZP)(P, w, I),
+        [T, A] = i.useState(null != (n = null == M ? void 0 : M.defaultCategory) ? n : c.KN.Trick),
+        [Z, N] = i.useState(null == M || null == (t = M.defaultHighlightedReward) ? void 0 : t.skuId),
+        [F, R] = i.useState(!1),
+        B = i.useRef(T),
+        U = i.useMemo(
             () =>
                 null == w
-                    ? null != k
-                        ? k
+                    ? null != P
+                        ? P
                         : []
                     : w.flatMap((e) => {
                           var t, n;
@@ -85,35 +85,35 @@ function y(e) {
                                       }),
                                 t);
                       }),
-            [w, k, T],
+            [w, P, T],
         );
     i.useEffect(() => {
-        let e = null == I ? void 0 : I.defaultHighlightedReward;
-        !R && null == P && null != e && null != e && H.some((t) => t.skuId === e.skuId) && (O(e), N(e.skuId));
-    }, [I, R, P, H, O]),
+        let e = null == M ? void 0 : M.defaultHighlightedReward;
+        !F && null == I && null != e && null != e && U.some((t) => t.skuId === e.skuId) && (O(e), N(e.skuId));
+    }, [M, F, I, U, O]),
         i.useEffect(() => {
-            (null == I ? void 0 : I.defaultCategory) == null || R || A(I.defaultCategory);
-        }, [null == I ? void 0 : I.defaultCategory, R]),
-        a()(null != S, "Expected plan to selected"),
-        a()(null != v, "Expected selectedSkuId"),
-        a()(null != E, "Step should be set");
-    let F = i.useMemo(() => null != Z && (null != k ? k : []).some((e) => e.skuId === Z), [Z, k]),
-        G = i.useMemo(() => null != P && H.some((e) => e.skuId === P.skuId), [H, P]),
-        D = i.useMemo(() => 0 === H.length || null == Z || !G || !F, [H, Z, F, G]);
+            (null == M ? void 0 : M.defaultCategory) == null || F || A(M.defaultCategory);
+        }, [null == M ? void 0 : M.defaultCategory, F]),
+        o()(null != S, "Expected plan to selected"),
+        o()(null != v, "Expected selectedSkuId"),
+        o()(null != E, "Step should be set");
+    let H = i.useMemo(() => null != Z && (null != P ? P : []).some((e) => e.skuId === Z), [Z, P]),
+        G = i.useMemo(() => null != I && U.some((e) => e.skuId === I.skuId), [U, I]),
+        D = i.useMemo(() => 0 === U.length || null == Z || !G || !H, [U, Z, H, G]);
     i.useEffect(() => {
-        if (0 === H.length) {
+        if (0 === U.length) {
             N(void 0), O(void 0);
             return;
         }
-        (F && H.some((e) => e.skuId === Z)) || null == Z || (N(void 0), O(void 0));
-    }, [H, F, Z, O]),
+        (H && U.some((e) => e.skuId === Z)) || null == Z || (N(void 0), O(void 0));
+    }, [U, H, Z, O]),
         i.useEffect(() => {
-            U.current === T || G || (O(void 0), N(void 0)), (U.current = T);
+            B.current === T || G || (O(void 0), N(void 0)), (B.current = T);
         }, [T, G, O]);
-    let K = (e) => {
-            O(H.find((t) => t.skuId === e)), N(e), B(!0);
+    let Y = (e) => {
+            O(U.find((t) => t.skuId === e)), N(e), R(!0);
         },
-        z = H.map((e) => {
+        z = U.map((e) => {
             var t, n;
             return (0, r.jsx)(
                 C.c,
@@ -122,25 +122,25 @@ function y(e) {
                     assetId: e.assetId,
                     productName: null == (t = e.name) ? void 0 : t.call(e),
                     a11yLabel: null == (n = e.a11yLabel) ? void 0 : n.call(e),
-                    claimed: null != k && k.every((t) => t.skuId !== e.skuId),
-                    user: M,
-                    onSelect: K,
+                    claimed: null != P && P.every((t) => t.skuId !== e.skuId),
+                    user: k,
+                    onSelect: Y,
                     selectedSkuId: Z,
                     category: T,
                 },
                 e.skuId,
             );
         }),
-        W = (0, r.jsx)(j.O3, {
-            children: (0, r.jsx)(o.mzw, {
+        K = (0, r.jsx)(j.O3, {
+            children: (0, r.jsx)(s.mzw, {
                 className: L.modalFooter,
                 children: (0, r.jsx)(p.y, {
                     onStepChange: (e) => {
-                        null != M &&
-                            null != P &&
-                            h.default.track(g.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: M.id,
-                                reward_sku_id: P.skuId,
+                        null != k &&
+                            null != I &&
+                            h.default.track(b.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                                user_id: k.id,
+                                reward_sku_id: I.skuId,
                             }),
                             l(e);
                     },
@@ -155,31 +155,31 @@ function y(e) {
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(o.xBx, {
+            (0, r.jsxs)(s.xBx, {
                 className: L.modalHeader,
                 direction: d.Z.Direction.VERTICAL,
                 align: d.Z.Align.START,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-lg/bold",
                         color: "header-primary",
-                        children: b.intl.string(b.t["3JCuX1"]),
+                        children: g.intl.string(g.t["3JCuX1"]),
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "text-secondary",
                         className: L.headerSubtitle,
-                        children: b.intl.string(b.t.MhwtRU),
+                        children: g.intl.string(g.t.MhwtRU),
                     }),
-                    (0, r.jsx)(o.olH, {
+                    (0, r.jsx)(s.olH, {
                         className: L.closeButton,
                         onClick: y,
                     }),
                 ],
             }),
-            (0, r.jsx)(o.hzk, {
-                children: (0, r.jsxs)(o.Kqy, {
+            (0, r.jsx)(s.hzk, {
+                children: (0, r.jsxs)(s.Kqy, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
@@ -197,7 +197,7 @@ function y(e) {
                     ],
                 }),
             }),
-            W,
+            K,
         ],
     });
 }

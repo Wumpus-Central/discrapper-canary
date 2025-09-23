@@ -3,12 +3,12 @@ var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(63063),
-    a = n(67734),
-    s = n(375263),
+    s = n(67734),
+    a = n(375263),
     o = n(586382),
     c = n(981631),
     d = n(388032),
-    u = n(112913);
+    u = n(48895);
 function m(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)(i.hjN, {
@@ -35,7 +35,7 @@ function m(e) {
                             articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH),
                         }),
                     }),
-                    (0, r.jsx)(a.F, {
+                    (0, r.jsx)(s.F, {
                         guild: t,
                         canManageGuild: n,
                         buttonClassName: u.button,
@@ -44,7 +44,7 @@ function m(e) {
             }),
             (0, r.jsx)("div", {
                 className: u.column,
-                children: (0, r.jsx)(s.O, {
+                children: (0, r.jsx)(a.O, {
                     guild: t,
                     canManageGuild: n,
                 }),

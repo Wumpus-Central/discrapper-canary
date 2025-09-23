@@ -115,14 +115,14 @@ var r = n(951288),
     e3 = n(422202),
     e4 = n(870569),
     e8 = n(345243),
-    e5 = n(115530),
-    e6 = n(981631),
+    e6 = n(115530),
+    e5 = n(981631),
     e7 = n(215023),
     e9 = n(921944),
     te = n(46140),
     tt = n(65154),
     tn = n(388032),
-    tr = n(25874);
+    tr = n(490579);
 function ti(e, t, n) {
     return (
         t in e
@@ -239,9 +239,9 @@ function tO() {
                 null != i && r(i), null == (n = e.current) || n.call(e);
             };
             return (
-                eX.S.subscribe(e6.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
+                eX.S.subscribe(e5.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
                 () => {
-                    eX.S.unsubscribe(e6.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t);
+                    eX.S.unsubscribe(e5.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t);
                 }
             );
         }),
@@ -279,7 +279,7 @@ function tv(e) {
     return null == s
         ? null
         : (0, r.jsx)(E.Z, {
-              object: e6.qAy.AVATAR,
+              object: e5.qAy.AVATAR,
               children: (0, r.jsx)(eh.Z, {
                   user: s,
                   targetElementRef: h,
@@ -337,7 +337,7 @@ function tv(e) {
                                           src: s.getAvatarURL(void 0, O - 4, !1),
                                           avatarDecoration: b,
                                           "aria-label": s.username,
-                                          status: a ? e6.Skl.STREAMING : l,
+                                          status: a ? e5.Skl.STREAMING : l,
                                           isSpeaking: n,
                                           className: tr.avatar,
                                       }),
@@ -413,7 +413,7 @@ class tI extends i.PureComponent {
                 ? void 0
                 : t.find((e) => {
                       let { type: t } = e;
-                      return t === e6.IIU.CUSTOM_STATUS;
+                      return t === e5.IIU.CUSTOM_STATUS;
                   });
         return null != c
             ? (0, r.jsx)(A.Z, {
@@ -425,7 +425,7 @@ class tI extends i.PureComponent {
                       className: tr.customStatus,
                   }),
               })
-            : null != a && a !== e6.Skl.UNKNOWN && i.hasUniqueUsername()
+            : null != a && a !== e5.Skl.UNKNOWN && i.hasUniqueUsername()
               ? (0, r.jsx)(A.Z, {
                     hoverText: o,
                     forceHover: e,
@@ -581,16 +581,16 @@ class tI extends i.PureComponent {
             ti(this, "avatarWithPopoutRef", i.createRef()),
             ti(this, "handleToggleSelfMute", () => {
                 let { serverMute: e, suppress: t, selfMute: n } = this.props;
-                (0, G.Z)(e, t, e6.jXE.ACCOUNT_PANEL), (0, B.v)(C.Z.ACCOUNT, B.d.MIC, n);
+                (0, G.Z)(e, t, e5.jXE.ACCOUNT_PANEL), (0, B.v)(C.Z.ACCOUNT, B.d.MIC, n);
             }),
             ti(this, "handleToggleSelfDeaf", () => {
                 let { serverDeaf: e, selfDeaf: t } = this.props;
-                (0, U.Z)(e, e6.jXE.ACCOUNT_PANEL), (0, B.v)(C.Z.ACCOUNT, B.d.DEAFEN, !t);
+                (0, U.Z)(e, e5.jXE.ACCOUNT_PANEL), (0, B.v)(C.Z.ACCOUNT, B.d.DEAFEN, !t);
             }),
             ti(this, "handleOpenAccountSettings", () => {
                 this.dismissTooltips(),
                     eB.Z.isConnected()
-                        ? (0, eb.openUserSettings)(eg.n.VOICE_AND_VIDEO_PANEL, { section: e6.oAB.VOICE })
+                        ? (0, eb.openUserSettings)(eg.n.VOICE_AND_VIDEO_PANEL, { section: e5.oAB.VOICE })
                         : (0, eb.openUserSettings)();
             }),
             ti(this, "handleOpenSettingsContextMenu", (e) => {
@@ -684,7 +684,7 @@ class tI extends i.PureComponent {
                         identifiable: "always",
                     }),
                 ),
-                    eW.default.track(e6.rMx.TEXT_COPIED, { type: "User Tag" });
+                    eW.default.track(e5.rMx.TEXT_COPIED, { type: "User Tag" });
                 let r = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0,
@@ -743,7 +743,7 @@ class tI extends i.PureComponent {
                     children: [
                         (0, r.jsx)("div", {
                             className: tr.panelTitleContainer,
-                            children: (0, r.jsx)(e5.Z, {
+                            children: (0, r.jsx)(e6.Z, {
                                 className: o()({ [tr.withDisplayNameStyles]: i }),
                                 children: (0, r.jsx)(Q.Z, {
                                     userName: e0.ZP.getName(t),
@@ -886,7 +886,7 @@ function tA() {
                     null !=
                     e.find((e) => {
                         let { type: t } = e;
-                        return t === e6.IIU.STREAMING;
+                        return t === e5.IIU.STREAMING;
                     }),
                 status: eF.Z.getStatus(),
             };
@@ -1136,7 +1136,7 @@ function tN(e) {
             $(!1);
         }, []);
     (0, eq.yp)({
-        event: e6.CkL.OPEN_VOICE_FILTER_POPOUT,
+        event: e5.CkL.OPEN_VOICE_FILTER_POPOUT,
         handler: () => {
             $(!0);
         },

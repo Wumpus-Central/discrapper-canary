@@ -1,88 +1,88 @@
 t.d(n, { default: () => E });
-var i = t(951288);
+var r = t(951288);
 t(647438);
-var r = t(481060),
+var i = t(481060),
     l = t(239091),
-    a = t(108843),
-    o = t(100527),
-    s = t(299206),
-    c = t(895563),
-    u = t(32750),
+    o = t(108843),
+    a = t(100527),
+    c = t(299206),
+    u = t(895563),
+    s = t(32750),
     d = t(109764),
     f = t(323597),
     h = t(461535),
-    p = t(438536),
-    g = t(251746),
-    O = t(193987),
-    b = t(933793),
-    v = t(765483),
-    y = t(13736),
-    Z = t(732393),
-    m = t(214906),
+    b = t(438536),
+    p = t(251746),
+    Z = t(193987),
+    O = t(933793),
+    j = t(765483),
+    g = t(13736),
+    v = t(732393),
+    m = t(71991),
     _ = t(612856),
-    j = t(137591),
-    C = t(388032);
-let E = (0, a.Z)(
+    y = t(137591),
+    P = t(388032);
+let E = (0, o.Z)(
     function (e) {
         let { channel: n, onSelect: t } = e,
-            a = (0, d.Z)(n),
-            o = (0, h.Z)(n),
+            o = (0, d.Z)(n),
+            a = (0, h.Z)(n),
             E = (0, m.Z)(n),
-            P = (0, u.Z)(n),
-            N = (0, O.Z)(n),
-            A = (0, f.Z)(n),
-            R = (0, s.Z)({
+            N = (0, s.Z)(n),
+            x = (0, Z.Z)(n),
+            C = (0, f.Z)(n),
+            w = (0, c.Z)({
                 id: n.id,
-                label: C.intl.string(C.t.DQ797u),
+                label: P.intl.string(P.t.DQ797u),
             }),
-            T = (0, p.Z)(n, "Context Menu"),
-            S = (0, b.Z)(n),
-            I = (0, _.Z)(n),
-            U = (0, y.Z)(n),
-            w = (0, Z.Z)(n.id),
-            D = (0, g.Z)(n),
-            x = (0, j.Z)(n),
-            M = (0, c.l)(n),
-            k = (0, c.P)(n),
-            G = (0, v.Z)(n);
-        return (0, i.jsxs)(r.v2r, {
+            S = (0, b.Z)(n, "Context Menu"),
+            A = (0, O.Z)(n),
+            M = (0, _.Z)(n),
+            T = (0, g.Z)(n),
+            k = (0, v.Z)(n.id),
+            R = (0, p.Z)(n),
+            D = (0, y.Z)(n),
+            U = (0, u.l)(n),
+            I = (0, u.P)(n),
+            G = (0, j.Z)(n);
+        return (0, r.jsxs)(i.v2r, {
             navId: "thread-context",
             onClose: l.Zy,
-            "aria-label": C.intl.string(C.t["1NBjqa"]),
+            "aria-label": P.intl.string(P.t["1NBjqa"]),
             onSelect: t,
             children: [
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [o, M],
+                        children: [a, U],
                     },
                     "mark-as-read-or-favorite",
                 ),
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [T, D, P, N, U, w, a],
+                        children: [S, R, N, x, T, k, o],
                     },
                     "thread-actions",
                 ),
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [E, I],
+                        children: [E, M],
                     },
                     "notifications",
                 ),
-                (0, i.jsx)(r.kSQ, { children: k }),
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsx)(i.kSQ, { children: I }),
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [x, S, A, G],
+                        children: [D, A, C, G],
                     },
                     "admin-actions",
                 ),
-                (0, i.jsx)(r.kSQ, { children: R }, "developer-actions"),
+                (0, r.jsx)(i.kSQ, { children: w }, "developer-actions"),
             ],
         });
     },
-    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_LIST_THREAD_MENU],
+    [a.Z.CONTEXT_MENU, a.Z.CHANNEL_LIST_THREAD_MENU],
 );

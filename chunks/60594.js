@@ -5,7 +5,7 @@ var r = n(951288),
     s = n.n(l),
     o = n(512722),
     a = n.n(o),
-    c = n(938288),
+    c = n(401393),
     d = n(209739),
     u = n.n(d),
     f = n(442837),
@@ -18,8 +18,8 @@ var r = n(951288),
     v = n(89425),
     j = n(812206),
     b = n(600164),
-    S = n(313201),
-    y = n(243778),
+    y = n(313201),
+    S = n(243778),
     C = n(594190),
     O = n(751571),
     w = n(970731),
@@ -41,7 +41,7 @@ var r = n(951288),
     W = n(299570),
     z = n(960861),
     F = n(989941),
-    H = n(504580),
+    H = n(399299),
     V = n(351152),
     Y = n(567126),
     J = n(143135),
@@ -52,7 +52,7 @@ var r = n(951288),
     $ = n(921944),
     ee = n(761274),
     et = n(388032),
-    en = n(542257),
+    en = n(79985),
     er = n(402163);
 function ei(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -137,16 +137,16 @@ function eo(e) {
             var e;
             return null != ev ? (null == (e = P.Z.getGuild(ev)) ? void 0 : e.premiumTier) : null;
         }),
-        [eb, eS] = null != (l = (0, U.Z)(ed, e_, ej)) ? l : [q.LY.RESOLUTION_720, q.ws.FPS_30],
-        { lastPickerAction: ey } = (0, f.e7)([z.ZP], () => z.ZP.getPickerState()),
+        [eb, ey] = null != (l = (0, U.Z)(ed, e_, ej)) ? l : [q.LY.RESOLUTION_720, q.ws.FPS_30],
+        { lastPickerAction: eS } = (0, f.e7)([z.ZP], () => z.ZP.getPickerState()),
         eC = T.Z.getUseSystemScreensharePicker();
     (0, z.UB)();
     let eO = eC && (0, D.isMac)() && u().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, K.jR),
         ew = [];
     ec === h.Dvm.ENTERED && eC && (0, D.isMac)() && ew.push(m.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eZ, eI] = (0, y.US)(ew, void 0, !0);
-    ed !== q.tI.PRESET_CUSTOM && ((eu = eb), (ef = eS)), (0, G.Z)(ed, eu, ef, e_, ej) || ((eu = eb), (ef = eS));
-    let eN = (0, S.Dt)(),
+    let [eZ, eI] = (0, S.US)(ew, void 0, !0);
+    ed !== q.tI.PRESET_CUSTOM && ((eu = eb), (ef = ey)), (0, G.Z)(ed, eu, ef, e_, ej) || ((eu = eb), (ef = ey));
+    let eN = (0, y.Dt)(),
         [eP, eT] = i.useState(((w = B && !eO), M ? 0 : w ? 2 : 3)),
         [eE, eR] = i.useState(eO),
         [eA, ek] = i.useState(null),
@@ -252,7 +252,7 @@ function eo(e) {
             },
             [e$],
         );
-    function e4(e) {
+    function e8(e) {
         if ((e.preventDefault(), 1 === eP)) return e3();
         if (2 === eP) return eT(3);
         if (null != e$) return eT(1);
@@ -273,7 +273,7 @@ function eo(e) {
             });
         } else e2();
     }
-    let e8 = i.useCallback(
+    let e4 = i.useCallback(
             (e) => {
                 eD(e),
                     null != e &&
@@ -292,7 +292,7 @@ function eo(e) {
             },
             [B],
         ),
-        e6 = !(1 === eP && eC && ey === z.Uc.Error),
+        e6 = !(1 === eP && eC && eS === z.Uc.Error),
         e9 = (function (e) {
             switch (e) {
                 case 2:
@@ -438,7 +438,7 @@ function eo(e) {
                     children: () => {
                         var e;
                         return (0, r.jsxs)("form", {
-                            onSubmit: e4,
+                            onSubmit: e8,
                             ref: eh,
                             children: [
                                 (0, r.jsxs)(h.MyZ, {
@@ -458,10 +458,10 @@ function eo(e) {
                                             children: (0, r.jsx)("div", {
                                                 className: en.modalSize,
                                                 children: eC
-                                                    ? (0, r.jsx)(Y.se, { onSourceSelect: e8 })
+                                                    ? (0, r.jsx)(Y.se, { onSourceSelect: e4 })
                                                     : (0, r.jsx)(Y.oA, {
                                                           selectedSource: eM,
-                                                          onChangeSelectedSource: e8,
+                                                          onChangeSelectedSource: e4,
                                                       }),
                                             }),
                                         }),
@@ -484,7 +484,7 @@ function eo(e) {
                                                     onChangeSelectedResolution: (e) => e5(eG, e, eF),
                                                     onChangeSelectedPreset: (e) => e5(e, eW, eF),
                                                     onChangeSelectedChannelId: ek,
-                                                    onChangeSelectedSource: e8,
+                                                    onChangeSelectedSource: e4,
                                                     onChangeSource: () => tt(),
                                                     onChangeAudioDevice: (e) => eB(e),
                                                     onChangeGuild: () => eT(0),

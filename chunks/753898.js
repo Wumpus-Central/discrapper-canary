@@ -15,9 +15,9 @@ var r = n(951288),
     g = n(769409),
     b = n(518311),
     y = n(518950),
-    _ = n(967128),
-    C = n(388032),
-    v = n(963392);
+    C = n(967128),
+    _ = n(388032),
+    v = n(40036);
 function x(e) {
     var t;
     let { channel: n, children: x, user: O } = e,
@@ -25,8 +25,8 @@ function x(e) {
         E = null != (t = (0, d.ZP)(n)) ? t : "",
         {
             avatarDecorationSrc: S,
-            eventHandlers: I,
-            isAnimating: P,
+            eventHandlers: P,
+            isAnimating: I,
         } = (0, y.Z)({
             userId: null == O ? void 0 : O.id,
             size: o.EFr.SIZE_80,
@@ -34,19 +34,19 @@ function x(e) {
         }),
         [Z, T] = i.useState(!1),
         N = i.useCallback(() => {
-            I.onMouseEnter(), T(!0);
-        }, [I]),
+            P.onMouseEnter(), T(!0);
+        }, [P]),
         A = i.useCallback(() => {
-            I.onMouseLeave(), T(!1);
-        }, [I]),
+            P.onMouseLeave(), T(!1);
+        }, [P]),
         w = !n.isMultiUserDM() && (null == O ? void 0 : O.displayNameStyles) != null;
-    return (0, r.jsxs)(_.ZP, {
+    return (0, r.jsxs)(C.ZP, {
         channelId: n.id,
         onMouseEnter: N,
         onMouseLeave: A,
         children: [
             (() => {
-                let e = !j && P;
+                let e = !j && I;
                 return n.isMultiUserDM()
                     ? (0, r.jsx)(m.v, {
                           channel: n,
@@ -67,7 +67,7 @@ function x(e) {
                           avatarDecoration: S,
                       });
             })(),
-            (0, r.jsx)(_.Ot, {
+            (0, r.jsx)(C.Ot, {
                 children: w
                     ? (0, r.jsx)(h.Z, {
                           userName: E,
@@ -77,21 +77,21 @@ function x(e) {
                       })
                     : E,
             }),
-            (0, r.jsx)(_.jz, { children: x }),
+            (0, r.jsx)(C.jz, { children: x }),
             n.isMultiUserDM() &&
                 (0, r.jsxs)(a.hE2, {
                     className: v.buttonContainer,
                     children: [
                         (0, r.jsx)(b.l, {
                             channel: n,
-                            text: C.intl.string(C.t["6Qgren"]),
+                            text: _.intl.string(_.t["6Qgren"]),
                             icon: o.ejJ,
                         }),
                         (0, r.jsx)(a.zxk, {
                             icon: o.vdY,
                             variant: "secondary",
-                            text: C.intl.string(C.t["5Q9+/P"]),
-                            "aria-label": C.intl.string(C.t["5Q9+/P"]),
+                            text: _.intl.string(_.t["5Q9+/P"]),
+                            "aria-label": _.intl.string(_.t["5Q9+/P"]),
                             onClick: () => (0, g.B)(n.id, c.Z.EMPTY_GROUP_DM),
                         }),
                     ],

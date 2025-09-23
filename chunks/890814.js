@@ -1,11 +1,11 @@
-r.d(t, { Z: () => l });
-var n = r(951288);
-r(647438);
-var i = r(956636);
-function l(e) {
-    let { games: t, renderGame: r } = e;
-    return (0, n.jsx)("ul", {
+n.d(t, { Z: () => o });
+var r = n(951288);
+n(647438);
+var i = n(82977);
+function o(e) {
+    let { games: t, renderGame: n } = e;
+    return (0, r.jsx)("ul", {
         className: i.coverList,
-        children: t.map((e, t) => (0, n.jsx)("li", { children: r(e) }, "".concat(e.applicationId, "-").concat(t))),
+        children: t.map((e, t) => (0, r.jsx)("li", { children: n(e) }, "".concat(e.applicationId, "-").concat(t))),
     });
 }

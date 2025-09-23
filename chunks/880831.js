@@ -8,7 +8,7 @@ var r = n(951288),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    s = n(938288),
+    s = n(401393),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -19,16 +19,16 @@ var r = n(951288),
     g = n(937889),
     b = n(739566),
     y = n(267128),
-    _ = n(378233),
-    C = n(419922),
+    C = n(378233),
+    _ = n(419922),
     v = n(375954),
     x = n(699516),
     O = n(768581),
     j = n(70956),
     E = n(823379),
     S = n(981631),
-    I = n(217702),
-    P = n(89019);
+    P = n(217702),
+    I = n(832063);
 let Z = 10 * j.Z.Millis.SECOND;
 function T(e) {
     var t;
@@ -69,19 +69,19 @@ function T(e) {
             renderedContent: N,
             trailingIcon: A,
             leadingIcon: w,
-        } = (0, y.f)(n, Z, l, o, P.messageContent, {
-            trailingIconClass: P.messageContentTrailingIcon,
-            leadingIconClass: P.messageContentLeadingIcon,
-            iconSize: I.WW,
+        } = (0, y.f)(n, Z, l, o, I.messageContent, {
+            trailingIconClass: I.messageContentTrailingIcon,
+            leadingIconClass: I.messageContentLeadingIcon,
+            iconSize: P.WW,
         }),
-        R = (0, _.cv)(n),
-        M =
-            R.length > 0
-                ? R.map((e) =>
+        M = (0, C.cv)(n),
+        R =
+            M.length > 0
+                ? M.map((e) =>
                       (0, r.jsx)(
-                          C.Z,
+                          _.Z,
                           {
-                              className: P.sticker,
+                              className: I.sticker,
                               size: 128,
                               sticker: e,
                               isInteracting: v,
@@ -91,7 +91,7 @@ function T(e) {
                   )
                 : null;
     return (0, r.jsxs)(u.P3F, {
-        className: P.toast,
+        className: I.toast,
         onMouseEnter: () => {
             j(!0);
         },
@@ -101,11 +101,11 @@ function T(e) {
         onClick: S,
         children: [
             (0, r.jsxs)("div", {
-                className: a()(P.messageContentWrapper, { [P.mentioned]: n.mentioned }),
+                className: a()(I.messageContentWrapper, { [I.mentioned]: n.mentioned }),
                 children: [
-                    null != M ? null : w,
-                    null != (t = null != N ? N : M) ? t : (0, r.jsx)("span", { children: T }),
-                    null != M ? null : A,
+                    null != R ? null : w,
+                    null != (t = null != N ? N : R) ? t : (0, r.jsx)("span", { children: T }),
+                    null != R ? null : A,
                 ],
             }),
             (0, r.jsx)("img", {
@@ -118,7 +118,7 @@ function T(e) {
                               avatar: s.guildMemberAvatar,
                           })
                         : n.author.getAvatarURL(d, 32),
-                className: P.avatar,
+                className: I.avatar,
             }),
         ],
     });
@@ -185,9 +185,9 @@ function N(e) {
         y = i.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        _ = i.useRef(g);
+        C = i.useRef(g);
     i.useLayoutEffect(() => {
-        _.current = g;
+        C.current = g;
     }),
         i.useLayoutEffect(() => {
             let e = {},
@@ -197,14 +197,14 @@ function N(e) {
                 let i = null != (n = m.current[r.id]) ? n : 0;
                 (e[r.id] = t), (t += i + 8);
             }
-            (0, o.isEqual)(e, _.current) || b(e);
+            (0, o.isEqual)(e, C.current) || b(e);
         }, [f]);
-    let C = f.map((e) => ({
+    let _ = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id],
         })),
-        x = (0, u.Yzy)(C, {
+        x = (0, u.Yzy)(_, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -241,7 +241,7 @@ function N(e) {
                 children: x((e, t) =>
                     (0, r.jsx)(s.animated.div, {
                         ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
-                        className: P.toastWrapper,
+                        className: I.toastWrapper,
                         style: e,
                         children: (0, r.jsx)(T, { message: t.message }),
                     }),

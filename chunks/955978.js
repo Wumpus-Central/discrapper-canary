@@ -5,24 +5,24 @@ var i = n(951288),
     o = n(812206),
     a = n(594190),
     s = n(925329),
-    c = n(592125),
-    u = n(944486),
+    u = n(592125),
+    c = n(944486),
     d = n(594174),
     p = n(5192),
     h = n(620954),
     f = n(987650),
     m = n(388032),
-    g = n(439419);
+    g = n(64102);
 function y(e, t, n) {
     var y;
     let O = d.default.getUser(e);
     if (null == O) return null;
-    let v = u.Z.getCurrentlySelectedChannelId(),
-        b = c.Z.getChannel(v),
-        E = o.Z.getApplication(t),
-        _ = a.ZP.getRunningGames().find((e) => e.id === t),
-        S = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
-        x = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+    let E = c.Z.getCurrentlySelectedChannelId(),
+        v = u.Z.getChannel(E),
+        S = o.Z.getApplication(t),
+        b = a.ZP.getRunningGames().find((e) => e.id === t),
+        x = null != (y = null == b ? void 0 : b.name) ? y : null == S ? void 0 : S.name,
+        j = (0, p.oY)(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, O),
         I = (0, i.jsxs)("div", {
             className: g.nowPlayingNotification,
             children: [
@@ -41,13 +41,13 @@ function y(e, t, n) {
                         color: "interactive-normal",
                         className: g.bodyText,
                         children: m.intl.format(m.t["q7/rgo"], {
-                            username: null != x ? x : O.username,
-                            gameName: S,
+                            username: null != j ? j : O.username,
+                            gameName: x,
                             gameIcon: () =>
-                                null != E || null != _
+                                null != S || null != b
                                     ? (0, i.jsx)(s.Z, {
-                                          game: E,
-                                          pid: null == _ ? void 0 : _.pid,
+                                          game: S,
+                                          pid: null == b ? void 0 : b.pid,
                                           size: s.A.XSMALL,
                                           className: g.gameIcon,
                                       })
@@ -57,11 +57,11 @@ function y(e, t, n) {
                 }),
             ],
         }),
-        { trackView: C, trackClick: j } = (0, h.R)(f.n0.NowPlayingNotification, {
+        { trackView: C, trackClick: Z } = (0, h.R)(f.n0.NowPlayingNotification, {
             notif_type: f.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
-            activity_name: null != S ? S : n.name,
+            activity_name: null != x ? x : n.name,
         });
     return {
         body: I,
@@ -74,7 +74,7 @@ function y(e, t, n) {
             C();
         },
         onDismissClick: () => {
-            j("dismiss");
+            Z("dismiss");
         },
     };
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => N,
+    Z: () => P,
     _: () => S,
 }),
     n(388685);
@@ -7,7 +7,7 @@ var r = n(951288),
     i = n(647438),
     a = n(512722),
     l = n.n(a),
-    s = n(938288),
+    s = n(401393),
     o = n(442837),
     c = n(481060),
     d = n(53281),
@@ -22,16 +22,16 @@ var r = n(951288),
     j = n(127654),
     v = n(228392),
     _ = n(981631),
-    C = n(104010);
+    C = n(20576);
 let y = {
         scale: 0.95,
         opacity: 0,
     },
-    w = {
+    T = {
         scale: 1,
         opacity: 1,
     },
-    T = {
+    w = {
         scale: 1,
         opacity: 1,
     },
@@ -85,14 +85,14 @@ function S(e) {
         })
     );
 }
-function P(e) {
+function N(e) {
     let { channelId: t, closePopout: n } = e,
         [a, l] = i.useState(!1),
         { reducedMotion: d } = i.useContext(c.Sfi),
         f = (0, c.q_F)(
             {
-                from: d.enabled ? w : y,
-                to: T,
+                from: d.enabled ? T : y,
+                to: w,
                 config: O,
             },
             "animate-always",
@@ -141,7 +141,7 @@ function P(e) {
         }),
     });
 }
-function N(e) {
+function P(e) {
     let { channelId: t } = e,
         [n, a] = i.useState(!1),
         l = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
@@ -176,7 +176,7 @@ function N(e) {
                       channelId: t,
                   }),
             n &&
-                (0, r.jsx)(P, {
+                (0, r.jsx)(N, {
                     channelId: t,
                     closePopout: () => {
                         a(!1);

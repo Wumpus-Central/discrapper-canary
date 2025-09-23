@@ -1,45 +1,45 @@
-t.d(e, { s: () => U }), t(388685);
+t.d(A, { s: () => U }), t(388685);
 var n = t(951288),
     r = t(647438),
-    a = t(120356),
-    l = t.n(a),
+    l = t(120356),
+    a = t.n(l),
     i = t(28664),
     o = t(481060),
     s = t(205822),
     d = t(476326),
-    c = t(377171),
-    u = t(313201),
-    f = t(374794),
-    g = t(587123),
+    u = t(377171),
+    c = t(313201),
+    g = t(374794),
+    f = t(587123),
     p = t(863663),
     m = t(731994),
     q = t(629481),
     h = t(388032),
-    b = t(530521);
-let C = (0, u.hQ)();
-function v(A) {
-    var e;
-    let { upload: t, progress: a = 0, onDeleteAttachment: s } = A,
+    v = t(45856);
+let b = (0, c.hQ)();
+function C(e) {
+    var A;
+    let { upload: t, progress: l = 0, onDeleteAttachment: s } = e,
         d = r.useCallback(() => {
             null == s || s(t.id);
         }, [s, t.id]),
-        u = a >= 1,
-        f = a < 0,
-        g = u || f,
-        m = null != (e = t.filename) ? e : t.id,
-        q = (0, p.kg)(a);
+        c = l >= 1,
+        g = l < 0,
+        f = c || g,
+        m = null != (A = t.filename) ? A : t.id,
+        q = (0, p.kg)(l);
     return (0, n.jsx)(i.u, {
         asContainer: !0,
         text: q,
         children: (0, n.jsxs)("div", {
-            className: l()(b.attachedFileCard, {
-                [b.attachedFileCardError]: f,
-                [b.attachedFileCardUploading]: !g,
+            className: a()(v.attachedFileCard, {
+                [v.attachedFileCardError]: g,
+                [v.attachedFileCardUploading]: !f,
             }),
             children: [
                 (0, n.jsx)(o.ZKT, {
                     size: "xs",
-                    color: c.Z.INTERACTIVE_MUTED,
+                    color: u.Z.INTERACTIVE_MUTED,
                 }),
                 (0, n.jsx)(o.LZC, {
                     size: 10,
@@ -49,79 +49,79 @@ function v(A) {
                     variant: "text-sm/normal",
                     children: m,
                 }),
-                !g &&
+                !f &&
                     (0, n.jsx)(o.$jN, {
-                        className: b.attachedFileCardSpinner,
+                        className: v.attachedFileCardSpinner,
                         type: o.$jN.Type.SPINNING_CIRCLE,
                     }),
-                g &&
+                f &&
                     null != s &&
                     (0, n.jsx)(o.P3F, {
                         onClick: d,
                         "aria-label": h.intl.formatToPlainString(h.t["1o5hyc"], { attachment: m }),
                         "aria-hidden": !1,
-                        className: b.deleteButton,
+                        className: v.deleteButton,
                         children: (0, n.jsx)(o.Dio, {
                             size: "xxs",
                             color: "currentColor",
-                            className: b.__invalid_deleteIcon,
+                            className: v.__invalid_deleteIcon,
                         }),
                     }),
             ],
         }),
     });
 }
-function U(A) {
-    let { onFileAdded: e } = A,
+function U(e) {
+    let { onFileAdded: A } = e,
         {
             uploads: t,
-            canAttachFiles: a,
-            canAttachArchives: l,
+            canAttachFiles: l,
+            canAttachArchives: a,
             addAttachment: i,
-            deleteAttachment: c,
-            fileUploadProgresses: u,
-        } = (0, g.P)(),
+            deleteAttachment: u,
+            fileUploadProgresses: c,
+        } = (0, f.P)(),
         p = r.useRef(!1);
-    function U(A) {
+    function U(e) {
         try {
-            for (let e of A)
+            for (let A of e)
                 i({
                     platform: d.ow.WEB,
-                    file: e,
+                    file: A,
                     origin: "unknown:guild_product_attachment",
                 });
             p.current = !0;
-        } catch (A) {}
+        } catch (e) {}
     }
     return (
         r.useEffect(() => {
-            p.current && (e(), (p.current = !1));
-        }, [e]),
+            p.current && (A(), (p.current = !1));
+        }, [A]),
         (0, n.jsxs)("div", {
-            className: b.container,
+            className: v.container,
             children: [
                 (0, n.jsx)(s.Z, {
-                    className: b.uploadArea,
+                    className: v.uploadArea,
                     title: h.intl.string(h.t["5eTk2t"]),
                     description: h.intl.string(h.t.Ecxoxs),
                     icons: m.J6,
                     onDrop: U,
                 }),
-                (0, n.jsxs)(f.Z, {
-                    className: b.addFileButtonLook,
-                    innerClassName: b.addFileButton,
-                    disabled: !a,
+                (0, n.jsxs)(g.Z, {
+                    className: v.addFileButtonLook,
+                    innerClassName: v.addFileButton,
+                    disabled: !l,
                     "aria-label": h.intl.string(h.t["23LeCA"]),
-                    "aria-describedby": C,
+                    "aria-describedby": b,
                     multiple: !0,
-                    onChange: function (A) {
-                        null != A.currentTarget.files && U(A.currentTarget.files);
+                    onChange: function (e) {
+                        null != e.currentTarget.files && U(e.currentTarget.files);
                     },
                     children: [
                         (0, n.jsx)(o.dZu, {
                             size: "xs",
                             color: "currentColor",
-                            className: b.addFileButtonIcon,
+                            className: v.addFileButtonIcon,
                             "aria-hidden": !0,
                         }),
                         (0, n.jsx)(o.Text, {
@@ -133,31 +133,31 @@ function U(A) {
                 }),
                 (0, n.jsx)(o.LZC, { size: 12 }),
                 (0, n.jsx)(o.Text, {
-                    id: C,
+                    id: b,
                     color: "text-muted",
                     variant: "text-xs/normal",
-                    children: l
+                    children: a
                         ? h.intl.formatToPlainString(h.t.lvU6sr, { fileUploadLimit: q.TR })
                         : h.intl.formatToPlainString(h.t.DOXzIS, { fileUploadLimit: q.TR }),
                 }),
                 t.length > 0 &&
                     (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, n.jsx)("div", { className: b.separator }),
+                            (0, n.jsx)("div", { className: v.separator }),
                             (0, n.jsx)("ul", {
-                                className: b.attachedFilesContainer,
+                                className: v.attachedFilesContainer,
                                 "aria-label": h.intl.string(h.t.YZ6cTU),
-                                children: t.map((A) =>
+                                children: t.map((e) =>
                                     (0, n.jsx)(
                                         "li",
                                         {
-                                            children: (0, n.jsx)(v, {
-                                                upload: A,
-                                                onDeleteAttachment: c,
-                                                progress: u[A.id],
+                                            children: (0, n.jsx)(C, {
+                                                upload: e,
+                                                onDeleteAttachment: u,
+                                                progress: c[e.id],
                                             }),
                                         },
-                                        A.id,
+                                        e.id,
                                     ),
                                 ),
                             }),

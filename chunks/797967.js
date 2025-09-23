@@ -7,8 +7,8 @@ var r = n(951288),
     s = n(481060),
     c = n(981631),
     d = n(388032),
-    u = n(989308),
-    p = n(616132);
+    u = n(258640),
+    p = n(85854);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -158,21 +158,21 @@ function b(e) {
             disabled: b = !1,
             customPickerPosition: x = "bottom",
             secondaryValue: j,
-            onChangeGradientColors: S,
-            isGradient: _ = !1,
+            onChangeGradientColors: _,
+            isGradient: S = !1,
             gradientButtonClassName: C,
             allowBlackCustomColor: O = !1,
         } = e,
         v = o.useCallback((e) => (0 !== e || O) && e !== t && !n.some((t) => t === e) && (O || 0 !== e), [n, t, O]),
-        y = o.useRef(null),
         P = o.useRef(null),
+        y = o.useRef(null),
         k = o.useRef(null),
         [N, E] = o.useState(() => (v(l) ? l : null)),
         [T, D] = o.useState({
             start: l,
             end: null != j ? j : c.p6O,
         }),
-        [R, A] = o.useState({
+        [R, w] = o.useState({
             showStart: !1,
             showEnd: !1,
         });
@@ -183,7 +183,7 @@ function b(e) {
                 end: null != j ? j : c.p6O,
             });
     }, [l, v, j]);
-    let w = o.useCallback(
+    let A = o.useCallback(
             (e) => {
                 null == u || u(e), E(null);
             },
@@ -201,12 +201,12 @@ function b(e) {
                     start: e,
                     end: t,
                 }),
-                    null == S || S([e, t]);
+                    null == _ || _([e, t]);
             },
-            [S],
+            [_],
         ),
         B = o.useCallback((e, t) => {
-            A((n) => m(f({}, n), { [e]: t }));
+            w((n) => m(f({}, n), { [e]: t }));
         }, []),
         M = o.useCallback(() => {
             var e, t, n, o, l;
@@ -245,7 +245,7 @@ function b(e) {
                           }),
                           (0, r.jsx)(h, {
                               isStart: !0,
-                              buttonRef: P,
+                              buttonRef: y,
                               color: null != (o = T.start) ? o : c.p6O,
                               showPopout: R.showStart,
                               position: x,
@@ -293,15 +293,15 @@ function b(e) {
                 return b
                     ? a
                     : (0, r.jsx)(s.yRy, {
-                          targetElementRef: y,
+                          targetElementRef: P,
                           renderPopout: G,
                           position: x,
                           children: (e) =>
                               (0, r.jsx)(s.ua7, {
-                                  targetElementRef: y,
+                                  targetElementRef: P,
                                   text: d.intl.string(d.t["FHBa//"]),
                                   position: "bottom",
-                                  children: (t) => (0, r.jsx)("div", m(f({ ref: y }, t, e), { children: a })),
+                                  children: (t) => (0, r.jsx)("div", m(f({ ref: P }, t, e), { children: a })),
                               }),
                       });
             },
@@ -326,9 +326,9 @@ function b(e) {
             renderDefaultButton: Y,
             renderCustomButton: Z,
             renderGradientCustomButton: M,
-            isGradient: _,
+            isGradient: S,
             customColor: N,
-            onChange: _ ? L : w,
+            onChange: S ? L : A,
         }),
     );
 }

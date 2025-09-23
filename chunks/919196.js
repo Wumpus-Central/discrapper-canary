@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(539854), n(953529);
+n.d(t, { Z: () => w }), n(388685), n(539854), n(953529);
 var i = n(951288),
     r = n(647438),
     l = n(243814),
@@ -19,7 +19,7 @@ var i = n(951288),
     v = n(725875),
     y = n(981631),
     O = n(388032),
-    _ = n(85541);
+    _ = n(156065);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -106,58 +106,58 @@ function N(e) {
         t),
     );
 }
-function S(e) {
+function w(e) {
     var t;
     let {
             guild: n,
             applicationIntegration: s,
             selectableWebhookChannels: d,
-            editedWebhook: S,
-            errors: Z,
-            canNavigate: w,
+            editedWebhook: w,
+            errors: S,
+            canNavigate: I,
         } = e,
-        { application: I, integration: P, webhooks: T } = s,
+        { application: P, integration: Z, webhooks: T } = s,
         [E, k] = (0, a.Wu)(
             [m.Z],
-            () => [m.Z.can(y.Plq.MANAGE_ROLES, n), null == I.bot || m.Z.canManageUser(y.Plq.MANAGE_GUILD, I.bot.id, n)],
-            [I.bot, n],
+            () => [m.Z.can(y.Plq.MANAGE_ROLES, n), null == P.bot || m.Z.canManageUser(y.Plq.MANAGE_GUILD, P.bot.id, n)],
+            [P.bot, n],
         ),
         A = (0, a.e7)([m.Z], () => m.Z.can(y.Plq.MANAGE_WEBHOOKS, n), [n]),
         D = r.useCallback(() => {
-            w() &&
+            I() &&
                 (0, o.h7j)((e) =>
                     (0, i.jsx)(
                         N,
                         C(
                             {
                                 guild: n,
-                                application: I,
-                                integration: P,
+                                application: P,
+                                integration: Z,
                             },
                             e,
                         ),
                     ),
                 );
-        }, [I, w, n, P]),
+        }, [P, I, n, Z]),
         R = r.useMemo(() => {
             let e = [
                 {
                     icon: o.T39,
-                    text: O.intl.formatToPlainString(O.t.gcdJ8P, { timestamp: g.default.extractTimestamp(P.id) }),
+                    text: O.intl.formatToPlainString(O.t.gcdJ8P, { timestamp: g.default.extractTimestamp(Z.id) }),
                 },
             ];
             return (
-                null != P.user &&
+                null != Z.user &&
                     e.push({
                         icon: o.tBG,
-                        text: O.intl.formatToPlainString(O.t.qE7oqq, { user: f.ZP.getUserTag(P.user) }),
+                        text: O.intl.formatToPlainString(O.t.qE7oqq, { user: f.ZP.getUserTag(Z.user) }),
                     }),
                 e
             );
-        }, [P.id, P.user]),
+        }, [Z.id, Z.user]),
         L = r.useMemo(() => {
             var e;
-            return null != I.bot && (null == (e = P.scopes) ? void 0 : e.includes(l.x.BOT))
+            return null != P.bot && (null == (e = Z.scopes) ? void 0 : e.includes(l.x.BOT))
                 ? (0, i.jsx)(j.Z, {
                       guild: n,
                       applicationIntegration: s,
@@ -171,30 +171,30 @@ function S(e) {
                           children: O.intl.string(O.t.pfLnzc),
                       }),
                   });
-        }, [I.bot, s, n, P.scopes]);
+        }, [P.bot, s, n, Z.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.Z, {
-                name: I.name,
-                imageSrc: null != (t = I.getIconURL(32)) ? t : b.pK["0"],
+                name: P.name,
+                imageSrc: null != (t = P.getIconURL(32)) ? t : b.pK["0"],
                 details: R,
                 isHeader: !0,
             }),
-            (null == I ? void 0 : I.description) != null
+            (null == P ? void 0 : P.description) != null
                 ? (0, i.jsx)(p.Z, {
-                      userBio: I.description,
+                      userBio: P.description,
                       className: _.headerDescription,
                   })
                 : null,
             E
                 ? (0, i.jsx)(u.Z, {
-                      application: I,
-                      canNavigate: w,
+                      application: P,
+                      canNavigate: I,
                       guildId: n.id,
                   })
                 : null,
             (0, i.jsx)(o.$i$, { className: _.headerDivider }),
-            null != I.bot
+            null != P.bot
                 ? (0, i.jsxs)("div", {
                       className: _.section,
                       children: [
@@ -222,10 +222,10 @@ function S(e) {
                     T.length > 0
                         ? (0, i.jsx)(v.Z, {
                               webhooks: T,
-                              editedWebhook: S,
+                              editedWebhook: w,
                               selectableWebhookChannels: d,
-                              errors: Z,
-                              canNavigate: w,
+                              errors: S,
+                              canNavigate: I,
                           })
                         : (0, i.jsx)(o.Zbd, {
                               className: _.emptyCard,

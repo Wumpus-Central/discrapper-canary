@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(367907),
-    s = n(807582),
+    s = n(367907),
+    a = n(807582),
     o = n(26323),
     c = n(516129),
     d = n(345861),
@@ -11,10 +11,10 @@ var r = n(951288),
     m = n(434404),
     g = n(981631),
     p = n(30513),
-    h = n(486324),
-    f = n(200299),
+    f = n(486324),
+    h = n(200299),
     b = n(388032),
-    x = n(197530);
+    x = n(359449);
 let j = function (e) {
     let { guild: t } = e,
         j = t.features.has(g.oNc.BANNER),
@@ -22,7 +22,7 @@ let j = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void m.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -60,7 +60,7 @@ let j = function (e) {
                                         let { imageUri: n } = e;
                                         return m.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: h.pC.HOME_HEADER,
+                                    uploadType: f.pC.HOME_HEADER,
                                 },
                                 n,
                             ),
@@ -73,7 +73,7 @@ let j = function (e) {
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
-                    (0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, s.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: g.jXE.GUILD_SETTINGS_ONBOARDING,
                             object: g.qAy.LEARN_MORE,
@@ -107,7 +107,7 @@ let j = function (e) {
             onChange: v,
             hint: b.intl.string(b.t.NyXznp),
             enabled: j,
-            maxFileSizeBytes: f.B,
+            maxFileSizeBytes: h.B,
         });
     return j
         ? (0, r.jsxs)(r.Fragment, {
@@ -120,7 +120,7 @@ let j = function (e) {
                               variant: "heading-lg/extrabold",
                               children: b.intl.string(b.t.BBj1nZ),
                           }),
-                          (0, r.jsx)(s.Z, {
+                          (0, r.jsx)(a.Z, {
                               className: x.boostIndicator,
                               guild: t,
                               guildFeature: g.oNc.BANNER,
@@ -143,7 +143,7 @@ let j = function (e) {
                                       className: x.uploadButton,
                                       children: (0, r.jsx)(d.Z, {
                                           onChange: v,
-                                          maxFileSizeBytes: f.B,
+                                          maxFileSizeBytes: h.B,
                                           text: b.intl.string(b.t.yG2pUl),
                                           size: "md",
                                           variant: "primary",
@@ -166,7 +166,7 @@ let j = function (e) {
                               variant: "heading-lg/extrabold",
                               children: b.intl.string(b.t.BBj1nZ),
                           }),
-                          (0, r.jsx)(s.Z, {
+                          (0, r.jsx)(a.Z, {
                               className: x.boostIndicator,
                               guild: t,
                               guildFeature: g.oNc.BANNER,

@@ -17,18 +17,18 @@ var r = n(951288),
     O = n(626135),
     y = n(709054),
     _ = n(591759),
-    j = n(833592),
-    v = n(497089),
+    v = n(833592),
+    j = n(497089),
     x = n(178480),
     C = n(418316),
     E = n(382865),
     S = n(526146),
-    P = n(400565),
-    I = n(148789),
+    I = n(400565),
+    P = n(148789),
     N = n(11825),
-    Z = n(981631),
-    w = n(388032),
-    T = n(231796),
+    w = n(981631),
+    Z = n(388032),
+    T = n(17250),
     A = n(756688),
     R = n(886765);
 function D(e) {
@@ -75,9 +75,9 @@ function L(e) {
 function M(e) {
     let { item: t } = e,
         n = R,
-        i = w.intl.string(w.t.SJTHJS);
+        i = Z.intl.string(Z.t.SJTHJS);
     return (
-        t.completed && ((n = A), (i = w.intl.string(w.t.f6RTAA))),
+        t.completed && ((n = A), (i = Z.intl.string(Z.t.f6RTAA))),
         (0, r.jsxs)("div", {
             className: T.lifecycleContainer,
             children: [
@@ -107,7 +107,7 @@ let U = i.memo(function (e) {
             { analyticsLocations: u } = (0, c.ZP)(),
             f = (0, S.I)(l, s),
             g = i.useCallback(async () => {
-                if ((f || (0, j.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
+                if ((f || (0, v.wt)(l), null != l.item_enum && l.item_enum === j.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("6074").then(n.bind(n, 443189));
                         return (t) =>
@@ -157,8 +157,8 @@ let U = i.memo(function (e) {
                             });
                         } else await (0, d.Z)(r);
                     }
-                    O.default.track(Z.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: v.ud.CLICKED,
+                    O.default.track(w.rMx.NOTIFICATION_CENTER_ACTION, {
+                        action_type: j.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
                         acked: f,
@@ -166,11 +166,11 @@ let U = i.memo(function (e) {
                 }
             }, [l, f, u]),
             m = null;
-        l.type === v.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
-            ? (m = (0, r.jsx)(I.Z, { userId: l.other_user.id }))
-            : l.type === v.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+        l.type === j.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
+            ? (m = (0, r.jsx)(P.Z, { userId: l.other_user.id }))
+            : l.type === j.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
-              (m = (0, r.jsx)(I.Z, {
+              (m = (0, r.jsx)(P.Z, {
                   userId: l.other_user.id,
                   applicationId: l.applicationId,
               }));
@@ -179,12 +179,12 @@ let U = i.memo(function (e) {
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e }),
             }),
-            { emoji_id: w, emoji_name: A } = l,
+            { emoji_id: Z, emoji_name: A } = l,
             R =
-                null != w || null != A
+                null != Z || null != A
                     ? (0, r.jsx)(a.Z, {
                           className: T.emoji,
-                          emojiId: w,
+                          emojiId: Z,
                           emojiName: A,
                       })
                     : null;
@@ -198,7 +198,7 @@ let U = i.memo(function (e) {
                     onClick: g,
                     children: [
                         f ? null : (0, r.jsx)("div", { className: T.unread }),
-                        (0, r.jsx)(P.U, { item: l }),
+                        (0, r.jsx)(I.U, { item: l }),
                         (0, r.jsxs)("div", {
                             className: T.body,
                             children: [

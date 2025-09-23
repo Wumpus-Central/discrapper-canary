@@ -3,32 +3,32 @@ var r = n(951288);
 n(647438);
 var i = n(442837),
     l = n(692547),
-    a = n(481060),
-    s = n(45966),
+    s = n(481060),
+    a = n(45966),
     o = n(637853),
     c = n(889369),
     d = n(974513),
     u = n(290511),
     m = n(388032),
-    g = n(636942);
+    g = n(36040);
 function p(e) {
     let { guildId: t, scrollToQuestions: n } = e,
-        p = (0, i.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        h = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [f, b] = (0, o.VF)(t, h),
-        [x, j] = (0, d.OA)(t, [...h]),
+        p = (0, i.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
+        f = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
+        [h, b] = (0, o.VF)(t, f),
+        [x, j] = (0, d.OA)(t, [...f]),
         v = p ? j.length : b.length,
-        _ = p ? x.length : f.length,
+        _ = p ? x.length : h.length,
         O = v < u.md,
         y = _ >= u.X,
         C = j.length - b.length,
-        N = (0, r.jsx)(a.owK, {
+        N = (0, r.jsx)(s.owK, {
             size: "sm",
             color: l.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
             className: g.icon,
         }),
-        E = (0, r.jsx)(a.k$p, {
+        E = (0, r.jsx)(s.k$p, {
             size: "sm",
             className: g.icon,
             color: l.Z.colors.WHITE.css,
@@ -45,28 +45,28 @@ function p(e) {
             (0, r.jsxs)("div", {
                 className: g.header,
                 children: [
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         color: "text-brand",
                         children: m.intl.format(m.t.kvroKC, { count: _ }),
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         color: "text-muted",
                         children: m.intl.format(m.t["0MjxJy"], { count: v }),
                     }),
                 ],
             }),
-            (0, r.jsx)(a.yGy, {
+            (0, r.jsx)(s.yGy, {
                 foregroundColors: S,
                 percents: I,
-                size: a.yGy.Sizes.XSMALL,
+                size: s.yGy.Sizes.XSMALL,
             }),
             (0, r.jsxs)("div", {
                 className: g.requiredItem,
                 children: [
                     O ? E : N,
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.intl.format(m.t.k0COZW, { count: u.md }),
@@ -77,7 +77,7 @@ function p(e) {
                 className: g.requiredItem,
                 children: [
                     y ? N : E,
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.intl.format(m.t.PwXgS0, { count: u.X }),
@@ -90,13 +90,13 @@ function p(e) {
                         (0, r.jsxs)("div", {
                             className: g.requiredItem,
                             children: [
-                                (0, r.jsx)(a.d3s, {
+                                (0, r.jsx)(s.d3s, {
                                     size: "sm",
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
                                     className: g.icon,
                                 }),
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: m.intl.string(m.t.AyvkOD),
@@ -106,21 +106,21 @@ function p(e) {
                         (0, r.jsxs)("div", {
                             className: g.requiredItem,
                             children: [
-                                (0, r.jsx)(a.d3s, {
+                                (0, r.jsx)(s.d3s, {
                                     size: "sm",
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
                                     className: g.icon,
                                 }),
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: m.intl.format(m.t["8Geut7"], {
                                         count: C,
                                         prejoinHook: (e) =>
-                                            (0, r.jsx)(a.eee, {
+                                            (0, r.jsx)(s.eee, {
                                                 onClick: n,
-                                                children: (0, r.jsx)(a.Text, {
+                                                children: (0, r.jsx)(s.Text, {
                                                     tag: "span",
                                                     variant: "text-xs/normal",
                                                     color: "text-link",

@@ -15,20 +15,20 @@ var r = n(951288),
     g = n(488634),
     b = n(86203),
     y = n(6025),
-    _ = n(621853),
-    C = n(892001),
+    C = n(621853),
+    _ = n(892001),
     v = n(433355),
     x = n(699516),
     O = n(594174),
     j = n(768581),
     E = n(525541),
     S = n(981631),
-    I = n(228168),
-    P = n(388032),
-    Z = n(291738);
+    P = n(228168),
+    I = n(388032),
+    Z = n(90985);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
-            l = (0, s.e7)([_.Z], () => _.Z.getMutualGuilds(t), [t]),
+            l = (0, s.e7)([C.Z], () => C.Z.getMutualGuilds(t), [t]),
             a = i.useMemo(
                 () =>
                     null != l
@@ -77,7 +77,7 @@ let T = (e) => {
             ? (0, r.jsx)(c.Text, {
                   color: "header-secondary",
                   variant: "text-sm/normal",
-                  children: P.intl.string(P.t.zjVh8v),
+                  children: I.intl.string(I.t.zjVh8v),
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -87,17 +87,17 @@ let T = (e) => {
                       }),
                       (0, r.jsx)(c.P3F, {
                           onClick: () => {
-                              (0, C.openUserProfileModal)({
+                              (0, _.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: I.oh.MUTUAL_GUILDS,
+                                  section: P.oh.MUTUAL_GUILDS,
                                   sourceAnalyticsLocations: [d.Z.DM_CHANNEL],
                               });
                           },
                           children: (0, r.jsx)(c.Text, {
                               className: Z.mutualGuilds,
                               variant: "text-sm/normal",
-                              children: P.intl.format(P.t.eE3oen, { count: l.length }),
+                              children: I.intl.format(I.t.eE3oen, { count: l.length }),
                           }),
                       }),
                   ],
@@ -119,7 +119,7 @@ let T = (e) => {
                 onClick: () => {
                     u.Z.blockUser(i, { location: S.ZY5.DM_CHANNEL });
                 },
-                text: P.intl.string(P.t.l4EmaW),
+                text: I.intl.string(I.t.l4EmaW),
             }),
             d = (0, h.n)({ userId: i });
         switch (n) {
@@ -146,7 +146,7 @@ let T = (e) => {
                             onClick: () => {
                                 u.Z.removeFriend(i, { location: S.ZY5.DM_CHANNEL });
                             },
-                            text: P.intl.string(P.t.cvSt1N),
+                            text: I.intl.string(I.t.cvSt1N),
                         }),
                         s,
                     ],
@@ -158,7 +158,7 @@ let T = (e) => {
                     onClick: () => {
                         u.Z.unblockUser(i, { location: S.ZY5.DM_CHANNEL });
                     },
-                    text: P.intl.string(P.t.XyHpKC),
+                    text: I.intl.string(I.t.XyHpKC),
                 });
             case S.OGo.PENDING_INCOMING:
                 return (0, r.jsxs)(r.Fragment, {
@@ -167,7 +167,7 @@ let T = (e) => {
                             size: "sm",
                             variant: "primary",
                             onClick: o,
-                            text: P.intl.string(P.t["+WbSn5"]),
+                            text: I.intl.string(I.t["+WbSn5"]),
                         }),
                         (0, r.jsx)(c.zxk, {
                             size: "sm",
@@ -175,7 +175,7 @@ let T = (e) => {
                             onClick: () => {
                                 u.Z.cancelFriendRequest(i, { location: S.ZY5.DM_CHANNEL });
                             },
-                            text: P.intl.string(P.t.rQSndn),
+                            text: I.intl.string(I.t.rQSndn),
                         }),
                         s,
                     ],
@@ -187,7 +187,7 @@ let T = (e) => {
                             size: "sm",
                             variant: "primary",
                             disabled: !0,
-                            text: P.intl.string(P.t.xMH6vL),
+                            text: I.intl.string(I.t.xMH6vL),
                         }),
                         s,
                     ],
@@ -199,7 +199,7 @@ let T = (e) => {
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
             l = i.useCallback(() => {
-                (0, c.showToast)((0, c.createToast)(P.intl.string(P.t.a2j0ho), c.ToastType.FAILURE));
+                (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0ho), c.ToastType.FAILURE));
             }, []),
             a = i.useCallback(() => {
                 y.Z.closeChannelSidebar(v.uZ);
@@ -229,7 +229,7 @@ let T = (e) => {
                     disabled: g,
                     onClick: () => s(t),
                     loading: d,
-                    text: P.intl.string(P.t.Kz8Pws),
+                    text: I.intl.string(I.t.Kz8Pws),
                 }),
                 (0, r.jsx)(c.zxk, {
                     variant: "secondary",
@@ -237,7 +237,7 @@ let T = (e) => {
                     disabled: g,
                     onClick: () => u(t),
                     loading: p,
-                    text: P.intl.string(P.t.B2nygY),
+                    text: I.intl.string(I.t.B2nygY),
                 }),
             ],
         });
@@ -278,13 +278,13 @@ let T = (e) => {
                                   }),
                           ],
                       }),
-            _ =
+            C =
                 d !== S.OGo.PENDING_INCOMING || u || p
                     ? null
                     : (0, r.jsx)(c.Text, {
                           color: "header-secondary",
                           variant: "text-sm/normal",
-                          children: P.intl.string(P.t.c2v5nJ),
+                          children: I.intl.string(I.t.c2v5nJ),
                       });
         return (0, r.jsxs)("div", {
             className: m ? Z.mobileContainer : Z.container,
@@ -299,7 +299,7 @@ let T = (e) => {
                 !m && (0, r.jsx)("div", { className: Z.divider }),
                 (0, r.jsxs)("div", {
                     className: a()(Z.inline, Z.wrap),
-                    children: [_, y],
+                    children: [C, y],
                 }),
             ],
         });

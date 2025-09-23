@@ -1,20 +1,20 @@
-n.d(t, { Z: () => j }), n(35282), n(388685);
+n.d(t, { Z: () => b }), n(35282), n(388685);
 var r,
     i = n(951288),
     l = n(647438),
     s = n(593473),
-    a = n(442837),
-    o = n(544891),
+    o = n(442837),
+    a = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     h = n(108427),
-    p = n(598077),
-    g = n(896797),
-    m = n(981631),
+    g = n(598077),
+    m = n(896797),
+    p = n(981631),
     f = n(930441),
     _ = n(388032),
-    x = n(197571);
+    x = n(10198);
 function E(e, t, n) {
     return (
         t in e
@@ -28,14 +28,14 @@ function E(e, t, n) {
         e
     );
 }
-a.ZP.initialize();
+o.ZP.initialize();
 class v extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
             t = (0, s.parse)(this.props.location.search);
-        o.tn
+        a.tn
             .post({
-                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: p.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -50,7 +50,7 @@ class v extends (r = l.PureComponent) {
                     let {
                             body: { user: n },
                         } = e,
-                        r = new p.Z(n);
+                        r = new g.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -88,7 +88,7 @@ class v extends (r = l.PureComponent) {
                     className: x.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
-                    onClick: () => r(m.Z5c.SETTINGS("notifications", f.vG)),
+                    onClick: () => r(p.Z5c.SETTINGS("notifications", f.vG)),
                     children: _.intl.string(_.t.YYTira),
                 }),
             ],
@@ -157,4 +157,4 @@ class v extends (r = l.PureComponent) {
     }
 }
 E(v, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let j = a.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(v);
+let b = o.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);

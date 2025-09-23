@@ -6,12 +6,12 @@ n.d(t, {
 var r = n(951288),
     i = n(647438),
     l = n(755721),
-    a = n(481060),
-    s = n(957011),
+    s = n(481060),
+    a = n(957011),
     o = n(587431),
     c = n(756066),
     d = n(388032),
-    u = n(52726),
+    u = n(370191),
     m = n(270395);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -39,29 +39,29 @@ function g(e) {
     return e;
 }
 let p = "role_subscriptions_eligibility_modal";
-function h(e) {
-    let { guild: t, eligibility: i, eligibilityLoading: l, eligibilityError: s, refreshEligibility: o } = e;
-    return (0, r.jsx)(a.zxk, {
+function f(e) {
+    let { guild: t, eligibility: i, eligibilityLoading: l, eligibilityError: a, refreshEligibility: o } = e;
+    return (0, r.jsx)(s.zxk, {
         variant: "expressive",
         onClick: function () {
-            (0, a.ZDy)(
+            (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e("21863").then(n.bind(n, 466501));
                     return (n) => {
-                        var a, c;
+                        var s, c;
                         return (0, r.jsx)(
                             e,
-                            ((a = g({}, n)),
+                            ((s = g({}, n)),
                             (c = c =
                                 {
                                     eligibility: i,
                                     eligibilityLoading: l,
-                                    eligibilityError: s,
+                                    eligibilityError: a,
                                     refreshEligibility: o,
                                     guildId: t.id,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(c))
+                                ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(c))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -70,9 +70,9 @@ function h(e) {
                                       }
                                       return n;
                                   })(Object(c)).forEach(function (e) {
-                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(c, e));
+                                      Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(c, e));
                                   }),
-                            a),
+                            s),
                         );
                     };
                 },
@@ -81,30 +81,30 @@ function h(e) {
         },
         size: "md",
         text: d.intl.string(d.t.NL5ZNT),
-        icon: a.Mgn,
+        icon: s.Mgn,
     });
 }
-function f(e) {
+function h(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: c, error: u, loading: m, submitAcceptTermsRequest: g } = (0, s.Z)(t.id),
-        [p, h] = i.useState(!1);
+        { canSubmitAcceptance: c, error: u, loading: m, submitAcceptTermsRequest: g } = (0, a.Z)(t.id),
+        [p, f] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.$q, {
                 onChange: function () {
-                    h((e) => !e);
+                    f((e) => !e);
                 },
                 size: 20,
                 type: l.M0.INVERTED,
                 value: p,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(s.Text, {
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: n,
                 }),
             }),
-            (0, r.jsx)(a.LZC, { size: 24 }),
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(s.zxk, {
                 disabled: !p || !c,
                 onClick: g,
                 loading: m,
@@ -113,7 +113,7 @@ function f(e) {
             }),
             null != u &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(a.LZC, { size: 24 }), (0, r.jsx)(o.Z, { children: u.getAnyErrorMessage() })],
+                    children: [(0, r.jsx)(s.LZC, { size: 24 }), (0, r.jsx)(o.Z, { children: u.getAnyErrorMessage() })],
                 }),
         ],
     });
@@ -123,8 +123,8 @@ function b(e) {
         {
             eligibilityLoading: i,
             eligibilityError: l,
-            refreshEligibility: a,
-            eligibility: s,
+            refreshEligibility: s,
+            eligibility: a,
             eligibleForMonetization: o,
             acceptTermsCheckboxText: d,
             wasRejectedInV1: u,
@@ -132,16 +132,16 @@ function b(e) {
     return o
         ? u
             ? (0, r.jsx)(c.Z, g({}, n))
-            : (0, r.jsx)(f, {
+            : (0, r.jsx)(h, {
                   guild: t,
                   checkboxText: d,
               })
-        : (0, r.jsx)(h, {
+        : (0, r.jsx)(f, {
               guild: t,
-              eligibility: s,
+              eligibility: a,
               eligibilityLoading: i,
               eligibilityError: l,
-              refreshEligibility: a,
+              refreshEligibility: s,
           });
 }
 function x(e) {
@@ -157,18 +157,18 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: u.ctaContent,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
                         children: d.intl.string(d.t.PqYfh4),
                     }),
-                    (0, r.jsx)(a.LZC, { size: 12 }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.LZC, { size: 12 }),
+                    (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: d.intl.string(d.t["41wkMT"]),
                     }),
-                    (0, r.jsx)(a.LZC, { size: 24 }),
+                    (0, r.jsx)(s.LZC, { size: 24 }),
                     (0, r.jsx)(b, {
                         guild: t,
                         monetizationEligibility: n,

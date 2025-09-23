@@ -1,31 +1,31 @@
-n.d(t, { Z: () => P }), n(35282), n(388685), n(415506);
+n.d(t, { Z: () => Z }), n(35282), n(388685), n(415506);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
     s = n.n(l),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     c = n(893776),
     u = n(533307),
     d = n(978085),
     h = n(232567),
-    p = n(388905),
-    g = n(362762),
-    m = n(108427),
+    g = n(388905),
+    m = n(362762),
+    p = n(108427),
     f = n(314897),
     _ = n(896797),
     x = n(82142),
     E = n(283595),
     v = n(55563),
-    j = n(669079),
-    b = n(63063),
+    b = n(669079),
+    j = n(63063),
     I = n(51144),
     N = n(481153),
     O = n(781428),
-    y = n(423527),
-    S = n(981631),
+    S = n(423527),
+    y = n(981631),
     C = n(388032),
-    A = n(197571);
+    A = n(10198);
 function T(e, t, n) {
     return (
         t in e
@@ -39,16 +39,16 @@ function T(e, t, n) {
         e
     );
 }
-a.ZP.initialize();
-class Z extends i.PureComponent {
+o.ZP.initialize();
+class P extends i.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, m.e)("gift_code");
+        e && this.handleAuthenticated(), t || this.resolveGiftCode(), (0, p.e)("gift_code");
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            o.Z.wait(() => {
+            a.Z.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -74,59 +74,59 @@ class Z extends i.PureComponent {
         let { libraryApplication: t, sku: n } = this.props,
             { error: r } = this.state,
             i = null != r ? r.code : null;
-        return i === S.evJ.INVALID_GIFT_SELF_REDEMPTION
+        return i === y.evJ.INVALID_GIFT_SELF_REDEMPTION
             ? C.intl.string(C.t.wa9h7O)
-            : i === S.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === S.POd.COLLECTIBLES
+            : i === y.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === y.POd.COLLECTIBLES
               ? C.intl.string(C.t.mdLtb2)
-              : null != t || i === S.evJ.INVALID_GIFT_REDEMPTION_OWNED
-                ? C.intl.format(C.t.PIdmg4, { libraryLink: S.Z5c.APPLICATION_LIBRARY })
-                : e.isClaimed || i === S.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
+              : null != t || i === y.evJ.INVALID_GIFT_REDEMPTION_OWNED
+                ? C.intl.format(C.t.PIdmg4, { libraryLink: y.Z5c.APPLICATION_LIBRARY })
+                : e.isClaimed || i === y.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
                   ? C.intl.string(C.t.ilcBeX)
-                  : i === S.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
+                  : i === y.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
                     ? C.intl.string(C.t.ypuSd3)
                     : void 0;
     }
     renderSpinner(e) {
-        return (0, r.jsxs)(p.ZP, {
-            children: [(0, r.jsx)(p.Dx, { children: e }), (0, r.jsx)(p.Hh, {})],
+        return (0, r.jsxs)(g.ZP, {
+            children: [(0, r.jsx)(g.Dx, { children: e }), (0, r.jsx)(g.Hh, {})],
         });
     }
     renderExpiredInvite() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(g.ZP, {
             children: [
-                (0, r.jsx)(p.Ee, {
+                (0, r.jsx)(g.Ee, {
                     src: n(167969),
                     className: A.marginBottom8,
                 }),
-                (0, r.jsx)(p.Dx, {
+                (0, r.jsx)(g.Dx, {
                     className: s()(A.marginTop8, A.marginBottom8),
                     children: C.intl.string(C.t.KPowgo),
                 }),
-                (0, r.jsx)(p.DK, { children: C.intl.string(C.t.j8734e) }),
-                (0, r.jsx)(p.zx, {
+                (0, r.jsx)(g.DK, { children: C.intl.string(C.t.j8734e) }),
+                (0, r.jsx)(g.zx, {
                     className: s()(A.marginTop40, A.marginBottom8),
                     onClick: () => t(e),
                     children: C.intl.string(C.t.fIv16O),
                 }),
-                (0, r.jsx)(p.zx, {
-                    onClick: () => window.open(b.Z.getArticleURL(S.BhN.GIFTING), "_blank"),
-                    look: p.zx.Looks.LINK,
-                    color: p.zx.Colors.LINK,
+                (0, r.jsx)(g.zx, {
+                    onClick: () => window.open(j.Z.getArticleURL(y.BhN.GIFTING), "_blank"),
+                    look: g.zx.Looks.LINK,
+                    color: g.zx.Colors.LINK,
                     children: C.intl.string(C.t["/CjuXF"]),
                 }),
             ],
         });
     }
     renderAppOpened() {
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(g.ZP, {
             children: [
-                (0, r.jsx)(p.Dx, {
+                (0, r.jsx)(g.Dx, {
                     className: A.marginBottom8,
                     children: C.intl.string(C.t.csrAMD),
                 }),
-                (0, r.jsx)(p.DK, { children: C.intl.string(C.t["m1+IBg"]) }),
-                (0, r.jsx)(p.zx, {
+                (0, r.jsx)(g.DK, { children: C.intl.string(C.t["m1+IBg"]) }),
+                (0, r.jsx)(g.zx, {
                     className: A.marginTop40,
                     onClick: () => this.setState({ continueOnWeb: !0 }),
                     children: C.intl.string(C.t["qsI+EB"]),
@@ -136,26 +136,26 @@ class Z extends i.PureComponent {
     }
     renderVerification(e) {
         let { sentVerification: t } = this.state;
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(g.ZP, {
             children: [
-                (0, r.jsx)(p.Ee, {
+                (0, r.jsx)(g.Ee, {
                     src: n(892235),
                     className: A.marginBottom8,
                 }),
-                (0, r.jsx)(p.Dx, { children: C.intl.format(C.t.ivLUf3, { username: e.username }) }),
-                (0, r.jsx)(p.DK, {
+                (0, r.jsx)(g.Dx, { children: C.intl.format(C.t.ivLUf3, { username: e.username }) }),
+                (0, r.jsx)(g.DK, {
                     className: A.marginTop20,
                     children: C.intl.string(C.t["8Su18/"]),
                 }),
-                (0, r.jsx)(p.zx, {
+                (0, r.jsx)(g.zx, {
                     disabled: t,
                     className: A.marginTop40,
                     onClick: this.handleResendVerification,
                     children: t ? C.intl.string(C.t.CMa9Rk) : C.intl.string(C.t.lm1UKi),
                 }),
-                (0, r.jsx)(p.zx, {
-                    look: p.zx.Looks.LINK,
-                    color: p.zx.Colors.LINK,
+                (0, r.jsx)(g.zx, {
+                    look: g.zx.Looks.LINK,
+                    color: g.zx.Colors.LINK,
                     onClick: this.refreshUser,
                     className: A.marginTop8,
                     children: C.intl.string(C.t.Po9eBQ),
@@ -165,21 +165,21 @@ class Z extends i.PureComponent {
     }
     renderAuthenticated(e, t) {
         let n = this.getErrorMessage(e);
-        return (0, r.jsxs)(p.ZP, {
+        return (0, r.jsxs)(g.ZP, {
             children: [
                 (0, r.jsx)(N.Z, { giftCode: e }),
-                (0, r.jsx)(p.zx, {
+                (0, r.jsx)(g.zx, {
                     disabled: null != n,
                     className: A.marginTop40,
                     onClick: this.handleAccept,
                     children: C.intl.string(C.t.n6I6k5),
                 }),
                 null != n
-                    ? (0, r.jsx)(p.DK, {
+                    ? (0, r.jsx)(g.DK, {
                           className: A.marginTop20,
                           children: n,
                       })
-                    : (0, r.jsx)(p.i_, {
+                    : (0, r.jsx)(g.i_, {
                           className: A.marginTop20,
                           children: C.intl.format(C.t.NYM08v, {
                               userTag: I.ZP.getUserTag(t),
@@ -197,12 +197,12 @@ class Z extends i.PureComponent {
                 giftCode: i,
                 isResolved: l,
                 isAccepting: s,
-                transitionTo: a,
-                location: o,
+                transitionTo: o,
+                location: a,
             } = this.props,
             { fetchingUser: c, continueOnWeb: u } = this.state;
-        if (e === S.kEZ.OPEN && !u) return this.renderAppOpened();
-        if (e === S.kEZ.OPENING) return this.renderSpinner(C.intl.string(C.t["Z+hCVV"]));
+        if (e === y.kEZ.OPEN && !u) return this.renderAppOpened();
+        if (e === y.kEZ.OPENING) return this.renderSpinner(C.intl.string(C.t["Z+hCVV"]));
         if (s) return this.renderSpinner(C.intl.string(C.t.bhJseH));
         if (null == i) return l ? this.renderExpiredInvite() : this.renderSpinner(C.intl.string(C.t.b3lf1d));
         if (l) {
@@ -218,14 +218,14 @@ class Z extends i.PureComponent {
                 ? (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: a,
-                      location: o,
+                      transitionTo: o,
+                      location: a,
                   })
-                : (0, r.jsx)(y.Z, {
+                : (0, r.jsx)(S.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
-                      transitionTo: a,
-                      location: o,
+                      transitionTo: o,
+                      location: a,
                   });
         }
         return null;
@@ -253,7 +253,7 @@ class Z extends i.PureComponent {
             }),
             T(this, "handleLogout", () => {
                 let e = this.props.match.params.giftCode;
-                c.Z.logout("gift_code", S.Z5c.GIFT_CODE_LOGIN(e));
+                c.Z.logout("gift_code", y.Z5c.GIFT_CODE_LOGIN(e));
             }),
             T(this, "handleResendVerification", () => {
                 c.Z.verifyResend(), this.setState({ sentVerification: !0 });
@@ -263,7 +263,7 @@ class Z extends i.PureComponent {
                 if (null == t) throw Error("Trying to accept gift before resolve");
                 let n = this.getCode();
                 try {
-                    this.setState({ error: null }), await u.Z.redeemGiftCode({ code: n }), e(S.Z5c.APP);
+                    this.setState({ error: null }), await u.Z.redeemGiftCode({ code: n }), e(y.Z5c.APP);
                 } catch (e) {
                     this.setState({ error: e });
                 }
@@ -272,12 +272,12 @@ class Z extends i.PureComponent {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
                 u.Z.resolveGiftCode(t, !0, !0).then((n) => {
-                    null != n && null != n.giftCode.promotion && e(S.Z5c.BILLING_PROMOTION_REDEMPTION(t));
+                    null != n && null != n.giftCode.promotion && e(y.Z5c.BILLING_PROMOTION_REDEMPTION(t));
                 });
             });
     }
 }
-let P = a.ZP.connectStores([x.Z, E.Z, f.default, v.Z, _.Z, g.Z], (e) => {
+let Z = o.ZP.connectStores([x.Z, E.Z, f.default, v.Z, _.Z, m.Z], (e) => {
     let t = e.match.params.giftCode,
         n = x.Z.get(t),
         r = null != n ? v.Z.get(n.skuId) : null;
@@ -286,13 +286,13 @@ let P = a.ZP.connectStores([x.Z, E.Z, f.default, v.Z, _.Z, g.Z], (e) => {
         sku: r,
         libraryApplication:
             null != r && (null == n ? void 0 : n.entitlementBranches) != null
-                ? j.z2(n.entitlementBranches, r, E.Z)
+                ? b.z2(n.entitlementBranches, r, E.Z)
                 : null,
         authenticated: f.default.isAuthenticated(),
         defaultRoute: _.Z.defaultRoute,
         isResolved: x.Z.getIsResolved(t),
         isAccepting: x.Z.getIsAccepting(t),
         libraryApplicationsFetched: E.Z.fetched,
-        nativeAppState: g.Z.getState(t),
+        nativeAppState: m.Z.getState(t),
     };
-})(Z);
+})(P);

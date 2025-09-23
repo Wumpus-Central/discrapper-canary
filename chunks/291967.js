@@ -1,12 +1,12 @@
-a.d(n, { Z: () => l });
-var t = a(951288);
-a(647438);
-var i = a(158040),
-    r = a(979611);
-function l(e) {
-    let { rewardName: n, children: a } = e;
-    return (0, t.jsxs)("div", {
-        className: r.container,
-        children: [(0, t.jsx)(i.T, { rewardName: n }), a],
+n.d(t, { Z: () => o });
+var r = n(951288);
+n(647438);
+var a = n(158040),
+    i = n(29321);
+function o(e) {
+    let { rewardName: t, children: n } = e;
+    return (0, r.jsxs)("div", {
+        className: i.container,
+        children: [(0, r.jsx)(a.T, { rewardName: t }), n],
     });
 }

@@ -2,10 +2,10 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(481060),
-    a = n(457414),
-    s = n(311173),
+    s = n(457414),
+    a = n(311173),
     o = n(388032),
-    c = n(97247);
+    c = n(332310);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,20 +52,20 @@ function u(e, t) {
 function m(e) {
     var t;
     let { rule: n, onChangeRule: m, collapsed: g = !1 } = e,
-        [p, h] = i.useState(!g),
-        f = i.useCallback(() => {
-            h(!p);
-        }, [p, h]),
+        [p, f] = i.useState(!g),
+        h = i.useCallback(() => {
+            f(!p);
+        }, [p, f]),
         b = i.useCallback(
             (e) => {
                 m(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
             [m, n],
         );
-    return (0, a.S)(n.triggerType)
+    return (0, s.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {
               isExpanded: p,
-              collapsibleContent: (0, r.jsx)(s.Z, {
+              collapsibleContent: (0, r.jsx)(a.Z, {
                   rule: n,
                   onChangeText: b,
                   className: c.textAreaContainer,
@@ -76,7 +76,7 @@ function m(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
-                          f(), t(e);
+                          h(), t(e);
                       },
                       children: (0, r.jsxs)("div", {
                           className: c.header,

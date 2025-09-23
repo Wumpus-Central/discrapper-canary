@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(248554),
     b = n(228168),
     _ = n(388032),
-    O = n(229870);
+    O = n(73686);
 let E = {
     [o.l.FAVORITE_GAMES]: {
         placeholder: {
@@ -60,7 +60,7 @@ function y(e) {
     let { widgetType: t, onAddWidget: n, size: l = "default", loading: c = !1, trackUserProfileEditAction: u } = e,
         { placeholder: _, getAriaLabel: y } = E[t],
         v = "small" === l,
-        I = (0, d.oz)().data,
+        I = (0, d.SM)().data,
         C = i.useMemo(() => {
             switch (t) {
                 case o.l.CURRENT_GAMES:

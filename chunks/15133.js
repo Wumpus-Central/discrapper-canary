@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => v });
+n.r(t), n.d(t, { default: () => g });
 var r = n(951288),
     a = n(647438),
     i = n(657707),
@@ -8,21 +8,21 @@ var r = n(951288),
     l = n(639777),
     d = n(744993),
     u = n(693587),
-    b = n(462923),
-    m = n(331500),
-    p = n(401561),
+    m = n(462923),
+    b = n(331500),
+    p = n(440589),
     f = n(388032),
-    j = n(828843);
-function v(e) {
+    j = n(50803);
+function g(e) {
     let { guildId: t } = e;
     a.useEffect(() => {
         (0, d.EC)(t);
     }, [t]);
     let n = (0, l.Z)(t),
-        v = (0, s.e7)([u.Z], () => u.Z.getStateForGuild(t)),
-        g = a.useMemo(
-            () => ((null == v ? void 0 : v.instances) == null ? [] : Object.values(v.instances)),
-            [null == v ? void 0 : v.instances],
+        g = (0, s.e7)([u.Z], () => u.Z.getStateForGuild(t)),
+        x = a.useMemo(
+            () => ((null == g ? void 0 : g.instances) == null ? [] : Object.values(g.instances)),
+            [null == g ? void 0 : g.instances],
         );
     return (0, r.jsxs)("div", {
         className: j.container,
@@ -41,14 +41,14 @@ function v(e) {
             (0, r.jsxs)("div", {
                 className: j.contentContainer,
                 children: [
-                    (null == v ? void 0 : v.instances) != null
-                        ? (0, r.jsx)("div", {
+                    (null == g ? void 0 : g.instances) != null
+                        ? (0, r.jsx)(c.zJl, {
                               className: j.gameContainerWrapper,
                               children: (0, r.jsx)("div", {
                                   className: j.gameContainer,
-                                  children: g.map((e, n) =>
+                                  children: x.map((e, n) =>
                                       (0, r.jsx)(
-                                          b.Z,
+                                          m.Z,
                                           {
                                               guildId: t,
                                               instance: e,
@@ -62,7 +62,7 @@ function v(e) {
                               className: j.spinnerContainer,
                               children: (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }),
                           }),
-                    n && (0, r.jsx)(m.Z, { guildId: t }),
+                    n && (0, r.jsx)(b.Z, { guildId: t }),
                 ],
             }),
         ],

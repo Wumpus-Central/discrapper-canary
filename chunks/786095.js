@@ -12,9 +12,9 @@ var r = n(951288),
     g = n(572456),
     b = n(434404),
     p = n(981631),
-    m = n(273504),
-    O = n(388032),
-    y = n(335260);
+    O = n(273504),
+    m = n(388032),
+    y = n(31593);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function v(e, t) {
         e
     );
 }
-let j = m.fX.KEYWORD;
+let j = O.fX.KEYWORD;
 function E(e, t) {
     let { perGuildMaxCount: n } = c.I6[j],
         { isLoading: E, saveRule: S, errorMessage: P } = (0, d.w)(),
@@ -76,7 +76,7 @@ function E(e, t) {
     let C = e.split(" "),
         R = C.length;
     try {
-        (0, o.km)(C, m.RH);
+        (0, o.km)(C, O.RH);
     } catch (e) {
         return null;
     }
@@ -108,12 +108,12 @@ function E(e, t) {
             await S(i, x),
                 A(i),
                 null != P
-                    ? (0, l.showToast)((0, l.createToast)(O.intl.string(O.t.wH6L0t), l.ToastType.FAILURE))
-                    : (0, l.showToast)((0, l.createToast)(O.intl.string(O.t["0rdYm5"]), l.ToastType.SUCCESS));
+                    ? (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.wH6L0t), l.ToastType.FAILURE))
+                    : (0, l.showToast)((0, l.createToast)(m.intl.string(m.t["0rdYm5"]), l.ToastType.SUCCESS));
         },
         G = (0, r.jsx)(l.sNh, {
             id: "automod-rules-loading",
-            label: O.intl.string(O.t.ZTNur6),
+            label: m.intl.string(m.t.ZTNur6),
         });
     return (
         w ||
@@ -122,7 +122,7 @@ function E(e, t) {
                     D &&
                         (0, r.jsx)(l.sNh, {
                             id: "add-first-rule",
-                            label: O.intl.string(O.t.f72Zqa),
+                            label: m.intl.string(m.t.f72Zqa),
                             action: L,
                             disabled: E,
                         }),
@@ -161,7 +161,7 @@ function E(e, t) {
                                 (0, r.jsx)(l.Clw, {}),
                                 (0, r.jsx)(l.sNh, {
                                     id: "add-another-rule",
-                                    label: O.intl.string(O.t["0K5jDA"]),
+                                    label: m.intl.string(m.t["0K5jDA"]),
                                     action: L,
                                     disabled: E,
                                 }),
@@ -171,7 +171,7 @@ function E(e, t) {
             })),
         (0, r.jsx)(l.sNh, {
             id: "guild-automod-add-selection",
-            label: O.intl.formatToPlainString(O.t.Kkjv1t, { keywordCount: R }),
+            label: m.intl.formatToPlainString(m.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
                 Z || (T(!0), I());
             },

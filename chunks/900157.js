@@ -3,29 +3,29 @@ var r = n(951288),
     i = n(647438),
     l = n(392711),
     a = n.n(l),
-    o = n(442837),
-    s = n(570140),
+    s = n(442837),
+    o = n(570140),
     c = n(239091),
-    u = n(561472),
-    d = n(367907),
+    d = n(561472),
+    u = n(367907),
     p = n(731429),
     h = n(188471),
     f = n(933557),
-    m = n(287746),
-    g = n(541716),
+    g = n(287746),
+    m = n(541716),
     b = n(665149),
     y = n(910611),
     _ = n(359110),
-    C = n(592125),
-    v = n(703558),
+    O = n(592125),
+    j = n(703558),
     x = n(430824),
-    O = n(979651),
-    j = n(664342),
-    E = n(124368),
-    S = n(981631),
-    I = n(388032),
-    P = n(952899);
-function Z(e) {
+    v = n(979651),
+    C = n(664342),
+    I = n(124368),
+    E = n(981631),
+    S = n(388032),
+    Z = n(229);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,69 +70,69 @@ function T(e, t) {
 }
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
-        A = (0, o.e7)([C.Z], () => C.Z.getChannel(t)),
-        w = (0, o.e7)([x.Z], () => x.Z.getGuild(null == A ? void 0 : A.getGuildId())),
-        R = (0, f.ZP)(A);
-    var M = A;
-    let D = (0, o.e7)([O.Z], () => null != M && !a().isEmpty(O.Z.getVoiceStatesForChannel(M.id)));
+        R = (0, s.e7)([O.Z], () => O.Z.getChannel(t)),
+        w = (0, s.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        A = (0, f.ZP)(R);
+    var D = R;
+    let L = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
     i.useEffect(() => {
-        D &&
-            null != M &&
-            (s.Z.dispatch({
+        L &&
+            null != D &&
+            (o.Z.dispatch({
                 type: "SIDEBAR_CLOSE",
-                baseChannelId: M.parent_id,
+                baseChannelId: D.parent_id,
             }),
-            (0, _.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
-    }, [D, M]);
-    let L = i.useRef(!1);
+            (0, _.ad)(D, { source: I.on.VOICE_AUTO_OPEN }));
+    }, [L, D]);
+    let M = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            if (null == A || L.current) return;
-            L.current = !0;
-            let e = (0, p.K)(C.Z.getChannel(A.id), !0);
-            (0, d.yw)(S.rMx.CHANNEL_OPENED, T(Z({}, e, (0, d.$H)(A.id)), { channel_view: N })),
-                (0, h.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
-        }, [A, N]),
-        null == A || null == w)
+            if (null == R || M.current) return;
+            M.current = !0;
+            let e = (0, p.K)(O.Z.getChannel(R.id), !0);
+            (0, u.yw)(E.rMx.CHANNEL_OPENED, T(P({}, e, (0, u.$H)(R.id)), { channel_view: N })),
+                (0, h.a)(E.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: R.id });
+        }, [R, N]),
+        null == R || null == w)
     )
         return null;
-    let k = (0, r.jsx)(j.Z, {
-        channel: A,
+    let k = (0, r.jsx)(C.Z, {
+        channel: R,
         baseChannelId: l,
     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(u.Z, {
-                channel: A,
-                draftType: v.d.ChannelMessage,
+            (0, r.jsx)(d.Z, {
+                channel: R,
+                draftType: j.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: k,
-                "aria-label": I.intl.string(I.t.Pwe8tL),
+                "aria-label": S.intl.string(S.t.Pwe8tL),
                 children: (0, y.ud)({
-                    channel: A,
-                    channelName: R,
+                    channel: R,
+                    channelName: A,
                     guild: w,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
                         (0, c.jW)(e, async () => {
                             let { default: e } = await n.e("40157").then(n.bind(n, 422200));
-                            return (t) => (0, r.jsx)(e, T(Z({}, t), { channel: A }));
+                            return (t) => (0, r.jsx)(e, T(P({}, t), { channel: R }));
                         });
                     },
                     handleClick: function () {
-                        null != A && (0, _.Kh)(A.id);
+                        null != R && (0, _.Kh)(R.id);
                     },
                 }),
             }),
             (0, r.jsx)("div", {
-                className: P.chat,
+                className: Z.chat,
                 children: (0, r.jsx)(
-                    m.Z,
+                    g.Z,
                     {
-                        channel: A,
+                        channel: R,
                         guild: w,
-                        chatInputType: g.Ie.SIDEBAR,
+                        chatInputType: m.Ie.SIDEBAR,
                     },
                     t,
                 ),

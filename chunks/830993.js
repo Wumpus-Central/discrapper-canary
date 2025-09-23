@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -17,17 +17,17 @@ var r = n(951288),
     O = n(823379),
     y = n(355363),
     _ = n(449932),
-    j = n(561788),
-    v = n(876548),
+    v = n(561788),
+    j = n(876548),
     x = n(543432),
     C = n(981631),
     E = n(388032),
-    S = n(413409),
-    P = n(21265);
-function I(e) {
+    S = n(333972),
+    I = n(934882);
+function P(e) {
     var t, l;
     let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
-        j = i.useMemo(() => {
+        v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
                 ? {}
@@ -42,16 +42,16 @@ function I(e) {
                               : [],
                   };
         }, [o, g]);
-    (0, c.$)(j, "VoiceChannelActivities");
-    let v = (0, u.ZP)(o),
-        x = Array.from((0, u.uF)(v).values()),
-        P = null != (t = null == g ? void 0 : g.filter(O.lm)) ? t : [],
-        I = (0, a.e7)(
+    (0, c.$)(v, "VoiceChannelActivities");
+    let j = (0, u.ZP)(o),
+        x = Array.from((0, u.uF)(j).values()),
+        I = null != (t = null == g ? void 0 : g.filter(O.lm)) ? t : [],
+        P = (0, a.e7)(
             [m.Z],
             () => {
                 let e = {};
                 return (
-                    P.forEach((t) => {
+                    I.forEach((t) => {
                         let n = m.Z.findActivity(
                             t.user.id,
                             (e) =>
@@ -78,10 +78,10 @@ function I(e) {
                     Object.values(e)
                 );
             },
-            [P],
+            [I],
             a.pF,
         );
-    return I.length + x.length === 0
+    return P.length + x.length === 0
         ? null
         : (0, r.jsxs)(s.Ttm, {
               className: S.container,
@@ -105,7 +105,7 @@ function I(e) {
                           t,
                       );
                   }),
-                  I.map((e, t) => {
+                  P.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
                           _.Z,
@@ -212,11 +212,11 @@ function N(e) {
     return null == (0, f.KS)(t, u)
         ? null
         : (0, r.jsxs)("div", {
-              className: o()(S.popoutHeaderContainer, P.popoutHeaderContainer),
+              className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),
               children: [
-                  (0, r.jsx)(j.Z, { channel: t }),
+                  (0, r.jsx)(v.Z, { channel: t }),
                   c
-                      ? (0, r.jsx)(v.Z, {
+                      ? (0, r.jsx)(j.Z, {
                             userCount: i,
                             video: s,
                             channel: t,

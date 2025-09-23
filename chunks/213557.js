@@ -27,7 +27,7 @@ var l = n(951288),
     w = n(287746),
     P = n(981631),
     E = n(388032),
-    S = n(10832);
+    S = n(952713);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -129,7 +129,7 @@ function B(e) {
                           inSidebar: !0,
                           handleContextMenu: (e) => {
                               (0, o.jW)(e, async () => {
-                                  let { default: e } = await Promise.all([n.e("24783"), n.e("41815")]).then(
+                                  let { default: e } = await Promise.all([n.e("24783"), n.e("63384")]).then(
                                       n.bind(n, 439635),
                                   );
                                   return (t) =>

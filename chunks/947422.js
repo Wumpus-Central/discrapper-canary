@@ -4,8 +4,8 @@ r(647438);
 var o = r(667202),
     i = r(481060),
     c = r(388032),
-    l = r(76349),
-    s = r(787068);
+    l = r(614905),
+    s = r(768982);
 let a = (t) => {
     let { text: e, icon: r, foreground: o } = t;
     return (0, n.jsxs)("div", {

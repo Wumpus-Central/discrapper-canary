@@ -3,16 +3,16 @@ var r,
     i = n(951288),
     l = n(647438),
     s = n(593473),
-    a = n(442837),
-    o = n(544891),
+    o = n(442837),
+    a = n(544891),
     c = n(108427),
     u = n(896797),
     d = n(411198),
     h = n(129293),
-    p = n(388905),
-    g = n(981631),
-    m = n(388032),
-    f = n(197571);
+    g = n(388905),
+    m = n(981631),
+    p = n(388032),
+    f = n(10198);
 function _(e, t, n) {
     return (
         t in e
@@ -26,14 +26,14 @@ function _(e, t, n) {
         e
     );
 }
-a.ZP.initialize();
+o.ZP.initialize();
 class x extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, h.Z)(this.props.location),
             t = (0, s.parse)(this.props.location.search);
-        o.tn
+        a.tn
             .post({
-                url: g.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -63,52 +63,52 @@ class x extends (r = l.PureComponent) {
             (0, c.e)("disable_server_highlight_notifications");
     }
     renderBusy() {
-        return (0, i.jsx)(p.ZP, { children: (0, i.jsx)(p.Hh, {}) });
+        return (0, i.jsx)(g.ZP, { children: (0, i.jsx)(g.Hh, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, i.jsxs)(p.ZP, {
+        return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(p.Dx, {
+                (0, i.jsx)(g.Dx, {
                     className: f.marginBottom8,
-                    children: m.intl.string(m.t.Z33eiI),
+                    children: p.intl.string(p.t.Z33eiI),
                 }),
-                (0, i.jsx)(p.DK, { children: m.intl.format(m.t.NRWtfH, { guildName: n.name }) }),
-                (0, i.jsx)(p.zx, {
+                (0, i.jsx)(g.DK, { children: p.intl.format(p.t.NRWtfH, { guildName: n.name }) }),
+                (0, i.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: m.intl.string(m.t.fIv16O),
+                    children: p.intl.string(p.t.fIv16O),
                 }),
-                (0, i.jsx)(p.zx, {
+                (0, i.jsx)(g.zx, {
                     className: f.marginTop8,
-                    color: p.zx.Colors.LINK,
-                    look: p.zx.Looks.LINK,
+                    color: g.zx.Colors.LINK,
+                    look: g.zx.Looks.LINK,
                     onClick: () => {
-                        t(g.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                        t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                     },
-                    children: m.intl.string(m.t["cGmT/P"]),
+                    children: p.intl.string(p.t["cGmT/P"]),
                 }),
             ],
         });
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, i.jsxs)(p.ZP, {
+        return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(p.Ee, {
+                (0, i.jsx)(g.Ee, {
                     src: n(105020),
                     className: f.marginBottom20,
                 }),
-                (0, i.jsx)(p.Dx, {
+                (0, i.jsx)(g.Dx, {
                     className: f.marginBottom8,
-                    children: m.intl.string(m.t.ox9hIS),
+                    children: p.intl.string(p.t.ox9hIS),
                 }),
-                (0, i.jsx)(p.DK, { children: m.intl.string(m.t["/dcuR0"]) }),
-                (0, i.jsx)(p.zx, {
+                (0, i.jsx)(g.DK, { children: p.intl.string(p.t["/dcuR0"]) }),
+                (0, i.jsx)(g.zx, {
                     className: f.marginTop40,
                     onClick: () => t(e),
-                    children: m.intl.string(m.t.fIv16O),
+                    children: p.intl.string(p.t.fIv16O),
                 }),
             ],
         });
@@ -127,4 +127,4 @@ class x extends (r = l.PureComponent) {
     }
 }
 _(x, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let E = a.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);
+let E = o.ZP.connectStores([u.Z], () => ({ defaultRoute: u.Z.defaultRoute }))(x);

@@ -14,13 +14,13 @@ var r = n(951288),
     f = n(763520),
     p = n(194082),
     m = n(710845),
-    E = n(916016),
+    E = n(965048),
     g = n(590293),
     b = n(595816),
     S = n(863908),
     v = n(871118),
-    h = n(517525),
-    O = n(352978),
+    O = n(517525),
+    h = n(352978),
     y = n(590076),
     _ = n(507675),
     j = n(199902),
@@ -38,10 +38,10 @@ var r = n(951288),
     M = n(651183),
     L = n(623825),
     F = n(981631),
-    V = n(354459),
-    k = n(65154),
+    k = n(354459),
+    V = n(65154),
     U = n(388032),
-    H = n(7504);
+    H = n(400872);
 let W = new m.Z("StreamTile");
 function Y(e) {
     let { participant: t, selected: n, focused: l, idle: i, width: a, premiumIndicator: u } = e,
@@ -52,7 +52,7 @@ function Y(e) {
             n || l ? null : (0, r.jsx)(M.Z, { participant: t }),
             l || null == s || s.state === F.jm8.ENDED || s.state === F.jm8.FAILED
                 ? null
-                : (0, r.jsx)(h.Z, {
+                : (0, r.jsx)(O.Z, {
                       size: p.ZP.Sizes.SMALL,
                       className: H.liveIndicator,
                       participant: t,
@@ -70,7 +70,7 @@ function z(e) {
             onVideoResize: i,
             fit: p,
             inPopout: m,
-            inOverlayPopout: h = !1,
+            inOverlayPopout: O = !1,
             width: M,
             focused: L,
             wrapperClassName: Y,
@@ -79,15 +79,15 @@ function z(e) {
         G = w.Z.getVideoComponent(),
         K = (0, o.e7)([Z.default], () => Z.default.getId()),
         q = (0, g.Z)(),
-        { stream: B, user: J, streamId: X } = t,
+        { stream: B, user: X, streamId: J } = t,
         Q = (0, o.e7)([I.Z], () => I.Z.getChannel(B.channelId)),
-        $ = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(J.id, B.guildId), [J.id, B.guildId]),
+        $ = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(X.id, B.guildId), [X.id, B.guildId]),
         { defaultWatchMultipleStreams: ee } = (0, b.P)({ location: "StreamTile" }),
         et = (0, o.e7)([j.Z], () => j.Z.getAllActiveStreams().length > 0),
         en = (0, o.e7)([P.Z], () => P.Z.isFocused()),
         er = (null == $ ? void 0 : $.ownerId) === K,
         el = er && !en && !m,
-        ei = null != $ ? (0, S.Z)($, J, J.id === K, el) : null,
+        ei = null != $ ? (0, S.Z)($, X, X.id === K, el) : null,
         ea = M < 195;
     (0, d.ZP)(() => {
         !et &&
@@ -95,7 +95,7 @@ function z(e) {
             !er &&
             ((0, c.rn)(B), s.Z.updateStageStreamSize(B.channelId, !1));
     });
-    let eo = (0, E.c)(k.Yn.STREAM, t.user.id);
+    let eo = (0, E.c)(V.Yn.STREAM, t.user.id);
     if (
         (l.useEffect(() => {
             W.info(
@@ -103,7 +103,7 @@ function z(e) {
                     .concat(null != $, " | selected: ")
                     .concat(n, " | Video: ")
                     .concat(null != G, " | MediaEngine: ")
-                    .concat(w.Z.supports(k.AN.VIDEO)),
+                    .concat(w.Z.supports(V.AN.VIDEO)),
             );
         }, [G, $, n]),
         q)
@@ -112,7 +112,7 @@ function z(e) {
             stream: t.stream,
             isSmall: ea,
             selected: n,
-            isSelfStream: J.id === K,
+            isSelfStream: X.id === K,
         });
     if ((null == $ ? void 0 : $.state) === F.jm8.ENDED)
         return (0, r.jsx)(x.Z, {
@@ -128,13 +128,13 @@ function z(e) {
             stream: t.stream,
             width: M,
         });
-    if (t.type === V.fO.HIDDEN_STREAM)
+    if (t.type === k.fO.HIDDEN_STREAM)
         return (0, r.jsx)(T.Z, {
             selected: n,
             participant: t,
             width: M,
         });
-    if (!(null != $ && !n && null != G && w.Z.supports(k.AN.VIDEO)))
+    if (!(null != $ && !n && null != G && w.Z.supports(V.AN.VIDEO)))
         return (0, r.jsxs)("div", {
             className: a()(H.content, H.streamPreview, { [H.small]: ea }),
             children: [
@@ -183,26 +183,26 @@ function z(e) {
                           focused: L,
                           channelId: Q.id,
                           guildId: Q.guild_id,
-                          streamerId: J.id,
+                          streamerId: X.id,
                           hasScreenMessage: null != ei,
                           stream: B,
                       })
                     : null,
                 (0, r.jsx)(
-                    O.Z,
+                    h.Z,
                     {
                         onResize: i,
                         wrapperClassName: a()(H.videoWrapper, Y),
                         className: H.content,
-                        streamId: X,
+                        streamId: J,
                         videoComponent: G,
                         fit: p,
                         paused: z || (null == $ ? void 0 : $.state) === F.jm8.PAUSED || el,
                         videoSpinnerContext: er ? f.m.SELF_STREAM : f.m.REMOTE_STREAM,
-                        userId: J.id,
+                        userId: X.id,
                         streamKey: t.id,
                     },
-                    X,
+                    J,
                 ),
                 null != ei
                     ? (0, r.jsx)(

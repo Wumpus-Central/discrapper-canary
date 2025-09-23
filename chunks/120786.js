@@ -1,92 +1,92 @@
-n.d(t, { L: () => O });
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
+n.d(t, { L: () => _ });
+var a = n(951288),
+    r = n(647438),
+    i = n(120356),
+    l = n.n(i),
     s = n(442837),
-    l = n(159691),
+    o = n(159691),
     c = n(481060),
-    u = n(607070),
-    d = n(70097),
-    f = n(63063),
-    _ = n(507808),
+    d = n(607070),
+    u = n(70097),
+    m = n(63063),
+    h = n(507808),
     p = n(981631),
-    h = n(388032),
-    m = n(97127),
-    g = n(665923),
-    E = n(477154),
-    b = n(387888);
-let y = () => {
-        let e = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
-        return (0, r.jsx)("div", {
-            className: m.assetContainer,
+    x = n(388032),
+    f = n(270469),
+    b = n(892260),
+    g = n(477154),
+    j = n(387888);
+let v = () => {
+        let e = (0, s.e7)([d.Z], () => d.Z.useReducedMotion);
+        return (0, a.jsx)("div", {
+            className: f.assetContainer,
             children: e
-                ? (0, r.jsx)("img", {
-                      src: E.Z,
-                      className: m.orbAsset,
+                ? (0, a.jsx)("img", {
+                      src: g.Z,
+                      className: f.orbAsset,
                       alt: "Orb",
                   })
-                : (0, r.jsxs)(d.Z, {
+                : (0, a.jsxs)(u.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: m.orbAsset,
+                      className: f.orbAsset,
                       children: [
-                          (0, r.jsx)("source", {
-                              src: b.Z,
+                          (0, a.jsx)("source", {
+                              src: j.Z,
                               type: "video/webm",
                           }),
-                          (0, r.jsx)("img", {
-                              src: E.Z,
-                              className: m.orbAsset,
+                          (0, a.jsx)("img", {
+                              src: g.Z,
+                              className: f.orbAsset,
                               alt: "Orb",
                           }),
                       ],
                   }),
         });
     },
-    O = (e) => {
+    _ = (e) => {
         let {
                 ctaText: t,
                 ctaOnClick: n,
-                analyticsPage: a,
-                linkPreText: s = h.intl.string(h.t["5qZv9P"]),
-                linkText: u = h.intl.string(h.t.XRdyj4),
+                analyticsPage: i,
+                linkPreText: s = x.intl.string(x.t["5qZv9P"]),
+                linkText: d = x.intl.string(x.t.XRdyj4),
             } = e,
-            d = i.useCallback(() => {
-                null != a &&
-                    (0, _.Y)({
-                        pageType: a,
+            u = r.useCallback(() => {
+                null != i &&
+                    (0, h.Y)({
+                        pageType: i,
                         sectionType: p.jXE.ORBS_BALANCE_MENU,
                         ctaObject: p.qAy.ORBS_LEARN_MORE_LINK,
                     });
-            }, [a]);
-        return (0, r.jsxs)("div", {
-            className: o()(m.container, g.baseCardOutline),
+            }, [i]);
+        return (0, a.jsxs)("div", {
+            className: l()(f.container, b.baseCardOutline),
             children: [
-                (0, r.jsx)(y, {}),
-                (0, r.jsx)(l.zxk, {
+                (0, a.jsx)(v, {}),
+                (0, a.jsx)(o.zxk, {
                     text: t,
                     variant: "primary",
                     size: "sm",
                     onClick: n,
                     fullWidth: !0,
                 }),
-                (0, r.jsxs)("div", {
-                    className: m.linkContainer,
+                (0, a.jsxs)("div", {
+                    className: f.linkContainer,
                     children: [
                         void 0 !== s &&
-                            (0, r.jsxs)(c.Text, {
+                            (0, a.jsxs)(c.Text, {
                                 variant: "text-xs/normal",
-                                className: m.linkPreText,
+                                className: f.linkPreText,
                                 children: [s, "\xA0"],
                             }),
-                        (0, r.jsx)(c.eee, {
+                        (0, a.jsx)(c.eee, {
                             target: "_blank",
                             rel: "author",
-                            href: f.Z.getArticleURL(p.BhN.ORBS_FAQ),
-                            className: m.learnMoreLink,
-                            onClick: d,
-                            children: u,
+                            href: m.Z.getArticleURL(p.BhN.ORBS_FAQ),
+                            className: f.learnMoreLink,
+                            onClick: u,
+                            children: d,
                         }),
                     ],
                 }),

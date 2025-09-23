@@ -1,58 +1,58 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(399606),
     l = n(481060),
-    a = n(7284),
-    o = n(210975),
+    o = n(7284),
+    a = n(210975),
     s = n(158776),
     c = n(699516),
     u = n(594174),
     d = n(51144),
     p = n(984370),
-    h = n(388032),
-    f = n(97009);
-function m(e) {
+    f = n(388032),
+    h = n(161655);
+function g(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
-        m = (0, i.e7)([u.default], () => u.default.getUser(t)),
-        g = (0, i.e7)([s.Z], () => s.Z.getStatus(t)),
+        g = (0, i.e7)([u.default], () => u.default.getUser(t)),
+        m = (0, i.e7)([s.Z], () => s.Z.getStatus(t)),
         b = (0, i.e7)([s.Z], () => s.Z.isMobileOnline(t)),
-        y = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
-        _ = d.ZP.useUserTag(m),
-        C = (0, a.j)({ displayNameStyles: null == m ? void 0 : m.displayNameStyles }),
-        v = (0, o.m$)({ channelId: e.channel.id });
+        O = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
+        y = d.ZP.useUserTag(g),
+        _ = (0, o.j)({ displayNameStyles: null == g ? void 0 : g.displayNameStyles }),
+        v = (0, a.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.nn4, { children: h.intl.string(h.t.EJRzg4) }),
-            null != m &&
+            (0, r.jsx)(l.nn4, { children: f.intl.string(f.t.EJRzg4) }),
+            null != g &&
                 !n &&
                 (0, r.jsx)("div", {
                     children: (0, r.jsx)(l.qEK, {
-                        status: g,
+                        status: m,
                         isMobile: b,
-                        className: f.avatar,
+                        className: h.avatar,
                         size: l.EFr.SIZE_20,
-                        "aria-label": d.ZP.getName(m),
-                        src: m.getAvatarURL(void 0, 20),
+                        "aria-label": d.ZP.getName(g),
+                        src: g.getAvatarURL(void 0, 20),
                     }),
                 }),
             (0, r.jsx)(p.Z.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
-                className: null != e.handleClick ? f.cursorPointer : null,
+                className: null != e.handleClick ? h.cursorPointer : null,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.DY3, {
-                            text: _,
+                            text: y,
                             position: "bottom",
-                            className: C,
-                            children: null != y ? y : d.ZP.getName(m),
+                            className: _,
+                            children: null != O ? O : d.ZP.getName(g),
                         }),
                         v &&
                             (0, r.jsx)(l.ua7, {
-                                text: h.intl.string(h.t.QyZ4TU),
+                                text: f.intl.string(f.t.QyZ4TU),
                                 children: (e) => {
                                     var t, n;
                                     return (0, r.jsx)(
@@ -85,9 +85,9 @@ function m(e) {
                                         (n = n =
                                             {
                                                 size: "xs",
-                                                "aria-label": h.intl.string(h.t.VHXh8f),
+                                                "aria-label": f.intl.string(f.t.VHXh8f),
                                                 color: l.TVs.colors.INTERACTIVE_NORMAL,
-                                                className: f.secureFramesIcon,
+                                                className: h.secureFramesIcon,
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

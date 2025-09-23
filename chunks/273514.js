@@ -2,14 +2,14 @@ n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(565138),
-    l = n(592125),
+    l = n(565138),
+    a = n(592125),
     o = n(430824),
     s = n(388032),
-    c = n(238972);
+    c = n(50079);
 let d = (e) => {
     let { entry: t } = e,
-        n = l.Z.getChannel(t.channelId);
+        n = a.Z.getChannel(t.channelId);
     if (null == n) return null;
     let d = o.Z.getGuild(n.guild_id);
     return null == d
@@ -28,9 +28,9 @@ let d = (e) => {
                           (0, r.jsxs)("div", {
                               className: c.hubInfo,
                               children: [
-                                  (0, r.jsx)(a.Z, {
+                                  (0, r.jsx)(l.Z, {
                                       guild: d,
-                                      size: a.Z.Sizes.MINI,
+                                      size: l.Z.Sizes.MINI,
                                       className: c.hubIcon,
                                   }),
                                   (0, r.jsx)(i.Text, {

@@ -17,7 +17,7 @@ var l = n(442837),
     h = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(36973);
+    b = n(434652);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,29 +48,29 @@ let _ = (e) => {
     let { type: t, guildId: r, closePopout: y } = e,
         _ = (0, u.Dt)(),
         {
-            notClaimed: j,
-            notEmailVerified: v,
+            notClaimed: v,
+            notEmailVerified: j,
             notPhoneVerified: x,
             newAccount: C,
             newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
-        P = null,
-        I = null;
+        I = null,
+        P = null;
     return (0 === t &&
-        (j
-            ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
+        (v
+            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
             : x
-              ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
-              : v
-                ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
+              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              : j
+                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
                 : E
-                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
-                    (I = m.intl.string(m.t.BddRzc)))
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))
                   : C &&
-                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
-                    (I = m.intl.string(m.t.BddRzc)))),
-    null == S || null == P)
+                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
+                    (P = m.intl.string(m.t.BddRzc)))),
+    null == S || null == I)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
@@ -92,20 +92,20 @@ let _ = (e) => {
                           (0, i.jsx)(a.Text, {
                               color: "header-secondary",
                               variant: "text-sm/normal",
-                              children: P,
+                              children: I,
                           }),
                           (0, i.jsxs)("div", {
                               className: b.buttonContainer,
                               children: [
-                                  null != I
+                                  null != P
                                       ? (0, i.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
                                             children: (0, i.jsx)(a.zxk, {
                                                 variant: "primary",
-                                                text: I,
+                                                text: P,
                                                 onClick: () => {
-                                                    j
+                                                    v
                                                         ? c.j()
                                                         : x
                                                           ? (0, a.ZDy)(
@@ -121,7 +121,7 @@ let _ = (e) => {
                                                                 },
                                                                 { modalKey: g.M },
                                                             )
-                                                          : v &&
+                                                          : j &&
                                                             (s.Z.verifyResend(),
                                                             (0, a.h7j)((e) => {
                                                                 var t, n, r;
@@ -176,7 +176,7 @@ let _ = (e) => {
                                             }),
                                         })
                                       : null,
-                                  j || x || v
+                                  v || x || j
                                       ? (0, i.jsx)(o.zx, {
                                             onClick: y,
                                             look: o.zx.Looks.BLANK,

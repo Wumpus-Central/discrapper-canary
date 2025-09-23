@@ -8,8 +8,8 @@ var i = n(120356),
     o = n(948851),
     u = n(868728),
     d = n(388032),
-    c = n(451964),
-    g = n(197571);
+    c = n(869306),
+    g = n(10198);
 let h = (e) => {
     let {
             handleDone: t,
@@ -19,8 +19,8 @@ let h = (e) => {
             onGenerateNewLink: m,
             onToggleTemporary: p,
             onSelectMaxAge: v,
-            onSelectMaxUses: I,
-            isGuestInviteCreationToggleEnabled: x,
+            onSelectMaxUses: x,
+            isGuestInviteCreationToggleEnabled: I,
             onSetInviteFlags: f,
         } = e,
         j = (0, s.ZP)(),
@@ -52,9 +52,9 @@ let h = (e) => {
                 temporary: S,
                 onToggleTemporary: p,
                 onSelectMaxAge: v,
-                onSelectMaxUses: I,
+                onSelectMaxUses: x,
                 onGenerateNewLink: m,
-                isGuestInviteCreationToggleEnabled: x,
+                isGuestInviteCreationToggleEnabled: I,
                 onSetInviteFlags: f,
                 inviteFlags: b,
             }),

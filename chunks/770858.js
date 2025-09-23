@@ -17,27 +17,27 @@ var r = n(951288),
     O = n(961040),
     y = n(932711),
     _ = n(871301),
-    j = n(981631),
-    v = n(490897),
-    x = n(888158);
+    v = n(981631),
+    j = n(490897),
+    x = n(86517);
 function C() {
     let e = (0, o.e7)([h.default], () => h.default.getCurrentUser());
     return (0, o.e7)(
         [p.ZP],
-        () => (null == e ? void 0 : e.id) != null && p.ZP.getMentionCount(e.id, v.W.NOTIFICATION_CENTER) > 0,
+        () => (null == e ? void 0 : e.id) != null && p.ZP.getMentionCount(e.id, j.W.NOTIFICATION_CENTER) > 0,
     );
 }
 function E(e) {
     var t, n;
     let { onClick: d, selectedOverride: p = !1, popoutProps: h, ref: O } = e,
-        v = (0, l.Ie)("notifications-inbox"),
+        j = (0, l.Ie)("notifications-inbox"),
         [E, S] = i.useState(!1),
-        P = (0, m.D)(),
-        I = p || P,
+        I = (0, m.D)(),
+        P = p || I,
         { notificationCenterVariant: N } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
         {
-            badge: Z,
-            badgeDimensions: w,
+            badge: w,
+            badgeDimensions: Z,
             unreadChannelsCount: T,
         } = (function (e) {
             let { notificationCenterVariant: t } = (0, g.pN)({ location: "NotificationsInboxButtonInner" }),
@@ -67,17 +67,17 @@ function E(e) {
                       unreadChannelsCount: n.length,
                       badgeDimensions: o,
                   };
-        })(I),
+        })(P),
         A = N === g.jP.LEGACY ? a.xx7 : a.Dkj,
         R = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
         D = i.useMemo(() => {
-            if (N === g.jP.SIDEBAR) return j.Z5c.CHANNEL(j.STv, R);
+            if (N === g.jP.SIDEBAR) return v.Z5c.CHANNEL(v.STv, R);
         }, [N, R]);
     return (0, r.jsxs)(u.H, {
         ref: O,
         children: [
             (0, r.jsx)(c.Z, {
-                selected: I && N === g.jP.SIDEBAR,
+                selected: P && N === g.jP.SIDEBAR,
                 hovered: E && N === g.jP.SIDEBAR,
                 unread: T > 0,
                 className: x.pill,
@@ -85,9 +85,9 @@ function E(e) {
             }),
             (0, r.jsx)(y.Z, {
                 children: (0, r.jsx)(a.aRk, {
-                    selected: I || E,
-                    lowerBadge: Z,
-                    lowerBadgeSize: w,
+                    selected: P || E,
+                    lowerBadge: w,
+                    lowerBadgeSize: Z,
                     children: (0, r.jsx)(
                         a.LYs,
                         ((t = (function (e) {
@@ -114,12 +114,12 @@ function E(e) {
                                     });
                             }
                             return e;
-                        })({}, v, h)),
+                        })({}, j, h)),
                         (n = n =
                             {
                                 onClick: d,
                                 to: D,
-                                selected: I || E,
+                                selected: P || E,
                                 onMouseEnter: () => S(!0),
                                 onMouseLeave: () => S(!1),
                                 children: (0, r.jsx)(A, {

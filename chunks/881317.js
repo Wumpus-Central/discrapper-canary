@@ -3,21 +3,21 @@ var r = n(951288),
     i = n(647438),
     l = n(990547),
     s = n(442837),
-    a = n(481060),
-    o = n(893776),
+    o = n(481060),
+    a = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
     h = n(82554),
-    p = n(726521),
-    g = n(185625),
-    m = n(314897),
+    g = n(726521),
+    m = n(185625),
+    p = n(314897),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
-    E = n(884110),
-    v = n(197571);
-function j(e) {
+    E = n(848496),
+    v = n(10198);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function b(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,27 +70,27 @@ let I = {
         let { title: t, menuType: i } = e,
             s = (e) => {
                 let t = async () => {
-                        await (0, g.yL)(i, e);
+                        await (0, m.yL)(i, e);
                     },
-                    s = async (t) => await (0, g.RV)(i, e, t),
-                    o = (e) => {
+                    s = async (t) => await (0, m.RV)(i, e, t),
+                    a = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
-                            ? (0, p.eE)(t)
+                            ? (0, g.eE)(t)
                             : i === h.BM.USER
-                              ? (0, p.JM)(t)
-                              : i === h.BM.GUILD && (0, p.FO)(t);
+                              ? (0, g.JM)(t)
+                              : i === h.BM.GUILD && (0, g.FO)(t);
                     };
                 t(),
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e("94566").then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                b(j({}, n), {
+                                j(b({}, n), {
                                     onFormSubmit: s,
                                     onResend: t,
-                                    onSuccess: o,
+                                    onSuccess: a,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t["13ofGh"]),
                                     impression: { impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
@@ -98,15 +98,15 @@ let I = {
                             );
                     });
             };
-        return (0, r.jsxs)(a.P3F, {
+        return (0, r.jsxs)(o.P3F, {
             className: E.reportButton,
             onClick: () =>
-                void (0, a.ZDy)(async () => {
+                void (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("93288").then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            b(j({}, t), {
+                            j(b({}, t), {
                                 onSuccess: s,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
@@ -114,11 +114,11 @@ let I = {
                         );
                 }),
             children: [
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: "text-md/medium",
                     children: t,
                 }),
-                (0, r.jsx)(a.LJT, {
+                (0, r.jsx)(o.LJT, {
                     size: "sm",
                     color: "currentColor",
                 }),
@@ -128,10 +128,10 @@ let I = {
     O = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
-            p = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-            j = () => {
-                (0, g.Jj)()
+            h = (0, s.e7)([p.default], () => p.default.isAuthenticated()),
+            g = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            b = () => {
+                (0, m.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },
@@ -148,17 +148,17 @@ let I = {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => j())
+                          .then(() => b())
                           .catch(() => t(!1)))
-                    : j();
+                    : b();
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    p || (await o.Z.getLocationMetadata(), o.Z.getExperiments());
+                    g || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
                 })();
-            }, [p]),
-            e || !p
-                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(a.$jN, {}) })
+            }, [g]),
+            e || !g
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
                   (0, r.jsxs)(u.ZP, {

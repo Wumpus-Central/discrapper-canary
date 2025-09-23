@@ -2,9 +2,9 @@ n.d(t, { Z: () => s });
 var r = n(951288);
 n(647438);
 var i = n(481060),
-    a = n(565138),
-    l = n(388032),
-    o = n(99563);
+    l = n(565138),
+    a = n(388032),
+    o = n(296654);
 let s = (e) => {
     let { guild: t } = e;
     return (0, r.jsxs)("div", {
@@ -13,7 +13,7 @@ let s = (e) => {
             (0, r.jsx)(i.X6q, {
                 className: o.header,
                 variant: "heading-sm/semibold",
-                children: l.intl.string(l.t["0ox7Hh"]),
+                children: a.intl.string(a.t["0ox7Hh"]),
             }),
             (0, r.jsx)("div", {
                 className: o.guildContainer,
@@ -22,9 +22,9 @@ let s = (e) => {
                     children: [
                         (0, r.jsx)("div", {
                             className: o.guildIcon,
-                            children: (0, r.jsx)(a.Z, {
+                            children: (0, r.jsx)(l.Z, {
                                 guild: t,
-                                size: a.Z.Sizes.LARGE,
+                                size: l.Z.Sizes.LARGE,
                             }),
                         }),
                         (0, r.jsx)("div", {

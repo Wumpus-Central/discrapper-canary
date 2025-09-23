@@ -6,31 +6,31 @@ var r = n(951288),
     i = n(647438),
     l = n(442837),
     a = n(481060),
-    o = n(239091),
-    s = n(82295),
+    s = n(239091),
+    o = n(82295),
     c = n(485267),
-    u = n(71585),
-    d = n(703180),
+    d = n(71585),
+    u = n(703180),
     p = n(809017),
     h = n(981631),
     f = n(388032),
-    m = n(532406),
-    g = n(32482);
+    g = n(489229),
+    m = n(854641);
 function b(e) {
     return (null == e ? void 0 : e.id) === p.G;
 }
 let y = i.memo(function (e) {
     let t,
         { title: p, onToggleExpand: b, expanded: y, expandedCount: _ } = e,
-        C = (0, l.e7)([u.Z], () => u.Z.hidden),
-        v = i.useCallback((e) => {
-            (0, o.jW)(e, async () => {
+        O = (0, l.e7)([d.Z], () => d.Z.hidden),
+        j = i.useCallback((e) => {
+            (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
-                return () => (0, r.jsx)(e, { closePopout: o.Zy });
+                return () => (0, r.jsx)(e, { closePopout: s.Zy });
             });
         }, []);
-    return (0, r.jsxs)(s.Z, {
-        className: g.membersGroup,
+    return (0, r.jsxs)(o.Z, {
+        className: m.membersGroup,
         children: [
             (0, r.jsx)(a.nn4, {
                 children: f.intl.format(f.t.UaqbkZ, {
@@ -41,33 +41,33 @@ let y = i.memo(function (e) {
             (0, r.jsxs)(a.P3F, {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-                        return C ? (0, c.lY)() : _ > 3 ? b() : (0, h.dG4)();
+                        return O ? (0, c.lY)() : _ > 3 ? b() : (0, h.dG4)();
                 },
-                onContextMenu: v,
+                onContextMenu: j,
                 tag: "span",
                 "aria-hidden": !0,
-                className: m.headerContainer,
+                className: g.headerContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: m.header,
+                        className: g.header,
                         children: [
                             (0, r.jsxs)("span", {
                                 children: [p, " \u2014 ", _],
                             }),
-                            (0, r.jsx)(d.Z, {}),
+                            (0, r.jsx)(u.Z, {}),
                         ],
                     }),
-                    _ <= 3 && !C
+                    _ <= 3 && !O
                         ? null
-                        : ((t = C
-                              ? (0, r.jsx)(a.u04, { className: m.toggleExpandIcon })
+                        : ((t = O
+                              ? (0, r.jsx)(a.u04, { className: g.toggleExpandIcon })
                               : y
-                                ? (0, r.jsx)(a.CJ0, { className: m.toggleExpandIcon })
-                                : (0, r.jsx)(a.Fbu, { className: m.toggleExpandIcon })),
+                                ? (0, r.jsx)(a.CJ0, { className: g.toggleExpandIcon })
+                                : (0, r.jsx)(a.Fbu, { className: g.toggleExpandIcon })),
                           (0, r.jsx)(a.tEY, {
                               children: (0, r.jsx)("div", {
                                   tabIndex: 0,
-                                  className: m.toggleExpandIcon,
+                                  className: g.toggleExpandIcon,
                                   children: t,
                               }),
                           })),

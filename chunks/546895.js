@@ -22,8 +22,8 @@ n.d(t, { Z: () => d }),
     n(35282);
 var a = n(951288),
     r = n(647438),
-    l = n(108514),
-    i = n(793030),
+    i = n(108514),
+    l = n(793030),
     s = n(481060);
 let o = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
@@ -153,7 +153,7 @@ let o = {
     "discord_common/js/shared/animations/app/gifts/standard/coffee/coffee-loop.lottiejson": () =>
         n.e("93554").then(n.t.bind(n, 732573, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Anime_v01_Lottie.lottiejson": () =>
-        n.e("39690").then(n.t.bind(n, 725432, 19)),
+        n.e("219").then(n.t.bind(n, 725432, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Arcade_v01.lottiejson": () =>
         n.e("54931").then(n.t.bind(n, 488583, 19)),
     "discord_app/images/burst_reactions/BurstReaction_BlackHoles_v01.lottiejson": () =>
@@ -318,7 +318,7 @@ function c(e) {
             (e) =>
                 new Promise((t, n) => {
                     let a = new Uint8Array(e);
-                    l.Ri(a, (e, a) => {
+                    i.Ri(a, (e, a) => {
                         null != e && n(e);
                         let r = Object.keys(a).reduce((e, t) => {
                                 var n, r;
@@ -348,7 +348,7 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (r = r = { [t]: JSON.parse(l.T8(a[t])) }),
+                                    (r = r = { [t]: JSON.parse(i.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, t) {
@@ -364,19 +364,19 @@ function c(e) {
                                     n
                                 );
                             }, {}),
-                            i = r["manifest.json"];
-                        t(r["animations/".concat(i.animations[0].id, ".json")]);
+                            l = r["manifest.json"];
+                        t(r["animations/".concat(l.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
 function d() {
     let [e, t] = r.useState(void 0),
-        [n, l] = r.useState(400),
+        [n, i] = r.useState(400),
         [d, u] = r.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(i.Kqy, {
+        children: (0, a.jsxs)(l.Kqy, {
             gap: 24,
             children: [
                 (0, a.jsx)(s.VcW, {
@@ -387,13 +387,13 @@ function d() {
                     value: e,
                     onChange: t,
                 }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(l.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
                         (0, a.jsx)(s.oil, {
                             value: n.toString(),
-                            onChange: (e) => l(Number(e)),
+                            onChange: (e) => i(Number(e)),
                             label: "Width",
                         }),
                         (0, a.jsx)(s.oil, {

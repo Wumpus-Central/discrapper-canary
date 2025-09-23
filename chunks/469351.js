@@ -2,8 +2,8 @@ n.d(t, { t: () => w }), n(388685), n(314940);
 var r = n(951288),
     i = n(647438),
     l = n(278074),
-    a = n(399606),
-    s = n(159691),
+    s = n(399606),
+    a = n(159691),
     o = n(481060),
     c = n(76535),
     d = n(395586),
@@ -11,8 +11,8 @@ var r = n(951288),
     m = n(715796),
     g = n(411667),
     p = n(434404),
-    h = n(962086),
-    f = n(225675),
+    f = n(962086),
+    h = n(225675),
     b = n(703656),
     x = n(601964),
     j = n(485386),
@@ -26,12 +26,12 @@ var r = n(951288),
     I = n(981631),
     S = n(176505),
     T = n(388032),
-    P = n(68920);
+    P = n(514709);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: w } = (0, y.eD)(t),
-        R = (0, a.e7)([v.Z], () => v.Z.getGuild(t)),
-        Z = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        R = (0, s.e7)([v.Z], () => v.Z.getGuild(t)),
+        Z = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         D = null != R && (0, x.eM)(R, Z),
         { loading: A } = (0, c.H)(t),
         [L, k] = i.useState(n ? "manage_listings" : "payment");
@@ -41,8 +41,8 @@ function w(e) {
         let e = j.Z.getEveryoneRole(R);
         p.Z.close();
         let t = { [e.id]: e };
-        (0, h.iD)(R.id, {
-            type: f.z.SERVER_SHOP,
+        (0, f.iD)(R.id, {
+            type: h.z.SERVER_SHOP,
             roles: t,
             initialTab: "guild_products",
             returnToSection: I.pNK.GUILD_PRODUCTS,
@@ -96,7 +96,7 @@ function w(e) {
                 n
                     ? (0, r.jsx)("div", {
                           className: P.previewButton,
-                          children: (0, r.jsx)(s.zxk, {
+                          children: (0, r.jsx)(a.zxk, {
                               text: T.intl.string(T.t.vM81yc),
                               variant: "secondary",
                               onClick: M,

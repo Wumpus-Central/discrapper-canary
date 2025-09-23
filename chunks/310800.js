@@ -3,8 +3,8 @@ var r = n(951288);
 n(647438);
 var i = n(159691),
     l = n(481060),
-    a = n(724598),
-    s = n(674180),
+    s = n(724598),
+    a = n(674180),
     o = n(572004),
     c = n(495437),
     d = n(267101),
@@ -12,24 +12,24 @@ var i = n(159691),
     m = n(676651),
     g = n(613810),
     p = n(391181),
-    h = n(388032),
-    f = n(82917);
+    f = n(388032),
+    h = n(931281);
 let b = "guild-product-listings-header";
 function x(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
         m = (0, d.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: x } = (0, s.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: x } = (0, a.gX)(t),
         j = m.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.vwX, {
-                className: f.productListingsHeader,
+                className: h.productListingsHeader,
                 id: b,
-                children: j ? h.intl.string(h.t.RwuStb) : h.intl.string(h.t.WKMcMT),
+                children: j ? f.intl.string(f.t.RwuStb) : f.intl.string(f.t.WKMcMT),
             }),
             j
                 ? (0, r.jsx)("ul", {
-                      className: f.productListings,
+                      className: h.productListings,
                       "aria-labelledby": b,
                       children: m.map((e) =>
                           (0, r.jsx)(
@@ -44,10 +44,10 @@ function x(e) {
                                           return (n = e.id), void (0, c.Je)(t, n, { published: !1 });
                                       },
                                       onDeleteProduct: () => {
-                                          var i, a;
+                                          var i, s;
                                           return (
                                               (i = e.id),
-                                              (a = e.name),
+                                              (s = e.name),
                                               void (0, l.ZDy)(async () => {
                                                   let { default: e } = await n.e("95925").then(n.bind(n, 673078));
                                                   return (n) =>
@@ -86,7 +86,7 @@ function x(e) {
                                                               {
                                                                   guildId: t,
                                                                   productId: i,
-                                                                  productName: a,
+                                                                  productName: s,
                                                               },
                                                               n,
                                                           ),
@@ -111,7 +111,7 @@ function x(e) {
                           ),
                       ),
                   })
-                : (0, r.jsx)(a.Z, {
+                : (0, r.jsx)(s.Z, {
                       guildId: t,
                       showCTA: !1,
                       responsive: !1,
@@ -121,22 +121,22 @@ function x(e) {
 }
 function j(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, s.gX)(t),
-        a = (e) => {
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
+        s = (e) => {
             m.h(t, e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.zxk, {
-                text: h.intl.string(h.t.riG6DQ),
+                text: f.intl.string(f.t.riG6DQ),
                 icon: l.qJs,
-                onClick: () => a(null),
+                onClick: () => s(null),
                 disabled: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(x, {
                 guildId: t,
-                handleCreateOrEditProduct: a,
+                handleCreateOrEditProduct: s,
             }),
         ],
     });

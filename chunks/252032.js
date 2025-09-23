@@ -15,10 +15,10 @@ var r = n(951288),
     g = n(630388),
     b = n(838440),
     y = n(930282),
-    _ = n(955384),
-    C = n(981631),
+    C = n(955384),
+    _ = n(981631),
     v = n(224837),
-    x = n(360514);
+    x = n(5898);
 function O(e) {
     let { value: t, channel: n } = e;
     return (0, b.v)({
@@ -35,12 +35,12 @@ function j(e) {
         { id: u } = n,
         m = t.getGuildId(),
         b = (0, l.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        y = t.type === C.d4z.GUILD_ANNOUNCEMENT,
-        j = null != b && b.features.has(C.oNc.NEWS),
+        y = t.type === _.d4z.GUILD_ANNOUNCEMENT,
+        j = null != b && b.features.has(_.oNc.NEWS),
         S = y && j,
         {
-            editingMessage: I,
-            editingTextValue: P,
+            editingMessage: P,
+            editingTextValue: I,
             editingRichValue: Z,
         } = (0, l.cj)(
             [p.Z],
@@ -55,14 +55,14 @@ function j(e) {
         N = i.useCallback(
             (e, r, i) => {
                 let { content: l } = i,
-                    c = f.Z.can(C.Plq.MANAGE_MESSAGES, t),
-                    u = null != I && null != I.author ? I.author.id : null,
+                    c = f.Z.can(_.Plq.MANAGE_MESSAGES, t),
+                    u = null != P && null != P.author ? P.author.id : null,
                     d = S && (u === T || c),
                     p = {
                         content: l,
                         components: void 0,
                     };
-                if (n.hasFlag(C.iLy.IS_COMPONENTS_V2)) {
+                if (n.hasFlag(_.iLy.IS_COMPONENTS_V2)) {
                     var h;
                     let e = (null == (h = n.components[0]) ? void 0 : h.type) === s.re.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== s.re.TEXT_DISPLAY);
@@ -75,13 +75,13 @@ function j(e) {
                         (p.components = t);
                 }
                 return (
-                    d && null != I && (0, g.yE)(I.flags, C.iLy.CROSSPOSTED)
+                    d && null != P && (0, g.yE)(P.flags, _.iLy.CROSSPOSTED)
                         ? o.Z.confirmEdit(e, r, p)
                         : a.Z.editMessage(e, r, p),
                     Promise.resolve()
                 );
             },
-            [I, S, T, t, n],
+            [P, S, T, t, n],
         ),
         A = i.useCallback(
             (e) => {
@@ -135,12 +135,12 @@ function j(e) {
             },
             [u],
         );
-    return null != P && null != Z
-        ? (0, r.jsx)(_.Z, {
+    return null != I && null != Z
+        ? (0, r.jsx)(C.Z, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: P,
+              textValue: I,
               richValue: Z,
               onCancel: a.Z.endEditMessage,
               onChange: a.Z.updateEditMessage,
@@ -168,10 +168,10 @@ function E(e) {
     return (
         i.useEffect(
             () => (
-                m.S.subscribe(C.CkL.TEXTAREA_FOCUS, g),
-                m.S.subscribe(C.CkL.TEXTAREA_BLUR, b),
+                m.S.subscribe(_.CkL.TEXTAREA_FOCUS, g),
+                m.S.subscribe(_.CkL.TEXTAREA_BLUR, b),
                 () => {
-                    m.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(C.CkL.TEXTAREA_BLUR, b);
+                    m.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(_.CkL.TEXTAREA_BLUR, b);
                 }
             ),
             [g, b],

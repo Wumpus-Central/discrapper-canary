@@ -3,13 +3,13 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(692547),
-    s = n(481060),
+    s = n(692547),
+    a = n(481060),
     o = n(259580),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    m = n(31829);
+    m = n(866234);
 let g = function (e) {
     let {
             channelId: t,
@@ -17,8 +17,8 @@ let g = function (e) {
             index: i,
             isDragEnabled: g,
             isDropHovered: p,
-            onDrop: h,
-            onEdit: f,
+            onDrop: f,
+            onEdit: h,
             onRemove: b,
             canRemove: x,
             title: j,
@@ -33,8 +33,8 @@ let g = function (e) {
         index: i,
         isDragEnabled: g,
         isDropHovered: p,
-        onDrop: h,
-        onEdit: f,
+        onDrop: f,
+        onEdit: h,
         onRemove: b,
         title: j,
         canRemove: x,
@@ -46,11 +46,11 @@ let g = function (e) {
                 channelId: t,
             }),
             0 !== C &&
-                (0, r.jsxs)(s.P3F, {
+                (0, r.jsxs)(a.P3F, {
                     className: l()(m.fieldFooterContainer, m.clickable),
-                    onClick: f,
+                    onClick: h,
                     children: [
-                        (0, r.jsx)(s.R94, {
+                        (0, r.jsx)(a.R94, {
                             className: m.clickable,
                             children: u.intl.format(u.t.jnhD0d, { count: C }),
                         }),
@@ -58,7 +58,7 @@ let g = function (e) {
                             className: m.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: a.Z.unsafe_rawColors.WHITE_500.css,
+                            color: s.Z.unsafe_rawColors.WHITE_500.css,
                         }),
                     ],
                 }),

@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(938288),
+    o = n(401393),
     s = n(442837),
     c = n(481060),
     u = n(393238),
@@ -15,10 +15,10 @@ var r = n(951288),
     g = n(64078),
     b = n(351780),
     y = n(843693),
-    _ = n(641033),
-    C = n(989830),
+    C = n(641033),
+    _ = n(989830),
     v = n(388032),
-    x = n(23586);
+    x = n(436083);
 let O = i.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -28,7 +28,7 @@ let O = i.memo(function (e) {
             if (null == a ? void 0 : a.displayed) return;
             p(!1),
                 setImmediate(() => {
-                    p((null != a ? (0, _.Eo)(a.combo) : 0) > 0);
+                    p((null != a ? (0, C.Eo)(a.combo) : 0) > 0);
                 });
             let e = setTimeout(() => {
                 p(!1), null != a && (0, g.ew)(a);
@@ -54,14 +54,14 @@ let O = i.memo(function (e) {
                 children: (0, r.jsx)(c.Text, {
                     className: x.comboScore,
                     variant: "text-sm/bold",
-                    children: (0, _.Eo)(a.combo),
+                    children: (0, C.Eo)(a.combo),
                 }),
             })
         );
     }),
     j = i.memo(function (e) {
         let { value: t, multiplier: n } = e,
-            { color: l, square: o, flair: s } = i.useMemo(() => (0, _.yz)(n), [n]),
+            { color: l, square: o, flair: s } = i.useMemo(() => (0, C.yz)(n), [n]),
             u = (0, p.Lq)(l);
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -130,12 +130,12 @@ let O = i.memo(function (e) {
             a = (0, s.e7)([b.Z], () => b.Z.isEnabled()),
             d = (0, s.e7)([y.ZP], () => y.ZP.isComboing(n, t), [t, n]),
             { ref: p, width: m = 0 } = (0, u.ZP)(),
-            [g, _] = i.useState(!1),
-            v = (0, C.Z)(t),
+            [g, C] = i.useState(!1),
+            v = (0, _.Z)(t),
             E = a && d && l;
         i.useEffect(() => {
-            E && _(!0);
-            let e = setTimeout(() => _(E), 1000);
+            E && C(!0);
+            let e = setTimeout(() => C(E), 1000);
             return () => clearTimeout(e);
         }, [E]);
         let S = (0, c.q_F)({
@@ -144,7 +144,7 @@ let O = i.memo(function (e) {
                 pointerEvents: "none",
                 config: o.config.stiff,
             }),
-            I = i.useMemo(
+            P = i.useMemo(
                 () =>
                     null != v
                         ? v
@@ -154,16 +154,16 @@ let O = i.memo(function (e) {
                           },
                 [v],
             ),
-            P = i.useRef(I);
+            I = i.useRef(P);
         i.useEffect(() => {
-            (I.multiplier > 1 || I.value > 0) && (P.current = I);
-        }, [I]);
+            (P.multiplier > 1 || P.value > 0) && (I.current = P);
+        }, [P]);
         let { multiplier: Z, value: T } = i.useMemo(
             () => ({
-                value: E ? I.value : P.current.value,
-                multiplier: E ? I.multiplier : P.current.multiplier,
+                value: E ? P.value : I.current.value,
+                multiplier: E ? P.multiplier : I.current.multiplier,
             }),
-            [E, I, P],
+            [E, P, I],
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [

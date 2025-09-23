@@ -8,9 +8,9 @@ var o = n(481060),
     s = n(626135),
     c = n(981631),
     d = n(474936),
-    u = n(693450),
+    u = n(62222),
     p = n(388032),
-    f = n(679101);
+    f = n(365875);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,7 +85,7 @@ function g(e) {
                 }),
             ],
         }),
-        S = (0, r.jsxs)("div", {
+        _ = (0, r.jsxs)("div", {
             className: f.upsell,
             children: [
                 (0, r.jsxs)("div", {
@@ -135,6 +135,6 @@ function g(e) {
     return (0, r.jsx)(o.mzw, {
         "data-migration-pending": !0,
         className: f.footer,
-        children: b ? j : S,
+        children: b ? j : _,
     });
 }

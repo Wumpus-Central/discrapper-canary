@@ -6,20 +6,20 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    s = n(264451),
+    s = n(481060),
+    a = n(264451),
     o = n(75775),
     c = n(388032),
-    d = n(8275);
+    d = n(985043);
 let u = (e) => {
         let { value: t, isPercent: n } = e;
         if (null == t) return null;
-        let { formattedValue: i, isPositive: u } = (0, s.m5)(t, n);
+        let { formattedValue: i, isPositive: u } = (0, a.m5)(t, n);
         return (0, r.jsxs)("div", {
             className: d.trendContainer,
             children: [
                 (0, r.jsx)(o.Z, { className: l()(d.chartLineIcon, { [d.chartLineIconNegative]: !u }) }),
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: "text-md/normal",
                     className: d.trendDescription,
                     children: c.intl.format(c.t.OTHOvb, { value: i }),
@@ -28,7 +28,7 @@ let u = (e) => {
         });
     },
     m = (e) => {
-        let { label: t, sublabel: n, value: i, additionalContent: l, tooltip: s } = e;
+        let { label: t, sublabel: n, value: i, additionalContent: l, tooltip: a } = e;
         return (0, r.jsxs)("div", {
             className: d.container,
             children: [
@@ -37,17 +37,17 @@ let u = (e) => {
                         (0, r.jsxs)("div", {
                             className: d.labelContainer,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     className: d.label,
                                     children: t,
                                 }),
-                                null != s &&
-                                    (0, r.jsx)(a.ua7, {
-                                        text: s,
+                                null != a &&
+                                    (0, r.jsx)(s.ua7, {
+                                        text: a,
                                         children: (e) =>
                                             (0, r.jsx)(
-                                                a.d3s,
+                                                s.d3s,
                                                 (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -84,7 +84,7 @@ let u = (e) => {
                                             ),
                                     }),
                                 null != n
-                                    ? (0, r.jsx)(a.Text, {
+                                    ? (0, r.jsx)(s.Text, {
                                           variant: "text-xs/normal",
                                           className: d.sublabel,
                                           children: n,
@@ -92,7 +92,7 @@ let u = (e) => {
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             className: d.value,
                             variant: "text-sm/normal",
                             children: i,

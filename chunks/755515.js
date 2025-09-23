@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(951288),
     i = n(647438),
     l = n(450369),
-    a = n(62219);
-let o = i.memo(function (e) {
-    let { channel: t, participants: n, tileWidth: i, selectedParticipant: o } = e;
+    a = n(123382);
+let s = i.memo(function (e) {
+    let { channel: t, participants: n, tileWidth: i, selectedParticipant: s } = e;
     return (0, r.jsx)("div", {
         className: a.rowContainer,
         children: n.map((e) =>
-            e.id === (null == o ? void 0 : o.id)
+            e.id === (null == s ? void 0 : s.id)
                 ? null
                 : (0, r.jsx)(
                       l.Z,

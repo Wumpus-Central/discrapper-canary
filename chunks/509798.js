@@ -1,16 +1,16 @@
-n.d(t, { g: () => s });
+n.d(t, { g: () => a });
 var r = n(951288);
 n(647438);
 var i = n(481060),
     l = n(388032),
-    a = n(595453);
-function s(e) {
+    s = n(87608);
+function a(e) {
     let { forceFetchGuildProfile: t } = e;
     return (0, r.jsxs)("main", {
-        className: a.container,
+        className: s.container,
         children: [
             (0, r.jsxs)("div", {
-                className: a.errorHeader,
+                className: s.errorHeader,
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: "heading-xl/semibold",

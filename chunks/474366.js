@@ -17,10 +17,10 @@ var r = n(951288),
     b = n(981631),
     j = n(675654),
     v = n(710111),
-    _ = n(764295),
+    _ = n(304726),
     C = n(388032),
-    y = n(65766);
-function w(e) {
+    y = n(911873);
+function T(e) {
     let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         m = C.intl.formatToPlainString(C.t.tuMUJy, {
@@ -50,7 +50,7 @@ function w(e) {
         ],
     });
 }
-function T(e) {
+function w(e) {
     let { containerRef: t, text: n } = e,
         a = i.useRef(null),
         l = (0, s.e7)([g.Z], () => {
@@ -97,7 +97,7 @@ function T(e) {
     }, [x, o, c, t]);
     return void 0 === l
         ? null
-        : (0, r.jsx)(w, {
+        : (0, r.jsx)(T, {
               sound: l,
               playSound: b,
               isPlaying: f,
@@ -138,7 +138,7 @@ function O() {
                         color: "text-secondary",
                         children: C.intl.format(_.default["8N4c5+"], {
                             airhornHook: (t) =>
-                                (0, r.jsx)(T, {
+                                (0, r.jsx)(w, {
                                     containerRef: e,
                                     text: t,
                                 }),

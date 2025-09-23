@@ -11,8 +11,8 @@ var r = n(951288),
     p = n(834129),
     h = n(981631),
     f = n(388032),
-    m = n(378661),
-    g = n(360514);
+    m = n(77162),
+    g = n(5898);
 function b(e) {
     let { expanded: t, onClick: n, count: i, compact: l, collapsedReason: a } = e,
         u = (0, o.EQ)({ collapsedReason: a })
@@ -66,8 +66,8 @@ let y = i.memo(function (e) {
     let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: c } = e,
         { hasJumpTarget: p = !1 } = n,
         [f, y] = i.useState(p),
-        _ = i.useCallback(() => y((e) => !e), []),
-        C = n.hasUnread ? n.content.length - 1 : n.content.length;
+        C = i.useCallback(() => y((e) => !e), []),
+        _ = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, r.jsxs)("div", {
         className: a()({
             [g.groupStart]: !0,
@@ -87,10 +87,10 @@ let y = i.memo(function (e) {
             (0, r.jsx)(
                 b,
                 {
-                    count: C,
+                    count: _,
                     compact: o,
                     expanded: f,
-                    onClick: _,
+                    onClick: C,
                     collapsedReason: c,
                 },
                 "collapsed-message-item",

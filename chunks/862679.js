@@ -7,7 +7,7 @@ var r = n(951288),
     s = n(481060),
     c = n(346486),
     u = n(433355),
-    d = n(944701);
+    d = n(98484);
 let p = function (e) {
     let {
             message: t,
@@ -19,8 +19,8 @@ let p = function (e) {
             onButtonClick: g,
             imageSrc: b,
             animationSrc: y,
-            secondaryButtonText: _,
-            onSecondaryButtonClick: C,
+            secondaryButtonText: C,
+            onSecondaryButtonClick: _,
             children: v,
             useReducedMotion: x = !1,
         } = e,
@@ -69,15 +69,15 @@ let p = function (e) {
                 (0, r.jsxs)("div", {
                     className: d.buttonContainer,
                     children: [
-                        null != _ &&
+                        null != C &&
                             (0, r.jsx)(o.zx, {
                                 className: d.button,
                                 size: o.zx.Sizes.SMALL,
-                                onClick: C,
+                                onClick: _,
                                 look: o.zx.Looks.LINK,
                                 color: o.zx.Colors.PRIMARY,
                                 submitting: m,
-                                children: _,
+                                children: C,
                             }),
                         null != h &&
                             (0, r.jsx)(o.zx, {

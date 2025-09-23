@@ -10,10 +10,10 @@ var r = n(951288),
     d = n(626135),
     p = n(981631),
     h = n(388032),
-    f = n(150599),
-    m = n(430864);
+    f = n(43948),
+    m = n(602009);
 function g(e) {
-    let { onClose: t, onConfirm: g, onCancel: b, channel: y, analyticsType: _, popoutText: C, animation: v } = e;
+    let { onClose: t, onConfirm: g, onCancel: b, channel: y, analyticsType: C, popoutText: _, animation: v } = e;
     i.useEffect(() => {
         d.default.track(
             p.rMx.OPEN_POPOUT,
@@ -41,9 +41,9 @@ function g(e) {
                         });
                 }
                 return e;
-            })({ type: _ }, (0, c.v_)(y)),
+            })({ type: C }, (0, c.v_)(y)),
         );
-    }, [_, y]);
+    }, [C, y]);
     let x = i.useCallback(() => {
             null == g || g(), t();
         }, [g, t]),
@@ -103,7 +103,7 @@ function g(e) {
                                         id: "content-warning-popout-label",
                                         className: m.markup,
                                         variant: "text-sm/normal",
-                                        children: C.body,
+                                        children: _.body,
                                     }),
                                     (0, r.jsxs)("div", {
                                         className: f.buttonWrapper,
@@ -147,7 +147,7 @@ function g(e) {
                             }),
                         ],
                     }),
-                    null != C.footer && "" !== C.footer
+                    null != _.footer && "" !== _.footer
                         ? (0, r.jsxs)("div", {
                               className: f.footer,
                               children: [
@@ -158,7 +158,7 @@ function g(e) {
                                   }),
                                   (0, r.jsx)(s.Text, {
                                       variant: "text-sm/normal",
-                                      children: C.footer,
+                                      children: _.footer,
                                   }),
                               ],
                           })

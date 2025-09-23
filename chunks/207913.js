@@ -17,26 +17,26 @@ var r = n(951288),
     O = n(739566),
     y = n(930282),
     _ = n(318713),
-    j = n(47930),
-    v = n(123145),
+    v = n(47930),
+    j = n(123145),
     x = n(25015),
     C = n(178480),
     E = n(518950),
     S = n(131704),
-    P = n(601964),
-    I = n(592125),
+    I = n(601964),
+    P = n(592125),
     N = n(720202),
-    Z = n(430824),
-    w = n(821020),
+    w = n(430824),
+    Z = n(821020),
     T = n(948154),
     A = n(804932),
     R = n(993609),
     D = n(987889),
     L = n(586694),
     M = n(981631),
-    k = n(677642),
+    k = n(997998),
     U = n(388032),
-    G = n(361584);
+    G = n(66449);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,7 +62,7 @@ function B(e) {
     }
     return e;
 }
-function V(e, t) {
+function F(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,11 +80,11 @@ function V(e, t) {
         e
     );
 }
-function F(e) {
+function V(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
         p = n.type === M.d4z.UNKNOWN ? u.VL1 : (0, h.KS)(n, null),
         m = (0, f.ZP)(n, !1),
-        b = (0, c.e7)([Z.Z], () => Z.Z.getGuild(n.getGuildId())),
+        b = (0, c.e7)([w.Z], () => w.Z.getGuild(n.getGuildId())),
         { nick: y, colorString: _ } = (0, O.ZP)(t),
         { avatarSrc: x, eventHandlers: C } = (0, E.Z)({
             userId: t.author.id,
@@ -93,17 +93,17 @@ function F(e) {
             animateOnHover: !0,
         }),
         S = n.type !== M.d4z.GUILD_ANNOUNCEMENT || null == b,
-        I = (0, j.x)({
+        P = (0, v.x)({
             channel: n,
             message: t,
             user: t.author,
             compact: !0,
             isRepliedMessage: !0,
         }),
-        w = (0, r.jsx)("div", {
+        Z = (0, r.jsx)("div", {
             className: G.usernameTagContainer,
             inert: !0,
-            children: (0, r.jsx)(v.Z, {
+            children: (0, r.jsx)(j.Z, {
                 channel: n,
                 message: t,
                 hideGuildTag: !0,
@@ -117,7 +117,7 @@ function F(e) {
         }, [b, t.author.id]),
         (0, r.jsx)(
             u.tEY,
-            V(B({}, l), {
+            F(B({}, l), {
                 children: (0, r.jsxs)("div", {
                     onMouseLeave: C.onMouseLeave,
                     onMouseEnter: C.onMouseEnter,
@@ -135,13 +135,13 @@ function F(e) {
                                       "aria-label": "User Avatar",
                                       src: x,
                                       size: u.EFr.SIZE_32,
-                                      cornerIconUrl: null != b ? (0, P.EB)(b, 24) : void 0,
+                                      cornerIconUrl: null != b ? (0, I.EB)(b, 24) : void 0,
                                       cornerIconOffsetX: 4,
                                       cornerIconOffsetY: 3,
                                   })
                                 : (0, r.jsx)(L.E, {
                                       "aria-label": "Guild Icon",
-                                      src: (0, P.EB)(b, 32),
+                                      src: (0, I.EB)(b, 32),
                                       size: u.EFr.SIZE_32,
                                       cornerIconUrl: t.author.getAvatarURL(b.id, 24),
                                       cornerIconOffsetX: 4,
@@ -168,9 +168,9 @@ function F(e) {
                                                       (0, r.jsx)("div", {
                                                           className: G.username,
                                                           style: { color: null != _ ? _ : void 0 },
-                                                          children: (0, r.jsx)(g.Z, { children: w }),
+                                                          children: (0, r.jsx)(g.Z, { children: Z }),
                                                       }),
-                                                      I,
+                                                      P,
                                                   ],
                                               })
                                             : (0, r.jsx)(g.Z, {
@@ -326,14 +326,14 @@ function W(e) {
                             ? (O = u.SlE)
                             : h && (O = u.gj8);
                 let _ = !0,
-                    j = null;
+                    v = null;
                 if (e)
-                    if (c) j = U.intl.string(U.t["9ddYKi"]);
+                    if (c) v = U.intl.string(U.t["9ddYKi"]);
                     else if (p) {
-                        var v;
-                        (_ = !1), (j = null == (v = t.poll) ? void 0 : v.question.text);
+                        var j;
+                        (_ = !1), (v = null == (j = t.poll) ? void 0 : j.question.text);
                     } else
-                        j = f
+                        v = f
                             ? U.intl.string(U.t.sad2PD)
                             : i
                               ? U.intl.string(U.t.p0oZm5)
@@ -350,7 +350,7 @@ function W(e) {
                                         : U.intl.string(U.t.sDqZHB);
                 else
                     (_ = !1),
-                        (j = (0, r.jsx)(y.ZP, {
+                        (v = (0, r.jsx)(y.ZP, {
                             content: a,
                             message: t,
                             compact: !1,
@@ -361,16 +361,16 @@ function W(e) {
                         }));
                 return (
                     e &&
-                        (j = (0, r.jsx)("div", {
+                        (v = (0, r.jsx)("div", {
                             className: o()(G.message, {
                                 [G.unread]: n,
                                 [G.selected]: l,
                                 [G.descriptionMessage]: _,
                             }),
-                            children: j,
+                            children: v,
                         })),
                     {
-                        previewContent: j,
+                        previewContent: v,
                         Icon: O,
                     }
                 );
@@ -408,9 +408,9 @@ let K = (0, i.memo)(
             f = l.message,
             h = (0, A.fJ)(),
             { params: g } = (0, s.$B)(),
-            m = (0, c.e7)([I.Z], () => {
+            m = (0, c.e7)([P.Z], () => {
                 if (null == f) return null;
-                let e = I.Z.getChannel(l.channelId);
+                let e = P.Z.getChannel(l.channelId);
                 return null != e
                     ? e
                     : new S.nl({
@@ -424,7 +424,7 @@ let K = (0, i.memo)(
                 var t;
                 return e.isMenuOpenForMessage(null != (t = null == f ? void 0 : f.id) ? t : null);
             }),
-            { notificationCenterVariant: O } = (0, w.pN)({ location: "NotificationsInboxMessageUnit" }),
+            { notificationCenterVariant: O } = (0, Z.pN)({ location: "NotificationsInboxMessageUnit" }),
             y = i.useMemo(
                 () => "".concat(null == f ? void 0 : f.author.username, ": ").concat(null == m ? void 0 : m.name),
                 [null == f ? void 0 : f.author.username, null == m ? void 0 : m.name],
@@ -443,7 +443,7 @@ let K = (0, i.memo)(
                           message: f,
                           channel: m,
                           isUnread: p,
-                          isSidebar: O === w.jP.SIDEBAR,
+                          isSidebar: O === Z.jP.SIDEBAR,
                           viewId: h,
                       });
                   },
@@ -458,12 +458,12 @@ let K = (0, i.memo)(
                               e,
                               async () => {
                                   let { default: e } = await n.e("74922").then(n.bind(n, 550265));
-                                  return (t) => (0, r.jsx)(e, V(B({}, t), { channel: m }));
+                                  return (t) => (0, r.jsx)(e, F(B({}, t), { channel: m }));
                               },
                               { disableClickTrap: !0 },
                           );
                   },
-                  children: (0, r.jsx)(F, {
+                  children: (0, r.jsx)(V, {
                       message: f,
                       channel: m,
                       isSelected: f.id === g.messageId,

@@ -2,13 +2,13 @@ n.d(t, { Z: () => p });
 var r = n(951288),
     i = n(647438),
     l = n(442837),
-    a = n(481060),
-    s = n(813197),
+    s = n(481060),
+    a = n(813197),
     o = n(999382),
     c = n(486324),
     d = n(388032),
-    u = n(713611),
-    m = n(270856);
+    u = n(655544),
+    m = n(998918);
 function g(e) {
     let { profile: t, handleIconChange: l, canManageGuild: o } = e,
         m = i.useCallback(() => {
@@ -16,8 +16,8 @@ function g(e) {
         }, [l]),
         g = i.useCallback(
             (e, t) => {
-                (0, a.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                (0, s.ZDy)(async () => {
+                    let { default: i } = await Promise.all([n.e("91689"), n.e("59732"), n.e("63188")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -67,19 +67,19 @@ function g(e) {
     return (0, r.jsxs)("div", {
         className: u.buttons,
         children: [
-            (0, r.jsx)(a.tEY, {
+            (0, r.jsx)(s.tEY, {
                 within: !0,
                 children: (0, r.jsxs)("div", {
                     className: u.iconInput,
                     children: [
-                        (0, r.jsx)(a.zxk, {
+                        (0, r.jsx)(s.zxk, {
                             tabIndex: -1,
                             size: "sm",
                             variant: "primary",
                             disabled: !o,
                             text: d.intl.string(d.t.r3Jdsb),
                         }),
-                        (0, r.jsx)(s.ZP, {
+                        (0, r.jsx)(a.ZP, {
                             tabIndex: 0,
                             onChange: g,
                             disabled: !o,
@@ -88,7 +88,7 @@ function g(e) {
                 }),
             }),
             null != t.icon
-                ? (0, r.jsx)(a.zxk, {
+                ? (0, r.jsx)(s.zxk, {
                       variant: "critical-secondary",
                       size: "sm",
                       text: d.intl.string(d.t.x8AlTk),
@@ -101,18 +101,18 @@ function g(e) {
 }
 function p(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
-        s = (0, l.e7)([o.Z], () => o.Z.getError("icon"));
+        a = (0, l.e7)([o.Z], () => o.Z.getError("icon"));
     return (0, r.jsxs)("section", {
         className: u.container,
         children: [
-            (0, r.jsxs)(a.hjN, {
+            (0, r.jsxs)(s.hjN, {
                 className: m.section,
                 children: [
                     (0, r.jsxs)("div", {
                         className: m.sectionHeader,
                         children: [
-                            (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.FkQnxM) }),
-                            (0, r.jsx)(a.R94, {
+                            (0, r.jsx)(s.vwX, { children: d.intl.string(d.t.FkQnxM) }),
+                            (0, r.jsx)(s.R94, {
                                 type: "description",
                                 children: d.intl.string(d.t.KjkA0d),
                             }),
@@ -125,10 +125,10 @@ function p(e) {
                     }),
                 ],
             }),
-            null != s
+            null != a
                 ? (0, r.jsx)("div", {
                       className: u.iconError,
-                      children: s,
+                      children: a,
                   })
                 : null,
         ],

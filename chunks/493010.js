@@ -15,8 +15,8 @@ var r = n(951288),
     g = n(909820),
     b = n(981631),
     y = n(921944),
-    _ = n(388032),
-    C = n(952899);
+    C = n(388032),
+    _ = n(229);
 let v = function (e) {
     let { channel: t, guild: n, maxWidth: v } = e;
     i.useEffect(() => {
@@ -27,7 +27,7 @@ let v = function (e) {
         }, [t.id]),
         O = (0, r.jsx)(h.ZP.Icon, {
             icon: a.Dio,
-            tooltip: _.intl.string(_.t.cpT0Cg),
+            tooltip: C.intl.string(C.t.cpT0Cg),
             onClick: x,
         });
     return (0, r.jsxs)(u.Z, {
@@ -41,17 +41,17 @@ let v = function (e) {
             }),
             (0, r.jsxs)(h.ZP, {
                 toolbar: O,
-                "aria-label": _.intl.string(_.t.BIYAqa),
+                "aria-label": C.intl.string(C.t.BIYAqa),
                 children: [
                     (0, r.jsx)(h.ZP.ChannelIcon, {
                         icon: a.kBi,
-                        "aria-label": _.intl.string(_.t.Kx5kCA),
+                        "aria-label": C.intl.string(C.t.Kx5kCA),
                     }),
                     (0, r.jsx)(h.ZP.Title, { children: t.name }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: C.chat,
+                className: _.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {

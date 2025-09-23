@@ -1,37 +1,37 @@
-n.d(t, { Z: () => u }), n(953529);
-var r = n(951288),
-    i = n(647438),
-    l = n(481060),
-    a = n(118589),
-    o = n(241945),
-    c = n(388032),
-    s = n(58571);
-let u = (e) => {
+n.d(t, { Z: () => d }), n(953529);
+var a = n(951288),
+    r = n(647438),
+    i = n(481060),
+    l = n(118589),
+    s = n(753160),
+    o = n(388032),
+    c = n(677881);
+let d = (e) => {
     let { onSubmit: t, disabled: n } = e,
-        u = i.useCallback(async () => {
-            await t({ type: a.rY.Empty }), window.location.reload();
+        d = r.useCallback(async () => {
+            await t({ type: l.rY.Empty }), window.location.reload();
         }, [t]);
-    return (0, r.jsxs)("div", {
-        className: s.container,
+    return (0, a.jsxs)("div", {
+        className: c.container,
         children: [
-            (0, r.jsx)(l.X6q, {
+            (0, a.jsx)(i.X6q, {
                 variant: "heading-lg/bold",
-                className: s.title,
-                children: c.intl.string(o.default.v52itr),
+                className: c.title,
+                children: o.intl.string(s.default.v52itr),
             }),
-            (0, r.jsx)(l.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                className: s.description,
-                children: c.intl.string(o.default["5am8Dw"]),
+                className: c.description,
+                children: o.intl.string(s.default["5am8Dw"]),
             }),
-            (0, r.jsx)(l.Kqy, {
+            (0, a.jsx)(i.Kqy, {
                 direction: "horizontal",
                 justify: "end",
-                children: (0, r.jsx)(l.zxk, {
+                children: (0, a.jsx)(i.zxk, {
                     variant: "primary",
-                    text: c.intl.string(o.default.GDsHl5),
-                    onClick: u,
+                    text: o.intl.string(s.default.GDsHl5),
+                    onClick: d,
                     disabled: n,
                 }),
             }),

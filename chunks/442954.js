@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(642613), n(388685);
+n.d(t, { Z: () => v }), n(642613), n(388685);
 var a = n(951288),
     r = n(647438),
     i = n(990547),
@@ -11,8 +11,8 @@ var a = n(951288),
     m = n(981631),
     h = n(723359),
     p = n(388032),
-    x = n(711322),
-    f = n(451429);
+    x = n(596533),
+    f = n(866403);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,7 +56,7 @@ function g(e, t) {
         e
     );
 }
-let v = {
+let j = {
     CollectiblesExpiryModal: async () => {
         let { default: e } = await n.e("77370").then(n.bind(n, 83950));
         return (t) => (0, a.jsx)(e, b({}, t));
@@ -93,7 +93,7 @@ let v = {
         return (t) => (0, a.jsx)(e, g(b({}, t), { entryPoint: o.cU.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
     },
     ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([n.e("1716"), n.e("8430")]).then(n.bind(n, 701509));
+        let { default: e } = await Promise.all([n.e("1716"), n.e("48590")]).then(n.bind(n, 746882));
         return (t) => (0, a.jsx)(e, g(b({}, t), { source: h.L0.NSFW_SERVER }));
     },
     ExistingUserAgeGateUnderage: async () => {
@@ -150,10 +150,10 @@ let v = {
             );
     },
 };
-function j() {
+function v() {
     let e = r.useMemo(
             () =>
-                Object.keys(v)
+                Object.keys(j)
                     .map((e) => ({
                         label: e,
                         value: e,
@@ -188,7 +188,7 @@ function j() {
                                 (0, a.jsx)(s.zxk, {
                                     variant: "primary",
                                     text: "Open",
-                                    onClick: () => (0, s.ZDy)(v[t]),
+                                    onClick: () => (0, s.ZDy)(j[t]),
                                 }),
                             ],
                         }),

@@ -16,10 +16,10 @@ var r = n(951288),
     g = n(51499),
     x = n(678334),
     v = n(456251),
-    j = n(27034),
+    j = n(614277),
     y = n(698708),
     O = n(388032),
-    C = n(633290);
+    C = n(384048);
 function S(e) {
     var t, n;
     let {
@@ -28,10 +28,10 @@ function S(e) {
             handleStepChange: P,
             trialFooterMessageOverride: N,
             reviewWarningMessage: T,
-            planGroup: E,
-            openInvoiceId: _,
-            analyticsData: w,
-            analyticsLocation: k,
+            planGroup: k,
+            openInvoiceId: E,
+            analyticsData: _,
+            analyticsLocation: w,
             handleClose: Z,
         } = e,
         {
@@ -126,7 +126,7 @@ function S(e) {
                     null == D
                         ? (0, r.jsx)(u.Z, {
                               selectedPlanId: W.id,
-                              planGroup: E,
+                              planGroup: k,
                               paymentSources: B,
                               onPaymentSourceChange: (e) => V(null != e ? e.id : null),
                               priceOptions: R,
@@ -156,10 +156,10 @@ function S(e) {
                               onInvoiceError: (e) => {
                                   er(e);
                               },
-                              planGroup: E,
+                              planGroup: k,
                               currencies: L,
                               onCurrencyChange: (e) => z(e),
-                              hasOpenInvoice: null != _,
+                              hasOpenInvoice: null != E,
                               purchaseState: Y,
                               handleClose: Z,
                           }),
@@ -174,12 +174,12 @@ function S(e) {
                     onPurchaseError: (e) => Q(e),
                     legalTermsNodeRef: ea,
                     flashLegalTerms: () => $(!0),
-                    analyticsLocation: k,
-                    baseAnalyticsData: w,
+                    analyticsLocation: w,
+                    baseAnalyticsData: _,
                     flowStartTime: F.startTime,
-                    planGroup: E,
+                    planGroup: k,
                     purchaseTokenAuthState: M,
-                    openInvoiceId: _,
+                    openInvoiceId: E,
                     metadata: ei ? void 0 : J,
                     backButtonEligible: l,
                     invoiceError: en,

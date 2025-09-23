@@ -15,7 +15,7 @@ var r = n(951288),
     _ = n(126982),
     p = n(791785),
     h = n(51499),
-    m = n(27034),
+    m = n(614277),
     g = n(626135),
     E = n(152521),
     b = n(932563),
@@ -277,7 +277,7 @@ let w = {
             ],
         });
     },
-    k = [
+    M = [
         {
             key: null,
             renderStep: (e) => (0, r.jsx)(L, A({}, e)),
@@ -288,7 +288,7 @@ let w = {
             options: { useBreadcrumbLabel: () => T.intl.string(T.t.QBnNHh) },
         },
     ],
-    M = (e, t, n) =>
+    k = (e, t, n) =>
         (0, r.jsx)(_.Z, {
             isOrbCheckout: !0,
             step: n,
@@ -321,7 +321,7 @@ let w = {
             onClose: c,
             hideShadow: !0,
             skuId: t,
-            renderHeader: M,
+            renderHeader: k,
             initialPlanId: null,
             analyticsLocations: n,
         });
@@ -333,7 +333,7 @@ let w = {
             applicationId: (0, E.N)(t),
             activeSubscription: null,
             loadId: n,
-            stepConfigs: k,
+            stepConfigs: M,
             purchaseType: v.GZQ.ONE_TIME,
             skuIDs: [t],
             excludeSubscriptionPlansBySKU: !0,
