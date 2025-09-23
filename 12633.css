@@ -23061,7 +23061,22 @@ svg.radioIcon_c1e9c4 {
 }
 
 .gameClickable_e0f8ae {
-    cursor: pointer
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .2s ease
+}
+
+.gameGrid_e0f8ae:hover .gameClickable_e0f8ae {
+    opacity: .5
+}
+
+.gameGrid_e0f8ae:hover .gameClickable_e0f8ae:hover {
+    border-radius: 8px;
+    opacity: 1
+}
+
+.gameGrid_e0f8ae:hover .gameClickable_e0f8ae:hover .coverArt_e0f8ae {
+    box-shadow: 0 0 25px 0 rgba(145, 101, 255, .25)
 }
 
 .coverArt_e0f8ae {
@@ -23070,6 +23085,7 @@ svg.radioIcon_c1e9c4 {
     display: block;
     height: 94px;
     object-fit: cover;
+    transition: box-shadow .2s ease;
     width: 73px
 }
 

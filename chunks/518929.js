@@ -1,57 +1,36 @@
-n.d(t, { Ji: () => s });
+n.d(t, { VZ: () => c });
 var r = n(818083),
-    i = n(427164);
-n(638395), n(171393);
-var a = n(987338);
-let o = (0, r.B)({
-    kind: "user",
-    id: "2024-07_icymi",
-    label: "In-case-you-missed-it tab",
-    commonTriggerPoint: a.$P.CONNECTION_OPEN_MOBILE,
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "enables the new icymi tab",
-            config: { enabled: !0 },
-        },
-        {
-            id: 2,
-            label: "new icymi tab with some new features",
-            config: { enabled: !0 },
-        },
-        {
-            id: 3,
-            label: "new icymi tab with more new features",
-            config: {
-                enabled: !0,
-                forumThreads: !0,
+    i = n(427164),
+    a = n(638395);
+n(171393);
+var o = n(987338);
+let s = "hide_icymi_tab",
+    l = (0, r.B)({
+        kind: "user",
+        id: "2024-07_icymi",
+        label: "In-case-you-missed-it tab",
+        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: "enables the new icymi tab",
+                config: { enabled: !0 },
             },
-        },
-    ],
-});
-(0, r.B)({
-    kind: "user",
-    id: "2025-07_icymi_split_notification_tab",
-    label: "Split notifications tab",
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: "Split notifications tab",
-            config: { enabled: !0 },
-        },
-    ],
-});
-function s(e) {
+        ],
+    });
+function c(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return o.getCurrentConfig(
-        { location: e },
-        {
-            disable: !0,
-            autoTrackExposure: t,
-        },
-    ).enabled;
+    return (
+        a.Z.get(s),
+        l.getCurrentConfig(
+            { location: e },
+            {
+                autoTrackExposure: t,
+                disable: !0,
+            },
+        ).enabled
+    );
 }
 (0, r.B)({
     kind: "user",
