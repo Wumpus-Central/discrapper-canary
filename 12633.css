@@ -45031,12 +45031,14 @@ img.thumbnail__0f2e8 {
     background-color: var(--user-profile-overlay-background);
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     color: var(--text-tertiary);
+    cursor: pointer;
     flex-grow: 1;
     margin: 0 8px;
     opacity: 1;
     overflow: hidden;
     padding: 4px 8px;
     position: relative;
+    text-align: center;
     transform: translateY(-50%);
     transition: opacity .1s ease-in-out, background-color var(--custom-button-transition-duration) ease-in-out
 }
