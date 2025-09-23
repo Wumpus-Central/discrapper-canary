@@ -28,7 +28,7 @@ function a(e, t, n) {
         e
     );
 }
-let o = n(4667);
+let o = n(6075);
 class s {
     static create(e) {
         let t = null;
@@ -40,7 +40,7 @@ class s {
     }
     hasTransparency() {
         if (4 !== this.img.ctype && 6 !== this.img.ctype) return !1;
-        let e = new Uint8Array(i().toRGBA8(this.img));
+        let e = new Uint8Array(i().toRGBA8(this.img)[0]);
         for (let t = 3; t < e.length; t += 4) if (e[t] < 255) return !0;
         return !1;
     }
