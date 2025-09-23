@@ -87,6 +87,7 @@ var d = (function (e) {
             (e.EXYNOS = "exynos"),
             (e.QUALCOMM = "qualcomm"),
             (e.MEDIATEK = "mediatek"),
+            (e.WMF_SW = "wmf_sw"),
             (e.UNCATEGORIZED = "uncategorized"),
             (e.UNKNOWN = "unknown"),
             e
@@ -124,6 +125,7 @@ let p = Object.freeze({
         "omx.qcom": "qualcomm",
         "c2.mtk": "mediatek",
         "omx.mtk": "mediatek",
+        "mediafoundation sw": "wmf_sw",
     }),
     h = Object.freeze({
         videotoolbox: "videotoolbox",
