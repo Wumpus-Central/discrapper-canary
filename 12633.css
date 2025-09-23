@@ -77829,7 +77829,7 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 
 .nitroGradientBorderHover__1f069:before {
     background: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%), var(--premium-tier-2-purple-for-gradients);
-    border-radius: inherit;
+    border-radius: calc(var(--custom-card-border-radius) + 2px);
     content: "";
     inset: -2px;
     opacity: 0;
@@ -78071,11 +78071,12 @@ div:hover>div>.container__1f2ac .badgeImage__1f2ac:not(.upcomingBadge__1f2ac) {
 }
 
 .card_b5493b {
+    --custom-card-border-radius: 20px;
     align-items: flex-start;
     background-color: var(--background-secondary-alt);
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 20px;
+    border-radius: var(--custom-card-border-radius);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
