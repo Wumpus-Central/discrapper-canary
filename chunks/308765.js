@@ -55,7 +55,7 @@ let i = {
         loadAfterConnectionOpen: !0,
     },
     ConferenceModeManager: {
-        actions: ["VOICE_CHANNEL_SELECT"],
+        actions: ["VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(571984).Z,
     },
     ContentProtectionManager: {
