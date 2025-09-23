@@ -1,4 +1,4 @@
-n.d(t, { s: () => O }), n(388685);
+n.d(t, { s: () => v }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -7,12 +7,13 @@ var r = n(951288),
     l = n(481060),
     c = n(727637),
     u = n(243778),
-    d = n(607550),
-    f = n(921944),
-    _ = n(388032),
-    p = n(820657),
-    h = n(74866);
-function m(e, t, n) {
+    d = n(277511),
+    f = n(602733),
+    _ = n(921944),
+    p = n(388032),
+    h = n(820657),
+    m = n(74866);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,25 +54,25 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = (e) => {
+let O = (e) => {
         let { message: t } = e;
         return (0, r.jsxs)("div", {
-            className: h.toast,
+            className: m.toast,
             children: [
                 (0, r.jsx)(l.kSu, {
                     size: "refresh_sm",
-                    className: p.toastIcon,
+                    className: h.toastIcon,
                     color: l.TVs.colors.STATUS_POSITIVE,
                 }),
                 (0, r.jsx)(l.Text, {
@@ -82,63 +83,63 @@ let y = (e) => {
             ],
         });
     },
-    O = (e) => {
-        let { skuId: t, iconSize: n = 20, className: a, enableHoverEffect: h = !1 } = e,
-            [m, E] = (0, u.US)([s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-            O = m === s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-            v = (0, d.ny)(t),
-            I = i.useRef(null),
-            T = (0, c.Z)(I),
-            S = v ? l.h_8 : l.Pzh,
-            A = v || T ? p.wishlistedOrHoveredIconColor : p.normalIconColor,
-            C = i.useCallback(
+    v = (e) => {
+        let { skuId: t, iconSize: n = 20, className: a, enableHoverEffect: m = !1 } = e,
+            [g, b] = (0, u.US)([s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+            v = g === s.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+            I = (0, f.n)("123", t),
+            T = i.useRef(null),
+            S = (0, c.Z)(T),
+            A = I ? l.h_8 : l.Pzh,
+            C = I || S ? h.wishlistedOrHoveredIconColor : h.normalIconColor,
+            N = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        v
-                            ? ((0, d.yj)(t),
+                        I
+                            ? (d.Z.removeSkuFromWishlist("123", t),
                               (0, l.showToast)(
                                   (0, l.createToast)("", l.ToastType.CUSTOM, {
-                                      component: (0, r.jsx)(y, { message: _.intl.string(_.t.DSXOiI) }),
+                                      component: (0, r.jsx)(O, { message: p.intl.string(p.t.DSXOiI) }),
                                   }),
                               ))
-                            : ((0, d.iI)(t),
+                            : (d.Z.addSkuToWishlist("123", t),
                               (0, l.showToast)(
                                   (0, l.createToast)("", l.ToastType.CUSTOM, {
-                                      component: (0, r.jsx)(y, { message: _.intl.string(_.t["3T2jbW"]) }),
+                                      component: (0, r.jsx)(O, { message: p.intl.string(p.t["3T2jbW"]) }),
                                   }),
                               ),
-                              O && E(f.L.USER_DISMISS));
+                              v && b(_.L.USER_DISMISS));
                 },
-                [v, t, O, E],
+                [I, t, v, b],
             ),
-            N = v ? _.intl.string(_.t.yr9TTU) : _.intl.string(_.t["8DkMER"]),
-            R = O
+            R = I ? p.intl.string(p.t.yr9TTU) : p.intl.string(p.t["8DkMER"]),
+            P = v
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.Text, {
                               variant: "text-sm/semibold",
-                              children: _.intl.string(_.t["47Rhc3"]),
+                              children: p.intl.string(p.t["47Rhc3"]),
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: "text-sm/medium",
-                              children: _.intl.string(_.t.PXjA0d),
+                              children: p.intl.string(p.t.PXjA0d),
                           }),
                       ],
                   })
-                : N;
+                : R;
         return (0, r.jsx)(l.ua7, {
-            text: R,
-            "aria-label": N,
+            text: P,
+            "aria-label": R,
             children: (e) =>
                 (0, r.jsx)(
                     l.P3F,
-                    b(g({}, e), {
-                        className: o()(p.wishlistButton, h && p.withHover, a),
-                        innerRef: I,
-                        onClick: C,
-                        "aria-label": N,
-                        children: (0, r.jsx)(S, {
-                            colorClass: A,
+                    y(E({}, e), {
+                        className: o()(h.wishlistButton, m && h.withHover, a),
+                        innerRef: T,
+                        onClick: N,
+                        "aria-label": R,
+                        children: (0, r.jsx)(A, {
+                            colorClass: C,
                             size: "custom",
                             height: n,
                             width: n,
