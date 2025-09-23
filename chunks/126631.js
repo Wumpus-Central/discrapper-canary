@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(481060),
@@ -6,34 +6,36 @@ var r = n(951288),
     s = n(752305),
     l = n(893718),
     c = n(313201),
-    u = n(131704),
-    d = n(993413),
-    f = n(981631),
-    _ = n(388032),
-    p = n(100077);
-let h = (0, c.hQ)(),
-    m = (0, u.kt)({
+    u = n(526665),
+    d = n(518596),
+    f = n(131704),
+    _ = n(993413),
+    p = n(981631),
+    h = n(388032),
+    m = n(100077);
+let g = (0, c.hQ)(),
+    E = (0, f.kt)({
         id: "1",
-        type: f.d4z.DM,
+        type: p.d4z.DM,
     }),
-    g = (0, c.hQ)();
-function E(e) {
+    b = (0, c.hQ)();
+function y(e) {
     let {
             sectionTitle: t,
             errors: n,
             onBioChange: c,
-            pendingBio: u,
-            placeholder: E,
-            currentBio: b,
-            disabled: y = !1,
+            pendingBio: f,
+            placeholder: y,
+            currentBio: O,
+            disabled: v = !1,
         } = e,
-        [O, v] = i.useState(null != u ? u : b),
-        [I, T] = i.useState((0, s.JM)(O)),
-        S = i.useRef(!1);
-    function A(e, t, n) {
-        t !== O && (v(t), T(n), c(t));
+        [I, T] = i.useState(null != f ? f : O),
+        [S, A] = i.useState((0, s.JM)(I)),
+        C = i.useRef(!1);
+    function N(e, t, n) {
+        t !== I && (T(t), A(n), c(t));
     }
-    function C() {
+    function R() {
         return new Promise((e) => {
             e({
                 shouldClear: !1,
@@ -41,46 +43,47 @@ function E(e) {
             });
         });
     }
-    return (
-        i.useEffect(() => {
-            if (void 0 === u) {
-                let e = (0, s.JM)(b);
-                v(b), T(e);
-            }
-        }, [u, b]),
-        (0, r.jsxs)(d.Z, {
-            title: t,
-            titleId: h,
-            description: _.intl.string(_.t.Bbw6AQ),
-            errors: n,
-            disabled: y,
-            children: [
-                (0, r.jsx)(l.ZP, {
-                    "aria-describedby": g,
-                    "aria-labelledby": h,
-                    className: p.bioTextAreaContainer,
-                    innerClassName: p.bioTextArea,
-                    maxCharacterCount: f.tPV,
-                    onChange: A,
-                    placeholder: E,
-                    channel: m,
-                    textValue: O,
-                    richValue: I,
-                    type: o.Ie.PROFILE_BIO_INPUT,
-                    onBlur: () => {
-                        S.current = !1;
-                    },
-                    onFocus: () => {
-                        S.current = !0;
-                    },
-                    focused: S.current,
-                    onSubmit: C,
-                }),
-                (0, r.jsx)(a.nn4, {
-                    id: g,
-                    children: _.intl.format(_.t["+DFxLS"], { maxLength: f.tPV }),
-                }),
-            ],
-        })
-    );
+    i.useEffect(() => {
+        if (void 0 === f) {
+            let e = (0, s.JM)(O);
+            T(O), A(e);
+        }
+    }, [f, O]);
+    let P = (0, u.wy)("AboutMeSection");
+    return (0, r.jsxs)(_.Z, {
+        title: t,
+        titleId: g,
+        description: h.intl.string(h.t.Bbw6AQ),
+        errors: n,
+        disabled: v,
+        children: [
+            (0, r.jsx)(l.ZP, {
+                "aria-describedby": b,
+                "aria-labelledby": g,
+                className: m.bioTextAreaContainer,
+                innerClassName: m.bioTextArea,
+                maxCharacterCount: p.tPV,
+                onChange: N,
+                placeholder: y,
+                channel: E,
+                textValue: I,
+                richValue: S,
+                emojiPickerCloseOnModalOuterClick: P,
+                parentModalKey: P ? d.USER_SETTINGS_MODAL_KEY : void 0,
+                type: o.Ie.PROFILE_BIO_INPUT,
+                onBlur: () => {
+                    C.current = !1;
+                },
+                onFocus: () => {
+                    C.current = !0;
+                },
+                focused: C.current,
+                onSubmit: R,
+            }),
+            (0, r.jsx)(a.nn4, {
+                id: b,
+                children: h.intl.format(h.t["+DFxLS"], { maxLength: p.tPV }),
+            }),
+        ],
+    });
 }
