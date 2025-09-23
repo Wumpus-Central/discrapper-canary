@@ -1,325 +1,317 @@
-n.d(t, {
-    Z: () => ev,
-    g: () => eO,
+t.d(s, {
+    Z: () => eh,
+    g: () => ej,
 }),
-    n(953529),
-    n(388685),
-    n(539854);
-var r = n(951288),
-    i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(512722),
-    l = n.n(s),
-    c = n(392711),
-    u = n.n(c),
-    d = n(442837),
-    f = n(780384),
-    _ = n(755721),
-    p = n(481060),
-    h = n(570140),
-    m = n(179360),
-    g = n(410030),
-    E = n(607070),
-    b = n(543241),
-    y = n(906411),
-    O = n(565138),
-    v = n(822179),
-    I = n(419922),
-    T = n(687158),
-    S = n(484459),
-    A = n(813549),
-    C = n(867176),
-    N = n(502762),
-    R = n(652853),
-    P = n(313789),
-    w = n(518596),
-    D = n(430824),
-    x = n(594174),
-    L = n(314884),
-    j = n(626135),
-    M = n(768581),
-    k = n(63063),
-    U = n(998502),
-    G = n(789155),
-    B = n(798769),
-    Z = n(474936),
-    F = n(981631),
-    V = n(388032),
-    H = n(616885),
-    Y = n(834982),
-    W = n(912450),
-    K = n(703548),
-    z = n(869333),
-    q = n(652528),
-    X = n(874692),
-    Q = n(391458),
-    J = n(70967),
-    $ = n(674264),
-    ee = n(360088),
-    et = n(304880);
-function en(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function er() {
-    return (er =
+    t(953529),
+    t(388685),
+    t(539854);
+var r = t(951288),
+    n = t(647438),
+    i = t(120356),
+    a = t.n(i),
+    o = t(512722),
+    l = t.n(o),
+    c = t(392711),
+    u = t.n(c),
+    m = t(442837),
+    d = t(780384),
+    p = t(755721),
+    x = t(481060),
+    f = t(570140),
+    j = t(179360),
+    h = t(410030),
+    C = t(607070),
+    g = t(543241),
+    I = t(906411),
+    N = t(565138),
+    T = t(822179),
+    b = t(419922),
+    v = t(687158),
+    E = t(484459),
+    _ = t(813549),
+    y = t(867176),
+    L = t(502762),
+    O = t(652853),
+    P = t(313789),
+    M = t(518596),
+    A = t(430824),
+    S = t(594174),
+    U = t(314884),
+    R = t(626135),
+    w = t(768581),
+    Z = t(63063),
+    k = t(998502),
+    F = t(789155),
+    z = t(798769),
+    V = t(474936),
+    D = t(981631),
+    B = t(388032),
+    K = t(616885),
+    G = t(834982),
+    W = t(912450),
+    Y = t(703548),
+    q = t(869333),
+    H = t(652528),
+    Q = t(874692),
+    X = t(391458),
+    $ = t(70967),
+    J = t(674264),
+    ee = t(360088),
+    es = t(304880);
+function et() {
+    return (et =
         Object.assign ||
         function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var s = 1; s < arguments.length; s++) {
+                var t = arguments[s];
+                for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
             }
             return e;
         }).apply(this, arguments);
 }
-function ei(e) {
-    if (null == e) throw TypeError("Cannot destructure " + e);
-    return e;
-}
-function ea(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                en(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function eo(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function es(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : eo(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let el = U.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
-    ec = {
-        boostItemVisual: q,
-        emojiStickersVisual: X,
+let er = k.ZP.getEnableHardwareAcceleration() ? x.Xo$ : x.qEK,
+    en = {
+        boostItemVisual: H,
+        emojiStickersVisual: Q,
         screenShareItemVisual: ee,
-        uploadsMessagesItemVisual: Q,
-        uploadsMessagesItemVisualV2: J,
-        PL: $,
-        TR: et,
+        uploadsMessagesItemVisual: X,
+        uploadsMessagesItemVisualV2: $,
+        PL: J,
+        TR: es,
     },
-    eu = {
-        boostItemVisual: Y,
+    ei = {
+        boostItemVisual: G,
         emojiStickersVisual: W,
         screenShareItemVisual: ee,
-        uploadsMessagesItemVisual: K,
-        uploadsMessagesItemVisualV2: z,
-        PL: $,
-        TR: et,
+        uploadsMessagesItemVisual: Y,
+        uploadsMessagesItemVisualV2: q,
+        PL: J,
+        TR: es,
     };
-function ed() {
-    let e = (0, g.ZP)();
-    return (0, f.wj)(e) ? eu : ec;
+function ea() {
+    let e = (0, h.ZP)();
+    return (0, d.wj)(e) ? ei : en;
 }
-function ef(e) {
-    let { description: t, onLearnMore: n, renderVisual: i } = e,
-        a = ey();
+function eo(e) {
+    let { description: s, onLearnMore: t, renderVisual: n } = e,
+        i = ef();
     return (0, r.jsxs)("div", {
-        className: o()(H.whatYouLoseItem, { [H.premiumRebrand]: a }),
+        className: a()(K.whatYouLoseItem, { [K.premiumRebrand]: i }),
         children: [
             (0, r.jsxs)("div", {
-                className: o()(H.whatYouLoseItemLeftColumn, { [H.premiumRebrand]: a }),
+                className: a()(K.whatYouLoseItemLeftColumn, { [K.premiumRebrand]: i }),
                 children: [
-                    (0, r.jsx)(p.Text, {
+                    (0, r.jsx)(x.Text, {
                         variant: "text-md/normal",
-                        children: t,
+                        children: s,
                     }),
-                    (0, r.jsx)(_.zx, {
+                    (0, r.jsx)(p.zx, {
                         "data-migration-pending": !0,
-                        look: _.zx.Looks.LINK,
-                        color: _.zx.Colors.LINK,
-                        size: _.zx.Sizes.NONE,
-                        className: H.whatYouLoseItemLearnMore,
-                        onClick: n,
-                        children: V.intl.string(V.t.hvVgAQ),
+                        look: p.zx.Looks.LINK,
+                        color: p.zx.Colors.LINK,
+                        size: p.zx.Sizes.NONE,
+                        className: K.whatYouLoseItemLearnMore,
+                        onClick: t,
+                        children: B.intl.string(B.t.hvVgAQ),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: o()(H.whatYouLoseItemRightColumn, { [H.premiumRebrand]: a }),
-                children: i(),
+                className: a()(K.whatYouLoseItemRightColumn, { [K.premiumRebrand]: i }),
+                children: n(),
             }),
         ],
     });
 }
-function e_(e) {
-    var t = er({}, ei(e));
-    let { theme: n } = (0, R.z)(),
-        i = (0, p.dQu)(p.TVs.colors.INTERACTIVE_ACTIVE, n).hex();
-    return (0, r.jsx)(p.SrA, es(ea({ size: "md" }, t), { color: i }));
+function el(e) {
+    var s,
+        t,
+        n = et(
+            {},
+            (function (e) {
+                if (null == e) throw TypeError("Cannot destructure " + e);
+                return e;
+            })(e),
+        );
+    let { theme: i } = (0, O.z)(),
+        a = (0, x.dQu)(x.TVs.colors.INTERACTIVE_ACTIVE, i).hex();
+    return (0, r.jsx)(
+        x.SrA,
+        ((s = (function (e) {
+            for (var s = 1; s < arguments.length; s++) {
+                var t = null != arguments[s] ? arguments[s] : {},
+                    r = Object.keys(t);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (s) {
+                        var r;
+                        (r = t[s]),
+                            s in e
+                                ? Object.defineProperty(e, s, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[s] = r);
+                    });
+            }
+            return e;
+        })({ size: "md" }, n)),
+        (t = t = { color: a }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(t))
+            : (function (e, s) {
+                  var t = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, r);
+                  }
+                  return t;
+              })(Object(t)).forEach(function (e) {
+                  Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(t, e));
+              }),
+        s),
+    );
 }
-function ep(e) {
-    let t,
-        { currentUser: n, premiumType: i, onClose: a } = e,
-        o = (0, T.ZP)(n.id),
-        s = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
-        l = i === Z.p9.TIER_1,
-        c = () => {
-            a(),
-                (0, w.openUserSettings)(P.n.PROFILE_PANEL, { section: F.oAB.PROFILE_CUSTOMIZATION }),
-                j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "user_profile_customization" });
-        };
+function ec(e) {
+    let s,
+        { currentUser: t, premiumType: n, onClose: i } = e,
+        a = (0, v.ZP)(t.id),
+        o = (0, m.e7)([C.Z], () => C.Z.useReducedMotion),
+        l = n === V.p9.TIER_1;
     return (
-        (t =
-            (null == o ? void 0 : o.premiumType) === Z.p9.TIER_2
-                ? (0, r.jsxs)(N.Z, {
-                      user: n,
-                      displayProfile: o,
+        (s =
+            (null == a ? void 0 : a.premiumType) === V.p9.TIER_2
+                ? (0, r.jsxs)(L.Z, {
+                      user: t,
+                      displayProfile: a,
                       forceShowPremium: !0,
                       themeType: null,
-                      className: H.profileCard,
+                      className: K.profileCard,
                       children: [
-                          (0, r.jsx)(C.b, {
-                              user: n,
-                              displayProfile: o,
-                              avatarSize: p.EFr.SIZE_56,
+                          (0, r.jsx)(y.b, {
+                              user: t,
+                              displayProfile: a,
+                              avatarSize: x.EFr.SIZE_56,
                               avatarOffsetX: 8,
                               avatarOffsetY: 2,
                               bannerWidth: 172,
                               bannerHeight: 60,
                               themePadding: 4,
                           }),
-                          (0, r.jsx)(el, {
-                              className: H.profileAvatar,
-                              src: n.getAvatarURL(void 0, (0, p.pxk)(p.EFr.SIZE_56), !s),
-                              size: p.EFr.SIZE_56,
-                              "aria-label": n.username,
+                          (0, r.jsx)(er, {
+                              className: K.profileAvatar,
+                              src: t.getAvatarURL(void 0, (0, x.pxk)(x.EFr.SIZE_56), !o),
+                              size: x.EFr.SIZE_56,
+                              "aria-label": t.username,
                           }),
                           (0, r.jsxs)("div", {
-                              className: H.profileUserInfo,
+                              className: K.profileUserInfo,
                               children: [
-                                  (0, r.jsx)(A.Z, {
-                                      className: H.profileNameTag,
-                                      usernameClass: H.profileNameTagUsername,
-                                      name: n.toString(),
+                                  (0, r.jsx)(_.Z, {
+                                      className: K.profileNameTag,
+                                      usernameClass: K.profileNameTagUsername,
+                                      name: t.toString(),
                                   }),
-                                  (0, r.jsx)(e_, { className: H.profilePremiumIcon }),
+                                  (0, r.jsx)(el, { className: K.profilePremiumIcon }),
                               ],
                           }),
                       ],
                   })
                 : (0, r.jsxs)("div", {
-                      className: H.profileCardTier1,
+                      className: K.profileCardTier1,
                       children: [
-                          (0, r.jsx)(el, {
-                              className: H.profileAvatarTier1,
-                              src: n.getAvatarURL(void 0, (0, p.pxk)(p.EFr.SIZE_56), !s),
-                              size: p.EFr.SIZE_56,
-                              "aria-label": n.username,
+                          (0, r.jsx)(er, {
+                              className: K.profileAvatarTier1,
+                              src: t.getAvatarURL(void 0, (0, x.pxk)(x.EFr.SIZE_56), !o),
+                              size: x.EFr.SIZE_56,
+                              "aria-label": t.username,
                           }),
                           (0, r.jsxs)("div", {
-                              className: H.profileUserInfoTier1,
+                              className: K.profileUserInfoTier1,
                               children: [
-                                  (0, r.jsx)(A.Z, {
-                                      className: H.profileNameTag,
-                                      usernameClass: H.profileNameTagUsername,
-                                      name: n.toString(),
+                                  (0, r.jsx)(_.Z, {
+                                      className: K.profileNameTag,
+                                      usernameClass: K.profileNameTagUsername,
+                                      name: t.toString(),
                                   }),
-                                  (0, r.jsx)(p.SrA, {
+                                  (0, r.jsx)(x.SrA, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: H.profilePremiumIcon,
+                                      className: K.profilePremiumIcon,
                                   }),
                               ],
                           }),
                       ],
                   })),
-        (0, r.jsx)(ef, {
-            description: l ? V.intl.format(V.t.xCaYwM, {}) : V.intl.format(V.t["gpqr+v"], {}),
-            onLearnMore: c,
-            renderVisual: () => t,
+        (0, r.jsx)(eo, {
+            description: l ? B.intl.format(B.t.xCaYwM, {}) : B.intl.format(B.t["gpqr+v"], {}),
+            onLearnMore: () => {
+                i(),
+                    (0, M.openUserSettings)(P.n.PROFILE_PANEL, { section: D.oAB.PROFILE_CUSTOMIZATION }),
+                    R.default.track(D.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
+                        action: "user_profile_customization",
+                    });
+            },
+            renderVisual: () => s,
         })
     );
 }
-function eh(e) {
-    let { premiumType: t } = e,
-        n = 3,
-        i = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
-        a = (0, b.wC)(null)
-            .filter((e) => e.type === y.B.GUILD && (e.animated || null != e.guildId))
-            .slice(0, n),
-        o = (0, d.Wu)([v.Z], () => v.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, n - a.length)),
-        s = ed().emojiStickersVisual,
-        l = t === Z.p9.TIER_1,
-        c = () => {
-            window.open(k.Z.getArticleURL(F.BhN.PREMIUM_DETAILS)),
-                j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
-        };
-    return (0, r.jsx)(ef, {
-        description: l ? V.intl.format(V.t.couiKC, {}) : V.intl.format(V.t["0hUHi4"], {}),
-        onLearnMore: c,
+function eu(e) {
+    let { premiumType: s } = e,
+        t = (0, m.e7)([C.Z], () => C.Z.useReducedMotion),
+        n = (0, g.wC)(null)
+            .filter((e) => e.type === I.B.GUILD && (e.animated || null != e.guildId))
+            .slice(0, 3),
+        i = (0, m.Wu)([T.Z], () => T.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
+        a = ea().emojiStickersVisual,
+        o = s === V.p9.TIER_1;
+    return (0, r.jsx)(eo, {
+        description: o ? B.intl.format(B.t.couiKC, {}) : B.intl.format(B.t["0hUHi4"], {}),
+        onLearnMore: () => {
+            window.open(Z.Z.getArticleURL(D.BhN.PREMIUM_DETAILS)),
+                R.default.track(D.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
+        },
         renderVisual: () =>
-            (null != a && a.length > 0) || (!l && null != o && o.length > 0)
+            (null != n && n.length > 0) || (!o && null != i && i.length > 0)
                 ? (0, r.jsxs)("div", {
-                      className: H.emojiStickersPersonalizedContainer,
+                      className: K.emojiStickersPersonalizedContainer,
                       children: [
-                          a
+                          n
                               .map((e) =>
                                   null == e.id
                                       ? e.url
-                                      : M.ZP.getEmojiURL({
+                                      : w.ZP.getEmojiURL({
                                             id: e.id,
-                                            animated: !i && e.animated,
+                                            animated: !t && e.animated,
                                             size: 58,
                                         }),
                               )
-                              .map((e, t) =>
+                              .map((e, s) =>
                                   null != e
                                       ? (0, r.jsx)(
                                             "img",
                                             {
-                                                className: H.personalizedEmoji,
+                                                className: K.personalizedEmoji,
                                                 alt: "",
                                                 src: e,
                                             },
-                                            "emoji-".concat(t),
+                                            "emoji-".concat(s),
                                         )
                                       : null,
                               ),
-                          l
+                          o
                               ? null
-                              : o.map((e) =>
+                              : i.map((e) =>
                                     (0, r.jsx)(
-                                        I.Z,
+                                        b.Z,
                                         {
-                                            disableAnimation: i,
+                                            disableAnimation: t,
                                             sticker: e,
                                             size: 58,
                                             withLoadingIndicator: !1,
@@ -330,78 +322,77 @@ function eh(e) {
                       ],
                   })
                 : (0, r.jsx)("img", {
-                      className: H.nonPersonalizedGraphic,
+                      className: K.nonPersonalizedGraphic,
                       alt: "",
-                      src: s,
+                      src: a,
                   }),
     });
 }
 function em(e) {
-    let { premiumType: t, onClose: n } = e;
-    i.useEffect(() => h.Z.wait(() => (0, m.X8)()), []);
-    let a = (0, d.e7)([E.Z], () => E.Z.useReducedMotion),
-        [s, l] = (0, d.Wu)([L.Z, D.Z], () => {
-            let e = L.Z.boostSlots,
-                t = new Map();
+    let { premiumType: s, onClose: t } = e;
+    n.useEffect(() => f.Z.wait(() => (0, j.X8)()), []);
+    let i = (0, m.e7)([C.Z], () => C.Z.useReducedMotion),
+        [o, l] = (0, m.Wu)([U.Z, A.Z], () => {
+            let e = U.Z.boostSlots,
+                s = new Map();
             u()(e)
                 .map("premiumGuildSubscription")
                 .map("guildId")
                 .forEach((e) => {
-                    if (null != D.Z.getGuild(e)) {
-                        var n;
-                        let r = null != (n = t.get(e)) ? n : 0;
-                        t.set(e, r + 1);
+                    if (null != A.Z.getGuild(e)) {
+                        var t;
+                        let r = null != (t = s.get(e)) ? t : 0;
+                        s.set(e, r + 1);
                     }
                 });
-            let n = null,
+            let t = null,
                 r = 0;
             return (
-                t.size > 0 && ([n, r] = Array.from(t.entries()).reduce((e, t) => (t[1] > e[1] ? t : e))),
-                [D.Z.getGuild(n), r]
+                s.size > 0 && ([t, r] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))),
+                [A.Z.getGuild(t), r]
             );
         }),
-        c = null != s && l > 0,
-        f = ed().boostItemVisual,
-        _ = () => {
-            n(),
-                (0, w.openUserSettings)(P.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: F.oAB.GUILD_BOOSTING }),
-                j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
-        };
-    return (0, r.jsx)(ef, {
-        description: t === Z.p9.TIER_1 ? V.intl.format(V.t["K4Hv6+"], {}) : V.intl.format(V.t.wRxEDQ, {}),
-        onLearnMore: _,
+        c = null != o && l > 0,
+        d = ea().boostItemVisual;
+    return (0, r.jsx)(eo, {
+        description: s === V.p9.TIER_1 ? B.intl.format(B.t["K4Hv6+"], {}) : B.intl.format(B.t.wRxEDQ, {}),
+        onLearnMore: () => {
+            t(),
+                (0, M.openUserSettings)(P.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: D.oAB.GUILD_BOOSTING }),
+                R.default.track(D.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
+        },
         renderVisual: () =>
             c
                 ? (0, r.jsx)("div", {
-                      className: H.boostCardContainer,
+                      className: K.boostCardContainer,
                       children: (0, r.jsxs)("div", {
-                          className: H.boostCard,
+                          className: K.boostCard,
                           children: [
-                              (0, r.jsx)(O.Z, {
-                                  guild: s,
-                                  size: O.Z.Sizes.MEDIUM,
-                                  animate: !a,
-                                  className: H.boostCardIcon,
+                              (0, r.jsx)(N.Z, {
+                                  guild: o,
+                                  size: N.Z.Sizes.MEDIUM,
+                                  animate: !i,
+                                  className: K.boostCardIcon,
                               }),
                               (0, r.jsxs)("div", {
-                                  className: H.boostCardInfo,
+                                  className: K.boostCardInfo,
                                   children: [
-                                      (0, r.jsx)(p.Text, {
+                                      (0, r.jsx)(x.Text, {
                                           variant: "text-md/normal",
-                                          className: o()(H.textSingleLineEllipsis, H.boostCardTitle),
-                                          children: s.name,
+                                          className: a()(K.textSingleLineEllipsis, K.boostCardTitle),
+                                          children: o.name,
                                       }),
                                       (0, r.jsxs)("div", {
-                                          className: H.boostCardSubtitle,
+                                          className: K.boostCardSubtitle,
                                           children: [
-                                              (0, r.jsx)(p.$Eu, {
-                                                  color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                                                  className: H.boostCardGem,
+                                              (0, r.jsx)(x.$Eu, {
+                                                  color: x.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                  className: K.boostCardGem,
                                               }),
-                                              (0, r.jsx)(p.Text, {
+                                              (0, r.jsx)(x.Text, {
                                                   variant: "text-xs/normal",
-                                                  className: o()(H.textSingleLineEllipsis, H.boostCardCount),
-                                                  children: V.intl.format(V.t["Ou/g/P"], { boostCount: l }),
+                                                  className: a()(K.textSingleLineEllipsis, K.boostCardCount),
+                                                  children: B.intl.format(B.t["Ou/g/P"], { boostCount: l }),
                                               }),
                                           ],
                                       }),
@@ -412,19 +403,18 @@ function em(e) {
                   })
                 : (0, r.jsx)("img", {
                       alt: "",
-                      src: f,
+                      src: d,
                   }),
     });
 }
-let eg = () => {
-    let e = ed().screenShareItemVisual,
-        t = () => {
-            window.open(k.Z.getArticleURL(F.BhN.STREAM_QUALITY_SETTINGS)),
-                j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
-        };
-    return (0, r.jsx)(ef, {
-        description: V.intl.format(V.t.wK04T0, {}),
-        onLearnMore: t,
+let ed = () => {
+    let e = ea().screenShareItemVisual;
+    return (0, r.jsx)(eo, {
+        description: B.intl.format(B.t.wK04T0, {}),
+        onLearnMore: () => {
+            window.open(Z.Z.getArticleURL(D.BhN.STREAM_QUALITY_SETTINGS)),
+                R.default.track(D.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
+        },
         renderVisual: () =>
             (0, r.jsx)("img", {
                 alt: "",
@@ -432,223 +422,222 @@ let eg = () => {
             }),
     });
 };
-function eE(e) {
-    let { premiumType: t } = e,
-        n = ed().uploadsMessagesItemVisual,
-        i = () => {
-            window.open(k.Z.getArticleURL(F.BhN.PREMIUM_DETAILS)),
-                j.default.track(F.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
-        };
-    return (0, r.jsx)(ef, {
-        description: t === Z.p9.TIER_2 ? V.intl.format(V.t.GsOFRE, {}) : V.intl.format(V.t.wFWO6O, {}),
-        onLearnMore: i,
+function ep(e) {
+    let { premiumType: s } = e,
+        t = ea().uploadsMessagesItemVisual;
+    return (0, r.jsx)(eo, {
+        description: s === V.p9.TIER_2 ? B.intl.format(B.t.GsOFRE, {}) : B.intl.format(B.t.wFWO6O, {}),
+        onLearnMore: () => {
+            window.open(Z.Z.getArticleURL(D.BhN.PREMIUM_DETAILS)),
+                R.default.track(D.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
+        },
         renderVisual: () =>
             (0, r.jsx)("img", {
                 alt: "",
-                src: n,
+                src: t,
             }),
     });
 }
-let eb = i.createContext({ isPremiumRebrand: !1 }),
-    ey = () => i.useContext(eb).isPremiumRebrand;
-function eO(e) {
-    let { currentUser: t, premiumType: n, onClose: a, isDowngrade: s = !1, isPremiumRebrand: l = !1 } = e,
-        c = i.useMemo(() => {
+let ex = n.createContext({ isPremiumRebrand: !1 }),
+    ef = () => n.useContext(ex).isPremiumRebrand;
+function ej(e) {
+    let { currentUser: s, premiumType: t, onClose: i, isDowngrade: o = !1, isPremiumRebrand: l = !1 } = e,
+        c = n.useMemo(() => {
             let e = [];
-            switch (n) {
-                case Z.p9.TIER_0:
-                    e.push((0, r.jsx)(eh, { premiumType: n }), (0, r.jsx)(eE, { premiumType: n }));
+            switch (t) {
+                case V.p9.TIER_0:
+                    e.push((0, r.jsx)(eu, { premiumType: t }), (0, r.jsx)(ep, { premiumType: t }));
                     break;
-                case Z.p9.TIER_1:
-                    s
+                case V.p9.TIER_1:
+                    o
                         ? e.push(
                               (0, r.jsx)(
-                                  ep,
+                                  ec,
                                   {
-                                      currentUser: t,
-                                      premiumType: n,
-                                      onClose: a,
+                                      currentUser: s,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "profile-item",
                               ),
-                              (0, r.jsx)(eg, {}, "screen-share-item"),
+                              (0, r.jsx)(ed, {}, "screen-share-item"),
                               (0, r.jsx)(
                                   em,
                                   {
-                                      premiumType: n,
-                                      onClose: a,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "boost-item",
                               ),
                           )
                         : e.push(
                               (0, r.jsx)(
-                                  ep,
+                                  ec,
                                   {
-                                      currentUser: t,
-                                      premiumType: n,
-                                      onClose: a,
+                                      currentUser: s,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "profile-item",
                               ),
-                              (0, r.jsx)(eh, { premiumType: n }, "emoji-stickers-item"),
-                              (0, r.jsx)(eg, {}, "screen-share-item"),
-                              (0, r.jsx)(eE, { premiumType: n }, "uploads-item"),
+                              (0, r.jsx)(eu, { premiumType: t }, "emoji-stickers-item"),
+                              (0, r.jsx)(ed, {}, "screen-share-item"),
+                              (0, r.jsx)(ep, { premiumType: t }, "uploads-item"),
                               (0, r.jsx)(
                                   em,
                                   {
-                                      premiumType: n,
-                                      onClose: a,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "boost-item",
                               ),
                           );
                     break;
-                case Z.p9.TIER_2:
-                    s
+                case V.p9.TIER_2:
+                    o
                         ? e.push(
                               (0, r.jsx)(
-                                  ep,
+                                  ec,
                                   {
-                                      currentUser: t,
-                                      premiumType: n,
-                                      onClose: a,
+                                      currentUser: s,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "profile-item",
                               ),
                               (0, r.jsx)(
                                   em,
                                   {
-                                      premiumType: n,
-                                      onClose: a,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "boost-item",
                               ),
-                              (0, r.jsx)(eg, {}, "screen-share-item"),
+                              (0, r.jsx)(ed, {}, "screen-share-item"),
                           )
                         : e.push(
                               (0, r.jsx)(
-                                  ep,
+                                  ec,
                                   {
-                                      currentUser: t,
-                                      premiumType: n,
-                                      onClose: a,
+                                      currentUser: s,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "profile-item",
                               ),
-                              (0, r.jsx)(eh, { premiumType: n }, "emoji-stickers-item"),
+                              (0, r.jsx)(eu, { premiumType: t }, "emoji-stickers-item"),
                               (0, r.jsx)(
                                   em,
                                   {
-                                      premiumType: n,
-                                      onClose: a,
+                                      premiumType: t,
+                                      onClose: i,
                                   },
                                   "boost-item",
                               ),
-                              (0, r.jsx)(eg, {}, "screen-share-item"),
-                              (0, r.jsx)(eE, { premiumType: n }, "uploads-item"),
+                              (0, r.jsx)(ed, {}, "screen-share-item"),
+                              (0, r.jsx)(ep, { premiumType: t }, "uploads-item"),
                           );
             }
             return e;
-        }, [n, t, a, s]);
-    return (0, r.jsx)(eb.Provider, {
+        }, [t, s, i, o]);
+    return (0, r.jsx)(ex.Provider, {
         value: { isPremiumRebrand: l },
         children: (0, r.jsx)("div", {
-            className: o()(H.whatYouLoseItemContainer, {
-                [H.premiumRebrand]: l,
-                [H.noMargin]: l && c.length <= 2,
+            className: a()(K.whatYouLoseItemContainer, {
+                [K.premiumRebrand]: l,
+                [K.noMargin]: l && c.length <= 2,
             }),
             children: c,
         }),
     });
 }
-let ev = function (e) {
+let eh = function (e) {
     let {
-            premiumType: t,
-            titleText: n,
-            subtitleText: a,
-            footer: o,
-            onClose: s,
+            premiumType: s,
+            titleText: t,
+            subtitleText: i,
+            footer: a,
+            onClose: o,
             onDiscountClaim: c,
             onContinue: u,
-            analyticsLocations: f,
-            isLoading: _ = !1,
-            churnUserDiscountOffer: h = null,
-            isDowngrade: m = !1,
-            subtitleIcon: g,
-            subtitleClassName: E,
+            analyticsLocations: d,
+            isLoading: p = !1,
+            churnUserDiscountOffer: f = null,
+            isDowngrade: j = !1,
+            subtitleIcon: h,
+            subtitleClassName: C,
         } = e,
-        b = (0, d.e7)([x.default], () => {
-            let e = x.default.getCurrentUser();
+        g = (0, m.e7)([S.default], () => {
+            let e = S.default.getCurrentUser();
             return l()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
         });
-    i.useEffect(() => {
-        (0, S.Z)(b.id, b.getAvatarURL(null, 80));
-    }, [b]);
-    let y = null != h && !_;
-    return (i.useEffect(() => {
-        y &&
-            j.default.track(F.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
-                location_stack: f,
-                discount_id: null == h ? void 0 : h.discount_id,
+    n.useEffect(() => {
+        (0, E.Z)(g.id, g.getAvatarURL(null, 80));
+    }, [g]);
+    let I = null != f && !p;
+    return (n.useEffect(() => {
+        I &&
+            R.default.track(D.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
+                location_stack: d,
+                discount_id: null == f ? void 0 : f.discount_id,
             });
-    }, [y, f, h]),
-    _)
+    }, [I, d, f]),
+    p)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(B.Z, {
-                      premiumType: t,
-                      onClose: s,
+                  (0, r.jsx)(z.Z, {
+                      premiumType: s,
+                      onClose: o,
                   }),
-                  (0, r.jsx)(p.hzk, {
+                  (0, r.jsx)(x.hzk, {
                       "data-migration-pending": !0,
-                      className: H.body,
-                      children: (0, r.jsx)(p.$jN, { className: H.spinner }),
+                      className: K.body,
+                      children: (0, r.jsx)(x.$jN, { className: K.spinner }),
                   }),
               ],
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(B.Z, {
-                      premiumType: t,
-                      onClose: s,
+                  (0, r.jsx)(z.Z, {
+                      premiumType: s,
+                      onClose: o,
                   }),
-                  (0, r.jsxs)(p.hzk, {
+                  (0, r.jsxs)(x.hzk, {
                       "data-migration-pending": !0,
-                      className: H.body,
+                      className: K.body,
                       children: [
-                          (0, r.jsx)(p.X6q, {
+                          (0, r.jsx)(x.X6q, {
                               variant: "heading-xl/semibold",
                               color: "header-primary",
-                              className: H.title,
-                              children: n,
+                              className: K.title,
+                              children: t,
                           }),
                           (0, r.jsxs)("div", {
-                              className: E,
+                              className: C,
                               children: [
-                                  g,
-                                  (0, r.jsx)(p.Text, {
+                                  h,
+                                  (0, r.jsx)(x.Text, {
                                       variant: "text-md/normal",
-                                      children: a,
+                                      children: i,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(eO, {
-                              currentUser: b,
-                              premiumType: t,
-                              onClose: s,
-                              isDowngrade: m,
+                          (0, r.jsx)(ej, {
+                              currentUser: g,
+                              premiumType: s,
+                              onClose: o,
+                              isDowngrade: j,
                           }),
                       ],
                   }),
-                  !y &&
-                      (0, r.jsx)(p.mzw, {
+                  !I &&
+                      (0, r.jsx)(x.mzw, {
                           "data-migration-pending": !0,
-                          children: o,
+                          children: a,
                       }),
-                  y &&
-                      (0, r.jsx)(G.Z, {
-                          churnUserDiscountOffer: h,
+                  I &&
+                      (0, r.jsx)(F.Z, {
+                          churnUserDiscountOffer: f,
                           onDiscountClaim: c,
                           onContinue: u,
                       }),

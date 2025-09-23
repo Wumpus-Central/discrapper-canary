@@ -22,6 +22,11 @@ let d = [
     "Virtual Currency Configuration",
     "Orbs",
     "Quest Preview Tool",
+    "Revenue Storybook",
+    "Payment Components",
+    "Orb Components",
+    "Virtual Currency",
+    "Nitro Components",
 ];
 function f(e) {
     let { legacy: t = !0 } = e,

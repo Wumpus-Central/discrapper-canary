@@ -182,7 +182,7 @@ function Y(e, t) {
             let { default: t } = await n.e("74560").then(n.bind(n, 246855));
             return (n) => (0, r.jsx)(t, G(k({}, n), { quest: e }));
         }
-        let { default: i } = await n.e("20565").then(n.bind(n, 383294));
+        let { default: i } = await Promise.all([n.e("93964"), n.e("13025")]).then(n.bind(n, 383294));
         return (n) =>
             (0, r.jsx)(
                 i,

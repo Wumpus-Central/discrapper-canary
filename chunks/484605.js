@@ -11,7 +11,7 @@ var i = n(264418),
     d = n(474936),
     p = n(921944),
     f = n(388032),
-    h = n(746986);
+    h = n(288541);
 let g = (e) => {
     let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: b, children: _ } = e,
         { analyticsLocations: O } = (0, o.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
@@ -40,9 +40,10 @@ let g = (e) => {
                     onClick: () => {
                         b(p.L.TAKE_ACTION),
                             (0, l.ZDy)(async () => {
-                                let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await n
-                                    .e("26526")
-                                    .then(n.bind(n, 48813));
+                                let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
+                                    n.e("26526"),
+                                    n.e("11456"),
+                                ]).then(n.bind(n, 48813));
                                 return (t) => {
                                     var n, i;
                                     return (0, r.jsx)(

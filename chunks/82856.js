@@ -1,101 +1,53 @@
-n.d(t, {
-    o: () => b,
+r.d(t, {
+    o: () => p,
     y: () => y,
 });
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(481060),
-    s = n(493773),
-    l = n(819640),
-    c = n(751648),
-    u = n(479766),
-    d = n(970815),
-    f = n(981631);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function p(e) {
+var n = r(951288),
+    o = r(647438),
+    l = r(442837),
+    u = r(481060),
+    a = r(493773),
+    c = r(819640),
+    i = r(751648),
+    s = r(479766),
+    b = r(970815),
+    f = r(981631);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function m(e, t) {
+function p() {
+    let e = (0, l.e7)([s.Z], () => s.Z.balancePillOverlay);
     return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function g(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = E(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function E(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function b() {
-    let e = (0, a.e7)([u.Z], () => u.Z.balancePillOverlay);
-    return (
-        (0, s.ZP)(() => {
+        (0, a.ZP)(() => {
             setTimeout(() => {
-                e || (0, c.qD)(!0);
+                e || (0, i.qD)(!0);
             }, 300);
         }),
-        (0, i.useEffect)(
+        (0, o.useEffect)(
             () => () => {
-                !(0, o.$sL)() && e && (0, c.qD)(!1);
+                !(0, u.$sL)() && e && (0, i.qD)(!1);
             },
             [e],
         ),
@@ -103,37 +55,74 @@ function b() {
     );
 }
 function y(e) {
-    var { pillRef: t, anchorPillType: n } = e,
-        s = g(e, ["pillRef", "anchorPillType"]);
-    let { balancePillOverlay: c } = (0, a.cj)([u.Z], () => ({ balancePillOverlay: u.Z.balancePillOverlay })),
-        _ = (0, r.jsx)(d.A4, p({ ref: t }, s)),
-        h = (0, r.jsx)(
-            d.A4,
-            m(p({}, s), {
-                isInModalOverlay: !0,
-                disabled: !0,
-            }),
+    var t,
+        r,
+        { pillRef: a, anchorPillType: i } = e,
+        p = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var r,
+                        n,
+                        o = {},
+                        l = Object.keys(e);
+                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < l.length; n++)
+                    (r = l[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+            }
+            return o;
+        })(e, ["pillRef", "anchorPillType"]);
+    let { balancePillOverlay: y } = (0, l.cj)([s.Z], () => ({ balancePillOverlay: s.Z.balancePillOverlay })),
+        g = (0, n.jsx)(b.A4, O({ ref: a }, p)),
+        j = (0, n.jsx)(
+            b.A4,
+            ((t = O({}, p)),
+            (r = r =
+                {
+                    isInModalOverlay: !0,
+                    disabled: !0,
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
+                      }
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            t),
         ),
-        { isAnyLayerOpen: E, isLastLayerShopFullScreen: b } = (0, a.cj)([l.Z], () => {
-            let e = l.Z.getLayers();
+        { isAnyLayerOpen: d, isLastLayerShopFullScreen: m } = (0, l.cj)([c.Z], () => {
+            let e = c.Z.getLayers();
             return {
                 isLastLayerShopFullScreen: e.length > 0 && e[e.length - 1] === f.S9g.COLLECTIBLES_SHOP,
-                isAnyLayerOpen: l.Z.hasLayers(),
+                isAnyLayerOpen: c.Z.hasLayers(),
             };
         }),
-        y = i.useMemo(() => !!c && (!E || (b && "SHOP_FULLSCREEN" === n)), [c, E, b, n]),
-        O = null != t.current ? t.current.offsetHeight : 36;
-    return (0, r.jsx)(o.yRy, {
+        v = o.useMemo(() => !!y && (!d || (m && "SHOP_FULLSCREEN" === i)), [y, d, m, i]),
+        P = null != a.current ? a.current.offsetHeight : 36;
+    return (0, n.jsx)(u.yRy, {
         fixed: !0,
         autoInvert: !1,
-        renderPopout: () => h,
+        renderPopout: () => j,
         position: "bottom",
         align: "right",
-        shouldShow: y,
-        spacing: -O,
-        animation: o.yRy.Animation.NONE,
-        targetElementRef: t,
-        positionKey: "".concat(s.balance, "-").concat(c),
-        children: () => _,
+        shouldShow: v,
+        spacing: -P,
+        animation: u.yRy.Animation.NONE,
+        targetElementRef: a,
+        positionKey: "".concat(p.balance, "-").concat(y),
+        children: () => g,
     });
 }

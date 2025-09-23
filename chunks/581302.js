@@ -5,16 +5,16 @@ var r = n(693789),
     i = n(789164),
     l = n(481060),
     s = n(703656),
-    o = n(450272),
-    c = n(52647),
+    o = n(52647),
+    c = n(237012),
     d = n(981631),
     u = n(906406);
 let m = function () {
-    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, c.Z)();
+    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, o.Z)();
     return (0, a.jsx)(i.h, {
         title: "Virtual Currency Configuration",
         className: u.container,
-        children: (0, a.jsxs)(o.E_, {
+        children: (0, a.jsxs)(c.E_, {
             label: "Reset Onboarding State",
             direction: "vertical",
             children: [

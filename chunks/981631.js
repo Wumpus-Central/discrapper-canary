@@ -3341,7 +3341,6 @@ let tZ = {
         ADVANCED: "Advanced",
         PROFILE_CUSTOMIZATION: "Profile Customization",
         PROFILE_CUSTOMIZATION_TRY_IT_OUT: "Profile Customization Try It Out",
-        REVENUE_STORYBOOK_PAGE: "Revenue Storybook",
         POGGERMODE: "Powermode Settings",
         SESSIONS: "Sessions",
         FAMILY_CENTER: "Family Center",

@@ -1,18 +1,17 @@
-n.d(t, {
-    D2: () => r,
-    nL: () => a,
+r.d(t, {
+    D2: () => n,
+    nL: () => l,
 });
-let r = 3000,
-    i = {
+let n = 3000,
+    o = {
         EARN: 0.25,
         SPEND: 0.3,
     },
-    a = (e, t) => {
-        let n = e > 0,
-            r = t * i[n ? "EARN" : "SPEND"],
-            a = n ? t - r : 0;
+    l = (e, t) => {
+        let r = e > 0,
+            n = t * o[r ? "EARN" : "SPEND"];
         return {
-            duration: r,
-            delay: a,
+            duration: n,
+            delay: r ? t - n : 0,
         };
     };
