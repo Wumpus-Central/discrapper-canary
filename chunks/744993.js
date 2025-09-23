@@ -7,7 +7,8 @@ n.d(t, {
     po: () => p,
     s9: () => j,
     yP: () => g,
-});
+}),
+    n(642613);
 var a = n(544891),
     r = n(570140),
     i = n(594174),
@@ -126,7 +127,7 @@ function _(e) {
         .then((e) => {
             r.Z.dispatch({
                 type: "PORTKEY_FETCH_REGIONS_SUCCESS",
-                regions: e.body.map(u.Z),
+                regions: e.body.map(u.Z).sort((e, t) => e.name.localeCompare(t.name)),
             });
         });
 }
