@@ -3,7 +3,7 @@ var r = n(951288),
     i = n(647438),
     a = n(120356),
     o = n.n(a),
-    s = n(938288),
+    s = n(401393),
     l = n(278074),
     c = n(754700),
     u = n(442837),
@@ -40,7 +40,7 @@ var r = n(951288),
     Z = n(46140),
     F = n(743294),
     V = n(388032),
-    H = n(475832);
+    H = n(990759);
 function Y(e) {
     var t, n;
     let { quest: a, onClick: s, reducedMotion: l, isExpanded: u } = e,
@@ -193,6 +193,7 @@ function z(e) {
                                 loading: I,
                                 text: A,
                                 size: "sm",
+                                icon: t.config.features.includes(Z.S7.CLOUD_GAMING_ACTIVITY) ? _.v3n : void 0,
                                 fullWidth: !0,
                             }),
                         }),

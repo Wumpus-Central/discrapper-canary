@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(667105),
     b = n(46140),
     y = n(388032),
-    O = n(924304);
+    O = n(179844);
 let v = [
     {
         value: b.cd.DESKTOP,
@@ -81,8 +81,8 @@ function S(e) {
         x = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         L = (0, E.g2)({ useReducedMotion: x }),
         j = (0, d.O5)(),
-        k = (0, _._s)({ quest: C }),
-        M = (0, _.z)(C),
+        M = (0, _._s)({ quest: C }),
+        k = (0, _.z)(C),
         U = (0, _.B6)(C.config.expiresAt, {
             month: "numeric",
             day: "numeric",
@@ -255,8 +255,8 @@ function S(e) {
                                 },
                                 size: "sm",
                             })
-                          : (0, f.$J)(C) && !M && $ !== h.LI.DESKTOP
-                            ? k
+                          : (0, f.$J)(C) && !k && $ !== h.LI.DESKTOP
+                            ? M
                                 ? (0, r.jsx)("div", {
                                       className: O.button,
                                       children: (0, r.jsx)(o.zxk, {
@@ -322,6 +322,7 @@ function S(e) {
                                     variant: "primary",
                                     onClick: null != es ? es : void 0,
                                     text: eo,
+                                    icon: C.config.features.includes(b.S7.CLOUD_GAMING_ACTIVITY) ? l.v3n : void 0,
                                     fullWidth: !0,
                                 }),
                             }))

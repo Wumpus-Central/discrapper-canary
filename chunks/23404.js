@@ -24,7 +24,7 @@ var r = n(951288),
     S = n(46140),
     T = n(981631),
     N = n(388032),
-    P = n(408228);
+    P = n(123611);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -253,6 +253,7 @@ function A(e) {
                                           text: Q,
                                           onClick: k,
                                           loading: T,
+                                          icon: _.config.features.includes(S.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : void 0,
                                       }),
                                   ],
                               }),
