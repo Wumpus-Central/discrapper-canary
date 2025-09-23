@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -6,59 +6,49 @@ var i = n(442837),
     a = n(194359),
     o = n(631937),
     s = n(702321),
-    c = n(377171),
-    u = n(699516),
-    d = n(626135),
-    p = n(63063),
-    h = n(862679),
-    f = n(981631),
-    m = n(596401),
-    g = n(388032);
-function b(e) {
-    var t, b;
-    let { channel: _, children: y } = e,
-        C = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
-    (0, o.Z)(_.id);
-    let x = (0, s.Z)(_.id),
-        v = _.isSystemDM(),
-        O = C && !v && !_.isMultiUserDM(),
-        j = {};
+    c = n(699516),
+    u = n(626135),
+    d = n(63063),
+    p = n(862679),
+    h = n(981631),
+    f = n(596401),
+    m = n(388032);
+function g(e) {
+    var t, g;
+    let { channel: b, children: y } = e,
+        C = (0, i.e7)([c.Z], () => c.Z.isBlocked(b.getRecipientId()));
+    (0, o.Z)(b.id);
+    let _ = (0, s.Z)(b.id),
+        v = b.isSystemDM(),
+        x = C && !v && !b.isMultiUserDM(),
+        O = {};
     if (v) {
-        let e = x
-            ? (0, r.jsxs)(r.Fragment, {
-                  children: [
-                      g.intl.string(g.t["+KSnWV"]),
-                      (0, r.jsx)(l.rgF, {
-                          size: "xs",
-                          color: c.Z.HEADER_PRIMARY,
-                      }),
-                  ],
-              })
-            : g.intl.string(g.t.hvVgAQ);
-        (j.message = g.intl.string(g.t.Bt2N7O)),
-            (j.subtitle = g.intl.string(g.t["n/Vzk5"])),
-            (j.buttonText = e),
-            (j.onButtonClick = () => {
-                if (x) {
-                    open(m.D2),
-                        d.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
+        let e = _ ? m.intl.string(m.t["+KSnWV"]) : m.intl.string(m.t.hvVgAQ);
+        (O.message = m.intl.string(m.t.Bt2N7O)),
+            (O.subtitle = m.intl.string(m.t["n/Vzk5"])),
+            (O.buttonText = e),
+            (O.buttonIcon = _ ? l.rgF : void 0),
+            (O.onButtonClick = () => {
+                if (_) {
+                    open(f.D2),
+                        u.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: "chat_blocker",
-                            target: m.D2,
+                            target: f.D2,
                         });
                     return;
                 }
-                open(p.Z.getArticleURL(f.BhN.SYSTEM_DMS));
+                open(d.Z.getArticleURL(h.BhN.SYSTEM_DMS));
             }),
-            (j.imageSrc = n(780961));
+            (O.imageSrc = n(780961));
     } else
-        O &&
-            ((j.message = g.intl.string(g.t["9T6N5+"])),
-            (j.buttonText = g.intl.string(g.t.XyHpKC)),
-            (j.onButtonClick = () => {
-                a.Z.unblockUser(_.getRecipientId());
+        x &&
+            ((O.message = m.intl.string(m.t["9T6N5+"])),
+            (O.buttonText = m.intl.string(m.t.XyHpKC)),
+            (O.onButtonClick = () => {
+                a.Z.unblockUser(b.getRecipientId());
             }));
     return (0, r.jsx)(
-        h.Z,
+        p.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -83,10 +73,10 @@ function b(e) {
                     });
             }
             return e;
-        })({}, j)),
-        (b = b = { children: y }),
+        })({}, O)),
+        (g = g = { children: y }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(b))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(g))
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -94,8 +84,8 @@ function b(e) {
                       n.push.apply(n, r);
                   }
                   return n;
-              })(Object(b)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(b, e));
+              })(Object(g)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(g, e));
               }),
         t),
     );

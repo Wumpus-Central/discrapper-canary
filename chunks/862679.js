@@ -1,63 +1,63 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => d });
 var r = n(951288),
     i = n(647438),
     l = n(873546),
     a = n(442837),
-    o = n(755721),
-    s = n(481060),
-    c = n(346486),
-    u = n(433355),
-    d = n(98484);
-let p = function (e) {
+    o = n(481060),
+    s = n(346486),
+    c = n(433355),
+    u = n(98484);
+let d = function (e) {
     let {
             message: t,
             subtitle: n,
-            countdown: p,
-            buttonText: h,
-            buttonColor: f,
-            buttonSubmitting: m,
-            onButtonClick: g,
-            imageSrc: b,
-            animationSrc: y,
-            secondaryButtonText: C,
-            onSecondaryButtonClick: _,
-            children: v,
-            useReducedMotion: x = !1,
+            countdown: d,
+            buttonText: p,
+            buttonIcon: h,
+            buttonSubmitting: f,
+            onButtonClick: m,
+            imageSrc: g,
+            animationSrc: b,
+            secondaryButtonText: y,
+            onSecondaryButtonClick: C,
+            children: _,
+            useReducedMotion: v = !1,
+            buttonVariant: x,
         } = e,
-        O = (0, a.e7)([u.ZP], () => u.ZP.getState().isMembersOpen);
+        O = (0, a.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (l.tq && O) return null;
-    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(v) });
+    if (null == t) return (0, r.jsx)(r.Fragment, { children: i.Children.only(_) });
     let j = null;
     return (
-        null != b
+        null != g
             ? (j = (0, r.jsx)("img", {
                   alt: "",
-                  src: b,
-                  className: d.image,
+                  src: g,
+                  className: u.image,
               }))
-            : null != y &&
-              (j = (0, r.jsx)(s.Fmz, {
-                  importData: y,
-                  shouldAnimate: !x,
-                  className: d.animation,
+            : null != b &&
+              (j = (0, r.jsx)(o.Fmz, {
+                  importData: b,
+                  shouldAnimate: !v,
+                  className: u.animation,
               })),
         (0, r.jsxs)("div", {
-            className: d.wrapper,
+            className: u.wrapper,
             children: [
                 (0, r.jsxs)("div", {
-                    className: d.content,
+                    className: u.content,
                     children: [
                         j,
                         (0, r.jsxs)("div", {
-                            className: d.text,
+                            className: u.text,
                             children: [
-                                (0, r.jsx)(s.X6q, {
+                                (0, r.jsx)(o.X6q, {
                                     variant: "heading-md/semibold",
-                                    className: d.title,
+                                    className: u.title,
                                     children: t,
                                 }),
                                 null != n &&
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         color: "text-muted",
                                         variant: "text-xs/normal",
                                         children: n,
@@ -67,34 +67,35 @@ let p = function (e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: d.buttonContainer,
+                    className: u.buttonContainer,
                     children: [
-                        null != C &&
-                            (0, r.jsx)(o.zx, {
-                                className: d.button,
-                                size: o.zx.Sizes.SMALL,
-                                onClick: _,
-                                look: o.zx.Looks.LINK,
-                                color: o.zx.Colors.PRIMARY,
-                                submitting: m,
-                                children: C,
+                        null != y &&
+                            (0, r.jsx)("div", {
+                                className: u.button,
+                                children: (0, r.jsx)(o.Avr, {
+                                    textVariant: "text-sm/semibold",
+                                    text: y,
+                                    onClick: C,
+                                }),
                             }),
-                        null != h &&
-                            (0, r.jsx)(o.zx, {
-                                className: d.button,
-                                innerClassName: d.innerButton,
-                                size: o.zx.Sizes.SMALL,
-                                onClick: g,
-                                submitting: m,
-                                color: null != f ? f : o.zx.Colors.PRIMARY,
-                                children: h,
+                        null != p &&
+                            (0, r.jsx)("div", {
+                                className: u.button,
+                                children: (0, r.jsx)(o.zxk, {
+                                    text: p,
+                                    size: "sm",
+                                    variant: null != x ? x : "secondary",
+                                    onClick: m,
+                                    loading: f,
+                                    icon: h,
+                                }),
                             }),
                     ],
                 }),
-                null != p &&
-                    (0, r.jsx)(c.Z, {
-                        className: d.countdown,
-                        deadline: p,
+                null != d &&
+                    (0, r.jsx)(s.Z, {
+                        className: u.countdown,
+                        deadline: d,
                     }),
             ],
         })
