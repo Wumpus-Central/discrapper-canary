@@ -5,5 +5,4 @@ e.exports = {
     description: "description_cbd19d",
     buttonsHorizontal: "buttonsHorizontal_cbd19d",
     buttonsVertical: "buttonsVertical_cbd19d",
-    buttonVertical: "buttonVertical_cbd19d",
 };

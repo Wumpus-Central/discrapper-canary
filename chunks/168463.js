@@ -1,14 +1,13 @@
-n.d(t, { Z: () => E }), n(388685), n(953529);
+n.d(t, { Z: () => g }), n(388685), n(953529);
 var r = n(951288),
     i = n(647438),
-    a = n(755721),
-    o = n(481060),
-    s = n(626135),
-    l = n(502762),
-    c = n(981631),
-    u = n(388032),
-    d = n(982629);
-function f(e, t, n) {
+    a = n(481060),
+    o = n(626135),
+    s = n(502762),
+    l = n(981631),
+    c = n(388032),
+    u = n(306349);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,89 +48,87 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = !1;
-function g(e) {
+let h = !1;
+function m(e) {
     let { variant: t = "vertical" } = e,
-        [f, p] = i.useState(!1),
-        g = "vertical" === t,
-        E = i.useCallback(() => {
-            s.default.track(c.rMx.USER_PROFILE_REPORT_GAME_DETECTION, {
+        [d, _] = i.useState(!1),
+        m = "vertical" === t,
+        g = i.useCallback(() => {
+            o.default.track(l.rMx.USER_PROFILE_REPORT_GAME_DETECTION, {
                 game_detected: !1,
                 game_detection_correct: !0,
                 application_id: null,
             }),
-                p(!0);
+                _(!0);
         }, []),
-        b = i.useCallback(() => {
-            s.default.track(c.rMx.USER_PROFILE_REPORT_GAME_DETECTION, {
+        E = i.useCallback(() => {
+            o.default.track(l.rMx.USER_PROFILE_REPORT_GAME_DETECTION, {
                 game_detected: !1,
                 game_detection_correct: !1,
                 application_id: null,
             }),
-                (0, o.ZDy)(async () => {
+                (0, a.ZDy)(async () => {
                     let { default: e } = await n.e("82077").then(n.bind(n, 953848));
-                    return (t) => (0, r.jsx)(e, h(_({}, t), { onSubmitted: () => p(!0) }));
+                    return (t) => (0, r.jsx)(e, p(f({}, t), { onSubmitted: () => _(!0) }));
                 });
         }, []);
     return (i.useEffect(
         () => () => {
-            f && (m = !0);
+            d && (h = !0);
         },
-        [f],
+        [d],
     ),
-    f)
-        ? (0, r.jsx)(l.Z.Overlay, {
-              className: d.container,
+    d)
+        ? (0, r.jsx)(s.Z.Overlay, {
+              className: u.container,
               children: (0, r.jsx)("div", {
-                  className: g ? d.contentVertical : d.contentHorizontal,
-                  children: (0, r.jsx)(o.Text, {
+                  className: m ? u.contentVertical : u.contentHorizontal,
+                  children: (0, r.jsx)(a.Text, {
                       variant: "text-sm/normal",
                       color: "header-secondary",
-                      className: d.description,
-                      children: u.intl.string(u.t.X0TrNT),
+                      className: u.description,
+                      children: c.intl.string(c.t.X0TrNT),
                   }),
               }),
           })
-        : (0, r.jsx)(l.Z.Overlay, {
-              className: d.container,
+        : (0, r.jsx)(s.Z.Overlay, {
+              className: u.container,
               children: (0, r.jsxs)("div", {
-                  className: g ? d.contentVertical : d.contentHorizontal,
+                  className: m ? u.contentVertical : u.contentHorizontal,
                   children: [
-                      (0, r.jsx)(o.Text, {
+                      (0, r.jsx)(a.Text, {
                           variant: "text-sm/normal",
                           color: "header-secondary",
-                          className: d.description,
-                          children: u.intl.string(u.t.bHpUcX),
+                          className: u.description,
+                          children: c.intl.string(c.t.bHpUcX),
                       }),
                       (0, r.jsxs)("div", {
-                          className: g ? d.buttonsVertical : d.buttonsHorizontal,
+                          className: m ? u.buttonsVertical : u.buttonsHorizontal,
                           children: [
-                              (0, r.jsx)(a.zx, {
-                                  size: a.zx.Sizes.SMALL,
-                                  look: a.zx.Looks.FILLED,
-                                  color: a.zx.Colors.PRIMARY,
-                                  onClick: E,
-                                  className: g ? d.buttonVertical : d.buttonHorizontal,
-                                  children: u.intl.string(u.t.p89ACg),
+                              (0, r.jsx)(a.zxk, {
+                                  text: c.intl.string(c.t.p89ACg),
+                                  size: "sm",
+                                  variant: "secondary",
+                                  onClick: g,
+                                  fullWidth: !0,
                               }),
-                              (0, r.jsx)(a.zx, {
-                                  size: a.zx.Sizes.SMALL,
-                                  look: a.zx.Looks.FILLED,
-                                  color: a.zx.Colors.PRIMARY,
-                                  onClick: b,
-                                  className: g ? d.buttonVertical : d.buttonHorizontal,
-                                  children: u.intl.string(u.t.gm1Ven),
+                              (0, r.jsx)(a.zxk, {
+                                  text: c.intl.string(c.t.gm1Ven),
+                                  size: "sm",
+                                  variant: "secondary",
+                                  onClick: E,
+                                  fullWidth: !0,
                               }),
                           ],
                       }),
@@ -139,7 +136,7 @@ function g(e) {
               }),
           });
 }
-function E(e) {
+function g(e) {
     let { variant: t } = e;
-    return m ? null : (0, r.jsx)(g, { variant: t });
+    return h ? null : (0, r.jsx)(m, { variant: t });
 }
