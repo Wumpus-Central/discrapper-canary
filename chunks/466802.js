@@ -1,5 +1,5 @@
 n.d(t, { Z: () => f });
-var r = n(657707),
+var r = n(73837),
     i = n(509613),
     l = n(28682),
     o = n(313789),
@@ -12,7 +12,7 @@ let d = (0, i.x1)(o.n.NITRO_PANE, {
         render: s.Z,
     }),
     f = (0, i.wf)(o.n.NITRO_PANEL, {
-        icon: r.SrA,
+        icon: r.Sr,
         useTitle: () => c.intl.string(c.t.Ipxkoq),
         getLayout: () => [d],
         trailing: {
