@@ -135,11 +135,12 @@ var m = (function (e) {
         );
     })({});
 function E(e, t) {
-    let { type: n, value: r, userId: i } = t;
+    let { type: n, value: r, userId: i, secondaryValue: a } = t;
     s.default.track(c.rMx.WIDGET_INTERACTED, {
         widget_type: e,
         interaction_type: n,
         interaction_value: r,
+        interaction_secondary_value: a,
         target_user_id: i,
         media_session_id: o.Z.getMediaSessionId(),
     });
