@@ -1,13 +1,14 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(647438),
     i = n(876215),
     l = n(442837),
     a = n(146282),
+    s = n(354655),
     o = n(442853),
-    s = n(520951),
-    c = n(897674),
+    c = n(520951),
+    d = n(897674),
     u = n(206583);
-let d = new Set([
+let p = new Set([
     i.s.PLAYED_GAME,
     i.s.WATCHED_MEDIA,
     i.s.TOP_GAME,
@@ -15,14 +16,15 @@ let d = new Set([
     i.s.LISTENED_SESSION,
     i.s.LAUNCHED_ACTIVITY,
 ]);
-function p(e) {
-    let t = (0, c.Z)({ id: u.YN.GLOBAL_FEED });
+function h(e) {
+    let t = (0, d.Z)({ id: u.YN.GLOBAL_FEED });
     (t = (0, o.Z)({
         entries: t,
         channelId: e,
     })),
-        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => d.has(e.content_type))), [t]));
-    let { entries: n, filteredIds: i } = (0, s.Z)(t);
+        (t = (0, s.Z)({ entries: t })),
+        (t = r.useMemo(() => (null == t ? void 0 : t.filter((e) => p.has(e.content_type))), [t]));
+    let { entries: n, filteredIds: i } = (0, c.Z)(t);
     return (
         (t = n),
         {
