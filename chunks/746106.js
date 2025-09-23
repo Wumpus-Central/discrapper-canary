@@ -1,4 +1,4 @@
-n.d(t, { w: () => R }), n(388685);
+n.d(t, { w: () => P }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(631562),
@@ -13,76 +13,78 @@ var r = n(951288),
     p = n(950796),
     h = n(392358),
     m = n(591146),
-    g = n(314910),
-    E = n(928518),
-    b = n(823961),
-    y = n(819439),
-    O = n(706454),
-    v = n(210887),
-    I = n(451478),
-    T = n(998502),
-    S = n(264783),
-    A = n(892071),
-    C = n(388032);
-function N(e, t) {
-    let n = i.useCallback(
+    g = n(377089),
+    E = n(314910),
+    b = n(928518),
+    y = n(823961),
+    O = n(819439),
+    v = n(706454),
+    I = n(210887),
+    T = n(451478),
+    S = n(998502),
+    A = n(264783),
+    C = n(892071),
+    N = n(388032);
+function R(e, t, n) {
+    let r = i.useCallback(
             () => ({
                 i18n: {
-                    SPINNER_LOADING_LABEL: C.intl.string(C.t.ZTNur6),
-                    BUTTON_LOADING_STARTED_LABEL: C.intl.string(C.t.pfChQk),
-                    BUTTON_LOADING_FINISHED_LABEL: C.intl.string(C.t.SVPara),
-                    CLOSE_BUTTON_LABEL: C.intl.string(C.t.cpT0Cg),
-                    PLAY_BUTTON_LABEL: C.intl.string(C.t.RscU7O),
-                    PAUSE_BUTTON_LABEL: C.intl.string(C.t.ZcgDJS),
-                    NEW: C.intl.string(C.t.y2b7CA),
-                    BETA: C.intl.string(C.t.oW0eUV),
-                    EARLY_ACCESS: C.intl.string(C.t.EYxi0t),
-                    BILLING_TRIAL_FREE_TRIAL_TEXT: C.intl.string(C.t.IBYG5e),
+                    SPINNER_LOADING_LABEL: N.intl.string(N.t.ZTNur6),
+                    BUTTON_LOADING_STARTED_LABEL: N.intl.string(N.t.pfChQk),
+                    BUTTON_LOADING_FINISHED_LABEL: N.intl.string(N.t.SVPara),
+                    CLOSE_BUTTON_LABEL: N.intl.string(N.t.cpT0Cg),
+                    PLAY_BUTTON_LABEL: N.intl.string(N.t.RscU7O),
+                    PAUSE_BUTTON_LABEL: N.intl.string(N.t.ZcgDJS),
+                    NEW: N.intl.string(N.t.y2b7CA),
+                    BETA: N.intl.string(N.t.oW0eUV),
+                    EARLY_ACCESS: N.intl.string(N.t.EYxi0t),
+                    BILLING_TRIAL_FREE_TRIAL_TEXT: N.intl.string(N.t.IBYG5e),
                 },
                 theme: e,
                 saturation: t,
-                defaultLayerContext: g.nz,
+                defaultLayerContext: E.nz,
+                experiments: { enabledExperiments: n },
             }),
-            [e, t],
+            [e, t, n],
         ),
-        [r, o] = i.useState(n);
+        [o, s] = i.useState(r);
     return (
         i.useLayoutEffect(() => {
             function e() {
-                o(n);
+                s(r);
             }
-            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), C.intl.onLocaleChange(e);
-        }, [n]),
-        r
+            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), N.intl.onLocaleChange(e);
+        }, [r]),
+        o
     );
 }
-function R(e) {
+function P(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
-        [g] = i.useState(() => T.ZP.getEnableHardwareAcceleration()),
+        [E] = i.useState(() => S.ZP.getEnableHardwareAcceleration()),
         {
-            locale: C,
-            theme: R,
-            focused: P,
-            currentWindow: w,
-            fontScale: D,
-            fontScaleClass: x,
-            keyboardModeEnabled: L,
-            saturation: j,
-            desaturateUserColors: M,
-            useForcedColors: k,
-            systemForcedColors: U,
-            useReducedMotion: G,
-            alwaysShowLinkDecorations: B,
-            confettiMode: Z,
-            highContrastMode: F,
-        } = (0, l.cj)([O.default, u.Z, v.Z, I.Z, E.Z, b.Z], () => {
+            locale: N,
+            theme: P,
+            focused: w,
+            currentWindow: D,
+            fontScale: x,
+            fontScaleClass: L,
+            keyboardModeEnabled: j,
+            saturation: M,
+            desaturateUserColors: k,
+            useForcedColors: U,
+            systemForcedColors: G,
+            useReducedMotion: B,
+            alwaysShowLinkDecorations: Z,
+            confettiMode: F,
+            highContrastMode: V,
+        } = (0, l.cj)([v.default, u.Z, I.Z, T.Z, b.Z, y.Z], () => {
             var e;
             return {
-                locale: O.default.locale,
-                theme: null != n ? n : v.Z.theme,
-                focused: o ? E.Z.getWindowFocused(t) : I.Z.isFocused(),
-                currentWindow: o && null != (e = E.Z.getWindow(t)) ? e : window,
+                locale: v.default.locale,
+                theme: null != n ? n : I.Z.theme,
+                focused: o ? b.Z.getWindowFocused(t) : T.Z.isFocused(),
+                currentWindow: o && null != (e = b.Z.getWindow(t)) ? e : window,
                 fontScale: u.Z.fontScale,
                 fontScaleClass: u.Z.fontScaleClass,
                 keyboardModeEnabled: u.Z.keyboardModeEnabled,
@@ -93,57 +95,71 @@ function R(e) {
                 useReducedMotion: u.Z.useReducedMotion,
                 alwaysShowLinkDecorations: u.Z.alwaysShowLinkDecorations,
                 highContrastMode: u.Z.isHighContrastModeEnabled,
-                confettiMode: b.Z.confettiMode,
+                confettiMode: y.Z.confettiMode,
             };
         }),
-        V = d.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
-        H = (0, h.Z)(w, __OVERLAY__ || P),
-        Y = 0;
-    1 !== j && (Y = (0, c.OdO)(Y, c.bgu.REDUCE_SATURATION_ENABLED));
-    let W = (0, S.A)(),
-        K = (0, m.Ml)("RootThemeContextProvider"),
-        z = (0, m.CL)("RootThemeContextProvider"),
-        q = (0, m.VM)("RootThemeContextProvider"),
-        X = _.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
-        Q = (0, f.Z)("RootThemeContextProvider"),
-        J = (0, y.$)({ location: "RootThemeContextProvider" }),
-        $ = (0, p.On)({
+        H = d.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
+        Y = (0, h.Z)(D, __OVERLAY__ || w),
+        W = 0;
+    1 !== M && (W = (0, c.OdO)(W, c.bgu.REDUCE_SATURATION_ENABLED));
+    let K = (0, A.A)(),
+        z = (0, m.Ml)("RootThemeContextProvider"),
+        q = (0, m.CL)("RootThemeContextProvider"),
+        X = (0, m.VM)("RootThemeContextProvider"),
+        Q = (0, g.U)("RootThemeContextProvider"),
+        J = _.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
+        $ = (0, f.Z)("RootThemeContextProvider"),
+        ee = (0, O.$)({ location: "RootThemeContextProvider" }),
+        et = (0, p.On)({
             isPopoutWindow: o,
-            isSearchDesktopTopLevelEnabled: J,
+            isSearchDesktopTopLevelEnabled: ee,
         }),
-        ee = N(R, j);
+        en = R(
+            P,
+            M,
+            i.useMemo(() => {
+                let e = [];
+                return (
+                    z && e.push("refresh-fast-follow-avatars"),
+                    q && e.push("refresh-fast-follow-guild-bg"),
+                    X && e.push("refresh-fast-follow-distinct-borders"),
+                    Q && e.push("mana-text-inputs"),
+                    e
+                );
+            }, [z, q, X, Q]),
+        );
     return (0, r.jsx)(c.kb5, {
-        value: ee,
+        value: en,
         children: (0, r.jsx)(c.wMY, {
-            theme: R,
-            flags: Y,
-            saturation: j,
-            density: W,
-            children: (0, r.jsx)(A.cE, {
-                lang: C,
-                theme: R,
-                density: W,
-                focused: P,
-                fontScale: D,
-                fontScaleClass: x,
-                keyboardModeEnabled: L,
-                mouseMode: H,
-                saturation: j,
-                desaturateUserColors: M,
-                useForcedColors: k,
-                systemForcedColors: U,
-                useReducedMotion: G,
-                alwaysShowLinkDecorations: B,
-                hardwareAccelerationEnabled: g,
-                highContrastMode: V && F,
+            theme: P,
+            flags: W,
+            saturation: M,
+            density: K,
+            children: (0, r.jsx)(C.cE, {
+                lang: N,
+                theme: P,
+                density: K,
+                focused: w,
+                fontScale: x,
+                fontScaleClass: L,
+                keyboardModeEnabled: j,
+                mouseMode: Y,
+                saturation: M,
+                desaturateUserColors: k,
+                useForcedColors: U,
+                systemForcedColors: G,
+                useReducedMotion: B,
+                alwaysShowLinkDecorations: Z,
+                hardwareAccelerationEnabled: E,
+                highContrastMode: H && V,
                 isPopoutWindow: o,
-                rootClassName: s()($, {
-                    "confetti-mode": Z,
-                    "refresh-fast-follow-avatars": K && !Q,
-                    "refresh-fast-follow-guild-bg": z,
-                    "refresh-fast-follow-distinct-borders": q,
-                    "client-theme-color-picker": X,
-                    "align-chat-input": Q,
+                rootClassName: s()(et, {
+                    "confetti-mode": F,
+                    "refresh-fast-follow-avatars": z && !$,
+                    "refresh-fast-follow-guild-bg": q,
+                    "refresh-fast-follow-distinct-borders": X,
+                    "client-theme-color-picker": J,
+                    "align-chat-input": $,
                 }),
                 children: a,
             }),

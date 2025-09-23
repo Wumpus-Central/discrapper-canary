@@ -1,7 +1,7 @@
 n.d(t, { a: () => o }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(497039);
+    a = n(793030);
 let o = {
     title: "VoidSwitch",
     stories: [
@@ -11,7 +11,7 @@ let o = {
             component: function (e) {
                 let { disabled: t } = e,
                     [n, o] = i.useState(!1);
-                return (0, r.jsx)(a.T, {
+                return (0, r.jsx)(a.T2P, {
                     onChange: o,
                     disabled: t,
                     checked: n,
