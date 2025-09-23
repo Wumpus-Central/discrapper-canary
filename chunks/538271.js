@@ -23,4 +23,5 @@ e.exports = {
     constrainedRow: "constrainedRow__1fed1",
     usernameRow: "usernameRow__1fed1",
     usernameInnerRow: "usernameInnerRow__1fed1",
+    textRevealer: "textRevealer__1fed1",
 };

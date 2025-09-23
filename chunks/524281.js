@@ -5,7 +5,6 @@ e.exports = {
     emptyState: "emptyState_bc4a3e",
     description: "description_bc4a3e",
     divider: "divider_bc4a3e",
-    debugButton: "debugButton_bc4a3e",
     debugTitle: "debugTitle_bc4a3e",
     pre: "pre_bc4a3e",
 };

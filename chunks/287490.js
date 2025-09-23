@@ -1,25 +1,24 @@
-n.d(t, { Z: () => S }), n(388685), n(953529), n(49124), n(539854), n(642613);
+n.d(t, { Z: () => T }), n(388685), n(953529), n(49124), n(539854), n(642613);
 var r = n(951288),
     i = n(647438),
     a = n(392711),
     o = n.n(a),
     s = n(442837),
-    l = n(755721),
-    c = n(481060),
-    u = n(887580),
-    d = n(492435),
-    f = n(389494),
-    _ = n(353926),
-    p = n(667344),
-    h = n(453032),
-    m = n(493075),
-    g = n(314897),
-    E = n(430824),
-    b = n(572004),
-    y = n(878209),
-    O = n(987338),
-    v = n(758746);
-function I(e, t, n) {
+    l = n(481060),
+    c = n(887580),
+    u = n(492435),
+    d = n(389494),
+    f = n(353926),
+    _ = n(667344),
+    p = n(453032),
+    h = n(493075),
+    m = n(314897),
+    g = n(430824),
+    E = n(572004),
+    b = n(878209),
+    y = n(987338),
+    O = n(524281);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +31,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,30 +42,30 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function S() {
-    let { experiments: e, overridesInfo: t } = (0, p.Q)(),
-        { experiments: n, overridesInfo: a } = (0, m.s)(),
-        o = i.useMemo(() => T({}, n, e), [n, e]),
-        s = i.useMemo(() => T({}, a, t), [a, t]),
-        [l, u] = i.useState(""),
-        d = (0, y.Ro)((0, y.Tc)((0, y.Cg)(o), s), l);
-    return (0, r.jsxs)(c.hjN, {
-        tag: c.RB0.H1,
+function T() {
+    let { experiments: e, overridesInfo: t } = (0, _.Q)(),
+        { experiments: n, overridesInfo: a } = (0, h.s)(),
+        o = i.useMemo(() => I({}, n, e), [n, e]),
+        s = i.useMemo(() => I({}, a, t), [a, t]),
+        [c, u] = i.useState(""),
+        d = (0, b.Ro)((0, b.Tc)((0, b.Cg)(o), s), c);
+    return (0, r.jsxs)(l.hjN, {
+        tag: l.RB0.H1,
         title: "Experiments",
         children: [
-            (0, r.jsx)(c.E1j, {
-                query: l,
+            (0, r.jsx)(l.E1j, {
+                query: c,
                 onChange: u,
                 onClear: () => u(""),
             }),
             d.length > 0
                 ? d.map((e) => {
-                      let t = "guild" === e.experiment.kind ? C : A;
+                      let t = "guild" === e.experiment.kind ? A : S;
                       return (0, r.jsx)(
                           t,
                           {
@@ -79,8 +78,8 @@ function S() {
                       );
                   })
                 : (0, r.jsx)("div", {
-                      className: v.emptyState,
-                      children: (0, r.jsx)(c.X6q, {
+                      className: O.emptyState,
+                      children: (0, r.jsx)(l.X6q, {
                           variant: "heading-md/semibold",
                           children: "No Experiments Found",
                       }),
@@ -88,19 +87,19 @@ function S() {
         ],
     });
 }
-function A(e) {
-    let { experiment: t, experimentId: n, overrideInfo: a, defaultOpen: p } = e,
-        [m, E] = i.useState(p),
-        [y, I] = i.useState(!1),
-        T = i.useCallback(() => {
-            E((e) => !e);
+function S(e) {
+    let { experiment: t, experimentId: n, overrideInfo: a, defaultOpen: _ } = e,
+        [h, g] = i.useState(_),
+        [b, v] = i.useState(!1),
+        I = i.useCallback(() => {
+            g((e) => !e);
         }, []),
-        S = (0, s.e7)([g.default], () => g.default.getId()),
-        A = (0, h.q)(t, S),
-        C = (0, h.a)(t, S),
-        N = (0, s.Wu)([_.Z], () =>
+        T = (0, s.e7)([m.default], () => m.default.getId()),
+        S = (0, p.q)(t, T),
+        A = (0, p.a)(t, T),
+        C = (0, s.Wu)([f.Z], () =>
             o()
-                .sortBy(_.Z.getRecentExposures(O.xY.USER, n), (e) => {
+                .sortBy(f.Z.getRecentExposures(y.xY.USER, n), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -109,13 +108,13 @@ function A(e) {
                     return "".concat(new Date(n).toLocaleString(), " (").concat(t, ")");
                 }),
         ),
-        R = i.useCallback(
+        N = i.useCallback(
             (e) => {
-                (0, b.JG)((0, u.sZ)(n), () => {
-                    (0, c.showToast)({
+                (0, E.JG)((0, c.sZ)(n), () => {
+                    (0, l.showToast)({
                         id: "experiment-link-copied",
                         message: "Copied experiment link",
-                        type: c.ToastType.SUCCESS,
+                        type: l.ToastType.SUCCESS,
                     }),
                         e.preventDefault(),
                         e.stopPropagation();
@@ -123,30 +122,30 @@ function A(e) {
             },
             [n],
         ),
-        P = (0, r.jsx)(c.kL8, {
+        R = (0, r.jsx)(l.kL8, {
             "aria-label": "Toggle visibility",
-            onClick: T,
-            children: (0, r.jsxs)(c.vwX, {
-                tag: c.RB0.H3,
-                className: v.title,
+            onClick: I,
+            children: (0, r.jsxs)(l.vwX, {
+                tag: l.RB0.H3,
+                className: O.title,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsxs)(c.Kqy, {
+                            (0, r.jsxs)(l.Kqy, {
                                 direction: "horizontal",
                                 align: "center",
                                 gap: 4,
                                 children: [
                                     t.title,
                                     " ",
-                                    b.wS &&
-                                        (0, r.jsx)(c.P3F, {
-                                            onClick: R,
-                                            children: (0, r.jsx)(c.xPt, { size: "xs" }),
+                                    E.wS &&
+                                        (0, r.jsx)(l.P3F, {
+                                            onClick: N,
+                                            children: (0, r.jsx)(l.xPt, { size: "xs" }),
                                         }),
                                 ],
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(l.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
                                 children: n,
@@ -154,35 +153,35 @@ function A(e) {
                         ],
                     }),
                     (0, r.jsx)("span", {
-                        className: v.experimentDate,
+                        className: O.experimentDate,
                         children: "User",
                     }),
                 ],
             }),
         });
-    if (!m)
+    if (!h)
         return (0, r.jsx)("div", {
-            className: v.group,
-            children: (0, r.jsx)(c.hjN, { children: P }),
+            className: O.group,
+            children: (0, r.jsx)(l.hjN, { children: R }),
         });
-    let w = "";
+    let P = "";
     return (
-        (w =
-            t.system === d.I.LEGACY
-                ? "Currently assigned to bucket ".concat(null != A ? A : O.NZ.NOT_ELIGIBLE)
-                : null != A
-                  ? "Currently assigned to variant ".concat(A)
+        (P =
+            t.system === u.I.LEGACY
+                ? "Currently assigned to bucket ".concat(null != S ? S : y.NZ.NOT_ELIGIBLE)
+                : null != S
+                  ? "Currently assigned to variant ".concat(S)
                   : "Currently unassigned"),
         (0, r.jsxs)("div", {
-            className: v.group,
+            className: O.group,
             children: [
-                (0, r.jsxs)(c.hjN, {
+                (0, r.jsxs)(l.hjN, {
                     children: [
-                        P,
+                        R,
                         (0, r.jsx)("div", {
-                            children: (0, r.jsx)(c.xJW, {
-                                title: t.system === d.I.LEGACY ? "Bucket Override" : "Variant Override",
-                                children: (0, r.jsx)(f.y, {
+                            children: (0, r.jsx)(l.xJW, {
+                                title: t.system === u.I.LEGACY ? "Bucket Override" : "Variant Override",
+                                children: (0, r.jsx)(d.y, {
                                     experiment: t,
                                     experimentId: n,
                                     overrideInfo: a,
@@ -190,84 +189,85 @@ function A(e) {
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: v.description,
+                            className: O.description,
                             children: [
-                                (0, r.jsx)(c.R94, {
-                                    type: c.geA.DESCRIPTION,
-                                    children: w,
+                                (0, r.jsx)(l.R94, {
+                                    type: l.geA.DESCRIPTION,
+                                    children: P,
                                 }),
-                                null == C
-                                    ? (0, r.jsx)(c.R94, {
-                                          type: c.geA.DESCRIPTION,
+                                null == A
+                                    ? (0, r.jsx)(l.R94, {
+                                          type: l.geA.DESCRIPTION,
                                           children:
                                               'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
                                       })
                                     : null,
                             ],
                         }),
-                        y
+                        b
                             ? (0, r.jsxs)("div", {
                                   children: [
-                                      (0, r.jsx)(c.vwX, {
+                                      (0, r.jsx)(l.vwX, {
                                           tag: "h5",
-                                          className: v.debugTitle,
+                                          className: O.debugTitle,
                                           children: "Server Descriptor",
                                       }),
-                                      (0, r.jsx)(c.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: "code",
-                                          className: v.pre,
-                                          children: null == C ? "None" : JSON.stringify(C, void 0, 2),
+                                          className: O.pre,
+                                          children: null == A ? "None" : JSON.stringify(A, void 0, 2),
                                       }),
-                                      (0, r.jsx)(c.vwX, {
+                                      (0, r.jsx)(l.vwX, {
                                           tag: "h5",
-                                          className: v.debugTitle,
+                                          className: O.debugTitle,
                                           children: "Override Descriptor",
                                       }),
-                                      (0, r.jsx)(c.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: "code",
-                                          className: v.pre,
+                                          className: O.pre,
                                           children:
                                               (null == a ? void 0 : a.originalDescriptor) == null
                                                   ? "None"
                                                   : JSON.stringify(a.originalDescriptor, void 0, 2),
                                       }),
-                                      (0, r.jsx)(c.vwX, {
+                                      (0, r.jsx)(l.vwX, {
                                           tag: "h5",
-                                          className: v.debugTitle,
+                                          className: O.debugTitle,
                                           children: "Recent Exposures",
                                       }),
-                                      (0, r.jsx)(c.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: "code",
-                                          className: v.pre,
-                                          children: 0 === N.length ? "None" : N.join("\n"),
+                                          className: O.pre,
+                                          children: 0 === C.length ? "None" : C.join("\n"),
                                       }),
                                   ],
                               })
-                            : (0, r.jsx)(l.zx, {
-                                  className: v.debugButton,
-                                  size: l.zx.Sizes.SMALL,
-                                  look: l.zx.Looks.BLANK,
-                                  onClick: () => I(!0),
-                                  children: "More Details \xBB",
+                            : (0, r.jsx)("div", {
+                                  className: O.debugTitle,
+                                  children: (0, r.jsx)(l.Avr, {
+                                      variant: "secondary",
+                                      text: "More Details \xBB",
+                                      onClick: () => v(!0),
+                                  }),
                               }),
                     ],
                 }),
-                (0, r.jsx)(c.$i$, { className: v.divider }),
+                (0, r.jsx)(l.$i$, { className: O.divider }),
             ],
         })
     );
 }
-function C(e) {
+function A(e) {
     let { experiment: t, experimentId: n, overrideInfo: a } = e,
-        [u, d] = i.useState(null != a),
-        [p, h] = i.useState(!1),
-        m = i.useCallback(() => {
-            d((e) => !e);
+        [c, u] = i.useState(null != a),
+        [_, p] = i.useState(!1),
+        h = i.useCallback(() => {
+            u((e) => !e);
         }, []),
-        g = (0, s.e7)([_.Z], () => _.Z.getLoadedGuildExperiment(n)),
-        b = (0, s.Wu)([_.Z], () =>
+        m = (0, s.e7)([f.Z], () => f.Z.getLoadedGuildExperiment(n)),
+        E = (0, s.Wu)([f.Z], () =>
             o()
-                .sortBy(_.Z.getRecentExposures(O.xY.GUILD, n), (e) => {
+                .sortBy(f.Z.getRecentExposures(y.xY.GUILD, n), (e) => {
                     let [t, n] = e;
                     return -n;
                 })
@@ -276,14 +276,14 @@ function C(e) {
                     return "".concat(new Date(n).toLocaleString(), " (").concat(t, ")");
                 }),
         ),
-        [y, I] = (0, s.Wu)([E.Z, _.Z], () => {
-            let e = o().sortBy(E.Z.getGuildsArray(), (e) => e.name.toLowerCase()),
+        [b, v] = (0, s.Wu)([g.Z, f.Z], () => {
+            let e = o().sortBy(g.Z.getGuildsArray(), (e) => e.name.toLowerCase()),
                 t = {},
                 r = [];
             for (let a of e) {
                 var i;
-                let e = _.Z.getGuildExperimentDescriptor(n, a.id),
-                    o = null != (i = null == e ? void 0 : e.bucket) ? i : O.NZ.NOT_ELIGIBLE;
+                let e = f.Z.getGuildExperimentDescriptor(n, a.id),
+                    o = null != (i = null == e ? void 0 : e.bucket) ? i : y.NZ.NOT_ELIGIBLE;
                 o in t || (t[o] = 0), t[o]++, r.push("".concat(a.name, ": ").concat(o));
             }
             let a = o()(t)
@@ -294,16 +294,16 @@ function C(e) {
                 .join(", ");
             return [r.join("\n"), a];
         }),
-        T = (0, r.jsx)(c.P3F, {
-            onClick: m,
-            children: (0, r.jsxs)(c.vwX, {
-                tag: c.RB0.H3,
-                className: v.title,
+        I = (0, r.jsx)(l.P3F, {
+            onClick: h,
+            children: (0, r.jsxs)(l.vwX, {
+                tag: l.RB0.H3,
+                className: O.title,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)("span", { children: t.title }),
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(l.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
                                 children: n,
@@ -311,23 +311,23 @@ function C(e) {
                         ],
                     }),
                     (0, r.jsx)("span", {
-                        className: v.experimentDate,
+                        className: O.experimentDate,
                         children: "Guild",
                     }),
                 ],
             }),
         });
-    return u
+    return c
         ? (0, r.jsxs)("div", {
-              className: v.group,
+              className: O.group,
               children: [
-                  (0, r.jsxs)(c.hjN, {
+                  (0, r.jsxs)(l.hjN, {
                       children: [
-                          T,
+                          I,
                           (0, r.jsx)("div", {
-                              children: (0, r.jsx)(c.xJW, {
+                              children: (0, r.jsx)(l.xJW, {
                                   title: "Bucket Override",
-                                  children: (0, r.jsx)(f.y, {
+                                  children: (0, r.jsx)(d.y, {
                                       experiment: t,
                                       experimentId: n,
                                       overrideInfo: a,
@@ -335,83 +335,84 @@ function C(e) {
                               }),
                           }),
                           (0, r.jsxs)("div", {
-                              className: v.description,
+                              className: O.description,
                               children: [
-                                  (0, r.jsxs)(c.R94, {
-                                      type: c.geA.DESCRIPTION,
-                                      children: ["Current Assignments: ", I],
+                                  (0, r.jsxs)(l.R94, {
+                                      type: l.geA.DESCRIPTION,
+                                      children: ["Current Assignments: ", v],
                                   }),
-                                  null == g
-                                      ? (0, r.jsx)(c.R94, {
-                                            type: c.geA.DESCRIPTION,
+                                  null == m
+                                      ? (0, r.jsx)(l.R94, {
+                                            type: l.geA.DESCRIPTION,
                                             children:
                                                 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
                                         })
                                       : null,
                               ],
                           }),
-                          p
+                          _
                               ? (0, r.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(c.vwX, {
+                                        (0, r.jsx)(l.vwX, {
                                             tag: "h5",
-                                            className: v.debugTitle,
+                                            className: O.debugTitle,
                                             children: "Guild Assignments",
                                         }),
-                                        (0, r.jsx)(c.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             variant: "code",
-                                            className: v.pre,
-                                            children: y,
+                                            className: O.pre,
+                                            children: b,
                                         }),
-                                        (0, r.jsx)(c.vwX, {
+                                        (0, r.jsx)(l.vwX, {
                                             tag: "h5",
-                                            className: v.debugTitle,
+                                            className: O.debugTitle,
                                             children: "Server Descriptor",
                                         }),
-                                        (0, r.jsx)(c.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             variant: "code",
-                                            className: v.pre,
-                                            children: null == g ? "None" : JSON.stringify(g, void 0, 2),
+                                            className: O.pre,
+                                            children: null == m ? "None" : JSON.stringify(m, void 0, 2),
                                         }),
-                                        (0, r.jsx)(c.vwX, {
+                                        (0, r.jsx)(l.vwX, {
                                             tag: "h5",
-                                            className: v.debugTitle,
+                                            className: O.debugTitle,
                                             children: "Override Descriptor",
                                         }),
-                                        (0, r.jsx)(c.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             variant: "code",
-                                            className: v.pre,
+                                            className: O.pre,
                                             children:
                                                 (null == a ? void 0 : a.originalDescriptor) == null
                                                     ? "None"
                                                     : JSON.stringify(a.originalDescriptor, void 0, 2),
                                         }),
-                                        (0, r.jsx)(c.vwX, {
+                                        (0, r.jsx)(l.vwX, {
                                             tag: "h5",
-                                            className: v.debugTitle,
+                                            className: O.debugTitle,
                                             children: "Recent Exposures",
                                         }),
-                                        (0, r.jsx)(c.Text, {
+                                        (0, r.jsx)(l.Text, {
                                             variant: "code",
-                                            className: v.pre,
-                                            children: 0 === b.length ? "None" : b.join("\n"),
+                                            className: O.pre,
+                                            children: 0 === E.length ? "None" : E.join("\n"),
                                         }),
                                     ],
                                 })
-                              : (0, r.jsx)(l.zx, {
-                                    className: v.debugButton,
-                                    size: l.zx.Sizes.SMALL,
-                                    look: l.zx.Looks.BLANK,
-                                    onClick: () => h(!0),
-                                    children: "More Details \xBB",
+                              : (0, r.jsx)("div", {
+                                    className: O.debugTitle,
+                                    children: (0, r.jsx)(l.Avr, {
+                                        variant: "secondary",
+                                        text: "More Details \xBB",
+                                        onClick: () => p(!0),
+                                    }),
                                 }),
                       ],
                   }),
-                  (0, r.jsx)(c.$i$, { className: v.divider }),
+                  (0, r.jsx)(l.$i$, { className: O.divider }),
               ],
           })
         : (0, r.jsx)("div", {
-              className: v.group,
-              children: (0, r.jsx)(c.hjN, { children: T }),
+              className: O.group,
+              children: (0, r.jsx)(l.hjN, { children: I }),
           });
 }

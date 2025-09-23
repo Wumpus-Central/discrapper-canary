@@ -1,78 +1,76 @@
-n.d(t, { c: () => I });
+n.d(t, { c: () => v });
 var r = n(951288);
 n(647438);
 var i = n(442837),
-    a = n(755721),
-    o = n(481060),
-    s = n(493773),
-    l = n(100527),
-    c = n(906732),
-    u = n(737604),
-    d = n(539873),
-    f = n(803038),
-    _ = n(550385),
-    p = n(638212),
-    h = n(767714),
-    m = n(626135),
-    g = n(342386),
-    E = n(981631),
-    b = n(474936),
-    y = n(388032),
-    O = n(77247);
-let v = () => {
-        (0, _.XO)(_.wh.APP_ICON), (0, g.default)();
+    a = n(481060),
+    o = n(493773),
+    s = n(100527),
+    l = n(906732),
+    c = n(737604),
+    u = n(539873),
+    d = n(803038),
+    f = n(550385),
+    _ = n(638212),
+    p = n(767714),
+    h = n(626135),
+    m = n(342386),
+    g = n(981631),
+    E = n(474936),
+    b = n(388032),
+    y = n(77247);
+let O = () => {
+        (0, f.XO)(f.wh.APP_ICON), (0, m.default)();
     },
-    I = () => {
-        let { analyticsLocations: e } = (0, c.ZP)(l.Z.USER_SETTINGS),
-            t = (0, i.e7)([u.Z], () => u.Z.isUpsellPreview);
-        (0, s.ZP)(() => {
+    v = () => {
+        let { analyticsLocations: e } = (0, l.ZP)(s.Z.USER_SETTINGS),
+            t = (0, i.e7)([c.Z], () => c.Z.isUpsellPreview);
+        (0, o.ZP)(() => {
             t &&
-                m.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: b.cd.APP_ICON_UPSELL,
+                h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: E.cd.APP_ICON_UPSELL,
                     location_stack: e,
                 });
         });
-        let { v2EditorEnabled: n } = f.Mc.useExperiment({ location: "UserSettingsAppearanceInAppIcon" }),
-            _ = () => {
-                let e = n ? O.tryItOutButtonsV2 : O.tryItOutButtons;
+        let { v2EditorEnabled: n } = d.Mc.useExperiment({ location: "UserSettingsAppearanceInAppIcon" }),
+            f = () => {
+                let e = n ? y.tryItOutButtonsV2 : y.tryItOutButtons;
                 return (0, r.jsxs)("div", {
                     className: e,
                     children: [
-                        (0, r.jsx)(a.zx, {
-                            size: a.zx.Sizes.MEDIUM,
-                            color: t ? a.zx.Colors.PRIMARY : a.zx.Colors.BRAND,
-                            onClick: () => v(),
-                            children: y.intl.string(y.t["hb/wEx"]),
+                        (0, r.jsx)(a.zxk, {
+                            variant: t ? "secondary" : "primary",
+                            text: b.intl.string(b.t["hb/wEx"]),
+                            onClick: () => O(),
                         }),
                         t
                             ? n
-                                ? (0, r.jsx)(p.Z, {
-                                      subscriptionTier: b.Si.TIER_2,
-                                      defaultTextOverride: y.intl.string(y.t.mr4K7O),
+                                ? (0, r.jsx)(_.Z, {
+                                      subscriptionTier: E.Si.TIER_2,
+                                      defaultTextOverride: b.intl.string(b.t.mr4K7O),
                                       premiumModalAnalyticsLocation: {
-                                          object: E.qAy.BUTTON_CTA,
-                                          objectType: E.Qqv.BUY,
+                                          object: g.qAy.BUTTON_CTA,
+                                          objectType: g.Qqv.BUY,
                                       },
                                       fullWidth: !0,
                                   })
-                                : (0, r.jsx)(h.Z, {
-                                      className: O.tryItOutButton,
+                                : (0, r.jsx)(p.Z, {
+                                      className: y.tryItOutButton,
                                       showGradient: !1,
-                                      subscriptionTier: b.Si.TIER_2,
-                                      textOptions: { textOverride: y.intl.string(y.t.mr4K7O) },
+                                      subscriptionTier: E.Si.TIER_2,
+                                      textOptions: { textOverride: b.intl.string(b.t.mr4K7O) },
                                   })
                             : null,
                     ],
                 });
             };
         return (0, r.jsxs)("div", {
-            className: O.selectionGroup,
+            className: y.selectionGroup,
             children: [
-                (0, r.jsx)(d.Z, {
+                (0, r.jsx)(u.Z, {
                     disabled: t,
-                    renderCTAButtons: _,
+                    renderCTAButtons: f,
                 }),
-                (0, r.jsx)(o.$i$, { className: O.divider }),
+                (0, r.jsx)(a.$i$, { className: y.divider }),
             ],
         });
     };

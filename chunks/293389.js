@@ -504,11 +504,11 @@ let H = (0, I.oH)(function () {
     Y = function (e) {
         let { className: t, showHeader: n = !0 } = e,
             a = (0, s.Wu)([h.ZP], () => h.ZP.getGamesSeen(!1)),
-            { runningGame: l, overrideExePaths: d } = (0, s.cj)([h.ZP], () => ({
+            { runningGame: l, overrideExePaths: c } = (0, s.cj)([h.ZP], () => ({
                 runningGame: h.ZP.getVisibleGame(),
                 overrideExePaths: H(...h.ZP.getOverrides()),
             })),
-            { gameHistory: f, robloxSubgameHistory: _ } = i.useMemo(
+            { gameHistory: d, robloxSubgameHistory: f } = i.useMemo(
                 () =>
                     a.reduce((e, t) => ((0, b.le)(t) ? e.robloxSubgameHistory.push(t) : e.gameHistory.push(t), e), {
                         gameHistory: [],
@@ -516,9 +516,9 @@ let H = (0, I.oH)(function () {
                     }),
                 [a],
             ),
-            p = i.useRef(null);
-        function g() {
-            return 0 === f.length
+            _ = i.useRef(null);
+        function p() {
+            return 0 === d.length
                 ? (0, r.jsx)(V, { children: (0, r.jsx)(u.OZU, { children: C.intl.string(C.t["1yiJws"]) }) })
                 : (0, r.jsxs)(u.hjN, {
                       className: w.marginTop40,
@@ -532,13 +532,13 @@ let H = (0, I.oH)(function () {
                               type: u.geA.DESCRIPTION,
                               children: C.intl.format(C.t.KPA3m5, { igdbLink: G }),
                           }),
-                          f.map((e) =>
+                          d.map((e) =>
                               (0, r.jsx)(
                                   Z,
                                   {
                                       rawGame: e,
-                                      isOverride: d.has(e.exePath),
-                                      subgames: e.id === E.eB ? _ : void 0,
+                                      isOverride: c.has(e.exePath),
+                                      subgames: e.id === E.eB ? f : void 0,
                                   },
                                   (0, h.rH)(e),
                               ),
@@ -558,9 +558,9 @@ let H = (0, I.oH)(function () {
                               Z,
                               {
                                   rawGame: l,
-                                  isOverride: d.has(l.exePath),
+                                  isOverride: c.has(l.exePath),
                                   nowPlaying: !0,
-                                  subgames: l.id === E.eB ? _ : void 0,
+                                  subgames: l.id === E.eB ? f : void 0,
                               },
                               (0, h.rH)(l),
                           )
@@ -570,7 +570,7 @@ let H = (0, I.oH)(function () {
                         children: [
                             (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqK) }),
                             (0, r.jsx)(u.yRy, {
-                                targetElementRef: p,
+                                targetElementRef: _,
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
                                     return (0, r.jsx)(B, { onClose: t });
@@ -579,19 +579,18 @@ let H = (0, I.oH)(function () {
                                 position: "bottom",
                                 children: (e) =>
                                     (0, r.jsx)(
-                                        c.zx,
+                                        u.Avr,
                                         j(x({}, e), {
-                                            look: c.iL.LINK,
-                                            size: c.Ph.MIN,
-                                            color: c.Tt.LINK,
-                                            buttonRef: p,
-                                            children: C.intl.string(C.t.GjgdXV),
+                                            buttonRef: _,
+                                            variant: "primary",
+                                            textVariant: "text-sm/medium",
+                                            text: C.intl.string(C.t.GjgdXV),
                                         }),
                                     ),
                             }),
                         ],
                     }),
-                    g(),
+                    p(),
                 ],
             })
         );

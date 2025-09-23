@@ -49904,10 +49904,9 @@ screen and (max-width:485px) {
     margin: 0 -8px
 }
 
-.previewThemeButtonWide_fbfab6 {
+.previewThemeButton_fbfab6 {
     margin-bottom: 26px;
-    margin-top: 16px;
-    width: 100%
+    margin-top: 16px
 }
 
 .premiumTier2Divider_fbfab6 {
@@ -80688,6 +80687,12 @@ div.nagbar_d74ef8 {
     border: 1px solid CanvasText
 }
 
+.textRevealer__1fed1 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
 .header__6dc27 {
     align-items: center;
     display: flex;
@@ -84066,7 +84071,10 @@ div.nagbar_d74ef8 {
 }
 
 .nowPlayingAdd_cc46f0 {
-    color: var(--header-muted)
+    align-items: center;
+    color: var(--header-muted);
+    display: flex;
+    gap: 4px
 }
 
 .nowPlaying_cc46f0 {
@@ -88573,14 +88581,6 @@ html .invoiceCancelRow__968a4 {
 
 .divider_bc4a3e {
     margin-top: 20px
-}
-
-.debugButton_bc4a3e {
-    color: var(--text-default);
-    margin: 0;
-    min-height: auto;
-    min-width: auto;
-    padding: 0
 }
 
 .debugTitle_bc4a3e {

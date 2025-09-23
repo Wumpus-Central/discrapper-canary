@@ -41,7 +41,7 @@ var r = n(951288),
     F = n(815660),
     V = n(801461),
     H = n(388032),
-    Y = n(378846);
+    Y = n(538271);
 function W(e, t, n) {
     return (
         t in e
@@ -312,16 +312,16 @@ function ee(e) {
     let { text: t, censor: n, revealLabel: a, hideLabel: o } = e,
         [s, l] = i.useState(!1),
         c = s ? t : n(t);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, r.jsxs)("div", {
+        className: Y.textRevealer,
         children: [
             c,
-            (0, r.jsx)(d.zx, {
-                look: d.zx.Looks.LINK,
-                size: d.zx.Sizes.MIN,
-                color: d.zx.Colors.LINK,
+            (0, r.jsx)(f.Avr, {
+                variant: "primary",
+                textVariant: "text-sm/medium",
                 "aria-label": s ? o : a,
                 onClick: () => l(!s),
-                children: s ? H.intl.string(H.t.fgq1go) : H.intl.string(H.t.dcztdX),
+                text: s ? H.intl.string(H.t.fgq1go) : H.intl.string(H.t.dcztdX),
             }),
         ],
     });
