@@ -14,9 +14,9 @@ var r = n(951288),
     d = n(739754),
     f = n(970184),
     _ = n(280501),
-    p = n(388032),
+    p = n(292419),
     h = n(28517),
-    m = n(623734);
+    m = n(219879);
 function g(e, t, n) {
     return (
         t in e
@@ -85,7 +85,8 @@ var v = (function (e) {
 })({});
 function I(e) {
     let { selectActionComponent: t, queryOptions: n, renderIcon: a, renderOptionLabel: s, defaultValues: g } = e,
-        { type: b, placeholder: v, maxValues: I, disabled: T } = t,
+        { type: b, maxValues: v, disabled: I } = t,
+        T = (0, p.Wo)(t),
         [S, A] = i.useState(!1),
         [C, N] = i.useState(!1),
         [R, P] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
@@ -117,7 +118,7 @@ function I(e) {
                 : void 0,
         ),
         V = null != k.modal,
-        H = I > 1,
+        H = v > 1,
         Y = B === _.gH.LOADING;
     i.useEffect(() => {
         if (
@@ -161,10 +162,10 @@ function I(e) {
         Q = 0 === R.size || S,
         J = {
             isProcessing: Y,
-            isDisabled: T || B === _.gH.DISABLED || Z,
+            isDisabled: I || B === _.gH.DISABLED || Z,
             wrapperClassName: o()(h.select, { [h.inModal]: V }),
             options: q,
-            placeholder: Q ? (null != v ? v : p.intl.string(p.t.Otr6W1)) : void 0,
+            placeholder: Q ? T : void 0,
             onClose: () => A(!1),
             onOpen: () => A(!0),
             onBlur: () => N(!1),
