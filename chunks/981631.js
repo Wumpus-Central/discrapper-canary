@@ -58,7 +58,7 @@ n.d(t, {
     HeQ: () => E.He,
     Hqc: () => nT,
     IE4: () => F,
-    IIU: () => e6,
+    IIU: () => e5,
     IWh: () => rP,
     IXf: () => te,
     I_8: () => eg,
@@ -94,7 +94,7 @@ n.d(t, {
     O0b: () => nf,
     O0n: () => es,
     O42: () => b.O4,
-    O8q: () => n5,
+    O8q: () => n6,
     OBS: () => K,
     OBo: () => nd,
     OGo: () => ef,
@@ -109,7 +109,7 @@ n.d(t, {
     POd: () => rf,
     PRK: () => e0,
     PUi: () => nk,
-    Pbq: () => t5,
+    Pbq: () => t6,
     Plq: () => E.Pl,
     PrB: () => L,
     PrS: () => tE,
@@ -164,7 +164,7 @@ n.d(t, {
     VqG: () => E.Vq,
     Vzj: () => E.Vz,
     WND: () => nc,
-    WtW: () => e5,
+    WtW: () => e6,
     Wyy: () => t9,
     X5t: () => E.X5,
     X6Q: () => E.X6,
@@ -208,7 +208,7 @@ n.d(t, {
     dN1: () => eJ,
     dYL: () => tP,
     e3s: () => n9,
-    eBq: () => n6,
+    eBq: () => n5,
     eHb: () => nX,
     eRX: () => ne,
     eWB: () => ta,
@@ -276,7 +276,7 @@ n.d(t, {
     pNK: () => A,
     pTL: () => rZ,
     pjP: () => n3,
-    pmI: () => t6,
+    pmI: () => t5,
     q5t: () => tj,
     q9n: () => nV,
     qAy: () => tG,
@@ -1912,6 +1912,7 @@ let em = "@me",
         SAFETY_FLOWS_RESEND_VERIFICATION_CODE: "/safety-flows/resend/email/reverification/pincode",
         VOICE_FILTERS_CATALOG: "/voice-filters/catalog",
         APEX_EXPERIMENTS_METADATA: "/apex/experiments/metadata",
+        APEX_EXPERIMENTS: "/apex/experiments",
         GUILD_MIGRATE_PIN_PERMISSION: (e) => "/guilds/".concat(e, "/migrate-pin-permission"),
     }),
     eA = Object.freeze({
@@ -2167,10 +2168,10 @@ var e8 = (function (e) {
             e
         );
     })({}),
-    e5 = (function (e) {
+    e6 = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
-    e6 = (function (e) {
+    e5 = (function (e) {
         return (
             (e[(e.PLAYING = 0)] = "PLAYING"),
             (e[(e.STREAMING = 1)] = "STREAMING"),
@@ -3640,8 +3641,8 @@ let t2 = new Set(["facebook", "contacts"]),
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
     t8 = 10070709,
-    t5 = (0, d.Rf)(t8),
-    t6 = [
+    t6 = (0, d.Rf)(t8),
+    t5 = [
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
     ],
@@ -5985,8 +5986,8 @@ var n3 = (function (e) {
         );
     })({});
 let n8 = 14,
-    n5 = 6,
-    n6 = 30;
+    n6 = 6,
+    n5 = 30;
 var n7 = (function (e) {
     return (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), e;
 })({});
