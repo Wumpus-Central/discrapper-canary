@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(642613);
+n.d(t, { Z: () => H }), n(388685), n(642613);
 var r = n(392711),
     i = n.n(r),
     a = n(51407),
@@ -204,6 +204,16 @@ function Z(e) {
     let { context: t, userId: n } = e;
     n !== f.default.getId() && M(t, n, d.Z.isLocalSoundboardMuted(n));
 }
+function F(e) {
+    let {} = e;
+    g.hW.updateAsync(
+        "audioContextSettings",
+        (e) => {
+            (e.user = {}), (e.stream = {});
+        },
+        g.fy.INFREQUENT_USER_ACTION,
+    );
+}
 class V extends l.Z {
     constructor(...e) {
         super(...e),
@@ -212,7 +222,8 @@ class V extends l.Z {
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: B,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: Z,
+                MEDIA_ENGINE_RESET_SETTINGS: F,
             });
     }
 }
-let F = new V();
+let H = new V();

@@ -1,5 +1,5 @@
 let r, i, a, o, s, l, c;
-n.d(t, { Z: () => rw }), n(388685), n(953529), n(457542), n(539854), n(642613), n(49124), n(337869);
+n.d(t, { Z: () => rD }), n(388685), n(953529), n(457542), n(539854), n(642613), n(49124), n(337869);
 var u,
     d = n(512722),
     f = n.n(d),
@@ -775,7 +775,7 @@ function tK() {
             });
         }),
         eK.on(b.aB.VoiceQueueMetrics, (e) => {
-            let t = rP(e);
+            let t = rw(e);
             null !== t && er.default.track(eb.rMx.VOICE_QUEUE_METRICS, t);
         }),
         eK.setOnVideoContainerResized((e, t, n) => {
@@ -1768,6 +1768,17 @@ function rb(e) {
     eK.setAecDump(n.aecDumpEnabled);
 }
 function ry(e) {
+    let { overrides: t } = e;
+    if (__OVERLAY__) return !1;
+    (ez = Object.values(eT.Yn).reduce((e, n) => {
+        let r = n,
+            i = eY();
+        return (e[r] = p().merge(i, t[r])), e;
+    }, {})),
+        y.K.set(ew, ez),
+        t3();
+}
+function rO(e) {
     let { state: t } = e,
         n = D.Z.isEnabled();
     if (t === eb.$7l.BACKGROUND && e6 && !n) (ti = !0), tB(!1);
@@ -1777,35 +1788,35 @@ function ry(e) {
     }
     return !0;
 }
-function rO(e) {
+function rv(e) {
     eK.eachConnection((t) => t.setBitRate(e.bitrate));
 }
-function rv() {
+function rI() {
     if ((!e6 && null == a) || null != eh.Z.getRTCConnectionId()) return !1;
     tB(!1, null);
 }
-function rI() {
+function rT() {
     return !!tb && ((tb = !1), !0);
 }
-function rT(e) {
+function rS(e) {
     eK.eachConnection((t) => t.applyVideoQualityMode(e.mode));
 }
-function rS(e) {
+function rA(e) {
     let { settings: t } = e;
     eK.applyMediaFilterSettings(t).finally(() => {
         (ty = !1), r.emitChange();
     });
 }
-function rA() {
+function rC() {
     ty = !0;
 }
-function rC() {
+function rN() {
     ty = !1;
 }
-function rN(e) {
+function rR(e) {
     tR = e.enabled;
 }
-class rR extends (u = E.ZP.Store) {
+class rP extends (u = E.ZP.Store) {
     initialize() {
         tK(),
             t0(),
@@ -2292,7 +2303,7 @@ class rR extends (u = E.ZP.Store) {
         return tN;
     }
 }
-function rP(e) {
+function rw(e) {
     if (null == e.taskMetrics || 0 === e.taskMetrics.length || 1 === e.taskMetrics.length) return null;
     let t = {
         metrics_period_ms: e.periodMs,
@@ -2317,8 +2328,8 @@ function rP(e) {
         }
     return (t.full_task_report = JSON.stringify(n)), t;
 }
-eA(rR, "displayName", "MediaEngineStore");
-let rw = (r = new rR(v.Z, {
+eA(rP, "displayName", "MediaEngineStore");
+let rD = (r = new rP(v.Z, {
     VOICE_CHANNEL_SELECT: rs,
     VOICE_STATE_UPDATES: nc,
     CONNECTION_OPEN: ni,
@@ -2377,21 +2388,22 @@ let rw = (r = new rR(v.Z, {
     OVERLAY_INITIALIZE: na,
     MEDIA_ENGINE_SET_OPEN_H264: rE,
     MEDIA_ENGINE_SET_HARDWARE_ENCODING: nW,
-    APP_STATE_UPDATE: ry,
-    SET_CHANNEL_BITRATE: rO,
+    APP_STATE_UPDATE: rO,
+    SET_CHANNEL_BITRATE: rv,
     SET_VAD_PERMISSION: n3,
     SET_NATIVE_PERMISSION: n4,
-    SET_CHANNEL_VIDEO_QUALITY_MODE: rT,
+    SET_CHANNEL_VIDEO_QUALITY_MODE: rS,
     MEDIA_ENGINE_SET_AEC_DUMP: rb,
-    CHANNEL_DELETE: rv,
-    MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET: rI,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: rS,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START: rA,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR: rC,
+    MEDIA_ENGINE_RESET_SETTINGS: ry,
+    CHANNEL_DELETE: rI,
+    MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET: rT,
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: rA,
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START: rC,
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR: rN,
     USER_SETTINGS_PROTO_UPDATE: n_,
     CLIPS_INIT: r_,
     CLIPS_SETTINGS_UPDATE: rp,
-    MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: rN,
+    MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: rR,
     VOICE_FILTER_REQUEST_SWITCH: re,
     VOICE_FILTER_LOOPBACK_TOGGLE: n9,
     VOICE_FILTER_APPLIED: rn,

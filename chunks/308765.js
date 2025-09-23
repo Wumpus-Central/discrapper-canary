@@ -10,6 +10,7 @@ let i = {
             "AUDIO_SET_LOCAL_VOLUME",
             "AUDIO_TOGGLE_LOCAL_MUTE",
             "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE",
+            "MEDIA_ENGINE_RESET_SETTINGS",
         ],
         inlineRequire: () => n(345953).Z,
     },
@@ -52,6 +53,10 @@ let i = {
     CommunicationDisabledManager: {
         inlineRequire: () => n(202107).Z,
         loadAfterConnectionOpen: !0,
+    },
+    ConferenceModeManager: {
+        actions: ["VOICE_CHANNEL_SELECT"],
+        inlineRequire: () => n(571984).Z,
     },
     ContentProtectionManager: {
         inlineRequire: () => n(725140).Z,
