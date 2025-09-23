@@ -1468,7 +1468,7 @@
 }
 
 .xs_a22cb0.hasText_a22cb0 {
-    min-width: 60px
+    min-width: var(--__button-min-width, 60px)
 }
 
 .xs_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0 {
@@ -1481,7 +1481,7 @@
 }
 
 .sm_a22cb0.hasText_a22cb0 {
-    min-width: 60px
+    min-width: var(--__button-min-width, 60px)
 }
 
 .sm_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0 {
@@ -1494,7 +1494,7 @@
 }
 
 .md_a22cb0.hasText_a22cb0 {
-    min-width: 100px
+    min-width: var(--__button-min-width, 100px)
 }
 
 .md_a22cb0.hasText_a22cb0 .buttonChildrenWrapper_a22cb0 {
@@ -16388,7 +16388,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .xs__0f084.hasText__0f084 {
-    min-width: 60px
+    min-width: var(--__button-min-width, 60px)
 }
 
 .xs__0f084.hasText__0f084 .buttonChildrenWrapper__0f084 {
@@ -16401,7 +16401,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .sm__0f084.hasText__0f084 {
-    min-width: 60px
+    min-width: var(--__button-min-width, 60px)
 }
 
 .sm__0f084.hasText__0f084 .buttonChildrenWrapper__0f084 {
@@ -16414,7 +16414,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .md__0f084.hasText__0f084 {
-    min-width: 100px
+    min-width: var(--__button-min-width, 100px)
 }
 
 .md__0f084.hasText__0f084 .buttonChildrenWrapper__0f084 {
