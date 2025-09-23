@@ -17,7 +17,7 @@ var r = n(951288),
     E = n(723307),
     b = n(981631),
     y = n(388032),
-    O = n(879048),
+    O = n(189730),
     v = n(557256);
 function I(e, t, n) {
     return (
@@ -129,7 +129,7 @@ let C = 10,
                     sourceQuestContent: s,
                 }),
                     (0, o.ZDy)(async () => {
-                        let { default: e } = await Promise.all([n.e("89311"), n.e("83123")]).then(n.bind(n, 644941));
+                        let { default: e } = await Promise.all([n.e("89311"), n.e("20074")]).then(n.bind(n, 644941));
                         return (t) =>
                             (0, r.jsx)(
                                 e,
@@ -319,20 +319,20 @@ function U(e) {
         f = (0, h.O5)(),
         _ = i.useRef(null),
         p = (null == t ? void 0 : t.current) != null,
-        g = p ? t : _,
-        E = p ? "right" : "top",
-        b = p ? "bottom" : void 0,
-        y = () => {
+        m = p ? t : _,
+        g = p ? "right" : "top",
+        E = p ? "bottom" : void 0,
+        b = () => {
             null == s || s(),
                 f({
                     questId: c.id,
-                    questContent: m.jn.SPONSORED_QUEST_SHEET,
+                    questContent: u,
                     questContentCTA: h.jZ.SPONSORED_QUEST_SHEET,
                     sourceQuestContent: u,
                 });
         };
     return (0, r.jsx)(o.yRy, {
-        targetElementRef: g,
+        targetElementRef: m,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(k, {
@@ -343,10 +343,10 @@ function U(e) {
                 impressionRef: d,
             });
         },
-        onRequestOpen: y,
+        onRequestOpen: b,
         onRequestClose: l,
-        position: E,
-        align: b,
+        position: g,
+        align: E,
         spacing: N,
         children: (e) => a(e, _),
     });
