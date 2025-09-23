@@ -506,14 +506,8 @@ function K(e) {
             }
             return null;
         }),
-        U = (0, R.nP)({
-            isXDMSearch: t.type === G.aib.DMS,
-            location: "Search",
-        }),
-        F = (0, R.KS)({
-            isXDMSearch: t.type === G.aib.DMS,
-            location: "Search",
-        }),
+        U = (0, R.nP)({ location: "Search" }),
+        F = (0, R.KS)({ location: "Search" }),
         V = U || F,
         H = (0, C.$)({ location: "Search" }),
         K = i.useMemo(

@@ -33,32 +33,32 @@ let a = {
         ],
     });
 function s(e) {
-    let { isXDMSearch: t, location: n, autoTrackExposure: r = !0 } = e,
-        a = (0, i.nd)({
-            location: n,
-            autoTrackExposure: r,
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.nd)({
+            location: t,
+            autoTrackExposure: n,
         }),
-        { isNoTopFiltersRedesignEnabled: s } = o.useExperiment(
-            { location: n },
+        { isNoTopFiltersRedesignEnabled: a } = o.useExperiment(
+            { location: t },
             {
-                autoTrackExposure: r,
-                disable: a || t,
+                autoTrackExposure: n,
+                disable: r,
             },
         );
-    return s;
+    return a;
 }
 function l(e) {
-    let { isXDMSearch: t, location: n, autoTrackExposure: r = !0 } = e,
-        a = (0, i.nd)({
-            location: n,
-            autoTrackExposure: r,
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.nd)({
+            location: t,
+            autoTrackExposure: n,
         }),
-        { isSuggestTopFiltersRedesignEnabled: s } = o.useExperiment(
-            { location: n },
+        { isSuggestTopFiltersRedesignEnabled: a } = o.useExperiment(
+            { location: t },
             {
-                autoTrackExposure: r,
-                disable: a || t,
+                autoTrackExposure: n,
+                disable: r,
             },
         );
-    return s;
+    return a;
 }

@@ -72,10 +72,7 @@ function S(e, t) {
 }
 function A(e) {
     let { resultsState: t, searchContext: v, selectedChannel: T, setSearchQuery: A } = e,
-        C = (0, l.KS)({
-            isXDMSearch: v.type === b.aib.DMS,
-            location: "SearchFiltersRedesignPopout",
-        }),
+        C = (0, l.KS)({ location: "SearchFiltersRedesignPopout" }),
         { autocompletes: N, mode: R } = t,
         P = (0, g.Z)({
             autocompletes: N,
@@ -88,7 +85,7 @@ function A(e) {
         }),
         D = () => {
             (0, a.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("56266"), n.e("37979")]).then(n.bind(n, 238088));
+                let { default: e } = await Promise.all([n.e("30474"), n.e("37979")]).then(n.bind(n, 238088));
                 return (t) => (0, r.jsx)(e, S(I({}, t), { searchContext: v }));
             });
         },
@@ -129,7 +126,7 @@ function A(e) {
         {
             [b.Sap.EMPTY]: () => {
                 let e = [];
-                if (null != T) {
+                if (null != T && (0, s.R6)(v)) {
                     let t = (0, u.f)(T),
                         n = (e) => {
                             var t;
