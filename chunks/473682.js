@@ -1,10 +1,9 @@
 n.d(t, {
-    IU: () => p,
+    IU: () => m,
     M4: () => o,
     Ne: () => c,
     T9: () => l,
     Vb: () => i,
-    cF: () => m,
     gM: () => u,
     hK: () => s,
     zI: () => d,
@@ -35,5 +34,4 @@ let l = {
     c = 12633 == n.j ? o - 2 * s : null,
     d = 10,
     u = 32,
-    m = 1000,
-    p = window.GLOBAL_ENV.RELEASE_CHANNEL === r.C.STAGING ? "1415044199572832256" : "1415025086791942144";
+    m = window.GLOBAL_ENV.RELEASE_CHANNEL === r.C.STAGING ? "1415044199572832256" : "1415025086791942144";
