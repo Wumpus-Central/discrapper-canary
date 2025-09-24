@@ -6,17 +6,14 @@ var r = n(951288),
     s = n(846027),
     l = n(906732),
     c = n(131951),
-    u = n(321614),
+    u = n(846071),
     d = n(345655),
     f = n(388032),
     _ = n(197571);
 function p() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         t = (0, a.e7)([c.Z], () => c.Z.getActiveInputProfile()),
-        { enabledInputProfiles: n } = (0, u.c)({
-            location: "UserSettingsInputProfile",
-            autoTrackExposure: !1,
-        }),
+        { enabledInputProfiles: n } = (0, u.G)({ location: "UserSettingsInputProfile" }),
         p = i.useCallback(
             (t) => {
                 let { value: n } = t;

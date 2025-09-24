@@ -54,7 +54,7 @@ var i = n(990547),
     W = n(998502),
     K = n(695346),
     z = n(604227),
-    q = n(321614),
+    q = n(846071),
     X = n(748717),
     Q = n(419636),
     J = n(799071),
@@ -1064,10 +1064,7 @@ let ez = () => {
                 ],
                 parent: ej.s6.VOICE_AND_VIDEO_VOICE,
                 predicate: () => {
-                    let { enabledInputProfiles: e } = (0, q.R)({
-                        location: "SettingsRendererConfig",
-                        autoTrackExposure: !1,
-                    });
+                    let { enabledInputProfiles: e } = (0, q.P)({ location: "SettingsRendererConfig" });
                     return e.length > 0;
                 },
             },
