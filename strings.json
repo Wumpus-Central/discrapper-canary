@@ -14645,7 +14645,7 @@
   "aB5xLy": "Unlock to join $[!!{keybind}!!]({{keybindHook}})",
   "hxz/4O": "Press !!{keybind}!! to talk",
   "PIeSHB": "Keybinds disabled — requires admin privileges",
-  "rqNDQk": "Keybinds are disabled. Visit Overlay Settings.",
+  "MVS9pa": "Keybinds are disabled. Visit [Overlay Settings](Overlay Settings).",
   "uFcRen": "!!{nick}!! joined voice",
   "gnKWdX": "Notifications",
   "O1Nbjo": "Any notifications you receive while in game will go here.",
