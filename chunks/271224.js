@@ -2,8 +2,8 @@ o.d(t, { default: () => _ }), o(388685);
 var n = o(951288),
     r = o(647438),
     a = o(120356),
-    c = o.n(a),
-    s = o(481060),
+    s = o.n(a),
+    c = o(481060),
     i = o(870246),
     l = o(639777),
     d = o(973772),
@@ -41,12 +41,12 @@ function _(e) {
     let [j, g] = r.useState(void 0),
         v = (0, d.ZP)(a, _),
         x = v.type === b.A3.TIER_OVERRIDE_ACTIVATED,
-        y = (0, l.Z)(a),
-        C = null == v.sourceEntitlement || !y;
+        h = (0, l.Z)(a),
+        y = null == v.sourceEntitlement || !h;
     return (
         (0, i.$)(a, _, i.w.DETAIL),
         (0, n.jsxs)(
-            s.Y0X,
+            c.Y0X,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var o = null != arguments[t] ? arguments[t] : {},
@@ -75,7 +75,7 @@ function _(e) {
                 {
                     "data-migration-pending": !0,
                     className: f.modal,
-                    size: s.CgR.DYNAMIC,
+                    size: c.CgR.DYNAMIC,
                 },
                 k,
             )),
@@ -83,7 +83,7 @@ function _(e) {
                 {
                     parentComponent: "GuildPowerupLevelModal",
                     children: [
-                        (0, n.jsxs)(s.hzk, {
+                        (0, n.jsxs)(c.hzk, {
                             "data-migration-pending": !0,
                             className: f.modalContentContainer,
                             scrollbarType: "none",
@@ -96,31 +96,30 @@ function _(e) {
                                 (0, n.jsxs)("div", {
                                     className: f.contentContainer,
                                     children: [
-                                        (0, n.jsx)(s.X6q, {
+                                        (0, n.jsx)(c.X6q, {
                                             variant: "heading-xl/extrabold",
                                             children: _.title,
                                         }),
                                         (0, n.jsx)(u.Z, { powerup: _ }),
                                         null != j &&
-                                            (0, n.jsx)(s.Text, {
+                                            (0, n.jsx)(c.Text, {
                                                 color: "status-danger",
                                                 variant: "text-sm/semibold",
                                                 children: j,
                                             }),
                                         (0, n.jsxs)("div", {
-                                            className: c()(f.footer, { [f.disabled]: C }),
+                                            className: s()(f.footer, { [f.disabled]: y }),
                                             children: [
                                                 !x &&
-                                                    y &&
-                                                    (0, n.jsx)(p.ZP, {
+                                                    h &&
+                                                    (0, n.jsx)(p.Z, {
                                                         guildId: a,
                                                         powerup: _,
                                                         onError: g,
-                                                        grow: !1,
-                                                        compact: !C,
+                                                        fullWidth: !1,
                                                     }),
-                                                (0, n.jsx)(s.zxk, {
-                                                    variant: C ? "secondary" : "primary",
+                                                (0, n.jsx)(c.zxk, {
+                                                    variant: y ? "secondary" : "primary",
                                                     onClick: O,
                                                     text: m.intl.string(m.t.cpT0Cg),
                                                 }),
@@ -130,7 +129,7 @@ function _(e) {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(s.olH, {
+                        (0, n.jsx)(c.olH, {
                             "data-migration-pending": !0,
                             className: f.close,
                             onClick: O,

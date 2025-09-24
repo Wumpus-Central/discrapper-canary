@@ -1,68 +1,66 @@
-t.d(n, { Z: () => m });
-var a = t(951288),
-    i = t(481060),
-    r = t(703656),
-    l = t(981631),
-    s = t(176505),
-    o = t(401561),
-    c = t(388032),
-    d = t(477487),
-    u = t(438957);
-function m(e, n) {
+n.d(t, { Z: () => d });
+var l = n(951288),
+    i = n(481060),
+    a = n(703656),
+    r = n(981631),
+    s = n(176505),
+    o = n(401561),
+    u = n(388032),
+    c = n(438957);
+function d(e, t) {
     (0, i.ZDy)(async () => {
-        let { default: m } = await t.e("13965").then(t.bind(t, 666083));
-        return (t) =>
-            (0, a.jsx)(
-                m,
+        let { default: d } = await n.e("13965").then(n.bind(n, 666083));
+        return (n) =>
+            (0, l.jsx)(
+                d,
                 (function (e) {
-                    for (var n = 1; n < arguments.length; n++) {
-                        var t = null != arguments[n] ? arguments[n] : {},
-                            a = Object.keys(t);
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            l = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (a = a.concat(
-                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                            (l = l.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            a.forEach(function (n) {
-                                var a;
-                                (a = t[n]),
-                                    n in e
-                                        ? Object.defineProperty(e, n, {
-                                              value: a,
+                            l.forEach(function (t) {
+                                var l;
+                                (l = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[n] = a);
+                                        : (e[t] = l);
                             });
                     }
                     return e;
                 })(
                     {
-                        title: c.intl.string(o.default.hcBOZW),
-                        description: c.intl.formatToPlainString(o.default.KCgZMj, { provider: "Portkey" }),
-                        image: (0, a.jsx)("div", {
-                            className: u.imageContainer,
-                            children: (0, a.jsx)("img", {
-                                className: u.image,
+                        title: u.intl.string(o.default.hcBOZW),
+                        description: u.intl.formatToPlainString(o.default.KCgZMj, { provider: "Portkey" }),
+                        image: (0, l.jsx)("div", {
+                            className: c.imageContainer,
+                            children: (0, l.jsx)("img", {
+                                className: c.image,
                                 alt: "",
-                                src: n.imageUrl,
+                                src: t.imageUrl,
                             }),
                         }),
-                        button: (0, a.jsx)("div", {
+                        button: (0, l.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: d.button,
-                            children: (0, a.jsx)(i.zxk, {
+                            children: (0, l.jsx)(i.zxk, {
                                 variant: "primary",
-                                text: c.intl.string(o.default.AS3n8v),
+                                text: u.intl.string(o.default.AS3n8v),
                                 onClick: () => {
-                                    (0, r.uL)(l.Z5c.CHANNEL(e, s.oC.PORTKEY)), t.onClose();
+                                    (0, a.uL)(r.Z5c.CHANNEL(e, s.oC.PORTKEY)), n.onClose();
                                 },
                             }),
                         }),
                     },
-                    t,
+                    n,
                 ),
             );
     });

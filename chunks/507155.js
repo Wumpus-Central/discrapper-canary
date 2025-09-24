@@ -1,4 +1,4 @@
-r.d(t, { Z: () => x }), r(388685), r(953529);
+r.d(t, { Z: () => b }), r(388685), r(953529);
 var n = r(951288),
     o = r(647438),
     a = r(120356),
@@ -10,52 +10,52 @@ var n = r(951288),
     u = r(795338),
     p = r(880419),
     f = r(279604),
-    m = r(787188),
-    v = r(388032),
-    j = r(397321);
-function x(e) {
+    v = r(787188),
+    j = r(388032),
+    x = r(397321);
+function b(e) {
     let { canUseBoosts: t, guildId: r, powerup: a } = e,
-        [x, b] = o.useState(!1),
-        g = (0, c.ZP)(r, a),
-        O = (0, m._)(a, g, !1),
-        y = (0, c.UP)(g),
+        [b, m] = o.useState(!1),
+        O = (0, c.ZP)(r, a),
+        g = (0, v._)(a, O, !1),
+        y = (0, c.UP)(O),
         { disabled: C } = (0, l.Z)(r, a, y),
         { onShowDeactivate: h, onActivate: P } = (0, f.ZP)(r, a),
         k = !t || C,
-        _ = y && !k,
-        w = (0, n.jsxs)(n.Fragment, {
+        w = y && !k,
+        _ = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)("div", {
-                    className: i()(j.perkCardImage, { [j.active]: y }),
+                    className: i()(x.perkCardImage, { [x.active]: y }),
                     children: (0, n.jsx)(u.m, {
                         powerup: a,
-                        isHovering: !k && x,
+                        isHovering: !k && b,
                     }),
                 }),
                 (0, n.jsxs)("div", {
-                    className: j.footerContainer,
+                    className: x.footerContainer,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: j.footerDetails,
+                            className: x.footerDetails,
                             children: [
                                 (0, n.jsx)("div", {
                                     children: (0, n.jsx)(s.Text, {
                                         variant: "text-sm/medium",
-                                        color: (y || x) && !k ? "text-primary" : "text-secondary",
+                                        color: (y || b) && !k ? "text-primary" : "text-secondary",
                                         children: a.description,
                                     }),
                                 }),
                                 (0, n.jsxs)("div", {
                                     children: [
-                                        (null == O ? void 0 : O.type) === "expiring" &&
-                                            (0, n.jsx)(d.rL, { dateString: O.expiringAt }),
-                                        (null == O ? void 0 : O.type) === "removing" &&
-                                            (0, n.jsx)(d.c, { removingAt: O.removingAt }),
-                                        (null == O ? void 0 : O.type) === "active" &&
-                                            (0, n.jsx)(d.P2, { text: O.statusText }),
-                                        null == O &&
+                                        (null == g ? void 0 : g.type) === "expiring" &&
+                                            (0, n.jsx)(d.rL, { dateString: g.expiringAt }),
+                                        (null == g ? void 0 : g.type) === "removing" &&
+                                            (0, n.jsx)(d.c, { removingAt: g.removingAt }),
+                                        (null == g ? void 0 : g.type) === "active" &&
+                                            (0, n.jsx)(d.P2, { text: g.statusText }),
+                                        null == g &&
                                             (0, n.jsxs)("div", {
-                                                className: j.statusContainer,
+                                                className: x.statusContainer,
                                                 children: [
                                                     (0, n.jsx)(s.$Eu, {
                                                         size: "sm",
@@ -64,7 +64,7 @@ function x(e) {
                                                     (0, n.jsx)(s.Text, {
                                                         variant: "text-sm/medium",
                                                         color: "text-secondary",
-                                                        children: v.intl.formatToPlainString(v.t.t2Wbo6, {
+                                                        children: j.intl.formatToPlainString(j.t.t2Wbo6, {
                                                             required: a.cost,
                                                             decorator: "",
                                                         }),
@@ -75,14 +75,11 @@ function x(e) {
                                 }),
                             ],
                         }),
-                        _ &&
-                            (0, n.jsx)(p.ZP, {
-                                compact: !0,
-                                iconSize: "md",
+                        w &&
+                            (0, n.jsx)(p.Z, {
                                 guildId: r,
                                 powerup: a,
                                 onClick: h,
-                                className: j.toggleButton,
                             }),
                     ],
                 }),
@@ -90,19 +87,19 @@ function x(e) {
         });
     return y
         ? (0, n.jsx)("div", {
-              className: i()(j.perkCard, j.activeCard, { [j.disabled]: k }),
-              onMouseEnter: () => b(!0),
-              onMouseLeave: () => b(!1),
-              children: w,
+              className: i()(x.perkCard, x.activeCard, { [x.disabled]: k }),
+              onMouseEnter: () => m(!0),
+              onMouseLeave: () => m(!1),
+              children: _,
           })
         : (0, n.jsx)(s.P3F, {
-              className: i()(j.perkCard, { [j.disabled]: k }),
-              onMouseEnter: () => b(!0),
-              onMouseLeave: () => b(!1),
+              className: i()(x.perkCard, { [x.disabled]: k }),
+              onMouseEnter: () => m(!0),
+              onMouseLeave: () => m(!1),
               "aria-disabled": k,
               onClick: (e) => {
                   e.stopPropagation(), k || null == P || P(e, { shouldCloseAllModals: !1 });
               },
-              children: w,
+              children: _,
           });
 }
