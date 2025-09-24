@@ -3630,11 +3630,7 @@ var t$ = (function (e) {
     t1 = (function (e) {
         return (e[(e.PRIVATE = 0)] = "PRIVATE"), (e[(e.PUBLIC = 1)] = "PUBLIC"), e;
     })({});
-let t2 = Object.freeze({
-        OAUTH2_REDIRECT_FRAGMENT: "/_discord?",
-        GAME_INVITE_FRAGMENT: "/_discord/join?secret=",
-        AUTHORIZATION_CANCEL_FRAGMENT: "/_discord/auth?cancel=true",
-    }),
+let t2 = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
     t3 = new Set(["facebook", "contacts"]),
     t4 = new Set(["spotify", "xbox", "playstation", "playstation-stg", "crunchyroll"]),
     t8 = Object.freeze({
