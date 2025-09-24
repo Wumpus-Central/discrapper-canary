@@ -201,7 +201,12 @@ function U(e) {
 }
 function G(e) {
     let t = (0, o.l6)(),
-        n = e === g.L0.NSFW_SERVER || e === g.L0.NSFW_SERVER_INVITE || e === g.L0.NSFW_SERVER_INVITE_EMBED;
+        n = k(),
+        i = e === g.L0.NSFW_SERVER || e === g.L0.NSFW_SERVER_INVITE || e === g.L0.NSFW_SERVER_INVITE_EMBED,
+        a = (0, r.e7)([_.default], () => {
+            var e;
+            return (null == (e = _.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
+        });
     if (e === g.L0.JOIN_LARGE_GUILD_UNDERAGE || e === g.L0.ACCESS_LARGE_GUILD_UNDERAGE) {
         let n = e === g.L0.JOIN_LARGE_GUILD_UNDERAGE ? b.t["u/xsKy"] : b.t.MjQbfn,
             r = T(t);
@@ -214,8 +219,8 @@ function G(e) {
     return t
         ? {
               verifyAgreementButtonText: b.intl.string(b.t.PBG51t),
-              verifyGateDescription: n ? b.intl.format(b.t["7uIWQE"], {}) : b.intl.format(b.t.x1coPj, {}),
-              verifyTitle: n ? b.intl.string(b.t.xi46lp) : b.intl.string(b.t.ZmwvDQ),
+              verifyGateDescription: i ? b.intl.format(b.t["7uIWQE"], {}) : b.intl.format(b.t.x1coPj, {}),
+              verifyTitle: i ? b.intl.string(b.t.xi46lp) : b.intl.string(b.t.ZmwvDQ),
           }
         : e === g.L0.LARGE_GUILD
           ? {
@@ -223,11 +228,17 @@ function G(e) {
                 verifyGateDescription: b.intl.string(b.t.SxY4IS),
                 verifyAgreementButtonText: b.intl.string(b.t["5B+npK"]),
             }
-          : {
-                verifyAgreementButtonText: b.intl.string(b.t["5B+npK"]),
-                verifyGateDescription: n ? b.intl.string(b.t.akjk0d) : b.intl.string(b.t["u/xqhY"]),
-                verifyTitle: n ? b.intl.string(b.t.xi46lp) : b.intl.string(b.t.ZmwvDQ),
-            };
+          : a && i && !n
+            ? {
+                  verifyTitle: b.intl.string(b.t["H0SG/v"]),
+                  verifyGateDescription: b.intl.format(b.t["6++3cX"], { helpURL: p.Z.getArticleURL(E.BhN.AGE_GATE) }),
+                  verifyAgreementButtonText: null,
+              }
+            : {
+                  verifyAgreementButtonText: b.intl.string(b.t["5B+npK"]),
+                  verifyGateDescription: i ? b.intl.string(b.t.akjk0d) : b.intl.string(b.t["u/xqhY"]),
+                  verifyTitle: i ? b.intl.string(b.t.xi46lp) : b.intl.string(b.t.ZmwvDQ),
+              };
 }
 let B = () => {
         let e = _.default.getCurrentUser();
