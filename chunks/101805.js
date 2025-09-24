@@ -11,7 +11,7 @@ function r(e) {
         port: e.port,
         entitlementId: e.entitlement_id,
         gameServerPanelUrl: e.provider_url,
-        gameId: "1",
+        gameId: e.game_id,
         onlineConnectionsCount: 0,
         status: "online",
         instructions: [],
