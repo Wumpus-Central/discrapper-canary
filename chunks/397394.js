@@ -355,8 +355,10 @@ function V(e) {
         children: (0, r.jsx)(S.j, {
             transitionState: d.Dv.ENTERED,
             hideHeader: !0,
-            title: C.intl.string(C.t.j2d6Ki),
-            subtitle: l,
+            children: (0, r.jsx)(Z, {
+                message: l,
+                showsCloseWindowText: !0,
+            }),
         }),
     });
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => N,
     m: () => T,
 }),
     n(388685),
@@ -8,27 +8,26 @@ var r = n(951288),
     i = n(647438),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(755721),
-    c = n(481060),
-    u = n(239091),
+    s = n(442837),
+    o = n(481060),
+    c = n(239091),
     d = n(749210),
-    p = n(686546),
-    h = n(951394),
-    f = n(565138),
-    m = n(372769),
+    u = n(686546),
+    p = n(951394),
+    h = n(565138),
+    f = n(372769),
     g = n(134432),
-    b = n(769654),
-    _ = n(430824),
+    m = n(769654),
+    b = n(430824),
     y = n(768581),
-    C = n(411198),
-    x = n(683818),
-    v = n(16853),
-    O = n(981631),
-    j = n(388032),
-    E = n(777261),
-    S = n(883760);
-function I(e) {
+    _ = n(411198),
+    O = n(683818),
+    j = n(16853),
+    v = n(981631),
+    x = n(388032),
+    C = n(777261),
+    I = n(883760);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +52,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -93,87 +92,87 @@ function Z(e, t) {
 }
 let T = (e) => {
     let { onClick: t } = e;
-    return (0, r.jsxs)(c.P3F, {
+    return (0, r.jsxs)(o.P3F, {
         onClick: t,
-        className: E.addEntryCard,
+        className: C.addEntryCard,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: S,
+                src: I,
             }),
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: "text-sm/semibold",
                 color: "header-primary",
-                className: E.addServerText,
-                children: j.intl.string(j.t.H9jxS0),
+                className: C.addServerText,
+                children: x.intl.string(x.t.H9jxS0),
             }),
         ],
     });
 };
-function N(e) {
+function P(e) {
     let { entry: t } = e,
-        [l, o] = i.useState(!1),
-        s = i.useRef(null),
-        { canEdit: u } = (0, x.Z)(t);
+        [l, s] = i.useState(!1),
+        c = i.useRef(null),
+        { canEdit: d } = (0, O.Z)(t);
     return (0, r.jsx)("div", {
-        className: a()(E.actionButtonsContainer, { [E.forceButtonsShow]: l }),
-        children: (0, r.jsxs)(h.ZP, {
+        className: a()(C.actionButtonsContainer, { [C.forceButtonsShow]: l }),
+        children: (0, r.jsxs)(p.ZP, {
             children: [
-                u
-                    ? (0, r.jsx)(c.ua7, {
-                          text: j.intl.string(j.t.XnuOvL),
+                d
+                    ? (0, r.jsx)(o.ua7, {
+                          text: x.intl.string(x.t.XnuOvL),
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
                                   l = Z(e, ["onClick"]);
                               return (0, r.jsx)(
-                                  h.zx,
-                                  P(I({}, l), {
+                                  p.zx,
+                                  S(E({}, l), {
                                       onClick: () => {
                                           null == i || i(),
-                                              (0, c.ZDy)(async () => {
+                                              (0, o.ZDy)(async () => {
                                                   let { default: e } = await n.e("34191").then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, P(I({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, S(E({}, n), { entry: t }));
                                               });
                                       },
-                                      "aria-label": j.intl.string(j.t.XnuOvL),
-                                      children: (0, r.jsx)(c.vdY, {
+                                      "aria-label": x.intl.string(x.t.XnuOvL),
+                                      children: (0, r.jsx)(o.vdY, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: E.overflowIcon,
+                                          className: C.overflowIcon,
                                       }),
                                   }),
                               );
                           },
                       })
                     : null,
-                (0, r.jsx)(v.Z, {
-                    targetElementRef: s,
-                    onRequestOpen: () => o(!0),
-                    onRequestClose: () => o(!1),
+                (0, r.jsx)(j.Z, {
+                    targetElementRef: c,
+                    onRequestOpen: () => s(!0),
+                    onRequestClose: () => s(!1),
                     entry: t,
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
                             n = Z(e, ["onClick"]);
-                        return (0, r.jsx)(c.ua7, {
-                            text: j.intl.string(j.t.UKOtz8),
+                        return (0, r.jsx)(o.ua7, {
+                            text: x.intl.string(x.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
                                     l = Z(e, ["onClick"]);
                                 return (0, r.jsx)(
-                                    h.zx,
-                                    P(I({}, n, l), {
-                                        ref: s,
+                                    p.zx,
+                                    S(E({}, n, l), {
+                                        ref: c,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
                                         },
-                                        "aria-label": j.intl.string(j.t.UKOtz8),
-                                        children: (0, r.jsx)(c.xhG, {
+                                        "aria-label": x.intl.string(x.t.UKOtz8),
+                                        children: (0, r.jsx)(o.xhG, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: E.overflowIcon,
+                                            className: C.overflowIcon,
                                         }),
                                     }),
                                 );
@@ -185,20 +184,20 @@ function N(e) {
         }),
     });
 }
-let A = (e) => {
+let N = (e) => {
     var t;
     let { entry: l } = e,
-        [a, h] = i.useState(!1),
-        x = null != (0, o.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        v = async () => {
-            h(!0);
+        [a, p] = i.useState(!1),
+        O = null != (0, s.e7)([b.Z], () => b.Z.getGuild(l.guildId)),
+        j = async () => {
+            p(!0);
             try {
-                x ? (0, b.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: O.vtS.DIRECTORY_ENTRY });
+                O ? (0, m.X)(l.guildId) : await d.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
-                h(!1);
+                p(!1);
             }
         },
-        S = y.ZP.getGuildSplashURL({
+        I = y.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
             size: 300 * (0, g.x_)(),
@@ -212,44 +211,44 @@ let A = (e) => {
             }))
                 ? t
                 : void 0,
-        T = j.intl.string(j.t.VJlc0d);
+        T = x.intl.string(x.t.VJlc0d);
     return (
-        x && (T = j.intl.string(j.t.cqWE2d)),
+        O && (T = x.intl.string(x.t.cqWE2d)),
         (0, r.jsxs)("div", {
-            className: E.card,
+            className: C.card,
             onContextMenu: (e) => {
-                (0, u.jW)(e, async () => {
+                (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, P(I({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, S(E({}, t), { entry: l }));
                 });
             },
             children: [
                 (0, r.jsxs)("div", {
-                    className: E.cardHeader,
+                    className: C.cardHeader,
                     children: [
                         (0, r.jsx)("div", {
-                            className: E.splash,
+                            className: C.splash,
                             children:
-                                null != S &&
+                                null != I &&
                                 (0, r.jsx)("img", {
-                                    src: S,
+                                    src: I,
                                     alt: "",
-                                    className: E.splashImage,
+                                    className: C.splashImage,
                                 }),
                         }),
                         (0, r.jsx)("div", {
-                            className: E.guildIcon,
-                            children: (0, r.jsx)(p.ZP, {
-                                mask: p.ZP.Masks.SQUIRCLE,
+                            className: C.guildIcon,
+                            children: (0, r.jsx)(u.ZP, {
+                                mask: u.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, r.jsx)("div", {
-                                    className: E.iconMask,
-                                    children: (0, r.jsx)(f.Z, {
-                                        className: E.icon,
+                                    className: C.iconMask,
+                                    children: (0, r.jsx)(h.Z, {
+                                        className: C.icon,
                                         iconSrc: Z,
-                                        guild: (0, C.e)(l),
-                                        size: f.Z.Sizes.MEDIUM,
+                                        guild: (0, _.e)(l),
+                                        size: h.Z.Sizes.MEDIUM,
                                         active: !0,
                                     }),
                                 }),
@@ -258,42 +257,42 @@ let A = (e) => {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: E.guildInfo,
+                    className: C.guildInfo,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: E.title,
+                            className: C.title,
                             children: [
-                                (0, r.jsx)(m.Z, {
-                                    className: E.guildBadge,
+                                (0, r.jsx)(f.Z, {
+                                    className: C.guildBadge,
                                     guild: l,
-                                    tooltipColor: c.ua7.Colors.PRIMARY,
+                                    tooltipColor: o.ua7.Colors.PRIMARY,
                                 }),
-                                (0, r.jsx)(c.Text, {
-                                    className: E.guildName,
+                                (0, r.jsx)(o.Text, {
+                                    className: C.guildName,
                                     variant: "heading-md/semibold",
                                     color: "header-primary",
                                     children: l.name,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(c.Text, {
-                            className: E.description,
+                        (0, r.jsx)(o.Text, {
+                            className: C.description,
                             variant: "text-sm/normal",
                             color: "header-secondary",
                             children: l.description,
                         }),
                         (0, r.jsxs)("div", {
-                            className: E.memberInfo,
+                            className: C.memberInfo,
                             children: [
                                 null != l.approximatePresenceCount &&
                                     (0, r.jsxs)("div", {
-                                        className: E.memberCount,
+                                        className: C.memberCount,
                                         children: [
-                                            (0, r.jsx)("div", { className: E.dotOnline }),
-                                            (0, r.jsx)(c.Text, {
+                                            (0, r.jsx)("div", { className: C.dotOnline }),
+                                            (0, r.jsx)(o.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: j.intl.format(j.t["LC+S+v"], {
+                                                children: x.intl.format(x.t["LC+S+v"], {
                                                     membersOnline: l.approximatePresenceCount,
                                                 }),
                                             }),
@@ -301,13 +300,13 @@ let A = (e) => {
                                     }),
                                 null != l.approximateMemberCount &&
                                     (0, r.jsxs)("div", {
-                                        className: E.memberCount,
+                                        className: C.memberCount,
                                         children: [
-                                            (0, r.jsx)("div", { className: E.dotOffline }),
-                                            (0, r.jsx)(c.Text, {
+                                            (0, r.jsx)("div", { className: C.dotOffline }),
+                                            (0, r.jsx)(o.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: j.intl.format(j.t.zRl6XV, {
+                                                children: x.intl.format(x.t.zRl6XV, {
                                                     count: l.approximateMemberCount,
                                                 }),
                                             }),
@@ -315,16 +314,19 @@ let A = (e) => {
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(s.zx, {
-                            submitting: a,
-                            className: E.joinButton,
-                            color: x ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN,
-                            onClick: v,
-                            children: T,
+                        (0, r.jsx)("div", {
+                            className: C.joinButton,
+                            children: (0, r.jsx)(o.zxk, {
+                                loading: a,
+                                variant: O ? "secondary" : "active",
+                                onClick: j,
+                                text: T,
+                                fullWidth: !0,
+                            }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(N, { entry: l }),
+                (0, r.jsx)(P, { entry: l }),
             ],
         })
     );

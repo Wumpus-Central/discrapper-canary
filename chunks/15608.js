@@ -1,60 +1,59 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var i = n(951288),
     s = n(647438),
-    l = n(755721),
-    r = n(481060),
-    a = n(600164),
-    o = n(109983),
-    c = n(120298),
-    d = n(75666),
-    u = n(388032),
-    m = n(496563);
-function x(e) {
+    l = n(481060),
+    r = n(600164),
+    a = n(109983),
+    o = n(120298),
+    c = n(75666),
+    d = n(388032),
+    u = n(496563);
+function m(e) {
     let { guildTemplate: t, onClick: n, autoFocus: l } = e,
         r = s.useCallback(() => {
             n(t);
         }, [t, n]);
-    return (0, i.jsx)(o.Z, {
-        icon: c.M[t.id],
+    return (0, i.jsx)(a.Z, {
+        icon: o.M[t.id],
         message: t.label,
         onClick: r,
         autoFocus: l,
     });
 }
-function C(e) {
+function x(e) {
     var t, n;
-    let { onClose: s, onBack: o, onChooseTemplate: c, directoryGuildName: C } = e,
-        h = (0, d.Pp)();
+    let { onClose: s, onBack: a, onChooseTemplate: o, directoryGuildName: x } = e,
+        C = (0, c.Pp)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(r.xBx, {
-                direction: a.Z.Direction.VERTICAL,
-                className: m.header,
+            (0, i.jsxs)(l.xBx, {
+                direction: r.Z.Direction.VERTICAL,
+                className: u.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(r.X6q, {
-                        className: m.title,
+                    (0, i.jsx)(l.X6q, {
+                        className: u.title,
                         variant: "heading-xl/semibold",
-                        children: u.intl.format(u.t.T7aLYW, { guildName: C }),
+                        children: d.intl.format(d.t.T7aLYW, { guildName: x }),
                     }),
-                    (0, i.jsx)(r.Text, {
-                        className: m.subtitle,
+                    (0, i.jsx)(l.Text, {
+                        className: u.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: u.intl.string(u.t["RA+St7"]),
+                        children: d.intl.string(d.t["RA+St7"]),
                     }),
                     null != s &&
-                        (0, i.jsx)(r.olH, {
-                            className: m.closeButton,
+                        (0, i.jsx)(l.olH, {
+                            className: u.closeButton,
                             onClick: s,
                         }),
                 ],
             }),
-            (0, i.jsxs)(r.hzk, {
-                className: m.templatesList,
+            (0, i.jsxs)(l.hzk, {
+                className: u.templatesList,
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(x, {
+                    (0, i.jsx)(m, {
                         guildTemplate:
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -80,8 +79,8 @@ function C(e) {
                                         });
                                 }
                                 return e;
-                            })({}, h[d.sE.CREATE])),
-                            (n = n = { label: u.intl.string(u.t.WqJbLi) }),
+                            })({}, C[c.sE.CREATE])),
+                            (n = n = { label: d.intl.string(d.t.WqJbLi) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
@@ -95,48 +94,47 @@ function C(e) {
                                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                   }),
                             t),
-                        onClick: c,
+                        onClick: o,
                     }),
-                    (0, i.jsx)(r.Text, {
-                        className: m.optionHeader,
+                    (0, i.jsx)(l.Text, {
+                        className: u.optionHeader,
                         color: "header-secondary",
                         variant: "text-xs/bold",
-                        children: u.intl.string(u.t.JGDkfn),
+                        children: d.intl.string(d.t.JGDkfn),
                     }),
-                    (0, i.jsx)(x, {
-                        guildTemplate: h[d.sE.HUB_STUDY],
-                        onClick: c,
+                    (0, i.jsx)(m, {
+                        guildTemplate: C[c.sE.HUB_STUDY],
+                        onClick: o,
                     }),
-                    (0, i.jsx)(x, {
-                        guildTemplate: h[d.sE.HUB_SCHOOL_CLUB],
-                        onClick: c,
+                    (0, i.jsx)(m, {
+                        guildTemplate: C[c.sE.HUB_SCHOOL_CLUB],
+                        onClick: o,
                     }),
-                    (0, i.jsx)(x, {
-                        guildTemplate: h[d.sE.HUB_CLASS],
-                        onClick: c,
+                    (0, i.jsx)(m, {
+                        guildTemplate: C[c.sE.HUB_CLASS],
+                        onClick: o,
                     }),
-                    (0, i.jsx)(x, {
-                        guildTemplate: h[d.sE.HUB_SOCIAL],
-                        onClick: c,
+                    (0, i.jsx)(m, {
+                        guildTemplate: C[c.sE.HUB_SOCIAL],
+                        onClick: o,
                     }),
-                    (0, i.jsx)(x, {
-                        guildTemplate: h[d.sE.HUB_MAJOR],
-                        onClick: c,
+                    (0, i.jsx)(m, {
+                        guildTemplate: C[c.sE.HUB_MAJOR],
+                        onClick: o,
                     }),
-                    (0, i.jsx)(x, {
-                        guildTemplate: h[d.sE.HUB_DORM],
-                        onClick: c,
+                    (0, i.jsx)(m, {
+                        guildTemplate: C[c.sE.HUB_DORM],
+                        onClick: o,
                     }),
                 ],
             }),
-            (0, i.jsx)(r.mzw, {
-                className: m.footer,
-                children: (0, i.jsx)(l.zx, {
-                    className: m.backButton,
-                    look: l.zx.Looks.BLANK,
-                    size: l.zx.Sizes.MIN,
-                    onClick: o,
-                    children: u.intl.string(u.t["13/7kZ"]),
+            (0, i.jsx)(l.mzw, {
+                className: u.footer,
+                children: (0, i.jsx)(l.Avr, {
+                    textVariant: "text-sm/medium",
+                    variant: "secondary",
+                    text: d.intl.string(d.t["13/7kZ"]),
+                    onClick: a,
                 }),
             }),
         ],

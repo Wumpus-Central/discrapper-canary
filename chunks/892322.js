@@ -1,75 +1,74 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => m });
 var i = n(951288);
 n(647438);
 var s = n(512722),
     l = n.n(s),
-    a = n(755721),
     r = n(481060),
-    o = n(600164),
-    c = n(565138),
-    d = n(703656),
-    u = n(388032),
-    m = n(475608);
-function x(e) {
-    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: s, onClose: x } = e;
+    a = n(600164),
+    o = n(565138),
+    c = n(703656),
+    d = n(388032),
+    u = n(475608);
+function m(e) {
+    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: s, onClose: m } = e;
     return (
         l()(null != n, "Missing guild in Hub add guild confirmation"),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(r.xBx, {
-                    direction: o.Z.Direction.VERTICAL,
-                    className: m.header,
+                    direction: a.Z.Direction.VERTICAL,
+                    className: u.header,
                     separator: !1,
                     children: [
-                        null != x &&
+                        null != m &&
                             (0, i.jsx)(r.olH, {
-                                className: m.closeButton,
-                                onClick: x,
+                                className: u.closeButton,
+                                onClick: m,
                             }),
-                        (0, i.jsx)(c.Z, {
+                        (0, i.jsx)(o.Z, {
                             guild: n,
-                            size: c.Z.Sizes.XLARGE,
+                            size: o.Z.Sizes.XLARGE,
                             active: !0,
                         }),
                         (0, i.jsx)(r.X6q, {
-                            className: m.title,
+                            className: u.title,
                             variant: "heading-xl/semibold",
-                            children: u.intl.string(u.t.CueiPT),
+                            children: d.intl.string(d.t.CueiPT),
                         }),
                         (0, i.jsx)(r.Text, {
-                            className: m.__invalid_subtitle,
+                            className: u.__invalid_subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
                             children: s
-                                ? u.intl.formatToPlainString(u.t.R7Pqn5, { guildName: t })
-                                : u.intl.formatToPlainString(u.t.eIxPSk, { guildName: t }),
+                                ? d.intl.formatToPlainString(d.t.R7Pqn5, { guildName: t })
+                                : d.intl.formatToPlainString(d.t.eIxPSk, { guildName: t }),
                         }),
                     ],
                 }),
                 (0, i.jsx)(r.mzw, {
-                    className: m.buttonRow,
+                    className: u.buttonRow,
                     children: s
-                        ? (0, i.jsx)(a.zx, {
-                              className: m.addConfirmButton,
-                              color: a.zx.Colors.BRAND,
-                              onClick: x,
-                              children: u.intl.string(u.t["X0WK+/"]),
+                        ? (0, i.jsx)(r.zxk, {
+                              text: d.intl.string(d.t["X0WK+/"]),
+                              fullWidth: !0,
+                              variant: "primary",
+                              onClick: m,
                           })
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(a.zx, {
-                                      className: m.createSecondaryButton,
-                                      color: a.zx.Colors.PRIMARY,
-                                      onClick: x,
-                                      children: u.intl.string(u.t["X/VABg"]),
+                                  (0, i.jsx)(r.zxk, {
+                                      fullWidth: !0,
+                                      text: d.intl.string(d.t["X/VABg"]),
+                                      variant: "secondary",
+                                      onClick: m,
                                   }),
-                                  (0, i.jsx)(a.zx, {
-                                      className: m.createConfirmButton,
-                                      color: a.zx.Colors.BRAND,
+                                  (0, i.jsx)(r.zxk, {
+                                      fullWidth: !0,
+                                      variant: "primary",
                                       onClick: () => {
-                                          (0, d.XU)(n.id), null == x || x();
+                                          (0, c.XU)(n.id), null == m || m();
                                       },
-                                      children: u.intl.string(u.t.DymAQk),
+                                      text: d.intl.string(d.t.DymAQk),
                                   }),
                               ],
                           }),
