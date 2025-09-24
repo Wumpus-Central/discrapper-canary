@@ -1,4 +1,4 @@
-n.d(t, { w: () => P }), n(388685), n(539854);
+n.d(t, { w: () => w }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     a = n(631562),
@@ -8,63 +8,66 @@ var r = n(951288),
     c = n(481060),
     u = n(607070),
     d = n(299363),
-    f = n(338390),
-    _ = n(803038),
-    p = n(950796),
-    h = n(392358),
-    m = n(591146),
-    g = n(377089),
-    E = n(314910),
-    b = n(928518),
-    y = n(823961),
-    O = n(819439),
-    v = n(706454),
-    I = n(210887),
-    T = n(451478),
-    S = n(998502),
-    A = n(264783),
-    C = n(892071),
-    N = n(388032);
-function R(e, t, n) {
-    let r = i.useCallback(
+    f = n(793903),
+    _ = n(338390),
+    p = n(803038),
+    h = n(950796),
+    m = n(392358),
+    g = n(591146),
+    E = n(377089),
+    b = n(314910),
+    y = n(928518),
+    O = n(823961),
+    v = n(819439),
+    I = n(706454),
+    T = n(210887),
+    S = n(451478),
+    A = n(998502),
+    C = n(264783),
+    N = n(892071),
+    R = n(388032);
+function P(e, t, n) {
+    let r = i.useContext(f.Z),
+        o = i.useCallback(
             () => ({
                 i18n: {
-                    SPINNER_LOADING_LABEL: N.intl.string(N.t.ZTNur6),
-                    BUTTON_LOADING_STARTED_LABEL: N.intl.string(N.t.pfChQk),
-                    BUTTON_LOADING_FINISHED_LABEL: N.intl.string(N.t.SVPara),
-                    CLOSE_BUTTON_LABEL: N.intl.string(N.t.cpT0Cg),
-                    PLAY_BUTTON_LABEL: N.intl.string(N.t.RscU7O),
-                    PAUSE_BUTTON_LABEL: N.intl.string(N.t.ZcgDJS),
-                    NEW: N.intl.string(N.t.y2b7CA),
-                    BETA: N.intl.string(N.t.oW0eUV),
-                    EARLY_ACCESS: N.intl.string(N.t.EYxi0t),
-                    BILLING_TRIAL_FREE_TRIAL_TEXT: N.intl.string(N.t.IBYG5e),
+                    SPINNER_LOADING_LABEL: R.intl.string(R.t.ZTNur6),
+                    BUTTON_LOADING_STARTED_LABEL: R.intl.string(R.t.pfChQk),
+                    BUTTON_LOADING_FINISHED_LABEL: R.intl.string(R.t.SVPara),
+                    CLOSE_BUTTON_LABEL: R.intl.string(R.t.cpT0Cg),
+                    PLAY_BUTTON_LABEL: R.intl.string(R.t.RscU7O),
+                    PAUSE_BUTTON_LABEL: R.intl.string(R.t.ZcgDJS),
+                    NEW: R.intl.string(R.t.y2b7CA),
+                    BETA: R.intl.string(R.t.oW0eUV),
+                    EARLY_ACCESS: R.intl.string(R.t.EYxi0t),
+                    BILLING_TRIAL_FREE_TRIAL_TEXT: R.intl.string(R.t.IBYG5e),
                 },
                 theme: e,
                 saturation: t,
-                defaultLayerContext: E.nz,
+                defaultLayerContext: b.nz,
                 experiments: { enabledExperiments: n },
+                trackImpression: r,
             }),
-            [e, t, n],
+            [e, t, n, r],
         ),
-        [o, s] = i.useState(r);
+        [s, l] = i.useState(o);
     return (
         i.useLayoutEffect(() => {
             function e() {
-                s(r);
+                l(o);
             }
-            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), N.intl.onLocaleChange(e);
-        }, [r]),
-        o
+            (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), R.intl.onLocaleChange(e);
+        }, [o]),
+        s
     );
 }
-function P(e) {
+function w(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
-        [E] = i.useState(() => S.ZP.getEnableHardwareAcceleration()),
+        [f] = i.useState(() => A.ZP.getEnableHardwareAcceleration()),
         {
-            locale: N,
-            theme: P,
+            locale: b,
+            theme: R,
             focused: w,
             currentWindow: D,
             fontScale: x,
@@ -78,13 +81,13 @@ function P(e) {
             alwaysShowLinkDecorations: Z,
             confettiMode: F,
             highContrastMode: V,
-        } = (0, l.cj)([v.default, u.Z, I.Z, T.Z, b.Z, y.Z], () => {
+        } = (0, l.cj)([I.default, u.Z, T.Z, S.Z, y.Z, O.Z], () => {
             var e;
             return {
-                locale: v.default.locale,
-                theme: null != n ? n : I.Z.theme,
-                focused: o ? b.Z.getWindowFocused(t) : T.Z.isFocused(),
-                currentWindow: o && null != (e = b.Z.getWindow(t)) ? e : window,
+                locale: I.default.locale,
+                theme: null != n ? n : T.Z.theme,
+                focused: o ? y.Z.getWindowFocused(t) : S.Z.isFocused(),
+                currentWindow: o && null != (e = y.Z.getWindow(t)) ? e : window,
                 fontScale: u.Z.fontScale,
                 fontScaleClass: u.Z.fontScaleClass,
                 keyboardModeEnabled: u.Z.keyboardModeEnabled,
@@ -95,27 +98,27 @@ function P(e) {
                 useReducedMotion: u.Z.useReducedMotion,
                 alwaysShowLinkDecorations: u.Z.alwaysShowLinkDecorations,
                 highContrastMode: u.Z.isHighContrastModeEnabled,
-                confettiMode: y.Z.confettiMode,
+                confettiMode: O.Z.confettiMode,
             };
         }),
         H = d.U.useExperiment({ location: "RootThemeContextProvider" }, { autoTrackExposure: !0 }).enabled,
-        Y = (0, h.Z)(D, __OVERLAY__ || w),
+        Y = (0, m.Z)(D, __OVERLAY__ || w),
         W = 0;
     1 !== M && (W = (0, c.OdO)(W, c.bgu.REDUCE_SATURATION_ENABLED));
-    let K = (0, A.A)(),
-        z = (0, m.Ml)("RootThemeContextProvider"),
-        q = (0, m.CL)("RootThemeContextProvider"),
-        X = (0, m.VM)("RootThemeContextProvider"),
-        Q = (0, g.U)("RootThemeContextProvider"),
-        J = _.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
-        $ = (0, f.Z)("RootThemeContextProvider"),
-        ee = (0, O.$)({ location: "RootThemeContextProvider" }),
-        et = (0, p.On)({
+    let K = (0, C.A)(),
+        z = (0, g.Ml)("RootThemeContextProvider"),
+        q = (0, g.CL)("RootThemeContextProvider"),
+        X = (0, g.VM)("RootThemeContextProvider"),
+        Q = (0, E.U)("RootThemeContextProvider"),
+        J = p.Mc.useExperiment({ location: "RootThemeContextProvider" }).enabled,
+        $ = (0, _.Z)("RootThemeContextProvider"),
+        ee = (0, v.$)({ location: "RootThemeContextProvider" }),
+        et = (0, h.On)({
             isPopoutWindow: o,
             isSearchDesktopTopLevelEnabled: ee,
         }),
-        en = R(
-            P,
+        en = P(
+            R,
             M,
             i.useMemo(() => {
                 let e = [];
@@ -131,13 +134,13 @@ function P(e) {
     return (0, r.jsx)(c.kb5, {
         value: en,
         children: (0, r.jsx)(c.wMY, {
-            theme: P,
+            theme: R,
             flags: W,
             saturation: M,
             density: K,
-            children: (0, r.jsx)(C.cE, {
-                lang: N,
-                theme: P,
+            children: (0, r.jsx)(N.cE, {
+                lang: b,
+                theme: R,
                 density: K,
                 focused: w,
                 fontScale: x,
@@ -150,7 +153,7 @@ function P(e) {
                 systemForcedColors: G,
                 useReducedMotion: B,
                 alwaysShowLinkDecorations: Z,
-                hardwareAccelerationEnabled: E,
+                hardwareAccelerationEnabled: f,
                 highContrastMode: H && V,
                 isPopoutWindow: o,
                 rootClassName: s()(et, {

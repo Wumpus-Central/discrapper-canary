@@ -1,7 +1,7 @@
 n.d(t, { N: () => d });
 var r = n(951288),
     i = n(647438),
-    a = n(681803),
+    a = n(793030),
     o = n(159691),
     s = n(388032),
     l = n(37751);
@@ -36,7 +36,7 @@ function u(e) {
 }
 function d(e) {
     let { onClick: t, "aria-label": n = s.intl.string(s.t.cpT0Cg) } = e,
-        { firstFocusableItemProps: c } = i.useContext(a.M);
+        { firstFocusableItemProps: c } = i.useContext(a.MJU);
     return (0, r.jsx)("div", {
         className: l.closeButton,
         children: (0, r.jsx)(
