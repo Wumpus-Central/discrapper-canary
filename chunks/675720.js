@@ -1,13 +1,14 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => b });
 var r = n(951288),
     i = n(647438),
     a = n(887003),
     o = n(481060),
     s = n(624138),
     l = n(786089),
-    c = n(818923),
-    u = n(52461);
-function d(e, t, n) {
+    c = n(388032),
+    u = n(818923),
+    d = n(52461);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +32,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,18 +49,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = (e) => {
+let m = (e) => {
         var t, n, r;
         let i = null == e || null == (n = e.config) || null == (t = n.rewardsConfig) ? void 0 : t.rewards,
             a = Array.isArray(i) && i.length > 0,
@@ -70,7 +71,7 @@ let h = (e) => {
             ? o
             : null;
     },
-    m = (e) => {
+    g = (e) => {
         var t, n;
         let r = null == e || null == (n = e.config) || null == (t = n.rewardsConfig) ? void 0 : t.rewards,
             i = (null != r ? r : []).map((e) => {
@@ -121,36 +122,36 @@ let h = (e) => {
             config: o,
             userStatus:
                 null != e.userStatus
-                    ? p(f({}, e.userStatus), {
+                    ? h(_({}, e.userStatus), {
                           claimedAt: new Date().toISOString(),
                           claimedTier: 0,
                       })
                     : null,
         };
     },
-    g = () =>
+    E = () =>
         (0, r.jsx)(o.X6q, {
-            className: u.trophyCaseHeading,
+            className: d.trophyCaseHeading,
             variant: "heading-md/semibold",
-            children: "Trophy Case Card",
+            children: c.intl.string(c.t["4D+sT0"]),
         }),
-    E = (e) => {
+    b = (e) => {
         let { quest: t } = e,
-            n = i.useMemo(() => h(t), [t]),
-            a = i.useMemo(() => m(t), [t]);
+            n = i.useMemo(() => m(t), [t]),
+            a = i.useMemo(() => g(t), [t]);
         return null == t || null == t.config
             ? (0, r.jsxs)("div", {
-                  className: u.trophyCaseCard,
+                  className: d.trophyCaseCard,
                   children: [
-                      (0, r.jsx)(g, {}),
+                      (0, r.jsx)(E, {}),
                       (0, r.jsx)("div", {
-                          className: u.trophyCaseContainer,
+                          className: d.trophyCaseContainer,
                           children: (0, r.jsx)("div", {
-                              className: u.trophyCaseWrapper,
+                              className: d.trophyCaseWrapper,
                               children: (0, r.jsx)(o.Text, {
                                   variant: "text-md/normal",
                                   color: "text-muted",
-                                  children: "Quest data is not available.",
+                                  children: c.intl.string(c.t.U3ek5u),
                               }),
                           }),
                       }),
@@ -158,34 +159,33 @@ let h = (e) => {
               })
             : null == n
               ? (0, r.jsxs)("div", {
-                    className: u.trophyCaseCard,
+                    className: d.trophyCaseCard,
                     children: [
-                        (0, r.jsx)(g, {}),
+                        (0, r.jsx)(E, {}),
                         (0, r.jsx)("div", {
-                            className: u.trophyCaseContainer,
+                            className: d.trophyCaseContainer,
                             children: (0, r.jsx)("div", {
-                                className: u.trophyCaseWrapper,
+                                className: d.trophyCaseWrapper,
                                 children: (0, r.jsx)(o.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children:
-                                        "This quest has no rewards configured. Trophy Case cards require at least one reward to display.",
+                                    children: c.intl.string(c.t["Gj+fXF"]),
                                 }),
                             }),
                         }),
                     ],
                 })
               : (0, r.jsx)("div", {
-                    className: c.previewBackground,
+                    className: u.previewBackground,
                     children: (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(g, {}),
+                            (0, r.jsx)(E, {}),
                             (0, r.jsx)("div", {
-                                className: u.trophyCaseContainer,
+                                className: d.trophyCaseContainer,
                                 children: (0, r.jsx)("div", {
-                                    className: u.trophyCaseWrapper,
+                                    className: d.trophyCaseWrapper,
                                     children: (0, r.jsx)("div", {
-                                        className: u.trophyCaseWrapperInner,
+                                        className: d.trophyCaseWrapperInner,
                                         children: (0, r.jsx)(l.Z, { quest: a }),
                                     }),
                                 }),

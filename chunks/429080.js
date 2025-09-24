@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(120356),
@@ -10,9 +10,10 @@ var r = n(951288),
     d = n(51144),
     f = n(553393),
     _ = n(981631),
-    p = n(818923),
-    h = n(746882);
-function m(e, t, n) {
+    p = n(388032),
+    h = n(818923),
+    m = n(746882);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,35 +54,35 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = function (e) {
+let O = function (e) {
     let { quest: t } = e,
         [n, a] = i.useState(!1),
-        m = i.useRef(null),
-        E = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        y = d.ZP.useName(E),
-        O = (0, c.Z)(null == E ? void 0 : E.id),
-        v = i.useCallback(
+        g = i.useRef(null),
+        b = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        O = d.ZP.useName(b),
+        v = (0, c.Z)(null == b ? void 0 : b.id),
+        I = i.useCallback(
             (e) =>
                 (0, r.jsx)(
                     f.Z,
-                    b(
-                        g(
+                    y(
+                        E(
                             {
-                                name: y,
+                                name: O,
                                 quest: t,
-                                memberListItemRef: m,
-                                applicationStream: O,
+                                memberListItemRef: g,
+                                applicationStream: v,
                             },
                             e,
                         ),
@@ -92,28 +93,27 @@ let y = function (e) {
                         },
                     ),
                 ),
-            [t, O, y],
+            [t, v, O],
         );
     return (0, r.jsx)("div", {
-        className: p.previewBackground,
+        className: h.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: p.previewCard,
+            className: h.previewCard,
             children: [
                 (0, r.jsx)(l.X6q, {
-                    className: h.heading,
+                    className: m.heading,
                     variant: "heading-md/semibold",
-                    children: "Members List Popout",
+                    children: p.intl.string(p.t.U8vTzs),
                 }),
                 (0, r.jsx)("div", {
-                    className: h.previewDescription,
-                    children:
-                        "This shows how the quest appears when your user has an active quest in the members list. Click your member item below to show the quest popout. Note: In production, the quest popout doesn't show for your own user.",
+                    className: m.previewDescription,
+                    children: p.intl.string(p.t["0TZ85+"]),
                 }),
                 (0, r.jsx)("div", {
-                    className: h.memberListContainer,
+                    className: m.memberListContainer,
                     children: (0, r.jsx)(l.yRy, {
-                        targetElementRef: m,
-                        renderPopout: v,
+                        targetElementRef: g,
+                        renderPopout: I,
                         position: "bottom",
                         shouldShow: n,
                         onRequestClose: () => a(!1),
@@ -125,32 +125,32 @@ let y = function (e) {
                         scrollBehavior: "close",
                         children: () =>
                             (0, r.jsx)("div", {
-                                ref: m,
-                                className: o()(h.minimalMemberItem, { [h.selected]: n }),
+                                ref: g,
+                                className: o()(m.minimalMemberItem, { [m.selected]: n }),
                                 children: (0, r.jsx)(l.P3F, {
                                     onClick: () => a(!n),
                                     tabIndex: 0,
                                     children: (0, r.jsxs)("div", {
-                                        className: h.memberItemContent,
+                                        className: m.memberItemContent,
                                         children: [
                                             (0, r.jsx)(l.qEK, {
                                                 size: l.EFr.SIZE_32,
-                                                src: null == E ? void 0 : E.getAvatarURL(void 0, 32),
+                                                src: null == b ? void 0 : b.getAvatarURL(void 0, 32),
                                                 status: _.Skl.ONLINE,
-                                                "aria-label": null == E ? void 0 : E.username,
+                                                "aria-label": null == b ? void 0 : b.username,
                                             }),
                                             (0, r.jsxs)("div", {
-                                                className: h.memberInfo,
+                                                className: m.memberInfo,
                                                 children: [
                                                     (0, r.jsx)(l.Text, {
                                                         variant: "text-md/semibold",
                                                         color: "header-primary",
-                                                        children: y,
+                                                        children: O,
                                                     }),
                                                     (0, r.jsx)(l.Text, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
-                                                        children: "Online",
+                                                        children: p.intl.string(p.t.b9w3bG),
                                                     }),
                                                 ],
                                             }),

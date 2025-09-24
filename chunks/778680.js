@@ -1,39 +1,41 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => c });
 var r = n(951288),
     i = n(647438),
     a = n(481060),
     o = n(751586),
-    s = n(473846);
-function l(e) {
-    let { children: t, selectedSections: n = [], onSectionSelect: l, controls: c } = e,
-        u = 0 === n.length || n.length === o.Tl.length,
-        d = i.useMemo(() => (u ? "all" : 1 === n.length ? n[0] : "all"), [n, u]),
-        f = (e) => {
-            null == l || l(e);
+    s = n(388032),
+    l = n(473846);
+function c(e) {
+    let { children: t, selectedSections: n = [], onSectionSelect: c, controls: u } = e,
+        d = (0, o.Ui)(),
+        f = 0 === n.length || n.length === d.length,
+        _ = i.useMemo(() => (f ? "all" : 1 === n.length ? n[0] : "all"), [n, f]),
+        p = (e) => {
+            null == c || c(e);
         };
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: l.container,
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: "heading-xl/semibold",
                 color: "header-primary",
-                children: "Quest Preview Tool",
+                children: s.intl.string(s.t.BDUDam),
             }),
             (0, r.jsx)("div", {
-                className: s.controlsBarContainer,
-                children: c,
+                className: l.controlsBarContainer,
+                children: u,
             }),
             (0, r.jsxs)(a.njP, {
                 type: "top",
                 look: "brand",
-                selectedItem: d,
-                onItemSelect: f,
+                selectedItem: _,
+                onItemSelect: p,
                 children: [
                     (0, r.jsx)(a.njP.Item, {
                         id: "all",
-                        children: "All Sections",
+                        children: s.intl.string(s.t.Y9DnPT),
                     }),
-                    o.Tl.map((e) =>
+                    d.map((e) =>
                         (0, r.jsx)(
                             a.njP.Item,
                             {
@@ -46,9 +48,9 @@ function l(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: s.contentArea,
+                className: l.contentArea,
                 children: (0, r.jsx)("div", {
-                    className: s.content,
+                    className: l.content,
                     children: t,
                 }),
             }),

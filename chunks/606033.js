@@ -99,7 +99,7 @@ let h = function (e) {
                                         options: N,
                                         value: m,
                                         onChange: D,
-                                        placeholder: "Select or enter Quest ID",
+                                        placeholder: _.intl.string(_.t.Zw8jxs),
                                         clearable: !0,
                                         filter: (e, t) => {
                                             if ((0, l.Ew)(null == t ? void 0 : t.trim())) return e;
@@ -153,21 +153,21 @@ let h = function (e) {
                                 disabled: y,
                                 loading: y,
                                 variant: "secondary",
-                                text: "Complete Quest",
+                                text: _.intl.string(_.t.jQEfRU),
                             }),
                             (0, r.jsx)(o.zxk, {
                                 onClick: P,
                                 disabled: y,
                                 loading: y,
                                 variant: "secondary",
-                                text: "Reset Quest",
+                                text: _.intl.string(_.t.taqkwM),
                             }),
                             (0, r.jsx)(o.zxk, {
                                 onClick: w,
                                 disabled: y,
                                 loading: y,
                                 variant: "secondary",
-                                text: "Random Progress",
+                                text: _.intl.string(_.t.cKSLr6),
                             }),
                             (0, r.jsx)(o.yRy, {
                                 targetElementRef: T,
@@ -182,7 +182,7 @@ let h = function (e) {
                                             className: p.copyInput,
                                             children: (0, r.jsx)(s.Z, {
                                                 value: f.$w.QUEST_PREVIEW_TOOL_2(m),
-                                                text: "Copy link",
+                                                text: _.intl.string(_.t.WqhZsr),
                                             }),
                                         }),
                                     }),
@@ -190,7 +190,7 @@ let h = function (e) {
                                     (0, r.jsx)(o.hU, {
                                         buttonRef: T,
                                         onClick: () => I(!v),
-                                        "aria-label": "Share quest link",
+                                        "aria-label": _.intl.string(_.t.rNGQfH),
                                         icon: o.TIy,
                                         variant: "secondary",
                                     }),

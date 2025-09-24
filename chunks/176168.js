@@ -1,30 +1,31 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(951288),
     i = n(481060),
     a = n(210724),
     o = n(130653),
     s = n(78826),
-    l = n(818923),
-    c = n(805832),
-    u = n(981028);
-let d = function (e) {
+    l = n(388032),
+    c = n(818923),
+    u = n(805832),
+    d = n(981028);
+let f = function (e) {
     let { quest: t } = e;
     return (0, r.jsx)("div", {
-        className: l.previewBackground,
+        className: c.previewBackground,
         children: (0, r.jsxs)("div", {
-            className: c.barCard,
+            className: u.barCard,
             children: [
                 (0, r.jsx)(i.X6q, {
-                    className: c.barHeading,
+                    className: u.barHeading,
                     variant: "heading-md/semibold",
-                    children: "Quest Bar",
+                    children: l.intl.string(l.t.dCHFNT),
                 }),
                 (0, r.jsx)("div", {
-                    className: c.fixedBarContainer,
+                    className: u.fixedBarContainer,
                     children: (0, r.jsx)("div", {
-                        className: c.fixedBarWrapper,
+                        className: u.fixedBarWrapper,
                         children: (0, r.jsx)("div", {
-                            className: u.panels,
+                            className: d.panels,
                             children: (0, r.jsx)(o.Z, {
                                 children: (0, r.jsx)(s.p, {
                                     source: "preview",
