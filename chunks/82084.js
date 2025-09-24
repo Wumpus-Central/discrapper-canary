@@ -5,8 +5,8 @@ var r = n(951288),
 function o(e) {
     var t,
         n,
-        { root: o, directory: s, target: a, sidebarHeader: u, sidebarFooter: c } = e,
-        d = (function (e, t) {
+        { root: o, directory: s, target: a, onPanelChange: u, sidebarHeader: c, sidebarFooter: d } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,7 +26,7 @@ function o(e) {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ["root", "directory", "target", "sidebarHeader", "sidebarFooter"]);
+        })(e, ["root", "directory", "target", "onPanelChange", "sidebarHeader", "sidebarFooter"]);
     return (0, r.jsx)(
         i.A,
         ((t = (function (e) {
@@ -53,16 +53,17 @@ function o(e) {
                     });
             }
             return e;
-        })({}, d)),
+        })({}, g)),
         (n = n =
             {
                 children: (0, r.jsx)(l.Z, {
-                    onClose: d.onClose,
+                    onClose: g.onClose,
                     root: o,
                     directory: s,
                     target: a,
-                    sidebarHeader: u,
-                    sidebarFooter: c,
+                    onPanelChange: u,
+                    sidebarHeader: c,
+                    sidebarFooter: d,
                 }),
             }),
         Object.getOwnPropertyDescriptors

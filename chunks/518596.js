@@ -1,10 +1,12 @@
 n.r(t),
     n.d(t, {
         USER_SETTINGS_MODAL_KEY: () => E,
+        getUserSettingsSectionsByWebUserSettings: () => I,
         getWebUserSettingsByUserSettingsSections: () => v,
         openUserSettings: () => b,
-        openUserSettingsFromParsedUrl: () => I,
+        openUserSettingsFromParsedUrl: () => T,
     }),
+    n(388685),
     n(35282);
 var r = n(951288),
     i = n(481060),
@@ -135,40 +137,46 @@ function O(e) {
 }
 function v() {
     let e = (0, u.KV)("getWebUserSettingFromSection");
-    return {
-        [d.oAB.ACCOUNT]: c.n.ACCOUNT_PANEL,
-        [d.oAB.PROFILE_CUSTOMIZATION]: c.n.PROFILE_PANEL,
-        [d.oAB.CONTENT_AND_SOCIAL]: c.n.CONTENT_AND_SOCIAL_PANEL,
-        [d.oAB.DATA_AND_PRIVACY]: c.n.DATA_AND_PRIVACY_PANEL,
-        [d.oAB.FAMILY_CENTER]: c.n.FAMILY_CENTER_PANEL,
-        [d.oAB.SESSIONS]: c.n.SESSIONS_PANEL,
-        [d.oAB.AUTHORIZED_APPS]: c.n.AUTHORIZED_APPS_PANEL,
-        [d.oAB.CONNECTIONS]: c.n.CONNECTIONS_PANEL,
-        [d.oAB.CLIPS]: c.n.CLIPS_PANEL,
-        [d.oAB.PREMIUM]: c.n.NITRO_PANEL,
-        [d.oAB.SUBSCRIPTIONS]: c.n.SUBSCRIPTIONS_PANEL,
-        [d.oAB.INVENTORY]: c.n.GIFT_PANEL,
-        [d.oAB.BILLING]: c.n.BILLING_PANEL,
-        [d.oAB.APPEARANCE]: c.n.APPEARANCE_PANEL,
-        [d.oAB.ACCESSIBILITY]: c.n.ACCESSIBILITY_PANEL,
-        [d.oAB.VOICE]: c.n.VOICE_AND_VIDEO_PANEL,
-        [d.oAB.POGGERMODE]: c.n.POGGERMODE_PANEL,
-        [d.oAB.TEXT]: c.n.CHAT_PANEL,
-        [d.oAB.NOTIFICATIONS]: e ? c.n.NOTIFICATIONS_PANEL : c.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL,
-        [d.oAB.KEYBINDS]: c.n.KEYBINDS_PANEL,
-        [d.oAB.LOCALE]: c.n.LOCALE_PANEL,
-        [d.oAB.WINDOWS]: c.n.WINDOWS_PANEL,
-        [d.oAB.LINUX]: c.n.LINUX_PANEL,
-        [d.oAB.STREAMER_MODE]: c.n.STREAMER_MODE_PANEL,
-        [d.oAB.ADVANCED]: c.n.ADVANCED_PANEL,
-        [d.oAB.ACTIVITY_PRIVACY]: c.n.ACTIVITY_PRIVACY_PANEL,
-        [d.oAB.REGISTERED_GAMES]: c.n.REGISTERED_GAMES_PANEL,
-        [d.oAB.OVERLAY]: c.n.OVERLAY_PANEL,
-        [d.oAB.EXPERIMENTS]: c.n.EXPERIMENTS_PANEL,
-        [d.oAB.DEVELOPER_OPTIONS]: c.n.DEVELOPER_OPTIONS_PANEL,
-    };
+    return new Map([
+        [d.oAB.ACCOUNT, c.n.ACCOUNT_PANEL],
+        [d.oAB.PROFILE_CUSTOMIZATION, c.n.PROFILE_PANEL],
+        [d.oAB.CONTENT_AND_SOCIAL, c.n.CONTENT_AND_SOCIAL_PANEL],
+        [d.oAB.DATA_AND_PRIVACY, c.n.DATA_AND_PRIVACY_PANEL],
+        [d.oAB.FAMILY_CENTER, c.n.FAMILY_CENTER_PANEL],
+        [d.oAB.SESSIONS, c.n.SESSIONS_PANEL],
+        [d.oAB.AUTHORIZED_APPS, c.n.AUTHORIZED_APPS_PANEL],
+        [d.oAB.CONNECTIONS, c.n.CONNECTIONS_PANEL],
+        [d.oAB.CLIPS, c.n.CLIPS_PANEL],
+        [d.oAB.PREMIUM, c.n.NITRO_PANEL],
+        [d.oAB.SUBSCRIPTIONS, c.n.SUBSCRIPTIONS_PANEL],
+        [d.oAB.INVENTORY, c.n.GIFT_PANEL],
+        [d.oAB.BILLING, c.n.BILLING_PANEL],
+        [d.oAB.APPEARANCE, c.n.APPEARANCE_PANEL],
+        [d.oAB.ACCESSIBILITY, c.n.ACCESSIBILITY_PANEL],
+        [d.oAB.VOICE, c.n.VOICE_AND_VIDEO_PANEL],
+        [d.oAB.POGGERMODE, c.n.POGGERMODE_PANEL],
+        [d.oAB.TEXT, c.n.CHAT_PANEL],
+        [d.oAB.NOTIFICATIONS, e ? c.n.NOTIFICATIONS_PANEL : c.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL],
+        [d.oAB.KEYBINDS, c.n.KEYBINDS_PANEL],
+        [d.oAB.LOCALE, c.n.LOCALE_PANEL],
+        [d.oAB.WINDOWS, c.n.WINDOWS_PANEL],
+        [d.oAB.LINUX, c.n.LINUX_PANEL],
+        [d.oAB.STREAMER_MODE, c.n.STREAMER_MODE_PANEL],
+        [d.oAB.ADVANCED, c.n.ADVANCED_PANEL],
+        [d.oAB.ACTIVITY_PRIVACY, c.n.ACTIVITY_PRIVACY_PANEL],
+        [d.oAB.REGISTERED_GAMES, c.n.REGISTERED_GAMES_PANEL],
+        [d.oAB.OVERLAY, c.n.OVERLAY_PANEL],
+        [d.oAB.EXPERIMENTS, c.n.EXPERIMENTS_PANEL],
+        [d.oAB.DEVELOPER_OPTIONS, c.n.DEVELOPER_OPTIONS_PANEL],
+    ]);
 }
-function I(e) {
+function I() {
+    let e = v(),
+        t = new Map();
+    for (let [n, r] of e.entries()) t.set(r, n);
+    return t;
+}
+function T(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
     y({
         section: t.section,
@@ -183,7 +191,7 @@ function I(e) {
         });
     };
     if ((0, u.yP)("renderUserSettingsRedirector")) {
-        let e = v()[t.section];
+        let e = v().get(t.section);
         null == e
             ? (O({
                   section: t.section,

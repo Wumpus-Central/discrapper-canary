@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(636298),
@@ -49,21 +49,21 @@ function d(e, t) {
         e
     );
 }
-function f(e) {
-    var t, n, f;
-    let { root: g, directory: y, target: O, onClose: E, sidebarHeader: b, sidebarFooter: p } = e,
-        [v, T] = i.useState(!0),
-        [j, m] = i.useState(null == (t = y.entry(O)) ? void 0 : t.parentPanel),
-        [N, S] = i.useState(() => y.typedGet(j)),
-        C = i.useCallback(() => P(void 0), []),
-        [_, P] = i.useState({
+function g(e) {
+    var t, n, g;
+    let { root: f, directory: y, target: O, onClose: E, sidebarHeader: b, sidebarFooter: p, onPanelChange: v } = e,
+        [T, S] = i.useState(!0),
+        [j, N] = i.useState(null == (t = y.entry(O)) ? void 0 : t.parentPanel),
+        [m, C] = i.useState(() => y.typedGet(j)),
+        _ = i.useCallback(() => x(void 0), []),
+        [P, x] = i.useState({
             target: O,
             targetAccordion: null == (n = y.entry(O)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
-            complete: C,
+            complete: _,
         }),
-        { navigateWithValidation: x } = (0, s.Cu)(),
-        I = i.useMemo(
+        { navigateWithValidation: I } = (0, s.Cu)(),
+        A = i.useMemo(
             () => ({
                 currentPanel: y.typedGet(j),
                 navigateTo: (e) => {
@@ -72,41 +72,41 @@ function f(e) {
                     let n = {
                         target: e,
                         targetAccordion: t.parentAccordion,
-                        complete: C,
+                        complete: _,
                     };
                     if (t.parentPanel.key !== (null == j ? void 0 : j.key)) {
                         let e = t.parentPanel;
-                        x(() => {
-                            P(d(c({}, n), { animateScroll: !1 })), S(e), m(e);
+                        I(() => {
+                            x(d(c({}, n), { animateScroll: !1 })), C(e), N(e), null == v || v(e.key);
                         });
-                    } else P(d(c({}, n), { animateScroll: !0 }));
+                    } else x(d(c({}, n), { animateScroll: !0 }));
                 },
-                navTransition: _,
-                showNavigationMobile: v,
-                setShowNavigationMobile: T,
+                navTransition: P,
+                showNavigationMobile: T,
+                setShowNavigationMobile: S,
             }),
-            [y, j, _, v, C, x],
+            [y, j, P, T, _, I, v],
         ),
-        A = () => x(E);
+        h = () => I(E);
     return (0, r.jsx)(a.j.Provider, {
-        value: I,
+        value: A,
         children: (0, r.jsxs)("div", {
             className: u.container,
             children: [
                 (0, r.jsx)(o.P, {
-                    root: g,
+                    root: f,
                     header: b,
                     footer: p,
-                    onClose: A,
+                    onClose: h,
                 }),
                 (0, r.jsx)(l.Z, {
-                    onClose: A,
-                    setting: null != (f = I.currentPanel) ? f : N,
+                    onClose: h,
+                    setting: null != (g = A.currentPanel) ? g : m,
                 }),
             ],
         }),
     });
 }
-function g(e) {
-    return (0, r.jsx)(s.Ri, { children: (0, r.jsx)(f, c({}, e)) });
+function f(e) {
+    return (0, r.jsx)(s.Ri, { children: (0, r.jsx)(g, c({}, e)) });
 }

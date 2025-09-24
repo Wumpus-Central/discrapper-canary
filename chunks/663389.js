@@ -177,6 +177,12 @@ class U extends (r = o.ZP.Store) {
     shouldOpenWithoutBackstack() {
         return O;
     }
+    getAnalyticsLocation() {
+        return I;
+    }
+    getAnalyticsLocations() {
+        return T;
+    }
     getProps() {
         return {
             submitting: f === c.QZA.SUBMITTING,

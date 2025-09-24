@@ -1,117 +1,99 @@
-n.r(t), n.d(t, { default: () => y });
-var i = n(951288),
-    a = n(647438),
-    s = n(442837),
-    l = n(37234),
-    o = n(230711),
+n.r(t), n.d(t, { default: () => w });
+var s = n(951288),
+    i = n(647438),
+    o = n(442837),
+    a = n(37234),
+    l = n(230711),
     r = n(410575),
-    u = n(503089),
-    c = n(110924),
+    c = n(503089),
+    u = n(110924),
     d = n(100527),
-    Z = n(367907),
-    f = n(906732),
-    _ = n(254901),
+    Z = n(906732),
+    f = n(254901),
     g = n(45493),
     p = n(332473),
-    E = n(113434),
-    h = n(984802),
-    S = n(663389),
-    b = n(210887),
-    k = n(996733),
+    h = n(113434),
+    S = n(984802),
+    _ = n(663389),
+    b = n(88658),
+    E = n(210887),
+    m = n(996733),
     x = n(991346),
-    m = n(839469),
+    k = n(839469),
     P = n(981631),
     T = n(388032);
-let j = a.forwardRef(function () {
+let j = i.forwardRef(function () {
         g.Z.trackExposure({ location: "cd25e4_1" }),
-            _.Z.useExperiment({ location: "user_setting_auto" }, { autoTrackExposure: !1 }),
-            _.Z.trackExposure({ location: "user_setting_manual" });
-        let e = (0, s.e7)([b.Z], () => b.Z.theme),
-            t = (0, h.Ll)(),
+            f.Z.useExperiment({ location: "user_setting_auto" }, { autoTrackExposure: !1 }),
+            f.Z.trackExposure({ location: "user_setting_manual" });
+        let e = (0, o.e7)([E.Z], () => E.Z.theme),
+            t = (0, S.Ll)(),
             {
                 section: n,
                 subsection: j,
-                analyticsLocation: y,
+                analyticsLocation: w,
                 analyticsLocations: A,
-            } = (0, s.cj)([S.Z], () => {
-                let e = S.Z.getSection(),
-                    t = S.Z.getSubsection(),
-                    { analyticsLocation: n, analyticsLocations: i } = S.Z.getProps();
+            } = (0, o.cj)([_.Z], () => {
+                let e = _.Z.getSection(),
+                    t = _.Z.getSubsection(),
+                    { analyticsLocation: n, analyticsLocations: s } = _.Z.getProps();
                 return {
                     section: e,
                     subsection: t,
                     analyticsLocation: n,
-                    analyticsLocations: i,
+                    analyticsLocations: s,
                 };
             }),
-            w = (0, c.Z)(n),
-            C = (0, c.Z)(j),
-            G = (0, k.Z7)(),
-            { analyticsLocations: I } = (0, f.ZP)(d.Z.USER_SETTINGS);
-        a.useEffect(() => {
+            C = (0, u.Z)(n),
+            v = (0, u.Z)(j),
+            y = (0, m.Z7)(),
+            { analyticsLocations: G } = (0, Z.ZP)(d.Z.USER_SETTINGS);
+        i.useEffect(() => {
             null != n &&
-                (n !== w || j !== C) &&
-                (function (e) {
-                    let {
-                        destinationPane: t,
-                        originPane: n = null,
-                        source: i = null,
-                        subsection: a = null,
-                        locationStack: s = null,
-                        searchQuery: l = null,
-                    } = e;
-                    Z.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
-                        settings_type: "user",
-                        origin_pane: n,
-                        destination_pane: t,
-                        location_stack: s,
-                        source: i,
-                        subsection: a,
-                        search_query: l,
-                    });
-                })({
+                (n !== C || j !== v) &&
+                (0, b.QB)({
                     destinationPane: n,
-                    originPane: null != w ? w : null,
-                    source: y,
+                    originPane: null != C ? C : null,
+                    source: w,
                     subsection: j,
                     locationStack: A,
-                    searchQuery: "" !== G ? G : null,
+                    searchQuery: "" !== y ? y : null,
                 });
-        }, [n, w, j, C, y, A, G]);
-        let { hasSearchResults: N, searchResults: v } = (0, m.E)(),
-            L = (0, x.VO)(),
-            R = (0, x.q8)(v),
-            U = a.useMemo(() => (N ? R : L), [N, R, L]),
-            q = (0, p.b)(),
-            M = (0, E.iO)(),
-            B = a.useCallback((e) => {
-                o.Z.setSection(e);
+        }, [n, C, j, v, w, A, y]);
+        let { hasSearchResults: L, searchResults: R } = (0, k.F)(),
+            U = (0, x.VO)(),
+            B = (0, x.q8)(R),
+            F = i.useMemo(() => (L ? B : U), [L, B, U]),
+            I = (0, p.b)(),
+            N = (0, h.iO)(),
+            q = i.useCallback((e) => {
+                l.Z.setSection(e);
             }, []);
-        return (0, i.jsx)(f.Gt, {
-            value: I,
-            children: (0, i.jsx)(r.Z, {
+        return (0, s.jsx)(Z.Gt, {
+            value: G,
+            children: (0, s.jsx)(r.Z, {
                 root: !0,
                 page: P.ZY5.USER_SETTINGS,
-                children: (0, i.jsx)(u.ZP, {
+                children: (0, s.jsx)(c.ZP, {
                     theme: e,
                     title: T.intl.string(T.t.cduTBA),
                     sidebarTheme: t,
                     section: n,
-                    onSetSection: B,
-                    onClose: l.xf,
-                    sections: U,
-                    isEligibleForPomelo: q,
-                    questsForBadge: M,
+                    onSetSection: q,
+                    onClose: a.xf,
+                    sections: F,
+                    isEligibleForPomelo: I,
+                    questsForBadge: N,
                     showUserSettingsSearch: !0,
                 }),
             }),
         });
     }),
-    y = a.forwardRef(function () {
-        let e = (0, s.e7)([S.Z], () => S.Z.getProps().analyticsLocations),
-            { analyticsLocations: t } = (0, f.ZP)(e);
-        return (0, i.jsx)(f.Gt, {
+    w = i.forwardRef(function () {
+        let e = (0, o.e7)([_.Z], () => _.Z.getProps().analyticsLocations),
+            { analyticsLocations: t } = (0, Z.ZP)(e);
+        return (0, s.jsx)(Z.Gt, {
             value: t,
-            children: (0, i.jsx)(j, {}),
+            children: (0, s.jsx)(j, {}),
         });
     });
