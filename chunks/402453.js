@@ -29,8 +29,10 @@ function s() {
     return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
 function l(e) {
-    var t, n, r;
-    return null != (r = null == (n = s().experiments) || null == (t = n.manaDesktopToggleInputs) ? void 0 : t[e]) && r;
+    var t, n;
+    return (null != (n = null == (t = s().experiments) ? void 0 : t.enabledExperiments) ? n : []).includes(
+        "mana-toggle-inputs",
+    );
 }
 function c(e) {
     let { children: t, value: n } = e;
