@@ -8,12 +8,12 @@ var i = n(442837),
     a = n(705262),
     o = n(569984),
     s = n(564034),
-    l = n(176168),
-    c = n(234086),
-    u = n(17057),
-    d = n(70621),
-    f = n(429080),
-    _ = n(675720),
+    l = n(649424),
+    c = n(176168),
+    u = n(234086),
+    d = n(17057),
+    f = n(70621),
+    _ = n(429080),
     p = n(388032),
     h = n(726927);
 function m() {
@@ -39,8 +39,8 @@ function m() {
             label: p.intl.string(p.t.QbGtHB),
         },
         {
-            value: "trophy_case",
-            label: p.intl.string(p.t.dQ3vgI),
+            value: "activity_panel",
+            label: p.intl.string(p.t.HWICen),
         },
     ];
 }
@@ -53,27 +53,27 @@ let g = (e) => {
         children: [
             m("home_card") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(d.w, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(f.w, { quest: p }), (0, r.jsx)(s.i, {})],
                 }),
             m("quest_bar") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(l.Z, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(c.Z, { quest: p }), (0, r.jsx)(s.i, {})],
                 }),
             m("share_embed") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(u.Z, { questId: p.id }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(d.Z, { questId: p.id }), (0, r.jsx)(s.i, {})],
                 }),
             m("channel_call_header") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(c.i, { quest: p }), (0, r.jsx)(s.i, {})],
+                    children: [(0, r.jsx)(u.i, { quest: p }), (0, r.jsx)(s.i, {})],
                 }),
             m("members_list") &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(f.Z, { quest: p }), (0, r.jsx)(s.i, {})],
-                }),
-            m("trophy_case") &&
-                (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(_.Z, { quest: p }), (0, r.jsx)(s.i, {})],
+                }),
+            m("activity_panel") &&
+                (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(l.Z, { quest: p }), (0, r.jsx)(s.i, {})],
                 }),
             (0, r.jsx)("div", {
                 className: h.themes,

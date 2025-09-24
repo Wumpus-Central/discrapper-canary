@@ -32,6 +32,7 @@ n.d(t, {
     uA: () => eO,
     vf: () => eB,
     z: () => eg,
+    z1: () => eW,
     z6: () => eA,
     zB: () => eV,
 }),
@@ -934,4 +935,12 @@ let eH = () => (0, c.Wu)([N.Z], () => [...N.Z.quests.values()]).some((e) => e.pr
         let e = (0, w.T)({ location: M.dr.QUEST_PREVIEW_TOOL_2 }),
             t = eH();
         return e && t;
+    },
+    eW = (e) => {
+        var t;
+        let n = (null == e ? void 0 : e.userStatus) != null && (0, A.zE)(e.userStatus, R.jn.ACTIVITY_PANEL),
+            r = eu(null != e ? e : null),
+            i = (null == e || null == (t = e.userStatus) ? void 0 : t.claimedAt) != null,
+            a = (0, c.e7)([N.Z], () => null != N.Z.questEnrollmentBlockedUntil, []);
+        return !n && !r && !i && !a;
     };

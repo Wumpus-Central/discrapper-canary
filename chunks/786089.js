@@ -1,207 +1,205 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
-    a = n(120356),
-    o = n.n(a),
-    s = n(979554),
-    l = n(887003),
+    l = n(120356),
+    a = n.n(l),
+    o = n(979554),
+    s = n(887003),
     c = n(442837),
     u = n(780384),
     d = n(481060),
-    f = n(393238),
-    _ = n(410030),
-    p = n(204418),
-    h = n(70097),
+    p = n(393238),
+    f = n(410030),
+    h = n(204418),
+    g = n(70097),
     m = n(594174),
-    g = n(626135),
-    E = n(617136),
-    b = n(113434),
-    y = n(497505),
-    O = n(475595),
+    b = n(626135),
+    _ = n(617136),
+    O = n(113434),
+    E = n(497505),
+    y = n(475595),
     v = n(352084),
     I = n(125011),
-    T = n(685613),
-    S = n(981631),
-    A = n(388032),
-    C = n(199679);
-function N(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function R(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                N(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function P(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = w(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function w(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function D(e) {
-    var t, n, a, N, w, D;
-    let { quest: x } = e,
-        [L, j] = (0, i.useState)(!1),
-        [M, k] = (0, i.useState)(24),
-        [U, G] = (0, i.useState)(!1),
-        B = (0, i.useRef)(null),
-        Z = (0, i.useRef)(null),
-        F = (0, i.useRef)(null),
-        V = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: H, height: Y = 0 } = (0, f.ZP)(),
-        W = (0, _.ZP)(),
-        K = (0, b.B6)(null == (t = x.userStatus) ? void 0 : t.claimedAt, {
+    S = n(685613),
+    C = n(981631),
+    T = n(388032),
+    N = n(199679);
+let P = (0, i.memo)(function (e) {
+    var t, n, l, P, j, x;
+    let { quest: A } = e,
+        [Z, w] = (0, i.useState)(!1),
+        [L, R] = (0, i.useState)(24),
+        [D, k] = (0, i.useState)(!1),
+        M = (0, i.useRef)(null),
+        U = (0, i.useRef)(null),
+        G = (0, i.useRef)(null),
+        B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        { ref: V, height: H = 0 } = (0, p.ZP)(),
+        F = (0, f.ZP)(),
+        z = (0, O.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
             month: "numeric",
             day: "numeric",
         }),
-        z = null != (w = null == (n = x.userStatus) ? void 0 : n.claimedTier) ? w : 0,
-        q = x.config.rewards[z],
-        X = (null == q ? void 0 : q.type) === l.w.FRACTIONAL_PREMIUM,
-        Q = (null == q ? void 0 : q.type) === l.w.COLLECTIBLE,
-        J = (null == q ? void 0 : q.type) === l.w.VIRTUAL_CURRENCY,
-        $ = null == q || null == (N = q.collectibleProduct) || null == (a = N.items) ? void 0 : a[0],
-        ee = (null == $ ? void 0 : $.type) === s.Z.AVATAR_DECORATION ? $ : null;
-    (0, f.PM)(B, (e) => {
+        W = null != (j = null == (n = A.userStatus) ? void 0 : n.claimedTier) ? j : 0,
+        Y = A.config.rewards[W],
+        K = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
+        q = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
+        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
+        X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
+        J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
+    (0, p.PM)(M, (e) => {
         let { height: t } = e;
-        if (!Q || null == t || null == Z.current || null == B.current || null == F.current) return;
-        let n = B.current.getBoundingClientRect(),
-            r = Z.current.getBoundingClientRect(),
-            i = F.current.getBoundingClientRect();
-        k((r.top - n.top - i.height) / 2);
+        if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
+        let n = M.current.getBoundingClientRect(),
+            r = U.current.getBoundingClientRect(),
+            i = G.current.getBoundingClientRect();
+        R((r.top - n.top - i.height) / 2);
     });
-    let et = (0, u.wj)(W),
-        en = (0, i.useMemo)(() => null != x.config.cosponsorMetadata, [x]),
-        er = (0, i.useMemo)(() => (0, O.fh)(x, O.eC.REWARD), [x]),
-        ei = L ? Y + 8 : 0,
-        ea = (0, E.mH)(y.jn.TROPHY_CASE_CARD),
-        { content_position: eo, row_index: es } = ea,
-        el = P(ea, ["content_position", "row_index"]),
-        ec = () => {
-            j(!0), g.default.track(S.rMx.QUEST_HOVER, R({ quest_id: x.id }, el));
+    let $ = (0, u.wj)(F),
+        ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
+        et = (0, i.useMemo)(() => (0, y.fh)(A, y.eC.REWARD), [A]),
+        en = Z ? H + 8 : 0,
+        er = (0, _.mH)(E.jn.TROPHY_CASE_CARD),
+        { content_position: ei, row_index: el } = er,
+        ea = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(er, ["content_position", "row_index"]),
+        eo = () => {
+            w(!0),
+                b.default.track(
+                    C.rMx.QUEST_HOVER,
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({ quest_id: A.id }, ea),
+                );
         },
-        eu = () => j(!1),
-        ed = (e) => {
-            G(!0),
-                g.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
+        es = () => w(!1),
+        ec = (e) => {
+            k(!0),
+                b.default.track(C.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
-                    quest_id: x.id,
+                    quest_id: A.id,
                 });
         };
-    return null == q || U
+    return null == Y || D
         ? null
         : (0, r.jsx)(d.tEY, {
               children: (0, r.jsxs)("div", {
-                  ref: B,
+                  ref: M,
                   tabIndex: 0,
-                  onFocus: ec,
-                  onBlur: eu,
-                  onMouseEnter: ec,
-                  onMouseLeave: eu,
-                  className: o()(C.container, { [C.hovered]: L }),
+                  onFocus: eo,
+                  onBlur: es,
+                  onMouseEnter: eo,
+                  onMouseLeave: es,
+                  className: a()(N.container, { [N.hovered]: Z }),
                   children: [
-                      null != V &&
-                          Q &&
-                          null != ee &&
+                      null != B &&
+                          q &&
+                          null != J &&
                           (0, r.jsx)("div", {
-                              ref: F,
-                              className: C.decoWrapper,
-                              style: { top: M },
-                              children: (0, r.jsx)(p.Z, {
-                                  avatarDecorationOverride: ee,
-                                  user: V,
+                              ref: G,
+                              className: N.decoWrapper,
+                              style: { top: L },
+                              children: (0, r.jsx)(h.Z, {
+                                  avatarDecorationOverride: J,
+                                  user: B,
                                   guildId: null,
                               }),
                           }),
-                      X
-                          ? (0, r.jsx)(v.Z, { className: C.image })
-                          : J
-                            ? (0, r.jsx)(I.Z, { className: C.image })
-                            : er.isAnimated
-                              ? (0, r.jsx)(h.Z, {
-                                    className: C.assetBlurred,
+                      K
+                          ? (0, r.jsx)(v.Z, { className: N.image })
+                          : Q
+                            ? (0, r.jsx)(I.Z, { className: N.image })
+                            : et.isAnimated
+                              ? (0, r.jsx)(g.Z, {
+                                    className: N.assetBlurred,
                                     autoPlay: !1,
                                     children: (0, r.jsx)("source", {
-                                        src: er.url,
-                                        type: null != (D = er.mimetype) ? D : void 0,
-                                        onError: () => ed(er.url),
+                                        src: et.url,
+                                        type: null != (x = et.mimetype) ? x : void 0,
+                                        onError: () => ec(et.url),
                                     }),
                                 })
                               : (0, r.jsx)("img", {
-                                    className: C.image,
-                                    src: er.url,
-                                    alt: x.config.messages.questName,
-                                    onError: () => ed(er.url),
+                                    className: N.image,
+                                    src: et.url,
+                                    alt: A.config.messages.questName,
+                                    onError: () => ec(et.url),
                                 }),
                       (0, r.jsx)("div", {
-                          className: o()(C.overlay, {
-                              [C.darkThemeGradient]: et,
-                              [C.lightThemeGradient]: !et,
+                          className: a()(N.overlay, {
+                              [N.darkThemeGradient]: $,
+                              [N.lightThemeGradient]: !$,
                           }),
                       }),
                       (0, r.jsx)("div", {
-                          ref: Z,
-                          className: C.logoContainer,
-                          style: { transform: "translateY(-".concat(ei, "px)") },
-                          children: (0, r.jsx)(T.ZP, {
-                              logotypeClassName: o()(C.logo, { [C.logoWithCosponsor]: en }),
-                              quest: x,
+                          ref: U,
+                          className: N.logoContainer,
+                          style: { transform: "translateY(-".concat(en, "px)") },
+                          children: (0, r.jsx)(S.ZP, {
+                              logotypeClassName: a()(N.logo, { [N.logoWithCosponsor]: ee }),
+                              quest: A,
                               withGameTile: !1,
                           }),
                       }),
                       (0, r.jsxs)("div", {
-                          ref: H,
-                          className: C.details,
+                          ref: V,
+                          className: N.details,
                           children: [
                               (0, r.jsx)(d.X6q, {
-                                  className: C.title,
+                                  className: N.title,
                                   variant: "heading-md/semibold",
                                   color: "always-white",
-                                  children: A.intl.format(A.t.EAYZAg, { questName: x.config.messages.questName }),
+                                  children: T.intl.format(T.t.EAYZAg, { questName: A.config.messages.questName }),
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
-                                  color: et ? "text-muted" : "always-white",
-                                  style: { opacity: et ? 1 : 0.75 },
-                                  children: A.intl.format(A.t.kXVcV1, {
-                                      reward: q.name,
-                                      claimedDate: K,
+                                  color: $ ? "text-muted" : "always-white",
+                                  style: { opacity: $ ? 1 : 0.75 },
+                                  children: T.intl.format(T.t.kXVcV1, {
+                                      reward: Y.name,
+                                      claimedDate: z,
                                   }),
                               }),
                           ],
@@ -209,5 +207,4 @@ function D(e) {
                   ],
               }),
           });
-}
-let x = (0, i.memo)(D);
+});
