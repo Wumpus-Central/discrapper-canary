@@ -49,12 +49,14 @@ function d(e, t) {
                         }),
                         button: d
                             ? (0, r.jsx)(l.ms, {
+                                  className: u.button,
                                   guildId: e,
                                   powerup: t,
                                   onClick: n.onClose,
                               })
                             : (0, r.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
+                                  className: u.button,
                                   children: (0, r.jsx)(i.zxk, {
                                       variant: "primary",
                                       text: c.intl.string(c.t.cpT0Cg),

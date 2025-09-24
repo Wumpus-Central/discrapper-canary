@@ -6,7 +6,7 @@ var r = n(951288);
 n(647438);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
+    o = n(755721),
     a = n(10765),
     s = n(639777),
     c = n(973772),
@@ -54,25 +54,76 @@ function _(e) {
     return e;
 }
 function O(e) {
-    let { guildId: t, powerup: n, onClick: i } = e,
-        l = (0, d.Z)(t, n),
-        { onShowMore: a } = (0, p.ZP)(t, n),
-        s = f.uc.has(n.skuId);
-    return (0, r.jsx)(o.zxk, {
-        fullWidth: !0,
-        onClick: (e) => {
-            null == i || i(e), s ? null == l || l(e) : null == a || a();
-        },
-        text: s ? g.intl.string(h.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]),
-    });
+    var t,
+        n,
+        { guildId: i, powerup: l, onClick: a } = e,
+        s = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            }
+            return i;
+        })(e, ["guildId", "powerup", "onClick"]);
+    let c = (0, d.Z)(i, l),
+        { onShowMore: u } = (0, p.ZP)(i, l),
+        b = f.uc.has(l.skuId);
+    return (0, r.jsx)(
+        o.zx,
+        ((t = _(
+            {
+                className: m.primaryButton,
+                innerClassName: m.buttonInner,
+                wrapperClassName: m.buttonWrapper,
+                grow: !0,
+                onClick: (e) => {
+                    null == a || a(e), b ? null == c || c(e) : null == u || u();
+                },
+            },
+            s,
+        )),
+        (n = n = { children: b ? g.intl.string(h.default["g5Ds6+"]) : g.intl.string(g.t["0Q61kJ"]) }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
+    );
 }
 function y(e) {
-    let { guildId: t, powerup: n } = e,
-        { onShowMore: i } = (0, p.ZP)(t, n);
-    return (0, r.jsx)(o.zxk, {
-        fullWidth: !0,
-        onClick: i,
-        text: n.type === f.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
+    let { className: t, guildId: n, powerup: i } = e,
+        { onShowMore: a } = (0, p.ZP)(n, i);
+    return (0, r.jsx)("div", {
+        className: l()(m.container, t),
+        children: (0, r.jsx)(o.zx, {
+            className: m.primaryButton,
+            innerClassName: m.buttonInner,
+            wrapperClassName: m.buttonWrapper,
+            grow: !0,
+            onClick: a,
+            children: i.type === f.Us.LEVEL ? g.intl.string(g.t["0Q61kJ"]) : g.intl.string(g.t.Xa11Eh),
+        }),
     });
 }
 function v(e) {
@@ -85,11 +136,12 @@ function v(e) {
         className: l()(m.container, t),
         children: [
             p &&
-                (0, r.jsx)(u.Z, {
+                (0, r.jsx)(u.ZP, {
                     guildId: n,
                     powerup: i,
                     onError: o,
-                    fullWidth: h,
+                    grow: h,
+                    compact: !h,
                 }),
             s &&
                 (0, r.jsx)(O, {
