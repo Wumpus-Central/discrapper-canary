@@ -15,9 +15,9 @@ var r = t(951288),
     f = t(210682),
     _ = t(39793),
     h = t(473682),
-    j = t(440589),
+    j = t(401561),
     b = t(388032),
-    v = t(557787);
+    v = t(149671);
 function C(e) {
     let { plan: n, selected: t, className: i } = e;
     return null == n
@@ -90,23 +90,24 @@ function O() {
         planId: y,
         setPlanId: S,
         planCost: P,
-        error: E,
+        stepLoading: E,
+        error: w,
     } = (0, g.aj)();
     i.useEffect(() => {
         (0, u._k)(e);
     }, [e]);
-    let w = (0, o.e7)([m.Z], () => m.Z.getRegions()),
-        T = i.useMemo(() => {
+    let T = (0, o.e7)([m.Z], () => m.Z.getRegions()),
+        I = i.useMemo(() => {
             var e;
             return null !=
-                (e = w.map((e) => ({
+                (e = T.map((e) => ({
                     value: e,
                     label: e.name,
                 })))
                 ? e
                 : [];
-        }, [w]),
-        I = i.useMemo(() => {
+        }, [T]),
+        R = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -119,7 +120,7 @@ function O() {
                 ? e
                 : [];
         }, [n]),
-        R = (0, f.Z)();
+        k = (0, f.Z)();
     return null == n
         ? (0, r.jsx)("div", {
               className: v.spinnerContainer,
@@ -164,6 +165,7 @@ function O() {
                                               placeholder: b.intl.string(j.default.Kg0Zio),
                                               showCharacterCount: !0,
                                               maxLength: h.gM,
+                                              disabled: E,
                                           }),
                                       ],
                                   }),
@@ -203,7 +205,8 @@ function O() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === t,
-                                              options: T,
+                                              isDisabled: E,
+                                              options: I,
                                               optionClassName: v.option,
                                               select: (e) => l(e.id),
                                               placeholder: b.intl.string(j.default["op6/kZ"]),
@@ -242,7 +245,8 @@ function O() {
                                           (0, r.jsx)(c.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === y,
-                                              options: I,
+                                              isDisabled: E,
+                                              options: R,
                                               optionClassName: v.option,
                                               select: (e) => S(e.id),
                                               placeholder: b.intl.string(j.default["4QOSPj"]),
@@ -293,16 +297,16 @@ function O() {
                           helpCenterUrl: "https://google.com/help-center",
                       }),
                   }),
-                  null != E &&
+                  null != w &&
                       (0, r.jsx)(c.Text, {
                           variant: "text-xs/medium",
                           color: "text-danger",
-                          children: E,
+                          children: w,
                       }),
                   (0, r.jsxs)(x.ok, {
                       step: h.Vb.SERVER_SETTINGS,
                       className: v.footerContainer,
-                      children: [(0, r.jsx)(x.VS, {}), (0, r.jsx)(x.oh, { disabled: !R })],
+                      children: [(0, r.jsx)(x.VS, {}), (0, r.jsx)(x.oh, { disabled: !k })],
                   }),
               ],
           });
