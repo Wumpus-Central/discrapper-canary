@@ -1,4 +1,3 @@
-n.d(t, { Z: () => r });
 function r(e) {
     return {
         id: e.id,
@@ -18,3 +17,4 @@ function r(e) {
         instructions: [],
     };
 }
+n.d(t, { Z: () => r });
