@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => T });
 var r = n(951288);
 n(647438);
 var i = n(120356),
@@ -10,22 +10,23 @@ var i = n(120356),
     u = n(239091),
     d = n(607070),
     p = n(367907),
-    h = n(357352),
-    f = n(652515),
+    f = n(357352),
+    h = n(652515),
     g = n(550951),
     m = n(886176),
     b = n(266454),
-    O = n(703656),
+    _ = n(703656),
+    O = n(164670),
     y = n(984933),
-    _ = n(430824),
+    v = n(430824),
     j = n(626135),
-    v = n(434479),
-    x = n(981631),
-    C = n(176505),
-    E = n(629481),
-    S = n(388032),
-    P = n(296553);
-function I(e) {
+    x = n(434479),
+    C = n(981631),
+    E = n(176505),
+    S = n(629481),
+    P = n(388032),
+    I = n(296553);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +51,7 @@ function I(e) {
     }
     return e;
 }
-function N(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,61 +69,61 @@ function N(e, t) {
         e
     );
 }
-function w(e) {
+function Z(e) {
     let { guildId: t, selected: n, handleClick: i } = e,
-        u = (0, f.RF)(t, "guild_shop_channel_row"),
-        g = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
-        C = (null == g ? void 0 : g.features.has(x.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        w = "false" === s.K.get(E.tM, "false"),
+        u = (0, h.RF)(t, "guild_shop_channel_row"),
+        g = (0, o.e7)([v.Z], () => v.Z.getGuild(t)),
+        O = (null == g ? void 0 : g.features.has(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        E = "false" === s.K.get(S.tM, "false"),
         Z = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
-    return (0, r.jsx)(v.m, {
+    return (0, r.jsx)(x.m, {
         id: "shop-".concat(t),
-        className: l()(P.previewChannelRow, {
-            [P.selected]: n,
-            [P.phantomPreview]: w,
+        className: l()(I.previewChannelRow, {
+            [I.selected]: n,
+            [I.phantomPreview]: E,
         }),
-        innerClassName: P.previewChannelRowContent,
+        innerClassName: I.previewChannelRowContent,
         renderIcon: (e) =>
             (0, r.jsx)(m.Z, {
                 width: 20,
                 height: 20,
-                className: l()([e, P.shopIcon]),
+                className: l()([e, I.shopIcon]),
             }),
-        text: S.intl.string(S.t.al5EXF),
+        text: P.intl.string(P.t.al5EXF),
         selected: n,
         onClick: i,
         trailing: (0, r.jsxs)("div", {
-            className: P.gifSection,
+            className: I.gifSection,
             children: [
                 Z
                     ? (0, r.jsx)(c.IGR, {
                           color: c.TVs.unsafe_rawColors.BRAND_260.css,
-                          text: S.intl.string(S.t.y2b7CA),
-                          className: P.newBadge,
+                          text: P.intl.string(P.t.y2b7CA),
+                          className: I.newBadge,
                       })
                     : (0, r.jsx)("img", {
-                          src: (0, h.b)("server_products/storefront/money.gif"),
-                          className: P.money,
+                          src: (0, f.b)("server_products/storefront/money.gif"),
+                          className: I.money,
                           alt: "",
                       }),
                 n &&
                     (0, r.jsx)(c.P3F, {
-                        className: P.closeButton,
+                        className: I.closeButton,
                         onClick: (e) => {
                             if (
                                 (e.stopPropagation(),
                                 (0, b.Q3)(a.z.SERVER_SHOP_PHANTOM_PREVIEW),
                                 j.default.track(
-                                    x.rMx.GUILD_SHOP_PREVIEW_CLICK,
-                                    N(I({}, (0, p.hH)(t)), { action_taken: E.mz.DISMISS_CHANNEL_ROW }),
+                                    C.rMx.GUILD_SHOP_PREVIEW_CLICK,
+                                    w(N({}, (0, p.hH)(t)), { action_taken: S.mz.DISMISS_CHANNEL_ROW }),
                                 ),
-                                !u || !C)
+                                !u || !O)
                             ) {
                                 var n;
-                                (0, O.dL)(x.Z5c.CHANNEL(t, null == (n = y.ZP.getDefaultChannel(t)) ? void 0 : n.id));
+                                (0, _.dL)(C.Z5c.CHANNEL(t, null == (n = y.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
                         },
-                        "aria-label": S.intl.string(S.t.cpT0Cg),
+                        "aria-label": P.intl.string(P.t.cpT0Cg),
                         children: (0, r.jsx)(c.k$p, {
                             size: "xs",
                             color: "currentColor",
@@ -132,34 +133,42 @@ function w(e) {
         }),
     });
 }
-function Z(e) {
+function T(e) {
     let { guild: t, selected: i } = e,
         l = (0, g.g)(t, "guild_shop_channel_row"),
-        o = () => {
-            s.K.set(E.tM, "true"), (0, O.uL)(x.Z5c.CHANNEL(t.id, C.oC.GUILD_SHOP));
+        o = (0, O.w)(t),
+        a = () => {
+            s.K.set(S.tM, "true"), (0, _.uL)(C.Z5c.CHANNEL(t.id, E.oC.GUILD_SHOP));
         };
     return l
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(Z, {
               guildId: t.id,
               selected: i,
-              handleClick: o,
+              handleClick: a,
           })
-        : (0, r.jsx)(v.m, {
+        : (0, r.jsx)(x.m, {
               id: "shop-".concat(t.id),
               renderIcon: (e) =>
-                  (0, r.jsx)(m.Z, {
-                      width: 20,
-                      height: 20,
-                      className: e,
-                  }),
-              text: S.intl.string(S.t.al5EXF),
+                  o
+                      ? (0, r.jsx)(c.EOn, {
+                            size: "custom",
+                            width: 20,
+                            height: 20,
+                            className: e,
+                        })
+                      : (0, r.jsx)(m.Z, {
+                            width: 20,
+                            height: 20,
+                            className: e,
+                        }),
+              text: o ? P.intl.string(P.t.vyaWs7) : P.intl.string(P.t.al5EXF),
               selected: i,
-              onClick: o,
+              onClick: a,
               onContextMenu: (e) => {
                   null != t &&
                       (0, u.jW)(e, async () => {
                           let { default: e } = await n.e("66050").then(n.bind(n, 376573));
-                          return (n) => (0, r.jsx)(e, N(I({}, n), { guild: t }));
+                          return (n) => (0, r.jsx)(e, w(N({}, n), { guild: t }));
                       });
               },
           });

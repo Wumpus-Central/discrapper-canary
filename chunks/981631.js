@@ -53,12 +53,12 @@ n.d(t, {
     GU0: () => eh,
     GZQ: () => E.GZ,
     H0J: () => E.H0,
-    HGf: () => n6,
+    HGf: () => n5,
     HN8: () => eF,
     HeQ: () => E.He,
     Hqc: () => nS,
     IE4: () => F,
-    IIU: () => e5,
+    IIU: () => e6,
     IWh: () => rw,
     IXf: () => te,
     I_8: () => eg,
@@ -94,7 +94,7 @@ n.d(t, {
     O0b: () => n_,
     O0n: () => es,
     O42: () => b.O4,
-    O8q: () => n5,
+    O8q: () => n6,
     OBS: () => K,
     OBo: () => nf,
     OGo: () => ef,
@@ -109,7 +109,7 @@ n.d(t, {
     POd: () => r_,
     PRK: () => e0,
     PUi: () => nU,
-    Pbq: () => t5,
+    Pbq: () => t6,
     Plq: () => E.Pl,
     PrB: () => L,
     PrS: () => tE,
@@ -165,7 +165,7 @@ n.d(t, {
     VqG: () => E.Vq,
     Vzj: () => E.Vz,
     WND: () => nu,
-    WtW: () => e6,
+    WtW: () => e5,
     Wyy: () => ne,
     X5t: () => E.X5,
     X6Q: () => E.X6,
@@ -269,7 +269,7 @@ n.d(t, {
     oNc: () => G,
     o_z: () => eb,
     p3w: () => tm,
-    p6O: () => t6,
+    p6O: () => t5,
     pAY: () => th,
     pJs: () => w,
     pKx: () => E.pK,
@@ -759,6 +759,7 @@ var o = n(106351),
             (e.CREATOR_MONETIZABLE_RESTRICTED = "CREATOR_MONETIZABLE_RESTRICTED"),
             (e.CREATOR_STORE_PAGE = "CREATOR_STORE_PAGE"),
             (e.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING = "CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING"),
+            (e.SOCIAL_LAYER_STOREFRONT = "SOCIAL_LAYER_STOREFRONT"),
             (e.PRODUCTS_AVAILABLE_FOR_PURCHASE = "PRODUCTS_AVAILABLE_FOR_PURCHASE"),
             (e.GUILD_WEB_PAGE_VANITY_URL = "GUILD_WEB_PAGE_VANITY_URL"),
             (e.THREADS_ENABLED = "THREADS_ENABLED"),
@@ -2170,10 +2171,10 @@ var e8 = (function (e) {
             e
         );
     })({}),
-    e6 = (function (e) {
+    e5 = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
-    e5 = (function (e) {
+    e6 = (function (e) {
         return (
             (e[(e.PLAYING = 0)] = "PLAYING"),
             (e[(e.STREAMING = 1)] = "STREAMING"),
@@ -3640,8 +3641,8 @@ let t2 = Object.freeze({
         IOS: "https://itunes.apple.com/app/discord/id985746746",
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
     }),
-    t6 = 10070709,
-    t5 = (0, d.Rf)(t6),
+    t5 = 10070709,
+    t6 = (0, d.Rf)(t5),
     t7 = [
         1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
@@ -5986,8 +5987,8 @@ var n4 = (function (e) {
             e
         );
     })({});
-let n6 = 14,
-    n5 = 6,
+let n5 = 14,
+    n6 = 6,
     n7 = 30;
 var n9 = (function (e) {
     return (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), e;

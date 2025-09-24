@@ -39,7 +39,8 @@ let d = (e) => {
             shouldHideGuildPurchaseEntryPoints:
                 !(
                     (null == n ? void 0 : n.features.has(u.oNc.CREATOR_MONETIZABLE)) ||
-                    (null == n ? void 0 : n.features.has(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL))
+                    (null == n ? void 0 : n.features.has(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) ||
+                    (null == n ? void 0 : n.features.has(u.oNc.SOCIAL_LAYER_STOREFRONT))
                 ) ||
                 (a
                     ? null == (t = null == n ? void 0 : n.features.has(u.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || t
