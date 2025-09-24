@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(951288);
 n(647438);
 var i = n(442837),
@@ -12,7 +12,7 @@ var i = n(442837),
     p = n(434479),
     f = n(490897),
     h = n(388032),
-    g = n(516966);
+    g = n(509612);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -56,9 +56,9 @@ function b(e, t) {
         e
     );
 }
-function O(e) {
-    let { guild: t, selected: O } = e,
-        { hasUnread: y, mentionCount: _ } = (0, i.cj)(
+function _(e) {
+    let { guild: t, selected: _ } = e,
+        { hasUnread: O, mentionCount: y } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, f.W.GUILD_EVENT),
@@ -69,7 +69,7 @@ function O(e) {
         v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function j() {
         await (0, o.ZDy)(async () => {
-            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("5836")]).then(n.bind(n, 17671));
+            let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("25688")]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
         }),
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
@@ -85,7 +85,7 @@ function O(e) {
                 className: e,
             }),
         text: C,
-        selected: O,
+        selected: _,
         onClick: j,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
@@ -93,13 +93,13 @@ function O(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: y && !v,
+        showUnread: O && !v,
         trailing:
-            !v && _ > 0
+            !v && y > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: _,
+                      count: y,
                   })
                 : null,
     });

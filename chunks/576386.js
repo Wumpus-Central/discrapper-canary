@@ -1,105 +1,105 @@
-n.d(t, { Z: () => v });
-var l = n(951288),
-    i = n(647438),
-    r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    o = n(727637),
-    c = n(135483),
-    d = n(171019),
-    u = n(22267),
-    p = n(74538),
-    m = n(539530),
-    x = n(388032),
-    g = n(801707);
-let h = (e) => {
+r.d(t, { Z: () => b });
+var n = r(951288),
+    i = r(647438),
+    a = r(120356),
+    l = r.n(a),
+    o = r(481060),
+    s = r(727637),
+    c = r(135483),
+    d = r(171019),
+    u = r(22267),
+    p = r(74538),
+    _ = r(539530),
+    m = r(388032),
+    h = r(24391);
+let v = (e) => {
         var t;
-        let { currentUser: n, nameplate: r, section: c, canUsePremiumCollectibles: p, isSelected: h, onClick: v } = e,
-            _ = (0, i.useRef)(null),
-            C = (0, o.Z)(_);
-        return (0, l.jsxs)(a.P3F, {
-            innerRef: _,
-            "aria-label": null != (t = r.label) ? t : x.intl.string(x.t.x5CoXV),
-            className: g.nameplateItem,
-            onClick: v,
+        let { currentUser: r, nameplate: a, section: c, canUsePremiumCollectibles: p, isSelected: v, onClick: b } = e,
+            f = (0, i.useRef)(null),
+            g = (0, s.Z)(f);
+        return (0, n.jsxs)(o.P3F, {
+            innerRef: f,
+            "aria-label": null != (t = a.label) ? t : m.intl.string(m.t.x5CoXV),
+            className: h.nameplateItem,
+            onClick: b,
             children: [
-                (0, l.jsx)(u.Z, {
-                    nameplate: r,
-                    user: n,
+                (0, n.jsx)(u.Z, {
+                    nameplate: a,
+                    user: r,
                     showPlaceholderUser: !0,
-                    isHighlighted: C,
+                    isHighlighted: g,
                 }),
-                (0, l.jsx)("div", { className: s()(g.nameplateItemOverlay, { [g.selected]: h }) }),
-                (0, l.jsx)(d.Z, {
-                    isPurchaseSection: c === m.$0.PURCHASE,
-                    isPremiumSection: c === m.$0.PREMIUM_PURCHASE,
+                (0, n.jsx)("div", { className: l()(h.nameplateItemOverlay, { [h.selected]: v }) }),
+                (0, n.jsx)(d.Z, {
+                    isPurchaseSection: c === _.$0.PURCHASE,
+                    isPremiumSection: c === _.$0.PREMIUM_PURCHASE,
                     canUsePremiumCollectibles: p,
-                    skuId: r.skuId,
+                    skuId: a.skuId,
                 }),
             ],
         });
     },
-    v = (e) => {
-        let { currentUser: t, selectedNameplate: n, guildId: i, onSelect: r, onOpenShop: o } = e,
+    b = (e) => {
+        let { currentUser: t, selectedNameplate: r, guildId: i, onSelect: a, onOpenShop: s } = e,
             d = p.ZP.canUseCollectibles(t),
-            u = (0, m.ZP)();
-        return (0, l.jsx)(a.u2D, {
-            className: g.inventory,
+            u = (0, _.ZP)();
+        return (0, n.jsx)(o.u2D, {
+            className: h.inventory,
             children: u.map((e) =>
-                (0, l.jsxs)(
+                (0, n.jsxs)(
                     "div",
                     {
                         children: [
-                            (0, l.jsx)(a.vwX, { children: e.header }),
-                            e.section === m.$0.PURCHASE &&
-                                (0, l.jsxs)("div", {
-                                    className: g.inventoryControls,
+                            (0, n.jsx)(o.vwX, { children: e.header }),
+                            e.section === _.$0.PURCHASE &&
+                                (0, n.jsxs)("div", {
+                                    className: h.inventoryControls,
                                     children: [
-                                        (0, l.jsxs)(a.P3F, {
-                                            className: s()(g.inventoryControlsButton, { [g.selected]: null == n }),
-                                            onClick: () => r(null),
+                                        (0, n.jsxs)(o.P3F, {
+                                            className: l()(h.inventoryControlsButton, { [h.selected]: null == r }),
+                                            onClick: () => a(null),
                                             children: [
-                                                (0, l.jsx)(a.t6m, {
+                                                (0, n.jsx)(o.t6m, {
                                                     size: "md",
                                                     color: "currentColor",
                                                 }),
-                                                (0, l.jsx)(a.Text, {
+                                                (0, n.jsx)(o.Text, {
                                                     variant: "text-xs/normal",
                                                     children:
                                                         null != i
-                                                            ? x.intl.string(x.t.CHf9iI)
-                                                            : x.intl.string(x.t.PoWNfX),
+                                                            ? m.intl.string(m.t.CHf9iI)
+                                                            : m.intl.string(m.t.PoWNfX),
                                                 }),
                                             ],
                                         }),
-                                        (0, l.jsxs)(a.P3F, {
-                                            className: g.inventoryControlsButton,
-                                            onClick: o,
+                                        (0, n.jsxs)(o.P3F, {
+                                            className: h.inventoryControlsButton,
+                                            onClick: s,
                                             children: [
-                                                (0, l.jsx)(a.EOn, {
+                                                (0, n.jsx)(o.EOn, {
                                                     size: "md",
                                                     color: "currentColor",
                                                 }),
-                                                (0, l.jsx)(a.Text, {
+                                                (0, n.jsx)(o.Text, {
                                                     variant: "text-xs/normal",
-                                                    children: x.intl.string(x.t.pWG4zc),
+                                                    children: m.intl.string(m.t.pWG4zc),
                                                 }),
                                             ],
                                         }),
                                     ],
                                 }),
-                            (0, l.jsx)("div", {
-                                className: g.list,
+                            (0, n.jsx)("div", {
+                                className: h.list,
                                 children: e.items.filter(c.k).map((i) =>
-                                    (0, l.jsx)(
-                                        h,
+                                    (0, n.jsx)(
+                                        v,
                                         {
                                             currentUser: t,
                                             nameplate: i,
                                             section: e.section,
                                             canUsePremiumCollectibles: d,
-                                            isSelected: (null == n ? void 0 : n.skuId) === i.skuId,
-                                            onClick: () => r(i),
+                                            isSelected: (null == r ? void 0 : r.skuId) === i.skuId,
+                                            onClick: () => a(i),
                                         },
                                         i.skuId,
                                     ),

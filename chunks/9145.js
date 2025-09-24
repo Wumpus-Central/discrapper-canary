@@ -25,8 +25,8 @@ var r = n(951288),
     E = n(566620),
     S = n(317381),
     Z = n(619915),
-    P = n(988980),
-    T = n(16609),
+    T = n(988980),
+    P = n(16609),
     N = n(952561),
     R = n(563218),
     w = n(884338),
@@ -37,7 +37,7 @@ var r = n(951288),
     k = n(918559),
     U = n(981631),
     G = n(388032),
-    H = n(322678);
+    H = n(33985);
 let F = w.u8.SIZE_32,
     B = {
         [k.MI.NO_CHAT]: H.noChat,
@@ -48,7 +48,7 @@ function z(e) {
     let { maxHeight: z, connectedLocation: V, renderExternalHeader: W } = e,
         Y = (0, N.Z)(),
         q = (0, s.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(V), [V]),
-        K = (0, T.p)(V),
+        K = (0, P.p)(V),
         Q = (0, s.e7)([O.Z], () => O.Z.getChannel(K)),
         X = (0, Z.gb)(q),
         J = (0, Z.uF)(X),
@@ -81,7 +81,7 @@ function z(e) {
     let ec = es.width / Math.max(es.height, 1) < k.I0,
         ed = 0,
         eu = 0,
-        ep = (0, P.Z)(null == Y ? void 0 : Y.id);
+        ep = (0, T.Z)(null == Y ? void 0 : Y.id);
     if (!ep) {
         let e = es.width,
             t = es.height;

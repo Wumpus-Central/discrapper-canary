@@ -10,7 +10,7 @@ var r = n(951288),
     u = n(933793),
     p = n(13736),
     h = n(732393),
-    f = n(71991),
+    f = n(214906),
     g = n(612856),
     m = n(137591),
     b = n(299206),
@@ -19,7 +19,7 @@ var r = n(951288),
     O = n(359110),
     j = n(585483),
     x = n(407908),
-    v = n(739830),
+    v = n(131694),
     C = n(488131),
     I = n(981631),
     E = n(388032);
@@ -66,7 +66,7 @@ function Z(e, t) {
         e
     );
 }
-function P(e) {
+function T(e) {
     let { channel: t } = e,
         [n, a] = i.useState(!1),
         s = i.useRef(null);
@@ -83,7 +83,7 @@ function P(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(T, Z(S({}, e), { channel: t }));
+            return (0, r.jsx)(P, Z(S({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -101,7 +101,7 @@ function P(e) {
         },
     });
 }
-function T(e) {
+function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         y = (0, c.Z)(t, "Sidebar Overflow"),
         _ = (0, u.Z)(t),
@@ -110,8 +110,8 @@ function T(e) {
         C = (0, a.Z)(t),
         S = (0, d.Z)(t),
         Z = (0, h.Z)(t.id),
-        P = (0, p.Z)(t),
-        T = (0, o.Z)(t),
+        T = (0, p.Z)(t),
+        P = (0, o.Z)(t),
         N = (0, s.Z)(t),
         R = (0, b.Z)({
             id: t.id,
@@ -141,7 +141,7 @@ function T(e) {
                 children: [x, v],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [P, _, Z],
+                children: [T, _, Z],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -167,7 +167,7 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, C, S, T],
+                children: [w, C, S, P],
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [N, R],
@@ -181,7 +181,7 @@ function N(e) {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(v.Z, { channel: t }),
             t.isModeratorReportChannel() ? (0, r.jsx)(x.Z, { channel: t }) : null,
-            (0, r.jsx)(P, { channel: t }),
+            (0, r.jsx)(T, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: E.intl.string(E.t.cpT0Cg),

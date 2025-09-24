@@ -9,41 +9,41 @@ var a = n(951288),
     d = n(138201),
     u = n(210825),
     m = n(420846),
-    h = n(63063),
-    p = n(168107),
+    p = n(63063),
+    h = n(168107),
     x = n(480916),
     f = n(352138),
     b = n(629235),
     g = n(981631),
-    j = n(131022),
-    v = n(388032),
-    _ = n(450192),
+    v = n(398158),
+    j = n(388032),
+    _ = n(70402),
     y = n(736056);
 let C = function (e) {
     let { transitionState: t, entryPoint: n, onClose: C, onComplete: E, dismissable: N } = e,
-        [S, O] = r.useState(l.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        T = r.useRef(S),
-        [P, k] = (0, c.US)([S], void 0, !0),
-        R = r.useMemo(() => (0, i.Z)(), []),
-        I = r.useRef(!1);
+        [T, S] = r.useState(l.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        O = r.useRef(T),
+        [P, I] = (0, c.US)([T], void 0, !0),
+        k = r.useMemo(() => (0, i.Z)(), []),
+        w = r.useRef(!1);
     r.useEffect(() => {
-        T.current = P;
+        O.current = P;
     }, [P]);
-    let { loading: w, ageVerificationMethods: A } = (0, b.Z)(
+    let { loading: R, ageVerificationMethods: A } = (0, b.Z)(
         () => {
             null == E || E(), C();
         },
         () => {
-            O(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            S(l.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
     );
     return (
         r.useLayoutEffect(
             () => () => {
-                if (I.current) return;
-                let e = T.current;
+                if (w.current) return;
+                let e = O.current;
                 null != e &&
-                    ((I.current = !0),
+                    ((w.current = !0),
                     m.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -52,8 +52,8 @@ let C = function (e) {
             [],
         ),
         r.useEffect(() => {
-            (0, x.lA)(R, x.d_.EXPRESSIVE_PRIMARY, n);
-        }, [R, n]),
+            (0, x.lA)(k, x.d_.EXPRESSIVE_PRIMARY, n);
+        }, [k, n]),
         (0, a.jsx)(s.I, {
             transitionState: t,
             onClose: C,
@@ -63,19 +63,19 @@ let C = function (e) {
                 type: "image",
                 src: y.Z,
             },
-            title: v.intl.string(v.t.JHNunp),
-            subtitle: v.intl.format(j.default.RpMIT0, {
+            title: j.intl.string(j.t.JHNunp),
+            subtitle: j.intl.format(v.default.RpMIT0, {
                 handleOnHelpUrlHook: () => {
-                    p.Z.openUrl(h.Z.getArticleURL(g.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, x.x3)(R, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
+                    h.Z.openUrl(p.Z.getArticleURL(g.BhN.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, x.x3)(k, x.d_.EXPRESSIVE_PRIMARY, x.sU.LEARN_MORE);
                 },
             }),
             actionBarInput: (0, a.jsx)(o.Avr, {
                 size: "sm",
                 textVariant: "text-sm/medium",
-                text: v.intl.string(v.t["2jxGen"]),
+                text: j.intl.string(j.t["2jxGen"]),
                 onClick: () => {
-                    (0, x.x3)(R, x.d_.EXPRESSIVE_PRIMARY, x.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
+                    (0, x.x3)(k, x.d_.EXPRESSIVE_PRIMARY, x.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
                 },
             }),
             children: (0, a.jsxs)(o.Kqy, {
@@ -102,7 +102,7 @@ let C = function (e) {
                             (0, a.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: v.intl.string(j.default.ar3a3t),
+                                children: j.intl.string(v.default.ar3a3t),
                             }),
                         ],
                     }),
@@ -115,12 +115,12 @@ let C = function (e) {
                                   (0, a.jsx)(o.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-secondary",
-                                      children: v.intl.string(j.default.cR6339),
+                                      children: j.intl.string(v.default.cR6339),
                                   }),
                                   (0, a.jsx)(o.zxk, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: v.intl.string(j.default.hDvmYG),
+                                      text: j.intl.string(v.default.hDvmYG),
                                       onClick: () => {
                                           (0, f.J)();
                                       },
@@ -138,8 +138,8 @@ let C = function (e) {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: w,
-                                          onButtonPress: () => r(R),
+                                          buttonDisabled: R,
+                                          onButtonPress: () => r(k),
                                       },
                                       t,
                                   );

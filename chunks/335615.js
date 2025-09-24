@@ -25,8 +25,8 @@ var r = n(951288),
     E = n(868671),
     S = n(82295),
     Z = n(91218),
-    P = n(313201),
-    T = n(623624),
+    T = n(313201),
+    P = n(623624),
     N = n(518738),
     R = n(850020),
     w = n(155409),
@@ -44,7 +44,7 @@ var r = n(951288),
     V = n(998502),
     W = n(981631),
     Y = n(388032),
-    q = n(854641);
+    q = n(32482);
 function K(e, t, n) {
     return (
         t in e
@@ -166,7 +166,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
             ]),
             E = i.useRef(null),
             [S, Z] = i.useState(!1),
-            P = null != v ? new Date(v) : null,
+            T = null != v ? new Date(v) : null,
             N = i.useCallback(
                 (e) => {
                     (0, f.jW)(e, async () => {
@@ -175,7 +175,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                                 n.e("98783"),
                                 n.e("8982"),
                                 n.e("7717"),
-                                n.e("19848"),
+                                n.e("52021"),
                             ]).then(n.bind(n, 757387)),
                             t = H.Z.isInChannel(k.Z.getVoiceChannelId(), d.id);
                         return (n) =>
@@ -206,7 +206,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != O &&
                         (e.stopPropagation(),
-                        (0, T.f)({
+                        (0, P.f)({
                             guildId: O,
                             location: {
                                 section: W.jXE.MEMBER_LIST,
@@ -247,7 +247,7 @@ let $ = V.ZP.getEnableHardwareAcceleration(),
                             activities: h,
                             applicationStream: g,
                             isOwner: o,
-                            premiumSince: P,
+                            premiumSince: T,
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
@@ -389,7 +389,7 @@ class el extends i.Component {
         let { groups: e, listId: t, channel: n, sectionHeight: i } = this.props;
         return (0, r.jsx)(h.Wdt, {
             children: (l) =>
-                (0, r.jsx)(P.FG, {
+                (0, r.jsx)(T.FG, {
                     children: (s) =>
                         (0, r.jsx)("aside", {
                             className: a()(q.membersWrap, q.hiddenMembers),

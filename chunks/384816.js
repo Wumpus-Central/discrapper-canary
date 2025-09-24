@@ -9,8 +9,8 @@ var i = t(442837),
     c = t(706454),
     d = t(914010),
     u = t(246946),
-    f = t(785717),
-    m = t(250822),
+    m = t(785717),
+    f = t(250822),
     p = t(771362),
     h = t(280885),
     j = t(819602),
@@ -20,16 +20,16 @@ var i = t(442837),
     b = t(179828),
     y = t(228168),
     O = t(388032),
-    Z = t(438160);
+    Z = t(54966);
 function I(e) {
     let { user: n, currentUser: t, displayProfile: I, subsection: P, onClose: N } = e,
-        { trackUserProfileAction: T } = (0, f.KZ)(),
+        { trackUserProfileAction: T } = (0, m.KZ)(),
         E = (0, i.e7)([d.Z], () => d.Z.getGuildId()),
         A = (0, s.Y)({ userId: n.id }),
         S = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = (0, i.e7)([c.default], () => c.default.locale),
         w = (0, p.Z)(n.id),
-        _ = (0, m.Z)(n.id);
+        _ = (0, f.Z)(n.id);
     return (0, l.jsxs)(r.zJl, {
         fade: !0,
         className: Z.scroller,

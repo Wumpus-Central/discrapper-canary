@@ -1,13 +1,15 @@
 n.d(t, {
-    M: () => _,
-    V: () => p,
+    M: () => h,
+    V: () => m,
 }),
     n(388685);
 var r = n(951288),
     i = n(647438),
     a = n(793030),
-    o = n(793903);
-function s(e, t, n) {
+    o = n(597442),
+    s = n(481060),
+    l = n(793903);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +22,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +33,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +50,22 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function d(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +73,7 @@ function d(e, t) {
     }
     return i;
 }
-function f(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,46 +82,46 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = i.createContext({ inDialog: void 0 }),
-    p = i.forwardRef(function (e, t) {
-        let { children: n, impressionType: s, impression: c, disableTrack: f, returnRef: p } = e,
-            h = d(e, ["children", "impressionType", "impression", "disableTrack", "returnRef"]),
-            m = i.useRef(null),
-            g = i.useRef(null),
-            [E, b] = i.useState(!1),
-            y = E ? g : m;
-        (0, a.Tbt)(y, { returnRef: p }),
-            i.useContext(o.Z)(
+let h = i.createContext({ inDialog: void 0 }),
+    m = i.forwardRef(function (e, t) {
+        let { children: n, impressionType: c, impression: d, disableTrack: p, returnRef: m } = e,
+            g = _(e, ["children", "impressionType", "impression", "disableTrack", "returnRef"]),
+            E = i.useRef(null),
+            b = i.useRef(null),
+            [y, O] = i.useState(!1),
+            v = y ? b : E;
+        (0, o.T)(v, { returnRef: m }),
+            i.useContext(l.Z)(
                 {
-                    type: s,
-                    name: null == c ? void 0 : c.impressionName,
-                    properties: null == c ? void 0 : c.impressionProperties,
+                    type: c,
+                    name: null == d ? void 0 : d.impressionName,
+                    properties: null == d ? void 0 : d.impressionProperties,
                 },
-                { disableTrack: f },
+                { disableTrack: p },
             ),
-            i.useImperativeHandle(t, () => m.current);
-        let O = i.useCallback(
+            i.useImperativeHandle(t, () => E.current);
+        let I = i.useCallback(
             (e) => {
-                E !== e && b(e);
+                y !== e && O(e);
             },
-            [E],
+            [y],
         );
-        return (0, r.jsx)(_.Provider, {
+        return (0, r.jsx)(h.Provider, {
             value: {
                 inDialog: !0,
-                setFocusLockDisabled: O,
+                setFocusLockDisabled: I,
             },
             children: (0, r.jsx)(
                 "div",
-                u(l({}, h), {
-                    ref: m,
+                f(u({}, g), {
+                    ref: E,
                     role: "dialog",
                     tabIndex: -1,
                     "aria-modal": !0,
-                    children: (0, r.jsx)(a.y5t, {
+                    children: (0, r.jsx)(s.y5t, {
                         forceLevel: 1,
                         children: (0, r.jsx)(a.JcV, {
-                            containerRef: m,
+                            containerRef: E,
                             children: n,
                         }),
                     }),

@@ -6,7 +6,7 @@ var r = n(951288),
     l = n(86419),
     c = n(286957),
     s = n(388032),
-    u = n(200344);
+    u = n(44258);
 let d = i.memo(function (e) {
     let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: a } = e;
     return (0, r.jsx)(o.v2r, {

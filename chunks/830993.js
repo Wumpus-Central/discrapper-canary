@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(539854);
+n.d(t, { Z: () => I }), n(388685), n(539854);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -14,19 +14,19 @@ var r = n(951288),
     g = n(496675),
     m = n(158776),
     b = n(979651),
-    O = n(823379),
-    y = n(355363),
-    _ = n(449932),
+    _ = n(823379),
+    O = n(355363),
+    y = n(449932),
     v = n(561788),
     j = n(876548),
     x = n(543432),
     C = n(981631),
     E = n(388032),
-    S = n(333972),
-    I = n(934882);
-function P(e) {
+    S = n(413409),
+    P = n(21265);
+function I(e) {
     var t, l;
-    let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
+    let { channel: o, guild: f, onAction: h, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,
         v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
@@ -45,13 +45,13 @@ function P(e) {
     (0, c.$)(v, "VoiceChannelActivities");
     let j = (0, u.ZP)(o),
         x = Array.from((0, u.uF)(j).values()),
-        I = null != (t = null == g ? void 0 : g.filter(O.lm)) ? t : [],
-        P = (0, a.e7)(
+        P = null != (t = null == g ? void 0 : g.filter(_.lm)) ? t : [],
+        I = (0, a.e7)(
             [m.Z],
             () => {
                 let e = {};
                 return (
-                    I.forEach((t) => {
+                    P.forEach((t) => {
                         let n = m.Z.findActivity(
                             t.user.id,
                             (e) =>
@@ -78,10 +78,10 @@ function P(e) {
                     Object.values(e)
                 );
             },
-            [I],
+            [P],
             a.pF,
         );
-    return P.length + x.length === 0
+    return I.length + x.length === 0
         ? null
         : (0, r.jsxs)(s.Ttm, {
               className: S.container,
@@ -95,7 +95,7 @@ function P(e) {
                   x.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
-                          _.Z,
+                          y.Z,
                           {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
@@ -105,10 +105,10 @@ function P(e) {
                           t,
                       );
                   }),
-                  P.map((e, t) => {
+                  I.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
-                          _.Z,
+                          y.Z,
                           {
                               presenceActivity: i,
                               channel: o,
@@ -118,7 +118,7 @@ function P(e) {
                           t,
                       );
                   }),
-                  y &&
+                  O &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)("div", { className: S.headerDivider }),
@@ -202,7 +202,7 @@ function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
         l = (0, a.e7)([g.Z], () => !g.Z.can(C.Plq.CONNECT, t)),
         s = (0, a.e7)([b.Z], () => b.Z.hasVideo(t.id)),
-        c = (0, y.ZP)({
+        c = (0, O.ZP)({
             channel: t,
             locked: l,
             video: s,
@@ -212,7 +212,7 @@ function N(e) {
     return null == (0, f.KS)(t, u)
         ? null
         : (0, r.jsxs)("div", {
-              className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),
+              className: o()(S.popoutHeaderContainer, P.popoutHeaderContainer),
               children: [
                   (0, r.jsx)(v.Z, { channel: t }),
                   c

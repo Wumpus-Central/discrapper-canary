@@ -14,8 +14,8 @@ var r,
     d = n(481060),
     h = n(570140),
     g = n(893776),
-    m = n(899742),
-    p = n(743142),
+    p = n(899742),
+    m = n(743142),
     f = n(254942),
     _ = n(388905),
     x = n(379760),
@@ -31,23 +31,23 @@ var r,
     C = n(952802),
     A = n(703656),
     T = n(648358),
-    P = n(108427),
-    Z = n(901375),
+    Z = n(108427),
+    P = n(901375),
     R = n(314897),
     L = n(117240),
     w = n(896797),
     D = n(626135),
     k = n(585483),
     M = n(358085),
-    G = n(481153),
-    U = n(588705),
+    U = n(481153),
+    G = n(588705),
     B = n(494526),
     F = n(163671),
     z = n(981631),
     V = n(260539),
     K = n(388032),
-    H = n(977150),
-    W = n(10198);
+    H = n(132825),
+    W = n(197571);
 function q(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ class Q extends (r = l.PureComponent) {
     }
     componentDidMount() {
         let { handoffAvailable: e, authenticated: t, giftCodeSKU: n, invite: r, location: i } = this.props;
-        e && !t ? (0, m.is)() : t && this.loginOrSSO(t, i, !0),
+        e && !t ? (0, p.is)() : t && this.loginOrSSO(t, i, !0),
             D.default.track(
                 z.rMx.LOGIN_VIEWED,
                 J(
@@ -122,13 +122,13 @@ class Q extends (r = l.PureComponent) {
                 { flush: !0 },
             ),
             t ||
-                (0, Z.j)({
+                (0, P.j)({
                     abortController: this.state.conditionalMediationAbortController,
                     loginSource: this.loginSource,
                     giftCodeSKUId: this.giftCodeSKUId,
                 }),
             g.Z.getLocationMetadata(),
-            (0, P.e)("login");
+            (0, Z.e)("login");
     }
     componentDidUpdate(e, t) {
         let { authenticated: n, location: r, handoffAvailable: i } = this.props,
@@ -159,7 +159,7 @@ class Q extends (r = l.PureComponent) {
             else if (null != n.channel) return "dm_invite";
             else if (null != n.inviter) return "friend_invite";
         }
-        return null != i ? (0, p.L)(i) : null;
+        return null != i ? (0, m.L)(i) : null;
     }
     get giftCodeSKUId() {
         let { giftCode: e } = this.props;
@@ -282,7 +282,7 @@ class Q extends (r = l.PureComponent) {
         return (0, i.jsxs)(_.ZP, {
             className: e,
             children: [
-                (0, i.jsx)(U.R, {}),
+                (0, i.jsx)(G.R, {}),
                 (0, i.jsxs)(_.gO, {
                     className: W.marginTop20,
                     children: [
@@ -355,9 +355,9 @@ class Q extends (r = l.PureComponent) {
         return (
             (n =
                 null != r
-                    ? (0, i.jsx)(U.Z, { invite: r })
+                    ? (0, i.jsx)(G.Z, { invite: r })
                     : null != l
-                      ? (0, i.jsx)(G.Z, { giftCode: l })
+                      ? (0, i.jsx)(U.Z, { giftCode: l })
                       : (0, i.jsxs)("div", {
                             className: H.header,
                             children: [

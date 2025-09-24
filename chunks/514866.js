@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var a = n(951288);
 n(647438);
 var r = n(120356),
@@ -10,13 +10,13 @@ var r = n(120356),
     d = n(963886),
     u = n(110478),
     m = n(423932),
-    h = n(695346),
-    p = n(306052),
+    p = n(695346),
+    h = n(306052),
     x = n(594174),
-    f = n(103088),
-    b = n(10198);
+    f = n(517269),
+    b = n(197571);
 let g = () => {
-    Promise.all([n.e("52030"), n.e("91403")])
+    Promise.all([n.e("52030"), n.e("1286")])
         .then(n.bind(n, 24031))
         .then((e) => {
             let { openMFAModal: t } = e;
@@ -41,15 +41,15 @@ let g = () => {
             );
         });
 };
-function j() {
+function v() {
     let e = x.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        n = h.Rt.useSetting();
+        n = p.Rt.useSetting();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
                 className: i()(f.buttonsContainer, b.marginBottom20),
-                children: (0, a.jsx)(p.g, { isDevTools: !0 }),
+                children: (0, a.jsx)(h.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
                 className: i()(f.buttonsContainer, b.marginBottom20),
@@ -109,7 +109,7 @@ function j() {
                             className: i()(f.buttonsContainer, b.marginBottom20),
                             children: (0, a.jsx)(s.j7V, {
                                 value: n,
-                                onChange: (e) => h.Rt.updateSetting(e),
+                                onChange: (e) => p.Rt.updateSetting(e),
                                 hideBorder: !0,
                                 children: "Ignore profile speedbump disabled",
                             }),

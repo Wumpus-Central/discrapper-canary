@@ -15,17 +15,17 @@ var i = n(442837),
     g = n(496675),
     m = n(306680),
     b = n(979651),
-    O = n(968358),
-    y = n(790901),
-    _ = n(714794),
+    _ = n(968358),
+    O = n(790901),
+    y = n(714794),
     v = n(355363),
     j = n(687352),
     x = n(876548),
     C = n(25601),
     E = n(981631),
     S = n(490897),
-    I = n(388032),
-    P = n(88448);
+    P = n(388032),
+    I = n(885525);
 function N(e) {
     var t;
     let {
@@ -37,8 +37,8 @@ function N(e) {
             enableActivities: A,
             isSubscriptionGated: R,
             needSubscriptionToAccess: D,
-            isNewChannel: L,
-            muted: M,
+            isNewChannel: M,
+            muted: L,
             resolvedUnreadSetting: k,
         } = e,
         U = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
@@ -60,25 +60,25 @@ function N(e) {
             var e, t;
             return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.oNc.COMMUNITY)) && t;
         });
-    if ((0, _.Z)(U))
+    if ((0, y.Z)(U))
         return (0, r.jsx)(C.Z, {
             mentionsCount: U,
             isMentionLowImportance: G,
         });
     if ((0, d.O)(R)) return (0, r.jsx)(d.Z, { locked: D });
-    if (L)
+    if (M)
         return (0, r.jsx)(o.IGR, {
-            text: I.intl.string(I.t.y2b7CA),
+            text: P.intl.string(P.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
-            className: P.newChannel,
+            className: I.newChannel,
         });
-    if (!M && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
+    if (!L && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
-            children: I.intl.format(I.t.GkAbqa, { count: (0, o.NGo)(K) }),
+            children: P.intl.format(P.t.GkAbqa, { count: (0, o.NGo)(K) }),
         });
-    if (!M && n.isForumLikeChannel() && null != Y && Y > 0)
+    if (!L && n.isForumLikeChannel() && null != Y && Y > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
@@ -91,9 +91,9 @@ function N(e) {
               video: H || z,
               channel: n,
           })
-        : w && (0, O.a)(Z) && q
+        : w && (0, _.a)(Z) && q
           ? (0, r.jsx)(o.IGR, {
-                text: I.intl.string(I.t.dI3q4u),
+                text: P.intl.string(P.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
           : null != V
@@ -101,10 +101,10 @@ function N(e) {
                   textColor: "text-feedback-positive",
                   entry: { start: V },
               })
-            : null != A && A && (0, y.u)(B)
+            : null != A && A && (0, O.u)(B)
               ? (0, r.jsx)(j.Z, {
                     embeddedApps: B,
-                    muted: M,
+                    muted: L,
                 })
               : null;
 }

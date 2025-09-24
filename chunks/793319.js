@@ -42,9 +42,9 @@ var r = n(951288),
     D = n(459502),
     U = n(853170),
     B = n(140465),
-    F = n(800966),
+    H = n(800966),
     V = n(641015),
-    H = n(618158),
+    F = n(618158),
     G = n(390322),
     z = n(791592),
     W = n(136995),
@@ -75,7 +75,7 @@ var r = n(951288),
     eb = n(981631),
     ey = n(354459),
     eC = n(921944),
-    e_ = n(817675);
+    e_ = n(32312);
 function ev() {
     return (ev =
         Object.assign ||
@@ -169,7 +169,7 @@ function eE(e) {
                             if (t === d.z.TRIAL_NUX_STREAM_COACH_MARK)
                                 return (
                                     E(!0),
-                                    (0, r.jsx)(F.h, {
+                                    (0, r.jsx)(H.h, {
                                         buttonRef: b,
                                         dismissed: !1,
                                         onDismiss: () => {
@@ -180,7 +180,7 @@ function eE(e) {
                         },
                     });
             })(),
-            (0, r.jsx)(H.Z, {
+            (0, r.jsx)(F.Z, {
                 children: (0, r.jsx)(p.yRy, {
                     targetElementRef: C,
                     renderPopout: (e) => {
@@ -485,11 +485,11 @@ let eT = function (e) {
         k = (0, A.Z)(),
         L = (0, u.e7)([N.Z], () => null != N.Z.getAwaitingRemoteSessionInfo()),
         B = null != k,
-        F = (0, u.e7)([ei.Z], () => {
+        H = (0, u.e7)([ei.Z], () => {
             var e;
             return (null != (e = null == k ? void 0 : k.channelId) ? e : ei.Z.getVoiceChannelId()) === n.id;
         }),
-        H = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
+        F = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         { reachedLimit: z, limit: W } = (0, eo.Z)(n),
         { analyticsLocations: q } = (0, x.ZP)(v.Z.VOICE_CONTROL_TRAY),
         Y = (0, $.Hu)({
@@ -519,7 +519,7 @@ let eT = function (e) {
                   );
               }
             : void 0;
-    return F
+    return H
         ? (0, r.jsx)(x.Gt, {
               value: q,
               children: (0, r.jsxs)(b.Z, {
@@ -670,7 +670,7 @@ let eT = function (e) {
                                   ],
                               }),
                               (0, r.jsx)(eP, {
-                                  connectedEmbeddedActivity: H,
+                                  connectedEmbeddedActivity: F,
                                   currentUser: y,
                                   channel: n,
                                   onDisconnectCall: o,

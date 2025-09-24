@@ -9,13 +9,13 @@ var i = t(442837),
     c = t(785717),
     d = t(621853),
     u = t(172351),
-    f = t(280885),
-    m = t(900927),
+    m = t(280885),
+    f = t(900927),
     p = t(678738),
     h = t(179828),
     j = t(228168),
     x = t(388032),
-    v = t(438160);
+    v = t(54966);
 function g(e) {
     let { user: n, currentUser: t, displayProfile: g, guildId: b, subsection: y, onClose: O } = e,
         { trackUserProfileAction: Z } = (0, c.KZ)(),
@@ -30,7 +30,7 @@ function g(e) {
         children: [
             (null == g ? void 0 : g.bio) != null &&
                 (null == g ? void 0 : g.bio) !== "" &&
-                (0, l.jsx)(f.Z, {
+                (0, l.jsx)(m.Z, {
                     userBio: g.bio,
                     setLineClamp: !1,
                 }),
@@ -52,7 +52,7 @@ function g(e) {
                 }),
             (0, l.jsx)(p.Z, {
                 heading: x.intl.string(x.t["A//N4u"]),
-                children: (0, l.jsx)(m.Z, {
+                children: (0, l.jsx)(f.Z, {
                     userId: n.id,
                     guildId: b,
                     tooltipDelay: j.vB,

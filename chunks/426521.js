@@ -14,21 +14,21 @@ var r = n(951288),
     g = n(695346),
     m = n(598077),
     b = n(594174),
-    O = n(626135),
-    y = n(709054),
-    _ = n(591759),
+    _ = n(626135),
+    O = n(709054),
+    y = n(591759),
     v = n(833592),
     j = n(497089),
     x = n(178480),
     C = n(418316),
     E = n(382865),
     S = n(526146),
-    I = n(400565),
-    P = n(148789),
+    P = n(400565),
+    I = n(148789),
     N = n(11825),
     w = n(981631),
     Z = n(388032),
-    T = n(17250),
+    T = n(231796),
     A = n(756688),
     R = n(886765);
 function D(e) {
@@ -57,7 +57,7 @@ function D(e) {
         ],
     });
 }
-function L(e) {
+function M(e) {
     let {
         item: { callout: t },
     } = e;
@@ -72,7 +72,7 @@ function L(e) {
         }),
     });
 }
-function M(e) {
+function L(e) {
     let { item: t } = e,
         n = R,
         i = Z.intl.string(Z.t.SJTHJS);
@@ -141,12 +141,12 @@ let U = i.memo(function (e) {
                             );
                     });
                 if (null != l.deeplink) {
-                    let t = _.Z.safeParseWithQuery(l.deeplink);
+                    let t = y.Z.safeParseWithQuery(l.deeplink);
                     if (null == t) return;
                     let n = t.hostname,
                         r = t.path;
                     if (null == n || null == r) return;
-                    if (_.Z.isDiscordHostname(n)) {
+                    if (y.Z.isDiscordHostname(n)) {
                         let t = r.match("^/users/(\\d+)");
                         if (null != t && 2 === t.length) {
                             var e;
@@ -157,7 +157,7 @@ let U = i.memo(function (e) {
                             });
                         } else await (0, d.Z)(r);
                     }
-                    O.default.track(w.rMx.NOTIFICATION_CENTER_ACTION, {
+                    _.default.track(w.rMx.NOTIFICATION_CENTER_ACTION, {
                         action_type: j.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
@@ -167,10 +167,10 @@ let U = i.memo(function (e) {
             }, [l, f, u]),
             m = null;
         l.type === j.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
-            ? (m = (0, r.jsx)(P.Z, { userId: l.other_user.id }))
+            ? (m = (0, r.jsx)(I.Z, { userId: l.other_user.id }))
             : l.type === j.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
-              (m = (0, r.jsx)(P.Z, {
+              (m = (0, r.jsx)(I.Z, {
                   userId: l.other_user.id,
                   applicationId: l.applicationId,
               }));
@@ -198,11 +198,11 @@ let U = i.memo(function (e) {
                     onClick: g,
                     children: [
                         f ? null : (0, r.jsx)("div", { className: T.unread }),
-                        (0, r.jsx)(I.U, { item: l }),
+                        (0, r.jsx)(P.U, { item: l }),
                         (0, r.jsxs)("div", {
                             className: T.body,
                             children: [
-                                "lifecycle_item" === l.type && null != l.item_enum && (0, r.jsx)(M, { item: l }),
+                                "lifecycle_item" === l.type && null != l.item_enum && (0, r.jsx)(L, { item: l }),
                                 (0, r.jsxs)(o.Text, {
                                     variant: "text-md/normal",
                                     color: f ? "text-muted" : "text-default",
@@ -211,11 +211,11 @@ let U = i.memo(function (e) {
                                 (null == (t = l.message) ? void 0 : t.content) != null
                                     ? (0, r.jsx)(D, { item: l })
                                     : null,
-                                null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
+                                null != l.callout ? (0, r.jsx)(M, { item: l }) : null,
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: f ? "text-muted" : "header-secondary",
-                                    children: (0, x.a3)(y.default.extractTimestamp(l.id)),
+                                    children: (0, x.a3)(O.default.extractTimestamp(l.id)),
                                 }),
                                 m,
                             ],

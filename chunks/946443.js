@@ -1,7 +1,7 @@
 n.d(t, {
     QP: () => N,
     ZP: () => S,
-    h6: () => P,
+    h6: () => I,
 }),
     n(388685);
 var r = n(951288),
@@ -19,20 +19,20 @@ var r = n(951288),
     g = n(724757),
     m = n(626135),
     b = n(585483),
-    O = n(358085),
-    y = n(143316),
-    _ = n(240126),
+    _ = n(358085),
+    O = n(143316),
+    y = n(240126),
     v = n(147522),
     j = n(809780),
     x = n(981631),
     C = n(388032),
-    E = n(77902);
+    E = n(915087);
 function S(e) {
-    var t, n, l, a, y, S, P;
+    var t, n, l, a, O, S, I;
     let { onJump: N, showTutorial: w, setSeenTutorial: Z, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
-        { loadState: L, channels: M } = R,
+        { loadState: M, channels: L } = R,
         { maybeLoadMore: k } = D,
         U = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing);
     (t = A),
@@ -52,11 +52,11 @@ function S(e) {
             (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
         (a = R),
-        (y = D),
+        (O = D),
         i.useEffect(() => {
             let e = () => {
                 let e = a.channels.find((e) => !e.collapsed);
-                null != e && y.markChannelRead(e);
+                null != e && O.markChannelRead(e);
             };
             return (
                 b.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
@@ -64,11 +64,11 @@ function S(e) {
                     b.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [y, a.channels]),
+        }, [O, a.channels]),
         (S = D),
         i.useEffect(() => {
             let e = (e) => {
-                ((0, O.isMac)() || (0, O.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
+                ((0, _.isMac)() || (0, _.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
                     "z" === e.key &&
@@ -102,12 +102,12 @@ function S(e) {
             ),
         );
     let G = (0, g.Z)("unreads", A);
-    if (0 === M.length) {
-        return (0, r.jsx)(_.Z, {
+    if (0 === L.length) {
+        return (0, r.jsx)(y.Z, {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+P"]),
             tip:
-                (null == (P = s().os) ? void 0 : P.family) === "OS X"
+                (null == (I = s().os) ? void 0 : I.family) === "OS X"
                     ? C.intl.string(C.t.w9uDOT)
                     : C.intl.string(C.t.BiUJCw),
         });
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: L === j.jd.Done ? void 0 : k,
+                            onScroll: M === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(U)),
                             children: [
-                                w ? (0, r.jsx)(I, { setSeenTutorial: Z }) : null,
-                                (0, v.Z)(M, D, N),
-                                L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                w ? (0, r.jsx)(P, { setSeenTutorial: Z }) : null,
+                                (0, v.Z)(L, D, N),
+                                M === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -206,7 +206,7 @@ function S(e) {
         }),
     });
 }
-function I(e) {
+function P(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
         className: E.tutorial,
@@ -245,8 +245,8 @@ function I(e) {
         ],
     });
 }
-function P() {
-    return (0, r.jsx)(_.Z, {
+function I() {
+    return (0, r.jsx)(y.Z, {
         Icon: d.xx7,
         disableStars: !0,
         header: C.intl.string(C.t["KG/ynZ"]),
@@ -254,7 +254,7 @@ function P() {
     });
 }
 let N = () =>
-    (0, r.jsx)(y.Z, {
+    (0, r.jsx)(O.Z, {
         onClick: () => b.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ),
         type: "top-header",
     });

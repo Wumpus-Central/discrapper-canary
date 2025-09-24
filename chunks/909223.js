@@ -10,13 +10,13 @@ var r = n(951288),
     d = n(353926),
     h = n(82554),
     g = n(726521),
-    m = n(185625),
-    p = n(314897),
+    p = n(185625),
+    m = n(314897),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
-    E = n(942970),
-    v = n(10198);
+    E = n(325659),
+    v = n(197571);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,9 +70,9 @@ let I = {
         let { title: t, menuType: i } = e,
             s = (e) => {
                 let t = async () => {
-                        await (0, m.yL)(i, e);
+                        await (0, p.yL)(i, e);
                     },
-                    s = async (t) => await (0, m.RV)(i, e, t),
+                    s = async (t) => await (0, p.RV)(i, e, t),
                     a = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
@@ -128,10 +128,10 @@ let I = {
     O = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, s.e7)([p.default], () => p.default.isAuthenticated()),
+            h = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
             g = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             b = () => {
-                (0, m.Jj)()
+                (0, p.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },

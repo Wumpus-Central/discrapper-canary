@@ -34,17 +34,15 @@ function h(e) {
         })),
         c = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled),
         f = (0, s.e7)([u.Z], () => u.Z.alwaysShowLinkDecorations),
-        h = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        m = i.useMemo(
+        h = i.useMemo(
             () => ({
                 reducedMotion: n,
                 prefersCrossfades: !1,
                 forcedColors: o,
                 alwaysShowLinkDecorations: f,
                 highContrastModeEnabled: c,
-                keyboardModeEnabled: h,
             }),
-            [n, o, f, c, h],
+            [n, o, f, c],
         );
     return (
         i.useEffect(
@@ -57,7 +55,7 @@ function h(e) {
             [],
         ),
         (0, r.jsx)(l.Sfi.Provider, {
-            value: m,
+            value: h,
             children: t,
         })
     );

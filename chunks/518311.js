@@ -46,9 +46,9 @@ var r,
     D = n(752048),
     U = n(131704),
     B = n(592125),
-    F = n(341165),
+    H = n(341165),
     V = n(544610),
-    H = n(19780),
+    F = n(19780),
     G = n(306680),
     z = n(699516),
     W = n(246946),
@@ -64,8 +64,8 @@ var r,
     en = n(575464),
     er = n(981631),
     ei = n(388032),
-    el = n(497072),
-    ea = n(10198);
+    el = n(918324),
+    ea = n(197571);
 function eo(e, t, n) {
     return (
         t in e
@@ -777,7 +777,7 @@ class eg extends (r = l.PureComponent) {
             eo(this, "pushToExistingDM", (e, t) => {
                 let n = this._searchCounter,
                     r = (0, P.v_)(e),
-                    i = H.Z.getChannelId() === e.id;
+                    i = F.Z.getChannelId() === e.id;
                 b.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void g.Z.call(n, !1, !0);
@@ -895,10 +895,10 @@ function eb(e) {
 function ey(e) {
     var { channel: t } = e,
         n = eu(e, ["channel"]);
-    let r = (0, p.cj)([V.Z, F.Z, W.Z], () => {
+    let r = (0, p.cj)([V.Z, H.Z, W.Z], () => {
         let e;
         return (
-            null != t && null != (e = F.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            null != t && null != (e = H.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             ec(es({}, V.Z.getState()), {
                 invite: e,
                 hideDiscriminator: W.Z.hidePersonalInformation,

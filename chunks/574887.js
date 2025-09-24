@@ -9,14 +9,14 @@ var i = t(120356),
     c = t(367907),
     d = t(122021),
     u = t(275759),
-    f = t(888496),
-    m = t(768762),
+    m = t(888496),
+    f = t(768762),
     p = t(706454),
     h = t(49012),
     j = t(981631),
     x = t(856651),
     v = t(388032),
-    g = t(638999);
+    g = t(20163);
 function b(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
@@ -146,9 +146,9 @@ function O(e) {
                                                               }),
                                                           ),
                                                   }),
-                                                  (0, l.jsx)(m.Z, {
+                                                  (0, l.jsx)(f.Z, {
                                                       className: g.platformUrlIcon,
-                                                      direction: m.Z.Directions.RIGHT,
+                                                      direction: f.Z.Directions.RIGHT,
                                                   }),
                                               ],
                                           }),
@@ -165,17 +165,17 @@ function O(e) {
                         className: g.metadata,
                         children:
                             t.type === j.ABu.REDDIT
-                                ? (0, f.oP)(o)
+                                ? (0, m.oP)(o)
                                 : t.type === j.ABu.STEAM
-                                  ? (0, f.Dq)(o)
+                                  ? (0, m.Dq)(o)
                                   : t.type === j.ABu.BLUESKY || t.type === j.ABu.MASTODON || t.type === j.ABu.TWITTER
-                                    ? (0, f.rJ)(o)
+                                    ? (0, m.rJ)(o)
                                     : t.type === j.ABu.PAYPAL
-                                      ? (0, f.li)(o)
+                                      ? (0, m.li)(o)
                                       : t.type === j.ABu.EBAY
-                                        ? (0, f.ul)(o)
+                                        ? (0, m.ul)(o)
                                         : t.type === j.ABu.TIKTOK
-                                          ? (0, f.hf)(o)
+                                          ? (0, m.hf)(o)
                                           : null,
                     }),
                 ],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(539854);
+n.d(t, { Z: () => p }), n(388685), n(539854);
 var a = n(951288),
     r = n(647438),
     i = n(442837),
@@ -7,16 +7,16 @@ var a = n(951288),
     o = n(581883),
     c = n(428967),
     d = n(972118),
-    u = n(561735),
-    m = n(10198);
-let h = r.memo(function (e) {
+    u = n(764668),
+    m = n(197571);
+let p = r.memo(function (e) {
     let { className: t, content: n, onChange: i } = e,
         o = l.z[n],
-        { isDismissed: m, handleToggleDismissState: h } = (0, d.Z)(o),
+        { isDismissed: m, handleToggleDismissState: p } = (0, d.Z)(o),
         [x, f] = r.useState(!1),
         b = r.useCallback(() => {
-            null == i || i(n), h();
-        }, [i, h, n]),
+            null == i || i(n), p();
+        }, [i, p, n]),
         g = r.useCallback(
             (e) => {
                 e.preventDefault(), f(!0), navigator.clipboard.writeText(n.toLowerCase());
@@ -38,7 +38,7 @@ let h = r.memo(function (e) {
                             className: u.text,
                             children: "".concat(n.toLowerCase(), " (").concat(l.z[n], ")"),
                         }),
-                        (0, c.qh)(o) && (0, a.jsx)(p, { content: o }),
+                        (0, c.qh)(o) && (0, a.jsx)(h, { content: o }),
                     ],
                 }),
                 (0, a.jsx)(s.hU, {
@@ -52,7 +52,7 @@ let h = r.memo(function (e) {
         }),
     });
 });
-function p(e) {
+function h(e) {
     let { content: t } = e,
         n = (0, i.e7)([o.Z], () => {
             var e, n;

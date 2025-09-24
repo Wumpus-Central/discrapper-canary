@@ -5,7 +5,7 @@ var r = n(951288),
     o = n(404975),
     s = n(924052),
     a = n(59662),
-    u = n(4640);
+    u = n(990757);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -51,32 +51,32 @@ function d(e, t) {
 }
 function f(e) {
     var t, n, f;
-    let { root: g, directory: O, target: y, onClose: E, sidebarHeader: b, sidebarFooter: p } = e,
+    let { root: g, directory: y, target: O, onClose: E, sidebarHeader: b, sidebarFooter: p } = e,
         [v, T] = i.useState(!0),
-        [S, N] = i.useState(null == (t = O.entry(y)) ? void 0 : t.parentPanel),
-        [j, m] = i.useState(() => O.typedGet(S)),
+        [j, N] = i.useState(null == (t = y.entry(O)) ? void 0 : t.parentPanel),
+        [S, m] = i.useState(() => y.typedGet(j)),
         C = i.useCallback(() => P(void 0), []),
         [_, P] = i.useState({
-            target: y,
-            targetAccordion: null == (n = O.entry(y)) ? void 0 : n.parentAccordion,
+            target: O,
+            targetAccordion: null == (n = y.entry(O)) ? void 0 : n.parentAccordion,
             animateScroll: !1,
             complete: C,
         }),
-        { navigateWithValidation: I } = (0, s.Cu)(),
-        x = i.useMemo(
+        { navigateWithValidation: x } = (0, s.Cu)(),
+        I = i.useMemo(
             () => ({
-                currentPanel: O.typedGet(S),
+                currentPanel: y.typedGet(j),
                 navigateTo: (e) => {
-                    let t = O.entry(e);
+                    let t = y.entry(e);
                     if ((null == t ? void 0 : t.parentPanel) == null) return;
                     let n = {
                         target: e,
                         targetAccordion: t.parentAccordion,
                         complete: C,
                     };
-                    if (t.parentPanel.key !== (null == S ? void 0 : S.key)) {
+                    if (t.parentPanel.key !== (null == j ? void 0 : j.key)) {
                         let e = t.parentPanel;
-                        I(() => {
+                        x(() => {
                             P(d(c({}, n), { animateScroll: !1 })), m(e), N(e);
                         });
                     } else P(d(c({}, n), { animateScroll: !0 }));
@@ -85,10 +85,10 @@ function f(e) {
                 showNavigationMobile: v,
                 setShowNavigationMobile: T,
             }),
-            [O, S, _, v, C, I],
+            [y, j, _, v, C, x],
         );
     return (0, r.jsx)(a.j.Provider, {
-        value: x,
+        value: I,
         children: (0, r.jsxs)("div", {
             className: u.container,
             children: [
@@ -98,8 +98,8 @@ function f(e) {
                     footer: p,
                 }),
                 (0, r.jsx)(l.Z, {
-                    onClose: () => I(E),
-                    setting: null != (f = x.currentPanel) ? f : j,
+                    onClose: () => x(E),
+                    setting: null != (f = I.currentPanel) ? f : S,
                 }),
             ],
         }),

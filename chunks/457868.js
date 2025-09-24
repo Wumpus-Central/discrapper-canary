@@ -25,8 +25,8 @@ var r = n(951288),
     E = n(670188),
     S = n(199902),
     Z = n(271383),
-    P = n(485386),
-    T = n(158776),
+    T = n(485386),
+    P = n(158776),
     N = n(885110),
     R = n(111583),
     w = n(594174),
@@ -39,8 +39,8 @@ var r = n(951288),
     G = n(276264),
     H = n(981631),
     F = n(388032),
-    B = n(101265),
-    z = n(854641);
+    B = n(61722),
+    z = n(32482);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,10 +73,10 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             o = i.useRef(null),
             d = (0, p.e7)([R.Z], () => R.Z.isTyping(t.id, a)),
             h = (0, p.e7)([Z.ZP], () => Z.ZP.getMember(t.guild_id, a)),
-            m = (0, p.e7)([P.Z], () => {
+            m = (0, p.e7)([T.Z], () => {
                 var e;
                 return (null == h ? void 0 : h.colorRoleId) != null
-                    ? null == (e = P.Z.getRole(t.guild_id, h.colorRoleId))
+                    ? null == (e = T.Z.getRole(t.guild_id, h.colorRoleId))
                         ? void 0
                         : e.name
                     : void 0;
@@ -84,9 +84,9 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             y = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             _ = (null == b ? void 0 : b.id) === (null == y ? void 0 : y.id),
-            O = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
-            x = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
-            C = (0, p.e7)([T.Z, N.Z], () => (_ ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
+            O = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getStatus() : P.Z.getStatus(a, t.guild_id))),
+            x = (0, p.e7)([P.Z], () => P.Z.isMobileOnline(a)),
+            C = (0, p.e7)([P.Z, N.Z], () => (_ ? N.Z.getActivities() : P.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)),
             D = (0, c.JA)(a),
             M = (0, p.e7)([I.Z], () => I.Z.canUserViewChannel(t.id, l, a)),
@@ -95,7 +95,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 (e) => {
                     null != b &&
                         (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("32646")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("70675"), n.e("96456")]).then(
                                 n.bind(n, 654663),
                             );
                             return (n) => {

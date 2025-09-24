@@ -18,8 +18,8 @@ var r = n(951288),
     C = n(796638),
     _ = n(981631),
     v = n(354459),
-    x = n(450906),
-    O = n(74246);
+    x = n(394024),
+    O = n(597843);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -83,10 +83,10 @@ function I(e) {
             width: D,
             height: U,
             layout: B,
-            idle: F,
+            idle: H,
         } = e,
         V = null != A,
-        H = h.Z.getVideoComponent(),
+        F = h.Z.getVideoComponent(),
         G = p.default.getId(),
         [z, W] = i.useState(null),
         q = (0, c.Z)(z),
@@ -204,7 +204,7 @@ function I(e) {
                                                           noBorder: ed >= D || eu >= U,
                                                           channel: M,
                                                           className: x.focusedVideo,
-                                                          videoComponent: H,
+                                                          videoComponent: F,
                                                           width: D,
                                                           participant: t,
                                                           onClick: l,
@@ -223,7 +223,7 @@ function I(e) {
                             }),
                             el
                                 ? (0, r.jsx)(o.animated.div, {
-                                      className: a()(O.actionRow, { [O.idle]: F }),
+                                      className: a()(O.actionRow, { [O.idle]: H }),
                                       style: { bottom: eC.value },
                                       children: (0, r.jsx)(d.Z, {
                                           channelId: M.id,

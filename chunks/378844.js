@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => y,
-    Z: () => _,
+    R: () => O,
+    Z: () => y,
 });
 var r,
     i = n(951288);
@@ -17,8 +17,8 @@ var l = n(442837),
     h = n(981631),
     g = n(815660),
     m = n(388032),
-    b = n(434652);
-function O(e) {
+    b = n(36973);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,10 +43,10 @@ function O(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
-let _ = (e) => {
-    let { type: t, guildId: r, closePopout: y } = e,
-        _ = (0, u.Dt)(),
+var O = (((r = {})[(r.VOICE = 0)] = "VOICE"), r);
+let y = (e) => {
+    let { type: t, guildId: r, closePopout: O } = e,
+        y = (0, u.Dt)(),
         {
             notClaimed: v,
             notEmailVerified: j,
@@ -55,26 +55,26 @@ let _ = (e) => {
             newMember: E,
         } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BA"]) : null,
-        I = null,
-        P = null;
+        P = null,
+        I = null;
     return (0 === t &&
         (v
-            ? ((I = m.intl.string(m.t.IRxUlJ)), (P = m.intl.string(m.t.fiNVio)))
+            ? ((P = m.intl.string(m.t.IRxUlJ)), (I = m.intl.string(m.t.fiNVio)))
             : x
-              ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOj"])))
+              ? ((P = m.intl.string(m.t.vW8iUF)), (I = m.intl.string(m.t["50gfOj"])))
               : j
-                ? ((I = m.intl.string(m.t.vdSOp6)), (P = m.intl.string(m.t.lm1UKi)))
+                ? ((P = m.intl.string(m.t.vdSOp6)), (I = m.intl.string(m.t.lm1UKi)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))
+                  ? ((P = m.intl.formatToPlainString(m.t.v1ktYW, { min: h.YeM.MEMBER_AGE })),
+                    (I = m.intl.string(m.t.BddRzc)))
                   : C &&
-                    ((I = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
-                    (P = m.intl.string(m.t.BddRzc)))),
-    null == S || null == I)
+                    ((P = m.intl.formatToPlainString(m.t["sncw4+"], { min: h.YeM.ACCOUNT_AGE })),
+                    (I = m.intl.string(m.t.BddRzc)))),
+    null == S || null == P)
         ? null
         : (0, i.jsxs)(a.VqE, {
               className: b.container,
-              "aria-labelledby": _,
+              "aria-labelledby": y,
               children: [
                   (0, i.jsx)("img", {
                       alt: "",
@@ -86,24 +86,24 @@ let _ = (e) => {
                       children: [
                           (0, i.jsx)(a.X6q, {
                               variant: "heading-md/semibold",
-                              id: _,
+                              id: y,
                               children: S,
                           }),
                           (0, i.jsx)(a.Text, {
                               color: "header-secondary",
                               variant: "text-sm/normal",
-                              children: I,
+                              children: P,
                           }),
                           (0, i.jsxs)("div", {
                               className: b.buttonContainer,
                               children: [
-                                  null != P
+                                  null != I
                                       ? (0, i.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: b.primaryButton,
                                             children: (0, i.jsx)(a.zxk, {
                                                 variant: "primary",
-                                                text: P,
+                                                text: I,
                                                 onClick: () => {
                                                     v
                                                         ? c.j()
@@ -116,7 +116,7 @@ let _ = (e) => {
                                                                     return (t) =>
                                                                         (0, i.jsx)(
                                                                             e,
-                                                                            O({ reason: d.L.GUILD_PHONE_REQUIRED }, t),
+                                                                            _({ reason: d.L.GUILD_PHONE_REQUIRED }, t),
                                                                         );
                                                                 },
                                                                 { modalKey: g.M },
@@ -127,7 +127,7 @@ let _ = (e) => {
                                                                 var t, n, r;
                                                                 return (0, i.jsx)(
                                                                     a.ConfirmModal,
-                                                                    ((n = O(
+                                                                    ((n = _(
                                                                         {
                                                                             header: m.intl.string(m.t.LykQYm),
                                                                             confirmText: m.intl.string(m.t.BddRzc),
@@ -171,14 +171,14 @@ let _ = (e) => {
                                                                     n),
                                                                 );
                                                             })),
-                                                        y();
+                                                        O();
                                                 },
                                             }),
                                         })
                                       : null,
                                   v || x || j
                                       ? (0, i.jsx)(o.zx, {
-                                            onClick: y,
+                                            onClick: O,
                                             look: o.zx.Looks.BLANK,
                                             className: b.cancel,
                                             children: m.intl.string(m.t.oEAioK),

@@ -1,47 +1,47 @@
-n.d(t, { Z: () => _ });
-var r = n(951288),
-    i = n(647438),
-    a = n(442837),
-    o = n(481060),
+n.d(t, { Z: () => p });
+var a = n(951288),
+    r = n(647438),
+    i = n(442837),
+    l = n(481060),
     s = n(607070),
-    l = n(7093),
+    o = n(7093),
     c = n(40347),
-    u = n(388032),
-    d = n(478741);
-let f = i.lazy(() => n.e("22274").then(n.bind(n, 269792)));
-function _() {
-    let e = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        t = (0, l.Z)((e) => e.shouldRenderTenureLevelUp),
+    d = n(388032),
+    u = n(92038);
+let m = r.lazy(() => n.e("22274").then(n.bind(n, 269792)));
+function p() {
+    let e = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        t = (0, o.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, c.Z)();
-    return e || !t || null == n ? null : (0, r.jsx)(p, { levelUpData: n });
+    return e || !t || null == n ? null : (0, a.jsx)(h, { levelUpData: n });
 }
-function p(e) {
+function h(e) {
     let { levelUpData: t } = e,
-        n = i.useRef(null),
-        a = i.useCallback(() => {
-            l.Z.setState({ shouldRenderTenureLevelUp: !1 });
+        n = r.useRef(null),
+        i = r.useCallback(() => {
+            o.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        i.useEffect(() => a, [a]),
-        (0, r.jsx)(o.EqS, {
+        r.useEffect(() => i, [i]),
+        (0, a.jsx)(l.EqS, {
             containerRef: n,
-            children: (0, r.jsxs)("div", {
-                className: d.wrapper,
+            children: (0, a.jsxs)("div", {
+                className: u.wrapper,
                 children: [
-                    (0, r.jsx)(o.M0o, {
-                        className: d.closeButton,
-                        tooltip: u.intl.string(u.t.cpT0Cg),
-                        color: o.YX$.SECONDARY,
-                        size: o.tT7.SIZE_24,
-                        icon: (0, r.jsx)(o.Dio, {
+                    (0, a.jsx)(l.M0o, {
+                        className: u.closeButton,
+                        tooltip: d.intl.string(d.t.cpT0Cg),
+                        color: l.YX$.SECONDARY,
+                        size: l.tT7.SIZE_24,
+                        icon: (0, a.jsx)(l.Dio, {
                             size: "xs",
                             color: "currentColor",
                         }),
-                        onClick: a,
+                        onClick: i,
                     }),
-                    (0, r.jsx)(i.Suspense, {
+                    (0, a.jsx)(r.Suspense, {
                         fallback: null,
-                        children: (0, r.jsx)(f, { levelUpData: t }),
+                        children: (0, a.jsx)(m, { levelUpData: t }),
                     }),
                 ],
             }),

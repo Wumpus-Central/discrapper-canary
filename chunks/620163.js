@@ -100,9 +100,9 @@ var i = n(990547),
     eU = n(46140),
     eG = n(65154),
     eB = n(388032),
-    eZ = n(62222),
-    eF = n(412297),
-    eV = n(756464);
+    eZ = n(693450),
+    eF = n(345909),
+    eV = n(202323);
 function eH(e, t, n) {
     return (
         t in e
@@ -209,8 +209,8 @@ let ez = () => {
             isEligibleForQuests: e3,
             isStricterMessageRequestsEnabled: e4,
             hasLibraryApplication: e8,
-            hasTOTPEnabled: e6,
-            developerMode: e5,
+            hasTOTPEnabled: e5,
+            developerMode: e6,
             isAdultUser: e7,
             hasSecureFramesVerifiedUserIds: e9,
             hypeSquadRemoved: te,
@@ -301,13 +301,13 @@ let ez = () => {
                 searchableTitles: [eB.intl.string(eB.t.cDgKtb)],
                 section: ek.oAB.ACCOUNT,
                 parent: ej.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e6,
+                predicate: () => !e5,
             },
             [ej.s6.ACCOUNT_REMOVE_2FA]: {
                 searchableTitles: [eB.intl.string(eB.t["D+aE7u"])],
                 section: ek.oAB.ACCOUNT,
                 parent: ej.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e6,
+                predicate: () => e5,
             },
             [ej.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
                 searchableTitles: [eB.intl.string(eB.t.fZSi1N)],
@@ -1664,7 +1664,7 @@ let ez = () => {
                 section: ek.oAB.ADVANCED,
                 searchableTitles: [eB.intl.string(eB.t.erOqlp)],
                 parent: ej.s6.SETTINGS_ADVANCED,
-                predicate: () => e5,
+                predicate: () => e6,
             },
             [ej.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
                 section: ek.oAB.ADVANCED,

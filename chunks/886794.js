@@ -8,8 +8,8 @@ var l = t(951288),
     c = t(313201),
     d = t(680295),
     u = t(5192),
-    f = t(785717),
-    m = t(687158),
+    m = t(785717),
+    f = t(687158),
     p = t(899007),
     h = t(648052),
     j = t(867176),
@@ -24,9 +24,9 @@ var l = t(951288),
     P = t(981631),
     N = t(671955),
     T = t(388032),
-    E = t(526594),
-    A = t(438160),
-    S = t(909735);
+    E = t(673517),
+    A = t(54966),
+    S = t(602727);
 function C(e) {
     var n;
     let {
@@ -42,11 +42,11 @@ function C(e) {
             sourceAnalyticsLocations: k = [],
         } = e,
         B = C === P.ME ? void 0 : C,
-        V = (0, m.ZP)(t.id, B),
+        V = (0, f.ZP)(t.id, B),
         F = u.ZP.getName(B, w, t),
         G = (0, c.Dt)(),
         { analyticsLocations: z } = (0, a.ZP)([...k, s.Z.USER_PROFILE_MODAL]),
-        K = (0, f.ZB)({
+        K = (0, m.ZB)({
             layout: "MODAL",
             userId: t.id,
             sourceSessionId: R,
@@ -59,7 +59,7 @@ function C(e) {
         Y = (0, o.Z)(W);
     return (0, l.jsx)(a.Gt, {
         value: z,
-        children: (0, l.jsx)(f.Mt, {
+        children: (0, l.jsx)(m.Mt, {
             value: K,
             openedAt: M,
             fetchStartedAt: null == V ? void 0 : V.fetchStartedAt,

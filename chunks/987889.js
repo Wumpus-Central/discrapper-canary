@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(442837),
@@ -14,9 +14,9 @@ var r = n(951288),
     g = n(370774),
     m = n(993609),
     b = n(982183),
-    O = n(981631),
-    y = n(388032),
-    _ = n(66449);
+    _ = n(981631),
+    O = n(388032),
+    y = n(361584);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,7 +81,7 @@ function C(e) {
             (0, r.jsx)(
                 o.P3F,
                 j(v({}, e), {
-                    className: _.action,
+                    className: y.action,
                     onClick: (e) => {
                         (0, h.Qz)({
                             message: l,
@@ -93,7 +93,7 @@ function C(e) {
                     },
                     children: (0, r.jsx)(a, {
                         size: c ? "sm" : "xs",
-                        className: _.actionIcon,
+                        className: y.actionIcon,
                     }),
                 }),
             ),
@@ -104,22 +104,22 @@ function E(e) {
         d = (0, h.fJ)(),
         [p, f] = (0, i.useState)(!1),
         [g, b] = (0, i.useState)(!1),
-        O = (0, i.useRef)(null),
-        { openMenu: y, closeMenu: x } = (0, m.z)();
+        _ = (0, i.useRef)(null),
+        { openMenu: O, closeMenu: x } = (0, m.z)();
     return (0, r.jsx)(o.yRy, {
         shouldShow: g,
         animation: o.yRy.Animation.NONE,
         position: "right",
         align: "top",
         autoInvert: !1,
-        targetElementRef: O,
+        targetElementRef: _,
         onRequestClose: () => {
             b(!1), x(n.id, u);
         },
         renderPopout: (e) =>
             (0, r.jsx)(o.VqE, {
                 onClick: (e) => e.stopPropagation(),
-                returnRef: O,
+                returnRef: _,
                 children: (0, r.jsx)(s, {
                     renderPopoutProps: e,
                     channel: t,
@@ -137,8 +137,8 @@ function E(e) {
                     (0, r.jsx)(
                         o.P3F,
                         j(v({}, t), {
-                            innerRef: O,
-                            className: _.action,
+                            innerRef: _,
+                            className: y.action,
                             onClick: (e) => {
                                 (0, h.Qz)({
                                     message: n,
@@ -147,14 +147,14 @@ function E(e) {
                                 }),
                                     e.stopPropagation();
                                 let t = !g;
-                                b(t), t ? y(n.id, u) : x(n.id, u);
+                                b(t), t ? O(n.id, u) : x(n.id, u);
                             },
                             children: (0, r.jsx)(
                                 a,
                                 j(v({}, e), {
                                     message: n,
                                     "aria-label": l,
-                                    className: _.actionIcon,
+                                    className: y.actionIcon,
                                     size: p ? "sm" : "xs",
                                 }),
                             ),
@@ -167,7 +167,7 @@ let S = {
     [b.r0.ACK]: {
         type: "standard",
         Icon: o.dz2,
-        label: y.intl.string(y.t.e6RscX),
+        label: O.intl.string(O.t.e6RscX),
         onClick: (e) => {
             a.Z.dispatch({
                 type: "NOTIFICATIONS_INBOX_ITEM_ACK",
@@ -177,8 +177,8 @@ let S = {
                 s.In(
                     e.channel_id,
                     {
-                        object: O.qAy.MARK_MESSAGE_AS_READ_BUTTON,
-                        objectType: O.Qqv.ACK_MANUAL,
+                        object: _.qAy.MARK_MESSAGE_AS_READ_BUTTON,
+                        objectType: _.Qqv.ACK_MANUAL,
                     },
                     !0,
                     void 0,
@@ -189,7 +189,7 @@ let S = {
     },
     [b.r0.BOOKMARK]: {
         type: "menu",
-        label: y.intl.string(y.t["9p3D9v"]),
+        label: O.intl.string(O.t["9p3D9v"]),
         Icon: (e) =>
             null != p.Z.getSavedMessage(e.message.channel_id, e.message.id)
                 ? (0, r.jsx)(o.plf, v({}, e))
@@ -206,14 +206,14 @@ let S = {
                 o.v2r,
                 j(v({}, n), {
                     navId: "message-reminder-create",
-                    "aria-label": y.intl.string(y.t.mJ3P0N),
+                    "aria-label": O.intl.string(O.t.mJ3P0N),
                     onClose: n.closePopout,
                     onSelect: () => null,
                     children: [
                         null != i
                             ? (0, r.jsx)(o.sNh, {
                                   id: "remove-from-for-later",
-                                  label: y.intl.string(y.t.SvXS1d),
+                                  label: O.intl.string(O.t.SvXS1d),
                                   icon: o.plf,
                                   action: () =>
                                       (0, d.x)({
@@ -225,7 +225,7 @@ let S = {
                               })
                             : (0, r.jsx)(o.sNh, {
                                   id: "create-bookmark",
-                                  label: y.intl.string(y.t["9p3D9v"]),
+                                  label: O.intl.string(O.t["9p3D9v"]),
                                   icon: o.gt9,
                                   action: () =>
                                       (0, d.z)({
@@ -244,7 +244,7 @@ let S = {
     [b.r0.SETTINGS]: {
         type: "menu",
         Icon: o.Dkj,
-        label: y.intl.string(y.t.h850Sk),
+        label: O.intl.string(O.t.h850Sk),
         interactionType: h.s_.SETTINGS,
         Menu: (e) => {
             let { channel: t, renderPopoutProps: n } = e;
@@ -254,7 +254,7 @@ let S = {
                       j(v({}, n), {
                           channel: t,
                           navId: "thread-context",
-                          label: y.intl.string(y.t["1NBjqa"]),
+                          label: O.intl.string(O.t["1NBjqa"]),
                       }),
                   )
                 : (0, r.jsx)(
@@ -262,13 +262,13 @@ let S = {
                       j(v({}, n), {
                           channel: t,
                           navId: "channel-context",
-                          label: y.intl.string(y.t.Xm41aW),
+                          label: O.intl.string(O.t.Xm41aW),
                       }),
                   );
         },
     },
 };
-function I(e) {
+function P(e) {
     let { message: t, channel: n, isUnread: l } = e,
         a = ((e, t) => {
             let n = (0, g.ux)();
@@ -283,7 +283,7 @@ function I(e) {
         gap: 4,
         align: "center",
         justify: "center",
-        className: _.actions,
+        className: y.actions,
         children: a.map((e) => {
             let i = S[e];
             switch (i.type) {

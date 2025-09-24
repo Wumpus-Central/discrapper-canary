@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(362762),
     h = n(409059),
     g = n(659900),
-    m = n(962220),
-    p = n(473855),
+    p = n(962220),
+    m = n(473855),
     f = n(306453),
     _ = n(929809),
     x = n(108427),
@@ -27,9 +27,9 @@ var r = n(951288),
     C = n(701476),
     A = n(630724),
     T = n(436620),
-    P = n(388032),
-    Z = n(858518),
-    R = n(10198);
+    Z = n(388032),
+    P = n(160033),
+    R = n(197571);
 function L(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ class w extends i.PureComponent {
             T.KO || j.Z.launch("discord://" + S.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return T.KO
@@ -75,10 +75,10 @@ class w extends i.PureComponent {
                 }),
                 (0, r.jsx)(u.Dx, {
                     className: s()(R.marginTop8, R.marginBottom8),
-                    children: P.intl.string(P.t.C7ZRNz),
+                    children: Z.intl.string(Z.t.C7ZRNz),
                 }),
-                (0, r.jsx)(u.DK, { children: P.intl.string(P.t.A6MwXF) }),
-                this.renderButton(P.intl.string(P.t.fIv16O), this.handleContinue),
+                (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t.A6MwXF) }),
+                this.renderButton(Z.intl.string(Z.t.fIv16O), this.handleContinue),
             ],
         });
     }
@@ -87,10 +87,10 @@ class w extends i.PureComponent {
             children: [
                 (0, r.jsx)(u.Dx, {
                     className: R.marginBottom8,
-                    children: P.intl.string(P.t.csrAMD),
+                    children: Z.intl.string(Z.t.csrAMD),
                 }),
-                (0, r.jsx)(u.DK, { children: P.intl.string(P.t["m1+IBg"]) }),
-                this.renderButton(P.intl.string(P.t.fIv16O), this.handleContinue),
+                (0, r.jsx)(u.DK, { children: Z.intl.string(Z.t["m1+IBg"]) }),
+                this.renderButton(Z.intl.string(Z.t.fIv16O), this.handleContinue),
             ],
         });
     }
@@ -98,7 +98,7 @@ class w extends i.PureComponent {
         let { guildTemplate: e } = this.props;
         return (a()(null != e, "guild template must not be null"), e.state === y.Rj.RESOLVING)
             ? (0, r.jsx)(u.ZP, {
-                  className: Z.authBox,
+                  className: P.authBox,
                   children: (0, r.jsx)(f.Z, { guildTemplate: e }),
               })
             : (0, r.jsx)(k, { guildTemplate: e });
@@ -106,19 +106,19 @@ class w extends i.PureComponent {
     renderContinue() {
         return (0, r.jsxs)(u.ZP, {
             children: [
-                (0, r.jsx)(u.Dx, { children: P.intl.string(P.t.fOc4go) }),
-                this.renderButton(P.intl.string(P.t.fIv16O), this.handleContinue),
+                (0, r.jsx)(u.Dx, { children: Z.intl.string(Z.t.fOc4go) }),
+                this.renderButton(Z.intl.string(Z.t.fIv16O), this.handleContinue),
             ],
         });
     }
     render() {
         let { guildTemplate: e, nativeAppState: t, authenticated: n, transitionTo: i, location: l } = this.props;
-        if (null == e) return this.renderSpinner(P.intl.string(P.t.ZTNur6));
+        if (null == e) return this.renderSpinner(Z.intl.string(Z.t.ZTNur6));
         if (t === S.kEZ.OPEN) return this.renderAppOpened();
-        if (t === S.kEZ.OPENING) return this.renderSpinner(P.intl.string(P.t["Z+hCVV"]));
+        if (t === S.kEZ.OPENING) return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
         switch (e.state) {
             case y.Rj.RESOLVING:
-                return this.renderSpinner(P.intl.string(P.t["Z+hCVV"]));
+                return this.renderSpinner(Z.intl.string(Z.t["Z+hCVV"]));
             case y.Rj.RESOLVED:
                 if (n || !T.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
@@ -184,25 +184,25 @@ function k(e) {
     let l = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Dx, {
-                className: Z.header,
-                children: P.intl.string(P.t.UNFvtL),
+                className: P.header,
+                children: Z.intl.string(Z.t.UNFvtL),
             }),
             n,
             (0, r.jsx)(u.zx, {
-                className: Z.createButton,
+                className: P.createButton,
                 onClick: i,
-                children: P.intl.string(P.t.xr59t7),
+                children: Z.intl.string(Z.t.xr59t7),
             }),
         ],
     });
     return (0, r.jsx)(N.Z, {
-        className: Z.authBox,
+        className: P.authBox,
         children: () => [
-            (0, r.jsx)(p.Z, { guildTemplate: t }, "template"),
+            (0, r.jsx)(m.Z, { guildTemplate: t }, "template"),
             (0, r.jsx)(
                 "div",
                 {
-                    className: Z.formContainer,
+                    className: P.formContainer,
                     children: l,
                 },
                 "contents",

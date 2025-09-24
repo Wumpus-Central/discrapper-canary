@@ -1,28 +1,28 @@
 n.d(t, { Z: () => d });
 var r = n(951288);
 n(647438);
-var l = n(120356),
-    i = n.n(l),
+var i = n(120356),
+    l = n.n(i),
     a = n(28664),
     o = n(481060),
-    u = n(871118),
+    c = n(871118),
     s = n(388032),
-    c = n(400872);
+    u = n(7504);
 function d(e) {
-    let { stream: t, isSmall: n, selected: l, isSelfStream: d } = e;
+    let { stream: t, isSmall: n, selected: i, isSelfStream: d } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(u.Z, {
-                className: i()(c.absoluteFill, c.streamPreviewOpacity),
+            (0, r.jsx)(c.Z, {
+                className: l()(u.absoluteFill, u.streamPreviewOpacity),
                 stream: t,
                 noText: !0,
             }),
-            !l &&
+            !i &&
                 (0, r.jsxs)("div", {
-                    className: i()(c.content, c.streamUnavailable, { [c.small]: n }),
+                    className: l()(u.content, u.streamUnavailable, { [u.small]: n }),
                     children: [
                         (0, r.jsx)(o.Text, {
-                            className: c.streamUnavailableText,
+                            className: u.streamUnavailableText,
                             color: "always-white",
                             variant: n ? "text-sm/semibold" : "text-md/semibold",
                             children: d ? s.intl.string(s.t.UeEwj4) : s.intl.string(s.t["1i3tSU"]),
@@ -34,8 +34,8 @@ function d(e) {
                                 children: (0, r.jsx)(o.o8v, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: c.stopStreamIcon,
-                                    colorClass: c.stopStreamForeground,
+                                    className: u.stopStreamIcon,
+                                    colorClass: u.stopStreamForeground,
                                 }),
                             }),
                         }),

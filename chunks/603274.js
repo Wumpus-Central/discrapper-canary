@@ -15,14 +15,14 @@ var i = n(120356),
     g = n(199902),
     m = n(592125),
     b = n(594174),
-    O = n(938475),
-    y = n(823379),
-    _ = n(709054),
+    _ = n(938475),
+    O = n(823379),
+    y = n(709054),
     v = n(853856),
     j = n(981631),
     x = n(388032),
-    C = n(102647),
-    E = n(395530);
+    C = n(132789),
+    E = n(78480);
 function S(e, t) {
     return 0 === t.length
         ? null
@@ -41,21 +41,21 @@ function S(e, t) {
               ],
           });
 }
-function I() {
+function P() {
     let e = (0, s.Wu)([v.Z, m.Z], () =>
-            _.default
+            y.default
                 .keys(v.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
-                .filter(y.lm),
+                .filter(O.lm),
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
         i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, s.Wu)(
-            [O.ZP],
+            [_.ZP],
             () =>
                 a().flatMap(n, (e) =>
-                    O.ZP.getVoiceStatesForChannel(e).map((e) => {
+                    _.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
                     }),
@@ -85,7 +85,7 @@ function I() {
                     .map((e) => e.ownerId),
             [t],
         ),
-        I = (0, s.Wu)([d.ZP], () => {
+        P = (0, s.Wu)([d.ZP], () => {
             let e = d.ZP.getEmbeddedActivitiesByChannel(),
                 n = [];
             for (let l of t) {
@@ -98,11 +98,11 @@ function I() {
             }
             return n;
         }, [t]),
-        P = (0, s.Wu)([b.default], () => I.map((e) => b.default.getUser(e)), [I]),
+        I = (0, s.Wu)([b.default], () => P.map((e) => b.default.getUser(e)), [P]),
         N = (0, s.Wu)([b.default], () => E.map((e) => b.default.getUser(e)), [E]),
         w = S(
             c.gj8,
-            l.filter((e) => !E.includes(e.id) && !I.includes(e.id)),
+            l.filter((e) => !E.includes(e.id) && !P.includes(e.id)),
         ),
         Z =
             0 === o.length
@@ -139,15 +139,15 @@ function I() {
                   }),
         T = S(
             c.hGI,
-            N.filter((e) => null != e && !I.includes(e.id)),
+            N.filter((e) => null != e && !P.includes(e.id)),
         ),
         { enabled: A } = u.c.useExperiment({ location: "FavoritesTooltip" }, { autoTrackExposure: !0 }),
-        R = S(A ? c.iWm : c.nG3, P);
+        R = S(A ? c.iWm : c.nG3, I);
     return (0, r.jsxs)(r.Fragment, {
         children: [Z, w, T, R],
     });
 }
-function P() {
+function I() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -157,7 +157,7 @@ function P() {
                     children: x.intl.string(x.t.wMWycn),
                 }),
             }),
-            (0, r.jsx)(I, {}),
+            (0, r.jsx)(P, {}),
         ],
     });
 }
@@ -167,7 +167,7 @@ function N(e) {
         hideOnClick: !0,
         spacing: 12,
         position: "right",
-        text: (0, r.jsx)(P, {}),
+        text: (0, r.jsx)(I, {}),
         "aria-label": t,
         tooltipClassName: E.listItemTooltip,
         onTooltipShow: n,

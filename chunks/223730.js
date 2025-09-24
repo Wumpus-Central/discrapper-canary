@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => y,
-    y: () => O,
+    K: () => O,
+    y: () => _,
 });
 var r = n(951288),
     i = n(442837),
@@ -12,9 +12,9 @@ var r = n(951288),
     u = n(88658),
     d = n(782896),
     p = n(981631),
-    f = n(893867),
+    f = n(933554),
     h = n(388032),
-    g = n(905618);
+    g = n(95049);
 let m = () => {
     (0, s.openUserSettings)(a.n.ACTIVITY_PRIVACY_PANEL, { section: p.oAB.ACTIVITY_PRIVACY });
 };
@@ -35,7 +35,7 @@ function b(e) {
         ],
     });
 }
-function O(e) {
+function _(e) {
     let { onClosePopout: t } = e,
         n = o.G6.useSetting(),
         a = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
@@ -56,7 +56,7 @@ function O(e) {
               ],
           });
 }
-function y(e) {
+function O(e) {
     let { onClosePopout: t } = e;
     return (0, r.jsx)(l.P3F, {
         className: g.customizeLink,

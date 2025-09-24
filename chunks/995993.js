@@ -14,21 +14,21 @@ var r = n(951288),
     g = n(306680),
     m = n(709054),
     b = n(540126),
-    O = n(434479),
-    y = n(981631),
-    _ = n(176505),
+    _ = n(434479),
+    O = n(981631),
+    y = n(176505),
     v = n(490897),
     j = n(388032),
-    x = n(88448);
+    x = n(885525);
 function C(e) {
     let { guild: t, selected: C } = e,
         E = (0, p.Z)(t),
         S = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        I = (0, l.Wu)([f.Z], () =>
+        P = (0, l.Wu)([f.Z], () =>
             Array.from(f.Z.getNewChannelIds(t.id)).filter((e) => f.Z.shouldIndicateNewChannel(t.id, e)),
         ),
-        P = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
-        N = I.length > b.Cb,
+        I = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
+        N = P.length > b.Cb,
         w = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = g.ZP.lastMessageId(t.id, v.W.GUILD_ONBOARDING_QUESTION);
@@ -37,7 +37,7 @@ function C(e) {
             return null != e && e > r;
         }),
         Z = i.useCallback(() => {
-            (0, h.uL)(y.Z5c.CHANNEL(t.id, E ? _.oC.CUSTOMIZE_COMMUNITY : _.oC.CHANNEL_BROWSER));
+            (0, h.uL)(O.Z5c.CHANNEL(t.id, E ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
         }, [t.id, E]),
         T = i.useCallback(
             (e) => {
@@ -94,7 +94,7 @@ function C(e) {
         ),
         A = null;
     return (
-        (S && !P && !N) ||
+        (S && !I && !N) ||
             C ||
             w ||
             (A = (0, r.jsx)(s.IGR, {
@@ -102,7 +102,7 @@ function C(e) {
                 text: j.intl.string(j.t.y2b7CA),
                 className: x.newChannel,
             })),
-        (0, r.jsx)(O.m, {
+        (0, r.jsx)(_.m, {
             id: "channels-".concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(s.H$4, {

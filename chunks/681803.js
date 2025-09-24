@@ -1,12 +1,13 @@
 n.d(t, {
-    M: () => _,
-    V: () => m,
+    M: () => p,
+    V: () => g,
 });
 var r = n(951288),
     i = n(647438),
     a = n(793030),
-    o = n(793903);
-function s(e, t, n) {
+    o = n(597442),
+    s = n(793903);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,22 +48,22 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function d(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +71,7 @@ function d(e, t) {
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,15 +80,15 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = i.createContext({ firstFocusableItemProps: void 0 });
-function p(e) {
+let p = i.createContext({ firstFocusableItemProps: void 0 });
+function h(e) {
     var { children: t, ref: n } = e,
-        i = d(e, ["children", "ref"]);
-    return (0, r.jsx)(_.Provider, {
+        i = f(e, ["children", "ref"]);
+    return (0, r.jsx)(p.Provider, {
         value: { firstFocusableItemProps: void 0 },
         children: (0, r.jsx)(
             "div",
-            u(l({}, i), {
+            d(c({}, i), {
                 ref: n,
                 "data-dialog": "modal",
                 role: "dialog",
@@ -103,16 +104,16 @@ function p(e) {
         ),
     });
 }
-function h(e) {
+function m(e) {
     var { children: t } = e,
-        n = d(e, ["children"]);
+        n = f(e, ["children"]);
     return (0, r.jsx)(a.Wdt, {
         children: (e) =>
-            (0, r.jsx)(_.Provider, {
+            (0, r.jsx)(p.Provider, {
                 value: { firstFocusableItemProps: e },
                 children: (0, r.jsx)(
                     "div",
-                    u(l({}, n), {
+                    d(c({}, n), {
                         "data-dialog": "non-modal",
                         role: "dialog",
                         children: t,
@@ -121,13 +122,13 @@ function h(e) {
             }),
     });
 }
-function m(e) {
+function g(e) {
     var t,
         n,
-        { ref: s, returnRef: c, modal: f = !0, setDialogRef: _, trackingProps: m } = e,
-        g = d(e, ["ref", "returnRef", "modal", "setDialogRef", "trackingProps"]);
+        { ref: a, returnRef: l, modal: u = !0, setDialogRef: _, trackingProps: p } = e,
+        g = f(e, ["ref", "returnRef", "modal", "setDialogRef", "trackingProps"]);
     let E = i.useRef(null);
-    i.useImperativeHandle(s, () => E.current),
+    i.useImperativeHandle(a, () => E.current),
         i.useEffect(
             () => (
                 null == _ || _(E.current),
@@ -137,18 +138,18 @@ function m(e) {
             ),
             [],
         ),
-        i.useContext(o.Z)(
+        i.useContext(s.Z)(
             {
-                type: null == m ? void 0 : m.impressionType,
-                name: null == m || null == (t = m.impression) ? void 0 : t.impressionName,
-                properties: null == m || null == (n = m.impression) ? void 0 : n.impressionProperties,
+                type: null == p ? void 0 : p.impressionType,
+                name: null == p || null == (t = p.impression) ? void 0 : t.impressionName,
+                properties: null == p || null == (n = p.impression) ? void 0 : n.impressionProperties,
             },
-            { disableTrack: null == m ? void 0 : m.disableTrack },
+            { disableTrack: null == p ? void 0 : p.disableTrack },
         ),
-        (0, a.Tbt)(E, {
-            returnRef: c,
-            disable: !f,
+        (0, o.T)(E, {
+            returnRef: l,
+            disable: !u,
         });
-    let b = f ? p : h;
-    return (0, r.jsx)(b, u(l({}, g), { ref: E }));
+    let b = u ? h : m;
+    return (0, r.jsx)(b, d(c({}, g), { ref: E }));
 }

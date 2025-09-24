@@ -11,16 +11,16 @@ var i = n(399606),
     d = n(51144),
     p = n(984370),
     f = n(388032),
-    h = n(161655);
+    h = n(97009);
 function g(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
         g = (0, i.e7)([u.default], () => u.default.getUser(t)),
         m = (0, i.e7)([s.Z], () => s.Z.getStatus(t)),
         b = (0, i.e7)([s.Z], () => s.Z.isMobileOnline(t)),
-        O = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
-        y = d.ZP.useUserTag(g),
-        _ = (0, o.j)({ displayNameStyles: null == g ? void 0 : g.displayNameStyles }),
+        _ = (0, i.e7)([c.Z], () => c.Z.getNickname(t)),
+        O = d.ZP.useUserTag(g),
+        y = (0, o.j)({ displayNameStyles: null == g ? void 0 : g.displayNameStyles }),
         v = (0, a.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -45,10 +45,10 @@ function g(e) {
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.DY3, {
-                            text: y,
+                            text: O,
                             position: "bottom",
-                            className: _,
-                            children: null != O ? O : d.ZP.getName(g),
+                            className: y,
+                            children: null != _ ? _ : d.ZP.getName(g),
                         }),
                         v &&
                             (0, r.jsx)(l.ua7, {

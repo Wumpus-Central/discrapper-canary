@@ -8,29 +8,29 @@ var l = t(951288),
     c = t(481060),
     d = t(607070),
     u = t(872269),
-    f = t(228168),
-    m = t(388032),
-    p = t(214906),
-    h = t(74866);
+    m = t(228168),
+    f = t(388032),
+    p = t(361623),
+    h = t(583140);
 let j = {
-        [f.qb.WIDGET_ADDED]: {
-            message: m.intl.string(m.t.fFP1U1),
+        [m.qb.WIDGET_ADDED]: {
+            message: f.intl.string(f.t.fFP1U1),
             icon: (0, l.jsx)(c.dz2, {
                 size: "sm",
                 color: c.TVs.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_added",
         },
-        [f.qb.WIDGET_REMOVED]: {
-            message: m.intl.string(m.t.zzsK7u),
+        [m.qb.WIDGET_REMOVED]: {
+            message: f.intl.string(f.t.zzsK7u),
             icon: (0, l.jsx)(c.dz2, {
                 size: "sm",
                 color: c.TVs.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_removed",
         },
-        [f.qb.WIDGET_SAVE_FAILURE]: {
-            message: m.intl.string(m.t["84MExs"]),
+        [m.qb.WIDGET_SAVE_FAILURE]: {
+            message: f.intl.string(f.t["84MExs"]),
             icon: (0, l.jsx)(c.Uz9, {
                 size: "sm",
                 color: c.TVs.colors.STATUS_DANGER.css,
@@ -60,17 +60,17 @@ let j = {
     v = (e) => {
         let { className: n, onAutoHide: t } = e,
             r = (0, u.be)(),
-            f = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            [m, h] = i.useState(!1),
+            m = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+            [f, h] = i.useState(!1),
             [v, g] = i.useState(null);
         i.useEffect(() => {
             null !== r ? (h(!0), g(j[r]), c.uvj.announce(j[r].message)) : h(!1);
         }, [r]);
         let b = (0, c.Yzy)(
-            m,
+            f,
             {
                 from: {
-                    transform: f ? "translateY(0)" : "translateY(-12px)",
+                    transform: m ? "translateY(0)" : "translateY(-12px)",
                     opacity: 0,
                 },
                 enter: {
@@ -78,7 +78,7 @@ let j = {
                     opacity: 1,
                 },
                 leave: {
-                    transform: f ? "translateY(0)" : "translateY(-12px)",
+                    transform: m ? "translateY(0)" : "translateY(-12px)",
                     opacity: 0,
                 },
                 config: {
@@ -92,13 +92,13 @@ let j = {
         );
         return (
             i.useEffect(() => {
-                if (m) {
+                if (f) {
                     let e = setTimeout(() => {
                         null == t || t();
                     }, 2000);
                     return () => clearTimeout(e);
                 }
-            }, [m, t]),
+            }, [f, t]),
             (0, l.jsx)(l.Fragment, {
                 children: b(
                     (e, t) =>

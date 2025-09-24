@@ -20,14 +20,14 @@ var r = n(951288),
     g = n(82295),
     m = n(111028),
     b = n(680089),
-    O = n(430824),
-    y = n(496675),
-    _ = n(9156),
+    _ = n(430824),
+    O = n(496675),
+    y = n(9156),
     v = n(203818),
     j = n(438144),
     x = n(981631),
     C = n(388032),
-    E = n(973780);
+    E = n(84688);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -53,7 +53,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
+function I(e) {
     e.stopPropagation();
 }
 let N = i.memo(function (e) {
@@ -86,17 +86,17 @@ let N = i.memo(function (e) {
                 hideIcon: w,
                 children: Z,
             } = e,
-            T = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            T = (0, s.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
             A = (0, s.e7)([b.Z], () => b.Z.isCollapsed(l.id)),
-            R = (0, s.e7)([y.Z], () => y.Z.can(x.Plq.MANAGE_CHANNELS, l));
+            R = (0, s.e7)([O.Z], () => O.Z.can(x.Plq.MANAGE_CHANNELS, l));
         t = null != N ? (j > N ? E.containerDragAfter : E.containerDragBefore) : E.containerDefault;
         let D = i.useCallback(() => {
                 A ? (0, p.mJ)(l.id) : (0, p.c4)(l.id);
             }, [l.id, A]),
-            L = i.useCallback(
+            M = i.useCallback(
                 (e) => {
                     if ("null" !== l.id) {
-                        let t = O.Z.getGuild(l.getGuildId());
+                        let t = _.Z.getGuild(l.getGuildId());
                         null != t &&
                             (0, f.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e("8965"), n.e("14280")]).then(
@@ -105,7 +105,7 @@ let N = i.memo(function (e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        I(S({}, n), {
+                                        P(S({}, n), {
                                             channel: l,
                                             guild: t,
                                         }),
@@ -115,16 +115,16 @@ let N = i.memo(function (e) {
                 },
                 [l],
             ),
-            M = i.useCallback(() => {
+            L = i.useCallback(() => {
                 let e = l.type === x.d4z.GUILD_CATEGORY ? null : l.type,
                     t = l.getGuildId();
                 null != t &&
                     (0, d.ZDy)(async () => {
-                        let { default: i } = await Promise.all([n.e("45094"), n.e("87586")]).then(n.bind(n, 218613));
+                        let { default: i } = await Promise.all([n.e("45094"), n.e("67133")]).then(n.bind(n, 218613));
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                I(S({}, n), {
+                                P(S({}, n), {
                                     channelType: e,
                                     guildId: t,
                                     categoryId: "null" !== l.id ? l.id : null,
@@ -175,11 +175,11 @@ let N = i.memo(function (e) {
                                 [E.muted]: T,
                                 [E.clickable]: !0,
                             }),
-                            onContextMenu: L,
+                            onContextMenu: M,
                             children: [
                                 (0, r.jsxs)(
                                     d.P3F,
-                                    I(
+                                    P(
                                         S(
                                             {
                                                 innerRef: F,
@@ -212,7 +212,7 @@ let N = i.memo(function (e) {
                                     ),
                                 ),
                                 (0, r.jsx)("div", {
-                                    onClick: P,
+                                    onClick: I,
                                     className: E.children,
                                     children:
                                         R && !v
@@ -225,7 +225,7 @@ let N = i.memo(function (e) {
                                                           look: u.zx.Looks.BLANK,
                                                           size: u.zx.Sizes.NONE,
                                                           className: o()(E.addButton, E.forceVisible),
-                                                          onClick: M,
+                                                          onClick: L,
                                                           onMouseEnter: t,
                                                           onMouseLeave: n,
                                                           tabIndex: G,

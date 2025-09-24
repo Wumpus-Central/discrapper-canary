@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(893776),
     h = n(99690),
     g = n(937154),
-    m = n(448986),
-    p = n(388905),
+    p = n(448986),
+    m = n(388905),
     f = n(198993),
     _ = n(710845),
     x = n(314897),
@@ -23,11 +23,11 @@ var r = n(951288),
     N = n(981631),
     O = n(231338),
     S = n(388032),
-    y = n(967557),
-    C = n(10198);
+    y = n(819286),
+    C = n(197571);
 let A = n(515695),
     T = new _.Z("LoginQRSocket");
-function P(e) {
+function Z(e) {
     let { text: t = "" } = e,
         [n, l] = i.useState(!1);
     return (
@@ -71,7 +71,7 @@ function P(e) {
         })
     );
 }
-let Z = (e) => {
+let P = (e) => {
     let { className: t, children: n } = e;
     return (0, r.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -87,14 +87,14 @@ function R(e) {
         case 1:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(P, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
-                    (0, r.jsx)(p.Dx, {
+                    (0, r.jsx)(Z, { text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : "" }),
+                    (0, r.jsx)(m.Dx, {
                         className: C.marginBottom8,
                         children: S.intl.string(S.t.UPiHaG),
                     }),
                     null != i
-                        ? (0, r.jsx)(Z, { children: i })
-                        : (0, r.jsx)(p.DK, { children: S.intl.format(S.t["Qq+A6u"], {}) }),
+                        ? (0, r.jsx)(P, { children: i })
+                        : (0, r.jsx)(m.DK, { children: S.intl.format(S.t["Qq+A6u"], {}) }),
                     (0, r.jsx)(c.zx, {
                         size: c.Ph.LARGE,
                         look: c.iL.LINK,
@@ -130,11 +130,11 @@ function R(e) {
                         isMobile: !0,
                         status: O.Sk.ONLINE,
                     }),
-                    (0, r.jsx)(p.Dx, {
+                    (0, r.jsx)(m.Dx, {
                         className: C.marginBottom8,
                         children: S.intl.string(S.t.apGCUV),
                     }),
-                    (0, r.jsx)(p.DK, {
+                    (0, r.jsx)(m.DK, {
                         children: S.intl.format(S.t.Cbl5JC, { username: "".concat(j.ZP.getUserTag(e)) }),
                     }),
                     (0, r.jsx)(c.zx, {
@@ -160,7 +160,7 @@ function L(e) {
             state: c,
             rsaKeyPair: d,
             cancel: h,
-            handleFailure: p,
+            handleFailure: m,
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, l] = i.useState(!1),
@@ -168,7 +168,7 @@ function L(e) {
                 [c, u] = i.useState(null),
                 d = (0, g.Z)(),
                 h = i.useMemo(() => new s.Z(1500, 30000), []),
-                p = (0, m.Z)(() => {
+                m = (0, p.Z)(() => {
                     a({ step: 0 }),
                         d
                             ? n((e) => e + 1)
@@ -180,8 +180,8 @@ function L(e) {
                 f = i.useCallback(() => {
                     T.error("Could not complete QR code login, trying to restart with a new QR code."),
                         a({ step: 0 }),
-                        h.pending || h.fail(p);
-                }, [p, h]);
+                        h.pending || h.fail(m);
+                }, [m, h]);
             return (
                 i.useEffect(() => {
                     d &&
@@ -204,7 +204,7 @@ function L(e) {
                         if (null != l) return l;
                         throw Error("No key pair set");
                     }
-                    let m = () => {
+                    let p = () => {
                         d
                             ? ((d = !1), r.send(JSON.stringify({ op: "heartbeat" })))
                             : (i("heartbeat timeout, reconnecting."), r.close(), f());
@@ -274,14 +274,14 @@ function L(e) {
                                     return;
                                 }
                                 case "cancel":
-                                    i("remote auth handshake cancelled."), p();
+                                    i("remote auth handshake cancelled."), m();
                                     return;
                                 case "hello": {
                                     i("got hello, auth timeout=".concat(l.timeout_ms, "ms"));
                                     let e = l.heartbeat_interval;
                                     c = setTimeout(
                                         () => {
-                                            (c = null), m(), (o = setInterval(m, e));
+                                            (c = null), p(), (o = setInterval(p, e));
                                         },
                                         Math.floor(e * Math.random()),
                                     );
@@ -321,11 +321,11 @@ function L(e) {
                                 null != o && clearInterval(o);
                         }
                     );
-                }, [p, e, t, h, f]),
+                }, [m, e, t, h, f]),
                 {
                     state: o,
                     rsaKeyPair: c,
-                    cancel: p,
+                    cancel: m,
                     handleFailure: f,
                 }
             );
@@ -360,14 +360,14 @@ function L(e) {
                                     r = await (0, b.Pk)(d);
                                 t(n, r);
                             } catch (e) {
-                                p();
+                                m();
                             }
-                        else p();
+                        else m();
                     })
                     .catch(() => {
-                        p();
+                        m();
                     });
-        }, [c, t, d, p]),
+        }, [c, t, d, m]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", { className: y.verticalSeparator }),

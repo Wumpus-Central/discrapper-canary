@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -10,8 +10,8 @@ var r = n(951288),
     d = n(984370),
     p = n(981631),
     f = n(388032),
-    h = n(323129),
-    g = n(602009);
+    h = n(413140),
+    g = n(430864);
 function m(e, t, n) {
     return (
         t in e
@@ -41,10 +41,10 @@ function b(e) {
     }
     return e;
 }
-function O(e) {
+function _(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class y extends i.Component {
+class O extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -82,9 +82,9 @@ class y extends i.Component {
             m(this, "handleOpenTopic", (e) => {
                 let t = e.target;
                 if ((0, a.kK)(t)) {
-                    if (O(t)) return;
+                    if (_(t)) return;
                     let e = t.parentNode;
-                    if ((0, a.kK)(e) && O(e)) return;
+                    if ((0, a.kK)(e) && _(e)) return;
                 }
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("65631").then(n.bind(n, 10722));
@@ -113,9 +113,9 @@ class y extends i.Component {
                         n.e("66201"),
                         n.e("91315"),
                         n.e("30474"),
-                        n.e("63962"),
+                        n.e("91053"),
                         n.e("24783"),
-                        n.e("23049"),
+                        n.e("2498"),
                     ]).then(n.bind(n, 439635));
                     return (n) =>
                         (0, r.jsx)(
@@ -154,4 +154,4 @@ class y extends i.Component {
             });
     }
 }
-let _ = y;
+let y = O;

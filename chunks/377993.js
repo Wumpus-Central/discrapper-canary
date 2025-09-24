@@ -25,8 +25,8 @@ var r = n(951288),
     E = n(276264),
     S = n(981631),
     Z = n(388032),
-    P = n(854641);
-function T(e) {
+    T = n(32482);
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,17 +60,17 @@ function w(e) {
         j = (0, a.e7)([b.Z], () => b.Z.isMobileOnline(t.id)),
         v = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
-        P = i.useRef(null),
+        T = i.useRef(null),
         N = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("92775")]).then(
+                let { default: e } = await Promise.all([n.e("79695"), n.e("98783"), n.e("49062")]).then(
                     n.bind(n, 354589),
                 );
                 return (n) => {
                     var i, l;
                     return (0, r.jsx)(
                         e,
-                        ((i = T({}, n)),
+                        ((i = P({}, n)),
                         (l = l =
                             {
                                 user: t,
@@ -106,7 +106,7 @@ function w(e) {
         A = (0, g.K)({ user: t }),
         [D, L] = i.useState(!1);
     return (0, r.jsx)(m.Z, {
-        targetElementRef: P,
+        targetElementRef: T,
         user: t,
         channelId: s.id,
         position: l.tq ? "window_center" : "left",
@@ -141,9 +141,9 @@ function w(e) {
                 })(e, ["onClick", "onMouseDown"]);
             return (0, r.jsx)(
                 E.Z,
-                T(
+                P(
                     {
-                        ref: P,
+                        ref: T,
                         user: t,
                         currentUser: f,
                         isOwner: t.id === s.ownerId,
@@ -229,15 +229,15 @@ function D(e) {
     return (0, r.jsx)(u.Gt, {
         value: o,
         children: (0, r.jsx)("div", {
-            className: P.container,
+            className: T.container,
             children: (0, r.jsx)("aside", {
-                className: P.membersWrap,
+                className: T.membersWrap,
                 children: (0, r.jsxs)(s.Ttm, {
-                    className: P.members,
+                    className: T.members,
                     fade: !0,
                     children: [
                         (0, r.jsxs)(f.Z, {
-                            className: P.membersGroup,
+                            className: T.membersGroup,
                             children: [
                                 "".concat(Z.intl.string(Z.t["9Oq93t"]), "\u2014").concat(c.length, " "),
                                 h && (0, r.jsx)(p.Z, { type: p.Z.Types.STAFF_ONLY_DM }),

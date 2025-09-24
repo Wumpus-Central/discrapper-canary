@@ -14,17 +14,17 @@ var r = n(951288),
     g = n(592125),
     m = n(699516),
     b = n(709054),
-    O = n(594173),
-    y = n(786761),
-    _ = n(493892),
+    _ = n(594173),
+    O = n(786761),
+    y = n(493892),
     v = n(901461),
     j = n(739566),
     x = n(443877),
     C = n(492593),
     E = n(453687),
     S = n(938353),
-    I = n(25015),
-    P = n(689674),
+    P = n(25015),
+    I = n(689674),
     N = n(963550),
     w = n(845080),
     Z = n(295790),
@@ -32,9 +32,9 @@ var r = n(951288),
     A = n(56744),
     R = n(834129),
     D = n(981631),
-    L = n(388032),
-    M = n(77162),
-    k = n(5898);
+    M = n(388032),
+    L = n(378661),
+    k = n(360514);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,7 +85,7 @@ let B = i.memo(function e(t) {
             channel: l,
             message: s,
             compact: R = !1,
-            className: M,
+            className: L,
             onContextMenu: B,
             onClick: V,
             disableInteraction: H = !1,
@@ -106,7 +106,7 @@ let B = i.memo(function e(t) {
         ee = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         et = (0, d.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: en } = (0, x.Z)(l),
-        { content: er, hasSpoilerEmbeds: ei } = (0, I.Z)(s, {
+        { content: er, hasSpoilerEmbeds: ei } = (0, P.Z)(s, {
             hideSimpleEmbedContent: Q && J,
             allowList: ee,
             allowHeading: ee,
@@ -120,13 +120,13 @@ let B = i.memo(function e(t) {
         ),
         ea = s.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === f.Y.LOADED && null != q,
         es = !ea && void 0 === i,
-        ec = (0, P.Z)({
+        ec = (0, I.Z)({
             message: s,
             channel: l,
             enabled: es,
         }),
         eu = (0, c.v)(s),
-        ed = (0, O.ro)(s.id, s.channel_id),
+        ed = (0, _.ro)(s.id, s.channel_id),
         ep = (0, p.Z)(s),
         ef = (0, E.iG)(s);
     return ea
@@ -139,21 +139,21 @@ let B = i.memo(function e(t) {
               }),
           )
         : (m.Z.isBlockedForMessage(s)
-                ? (i = L.t["+FcYMz"])
+                ? (i = M.t["+FcYMz"])
                 : m.Z.isIgnoredForMessage(s)
-                  ? (i = L.t.VFWjc3)
-                  : (0, _.DQ)(s) && W && (i = L.t.xfkfTE),
+                  ? (i = M.t.VFWjc3)
+                  : (0, y.DQ)(s) && W && (i = M.t.xfkfTE),
             void 0 !== i)
           ? (0, r.jsx)(F, {
-                className: M,
+                className: L,
                 compact: R,
                 count: 1,
                 collapsedReason: i,
             })
           : (0, r.jsx)(C.Z, {
                 compact: R,
-                className: o()(M, {
-                    [k.ephemeral]: (0, y.Pv)(s),
+                className: o()(L, {
+                    [k.ephemeral]: (0, O.Pv)(s),
                     [k.disableInteraction]: H,
                     [k.groupStart]: t.isGroupStart,
                 }),
@@ -198,7 +198,7 @@ let B = i.memo(function e(t) {
                 messageRef: ec,
                 author: el,
                 "aria-labelledby": ef,
-                "aria-roledescription": L.intl.string(L.t.BAB0yM),
+                "aria-roledescription": M.intl.string(M.t.BAB0yM),
             });
 });
 function F(e) {
@@ -209,15 +209,15 @@ function F(e) {
         role: "group",
         childrenMessageContent: (0, r.jsx)(R.Z, {
             compact: i,
-            className: M.blockedSystemMessage,
+            className: L.blockedSystemMessage,
             iconNode: (0, r.jsx)(s.Dio, {
                 size: "md",
                 color: "currentColor",
-                className: M.blockedIcon,
+                className: L.blockedIcon,
             }),
             children: (0, r.jsx)("div", {
-                className: M.blockedMessageText,
-                children: L.intl.format(l, { count: n }),
+                className: L.blockedMessageText,
+                children: M.intl.format(l, { count: n }),
             }),
         }),
     });
