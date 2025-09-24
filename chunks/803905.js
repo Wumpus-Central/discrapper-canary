@@ -1,31 +1,31 @@
 n.d(t, {
-    $0: () => R,
-    AN: () => k,
-    Ct: () => A,
-    EQ: () => B,
-    Ej: () => T,
-    ME: () => m,
-    O1: () => v,
-    O8: () => w,
-    Pl: () => I,
-    Uw: () => x,
-    ZE: () => j,
-    _G: () => O,
-    _O: () => S,
-    _y: () => g,
+    $0: () => N,
+    AN: () => j,
+    Ct: () => S,
+    EQ: () => G,
+    Ej: () => I,
+    ME: () => h,
+    O1: () => O,
+    O8: () => P,
+    Pl: () => v,
+    Uw: () => D,
+    ZE: () => L,
+    _G: () => y,
+    _O: () => T,
+    _y: () => m,
     do: () => M,
-    g7: () => P,
-    g_: () => p,
-    hs: () => b,
-    j4: () => N,
-    ks: () => V,
-    lX: () => y,
-    m_: () => h,
-    tj: () => E,
-    uw: () => C,
-    wN: () => G,
-    zZ: () => U,
-    zm: () => L,
+    g7: () => R,
+    g_: () => _,
+    hs: () => E,
+    j4: () => C,
+    ks: () => F,
+    lX: () => b,
+    m_: () => p,
+    tj: () => g,
+    uw: () => A,
+    wN: () => U,
+    zZ: () => k,
+    zm: () => x,
 }),
     n(49124);
 var r = n(848246),
@@ -35,19 +35,14 @@ var r = n(848246),
     s = n(526998),
     l = n(575691),
     c = n(474936);
-let u = new i.Z("ProductCatalog.tsx"),
-    d = Object.freeze({
-        [c.p9.TIER_0]: c.Si.TIER_0,
-        [c.p9.TIER_1]: c.Si.TIER_1,
-        [c.p9.TIER_2]: c.Si.TIER_2,
-    });
-function f(e, t) {
+let u = new i.Z("ProductCatalog.tsx");
+function d(e, t) {
     if (null == t || null == t.premiumType) return !1;
     try {
-        let n = d[t.premiumType];
+        let n = c.uM[t.premiumType];
         if (null == n)
             return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = Z[n];
+        let r = B[n];
         if (null == r)
             return (
                 u.warn(
@@ -66,73 +61,73 @@ function f(e, t) {
     }
     return !1;
 }
-class _ extends o.Z {
+class f extends o.Z {
     constructor(e, t) {
-        super(e, (e) => f(this, e), t);
+        super(e, (e) => d(this, e), t);
     }
 }
-let p = new _(r.q.ANIMATED_EMOJIS),
-    h = new _(r.q.EMOJIS_EVERYWHERE),
-    m = new _(r.q.STICKERS_EVERYWHERE),
-    g = new _(r.q.SOUNDBOARD_EVERYWHERE),
-    E = new _(r.q.CUSTOM_CALL_SOUNDS),
-    b = new _(r.q.PREMIUM_VOICE_FILTERS),
-    y = new _(r.q.ANIMATED_AVATAR),
-    O = new _(r.q.CUSTOM_DISCRIMINATOR),
-    v = new _(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    I = new _("profileBadges"),
-    T = new _(r.q.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
-    S = new _("collectibles"),
-    A = new _("appIcons"),
-    C = new _(r.q.CLIENT_THEMES),
-    N = new _("boostDiscount"),
-    R = new _("freeBoosts"),
-    P = new _(r.q.STREAM_MID_QUALITY),
-    w = new _(r.q.STREAM_HIGH_QUALITY),
-    D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
-    x = new _("fancyVoiceChannelReactions"),
-    L = new _("installPremiumApplications"),
-    j = new _("redeemPremiumPerks"),
-    k = new _(r.q.VIDEO_FILTER_ASSETS);
+let _ = new f(r.q.ANIMATED_EMOJIS),
+    p = new f(r.q.EMOJIS_EVERYWHERE),
+    h = new f(r.q.STICKERS_EVERYWHERE),
+    m = new f(r.q.SOUNDBOARD_EVERYWHERE),
+    g = new f(r.q.CUSTOM_CALL_SOUNDS),
+    E = new f(r.q.PREMIUM_VOICE_FILTERS),
+    b = new f(r.q.ANIMATED_AVATAR),
+    y = new f(r.q.CUSTOM_DISCRIMINATOR),
+    O = new f(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
+    v = new f("profileBadges"),
+    I = new f(r.q.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
+    T = new f("collectibles"),
+    S = new f("appIcons"),
+    A = new f(r.q.CLIENT_THEMES),
+    C = new f("boostDiscount"),
+    N = new f("freeBoosts"),
+    R = new f(r.q.STREAM_MID_QUALITY),
+    P = new f(r.q.STREAM_HIGH_QUALITY),
+    w = new f(r.q.CUSTOM_NOTIFICATION_SOUNDS),
+    D = new f("fancyVoiceChannelReactions"),
+    x = new f("installPremiumApplications"),
+    L = new f("redeemPremiumPerks"),
+    j = new f(r.q.VIDEO_FILTER_ASSETS);
 new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
-let M = new _(r.q.INCREASED_GUILD_LIMIT),
-    U = new _(r.q.INCREASED_MESSAGE_LENGTH),
-    G = new _("increasedVideoUploadQuality"),
-    B = new _("uploadLargeFiles"),
-    Z = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, N, P, x, G, B, A]),
+let M = new f(r.q.INCREASED_GUILD_LIMIT),
+    k = new f(r.q.INCREASED_MESSAGE_LENGTH),
+    U = new f("increasedVideoUploadQuality"),
+    G = new f("uploadLargeFiles"),
+    B = Object.freeze({
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [_, p, h, v, j, U, G, S]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [_, p, b, y, v, C, R, D, U, G, S]),
         [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [
+            _,
             p,
             h,
             m,
             g,
-            E,
+            b,
             y,
             O,
             v,
             I,
-            T,
+            A,
             C,
             N,
             R,
             P,
-            w,
+            D,
             x,
             L,
             j,
-            k,
             M,
+            k,
             U,
             G,
-            B,
-            A,
             S,
-            D,
-            b,
+            T,
+            w,
+            E,
         ]),
     }),
-    F = [N, R];
-function V(e, t, n) {
-    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && F.includes(e))) && e.getFeatureValue(t);
+    Z = [C, N];
+function F(e, t, n) {
+    return !((0, s.U)("canUserUse", t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
 }
