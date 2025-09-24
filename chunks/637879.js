@@ -33,7 +33,7 @@ var i = n(120356),
     b = n(981631),
     y = n(268685),
     O = n(388032),
-    v = n(465262);
+    v = n(493090);
 function I(e, t, n) {
     return (
         t in e
@@ -199,7 +199,7 @@ function D(e) {
     let { title: t, showDivider: n, children: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            "top" === n && (0, r.jsx)("div", { className: v.divider }),
+            n && (0, r.jsx)("div", { className: v.divider }),
             (0, r.jsx)(
                 "ul",
                 {
@@ -209,7 +209,6 @@ function D(e) {
                 },
                 t,
             ),
-            "bottom" === n && (0, r.jsx)("div", { className: v.divider }),
         ],
     });
 }
@@ -231,13 +230,10 @@ function x(e) {
 function L(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         o = i,
-        { rows: s, title: l, trailingIcon: c } = n.data,
-        u = i > 0,
-        d = 0 === i,
-        f = u ? "top" : d ? "bottom" : null;
+        { rows: s, title: l, trailingIcon: c } = n.data;
     return (0, r.jsxs)(D, {
         title: l,
-        showDivider: f,
+        showDivider: i > 0,
         children: [
             (0, r.jsx)(x, {
                 headerId: l,

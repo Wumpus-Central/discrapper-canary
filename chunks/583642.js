@@ -116,7 +116,7 @@ let C = i.forwardRef(function (e, t) {
             };
         return (
             i.useEffect(() => {
-                u(-1);
+                o.mode.type === I.Sap.FILTER ? u(0) : u(-1);
             }, [o.mode.type]),
             i.useImperativeHandle(t, () => ({
                 selectedIndex: c,

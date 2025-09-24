@@ -54034,9 +54034,9 @@ h3.improved__1689b:after {
 
 .message_fcf29c {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -70202,8 +70202,7 @@ html .progress__61462 {
 .itemContainer__1bb32 {
     border-radius: var(--radius-sm);
     cursor: pointer;
-    overflow: hidden;
-    transition: background-color .2s ease-in-out
+    overflow: hidden
 }
 
 .itemContainer__1bb32:active,
@@ -70536,16 +70535,6 @@ html .progress__61462 {
 
 .full-motion .searchBar__97492 {
     transition: width .25s ease
-}
-
-.keybind__97492 {
-    display: inline-block;
-    margin-left: 4px
-}
-
-.shortcut__97492 {
-    font-size: 12px;
-    line-height: 16px
 }
 
 .enable-forced-colors .focused__97492,

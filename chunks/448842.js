@@ -168,7 +168,7 @@ function C(e) {
                                 query: ""
                                     .concat(null != (t = null == a ? void 0 : a.key) ? t : i.toString(), " ")
                                     .concat(o),
-                                performSearch: !1,
+                                performSearch: !0,
                                 replace: !1,
                             });
                         },
@@ -371,7 +371,7 @@ function C(e) {
                                 }),
                                     C({
                                         query: a,
-                                        performSearch: !1,
+                                        performSearch: !0,
                                         replace: !1,
                                     });
                             };
@@ -392,9 +392,7 @@ function C(e) {
                         });
                     },
                 });
-                return {
-                    items: [...t, M],
-                };
+                return { items: [...t] };
             },
         }[P.type])(),
         U = i.useMemo(() => {
