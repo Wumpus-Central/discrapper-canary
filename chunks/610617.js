@@ -1,110 +1,69 @@
-t.d(n, { default: () => j }), t(388685);
-var l = t(951288),
-    a = t(647438),
-    i = t(106351),
-    d = t(442837),
-    r = t(755721),
-    o = t(481060),
-    c = t(471445),
+t.d(n, { default: () => p }), t(388685);
+var a = t(951288),
+    i = t(647438),
+    l = t(106351),
+    r = t(442837),
+    d = t(82659),
+    c = t(481060),
+    o = t(471445),
     s = t(856768),
     u = t(324067),
     h = t(771845),
-    m = t(9156),
-    x = t(117984),
-    f = t(593214),
-    v = t(378337),
+    f = t(9156),
+    v = t(117984),
+    x = t(593214),
+    m = t(378337),
     g = t(388032),
     C = t(345986);
-function j(e) {
-    let { transitionState: n, onClose: t, parentId: i } = e,
-        c = (0, d.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()[0]),
-        [u, m] = a.useState(c),
-        [x, f] = a.useState(!1);
-    return (0, l.jsxs)(o.Y0X, {
+function p(e) {
+    let { transitionState: n, onClose: t, parentId: l } = e,
+        o = (0, r.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()[0]),
+        [u, f] = i.useState(o),
+        [v, x] = i.useState(!1);
+    return (0, a.jsx)(d.Modal, {
+        title: g.intl.string(g.t["4wcdEx"]),
+        actions: [],
         transitionState: n,
-        parentComponent: "AddFavoriteChannelModal",
-        children: [
-            (0, l.jsxs)(o.xBx, {
-                className: C.modalHeader,
-                children: [
-                    (0, l.jsxs)("div", {
-                        className: C.modalHeaderTitle,
-                        children: [
-                            (0, l.jsx)(o.X6q, {
-                                variant: "text-lg/semibold",
-                                children: g.intl.string(g.t["4wcdEx"]),
-                            }),
-                            (0, l.jsx)(o.olH, { onClick: t }),
-                        ],
-                    }),
-                    (0, l.jsx)("div", {
-                        className: C.guildSelector,
-                        children: (0, l.jsx)(s.q, {
-                            guildId: u,
-                            onChange: function (e) {
-                                null != e && m(e.id);
-                            },
-                        }),
-                    }),
-                ],
-            }),
-            (0, l.jsx)(o.hzk, {
-                className: C.modalContent,
-                children: (0, l.jsx)(_, {
-                    guildId: u,
-                    hideMutedChannels: x,
-                    parentId: i,
-                }),
-            }),
-            (0, l.jsxs)(o.mzw, {
-                className: C.modalFooter,
-                children: [
-                    (0, l.jsx)(r.zx, {
-                        className: C.goBackButton,
-                        look: r.iL.BLANK,
-                        color: r.Tt.PRIMARY,
-                        size: r.Ph.SMALL,
-                        onClick: t,
-                        children: g.intl.string(g.t["/g10LC"]),
-                    }),
-                    (0, l.jsx)("div", {
-                        children: (0, l.jsx)(r.$q, {
-                            type: r.M0.INVERTED,
-                            value: x,
-                            onChange: (e, n) => f(n),
-                            children: (0, l.jsx)(o.Text, {
-                                variant: "text-sm/medium",
-                                color: "interactive-normal",
-                                children: g.intl.string(g.t.UwOLJC),
-                            }),
-                        }),
-                    }),
-                ],
-            }),
-        ],
+        onClose: t,
+        input: (0, a.jsx)(s.q, {
+            guildId: u,
+            onChange: function (e) {
+                null != e && f(e.id);
+            },
+        }),
+        actionBarInput: (0, a.jsx)(c.XZJ, {
+            checked: v,
+            onChange: (e) => x(e),
+            label: g.intl.string(g.t.UwOLJC),
+        }),
+        children: (0, a.jsx)(j, {
+            guildId: u,
+            hideMutedChannels: v,
+            parentId: l,
+        }),
     });
 }
-function _(e) {
-    let { guildId: n, hideMutedChannels: t, parentId: r } = e,
-        o = (0, d.e7)([u.Z], () => u.Z.getCategories(n)),
-        c = (0, v.Z)(o),
-        s = a.useRef(null);
+function j(e) {
+    let { guildId: n, hideMutedChannels: t, parentId: d } = e,
+        c = (0, r.e7)([u.Z], () => u.Z.getCategories(n)),
+        o = (0, m.Z)(c),
+        s = i.useRef(null);
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             var e;
             null == s || null == (e = s.current) || e.scroll({ top: 0 });
         }, [n]),
-        (0, l.jsx)("div", {
+        (0, a.jsx)("div", {
             ref: s,
-            children: c.map((e) =>
-                e.type === i.d.GUILD_CATEGORY
-                    ? (0, l.jsx)(p, { name: e.name }, e.id)
-                    : (0, l.jsx)(
-                          I,
+            children: o.map((e) =>
+                e.type === l.d.GUILD_CATEGORY
+                    ? (0, a.jsx)(I, { name: e.name }, e.id)
+                    : (0, a.jsx)(
+                          _,
                           {
                               channel: e,
                               hideMutedChannels: t,
-                              parentId: r,
+                              parentId: d,
                           },
                           e.id,
                       ),
@@ -112,32 +71,32 @@ function _(e) {
         })
     );
 }
-function p(e) {
+function I(e) {
     let { name: n } = e;
-    return (0, l.jsx)(o.Text, {
+    return (0, a.jsx)(c.Text, {
         className: C.categoryRow,
         variant: "eyebrow",
         color: "interactive-normal",
         children: n,
     });
 }
-function I(e) {
-    let { channel: n, hideMutedChannels: t, parentId: a } = e,
-        i = (0, f.s4)(n.id);
-    if ((0, d.e7)([m.ZP], () => m.ZP.isChannelMuted(n.guild_id, n.id)) && t) return null;
-    let r = (0, c.KS)(n);
-    return (0, l.jsxs)(
+function _(e) {
+    let { channel: n, hideMutedChannels: t, parentId: i } = e,
+        l = (0, x.s4)(n.id);
+    if ((0, r.e7)([f.ZP], () => f.ZP.isChannelMuted(n.guild_id, n.id)) && t) return null;
+    let d = (0, o.KS)(n);
+    return (0, a.jsxs)(
         "div",
         {
             className: C.channelRow,
             children: [
-                (0, l.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: C.channelName,
                     children: [
-                        null != r &&
-                            (0, l.jsx)("div", {
+                        null != d &&
+                            (0, a.jsx)("div", {
                                 className: C.channelIconContainer,
-                                children: (0, l.jsx)(r, {
+                                children: (0, a.jsx)(d, {
                                     className: C.channelIcon,
                                     size: "custom",
                                     color: "currentColor",
@@ -145,44 +104,43 @@ function I(e) {
                                     width: 20,
                                 }),
                             }),
-                        (0, l.jsx)(o.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: "text-md/medium",
                             color: "interactive-normal",
                             children: n.name,
                         }),
                     ],
                 }),
-                null != i
-                    ? (0, l.jsx)(A, { channelId: n.id })
-                    : (0, l.jsx)(k, {
+                null != l
+                    ? (0, a.jsx)(k, { channelId: n.id })
+                    : (0, a.jsx)(Z, {
                           channelId: n.id,
-                          parentId: a,
+                          parentId: i,
                       }),
             ],
         },
         n.id,
     );
 }
-function k(e) {
+function Z(e) {
     let { channelId: n, parentId: t } = e;
-    return (0, l.jsx)(r.zx, {
-        look: r.iL.OUTLINED,
-        size: r.Ph.SMALL,
-        color: r.Tt.BRAND,
+    return (0, a.jsx)(c.zxk, {
+        variant: "primary",
+        size: "sm",
+        text: g.intl.string(g.t.OYkgVl),
         onClick: function () {
-            (0, x.kj)(n, t);
+            (0, v.kj)(n, t);
         },
-        children: g.intl.string(g.t.OYkgVl),
     });
 }
-function A(e) {
+function k(e) {
     let { channelId: n } = e;
-    return (0, l.jsx)(o.zxk, {
+    return (0, a.jsx)(c.zxk, {
         variant: "secondary",
         size: "sm",
         text: g.intl.string(g.t.N86XcH),
         onClick: function () {
-            (0, x.oC)(n);
+            (0, v.oC)(n);
         },
     });
 }
