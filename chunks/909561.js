@@ -1,18 +1,1 @@
-n.d(t, { q: () => u });
-var r = n(578206),
-    i = n(771109),
-    a = n(204574),
-    o = n(647438);
-let s = new WeakMap();
-function l(e) {
-    let t = s.get(e);
-    return t || ((t = new (0, i.J)(e)), s.set(e, t)), t;
-}
-function c(e, t) {
-    return (t && i.J.getGlobalDictionaryForPackage(t)) || l(e);
-}
-function u(e, t) {
-    let { locale: n } = (0, r.j)(),
-        i = c(e, t);
-    return (0, o.useMemo)(() => new (0, a.E)(n, i), [n, i]);
-}
+e.exports = "/assets/3d432f6e3d574cee.svg";
