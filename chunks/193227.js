@@ -1,58 +1,70 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(951288),
     l = n(647438),
     a = n(120356),
-    s = n.n(a),
-    i = n(399606),
+    i = n.n(a),
+    s = n(399606),
     o = n(481060),
     c = n(434650),
     u = n(594174),
     d = n(381585),
-    g = n(870289),
-    p = n(370039),
-    f = n(937510),
-    _ = n(303952),
-    h = n(253355),
-    C = n(38900),
-    m = n(709999),
-    b = n(258939),
-    E = n(81136),
-    S = n(619899),
+    g = n(128922),
+    p = n(870289),
+    f = n(370039),
+    h = n(937510),
+    C = n(303952),
+    _ = n(253355),
+    m = n(38900),
+    b = n(709999),
+    E = n(653126),
+    S = n(258939),
+    x = n(81136),
+    v = n(619899),
     O = n(215023),
-    v = n(887353);
-function x(e) {
+    T = n(887353);
+function y(e) {
     let { products: t, header: n, category: l } = e,
-        a = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        s = (0, S.St)(t);
+        a = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        i = (0, v.St)(t),
+        c = g.Z.useConfig({ location: "Products" }).showCardsV2;
     return null == a || 0 === t.length
         ? null
         : (0, r.jsxs)("div", {
               children: [
                   null != n
                       ? (0, r.jsx)(o.Text, {
-                            className: v.itemTypeTitle,
+                            className: T.itemTypeTitle,
                             color: "header-secondary",
                             variant: "text-sm/bold",
                             children: n,
                         })
                       : (0, r.jsx)(o.LZC, { size: 24 }),
                   (0, r.jsx)("div", {
-                      className: v.cardsContainer,
-                      children: s.map((e, t) =>
+                      className: T.cardsContainer,
+                      children: i.map((e, t) =>
                           (0, r.jsx)(
                               d.k0,
                               {
                                   newValue: { tilePosition: t },
-                                  children: (0, r.jsx)(
-                                      m.Z,
-                                      {
-                                          category: l,
-                                          product: e,
-                                          user: a,
-                                          tab: O.AW.CATALOG,
-                                      },
-                                      e.skuId,
-                                  ),
+                                  children: c
+                                      ? (0, r.jsx)(
+                                            E.Z,
+                                            {
+                                                skuId: e.skuId,
+                                                config: { tab: O.AW.CATALOG },
+                                            },
+                                            e.skuId,
+                                        )
+                                      : (0, r.jsx)(
+                                            b.Z,
+                                            {
+                                                category: l,
+                                                product: e,
+                                                user: a,
+                                                tab: O.AW.CATALOG,
+                                            },
+                                            e.skuId,
+                                        ),
                               },
                               e.skuId,
                           ),
@@ -61,38 +73,38 @@ function x(e) {
               ],
           });
 }
-function T(e) {
+function L(e) {
     let { category: t } = e,
-        n = (0, f.l)(t.products),
-        l = (0, p.a)()(n);
-    return (0, r.jsx)(x, {
+        n = (0, h.l)(t.products),
+        l = (0, f.a)()(n);
+    return (0, r.jsx)(y, {
         products: l,
         category: t,
     });
 }
-function y(e) {
+function j(e) {
     let { category: t, isFullScreen: n } = e,
-        [a, s] = l.useState(!1),
-        i = (0, c.O)(
+        [a, i] = l.useState(!1),
+        s = (0, c.O)(
             (e) => {
-                s(e);
+                i(e);
             },
             n ? 0.13 : 0.15,
         );
     return (0, r.jsxs)("div", {
-        className: v.categoryWrapper,
-        ref: i,
-        children: [(0, r.jsx)(h.Z, { category: t }), (0, r.jsx)(T, { category: t })],
+        className: T.categoryWrapper,
+        ref: s,
+        children: [(0, r.jsx)(_.Z, { category: t }), (0, r.jsx)(L, { category: t })],
     });
 }
-function L(e) {
+function k(e) {
     var t;
-    let { sortedCategories: n, setCategoryRef: a, isFullScreen: i, currentPage: c, handlePageChange: u } = e,
-        p = (0, d.sp)(),
-        f = (0, b.R)(),
-        h = null != (t = null == p ? void 0 : p.sessionId) ? t : "",
-        { noCache: m, includeUnpublished: S } = (0, E.Z)(),
-        x = l.useMemo(
+    let { sortedCategories: n, setCategoryRef: a, isFullScreen: s, currentPage: c, handlePageChange: u } = e,
+        g = (0, d.sp)(),
+        f = (0, S.R)(),
+        h = null != (t = null == g ? void 0 : g.sessionId) ? t : "",
+        { noCache: _, includeUnpublished: b } = (0, x.Z)(),
+        E = l.useMemo(
             () =>
                 n
                     .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
@@ -102,48 +114,48 @@ function L(e) {
                     }),
             [n],
         ),
-        T = l.useMemo(() => {
+        v = l.useMemo(() => {
             let e = (c - 1) * O.kN;
-            return x.slice(e, e + O.kN);
-        }, [x, c]);
+            return E.slice(e, e + O.kN);
+        }, [E, c]);
     l.useEffect(() => {
-        (0, _.n)({
+        (0, C.n)({
             sessionId: h,
-            checkpoint: _.a.SHOP_MOUNTED,
+            checkpoint: C.a.SHOP_MOUNTED,
             tab: O.AW.CATALOG,
-            isFullScreen: i,
-            unpublishedCategoriesShown: S,
-            cacheDisabled: m,
+            isFullScreen: s,
+            unpublishedCategoriesShown: b,
+            cacheDisabled: _,
         });
     }, []),
         l.useEffect(() => {
             f ||
-                0 === T.length ||
-                (0, _.n)({
+                0 === v.length ||
+                (0, C.n)({
                     sessionId: h,
-                    checkpoint: _.a.SHOP_RENDERED,
+                    checkpoint: C.a.SHOP_RENDERED,
                     tab: O.AW.CATALOG,
-                    isFullScreen: i,
-                    unpublishedCategoriesShown: S,
-                    cacheDisabled: m,
+                    isFullScreen: s,
+                    unpublishedCategoriesShown: b,
+                    cacheDisabled: _,
                 });
-        }, [h, i, S, m, f, T.length]);
-    let L = (0, g.FF)("CollectiblesBrowse");
+        }, [h, s, b, _, f, v.length]);
+    let y = (0, p.FF)("CollectiblesBrowse");
     return f
-        ? (0, r.jsx)(C.Z, {})
+        ? (0, r.jsx)(m.Z, {})
         : (0, r.jsxs)("div", {
-              className: s()(v.categories, { [v.categoriesNoFilter]: !L }),
+              className: i()(T.categories, { [T.categoriesNoFilter]: !y }),
               children: [
-                  T.map((e, t) =>
+                  v.map((e, t) =>
                       (0, r.jsx)(
                           "div",
                           {
                               ref: (t) => a(e.skuId, t),
                               children: (0, r.jsx)(d.k0, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, r.jsx)(y, {
+                                  children: (0, r.jsx)(j, {
                                       category: e,
-                                      isFullScreen: i,
+                                      isFullScreen: s,
                                   }),
                               }),
                           },
@@ -151,10 +163,10 @@ function L(e) {
                       ),
                   ),
                   (0, r.jsx)("div", {
-                      className: v.paginationContainer,
+                      className: T.paginationContainer,
                       children: (0, r.jsx)(o.DsT, {
                           currentPage: c,
-                          totalCount: x.length,
+                          totalCount: E.length,
                           pageSize: O.kN,
                           onPageChange: u,
                           disablePaginationGap: !0,
