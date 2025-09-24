@@ -1,162 +1,136 @@
 n.d(t, {
-    Fe: () => g,
-    O8: () => T,
-    V: () => v,
-    tV: () => I,
+    Fe: () => h,
+    O8: () => O,
+    V: () => b,
+    tV: () => y,
 }),
     n(35282);
 var r = n(970683),
-    i = n(481060),
-    a = n(505905),
-    o = n(981631),
-    s = n(388032),
-    l = n(324349),
-    c = n(829290),
-    u = n(136779),
-    d = n(33346),
-    f = n(857042),
-    _ = n(558532),
-    p = n(346554),
-    h = n(444305);
-let m = [null, null];
-function g(e) {
-    return null == e ? m : e.split(":");
+    i = n(505905),
+    a = n(981631),
+    o = n(388032),
+    s = n(829290),
+    l = n(136779),
+    c = n(33346),
+    u = n(857042),
+    d = n(558532),
+    f = n(346554),
+    _ = n(444305);
+let p = [null, null];
+function h(e) {
+    return null == e ? p : e.split(":");
 }
-let E = () => ({
-        [a.tN.CHILLING]: {
-            title: s.intl.string(s.t["vkpn7+"]),
-            icon: f,
-        },
-        [a.tN.GAMING]: {
-            title: s.intl.string(s.t.lZslwM),
-            icon: _,
-        },
-        [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.b6AscH),
-            icon: p,
-        },
-        [a.tN.BRB]: {
-            title: s.intl.string(s.t["30yqZW"]),
-            icon: d,
-        },
-        [a.tN.WATCHING]: {
-            title: s.intl.string(s.t.di6IFx),
-            icon: h,
-        },
-    }),
-    b = () => ({
-        [a.tN.BRB]: {
-            title: s.intl.string(s.t.fFTJTE),
+let m = () => ({
+        [i.tN.CHILLING]: {
+            title: o.intl.string(o.t["vkpn7+"]),
             icon: u,
         },
-        [a.tN.CHILLING]: {
-            title: s.intl.string(s.t.vybY9f),
-            icon: r.s_,
+        [i.tN.GAMING]: {
+            title: o.intl.string(o.t.lZslwM),
+            icon: d,
         },
-        [a.tN.GAMING]: {
-            title: s.intl.string(s.t.wvWdTU),
-            icon: r.mB,
+        [i.tN.FOCUSING]: {
+            title: o.intl.string(o.t.b6AscH),
+            icon: f,
         },
-        [a.tN.WATCHING]: {
-            title: s.intl.string(s.t.s8xFaG),
+        [i.tN.BRB]: {
+            title: o.intl.string(o.t["30yqZW"]),
             icon: c,
         },
-        [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.D5eCT0),
-            icon: r.FG,
+        [i.tN.WATCHING]: {
+            title: o.intl.string(o.t.di6IFx),
+            icon: _,
         },
     }),
-    y = () => ({
-        [a.tN.BRB]: {
-            title: s.intl.string(s.t.fFTJTE),
-            icon: i.GsA,
-        },
-        [a.tN.CHILLING]: {
-            title: s.intl.string(s.t.vybY9f),
+    g = () => ({
+        [i.tN.BRB]: {
+            title: o.intl.string(o.t.fFTJTE),
             icon: l,
         },
-        [a.tN.GAMING]: {
-            title: s.intl.string(s.t.wvWdTU),
-            icon: i.iWm,
+        [i.tN.CHILLING]: {
+            title: o.intl.string(o.t.vybY9f),
+            icon: r.s_,
         },
-        [a.tN.WATCHING]: {
-            title: s.intl.string(s.t.s8xFaG),
-            icon: i.FLu,
+        [i.tN.GAMING]: {
+            title: o.intl.string(o.t.wvWdTU),
+            icon: r.mB,
         },
-        [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.D5eCT0),
-            icon: i.Xbz,
+        [i.tN.WATCHING]: {
+            title: o.intl.string(o.t.s8xFaG),
+            icon: s,
+        },
+        [i.tN.FOCUSING]: {
+            title: o.intl.string(o.t.D5eCT0),
+            icon: r.Nl,
         },
     }),
-    O = () => ({
-        [a.tN.BRB]: {
-            title: s.intl.string(s.t.fFTJTE),
+    E = () => ({
+        [i.tN.BRB]: {
+            title: o.intl.string(o.t.fFTJTE),
             emoji: {
                 id: void 0,
                 name: "\uD83D\uDCA8",
             },
         },
-        [a.tN.CHILLING]: {
-            title: s.intl.string(s.t.vybY9f),
+        [i.tN.CHILLING]: {
+            title: o.intl.string(o.t.vybY9f),
             emoji: {
                 id: void 0,
                 name: "\uD83C\uDF68",
             },
         },
-        [a.tN.GAMING]: {
-            title: s.intl.string(s.t.wvWdTU),
+        [i.tN.GAMING]: {
+            title: o.intl.string(o.t.wvWdTU),
             emoji: {
                 id: void 0,
                 name: "\u2694️",
             },
         },
-        [a.tN.WATCHING]: {
-            title: s.intl.string(s.t.s8xFaG),
+        [i.tN.WATCHING]: {
+            title: o.intl.string(o.t.s8xFaG),
             emoji: {
                 id: void 0,
                 name: "\uD83C\uDF7F",
             },
         },
-        [a.tN.FOCUSING]: {
-            title: s.intl.string(s.t.D5eCT0),
+        [i.tN.FOCUSING]: {
+            title: o.intl.string(o.t.D5eCT0),
             emoji: {
                 id: void 0,
                 name: "\uD83E\uDDE0",
             },
         },
     }),
-    v = (e) => {
+    b = (e) => {
         switch (e) {
             case "original":
             default:
-                return E();
+                return m();
             case "illocons":
-                return b();
-            case "icons":
-                return y();
+                return g();
             case "twemoji":
-                return O();
+                return E();
         }
     },
-    I = function (e) {
+    y = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "original";
-        if ((null == e ? void 0 : e.type) !== o.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
-        let n = g(e.state),
+        if ((null == e ? void 0 : e.type) !== a.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
+        let n = h(e.state),
             r = n[0];
-        if (r === a.tN.CUSTOM) return null;
-        let i = v(n.length > 1 ? n[1] : t);
-        return r in i ? i[r] : null;
+        if (r === i.tN.CUSTOM) return null;
+        let o = b(n.length > 1 ? n[1] : t);
+        return r in o ? o[r] : null;
     },
-    T = function (e) {
+    O = function (e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "original";
-        return (null == e ? void 0 : e.type) !== o.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null
+        return (null == e ? void 0 : e.type) !== a.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null
             ? null
-            : g(e.state)[0] === a.tN.CUSTOM
+            : h(e.state)[0] === i.tN.CUSTOM
               ? null == e
                   ? void 0
                   : e.details
-              : null == (t = I(e, n))
+              : null == (t = y(e, n))
                 ? void 0
                 : t.title;
     };

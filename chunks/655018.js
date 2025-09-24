@@ -34,68 +34,68 @@ function N(e) {
         M = (0, u.e7)([g.Z], () => g.Z.getCustomHangStatus()),
         R = (0, u.e7)([g.Z], () => g.Z.getRecentStatuses()),
         k = (0, u.e7)([g.Z], () => g.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: L } = m.n.useExperiment({
+        { defaultStatusVariant: L, allowPermanentClear: D } = m.n.useExperiment({
             guildId: o.guild_id,
             location: "HangStatusPicker",
         }),
-        D = (0, b.V)(L),
-        U = i.useRef(null),
-        [B, H] = i.useState(null != (n = null == M ? void 0 : M.status) ? n : ""),
-        [V, F] = i.useState(null != (l = null == M ? void 0 : M.emoji) ? l : null),
-        G = (0, u.e7)([g.Z], () => g.Z.getCurrentHangStatus()),
-        z = k.length > 0,
-        W = null == B || "" === B.trim(),
-        q = (0, _.Z)(o),
-        Y =
-            (B.trim().length > 0 && B.trim() !== (null == M || null == (t = M.status) ? void 0 : t.trim())) ||
-            (null != V && !s()(V, null == M ? void 0 : M.emoji)),
-        [K, X] = i.useState(!1);
+        U = (0, b.V)(L),
+        B = i.useRef(null),
+        [H, V] = i.useState(null != (n = null == M ? void 0 : M.status) ? n : ""),
+        [F, G] = i.useState(null != (l = null == M ? void 0 : M.emoji) ? l : null),
+        z = (0, u.e7)([g.Z], () => g.Z.getCurrentHangStatus()),
+        W = k.length > 0,
+        q = null == H || "" === H.trim(),
+        Y = (0, _.Z)(o),
+        K =
+            (H.trim().length > 0 && H.trim() !== (null == M || null == (t = M.status) ? void 0 : t.trim())) ||
+            (null != F && !s()(F, null == M ? void 0 : M.emoji)),
+        [X, J] = i.useState(!1);
     i.useEffect(() => {
-        B.trim().length > 0 && K && X(!1), null == V && K && X(!1);
-    }, [B, V, K]),
+        H.trim().length > 0 && X && J(!1), null == F && X && J(!1);
+    }, [H, F, X]),
         i.useEffect(() => {
-            if (null != V) {
+            if (null != F) {
                 var e;
                 null == (e = w.current) || e.focus();
             }
-        }, [V]),
+        }, [F]),
         i.useEffect(() => {
             var e;
-            B !== (null != (e = null == M ? void 0 : M.status) ? e : "") && "" !== B.trim() ? N(!0) : N(!1);
-        }, [B, null == M ? void 0 : M.status, V, null == M ? void 0 : M.emoji, N]),
+            H !== (null != (e = null == M ? void 0 : M.status) ? e : "") && "" !== H.trim() ? N(!0) : N(!1);
+        }, [H, null == M ? void 0 : M.status, F, null == M ? void 0 : M.emoji, N]),
         i.useEffect(() => {
             var e;
-            (null == G || G === S.tN.CUSTOM) && (null == (e = w.current) || e.focus());
-        }, [G]),
+            (null == z || z === S.tN.CUSTOM) && (null == (e = w.current) || e.focus());
+        }, [z]),
         i.useEffect(() => {
-            null == A || A(null == U ? void 0 : U.current);
-        }, [U, A]);
-    let J = i.useCallback(
+            null == A || A(null == B ? void 0 : B.current);
+        }, [B, A]);
+    let Q = i.useCallback(
             (e) => {
-                e !== G && ((0, f.Zx)(e, !0), null != V && F(null), "" !== B.trim() && H(""));
+                e !== z && ((0, f.Zx)(e, !0), null != F && G(null), "" !== H.trim() && V(""));
             },
-            [G, V, B],
+            [z, F, H],
         ),
-        Q = i.useCallback(
+        $ = i.useCallback(
             (e, t) => {
                 let { emoji: n, status: r } = e;
                 (s()(n, null == M ? void 0 : M.emoji) && r === (null == M ? void 0 : M.status)) ||
-                    ((0, f._s)(e.status, e.emoji, !0), F(t ? null : e.emoji), H(t ? "" : e.status));
+                    ((0, f._s)(e.status, e.emoji, !0), G(t ? null : e.emoji), V(t ? "" : e.status));
             },
             [null == M ? void 0 : M.emoji, null == M ? void 0 : M.status],
         ),
-        $ = i.useCallback(
+        ee = i.useCallback(
             (e) => {
                 var t;
                 null == e || null == (t = e.preventDefault) || t.call(e),
-                    null != V && 0 === B.trim().length && X(!0),
-                    W ||
-                        Q(
+                    null != F && 0 === H.trim().length && J(!0),
+                    q ||
+                        $(
                             {
-                                status: B,
+                                status: H,
                                 emoji:
-                                    null != V
-                                        ? V
+                                    null != F
+                                        ? F
                                         : {
                                               id: null,
                                               name: "\uD83D\uDCAD",
@@ -105,17 +105,17 @@ function N(e) {
                             !0,
                         );
             },
-            [B, V, Q, W],
+            [H, F, $, q],
         ),
-        ee = i.useCallback(() => {
+        et = i.useCallback(() => {
             let e = null,
                 t = null;
             do {
                 var n;
                 if (
-                    0 === q.length ||
+                    0 === Y.length ||
                     ((t =
-                        (null == (e = (0, c.sample)(q)) ? void 0 : e.id) != null
+                        (null == (e = (0, c.sample)(Y)) ? void 0 : e.id) != null
                             ? {
                                   id: e.id,
                                   name: e.name,
@@ -126,26 +126,26 @@ function N(e) {
                                   name: null != (n = null == e ? void 0 : e.optionallyDiverseSequence) ? n : "",
                                   animated: !1,
                               }),
-                    1 === q.length)
+                    1 === Y.length)
                 )
                     break;
-            } while (null == e || (null == e ? void 0 : e.name) == null || s()(V, t));
+            } while (null == e || (null == e ? void 0 : e.name) == null || s()(F, t));
             null != t &&
                 (null == e ? void 0 : e.name) != null &&
-                (F(t), H(e.name), h.default.track(P.rMx.HANG_STATUS_RANDOMIZER_CLICKED, (0, y.Z)(o.id)));
-        }, [q, V, o.id]),
-        et = i.useCallback(() => {
+                (G(t), V(e.name), h.default.track(P.rMx.HANG_STATUS_RANDOMIZER_CLICKED, (0, y.Z)(o.id)));
+        }, [Y, F, o.id]),
+        en = i.useCallback(() => {
             N(!1);
         }, [N]),
-        en = i.useCallback(() => {
+        er = i.useCallback(() => {
             var e;
-            B !== (null != (e = null == M ? void 0 : M.status) ? e : "") && "" !== B.trim() ? N(!0) : N(!1);
-        }, [N, B, null == M ? void 0 : M.status]),
-        er = i.useCallback(
+            H !== (null != (e = null == M ? void 0 : M.status) ? e : "") && "" !== H.trim() ? N(!0) : N(!1);
+        }, [N, H, null == M ? void 0 : M.status]),
+        ei = i.useCallback(
             (e, t, n) => {
                 var i;
                 let l = (0, C.Z)(e),
-                    a = l ? D[e] : null,
+                    a = l ? U[e] : null,
                     o = k.some(
                         (t) =>
                             ((0, C.Z)(t) && l && e === t) ||
@@ -171,25 +171,25 @@ function N(e) {
                     E.L,
                     {
                         isSelected: l
-                            ? G === e
+                            ? z === e
                             : s()(null == M ? void 0 : M.emoji, e.emoji) &&
                               (null == M ? void 0 : M.status) === e.status,
                         label: l ? (null != (i = null == a ? void 0 : a.title) ? i : "") : e.status,
                         icon: c,
                         setStatus: () => {
-                            l ? J(e) : Q(e);
+                            l ? Q(e) : $(e);
                         },
-                        clearStatus: () => (0, f.Sc)(!0),
+                        clearStatus: () => (0, f.Sc)(!0, D),
                         isFavorited: o,
                         onFavoriteClick: () => (0, f.tg)(l ? e : e.status, l ? null : e.emoji),
                     },
                     "".concat(n, "-").concat(t),
                 );
             },
-            [L, Q, J, D, null == M ? void 0 : M.emoji, null == M ? void 0 : M.status, G, k],
+            [L, $, Q, U, null == M ? void 0 : M.emoji, null == M ? void 0 : M.status, z, k, D],
         );
     return (0, r.jsxs)("div", {
-        ref: U,
+        ref: B,
         role: "menu",
         id: "hang-status-picker",
         tabIndex: -1,
@@ -199,42 +199,42 @@ function N(e) {
                 role: "group",
                 className: a()(T.groupLabel, Z.group),
                 children: (0, r.jsxs)("form", {
-                    onSubmit: $,
+                    onSubmit: ee,
                     className: a()(T.item, Z.input),
                     children: [
                         (0, r.jsx)(d.oil, {
                             inputRef: w,
-                            value: B,
-                            onBlur: et,
-                            onFocus: en,
-                            onChange: (e) => H(e.substring(0, S.s0)),
+                            value: H,
+                            onBlur: en,
+                            onFocus: er,
+                            onChange: (e) => V(e.substring(0, S.s0)),
                             placeholder: I.intl.string(I.t.KPop4u),
                             leading: {
                                 type: "emoji",
                                 button: (0, r.jsx)(x.A, {
-                                    customStatusEmoji: V,
-                                    setCustomStatusEmoji: F,
+                                    customStatusEmoji: F,
+                                    setCustomStatusEmoji: G,
                                 }),
                             },
                             trailing: {
                                 icon: v.k,
-                                onClick: ee,
+                                onClick: et,
                                 "aria-label": I.intl.string(I.t["5UAi5+"]),
                             },
                         }),
-                        K &&
+                        X &&
                             (0, r.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 className: Z.inputHint,
                                 color: "text-danger",
                                 children: I.intl.string(I.t["s/oq0d"]),
                             }),
-                        Y &&
-                            !K &&
+                        K &&
+                            !X &&
                             (0, r.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 className: Z.inputHint,
-                                children: I.intl.format(I.t["VjkH/v"], { onSave: () => $() }),
+                                children: I.intl.format(I.t["VjkH/v"], { onSave: () => ee() }),
                             }),
                     ],
                 }),
@@ -245,7 +245,7 @@ function N(e) {
                 className: a()(T.groupLabel, Z.group, Z.scroller),
                 children: [
                     (0, r.jsx)(j.d, { guildId: o.guild_id }),
-                    z &&
+                    W &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsxs)("div", {
@@ -259,11 +259,11 @@ function N(e) {
                                         (0, r.jsx)(d.r7p, { size: "xxs" }),
                                     ],
                                 }),
-                                k.map((e, t) => er(e, t, "favorite")),
+                                k.map((e, t) => ei(e, t, "favorite")),
                             ],
                         }),
                     R.length > 0 &&
-                        z &&
+                        W &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
@@ -283,7 +283,7 @@ function N(e) {
                                 }),
                             ],
                         }),
-                    R.map((e, t) => er(e, t, "recent")),
+                    R.map((e, t) => ei(e, t, "recent")),
                 ],
             }),
         ],
