@@ -39796,6 +39796,7 @@ body .headerAnimation_b54a5b {
     border-width: 1px;
     display: flex;
     gap: 12px;
+    margin-top: 16px;
     padding: var(--space-12)
 }
 
@@ -39868,7 +39869,6 @@ body .headerAnimation_b54a5b {
 
 .confirmation_cd2ff7 {
     align-items: center;
-    background-color: var(--modal-background);
     border-radius: 4px;
     display: flex;
     flex-direction: column;
