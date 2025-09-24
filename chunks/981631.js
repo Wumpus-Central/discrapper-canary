@@ -5025,6 +5025,7 @@ var nE = (function (e) {
             (e.SWIPE_HANG_STATUS = "swipe_hang_status"),
             (e.VIEW_HANG_STATUS = "view_hang_status"),
             (e.HANG_STATUS_CTA_CLICKED = "hang_status_cta_clicked"),
+            (e.HANG_STATUS_RANDOMIZER_CLICKED = "hang_status_randomizer_clicked"),
             (e.MEMBER_VERIFICATION_APPLICATION_VIEWED = "member_verification_application_viewed"),
             (e.GUILD_MEMBER_APPLICATION_REPORTED = "guild_member_application_reported"),
             (e.GUILD_APPLICATION_ABANDONED = "guild_application_abandoned"),
