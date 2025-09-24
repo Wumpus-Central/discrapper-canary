@@ -1,26 +1,26 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => I });
 var r = n(951288),
     i = n(647438),
-    l = n(597312),
+    l = n(793030),
     a = n(442837),
-    o = n(481060),
-    s = n(410030),
+    s = n(481060),
+    o = n(410030),
     c = n(100527),
-    u = n(906732),
-    d = n(699516),
+    d = n(906732),
+    u = n(699516),
     p = n(5192),
     h = n(785717),
     f = n(221292),
-    m = n(687158),
-    g = n(316027),
+    g = n(687158),
+    m = n(316027),
     b = n(502762),
-    _ = n(848780),
-    y = n(907179),
-    C = n(671955),
-    x = n(388032),
+    y = n(848780),
+    _ = n(907179),
+    O = n(671955),
+    j = n(388032),
     v = n(491010),
-    O = n(268293);
-function j(e) {
+    x = n(268293);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,38 +45,38 @@ function j(e) {
     }
     return e;
 }
-function E(e) {
-    let { user: t, channel: n, onHide: E } = e,
-        S = (0, m.ZP)(t.id),
-        I = (0, s.ZP)(),
-        P = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
-        { analyticsLocations: Z } = (0, u.ZP)(P ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
-        T = (0, h.ZB)({
+function I(e) {
+    let { user: t, channel: n, onHide: I } = e,
+        E = (0, g.ZP)(t.id),
+        S = (0, o.ZP)(),
+        Z = (0, a.e7)([u.Z], () => u.Z.isBlocked(t.id)),
+        { analyticsLocations: T } = (0, d.ZP)(Z ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
+        P = (0, h.ZB)({
             layout: "SIDEBAR",
             userId: t.id,
             channelId: n.id,
         }),
         N = i.useRef(null);
-    return (0, r.jsx)(u.Gt, {
-        value: Z,
+    return (0, r.jsx)(d.Gt, {
+        value: T,
         children: (0, r.jsx)(h.Mt, {
-            value: T,
-            fetchStartedAt: null == S ? void 0 : S.fetchStartedAt,
-            fetchEndedAt: null == S ? void 0 : S.fetchEndedAt,
-            isLoaded: null == S ? void 0 : S.isLoaded,
+            value: P,
+            fetchStartedAt: null == E ? void 0 : E.fetchStartedAt,
+            fetchEndedAt: null == E ? void 0 : E.fetchEndedAt,
+            isLoaded: null == E ? void 0 : E.isLoaded,
             children: (0, r.jsx)(b.Z, {
                 ref: N,
                 user: t,
-                displayProfile: S,
-                themeType: C.l.SIDEBAR,
-                themeOverride: I,
-                children: (0, r.jsx)(l.u2, {
+                displayProfile: E,
+                themeType: O.l.SIDEBAR,
+                themeOverride: S,
+                children: (0, r.jsx)(l.u2D, {
                     children: (0, r.jsxs)("div", {
                         className: v.container,
                         children: [
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: O,
+                                src: x,
                                 className: v.preview,
                                 "aria-hidden": !0,
                             }),
@@ -86,50 +86,50 @@ function E(e) {
                                     (0, r.jsxs)("div", {
                                         className: v.headerContainer,
                                         children: [
-                                            (0, r.jsx)(g.Z, { user: t }),
-                                            (0, r.jsx)(o.X6q, {
+                                            (0, r.jsx)(m.Z, { user: t }),
+                                            (0, r.jsx)(s.X6q, {
                                                 variant: "heading-lg/bold",
-                                                children: x.intl.string(x.t.b33pLC),
+                                                children: j.intl.string(j.t.b33pLC),
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                children: x.intl.format(P ? x.t["8F+WNz"] : x.t["/cZp5u"], {
+                                                children: j.intl.format(Z ? j.t["8F+WNz"] : j.t["/cZp5u"], {
                                                     username: p.ZP.getName(n.guild_id, n.id, t),
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, r.jsxs)(o.Kqy, {
+                                    (0, r.jsxs)(s.Kqy, {
                                         align: "center",
                                         children: [
-                                            (0, r.jsx)(y.Z, {
-                                                isBlocked: P,
+                                            (0, r.jsx)(_.Z, {
+                                                isBlocked: Z,
                                                 onClick: () => {
-                                                    E(),
+                                                    I(),
                                                         (0, f.pQ)(
-                                                            j(
+                                                            C(
                                                                 {
-                                                                    action: P
+                                                                    action: Z
                                                                         ? "VIEW_BLOCKED_PROFILE"
                                                                         : "VIEW_IGNORED_PROFILE",
-                                                                    analyticsLocations: Z,
+                                                                    analyticsLocations: T,
                                                                 },
-                                                                T,
+                                                                P,
                                                             ),
                                                         );
                                                 },
                                             }),
-                                            (0, r.jsx)(_.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    E(),
+                                                    I(),
                                                         (0, f.pQ)(
-                                                            j(
+                                                            C(
                                                                 {
                                                                     action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                                    analyticsLocations: Z,
+                                                                    analyticsLocations: T,
                                                                 },
-                                                                T,
+                                                                P,
                                                             ),
                                                         );
                                                 },
