@@ -15,7 +15,7 @@ var r = n(951288),
     m = n(243778),
     g = n(921944),
     E = n(388032),
-    b = n(409397);
+    b = n(427760);
 let y = (0, a.U)((e) => ({
         activeEntryId: null,
         setActiveEntryId: (t) => e({ activeEntryId: t }),
@@ -46,13 +46,21 @@ let y = (0, a.U)((e) => ({
                 D && (w(g.L.USER_DISMISS), C(null));
             },
             [D, w, C],
-        ),
-            (0, _.Z)({
-                name: o.ImpressionNames.CLOUD_PLAY_CTA,
-                type: o.ImpressionTypes.VIEW,
-                properties: { location_stack: v },
-            });
-        let L = () => {
+        );
+        let [L, j] = i.useState(!1);
+        i.useEffect(() => {
+            D && !L && j(!0);
+        }, [D, L]),
+            (0, _.Z)(
+                {
+                    name: o.ImpressionNames.CLOUD_PLAY_CTA,
+                    type: o.ImpressionTypes.VIEW,
+                    properties: { location_stack: v },
+                },
+                { disableTrack: !L },
+                [L],
+            );
+        let M = () => {
             w(g.L.USER_DISMISS), C(null);
         };
         return (0, r.jsx)(l.J2, {
@@ -74,7 +82,7 @@ let y = (0, a.U)((e) => ({
                     onClick: x,
                 },
             ],
-            onRequestClose: L,
+            onRequestClose: M,
         });
     },
     v = (e) => {
