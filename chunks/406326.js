@@ -63,15 +63,15 @@ function _(e) {
             onSearchModeChange: o,
             totalResults: _,
             isIndexing: j,
-            isSearching: x,
-            documentsIndexed: v,
+            isSearching: v,
+            documentsIndexed: x,
         } = e,
         C = (0, d.UX)({ location: "SearchHeader" }),
         I = (0, u.nP)({ location: "SearchHeader" }),
         E = (0, u.KS)({ location: "SearchHeader" }),
         S = (0, h.I)(t),
         { totalFilters: Z } = (0, p.p4)(S, t),
-        P = i.useMemo(() => {
+        T = i.useMemo(() => {
             if (t.type === f.aib.DMS && C) {
                 var e, n;
                 let t = null != (n = null == (e = (0, c.$G)(S).channel_id) ? void 0 : e.length) ? n : 0;
@@ -79,7 +79,7 @@ function _(e) {
             }
             return null;
         }, [C, t.type, S]),
-        T = i.useMemo(
+        P = i.useMemo(
             () => [
                 {
                     label: g.intl.string(g.t.CbaapK),
@@ -98,23 +98,23 @@ function _(e) {
         ),
         N = i.useCallback(() => {
             (0, s.ZDy)(async () => {
-                let { default: e } = await n.e("16757").then(n.bind(n, 238088));
+                let { default: e } = await Promise.all([n.e("37979"), n.e("57390")]).then(n.bind(n, 238088));
                 return (n) => (0, r.jsx)(e, y(b({}, n), { searchContext: t }));
             });
         }, [t]),
         R = i.useMemo(() => (Z > 0 ? g.intl.format(g.t.uaR4sL, { filterCount: Z }) : g.intl.string(g.t.UdhTtr)), [Z]);
     return (0, r.jsxs)("header", {
-        className: a()(m.searchHeader, { [m.searchHeaderWithSubtitle]: null != P }),
+        className: a()(m.searchHeader, { [m.searchHeaderWithSubtitle]: null != T }),
         children: [
             (0, r.jsx)("div", {
                 className: m.totalResults,
                 role: "status",
                 children: (0, r.jsx)(O, {
                     totalResults: _,
-                    subtitle: P,
+                    subtitle: T,
                     isIndexing: j,
-                    isSearching: x,
-                    documentsIndexed: v,
+                    isSearching: v,
+                    documentsIndexed: x,
                 }),
             }),
             I || E
@@ -122,7 +122,7 @@ function _(e) {
                       className: m.searchModeAndFiltersContainer,
                       children: [
                           (0, r.jsx)(s.q4e, {
-                              options: T,
+                              options: P,
                               value: l,
                               onChange: o,
                               popoutWidth: 130,
@@ -166,9 +166,9 @@ function _(e) {
 function O(e) {
     let { totalResults: t, subtitle: n, isSearching: i, isIndexing: l, documentsIndexed: a } = e;
     return l
-        ? (0, r.jsx)(x, { documentsIndexed: a })
+        ? (0, r.jsx)(v, { documentsIndexed: a })
         : i
-          ? (0, r.jsx)(v, {})
+          ? (0, r.jsx)(x, {})
           : (0, r.jsx)(C, {
                 totalResults: t,
                 subtitle: n,
@@ -184,7 +184,7 @@ function j() {
         }),
     });
 }
-function x(e) {
+function v(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(s.ua7, {
         text: g.intl.formatToPlainString(g.t["4Y3O+P"], { count: t }),
@@ -208,7 +208,7 @@ function x(e) {
             ),
     });
 }
-function v() {
+function x() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Text, {

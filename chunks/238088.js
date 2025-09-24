@@ -1,4 +1,4 @@
-l.d(t, { default: () => I }), l(388685), l(539854), l(781311);
+l.d(t, { default: () => j }), l(388685), l(539854), l(781311);
 var n = l(951288),
     r = l(647438),
     a = l(913527),
@@ -11,14 +11,14 @@ var n = l(951288),
     h = l(592125),
     x = l(944486),
     g = l(594174),
-    F = l(585483),
-    m = l(607802),
-    p = l(465524),
-    C = l(611004),
-    S = l(981631),
+    p = l(585483),
+    C = l(607802),
+    m = l(465524),
+    F = l(611004),
+    T = l(981631),
     b = l(388032),
-    f = l(540432);
-function y(e) {
+    y = l(540432);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var l = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(l);
@@ -43,12 +43,12 @@ function y(e) {
     }
     return e;
 }
-function _(e) {
+function S(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: a, options: s, handleRemoveDateFilter: o } = e,
         c = i()(),
         d = i()("2015-05-15");
     return (0, n.jsxs)("div", {
-        className: f.dateFilter,
+        className: y.dateFilter,
         children: [
             (0, n.jsx)(u.q4e, {
                 options: s,
@@ -59,7 +59,7 @@ function _(e) {
                         index: t,
                     });
                 },
-                className: f.dateFilterSelect,
+                className: y.dateFilterSelect,
             }),
             (0, n.jsx)(u.Wrb, {
                 value: l.date,
@@ -76,19 +76,19 @@ function _(e) {
                 onClick: () => {
                     o(t);
                 },
-                className: f.removeDateFilterButton,
+                className: y.removeDateFilterButton,
                 "aria-label": b.intl.formatToPlainString(b.t["2LwBlJ"], { filterNumber: t + 1 }),
                 children: (0, n.jsx)(u.XHJ, {
                     size: "md",
                     color: "currentColor",
-                    className: f.trashIcon,
+                    className: y.trashIcon,
                     "aria-hidden": !0,
                 }),
             }),
         ],
     });
 }
-function E(e) {
+function f(e) {
     let {
             options: t,
             dates: l,
@@ -99,23 +99,23 @@ function E(e) {
         } = e,
         o = l.length < 4;
     return (0, n.jsxs)("div", {
-        className: f.filterSection,
+        className: y.filterSection,
         children: [
             (0, n.jsx)(u.Text, {
                 variant: "text-md/medium",
                 color: "text-primary",
-                className: f.label,
+                className: y.label,
                 children: b.intl.string(b.t.oesnws),
             }),
             (0, n.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: f.sublabel,
+                className: y.sublabel,
                 children: b.intl.string(b.t.A2DY6O),
             }),
             l.map((e, l) =>
                 (0, n.jsx)(
-                    _,
+                    S,
                     {
                         options: t,
                         index: l,
@@ -138,7 +138,7 @@ function E(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     let {
         label: t,
         sublabel: l,
@@ -154,18 +154,18 @@ function T(e) {
         renderOptionSuffix: g,
     } = e;
     return (0, n.jsxs)("div", {
-        className: f.filterSection,
+        className: y.filterSection,
         children: [
             (0, n.jsx)(u.Text, {
                 variant: "text-md/medium",
                 color: "text-primary",
-                className: f.label,
+                className: y.label,
                 children: t,
             }),
             (0, n.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: f.sublabel,
+                className: y.sublabel,
                 children: l,
             }),
             (0, n.jsx)(u.VcW, {
@@ -184,62 +184,90 @@ function T(e) {
         ],
     });
 }
-function I(e) {
+function R(e) {
+    let { label: t, sublabel: l, textPlaceholder: r, value: a, onChange: i, options: s } = e;
+    return (0, n.jsxs)("div", {
+        className: y.filterSection,
+        children: [
+            (0, n.jsx)(u.Text, {
+                variant: "text-md/medium",
+                color: "text-primary",
+                className: y.label,
+                children: t,
+            }),
+            (0, n.jsx)(u.Text, {
+                variant: "text-sm/medium",
+                color: "text-secondary",
+                className: y.sublabel,
+                children: l,
+            }),
+            (0, n.jsx)(u.q4e, {
+                placeholder: r,
+                options: s,
+                onChange: i,
+                value: a,
+                clearable: !0,
+            }),
+        ],
+    });
+}
+function j(e) {
     let { transitionState: t, onClose: l, searchContext: a } = e,
         i = (0, d.Dt)(),
-        _ = r.useMemo(() => (0, m.s5)(a), [a]),
-        I = (0, s.e7)([h.Z, x.Z], () => {
+        S = r.useMemo(() => (0, C.s5)(a), [a]),
+        j = (0, s.e7)([h.Z, x.Z], () => {
             let e = h.Z.getChannel(x.Z.getChannelId());
-            return null != e ? (0, m.nl)(e) : "general";
+            return null != e ? (0, C.nl)(e) : "general";
         }),
-        v = (0, s.e7)([g.default], () => {
+        N = (0, s.e7)([g.default], () => {
             let e = g.default.getCurrentUser();
             return null != e ? e.username : b.intl.string(b.t.cqpybG);
         }),
-        [R, j] = r.useState(C.Z.getSearchInputText(a)),
-        O = r.useMemo(() => (0, m.kG)(null != R ? R : ""), [R]),
-        { prefilledSearchFilters: N, eligibleFilterTokens: L } = (0, p.p4)(O, a),
-        k = L.has(S.dCx.FILTER_FROM),
-        M = L.has(S.dCx.FILTER_MENTIONS),
-        P = L.has(S.dCx.FILTER_IN),
-        D = r.useMemo(() => (0, m.nI)(O), [O]),
+        [O, v] = r.useState(F.Z.getSearchInputText(a)),
+        L = r.useMemo(() => (0, C.kG)(null != O ? O : ""), [O]),
+        { prefilledSearchFilters: _, eligibleFilterTokens: P } = (0, m.p4)(L, a),
+        k = P.has(T.dCx.FILTER_FROM),
+        A = P.has(T.dCx.FILTER_MENTIONS),
+        Q = P.has(T.dCx.FILTER_IN),
+        M = P.has(T.dCx.FILTER_AUTHOR_TYPE),
+        q = r.useMemo(() => (0, C.nI)(L), [L]),
         {
-            options: Q,
-            query: q,
-            setQuery: A,
-            setQueryString: H,
-            handleClearFilter: w,
-            getApplyQueryString: B,
-            handleFocusFilter: Z,
-        } = (0, p.HJ)(a, S.dCx.FILTER_FROM, N[S.dCx.FILTER_FROM]),
-        {
-            options: z,
-            query: J,
-            setQuery: W,
-            setQueryString: K,
+            options: D,
+            query: H,
+            setQuery: w,
+            setQueryString: Y,
             handleClearFilter: U,
-            getApplyQueryString: Y,
-            handleFocusFilter: G,
-        } = (0, p.HJ)(a, S.dCx.FILTER_MENTIONS, N[S.dCx.FILTER_MENTIONS]),
-        V = (0, p.Zc)(_),
+            getApplyQueryString: Z,
+            handleFocusFilter: z,
+        } = (0, m.HJ)(a, T.dCx.FILTER_FROM, _[T.dCx.FILTER_FROM]),
         {
-            options: X,
-            query: $,
-            setQuery: ee,
-            handleClearFilter: et,
-            getApplyQueryString: el,
-            handleFocusFilter: en,
-        } = (0, p.Z2)(a, N[S.dCx.FILTER_HAS]),
+            options: J,
+            query: W,
+            setQuery: B,
+            setQueryString: X,
+            handleClearFilter: K,
+            getApplyQueryString: G,
+            handleFocusFilter: V,
+        } = (0, m.HJ)(a, T.dCx.FILTER_MENTIONS, _[T.dCx.FILTER_MENTIONS]),
+        $ = (0, m.Zc)(S),
         {
-            options: er,
-            query: ea,
-            setQuery: ei,
-            setQueryString: es,
-            handleClearFilter: eo,
-            getApplyQueryString: eu,
-            handleFocusFilter: ec,
-        } = (0, p.ur)(a, N[S.dCx.FILTER_IN]),
-        ed = r.useCallback((e) => {
+            options: ee,
+            query: et,
+            setQuery: el,
+            handleClearFilter: en,
+            getApplyQueryString: er,
+            handleFocusFilter: ea,
+        } = (0, m.Z2)(a, _[T.dCx.FILTER_HAS]),
+        {
+            options: ei,
+            query: es,
+            setQuery: eo,
+            setQueryString: eu,
+            handleClearFilter: ec,
+            getApplyQueryString: ed,
+            handleFocusFilter: eh,
+        } = (0, m.ur)(a, _[T.dCx.FILTER_IN]),
+        ex = r.useCallback((e) => {
             if (null == e) return;
             let t = h.Z.getChannel(e.value);
             if (null == t) return;
@@ -252,71 +280,95 @@ function I(e) {
                 : null;
         }, []),
         {
-            options: eh,
-            dates: ex,
-            validDates: eg,
-            handleDateQueryChange: eF,
-            handleDateChange: em,
-            handleAddDateFilter: ep,
-            handleRemoveDateFilter: eC,
-            handleClearDateFilter: eS,
-            getDateQueryString: eb,
-        } = (0, p.fI)(N.dateFilters),
-        ef = r.useMemo(() => {
+            options: eg,
+            dates: ep,
+            validDates: eC,
+            handleDateQueryChange: em,
+            handleDateChange: eF,
+            handleAddDateFilter: eT,
+            handleRemoveDateFilter: eb,
+            handleClearDateFilter: ey,
+            getDateQueryString: eE,
+        } = (0, m.fI)(_.dateFilters),
+        {
+            options: eS,
+            query: ef,
+            setQuery: eI,
+            handleClearFilter: eR,
+            getApplyQueryString: ej,
+            handleFocusFilter: eN,
+        } = (0, m.fJ)(a, _[T.dCx.FILTER_AUTHOR_TYPE]),
+        {
+            options: eO,
+            query: ev,
+            setQuery: eL,
+            handleClearFilter: e_,
+            getApplyQueryString: eP,
+        } = (0, m.zL)(a, _[T.dCx.FILTER_PINNED]),
+        ek = r.useMemo(() => {
             let e = 0;
             return (
-                k && q.length > 0 && (e += q.length),
-                M && J.length > 0 && (e += J.length),
-                P && ea.length > 0 && (e += ea.length),
-                $.length > 0 && (e += $.length),
-                eg.length > 0 && (e += eg.length),
+                k && H.length > 0 && (e += H.length),
+                A && W.length > 0 && (e += W.length),
+                Q && es.length > 0 && (e += es.length),
+                et.length > 0 && (e += et.length),
+                eC.length > 0 && (e += eC.length),
+                M && ef.length > 0 && (e += ef.length),
+                null !== ev && (e += 1),
                 e
             );
-        }, [k, q, M, J, P, ea, $, eg]),
-        ey = r.useMemo(
+        }, [k, H, A, W, Q, es, et, eC, M, ef, ev]),
+        eA = r.useMemo(
             () =>
                 !(
-                    (!k || (0, p.Ek)(q, N[S.dCx.FILTER_FROM])) &&
-                    (!M || (0, p.Ek)(J, N[S.dCx.FILTER_MENTIONS])) &&
-                    (!P || (0, p.Ek)(ea, N[S.dCx.FILTER_IN])) &&
-                    (0, p.Ek)($, N[S.dCx.FILTER_HAS]) &&
-                    (0, p.LE)(eg, N.dateFilters)
+                    (!k || (0, m.Ek)(H, _[T.dCx.FILTER_FROM])) &&
+                    (!A || (0, m.Ek)(W, _[T.dCx.FILTER_MENTIONS])) &&
+                    (!Q || (0, m.Ek)(es, _[T.dCx.FILTER_IN])) &&
+                    (0, m.Ek)(et, _[T.dCx.FILTER_HAS]) &&
+                    (0, m.LE)(eC, _.dateFilters) &&
+                    (!M || (0, m.Ek)(ef, _[T.dCx.FILTER_AUTHOR_TYPE])) &&
+                    (0, m.Ek)(ev, _[T.dCx.FILTER_PINNED])
                 ),
-            [k, q, N, M, J, P, ea, $, eg],
+            [k, H, _, A, W, Q, es, et, eC, M, ef, ev],
         ),
-        e_ = r.useCallback(() => {
-            let e = el(S.dCx.FILTER_HAS),
-                t = eb(),
-                n = [];
+        eQ = r.useCallback(() => {
+            let e = er(T.dCx.FILTER_HAS),
+                t = eE(),
+                n = eP(T.dCx.FILTER_PINNED),
+                r = [];
             if (k) {
-                let e = B(S.dCx.FILTER_FROM);
-                null != e && n.push(e);
+                let e = Z(T.dCx.FILTER_FROM);
+                null != e && r.push(e);
             }
-            if (M) {
-                let e = Y(S.dCx.FILTER_MENTIONS);
-                null != e && n.push(e);
+            if (A) {
+                let e = G(T.dCx.FILTER_MENTIONS);
+                null != e && r.push(e);
             }
-            if (P) {
-                let e = eu(S.dCx.FILTER_IN);
-                null != e && n.push(e);
+            if (Q) {
+                let e = ed(T.dCx.FILTER_IN);
+                null != e && r.push(e);
             }
-            if ((null != e && n.push(e), null != t && n.push(t), 0 === n.length && 0 === D.trim().length)) {
-                F.S.dispatch(S.CkL.SEARCH_RESULTS_CLOSE), l();
+            if ((null != e && r.push(e), null != t && r.push(t), M)) {
+                let e = ej(T.dCx.FILTER_AUTHOR_TYPE);
+                null != e && r.push(e);
+            }
+            if ((null != n && r.push(n), 0 === r.length && 0 === q.trim().length)) {
+                p.S.dispatch(T.CkL.SEARCH_RESULTS_CLOSE), l();
                 return;
             }
-            let r = [...n, D].join(" ");
-            F.S.dispatch(S.CkL.SET_SEARCH_QUERY, {
-                query: r,
+            let a = [...r, q].join(" ");
+            p.S.dispatch(T.CkL.SET_SEARCH_QUERY, {
+                query: a,
                 anchor: 0,
                 focus: 0,
                 performSearch: !0,
                 replace: !0,
             }),
                 l();
-        }, [k, P, M, eb, B, el, eu, Y, D, l]),
-        eE = r.useCallback(() => {
-            k && w(), M && U(), P && eo(), et(), eS();
-        }, [k, M, et, P, eS, w, U, eo]);
+        }, [M, k, Q, A, ej, eE, Z, er, ed, G, q, l, eP]),
+        eM = r.useCallback(() => {
+            k && U(), A && K(), Q && ec(), M && eR(), en(), ey(), e_();
+        }, [k, A, en, Q, ey, U, K, ec, M, eR, e_]);
     return (0, n.jsxs)(o.Modal, {
         transitionState: t,
         onClose: l,
@@ -331,86 +383,106 @@ function I(e) {
             {
                 variant: "primary",
                 text: b.intl.string(b.t.qDzapq),
-                onClick: e_,
-                disabled: !ey,
+                onClick: eQ,
+                disabled: !eA,
             },
         ],
         actionBarInput: (0, n.jsx)(u.P3F, {
-            onClick: eE,
-            className: f.clearFilters,
+            onClick: eM,
+            className: y.clearFilters,
             children: (0, n.jsxs)(u.Text, {
                 variant: "text-sm/medium",
-                color: ef > 0 ? "text-brand" : "text-tertiary",
-                children: [b.intl.string(b.t.YfwFu7), " ", ef > 0 && "(".concat(ef, ")")],
+                color: ek > 0 ? "text-brand" : "text-tertiary",
+                children: [b.intl.string(b.t.YfwFu7), " ", ek > 0 && "(".concat(ek, ")")],
             }),
         }),
         children: [
             k &&
                 (0, n.jsx)(
-                    T,
-                    y(
+                    I,
+                    E(
                         {
                             label: b.intl.string(b.t.Qz6eOT),
                             sublabel: b.intl.string(b.t["2JyXnJ"]),
-                            textPlaceholder: b.intl.formatToPlainString(b.t.V4WMj4, { username: v }),
-                            value: q,
-                            onChange: A,
-                            onFocus: Z,
-                            onSearchChange: H,
-                            options: Q,
+                            textPlaceholder: b.intl.formatToPlainString(b.t.V4WMj4, { username: N }),
+                            value: H,
+                            onChange: w,
+                            onFocus: z,
+                            onSearchChange: Y,
+                            options: D,
                         },
-                        V,
+                        $,
                     ),
                 ),
-            P &&
-                (0, n.jsx)(T, {
+            Q &&
+                (0, n.jsx)(I, {
                     label: b.intl.string(b.t["kLrM/v"]),
                     sublabel: b.intl.string(b.t.x8cC09),
-                    textPlaceholder: b.intl.formatToPlainString(b.t.K4l509, { channelName: I }),
-                    value: ea,
-                    onChange: ei,
-                    onFocus: ec,
-                    onSearchChange: es,
-                    options: er,
+                    textPlaceholder: b.intl.formatToPlainString(b.t.K4l509, { channelName: j }),
+                    value: es,
+                    onChange: eo,
+                    onFocus: eh,
+                    onSearchChange: eu,
+                    options: ei,
                     filter: !1,
                     closeOnSelect: !1,
-                    renderOptionPrefix: ed,
+                    renderOptionPrefix: ex,
                 }),
-            M &&
+            A &&
                 (0, n.jsx)(
-                    T,
-                    y(
+                    I,
+                    E(
                         {
                             label: b.intl.string(b.t.HEBnRU),
                             sublabel: b.intl.string(b.t.PdfTqa),
-                            textPlaceholder: b.intl.formatToPlainString(b.t.zka3aG, { username: v }),
-                            value: J,
-                            onChange: W,
-                            onFocus: G,
-                            onSearchChange: K,
-                            options: z,
+                            textPlaceholder: b.intl.formatToPlainString(b.t.zka3aG, { username: N }),
+                            value: W,
+                            onChange: B,
+                            onFocus: V,
+                            onSearchChange: X,
+                            options: J,
                         },
-                        V,
+                        $,
                     ),
                 ),
-            (0, n.jsx)(T, {
+            (0, n.jsx)(I, {
                 label: b.intl.string(b.t["892qg4"]),
                 sublabel: b.intl.string(b.t["Oa//IC"]),
                 textPlaceholder: b.intl.string(b.t.tROvHB),
-                value: $,
-                onChange: ee,
-                onFocus: en,
-                options: X,
+                value: et,
+                onChange: el,
+                onFocus: ea,
+                options: ee,
                 filter: !0,
                 closeOnSelect: !1,
             }),
-            (0, n.jsx)(E, {
-                options: eh,
-                dates: ex,
-                handleDateQueryChange: eF,
-                handleDateChange: em,
-                handleAddDateFilter: ep,
-                handleRemoveDateFilter: eC,
+            (0, n.jsx)(f, {
+                options: eg,
+                dates: ep,
+                handleDateQueryChange: em,
+                handleDateChange: eF,
+                handleAddDateFilter: eT,
+                handleRemoveDateFilter: eb,
+            }),
+            M &&
+                (0, n.jsx)(I, {
+                    label: b.intl.string(b.t.Xgc1am),
+                    sublabel: b.intl.string(b.t.XaOAdn),
+                    textPlaceholder: b.intl.string(b.t.CAdOdX),
+                    value: ef,
+                    onChange: eI,
+                    onFocus: eN,
+                    options: eS,
+                    filter: !0,
+                    closeOnSelect: !1,
+                }),
+            (0, n.jsx)(R, {
+                label: b.intl.string(b.t["6LYPWV"]),
+                sublabel: b.intl.string(b.t.L8jjfn),
+                textPlaceholder: b.intl.string(b.t.AQpFbW),
+                value: ev,
+                onChange: eL,
+                options: eO,
             }),
         ],
     });
