@@ -21,54 +21,56 @@ function m(e) {
             tooltipClassName: m,
             voiceChannel: g,
             hangStatus: E,
-            textSize: b = "xs",
-            animateEmoji: y = !0,
-            hideEmoji: O = !1,
-            hideTooltip: v = !1,
+            userId: b,
+            textSize: y = "xs",
+            animateEmoji: O = !0,
+            hideEmoji: v = !1,
+            hideTooltip: I = !1,
         } = e,
-        I = (0, d.E)("ActivityStatus", g),
-        { defaultStatusVariant: T } = l.n.useExperiment({
+        T = (0, d.E)("ActivityStatus", g),
+        { defaultStatusVariant: S } = l.n.useExperiment({
             guildId: null == g ? void 0 : g.guild_id,
             location: "CustomStatusActivityStatus",
         });
     if (null == t && null == E) return null;
-    let S = null != E && I,
-        A = S ? (0, c.O8)(E, T) : null,
-        C = null == t ? void 0 : t.emoji,
-        N = null != A ? A : null == t ? void 0 : t.state,
-        R = null != N && "" !== N,
-        P = null;
-    S
-        ? (P = (0, r.jsx)(u.Z, {
+    let A = null != E && T,
+        C = A && null != b ? (0, c.O8)(b, E, S) : null,
+        N = null == t ? void 0 : t.emoji,
+        R = null != C ? C : null == t ? void 0 : t.state,
+        P = null != R && "" !== R,
+        w = null;
+    A && null != b
+        ? (w = (0, r.jsx)(u.Z, {
+              userId: b,
               size: h,
               className: a()(i, p.hangStatusIcon),
               hangStatusActivity: E,
           }))
-        : null == C ||
-          O ||
-          (P = (0, r.jsx)(f.Z, {
-              emoji: C,
-              animate: y,
+        : null == N ||
+          v ||
+          (w = (0, r.jsx)(f.Z, {
+              emoji: N,
+              animate: O,
               className: i,
-              hideTooltip: v || R,
+              hideTooltip: I || P,
           }));
-    let w = R && (null != P ? " ".concat(N) : N),
-        D = () => {
-            let e = null != C && !O && !R;
-            return v || e
+    let D = P && (null != w ? " ".concat(R) : R),
+        x = () => {
+            let e = null != N && !v && !P;
+            return I || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [P, w],
+                      children: [w, D],
                   })
                 : (0, r.jsxs)(s.Z, {
                       delay: _.X,
                       tooltipClassName: m,
-                      children: [P, w],
+                      children: [w, D],
                   });
         };
     return (0, r.jsx)(o.Text, {
-        variant: "text-".concat(b, "/medium"),
+        variant: "text-".concat(y, "/medium"),
         color: "none",
         className: a()(p.truncated, n),
-        children: D(),
+        children: x(),
     });
 }

@@ -315,6 +315,7 @@ function G(e) {
                       tooltipClassName: er,
                       voiceChannel: l,
                       hangStatus: Z,
+                      userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {
         className: er,

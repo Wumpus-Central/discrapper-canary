@@ -217,47 +217,50 @@ class $ extends (r = a.PureComponent) {
     }
     renderImage(e) {
         var t, n, r;
-        let o, l;
+        let o,
+            l,
+            { user: c } = this.props;
         if (e.type === B.IIU.HANG_STATUS)
             return (0, i.jsx)("div", {
                 className: F.assets,
                 children: (0, i.jsx)(I.Z, {
+                    userId: c.id,
                     hangStatusActivity: e,
                     size: K,
                     className: s()(F.assetsHangStatus, this.getTypeClass("assetsSmallImage", "WithoutLargeImage")),
                 }),
             });
-        let { type: c } = this.props,
-            { assets: u, application_id: f } = e;
-        if (null == u || (null == u.large_image && null == u.small_image)) return null;
-        (0, k.Z)(e) && (o = q[c]);
-        let _ = (0, j.Z)(e),
-            p =
-                null != u.large_image
+        let { type: u } = this.props,
+            { assets: f, application_id: _ } = e;
+        if (null == f || (null == f.large_image && null == f.small_image)) return null;
+        (0, k.Z)(e) && (o = q[u]);
+        let p = (0, j.Z)(e),
+            h =
+                null != f.large_image
                     ? (0, i.jsx)("img", {
-                          alt: null != (t = u.large_text) ? t : "",
-                          src: (0, N.xF)(f, u.large_image, null != o ? o : [G.Si.LARGE, G.Si.LARGE]),
+                          alt: null != (t = f.large_text) ? t : "",
+                          src: (0, N.xF)(_, f.large_image, null != o ? o : [G.Si.LARGE, G.Si.LARGE]),
                           className: s()(
                               this.getTypeClass(
                                   "assetsLargeImage",
                                   this.isStreamerOnTypeActivityFeed() ? B.ABu.TWITCH : "",
                               ),
                               {
-                                  [null != (n = this.getTypeClass("assetsLargeMask")) ? n : ""]: null != u.small_image,
-                                  [F.assetsLargeImageSpotify]: _,
+                                  [null != (n = this.getTypeClass("assetsLargeMask")) ? n : ""]: null != f.small_image,
+                                  [F.assetsLargeImageSpotify]: p,
                               },
                           ),
                       })
                     : null;
-        if (_)
-            p = (0, i.jsx)(d.eee, {
+        if (p)
+            h = (0, i.jsx)(d.eee, {
                 onClick: this.handleOpenSpotifyAlbum,
-                children: p,
+                children: h,
             });
         else if ((0, C.dS)(e)) {
             let t = (0, C.rq)(e);
             if (null == t) return null;
-            p = (0, i.jsx)(m.ZP, {
+            h = (0, i.jsx)(m.ZP, {
                 mask: m.ZP.Masks.SQUIRCLE,
                 width: G.Si.SMALL,
                 height: G.Si.SMALL,
@@ -266,7 +269,7 @@ class $ extends (r = a.PureComponent) {
                         null !=
                         (r = R.ZP.getGuildIconURL({
                             id: t.guildId,
-                            icon: u.small_image,
+                            icon: f.small_image,
                             size: G.Si.SMALL,
                         }))
                             ? r
@@ -279,7 +282,7 @@ class $ extends (r = a.PureComponent) {
         return (this.isStreamerOnTypeActivityFeed() &&
             null != e.url &&
             "" !== e.url &&
-            (p = (0, i.jsxs)("div", {
+            (h = (0, i.jsxs)("div", {
                 className: F.twitchImageContainer,
                 children: [
                     (0, i.jsxs)("div", {
@@ -298,14 +301,14 @@ class $ extends (r = a.PureComponent) {
                     (0, i.jsx)(d.eee, {
                         className: F.twitchBackgroundImage,
                         href: e.url,
-                        children: p,
+                        children: h,
                     }),
                 ],
             })),
         (0, C.dS)(e) ||
-            null == u.small_image ||
+            null == f.small_image ||
             (l = (0, i.jsx)(d.ua7, {
-                text: "" !== u.small_text ? u.small_text : null,
+                text: "" !== f.small_text ? f.small_text : null,
                 position: "top",
                 children: (e) => {
                     var t;
@@ -313,11 +316,11 @@ class $ extends (r = a.PureComponent) {
                         "img",
                         H(
                             {
-                                alt: null != (t = u.small_text) ? t : "",
-                                src: (0, N.xF)(f, u.small_image, [G.Si.SMALL, G.Si.SMALL]),
+                                alt: null != (t = f.small_text) ? t : "",
+                                src: (0, N.xF)(_, f.small_image, [G.Si.SMALL, G.Si.SMALL]),
                                 className: this.getTypeClass(
                                     "assetsSmallImage",
-                                    null == p ? "WithoutLargeImage" : void 0,
+                                    null == h ? "WithoutLargeImage" : void 0,
                                 ),
                             },
                             e,
@@ -325,7 +328,7 @@ class $ extends (r = a.PureComponent) {
                     );
                 },
             })),
-        null == p)
+        null == h)
             ? (0, i.jsx)("div", {
                   className: F.assets,
                   children: l,
@@ -334,12 +337,12 @@ class $ extends (r = a.PureComponent) {
                   className: F.assets,
                   children: [
                       (0, i.jsx)(d.ua7, {
-                          text: null != u.large_text ? u.large_text : null,
+                          text: null != f.large_text ? f.large_text : null,
                           position: "top",
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: n } = e;
-                              return null != p
-                                  ? a.cloneElement(p, {
+                              return null != h
+                                  ? a.cloneElement(h, {
                                         onMouseEnter: t,
                                         onMouseLeave: n,
                                     })
@@ -370,7 +373,7 @@ class $ extends (r = a.PureComponent) {
             c = e.name,
             u = c;
         return (o === B.IIU.HANG_STATUS
-            ? (u = (0, v.O8)(e))
+            ? (u = (0, v.O8)(t.id, e))
             : l && null != n
               ? (u = (0, i.jsx)("span", {
                     className: F.activityName,

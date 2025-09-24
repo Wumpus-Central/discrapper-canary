@@ -1,52 +1,60 @@
-n.d(t, { Z: () => d }), n(388685), n(467055);
+n.d(t, { Z: () => f }), n(388685), n(467055);
 var r = n(951288);
 n(647438);
 var i = n(657707),
     a = n(212605),
     o = n(584973),
     s = n(833858),
-    l = n(505905);
-let c = new Set([i.GsA.name, i.iWm.name, i.FLu.name, i.Xbz.name]),
-    u = Object.fromEntries(
+    l = n(797156),
+    c = n(505905);
+let u = new Set([i.GsA.name, i.iWm.name, i.FLu.name, i.Xbz.name]),
+    d = Object.fromEntries(
         Object.entries(a.Z).map((e) => {
             let [t, n] = e;
             return [n, t];
         }),
     ),
-    d = (e) => {
+    f = (e) => {
         var t, n;
-        let { className: i, hangStatusActivity: a, size: d, animate: f = !0, fallbackVariant: _ = "original" } = e,
-            p = (0, s.Fe)(null == a ? void 0 : a.state),
-            h = (0, s.tV)(a, _);
-        if ((p[0] === l.tN.CUSTOM || (null == h ? void 0 : h.emoji) != null) && null != a) {
-            let e = null != (t = null == h ? void 0 : h.emoji) ? t : a.emoji;
+        let {
+                className: i,
+                hangStatusActivity: a,
+                size: f,
+                animate: _ = !0,
+                fallbackVariant: p = "original",
+                userId: h,
+            } = e,
+            m = (0, l.F)(h, null == a ? void 0 : a.state),
+            g = (0, s.tV)(h, a, p);
+        if ((m[0] === c.tN.CUSTOM || (null == g ? void 0 : g.emoji) != null) && null != a) {
+            let e = null != (t = null == g ? void 0 : g.emoji) ? t : a.emoji;
             return null != e
                 ? (0, r.jsx)(o.Z, {
                       emoji: e,
                       className: i,
                       hideTooltip: !0,
-                      animate: f,
+                      animate: _,
                   })
                 : null;
         }
-        let m = null == h ? void 0 : h.icon;
-        if (null == m) return null;
-        if ("string" == typeof m)
-            return null != m
+        let E = null == g ? void 0 : g.icon;
+        if (null == E) return null;
+        if ("string" == typeof E)
+            return null != E
                 ? (0, r.jsx)("img", {
-                      src: m,
+                      src: E,
                       alt: "",
                       className: null != i ? i : void 0,
                   })
                 : null;
-        let g = m;
-        return c.has(m.name)
-            ? (0, r.jsx)(g, {
-                  size: null != (n = u[d]) ? n : void 0,
+        let b = E;
+        return u.has(E.name)
+            ? (0, r.jsx)(b, {
+                  size: null != (n = d[f]) ? n : void 0,
                   className: i,
               })
-            : (0, r.jsx)(g, {
-                  size: d,
+            : (0, r.jsx)(b, {
+                  size: f,
                   className: i,
               });
     };

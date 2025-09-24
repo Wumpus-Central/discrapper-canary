@@ -29,7 +29,7 @@ var r = n(951288),
     I = n(354459),
     T = n(927923),
     S = n(388032),
-    A = n(867721);
+    A = n(368736);
 function C(e, t, n) {
     return (
         t in e
@@ -105,20 +105,21 @@ function D(e, t) {
 }
 let x = 16,
     L = (e) => {
-        let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: a } = e,
-            s = (e) => {
+        let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: a, userId: s } = e,
+            c = (e) => {
                 e.stopPropagation(), null == a || a();
             };
         return i && null == t
             ? (0, r.jsx)(l.P3F, {
-                  onClick: s,
+                  onClick: c,
                   className: A.icons,
-                  children: (0, r.jsx)(l.svS, { className: o()(A.icon, n) }),
+                  children: (0, r.jsx)(l.EO4, { className: o()(A.icon, n) }),
               })
             : (0, r.jsx)(l.P3F, {
-                  onClick: s,
+                  onClick: c,
                   className: A.icons,
                   children: (0, r.jsx)(g.Z, {
+                      userId: s,
                       size: x,
                       hangStatusActivity: t,
                       className: o()(A.icon, n),
@@ -285,6 +286,7 @@ function M(e) {
                                       "".concat(M.id, "-game"),
                                   )
                                 : (0, r.jsx)(L, {
+                                      userId: M.id,
                                       hangStatusActivity: U,
                                       iconClassName: N,
                                       isSelf: F,

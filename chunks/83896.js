@@ -1,4 +1,4 @@
-n.d(t, { I: () => E }), n(388685);
+n.d(t, { I: () => S }), n(388685);
 var r = n(951288),
     i = n(647438),
     l = n(120356),
@@ -13,13 +13,14 @@ var r = n(951288),
     f = n(833858),
     m = n(866071),
     g = n(699263),
-    b = n(223135),
-    y = n(505905),
+    b = n(797156),
+    y = n(223135),
+    C = n(505905),
     _ = n(981631),
-    C = n(388032),
-    v = n(10359),
-    x = n(254477);
-function O(e) {
+    v = n(388032),
+    x = n(10359),
+    O = n(254477);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +45,7 @@ function O(e) {
     }
     return e;
 }
-function j(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,19 +63,19 @@ function j(e, t) {
         e
     );
 }
-function E(e) {
-    let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: E } = e,
-        S = i.useRef(null),
+function S(e) {
+    let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: S } = e,
+        P = i.useRef(null),
         I = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId() === n.id),
-        P = (0, o.e7)([u.Z], () => u.Z.can(_.Plq.CONNECT, n)),
-        Z = (null == t ? void 0 : t.emoji) == null || (0, m.K)(t.emoji, n);
+        Z = (0, o.e7)([u.Z], () => u.Z.can(_.Plq.CONNECT, n)),
+        T = (null == t ? void 0 : t.emoji) == null || (0, m.K)(t.emoji, n);
     i.useEffect(() => {
-        null == E || E(null == S ? void 0 : S.current);
-    }, [S, E]),
+        null == S || S(null == P ? void 0 : P.current);
+    }, [P, S]),
         i.useEffect(() => {
             p.default.track(
                 _.rMx.VIEW_HANG_STATUS,
-                O(
+                j(
                     {
                         source: "HangStatusPopout",
                         other_user_id: l,
@@ -83,72 +84,73 @@ function E(e) {
                 ),
             );
         }, [n.guild_id, n.id, l]);
-    let T = i.useCallback(() => {
+    let N = i.useCallback(() => {
             !I &&
-                P &&
+                Z &&
                 (c.default.selectVoiceChannel(n.id),
                 p.default.track(
                     _.rMx.HANG_STATUS_CTA_CLICKED,
-                    j(O({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "join",
                     }),
                 ));
-        }, [I, P, n.id, l]),
-        N = i.useCallback(() => {
-            if (!I || !Z || null == t.state) return;
-            let [e] = (0, f.Fe)(t.state);
+        }, [I, Z, n.id, l]),
+        A = i.useCallback(() => {
+            if (!I || !T || null == t.state) return;
+            let [e] = (0, b.F)(l, t.state);
             if (null != e) {
-                if (e === y.tN.CUSTOM) {
+                if (e === C.tN.CUSTOM) {
                     if (null == t.details || null == t.emoji) return;
                     (0, h._s)(t.details, t.emoji, !0);
                 } else (0, h.Zx)(e, !0);
                 p.default.track(
                     _.rMx.HANG_STATUS_CTA_CLICKED,
-                    j(O({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "swipe",
                     }),
                 );
             }
-        }, [I, Z, t, n.id, l]);
+        }, [I, T, t, n.id, l]);
     return (0, r.jsxs)("div", {
-        ref: S,
-        className: a()(x.popover, v.container),
+        ref: P,
+        className: a()(O.popover, x.container),
         children: [
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(y.Z, {
+                userId: l,
                 size: 32,
-                className: v.icon,
+                className: x.icon,
                 hangStatusActivity: t,
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/medium",
-                className: v.statusText,
-                children: (0, f.O8)(t),
+                className: x.statusText,
+                children: (0, f.O8)(l, t),
             }),
             I
                 ? (0, r.jsx)(s.ua7, {
-                      text: Z ? void 0 : C.intl.string(C.t["0LMpW1"]),
+                      text: T ? void 0 : v.intl.string(v.t["0LMpW1"]),
                       children: (e) =>
                           (0, r.jsx)(
                               "div",
-                              j(O({}, e), {
+                              E(j({}, e), {
                                   children: (0, r.jsx)(s.zxk, {
                                       size: "sm",
                                       variant: "secondary",
-                                      text: C.intl.string(C.t["0eHzpq"]),
-                                      onClick: N,
-                                      disabled: !Z,
+                                      text: v.intl.string(v.t["0eHzpq"]),
+                                      onClick: A,
+                                      disabled: !T,
                                   }),
                               }),
                           ),
                   })
-                : P &&
+                : Z &&
                   (0, r.jsx)(s.zxk, {
                       size: "sm",
                       variant: "secondary",
-                      text: C.intl.string(C.t["B/dHXF"]),
-                      onClick: T,
+                      text: v.intl.string(v.t["B/dHXF"]),
+                      onClick: N,
                   }),
         ],
     });

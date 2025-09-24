@@ -112,6 +112,7 @@ function v(e) {
                       tooltipClassName: k,
                       voiceChannel: v,
                       hangStatus: D,
+                      userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {
         className: k,

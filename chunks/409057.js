@@ -39,7 +39,7 @@ var r = n(951288),
     B = n(701488),
     Z = n(671955),
     F = n(388032),
-    V = n(663907);
+    V = n(704543);
 function H(e, t, n) {
     return (
         t in e
@@ -141,9 +141,10 @@ function z(e) {
         }),
         ep = () => {
             let e = (0, s.Z)(i) ? "crunchyroll" : "default",
-                t = et === Z.l.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
+                n = et === Z.l.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
             return i.type === G.IIU.HANG_STATUS
                 ? (0, r.jsx)(y.Z, {
+                      userId: t.id,
                       size: et !== Z.l.MODAL_V2 ? 60 : 100,
                       hangStatusActivity: i,
                       className: a()(V.hangStatusIcon, V.image, { [V.small]: et !== Z.l.MODAL_V2 }),
@@ -152,14 +153,14 @@ function z(e) {
                   ? (0, r.jsx)(h.E, {
                         image: ed,
                         smallImage: ef,
-                        size: t,
+                        size: n,
                         aspectRatio: e,
                         className: V.image,
                     })
                   : (0, r.jsx)(h.E, {
                         image: ed,
                         smallImage: ef,
-                        size: t,
+                        size: n,
                         className: V.clickableImage,
                         aspectRatio: e,
                         onClick: (e) => {
@@ -171,7 +172,7 @@ function z(e) {
             i.type === G.IIU.HANG_STATUS
                 ? (0, r.jsx)(L.f, {
                       variant: "heading-sm/semibold",
-                      text: (0, b.O8)(i),
+                      text: (0, b.O8)(t.id, i),
                       id: J,
                   })
                 : (0, u.Z)(i) && null != z
