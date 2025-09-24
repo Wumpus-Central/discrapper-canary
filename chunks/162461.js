@@ -1,9 +1,9 @@
 n.d(t, {
+    EB: () => l,
     me: () => s,
     nP: () => f,
     sA: () => c,
     wm: () => u,
-    zO: () => l,
 });
 var r = n(818083),
     i = n(518929),
@@ -50,21 +50,26 @@ let o = (0, r.B)({
     }),
     l = (0, r.B)({
         kind: "user",
-        id: "2025-05_hotwheels_user_affinity_v2",
+        id: "2025-09_hotwheels_nvidia_boost",
         label: "Next iteration of the activity feed ranking model.",
         commonTriggerPoint: a.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
-                id: 14,
-                label: "ML model V3 - User Affinity V2",
+                id: 16,
+                label: "ML model V3 - Nvidia small boost",
+                config: {},
+            },
+            {
+                id: 17,
+                label: "ML model V3 - Nvidia big boost",
                 config: {},
             },
         ],
     });
 function c(e) {
     let { enabled: t } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
-        n = (0, i.Ji)(e, !1);
+        n = (0, i.VZ)(e, !1);
     return t || n;
 }
 function u(e) {
