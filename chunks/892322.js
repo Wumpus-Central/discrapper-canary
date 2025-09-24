@@ -1,77 +1,70 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => x });
 var i = n(951288);
 n(647438);
-var s = n(512722),
-    l = n.n(s),
-    r = n(481060),
-    a = n(600164),
-    o = n(565138),
-    c = n(703656),
-    d = n(388032),
-    u = n(475608);
-function m(e) {
-    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: s, onClose: m } = e;
+var l = n(512722),
+    s = n.n(l),
+    r = n(369585),
+    a = n(103866),
+    o = n(481060),
+    c = n(565138),
+    d = n(703656),
+    u = n(388032),
+    m = n(475608);
+function x(e) {
+    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: l, onClose: x } = e;
     return (
-        l()(null != n, "Missing guild in Hub add guild confirmation"),
+        s()(null != n, "Missing guild in Hub add guild confirmation"),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(r.xBx, {
-                    direction: a.Z.Direction.VERTICAL,
-                    className: u.header,
-                    separator: !1,
-                    children: [
-                        null != m &&
-                            (0, i.jsx)(r.olH, {
-                                className: u.closeButton,
-                                onClick: m,
+                (0, i.jsx)(a.f, {
+                    children: (0, i.jsxs)("div", {
+                        className: m.content,
+                        children: [
+                            (0, i.jsx)(c.Z, {
+                                guild: n,
+                                size: c.Z.Sizes.XLARGE,
+                                active: !0,
                             }),
-                        (0, i.jsx)(o.Z, {
-                            guild: n,
-                            size: o.Z.Sizes.XLARGE,
-                            active: !0,
-                        }),
-                        (0, i.jsx)(r.X6q, {
-                            className: u.title,
-                            variant: "heading-xl/semibold",
-                            children: d.intl.string(d.t.CueiPT),
-                        }),
-                        (0, i.jsx)(r.Text, {
-                            className: u.__invalid_subtitle,
-                            color: "header-secondary",
-                            variant: "text-md/normal",
-                            children: s
-                                ? d.intl.formatToPlainString(d.t.R7Pqn5, { guildName: t })
-                                : d.intl.formatToPlainString(d.t.eIxPSk, { guildName: t }),
-                        }),
-                    ],
+                            (0, i.jsx)(o.X6q, {
+                                className: m.title,
+                                variant: "heading-xl/semibold",
+                                children: u.intl.string(u.t.CueiPT),
+                            }),
+                            (0, i.jsx)(o.Text, {
+                                className: m.__invalid_subtitle,
+                                color: "header-secondary",
+                                variant: "text-md/normal",
+                                children: l
+                                    ? u.intl.formatToPlainString(u.t.R7Pqn5, { guildName: t })
+                                    : u.intl.formatToPlainString(u.t.eIxPSk, { guildName: t }),
+                            }),
+                        ],
+                    }),
                 }),
-                (0, i.jsx)(r.mzw, {
-                    className: u.buttonRow,
-                    children: s
-                        ? (0, i.jsx)(r.zxk, {
-                              text: d.intl.string(d.t["X0WK+/"]),
-                              fullWidth: !0,
-                              variant: "primary",
-                              onClick: m,
-                          })
-                        : (0, i.jsxs)(i.Fragment, {
-                              children: [
-                                  (0, i.jsx)(r.zxk, {
-                                      fullWidth: !0,
-                                      text: d.intl.string(d.t["X/VABg"]),
-                                      variant: "secondary",
-                                      onClick: m,
-                                  }),
-                                  (0, i.jsx)(r.zxk, {
-                                      fullWidth: !0,
-                                      variant: "primary",
-                                      onClick: () => {
-                                          (0, c.XU)(n.id), null == m || m();
-                                      },
-                                      text: d.intl.string(d.t.DymAQk),
-                                  }),
-                              ],
-                          }),
+                (0, i.jsx)(r.G, {
+                    actionsFullWidth: !0,
+                    actions: l
+                        ? [
+                              {
+                                  text: u.intl.string(u.t["X0WK+/"]),
+                                  variant: "primary",
+                                  onClick: x,
+                              },
+                          ]
+                        : [
+                              {
+                                  text: u.intl.string(u.t["X/VABg"]),
+                                  variant: "secondary",
+                                  onClick: x,
+                              },
+                              {
+                                  text: u.intl.string(u.t.DymAQk),
+                                  variant: "primary",
+                                  onClick: () => {
+                                      (0, d.XU)(n.id), null == x || x();
+                                  },
+                              },
+                          ],
                 }),
             ],
         })
