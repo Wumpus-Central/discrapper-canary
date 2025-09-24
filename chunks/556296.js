@@ -4,7 +4,6 @@ n.d(t, {
     I1: () => k,
     ZP: () => ev,
 }),
-    n(415506),
     n(388685),
     n(539854),
     n(704826),
@@ -119,7 +118,7 @@ let L = "1001",
         var i, a;
         let o = (0, b.pz)(!1).get("Backquote"),
             s = (0, b.pz)(!0).get("Backquote");
-        w.log(e.message, {
+        w.log(e, {
             tags: {
                 backquoteKey: null != o ? o : "unknown",
                 nativeBackquoteKey: null != s ? s : "unknown",
@@ -128,7 +127,6 @@ let L = "1001",
             },
             extra: N(
                 {
-                    stack: e.stack,
                     keyCombo: t,
                     combo: n,
                     layoutMapBacktick: o,
@@ -149,13 +147,13 @@ function G(e) {
     return k(n)
         ? n
         : null == i
-          ? (U(Error("Unable to get backtick code for overlay default keybind"), e, n, { rawBacktickShape: r }), null)
-          : (U(Error("Default overlay keybind is unsupported"), e, n, { rawBacktickCode: i }),
+          ? (U("Unable to get backtick code for overlay default keybind", e, n, { rawBacktickShape: r }), null)
+          : (U("Default overlay keybind is unsupported", e, n, { rawBacktickCode: i }),
             [...n, [S.Mo.KEYBOARD_KEY, i, (0, y.dU)()]]);
 }
 let B = () => {
         let e = x();
-        "shift" === e && (U(Error("Default overlay keybind is only shift"), e, null), (e = "shift+`"));
+        "shift" === e && (U("Default overlay keybind is only shift", e, null), (e = "shift+`"));
         let t = G(e);
         if (null == t) return M([], !1);
         if (k(t)) return M(t, !0);
@@ -163,10 +161,10 @@ let B = () => {
             r = (0, b.T_)("`");
         return (
             0 === t.length
-                ? U(Error("Default overlay keybind combo is empty"), e, t)
+                ? U("Default overlay keybind combo is empty", e, t)
                 : null == n
-                  ? U(Error("Unable to get shift code"), e, t, { shiftCode: n })
-                  : null == r && U(Error("Unable to get backtick code"), e, t),
+                  ? U("Unable to get shift code", e, t, { shiftCode: n })
+                  : null == r && U("Unable to get backtick code", e, t),
             M(t, !1)
         );
     },

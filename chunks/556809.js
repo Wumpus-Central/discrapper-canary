@@ -63,7 +63,7 @@ let m = new i.Z("OverlayWindowRAFManager"),
                 return v(r, e), r;
             }
         } catch (e) {
-            m.error("RAF redirect failed, falling back to original", e),
+            m.error("RAF redirect failed, falling back to original. Cause:", e),
                 (0, c.D1)(e, _.ZP.getOverlayMethod((0, s.getPID)()));
         }
         return (E = "None"), g(e);
