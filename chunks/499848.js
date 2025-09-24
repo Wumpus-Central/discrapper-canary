@@ -32,6 +32,5 @@ let s = a.ZP.connectStores([i.ZP], (e) => {
         videoStreams: c,
         title: o.intl.string(o.t.SJmZam),
         showUserInfo: !0,
-        showSimulcastOverride: !0,
     });
 });
