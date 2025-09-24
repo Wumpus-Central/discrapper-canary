@@ -25738,8 +25738,10 @@ span.clanTag__5d473 {
     width: 18px
 }
 
-.infoBox__50a54 {
-    margin-top: 16px
+.deleteModalBody__50a54 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
 }
 
 .warningContainer__50a54 {

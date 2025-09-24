@@ -32,5 +32,4 @@ e.exports = {
     connectedAccountVanityMetadataCreatedAt: "connectedAccountVanityMetadataCreatedAt_c7f964",
     connectionMetadataUpsellTag: "connectionMetadataUpsellTag_c7f964",
     connectionMetadataUpsellDescription: "connectionMetadataUpsellDescription_c7f964",
-    infoBox: "infoBox_c7f964",
 };
