@@ -80519,6 +80519,9 @@ div.nagbar_d74ef8 {
 }
 
 .content_a202d2 {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
     margin-top: 20px
 }
 
